@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 44744 (2632 per locale)
+/// Strings: 44761 (2633 per locale)
 ///
-/// Built on 2026-07-27 at 07:23 UTC
+/// Built on 2026-07-27 at 08:00 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3506,6 +3506,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get game_line_tracks_hint =>
       'Preview each track at this line\'s moment, then exclude the BGM ones';
   String get game_line_track_use => 'Use for this line';
+  String get game_user_tags_title => 'My tags';
 }
 
 // Path: <root>
@@ -9492,6 +9493,8 @@ class _StringsAr extends _StringsEn {
       'Preview each track at this line\'s moment, then exclude the BGM ones';
   @override
   String get game_line_track_use => 'Use for this line';
+  @override
+  String get game_user_tags_title => 'My tags';
 }
 
 // Path: <root>
@@ -15546,6 +15549,8 @@ class _StringsDe extends _StringsEn {
       'Preview each track at this line\'s moment, then exclude the BGM ones';
   @override
   String get game_line_track_use => 'Use for this line';
+  @override
+  String get game_user_tags_title => 'My tags';
 }
 
 // Path: <root>
@@ -21616,6 +21621,8 @@ class _StringsEs extends _StringsEn {
       'Preview each track at this line\'s moment, then exclude the BGM ones';
   @override
   String get game_line_track_use => 'Use for this line';
+  @override
+  String get game_user_tags_title => 'My tags';
 }
 
 // Path: <root>
@@ -27697,6 +27704,8 @@ class _StringsFr extends _StringsEn {
       'Preview each track at this line\'s moment, then exclude the BGM ones';
   @override
   String get game_line_track_use => 'Use for this line';
+  @override
+  String get game_user_tags_title => 'My tags';
 }
 
 // Path: <root>
@@ -33707,6 +33716,8 @@ class _StringsId extends _StringsEn {
       'Preview each track at this line\'s moment, then exclude the BGM ones';
   @override
   String get game_line_track_use => 'Use for this line';
+  @override
+  String get game_user_tags_title => 'My tags';
 }
 
 // Path: <root>
@@ -39763,6 +39774,8 @@ class _StringsIt extends _StringsEn {
       'Preview each track at this line\'s moment, then exclude the BGM ones';
   @override
   String get game_line_track_use => 'Use for this line';
+  @override
+  String get game_user_tags_title => 'My tags';
 }
 
 // Path: <root>
@@ -45635,6 +45648,8 @@ class _StringsJa extends _StringsEn {
       'Preview each track at this line\'s moment, then exclude the BGM ones';
   @override
   String get game_line_track_use => 'Use for this line';
+  @override
+  String get game_user_tags_title => 'My tags';
 }
 
 // Path: <root>
@@ -51509,6 +51524,8 @@ class _StringsKo extends _StringsEn {
       'Preview each track at this line\'s moment, then exclude the BGM ones';
   @override
   String get game_line_track_use => 'Use for this line';
+  @override
+  String get game_user_tags_title => 'My tags';
 }
 
 // Path: <root>
@@ -57545,6 +57562,8 @@ class _StringsNl extends _StringsEn {
       'Preview each track at this line\'s moment, then exclude the BGM ones';
   @override
   String get game_line_track_use => 'Use for this line';
+  @override
+  String get game_user_tags_title => 'My tags';
 }
 
 // Path: <root>
@@ -63594,6 +63613,8 @@ class _StringsPtBr extends _StringsEn {
       'Preview each track at this line\'s moment, then exclude the BGM ones';
   @override
   String get game_line_track_use => 'Use for this line';
+  @override
+  String get game_user_tags_title => 'My tags';
 }
 
 // Path: <root>
@@ -69627,6 +69648,8 @@ class _StringsRu extends _StringsEn {
       'Preview each track at this line\'s moment, then exclude the BGM ones';
   @override
   String get game_line_track_use => 'Use for this line';
+  @override
+  String get game_user_tags_title => 'My tags';
 }
 
 // Path: <root>
@@ -75608,6 +75631,8 @@ class _StringsTh extends _StringsEn {
       'Preview each track at this line\'s moment, then exclude the BGM ones';
   @override
   String get game_line_track_use => 'Use for this line';
+  @override
+  String get game_user_tags_title => 'My tags';
 }
 
 // Path: <root>
@@ -81621,6 +81646,8 @@ class _StringsTr extends _StringsEn {
       'Preview each track at this line\'s moment, then exclude the BGM ones';
   @override
   String get game_line_track_use => 'Use for this line';
+  @override
+  String get game_user_tags_title => 'My tags';
 }
 
 // Path: <root>
@@ -87619,6 +87646,8 @@ class _StringsVi extends _StringsEn {
       'Preview each track at this line\'s moment, then exclude the BGM ones';
   @override
   String get game_line_track_use => 'Use for this line';
+  @override
+  String get game_user_tags_title => 'My tags';
 }
 
 // Path: <root>
@@ -93206,6 +93235,8 @@ class _StringsZhCn extends _StringsEn {
   String get game_line_tracks_hint => '按本句时刻试听各轨，确认是 BGM 就排除';
   @override
   String get game_line_track_use => '用于本句';
+  @override
+  String get game_user_tags_title => '我的标签';
 }
 
 // Path: <root>
@@ -99000,6 +99031,8 @@ class _StringsZhHk extends _StringsEn {
       'Preview each track at this line\'s moment, then exclude the BGM ones';
   @override
   String get game_line_track_use => 'Use for this line';
+  @override
+  String get game_user_tags_title => 'My tags';
 }
 
 /// Flat map(s) containing all translations.
@@ -104380,6 +104413,8 @@ extension on _StringsEn {
         return 'Preview each track at this line\'s moment, then exclude the BGM ones';
       case 'game_line_track_use':
         return 'Use for this line';
+      case 'game_user_tags_title':
+        return 'My tags';
       default:
         return null;
     }
@@ -109758,6 +109793,8 @@ extension on _StringsAr {
         return 'Preview each track at this line\'s moment, then exclude the BGM ones';
       case 'game_line_track_use':
         return 'Use for this line';
+      case 'game_user_tags_title':
+        return 'My tags';
       default:
         return null;
     }
@@ -115157,6 +115194,8 @@ extension on _StringsDe {
         return 'Preview each track at this line\'s moment, then exclude the BGM ones';
       case 'game_line_track_use':
         return 'Use for this line';
+      case 'game_user_tags_title':
+        return 'My tags';
       default:
         return null;
     }
@@ -120555,6 +120594,8 @@ extension on _StringsEs {
         return 'Preview each track at this line\'s moment, then exclude the BGM ones';
       case 'game_line_track_use':
         return 'Use for this line';
+      case 'game_user_tags_title':
+        return 'My tags';
       default:
         return null;
     }
@@ -125959,6 +126000,8 @@ extension on _StringsFr {
         return 'Preview each track at this line\'s moment, then exclude the BGM ones';
       case 'game_line_track_use':
         return 'Use for this line';
+      case 'game_user_tags_title':
+        return 'My tags';
       default:
         return null;
     }
@@ -131345,6 +131388,8 @@ extension on _StringsId {
         return 'Preview each track at this line\'s moment, then exclude the BGM ones';
       case 'game_line_track_use':
         return 'Use for this line';
+      case 'game_user_tags_title':
+        return 'My tags';
       default:
         return null;
     }
@@ -136746,6 +136791,8 @@ extension on _StringsIt {
         return 'Preview each track at this line\'s moment, then exclude the BGM ones';
       case 'game_line_track_use':
         return 'Use for this line';
+      case 'game_user_tags_title':
+        return 'My tags';
       default:
         return null;
     }
@@ -142109,6 +142156,8 @@ extension on _StringsJa {
         return 'Preview each track at this line\'s moment, then exclude the BGM ones';
       case 'game_line_track_use':
         return 'Use for this line';
+      case 'game_user_tags_title':
+        return 'My tags';
       default:
         return null;
     }
@@ -147476,6 +147525,8 @@ extension on _StringsKo {
         return 'Preview each track at this line\'s moment, then exclude the BGM ones';
       case 'game_line_track_use':
         return 'Use for this line';
+      case 'game_user_tags_title':
+        return 'My tags';
       default:
         return null;
     }
@@ -152870,6 +152921,8 @@ extension on _StringsNl {
         return 'Preview each track at this line\'s moment, then exclude the BGM ones';
       case 'game_line_track_use':
         return 'Use for this line';
+      case 'game_user_tags_title':
+        return 'My tags';
       default:
         return null;
     }
@@ -158261,6 +158314,8 @@ extension on _StringsPtBr {
         return 'Preview each track at this line\'s moment, then exclude the BGM ones';
       case 'game_line_track_use':
         return 'Use for this line';
+      case 'game_user_tags_title':
+        return 'My tags';
       default:
         return null;
     }
@@ -163657,6 +163712,8 @@ extension on _StringsRu {
         return 'Preview each track at this line\'s moment, then exclude the BGM ones';
       case 'game_line_track_use':
         return 'Use for this line';
+      case 'game_user_tags_title':
+        return 'My tags';
       default:
         return null;
     }
@@ -169037,6 +169094,8 @@ extension on _StringsTh {
         return 'Preview each track at this line\'s moment, then exclude the BGM ones';
       case 'game_line_track_use':
         return 'Use for this line';
+      case 'game_user_tags_title':
+        return 'My tags';
       default:
         return null;
     }
@@ -174426,6 +174485,8 @@ extension on _StringsTr {
         return 'Preview each track at this line\'s moment, then exclude the BGM ones';
       case 'game_line_track_use':
         return 'Use for this line';
+      case 'game_user_tags_title':
+        return 'My tags';
       default:
         return null;
     }
@@ -179810,6 +179871,8 @@ extension on _StringsVi {
         return 'Preview each track at this line\'s moment, then exclude the BGM ones';
       case 'game_line_track_use':
         return 'Use for this line';
+      case 'game_user_tags_title':
+        return 'My tags';
       default:
         return null;
     }
@@ -185148,6 +185211,8 @@ extension on _StringsZhCn {
         return '按本句时刻试听各轨，确认是 BGM 就排除';
       case 'game_line_track_use':
         return '用于本句';
+      case 'game_user_tags_title':
+        return '我的标签';
       default:
         return null;
     }
@@ -190506,6 +190571,8 @@ extension on _StringsZhHk {
         return 'Preview each track at this line\'s moment, then exclude the BGM ones';
       case 'game_line_track_use':
         return 'Use for this line';
+      case 'game_user_tags_title':
+        return 'My tags';
       default:
         return null;
     }
