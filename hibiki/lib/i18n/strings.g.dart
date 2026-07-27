@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 45611 (2683 per locale)
+/// Strings: 45628 (2684 per locale)
 ///
-/// Built on 2026-07-27 at 19:26 UTC
+/// Built on 2026-07-27 at 20:57 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3594,6 +3594,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Could not get a valid response from the cover source. Check your network and retry.';
   String get scrape_reason_server =>
       'The cover source returned an error. Try again later or pick another candidate.';
+  String get common_more_actions => 'More actions';
 }
 
 // Path: <root>
@@ -9719,6 +9720,8 @@ class _StringsAr extends _StringsEn {
   @override
   String get scrape_reason_server =>
       'The cover source returned an error. Try again later or pick another candidate.';
+  @override
+  String get common_more_actions => 'More actions';
 }
 
 // Path: <root>
@@ -15912,6 +15915,8 @@ class _StringsDe extends _StringsEn {
   @override
   String get scrape_reason_server =>
       'The cover source returned an error. Try again later or pick another candidate.';
+  @override
+  String get common_more_actions => 'More actions';
 }
 
 // Path: <root>
@@ -22121,6 +22126,8 @@ class _StringsEs extends _StringsEn {
   @override
   String get scrape_reason_server =>
       'The cover source returned an error. Try again later or pick another candidate.';
+  @override
+  String get common_more_actions => 'More actions';
 }
 
 // Path: <root>
@@ -28341,6 +28348,8 @@ class _StringsFr extends _StringsEn {
   @override
   String get scrape_reason_server =>
       'The cover source returned an error. Try again later or pick another candidate.';
+  @override
+  String get common_more_actions => 'More actions';
 }
 
 // Path: <root>
@@ -34490,6 +34499,8 @@ class _StringsId extends _StringsEn {
   @override
   String get scrape_reason_server =>
       'The cover source returned an error. Try again later or pick another candidate.';
+  @override
+  String get common_more_actions => 'More actions';
 }
 
 // Path: <root>
@@ -40685,6 +40696,8 @@ class _StringsIt extends _StringsEn {
   @override
   String get scrape_reason_server =>
       'The cover source returned an error. Try again later or pick another candidate.';
+  @override
+  String get common_more_actions => 'More actions';
 }
 
 // Path: <root>
@@ -46697,6 +46710,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get scrape_reason_server =>
       'The cover source returned an error. Try again later or pick another candidate.';
+  @override
+  String get common_more_actions => 'More actions';
 }
 
 // Path: <root>
@@ -52711,6 +52726,8 @@ class _StringsKo extends _StringsEn {
   @override
   String get scrape_reason_server =>
       'The cover source returned an error. Try again later or pick another candidate.';
+  @override
+  String get common_more_actions => 'More actions';
 }
 
 // Path: <root>
@@ -58886,6 +58903,8 @@ class _StringsNl extends _StringsEn {
   @override
   String get scrape_reason_server =>
       'The cover source returned an error. Try again later or pick another candidate.';
+  @override
+  String get common_more_actions => 'More actions';
 }
 
 // Path: <root>
@@ -65074,6 +65093,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get scrape_reason_server =>
       'The cover source returned an error. Try again later or pick another candidate.';
+  @override
+  String get common_more_actions => 'More actions';
 }
 
 // Path: <root>
@@ -71246,6 +71267,8 @@ class _StringsRu extends _StringsEn {
   @override
   String get scrape_reason_server =>
       'The cover source returned an error. Try again later or pick another candidate.';
+  @override
+  String get common_more_actions => 'More actions';
 }
 
 // Path: <root>
@@ -77366,6 +77389,8 @@ class _StringsTh extends _StringsEn {
   @override
   String get scrape_reason_server =>
       'The cover source returned an error. Try again later or pick another candidate.';
+  @override
+  String get common_more_actions => 'More actions';
 }
 
 // Path: <root>
@@ -83518,6 +83543,8 @@ class _StringsTr extends _StringsEn {
   @override
   String get scrape_reason_server =>
       'The cover source returned an error. Try again later or pick another candidate.';
+  @override
+  String get common_more_actions => 'More actions';
 }
 
 // Path: <root>
@@ -89655,6 +89682,8 @@ class _StringsVi extends _StringsEn {
   @override
   String get scrape_reason_server =>
       'The cover source returned an error. Try again later or pick another candidate.';
+  @override
+  String get common_more_actions => 'More actions';
 }
 
 // Path: <root>
@@ -95363,6 +95392,8 @@ class _StringsZhCn extends _StringsEn {
   String get scrape_reason_network => '没能从封面源取到有效响应，请检查网络后重试。';
   @override
   String get scrape_reason_server => '封面源返回了错误，请稍后重试或换一个候选。';
+  @override
+  String get common_more_actions => '更多操作';
 }
 
 // Path: <root>
@@ -101296,6 +101327,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get scrape_reason_server =>
       'The cover source returned an error. Try again later or pick another candidate.';
+  @override
+  String get common_more_actions => 'More actions';
 }
 
 /// Flat map(s) containing all translations.
@@ -106791,6 +106824,8 @@ extension on _StringsEn {
         return 'Could not get a valid response from the cover source. Check your network and retry.';
       case 'scrape_reason_server':
         return 'The cover source returned an error. Try again later or pick another candidate.';
+      case 'common_more_actions':
+        return 'More actions';
       default:
         return null;
     }
@@ -112284,6 +112319,8 @@ extension on _StringsAr {
         return 'Could not get a valid response from the cover source. Check your network and retry.';
       case 'scrape_reason_server':
         return 'The cover source returned an error. Try again later or pick another candidate.';
+      case 'common_more_actions':
+        return 'More actions';
       default:
         return null;
     }
@@ -117798,6 +117835,8 @@ extension on _StringsDe {
         return 'Could not get a valid response from the cover source. Check your network and retry.';
       case 'scrape_reason_server':
         return 'The cover source returned an error. Try again later or pick another candidate.';
+      case 'common_more_actions':
+        return 'More actions';
       default:
         return null;
     }
@@ -123311,6 +123350,8 @@ extension on _StringsEs {
         return 'Could not get a valid response from the cover source. Check your network and retry.';
       case 'scrape_reason_server':
         return 'The cover source returned an error. Try again later or pick another candidate.';
+      case 'common_more_actions':
+        return 'More actions';
       default:
         return null;
     }
@@ -128830,6 +128871,8 @@ extension on _StringsFr {
         return 'Could not get a valid response from the cover source. Check your network and retry.';
       case 'scrape_reason_server':
         return 'The cover source returned an error. Try again later or pick another candidate.';
+      case 'common_more_actions':
+        return 'More actions';
       default:
         return null;
     }
@@ -134331,6 +134374,8 @@ extension on _StringsId {
         return 'Could not get a valid response from the cover source. Check your network and retry.';
       case 'scrape_reason_server':
         return 'The cover source returned an error. Try again later or pick another candidate.';
+      case 'common_more_actions':
+        return 'More actions';
       default:
         return null;
     }
@@ -139847,6 +139892,8 @@ extension on _StringsIt {
         return 'Could not get a valid response from the cover source. Check your network and retry.';
       case 'scrape_reason_server':
         return 'The cover source returned an error. Try again later or pick another candidate.';
+      case 'common_more_actions':
+        return 'More actions';
       default:
         return null;
     }
@@ -145325,6 +145372,8 @@ extension on _StringsJa {
         return 'Could not get a valid response from the cover source. Check your network and retry.';
       case 'scrape_reason_server':
         return 'The cover source returned an error. Try again later or pick another candidate.';
+      case 'common_more_actions':
+        return 'More actions';
       default:
         return null;
     }
@@ -150807,6 +150856,8 @@ extension on _StringsKo {
         return 'Could not get a valid response from the cover source. Check your network and retry.';
       case 'scrape_reason_server':
         return 'The cover source returned an error. Try again later or pick another candidate.';
+      case 'common_more_actions':
+        return 'More actions';
       default:
         return null;
     }
@@ -156316,6 +156367,8 @@ extension on _StringsNl {
         return 'Could not get a valid response from the cover source. Check your network and retry.';
       case 'scrape_reason_server':
         return 'The cover source returned an error. Try again later or pick another candidate.';
+      case 'common_more_actions':
+        return 'More actions';
       default:
         return null;
     }
@@ -161822,6 +161875,8 @@ extension on _StringsPtBr {
         return 'Could not get a valid response from the cover source. Check your network and retry.';
       case 'scrape_reason_server':
         return 'The cover source returned an error. Try again later or pick another candidate.';
+      case 'common_more_actions':
+        return 'More actions';
       default:
         return null;
     }
@@ -167333,6 +167388,8 @@ extension on _StringsRu {
         return 'Could not get a valid response from the cover source. Check your network and retry.';
       case 'scrape_reason_server':
         return 'The cover source returned an error. Try again later or pick another candidate.';
+      case 'common_more_actions':
+        return 'More actions';
       default:
         return null;
     }
@@ -172828,6 +172885,8 @@ extension on _StringsTh {
         return 'Could not get a valid response from the cover source. Check your network and retry.';
       case 'scrape_reason_server':
         return 'The cover source returned an error. Try again later or pick another candidate.';
+      case 'common_more_actions':
+        return 'More actions';
       default:
         return null;
     }
@@ -178332,6 +178391,8 @@ extension on _StringsTr {
         return 'Could not get a valid response from the cover source. Check your network and retry.';
       case 'scrape_reason_server':
         return 'The cover source returned an error. Try again later or pick another candidate.';
+      case 'common_more_actions':
+        return 'More actions';
       default:
         return null;
     }
@@ -183831,6 +183892,8 @@ extension on _StringsVi {
         return 'Could not get a valid response from the cover source. Check your network and retry.';
       case 'scrape_reason_server':
         return 'The cover source returned an error. Try again later or pick another candidate.';
+      case 'common_more_actions':
+        return 'More actions';
       default:
         return null;
     }
@@ -189284,6 +189347,8 @@ extension on _StringsZhCn {
         return '没能从封面源取到有效响应，请检查网络后重试。';
       case 'scrape_reason_server':
         return '封面源返回了错误，请稍后重试或换一个候选。';
+      case 'common_more_actions':
+        return '更多操作';
       default:
         return null;
     }
@@ -194757,6 +194822,8 @@ extension on _StringsZhHk {
         return 'Could not get a valid response from the cover source. Check your network and retry.';
       case 'scrape_reason_server':
         return 'The cover source returned an error. Try again later or pick another candidate.';
+      case 'common_more_actions':
+        return 'More actions';
       default:
         return null;
     }
