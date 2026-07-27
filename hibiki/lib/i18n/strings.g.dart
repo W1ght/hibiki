@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 44574 (2622 per locale)
+/// Strings: 44591 (2623 per locale)
 ///
-/// Built on 2026-07-27 at 06:19 UTC
+/// Built on 2026-07-27 at 07:06 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3493,6 +3493,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
   String get yomitan_port_kill_self_instance =>
       'This process is another running instance of this app.';
+  String get game_track_bgm => 'BGM / excluded';
 }
 
 // Path: <root>
@@ -9456,6 +9457,8 @@ class _StringsAr extends _StringsEn {
   @override
   String get yomitan_port_kill_self_instance =>
       'This process is another running instance of this app.';
+  @override
+  String get game_track_bgm => 'BGM / excluded';
 }
 
 // Path: <root>
@@ -15487,6 +15490,8 @@ class _StringsDe extends _StringsEn {
   @override
   String get yomitan_port_kill_self_instance =>
       'This process is another running instance of this app.';
+  @override
+  String get game_track_bgm => 'BGM / excluded';
 }
 
 // Path: <root>
@@ -21534,6 +21539,8 @@ class _StringsEs extends _StringsEn {
   @override
   String get yomitan_port_kill_self_instance =>
       'This process is another running instance of this app.';
+  @override
+  String get game_track_bgm => 'BGM / excluded';
 }
 
 // Path: <root>
@@ -27592,6 +27599,8 @@ class _StringsFr extends _StringsEn {
   @override
   String get yomitan_port_kill_self_instance =>
       'This process is another running instance of this app.';
+  @override
+  String get game_track_bgm => 'BGM / excluded';
 }
 
 // Path: <root>
@@ -33579,6 +33588,8 @@ class _StringsId extends _StringsEn {
   @override
   String get yomitan_port_kill_self_instance =>
       'This process is another running instance of this app.';
+  @override
+  String get game_track_bgm => 'BGM / excluded';
 }
 
 // Path: <root>
@@ -39612,6 +39623,8 @@ class _StringsIt extends _StringsEn {
   @override
   String get yomitan_port_kill_self_instance =>
       'This process is another running instance of this app.';
+  @override
+  String get game_track_bgm => 'BGM / excluded';
 }
 
 // Path: <root>
@@ -45461,6 +45474,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get yomitan_port_kill_self_instance =>
       'This process is another running instance of this app.';
+  @override
+  String get game_track_bgm => 'BGM / excluded';
 }
 
 // Path: <root>
@@ -51312,6 +51327,8 @@ class _StringsKo extends _StringsEn {
   @override
   String get yomitan_port_kill_self_instance =>
       'This process is another running instance of this app.';
+  @override
+  String get game_track_bgm => 'BGM / excluded';
 }
 
 // Path: <root>
@@ -57325,6 +57342,8 @@ class _StringsNl extends _StringsEn {
   @override
   String get yomitan_port_kill_self_instance =>
       'This process is another running instance of this app.';
+  @override
+  String get game_track_bgm => 'BGM / excluded';
 }
 
 // Path: <root>
@@ -63351,6 +63370,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get yomitan_port_kill_self_instance =>
       'This process is another running instance of this app.';
+  @override
+  String get game_track_bgm => 'BGM / excluded';
 }
 
 // Path: <root>
@@ -69361,6 +69382,8 @@ class _StringsRu extends _StringsEn {
   @override
   String get yomitan_port_kill_self_instance =>
       'This process is another running instance of this app.';
+  @override
+  String get game_track_bgm => 'BGM / excluded';
 }
 
 // Path: <root>
@@ -75319,6 +75342,8 @@ class _StringsTh extends _StringsEn {
   @override
   String get yomitan_port_kill_self_instance =>
       'This process is another running instance of this app.';
+  @override
+  String get game_track_bgm => 'BGM / excluded';
 }
 
 // Path: <root>
@@ -81309,6 +81334,8 @@ class _StringsTr extends _StringsEn {
   @override
   String get yomitan_port_kill_self_instance =>
       'This process is another running instance of this app.';
+  @override
+  String get game_track_bgm => 'BGM / excluded';
 }
 
 // Path: <root>
@@ -87284,6 +87311,8 @@ class _StringsVi extends _StringsEn {
   @override
   String get yomitan_port_kill_self_instance =>
       'This process is another running instance of this app.';
+  @override
+  String get game_track_bgm => 'BGM / excluded';
 }
 
 // Path: <root>
@@ -92851,6 +92880,8 @@ class _StringsZhCn extends _StringsEn {
       '${process} 是关键系统进程，Hibiki 不会结束它；请改用其他端口。';
   @override
   String get yomitan_port_kill_self_instance => '该进程是本应用的另一个正在运行的实例。';
+  @override
+  String get game_track_bgm => 'BGM / 已排除';
 }
 
 // Path: <root>
@@ -98622,6 +98653,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get yomitan_port_kill_self_instance =>
       'This process is another running instance of this app.';
+  @override
+  String get game_track_bgm => 'BGM / excluded';
 }
 
 /// Flat map(s) containing all translations.
@@ -103982,6 +104015,8 @@ extension on _StringsEn {
             '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
       case 'yomitan_port_kill_self_instance':
         return 'This process is another running instance of this app.';
+      case 'game_track_bgm':
+        return 'BGM / excluded';
       default:
         return null;
     }
@@ -109340,6 +109375,8 @@ extension on _StringsAr {
             '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
       case 'yomitan_port_kill_self_instance':
         return 'This process is another running instance of this app.';
+      case 'game_track_bgm':
+        return 'BGM / excluded';
       default:
         return null;
     }
@@ -114719,6 +114756,8 @@ extension on _StringsDe {
             '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
       case 'yomitan_port_kill_self_instance':
         return 'This process is another running instance of this app.';
+      case 'game_track_bgm':
+        return 'BGM / excluded';
       default:
         return null;
     }
@@ -120097,6 +120136,8 @@ extension on _StringsEs {
             '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
       case 'yomitan_port_kill_self_instance':
         return 'This process is another running instance of this app.';
+      case 'game_track_bgm':
+        return 'BGM / excluded';
       default:
         return null;
     }
@@ -125481,6 +125522,8 @@ extension on _StringsFr {
             '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
       case 'yomitan_port_kill_self_instance':
         return 'This process is another running instance of this app.';
+      case 'game_track_bgm':
+        return 'BGM / excluded';
       default:
         return null;
     }
@@ -130847,6 +130890,8 @@ extension on _StringsId {
             '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
       case 'yomitan_port_kill_self_instance':
         return 'This process is another running instance of this app.';
+      case 'game_track_bgm':
+        return 'BGM / excluded';
       default:
         return null;
     }
@@ -136228,6 +136273,8 @@ extension on _StringsIt {
             '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
       case 'yomitan_port_kill_self_instance':
         return 'This process is another running instance of this app.';
+      case 'game_track_bgm':
+        return 'BGM / excluded';
       default:
         return null;
     }
@@ -141571,6 +141618,8 @@ extension on _StringsJa {
             '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
       case 'yomitan_port_kill_self_instance':
         return 'This process is another running instance of this app.';
+      case 'game_track_bgm':
+        return 'BGM / excluded';
       default:
         return null;
     }
@@ -146918,6 +146967,8 @@ extension on _StringsKo {
             '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
       case 'yomitan_port_kill_self_instance':
         return 'This process is another running instance of this app.';
+      case 'game_track_bgm':
+        return 'BGM / excluded';
       default:
         return null;
     }
@@ -152292,6 +152343,8 @@ extension on _StringsNl {
             '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
       case 'yomitan_port_kill_self_instance':
         return 'This process is another running instance of this app.';
+      case 'game_track_bgm':
+        return 'BGM / excluded';
       default:
         return null;
     }
@@ -157663,6 +157716,8 @@ extension on _StringsPtBr {
             '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
       case 'yomitan_port_kill_self_instance':
         return 'This process is another running instance of this app.';
+      case 'game_track_bgm':
+        return 'BGM / excluded';
       default:
         return null;
     }
@@ -163039,6 +163094,8 @@ extension on _StringsRu {
             '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
       case 'yomitan_port_kill_self_instance':
         return 'This process is another running instance of this app.';
+      case 'game_track_bgm':
+        return 'BGM / excluded';
       default:
         return null;
     }
@@ -168399,6 +168456,8 @@ extension on _StringsTh {
             '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
       case 'yomitan_port_kill_self_instance':
         return 'This process is another running instance of this app.';
+      case 'game_track_bgm':
+        return 'BGM / excluded';
       default:
         return null;
     }
@@ -173768,6 +173827,8 @@ extension on _StringsTr {
             '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
       case 'yomitan_port_kill_self_instance':
         return 'This process is another running instance of this app.';
+      case 'game_track_bgm':
+        return 'BGM / excluded';
       default:
         return null;
     }
@@ -179132,6 +179193,8 @@ extension on _StringsVi {
             '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
       case 'yomitan_port_kill_self_instance':
         return 'This process is another running instance of this app.';
+      case 'game_track_bgm':
+        return 'BGM / excluded';
       default:
         return null;
     }
@@ -184450,6 +184513,8 @@ extension on _StringsZhCn {
             '${process} 是关键系统进程，Hibiki 不会结束它；请改用其他端口。';
       case 'yomitan_port_kill_self_instance':
         return '该进程是本应用的另一个正在运行的实例。';
+      case 'game_track_bgm':
+        return 'BGM / 已排除';
       default:
         return null;
     }
@@ -189788,6 +189853,8 @@ extension on _StringsZhHk {
             '${process} is a critical system process — Hibiki will not end it. Change the port instead.';
       case 'yomitan_port_kill_self_instance':
         return 'This process is another running instance of this app.';
+      case 'game_track_bgm':
+        return 'BGM / excluded';
       default:
         return null;
     }
