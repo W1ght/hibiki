@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 45543 (2679 per locale)
+/// Strings: 45560 (2680 per locale)
 ///
-/// Built on 2026-07-27 at 18:27 UTC
+/// Built on 2026-07-27 at 19:04 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3586,6 +3586,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get media_tracking_status => 'Collection status';
   String get media_tracking_signup => 'Create a Bangumi account';
   String get media_tracking_game => 'Game';
+  String get download_rate_limit_lan_exempt =>
+      'Does not apply within your local network; LAN transfers always run at full speed.';
 }
 
 // Path: <root>
@@ -9699,6 +9701,9 @@ class _StringsAr extends _StringsEn {
   String get media_tracking_signup => 'Create a Bangumi account';
   @override
   String get media_tracking_game => 'Game';
+  @override
+  String get download_rate_limit_lan_exempt =>
+      'Does not apply within your local network; LAN transfers always run at full speed.';
 }
 
 // Path: <root>
@@ -15880,6 +15885,9 @@ class _StringsDe extends _StringsEn {
   String get media_tracking_signup => 'Create a Bangumi account';
   @override
   String get media_tracking_game => 'Game';
+  @override
+  String get download_rate_limit_lan_exempt =>
+      'Does not apply within your local network; LAN transfers always run at full speed.';
 }
 
 // Path: <root>
@@ -22077,6 +22085,9 @@ class _StringsEs extends _StringsEn {
   String get media_tracking_signup => 'Create a Bangumi account';
   @override
   String get media_tracking_game => 'Game';
+  @override
+  String get download_rate_limit_lan_exempt =>
+      'Does not apply within your local network; LAN transfers always run at full speed.';
 }
 
 // Path: <root>
@@ -28285,6 +28296,9 @@ class _StringsFr extends _StringsEn {
   String get media_tracking_signup => 'Create a Bangumi account';
   @override
   String get media_tracking_game => 'Game';
+  @override
+  String get download_rate_limit_lan_exempt =>
+      'Does not apply within your local network; LAN transfers always run at full speed.';
 }
 
 // Path: <root>
@@ -34422,6 +34436,9 @@ class _StringsId extends _StringsEn {
   String get media_tracking_signup => 'Create a Bangumi account';
   @override
   String get media_tracking_game => 'Game';
+  @override
+  String get download_rate_limit_lan_exempt =>
+      'Does not apply within your local network; LAN transfers always run at full speed.';
 }
 
 // Path: <root>
@@ -40605,6 +40622,9 @@ class _StringsIt extends _StringsEn {
   String get media_tracking_signup => 'Create a Bangumi account';
   @override
   String get media_tracking_game => 'Game';
+  @override
+  String get download_rate_limit_lan_exempt =>
+      'Does not apply within your local network; LAN transfers always run at full speed.';
 }
 
 // Path: <root>
@@ -46605,6 +46625,9 @@ class _StringsJa extends _StringsEn {
   String get media_tracking_signup => 'Create a Bangumi account';
   @override
   String get media_tracking_game => 'Game';
+  @override
+  String get download_rate_limit_lan_exempt =>
+      'Does not apply within your local network; LAN transfers always run at full speed.';
 }
 
 // Path: <root>
@@ -52607,6 +52630,9 @@ class _StringsKo extends _StringsEn {
   String get media_tracking_signup => 'Create a Bangumi account';
   @override
   String get media_tracking_game => 'Game';
+  @override
+  String get download_rate_limit_lan_exempt =>
+      'Does not apply within your local network; LAN transfers always run at full speed.';
 }
 
 // Path: <root>
@@ -58770,6 +58796,9 @@ class _StringsNl extends _StringsEn {
   String get media_tracking_signup => 'Create a Bangumi account';
   @override
   String get media_tracking_game => 'Game';
+  @override
+  String get download_rate_limit_lan_exempt =>
+      'Does not apply within your local network; LAN transfers always run at full speed.';
 }
 
 // Path: <root>
@@ -64946,6 +64975,9 @@ class _StringsPtBr extends _StringsEn {
   String get media_tracking_signup => 'Create a Bangumi account';
   @override
   String get media_tracking_game => 'Game';
+  @override
+  String get download_rate_limit_lan_exempt =>
+      'Does not apply within your local network; LAN transfers always run at full speed.';
 }
 
 // Path: <root>
@@ -71106,6 +71138,9 @@ class _StringsRu extends _StringsEn {
   String get media_tracking_signup => 'Create a Bangumi account';
   @override
   String get media_tracking_game => 'Game';
+  @override
+  String get download_rate_limit_lan_exempt =>
+      'Does not apply within your local network; LAN transfers always run at full speed.';
 }
 
 // Path: <root>
@@ -77214,6 +77249,9 @@ class _StringsTh extends _StringsEn {
   String get media_tracking_signup => 'Create a Bangumi account';
   @override
   String get media_tracking_game => 'Game';
+  @override
+  String get download_rate_limit_lan_exempt =>
+      'Does not apply within your local network; LAN transfers always run at full speed.';
 }
 
 // Path: <root>
@@ -83354,6 +83392,9 @@ class _StringsTr extends _StringsEn {
   String get media_tracking_signup => 'Create a Bangumi account';
   @override
   String get media_tracking_game => 'Game';
+  @override
+  String get download_rate_limit_lan_exempt =>
+      'Does not apply within your local network; LAN transfers always run at full speed.';
 }
 
 // Path: <root>
@@ -89479,6 +89520,9 @@ class _StringsVi extends _StringsEn {
   String get media_tracking_signup => 'Create a Bangumi account';
   @override
   String get media_tracking_game => 'Game';
+  @override
+  String get download_rate_limit_lan_exempt =>
+      'Does not apply within your local network; LAN transfers always run at full speed.';
 }
 
 // Path: <root>
@@ -95179,6 +95223,8 @@ class _StringsZhCn extends _StringsEn {
   String get media_tracking_signup => '注册 Bangumi 账号';
   @override
   String get media_tracking_game => '游戏';
+  @override
+  String get download_rate_limit_lan_exempt => '不作用于局域网；局域网内的传输始终全速进行。';
 }
 
 // Path: <root>
@@ -101100,6 +101146,9 @@ class _StringsZhHk extends _StringsEn {
   String get media_tracking_signup => 'Create a Bangumi account';
   @override
   String get media_tracking_game => 'Game';
+  @override
+  String get download_rate_limit_lan_exempt =>
+      'Does not apply within your local network; LAN transfers always run at full speed.';
 }
 
 /// Flat map(s) containing all translations.
@@ -106587,6 +106636,8 @@ extension on _StringsEn {
         return 'Create a Bangumi account';
       case 'media_tracking_game':
         return 'Game';
+      case 'download_rate_limit_lan_exempt':
+        return 'Does not apply within your local network; LAN transfers always run at full speed.';
       default:
         return null;
     }
@@ -112072,6 +112123,8 @@ extension on _StringsAr {
         return 'Create a Bangumi account';
       case 'media_tracking_game':
         return 'Game';
+      case 'download_rate_limit_lan_exempt':
+        return 'Does not apply within your local network; LAN transfers always run at full speed.';
       default:
         return null;
     }
@@ -117578,6 +117631,8 @@ extension on _StringsDe {
         return 'Create a Bangumi account';
       case 'media_tracking_game':
         return 'Game';
+      case 'download_rate_limit_lan_exempt':
+        return 'Does not apply within your local network; LAN transfers always run at full speed.';
       default:
         return null;
     }
@@ -123083,6 +123138,8 @@ extension on _StringsEs {
         return 'Create a Bangumi account';
       case 'media_tracking_game':
         return 'Game';
+      case 'download_rate_limit_lan_exempt':
+        return 'Does not apply within your local network; LAN transfers always run at full speed.';
       default:
         return null;
     }
@@ -128594,6 +128651,8 @@ extension on _StringsFr {
         return 'Create a Bangumi account';
       case 'media_tracking_game':
         return 'Game';
+      case 'download_rate_limit_lan_exempt':
+        return 'Does not apply within your local network; LAN transfers always run at full speed.';
       default:
         return null;
     }
@@ -134087,6 +134146,8 @@ extension on _StringsId {
         return 'Create a Bangumi account';
       case 'media_tracking_game':
         return 'Game';
+      case 'download_rate_limit_lan_exempt':
+        return 'Does not apply within your local network; LAN transfers always run at full speed.';
       default:
         return null;
     }
@@ -139595,6 +139656,8 @@ extension on _StringsIt {
         return 'Create a Bangumi account';
       case 'media_tracking_game':
         return 'Game';
+      case 'download_rate_limit_lan_exempt':
+        return 'Does not apply within your local network; LAN transfers always run at full speed.';
       default:
         return null;
     }
@@ -145065,6 +145128,8 @@ extension on _StringsJa {
         return 'Create a Bangumi account';
       case 'media_tracking_game':
         return 'Game';
+      case 'download_rate_limit_lan_exempt':
+        return 'Does not apply within your local network; LAN transfers always run at full speed.';
       default:
         return null;
     }
@@ -150539,6 +150604,8 @@ extension on _StringsKo {
         return 'Create a Bangumi account';
       case 'media_tracking_game':
         return 'Game';
+      case 'download_rate_limit_lan_exempt':
+        return 'Does not apply within your local network; LAN transfers always run at full speed.';
       default:
         return null;
     }
@@ -156040,6 +156107,8 @@ extension on _StringsNl {
         return 'Create a Bangumi account';
       case 'media_tracking_game':
         return 'Game';
+      case 'download_rate_limit_lan_exempt':
+        return 'Does not apply within your local network; LAN transfers always run at full speed.';
       default:
         return null;
     }
@@ -161538,6 +161607,8 @@ extension on _StringsPtBr {
         return 'Create a Bangumi account';
       case 'media_tracking_game':
         return 'Game';
+      case 'download_rate_limit_lan_exempt':
+        return 'Does not apply within your local network; LAN transfers always run at full speed.';
       default:
         return null;
     }
@@ -167041,6 +167112,8 @@ extension on _StringsRu {
         return 'Create a Bangumi account';
       case 'media_tracking_game':
         return 'Game';
+      case 'download_rate_limit_lan_exempt':
+        return 'Does not apply within your local network; LAN transfers always run at full speed.';
       default:
         return null;
     }
@@ -172528,6 +172601,8 @@ extension on _StringsTh {
         return 'Create a Bangumi account';
       case 'media_tracking_game':
         return 'Game';
+      case 'download_rate_limit_lan_exempt':
+        return 'Does not apply within your local network; LAN transfers always run at full speed.';
       default:
         return null;
     }
@@ -178024,6 +178099,8 @@ extension on _StringsTr {
         return 'Create a Bangumi account';
       case 'media_tracking_game':
         return 'Game';
+      case 'download_rate_limit_lan_exempt':
+        return 'Does not apply within your local network; LAN transfers always run at full speed.';
       default:
         return null;
     }
@@ -183515,6 +183592,8 @@ extension on _StringsVi {
         return 'Create a Bangumi account';
       case 'media_tracking_game':
         return 'Game';
+      case 'download_rate_limit_lan_exempt':
+        return 'Does not apply within your local network; LAN transfers always run at full speed.';
       default:
         return null;
     }
@@ -188960,6 +189039,8 @@ extension on _StringsZhCn {
         return '注册 Bangumi 账号';
       case 'media_tracking_game':
         return '游戏';
+      case 'download_rate_limit_lan_exempt':
+        return '不作用于局域网；局域网内的传输始终全速进行。';
       default:
         return null;
     }
@@ -194425,6 +194506,8 @@ extension on _StringsZhHk {
         return 'Create a Bangumi account';
       case 'media_tracking_game':
         return 'Game';
+      case 'download_rate_limit_lan_exempt':
+        return 'Does not apply within your local network; LAN transfers always run at full speed.';
       default:
         return null;
     }
