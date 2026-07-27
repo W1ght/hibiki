@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 45492 (2676 per locale)
+/// Strings: 45543 (2679 per locale)
 ///
-/// Built on 2026-07-27 at 18:12 UTC
+/// Built on 2026-07-27 at 18:27 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3583,6 +3583,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String manga_ocr_acceleration_degraded(
           {required Object engine, required Object reason}) =>
       'GPU acceleration unavailable, running OCR on ${engine}: ${reason}';
+  String get media_tracking_status => 'Collection status';
+  String get media_tracking_signup => 'Create a Bangumi account';
+  String get media_tracking_game => 'Game';
 }
 
 // Path: <root>
@@ -9690,6 +9693,12 @@ class _StringsAr extends _StringsEn {
   String manga_ocr_acceleration_degraded(
           {required Object engine, required Object reason}) =>
       'GPU acceleration unavailable, running OCR on ${engine}: ${reason}';
+  @override
+  String get media_tracking_status => 'Collection status';
+  @override
+  String get media_tracking_signup => 'Create a Bangumi account';
+  @override
+  String get media_tracking_game => 'Game';
 }
 
 // Path: <root>
@@ -15865,6 +15874,12 @@ class _StringsDe extends _StringsEn {
   String manga_ocr_acceleration_degraded(
           {required Object engine, required Object reason}) =>
       'GPU acceleration unavailable, running OCR on ${engine}: ${reason}';
+  @override
+  String get media_tracking_status => 'Collection status';
+  @override
+  String get media_tracking_signup => 'Create a Bangumi account';
+  @override
+  String get media_tracking_game => 'Game';
 }
 
 // Path: <root>
@@ -22056,6 +22071,12 @@ class _StringsEs extends _StringsEn {
   String manga_ocr_acceleration_degraded(
           {required Object engine, required Object reason}) =>
       'GPU acceleration unavailable, running OCR on ${engine}: ${reason}';
+  @override
+  String get media_tracking_status => 'Collection status';
+  @override
+  String get media_tracking_signup => 'Create a Bangumi account';
+  @override
+  String get media_tracking_game => 'Game';
 }
 
 // Path: <root>
@@ -28258,6 +28279,12 @@ class _StringsFr extends _StringsEn {
   String manga_ocr_acceleration_degraded(
           {required Object engine, required Object reason}) =>
       'GPU acceleration unavailable, running OCR on ${engine}: ${reason}';
+  @override
+  String get media_tracking_status => 'Collection status';
+  @override
+  String get media_tracking_signup => 'Create a Bangumi account';
+  @override
+  String get media_tracking_game => 'Game';
 }
 
 // Path: <root>
@@ -34389,6 +34416,12 @@ class _StringsId extends _StringsEn {
   String manga_ocr_acceleration_degraded(
           {required Object engine, required Object reason}) =>
       'GPU acceleration unavailable, running OCR on ${engine}: ${reason}';
+  @override
+  String get media_tracking_status => 'Collection status';
+  @override
+  String get media_tracking_signup => 'Create a Bangumi account';
+  @override
+  String get media_tracking_game => 'Game';
 }
 
 // Path: <root>
@@ -40566,6 +40599,12 @@ class _StringsIt extends _StringsEn {
   String manga_ocr_acceleration_degraded(
           {required Object engine, required Object reason}) =>
       'GPU acceleration unavailable, running OCR on ${engine}: ${reason}';
+  @override
+  String get media_tracking_status => 'Collection status';
+  @override
+  String get media_tracking_signup => 'Create a Bangumi account';
+  @override
+  String get media_tracking_game => 'Game';
 }
 
 // Path: <root>
@@ -46560,6 +46599,12 @@ class _StringsJa extends _StringsEn {
   String manga_ocr_acceleration_degraded(
           {required Object engine, required Object reason}) =>
       'GPU acceleration unavailable, running OCR on ${engine}: ${reason}';
+  @override
+  String get media_tracking_status => 'Collection status';
+  @override
+  String get media_tracking_signup => 'Create a Bangumi account';
+  @override
+  String get media_tracking_game => 'Game';
 }
 
 // Path: <root>
@@ -52556,6 +52601,12 @@ class _StringsKo extends _StringsEn {
   String manga_ocr_acceleration_degraded(
           {required Object engine, required Object reason}) =>
       'GPU acceleration unavailable, running OCR on ${engine}: ${reason}';
+  @override
+  String get media_tracking_status => 'Collection status';
+  @override
+  String get media_tracking_signup => 'Create a Bangumi account';
+  @override
+  String get media_tracking_game => 'Game';
 }
 
 // Path: <root>
@@ -58713,6 +58764,12 @@ class _StringsNl extends _StringsEn {
   String manga_ocr_acceleration_degraded(
           {required Object engine, required Object reason}) =>
       'GPU acceleration unavailable, running OCR on ${engine}: ${reason}';
+  @override
+  String get media_tracking_status => 'Collection status';
+  @override
+  String get media_tracking_signup => 'Create a Bangumi account';
+  @override
+  String get media_tracking_game => 'Game';
 }
 
 // Path: <root>
@@ -64883,6 +64940,12 @@ class _StringsPtBr extends _StringsEn {
   String manga_ocr_acceleration_degraded(
           {required Object engine, required Object reason}) =>
       'GPU acceleration unavailable, running OCR on ${engine}: ${reason}';
+  @override
+  String get media_tracking_status => 'Collection status';
+  @override
+  String get media_tracking_signup => 'Create a Bangumi account';
+  @override
+  String get media_tracking_game => 'Game';
 }
 
 // Path: <root>
@@ -71037,6 +71100,12 @@ class _StringsRu extends _StringsEn {
   String manga_ocr_acceleration_degraded(
           {required Object engine, required Object reason}) =>
       'GPU acceleration unavailable, running OCR on ${engine}: ${reason}';
+  @override
+  String get media_tracking_status => 'Collection status';
+  @override
+  String get media_tracking_signup => 'Create a Bangumi account';
+  @override
+  String get media_tracking_game => 'Game';
 }
 
 // Path: <root>
@@ -77139,6 +77208,12 @@ class _StringsTh extends _StringsEn {
   String manga_ocr_acceleration_degraded(
           {required Object engine, required Object reason}) =>
       'GPU acceleration unavailable, running OCR on ${engine}: ${reason}';
+  @override
+  String get media_tracking_status => 'Collection status';
+  @override
+  String get media_tracking_signup => 'Create a Bangumi account';
+  @override
+  String get media_tracking_game => 'Game';
 }
 
 // Path: <root>
@@ -83273,6 +83348,12 @@ class _StringsTr extends _StringsEn {
   String manga_ocr_acceleration_degraded(
           {required Object engine, required Object reason}) =>
       'GPU acceleration unavailable, running OCR on ${engine}: ${reason}';
+  @override
+  String get media_tracking_status => 'Collection status';
+  @override
+  String get media_tracking_signup => 'Create a Bangumi account';
+  @override
+  String get media_tracking_game => 'Game';
 }
 
 // Path: <root>
@@ -89392,6 +89473,12 @@ class _StringsVi extends _StringsEn {
   String manga_ocr_acceleration_degraded(
           {required Object engine, required Object reason}) =>
       'GPU acceleration unavailable, running OCR on ${engine}: ${reason}';
+  @override
+  String get media_tracking_status => 'Collection status';
+  @override
+  String get media_tracking_signup => 'Create a Bangumi account';
+  @override
+  String get media_tracking_game => 'Game';
 }
 
 // Path: <root>
@@ -95086,6 +95173,12 @@ class _StringsZhCn extends _StringsEn {
   String manga_ocr_acceleration_degraded(
           {required Object engine, required Object reason}) =>
       'GPU 加速不可用，OCR 改用 ${engine} 运行：${reason}';
+  @override
+  String get media_tracking_status => '收藏状态';
+  @override
+  String get media_tracking_signup => '注册 Bangumi 账号';
+  @override
+  String get media_tracking_game => '游戏';
 }
 
 // Path: <root>
@@ -101001,6 +101094,12 @@ class _StringsZhHk extends _StringsEn {
   String manga_ocr_acceleration_degraded(
           {required Object engine, required Object reason}) =>
       'GPU acceleration unavailable, running OCR on ${engine}: ${reason}';
+  @override
+  String get media_tracking_status => 'Collection status';
+  @override
+  String get media_tracking_signup => 'Create a Bangumi account';
+  @override
+  String get media_tracking_game => 'Game';
 }
 
 /// Flat map(s) containing all translations.
@@ -106482,6 +106581,12 @@ extension on _StringsEn {
       case 'manga_ocr_acceleration_degraded':
         return ({required Object engine, required Object reason}) =>
             'GPU acceleration unavailable, running OCR on ${engine}: ${reason}';
+      case 'media_tracking_status':
+        return 'Collection status';
+      case 'media_tracking_signup':
+        return 'Create a Bangumi account';
+      case 'media_tracking_game':
+        return 'Game';
       default:
         return null;
     }
@@ -111961,6 +112066,12 @@ extension on _StringsAr {
       case 'manga_ocr_acceleration_degraded':
         return ({required Object engine, required Object reason}) =>
             'GPU acceleration unavailable, running OCR on ${engine}: ${reason}';
+      case 'media_tracking_status':
+        return 'Collection status';
+      case 'media_tracking_signup':
+        return 'Create a Bangumi account';
+      case 'media_tracking_game':
+        return 'Game';
       default:
         return null;
     }
@@ -117461,6 +117572,12 @@ extension on _StringsDe {
       case 'manga_ocr_acceleration_degraded':
         return ({required Object engine, required Object reason}) =>
             'GPU acceleration unavailable, running OCR on ${engine}: ${reason}';
+      case 'media_tracking_status':
+        return 'Collection status';
+      case 'media_tracking_signup':
+        return 'Create a Bangumi account';
+      case 'media_tracking_game':
+        return 'Game';
       default:
         return null;
     }
@@ -122960,6 +123077,12 @@ extension on _StringsEs {
       case 'manga_ocr_acceleration_degraded':
         return ({required Object engine, required Object reason}) =>
             'GPU acceleration unavailable, running OCR on ${engine}: ${reason}';
+      case 'media_tracking_status':
+        return 'Collection status';
+      case 'media_tracking_signup':
+        return 'Create a Bangumi account';
+      case 'media_tracking_game':
+        return 'Game';
       default:
         return null;
     }
@@ -128465,6 +128588,12 @@ extension on _StringsFr {
       case 'manga_ocr_acceleration_degraded':
         return ({required Object engine, required Object reason}) =>
             'GPU acceleration unavailable, running OCR on ${engine}: ${reason}';
+      case 'media_tracking_status':
+        return 'Collection status';
+      case 'media_tracking_signup':
+        return 'Create a Bangumi account';
+      case 'media_tracking_game':
+        return 'Game';
       default:
         return null;
     }
@@ -133952,6 +134081,12 @@ extension on _StringsId {
       case 'manga_ocr_acceleration_degraded':
         return ({required Object engine, required Object reason}) =>
             'GPU acceleration unavailable, running OCR on ${engine}: ${reason}';
+      case 'media_tracking_status':
+        return 'Collection status';
+      case 'media_tracking_signup':
+        return 'Create a Bangumi account';
+      case 'media_tracking_game':
+        return 'Game';
       default:
         return null;
     }
@@ -139454,6 +139589,12 @@ extension on _StringsIt {
       case 'manga_ocr_acceleration_degraded':
         return ({required Object engine, required Object reason}) =>
             'GPU acceleration unavailable, running OCR on ${engine}: ${reason}';
+      case 'media_tracking_status':
+        return 'Collection status';
+      case 'media_tracking_signup':
+        return 'Create a Bangumi account';
+      case 'media_tracking_game':
+        return 'Game';
       default:
         return null;
     }
@@ -144918,6 +145059,12 @@ extension on _StringsJa {
       case 'manga_ocr_acceleration_degraded':
         return ({required Object engine, required Object reason}) =>
             'GPU acceleration unavailable, running OCR on ${engine}: ${reason}';
+      case 'media_tracking_status':
+        return 'Collection status';
+      case 'media_tracking_signup':
+        return 'Create a Bangumi account';
+      case 'media_tracking_game':
+        return 'Game';
       default:
         return null;
     }
@@ -150386,6 +150533,12 @@ extension on _StringsKo {
       case 'manga_ocr_acceleration_degraded':
         return ({required Object engine, required Object reason}) =>
             'GPU acceleration unavailable, running OCR on ${engine}: ${reason}';
+      case 'media_tracking_status':
+        return 'Collection status';
+      case 'media_tracking_signup':
+        return 'Create a Bangumi account';
+      case 'media_tracking_game':
+        return 'Game';
       default:
         return null;
     }
@@ -155881,6 +156034,12 @@ extension on _StringsNl {
       case 'manga_ocr_acceleration_degraded':
         return ({required Object engine, required Object reason}) =>
             'GPU acceleration unavailable, running OCR on ${engine}: ${reason}';
+      case 'media_tracking_status':
+        return 'Collection status';
+      case 'media_tracking_signup':
+        return 'Create a Bangumi account';
+      case 'media_tracking_game':
+        return 'Game';
       default:
         return null;
     }
@@ -161373,6 +161532,12 @@ extension on _StringsPtBr {
       case 'manga_ocr_acceleration_degraded':
         return ({required Object engine, required Object reason}) =>
             'GPU acceleration unavailable, running OCR on ${engine}: ${reason}';
+      case 'media_tracking_status':
+        return 'Collection status';
+      case 'media_tracking_signup':
+        return 'Create a Bangumi account';
+      case 'media_tracking_game':
+        return 'Game';
       default:
         return null;
     }
@@ -166870,6 +167035,12 @@ extension on _StringsRu {
       case 'manga_ocr_acceleration_degraded':
         return ({required Object engine, required Object reason}) =>
             'GPU acceleration unavailable, running OCR on ${engine}: ${reason}';
+      case 'media_tracking_status':
+        return 'Collection status';
+      case 'media_tracking_signup':
+        return 'Create a Bangumi account';
+      case 'media_tracking_game':
+        return 'Game';
       default:
         return null;
     }
@@ -172351,6 +172522,12 @@ extension on _StringsTh {
       case 'manga_ocr_acceleration_degraded':
         return ({required Object engine, required Object reason}) =>
             'GPU acceleration unavailable, running OCR on ${engine}: ${reason}';
+      case 'media_tracking_status':
+        return 'Collection status';
+      case 'media_tracking_signup':
+        return 'Create a Bangumi account';
+      case 'media_tracking_game':
+        return 'Game';
       default:
         return null;
     }
@@ -177841,6 +178018,12 @@ extension on _StringsTr {
       case 'manga_ocr_acceleration_degraded':
         return ({required Object engine, required Object reason}) =>
             'GPU acceleration unavailable, running OCR on ${engine}: ${reason}';
+      case 'media_tracking_status':
+        return 'Collection status';
+      case 'media_tracking_signup':
+        return 'Create a Bangumi account';
+      case 'media_tracking_game':
+        return 'Game';
       default:
         return null;
     }
@@ -183326,6 +183509,12 @@ extension on _StringsVi {
       case 'manga_ocr_acceleration_degraded':
         return ({required Object engine, required Object reason}) =>
             'GPU acceleration unavailable, running OCR on ${engine}: ${reason}';
+      case 'media_tracking_status':
+        return 'Collection status';
+      case 'media_tracking_signup':
+        return 'Create a Bangumi account';
+      case 'media_tracking_game':
+        return 'Game';
       default:
         return null;
     }
@@ -188765,6 +188954,12 @@ extension on _StringsZhCn {
       case 'manga_ocr_acceleration_degraded':
         return ({required Object engine, required Object reason}) =>
             'GPU 加速不可用，OCR 改用 ${engine} 运行：${reason}';
+      case 'media_tracking_status':
+        return '收藏状态';
+      case 'media_tracking_signup':
+        return '注册 Bangumi 账号';
+      case 'media_tracking_game':
+        return '游戏';
       default:
         return null;
     }
@@ -194224,6 +194419,12 @@ extension on _StringsZhHk {
       case 'manga_ocr_acceleration_degraded':
         return ({required Object engine, required Object reason}) =>
             'GPU acceleration unavailable, running OCR on ${engine}: ${reason}';
+      case 'media_tracking_status':
+        return 'Collection status';
+      case 'media_tracking_signup':
+        return 'Create a Bangumi account';
+      case 'media_tracking_game':
+        return 'Game';
       default:
         return null;
     }
