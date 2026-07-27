@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 44013 (2589 per locale)
+/// Strings: 44064 (2592 per locale)
 ///
-/// Built on 2026-07-27 at 02:08 UTC
+/// Built on 2026-07-27 at 05:46 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -1401,6 +1401,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get game_line_track_tooltip => 'Pick the voice track for this line';
   String get game_line_unfavorite_tooltip => 'Remove favorite';
   String get game_live_lines => 'Live lines';
+  String get game_manage_tracks => 'Manage audio tracks';
   String get game_meta_added => 'Added';
   String get game_meta_ranking => 'Ranking';
   String get game_meta_source => 'Data source';
@@ -1494,6 +1495,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get game_track_clips => 'Clips';
   String get game_track_energy => 'Energy';
   String get game_track_exclude_bgm => 'Mark as BGM';
+  String get game_track_exclusion_hint =>
+      'Mark a BGM/ambience track as excluded so auto-selection never treats it as voice — lines without speech no longer pick up BGM.';
+  String get game_track_exclusion_title => 'Exclude audio tracks';
   String get game_track_no_clips => 'No clips in the recent window';
   String get game_track_preview => 'Preview this track';
   String get game_track_preview_failed =>
@@ -5619,6 +5623,8 @@ class _StringsAr extends _StringsEn {
   @override
   String get game_live_lines => 'Live lines';
   @override
+  String get game_manage_tracks => 'Manage audio tracks';
+  @override
   String get game_meta_added => 'Added';
   @override
   String get game_meta_ranking => 'Ranking';
@@ -5799,6 +5805,11 @@ class _StringsAr extends _StringsEn {
   String get game_track_energy => 'Energy';
   @override
   String get game_track_exclude_bgm => 'Mark as BGM';
+  @override
+  String get game_track_exclusion_hint =>
+      'Mark a BGM/ambience track as excluded so auto-selection never treats it as voice — lines without speech no longer pick up BGM.';
+  @override
+  String get game_track_exclusion_title => 'Exclude audio tracks';
   @override
   String get game_track_no_clips => 'No clips in the recent window';
   @override
@@ -11537,6 +11548,8 @@ class _StringsDe extends _StringsEn {
   @override
   String get game_live_lines => 'Live lines';
   @override
+  String get game_manage_tracks => 'Manage audio tracks';
+  @override
   String get game_meta_added => 'Added';
   @override
   String get game_meta_ranking => 'Ranking';
@@ -11717,6 +11730,11 @@ class _StringsDe extends _StringsEn {
   String get game_track_energy => 'Energy';
   @override
   String get game_track_exclude_bgm => 'Mark as BGM';
+  @override
+  String get game_track_exclusion_hint =>
+      'Mark a BGM/ambience track as excluded so auto-selection never treats it as voice — lines without speech no longer pick up BGM.';
+  @override
+  String get game_track_exclusion_title => 'Exclude audio tracks';
   @override
   String get game_track_no_clips => 'No clips in the recent window';
   @override
@@ -17496,6 +17514,8 @@ class _StringsEs extends _StringsEn {
   @override
   String get game_live_lines => 'Live lines';
   @override
+  String get game_manage_tracks => 'Manage audio tracks';
+  @override
   String get game_meta_added => 'Added';
   @override
   String get game_meta_ranking => 'Ranking';
@@ -17676,6 +17696,11 @@ class _StringsEs extends _StringsEn {
   String get game_track_energy => 'Energy';
   @override
   String get game_track_exclude_bgm => 'Mark as BGM';
+  @override
+  String get game_track_exclusion_hint =>
+      'Mark a BGM/ambience track as excluded so auto-selection never treats it as voice — lines without speech no longer pick up BGM.';
+  @override
+  String get game_track_exclusion_title => 'Exclude audio tracks';
   @override
   String get game_track_no_clips => 'No clips in the recent window';
   @override
@@ -23478,6 +23503,8 @@ class _StringsFr extends _StringsEn {
   @override
   String get game_live_lines => 'Live lines';
   @override
+  String get game_manage_tracks => 'Manage audio tracks';
+  @override
   String get game_meta_added => 'Added';
   @override
   String get game_meta_ranking => 'Ranking';
@@ -23658,6 +23685,11 @@ class _StringsFr extends _StringsEn {
   String get game_track_energy => 'Energy';
   @override
   String get game_track_exclude_bgm => 'Mark as BGM';
+  @override
+  String get game_track_exclusion_hint =>
+      'Mark a BGM/ambience track as excluded so auto-selection never treats it as voice — lines without speech no longer pick up BGM.';
+  @override
+  String get game_track_exclusion_title => 'Exclude audio tracks';
   @override
   String get game_track_no_clips => 'No clips in the recent window';
   @override
@@ -29429,6 +29461,8 @@ class _StringsId extends _StringsEn {
   @override
   String get game_live_lines => 'Live lines';
   @override
+  String get game_manage_tracks => 'Manage audio tracks';
+  @override
   String get game_meta_added => 'Added';
   @override
   String get game_meta_ranking => 'Ranking';
@@ -29609,6 +29643,11 @@ class _StringsId extends _StringsEn {
   String get game_track_energy => 'Energy';
   @override
   String get game_track_exclude_bgm => 'Mark as BGM';
+  @override
+  String get game_track_exclusion_hint =>
+      'Mark a BGM/ambience track as excluded so auto-selection never treats it as voice — lines without speech no longer pick up BGM.';
+  @override
+  String get game_track_exclusion_title => 'Exclude audio tracks';
   @override
   String get game_track_no_clips => 'No clips in the recent window';
   @override
@@ -35363,6 +35402,8 @@ class _StringsIt extends _StringsEn {
   @override
   String get game_live_lines => 'Live lines';
   @override
+  String get game_manage_tracks => 'Manage audio tracks';
+  @override
   String get game_meta_added => 'Added';
   @override
   String get game_meta_ranking => 'Ranking';
@@ -35543,6 +35584,11 @@ class _StringsIt extends _StringsEn {
   String get game_track_energy => 'Energy';
   @override
   String get game_track_exclude_bgm => 'Mark as BGM';
+  @override
+  String get game_track_exclusion_hint =>
+      'Mark a BGM/ambience track as excluded so auto-selection never treats it as voice — lines without speech no longer pick up BGM.';
+  @override
+  String get game_track_exclusion_title => 'Exclude audio tracks';
   @override
   String get game_track_no_clips => 'No clips in the recent window';
   @override
@@ -41267,6 +41313,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get game_live_lines => 'Live lines';
   @override
+  String get game_manage_tracks => '音声トラックを管理';
+  @override
   String get game_meta_added => 'Added';
   @override
   String get game_meta_ranking => 'Ranking';
@@ -41447,6 +41495,11 @@ class _StringsJa extends _StringsEn {
   String get game_track_energy => 'Energy';
   @override
   String get game_track_exclude_bgm => 'Mark as BGM';
+  @override
+  String get game_track_exclusion_hint =>
+      'BGM／環境音のトラックを除外に設定すると、自動選択がそれを音声として扱わなくなります——音声のないセリフで BGM を拾わなくなります。';
+  @override
+  String get game_track_exclusion_title => '音声トラックを除外';
   @override
   String get game_track_no_clips => 'No clips in the recent window';
   @override
@@ -47043,6 +47096,8 @@ class _StringsKo extends _StringsEn {
   @override
   String get game_live_lines => 'Live lines';
   @override
+  String get game_manage_tracks => 'Manage audio tracks';
+  @override
   String get game_meta_added => 'Added';
   @override
   String get game_meta_ranking => 'Ranking';
@@ -47223,6 +47278,11 @@ class _StringsKo extends _StringsEn {
   String get game_track_energy => 'Energy';
   @override
   String get game_track_exclude_bgm => 'Mark as BGM';
+  @override
+  String get game_track_exclusion_hint =>
+      'Mark a BGM/ambience track as excluded so auto-selection never treats it as voice — lines without speech no longer pick up BGM.';
+  @override
+  String get game_track_exclusion_title => 'Exclude audio tracks';
   @override
   String get game_track_no_clips => 'No clips in the recent window';
   @override
@@ -52871,6 +52931,8 @@ class _StringsNl extends _StringsEn {
   @override
   String get game_live_lines => 'Live lines';
   @override
+  String get game_manage_tracks => 'Manage audio tracks';
+  @override
   String get game_meta_added => 'Added';
   @override
   String get game_meta_ranking => 'Ranking';
@@ -53051,6 +53113,11 @@ class _StringsNl extends _StringsEn {
   String get game_track_energy => 'Energy';
   @override
   String get game_track_exclude_bgm => 'Mark as BGM';
+  @override
+  String get game_track_exclusion_hint =>
+      'Mark a BGM/ambience track as excluded so auto-selection never treats it as voice — lines without speech no longer pick up BGM.';
+  @override
+  String get game_track_exclusion_title => 'Exclude audio tracks';
   @override
   String get game_track_no_clips => 'No clips in the recent window';
   @override
@@ -58819,6 +58886,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get game_live_lines => 'Live lines';
   @override
+  String get game_manage_tracks => 'Manage audio tracks';
+  @override
   String get game_meta_added => 'Added';
   @override
   String get game_meta_ranking => 'Ranking';
@@ -58999,6 +59068,11 @@ class _StringsPtBr extends _StringsEn {
   String get game_track_energy => 'Energy';
   @override
   String get game_track_exclude_bgm => 'Mark as BGM';
+  @override
+  String get game_track_exclusion_hint =>
+      'Mark a BGM/ambience track as excluded so auto-selection never treats it as voice — lines without speech no longer pick up BGM.';
+  @override
+  String get game_track_exclusion_title => 'Exclude audio tracks';
   @override
   String get game_track_no_clips => 'No clips in the recent window';
   @override
@@ -64764,6 +64838,8 @@ class _StringsRu extends _StringsEn {
   @override
   String get game_live_lines => 'Live lines';
   @override
+  String get game_manage_tracks => 'Manage audio tracks';
+  @override
   String get game_meta_added => 'Added';
   @override
   String get game_meta_ranking => 'Ranking';
@@ -64944,6 +65020,11 @@ class _StringsRu extends _StringsEn {
   String get game_track_energy => 'Energy';
   @override
   String get game_track_exclude_bgm => 'Mark as BGM';
+  @override
+  String get game_track_exclusion_hint =>
+      'Mark a BGM/ambience track as excluded so auto-selection never treats it as voice — lines without speech no longer pick up BGM.';
+  @override
+  String get game_track_exclusion_title => 'Exclude audio tracks';
   @override
   String get game_track_no_clips => 'No clips in the recent window';
   @override
@@ -70679,6 +70760,8 @@ class _StringsTh extends _StringsEn {
   @override
   String get game_live_lines => 'Live lines';
   @override
+  String get game_manage_tracks => 'Manage audio tracks';
+  @override
   String get game_meta_added => 'Added';
   @override
   String get game_meta_ranking => 'Ranking';
@@ -70859,6 +70942,11 @@ class _StringsTh extends _StringsEn {
   String get game_track_energy => 'Energy';
   @override
   String get game_track_exclude_bgm => 'Mark as BGM';
+  @override
+  String get game_track_exclusion_hint =>
+      'Mark a BGM/ambience track as excluded so auto-selection never treats it as voice — lines without speech no longer pick up BGM.';
+  @override
+  String get game_track_exclusion_title => 'Exclude audio tracks';
   @override
   String get game_track_no_clips => 'No clips in the recent window';
   @override
@@ -76582,6 +76670,8 @@ class _StringsTr extends _StringsEn {
   @override
   String get game_live_lines => 'Live lines';
   @override
+  String get game_manage_tracks => 'Manage audio tracks';
+  @override
   String get game_meta_added => 'Added';
   @override
   String get game_meta_ranking => 'Ranking';
@@ -76762,6 +76852,11 @@ class _StringsTr extends _StringsEn {
   String get game_track_energy => 'Energy';
   @override
   String get game_track_exclude_bgm => 'Mark as BGM';
+  @override
+  String get game_track_exclusion_hint =>
+      'Mark a BGM/ambience track as excluded so auto-selection never treats it as voice — lines without speech no longer pick up BGM.';
+  @override
+  String get game_track_exclusion_title => 'Exclude audio tracks';
   @override
   String get game_track_no_clips => 'No clips in the recent window';
   @override
@@ -82492,6 +82587,8 @@ class _StringsVi extends _StringsEn {
   @override
   String get game_live_lines => 'Live lines';
   @override
+  String get game_manage_tracks => 'Manage audio tracks';
+  @override
   String get game_meta_added => 'Added';
   @override
   String get game_meta_ranking => 'Ranking';
@@ -82672,6 +82769,11 @@ class _StringsVi extends _StringsEn {
   String get game_track_energy => 'Energy';
   @override
   String get game_track_exclude_bgm => 'Mark as BGM';
+  @override
+  String get game_track_exclusion_hint =>
+      'Mark a BGM/ambience track as excluded so auto-selection never treats it as voice — lines without speech no longer pick up BGM.';
+  @override
+  String get game_track_exclusion_title => 'Exclude audio tracks';
   @override
   String get game_track_no_clips => 'No clips in the recent window';
   @override
@@ -88236,6 +88338,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get game_live_lines => '实时台词';
   @override
+  String get game_manage_tracks => '管理音轨';
+  @override
   String get game_meta_added => '添加时间';
   @override
   String get game_meta_ranking => '游戏排行';
@@ -88412,6 +88516,11 @@ class _StringsZhCn extends _StringsEn {
   String get game_track_energy => '能量';
   @override
   String get game_track_exclude_bgm => '标记为 BGM';
+  @override
+  String get game_track_exclusion_hint =>
+      '把 BGM/环境音轨标记为排除，自动选源便不会把它当成语音——没有语音的台词也不会再读到 BGM。';
+  @override
+  String get game_track_exclusion_title => '排除音轨';
   @override
   String get game_track_no_clips => '近窗内没有片段';
   @override
@@ -93824,6 +93933,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get game_live_lines => 'Live lines';
   @override
+  String get game_manage_tracks => '管理音軌';
+  @override
   String get game_meta_added => 'Added';
   @override
   String get game_meta_ranking => 'Ranking';
@@ -94004,6 +94115,11 @@ class _StringsZhHk extends _StringsEn {
   String get game_track_energy => 'Energy';
   @override
   String get game_track_exclude_bgm => 'Mark as BGM';
+  @override
+  String get game_track_exclusion_hint =>
+      '把 BGM/環境音軌標記為排除，自動選源便不會把它當成語音——沒有語音的台詞也不會再讀到 BGM。';
+  @override
+  String get game_track_exclusion_title => '排除音軌';
   @override
   String get game_track_no_clips => 'No clips in the recent window';
   @override
@@ -99323,6 +99439,8 @@ extension on _StringsEn {
         return 'Remove favorite';
       case 'game_live_lines':
         return 'Live lines';
+      case 'game_manage_tracks':
+        return 'Manage audio tracks';
       case 'game_meta_added':
         return 'Added';
       case 'game_meta_ranking':
@@ -99499,6 +99617,10 @@ extension on _StringsEn {
         return 'Energy';
       case 'game_track_exclude_bgm':
         return 'Mark as BGM';
+      case 'game_track_exclusion_hint':
+        return 'Mark a BGM/ambience track as excluded so auto-selection never treats it as voice — lines without speech no longer pick up BGM.';
+      case 'game_track_exclusion_title':
+        return 'Exclude audio tracks';
       case 'game_track_no_clips':
         return 'No clips in the recent window';
       case 'game_track_preview':
@@ -104618,6 +104740,8 @@ extension on _StringsAr {
         return 'Remove favorite';
       case 'game_live_lines':
         return 'Live lines';
+      case 'game_manage_tracks':
+        return 'Manage audio tracks';
       case 'game_meta_added':
         return 'Added';
       case 'game_meta_ranking':
@@ -104794,6 +104918,10 @@ extension on _StringsAr {
         return 'Energy';
       case 'game_track_exclude_bgm':
         return 'Mark as BGM';
+      case 'game_track_exclusion_hint':
+        return 'Mark a BGM/ambience track as excluded so auto-selection never treats it as voice — lines without speech no longer pick up BGM.';
+      case 'game_track_exclusion_title':
+        return 'Exclude audio tracks';
       case 'game_track_no_clips':
         return 'No clips in the recent window';
       case 'game_track_preview':
@@ -109913,6 +110041,8 @@ extension on _StringsDe {
         return 'Remove favorite';
       case 'game_live_lines':
         return 'Live lines';
+      case 'game_manage_tracks':
+        return 'Manage audio tracks';
       case 'game_meta_added':
         return 'Added';
       case 'game_meta_ranking':
@@ -110089,6 +110219,10 @@ extension on _StringsDe {
         return 'Energy';
       case 'game_track_exclude_bgm':
         return 'Mark as BGM';
+      case 'game_track_exclusion_hint':
+        return 'Mark a BGM/ambience track as excluded so auto-selection never treats it as voice — lines without speech no longer pick up BGM.';
+      case 'game_track_exclusion_title':
+        return 'Exclude audio tracks';
       case 'game_track_no_clips':
         return 'No clips in the recent window';
       case 'game_track_preview':
@@ -115227,6 +115361,8 @@ extension on _StringsEs {
         return 'Remove favorite';
       case 'game_live_lines':
         return 'Live lines';
+      case 'game_manage_tracks':
+        return 'Manage audio tracks';
       case 'game_meta_added':
         return 'Added';
       case 'game_meta_ranking':
@@ -115403,6 +115539,10 @@ extension on _StringsEs {
         return 'Energy';
       case 'game_track_exclude_bgm':
         return 'Mark as BGM';
+      case 'game_track_exclusion_hint':
+        return 'Mark a BGM/ambience track as excluded so auto-selection never treats it as voice — lines without speech no longer pick up BGM.';
+      case 'game_track_exclusion_title':
+        return 'Exclude audio tracks';
       case 'game_track_no_clips':
         return 'No clips in the recent window';
       case 'game_track_preview':
@@ -120542,6 +120682,8 @@ extension on _StringsFr {
         return 'Remove favorite';
       case 'game_live_lines':
         return 'Live lines';
+      case 'game_manage_tracks':
+        return 'Manage audio tracks';
       case 'game_meta_added':
         return 'Added';
       case 'game_meta_ranking':
@@ -120718,6 +120860,10 @@ extension on _StringsFr {
         return 'Energy';
       case 'game_track_exclude_bgm':
         return 'Mark as BGM';
+      case 'game_track_exclusion_hint':
+        return 'Mark a BGM/ambience track as excluded so auto-selection never treats it as voice — lines without speech no longer pick up BGM.';
+      case 'game_track_exclusion_title':
+        return 'Exclude audio tracks';
       case 'game_track_no_clips':
         return 'No clips in the recent window';
       case 'game_track_preview':
@@ -125855,6 +126001,8 @@ extension on _StringsId {
         return 'Remove favorite';
       case 'game_live_lines':
         return 'Live lines';
+      case 'game_manage_tracks':
+        return 'Manage audio tracks';
       case 'game_meta_added':
         return 'Added';
       case 'game_meta_ranking':
@@ -126031,6 +126179,10 @@ extension on _StringsId {
         return 'Energy';
       case 'game_track_exclude_bgm':
         return 'Mark as BGM';
+      case 'game_track_exclusion_hint':
+        return 'Mark a BGM/ambience track as excluded so auto-selection never treats it as voice — lines without speech no longer pick up BGM.';
+      case 'game_track_exclusion_title':
+        return 'Exclude audio tracks';
       case 'game_track_no_clips':
         return 'No clips in the recent window';
       case 'game_track_preview':
@@ -131157,6 +131309,8 @@ extension on _StringsIt {
         return 'Remove favorite';
       case 'game_live_lines':
         return 'Live lines';
+      case 'game_manage_tracks':
+        return 'Manage audio tracks';
       case 'game_meta_added':
         return 'Added';
       case 'game_meta_ranking':
@@ -131333,6 +131487,10 @@ extension on _StringsIt {
         return 'Energy';
       case 'game_track_exclude_bgm':
         return 'Mark as BGM';
+      case 'game_track_exclusion_hint':
+        return 'Mark a BGM/ambience track as excluded so auto-selection never treats it as voice — lines without speech no longer pick up BGM.';
+      case 'game_track_exclusion_title':
+        return 'Exclude audio tracks';
       case 'game_track_no_clips':
         return 'No clips in the recent window';
       case 'game_track_preview':
@@ -136461,6 +136619,8 @@ extension on _StringsJa {
         return 'Remove favorite';
       case 'game_live_lines':
         return 'Live lines';
+      case 'game_manage_tracks':
+        return '音声トラックを管理';
       case 'game_meta_added':
         return 'Added';
       case 'game_meta_ranking':
@@ -136637,6 +136797,10 @@ extension on _StringsJa {
         return 'Energy';
       case 'game_track_exclude_bgm':
         return 'Mark as BGM';
+      case 'game_track_exclusion_hint':
+        return 'BGM／環境音のトラックを除外に設定すると、自動選択がそれを音声として扱わなくなります——音声のないセリフで BGM を拾わなくなります。';
+      case 'game_track_exclusion_title':
+        return '音声トラックを除外';
       case 'game_track_no_clips':
         return 'No clips in the recent window';
       case 'game_track_preview':
@@ -141739,6 +141903,8 @@ extension on _StringsKo {
         return 'Remove favorite';
       case 'game_live_lines':
         return 'Live lines';
+      case 'game_manage_tracks':
+        return 'Manage audio tracks';
       case 'game_meta_added':
         return 'Added';
       case 'game_meta_ranking':
@@ -141915,6 +142081,10 @@ extension on _StringsKo {
         return 'Energy';
       case 'game_track_exclude_bgm':
         return 'Mark as BGM';
+      case 'game_track_exclusion_hint':
+        return 'Mark a BGM/ambience track as excluded so auto-selection never treats it as voice — lines without speech no longer pick up BGM.';
+      case 'game_track_exclusion_title':
+        return 'Exclude audio tracks';
       case 'game_track_no_clips':
         return 'No clips in the recent window';
       case 'game_track_preview':
@@ -147029,6 +147199,8 @@ extension on _StringsNl {
         return 'Remove favorite';
       case 'game_live_lines':
         return 'Live lines';
+      case 'game_manage_tracks':
+        return 'Manage audio tracks';
       case 'game_meta_added':
         return 'Added';
       case 'game_meta_ranking':
@@ -147205,6 +147377,10 @@ extension on _StringsNl {
         return 'Energy';
       case 'game_track_exclude_bgm':
         return 'Mark as BGM';
+      case 'game_track_exclusion_hint':
+        return 'Mark a BGM/ambience track as excluded so auto-selection never treats it as voice — lines without speech no longer pick up BGM.';
+      case 'game_track_exclusion_title':
+        return 'Exclude audio tracks';
       case 'game_track_no_clips':
         return 'No clips in the recent window';
       case 'game_track_preview':
@@ -152336,6 +152512,8 @@ extension on _StringsPtBr {
         return 'Remove favorite';
       case 'game_live_lines':
         return 'Live lines';
+      case 'game_manage_tracks':
+        return 'Manage audio tracks';
       case 'game_meta_added':
         return 'Added';
       case 'game_meta_ranking':
@@ -152512,6 +152690,10 @@ extension on _StringsPtBr {
         return 'Energy';
       case 'game_track_exclude_bgm':
         return 'Mark as BGM';
+      case 'game_track_exclusion_hint':
+        return 'Mark a BGM/ambience track as excluded so auto-selection never treats it as voice — lines without speech no longer pick up BGM.';
+      case 'game_track_exclusion_title':
+        return 'Exclude audio tracks';
       case 'game_track_no_clips':
         return 'No clips in the recent window';
       case 'game_track_preview':
@@ -157644,6 +157826,8 @@ extension on _StringsRu {
         return 'Remove favorite';
       case 'game_live_lines':
         return 'Live lines';
+      case 'game_manage_tracks':
+        return 'Manage audio tracks';
       case 'game_meta_added':
         return 'Added';
       case 'game_meta_ranking':
@@ -157820,6 +158004,10 @@ extension on _StringsRu {
         return 'Energy';
       case 'game_track_exclude_bgm':
         return 'Mark as BGM';
+      case 'game_track_exclusion_hint':
+        return 'Mark a BGM/ambience track as excluded so auto-selection never treats it as voice — lines without speech no longer pick up BGM.';
+      case 'game_track_exclusion_title':
+        return 'Exclude audio tracks';
       case 'game_track_no_clips':
         return 'No clips in the recent window';
       case 'game_track_preview':
@@ -162947,6 +163135,8 @@ extension on _StringsTh {
         return 'Remove favorite';
       case 'game_live_lines':
         return 'Live lines';
+      case 'game_manage_tracks':
+        return 'Manage audio tracks';
       case 'game_meta_added':
         return 'Added';
       case 'game_meta_ranking':
@@ -163123,6 +163313,10 @@ extension on _StringsTh {
         return 'Energy';
       case 'game_track_exclude_bgm':
         return 'Mark as BGM';
+      case 'game_track_exclusion_hint':
+        return 'Mark a BGM/ambience track as excluded so auto-selection never treats it as voice — lines without speech no longer pick up BGM.';
+      case 'game_track_exclusion_title':
+        return 'Exclude audio tracks';
       case 'game_track_no_clips':
         return 'No clips in the recent window';
       case 'game_track_preview':
@@ -168246,6 +168440,8 @@ extension on _StringsTr {
         return 'Remove favorite';
       case 'game_live_lines':
         return 'Live lines';
+      case 'game_manage_tracks':
+        return 'Manage audio tracks';
       case 'game_meta_added':
         return 'Added';
       case 'game_meta_ranking':
@@ -168422,6 +168618,10 @@ extension on _StringsTr {
         return 'Energy';
       case 'game_track_exclude_bgm':
         return 'Mark as BGM';
+      case 'game_track_exclusion_hint':
+        return 'Mark a BGM/ambience track as excluded so auto-selection never treats it as voice — lines without speech no longer pick up BGM.';
+      case 'game_track_exclusion_title':
+        return 'Exclude audio tracks';
       case 'game_track_no_clips':
         return 'No clips in the recent window';
       case 'game_track_preview':
@@ -173546,6 +173746,8 @@ extension on _StringsVi {
         return 'Remove favorite';
       case 'game_live_lines':
         return 'Live lines';
+      case 'game_manage_tracks':
+        return 'Manage audio tracks';
       case 'game_meta_added':
         return 'Added';
       case 'game_meta_ranking':
@@ -173722,6 +173924,10 @@ extension on _StringsVi {
         return 'Energy';
       case 'game_track_exclude_bgm':
         return 'Mark as BGM';
+      case 'game_track_exclusion_hint':
+        return 'Mark a BGM/ambience track as excluded so auto-selection never treats it as voice — lines without speech no longer pick up BGM.';
+      case 'game_track_exclusion_title':
+        return 'Exclude audio tracks';
       case 'game_track_no_clips':
         return 'No clips in the recent window';
       case 'game_track_preview':
@@ -178828,6 +179034,8 @@ extension on _StringsZhCn {
         return '取消收藏';
       case 'game_live_lines':
         return '实时台词';
+      case 'game_manage_tracks':
+        return '管理音轨';
       case 'game_meta_added':
         return '添加时间';
       case 'game_meta_ranking':
@@ -179004,6 +179212,10 @@ extension on _StringsZhCn {
         return '能量';
       case 'game_track_exclude_bgm':
         return '标记为 BGM';
+      case 'game_track_exclusion_hint':
+        return '把 BGM/环境音轨标记为排除，自动选源便不会把它当成语音——没有语音的台词也不会再读到 BGM。';
+      case 'game_track_exclusion_title':
+        return '排除音轨';
       case 'game_track_no_clips':
         return '近窗内没有片段';
       case 'game_track_preview':
@@ -184088,6 +184300,8 @@ extension on _StringsZhHk {
         return 'Remove favorite';
       case 'game_live_lines':
         return 'Live lines';
+      case 'game_manage_tracks':
+        return '管理音軌';
       case 'game_meta_added':
         return 'Added';
       case 'game_meta_ranking':
@@ -184264,6 +184478,10 @@ extension on _StringsZhHk {
         return 'Energy';
       case 'game_track_exclude_bgm':
         return 'Mark as BGM';
+      case 'game_track_exclusion_hint':
+        return '把 BGM/環境音軌標記為排除，自動選源便不會把它當成語音——沒有語音的台詞也不會再讀到 BGM。';
+      case 'game_track_exclusion_title':
+        return '排除音軌';
       case 'game_track_no_clips':
         return 'No clips in the recent window';
       case 'game_track_preview':
