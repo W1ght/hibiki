@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 44693 (2629 per locale)
+/// Strings: 44744 (2632 per locale)
 ///
-/// Built on 2026-07-27 at 07:20 UTC
+/// Built on 2026-07-27 at 07:23 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3502,6 +3502,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'System-mix fallback; may include BGM';
   String get game_line_recapture => 'Recapture voice';
   String get game_line_recapture_stop => 'Finish recapture';
+  String get game_line_tracks => 'Tracks for this line';
+  String get game_line_tracks_hint =>
+      'Preview each track at this line\'s moment, then exclude the BGM ones';
+  String get game_line_track_use => 'Use for this line';
 }
 
 // Path: <root>
@@ -9481,6 +9485,13 @@ class _StringsAr extends _StringsEn {
   String get game_line_recapture => 'Recapture voice';
   @override
   String get game_line_recapture_stop => 'Finish recapture';
+  @override
+  String get game_line_tracks => 'Tracks for this line';
+  @override
+  String get game_line_tracks_hint =>
+      'Preview each track at this line\'s moment, then exclude the BGM ones';
+  @override
+  String get game_line_track_use => 'Use for this line';
 }
 
 // Path: <root>
@@ -15528,6 +15539,13 @@ class _StringsDe extends _StringsEn {
   String get game_line_recapture => 'Recapture voice';
   @override
   String get game_line_recapture_stop => 'Finish recapture';
+  @override
+  String get game_line_tracks => 'Tracks for this line';
+  @override
+  String get game_line_tracks_hint =>
+      'Preview each track at this line\'s moment, then exclude the BGM ones';
+  @override
+  String get game_line_track_use => 'Use for this line';
 }
 
 // Path: <root>
@@ -21591,6 +21609,13 @@ class _StringsEs extends _StringsEn {
   String get game_line_recapture => 'Recapture voice';
   @override
   String get game_line_recapture_stop => 'Finish recapture';
+  @override
+  String get game_line_tracks => 'Tracks for this line';
+  @override
+  String get game_line_tracks_hint =>
+      'Preview each track at this line\'s moment, then exclude the BGM ones';
+  @override
+  String get game_line_track_use => 'Use for this line';
 }
 
 // Path: <root>
@@ -27665,6 +27690,13 @@ class _StringsFr extends _StringsEn {
   String get game_line_recapture => 'Recapture voice';
   @override
   String get game_line_recapture_stop => 'Finish recapture';
+  @override
+  String get game_line_tracks => 'Tracks for this line';
+  @override
+  String get game_line_tracks_hint =>
+      'Preview each track at this line\'s moment, then exclude the BGM ones';
+  @override
+  String get game_line_track_use => 'Use for this line';
 }
 
 // Path: <root>
@@ -33668,6 +33700,13 @@ class _StringsId extends _StringsEn {
   String get game_line_recapture => 'Recapture voice';
   @override
   String get game_line_recapture_stop => 'Finish recapture';
+  @override
+  String get game_line_tracks => 'Tracks for this line';
+  @override
+  String get game_line_tracks_hint =>
+      'Preview each track at this line\'s moment, then exclude the BGM ones';
+  @override
+  String get game_line_track_use => 'Use for this line';
 }
 
 // Path: <root>
@@ -39717,6 +39756,13 @@ class _StringsIt extends _StringsEn {
   String get game_line_recapture => 'Recapture voice';
   @override
   String get game_line_recapture_stop => 'Finish recapture';
+  @override
+  String get game_line_tracks => 'Tracks for this line';
+  @override
+  String get game_line_tracks_hint =>
+      'Preview each track at this line\'s moment, then exclude the BGM ones';
+  @override
+  String get game_line_track_use => 'Use for this line';
 }
 
 // Path: <root>
@@ -45582,6 +45628,13 @@ class _StringsJa extends _StringsEn {
   String get game_line_recapture => 'Recapture voice';
   @override
   String get game_line_recapture_stop => 'Finish recapture';
+  @override
+  String get game_line_tracks => 'Tracks for this line';
+  @override
+  String get game_line_tracks_hint =>
+      'Preview each track at this line\'s moment, then exclude the BGM ones';
+  @override
+  String get game_line_track_use => 'Use for this line';
 }
 
 // Path: <root>
@@ -51449,6 +51502,13 @@ class _StringsKo extends _StringsEn {
   String get game_line_recapture => 'Recapture voice';
   @override
   String get game_line_recapture_stop => 'Finish recapture';
+  @override
+  String get game_line_tracks => 'Tracks for this line';
+  @override
+  String get game_line_tracks_hint =>
+      'Preview each track at this line\'s moment, then exclude the BGM ones';
+  @override
+  String get game_line_track_use => 'Use for this line';
 }
 
 // Path: <root>
@@ -57478,6 +57538,13 @@ class _StringsNl extends _StringsEn {
   String get game_line_recapture => 'Recapture voice';
   @override
   String get game_line_recapture_stop => 'Finish recapture';
+  @override
+  String get game_line_tracks => 'Tracks for this line';
+  @override
+  String get game_line_tracks_hint =>
+      'Preview each track at this line\'s moment, then exclude the BGM ones';
+  @override
+  String get game_line_track_use => 'Use for this line';
 }
 
 // Path: <root>
@@ -63520,6 +63587,13 @@ class _StringsPtBr extends _StringsEn {
   String get game_line_recapture => 'Recapture voice';
   @override
   String get game_line_recapture_stop => 'Finish recapture';
+  @override
+  String get game_line_tracks => 'Tracks for this line';
+  @override
+  String get game_line_tracks_hint =>
+      'Preview each track at this line\'s moment, then exclude the BGM ones';
+  @override
+  String get game_line_track_use => 'Use for this line';
 }
 
 // Path: <root>
@@ -69546,6 +69620,13 @@ class _StringsRu extends _StringsEn {
   String get game_line_recapture => 'Recapture voice';
   @override
   String get game_line_recapture_stop => 'Finish recapture';
+  @override
+  String get game_line_tracks => 'Tracks for this line';
+  @override
+  String get game_line_tracks_hint =>
+      'Preview each track at this line\'s moment, then exclude the BGM ones';
+  @override
+  String get game_line_track_use => 'Use for this line';
 }
 
 // Path: <root>
@@ -75520,6 +75601,13 @@ class _StringsTh extends _StringsEn {
   String get game_line_recapture => 'Recapture voice';
   @override
   String get game_line_recapture_stop => 'Finish recapture';
+  @override
+  String get game_line_tracks => 'Tracks for this line';
+  @override
+  String get game_line_tracks_hint =>
+      'Preview each track at this line\'s moment, then exclude the BGM ones';
+  @override
+  String get game_line_track_use => 'Use for this line';
 }
 
 // Path: <root>
@@ -81526,6 +81614,13 @@ class _StringsTr extends _StringsEn {
   String get game_line_recapture => 'Recapture voice';
   @override
   String get game_line_recapture_stop => 'Finish recapture';
+  @override
+  String get game_line_tracks => 'Tracks for this line';
+  @override
+  String get game_line_tracks_hint =>
+      'Preview each track at this line\'s moment, then exclude the BGM ones';
+  @override
+  String get game_line_track_use => 'Use for this line';
 }
 
 // Path: <root>
@@ -87517,6 +87612,13 @@ class _StringsVi extends _StringsEn {
   String get game_line_recapture => 'Recapture voice';
   @override
   String get game_line_recapture_stop => 'Finish recapture';
+  @override
+  String get game_line_tracks => 'Tracks for this line';
+  @override
+  String get game_line_tracks_hint =>
+      'Preview each track at this line\'s moment, then exclude the BGM ones';
+  @override
+  String get game_line_track_use => 'Use for this line';
 }
 
 // Path: <root>
@@ -93098,6 +93200,12 @@ class _StringsZhCn extends _StringsEn {
   String get game_line_recapture => '补录语音';
   @override
   String get game_line_recapture_stop => '完成补录';
+  @override
+  String get game_line_tracks => '本句音轨';
+  @override
+  String get game_line_tracks_hint => '按本句时刻试听各轨，确认是 BGM 就排除';
+  @override
+  String get game_line_track_use => '用于本句';
 }
 
 // Path: <root>
@@ -98885,6 +98993,13 @@ class _StringsZhHk extends _StringsEn {
   String get game_line_recapture => 'Recapture voice';
   @override
   String get game_line_recapture_stop => 'Finish recapture';
+  @override
+  String get game_line_tracks => 'Tracks for this line';
+  @override
+  String get game_line_tracks_hint =>
+      'Preview each track at this line\'s moment, then exclude the BGM ones';
+  @override
+  String get game_line_track_use => 'Use for this line';
 }
 
 /// Flat map(s) containing all translations.
@@ -104259,6 +104374,12 @@ extension on _StringsEn {
         return 'Recapture voice';
       case 'game_line_recapture_stop':
         return 'Finish recapture';
+      case 'game_line_tracks':
+        return 'Tracks for this line';
+      case 'game_line_tracks_hint':
+        return 'Preview each track at this line\'s moment, then exclude the BGM ones';
+      case 'game_line_track_use':
+        return 'Use for this line';
       default:
         return null;
     }
@@ -109631,6 +109752,12 @@ extension on _StringsAr {
         return 'Recapture voice';
       case 'game_line_recapture_stop':
         return 'Finish recapture';
+      case 'game_line_tracks':
+        return 'Tracks for this line';
+      case 'game_line_tracks_hint':
+        return 'Preview each track at this line\'s moment, then exclude the BGM ones';
+      case 'game_line_track_use':
+        return 'Use for this line';
       default:
         return null;
     }
@@ -115024,6 +115151,12 @@ extension on _StringsDe {
         return 'Recapture voice';
       case 'game_line_recapture_stop':
         return 'Finish recapture';
+      case 'game_line_tracks':
+        return 'Tracks for this line';
+      case 'game_line_tracks_hint':
+        return 'Preview each track at this line\'s moment, then exclude the BGM ones';
+      case 'game_line_track_use':
+        return 'Use for this line';
       default:
         return null;
     }
@@ -120416,6 +120549,12 @@ extension on _StringsEs {
         return 'Recapture voice';
       case 'game_line_recapture_stop':
         return 'Finish recapture';
+      case 'game_line_tracks':
+        return 'Tracks for this line';
+      case 'game_line_tracks_hint':
+        return 'Preview each track at this line\'s moment, then exclude the BGM ones';
+      case 'game_line_track_use':
+        return 'Use for this line';
       default:
         return null;
     }
@@ -125814,6 +125953,12 @@ extension on _StringsFr {
         return 'Recapture voice';
       case 'game_line_recapture_stop':
         return 'Finish recapture';
+      case 'game_line_tracks':
+        return 'Tracks for this line';
+      case 'game_line_tracks_hint':
+        return 'Preview each track at this line\'s moment, then exclude the BGM ones';
+      case 'game_line_track_use':
+        return 'Use for this line';
       default:
         return null;
     }
@@ -131194,6 +131339,12 @@ extension on _StringsId {
         return 'Recapture voice';
       case 'game_line_recapture_stop':
         return 'Finish recapture';
+      case 'game_line_tracks':
+        return 'Tracks for this line';
+      case 'game_line_tracks_hint':
+        return 'Preview each track at this line\'s moment, then exclude the BGM ones';
+      case 'game_line_track_use':
+        return 'Use for this line';
       default:
         return null;
     }
@@ -136589,6 +136740,12 @@ extension on _StringsIt {
         return 'Recapture voice';
       case 'game_line_recapture_stop':
         return 'Finish recapture';
+      case 'game_line_tracks':
+        return 'Tracks for this line';
+      case 'game_line_tracks_hint':
+        return 'Preview each track at this line\'s moment, then exclude the BGM ones';
+      case 'game_line_track_use':
+        return 'Use for this line';
       default:
         return null;
     }
@@ -141946,6 +142103,12 @@ extension on _StringsJa {
         return 'Recapture voice';
       case 'game_line_recapture_stop':
         return 'Finish recapture';
+      case 'game_line_tracks':
+        return 'Tracks for this line';
+      case 'game_line_tracks_hint':
+        return 'Preview each track at this line\'s moment, then exclude the BGM ones';
+      case 'game_line_track_use':
+        return 'Use for this line';
       default:
         return null;
     }
@@ -147307,6 +147470,12 @@ extension on _StringsKo {
         return 'Recapture voice';
       case 'game_line_recapture_stop':
         return 'Finish recapture';
+      case 'game_line_tracks':
+        return 'Tracks for this line';
+      case 'game_line_tracks_hint':
+        return 'Preview each track at this line\'s moment, then exclude the BGM ones';
+      case 'game_line_track_use':
+        return 'Use for this line';
       default:
         return null;
     }
@@ -152695,6 +152864,12 @@ extension on _StringsNl {
         return 'Recapture voice';
       case 'game_line_recapture_stop':
         return 'Finish recapture';
+      case 'game_line_tracks':
+        return 'Tracks for this line';
+      case 'game_line_tracks_hint':
+        return 'Preview each track at this line\'s moment, then exclude the BGM ones';
+      case 'game_line_track_use':
+        return 'Use for this line';
       default:
         return null;
     }
@@ -158080,6 +158255,12 @@ extension on _StringsPtBr {
         return 'Recapture voice';
       case 'game_line_recapture_stop':
         return 'Finish recapture';
+      case 'game_line_tracks':
+        return 'Tracks for this line';
+      case 'game_line_tracks_hint':
+        return 'Preview each track at this line\'s moment, then exclude the BGM ones';
+      case 'game_line_track_use':
+        return 'Use for this line';
       default:
         return null;
     }
@@ -163470,6 +163651,12 @@ extension on _StringsRu {
         return 'Recapture voice';
       case 'game_line_recapture_stop':
         return 'Finish recapture';
+      case 'game_line_tracks':
+        return 'Tracks for this line';
+      case 'game_line_tracks_hint':
+        return 'Preview each track at this line\'s moment, then exclude the BGM ones';
+      case 'game_line_track_use':
+        return 'Use for this line';
       default:
         return null;
     }
@@ -168844,6 +169031,12 @@ extension on _StringsTh {
         return 'Recapture voice';
       case 'game_line_recapture_stop':
         return 'Finish recapture';
+      case 'game_line_tracks':
+        return 'Tracks for this line';
+      case 'game_line_tracks_hint':
+        return 'Preview each track at this line\'s moment, then exclude the BGM ones';
+      case 'game_line_track_use':
+        return 'Use for this line';
       default:
         return null;
     }
@@ -174227,6 +174420,12 @@ extension on _StringsTr {
         return 'Recapture voice';
       case 'game_line_recapture_stop':
         return 'Finish recapture';
+      case 'game_line_tracks':
+        return 'Tracks for this line';
+      case 'game_line_tracks_hint':
+        return 'Preview each track at this line\'s moment, then exclude the BGM ones';
+      case 'game_line_track_use':
+        return 'Use for this line';
       default:
         return null;
     }
@@ -179605,6 +179804,12 @@ extension on _StringsVi {
         return 'Recapture voice';
       case 'game_line_recapture_stop':
         return 'Finish recapture';
+      case 'game_line_tracks':
+        return 'Tracks for this line';
+      case 'game_line_tracks_hint':
+        return 'Preview each track at this line\'s moment, then exclude the BGM ones';
+      case 'game_line_track_use':
+        return 'Use for this line';
       default:
         return null;
     }
@@ -184937,6 +185142,12 @@ extension on _StringsZhCn {
         return '补录语音';
       case 'game_line_recapture_stop':
         return '完成补录';
+      case 'game_line_tracks':
+        return '本句音轨';
+      case 'game_line_tracks_hint':
+        return '按本句时刻试听各轨，确认是 BGM 就排除';
+      case 'game_line_track_use':
+        return '用于本句';
       default:
         return null;
     }
@@ -190289,6 +190500,12 @@ extension on _StringsZhHk {
         return 'Recapture voice';
       case 'game_line_recapture_stop':
         return 'Finish recapture';
+      case 'game_line_tracks':
+        return 'Tracks for this line';
+      case 'game_line_tracks_hint':
+        return 'Preview each track at this line\'s moment, then exclude the BGM ones';
+      case 'game_line_track_use':
+        return 'Use for this line';
       default:
         return null;
     }
