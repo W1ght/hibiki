@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 45713 (2689 per locale)
+/// Strings: 45781 (2693 per locale)
 ///
-/// Built on 2026-07-27 at 13:35 UTC
+/// Built on 2026-07-27 at 14:41 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -1436,7 +1436,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get game_scrape_applied => 'Metadata updated';
   String get game_scrape_failed => 'Metadata fetch failed';
   String get game_scrape_no_result => 'No matching entry found';
-  String get game_scrape_pick => 'Pick the matching entry';
   String get game_scrape_query => 'Title or source ID';
   String get game_search => 'Search games';
   String get game_session_events => 'Session events';
@@ -3592,6 +3591,14 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get manga_import_direct => 'Import without OCR';
   String get manga_library => 'Manga';
   String get manga_import_action => 'Import Manga';
+  String get game_scrape_search => 'Search';
+  String get game_scrape_use => 'Use';
+  String get game_scrape_search_failed =>
+      'Search failed. Check your network and try again.';
+  String get game_remove_confirm =>
+      'Remove this game from the library? Game files on disk will not be deleted.';
+  String get delete_collection_also_games =>
+      'Also remove the games in it from the library (game files on disk are kept)';
 }
 
 // Path: <root>
@@ -5826,8 +5833,6 @@ class _StringsAr extends _StringsEn {
   String get game_scrape_failed => 'Metadata fetch failed';
   @override
   String get game_scrape_no_result => 'No matching entry found';
-  @override
-  String get game_scrape_pick => 'Pick the matching entry';
   @override
   String get game_scrape_query => 'Title or source ID';
   @override
@@ -9721,6 +9726,19 @@ class _StringsAr extends _StringsEn {
   String get manga_library => 'Manga';
   @override
   String get manga_import_action => 'Import Manga';
+  @override
+  String get game_scrape_search => 'Search';
+  @override
+  String get game_scrape_use => 'Use';
+  @override
+  String get game_scrape_search_failed =>
+      'Search failed. Check your network and try again.';
+  @override
+  String get game_remove_confirm =>
+      'Remove this game from the library? Game files on disk will not be deleted.';
+  @override
+  String get delete_collection_also_games =>
+      'Also remove the games in it from the library (game files on disk are kept)';
 }
 
 // Path: <root>
@@ -11983,8 +12001,6 @@ class _StringsDe extends _StringsEn {
   String get game_scrape_failed => 'Metadata fetch failed';
   @override
   String get game_scrape_no_result => 'No matching entry found';
-  @override
-  String get game_scrape_pick => 'Pick the matching entry';
   @override
   String get game_scrape_query => 'Title or source ID';
   @override
@@ -15918,6 +15934,19 @@ class _StringsDe extends _StringsEn {
   String get manga_library => 'Manga';
   @override
   String get manga_import_action => 'Import Manga';
+  @override
+  String get game_scrape_search => 'Search';
+  @override
+  String get game_scrape_use => 'Use';
+  @override
+  String get game_scrape_search_failed =>
+      'Search failed. Check your network and try again.';
+  @override
+  String get game_remove_confirm =>
+      'Remove this game from the library? Game files on disk will not be deleted.';
+  @override
+  String get delete_collection_also_games =>
+      'Also remove the games in it from the library (game files on disk are kept)';
 }
 
 // Path: <root>
@@ -18181,8 +18210,6 @@ class _StringsEs extends _StringsEn {
   String get game_scrape_failed => 'Metadata fetch failed';
   @override
   String get game_scrape_no_result => 'No matching entry found';
-  @override
-  String get game_scrape_pick => 'Pick the matching entry';
   @override
   String get game_scrape_query => 'Title or source ID';
   @override
@@ -22131,6 +22158,19 @@ class _StringsEs extends _StringsEn {
   String get manga_library => 'Manga';
   @override
   String get manga_import_action => 'Import Manga';
+  @override
+  String get game_scrape_search => 'Search';
+  @override
+  String get game_scrape_use => 'Use';
+  @override
+  String get game_scrape_search_failed =>
+      'Search failed. Check your network and try again.';
+  @override
+  String get game_remove_confirm =>
+      'Remove this game from the library? Game files on disk will not be deleted.';
+  @override
+  String get delete_collection_also_games =>
+      'Also remove the games in it from the library (game files on disk are kept)';
 }
 
 // Path: <root>
@@ -24402,8 +24442,6 @@ class _StringsFr extends _StringsEn {
   String get game_scrape_failed => 'Metadata fetch failed';
   @override
   String get game_scrape_no_result => 'No matching entry found';
-  @override
-  String get game_scrape_pick => 'Pick the matching entry';
   @override
   String get game_scrape_query => 'Title or source ID';
   @override
@@ -28355,6 +28393,19 @@ class _StringsFr extends _StringsEn {
   String get manga_library => 'Manga';
   @override
   String get manga_import_action => 'Import Manga';
+  @override
+  String get game_scrape_search => 'Search';
+  @override
+  String get game_scrape_use => 'Use';
+  @override
+  String get game_scrape_search_failed =>
+      'Search failed. Check your network and try again.';
+  @override
+  String get game_remove_confirm =>
+      'Remove this game from the library? Game files on disk will not be deleted.';
+  @override
+  String get delete_collection_also_games =>
+      'Also remove the games in it from the library (game files on disk are kept)';
 }
 
 // Path: <root>
@@ -30592,8 +30643,6 @@ class _StringsId extends _StringsEn {
   String get game_scrape_failed => 'Metadata fetch failed';
   @override
   String get game_scrape_no_result => 'No matching entry found';
-  @override
-  String get game_scrape_pick => 'Pick the matching entry';
   @override
   String get game_scrape_query => 'Title or source ID';
   @override
@@ -34508,6 +34557,19 @@ class _StringsId extends _StringsEn {
   String get manga_library => 'Manga';
   @override
   String get manga_import_action => 'Import Manga';
+  @override
+  String get game_scrape_search => 'Search';
+  @override
+  String get game_scrape_use => 'Use';
+  @override
+  String get game_scrape_search_failed =>
+      'Search failed. Check your network and try again.';
+  @override
+  String get game_remove_confirm =>
+      'Remove this game from the library? Game files on disk will not be deleted.';
+  @override
+  String get delete_collection_also_games =>
+      'Also remove the games in it from the library (game files on disk are kept)';
 }
 
 // Path: <root>
@@ -36765,8 +36827,6 @@ class _StringsIt extends _StringsEn {
   String get game_scrape_failed => 'Metadata fetch failed';
   @override
   String get game_scrape_no_result => 'No matching entry found';
-  @override
-  String get game_scrape_pick => 'Pick the matching entry';
   @override
   String get game_scrape_query => 'Title or source ID';
   @override
@@ -40707,6 +40767,19 @@ class _StringsIt extends _StringsEn {
   String get manga_library => 'Manga';
   @override
   String get manga_import_action => 'Import Manga';
+  @override
+  String get game_scrape_search => 'Search';
+  @override
+  String get game_scrape_use => 'Use';
+  @override
+  String get game_scrape_search_failed =>
+      'Search failed. Check your network and try again.';
+  @override
+  String get game_remove_confirm =>
+      'Remove this game from the library? Game files on disk will not be deleted.';
+  @override
+  String get delete_collection_also_games =>
+      'Also remove the games in it from the library (game files on disk are kept)';
 }
 
 // Path: <root>
@@ -42909,8 +42982,6 @@ class _StringsJa extends _StringsEn {
   String get game_scrape_failed => 'Metadata fetch failed';
   @override
   String get game_scrape_no_result => 'No matching entry found';
-  @override
-  String get game_scrape_pick => 'Pick the matching entry';
   @override
   String get game_scrape_query => 'Title or source ID';
   @override
@@ -46723,6 +46794,19 @@ class _StringsJa extends _StringsEn {
   String get manga_library => 'Manga';
   @override
   String get manga_import_action => 'Import Manga';
+  @override
+  String get game_scrape_search => 'Search';
+  @override
+  String get game_scrape_use => 'Use';
+  @override
+  String get game_scrape_search_failed =>
+      'Search failed. Check your network and try again.';
+  @override
+  String get game_remove_confirm =>
+      'Remove this game from the library? Game files on disk will not be deleted.';
+  @override
+  String get delete_collection_also_games =>
+      'Also remove the games in it from the library (game files on disk are kept)';
 }
 
 // Path: <root>
@@ -48925,8 +49009,6 @@ class _StringsKo extends _StringsEn {
   String get game_scrape_failed => 'Metadata fetch failed';
   @override
   String get game_scrape_no_result => 'No matching entry found';
-  @override
-  String get game_scrape_pick => 'Pick the matching entry';
   @override
   String get game_scrape_query => 'Title or source ID';
   @override
@@ -52741,6 +52823,19 @@ class _StringsKo extends _StringsEn {
   String get manga_library => 'Manga';
   @override
   String get manga_import_action => 'Import Manga';
+  @override
+  String get game_scrape_search => 'Search';
+  @override
+  String get game_scrape_use => 'Use';
+  @override
+  String get game_scrape_search_failed =>
+      'Search failed. Check your network and try again.';
+  @override
+  String get game_remove_confirm =>
+      'Remove this game from the library? Game files on disk will not be deleted.';
+  @override
+  String get delete_collection_also_games =>
+      'Also remove the games in it from the library (game files on disk are kept)';
 }
 
 // Path: <root>
@@ -54992,8 +55087,6 @@ class _StringsNl extends _StringsEn {
   String get game_scrape_failed => 'Metadata fetch failed';
   @override
   String get game_scrape_no_result => 'No matching entry found';
-  @override
-  String get game_scrape_pick => 'Pick the matching entry';
   @override
   String get game_scrape_query => 'Title or source ID';
   @override
@@ -58920,6 +59013,19 @@ class _StringsNl extends _StringsEn {
   String get manga_library => 'Manga';
   @override
   String get manga_import_action => 'Import Manga';
+  @override
+  String get game_scrape_search => 'Search';
+  @override
+  String get game_scrape_use => 'Use';
+  @override
+  String get game_scrape_search_failed =>
+      'Search failed. Check your network and try again.';
+  @override
+  String get game_remove_confirm =>
+      'Remove this game from the library? Game files on disk will not be deleted.';
+  @override
+  String get delete_collection_also_games =>
+      'Also remove the games in it from the library (game files on disk are kept)';
 }
 
 // Path: <root>
@@ -61179,8 +61285,6 @@ class _StringsPtBr extends _StringsEn {
   String get game_scrape_failed => 'Metadata fetch failed';
   @override
   String get game_scrape_no_result => 'No matching entry found';
-  @override
-  String get game_scrape_pick => 'Pick the matching entry';
   @override
   String get game_scrape_query => 'Title or source ID';
   @override
@@ -65112,6 +65216,19 @@ class _StringsPtBr extends _StringsEn {
   String get manga_library => 'Manga';
   @override
   String get manga_import_action => 'Import Manga';
+  @override
+  String get game_scrape_search => 'Search';
+  @override
+  String get game_scrape_use => 'Use';
+  @override
+  String get game_scrape_search_failed =>
+      'Search failed. Check your network and try again.';
+  @override
+  String get game_remove_confirm =>
+      'Remove this game from the library? Game files on disk will not be deleted.';
+  @override
+  String get delete_collection_also_games =>
+      'Also remove the games in it from the library (game files on disk are kept)';
 }
 
 // Path: <root>
@@ -67363,8 +67480,6 @@ class _StringsRu extends _StringsEn {
   String get game_scrape_failed => 'Metadata fetch failed';
   @override
   String get game_scrape_no_result => 'No matching entry found';
-  @override
-  String get game_scrape_pick => 'Pick the matching entry';
   @override
   String get game_scrape_query => 'Title or source ID';
   @override
@@ -71288,6 +71403,19 @@ class _StringsRu extends _StringsEn {
   String get manga_library => 'Manga';
   @override
   String get manga_import_action => 'Import Manga';
+  @override
+  String get game_scrape_search => 'Search';
+  @override
+  String get game_scrape_use => 'Use';
+  @override
+  String get game_scrape_search_failed =>
+      'Search failed. Check your network and try again.';
+  @override
+  String get game_remove_confirm =>
+      'Remove this game from the library? Game files on disk will not be deleted.';
+  @override
+  String get delete_collection_also_games =>
+      'Also remove the games in it from the library (game files on disk are kept)';
 }
 
 // Path: <root>
@@ -73517,8 +73645,6 @@ class _StringsTh extends _StringsEn {
   String get game_scrape_failed => 'Metadata fetch failed';
   @override
   String get game_scrape_no_result => 'No matching entry found';
-  @override
-  String get game_scrape_pick => 'Pick the matching entry';
   @override
   String get game_scrape_query => 'Title or source ID';
   @override
@@ -77412,6 +77538,19 @@ class _StringsTh extends _StringsEn {
   String get manga_library => 'Manga';
   @override
   String get manga_import_action => 'Import Manga';
+  @override
+  String get game_scrape_search => 'Search';
+  @override
+  String get game_scrape_use => 'Use';
+  @override
+  String get game_scrape_search_failed =>
+      'Search failed. Check your network and try again.';
+  @override
+  String get game_remove_confirm =>
+      'Remove this game from the library? Game files on disk will not be deleted.';
+  @override
+  String get delete_collection_also_games =>
+      'Also remove the games in it from the library (game files on disk are kept)';
 }
 
 // Path: <root>
@@ -79659,8 +79798,6 @@ class _StringsTr extends _StringsEn {
   String get game_scrape_failed => 'Metadata fetch failed';
   @override
   String get game_scrape_no_result => 'No matching entry found';
-  @override
-  String get game_scrape_pick => 'Pick the matching entry';
   @override
   String get game_scrape_query => 'Title or source ID';
   @override
@@ -83568,6 +83705,19 @@ class _StringsTr extends _StringsEn {
   String get manga_library => 'Manga';
   @override
   String get manga_import_action => 'Import Manga';
+  @override
+  String get game_scrape_search => 'Search';
+  @override
+  String get game_scrape_use => 'Use';
+  @override
+  String get game_scrape_search_failed =>
+      'Search failed. Check your network and try again.';
+  @override
+  String get game_remove_confirm =>
+      'Remove this game from the library? Game files on disk will not be deleted.';
+  @override
+  String get delete_collection_also_games =>
+      'Also remove the games in it from the library (game files on disk are kept)';
 }
 
 // Path: <root>
@@ -85808,8 +85958,6 @@ class _StringsVi extends _StringsEn {
   String get game_scrape_failed => 'Metadata fetch failed';
   @override
   String get game_scrape_no_result => 'No matching entry found';
-  @override
-  String get game_scrape_pick => 'Pick the matching entry';
   @override
   String get game_scrape_query => 'Title or source ID';
   @override
@@ -89709,6 +89857,19 @@ class _StringsVi extends _StringsEn {
   String get manga_library => 'Manga';
   @override
   String get manga_import_action => 'Import Manga';
+  @override
+  String get game_scrape_search => 'Search';
+  @override
+  String get game_scrape_use => 'Use';
+  @override
+  String get game_scrape_search_failed =>
+      'Search failed. Check your network and try again.';
+  @override
+  String get game_remove_confirm =>
+      'Remove this game from the library? Game files on disk will not be deleted.';
+  @override
+  String get delete_collection_also_games =>
+      'Also remove the games in it from the library (game files on disk are kept)';
 }
 
 // Path: <root>
@@ -91790,8 +91951,6 @@ class _StringsZhCn extends _StringsEn {
   String get game_scrape_failed => '元数据获取失败';
   @override
   String get game_scrape_no_result => '没有找到匹配条目';
-  @override
-  String get game_scrape_pick => '选择匹配的条目';
   @override
   String get game_scrape_query => '标题或源 ID';
   @override
@@ -95427,6 +95586,16 @@ class _StringsZhCn extends _StringsEn {
   String get manga_library => '漫画';
   @override
   String get manga_import_action => '导入漫画';
+  @override
+  String get game_scrape_search => '搜索';
+  @override
+  String get game_scrape_use => '使用';
+  @override
+  String get game_scrape_search_failed => '搜索失败，请检查网络后重试';
+  @override
+  String get game_remove_confirm => '从库中移除此游戏？不会删除磁盘上的游戏文件。';
+  @override
+  String get delete_collection_also_games => '同时把其中的游戏移出库（不会删除磁盘上的游戏文件）';
 }
 
 // Path: <root>
@@ -97599,8 +97768,6 @@ class _StringsZhHk extends _StringsEn {
   String get game_scrape_failed => 'Metadata fetch failed';
   @override
   String get game_scrape_no_result => 'No matching entry found';
-  @override
-  String get game_scrape_pick => 'Pick the matching entry';
   @override
   String get game_scrape_query => 'Title or source ID';
   @override
@@ -101364,6 +101531,19 @@ class _StringsZhHk extends _StringsEn {
   String get manga_library => 'Manga';
   @override
   String get manga_import_action => 'Import Manga';
+  @override
+  String get game_scrape_search => 'Search';
+  @override
+  String get game_scrape_use => 'Use';
+  @override
+  String get game_scrape_search_failed =>
+      'Search failed. Check your network and try again.';
+  @override
+  String get game_remove_confirm =>
+      'Remove this game from the library? Game files on disk will not be deleted.';
+  @override
+  String get delete_collection_also_games =>
+      'Also remove the games in it from the library (game files on disk are kept)';
 }
 
 /// Flat map(s) containing all translations.
@@ -103337,8 +103517,6 @@ extension on _StringsEn {
         return 'Metadata fetch failed';
       case 'game_scrape_no_result':
         return 'No matching entry found';
-      case 'game_scrape_pick':
-        return 'Pick the matching entry';
       case 'game_scrape_query':
         return 'Title or source ID';
       case 'game_search':
@@ -106870,6 +107048,16 @@ extension on _StringsEn {
         return 'Manga';
       case 'manga_import_action':
         return 'Import Manga';
+      case 'game_scrape_search':
+        return 'Search';
+      case 'game_scrape_use':
+        return 'Use';
+      case 'game_scrape_search_failed':
+        return 'Search failed. Check your network and try again.';
+      case 'game_remove_confirm':
+        return 'Remove this game from the library? Game files on disk will not be deleted.';
+      case 'delete_collection_also_games':
+        return 'Also remove the games in it from the library (game files on disk are kept)';
       default:
         return null;
     }
@@ -108844,8 +109032,6 @@ extension on _StringsAr {
         return 'Metadata fetch failed';
       case 'game_scrape_no_result':
         return 'No matching entry found';
-      case 'game_scrape_pick':
-        return 'Pick the matching entry';
       case 'game_scrape_query':
         return 'Title or source ID';
       case 'game_search':
@@ -112374,6 +112560,16 @@ extension on _StringsAr {
         return 'Manga';
       case 'manga_import_action':
         return 'Import Manga';
+      case 'game_scrape_search':
+        return 'Search';
+      case 'game_scrape_use':
+        return 'Use';
+      case 'game_scrape_search_failed':
+        return 'Search failed. Check your network and try again.';
+      case 'game_remove_confirm':
+        return 'Remove this game from the library? Game files on disk will not be deleted.';
+      case 'delete_collection_also_games':
+        return 'Also remove the games in it from the library (game files on disk are kept)';
       default:
         return null;
     }
@@ -114351,8 +114547,6 @@ extension on _StringsDe {
         return 'Metadata fetch failed';
       case 'game_scrape_no_result':
         return 'No matching entry found';
-      case 'game_scrape_pick':
-        return 'Pick the matching entry';
       case 'game_scrape_query':
         return 'Title or source ID';
       case 'game_search':
@@ -117899,6 +118093,16 @@ extension on _StringsDe {
         return 'Manga';
       case 'manga_import_action':
         return 'Import Manga';
+      case 'game_scrape_search':
+        return 'Search';
+      case 'game_scrape_use':
+        return 'Use';
+      case 'game_scrape_search_failed':
+        return 'Search failed. Check your network and try again.';
+      case 'game_remove_confirm':
+        return 'Remove this game from the library? Game files on disk will not be deleted.';
+      case 'delete_collection_also_games':
+        return 'Also remove the games in it from the library (game files on disk are kept)';
       default:
         return null;
     }
@@ -119877,8 +120081,6 @@ extension on _StringsEs {
         return 'Metadata fetch failed';
       case 'game_scrape_no_result':
         return 'No matching entry found';
-      case 'game_scrape_pick':
-        return 'Pick the matching entry';
       case 'game_scrape_query':
         return 'Title or source ID';
       case 'game_search':
@@ -123423,6 +123625,16 @@ extension on _StringsEs {
         return 'Manga';
       case 'manga_import_action':
         return 'Import Manga';
+      case 'game_scrape_search':
+        return 'Search';
+      case 'game_scrape_use':
+        return 'Use';
+      case 'game_scrape_search_failed':
+        return 'Search failed. Check your network and try again.';
+      case 'game_remove_confirm':
+        return 'Remove this game from the library? Game files on disk will not be deleted.';
+      case 'delete_collection_also_games':
+        return 'Also remove the games in it from the library (game files on disk are kept)';
       default:
         return null;
     }
@@ -125404,8 +125616,6 @@ extension on _StringsFr {
         return 'Metadata fetch failed';
       case 'game_scrape_no_result':
         return 'No matching entry found';
-      case 'game_scrape_pick':
-        return 'Pick the matching entry';
       case 'game_scrape_query':
         return 'Title or source ID';
       case 'game_search':
@@ -128953,6 +129163,16 @@ extension on _StringsFr {
         return 'Manga';
       case 'manga_import_action':
         return 'Import Manga';
+      case 'game_scrape_search':
+        return 'Search';
+      case 'game_scrape_use':
+        return 'Use';
+      case 'game_scrape_search_failed':
+        return 'Search failed. Check your network and try again.';
+      case 'game_remove_confirm':
+        return 'Remove this game from the library? Game files on disk will not be deleted.';
+      case 'delete_collection_also_games':
+        return 'Also remove the games in it from the library (game files on disk are kept)';
       default:
         return null;
     }
@@ -130929,8 +131149,6 @@ extension on _StringsId {
         return 'Metadata fetch failed';
       case 'game_scrape_no_result':
         return 'No matching entry found';
-      case 'game_scrape_pick':
-        return 'Pick the matching entry';
       case 'game_scrape_query':
         return 'Title or source ID';
       case 'game_search':
@@ -134465,6 +134683,16 @@ extension on _StringsId {
         return 'Manga';
       case 'manga_import_action':
         return 'Import Manga';
+      case 'game_scrape_search':
+        return 'Search';
+      case 'game_scrape_use':
+        return 'Use';
+      case 'game_scrape_search_failed':
+        return 'Search failed. Check your network and try again.';
+      case 'game_remove_confirm':
+        return 'Remove this game from the library? Game files on disk will not be deleted.';
+      case 'delete_collection_also_games':
+        return 'Also remove the games in it from the library (game files on disk are kept)';
       default:
         return null;
     }
@@ -136443,8 +136671,6 @@ extension on _StringsIt {
         return 'Metadata fetch failed';
       case 'game_scrape_no_result':
         return 'No matching entry found';
-      case 'game_scrape_pick':
-        return 'Pick the matching entry';
       case 'game_scrape_query':
         return 'Title or source ID';
       case 'game_search':
@@ -139992,6 +140218,16 @@ extension on _StringsIt {
         return 'Manga';
       case 'manga_import_action':
         return 'Import Manga';
+      case 'game_scrape_search':
+        return 'Search';
+      case 'game_scrape_use':
+        return 'Use';
+      case 'game_scrape_search_failed':
+        return 'Search failed. Check your network and try again.';
+      case 'game_remove_confirm':
+        return 'Remove this game from the library? Game files on disk will not be deleted.';
+      case 'delete_collection_also_games':
+        return 'Also remove the games in it from the library (game files on disk are kept)';
       default:
         return null;
     }
@@ -141959,8 +142195,6 @@ extension on _StringsJa {
         return 'Metadata fetch failed';
       case 'game_scrape_no_result':
         return 'No matching entry found';
-      case 'game_scrape_pick':
-        return 'Pick the matching entry';
       case 'game_scrape_query':
         return 'Title or source ID';
       case 'game_search':
@@ -145481,6 +145715,16 @@ extension on _StringsJa {
         return 'Manga';
       case 'manga_import_action':
         return 'Import Manga';
+      case 'game_scrape_search':
+        return 'Search';
+      case 'game_scrape_use':
+        return 'Use';
+      case 'game_scrape_search_failed':
+        return 'Search failed. Check your network and try again.';
+      case 'game_remove_confirm':
+        return 'Remove this game from the library? Game files on disk will not be deleted.';
+      case 'delete_collection_also_games':
+        return 'Also remove the games in it from the library (game files on disk are kept)';
       default:
         return null;
     }
@@ -147449,8 +147693,6 @@ extension on _StringsKo {
         return 'Metadata fetch failed';
       case 'game_scrape_no_result':
         return 'No matching entry found';
-      case 'game_scrape_pick':
-        return 'Pick the matching entry';
       case 'game_scrape_query':
         return 'Title or source ID';
       case 'game_search':
@@ -150974,6 +151216,16 @@ extension on _StringsKo {
         return 'Manga';
       case 'manga_import_action':
         return 'Import Manga';
+      case 'game_scrape_search':
+        return 'Search';
+      case 'game_scrape_use':
+        return 'Use';
+      case 'game_scrape_search_failed':
+        return 'Search failed. Check your network and try again.';
+      case 'game_remove_confirm':
+        return 'Remove this game from the library? Game files on disk will not be deleted.';
+      case 'delete_collection_also_games':
+        return 'Also remove the games in it from the library (game files on disk are kept)';
       default:
         return null;
     }
@@ -152951,8 +153203,6 @@ extension on _StringsNl {
         return 'Metadata fetch failed';
       case 'game_scrape_no_result':
         return 'No matching entry found';
-      case 'game_scrape_pick':
-        return 'Pick the matching entry';
       case 'game_scrape_query':
         return 'Title or source ID';
       case 'game_search':
@@ -156494,6 +156744,16 @@ extension on _StringsNl {
         return 'Manga';
       case 'manga_import_action':
         return 'Import Manga';
+      case 'game_scrape_search':
+        return 'Search';
+      case 'game_scrape_use':
+        return 'Use';
+      case 'game_scrape_search_failed':
+        return 'Search failed. Check your network and try again.';
+      case 'game_remove_confirm':
+        return 'Remove this game from the library? Game files on disk will not be deleted.';
+      case 'delete_collection_also_games':
+        return 'Also remove the games in it from the library (game files on disk are kept)';
       default:
         return null;
     }
@@ -158470,8 +158730,6 @@ extension on _StringsPtBr {
         return 'Metadata fetch failed';
       case 'game_scrape_no_result':
         return 'No matching entry found';
-      case 'game_scrape_pick':
-        return 'Pick the matching entry';
       case 'game_scrape_query':
         return 'Title or source ID';
       case 'game_search':
@@ -162011,6 +162269,16 @@ extension on _StringsPtBr {
         return 'Manga';
       case 'manga_import_action':
         return 'Import Manga';
+      case 'game_scrape_search':
+        return 'Search';
+      case 'game_scrape_use':
+        return 'Use';
+      case 'game_scrape_search_failed':
+        return 'Search failed. Check your network and try again.';
+      case 'game_remove_confirm':
+        return 'Remove this game from the library? Game files on disk will not be deleted.';
+      case 'delete_collection_also_games':
+        return 'Also remove the games in it from the library (game files on disk are kept)';
       default:
         return null;
     }
@@ -163990,8 +164258,6 @@ extension on _StringsRu {
         return 'Metadata fetch failed';
       case 'game_scrape_no_result':
         return 'No matching entry found';
-      case 'game_scrape_pick':
-        return 'Pick the matching entry';
       case 'game_scrape_query':
         return 'Title or source ID';
       case 'game_search':
@@ -167533,6 +167799,16 @@ extension on _StringsRu {
         return 'Manga';
       case 'manga_import_action':
         return 'Import Manga';
+      case 'game_scrape_search':
+        return 'Search';
+      case 'game_scrape_use':
+        return 'Use';
+      case 'game_scrape_search_failed':
+        return 'Search failed. Check your network and try again.';
+      case 'game_remove_confirm':
+        return 'Remove this game from the library? Game files on disk will not be deleted.';
+      case 'delete_collection_also_games':
+        return 'Also remove the games in it from the library (game files on disk are kept)';
       default:
         return null;
     }
@@ -169505,8 +169781,6 @@ extension on _StringsTh {
         return 'Metadata fetch failed';
       case 'game_scrape_no_result':
         return 'No matching entry found';
-      case 'game_scrape_pick':
-        return 'Pick the matching entry';
       case 'game_scrape_query':
         return 'Title or source ID';
       case 'game_search':
@@ -173039,6 +173313,16 @@ extension on _StringsTh {
         return 'Manga';
       case 'manga_import_action':
         return 'Import Manga';
+      case 'game_scrape_search':
+        return 'Search';
+      case 'game_scrape_use':
+        return 'Use';
+      case 'game_scrape_search_failed':
+        return 'Search failed. Check your network and try again.';
+      case 'game_remove_confirm':
+        return 'Remove this game from the library? Game files on disk will not be deleted.';
+      case 'delete_collection_also_games':
+        return 'Also remove the games in it from the library (game files on disk are kept)';
       default:
         return null;
     }
@@ -175016,8 +175300,6 @@ extension on _StringsTr {
         return 'Metadata fetch failed';
       case 'game_scrape_no_result':
         return 'No matching entry found';
-      case 'game_scrape_pick':
-        return 'Pick the matching entry';
       case 'game_scrape_query':
         return 'Title or source ID';
       case 'game_search':
@@ -178554,6 +178836,16 @@ extension on _StringsTr {
         return 'Manga';
       case 'manga_import_action':
         return 'Import Manga';
+      case 'game_scrape_search':
+        return 'Search';
+      case 'game_scrape_use':
+        return 'Use';
+      case 'game_scrape_search_failed':
+        return 'Search failed. Check your network and try again.';
+      case 'game_remove_confirm':
+        return 'Remove this game from the library? Game files on disk will not be deleted.';
+      case 'delete_collection_also_games':
+        return 'Also remove the games in it from the library (game files on disk are kept)';
       default:
         return null;
     }
@@ -180528,8 +180820,6 @@ extension on _StringsVi {
         return 'Metadata fetch failed';
       case 'game_scrape_no_result':
         return 'No matching entry found';
-      case 'game_scrape_pick':
-        return 'Pick the matching entry';
       case 'game_scrape_query':
         return 'Title or source ID';
       case 'game_search':
@@ -184064,6 +184354,16 @@ extension on _StringsVi {
         return 'Manga';
       case 'manga_import_action':
         return 'Import Manga';
+      case 'game_scrape_search':
+        return 'Search';
+      case 'game_scrape_use':
+        return 'Use';
+      case 'game_scrape_search_failed':
+        return 'Search failed. Check your network and try again.';
+      case 'game_remove_confirm':
+        return 'Remove this game from the library? Game files on disk will not be deleted.';
+      case 'delete_collection_also_games':
+        return 'Also remove the games in it from the library (game files on disk are kept)';
       default:
         return null;
     }
@@ -186022,8 +186322,6 @@ extension on _StringsZhCn {
         return '元数据获取失败';
       case 'game_scrape_no_result':
         return '没有找到匹配条目';
-      case 'game_scrape_pick':
-        return '选择匹配的条目';
       case 'game_scrape_query':
         return '标题或源 ID';
       case 'game_search':
@@ -189528,6 +189826,16 @@ extension on _StringsZhCn {
         return '漫画';
       case 'manga_import_action':
         return '导入漫画';
+      case 'game_scrape_search':
+        return '搜索';
+      case 'game_scrape_use':
+        return '使用';
+      case 'game_scrape_search_failed':
+        return '搜索失败，请检查网络后重试';
+      case 'game_remove_confirm':
+        return '从库中移除此游戏？不会删除磁盘上的游戏文件。';
+      case 'delete_collection_also_games':
+        return '同时把其中的游戏移出库（不会删除磁盘上的游戏文件）';
       default:
         return null;
     }
@@ -191494,8 +191802,6 @@ extension on _StringsZhHk {
         return 'Metadata fetch failed';
       case 'game_scrape_no_result':
         return 'No matching entry found';
-      case 'game_scrape_pick':
-        return 'Pick the matching entry';
       case 'game_scrape_query':
         return 'Title or source ID';
       case 'game_search':
@@ -195012,6 +195318,16 @@ extension on _StringsZhHk {
         return 'Manga';
       case 'manga_import_action':
         return 'Import Manga';
+      case 'game_scrape_search':
+        return 'Search';
+      case 'game_scrape_use':
+        return 'Use';
+      case 'game_scrape_search_failed':
+        return 'Search failed. Check your network and try again.';
+      case 'game_remove_confirm':
+        return 'Remove this game from the library? Game files on disk will not be deleted.';
+      case 'delete_collection_also_games':
+        return 'Also remove the games in it from the library (game files on disk are kept)';
       default:
         return null;
     }
