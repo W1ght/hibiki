@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 44591 (2623 per locale)
+/// Strings: 44693 (2629 per locale)
 ///
-/// Built on 2026-07-27 at 07:06 UTC
+/// Built on 2026-07-27 at 07:20 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3494,6 +3494,14 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get yomitan_port_kill_self_instance =>
       'This process is another running instance of this app.';
   String get game_track_bgm => 'BGM / excluded';
+  String get game_line_audio_no_voice => 'No voice';
+  String get game_line_audio_overlong => 'Overlong clip';
+  String get game_line_audio_overlong_hint =>
+      'Far longer than a single line; may include BGM or other mixed audio';
+  String get game_line_audio_loopback_hint =>
+      'System-mix fallback; may include BGM';
+  String get game_line_recapture => 'Recapture voice';
+  String get game_line_recapture_stop => 'Finish recapture';
 }
 
 // Path: <root>
@@ -9459,6 +9467,20 @@ class _StringsAr extends _StringsEn {
       'This process is another running instance of this app.';
   @override
   String get game_track_bgm => 'BGM / excluded';
+  @override
+  String get game_line_audio_no_voice => 'No voice';
+  @override
+  String get game_line_audio_overlong => 'Overlong clip';
+  @override
+  String get game_line_audio_overlong_hint =>
+      'Far longer than a single line; may include BGM or other mixed audio';
+  @override
+  String get game_line_audio_loopback_hint =>
+      'System-mix fallback; may include BGM';
+  @override
+  String get game_line_recapture => 'Recapture voice';
+  @override
+  String get game_line_recapture_stop => 'Finish recapture';
 }
 
 // Path: <root>
@@ -15492,6 +15514,20 @@ class _StringsDe extends _StringsEn {
       'This process is another running instance of this app.';
   @override
   String get game_track_bgm => 'BGM / excluded';
+  @override
+  String get game_line_audio_no_voice => 'No voice';
+  @override
+  String get game_line_audio_overlong => 'Overlong clip';
+  @override
+  String get game_line_audio_overlong_hint =>
+      'Far longer than a single line; may include BGM or other mixed audio';
+  @override
+  String get game_line_audio_loopback_hint =>
+      'System-mix fallback; may include BGM';
+  @override
+  String get game_line_recapture => 'Recapture voice';
+  @override
+  String get game_line_recapture_stop => 'Finish recapture';
 }
 
 // Path: <root>
@@ -21541,6 +21577,20 @@ class _StringsEs extends _StringsEn {
       'This process is another running instance of this app.';
   @override
   String get game_track_bgm => 'BGM / excluded';
+  @override
+  String get game_line_audio_no_voice => 'No voice';
+  @override
+  String get game_line_audio_overlong => 'Overlong clip';
+  @override
+  String get game_line_audio_overlong_hint =>
+      'Far longer than a single line; may include BGM or other mixed audio';
+  @override
+  String get game_line_audio_loopback_hint =>
+      'System-mix fallback; may include BGM';
+  @override
+  String get game_line_recapture => 'Recapture voice';
+  @override
+  String get game_line_recapture_stop => 'Finish recapture';
 }
 
 // Path: <root>
@@ -27601,6 +27651,20 @@ class _StringsFr extends _StringsEn {
       'This process is another running instance of this app.';
   @override
   String get game_track_bgm => 'BGM / excluded';
+  @override
+  String get game_line_audio_no_voice => 'No voice';
+  @override
+  String get game_line_audio_overlong => 'Overlong clip';
+  @override
+  String get game_line_audio_overlong_hint =>
+      'Far longer than a single line; may include BGM or other mixed audio';
+  @override
+  String get game_line_audio_loopback_hint =>
+      'System-mix fallback; may include BGM';
+  @override
+  String get game_line_recapture => 'Recapture voice';
+  @override
+  String get game_line_recapture_stop => 'Finish recapture';
 }
 
 // Path: <root>
@@ -33590,6 +33654,20 @@ class _StringsId extends _StringsEn {
       'This process is another running instance of this app.';
   @override
   String get game_track_bgm => 'BGM / excluded';
+  @override
+  String get game_line_audio_no_voice => 'No voice';
+  @override
+  String get game_line_audio_overlong => 'Overlong clip';
+  @override
+  String get game_line_audio_overlong_hint =>
+      'Far longer than a single line; may include BGM or other mixed audio';
+  @override
+  String get game_line_audio_loopback_hint =>
+      'System-mix fallback; may include BGM';
+  @override
+  String get game_line_recapture => 'Recapture voice';
+  @override
+  String get game_line_recapture_stop => 'Finish recapture';
 }
 
 // Path: <root>
@@ -39625,6 +39703,20 @@ class _StringsIt extends _StringsEn {
       'This process is another running instance of this app.';
   @override
   String get game_track_bgm => 'BGM / excluded';
+  @override
+  String get game_line_audio_no_voice => 'No voice';
+  @override
+  String get game_line_audio_overlong => 'Overlong clip';
+  @override
+  String get game_line_audio_overlong_hint =>
+      'Far longer than a single line; may include BGM or other mixed audio';
+  @override
+  String get game_line_audio_loopback_hint =>
+      'System-mix fallback; may include BGM';
+  @override
+  String get game_line_recapture => 'Recapture voice';
+  @override
+  String get game_line_recapture_stop => 'Finish recapture';
 }
 
 // Path: <root>
@@ -45476,6 +45568,20 @@ class _StringsJa extends _StringsEn {
       'This process is another running instance of this app.';
   @override
   String get game_track_bgm => 'BGM / excluded';
+  @override
+  String get game_line_audio_no_voice => 'No voice';
+  @override
+  String get game_line_audio_overlong => 'Overlong clip';
+  @override
+  String get game_line_audio_overlong_hint =>
+      'Far longer than a single line; may include BGM or other mixed audio';
+  @override
+  String get game_line_audio_loopback_hint =>
+      'System-mix fallback; may include BGM';
+  @override
+  String get game_line_recapture => 'Recapture voice';
+  @override
+  String get game_line_recapture_stop => 'Finish recapture';
 }
 
 // Path: <root>
@@ -51329,6 +51435,20 @@ class _StringsKo extends _StringsEn {
       'This process is another running instance of this app.';
   @override
   String get game_track_bgm => 'BGM / excluded';
+  @override
+  String get game_line_audio_no_voice => 'No voice';
+  @override
+  String get game_line_audio_overlong => 'Overlong clip';
+  @override
+  String get game_line_audio_overlong_hint =>
+      'Far longer than a single line; may include BGM or other mixed audio';
+  @override
+  String get game_line_audio_loopback_hint =>
+      'System-mix fallback; may include BGM';
+  @override
+  String get game_line_recapture => 'Recapture voice';
+  @override
+  String get game_line_recapture_stop => 'Finish recapture';
 }
 
 // Path: <root>
@@ -57344,6 +57464,20 @@ class _StringsNl extends _StringsEn {
       'This process is another running instance of this app.';
   @override
   String get game_track_bgm => 'BGM / excluded';
+  @override
+  String get game_line_audio_no_voice => 'No voice';
+  @override
+  String get game_line_audio_overlong => 'Overlong clip';
+  @override
+  String get game_line_audio_overlong_hint =>
+      'Far longer than a single line; may include BGM or other mixed audio';
+  @override
+  String get game_line_audio_loopback_hint =>
+      'System-mix fallback; may include BGM';
+  @override
+  String get game_line_recapture => 'Recapture voice';
+  @override
+  String get game_line_recapture_stop => 'Finish recapture';
 }
 
 // Path: <root>
@@ -63372,6 +63506,20 @@ class _StringsPtBr extends _StringsEn {
       'This process is another running instance of this app.';
   @override
   String get game_track_bgm => 'BGM / excluded';
+  @override
+  String get game_line_audio_no_voice => 'No voice';
+  @override
+  String get game_line_audio_overlong => 'Overlong clip';
+  @override
+  String get game_line_audio_overlong_hint =>
+      'Far longer than a single line; may include BGM or other mixed audio';
+  @override
+  String get game_line_audio_loopback_hint =>
+      'System-mix fallback; may include BGM';
+  @override
+  String get game_line_recapture => 'Recapture voice';
+  @override
+  String get game_line_recapture_stop => 'Finish recapture';
 }
 
 // Path: <root>
@@ -69384,6 +69532,20 @@ class _StringsRu extends _StringsEn {
       'This process is another running instance of this app.';
   @override
   String get game_track_bgm => 'BGM / excluded';
+  @override
+  String get game_line_audio_no_voice => 'No voice';
+  @override
+  String get game_line_audio_overlong => 'Overlong clip';
+  @override
+  String get game_line_audio_overlong_hint =>
+      'Far longer than a single line; may include BGM or other mixed audio';
+  @override
+  String get game_line_audio_loopback_hint =>
+      'System-mix fallback; may include BGM';
+  @override
+  String get game_line_recapture => 'Recapture voice';
+  @override
+  String get game_line_recapture_stop => 'Finish recapture';
 }
 
 // Path: <root>
@@ -75344,6 +75506,20 @@ class _StringsTh extends _StringsEn {
       'This process is another running instance of this app.';
   @override
   String get game_track_bgm => 'BGM / excluded';
+  @override
+  String get game_line_audio_no_voice => 'No voice';
+  @override
+  String get game_line_audio_overlong => 'Overlong clip';
+  @override
+  String get game_line_audio_overlong_hint =>
+      'Far longer than a single line; may include BGM or other mixed audio';
+  @override
+  String get game_line_audio_loopback_hint =>
+      'System-mix fallback; may include BGM';
+  @override
+  String get game_line_recapture => 'Recapture voice';
+  @override
+  String get game_line_recapture_stop => 'Finish recapture';
 }
 
 // Path: <root>
@@ -81336,6 +81512,20 @@ class _StringsTr extends _StringsEn {
       'This process is another running instance of this app.';
   @override
   String get game_track_bgm => 'BGM / excluded';
+  @override
+  String get game_line_audio_no_voice => 'No voice';
+  @override
+  String get game_line_audio_overlong => 'Overlong clip';
+  @override
+  String get game_line_audio_overlong_hint =>
+      'Far longer than a single line; may include BGM or other mixed audio';
+  @override
+  String get game_line_audio_loopback_hint =>
+      'System-mix fallback; may include BGM';
+  @override
+  String get game_line_recapture => 'Recapture voice';
+  @override
+  String get game_line_recapture_stop => 'Finish recapture';
 }
 
 // Path: <root>
@@ -87313,6 +87503,20 @@ class _StringsVi extends _StringsEn {
       'This process is another running instance of this app.';
   @override
   String get game_track_bgm => 'BGM / excluded';
+  @override
+  String get game_line_audio_no_voice => 'No voice';
+  @override
+  String get game_line_audio_overlong => 'Overlong clip';
+  @override
+  String get game_line_audio_overlong_hint =>
+      'Far longer than a single line; may include BGM or other mixed audio';
+  @override
+  String get game_line_audio_loopback_hint =>
+      'System-mix fallback; may include BGM';
+  @override
+  String get game_line_recapture => 'Recapture voice';
+  @override
+  String get game_line_recapture_stop => 'Finish recapture';
 }
 
 // Path: <root>
@@ -92882,6 +93086,18 @@ class _StringsZhCn extends _StringsEn {
   String get yomitan_port_kill_self_instance => '该进程是本应用的另一个正在运行的实例。';
   @override
   String get game_track_bgm => 'BGM / 已排除';
+  @override
+  String get game_line_audio_no_voice => '无配音';
+  @override
+  String get game_line_audio_overlong => '超长片段';
+  @override
+  String get game_line_audio_overlong_hint => '远超单句时长，可能混入 BGM 或其它混音';
+  @override
+  String get game_line_audio_loopback_hint => '整机混音兜底，可能混入 BGM';
+  @override
+  String get game_line_recapture => '补录语音';
+  @override
+  String get game_line_recapture_stop => '完成补录';
 }
 
 // Path: <root>
@@ -98655,6 +98871,20 @@ class _StringsZhHk extends _StringsEn {
       'This process is another running instance of this app.';
   @override
   String get game_track_bgm => 'BGM / excluded';
+  @override
+  String get game_line_audio_no_voice => 'No voice';
+  @override
+  String get game_line_audio_overlong => 'Overlong clip';
+  @override
+  String get game_line_audio_overlong_hint =>
+      'Far longer than a single line; may include BGM or other mixed audio';
+  @override
+  String get game_line_audio_loopback_hint =>
+      'System-mix fallback; may include BGM';
+  @override
+  String get game_line_recapture => 'Recapture voice';
+  @override
+  String get game_line_recapture_stop => 'Finish recapture';
 }
 
 /// Flat map(s) containing all translations.
@@ -104017,6 +104247,18 @@ extension on _StringsEn {
         return 'This process is another running instance of this app.';
       case 'game_track_bgm':
         return 'BGM / excluded';
+      case 'game_line_audio_no_voice':
+        return 'No voice';
+      case 'game_line_audio_overlong':
+        return 'Overlong clip';
+      case 'game_line_audio_overlong_hint':
+        return 'Far longer than a single line; may include BGM or other mixed audio';
+      case 'game_line_audio_loopback_hint':
+        return 'System-mix fallback; may include BGM';
+      case 'game_line_recapture':
+        return 'Recapture voice';
+      case 'game_line_recapture_stop':
+        return 'Finish recapture';
       default:
         return null;
     }
@@ -109377,6 +109619,18 @@ extension on _StringsAr {
         return 'This process is another running instance of this app.';
       case 'game_track_bgm':
         return 'BGM / excluded';
+      case 'game_line_audio_no_voice':
+        return 'No voice';
+      case 'game_line_audio_overlong':
+        return 'Overlong clip';
+      case 'game_line_audio_overlong_hint':
+        return 'Far longer than a single line; may include BGM or other mixed audio';
+      case 'game_line_audio_loopback_hint':
+        return 'System-mix fallback; may include BGM';
+      case 'game_line_recapture':
+        return 'Recapture voice';
+      case 'game_line_recapture_stop':
+        return 'Finish recapture';
       default:
         return null;
     }
@@ -114758,6 +115012,18 @@ extension on _StringsDe {
         return 'This process is another running instance of this app.';
       case 'game_track_bgm':
         return 'BGM / excluded';
+      case 'game_line_audio_no_voice':
+        return 'No voice';
+      case 'game_line_audio_overlong':
+        return 'Overlong clip';
+      case 'game_line_audio_overlong_hint':
+        return 'Far longer than a single line; may include BGM or other mixed audio';
+      case 'game_line_audio_loopback_hint':
+        return 'System-mix fallback; may include BGM';
+      case 'game_line_recapture':
+        return 'Recapture voice';
+      case 'game_line_recapture_stop':
+        return 'Finish recapture';
       default:
         return null;
     }
@@ -120138,6 +120404,18 @@ extension on _StringsEs {
         return 'This process is another running instance of this app.';
       case 'game_track_bgm':
         return 'BGM / excluded';
+      case 'game_line_audio_no_voice':
+        return 'No voice';
+      case 'game_line_audio_overlong':
+        return 'Overlong clip';
+      case 'game_line_audio_overlong_hint':
+        return 'Far longer than a single line; may include BGM or other mixed audio';
+      case 'game_line_audio_loopback_hint':
+        return 'System-mix fallback; may include BGM';
+      case 'game_line_recapture':
+        return 'Recapture voice';
+      case 'game_line_recapture_stop':
+        return 'Finish recapture';
       default:
         return null;
     }
@@ -125524,6 +125802,18 @@ extension on _StringsFr {
         return 'This process is another running instance of this app.';
       case 'game_track_bgm':
         return 'BGM / excluded';
+      case 'game_line_audio_no_voice':
+        return 'No voice';
+      case 'game_line_audio_overlong':
+        return 'Overlong clip';
+      case 'game_line_audio_overlong_hint':
+        return 'Far longer than a single line; may include BGM or other mixed audio';
+      case 'game_line_audio_loopback_hint':
+        return 'System-mix fallback; may include BGM';
+      case 'game_line_recapture':
+        return 'Recapture voice';
+      case 'game_line_recapture_stop':
+        return 'Finish recapture';
       default:
         return null;
     }
@@ -130892,6 +131182,18 @@ extension on _StringsId {
         return 'This process is another running instance of this app.';
       case 'game_track_bgm':
         return 'BGM / excluded';
+      case 'game_line_audio_no_voice':
+        return 'No voice';
+      case 'game_line_audio_overlong':
+        return 'Overlong clip';
+      case 'game_line_audio_overlong_hint':
+        return 'Far longer than a single line; may include BGM or other mixed audio';
+      case 'game_line_audio_loopback_hint':
+        return 'System-mix fallback; may include BGM';
+      case 'game_line_recapture':
+        return 'Recapture voice';
+      case 'game_line_recapture_stop':
+        return 'Finish recapture';
       default:
         return null;
     }
@@ -136275,6 +136577,18 @@ extension on _StringsIt {
         return 'This process is another running instance of this app.';
       case 'game_track_bgm':
         return 'BGM / excluded';
+      case 'game_line_audio_no_voice':
+        return 'No voice';
+      case 'game_line_audio_overlong':
+        return 'Overlong clip';
+      case 'game_line_audio_overlong_hint':
+        return 'Far longer than a single line; may include BGM or other mixed audio';
+      case 'game_line_audio_loopback_hint':
+        return 'System-mix fallback; may include BGM';
+      case 'game_line_recapture':
+        return 'Recapture voice';
+      case 'game_line_recapture_stop':
+        return 'Finish recapture';
       default:
         return null;
     }
@@ -141620,6 +141934,18 @@ extension on _StringsJa {
         return 'This process is another running instance of this app.';
       case 'game_track_bgm':
         return 'BGM / excluded';
+      case 'game_line_audio_no_voice':
+        return 'No voice';
+      case 'game_line_audio_overlong':
+        return 'Overlong clip';
+      case 'game_line_audio_overlong_hint':
+        return 'Far longer than a single line; may include BGM or other mixed audio';
+      case 'game_line_audio_loopback_hint':
+        return 'System-mix fallback; may include BGM';
+      case 'game_line_recapture':
+        return 'Recapture voice';
+      case 'game_line_recapture_stop':
+        return 'Finish recapture';
       default:
         return null;
     }
@@ -146969,6 +147295,18 @@ extension on _StringsKo {
         return 'This process is another running instance of this app.';
       case 'game_track_bgm':
         return 'BGM / excluded';
+      case 'game_line_audio_no_voice':
+        return 'No voice';
+      case 'game_line_audio_overlong':
+        return 'Overlong clip';
+      case 'game_line_audio_overlong_hint':
+        return 'Far longer than a single line; may include BGM or other mixed audio';
+      case 'game_line_audio_loopback_hint':
+        return 'System-mix fallback; may include BGM';
+      case 'game_line_recapture':
+        return 'Recapture voice';
+      case 'game_line_recapture_stop':
+        return 'Finish recapture';
       default:
         return null;
     }
@@ -152345,6 +152683,18 @@ extension on _StringsNl {
         return 'This process is another running instance of this app.';
       case 'game_track_bgm':
         return 'BGM / excluded';
+      case 'game_line_audio_no_voice':
+        return 'No voice';
+      case 'game_line_audio_overlong':
+        return 'Overlong clip';
+      case 'game_line_audio_overlong_hint':
+        return 'Far longer than a single line; may include BGM or other mixed audio';
+      case 'game_line_audio_loopback_hint':
+        return 'System-mix fallback; may include BGM';
+      case 'game_line_recapture':
+        return 'Recapture voice';
+      case 'game_line_recapture_stop':
+        return 'Finish recapture';
       default:
         return null;
     }
@@ -157718,6 +158068,18 @@ extension on _StringsPtBr {
         return 'This process is another running instance of this app.';
       case 'game_track_bgm':
         return 'BGM / excluded';
+      case 'game_line_audio_no_voice':
+        return 'No voice';
+      case 'game_line_audio_overlong':
+        return 'Overlong clip';
+      case 'game_line_audio_overlong_hint':
+        return 'Far longer than a single line; may include BGM or other mixed audio';
+      case 'game_line_audio_loopback_hint':
+        return 'System-mix fallback; may include BGM';
+      case 'game_line_recapture':
+        return 'Recapture voice';
+      case 'game_line_recapture_stop':
+        return 'Finish recapture';
       default:
         return null;
     }
@@ -163096,6 +163458,18 @@ extension on _StringsRu {
         return 'This process is another running instance of this app.';
       case 'game_track_bgm':
         return 'BGM / excluded';
+      case 'game_line_audio_no_voice':
+        return 'No voice';
+      case 'game_line_audio_overlong':
+        return 'Overlong clip';
+      case 'game_line_audio_overlong_hint':
+        return 'Far longer than a single line; may include BGM or other mixed audio';
+      case 'game_line_audio_loopback_hint':
+        return 'System-mix fallback; may include BGM';
+      case 'game_line_recapture':
+        return 'Recapture voice';
+      case 'game_line_recapture_stop':
+        return 'Finish recapture';
       default:
         return null;
     }
@@ -168458,6 +168832,18 @@ extension on _StringsTh {
         return 'This process is another running instance of this app.';
       case 'game_track_bgm':
         return 'BGM / excluded';
+      case 'game_line_audio_no_voice':
+        return 'No voice';
+      case 'game_line_audio_overlong':
+        return 'Overlong clip';
+      case 'game_line_audio_overlong_hint':
+        return 'Far longer than a single line; may include BGM or other mixed audio';
+      case 'game_line_audio_loopback_hint':
+        return 'System-mix fallback; may include BGM';
+      case 'game_line_recapture':
+        return 'Recapture voice';
+      case 'game_line_recapture_stop':
+        return 'Finish recapture';
       default:
         return null;
     }
@@ -173829,6 +174215,18 @@ extension on _StringsTr {
         return 'This process is another running instance of this app.';
       case 'game_track_bgm':
         return 'BGM / excluded';
+      case 'game_line_audio_no_voice':
+        return 'No voice';
+      case 'game_line_audio_overlong':
+        return 'Overlong clip';
+      case 'game_line_audio_overlong_hint':
+        return 'Far longer than a single line; may include BGM or other mixed audio';
+      case 'game_line_audio_loopback_hint':
+        return 'System-mix fallback; may include BGM';
+      case 'game_line_recapture':
+        return 'Recapture voice';
+      case 'game_line_recapture_stop':
+        return 'Finish recapture';
       default:
         return null;
     }
@@ -179195,6 +179593,18 @@ extension on _StringsVi {
         return 'This process is another running instance of this app.';
       case 'game_track_bgm':
         return 'BGM / excluded';
+      case 'game_line_audio_no_voice':
+        return 'No voice';
+      case 'game_line_audio_overlong':
+        return 'Overlong clip';
+      case 'game_line_audio_overlong_hint':
+        return 'Far longer than a single line; may include BGM or other mixed audio';
+      case 'game_line_audio_loopback_hint':
+        return 'System-mix fallback; may include BGM';
+      case 'game_line_recapture':
+        return 'Recapture voice';
+      case 'game_line_recapture_stop':
+        return 'Finish recapture';
       default:
         return null;
     }
@@ -184515,6 +184925,18 @@ extension on _StringsZhCn {
         return '该进程是本应用的另一个正在运行的实例。';
       case 'game_track_bgm':
         return 'BGM / 已排除';
+      case 'game_line_audio_no_voice':
+        return '无配音';
+      case 'game_line_audio_overlong':
+        return '超长片段';
+      case 'game_line_audio_overlong_hint':
+        return '远超单句时长，可能混入 BGM 或其它混音';
+      case 'game_line_audio_loopback_hint':
+        return '整机混音兜底，可能混入 BGM';
+      case 'game_line_recapture':
+        return '补录语音';
+      case 'game_line_recapture_stop':
+        return '完成补录';
       default:
         return null;
     }
@@ -189855,6 +190277,18 @@ extension on _StringsZhHk {
         return 'This process is another running instance of this app.';
       case 'game_track_bgm':
         return 'BGM / excluded';
+      case 'game_line_audio_no_voice':
+        return 'No voice';
+      case 'game_line_audio_overlong':
+        return 'Overlong clip';
+      case 'game_line_audio_overlong_hint':
+        return 'Far longer than a single line; may include BGM or other mixed audio';
+      case 'game_line_audio_loopback_hint':
+        return 'System-mix fallback; may include BGM';
+      case 'game_line_recapture':
+        return 'Recapture voice';
+      case 'game_line_recapture_stop':
+        return 'Finish recapture';
       default:
         return null;
     }
