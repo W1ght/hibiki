@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 46070 (2710 per locale)
+/// Strings: 46138 (2714 per locale)
 ///
-/// Built on 2026-07-28 at 07:13 UTC
+/// Built on 2026-07-28 at 07:50 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3638,6 +3638,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get gal_mining_image_mode_screenshot => 'Screenshot';
   String get gal_mining_image_mode_hint =>
       'Galgame scenes barely move within one line, so a still screenshot is usually smaller and just as useful.';
+  String get shortcut_scope_manga => 'Manga';
+  String get shortcut_action_manga_page_forward => 'Next page';
+  String get shortcut_action_manga_page_backward => 'Previous page';
+  String get shortcut_action_manga_dismiss_dict => 'Close dictionary';
 }
 
 // Path: <root>
@@ -9834,6 +9838,14 @@ class _StringsAr extends _StringsEn {
   @override
   String get gal_mining_image_mode_hint =>
       'Galgame scenes barely move within one line, so a still screenshot is usually smaller and just as useful.';
+  @override
+  String get shortcut_scope_manga => 'Manga';
+  @override
+  String get shortcut_action_manga_page_forward => 'Next page';
+  @override
+  String get shortcut_action_manga_page_backward => 'Previous page';
+  @override
+  String get shortcut_action_manga_dismiss_dict => 'Close dictionary';
 }
 
 // Path: <root>
@@ -16098,6 +16110,14 @@ class _StringsDe extends _StringsEn {
   @override
   String get gal_mining_image_mode_hint =>
       'Galgame scenes barely move within one line, so a still screenshot is usually smaller and just as useful.';
+  @override
+  String get shortcut_scope_manga => 'Manga';
+  @override
+  String get shortcut_action_manga_page_forward => 'Next page';
+  @override
+  String get shortcut_action_manga_page_backward => 'Previous page';
+  @override
+  String get shortcut_action_manga_dismiss_dict => 'Close dictionary';
 }
 
 // Path: <root>
@@ -22378,6 +22398,14 @@ class _StringsEs extends _StringsEn {
   @override
   String get gal_mining_image_mode_hint =>
       'Galgame scenes barely move within one line, so a still screenshot is usually smaller and just as useful.';
+  @override
+  String get shortcut_scope_manga => 'Manga';
+  @override
+  String get shortcut_action_manga_page_forward => 'Next page';
+  @override
+  String get shortcut_action_manga_page_backward => 'Previous page';
+  @override
+  String get shortcut_action_manga_dismiss_dict => 'Close dictionary';
 }
 
 // Path: <root>
@@ -28669,6 +28697,14 @@ class _StringsFr extends _StringsEn {
   @override
   String get gal_mining_image_mode_hint =>
       'Galgame scenes barely move within one line, so a still screenshot is usually smaller and just as useful.';
+  @override
+  String get shortcut_scope_manga => 'Manga';
+  @override
+  String get shortcut_action_manga_page_forward => 'Next page';
+  @override
+  String get shortcut_action_manga_page_backward => 'Previous page';
+  @override
+  String get shortcut_action_manga_dismiss_dict => 'Close dictionary';
 }
 
 // Path: <root>
@@ -34889,6 +34925,14 @@ class _StringsId extends _StringsEn {
   @override
   String get gal_mining_image_mode_hint =>
       'Galgame scenes barely move within one line, so a still screenshot is usually smaller and just as useful.';
+  @override
+  String get shortcut_scope_manga => 'Manga';
+  @override
+  String get shortcut_action_manga_page_forward => 'Next page';
+  @override
+  String get shortcut_action_manga_page_backward => 'Previous page';
+  @override
+  String get shortcut_action_manga_dismiss_dict => 'Close dictionary';
 }
 
 // Path: <root>
@@ -41155,6 +41199,14 @@ class _StringsIt extends _StringsEn {
   @override
   String get gal_mining_image_mode_hint =>
       'Galgame scenes barely move within one line, so a still screenshot is usually smaller and just as useful.';
+  @override
+  String get shortcut_scope_manga => 'Manga';
+  @override
+  String get shortcut_action_manga_page_forward => 'Next page';
+  @override
+  String get shortcut_action_manga_page_backward => 'Previous page';
+  @override
+  String get shortcut_action_manga_dismiss_dict => 'Close dictionary';
 }
 
 // Path: <root>
@@ -47238,6 +47290,14 @@ class _StringsJa extends _StringsEn {
   @override
   String get gal_mining_image_mode_hint =>
       'Galgame scenes barely move within one line, so a still screenshot is usually smaller and just as useful.';
+  @override
+  String get shortcut_scope_manga => 'Manga';
+  @override
+  String get shortcut_action_manga_page_forward => 'Next page';
+  @override
+  String get shortcut_action_manga_page_backward => 'Previous page';
+  @override
+  String get shortcut_action_manga_dismiss_dict => 'Close dictionary';
 }
 
 // Path: <root>
@@ -53323,6 +53383,14 @@ class _StringsKo extends _StringsEn {
   @override
   String get gal_mining_image_mode_hint =>
       'Galgame scenes barely move within one line, so a still screenshot is usually smaller and just as useful.';
+  @override
+  String get shortcut_scope_manga => 'Manga';
+  @override
+  String get shortcut_action_manga_page_forward => 'Next page';
+  @override
+  String get shortcut_action_manga_page_backward => 'Previous page';
+  @override
+  String get shortcut_action_manga_dismiss_dict => 'Close dictionary';
 }
 
 // Path: <root>
@@ -59569,6 +59637,14 @@ class _StringsNl extends _StringsEn {
   @override
   String get gal_mining_image_mode_hint =>
       'Galgame scenes barely move within one line, so a still screenshot is usually smaller and just as useful.';
+  @override
+  String get shortcut_scope_manga => 'Manga';
+  @override
+  String get shortcut_action_manga_page_forward => 'Next page';
+  @override
+  String get shortcut_action_manga_page_backward => 'Previous page';
+  @override
+  String get shortcut_action_manga_dismiss_dict => 'Close dictionary';
 }
 
 // Path: <root>
@@ -65828,6 +65904,14 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get gal_mining_image_mode_hint =>
       'Galgame scenes barely move within one line, so a still screenshot is usually smaller and just as useful.';
+  @override
+  String get shortcut_scope_manga => 'Manga';
+  @override
+  String get shortcut_action_manga_page_forward => 'Next page';
+  @override
+  String get shortcut_action_manga_page_backward => 'Previous page';
+  @override
+  String get shortcut_action_manga_dismiss_dict => 'Close dictionary';
 }
 
 // Path: <root>
@@ -72071,6 +72155,14 @@ class _StringsRu extends _StringsEn {
   @override
   String get gal_mining_image_mode_hint =>
       'Galgame scenes barely move within one line, so a still screenshot is usually smaller and just as useful.';
+  @override
+  String get shortcut_scope_manga => 'Manga';
+  @override
+  String get shortcut_action_manga_page_forward => 'Next page';
+  @override
+  String get shortcut_action_manga_page_backward => 'Previous page';
+  @override
+  String get shortcut_action_manga_dismiss_dict => 'Close dictionary';
 }
 
 // Path: <root>
@@ -78262,6 +78354,14 @@ class _StringsTh extends _StringsEn {
   @override
   String get gal_mining_image_mode_hint =>
       'Galgame scenes barely move within one line, so a still screenshot is usually smaller and just as useful.';
+  @override
+  String get shortcut_scope_manga => 'Manga';
+  @override
+  String get shortcut_action_manga_page_forward => 'Next page';
+  @override
+  String get shortcut_action_manga_page_backward => 'Previous page';
+  @override
+  String get shortcut_action_manga_dismiss_dict => 'Close dictionary';
 }
 
 // Path: <root>
@@ -84485,6 +84585,14 @@ class _StringsTr extends _StringsEn {
   @override
   String get gal_mining_image_mode_hint =>
       'Galgame scenes barely move within one line, so a still screenshot is usually smaller and just as useful.';
+  @override
+  String get shortcut_scope_manga => 'Manga';
+  @override
+  String get shortcut_action_manga_page_forward => 'Next page';
+  @override
+  String get shortcut_action_manga_page_backward => 'Previous page';
+  @override
+  String get shortcut_action_manga_dismiss_dict => 'Close dictionary';
 }
 
 // Path: <root>
@@ -90693,6 +90801,14 @@ class _StringsVi extends _StringsEn {
   @override
   String get gal_mining_image_mode_hint =>
       'Galgame scenes barely move within one line, so a still screenshot is usually smaller and just as useful.';
+  @override
+  String get shortcut_scope_manga => 'Manga';
+  @override
+  String get shortcut_action_manga_page_forward => 'Next page';
+  @override
+  String get shortcut_action_manga_page_backward => 'Previous page';
+  @override
+  String get shortcut_action_manga_dismiss_dict => 'Close dictionary';
 }
 
 // Path: <root>
@@ -96467,6 +96583,14 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get gal_mining_image_mode_hint =>
       'Galgame 一句台词内画面基本不动，静态截图通常更小、信息量一样。';
+  @override
+  String get shortcut_scope_manga => '漫画';
+  @override
+  String get shortcut_action_manga_page_forward => '下一页';
+  @override
+  String get shortcut_action_manga_page_backward => '上一页';
+  @override
+  String get shortcut_action_manga_dismiss_dict => '关闭词典';
 }
 
 // Path: <root>
@@ -102471,6 +102595,14 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get gal_mining_image_mode_hint =>
       'Galgame scenes barely move within one line, so a still screenshot is usually smaller and just as useful.';
+  @override
+  String get shortcut_scope_manga => 'Manga';
+  @override
+  String get shortcut_action_manga_page_forward => 'Next page';
+  @override
+  String get shortcut_action_manga_page_backward => 'Previous page';
+  @override
+  String get shortcut_action_manga_dismiss_dict => 'Close dictionary';
 }
 
 /// Flat map(s) containing all translations.
@@ -108023,6 +108155,14 @@ extension on _StringsEn {
         return 'Screenshot';
       case 'gal_mining_image_mode_hint':
         return 'Galgame scenes barely move within one line, so a still screenshot is usually smaller and just as useful.';
+      case 'shortcut_scope_manga':
+        return 'Manga';
+      case 'shortcut_action_manga_page_forward':
+        return 'Next page';
+      case 'shortcut_action_manga_page_backward':
+        return 'Previous page';
+      case 'shortcut_action_manga_dismiss_dict':
+        return 'Close dictionary';
       default:
         return null;
     }
@@ -113573,6 +113713,14 @@ extension on _StringsAr {
         return 'Screenshot';
       case 'gal_mining_image_mode_hint':
         return 'Galgame scenes barely move within one line, so a still screenshot is usually smaller and just as useful.';
+      case 'shortcut_scope_manga':
+        return 'Manga';
+      case 'shortcut_action_manga_page_forward':
+        return 'Next page';
+      case 'shortcut_action_manga_page_backward':
+        return 'Previous page';
+      case 'shortcut_action_manga_dismiss_dict':
+        return 'Close dictionary';
       default:
         return null;
     }
@@ -119144,6 +119292,14 @@ extension on _StringsDe {
         return 'Screenshot';
       case 'gal_mining_image_mode_hint':
         return 'Galgame scenes barely move within one line, so a still screenshot is usually smaller and just as useful.';
+      case 'shortcut_scope_manga':
+        return 'Manga';
+      case 'shortcut_action_manga_page_forward':
+        return 'Next page';
+      case 'shortcut_action_manga_page_backward':
+        return 'Previous page';
+      case 'shortcut_action_manga_dismiss_dict':
+        return 'Close dictionary';
       default:
         return null;
     }
@@ -124714,6 +124870,14 @@ extension on _StringsEs {
         return 'Screenshot';
       case 'gal_mining_image_mode_hint':
         return 'Galgame scenes barely move within one line, so a still screenshot is usually smaller and just as useful.';
+      case 'shortcut_scope_manga':
+        return 'Manga';
+      case 'shortcut_action_manga_page_forward':
+        return 'Next page';
+      case 'shortcut_action_manga_page_backward':
+        return 'Previous page';
+      case 'shortcut_action_manga_dismiss_dict':
+        return 'Close dictionary';
       default:
         return null;
     }
@@ -130290,6 +130454,14 @@ extension on _StringsFr {
         return 'Screenshot';
       case 'gal_mining_image_mode_hint':
         return 'Galgame scenes barely move within one line, so a still screenshot is usually smaller and just as useful.';
+      case 'shortcut_scope_manga':
+        return 'Manga';
+      case 'shortcut_action_manga_page_forward':
+        return 'Next page';
+      case 'shortcut_action_manga_page_backward':
+        return 'Previous page';
+      case 'shortcut_action_manga_dismiss_dict':
+        return 'Close dictionary';
       default:
         return null;
     }
@@ -135848,6 +136020,14 @@ extension on _StringsId {
         return 'Screenshot';
       case 'gal_mining_image_mode_hint':
         return 'Galgame scenes barely move within one line, so a still screenshot is usually smaller and just as useful.';
+      case 'shortcut_scope_manga':
+        return 'Manga';
+      case 'shortcut_action_manga_page_forward':
+        return 'Next page';
+      case 'shortcut_action_manga_page_backward':
+        return 'Previous page';
+      case 'shortcut_action_manga_dismiss_dict':
+        return 'Close dictionary';
       default:
         return null;
     }
@@ -141421,6 +141601,14 @@ extension on _StringsIt {
         return 'Screenshot';
       case 'gal_mining_image_mode_hint':
         return 'Galgame scenes barely move within one line, so a still screenshot is usually smaller and just as useful.';
+      case 'shortcut_scope_manga':
+        return 'Manga';
+      case 'shortcut_action_manga_page_forward':
+        return 'Next page';
+      case 'shortcut_action_manga_page_backward':
+        return 'Previous page';
+      case 'shortcut_action_manga_dismiss_dict':
+        return 'Close dictionary';
       default:
         return null;
     }
@@ -146956,6 +147144,14 @@ extension on _StringsJa {
         return 'Screenshot';
       case 'gal_mining_image_mode_hint':
         return 'Galgame scenes barely move within one line, so a still screenshot is usually smaller and just as useful.';
+      case 'shortcut_scope_manga':
+        return 'Manga';
+      case 'shortcut_action_manga_page_forward':
+        return 'Next page';
+      case 'shortcut_action_manga_page_backward':
+        return 'Previous page';
+      case 'shortcut_action_manga_dismiss_dict':
+        return 'Close dictionary';
       default:
         return null;
     }
@@ -152495,6 +152691,14 @@ extension on _StringsKo {
         return 'Screenshot';
       case 'gal_mining_image_mode_hint':
         return 'Galgame scenes barely move within one line, so a still screenshot is usually smaller and just as useful.';
+      case 'shortcut_scope_manga':
+        return 'Manga';
+      case 'shortcut_action_manga_page_forward':
+        return 'Next page';
+      case 'shortcut_action_manga_page_backward':
+        return 'Previous page';
+      case 'shortcut_action_manga_dismiss_dict':
+        return 'Close dictionary';
       default:
         return null;
     }
@@ -158061,6 +158265,14 @@ extension on _StringsNl {
         return 'Screenshot';
       case 'gal_mining_image_mode_hint':
         return 'Galgame scenes barely move within one line, so a still screenshot is usually smaller and just as useful.';
+      case 'shortcut_scope_manga':
+        return 'Manga';
+      case 'shortcut_action_manga_page_forward':
+        return 'Next page';
+      case 'shortcut_action_manga_page_backward':
+        return 'Previous page';
+      case 'shortcut_action_manga_dismiss_dict':
+        return 'Close dictionary';
       default:
         return null;
     }
@@ -163624,6 +163836,14 @@ extension on _StringsPtBr {
         return 'Screenshot';
       case 'gal_mining_image_mode_hint':
         return 'Galgame scenes barely move within one line, so a still screenshot is usually smaller and just as useful.';
+      case 'shortcut_scope_manga':
+        return 'Manga';
+      case 'shortcut_action_manga_page_forward':
+        return 'Next page';
+      case 'shortcut_action_manga_page_backward':
+        return 'Previous page';
+      case 'shortcut_action_manga_dismiss_dict':
+        return 'Close dictionary';
       default:
         return null;
     }
@@ -169192,6 +169412,14 @@ extension on _StringsRu {
         return 'Screenshot';
       case 'gal_mining_image_mode_hint':
         return 'Galgame scenes barely move within one line, so a still screenshot is usually smaller and just as useful.';
+      case 'shortcut_scope_manga':
+        return 'Manga';
+      case 'shortcut_action_manga_page_forward':
+        return 'Next page';
+      case 'shortcut_action_manga_page_backward':
+        return 'Previous page';
+      case 'shortcut_action_manga_dismiss_dict':
+        return 'Close dictionary';
       default:
         return null;
     }
@@ -174744,6 +174972,14 @@ extension on _StringsTh {
         return 'Screenshot';
       case 'gal_mining_image_mode_hint':
         return 'Galgame scenes barely move within one line, so a still screenshot is usually smaller and just as useful.';
+      case 'shortcut_scope_manga':
+        return 'Manga';
+      case 'shortcut_action_manga_page_forward':
+        return 'Next page';
+      case 'shortcut_action_manga_page_backward':
+        return 'Previous page';
+      case 'shortcut_action_manga_dismiss_dict':
+        return 'Close dictionary';
       default:
         return null;
     }
@@ -180305,6 +180541,14 @@ extension on _StringsTr {
         return 'Screenshot';
       case 'gal_mining_image_mode_hint':
         return 'Galgame scenes barely move within one line, so a still screenshot is usually smaller and just as useful.';
+      case 'shortcut_scope_manga':
+        return 'Manga';
+      case 'shortcut_action_manga_page_forward':
+        return 'Next page';
+      case 'shortcut_action_manga_page_backward':
+        return 'Previous page';
+      case 'shortcut_action_manga_dismiss_dict':
+        return 'Close dictionary';
       default:
         return null;
     }
@@ -185861,6 +186105,14 @@ extension on _StringsVi {
         return 'Screenshot';
       case 'gal_mining_image_mode_hint':
         return 'Galgame scenes barely move within one line, so a still screenshot is usually smaller and just as useful.';
+      case 'shortcut_scope_manga':
+        return 'Manga';
+      case 'shortcut_action_manga_page_forward':
+        return 'Next page';
+      case 'shortcut_action_manga_page_backward':
+        return 'Previous page';
+      case 'shortcut_action_manga_dismiss_dict':
+        return 'Close dictionary';
       default:
         return null;
     }
@@ -191371,6 +191623,14 @@ extension on _StringsZhCn {
         return '静态截图';
       case 'gal_mining_image_mode_hint':
         return 'Galgame 一句台词内画面基本不动，静态截图通常更小、信息量一样。';
+      case 'shortcut_scope_manga':
+        return '漫画';
+      case 'shortcut_action_manga_page_forward':
+        return '下一页';
+      case 'shortcut_action_manga_page_backward':
+        return '上一页';
+      case 'shortcut_action_manga_dismiss_dict':
+        return '关闭词典';
       default:
         return null;
     }
@@ -196901,6 +197161,14 @@ extension on _StringsZhHk {
         return 'Screenshot';
       case 'gal_mining_image_mode_hint':
         return 'Galgame scenes barely move within one line, so a still screenshot is usually smaller and just as useful.';
+      case 'shortcut_scope_manga':
+        return 'Manga';
+      case 'shortcut_action_manga_page_forward':
+        return 'Next page';
+      case 'shortcut_action_manga_page_backward':
+        return 'Previous page';
+      case 'shortcut_action_manga_dismiss_dict':
+        return 'Close dictionary';
       default:
         return null;
     }
