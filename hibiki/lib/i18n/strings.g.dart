@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 46002 (2706 per locale)
+/// Strings: 46019 (2707 per locale)
 ///
-/// Built on 2026-07-28 at 06:16 UTC
+/// Built on 2026-07-28 at 07:01 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3574,8 +3574,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Search failed. Check your network and try again.';
   String get game_remove_confirm =>
       'Remove this game from the library? Game files on disk will not be deleted.';
-  String get delete_collection_also_games =>
-      'Also remove the games in it from the library (game files on disk are kept)';
   String manga_ocr_acceleration_status({required Object engine}) =>
       'OCR acceleration: ${engine}';
   String manga_ocr_acceleration_degraded(
@@ -3632,6 +3630,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Off by default: transfers with peers on your local network ignore the limits above.';
   String get download_rate_limit_lan_included =>
       'Also applies within your local network.';
+  String get video_collection_no_local_member =>
+      'No local video in this collection';
+  String video_scrape_online_match_collection({required Object name}) =>
+      'Match cover for ${name}';
 }
 
 // Path: <root>
@@ -9726,9 +9728,6 @@ class _StringsAr extends _StringsEn {
   String get game_remove_confirm =>
       'Remove this game from the library? Game files on disk will not be deleted.';
   @override
-  String get delete_collection_also_games =>
-      'Also remove the games in it from the library (game files on disk are kept)';
-  @override
   String manga_ocr_acceleration_status({required Object engine}) =>
       'OCR acceleration: ${engine}';
   @override
@@ -9818,6 +9817,12 @@ class _StringsAr extends _StringsEn {
   @override
   String get download_rate_limit_lan_included =>
       'Also applies within your local network.';
+  @override
+  String get video_collection_no_local_member =>
+      'No local video in this collection';
+  @override
+  String video_scrape_online_match_collection({required Object name}) =>
+      'Match cover for ${name}';
 }
 
 // Path: <root>
@@ -15980,9 +15985,6 @@ class _StringsDe extends _StringsEn {
   String get game_remove_confirm =>
       'Remove this game from the library? Game files on disk will not be deleted.';
   @override
-  String get delete_collection_also_games =>
-      'Also remove the games in it from the library (game files on disk are kept)';
-  @override
   String manga_ocr_acceleration_status({required Object engine}) =>
       'OCR acceleration: ${engine}';
   @override
@@ -16072,6 +16074,12 @@ class _StringsDe extends _StringsEn {
   @override
   String get download_rate_limit_lan_included =>
       'Also applies within your local network.';
+  @override
+  String get video_collection_no_local_member =>
+      'No local video in this collection';
+  @override
+  String video_scrape_online_match_collection({required Object name}) =>
+      'Match cover for ${name}';
 }
 
 // Path: <root>
@@ -22250,9 +22258,6 @@ class _StringsEs extends _StringsEn {
   String get game_remove_confirm =>
       'Remove this game from the library? Game files on disk will not be deleted.';
   @override
-  String get delete_collection_also_games =>
-      'Also remove the games in it from the library (game files on disk are kept)';
-  @override
   String manga_ocr_acceleration_status({required Object engine}) =>
       'OCR acceleration: ${engine}';
   @override
@@ -22342,6 +22347,12 @@ class _StringsEs extends _StringsEn {
   @override
   String get download_rate_limit_lan_included =>
       'Also applies within your local network.';
+  @override
+  String get video_collection_no_local_member =>
+      'No local video in this collection';
+  @override
+  String video_scrape_online_match_collection({required Object name}) =>
+      'Match cover for ${name}';
 }
 
 // Path: <root>
@@ -28531,9 +28542,6 @@ class _StringsFr extends _StringsEn {
   String get game_remove_confirm =>
       'Remove this game from the library? Game files on disk will not be deleted.';
   @override
-  String get delete_collection_also_games =>
-      'Also remove the games in it from the library (game files on disk are kept)';
-  @override
   String manga_ocr_acceleration_status({required Object engine}) =>
       'OCR acceleration: ${engine}';
   @override
@@ -28623,6 +28631,12 @@ class _StringsFr extends _StringsEn {
   @override
   String get download_rate_limit_lan_included =>
       'Also applies within your local network.';
+  @override
+  String get video_collection_no_local_member =>
+      'No local video in this collection';
+  @override
+  String video_scrape_online_match_collection({required Object name}) =>
+      'Match cover for ${name}';
 }
 
 // Path: <root>
@@ -34741,9 +34755,6 @@ class _StringsId extends _StringsEn {
   String get game_remove_confirm =>
       'Remove this game from the library? Game files on disk will not be deleted.';
   @override
-  String get delete_collection_also_games =>
-      'Also remove the games in it from the library (game files on disk are kept)';
-  @override
   String manga_ocr_acceleration_status({required Object engine}) =>
       'OCR acceleration: ${engine}';
   @override
@@ -34833,6 +34844,12 @@ class _StringsId extends _StringsEn {
   @override
   String get download_rate_limit_lan_included =>
       'Also applies within your local network.';
+  @override
+  String get video_collection_no_local_member =>
+      'No local video in this collection';
+  @override
+  String video_scrape_online_match_collection({required Object name}) =>
+      'Match cover for ${name}';
 }
 
 // Path: <root>
@@ -40997,9 +41014,6 @@ class _StringsIt extends _StringsEn {
   String get game_remove_confirm =>
       'Remove this game from the library? Game files on disk will not be deleted.';
   @override
-  String get delete_collection_also_games =>
-      'Also remove the games in it from the library (game files on disk are kept)';
-  @override
   String manga_ocr_acceleration_status({required Object engine}) =>
       'OCR acceleration: ${engine}';
   @override
@@ -41089,6 +41103,12 @@ class _StringsIt extends _StringsEn {
   @override
   String get download_rate_limit_lan_included =>
       'Also applies within your local network.';
+  @override
+  String get video_collection_no_local_member =>
+      'No local video in this collection';
+  @override
+  String video_scrape_online_match_collection({required Object name}) =>
+      'Match cover for ${name}';
 }
 
 // Path: <root>
@@ -47070,9 +47090,6 @@ class _StringsJa extends _StringsEn {
   String get game_remove_confirm =>
       'Remove this game from the library? Game files on disk will not be deleted.';
   @override
-  String get delete_collection_also_games =>
-      'Also remove the games in it from the library (game files on disk are kept)';
-  @override
   String manga_ocr_acceleration_status({required Object engine}) =>
       'OCR acceleration: ${engine}';
   @override
@@ -47162,6 +47179,12 @@ class _StringsJa extends _StringsEn {
   @override
   String get download_rate_limit_lan_included =>
       'Also applies within your local network.';
+  @override
+  String get video_collection_no_local_member =>
+      'No local video in this collection';
+  @override
+  String video_scrape_online_match_collection({required Object name}) =>
+      'Match cover for ${name}';
 }
 
 // Path: <root>
@@ -53145,9 +53168,6 @@ class _StringsKo extends _StringsEn {
   String get game_remove_confirm =>
       'Remove this game from the library? Game files on disk will not be deleted.';
   @override
-  String get delete_collection_also_games =>
-      'Also remove the games in it from the library (game files on disk are kept)';
-  @override
   String manga_ocr_acceleration_status({required Object engine}) =>
       'OCR acceleration: ${engine}';
   @override
@@ -53237,6 +53257,12 @@ class _StringsKo extends _StringsEn {
   @override
   String get download_rate_limit_lan_included =>
       'Also applies within your local network.';
+  @override
+  String get video_collection_no_local_member =>
+      'No local video in this collection';
+  @override
+  String video_scrape_online_match_collection({required Object name}) =>
+      'Match cover for ${name}';
 }
 
 // Path: <root>
@@ -59381,9 +59407,6 @@ class _StringsNl extends _StringsEn {
   String get game_remove_confirm =>
       'Remove this game from the library? Game files on disk will not be deleted.';
   @override
-  String get delete_collection_also_games =>
-      'Also remove the games in it from the library (game files on disk are kept)';
-  @override
   String manga_ocr_acceleration_status({required Object engine}) =>
       'OCR acceleration: ${engine}';
   @override
@@ -59473,6 +59496,12 @@ class _StringsNl extends _StringsEn {
   @override
   String get download_rate_limit_lan_included =>
       'Also applies within your local network.';
+  @override
+  String get video_collection_no_local_member =>
+      'No local video in this collection';
+  @override
+  String video_scrape_online_match_collection({required Object name}) =>
+      'Match cover for ${name}';
 }
 
 // Path: <root>
@@ -65630,9 +65659,6 @@ class _StringsPtBr extends _StringsEn {
   String get game_remove_confirm =>
       'Remove this game from the library? Game files on disk will not be deleted.';
   @override
-  String get delete_collection_also_games =>
-      'Also remove the games in it from the library (game files on disk are kept)';
-  @override
   String manga_ocr_acceleration_status({required Object engine}) =>
       'OCR acceleration: ${engine}';
   @override
@@ -65722,6 +65748,12 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get download_rate_limit_lan_included =>
       'Also applies within your local network.';
+  @override
+  String get video_collection_no_local_member =>
+      'No local video in this collection';
+  @override
+  String video_scrape_online_match_collection({required Object name}) =>
+      'Match cover for ${name}';
 }
 
 // Path: <root>
@@ -71863,9 +71895,6 @@ class _StringsRu extends _StringsEn {
   String get game_remove_confirm =>
       'Remove this game from the library? Game files on disk will not be deleted.';
   @override
-  String get delete_collection_also_games =>
-      'Also remove the games in it from the library (game files on disk are kept)';
-  @override
   String manga_ocr_acceleration_status({required Object engine}) =>
       'OCR acceleration: ${engine}';
   @override
@@ -71955,6 +71984,12 @@ class _StringsRu extends _StringsEn {
   @override
   String get download_rate_limit_lan_included =>
       'Also applies within your local network.';
+  @override
+  String get video_collection_no_local_member =>
+      'No local video in this collection';
+  @override
+  String video_scrape_online_match_collection({required Object name}) =>
+      'Match cover for ${name}';
 }
 
 // Path: <root>
@@ -78044,9 +78079,6 @@ class _StringsTh extends _StringsEn {
   String get game_remove_confirm =>
       'Remove this game from the library? Game files on disk will not be deleted.';
   @override
-  String get delete_collection_also_games =>
-      'Also remove the games in it from the library (game files on disk are kept)';
-  @override
   String manga_ocr_acceleration_status({required Object engine}) =>
       'OCR acceleration: ${engine}';
   @override
@@ -78136,6 +78168,12 @@ class _StringsTh extends _StringsEn {
   @override
   String get download_rate_limit_lan_included =>
       'Also applies within your local network.';
+  @override
+  String get video_collection_no_local_member =>
+      'No local video in this collection';
+  @override
+  String video_scrape_online_match_collection({required Object name}) =>
+      'Match cover for ${name}';
 }
 
 // Path: <root>
@@ -84257,9 +84295,6 @@ class _StringsTr extends _StringsEn {
   String get game_remove_confirm =>
       'Remove this game from the library? Game files on disk will not be deleted.';
   @override
-  String get delete_collection_also_games =>
-      'Also remove the games in it from the library (game files on disk are kept)';
-  @override
   String manga_ocr_acceleration_status({required Object engine}) =>
       'OCR acceleration: ${engine}';
   @override
@@ -84349,6 +84384,12 @@ class _StringsTr extends _StringsEn {
   @override
   String get download_rate_limit_lan_included =>
       'Also applies within your local network.';
+  @override
+  String get video_collection_no_local_member =>
+      'No local video in this collection';
+  @override
+  String video_scrape_online_match_collection({required Object name}) =>
+      'Match cover for ${name}';
 }
 
 // Path: <root>
@@ -90455,9 +90496,6 @@ class _StringsVi extends _StringsEn {
   String get game_remove_confirm =>
       'Remove this game from the library? Game files on disk will not be deleted.';
   @override
-  String get delete_collection_also_games =>
-      'Also remove the games in it from the library (game files on disk are kept)';
-  @override
   String manga_ocr_acceleration_status({required Object engine}) =>
       'OCR acceleration: ${engine}';
   @override
@@ -90547,6 +90585,12 @@ class _StringsVi extends _StringsEn {
   @override
   String get download_rate_limit_lan_included =>
       'Also applies within your local network.';
+  @override
+  String get video_collection_no_local_member =>
+      'No local video in this collection';
+  @override
+  String video_scrape_online_match_collection({required Object name}) =>
+      'Match cover for ${name}';
 }
 
 // Path: <root>
@@ -96229,8 +96273,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get game_remove_confirm => '从库中移除此游戏？不会删除磁盘上的游戏文件。';
   @override
-  String get delete_collection_also_games => '同时把其中的游戏移出库（不会删除磁盘上的游戏文件）';
-  @override
   String manga_ocr_acceleration_status({required Object engine}) =>
       'OCR 加速：${engine}';
   @override
@@ -96311,6 +96353,11 @@ class _StringsZhCn extends _StringsEn {
       '默认关闭：与局域网内 peer 的传输不受上面的限速约束。';
   @override
   String get download_rate_limit_lan_included => '同时作用于局域网内的传输。';
+  @override
+  String get video_collection_no_local_member => '本合集没有本地视频';
+  @override
+  String video_scrape_online_match_collection({required Object name}) =>
+      '为「${name}」匹配封面';
 }
 
 // Path: <root>
@@ -102213,9 +102260,6 @@ class _StringsZhHk extends _StringsEn {
   String get game_remove_confirm =>
       'Remove this game from the library? Game files on disk will not be deleted.';
   @override
-  String get delete_collection_also_games =>
-      'Also remove the games in it from the library (game files on disk are kept)';
-  @override
   String manga_ocr_acceleration_status({required Object engine}) =>
       'OCR acceleration: ${engine}';
   @override
@@ -102305,6 +102349,12 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get download_rate_limit_lan_included =>
       'Also applies within your local network.';
+  @override
+  String get video_collection_no_local_member =>
+      'No local video in this collection';
+  @override
+  String video_scrape_online_match_collection({required Object name}) =>
+      'Match cover for ${name}';
 }
 
 /// Flat map(s) containing all translations.
@@ -107775,8 +107825,6 @@ extension on _StringsEn {
         return 'Search failed. Check your network and try again.';
       case 'game_remove_confirm':
         return 'Remove this game from the library? Game files on disk will not be deleted.';
-      case 'delete_collection_also_games':
-        return 'Also remove the games in it from the library (game files on disk are kept)';
       case 'manga_ocr_acceleration_status':
         return ({required Object engine}) => 'OCR acceleration: ${engine}';
       case 'manga_ocr_acceleration_degraded':
@@ -107849,6 +107897,10 @@ extension on _StringsEn {
         return 'Off by default: transfers with peers on your local network ignore the limits above.';
       case 'download_rate_limit_lan_included':
         return 'Also applies within your local network.';
+      case 'video_collection_no_local_member':
+        return 'No local video in this collection';
+      case 'video_scrape_online_match_collection':
+        return ({required Object name}) => 'Match cover for ${name}';
       default:
         return null;
     }
@@ -113317,8 +113369,6 @@ extension on _StringsAr {
         return 'Search failed. Check your network and try again.';
       case 'game_remove_confirm':
         return 'Remove this game from the library? Game files on disk will not be deleted.';
-      case 'delete_collection_also_games':
-        return 'Also remove the games in it from the library (game files on disk are kept)';
       case 'manga_ocr_acceleration_status':
         return ({required Object engine}) => 'OCR acceleration: ${engine}';
       case 'manga_ocr_acceleration_degraded':
@@ -113391,6 +113441,10 @@ extension on _StringsAr {
         return 'Off by default: transfers with peers on your local network ignore the limits above.';
       case 'download_rate_limit_lan_included':
         return 'Also applies within your local network.';
+      case 'video_collection_no_local_member':
+        return 'No local video in this collection';
+      case 'video_scrape_online_match_collection':
+        return ({required Object name}) => 'Match cover for ${name}';
       default:
         return null;
     }
@@ -118880,8 +118934,6 @@ extension on _StringsDe {
         return 'Search failed. Check your network and try again.';
       case 'game_remove_confirm':
         return 'Remove this game from the library? Game files on disk will not be deleted.';
-      case 'delete_collection_also_games':
-        return 'Also remove the games in it from the library (game files on disk are kept)';
       case 'manga_ocr_acceleration_status':
         return ({required Object engine}) => 'OCR acceleration: ${engine}';
       case 'manga_ocr_acceleration_degraded':
@@ -118954,6 +119006,10 @@ extension on _StringsDe {
         return 'Off by default: transfers with peers on your local network ignore the limits above.';
       case 'download_rate_limit_lan_included':
         return 'Also applies within your local network.';
+      case 'video_collection_no_local_member':
+        return 'No local video in this collection';
+      case 'video_scrape_online_match_collection':
+        return ({required Object name}) => 'Match cover for ${name}';
       default:
         return null;
     }
@@ -124442,8 +124498,6 @@ extension on _StringsEs {
         return 'Search failed. Check your network and try again.';
       case 'game_remove_confirm':
         return 'Remove this game from the library? Game files on disk will not be deleted.';
-      case 'delete_collection_also_games':
-        return 'Also remove the games in it from the library (game files on disk are kept)';
       case 'manga_ocr_acceleration_status':
         return ({required Object engine}) => 'OCR acceleration: ${engine}';
       case 'manga_ocr_acceleration_degraded':
@@ -124516,6 +124570,10 @@ extension on _StringsEs {
         return 'Off by default: transfers with peers on your local network ignore the limits above.';
       case 'download_rate_limit_lan_included':
         return 'Also applies within your local network.';
+      case 'video_collection_no_local_member':
+        return 'No local video in this collection';
+      case 'video_scrape_online_match_collection':
+        return ({required Object name}) => 'Match cover for ${name}';
       default:
         return null;
     }
@@ -130010,8 +130068,6 @@ extension on _StringsFr {
         return 'Search failed. Check your network and try again.';
       case 'game_remove_confirm':
         return 'Remove this game from the library? Game files on disk will not be deleted.';
-      case 'delete_collection_also_games':
-        return 'Also remove the games in it from the library (game files on disk are kept)';
       case 'manga_ocr_acceleration_status':
         return ({required Object engine}) => 'OCR acceleration: ${engine}';
       case 'manga_ocr_acceleration_degraded':
@@ -130084,6 +130140,10 @@ extension on _StringsFr {
         return 'Off by default: transfers with peers on your local network ignore the limits above.';
       case 'download_rate_limit_lan_included':
         return 'Also applies within your local network.';
+      case 'video_collection_no_local_member':
+        return 'No local video in this collection';
+      case 'video_scrape_online_match_collection':
+        return ({required Object name}) => 'Match cover for ${name}';
       default:
         return null;
     }
@@ -135560,8 +135620,6 @@ extension on _StringsId {
         return 'Search failed. Check your network and try again.';
       case 'game_remove_confirm':
         return 'Remove this game from the library? Game files on disk will not be deleted.';
-      case 'delete_collection_also_games':
-        return 'Also remove the games in it from the library (game files on disk are kept)';
       case 'manga_ocr_acceleration_status':
         return ({required Object engine}) => 'OCR acceleration: ${engine}';
       case 'manga_ocr_acceleration_degraded':
@@ -135634,6 +135692,10 @@ extension on _StringsId {
         return 'Off by default: transfers with peers on your local network ignore the limits above.';
       case 'download_rate_limit_lan_included':
         return 'Also applies within your local network.';
+      case 'video_collection_no_local_member':
+        return 'No local video in this collection';
+      case 'video_scrape_online_match_collection':
+        return ({required Object name}) => 'Match cover for ${name}';
       default:
         return null;
     }
@@ -141125,8 +141187,6 @@ extension on _StringsIt {
         return 'Search failed. Check your network and try again.';
       case 'game_remove_confirm':
         return 'Remove this game from the library? Game files on disk will not be deleted.';
-      case 'delete_collection_also_games':
-        return 'Also remove the games in it from the library (game files on disk are kept)';
       case 'manga_ocr_acceleration_status':
         return ({required Object engine}) => 'OCR acceleration: ${engine}';
       case 'manga_ocr_acceleration_degraded':
@@ -141199,6 +141259,10 @@ extension on _StringsIt {
         return 'Off by default: transfers with peers on your local network ignore the limits above.';
       case 'download_rate_limit_lan_included':
         return 'Also applies within your local network.';
+      case 'video_collection_no_local_member':
+        return 'No local video in this collection';
+      case 'video_scrape_online_match_collection':
+        return ({required Object name}) => 'Match cover for ${name}';
       default:
         return null;
     }
@@ -146652,8 +146716,6 @@ extension on _StringsJa {
         return 'Search failed. Check your network and try again.';
       case 'game_remove_confirm':
         return 'Remove this game from the library? Game files on disk will not be deleted.';
-      case 'delete_collection_also_games':
-        return 'Also remove the games in it from the library (game files on disk are kept)';
       case 'manga_ocr_acceleration_status':
         return ({required Object engine}) => 'OCR acceleration: ${engine}';
       case 'manga_ocr_acceleration_degraded':
@@ -146726,6 +146788,10 @@ extension on _StringsJa {
         return 'Off by default: transfers with peers on your local network ignore the limits above.';
       case 'download_rate_limit_lan_included':
         return 'Also applies within your local network.';
+      case 'video_collection_no_local_member':
+        return 'No local video in this collection';
+      case 'video_scrape_online_match_collection':
+        return ({required Object name}) => 'Match cover for ${name}';
       default:
         return null;
     }
@@ -152183,8 +152249,6 @@ extension on _StringsKo {
         return 'Search failed. Check your network and try again.';
       case 'game_remove_confirm':
         return 'Remove this game from the library? Game files on disk will not be deleted.';
-      case 'delete_collection_also_games':
-        return 'Also remove the games in it from the library (game files on disk are kept)';
       case 'manga_ocr_acceleration_status':
         return ({required Object engine}) => 'OCR acceleration: ${engine}';
       case 'manga_ocr_acceleration_degraded':
@@ -152257,6 +152321,10 @@ extension on _StringsKo {
         return 'Off by default: transfers with peers on your local network ignore the limits above.';
       case 'download_rate_limit_lan_included':
         return 'Also applies within your local network.';
+      case 'video_collection_no_local_member':
+        return 'No local video in this collection';
+      case 'video_scrape_online_match_collection':
+        return ({required Object name}) => 'Match cover for ${name}';
       default:
         return null;
     }
@@ -157741,8 +157809,6 @@ extension on _StringsNl {
         return 'Search failed. Check your network and try again.';
       case 'game_remove_confirm':
         return 'Remove this game from the library? Game files on disk will not be deleted.';
-      case 'delete_collection_also_games':
-        return 'Also remove the games in it from the library (game files on disk are kept)';
       case 'manga_ocr_acceleration_status':
         return ({required Object engine}) => 'OCR acceleration: ${engine}';
       case 'manga_ocr_acceleration_degraded':
@@ -157815,6 +157881,10 @@ extension on _StringsNl {
         return 'Off by default: transfers with peers on your local network ignore the limits above.';
       case 'download_rate_limit_lan_included':
         return 'Also applies within your local network.';
+      case 'video_collection_no_local_member':
+        return 'No local video in this collection';
+      case 'video_scrape_online_match_collection':
+        return ({required Object name}) => 'Match cover for ${name}';
       default:
         return null;
     }
@@ -163296,8 +163366,6 @@ extension on _StringsPtBr {
         return 'Search failed. Check your network and try again.';
       case 'game_remove_confirm':
         return 'Remove this game from the library? Game files on disk will not be deleted.';
-      case 'delete_collection_also_games':
-        return 'Also remove the games in it from the library (game files on disk are kept)';
       case 'manga_ocr_acceleration_status':
         return ({required Object engine}) => 'OCR acceleration: ${engine}';
       case 'manga_ocr_acceleration_degraded':
@@ -163370,6 +163438,10 @@ extension on _StringsPtBr {
         return 'Off by default: transfers with peers on your local network ignore the limits above.';
       case 'download_rate_limit_lan_included':
         return 'Also applies within your local network.';
+      case 'video_collection_no_local_member':
+        return 'No local video in this collection';
+      case 'video_scrape_online_match_collection':
+        return ({required Object name}) => 'Match cover for ${name}';
       default:
         return null;
     }
@@ -168856,8 +168928,6 @@ extension on _StringsRu {
         return 'Search failed. Check your network and try again.';
       case 'game_remove_confirm':
         return 'Remove this game from the library? Game files on disk will not be deleted.';
-      case 'delete_collection_also_games':
-        return 'Also remove the games in it from the library (game files on disk are kept)';
       case 'manga_ocr_acceleration_status':
         return ({required Object engine}) => 'OCR acceleration: ${engine}';
       case 'manga_ocr_acceleration_degraded':
@@ -168930,6 +169000,10 @@ extension on _StringsRu {
         return 'Off by default: transfers with peers on your local network ignore the limits above.';
       case 'download_rate_limit_lan_included':
         return 'Also applies within your local network.';
+      case 'video_collection_no_local_member':
+        return 'No local video in this collection';
+      case 'video_scrape_online_match_collection':
+        return ({required Object name}) => 'Match cover for ${name}';
       default:
         return null;
     }
@@ -174400,8 +174474,6 @@ extension on _StringsTh {
         return 'Search failed. Check your network and try again.';
       case 'game_remove_confirm':
         return 'Remove this game from the library? Game files on disk will not be deleted.';
-      case 'delete_collection_also_games':
-        return 'Also remove the games in it from the library (game files on disk are kept)';
       case 'manga_ocr_acceleration_status':
         return ({required Object engine}) => 'OCR acceleration: ${engine}';
       case 'manga_ocr_acceleration_degraded':
@@ -174474,6 +174546,10 @@ extension on _StringsTh {
         return 'Off by default: transfers with peers on your local network ignore the limits above.';
       case 'download_rate_limit_lan_included':
         return 'Also applies within your local network.';
+      case 'video_collection_no_local_member':
+        return 'No local video in this collection';
+      case 'video_scrape_online_match_collection':
+        return ({required Object name}) => 'Match cover for ${name}';
       default:
         return null;
     }
@@ -179953,8 +180029,6 @@ extension on _StringsTr {
         return 'Search failed. Check your network and try again.';
       case 'game_remove_confirm':
         return 'Remove this game from the library? Game files on disk will not be deleted.';
-      case 'delete_collection_also_games':
-        return 'Also remove the games in it from the library (game files on disk are kept)';
       case 'manga_ocr_acceleration_status':
         return ({required Object engine}) => 'OCR acceleration: ${engine}';
       case 'manga_ocr_acceleration_degraded':
@@ -180027,6 +180101,10 @@ extension on _StringsTr {
         return 'Off by default: transfers with peers on your local network ignore the limits above.';
       case 'download_rate_limit_lan_included':
         return 'Also applies within your local network.';
+      case 'video_collection_no_local_member':
+        return 'No local video in this collection';
+      case 'video_scrape_online_match_collection':
+        return ({required Object name}) => 'Match cover for ${name}';
       default:
         return null;
     }
@@ -185501,8 +185579,6 @@ extension on _StringsVi {
         return 'Search failed. Check your network and try again.';
       case 'game_remove_confirm':
         return 'Remove this game from the library? Game files on disk will not be deleted.';
-      case 'delete_collection_also_games':
-        return 'Also remove the games in it from the library (game files on disk are kept)';
       case 'manga_ocr_acceleration_status':
         return ({required Object engine}) => 'OCR acceleration: ${engine}';
       case 'manga_ocr_acceleration_degraded':
@@ -185575,6 +185651,10 @@ extension on _StringsVi {
         return 'Off by default: transfers with peers on your local network ignore the limits above.';
       case 'download_rate_limit_lan_included':
         return 'Also applies within your local network.';
+      case 'video_collection_no_local_member':
+        return 'No local video in this collection';
+      case 'video_scrape_online_match_collection':
+        return ({required Object name}) => 'Match cover for ${name}';
       default:
         return null;
     }
@@ -191003,8 +191083,6 @@ extension on _StringsZhCn {
         return '搜索失败，请检查网络后重试';
       case 'game_remove_confirm':
         return '从库中移除此游戏？不会删除磁盘上的游戏文件。';
-      case 'delete_collection_also_games':
-        return '同时把其中的游戏移出库（不会删除磁盘上的游戏文件）';
       case 'manga_ocr_acceleration_status':
         return ({required Object engine}) => 'OCR 加速：${engine}';
       case 'manga_ocr_acceleration_degraded':
@@ -191077,6 +191155,10 @@ extension on _StringsZhCn {
         return '默认关闭：与局域网内 peer 的传输不受上面的限速约束。';
       case 'download_rate_limit_lan_included':
         return '同时作用于局域网内的传输。';
+      case 'video_collection_no_local_member':
+        return '本合集没有本地视频';
+      case 'video_scrape_online_match_collection':
+        return ({required Object name}) => '为「${name}」匹配封面';
       default:
         return null;
     }
@@ -196525,8 +196607,6 @@ extension on _StringsZhHk {
         return 'Search failed. Check your network and try again.';
       case 'game_remove_confirm':
         return 'Remove this game from the library? Game files on disk will not be deleted.';
-      case 'delete_collection_also_games':
-        return 'Also remove the games in it from the library (game files on disk are kept)';
       case 'manga_ocr_acceleration_status':
         return ({required Object engine}) => 'OCR acceleration: ${engine}';
       case 'manga_ocr_acceleration_degraded':
@@ -196599,6 +196679,10 @@ extension on _StringsZhHk {
         return 'Off by default: transfers with peers on your local network ignore the limits above.';
       case 'download_rate_limit_lan_included':
         return 'Also applies within your local network.';
+      case 'video_collection_no_local_member':
+        return 'No local video in this collection';
+      case 'video_scrape_online_match_collection':
+        return ({required Object name}) => 'Match cover for ${name}';
       default:
         return null;
     }
