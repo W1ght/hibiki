@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 46733 (2749 per locale)
+/// Strings: 47379 (2787 per locale)
 ///
-/// Built on 2026-07-28 at 17:15 UTC
+/// Built on 2026-07-28 at 20:13 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3693,6 +3693,49 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get library_view_media => 'Library';
   String get scrape_failure_detail_show => 'Show details';
   String get scrape_failure_detail_hide => 'Hide details';
+  String get library_view_manga_sources => 'Manga sources';
+  String get library_view_manga_extensions => 'Manga extensions';
+  String get library_view_source_settings => 'Source settings';
+  String get mihon_sources_title => 'Manga sources';
+  String get mihon_extensions_title => 'Manga extensions';
+  String get mihon_source_settings_title => 'Source settings';
+  String get mihon_store_add => 'Add extension store';
+  String get mihon_store_url => 'Extension store URL';
+  String get mihon_store_empty =>
+      'No extension stores yet. Add a compatible Mihon store or import a local APK.';
+  String get mihon_extension_import => 'Import local APK';
+  String get mihon_extension_warning =>
+      'Third-party extensions execute code with Hibiki permissions. Only install extensions and signers you trust.';
+  String get mihon_extension_install => 'Install';
+  String get mihon_extension_update => 'Update';
+  String get mihon_extension_uninstall => 'Uninstall';
+  String get mihon_extension_installed => 'Installed';
+  String get mihon_extension_disabled => 'Disabled';
+  String get mihon_source_empty =>
+      'No enabled manga sources. Install and enable an extension first.';
+  String get mihon_source_popular => 'Popular';
+  String get mihon_source_latest => 'Latest';
+  String get mihon_source_search => 'Search manga';
+  String get mihon_source_preferences => 'Source preferences';
+  String get mihon_source_clear_data => 'Clear source data';
+  String get mihon_source_clear_data_hint =>
+      'Clears this source preferences and cookies. Installed extensions are kept.';
+  String get mihon_signer_trust_title => 'Trust extension signer?';
+  String get mihon_signer_fingerprint => 'Signer SHA-256';
+  String get mihon_runtime_unavailable =>
+      'Mihon extensions are unavailable on this platform.';
+  String get mihon_extension_incompatible => 'Incompatible extension';
+  String get mihon_store_refresh => 'Refresh stores';
+  String get mihon_source_browse_mokuro => 'Built-in Mokuro catalog';
+  String get mihon_source_no_results => 'No manga found.';
+  String get mihon_chapters_title => 'Chapters';
+  String get mihon_extension_language_filter => 'Language';
+  String get mihon_extension_language_all => 'All languages';
+  String get mihon_filter_ignore => 'Ignore';
+  String get mihon_filter_include => 'Include';
+  String get mihon_filter_exclude => 'Exclude';
+  String get mihon_filter_ascending => 'Ascending';
+  String get mihon_filter_descending => 'Descending';
 }
 
 // Path: <root>
@@ -9983,6 +10026,87 @@ class _StringsAr extends _StringsEn {
   String get scrape_failure_detail_show => 'Show details';
   @override
   String get scrape_failure_detail_hide => 'Hide details';
+  @override
+  String get library_view_manga_sources => 'Manga sources';
+  @override
+  String get library_view_manga_extensions => 'Manga extensions';
+  @override
+  String get library_view_source_settings => 'Source settings';
+  @override
+  String get mihon_sources_title => 'Manga sources';
+  @override
+  String get mihon_extensions_title => 'Manga extensions';
+  @override
+  String get mihon_source_settings_title => 'Source settings';
+  @override
+  String get mihon_store_add => 'Add extension store';
+  @override
+  String get mihon_store_url => 'Extension store URL';
+  @override
+  String get mihon_store_empty =>
+      'No extension stores yet. Add a compatible Mihon store or import a local APK.';
+  @override
+  String get mihon_extension_import => 'Import local APK';
+  @override
+  String get mihon_extension_warning =>
+      'Third-party extensions execute code with Hibiki permissions. Only install extensions and signers you trust.';
+  @override
+  String get mihon_extension_install => 'Install';
+  @override
+  String get mihon_extension_update => 'Update';
+  @override
+  String get mihon_extension_uninstall => 'Uninstall';
+  @override
+  String get mihon_extension_installed => 'Installed';
+  @override
+  String get mihon_extension_disabled => 'Disabled';
+  @override
+  String get mihon_source_empty =>
+      'No enabled manga sources. Install and enable an extension first.';
+  @override
+  String get mihon_source_popular => 'Popular';
+  @override
+  String get mihon_source_latest => 'Latest';
+  @override
+  String get mihon_source_search => 'Search manga';
+  @override
+  String get mihon_source_preferences => 'Source preferences';
+  @override
+  String get mihon_source_clear_data => 'Clear source data';
+  @override
+  String get mihon_source_clear_data_hint =>
+      'Clears this source preferences and cookies. Installed extensions are kept.';
+  @override
+  String get mihon_signer_trust_title => 'Trust extension signer?';
+  @override
+  String get mihon_signer_fingerprint => 'Signer SHA-256';
+  @override
+  String get mihon_runtime_unavailable =>
+      'Mihon extensions are unavailable on this platform.';
+  @override
+  String get mihon_extension_incompatible => 'Incompatible extension';
+  @override
+  String get mihon_store_refresh => 'Refresh stores';
+  @override
+  String get mihon_source_browse_mokuro => 'Built-in Mokuro catalog';
+  @override
+  String get mihon_source_no_results => 'No manga found.';
+  @override
+  String get mihon_chapters_title => 'Chapters';
+  @override
+  String get mihon_extension_language_filter => 'Language';
+  @override
+  String get mihon_extension_language_all => 'All languages';
+  @override
+  String get mihon_filter_ignore => '忽略';
+  @override
+  String get mihon_filter_include => '包含';
+  @override
+  String get mihon_filter_exclude => '排除';
+  @override
+  String get mihon_filter_ascending => '升序';
+  @override
+  String get mihon_filter_descending => '降序';
 }
 
 // Path: <root>
@@ -16341,6 +16465,87 @@ class _StringsDe extends _StringsEn {
   String get scrape_failure_detail_show => 'Show details';
   @override
   String get scrape_failure_detail_hide => 'Hide details';
+  @override
+  String get library_view_manga_sources => 'Manga sources';
+  @override
+  String get library_view_manga_extensions => 'Manga extensions';
+  @override
+  String get library_view_source_settings => 'Source settings';
+  @override
+  String get mihon_sources_title => 'Manga sources';
+  @override
+  String get mihon_extensions_title => 'Manga extensions';
+  @override
+  String get mihon_source_settings_title => 'Source settings';
+  @override
+  String get mihon_store_add => 'Add extension store';
+  @override
+  String get mihon_store_url => 'Extension store URL';
+  @override
+  String get mihon_store_empty =>
+      'No extension stores yet. Add a compatible Mihon store or import a local APK.';
+  @override
+  String get mihon_extension_import => 'Import local APK';
+  @override
+  String get mihon_extension_warning =>
+      'Third-party extensions execute code with Hibiki permissions. Only install extensions and signers you trust.';
+  @override
+  String get mihon_extension_install => 'Install';
+  @override
+  String get mihon_extension_update => 'Update';
+  @override
+  String get mihon_extension_uninstall => 'Uninstall';
+  @override
+  String get mihon_extension_installed => 'Installed';
+  @override
+  String get mihon_extension_disabled => 'Disabled';
+  @override
+  String get mihon_source_empty =>
+      'No enabled manga sources. Install and enable an extension first.';
+  @override
+  String get mihon_source_popular => 'Popular';
+  @override
+  String get mihon_source_latest => 'Latest';
+  @override
+  String get mihon_source_search => 'Search manga';
+  @override
+  String get mihon_source_preferences => 'Source preferences';
+  @override
+  String get mihon_source_clear_data => 'Clear source data';
+  @override
+  String get mihon_source_clear_data_hint =>
+      'Clears this source preferences and cookies. Installed extensions are kept.';
+  @override
+  String get mihon_signer_trust_title => 'Trust extension signer?';
+  @override
+  String get mihon_signer_fingerprint => 'Signer SHA-256';
+  @override
+  String get mihon_runtime_unavailable =>
+      'Mihon extensions are unavailable on this platform.';
+  @override
+  String get mihon_extension_incompatible => 'Incompatible extension';
+  @override
+  String get mihon_store_refresh => 'Refresh stores';
+  @override
+  String get mihon_source_browse_mokuro => 'Built-in Mokuro catalog';
+  @override
+  String get mihon_source_no_results => 'No manga found.';
+  @override
+  String get mihon_chapters_title => 'Chapters';
+  @override
+  String get mihon_extension_language_filter => 'Language';
+  @override
+  String get mihon_extension_language_all => 'All languages';
+  @override
+  String get mihon_filter_ignore => '忽略';
+  @override
+  String get mihon_filter_include => '包含';
+  @override
+  String get mihon_filter_exclude => '排除';
+  @override
+  String get mihon_filter_ascending => '升序';
+  @override
+  String get mihon_filter_descending => '降序';
 }
 
 // Path: <root>
@@ -22715,6 +22920,87 @@ class _StringsEs extends _StringsEn {
   String get scrape_failure_detail_show => 'Show details';
   @override
   String get scrape_failure_detail_hide => 'Hide details';
+  @override
+  String get library_view_manga_sources => 'Manga sources';
+  @override
+  String get library_view_manga_extensions => 'Manga extensions';
+  @override
+  String get library_view_source_settings => 'Source settings';
+  @override
+  String get mihon_sources_title => 'Manga sources';
+  @override
+  String get mihon_extensions_title => 'Manga extensions';
+  @override
+  String get mihon_source_settings_title => 'Source settings';
+  @override
+  String get mihon_store_add => 'Add extension store';
+  @override
+  String get mihon_store_url => 'Extension store URL';
+  @override
+  String get mihon_store_empty =>
+      'No extension stores yet. Add a compatible Mihon store or import a local APK.';
+  @override
+  String get mihon_extension_import => 'Import local APK';
+  @override
+  String get mihon_extension_warning =>
+      'Third-party extensions execute code with Hibiki permissions. Only install extensions and signers you trust.';
+  @override
+  String get mihon_extension_install => 'Install';
+  @override
+  String get mihon_extension_update => 'Update';
+  @override
+  String get mihon_extension_uninstall => 'Uninstall';
+  @override
+  String get mihon_extension_installed => 'Installed';
+  @override
+  String get mihon_extension_disabled => 'Disabled';
+  @override
+  String get mihon_source_empty =>
+      'No enabled manga sources. Install and enable an extension first.';
+  @override
+  String get mihon_source_popular => 'Popular';
+  @override
+  String get mihon_source_latest => 'Latest';
+  @override
+  String get mihon_source_search => 'Search manga';
+  @override
+  String get mihon_source_preferences => 'Source preferences';
+  @override
+  String get mihon_source_clear_data => 'Clear source data';
+  @override
+  String get mihon_source_clear_data_hint =>
+      'Clears this source preferences and cookies. Installed extensions are kept.';
+  @override
+  String get mihon_signer_trust_title => 'Trust extension signer?';
+  @override
+  String get mihon_signer_fingerprint => 'Signer SHA-256';
+  @override
+  String get mihon_runtime_unavailable =>
+      'Mihon extensions are unavailable on this platform.';
+  @override
+  String get mihon_extension_incompatible => 'Incompatible extension';
+  @override
+  String get mihon_store_refresh => 'Refresh stores';
+  @override
+  String get mihon_source_browse_mokuro => 'Built-in Mokuro catalog';
+  @override
+  String get mihon_source_no_results => 'No manga found.';
+  @override
+  String get mihon_chapters_title => 'Chapters';
+  @override
+  String get mihon_extension_language_filter => 'Language';
+  @override
+  String get mihon_extension_language_all => 'All languages';
+  @override
+  String get mihon_filter_ignore => '忽略';
+  @override
+  String get mihon_filter_include => '包含';
+  @override
+  String get mihon_filter_exclude => '排除';
+  @override
+  String get mihon_filter_ascending => '升序';
+  @override
+  String get mihon_filter_descending => '降序';
 }
 
 // Path: <root>
@@ -29100,6 +29386,87 @@ class _StringsFr extends _StringsEn {
   String get scrape_failure_detail_show => 'Show details';
   @override
   String get scrape_failure_detail_hide => 'Hide details';
+  @override
+  String get library_view_manga_sources => 'Manga sources';
+  @override
+  String get library_view_manga_extensions => 'Manga extensions';
+  @override
+  String get library_view_source_settings => 'Source settings';
+  @override
+  String get mihon_sources_title => 'Manga sources';
+  @override
+  String get mihon_extensions_title => 'Manga extensions';
+  @override
+  String get mihon_source_settings_title => 'Source settings';
+  @override
+  String get mihon_store_add => 'Add extension store';
+  @override
+  String get mihon_store_url => 'Extension store URL';
+  @override
+  String get mihon_store_empty =>
+      'No extension stores yet. Add a compatible Mihon store or import a local APK.';
+  @override
+  String get mihon_extension_import => 'Import local APK';
+  @override
+  String get mihon_extension_warning =>
+      'Third-party extensions execute code with Hibiki permissions. Only install extensions and signers you trust.';
+  @override
+  String get mihon_extension_install => 'Install';
+  @override
+  String get mihon_extension_update => 'Update';
+  @override
+  String get mihon_extension_uninstall => 'Uninstall';
+  @override
+  String get mihon_extension_installed => 'Installed';
+  @override
+  String get mihon_extension_disabled => 'Disabled';
+  @override
+  String get mihon_source_empty =>
+      'No enabled manga sources. Install and enable an extension first.';
+  @override
+  String get mihon_source_popular => 'Popular';
+  @override
+  String get mihon_source_latest => 'Latest';
+  @override
+  String get mihon_source_search => 'Search manga';
+  @override
+  String get mihon_source_preferences => 'Source preferences';
+  @override
+  String get mihon_source_clear_data => 'Clear source data';
+  @override
+  String get mihon_source_clear_data_hint =>
+      'Clears this source preferences and cookies. Installed extensions are kept.';
+  @override
+  String get mihon_signer_trust_title => 'Trust extension signer?';
+  @override
+  String get mihon_signer_fingerprint => 'Signer SHA-256';
+  @override
+  String get mihon_runtime_unavailable =>
+      'Mihon extensions are unavailable on this platform.';
+  @override
+  String get mihon_extension_incompatible => 'Incompatible extension';
+  @override
+  String get mihon_store_refresh => 'Refresh stores';
+  @override
+  String get mihon_source_browse_mokuro => 'Built-in Mokuro catalog';
+  @override
+  String get mihon_source_no_results => 'No manga found.';
+  @override
+  String get mihon_chapters_title => 'Chapters';
+  @override
+  String get mihon_extension_language_filter => 'Language';
+  @override
+  String get mihon_extension_language_all => 'All languages';
+  @override
+  String get mihon_filter_ignore => '忽略';
+  @override
+  String get mihon_filter_include => '包含';
+  @override
+  String get mihon_filter_exclude => '排除';
+  @override
+  String get mihon_filter_ascending => '升序';
+  @override
+  String get mihon_filter_descending => '降序';
 }
 
 // Path: <root>
@@ -35414,6 +35781,87 @@ class _StringsId extends _StringsEn {
   String get scrape_failure_detail_show => 'Show details';
   @override
   String get scrape_failure_detail_hide => 'Hide details';
+  @override
+  String get library_view_manga_sources => 'Manga sources';
+  @override
+  String get library_view_manga_extensions => 'Manga extensions';
+  @override
+  String get library_view_source_settings => 'Source settings';
+  @override
+  String get mihon_sources_title => 'Manga sources';
+  @override
+  String get mihon_extensions_title => 'Manga extensions';
+  @override
+  String get mihon_source_settings_title => 'Source settings';
+  @override
+  String get mihon_store_add => 'Add extension store';
+  @override
+  String get mihon_store_url => 'Extension store URL';
+  @override
+  String get mihon_store_empty =>
+      'No extension stores yet. Add a compatible Mihon store or import a local APK.';
+  @override
+  String get mihon_extension_import => 'Import local APK';
+  @override
+  String get mihon_extension_warning =>
+      'Third-party extensions execute code with Hibiki permissions. Only install extensions and signers you trust.';
+  @override
+  String get mihon_extension_install => 'Install';
+  @override
+  String get mihon_extension_update => 'Update';
+  @override
+  String get mihon_extension_uninstall => 'Uninstall';
+  @override
+  String get mihon_extension_installed => 'Installed';
+  @override
+  String get mihon_extension_disabled => 'Disabled';
+  @override
+  String get mihon_source_empty =>
+      'No enabled manga sources. Install and enable an extension first.';
+  @override
+  String get mihon_source_popular => 'Popular';
+  @override
+  String get mihon_source_latest => 'Latest';
+  @override
+  String get mihon_source_search => 'Search manga';
+  @override
+  String get mihon_source_preferences => 'Source preferences';
+  @override
+  String get mihon_source_clear_data => 'Clear source data';
+  @override
+  String get mihon_source_clear_data_hint =>
+      'Clears this source preferences and cookies. Installed extensions are kept.';
+  @override
+  String get mihon_signer_trust_title => 'Trust extension signer?';
+  @override
+  String get mihon_signer_fingerprint => 'Signer SHA-256';
+  @override
+  String get mihon_runtime_unavailable =>
+      'Mihon extensions are unavailable on this platform.';
+  @override
+  String get mihon_extension_incompatible => 'Incompatible extension';
+  @override
+  String get mihon_store_refresh => 'Refresh stores';
+  @override
+  String get mihon_source_browse_mokuro => 'Built-in Mokuro catalog';
+  @override
+  String get mihon_source_no_results => 'No manga found.';
+  @override
+  String get mihon_chapters_title => 'Chapters';
+  @override
+  String get mihon_extension_language_filter => 'Language';
+  @override
+  String get mihon_extension_language_all => 'All languages';
+  @override
+  String get mihon_filter_ignore => '忽略';
+  @override
+  String get mihon_filter_include => '包含';
+  @override
+  String get mihon_filter_exclude => '排除';
+  @override
+  String get mihon_filter_ascending => '升序';
+  @override
+  String get mihon_filter_descending => '降序';
 }
 
 // Path: <root>
@@ -41774,6 +42222,87 @@ class _StringsIt extends _StringsEn {
   String get scrape_failure_detail_show => 'Show details';
   @override
   String get scrape_failure_detail_hide => 'Hide details';
+  @override
+  String get library_view_manga_sources => 'Manga sources';
+  @override
+  String get library_view_manga_extensions => 'Manga extensions';
+  @override
+  String get library_view_source_settings => 'Source settings';
+  @override
+  String get mihon_sources_title => 'Manga sources';
+  @override
+  String get mihon_extensions_title => 'Manga extensions';
+  @override
+  String get mihon_source_settings_title => 'Source settings';
+  @override
+  String get mihon_store_add => 'Add extension store';
+  @override
+  String get mihon_store_url => 'Extension store URL';
+  @override
+  String get mihon_store_empty =>
+      'No extension stores yet. Add a compatible Mihon store or import a local APK.';
+  @override
+  String get mihon_extension_import => 'Import local APK';
+  @override
+  String get mihon_extension_warning =>
+      'Third-party extensions execute code with Hibiki permissions. Only install extensions and signers you trust.';
+  @override
+  String get mihon_extension_install => 'Install';
+  @override
+  String get mihon_extension_update => 'Update';
+  @override
+  String get mihon_extension_uninstall => 'Uninstall';
+  @override
+  String get mihon_extension_installed => 'Installed';
+  @override
+  String get mihon_extension_disabled => 'Disabled';
+  @override
+  String get mihon_source_empty =>
+      'No enabled manga sources. Install and enable an extension first.';
+  @override
+  String get mihon_source_popular => 'Popular';
+  @override
+  String get mihon_source_latest => 'Latest';
+  @override
+  String get mihon_source_search => 'Search manga';
+  @override
+  String get mihon_source_preferences => 'Source preferences';
+  @override
+  String get mihon_source_clear_data => 'Clear source data';
+  @override
+  String get mihon_source_clear_data_hint =>
+      'Clears this source preferences and cookies. Installed extensions are kept.';
+  @override
+  String get mihon_signer_trust_title => 'Trust extension signer?';
+  @override
+  String get mihon_signer_fingerprint => 'Signer SHA-256';
+  @override
+  String get mihon_runtime_unavailable =>
+      'Mihon extensions are unavailable on this platform.';
+  @override
+  String get mihon_extension_incompatible => 'Incompatible extension';
+  @override
+  String get mihon_store_refresh => 'Refresh stores';
+  @override
+  String get mihon_source_browse_mokuro => 'Built-in Mokuro catalog';
+  @override
+  String get mihon_source_no_results => 'No manga found.';
+  @override
+  String get mihon_chapters_title => 'Chapters';
+  @override
+  String get mihon_extension_language_filter => 'Language';
+  @override
+  String get mihon_extension_language_all => 'All languages';
+  @override
+  String get mihon_filter_ignore => '忽略';
+  @override
+  String get mihon_filter_include => '包含';
+  @override
+  String get mihon_filter_exclude => '排除';
+  @override
+  String get mihon_filter_ascending => '升序';
+  @override
+  String get mihon_filter_descending => '降序';
 }
 
 // Path: <root>
@@ -47951,6 +48480,87 @@ class _StringsJa extends _StringsEn {
   String get scrape_failure_detail_show => 'Show details';
   @override
   String get scrape_failure_detail_hide => 'Hide details';
+  @override
+  String get library_view_manga_sources => 'Manga sources';
+  @override
+  String get library_view_manga_extensions => 'Manga extensions';
+  @override
+  String get library_view_source_settings => 'Source settings';
+  @override
+  String get mihon_sources_title => 'Manga sources';
+  @override
+  String get mihon_extensions_title => 'Manga extensions';
+  @override
+  String get mihon_source_settings_title => 'Source settings';
+  @override
+  String get mihon_store_add => 'Add extension store';
+  @override
+  String get mihon_store_url => 'Extension store URL';
+  @override
+  String get mihon_store_empty =>
+      'No extension stores yet. Add a compatible Mihon store or import a local APK.';
+  @override
+  String get mihon_extension_import => 'Import local APK';
+  @override
+  String get mihon_extension_warning =>
+      'Third-party extensions execute code with Hibiki permissions. Only install extensions and signers you trust.';
+  @override
+  String get mihon_extension_install => 'Install';
+  @override
+  String get mihon_extension_update => 'Update';
+  @override
+  String get mihon_extension_uninstall => 'Uninstall';
+  @override
+  String get mihon_extension_installed => 'Installed';
+  @override
+  String get mihon_extension_disabled => 'Disabled';
+  @override
+  String get mihon_source_empty =>
+      'No enabled manga sources. Install and enable an extension first.';
+  @override
+  String get mihon_source_popular => 'Popular';
+  @override
+  String get mihon_source_latest => 'Latest';
+  @override
+  String get mihon_source_search => 'Search manga';
+  @override
+  String get mihon_source_preferences => 'Source preferences';
+  @override
+  String get mihon_source_clear_data => 'Clear source data';
+  @override
+  String get mihon_source_clear_data_hint =>
+      'Clears this source preferences and cookies. Installed extensions are kept.';
+  @override
+  String get mihon_signer_trust_title => 'Trust extension signer?';
+  @override
+  String get mihon_signer_fingerprint => 'Signer SHA-256';
+  @override
+  String get mihon_runtime_unavailable =>
+      'Mihon extensions are unavailable on this platform.';
+  @override
+  String get mihon_extension_incompatible => 'Incompatible extension';
+  @override
+  String get mihon_store_refresh => 'Refresh stores';
+  @override
+  String get mihon_source_browse_mokuro => 'Built-in Mokuro catalog';
+  @override
+  String get mihon_source_no_results => 'No manga found.';
+  @override
+  String get mihon_chapters_title => 'Chapters';
+  @override
+  String get mihon_extension_language_filter => 'Language';
+  @override
+  String get mihon_extension_language_all => 'All languages';
+  @override
+  String get mihon_filter_ignore => '忽略';
+  @override
+  String get mihon_filter_include => '包含';
+  @override
+  String get mihon_filter_exclude => '排除';
+  @override
+  String get mihon_filter_ascending => '升序';
+  @override
+  String get mihon_filter_descending => '降序';
 }
 
 // Path: <root>
@@ -54130,6 +54740,87 @@ class _StringsKo extends _StringsEn {
   String get scrape_failure_detail_show => 'Show details';
   @override
   String get scrape_failure_detail_hide => 'Hide details';
+  @override
+  String get library_view_manga_sources => 'Manga sources';
+  @override
+  String get library_view_manga_extensions => 'Manga extensions';
+  @override
+  String get library_view_source_settings => 'Source settings';
+  @override
+  String get mihon_sources_title => 'Manga sources';
+  @override
+  String get mihon_extensions_title => 'Manga extensions';
+  @override
+  String get mihon_source_settings_title => 'Source settings';
+  @override
+  String get mihon_store_add => 'Add extension store';
+  @override
+  String get mihon_store_url => 'Extension store URL';
+  @override
+  String get mihon_store_empty =>
+      'No extension stores yet. Add a compatible Mihon store or import a local APK.';
+  @override
+  String get mihon_extension_import => 'Import local APK';
+  @override
+  String get mihon_extension_warning =>
+      'Third-party extensions execute code with Hibiki permissions. Only install extensions and signers you trust.';
+  @override
+  String get mihon_extension_install => 'Install';
+  @override
+  String get mihon_extension_update => 'Update';
+  @override
+  String get mihon_extension_uninstall => 'Uninstall';
+  @override
+  String get mihon_extension_installed => 'Installed';
+  @override
+  String get mihon_extension_disabled => 'Disabled';
+  @override
+  String get mihon_source_empty =>
+      'No enabled manga sources. Install and enable an extension first.';
+  @override
+  String get mihon_source_popular => 'Popular';
+  @override
+  String get mihon_source_latest => 'Latest';
+  @override
+  String get mihon_source_search => 'Search manga';
+  @override
+  String get mihon_source_preferences => 'Source preferences';
+  @override
+  String get mihon_source_clear_data => 'Clear source data';
+  @override
+  String get mihon_source_clear_data_hint =>
+      'Clears this source preferences and cookies. Installed extensions are kept.';
+  @override
+  String get mihon_signer_trust_title => 'Trust extension signer?';
+  @override
+  String get mihon_signer_fingerprint => 'Signer SHA-256';
+  @override
+  String get mihon_runtime_unavailable =>
+      'Mihon extensions are unavailable on this platform.';
+  @override
+  String get mihon_extension_incompatible => 'Incompatible extension';
+  @override
+  String get mihon_store_refresh => 'Refresh stores';
+  @override
+  String get mihon_source_browse_mokuro => 'Built-in Mokuro catalog';
+  @override
+  String get mihon_source_no_results => 'No manga found.';
+  @override
+  String get mihon_chapters_title => 'Chapters';
+  @override
+  String get mihon_extension_language_filter => 'Language';
+  @override
+  String get mihon_extension_language_all => 'All languages';
+  @override
+  String get mihon_filter_ignore => '忽略';
+  @override
+  String get mihon_filter_include => '包含';
+  @override
+  String get mihon_filter_exclude => '排除';
+  @override
+  String get mihon_filter_ascending => '升序';
+  @override
+  String get mihon_filter_descending => '降序';
 }
 
 // Path: <root>
@@ -60470,6 +61161,87 @@ class _StringsNl extends _StringsEn {
   String get scrape_failure_detail_show => 'Show details';
   @override
   String get scrape_failure_detail_hide => 'Hide details';
+  @override
+  String get library_view_manga_sources => 'Manga sources';
+  @override
+  String get library_view_manga_extensions => 'Manga extensions';
+  @override
+  String get library_view_source_settings => 'Source settings';
+  @override
+  String get mihon_sources_title => 'Manga sources';
+  @override
+  String get mihon_extensions_title => 'Manga extensions';
+  @override
+  String get mihon_source_settings_title => 'Source settings';
+  @override
+  String get mihon_store_add => 'Add extension store';
+  @override
+  String get mihon_store_url => 'Extension store URL';
+  @override
+  String get mihon_store_empty =>
+      'No extension stores yet. Add a compatible Mihon store or import a local APK.';
+  @override
+  String get mihon_extension_import => 'Import local APK';
+  @override
+  String get mihon_extension_warning =>
+      'Third-party extensions execute code with Hibiki permissions. Only install extensions and signers you trust.';
+  @override
+  String get mihon_extension_install => 'Install';
+  @override
+  String get mihon_extension_update => 'Update';
+  @override
+  String get mihon_extension_uninstall => 'Uninstall';
+  @override
+  String get mihon_extension_installed => 'Installed';
+  @override
+  String get mihon_extension_disabled => 'Disabled';
+  @override
+  String get mihon_source_empty =>
+      'No enabled manga sources. Install and enable an extension first.';
+  @override
+  String get mihon_source_popular => 'Popular';
+  @override
+  String get mihon_source_latest => 'Latest';
+  @override
+  String get mihon_source_search => 'Search manga';
+  @override
+  String get mihon_source_preferences => 'Source preferences';
+  @override
+  String get mihon_source_clear_data => 'Clear source data';
+  @override
+  String get mihon_source_clear_data_hint =>
+      'Clears this source preferences and cookies. Installed extensions are kept.';
+  @override
+  String get mihon_signer_trust_title => 'Trust extension signer?';
+  @override
+  String get mihon_signer_fingerprint => 'Signer SHA-256';
+  @override
+  String get mihon_runtime_unavailable =>
+      'Mihon extensions are unavailable on this platform.';
+  @override
+  String get mihon_extension_incompatible => 'Incompatible extension';
+  @override
+  String get mihon_store_refresh => 'Refresh stores';
+  @override
+  String get mihon_source_browse_mokuro => 'Built-in Mokuro catalog';
+  @override
+  String get mihon_source_no_results => 'No manga found.';
+  @override
+  String get mihon_chapters_title => 'Chapters';
+  @override
+  String get mihon_extension_language_filter => 'Language';
+  @override
+  String get mihon_extension_language_all => 'All languages';
+  @override
+  String get mihon_filter_ignore => '忽略';
+  @override
+  String get mihon_filter_include => '包含';
+  @override
+  String get mihon_filter_exclude => '排除';
+  @override
+  String get mihon_filter_ascending => '升序';
+  @override
+  String get mihon_filter_descending => '降序';
 }
 
 // Path: <root>
@@ -66823,6 +67595,87 @@ class _StringsPtBr extends _StringsEn {
   String get scrape_failure_detail_show => 'Show details';
   @override
   String get scrape_failure_detail_hide => 'Hide details';
+  @override
+  String get library_view_manga_sources => 'Manga sources';
+  @override
+  String get library_view_manga_extensions => 'Manga extensions';
+  @override
+  String get library_view_source_settings => 'Source settings';
+  @override
+  String get mihon_sources_title => 'Manga sources';
+  @override
+  String get mihon_extensions_title => 'Manga extensions';
+  @override
+  String get mihon_source_settings_title => 'Source settings';
+  @override
+  String get mihon_store_add => 'Add extension store';
+  @override
+  String get mihon_store_url => 'Extension store URL';
+  @override
+  String get mihon_store_empty =>
+      'No extension stores yet. Add a compatible Mihon store or import a local APK.';
+  @override
+  String get mihon_extension_import => 'Import local APK';
+  @override
+  String get mihon_extension_warning =>
+      'Third-party extensions execute code with Hibiki permissions. Only install extensions and signers you trust.';
+  @override
+  String get mihon_extension_install => 'Install';
+  @override
+  String get mihon_extension_update => 'Update';
+  @override
+  String get mihon_extension_uninstall => 'Uninstall';
+  @override
+  String get mihon_extension_installed => 'Installed';
+  @override
+  String get mihon_extension_disabled => 'Disabled';
+  @override
+  String get mihon_source_empty =>
+      'No enabled manga sources. Install and enable an extension first.';
+  @override
+  String get mihon_source_popular => 'Popular';
+  @override
+  String get mihon_source_latest => 'Latest';
+  @override
+  String get mihon_source_search => 'Search manga';
+  @override
+  String get mihon_source_preferences => 'Source preferences';
+  @override
+  String get mihon_source_clear_data => 'Clear source data';
+  @override
+  String get mihon_source_clear_data_hint =>
+      'Clears this source preferences and cookies. Installed extensions are kept.';
+  @override
+  String get mihon_signer_trust_title => 'Trust extension signer?';
+  @override
+  String get mihon_signer_fingerprint => 'Signer SHA-256';
+  @override
+  String get mihon_runtime_unavailable =>
+      'Mihon extensions are unavailable on this platform.';
+  @override
+  String get mihon_extension_incompatible => 'Incompatible extension';
+  @override
+  String get mihon_store_refresh => 'Refresh stores';
+  @override
+  String get mihon_source_browse_mokuro => 'Built-in Mokuro catalog';
+  @override
+  String get mihon_source_no_results => 'No manga found.';
+  @override
+  String get mihon_chapters_title => 'Chapters';
+  @override
+  String get mihon_extension_language_filter => 'Language';
+  @override
+  String get mihon_extension_language_all => 'All languages';
+  @override
+  String get mihon_filter_ignore => '忽略';
+  @override
+  String get mihon_filter_include => '包含';
+  @override
+  String get mihon_filter_exclude => '排除';
+  @override
+  String get mihon_filter_ascending => '升序';
+  @override
+  String get mihon_filter_descending => '降序';
 }
 
 // Path: <root>
@@ -73160,6 +74013,87 @@ class _StringsRu extends _StringsEn {
   String get scrape_failure_detail_show => 'Show details';
   @override
   String get scrape_failure_detail_hide => 'Hide details';
+  @override
+  String get library_view_manga_sources => 'Manga sources';
+  @override
+  String get library_view_manga_extensions => 'Manga extensions';
+  @override
+  String get library_view_source_settings => 'Source settings';
+  @override
+  String get mihon_sources_title => 'Manga sources';
+  @override
+  String get mihon_extensions_title => 'Manga extensions';
+  @override
+  String get mihon_source_settings_title => 'Source settings';
+  @override
+  String get mihon_store_add => 'Add extension store';
+  @override
+  String get mihon_store_url => 'Extension store URL';
+  @override
+  String get mihon_store_empty =>
+      'No extension stores yet. Add a compatible Mihon store or import a local APK.';
+  @override
+  String get mihon_extension_import => 'Import local APK';
+  @override
+  String get mihon_extension_warning =>
+      'Third-party extensions execute code with Hibiki permissions. Only install extensions and signers you trust.';
+  @override
+  String get mihon_extension_install => 'Install';
+  @override
+  String get mihon_extension_update => 'Update';
+  @override
+  String get mihon_extension_uninstall => 'Uninstall';
+  @override
+  String get mihon_extension_installed => 'Installed';
+  @override
+  String get mihon_extension_disabled => 'Disabled';
+  @override
+  String get mihon_source_empty =>
+      'No enabled manga sources. Install and enable an extension first.';
+  @override
+  String get mihon_source_popular => 'Popular';
+  @override
+  String get mihon_source_latest => 'Latest';
+  @override
+  String get mihon_source_search => 'Search manga';
+  @override
+  String get mihon_source_preferences => 'Source preferences';
+  @override
+  String get mihon_source_clear_data => 'Clear source data';
+  @override
+  String get mihon_source_clear_data_hint =>
+      'Clears this source preferences and cookies. Installed extensions are kept.';
+  @override
+  String get mihon_signer_trust_title => 'Trust extension signer?';
+  @override
+  String get mihon_signer_fingerprint => 'Signer SHA-256';
+  @override
+  String get mihon_runtime_unavailable =>
+      'Mihon extensions are unavailable on this platform.';
+  @override
+  String get mihon_extension_incompatible => 'Incompatible extension';
+  @override
+  String get mihon_store_refresh => 'Refresh stores';
+  @override
+  String get mihon_source_browse_mokuro => 'Built-in Mokuro catalog';
+  @override
+  String get mihon_source_no_results => 'No manga found.';
+  @override
+  String get mihon_chapters_title => 'Chapters';
+  @override
+  String get mihon_extension_language_filter => 'Language';
+  @override
+  String get mihon_extension_language_all => 'All languages';
+  @override
+  String get mihon_filter_ignore => '忽略';
+  @override
+  String get mihon_filter_include => '包含';
+  @override
+  String get mihon_filter_exclude => '排除';
+  @override
+  String get mihon_filter_ascending => '升序';
+  @override
+  String get mihon_filter_descending => '降序';
 }
 
 // Path: <root>
@@ -79445,6 +80379,87 @@ class _StringsTh extends _StringsEn {
   String get scrape_failure_detail_show => 'Show details';
   @override
   String get scrape_failure_detail_hide => 'Hide details';
+  @override
+  String get library_view_manga_sources => 'Manga sources';
+  @override
+  String get library_view_manga_extensions => 'Manga extensions';
+  @override
+  String get library_view_source_settings => 'Source settings';
+  @override
+  String get mihon_sources_title => 'Manga sources';
+  @override
+  String get mihon_extensions_title => 'Manga extensions';
+  @override
+  String get mihon_source_settings_title => 'Source settings';
+  @override
+  String get mihon_store_add => 'Add extension store';
+  @override
+  String get mihon_store_url => 'Extension store URL';
+  @override
+  String get mihon_store_empty =>
+      'No extension stores yet. Add a compatible Mihon store or import a local APK.';
+  @override
+  String get mihon_extension_import => 'Import local APK';
+  @override
+  String get mihon_extension_warning =>
+      'Third-party extensions execute code with Hibiki permissions. Only install extensions and signers you trust.';
+  @override
+  String get mihon_extension_install => 'Install';
+  @override
+  String get mihon_extension_update => 'Update';
+  @override
+  String get mihon_extension_uninstall => 'Uninstall';
+  @override
+  String get mihon_extension_installed => 'Installed';
+  @override
+  String get mihon_extension_disabled => 'Disabled';
+  @override
+  String get mihon_source_empty =>
+      'No enabled manga sources. Install and enable an extension first.';
+  @override
+  String get mihon_source_popular => 'Popular';
+  @override
+  String get mihon_source_latest => 'Latest';
+  @override
+  String get mihon_source_search => 'Search manga';
+  @override
+  String get mihon_source_preferences => 'Source preferences';
+  @override
+  String get mihon_source_clear_data => 'Clear source data';
+  @override
+  String get mihon_source_clear_data_hint =>
+      'Clears this source preferences and cookies. Installed extensions are kept.';
+  @override
+  String get mihon_signer_trust_title => 'Trust extension signer?';
+  @override
+  String get mihon_signer_fingerprint => 'Signer SHA-256';
+  @override
+  String get mihon_runtime_unavailable =>
+      'Mihon extensions are unavailable on this platform.';
+  @override
+  String get mihon_extension_incompatible => 'Incompatible extension';
+  @override
+  String get mihon_store_refresh => 'Refresh stores';
+  @override
+  String get mihon_source_browse_mokuro => 'Built-in Mokuro catalog';
+  @override
+  String get mihon_source_no_results => 'No manga found.';
+  @override
+  String get mihon_chapters_title => 'Chapters';
+  @override
+  String get mihon_extension_language_filter => 'Language';
+  @override
+  String get mihon_extension_language_all => 'All languages';
+  @override
+  String get mihon_filter_ignore => '忽略';
+  @override
+  String get mihon_filter_include => '包含';
+  @override
+  String get mihon_filter_exclude => '排除';
+  @override
+  String get mihon_filter_ascending => '升序';
+  @override
+  String get mihon_filter_descending => '降序';
 }
 
 // Path: <root>
@@ -85762,6 +86777,87 @@ class _StringsTr extends _StringsEn {
   String get scrape_failure_detail_show => 'Show details';
   @override
   String get scrape_failure_detail_hide => 'Hide details';
+  @override
+  String get library_view_manga_sources => 'Manga sources';
+  @override
+  String get library_view_manga_extensions => 'Manga extensions';
+  @override
+  String get library_view_source_settings => 'Source settings';
+  @override
+  String get mihon_sources_title => 'Manga sources';
+  @override
+  String get mihon_extensions_title => 'Manga extensions';
+  @override
+  String get mihon_source_settings_title => 'Source settings';
+  @override
+  String get mihon_store_add => 'Add extension store';
+  @override
+  String get mihon_store_url => 'Extension store URL';
+  @override
+  String get mihon_store_empty =>
+      'No extension stores yet. Add a compatible Mihon store or import a local APK.';
+  @override
+  String get mihon_extension_import => 'Import local APK';
+  @override
+  String get mihon_extension_warning =>
+      'Third-party extensions execute code with Hibiki permissions. Only install extensions and signers you trust.';
+  @override
+  String get mihon_extension_install => 'Install';
+  @override
+  String get mihon_extension_update => 'Update';
+  @override
+  String get mihon_extension_uninstall => 'Uninstall';
+  @override
+  String get mihon_extension_installed => 'Installed';
+  @override
+  String get mihon_extension_disabled => 'Disabled';
+  @override
+  String get mihon_source_empty =>
+      'No enabled manga sources. Install and enable an extension first.';
+  @override
+  String get mihon_source_popular => 'Popular';
+  @override
+  String get mihon_source_latest => 'Latest';
+  @override
+  String get mihon_source_search => 'Search manga';
+  @override
+  String get mihon_source_preferences => 'Source preferences';
+  @override
+  String get mihon_source_clear_data => 'Clear source data';
+  @override
+  String get mihon_source_clear_data_hint =>
+      'Clears this source preferences and cookies. Installed extensions are kept.';
+  @override
+  String get mihon_signer_trust_title => 'Trust extension signer?';
+  @override
+  String get mihon_signer_fingerprint => 'Signer SHA-256';
+  @override
+  String get mihon_runtime_unavailable =>
+      'Mihon extensions are unavailable on this platform.';
+  @override
+  String get mihon_extension_incompatible => 'Incompatible extension';
+  @override
+  String get mihon_store_refresh => 'Refresh stores';
+  @override
+  String get mihon_source_browse_mokuro => 'Built-in Mokuro catalog';
+  @override
+  String get mihon_source_no_results => 'No manga found.';
+  @override
+  String get mihon_chapters_title => 'Chapters';
+  @override
+  String get mihon_extension_language_filter => 'Language';
+  @override
+  String get mihon_extension_language_all => 'All languages';
+  @override
+  String get mihon_filter_ignore => '忽略';
+  @override
+  String get mihon_filter_include => '包含';
+  @override
+  String get mihon_filter_exclude => '排除';
+  @override
+  String get mihon_filter_ascending => '升序';
+  @override
+  String get mihon_filter_descending => '降序';
 }
 
 // Path: <root>
@@ -92064,6 +93160,87 @@ class _StringsVi extends _StringsEn {
   String get scrape_failure_detail_show => 'Show details';
   @override
   String get scrape_failure_detail_hide => 'Hide details';
+  @override
+  String get library_view_manga_sources => 'Manga sources';
+  @override
+  String get library_view_manga_extensions => 'Manga extensions';
+  @override
+  String get library_view_source_settings => 'Source settings';
+  @override
+  String get mihon_sources_title => 'Manga sources';
+  @override
+  String get mihon_extensions_title => 'Manga extensions';
+  @override
+  String get mihon_source_settings_title => 'Source settings';
+  @override
+  String get mihon_store_add => 'Add extension store';
+  @override
+  String get mihon_store_url => 'Extension store URL';
+  @override
+  String get mihon_store_empty =>
+      'No extension stores yet. Add a compatible Mihon store or import a local APK.';
+  @override
+  String get mihon_extension_import => 'Import local APK';
+  @override
+  String get mihon_extension_warning =>
+      'Third-party extensions execute code with Hibiki permissions. Only install extensions and signers you trust.';
+  @override
+  String get mihon_extension_install => 'Install';
+  @override
+  String get mihon_extension_update => 'Update';
+  @override
+  String get mihon_extension_uninstall => 'Uninstall';
+  @override
+  String get mihon_extension_installed => 'Installed';
+  @override
+  String get mihon_extension_disabled => 'Disabled';
+  @override
+  String get mihon_source_empty =>
+      'No enabled manga sources. Install and enable an extension first.';
+  @override
+  String get mihon_source_popular => 'Popular';
+  @override
+  String get mihon_source_latest => 'Latest';
+  @override
+  String get mihon_source_search => 'Search manga';
+  @override
+  String get mihon_source_preferences => 'Source preferences';
+  @override
+  String get mihon_source_clear_data => 'Clear source data';
+  @override
+  String get mihon_source_clear_data_hint =>
+      'Clears this source preferences and cookies. Installed extensions are kept.';
+  @override
+  String get mihon_signer_trust_title => 'Trust extension signer?';
+  @override
+  String get mihon_signer_fingerprint => 'Signer SHA-256';
+  @override
+  String get mihon_runtime_unavailable =>
+      'Mihon extensions are unavailable on this platform.';
+  @override
+  String get mihon_extension_incompatible => 'Incompatible extension';
+  @override
+  String get mihon_store_refresh => 'Refresh stores';
+  @override
+  String get mihon_source_browse_mokuro => 'Built-in Mokuro catalog';
+  @override
+  String get mihon_source_no_results => 'No manga found.';
+  @override
+  String get mihon_chapters_title => 'Chapters';
+  @override
+  String get mihon_extension_language_filter => 'Language';
+  @override
+  String get mihon_extension_language_all => 'All languages';
+  @override
+  String get mihon_filter_ignore => '忽略';
+  @override
+  String get mihon_filter_include => '包含';
+  @override
+  String get mihon_filter_exclude => '排除';
+  @override
+  String get mihon_filter_ascending => '升序';
+  @override
+  String get mihon_filter_descending => '降序';
 }
 
 // Path: <root>
@@ -97921,6 +99098,83 @@ class _StringsZhCn extends _StringsEn {
   String get scrape_failure_detail_show => '显示详情';
   @override
   String get scrape_failure_detail_hide => '隐藏详情';
+  @override
+  String get library_view_manga_sources => '漫画源';
+  @override
+  String get library_view_manga_extensions => '漫画扩展';
+  @override
+  String get library_view_source_settings => '来源设置';
+  @override
+  String get mihon_sources_title => '漫画源';
+  @override
+  String get mihon_extensions_title => '漫画扩展';
+  @override
+  String get mihon_source_settings_title => '来源设置';
+  @override
+  String get mihon_store_add => '添加扩展仓库';
+  @override
+  String get mihon_store_url => '扩展仓库地址';
+  @override
+  String get mihon_store_empty => '还没有扩展仓库。可添加兼容的 Mihon 仓库，或导入本地 APK。';
+  @override
+  String get mihon_extension_import => '导入本地 APK';
+  @override
+  String get mihon_extension_warning =>
+      '第三方扩展会以 Hibiki 的权限执行代码。请只安装你信任的扩展和签名者。';
+  @override
+  String get mihon_extension_install => '安装';
+  @override
+  String get mihon_extension_update => '更新';
+  @override
+  String get mihon_extension_uninstall => '卸载';
+  @override
+  String get mihon_extension_installed => '已安装';
+  @override
+  String get mihon_extension_disabled => '已停用';
+  @override
+  String get mihon_source_empty => '没有已启用的漫画源。请先安装并启用漫画扩展。';
+  @override
+  String get mihon_source_popular => '热门';
+  @override
+  String get mihon_source_latest => '最新';
+  @override
+  String get mihon_source_search => '搜索漫画';
+  @override
+  String get mihon_source_preferences => '来源偏好';
+  @override
+  String get mihon_source_clear_data => '清除来源数据';
+  @override
+  String get mihon_source_clear_data_hint => '清除该来源的偏好与 Cookie，不会卸载扩展。';
+  @override
+  String get mihon_signer_trust_title => '信任扩展签名者？';
+  @override
+  String get mihon_signer_fingerprint => '签名者 SHA-256';
+  @override
+  String get mihon_runtime_unavailable => '此平台暂不支持 Mihon 扩展。';
+  @override
+  String get mihon_extension_incompatible => '扩展不兼容';
+  @override
+  String get mihon_store_refresh => '刷新仓库';
+  @override
+  String get mihon_source_browse_mokuro => '内置 Mokuro 目录';
+  @override
+  String get mihon_source_no_results => '没有找到漫画。';
+  @override
+  String get mihon_chapters_title => '章节';
+  @override
+  String get mihon_extension_language_filter => '语言';
+  @override
+  String get mihon_extension_language_all => '全部语言';
+  @override
+  String get mihon_filter_ignore => '忽略';
+  @override
+  String get mihon_filter_include => '包含';
+  @override
+  String get mihon_filter_exclude => '排除';
+  @override
+  String get mihon_filter_ascending => '升序';
+  @override
+  String get mihon_filter_descending => '降序';
 }
 
 // Path: <root>
@@ -104019,6 +105273,87 @@ class _StringsZhHk extends _StringsEn {
   String get scrape_failure_detail_show => 'Show details';
   @override
   String get scrape_failure_detail_hide => 'Hide details';
+  @override
+  String get library_view_manga_sources => 'Manga sources';
+  @override
+  String get library_view_manga_extensions => 'Manga extensions';
+  @override
+  String get library_view_source_settings => 'Source settings';
+  @override
+  String get mihon_sources_title => 'Manga sources';
+  @override
+  String get mihon_extensions_title => 'Manga extensions';
+  @override
+  String get mihon_source_settings_title => 'Source settings';
+  @override
+  String get mihon_store_add => 'Add extension store';
+  @override
+  String get mihon_store_url => 'Extension store URL';
+  @override
+  String get mihon_store_empty =>
+      'No extension stores yet. Add a compatible Mihon store or import a local APK.';
+  @override
+  String get mihon_extension_import => 'Import local APK';
+  @override
+  String get mihon_extension_warning =>
+      'Third-party extensions execute code with Hibiki permissions. Only install extensions and signers you trust.';
+  @override
+  String get mihon_extension_install => 'Install';
+  @override
+  String get mihon_extension_update => 'Update';
+  @override
+  String get mihon_extension_uninstall => 'Uninstall';
+  @override
+  String get mihon_extension_installed => 'Installed';
+  @override
+  String get mihon_extension_disabled => 'Disabled';
+  @override
+  String get mihon_source_empty =>
+      'No enabled manga sources. Install and enable an extension first.';
+  @override
+  String get mihon_source_popular => 'Popular';
+  @override
+  String get mihon_source_latest => 'Latest';
+  @override
+  String get mihon_source_search => 'Search manga';
+  @override
+  String get mihon_source_preferences => 'Source preferences';
+  @override
+  String get mihon_source_clear_data => 'Clear source data';
+  @override
+  String get mihon_source_clear_data_hint =>
+      'Clears this source preferences and cookies. Installed extensions are kept.';
+  @override
+  String get mihon_signer_trust_title => 'Trust extension signer?';
+  @override
+  String get mihon_signer_fingerprint => 'Signer SHA-256';
+  @override
+  String get mihon_runtime_unavailable =>
+      'Mihon extensions are unavailable on this platform.';
+  @override
+  String get mihon_extension_incompatible => 'Incompatible extension';
+  @override
+  String get mihon_store_refresh => 'Refresh stores';
+  @override
+  String get mihon_source_browse_mokuro => 'Built-in Mokuro catalog';
+  @override
+  String get mihon_source_no_results => 'No manga found.';
+  @override
+  String get mihon_chapters_title => 'Chapters';
+  @override
+  String get mihon_extension_language_filter => 'Language';
+  @override
+  String get mihon_extension_language_all => 'All languages';
+  @override
+  String get mihon_filter_ignore => '忽略';
+  @override
+  String get mihon_filter_include => '包含';
+  @override
+  String get mihon_filter_exclude => '排除';
+  @override
+  String get mihon_filter_ascending => '升序';
+  @override
+  String get mihon_filter_descending => '降序';
 }
 
 /// Flat map(s) containing all translations.
@@ -109650,6 +110985,82 @@ extension on _StringsEn {
         return 'Show details';
       case 'scrape_failure_detail_hide':
         return 'Hide details';
+      case 'library_view_manga_sources':
+        return 'Manga sources';
+      case 'library_view_manga_extensions':
+        return 'Manga extensions';
+      case 'library_view_source_settings':
+        return 'Source settings';
+      case 'mihon_sources_title':
+        return 'Manga sources';
+      case 'mihon_extensions_title':
+        return 'Manga extensions';
+      case 'mihon_source_settings_title':
+        return 'Source settings';
+      case 'mihon_store_add':
+        return 'Add extension store';
+      case 'mihon_store_url':
+        return 'Extension store URL';
+      case 'mihon_store_empty':
+        return 'No extension stores yet. Add a compatible Mihon store or import a local APK.';
+      case 'mihon_extension_import':
+        return 'Import local APK';
+      case 'mihon_extension_warning':
+        return 'Third-party extensions execute code with Hibiki permissions. Only install extensions and signers you trust.';
+      case 'mihon_extension_install':
+        return 'Install';
+      case 'mihon_extension_update':
+        return 'Update';
+      case 'mihon_extension_uninstall':
+        return 'Uninstall';
+      case 'mihon_extension_installed':
+        return 'Installed';
+      case 'mihon_extension_disabled':
+        return 'Disabled';
+      case 'mihon_source_empty':
+        return 'No enabled manga sources. Install and enable an extension first.';
+      case 'mihon_source_popular':
+        return 'Popular';
+      case 'mihon_source_latest':
+        return 'Latest';
+      case 'mihon_source_search':
+        return 'Search manga';
+      case 'mihon_source_preferences':
+        return 'Source preferences';
+      case 'mihon_source_clear_data':
+        return 'Clear source data';
+      case 'mihon_source_clear_data_hint':
+        return 'Clears this source preferences and cookies. Installed extensions are kept.';
+      case 'mihon_signer_trust_title':
+        return 'Trust extension signer?';
+      case 'mihon_signer_fingerprint':
+        return 'Signer SHA-256';
+      case 'mihon_runtime_unavailable':
+        return 'Mihon extensions are unavailable on this platform.';
+      case 'mihon_extension_incompatible':
+        return 'Incompatible extension';
+      case 'mihon_store_refresh':
+        return 'Refresh stores';
+      case 'mihon_source_browse_mokuro':
+        return 'Built-in Mokuro catalog';
+      case 'mihon_source_no_results':
+        return 'No manga found.';
+      case 'mihon_chapters_title':
+        return 'Chapters';
+      case 'mihon_extension_language_filter':
+        return 'Language';
+      case 'mihon_extension_language_all':
+        return 'All languages';
+      case 'mihon_filter_ignore':
+        return 'Ignore';
+      case 'mihon_filter_include':
+        return 'Include';
+      case 'mihon_filter_exclude':
+        return 'Exclude';
+      case 'mihon_filter_ascending':
+        return 'Ascending';
+      case 'mihon_filter_descending':
+        return 'Descending';
       default:
         return null;
     }
@@ -115279,6 +116690,82 @@ extension on _StringsAr {
         return 'Show details';
       case 'scrape_failure_detail_hide':
         return 'Hide details';
+      case 'library_view_manga_sources':
+        return 'Manga sources';
+      case 'library_view_manga_extensions':
+        return 'Manga extensions';
+      case 'library_view_source_settings':
+        return 'Source settings';
+      case 'mihon_sources_title':
+        return 'Manga sources';
+      case 'mihon_extensions_title':
+        return 'Manga extensions';
+      case 'mihon_source_settings_title':
+        return 'Source settings';
+      case 'mihon_store_add':
+        return 'Add extension store';
+      case 'mihon_store_url':
+        return 'Extension store URL';
+      case 'mihon_store_empty':
+        return 'No extension stores yet. Add a compatible Mihon store or import a local APK.';
+      case 'mihon_extension_import':
+        return 'Import local APK';
+      case 'mihon_extension_warning':
+        return 'Third-party extensions execute code with Hibiki permissions. Only install extensions and signers you trust.';
+      case 'mihon_extension_install':
+        return 'Install';
+      case 'mihon_extension_update':
+        return 'Update';
+      case 'mihon_extension_uninstall':
+        return 'Uninstall';
+      case 'mihon_extension_installed':
+        return 'Installed';
+      case 'mihon_extension_disabled':
+        return 'Disabled';
+      case 'mihon_source_empty':
+        return 'No enabled manga sources. Install and enable an extension first.';
+      case 'mihon_source_popular':
+        return 'Popular';
+      case 'mihon_source_latest':
+        return 'Latest';
+      case 'mihon_source_search':
+        return 'Search manga';
+      case 'mihon_source_preferences':
+        return 'Source preferences';
+      case 'mihon_source_clear_data':
+        return 'Clear source data';
+      case 'mihon_source_clear_data_hint':
+        return 'Clears this source preferences and cookies. Installed extensions are kept.';
+      case 'mihon_signer_trust_title':
+        return 'Trust extension signer?';
+      case 'mihon_signer_fingerprint':
+        return 'Signer SHA-256';
+      case 'mihon_runtime_unavailable':
+        return 'Mihon extensions are unavailable on this platform.';
+      case 'mihon_extension_incompatible':
+        return 'Incompatible extension';
+      case 'mihon_store_refresh':
+        return 'Refresh stores';
+      case 'mihon_source_browse_mokuro':
+        return 'Built-in Mokuro catalog';
+      case 'mihon_source_no_results':
+        return 'No manga found.';
+      case 'mihon_chapters_title':
+        return 'Chapters';
+      case 'mihon_extension_language_filter':
+        return 'Language';
+      case 'mihon_extension_language_all':
+        return 'All languages';
+      case 'mihon_filter_ignore':
+        return '忽略';
+      case 'mihon_filter_include':
+        return '包含';
+      case 'mihon_filter_exclude':
+        return '排除';
+      case 'mihon_filter_ascending':
+        return '升序';
+      case 'mihon_filter_descending':
+        return '降序';
       default:
         return null;
     }
@@ -120929,6 +122416,82 @@ extension on _StringsDe {
         return 'Show details';
       case 'scrape_failure_detail_hide':
         return 'Hide details';
+      case 'library_view_manga_sources':
+        return 'Manga sources';
+      case 'library_view_manga_extensions':
+        return 'Manga extensions';
+      case 'library_view_source_settings':
+        return 'Source settings';
+      case 'mihon_sources_title':
+        return 'Manga sources';
+      case 'mihon_extensions_title':
+        return 'Manga extensions';
+      case 'mihon_source_settings_title':
+        return 'Source settings';
+      case 'mihon_store_add':
+        return 'Add extension store';
+      case 'mihon_store_url':
+        return 'Extension store URL';
+      case 'mihon_store_empty':
+        return 'No extension stores yet. Add a compatible Mihon store or import a local APK.';
+      case 'mihon_extension_import':
+        return 'Import local APK';
+      case 'mihon_extension_warning':
+        return 'Third-party extensions execute code with Hibiki permissions. Only install extensions and signers you trust.';
+      case 'mihon_extension_install':
+        return 'Install';
+      case 'mihon_extension_update':
+        return 'Update';
+      case 'mihon_extension_uninstall':
+        return 'Uninstall';
+      case 'mihon_extension_installed':
+        return 'Installed';
+      case 'mihon_extension_disabled':
+        return 'Disabled';
+      case 'mihon_source_empty':
+        return 'No enabled manga sources. Install and enable an extension first.';
+      case 'mihon_source_popular':
+        return 'Popular';
+      case 'mihon_source_latest':
+        return 'Latest';
+      case 'mihon_source_search':
+        return 'Search manga';
+      case 'mihon_source_preferences':
+        return 'Source preferences';
+      case 'mihon_source_clear_data':
+        return 'Clear source data';
+      case 'mihon_source_clear_data_hint':
+        return 'Clears this source preferences and cookies. Installed extensions are kept.';
+      case 'mihon_signer_trust_title':
+        return 'Trust extension signer?';
+      case 'mihon_signer_fingerprint':
+        return 'Signer SHA-256';
+      case 'mihon_runtime_unavailable':
+        return 'Mihon extensions are unavailable on this platform.';
+      case 'mihon_extension_incompatible':
+        return 'Incompatible extension';
+      case 'mihon_store_refresh':
+        return 'Refresh stores';
+      case 'mihon_source_browse_mokuro':
+        return 'Built-in Mokuro catalog';
+      case 'mihon_source_no_results':
+        return 'No manga found.';
+      case 'mihon_chapters_title':
+        return 'Chapters';
+      case 'mihon_extension_language_filter':
+        return 'Language';
+      case 'mihon_extension_language_all':
+        return 'All languages';
+      case 'mihon_filter_ignore':
+        return '忽略';
+      case 'mihon_filter_include':
+        return '包含';
+      case 'mihon_filter_exclude':
+        return '排除';
+      case 'mihon_filter_ascending':
+        return '升序';
+      case 'mihon_filter_descending':
+        return '降序';
       default:
         return null;
     }
@@ -126578,6 +128141,82 @@ extension on _StringsEs {
         return 'Show details';
       case 'scrape_failure_detail_hide':
         return 'Hide details';
+      case 'library_view_manga_sources':
+        return 'Manga sources';
+      case 'library_view_manga_extensions':
+        return 'Manga extensions';
+      case 'library_view_source_settings':
+        return 'Source settings';
+      case 'mihon_sources_title':
+        return 'Manga sources';
+      case 'mihon_extensions_title':
+        return 'Manga extensions';
+      case 'mihon_source_settings_title':
+        return 'Source settings';
+      case 'mihon_store_add':
+        return 'Add extension store';
+      case 'mihon_store_url':
+        return 'Extension store URL';
+      case 'mihon_store_empty':
+        return 'No extension stores yet. Add a compatible Mihon store or import a local APK.';
+      case 'mihon_extension_import':
+        return 'Import local APK';
+      case 'mihon_extension_warning':
+        return 'Third-party extensions execute code with Hibiki permissions. Only install extensions and signers you trust.';
+      case 'mihon_extension_install':
+        return 'Install';
+      case 'mihon_extension_update':
+        return 'Update';
+      case 'mihon_extension_uninstall':
+        return 'Uninstall';
+      case 'mihon_extension_installed':
+        return 'Installed';
+      case 'mihon_extension_disabled':
+        return 'Disabled';
+      case 'mihon_source_empty':
+        return 'No enabled manga sources. Install and enable an extension first.';
+      case 'mihon_source_popular':
+        return 'Popular';
+      case 'mihon_source_latest':
+        return 'Latest';
+      case 'mihon_source_search':
+        return 'Search manga';
+      case 'mihon_source_preferences':
+        return 'Source preferences';
+      case 'mihon_source_clear_data':
+        return 'Clear source data';
+      case 'mihon_source_clear_data_hint':
+        return 'Clears this source preferences and cookies. Installed extensions are kept.';
+      case 'mihon_signer_trust_title':
+        return 'Trust extension signer?';
+      case 'mihon_signer_fingerprint':
+        return 'Signer SHA-256';
+      case 'mihon_runtime_unavailable':
+        return 'Mihon extensions are unavailable on this platform.';
+      case 'mihon_extension_incompatible':
+        return 'Incompatible extension';
+      case 'mihon_store_refresh':
+        return 'Refresh stores';
+      case 'mihon_source_browse_mokuro':
+        return 'Built-in Mokuro catalog';
+      case 'mihon_source_no_results':
+        return 'No manga found.';
+      case 'mihon_chapters_title':
+        return 'Chapters';
+      case 'mihon_extension_language_filter':
+        return 'Language';
+      case 'mihon_extension_language_all':
+        return 'All languages';
+      case 'mihon_filter_ignore':
+        return '忽略';
+      case 'mihon_filter_include':
+        return '包含';
+      case 'mihon_filter_exclude':
+        return '排除';
+      case 'mihon_filter_ascending':
+        return '升序';
+      case 'mihon_filter_descending':
+        return '降序';
       default:
         return null;
     }
@@ -132233,6 +133872,82 @@ extension on _StringsFr {
         return 'Show details';
       case 'scrape_failure_detail_hide':
         return 'Hide details';
+      case 'library_view_manga_sources':
+        return 'Manga sources';
+      case 'library_view_manga_extensions':
+        return 'Manga extensions';
+      case 'library_view_source_settings':
+        return 'Source settings';
+      case 'mihon_sources_title':
+        return 'Manga sources';
+      case 'mihon_extensions_title':
+        return 'Manga extensions';
+      case 'mihon_source_settings_title':
+        return 'Source settings';
+      case 'mihon_store_add':
+        return 'Add extension store';
+      case 'mihon_store_url':
+        return 'Extension store URL';
+      case 'mihon_store_empty':
+        return 'No extension stores yet. Add a compatible Mihon store or import a local APK.';
+      case 'mihon_extension_import':
+        return 'Import local APK';
+      case 'mihon_extension_warning':
+        return 'Third-party extensions execute code with Hibiki permissions. Only install extensions and signers you trust.';
+      case 'mihon_extension_install':
+        return 'Install';
+      case 'mihon_extension_update':
+        return 'Update';
+      case 'mihon_extension_uninstall':
+        return 'Uninstall';
+      case 'mihon_extension_installed':
+        return 'Installed';
+      case 'mihon_extension_disabled':
+        return 'Disabled';
+      case 'mihon_source_empty':
+        return 'No enabled manga sources. Install and enable an extension first.';
+      case 'mihon_source_popular':
+        return 'Popular';
+      case 'mihon_source_latest':
+        return 'Latest';
+      case 'mihon_source_search':
+        return 'Search manga';
+      case 'mihon_source_preferences':
+        return 'Source preferences';
+      case 'mihon_source_clear_data':
+        return 'Clear source data';
+      case 'mihon_source_clear_data_hint':
+        return 'Clears this source preferences and cookies. Installed extensions are kept.';
+      case 'mihon_signer_trust_title':
+        return 'Trust extension signer?';
+      case 'mihon_signer_fingerprint':
+        return 'Signer SHA-256';
+      case 'mihon_runtime_unavailable':
+        return 'Mihon extensions are unavailable on this platform.';
+      case 'mihon_extension_incompatible':
+        return 'Incompatible extension';
+      case 'mihon_store_refresh':
+        return 'Refresh stores';
+      case 'mihon_source_browse_mokuro':
+        return 'Built-in Mokuro catalog';
+      case 'mihon_source_no_results':
+        return 'No manga found.';
+      case 'mihon_chapters_title':
+        return 'Chapters';
+      case 'mihon_extension_language_filter':
+        return 'Language';
+      case 'mihon_extension_language_all':
+        return 'All languages';
+      case 'mihon_filter_ignore':
+        return '忽略';
+      case 'mihon_filter_include':
+        return '包含';
+      case 'mihon_filter_exclude':
+        return '排除';
+      case 'mihon_filter_ascending':
+        return '升序';
+      case 'mihon_filter_descending':
+        return '降序';
       default:
         return null;
     }
@@ -137870,6 +139585,82 @@ extension on _StringsId {
         return 'Show details';
       case 'scrape_failure_detail_hide':
         return 'Hide details';
+      case 'library_view_manga_sources':
+        return 'Manga sources';
+      case 'library_view_manga_extensions':
+        return 'Manga extensions';
+      case 'library_view_source_settings':
+        return 'Source settings';
+      case 'mihon_sources_title':
+        return 'Manga sources';
+      case 'mihon_extensions_title':
+        return 'Manga extensions';
+      case 'mihon_source_settings_title':
+        return 'Source settings';
+      case 'mihon_store_add':
+        return 'Add extension store';
+      case 'mihon_store_url':
+        return 'Extension store URL';
+      case 'mihon_store_empty':
+        return 'No extension stores yet. Add a compatible Mihon store or import a local APK.';
+      case 'mihon_extension_import':
+        return 'Import local APK';
+      case 'mihon_extension_warning':
+        return 'Third-party extensions execute code with Hibiki permissions. Only install extensions and signers you trust.';
+      case 'mihon_extension_install':
+        return 'Install';
+      case 'mihon_extension_update':
+        return 'Update';
+      case 'mihon_extension_uninstall':
+        return 'Uninstall';
+      case 'mihon_extension_installed':
+        return 'Installed';
+      case 'mihon_extension_disabled':
+        return 'Disabled';
+      case 'mihon_source_empty':
+        return 'No enabled manga sources. Install and enable an extension first.';
+      case 'mihon_source_popular':
+        return 'Popular';
+      case 'mihon_source_latest':
+        return 'Latest';
+      case 'mihon_source_search':
+        return 'Search manga';
+      case 'mihon_source_preferences':
+        return 'Source preferences';
+      case 'mihon_source_clear_data':
+        return 'Clear source data';
+      case 'mihon_source_clear_data_hint':
+        return 'Clears this source preferences and cookies. Installed extensions are kept.';
+      case 'mihon_signer_trust_title':
+        return 'Trust extension signer?';
+      case 'mihon_signer_fingerprint':
+        return 'Signer SHA-256';
+      case 'mihon_runtime_unavailable':
+        return 'Mihon extensions are unavailable on this platform.';
+      case 'mihon_extension_incompatible':
+        return 'Incompatible extension';
+      case 'mihon_store_refresh':
+        return 'Refresh stores';
+      case 'mihon_source_browse_mokuro':
+        return 'Built-in Mokuro catalog';
+      case 'mihon_source_no_results':
+        return 'No manga found.';
+      case 'mihon_chapters_title':
+        return 'Chapters';
+      case 'mihon_extension_language_filter':
+        return 'Language';
+      case 'mihon_extension_language_all':
+        return 'All languages';
+      case 'mihon_filter_ignore':
+        return '忽略';
+      case 'mihon_filter_include':
+        return '包含';
+      case 'mihon_filter_exclude':
+        return '排除';
+      case 'mihon_filter_ascending':
+        return '升序';
+      case 'mihon_filter_descending':
+        return '降序';
       default:
         return null;
     }
@@ -143522,6 +145313,82 @@ extension on _StringsIt {
         return 'Show details';
       case 'scrape_failure_detail_hide':
         return 'Hide details';
+      case 'library_view_manga_sources':
+        return 'Manga sources';
+      case 'library_view_manga_extensions':
+        return 'Manga extensions';
+      case 'library_view_source_settings':
+        return 'Source settings';
+      case 'mihon_sources_title':
+        return 'Manga sources';
+      case 'mihon_extensions_title':
+        return 'Manga extensions';
+      case 'mihon_source_settings_title':
+        return 'Source settings';
+      case 'mihon_store_add':
+        return 'Add extension store';
+      case 'mihon_store_url':
+        return 'Extension store URL';
+      case 'mihon_store_empty':
+        return 'No extension stores yet. Add a compatible Mihon store or import a local APK.';
+      case 'mihon_extension_import':
+        return 'Import local APK';
+      case 'mihon_extension_warning':
+        return 'Third-party extensions execute code with Hibiki permissions. Only install extensions and signers you trust.';
+      case 'mihon_extension_install':
+        return 'Install';
+      case 'mihon_extension_update':
+        return 'Update';
+      case 'mihon_extension_uninstall':
+        return 'Uninstall';
+      case 'mihon_extension_installed':
+        return 'Installed';
+      case 'mihon_extension_disabled':
+        return 'Disabled';
+      case 'mihon_source_empty':
+        return 'No enabled manga sources. Install and enable an extension first.';
+      case 'mihon_source_popular':
+        return 'Popular';
+      case 'mihon_source_latest':
+        return 'Latest';
+      case 'mihon_source_search':
+        return 'Search manga';
+      case 'mihon_source_preferences':
+        return 'Source preferences';
+      case 'mihon_source_clear_data':
+        return 'Clear source data';
+      case 'mihon_source_clear_data_hint':
+        return 'Clears this source preferences and cookies. Installed extensions are kept.';
+      case 'mihon_signer_trust_title':
+        return 'Trust extension signer?';
+      case 'mihon_signer_fingerprint':
+        return 'Signer SHA-256';
+      case 'mihon_runtime_unavailable':
+        return 'Mihon extensions are unavailable on this platform.';
+      case 'mihon_extension_incompatible':
+        return 'Incompatible extension';
+      case 'mihon_store_refresh':
+        return 'Refresh stores';
+      case 'mihon_source_browse_mokuro':
+        return 'Built-in Mokuro catalog';
+      case 'mihon_source_no_results':
+        return 'No manga found.';
+      case 'mihon_chapters_title':
+        return 'Chapters';
+      case 'mihon_extension_language_filter':
+        return 'Language';
+      case 'mihon_extension_language_all':
+        return 'All languages';
+      case 'mihon_filter_ignore':
+        return '忽略';
+      case 'mihon_filter_include':
+        return '包含';
+      case 'mihon_filter_exclude':
+        return '排除';
+      case 'mihon_filter_ascending':
+        return '升序';
+      case 'mihon_filter_descending':
+        return '降序';
       default:
         return null;
     }
@@ -149136,6 +151003,82 @@ extension on _StringsJa {
         return 'Show details';
       case 'scrape_failure_detail_hide':
         return 'Hide details';
+      case 'library_view_manga_sources':
+        return 'Manga sources';
+      case 'library_view_manga_extensions':
+        return 'Manga extensions';
+      case 'library_view_source_settings':
+        return 'Source settings';
+      case 'mihon_sources_title':
+        return 'Manga sources';
+      case 'mihon_extensions_title':
+        return 'Manga extensions';
+      case 'mihon_source_settings_title':
+        return 'Source settings';
+      case 'mihon_store_add':
+        return 'Add extension store';
+      case 'mihon_store_url':
+        return 'Extension store URL';
+      case 'mihon_store_empty':
+        return 'No extension stores yet. Add a compatible Mihon store or import a local APK.';
+      case 'mihon_extension_import':
+        return 'Import local APK';
+      case 'mihon_extension_warning':
+        return 'Third-party extensions execute code with Hibiki permissions. Only install extensions and signers you trust.';
+      case 'mihon_extension_install':
+        return 'Install';
+      case 'mihon_extension_update':
+        return 'Update';
+      case 'mihon_extension_uninstall':
+        return 'Uninstall';
+      case 'mihon_extension_installed':
+        return 'Installed';
+      case 'mihon_extension_disabled':
+        return 'Disabled';
+      case 'mihon_source_empty':
+        return 'No enabled manga sources. Install and enable an extension first.';
+      case 'mihon_source_popular':
+        return 'Popular';
+      case 'mihon_source_latest':
+        return 'Latest';
+      case 'mihon_source_search':
+        return 'Search manga';
+      case 'mihon_source_preferences':
+        return 'Source preferences';
+      case 'mihon_source_clear_data':
+        return 'Clear source data';
+      case 'mihon_source_clear_data_hint':
+        return 'Clears this source preferences and cookies. Installed extensions are kept.';
+      case 'mihon_signer_trust_title':
+        return 'Trust extension signer?';
+      case 'mihon_signer_fingerprint':
+        return 'Signer SHA-256';
+      case 'mihon_runtime_unavailable':
+        return 'Mihon extensions are unavailable on this platform.';
+      case 'mihon_extension_incompatible':
+        return 'Incompatible extension';
+      case 'mihon_store_refresh':
+        return 'Refresh stores';
+      case 'mihon_source_browse_mokuro':
+        return 'Built-in Mokuro catalog';
+      case 'mihon_source_no_results':
+        return 'No manga found.';
+      case 'mihon_chapters_title':
+        return 'Chapters';
+      case 'mihon_extension_language_filter':
+        return 'Language';
+      case 'mihon_extension_language_all':
+        return 'All languages';
+      case 'mihon_filter_ignore':
+        return '忽略';
+      case 'mihon_filter_include':
+        return '包含';
+      case 'mihon_filter_exclude':
+        return '排除';
+      case 'mihon_filter_ascending':
+        return '升序';
+      case 'mihon_filter_descending':
+        return '降序';
       default:
         return null;
     }
@@ -154754,6 +156697,82 @@ extension on _StringsKo {
         return 'Show details';
       case 'scrape_failure_detail_hide':
         return 'Hide details';
+      case 'library_view_manga_sources':
+        return 'Manga sources';
+      case 'library_view_manga_extensions':
+        return 'Manga extensions';
+      case 'library_view_source_settings':
+        return 'Source settings';
+      case 'mihon_sources_title':
+        return 'Manga sources';
+      case 'mihon_extensions_title':
+        return 'Manga extensions';
+      case 'mihon_source_settings_title':
+        return 'Source settings';
+      case 'mihon_store_add':
+        return 'Add extension store';
+      case 'mihon_store_url':
+        return 'Extension store URL';
+      case 'mihon_store_empty':
+        return 'No extension stores yet. Add a compatible Mihon store or import a local APK.';
+      case 'mihon_extension_import':
+        return 'Import local APK';
+      case 'mihon_extension_warning':
+        return 'Third-party extensions execute code with Hibiki permissions. Only install extensions and signers you trust.';
+      case 'mihon_extension_install':
+        return 'Install';
+      case 'mihon_extension_update':
+        return 'Update';
+      case 'mihon_extension_uninstall':
+        return 'Uninstall';
+      case 'mihon_extension_installed':
+        return 'Installed';
+      case 'mihon_extension_disabled':
+        return 'Disabled';
+      case 'mihon_source_empty':
+        return 'No enabled manga sources. Install and enable an extension first.';
+      case 'mihon_source_popular':
+        return 'Popular';
+      case 'mihon_source_latest':
+        return 'Latest';
+      case 'mihon_source_search':
+        return 'Search manga';
+      case 'mihon_source_preferences':
+        return 'Source preferences';
+      case 'mihon_source_clear_data':
+        return 'Clear source data';
+      case 'mihon_source_clear_data_hint':
+        return 'Clears this source preferences and cookies. Installed extensions are kept.';
+      case 'mihon_signer_trust_title':
+        return 'Trust extension signer?';
+      case 'mihon_signer_fingerprint':
+        return 'Signer SHA-256';
+      case 'mihon_runtime_unavailable':
+        return 'Mihon extensions are unavailable on this platform.';
+      case 'mihon_extension_incompatible':
+        return 'Incompatible extension';
+      case 'mihon_store_refresh':
+        return 'Refresh stores';
+      case 'mihon_source_browse_mokuro':
+        return 'Built-in Mokuro catalog';
+      case 'mihon_source_no_results':
+        return 'No manga found.';
+      case 'mihon_chapters_title':
+        return 'Chapters';
+      case 'mihon_extension_language_filter':
+        return 'Language';
+      case 'mihon_extension_language_all':
+        return 'All languages';
+      case 'mihon_filter_ignore':
+        return '忽略';
+      case 'mihon_filter_include':
+        return '包含';
+      case 'mihon_filter_exclude':
+        return '排除';
+      case 'mihon_filter_ascending':
+        return '升序';
+      case 'mihon_filter_descending':
+        return '降序';
       default:
         return null;
     }
@@ -160399,6 +162418,82 @@ extension on _StringsNl {
         return 'Show details';
       case 'scrape_failure_detail_hide':
         return 'Hide details';
+      case 'library_view_manga_sources':
+        return 'Manga sources';
+      case 'library_view_manga_extensions':
+        return 'Manga extensions';
+      case 'library_view_source_settings':
+        return 'Source settings';
+      case 'mihon_sources_title':
+        return 'Manga sources';
+      case 'mihon_extensions_title':
+        return 'Manga extensions';
+      case 'mihon_source_settings_title':
+        return 'Source settings';
+      case 'mihon_store_add':
+        return 'Add extension store';
+      case 'mihon_store_url':
+        return 'Extension store URL';
+      case 'mihon_store_empty':
+        return 'No extension stores yet. Add a compatible Mihon store or import a local APK.';
+      case 'mihon_extension_import':
+        return 'Import local APK';
+      case 'mihon_extension_warning':
+        return 'Third-party extensions execute code with Hibiki permissions. Only install extensions and signers you trust.';
+      case 'mihon_extension_install':
+        return 'Install';
+      case 'mihon_extension_update':
+        return 'Update';
+      case 'mihon_extension_uninstall':
+        return 'Uninstall';
+      case 'mihon_extension_installed':
+        return 'Installed';
+      case 'mihon_extension_disabled':
+        return 'Disabled';
+      case 'mihon_source_empty':
+        return 'No enabled manga sources. Install and enable an extension first.';
+      case 'mihon_source_popular':
+        return 'Popular';
+      case 'mihon_source_latest':
+        return 'Latest';
+      case 'mihon_source_search':
+        return 'Search manga';
+      case 'mihon_source_preferences':
+        return 'Source preferences';
+      case 'mihon_source_clear_data':
+        return 'Clear source data';
+      case 'mihon_source_clear_data_hint':
+        return 'Clears this source preferences and cookies. Installed extensions are kept.';
+      case 'mihon_signer_trust_title':
+        return 'Trust extension signer?';
+      case 'mihon_signer_fingerprint':
+        return 'Signer SHA-256';
+      case 'mihon_runtime_unavailable':
+        return 'Mihon extensions are unavailable on this platform.';
+      case 'mihon_extension_incompatible':
+        return 'Incompatible extension';
+      case 'mihon_store_refresh':
+        return 'Refresh stores';
+      case 'mihon_source_browse_mokuro':
+        return 'Built-in Mokuro catalog';
+      case 'mihon_source_no_results':
+        return 'No manga found.';
+      case 'mihon_chapters_title':
+        return 'Chapters';
+      case 'mihon_extension_language_filter':
+        return 'Language';
+      case 'mihon_extension_language_all':
+        return 'All languages';
+      case 'mihon_filter_ignore':
+        return '忽略';
+      case 'mihon_filter_include':
+        return '包含';
+      case 'mihon_filter_exclude':
+        return '排除';
+      case 'mihon_filter_ascending':
+        return '升序';
+      case 'mihon_filter_descending':
+        return '降序';
       default:
         return null;
     }
@@ -166041,6 +168136,82 @@ extension on _StringsPtBr {
         return 'Show details';
       case 'scrape_failure_detail_hide':
         return 'Hide details';
+      case 'library_view_manga_sources':
+        return 'Manga sources';
+      case 'library_view_manga_extensions':
+        return 'Manga extensions';
+      case 'library_view_source_settings':
+        return 'Source settings';
+      case 'mihon_sources_title':
+        return 'Manga sources';
+      case 'mihon_extensions_title':
+        return 'Manga extensions';
+      case 'mihon_source_settings_title':
+        return 'Source settings';
+      case 'mihon_store_add':
+        return 'Add extension store';
+      case 'mihon_store_url':
+        return 'Extension store URL';
+      case 'mihon_store_empty':
+        return 'No extension stores yet. Add a compatible Mihon store or import a local APK.';
+      case 'mihon_extension_import':
+        return 'Import local APK';
+      case 'mihon_extension_warning':
+        return 'Third-party extensions execute code with Hibiki permissions. Only install extensions and signers you trust.';
+      case 'mihon_extension_install':
+        return 'Install';
+      case 'mihon_extension_update':
+        return 'Update';
+      case 'mihon_extension_uninstall':
+        return 'Uninstall';
+      case 'mihon_extension_installed':
+        return 'Installed';
+      case 'mihon_extension_disabled':
+        return 'Disabled';
+      case 'mihon_source_empty':
+        return 'No enabled manga sources. Install and enable an extension first.';
+      case 'mihon_source_popular':
+        return 'Popular';
+      case 'mihon_source_latest':
+        return 'Latest';
+      case 'mihon_source_search':
+        return 'Search manga';
+      case 'mihon_source_preferences':
+        return 'Source preferences';
+      case 'mihon_source_clear_data':
+        return 'Clear source data';
+      case 'mihon_source_clear_data_hint':
+        return 'Clears this source preferences and cookies. Installed extensions are kept.';
+      case 'mihon_signer_trust_title':
+        return 'Trust extension signer?';
+      case 'mihon_signer_fingerprint':
+        return 'Signer SHA-256';
+      case 'mihon_runtime_unavailable':
+        return 'Mihon extensions are unavailable on this platform.';
+      case 'mihon_extension_incompatible':
+        return 'Incompatible extension';
+      case 'mihon_store_refresh':
+        return 'Refresh stores';
+      case 'mihon_source_browse_mokuro':
+        return 'Built-in Mokuro catalog';
+      case 'mihon_source_no_results':
+        return 'No manga found.';
+      case 'mihon_chapters_title':
+        return 'Chapters';
+      case 'mihon_extension_language_filter':
+        return 'Language';
+      case 'mihon_extension_language_all':
+        return 'All languages';
+      case 'mihon_filter_ignore':
+        return '忽略';
+      case 'mihon_filter_include':
+        return '包含';
+      case 'mihon_filter_exclude':
+        return '排除';
+      case 'mihon_filter_ascending':
+        return '升序';
+      case 'mihon_filter_descending':
+        return '降序';
       default:
         return null;
     }
@@ -171688,6 +173859,82 @@ extension on _StringsRu {
         return 'Show details';
       case 'scrape_failure_detail_hide':
         return 'Hide details';
+      case 'library_view_manga_sources':
+        return 'Manga sources';
+      case 'library_view_manga_extensions':
+        return 'Manga extensions';
+      case 'library_view_source_settings':
+        return 'Source settings';
+      case 'mihon_sources_title':
+        return 'Manga sources';
+      case 'mihon_extensions_title':
+        return 'Manga extensions';
+      case 'mihon_source_settings_title':
+        return 'Source settings';
+      case 'mihon_store_add':
+        return 'Add extension store';
+      case 'mihon_store_url':
+        return 'Extension store URL';
+      case 'mihon_store_empty':
+        return 'No extension stores yet. Add a compatible Mihon store or import a local APK.';
+      case 'mihon_extension_import':
+        return 'Import local APK';
+      case 'mihon_extension_warning':
+        return 'Third-party extensions execute code with Hibiki permissions. Only install extensions and signers you trust.';
+      case 'mihon_extension_install':
+        return 'Install';
+      case 'mihon_extension_update':
+        return 'Update';
+      case 'mihon_extension_uninstall':
+        return 'Uninstall';
+      case 'mihon_extension_installed':
+        return 'Installed';
+      case 'mihon_extension_disabled':
+        return 'Disabled';
+      case 'mihon_source_empty':
+        return 'No enabled manga sources. Install and enable an extension first.';
+      case 'mihon_source_popular':
+        return 'Popular';
+      case 'mihon_source_latest':
+        return 'Latest';
+      case 'mihon_source_search':
+        return 'Search manga';
+      case 'mihon_source_preferences':
+        return 'Source preferences';
+      case 'mihon_source_clear_data':
+        return 'Clear source data';
+      case 'mihon_source_clear_data_hint':
+        return 'Clears this source preferences and cookies. Installed extensions are kept.';
+      case 'mihon_signer_trust_title':
+        return 'Trust extension signer?';
+      case 'mihon_signer_fingerprint':
+        return 'Signer SHA-256';
+      case 'mihon_runtime_unavailable':
+        return 'Mihon extensions are unavailable on this platform.';
+      case 'mihon_extension_incompatible':
+        return 'Incompatible extension';
+      case 'mihon_store_refresh':
+        return 'Refresh stores';
+      case 'mihon_source_browse_mokuro':
+        return 'Built-in Mokuro catalog';
+      case 'mihon_source_no_results':
+        return 'No manga found.';
+      case 'mihon_chapters_title':
+        return 'Chapters';
+      case 'mihon_extension_language_filter':
+        return 'Language';
+      case 'mihon_extension_language_all':
+        return 'All languages';
+      case 'mihon_filter_ignore':
+        return '忽略';
+      case 'mihon_filter_include':
+        return '包含';
+      case 'mihon_filter_exclude':
+        return '排除';
+      case 'mihon_filter_ascending':
+        return '升序';
+      case 'mihon_filter_descending':
+        return '降序';
       default:
         return null;
     }
@@ -177319,6 +179566,82 @@ extension on _StringsTh {
         return 'Show details';
       case 'scrape_failure_detail_hide':
         return 'Hide details';
+      case 'library_view_manga_sources':
+        return 'Manga sources';
+      case 'library_view_manga_extensions':
+        return 'Manga extensions';
+      case 'library_view_source_settings':
+        return 'Source settings';
+      case 'mihon_sources_title':
+        return 'Manga sources';
+      case 'mihon_extensions_title':
+        return 'Manga extensions';
+      case 'mihon_source_settings_title':
+        return 'Source settings';
+      case 'mihon_store_add':
+        return 'Add extension store';
+      case 'mihon_store_url':
+        return 'Extension store URL';
+      case 'mihon_store_empty':
+        return 'No extension stores yet. Add a compatible Mihon store or import a local APK.';
+      case 'mihon_extension_import':
+        return 'Import local APK';
+      case 'mihon_extension_warning':
+        return 'Third-party extensions execute code with Hibiki permissions. Only install extensions and signers you trust.';
+      case 'mihon_extension_install':
+        return 'Install';
+      case 'mihon_extension_update':
+        return 'Update';
+      case 'mihon_extension_uninstall':
+        return 'Uninstall';
+      case 'mihon_extension_installed':
+        return 'Installed';
+      case 'mihon_extension_disabled':
+        return 'Disabled';
+      case 'mihon_source_empty':
+        return 'No enabled manga sources. Install and enable an extension first.';
+      case 'mihon_source_popular':
+        return 'Popular';
+      case 'mihon_source_latest':
+        return 'Latest';
+      case 'mihon_source_search':
+        return 'Search manga';
+      case 'mihon_source_preferences':
+        return 'Source preferences';
+      case 'mihon_source_clear_data':
+        return 'Clear source data';
+      case 'mihon_source_clear_data_hint':
+        return 'Clears this source preferences and cookies. Installed extensions are kept.';
+      case 'mihon_signer_trust_title':
+        return 'Trust extension signer?';
+      case 'mihon_signer_fingerprint':
+        return 'Signer SHA-256';
+      case 'mihon_runtime_unavailable':
+        return 'Mihon extensions are unavailable on this platform.';
+      case 'mihon_extension_incompatible':
+        return 'Incompatible extension';
+      case 'mihon_store_refresh':
+        return 'Refresh stores';
+      case 'mihon_source_browse_mokuro':
+        return 'Built-in Mokuro catalog';
+      case 'mihon_source_no_results':
+        return 'No manga found.';
+      case 'mihon_chapters_title':
+        return 'Chapters';
+      case 'mihon_extension_language_filter':
+        return 'Language';
+      case 'mihon_extension_language_all':
+        return 'All languages';
+      case 'mihon_filter_ignore':
+        return '忽略';
+      case 'mihon_filter_include':
+        return '包含';
+      case 'mihon_filter_exclude':
+        return '排除';
+      case 'mihon_filter_ascending':
+        return '升序';
+      case 'mihon_filter_descending':
+        return '降序';
       default:
         return null;
     }
@@ -182959,6 +185282,82 @@ extension on _StringsTr {
         return 'Show details';
       case 'scrape_failure_detail_hide':
         return 'Hide details';
+      case 'library_view_manga_sources':
+        return 'Manga sources';
+      case 'library_view_manga_extensions':
+        return 'Manga extensions';
+      case 'library_view_source_settings':
+        return 'Source settings';
+      case 'mihon_sources_title':
+        return 'Manga sources';
+      case 'mihon_extensions_title':
+        return 'Manga extensions';
+      case 'mihon_source_settings_title':
+        return 'Source settings';
+      case 'mihon_store_add':
+        return 'Add extension store';
+      case 'mihon_store_url':
+        return 'Extension store URL';
+      case 'mihon_store_empty':
+        return 'No extension stores yet. Add a compatible Mihon store or import a local APK.';
+      case 'mihon_extension_import':
+        return 'Import local APK';
+      case 'mihon_extension_warning':
+        return 'Third-party extensions execute code with Hibiki permissions. Only install extensions and signers you trust.';
+      case 'mihon_extension_install':
+        return 'Install';
+      case 'mihon_extension_update':
+        return 'Update';
+      case 'mihon_extension_uninstall':
+        return 'Uninstall';
+      case 'mihon_extension_installed':
+        return 'Installed';
+      case 'mihon_extension_disabled':
+        return 'Disabled';
+      case 'mihon_source_empty':
+        return 'No enabled manga sources. Install and enable an extension first.';
+      case 'mihon_source_popular':
+        return 'Popular';
+      case 'mihon_source_latest':
+        return 'Latest';
+      case 'mihon_source_search':
+        return 'Search manga';
+      case 'mihon_source_preferences':
+        return 'Source preferences';
+      case 'mihon_source_clear_data':
+        return 'Clear source data';
+      case 'mihon_source_clear_data_hint':
+        return 'Clears this source preferences and cookies. Installed extensions are kept.';
+      case 'mihon_signer_trust_title':
+        return 'Trust extension signer?';
+      case 'mihon_signer_fingerprint':
+        return 'Signer SHA-256';
+      case 'mihon_runtime_unavailable':
+        return 'Mihon extensions are unavailable on this platform.';
+      case 'mihon_extension_incompatible':
+        return 'Incompatible extension';
+      case 'mihon_store_refresh':
+        return 'Refresh stores';
+      case 'mihon_source_browse_mokuro':
+        return 'Built-in Mokuro catalog';
+      case 'mihon_source_no_results':
+        return 'No manga found.';
+      case 'mihon_chapters_title':
+        return 'Chapters';
+      case 'mihon_extension_language_filter':
+        return 'Language';
+      case 'mihon_extension_language_all':
+        return 'All languages';
+      case 'mihon_filter_ignore':
+        return '忽略';
+      case 'mihon_filter_include':
+        return '包含';
+      case 'mihon_filter_exclude':
+        return '排除';
+      case 'mihon_filter_ascending':
+        return '升序';
+      case 'mihon_filter_descending':
+        return '降序';
       default:
         return null;
     }
@@ -188594,6 +190993,82 @@ extension on _StringsVi {
         return 'Show details';
       case 'scrape_failure_detail_hide':
         return 'Hide details';
+      case 'library_view_manga_sources':
+        return 'Manga sources';
+      case 'library_view_manga_extensions':
+        return 'Manga extensions';
+      case 'library_view_source_settings':
+        return 'Source settings';
+      case 'mihon_sources_title':
+        return 'Manga sources';
+      case 'mihon_extensions_title':
+        return 'Manga extensions';
+      case 'mihon_source_settings_title':
+        return 'Source settings';
+      case 'mihon_store_add':
+        return 'Add extension store';
+      case 'mihon_store_url':
+        return 'Extension store URL';
+      case 'mihon_store_empty':
+        return 'No extension stores yet. Add a compatible Mihon store or import a local APK.';
+      case 'mihon_extension_import':
+        return 'Import local APK';
+      case 'mihon_extension_warning':
+        return 'Third-party extensions execute code with Hibiki permissions. Only install extensions and signers you trust.';
+      case 'mihon_extension_install':
+        return 'Install';
+      case 'mihon_extension_update':
+        return 'Update';
+      case 'mihon_extension_uninstall':
+        return 'Uninstall';
+      case 'mihon_extension_installed':
+        return 'Installed';
+      case 'mihon_extension_disabled':
+        return 'Disabled';
+      case 'mihon_source_empty':
+        return 'No enabled manga sources. Install and enable an extension first.';
+      case 'mihon_source_popular':
+        return 'Popular';
+      case 'mihon_source_latest':
+        return 'Latest';
+      case 'mihon_source_search':
+        return 'Search manga';
+      case 'mihon_source_preferences':
+        return 'Source preferences';
+      case 'mihon_source_clear_data':
+        return 'Clear source data';
+      case 'mihon_source_clear_data_hint':
+        return 'Clears this source preferences and cookies. Installed extensions are kept.';
+      case 'mihon_signer_trust_title':
+        return 'Trust extension signer?';
+      case 'mihon_signer_fingerprint':
+        return 'Signer SHA-256';
+      case 'mihon_runtime_unavailable':
+        return 'Mihon extensions are unavailable on this platform.';
+      case 'mihon_extension_incompatible':
+        return 'Incompatible extension';
+      case 'mihon_store_refresh':
+        return 'Refresh stores';
+      case 'mihon_source_browse_mokuro':
+        return 'Built-in Mokuro catalog';
+      case 'mihon_source_no_results':
+        return 'No manga found.';
+      case 'mihon_chapters_title':
+        return 'Chapters';
+      case 'mihon_extension_language_filter':
+        return 'Language';
+      case 'mihon_extension_language_all':
+        return 'All languages';
+      case 'mihon_filter_ignore':
+        return '忽略';
+      case 'mihon_filter_include':
+        return '包含';
+      case 'mihon_filter_exclude':
+        return '排除';
+      case 'mihon_filter_ascending':
+        return '升序';
+      case 'mihon_filter_descending':
+        return '降序';
       default:
         return null;
     }
@@ -194183,6 +196658,82 @@ extension on _StringsZhCn {
         return '显示详情';
       case 'scrape_failure_detail_hide':
         return '隐藏详情';
+      case 'library_view_manga_sources':
+        return '漫画源';
+      case 'library_view_manga_extensions':
+        return '漫画扩展';
+      case 'library_view_source_settings':
+        return '来源设置';
+      case 'mihon_sources_title':
+        return '漫画源';
+      case 'mihon_extensions_title':
+        return '漫画扩展';
+      case 'mihon_source_settings_title':
+        return '来源设置';
+      case 'mihon_store_add':
+        return '添加扩展仓库';
+      case 'mihon_store_url':
+        return '扩展仓库地址';
+      case 'mihon_store_empty':
+        return '还没有扩展仓库。可添加兼容的 Mihon 仓库，或导入本地 APK。';
+      case 'mihon_extension_import':
+        return '导入本地 APK';
+      case 'mihon_extension_warning':
+        return '第三方扩展会以 Hibiki 的权限执行代码。请只安装你信任的扩展和签名者。';
+      case 'mihon_extension_install':
+        return '安装';
+      case 'mihon_extension_update':
+        return '更新';
+      case 'mihon_extension_uninstall':
+        return '卸载';
+      case 'mihon_extension_installed':
+        return '已安装';
+      case 'mihon_extension_disabled':
+        return '已停用';
+      case 'mihon_source_empty':
+        return '没有已启用的漫画源。请先安装并启用漫画扩展。';
+      case 'mihon_source_popular':
+        return '热门';
+      case 'mihon_source_latest':
+        return '最新';
+      case 'mihon_source_search':
+        return '搜索漫画';
+      case 'mihon_source_preferences':
+        return '来源偏好';
+      case 'mihon_source_clear_data':
+        return '清除来源数据';
+      case 'mihon_source_clear_data_hint':
+        return '清除该来源的偏好与 Cookie，不会卸载扩展。';
+      case 'mihon_signer_trust_title':
+        return '信任扩展签名者？';
+      case 'mihon_signer_fingerprint':
+        return '签名者 SHA-256';
+      case 'mihon_runtime_unavailable':
+        return '此平台暂不支持 Mihon 扩展。';
+      case 'mihon_extension_incompatible':
+        return '扩展不兼容';
+      case 'mihon_store_refresh':
+        return '刷新仓库';
+      case 'mihon_source_browse_mokuro':
+        return '内置 Mokuro 目录';
+      case 'mihon_source_no_results':
+        return '没有找到漫画。';
+      case 'mihon_chapters_title':
+        return '章节';
+      case 'mihon_extension_language_filter':
+        return '语言';
+      case 'mihon_extension_language_all':
+        return '全部语言';
+      case 'mihon_filter_ignore':
+        return '忽略';
+      case 'mihon_filter_include':
+        return '包含';
+      case 'mihon_filter_exclude':
+        return '排除';
+      case 'mihon_filter_ascending':
+        return '升序';
+      case 'mihon_filter_descending':
+        return '降序';
       default:
         return null;
     }
@@ -199792,6 +202343,82 @@ extension on _StringsZhHk {
         return 'Show details';
       case 'scrape_failure_detail_hide':
         return 'Hide details';
+      case 'library_view_manga_sources':
+        return 'Manga sources';
+      case 'library_view_manga_extensions':
+        return 'Manga extensions';
+      case 'library_view_source_settings':
+        return 'Source settings';
+      case 'mihon_sources_title':
+        return 'Manga sources';
+      case 'mihon_extensions_title':
+        return 'Manga extensions';
+      case 'mihon_source_settings_title':
+        return 'Source settings';
+      case 'mihon_store_add':
+        return 'Add extension store';
+      case 'mihon_store_url':
+        return 'Extension store URL';
+      case 'mihon_store_empty':
+        return 'No extension stores yet. Add a compatible Mihon store or import a local APK.';
+      case 'mihon_extension_import':
+        return 'Import local APK';
+      case 'mihon_extension_warning':
+        return 'Third-party extensions execute code with Hibiki permissions. Only install extensions and signers you trust.';
+      case 'mihon_extension_install':
+        return 'Install';
+      case 'mihon_extension_update':
+        return 'Update';
+      case 'mihon_extension_uninstall':
+        return 'Uninstall';
+      case 'mihon_extension_installed':
+        return 'Installed';
+      case 'mihon_extension_disabled':
+        return 'Disabled';
+      case 'mihon_source_empty':
+        return 'No enabled manga sources. Install and enable an extension first.';
+      case 'mihon_source_popular':
+        return 'Popular';
+      case 'mihon_source_latest':
+        return 'Latest';
+      case 'mihon_source_search':
+        return 'Search manga';
+      case 'mihon_source_preferences':
+        return 'Source preferences';
+      case 'mihon_source_clear_data':
+        return 'Clear source data';
+      case 'mihon_source_clear_data_hint':
+        return 'Clears this source preferences and cookies. Installed extensions are kept.';
+      case 'mihon_signer_trust_title':
+        return 'Trust extension signer?';
+      case 'mihon_signer_fingerprint':
+        return 'Signer SHA-256';
+      case 'mihon_runtime_unavailable':
+        return 'Mihon extensions are unavailable on this platform.';
+      case 'mihon_extension_incompatible':
+        return 'Incompatible extension';
+      case 'mihon_store_refresh':
+        return 'Refresh stores';
+      case 'mihon_source_browse_mokuro':
+        return 'Built-in Mokuro catalog';
+      case 'mihon_source_no_results':
+        return 'No manga found.';
+      case 'mihon_chapters_title':
+        return 'Chapters';
+      case 'mihon_extension_language_filter':
+        return 'Language';
+      case 'mihon_extension_language_all':
+        return 'All languages';
+      case 'mihon_filter_ignore':
+        return '忽略';
+      case 'mihon_filter_include':
+        return '包含';
+      case 'mihon_filter_exclude':
+        return '排除';
+      case 'mihon_filter_ascending':
+        return '升序';
+      case 'mihon_filter_descending':
+        return '降序';
       default:
         return null;
     }
