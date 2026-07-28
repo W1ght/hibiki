@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 46002 (2706 per locale)
+/// Strings: 46019 (2707 per locale)
 ///
-/// Built on 2026-07-28 at 06:16 UTC
+/// Built on 2026-07-28 at 06:32 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3632,6 +3632,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Off by default: transfers with peers on your local network ignore the limits above.';
   String get download_rate_limit_lan_included =>
       'Also applies within your local network.';
+  String get video_collection_no_local_member =>
+      'No local video in this collection';
 }
 
 // Path: <root>
@@ -9818,6 +9820,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get download_rate_limit_lan_included =>
       'Also applies within your local network.';
+  @override
+  String get video_collection_no_local_member =>
+      'No local video in this collection';
 }
 
 // Path: <root>
@@ -16072,6 +16077,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get download_rate_limit_lan_included =>
       'Also applies within your local network.';
+  @override
+  String get video_collection_no_local_member =>
+      'No local video in this collection';
 }
 
 // Path: <root>
@@ -22342,6 +22350,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get download_rate_limit_lan_included =>
       'Also applies within your local network.';
+  @override
+  String get video_collection_no_local_member =>
+      'No local video in this collection';
 }
 
 // Path: <root>
@@ -28623,6 +28634,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get download_rate_limit_lan_included =>
       'Also applies within your local network.';
+  @override
+  String get video_collection_no_local_member =>
+      'No local video in this collection';
 }
 
 // Path: <root>
@@ -34833,6 +34847,9 @@ class _StringsId extends _StringsEn {
   @override
   String get download_rate_limit_lan_included =>
       'Also applies within your local network.';
+  @override
+  String get video_collection_no_local_member =>
+      'No local video in this collection';
 }
 
 // Path: <root>
@@ -41089,6 +41106,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get download_rate_limit_lan_included =>
       'Also applies within your local network.';
+  @override
+  String get video_collection_no_local_member =>
+      'No local video in this collection';
 }
 
 // Path: <root>
@@ -47162,6 +47182,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get download_rate_limit_lan_included =>
       'Also applies within your local network.';
+  @override
+  String get video_collection_no_local_member =>
+      'No local video in this collection';
 }
 
 // Path: <root>
@@ -53237,6 +53260,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get download_rate_limit_lan_included =>
       'Also applies within your local network.';
+  @override
+  String get video_collection_no_local_member =>
+      'No local video in this collection';
 }
 
 // Path: <root>
@@ -59473,6 +59499,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get download_rate_limit_lan_included =>
       'Also applies within your local network.';
+  @override
+  String get video_collection_no_local_member =>
+      'No local video in this collection';
 }
 
 // Path: <root>
@@ -65722,6 +65751,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get download_rate_limit_lan_included =>
       'Also applies within your local network.';
+  @override
+  String get video_collection_no_local_member =>
+      'No local video in this collection';
 }
 
 // Path: <root>
@@ -71955,6 +71987,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get download_rate_limit_lan_included =>
       'Also applies within your local network.';
+  @override
+  String get video_collection_no_local_member =>
+      'No local video in this collection';
 }
 
 // Path: <root>
@@ -78136,6 +78171,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get download_rate_limit_lan_included =>
       'Also applies within your local network.';
+  @override
+  String get video_collection_no_local_member =>
+      'No local video in this collection';
 }
 
 // Path: <root>
@@ -84349,6 +84387,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get download_rate_limit_lan_included =>
       'Also applies within your local network.';
+  @override
+  String get video_collection_no_local_member =>
+      'No local video in this collection';
 }
 
 // Path: <root>
@@ -90547,6 +90588,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get download_rate_limit_lan_included =>
       'Also applies within your local network.';
+  @override
+  String get video_collection_no_local_member =>
+      'No local video in this collection';
 }
 
 // Path: <root>
@@ -96311,6 +96355,8 @@ class _StringsZhCn extends _StringsEn {
       '默认关闭：与局域网内 peer 的传输不受上面的限速约束。';
   @override
   String get download_rate_limit_lan_included => '同时作用于局域网内的传输。';
+  @override
+  String get video_collection_no_local_member => '本合集没有本地视频';
 }
 
 // Path: <root>
@@ -102305,6 +102351,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get download_rate_limit_lan_included =>
       'Also applies within your local network.';
+  @override
+  String get video_collection_no_local_member =>
+      'No local video in this collection';
 }
 
 /// Flat map(s) containing all translations.
@@ -107849,6 +107898,8 @@ extension on _StringsEn {
         return 'Off by default: transfers with peers on your local network ignore the limits above.';
       case 'download_rate_limit_lan_included':
         return 'Also applies within your local network.';
+      case 'video_collection_no_local_member':
+        return 'No local video in this collection';
       default:
         return null;
     }
@@ -113391,6 +113442,8 @@ extension on _StringsAr {
         return 'Off by default: transfers with peers on your local network ignore the limits above.';
       case 'download_rate_limit_lan_included':
         return 'Also applies within your local network.';
+      case 'video_collection_no_local_member':
+        return 'No local video in this collection';
       default:
         return null;
     }
@@ -118954,6 +119007,8 @@ extension on _StringsDe {
         return 'Off by default: transfers with peers on your local network ignore the limits above.';
       case 'download_rate_limit_lan_included':
         return 'Also applies within your local network.';
+      case 'video_collection_no_local_member':
+        return 'No local video in this collection';
       default:
         return null;
     }
@@ -124516,6 +124571,8 @@ extension on _StringsEs {
         return 'Off by default: transfers with peers on your local network ignore the limits above.';
       case 'download_rate_limit_lan_included':
         return 'Also applies within your local network.';
+      case 'video_collection_no_local_member':
+        return 'No local video in this collection';
       default:
         return null;
     }
@@ -130084,6 +130141,8 @@ extension on _StringsFr {
         return 'Off by default: transfers with peers on your local network ignore the limits above.';
       case 'download_rate_limit_lan_included':
         return 'Also applies within your local network.';
+      case 'video_collection_no_local_member':
+        return 'No local video in this collection';
       default:
         return null;
     }
@@ -135634,6 +135693,8 @@ extension on _StringsId {
         return 'Off by default: transfers with peers on your local network ignore the limits above.';
       case 'download_rate_limit_lan_included':
         return 'Also applies within your local network.';
+      case 'video_collection_no_local_member':
+        return 'No local video in this collection';
       default:
         return null;
     }
@@ -141199,6 +141260,8 @@ extension on _StringsIt {
         return 'Off by default: transfers with peers on your local network ignore the limits above.';
       case 'download_rate_limit_lan_included':
         return 'Also applies within your local network.';
+      case 'video_collection_no_local_member':
+        return 'No local video in this collection';
       default:
         return null;
     }
@@ -146726,6 +146789,8 @@ extension on _StringsJa {
         return 'Off by default: transfers with peers on your local network ignore the limits above.';
       case 'download_rate_limit_lan_included':
         return 'Also applies within your local network.';
+      case 'video_collection_no_local_member':
+        return 'No local video in this collection';
       default:
         return null;
     }
@@ -152257,6 +152322,8 @@ extension on _StringsKo {
         return 'Off by default: transfers with peers on your local network ignore the limits above.';
       case 'download_rate_limit_lan_included':
         return 'Also applies within your local network.';
+      case 'video_collection_no_local_member':
+        return 'No local video in this collection';
       default:
         return null;
     }
@@ -157815,6 +157882,8 @@ extension on _StringsNl {
         return 'Off by default: transfers with peers on your local network ignore the limits above.';
       case 'download_rate_limit_lan_included':
         return 'Also applies within your local network.';
+      case 'video_collection_no_local_member':
+        return 'No local video in this collection';
       default:
         return null;
     }
@@ -163370,6 +163439,8 @@ extension on _StringsPtBr {
         return 'Off by default: transfers with peers on your local network ignore the limits above.';
       case 'download_rate_limit_lan_included':
         return 'Also applies within your local network.';
+      case 'video_collection_no_local_member':
+        return 'No local video in this collection';
       default:
         return null;
     }
@@ -168930,6 +169001,8 @@ extension on _StringsRu {
         return 'Off by default: transfers with peers on your local network ignore the limits above.';
       case 'download_rate_limit_lan_included':
         return 'Also applies within your local network.';
+      case 'video_collection_no_local_member':
+        return 'No local video in this collection';
       default:
         return null;
     }
@@ -174474,6 +174547,8 @@ extension on _StringsTh {
         return 'Off by default: transfers with peers on your local network ignore the limits above.';
       case 'download_rate_limit_lan_included':
         return 'Also applies within your local network.';
+      case 'video_collection_no_local_member':
+        return 'No local video in this collection';
       default:
         return null;
     }
@@ -180027,6 +180102,8 @@ extension on _StringsTr {
         return 'Off by default: transfers with peers on your local network ignore the limits above.';
       case 'download_rate_limit_lan_included':
         return 'Also applies within your local network.';
+      case 'video_collection_no_local_member':
+        return 'No local video in this collection';
       default:
         return null;
     }
@@ -185575,6 +185652,8 @@ extension on _StringsVi {
         return 'Off by default: transfers with peers on your local network ignore the limits above.';
       case 'download_rate_limit_lan_included':
         return 'Also applies within your local network.';
+      case 'video_collection_no_local_member':
+        return 'No local video in this collection';
       default:
         return null;
     }
@@ -191077,6 +191156,8 @@ extension on _StringsZhCn {
         return '默认关闭：与局域网内 peer 的传输不受上面的限速约束。';
       case 'download_rate_limit_lan_included':
         return '同时作用于局域网内的传输。';
+      case 'video_collection_no_local_member':
+        return '本合集没有本地视频';
       default:
         return null;
     }
@@ -196599,6 +196680,8 @@ extension on _StringsZhHk {
         return 'Off by default: transfers with peers on your local network ignore the limits above.';
       case 'download_rate_limit_lan_included':
         return 'Also applies within your local network.';
+      case 'video_collection_no_local_member':
+        return 'No local video in this collection';
       default:
         return null;
     }
