@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 46002 (2706 per locale)
+/// Strings: 46019 (2707 per locale)
 ///
-/// Built on 2026-07-28 at 06:42 UTC
+/// Built on 2026-07-28 at 07:01 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3632,6 +3632,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Also applies within your local network.';
   String get video_collection_no_local_member =>
       'No local video in this collection';
+  String video_scrape_online_match_collection({required Object name}) =>
+      'Match cover for ${name}';
 }
 
 // Path: <root>
@@ -9818,6 +9820,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_collection_no_local_member =>
       'No local video in this collection';
+  @override
+  String video_scrape_online_match_collection({required Object name}) =>
+      'Match cover for ${name}';
 }
 
 // Path: <root>
@@ -16072,6 +16077,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_collection_no_local_member =>
       'No local video in this collection';
+  @override
+  String video_scrape_online_match_collection({required Object name}) =>
+      'Match cover for ${name}';
 }
 
 // Path: <root>
@@ -22342,6 +22350,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_collection_no_local_member =>
       'No local video in this collection';
+  @override
+  String video_scrape_online_match_collection({required Object name}) =>
+      'Match cover for ${name}';
 }
 
 // Path: <root>
@@ -28623,6 +28634,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_collection_no_local_member =>
       'No local video in this collection';
+  @override
+  String video_scrape_online_match_collection({required Object name}) =>
+      'Match cover for ${name}';
 }
 
 // Path: <root>
@@ -34833,6 +34847,9 @@ class _StringsId extends _StringsEn {
   @override
   String get video_collection_no_local_member =>
       'No local video in this collection';
+  @override
+  String video_scrape_online_match_collection({required Object name}) =>
+      'Match cover for ${name}';
 }
 
 // Path: <root>
@@ -41089,6 +41106,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_collection_no_local_member =>
       'No local video in this collection';
+  @override
+  String video_scrape_online_match_collection({required Object name}) =>
+      'Match cover for ${name}';
 }
 
 // Path: <root>
@@ -47162,6 +47182,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_collection_no_local_member =>
       'No local video in this collection';
+  @override
+  String video_scrape_online_match_collection({required Object name}) =>
+      'Match cover for ${name}';
 }
 
 // Path: <root>
@@ -53237,6 +53260,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_collection_no_local_member =>
       'No local video in this collection';
+  @override
+  String video_scrape_online_match_collection({required Object name}) =>
+      'Match cover for ${name}';
 }
 
 // Path: <root>
@@ -59473,6 +59499,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_collection_no_local_member =>
       'No local video in this collection';
+  @override
+  String video_scrape_online_match_collection({required Object name}) =>
+      'Match cover for ${name}';
 }
 
 // Path: <root>
@@ -65722,6 +65751,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_collection_no_local_member =>
       'No local video in this collection';
+  @override
+  String video_scrape_online_match_collection({required Object name}) =>
+      'Match cover for ${name}';
 }
 
 // Path: <root>
@@ -71955,6 +71987,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_collection_no_local_member =>
       'No local video in this collection';
+  @override
+  String video_scrape_online_match_collection({required Object name}) =>
+      'Match cover for ${name}';
 }
 
 // Path: <root>
@@ -78136,6 +78171,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_collection_no_local_member =>
       'No local video in this collection';
+  @override
+  String video_scrape_online_match_collection({required Object name}) =>
+      'Match cover for ${name}';
 }
 
 // Path: <root>
@@ -84349,6 +84387,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_collection_no_local_member =>
       'No local video in this collection';
+  @override
+  String video_scrape_online_match_collection({required Object name}) =>
+      'Match cover for ${name}';
 }
 
 // Path: <root>
@@ -90547,6 +90588,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_collection_no_local_member =>
       'No local video in this collection';
+  @override
+  String video_scrape_online_match_collection({required Object name}) =>
+      'Match cover for ${name}';
 }
 
 // Path: <root>
@@ -96311,6 +96355,9 @@ class _StringsZhCn extends _StringsEn {
   String get download_rate_limit_lan_included => '同时作用于局域网内的传输。';
   @override
   String get video_collection_no_local_member => '本合集没有本地视频';
+  @override
+  String video_scrape_online_match_collection({required Object name}) =>
+      '为「${name}」匹配封面';
 }
 
 // Path: <root>
@@ -102305,6 +102352,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_collection_no_local_member =>
       'No local video in this collection';
+  @override
+  String video_scrape_online_match_collection({required Object name}) =>
+      'Match cover for ${name}';
 }
 
 /// Flat map(s) containing all translations.
@@ -107849,6 +107899,8 @@ extension on _StringsEn {
         return 'Also applies within your local network.';
       case 'video_collection_no_local_member':
         return 'No local video in this collection';
+      case 'video_scrape_online_match_collection':
+        return ({required Object name}) => 'Match cover for ${name}';
       default:
         return null;
     }
@@ -113391,6 +113443,8 @@ extension on _StringsAr {
         return 'Also applies within your local network.';
       case 'video_collection_no_local_member':
         return 'No local video in this collection';
+      case 'video_scrape_online_match_collection':
+        return ({required Object name}) => 'Match cover for ${name}';
       default:
         return null;
     }
@@ -118954,6 +119008,8 @@ extension on _StringsDe {
         return 'Also applies within your local network.';
       case 'video_collection_no_local_member':
         return 'No local video in this collection';
+      case 'video_scrape_online_match_collection':
+        return ({required Object name}) => 'Match cover for ${name}';
       default:
         return null;
     }
@@ -124516,6 +124572,8 @@ extension on _StringsEs {
         return 'Also applies within your local network.';
       case 'video_collection_no_local_member':
         return 'No local video in this collection';
+      case 'video_scrape_online_match_collection':
+        return ({required Object name}) => 'Match cover for ${name}';
       default:
         return null;
     }
@@ -130084,6 +130142,8 @@ extension on _StringsFr {
         return 'Also applies within your local network.';
       case 'video_collection_no_local_member':
         return 'No local video in this collection';
+      case 'video_scrape_online_match_collection':
+        return ({required Object name}) => 'Match cover for ${name}';
       default:
         return null;
     }
@@ -135634,6 +135694,8 @@ extension on _StringsId {
         return 'Also applies within your local network.';
       case 'video_collection_no_local_member':
         return 'No local video in this collection';
+      case 'video_scrape_online_match_collection':
+        return ({required Object name}) => 'Match cover for ${name}';
       default:
         return null;
     }
@@ -141199,6 +141261,8 @@ extension on _StringsIt {
         return 'Also applies within your local network.';
       case 'video_collection_no_local_member':
         return 'No local video in this collection';
+      case 'video_scrape_online_match_collection':
+        return ({required Object name}) => 'Match cover for ${name}';
       default:
         return null;
     }
@@ -146726,6 +146790,8 @@ extension on _StringsJa {
         return 'Also applies within your local network.';
       case 'video_collection_no_local_member':
         return 'No local video in this collection';
+      case 'video_scrape_online_match_collection':
+        return ({required Object name}) => 'Match cover for ${name}';
       default:
         return null;
     }
@@ -152257,6 +152323,8 @@ extension on _StringsKo {
         return 'Also applies within your local network.';
       case 'video_collection_no_local_member':
         return 'No local video in this collection';
+      case 'video_scrape_online_match_collection':
+        return ({required Object name}) => 'Match cover for ${name}';
       default:
         return null;
     }
@@ -157815,6 +157883,8 @@ extension on _StringsNl {
         return 'Also applies within your local network.';
       case 'video_collection_no_local_member':
         return 'No local video in this collection';
+      case 'video_scrape_online_match_collection':
+        return ({required Object name}) => 'Match cover for ${name}';
       default:
         return null;
     }
@@ -163370,6 +163440,8 @@ extension on _StringsPtBr {
         return 'Also applies within your local network.';
       case 'video_collection_no_local_member':
         return 'No local video in this collection';
+      case 'video_scrape_online_match_collection':
+        return ({required Object name}) => 'Match cover for ${name}';
       default:
         return null;
     }
@@ -168930,6 +169002,8 @@ extension on _StringsRu {
         return 'Also applies within your local network.';
       case 'video_collection_no_local_member':
         return 'No local video in this collection';
+      case 'video_scrape_online_match_collection':
+        return ({required Object name}) => 'Match cover for ${name}';
       default:
         return null;
     }
@@ -174474,6 +174548,8 @@ extension on _StringsTh {
         return 'Also applies within your local network.';
       case 'video_collection_no_local_member':
         return 'No local video in this collection';
+      case 'video_scrape_online_match_collection':
+        return ({required Object name}) => 'Match cover for ${name}';
       default:
         return null;
     }
@@ -180027,6 +180103,8 @@ extension on _StringsTr {
         return 'Also applies within your local network.';
       case 'video_collection_no_local_member':
         return 'No local video in this collection';
+      case 'video_scrape_online_match_collection':
+        return ({required Object name}) => 'Match cover for ${name}';
       default:
         return null;
     }
@@ -185575,6 +185653,8 @@ extension on _StringsVi {
         return 'Also applies within your local network.';
       case 'video_collection_no_local_member':
         return 'No local video in this collection';
+      case 'video_scrape_online_match_collection':
+        return ({required Object name}) => 'Match cover for ${name}';
       default:
         return null;
     }
@@ -191077,6 +191157,8 @@ extension on _StringsZhCn {
         return '同时作用于局域网内的传输。';
       case 'video_collection_no_local_member':
         return '本合集没有本地视频';
+      case 'video_scrape_online_match_collection':
+        return ({required Object name}) => '为「${name}」匹配封面';
       default:
         return null;
     }
@@ -196599,6 +196681,8 @@ extension on _StringsZhHk {
         return 'Also applies within your local network.';
       case 'video_collection_no_local_member':
         return 'No local video in this collection';
+      case 'video_scrape_online_match_collection':
+        return ({required Object name}) => 'Match cover for ${name}';
       default:
         return null;
     }
