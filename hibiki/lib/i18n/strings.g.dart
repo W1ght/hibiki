@@ -3,7 +3,7 @@
 /// Locales: 17
 /// Strings: 46852 (2756 per locale)
 ///
-/// Built on 2026-07-29 at 05:49 UTC
+/// Built on 2026-07-29 at 06:45 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -1484,7 +1484,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get game_text_source_unknown => 'Unknown source';
   String get game_text_source_websocket => 'WebSocket';
   String get game_text_thread => 'Text thread';
-  String get game_text_thread_all => 'All text threads';
   String game_text_thread_audio_count({required Object count}) =>
       '${count} with audio';
   String get game_text_thread_hint =>
@@ -3705,6 +3704,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String batch_selection_stale_skipped(
           {required Object m, required Object n}) =>
       'Skipped ${m} of ${n} selected items that no longer exist';
+  String get game_text_thread_unset =>
+      'No thread selected — pick one to start capturing';
 }
 
 // Path: <root>
@@ -6033,8 +6034,6 @@ class _StringsAr extends _StringsEn {
   String get game_text_source_websocket => 'WebSocket';
   @override
   String get game_text_thread => 'Text thread';
-  @override
-  String get game_text_thread_all => 'All text threads';
   @override
   String game_text_thread_audio_count({required Object count}) =>
       '${count} with audio';
@@ -10014,6 +10013,9 @@ class _StringsAr extends _StringsEn {
   String batch_selection_stale_skipped(
           {required Object m, required Object n}) =>
       'Skipped ${m} of ${n} selected items that no longer exist';
+  @override
+  String get game_text_thread_unset =>
+      'No thread selected — pick one to start capturing';
 }
 
 // Path: <root>
@@ -12370,8 +12372,6 @@ class _StringsDe extends _StringsEn {
   String get game_text_source_websocket => 'WebSocket';
   @override
   String get game_text_thread => 'Text thread';
-  @override
-  String get game_text_thread_all => 'All text threads';
   @override
   String game_text_thread_audio_count({required Object count}) =>
       '${count} with audio';
@@ -16391,6 +16391,9 @@ class _StringsDe extends _StringsEn {
   String batch_selection_stale_skipped(
           {required Object m, required Object n}) =>
       'Skipped ${m} of ${n} selected items that no longer exist';
+  @override
+  String get game_text_thread_unset =>
+      'No thread selected — pick one to start capturing';
 }
 
 // Path: <root>
@@ -18748,8 +18751,6 @@ class _StringsEs extends _StringsEn {
   String get game_text_source_websocket => 'WebSocket';
   @override
   String get game_text_thread => 'Text thread';
-  @override
-  String get game_text_thread_all => 'All text threads';
   @override
   String game_text_thread_audio_count({required Object count}) =>
       '${count} with audio';
@@ -22784,6 +22785,9 @@ class _StringsEs extends _StringsEn {
   String batch_selection_stale_skipped(
           {required Object m, required Object n}) =>
       'Skipped ${m} of ${n} selected items that no longer exist';
+  @override
+  String get game_text_thread_unset =>
+      'No thread selected — pick one to start capturing';
 }
 
 // Path: <root>
@@ -25149,8 +25153,6 @@ class _StringsFr extends _StringsEn {
   String get game_text_source_websocket => 'WebSocket';
   @override
   String get game_text_thread => 'Text thread';
-  @override
-  String get game_text_thread_all => 'All text threads';
   @override
   String game_text_thread_audio_count({required Object count}) =>
       '${count} with audio';
@@ -29188,6 +29190,9 @@ class _StringsFr extends _StringsEn {
   String batch_selection_stale_skipped(
           {required Object m, required Object n}) =>
       'Skipped ${m} of ${n} selected items that no longer exist';
+  @override
+  String get game_text_thread_unset =>
+      'No thread selected — pick one to start capturing';
 }
 
 // Path: <root>
@@ -31519,8 +31524,6 @@ class _StringsId extends _StringsEn {
   String get game_text_source_websocket => 'WebSocket';
   @override
   String get game_text_thread => 'Text thread';
-  @override
-  String get game_text_thread_all => 'All text threads';
   @override
   String game_text_thread_audio_count({required Object count}) =>
       '${count} with audio';
@@ -35521,6 +35524,9 @@ class _StringsId extends _StringsEn {
   String batch_selection_stale_skipped(
           {required Object m, required Object n}) =>
       'Skipped ${m} of ${n} selected items that no longer exist';
+  @override
+  String get game_text_thread_unset =>
+      'No thread selected — pick one to start capturing';
 }
 
 // Path: <root>
@@ -37872,8 +37878,6 @@ class _StringsIt extends _StringsEn {
   String get game_text_source_websocket => 'WebSocket';
   @override
   String get game_text_thread => 'Text thread';
-  @override
-  String get game_text_thread_all => 'All text threads';
   @override
   String game_text_thread_audio_count({required Object count}) =>
       '${count} with audio';
@@ -41900,6 +41904,9 @@ class _StringsIt extends _StringsEn {
   String batch_selection_stale_skipped(
           {required Object m, required Object n}) =>
       'Skipped ${m} of ${n} selected items that no longer exist';
+  @override
+  String get game_text_thread_unset =>
+      'No thread selected — pick one to start capturing';
 }
 
 // Path: <root>
@@ -44196,8 +44203,6 @@ class _StringsJa extends _StringsEn {
   String get game_text_source_websocket => 'WebSocket';
   @override
   String get game_text_thread => 'Text thread';
-  @override
-  String get game_text_thread_all => 'All text threads';
   @override
   String game_text_thread_audio_count({required Object count}) =>
       '${count} with audio';
@@ -48096,6 +48101,9 @@ class _StringsJa extends _StringsEn {
   String batch_selection_stale_skipped(
           {required Object m, required Object n}) =>
       'Skipped ${m} of ${n} selected items that no longer exist';
+  @override
+  String get game_text_thread_unset =>
+      'No thread selected — pick one to start capturing';
 }
 
 // Path: <root>
@@ -50392,8 +50400,6 @@ class _StringsKo extends _StringsEn {
   String get game_text_source_websocket => 'WebSocket';
   @override
   String get game_text_thread => 'Text thread';
-  @override
-  String get game_text_thread_all => 'All text threads';
   @override
   String game_text_thread_audio_count({required Object count}) =>
       '${count} with audio';
@@ -54294,6 +54300,9 @@ class _StringsKo extends _StringsEn {
   String batch_selection_stale_skipped(
           {required Object m, required Object n}) =>
       'Skipped ${m} of ${n} selected items that no longer exist';
+  @override
+  String get game_text_thread_unset =>
+      'No thread selected — pick one to start capturing';
 }
 
 // Path: <root>
@@ -56639,8 +56648,6 @@ class _StringsNl extends _StringsEn {
   String get game_text_source_websocket => 'WebSocket';
   @override
   String get game_text_thread => 'Text thread';
-  @override
-  String get game_text_thread_all => 'All text threads';
   @override
   String game_text_thread_audio_count({required Object count}) =>
       '${count} with audio';
@@ -60653,6 +60660,9 @@ class _StringsNl extends _StringsEn {
   String batch_selection_stale_skipped(
           {required Object m, required Object n}) =>
       'Skipped ${m} of ${n} selected items that no longer exist';
+  @override
+  String get game_text_thread_unset =>
+      'No thread selected — pick one to start capturing';
 }
 
 // Path: <root>
@@ -63006,8 +63016,6 @@ class _StringsPtBr extends _StringsEn {
   String get game_text_source_websocket => 'WebSocket';
   @override
   String get game_text_thread => 'Text thread';
-  @override
-  String get game_text_thread_all => 'All text threads';
   @override
   String game_text_thread_audio_count({required Object count}) =>
       '${count} with audio';
@@ -67025,6 +67033,9 @@ class _StringsPtBr extends _StringsEn {
   String batch_selection_stale_skipped(
           {required Object m, required Object n}) =>
       'Skipped ${m} of ${n} selected items that no longer exist';
+  @override
+  String get game_text_thread_unset =>
+      'No thread selected — pick one to start capturing';
 }
 
 // Path: <root>
@@ -69370,8 +69381,6 @@ class _StringsRu extends _StringsEn {
   String get game_text_source_websocket => 'WebSocket';
   @override
   String get game_text_thread => 'Text thread';
-  @override
-  String get game_text_thread_all => 'All text threads';
   @override
   String game_text_thread_audio_count({required Object count}) =>
       '${count} with audio';
@@ -73381,6 +73390,9 @@ class _StringsRu extends _StringsEn {
   String batch_selection_stale_skipped(
           {required Object m, required Object n}) =>
       'Skipped ${m} of ${n} selected items that no longer exist';
+  @override
+  String get game_text_thread_unset =>
+      'No thread selected — pick one to start capturing';
 }
 
 // Path: <root>
@@ -75704,8 +75716,6 @@ class _StringsTh extends _StringsEn {
   String get game_text_source_websocket => 'WebSocket';
   @override
   String get game_text_thread => 'Text thread';
-  @override
-  String get game_text_thread_all => 'All text threads';
   @override
   String game_text_thread_audio_count({required Object count}) =>
       '${count} with audio';
@@ -79685,6 +79695,9 @@ class _StringsTh extends _StringsEn {
   String batch_selection_stale_skipped(
           {required Object m, required Object n}) =>
       'Skipped ${m} of ${n} selected items that no longer exist';
+  @override
+  String get game_text_thread_unset =>
+      'No thread selected — pick one to start capturing';
 }
 
 // Path: <root>
@@ -82026,8 +82039,6 @@ class _StringsTr extends _StringsEn {
   String get game_text_source_websocket => 'WebSocket';
   @override
   String get game_text_thread => 'Text thread';
-  @override
-  String get game_text_thread_all => 'All text threads';
   @override
   String game_text_thread_audio_count({required Object count}) =>
       '${count} with audio';
@@ -86021,6 +86032,9 @@ class _StringsTr extends _StringsEn {
   String batch_selection_stale_skipped(
           {required Object m, required Object n}) =>
       'Skipped ${m} of ${n} selected items that no longer exist';
+  @override
+  String get game_text_thread_unset =>
+      'No thread selected — pick one to start capturing';
 }
 
 // Path: <root>
@@ -88355,8 +88369,6 @@ class _StringsVi extends _StringsEn {
   String get game_text_source_websocket => 'WebSocket';
   @override
   String get game_text_thread => 'Text thread';
-  @override
-  String get game_text_thread_all => 'All text threads';
   @override
   String game_text_thread_audio_count({required Object count}) =>
       '${count} with audio';
@@ -92342,6 +92354,9 @@ class _StringsVi extends _StringsEn {
   String batch_selection_stale_skipped(
           {required Object m, required Object n}) =>
       'Skipped ${m} of ${n} selected items that no longer exist';
+  @override
+  String get game_text_thread_unset =>
+      'No thread selected — pick one to start capturing';
 }
 
 // Path: <root>
@@ -94515,8 +94530,6 @@ class _StringsZhCn extends _StringsEn {
   String get game_text_source_websocket => 'WebSocket';
   @override
   String get game_text_thread => '文本线程';
-  @override
-  String get game_text_thread_all => '全部文本线程';
   @override
   String game_text_thread_audio_count({required Object count}) =>
       '${count} 行有音频';
@@ -98216,6 +98229,8 @@ class _StringsZhCn extends _StringsEn {
   String batch_selection_stale_skipped(
           {required Object n, required Object m}) =>
       '选中的 ${n} 项中有 ${m} 项已不存在，已跳过';
+  @override
+  String get game_text_thread_unset => '尚未选择线程 · 选一条后开始捕获';
 }
 
 // Path: <root>
@@ -100482,8 +100497,6 @@ class _StringsZhHk extends _StringsEn {
   String get game_text_source_websocket => 'WebSocket';
   @override
   String get game_text_thread => 'Text thread';
-  @override
-  String get game_text_thread_all => 'All text threads';
   @override
   String game_text_thread_audio_count({required Object count}) =>
       '${count} with audio';
@@ -104333,6 +104346,9 @@ class _StringsZhHk extends _StringsEn {
   String batch_selection_stale_skipped(
           {required Object m, required Object n}) =>
       'Skipped ${m} of ${n} selected items that no longer exist';
+  @override
+  String get game_text_thread_unset =>
+      'No thread selected — pick one to start capturing';
 }
 
 /// Flat map(s) containing all translations.
@@ -106398,8 +106414,6 @@ extension on _StringsEn {
         return 'WebSocket';
       case 'game_text_thread':
         return 'Text thread';
-      case 'game_text_thread_all':
-        return 'All text threads';
       case 'game_text_thread_audio_count':
         return ({required Object count}) => '${count} with audio';
       case 'game_text_thread_hint':
@@ -109979,6 +109993,8 @@ extension on _StringsEn {
       case 'batch_selection_stale_skipped':
         return ({required Object m, required Object n}) =>
             'Skipped ${m} of ${n} selected items that no longer exist';
+      case 'game_text_thread_unset':
+        return 'No thread selected — pick one to start capturing';
       default:
         return null;
     }
@@ -112045,8 +112061,6 @@ extension on _StringsAr {
         return 'WebSocket';
       case 'game_text_thread':
         return 'Text thread';
-      case 'game_text_thread_all':
-        return 'All text threads';
       case 'game_text_thread_audio_count':
         return ({required Object count}) => '${count} with audio';
       case 'game_text_thread_hint':
@@ -115623,6 +115637,8 @@ extension on _StringsAr {
       case 'batch_selection_stale_skipped':
         return ({required Object m, required Object n}) =>
             'Skipped ${m} of ${n} selected items that no longer exist';
+      case 'game_text_thread_unset':
+        return 'No thread selected — pick one to start capturing';
       default:
         return null;
     }
@@ -117692,8 +117708,6 @@ extension on _StringsDe {
         return 'WebSocket';
       case 'game_text_thread':
         return 'Text thread';
-      case 'game_text_thread_all':
-        return 'All text threads';
       case 'game_text_thread_audio_count':
         return ({required Object count}) => '${count} with audio';
       case 'game_text_thread_hint':
@@ -121288,6 +121302,8 @@ extension on _StringsDe {
       case 'batch_selection_stale_skipped':
         return ({required Object m, required Object n}) =>
             'Skipped ${m} of ${n} selected items that no longer exist';
+      case 'game_text_thread_unset':
+        return 'No thread selected — pick one to start capturing';
       default:
         return null;
     }
@@ -123358,8 +123374,6 @@ extension on _StringsEs {
         return 'WebSocket';
       case 'game_text_thread':
         return 'Text thread';
-      case 'game_text_thread_all':
-        return 'All text threads';
       case 'game_text_thread_audio_count':
         return ({required Object count}) => '${count} with audio';
       case 'game_text_thread_hint':
@@ -126952,6 +126966,8 @@ extension on _StringsEs {
       case 'batch_selection_stale_skipped':
         return ({required Object m, required Object n}) =>
             'Skipped ${m} of ${n} selected items that no longer exist';
+      case 'game_text_thread_unset':
+        return 'No thread selected — pick one to start capturing';
       default:
         return null;
     }
@@ -129025,8 +129041,6 @@ extension on _StringsFr {
         return 'WebSocket';
       case 'game_text_thread':
         return 'Text thread';
-      case 'game_text_thread_all':
-        return 'All text threads';
       case 'game_text_thread_audio_count':
         return ({required Object count}) => '${count} with audio';
       case 'game_text_thread_hint':
@@ -132622,6 +132636,8 @@ extension on _StringsFr {
       case 'batch_selection_stale_skipped':
         return ({required Object m, required Object n}) =>
             'Skipped ${m} of ${n} selected items that no longer exist';
+      case 'game_text_thread_unset':
+        return 'No thread selected — pick one to start capturing';
       default:
         return null;
     }
@@ -134690,8 +134706,6 @@ extension on _StringsId {
         return 'WebSocket';
       case 'game_text_thread':
         return 'Text thread';
-      case 'game_text_thread_all':
-        return 'All text threads';
       case 'game_text_thread_audio_count':
         return ({required Object count}) => '${count} with audio';
       case 'game_text_thread_hint':
@@ -138274,6 +138288,8 @@ extension on _StringsId {
       case 'batch_selection_stale_skipped':
         return ({required Object m, required Object n}) =>
             'Skipped ${m} of ${n} selected items that no longer exist';
+      case 'game_text_thread_unset':
+        return 'No thread selected — pick one to start capturing';
       default:
         return null;
     }
@@ -140344,8 +140360,6 @@ extension on _StringsIt {
         return 'WebSocket';
       case 'game_text_thread':
         return 'Text thread';
-      case 'game_text_thread_all':
-        return 'All text threads';
       case 'game_text_thread_audio_count':
         return ({required Object count}) => '${count} with audio';
       case 'game_text_thread_hint':
@@ -143941,6 +143955,8 @@ extension on _StringsIt {
       case 'batch_selection_stale_skipped':
         return ({required Object m, required Object n}) =>
             'Skipped ${m} of ${n} selected items that no longer exist';
+      case 'game_text_thread_unset':
+        return 'No thread selected — pick one to start capturing';
       default:
         return null;
     }
@@ -146000,8 +146016,6 @@ extension on _StringsJa {
         return 'WebSocket';
       case 'game_text_thread':
         return 'Text thread';
-      case 'game_text_thread_all':
-        return 'All text threads';
       case 'game_text_thread_audio_count':
         return ({required Object count}) => '${count} with audio';
       case 'game_text_thread_hint':
@@ -149570,6 +149584,8 @@ extension on _StringsJa {
       case 'batch_selection_stale_skipped':
         return ({required Object m, required Object n}) =>
             'Skipped ${m} of ${n} selected items that no longer exist';
+      case 'game_text_thread_unset':
+        return 'No thread selected — pick one to start capturing';
       default:
         return null;
     }
@@ -151630,8 +151646,6 @@ extension on _StringsKo {
         return 'WebSocket';
       case 'game_text_thread':
         return 'Text thread';
-      case 'game_text_thread_all':
-        return 'All text threads';
       case 'game_text_thread_audio_count':
         return ({required Object count}) => '${count} with audio';
       case 'game_text_thread_hint':
@@ -155203,6 +155217,8 @@ extension on _StringsKo {
       case 'batch_selection_stale_skipped':
         return ({required Object m, required Object n}) =>
             'Skipped ${m} of ${n} selected items that no longer exist';
+      case 'game_text_thread_unset':
+        return 'No thread selected — pick one to start capturing';
       default:
         return null;
     }
@@ -157272,8 +157288,6 @@ extension on _StringsNl {
         return 'WebSocket';
       case 'game_text_thread':
         return 'Text thread';
-      case 'game_text_thread_all':
-        return 'All text threads';
       case 'game_text_thread_audio_count':
         return ({required Object count}) => '${count} with audio';
       case 'game_text_thread_hint':
@@ -160863,6 +160877,8 @@ extension on _StringsNl {
       case 'batch_selection_stale_skipped':
         return ({required Object m, required Object n}) =>
             'Skipped ${m} of ${n} selected items that no longer exist';
+      case 'game_text_thread_unset':
+        return 'No thread selected — pick one to start capturing';
       default:
         return null;
     }
@@ -162931,8 +162947,6 @@ extension on _StringsPtBr {
         return 'WebSocket';
       case 'game_text_thread':
         return 'Text thread';
-      case 'game_text_thread_all':
-        return 'All text threads';
       case 'game_text_thread_audio_count':
         return ({required Object count}) => '${count} with audio';
       case 'game_text_thread_hint':
@@ -166520,6 +166534,8 @@ extension on _StringsPtBr {
       case 'batch_selection_stale_skipped':
         return ({required Object m, required Object n}) =>
             'Skipped ${m} of ${n} selected items that no longer exist';
+      case 'game_text_thread_unset':
+        return 'No thread selected — pick one to start capturing';
       default:
         return null;
     }
@@ -168591,8 +168607,6 @@ extension on _StringsRu {
         return 'WebSocket';
       case 'game_text_thread':
         return 'Text thread';
-      case 'game_text_thread_all':
-        return 'All text threads';
       case 'game_text_thread_audio_count':
         return ({required Object count}) => '${count} with audio';
       case 'game_text_thread_hint':
@@ -172182,6 +172196,8 @@ extension on _StringsRu {
       case 'batch_selection_stale_skipped':
         return ({required Object m, required Object n}) =>
             'Skipped ${m} of ${n} selected items that no longer exist';
+      case 'game_text_thread_unset':
+        return 'No thread selected — pick one to start capturing';
       default:
         return null;
     }
@@ -174246,8 +174262,6 @@ extension on _StringsTh {
         return 'WebSocket';
       case 'game_text_thread':
         return 'Text thread';
-      case 'game_text_thread_all':
-        return 'All text threads';
       case 'game_text_thread_audio_count':
         return ({required Object count}) => '${count} with audio';
       case 'game_text_thread_hint':
@@ -177828,6 +177842,8 @@ extension on _StringsTh {
       case 'batch_selection_stale_skipped':
         return ({required Object m, required Object n}) =>
             'Skipped ${m} of ${n} selected items that no longer exist';
+      case 'game_text_thread_unset':
+        return 'No thread selected — pick one to start capturing';
       default:
         return null;
     }
@@ -179897,8 +179913,6 @@ extension on _StringsTr {
         return 'WebSocket';
       case 'game_text_thread':
         return 'Text thread';
-      case 'game_text_thread_all':
-        return 'All text threads';
       case 'game_text_thread_audio_count':
         return ({required Object count}) => '${count} with audio';
       case 'game_text_thread_hint':
@@ -183483,6 +183497,8 @@ extension on _StringsTr {
       case 'batch_selection_stale_skipped':
         return ({required Object m, required Object n}) =>
             'Skipped ${m} of ${n} selected items that no longer exist';
+      case 'game_text_thread_unset':
+        return 'No thread selected — pick one to start capturing';
       default:
         return null;
     }
@@ -185549,8 +185565,6 @@ extension on _StringsVi {
         return 'WebSocket';
       case 'game_text_thread':
         return 'Text thread';
-      case 'game_text_thread_all':
-        return 'All text threads';
       case 'game_text_thread_audio_count':
         return ({required Object count}) => '${count} with audio';
       case 'game_text_thread_hint':
@@ -189133,6 +189147,8 @@ extension on _StringsVi {
       case 'batch_selection_stale_skipped':
         return ({required Object m, required Object n}) =>
             'Skipped ${m} of ${n} selected items that no longer exist';
+      case 'game_text_thread_unset':
+        return 'No thread selected — pick one to start capturing';
       default:
         return null;
     }
@@ -191183,8 +191199,6 @@ extension on _StringsZhCn {
         return 'WebSocket';
       case 'game_text_thread':
         return '文本线程';
-      case 'game_text_thread_all':
-        return '全部文本线程';
       case 'game_text_thread_audio_count':
         return ({required Object count}) => '${count} 行有音频';
       case 'game_text_thread_hint':
@@ -194737,6 +194751,8 @@ extension on _StringsZhCn {
       case 'batch_selection_stale_skipped':
         return ({required Object n, required Object m}) =>
             '选中的 ${n} 项中有 ${m} 项已不存在，已跳过';
+      case 'game_text_thread_unset':
+        return '尚未选择线程 · 选一条后开始捕获';
       default:
         return null;
     }
@@ -196795,8 +196811,6 @@ extension on _StringsZhHk {
         return 'WebSocket';
       case 'game_text_thread':
         return 'Text thread';
-      case 'game_text_thread_all':
-        return 'All text threads';
       case 'game_text_thread_audio_count':
         return ({required Object count}) => '${count} with audio';
       case 'game_text_thread_hint':
@@ -200361,6 +200375,8 @@ extension on _StringsZhHk {
       case 'batch_selection_stale_skipped':
         return ({required Object m, required Object n}) =>
             'Skipped ${m} of ${n} selected items that no longer exist';
+      case 'game_text_thread_unset':
+        return 'No thread selected — pick one to start capturing';
       default:
         return null;
     }
