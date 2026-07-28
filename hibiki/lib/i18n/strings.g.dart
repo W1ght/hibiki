@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 46699 (2747 per locale)
+/// Strings: 46733 (2749 per locale)
 ///
-/// Built on 2026-07-28 at 16:00 UTC
+/// Built on 2026-07-28 at 17:15 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3691,6 +3691,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get library_view_browse => 'Browse';
   String get library_view_sources => 'Sources';
   String get library_view_media => 'Library';
+  String get scrape_failure_detail_show => 'Show details';
+  String get scrape_failure_detail_hide => 'Hide details';
 }
 
 // Path: <root>
@@ -9977,6 +9979,10 @@ class _StringsAr extends _StringsEn {
   String get library_view_sources => 'Sources';
   @override
   String get library_view_media => 'Library';
+  @override
+  String get scrape_failure_detail_show => 'Show details';
+  @override
+  String get scrape_failure_detail_hide => 'Hide details';
 }
 
 // Path: <root>
@@ -16331,6 +16337,10 @@ class _StringsDe extends _StringsEn {
   String get library_view_sources => 'Sources';
   @override
   String get library_view_media => 'Library';
+  @override
+  String get scrape_failure_detail_show => 'Show details';
+  @override
+  String get scrape_failure_detail_hide => 'Hide details';
 }
 
 // Path: <root>
@@ -22701,6 +22711,10 @@ class _StringsEs extends _StringsEn {
   String get library_view_sources => 'Sources';
   @override
   String get library_view_media => 'Library';
+  @override
+  String get scrape_failure_detail_show => 'Show details';
+  @override
+  String get scrape_failure_detail_hide => 'Hide details';
 }
 
 // Path: <root>
@@ -29082,6 +29096,10 @@ class _StringsFr extends _StringsEn {
   String get library_view_sources => 'Sources';
   @override
   String get library_view_media => 'Library';
+  @override
+  String get scrape_failure_detail_show => 'Show details';
+  @override
+  String get scrape_failure_detail_hide => 'Hide details';
 }
 
 // Path: <root>
@@ -35392,6 +35410,10 @@ class _StringsId extends _StringsEn {
   String get library_view_sources => 'Sources';
   @override
   String get library_view_media => 'Library';
+  @override
+  String get scrape_failure_detail_show => 'Show details';
+  @override
+  String get scrape_failure_detail_hide => 'Hide details';
 }
 
 // Path: <root>
@@ -41748,6 +41770,10 @@ class _StringsIt extends _StringsEn {
   String get library_view_sources => 'Sources';
   @override
   String get library_view_media => 'Library';
+  @override
+  String get scrape_failure_detail_show => 'Show details';
+  @override
+  String get scrape_failure_detail_hide => 'Hide details';
 }
 
 // Path: <root>
@@ -47921,6 +47947,10 @@ class _StringsJa extends _StringsEn {
   String get library_view_sources => 'Sources';
   @override
   String get library_view_media => 'Library';
+  @override
+  String get scrape_failure_detail_show => 'Show details';
+  @override
+  String get scrape_failure_detail_hide => 'Hide details';
 }
 
 // Path: <root>
@@ -54096,6 +54126,10 @@ class _StringsKo extends _StringsEn {
   String get library_view_sources => 'Sources';
   @override
   String get library_view_media => 'Library';
+  @override
+  String get scrape_failure_detail_show => 'Show details';
+  @override
+  String get scrape_failure_detail_hide => 'Hide details';
 }
 
 // Path: <root>
@@ -60432,6 +60466,10 @@ class _StringsNl extends _StringsEn {
   String get library_view_sources => 'Sources';
   @override
   String get library_view_media => 'Library';
+  @override
+  String get scrape_failure_detail_show => 'Show details';
+  @override
+  String get scrape_failure_detail_hide => 'Hide details';
 }
 
 // Path: <root>
@@ -66781,6 +66819,10 @@ class _StringsPtBr extends _StringsEn {
   String get library_view_sources => 'Sources';
   @override
   String get library_view_media => 'Library';
+  @override
+  String get scrape_failure_detail_show => 'Show details';
+  @override
+  String get scrape_failure_detail_hide => 'Hide details';
 }
 
 // Path: <root>
@@ -73114,6 +73156,10 @@ class _StringsRu extends _StringsEn {
   String get library_view_sources => 'Sources';
   @override
   String get library_view_media => 'Library';
+  @override
+  String get scrape_failure_detail_show => 'Show details';
+  @override
+  String get scrape_failure_detail_hide => 'Hide details';
 }
 
 // Path: <root>
@@ -79395,6 +79441,10 @@ class _StringsTh extends _StringsEn {
   String get library_view_sources => 'Sources';
   @override
   String get library_view_media => 'Library';
+  @override
+  String get scrape_failure_detail_show => 'Show details';
+  @override
+  String get scrape_failure_detail_hide => 'Hide details';
 }
 
 // Path: <root>
@@ -85708,6 +85758,10 @@ class _StringsTr extends _StringsEn {
   String get library_view_sources => 'Sources';
   @override
   String get library_view_media => 'Library';
+  @override
+  String get scrape_failure_detail_show => 'Show details';
+  @override
+  String get scrape_failure_detail_hide => 'Hide details';
 }
 
 // Path: <root>
@@ -92006,6 +92060,10 @@ class _StringsVi extends _StringsEn {
   String get library_view_sources => 'Sources';
   @override
   String get library_view_media => 'Library';
+  @override
+  String get scrape_failure_detail_show => 'Show details';
+  @override
+  String get scrape_failure_detail_hide => 'Hide details';
 }
 
 // Path: <root>
@@ -97859,6 +97917,10 @@ class _StringsZhCn extends _StringsEn {
   String get library_view_sources => '来源';
   @override
   String get library_view_media => '媒体库';
+  @override
+  String get scrape_failure_detail_show => '显示详情';
+  @override
+  String get scrape_failure_detail_hide => '隐藏详情';
 }
 
 // Path: <root>
@@ -103953,6 +104015,10 @@ class _StringsZhHk extends _StringsEn {
   String get library_view_sources => 'Sources';
   @override
   String get library_view_media => 'Library';
+  @override
+  String get scrape_failure_detail_show => 'Show details';
+  @override
+  String get scrape_failure_detail_hide => 'Hide details';
 }
 
 /// Flat map(s) containing all translations.
@@ -109580,6 +109646,10 @@ extension on _StringsEn {
         return 'Sources';
       case 'library_view_media':
         return 'Library';
+      case 'scrape_failure_detail_show':
+        return 'Show details';
+      case 'scrape_failure_detail_hide':
+        return 'Hide details';
       default:
         return null;
     }
@@ -115205,6 +115275,10 @@ extension on _StringsAr {
         return 'Sources';
       case 'library_view_media':
         return 'Library';
+      case 'scrape_failure_detail_show':
+        return 'Show details';
+      case 'scrape_failure_detail_hide':
+        return 'Hide details';
       default:
         return null;
     }
@@ -120851,6 +120925,10 @@ extension on _StringsDe {
         return 'Sources';
       case 'library_view_media':
         return 'Library';
+      case 'scrape_failure_detail_show':
+        return 'Show details';
+      case 'scrape_failure_detail_hide':
+        return 'Hide details';
       default:
         return null;
     }
@@ -126496,6 +126574,10 @@ extension on _StringsEs {
         return 'Sources';
       case 'library_view_media':
         return 'Library';
+      case 'scrape_failure_detail_show':
+        return 'Show details';
+      case 'scrape_failure_detail_hide':
+        return 'Hide details';
       default:
         return null;
     }
@@ -132147,6 +132229,10 @@ extension on _StringsFr {
         return 'Sources';
       case 'library_view_media':
         return 'Library';
+      case 'scrape_failure_detail_show':
+        return 'Show details';
+      case 'scrape_failure_detail_hide':
+        return 'Hide details';
       default:
         return null;
     }
@@ -137780,6 +137866,10 @@ extension on _StringsId {
         return 'Sources';
       case 'library_view_media':
         return 'Library';
+      case 'scrape_failure_detail_show':
+        return 'Show details';
+      case 'scrape_failure_detail_hide':
+        return 'Hide details';
       default:
         return null;
     }
@@ -143428,6 +143518,10 @@ extension on _StringsIt {
         return 'Sources';
       case 'library_view_media':
         return 'Library';
+      case 'scrape_failure_detail_show':
+        return 'Show details';
+      case 'scrape_failure_detail_hide':
+        return 'Hide details';
       default:
         return null;
     }
@@ -149038,6 +149132,10 @@ extension on _StringsJa {
         return 'Sources';
       case 'library_view_media':
         return 'Library';
+      case 'scrape_failure_detail_show':
+        return 'Show details';
+      case 'scrape_failure_detail_hide':
+        return 'Hide details';
       default:
         return null;
     }
@@ -154652,6 +154750,10 @@ extension on _StringsKo {
         return 'Sources';
       case 'library_view_media':
         return 'Library';
+      case 'scrape_failure_detail_show':
+        return 'Show details';
+      case 'scrape_failure_detail_hide':
+        return 'Hide details';
       default:
         return null;
     }
@@ -160293,6 +160395,10 @@ extension on _StringsNl {
         return 'Sources';
       case 'library_view_media':
         return 'Library';
+      case 'scrape_failure_detail_show':
+        return 'Show details';
+      case 'scrape_failure_detail_hide':
+        return 'Hide details';
       default:
         return null;
     }
@@ -165931,6 +166037,10 @@ extension on _StringsPtBr {
         return 'Sources';
       case 'library_view_media':
         return 'Library';
+      case 'scrape_failure_detail_show':
+        return 'Show details';
+      case 'scrape_failure_detail_hide':
+        return 'Hide details';
       default:
         return null;
     }
@@ -171574,6 +171684,10 @@ extension on _StringsRu {
         return 'Sources';
       case 'library_view_media':
         return 'Library';
+      case 'scrape_failure_detail_show':
+        return 'Show details';
+      case 'scrape_failure_detail_hide':
+        return 'Hide details';
       default:
         return null;
     }
@@ -177201,6 +177315,10 @@ extension on _StringsTh {
         return 'Sources';
       case 'library_view_media':
         return 'Library';
+      case 'scrape_failure_detail_show':
+        return 'Show details';
+      case 'scrape_failure_detail_hide':
+        return 'Hide details';
       default:
         return null;
     }
@@ -182837,6 +182955,10 @@ extension on _StringsTr {
         return 'Sources';
       case 'library_view_media':
         return 'Library';
+      case 'scrape_failure_detail_show':
+        return 'Show details';
+      case 'scrape_failure_detail_hide':
+        return 'Hide details';
       default:
         return null;
     }
@@ -188468,6 +188590,10 @@ extension on _StringsVi {
         return 'Sources';
       case 'library_view_media':
         return 'Library';
+      case 'scrape_failure_detail_show':
+        return 'Show details';
+      case 'scrape_failure_detail_hide':
+        return 'Hide details';
       default:
         return null;
     }
@@ -194053,6 +194179,10 @@ extension on _StringsZhCn {
         return '来源';
       case 'library_view_media':
         return '媒体库';
+      case 'scrape_failure_detail_show':
+        return '显示详情';
+      case 'scrape_failure_detail_hide':
+        return '隐藏详情';
       default:
         return null;
     }
@@ -199658,6 +199788,10 @@ extension on _StringsZhHk {
         return 'Sources';
       case 'library_view_media':
         return 'Library';
+      case 'scrape_failure_detail_show':
+        return 'Show details';
+      case 'scrape_failure_detail_hide':
+        return 'Hide details';
       default:
         return null;
     }
