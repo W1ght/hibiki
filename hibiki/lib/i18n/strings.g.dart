@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 46529 (2737 per locale)
+/// Strings: 46614 (2742 per locale)
 ///
-/// Built on 2026-07-28 at 15:17 UTC
+/// Built on 2026-07-28 at 15:36 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -1517,16 +1517,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get game_upscaling_download_body =>
       'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
   String get game_upscaling_download_title => 'Download Magpie upscaler?';
-  String get game_upscaling_hint =>
-      'Uses Magpie to upscale the galgame window while a hook session is running. Auto downloads Magpie on first use.';
   String get game_upscaling_hint_external =>
       'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
   String get game_upscaling_hint_first_run =>
       'Magpie still had to set itself up this time. Press Win+Shift+A to upscale now — next time you start the game it will happen automatically.';
   String get game_upscaling_hint_manual =>
       'Press Win+Shift+A to upscale the game window.';
-  String get game_upscaling_hint_not_installed =>
-      'Magpie is not installed. Set window upscaling to Auto to download it.';
   String get game_upscaling_installed_only => 'Installed only';
   String get game_upscaling_off => 'Off';
   String get game_upscaling_status_active => 'Window upscaling is on';
@@ -3677,6 +3673,19 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get shortcut_action_popup_mine_entry => 'Create card (mine)';
   String get game_hook_reason_protocol_mismatch =>
       'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
+  String get game_upscaling_auto_hint =>
+      'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+  String get game_upscaling_installed_only_hint =>
+      'Only use a Magpie that is already installed. Never downloads anything.';
+  String get game_upscaling_off_hint => 'Never upscale the game window.';
+  String get game_helper_bundle_missing =>
+      'The galgame hook helper is not bundled with this build. Update Hibiki to get it.';
+  String game_upscaling_pick_title({required Object name}) =>
+      'Window upscaling for ${name}';
+  String get game_upscaling_pick_body =>
+      'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
+  String get game_upscaling_hint_not_installed =>
+      'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
 }
 
 // Path: <root>
@@ -6063,9 +6072,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get game_upscaling_download_title => 'Download Magpie upscaler?';
   @override
-  String get game_upscaling_hint =>
-      'Uses Magpie to upscale the galgame window while a hook session is running. Auto downloads Magpie on first use.';
-  @override
   String get game_upscaling_hint_external =>
       'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
   @override
@@ -6074,9 +6080,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get game_upscaling_hint_manual =>
       'Press Win+Shift+A to upscale the game window.';
-  @override
-  String get game_upscaling_hint_not_installed =>
-      'Magpie is not installed. Set window upscaling to Auto to download it.';
   @override
   String get game_upscaling_installed_only => 'Installed only';
   @override
@@ -9939,6 +9942,26 @@ class _StringsAr extends _StringsEn {
   @override
   String get game_hook_reason_protocol_mismatch =>
       'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
+  @override
+  String get game_upscaling_auto_hint =>
+      'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+  @override
+  String get game_upscaling_installed_only_hint =>
+      'Only use a Magpie that is already installed. Never downloads anything.';
+  @override
+  String get game_upscaling_off_hint => 'Never upscale the game window.';
+  @override
+  String get game_helper_bundle_missing =>
+      'The galgame hook helper is not bundled with this build. Update Hibiki to get it.';
+  @override
+  String game_upscaling_pick_title({required Object name}) =>
+      'Window upscaling for ${name}';
+  @override
+  String get game_upscaling_pick_body =>
+      'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
+  @override
+  String get game_upscaling_hint_not_installed =>
+      'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
 }
 
 // Path: <root>
@@ -12353,9 +12376,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get game_upscaling_download_title => 'Download Magpie upscaler?';
   @override
-  String get game_upscaling_hint =>
-      'Uses Magpie to upscale the galgame window while a hook session is running. Auto downloads Magpie on first use.';
-  @override
   String get game_upscaling_hint_external =>
       'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
   @override
@@ -12364,9 +12384,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get game_upscaling_hint_manual =>
       'Press Win+Shift+A to upscale the game window.';
-  @override
-  String get game_upscaling_hint_not_installed =>
-      'Magpie is not installed. Set window upscaling to Auto to download it.';
   @override
   String get game_upscaling_installed_only => 'Installed only';
   @override
@@ -16269,6 +16286,26 @@ class _StringsDe extends _StringsEn {
   @override
   String get game_hook_reason_protocol_mismatch =>
       'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
+  @override
+  String get game_upscaling_auto_hint =>
+      'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+  @override
+  String get game_upscaling_installed_only_hint =>
+      'Only use a Magpie that is already installed. Never downloads anything.';
+  @override
+  String get game_upscaling_off_hint => 'Never upscale the game window.';
+  @override
+  String get game_helper_bundle_missing =>
+      'The galgame hook helper is not bundled with this build. Update Hibiki to get it.';
+  @override
+  String game_upscaling_pick_title({required Object name}) =>
+      'Window upscaling for ${name}';
+  @override
+  String get game_upscaling_pick_body =>
+      'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
+  @override
+  String get game_upscaling_hint_not_installed =>
+      'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
 }
 
 // Path: <root>
@@ -18684,9 +18721,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get game_upscaling_download_title => 'Download Magpie upscaler?';
   @override
-  String get game_upscaling_hint =>
-      'Uses Magpie to upscale the galgame window while a hook session is running. Auto downloads Magpie on first use.';
-  @override
   String get game_upscaling_hint_external =>
       'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
   @override
@@ -18695,9 +18729,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get game_upscaling_hint_manual =>
       'Press Win+Shift+A to upscale the game window.';
-  @override
-  String get game_upscaling_hint_not_installed =>
-      'Magpie is not installed. Set window upscaling to Auto to download it.';
   @override
   String get game_upscaling_installed_only => 'Installed only';
   @override
@@ -22615,6 +22646,26 @@ class _StringsEs extends _StringsEn {
   @override
   String get game_hook_reason_protocol_mismatch =>
       'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
+  @override
+  String get game_upscaling_auto_hint =>
+      'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+  @override
+  String get game_upscaling_installed_only_hint =>
+      'Only use a Magpie that is already installed. Never downloads anything.';
+  @override
+  String get game_upscaling_off_hint => 'Never upscale the game window.';
+  @override
+  String get game_helper_bundle_missing =>
+      'The galgame hook helper is not bundled with this build. Update Hibiki to get it.';
+  @override
+  String game_upscaling_pick_title({required Object name}) =>
+      'Window upscaling for ${name}';
+  @override
+  String get game_upscaling_pick_body =>
+      'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
+  @override
+  String get game_upscaling_hint_not_installed =>
+      'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
 }
 
 // Path: <root>
@@ -25038,9 +25089,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get game_upscaling_download_title => 'Download Magpie upscaler?';
   @override
-  String get game_upscaling_hint =>
-      'Uses Magpie to upscale the galgame window while a hook session is running. Auto downloads Magpie on first use.';
-  @override
   String get game_upscaling_hint_external =>
       'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
   @override
@@ -25049,9 +25097,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get game_upscaling_hint_manual =>
       'Press Win+Shift+A to upscale the game window.';
-  @override
-  String get game_upscaling_hint_not_installed =>
-      'Magpie is not installed. Set window upscaling to Auto to download it.';
   @override
   String get game_upscaling_installed_only => 'Installed only';
   @override
@@ -28972,6 +29017,26 @@ class _StringsFr extends _StringsEn {
   @override
   String get game_hook_reason_protocol_mismatch =>
       'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
+  @override
+  String get game_upscaling_auto_hint =>
+      'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+  @override
+  String get game_upscaling_installed_only_hint =>
+      'Only use a Magpie that is already installed. Never downloads anything.';
+  @override
+  String get game_upscaling_off_hint => 'Never upscale the game window.';
+  @override
+  String get game_helper_bundle_missing =>
+      'The galgame hook helper is not bundled with this build. Update Hibiki to get it.';
+  @override
+  String game_upscaling_pick_title({required Object name}) =>
+      'Window upscaling for ${name}';
+  @override
+  String get game_upscaling_pick_body =>
+      'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
+  @override
+  String get game_upscaling_hint_not_installed =>
+      'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
 }
 
 // Path: <root>
@@ -31361,9 +31426,6 @@ class _StringsId extends _StringsEn {
   @override
   String get game_upscaling_download_title => 'Download Magpie upscaler?';
   @override
-  String get game_upscaling_hint =>
-      'Uses Magpie to upscale the galgame window while a hook session is running. Auto downloads Magpie on first use.';
-  @override
   String get game_upscaling_hint_external =>
       'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
   @override
@@ -31372,9 +31434,6 @@ class _StringsId extends _StringsEn {
   @override
   String get game_upscaling_hint_manual =>
       'Press Win+Shift+A to upscale the game window.';
-  @override
-  String get game_upscaling_hint_not_installed =>
-      'Magpie is not installed. Set window upscaling to Auto to download it.';
   @override
   String get game_upscaling_installed_only => 'Installed only';
   @override
@@ -35258,6 +35317,26 @@ class _StringsId extends _StringsEn {
   @override
   String get game_hook_reason_protocol_mismatch =>
       'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
+  @override
+  String get game_upscaling_auto_hint =>
+      'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+  @override
+  String get game_upscaling_installed_only_hint =>
+      'Only use a Magpie that is already installed. Never downloads anything.';
+  @override
+  String get game_upscaling_off_hint => 'Never upscale the game window.';
+  @override
+  String get game_helper_bundle_missing =>
+      'The galgame hook helper is not bundled with this build. Update Hibiki to get it.';
+  @override
+  String game_upscaling_pick_title({required Object name}) =>
+      'Window upscaling for ${name}';
+  @override
+  String get game_upscaling_pick_body =>
+      'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
+  @override
+  String get game_upscaling_hint_not_installed =>
+      'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
 }
 
 // Path: <root>
@@ -37667,9 +37746,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get game_upscaling_download_title => 'Download Magpie upscaler?';
   @override
-  String get game_upscaling_hint =>
-      'Uses Magpie to upscale the galgame window while a hook session is running. Auto downloads Magpie on first use.';
-  @override
   String get game_upscaling_hint_external =>
       'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
   @override
@@ -37678,9 +37754,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get game_upscaling_hint_manual =>
       'Press Win+Shift+A to upscale the game window.';
-  @override
-  String get game_upscaling_hint_not_installed =>
-      'Magpie is not installed. Set window upscaling to Auto to download it.';
   @override
   String get game_upscaling_installed_only => 'Installed only';
   @override
@@ -41590,6 +41663,26 @@ class _StringsIt extends _StringsEn {
   @override
   String get game_hook_reason_protocol_mismatch =>
       'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
+  @override
+  String get game_upscaling_auto_hint =>
+      'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+  @override
+  String get game_upscaling_installed_only_hint =>
+      'Only use a Magpie that is already installed. Never downloads anything.';
+  @override
+  String get game_upscaling_off_hint => 'Never upscale the game window.';
+  @override
+  String get game_helper_bundle_missing =>
+      'The galgame hook helper is not bundled with this build. Update Hibiki to get it.';
+  @override
+  String game_upscaling_pick_title({required Object name}) =>
+      'Window upscaling for ${name}';
+  @override
+  String get game_upscaling_pick_body =>
+      'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
+  @override
+  String get game_upscaling_hint_not_installed =>
+      'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
 }
 
 // Path: <root>
@@ -43944,9 +44037,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get game_upscaling_download_title => 'Download Magpie upscaler?';
   @override
-  String get game_upscaling_hint =>
-      'Uses Magpie to upscale the galgame window while a hook session is running. Auto downloads Magpie on first use.';
-  @override
   String get game_upscaling_hint_external =>
       'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
   @override
@@ -43955,9 +44045,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get game_upscaling_hint_manual =>
       'Press Win+Shift+A to upscale the game window.';
-  @override
-  String get game_upscaling_hint_not_installed =>
-      'Magpie is not installed. Set window upscaling to Auto to download it.';
   @override
   String get game_upscaling_installed_only => 'Installed only';
   @override
@@ -47739,6 +47826,26 @@ class _StringsJa extends _StringsEn {
   @override
   String get game_hook_reason_protocol_mismatch =>
       'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
+  @override
+  String get game_upscaling_auto_hint =>
+      'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+  @override
+  String get game_upscaling_installed_only_hint =>
+      'Only use a Magpie that is already installed. Never downloads anything.';
+  @override
+  String get game_upscaling_off_hint => 'Never upscale the game window.';
+  @override
+  String get game_helper_bundle_missing =>
+      'The galgame hook helper is not bundled with this build. Update Hibiki to get it.';
+  @override
+  String game_upscaling_pick_title({required Object name}) =>
+      'Window upscaling for ${name}';
+  @override
+  String get game_upscaling_pick_body =>
+      'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
+  @override
+  String get game_upscaling_hint_not_installed =>
+      'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
 }
 
 // Path: <root>
@@ -50093,9 +50200,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get game_upscaling_download_title => 'Download Magpie upscaler?';
   @override
-  String get game_upscaling_hint =>
-      'Uses Magpie to upscale the galgame window while a hook session is running. Auto downloads Magpie on first use.';
-  @override
   String get game_upscaling_hint_external =>
       'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
   @override
@@ -50104,9 +50208,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get game_upscaling_hint_manual =>
       'Press Win+Shift+A to upscale the game window.';
-  @override
-  String get game_upscaling_hint_not_installed =>
-      'Magpie is not installed. Set window upscaling to Auto to download it.';
   @override
   String get game_upscaling_installed_only => 'Installed only';
   @override
@@ -53890,6 +53991,26 @@ class _StringsKo extends _StringsEn {
   @override
   String get game_hook_reason_protocol_mismatch =>
       'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
+  @override
+  String get game_upscaling_auto_hint =>
+      'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+  @override
+  String get game_upscaling_installed_only_hint =>
+      'Only use a Magpie that is already installed. Never downloads anything.';
+  @override
+  String get game_upscaling_off_hint => 'Never upscale the game window.';
+  @override
+  String get game_helper_bundle_missing =>
+      'The galgame hook helper is not bundled with this build. Update Hibiki to get it.';
+  @override
+  String game_upscaling_pick_title({required Object name}) =>
+      'Window upscaling for ${name}';
+  @override
+  String get game_upscaling_pick_body =>
+      'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
+  @override
+  String get game_upscaling_hint_not_installed =>
+      'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
 }
 
 // Path: <root>
@@ -56293,9 +56414,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get game_upscaling_download_title => 'Download Magpie upscaler?';
   @override
-  String get game_upscaling_hint =>
-      'Uses Magpie to upscale the galgame window while a hook session is running. Auto downloads Magpie on first use.';
-  @override
   String get game_upscaling_hint_external =>
       'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
   @override
@@ -56304,9 +56422,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get game_upscaling_hint_manual =>
       'Press Win+Shift+A to upscale the game window.';
-  @override
-  String get game_upscaling_hint_not_installed =>
-      'Magpie is not installed. Set window upscaling to Auto to download it.';
   @override
   String get game_upscaling_installed_only => 'Installed only';
   @override
@@ -60202,6 +60317,26 @@ class _StringsNl extends _StringsEn {
   @override
   String get game_hook_reason_protocol_mismatch =>
       'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
+  @override
+  String get game_upscaling_auto_hint =>
+      'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+  @override
+  String get game_upscaling_installed_only_hint =>
+      'Only use a Magpie that is already installed. Never downloads anything.';
+  @override
+  String get game_upscaling_off_hint => 'Never upscale the game window.';
+  @override
+  String get game_helper_bundle_missing =>
+      'The galgame hook helper is not bundled with this build. Update Hibiki to get it.';
+  @override
+  String game_upscaling_pick_title({required Object name}) =>
+      'Window upscaling for ${name}';
+  @override
+  String get game_upscaling_pick_body =>
+      'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
+  @override
+  String get game_upscaling_hint_not_installed =>
+      'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
 }
 
 // Path: <root>
@@ -62613,9 +62748,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get game_upscaling_download_title => 'Download Magpie upscaler?';
   @override
-  String get game_upscaling_hint =>
-      'Uses Magpie to upscale the galgame window while a hook session is running. Auto downloads Magpie on first use.';
-  @override
   String get game_upscaling_hint_external =>
       'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
   @override
@@ -62624,9 +62756,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get game_upscaling_hint_manual =>
       'Press Win+Shift+A to upscale the game window.';
-  @override
-  String get game_upscaling_hint_not_installed =>
-      'Magpie is not installed. Set window upscaling to Auto to download it.';
   @override
   String get game_upscaling_installed_only => 'Installed only';
   @override
@@ -66527,6 +66656,26 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get game_hook_reason_protocol_mismatch =>
       'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
+  @override
+  String get game_upscaling_auto_hint =>
+      'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+  @override
+  String get game_upscaling_installed_only_hint =>
+      'Only use a Magpie that is already installed. Never downloads anything.';
+  @override
+  String get game_upscaling_off_hint => 'Never upscale the game window.';
+  @override
+  String get game_helper_bundle_missing =>
+      'The galgame hook helper is not bundled with this build. Update Hibiki to get it.';
+  @override
+  String game_upscaling_pick_title({required Object name}) =>
+      'Window upscaling for ${name}';
+  @override
+  String get game_upscaling_pick_body =>
+      'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
+  @override
+  String get game_upscaling_hint_not_installed =>
+      'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
 }
 
 // Path: <root>
@@ -68930,9 +69079,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get game_upscaling_download_title => 'Download Magpie upscaler?';
   @override
-  String get game_upscaling_hint =>
-      'Uses Magpie to upscale the galgame window while a hook session is running. Auto downloads Magpie on first use.';
-  @override
   String get game_upscaling_hint_external =>
       'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
   @override
@@ -68941,9 +69087,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get game_upscaling_hint_manual =>
       'Press Win+Shift+A to upscale the game window.';
-  @override
-  String get game_upscaling_hint_not_installed =>
-      'Magpie is not installed. Set window upscaling to Auto to download it.';
   @override
   String get game_upscaling_installed_only => 'Installed only';
   @override
@@ -72836,6 +72979,26 @@ class _StringsRu extends _StringsEn {
   @override
   String get game_hook_reason_protocol_mismatch =>
       'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
+  @override
+  String get game_upscaling_auto_hint =>
+      'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+  @override
+  String get game_upscaling_installed_only_hint =>
+      'Only use a Magpie that is already installed. Never downloads anything.';
+  @override
+  String get game_upscaling_off_hint => 'Never upscale the game window.';
+  @override
+  String get game_helper_bundle_missing =>
+      'The galgame hook helper is not bundled with this build. Update Hibiki to get it.';
+  @override
+  String game_upscaling_pick_title({required Object name}) =>
+      'Window upscaling for ${name}';
+  @override
+  String get game_upscaling_pick_body =>
+      'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
+  @override
+  String get game_upscaling_hint_not_installed =>
+      'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
 }
 
 // Path: <root>
@@ -75217,9 +75380,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get game_upscaling_download_title => 'Download Magpie upscaler?';
   @override
-  String get game_upscaling_hint =>
-      'Uses Magpie to upscale the galgame window while a hook session is running. Auto downloads Magpie on first use.';
-  @override
   String get game_upscaling_hint_external =>
       'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
   @override
@@ -75228,9 +75388,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get game_upscaling_hint_manual =>
       'Press Win+Shift+A to upscale the game window.';
-  @override
-  String get game_upscaling_hint_not_installed =>
-      'Magpie is not installed. Set window upscaling to Auto to download it.';
   @override
   String get game_upscaling_installed_only => 'Installed only';
   @override
@@ -79093,6 +79250,26 @@ class _StringsTh extends _StringsEn {
   @override
   String get game_hook_reason_protocol_mismatch =>
       'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
+  @override
+  String get game_upscaling_auto_hint =>
+      'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+  @override
+  String get game_upscaling_installed_only_hint =>
+      'Only use a Magpie that is already installed. Never downloads anything.';
+  @override
+  String get game_upscaling_off_hint => 'Never upscale the game window.';
+  @override
+  String get game_helper_bundle_missing =>
+      'The galgame hook helper is not bundled with this build. Update Hibiki to get it.';
+  @override
+  String game_upscaling_pick_title({required Object name}) =>
+      'Window upscaling for ${name}';
+  @override
+  String get game_upscaling_pick_body =>
+      'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
+  @override
+  String get game_upscaling_hint_not_installed =>
+      'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
 }
 
 // Path: <root>
@@ -81492,9 +81669,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get game_upscaling_download_title => 'Download Magpie upscaler?';
   @override
-  String get game_upscaling_hint =>
-      'Uses Magpie to upscale the galgame window while a hook session is running. Auto downloads Magpie on first use.';
-  @override
   String get game_upscaling_hint_external =>
       'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
   @override
@@ -81503,9 +81677,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get game_upscaling_hint_manual =>
       'Press Win+Shift+A to upscale the game window.';
-  @override
-  String get game_upscaling_hint_not_installed =>
-      'Magpie is not installed. Set window upscaling to Auto to download it.';
   @override
   String get game_upscaling_installed_only => 'Installed only';
   @override
@@ -85382,6 +85553,26 @@ class _StringsTr extends _StringsEn {
   @override
   String get game_hook_reason_protocol_mismatch =>
       'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
+  @override
+  String get game_upscaling_auto_hint =>
+      'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+  @override
+  String get game_upscaling_installed_only_hint =>
+      'Only use a Magpie that is already installed. Never downloads anything.';
+  @override
+  String get game_upscaling_off_hint => 'Never upscale the game window.';
+  @override
+  String get game_helper_bundle_missing =>
+      'The galgame hook helper is not bundled with this build. Update Hibiki to get it.';
+  @override
+  String game_upscaling_pick_title({required Object name}) =>
+      'Window upscaling for ${name}';
+  @override
+  String get game_upscaling_pick_body =>
+      'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
+  @override
+  String get game_upscaling_hint_not_installed =>
+      'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
 }
 
 // Path: <root>
@@ -87774,9 +87965,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get game_upscaling_download_title => 'Download Magpie upscaler?';
   @override
-  String get game_upscaling_hint =>
-      'Uses Magpie to upscale the galgame window while a hook session is running. Auto downloads Magpie on first use.';
-  @override
   String get game_upscaling_hint_external =>
       'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
   @override
@@ -87785,9 +87973,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get game_upscaling_hint_manual =>
       'Press Win+Shift+A to upscale the game window.';
-  @override
-  String get game_upscaling_hint_not_installed =>
-      'Magpie is not installed. Set window upscaling to Auto to download it.';
   @override
   String get game_upscaling_installed_only => 'Installed only';
   @override
@@ -91656,6 +91841,26 @@ class _StringsVi extends _StringsEn {
   @override
   String get game_hook_reason_protocol_mismatch =>
       'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
+  @override
+  String get game_upscaling_auto_hint =>
+      'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+  @override
+  String get game_upscaling_installed_only_hint =>
+      'Only use a Magpie that is already installed. Never downloads anything.';
+  @override
+  String get game_upscaling_off_hint => 'Never upscale the game window.';
+  @override
+  String get game_helper_bundle_missing =>
+      'The galgame hook helper is not bundled with this build. Update Hibiki to get it.';
+  @override
+  String game_upscaling_pick_title({required Object name}) =>
+      'Window upscaling for ${name}';
+  @override
+  String get game_upscaling_pick_body =>
+      'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
+  @override
+  String get game_upscaling_hint_not_installed =>
+      'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
 }
 
 // Path: <root>
@@ -93883,9 +94088,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get game_upscaling_download_title => '下载 Magpie 超分组件？';
   @override
-  String get game_upscaling_hint =>
-      '使用 Magpie 在 galgame hook 会话期间对游戏窗口做超分。「自动」会在首次使用时按需下载 Magpie。';
-  @override
   String get game_upscaling_hint_external =>
       '你的电脑上已经开着一个 Magpie，Hibiki 没有去动它。按 Win+Shift+A 就能放大游戏窗口。';
   @override
@@ -93893,9 +94095,6 @@ class _StringsZhCn extends _StringsEn {
       '这次 Magpie 还在做首次初始化。现在按 Win+Shift+A 就能放大；下次启动游戏会自动放大。';
   @override
   String get game_upscaling_hint_manual => '按 Win+Shift+A 放大游戏窗口。';
-  @override
-  String get game_upscaling_hint_not_installed =>
-      '没有安装 Magpie。把「游戏窗口超分」改成「自动」即可下载。';
   @override
   String get game_upscaling_installed_only => '仅用已装';
   @override
@@ -97487,6 +97686,24 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get game_hook_reason_protocol_mismatch =>
       '捕获组件版本与 Hibiki 不一致，请更新或重新安装 galgame 捕获组件。';
+  @override
+  String get game_upscaling_auto_hint =>
+      '优先用机器上已有的 Magpie；没有就在征得同意后下载我们的自编产物（约 10 MB）。';
+  @override
+  String get game_upscaling_installed_only_hint => '只用机器上已经装好的 Magpie，绝不联网下载。';
+  @override
+  String get game_upscaling_off_hint => '不放大游戏窗口。';
+  @override
+  String get game_helper_bundle_missing =>
+      '这个版本没有随包附带 galgame 钩子 helper，请更新 Hibiki 获取。';
+  @override
+  String game_upscaling_pick_title({required Object name}) => '${name} 的窗口超分';
+  @override
+  String get game_upscaling_pick_body =>
+      '捕获会话期间用 Magpie 放大这个游戏的窗口。每个游戏各自设置——只有原生分辨率低于屏幕的游戏才用得上。会占用显卡。';
+  @override
+  String get game_upscaling_hint_not_installed =>
+      '没有安装 Magpie。在游戏库里右键这个游戏，把「窗口超分」改成「自动」即可下载。';
 }
 
 // Path: <root>
@@ -99811,9 +100028,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get game_upscaling_download_title => 'Download Magpie upscaler?';
   @override
-  String get game_upscaling_hint =>
-      'Uses Magpie to upscale the galgame window while a hook session is running. Auto downloads Magpie on first use.';
-  @override
   String get game_upscaling_hint_external =>
       'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
   @override
@@ -99822,9 +100036,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get game_upscaling_hint_manual =>
       'Press Win+Shift+A to upscale the game window.';
-  @override
-  String get game_upscaling_hint_not_installed =>
-      'Magpie is not installed. Set window upscaling to Auto to download it.';
   @override
   String get game_upscaling_installed_only => 'Installed only';
   @override
@@ -103557,6 +103768,26 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get game_hook_reason_protocol_mismatch =>
       'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
+  @override
+  String get game_upscaling_auto_hint =>
+      'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+  @override
+  String get game_upscaling_installed_only_hint =>
+      'Only use a Magpie that is already installed. Never downloads anything.';
+  @override
+  String get game_upscaling_off_hint => 'Never upscale the game window.';
+  @override
+  String get game_helper_bundle_missing =>
+      'The galgame hook helper is not bundled with this build. Update Hibiki to get it.';
+  @override
+  String game_upscaling_pick_title({required Object name}) =>
+      'Window upscaling for ${name}';
+  @override
+  String get game_upscaling_pick_body =>
+      'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
+  @override
+  String get game_upscaling_hint_not_installed =>
+      'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
 }
 
 /// Flat map(s) containing all translations.
@@ -105670,16 +105901,12 @@ extension on _StringsEn {
         return 'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
       case 'game_upscaling_download_title':
         return 'Download Magpie upscaler?';
-      case 'game_upscaling_hint':
-        return 'Uses Magpie to upscale the galgame window while a hook session is running. Auto downloads Magpie on first use.';
       case 'game_upscaling_hint_external':
         return 'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
       case 'game_upscaling_hint_first_run':
         return 'Magpie still had to set itself up this time. Press Win+Shift+A to upscale now — next time you start the game it will happen automatically.';
       case 'game_upscaling_hint_manual':
         return 'Press Win+Shift+A to upscale the game window.';
-      case 'game_upscaling_hint_not_installed':
-        return 'Magpie is not installed. Set window upscaling to Auto to download it.';
       case 'game_upscaling_installed_only':
         return 'Installed only';
       case 'game_upscaling_off':
@@ -109164,6 +109391,20 @@ extension on _StringsEn {
         return 'Create card (mine)';
       case 'game_hook_reason_protocol_mismatch':
         return 'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
+      case 'game_upscaling_auto_hint':
+        return 'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+      case 'game_upscaling_installed_only_hint':
+        return 'Only use a Magpie that is already installed. Never downloads anything.';
+      case 'game_upscaling_off_hint':
+        return 'Never upscale the game window.';
+      case 'game_helper_bundle_missing':
+        return 'The galgame hook helper is not bundled with this build. Update Hibiki to get it.';
+      case 'game_upscaling_pick_title':
+        return ({required Object name}) => 'Window upscaling for ${name}';
+      case 'game_upscaling_pick_body':
+        return 'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
+      case 'game_upscaling_hint_not_installed':
+        return 'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
       default:
         return null;
     }
@@ -111278,16 +111519,12 @@ extension on _StringsAr {
         return 'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
       case 'game_upscaling_download_title':
         return 'Download Magpie upscaler?';
-      case 'game_upscaling_hint':
-        return 'Uses Magpie to upscale the galgame window while a hook session is running. Auto downloads Magpie on first use.';
       case 'game_upscaling_hint_external':
         return 'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
       case 'game_upscaling_hint_first_run':
         return 'Magpie still had to set itself up this time. Press Win+Shift+A to upscale now — next time you start the game it will happen automatically.';
       case 'game_upscaling_hint_manual':
         return 'Press Win+Shift+A to upscale the game window.';
-      case 'game_upscaling_hint_not_installed':
-        return 'Magpie is not installed. Set window upscaling to Auto to download it.';
       case 'game_upscaling_installed_only':
         return 'Installed only';
       case 'game_upscaling_off':
@@ -114769,6 +115006,20 @@ extension on _StringsAr {
         return 'Create card (mine)';
       case 'game_hook_reason_protocol_mismatch':
         return 'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
+      case 'game_upscaling_auto_hint':
+        return 'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+      case 'game_upscaling_installed_only_hint':
+        return 'Only use a Magpie that is already installed. Never downloads anything.';
+      case 'game_upscaling_off_hint':
+        return 'Never upscale the game window.';
+      case 'game_helper_bundle_missing':
+        return 'The galgame hook helper is not bundled with this build. Update Hibiki to get it.';
+      case 'game_upscaling_pick_title':
+        return ({required Object name}) => 'Window upscaling for ${name}';
+      case 'game_upscaling_pick_body':
+        return 'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
+      case 'game_upscaling_hint_not_installed':
+        return 'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
       default:
         return null;
     }
@@ -116886,16 +117137,12 @@ extension on _StringsDe {
         return 'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
       case 'game_upscaling_download_title':
         return 'Download Magpie upscaler?';
-      case 'game_upscaling_hint':
-        return 'Uses Magpie to upscale the galgame window while a hook session is running. Auto downloads Magpie on first use.';
       case 'game_upscaling_hint_external':
         return 'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
       case 'game_upscaling_hint_first_run':
         return 'Magpie still had to set itself up this time. Press Win+Shift+A to upscale now — next time you start the game it will happen automatically.';
       case 'game_upscaling_hint_manual':
         return 'Press Win+Shift+A to upscale the game window.';
-      case 'game_upscaling_hint_not_installed':
-        return 'Magpie is not installed. Set window upscaling to Auto to download it.';
       case 'game_upscaling_installed_only':
         return 'Installed only';
       case 'game_upscaling_off':
@@ -120395,6 +120642,20 @@ extension on _StringsDe {
         return 'Create card (mine)';
       case 'game_hook_reason_protocol_mismatch':
         return 'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
+      case 'game_upscaling_auto_hint':
+        return 'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+      case 'game_upscaling_installed_only_hint':
+        return 'Only use a Magpie that is already installed. Never downloads anything.';
+      case 'game_upscaling_off_hint':
+        return 'Never upscale the game window.';
+      case 'game_helper_bundle_missing':
+        return 'The galgame hook helper is not bundled with this build. Update Hibiki to get it.';
+      case 'game_upscaling_pick_title':
+        return ({required Object name}) => 'Window upscaling for ${name}';
+      case 'game_upscaling_pick_body':
+        return 'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
+      case 'game_upscaling_hint_not_installed':
+        return 'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
       default:
         return null;
     }
@@ -122513,16 +122774,12 @@ extension on _StringsEs {
         return 'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
       case 'game_upscaling_download_title':
         return 'Download Magpie upscaler?';
-      case 'game_upscaling_hint':
-        return 'Uses Magpie to upscale the galgame window while a hook session is running. Auto downloads Magpie on first use.';
       case 'game_upscaling_hint_external':
         return 'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
       case 'game_upscaling_hint_first_run':
         return 'Magpie still had to set itself up this time. Press Win+Shift+A to upscale now — next time you start the game it will happen automatically.';
       case 'game_upscaling_hint_manual':
         return 'Press Win+Shift+A to upscale the game window.';
-      case 'game_upscaling_hint_not_installed':
-        return 'Magpie is not installed. Set window upscaling to Auto to download it.';
       case 'game_upscaling_installed_only':
         return 'Installed only';
       case 'game_upscaling_off':
@@ -126020,6 +126277,20 @@ extension on _StringsEs {
         return 'Create card (mine)';
       case 'game_hook_reason_protocol_mismatch':
         return 'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
+      case 'game_upscaling_auto_hint':
+        return 'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+      case 'game_upscaling_installed_only_hint':
+        return 'Only use a Magpie that is already installed. Never downloads anything.';
+      case 'game_upscaling_off_hint':
+        return 'Never upscale the game window.';
+      case 'game_helper_bundle_missing':
+        return 'The galgame hook helper is not bundled with this build. Update Hibiki to get it.';
+      case 'game_upscaling_pick_title':
+        return ({required Object name}) => 'Window upscaling for ${name}';
+      case 'game_upscaling_pick_body':
+        return 'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
+      case 'game_upscaling_hint_not_installed':
+        return 'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
       default:
         return null;
     }
@@ -128141,16 +128412,12 @@ extension on _StringsFr {
         return 'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
       case 'game_upscaling_download_title':
         return 'Download Magpie upscaler?';
-      case 'game_upscaling_hint':
-        return 'Uses Magpie to upscale the galgame window while a hook session is running. Auto downloads Magpie on first use.';
       case 'game_upscaling_hint_external':
         return 'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
       case 'game_upscaling_hint_first_run':
         return 'Magpie still had to set itself up this time. Press Win+Shift+A to upscale now — next time you start the game it will happen automatically.';
       case 'game_upscaling_hint_manual':
         return 'Press Win+Shift+A to upscale the game window.';
-      case 'game_upscaling_hint_not_installed':
-        return 'Magpie is not installed. Set window upscaling to Auto to download it.';
       case 'game_upscaling_installed_only':
         return 'Installed only';
       case 'game_upscaling_off':
@@ -131651,6 +131918,20 @@ extension on _StringsFr {
         return 'Create card (mine)';
       case 'game_hook_reason_protocol_mismatch':
         return 'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
+      case 'game_upscaling_auto_hint':
+        return 'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+      case 'game_upscaling_installed_only_hint':
+        return 'Only use a Magpie that is already installed. Never downloads anything.';
+      case 'game_upscaling_off_hint':
+        return 'Never upscale the game window.';
+      case 'game_helper_bundle_missing':
+        return 'The galgame hook helper is not bundled with this build. Update Hibiki to get it.';
+      case 'game_upscaling_pick_title':
+        return ({required Object name}) => 'Window upscaling for ${name}';
+      case 'game_upscaling_pick_body':
+        return 'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
+      case 'game_upscaling_hint_not_installed':
+        return 'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
       default:
         return null;
     }
@@ -133767,16 +134048,12 @@ extension on _StringsId {
         return 'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
       case 'game_upscaling_download_title':
         return 'Download Magpie upscaler?';
-      case 'game_upscaling_hint':
-        return 'Uses Magpie to upscale the galgame window while a hook session is running. Auto downloads Magpie on first use.';
       case 'game_upscaling_hint_external':
         return 'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
       case 'game_upscaling_hint_first_run':
         return 'Magpie still had to set itself up this time. Press Win+Shift+A to upscale now — next time you start the game it will happen automatically.';
       case 'game_upscaling_hint_manual':
         return 'Press Win+Shift+A to upscale the game window.';
-      case 'game_upscaling_hint_not_installed':
-        return 'Magpie is not installed. Set window upscaling to Auto to download it.';
       case 'game_upscaling_installed_only':
         return 'Installed only';
       case 'game_upscaling_off':
@@ -137264,6 +137541,20 @@ extension on _StringsId {
         return 'Create card (mine)';
       case 'game_hook_reason_protocol_mismatch':
         return 'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
+      case 'game_upscaling_auto_hint':
+        return 'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+      case 'game_upscaling_installed_only_hint':
+        return 'Only use a Magpie that is already installed. Never downloads anything.';
+      case 'game_upscaling_off_hint':
+        return 'Never upscale the game window.';
+      case 'game_helper_bundle_missing':
+        return 'The galgame hook helper is not bundled with this build. Update Hibiki to get it.';
+      case 'game_upscaling_pick_title':
+        return ({required Object name}) => 'Window upscaling for ${name}';
+      case 'game_upscaling_pick_body':
+        return 'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
+      case 'game_upscaling_hint_not_installed':
+        return 'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
       default:
         return null;
     }
@@ -139382,16 +139673,12 @@ extension on _StringsIt {
         return 'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
       case 'game_upscaling_download_title':
         return 'Download Magpie upscaler?';
-      case 'game_upscaling_hint':
-        return 'Uses Magpie to upscale the galgame window while a hook session is running. Auto downloads Magpie on first use.';
       case 'game_upscaling_hint_external':
         return 'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
       case 'game_upscaling_hint_first_run':
         return 'Magpie still had to set itself up this time. Press Win+Shift+A to upscale now — next time you start the game it will happen automatically.';
       case 'game_upscaling_hint_manual':
         return 'Press Win+Shift+A to upscale the game window.';
-      case 'game_upscaling_hint_not_installed':
-        return 'Magpie is not installed. Set window upscaling to Auto to download it.';
       case 'game_upscaling_installed_only':
         return 'Installed only';
       case 'game_upscaling_off':
@@ -142892,6 +143179,20 @@ extension on _StringsIt {
         return 'Create card (mine)';
       case 'game_hook_reason_protocol_mismatch':
         return 'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
+      case 'game_upscaling_auto_hint':
+        return 'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+      case 'game_upscaling_installed_only_hint':
+        return 'Only use a Magpie that is already installed. Never downloads anything.';
+      case 'game_upscaling_off_hint':
+        return 'Never upscale the game window.';
+      case 'game_helper_bundle_missing':
+        return 'The galgame hook helper is not bundled with this build. Update Hibiki to get it.';
+      case 'game_upscaling_pick_title':
+        return ({required Object name}) => 'Window upscaling for ${name}';
+      case 'game_upscaling_pick_body':
+        return 'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
+      case 'game_upscaling_hint_not_installed':
+        return 'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
       default:
         return null;
     }
@@ -144999,16 +145300,12 @@ extension on _StringsJa {
         return 'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
       case 'game_upscaling_download_title':
         return 'Download Magpie upscaler?';
-      case 'game_upscaling_hint':
-        return 'Uses Magpie to upscale the galgame window while a hook session is running. Auto downloads Magpie on first use.';
       case 'game_upscaling_hint_external':
         return 'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
       case 'game_upscaling_hint_first_run':
         return 'Magpie still had to set itself up this time. Press Win+Shift+A to upscale now — next time you start the game it will happen automatically.';
       case 'game_upscaling_hint_manual':
         return 'Press Win+Shift+A to upscale the game window.';
-      case 'game_upscaling_hint_not_installed':
-        return 'Magpie is not installed. Set window upscaling to Auto to download it.';
       case 'game_upscaling_installed_only':
         return 'Installed only';
       case 'game_upscaling_off':
@@ -148482,6 +148779,20 @@ extension on _StringsJa {
         return 'Create card (mine)';
       case 'game_hook_reason_protocol_mismatch':
         return 'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
+      case 'game_upscaling_auto_hint':
+        return 'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+      case 'game_upscaling_installed_only_hint':
+        return 'Only use a Magpie that is already installed. Never downloads anything.';
+      case 'game_upscaling_off_hint':
+        return 'Never upscale the game window.';
+      case 'game_helper_bundle_missing':
+        return 'The galgame hook helper is not bundled with this build. Update Hibiki to get it.';
+      case 'game_upscaling_pick_title':
+        return ({required Object name}) => 'Window upscaling for ${name}';
+      case 'game_upscaling_pick_body':
+        return 'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
+      case 'game_upscaling_hint_not_installed':
+        return 'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
       default:
         return null;
     }
@@ -150590,16 +150901,12 @@ extension on _StringsKo {
         return 'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
       case 'game_upscaling_download_title':
         return 'Download Magpie upscaler?';
-      case 'game_upscaling_hint':
-        return 'Uses Magpie to upscale the galgame window while a hook session is running. Auto downloads Magpie on first use.';
       case 'game_upscaling_hint_external':
         return 'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
       case 'game_upscaling_hint_first_run':
         return 'Magpie still had to set itself up this time. Press Win+Shift+A to upscale now — next time you start the game it will happen automatically.';
       case 'game_upscaling_hint_manual':
         return 'Press Win+Shift+A to upscale the game window.';
-      case 'game_upscaling_hint_not_installed':
-        return 'Magpie is not installed. Set window upscaling to Auto to download it.';
       case 'game_upscaling_installed_only':
         return 'Installed only';
       case 'game_upscaling_off':
@@ -154076,6 +154383,20 @@ extension on _StringsKo {
         return 'Create card (mine)';
       case 'game_hook_reason_protocol_mismatch':
         return 'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
+      case 'game_upscaling_auto_hint':
+        return 'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+      case 'game_upscaling_installed_only_hint':
+        return 'Only use a Magpie that is already installed. Never downloads anything.';
+      case 'game_upscaling_off_hint':
+        return 'Never upscale the game window.';
+      case 'game_helper_bundle_missing':
+        return 'The galgame hook helper is not bundled with this build. Update Hibiki to get it.';
+      case 'game_upscaling_pick_title':
+        return ({required Object name}) => 'Window upscaling for ${name}';
+      case 'game_upscaling_pick_body':
+        return 'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
+      case 'game_upscaling_hint_not_installed':
+        return 'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
       default:
         return null;
     }
@@ -156193,16 +156514,12 @@ extension on _StringsNl {
         return 'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
       case 'game_upscaling_download_title':
         return 'Download Magpie upscaler?';
-      case 'game_upscaling_hint':
-        return 'Uses Magpie to upscale the galgame window while a hook session is running. Auto downloads Magpie on first use.';
       case 'game_upscaling_hint_external':
         return 'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
       case 'game_upscaling_hint_first_run':
         return 'Magpie still had to set itself up this time. Press Win+Shift+A to upscale now — next time you start the game it will happen automatically.';
       case 'game_upscaling_hint_manual':
         return 'Press Win+Shift+A to upscale the game window.';
-      case 'game_upscaling_hint_not_installed':
-        return 'Magpie is not installed. Set window upscaling to Auto to download it.';
       case 'game_upscaling_installed_only':
         return 'Installed only';
       case 'game_upscaling_off':
@@ -159697,6 +160014,20 @@ extension on _StringsNl {
         return 'Create card (mine)';
       case 'game_hook_reason_protocol_mismatch':
         return 'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
+      case 'game_upscaling_auto_hint':
+        return 'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+      case 'game_upscaling_installed_only_hint':
+        return 'Only use a Magpie that is already installed. Never downloads anything.';
+      case 'game_upscaling_off_hint':
+        return 'Never upscale the game window.';
+      case 'game_helper_bundle_missing':
+        return 'The galgame hook helper is not bundled with this build. Update Hibiki to get it.';
+      case 'game_upscaling_pick_title':
+        return ({required Object name}) => 'Window upscaling for ${name}';
+      case 'game_upscaling_pick_body':
+        return 'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
+      case 'game_upscaling_hint_not_installed':
+        return 'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
       default:
         return null;
     }
@@ -161813,16 +162144,12 @@ extension on _StringsPtBr {
         return 'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
       case 'game_upscaling_download_title':
         return 'Download Magpie upscaler?';
-      case 'game_upscaling_hint':
-        return 'Uses Magpie to upscale the galgame window while a hook session is running. Auto downloads Magpie on first use.';
       case 'game_upscaling_hint_external':
         return 'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
       case 'game_upscaling_hint_first_run':
         return 'Magpie still had to set itself up this time. Press Win+Shift+A to upscale now — next time you start the game it will happen automatically.';
       case 'game_upscaling_hint_manual':
         return 'Press Win+Shift+A to upscale the game window.';
-      case 'game_upscaling_hint_not_installed':
-        return 'Magpie is not installed. Set window upscaling to Auto to download it.';
       case 'game_upscaling_installed_only':
         return 'Installed only';
       case 'game_upscaling_off':
@@ -165315,6 +165642,20 @@ extension on _StringsPtBr {
         return 'Create card (mine)';
       case 'game_hook_reason_protocol_mismatch':
         return 'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
+      case 'game_upscaling_auto_hint':
+        return 'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+      case 'game_upscaling_installed_only_hint':
+        return 'Only use a Magpie that is already installed. Never downloads anything.';
+      case 'game_upscaling_off_hint':
+        return 'Never upscale the game window.';
+      case 'game_helper_bundle_missing':
+        return 'The galgame hook helper is not bundled with this build. Update Hibiki to get it.';
+      case 'game_upscaling_pick_title':
+        return ({required Object name}) => 'Window upscaling for ${name}';
+      case 'game_upscaling_pick_body':
+        return 'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
+      case 'game_upscaling_hint_not_installed':
+        return 'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
       default:
         return null;
     }
@@ -167434,16 +167775,12 @@ extension on _StringsRu {
         return 'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
       case 'game_upscaling_download_title':
         return 'Download Magpie upscaler?';
-      case 'game_upscaling_hint':
-        return 'Uses Magpie to upscale the galgame window while a hook session is running. Auto downloads Magpie on first use.';
       case 'game_upscaling_hint_external':
         return 'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
       case 'game_upscaling_hint_first_run':
         return 'Magpie still had to set itself up this time. Press Win+Shift+A to upscale now — next time you start the game it will happen automatically.';
       case 'game_upscaling_hint_manual':
         return 'Press Win+Shift+A to upscale the game window.';
-      case 'game_upscaling_hint_not_installed':
-        return 'Magpie is not installed. Set window upscaling to Auto to download it.';
       case 'game_upscaling_installed_only':
         return 'Installed only';
       case 'game_upscaling_off':
@@ -170938,6 +171275,20 @@ extension on _StringsRu {
         return 'Create card (mine)';
       case 'game_hook_reason_protocol_mismatch':
         return 'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
+      case 'game_upscaling_auto_hint':
+        return 'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+      case 'game_upscaling_installed_only_hint':
+        return 'Only use a Magpie that is already installed. Never downloads anything.';
+      case 'game_upscaling_off_hint':
+        return 'Never upscale the game window.';
+      case 'game_helper_bundle_missing':
+        return 'The galgame hook helper is not bundled with this build. Update Hibiki to get it.';
+      case 'game_upscaling_pick_title':
+        return ({required Object name}) => 'Window upscaling for ${name}';
+      case 'game_upscaling_pick_body':
+        return 'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
+      case 'game_upscaling_hint_not_installed':
+        return 'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
       default:
         return null;
     }
@@ -173050,16 +173401,12 @@ extension on _StringsTh {
         return 'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
       case 'game_upscaling_download_title':
         return 'Download Magpie upscaler?';
-      case 'game_upscaling_hint':
-        return 'Uses Magpie to upscale the galgame window while a hook session is running. Auto downloads Magpie on first use.';
       case 'game_upscaling_hint_external':
         return 'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
       case 'game_upscaling_hint_first_run':
         return 'Magpie still had to set itself up this time. Press Win+Shift+A to upscale now — next time you start the game it will happen automatically.';
       case 'game_upscaling_hint_manual':
         return 'Press Win+Shift+A to upscale the game window.';
-      case 'game_upscaling_hint_not_installed':
-        return 'Magpie is not installed. Set window upscaling to Auto to download it.';
       case 'game_upscaling_installed_only':
         return 'Installed only';
       case 'game_upscaling_off':
@@ -176545,6 +176892,20 @@ extension on _StringsTh {
         return 'Create card (mine)';
       case 'game_hook_reason_protocol_mismatch':
         return 'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
+      case 'game_upscaling_auto_hint':
+        return 'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+      case 'game_upscaling_installed_only_hint':
+        return 'Only use a Magpie that is already installed. Never downloads anything.';
+      case 'game_upscaling_off_hint':
+        return 'Never upscale the game window.';
+      case 'game_helper_bundle_missing':
+        return 'The galgame hook helper is not bundled with this build. Update Hibiki to get it.';
+      case 'game_upscaling_pick_title':
+        return ({required Object name}) => 'Window upscaling for ${name}';
+      case 'game_upscaling_pick_body':
+        return 'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
+      case 'game_upscaling_hint_not_installed':
+        return 'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
       default:
         return null;
     }
@@ -178662,16 +179023,12 @@ extension on _StringsTr {
         return 'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
       case 'game_upscaling_download_title':
         return 'Download Magpie upscaler?';
-      case 'game_upscaling_hint':
-        return 'Uses Magpie to upscale the galgame window while a hook session is running. Auto downloads Magpie on first use.';
       case 'game_upscaling_hint_external':
         return 'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
       case 'game_upscaling_hint_first_run':
         return 'Magpie still had to set itself up this time. Press Win+Shift+A to upscale now — next time you start the game it will happen automatically.';
       case 'game_upscaling_hint_manual':
         return 'Press Win+Shift+A to upscale the game window.';
-      case 'game_upscaling_hint_not_installed':
-        return 'Magpie is not installed. Set window upscaling to Auto to download it.';
       case 'game_upscaling_installed_only':
         return 'Installed only';
       case 'game_upscaling_off':
@@ -182161,6 +182518,20 @@ extension on _StringsTr {
         return 'Create card (mine)';
       case 'game_hook_reason_protocol_mismatch':
         return 'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
+      case 'game_upscaling_auto_hint':
+        return 'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+      case 'game_upscaling_installed_only_hint':
+        return 'Only use a Magpie that is already installed. Never downloads anything.';
+      case 'game_upscaling_off_hint':
+        return 'Never upscale the game window.';
+      case 'game_helper_bundle_missing':
+        return 'The galgame hook helper is not bundled with this build. Update Hibiki to get it.';
+      case 'game_upscaling_pick_title':
+        return ({required Object name}) => 'Window upscaling for ${name}';
+      case 'game_upscaling_pick_body':
+        return 'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
+      case 'game_upscaling_hint_not_installed':
+        return 'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
       default:
         return null;
     }
@@ -184275,16 +184646,12 @@ extension on _StringsVi {
         return 'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
       case 'game_upscaling_download_title':
         return 'Download Magpie upscaler?';
-      case 'game_upscaling_hint':
-        return 'Uses Magpie to upscale the galgame window while a hook session is running. Auto downloads Magpie on first use.';
       case 'game_upscaling_hint_external':
         return 'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
       case 'game_upscaling_hint_first_run':
         return 'Magpie still had to set itself up this time. Press Win+Shift+A to upscale now — next time you start the game it will happen automatically.';
       case 'game_upscaling_hint_manual':
         return 'Press Win+Shift+A to upscale the game window.';
-      case 'game_upscaling_hint_not_installed':
-        return 'Magpie is not installed. Set window upscaling to Auto to download it.';
       case 'game_upscaling_installed_only':
         return 'Installed only';
       case 'game_upscaling_off':
@@ -187772,6 +188139,20 @@ extension on _StringsVi {
         return 'Create card (mine)';
       case 'game_hook_reason_protocol_mismatch':
         return 'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
+      case 'game_upscaling_auto_hint':
+        return 'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+      case 'game_upscaling_installed_only_hint':
+        return 'Only use a Magpie that is already installed. Never downloads anything.';
+      case 'game_upscaling_off_hint':
+        return 'Never upscale the game window.';
+      case 'game_helper_bundle_missing':
+        return 'The galgame hook helper is not bundled with this build. Update Hibiki to get it.';
+      case 'game_upscaling_pick_title':
+        return ({required Object name}) => 'Window upscaling for ${name}';
+      case 'game_upscaling_pick_body':
+        return 'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
+      case 'game_upscaling_hint_not_installed':
+        return 'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
       default:
         return null;
     }
@@ -189870,16 +190251,12 @@ extension on _StringsZhCn {
         return '游戏窗口超分需要 Magpie（约 10 MB，GPL-3.0，由我们自行从源码编译）。现在下载吗？';
       case 'game_upscaling_download_title':
         return '下载 Magpie 超分组件？';
-      case 'game_upscaling_hint':
-        return '使用 Magpie 在 galgame hook 会话期间对游戏窗口做超分。「自动」会在首次使用时按需下载 Magpie。';
       case 'game_upscaling_hint_external':
         return '你的电脑上已经开着一个 Magpie，Hibiki 没有去动它。按 Win+Shift+A 就能放大游戏窗口。';
       case 'game_upscaling_hint_first_run':
         return '这次 Magpie 还在做首次初始化。现在按 Win+Shift+A 就能放大；下次启动游戏会自动放大。';
       case 'game_upscaling_hint_manual':
         return '按 Win+Shift+A 放大游戏窗口。';
-      case 'game_upscaling_hint_not_installed':
-        return '没有安装 Magpie。把「游戏窗口超分」改成「自动」即可下载。';
       case 'game_upscaling_installed_only':
         return '仅用已装';
       case 'game_upscaling_off':
@@ -193337,6 +193714,20 @@ extension on _StringsZhCn {
         return '制卡（加号）';
       case 'game_hook_reason_protocol_mismatch':
         return '捕获组件版本与 Hibiki 不一致，请更新或重新安装 galgame 捕获组件。';
+      case 'game_upscaling_auto_hint':
+        return '优先用机器上已有的 Magpie；没有就在征得同意后下载我们的自编产物（约 10 MB）。';
+      case 'game_upscaling_installed_only_hint':
+        return '只用机器上已经装好的 Magpie，绝不联网下载。';
+      case 'game_upscaling_off_hint':
+        return '不放大游戏窗口。';
+      case 'game_helper_bundle_missing':
+        return '这个版本没有随包附带 galgame 钩子 helper，请更新 Hibiki 获取。';
+      case 'game_upscaling_pick_title':
+        return ({required Object name}) => '${name} 的窗口超分';
+      case 'game_upscaling_pick_body':
+        return '捕获会话期间用 Magpie 放大这个游戏的窗口。每个游戏各自设置——只有原生分辨率低于屏幕的游戏才用得上。会占用显卡。';
+      case 'game_upscaling_hint_not_installed':
+        return '没有安装 Magpie。在游戏库里右键这个游戏，把「窗口超分」改成「自动」即可下载。';
       default:
         return null;
     }
@@ -195443,16 +195834,12 @@ extension on _StringsZhHk {
         return 'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
       case 'game_upscaling_download_title':
         return 'Download Magpie upscaler?';
-      case 'game_upscaling_hint':
-        return 'Uses Magpie to upscale the galgame window while a hook session is running. Auto downloads Magpie on first use.';
       case 'game_upscaling_hint_external':
         return 'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
       case 'game_upscaling_hint_first_run':
         return 'Magpie still had to set itself up this time. Press Win+Shift+A to upscale now — next time you start the game it will happen automatically.';
       case 'game_upscaling_hint_manual':
         return 'Press Win+Shift+A to upscale the game window.';
-      case 'game_upscaling_hint_not_installed':
-        return 'Magpie is not installed. Set window upscaling to Auto to download it.';
       case 'game_upscaling_installed_only':
         return 'Installed only';
       case 'game_upscaling_off':
@@ -198922,6 +199309,20 @@ extension on _StringsZhHk {
         return 'Create card (mine)';
       case 'game_hook_reason_protocol_mismatch':
         return 'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
+      case 'game_upscaling_auto_hint':
+        return 'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+      case 'game_upscaling_installed_only_hint':
+        return 'Only use a Magpie that is already installed. Never downloads anything.';
+      case 'game_upscaling_off_hint':
+        return 'Never upscale the game window.';
+      case 'game_helper_bundle_missing':
+        return 'The galgame hook helper is not bundled with this build. Update Hibiki to get it.';
+      case 'game_upscaling_pick_title':
+        return ({required Object name}) => 'Window upscaling for ${name}';
+      case 'game_upscaling_pick_body':
+        return 'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
+      case 'game_upscaling_hint_not_installed':
+        return 'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
       default:
         return null;
     }
