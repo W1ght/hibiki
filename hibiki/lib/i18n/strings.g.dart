@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 46138 (2714 per locale)
+/// Strings: 46172 (2716 per locale)
 ///
-/// Built on 2026-07-28 at 07:50 UTC
+/// Built on 2026-07-28 at 09:02 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3642,6 +3642,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get shortcut_action_manga_page_forward => 'Next page';
   String get shortcut_action_manga_page_backward => 'Previous page';
   String get shortcut_action_manga_dismiss_dict => 'Close dictionary';
+  String get video_setting_jimaku_default_language =>
+      'Default subtitle language';
+  String get video_setting_jimaku_default_language_hint =>
+      'Preferred language when the series has no remembered choice';
 }
 
 // Path: <root>
@@ -9846,6 +9850,12 @@ class _StringsAr extends _StringsEn {
   String get shortcut_action_manga_page_backward => 'Previous page';
   @override
   String get shortcut_action_manga_dismiss_dict => 'Close dictionary';
+  @override
+  String get video_setting_jimaku_default_language =>
+      'Default subtitle language';
+  @override
+  String get video_setting_jimaku_default_language_hint =>
+      'Preferred language when the series has no remembered choice';
 }
 
 // Path: <root>
@@ -16118,6 +16128,12 @@ class _StringsDe extends _StringsEn {
   String get shortcut_action_manga_page_backward => 'Previous page';
   @override
   String get shortcut_action_manga_dismiss_dict => 'Close dictionary';
+  @override
+  String get video_setting_jimaku_default_language =>
+      'Default subtitle language';
+  @override
+  String get video_setting_jimaku_default_language_hint =>
+      'Preferred language when the series has no remembered choice';
 }
 
 // Path: <root>
@@ -22406,6 +22422,12 @@ class _StringsEs extends _StringsEn {
   String get shortcut_action_manga_page_backward => 'Previous page';
   @override
   String get shortcut_action_manga_dismiss_dict => 'Close dictionary';
+  @override
+  String get video_setting_jimaku_default_language =>
+      'Default subtitle language';
+  @override
+  String get video_setting_jimaku_default_language_hint =>
+      'Preferred language when the series has no remembered choice';
 }
 
 // Path: <root>
@@ -28705,6 +28727,12 @@ class _StringsFr extends _StringsEn {
   String get shortcut_action_manga_page_backward => 'Previous page';
   @override
   String get shortcut_action_manga_dismiss_dict => 'Close dictionary';
+  @override
+  String get video_setting_jimaku_default_language =>
+      'Default subtitle language';
+  @override
+  String get video_setting_jimaku_default_language_hint =>
+      'Preferred language when the series has no remembered choice';
 }
 
 // Path: <root>
@@ -34933,6 +34961,12 @@ class _StringsId extends _StringsEn {
   String get shortcut_action_manga_page_backward => 'Previous page';
   @override
   String get shortcut_action_manga_dismiss_dict => 'Close dictionary';
+  @override
+  String get video_setting_jimaku_default_language =>
+      'Default subtitle language';
+  @override
+  String get video_setting_jimaku_default_language_hint =>
+      'Preferred language when the series has no remembered choice';
 }
 
 // Path: <root>
@@ -41207,6 +41241,12 @@ class _StringsIt extends _StringsEn {
   String get shortcut_action_manga_page_backward => 'Previous page';
   @override
   String get shortcut_action_manga_dismiss_dict => 'Close dictionary';
+  @override
+  String get video_setting_jimaku_default_language =>
+      'Default subtitle language';
+  @override
+  String get video_setting_jimaku_default_language_hint =>
+      'Preferred language when the series has no remembered choice';
 }
 
 // Path: <root>
@@ -47298,6 +47338,12 @@ class _StringsJa extends _StringsEn {
   String get shortcut_action_manga_page_backward => 'Previous page';
   @override
   String get shortcut_action_manga_dismiss_dict => 'Close dictionary';
+  @override
+  String get video_setting_jimaku_default_language =>
+      'Default subtitle language';
+  @override
+  String get video_setting_jimaku_default_language_hint =>
+      'Preferred language when the series has no remembered choice';
 }
 
 // Path: <root>
@@ -53391,6 +53437,12 @@ class _StringsKo extends _StringsEn {
   String get shortcut_action_manga_page_backward => 'Previous page';
   @override
   String get shortcut_action_manga_dismiss_dict => 'Close dictionary';
+  @override
+  String get video_setting_jimaku_default_language =>
+      'Default subtitle language';
+  @override
+  String get video_setting_jimaku_default_language_hint =>
+      'Preferred language when the series has no remembered choice';
 }
 
 // Path: <root>
@@ -59645,6 +59697,12 @@ class _StringsNl extends _StringsEn {
   String get shortcut_action_manga_page_backward => 'Previous page';
   @override
   String get shortcut_action_manga_dismiss_dict => 'Close dictionary';
+  @override
+  String get video_setting_jimaku_default_language =>
+      'Default subtitle language';
+  @override
+  String get video_setting_jimaku_default_language_hint =>
+      'Preferred language when the series has no remembered choice';
 }
 
 // Path: <root>
@@ -65912,6 +65970,12 @@ class _StringsPtBr extends _StringsEn {
   String get shortcut_action_manga_page_backward => 'Previous page';
   @override
   String get shortcut_action_manga_dismiss_dict => 'Close dictionary';
+  @override
+  String get video_setting_jimaku_default_language =>
+      'Default subtitle language';
+  @override
+  String get video_setting_jimaku_default_language_hint =>
+      'Preferred language when the series has no remembered choice';
 }
 
 // Path: <root>
@@ -72163,6 +72227,12 @@ class _StringsRu extends _StringsEn {
   String get shortcut_action_manga_page_backward => 'Previous page';
   @override
   String get shortcut_action_manga_dismiss_dict => 'Close dictionary';
+  @override
+  String get video_setting_jimaku_default_language =>
+      'Default subtitle language';
+  @override
+  String get video_setting_jimaku_default_language_hint =>
+      'Preferred language when the series has no remembered choice';
 }
 
 // Path: <root>
@@ -78362,6 +78432,12 @@ class _StringsTh extends _StringsEn {
   String get shortcut_action_manga_page_backward => 'Previous page';
   @override
   String get shortcut_action_manga_dismiss_dict => 'Close dictionary';
+  @override
+  String get video_setting_jimaku_default_language =>
+      'Default subtitle language';
+  @override
+  String get video_setting_jimaku_default_language_hint =>
+      'Preferred language when the series has no remembered choice';
 }
 
 // Path: <root>
@@ -84593,6 +84669,12 @@ class _StringsTr extends _StringsEn {
   String get shortcut_action_manga_page_backward => 'Previous page';
   @override
   String get shortcut_action_manga_dismiss_dict => 'Close dictionary';
+  @override
+  String get video_setting_jimaku_default_language =>
+      'Default subtitle language';
+  @override
+  String get video_setting_jimaku_default_language_hint =>
+      'Preferred language when the series has no remembered choice';
 }
 
 // Path: <root>
@@ -90809,6 +90891,12 @@ class _StringsVi extends _StringsEn {
   String get shortcut_action_manga_page_backward => 'Previous page';
   @override
   String get shortcut_action_manga_dismiss_dict => 'Close dictionary';
+  @override
+  String get video_setting_jimaku_default_language =>
+      'Default subtitle language';
+  @override
+  String get video_setting_jimaku_default_language_hint =>
+      'Preferred language when the series has no remembered choice';
 }
 
 // Path: <root>
@@ -96591,6 +96679,10 @@ class _StringsZhCn extends _StringsEn {
   String get shortcut_action_manga_page_backward => '上一页';
   @override
   String get shortcut_action_manga_dismiss_dict => '关闭词典';
+  @override
+  String get video_setting_jimaku_default_language => '默认字幕语言';
+  @override
+  String get video_setting_jimaku_default_language_hint => '该系列没有记住的语言时优先使用';
 }
 
 // Path: <root>
@@ -102603,6 +102695,12 @@ class _StringsZhHk extends _StringsEn {
   String get shortcut_action_manga_page_backward => 'Previous page';
   @override
   String get shortcut_action_manga_dismiss_dict => 'Close dictionary';
+  @override
+  String get video_setting_jimaku_default_language =>
+      'Default subtitle language';
+  @override
+  String get video_setting_jimaku_default_language_hint =>
+      'Preferred language when the series has no remembered choice';
 }
 
 /// Flat map(s) containing all translations.
@@ -108163,6 +108261,10 @@ extension on _StringsEn {
         return 'Previous page';
       case 'shortcut_action_manga_dismiss_dict':
         return 'Close dictionary';
+      case 'video_setting_jimaku_default_language':
+        return 'Default subtitle language';
+      case 'video_setting_jimaku_default_language_hint':
+        return 'Preferred language when the series has no remembered choice';
       default:
         return null;
     }
@@ -113721,6 +113823,10 @@ extension on _StringsAr {
         return 'Previous page';
       case 'shortcut_action_manga_dismiss_dict':
         return 'Close dictionary';
+      case 'video_setting_jimaku_default_language':
+        return 'Default subtitle language';
+      case 'video_setting_jimaku_default_language_hint':
+        return 'Preferred language when the series has no remembered choice';
       default:
         return null;
     }
@@ -119300,6 +119406,10 @@ extension on _StringsDe {
         return 'Previous page';
       case 'shortcut_action_manga_dismiss_dict':
         return 'Close dictionary';
+      case 'video_setting_jimaku_default_language':
+        return 'Default subtitle language';
+      case 'video_setting_jimaku_default_language_hint':
+        return 'Preferred language when the series has no remembered choice';
       default:
         return null;
     }
@@ -124878,6 +124988,10 @@ extension on _StringsEs {
         return 'Previous page';
       case 'shortcut_action_manga_dismiss_dict':
         return 'Close dictionary';
+      case 'video_setting_jimaku_default_language':
+        return 'Default subtitle language';
+      case 'video_setting_jimaku_default_language_hint':
+        return 'Preferred language when the series has no remembered choice';
       default:
         return null;
     }
@@ -130462,6 +130576,10 @@ extension on _StringsFr {
         return 'Previous page';
       case 'shortcut_action_manga_dismiss_dict':
         return 'Close dictionary';
+      case 'video_setting_jimaku_default_language':
+        return 'Default subtitle language';
+      case 'video_setting_jimaku_default_language_hint':
+        return 'Preferred language when the series has no remembered choice';
       default:
         return null;
     }
@@ -136028,6 +136146,10 @@ extension on _StringsId {
         return 'Previous page';
       case 'shortcut_action_manga_dismiss_dict':
         return 'Close dictionary';
+      case 'video_setting_jimaku_default_language':
+        return 'Default subtitle language';
+      case 'video_setting_jimaku_default_language_hint':
+        return 'Preferred language when the series has no remembered choice';
       default:
         return null;
     }
@@ -141609,6 +141731,10 @@ extension on _StringsIt {
         return 'Previous page';
       case 'shortcut_action_manga_dismiss_dict':
         return 'Close dictionary';
+      case 'video_setting_jimaku_default_language':
+        return 'Default subtitle language';
+      case 'video_setting_jimaku_default_language_hint':
+        return 'Preferred language when the series has no remembered choice';
       default:
         return null;
     }
@@ -147152,6 +147278,10 @@ extension on _StringsJa {
         return 'Previous page';
       case 'shortcut_action_manga_dismiss_dict':
         return 'Close dictionary';
+      case 'video_setting_jimaku_default_language':
+        return 'Default subtitle language';
+      case 'video_setting_jimaku_default_language_hint':
+        return 'Preferred language when the series has no remembered choice';
       default:
         return null;
     }
@@ -152699,6 +152829,10 @@ extension on _StringsKo {
         return 'Previous page';
       case 'shortcut_action_manga_dismiss_dict':
         return 'Close dictionary';
+      case 'video_setting_jimaku_default_language':
+        return 'Default subtitle language';
+      case 'video_setting_jimaku_default_language_hint':
+        return 'Preferred language when the series has no remembered choice';
       default:
         return null;
     }
@@ -158273,6 +158407,10 @@ extension on _StringsNl {
         return 'Previous page';
       case 'shortcut_action_manga_dismiss_dict':
         return 'Close dictionary';
+      case 'video_setting_jimaku_default_language':
+        return 'Default subtitle language';
+      case 'video_setting_jimaku_default_language_hint':
+        return 'Preferred language when the series has no remembered choice';
       default:
         return null;
     }
@@ -163844,6 +163982,10 @@ extension on _StringsPtBr {
         return 'Previous page';
       case 'shortcut_action_manga_dismiss_dict':
         return 'Close dictionary';
+      case 'video_setting_jimaku_default_language':
+        return 'Default subtitle language';
+      case 'video_setting_jimaku_default_language_hint':
+        return 'Preferred language when the series has no remembered choice';
       default:
         return null;
     }
@@ -169420,6 +169562,10 @@ extension on _StringsRu {
         return 'Previous page';
       case 'shortcut_action_manga_dismiss_dict':
         return 'Close dictionary';
+      case 'video_setting_jimaku_default_language':
+        return 'Default subtitle language';
+      case 'video_setting_jimaku_default_language_hint':
+        return 'Preferred language when the series has no remembered choice';
       default:
         return null;
     }
@@ -174980,6 +175126,10 @@ extension on _StringsTh {
         return 'Previous page';
       case 'shortcut_action_manga_dismiss_dict':
         return 'Close dictionary';
+      case 'video_setting_jimaku_default_language':
+        return 'Default subtitle language';
+      case 'video_setting_jimaku_default_language_hint':
+        return 'Preferred language when the series has no remembered choice';
       default:
         return null;
     }
@@ -180549,6 +180699,10 @@ extension on _StringsTr {
         return 'Previous page';
       case 'shortcut_action_manga_dismiss_dict':
         return 'Close dictionary';
+      case 'video_setting_jimaku_default_language':
+        return 'Default subtitle language';
+      case 'video_setting_jimaku_default_language_hint':
+        return 'Preferred language when the series has no remembered choice';
       default:
         return null;
     }
@@ -186113,6 +186267,10 @@ extension on _StringsVi {
         return 'Previous page';
       case 'shortcut_action_manga_dismiss_dict':
         return 'Close dictionary';
+      case 'video_setting_jimaku_default_language':
+        return 'Default subtitle language';
+      case 'video_setting_jimaku_default_language_hint':
+        return 'Preferred language when the series has no remembered choice';
       default:
         return null;
     }
@@ -191631,6 +191789,10 @@ extension on _StringsZhCn {
         return '上一页';
       case 'shortcut_action_manga_dismiss_dict':
         return '关闭词典';
+      case 'video_setting_jimaku_default_language':
+        return '默认字幕语言';
+      case 'video_setting_jimaku_default_language_hint':
+        return '该系列没有记住的语言时优先使用';
       default:
         return null;
     }
@@ -197169,6 +197331,10 @@ extension on _StringsZhHk {
         return 'Previous page';
       case 'shortcut_action_manga_dismiss_dict':
         return 'Close dictionary';
+      case 'video_setting_jimaku_default_language':
+        return 'Default subtitle language';
+      case 'video_setting_jimaku_default_language_hint':
+        return 'Preferred language when the series has no remembered choice';
       default:
         return null;
     }
