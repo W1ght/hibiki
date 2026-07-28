@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 46189 (2717 per locale)
+/// Strings: 46223 (2719 per locale)
 ///
-/// Built on 2026-07-28 at 09:04 UTC
+/// Built on 2026-07-28 at 09:05 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3648,6 +3648,11 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Preferred language when the series has no remembered choice';
   String get video_jimaku_api_key_settings_hint =>
       'Also editable in Settings → Video → Subtitles';
+  String anime_download_subs_partial(
+          {required Object done, required Object total}) =>
+      'Subtitles: only ${done} of ${total} downloaded';
+  String get anime_download_subs_episodes_unverified =>
+      'Episode numbers are not verified against this pack - subtitles may come from another season.';
 }
 
 // Path: <root>
@@ -9861,6 +9866,13 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_jimaku_api_key_settings_hint =>
       'Also editable in Settings → Video → Subtitles';
+  @override
+  String anime_download_subs_partial(
+          {required Object done, required Object total}) =>
+      'Subtitles: only ${done} of ${total} downloaded';
+  @override
+  String get anime_download_subs_episodes_unverified =>
+      'Episode numbers are not verified against this pack - subtitles may come from another season.';
 }
 
 // Path: <root>
@@ -16142,6 +16154,13 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_jimaku_api_key_settings_hint =>
       'Also editable in Settings → Video → Subtitles';
+  @override
+  String anime_download_subs_partial(
+          {required Object done, required Object total}) =>
+      'Subtitles: only ${done} of ${total} downloaded';
+  @override
+  String get anime_download_subs_episodes_unverified =>
+      'Episode numbers are not verified against this pack - subtitles may come from another season.';
 }
 
 // Path: <root>
@@ -22439,6 +22458,13 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_jimaku_api_key_settings_hint =>
       'Also editable in Settings → Video → Subtitles';
+  @override
+  String anime_download_subs_partial(
+          {required Object done, required Object total}) =>
+      'Subtitles: only ${done} of ${total} downloaded';
+  @override
+  String get anime_download_subs_episodes_unverified =>
+      'Episode numbers are not verified against this pack - subtitles may come from another season.';
 }
 
 // Path: <root>
@@ -28747,6 +28773,13 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_jimaku_api_key_settings_hint =>
       'Also editable in Settings → Video → Subtitles';
+  @override
+  String anime_download_subs_partial(
+          {required Object done, required Object total}) =>
+      'Subtitles: only ${done} of ${total} downloaded';
+  @override
+  String get anime_download_subs_episodes_unverified =>
+      'Episode numbers are not verified against this pack - subtitles may come from another season.';
 }
 
 // Path: <root>
@@ -34984,6 +35017,13 @@ class _StringsId extends _StringsEn {
   @override
   String get video_jimaku_api_key_settings_hint =>
       'Also editable in Settings → Video → Subtitles';
+  @override
+  String anime_download_subs_partial(
+          {required Object done, required Object total}) =>
+      'Subtitles: only ${done} of ${total} downloaded';
+  @override
+  String get anime_download_subs_episodes_unverified =>
+      'Episode numbers are not verified against this pack - subtitles may come from another season.';
 }
 
 // Path: <root>
@@ -41267,6 +41307,13 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_jimaku_api_key_settings_hint =>
       'Also editable in Settings → Video → Subtitles';
+  @override
+  String anime_download_subs_partial(
+          {required Object done, required Object total}) =>
+      'Subtitles: only ${done} of ${total} downloaded';
+  @override
+  String get anime_download_subs_episodes_unverified =>
+      'Episode numbers are not verified against this pack - subtitles may come from another season.';
 }
 
 // Path: <root>
@@ -47367,6 +47414,13 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_jimaku_api_key_settings_hint =>
       'Also editable in Settings → Video → Subtitles';
+  @override
+  String anime_download_subs_partial(
+          {required Object done, required Object total}) =>
+      'Subtitles: only ${done} of ${total} downloaded';
+  @override
+  String get anime_download_subs_episodes_unverified =>
+      'Episode numbers are not verified against this pack - subtitles may come from another season.';
 }
 
 // Path: <root>
@@ -53469,6 +53523,13 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_jimaku_api_key_settings_hint =>
       'Also editable in Settings → Video → Subtitles';
+  @override
+  String anime_download_subs_partial(
+          {required Object done, required Object total}) =>
+      'Subtitles: only ${done} of ${total} downloaded';
+  @override
+  String get anime_download_subs_episodes_unverified =>
+      'Episode numbers are not verified against this pack - subtitles may come from another season.';
 }
 
 // Path: <root>
@@ -59732,6 +59793,13 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_jimaku_api_key_settings_hint =>
       'Also editable in Settings → Video → Subtitles';
+  @override
+  String anime_download_subs_partial(
+          {required Object done, required Object total}) =>
+      'Subtitles: only ${done} of ${total} downloaded';
+  @override
+  String get anime_download_subs_episodes_unverified =>
+      'Episode numbers are not verified against this pack - subtitles may come from another season.';
 }
 
 // Path: <root>
@@ -66008,6 +66076,13 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_jimaku_api_key_settings_hint =>
       'Also editable in Settings → Video → Subtitles';
+  @override
+  String anime_download_subs_partial(
+          {required Object done, required Object total}) =>
+      'Subtitles: only ${done} of ${total} downloaded';
+  @override
+  String get anime_download_subs_episodes_unverified =>
+      'Episode numbers are not verified against this pack - subtitles may come from another season.';
 }
 
 // Path: <root>
@@ -72268,6 +72343,13 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_jimaku_api_key_settings_hint =>
       'Also editable in Settings → Video → Subtitles';
+  @override
+  String anime_download_subs_partial(
+          {required Object done, required Object total}) =>
+      'Subtitles: only ${done} of ${total} downloaded';
+  @override
+  String get anime_download_subs_episodes_unverified =>
+      'Episode numbers are not verified against this pack - subtitles may come from another season.';
 }
 
 // Path: <root>
@@ -78476,6 +78558,13 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_jimaku_api_key_settings_hint =>
       'Also editable in Settings → Video → Subtitles';
+  @override
+  String anime_download_subs_partial(
+          {required Object done, required Object total}) =>
+      'Subtitles: only ${done} of ${total} downloaded';
+  @override
+  String get anime_download_subs_episodes_unverified =>
+      'Episode numbers are not verified against this pack - subtitles may come from another season.';
 }
 
 // Path: <root>
@@ -84716,6 +84805,13 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_jimaku_api_key_settings_hint =>
       'Also editable in Settings → Video → Subtitles';
+  @override
+  String anime_download_subs_partial(
+          {required Object done, required Object total}) =>
+      'Subtitles: only ${done} of ${total} downloaded';
+  @override
+  String get anime_download_subs_episodes_unverified =>
+      'Episode numbers are not verified against this pack - subtitles may come from another season.';
 }
 
 // Path: <root>
@@ -90941,6 +91037,13 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_jimaku_api_key_settings_hint =>
       'Also editable in Settings → Video → Subtitles';
+  @override
+  String anime_download_subs_partial(
+          {required Object done, required Object total}) =>
+      'Subtitles: only ${done} of ${total} downloaded';
+  @override
+  String get anime_download_subs_episodes_unverified =>
+      'Episode numbers are not verified against this pack - subtitles may come from another season.';
 }
 
 // Path: <root>
@@ -96729,6 +96832,12 @@ class _StringsZhCn extends _StringsEn {
   String get video_setting_jimaku_default_language_hint => '该系列没有记住的语言时优先使用';
   @override
   String get video_jimaku_api_key_settings_hint => '也可在 设置 → 视频 → 字幕 中修改';
+  @override
+  String anime_download_subs_partial(
+          {required Object done, required Object total}) =>
+      '字幕只成功下载 ${done}/${total} 条';
+  @override
+  String get anime_download_subs_episodes_unverified => '集号未与该整季包核对，字幕可能来自别的季。';
 }
 
 // Path: <root>
@@ -102750,6 +102859,13 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_jimaku_api_key_settings_hint =>
       'Also editable in Settings → Video → Subtitles';
+  @override
+  String anime_download_subs_partial(
+          {required Object done, required Object total}) =>
+      'Subtitles: only ${done} of ${total} downloaded';
+  @override
+  String get anime_download_subs_episodes_unverified =>
+      'Episode numbers are not verified against this pack - subtitles may come from another season.';
 }
 
 /// Flat map(s) containing all translations.
@@ -108316,6 +108432,11 @@ extension on _StringsEn {
         return 'Preferred language when the series has no remembered choice';
       case 'video_jimaku_api_key_settings_hint':
         return 'Also editable in Settings → Video → Subtitles';
+      case 'anime_download_subs_partial':
+        return ({required Object done, required Object total}) =>
+            'Subtitles: only ${done} of ${total} downloaded';
+      case 'anime_download_subs_episodes_unverified':
+        return 'Episode numbers are not verified against this pack - subtitles may come from another season.';
       default:
         return null;
     }
@@ -113880,6 +114001,11 @@ extension on _StringsAr {
         return 'Preferred language when the series has no remembered choice';
       case 'video_jimaku_api_key_settings_hint':
         return 'Also editable in Settings → Video → Subtitles';
+      case 'anime_download_subs_partial':
+        return ({required Object done, required Object total}) =>
+            'Subtitles: only ${done} of ${total} downloaded';
+      case 'anime_download_subs_episodes_unverified':
+        return 'Episode numbers are not verified against this pack - subtitles may come from another season.';
       default:
         return null;
     }
@@ -119465,6 +119591,11 @@ extension on _StringsDe {
         return 'Preferred language when the series has no remembered choice';
       case 'video_jimaku_api_key_settings_hint':
         return 'Also editable in Settings → Video → Subtitles';
+      case 'anime_download_subs_partial':
+        return ({required Object done, required Object total}) =>
+            'Subtitles: only ${done} of ${total} downloaded';
+      case 'anime_download_subs_episodes_unverified':
+        return 'Episode numbers are not verified against this pack - subtitles may come from another season.';
       default:
         return null;
     }
@@ -125049,6 +125180,11 @@ extension on _StringsEs {
         return 'Preferred language when the series has no remembered choice';
       case 'video_jimaku_api_key_settings_hint':
         return 'Also editable in Settings → Video → Subtitles';
+      case 'anime_download_subs_partial':
+        return ({required Object done, required Object total}) =>
+            'Subtitles: only ${done} of ${total} downloaded';
+      case 'anime_download_subs_episodes_unverified':
+        return 'Episode numbers are not verified against this pack - subtitles may come from another season.';
       default:
         return null;
     }
@@ -130639,6 +130775,11 @@ extension on _StringsFr {
         return 'Preferred language when the series has no remembered choice';
       case 'video_jimaku_api_key_settings_hint':
         return 'Also editable in Settings → Video → Subtitles';
+      case 'anime_download_subs_partial':
+        return ({required Object done, required Object total}) =>
+            'Subtitles: only ${done} of ${total} downloaded';
+      case 'anime_download_subs_episodes_unverified':
+        return 'Episode numbers are not verified against this pack - subtitles may come from another season.';
       default:
         return null;
     }
@@ -136211,6 +136352,11 @@ extension on _StringsId {
         return 'Preferred language when the series has no remembered choice';
       case 'video_jimaku_api_key_settings_hint':
         return 'Also editable in Settings → Video → Subtitles';
+      case 'anime_download_subs_partial':
+        return ({required Object done, required Object total}) =>
+            'Subtitles: only ${done} of ${total} downloaded';
+      case 'anime_download_subs_episodes_unverified':
+        return 'Episode numbers are not verified against this pack - subtitles may come from another season.';
       default:
         return null;
     }
@@ -141798,6 +141944,11 @@ extension on _StringsIt {
         return 'Preferred language when the series has no remembered choice';
       case 'video_jimaku_api_key_settings_hint':
         return 'Also editable in Settings → Video → Subtitles';
+      case 'anime_download_subs_partial':
+        return ({required Object done, required Object total}) =>
+            'Subtitles: only ${done} of ${total} downloaded';
+      case 'anime_download_subs_episodes_unverified':
+        return 'Episode numbers are not verified against this pack - subtitles may come from another season.';
       default:
         return null;
     }
@@ -147347,6 +147498,11 @@ extension on _StringsJa {
         return 'Preferred language when the series has no remembered choice';
       case 'video_jimaku_api_key_settings_hint':
         return 'Also editable in Settings → Video → Subtitles';
+      case 'anime_download_subs_partial':
+        return ({required Object done, required Object total}) =>
+            'Subtitles: only ${done} of ${total} downloaded';
+      case 'anime_download_subs_episodes_unverified':
+        return 'Episode numbers are not verified against this pack - subtitles may come from another season.';
       default:
         return null;
     }
@@ -152900,6 +153056,11 @@ extension on _StringsKo {
         return 'Preferred language when the series has no remembered choice';
       case 'video_jimaku_api_key_settings_hint':
         return 'Also editable in Settings → Video → Subtitles';
+      case 'anime_download_subs_partial':
+        return ({required Object done, required Object total}) =>
+            'Subtitles: only ${done} of ${total} downloaded';
+      case 'anime_download_subs_episodes_unverified':
+        return 'Episode numbers are not verified against this pack - subtitles may come from another season.';
       default:
         return null;
     }
@@ -158480,6 +158641,11 @@ extension on _StringsNl {
         return 'Preferred language when the series has no remembered choice';
       case 'video_jimaku_api_key_settings_hint':
         return 'Also editable in Settings → Video → Subtitles';
+      case 'anime_download_subs_partial':
+        return ({required Object done, required Object total}) =>
+            'Subtitles: only ${done} of ${total} downloaded';
+      case 'anime_download_subs_episodes_unverified':
+        return 'Episode numbers are not verified against this pack - subtitles may come from another season.';
       default:
         return null;
     }
@@ -164057,6 +164223,11 @@ extension on _StringsPtBr {
         return 'Preferred language when the series has no remembered choice';
       case 'video_jimaku_api_key_settings_hint':
         return 'Also editable in Settings → Video → Subtitles';
+      case 'anime_download_subs_partial':
+        return ({required Object done, required Object total}) =>
+            'Subtitles: only ${done} of ${total} downloaded';
+      case 'anime_download_subs_episodes_unverified':
+        return 'Episode numbers are not verified against this pack - subtitles may come from another season.';
       default:
         return null;
     }
@@ -169639,6 +169810,11 @@ extension on _StringsRu {
         return 'Preferred language when the series has no remembered choice';
       case 'video_jimaku_api_key_settings_hint':
         return 'Also editable in Settings → Video → Subtitles';
+      case 'anime_download_subs_partial':
+        return ({required Object done, required Object total}) =>
+            'Subtitles: only ${done} of ${total} downloaded';
+      case 'anime_download_subs_episodes_unverified':
+        return 'Episode numbers are not verified against this pack - subtitles may come from another season.';
       default:
         return null;
     }
@@ -175205,6 +175381,11 @@ extension on _StringsTh {
         return 'Preferred language when the series has no remembered choice';
       case 'video_jimaku_api_key_settings_hint':
         return 'Also editable in Settings → Video → Subtitles';
+      case 'anime_download_subs_partial':
+        return ({required Object done, required Object total}) =>
+            'Subtitles: only ${done} of ${total} downloaded';
+      case 'anime_download_subs_episodes_unverified':
+        return 'Episode numbers are not verified against this pack - subtitles may come from another season.';
       default:
         return null;
     }
@@ -180780,6 +180961,11 @@ extension on _StringsTr {
         return 'Preferred language when the series has no remembered choice';
       case 'video_jimaku_api_key_settings_hint':
         return 'Also editable in Settings → Video → Subtitles';
+      case 'anime_download_subs_partial':
+        return ({required Object done, required Object total}) =>
+            'Subtitles: only ${done} of ${total} downloaded';
+      case 'anime_download_subs_episodes_unverified':
+        return 'Episode numbers are not verified against this pack - subtitles may come from another season.';
       default:
         return null;
     }
@@ -186350,6 +186536,11 @@ extension on _StringsVi {
         return 'Preferred language when the series has no remembered choice';
       case 'video_jimaku_api_key_settings_hint':
         return 'Also editable in Settings → Video → Subtitles';
+      case 'anime_download_subs_partial':
+        return ({required Object done, required Object total}) =>
+            'Subtitles: only ${done} of ${total} downloaded';
+      case 'anime_download_subs_episodes_unverified':
+        return 'Episode numbers are not verified against this pack - subtitles may come from another season.';
       default:
         return null;
     }
@@ -191874,6 +192065,11 @@ extension on _StringsZhCn {
         return '该系列没有记住的语言时优先使用';
       case 'video_jimaku_api_key_settings_hint':
         return '也可在 设置 → 视频 → 字幕 中修改';
+      case 'anime_download_subs_partial':
+        return ({required Object done, required Object total}) =>
+            '字幕只成功下载 ${done}/${total} 条';
+      case 'anime_download_subs_episodes_unverified':
+        return '集号未与该整季包核对，字幕可能来自别的季。';
       default:
         return null;
     }
@@ -197418,6 +197614,11 @@ extension on _StringsZhHk {
         return 'Preferred language when the series has no remembered choice';
       case 'video_jimaku_api_key_settings_hint':
         return 'Also editable in Settings → Video → Subtitles';
+      case 'anime_download_subs_partial':
+        return ({required Object done, required Object total}) =>
+            'Subtitles: only ${done} of ${total} downloaded';
+      case 'anime_download_subs_episodes_unverified':
+        return 'Episode numbers are not verified against this pack - subtitles may come from another season.';
       default:
         return null;
     }
