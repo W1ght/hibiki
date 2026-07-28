@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 46172 (2716 per locale)
+/// Strings: 46189 (2717 per locale)
 ///
-/// Built on 2026-07-28 at 09:02 UTC
+/// Built on 2026-07-28 at 09:04 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3646,6 +3646,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Default subtitle language';
   String get video_setting_jimaku_default_language_hint =>
       'Preferred language when the series has no remembered choice';
+  String get video_jimaku_api_key_settings_hint =>
+      'Also editable in Settings → Video → Subtitles';
 }
 
 // Path: <root>
@@ -9856,6 +9858,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_setting_jimaku_default_language_hint =>
       'Preferred language when the series has no remembered choice';
+  @override
+  String get video_jimaku_api_key_settings_hint =>
+      'Also editable in Settings → Video → Subtitles';
 }
 
 // Path: <root>
@@ -16134,6 +16139,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_setting_jimaku_default_language_hint =>
       'Preferred language when the series has no remembered choice';
+  @override
+  String get video_jimaku_api_key_settings_hint =>
+      'Also editable in Settings → Video → Subtitles';
 }
 
 // Path: <root>
@@ -22428,6 +22436,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_setting_jimaku_default_language_hint =>
       'Preferred language when the series has no remembered choice';
+  @override
+  String get video_jimaku_api_key_settings_hint =>
+      'Also editable in Settings → Video → Subtitles';
 }
 
 // Path: <root>
@@ -28733,6 +28744,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_setting_jimaku_default_language_hint =>
       'Preferred language when the series has no remembered choice';
+  @override
+  String get video_jimaku_api_key_settings_hint =>
+      'Also editable in Settings → Video → Subtitles';
 }
 
 // Path: <root>
@@ -34967,6 +34981,9 @@ class _StringsId extends _StringsEn {
   @override
   String get video_setting_jimaku_default_language_hint =>
       'Preferred language when the series has no remembered choice';
+  @override
+  String get video_jimaku_api_key_settings_hint =>
+      'Also editable in Settings → Video → Subtitles';
 }
 
 // Path: <root>
@@ -41247,6 +41264,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_setting_jimaku_default_language_hint =>
       'Preferred language when the series has no remembered choice';
+  @override
+  String get video_jimaku_api_key_settings_hint =>
+      'Also editable in Settings → Video → Subtitles';
 }
 
 // Path: <root>
@@ -47344,6 +47364,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_setting_jimaku_default_language_hint =>
       'Preferred language when the series has no remembered choice';
+  @override
+  String get video_jimaku_api_key_settings_hint =>
+      'Also editable in Settings → Video → Subtitles';
 }
 
 // Path: <root>
@@ -53443,6 +53466,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_setting_jimaku_default_language_hint =>
       'Preferred language when the series has no remembered choice';
+  @override
+  String get video_jimaku_api_key_settings_hint =>
+      'Also editable in Settings → Video → Subtitles';
 }
 
 // Path: <root>
@@ -59703,6 +59729,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_setting_jimaku_default_language_hint =>
       'Preferred language when the series has no remembered choice';
+  @override
+  String get video_jimaku_api_key_settings_hint =>
+      'Also editable in Settings → Video → Subtitles';
 }
 
 // Path: <root>
@@ -65976,6 +66005,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_setting_jimaku_default_language_hint =>
       'Preferred language when the series has no remembered choice';
+  @override
+  String get video_jimaku_api_key_settings_hint =>
+      'Also editable in Settings → Video → Subtitles';
 }
 
 // Path: <root>
@@ -72233,6 +72265,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_setting_jimaku_default_language_hint =>
       'Preferred language when the series has no remembered choice';
+  @override
+  String get video_jimaku_api_key_settings_hint =>
+      'Also editable in Settings → Video → Subtitles';
 }
 
 // Path: <root>
@@ -78438,6 +78473,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_setting_jimaku_default_language_hint =>
       'Preferred language when the series has no remembered choice';
+  @override
+  String get video_jimaku_api_key_settings_hint =>
+      'Also editable in Settings → Video → Subtitles';
 }
 
 // Path: <root>
@@ -84675,6 +84713,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_setting_jimaku_default_language_hint =>
       'Preferred language when the series has no remembered choice';
+  @override
+  String get video_jimaku_api_key_settings_hint =>
+      'Also editable in Settings → Video → Subtitles';
 }
 
 // Path: <root>
@@ -90897,6 +90938,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_setting_jimaku_default_language_hint =>
       'Preferred language when the series has no remembered choice';
+  @override
+  String get video_jimaku_api_key_settings_hint =>
+      'Also editable in Settings → Video → Subtitles';
 }
 
 // Path: <root>
@@ -96683,6 +96727,8 @@ class _StringsZhCn extends _StringsEn {
   String get video_setting_jimaku_default_language => '默认字幕语言';
   @override
   String get video_setting_jimaku_default_language_hint => '该系列没有记住的语言时优先使用';
+  @override
+  String get video_jimaku_api_key_settings_hint => '也可在 设置 → 视频 → 字幕 中修改';
 }
 
 // Path: <root>
@@ -102701,6 +102747,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_setting_jimaku_default_language_hint =>
       'Preferred language when the series has no remembered choice';
+  @override
+  String get video_jimaku_api_key_settings_hint =>
+      'Also editable in Settings → Video → Subtitles';
 }
 
 /// Flat map(s) containing all translations.
@@ -108265,6 +108314,8 @@ extension on _StringsEn {
         return 'Default subtitle language';
       case 'video_setting_jimaku_default_language_hint':
         return 'Preferred language when the series has no remembered choice';
+      case 'video_jimaku_api_key_settings_hint':
+        return 'Also editable in Settings → Video → Subtitles';
       default:
         return null;
     }
@@ -113827,6 +113878,8 @@ extension on _StringsAr {
         return 'Default subtitle language';
       case 'video_setting_jimaku_default_language_hint':
         return 'Preferred language when the series has no remembered choice';
+      case 'video_jimaku_api_key_settings_hint':
+        return 'Also editable in Settings → Video → Subtitles';
       default:
         return null;
     }
@@ -119410,6 +119463,8 @@ extension on _StringsDe {
         return 'Default subtitle language';
       case 'video_setting_jimaku_default_language_hint':
         return 'Preferred language when the series has no remembered choice';
+      case 'video_jimaku_api_key_settings_hint':
+        return 'Also editable in Settings → Video → Subtitles';
       default:
         return null;
     }
@@ -124992,6 +125047,8 @@ extension on _StringsEs {
         return 'Default subtitle language';
       case 'video_setting_jimaku_default_language_hint':
         return 'Preferred language when the series has no remembered choice';
+      case 'video_jimaku_api_key_settings_hint':
+        return 'Also editable in Settings → Video → Subtitles';
       default:
         return null;
     }
@@ -130580,6 +130637,8 @@ extension on _StringsFr {
         return 'Default subtitle language';
       case 'video_setting_jimaku_default_language_hint':
         return 'Preferred language when the series has no remembered choice';
+      case 'video_jimaku_api_key_settings_hint':
+        return 'Also editable in Settings → Video → Subtitles';
       default:
         return null;
     }
@@ -136150,6 +136209,8 @@ extension on _StringsId {
         return 'Default subtitle language';
       case 'video_setting_jimaku_default_language_hint':
         return 'Preferred language when the series has no remembered choice';
+      case 'video_jimaku_api_key_settings_hint':
+        return 'Also editable in Settings → Video → Subtitles';
       default:
         return null;
     }
@@ -141735,6 +141796,8 @@ extension on _StringsIt {
         return 'Default subtitle language';
       case 'video_setting_jimaku_default_language_hint':
         return 'Preferred language when the series has no remembered choice';
+      case 'video_jimaku_api_key_settings_hint':
+        return 'Also editable in Settings → Video → Subtitles';
       default:
         return null;
     }
@@ -147282,6 +147345,8 @@ extension on _StringsJa {
         return 'Default subtitle language';
       case 'video_setting_jimaku_default_language_hint':
         return 'Preferred language when the series has no remembered choice';
+      case 'video_jimaku_api_key_settings_hint':
+        return 'Also editable in Settings → Video → Subtitles';
       default:
         return null;
     }
@@ -152833,6 +152898,8 @@ extension on _StringsKo {
         return 'Default subtitle language';
       case 'video_setting_jimaku_default_language_hint':
         return 'Preferred language when the series has no remembered choice';
+      case 'video_jimaku_api_key_settings_hint':
+        return 'Also editable in Settings → Video → Subtitles';
       default:
         return null;
     }
@@ -158411,6 +158478,8 @@ extension on _StringsNl {
         return 'Default subtitle language';
       case 'video_setting_jimaku_default_language_hint':
         return 'Preferred language when the series has no remembered choice';
+      case 'video_jimaku_api_key_settings_hint':
+        return 'Also editable in Settings → Video → Subtitles';
       default:
         return null;
     }
@@ -163986,6 +164055,8 @@ extension on _StringsPtBr {
         return 'Default subtitle language';
       case 'video_setting_jimaku_default_language_hint':
         return 'Preferred language when the series has no remembered choice';
+      case 'video_jimaku_api_key_settings_hint':
+        return 'Also editable in Settings → Video → Subtitles';
       default:
         return null;
     }
@@ -169566,6 +169637,8 @@ extension on _StringsRu {
         return 'Default subtitle language';
       case 'video_setting_jimaku_default_language_hint':
         return 'Preferred language when the series has no remembered choice';
+      case 'video_jimaku_api_key_settings_hint':
+        return 'Also editable in Settings → Video → Subtitles';
       default:
         return null;
     }
@@ -175130,6 +175203,8 @@ extension on _StringsTh {
         return 'Default subtitle language';
       case 'video_setting_jimaku_default_language_hint':
         return 'Preferred language when the series has no remembered choice';
+      case 'video_jimaku_api_key_settings_hint':
+        return 'Also editable in Settings → Video → Subtitles';
       default:
         return null;
     }
@@ -180703,6 +180778,8 @@ extension on _StringsTr {
         return 'Default subtitle language';
       case 'video_setting_jimaku_default_language_hint':
         return 'Preferred language when the series has no remembered choice';
+      case 'video_jimaku_api_key_settings_hint':
+        return 'Also editable in Settings → Video → Subtitles';
       default:
         return null;
     }
@@ -186271,6 +186348,8 @@ extension on _StringsVi {
         return 'Default subtitle language';
       case 'video_setting_jimaku_default_language_hint':
         return 'Preferred language when the series has no remembered choice';
+      case 'video_jimaku_api_key_settings_hint':
+        return 'Also editable in Settings → Video → Subtitles';
       default:
         return null;
     }
@@ -191793,6 +191872,8 @@ extension on _StringsZhCn {
         return '默认字幕语言';
       case 'video_setting_jimaku_default_language_hint':
         return '该系列没有记住的语言时优先使用';
+      case 'video_jimaku_api_key_settings_hint':
+        return '也可在 设置 → 视频 → 字幕 中修改';
       default:
         return null;
     }
@@ -197335,6 +197416,8 @@ extension on _StringsZhHk {
         return 'Default subtitle language';
       case 'video_setting_jimaku_default_language_hint':
         return 'Preferred language when the series has no remembered choice';
+      case 'video_jimaku_api_key_settings_hint':
+        return 'Also editable in Settings → Video → Subtitles';
       default:
         return null;
     }
