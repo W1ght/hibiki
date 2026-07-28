@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 46614 (2742 per locale)
+/// Strings: 46699 (2747 per locale)
 ///
-/// Built on 2026-07-28 at 15:36 UTC
+/// Built on 2026-07-28 at 16:00 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3686,6 +3686,11 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
   String get game_upscaling_hint_not_installed =>
       'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+  String media_source_count_manga({required Object n}) => '${n} volumes';
+  String get library_view_shelf => 'Shelf';
+  String get library_view_browse => 'Browse';
+  String get library_view_sources => 'Sources';
+  String get library_view_media => 'Library';
 }
 
 // Path: <root>
@@ -9962,6 +9967,16 @@ class _StringsAr extends _StringsEn {
   @override
   String get game_upscaling_hint_not_installed =>
       'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+  @override
+  String media_source_count_manga({required Object n}) => '${n} volumes';
+  @override
+  String get library_view_shelf => 'Shelf';
+  @override
+  String get library_view_browse => 'Browse';
+  @override
+  String get library_view_sources => 'Sources';
+  @override
+  String get library_view_media => 'Library';
 }
 
 // Path: <root>
@@ -16306,6 +16321,16 @@ class _StringsDe extends _StringsEn {
   @override
   String get game_upscaling_hint_not_installed =>
       'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+  @override
+  String media_source_count_manga({required Object n}) => '${n} volumes';
+  @override
+  String get library_view_shelf => 'Shelf';
+  @override
+  String get library_view_browse => 'Browse';
+  @override
+  String get library_view_sources => 'Sources';
+  @override
+  String get library_view_media => 'Library';
 }
 
 // Path: <root>
@@ -22666,6 +22691,16 @@ class _StringsEs extends _StringsEn {
   @override
   String get game_upscaling_hint_not_installed =>
       'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+  @override
+  String media_source_count_manga({required Object n}) => '${n} volumes';
+  @override
+  String get library_view_shelf => 'Shelf';
+  @override
+  String get library_view_browse => 'Browse';
+  @override
+  String get library_view_sources => 'Sources';
+  @override
+  String get library_view_media => 'Library';
 }
 
 // Path: <root>
@@ -29037,6 +29072,16 @@ class _StringsFr extends _StringsEn {
   @override
   String get game_upscaling_hint_not_installed =>
       'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+  @override
+  String media_source_count_manga({required Object n}) => '${n} volumes';
+  @override
+  String get library_view_shelf => 'Shelf';
+  @override
+  String get library_view_browse => 'Browse';
+  @override
+  String get library_view_sources => 'Sources';
+  @override
+  String get library_view_media => 'Library';
 }
 
 // Path: <root>
@@ -35337,6 +35382,16 @@ class _StringsId extends _StringsEn {
   @override
   String get game_upscaling_hint_not_installed =>
       'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+  @override
+  String media_source_count_manga({required Object n}) => '${n} volumes';
+  @override
+  String get library_view_shelf => 'Shelf';
+  @override
+  String get library_view_browse => 'Browse';
+  @override
+  String get library_view_sources => 'Sources';
+  @override
+  String get library_view_media => 'Library';
 }
 
 // Path: <root>
@@ -41683,6 +41738,16 @@ class _StringsIt extends _StringsEn {
   @override
   String get game_upscaling_hint_not_installed =>
       'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+  @override
+  String media_source_count_manga({required Object n}) => '${n} volumes';
+  @override
+  String get library_view_shelf => 'Shelf';
+  @override
+  String get library_view_browse => 'Browse';
+  @override
+  String get library_view_sources => 'Sources';
+  @override
+  String get library_view_media => 'Library';
 }
 
 // Path: <root>
@@ -47846,6 +47911,16 @@ class _StringsJa extends _StringsEn {
   @override
   String get game_upscaling_hint_not_installed =>
       'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+  @override
+  String media_source_count_manga({required Object n}) => '${n} volumes';
+  @override
+  String get library_view_shelf => 'Shelf';
+  @override
+  String get library_view_browse => 'Browse';
+  @override
+  String get library_view_sources => 'Sources';
+  @override
+  String get library_view_media => 'Library';
 }
 
 // Path: <root>
@@ -54011,6 +54086,16 @@ class _StringsKo extends _StringsEn {
   @override
   String get game_upscaling_hint_not_installed =>
       'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+  @override
+  String media_source_count_manga({required Object n}) => '${n} volumes';
+  @override
+  String get library_view_shelf => 'Shelf';
+  @override
+  String get library_view_browse => 'Browse';
+  @override
+  String get library_view_sources => 'Sources';
+  @override
+  String get library_view_media => 'Library';
 }
 
 // Path: <root>
@@ -60337,6 +60422,16 @@ class _StringsNl extends _StringsEn {
   @override
   String get game_upscaling_hint_not_installed =>
       'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+  @override
+  String media_source_count_manga({required Object n}) => '${n} volumes';
+  @override
+  String get library_view_shelf => 'Shelf';
+  @override
+  String get library_view_browse => 'Browse';
+  @override
+  String get library_view_sources => 'Sources';
+  @override
+  String get library_view_media => 'Library';
 }
 
 // Path: <root>
@@ -66676,6 +66771,16 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get game_upscaling_hint_not_installed =>
       'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+  @override
+  String media_source_count_manga({required Object n}) => '${n} volumes';
+  @override
+  String get library_view_shelf => 'Shelf';
+  @override
+  String get library_view_browse => 'Browse';
+  @override
+  String get library_view_sources => 'Sources';
+  @override
+  String get library_view_media => 'Library';
 }
 
 // Path: <root>
@@ -72999,6 +73104,16 @@ class _StringsRu extends _StringsEn {
   @override
   String get game_upscaling_hint_not_installed =>
       'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+  @override
+  String media_source_count_manga({required Object n}) => '${n} volumes';
+  @override
+  String get library_view_shelf => 'Shelf';
+  @override
+  String get library_view_browse => 'Browse';
+  @override
+  String get library_view_sources => 'Sources';
+  @override
+  String get library_view_media => 'Library';
 }
 
 // Path: <root>
@@ -79270,6 +79385,16 @@ class _StringsTh extends _StringsEn {
   @override
   String get game_upscaling_hint_not_installed =>
       'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+  @override
+  String media_source_count_manga({required Object n}) => '${n} volumes';
+  @override
+  String get library_view_shelf => 'Shelf';
+  @override
+  String get library_view_browse => 'Browse';
+  @override
+  String get library_view_sources => 'Sources';
+  @override
+  String get library_view_media => 'Library';
 }
 
 // Path: <root>
@@ -85573,6 +85698,16 @@ class _StringsTr extends _StringsEn {
   @override
   String get game_upscaling_hint_not_installed =>
       'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+  @override
+  String media_source_count_manga({required Object n}) => '${n} volumes';
+  @override
+  String get library_view_shelf => 'Shelf';
+  @override
+  String get library_view_browse => 'Browse';
+  @override
+  String get library_view_sources => 'Sources';
+  @override
+  String get library_view_media => 'Library';
 }
 
 // Path: <root>
@@ -91861,6 +91996,16 @@ class _StringsVi extends _StringsEn {
   @override
   String get game_upscaling_hint_not_installed =>
       'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+  @override
+  String media_source_count_manga({required Object n}) => '${n} volumes';
+  @override
+  String get library_view_shelf => 'Shelf';
+  @override
+  String get library_view_browse => 'Browse';
+  @override
+  String get library_view_sources => 'Sources';
+  @override
+  String get library_view_media => 'Library';
 }
 
 // Path: <root>
@@ -97704,6 +97849,16 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get game_upscaling_hint_not_installed =>
       '没有安装 Magpie。在游戏库里右键这个游戏，把「窗口超分」改成「自动」即可下载。';
+  @override
+  String media_source_count_manga({required Object n}) => '${n} 卷';
+  @override
+  String get library_view_shelf => '书架';
+  @override
+  String get library_view_browse => '浏览';
+  @override
+  String get library_view_sources => '来源';
+  @override
+  String get library_view_media => '媒体库';
 }
 
 // Path: <root>
@@ -103788,6 +103943,16 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get game_upscaling_hint_not_installed =>
       'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+  @override
+  String media_source_count_manga({required Object n}) => '${n} volumes';
+  @override
+  String get library_view_shelf => 'Shelf';
+  @override
+  String get library_view_browse => 'Browse';
+  @override
+  String get library_view_sources => 'Sources';
+  @override
+  String get library_view_media => 'Library';
 }
 
 /// Flat map(s) containing all translations.
@@ -109405,6 +109570,16 @@ extension on _StringsEn {
         return 'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
       case 'game_upscaling_hint_not_installed':
         return 'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+      case 'media_source_count_manga':
+        return ({required Object n}) => '${n} volumes';
+      case 'library_view_shelf':
+        return 'Shelf';
+      case 'library_view_browse':
+        return 'Browse';
+      case 'library_view_sources':
+        return 'Sources';
+      case 'library_view_media':
+        return 'Library';
       default:
         return null;
     }
@@ -115020,6 +115195,16 @@ extension on _StringsAr {
         return 'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
       case 'game_upscaling_hint_not_installed':
         return 'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+      case 'media_source_count_manga':
+        return ({required Object n}) => '${n} volumes';
+      case 'library_view_shelf':
+        return 'Shelf';
+      case 'library_view_browse':
+        return 'Browse';
+      case 'library_view_sources':
+        return 'Sources';
+      case 'library_view_media':
+        return 'Library';
       default:
         return null;
     }
@@ -120656,6 +120841,16 @@ extension on _StringsDe {
         return 'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
       case 'game_upscaling_hint_not_installed':
         return 'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+      case 'media_source_count_manga':
+        return ({required Object n}) => '${n} volumes';
+      case 'library_view_shelf':
+        return 'Shelf';
+      case 'library_view_browse':
+        return 'Browse';
+      case 'library_view_sources':
+        return 'Sources';
+      case 'library_view_media':
+        return 'Library';
       default:
         return null;
     }
@@ -126291,6 +126486,16 @@ extension on _StringsEs {
         return 'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
       case 'game_upscaling_hint_not_installed':
         return 'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+      case 'media_source_count_manga':
+        return ({required Object n}) => '${n} volumes';
+      case 'library_view_shelf':
+        return 'Shelf';
+      case 'library_view_browse':
+        return 'Browse';
+      case 'library_view_sources':
+        return 'Sources';
+      case 'library_view_media':
+        return 'Library';
       default:
         return null;
     }
@@ -131932,6 +132137,16 @@ extension on _StringsFr {
         return 'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
       case 'game_upscaling_hint_not_installed':
         return 'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+      case 'media_source_count_manga':
+        return ({required Object n}) => '${n} volumes';
+      case 'library_view_shelf':
+        return 'Shelf';
+      case 'library_view_browse':
+        return 'Browse';
+      case 'library_view_sources':
+        return 'Sources';
+      case 'library_view_media':
+        return 'Library';
       default:
         return null;
     }
@@ -137555,6 +137770,16 @@ extension on _StringsId {
         return 'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
       case 'game_upscaling_hint_not_installed':
         return 'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+      case 'media_source_count_manga':
+        return ({required Object n}) => '${n} volumes';
+      case 'library_view_shelf':
+        return 'Shelf';
+      case 'library_view_browse':
+        return 'Browse';
+      case 'library_view_sources':
+        return 'Sources';
+      case 'library_view_media':
+        return 'Library';
       default:
         return null;
     }
@@ -143193,6 +143418,16 @@ extension on _StringsIt {
         return 'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
       case 'game_upscaling_hint_not_installed':
         return 'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+      case 'media_source_count_manga':
+        return ({required Object n}) => '${n} volumes';
+      case 'library_view_shelf':
+        return 'Shelf';
+      case 'library_view_browse':
+        return 'Browse';
+      case 'library_view_sources':
+        return 'Sources';
+      case 'library_view_media':
+        return 'Library';
       default:
         return null;
     }
@@ -148793,6 +149028,16 @@ extension on _StringsJa {
         return 'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
       case 'game_upscaling_hint_not_installed':
         return 'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+      case 'media_source_count_manga':
+        return ({required Object n}) => '${n} volumes';
+      case 'library_view_shelf':
+        return 'Shelf';
+      case 'library_view_browse':
+        return 'Browse';
+      case 'library_view_sources':
+        return 'Sources';
+      case 'library_view_media':
+        return 'Library';
       default:
         return null;
     }
@@ -154397,6 +154642,16 @@ extension on _StringsKo {
         return 'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
       case 'game_upscaling_hint_not_installed':
         return 'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+      case 'media_source_count_manga':
+        return ({required Object n}) => '${n} volumes';
+      case 'library_view_shelf':
+        return 'Shelf';
+      case 'library_view_browse':
+        return 'Browse';
+      case 'library_view_sources':
+        return 'Sources';
+      case 'library_view_media':
+        return 'Library';
       default:
         return null;
     }
@@ -160028,6 +160283,16 @@ extension on _StringsNl {
         return 'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
       case 'game_upscaling_hint_not_installed':
         return 'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+      case 'media_source_count_manga':
+        return ({required Object n}) => '${n} volumes';
+      case 'library_view_shelf':
+        return 'Shelf';
+      case 'library_view_browse':
+        return 'Browse';
+      case 'library_view_sources':
+        return 'Sources';
+      case 'library_view_media':
+        return 'Library';
       default:
         return null;
     }
@@ -165656,6 +165921,16 @@ extension on _StringsPtBr {
         return 'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
       case 'game_upscaling_hint_not_installed':
         return 'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+      case 'media_source_count_manga':
+        return ({required Object n}) => '${n} volumes';
+      case 'library_view_shelf':
+        return 'Shelf';
+      case 'library_view_browse':
+        return 'Browse';
+      case 'library_view_sources':
+        return 'Sources';
+      case 'library_view_media':
+        return 'Library';
       default:
         return null;
     }
@@ -171289,6 +171564,16 @@ extension on _StringsRu {
         return 'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
       case 'game_upscaling_hint_not_installed':
         return 'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+      case 'media_source_count_manga':
+        return ({required Object n}) => '${n} volumes';
+      case 'library_view_shelf':
+        return 'Shelf';
+      case 'library_view_browse':
+        return 'Browse';
+      case 'library_view_sources':
+        return 'Sources';
+      case 'library_view_media':
+        return 'Library';
       default:
         return null;
     }
@@ -176906,6 +177191,16 @@ extension on _StringsTh {
         return 'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
       case 'game_upscaling_hint_not_installed':
         return 'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+      case 'media_source_count_manga':
+        return ({required Object n}) => '${n} volumes';
+      case 'library_view_shelf':
+        return 'Shelf';
+      case 'library_view_browse':
+        return 'Browse';
+      case 'library_view_sources':
+        return 'Sources';
+      case 'library_view_media':
+        return 'Library';
       default:
         return null;
     }
@@ -182532,6 +182827,16 @@ extension on _StringsTr {
         return 'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
       case 'game_upscaling_hint_not_installed':
         return 'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+      case 'media_source_count_manga':
+        return ({required Object n}) => '${n} volumes';
+      case 'library_view_shelf':
+        return 'Shelf';
+      case 'library_view_browse':
+        return 'Browse';
+      case 'library_view_sources':
+        return 'Sources';
+      case 'library_view_media':
+        return 'Library';
       default:
         return null;
     }
@@ -188153,6 +188458,16 @@ extension on _StringsVi {
         return 'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
       case 'game_upscaling_hint_not_installed':
         return 'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+      case 'media_source_count_manga':
+        return ({required Object n}) => '${n} volumes';
+      case 'library_view_shelf':
+        return 'Shelf';
+      case 'library_view_browse':
+        return 'Browse';
+      case 'library_view_sources':
+        return 'Sources';
+      case 'library_view_media':
+        return 'Library';
       default:
         return null;
     }
@@ -193728,6 +194043,16 @@ extension on _StringsZhCn {
         return '捕获会话期间用 Magpie 放大这个游戏的窗口。每个游戏各自设置——只有原生分辨率低于屏幕的游戏才用得上。会占用显卡。';
       case 'game_upscaling_hint_not_installed':
         return '没有安装 Magpie。在游戏库里右键这个游戏，把「窗口超分」改成「自动」即可下载。';
+      case 'media_source_count_manga':
+        return ({required Object n}) => '${n} 卷';
+      case 'library_view_shelf':
+        return '书架';
+      case 'library_view_browse':
+        return '浏览';
+      case 'library_view_sources':
+        return '来源';
+      case 'library_view_media':
+        return '媒体库';
       default:
         return null;
     }
@@ -199323,6 +199648,16 @@ extension on _StringsZhHk {
         return 'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
       case 'game_upscaling_hint_not_installed':
         return 'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+      case 'media_source_count_manga':
+        return ({required Object n}) => '${n} volumes';
+      case 'library_view_shelf':
+        return 'Shelf';
+      case 'library_view_browse':
+        return 'Browse';
+      case 'library_view_sources':
+        return 'Sources';
+      case 'library_view_media':
+        return 'Library';
       default:
         return null;
     }
