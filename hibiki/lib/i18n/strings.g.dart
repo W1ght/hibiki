@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 46019 (2707 per locale)
+/// Strings: 46070 (2710 per locale)
 ///
-/// Built on 2026-07-28 at 07:01 UTC
+/// Built on 2026-07-28 at 07:13 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3634,6 +3634,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'No local video in this collection';
   String video_scrape_online_match_collection({required Object name}) =>
       'Match cover for ${name}';
+  String get gal_mining_image_mode => 'Galgame card image';
+  String get gal_mining_image_mode_screenshot => 'Screenshot';
+  String get gal_mining_image_mode_hint =>
+      'Galgame scenes barely move within one line, so a still screenshot is usually smaller and just as useful.';
 }
 
 // Path: <root>
@@ -9823,6 +9827,13 @@ class _StringsAr extends _StringsEn {
   @override
   String video_scrape_online_match_collection({required Object name}) =>
       'Match cover for ${name}';
+  @override
+  String get gal_mining_image_mode => 'Galgame card image';
+  @override
+  String get gal_mining_image_mode_screenshot => 'Screenshot';
+  @override
+  String get gal_mining_image_mode_hint =>
+      'Galgame scenes barely move within one line, so a still screenshot is usually smaller and just as useful.';
 }
 
 // Path: <root>
@@ -16080,6 +16091,13 @@ class _StringsDe extends _StringsEn {
   @override
   String video_scrape_online_match_collection({required Object name}) =>
       'Match cover for ${name}';
+  @override
+  String get gal_mining_image_mode => 'Galgame card image';
+  @override
+  String get gal_mining_image_mode_screenshot => 'Screenshot';
+  @override
+  String get gal_mining_image_mode_hint =>
+      'Galgame scenes barely move within one line, so a still screenshot is usually smaller and just as useful.';
 }
 
 // Path: <root>
@@ -22353,6 +22371,13 @@ class _StringsEs extends _StringsEn {
   @override
   String video_scrape_online_match_collection({required Object name}) =>
       'Match cover for ${name}';
+  @override
+  String get gal_mining_image_mode => 'Galgame card image';
+  @override
+  String get gal_mining_image_mode_screenshot => 'Screenshot';
+  @override
+  String get gal_mining_image_mode_hint =>
+      'Galgame scenes barely move within one line, so a still screenshot is usually smaller and just as useful.';
 }
 
 // Path: <root>
@@ -28637,6 +28662,13 @@ class _StringsFr extends _StringsEn {
   @override
   String video_scrape_online_match_collection({required Object name}) =>
       'Match cover for ${name}';
+  @override
+  String get gal_mining_image_mode => 'Galgame card image';
+  @override
+  String get gal_mining_image_mode_screenshot => 'Screenshot';
+  @override
+  String get gal_mining_image_mode_hint =>
+      'Galgame scenes barely move within one line, so a still screenshot is usually smaller and just as useful.';
 }
 
 // Path: <root>
@@ -34850,6 +34882,13 @@ class _StringsId extends _StringsEn {
   @override
   String video_scrape_online_match_collection({required Object name}) =>
       'Match cover for ${name}';
+  @override
+  String get gal_mining_image_mode => 'Galgame card image';
+  @override
+  String get gal_mining_image_mode_screenshot => 'Screenshot';
+  @override
+  String get gal_mining_image_mode_hint =>
+      'Galgame scenes barely move within one line, so a still screenshot is usually smaller and just as useful.';
 }
 
 // Path: <root>
@@ -41109,6 +41148,13 @@ class _StringsIt extends _StringsEn {
   @override
   String video_scrape_online_match_collection({required Object name}) =>
       'Match cover for ${name}';
+  @override
+  String get gal_mining_image_mode => 'Galgame card image';
+  @override
+  String get gal_mining_image_mode_screenshot => 'Screenshot';
+  @override
+  String get gal_mining_image_mode_hint =>
+      'Galgame scenes barely move within one line, so a still screenshot is usually smaller and just as useful.';
 }
 
 // Path: <root>
@@ -47185,6 +47231,13 @@ class _StringsJa extends _StringsEn {
   @override
   String video_scrape_online_match_collection({required Object name}) =>
       'Match cover for ${name}';
+  @override
+  String get gal_mining_image_mode => 'Galgame card image';
+  @override
+  String get gal_mining_image_mode_screenshot => 'Screenshot';
+  @override
+  String get gal_mining_image_mode_hint =>
+      'Galgame scenes barely move within one line, so a still screenshot is usually smaller and just as useful.';
 }
 
 // Path: <root>
@@ -53263,6 +53316,13 @@ class _StringsKo extends _StringsEn {
   @override
   String video_scrape_online_match_collection({required Object name}) =>
       'Match cover for ${name}';
+  @override
+  String get gal_mining_image_mode => 'Galgame card image';
+  @override
+  String get gal_mining_image_mode_screenshot => 'Screenshot';
+  @override
+  String get gal_mining_image_mode_hint =>
+      'Galgame scenes barely move within one line, so a still screenshot is usually smaller and just as useful.';
 }
 
 // Path: <root>
@@ -59502,6 +59562,13 @@ class _StringsNl extends _StringsEn {
   @override
   String video_scrape_online_match_collection({required Object name}) =>
       'Match cover for ${name}';
+  @override
+  String get gal_mining_image_mode => 'Galgame card image';
+  @override
+  String get gal_mining_image_mode_screenshot => 'Screenshot';
+  @override
+  String get gal_mining_image_mode_hint =>
+      'Galgame scenes barely move within one line, so a still screenshot is usually smaller and just as useful.';
 }
 
 // Path: <root>
@@ -65754,6 +65821,13 @@ class _StringsPtBr extends _StringsEn {
   @override
   String video_scrape_online_match_collection({required Object name}) =>
       'Match cover for ${name}';
+  @override
+  String get gal_mining_image_mode => 'Galgame card image';
+  @override
+  String get gal_mining_image_mode_screenshot => 'Screenshot';
+  @override
+  String get gal_mining_image_mode_hint =>
+      'Galgame scenes barely move within one line, so a still screenshot is usually smaller and just as useful.';
 }
 
 // Path: <root>
@@ -71990,6 +72064,13 @@ class _StringsRu extends _StringsEn {
   @override
   String video_scrape_online_match_collection({required Object name}) =>
       'Match cover for ${name}';
+  @override
+  String get gal_mining_image_mode => 'Galgame card image';
+  @override
+  String get gal_mining_image_mode_screenshot => 'Screenshot';
+  @override
+  String get gal_mining_image_mode_hint =>
+      'Galgame scenes barely move within one line, so a still screenshot is usually smaller and just as useful.';
 }
 
 // Path: <root>
@@ -78174,6 +78255,13 @@ class _StringsTh extends _StringsEn {
   @override
   String video_scrape_online_match_collection({required Object name}) =>
       'Match cover for ${name}';
+  @override
+  String get gal_mining_image_mode => 'Galgame card image';
+  @override
+  String get gal_mining_image_mode_screenshot => 'Screenshot';
+  @override
+  String get gal_mining_image_mode_hint =>
+      'Galgame scenes barely move within one line, so a still screenshot is usually smaller and just as useful.';
 }
 
 // Path: <root>
@@ -84390,6 +84478,13 @@ class _StringsTr extends _StringsEn {
   @override
   String video_scrape_online_match_collection({required Object name}) =>
       'Match cover for ${name}';
+  @override
+  String get gal_mining_image_mode => 'Galgame card image';
+  @override
+  String get gal_mining_image_mode_screenshot => 'Screenshot';
+  @override
+  String get gal_mining_image_mode_hint =>
+      'Galgame scenes barely move within one line, so a still screenshot is usually smaller and just as useful.';
 }
 
 // Path: <root>
@@ -90591,6 +90686,13 @@ class _StringsVi extends _StringsEn {
   @override
   String video_scrape_online_match_collection({required Object name}) =>
       'Match cover for ${name}';
+  @override
+  String get gal_mining_image_mode => 'Galgame card image';
+  @override
+  String get gal_mining_image_mode_screenshot => 'Screenshot';
+  @override
+  String get gal_mining_image_mode_hint =>
+      'Galgame scenes barely move within one line, so a still screenshot is usually smaller and just as useful.';
 }
 
 // Path: <root>
@@ -96358,6 +96460,13 @@ class _StringsZhCn extends _StringsEn {
   @override
   String video_scrape_online_match_collection({required Object name}) =>
       '为「${name}」匹配封面';
+  @override
+  String get gal_mining_image_mode => 'Galgame 制卡配图';
+  @override
+  String get gal_mining_image_mode_screenshot => '静态截图';
+  @override
+  String get gal_mining_image_mode_hint =>
+      'Galgame 一句台词内画面基本不动，静态截图通常更小、信息量一样。';
 }
 
 // Path: <root>
@@ -102355,6 +102464,13 @@ class _StringsZhHk extends _StringsEn {
   @override
   String video_scrape_online_match_collection({required Object name}) =>
       'Match cover for ${name}';
+  @override
+  String get gal_mining_image_mode => 'Galgame card image';
+  @override
+  String get gal_mining_image_mode_screenshot => 'Screenshot';
+  @override
+  String get gal_mining_image_mode_hint =>
+      'Galgame scenes barely move within one line, so a still screenshot is usually smaller and just as useful.';
 }
 
 /// Flat map(s) containing all translations.
@@ -107901,6 +108017,12 @@ extension on _StringsEn {
         return 'No local video in this collection';
       case 'video_scrape_online_match_collection':
         return ({required Object name}) => 'Match cover for ${name}';
+      case 'gal_mining_image_mode':
+        return 'Galgame card image';
+      case 'gal_mining_image_mode_screenshot':
+        return 'Screenshot';
+      case 'gal_mining_image_mode_hint':
+        return 'Galgame scenes barely move within one line, so a still screenshot is usually smaller and just as useful.';
       default:
         return null;
     }
@@ -113445,6 +113567,12 @@ extension on _StringsAr {
         return 'No local video in this collection';
       case 'video_scrape_online_match_collection':
         return ({required Object name}) => 'Match cover for ${name}';
+      case 'gal_mining_image_mode':
+        return 'Galgame card image';
+      case 'gal_mining_image_mode_screenshot':
+        return 'Screenshot';
+      case 'gal_mining_image_mode_hint':
+        return 'Galgame scenes barely move within one line, so a still screenshot is usually smaller and just as useful.';
       default:
         return null;
     }
@@ -119010,6 +119138,12 @@ extension on _StringsDe {
         return 'No local video in this collection';
       case 'video_scrape_online_match_collection':
         return ({required Object name}) => 'Match cover for ${name}';
+      case 'gal_mining_image_mode':
+        return 'Galgame card image';
+      case 'gal_mining_image_mode_screenshot':
+        return 'Screenshot';
+      case 'gal_mining_image_mode_hint':
+        return 'Galgame scenes barely move within one line, so a still screenshot is usually smaller and just as useful.';
       default:
         return null;
     }
@@ -124574,6 +124708,12 @@ extension on _StringsEs {
         return 'No local video in this collection';
       case 'video_scrape_online_match_collection':
         return ({required Object name}) => 'Match cover for ${name}';
+      case 'gal_mining_image_mode':
+        return 'Galgame card image';
+      case 'gal_mining_image_mode_screenshot':
+        return 'Screenshot';
+      case 'gal_mining_image_mode_hint':
+        return 'Galgame scenes barely move within one line, so a still screenshot is usually smaller and just as useful.';
       default:
         return null;
     }
@@ -130144,6 +130284,12 @@ extension on _StringsFr {
         return 'No local video in this collection';
       case 'video_scrape_online_match_collection':
         return ({required Object name}) => 'Match cover for ${name}';
+      case 'gal_mining_image_mode':
+        return 'Galgame card image';
+      case 'gal_mining_image_mode_screenshot':
+        return 'Screenshot';
+      case 'gal_mining_image_mode_hint':
+        return 'Galgame scenes barely move within one line, so a still screenshot is usually smaller and just as useful.';
       default:
         return null;
     }
@@ -135696,6 +135842,12 @@ extension on _StringsId {
         return 'No local video in this collection';
       case 'video_scrape_online_match_collection':
         return ({required Object name}) => 'Match cover for ${name}';
+      case 'gal_mining_image_mode':
+        return 'Galgame card image';
+      case 'gal_mining_image_mode_screenshot':
+        return 'Screenshot';
+      case 'gal_mining_image_mode_hint':
+        return 'Galgame scenes barely move within one line, so a still screenshot is usually smaller and just as useful.';
       default:
         return null;
     }
@@ -141263,6 +141415,12 @@ extension on _StringsIt {
         return 'No local video in this collection';
       case 'video_scrape_online_match_collection':
         return ({required Object name}) => 'Match cover for ${name}';
+      case 'gal_mining_image_mode':
+        return 'Galgame card image';
+      case 'gal_mining_image_mode_screenshot':
+        return 'Screenshot';
+      case 'gal_mining_image_mode_hint':
+        return 'Galgame scenes barely move within one line, so a still screenshot is usually smaller and just as useful.';
       default:
         return null;
     }
@@ -146792,6 +146950,12 @@ extension on _StringsJa {
         return 'No local video in this collection';
       case 'video_scrape_online_match_collection':
         return ({required Object name}) => 'Match cover for ${name}';
+      case 'gal_mining_image_mode':
+        return 'Galgame card image';
+      case 'gal_mining_image_mode_screenshot':
+        return 'Screenshot';
+      case 'gal_mining_image_mode_hint':
+        return 'Galgame scenes barely move within one line, so a still screenshot is usually smaller and just as useful.';
       default:
         return null;
     }
@@ -152325,6 +152489,12 @@ extension on _StringsKo {
         return 'No local video in this collection';
       case 'video_scrape_online_match_collection':
         return ({required Object name}) => 'Match cover for ${name}';
+      case 'gal_mining_image_mode':
+        return 'Galgame card image';
+      case 'gal_mining_image_mode_screenshot':
+        return 'Screenshot';
+      case 'gal_mining_image_mode_hint':
+        return 'Galgame scenes barely move within one line, so a still screenshot is usually smaller and just as useful.';
       default:
         return null;
     }
@@ -157885,6 +158055,12 @@ extension on _StringsNl {
         return 'No local video in this collection';
       case 'video_scrape_online_match_collection':
         return ({required Object name}) => 'Match cover for ${name}';
+      case 'gal_mining_image_mode':
+        return 'Galgame card image';
+      case 'gal_mining_image_mode_screenshot':
+        return 'Screenshot';
+      case 'gal_mining_image_mode_hint':
+        return 'Galgame scenes barely move within one line, so a still screenshot is usually smaller and just as useful.';
       default:
         return null;
     }
@@ -163442,6 +163618,12 @@ extension on _StringsPtBr {
         return 'No local video in this collection';
       case 'video_scrape_online_match_collection':
         return ({required Object name}) => 'Match cover for ${name}';
+      case 'gal_mining_image_mode':
+        return 'Galgame card image';
+      case 'gal_mining_image_mode_screenshot':
+        return 'Screenshot';
+      case 'gal_mining_image_mode_hint':
+        return 'Galgame scenes barely move within one line, so a still screenshot is usually smaller and just as useful.';
       default:
         return null;
     }
@@ -169004,6 +169186,12 @@ extension on _StringsRu {
         return 'No local video in this collection';
       case 'video_scrape_online_match_collection':
         return ({required Object name}) => 'Match cover for ${name}';
+      case 'gal_mining_image_mode':
+        return 'Galgame card image';
+      case 'gal_mining_image_mode_screenshot':
+        return 'Screenshot';
+      case 'gal_mining_image_mode_hint':
+        return 'Galgame scenes barely move within one line, so a still screenshot is usually smaller and just as useful.';
       default:
         return null;
     }
@@ -174550,6 +174738,12 @@ extension on _StringsTh {
         return 'No local video in this collection';
       case 'video_scrape_online_match_collection':
         return ({required Object name}) => 'Match cover for ${name}';
+      case 'gal_mining_image_mode':
+        return 'Galgame card image';
+      case 'gal_mining_image_mode_screenshot':
+        return 'Screenshot';
+      case 'gal_mining_image_mode_hint':
+        return 'Galgame scenes barely move within one line, so a still screenshot is usually smaller and just as useful.';
       default:
         return null;
     }
@@ -180105,6 +180299,12 @@ extension on _StringsTr {
         return 'No local video in this collection';
       case 'video_scrape_online_match_collection':
         return ({required Object name}) => 'Match cover for ${name}';
+      case 'gal_mining_image_mode':
+        return 'Galgame card image';
+      case 'gal_mining_image_mode_screenshot':
+        return 'Screenshot';
+      case 'gal_mining_image_mode_hint':
+        return 'Galgame scenes barely move within one line, so a still screenshot is usually smaller and just as useful.';
       default:
         return null;
     }
@@ -185655,6 +185855,12 @@ extension on _StringsVi {
         return 'No local video in this collection';
       case 'video_scrape_online_match_collection':
         return ({required Object name}) => 'Match cover for ${name}';
+      case 'gal_mining_image_mode':
+        return 'Galgame card image';
+      case 'gal_mining_image_mode_screenshot':
+        return 'Screenshot';
+      case 'gal_mining_image_mode_hint':
+        return 'Galgame scenes barely move within one line, so a still screenshot is usually smaller and just as useful.';
       default:
         return null;
     }
@@ -191159,6 +191365,12 @@ extension on _StringsZhCn {
         return '本合集没有本地视频';
       case 'video_scrape_online_match_collection':
         return ({required Object name}) => '为「${name}」匹配封面';
+      case 'gal_mining_image_mode':
+        return 'Galgame 制卡配图';
+      case 'gal_mining_image_mode_screenshot':
+        return '静态截图';
+      case 'gal_mining_image_mode_hint':
+        return 'Galgame 一句台词内画面基本不动，静态截图通常更小、信息量一样。';
       default:
         return null;
     }
@@ -196683,6 +196895,12 @@ extension on _StringsZhHk {
         return 'No local video in this collection';
       case 'video_scrape_online_match_collection':
         return ({required Object name}) => 'Match cover for ${name}';
+      case 'gal_mining_image_mode':
+        return 'Galgame card image';
+      case 'gal_mining_image_mode_screenshot':
+        return 'Screenshot';
+      case 'gal_mining_image_mode_hint':
+        return 'Galgame scenes barely move within one line, so a still screenshot is usually smaller and just as useful.';
       default:
         return null;
     }
