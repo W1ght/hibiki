@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 46495 (2735 per locale)
+/// Strings: 46512 (2736 per locale)
 ///
-/// Built on 2026-07-28 at 14:53 UTC
+/// Built on 2026-07-28 at 15:09 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3674,6 +3674,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get media_tracking_open_subject => 'Open on Bangumi';
   String get media_tracking_manage_links => 'Manage links';
   String get media_tracking_last_error => 'Last error';
+  String get shortcut_action_popup_mine_entry => 'Create card (mine)';
 }
 
 // Path: <root>
@@ -9931,6 +9932,8 @@ class _StringsAr extends _StringsEn {
   String get media_tracking_manage_links => 'Manage links';
   @override
   String get media_tracking_last_error => 'Last error';
+  @override
+  String get shortcut_action_popup_mine_entry => 'Create card (mine)';
 }
 
 // Path: <root>
@@ -16256,6 +16259,8 @@ class _StringsDe extends _StringsEn {
   String get media_tracking_manage_links => 'Manage links';
   @override
   String get media_tracking_last_error => 'Last error';
+  @override
+  String get shortcut_action_popup_mine_entry => 'Create card (mine)';
 }
 
 // Path: <root>
@@ -22597,6 +22602,8 @@ class _StringsEs extends _StringsEn {
   String get media_tracking_manage_links => 'Manage links';
   @override
   String get media_tracking_last_error => 'Last error';
+  @override
+  String get shortcut_action_popup_mine_entry => 'Create card (mine)';
 }
 
 // Path: <root>
@@ -28949,6 +28956,8 @@ class _StringsFr extends _StringsEn {
   String get media_tracking_manage_links => 'Manage links';
   @override
   String get media_tracking_last_error => 'Last error';
+  @override
+  String get shortcut_action_popup_mine_entry => 'Create card (mine)';
 }
 
 // Path: <root>
@@ -35230,6 +35239,8 @@ class _StringsId extends _StringsEn {
   String get media_tracking_manage_links => 'Manage links';
   @override
   String get media_tracking_last_error => 'Last error';
+  @override
+  String get shortcut_action_popup_mine_entry => 'Create card (mine)';
 }
 
 // Path: <root>
@@ -41557,6 +41568,8 @@ class _StringsIt extends _StringsEn {
   String get media_tracking_manage_links => 'Manage links';
   @override
   String get media_tracking_last_error => 'Last error';
+  @override
+  String get shortcut_action_popup_mine_entry => 'Create card (mine)';
 }
 
 // Path: <root>
@@ -47701,6 +47714,8 @@ class _StringsJa extends _StringsEn {
   String get media_tracking_manage_links => 'Manage links';
   @override
   String get media_tracking_last_error => 'Last error';
+  @override
+  String get shortcut_action_popup_mine_entry => 'Create card (mine)';
 }
 
 // Path: <root>
@@ -53847,6 +53862,8 @@ class _StringsKo extends _StringsEn {
   String get media_tracking_manage_links => 'Manage links';
   @override
   String get media_tracking_last_error => 'Last error';
+  @override
+  String get shortcut_action_popup_mine_entry => 'Create card (mine)';
 }
 
 // Path: <root>
@@ -60154,6 +60171,8 @@ class _StringsNl extends _StringsEn {
   String get media_tracking_manage_links => 'Manage links';
   @override
   String get media_tracking_last_error => 'Last error';
+  @override
+  String get shortcut_action_popup_mine_entry => 'Create card (mine)';
 }
 
 // Path: <root>
@@ -66474,6 +66493,8 @@ class _StringsPtBr extends _StringsEn {
   String get media_tracking_manage_links => 'Manage links';
   @override
   String get media_tracking_last_error => 'Last error';
+  @override
+  String get shortcut_action_popup_mine_entry => 'Create card (mine)';
 }
 
 // Path: <root>
@@ -72778,6 +72799,8 @@ class _StringsRu extends _StringsEn {
   String get media_tracking_manage_links => 'Manage links';
   @override
   String get media_tracking_last_error => 'Last error';
+  @override
+  String get shortcut_action_popup_mine_entry => 'Create card (mine)';
 }
 
 // Path: <root>
@@ -79030,6 +79053,8 @@ class _StringsTh extends _StringsEn {
   String get media_tracking_manage_links => 'Manage links';
   @override
   String get media_tracking_last_error => 'Last error';
+  @override
+  String get shortcut_action_popup_mine_entry => 'Create card (mine)';
 }
 
 // Path: <root>
@@ -85314,6 +85339,8 @@ class _StringsTr extends _StringsEn {
   String get media_tracking_manage_links => 'Manage links';
   @override
   String get media_tracking_last_error => 'Last error';
+  @override
+  String get shortcut_action_popup_mine_entry => 'Create card (mine)';
 }
 
 // Path: <root>
@@ -91583,6 +91610,8 @@ class _StringsVi extends _StringsEn {
   String get media_tracking_manage_links => 'Manage links';
   @override
   String get media_tracking_last_error => 'Last error';
+  @override
+  String get shortcut_action_popup_mine_entry => 'Create card (mine)';
 }
 
 // Path: <root>
@@ -97409,6 +97438,8 @@ class _StringsZhCn extends _StringsEn {
   String get media_tracking_manage_links => '管理关联';
   @override
   String get media_tracking_last_error => '上次错误';
+  @override
+  String get shortcut_action_popup_mine_entry => '制卡（加号）';
 }
 
 // Path: <root>
@@ -103474,6 +103505,8 @@ class _StringsZhHk extends _StringsEn {
   String get media_tracking_manage_links => 'Manage links';
   @override
   String get media_tracking_last_error => 'Last error';
+  @override
+  String get shortcut_action_popup_mine_entry => 'Create card (mine)';
 }
 
 /// Flat map(s) containing all translations.
@@ -109077,6 +109110,8 @@ extension on _StringsEn {
         return 'Manage links';
       case 'media_tracking_last_error':
         return 'Last error';
+      case 'shortcut_action_popup_mine_entry':
+        return 'Create card (mine)';
       default:
         return null;
     }
@@ -114678,6 +114713,8 @@ extension on _StringsAr {
         return 'Manage links';
       case 'media_tracking_last_error':
         return 'Last error';
+      case 'shortcut_action_popup_mine_entry':
+        return 'Create card (mine)';
       default:
         return null;
     }
@@ -120300,6 +120337,8 @@ extension on _StringsDe {
         return 'Manage links';
       case 'media_tracking_last_error':
         return 'Last error';
+      case 'shortcut_action_popup_mine_entry':
+        return 'Create card (mine)';
       default:
         return null;
     }
@@ -125921,6 +125960,8 @@ extension on _StringsEs {
         return 'Manage links';
       case 'media_tracking_last_error':
         return 'Last error';
+      case 'shortcut_action_popup_mine_entry':
+        return 'Create card (mine)';
       default:
         return null;
     }
@@ -131548,6 +131589,8 @@ extension on _StringsFr {
         return 'Manage links';
       case 'media_tracking_last_error':
         return 'Last error';
+      case 'shortcut_action_popup_mine_entry':
+        return 'Create card (mine)';
       default:
         return null;
     }
@@ -137157,6 +137200,8 @@ extension on _StringsId {
         return 'Manage links';
       case 'media_tracking_last_error':
         return 'Last error';
+      case 'shortcut_action_popup_mine_entry':
+        return 'Create card (mine)';
       default:
         return null;
     }
@@ -142781,6 +142826,8 @@ extension on _StringsIt {
         return 'Manage links';
       case 'media_tracking_last_error':
         return 'Last error';
+      case 'shortcut_action_popup_mine_entry':
+        return 'Create card (mine)';
       default:
         return null;
     }
@@ -148367,6 +148414,8 @@ extension on _StringsJa {
         return 'Manage links';
       case 'media_tracking_last_error':
         return 'Last error';
+      case 'shortcut_action_popup_mine_entry':
+        return 'Create card (mine)';
       default:
         return null;
     }
@@ -153957,6 +154006,8 @@ extension on _StringsKo {
         return 'Manage links';
       case 'media_tracking_last_error':
         return 'Last error';
+      case 'shortcut_action_popup_mine_entry':
+        return 'Create card (mine)';
       default:
         return null;
     }
@@ -159574,6 +159625,8 @@ extension on _StringsNl {
         return 'Manage links';
       case 'media_tracking_last_error':
         return 'Last error';
+      case 'shortcut_action_popup_mine_entry':
+        return 'Create card (mine)';
       default:
         return null;
     }
@@ -165188,6 +165241,8 @@ extension on _StringsPtBr {
         return 'Manage links';
       case 'media_tracking_last_error':
         return 'Last error';
+      case 'shortcut_action_popup_mine_entry':
+        return 'Create card (mine)';
       default:
         return null;
     }
@@ -170807,6 +170862,8 @@ extension on _StringsRu {
         return 'Manage links';
       case 'media_tracking_last_error':
         return 'Last error';
+      case 'shortcut_action_popup_mine_entry':
+        return 'Create card (mine)';
       default:
         return null;
     }
@@ -176410,6 +176467,8 @@ extension on _StringsTh {
         return 'Manage links';
       case 'media_tracking_last_error':
         return 'Last error';
+      case 'shortcut_action_popup_mine_entry':
+        return 'Create card (mine)';
       default:
         return null;
     }
@@ -182022,6 +182081,8 @@ extension on _StringsTr {
         return 'Manage links';
       case 'media_tracking_last_error':
         return 'Last error';
+      case 'shortcut_action_popup_mine_entry':
+        return 'Create card (mine)';
       default:
         return null;
     }
@@ -187629,6 +187690,8 @@ extension on _StringsVi {
         return 'Manage links';
       case 'media_tracking_last_error':
         return 'Last error';
+      case 'shortcut_action_popup_mine_entry':
+        return 'Create card (mine)';
       default:
         return null;
     }
@@ -193190,6 +193253,8 @@ extension on _StringsZhCn {
         return '管理关联';
       case 'media_tracking_last_error':
         return '上次错误';
+      case 'shortcut_action_popup_mine_entry':
+        return '制卡（加号）';
       default:
         return null;
     }
@@ -198771,6 +198836,8 @@ extension on _StringsZhHk {
         return 'Manage links';
       case 'media_tracking_last_error':
         return 'Last error';
+      case 'shortcut_action_popup_mine_entry':
+        return 'Create card (mine)';
       default:
         return null;
     }
