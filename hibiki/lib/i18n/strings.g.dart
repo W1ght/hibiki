@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 46019 (2707 per locale)
+/// Strings: 46002 (2706 per locale)
 ///
-/// Built on 2026-07-28 at 06:32 UTC
+/// Built on 2026-07-28 at 06:42 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3574,8 +3574,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Search failed. Check your network and try again.';
   String get game_remove_confirm =>
       'Remove this game from the library? Game files on disk will not be deleted.';
-  String get delete_collection_also_games =>
-      'Also remove the games in it from the library (game files on disk are kept)';
   String manga_ocr_acceleration_status({required Object engine}) =>
       'OCR acceleration: ${engine}';
   String manga_ocr_acceleration_degraded(
@@ -9727,9 +9725,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get game_remove_confirm =>
       'Remove this game from the library? Game files on disk will not be deleted.';
-  @override
-  String get delete_collection_also_games =>
-      'Also remove the games in it from the library (game files on disk are kept)';
   @override
   String manga_ocr_acceleration_status({required Object engine}) =>
       'OCR acceleration: ${engine}';
@@ -15984,9 +15979,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get game_remove_confirm =>
       'Remove this game from the library? Game files on disk will not be deleted.';
-  @override
-  String get delete_collection_also_games =>
-      'Also remove the games in it from the library (game files on disk are kept)';
   @override
   String manga_ocr_acceleration_status({required Object engine}) =>
       'OCR acceleration: ${engine}';
@@ -22257,9 +22249,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get game_remove_confirm =>
       'Remove this game from the library? Game files on disk will not be deleted.';
-  @override
-  String get delete_collection_also_games =>
-      'Also remove the games in it from the library (game files on disk are kept)';
   @override
   String manga_ocr_acceleration_status({required Object engine}) =>
       'OCR acceleration: ${engine}';
@@ -28542,9 +28531,6 @@ class _StringsFr extends _StringsEn {
   String get game_remove_confirm =>
       'Remove this game from the library? Game files on disk will not be deleted.';
   @override
-  String get delete_collection_also_games =>
-      'Also remove the games in it from the library (game files on disk are kept)';
-  @override
   String manga_ocr_acceleration_status({required Object engine}) =>
       'OCR acceleration: ${engine}';
   @override
@@ -34754,9 +34740,6 @@ class _StringsId extends _StringsEn {
   @override
   String get game_remove_confirm =>
       'Remove this game from the library? Game files on disk will not be deleted.';
-  @override
-  String get delete_collection_also_games =>
-      'Also remove the games in it from the library (game files on disk are kept)';
   @override
   String manga_ocr_acceleration_status({required Object engine}) =>
       'OCR acceleration: ${engine}';
@@ -41014,9 +40997,6 @@ class _StringsIt extends _StringsEn {
   String get game_remove_confirm =>
       'Remove this game from the library? Game files on disk will not be deleted.';
   @override
-  String get delete_collection_also_games =>
-      'Also remove the games in it from the library (game files on disk are kept)';
-  @override
   String manga_ocr_acceleration_status({required Object engine}) =>
       'OCR acceleration: ${engine}';
   @override
@@ -47089,9 +47069,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get game_remove_confirm =>
       'Remove this game from the library? Game files on disk will not be deleted.';
-  @override
-  String get delete_collection_also_games =>
-      'Also remove the games in it from the library (game files on disk are kept)';
   @override
   String manga_ocr_acceleration_status({required Object engine}) =>
       'OCR acceleration: ${engine}';
@@ -53167,9 +53144,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get game_remove_confirm =>
       'Remove this game from the library? Game files on disk will not be deleted.';
-  @override
-  String get delete_collection_also_games =>
-      'Also remove the games in it from the library (game files on disk are kept)';
   @override
   String manga_ocr_acceleration_status({required Object engine}) =>
       'OCR acceleration: ${engine}';
@@ -59406,9 +59380,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get game_remove_confirm =>
       'Remove this game from the library? Game files on disk will not be deleted.';
-  @override
-  String get delete_collection_also_games =>
-      'Also remove the games in it from the library (game files on disk are kept)';
   @override
   String manga_ocr_acceleration_status({required Object engine}) =>
       'OCR acceleration: ${engine}';
@@ -65659,9 +65630,6 @@ class _StringsPtBr extends _StringsEn {
   String get game_remove_confirm =>
       'Remove this game from the library? Game files on disk will not be deleted.';
   @override
-  String get delete_collection_also_games =>
-      'Also remove the games in it from the library (game files on disk are kept)';
-  @override
   String manga_ocr_acceleration_status({required Object engine}) =>
       'OCR acceleration: ${engine}';
   @override
@@ -71895,9 +71863,6 @@ class _StringsRu extends _StringsEn {
   String get game_remove_confirm =>
       'Remove this game from the library? Game files on disk will not be deleted.';
   @override
-  String get delete_collection_also_games =>
-      'Also remove the games in it from the library (game files on disk are kept)';
-  @override
   String manga_ocr_acceleration_status({required Object engine}) =>
       'OCR acceleration: ${engine}';
   @override
@@ -78078,9 +78043,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get game_remove_confirm =>
       'Remove this game from the library? Game files on disk will not be deleted.';
-  @override
-  String get delete_collection_also_games =>
-      'Also remove the games in it from the library (game files on disk are kept)';
   @override
   String manga_ocr_acceleration_status({required Object engine}) =>
       'OCR acceleration: ${engine}';
@@ -84295,9 +84257,6 @@ class _StringsTr extends _StringsEn {
   String get game_remove_confirm =>
       'Remove this game from the library? Game files on disk will not be deleted.';
   @override
-  String get delete_collection_also_games =>
-      'Also remove the games in it from the library (game files on disk are kept)';
-  @override
   String manga_ocr_acceleration_status({required Object engine}) =>
       'OCR acceleration: ${engine}';
   @override
@@ -90496,9 +90455,6 @@ class _StringsVi extends _StringsEn {
   String get game_remove_confirm =>
       'Remove this game from the library? Game files on disk will not be deleted.';
   @override
-  String get delete_collection_also_games =>
-      'Also remove the games in it from the library (game files on disk are kept)';
-  @override
   String manga_ocr_acceleration_status({required Object engine}) =>
       'OCR acceleration: ${engine}';
   @override
@@ -96272,8 +96228,6 @@ class _StringsZhCn extends _StringsEn {
   String get game_scrape_search_failed => '搜索失败，请检查网络后重试';
   @override
   String get game_remove_confirm => '从库中移除此游戏？不会删除磁盘上的游戏文件。';
-  @override
-  String get delete_collection_also_games => '同时把其中的游戏移出库（不会删除磁盘上的游戏文件）';
   @override
   String manga_ocr_acceleration_status({required Object engine}) =>
       'OCR 加速：${engine}';
@@ -102259,9 +102213,6 @@ class _StringsZhHk extends _StringsEn {
   String get game_remove_confirm =>
       'Remove this game from the library? Game files on disk will not be deleted.';
   @override
-  String get delete_collection_also_games =>
-      'Also remove the games in it from the library (game files on disk are kept)';
-  @override
   String manga_ocr_acceleration_status({required Object engine}) =>
       'OCR acceleration: ${engine}';
   @override
@@ -107824,8 +107775,6 @@ extension on _StringsEn {
         return 'Search failed. Check your network and try again.';
       case 'game_remove_confirm':
         return 'Remove this game from the library? Game files on disk will not be deleted.';
-      case 'delete_collection_also_games':
-        return 'Also remove the games in it from the library (game files on disk are kept)';
       case 'manga_ocr_acceleration_status':
         return ({required Object engine}) => 'OCR acceleration: ${engine}';
       case 'manga_ocr_acceleration_degraded':
@@ -113368,8 +113317,6 @@ extension on _StringsAr {
         return 'Search failed. Check your network and try again.';
       case 'game_remove_confirm':
         return 'Remove this game from the library? Game files on disk will not be deleted.';
-      case 'delete_collection_also_games':
-        return 'Also remove the games in it from the library (game files on disk are kept)';
       case 'manga_ocr_acceleration_status':
         return ({required Object engine}) => 'OCR acceleration: ${engine}';
       case 'manga_ocr_acceleration_degraded':
@@ -118933,8 +118880,6 @@ extension on _StringsDe {
         return 'Search failed. Check your network and try again.';
       case 'game_remove_confirm':
         return 'Remove this game from the library? Game files on disk will not be deleted.';
-      case 'delete_collection_also_games':
-        return 'Also remove the games in it from the library (game files on disk are kept)';
       case 'manga_ocr_acceleration_status':
         return ({required Object engine}) => 'OCR acceleration: ${engine}';
       case 'manga_ocr_acceleration_degraded':
@@ -124497,8 +124442,6 @@ extension on _StringsEs {
         return 'Search failed. Check your network and try again.';
       case 'game_remove_confirm':
         return 'Remove this game from the library? Game files on disk will not be deleted.';
-      case 'delete_collection_also_games':
-        return 'Also remove the games in it from the library (game files on disk are kept)';
       case 'manga_ocr_acceleration_status':
         return ({required Object engine}) => 'OCR acceleration: ${engine}';
       case 'manga_ocr_acceleration_degraded':
@@ -130067,8 +130010,6 @@ extension on _StringsFr {
         return 'Search failed. Check your network and try again.';
       case 'game_remove_confirm':
         return 'Remove this game from the library? Game files on disk will not be deleted.';
-      case 'delete_collection_also_games':
-        return 'Also remove the games in it from the library (game files on disk are kept)';
       case 'manga_ocr_acceleration_status':
         return ({required Object engine}) => 'OCR acceleration: ${engine}';
       case 'manga_ocr_acceleration_degraded':
@@ -135619,8 +135560,6 @@ extension on _StringsId {
         return 'Search failed. Check your network and try again.';
       case 'game_remove_confirm':
         return 'Remove this game from the library? Game files on disk will not be deleted.';
-      case 'delete_collection_also_games':
-        return 'Also remove the games in it from the library (game files on disk are kept)';
       case 'manga_ocr_acceleration_status':
         return ({required Object engine}) => 'OCR acceleration: ${engine}';
       case 'manga_ocr_acceleration_degraded':
@@ -141186,8 +141125,6 @@ extension on _StringsIt {
         return 'Search failed. Check your network and try again.';
       case 'game_remove_confirm':
         return 'Remove this game from the library? Game files on disk will not be deleted.';
-      case 'delete_collection_also_games':
-        return 'Also remove the games in it from the library (game files on disk are kept)';
       case 'manga_ocr_acceleration_status':
         return ({required Object engine}) => 'OCR acceleration: ${engine}';
       case 'manga_ocr_acceleration_degraded':
@@ -146715,8 +146652,6 @@ extension on _StringsJa {
         return 'Search failed. Check your network and try again.';
       case 'game_remove_confirm':
         return 'Remove this game from the library? Game files on disk will not be deleted.';
-      case 'delete_collection_also_games':
-        return 'Also remove the games in it from the library (game files on disk are kept)';
       case 'manga_ocr_acceleration_status':
         return ({required Object engine}) => 'OCR acceleration: ${engine}';
       case 'manga_ocr_acceleration_degraded':
@@ -152248,8 +152183,6 @@ extension on _StringsKo {
         return 'Search failed. Check your network and try again.';
       case 'game_remove_confirm':
         return 'Remove this game from the library? Game files on disk will not be deleted.';
-      case 'delete_collection_also_games':
-        return 'Also remove the games in it from the library (game files on disk are kept)';
       case 'manga_ocr_acceleration_status':
         return ({required Object engine}) => 'OCR acceleration: ${engine}';
       case 'manga_ocr_acceleration_degraded':
@@ -157808,8 +157741,6 @@ extension on _StringsNl {
         return 'Search failed. Check your network and try again.';
       case 'game_remove_confirm':
         return 'Remove this game from the library? Game files on disk will not be deleted.';
-      case 'delete_collection_also_games':
-        return 'Also remove the games in it from the library (game files on disk are kept)';
       case 'manga_ocr_acceleration_status':
         return ({required Object engine}) => 'OCR acceleration: ${engine}';
       case 'manga_ocr_acceleration_degraded':
@@ -163365,8 +163296,6 @@ extension on _StringsPtBr {
         return 'Search failed. Check your network and try again.';
       case 'game_remove_confirm':
         return 'Remove this game from the library? Game files on disk will not be deleted.';
-      case 'delete_collection_also_games':
-        return 'Also remove the games in it from the library (game files on disk are kept)';
       case 'manga_ocr_acceleration_status':
         return ({required Object engine}) => 'OCR acceleration: ${engine}';
       case 'manga_ocr_acceleration_degraded':
@@ -168927,8 +168856,6 @@ extension on _StringsRu {
         return 'Search failed. Check your network and try again.';
       case 'game_remove_confirm':
         return 'Remove this game from the library? Game files on disk will not be deleted.';
-      case 'delete_collection_also_games':
-        return 'Also remove the games in it from the library (game files on disk are kept)';
       case 'manga_ocr_acceleration_status':
         return ({required Object engine}) => 'OCR acceleration: ${engine}';
       case 'manga_ocr_acceleration_degraded':
@@ -174473,8 +174400,6 @@ extension on _StringsTh {
         return 'Search failed. Check your network and try again.';
       case 'game_remove_confirm':
         return 'Remove this game from the library? Game files on disk will not be deleted.';
-      case 'delete_collection_also_games':
-        return 'Also remove the games in it from the library (game files on disk are kept)';
       case 'manga_ocr_acceleration_status':
         return ({required Object engine}) => 'OCR acceleration: ${engine}';
       case 'manga_ocr_acceleration_degraded':
@@ -180028,8 +179953,6 @@ extension on _StringsTr {
         return 'Search failed. Check your network and try again.';
       case 'game_remove_confirm':
         return 'Remove this game from the library? Game files on disk will not be deleted.';
-      case 'delete_collection_also_games':
-        return 'Also remove the games in it from the library (game files on disk are kept)';
       case 'manga_ocr_acceleration_status':
         return ({required Object engine}) => 'OCR acceleration: ${engine}';
       case 'manga_ocr_acceleration_degraded':
@@ -185578,8 +185501,6 @@ extension on _StringsVi {
         return 'Search failed. Check your network and try again.';
       case 'game_remove_confirm':
         return 'Remove this game from the library? Game files on disk will not be deleted.';
-      case 'delete_collection_also_games':
-        return 'Also remove the games in it from the library (game files on disk are kept)';
       case 'manga_ocr_acceleration_status':
         return ({required Object engine}) => 'OCR acceleration: ${engine}';
       case 'manga_ocr_acceleration_degraded':
@@ -191082,8 +191003,6 @@ extension on _StringsZhCn {
         return '搜索失败，请检查网络后重试';
       case 'game_remove_confirm':
         return '从库中移除此游戏？不会删除磁盘上的游戏文件。';
-      case 'delete_collection_also_games':
-        return '同时把其中的游戏移出库（不会删除磁盘上的游戏文件）';
       case 'manga_ocr_acceleration_status':
         return ({required Object engine}) => 'OCR 加速：${engine}';
       case 'manga_ocr_acceleration_degraded':
@@ -196606,8 +196525,6 @@ extension on _StringsZhHk {
         return 'Search failed. Check your network and try again.';
       case 'game_remove_confirm':
         return 'Remove this game from the library? Game files on disk will not be deleted.';
-      case 'delete_collection_also_games':
-        return 'Also remove the games in it from the library (game files on disk are kept)';
       case 'manga_ocr_acceleration_status':
         return ({required Object engine}) => 'OCR acceleration: ${engine}';
       case 'manga_ocr_acceleration_degraded':
