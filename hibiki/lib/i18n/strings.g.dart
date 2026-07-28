@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 46308 (2724 per locale)
+/// Strings: 46325 (2725 per locale)
 ///
-/// Built on 2026-07-28 at 11:47 UTC
+/// Built on 2026-07-28 at 12:36 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3661,6 +3661,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Built-in engine requires a desktop platform. This device uses external qBittorrent.';
   String get stat_source_breakdown => 'By source';
   String stat_format_pages({required Object n}) => '${n} pages';
+  String anime_download_subs_season_mismatch({required Object season}) =>
+      'No subtitle entry matches season ${season} of this pack - not auto-selected. Pick one manually if you want it anyway.';
 }
 
 // Path: <root>
@@ -9894,6 +9896,9 @@ class _StringsAr extends _StringsEn {
   String get stat_source_breakdown => 'By source';
   @override
   String stat_format_pages({required Object n}) => '${n} pages';
+  @override
+  String anime_download_subs_season_mismatch({required Object season}) =>
+      'No subtitle entry matches season ${season} of this pack - not auto-selected. Pick one manually if you want it anyway.';
 }
 
 // Path: <root>
@@ -16195,6 +16200,9 @@ class _StringsDe extends _StringsEn {
   String get stat_source_breakdown => 'By source';
   @override
   String stat_format_pages({required Object n}) => '${n} pages';
+  @override
+  String anime_download_subs_season_mismatch({required Object season}) =>
+      'No subtitle entry matches season ${season} of this pack - not auto-selected. Pick one manually if you want it anyway.';
 }
 
 // Path: <root>
@@ -22512,6 +22520,9 @@ class _StringsEs extends _StringsEn {
   String get stat_source_breakdown => 'By source';
   @override
   String stat_format_pages({required Object n}) => '${n} pages';
+  @override
+  String anime_download_subs_season_mismatch({required Object season}) =>
+      'No subtitle entry matches season ${season} of this pack - not auto-selected. Pick one manually if you want it anyway.';
 }
 
 // Path: <root>
@@ -28840,6 +28851,9 @@ class _StringsFr extends _StringsEn {
   String get stat_source_breakdown => 'By source';
   @override
   String stat_format_pages({required Object n}) => '${n} pages';
+  @override
+  String anime_download_subs_season_mismatch({required Object season}) =>
+      'No subtitle entry matches season ${season} of this pack - not auto-selected. Pick one manually if you want it anyway.';
 }
 
 // Path: <root>
@@ -35097,6 +35111,9 @@ class _StringsId extends _StringsEn {
   String get stat_source_breakdown => 'By source';
   @override
   String stat_format_pages({required Object n}) => '${n} pages';
+  @override
+  String anime_download_subs_season_mismatch({required Object season}) =>
+      'No subtitle entry matches season ${season} of this pack - not auto-selected. Pick one manually if you want it anyway.';
 }
 
 // Path: <root>
@@ -41400,6 +41417,9 @@ class _StringsIt extends _StringsEn {
   String get stat_source_breakdown => 'By source';
   @override
   String stat_format_pages({required Object n}) => '${n} pages';
+  @override
+  String anime_download_subs_season_mismatch({required Object season}) =>
+      'No subtitle entry matches season ${season} of this pack - not auto-selected. Pick one manually if you want it anyway.';
 }
 
 // Path: <root>
@@ -47520,6 +47540,9 @@ class _StringsJa extends _StringsEn {
   String get stat_source_breakdown => 'By source';
   @override
   String stat_format_pages({required Object n}) => '${n} pages';
+  @override
+  String anime_download_subs_season_mismatch({required Object season}) =>
+      'No subtitle entry matches season ${season} of this pack - not auto-selected. Pick one manually if you want it anyway.';
 }
 
 // Path: <root>
@@ -53642,6 +53665,9 @@ class _StringsKo extends _StringsEn {
   String get stat_source_breakdown => 'By source';
   @override
   String stat_format_pages({required Object n}) => '${n} pages';
+  @override
+  String anime_download_subs_season_mismatch({required Object season}) =>
+      'No subtitle entry matches season ${season} of this pack - not auto-selected. Pick one manually if you want it anyway.';
 }
 
 // Path: <root>
@@ -59925,6 +59951,9 @@ class _StringsNl extends _StringsEn {
   String get stat_source_breakdown => 'By source';
   @override
   String stat_format_pages({required Object n}) => '${n} pages';
+  @override
+  String anime_download_subs_season_mismatch({required Object season}) =>
+      'No subtitle entry matches season ${season} of this pack - not auto-selected. Pick one manually if you want it anyway.';
 }
 
 // Path: <root>
@@ -66221,6 +66250,9 @@ class _StringsPtBr extends _StringsEn {
   String get stat_source_breakdown => 'By source';
   @override
   String stat_format_pages({required Object n}) => '${n} pages';
+  @override
+  String anime_download_subs_season_mismatch({required Object season}) =>
+      'No subtitle entry matches season ${season} of this pack - not auto-selected. Pick one manually if you want it anyway.';
 }
 
 // Path: <root>
@@ -72501,6 +72533,9 @@ class _StringsRu extends _StringsEn {
   String get stat_source_breakdown => 'By source';
   @override
   String stat_format_pages({required Object n}) => '${n} pages';
+  @override
+  String anime_download_subs_season_mismatch({required Object season}) =>
+      'No subtitle entry matches season ${season} of this pack - not auto-selected. Pick one manually if you want it anyway.';
 }
 
 // Path: <root>
@@ -78729,6 +78764,9 @@ class _StringsTh extends _StringsEn {
   String get stat_source_breakdown => 'By source';
   @override
   String stat_format_pages({required Object n}) => '${n} pages';
+  @override
+  String anime_download_subs_season_mismatch({required Object season}) =>
+      'No subtitle entry matches season ${season} of this pack - not auto-selected. Pick one manually if you want it anyway.';
 }
 
 // Path: <root>
@@ -84989,6 +85027,9 @@ class _StringsTr extends _StringsEn {
   String get stat_source_breakdown => 'By source';
   @override
   String stat_format_pages({required Object n}) => '${n} pages';
+  @override
+  String anime_download_subs_season_mismatch({required Object season}) =>
+      'No subtitle entry matches season ${season} of this pack - not auto-selected. Pick one manually if you want it anyway.';
 }
 
 // Path: <root>
@@ -91234,6 +91275,9 @@ class _StringsVi extends _StringsEn {
   String get stat_source_breakdown => 'By source';
   @override
   String stat_format_pages({required Object n}) => '${n} pages';
+  @override
+  String anime_download_subs_season_mismatch({required Object season}) =>
+      'No subtitle entry matches season ${season} of this pack - not auto-selected. Pick one manually if you want it anyway.';
 }
 
 // Path: <root>
@@ -97039,6 +97083,9 @@ class _StringsZhCn extends _StringsEn {
   String get stat_source_breakdown => '各来源';
   @override
   String stat_format_pages({required Object n}) => '${n} 页';
+  @override
+  String anime_download_subs_season_mismatch({required Object season}) =>
+      '没有字幕条目对得上该种子的第 ${season} 季，已不自动选中。要用的话请手动选一条。';
 }
 
 // Path: <root>
@@ -103080,6 +103127,9 @@ class _StringsZhHk extends _StringsEn {
   String get stat_source_breakdown => 'By source';
   @override
   String stat_format_pages({required Object n}) => '${n} pages';
+  @override
+  String anime_download_subs_season_mismatch({required Object season}) =>
+      'No subtitle entry matches season ${season} of this pack - not auto-selected. Pick one manually if you want it anyway.';
 }
 
 /// Flat map(s) containing all translations.
@@ -108661,6 +108711,9 @@ extension on _StringsEn {
         return 'By source';
       case 'stat_format_pages':
         return ({required Object n}) => '${n} pages';
+      case 'anime_download_subs_season_mismatch':
+        return ({required Object season}) =>
+            'No subtitle entry matches season ${season} of this pack - not auto-selected. Pick one manually if you want it anyway.';
       default:
         return null;
     }
@@ -114240,6 +114293,9 @@ extension on _StringsAr {
         return 'By source';
       case 'stat_format_pages':
         return ({required Object n}) => '${n} pages';
+      case 'anime_download_subs_season_mismatch':
+        return ({required Object season}) =>
+            'No subtitle entry matches season ${season} of this pack - not auto-selected. Pick one manually if you want it anyway.';
       default:
         return null;
     }
@@ -119840,6 +119896,9 @@ extension on _StringsDe {
         return 'By source';
       case 'stat_format_pages':
         return ({required Object n}) => '${n} pages';
+      case 'anime_download_subs_season_mismatch':
+        return ({required Object season}) =>
+            'No subtitle entry matches season ${season} of this pack - not auto-selected. Pick one manually if you want it anyway.';
       default:
         return null;
     }
@@ -125439,6 +125498,9 @@ extension on _StringsEs {
         return 'By source';
       case 'stat_format_pages':
         return ({required Object n}) => '${n} pages';
+      case 'anime_download_subs_season_mismatch':
+        return ({required Object season}) =>
+            'No subtitle entry matches season ${season} of this pack - not auto-selected. Pick one manually if you want it anyway.';
       default:
         return null;
     }
@@ -131044,6 +131106,9 @@ extension on _StringsFr {
         return 'By source';
       case 'stat_format_pages':
         return ({required Object n}) => '${n} pages';
+      case 'anime_download_subs_season_mismatch':
+        return ({required Object season}) =>
+            'No subtitle entry matches season ${season} of this pack - not auto-selected. Pick one manually if you want it anyway.';
       default:
         return null;
     }
@@ -136631,6 +136696,9 @@ extension on _StringsId {
         return 'By source';
       case 'stat_format_pages':
         return ({required Object n}) => '${n} pages';
+      case 'anime_download_subs_season_mismatch':
+        return ({required Object season}) =>
+            'No subtitle entry matches season ${season} of this pack - not auto-selected. Pick one manually if you want it anyway.';
       default:
         return null;
     }
@@ -142233,6 +142301,9 @@ extension on _StringsIt {
         return 'By source';
       case 'stat_format_pages':
         return ({required Object n}) => '${n} pages';
+      case 'anime_download_subs_season_mismatch':
+        return ({required Object season}) =>
+            'No subtitle entry matches season ${season} of this pack - not auto-selected. Pick one manually if you want it anyway.';
       default:
         return null;
     }
@@ -147797,6 +147868,9 @@ extension on _StringsJa {
         return 'By source';
       case 'stat_format_pages':
         return ({required Object n}) => '${n} pages';
+      case 'anime_download_subs_season_mismatch':
+        return ({required Object season}) =>
+            'No subtitle entry matches season ${season} of this pack - not auto-selected. Pick one manually if you want it anyway.';
       default:
         return null;
     }
@@ -153365,6 +153439,9 @@ extension on _StringsKo {
         return 'By source';
       case 'stat_format_pages':
         return ({required Object n}) => '${n} pages';
+      case 'anime_download_subs_season_mismatch':
+        return ({required Object season}) =>
+            'No subtitle entry matches season ${season} of this pack - not auto-selected. Pick one manually if you want it anyway.';
       default:
         return null;
     }
@@ -158960,6 +159037,9 @@ extension on _StringsNl {
         return 'By source';
       case 'stat_format_pages':
         return ({required Object n}) => '${n} pages';
+      case 'anime_download_subs_season_mismatch':
+        return ({required Object season}) =>
+            'No subtitle entry matches season ${season} of this pack - not auto-selected. Pick one manually if you want it anyway.';
       default:
         return null;
     }
@@ -164552,6 +164632,9 @@ extension on _StringsPtBr {
         return 'By source';
       case 'stat_format_pages':
         return ({required Object n}) => '${n} pages';
+      case 'anime_download_subs_season_mismatch':
+        return ({required Object season}) =>
+            'No subtitle entry matches season ${season} of this pack - not auto-selected. Pick one manually if you want it anyway.';
       default:
         return null;
     }
@@ -170149,6 +170232,9 @@ extension on _StringsRu {
         return 'By source';
       case 'stat_format_pages':
         return ({required Object n}) => '${n} pages';
+      case 'anime_download_subs_season_mismatch':
+        return ({required Object season}) =>
+            'No subtitle entry matches season ${season} of this pack - not auto-selected. Pick one manually if you want it anyway.';
       default:
         return null;
     }
@@ -175730,6 +175816,9 @@ extension on _StringsTh {
         return 'By source';
       case 'stat_format_pages':
         return ({required Object n}) => '${n} pages';
+      case 'anime_download_subs_season_mismatch':
+        return ({required Object season}) =>
+            'No subtitle entry matches season ${season} of this pack - not auto-selected. Pick one manually if you want it anyway.';
       default:
         return null;
     }
@@ -181320,6 +181409,9 @@ extension on _StringsTr {
         return 'By source';
       case 'stat_format_pages':
         return ({required Object n}) => '${n} pages';
+      case 'anime_download_subs_season_mismatch':
+        return ({required Object season}) =>
+            'No subtitle entry matches season ${season} of this pack - not auto-selected. Pick one manually if you want it anyway.';
       default:
         return null;
     }
@@ -186905,6 +186997,9 @@ extension on _StringsVi {
         return 'By source';
       case 'stat_format_pages':
         return ({required Object n}) => '${n} pages';
+      case 'anime_download_subs_season_mismatch':
+        return ({required Object season}) =>
+            'No subtitle entry matches season ${season} of this pack - not auto-selected. Pick one manually if you want it anyway.';
       default:
         return null;
     }
@@ -192444,6 +192539,9 @@ extension on _StringsZhCn {
         return '各来源';
       case 'stat_format_pages':
         return ({required Object n}) => '${n} 页';
+      case 'anime_download_subs_season_mismatch':
+        return ({required Object season}) =>
+            '没有字幕条目对得上该种子的第 ${season} 季，已不自动选中。要用的话请手动选一条。';
       default:
         return null;
     }
@@ -198003,6 +198101,9 @@ extension on _StringsZhHk {
         return 'By source';
       case 'stat_format_pages':
         return ({required Object n}) => '${n} pages';
+      case 'anime_download_subs_season_mismatch':
+        return ({required Object season}) =>
+            'No subtitle entry matches season ${season} of this pack - not auto-selected. Pick one manually if you want it anyway.';
       default:
         return null;
     }
