@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 46274 (2722 per locale)
+/// Strings: 46291 (2723 per locale)
 ///
-/// Built on 2026-07-28 at 10:31 UTC
+/// Built on 2026-07-28 at 11:26 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3659,6 +3659,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Subtitles: pending until download completes';
   String get anime_download_subs_unmatched =>
       'Subtitles: no match for this pack';
+  String get download_backend_desktop_only_note =>
+      'Built-in engine requires a desktop platform. This device uses external qBittorrent.';
 }
 
 // Path: <root>
@@ -9888,6 +9890,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get anime_download_subs_unmatched =>
       'Subtitles: no match for this pack';
+  @override
+  String get download_backend_desktop_only_note =>
+      'Built-in engine requires a desktop platform. This device uses external qBittorrent.';
 }
 
 // Path: <root>
@@ -16185,6 +16190,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get anime_download_subs_unmatched =>
       'Subtitles: no match for this pack';
+  @override
+  String get download_backend_desktop_only_note =>
+      'Built-in engine requires a desktop platform. This device uses external qBittorrent.';
 }
 
 // Path: <root>
@@ -22498,6 +22506,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get anime_download_subs_unmatched =>
       'Subtitles: no match for this pack';
+  @override
+  String get download_backend_desktop_only_note =>
+      'Built-in engine requires a desktop platform. This device uses external qBittorrent.';
 }
 
 // Path: <root>
@@ -28822,6 +28833,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get anime_download_subs_unmatched =>
       'Subtitles: no match for this pack';
+  @override
+  String get download_backend_desktop_only_note =>
+      'Built-in engine requires a desktop platform. This device uses external qBittorrent.';
 }
 
 // Path: <root>
@@ -35075,6 +35089,9 @@ class _StringsId extends _StringsEn {
   @override
   String get anime_download_subs_unmatched =>
       'Subtitles: no match for this pack';
+  @override
+  String get download_backend_desktop_only_note =>
+      'Built-in engine requires a desktop platform. This device uses external qBittorrent.';
 }
 
 // Path: <root>
@@ -41374,6 +41391,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get anime_download_subs_unmatched =>
       'Subtitles: no match for this pack';
+  @override
+  String get download_backend_desktop_only_note =>
+      'Built-in engine requires a desktop platform. This device uses external qBittorrent.';
 }
 
 // Path: <root>
@@ -47490,6 +47510,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get anime_download_subs_unmatched =>
       'Subtitles: no match for this pack';
+  @override
+  String get download_backend_desktop_only_note =>
+      'Built-in engine requires a desktop platform. This device uses external qBittorrent.';
 }
 
 // Path: <root>
@@ -53608,6 +53631,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get anime_download_subs_unmatched =>
       'Subtitles: no match for this pack';
+  @override
+  String get download_backend_desktop_only_note =>
+      'Built-in engine requires a desktop platform. This device uses external qBittorrent.';
 }
 
 // Path: <root>
@@ -59887,6 +59913,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get anime_download_subs_unmatched =>
       'Subtitles: no match for this pack';
+  @override
+  String get download_backend_desktop_only_note =>
+      'Built-in engine requires a desktop platform. This device uses external qBittorrent.';
 }
 
 // Path: <root>
@@ -66179,6 +66208,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get anime_download_subs_unmatched =>
       'Subtitles: no match for this pack';
+  @override
+  String get download_backend_desktop_only_note =>
+      'Built-in engine requires a desktop platform. This device uses external qBittorrent.';
 }
 
 // Path: <root>
@@ -72455,6 +72487,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get anime_download_subs_unmatched =>
       'Subtitles: no match for this pack';
+  @override
+  String get download_backend_desktop_only_note =>
+      'Built-in engine requires a desktop platform. This device uses external qBittorrent.';
 }
 
 // Path: <root>
@@ -78679,6 +78714,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get anime_download_subs_unmatched =>
       'Subtitles: no match for this pack';
+  @override
+  String get download_backend_desktop_only_note =>
+      'Built-in engine requires a desktop platform. This device uses external qBittorrent.';
 }
 
 // Path: <root>
@@ -84935,6 +84973,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get anime_download_subs_unmatched =>
       'Subtitles: no match for this pack';
+  @override
+  String get download_backend_desktop_only_note =>
+      'Built-in engine requires a desktop platform. This device uses external qBittorrent.';
 }
 
 // Path: <root>
@@ -91176,6 +91217,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get anime_download_subs_unmatched =>
       'Subtitles: no match for this pack';
+  @override
+  String get download_backend_desktop_only_note =>
+      'Built-in engine requires a desktop platform. This device uses external qBittorrent.';
 }
 
 // Path: <root>
@@ -96976,6 +97020,9 @@ class _StringsZhCn extends _StringsEn {
   String get anime_download_subs_pending => '字幕：待下载完成后配对';
   @override
   String get anime_download_subs_unmatched => '字幕：未匹配到（可手动补）';
+  @override
+  String get download_backend_desktop_only_note =>
+      '内置引擎仅桌面平台可用，本设备使用外接 qBittorrent。';
 }
 
 // Path: <root>
@@ -103013,6 +103060,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get anime_download_subs_unmatched =>
       'Subtitles: no match for this pack';
+  @override
+  String get download_backend_desktop_only_note =>
+      'Built-in engine requires a desktop platform. This device uses external qBittorrent.';
 }
 
 /// Flat map(s) containing all translations.
@@ -108590,6 +108640,8 @@ extension on _StringsEn {
         return 'Subtitles: pending until download completes';
       case 'anime_download_subs_unmatched':
         return 'Subtitles: no match for this pack';
+      case 'download_backend_desktop_only_note':
+        return 'Built-in engine requires a desktop platform. This device uses external qBittorrent.';
       default:
         return null;
     }
@@ -114165,6 +114217,8 @@ extension on _StringsAr {
         return 'Subtitles: pending until download completes';
       case 'anime_download_subs_unmatched':
         return 'Subtitles: no match for this pack';
+      case 'download_backend_desktop_only_note':
+        return 'Built-in engine requires a desktop platform. This device uses external qBittorrent.';
       default:
         return null;
     }
@@ -119761,6 +119815,8 @@ extension on _StringsDe {
         return 'Subtitles: pending until download completes';
       case 'anime_download_subs_unmatched':
         return 'Subtitles: no match for this pack';
+      case 'download_backend_desktop_only_note':
+        return 'Built-in engine requires a desktop platform. This device uses external qBittorrent.';
       default:
         return null;
     }
@@ -125356,6 +125412,8 @@ extension on _StringsEs {
         return 'Subtitles: pending until download completes';
       case 'anime_download_subs_unmatched':
         return 'Subtitles: no match for this pack';
+      case 'download_backend_desktop_only_note':
+        return 'Built-in engine requires a desktop platform. This device uses external qBittorrent.';
       default:
         return null;
     }
@@ -130957,6 +131015,8 @@ extension on _StringsFr {
         return 'Subtitles: pending until download completes';
       case 'anime_download_subs_unmatched':
         return 'Subtitles: no match for this pack';
+      case 'download_backend_desktop_only_note':
+        return 'Built-in engine requires a desktop platform. This device uses external qBittorrent.';
       default:
         return null;
     }
@@ -136540,6 +136600,8 @@ extension on _StringsId {
         return 'Subtitles: pending until download completes';
       case 'anime_download_subs_unmatched':
         return 'Subtitles: no match for this pack';
+      case 'download_backend_desktop_only_note':
+        return 'Built-in engine requires a desktop platform. This device uses external qBittorrent.';
       default:
         return null;
     }
@@ -142138,6 +142200,8 @@ extension on _StringsIt {
         return 'Subtitles: pending until download completes';
       case 'anime_download_subs_unmatched':
         return 'Subtitles: no match for this pack';
+      case 'download_backend_desktop_only_note':
+        return 'Built-in engine requires a desktop platform. This device uses external qBittorrent.';
       default:
         return null;
     }
@@ -147698,6 +147762,8 @@ extension on _StringsJa {
         return 'Subtitles: pending until download completes';
       case 'anime_download_subs_unmatched':
         return 'Subtitles: no match for this pack';
+      case 'download_backend_desktop_only_note':
+        return 'Built-in engine requires a desktop platform. This device uses external qBittorrent.';
       default:
         return null;
     }
@@ -153262,6 +153328,8 @@ extension on _StringsKo {
         return 'Subtitles: pending until download completes';
       case 'anime_download_subs_unmatched':
         return 'Subtitles: no match for this pack';
+      case 'download_backend_desktop_only_note':
+        return 'Built-in engine requires a desktop platform. This device uses external qBittorrent.';
       default:
         return null;
     }
@@ -158853,6 +158921,8 @@ extension on _StringsNl {
         return 'Subtitles: pending until download completes';
       case 'anime_download_subs_unmatched':
         return 'Subtitles: no match for this pack';
+      case 'download_backend_desktop_only_note':
+        return 'Built-in engine requires a desktop platform. This device uses external qBittorrent.';
       default:
         return null;
     }
@@ -164441,6 +164511,8 @@ extension on _StringsPtBr {
         return 'Subtitles: pending until download completes';
       case 'anime_download_subs_unmatched':
         return 'Subtitles: no match for this pack';
+      case 'download_backend_desktop_only_note':
+        return 'Built-in engine requires a desktop platform. This device uses external qBittorrent.';
       default:
         return null;
     }
@@ -170034,6 +170106,8 @@ extension on _StringsRu {
         return 'Subtitles: pending until download completes';
       case 'anime_download_subs_unmatched':
         return 'Subtitles: no match for this pack';
+      case 'download_backend_desktop_only_note':
+        return 'Built-in engine requires a desktop platform. This device uses external qBittorrent.';
       default:
         return null;
     }
@@ -175611,6 +175685,8 @@ extension on _StringsTh {
         return 'Subtitles: pending until download completes';
       case 'anime_download_subs_unmatched':
         return 'Subtitles: no match for this pack';
+      case 'download_backend_desktop_only_note':
+        return 'Built-in engine requires a desktop platform. This device uses external qBittorrent.';
       default:
         return null;
     }
@@ -181197,6 +181273,8 @@ extension on _StringsTr {
         return 'Subtitles: pending until download completes';
       case 'anime_download_subs_unmatched':
         return 'Subtitles: no match for this pack';
+      case 'download_backend_desktop_only_note':
+        return 'Built-in engine requires a desktop platform. This device uses external qBittorrent.';
       default:
         return null;
     }
@@ -186778,6 +186856,8 @@ extension on _StringsVi {
         return 'Subtitles: pending until download completes';
       case 'anime_download_subs_unmatched':
         return 'Subtitles: no match for this pack';
+      case 'download_backend_desktop_only_note':
+        return 'Built-in engine requires a desktop platform. This device uses external qBittorrent.';
       default:
         return null;
     }
@@ -192313,6 +192393,8 @@ extension on _StringsZhCn {
         return '字幕：待下载完成后配对';
       case 'anime_download_subs_unmatched':
         return '字幕：未匹配到（可手动补）';
+      case 'download_backend_desktop_only_note':
+        return '内置引擎仅桌面平台可用，本设备使用外接 qBittorrent。';
       default:
         return null;
     }
@@ -197868,6 +197950,8 @@ extension on _StringsZhHk {
         return 'Subtitles: pending until download completes';
       case 'anime_download_subs_unmatched':
         return 'Subtitles: no match for this pack';
+      case 'download_backend_desktop_only_note':
+        return 'Built-in engine requires a desktop platform. This device uses external qBittorrent.';
       default:
         return null;
     }
