@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 46291 (2723 per locale)
+/// Strings: 46308 (2724 per locale)
 ///
-/// Built on 2026-07-28 at 11:26 UTC
+/// Built on 2026-07-28 at 11:47 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2434,8 +2434,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get stat_goal_reached => 'Goal reached';
   String stat_goal_recent_average({required Object n}) =>
       'Last 7 days: ${n} chars/day on average';
-  String get stat_goal_scope_hint =>
-      'Counts all characters combined: reading + video subtitles + game text.';
   String get stat_goal_set => 'Set goal';
   String get stat_goal_unit_chars => 'chars';
   String get stat_goal_weekly => 'Weekly goal';
@@ -3661,6 +3659,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Subtitles: no match for this pack';
   String get download_backend_desktop_only_note =>
       'Built-in engine requires a desktop platform. This device uses external qBittorrent.';
+  String get stat_source_breakdown => 'By source';
+  String stat_format_pages({required Object n}) => '${n} pages';
 }
 
 // Path: <root>
@@ -7719,9 +7719,6 @@ class _StringsAr extends _StringsEn {
   String stat_goal_recent_average({required Object n}) =>
       'Last 7 days: ${n} chars/day on average';
   @override
-  String get stat_goal_scope_hint =>
-      'Counts all characters combined: reading + video subtitles + game text.';
-  @override
   String get stat_goal_set => 'Set Goal';
   @override
   String get stat_goal_unit_chars => 'chars';
@@ -9893,6 +9890,10 @@ class _StringsAr extends _StringsEn {
   @override
   String get download_backend_desktop_only_note =>
       'Built-in engine requires a desktop platform. This device uses external qBittorrent.';
+  @override
+  String get stat_source_breakdown => 'By source';
+  @override
+  String stat_format_pages({required Object n}) => '${n} pages';
 }
 
 // Path: <root>
@@ -13994,9 +13995,6 @@ class _StringsDe extends _StringsEn {
   String stat_goal_recent_average({required Object n}) =>
       'Last 7 days: ${n} chars/day on average';
   @override
-  String get stat_goal_scope_hint =>
-      'Counts all characters combined: reading + video subtitles + game text.';
-  @override
   String get stat_goal_set => 'Set Goal';
   @override
   String get stat_goal_unit_chars => 'chars';
@@ -16193,6 +16191,10 @@ class _StringsDe extends _StringsEn {
   @override
   String get download_backend_desktop_only_note =>
       'Built-in engine requires a desktop platform. This device uses external qBittorrent.';
+  @override
+  String get stat_source_breakdown => 'By source';
+  @override
+  String stat_format_pages({required Object n}) => '${n} pages';
 }
 
 // Path: <root>
@@ -20302,9 +20304,6 @@ class _StringsEs extends _StringsEn {
   String stat_goal_recent_average({required Object n}) =>
       'Last 7 days: ${n} chars/day on average';
   @override
-  String get stat_goal_scope_hint =>
-      'Counts all characters combined: reading + video subtitles + game text.';
-  @override
   String get stat_goal_set => 'Set Goal';
   @override
   String get stat_goal_unit_chars => 'chars';
@@ -22509,6 +22508,10 @@ class _StringsEs extends _StringsEn {
   @override
   String get download_backend_desktop_only_note =>
       'Built-in engine requires a desktop platform. This device uses external qBittorrent.';
+  @override
+  String get stat_source_breakdown => 'By source';
+  @override
+  String stat_format_pages({required Object n}) => '${n} pages';
 }
 
 // Path: <root>
@@ -26629,9 +26632,6 @@ class _StringsFr extends _StringsEn {
   String stat_goal_recent_average({required Object n}) =>
       'Last 7 days: ${n} chars/day on average';
   @override
-  String get stat_goal_scope_hint =>
-      'Counts all characters combined: reading + video subtitles + game text.';
-  @override
   String get stat_goal_set => 'Set Goal';
   @override
   String get stat_goal_unit_chars => 'chars';
@@ -28836,6 +28836,10 @@ class _StringsFr extends _StringsEn {
   @override
   String get download_backend_desktop_only_note =>
       'Built-in engine requires a desktop platform. This device uses external qBittorrent.';
+  @override
+  String get stat_source_breakdown => 'By source';
+  @override
+  String stat_format_pages({required Object n}) => '${n} pages';
 }
 
 // Path: <root>
@@ -32907,9 +32911,6 @@ class _StringsId extends _StringsEn {
   String stat_goal_recent_average({required Object n}) =>
       'Last 7 days: ${n} chars/day on average';
   @override
-  String get stat_goal_scope_hint =>
-      'Counts all characters combined: reading + video subtitles + game text.';
-  @override
   String get stat_goal_set => 'Set Goal';
   @override
   String get stat_goal_unit_chars => 'chars';
@@ -35092,6 +35093,10 @@ class _StringsId extends _StringsEn {
   @override
   String get download_backend_desktop_only_note =>
       'Built-in engine requires a desktop platform. This device uses external qBittorrent.';
+  @override
+  String get stat_source_breakdown => 'By source';
+  @override
+  String stat_format_pages({required Object n}) => '${n} pages';
 }
 
 // Path: <root>
@@ -39194,9 +39199,6 @@ class _StringsIt extends _StringsEn {
   String stat_goal_recent_average({required Object n}) =>
       'Last 7 days: ${n} chars/day on average';
   @override
-  String get stat_goal_scope_hint =>
-      'Counts all characters combined: reading + video subtitles + game text.';
-  @override
   String get stat_goal_set => 'Set Goal';
   @override
   String get stat_goal_unit_chars => 'chars';
@@ -41394,6 +41396,10 @@ class _StringsIt extends _StringsEn {
   @override
   String get download_backend_desktop_only_note =>
       'Built-in engine requires a desktop platform. This device uses external qBittorrent.';
+  @override
+  String get stat_source_breakdown => 'By source';
+  @override
+  String stat_format_pages({required Object n}) => '${n} pages';
 }
 
 // Path: <root>
@@ -45389,9 +45395,6 @@ class _StringsJa extends _StringsEn {
   String stat_goal_recent_average({required Object n}) =>
       'Last 7 days: ${n} chars/day on average';
   @override
-  String get stat_goal_scope_hint =>
-      'Counts all characters combined: reading + video subtitles + game text.';
-  @override
   String get stat_goal_set => 'Set Goal';
   @override
   String get stat_goal_unit_chars => 'chars';
@@ -47513,6 +47516,10 @@ class _StringsJa extends _StringsEn {
   @override
   String get download_backend_desktop_only_note =>
       'Built-in engine requires a desktop platform. This device uses external qBittorrent.';
+  @override
+  String get stat_source_breakdown => 'By source';
+  @override
+  String stat_format_pages({required Object n}) => '${n} pages';
 }
 
 // Path: <root>
@@ -51505,9 +51512,6 @@ class _StringsKo extends _StringsEn {
   String stat_goal_recent_average({required Object n}) =>
       'Last 7 days: ${n} chars/day on average';
   @override
-  String get stat_goal_scope_hint =>
-      'Counts all characters combined: reading + video subtitles + game text.';
-  @override
   String get stat_goal_set => 'Set Goal';
   @override
   String get stat_goal_unit_chars => 'chars';
@@ -53634,6 +53638,10 @@ class _StringsKo extends _StringsEn {
   @override
   String get download_backend_desktop_only_note =>
       'Built-in engine requires a desktop platform. This device uses external qBittorrent.';
+  @override
+  String get stat_source_breakdown => 'By source';
+  @override
+  String stat_format_pages({required Object n}) => '${n} pages';
 }
 
 // Path: <root>
@@ -57721,9 +57729,6 @@ class _StringsNl extends _StringsEn {
   String stat_goal_recent_average({required Object n}) =>
       'Last 7 days: ${n} chars/day on average';
   @override
-  String get stat_goal_scope_hint =>
-      'Counts all characters combined: reading + video subtitles + game text.';
-  @override
   String get stat_goal_set => 'Set Goal';
   @override
   String get stat_goal_unit_chars => 'chars';
@@ -59916,6 +59921,10 @@ class _StringsNl extends _StringsEn {
   @override
   String get download_backend_desktop_only_note =>
       'Built-in engine requires a desktop platform. This device uses external qBittorrent.';
+  @override
+  String get stat_source_breakdown => 'By source';
+  @override
+  String stat_format_pages({required Object n}) => '${n} pages';
 }
 
 // Path: <root>
@@ -64014,9 +64023,6 @@ class _StringsPtBr extends _StringsEn {
   String stat_goal_recent_average({required Object n}) =>
       'Last 7 days: ${n} chars/day on average';
   @override
-  String get stat_goal_scope_hint =>
-      'Counts all characters combined: reading + video subtitles + game text.';
-  @override
   String get stat_goal_set => 'Set Goal';
   @override
   String get stat_goal_unit_chars => 'chars';
@@ -66211,6 +66217,10 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get download_backend_desktop_only_note =>
       'Built-in engine requires a desktop platform. This device uses external qBittorrent.';
+  @override
+  String get stat_source_breakdown => 'By source';
+  @override
+  String stat_format_pages({required Object n}) => '${n} pages';
 }
 
 // Path: <root>
@@ -70300,9 +70310,6 @@ class _StringsRu extends _StringsEn {
   String stat_goal_recent_average({required Object n}) =>
       'Last 7 days: ${n} chars/day on average';
   @override
-  String get stat_goal_scope_hint =>
-      'Counts all characters combined: reading + video subtitles + game text.';
-  @override
   String get stat_goal_set => 'Set Goal';
   @override
   String get stat_goal_unit_chars => 'chars';
@@ -72490,6 +72497,10 @@ class _StringsRu extends _StringsEn {
   @override
   String get download_backend_desktop_only_note =>
       'Built-in engine requires a desktop platform. This device uses external qBittorrent.';
+  @override
+  String get stat_source_breakdown => 'By source';
+  @override
+  String stat_format_pages({required Object n}) => '${n} pages';
 }
 
 // Path: <root>
@@ -76540,9 +76551,6 @@ class _StringsTh extends _StringsEn {
   String stat_goal_recent_average({required Object n}) =>
       'Last 7 days: ${n} chars/day on average';
   @override
-  String get stat_goal_scope_hint =>
-      'Counts all characters combined: reading + video subtitles + game text.';
-  @override
   String get stat_goal_set => 'Set Goal';
   @override
   String get stat_goal_unit_chars => 'chars';
@@ -78717,6 +78725,10 @@ class _StringsTh extends _StringsEn {
   @override
   String get download_backend_desktop_only_note =>
       'Built-in engine requires a desktop platform. This device uses external qBittorrent.';
+  @override
+  String get stat_source_breakdown => 'By source';
+  @override
+  String stat_format_pages({required Object n}) => '${n} pages';
 }
 
 // Path: <root>
@@ -82793,9 +82805,6 @@ class _StringsTr extends _StringsEn {
   String stat_goal_recent_average({required Object n}) =>
       'Last 7 days: ${n} chars/day on average';
   @override
-  String get stat_goal_scope_hint =>
-      'Counts all characters combined: reading + video subtitles + game text.';
-  @override
   String get stat_goal_set => 'Set Goal';
   @override
   String get stat_goal_unit_chars => 'chars';
@@ -84976,6 +84985,10 @@ class _StringsTr extends _StringsEn {
   @override
   String get download_backend_desktop_only_note =>
       'Built-in engine requires a desktop platform. This device uses external qBittorrent.';
+  @override
+  String get stat_source_breakdown => 'By source';
+  @override
+  String stat_format_pages({required Object n}) => '${n} pages';
 }
 
 // Path: <root>
@@ -89044,9 +89057,6 @@ class _StringsVi extends _StringsEn {
   String stat_goal_recent_average({required Object n}) =>
       'Last 7 days: ${n} chars/day on average';
   @override
-  String get stat_goal_scope_hint =>
-      'Counts all characters combined: reading + video subtitles + game text.';
-  @override
   String get stat_goal_set => 'Set Goal';
   @override
   String get stat_goal_unit_chars => 'chars';
@@ -91220,6 +91230,10 @@ class _StringsVi extends _StringsEn {
   @override
   String get download_backend_desktop_only_note =>
       'Built-in engine requires a desktop platform. This device uses external qBittorrent.';
+  @override
+  String get stat_source_breakdown => 'By source';
+  @override
+  String stat_format_pages({required Object n}) => '${n} pages';
 }
 
 // Path: <root>
@@ -95016,8 +95030,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String stat_goal_recent_average({required Object n}) => '近 7 日日均 ${n} 字';
   @override
-  String get stat_goal_scope_hint => '口径：阅读 + 视频字幕 + 游戏文本的全部字符数合计';
-  @override
   String get stat_goal_set => '设定目标';
   @override
   String get stat_goal_unit_chars => '字';
@@ -97023,6 +97035,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get download_backend_desktop_only_note =>
       '内置引擎仅桌面平台可用，本设备使用外接 qBittorrent。';
+  @override
+  String get stat_source_breakdown => '各来源';
+  @override
+  String stat_format_pages({required Object n}) => '${n} 页';
 }
 
 // Path: <root>
@@ -100972,9 +100988,6 @@ class _StringsZhHk extends _StringsEn {
   String stat_goal_recent_average({required Object n}) =>
       'Last 7 days: ${n} chars/day on average';
   @override
-  String get stat_goal_scope_hint =>
-      'Counts all characters combined: reading + video subtitles + game text.';
-  @override
   String get stat_goal_set => 'Set Goal';
   @override
   String get stat_goal_unit_chars => 'chars';
@@ -103063,6 +103076,10 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get download_backend_desktop_only_note =>
       'Built-in engine requires a desktop platform. This device uses external qBittorrent.';
+  @override
+  String get stat_source_breakdown => 'By source';
+  @override
+  String stat_format_pages({required Object n}) => '${n} pages';
 }
 
 /// Flat map(s) containing all translations.
@@ -106710,8 +106727,6 @@ extension on _StringsEn {
       case 'stat_goal_recent_average':
         return ({required Object n}) =>
             'Last 7 days: ${n} chars/day on average';
-      case 'stat_goal_scope_hint':
-        return 'Counts all characters combined: reading + video subtitles + game text.';
       case 'stat_goal_set':
         return 'Set goal';
       case 'stat_goal_unit_chars':
@@ -108642,6 +108657,10 @@ extension on _StringsEn {
         return 'Subtitles: no match for this pack';
       case 'download_backend_desktop_only_note':
         return 'Built-in engine requires a desktop platform. This device uses external qBittorrent.';
+      case 'stat_source_breakdown':
+        return 'By source';
+      case 'stat_format_pages':
+        return ({required Object n}) => '${n} pages';
       default:
         return null;
     }
@@ -112287,8 +112306,6 @@ extension on _StringsAr {
       case 'stat_goal_recent_average':
         return ({required Object n}) =>
             'Last 7 days: ${n} chars/day on average';
-      case 'stat_goal_scope_hint':
-        return 'Counts all characters combined: reading + video subtitles + game text.';
       case 'stat_goal_set':
         return 'Set Goal';
       case 'stat_goal_unit_chars':
@@ -114219,6 +114236,10 @@ extension on _StringsAr {
         return 'Subtitles: no match for this pack';
       case 'download_backend_desktop_only_note':
         return 'Built-in engine requires a desktop platform. This device uses external qBittorrent.';
+      case 'stat_source_breakdown':
+        return 'By source';
+      case 'stat_format_pages':
+        return ({required Object n}) => '${n} pages';
       default:
         return null;
     }
@@ -117878,8 +117899,6 @@ extension on _StringsDe {
       case 'stat_goal_recent_average':
         return ({required Object n}) =>
             'Last 7 days: ${n} chars/day on average';
-      case 'stat_goal_scope_hint':
-        return 'Counts all characters combined: reading + video subtitles + game text.';
       case 'stat_goal_set':
         return 'Set Goal';
       case 'stat_goal_unit_chars':
@@ -119817,6 +119836,10 @@ extension on _StringsDe {
         return 'Subtitles: no match for this pack';
       case 'download_backend_desktop_only_note':
         return 'Built-in engine requires a desktop platform. This device uses external qBittorrent.';
+      case 'stat_source_breakdown':
+        return 'By source';
+      case 'stat_format_pages':
+        return ({required Object n}) => '${n} pages';
       default:
         return null;
     }
@@ -123476,8 +123499,6 @@ extension on _StringsEs {
       case 'stat_goal_recent_average':
         return ({required Object n}) =>
             'Last 7 days: ${n} chars/day on average';
-      case 'stat_goal_scope_hint':
-        return 'Counts all characters combined: reading + video subtitles + game text.';
       case 'stat_goal_set':
         return 'Set Goal';
       case 'stat_goal_unit_chars':
@@ -125414,6 +125435,10 @@ extension on _StringsEs {
         return 'Subtitles: no match for this pack';
       case 'download_backend_desktop_only_note':
         return 'Built-in engine requires a desktop platform. This device uses external qBittorrent.';
+      case 'stat_source_breakdown':
+        return 'By source';
+      case 'stat_format_pages':
+        return ({required Object n}) => '${n} pages';
       default:
         return null;
     }
@@ -129075,8 +129100,6 @@ extension on _StringsFr {
       case 'stat_goal_recent_average':
         return ({required Object n}) =>
             'Last 7 days: ${n} chars/day on average';
-      case 'stat_goal_scope_hint':
-        return 'Counts all characters combined: reading + video subtitles + game text.';
       case 'stat_goal_set':
         return 'Set Goal';
       case 'stat_goal_unit_chars':
@@ -131017,6 +131040,10 @@ extension on _StringsFr {
         return 'Subtitles: no match for this pack';
       case 'download_backend_desktop_only_note':
         return 'Built-in engine requires a desktop platform. This device uses external qBittorrent.';
+      case 'stat_source_breakdown':
+        return 'By source';
+      case 'stat_format_pages':
+        return ({required Object n}) => '${n} pages';
       default:
         return null;
     }
@@ -134669,8 +134696,6 @@ extension on _StringsId {
       case 'stat_goal_recent_average':
         return ({required Object n}) =>
             'Last 7 days: ${n} chars/day on average';
-      case 'stat_goal_scope_hint':
-        return 'Counts all characters combined: reading + video subtitles + game text.';
       case 'stat_goal_set':
         return 'Set Goal';
       case 'stat_goal_unit_chars':
@@ -136602,6 +136627,10 @@ extension on _StringsId {
         return 'Subtitles: no match for this pack';
       case 'download_backend_desktop_only_note':
         return 'Built-in engine requires a desktop platform. This device uses external qBittorrent.';
+      case 'stat_source_breakdown':
+        return 'By source';
+      case 'stat_format_pages':
+        return ({required Object n}) => '${n} pages';
       default:
         return null;
     }
@@ -140259,8 +140288,6 @@ extension on _StringsIt {
       case 'stat_goal_recent_average':
         return ({required Object n}) =>
             'Last 7 days: ${n} chars/day on average';
-      case 'stat_goal_scope_hint':
-        return 'Counts all characters combined: reading + video subtitles + game text.';
       case 'stat_goal_set':
         return 'Set Goal';
       case 'stat_goal_unit_chars':
@@ -142202,6 +142229,10 @@ extension on _StringsIt {
         return 'Subtitles: no match for this pack';
       case 'download_backend_desktop_only_note':
         return 'Built-in engine requires a desktop platform. This device uses external qBittorrent.';
+      case 'stat_source_breakdown':
+        return 'By source';
+      case 'stat_format_pages':
+        return ({required Object n}) => '${n} pages';
       default:
         return null;
     }
@@ -145838,8 +145869,6 @@ extension on _StringsJa {
       case 'stat_goal_recent_average':
         return ({required Object n}) =>
             'Last 7 days: ${n} chars/day on average';
-      case 'stat_goal_scope_hint':
-        return 'Counts all characters combined: reading + video subtitles + game text.';
       case 'stat_goal_set':
         return 'Set Goal';
       case 'stat_goal_unit_chars':
@@ -147764,6 +147793,10 @@ extension on _StringsJa {
         return 'Subtitles: no match for this pack';
       case 'download_backend_desktop_only_note':
         return 'Built-in engine requires a desktop platform. This device uses external qBittorrent.';
+      case 'stat_source_breakdown':
+        return 'By source';
+      case 'stat_format_pages':
+        return ({required Object n}) => '${n} pages';
       default:
         return null;
     }
@@ -151403,8 +151436,6 @@ extension on _StringsKo {
       case 'stat_goal_recent_average':
         return ({required Object n}) =>
             'Last 7 days: ${n} chars/day on average';
-      case 'stat_goal_scope_hint':
-        return 'Counts all characters combined: reading + video subtitles + game text.';
       case 'stat_goal_set':
         return 'Set Goal';
       case 'stat_goal_unit_chars':
@@ -153330,6 +153361,10 @@ extension on _StringsKo {
         return 'Subtitles: no match for this pack';
       case 'download_backend_desktop_only_note':
         return 'Built-in engine requires a desktop platform. This device uses external qBittorrent.';
+      case 'stat_source_breakdown':
+        return 'By source';
+      case 'stat_format_pages':
+        return ({required Object n}) => '${n} pages';
       default:
         return null;
     }
@@ -156986,8 +157021,6 @@ extension on _StringsNl {
       case 'stat_goal_recent_average':
         return ({required Object n}) =>
             'Last 7 days: ${n} chars/day on average';
-      case 'stat_goal_scope_hint':
-        return 'Counts all characters combined: reading + video subtitles + game text.';
       case 'stat_goal_set':
         return 'Set Goal';
       case 'stat_goal_unit_chars':
@@ -158923,6 +158956,10 @@ extension on _StringsNl {
         return 'Subtitles: no match for this pack';
       case 'download_backend_desktop_only_note':
         return 'Built-in engine requires a desktop platform. This device uses external qBittorrent.';
+      case 'stat_source_breakdown':
+        return 'By source';
+      case 'stat_format_pages':
+        return ({required Object n}) => '${n} pages';
       default:
         return null;
     }
@@ -162577,8 +162614,6 @@ extension on _StringsPtBr {
       case 'stat_goal_recent_average':
         return ({required Object n}) =>
             'Last 7 days: ${n} chars/day on average';
-      case 'stat_goal_scope_hint':
-        return 'Counts all characters combined: reading + video subtitles + game text.';
       case 'stat_goal_set':
         return 'Set Goal';
       case 'stat_goal_unit_chars':
@@ -164513,6 +164548,10 @@ extension on _StringsPtBr {
         return 'Subtitles: no match for this pack';
       case 'download_backend_desktop_only_note':
         return 'Built-in engine requires a desktop platform. This device uses external qBittorrent.';
+      case 'stat_source_breakdown':
+        return 'By source';
+      case 'stat_format_pages':
+        return ({required Object n}) => '${n} pages';
       default:
         return null;
     }
@@ -168170,8 +168209,6 @@ extension on _StringsRu {
       case 'stat_goal_recent_average':
         return ({required Object n}) =>
             'Last 7 days: ${n} chars/day on average';
-      case 'stat_goal_scope_hint':
-        return 'Counts all characters combined: reading + video subtitles + game text.';
       case 'stat_goal_set':
         return 'Set Goal';
       case 'stat_goal_unit_chars':
@@ -170108,6 +170145,10 @@ extension on _StringsRu {
         return 'Subtitles: no match for this pack';
       case 'download_backend_desktop_only_note':
         return 'Built-in engine requires a desktop platform. This device uses external qBittorrent.';
+      case 'stat_source_breakdown':
+        return 'By source';
+      case 'stat_format_pages':
+        return ({required Object n}) => '${n} pages';
       default:
         return null;
     }
@@ -173754,8 +173795,6 @@ extension on _StringsTh {
       case 'stat_goal_recent_average':
         return ({required Object n}) =>
             'Last 7 days: ${n} chars/day on average';
-      case 'stat_goal_scope_hint':
-        return 'Counts all characters combined: reading + video subtitles + game text.';
       case 'stat_goal_set':
         return 'Set Goal';
       case 'stat_goal_unit_chars':
@@ -175687,6 +175726,10 @@ extension on _StringsTh {
         return 'Subtitles: no match for this pack';
       case 'download_backend_desktop_only_note':
         return 'Built-in engine requires a desktop platform. This device uses external qBittorrent.';
+      case 'stat_source_breakdown':
+        return 'By source';
+      case 'stat_format_pages':
+        return ({required Object n}) => '${n} pages';
       default:
         return null;
     }
@@ -179338,8 +179381,6 @@ extension on _StringsTr {
       case 'stat_goal_recent_average':
         return ({required Object n}) =>
             'Last 7 days: ${n} chars/day on average';
-      case 'stat_goal_scope_hint':
-        return 'Counts all characters combined: reading + video subtitles + game text.';
       case 'stat_goal_set':
         return 'Set Goal';
       case 'stat_goal_unit_chars':
@@ -181275,6 +181316,10 @@ extension on _StringsTr {
         return 'Subtitles: no match for this pack';
       case 'download_backend_desktop_only_note':
         return 'Built-in engine requires a desktop platform. This device uses external qBittorrent.';
+      case 'stat_source_breakdown':
+        return 'By source';
+      case 'stat_format_pages':
+        return ({required Object n}) => '${n} pages';
       default:
         return null;
     }
@@ -184925,8 +184970,6 @@ extension on _StringsVi {
       case 'stat_goal_recent_average':
         return ({required Object n}) =>
             'Last 7 days: ${n} chars/day on average';
-      case 'stat_goal_scope_hint':
-        return 'Counts all characters combined: reading + video subtitles + game text.';
       case 'stat_goal_set':
         return 'Set Goal';
       case 'stat_goal_unit_chars':
@@ -186858,6 +186901,10 @@ extension on _StringsVi {
         return 'Subtitles: no match for this pack';
       case 'download_backend_desktop_only_note':
         return 'Built-in engine requires a desktop platform. This device uses external qBittorrent.';
+      case 'stat_source_breakdown':
+        return 'By source';
+      case 'stat_format_pages':
+        return ({required Object n}) => '${n} pages';
       default:
         return null;
     }
@@ -190481,8 +190528,6 @@ extension on _StringsZhCn {
         return '已达成';
       case 'stat_goal_recent_average':
         return ({required Object n}) => '近 7 日日均 ${n} 字';
-      case 'stat_goal_scope_hint':
-        return '口径：阅读 + 视频字幕 + 游戏文本的全部字符数合计';
       case 'stat_goal_set':
         return '设定目标';
       case 'stat_goal_unit_chars':
@@ -192395,6 +192440,10 @@ extension on _StringsZhCn {
         return '字幕：未匹配到（可手动补）';
       case 'download_backend_desktop_only_note':
         return '内置引擎仅桌面平台可用，本设备使用外接 qBittorrent。';
+      case 'stat_source_breakdown':
+        return '各来源';
+      case 'stat_format_pages':
+        return ({required Object n}) => '${n} 页';
       default:
         return null;
     }
@@ -196029,8 +196078,6 @@ extension on _StringsZhHk {
       case 'stat_goal_recent_average':
         return ({required Object n}) =>
             'Last 7 days: ${n} chars/day on average';
-      case 'stat_goal_scope_hint':
-        return 'Counts all characters combined: reading + video subtitles + game text.';
       case 'stat_goal_set':
         return 'Set Goal';
       case 'stat_goal_unit_chars':
@@ -197952,6 +197999,10 @@ extension on _StringsZhHk {
         return 'Subtitles: no match for this pack';
       case 'download_backend_desktop_only_note':
         return 'Built-in engine requires a desktop platform. This device uses external qBittorrent.';
+      case 'stat_source_breakdown':
+        return 'By source';
+      case 'stat_format_pages':
+        return ({required Object n}) => '${n} pages';
       default:
         return null;
     }
