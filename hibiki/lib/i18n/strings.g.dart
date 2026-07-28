@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 45815 (2695 per locale)
+/// Strings: 45951 (2703 per locale)
 ///
-/// Built on 2026-07-28 at 05:37 UTC
+/// Built on 2026-07-28 at 05:54 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -1217,7 +1217,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get game_audio_backend_none => 'No audio source';
   String get game_audio_backend_resource => 'Game resource audio';
   String get game_audio_duration => 'Audio duration';
-  String get game_audio_fallback_allow => 'Allow audio fallback';
   String get game_audio_fallback_disabled_missing =>
       'No matching game resource audio; fallback is disabled';
   String get game_audio_resource_id => 'Audio resource ID';
@@ -1497,7 +1496,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get game_track_exclusion_hint =>
       'Mark a BGM/ambience track as excluded so auto-selection never treats it as voice — lines without speech no longer pick up BGM.';
   String get game_track_exclusion_title => 'Exclude audio tracks';
-  String get game_track_no_clips => 'No clips in the recent window';
   String get game_track_preview => 'Preview this track';
   String get game_track_preview_failed =>
       'No recent audio could be captured from this track';
@@ -3615,6 +3613,20 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String anki_lapis_backup_done_pruned(
           {required Object path, required Object count}) =>
       'Backed up to ${path} (${count} old backups pruned by the 90-day / keep-10 policy)';
+  String get game_audio_fallback_policy => 'Audio fallback';
+  String get game_audio_fallback_full => 'Allow mixed audio';
+  String get game_audio_fallback_clean => 'Clean sources only';
+  String get game_audio_fallback_resource => 'Original resources only';
+  String get game_track_silent_at_cue => 'No sound at this line';
+  String get game_audio_fallback_full_hint =>
+      'Falls back to the system mix when no clean voice is captured; the clip may contain BGM and effects.';
+  String get game_audio_fallback_clean_hint =>
+      'Uses game resource audio and engine PCM only. Lines with no voice are mined without audio instead of picking up BGM.';
+  String get game_audio_fallback_resource_hint =>
+      'Requires the original voice file shipped with the game; mining is refused when it is missing.';
+  String get game_line_audio_suppressed => 'Mix skipped';
+  String get game_line_audio_suppressed_hint =>
+      'No clean audio source produced audio for this line, and the system mix was skipped by your audio fallback policy. This does not mean the line has no voice.';
 }
 
 // Path: <root>
@@ -5458,8 +5470,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get game_audio_duration => 'Audio duration';
   @override
-  String get game_audio_fallback_allow => '允许音频降级';
-  @override
   String get game_audio_fallback_disabled_missing =>
       '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
   @override
@@ -5966,8 +5976,6 @@ class _StringsAr extends _StringsEn {
       'Mark a BGM/ambience track as excluded so auto-selection never treats it as voice — lines without speech no longer pick up BGM.';
   @override
   String get game_track_exclusion_title => 'Exclude audio tracks';
-  @override
-  String get game_track_no_clips => 'No clips in the recent window';
   @override
   String get game_track_preview => 'Preview this track';
   @override
@@ -9773,6 +9781,30 @@ class _StringsAr extends _StringsEn {
   String anki_lapis_backup_done_pruned(
           {required Object path, required Object count}) =>
       'Backed up to ${path} (${count} old backups pruned by the 90-day / keep-10 policy)';
+  @override
+  String get game_audio_fallback_policy => 'Audio fallback';
+  @override
+  String get game_audio_fallback_full => 'Allow mixed audio';
+  @override
+  String get game_audio_fallback_clean => 'Clean sources only';
+  @override
+  String get game_audio_fallback_resource => 'Original resources only';
+  @override
+  String get game_track_silent_at_cue => 'No sound at this line';
+  @override
+  String get game_audio_fallback_full_hint =>
+      'Falls back to the system mix when no clean voice is captured; the clip may contain BGM and effects.';
+  @override
+  String get game_audio_fallback_clean_hint =>
+      'Uses game resource audio and engine PCM only. Lines with no voice are mined without audio instead of picking up BGM.';
+  @override
+  String get game_audio_fallback_resource_hint =>
+      'Requires the original voice file shipped with the game; mining is refused when it is missing.';
+  @override
+  String get game_line_audio_suppressed => 'Mix skipped';
+  @override
+  String get game_line_audio_suppressed_hint =>
+      'No clean audio source produced audio for this line, and the system mix was skipped by your audio fallback policy. This does not mean the line has no voice.';
 }
 
 // Path: <root>
@@ -11644,8 +11676,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get game_audio_duration => 'Audio duration';
   @override
-  String get game_audio_fallback_allow => '允许音频降级';
-  @override
   String get game_audio_fallback_disabled_missing =>
       '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
   @override
@@ -12152,8 +12182,6 @@ class _StringsDe extends _StringsEn {
       'Mark a BGM/ambience track as excluded so auto-selection never treats it as voice — lines without speech no longer pick up BGM.';
   @override
   String get game_track_exclusion_title => 'Exclude audio tracks';
-  @override
-  String get game_track_no_clips => 'No clips in the recent window';
   @override
   String get game_track_preview => 'Preview this track';
   @override
@@ -15999,6 +16027,30 @@ class _StringsDe extends _StringsEn {
   String anki_lapis_backup_done_pruned(
           {required Object path, required Object count}) =>
       'Backed up to ${path} (${count} old backups pruned by the 90-day / keep-10 policy)';
+  @override
+  String get game_audio_fallback_policy => 'Audio fallback';
+  @override
+  String get game_audio_fallback_full => 'Allow mixed audio';
+  @override
+  String get game_audio_fallback_clean => 'Clean sources only';
+  @override
+  String get game_audio_fallback_resource => 'Original resources only';
+  @override
+  String get game_track_silent_at_cue => 'No sound at this line';
+  @override
+  String get game_audio_fallback_full_hint =>
+      'Falls back to the system mix when no clean voice is captured; the clip may contain BGM and effects.';
+  @override
+  String get game_audio_fallback_clean_hint =>
+      'Uses game resource audio and engine PCM only. Lines with no voice are mined without audio instead of picking up BGM.';
+  @override
+  String get game_audio_fallback_resource_hint =>
+      'Requires the original voice file shipped with the game; mining is refused when it is missing.';
+  @override
+  String get game_line_audio_suppressed => 'Mix skipped';
+  @override
+  String get game_line_audio_suppressed_hint =>
+      'No clean audio source produced audio for this line, and the system mix was skipped by your audio fallback policy. This does not mean the line has no voice.';
 }
 
 // Path: <root>
@@ -17871,8 +17923,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get game_audio_duration => 'Audio duration';
   @override
-  String get game_audio_fallback_allow => '允许音频降级';
-  @override
   String get game_audio_fallback_disabled_missing =>
       '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
   @override
@@ -18379,8 +18429,6 @@ class _StringsEs extends _StringsEn {
       'Mark a BGM/ambience track as excluded so auto-selection never treats it as voice — lines without speech no longer pick up BGM.';
   @override
   String get game_track_exclusion_title => 'Exclude audio tracks';
-  @override
-  String get game_track_no_clips => 'No clips in the recent window';
   @override
   String get game_track_preview => 'Preview this track';
   @override
@@ -22241,6 +22289,30 @@ class _StringsEs extends _StringsEn {
   String anki_lapis_backup_done_pruned(
           {required Object path, required Object count}) =>
       'Backed up to ${path} (${count} old backups pruned by the 90-day / keep-10 policy)';
+  @override
+  String get game_audio_fallback_policy => 'Audio fallback';
+  @override
+  String get game_audio_fallback_full => 'Allow mixed audio';
+  @override
+  String get game_audio_fallback_clean => 'Clean sources only';
+  @override
+  String get game_audio_fallback_resource => 'Original resources only';
+  @override
+  String get game_track_silent_at_cue => 'No sound at this line';
+  @override
+  String get game_audio_fallback_full_hint =>
+      'Falls back to the system mix when no clean voice is captured; the clip may contain BGM and effects.';
+  @override
+  String get game_audio_fallback_clean_hint =>
+      'Uses game resource audio and engine PCM only. Lines with no voice are mined without audio instead of picking up BGM.';
+  @override
+  String get game_audio_fallback_resource_hint =>
+      'Requires the original voice file shipped with the game; mining is refused when it is missing.';
+  @override
+  String get game_line_audio_suppressed => 'Mix skipped';
+  @override
+  String get game_line_audio_suppressed_hint =>
+      'No clean audio source produced audio for this line, and the system mix was skipped by your audio fallback policy. This does not mean the line has no voice.';
 }
 
 // Path: <root>
@@ -24121,8 +24193,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get game_audio_duration => 'Audio duration';
   @override
-  String get game_audio_fallback_allow => '允许音频降级';
-  @override
   String get game_audio_fallback_disabled_missing =>
       '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
   @override
@@ -24629,8 +24699,6 @@ class _StringsFr extends _StringsEn {
       'Mark a BGM/ambience track as excluded so auto-selection never treats it as voice — lines without speech no longer pick up BGM.';
   @override
   String get game_track_exclusion_title => 'Exclude audio tracks';
-  @override
-  String get game_track_no_clips => 'No clips in the recent window';
   @override
   String get game_track_preview => 'Preview this track';
   @override
@@ -28494,6 +28562,30 @@ class _StringsFr extends _StringsEn {
   String anki_lapis_backup_done_pruned(
           {required Object path, required Object count}) =>
       'Backed up to ${path} (${count} old backups pruned by the 90-day / keep-10 policy)';
+  @override
+  String get game_audio_fallback_policy => 'Audio fallback';
+  @override
+  String get game_audio_fallback_full => 'Allow mixed audio';
+  @override
+  String get game_audio_fallback_clean => 'Clean sources only';
+  @override
+  String get game_audio_fallback_resource => 'Original resources only';
+  @override
+  String get game_track_silent_at_cue => 'No sound at this line';
+  @override
+  String get game_audio_fallback_full_hint =>
+      'Falls back to the system mix when no clean voice is captured; the clip may contain BGM and effects.';
+  @override
+  String get game_audio_fallback_clean_hint =>
+      'Uses game resource audio and engine PCM only. Lines with no voice are mined without audio instead of picking up BGM.';
+  @override
+  String get game_audio_fallback_resource_hint =>
+      'Requires the original voice file shipped with the game; mining is refused when it is missing.';
+  @override
+  String get game_line_audio_suppressed => 'Mix skipped';
+  @override
+  String get game_line_audio_suppressed_hint =>
+      'No clean audio source produced audio for this line, and the system mix was skipped by your audio fallback policy. This does not mean the line has no voice.';
 }
 
 // Path: <root>
@@ -30340,8 +30432,6 @@ class _StringsId extends _StringsEn {
   @override
   String get game_audio_duration => 'Audio duration';
   @override
-  String get game_audio_fallback_allow => '允许音频降级';
-  @override
   String get game_audio_fallback_disabled_missing =>
       '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
   @override
@@ -30848,8 +30938,6 @@ class _StringsId extends _StringsEn {
       'Mark a BGM/ambience track as excluded so auto-selection never treats it as voice — lines without speech no longer pick up BGM.';
   @override
   String get game_track_exclusion_title => 'Exclude audio tracks';
-  @override
-  String get game_track_no_clips => 'No clips in the recent window';
   @override
   String get game_track_preview => 'Preview this track';
   @override
@@ -34676,6 +34764,30 @@ class _StringsId extends _StringsEn {
   String anki_lapis_backup_done_pruned(
           {required Object path, required Object count}) =>
       'Backed up to ${path} (${count} old backups pruned by the 90-day / keep-10 policy)';
+  @override
+  String get game_audio_fallback_policy => 'Audio fallback';
+  @override
+  String get game_audio_fallback_full => 'Allow mixed audio';
+  @override
+  String get game_audio_fallback_clean => 'Clean sources only';
+  @override
+  String get game_audio_fallback_resource => 'Original resources only';
+  @override
+  String get game_track_silent_at_cue => 'No sound at this line';
+  @override
+  String get game_audio_fallback_full_hint =>
+      'Falls back to the system mix when no clean voice is captured; the clip may contain BGM and effects.';
+  @override
+  String get game_audio_fallback_clean_hint =>
+      'Uses game resource audio and engine PCM only. Lines with no voice are mined without audio instead of picking up BGM.';
+  @override
+  String get game_audio_fallback_resource_hint =>
+      'Requires the original voice file shipped with the game; mining is refused when it is missing.';
+  @override
+  String get game_line_audio_suppressed => 'Mix skipped';
+  @override
+  String get game_line_audio_suppressed_hint =>
+      'No clean audio source produced audio for this line, and the system mix was skipped by your audio fallback policy. This does not mean the line has no voice.';
 }
 
 // Path: <root>
@@ -36542,8 +36654,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get game_audio_duration => 'Audio duration';
   @override
-  String get game_audio_fallback_allow => '允许音频降级';
-  @override
   String get game_audio_fallback_disabled_missing =>
       '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
   @override
@@ -37050,8 +37160,6 @@ class _StringsIt extends _StringsEn {
       'Mark a BGM/ambience track as excluded so auto-selection never treats it as voice — lines without speech no longer pick up BGM.';
   @override
   String get game_track_exclusion_title => 'Exclude audio tracks';
-  @override
-  String get game_track_no_clips => 'No clips in the recent window';
   @override
   String get game_track_preview => 'Preview this track';
   @override
@@ -40904,6 +41012,30 @@ class _StringsIt extends _StringsEn {
   String anki_lapis_backup_done_pruned(
           {required Object path, required Object count}) =>
       'Backed up to ${path} (${count} old backups pruned by the 90-day / keep-10 policy)';
+  @override
+  String get game_audio_fallback_policy => 'Audio fallback';
+  @override
+  String get game_audio_fallback_full => 'Allow mixed audio';
+  @override
+  String get game_audio_fallback_clean => 'Clean sources only';
+  @override
+  String get game_audio_fallback_resource => 'Original resources only';
+  @override
+  String get game_track_silent_at_cue => 'No sound at this line';
+  @override
+  String get game_audio_fallback_full_hint =>
+      'Falls back to the system mix when no clean voice is captured; the clip may contain BGM and effects.';
+  @override
+  String get game_audio_fallback_clean_hint =>
+      'Uses game resource audio and engine PCM only. Lines with no voice are mined without audio instead of picking up BGM.';
+  @override
+  String get game_audio_fallback_resource_hint =>
+      'Requires the original voice file shipped with the game; mining is refused when it is missing.';
+  @override
+  String get game_line_audio_suppressed => 'Mix skipped';
+  @override
+  String get game_line_audio_suppressed_hint =>
+      'No clean audio source produced audio for this line, and the system mix was skipped by your audio fallback policy. This does not mean the line has no voice.';
 }
 
 // Path: <root>
@@ -42715,8 +42847,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get game_audio_duration => 'Audio duration';
   @override
-  String get game_audio_fallback_allow => '允许音频降级';
-  @override
   String get game_audio_fallback_disabled_missing =>
       '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
   @override
@@ -43223,8 +43353,6 @@ class _StringsJa extends _StringsEn {
       'BGM／環境音のトラックを除外に設定すると、自動選択がそれを音声として扱わなくなります——音声のないセリフで BGM を拾わなくなります。';
   @override
   String get game_track_exclusion_title => '音声トラックを除外';
-  @override
-  String get game_track_no_clips => 'No clips in the recent window';
   @override
   String get game_track_preview => 'Preview this track';
   @override
@@ -46949,6 +47077,30 @@ class _StringsJa extends _StringsEn {
   String anki_lapis_backup_done_pruned(
           {required Object path, required Object count}) =>
       'Backed up to ${path} (${count} old backups pruned by the 90-day / keep-10 policy)';
+  @override
+  String get game_audio_fallback_policy => 'Audio fallback';
+  @override
+  String get game_audio_fallback_full => 'Allow mixed audio';
+  @override
+  String get game_audio_fallback_clean => 'Clean sources only';
+  @override
+  String get game_audio_fallback_resource => 'Original resources only';
+  @override
+  String get game_track_silent_at_cue => 'No sound at this line';
+  @override
+  String get game_audio_fallback_full_hint =>
+      'Falls back to the system mix when no clean voice is captured; the clip may contain BGM and effects.';
+  @override
+  String get game_audio_fallback_clean_hint =>
+      'Uses game resource audio and engine PCM only. Lines with no voice are mined without audio instead of picking up BGM.';
+  @override
+  String get game_audio_fallback_resource_hint =>
+      'Requires the original voice file shipped with the game; mining is refused when it is missing.';
+  @override
+  String get game_line_audio_suppressed => 'Mix skipped';
+  @override
+  String get game_line_audio_suppressed_hint =>
+      'No clean audio source produced audio for this line, and the system mix was skipped by your audio fallback policy. This does not mean the line has no voice.';
 }
 
 // Path: <root>
@@ -48760,8 +48912,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get game_audio_duration => 'Audio duration';
   @override
-  String get game_audio_fallback_allow => '允许音频降级';
-  @override
   String get game_audio_fallback_disabled_missing =>
       '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
   @override
@@ -49268,8 +49418,6 @@ class _StringsKo extends _StringsEn {
       'Mark a BGM/ambience track as excluded so auto-selection never treats it as voice — lines without speech no longer pick up BGM.';
   @override
   String get game_track_exclusion_title => 'Exclude audio tracks';
-  @override
-  String get game_track_no_clips => 'No clips in the recent window';
   @override
   String get game_track_preview => 'Preview this track';
   @override
@@ -52996,6 +53144,30 @@ class _StringsKo extends _StringsEn {
   String anki_lapis_backup_done_pruned(
           {required Object path, required Object count}) =>
       'Backed up to ${path} (${count} old backups pruned by the 90-day / keep-10 policy)';
+  @override
+  String get game_audio_fallback_policy => 'Audio fallback';
+  @override
+  String get game_audio_fallback_full => 'Allow mixed audio';
+  @override
+  String get game_audio_fallback_clean => 'Clean sources only';
+  @override
+  String get game_audio_fallback_resource => 'Original resources only';
+  @override
+  String get game_track_silent_at_cue => 'No sound at this line';
+  @override
+  String get game_audio_fallback_full_hint =>
+      'Falls back to the system mix when no clean voice is captured; the clip may contain BGM and effects.';
+  @override
+  String get game_audio_fallback_clean_hint =>
+      'Uses game resource audio and engine PCM only. Lines with no voice are mined without audio instead of picking up BGM.';
+  @override
+  String get game_audio_fallback_resource_hint =>
+      'Requires the original voice file shipped with the game; mining is refused when it is missing.';
+  @override
+  String get game_line_audio_suppressed => 'Mix skipped';
+  @override
+  String get game_line_audio_suppressed_hint =>
+      'No clean audio source produced audio for this line, and the system mix was skipped by your audio fallback policy. This does not mean the line has no voice.';
 }
 
 // Path: <root>
@@ -54856,8 +55028,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get game_audio_duration => 'Audio duration';
   @override
-  String get game_audio_fallback_allow => '允许音频降级';
-  @override
   String get game_audio_fallback_disabled_missing =>
       '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
   @override
@@ -55364,8 +55534,6 @@ class _StringsNl extends _StringsEn {
       'Mark a BGM/ambience track as excluded so auto-selection never treats it as voice — lines without speech no longer pick up BGM.';
   @override
   String get game_track_exclusion_title => 'Exclude audio tracks';
-  @override
-  String get game_track_no_clips => 'No clips in the recent window';
   @override
   String get game_track_preview => 'Preview this track';
   @override
@@ -59204,6 +59372,30 @@ class _StringsNl extends _StringsEn {
   String anki_lapis_backup_done_pruned(
           {required Object path, required Object count}) =>
       'Backed up to ${path} (${count} old backups pruned by the 90-day / keep-10 policy)';
+  @override
+  String get game_audio_fallback_policy => 'Audio fallback';
+  @override
+  String get game_audio_fallback_full => 'Allow mixed audio';
+  @override
+  String get game_audio_fallback_clean => 'Clean sources only';
+  @override
+  String get game_audio_fallback_resource => 'Original resources only';
+  @override
+  String get game_track_silent_at_cue => 'No sound at this line';
+  @override
+  String get game_audio_fallback_full_hint =>
+      'Falls back to the system mix when no clean voice is captured; the clip may contain BGM and effects.';
+  @override
+  String get game_audio_fallback_clean_hint =>
+      'Uses game resource audio and engine PCM only. Lines with no voice are mined without audio instead of picking up BGM.';
+  @override
+  String get game_audio_fallback_resource_hint =>
+      'Requires the original voice file shipped with the game; mining is refused when it is missing.';
+  @override
+  String get game_line_audio_suppressed => 'Mix skipped';
+  @override
+  String get game_line_audio_suppressed_hint =>
+      'No clean audio source produced audio for this line, and the system mix was skipped by your audio fallback policy. This does not mean the line has no voice.';
 }
 
 // Path: <root>
@@ -61072,8 +61264,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get game_audio_duration => 'Audio duration';
   @override
-  String get game_audio_fallback_allow => '允许音频降级';
-  @override
   String get game_audio_fallback_disabled_missing =>
       '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
   @override
@@ -61580,8 +61770,6 @@ class _StringsPtBr extends _StringsEn {
       'Mark a BGM/ambience track as excluded so auto-selection never treats it as voice — lines without speech no longer pick up BGM.';
   @override
   String get game_track_exclusion_title => 'Exclude audio tracks';
-  @override
-  String get game_track_no_clips => 'No clips in the recent window';
   @override
   String get game_track_preview => 'Preview this track';
   @override
@@ -65425,6 +65613,30 @@ class _StringsPtBr extends _StringsEn {
   String anki_lapis_backup_done_pruned(
           {required Object path, required Object count}) =>
       'Backed up to ${path} (${count} old backups pruned by the 90-day / keep-10 policy)';
+  @override
+  String get game_audio_fallback_policy => 'Audio fallback';
+  @override
+  String get game_audio_fallback_full => 'Allow mixed audio';
+  @override
+  String get game_audio_fallback_clean => 'Clean sources only';
+  @override
+  String get game_audio_fallback_resource => 'Original resources only';
+  @override
+  String get game_track_silent_at_cue => 'No sound at this line';
+  @override
+  String get game_audio_fallback_full_hint =>
+      'Falls back to the system mix when no clean voice is captured; the clip may contain BGM and effects.';
+  @override
+  String get game_audio_fallback_clean_hint =>
+      'Uses game resource audio and engine PCM only. Lines with no voice are mined without audio instead of picking up BGM.';
+  @override
+  String get game_audio_fallback_resource_hint =>
+      'Requires the original voice file shipped with the game; mining is refused when it is missing.';
+  @override
+  String get game_line_audio_suppressed => 'Mix skipped';
+  @override
+  String get game_line_audio_suppressed_hint =>
+      'No clean audio source produced audio for this line, and the system mix was skipped by your audio fallback policy. This does not mean the line has no voice.';
 }
 
 // Path: <root>
@@ -67285,8 +67497,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get game_audio_duration => 'Audio duration';
   @override
-  String get game_audio_fallback_allow => '允许音频降级';
-  @override
   String get game_audio_fallback_disabled_missing =>
       '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
   @override
@@ -67793,8 +68003,6 @@ class _StringsRu extends _StringsEn {
       'Mark a BGM/ambience track as excluded so auto-selection never treats it as voice — lines without speech no longer pick up BGM.';
   @override
   String get game_track_exclusion_title => 'Exclude audio tracks';
-  @override
-  String get game_track_no_clips => 'No clips in the recent window';
   @override
   String get game_track_preview => 'Preview this track';
   @override
@@ -71630,6 +71838,30 @@ class _StringsRu extends _StringsEn {
   String anki_lapis_backup_done_pruned(
           {required Object path, required Object count}) =>
       'Backed up to ${path} (${count} old backups pruned by the 90-day / keep-10 policy)';
+  @override
+  String get game_audio_fallback_policy => 'Audio fallback';
+  @override
+  String get game_audio_fallback_full => 'Allow mixed audio';
+  @override
+  String get game_audio_fallback_clean => 'Clean sources only';
+  @override
+  String get game_audio_fallback_resource => 'Original resources only';
+  @override
+  String get game_track_silent_at_cue => 'No sound at this line';
+  @override
+  String get game_audio_fallback_full_hint =>
+      'Falls back to the system mix when no clean voice is captured; the clip may contain BGM and effects.';
+  @override
+  String get game_audio_fallback_clean_hint =>
+      'Uses game resource audio and engine PCM only. Lines with no voice are mined without audio instead of picking up BGM.';
+  @override
+  String get game_audio_fallback_resource_hint =>
+      'Requires the original voice file shipped with the game; mining is refused when it is missing.';
+  @override
+  String get game_line_audio_suppressed => 'Mix skipped';
+  @override
+  String get game_line_audio_suppressed_hint =>
+      'No clean audio source produced audio for this line, and the system mix was skipped by your audio fallback policy. This does not mean the line has no voice.';
 }
 
 // Path: <root>
@@ -73468,8 +73700,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get game_audio_duration => 'Audio duration';
   @override
-  String get game_audio_fallback_allow => '允许音频降级';
-  @override
   String get game_audio_fallback_disabled_missing =>
       '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
   @override
@@ -73976,8 +74206,6 @@ class _StringsTh extends _StringsEn {
       'Mark a BGM/ambience track as excluded so auto-selection never treats it as voice — lines without speech no longer pick up BGM.';
   @override
   String get game_track_exclusion_title => 'Exclude audio tracks';
-  @override
-  String get game_track_no_clips => 'No clips in the recent window';
   @override
   String get game_track_preview => 'Preview this track';
   @override
@@ -77783,6 +78011,30 @@ class _StringsTh extends _StringsEn {
   String anki_lapis_backup_done_pruned(
           {required Object path, required Object count}) =>
       'Backed up to ${path} (${count} old backups pruned by the 90-day / keep-10 policy)';
+  @override
+  String get game_audio_fallback_policy => 'Audio fallback';
+  @override
+  String get game_audio_fallback_full => 'Allow mixed audio';
+  @override
+  String get game_audio_fallback_clean => 'Clean sources only';
+  @override
+  String get game_audio_fallback_resource => 'Original resources only';
+  @override
+  String get game_track_silent_at_cue => 'No sound at this line';
+  @override
+  String get game_audio_fallback_full_hint =>
+      'Falls back to the system mix when no clean voice is captured; the clip may contain BGM and effects.';
+  @override
+  String get game_audio_fallback_clean_hint =>
+      'Uses game resource audio and engine PCM only. Lines with no voice are mined without audio instead of picking up BGM.';
+  @override
+  String get game_audio_fallback_resource_hint =>
+      'Requires the original voice file shipped with the game; mining is refused when it is missing.';
+  @override
+  String get game_line_audio_suppressed => 'Mix skipped';
+  @override
+  String get game_line_audio_suppressed_hint =>
+      'No clean audio source produced audio for this line, and the system mix was skipped by your audio fallback policy. This does not mean the line has no voice.';
 }
 
 // Path: <root>
@@ -79639,8 +79891,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get game_audio_duration => 'Audio duration';
   @override
-  String get game_audio_fallback_allow => '允许音频降级';
-  @override
   String get game_audio_fallback_disabled_missing =>
       '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
   @override
@@ -80147,8 +80397,6 @@ class _StringsTr extends _StringsEn {
       'Mark a BGM/ambience track as excluded so auto-selection never treats it as voice — lines without speech no longer pick up BGM.';
   @override
   String get game_track_exclusion_title => 'Exclude audio tracks';
-  @override
-  String get game_track_no_clips => 'No clips in the recent window';
   @override
   String get game_track_preview => 'Preview this track';
   @override
@@ -83968,6 +84216,30 @@ class _StringsTr extends _StringsEn {
   String anki_lapis_backup_done_pruned(
           {required Object path, required Object count}) =>
       'Backed up to ${path} (${count} old backups pruned by the 90-day / keep-10 policy)';
+  @override
+  String get game_audio_fallback_policy => 'Audio fallback';
+  @override
+  String get game_audio_fallback_full => 'Allow mixed audio';
+  @override
+  String get game_audio_fallback_clean => 'Clean sources only';
+  @override
+  String get game_audio_fallback_resource => 'Original resources only';
+  @override
+  String get game_track_silent_at_cue => 'No sound at this line';
+  @override
+  String get game_audio_fallback_full_hint =>
+      'Falls back to the system mix when no clean voice is captured; the clip may contain BGM and effects.';
+  @override
+  String get game_audio_fallback_clean_hint =>
+      'Uses game resource audio and engine PCM only. Lines with no voice are mined without audio instead of picking up BGM.';
+  @override
+  String get game_audio_fallback_resource_hint =>
+      'Requires the original voice file shipped with the game; mining is refused when it is missing.';
+  @override
+  String get game_line_audio_suppressed => 'Mix skipped';
+  @override
+  String get game_line_audio_suppressed_hint =>
+      'No clean audio source produced audio for this line, and the system mix was skipped by your audio fallback policy. This does not mean the line has no voice.';
 }
 
 // Path: <root>
@@ -85817,8 +86089,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get game_audio_duration => 'Audio duration';
   @override
-  String get game_audio_fallback_allow => '允许音频降级';
-  @override
   String get game_audio_fallback_disabled_missing =>
       '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
   @override
@@ -86325,8 +86595,6 @@ class _StringsVi extends _StringsEn {
       'Mark a BGM/ambience track as excluded so auto-selection never treats it as voice — lines without speech no longer pick up BGM.';
   @override
   String get game_track_exclusion_title => 'Exclude audio tracks';
-  @override
-  String get game_track_no_clips => 'No clips in the recent window';
   @override
   String get game_track_preview => 'Preview this track';
   @override
@@ -90138,6 +90406,30 @@ class _StringsVi extends _StringsEn {
   String anki_lapis_backup_done_pruned(
           {required Object path, required Object count}) =>
       'Backed up to ${path} (${count} old backups pruned by the 90-day / keep-10 policy)';
+  @override
+  String get game_audio_fallback_policy => 'Audio fallback';
+  @override
+  String get game_audio_fallback_full => 'Allow mixed audio';
+  @override
+  String get game_audio_fallback_clean => 'Clean sources only';
+  @override
+  String get game_audio_fallback_resource => 'Original resources only';
+  @override
+  String get game_track_silent_at_cue => 'No sound at this line';
+  @override
+  String get game_audio_fallback_full_hint =>
+      'Falls back to the system mix when no clean voice is captured; the clip may contain BGM and effects.';
+  @override
+  String get game_audio_fallback_clean_hint =>
+      'Uses game resource audio and engine PCM only. Lines with no voice are mined without audio instead of picking up BGM.';
+  @override
+  String get game_audio_fallback_resource_hint =>
+      'Requires the original voice file shipped with the game; mining is refused when it is missing.';
+  @override
+  String get game_line_audio_suppressed => 'Mix skipped';
+  @override
+  String get game_line_audio_suppressed_hint =>
+      'No clean audio source produced audio for this line, and the system mix was skipped by your audio fallback policy. This does not mean the line has no voice.';
 }
 
 // Path: <root>
@@ -91855,8 +92147,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get game_audio_duration => '音频时长';
   @override
-  String get game_audio_fallback_allow => '允许音频降级';
-  @override
   String get game_audio_fallback_disabled_missing =>
       '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
   @override
@@ -92333,8 +92623,6 @@ class _StringsZhCn extends _StringsEn {
       '把 BGM/环境音轨标记为排除，自动选源便不会把它当成语音——没有语音的台词也不会再读到 BGM。';
   @override
   String get game_track_exclusion_title => '排除音轨';
-  @override
-  String get game_track_no_clips => '近窗内没有片段';
   @override
   String get game_track_preview => '试听该音轨';
   @override
@@ -95877,6 +96165,28 @@ class _StringsZhCn extends _StringsEn {
   String anki_lapis_backup_done_pruned(
           {required Object path, required Object count}) =>
       '已备份到 ${path}（按「保留 90 天、至少留 10 份」清理了 ${count} 份旧备份）';
+  @override
+  String get game_audio_fallback_policy => '音频降级';
+  @override
+  String get game_audio_fallback_full => '允许混音兜底';
+  @override
+  String get game_audio_fallback_clean => '只用干净语音';
+  @override
+  String get game_audio_fallback_resource => '只用游戏原始资源';
+  @override
+  String get game_track_silent_at_cue => '这句时刻没有声音';
+  @override
+  String get game_audio_fallback_full_hint => '抓不到干净语音时用系统混音兜底，可能混入 BGM 和音效。';
+  @override
+  String get game_audio_fallback_clean_hint =>
+      '只用游戏资源音频和引擎 PCM。没有配音的句子照常制卡，只是不带音频，不会收进 BGM。';
+  @override
+  String get game_audio_fallback_resource_hint => '必须拿到游戏自带的原始语音文件，缺失时拒绝制卡。';
+  @override
+  String get game_line_audio_suppressed => '已跳过混音';
+  @override
+  String get game_line_audio_suppressed_hint =>
+      '本句没有干净音源可用，整机混音已按你选的降级策略跳过。这不代表这句没有配音。';
 }
 
 // Path: <root>
@@ -97658,8 +97968,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get game_audio_duration => 'Audio duration';
   @override
-  String get game_audio_fallback_allow => '允许音频降级';
-  @override
   String get game_audio_fallback_disabled_missing =>
       '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
   @override
@@ -98166,8 +98474,6 @@ class _StringsZhHk extends _StringsEn {
       '把 BGM/環境音軌標記為排除，自動選源便不會把它當成語音——沒有語音的台詞也不會再讀到 BGM。';
   @override
   String get game_track_exclusion_title => '排除音軌';
-  @override
-  String get game_track_no_clips => 'No clips in the recent window';
   @override
   String get game_track_preview => 'Preview this track';
   @override
@@ -101843,6 +102149,30 @@ class _StringsZhHk extends _StringsEn {
   String anki_lapis_backup_done_pruned(
           {required Object path, required Object count}) =>
       'Backed up to ${path} (${count} old backups pruned by the 90-day / keep-10 policy)';
+  @override
+  String get game_audio_fallback_policy => 'Audio fallback';
+  @override
+  String get game_audio_fallback_full => 'Allow mixed audio';
+  @override
+  String get game_audio_fallback_clean => 'Clean sources only';
+  @override
+  String get game_audio_fallback_resource => 'Original resources only';
+  @override
+  String get game_track_silent_at_cue => 'No sound at this line';
+  @override
+  String get game_audio_fallback_full_hint =>
+      'Falls back to the system mix when no clean voice is captured; the clip may contain BGM and effects.';
+  @override
+  String get game_audio_fallback_clean_hint =>
+      'Uses game resource audio and engine PCM only. Lines with no voice are mined without audio instead of picking up BGM.';
+  @override
+  String get game_audio_fallback_resource_hint =>
+      'Requires the original voice file shipped with the game; mining is refused when it is missing.';
+  @override
+  String get game_line_audio_suppressed => 'Mix skipped';
+  @override
+  String get game_line_audio_suppressed_hint =>
+      'No clean audio source produced audio for this line, and the system mix was skipped by your audio fallback policy. This does not mean the line has no voice.';
 }
 
 /// Flat map(s) containing all translations.
@@ -103468,8 +103798,6 @@ extension on _StringsEn {
         return 'Game resource audio';
       case 'game_audio_duration':
         return 'Audio duration';
-      case 'game_audio_fallback_allow':
-        return 'Allow audio fallback';
       case 'game_audio_fallback_disabled_missing':
         return 'No matching game resource audio; fallback is disabled';
       case 'game_audio_resource_id':
@@ -103928,8 +104256,6 @@ extension on _StringsEn {
         return 'Mark a BGM/ambience track as excluded so auto-selection never treats it as voice — lines without speech no longer pick up BGM.';
       case 'game_track_exclusion_title':
         return 'Exclude audio tracks';
-      case 'game_track_no_clips':
-        return 'No clips in the recent window';
       case 'game_track_preview':
         return 'Preview this track';
       case 'game_track_preview_failed':
@@ -107365,6 +107691,26 @@ extension on _StringsEn {
       case 'anki_lapis_backup_done_pruned':
         return ({required Object path, required Object count}) =>
             'Backed up to ${path} (${count} old backups pruned by the 90-day / keep-10 policy)';
+      case 'game_audio_fallback_policy':
+        return 'Audio fallback';
+      case 'game_audio_fallback_full':
+        return 'Allow mixed audio';
+      case 'game_audio_fallback_clean':
+        return 'Clean sources only';
+      case 'game_audio_fallback_resource':
+        return 'Original resources only';
+      case 'game_track_silent_at_cue':
+        return 'No sound at this line';
+      case 'game_audio_fallback_full_hint':
+        return 'Falls back to the system mix when no clean voice is captured; the clip may contain BGM and effects.';
+      case 'game_audio_fallback_clean_hint':
+        return 'Uses game resource audio and engine PCM only. Lines with no voice are mined without audio instead of picking up BGM.';
+      case 'game_audio_fallback_resource_hint':
+        return 'Requires the original voice file shipped with the game; mining is refused when it is missing.';
+      case 'game_line_audio_suppressed':
+        return 'Mix skipped';
+      case 'game_line_audio_suppressed_hint':
+        return 'No clean audio source produced audio for this line, and the system mix was skipped by your audio fallback policy. This does not mean the line has no voice.';
       default:
         return null;
     }
@@ -108991,8 +109337,6 @@ extension on _StringsAr {
         return 'Game resource audio';
       case 'game_audio_duration':
         return 'Audio duration';
-      case 'game_audio_fallback_allow':
-        return '允许音频降级';
       case 'game_audio_fallback_disabled_missing':
         return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
       case 'game_audio_resource_id':
@@ -109451,8 +109795,6 @@ extension on _StringsAr {
         return 'Mark a BGM/ambience track as excluded so auto-selection never treats it as voice — lines without speech no longer pick up BGM.';
       case 'game_track_exclusion_title':
         return 'Exclude audio tracks';
-      case 'game_track_no_clips':
-        return 'No clips in the recent window';
       case 'game_track_preview':
         return 'Preview this track';
       case 'game_track_preview_failed':
@@ -112885,6 +113227,26 @@ extension on _StringsAr {
       case 'anki_lapis_backup_done_pruned':
         return ({required Object path, required Object count}) =>
             'Backed up to ${path} (${count} old backups pruned by the 90-day / keep-10 policy)';
+      case 'game_audio_fallback_policy':
+        return 'Audio fallback';
+      case 'game_audio_fallback_full':
+        return 'Allow mixed audio';
+      case 'game_audio_fallback_clean':
+        return 'Clean sources only';
+      case 'game_audio_fallback_resource':
+        return 'Original resources only';
+      case 'game_track_silent_at_cue':
+        return 'No sound at this line';
+      case 'game_audio_fallback_full_hint':
+        return 'Falls back to the system mix when no clean voice is captured; the clip may contain BGM and effects.';
+      case 'game_audio_fallback_clean_hint':
+        return 'Uses game resource audio and engine PCM only. Lines with no voice are mined without audio instead of picking up BGM.';
+      case 'game_audio_fallback_resource_hint':
+        return 'Requires the original voice file shipped with the game; mining is refused when it is missing.';
+      case 'game_line_audio_suppressed':
+        return 'Mix skipped';
+      case 'game_line_audio_suppressed_hint':
+        return 'No clean audio source produced audio for this line, and the system mix was skipped by your audio fallback policy. This does not mean the line has no voice.';
       default:
         return null;
     }
@@ -114514,8 +114876,6 @@ extension on _StringsDe {
         return 'Game resource audio';
       case 'game_audio_duration':
         return 'Audio duration';
-      case 'game_audio_fallback_allow':
-        return '允许音频降级';
       case 'game_audio_fallback_disabled_missing':
         return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
       case 'game_audio_resource_id':
@@ -114974,8 +115334,6 @@ extension on _StringsDe {
         return 'Mark a BGM/ambience track as excluded so auto-selection never treats it as voice — lines without speech no longer pick up BGM.';
       case 'game_track_exclusion_title':
         return 'Exclude audio tracks';
-      case 'game_track_no_clips':
-        return 'No clips in the recent window';
       case 'game_track_preview':
         return 'Preview this track';
       case 'game_track_preview_failed':
@@ -118426,6 +118784,26 @@ extension on _StringsDe {
       case 'anki_lapis_backup_done_pruned':
         return ({required Object path, required Object count}) =>
             'Backed up to ${path} (${count} old backups pruned by the 90-day / keep-10 policy)';
+      case 'game_audio_fallback_policy':
+        return 'Audio fallback';
+      case 'game_audio_fallback_full':
+        return 'Allow mixed audio';
+      case 'game_audio_fallback_clean':
+        return 'Clean sources only';
+      case 'game_audio_fallback_resource':
+        return 'Original resources only';
+      case 'game_track_silent_at_cue':
+        return 'No sound at this line';
+      case 'game_audio_fallback_full_hint':
+        return 'Falls back to the system mix when no clean voice is captured; the clip may contain BGM and effects.';
+      case 'game_audio_fallback_clean_hint':
+        return 'Uses game resource audio and engine PCM only. Lines with no voice are mined without audio instead of picking up BGM.';
+      case 'game_audio_fallback_resource_hint':
+        return 'Requires the original voice file shipped with the game; mining is refused when it is missing.';
+      case 'game_line_audio_suppressed':
+        return 'Mix skipped';
+      case 'game_line_audio_suppressed_hint':
+        return 'No clean audio source produced audio for this line, and the system mix was skipped by your audio fallback policy. This does not mean the line has no voice.';
       default:
         return null;
     }
@@ -120056,8 +120434,6 @@ extension on _StringsEs {
         return 'Game resource audio';
       case 'game_audio_duration':
         return 'Audio duration';
-      case 'game_audio_fallback_allow':
-        return '允许音频降级';
       case 'game_audio_fallback_disabled_missing':
         return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
       case 'game_audio_resource_id':
@@ -120516,8 +120892,6 @@ extension on _StringsEs {
         return 'Mark a BGM/ambience track as excluded so auto-selection never treats it as voice — lines without speech no longer pick up BGM.';
       case 'game_track_exclusion_title':
         return 'Exclude audio tracks';
-      case 'game_track_no_clips':
-        return 'No clips in the recent window';
       case 'game_track_preview':
         return 'Preview this track';
       case 'game_track_preview_failed':
@@ -123966,6 +124340,26 @@ extension on _StringsEs {
       case 'anki_lapis_backup_done_pruned':
         return ({required Object path, required Object count}) =>
             'Backed up to ${path} (${count} old backups pruned by the 90-day / keep-10 policy)';
+      case 'game_audio_fallback_policy':
+        return 'Audio fallback';
+      case 'game_audio_fallback_full':
+        return 'Allow mixed audio';
+      case 'game_audio_fallback_clean':
+        return 'Clean sources only';
+      case 'game_audio_fallback_resource':
+        return 'Original resources only';
+      case 'game_track_silent_at_cue':
+        return 'No sound at this line';
+      case 'game_audio_fallback_full_hint':
+        return 'Falls back to the system mix when no clean voice is captured; the clip may contain BGM and effects.';
+      case 'game_audio_fallback_clean_hint':
+        return 'Uses game resource audio and engine PCM only. Lines with no voice are mined without audio instead of picking up BGM.';
+      case 'game_audio_fallback_resource_hint':
+        return 'Requires the original voice file shipped with the game; mining is refused when it is missing.';
+      case 'game_line_audio_suppressed':
+        return 'Mix skipped';
+      case 'game_line_audio_suppressed_hint':
+        return 'No clean audio source produced audio for this line, and the system mix was skipped by your audio fallback policy. This does not mean the line has no voice.';
       default:
         return null;
     }
@@ -125599,8 +125993,6 @@ extension on _StringsFr {
         return 'Game resource audio';
       case 'game_audio_duration':
         return 'Audio duration';
-      case 'game_audio_fallback_allow':
-        return '允许音频降级';
       case 'game_audio_fallback_disabled_missing':
         return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
       case 'game_audio_resource_id':
@@ -126059,8 +126451,6 @@ extension on _StringsFr {
         return 'Mark a BGM/ambience track as excluded so auto-selection never treats it as voice — lines without speech no longer pick up BGM.';
       case 'game_track_exclusion_title':
         return 'Exclude audio tracks';
-      case 'game_track_no_clips':
-        return 'No clips in the recent window';
       case 'game_track_preview':
         return 'Preview this track';
       case 'game_track_preview_failed':
@@ -129512,6 +129902,26 @@ extension on _StringsFr {
       case 'anki_lapis_backup_done_pruned':
         return ({required Object path, required Object count}) =>
             'Backed up to ${path} (${count} old backups pruned by the 90-day / keep-10 policy)';
+      case 'game_audio_fallback_policy':
+        return 'Audio fallback';
+      case 'game_audio_fallback_full':
+        return 'Allow mixed audio';
+      case 'game_audio_fallback_clean':
+        return 'Clean sources only';
+      case 'game_audio_fallback_resource':
+        return 'Original resources only';
+      case 'game_track_silent_at_cue':
+        return 'No sound at this line';
+      case 'game_audio_fallback_full_hint':
+        return 'Falls back to the system mix when no clean voice is captured; the clip may contain BGM and effects.';
+      case 'game_audio_fallback_clean_hint':
+        return 'Uses game resource audio and engine PCM only. Lines with no voice are mined without audio instead of picking up BGM.';
+      case 'game_audio_fallback_resource_hint':
+        return 'Requires the original voice file shipped with the game; mining is refused when it is missing.';
+      case 'game_line_audio_suppressed':
+        return 'Mix skipped';
+      case 'game_line_audio_suppressed_hint':
+        return 'No clean audio source produced audio for this line, and the system mix was skipped by your audio fallback policy. This does not mean the line has no voice.';
       default:
         return null;
     }
@@ -131140,8 +131550,6 @@ extension on _StringsId {
         return 'Game resource audio';
       case 'game_audio_duration':
         return 'Audio duration';
-      case 'game_audio_fallback_allow':
-        return '允许音频降级';
       case 'game_audio_fallback_disabled_missing':
         return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
       case 'game_audio_resource_id':
@@ -131600,8 +132008,6 @@ extension on _StringsId {
         return 'Mark a BGM/ambience track as excluded so auto-selection never treats it as voice — lines without speech no longer pick up BGM.';
       case 'game_track_exclusion_title':
         return 'Exclude audio tracks';
-      case 'game_track_no_clips':
-        return 'No clips in the recent window';
       case 'game_track_preview':
         return 'Preview this track';
       case 'game_track_preview_failed':
@@ -135040,6 +135446,26 @@ extension on _StringsId {
       case 'anki_lapis_backup_done_pruned':
         return ({required Object path, required Object count}) =>
             'Backed up to ${path} (${count} old backups pruned by the 90-day / keep-10 policy)';
+      case 'game_audio_fallback_policy':
+        return 'Audio fallback';
+      case 'game_audio_fallback_full':
+        return 'Allow mixed audio';
+      case 'game_audio_fallback_clean':
+        return 'Clean sources only';
+      case 'game_audio_fallback_resource':
+        return 'Original resources only';
+      case 'game_track_silent_at_cue':
+        return 'No sound at this line';
+      case 'game_audio_fallback_full_hint':
+        return 'Falls back to the system mix when no clean voice is captured; the clip may contain BGM and effects.';
+      case 'game_audio_fallback_clean_hint':
+        return 'Uses game resource audio and engine PCM only. Lines with no voice are mined without audio instead of picking up BGM.';
+      case 'game_audio_fallback_resource_hint':
+        return 'Requires the original voice file shipped with the game; mining is refused when it is missing.';
+      case 'game_line_audio_suppressed':
+        return 'Mix skipped';
+      case 'game_line_audio_suppressed_hint':
+        return 'No clean audio source produced audio for this line, and the system mix was skipped by your audio fallback policy. This does not mean the line has no voice.';
       default:
         return null;
     }
@@ -136670,8 +137096,6 @@ extension on _StringsIt {
         return 'Game resource audio';
       case 'game_audio_duration':
         return 'Audio duration';
-      case 'game_audio_fallback_allow':
-        return '允许音频降级';
       case 'game_audio_fallback_disabled_missing':
         return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
       case 'game_audio_resource_id':
@@ -137130,8 +137554,6 @@ extension on _StringsIt {
         return 'Mark a BGM/ambience track as excluded so auto-selection never treats it as voice — lines without speech no longer pick up BGM.';
       case 'game_track_exclusion_title':
         return 'Exclude audio tracks';
-      case 'game_track_no_clips':
-        return 'No clips in the recent window';
       case 'game_track_preview':
         return 'Preview this track';
       case 'game_track_preview_failed':
@@ -140583,6 +141005,26 @@ extension on _StringsIt {
       case 'anki_lapis_backup_done_pruned':
         return ({required Object path, required Object count}) =>
             'Backed up to ${path} (${count} old backups pruned by the 90-day / keep-10 policy)';
+      case 'game_audio_fallback_policy':
+        return 'Audio fallback';
+      case 'game_audio_fallback_full':
+        return 'Allow mixed audio';
+      case 'game_audio_fallback_clean':
+        return 'Clean sources only';
+      case 'game_audio_fallback_resource':
+        return 'Original resources only';
+      case 'game_track_silent_at_cue':
+        return 'No sound at this line';
+      case 'game_audio_fallback_full_hint':
+        return 'Falls back to the system mix when no clean voice is captured; the clip may contain BGM and effects.';
+      case 'game_audio_fallback_clean_hint':
+        return 'Uses game resource audio and engine PCM only. Lines with no voice are mined without audio instead of picking up BGM.';
+      case 'game_audio_fallback_resource_hint':
+        return 'Requires the original voice file shipped with the game; mining is refused when it is missing.';
+      case 'game_line_audio_suppressed':
+        return 'Mix skipped';
+      case 'game_line_audio_suppressed_hint':
+        return 'No clean audio source produced audio for this line, and the system mix was skipped by your audio fallback policy. This does not mean the line has no voice.';
       default:
         return null;
     }
@@ -142202,8 +142644,6 @@ extension on _StringsJa {
         return 'Game resource audio';
       case 'game_audio_duration':
         return 'Audio duration';
-      case 'game_audio_fallback_allow':
-        return '允许音频降级';
       case 'game_audio_fallback_disabled_missing':
         return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
       case 'game_audio_resource_id':
@@ -142662,8 +143102,6 @@ extension on _StringsJa {
         return 'BGM／環境音のトラックを除外に設定すると、自動選択がそれを音声として扱わなくなります——音声のないセリフで BGM を拾わなくなります。';
       case 'game_track_exclusion_title':
         return '音声トラックを除外';
-      case 'game_track_no_clips':
-        return 'No clips in the recent window';
       case 'game_track_preview':
         return 'Preview this track';
       case 'game_track_preview_failed':
@@ -146088,6 +146526,26 @@ extension on _StringsJa {
       case 'anki_lapis_backup_done_pruned':
         return ({required Object path, required Object count}) =>
             'Backed up to ${path} (${count} old backups pruned by the 90-day / keep-10 policy)';
+      case 'game_audio_fallback_policy':
+        return 'Audio fallback';
+      case 'game_audio_fallback_full':
+        return 'Allow mixed audio';
+      case 'game_audio_fallback_clean':
+        return 'Clean sources only';
+      case 'game_audio_fallback_resource':
+        return 'Original resources only';
+      case 'game_track_silent_at_cue':
+        return 'No sound at this line';
+      case 'game_audio_fallback_full_hint':
+        return 'Falls back to the system mix when no clean voice is captured; the clip may contain BGM and effects.';
+      case 'game_audio_fallback_clean_hint':
+        return 'Uses game resource audio and engine PCM only. Lines with no voice are mined without audio instead of picking up BGM.';
+      case 'game_audio_fallback_resource_hint':
+        return 'Requires the original voice file shipped with the game; mining is refused when it is missing.';
+      case 'game_line_audio_suppressed':
+        return 'Mix skipped';
+      case 'game_line_audio_suppressed_hint':
+        return 'No clean audio source produced audio for this line, and the system mix was skipped by your audio fallback policy. This does not mean the line has no voice.';
       default:
         return null;
     }
@@ -147708,8 +148166,6 @@ extension on _StringsKo {
         return 'Game resource audio';
       case 'game_audio_duration':
         return 'Audio duration';
-      case 'game_audio_fallback_allow':
-        return '允许音频降级';
       case 'game_audio_fallback_disabled_missing':
         return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
       case 'game_audio_resource_id':
@@ -148168,8 +148624,6 @@ extension on _StringsKo {
         return 'Mark a BGM/ambience track as excluded so auto-selection never treats it as voice — lines without speech no longer pick up BGM.';
       case 'game_track_exclusion_title':
         return 'Exclude audio tracks';
-      case 'game_track_no_clips':
-        return 'No clips in the recent window';
       case 'game_track_preview':
         return 'Preview this track';
       case 'game_track_preview_failed':
@@ -151597,6 +152051,26 @@ extension on _StringsKo {
       case 'anki_lapis_backup_done_pruned':
         return ({required Object path, required Object count}) =>
             'Backed up to ${path} (${count} old backups pruned by the 90-day / keep-10 policy)';
+      case 'game_audio_fallback_policy':
+        return 'Audio fallback';
+      case 'game_audio_fallback_full':
+        return 'Allow mixed audio';
+      case 'game_audio_fallback_clean':
+        return 'Clean sources only';
+      case 'game_audio_fallback_resource':
+        return 'Original resources only';
+      case 'game_track_silent_at_cue':
+        return 'No sound at this line';
+      case 'game_audio_fallback_full_hint':
+        return 'Falls back to the system mix when no clean voice is captured; the clip may contain BGM and effects.';
+      case 'game_audio_fallback_clean_hint':
+        return 'Uses game resource audio and engine PCM only. Lines with no voice are mined without audio instead of picking up BGM.';
+      case 'game_audio_fallback_resource_hint':
+        return 'Requires the original voice file shipped with the game; mining is refused when it is missing.';
+      case 'game_line_audio_suppressed':
+        return 'Mix skipped';
+      case 'game_line_audio_suppressed_hint':
+        return 'No clean audio source produced audio for this line, and the system mix was skipped by your audio fallback policy. This does not mean the line has no voice.';
       default:
         return null;
     }
@@ -153226,8 +153700,6 @@ extension on _StringsNl {
         return 'Game resource audio';
       case 'game_audio_duration':
         return 'Audio duration';
-      case 'game_audio_fallback_allow':
-        return '允许音频降级';
       case 'game_audio_fallback_disabled_missing':
         return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
       case 'game_audio_resource_id':
@@ -153686,8 +154158,6 @@ extension on _StringsNl {
         return 'Mark a BGM/ambience track as excluded so auto-selection never treats it as voice — lines without speech no longer pick up BGM.';
       case 'game_track_exclusion_title':
         return 'Exclude audio tracks';
-      case 'game_track_no_clips':
-        return 'No clips in the recent window';
       case 'game_track_preview':
         return 'Preview this track';
       case 'game_track_preview_failed':
@@ -157133,6 +157603,26 @@ extension on _StringsNl {
       case 'anki_lapis_backup_done_pruned':
         return ({required Object path, required Object count}) =>
             'Backed up to ${path} (${count} old backups pruned by the 90-day / keep-10 policy)';
+      case 'game_audio_fallback_policy':
+        return 'Audio fallback';
+      case 'game_audio_fallback_full':
+        return 'Allow mixed audio';
+      case 'game_audio_fallback_clean':
+        return 'Clean sources only';
+      case 'game_audio_fallback_resource':
+        return 'Original resources only';
+      case 'game_track_silent_at_cue':
+        return 'No sound at this line';
+      case 'game_audio_fallback_full_hint':
+        return 'Falls back to the system mix when no clean voice is captured; the clip may contain BGM and effects.';
+      case 'game_audio_fallback_clean_hint':
+        return 'Uses game resource audio and engine PCM only. Lines with no voice are mined without audio instead of picking up BGM.';
+      case 'game_audio_fallback_resource_hint':
+        return 'Requires the original voice file shipped with the game; mining is refused when it is missing.';
+      case 'game_line_audio_suppressed':
+        return 'Mix skipped';
+      case 'game_line_audio_suppressed_hint':
+        return 'No clean audio source produced audio for this line, and the system mix was skipped by your audio fallback policy. This does not mean the line has no voice.';
       default:
         return null;
     }
@@ -158761,8 +159251,6 @@ extension on _StringsPtBr {
         return 'Game resource audio';
       case 'game_audio_duration':
         return 'Audio duration';
-      case 'game_audio_fallback_allow':
-        return '允许音频降级';
       case 'game_audio_fallback_disabled_missing':
         return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
       case 'game_audio_resource_id':
@@ -159221,8 +159709,6 @@ extension on _StringsPtBr {
         return 'Mark a BGM/ambience track as excluded so auto-selection never treats it as voice — lines without speech no longer pick up BGM.';
       case 'game_track_exclusion_title':
         return 'Exclude audio tracks';
-      case 'game_track_no_clips':
-        return 'No clips in the recent window';
       case 'game_track_preview':
         return 'Preview this track';
       case 'game_track_preview_failed':
@@ -162666,6 +163152,26 @@ extension on _StringsPtBr {
       case 'anki_lapis_backup_done_pruned':
         return ({required Object path, required Object count}) =>
             'Backed up to ${path} (${count} old backups pruned by the 90-day / keep-10 policy)';
+      case 'game_audio_fallback_policy':
+        return 'Audio fallback';
+      case 'game_audio_fallback_full':
+        return 'Allow mixed audio';
+      case 'game_audio_fallback_clean':
+        return 'Clean sources only';
+      case 'game_audio_fallback_resource':
+        return 'Original resources only';
+      case 'game_track_silent_at_cue':
+        return 'No sound at this line';
+      case 'game_audio_fallback_full_hint':
+        return 'Falls back to the system mix when no clean voice is captured; the clip may contain BGM and effects.';
+      case 'game_audio_fallback_clean_hint':
+        return 'Uses game resource audio and engine PCM only. Lines with no voice are mined without audio instead of picking up BGM.';
+      case 'game_audio_fallback_resource_hint':
+        return 'Requires the original voice file shipped with the game; mining is refused when it is missing.';
+      case 'game_line_audio_suppressed':
+        return 'Mix skipped';
+      case 'game_line_audio_suppressed_hint':
+        return 'No clean audio source produced audio for this line, and the system mix was skipped by your audio fallback policy. This does not mean the line has no voice.';
       default:
         return null;
     }
@@ -164297,8 +164803,6 @@ extension on _StringsRu {
         return 'Game resource audio';
       case 'game_audio_duration':
         return 'Audio duration';
-      case 'game_audio_fallback_allow':
-        return '允许音频降级';
       case 'game_audio_fallback_disabled_missing':
         return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
       case 'game_audio_resource_id':
@@ -164757,8 +165261,6 @@ extension on _StringsRu {
         return 'Mark a BGM/ambience track as excluded so auto-selection never treats it as voice — lines without speech no longer pick up BGM.';
       case 'game_track_exclusion_title':
         return 'Exclude audio tracks';
-      case 'game_track_no_clips':
-        return 'No clips in the recent window';
       case 'game_track_preview':
         return 'Preview this track';
       case 'game_track_preview_failed':
@@ -168204,6 +168706,26 @@ extension on _StringsRu {
       case 'anki_lapis_backup_done_pruned':
         return ({required Object path, required Object count}) =>
             'Backed up to ${path} (${count} old backups pruned by the 90-day / keep-10 policy)';
+      case 'game_audio_fallback_policy':
+        return 'Audio fallback';
+      case 'game_audio_fallback_full':
+        return 'Allow mixed audio';
+      case 'game_audio_fallback_clean':
+        return 'Clean sources only';
+      case 'game_audio_fallback_resource':
+        return 'Original resources only';
+      case 'game_track_silent_at_cue':
+        return 'No sound at this line';
+      case 'game_audio_fallback_full_hint':
+        return 'Falls back to the system mix when no clean voice is captured; the clip may contain BGM and effects.';
+      case 'game_audio_fallback_clean_hint':
+        return 'Uses game resource audio and engine PCM only. Lines with no voice are mined without audio instead of picking up BGM.';
+      case 'game_audio_fallback_resource_hint':
+        return 'Requires the original voice file shipped with the game; mining is refused when it is missing.';
+      case 'game_line_audio_suppressed':
+        return 'Mix skipped';
+      case 'game_line_audio_suppressed_hint':
+        return 'No clean audio source produced audio for this line, and the system mix was skipped by your audio fallback policy. This does not mean the line has no voice.';
       default:
         return null;
     }
@@ -169828,8 +170350,6 @@ extension on _StringsTh {
         return 'Game resource audio';
       case 'game_audio_duration':
         return 'Audio duration';
-      case 'game_audio_fallback_allow':
-        return '允许音频降级';
       case 'game_audio_fallback_disabled_missing':
         return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
       case 'game_audio_resource_id':
@@ -170288,8 +170808,6 @@ extension on _StringsTh {
         return 'Mark a BGM/ambience track as excluded so auto-selection never treats it as voice — lines without speech no longer pick up BGM.';
       case 'game_track_exclusion_title':
         return 'Exclude audio tracks';
-      case 'game_track_no_clips':
-        return 'No clips in the recent window';
       case 'game_track_preview':
         return 'Preview this track';
       case 'game_track_preview_failed':
@@ -173726,6 +174244,26 @@ extension on _StringsTh {
       case 'anki_lapis_backup_done_pruned':
         return ({required Object path, required Object count}) =>
             'Backed up to ${path} (${count} old backups pruned by the 90-day / keep-10 policy)';
+      case 'game_audio_fallback_policy':
+        return 'Audio fallback';
+      case 'game_audio_fallback_full':
+        return 'Allow mixed audio';
+      case 'game_audio_fallback_clean':
+        return 'Clean sources only';
+      case 'game_audio_fallback_resource':
+        return 'Original resources only';
+      case 'game_track_silent_at_cue':
+        return 'No sound at this line';
+      case 'game_audio_fallback_full_hint':
+        return 'Falls back to the system mix when no clean voice is captured; the clip may contain BGM and effects.';
+      case 'game_audio_fallback_clean_hint':
+        return 'Uses game resource audio and engine PCM only. Lines with no voice are mined without audio instead of picking up BGM.';
+      case 'game_audio_fallback_resource_hint':
+        return 'Requires the original voice file shipped with the game; mining is refused when it is missing.';
+      case 'game_line_audio_suppressed':
+        return 'Mix skipped';
+      case 'game_line_audio_suppressed_hint':
+        return 'No clean audio source produced audio for this line, and the system mix was skipped by your audio fallback policy. This does not mean the line has no voice.';
       default:
         return null;
     }
@@ -175355,8 +175893,6 @@ extension on _StringsTr {
         return 'Game resource audio';
       case 'game_audio_duration':
         return 'Audio duration';
-      case 'game_audio_fallback_allow':
-        return '允许音频降级';
       case 'game_audio_fallback_disabled_missing':
         return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
       case 'game_audio_resource_id':
@@ -175815,8 +176351,6 @@ extension on _StringsTr {
         return 'Mark a BGM/ambience track as excluded so auto-selection never treats it as voice — lines without speech no longer pick up BGM.';
       case 'game_track_exclusion_title':
         return 'Exclude audio tracks';
-      case 'game_track_no_clips':
-        return 'No clips in the recent window';
       case 'game_track_preview':
         return 'Preview this track';
       case 'game_track_preview_failed':
@@ -179257,6 +179791,26 @@ extension on _StringsTr {
       case 'anki_lapis_backup_done_pruned':
         return ({required Object path, required Object count}) =>
             'Backed up to ${path} (${count} old backups pruned by the 90-day / keep-10 policy)';
+      case 'game_audio_fallback_policy':
+        return 'Audio fallback';
+      case 'game_audio_fallback_full':
+        return 'Allow mixed audio';
+      case 'game_audio_fallback_clean':
+        return 'Clean sources only';
+      case 'game_audio_fallback_resource':
+        return 'Original resources only';
+      case 'game_track_silent_at_cue':
+        return 'No sound at this line';
+      case 'game_audio_fallback_full_hint':
+        return 'Falls back to the system mix when no clean voice is captured; the clip may contain BGM and effects.';
+      case 'game_audio_fallback_clean_hint':
+        return 'Uses game resource audio and engine PCM only. Lines with no voice are mined without audio instead of picking up BGM.';
+      case 'game_audio_fallback_resource_hint':
+        return 'Requires the original voice file shipped with the game; mining is refused when it is missing.';
+      case 'game_line_audio_suppressed':
+        return 'Mix skipped';
+      case 'game_line_audio_suppressed_hint':
+        return 'No clean audio source produced audio for this line, and the system mix was skipped by your audio fallback policy. This does not mean the line has no voice.';
       default:
         return null;
     }
@@ -180883,8 +181437,6 @@ extension on _StringsVi {
         return 'Game resource audio';
       case 'game_audio_duration':
         return 'Audio duration';
-      case 'game_audio_fallback_allow':
-        return '允许音频降级';
       case 'game_audio_fallback_disabled_missing':
         return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
       case 'game_audio_resource_id':
@@ -181343,8 +181895,6 @@ extension on _StringsVi {
         return 'Mark a BGM/ambience track as excluded so auto-selection never treats it as voice — lines without speech no longer pick up BGM.';
       case 'game_track_exclusion_title':
         return 'Exclude audio tracks';
-      case 'game_track_no_clips':
-        return 'No clips in the recent window';
       case 'game_track_preview':
         return 'Preview this track';
       case 'game_track_preview_failed':
@@ -184783,6 +185333,26 @@ extension on _StringsVi {
       case 'anki_lapis_backup_done_pruned':
         return ({required Object path, required Object count}) =>
             'Backed up to ${path} (${count} old backups pruned by the 90-day / keep-10 policy)';
+      case 'game_audio_fallback_policy':
+        return 'Audio fallback';
+      case 'game_audio_fallback_full':
+        return 'Allow mixed audio';
+      case 'game_audio_fallback_clean':
+        return 'Clean sources only';
+      case 'game_audio_fallback_resource':
+        return 'Original resources only';
+      case 'game_track_silent_at_cue':
+        return 'No sound at this line';
+      case 'game_audio_fallback_full_hint':
+        return 'Falls back to the system mix when no clean voice is captured; the clip may contain BGM and effects.';
+      case 'game_audio_fallback_clean_hint':
+        return 'Uses game resource audio and engine PCM only. Lines with no voice are mined without audio instead of picking up BGM.';
+      case 'game_audio_fallback_resource_hint':
+        return 'Requires the original voice file shipped with the game; mining is refused when it is missing.';
+      case 'game_line_audio_suppressed':
+        return 'Mix skipped';
+      case 'game_line_audio_suppressed_hint':
+        return 'No clean audio source produced audio for this line, and the system mix was skipped by your audio fallback policy. This does not mean the line has no voice.';
       default:
         return null;
     }
@@ -186394,8 +186964,6 @@ extension on _StringsZhCn {
         return '游戏资源音频';
       case 'game_audio_duration':
         return '音频时长';
-      case 'game_audio_fallback_allow':
-        return '允许音频降级';
       case 'game_audio_fallback_disabled_missing':
         return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
       case 'game_audio_resource_id':
@@ -186853,8 +187421,6 @@ extension on _StringsZhCn {
         return '把 BGM/环境音轨标记为排除，自动选源便不会把它当成语音——没有语音的台词也不会再读到 BGM。';
       case 'game_track_exclusion_title':
         return '排除音轨';
-      case 'game_track_no_clips':
-        return '近窗内没有片段';
       case 'game_track_preview':
         return '试听该音轨';
       case 'game_track_preview_failed':
@@ -190263,6 +190829,26 @@ extension on _StringsZhCn {
       case 'anki_lapis_backup_done_pruned':
         return ({required Object path, required Object count}) =>
             '已备份到 ${path}（按「保留 90 天、至少留 10 份」清理了 ${count} 份旧备份）';
+      case 'game_audio_fallback_policy':
+        return '音频降级';
+      case 'game_audio_fallback_full':
+        return '允许混音兜底';
+      case 'game_audio_fallback_clean':
+        return '只用干净语音';
+      case 'game_audio_fallback_resource':
+        return '只用游戏原始资源';
+      case 'game_track_silent_at_cue':
+        return '这句时刻没有声音';
+      case 'game_audio_fallback_full_hint':
+        return '抓不到干净语音时用系统混音兜底，可能混入 BGM 和音效。';
+      case 'game_audio_fallback_clean_hint':
+        return '只用游戏资源音频和引擎 PCM。没有配音的句子照常制卡，只是不带音频，不会收进 BGM。';
+      case 'game_audio_fallback_resource_hint':
+        return '必须拿到游戏自带的原始语音文件，缺失时拒绝制卡。';
+      case 'game_line_audio_suppressed':
+        return '已跳过混音';
+      case 'game_line_audio_suppressed_hint':
+        return '本句没有干净音源可用，整机混音已按你选的降级策略跳过。这不代表这句没有配音。';
       default:
         return null;
     }
@@ -191881,8 +192467,6 @@ extension on _StringsZhHk {
         return 'Game resource audio';
       case 'game_audio_duration':
         return 'Audio duration';
-      case 'game_audio_fallback_allow':
-        return '允许音频降级';
       case 'game_audio_fallback_disabled_missing':
         return '未找到与该句匹配的游戏资源音频；已关闭降级，未制卡';
       case 'game_audio_resource_id':
@@ -192341,8 +192925,6 @@ extension on _StringsZhHk {
         return '把 BGM/環境音軌標記為排除，自動選源便不會把它當成語音——沒有語音的台詞也不會再讀到 BGM。';
       case 'game_track_exclusion_title':
         return '排除音軌';
-      case 'game_track_no_clips':
-        return 'No clips in the recent window';
       case 'game_track_preview':
         return 'Preview this track';
       case 'game_track_preview_failed':
@@ -195763,6 +196345,26 @@ extension on _StringsZhHk {
       case 'anki_lapis_backup_done_pruned':
         return ({required Object path, required Object count}) =>
             'Backed up to ${path} (${count} old backups pruned by the 90-day / keep-10 policy)';
+      case 'game_audio_fallback_policy':
+        return 'Audio fallback';
+      case 'game_audio_fallback_full':
+        return 'Allow mixed audio';
+      case 'game_audio_fallback_clean':
+        return 'Clean sources only';
+      case 'game_audio_fallback_resource':
+        return 'Original resources only';
+      case 'game_track_silent_at_cue':
+        return 'No sound at this line';
+      case 'game_audio_fallback_full_hint':
+        return 'Falls back to the system mix when no clean voice is captured; the clip may contain BGM and effects.';
+      case 'game_audio_fallback_clean_hint':
+        return 'Uses game resource audio and engine PCM only. Lines with no voice are mined without audio instead of picking up BGM.';
+      case 'game_audio_fallback_resource_hint':
+        return 'Requires the original voice file shipped with the game; mining is refused when it is missing.';
+      case 'game_line_audio_suppressed':
+        return 'Mix skipped';
+      case 'game_line_audio_suppressed_hint':
+        return 'No clean audio source produced audio for this line, and the system mix was skipped by your audio fallback policy. This does not mean the line has no voice.';
       default:
         return null;
     }
