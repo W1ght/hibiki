@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 45951 (2703 per locale)
+/// Strings: 46002 (2706 per locale)
 ///
-/// Built on 2026-07-28 at 05:54 UTC
+/// Built on 2026-07-28 at 06:16 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3627,6 +3627,11 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get game_line_audio_suppressed => 'Mix skipped';
   String get game_line_audio_suppressed_hint =>
       'No clean audio source produced audio for this line, and the system mix was skipped by your audio fallback policy. This does not mean the line has no voice.';
+  String get video_setting_torrent_limit_lan => 'Apply limits to LAN peers';
+  String get video_setting_torrent_limit_lan_hint =>
+      'Off by default: transfers with peers on your local network ignore the limits above.';
+  String get download_rate_limit_lan_included =>
+      'Also applies within your local network.';
 }
 
 // Path: <root>
@@ -9805,6 +9810,14 @@ class _StringsAr extends _StringsEn {
   @override
   String get game_line_audio_suppressed_hint =>
       'No clean audio source produced audio for this line, and the system mix was skipped by your audio fallback policy. This does not mean the line has no voice.';
+  @override
+  String get video_setting_torrent_limit_lan => 'Apply limits to LAN peers';
+  @override
+  String get video_setting_torrent_limit_lan_hint =>
+      'Off by default: transfers with peers on your local network ignore the limits above.';
+  @override
+  String get download_rate_limit_lan_included =>
+      'Also applies within your local network.';
 }
 
 // Path: <root>
@@ -16051,6 +16064,14 @@ class _StringsDe extends _StringsEn {
   @override
   String get game_line_audio_suppressed_hint =>
       'No clean audio source produced audio for this line, and the system mix was skipped by your audio fallback policy. This does not mean the line has no voice.';
+  @override
+  String get video_setting_torrent_limit_lan => 'Apply limits to LAN peers';
+  @override
+  String get video_setting_torrent_limit_lan_hint =>
+      'Off by default: transfers with peers on your local network ignore the limits above.';
+  @override
+  String get download_rate_limit_lan_included =>
+      'Also applies within your local network.';
 }
 
 // Path: <root>
@@ -22313,6 +22334,14 @@ class _StringsEs extends _StringsEn {
   @override
   String get game_line_audio_suppressed_hint =>
       'No clean audio source produced audio for this line, and the system mix was skipped by your audio fallback policy. This does not mean the line has no voice.';
+  @override
+  String get video_setting_torrent_limit_lan => 'Apply limits to LAN peers';
+  @override
+  String get video_setting_torrent_limit_lan_hint =>
+      'Off by default: transfers with peers on your local network ignore the limits above.';
+  @override
+  String get download_rate_limit_lan_included =>
+      'Also applies within your local network.';
 }
 
 // Path: <root>
@@ -28586,6 +28615,14 @@ class _StringsFr extends _StringsEn {
   @override
   String get game_line_audio_suppressed_hint =>
       'No clean audio source produced audio for this line, and the system mix was skipped by your audio fallback policy. This does not mean the line has no voice.';
+  @override
+  String get video_setting_torrent_limit_lan => 'Apply limits to LAN peers';
+  @override
+  String get video_setting_torrent_limit_lan_hint =>
+      'Off by default: transfers with peers on your local network ignore the limits above.';
+  @override
+  String get download_rate_limit_lan_included =>
+      'Also applies within your local network.';
 }
 
 // Path: <root>
@@ -34788,6 +34825,14 @@ class _StringsId extends _StringsEn {
   @override
   String get game_line_audio_suppressed_hint =>
       'No clean audio source produced audio for this line, and the system mix was skipped by your audio fallback policy. This does not mean the line has no voice.';
+  @override
+  String get video_setting_torrent_limit_lan => 'Apply limits to LAN peers';
+  @override
+  String get video_setting_torrent_limit_lan_hint =>
+      'Off by default: transfers with peers on your local network ignore the limits above.';
+  @override
+  String get download_rate_limit_lan_included =>
+      'Also applies within your local network.';
 }
 
 // Path: <root>
@@ -41036,6 +41081,14 @@ class _StringsIt extends _StringsEn {
   @override
   String get game_line_audio_suppressed_hint =>
       'No clean audio source produced audio for this line, and the system mix was skipped by your audio fallback policy. This does not mean the line has no voice.';
+  @override
+  String get video_setting_torrent_limit_lan => 'Apply limits to LAN peers';
+  @override
+  String get video_setting_torrent_limit_lan_hint =>
+      'Off by default: transfers with peers on your local network ignore the limits above.';
+  @override
+  String get download_rate_limit_lan_included =>
+      'Also applies within your local network.';
 }
 
 // Path: <root>
@@ -47101,6 +47154,14 @@ class _StringsJa extends _StringsEn {
   @override
   String get game_line_audio_suppressed_hint =>
       'No clean audio source produced audio for this line, and the system mix was skipped by your audio fallback policy. This does not mean the line has no voice.';
+  @override
+  String get video_setting_torrent_limit_lan => 'Apply limits to LAN peers';
+  @override
+  String get video_setting_torrent_limit_lan_hint =>
+      'Off by default: transfers with peers on your local network ignore the limits above.';
+  @override
+  String get download_rate_limit_lan_included =>
+      'Also applies within your local network.';
 }
 
 // Path: <root>
@@ -53168,6 +53229,14 @@ class _StringsKo extends _StringsEn {
   @override
   String get game_line_audio_suppressed_hint =>
       'No clean audio source produced audio for this line, and the system mix was skipped by your audio fallback policy. This does not mean the line has no voice.';
+  @override
+  String get video_setting_torrent_limit_lan => 'Apply limits to LAN peers';
+  @override
+  String get video_setting_torrent_limit_lan_hint =>
+      'Off by default: transfers with peers on your local network ignore the limits above.';
+  @override
+  String get download_rate_limit_lan_included =>
+      'Also applies within your local network.';
 }
 
 // Path: <root>
@@ -59396,6 +59465,14 @@ class _StringsNl extends _StringsEn {
   @override
   String get game_line_audio_suppressed_hint =>
       'No clean audio source produced audio for this line, and the system mix was skipped by your audio fallback policy. This does not mean the line has no voice.';
+  @override
+  String get video_setting_torrent_limit_lan => 'Apply limits to LAN peers';
+  @override
+  String get video_setting_torrent_limit_lan_hint =>
+      'Off by default: transfers with peers on your local network ignore the limits above.';
+  @override
+  String get download_rate_limit_lan_included =>
+      'Also applies within your local network.';
 }
 
 // Path: <root>
@@ -65637,6 +65714,14 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get game_line_audio_suppressed_hint =>
       'No clean audio source produced audio for this line, and the system mix was skipped by your audio fallback policy. This does not mean the line has no voice.';
+  @override
+  String get video_setting_torrent_limit_lan => 'Apply limits to LAN peers';
+  @override
+  String get video_setting_torrent_limit_lan_hint =>
+      'Off by default: transfers with peers on your local network ignore the limits above.';
+  @override
+  String get download_rate_limit_lan_included =>
+      'Also applies within your local network.';
 }
 
 // Path: <root>
@@ -71862,6 +71947,14 @@ class _StringsRu extends _StringsEn {
   @override
   String get game_line_audio_suppressed_hint =>
       'No clean audio source produced audio for this line, and the system mix was skipped by your audio fallback policy. This does not mean the line has no voice.';
+  @override
+  String get video_setting_torrent_limit_lan => 'Apply limits to LAN peers';
+  @override
+  String get video_setting_torrent_limit_lan_hint =>
+      'Off by default: transfers with peers on your local network ignore the limits above.';
+  @override
+  String get download_rate_limit_lan_included =>
+      'Also applies within your local network.';
 }
 
 // Path: <root>
@@ -78035,6 +78128,14 @@ class _StringsTh extends _StringsEn {
   @override
   String get game_line_audio_suppressed_hint =>
       'No clean audio source produced audio for this line, and the system mix was skipped by your audio fallback policy. This does not mean the line has no voice.';
+  @override
+  String get video_setting_torrent_limit_lan => 'Apply limits to LAN peers';
+  @override
+  String get video_setting_torrent_limit_lan_hint =>
+      'Off by default: transfers with peers on your local network ignore the limits above.';
+  @override
+  String get download_rate_limit_lan_included =>
+      'Also applies within your local network.';
 }
 
 // Path: <root>
@@ -84240,6 +84341,14 @@ class _StringsTr extends _StringsEn {
   @override
   String get game_line_audio_suppressed_hint =>
       'No clean audio source produced audio for this line, and the system mix was skipped by your audio fallback policy. This does not mean the line has no voice.';
+  @override
+  String get video_setting_torrent_limit_lan => 'Apply limits to LAN peers';
+  @override
+  String get video_setting_torrent_limit_lan_hint =>
+      'Off by default: transfers with peers on your local network ignore the limits above.';
+  @override
+  String get download_rate_limit_lan_included =>
+      'Also applies within your local network.';
 }
 
 // Path: <root>
@@ -90430,6 +90539,14 @@ class _StringsVi extends _StringsEn {
   @override
   String get game_line_audio_suppressed_hint =>
       'No clean audio source produced audio for this line, and the system mix was skipped by your audio fallback policy. This does not mean the line has no voice.';
+  @override
+  String get video_setting_torrent_limit_lan => 'Apply limits to LAN peers';
+  @override
+  String get video_setting_torrent_limit_lan_hint =>
+      'Off by default: transfers with peers on your local network ignore the limits above.';
+  @override
+  String get download_rate_limit_lan_included =>
+      'Also applies within your local network.';
 }
 
 // Path: <root>
@@ -96187,6 +96304,13 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get game_line_audio_suppressed_hint =>
       '本句没有干净音源可用，整机混音已按你选的降级策略跳过。这不代表这句没有配音。';
+  @override
+  String get video_setting_torrent_limit_lan => '限速也作用于局域网';
+  @override
+  String get video_setting_torrent_limit_lan_hint =>
+      '默认关闭：与局域网内 peer 的传输不受上面的限速约束。';
+  @override
+  String get download_rate_limit_lan_included => '同时作用于局域网内的传输。';
 }
 
 // Path: <root>
@@ -102173,6 +102297,14 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get game_line_audio_suppressed_hint =>
       'No clean audio source produced audio for this line, and the system mix was skipped by your audio fallback policy. This does not mean the line has no voice.';
+  @override
+  String get video_setting_torrent_limit_lan => 'Apply limits to LAN peers';
+  @override
+  String get video_setting_torrent_limit_lan_hint =>
+      'Off by default: transfers with peers on your local network ignore the limits above.';
+  @override
+  String get download_rate_limit_lan_included =>
+      'Also applies within your local network.';
 }
 
 /// Flat map(s) containing all translations.
@@ -107711,6 +107843,12 @@ extension on _StringsEn {
         return 'Mix skipped';
       case 'game_line_audio_suppressed_hint':
         return 'No clean audio source produced audio for this line, and the system mix was skipped by your audio fallback policy. This does not mean the line has no voice.';
+      case 'video_setting_torrent_limit_lan':
+        return 'Apply limits to LAN peers';
+      case 'video_setting_torrent_limit_lan_hint':
+        return 'Off by default: transfers with peers on your local network ignore the limits above.';
+      case 'download_rate_limit_lan_included':
+        return 'Also applies within your local network.';
       default:
         return null;
     }
@@ -113247,6 +113385,12 @@ extension on _StringsAr {
         return 'Mix skipped';
       case 'game_line_audio_suppressed_hint':
         return 'No clean audio source produced audio for this line, and the system mix was skipped by your audio fallback policy. This does not mean the line has no voice.';
+      case 'video_setting_torrent_limit_lan':
+        return 'Apply limits to LAN peers';
+      case 'video_setting_torrent_limit_lan_hint':
+        return 'Off by default: transfers with peers on your local network ignore the limits above.';
+      case 'download_rate_limit_lan_included':
+        return 'Also applies within your local network.';
       default:
         return null;
     }
@@ -118804,6 +118948,12 @@ extension on _StringsDe {
         return 'Mix skipped';
       case 'game_line_audio_suppressed_hint':
         return 'No clean audio source produced audio for this line, and the system mix was skipped by your audio fallback policy. This does not mean the line has no voice.';
+      case 'video_setting_torrent_limit_lan':
+        return 'Apply limits to LAN peers';
+      case 'video_setting_torrent_limit_lan_hint':
+        return 'Off by default: transfers with peers on your local network ignore the limits above.';
+      case 'download_rate_limit_lan_included':
+        return 'Also applies within your local network.';
       default:
         return null;
     }
@@ -124360,6 +124510,12 @@ extension on _StringsEs {
         return 'Mix skipped';
       case 'game_line_audio_suppressed_hint':
         return 'No clean audio source produced audio for this line, and the system mix was skipped by your audio fallback policy. This does not mean the line has no voice.';
+      case 'video_setting_torrent_limit_lan':
+        return 'Apply limits to LAN peers';
+      case 'video_setting_torrent_limit_lan_hint':
+        return 'Off by default: transfers with peers on your local network ignore the limits above.';
+      case 'download_rate_limit_lan_included':
+        return 'Also applies within your local network.';
       default:
         return null;
     }
@@ -129922,6 +130078,12 @@ extension on _StringsFr {
         return 'Mix skipped';
       case 'game_line_audio_suppressed_hint':
         return 'No clean audio source produced audio for this line, and the system mix was skipped by your audio fallback policy. This does not mean the line has no voice.';
+      case 'video_setting_torrent_limit_lan':
+        return 'Apply limits to LAN peers';
+      case 'video_setting_torrent_limit_lan_hint':
+        return 'Off by default: transfers with peers on your local network ignore the limits above.';
+      case 'download_rate_limit_lan_included':
+        return 'Also applies within your local network.';
       default:
         return null;
     }
@@ -135466,6 +135628,12 @@ extension on _StringsId {
         return 'Mix skipped';
       case 'game_line_audio_suppressed_hint':
         return 'No clean audio source produced audio for this line, and the system mix was skipped by your audio fallback policy. This does not mean the line has no voice.';
+      case 'video_setting_torrent_limit_lan':
+        return 'Apply limits to LAN peers';
+      case 'video_setting_torrent_limit_lan_hint':
+        return 'Off by default: transfers with peers on your local network ignore the limits above.';
+      case 'download_rate_limit_lan_included':
+        return 'Also applies within your local network.';
       default:
         return null;
     }
@@ -141025,6 +141193,12 @@ extension on _StringsIt {
         return 'Mix skipped';
       case 'game_line_audio_suppressed_hint':
         return 'No clean audio source produced audio for this line, and the system mix was skipped by your audio fallback policy. This does not mean the line has no voice.';
+      case 'video_setting_torrent_limit_lan':
+        return 'Apply limits to LAN peers';
+      case 'video_setting_torrent_limit_lan_hint':
+        return 'Off by default: transfers with peers on your local network ignore the limits above.';
+      case 'download_rate_limit_lan_included':
+        return 'Also applies within your local network.';
       default:
         return null;
     }
@@ -146546,6 +146720,12 @@ extension on _StringsJa {
         return 'Mix skipped';
       case 'game_line_audio_suppressed_hint':
         return 'No clean audio source produced audio for this line, and the system mix was skipped by your audio fallback policy. This does not mean the line has no voice.';
+      case 'video_setting_torrent_limit_lan':
+        return 'Apply limits to LAN peers';
+      case 'video_setting_torrent_limit_lan_hint':
+        return 'Off by default: transfers with peers on your local network ignore the limits above.';
+      case 'download_rate_limit_lan_included':
+        return 'Also applies within your local network.';
       default:
         return null;
     }
@@ -152071,6 +152251,12 @@ extension on _StringsKo {
         return 'Mix skipped';
       case 'game_line_audio_suppressed_hint':
         return 'No clean audio source produced audio for this line, and the system mix was skipped by your audio fallback policy. This does not mean the line has no voice.';
+      case 'video_setting_torrent_limit_lan':
+        return 'Apply limits to LAN peers';
+      case 'video_setting_torrent_limit_lan_hint':
+        return 'Off by default: transfers with peers on your local network ignore the limits above.';
+      case 'download_rate_limit_lan_included':
+        return 'Also applies within your local network.';
       default:
         return null;
     }
@@ -157623,6 +157809,12 @@ extension on _StringsNl {
         return 'Mix skipped';
       case 'game_line_audio_suppressed_hint':
         return 'No clean audio source produced audio for this line, and the system mix was skipped by your audio fallback policy. This does not mean the line has no voice.';
+      case 'video_setting_torrent_limit_lan':
+        return 'Apply limits to LAN peers';
+      case 'video_setting_torrent_limit_lan_hint':
+        return 'Off by default: transfers with peers on your local network ignore the limits above.';
+      case 'download_rate_limit_lan_included':
+        return 'Also applies within your local network.';
       default:
         return null;
     }
@@ -163172,6 +163364,12 @@ extension on _StringsPtBr {
         return 'Mix skipped';
       case 'game_line_audio_suppressed_hint':
         return 'No clean audio source produced audio for this line, and the system mix was skipped by your audio fallback policy. This does not mean the line has no voice.';
+      case 'video_setting_torrent_limit_lan':
+        return 'Apply limits to LAN peers';
+      case 'video_setting_torrent_limit_lan_hint':
+        return 'Off by default: transfers with peers on your local network ignore the limits above.';
+      case 'download_rate_limit_lan_included':
+        return 'Also applies within your local network.';
       default:
         return null;
     }
@@ -168726,6 +168924,12 @@ extension on _StringsRu {
         return 'Mix skipped';
       case 'game_line_audio_suppressed_hint':
         return 'No clean audio source produced audio for this line, and the system mix was skipped by your audio fallback policy. This does not mean the line has no voice.';
+      case 'video_setting_torrent_limit_lan':
+        return 'Apply limits to LAN peers';
+      case 'video_setting_torrent_limit_lan_hint':
+        return 'Off by default: transfers with peers on your local network ignore the limits above.';
+      case 'download_rate_limit_lan_included':
+        return 'Also applies within your local network.';
       default:
         return null;
     }
@@ -174264,6 +174468,12 @@ extension on _StringsTh {
         return 'Mix skipped';
       case 'game_line_audio_suppressed_hint':
         return 'No clean audio source produced audio for this line, and the system mix was skipped by your audio fallback policy. This does not mean the line has no voice.';
+      case 'video_setting_torrent_limit_lan':
+        return 'Apply limits to LAN peers';
+      case 'video_setting_torrent_limit_lan_hint':
+        return 'Off by default: transfers with peers on your local network ignore the limits above.';
+      case 'download_rate_limit_lan_included':
+        return 'Also applies within your local network.';
       default:
         return null;
     }
@@ -179811,6 +180021,12 @@ extension on _StringsTr {
         return 'Mix skipped';
       case 'game_line_audio_suppressed_hint':
         return 'No clean audio source produced audio for this line, and the system mix was skipped by your audio fallback policy. This does not mean the line has no voice.';
+      case 'video_setting_torrent_limit_lan':
+        return 'Apply limits to LAN peers';
+      case 'video_setting_torrent_limit_lan_hint':
+        return 'Off by default: transfers with peers on your local network ignore the limits above.';
+      case 'download_rate_limit_lan_included':
+        return 'Also applies within your local network.';
       default:
         return null;
     }
@@ -185353,6 +185569,12 @@ extension on _StringsVi {
         return 'Mix skipped';
       case 'game_line_audio_suppressed_hint':
         return 'No clean audio source produced audio for this line, and the system mix was skipped by your audio fallback policy. This does not mean the line has no voice.';
+      case 'video_setting_torrent_limit_lan':
+        return 'Apply limits to LAN peers';
+      case 'video_setting_torrent_limit_lan_hint':
+        return 'Off by default: transfers with peers on your local network ignore the limits above.';
+      case 'download_rate_limit_lan_included':
+        return 'Also applies within your local network.';
       default:
         return null;
     }
@@ -190849,6 +191071,12 @@ extension on _StringsZhCn {
         return '已跳过混音';
       case 'game_line_audio_suppressed_hint':
         return '本句没有干净音源可用，整机混音已按你选的降级策略跳过。这不代表这句没有配音。';
+      case 'video_setting_torrent_limit_lan':
+        return '限速也作用于局域网';
+      case 'video_setting_torrent_limit_lan_hint':
+        return '默认关闭：与局域网内 peer 的传输不受上面的限速约束。';
+      case 'download_rate_limit_lan_included':
+        return '同时作用于局域网内的传输。';
       default:
         return null;
     }
@@ -196365,6 +196593,12 @@ extension on _StringsZhHk {
         return 'Mix skipped';
       case 'game_line_audio_suppressed_hint':
         return 'No clean audio source produced audio for this line, and the system mix was skipped by your audio fallback policy. This does not mean the line has no voice.';
+      case 'video_setting_torrent_limit_lan':
+        return 'Apply limits to LAN peers';
+      case 'video_setting_torrent_limit_lan_hint':
+        return 'Off by default: transfers with peers on your local network ignore the limits above.';
+      case 'download_rate_limit_lan_included':
+        return 'Also applies within your local network.';
       default:
         return null;
     }
