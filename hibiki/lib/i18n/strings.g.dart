@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 46223 (2719 per locale)
+/// Strings: 46274 (2722 per locale)
 ///
-/// Built on 2026-07-28 at 09:05 UTC
+/// Built on 2026-07-28 at 10:31 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3653,6 +3653,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Subtitles: only ${done} of ${total} downloaded';
   String get anime_download_subs_episodes_unverified =>
       'Episode numbers are not verified against this pack - subtitles may come from another season.';
+  String get anime_download_subs_deferred =>
+      'Subtitles are matched after download, from the pack\'s actual files';
+  String get anime_download_subs_pending =>
+      'Subtitles: pending until download completes';
+  String get anime_download_subs_unmatched =>
+      'Subtitles: no match for this pack';
 }
 
 // Path: <root>
@@ -9873,6 +9879,15 @@ class _StringsAr extends _StringsEn {
   @override
   String get anime_download_subs_episodes_unverified =>
       'Episode numbers are not verified against this pack - subtitles may come from another season.';
+  @override
+  String get anime_download_subs_deferred =>
+      'Subtitles are matched after download, from the pack\'s actual files';
+  @override
+  String get anime_download_subs_pending =>
+      'Subtitles: pending until download completes';
+  @override
+  String get anime_download_subs_unmatched =>
+      'Subtitles: no match for this pack';
 }
 
 // Path: <root>
@@ -16161,6 +16176,15 @@ class _StringsDe extends _StringsEn {
   @override
   String get anime_download_subs_episodes_unverified =>
       'Episode numbers are not verified against this pack - subtitles may come from another season.';
+  @override
+  String get anime_download_subs_deferred =>
+      'Subtitles are matched after download, from the pack\'s actual files';
+  @override
+  String get anime_download_subs_pending =>
+      'Subtitles: pending until download completes';
+  @override
+  String get anime_download_subs_unmatched =>
+      'Subtitles: no match for this pack';
 }
 
 // Path: <root>
@@ -22465,6 +22489,15 @@ class _StringsEs extends _StringsEn {
   @override
   String get anime_download_subs_episodes_unverified =>
       'Episode numbers are not verified against this pack - subtitles may come from another season.';
+  @override
+  String get anime_download_subs_deferred =>
+      'Subtitles are matched after download, from the pack\'s actual files';
+  @override
+  String get anime_download_subs_pending =>
+      'Subtitles: pending until download completes';
+  @override
+  String get anime_download_subs_unmatched =>
+      'Subtitles: no match for this pack';
 }
 
 // Path: <root>
@@ -28780,6 +28813,15 @@ class _StringsFr extends _StringsEn {
   @override
   String get anime_download_subs_episodes_unverified =>
       'Episode numbers are not verified against this pack - subtitles may come from another season.';
+  @override
+  String get anime_download_subs_deferred =>
+      'Subtitles are matched after download, from the pack\'s actual files';
+  @override
+  String get anime_download_subs_pending =>
+      'Subtitles: pending until download completes';
+  @override
+  String get anime_download_subs_unmatched =>
+      'Subtitles: no match for this pack';
 }
 
 // Path: <root>
@@ -35024,6 +35066,15 @@ class _StringsId extends _StringsEn {
   @override
   String get anime_download_subs_episodes_unverified =>
       'Episode numbers are not verified against this pack - subtitles may come from another season.';
+  @override
+  String get anime_download_subs_deferred =>
+      'Subtitles are matched after download, from the pack\'s actual files';
+  @override
+  String get anime_download_subs_pending =>
+      'Subtitles: pending until download completes';
+  @override
+  String get anime_download_subs_unmatched =>
+      'Subtitles: no match for this pack';
 }
 
 // Path: <root>
@@ -41314,6 +41365,15 @@ class _StringsIt extends _StringsEn {
   @override
   String get anime_download_subs_episodes_unverified =>
       'Episode numbers are not verified against this pack - subtitles may come from another season.';
+  @override
+  String get anime_download_subs_deferred =>
+      'Subtitles are matched after download, from the pack\'s actual files';
+  @override
+  String get anime_download_subs_pending =>
+      'Subtitles: pending until download completes';
+  @override
+  String get anime_download_subs_unmatched =>
+      'Subtitles: no match for this pack';
 }
 
 // Path: <root>
@@ -47421,6 +47481,15 @@ class _StringsJa extends _StringsEn {
   @override
   String get anime_download_subs_episodes_unverified =>
       'Episode numbers are not verified against this pack - subtitles may come from another season.';
+  @override
+  String get anime_download_subs_deferred =>
+      'Subtitles are matched after download, from the pack\'s actual files';
+  @override
+  String get anime_download_subs_pending =>
+      'Subtitles: pending until download completes';
+  @override
+  String get anime_download_subs_unmatched =>
+      'Subtitles: no match for this pack';
 }
 
 // Path: <root>
@@ -53530,6 +53599,15 @@ class _StringsKo extends _StringsEn {
   @override
   String get anime_download_subs_episodes_unverified =>
       'Episode numbers are not verified against this pack - subtitles may come from another season.';
+  @override
+  String get anime_download_subs_deferred =>
+      'Subtitles are matched after download, from the pack\'s actual files';
+  @override
+  String get anime_download_subs_pending =>
+      'Subtitles: pending until download completes';
+  @override
+  String get anime_download_subs_unmatched =>
+      'Subtitles: no match for this pack';
 }
 
 // Path: <root>
@@ -59800,6 +59878,15 @@ class _StringsNl extends _StringsEn {
   @override
   String get anime_download_subs_episodes_unverified =>
       'Episode numbers are not verified against this pack - subtitles may come from another season.';
+  @override
+  String get anime_download_subs_deferred =>
+      'Subtitles are matched after download, from the pack\'s actual files';
+  @override
+  String get anime_download_subs_pending =>
+      'Subtitles: pending until download completes';
+  @override
+  String get anime_download_subs_unmatched =>
+      'Subtitles: no match for this pack';
 }
 
 // Path: <root>
@@ -66083,6 +66170,15 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get anime_download_subs_episodes_unverified =>
       'Episode numbers are not verified against this pack - subtitles may come from another season.';
+  @override
+  String get anime_download_subs_deferred =>
+      'Subtitles are matched after download, from the pack\'s actual files';
+  @override
+  String get anime_download_subs_pending =>
+      'Subtitles: pending until download completes';
+  @override
+  String get anime_download_subs_unmatched =>
+      'Subtitles: no match for this pack';
 }
 
 // Path: <root>
@@ -72350,6 +72446,15 @@ class _StringsRu extends _StringsEn {
   @override
   String get anime_download_subs_episodes_unverified =>
       'Episode numbers are not verified against this pack - subtitles may come from another season.';
+  @override
+  String get anime_download_subs_deferred =>
+      'Subtitles are matched after download, from the pack\'s actual files';
+  @override
+  String get anime_download_subs_pending =>
+      'Subtitles: pending until download completes';
+  @override
+  String get anime_download_subs_unmatched =>
+      'Subtitles: no match for this pack';
 }
 
 // Path: <root>
@@ -78565,6 +78670,15 @@ class _StringsTh extends _StringsEn {
   @override
   String get anime_download_subs_episodes_unverified =>
       'Episode numbers are not verified against this pack - subtitles may come from another season.';
+  @override
+  String get anime_download_subs_deferred =>
+      'Subtitles are matched after download, from the pack\'s actual files';
+  @override
+  String get anime_download_subs_pending =>
+      'Subtitles: pending until download completes';
+  @override
+  String get anime_download_subs_unmatched =>
+      'Subtitles: no match for this pack';
 }
 
 // Path: <root>
@@ -84812,6 +84926,15 @@ class _StringsTr extends _StringsEn {
   @override
   String get anime_download_subs_episodes_unverified =>
       'Episode numbers are not verified against this pack - subtitles may come from another season.';
+  @override
+  String get anime_download_subs_deferred =>
+      'Subtitles are matched after download, from the pack\'s actual files';
+  @override
+  String get anime_download_subs_pending =>
+      'Subtitles: pending until download completes';
+  @override
+  String get anime_download_subs_unmatched =>
+      'Subtitles: no match for this pack';
 }
 
 // Path: <root>
@@ -91044,6 +91167,15 @@ class _StringsVi extends _StringsEn {
   @override
   String get anime_download_subs_episodes_unverified =>
       'Episode numbers are not verified against this pack - subtitles may come from another season.';
+  @override
+  String get anime_download_subs_deferred =>
+      'Subtitles are matched after download, from the pack\'s actual files';
+  @override
+  String get anime_download_subs_pending =>
+      'Subtitles: pending until download completes';
+  @override
+  String get anime_download_subs_unmatched =>
+      'Subtitles: no match for this pack';
 }
 
 // Path: <root>
@@ -96838,6 +96970,12 @@ class _StringsZhCn extends _StringsEn {
       '字幕只成功下载 ${done}/${total} 条';
   @override
   String get anime_download_subs_episodes_unverified => '集号未与该整季包核对，字幕可能来自别的季。';
+  @override
+  String get anime_download_subs_deferred => '字幕将在下载完成后按包内实际文件配对';
+  @override
+  String get anime_download_subs_pending => '字幕：待下载完成后配对';
+  @override
+  String get anime_download_subs_unmatched => '字幕：未匹配到（可手动补）';
 }
 
 // Path: <root>
@@ -102866,6 +103004,15 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get anime_download_subs_episodes_unverified =>
       'Episode numbers are not verified against this pack - subtitles may come from another season.';
+  @override
+  String get anime_download_subs_deferred =>
+      'Subtitles are matched after download, from the pack\'s actual files';
+  @override
+  String get anime_download_subs_pending =>
+      'Subtitles: pending until download completes';
+  @override
+  String get anime_download_subs_unmatched =>
+      'Subtitles: no match for this pack';
 }
 
 /// Flat map(s) containing all translations.
@@ -108437,6 +108584,12 @@ extension on _StringsEn {
             'Subtitles: only ${done} of ${total} downloaded';
       case 'anime_download_subs_episodes_unverified':
         return 'Episode numbers are not verified against this pack - subtitles may come from another season.';
+      case 'anime_download_subs_deferred':
+        return 'Subtitles are matched after download, from the pack\'s actual files';
+      case 'anime_download_subs_pending':
+        return 'Subtitles: pending until download completes';
+      case 'anime_download_subs_unmatched':
+        return 'Subtitles: no match for this pack';
       default:
         return null;
     }
@@ -114006,6 +114159,12 @@ extension on _StringsAr {
             'Subtitles: only ${done} of ${total} downloaded';
       case 'anime_download_subs_episodes_unverified':
         return 'Episode numbers are not verified against this pack - subtitles may come from another season.';
+      case 'anime_download_subs_deferred':
+        return 'Subtitles are matched after download, from the pack\'s actual files';
+      case 'anime_download_subs_pending':
+        return 'Subtitles: pending until download completes';
+      case 'anime_download_subs_unmatched':
+        return 'Subtitles: no match for this pack';
       default:
         return null;
     }
@@ -119596,6 +119755,12 @@ extension on _StringsDe {
             'Subtitles: only ${done} of ${total} downloaded';
       case 'anime_download_subs_episodes_unverified':
         return 'Episode numbers are not verified against this pack - subtitles may come from another season.';
+      case 'anime_download_subs_deferred':
+        return 'Subtitles are matched after download, from the pack\'s actual files';
+      case 'anime_download_subs_pending':
+        return 'Subtitles: pending until download completes';
+      case 'anime_download_subs_unmatched':
+        return 'Subtitles: no match for this pack';
       default:
         return null;
     }
@@ -125185,6 +125350,12 @@ extension on _StringsEs {
             'Subtitles: only ${done} of ${total} downloaded';
       case 'anime_download_subs_episodes_unverified':
         return 'Episode numbers are not verified against this pack - subtitles may come from another season.';
+      case 'anime_download_subs_deferred':
+        return 'Subtitles are matched after download, from the pack\'s actual files';
+      case 'anime_download_subs_pending':
+        return 'Subtitles: pending until download completes';
+      case 'anime_download_subs_unmatched':
+        return 'Subtitles: no match for this pack';
       default:
         return null;
     }
@@ -130780,6 +130951,12 @@ extension on _StringsFr {
             'Subtitles: only ${done} of ${total} downloaded';
       case 'anime_download_subs_episodes_unverified':
         return 'Episode numbers are not verified against this pack - subtitles may come from another season.';
+      case 'anime_download_subs_deferred':
+        return 'Subtitles are matched after download, from the pack\'s actual files';
+      case 'anime_download_subs_pending':
+        return 'Subtitles: pending until download completes';
+      case 'anime_download_subs_unmatched':
+        return 'Subtitles: no match for this pack';
       default:
         return null;
     }
@@ -136357,6 +136534,12 @@ extension on _StringsId {
             'Subtitles: only ${done} of ${total} downloaded';
       case 'anime_download_subs_episodes_unverified':
         return 'Episode numbers are not verified against this pack - subtitles may come from another season.';
+      case 'anime_download_subs_deferred':
+        return 'Subtitles are matched after download, from the pack\'s actual files';
+      case 'anime_download_subs_pending':
+        return 'Subtitles: pending until download completes';
+      case 'anime_download_subs_unmatched':
+        return 'Subtitles: no match for this pack';
       default:
         return null;
     }
@@ -141949,6 +142132,12 @@ extension on _StringsIt {
             'Subtitles: only ${done} of ${total} downloaded';
       case 'anime_download_subs_episodes_unverified':
         return 'Episode numbers are not verified against this pack - subtitles may come from another season.';
+      case 'anime_download_subs_deferred':
+        return 'Subtitles are matched after download, from the pack\'s actual files';
+      case 'anime_download_subs_pending':
+        return 'Subtitles: pending until download completes';
+      case 'anime_download_subs_unmatched':
+        return 'Subtitles: no match for this pack';
       default:
         return null;
     }
@@ -147503,6 +147692,12 @@ extension on _StringsJa {
             'Subtitles: only ${done} of ${total} downloaded';
       case 'anime_download_subs_episodes_unverified':
         return 'Episode numbers are not verified against this pack - subtitles may come from another season.';
+      case 'anime_download_subs_deferred':
+        return 'Subtitles are matched after download, from the pack\'s actual files';
+      case 'anime_download_subs_pending':
+        return 'Subtitles: pending until download completes';
+      case 'anime_download_subs_unmatched':
+        return 'Subtitles: no match for this pack';
       default:
         return null;
     }
@@ -153061,6 +153256,12 @@ extension on _StringsKo {
             'Subtitles: only ${done} of ${total} downloaded';
       case 'anime_download_subs_episodes_unverified':
         return 'Episode numbers are not verified against this pack - subtitles may come from another season.';
+      case 'anime_download_subs_deferred':
+        return 'Subtitles are matched after download, from the pack\'s actual files';
+      case 'anime_download_subs_pending':
+        return 'Subtitles: pending until download completes';
+      case 'anime_download_subs_unmatched':
+        return 'Subtitles: no match for this pack';
       default:
         return null;
     }
@@ -158646,6 +158847,12 @@ extension on _StringsNl {
             'Subtitles: only ${done} of ${total} downloaded';
       case 'anime_download_subs_episodes_unverified':
         return 'Episode numbers are not verified against this pack - subtitles may come from another season.';
+      case 'anime_download_subs_deferred':
+        return 'Subtitles are matched after download, from the pack\'s actual files';
+      case 'anime_download_subs_pending':
+        return 'Subtitles: pending until download completes';
+      case 'anime_download_subs_unmatched':
+        return 'Subtitles: no match for this pack';
       default:
         return null;
     }
@@ -164228,6 +164435,12 @@ extension on _StringsPtBr {
             'Subtitles: only ${done} of ${total} downloaded';
       case 'anime_download_subs_episodes_unverified':
         return 'Episode numbers are not verified against this pack - subtitles may come from another season.';
+      case 'anime_download_subs_deferred':
+        return 'Subtitles are matched after download, from the pack\'s actual files';
+      case 'anime_download_subs_pending':
+        return 'Subtitles: pending until download completes';
+      case 'anime_download_subs_unmatched':
+        return 'Subtitles: no match for this pack';
       default:
         return null;
     }
@@ -169815,6 +170028,12 @@ extension on _StringsRu {
             'Subtitles: only ${done} of ${total} downloaded';
       case 'anime_download_subs_episodes_unverified':
         return 'Episode numbers are not verified against this pack - subtitles may come from another season.';
+      case 'anime_download_subs_deferred':
+        return 'Subtitles are matched after download, from the pack\'s actual files';
+      case 'anime_download_subs_pending':
+        return 'Subtitles: pending until download completes';
+      case 'anime_download_subs_unmatched':
+        return 'Subtitles: no match for this pack';
       default:
         return null;
     }
@@ -175386,6 +175605,12 @@ extension on _StringsTh {
             'Subtitles: only ${done} of ${total} downloaded';
       case 'anime_download_subs_episodes_unverified':
         return 'Episode numbers are not verified against this pack - subtitles may come from another season.';
+      case 'anime_download_subs_deferred':
+        return 'Subtitles are matched after download, from the pack\'s actual files';
+      case 'anime_download_subs_pending':
+        return 'Subtitles: pending until download completes';
+      case 'anime_download_subs_unmatched':
+        return 'Subtitles: no match for this pack';
       default:
         return null;
     }
@@ -180966,6 +181191,12 @@ extension on _StringsTr {
             'Subtitles: only ${done} of ${total} downloaded';
       case 'anime_download_subs_episodes_unverified':
         return 'Episode numbers are not verified against this pack - subtitles may come from another season.';
+      case 'anime_download_subs_deferred':
+        return 'Subtitles are matched after download, from the pack\'s actual files';
+      case 'anime_download_subs_pending':
+        return 'Subtitles: pending until download completes';
+      case 'anime_download_subs_unmatched':
+        return 'Subtitles: no match for this pack';
       default:
         return null;
     }
@@ -186541,6 +186772,12 @@ extension on _StringsVi {
             'Subtitles: only ${done} of ${total} downloaded';
       case 'anime_download_subs_episodes_unverified':
         return 'Episode numbers are not verified against this pack - subtitles may come from another season.';
+      case 'anime_download_subs_deferred':
+        return 'Subtitles are matched after download, from the pack\'s actual files';
+      case 'anime_download_subs_pending':
+        return 'Subtitles: pending until download completes';
+      case 'anime_download_subs_unmatched':
+        return 'Subtitles: no match for this pack';
       default:
         return null;
     }
@@ -192070,6 +192307,12 @@ extension on _StringsZhCn {
             '字幕只成功下载 ${done}/${total} 条';
       case 'anime_download_subs_episodes_unverified':
         return '集号未与该整季包核对，字幕可能来自别的季。';
+      case 'anime_download_subs_deferred':
+        return '字幕将在下载完成后按包内实际文件配对';
+      case 'anime_download_subs_pending':
+        return '字幕：待下载完成后配对';
+      case 'anime_download_subs_unmatched':
+        return '字幕：未匹配到（可手动补）';
       default:
         return null;
     }
@@ -197619,6 +197862,12 @@ extension on _StringsZhHk {
             'Subtitles: only ${done} of ${total} downloaded';
       case 'anime_download_subs_episodes_unverified':
         return 'Episode numbers are not verified against this pack - subtitles may come from another season.';
+      case 'anime_download_subs_deferred':
+        return 'Subtitles are matched after download, from the pack\'s actual files';
+      case 'anime_download_subs_pending':
+        return 'Subtitles: pending until download completes';
+      case 'anime_download_subs_unmatched':
+        return 'Subtitles: no match for this pack';
       default:
         return null;
     }
