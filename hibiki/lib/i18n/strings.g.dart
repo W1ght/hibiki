@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 46308 (2724 per locale)
+/// Strings: 46495 (2735 per locale)
 ///
-/// Built on 2026-07-28 at 12:37 UTC
+/// Built on 2026-07-28 at 14:53 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -1865,8 +1865,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get media_tracking_account => 'Bangumi account';
   String get media_tracking_add_mapping => 'Add mapping';
   String get media_tracking_anime => 'Anime';
-  String get media_tracking_bookmeter_note =>
-      'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
   String get media_tracking_chapter => 'Chapter';
   String get media_tracking_connect => 'Connect and verify';
   String get media_tracking_connected_as => 'Connected account';
@@ -3660,6 +3658,22 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String stat_format_pages({required Object n}) => '${n} pages';
   String anime_download_subs_season_mismatch({required Object season}) =>
       'No subtitle entry matches season ${season} of this pack - not auto-selected. Pick one manually if you want it anyway.';
+  String get media_tracking_card_title => 'Bangumi sync';
+  String get media_tracking_not_connected =>
+      'Not connected. Progress stays local and nothing reaches Bangumi.';
+  String get media_tracking_last_sync => 'Last sync';
+  String get media_tracking_never_synced => 'Never synced';
+  String media_tracking_linked_count({required Object n}) => '${n} linked';
+  String media_tracking_pending_count({required Object n}) =>
+      '${n} waiting to send';
+  String get media_tracking_all_synced => 'Everything sent';
+  String get media_tracking_unauthorized =>
+      'Bangumi rejected the access token. Reconnect it in settings.';
+  String get media_tracking_unlinked_hint =>
+      'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
+  String get media_tracking_open_subject => 'Open on Bangumi';
+  String get media_tracking_manage_links => 'Manage links';
+  String get media_tracking_last_error => 'Last error';
 }
 
 // Path: <root>
@@ -6665,9 +6679,6 @@ class _StringsAr extends _StringsEn {
   String get media_tracking_add_mapping => 'Add mapping';
   @override
   String get media_tracking_anime => 'Anime';
-  @override
-  String get media_tracking_bookmeter_note =>
-      'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
   @override
   String get media_tracking_chapter => 'Chapter';
   @override
@@ -9892,6 +9903,34 @@ class _StringsAr extends _StringsEn {
   @override
   String anime_download_subs_season_mismatch({required Object season}) =>
       'No subtitle entry matches season ${season} of this pack - not auto-selected. Pick one manually if you want it anyway.';
+  @override
+  String get media_tracking_card_title => 'Bangumi sync';
+  @override
+  String get media_tracking_not_connected =>
+      'Not connected. Progress stays local and nothing reaches Bangumi.';
+  @override
+  String get media_tracking_last_sync => 'Last sync';
+  @override
+  String get media_tracking_never_synced => 'Never synced';
+  @override
+  String media_tracking_linked_count({required Object n}) => '${n} linked';
+  @override
+  String media_tracking_pending_count({required Object n}) =>
+      '${n} waiting to send';
+  @override
+  String get media_tracking_all_synced => 'Everything sent';
+  @override
+  String get media_tracking_unauthorized =>
+      'Bangumi rejected the access token. Reconnect it in settings.';
+  @override
+  String get media_tracking_unlinked_hint =>
+      'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
+  @override
+  String get media_tracking_open_subject => 'Open on Bangumi';
+  @override
+  String get media_tracking_manage_links => 'Manage links';
+  @override
+  String get media_tracking_last_error => 'Last error';
 }
 
 // Path: <root>
@@ -12926,9 +12965,6 @@ class _StringsDe extends _StringsEn {
   String get media_tracking_add_mapping => 'Add mapping';
   @override
   String get media_tracking_anime => 'Anime';
-  @override
-  String get media_tracking_bookmeter_note =>
-      'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
   @override
   String get media_tracking_chapter => 'Chapter';
   @override
@@ -16192,6 +16228,34 @@ class _StringsDe extends _StringsEn {
   @override
   String anime_download_subs_season_mismatch({required Object season}) =>
       'No subtitle entry matches season ${season} of this pack - not auto-selected. Pick one manually if you want it anyway.';
+  @override
+  String get media_tracking_card_title => 'Bangumi sync';
+  @override
+  String get media_tracking_not_connected =>
+      'Not connected. Progress stays local and nothing reaches Bangumi.';
+  @override
+  String get media_tracking_last_sync => 'Last sync';
+  @override
+  String get media_tracking_never_synced => 'Never synced';
+  @override
+  String media_tracking_linked_count({required Object n}) => '${n} linked';
+  @override
+  String media_tracking_pending_count({required Object n}) =>
+      '${n} waiting to send';
+  @override
+  String get media_tracking_all_synced => 'Everything sent';
+  @override
+  String get media_tracking_unauthorized =>
+      'Bangumi rejected the access token. Reconnect it in settings.';
+  @override
+  String get media_tracking_unlinked_hint =>
+      'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
+  @override
+  String get media_tracking_open_subject => 'Open on Bangumi';
+  @override
+  String get media_tracking_manage_links => 'Manage links';
+  @override
+  String get media_tracking_last_error => 'Last error';
 }
 
 // Path: <root>
@@ -19230,9 +19294,6 @@ class _StringsEs extends _StringsEn {
   String get media_tracking_add_mapping => 'Add mapping';
   @override
   String get media_tracking_anime => 'Anime';
-  @override
-  String get media_tracking_bookmeter_note =>
-      'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
   @override
   String get media_tracking_chapter => 'Chapter';
   @override
@@ -22508,6 +22569,34 @@ class _StringsEs extends _StringsEn {
   @override
   String anime_download_subs_season_mismatch({required Object season}) =>
       'No subtitle entry matches season ${season} of this pack - not auto-selected. Pick one manually if you want it anyway.';
+  @override
+  String get media_tracking_card_title => 'Bangumi sync';
+  @override
+  String get media_tracking_not_connected =>
+      'Not connected. Progress stays local and nothing reaches Bangumi.';
+  @override
+  String get media_tracking_last_sync => 'Last sync';
+  @override
+  String get media_tracking_never_synced => 'Never synced';
+  @override
+  String media_tracking_linked_count({required Object n}) => '${n} linked';
+  @override
+  String media_tracking_pending_count({required Object n}) =>
+      '${n} waiting to send';
+  @override
+  String get media_tracking_all_synced => 'Everything sent';
+  @override
+  String get media_tracking_unauthorized =>
+      'Bangumi rejected the access token. Reconnect it in settings.';
+  @override
+  String get media_tracking_unlinked_hint =>
+      'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
+  @override
+  String get media_tracking_open_subject => 'Open on Bangumi';
+  @override
+  String get media_tracking_manage_links => 'Manage links';
+  @override
+  String get media_tracking_last_error => 'Last error';
 }
 
 // Path: <root>
@@ -25553,9 +25642,6 @@ class _StringsFr extends _StringsEn {
   String get media_tracking_add_mapping => 'Add mapping';
   @override
   String get media_tracking_anime => 'Anime';
-  @override
-  String get media_tracking_bookmeter_note =>
-      'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
   @override
   String get media_tracking_chapter => 'Chapter';
   @override
@@ -28835,6 +28921,34 @@ class _StringsFr extends _StringsEn {
   @override
   String anime_download_subs_season_mismatch({required Object season}) =>
       'No subtitle entry matches season ${season} of this pack - not auto-selected. Pick one manually if you want it anyway.';
+  @override
+  String get media_tracking_card_title => 'Bangumi sync';
+  @override
+  String get media_tracking_not_connected =>
+      'Not connected. Progress stays local and nothing reaches Bangumi.';
+  @override
+  String get media_tracking_last_sync => 'Last sync';
+  @override
+  String get media_tracking_never_synced => 'Never synced';
+  @override
+  String media_tracking_linked_count({required Object n}) => '${n} linked';
+  @override
+  String media_tracking_pending_count({required Object n}) =>
+      '${n} waiting to send';
+  @override
+  String get media_tracking_all_synced => 'Everything sent';
+  @override
+  String get media_tracking_unauthorized =>
+      'Bangumi rejected the access token. Reconnect it in settings.';
+  @override
+  String get media_tracking_unlinked_hint =>
+      'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
+  @override
+  String get media_tracking_open_subject => 'Open on Bangumi';
+  @override
+  String get media_tracking_manage_links => 'Manage links';
+  @override
+  String get media_tracking_last_error => 'Last error';
 }
 
 // Path: <root>
@@ -31843,9 +31957,6 @@ class _StringsId extends _StringsEn {
   String get media_tracking_add_mapping => 'Add mapping';
   @override
   String get media_tracking_anime => 'Anime';
-  @override
-  String get media_tracking_bookmeter_note =>
-      'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
   @override
   String get media_tracking_chapter => 'Chapter';
   @override
@@ -35091,6 +35202,34 @@ class _StringsId extends _StringsEn {
   @override
   String anime_download_subs_season_mismatch({required Object season}) =>
       'No subtitle entry matches season ${season} of this pack - not auto-selected. Pick one manually if you want it anyway.';
+  @override
+  String get media_tracking_card_title => 'Bangumi sync';
+  @override
+  String get media_tracking_not_connected =>
+      'Not connected. Progress stays local and nothing reaches Bangumi.';
+  @override
+  String get media_tracking_last_sync => 'Last sync';
+  @override
+  String get media_tracking_never_synced => 'Never synced';
+  @override
+  String media_tracking_linked_count({required Object n}) => '${n} linked';
+  @override
+  String media_tracking_pending_count({required Object n}) =>
+      '${n} waiting to send';
+  @override
+  String get media_tracking_all_synced => 'Everything sent';
+  @override
+  String get media_tracking_unauthorized =>
+      'Bangumi rejected the access token. Reconnect it in settings.';
+  @override
+  String get media_tracking_unlinked_hint =>
+      'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
+  @override
+  String get media_tracking_open_subject => 'Open on Bangumi';
+  @override
+  String get media_tracking_manage_links => 'Manage links';
+  @override
+  String get media_tracking_last_error => 'Last error';
 }
 
 // Path: <root>
@@ -38122,9 +38261,6 @@ class _StringsIt extends _StringsEn {
   String get media_tracking_add_mapping => 'Add mapping';
   @override
   String get media_tracking_anime => 'Anime';
-  @override
-  String get media_tracking_bookmeter_note =>
-      'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
   @override
   String get media_tracking_chapter => 'Chapter';
   @override
@@ -41393,6 +41529,34 @@ class _StringsIt extends _StringsEn {
   @override
   String anime_download_subs_season_mismatch({required Object season}) =>
       'No subtitle entry matches season ${season} of this pack - not auto-selected. Pick one manually if you want it anyway.';
+  @override
+  String get media_tracking_card_title => 'Bangumi sync';
+  @override
+  String get media_tracking_not_connected =>
+      'Not connected. Progress stays local and nothing reaches Bangumi.';
+  @override
+  String get media_tracking_last_sync => 'Last sync';
+  @override
+  String get media_tracking_never_synced => 'Never synced';
+  @override
+  String media_tracking_linked_count({required Object n}) => '${n} linked';
+  @override
+  String media_tracking_pending_count({required Object n}) =>
+      '${n} waiting to send';
+  @override
+  String get media_tracking_all_synced => 'Everything sent';
+  @override
+  String get media_tracking_unauthorized =>
+      'Bangumi rejected the access token. Reconnect it in settings.';
+  @override
+  String get media_tracking_unlinked_hint =>
+      'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
+  @override
+  String get media_tracking_open_subject => 'Open on Bangumi';
+  @override
+  String get media_tracking_manage_links => 'Manage links';
+  @override
+  String get media_tracking_last_error => 'Last error';
 }
 
 // Path: <root>
@@ -44355,9 +44519,6 @@ class _StringsJa extends _StringsEn {
   String get media_tracking_add_mapping => 'Add mapping';
   @override
   String get media_tracking_anime => 'Anime';
-  @override
-  String get media_tracking_bookmeter_note =>
-      'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
   @override
   String get media_tracking_chapter => 'Chapter';
   @override
@@ -47512,6 +47673,34 @@ class _StringsJa extends _StringsEn {
   @override
   String anime_download_subs_season_mismatch({required Object season}) =>
       'No subtitle entry matches season ${season} of this pack - not auto-selected. Pick one manually if you want it anyway.';
+  @override
+  String get media_tracking_card_title => 'Bangumi sync';
+  @override
+  String get media_tracking_not_connected =>
+      'Not connected. Progress stays local and nothing reaches Bangumi.';
+  @override
+  String get media_tracking_last_sync => 'Last sync';
+  @override
+  String get media_tracking_never_synced => 'Never synced';
+  @override
+  String media_tracking_linked_count({required Object n}) => '${n} linked';
+  @override
+  String media_tracking_pending_count({required Object n}) =>
+      '${n} waiting to send';
+  @override
+  String get media_tracking_all_synced => 'Everything sent';
+  @override
+  String get media_tracking_unauthorized =>
+      'Bangumi rejected the access token. Reconnect it in settings.';
+  @override
+  String get media_tracking_unlinked_hint =>
+      'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
+  @override
+  String get media_tracking_open_subject => 'Open on Bangumi';
+  @override
+  String get media_tracking_manage_links => 'Manage links';
+  @override
+  String get media_tracking_last_error => 'Last error';
 }
 
 // Path: <root>
@@ -50475,9 +50664,6 @@ class _StringsKo extends _StringsEn {
   String get media_tracking_add_mapping => 'Add mapping';
   @override
   String get media_tracking_anime => 'Anime';
-  @override
-  String get media_tracking_bookmeter_note =>
-      'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
   @override
   String get media_tracking_chapter => 'Chapter';
   @override
@@ -53633,6 +53819,34 @@ class _StringsKo extends _StringsEn {
   @override
   String anime_download_subs_season_mismatch({required Object season}) =>
       'No subtitle entry matches season ${season} of this pack - not auto-selected. Pick one manually if you want it anyway.';
+  @override
+  String get media_tracking_card_title => 'Bangumi sync';
+  @override
+  String get media_tracking_not_connected =>
+      'Not connected. Progress stays local and nothing reaches Bangumi.';
+  @override
+  String get media_tracking_last_sync => 'Last sync';
+  @override
+  String get media_tracking_never_synced => 'Never synced';
+  @override
+  String media_tracking_linked_count({required Object n}) => '${n} linked';
+  @override
+  String media_tracking_pending_count({required Object n}) =>
+      '${n} waiting to send';
+  @override
+  String get media_tracking_all_synced => 'Everything sent';
+  @override
+  String get media_tracking_unauthorized =>
+      'Bangumi rejected the access token. Reconnect it in settings.';
+  @override
+  String get media_tracking_unlinked_hint =>
+      'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
+  @override
+  String get media_tracking_open_subject => 'Open on Bangumi';
+  @override
+  String get media_tracking_manage_links => 'Manage links';
+  @override
+  String get media_tracking_last_error => 'Last error';
 }
 
 // Path: <root>
@@ -56655,9 +56869,6 @@ class _StringsNl extends _StringsEn {
   String get media_tracking_add_mapping => 'Add mapping';
   @override
   String get media_tracking_anime => 'Anime';
-  @override
-  String get media_tracking_bookmeter_note =>
-      'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
   @override
   String get media_tracking_chapter => 'Chapter';
   @override
@@ -59915,6 +60126,34 @@ class _StringsNl extends _StringsEn {
   @override
   String anime_download_subs_season_mismatch({required Object season}) =>
       'No subtitle entry matches season ${season} of this pack - not auto-selected. Pick one manually if you want it anyway.';
+  @override
+  String get media_tracking_card_title => 'Bangumi sync';
+  @override
+  String get media_tracking_not_connected =>
+      'Not connected. Progress stays local and nothing reaches Bangumi.';
+  @override
+  String get media_tracking_last_sync => 'Last sync';
+  @override
+  String get media_tracking_never_synced => 'Never synced';
+  @override
+  String media_tracking_linked_count({required Object n}) => '${n} linked';
+  @override
+  String media_tracking_pending_count({required Object n}) =>
+      '${n} waiting to send';
+  @override
+  String get media_tracking_all_synced => 'Everything sent';
+  @override
+  String get media_tracking_unauthorized =>
+      'Bangumi rejected the access token. Reconnect it in settings.';
+  @override
+  String get media_tracking_unlinked_hint =>
+      'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
+  @override
+  String get media_tracking_open_subject => 'Open on Bangumi';
+  @override
+  String get media_tracking_manage_links => 'Manage links';
+  @override
+  String get media_tracking_last_error => 'Last error';
 }
 
 // Path: <root>
@@ -62948,9 +63187,6 @@ class _StringsPtBr extends _StringsEn {
   String get media_tracking_add_mapping => 'Add mapping';
   @override
   String get media_tracking_anime => 'Anime';
-  @override
-  String get media_tracking_bookmeter_note =>
-      'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
   @override
   String get media_tracking_chapter => 'Chapter';
   @override
@@ -66210,6 +66446,34 @@ class _StringsPtBr extends _StringsEn {
   @override
   String anime_download_subs_season_mismatch({required Object season}) =>
       'No subtitle entry matches season ${season} of this pack - not auto-selected. Pick one manually if you want it anyway.';
+  @override
+  String get media_tracking_card_title => 'Bangumi sync';
+  @override
+  String get media_tracking_not_connected =>
+      'Not connected. Progress stays local and nothing reaches Bangumi.';
+  @override
+  String get media_tracking_last_sync => 'Last sync';
+  @override
+  String get media_tracking_never_synced => 'Never synced';
+  @override
+  String media_tracking_linked_count({required Object n}) => '${n} linked';
+  @override
+  String media_tracking_pending_count({required Object n}) =>
+      '${n} waiting to send';
+  @override
+  String get media_tracking_all_synced => 'Everything sent';
+  @override
+  String get media_tracking_unauthorized =>
+      'Bangumi rejected the access token. Reconnect it in settings.';
+  @override
+  String get media_tracking_unlinked_hint =>
+      'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
+  @override
+  String get media_tracking_open_subject => 'Open on Bangumi';
+  @override
+  String get media_tracking_manage_links => 'Manage links';
+  @override
+  String get media_tracking_last_error => 'Last error';
 }
 
 // Path: <root>
@@ -69234,9 +69498,6 @@ class _StringsRu extends _StringsEn {
   String get media_tracking_add_mapping => 'Add mapping';
   @override
   String get media_tracking_anime => 'Anime';
-  @override
-  String get media_tracking_bookmeter_note =>
-      'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
   @override
   String get media_tracking_chapter => 'Chapter';
   @override
@@ -72489,6 +72750,34 @@ class _StringsRu extends _StringsEn {
   @override
   String anime_download_subs_season_mismatch({required Object season}) =>
       'No subtitle entry matches season ${season} of this pack - not auto-selected. Pick one manually if you want it anyway.';
+  @override
+  String get media_tracking_card_title => 'Bangumi sync';
+  @override
+  String get media_tracking_not_connected =>
+      'Not connected. Progress stays local and nothing reaches Bangumi.';
+  @override
+  String get media_tracking_last_sync => 'Last sync';
+  @override
+  String get media_tracking_never_synced => 'Never synced';
+  @override
+  String media_tracking_linked_count({required Object n}) => '${n} linked';
+  @override
+  String media_tracking_pending_count({required Object n}) =>
+      '${n} waiting to send';
+  @override
+  String get media_tracking_all_synced => 'Everything sent';
+  @override
+  String get media_tracking_unauthorized =>
+      'Bangumi rejected the access token. Reconnect it in settings.';
+  @override
+  String get media_tracking_unlinked_hint =>
+      'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
+  @override
+  String get media_tracking_open_subject => 'Open on Bangumi';
+  @override
+  String get media_tracking_manage_links => 'Manage links';
+  @override
+  String get media_tracking_last_error => 'Last error';
 }
 
 // Path: <root>
@@ -75487,9 +75776,6 @@ class _StringsTh extends _StringsEn {
   String get media_tracking_add_mapping => 'Add mapping';
   @override
   String get media_tracking_anime => 'Anime';
-  @override
-  String get media_tracking_bookmeter_note =>
-      'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
   @override
   String get media_tracking_chapter => 'Chapter';
   @override
@@ -78716,6 +79002,34 @@ class _StringsTh extends _StringsEn {
   @override
   String anime_download_subs_season_mismatch({required Object season}) =>
       'No subtitle entry matches season ${season} of this pack - not auto-selected. Pick one manually if you want it anyway.';
+  @override
+  String get media_tracking_card_title => 'Bangumi sync';
+  @override
+  String get media_tracking_not_connected =>
+      'Not connected. Progress stays local and nothing reaches Bangumi.';
+  @override
+  String get media_tracking_last_sync => 'Last sync';
+  @override
+  String get media_tracking_never_synced => 'Never synced';
+  @override
+  String media_tracking_linked_count({required Object n}) => '${n} linked';
+  @override
+  String media_tracking_pending_count({required Object n}) =>
+      '${n} waiting to send';
+  @override
+  String get media_tracking_all_synced => 'Everything sent';
+  @override
+  String get media_tracking_unauthorized =>
+      'Bangumi rejected the access token. Reconnect it in settings.';
+  @override
+  String get media_tracking_unlinked_hint =>
+      'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
+  @override
+  String get media_tracking_open_subject => 'Open on Bangumi';
+  @override
+  String get media_tracking_manage_links => 'Manage links';
+  @override
+  String get media_tracking_last_error => 'Last error';
 }
 
 // Path: <root>
@@ -81733,9 +82047,6 @@ class _StringsTr extends _StringsEn {
   String get media_tracking_add_mapping => 'Add mapping';
   @override
   String get media_tracking_anime => 'Anime';
-  @override
-  String get media_tracking_bookmeter_note =>
-      'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
   @override
   String get media_tracking_chapter => 'Chapter';
   @override
@@ -84975,6 +85286,34 @@ class _StringsTr extends _StringsEn {
   @override
   String anime_download_subs_season_mismatch({required Object season}) =>
       'No subtitle entry matches season ${season} of this pack - not auto-selected. Pick one manually if you want it anyway.';
+  @override
+  String get media_tracking_card_title => 'Bangumi sync';
+  @override
+  String get media_tracking_not_connected =>
+      'Not connected. Progress stays local and nothing reaches Bangumi.';
+  @override
+  String get media_tracking_last_sync => 'Last sync';
+  @override
+  String get media_tracking_never_synced => 'Never synced';
+  @override
+  String media_tracking_linked_count({required Object n}) => '${n} linked';
+  @override
+  String media_tracking_pending_count({required Object n}) =>
+      '${n} waiting to send';
+  @override
+  String get media_tracking_all_synced => 'Everything sent';
+  @override
+  String get media_tracking_unauthorized =>
+      'Bangumi rejected the access token. Reconnect it in settings.';
+  @override
+  String get media_tracking_unlinked_hint =>
+      'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
+  @override
+  String get media_tracking_open_subject => 'Open on Bangumi';
+  @override
+  String get media_tracking_manage_links => 'Manage links';
+  @override
+  String get media_tracking_last_error => 'Last error';
 }
 
 // Path: <root>
@@ -87985,9 +88324,6 @@ class _StringsVi extends _StringsEn {
   String get media_tracking_add_mapping => 'Add mapping';
   @override
   String get media_tracking_anime => 'Anime';
-  @override
-  String get media_tracking_bookmeter_note =>
-      'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
   @override
   String get media_tracking_chapter => 'Chapter';
   @override
@@ -91219,6 +91555,34 @@ class _StringsVi extends _StringsEn {
   @override
   String anime_download_subs_season_mismatch({required Object season}) =>
       'No subtitle entry matches season ${season} of this pack - not auto-selected. Pick one manually if you want it anyway.';
+  @override
+  String get media_tracking_card_title => 'Bangumi sync';
+  @override
+  String get media_tracking_not_connected =>
+      'Not connected. Progress stays local and nothing reaches Bangumi.';
+  @override
+  String get media_tracking_last_sync => 'Last sync';
+  @override
+  String get media_tracking_never_synced => 'Never synced';
+  @override
+  String media_tracking_linked_count({required Object n}) => '${n} linked';
+  @override
+  String media_tracking_pending_count({required Object n}) =>
+      '${n} waiting to send';
+  @override
+  String get media_tracking_all_synced => 'Everything sent';
+  @override
+  String get media_tracking_unauthorized =>
+      'Bangumi rejected the access token. Reconnect it in settings.';
+  @override
+  String get media_tracking_unlinked_hint =>
+      'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
+  @override
+  String get media_tracking_open_subject => 'Open on Bangumi';
+  @override
+  String get media_tracking_manage_links => 'Manage links';
+  @override
+  String get media_tracking_last_error => 'Last error';
 }
 
 // Path: <root>
@@ -94019,9 +94383,6 @@ class _StringsZhCn extends _StringsEn {
   String get media_tracking_add_mapping => '添加映射';
   @override
   String get media_tracking_anime => '番剧';
-  @override
-  String get media_tracking_bookmeter_note =>
-      '读书 Meter 未公开个人写入 API，因此仅参考其进度交互，不进行网页抓取。';
   @override
   String get media_tracking_chapter => '话';
   @override
@@ -97023,6 +97384,31 @@ class _StringsZhCn extends _StringsEn {
   @override
   String anime_download_subs_season_mismatch({required Object season}) =>
       '没有字幕条目对得上该种子的第 ${season} 季，已不自动选中。要用的话请手动选一条。';
+  @override
+  String get media_tracking_card_title => 'Bangumi 同步';
+  @override
+  String get media_tracking_not_connected => '未连接。进度只记在本地，不会同步到 Bangumi。';
+  @override
+  String get media_tracking_last_sync => '上次同步';
+  @override
+  String get media_tracking_never_synced => '从未同步';
+  @override
+  String media_tracking_linked_count({required Object n}) => '已关联 ${n} 项';
+  @override
+  String media_tracking_pending_count({required Object n}) => '${n} 项待发送';
+  @override
+  String get media_tracking_all_synced => '全部已发送';
+  @override
+  String get media_tracking_unauthorized => 'Bangumi 拒绝了访问令牌，请在设置里重新连接。';
+  @override
+  String get media_tracking_unlinked_hint =>
+      '还没有任何条目关联到 Bangumi 条目，所以看完/读完在那边不会有任何变化。自动匹配只在标题唯一命中时才建立关联，其余需要手动关联。';
+  @override
+  String get media_tracking_open_subject => '在 Bangumi 打开';
+  @override
+  String get media_tracking_manage_links => '管理关联';
+  @override
+  String get media_tracking_last_error => '上次错误';
 }
 
 // Path: <root>
@@ -99952,9 +100338,6 @@ class _StringsZhHk extends _StringsEn {
   String get media_tracking_add_mapping => 'Add mapping';
   @override
   String get media_tracking_anime => 'Anime';
-  @override
-  String get media_tracking_bookmeter_note =>
-      'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
   @override
   String get media_tracking_chapter => 'Chapter';
   @override
@@ -103063,6 +103446,34 @@ class _StringsZhHk extends _StringsEn {
   @override
   String anime_download_subs_season_mismatch({required Object season}) =>
       'No subtitle entry matches season ${season} of this pack - not auto-selected. Pick one manually if you want it anyway.';
+  @override
+  String get media_tracking_card_title => 'Bangumi sync';
+  @override
+  String get media_tracking_not_connected =>
+      'Not connected. Progress stays local and nothing reaches Bangumi.';
+  @override
+  String get media_tracking_last_sync => 'Last sync';
+  @override
+  String get media_tracking_never_synced => 'Never synced';
+  @override
+  String media_tracking_linked_count({required Object n}) => '${n} linked';
+  @override
+  String media_tracking_pending_count({required Object n}) =>
+      '${n} waiting to send';
+  @override
+  String get media_tracking_all_synced => 'Everything sent';
+  @override
+  String get media_tracking_unauthorized =>
+      'Bangumi rejected the access token. Reconnect it in settings.';
+  @override
+  String get media_tracking_unlinked_hint =>
+      'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
+  @override
+  String get media_tracking_open_subject => 'Open on Bangumi';
+  @override
+  String get media_tracking_manage_links => 'Manage links';
+  @override
+  String get media_tracking_last_error => 'Last error';
 }
 
 /// Flat map(s) containing all translations.
@@ -105730,8 +106141,6 @@ extension on _StringsEn {
         return 'Add mapping';
       case 'media_tracking_anime':
         return 'Anime';
-      case 'media_tracking_bookmeter_note':
-        return 'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
       case 'media_tracking_chapter':
         return 'Chapter';
       case 'media_tracking_connect':
@@ -108644,6 +109053,30 @@ extension on _StringsEn {
       case 'anime_download_subs_season_mismatch':
         return ({required Object season}) =>
             'No subtitle entry matches season ${season} of this pack - not auto-selected. Pick one manually if you want it anyway.';
+      case 'media_tracking_card_title':
+        return 'Bangumi sync';
+      case 'media_tracking_not_connected':
+        return 'Not connected. Progress stays local and nothing reaches Bangumi.';
+      case 'media_tracking_last_sync':
+        return 'Last sync';
+      case 'media_tracking_never_synced':
+        return 'Never synced';
+      case 'media_tracking_linked_count':
+        return ({required Object n}) => '${n} linked';
+      case 'media_tracking_pending_count':
+        return ({required Object n}) => '${n} waiting to send';
+      case 'media_tracking_all_synced':
+        return 'Everything sent';
+      case 'media_tracking_unauthorized':
+        return 'Bangumi rejected the access token. Reconnect it in settings.';
+      case 'media_tracking_unlinked_hint':
+        return 'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
+      case 'media_tracking_open_subject':
+        return 'Open on Bangumi';
+      case 'media_tracking_manage_links':
+        return 'Manage links';
+      case 'media_tracking_last_error':
+        return 'Last error';
       default:
         return null;
     }
@@ -111311,8 +111744,6 @@ extension on _StringsAr {
         return 'Add mapping';
       case 'media_tracking_anime':
         return 'Anime';
-      case 'media_tracking_bookmeter_note':
-        return 'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
       case 'media_tracking_chapter':
         return 'Chapter';
       case 'media_tracking_connect':
@@ -114223,6 +114654,30 @@ extension on _StringsAr {
       case 'anime_download_subs_season_mismatch':
         return ({required Object season}) =>
             'No subtitle entry matches season ${season} of this pack - not auto-selected. Pick one manually if you want it anyway.';
+      case 'media_tracking_card_title':
+        return 'Bangumi sync';
+      case 'media_tracking_not_connected':
+        return 'Not connected. Progress stays local and nothing reaches Bangumi.';
+      case 'media_tracking_last_sync':
+        return 'Last sync';
+      case 'media_tracking_never_synced':
+        return 'Never synced';
+      case 'media_tracking_linked_count':
+        return ({required Object n}) => '${n} linked';
+      case 'media_tracking_pending_count':
+        return ({required Object n}) => '${n} waiting to send';
+      case 'media_tracking_all_synced':
+        return 'Everything sent';
+      case 'media_tracking_unauthorized':
+        return 'Bangumi rejected the access token. Reconnect it in settings.';
+      case 'media_tracking_unlinked_hint':
+        return 'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
+      case 'media_tracking_open_subject':
+        return 'Open on Bangumi';
+      case 'media_tracking_manage_links':
+        return 'Manage links';
+      case 'media_tracking_last_error':
+        return 'Last error';
       default:
         return null;
     }
@@ -116897,8 +117352,6 @@ extension on _StringsDe {
         return 'Add mapping';
       case 'media_tracking_anime':
         return 'Anime';
-      case 'media_tracking_bookmeter_note':
-        return 'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
       case 'media_tracking_chapter':
         return 'Chapter';
       case 'media_tracking_connect':
@@ -119823,6 +120276,30 @@ extension on _StringsDe {
       case 'anime_download_subs_season_mismatch':
         return ({required Object season}) =>
             'No subtitle entry matches season ${season} of this pack - not auto-selected. Pick one manually if you want it anyway.';
+      case 'media_tracking_card_title':
+        return 'Bangumi sync';
+      case 'media_tracking_not_connected':
+        return 'Not connected. Progress stays local and nothing reaches Bangumi.';
+      case 'media_tracking_last_sync':
+        return 'Last sync';
+      case 'media_tracking_never_synced':
+        return 'Never synced';
+      case 'media_tracking_linked_count':
+        return ({required Object n}) => '${n} linked';
+      case 'media_tracking_pending_count':
+        return ({required Object n}) => '${n} waiting to send';
+      case 'media_tracking_all_synced':
+        return 'Everything sent';
+      case 'media_tracking_unauthorized':
+        return 'Bangumi rejected the access token. Reconnect it in settings.';
+      case 'media_tracking_unlinked_hint':
+        return 'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
+      case 'media_tracking_open_subject':
+        return 'Open on Bangumi';
+      case 'media_tracking_manage_links':
+        return 'Manage links';
+      case 'media_tracking_last_error':
+        return 'Last error';
       default:
         return null;
     }
@@ -122497,8 +122974,6 @@ extension on _StringsEs {
         return 'Add mapping';
       case 'media_tracking_anime':
         return 'Anime';
-      case 'media_tracking_bookmeter_note':
-        return 'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
       case 'media_tracking_chapter':
         return 'Chapter';
       case 'media_tracking_connect':
@@ -125422,6 +125897,30 @@ extension on _StringsEs {
       case 'anime_download_subs_season_mismatch':
         return ({required Object season}) =>
             'No subtitle entry matches season ${season} of this pack - not auto-selected. Pick one manually if you want it anyway.';
+      case 'media_tracking_card_title':
+        return 'Bangumi sync';
+      case 'media_tracking_not_connected':
+        return 'Not connected. Progress stays local and nothing reaches Bangumi.';
+      case 'media_tracking_last_sync':
+        return 'Last sync';
+      case 'media_tracking_never_synced':
+        return 'Never synced';
+      case 'media_tracking_linked_count':
+        return ({required Object n}) => '${n} linked';
+      case 'media_tracking_pending_count':
+        return ({required Object n}) => '${n} waiting to send';
+      case 'media_tracking_all_synced':
+        return 'Everything sent';
+      case 'media_tracking_unauthorized':
+        return 'Bangumi rejected the access token. Reconnect it in settings.';
+      case 'media_tracking_unlinked_hint':
+        return 'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
+      case 'media_tracking_open_subject':
+        return 'Open on Bangumi';
+      case 'media_tracking_manage_links':
+        return 'Manage links';
+      case 'media_tracking_last_error':
+        return 'Last error';
       default:
         return null;
     }
@@ -128100,8 +128599,6 @@ extension on _StringsFr {
         return 'Add mapping';
       case 'media_tracking_anime':
         return 'Anime';
-      case 'media_tracking_bookmeter_note':
-        return 'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
       case 'media_tracking_chapter':
         return 'Chapter';
       case 'media_tracking_connect':
@@ -131027,6 +131524,30 @@ extension on _StringsFr {
       case 'anime_download_subs_season_mismatch':
         return ({required Object season}) =>
             'No subtitle entry matches season ${season} of this pack - not auto-selected. Pick one manually if you want it anyway.';
+      case 'media_tracking_card_title':
+        return 'Bangumi sync';
+      case 'media_tracking_not_connected':
+        return 'Not connected. Progress stays local and nothing reaches Bangumi.';
+      case 'media_tracking_last_sync':
+        return 'Last sync';
+      case 'media_tracking_never_synced':
+        return 'Never synced';
+      case 'media_tracking_linked_count':
+        return ({required Object n}) => '${n} linked';
+      case 'media_tracking_pending_count':
+        return ({required Object n}) => '${n} waiting to send';
+      case 'media_tracking_all_synced':
+        return 'Everything sent';
+      case 'media_tracking_unauthorized':
+        return 'Bangumi rejected the access token. Reconnect it in settings.';
+      case 'media_tracking_unlinked_hint':
+        return 'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
+      case 'media_tracking_open_subject':
+        return 'Open on Bangumi';
+      case 'media_tracking_manage_links':
+        return 'Manage links';
+      case 'media_tracking_last_error':
+        return 'Last error';
       default:
         return null;
     }
@@ -133698,8 +134219,6 @@ extension on _StringsId {
         return 'Add mapping';
       case 'media_tracking_anime':
         return 'Anime';
-      case 'media_tracking_bookmeter_note':
-        return 'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
       case 'media_tracking_chapter':
         return 'Chapter';
       case 'media_tracking_connect':
@@ -136614,6 +137133,30 @@ extension on _StringsId {
       case 'anime_download_subs_season_mismatch':
         return ({required Object season}) =>
             'No subtitle entry matches season ${season} of this pack - not auto-selected. Pick one manually if you want it anyway.';
+      case 'media_tracking_card_title':
+        return 'Bangumi sync';
+      case 'media_tracking_not_connected':
+        return 'Not connected. Progress stays local and nothing reaches Bangumi.';
+      case 'media_tracking_last_sync':
+        return 'Last sync';
+      case 'media_tracking_never_synced':
+        return 'Never synced';
+      case 'media_tracking_linked_count':
+        return ({required Object n}) => '${n} linked';
+      case 'media_tracking_pending_count':
+        return ({required Object n}) => '${n} waiting to send';
+      case 'media_tracking_all_synced':
+        return 'Everything sent';
+      case 'media_tracking_unauthorized':
+        return 'Bangumi rejected the access token. Reconnect it in settings.';
+      case 'media_tracking_unlinked_hint':
+        return 'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
+      case 'media_tracking_open_subject':
+        return 'Open on Bangumi';
+      case 'media_tracking_manage_links':
+        return 'Manage links';
+      case 'media_tracking_last_error':
+        return 'Last error';
       default:
         return null;
     }
@@ -139288,8 +139831,6 @@ extension on _StringsIt {
         return 'Add mapping';
       case 'media_tracking_anime':
         return 'Anime';
-      case 'media_tracking_bookmeter_note':
-        return 'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
       case 'media_tracking_chapter':
         return 'Chapter';
       case 'media_tracking_connect':
@@ -142216,6 +142757,30 @@ extension on _StringsIt {
       case 'anime_download_subs_season_mismatch':
         return ({required Object season}) =>
             'No subtitle entry matches season ${season} of this pack - not auto-selected. Pick one manually if you want it anyway.';
+      case 'media_tracking_card_title':
+        return 'Bangumi sync';
+      case 'media_tracking_not_connected':
+        return 'Not connected. Progress stays local and nothing reaches Bangumi.';
+      case 'media_tracking_last_sync':
+        return 'Last sync';
+      case 'media_tracking_never_synced':
+        return 'Never synced';
+      case 'media_tracking_linked_count':
+        return ({required Object n}) => '${n} linked';
+      case 'media_tracking_pending_count':
+        return ({required Object n}) => '${n} waiting to send';
+      case 'media_tracking_all_synced':
+        return 'Everything sent';
+      case 'media_tracking_unauthorized':
+        return 'Bangumi rejected the access token. Reconnect it in settings.';
+      case 'media_tracking_unlinked_hint':
+        return 'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
+      case 'media_tracking_open_subject':
+        return 'Open on Bangumi';
+      case 'media_tracking_manage_links':
+        return 'Manage links';
+      case 'media_tracking_last_error':
+        return 'Last error';
       default:
         return null;
     }
@@ -144875,8 +145440,6 @@ extension on _StringsJa {
         return 'Add mapping';
       case 'media_tracking_anime':
         return 'Anime';
-      case 'media_tracking_bookmeter_note':
-        return 'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
       case 'media_tracking_chapter':
         return 'Chapter';
       case 'media_tracking_connect':
@@ -147780,6 +148343,30 @@ extension on _StringsJa {
       case 'anime_download_subs_season_mismatch':
         return ({required Object season}) =>
             'No subtitle entry matches season ${season} of this pack - not auto-selected. Pick one manually if you want it anyway.';
+      case 'media_tracking_card_title':
+        return 'Bangumi sync';
+      case 'media_tracking_not_connected':
+        return 'Not connected. Progress stays local and nothing reaches Bangumi.';
+      case 'media_tracking_last_sync':
+        return 'Last sync';
+      case 'media_tracking_never_synced':
+        return 'Never synced';
+      case 'media_tracking_linked_count':
+        return ({required Object n}) => '${n} linked';
+      case 'media_tracking_pending_count':
+        return ({required Object n}) => '${n} waiting to send';
+      case 'media_tracking_all_synced':
+        return 'Everything sent';
+      case 'media_tracking_unauthorized':
+        return 'Bangumi rejected the access token. Reconnect it in settings.';
+      case 'media_tracking_unlinked_hint':
+        return 'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
+      case 'media_tracking_open_subject':
+        return 'Open on Bangumi';
+      case 'media_tracking_manage_links':
+        return 'Manage links';
+      case 'media_tracking_last_error':
+        return 'Last error';
       default:
         return null;
     }
@@ -150441,8 +151028,6 @@ extension on _StringsKo {
         return 'Add mapping';
       case 'media_tracking_anime':
         return 'Anime';
-      case 'media_tracking_bookmeter_note':
-        return 'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
       case 'media_tracking_chapter':
         return 'Chapter';
       case 'media_tracking_connect':
@@ -153348,6 +153933,30 @@ extension on _StringsKo {
       case 'anime_download_subs_season_mismatch':
         return ({required Object season}) =>
             'No subtitle entry matches season ${season} of this pack - not auto-selected. Pick one manually if you want it anyway.';
+      case 'media_tracking_card_title':
+        return 'Bangumi sync';
+      case 'media_tracking_not_connected':
+        return 'Not connected. Progress stays local and nothing reaches Bangumi.';
+      case 'media_tracking_last_sync':
+        return 'Last sync';
+      case 'media_tracking_never_synced':
+        return 'Never synced';
+      case 'media_tracking_linked_count':
+        return ({required Object n}) => '${n} linked';
+      case 'media_tracking_pending_count':
+        return ({required Object n}) => '${n} waiting to send';
+      case 'media_tracking_all_synced':
+        return 'Everything sent';
+      case 'media_tracking_unauthorized':
+        return 'Bangumi rejected the access token. Reconnect it in settings.';
+      case 'media_tracking_unlinked_hint':
+        return 'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
+      case 'media_tracking_open_subject':
+        return 'Open on Bangumi';
+      case 'media_tracking_manage_links':
+        return 'Manage links';
+      case 'media_tracking_last_error':
+        return 'Last error';
       default:
         return null;
     }
@@ -156021,8 +156630,6 @@ extension on _StringsNl {
         return 'Add mapping';
       case 'media_tracking_anime':
         return 'Anime';
-      case 'media_tracking_bookmeter_note':
-        return 'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
       case 'media_tracking_chapter':
         return 'Chapter';
       case 'media_tracking_connect':
@@ -158943,6 +159550,30 @@ extension on _StringsNl {
       case 'anime_download_subs_season_mismatch':
         return ({required Object season}) =>
             'No subtitle entry matches season ${season} of this pack - not auto-selected. Pick one manually if you want it anyway.';
+      case 'media_tracking_card_title':
+        return 'Bangumi sync';
+      case 'media_tracking_not_connected':
+        return 'Not connected. Progress stays local and nothing reaches Bangumi.';
+      case 'media_tracking_last_sync':
+        return 'Last sync';
+      case 'media_tracking_never_synced':
+        return 'Never synced';
+      case 'media_tracking_linked_count':
+        return ({required Object n}) => '${n} linked';
+      case 'media_tracking_pending_count':
+        return ({required Object n}) => '${n} waiting to send';
+      case 'media_tracking_all_synced':
+        return 'Everything sent';
+      case 'media_tracking_unauthorized':
+        return 'Bangumi rejected the access token. Reconnect it in settings.';
+      case 'media_tracking_unlinked_hint':
+        return 'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
+      case 'media_tracking_open_subject':
+        return 'Open on Bangumi';
+      case 'media_tracking_manage_links':
+        return 'Manage links';
+      case 'media_tracking_last_error':
+        return 'Last error';
       default:
         return null;
     }
@@ -161615,8 +162246,6 @@ extension on _StringsPtBr {
         return 'Add mapping';
       case 'media_tracking_anime':
         return 'Anime';
-      case 'media_tracking_bookmeter_note':
-        return 'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
       case 'media_tracking_chapter':
         return 'Chapter';
       case 'media_tracking_connect':
@@ -164535,6 +165164,30 @@ extension on _StringsPtBr {
       case 'anime_download_subs_season_mismatch':
         return ({required Object season}) =>
             'No subtitle entry matches season ${season} of this pack - not auto-selected. Pick one manually if you want it anyway.';
+      case 'media_tracking_card_title':
+        return 'Bangumi sync';
+      case 'media_tracking_not_connected':
+        return 'Not connected. Progress stays local and nothing reaches Bangumi.';
+      case 'media_tracking_last_sync':
+        return 'Last sync';
+      case 'media_tracking_never_synced':
+        return 'Never synced';
+      case 'media_tracking_linked_count':
+        return ({required Object n}) => '${n} linked';
+      case 'media_tracking_pending_count':
+        return ({required Object n}) => '${n} waiting to send';
+      case 'media_tracking_all_synced':
+        return 'Everything sent';
+      case 'media_tracking_unauthorized':
+        return 'Bangumi rejected the access token. Reconnect it in settings.';
+      case 'media_tracking_unlinked_hint':
+        return 'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
+      case 'media_tracking_open_subject':
+        return 'Open on Bangumi';
+      case 'media_tracking_manage_links':
+        return 'Manage links';
+      case 'media_tracking_last_error':
+        return 'Last error';
       default:
         return null;
     }
@@ -167210,8 +167863,6 @@ extension on _StringsRu {
         return 'Add mapping';
       case 'media_tracking_anime':
         return 'Anime';
-      case 'media_tracking_bookmeter_note':
-        return 'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
       case 'media_tracking_chapter':
         return 'Chapter';
       case 'media_tracking_connect':
@@ -170132,6 +170783,30 @@ extension on _StringsRu {
       case 'anime_download_subs_season_mismatch':
         return ({required Object season}) =>
             'No subtitle entry matches season ${season} of this pack - not auto-selected. Pick one manually if you want it anyway.';
+      case 'media_tracking_card_title':
+        return 'Bangumi sync';
+      case 'media_tracking_not_connected':
+        return 'Not connected. Progress stays local and nothing reaches Bangumi.';
+      case 'media_tracking_last_sync':
+        return 'Last sync';
+      case 'media_tracking_never_synced':
+        return 'Never synced';
+      case 'media_tracking_linked_count':
+        return ({required Object n}) => '${n} linked';
+      case 'media_tracking_pending_count':
+        return ({required Object n}) => '${n} waiting to send';
+      case 'media_tracking_all_synced':
+        return 'Everything sent';
+      case 'media_tracking_unauthorized':
+        return 'Bangumi rejected the access token. Reconnect it in settings.';
+      case 'media_tracking_unlinked_hint':
+        return 'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
+      case 'media_tracking_open_subject':
+        return 'Open on Bangumi';
+      case 'media_tracking_manage_links':
+        return 'Manage links';
+      case 'media_tracking_last_error':
+        return 'Last error';
       default:
         return null;
     }
@@ -172798,8 +173473,6 @@ extension on _StringsTh {
         return 'Add mapping';
       case 'media_tracking_anime':
         return 'Anime';
-      case 'media_tracking_bookmeter_note':
-        return 'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
       case 'media_tracking_chapter':
         return 'Chapter';
       case 'media_tracking_connect':
@@ -175713,6 +176386,30 @@ extension on _StringsTh {
       case 'anime_download_subs_season_mismatch':
         return ({required Object season}) =>
             'No subtitle entry matches season ${season} of this pack - not auto-selected. Pick one manually if you want it anyway.';
+      case 'media_tracking_card_title':
+        return 'Bangumi sync';
+      case 'media_tracking_not_connected':
+        return 'Not connected. Progress stays local and nothing reaches Bangumi.';
+      case 'media_tracking_last_sync':
+        return 'Last sync';
+      case 'media_tracking_never_synced':
+        return 'Never synced';
+      case 'media_tracking_linked_count':
+        return ({required Object n}) => '${n} linked';
+      case 'media_tracking_pending_count':
+        return ({required Object n}) => '${n} waiting to send';
+      case 'media_tracking_all_synced':
+        return 'Everything sent';
+      case 'media_tracking_unauthorized':
+        return 'Bangumi rejected the access token. Reconnect it in settings.';
+      case 'media_tracking_unlinked_hint':
+        return 'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
+      case 'media_tracking_open_subject':
+        return 'Open on Bangumi';
+      case 'media_tracking_manage_links':
+        return 'Manage links';
+      case 'media_tracking_last_error':
+        return 'Last error';
       default:
         return null;
     }
@@ -178384,8 +179081,6 @@ extension on _StringsTr {
         return 'Add mapping';
       case 'media_tracking_anime':
         return 'Anime';
-      case 'media_tracking_bookmeter_note':
-        return 'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
       case 'media_tracking_chapter':
         return 'Chapter';
       case 'media_tracking_connect':
@@ -181303,6 +181998,30 @@ extension on _StringsTr {
       case 'anime_download_subs_season_mismatch':
         return ({required Object season}) =>
             'No subtitle entry matches season ${season} of this pack - not auto-selected. Pick one manually if you want it anyway.';
+      case 'media_tracking_card_title':
+        return 'Bangumi sync';
+      case 'media_tracking_not_connected':
+        return 'Not connected. Progress stays local and nothing reaches Bangumi.';
+      case 'media_tracking_last_sync':
+        return 'Last sync';
+      case 'media_tracking_never_synced':
+        return 'Never synced';
+      case 'media_tracking_linked_count':
+        return ({required Object n}) => '${n} linked';
+      case 'media_tracking_pending_count':
+        return ({required Object n}) => '${n} waiting to send';
+      case 'media_tracking_all_synced':
+        return 'Everything sent';
+      case 'media_tracking_unauthorized':
+        return 'Bangumi rejected the access token. Reconnect it in settings.';
+      case 'media_tracking_unlinked_hint':
+        return 'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
+      case 'media_tracking_open_subject':
+        return 'Open on Bangumi';
+      case 'media_tracking_manage_links':
+        return 'Manage links';
+      case 'media_tracking_last_error':
+        return 'Last error';
       default:
         return null;
     }
@@ -183971,8 +184690,6 @@ extension on _StringsVi {
         return 'Add mapping';
       case 'media_tracking_anime':
         return 'Anime';
-      case 'media_tracking_bookmeter_note':
-        return 'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
       case 'media_tracking_chapter':
         return 'Chapter';
       case 'media_tracking_connect':
@@ -186888,6 +187605,30 @@ extension on _StringsVi {
       case 'anime_download_subs_season_mismatch':
         return ({required Object season}) =>
             'No subtitle entry matches season ${season} of this pack - not auto-selected. Pick one manually if you want it anyway.';
+      case 'media_tracking_card_title':
+        return 'Bangumi sync';
+      case 'media_tracking_not_connected':
+        return 'Not connected. Progress stays local and nothing reaches Bangumi.';
+      case 'media_tracking_last_sync':
+        return 'Last sync';
+      case 'media_tracking_never_synced':
+        return 'Never synced';
+      case 'media_tracking_linked_count':
+        return ({required Object n}) => '${n} linked';
+      case 'media_tracking_pending_count':
+        return ({required Object n}) => '${n} waiting to send';
+      case 'media_tracking_all_synced':
+        return 'Everything sent';
+      case 'media_tracking_unauthorized':
+        return 'Bangumi rejected the access token. Reconnect it in settings.';
+      case 'media_tracking_unlinked_hint':
+        return 'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
+      case 'media_tracking_open_subject':
+        return 'Open on Bangumi';
+      case 'media_tracking_manage_links':
+        return 'Manage links';
+      case 'media_tracking_last_error':
+        return 'Last error';
       default:
         return null;
     }
@@ -189536,8 +190277,6 @@ extension on _StringsZhCn {
         return '添加映射';
       case 'media_tracking_anime':
         return '番剧';
-      case 'media_tracking_bookmeter_note':
-        return '读书 Meter 未公开个人写入 API，因此仅参考其进度交互，不进行网页抓取。';
       case 'media_tracking_chapter':
         return '话';
       case 'media_tracking_connect':
@@ -192427,6 +193166,30 @@ extension on _StringsZhCn {
       case 'anime_download_subs_season_mismatch':
         return ({required Object season}) =>
             '没有字幕条目对得上该种子的第 ${season} 季，已不自动选中。要用的话请手动选一条。';
+      case 'media_tracking_card_title':
+        return 'Bangumi 同步';
+      case 'media_tracking_not_connected':
+        return '未连接。进度只记在本地，不会同步到 Bangumi。';
+      case 'media_tracking_last_sync':
+        return '上次同步';
+      case 'media_tracking_never_synced':
+        return '从未同步';
+      case 'media_tracking_linked_count':
+        return ({required Object n}) => '已关联 ${n} 项';
+      case 'media_tracking_pending_count':
+        return ({required Object n}) => '${n} 项待发送';
+      case 'media_tracking_all_synced':
+        return '全部已发送';
+      case 'media_tracking_unauthorized':
+        return 'Bangumi 拒绝了访问令牌，请在设置里重新连接。';
+      case 'media_tracking_unlinked_hint':
+        return '还没有任何条目关联到 Bangumi 条目，所以看完/读完在那边不会有任何变化。自动匹配只在标题唯一命中时才建立关联，其余需要手动关联。';
+      case 'media_tracking_open_subject':
+        return '在 Bangumi 打开';
+      case 'media_tracking_manage_links':
+        return '管理关联';
+      case 'media_tracking_last_error':
+        return '上次错误';
       default:
         return null;
     }
@@ -195085,8 +195848,6 @@ extension on _StringsZhHk {
         return 'Add mapping';
       case 'media_tracking_anime':
         return 'Anime';
-      case 'media_tracking_bookmeter_note':
-        return 'Bookmeter is used as a progress UI reference only because it does not expose a public personal write API.';
       case 'media_tracking_chapter':
         return 'Chapter';
       case 'media_tracking_connect':
@@ -197986,6 +198747,30 @@ extension on _StringsZhHk {
       case 'anime_download_subs_season_mismatch':
         return ({required Object season}) =>
             'No subtitle entry matches season ${season} of this pack - not auto-selected. Pick one manually if you want it anyway.';
+      case 'media_tracking_card_title':
+        return 'Bangumi sync';
+      case 'media_tracking_not_connected':
+        return 'Not connected. Progress stays local and nothing reaches Bangumi.';
+      case 'media_tracking_last_sync':
+        return 'Last sync';
+      case 'media_tracking_never_synced':
+        return 'Never synced';
+      case 'media_tracking_linked_count':
+        return ({required Object n}) => '${n} linked';
+      case 'media_tracking_pending_count':
+        return ({required Object n}) => '${n} waiting to send';
+      case 'media_tracking_all_synced':
+        return 'Everything sent';
+      case 'media_tracking_unauthorized':
+        return 'Bangumi rejected the access token. Reconnect it in settings.';
+      case 'media_tracking_unlinked_hint':
+        return 'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
+      case 'media_tracking_open_subject':
+        return 'Open on Bangumi';
+      case 'media_tracking_manage_links':
+        return 'Manage links';
+      case 'media_tracking_last_error':
+        return 'Last error';
       default:
         return null;
     }
