@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 46971 (2763 per locale)
+/// Strings: 47022 (2766 per locale)
 ///
-/// Built on 2026-07-29 at 07:19 UTC
+/// Built on 2026-07-29 at 08:08 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3715,6 +3715,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get manga_import_detected_confirm => 'Import as manga';
   String manga_import_detected_message({required Object name}) =>
       '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+  String get selection_web_search => 'Search the web';
+  String get selection_web_search_unavailable => 'No app can search the web.';
+  String get selection_share_failed => 'Could not open the share sheet.';
 }
 
 // Path: <root>
@@ -10041,6 +10044,12 @@ class _StringsAr extends _StringsEn {
   @override
   String manga_import_detected_message({required Object name}) =>
       '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+  @override
+  String get selection_web_search => 'Search the web';
+  @override
+  String get selection_web_search_unavailable => 'No app can search the web.';
+  @override
+  String get selection_share_failed => 'Could not open the share sheet.';
 }
 
 // Path: <root>
@@ -16435,6 +16444,12 @@ class _StringsDe extends _StringsEn {
   @override
   String manga_import_detected_message({required Object name}) =>
       '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+  @override
+  String get selection_web_search => 'Search the web';
+  @override
+  String get selection_web_search_unavailable => 'No app can search the web.';
+  @override
+  String get selection_share_failed => 'Could not open the share sheet.';
 }
 
 // Path: <root>
@@ -22845,6 +22860,12 @@ class _StringsEs extends _StringsEn {
   @override
   String manga_import_detected_message({required Object name}) =>
       '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+  @override
+  String get selection_web_search => 'Search the web';
+  @override
+  String get selection_web_search_unavailable => 'No app can search the web.';
+  @override
+  String get selection_share_failed => 'Could not open the share sheet.';
 }
 
 // Path: <root>
@@ -29266,6 +29287,12 @@ class _StringsFr extends _StringsEn {
   @override
   String manga_import_detected_message({required Object name}) =>
       '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+  @override
+  String get selection_web_search => 'Search the web';
+  @override
+  String get selection_web_search_unavailable => 'No app can search the web.';
+  @override
+  String get selection_share_failed => 'Could not open the share sheet.';
 }
 
 // Path: <root>
@@ -35616,6 +35643,12 @@ class _StringsId extends _StringsEn {
   @override
   String manga_import_detected_message({required Object name}) =>
       '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+  @override
+  String get selection_web_search => 'Search the web';
+  @override
+  String get selection_web_search_unavailable => 'No app can search the web.';
+  @override
+  String get selection_share_failed => 'Could not open the share sheet.';
 }
 
 // Path: <root>
@@ -42012,6 +42045,12 @@ class _StringsIt extends _StringsEn {
   @override
   String manga_import_detected_message({required Object name}) =>
       '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+  @override
+  String get selection_web_search => 'Search the web';
+  @override
+  String get selection_web_search_unavailable => 'No app can search the web.';
+  @override
+  String get selection_share_failed => 'Could not open the share sheet.';
 }
 
 // Path: <root>
@@ -48225,6 +48264,12 @@ class _StringsJa extends _StringsEn {
   @override
   String manga_import_detected_message({required Object name}) =>
       '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+  @override
+  String get selection_web_search => 'Search the web';
+  @override
+  String get selection_web_search_unavailable => 'No app can search the web.';
+  @override
+  String get selection_share_failed => 'Could not open the share sheet.';
 }
 
 // Path: <root>
@@ -54440,6 +54485,12 @@ class _StringsKo extends _StringsEn {
   @override
   String manga_import_detected_message({required Object name}) =>
       '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+  @override
+  String get selection_web_search => 'Search the web';
+  @override
+  String get selection_web_search_unavailable => 'No app can search the web.';
+  @override
+  String get selection_share_failed => 'Could not open the share sheet.';
 }
 
 // Path: <root>
@@ -60816,6 +60867,12 @@ class _StringsNl extends _StringsEn {
   @override
   String manga_import_detected_message({required Object name}) =>
       '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+  @override
+  String get selection_web_search => 'Search the web';
+  @override
+  String get selection_web_search_unavailable => 'No app can search the web.';
+  @override
+  String get selection_share_failed => 'Could not open the share sheet.';
 }
 
 // Path: <root>
@@ -67205,6 +67262,12 @@ class _StringsPtBr extends _StringsEn {
   @override
   String manga_import_detected_message({required Object name}) =>
       '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+  @override
+  String get selection_web_search => 'Search the web';
+  @override
+  String get selection_web_search_unavailable => 'No app can search the web.';
+  @override
+  String get selection_share_failed => 'Could not open the share sheet.';
 }
 
 // Path: <root>
@@ -73578,6 +73641,12 @@ class _StringsRu extends _StringsEn {
   @override
   String manga_import_detected_message({required Object name}) =>
       '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+  @override
+  String get selection_web_search => 'Search the web';
+  @override
+  String get selection_web_search_unavailable => 'No app can search the web.';
+  @override
+  String get selection_share_failed => 'Could not open the share sheet.';
 }
 
 // Path: <root>
@@ -79899,6 +79968,12 @@ class _StringsTh extends _StringsEn {
   @override
   String manga_import_detected_message({required Object name}) =>
       '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+  @override
+  String get selection_web_search => 'Search the web';
+  @override
+  String get selection_web_search_unavailable => 'No app can search the web.';
+  @override
+  String get selection_share_failed => 'Could not open the share sheet.';
 }
 
 // Path: <root>
@@ -86252,6 +86327,12 @@ class _StringsTr extends _StringsEn {
   @override
   String manga_import_detected_message({required Object name}) =>
       '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+  @override
+  String get selection_web_search => 'Search the web';
+  @override
+  String get selection_web_search_unavailable => 'No app can search the web.';
+  @override
+  String get selection_share_failed => 'Could not open the share sheet.';
 }
 
 // Path: <root>
@@ -92590,6 +92671,12 @@ class _StringsVi extends _StringsEn {
   @override
   String manga_import_detected_message({required Object name}) =>
       '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+  @override
+  String get selection_web_search => 'Search the web';
+  @override
+  String get selection_web_search_unavailable => 'No app can search the web.';
+  @override
+  String get selection_share_failed => 'Could not open the share sheet.';
 }
 
 // Path: <root>
@@ -98479,6 +98566,12 @@ class _StringsZhCn extends _StringsEn {
   @override
   String manga_import_detected_message({required Object name}) =>
       '「${name}」是漫画文件，将走漫画导入流程，而不是书籍导入流程。';
+  @override
+  String get selection_web_search => '网页搜索';
+  @override
+  String get selection_web_search_unavailable => '没有可用的网页搜索应用。';
+  @override
+  String get selection_share_failed => '无法打开分享面板。';
 }
 
 // Path: <root>
@@ -104613,6 +104706,12 @@ class _StringsZhHk extends _StringsEn {
   @override
   String manga_import_detected_message({required Object name}) =>
       '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+  @override
+  String get selection_web_search => 'Search the web';
+  @override
+  String get selection_web_search_unavailable => 'No app can search the web.';
+  @override
+  String get selection_share_failed => 'Could not open the share sheet.';
 }
 
 /// Flat map(s) containing all translations.
@@ -110274,6 +110373,12 @@ extension on _StringsEn {
       case 'manga_import_detected_message':
         return ({required Object name}) =>
             '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+      case 'selection_web_search':
+        return 'Search the web';
+      case 'selection_web_search_unavailable':
+        return 'No app can search the web.';
+      case 'selection_share_failed':
+        return 'Could not open the share sheet.';
       default:
         return null;
     }
@@ -115933,6 +116038,12 @@ extension on _StringsAr {
       case 'manga_import_detected_message':
         return ({required Object name}) =>
             '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+      case 'selection_web_search':
+        return 'Search the web';
+      case 'selection_web_search_unavailable':
+        return 'No app can search the web.';
+      case 'selection_share_failed':
+        return 'Could not open the share sheet.';
       default:
         return null;
     }
@@ -121613,6 +121724,12 @@ extension on _StringsDe {
       case 'manga_import_detected_message':
         return ({required Object name}) =>
             '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+      case 'selection_web_search':
+        return 'Search the web';
+      case 'selection_web_search_unavailable':
+        return 'No app can search the web.';
+      case 'selection_share_failed':
+        return 'Could not open the share sheet.';
       default:
         return null;
     }
@@ -127292,6 +127409,12 @@ extension on _StringsEs {
       case 'manga_import_detected_message':
         return ({required Object name}) =>
             '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+      case 'selection_web_search':
+        return 'Search the web';
+      case 'selection_web_search_unavailable':
+        return 'No app can search the web.';
+      case 'selection_share_failed':
+        return 'Could not open the share sheet.';
       default:
         return null;
     }
@@ -132977,6 +133100,12 @@ extension on _StringsFr {
       case 'manga_import_detected_message':
         return ({required Object name}) =>
             '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+      case 'selection_web_search':
+        return 'Search the web';
+      case 'selection_web_search_unavailable':
+        return 'No app can search the web.';
+      case 'selection_share_failed':
+        return 'Could not open the share sheet.';
       default:
         return null;
     }
@@ -138644,6 +138773,12 @@ extension on _StringsId {
       case 'manga_import_detected_message':
         return ({required Object name}) =>
             '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+      case 'selection_web_search':
+        return 'Search the web';
+      case 'selection_web_search_unavailable':
+        return 'No app can search the web.';
+      case 'selection_share_failed':
+        return 'Could not open the share sheet.';
       default:
         return null;
     }
@@ -144326,6 +144461,12 @@ extension on _StringsIt {
       case 'manga_import_detected_message':
         return ({required Object name}) =>
             '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+      case 'selection_web_search':
+        return 'Search the web';
+      case 'selection_web_search_unavailable':
+        return 'No app can search the web.';
+      case 'selection_share_failed':
+        return 'Could not open the share sheet.';
       default:
         return null;
     }
@@ -149970,6 +150111,12 @@ extension on _StringsJa {
       case 'manga_import_detected_message':
         return ({required Object name}) =>
             '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+      case 'selection_web_search':
+        return 'Search the web';
+      case 'selection_web_search_unavailable':
+        return 'No app can search the web.';
+      case 'selection_share_failed':
+        return 'Could not open the share sheet.';
       default:
         return null;
     }
@@ -155618,6 +155765,12 @@ extension on _StringsKo {
       case 'manga_import_detected_message':
         return ({required Object name}) =>
             '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+      case 'selection_web_search':
+        return 'Search the web';
+      case 'selection_web_search_unavailable':
+        return 'No app can search the web.';
+      case 'selection_share_failed':
+        return 'Could not open the share sheet.';
       default:
         return null;
     }
@@ -161293,6 +161446,12 @@ extension on _StringsNl {
       case 'manga_import_detected_message':
         return ({required Object name}) =>
             '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+      case 'selection_web_search':
+        return 'Search the web';
+      case 'selection_web_search_unavailable':
+        return 'No app can search the web.';
+      case 'selection_share_failed':
+        return 'Could not open the share sheet.';
       default:
         return null;
     }
@@ -166965,6 +167124,12 @@ extension on _StringsPtBr {
       case 'manga_import_detected_message':
         return ({required Object name}) =>
             '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+      case 'selection_web_search':
+        return 'Search the web';
+      case 'selection_web_search_unavailable':
+        return 'No app can search the web.';
+      case 'selection_share_failed':
+        return 'Could not open the share sheet.';
       default:
         return null;
     }
@@ -172642,6 +172807,12 @@ extension on _StringsRu {
       case 'manga_import_detected_message':
         return ({required Object name}) =>
             '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+      case 'selection_web_search':
+        return 'Search the web';
+      case 'selection_web_search_unavailable':
+        return 'No app can search the web.';
+      case 'selection_share_failed':
+        return 'Could not open the share sheet.';
       default:
         return null;
     }
@@ -178303,6 +178474,12 @@ extension on _StringsTh {
       case 'manga_import_detected_message':
         return ({required Object name}) =>
             '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+      case 'selection_web_search':
+        return 'Search the web';
+      case 'selection_web_search_unavailable':
+        return 'No app can search the web.';
+      case 'selection_share_failed':
+        return 'Could not open the share sheet.';
       default:
         return null;
     }
@@ -183973,6 +184150,12 @@ extension on _StringsTr {
       case 'manga_import_detected_message':
         return ({required Object name}) =>
             '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+      case 'selection_web_search':
+        return 'Search the web';
+      case 'selection_web_search_unavailable':
+        return 'No app can search the web.';
+      case 'selection_share_failed':
+        return 'Could not open the share sheet.';
       default:
         return null;
     }
@@ -189638,6 +189821,12 @@ extension on _StringsVi {
       case 'manga_import_detected_message':
         return ({required Object name}) =>
             '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+      case 'selection_web_search':
+        return 'Search the web';
+      case 'selection_web_search_unavailable':
+        return 'No app can search the web.';
+      case 'selection_share_failed':
+        return 'Could not open the share sheet.';
       default:
         return null;
     }
@@ -195256,6 +195445,12 @@ extension on _StringsZhCn {
         return '按漫画导入';
       case 'manga_import_detected_message':
         return ({required Object name}) => '「${name}」是漫画文件，将走漫画导入流程，而不是书籍导入流程。';
+      case 'selection_web_search':
+        return '网页搜索';
+      case 'selection_web_search_unavailable':
+        return '没有可用的网页搜索应用。';
+      case 'selection_share_failed':
+        return '无法打开分享面板。';
       default:
         return null;
     }
@@ -200895,6 +201090,12 @@ extension on _StringsZhHk {
       case 'manga_import_detected_message':
         return ({required Object name}) =>
             '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+      case 'selection_web_search':
+        return 'Search the web';
+      case 'selection_web_search_unavailable':
+        return 'No app can search the web.';
+      case 'selection_share_failed':
+        return 'Could not open the share sheet.';
       default:
         return null;
     }
