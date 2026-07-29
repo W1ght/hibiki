@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 46852 (2756 per locale)
+/// Strings: 46971 (2763 per locale)
 ///
-/// Built on 2026-07-29 at 06:45 UTC
+/// Built on 2026-07-29 at 07:19 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3706,6 +3706,15 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Skipped ${m} of ${n} selected items that no longer exist';
   String get game_text_thread_unset =>
       'No thread selected — pick one to start capturing';
+  String get manga_import_hint =>
+      'Pick a manga folder, a .cbz/.zip page archive, or a .mokuro file.';
+  String get manga_import_pick_file => 'Pick manga file';
+  String get manga_import_pick_folder => 'Pick manga folder';
+  String get manga_import_missing_input => 'Pick a manga file or folder first.';
+  String get manga_import_detected_title => 'This looks like manga';
+  String get manga_import_detected_confirm => 'Import as manga';
+  String manga_import_detected_message({required Object name}) =>
+      '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
 }
 
 // Path: <root>
@@ -10016,6 +10025,22 @@ class _StringsAr extends _StringsEn {
   @override
   String get game_text_thread_unset =>
       'No thread selected — pick one to start capturing';
+  @override
+  String get manga_import_hint =>
+      'Pick a manga folder, a .cbz/.zip page archive, or a .mokuro file.';
+  @override
+  String get manga_import_pick_file => 'Pick manga file';
+  @override
+  String get manga_import_pick_folder => 'Pick manga folder';
+  @override
+  String get manga_import_missing_input => 'Pick a manga file or folder first.';
+  @override
+  String get manga_import_detected_title => 'This looks like manga';
+  @override
+  String get manga_import_detected_confirm => 'Import as manga';
+  @override
+  String manga_import_detected_message({required Object name}) =>
+      '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
 }
 
 // Path: <root>
@@ -16394,6 +16419,22 @@ class _StringsDe extends _StringsEn {
   @override
   String get game_text_thread_unset =>
       'No thread selected — pick one to start capturing';
+  @override
+  String get manga_import_hint =>
+      'Pick a manga folder, a .cbz/.zip page archive, or a .mokuro file.';
+  @override
+  String get manga_import_pick_file => 'Pick manga file';
+  @override
+  String get manga_import_pick_folder => 'Pick manga folder';
+  @override
+  String get manga_import_missing_input => 'Pick a manga file or folder first.';
+  @override
+  String get manga_import_detected_title => 'This looks like manga';
+  @override
+  String get manga_import_detected_confirm => 'Import as manga';
+  @override
+  String manga_import_detected_message({required Object name}) =>
+      '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
 }
 
 // Path: <root>
@@ -22788,6 +22829,22 @@ class _StringsEs extends _StringsEn {
   @override
   String get game_text_thread_unset =>
       'No thread selected — pick one to start capturing';
+  @override
+  String get manga_import_hint =>
+      'Pick a manga folder, a .cbz/.zip page archive, or a .mokuro file.';
+  @override
+  String get manga_import_pick_file => 'Pick manga file';
+  @override
+  String get manga_import_pick_folder => 'Pick manga folder';
+  @override
+  String get manga_import_missing_input => 'Pick a manga file or folder first.';
+  @override
+  String get manga_import_detected_title => 'This looks like manga';
+  @override
+  String get manga_import_detected_confirm => 'Import as manga';
+  @override
+  String manga_import_detected_message({required Object name}) =>
+      '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
 }
 
 // Path: <root>
@@ -29193,6 +29250,22 @@ class _StringsFr extends _StringsEn {
   @override
   String get game_text_thread_unset =>
       'No thread selected — pick one to start capturing';
+  @override
+  String get manga_import_hint =>
+      'Pick a manga folder, a .cbz/.zip page archive, or a .mokuro file.';
+  @override
+  String get manga_import_pick_file => 'Pick manga file';
+  @override
+  String get manga_import_pick_folder => 'Pick manga folder';
+  @override
+  String get manga_import_missing_input => 'Pick a manga file or folder first.';
+  @override
+  String get manga_import_detected_title => 'This looks like manga';
+  @override
+  String get manga_import_detected_confirm => 'Import as manga';
+  @override
+  String manga_import_detected_message({required Object name}) =>
+      '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
 }
 
 // Path: <root>
@@ -35527,6 +35600,22 @@ class _StringsId extends _StringsEn {
   @override
   String get game_text_thread_unset =>
       'No thread selected — pick one to start capturing';
+  @override
+  String get manga_import_hint =>
+      'Pick a manga folder, a .cbz/.zip page archive, or a .mokuro file.';
+  @override
+  String get manga_import_pick_file => 'Pick manga file';
+  @override
+  String get manga_import_pick_folder => 'Pick manga folder';
+  @override
+  String get manga_import_missing_input => 'Pick a manga file or folder first.';
+  @override
+  String get manga_import_detected_title => 'This looks like manga';
+  @override
+  String get manga_import_detected_confirm => 'Import as manga';
+  @override
+  String manga_import_detected_message({required Object name}) =>
+      '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
 }
 
 // Path: <root>
@@ -41907,6 +41996,22 @@ class _StringsIt extends _StringsEn {
   @override
   String get game_text_thread_unset =>
       'No thread selected — pick one to start capturing';
+  @override
+  String get manga_import_hint =>
+      'Pick a manga folder, a .cbz/.zip page archive, or a .mokuro file.';
+  @override
+  String get manga_import_pick_file => 'Pick manga file';
+  @override
+  String get manga_import_pick_folder => 'Pick manga folder';
+  @override
+  String get manga_import_missing_input => 'Pick a manga file or folder first.';
+  @override
+  String get manga_import_detected_title => 'This looks like manga';
+  @override
+  String get manga_import_detected_confirm => 'Import as manga';
+  @override
+  String manga_import_detected_message({required Object name}) =>
+      '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
 }
 
 // Path: <root>
@@ -48104,6 +48209,22 @@ class _StringsJa extends _StringsEn {
   @override
   String get game_text_thread_unset =>
       'No thread selected — pick one to start capturing';
+  @override
+  String get manga_import_hint =>
+      'Pick a manga folder, a .cbz/.zip page archive, or a .mokuro file.';
+  @override
+  String get manga_import_pick_file => 'Pick manga file';
+  @override
+  String get manga_import_pick_folder => 'Pick manga folder';
+  @override
+  String get manga_import_missing_input => 'Pick a manga file or folder first.';
+  @override
+  String get manga_import_detected_title => 'This looks like manga';
+  @override
+  String get manga_import_detected_confirm => 'Import as manga';
+  @override
+  String manga_import_detected_message({required Object name}) =>
+      '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
 }
 
 // Path: <root>
@@ -54303,6 +54424,22 @@ class _StringsKo extends _StringsEn {
   @override
   String get game_text_thread_unset =>
       'No thread selected — pick one to start capturing';
+  @override
+  String get manga_import_hint =>
+      'Pick a manga folder, a .cbz/.zip page archive, or a .mokuro file.';
+  @override
+  String get manga_import_pick_file => 'Pick manga file';
+  @override
+  String get manga_import_pick_folder => 'Pick manga folder';
+  @override
+  String get manga_import_missing_input => 'Pick a manga file or folder first.';
+  @override
+  String get manga_import_detected_title => 'This looks like manga';
+  @override
+  String get manga_import_detected_confirm => 'Import as manga';
+  @override
+  String manga_import_detected_message({required Object name}) =>
+      '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
 }
 
 // Path: <root>
@@ -60663,6 +60800,22 @@ class _StringsNl extends _StringsEn {
   @override
   String get game_text_thread_unset =>
       'No thread selected — pick one to start capturing';
+  @override
+  String get manga_import_hint =>
+      'Pick a manga folder, a .cbz/.zip page archive, or a .mokuro file.';
+  @override
+  String get manga_import_pick_file => 'Pick manga file';
+  @override
+  String get manga_import_pick_folder => 'Pick manga folder';
+  @override
+  String get manga_import_missing_input => 'Pick a manga file or folder first.';
+  @override
+  String get manga_import_detected_title => 'This looks like manga';
+  @override
+  String get manga_import_detected_confirm => 'Import as manga';
+  @override
+  String manga_import_detected_message({required Object name}) =>
+      '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
 }
 
 // Path: <root>
@@ -67036,6 +67189,22 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get game_text_thread_unset =>
       'No thread selected — pick one to start capturing';
+  @override
+  String get manga_import_hint =>
+      'Pick a manga folder, a .cbz/.zip page archive, or a .mokuro file.';
+  @override
+  String get manga_import_pick_file => 'Pick manga file';
+  @override
+  String get manga_import_pick_folder => 'Pick manga folder';
+  @override
+  String get manga_import_missing_input => 'Pick a manga file or folder first.';
+  @override
+  String get manga_import_detected_title => 'This looks like manga';
+  @override
+  String get manga_import_detected_confirm => 'Import as manga';
+  @override
+  String manga_import_detected_message({required Object name}) =>
+      '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
 }
 
 // Path: <root>
@@ -73393,6 +73562,22 @@ class _StringsRu extends _StringsEn {
   @override
   String get game_text_thread_unset =>
       'No thread selected — pick one to start capturing';
+  @override
+  String get manga_import_hint =>
+      'Pick a manga folder, a .cbz/.zip page archive, or a .mokuro file.';
+  @override
+  String get manga_import_pick_file => 'Pick manga file';
+  @override
+  String get manga_import_pick_folder => 'Pick manga folder';
+  @override
+  String get manga_import_missing_input => 'Pick a manga file or folder first.';
+  @override
+  String get manga_import_detected_title => 'This looks like manga';
+  @override
+  String get manga_import_detected_confirm => 'Import as manga';
+  @override
+  String manga_import_detected_message({required Object name}) =>
+      '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
 }
 
 // Path: <root>
@@ -79698,6 +79883,22 @@ class _StringsTh extends _StringsEn {
   @override
   String get game_text_thread_unset =>
       'No thread selected — pick one to start capturing';
+  @override
+  String get manga_import_hint =>
+      'Pick a manga folder, a .cbz/.zip page archive, or a .mokuro file.';
+  @override
+  String get manga_import_pick_file => 'Pick manga file';
+  @override
+  String get manga_import_pick_folder => 'Pick manga folder';
+  @override
+  String get manga_import_missing_input => 'Pick a manga file or folder first.';
+  @override
+  String get manga_import_detected_title => 'This looks like manga';
+  @override
+  String get manga_import_detected_confirm => 'Import as manga';
+  @override
+  String manga_import_detected_message({required Object name}) =>
+      '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
 }
 
 // Path: <root>
@@ -86035,6 +86236,22 @@ class _StringsTr extends _StringsEn {
   @override
   String get game_text_thread_unset =>
       'No thread selected — pick one to start capturing';
+  @override
+  String get manga_import_hint =>
+      'Pick a manga folder, a .cbz/.zip page archive, or a .mokuro file.';
+  @override
+  String get manga_import_pick_file => 'Pick manga file';
+  @override
+  String get manga_import_pick_folder => 'Pick manga folder';
+  @override
+  String get manga_import_missing_input => 'Pick a manga file or folder first.';
+  @override
+  String get manga_import_detected_title => 'This looks like manga';
+  @override
+  String get manga_import_detected_confirm => 'Import as manga';
+  @override
+  String manga_import_detected_message({required Object name}) =>
+      '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
 }
 
 // Path: <root>
@@ -92357,6 +92574,22 @@ class _StringsVi extends _StringsEn {
   @override
   String get game_text_thread_unset =>
       'No thread selected — pick one to start capturing';
+  @override
+  String get manga_import_hint =>
+      'Pick a manga folder, a .cbz/.zip page archive, or a .mokuro file.';
+  @override
+  String get manga_import_pick_file => 'Pick manga file';
+  @override
+  String get manga_import_pick_folder => 'Pick manga folder';
+  @override
+  String get manga_import_missing_input => 'Pick a manga file or folder first.';
+  @override
+  String get manga_import_detected_title => 'This looks like manga';
+  @override
+  String get manga_import_detected_confirm => 'Import as manga';
+  @override
+  String manga_import_detected_message({required Object name}) =>
+      '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
 }
 
 // Path: <root>
@@ -98231,6 +98464,21 @@ class _StringsZhCn extends _StringsEn {
       '选中的 ${n} 项中有 ${m} 项已不存在，已跳过';
   @override
   String get game_text_thread_unset => '尚未选择线程 · 选一条后开始捕获';
+  @override
+  String get manga_import_hint => '选择漫画文件夹、.cbz/.zip 页图压缩包，或 .mokuro 文件。';
+  @override
+  String get manga_import_pick_file => '选择漫画文件';
+  @override
+  String get manga_import_pick_folder => '选择漫画文件夹';
+  @override
+  String get manga_import_missing_input => '请先选择漫画文件或文件夹。';
+  @override
+  String get manga_import_detected_title => '这看起来是漫画';
+  @override
+  String get manga_import_detected_confirm => '按漫画导入';
+  @override
+  String manga_import_detected_message({required Object name}) =>
+      '「${name}」是漫画文件，将走漫画导入流程，而不是书籍导入流程。';
 }
 
 // Path: <root>
@@ -104349,6 +104597,22 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get game_text_thread_unset =>
       'No thread selected — pick one to start capturing';
+  @override
+  String get manga_import_hint =>
+      'Pick a manga folder, a .cbz/.zip page archive, or a .mokuro file.';
+  @override
+  String get manga_import_pick_file => 'Pick manga file';
+  @override
+  String get manga_import_pick_folder => 'Pick manga folder';
+  @override
+  String get manga_import_missing_input => 'Pick a manga file or folder first.';
+  @override
+  String get manga_import_detected_title => 'This looks like manga';
+  @override
+  String get manga_import_detected_confirm => 'Import as manga';
+  @override
+  String manga_import_detected_message({required Object name}) =>
+      '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
 }
 
 /// Flat map(s) containing all translations.
@@ -109995,6 +110259,21 @@ extension on _StringsEn {
             'Skipped ${m} of ${n} selected items that no longer exist';
       case 'game_text_thread_unset':
         return 'No thread selected — pick one to start capturing';
+      case 'manga_import_hint':
+        return 'Pick a manga folder, a .cbz/.zip page archive, or a .mokuro file.';
+      case 'manga_import_pick_file':
+        return 'Pick manga file';
+      case 'manga_import_pick_folder':
+        return 'Pick manga folder';
+      case 'manga_import_missing_input':
+        return 'Pick a manga file or folder first.';
+      case 'manga_import_detected_title':
+        return 'This looks like manga';
+      case 'manga_import_detected_confirm':
+        return 'Import as manga';
+      case 'manga_import_detected_message':
+        return ({required Object name}) =>
+            '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
       default:
         return null;
     }
@@ -115639,6 +115918,21 @@ extension on _StringsAr {
             'Skipped ${m} of ${n} selected items that no longer exist';
       case 'game_text_thread_unset':
         return 'No thread selected — pick one to start capturing';
+      case 'manga_import_hint':
+        return 'Pick a manga folder, a .cbz/.zip page archive, or a .mokuro file.';
+      case 'manga_import_pick_file':
+        return 'Pick manga file';
+      case 'manga_import_pick_folder':
+        return 'Pick manga folder';
+      case 'manga_import_missing_input':
+        return 'Pick a manga file or folder first.';
+      case 'manga_import_detected_title':
+        return 'This looks like manga';
+      case 'manga_import_detected_confirm':
+        return 'Import as manga';
+      case 'manga_import_detected_message':
+        return ({required Object name}) =>
+            '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
       default:
         return null;
     }
@@ -121304,6 +121598,21 @@ extension on _StringsDe {
             'Skipped ${m} of ${n} selected items that no longer exist';
       case 'game_text_thread_unset':
         return 'No thread selected — pick one to start capturing';
+      case 'manga_import_hint':
+        return 'Pick a manga folder, a .cbz/.zip page archive, or a .mokuro file.';
+      case 'manga_import_pick_file':
+        return 'Pick manga file';
+      case 'manga_import_pick_folder':
+        return 'Pick manga folder';
+      case 'manga_import_missing_input':
+        return 'Pick a manga file or folder first.';
+      case 'manga_import_detected_title':
+        return 'This looks like manga';
+      case 'manga_import_detected_confirm':
+        return 'Import as manga';
+      case 'manga_import_detected_message':
+        return ({required Object name}) =>
+            '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
       default:
         return null;
     }
@@ -126968,6 +127277,21 @@ extension on _StringsEs {
             'Skipped ${m} of ${n} selected items that no longer exist';
       case 'game_text_thread_unset':
         return 'No thread selected — pick one to start capturing';
+      case 'manga_import_hint':
+        return 'Pick a manga folder, a .cbz/.zip page archive, or a .mokuro file.';
+      case 'manga_import_pick_file':
+        return 'Pick manga file';
+      case 'manga_import_pick_folder':
+        return 'Pick manga folder';
+      case 'manga_import_missing_input':
+        return 'Pick a manga file or folder first.';
+      case 'manga_import_detected_title':
+        return 'This looks like manga';
+      case 'manga_import_detected_confirm':
+        return 'Import as manga';
+      case 'manga_import_detected_message':
+        return ({required Object name}) =>
+            '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
       default:
         return null;
     }
@@ -132638,6 +132962,21 @@ extension on _StringsFr {
             'Skipped ${m} of ${n} selected items that no longer exist';
       case 'game_text_thread_unset':
         return 'No thread selected — pick one to start capturing';
+      case 'manga_import_hint':
+        return 'Pick a manga folder, a .cbz/.zip page archive, or a .mokuro file.';
+      case 'manga_import_pick_file':
+        return 'Pick manga file';
+      case 'manga_import_pick_folder':
+        return 'Pick manga folder';
+      case 'manga_import_missing_input':
+        return 'Pick a manga file or folder first.';
+      case 'manga_import_detected_title':
+        return 'This looks like manga';
+      case 'manga_import_detected_confirm':
+        return 'Import as manga';
+      case 'manga_import_detected_message':
+        return ({required Object name}) =>
+            '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
       default:
         return null;
     }
@@ -138290,6 +138629,21 @@ extension on _StringsId {
             'Skipped ${m} of ${n} selected items that no longer exist';
       case 'game_text_thread_unset':
         return 'No thread selected — pick one to start capturing';
+      case 'manga_import_hint':
+        return 'Pick a manga folder, a .cbz/.zip page archive, or a .mokuro file.';
+      case 'manga_import_pick_file':
+        return 'Pick manga file';
+      case 'manga_import_pick_folder':
+        return 'Pick manga folder';
+      case 'manga_import_missing_input':
+        return 'Pick a manga file or folder first.';
+      case 'manga_import_detected_title':
+        return 'This looks like manga';
+      case 'manga_import_detected_confirm':
+        return 'Import as manga';
+      case 'manga_import_detected_message':
+        return ({required Object name}) =>
+            '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
       default:
         return null;
     }
@@ -143957,6 +144311,21 @@ extension on _StringsIt {
             'Skipped ${m} of ${n} selected items that no longer exist';
       case 'game_text_thread_unset':
         return 'No thread selected — pick one to start capturing';
+      case 'manga_import_hint':
+        return 'Pick a manga folder, a .cbz/.zip page archive, or a .mokuro file.';
+      case 'manga_import_pick_file':
+        return 'Pick manga file';
+      case 'manga_import_pick_folder':
+        return 'Pick manga folder';
+      case 'manga_import_missing_input':
+        return 'Pick a manga file or folder first.';
+      case 'manga_import_detected_title':
+        return 'This looks like manga';
+      case 'manga_import_detected_confirm':
+        return 'Import as manga';
+      case 'manga_import_detected_message':
+        return ({required Object name}) =>
+            '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
       default:
         return null;
     }
@@ -149586,6 +149955,21 @@ extension on _StringsJa {
             'Skipped ${m} of ${n} selected items that no longer exist';
       case 'game_text_thread_unset':
         return 'No thread selected — pick one to start capturing';
+      case 'manga_import_hint':
+        return 'Pick a manga folder, a .cbz/.zip page archive, or a .mokuro file.';
+      case 'manga_import_pick_file':
+        return 'Pick manga file';
+      case 'manga_import_pick_folder':
+        return 'Pick manga folder';
+      case 'manga_import_missing_input':
+        return 'Pick a manga file or folder first.';
+      case 'manga_import_detected_title':
+        return 'This looks like manga';
+      case 'manga_import_detected_confirm':
+        return 'Import as manga';
+      case 'manga_import_detected_message':
+        return ({required Object name}) =>
+            '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
       default:
         return null;
     }
@@ -155219,6 +155603,21 @@ extension on _StringsKo {
             'Skipped ${m} of ${n} selected items that no longer exist';
       case 'game_text_thread_unset':
         return 'No thread selected — pick one to start capturing';
+      case 'manga_import_hint':
+        return 'Pick a manga folder, a .cbz/.zip page archive, or a .mokuro file.';
+      case 'manga_import_pick_file':
+        return 'Pick manga file';
+      case 'manga_import_pick_folder':
+        return 'Pick manga folder';
+      case 'manga_import_missing_input':
+        return 'Pick a manga file or folder first.';
+      case 'manga_import_detected_title':
+        return 'This looks like manga';
+      case 'manga_import_detected_confirm':
+        return 'Import as manga';
+      case 'manga_import_detected_message':
+        return ({required Object name}) =>
+            '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
       default:
         return null;
     }
@@ -160879,6 +161278,21 @@ extension on _StringsNl {
             'Skipped ${m} of ${n} selected items that no longer exist';
       case 'game_text_thread_unset':
         return 'No thread selected — pick one to start capturing';
+      case 'manga_import_hint':
+        return 'Pick a manga folder, a .cbz/.zip page archive, or a .mokuro file.';
+      case 'manga_import_pick_file':
+        return 'Pick manga file';
+      case 'manga_import_pick_folder':
+        return 'Pick manga folder';
+      case 'manga_import_missing_input':
+        return 'Pick a manga file or folder first.';
+      case 'manga_import_detected_title':
+        return 'This looks like manga';
+      case 'manga_import_detected_confirm':
+        return 'Import as manga';
+      case 'manga_import_detected_message':
+        return ({required Object name}) =>
+            '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
       default:
         return null;
     }
@@ -166536,6 +166950,21 @@ extension on _StringsPtBr {
             'Skipped ${m} of ${n} selected items that no longer exist';
       case 'game_text_thread_unset':
         return 'No thread selected — pick one to start capturing';
+      case 'manga_import_hint':
+        return 'Pick a manga folder, a .cbz/.zip page archive, or a .mokuro file.';
+      case 'manga_import_pick_file':
+        return 'Pick manga file';
+      case 'manga_import_pick_folder':
+        return 'Pick manga folder';
+      case 'manga_import_missing_input':
+        return 'Pick a manga file or folder first.';
+      case 'manga_import_detected_title':
+        return 'This looks like manga';
+      case 'manga_import_detected_confirm':
+        return 'Import as manga';
+      case 'manga_import_detected_message':
+        return ({required Object name}) =>
+            '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
       default:
         return null;
     }
@@ -172198,6 +172627,21 @@ extension on _StringsRu {
             'Skipped ${m} of ${n} selected items that no longer exist';
       case 'game_text_thread_unset':
         return 'No thread selected — pick one to start capturing';
+      case 'manga_import_hint':
+        return 'Pick a manga folder, a .cbz/.zip page archive, or a .mokuro file.';
+      case 'manga_import_pick_file':
+        return 'Pick manga file';
+      case 'manga_import_pick_folder':
+        return 'Pick manga folder';
+      case 'manga_import_missing_input':
+        return 'Pick a manga file or folder first.';
+      case 'manga_import_detected_title':
+        return 'This looks like manga';
+      case 'manga_import_detected_confirm':
+        return 'Import as manga';
+      case 'manga_import_detected_message':
+        return ({required Object name}) =>
+            '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
       default:
         return null;
     }
@@ -177844,6 +178288,21 @@ extension on _StringsTh {
             'Skipped ${m} of ${n} selected items that no longer exist';
       case 'game_text_thread_unset':
         return 'No thread selected — pick one to start capturing';
+      case 'manga_import_hint':
+        return 'Pick a manga folder, a .cbz/.zip page archive, or a .mokuro file.';
+      case 'manga_import_pick_file':
+        return 'Pick manga file';
+      case 'manga_import_pick_folder':
+        return 'Pick manga folder';
+      case 'manga_import_missing_input':
+        return 'Pick a manga file or folder first.';
+      case 'manga_import_detected_title':
+        return 'This looks like manga';
+      case 'manga_import_detected_confirm':
+        return 'Import as manga';
+      case 'manga_import_detected_message':
+        return ({required Object name}) =>
+            '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
       default:
         return null;
     }
@@ -183499,6 +183958,21 @@ extension on _StringsTr {
             'Skipped ${m} of ${n} selected items that no longer exist';
       case 'game_text_thread_unset':
         return 'No thread selected — pick one to start capturing';
+      case 'manga_import_hint':
+        return 'Pick a manga folder, a .cbz/.zip page archive, or a .mokuro file.';
+      case 'manga_import_pick_file':
+        return 'Pick manga file';
+      case 'manga_import_pick_folder':
+        return 'Pick manga folder';
+      case 'manga_import_missing_input':
+        return 'Pick a manga file or folder first.';
+      case 'manga_import_detected_title':
+        return 'This looks like manga';
+      case 'manga_import_detected_confirm':
+        return 'Import as manga';
+      case 'manga_import_detected_message':
+        return ({required Object name}) =>
+            '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
       default:
         return null;
     }
@@ -189149,6 +189623,21 @@ extension on _StringsVi {
             'Skipped ${m} of ${n} selected items that no longer exist';
       case 'game_text_thread_unset':
         return 'No thread selected — pick one to start capturing';
+      case 'manga_import_hint':
+        return 'Pick a manga folder, a .cbz/.zip page archive, or a .mokuro file.';
+      case 'manga_import_pick_file':
+        return 'Pick manga file';
+      case 'manga_import_pick_folder':
+        return 'Pick manga folder';
+      case 'manga_import_missing_input':
+        return 'Pick a manga file or folder first.';
+      case 'manga_import_detected_title':
+        return 'This looks like manga';
+      case 'manga_import_detected_confirm':
+        return 'Import as manga';
+      case 'manga_import_detected_message':
+        return ({required Object name}) =>
+            '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
       default:
         return null;
     }
@@ -194753,6 +195242,20 @@ extension on _StringsZhCn {
             '选中的 ${n} 项中有 ${m} 项已不存在，已跳过';
       case 'game_text_thread_unset':
         return '尚未选择线程 · 选一条后开始捕获';
+      case 'manga_import_hint':
+        return '选择漫画文件夹、.cbz/.zip 页图压缩包，或 .mokuro 文件。';
+      case 'manga_import_pick_file':
+        return '选择漫画文件';
+      case 'manga_import_pick_folder':
+        return '选择漫画文件夹';
+      case 'manga_import_missing_input':
+        return '请先选择漫画文件或文件夹。';
+      case 'manga_import_detected_title':
+        return '这看起来是漫画';
+      case 'manga_import_detected_confirm':
+        return '按漫画导入';
+      case 'manga_import_detected_message':
+        return ({required Object name}) => '「${name}」是漫画文件，将走漫画导入流程，而不是书籍导入流程。';
       default:
         return null;
     }
@@ -200377,6 +200880,21 @@ extension on _StringsZhHk {
             'Skipped ${m} of ${n} selected items that no longer exist';
       case 'game_text_thread_unset':
         return 'No thread selected — pick one to start capturing';
+      case 'manga_import_hint':
+        return 'Pick a manga folder, a .cbz/.zip page archive, or a .mokuro file.';
+      case 'manga_import_pick_file':
+        return 'Pick manga file';
+      case 'manga_import_pick_folder':
+        return 'Pick manga folder';
+      case 'manga_import_missing_input':
+        return 'Pick a manga file or folder first.';
+      case 'manga_import_detected_title':
+        return 'This looks like manga';
+      case 'manga_import_detected_confirm':
+        return 'Import as manga';
+      case 'manga_import_detected_message':
+        return ({required Object name}) =>
+            '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
       default:
         return null;
     }
