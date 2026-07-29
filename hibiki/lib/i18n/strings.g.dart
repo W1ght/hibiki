@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 48994 (2882 per locale)
+/// Strings: 49130 (2890 per locale)
 ///
-/// Built on 2026-08-01 at 04:54 UTC
+/// Built on 2026-08-01 at 05:05 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3895,6 +3895,22 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get gal_mining_animated_format => 'Game card animation format';
   String get gal_mining_animated_format_hint =>
       'Same formats as video cards, stored separately: a galgame frame barely moves within one line, so the trade-off differs.';
+  String get scrape_all => 'Scrape all';
+  String scrape_all_title({required Object kind}) => 'Scrape all ${kind}';
+  String scrape_all_confirm({required Object n}) =>
+      'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
+  String scrape_all_running({required Object current, required Object total}) =>
+      'Scraping ${current} / ${total}';
+  String scrape_all_item({required Object title}) => 'Processing: ${title}';
+  String scrape_all_done(
+          {required Object applied,
+          required Object review,
+          required Object skipped,
+          required Object failed}) =>
+      'Done: ${applied} applied, ${review} need review, ${skipped} skipped, ${failed} failed';
+  String get scrape_all_empty =>
+      'There are no items to scrape in this library.';
+  String get scrape_all_start => 'Start';
 }
 
 // Path: <root>
@@ -10521,6 +10537,30 @@ class _StringsAr extends _StringsEn {
   @override
   String get gal_mining_animated_format_hint =>
       'Same formats as video cards, stored separately: a galgame frame barely moves within one line, so the trade-off differs.';
+  @override
+  String get scrape_all => 'Scrape all';
+  @override
+  String scrape_all_title({required Object kind}) => 'Scrape all ${kind}';
+  @override
+  String scrape_all_confirm({required Object n}) =>
+      'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
+  @override
+  String scrape_all_running({required Object current, required Object total}) =>
+      'Scraping ${current} / ${total}';
+  @override
+  String scrape_all_item({required Object title}) => 'Processing: ${title}';
+  @override
+  String scrape_all_done(
+          {required Object applied,
+          required Object review,
+          required Object skipped,
+          required Object failed}) =>
+      'Done: ${applied} applied, ${review} need review, ${skipped} skipped, ${failed} failed';
+  @override
+  String get scrape_all_empty =>
+      'There are no items to scrape in this library.';
+  @override
+  String get scrape_all_start => 'Start';
 }
 
 // Path: <root>
@@ -17214,6 +17254,30 @@ class _StringsDe extends _StringsEn {
   @override
   String get gal_mining_animated_format_hint =>
       'Same formats as video cards, stored separately: a galgame frame barely moves within one line, so the trade-off differs.';
+  @override
+  String get scrape_all => 'Scrape all';
+  @override
+  String scrape_all_title({required Object kind}) => 'Scrape all ${kind}';
+  @override
+  String scrape_all_confirm({required Object n}) =>
+      'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
+  @override
+  String scrape_all_running({required Object current, required Object total}) =>
+      'Scraping ${current} / ${total}';
+  @override
+  String scrape_all_item({required Object title}) => 'Processing: ${title}';
+  @override
+  String scrape_all_done(
+          {required Object applied,
+          required Object review,
+          required Object skipped,
+          required Object failed}) =>
+      'Done: ${applied} applied, ${review} need review, ${skipped} skipped, ${failed} failed';
+  @override
+  String get scrape_all_empty =>
+      'There are no items to scrape in this library.';
+  @override
+  String get scrape_all_start => 'Start';
 }
 
 // Path: <root>
@@ -23923,6 +23987,30 @@ class _StringsEs extends _StringsEn {
   @override
   String get gal_mining_animated_format_hint =>
       'Same formats as video cards, stored separately: a galgame frame barely moves within one line, so the trade-off differs.';
+  @override
+  String get scrape_all => 'Scrape all';
+  @override
+  String scrape_all_title({required Object kind}) => 'Scrape all ${kind}';
+  @override
+  String scrape_all_confirm({required Object n}) =>
+      'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
+  @override
+  String scrape_all_running({required Object current, required Object total}) =>
+      'Scraping ${current} / ${total}';
+  @override
+  String scrape_all_item({required Object title}) => 'Processing: ${title}';
+  @override
+  String scrape_all_done(
+          {required Object applied,
+          required Object review,
+          required Object skipped,
+          required Object failed}) =>
+      'Done: ${applied} applied, ${review} need review, ${skipped} skipped, ${failed} failed';
+  @override
+  String get scrape_all_empty =>
+      'There are no items to scrape in this library.';
+  @override
+  String get scrape_all_start => 'Start';
 }
 
 // Path: <root>
@@ -30643,6 +30731,30 @@ class _StringsFr extends _StringsEn {
   @override
   String get gal_mining_animated_format_hint =>
       'Same formats as video cards, stored separately: a galgame frame barely moves within one line, so the trade-off differs.';
+  @override
+  String get scrape_all => 'Scrape all';
+  @override
+  String scrape_all_title({required Object kind}) => 'Scrape all ${kind}';
+  @override
+  String scrape_all_confirm({required Object n}) =>
+      'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
+  @override
+  String scrape_all_running({required Object current, required Object total}) =>
+      'Scraping ${current} / ${total}';
+  @override
+  String scrape_all_item({required Object title}) => 'Processing: ${title}';
+  @override
+  String scrape_all_done(
+          {required Object applied,
+          required Object review,
+          required Object skipped,
+          required Object failed}) =>
+      'Done: ${applied} applied, ${review} need review, ${skipped} skipped, ${failed} failed';
+  @override
+  String get scrape_all_empty =>
+      'There are no items to scrape in this library.';
+  @override
+  String get scrape_all_start => 'Start';
 }
 
 // Path: <root>
@@ -37292,6 +37404,30 @@ class _StringsId extends _StringsEn {
   @override
   String get gal_mining_animated_format_hint =>
       'Same formats as video cards, stored separately: a galgame frame barely moves within one line, so the trade-off differs.';
+  @override
+  String get scrape_all => 'Scrape all';
+  @override
+  String scrape_all_title({required Object kind}) => 'Scrape all ${kind}';
+  @override
+  String scrape_all_confirm({required Object n}) =>
+      'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
+  @override
+  String scrape_all_running({required Object current, required Object total}) =>
+      'Scraping ${current} / ${total}';
+  @override
+  String scrape_all_item({required Object title}) => 'Processing: ${title}';
+  @override
+  String scrape_all_done(
+          {required Object applied,
+          required Object review,
+          required Object skipped,
+          required Object failed}) =>
+      'Done: ${applied} applied, ${review} need review, ${skipped} skipped, ${failed} failed';
+  @override
+  String get scrape_all_empty =>
+      'There are no items to scrape in this library.';
+  @override
+  String get scrape_all_start => 'Start';
 }
 
 // Path: <root>
@@ -43987,6 +44123,30 @@ class _StringsIt extends _StringsEn {
   @override
   String get gal_mining_animated_format_hint =>
       'Same formats as video cards, stored separately: a galgame frame barely moves within one line, so the trade-off differs.';
+  @override
+  String get scrape_all => 'Scrape all';
+  @override
+  String scrape_all_title({required Object kind}) => 'Scrape all ${kind}';
+  @override
+  String scrape_all_confirm({required Object n}) =>
+      'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
+  @override
+  String scrape_all_running({required Object current, required Object total}) =>
+      'Scraping ${current} / ${total}';
+  @override
+  String scrape_all_item({required Object title}) => 'Processing: ${title}';
+  @override
+  String scrape_all_done(
+          {required Object applied,
+          required Object review,
+          required Object skipped,
+          required Object failed}) =>
+      'Done: ${applied} applied, ${review} need review, ${skipped} skipped, ${failed} failed';
+  @override
+  String get scrape_all_empty =>
+      'There are no items to scrape in this library.';
+  @override
+  String get scrape_all_start => 'Start';
 }
 
 // Path: <root>
@@ -50499,6 +50659,30 @@ class _StringsJa extends _StringsEn {
   @override
   String get gal_mining_animated_format_hint =>
       'Same formats as video cards, stored separately: a galgame frame barely moves within one line, so the trade-off differs.';
+  @override
+  String get scrape_all => 'Scrape all';
+  @override
+  String scrape_all_title({required Object kind}) => 'Scrape all ${kind}';
+  @override
+  String scrape_all_confirm({required Object n}) =>
+      'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
+  @override
+  String scrape_all_running({required Object current, required Object total}) =>
+      'Scraping ${current} / ${total}';
+  @override
+  String scrape_all_item({required Object title}) => 'Processing: ${title}';
+  @override
+  String scrape_all_done(
+          {required Object applied,
+          required Object review,
+          required Object skipped,
+          required Object failed}) =>
+      'Done: ${applied} applied, ${review} need review, ${skipped} skipped, ${failed} failed';
+  @override
+  String get scrape_all_empty =>
+      'There are no items to scrape in this library.';
+  @override
+  String get scrape_all_start => 'Start';
 }
 
 // Path: <root>
@@ -57013,6 +57197,30 @@ class _StringsKo extends _StringsEn {
   @override
   String get gal_mining_animated_format_hint =>
       'Same formats as video cards, stored separately: a galgame frame barely moves within one line, so the trade-off differs.';
+  @override
+  String get scrape_all => 'Scrape all';
+  @override
+  String scrape_all_title({required Object kind}) => 'Scrape all ${kind}';
+  @override
+  String scrape_all_confirm({required Object n}) =>
+      'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
+  @override
+  String scrape_all_running({required Object current, required Object total}) =>
+      'Scraping ${current} / ${total}';
+  @override
+  String scrape_all_item({required Object title}) => 'Processing: ${title}';
+  @override
+  String scrape_all_done(
+          {required Object applied,
+          required Object review,
+          required Object skipped,
+          required Object failed}) =>
+      'Done: ${applied} applied, ${review} need review, ${skipped} skipped, ${failed} failed';
+  @override
+  String get scrape_all_empty =>
+      'There are no items to scrape in this library.';
+  @override
+  String get scrape_all_start => 'Start';
 }
 
 // Path: <root>
@@ -63688,6 +63896,30 @@ class _StringsNl extends _StringsEn {
   @override
   String get gal_mining_animated_format_hint =>
       'Same formats as video cards, stored separately: a galgame frame barely moves within one line, so the trade-off differs.';
+  @override
+  String get scrape_all => 'Scrape all';
+  @override
+  String scrape_all_title({required Object kind}) => 'Scrape all ${kind}';
+  @override
+  String scrape_all_confirm({required Object n}) =>
+      'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
+  @override
+  String scrape_all_running({required Object current, required Object total}) =>
+      'Scraping ${current} / ${total}';
+  @override
+  String scrape_all_item({required Object title}) => 'Processing: ${title}';
+  @override
+  String scrape_all_done(
+          {required Object applied,
+          required Object review,
+          required Object skipped,
+          required Object failed}) =>
+      'Done: ${applied} applied, ${review} need review, ${skipped} skipped, ${failed} failed';
+  @override
+  String get scrape_all_empty =>
+      'There are no items to scrape in this library.';
+  @override
+  String get scrape_all_start => 'Start';
 }
 
 // Path: <root>
@@ -70376,6 +70608,30 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get gal_mining_animated_format_hint =>
       'Same formats as video cards, stored separately: a galgame frame barely moves within one line, so the trade-off differs.';
+  @override
+  String get scrape_all => 'Scrape all';
+  @override
+  String scrape_all_title({required Object kind}) => 'Scrape all ${kind}';
+  @override
+  String scrape_all_confirm({required Object n}) =>
+      'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
+  @override
+  String scrape_all_running({required Object current, required Object total}) =>
+      'Scraping ${current} / ${total}';
+  @override
+  String scrape_all_item({required Object title}) => 'Processing: ${title}';
+  @override
+  String scrape_all_done(
+          {required Object applied,
+          required Object review,
+          required Object skipped,
+          required Object failed}) =>
+      'Done: ${applied} applied, ${review} need review, ${skipped} skipped, ${failed} failed';
+  @override
+  String get scrape_all_empty =>
+      'There are no items to scrape in this library.';
+  @override
+  String get scrape_all_start => 'Start';
 }
 
 // Path: <root>
@@ -77048,6 +77304,30 @@ class _StringsRu extends _StringsEn {
   @override
   String get gal_mining_animated_format_hint =>
       'Same formats as video cards, stored separately: a galgame frame barely moves within one line, so the trade-off differs.';
+  @override
+  String get scrape_all => 'Scrape all';
+  @override
+  String scrape_all_title({required Object kind}) => 'Scrape all ${kind}';
+  @override
+  String scrape_all_confirm({required Object n}) =>
+      'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
+  @override
+  String scrape_all_running({required Object current, required Object total}) =>
+      'Scraping ${current} / ${total}';
+  @override
+  String scrape_all_item({required Object title}) => 'Processing: ${title}';
+  @override
+  String scrape_all_done(
+          {required Object applied,
+          required Object review,
+          required Object skipped,
+          required Object failed}) =>
+      'Done: ${applied} applied, ${review} need review, ${skipped} skipped, ${failed} failed';
+  @override
+  String get scrape_all_empty =>
+      'There are no items to scrape in this library.';
+  @override
+  String get scrape_all_start => 'Start';
 }
 
 // Path: <root>
@@ -83668,6 +83948,30 @@ class _StringsTh extends _StringsEn {
   @override
   String get gal_mining_animated_format_hint =>
       'Same formats as video cards, stored separately: a galgame frame barely moves within one line, so the trade-off differs.';
+  @override
+  String get scrape_all => 'Scrape all';
+  @override
+  String scrape_all_title({required Object kind}) => 'Scrape all ${kind}';
+  @override
+  String scrape_all_confirm({required Object n}) =>
+      'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
+  @override
+  String scrape_all_running({required Object current, required Object total}) =>
+      'Scraping ${current} / ${total}';
+  @override
+  String scrape_all_item({required Object title}) => 'Processing: ${title}';
+  @override
+  String scrape_all_done(
+          {required Object applied,
+          required Object review,
+          required Object skipped,
+          required Object failed}) =>
+      'Done: ${applied} applied, ${review} need review, ${skipped} skipped, ${failed} failed';
+  @override
+  String get scrape_all_empty =>
+      'There are no items to scrape in this library.';
+  @override
+  String get scrape_all_start => 'Start';
 }
 
 // Path: <root>
@@ -90320,6 +90624,30 @@ class _StringsTr extends _StringsEn {
   @override
   String get gal_mining_animated_format_hint =>
       'Same formats as video cards, stored separately: a galgame frame barely moves within one line, so the trade-off differs.';
+  @override
+  String get scrape_all => 'Scrape all';
+  @override
+  String scrape_all_title({required Object kind}) => 'Scrape all ${kind}';
+  @override
+  String scrape_all_confirm({required Object n}) =>
+      'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
+  @override
+  String scrape_all_running({required Object current, required Object total}) =>
+      'Scraping ${current} / ${total}';
+  @override
+  String scrape_all_item({required Object title}) => 'Processing: ${title}';
+  @override
+  String scrape_all_done(
+          {required Object applied,
+          required Object review,
+          required Object skipped,
+          required Object failed}) =>
+      'Done: ${applied} applied, ${review} need review, ${skipped} skipped, ${failed} failed';
+  @override
+  String get scrape_all_empty =>
+      'There are no items to scrape in this library.';
+  @override
+  String get scrape_all_start => 'Start';
 }
 
 // Path: <root>
@@ -96957,6 +97285,30 @@ class _StringsVi extends _StringsEn {
   @override
   String get gal_mining_animated_format_hint =>
       'Same formats as video cards, stored separately: a galgame frame barely moves within one line, so the trade-off differs.';
+  @override
+  String get scrape_all => 'Scrape all';
+  @override
+  String scrape_all_title({required Object kind}) => 'Scrape all ${kind}';
+  @override
+  String scrape_all_confirm({required Object n}) =>
+      'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
+  @override
+  String scrape_all_running({required Object current, required Object total}) =>
+      'Scraping ${current} / ${total}';
+  @override
+  String scrape_all_item({required Object title}) => 'Processing: ${title}';
+  @override
+  String scrape_all_done(
+          {required Object applied,
+          required Object review,
+          required Object skipped,
+          required Object failed}) =>
+      'Done: ${applied} applied, ${review} need review, ${skipped} skipped, ${failed} failed';
+  @override
+  String get scrape_all_empty =>
+      'There are no items to scrape in this library.';
+  @override
+  String get scrape_all_start => 'Start';
 }
 
 // Path: <root>
@@ -103121,6 +103473,29 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get gal_mining_animated_format_hint =>
       '与视频制卡同样的格式，但分开保存：galgame 一句台词内画面基本静止，取舍不同。';
+  @override
+  String get scrape_all => '全部刮削';
+  @override
+  String scrape_all_title({required Object kind}) => '刮削全部${kind}';
+  @override
+  String scrape_all_confirm({required Object n}) =>
+      '将按标题匹配库中的 ${n} 个条目。只自动应用唯一的精确匹配；已有手动封面会保留，歧义结果留待手动确认。';
+  @override
+  String scrape_all_running({required Object current, required Object total}) =>
+      '正在刮削 ${current} / ${total}';
+  @override
+  String scrape_all_item({required Object title}) => '正在处理：${title}';
+  @override
+  String scrape_all_done(
+          {required Object applied,
+          required Object review,
+          required Object skipped,
+          required Object failed}) =>
+      '完成：已应用 ${applied} 个，待手动确认 ${review} 个，已跳过 ${skipped} 个，失败 ${failed} 个';
+  @override
+  String get scrape_all_empty => '当前库没有可刮削的条目。';
+  @override
+  String get scrape_all_start => '开始';
 }
 
 // Path: <root>
@@ -109554,6 +109929,30 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get gal_mining_animated_format_hint =>
       'Same formats as video cards, stored separately: a galgame frame barely moves within one line, so the trade-off differs.';
+  @override
+  String get scrape_all => 'Scrape all';
+  @override
+  String scrape_all_title({required Object kind}) => 'Scrape all ${kind}';
+  @override
+  String scrape_all_confirm({required Object n}) =>
+      'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
+  @override
+  String scrape_all_running({required Object current, required Object total}) =>
+      'Scraping ${current} / ${total}';
+  @override
+  String scrape_all_item({required Object title}) => 'Processing: ${title}';
+  @override
+  String scrape_all_done(
+          {required Object applied,
+          required Object review,
+          required Object skipped,
+          required Object failed}) =>
+      'Done: ${applied} applied, ${review} need review, ${skipped} skipped, ${failed} failed';
+  @override
+  String get scrape_all_empty =>
+      'There are no items to scrape in this library.';
+  @override
+  String get scrape_all_start => 'Start';
 }
 
 /// Flat map(s) containing all translations.
@@ -115467,6 +115866,29 @@ extension on _StringsEn {
         return 'Game card animation format';
       case 'gal_mining_animated_format_hint':
         return 'Same formats as video cards, stored separately: a galgame frame barely moves within one line, so the trade-off differs.';
+      case 'scrape_all':
+        return 'Scrape all';
+      case 'scrape_all_title':
+        return ({required Object kind}) => 'Scrape all ${kind}';
+      case 'scrape_all_confirm':
+        return ({required Object n}) =>
+            'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
+      case 'scrape_all_running':
+        return ({required Object current, required Object total}) =>
+            'Scraping ${current} / ${total}';
+      case 'scrape_all_item':
+        return ({required Object title}) => 'Processing: ${title}';
+      case 'scrape_all_done':
+        return (
+                {required Object applied,
+                required Object review,
+                required Object skipped,
+                required Object failed}) =>
+            'Done: ${applied} applied, ${review} need review, ${skipped} skipped, ${failed} failed';
+      case 'scrape_all_empty':
+        return 'There are no items to scrape in this library.';
+      case 'scrape_all_start':
+        return 'Start';
       default:
         return null;
     }
@@ -121378,6 +121800,29 @@ extension on _StringsAr {
         return 'Game card animation format';
       case 'gal_mining_animated_format_hint':
         return 'Same formats as video cards, stored separately: a galgame frame barely moves within one line, so the trade-off differs.';
+      case 'scrape_all':
+        return 'Scrape all';
+      case 'scrape_all_title':
+        return ({required Object kind}) => 'Scrape all ${kind}';
+      case 'scrape_all_confirm':
+        return ({required Object n}) =>
+            'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
+      case 'scrape_all_running':
+        return ({required Object current, required Object total}) =>
+            'Scraping ${current} / ${total}';
+      case 'scrape_all_item':
+        return ({required Object title}) => 'Processing: ${title}';
+      case 'scrape_all_done':
+        return (
+                {required Object applied,
+                required Object review,
+                required Object skipped,
+                required Object failed}) =>
+            'Done: ${applied} applied, ${review} need review, ${skipped} skipped, ${failed} failed';
+      case 'scrape_all_empty':
+        return 'There are no items to scrape in this library.';
+      case 'scrape_all_start':
+        return 'Start';
       default:
         return null;
     }
@@ -127311,6 +127756,29 @@ extension on _StringsDe {
         return 'Game card animation format';
       case 'gal_mining_animated_format_hint':
         return 'Same formats as video cards, stored separately: a galgame frame barely moves within one line, so the trade-off differs.';
+      case 'scrape_all':
+        return 'Scrape all';
+      case 'scrape_all_title':
+        return ({required Object kind}) => 'Scrape all ${kind}';
+      case 'scrape_all_confirm':
+        return ({required Object n}) =>
+            'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
+      case 'scrape_all_running':
+        return ({required Object current, required Object total}) =>
+            'Scraping ${current} / ${total}';
+      case 'scrape_all_item':
+        return ({required Object title}) => 'Processing: ${title}';
+      case 'scrape_all_done':
+        return (
+                {required Object applied,
+                required Object review,
+                required Object skipped,
+                required Object failed}) =>
+            'Done: ${applied} applied, ${review} need review, ${skipped} skipped, ${failed} failed';
+      case 'scrape_all_empty':
+        return 'There are no items to scrape in this library.';
+      case 'scrape_all_start':
+        return 'Start';
       default:
         return null;
     }
@@ -133243,6 +133711,29 @@ extension on _StringsEs {
         return 'Game card animation format';
       case 'gal_mining_animated_format_hint':
         return 'Same formats as video cards, stored separately: a galgame frame barely moves within one line, so the trade-off differs.';
+      case 'scrape_all':
+        return 'Scrape all';
+      case 'scrape_all_title':
+        return ({required Object kind}) => 'Scrape all ${kind}';
+      case 'scrape_all_confirm':
+        return ({required Object n}) =>
+            'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
+      case 'scrape_all_running':
+        return ({required Object current, required Object total}) =>
+            'Scraping ${current} / ${total}';
+      case 'scrape_all_item':
+        return ({required Object title}) => 'Processing: ${title}';
+      case 'scrape_all_done':
+        return (
+                {required Object applied,
+                required Object review,
+                required Object skipped,
+                required Object failed}) =>
+            'Done: ${applied} applied, ${review} need review, ${skipped} skipped, ${failed} failed';
+      case 'scrape_all_empty':
+        return 'There are no items to scrape in this library.';
+      case 'scrape_all_start':
+        return 'Start';
       default:
         return null;
     }
@@ -139181,6 +139672,29 @@ extension on _StringsFr {
         return 'Game card animation format';
       case 'gal_mining_animated_format_hint':
         return 'Same formats as video cards, stored separately: a galgame frame barely moves within one line, so the trade-off differs.';
+      case 'scrape_all':
+        return 'Scrape all';
+      case 'scrape_all_title':
+        return ({required Object kind}) => 'Scrape all ${kind}';
+      case 'scrape_all_confirm':
+        return ({required Object n}) =>
+            'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
+      case 'scrape_all_running':
+        return ({required Object current, required Object total}) =>
+            'Scraping ${current} / ${total}';
+      case 'scrape_all_item':
+        return ({required Object title}) => 'Processing: ${title}';
+      case 'scrape_all_done':
+        return (
+                {required Object applied,
+                required Object review,
+                required Object skipped,
+                required Object failed}) =>
+            'Done: ${applied} applied, ${review} need review, ${skipped} skipped, ${failed} failed';
+      case 'scrape_all_empty':
+        return 'There are no items to scrape in this library.';
+      case 'scrape_all_start':
+        return 'Start';
       default:
         return null;
     }
@@ -145101,6 +145615,29 @@ extension on _StringsId {
         return 'Game card animation format';
       case 'gal_mining_animated_format_hint':
         return 'Same formats as video cards, stored separately: a galgame frame barely moves within one line, so the trade-off differs.';
+      case 'scrape_all':
+        return 'Scrape all';
+      case 'scrape_all_title':
+        return ({required Object kind}) => 'Scrape all ${kind}';
+      case 'scrape_all_confirm':
+        return ({required Object n}) =>
+            'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
+      case 'scrape_all_running':
+        return ({required Object current, required Object total}) =>
+            'Scraping ${current} / ${total}';
+      case 'scrape_all_item':
+        return ({required Object title}) => 'Processing: ${title}';
+      case 'scrape_all_done':
+        return (
+                {required Object applied,
+                required Object review,
+                required Object skipped,
+                required Object failed}) =>
+            'Done: ${applied} applied, ${review} need review, ${skipped} skipped, ${failed} failed';
+      case 'scrape_all_empty':
+        return 'There are no items to scrape in this library.';
+      case 'scrape_all_start':
+        return 'Start';
       default:
         return null;
     }
@@ -151035,6 +151572,29 @@ extension on _StringsIt {
         return 'Game card animation format';
       case 'gal_mining_animated_format_hint':
         return 'Same formats as video cards, stored separately: a galgame frame barely moves within one line, so the trade-off differs.';
+      case 'scrape_all':
+        return 'Scrape all';
+      case 'scrape_all_title':
+        return ({required Object kind}) => 'Scrape all ${kind}';
+      case 'scrape_all_confirm':
+        return ({required Object n}) =>
+            'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
+      case 'scrape_all_running':
+        return ({required Object current, required Object total}) =>
+            'Scraping ${current} / ${total}';
+      case 'scrape_all_item':
+        return ({required Object title}) => 'Processing: ${title}';
+      case 'scrape_all_done':
+        return (
+                {required Object applied,
+                required Object review,
+                required Object skipped,
+                required Object failed}) =>
+            'Done: ${applied} applied, ${review} need review, ${skipped} skipped, ${failed} failed';
+      case 'scrape_all_empty':
+        return 'There are no items to scrape in this library.';
+      case 'scrape_all_start':
+        return 'Start';
       default:
         return null;
     }
@@ -156931,6 +157491,29 @@ extension on _StringsJa {
         return 'Game card animation format';
       case 'gal_mining_animated_format_hint':
         return 'Same formats as video cards, stored separately: a galgame frame barely moves within one line, so the trade-off differs.';
+      case 'scrape_all':
+        return 'Scrape all';
+      case 'scrape_all_title':
+        return ({required Object kind}) => 'Scrape all ${kind}';
+      case 'scrape_all_confirm':
+        return ({required Object n}) =>
+            'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
+      case 'scrape_all_running':
+        return ({required Object current, required Object total}) =>
+            'Scraping ${current} / ${total}';
+      case 'scrape_all_item':
+        return ({required Object title}) => 'Processing: ${title}';
+      case 'scrape_all_done':
+        return (
+                {required Object applied,
+                required Object review,
+                required Object skipped,
+                required Object failed}) =>
+            'Done: ${applied} applied, ${review} need review, ${skipped} skipped, ${failed} failed';
+      case 'scrape_all_empty':
+        return 'There are no items to scrape in this library.';
+      case 'scrape_all_start':
+        return 'Start';
       default:
         return null;
     }
@@ -162831,6 +163414,29 @@ extension on _StringsKo {
         return 'Game card animation format';
       case 'gal_mining_animated_format_hint':
         return 'Same formats as video cards, stored separately: a galgame frame barely moves within one line, so the trade-off differs.';
+      case 'scrape_all':
+        return 'Scrape all';
+      case 'scrape_all_title':
+        return ({required Object kind}) => 'Scrape all ${kind}';
+      case 'scrape_all_confirm':
+        return ({required Object n}) =>
+            'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
+      case 'scrape_all_running':
+        return ({required Object current, required Object total}) =>
+            'Scraping ${current} / ${total}';
+      case 'scrape_all_item':
+        return ({required Object title}) => 'Processing: ${title}';
+      case 'scrape_all_done':
+        return (
+                {required Object applied,
+                required Object review,
+                required Object skipped,
+                required Object failed}) =>
+            'Done: ${applied} applied, ${review} need review, ${skipped} skipped, ${failed} failed';
+      case 'scrape_all_empty':
+        return 'There are no items to scrape in this library.';
+      case 'scrape_all_start':
+        return 'Start';
       default:
         return null;
     }
@@ -168759,6 +169365,29 @@ extension on _StringsNl {
         return 'Game card animation format';
       case 'gal_mining_animated_format_hint':
         return 'Same formats as video cards, stored separately: a galgame frame barely moves within one line, so the trade-off differs.';
+      case 'scrape_all':
+        return 'Scrape all';
+      case 'scrape_all_title':
+        return ({required Object kind}) => 'Scrape all ${kind}';
+      case 'scrape_all_confirm':
+        return ({required Object n}) =>
+            'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
+      case 'scrape_all_running':
+        return ({required Object current, required Object total}) =>
+            'Scraping ${current} / ${total}';
+      case 'scrape_all_item':
+        return ({required Object title}) => 'Processing: ${title}';
+      case 'scrape_all_done':
+        return (
+                {required Object applied,
+                required Object review,
+                required Object skipped,
+                required Object failed}) =>
+            'Done: ${applied} applied, ${review} need review, ${skipped} skipped, ${failed} failed';
+      case 'scrape_all_empty':
+        return 'There are no items to scrape in this library.';
+      case 'scrape_all_start':
+        return 'Start';
       default:
         return null;
     }
@@ -174684,6 +175313,29 @@ extension on _StringsPtBr {
         return 'Game card animation format';
       case 'gal_mining_animated_format_hint':
         return 'Same formats as video cards, stored separately: a galgame frame barely moves within one line, so the trade-off differs.';
+      case 'scrape_all':
+        return 'Scrape all';
+      case 'scrape_all_title':
+        return ({required Object kind}) => 'Scrape all ${kind}';
+      case 'scrape_all_confirm':
+        return ({required Object n}) =>
+            'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
+      case 'scrape_all_running':
+        return ({required Object current, required Object total}) =>
+            'Scraping ${current} / ${total}';
+      case 'scrape_all_item':
+        return ({required Object title}) => 'Processing: ${title}';
+      case 'scrape_all_done':
+        return (
+                {required Object applied,
+                required Object review,
+                required Object skipped,
+                required Object failed}) =>
+            'Done: ${applied} applied, ${review} need review, ${skipped} skipped, ${failed} failed';
+      case 'scrape_all_empty':
+        return 'There are no items to scrape in this library.';
+      case 'scrape_all_start':
+        return 'Start';
       default:
         return null;
     }
@@ -180614,6 +181266,29 @@ extension on _StringsRu {
         return 'Game card animation format';
       case 'gal_mining_animated_format_hint':
         return 'Same formats as video cards, stored separately: a galgame frame barely moves within one line, so the trade-off differs.';
+      case 'scrape_all':
+        return 'Scrape all';
+      case 'scrape_all_title':
+        return ({required Object kind}) => 'Scrape all ${kind}';
+      case 'scrape_all_confirm':
+        return ({required Object n}) =>
+            'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
+      case 'scrape_all_running':
+        return ({required Object current, required Object total}) =>
+            'Scraping ${current} / ${total}';
+      case 'scrape_all_item':
+        return ({required Object title}) => 'Processing: ${title}';
+      case 'scrape_all_done':
+        return (
+                {required Object applied,
+                required Object review,
+                required Object skipped,
+                required Object failed}) =>
+            'Done: ${applied} applied, ${review} need review, ${skipped} skipped, ${failed} failed';
+      case 'scrape_all_empty':
+        return 'There are no items to scrape in this library.';
+      case 'scrape_all_start':
+        return 'Start';
       default:
         return null;
     }
@@ -186527,6 +187202,29 @@ extension on _StringsTh {
         return 'Game card animation format';
       case 'gal_mining_animated_format_hint':
         return 'Same formats as video cards, stored separately: a galgame frame barely moves within one line, so the trade-off differs.';
+      case 'scrape_all':
+        return 'Scrape all';
+      case 'scrape_all_title':
+        return ({required Object kind}) => 'Scrape all ${kind}';
+      case 'scrape_all_confirm':
+        return ({required Object n}) =>
+            'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
+      case 'scrape_all_running':
+        return ({required Object current, required Object total}) =>
+            'Scraping ${current} / ${total}';
+      case 'scrape_all_item':
+        return ({required Object title}) => 'Processing: ${title}';
+      case 'scrape_all_done':
+        return (
+                {required Object applied,
+                required Object review,
+                required Object skipped,
+                required Object failed}) =>
+            'Done: ${applied} applied, ${review} need review, ${skipped} skipped, ${failed} failed';
+      case 'scrape_all_empty':
+        return 'There are no items to scrape in this library.';
+      case 'scrape_all_start':
+        return 'Start';
       default:
         return null;
     }
@@ -192449,6 +193147,29 @@ extension on _StringsTr {
         return 'Game card animation format';
       case 'gal_mining_animated_format_hint':
         return 'Same formats as video cards, stored separately: a galgame frame barely moves within one line, so the trade-off differs.';
+      case 'scrape_all':
+        return 'Scrape all';
+      case 'scrape_all_title':
+        return ({required Object kind}) => 'Scrape all ${kind}';
+      case 'scrape_all_confirm':
+        return ({required Object n}) =>
+            'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
+      case 'scrape_all_running':
+        return ({required Object current, required Object total}) =>
+            'Scraping ${current} / ${total}';
+      case 'scrape_all_item':
+        return ({required Object title}) => 'Processing: ${title}';
+      case 'scrape_all_done':
+        return (
+                {required Object applied,
+                required Object review,
+                required Object skipped,
+                required Object failed}) =>
+            'Done: ${applied} applied, ${review} need review, ${skipped} skipped, ${failed} failed';
+      case 'scrape_all_empty':
+        return 'There are no items to scrape in this library.';
+      case 'scrape_all_start':
+        return 'Start';
       default:
         return null;
     }
@@ -198367,6 +199088,29 @@ extension on _StringsVi {
         return 'Game card animation format';
       case 'gal_mining_animated_format_hint':
         return 'Same formats as video cards, stored separately: a galgame frame barely moves within one line, so the trade-off differs.';
+      case 'scrape_all':
+        return 'Scrape all';
+      case 'scrape_all_title':
+        return ({required Object kind}) => 'Scrape all ${kind}';
+      case 'scrape_all_confirm':
+        return ({required Object n}) =>
+            'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
+      case 'scrape_all_running':
+        return ({required Object current, required Object total}) =>
+            'Scraping ${current} / ${total}';
+      case 'scrape_all_item':
+        return ({required Object title}) => 'Processing: ${title}';
+      case 'scrape_all_done':
+        return (
+                {required Object applied,
+                required Object review,
+                required Object skipped,
+                required Object failed}) =>
+            'Done: ${applied} applied, ${review} need review, ${skipped} skipped, ${failed} failed';
+      case 'scrape_all_empty':
+        return 'There are no items to scrape in this library.';
+      case 'scrape_all_start':
+        return 'Start';
       default:
         return null;
     }
@@ -204232,6 +204976,29 @@ extension on _StringsZhCn {
         return '游戏制卡动图格式';
       case 'gal_mining_animated_format_hint':
         return '与视频制卡同样的格式，但分开保存：galgame 一句台词内画面基本静止，取舍不同。';
+      case 'scrape_all':
+        return '全部刮削';
+      case 'scrape_all_title':
+        return ({required Object kind}) => '刮削全部${kind}';
+      case 'scrape_all_confirm':
+        return ({required Object n}) =>
+            '将按标题匹配库中的 ${n} 个条目。只自动应用唯一的精确匹配；已有手动封面会保留，歧义结果留待手动确认。';
+      case 'scrape_all_running':
+        return ({required Object current, required Object total}) =>
+            '正在刮削 ${current} / ${total}';
+      case 'scrape_all_item':
+        return ({required Object title}) => '正在处理：${title}';
+      case 'scrape_all_done':
+        return (
+                {required Object applied,
+                required Object review,
+                required Object skipped,
+                required Object failed}) =>
+            '完成：已应用 ${applied} 个，待手动确认 ${review} 个，已跳过 ${skipped} 个，失败 ${failed} 个';
+      case 'scrape_all_empty':
+        return '当前库没有可刮削的条目。';
+      case 'scrape_all_start':
+        return '开始';
       default:
         return null;
     }
@@ -210123,6 +210890,29 @@ extension on _StringsZhHk {
         return 'Game card animation format';
       case 'gal_mining_animated_format_hint':
         return 'Same formats as video cards, stored separately: a galgame frame barely moves within one line, so the trade-off differs.';
+      case 'scrape_all':
+        return 'Scrape all';
+      case 'scrape_all_title':
+        return ({required Object kind}) => 'Scrape all ${kind}';
+      case 'scrape_all_confirm':
+        return ({required Object n}) =>
+            'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
+      case 'scrape_all_running':
+        return ({required Object current, required Object total}) =>
+            'Scraping ${current} / ${total}';
+      case 'scrape_all_item':
+        return ({required Object title}) => 'Processing: ${title}';
+      case 'scrape_all_done':
+        return (
+                {required Object applied,
+                required Object review,
+                required Object skipped,
+                required Object failed}) =>
+            'Done: ${applied} applied, ${review} need review, ${skipped} skipped, ${failed} failed';
+      case 'scrape_all_empty':
+        return 'There are no items to scrape in this library.';
+      case 'scrape_all_start':
+        return 'Start';
       default:
         return null;
     }
