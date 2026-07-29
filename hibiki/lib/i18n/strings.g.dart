@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 47379 (2787 per locale)
+/// Strings: 47413 (2789 per locale)
 ///
-/// Built on 2026-07-28 at 20:13 UTC
+/// Built on 2026-07-29 at 06:06 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3736,6 +3736,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get mihon_filter_exclude => 'Exclude';
   String get mihon_filter_ascending => 'Ascending';
   String get mihon_filter_descending => 'Descending';
+  String get mihon_add_to_bookshelf => 'Add to manga shelf';
+  String get mihon_in_bookshelf => 'In manga shelf';
 }
 
 // Path: <root>
@@ -10107,6 +10109,10 @@ class _StringsAr extends _StringsEn {
   String get mihon_filter_ascending => '升序';
   @override
   String get mihon_filter_descending => '降序';
+  @override
+  String get mihon_add_to_bookshelf => 'Add to manga shelf';
+  @override
+  String get mihon_in_bookshelf => 'In manga shelf';
 }
 
 // Path: <root>
@@ -16546,6 +16552,10 @@ class _StringsDe extends _StringsEn {
   String get mihon_filter_ascending => '升序';
   @override
   String get mihon_filter_descending => '降序';
+  @override
+  String get mihon_add_to_bookshelf => 'Add to manga shelf';
+  @override
+  String get mihon_in_bookshelf => 'In manga shelf';
 }
 
 // Path: <root>
@@ -23001,6 +23011,10 @@ class _StringsEs extends _StringsEn {
   String get mihon_filter_ascending => '升序';
   @override
   String get mihon_filter_descending => '降序';
+  @override
+  String get mihon_add_to_bookshelf => 'Add to manga shelf';
+  @override
+  String get mihon_in_bookshelf => 'In manga shelf';
 }
 
 // Path: <root>
@@ -29467,6 +29481,10 @@ class _StringsFr extends _StringsEn {
   String get mihon_filter_ascending => '升序';
   @override
   String get mihon_filter_descending => '降序';
+  @override
+  String get mihon_add_to_bookshelf => 'Add to manga shelf';
+  @override
+  String get mihon_in_bookshelf => 'In manga shelf';
 }
 
 // Path: <root>
@@ -35862,6 +35880,10 @@ class _StringsId extends _StringsEn {
   String get mihon_filter_ascending => '升序';
   @override
   String get mihon_filter_descending => '降序';
+  @override
+  String get mihon_add_to_bookshelf => 'Add to manga shelf';
+  @override
+  String get mihon_in_bookshelf => 'In manga shelf';
 }
 
 // Path: <root>
@@ -42303,6 +42325,10 @@ class _StringsIt extends _StringsEn {
   String get mihon_filter_ascending => '升序';
   @override
   String get mihon_filter_descending => '降序';
+  @override
+  String get mihon_add_to_bookshelf => 'Add to manga shelf';
+  @override
+  String get mihon_in_bookshelf => 'In manga shelf';
 }
 
 // Path: <root>
@@ -48561,6 +48587,10 @@ class _StringsJa extends _StringsEn {
   String get mihon_filter_ascending => '升序';
   @override
   String get mihon_filter_descending => '降序';
+  @override
+  String get mihon_add_to_bookshelf => 'Add to manga shelf';
+  @override
+  String get mihon_in_bookshelf => 'In manga shelf';
 }
 
 // Path: <root>
@@ -54821,6 +54851,10 @@ class _StringsKo extends _StringsEn {
   String get mihon_filter_ascending => '升序';
   @override
   String get mihon_filter_descending => '降序';
+  @override
+  String get mihon_add_to_bookshelf => 'Add to manga shelf';
+  @override
+  String get mihon_in_bookshelf => 'In manga shelf';
 }
 
 // Path: <root>
@@ -61242,6 +61276,10 @@ class _StringsNl extends _StringsEn {
   String get mihon_filter_ascending => '升序';
   @override
   String get mihon_filter_descending => '降序';
+  @override
+  String get mihon_add_to_bookshelf => 'Add to manga shelf';
+  @override
+  String get mihon_in_bookshelf => 'In manga shelf';
 }
 
 // Path: <root>
@@ -67676,6 +67714,10 @@ class _StringsPtBr extends _StringsEn {
   String get mihon_filter_ascending => '升序';
   @override
   String get mihon_filter_descending => '降序';
+  @override
+  String get mihon_add_to_bookshelf => 'Add to manga shelf';
+  @override
+  String get mihon_in_bookshelf => 'In manga shelf';
 }
 
 // Path: <root>
@@ -74094,6 +74136,10 @@ class _StringsRu extends _StringsEn {
   String get mihon_filter_ascending => '升序';
   @override
   String get mihon_filter_descending => '降序';
+  @override
+  String get mihon_add_to_bookshelf => 'Add to manga shelf';
+  @override
+  String get mihon_in_bookshelf => 'In manga shelf';
 }
 
 // Path: <root>
@@ -80460,6 +80506,10 @@ class _StringsTh extends _StringsEn {
   String get mihon_filter_ascending => '升序';
   @override
   String get mihon_filter_descending => '降序';
+  @override
+  String get mihon_add_to_bookshelf => 'Add to manga shelf';
+  @override
+  String get mihon_in_bookshelf => 'In manga shelf';
 }
 
 // Path: <root>
@@ -86858,6 +86908,10 @@ class _StringsTr extends _StringsEn {
   String get mihon_filter_ascending => '升序';
   @override
   String get mihon_filter_descending => '降序';
+  @override
+  String get mihon_add_to_bookshelf => 'Add to manga shelf';
+  @override
+  String get mihon_in_bookshelf => 'In manga shelf';
 }
 
 // Path: <root>
@@ -93241,6 +93295,10 @@ class _StringsVi extends _StringsEn {
   String get mihon_filter_ascending => '升序';
   @override
   String get mihon_filter_descending => '降序';
+  @override
+  String get mihon_add_to_bookshelf => 'Add to manga shelf';
+  @override
+  String get mihon_in_bookshelf => 'In manga shelf';
 }
 
 // Path: <root>
@@ -99175,6 +99233,10 @@ class _StringsZhCn extends _StringsEn {
   String get mihon_filter_ascending => '升序';
   @override
   String get mihon_filter_descending => '降序';
+  @override
+  String get mihon_add_to_bookshelf => '加入漫画书架';
+  @override
+  String get mihon_in_bookshelf => '已加入漫画书架';
 }
 
 // Path: <root>
@@ -105354,6 +105416,10 @@ class _StringsZhHk extends _StringsEn {
   String get mihon_filter_ascending => '升序';
   @override
   String get mihon_filter_descending => '降序';
+  @override
+  String get mihon_add_to_bookshelf => 'Add to manga shelf';
+  @override
+  String get mihon_in_bookshelf => 'In manga shelf';
 }
 
 /// Flat map(s) containing all translations.
@@ -111061,6 +111127,10 @@ extension on _StringsEn {
         return 'Ascending';
       case 'mihon_filter_descending':
         return 'Descending';
+      case 'mihon_add_to_bookshelf':
+        return 'Add to manga shelf';
+      case 'mihon_in_bookshelf':
+        return 'In manga shelf';
       default:
         return null;
     }
@@ -116766,6 +116836,10 @@ extension on _StringsAr {
         return '升序';
       case 'mihon_filter_descending':
         return '降序';
+      case 'mihon_add_to_bookshelf':
+        return 'Add to manga shelf';
+      case 'mihon_in_bookshelf':
+        return 'In manga shelf';
       default:
         return null;
     }
@@ -122492,6 +122566,10 @@ extension on _StringsDe {
         return '升序';
       case 'mihon_filter_descending':
         return '降序';
+      case 'mihon_add_to_bookshelf':
+        return 'Add to manga shelf';
+      case 'mihon_in_bookshelf':
+        return 'In manga shelf';
       default:
         return null;
     }
@@ -128217,6 +128295,10 @@ extension on _StringsEs {
         return '升序';
       case 'mihon_filter_descending':
         return '降序';
+      case 'mihon_add_to_bookshelf':
+        return 'Add to manga shelf';
+      case 'mihon_in_bookshelf':
+        return 'In manga shelf';
       default:
         return null;
     }
@@ -133948,6 +134030,10 @@ extension on _StringsFr {
         return '升序';
       case 'mihon_filter_descending':
         return '降序';
+      case 'mihon_add_to_bookshelf':
+        return 'Add to manga shelf';
+      case 'mihon_in_bookshelf':
+        return 'In manga shelf';
       default:
         return null;
     }
@@ -139661,6 +139747,10 @@ extension on _StringsId {
         return '升序';
       case 'mihon_filter_descending':
         return '降序';
+      case 'mihon_add_to_bookshelf':
+        return 'Add to manga shelf';
+      case 'mihon_in_bookshelf':
+        return 'In manga shelf';
       default:
         return null;
     }
@@ -145389,6 +145479,10 @@ extension on _StringsIt {
         return '升序';
       case 'mihon_filter_descending':
         return '降序';
+      case 'mihon_add_to_bookshelf':
+        return 'Add to manga shelf';
+      case 'mihon_in_bookshelf':
+        return 'In manga shelf';
       default:
         return null;
     }
@@ -151079,6 +151173,10 @@ extension on _StringsJa {
         return '升序';
       case 'mihon_filter_descending':
         return '降序';
+      case 'mihon_add_to_bookshelf':
+        return 'Add to manga shelf';
+      case 'mihon_in_bookshelf':
+        return 'In manga shelf';
       default:
         return null;
     }
@@ -156773,6 +156871,10 @@ extension on _StringsKo {
         return '升序';
       case 'mihon_filter_descending':
         return '降序';
+      case 'mihon_add_to_bookshelf':
+        return 'Add to manga shelf';
+      case 'mihon_in_bookshelf':
+        return 'In manga shelf';
       default:
         return null;
     }
@@ -162494,6 +162596,10 @@ extension on _StringsNl {
         return '升序';
       case 'mihon_filter_descending':
         return '降序';
+      case 'mihon_add_to_bookshelf':
+        return 'Add to manga shelf';
+      case 'mihon_in_bookshelf':
+        return 'In manga shelf';
       default:
         return null;
     }
@@ -168212,6 +168318,10 @@ extension on _StringsPtBr {
         return '升序';
       case 'mihon_filter_descending':
         return '降序';
+      case 'mihon_add_to_bookshelf':
+        return 'Add to manga shelf';
+      case 'mihon_in_bookshelf':
+        return 'In manga shelf';
       default:
         return null;
     }
@@ -173935,6 +174045,10 @@ extension on _StringsRu {
         return '升序';
       case 'mihon_filter_descending':
         return '降序';
+      case 'mihon_add_to_bookshelf':
+        return 'Add to manga shelf';
+      case 'mihon_in_bookshelf':
+        return 'In manga shelf';
       default:
         return null;
     }
@@ -179642,6 +179756,10 @@ extension on _StringsTh {
         return '升序';
       case 'mihon_filter_descending':
         return '降序';
+      case 'mihon_add_to_bookshelf':
+        return 'Add to manga shelf';
+      case 'mihon_in_bookshelf':
+        return 'In manga shelf';
       default:
         return null;
     }
@@ -185358,6 +185476,10 @@ extension on _StringsTr {
         return '升序';
       case 'mihon_filter_descending':
         return '降序';
+      case 'mihon_add_to_bookshelf':
+        return 'Add to manga shelf';
+      case 'mihon_in_bookshelf':
+        return 'In manga shelf';
       default:
         return null;
     }
@@ -191069,6 +191191,10 @@ extension on _StringsVi {
         return '升序';
       case 'mihon_filter_descending':
         return '降序';
+      case 'mihon_add_to_bookshelf':
+        return 'Add to manga shelf';
+      case 'mihon_in_bookshelf':
+        return 'In manga shelf';
       default:
         return null;
     }
@@ -196734,6 +196860,10 @@ extension on _StringsZhCn {
         return '升序';
       case 'mihon_filter_descending':
         return '降序';
+      case 'mihon_add_to_bookshelf':
+        return '加入漫画书架';
+      case 'mihon_in_bookshelf':
+        return '已加入漫画书架';
       default:
         return null;
     }
@@ -202419,6 +202549,10 @@ extension on _StringsZhHk {
         return '升序';
       case 'mihon_filter_descending':
         return '降序';
+      case 'mihon_add_to_bookshelf':
+        return 'Add to manga shelf';
+      case 'mihon_in_bookshelf':
+        return 'In manga shelf';
       default:
         return null;
     }
