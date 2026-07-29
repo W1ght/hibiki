@@ -3,7 +3,7 @@
 /// Locales: 17
 /// Strings: 48569 (2857 per locale)
 ///
-/// Built on 2026-07-31 at 14:41 UTC
+/// Built on 2026-07-31 at 15:32 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -1513,9 +1513,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get game_unread_lines => 'Unread';
   String get game_upscaling => 'Game window upscaling';
   String get game_upscaling_auto => 'Auto';
-  String get game_upscaling_download_body =>
-      'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
-  String get game_upscaling_download_title => 'Download Magpie upscaler?';
   String get game_upscaling_hint_external =>
       'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
   String get game_upscaling_hint_first_run =>
@@ -3671,9 +3668,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get game_hook_reason_protocol_mismatch =>
       'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
   String get game_upscaling_auto_hint =>
-      'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+      'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
   String get game_upscaling_installed_only_hint =>
-      'Only use a Magpie that is already installed. Never downloads anything.';
+      'Only use Magpie if it is already installed or running. Do not unpack Hibiki\'s bundled version.';
   String get game_upscaling_off_hint => 'Never upscale the game window.';
   String get game_helper_bundle_missing =>
       'The galgame hook helper is not bundled with this build. Update Hibiki to get it.';
@@ -3682,7 +3679,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get game_upscaling_pick_body =>
       'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
   String get game_upscaling_hint_not_installed =>
-      'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+      'Magpie is unavailable. Use Auto to enable Hibiki\'s bundled version; if it is still unavailable, update or reinstall Hibiki.';
   String media_source_count_manga({required Object n}) => '${n} volumes';
   String get library_view_shelf => 'Shelf';
   String get library_view_browse => 'Browse';
@@ -3854,6 +3851,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
   String get anki_lapis_visual_field_dictionary_name_note =>
       'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+  String get game_upscaling_error_bundle_missing =>
+      'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
+  String get game_upscaling_error_bundle_invalid =>
+      'The bundled Magpie component is corrupted or failed verification. Reinstall or update Hibiki.';
 }
 
 // Path: <root>
@@ -6233,11 +6234,6 @@ class _StringsAr extends _StringsEn {
   String get game_upscaling => 'Game window upscaling';
   @override
   String get game_upscaling_auto => 'Auto';
-  @override
-  String get game_upscaling_download_body =>
-      'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
-  @override
-  String get game_upscaling_download_title => 'Download Magpie upscaler?';
   @override
   String get game_upscaling_hint_external =>
       'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
@@ -10108,10 +10104,10 @@ class _StringsAr extends _StringsEn {
       'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
   @override
   String get game_upscaling_auto_hint =>
-      'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+      'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
   @override
   String get game_upscaling_installed_only_hint =>
-      'Only use a Magpie that is already installed. Never downloads anything.';
+      'Only use Magpie if it is already installed or running. Do not unpack Hibiki\'s bundled version.';
   @override
   String get game_upscaling_off_hint => 'Never upscale the game window.';
   @override
@@ -10125,7 +10121,7 @@ class _StringsAr extends _StringsEn {
       'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
   @override
   String get game_upscaling_hint_not_installed =>
-      'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+      'Magpie is unavailable. Use Auto to enable Hibiki\'s bundled version; if it is still unavailable, update or reinstall Hibiki.';
   @override
   String media_source_count_manga({required Object n}) => '${n} volumes';
   @override
@@ -10414,6 +10410,12 @@ class _StringsAr extends _StringsEn {
   @override
   String get anki_lapis_visual_field_dictionary_name_note =>
       'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+  @override
+  String get game_upscaling_error_bundle_missing =>
+      'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
+  @override
+  String get game_upscaling_error_bundle_invalid =>
+      'The bundled Magpie component is corrupted or failed verification. Reinstall or update Hibiki.';
 }
 
 // Path: <root>
@@ -12820,11 +12822,6 @@ class _StringsDe extends _StringsEn {
   String get game_upscaling => 'Game window upscaling';
   @override
   String get game_upscaling_auto => 'Auto';
-  @override
-  String get game_upscaling_download_body =>
-      'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
-  @override
-  String get game_upscaling_download_title => 'Download Magpie upscaler?';
   @override
   String get game_upscaling_hint_external =>
       'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
@@ -16735,10 +16732,10 @@ class _StringsDe extends _StringsEn {
       'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
   @override
   String get game_upscaling_auto_hint =>
-      'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+      'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
   @override
   String get game_upscaling_installed_only_hint =>
-      'Only use a Magpie that is already installed. Never downloads anything.';
+      'Only use Magpie if it is already installed or running. Do not unpack Hibiki\'s bundled version.';
   @override
   String get game_upscaling_off_hint => 'Never upscale the game window.';
   @override
@@ -16752,7 +16749,7 @@ class _StringsDe extends _StringsEn {
       'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
   @override
   String get game_upscaling_hint_not_installed =>
-      'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+      'Magpie is unavailable. Use Auto to enable Hibiki\'s bundled version; if it is still unavailable, update or reinstall Hibiki.';
   @override
   String media_source_count_manga({required Object n}) => '${n} volumes';
   @override
@@ -17041,6 +17038,12 @@ class _StringsDe extends _StringsEn {
   @override
   String get anki_lapis_visual_field_dictionary_name_note =>
       'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+  @override
+  String get game_upscaling_error_bundle_missing =>
+      'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
+  @override
+  String get game_upscaling_error_bundle_invalid =>
+      'The bundled Magpie component is corrupted or failed verification. Reinstall or update Hibiki.';
 }
 
 // Path: <root>
@@ -19448,11 +19451,6 @@ class _StringsEs extends _StringsEn {
   String get game_upscaling => 'Game window upscaling';
   @override
   String get game_upscaling_auto => 'Auto';
-  @override
-  String get game_upscaling_download_body =>
-      'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
-  @override
-  String get game_upscaling_download_title => 'Download Magpie upscaler?';
   @override
   String get game_upscaling_hint_external =>
       'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
@@ -23378,10 +23376,10 @@ class _StringsEs extends _StringsEn {
       'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
   @override
   String get game_upscaling_auto_hint =>
-      'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+      'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
   @override
   String get game_upscaling_installed_only_hint =>
-      'Only use a Magpie that is already installed. Never downloads anything.';
+      'Only use Magpie if it is already installed or running. Do not unpack Hibiki\'s bundled version.';
   @override
   String get game_upscaling_off_hint => 'Never upscale the game window.';
   @override
@@ -23395,7 +23393,7 @@ class _StringsEs extends _StringsEn {
       'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
   @override
   String get game_upscaling_hint_not_installed =>
-      'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+      'Magpie is unavailable. Use Auto to enable Hibiki\'s bundled version; if it is still unavailable, update or reinstall Hibiki.';
   @override
   String media_source_count_manga({required Object n}) => '${n} volumes';
   @override
@@ -23684,6 +23682,12 @@ class _StringsEs extends _StringsEn {
   @override
   String get anki_lapis_visual_field_dictionary_name_note =>
       'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+  @override
+  String get game_upscaling_error_bundle_missing =>
+      'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
+  @override
+  String get game_upscaling_error_bundle_invalid =>
+      'The bundled Magpie component is corrupted or failed verification. Reinstall or update Hibiki.';
 }
 
 // Path: <root>
@@ -26099,11 +26103,6 @@ class _StringsFr extends _StringsEn {
   String get game_upscaling => 'Game window upscaling';
   @override
   String get game_upscaling_auto => 'Auto';
-  @override
-  String get game_upscaling_download_body =>
-      'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
-  @override
-  String get game_upscaling_download_title => 'Download Magpie upscaler?';
   @override
   String get game_upscaling_hint_external =>
       'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
@@ -30032,10 +30031,10 @@ class _StringsFr extends _StringsEn {
       'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
   @override
   String get game_upscaling_auto_hint =>
-      'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+      'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
   @override
   String get game_upscaling_installed_only_hint =>
-      'Only use a Magpie that is already installed. Never downloads anything.';
+      'Only use Magpie if it is already installed or running. Do not unpack Hibiki\'s bundled version.';
   @override
   String get game_upscaling_off_hint => 'Never upscale the game window.';
   @override
@@ -30049,7 +30048,7 @@ class _StringsFr extends _StringsEn {
       'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
   @override
   String get game_upscaling_hint_not_installed =>
-      'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+      'Magpie is unavailable. Use Auto to enable Hibiki\'s bundled version; if it is still unavailable, update or reinstall Hibiki.';
   @override
   String media_source_count_manga({required Object n}) => '${n} volumes';
   @override
@@ -30338,6 +30337,12 @@ class _StringsFr extends _StringsEn {
   @override
   String get anki_lapis_visual_field_dictionary_name_note =>
       'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+  @override
+  String get game_upscaling_error_bundle_missing =>
+      'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
+  @override
+  String get game_upscaling_error_bundle_invalid =>
+      'The bundled Magpie component is corrupted or failed verification. Reinstall or update Hibiki.';
 }
 
 // Path: <root>
@@ -32719,11 +32724,6 @@ class _StringsId extends _StringsEn {
   String get game_upscaling => 'Game window upscaling';
   @override
   String get game_upscaling_auto => 'Auto';
-  @override
-  String get game_upscaling_download_body =>
-      'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
-  @override
-  String get game_upscaling_download_title => 'Download Magpie upscaler?';
   @override
   String get game_upscaling_hint_external =>
       'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
@@ -36615,10 +36615,10 @@ class _StringsId extends _StringsEn {
       'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
   @override
   String get game_upscaling_auto_hint =>
-      'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+      'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
   @override
   String get game_upscaling_installed_only_hint =>
-      'Only use a Magpie that is already installed. Never downloads anything.';
+      'Only use Magpie if it is already installed or running. Do not unpack Hibiki\'s bundled version.';
   @override
   String get game_upscaling_off_hint => 'Never upscale the game window.';
   @override
@@ -36632,7 +36632,7 @@ class _StringsId extends _StringsEn {
       'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
   @override
   String get game_upscaling_hint_not_installed =>
-      'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+      'Magpie is unavailable. Use Auto to enable Hibiki\'s bundled version; if it is still unavailable, update or reinstall Hibiki.';
   @override
   String media_source_count_manga({required Object n}) => '${n} volumes';
   @override
@@ -36921,6 +36921,12 @@ class _StringsId extends _StringsEn {
   @override
   String get anki_lapis_visual_field_dictionary_name_note =>
       'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+  @override
+  String get game_upscaling_error_bundle_missing =>
+      'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
+  @override
+  String get game_upscaling_error_bundle_invalid =>
+      'The bundled Magpie component is corrupted or failed verification. Reinstall or update Hibiki.';
 }
 
 // Path: <root>
@@ -39322,11 +39328,6 @@ class _StringsIt extends _StringsEn {
   String get game_upscaling => 'Game window upscaling';
   @override
   String get game_upscaling_auto => 'Auto';
-  @override
-  String get game_upscaling_download_body =>
-      'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
-  @override
-  String get game_upscaling_download_title => 'Download Magpie upscaler?';
   @override
   String get game_upscaling_hint_external =>
       'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
@@ -43244,10 +43245,10 @@ class _StringsIt extends _StringsEn {
       'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
   @override
   String get game_upscaling_auto_hint =>
-      'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+      'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
   @override
   String get game_upscaling_installed_only_hint =>
-      'Only use a Magpie that is already installed. Never downloads anything.';
+      'Only use Magpie if it is already installed or running. Do not unpack Hibiki\'s bundled version.';
   @override
   String get game_upscaling_off_hint => 'Never upscale the game window.';
   @override
@@ -43261,7 +43262,7 @@ class _StringsIt extends _StringsEn {
       'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
   @override
   String get game_upscaling_hint_not_installed =>
-      'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+      'Magpie is unavailable. Use Auto to enable Hibiki\'s bundled version; if it is still unavailable, update or reinstall Hibiki.';
   @override
   String media_source_count_manga({required Object n}) => '${n} volumes';
   @override
@@ -43550,6 +43551,12 @@ class _StringsIt extends _StringsEn {
   @override
   String get anki_lapis_visual_field_dictionary_name_note =>
       'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+  @override
+  String get game_upscaling_error_bundle_missing =>
+      'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
+  @override
+  String get game_upscaling_error_bundle_invalid =>
+      'The bundled Magpie component is corrupted or failed verification. Reinstall or update Hibiki.';
 }
 
 // Path: <root>
@@ -45896,11 +45903,6 @@ class _StringsJa extends _StringsEn {
   String get game_upscaling => 'Game window upscaling';
   @override
   String get game_upscaling_auto => 'Auto';
-  @override
-  String get game_upscaling_download_body =>
-      'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
-  @override
-  String get game_upscaling_download_title => 'Download Magpie upscaler?';
   @override
   String get game_upscaling_hint_external =>
       'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
@@ -49690,10 +49692,10 @@ class _StringsJa extends _StringsEn {
       'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
   @override
   String get game_upscaling_auto_hint =>
-      'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+      'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
   @override
   String get game_upscaling_installed_only_hint =>
-      'Only use a Magpie that is already installed. Never downloads anything.';
+      'Only use Magpie if it is already installed or running. Do not unpack Hibiki\'s bundled version.';
   @override
   String get game_upscaling_off_hint => 'Never upscale the game window.';
   @override
@@ -49707,7 +49709,7 @@ class _StringsJa extends _StringsEn {
       'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
   @override
   String get game_upscaling_hint_not_installed =>
-      'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+      'Magpie is unavailable. Use Auto to enable Hibiki\'s bundled version; if it is still unavailable, update or reinstall Hibiki.';
   @override
   String media_source_count_manga({required Object n}) => '${n} volumes';
   @override
@@ -49996,6 +49998,12 @@ class _StringsJa extends _StringsEn {
   @override
   String get anki_lapis_visual_field_dictionary_name_note =>
       'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+  @override
+  String get game_upscaling_error_bundle_missing =>
+      'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
+  @override
+  String get game_upscaling_error_bundle_invalid =>
+      'The bundled Magpie component is corrupted or failed verification. Reinstall or update Hibiki.';
 }
 
 // Path: <root>
@@ -52342,11 +52350,6 @@ class _StringsKo extends _StringsEn {
   String get game_upscaling => 'Game window upscaling';
   @override
   String get game_upscaling_auto => 'Auto';
-  @override
-  String get game_upscaling_download_body =>
-      'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
-  @override
-  String get game_upscaling_download_title => 'Download Magpie upscaler?';
   @override
   String get game_upscaling_hint_external =>
       'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
@@ -56138,10 +56141,10 @@ class _StringsKo extends _StringsEn {
       'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
   @override
   String get game_upscaling_auto_hint =>
-      'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+      'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
   @override
   String get game_upscaling_installed_only_hint =>
-      'Only use a Magpie that is already installed. Never downloads anything.';
+      'Only use Magpie if it is already installed or running. Do not unpack Hibiki\'s bundled version.';
   @override
   String get game_upscaling_off_hint => 'Never upscale the game window.';
   @override
@@ -56155,7 +56158,7 @@ class _StringsKo extends _StringsEn {
       'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
   @override
   String get game_upscaling_hint_not_installed =>
-      'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+      'Magpie is unavailable. Use Auto to enable Hibiki\'s bundled version; if it is still unavailable, update or reinstall Hibiki.';
   @override
   String media_source_count_manga({required Object n}) => '${n} volumes';
   @override
@@ -56444,6 +56447,12 @@ class _StringsKo extends _StringsEn {
   @override
   String get anki_lapis_visual_field_dictionary_name_note =>
       'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+  @override
+  String get game_upscaling_error_bundle_missing =>
+      'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
+  @override
+  String get game_upscaling_error_bundle_invalid =>
+      'The bundled Magpie component is corrupted or failed verification. Reinstall or update Hibiki.';
 }
 
 // Path: <root>
@@ -58839,11 +58848,6 @@ class _StringsNl extends _StringsEn {
   String get game_upscaling => 'Game window upscaling';
   @override
   String get game_upscaling_auto => 'Auto';
-  @override
-  String get game_upscaling_download_body =>
-      'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
-  @override
-  String get game_upscaling_download_title => 'Download Magpie upscaler?';
   @override
   String get game_upscaling_hint_external =>
       'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
@@ -62747,10 +62751,10 @@ class _StringsNl extends _StringsEn {
       'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
   @override
   String get game_upscaling_auto_hint =>
-      'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+      'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
   @override
   String get game_upscaling_installed_only_hint =>
-      'Only use a Magpie that is already installed. Never downloads anything.';
+      'Only use Magpie if it is already installed or running. Do not unpack Hibiki\'s bundled version.';
   @override
   String get game_upscaling_off_hint => 'Never upscale the game window.';
   @override
@@ -62764,7 +62768,7 @@ class _StringsNl extends _StringsEn {
       'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
   @override
   String get game_upscaling_hint_not_installed =>
-      'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+      'Magpie is unavailable. Use Auto to enable Hibiki\'s bundled version; if it is still unavailable, update or reinstall Hibiki.';
   @override
   String media_source_count_manga({required Object n}) => '${n} volumes';
   @override
@@ -63053,6 +63057,12 @@ class _StringsNl extends _StringsEn {
   @override
   String get anki_lapis_visual_field_dictionary_name_note =>
       'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+  @override
+  String get game_upscaling_error_bundle_missing =>
+      'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
+  @override
+  String get game_upscaling_error_bundle_invalid =>
+      'The bundled Magpie component is corrupted or failed verification. Reinstall or update Hibiki.';
 }
 
 // Path: <root>
@@ -65456,11 +65466,6 @@ class _StringsPtBr extends _StringsEn {
   String get game_upscaling => 'Game window upscaling';
   @override
   String get game_upscaling_auto => 'Auto';
-  @override
-  String get game_upscaling_download_body =>
-      'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
-  @override
-  String get game_upscaling_download_title => 'Download Magpie upscaler?';
   @override
   String get game_upscaling_hint_external =>
       'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
@@ -69369,10 +69374,10 @@ class _StringsPtBr extends _StringsEn {
       'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
   @override
   String get game_upscaling_auto_hint =>
-      'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+      'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
   @override
   String get game_upscaling_installed_only_hint =>
-      'Only use a Magpie that is already installed. Never downloads anything.';
+      'Only use Magpie if it is already installed or running. Do not unpack Hibiki\'s bundled version.';
   @override
   String get game_upscaling_off_hint => 'Never upscale the game window.';
   @override
@@ -69386,7 +69391,7 @@ class _StringsPtBr extends _StringsEn {
       'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
   @override
   String get game_upscaling_hint_not_installed =>
-      'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+      'Magpie is unavailable. Use Auto to enable Hibiki\'s bundled version; if it is still unavailable, update or reinstall Hibiki.';
   @override
   String media_source_count_manga({required Object n}) => '${n} volumes';
   @override
@@ -69675,6 +69680,12 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get anki_lapis_visual_field_dictionary_name_note =>
       'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+  @override
+  String get game_upscaling_error_bundle_missing =>
+      'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
+  @override
+  String get game_upscaling_error_bundle_invalid =>
+      'The bundled Magpie component is corrupted or failed verification. Reinstall or update Hibiki.';
 }
 
 // Path: <root>
@@ -72070,11 +72081,6 @@ class _StringsRu extends _StringsEn {
   String get game_upscaling => 'Game window upscaling';
   @override
   String get game_upscaling_auto => 'Auto';
-  @override
-  String get game_upscaling_download_body =>
-      'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
-  @override
-  String get game_upscaling_download_title => 'Download Magpie upscaler?';
   @override
   String get game_upscaling_hint_external =>
       'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
@@ -75975,10 +75981,10 @@ class _StringsRu extends _StringsEn {
       'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
   @override
   String get game_upscaling_auto_hint =>
-      'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+      'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
   @override
   String get game_upscaling_installed_only_hint =>
-      'Only use a Magpie that is already installed. Never downloads anything.';
+      'Only use Magpie if it is already installed or running. Do not unpack Hibiki\'s bundled version.';
   @override
   String get game_upscaling_off_hint => 'Never upscale the game window.';
   @override
@@ -75992,7 +75998,7 @@ class _StringsRu extends _StringsEn {
       'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
   @override
   String get game_upscaling_hint_not_installed =>
-      'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+      'Magpie is unavailable. Use Auto to enable Hibiki\'s bundled version; if it is still unavailable, update or reinstall Hibiki.';
   @override
   String media_source_count_manga({required Object n}) => '${n} volumes';
   @override
@@ -76281,6 +76287,12 @@ class _StringsRu extends _StringsEn {
   @override
   String get anki_lapis_visual_field_dictionary_name_note =>
       'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+  @override
+  String get game_upscaling_error_bundle_missing =>
+      'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
+  @override
+  String get game_upscaling_error_bundle_invalid =>
+      'The bundled Magpie component is corrupted or failed verification. Reinstall or update Hibiki.';
 }
 
 // Path: <root>
@@ -78654,11 +78666,6 @@ class _StringsTh extends _StringsEn {
   String get game_upscaling => 'Game window upscaling';
   @override
   String get game_upscaling_auto => 'Auto';
-  @override
-  String get game_upscaling_download_body =>
-      'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
-  @override
-  String get game_upscaling_download_title => 'Download Magpie upscaler?';
   @override
   String get game_upscaling_hint_external =>
       'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
@@ -82529,10 +82536,10 @@ class _StringsTh extends _StringsEn {
       'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
   @override
   String get game_upscaling_auto_hint =>
-      'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+      'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
   @override
   String get game_upscaling_installed_only_hint =>
-      'Only use a Magpie that is already installed. Never downloads anything.';
+      'Only use Magpie if it is already installed or running. Do not unpack Hibiki\'s bundled version.';
   @override
   String get game_upscaling_off_hint => 'Never upscale the game window.';
   @override
@@ -82546,7 +82553,7 @@ class _StringsTh extends _StringsEn {
       'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
   @override
   String get game_upscaling_hint_not_installed =>
-      'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+      'Magpie is unavailable. Use Auto to enable Hibiki\'s bundled version; if it is still unavailable, update or reinstall Hibiki.';
   @override
   String media_source_count_manga({required Object n}) => '${n} volumes';
   @override
@@ -82835,6 +82842,12 @@ class _StringsTh extends _StringsEn {
   @override
   String get anki_lapis_visual_field_dictionary_name_note =>
       'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+  @override
+  String get game_upscaling_error_bundle_missing =>
+      'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
+  @override
+  String get game_upscaling_error_bundle_invalid =>
+      'The bundled Magpie component is corrupted or failed verification. Reinstall or update Hibiki.';
 }
 
 // Path: <root>
@@ -85226,11 +85239,6 @@ class _StringsTr extends _StringsEn {
   String get game_upscaling => 'Game window upscaling';
   @override
   String get game_upscaling_auto => 'Auto';
-  @override
-  String get game_upscaling_download_body =>
-      'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
-  @override
-  String get game_upscaling_download_title => 'Download Magpie upscaler?';
   @override
   String get game_upscaling_hint_external =>
       'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
@@ -89115,10 +89123,10 @@ class _StringsTr extends _StringsEn {
       'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
   @override
   String get game_upscaling_auto_hint =>
-      'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+      'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
   @override
   String get game_upscaling_installed_only_hint =>
-      'Only use a Magpie that is already installed. Never downloads anything.';
+      'Only use Magpie if it is already installed or running. Do not unpack Hibiki\'s bundled version.';
   @override
   String get game_upscaling_off_hint => 'Never upscale the game window.';
   @override
@@ -89132,7 +89140,7 @@ class _StringsTr extends _StringsEn {
       'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
   @override
   String get game_upscaling_hint_not_installed =>
-      'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+      'Magpie is unavailable. Use Auto to enable Hibiki\'s bundled version; if it is still unavailable, update or reinstall Hibiki.';
   @override
   String media_source_count_manga({required Object n}) => '${n} volumes';
   @override
@@ -89421,6 +89429,12 @@ class _StringsTr extends _StringsEn {
   @override
   String get anki_lapis_visual_field_dictionary_name_note =>
       'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+  @override
+  String get game_upscaling_error_bundle_missing =>
+      'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
+  @override
+  String get game_upscaling_error_bundle_invalid =>
+      'The bundled Magpie component is corrupted or failed verification. Reinstall or update Hibiki.';
 }
 
 // Path: <root>
@@ -91805,11 +91819,6 @@ class _StringsVi extends _StringsEn {
   String get game_upscaling => 'Game window upscaling';
   @override
   String get game_upscaling_auto => 'Auto';
-  @override
-  String get game_upscaling_download_body =>
-      'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
-  @override
-  String get game_upscaling_download_title => 'Download Magpie upscaler?';
   @override
   String get game_upscaling_hint_external =>
       'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
@@ -95686,10 +95695,10 @@ class _StringsVi extends _StringsEn {
       'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
   @override
   String get game_upscaling_auto_hint =>
-      'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+      'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
   @override
   String get game_upscaling_installed_only_hint =>
-      'Only use a Magpie that is already installed. Never downloads anything.';
+      'Only use Magpie if it is already installed or running. Do not unpack Hibiki\'s bundled version.';
   @override
   String get game_upscaling_off_hint => 'Never upscale the game window.';
   @override
@@ -95703,7 +95712,7 @@ class _StringsVi extends _StringsEn {
       'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
   @override
   String get game_upscaling_hint_not_installed =>
-      'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+      'Magpie is unavailable. Use Auto to enable Hibiki\'s bundled version; if it is still unavailable, update or reinstall Hibiki.';
   @override
   String media_source_count_manga({required Object n}) => '${n} volumes';
   @override
@@ -95992,6 +96001,12 @@ class _StringsVi extends _StringsEn {
   @override
   String get anki_lapis_visual_field_dictionary_name_note =>
       'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+  @override
+  String get game_upscaling_error_bundle_missing =>
+      'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
+  @override
+  String get game_upscaling_error_bundle_invalid =>
+      'The bundled Magpie component is corrupted or failed verification. Reinstall or update Hibiki.';
 }
 
 // Path: <root>
@@ -98211,11 +98226,6 @@ class _StringsZhCn extends _StringsEn {
   String get game_upscaling => '游戏窗口超分';
   @override
   String get game_upscaling_auto => '自动';
-  @override
-  String get game_upscaling_download_body =>
-      '游戏窗口超分需要 Magpie（约 10 MB，GPL-3.0，由我们自行从源码编译）。现在下载吗？';
-  @override
-  String get game_upscaling_download_title => '下载 Magpie 超分组件？';
   @override
   String get game_upscaling_hint_external =>
       '你的电脑上已经开着一个 Magpie，Hibiki 没有去动它。按 Win+Shift+A 就能放大游戏窗口。';
@@ -101814,9 +101824,10 @@ class _StringsZhCn extends _StringsEn {
       '捕获组件版本与 Hibiki 不一致，请更新或重新安装 galgame 捕获组件。';
   @override
   String get game_upscaling_auto_hint =>
-      '优先用机器上已有的 Magpie；没有就在征得同意后下载我们的自编产物（约 10 MB）。';
+      '优先使用机器上正在运行的 Magpie；否则启用 Hibiki 内置版本，不需要下载。';
   @override
-  String get game_upscaling_installed_only_hint => '只用机器上已经装好的 Magpie，绝不联网下载。';
+  String get game_upscaling_installed_only_hint =>
+      '只用机器上已经安装或正在运行的 Magpie，不启用 Hibiki 内置版本。';
   @override
   String get game_upscaling_off_hint => '不放大游戏窗口。';
   @override
@@ -101829,7 +101840,7 @@ class _StringsZhCn extends _StringsEn {
       '捕获会话期间用 Magpie 放大这个游戏的窗口。每个游戏各自设置——只有原生分辨率低于屏幕的游戏才用得上。会占用显卡。';
   @override
   String get game_upscaling_hint_not_installed =>
-      '没有安装 Magpie。在游戏库里右键这个游戏，把「窗口超分」改成「自动」即可下载。';
+      'Magpie 当前不可用。将该游戏的「窗口超分」设为「自动」即可启用内置版本；仍不可用时请更新或重装 Hibiki。';
   @override
   String media_source_count_manga({required Object n}) => '${n} 卷';
   @override
@@ -102100,6 +102111,12 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get anki_lapis_visual_field_dictionary_name_note =>
       'Hibiki 生成的卡片把词性标签和词典名放在同一个标签里，两者无法分开设置样式。';
+  @override
+  String get game_upscaling_error_bundle_missing =>
+      'Hibiki 安装包不完整：缺少内置 Magpie 组件。请重新安装或更新 Hibiki。';
+  @override
+  String get game_upscaling_error_bundle_invalid =>
+      '内置 Magpie 组件已损坏或校验失败。请重新安装或更新 Hibiki。';
 }
 
 // Path: <root>
@@ -104416,11 +104433,6 @@ class _StringsZhHk extends _StringsEn {
   String get game_upscaling => 'Game window upscaling';
   @override
   String get game_upscaling_auto => 'Auto';
-  @override
-  String get game_upscaling_download_body =>
-      'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
-  @override
-  String get game_upscaling_download_title => 'Download Magpie upscaler?';
   @override
   String get game_upscaling_hint_external =>
       'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
@@ -108161,10 +108173,10 @@ class _StringsZhHk extends _StringsEn {
       'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
   @override
   String get game_upscaling_auto_hint =>
-      'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+      'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
   @override
   String get game_upscaling_installed_only_hint =>
-      'Only use a Magpie that is already installed. Never downloads anything.';
+      'Only use Magpie if it is already installed or running. Do not unpack Hibiki\'s bundled version.';
   @override
   String get game_upscaling_off_hint => 'Never upscale the game window.';
   @override
@@ -108178,7 +108190,7 @@ class _StringsZhHk extends _StringsEn {
       'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
   @override
   String get game_upscaling_hint_not_installed =>
-      'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+      'Magpie is unavailable. Use Auto to enable Hibiki\'s bundled version; if it is still unavailable, update or reinstall Hibiki.';
   @override
   String media_source_count_manga({required Object n}) => '${n} volumes';
   @override
@@ -108467,6 +108479,12 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get anki_lapis_visual_field_dictionary_name_note =>
       'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+  @override
+  String get game_upscaling_error_bundle_missing =>
+      'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
+  @override
+  String get game_upscaling_error_bundle_invalid =>
+      'The bundled Magpie component is corrupted or failed verification. Reinstall or update Hibiki.';
 }
 
 /// Flat map(s) containing all translations.
@@ -110574,10 +110592,6 @@ extension on _StringsEn {
         return 'Game window upscaling';
       case 'game_upscaling_auto':
         return 'Auto';
-      case 'game_upscaling_download_body':
-        return 'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
-      case 'game_upscaling_download_title':
-        return 'Download Magpie upscaler?';
       case 'game_upscaling_hint_external':
         return 'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
       case 'game_upscaling_hint_first_run':
@@ -114067,9 +114081,9 @@ extension on _StringsEn {
       case 'game_hook_reason_protocol_mismatch':
         return 'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
       case 'game_upscaling_auto_hint':
-        return 'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+        return 'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
       case 'game_upscaling_installed_only_hint':
-        return 'Only use a Magpie that is already installed. Never downloads anything.';
+        return 'Only use Magpie if it is already installed or running. Do not unpack Hibiki\'s bundled version.';
       case 'game_upscaling_off_hint':
         return 'Never upscale the game window.';
       case 'game_helper_bundle_missing':
@@ -114079,7 +114093,7 @@ extension on _StringsEn {
       case 'game_upscaling_pick_body':
         return 'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
       case 'game_upscaling_hint_not_installed':
-        return 'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+        return 'Magpie is unavailable. Use Auto to enable Hibiki\'s bundled version; if it is still unavailable, update or reinstall Hibiki.';
       case 'media_source_count_manga':
         return ({required Object n}) => '${n} volumes';
       case 'library_view_shelf':
@@ -114329,6 +114343,10 @@ extension on _StringsEn {
         return 'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
       case 'anki_lapis_visual_field_dictionary_name_note':
         return 'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+      case 'game_upscaling_error_bundle_missing':
+        return 'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
+      case 'game_upscaling_error_bundle_invalid':
+        return 'The bundled Magpie component is corrupted or failed verification. Reinstall or update Hibiki.';
       default:
         return null;
     }
@@ -116437,10 +116455,6 @@ extension on _StringsAr {
         return 'Game window upscaling';
       case 'game_upscaling_auto':
         return 'Auto';
-      case 'game_upscaling_download_body':
-        return 'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
-      case 'game_upscaling_download_title':
-        return 'Download Magpie upscaler?';
       case 'game_upscaling_hint_external':
         return 'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
       case 'game_upscaling_hint_first_run':
@@ -119927,9 +119941,9 @@ extension on _StringsAr {
       case 'game_hook_reason_protocol_mismatch':
         return 'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
       case 'game_upscaling_auto_hint':
-        return 'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+        return 'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
       case 'game_upscaling_installed_only_hint':
-        return 'Only use a Magpie that is already installed. Never downloads anything.';
+        return 'Only use Magpie if it is already installed or running. Do not unpack Hibiki\'s bundled version.';
       case 'game_upscaling_off_hint':
         return 'Never upscale the game window.';
       case 'game_helper_bundle_missing':
@@ -119939,7 +119953,7 @@ extension on _StringsAr {
       case 'game_upscaling_pick_body':
         return 'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
       case 'game_upscaling_hint_not_installed':
-        return 'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+        return 'Magpie is unavailable. Use Auto to enable Hibiki\'s bundled version; if it is still unavailable, update or reinstall Hibiki.';
       case 'media_source_count_manga':
         return ({required Object n}) => '${n} volumes';
       case 'library_view_shelf':
@@ -120189,6 +120203,10 @@ extension on _StringsAr {
         return 'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
       case 'anki_lapis_visual_field_dictionary_name_note':
         return 'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+      case 'game_upscaling_error_bundle_missing':
+        return 'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
+      case 'game_upscaling_error_bundle_invalid':
+        return 'The bundled Magpie component is corrupted or failed verification. Reinstall or update Hibiki.';
       default:
         return null;
     }
@@ -122301,10 +122319,6 @@ extension on _StringsDe {
         return 'Game window upscaling';
       case 'game_upscaling_auto':
         return 'Auto';
-      case 'game_upscaling_download_body':
-        return 'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
-      case 'game_upscaling_download_title':
-        return 'Download Magpie upscaler?';
       case 'game_upscaling_hint_external':
         return 'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
       case 'game_upscaling_hint_first_run':
@@ -125809,9 +125823,9 @@ extension on _StringsDe {
       case 'game_hook_reason_protocol_mismatch':
         return 'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
       case 'game_upscaling_auto_hint':
-        return 'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+        return 'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
       case 'game_upscaling_installed_only_hint':
-        return 'Only use a Magpie that is already installed. Never downloads anything.';
+        return 'Only use Magpie if it is already installed or running. Do not unpack Hibiki\'s bundled version.';
       case 'game_upscaling_off_hint':
         return 'Never upscale the game window.';
       case 'game_helper_bundle_missing':
@@ -125821,7 +125835,7 @@ extension on _StringsDe {
       case 'game_upscaling_pick_body':
         return 'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
       case 'game_upscaling_hint_not_installed':
-        return 'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+        return 'Magpie is unavailable. Use Auto to enable Hibiki\'s bundled version; if it is still unavailable, update or reinstall Hibiki.';
       case 'media_source_count_manga':
         return ({required Object n}) => '${n} volumes';
       case 'library_view_shelf':
@@ -126071,6 +126085,10 @@ extension on _StringsDe {
         return 'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
       case 'anki_lapis_visual_field_dictionary_name_note':
         return 'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+      case 'game_upscaling_error_bundle_missing':
+        return 'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
+      case 'game_upscaling_error_bundle_invalid':
+        return 'The bundled Magpie component is corrupted or failed verification. Reinstall or update Hibiki.';
       default:
         return null;
     }
@@ -128184,10 +128202,6 @@ extension on _StringsEs {
         return 'Game window upscaling';
       case 'game_upscaling_auto':
         return 'Auto';
-      case 'game_upscaling_download_body':
-        return 'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
-      case 'game_upscaling_download_title':
-        return 'Download Magpie upscaler?';
       case 'game_upscaling_hint_external':
         return 'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
       case 'game_upscaling_hint_first_run':
@@ -131690,9 +131704,9 @@ extension on _StringsEs {
       case 'game_hook_reason_protocol_mismatch':
         return 'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
       case 'game_upscaling_auto_hint':
-        return 'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+        return 'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
       case 'game_upscaling_installed_only_hint':
-        return 'Only use a Magpie that is already installed. Never downloads anything.';
+        return 'Only use Magpie if it is already installed or running. Do not unpack Hibiki\'s bundled version.';
       case 'game_upscaling_off_hint':
         return 'Never upscale the game window.';
       case 'game_helper_bundle_missing':
@@ -131702,7 +131716,7 @@ extension on _StringsEs {
       case 'game_upscaling_pick_body':
         return 'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
       case 'game_upscaling_hint_not_installed':
-        return 'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+        return 'Magpie is unavailable. Use Auto to enable Hibiki\'s bundled version; if it is still unavailable, update or reinstall Hibiki.';
       case 'media_source_count_manga':
         return ({required Object n}) => '${n} volumes';
       case 'library_view_shelf':
@@ -131952,6 +131966,10 @@ extension on _StringsEs {
         return 'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
       case 'anki_lapis_visual_field_dictionary_name_note':
         return 'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+      case 'game_upscaling_error_bundle_missing':
+        return 'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
+      case 'game_upscaling_error_bundle_invalid':
+        return 'The bundled Magpie component is corrupted or failed verification. Reinstall or update Hibiki.';
       default:
         return null;
     }
@@ -134068,10 +134086,6 @@ extension on _StringsFr {
         return 'Game window upscaling';
       case 'game_upscaling_auto':
         return 'Auto';
-      case 'game_upscaling_download_body':
-        return 'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
-      case 'game_upscaling_download_title':
-        return 'Download Magpie upscaler?';
       case 'game_upscaling_hint_external':
         return 'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
       case 'game_upscaling_hint_first_run':
@@ -137577,9 +137591,9 @@ extension on _StringsFr {
       case 'game_hook_reason_protocol_mismatch':
         return 'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
       case 'game_upscaling_auto_hint':
-        return 'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+        return 'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
       case 'game_upscaling_installed_only_hint':
-        return 'Only use a Magpie that is already installed. Never downloads anything.';
+        return 'Only use Magpie if it is already installed or running. Do not unpack Hibiki\'s bundled version.';
       case 'game_upscaling_off_hint':
         return 'Never upscale the game window.';
       case 'game_helper_bundle_missing':
@@ -137589,7 +137603,7 @@ extension on _StringsFr {
       case 'game_upscaling_pick_body':
         return 'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
       case 'game_upscaling_hint_not_installed':
-        return 'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+        return 'Magpie is unavailable. Use Auto to enable Hibiki\'s bundled version; if it is still unavailable, update or reinstall Hibiki.';
       case 'media_source_count_manga':
         return ({required Object n}) => '${n} volumes';
       case 'library_view_shelf':
@@ -137839,6 +137853,10 @@ extension on _StringsFr {
         return 'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
       case 'anki_lapis_visual_field_dictionary_name_note':
         return 'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+      case 'game_upscaling_error_bundle_missing':
+        return 'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
+      case 'game_upscaling_error_bundle_invalid':
+        return 'The bundled Magpie component is corrupted or failed verification. Reinstall or update Hibiki.';
       default:
         return null;
     }
@@ -139950,10 +139968,6 @@ extension on _StringsId {
         return 'Game window upscaling';
       case 'game_upscaling_auto':
         return 'Auto';
-      case 'game_upscaling_download_body':
-        return 'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
-      case 'game_upscaling_download_title':
-        return 'Download Magpie upscaler?';
       case 'game_upscaling_hint_external':
         return 'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
       case 'game_upscaling_hint_first_run':
@@ -143446,9 +143460,9 @@ extension on _StringsId {
       case 'game_hook_reason_protocol_mismatch':
         return 'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
       case 'game_upscaling_auto_hint':
-        return 'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+        return 'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
       case 'game_upscaling_installed_only_hint':
-        return 'Only use a Magpie that is already installed. Never downloads anything.';
+        return 'Only use Magpie if it is already installed or running. Do not unpack Hibiki\'s bundled version.';
       case 'game_upscaling_off_hint':
         return 'Never upscale the game window.';
       case 'game_helper_bundle_missing':
@@ -143458,7 +143472,7 @@ extension on _StringsId {
       case 'game_upscaling_pick_body':
         return 'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
       case 'game_upscaling_hint_not_installed':
-        return 'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+        return 'Magpie is unavailable. Use Auto to enable Hibiki\'s bundled version; if it is still unavailable, update or reinstall Hibiki.';
       case 'media_source_count_manga':
         return ({required Object n}) => '${n} volumes';
       case 'library_view_shelf':
@@ -143708,6 +143722,10 @@ extension on _StringsId {
         return 'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
       case 'anki_lapis_visual_field_dictionary_name_note':
         return 'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+      case 'game_upscaling_error_bundle_missing':
+        return 'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
+      case 'game_upscaling_error_bundle_invalid':
+        return 'The bundled Magpie component is corrupted or failed verification. Reinstall or update Hibiki.';
       default:
         return null;
     }
@@ -145820,10 +145838,6 @@ extension on _StringsIt {
         return 'Game window upscaling';
       case 'game_upscaling_auto':
         return 'Auto';
-      case 'game_upscaling_download_body':
-        return 'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
-      case 'game_upscaling_download_title':
-        return 'Download Magpie upscaler?';
       case 'game_upscaling_hint_external':
         return 'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
       case 'game_upscaling_hint_first_run':
@@ -149329,9 +149343,9 @@ extension on _StringsIt {
       case 'game_hook_reason_protocol_mismatch':
         return 'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
       case 'game_upscaling_auto_hint':
-        return 'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+        return 'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
       case 'game_upscaling_installed_only_hint':
-        return 'Only use a Magpie that is already installed. Never downloads anything.';
+        return 'Only use Magpie if it is already installed or running. Do not unpack Hibiki\'s bundled version.';
       case 'game_upscaling_off_hint':
         return 'Never upscale the game window.';
       case 'game_helper_bundle_missing':
@@ -149341,7 +149355,7 @@ extension on _StringsIt {
       case 'game_upscaling_pick_body':
         return 'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
       case 'game_upscaling_hint_not_installed':
-        return 'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+        return 'Magpie is unavailable. Use Auto to enable Hibiki\'s bundled version; if it is still unavailable, update or reinstall Hibiki.';
       case 'media_source_count_manga':
         return ({required Object n}) => '${n} volumes';
       case 'library_view_shelf':
@@ -149591,6 +149605,10 @@ extension on _StringsIt {
         return 'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
       case 'anki_lapis_visual_field_dictionary_name_note':
         return 'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+      case 'game_upscaling_error_bundle_missing':
+        return 'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
+      case 'game_upscaling_error_bundle_invalid':
+        return 'The bundled Magpie component is corrupted or failed verification. Reinstall or update Hibiki.';
       default:
         return null;
     }
@@ -151692,10 +151710,6 @@ extension on _StringsJa {
         return 'Game window upscaling';
       case 'game_upscaling_auto':
         return 'Auto';
-      case 'game_upscaling_download_body':
-        return 'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
-      case 'game_upscaling_download_title':
-        return 'Download Magpie upscaler?';
       case 'game_upscaling_hint_external':
         return 'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
       case 'game_upscaling_hint_first_run':
@@ -155174,9 +155188,9 @@ extension on _StringsJa {
       case 'game_hook_reason_protocol_mismatch':
         return 'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
       case 'game_upscaling_auto_hint':
-        return 'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+        return 'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
       case 'game_upscaling_installed_only_hint':
-        return 'Only use a Magpie that is already installed. Never downloads anything.';
+        return 'Only use Magpie if it is already installed or running. Do not unpack Hibiki\'s bundled version.';
       case 'game_upscaling_off_hint':
         return 'Never upscale the game window.';
       case 'game_helper_bundle_missing':
@@ -155186,7 +155200,7 @@ extension on _StringsJa {
       case 'game_upscaling_pick_body':
         return 'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
       case 'game_upscaling_hint_not_installed':
-        return 'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+        return 'Magpie is unavailable. Use Auto to enable Hibiki\'s bundled version; if it is still unavailable, update or reinstall Hibiki.';
       case 'media_source_count_manga':
         return ({required Object n}) => '${n} volumes';
       case 'library_view_shelf':
@@ -155436,6 +155450,10 @@ extension on _StringsJa {
         return 'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
       case 'anki_lapis_visual_field_dictionary_name_note':
         return 'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+      case 'game_upscaling_error_bundle_missing':
+        return 'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
+      case 'game_upscaling_error_bundle_invalid':
+        return 'The bundled Magpie component is corrupted or failed verification. Reinstall or update Hibiki.';
       default:
         return null;
     }
@@ -157538,10 +157556,6 @@ extension on _StringsKo {
         return 'Game window upscaling';
       case 'game_upscaling_auto':
         return 'Auto';
-      case 'game_upscaling_download_body':
-        return 'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
-      case 'game_upscaling_download_title':
-        return 'Download Magpie upscaler?';
       case 'game_upscaling_hint_external':
         return 'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
       case 'game_upscaling_hint_first_run':
@@ -161023,9 +161037,9 @@ extension on _StringsKo {
       case 'game_hook_reason_protocol_mismatch':
         return 'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
       case 'game_upscaling_auto_hint':
-        return 'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+        return 'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
       case 'game_upscaling_installed_only_hint':
-        return 'Only use a Magpie that is already installed. Never downloads anything.';
+        return 'Only use Magpie if it is already installed or running. Do not unpack Hibiki\'s bundled version.';
       case 'game_upscaling_off_hint':
         return 'Never upscale the game window.';
       case 'game_helper_bundle_missing':
@@ -161035,7 +161049,7 @@ extension on _StringsKo {
       case 'game_upscaling_pick_body':
         return 'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
       case 'game_upscaling_hint_not_installed':
-        return 'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+        return 'Magpie is unavailable. Use Auto to enable Hibiki\'s bundled version; if it is still unavailable, update or reinstall Hibiki.';
       case 'media_source_count_manga':
         return ({required Object n}) => '${n} volumes';
       case 'library_view_shelf':
@@ -161285,6 +161299,10 @@ extension on _StringsKo {
         return 'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
       case 'anki_lapis_visual_field_dictionary_name_note':
         return 'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+      case 'game_upscaling_error_bundle_missing':
+        return 'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
+      case 'game_upscaling_error_bundle_invalid':
+        return 'The bundled Magpie component is corrupted or failed verification. Reinstall or update Hibiki.';
       default:
         return null;
     }
@@ -163397,10 +163415,6 @@ extension on _StringsNl {
         return 'Game window upscaling';
       case 'game_upscaling_auto':
         return 'Auto';
-      case 'game_upscaling_download_body':
-        return 'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
-      case 'game_upscaling_download_title':
-        return 'Download Magpie upscaler?';
       case 'game_upscaling_hint_external':
         return 'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
       case 'game_upscaling_hint_first_run':
@@ -166900,9 +166914,9 @@ extension on _StringsNl {
       case 'game_hook_reason_protocol_mismatch':
         return 'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
       case 'game_upscaling_auto_hint':
-        return 'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+        return 'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
       case 'game_upscaling_installed_only_hint':
-        return 'Only use a Magpie that is already installed. Never downloads anything.';
+        return 'Only use Magpie if it is already installed or running. Do not unpack Hibiki\'s bundled version.';
       case 'game_upscaling_off_hint':
         return 'Never upscale the game window.';
       case 'game_helper_bundle_missing':
@@ -166912,7 +166926,7 @@ extension on _StringsNl {
       case 'game_upscaling_pick_body':
         return 'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
       case 'game_upscaling_hint_not_installed':
-        return 'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+        return 'Magpie is unavailable. Use Auto to enable Hibiki\'s bundled version; if it is still unavailable, update or reinstall Hibiki.';
       case 'media_source_count_manga':
         return ({required Object n}) => '${n} volumes';
       case 'library_view_shelf':
@@ -167162,6 +167176,10 @@ extension on _StringsNl {
         return 'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
       case 'anki_lapis_visual_field_dictionary_name_note':
         return 'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+      case 'game_upscaling_error_bundle_missing':
+        return 'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
+      case 'game_upscaling_error_bundle_invalid':
+        return 'The bundled Magpie component is corrupted or failed verification. Reinstall or update Hibiki.';
       default:
         return null;
     }
@@ -169273,10 +169291,6 @@ extension on _StringsPtBr {
         return 'Game window upscaling';
       case 'game_upscaling_auto':
         return 'Auto';
-      case 'game_upscaling_download_body':
-        return 'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
-      case 'game_upscaling_download_title':
-        return 'Download Magpie upscaler?';
       case 'game_upscaling_hint_external':
         return 'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
       case 'game_upscaling_hint_first_run':
@@ -172774,9 +172788,9 @@ extension on _StringsPtBr {
       case 'game_hook_reason_protocol_mismatch':
         return 'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
       case 'game_upscaling_auto_hint':
-        return 'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+        return 'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
       case 'game_upscaling_installed_only_hint':
-        return 'Only use a Magpie that is already installed. Never downloads anything.';
+        return 'Only use Magpie if it is already installed or running. Do not unpack Hibiki\'s bundled version.';
       case 'game_upscaling_off_hint':
         return 'Never upscale the game window.';
       case 'game_helper_bundle_missing':
@@ -172786,7 +172800,7 @@ extension on _StringsPtBr {
       case 'game_upscaling_pick_body':
         return 'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
       case 'game_upscaling_hint_not_installed':
-        return 'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+        return 'Magpie is unavailable. Use Auto to enable Hibiki\'s bundled version; if it is still unavailable, update or reinstall Hibiki.';
       case 'media_source_count_manga':
         return ({required Object n}) => '${n} volumes';
       case 'library_view_shelf':
@@ -173036,6 +173050,10 @@ extension on _StringsPtBr {
         return 'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
       case 'anki_lapis_visual_field_dictionary_name_note':
         return 'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+      case 'game_upscaling_error_bundle_missing':
+        return 'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
+      case 'game_upscaling_error_bundle_invalid':
+        return 'The bundled Magpie component is corrupted or failed verification. Reinstall or update Hibiki.';
       default:
         return null;
     }
@@ -175150,10 +175168,6 @@ extension on _StringsRu {
         return 'Game window upscaling';
       case 'game_upscaling_auto':
         return 'Auto';
-      case 'game_upscaling_download_body':
-        return 'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
-      case 'game_upscaling_download_title':
-        return 'Download Magpie upscaler?';
       case 'game_upscaling_hint_external':
         return 'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
       case 'game_upscaling_hint_first_run':
@@ -178653,9 +178667,9 @@ extension on _StringsRu {
       case 'game_hook_reason_protocol_mismatch':
         return 'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
       case 'game_upscaling_auto_hint':
-        return 'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+        return 'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
       case 'game_upscaling_installed_only_hint':
-        return 'Only use a Magpie that is already installed. Never downloads anything.';
+        return 'Only use Magpie if it is already installed or running. Do not unpack Hibiki\'s bundled version.';
       case 'game_upscaling_off_hint':
         return 'Never upscale the game window.';
       case 'game_helper_bundle_missing':
@@ -178665,7 +178679,7 @@ extension on _StringsRu {
       case 'game_upscaling_pick_body':
         return 'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
       case 'game_upscaling_hint_not_installed':
-        return 'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+        return 'Magpie is unavailable. Use Auto to enable Hibiki\'s bundled version; if it is still unavailable, update or reinstall Hibiki.';
       case 'media_source_count_manga':
         return ({required Object n}) => '${n} volumes';
       case 'library_view_shelf':
@@ -178915,6 +178929,10 @@ extension on _StringsRu {
         return 'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
       case 'anki_lapis_visual_field_dictionary_name_note':
         return 'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+      case 'game_upscaling_error_bundle_missing':
+        return 'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
+      case 'game_upscaling_error_bundle_invalid':
+        return 'The bundled Magpie component is corrupted or failed verification. Reinstall or update Hibiki.';
       default:
         return null;
     }
@@ -181021,10 +181039,6 @@ extension on _StringsTh {
         return 'Game window upscaling';
       case 'game_upscaling_auto':
         return 'Auto';
-      case 'game_upscaling_download_body':
-        return 'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
-      case 'game_upscaling_download_title':
-        return 'Download Magpie upscaler?';
       case 'game_upscaling_hint_external':
         return 'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
       case 'game_upscaling_hint_first_run':
@@ -184515,9 +184529,9 @@ extension on _StringsTh {
       case 'game_hook_reason_protocol_mismatch':
         return 'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
       case 'game_upscaling_auto_hint':
-        return 'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+        return 'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
       case 'game_upscaling_installed_only_hint':
-        return 'Only use a Magpie that is already installed. Never downloads anything.';
+        return 'Only use Magpie if it is already installed or running. Do not unpack Hibiki\'s bundled version.';
       case 'game_upscaling_off_hint':
         return 'Never upscale the game window.';
       case 'game_helper_bundle_missing':
@@ -184527,7 +184541,7 @@ extension on _StringsTh {
       case 'game_upscaling_pick_body':
         return 'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
       case 'game_upscaling_hint_not_installed':
-        return 'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+        return 'Magpie is unavailable. Use Auto to enable Hibiki\'s bundled version; if it is still unavailable, update or reinstall Hibiki.';
       case 'media_source_count_manga':
         return ({required Object n}) => '${n} volumes';
       case 'library_view_shelf':
@@ -184777,6 +184791,10 @@ extension on _StringsTh {
         return 'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
       case 'anki_lapis_visual_field_dictionary_name_note':
         return 'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+      case 'game_upscaling_error_bundle_missing':
+        return 'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
+      case 'game_upscaling_error_bundle_invalid':
+        return 'The bundled Magpie component is corrupted or failed verification. Reinstall or update Hibiki.';
       default:
         return null;
     }
@@ -186888,10 +186906,6 @@ extension on _StringsTr {
         return 'Game window upscaling';
       case 'game_upscaling_auto':
         return 'Auto';
-      case 'game_upscaling_download_body':
-        return 'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
-      case 'game_upscaling_download_title':
-        return 'Download Magpie upscaler?';
       case 'game_upscaling_hint_external':
         return 'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
       case 'game_upscaling_hint_first_run':
@@ -190386,9 +190400,9 @@ extension on _StringsTr {
       case 'game_hook_reason_protocol_mismatch':
         return 'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
       case 'game_upscaling_auto_hint':
-        return 'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+        return 'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
       case 'game_upscaling_installed_only_hint':
-        return 'Only use a Magpie that is already installed. Never downloads anything.';
+        return 'Only use Magpie if it is already installed or running. Do not unpack Hibiki\'s bundled version.';
       case 'game_upscaling_off_hint':
         return 'Never upscale the game window.';
       case 'game_helper_bundle_missing':
@@ -190398,7 +190412,7 @@ extension on _StringsTr {
       case 'game_upscaling_pick_body':
         return 'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
       case 'game_upscaling_hint_not_installed':
-        return 'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+        return 'Magpie is unavailable. Use Auto to enable Hibiki\'s bundled version; if it is still unavailable, update or reinstall Hibiki.';
       case 'media_source_count_manga':
         return ({required Object n}) => '${n} volumes';
       case 'library_view_shelf':
@@ -190648,6 +190662,10 @@ extension on _StringsTr {
         return 'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
       case 'anki_lapis_visual_field_dictionary_name_note':
         return 'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+      case 'game_upscaling_error_bundle_missing':
+        return 'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
+      case 'game_upscaling_error_bundle_invalid':
+        return 'The bundled Magpie component is corrupted or failed verification. Reinstall or update Hibiki.';
       default:
         return null;
     }
@@ -192757,10 +192775,6 @@ extension on _StringsVi {
         return 'Game window upscaling';
       case 'game_upscaling_auto':
         return 'Auto';
-      case 'game_upscaling_download_body':
-        return 'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
-      case 'game_upscaling_download_title':
-        return 'Download Magpie upscaler?';
       case 'game_upscaling_hint_external':
         return 'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
       case 'game_upscaling_hint_first_run':
@@ -196253,9 +196267,9 @@ extension on _StringsVi {
       case 'game_hook_reason_protocol_mismatch':
         return 'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
       case 'game_upscaling_auto_hint':
-        return 'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+        return 'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
       case 'game_upscaling_installed_only_hint':
-        return 'Only use a Magpie that is already installed. Never downloads anything.';
+        return 'Only use Magpie if it is already installed or running. Do not unpack Hibiki\'s bundled version.';
       case 'game_upscaling_off_hint':
         return 'Never upscale the game window.';
       case 'game_helper_bundle_missing':
@@ -196265,7 +196279,7 @@ extension on _StringsVi {
       case 'game_upscaling_pick_body':
         return 'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
       case 'game_upscaling_hint_not_installed':
-        return 'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+        return 'Magpie is unavailable. Use Auto to enable Hibiki\'s bundled version; if it is still unavailable, update or reinstall Hibiki.';
       case 'media_source_count_manga':
         return ({required Object n}) => '${n} volumes';
       case 'library_view_shelf':
@@ -196515,6 +196529,10 @@ extension on _StringsVi {
         return 'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
       case 'anki_lapis_visual_field_dictionary_name_note':
         return 'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+      case 'game_upscaling_error_bundle_missing':
+        return 'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
+      case 'game_upscaling_error_bundle_invalid':
+        return 'The bundled Magpie component is corrupted or failed verification. Reinstall or update Hibiki.';
       default:
         return null;
     }
@@ -198607,10 +198625,6 @@ extension on _StringsZhCn {
         return '游戏窗口超分';
       case 'game_upscaling_auto':
         return '自动';
-      case 'game_upscaling_download_body':
-        return '游戏窗口超分需要 Magpie（约 10 MB，GPL-3.0，由我们自行从源码编译）。现在下载吗？';
-      case 'game_upscaling_download_title':
-        return '下载 Magpie 超分组件？';
       case 'game_upscaling_hint_external':
         return '你的电脑上已经开着一个 Magpie，Hibiki 没有去动它。按 Win+Shift+A 就能放大游戏窗口。';
       case 'game_upscaling_hint_first_run':
@@ -202073,9 +202087,9 @@ extension on _StringsZhCn {
       case 'game_hook_reason_protocol_mismatch':
         return '捕获组件版本与 Hibiki 不一致，请更新或重新安装 galgame 捕获组件。';
       case 'game_upscaling_auto_hint':
-        return '优先用机器上已有的 Magpie；没有就在征得同意后下载我们的自编产物（约 10 MB）。';
+        return '优先使用机器上正在运行的 Magpie；否则启用 Hibiki 内置版本，不需要下载。';
       case 'game_upscaling_installed_only_hint':
-        return '只用机器上已经装好的 Magpie，绝不联网下载。';
+        return '只用机器上已经安装或正在运行的 Magpie，不启用 Hibiki 内置版本。';
       case 'game_upscaling_off_hint':
         return '不放大游戏窗口。';
       case 'game_helper_bundle_missing':
@@ -202085,7 +202099,7 @@ extension on _StringsZhCn {
       case 'game_upscaling_pick_body':
         return '捕获会话期间用 Magpie 放大这个游戏的窗口。每个游戏各自设置——只有原生分辨率低于屏幕的游戏才用得上。会占用显卡。';
       case 'game_upscaling_hint_not_installed':
-        return '没有安装 Magpie。在游戏库里右键这个游戏，把「窗口超分」改成「自动」即可下载。';
+        return 'Magpie 当前不可用。将该游戏的「窗口超分」设为「自动」即可启用内置版本；仍不可用时请更新或重装 Hibiki。';
       case 'media_source_count_manga':
         return ({required Object n}) => '${n} 卷';
       case 'library_view_shelf':
@@ -202330,6 +202344,10 @@ extension on _StringsZhCn {
         return '仅在保留多段释义的卡片上可见；只有一段释义的卡片不会显示。';
       case 'anki_lapis_visual_field_dictionary_name_note':
         return 'Hibiki 生成的卡片把词性标签和词典名放在同一个标签里，两者无法分开设置样式。';
+      case 'game_upscaling_error_bundle_missing':
+        return 'Hibiki 安装包不完整：缺少内置 Magpie 组件。请重新安装或更新 Hibiki。';
+      case 'game_upscaling_error_bundle_invalid':
+        return '内置 Magpie 组件已损坏或校验失败。请重新安装或更新 Hibiki。';
       default:
         return null;
     }
@@ -204430,10 +204448,6 @@ extension on _StringsZhHk {
         return 'Game window upscaling';
       case 'game_upscaling_auto':
         return 'Auto';
-      case 'game_upscaling_download_body':
-        return 'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
-      case 'game_upscaling_download_title':
-        return 'Download Magpie upscaler?';
       case 'game_upscaling_hint_external':
         return 'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
       case 'game_upscaling_hint_first_run':
@@ -207908,9 +207922,9 @@ extension on _StringsZhHk {
       case 'game_hook_reason_protocol_mismatch':
         return 'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
       case 'game_upscaling_auto_hint':
-        return 'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+        return 'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
       case 'game_upscaling_installed_only_hint':
-        return 'Only use a Magpie that is already installed. Never downloads anything.';
+        return 'Only use Magpie if it is already installed or running. Do not unpack Hibiki\'s bundled version.';
       case 'game_upscaling_off_hint':
         return 'Never upscale the game window.';
       case 'game_helper_bundle_missing':
@@ -207920,7 +207934,7 @@ extension on _StringsZhHk {
       case 'game_upscaling_pick_body':
         return 'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
       case 'game_upscaling_hint_not_installed':
-        return 'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+        return 'Magpie is unavailable. Use Auto to enable Hibiki\'s bundled version; if it is still unavailable, update or reinstall Hibiki.';
       case 'media_source_count_manga':
         return ({required Object n}) => '${n} volumes';
       case 'library_view_shelf':
@@ -208170,6 +208184,10 @@ extension on _StringsZhHk {
         return 'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
       case 'anki_lapis_visual_field_dictionary_name_note':
         return 'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+      case 'game_upscaling_error_bundle_missing':
+        return 'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
+      case 'game_upscaling_error_bundle_invalid':
+        return 'The bundled Magpie component is corrupted or failed verification. Reinstall or update Hibiki.';
       default:
         return null;
     }
