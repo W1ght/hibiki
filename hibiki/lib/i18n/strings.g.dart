@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 46971 (2763 per locale)
+/// Strings: 47158 (2774 per locale)
 ///
-/// Built on 2026-07-29 at 07:19 UTC
+/// Built on 2026-07-29 at 08:31 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3715,6 +3715,31 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get manga_import_detected_confirm => 'Import as manga';
   String manga_import_detected_message({required Object name}) =>
       '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+  String get video_jimaku_source_loading => 'Checking subtitle availability...';
+  String get video_jimaku_source_failed =>
+      'Could not check subtitle availability. Try searching again.';
+  String get video_jimaku_language_unknown => 'Language not labeled';
+  String video_jimaku_source_summary(
+          {required Object files,
+          required Object episodes,
+          required Object languages}) =>
+      '${files} subtitle files · ${episodes} episodes · ${languages}';
+  String video_jimaku_episode_unlabeled(
+          {required Object episode, required Object count}) =>
+      'No subtitle labeled episode ${episode}; ${count} unlabeled files may still match';
+  String video_jimaku_episode_unavailable({required Object episode}) =>
+      'No subtitle found for episode ${episode}';
+  String video_jimaku_episode_available(
+          {required Object count, required Object languages}) =>
+      '${count} subtitles available · ${languages}';
+  String get video_scrape_manual_match_hint =>
+      'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+  String get video_scrape_collection_match_hint =>
+      'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+  String get video_scrape_apply_to_collection_hint =>
+      'This writes the same cover to every episode. Leave it off unless that is intentional.';
+  String get video_scrape_tmdb_key_empty =>
+      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
 }
 
 // Path: <root>
@@ -10041,6 +10066,42 @@ class _StringsAr extends _StringsEn {
   @override
   String manga_import_detected_message({required Object name}) =>
       '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+  @override
+  String get video_jimaku_source_loading => 'Checking subtitle availability...';
+  @override
+  String get video_jimaku_source_failed =>
+      'Could not check subtitle availability. Try searching again.';
+  @override
+  String get video_jimaku_language_unknown => 'Language not labeled';
+  @override
+  String video_jimaku_source_summary(
+          {required Object files,
+          required Object episodes,
+          required Object languages}) =>
+      '${files} subtitle files · ${episodes} episodes · ${languages}';
+  @override
+  String video_jimaku_episode_unlabeled(
+          {required Object episode, required Object count}) =>
+      'No subtitle labeled episode ${episode}; ${count} unlabeled files may still match';
+  @override
+  String video_jimaku_episode_unavailable({required Object episode}) =>
+      'No subtitle found for episode ${episode}';
+  @override
+  String video_jimaku_episode_available(
+          {required Object count, required Object languages}) =>
+      '${count} subtitles available · ${languages}';
+  @override
+  String get video_scrape_manual_match_hint =>
+      'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+  @override
+  String get video_scrape_collection_match_hint =>
+      'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+  @override
+  String get video_scrape_apply_to_collection_hint =>
+      'This writes the same cover to every episode. Leave it off unless that is intentional.';
+  @override
+  String get video_scrape_tmdb_key_empty =>
+      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
 }
 
 // Path: <root>
@@ -16435,6 +16496,42 @@ class _StringsDe extends _StringsEn {
   @override
   String manga_import_detected_message({required Object name}) =>
       '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+  @override
+  String get video_jimaku_source_loading => 'Checking subtitle availability...';
+  @override
+  String get video_jimaku_source_failed =>
+      'Could not check subtitle availability. Try searching again.';
+  @override
+  String get video_jimaku_language_unknown => 'Language not labeled';
+  @override
+  String video_jimaku_source_summary(
+          {required Object files,
+          required Object episodes,
+          required Object languages}) =>
+      '${files} subtitle files · ${episodes} episodes · ${languages}';
+  @override
+  String video_jimaku_episode_unlabeled(
+          {required Object episode, required Object count}) =>
+      'No subtitle labeled episode ${episode}; ${count} unlabeled files may still match';
+  @override
+  String video_jimaku_episode_unavailable({required Object episode}) =>
+      'No subtitle found for episode ${episode}';
+  @override
+  String video_jimaku_episode_available(
+          {required Object count, required Object languages}) =>
+      '${count} subtitles available · ${languages}';
+  @override
+  String get video_scrape_manual_match_hint =>
+      'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+  @override
+  String get video_scrape_collection_match_hint =>
+      'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+  @override
+  String get video_scrape_apply_to_collection_hint =>
+      'This writes the same cover to every episode. Leave it off unless that is intentional.';
+  @override
+  String get video_scrape_tmdb_key_empty =>
+      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
 }
 
 // Path: <root>
@@ -22845,6 +22942,42 @@ class _StringsEs extends _StringsEn {
   @override
   String manga_import_detected_message({required Object name}) =>
       '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+  @override
+  String get video_jimaku_source_loading => 'Checking subtitle availability...';
+  @override
+  String get video_jimaku_source_failed =>
+      'Could not check subtitle availability. Try searching again.';
+  @override
+  String get video_jimaku_language_unknown => 'Language not labeled';
+  @override
+  String video_jimaku_source_summary(
+          {required Object files,
+          required Object episodes,
+          required Object languages}) =>
+      '${files} subtitle files · ${episodes} episodes · ${languages}';
+  @override
+  String video_jimaku_episode_unlabeled(
+          {required Object episode, required Object count}) =>
+      'No subtitle labeled episode ${episode}; ${count} unlabeled files may still match';
+  @override
+  String video_jimaku_episode_unavailable({required Object episode}) =>
+      'No subtitle found for episode ${episode}';
+  @override
+  String video_jimaku_episode_available(
+          {required Object count, required Object languages}) =>
+      '${count} subtitles available · ${languages}';
+  @override
+  String get video_scrape_manual_match_hint =>
+      'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+  @override
+  String get video_scrape_collection_match_hint =>
+      'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+  @override
+  String get video_scrape_apply_to_collection_hint =>
+      'This writes the same cover to every episode. Leave it off unless that is intentional.';
+  @override
+  String get video_scrape_tmdb_key_empty =>
+      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
 }
 
 // Path: <root>
@@ -29266,6 +29399,42 @@ class _StringsFr extends _StringsEn {
   @override
   String manga_import_detected_message({required Object name}) =>
       '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+  @override
+  String get video_jimaku_source_loading => 'Checking subtitle availability...';
+  @override
+  String get video_jimaku_source_failed =>
+      'Could not check subtitle availability. Try searching again.';
+  @override
+  String get video_jimaku_language_unknown => 'Language not labeled';
+  @override
+  String video_jimaku_source_summary(
+          {required Object files,
+          required Object episodes,
+          required Object languages}) =>
+      '${files} subtitle files · ${episodes} episodes · ${languages}';
+  @override
+  String video_jimaku_episode_unlabeled(
+          {required Object episode, required Object count}) =>
+      'No subtitle labeled episode ${episode}; ${count} unlabeled files may still match';
+  @override
+  String video_jimaku_episode_unavailable({required Object episode}) =>
+      'No subtitle found for episode ${episode}';
+  @override
+  String video_jimaku_episode_available(
+          {required Object count, required Object languages}) =>
+      '${count} subtitles available · ${languages}';
+  @override
+  String get video_scrape_manual_match_hint =>
+      'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+  @override
+  String get video_scrape_collection_match_hint =>
+      'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+  @override
+  String get video_scrape_apply_to_collection_hint =>
+      'This writes the same cover to every episode. Leave it off unless that is intentional.';
+  @override
+  String get video_scrape_tmdb_key_empty =>
+      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
 }
 
 // Path: <root>
@@ -35616,6 +35785,42 @@ class _StringsId extends _StringsEn {
   @override
   String manga_import_detected_message({required Object name}) =>
       '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+  @override
+  String get video_jimaku_source_loading => 'Checking subtitle availability...';
+  @override
+  String get video_jimaku_source_failed =>
+      'Could not check subtitle availability. Try searching again.';
+  @override
+  String get video_jimaku_language_unknown => 'Language not labeled';
+  @override
+  String video_jimaku_source_summary(
+          {required Object files,
+          required Object episodes,
+          required Object languages}) =>
+      '${files} subtitle files · ${episodes} episodes · ${languages}';
+  @override
+  String video_jimaku_episode_unlabeled(
+          {required Object episode, required Object count}) =>
+      'No subtitle labeled episode ${episode}; ${count} unlabeled files may still match';
+  @override
+  String video_jimaku_episode_unavailable({required Object episode}) =>
+      'No subtitle found for episode ${episode}';
+  @override
+  String video_jimaku_episode_available(
+          {required Object count, required Object languages}) =>
+      '${count} subtitles available · ${languages}';
+  @override
+  String get video_scrape_manual_match_hint =>
+      'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+  @override
+  String get video_scrape_collection_match_hint =>
+      'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+  @override
+  String get video_scrape_apply_to_collection_hint =>
+      'This writes the same cover to every episode. Leave it off unless that is intentional.';
+  @override
+  String get video_scrape_tmdb_key_empty =>
+      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
 }
 
 // Path: <root>
@@ -42012,6 +42217,42 @@ class _StringsIt extends _StringsEn {
   @override
   String manga_import_detected_message({required Object name}) =>
       '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+  @override
+  String get video_jimaku_source_loading => 'Checking subtitle availability...';
+  @override
+  String get video_jimaku_source_failed =>
+      'Could not check subtitle availability. Try searching again.';
+  @override
+  String get video_jimaku_language_unknown => 'Language not labeled';
+  @override
+  String video_jimaku_source_summary(
+          {required Object files,
+          required Object episodes,
+          required Object languages}) =>
+      '${files} subtitle files · ${episodes} episodes · ${languages}';
+  @override
+  String video_jimaku_episode_unlabeled(
+          {required Object episode, required Object count}) =>
+      'No subtitle labeled episode ${episode}; ${count} unlabeled files may still match';
+  @override
+  String video_jimaku_episode_unavailable({required Object episode}) =>
+      'No subtitle found for episode ${episode}';
+  @override
+  String video_jimaku_episode_available(
+          {required Object count, required Object languages}) =>
+      '${count} subtitles available · ${languages}';
+  @override
+  String get video_scrape_manual_match_hint =>
+      'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+  @override
+  String get video_scrape_collection_match_hint =>
+      'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+  @override
+  String get video_scrape_apply_to_collection_hint =>
+      'This writes the same cover to every episode. Leave it off unless that is intentional.';
+  @override
+  String get video_scrape_tmdb_key_empty =>
+      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
 }
 
 // Path: <root>
@@ -48225,6 +48466,42 @@ class _StringsJa extends _StringsEn {
   @override
   String manga_import_detected_message({required Object name}) =>
       '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+  @override
+  String get video_jimaku_source_loading => 'Checking subtitle availability...';
+  @override
+  String get video_jimaku_source_failed =>
+      'Could not check subtitle availability. Try searching again.';
+  @override
+  String get video_jimaku_language_unknown => 'Language not labeled';
+  @override
+  String video_jimaku_source_summary(
+          {required Object files,
+          required Object episodes,
+          required Object languages}) =>
+      '${files} subtitle files · ${episodes} episodes · ${languages}';
+  @override
+  String video_jimaku_episode_unlabeled(
+          {required Object episode, required Object count}) =>
+      'No subtitle labeled episode ${episode}; ${count} unlabeled files may still match';
+  @override
+  String video_jimaku_episode_unavailable({required Object episode}) =>
+      'No subtitle found for episode ${episode}';
+  @override
+  String video_jimaku_episode_available(
+          {required Object count, required Object languages}) =>
+      '${count} subtitles available · ${languages}';
+  @override
+  String get video_scrape_manual_match_hint =>
+      'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+  @override
+  String get video_scrape_collection_match_hint =>
+      'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+  @override
+  String get video_scrape_apply_to_collection_hint =>
+      'This writes the same cover to every episode. Leave it off unless that is intentional.';
+  @override
+  String get video_scrape_tmdb_key_empty =>
+      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
 }
 
 // Path: <root>
@@ -54440,6 +54717,42 @@ class _StringsKo extends _StringsEn {
   @override
   String manga_import_detected_message({required Object name}) =>
       '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+  @override
+  String get video_jimaku_source_loading => 'Checking subtitle availability...';
+  @override
+  String get video_jimaku_source_failed =>
+      'Could not check subtitle availability. Try searching again.';
+  @override
+  String get video_jimaku_language_unknown => 'Language not labeled';
+  @override
+  String video_jimaku_source_summary(
+          {required Object files,
+          required Object episodes,
+          required Object languages}) =>
+      '${files} subtitle files · ${episodes} episodes · ${languages}';
+  @override
+  String video_jimaku_episode_unlabeled(
+          {required Object episode, required Object count}) =>
+      'No subtitle labeled episode ${episode}; ${count} unlabeled files may still match';
+  @override
+  String video_jimaku_episode_unavailable({required Object episode}) =>
+      'No subtitle found for episode ${episode}';
+  @override
+  String video_jimaku_episode_available(
+          {required Object count, required Object languages}) =>
+      '${count} subtitles available · ${languages}';
+  @override
+  String get video_scrape_manual_match_hint =>
+      'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+  @override
+  String get video_scrape_collection_match_hint =>
+      'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+  @override
+  String get video_scrape_apply_to_collection_hint =>
+      'This writes the same cover to every episode. Leave it off unless that is intentional.';
+  @override
+  String get video_scrape_tmdb_key_empty =>
+      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
 }
 
 // Path: <root>
@@ -60816,6 +61129,42 @@ class _StringsNl extends _StringsEn {
   @override
   String manga_import_detected_message({required Object name}) =>
       '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+  @override
+  String get video_jimaku_source_loading => 'Checking subtitle availability...';
+  @override
+  String get video_jimaku_source_failed =>
+      'Could not check subtitle availability. Try searching again.';
+  @override
+  String get video_jimaku_language_unknown => 'Language not labeled';
+  @override
+  String video_jimaku_source_summary(
+          {required Object files,
+          required Object episodes,
+          required Object languages}) =>
+      '${files} subtitle files · ${episodes} episodes · ${languages}';
+  @override
+  String video_jimaku_episode_unlabeled(
+          {required Object episode, required Object count}) =>
+      'No subtitle labeled episode ${episode}; ${count} unlabeled files may still match';
+  @override
+  String video_jimaku_episode_unavailable({required Object episode}) =>
+      'No subtitle found for episode ${episode}';
+  @override
+  String video_jimaku_episode_available(
+          {required Object count, required Object languages}) =>
+      '${count} subtitles available · ${languages}';
+  @override
+  String get video_scrape_manual_match_hint =>
+      'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+  @override
+  String get video_scrape_collection_match_hint =>
+      'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+  @override
+  String get video_scrape_apply_to_collection_hint =>
+      'This writes the same cover to every episode. Leave it off unless that is intentional.';
+  @override
+  String get video_scrape_tmdb_key_empty =>
+      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
 }
 
 // Path: <root>
@@ -67205,6 +67554,42 @@ class _StringsPtBr extends _StringsEn {
   @override
   String manga_import_detected_message({required Object name}) =>
       '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+  @override
+  String get video_jimaku_source_loading => 'Checking subtitle availability...';
+  @override
+  String get video_jimaku_source_failed =>
+      'Could not check subtitle availability. Try searching again.';
+  @override
+  String get video_jimaku_language_unknown => 'Language not labeled';
+  @override
+  String video_jimaku_source_summary(
+          {required Object files,
+          required Object episodes,
+          required Object languages}) =>
+      '${files} subtitle files · ${episodes} episodes · ${languages}';
+  @override
+  String video_jimaku_episode_unlabeled(
+          {required Object episode, required Object count}) =>
+      'No subtitle labeled episode ${episode}; ${count} unlabeled files may still match';
+  @override
+  String video_jimaku_episode_unavailable({required Object episode}) =>
+      'No subtitle found for episode ${episode}';
+  @override
+  String video_jimaku_episode_available(
+          {required Object count, required Object languages}) =>
+      '${count} subtitles available · ${languages}';
+  @override
+  String get video_scrape_manual_match_hint =>
+      'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+  @override
+  String get video_scrape_collection_match_hint =>
+      'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+  @override
+  String get video_scrape_apply_to_collection_hint =>
+      'This writes the same cover to every episode. Leave it off unless that is intentional.';
+  @override
+  String get video_scrape_tmdb_key_empty =>
+      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
 }
 
 // Path: <root>
@@ -73578,6 +73963,42 @@ class _StringsRu extends _StringsEn {
   @override
   String manga_import_detected_message({required Object name}) =>
       '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+  @override
+  String get video_jimaku_source_loading => 'Checking subtitle availability...';
+  @override
+  String get video_jimaku_source_failed =>
+      'Could not check subtitle availability. Try searching again.';
+  @override
+  String get video_jimaku_language_unknown => 'Language not labeled';
+  @override
+  String video_jimaku_source_summary(
+          {required Object files,
+          required Object episodes,
+          required Object languages}) =>
+      '${files} subtitle files · ${episodes} episodes · ${languages}';
+  @override
+  String video_jimaku_episode_unlabeled(
+          {required Object episode, required Object count}) =>
+      'No subtitle labeled episode ${episode}; ${count} unlabeled files may still match';
+  @override
+  String video_jimaku_episode_unavailable({required Object episode}) =>
+      'No subtitle found for episode ${episode}';
+  @override
+  String video_jimaku_episode_available(
+          {required Object count, required Object languages}) =>
+      '${count} subtitles available · ${languages}';
+  @override
+  String get video_scrape_manual_match_hint =>
+      'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+  @override
+  String get video_scrape_collection_match_hint =>
+      'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+  @override
+  String get video_scrape_apply_to_collection_hint =>
+      'This writes the same cover to every episode. Leave it off unless that is intentional.';
+  @override
+  String get video_scrape_tmdb_key_empty =>
+      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
 }
 
 // Path: <root>
@@ -79899,6 +80320,42 @@ class _StringsTh extends _StringsEn {
   @override
   String manga_import_detected_message({required Object name}) =>
       '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+  @override
+  String get video_jimaku_source_loading => 'Checking subtitle availability...';
+  @override
+  String get video_jimaku_source_failed =>
+      'Could not check subtitle availability. Try searching again.';
+  @override
+  String get video_jimaku_language_unknown => 'Language not labeled';
+  @override
+  String video_jimaku_source_summary(
+          {required Object files,
+          required Object episodes,
+          required Object languages}) =>
+      '${files} subtitle files · ${episodes} episodes · ${languages}';
+  @override
+  String video_jimaku_episode_unlabeled(
+          {required Object episode, required Object count}) =>
+      'No subtitle labeled episode ${episode}; ${count} unlabeled files may still match';
+  @override
+  String video_jimaku_episode_unavailable({required Object episode}) =>
+      'No subtitle found for episode ${episode}';
+  @override
+  String video_jimaku_episode_available(
+          {required Object count, required Object languages}) =>
+      '${count} subtitles available · ${languages}';
+  @override
+  String get video_scrape_manual_match_hint =>
+      'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+  @override
+  String get video_scrape_collection_match_hint =>
+      'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+  @override
+  String get video_scrape_apply_to_collection_hint =>
+      'This writes the same cover to every episode. Leave it off unless that is intentional.';
+  @override
+  String get video_scrape_tmdb_key_empty =>
+      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
 }
 
 // Path: <root>
@@ -86252,6 +86709,42 @@ class _StringsTr extends _StringsEn {
   @override
   String manga_import_detected_message({required Object name}) =>
       '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+  @override
+  String get video_jimaku_source_loading => 'Checking subtitle availability...';
+  @override
+  String get video_jimaku_source_failed =>
+      'Could not check subtitle availability. Try searching again.';
+  @override
+  String get video_jimaku_language_unknown => 'Language not labeled';
+  @override
+  String video_jimaku_source_summary(
+          {required Object files,
+          required Object episodes,
+          required Object languages}) =>
+      '${files} subtitle files · ${episodes} episodes · ${languages}';
+  @override
+  String video_jimaku_episode_unlabeled(
+          {required Object episode, required Object count}) =>
+      'No subtitle labeled episode ${episode}; ${count} unlabeled files may still match';
+  @override
+  String video_jimaku_episode_unavailable({required Object episode}) =>
+      'No subtitle found for episode ${episode}';
+  @override
+  String video_jimaku_episode_available(
+          {required Object count, required Object languages}) =>
+      '${count} subtitles available · ${languages}';
+  @override
+  String get video_scrape_manual_match_hint =>
+      'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+  @override
+  String get video_scrape_collection_match_hint =>
+      'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+  @override
+  String get video_scrape_apply_to_collection_hint =>
+      'This writes the same cover to every episode. Leave it off unless that is intentional.';
+  @override
+  String get video_scrape_tmdb_key_empty =>
+      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
 }
 
 // Path: <root>
@@ -92590,6 +93083,42 @@ class _StringsVi extends _StringsEn {
   @override
   String manga_import_detected_message({required Object name}) =>
       '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+  @override
+  String get video_jimaku_source_loading => 'Checking subtitle availability...';
+  @override
+  String get video_jimaku_source_failed =>
+      'Could not check subtitle availability. Try searching again.';
+  @override
+  String get video_jimaku_language_unknown => 'Language not labeled';
+  @override
+  String video_jimaku_source_summary(
+          {required Object files,
+          required Object episodes,
+          required Object languages}) =>
+      '${files} subtitle files · ${episodes} episodes · ${languages}';
+  @override
+  String video_jimaku_episode_unlabeled(
+          {required Object episode, required Object count}) =>
+      'No subtitle labeled episode ${episode}; ${count} unlabeled files may still match';
+  @override
+  String video_jimaku_episode_unavailable({required Object episode}) =>
+      'No subtitle found for episode ${episode}';
+  @override
+  String video_jimaku_episode_available(
+          {required Object count, required Object languages}) =>
+      '${count} subtitles available · ${languages}';
+  @override
+  String get video_scrape_manual_match_hint =>
+      'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+  @override
+  String get video_scrape_collection_match_hint =>
+      'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+  @override
+  String get video_scrape_apply_to_collection_hint =>
+      'This writes the same cover to every episode. Leave it off unless that is intentional.';
+  @override
+  String get video_scrape_tmdb_key_empty =>
+      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
 }
 
 // Path: <root>
@@ -98479,6 +99008,41 @@ class _StringsZhCn extends _StringsEn {
   @override
   String manga_import_detected_message({required Object name}) =>
       '「${name}」是漫画文件，将走漫画导入流程，而不是书籍导入流程。';
+  @override
+  String get video_jimaku_source_loading => '正在检查字幕可用性…';
+  @override
+  String get video_jimaku_source_failed => '字幕可用性检查失败，请重新查找。';
+  @override
+  String get video_jimaku_language_unknown => '语言未标注';
+  @override
+  String video_jimaku_source_summary(
+          {required Object files,
+          required Object episodes,
+          required Object languages}) =>
+      '${files} 个字幕文件 · 覆盖 ${episodes} 集 · ${languages}';
+  @override
+  String video_jimaku_episode_unlabeled(
+          {required Object episode, required Object count}) =>
+      '未发现标为第 ${episode} 集的字幕；另有 ${count} 个未标集号文件可尝试';
+  @override
+  String video_jimaku_episode_unavailable({required Object episode}) =>
+      '没有找到第 ${episode} 集字幕';
+  @override
+  String video_jimaku_episode_available(
+          {required Object count, required Object languages}) =>
+      '有 ${count} 个字幕 · ${languages}';
+  @override
+  String get video_scrape_manual_match_hint =>
+      '手动匹配会替换本集封面，并保存来源映射和条目资料。切换来源后，点“搜索”才会请求该来源。';
+  @override
+  String get video_scrape_collection_match_hint =>
+      '这里只替换合集封面，不会修改各集封面或条目资料。切换来源后，点“搜索”才会请求该来源。';
+  @override
+  String get video_scrape_apply_to_collection_hint =>
+      '这会把同一张封面写到每一集；只有确实需要统一单集封面时才开启。';
+  @override
+  String get video_scrape_tmdb_key_empty =>
+      '先保存 TMDB API Key，再点“搜索”。这里不会混入其他来源的结果。';
 }
 
 // Path: <root>
@@ -104613,6 +105177,42 @@ class _StringsZhHk extends _StringsEn {
   @override
   String manga_import_detected_message({required Object name}) =>
       '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+  @override
+  String get video_jimaku_source_loading => 'Checking subtitle availability...';
+  @override
+  String get video_jimaku_source_failed =>
+      'Could not check subtitle availability. Try searching again.';
+  @override
+  String get video_jimaku_language_unknown => 'Language not labeled';
+  @override
+  String video_jimaku_source_summary(
+          {required Object files,
+          required Object episodes,
+          required Object languages}) =>
+      '${files} subtitle files · ${episodes} episodes · ${languages}';
+  @override
+  String video_jimaku_episode_unlabeled(
+          {required Object episode, required Object count}) =>
+      'No subtitle labeled episode ${episode}; ${count} unlabeled files may still match';
+  @override
+  String video_jimaku_episode_unavailable({required Object episode}) =>
+      'No subtitle found for episode ${episode}';
+  @override
+  String video_jimaku_episode_available(
+          {required Object count, required Object languages}) =>
+      '${count} subtitles available · ${languages}';
+  @override
+  String get video_scrape_manual_match_hint =>
+      'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+  @override
+  String get video_scrape_collection_match_hint =>
+      'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+  @override
+  String get video_scrape_apply_to_collection_hint =>
+      'This writes the same cover to every episode. Leave it off unless that is intentional.';
+  @override
+  String get video_scrape_tmdb_key_empty =>
+      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
 }
 
 /// Flat map(s) containing all translations.
@@ -110274,6 +110874,35 @@ extension on _StringsEn {
       case 'manga_import_detected_message':
         return ({required Object name}) =>
             '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+      case 'video_jimaku_source_loading':
+        return 'Checking subtitle availability...';
+      case 'video_jimaku_source_failed':
+        return 'Could not check subtitle availability. Try searching again.';
+      case 'video_jimaku_language_unknown':
+        return 'Language not labeled';
+      case 'video_jimaku_source_summary':
+        return (
+                {required Object files,
+                required Object episodes,
+                required Object languages}) =>
+            '${files} subtitle files · ${episodes} episodes · ${languages}';
+      case 'video_jimaku_episode_unlabeled':
+        return ({required Object episode, required Object count}) =>
+            'No subtitle labeled episode ${episode}; ${count} unlabeled files may still match';
+      case 'video_jimaku_episode_unavailable':
+        return ({required Object episode}) =>
+            'No subtitle found for episode ${episode}';
+      case 'video_jimaku_episode_available':
+        return ({required Object count, required Object languages}) =>
+            '${count} subtitles available · ${languages}';
+      case 'video_scrape_manual_match_hint':
+        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+      case 'video_scrape_collection_match_hint':
+        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+      case 'video_scrape_apply_to_collection_hint':
+        return 'This writes the same cover to every episode. Leave it off unless that is intentional.';
+      case 'video_scrape_tmdb_key_empty':
+        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
       default:
         return null;
     }
@@ -115933,6 +116562,35 @@ extension on _StringsAr {
       case 'manga_import_detected_message':
         return ({required Object name}) =>
             '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+      case 'video_jimaku_source_loading':
+        return 'Checking subtitle availability...';
+      case 'video_jimaku_source_failed':
+        return 'Could not check subtitle availability. Try searching again.';
+      case 'video_jimaku_language_unknown':
+        return 'Language not labeled';
+      case 'video_jimaku_source_summary':
+        return (
+                {required Object files,
+                required Object episodes,
+                required Object languages}) =>
+            '${files} subtitle files · ${episodes} episodes · ${languages}';
+      case 'video_jimaku_episode_unlabeled':
+        return ({required Object episode, required Object count}) =>
+            'No subtitle labeled episode ${episode}; ${count} unlabeled files may still match';
+      case 'video_jimaku_episode_unavailable':
+        return ({required Object episode}) =>
+            'No subtitle found for episode ${episode}';
+      case 'video_jimaku_episode_available':
+        return ({required Object count, required Object languages}) =>
+            '${count} subtitles available · ${languages}';
+      case 'video_scrape_manual_match_hint':
+        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+      case 'video_scrape_collection_match_hint':
+        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+      case 'video_scrape_apply_to_collection_hint':
+        return 'This writes the same cover to every episode. Leave it off unless that is intentional.';
+      case 'video_scrape_tmdb_key_empty':
+        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
       default:
         return null;
     }
@@ -121613,6 +122271,35 @@ extension on _StringsDe {
       case 'manga_import_detected_message':
         return ({required Object name}) =>
             '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+      case 'video_jimaku_source_loading':
+        return 'Checking subtitle availability...';
+      case 'video_jimaku_source_failed':
+        return 'Could not check subtitle availability. Try searching again.';
+      case 'video_jimaku_language_unknown':
+        return 'Language not labeled';
+      case 'video_jimaku_source_summary':
+        return (
+                {required Object files,
+                required Object episodes,
+                required Object languages}) =>
+            '${files} subtitle files · ${episodes} episodes · ${languages}';
+      case 'video_jimaku_episode_unlabeled':
+        return ({required Object episode, required Object count}) =>
+            'No subtitle labeled episode ${episode}; ${count} unlabeled files may still match';
+      case 'video_jimaku_episode_unavailable':
+        return ({required Object episode}) =>
+            'No subtitle found for episode ${episode}';
+      case 'video_jimaku_episode_available':
+        return ({required Object count, required Object languages}) =>
+            '${count} subtitles available · ${languages}';
+      case 'video_scrape_manual_match_hint':
+        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+      case 'video_scrape_collection_match_hint':
+        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+      case 'video_scrape_apply_to_collection_hint':
+        return 'This writes the same cover to every episode. Leave it off unless that is intentional.';
+      case 'video_scrape_tmdb_key_empty':
+        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
       default:
         return null;
     }
@@ -127292,6 +127979,35 @@ extension on _StringsEs {
       case 'manga_import_detected_message':
         return ({required Object name}) =>
             '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+      case 'video_jimaku_source_loading':
+        return 'Checking subtitle availability...';
+      case 'video_jimaku_source_failed':
+        return 'Could not check subtitle availability. Try searching again.';
+      case 'video_jimaku_language_unknown':
+        return 'Language not labeled';
+      case 'video_jimaku_source_summary':
+        return (
+                {required Object files,
+                required Object episodes,
+                required Object languages}) =>
+            '${files} subtitle files · ${episodes} episodes · ${languages}';
+      case 'video_jimaku_episode_unlabeled':
+        return ({required Object episode, required Object count}) =>
+            'No subtitle labeled episode ${episode}; ${count} unlabeled files may still match';
+      case 'video_jimaku_episode_unavailable':
+        return ({required Object episode}) =>
+            'No subtitle found for episode ${episode}';
+      case 'video_jimaku_episode_available':
+        return ({required Object count, required Object languages}) =>
+            '${count} subtitles available · ${languages}';
+      case 'video_scrape_manual_match_hint':
+        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+      case 'video_scrape_collection_match_hint':
+        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+      case 'video_scrape_apply_to_collection_hint':
+        return 'This writes the same cover to every episode. Leave it off unless that is intentional.';
+      case 'video_scrape_tmdb_key_empty':
+        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
       default:
         return null;
     }
@@ -132977,6 +133693,35 @@ extension on _StringsFr {
       case 'manga_import_detected_message':
         return ({required Object name}) =>
             '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+      case 'video_jimaku_source_loading':
+        return 'Checking subtitle availability...';
+      case 'video_jimaku_source_failed':
+        return 'Could not check subtitle availability. Try searching again.';
+      case 'video_jimaku_language_unknown':
+        return 'Language not labeled';
+      case 'video_jimaku_source_summary':
+        return (
+                {required Object files,
+                required Object episodes,
+                required Object languages}) =>
+            '${files} subtitle files · ${episodes} episodes · ${languages}';
+      case 'video_jimaku_episode_unlabeled':
+        return ({required Object episode, required Object count}) =>
+            'No subtitle labeled episode ${episode}; ${count} unlabeled files may still match';
+      case 'video_jimaku_episode_unavailable':
+        return ({required Object episode}) =>
+            'No subtitle found for episode ${episode}';
+      case 'video_jimaku_episode_available':
+        return ({required Object count, required Object languages}) =>
+            '${count} subtitles available · ${languages}';
+      case 'video_scrape_manual_match_hint':
+        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+      case 'video_scrape_collection_match_hint':
+        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+      case 'video_scrape_apply_to_collection_hint':
+        return 'This writes the same cover to every episode. Leave it off unless that is intentional.';
+      case 'video_scrape_tmdb_key_empty':
+        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
       default:
         return null;
     }
@@ -138644,6 +139389,35 @@ extension on _StringsId {
       case 'manga_import_detected_message':
         return ({required Object name}) =>
             '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+      case 'video_jimaku_source_loading':
+        return 'Checking subtitle availability...';
+      case 'video_jimaku_source_failed':
+        return 'Could not check subtitle availability. Try searching again.';
+      case 'video_jimaku_language_unknown':
+        return 'Language not labeled';
+      case 'video_jimaku_source_summary':
+        return (
+                {required Object files,
+                required Object episodes,
+                required Object languages}) =>
+            '${files} subtitle files · ${episodes} episodes · ${languages}';
+      case 'video_jimaku_episode_unlabeled':
+        return ({required Object episode, required Object count}) =>
+            'No subtitle labeled episode ${episode}; ${count} unlabeled files may still match';
+      case 'video_jimaku_episode_unavailable':
+        return ({required Object episode}) =>
+            'No subtitle found for episode ${episode}';
+      case 'video_jimaku_episode_available':
+        return ({required Object count, required Object languages}) =>
+            '${count} subtitles available · ${languages}';
+      case 'video_scrape_manual_match_hint':
+        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+      case 'video_scrape_collection_match_hint':
+        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+      case 'video_scrape_apply_to_collection_hint':
+        return 'This writes the same cover to every episode. Leave it off unless that is intentional.';
+      case 'video_scrape_tmdb_key_empty':
+        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
       default:
         return null;
     }
@@ -144326,6 +145100,35 @@ extension on _StringsIt {
       case 'manga_import_detected_message':
         return ({required Object name}) =>
             '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+      case 'video_jimaku_source_loading':
+        return 'Checking subtitle availability...';
+      case 'video_jimaku_source_failed':
+        return 'Could not check subtitle availability. Try searching again.';
+      case 'video_jimaku_language_unknown':
+        return 'Language not labeled';
+      case 'video_jimaku_source_summary':
+        return (
+                {required Object files,
+                required Object episodes,
+                required Object languages}) =>
+            '${files} subtitle files · ${episodes} episodes · ${languages}';
+      case 'video_jimaku_episode_unlabeled':
+        return ({required Object episode, required Object count}) =>
+            'No subtitle labeled episode ${episode}; ${count} unlabeled files may still match';
+      case 'video_jimaku_episode_unavailable':
+        return ({required Object episode}) =>
+            'No subtitle found for episode ${episode}';
+      case 'video_jimaku_episode_available':
+        return ({required Object count, required Object languages}) =>
+            '${count} subtitles available · ${languages}';
+      case 'video_scrape_manual_match_hint':
+        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+      case 'video_scrape_collection_match_hint':
+        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+      case 'video_scrape_apply_to_collection_hint':
+        return 'This writes the same cover to every episode. Leave it off unless that is intentional.';
+      case 'video_scrape_tmdb_key_empty':
+        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
       default:
         return null;
     }
@@ -149970,6 +150773,35 @@ extension on _StringsJa {
       case 'manga_import_detected_message':
         return ({required Object name}) =>
             '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+      case 'video_jimaku_source_loading':
+        return 'Checking subtitle availability...';
+      case 'video_jimaku_source_failed':
+        return 'Could not check subtitle availability. Try searching again.';
+      case 'video_jimaku_language_unknown':
+        return 'Language not labeled';
+      case 'video_jimaku_source_summary':
+        return (
+                {required Object files,
+                required Object episodes,
+                required Object languages}) =>
+            '${files} subtitle files · ${episodes} episodes · ${languages}';
+      case 'video_jimaku_episode_unlabeled':
+        return ({required Object episode, required Object count}) =>
+            'No subtitle labeled episode ${episode}; ${count} unlabeled files may still match';
+      case 'video_jimaku_episode_unavailable':
+        return ({required Object episode}) =>
+            'No subtitle found for episode ${episode}';
+      case 'video_jimaku_episode_available':
+        return ({required Object count, required Object languages}) =>
+            '${count} subtitles available · ${languages}';
+      case 'video_scrape_manual_match_hint':
+        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+      case 'video_scrape_collection_match_hint':
+        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+      case 'video_scrape_apply_to_collection_hint':
+        return 'This writes the same cover to every episode. Leave it off unless that is intentional.';
+      case 'video_scrape_tmdb_key_empty':
+        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
       default:
         return null;
     }
@@ -155618,6 +156450,35 @@ extension on _StringsKo {
       case 'manga_import_detected_message':
         return ({required Object name}) =>
             '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+      case 'video_jimaku_source_loading':
+        return 'Checking subtitle availability...';
+      case 'video_jimaku_source_failed':
+        return 'Could not check subtitle availability. Try searching again.';
+      case 'video_jimaku_language_unknown':
+        return 'Language not labeled';
+      case 'video_jimaku_source_summary':
+        return (
+                {required Object files,
+                required Object episodes,
+                required Object languages}) =>
+            '${files} subtitle files · ${episodes} episodes · ${languages}';
+      case 'video_jimaku_episode_unlabeled':
+        return ({required Object episode, required Object count}) =>
+            'No subtitle labeled episode ${episode}; ${count} unlabeled files may still match';
+      case 'video_jimaku_episode_unavailable':
+        return ({required Object episode}) =>
+            'No subtitle found for episode ${episode}';
+      case 'video_jimaku_episode_available':
+        return ({required Object count, required Object languages}) =>
+            '${count} subtitles available · ${languages}';
+      case 'video_scrape_manual_match_hint':
+        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+      case 'video_scrape_collection_match_hint':
+        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+      case 'video_scrape_apply_to_collection_hint':
+        return 'This writes the same cover to every episode. Leave it off unless that is intentional.';
+      case 'video_scrape_tmdb_key_empty':
+        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
       default:
         return null;
     }
@@ -161293,6 +162154,35 @@ extension on _StringsNl {
       case 'manga_import_detected_message':
         return ({required Object name}) =>
             '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+      case 'video_jimaku_source_loading':
+        return 'Checking subtitle availability...';
+      case 'video_jimaku_source_failed':
+        return 'Could not check subtitle availability. Try searching again.';
+      case 'video_jimaku_language_unknown':
+        return 'Language not labeled';
+      case 'video_jimaku_source_summary':
+        return (
+                {required Object files,
+                required Object episodes,
+                required Object languages}) =>
+            '${files} subtitle files · ${episodes} episodes · ${languages}';
+      case 'video_jimaku_episode_unlabeled':
+        return ({required Object episode, required Object count}) =>
+            'No subtitle labeled episode ${episode}; ${count} unlabeled files may still match';
+      case 'video_jimaku_episode_unavailable':
+        return ({required Object episode}) =>
+            'No subtitle found for episode ${episode}';
+      case 'video_jimaku_episode_available':
+        return ({required Object count, required Object languages}) =>
+            '${count} subtitles available · ${languages}';
+      case 'video_scrape_manual_match_hint':
+        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+      case 'video_scrape_collection_match_hint':
+        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+      case 'video_scrape_apply_to_collection_hint':
+        return 'This writes the same cover to every episode. Leave it off unless that is intentional.';
+      case 'video_scrape_tmdb_key_empty':
+        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
       default:
         return null;
     }
@@ -166965,6 +167855,35 @@ extension on _StringsPtBr {
       case 'manga_import_detected_message':
         return ({required Object name}) =>
             '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+      case 'video_jimaku_source_loading':
+        return 'Checking subtitle availability...';
+      case 'video_jimaku_source_failed':
+        return 'Could not check subtitle availability. Try searching again.';
+      case 'video_jimaku_language_unknown':
+        return 'Language not labeled';
+      case 'video_jimaku_source_summary':
+        return (
+                {required Object files,
+                required Object episodes,
+                required Object languages}) =>
+            '${files} subtitle files · ${episodes} episodes · ${languages}';
+      case 'video_jimaku_episode_unlabeled':
+        return ({required Object episode, required Object count}) =>
+            'No subtitle labeled episode ${episode}; ${count} unlabeled files may still match';
+      case 'video_jimaku_episode_unavailable':
+        return ({required Object episode}) =>
+            'No subtitle found for episode ${episode}';
+      case 'video_jimaku_episode_available':
+        return ({required Object count, required Object languages}) =>
+            '${count} subtitles available · ${languages}';
+      case 'video_scrape_manual_match_hint':
+        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+      case 'video_scrape_collection_match_hint':
+        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+      case 'video_scrape_apply_to_collection_hint':
+        return 'This writes the same cover to every episode. Leave it off unless that is intentional.';
+      case 'video_scrape_tmdb_key_empty':
+        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
       default:
         return null;
     }
@@ -172642,6 +173561,35 @@ extension on _StringsRu {
       case 'manga_import_detected_message':
         return ({required Object name}) =>
             '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+      case 'video_jimaku_source_loading':
+        return 'Checking subtitle availability...';
+      case 'video_jimaku_source_failed':
+        return 'Could not check subtitle availability. Try searching again.';
+      case 'video_jimaku_language_unknown':
+        return 'Language not labeled';
+      case 'video_jimaku_source_summary':
+        return (
+                {required Object files,
+                required Object episodes,
+                required Object languages}) =>
+            '${files} subtitle files · ${episodes} episodes · ${languages}';
+      case 'video_jimaku_episode_unlabeled':
+        return ({required Object episode, required Object count}) =>
+            'No subtitle labeled episode ${episode}; ${count} unlabeled files may still match';
+      case 'video_jimaku_episode_unavailable':
+        return ({required Object episode}) =>
+            'No subtitle found for episode ${episode}';
+      case 'video_jimaku_episode_available':
+        return ({required Object count, required Object languages}) =>
+            '${count} subtitles available · ${languages}';
+      case 'video_scrape_manual_match_hint':
+        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+      case 'video_scrape_collection_match_hint':
+        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+      case 'video_scrape_apply_to_collection_hint':
+        return 'This writes the same cover to every episode. Leave it off unless that is intentional.';
+      case 'video_scrape_tmdb_key_empty':
+        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
       default:
         return null;
     }
@@ -178303,6 +179251,35 @@ extension on _StringsTh {
       case 'manga_import_detected_message':
         return ({required Object name}) =>
             '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+      case 'video_jimaku_source_loading':
+        return 'Checking subtitle availability...';
+      case 'video_jimaku_source_failed':
+        return 'Could not check subtitle availability. Try searching again.';
+      case 'video_jimaku_language_unknown':
+        return 'Language not labeled';
+      case 'video_jimaku_source_summary':
+        return (
+                {required Object files,
+                required Object episodes,
+                required Object languages}) =>
+            '${files} subtitle files · ${episodes} episodes · ${languages}';
+      case 'video_jimaku_episode_unlabeled':
+        return ({required Object episode, required Object count}) =>
+            'No subtitle labeled episode ${episode}; ${count} unlabeled files may still match';
+      case 'video_jimaku_episode_unavailable':
+        return ({required Object episode}) =>
+            'No subtitle found for episode ${episode}';
+      case 'video_jimaku_episode_available':
+        return ({required Object count, required Object languages}) =>
+            '${count} subtitles available · ${languages}';
+      case 'video_scrape_manual_match_hint':
+        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+      case 'video_scrape_collection_match_hint':
+        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+      case 'video_scrape_apply_to_collection_hint':
+        return 'This writes the same cover to every episode. Leave it off unless that is intentional.';
+      case 'video_scrape_tmdb_key_empty':
+        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
       default:
         return null;
     }
@@ -183973,6 +184950,35 @@ extension on _StringsTr {
       case 'manga_import_detected_message':
         return ({required Object name}) =>
             '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+      case 'video_jimaku_source_loading':
+        return 'Checking subtitle availability...';
+      case 'video_jimaku_source_failed':
+        return 'Could not check subtitle availability. Try searching again.';
+      case 'video_jimaku_language_unknown':
+        return 'Language not labeled';
+      case 'video_jimaku_source_summary':
+        return (
+                {required Object files,
+                required Object episodes,
+                required Object languages}) =>
+            '${files} subtitle files · ${episodes} episodes · ${languages}';
+      case 'video_jimaku_episode_unlabeled':
+        return ({required Object episode, required Object count}) =>
+            'No subtitle labeled episode ${episode}; ${count} unlabeled files may still match';
+      case 'video_jimaku_episode_unavailable':
+        return ({required Object episode}) =>
+            'No subtitle found for episode ${episode}';
+      case 'video_jimaku_episode_available':
+        return ({required Object count, required Object languages}) =>
+            '${count} subtitles available · ${languages}';
+      case 'video_scrape_manual_match_hint':
+        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+      case 'video_scrape_collection_match_hint':
+        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+      case 'video_scrape_apply_to_collection_hint':
+        return 'This writes the same cover to every episode. Leave it off unless that is intentional.';
+      case 'video_scrape_tmdb_key_empty':
+        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
       default:
         return null;
     }
@@ -189638,6 +190644,35 @@ extension on _StringsVi {
       case 'manga_import_detected_message':
         return ({required Object name}) =>
             '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+      case 'video_jimaku_source_loading':
+        return 'Checking subtitle availability...';
+      case 'video_jimaku_source_failed':
+        return 'Could not check subtitle availability. Try searching again.';
+      case 'video_jimaku_language_unknown':
+        return 'Language not labeled';
+      case 'video_jimaku_source_summary':
+        return (
+                {required Object files,
+                required Object episodes,
+                required Object languages}) =>
+            '${files} subtitle files · ${episodes} episodes · ${languages}';
+      case 'video_jimaku_episode_unlabeled':
+        return ({required Object episode, required Object count}) =>
+            'No subtitle labeled episode ${episode}; ${count} unlabeled files may still match';
+      case 'video_jimaku_episode_unavailable':
+        return ({required Object episode}) =>
+            'No subtitle found for episode ${episode}';
+      case 'video_jimaku_episode_available':
+        return ({required Object count, required Object languages}) =>
+            '${count} subtitles available · ${languages}';
+      case 'video_scrape_manual_match_hint':
+        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+      case 'video_scrape_collection_match_hint':
+        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+      case 'video_scrape_apply_to_collection_hint':
+        return 'This writes the same cover to every episode. Leave it off unless that is intentional.';
+      case 'video_scrape_tmdb_key_empty':
+        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
       default:
         return null;
     }
@@ -195256,6 +196291,34 @@ extension on _StringsZhCn {
         return '按漫画导入';
       case 'manga_import_detected_message':
         return ({required Object name}) => '「${name}」是漫画文件，将走漫画导入流程，而不是书籍导入流程。';
+      case 'video_jimaku_source_loading':
+        return '正在检查字幕可用性…';
+      case 'video_jimaku_source_failed':
+        return '字幕可用性检查失败，请重新查找。';
+      case 'video_jimaku_language_unknown':
+        return '语言未标注';
+      case 'video_jimaku_source_summary':
+        return (
+                {required Object files,
+                required Object episodes,
+                required Object languages}) =>
+            '${files} 个字幕文件 · 覆盖 ${episodes} 集 · ${languages}';
+      case 'video_jimaku_episode_unlabeled':
+        return ({required Object episode, required Object count}) =>
+            '未发现标为第 ${episode} 集的字幕；另有 ${count} 个未标集号文件可尝试';
+      case 'video_jimaku_episode_unavailable':
+        return ({required Object episode}) => '没有找到第 ${episode} 集字幕';
+      case 'video_jimaku_episode_available':
+        return ({required Object count, required Object languages}) =>
+            '有 ${count} 个字幕 · ${languages}';
+      case 'video_scrape_manual_match_hint':
+        return '手动匹配会替换本集封面，并保存来源映射和条目资料。切换来源后，点“搜索”才会请求该来源。';
+      case 'video_scrape_collection_match_hint':
+        return '这里只替换合集封面，不会修改各集封面或条目资料。切换来源后，点“搜索”才会请求该来源。';
+      case 'video_scrape_apply_to_collection_hint':
+        return '这会把同一张封面写到每一集；只有确实需要统一单集封面时才开启。';
+      case 'video_scrape_tmdb_key_empty':
+        return '先保存 TMDB API Key，再点“搜索”。这里不会混入其他来源的结果。';
       default:
         return null;
     }
@@ -200895,6 +201958,35 @@ extension on _StringsZhHk {
       case 'manga_import_detected_message':
         return ({required Object name}) =>
             '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+      case 'video_jimaku_source_loading':
+        return 'Checking subtitle availability...';
+      case 'video_jimaku_source_failed':
+        return 'Could not check subtitle availability. Try searching again.';
+      case 'video_jimaku_language_unknown':
+        return 'Language not labeled';
+      case 'video_jimaku_source_summary':
+        return (
+                {required Object files,
+                required Object episodes,
+                required Object languages}) =>
+            '${files} subtitle files · ${episodes} episodes · ${languages}';
+      case 'video_jimaku_episode_unlabeled':
+        return ({required Object episode, required Object count}) =>
+            'No subtitle labeled episode ${episode}; ${count} unlabeled files may still match';
+      case 'video_jimaku_episode_unavailable':
+        return ({required Object episode}) =>
+            'No subtitle found for episode ${episode}';
+      case 'video_jimaku_episode_available':
+        return ({required Object count, required Object languages}) =>
+            '${count} subtitles available · ${languages}';
+      case 'video_scrape_manual_match_hint':
+        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+      case 'video_scrape_collection_match_hint':
+        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+      case 'video_scrape_apply_to_collection_hint':
+        return 'This writes the same cover to every episode. Leave it off unless that is intentional.';
+      case 'video_scrape_tmdb_key_empty':
+        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
       default:
         return null;
     }
