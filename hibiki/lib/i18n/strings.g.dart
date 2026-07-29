@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 46852 (2756 per locale)
+/// Strings: 47005 (2765 per locale)
 ///
-/// Built on 2026-07-29 at 06:45 UTC
+/// Built on 2026-07-29 at 08:00 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3664,8 +3664,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get media_tracking_all_synced => 'Everything sent';
   String get media_tracking_unauthorized =>
       'Bangumi rejected the access token. Reconnect it in settings.';
-  String get media_tracking_unlinked_hint =>
-      'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
   String get media_tracking_open_subject => 'Open on Bangumi';
   String get media_tracking_manage_links => 'Manage links';
   String get media_tracking_last_error => 'Last error';
@@ -3706,6 +3704,23 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Skipped ${m} of ${n} selected items that no longer exist';
   String get game_text_thread_unset =>
       'No thread selected — pick one to start capturing';
+  String get media_tracking_watched_show => 'View all watched anime';
+  String get media_tracking_watched_title => 'Watched on Bangumi';
+  String get media_tracking_watched_empty =>
+      'No anime is marked as watched on this Bangumi account.';
+  String media_tracking_watched_load_failed({required Object error}) =>
+      'Could not load watched anime: ${error}';
+  String media_tracking_watched_progress({required Object n}) =>
+      'Watched ${n} episodes';
+  String get media_tracking_manual_required => 'Needs manual link';
+  String media_tracking_manual_required_count({required Object n}) =>
+      '${n} items need manual links';
+  String get media_tracking_manual_required_hint =>
+      'These local items already have progress but are not linked to Bangumi.';
+  String get media_tracking_no_local_history =>
+      'No local watch, reading, or game progress needs linking.';
+  String media_tracking_more_manual_required({required Object n}) =>
+      '${n} more items need manual links';
 }
 
 // Path: <root>
@@ -9947,9 +9962,6 @@ class _StringsAr extends _StringsEn {
   String get media_tracking_unauthorized =>
       'Bangumi rejected the access token. Reconnect it in settings.';
   @override
-  String get media_tracking_unlinked_hint =>
-      'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
-  @override
   String get media_tracking_open_subject => 'Open on Bangumi';
   @override
   String get media_tracking_manage_links => 'Manage links';
@@ -10016,6 +10028,33 @@ class _StringsAr extends _StringsEn {
   @override
   String get game_text_thread_unset =>
       'No thread selected — pick one to start capturing';
+  @override
+  String get media_tracking_watched_show => 'View all watched anime';
+  @override
+  String get media_tracking_watched_title => 'Watched on Bangumi';
+  @override
+  String get media_tracking_watched_empty =>
+      'No anime is marked as watched on this Bangumi account.';
+  @override
+  String media_tracking_watched_load_failed({required Object error}) =>
+      'Could not load watched anime: ${error}';
+  @override
+  String media_tracking_watched_progress({required Object n}) =>
+      'Watched ${n} episodes';
+  @override
+  String get media_tracking_manual_required => 'Needs manual link';
+  @override
+  String media_tracking_manual_required_count({required Object n}) =>
+      '${n} items need manual links';
+  @override
+  String get media_tracking_manual_required_hint =>
+      'These local items already have progress but are not linked to Bangumi.';
+  @override
+  String get media_tracking_no_local_history =>
+      'No local watch, reading, or game progress needs linking.';
+  @override
+  String media_tracking_more_manual_required({required Object n}) =>
+      '${n} more items need manual links';
 }
 
 // Path: <root>
@@ -16325,9 +16364,6 @@ class _StringsDe extends _StringsEn {
   String get media_tracking_unauthorized =>
       'Bangumi rejected the access token. Reconnect it in settings.';
   @override
-  String get media_tracking_unlinked_hint =>
-      'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
-  @override
   String get media_tracking_open_subject => 'Open on Bangumi';
   @override
   String get media_tracking_manage_links => 'Manage links';
@@ -16394,6 +16430,33 @@ class _StringsDe extends _StringsEn {
   @override
   String get game_text_thread_unset =>
       'No thread selected — pick one to start capturing';
+  @override
+  String get media_tracking_watched_show => 'View all watched anime';
+  @override
+  String get media_tracking_watched_title => 'Watched on Bangumi';
+  @override
+  String get media_tracking_watched_empty =>
+      'No anime is marked as watched on this Bangumi account.';
+  @override
+  String media_tracking_watched_load_failed({required Object error}) =>
+      'Could not load watched anime: ${error}';
+  @override
+  String media_tracking_watched_progress({required Object n}) =>
+      'Watched ${n} episodes';
+  @override
+  String get media_tracking_manual_required => 'Needs manual link';
+  @override
+  String media_tracking_manual_required_count({required Object n}) =>
+      '${n} items need manual links';
+  @override
+  String get media_tracking_manual_required_hint =>
+      'These local items already have progress but are not linked to Bangumi.';
+  @override
+  String get media_tracking_no_local_history =>
+      'No local watch, reading, or game progress needs linking.';
+  @override
+  String media_tracking_more_manual_required({required Object n}) =>
+      '${n} more items need manual links';
 }
 
 // Path: <root>
@@ -22719,9 +22782,6 @@ class _StringsEs extends _StringsEn {
   String get media_tracking_unauthorized =>
       'Bangumi rejected the access token. Reconnect it in settings.';
   @override
-  String get media_tracking_unlinked_hint =>
-      'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
-  @override
   String get media_tracking_open_subject => 'Open on Bangumi';
   @override
   String get media_tracking_manage_links => 'Manage links';
@@ -22788,6 +22848,33 @@ class _StringsEs extends _StringsEn {
   @override
   String get game_text_thread_unset =>
       'No thread selected — pick one to start capturing';
+  @override
+  String get media_tracking_watched_show => 'View all watched anime';
+  @override
+  String get media_tracking_watched_title => 'Watched on Bangumi';
+  @override
+  String get media_tracking_watched_empty =>
+      'No anime is marked as watched on this Bangumi account.';
+  @override
+  String media_tracking_watched_load_failed({required Object error}) =>
+      'Could not load watched anime: ${error}';
+  @override
+  String media_tracking_watched_progress({required Object n}) =>
+      'Watched ${n} episodes';
+  @override
+  String get media_tracking_manual_required => 'Needs manual link';
+  @override
+  String media_tracking_manual_required_count({required Object n}) =>
+      '${n} items need manual links';
+  @override
+  String get media_tracking_manual_required_hint =>
+      'These local items already have progress but are not linked to Bangumi.';
+  @override
+  String get media_tracking_no_local_history =>
+      'No local watch, reading, or game progress needs linking.';
+  @override
+  String media_tracking_more_manual_required({required Object n}) =>
+      '${n} more items need manual links';
 }
 
 // Path: <root>
@@ -29124,9 +29211,6 @@ class _StringsFr extends _StringsEn {
   String get media_tracking_unauthorized =>
       'Bangumi rejected the access token. Reconnect it in settings.';
   @override
-  String get media_tracking_unlinked_hint =>
-      'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
-  @override
   String get media_tracking_open_subject => 'Open on Bangumi';
   @override
   String get media_tracking_manage_links => 'Manage links';
@@ -29193,6 +29277,33 @@ class _StringsFr extends _StringsEn {
   @override
   String get game_text_thread_unset =>
       'No thread selected — pick one to start capturing';
+  @override
+  String get media_tracking_watched_show => 'View all watched anime';
+  @override
+  String get media_tracking_watched_title => 'Watched on Bangumi';
+  @override
+  String get media_tracking_watched_empty =>
+      'No anime is marked as watched on this Bangumi account.';
+  @override
+  String media_tracking_watched_load_failed({required Object error}) =>
+      'Could not load watched anime: ${error}';
+  @override
+  String media_tracking_watched_progress({required Object n}) =>
+      'Watched ${n} episodes';
+  @override
+  String get media_tracking_manual_required => 'Needs manual link';
+  @override
+  String media_tracking_manual_required_count({required Object n}) =>
+      '${n} items need manual links';
+  @override
+  String get media_tracking_manual_required_hint =>
+      'These local items already have progress but are not linked to Bangumi.';
+  @override
+  String get media_tracking_no_local_history =>
+      'No local watch, reading, or game progress needs linking.';
+  @override
+  String media_tracking_more_manual_required({required Object n}) =>
+      '${n} more items need manual links';
 }
 
 // Path: <root>
@@ -35458,9 +35569,6 @@ class _StringsId extends _StringsEn {
   String get media_tracking_unauthorized =>
       'Bangumi rejected the access token. Reconnect it in settings.';
   @override
-  String get media_tracking_unlinked_hint =>
-      'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
-  @override
   String get media_tracking_open_subject => 'Open on Bangumi';
   @override
   String get media_tracking_manage_links => 'Manage links';
@@ -35527,6 +35635,33 @@ class _StringsId extends _StringsEn {
   @override
   String get game_text_thread_unset =>
       'No thread selected — pick one to start capturing';
+  @override
+  String get media_tracking_watched_show => 'View all watched anime';
+  @override
+  String get media_tracking_watched_title => 'Watched on Bangumi';
+  @override
+  String get media_tracking_watched_empty =>
+      'No anime is marked as watched on this Bangumi account.';
+  @override
+  String media_tracking_watched_load_failed({required Object error}) =>
+      'Could not load watched anime: ${error}';
+  @override
+  String media_tracking_watched_progress({required Object n}) =>
+      'Watched ${n} episodes';
+  @override
+  String get media_tracking_manual_required => 'Needs manual link';
+  @override
+  String media_tracking_manual_required_count({required Object n}) =>
+      '${n} items need manual links';
+  @override
+  String get media_tracking_manual_required_hint =>
+      'These local items already have progress but are not linked to Bangumi.';
+  @override
+  String get media_tracking_no_local_history =>
+      'No local watch, reading, or game progress needs linking.';
+  @override
+  String media_tracking_more_manual_required({required Object n}) =>
+      '${n} more items need manual links';
 }
 
 // Path: <root>
@@ -41838,9 +41973,6 @@ class _StringsIt extends _StringsEn {
   String get media_tracking_unauthorized =>
       'Bangumi rejected the access token. Reconnect it in settings.';
   @override
-  String get media_tracking_unlinked_hint =>
-      'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
-  @override
   String get media_tracking_open_subject => 'Open on Bangumi';
   @override
   String get media_tracking_manage_links => 'Manage links';
@@ -41907,6 +42039,33 @@ class _StringsIt extends _StringsEn {
   @override
   String get game_text_thread_unset =>
       'No thread selected — pick one to start capturing';
+  @override
+  String get media_tracking_watched_show => 'View all watched anime';
+  @override
+  String get media_tracking_watched_title => 'Watched on Bangumi';
+  @override
+  String get media_tracking_watched_empty =>
+      'No anime is marked as watched on this Bangumi account.';
+  @override
+  String media_tracking_watched_load_failed({required Object error}) =>
+      'Could not load watched anime: ${error}';
+  @override
+  String media_tracking_watched_progress({required Object n}) =>
+      'Watched ${n} episodes';
+  @override
+  String get media_tracking_manual_required => 'Needs manual link';
+  @override
+  String media_tracking_manual_required_count({required Object n}) =>
+      '${n} items need manual links';
+  @override
+  String get media_tracking_manual_required_hint =>
+      'These local items already have progress but are not linked to Bangumi.';
+  @override
+  String get media_tracking_no_local_history =>
+      'No local watch, reading, or game progress needs linking.';
+  @override
+  String media_tracking_more_manual_required({required Object n}) =>
+      '${n} more items need manual links';
 }
 
 // Path: <root>
@@ -48035,9 +48194,6 @@ class _StringsJa extends _StringsEn {
   String get media_tracking_unauthorized =>
       'Bangumi rejected the access token. Reconnect it in settings.';
   @override
-  String get media_tracking_unlinked_hint =>
-      'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
-  @override
   String get media_tracking_open_subject => 'Open on Bangumi';
   @override
   String get media_tracking_manage_links => 'Manage links';
@@ -48104,6 +48260,33 @@ class _StringsJa extends _StringsEn {
   @override
   String get game_text_thread_unset =>
       'No thread selected — pick one to start capturing';
+  @override
+  String get media_tracking_watched_show => 'View all watched anime';
+  @override
+  String get media_tracking_watched_title => 'Watched on Bangumi';
+  @override
+  String get media_tracking_watched_empty =>
+      'No anime is marked as watched on this Bangumi account.';
+  @override
+  String media_tracking_watched_load_failed({required Object error}) =>
+      'Could not load watched anime: ${error}';
+  @override
+  String media_tracking_watched_progress({required Object n}) =>
+      'Watched ${n} episodes';
+  @override
+  String get media_tracking_manual_required => 'Needs manual link';
+  @override
+  String media_tracking_manual_required_count({required Object n}) =>
+      '${n} items need manual links';
+  @override
+  String get media_tracking_manual_required_hint =>
+      'These local items already have progress but are not linked to Bangumi.';
+  @override
+  String get media_tracking_no_local_history =>
+      'No local watch, reading, or game progress needs linking.';
+  @override
+  String media_tracking_more_manual_required({required Object n}) =>
+      '${n} more items need manual links';
 }
 
 // Path: <root>
@@ -54234,9 +54417,6 @@ class _StringsKo extends _StringsEn {
   String get media_tracking_unauthorized =>
       'Bangumi rejected the access token. Reconnect it in settings.';
   @override
-  String get media_tracking_unlinked_hint =>
-      'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
-  @override
   String get media_tracking_open_subject => 'Open on Bangumi';
   @override
   String get media_tracking_manage_links => 'Manage links';
@@ -54303,6 +54483,33 @@ class _StringsKo extends _StringsEn {
   @override
   String get game_text_thread_unset =>
       'No thread selected — pick one to start capturing';
+  @override
+  String get media_tracking_watched_show => 'View all watched anime';
+  @override
+  String get media_tracking_watched_title => 'Watched on Bangumi';
+  @override
+  String get media_tracking_watched_empty =>
+      'No anime is marked as watched on this Bangumi account.';
+  @override
+  String media_tracking_watched_load_failed({required Object error}) =>
+      'Could not load watched anime: ${error}';
+  @override
+  String media_tracking_watched_progress({required Object n}) =>
+      'Watched ${n} episodes';
+  @override
+  String get media_tracking_manual_required => 'Needs manual link';
+  @override
+  String media_tracking_manual_required_count({required Object n}) =>
+      '${n} items need manual links';
+  @override
+  String get media_tracking_manual_required_hint =>
+      'These local items already have progress but are not linked to Bangumi.';
+  @override
+  String get media_tracking_no_local_history =>
+      'No local watch, reading, or game progress needs linking.';
+  @override
+  String media_tracking_more_manual_required({required Object n}) =>
+      '${n} more items need manual links';
 }
 
 // Path: <root>
@@ -60594,9 +60801,6 @@ class _StringsNl extends _StringsEn {
   String get media_tracking_unauthorized =>
       'Bangumi rejected the access token. Reconnect it in settings.';
   @override
-  String get media_tracking_unlinked_hint =>
-      'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
-  @override
   String get media_tracking_open_subject => 'Open on Bangumi';
   @override
   String get media_tracking_manage_links => 'Manage links';
@@ -60663,6 +60867,33 @@ class _StringsNl extends _StringsEn {
   @override
   String get game_text_thread_unset =>
       'No thread selected — pick one to start capturing';
+  @override
+  String get media_tracking_watched_show => 'View all watched anime';
+  @override
+  String get media_tracking_watched_title => 'Watched on Bangumi';
+  @override
+  String get media_tracking_watched_empty =>
+      'No anime is marked as watched on this Bangumi account.';
+  @override
+  String media_tracking_watched_load_failed({required Object error}) =>
+      'Could not load watched anime: ${error}';
+  @override
+  String media_tracking_watched_progress({required Object n}) =>
+      'Watched ${n} episodes';
+  @override
+  String get media_tracking_manual_required => 'Needs manual link';
+  @override
+  String media_tracking_manual_required_count({required Object n}) =>
+      '${n} items need manual links';
+  @override
+  String get media_tracking_manual_required_hint =>
+      'These local items already have progress but are not linked to Bangumi.';
+  @override
+  String get media_tracking_no_local_history =>
+      'No local watch, reading, or game progress needs linking.';
+  @override
+  String media_tracking_more_manual_required({required Object n}) =>
+      '${n} more items need manual links';
 }
 
 // Path: <root>
@@ -66967,9 +67198,6 @@ class _StringsPtBr extends _StringsEn {
   String get media_tracking_unauthorized =>
       'Bangumi rejected the access token. Reconnect it in settings.';
   @override
-  String get media_tracking_unlinked_hint =>
-      'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
-  @override
   String get media_tracking_open_subject => 'Open on Bangumi';
   @override
   String get media_tracking_manage_links => 'Manage links';
@@ -67036,6 +67264,33 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get game_text_thread_unset =>
       'No thread selected — pick one to start capturing';
+  @override
+  String get media_tracking_watched_show => 'View all watched anime';
+  @override
+  String get media_tracking_watched_title => 'Watched on Bangumi';
+  @override
+  String get media_tracking_watched_empty =>
+      'No anime is marked as watched on this Bangumi account.';
+  @override
+  String media_tracking_watched_load_failed({required Object error}) =>
+      'Could not load watched anime: ${error}';
+  @override
+  String media_tracking_watched_progress({required Object n}) =>
+      'Watched ${n} episodes';
+  @override
+  String get media_tracking_manual_required => 'Needs manual link';
+  @override
+  String media_tracking_manual_required_count({required Object n}) =>
+      '${n} items need manual links';
+  @override
+  String get media_tracking_manual_required_hint =>
+      'These local items already have progress but are not linked to Bangumi.';
+  @override
+  String get media_tracking_no_local_history =>
+      'No local watch, reading, or game progress needs linking.';
+  @override
+  String media_tracking_more_manual_required({required Object n}) =>
+      '${n} more items need manual links';
 }
 
 // Path: <root>
@@ -73324,9 +73579,6 @@ class _StringsRu extends _StringsEn {
   String get media_tracking_unauthorized =>
       'Bangumi rejected the access token. Reconnect it in settings.';
   @override
-  String get media_tracking_unlinked_hint =>
-      'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
-  @override
   String get media_tracking_open_subject => 'Open on Bangumi';
   @override
   String get media_tracking_manage_links => 'Manage links';
@@ -73393,6 +73645,33 @@ class _StringsRu extends _StringsEn {
   @override
   String get game_text_thread_unset =>
       'No thread selected — pick one to start capturing';
+  @override
+  String get media_tracking_watched_show => 'View all watched anime';
+  @override
+  String get media_tracking_watched_title => 'Watched on Bangumi';
+  @override
+  String get media_tracking_watched_empty =>
+      'No anime is marked as watched on this Bangumi account.';
+  @override
+  String media_tracking_watched_load_failed({required Object error}) =>
+      'Could not load watched anime: ${error}';
+  @override
+  String media_tracking_watched_progress({required Object n}) =>
+      'Watched ${n} episodes';
+  @override
+  String get media_tracking_manual_required => 'Needs manual link';
+  @override
+  String media_tracking_manual_required_count({required Object n}) =>
+      '${n} items need manual links';
+  @override
+  String get media_tracking_manual_required_hint =>
+      'These local items already have progress but are not linked to Bangumi.';
+  @override
+  String get media_tracking_no_local_history =>
+      'No local watch, reading, or game progress needs linking.';
+  @override
+  String media_tracking_more_manual_required({required Object n}) =>
+      '${n} more items need manual links';
 }
 
 // Path: <root>
@@ -79629,9 +79908,6 @@ class _StringsTh extends _StringsEn {
   String get media_tracking_unauthorized =>
       'Bangumi rejected the access token. Reconnect it in settings.';
   @override
-  String get media_tracking_unlinked_hint =>
-      'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
-  @override
   String get media_tracking_open_subject => 'Open on Bangumi';
   @override
   String get media_tracking_manage_links => 'Manage links';
@@ -79698,6 +79974,33 @@ class _StringsTh extends _StringsEn {
   @override
   String get game_text_thread_unset =>
       'No thread selected — pick one to start capturing';
+  @override
+  String get media_tracking_watched_show => 'View all watched anime';
+  @override
+  String get media_tracking_watched_title => 'Watched on Bangumi';
+  @override
+  String get media_tracking_watched_empty =>
+      'No anime is marked as watched on this Bangumi account.';
+  @override
+  String media_tracking_watched_load_failed({required Object error}) =>
+      'Could not load watched anime: ${error}';
+  @override
+  String media_tracking_watched_progress({required Object n}) =>
+      'Watched ${n} episodes';
+  @override
+  String get media_tracking_manual_required => 'Needs manual link';
+  @override
+  String media_tracking_manual_required_count({required Object n}) =>
+      '${n} items need manual links';
+  @override
+  String get media_tracking_manual_required_hint =>
+      'These local items already have progress but are not linked to Bangumi.';
+  @override
+  String get media_tracking_no_local_history =>
+      'No local watch, reading, or game progress needs linking.';
+  @override
+  String media_tracking_more_manual_required({required Object n}) =>
+      '${n} more items need manual links';
 }
 
 // Path: <root>
@@ -85966,9 +86269,6 @@ class _StringsTr extends _StringsEn {
   String get media_tracking_unauthorized =>
       'Bangumi rejected the access token. Reconnect it in settings.';
   @override
-  String get media_tracking_unlinked_hint =>
-      'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
-  @override
   String get media_tracking_open_subject => 'Open on Bangumi';
   @override
   String get media_tracking_manage_links => 'Manage links';
@@ -86035,6 +86335,33 @@ class _StringsTr extends _StringsEn {
   @override
   String get game_text_thread_unset =>
       'No thread selected — pick one to start capturing';
+  @override
+  String get media_tracking_watched_show => 'View all watched anime';
+  @override
+  String get media_tracking_watched_title => 'Watched on Bangumi';
+  @override
+  String get media_tracking_watched_empty =>
+      'No anime is marked as watched on this Bangumi account.';
+  @override
+  String media_tracking_watched_load_failed({required Object error}) =>
+      'Could not load watched anime: ${error}';
+  @override
+  String media_tracking_watched_progress({required Object n}) =>
+      'Watched ${n} episodes';
+  @override
+  String get media_tracking_manual_required => 'Needs manual link';
+  @override
+  String media_tracking_manual_required_count({required Object n}) =>
+      '${n} items need manual links';
+  @override
+  String get media_tracking_manual_required_hint =>
+      'These local items already have progress but are not linked to Bangumi.';
+  @override
+  String get media_tracking_no_local_history =>
+      'No local watch, reading, or game progress needs linking.';
+  @override
+  String media_tracking_more_manual_required({required Object n}) =>
+      '${n} more items need manual links';
 }
 
 // Path: <root>
@@ -92288,9 +92615,6 @@ class _StringsVi extends _StringsEn {
   String get media_tracking_unauthorized =>
       'Bangumi rejected the access token. Reconnect it in settings.';
   @override
-  String get media_tracking_unlinked_hint =>
-      'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
-  @override
   String get media_tracking_open_subject => 'Open on Bangumi';
   @override
   String get media_tracking_manage_links => 'Manage links';
@@ -92357,6 +92681,33 @@ class _StringsVi extends _StringsEn {
   @override
   String get game_text_thread_unset =>
       'No thread selected — pick one to start capturing';
+  @override
+  String get media_tracking_watched_show => 'View all watched anime';
+  @override
+  String get media_tracking_watched_title => 'Watched on Bangumi';
+  @override
+  String get media_tracking_watched_empty =>
+      'No anime is marked as watched on this Bangumi account.';
+  @override
+  String media_tracking_watched_load_failed({required Object error}) =>
+      'Could not load watched anime: ${error}';
+  @override
+  String media_tracking_watched_progress({required Object n}) =>
+      'Watched ${n} episodes';
+  @override
+  String get media_tracking_manual_required => 'Needs manual link';
+  @override
+  String media_tracking_manual_required_count({required Object n}) =>
+      '${n} items need manual links';
+  @override
+  String get media_tracking_manual_required_hint =>
+      'These local items already have progress but are not linked to Bangumi.';
+  @override
+  String get media_tracking_no_local_history =>
+      'No local watch, reading, or game progress needs linking.';
+  @override
+  String media_tracking_more_manual_required({required Object n}) =>
+      '${n} more items need manual links';
 }
 
 // Path: <root>
@@ -98167,9 +98518,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get media_tracking_unauthorized => 'Bangumi 拒绝了访问令牌，请在设置里重新连接。';
   @override
-  String get media_tracking_unlinked_hint =>
-      '还没有任何条目关联到 Bangumi 条目，所以看完/读完在那边不会有任何变化。自动匹配只在标题唯一命中时才建立关联，其余需要手动关联。';
-  @override
   String get media_tracking_open_subject => '在 Bangumi 打开';
   @override
   String get media_tracking_manage_links => '管理关联';
@@ -98231,6 +98579,30 @@ class _StringsZhCn extends _StringsEn {
       '选中的 ${n} 项中有 ${m} 项已不存在，已跳过';
   @override
   String get game_text_thread_unset => '尚未选择线程 · 选一条后开始捕获';
+  @override
+  String get media_tracking_watched_show => '查看全部看过';
+  @override
+  String get media_tracking_watched_title => 'Bangumi 看过';
+  @override
+  String get media_tracking_watched_empty => '这个 Bangumi 账号还没有标记为“看过”的番剧。';
+  @override
+  String media_tracking_watched_load_failed({required Object error}) =>
+      '读取看过记录失败：${error}';
+  @override
+  String media_tracking_watched_progress({required Object n}) => '已看 ${n} 集';
+  @override
+  String get media_tracking_manual_required => '需要手动关联';
+  @override
+  String media_tracking_manual_required_count({required Object n}) =>
+      '${n} 项需要手动关联';
+  @override
+  String get media_tracking_manual_required_hint =>
+      '这些本地条目已有观看、阅读或游玩记录，但还没有关联到 Bangumi。';
+  @override
+  String get media_tracking_no_local_history => '暂无需要关联的本地观看、阅读或游玩记录。';
+  @override
+  String media_tracking_more_manual_required({required Object n}) =>
+      '另有 ${n} 项需要手动关联';
 }
 
 // Path: <root>
@@ -104280,9 +104652,6 @@ class _StringsZhHk extends _StringsEn {
   String get media_tracking_unauthorized =>
       'Bangumi rejected the access token. Reconnect it in settings.';
   @override
-  String get media_tracking_unlinked_hint =>
-      'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
-  @override
   String get media_tracking_open_subject => 'Open on Bangumi';
   @override
   String get media_tracking_manage_links => 'Manage links';
@@ -104349,6 +104718,33 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get game_text_thread_unset =>
       'No thread selected — pick one to start capturing';
+  @override
+  String get media_tracking_watched_show => 'View all watched anime';
+  @override
+  String get media_tracking_watched_title => 'Watched on Bangumi';
+  @override
+  String get media_tracking_watched_empty =>
+      'No anime is marked as watched on this Bangumi account.';
+  @override
+  String media_tracking_watched_load_failed({required Object error}) =>
+      'Could not load watched anime: ${error}';
+  @override
+  String media_tracking_watched_progress({required Object n}) =>
+      'Watched ${n} episodes';
+  @override
+  String get media_tracking_manual_required => 'Needs manual link';
+  @override
+  String media_tracking_manual_required_count({required Object n}) =>
+      '${n} items need manual links';
+  @override
+  String get media_tracking_manual_required_hint =>
+      'These local items already have progress but are not linked to Bangumi.';
+  @override
+  String get media_tracking_no_local_history =>
+      'No local watch, reading, or game progress needs linking.';
+  @override
+  String media_tracking_more_manual_required({required Object n}) =>
+      '${n} more items need manual links';
 }
 
 /// Flat map(s) containing all translations.
@@ -109938,8 +110334,6 @@ extension on _StringsEn {
         return 'Everything sent';
       case 'media_tracking_unauthorized':
         return 'Bangumi rejected the access token. Reconnect it in settings.';
-      case 'media_tracking_unlinked_hint':
-        return 'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
       case 'media_tracking_open_subject':
         return 'Open on Bangumi';
       case 'media_tracking_manage_links':
@@ -109995,6 +110389,27 @@ extension on _StringsEn {
             'Skipped ${m} of ${n} selected items that no longer exist';
       case 'game_text_thread_unset':
         return 'No thread selected — pick one to start capturing';
+      case 'media_tracking_watched_show':
+        return 'View all watched anime';
+      case 'media_tracking_watched_title':
+        return 'Watched on Bangumi';
+      case 'media_tracking_watched_empty':
+        return 'No anime is marked as watched on this Bangumi account.';
+      case 'media_tracking_watched_load_failed':
+        return ({required Object error}) =>
+            'Could not load watched anime: ${error}';
+      case 'media_tracking_watched_progress':
+        return ({required Object n}) => 'Watched ${n} episodes';
+      case 'media_tracking_manual_required':
+        return 'Needs manual link';
+      case 'media_tracking_manual_required_count':
+        return ({required Object n}) => '${n} items need manual links';
+      case 'media_tracking_manual_required_hint':
+        return 'These local items already have progress but are not linked to Bangumi.';
+      case 'media_tracking_no_local_history':
+        return 'No local watch, reading, or game progress needs linking.';
+      case 'media_tracking_more_manual_required':
+        return ({required Object n}) => '${n} more items need manual links';
       default:
         return null;
     }
@@ -115582,8 +115997,6 @@ extension on _StringsAr {
         return 'Everything sent';
       case 'media_tracking_unauthorized':
         return 'Bangumi rejected the access token. Reconnect it in settings.';
-      case 'media_tracking_unlinked_hint':
-        return 'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
       case 'media_tracking_open_subject':
         return 'Open on Bangumi';
       case 'media_tracking_manage_links':
@@ -115639,6 +116052,27 @@ extension on _StringsAr {
             'Skipped ${m} of ${n} selected items that no longer exist';
       case 'game_text_thread_unset':
         return 'No thread selected — pick one to start capturing';
+      case 'media_tracking_watched_show':
+        return 'View all watched anime';
+      case 'media_tracking_watched_title':
+        return 'Watched on Bangumi';
+      case 'media_tracking_watched_empty':
+        return 'No anime is marked as watched on this Bangumi account.';
+      case 'media_tracking_watched_load_failed':
+        return ({required Object error}) =>
+            'Could not load watched anime: ${error}';
+      case 'media_tracking_watched_progress':
+        return ({required Object n}) => 'Watched ${n} episodes';
+      case 'media_tracking_manual_required':
+        return 'Needs manual link';
+      case 'media_tracking_manual_required_count':
+        return ({required Object n}) => '${n} items need manual links';
+      case 'media_tracking_manual_required_hint':
+        return 'These local items already have progress but are not linked to Bangumi.';
+      case 'media_tracking_no_local_history':
+        return 'No local watch, reading, or game progress needs linking.';
+      case 'media_tracking_more_manual_required':
+        return ({required Object n}) => '${n} more items need manual links';
       default:
         return null;
     }
@@ -121247,8 +121681,6 @@ extension on _StringsDe {
         return 'Everything sent';
       case 'media_tracking_unauthorized':
         return 'Bangumi rejected the access token. Reconnect it in settings.';
-      case 'media_tracking_unlinked_hint':
-        return 'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
       case 'media_tracking_open_subject':
         return 'Open on Bangumi';
       case 'media_tracking_manage_links':
@@ -121304,6 +121736,27 @@ extension on _StringsDe {
             'Skipped ${m} of ${n} selected items that no longer exist';
       case 'game_text_thread_unset':
         return 'No thread selected — pick one to start capturing';
+      case 'media_tracking_watched_show':
+        return 'View all watched anime';
+      case 'media_tracking_watched_title':
+        return 'Watched on Bangumi';
+      case 'media_tracking_watched_empty':
+        return 'No anime is marked as watched on this Bangumi account.';
+      case 'media_tracking_watched_load_failed':
+        return ({required Object error}) =>
+            'Could not load watched anime: ${error}';
+      case 'media_tracking_watched_progress':
+        return ({required Object n}) => 'Watched ${n} episodes';
+      case 'media_tracking_manual_required':
+        return 'Needs manual link';
+      case 'media_tracking_manual_required_count':
+        return ({required Object n}) => '${n} items need manual links';
+      case 'media_tracking_manual_required_hint':
+        return 'These local items already have progress but are not linked to Bangumi.';
+      case 'media_tracking_no_local_history':
+        return 'No local watch, reading, or game progress needs linking.';
+      case 'media_tracking_more_manual_required':
+        return ({required Object n}) => '${n} more items need manual links';
       default:
         return null;
     }
@@ -126911,8 +127364,6 @@ extension on _StringsEs {
         return 'Everything sent';
       case 'media_tracking_unauthorized':
         return 'Bangumi rejected the access token. Reconnect it in settings.';
-      case 'media_tracking_unlinked_hint':
-        return 'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
       case 'media_tracking_open_subject':
         return 'Open on Bangumi';
       case 'media_tracking_manage_links':
@@ -126968,6 +127419,27 @@ extension on _StringsEs {
             'Skipped ${m} of ${n} selected items that no longer exist';
       case 'game_text_thread_unset':
         return 'No thread selected — pick one to start capturing';
+      case 'media_tracking_watched_show':
+        return 'View all watched anime';
+      case 'media_tracking_watched_title':
+        return 'Watched on Bangumi';
+      case 'media_tracking_watched_empty':
+        return 'No anime is marked as watched on this Bangumi account.';
+      case 'media_tracking_watched_load_failed':
+        return ({required Object error}) =>
+            'Could not load watched anime: ${error}';
+      case 'media_tracking_watched_progress':
+        return ({required Object n}) => 'Watched ${n} episodes';
+      case 'media_tracking_manual_required':
+        return 'Needs manual link';
+      case 'media_tracking_manual_required_count':
+        return ({required Object n}) => '${n} items need manual links';
+      case 'media_tracking_manual_required_hint':
+        return 'These local items already have progress but are not linked to Bangumi.';
+      case 'media_tracking_no_local_history':
+        return 'No local watch, reading, or game progress needs linking.';
+      case 'media_tracking_more_manual_required':
+        return ({required Object n}) => '${n} more items need manual links';
       default:
         return null;
     }
@@ -132581,8 +133053,6 @@ extension on _StringsFr {
         return 'Everything sent';
       case 'media_tracking_unauthorized':
         return 'Bangumi rejected the access token. Reconnect it in settings.';
-      case 'media_tracking_unlinked_hint':
-        return 'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
       case 'media_tracking_open_subject':
         return 'Open on Bangumi';
       case 'media_tracking_manage_links':
@@ -132638,6 +133108,27 @@ extension on _StringsFr {
             'Skipped ${m} of ${n} selected items that no longer exist';
       case 'game_text_thread_unset':
         return 'No thread selected — pick one to start capturing';
+      case 'media_tracking_watched_show':
+        return 'View all watched anime';
+      case 'media_tracking_watched_title':
+        return 'Watched on Bangumi';
+      case 'media_tracking_watched_empty':
+        return 'No anime is marked as watched on this Bangumi account.';
+      case 'media_tracking_watched_load_failed':
+        return ({required Object error}) =>
+            'Could not load watched anime: ${error}';
+      case 'media_tracking_watched_progress':
+        return ({required Object n}) => 'Watched ${n} episodes';
+      case 'media_tracking_manual_required':
+        return 'Needs manual link';
+      case 'media_tracking_manual_required_count':
+        return ({required Object n}) => '${n} items need manual links';
+      case 'media_tracking_manual_required_hint':
+        return 'These local items already have progress but are not linked to Bangumi.';
+      case 'media_tracking_no_local_history':
+        return 'No local watch, reading, or game progress needs linking.';
+      case 'media_tracking_more_manual_required':
+        return ({required Object n}) => '${n} more items need manual links';
       default:
         return null;
     }
@@ -138233,8 +138724,6 @@ extension on _StringsId {
         return 'Everything sent';
       case 'media_tracking_unauthorized':
         return 'Bangumi rejected the access token. Reconnect it in settings.';
-      case 'media_tracking_unlinked_hint':
-        return 'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
       case 'media_tracking_open_subject':
         return 'Open on Bangumi';
       case 'media_tracking_manage_links':
@@ -138290,6 +138779,27 @@ extension on _StringsId {
             'Skipped ${m} of ${n} selected items that no longer exist';
       case 'game_text_thread_unset':
         return 'No thread selected — pick one to start capturing';
+      case 'media_tracking_watched_show':
+        return 'View all watched anime';
+      case 'media_tracking_watched_title':
+        return 'Watched on Bangumi';
+      case 'media_tracking_watched_empty':
+        return 'No anime is marked as watched on this Bangumi account.';
+      case 'media_tracking_watched_load_failed':
+        return ({required Object error}) =>
+            'Could not load watched anime: ${error}';
+      case 'media_tracking_watched_progress':
+        return ({required Object n}) => 'Watched ${n} episodes';
+      case 'media_tracking_manual_required':
+        return 'Needs manual link';
+      case 'media_tracking_manual_required_count':
+        return ({required Object n}) => '${n} items need manual links';
+      case 'media_tracking_manual_required_hint':
+        return 'These local items already have progress but are not linked to Bangumi.';
+      case 'media_tracking_no_local_history':
+        return 'No local watch, reading, or game progress needs linking.';
+      case 'media_tracking_more_manual_required':
+        return ({required Object n}) => '${n} more items need manual links';
       default:
         return null;
     }
@@ -143900,8 +144410,6 @@ extension on _StringsIt {
         return 'Everything sent';
       case 'media_tracking_unauthorized':
         return 'Bangumi rejected the access token. Reconnect it in settings.';
-      case 'media_tracking_unlinked_hint':
-        return 'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
       case 'media_tracking_open_subject':
         return 'Open on Bangumi';
       case 'media_tracking_manage_links':
@@ -143957,6 +144465,27 @@ extension on _StringsIt {
             'Skipped ${m} of ${n} selected items that no longer exist';
       case 'game_text_thread_unset':
         return 'No thread selected — pick one to start capturing';
+      case 'media_tracking_watched_show':
+        return 'View all watched anime';
+      case 'media_tracking_watched_title':
+        return 'Watched on Bangumi';
+      case 'media_tracking_watched_empty':
+        return 'No anime is marked as watched on this Bangumi account.';
+      case 'media_tracking_watched_load_failed':
+        return ({required Object error}) =>
+            'Could not load watched anime: ${error}';
+      case 'media_tracking_watched_progress':
+        return ({required Object n}) => 'Watched ${n} episodes';
+      case 'media_tracking_manual_required':
+        return 'Needs manual link';
+      case 'media_tracking_manual_required_count':
+        return ({required Object n}) => '${n} items need manual links';
+      case 'media_tracking_manual_required_hint':
+        return 'These local items already have progress but are not linked to Bangumi.';
+      case 'media_tracking_no_local_history':
+        return 'No local watch, reading, or game progress needs linking.';
+      case 'media_tracking_more_manual_required':
+        return ({required Object n}) => '${n} more items need manual links';
       default:
         return null;
     }
@@ -149529,8 +150058,6 @@ extension on _StringsJa {
         return 'Everything sent';
       case 'media_tracking_unauthorized':
         return 'Bangumi rejected the access token. Reconnect it in settings.';
-      case 'media_tracking_unlinked_hint':
-        return 'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
       case 'media_tracking_open_subject':
         return 'Open on Bangumi';
       case 'media_tracking_manage_links':
@@ -149586,6 +150113,27 @@ extension on _StringsJa {
             'Skipped ${m} of ${n} selected items that no longer exist';
       case 'game_text_thread_unset':
         return 'No thread selected — pick one to start capturing';
+      case 'media_tracking_watched_show':
+        return 'View all watched anime';
+      case 'media_tracking_watched_title':
+        return 'Watched on Bangumi';
+      case 'media_tracking_watched_empty':
+        return 'No anime is marked as watched on this Bangumi account.';
+      case 'media_tracking_watched_load_failed':
+        return ({required Object error}) =>
+            'Could not load watched anime: ${error}';
+      case 'media_tracking_watched_progress':
+        return ({required Object n}) => 'Watched ${n} episodes';
+      case 'media_tracking_manual_required':
+        return 'Needs manual link';
+      case 'media_tracking_manual_required_count':
+        return ({required Object n}) => '${n} items need manual links';
+      case 'media_tracking_manual_required_hint':
+        return 'These local items already have progress but are not linked to Bangumi.';
+      case 'media_tracking_no_local_history':
+        return 'No local watch, reading, or game progress needs linking.';
+      case 'media_tracking_more_manual_required':
+        return ({required Object n}) => '${n} more items need manual links';
       default:
         return null;
     }
@@ -155162,8 +155710,6 @@ extension on _StringsKo {
         return 'Everything sent';
       case 'media_tracking_unauthorized':
         return 'Bangumi rejected the access token. Reconnect it in settings.';
-      case 'media_tracking_unlinked_hint':
-        return 'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
       case 'media_tracking_open_subject':
         return 'Open on Bangumi';
       case 'media_tracking_manage_links':
@@ -155219,6 +155765,27 @@ extension on _StringsKo {
             'Skipped ${m} of ${n} selected items that no longer exist';
       case 'game_text_thread_unset':
         return 'No thread selected — pick one to start capturing';
+      case 'media_tracking_watched_show':
+        return 'View all watched anime';
+      case 'media_tracking_watched_title':
+        return 'Watched on Bangumi';
+      case 'media_tracking_watched_empty':
+        return 'No anime is marked as watched on this Bangumi account.';
+      case 'media_tracking_watched_load_failed':
+        return ({required Object error}) =>
+            'Could not load watched anime: ${error}';
+      case 'media_tracking_watched_progress':
+        return ({required Object n}) => 'Watched ${n} episodes';
+      case 'media_tracking_manual_required':
+        return 'Needs manual link';
+      case 'media_tracking_manual_required_count':
+        return ({required Object n}) => '${n} items need manual links';
+      case 'media_tracking_manual_required_hint':
+        return 'These local items already have progress but are not linked to Bangumi.';
+      case 'media_tracking_no_local_history':
+        return 'No local watch, reading, or game progress needs linking.';
+      case 'media_tracking_more_manual_required':
+        return ({required Object n}) => '${n} more items need manual links';
       default:
         return null;
     }
@@ -160822,8 +161389,6 @@ extension on _StringsNl {
         return 'Everything sent';
       case 'media_tracking_unauthorized':
         return 'Bangumi rejected the access token. Reconnect it in settings.';
-      case 'media_tracking_unlinked_hint':
-        return 'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
       case 'media_tracking_open_subject':
         return 'Open on Bangumi';
       case 'media_tracking_manage_links':
@@ -160879,6 +161444,27 @@ extension on _StringsNl {
             'Skipped ${m} of ${n} selected items that no longer exist';
       case 'game_text_thread_unset':
         return 'No thread selected — pick one to start capturing';
+      case 'media_tracking_watched_show':
+        return 'View all watched anime';
+      case 'media_tracking_watched_title':
+        return 'Watched on Bangumi';
+      case 'media_tracking_watched_empty':
+        return 'No anime is marked as watched on this Bangumi account.';
+      case 'media_tracking_watched_load_failed':
+        return ({required Object error}) =>
+            'Could not load watched anime: ${error}';
+      case 'media_tracking_watched_progress':
+        return ({required Object n}) => 'Watched ${n} episodes';
+      case 'media_tracking_manual_required':
+        return 'Needs manual link';
+      case 'media_tracking_manual_required_count':
+        return ({required Object n}) => '${n} items need manual links';
+      case 'media_tracking_manual_required_hint':
+        return 'These local items already have progress but are not linked to Bangumi.';
+      case 'media_tracking_no_local_history':
+        return 'No local watch, reading, or game progress needs linking.';
+      case 'media_tracking_more_manual_required':
+        return ({required Object n}) => '${n} more items need manual links';
       default:
         return null;
     }
@@ -166479,8 +167065,6 @@ extension on _StringsPtBr {
         return 'Everything sent';
       case 'media_tracking_unauthorized':
         return 'Bangumi rejected the access token. Reconnect it in settings.';
-      case 'media_tracking_unlinked_hint':
-        return 'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
       case 'media_tracking_open_subject':
         return 'Open on Bangumi';
       case 'media_tracking_manage_links':
@@ -166536,6 +167120,27 @@ extension on _StringsPtBr {
             'Skipped ${m} of ${n} selected items that no longer exist';
       case 'game_text_thread_unset':
         return 'No thread selected — pick one to start capturing';
+      case 'media_tracking_watched_show':
+        return 'View all watched anime';
+      case 'media_tracking_watched_title':
+        return 'Watched on Bangumi';
+      case 'media_tracking_watched_empty':
+        return 'No anime is marked as watched on this Bangumi account.';
+      case 'media_tracking_watched_load_failed':
+        return ({required Object error}) =>
+            'Could not load watched anime: ${error}';
+      case 'media_tracking_watched_progress':
+        return ({required Object n}) => 'Watched ${n} episodes';
+      case 'media_tracking_manual_required':
+        return 'Needs manual link';
+      case 'media_tracking_manual_required_count':
+        return ({required Object n}) => '${n} items need manual links';
+      case 'media_tracking_manual_required_hint':
+        return 'These local items already have progress but are not linked to Bangumi.';
+      case 'media_tracking_no_local_history':
+        return 'No local watch, reading, or game progress needs linking.';
+      case 'media_tracking_more_manual_required':
+        return ({required Object n}) => '${n} more items need manual links';
       default:
         return null;
     }
@@ -172141,8 +172746,6 @@ extension on _StringsRu {
         return 'Everything sent';
       case 'media_tracking_unauthorized':
         return 'Bangumi rejected the access token. Reconnect it in settings.';
-      case 'media_tracking_unlinked_hint':
-        return 'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
       case 'media_tracking_open_subject':
         return 'Open on Bangumi';
       case 'media_tracking_manage_links':
@@ -172198,6 +172801,27 @@ extension on _StringsRu {
             'Skipped ${m} of ${n} selected items that no longer exist';
       case 'game_text_thread_unset':
         return 'No thread selected — pick one to start capturing';
+      case 'media_tracking_watched_show':
+        return 'View all watched anime';
+      case 'media_tracking_watched_title':
+        return 'Watched on Bangumi';
+      case 'media_tracking_watched_empty':
+        return 'No anime is marked as watched on this Bangumi account.';
+      case 'media_tracking_watched_load_failed':
+        return ({required Object error}) =>
+            'Could not load watched anime: ${error}';
+      case 'media_tracking_watched_progress':
+        return ({required Object n}) => 'Watched ${n} episodes';
+      case 'media_tracking_manual_required':
+        return 'Needs manual link';
+      case 'media_tracking_manual_required_count':
+        return ({required Object n}) => '${n} items need manual links';
+      case 'media_tracking_manual_required_hint':
+        return 'These local items already have progress but are not linked to Bangumi.';
+      case 'media_tracking_no_local_history':
+        return 'No local watch, reading, or game progress needs linking.';
+      case 'media_tracking_more_manual_required':
+        return ({required Object n}) => '${n} more items need manual links';
       default:
         return null;
     }
@@ -177787,8 +178411,6 @@ extension on _StringsTh {
         return 'Everything sent';
       case 'media_tracking_unauthorized':
         return 'Bangumi rejected the access token. Reconnect it in settings.';
-      case 'media_tracking_unlinked_hint':
-        return 'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
       case 'media_tracking_open_subject':
         return 'Open on Bangumi';
       case 'media_tracking_manage_links':
@@ -177844,6 +178466,27 @@ extension on _StringsTh {
             'Skipped ${m} of ${n} selected items that no longer exist';
       case 'game_text_thread_unset':
         return 'No thread selected — pick one to start capturing';
+      case 'media_tracking_watched_show':
+        return 'View all watched anime';
+      case 'media_tracking_watched_title':
+        return 'Watched on Bangumi';
+      case 'media_tracking_watched_empty':
+        return 'No anime is marked as watched on this Bangumi account.';
+      case 'media_tracking_watched_load_failed':
+        return ({required Object error}) =>
+            'Could not load watched anime: ${error}';
+      case 'media_tracking_watched_progress':
+        return ({required Object n}) => 'Watched ${n} episodes';
+      case 'media_tracking_manual_required':
+        return 'Needs manual link';
+      case 'media_tracking_manual_required_count':
+        return ({required Object n}) => '${n} items need manual links';
+      case 'media_tracking_manual_required_hint':
+        return 'These local items already have progress but are not linked to Bangumi.';
+      case 'media_tracking_no_local_history':
+        return 'No local watch, reading, or game progress needs linking.';
+      case 'media_tracking_more_manual_required':
+        return ({required Object n}) => '${n} more items need manual links';
       default:
         return null;
     }
@@ -183442,8 +184085,6 @@ extension on _StringsTr {
         return 'Everything sent';
       case 'media_tracking_unauthorized':
         return 'Bangumi rejected the access token. Reconnect it in settings.';
-      case 'media_tracking_unlinked_hint':
-        return 'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
       case 'media_tracking_open_subject':
         return 'Open on Bangumi';
       case 'media_tracking_manage_links':
@@ -183499,6 +184140,27 @@ extension on _StringsTr {
             'Skipped ${m} of ${n} selected items that no longer exist';
       case 'game_text_thread_unset':
         return 'No thread selected — pick one to start capturing';
+      case 'media_tracking_watched_show':
+        return 'View all watched anime';
+      case 'media_tracking_watched_title':
+        return 'Watched on Bangumi';
+      case 'media_tracking_watched_empty':
+        return 'No anime is marked as watched on this Bangumi account.';
+      case 'media_tracking_watched_load_failed':
+        return ({required Object error}) =>
+            'Could not load watched anime: ${error}';
+      case 'media_tracking_watched_progress':
+        return ({required Object n}) => 'Watched ${n} episodes';
+      case 'media_tracking_manual_required':
+        return 'Needs manual link';
+      case 'media_tracking_manual_required_count':
+        return ({required Object n}) => '${n} items need manual links';
+      case 'media_tracking_manual_required_hint':
+        return 'These local items already have progress but are not linked to Bangumi.';
+      case 'media_tracking_no_local_history':
+        return 'No local watch, reading, or game progress needs linking.';
+      case 'media_tracking_more_manual_required':
+        return ({required Object n}) => '${n} more items need manual links';
       default:
         return null;
     }
@@ -189092,8 +189754,6 @@ extension on _StringsVi {
         return 'Everything sent';
       case 'media_tracking_unauthorized':
         return 'Bangumi rejected the access token. Reconnect it in settings.';
-      case 'media_tracking_unlinked_hint':
-        return 'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
       case 'media_tracking_open_subject':
         return 'Open on Bangumi';
       case 'media_tracking_manage_links':
@@ -189149,6 +189809,27 @@ extension on _StringsVi {
             'Skipped ${m} of ${n} selected items that no longer exist';
       case 'game_text_thread_unset':
         return 'No thread selected — pick one to start capturing';
+      case 'media_tracking_watched_show':
+        return 'View all watched anime';
+      case 'media_tracking_watched_title':
+        return 'Watched on Bangumi';
+      case 'media_tracking_watched_empty':
+        return 'No anime is marked as watched on this Bangumi account.';
+      case 'media_tracking_watched_load_failed':
+        return ({required Object error}) =>
+            'Could not load watched anime: ${error}';
+      case 'media_tracking_watched_progress':
+        return ({required Object n}) => 'Watched ${n} episodes';
+      case 'media_tracking_manual_required':
+        return 'Needs manual link';
+      case 'media_tracking_manual_required_count':
+        return ({required Object n}) => '${n} items need manual links';
+      case 'media_tracking_manual_required_hint':
+        return 'These local items already have progress but are not linked to Bangumi.';
+      case 'media_tracking_no_local_history':
+        return 'No local watch, reading, or game progress needs linking.';
+      case 'media_tracking_more_manual_required':
+        return ({required Object n}) => '${n} more items need manual links';
       default:
         return null;
     }
@@ -194696,8 +195377,6 @@ extension on _StringsZhCn {
         return '全部已发送';
       case 'media_tracking_unauthorized':
         return 'Bangumi 拒绝了访问令牌，请在设置里重新连接。';
-      case 'media_tracking_unlinked_hint':
-        return '还没有任何条目关联到 Bangumi 条目，所以看完/读完在那边不会有任何变化。自动匹配只在标题唯一命中时才建立关联，其余需要手动关联。';
       case 'media_tracking_open_subject':
         return '在 Bangumi 打开';
       case 'media_tracking_manage_links':
@@ -194753,6 +195432,26 @@ extension on _StringsZhCn {
             '选中的 ${n} 项中有 ${m} 项已不存在，已跳过';
       case 'game_text_thread_unset':
         return '尚未选择线程 · 选一条后开始捕获';
+      case 'media_tracking_watched_show':
+        return '查看全部看过';
+      case 'media_tracking_watched_title':
+        return 'Bangumi 看过';
+      case 'media_tracking_watched_empty':
+        return '这个 Bangumi 账号还没有标记为“看过”的番剧。';
+      case 'media_tracking_watched_load_failed':
+        return ({required Object error}) => '读取看过记录失败：${error}';
+      case 'media_tracking_watched_progress':
+        return ({required Object n}) => '已看 ${n} 集';
+      case 'media_tracking_manual_required':
+        return '需要手动关联';
+      case 'media_tracking_manual_required_count':
+        return ({required Object n}) => '${n} 项需要手动关联';
+      case 'media_tracking_manual_required_hint':
+        return '这些本地条目已有观看、阅读或游玩记录，但还没有关联到 Bangumi。';
+      case 'media_tracking_no_local_history':
+        return '暂无需要关联的本地观看、阅读或游玩记录。';
+      case 'media_tracking_more_manual_required':
+        return ({required Object n}) => '另有 ${n} 项需要手动关联';
       default:
         return null;
     }
@@ -200320,8 +201019,6 @@ extension on _StringsZhHk {
         return 'Everything sent';
       case 'media_tracking_unauthorized':
         return 'Bangumi rejected the access token. Reconnect it in settings.';
-      case 'media_tracking_unlinked_hint':
-        return 'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
       case 'media_tracking_open_subject':
         return 'Open on Bangumi';
       case 'media_tracking_manage_links':
@@ -200377,6 +201074,27 @@ extension on _StringsZhHk {
             'Skipped ${m} of ${n} selected items that no longer exist';
       case 'game_text_thread_unset':
         return 'No thread selected — pick one to start capturing';
+      case 'media_tracking_watched_show':
+        return 'View all watched anime';
+      case 'media_tracking_watched_title':
+        return 'Watched on Bangumi';
+      case 'media_tracking_watched_empty':
+        return 'No anime is marked as watched on this Bangumi account.';
+      case 'media_tracking_watched_load_failed':
+        return ({required Object error}) =>
+            'Could not load watched anime: ${error}';
+      case 'media_tracking_watched_progress':
+        return ({required Object n}) => 'Watched ${n} episodes';
+      case 'media_tracking_manual_required':
+        return 'Needs manual link';
+      case 'media_tracking_manual_required_count':
+        return ({required Object n}) => '${n} items need manual links';
+      case 'media_tracking_manual_required_hint':
+        return 'These local items already have progress but are not linked to Bangumi.';
+      case 'media_tracking_no_local_history':
+        return 'No local watch, reading, or game progress needs linking.';
+      case 'media_tracking_more_manual_required':
+        return ({required Object n}) => '${n} more items need manual links';
       default:
         return null;
     }
