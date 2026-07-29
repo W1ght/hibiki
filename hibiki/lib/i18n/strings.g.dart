@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 47192 (2776 per locale)
+/// Strings: 47328 (2784 per locale)
 ///
-/// Built on 2026-07-31 at 10:14 UTC
+/// Built on 2026-07-31 at 10:25 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3731,6 +3731,18 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get sync_last_auto_disabled => 'Last sync: skipped - auto sync is off';
   String get sync_last_cooled_down => 'Last sync: skipped - synced recently';
   String get sync_last_failed => 'Last sync: failed';
+  String anime_download_no_results_detail(
+          {required Object query, required Object filters}) =>
+      'The service responded successfully but returned 0 items. Query: ${query}; filters: ${filters}. Try another title or loosen the filters.';
+  String get anime_download_streaming_ready =>
+      'In library · download continues';
+  String get anime_download_task_settings => 'Task settings';
+  String get anime_download_task_library_name => 'Library name';
+  String get anime_download_task_content_kind => 'Import as';
+  String get anime_download_task_settings_hint =>
+      'These settings affect library import. Use Rename / move to change downloaded files or their folder.';
+  String get anime_download_task_more_actions => 'More task actions';
+  String get anime_download_unfiltered => 'No Trusted filter';
 }
 
 // Path: <root>
@@ -10086,6 +10098,26 @@ class _StringsAr extends _StringsEn {
   String get sync_last_cooled_down => 'Last sync: skipped - synced recently';
   @override
   String get sync_last_failed => 'Last sync: failed';
+  @override
+  String anime_download_no_results_detail(
+          {required Object query, required Object filters}) =>
+      'The service responded successfully but returned 0 items. Query: ${query}; filters: ${filters}. Try another title or loosen the filters.';
+  @override
+  String get anime_download_streaming_ready =>
+      'In library · download continues';
+  @override
+  String get anime_download_task_settings => 'Task settings';
+  @override
+  String get anime_download_task_library_name => 'Library name';
+  @override
+  String get anime_download_task_content_kind => 'Import as';
+  @override
+  String get anime_download_task_settings_hint =>
+      'These settings affect library import. Use Rename / move to change downloaded files or their folder.';
+  @override
+  String get anime_download_task_more_actions => 'More task actions';
+  @override
+  String get anime_download_unfiltered => 'No Trusted filter';
 }
 
 // Path: <root>
@@ -16509,6 +16541,26 @@ class _StringsDe extends _StringsEn {
   String get sync_last_cooled_down => 'Last sync: skipped - synced recently';
   @override
   String get sync_last_failed => 'Last sync: failed';
+  @override
+  String anime_download_no_results_detail(
+          {required Object query, required Object filters}) =>
+      'The service responded successfully but returned 0 items. Query: ${query}; filters: ${filters}. Try another title or loosen the filters.';
+  @override
+  String get anime_download_streaming_ready =>
+      'In library · download continues';
+  @override
+  String get anime_download_task_settings => 'Task settings';
+  @override
+  String get anime_download_task_library_name => 'Library name';
+  @override
+  String get anime_download_task_content_kind => 'Import as';
+  @override
+  String get anime_download_task_settings_hint =>
+      'These settings affect library import. Use Rename / move to change downloaded files or their folder.';
+  @override
+  String get anime_download_task_more_actions => 'More task actions';
+  @override
+  String get anime_download_unfiltered => 'No Trusted filter';
 }
 
 // Path: <root>
@@ -22948,6 +23000,26 @@ class _StringsEs extends _StringsEn {
   String get sync_last_cooled_down => 'Last sync: skipped - synced recently';
   @override
   String get sync_last_failed => 'Last sync: failed';
+  @override
+  String anime_download_no_results_detail(
+          {required Object query, required Object filters}) =>
+      'The service responded successfully but returned 0 items. Query: ${query}; filters: ${filters}. Try another title or loosen the filters.';
+  @override
+  String get anime_download_streaming_ready =>
+      'In library · download continues';
+  @override
+  String get anime_download_task_settings => 'Task settings';
+  @override
+  String get anime_download_task_library_name => 'Library name';
+  @override
+  String get anime_download_task_content_kind => 'Import as';
+  @override
+  String get anime_download_task_settings_hint =>
+      'These settings affect library import. Use Rename / move to change downloaded files or their folder.';
+  @override
+  String get anime_download_task_more_actions => 'More task actions';
+  @override
+  String get anime_download_unfiltered => 'No Trusted filter';
 }
 
 // Path: <root>
@@ -29398,6 +29470,26 @@ class _StringsFr extends _StringsEn {
   String get sync_last_cooled_down => 'Last sync: skipped - synced recently';
   @override
   String get sync_last_failed => 'Last sync: failed';
+  @override
+  String anime_download_no_results_detail(
+          {required Object query, required Object filters}) =>
+      'The service responded successfully but returned 0 items. Query: ${query}; filters: ${filters}. Try another title or loosen the filters.';
+  @override
+  String get anime_download_streaming_ready =>
+      'In library · download continues';
+  @override
+  String get anime_download_task_settings => 'Task settings';
+  @override
+  String get anime_download_task_library_name => 'Library name';
+  @override
+  String get anime_download_task_content_kind => 'Import as';
+  @override
+  String get anime_download_task_settings_hint =>
+      'These settings affect library import. Use Rename / move to change downloaded files or their folder.';
+  @override
+  String get anime_download_task_more_actions => 'More task actions';
+  @override
+  String get anime_download_unfiltered => 'No Trusted filter';
 }
 
 // Path: <root>
@@ -35777,6 +35869,26 @@ class _StringsId extends _StringsEn {
   String get sync_last_cooled_down => 'Last sync: skipped - synced recently';
   @override
   String get sync_last_failed => 'Last sync: failed';
+  @override
+  String anime_download_no_results_detail(
+          {required Object query, required Object filters}) =>
+      'The service responded successfully but returned 0 items. Query: ${query}; filters: ${filters}. Try another title or loosen the filters.';
+  @override
+  String get anime_download_streaming_ready =>
+      'In library · download continues';
+  @override
+  String get anime_download_task_settings => 'Task settings';
+  @override
+  String get anime_download_task_library_name => 'Library name';
+  @override
+  String get anime_download_task_content_kind => 'Import as';
+  @override
+  String get anime_download_task_settings_hint =>
+      'These settings affect library import. Use Rename / move to change downloaded files or their folder.';
+  @override
+  String get anime_download_task_more_actions => 'More task actions';
+  @override
+  String get anime_download_unfiltered => 'No Trusted filter';
 }
 
 // Path: <root>
@@ -42202,6 +42314,26 @@ class _StringsIt extends _StringsEn {
   String get sync_last_cooled_down => 'Last sync: skipped - synced recently';
   @override
   String get sync_last_failed => 'Last sync: failed';
+  @override
+  String anime_download_no_results_detail(
+          {required Object query, required Object filters}) =>
+      'The service responded successfully but returned 0 items. Query: ${query}; filters: ${filters}. Try another title or loosen the filters.';
+  @override
+  String get anime_download_streaming_ready =>
+      'In library · download continues';
+  @override
+  String get anime_download_task_settings => 'Task settings';
+  @override
+  String get anime_download_task_library_name => 'Library name';
+  @override
+  String get anime_download_task_content_kind => 'Import as';
+  @override
+  String get anime_download_task_settings_hint =>
+      'These settings affect library import. Use Rename / move to change downloaded files or their folder.';
+  @override
+  String get anime_download_task_more_actions => 'More task actions';
+  @override
+  String get anime_download_unfiltered => 'No Trusted filter';
 }
 
 // Path: <root>
@@ -48444,6 +48576,26 @@ class _StringsJa extends _StringsEn {
   String get sync_last_cooled_down => 'Last sync: skipped - synced recently';
   @override
   String get sync_last_failed => 'Last sync: failed';
+  @override
+  String anime_download_no_results_detail(
+          {required Object query, required Object filters}) =>
+      'The service responded successfully but returned 0 items. Query: ${query}; filters: ${filters}. Try another title or loosen the filters.';
+  @override
+  String get anime_download_streaming_ready =>
+      'In library · download continues';
+  @override
+  String get anime_download_task_settings => 'Task settings';
+  @override
+  String get anime_download_task_library_name => 'Library name';
+  @override
+  String get anime_download_task_content_kind => 'Import as';
+  @override
+  String get anime_download_task_settings_hint =>
+      'These settings affect library import. Use Rename / move to change downloaded files or their folder.';
+  @override
+  String get anime_download_task_more_actions => 'More task actions';
+  @override
+  String get anime_download_unfiltered => 'No Trusted filter';
 }
 
 // Path: <root>
@@ -54688,6 +54840,26 @@ class _StringsKo extends _StringsEn {
   String get sync_last_cooled_down => 'Last sync: skipped - synced recently';
   @override
   String get sync_last_failed => 'Last sync: failed';
+  @override
+  String anime_download_no_results_detail(
+          {required Object query, required Object filters}) =>
+      'The service responded successfully but returned 0 items. Query: ${query}; filters: ${filters}. Try another title or loosen the filters.';
+  @override
+  String get anime_download_streaming_ready =>
+      'In library · download continues';
+  @override
+  String get anime_download_task_settings => 'Task settings';
+  @override
+  String get anime_download_task_library_name => 'Library name';
+  @override
+  String get anime_download_task_content_kind => 'Import as';
+  @override
+  String get anime_download_task_settings_hint =>
+      'These settings affect library import. Use Rename / move to change downloaded files or their folder.';
+  @override
+  String get anime_download_task_more_actions => 'More task actions';
+  @override
+  String get anime_download_unfiltered => 'No Trusted filter';
 }
 
 // Path: <root>
@@ -61093,6 +61265,26 @@ class _StringsNl extends _StringsEn {
   String get sync_last_cooled_down => 'Last sync: skipped - synced recently';
   @override
   String get sync_last_failed => 'Last sync: failed';
+  @override
+  String anime_download_no_results_detail(
+          {required Object query, required Object filters}) =>
+      'The service responded successfully but returned 0 items. Query: ${query}; filters: ${filters}. Try another title or loosen the filters.';
+  @override
+  String get anime_download_streaming_ready =>
+      'In library · download continues';
+  @override
+  String get anime_download_task_settings => 'Task settings';
+  @override
+  String get anime_download_task_library_name => 'Library name';
+  @override
+  String get anime_download_task_content_kind => 'Import as';
+  @override
+  String get anime_download_task_settings_hint =>
+      'These settings affect library import. Use Rename / move to change downloaded files or their folder.';
+  @override
+  String get anime_download_task_more_actions => 'More task actions';
+  @override
+  String get anime_download_unfiltered => 'No Trusted filter';
 }
 
 // Path: <root>
@@ -67511,6 +67703,26 @@ class _StringsPtBr extends _StringsEn {
   String get sync_last_cooled_down => 'Last sync: skipped - synced recently';
   @override
   String get sync_last_failed => 'Last sync: failed';
+  @override
+  String anime_download_no_results_detail(
+          {required Object query, required Object filters}) =>
+      'The service responded successfully but returned 0 items. Query: ${query}; filters: ${filters}. Try another title or loosen the filters.';
+  @override
+  String get anime_download_streaming_ready =>
+      'In library · download continues';
+  @override
+  String get anime_download_task_settings => 'Task settings';
+  @override
+  String get anime_download_task_library_name => 'Library name';
+  @override
+  String get anime_download_task_content_kind => 'Import as';
+  @override
+  String get anime_download_task_settings_hint =>
+      'These settings affect library import. Use Rename / move to change downloaded files or their folder.';
+  @override
+  String get anime_download_task_more_actions => 'More task actions';
+  @override
+  String get anime_download_unfiltered => 'No Trusted filter';
 }
 
 // Path: <root>
@@ -73913,6 +74125,26 @@ class _StringsRu extends _StringsEn {
   String get sync_last_cooled_down => 'Last sync: skipped - synced recently';
   @override
   String get sync_last_failed => 'Last sync: failed';
+  @override
+  String anime_download_no_results_detail(
+          {required Object query, required Object filters}) =>
+      'The service responded successfully but returned 0 items. Query: ${query}; filters: ${filters}. Try another title or loosen the filters.';
+  @override
+  String get anime_download_streaming_ready =>
+      'In library · download continues';
+  @override
+  String get anime_download_task_settings => 'Task settings';
+  @override
+  String get anime_download_task_library_name => 'Library name';
+  @override
+  String get anime_download_task_content_kind => 'Import as';
+  @override
+  String get anime_download_task_settings_hint =>
+      'These settings affect library import. Use Rename / move to change downloaded files or their folder.';
+  @override
+  String get anime_download_task_more_actions => 'More task actions';
+  @override
+  String get anime_download_unfiltered => 'No Trusted filter';
 }
 
 // Path: <root>
@@ -80263,6 +80495,26 @@ class _StringsTh extends _StringsEn {
   String get sync_last_cooled_down => 'Last sync: skipped - synced recently';
   @override
   String get sync_last_failed => 'Last sync: failed';
+  @override
+  String anime_download_no_results_detail(
+          {required Object query, required Object filters}) =>
+      'The service responded successfully but returned 0 items. Query: ${query}; filters: ${filters}. Try another title or loosen the filters.';
+  @override
+  String get anime_download_streaming_ready =>
+      'In library · download continues';
+  @override
+  String get anime_download_task_settings => 'Task settings';
+  @override
+  String get anime_download_task_library_name => 'Library name';
+  @override
+  String get anime_download_task_content_kind => 'Import as';
+  @override
+  String get anime_download_task_settings_hint =>
+      'These settings affect library import. Use Rename / move to change downloaded files or their folder.';
+  @override
+  String get anime_download_task_more_actions => 'More task actions';
+  @override
+  String get anime_download_unfiltered => 'No Trusted filter';
 }
 
 // Path: <root>
@@ -86645,6 +86897,26 @@ class _StringsTr extends _StringsEn {
   String get sync_last_cooled_down => 'Last sync: skipped - synced recently';
   @override
   String get sync_last_failed => 'Last sync: failed';
+  @override
+  String anime_download_no_results_detail(
+          {required Object query, required Object filters}) =>
+      'The service responded successfully but returned 0 items. Query: ${query}; filters: ${filters}. Try another title or loosen the filters.';
+  @override
+  String get anime_download_streaming_ready =>
+      'In library · download continues';
+  @override
+  String get anime_download_task_settings => 'Task settings';
+  @override
+  String get anime_download_task_library_name => 'Library name';
+  @override
+  String get anime_download_task_content_kind => 'Import as';
+  @override
+  String get anime_download_task_settings_hint =>
+      'These settings affect library import. Use Rename / move to change downloaded files or their folder.';
+  @override
+  String get anime_download_task_more_actions => 'More task actions';
+  @override
+  String get anime_download_unfiltered => 'No Trusted filter';
 }
 
 // Path: <root>
@@ -93012,6 +93284,26 @@ class _StringsVi extends _StringsEn {
   String get sync_last_cooled_down => 'Last sync: skipped - synced recently';
   @override
   String get sync_last_failed => 'Last sync: failed';
+  @override
+  String anime_download_no_results_detail(
+          {required Object query, required Object filters}) =>
+      'The service responded successfully but returned 0 items. Query: ${query}; filters: ${filters}. Try another title or loosen the filters.';
+  @override
+  String get anime_download_streaming_ready =>
+      'In library · download continues';
+  @override
+  String get anime_download_task_settings => 'Task settings';
+  @override
+  String get anime_download_task_library_name => 'Library name';
+  @override
+  String get anime_download_task_content_kind => 'Import as';
+  @override
+  String get anime_download_task_settings_hint =>
+      'These settings affect library import. Use Rename / move to change downloaded files or their folder.';
+  @override
+  String get anime_download_task_more_actions => 'More task actions';
+  @override
+  String get anime_download_unfiltered => 'No Trusted filter';
 }
 
 // Path: <root>
@@ -98928,6 +99220,25 @@ class _StringsZhCn extends _StringsEn {
   String get sync_last_cooled_down => '上次同步：已跳过——刚同步过';
   @override
   String get sync_last_failed => '上次同步：失败';
+  @override
+  String anime_download_no_results_detail(
+          {required Object query, required Object filters}) =>
+      '服务已正常响应，但按当前条件返回 0 条。查询：${query}；筛选：${filters}。请尝试别名或放宽筛选。';
+  @override
+  String get anime_download_streaming_ready => '已入库 · 下载继续';
+  @override
+  String get anime_download_task_settings => '任务设置';
+  @override
+  String get anime_download_task_library_name => '入库名称';
+  @override
+  String get anime_download_task_content_kind => '入库类型';
+  @override
+  String get anime_download_task_settings_hint =>
+      '这些设置影响入库；要修改下载文件名或目录，请使用“重命名 / 移动”。';
+  @override
+  String get anime_download_task_more_actions => '更多任务操作';
+  @override
+  String get anime_download_unfiltered => '未启用 Trusted 筛选';
 }
 
 // Path: <root>
@@ -105091,6 +105402,26 @@ class _StringsZhHk extends _StringsEn {
   String get sync_last_cooled_down => 'Last sync: skipped - synced recently';
   @override
   String get sync_last_failed => 'Last sync: failed';
+  @override
+  String anime_download_no_results_detail(
+          {required Object query, required Object filters}) =>
+      'The service responded successfully but returned 0 items. Query: ${query}; filters: ${filters}. Try another title or loosen the filters.';
+  @override
+  String get anime_download_streaming_ready =>
+      'In library · download continues';
+  @override
+  String get anime_download_task_settings => 'Task settings';
+  @override
+  String get anime_download_task_library_name => 'Library name';
+  @override
+  String get anime_download_task_content_kind => 'Import as';
+  @override
+  String get anime_download_task_settings_hint =>
+      'These settings affect library import. Use Rename / move to change downloaded files or their folder.';
+  @override
+  String get anime_download_task_more_actions => 'More task actions';
+  @override
+  String get anime_download_unfiltered => 'No Trusted filter';
 }
 
 /// Flat map(s) containing all translations.
@@ -110779,6 +111110,23 @@ extension on _StringsEn {
         return 'Last sync: skipped - synced recently';
       case 'sync_last_failed':
         return 'Last sync: failed';
+      case 'anime_download_no_results_detail':
+        return ({required Object query, required Object filters}) =>
+            'The service responded successfully but returned 0 items. Query: ${query}; filters: ${filters}. Try another title or loosen the filters.';
+      case 'anime_download_streaming_ready':
+        return 'In library · download continues';
+      case 'anime_download_task_settings':
+        return 'Task settings';
+      case 'anime_download_task_library_name':
+        return 'Library name';
+      case 'anime_download_task_content_kind':
+        return 'Import as';
+      case 'anime_download_task_settings_hint':
+        return 'These settings affect library import. Use Rename / move to change downloaded files or their folder.';
+      case 'anime_download_task_more_actions':
+        return 'More task actions';
+      case 'anime_download_unfiltered':
+        return 'No Trusted filter';
       default:
         return null;
     }
@@ -116465,6 +116813,23 @@ extension on _StringsAr {
         return 'Last sync: skipped - synced recently';
       case 'sync_last_failed':
         return 'Last sync: failed';
+      case 'anime_download_no_results_detail':
+        return ({required Object query, required Object filters}) =>
+            'The service responded successfully but returned 0 items. Query: ${query}; filters: ${filters}. Try another title or loosen the filters.';
+      case 'anime_download_streaming_ready':
+        return 'In library · download continues';
+      case 'anime_download_task_settings':
+        return 'Task settings';
+      case 'anime_download_task_library_name':
+        return 'Library name';
+      case 'anime_download_task_content_kind':
+        return 'Import as';
+      case 'anime_download_task_settings_hint':
+        return 'These settings affect library import. Use Rename / move to change downloaded files or their folder.';
+      case 'anime_download_task_more_actions':
+        return 'More task actions';
+      case 'anime_download_unfiltered':
+        return 'No Trusted filter';
       default:
         return null;
     }
@@ -122172,6 +122537,23 @@ extension on _StringsDe {
         return 'Last sync: skipped - synced recently';
       case 'sync_last_failed':
         return 'Last sync: failed';
+      case 'anime_download_no_results_detail':
+        return ({required Object query, required Object filters}) =>
+            'The service responded successfully but returned 0 items. Query: ${query}; filters: ${filters}. Try another title or loosen the filters.';
+      case 'anime_download_streaming_ready':
+        return 'In library · download continues';
+      case 'anime_download_task_settings':
+        return 'Task settings';
+      case 'anime_download_task_library_name':
+        return 'Library name';
+      case 'anime_download_task_content_kind':
+        return 'Import as';
+      case 'anime_download_task_settings_hint':
+        return 'These settings affect library import. Use Rename / move to change downloaded files or their folder.';
+      case 'anime_download_task_more_actions':
+        return 'More task actions';
+      case 'anime_download_unfiltered':
+        return 'No Trusted filter';
       default:
         return null;
     }
@@ -127878,6 +128260,23 @@ extension on _StringsEs {
         return 'Last sync: skipped - synced recently';
       case 'sync_last_failed':
         return 'Last sync: failed';
+      case 'anime_download_no_results_detail':
+        return ({required Object query, required Object filters}) =>
+            'The service responded successfully but returned 0 items. Query: ${query}; filters: ${filters}. Try another title or loosen the filters.';
+      case 'anime_download_streaming_ready':
+        return 'In library · download continues';
+      case 'anime_download_task_settings':
+        return 'Task settings';
+      case 'anime_download_task_library_name':
+        return 'Library name';
+      case 'anime_download_task_content_kind':
+        return 'Import as';
+      case 'anime_download_task_settings_hint':
+        return 'These settings affect library import. Use Rename / move to change downloaded files or their folder.';
+      case 'anime_download_task_more_actions':
+        return 'More task actions';
+      case 'anime_download_unfiltered':
+        return 'No Trusted filter';
       default:
         return null;
     }
@@ -133590,6 +133989,23 @@ extension on _StringsFr {
         return 'Last sync: skipped - synced recently';
       case 'sync_last_failed':
         return 'Last sync: failed';
+      case 'anime_download_no_results_detail':
+        return ({required Object query, required Object filters}) =>
+            'The service responded successfully but returned 0 items. Query: ${query}; filters: ${filters}. Try another title or loosen the filters.';
+      case 'anime_download_streaming_ready':
+        return 'In library · download continues';
+      case 'anime_download_task_settings':
+        return 'Task settings';
+      case 'anime_download_task_library_name':
+        return 'Library name';
+      case 'anime_download_task_content_kind':
+        return 'Import as';
+      case 'anime_download_task_settings_hint':
+        return 'These settings affect library import. Use Rename / move to change downloaded files or their folder.';
+      case 'anime_download_task_more_actions':
+        return 'More task actions';
+      case 'anime_download_unfiltered':
+        return 'No Trusted filter';
       default:
         return null;
     }
@@ -139284,6 +139700,23 @@ extension on _StringsId {
         return 'Last sync: skipped - synced recently';
       case 'sync_last_failed':
         return 'Last sync: failed';
+      case 'anime_download_no_results_detail':
+        return ({required Object query, required Object filters}) =>
+            'The service responded successfully but returned 0 items. Query: ${query}; filters: ${filters}. Try another title or loosen the filters.';
+      case 'anime_download_streaming_ready':
+        return 'In library · download continues';
+      case 'anime_download_task_settings':
+        return 'Task settings';
+      case 'anime_download_task_library_name':
+        return 'Library name';
+      case 'anime_download_task_content_kind':
+        return 'Import as';
+      case 'anime_download_task_settings_hint':
+        return 'These settings affect library import. Use Rename / move to change downloaded files or their folder.';
+      case 'anime_download_task_more_actions':
+        return 'More task actions';
+      case 'anime_download_unfiltered':
+        return 'No Trusted filter';
       default:
         return null;
     }
@@ -144993,6 +145426,23 @@ extension on _StringsIt {
         return 'Last sync: skipped - synced recently';
       case 'sync_last_failed':
         return 'Last sync: failed';
+      case 'anime_download_no_results_detail':
+        return ({required Object query, required Object filters}) =>
+            'The service responded successfully but returned 0 items. Query: ${query}; filters: ${filters}. Try another title or loosen the filters.';
+      case 'anime_download_streaming_ready':
+        return 'In library · download continues';
+      case 'anime_download_task_settings':
+        return 'Task settings';
+      case 'anime_download_task_library_name':
+        return 'Library name';
+      case 'anime_download_task_content_kind':
+        return 'Import as';
+      case 'anime_download_task_settings_hint':
+        return 'These settings affect library import. Use Rename / move to change downloaded files or their folder.';
+      case 'anime_download_task_more_actions':
+        return 'More task actions';
+      case 'anime_download_unfiltered':
+        return 'No Trusted filter';
       default:
         return null;
     }
@@ -150664,6 +151114,23 @@ extension on _StringsJa {
         return 'Last sync: skipped - synced recently';
       case 'sync_last_failed':
         return 'Last sync: failed';
+      case 'anime_download_no_results_detail':
+        return ({required Object query, required Object filters}) =>
+            'The service responded successfully but returned 0 items. Query: ${query}; filters: ${filters}. Try another title or loosen the filters.';
+      case 'anime_download_streaming_ready':
+        return 'In library · download continues';
+      case 'anime_download_task_settings':
+        return 'Task settings';
+      case 'anime_download_task_library_name':
+        return 'Library name';
+      case 'anime_download_task_content_kind':
+        return 'Import as';
+      case 'anime_download_task_settings_hint':
+        return 'These settings affect library import. Use Rename / move to change downloaded files or their folder.';
+      case 'anime_download_task_more_actions':
+        return 'More task actions';
+      case 'anime_download_unfiltered':
+        return 'No Trusted filter';
       default:
         return null;
     }
@@ -156339,6 +156806,23 @@ extension on _StringsKo {
         return 'Last sync: skipped - synced recently';
       case 'sync_last_failed':
         return 'Last sync: failed';
+      case 'anime_download_no_results_detail':
+        return ({required Object query, required Object filters}) =>
+            'The service responded successfully but returned 0 items. Query: ${query}; filters: ${filters}. Try another title or loosen the filters.';
+      case 'anime_download_streaming_ready':
+        return 'In library · download continues';
+      case 'anime_download_task_settings':
+        return 'Task settings';
+      case 'anime_download_task_library_name':
+        return 'Library name';
+      case 'anime_download_task_content_kind':
+        return 'Import as';
+      case 'anime_download_task_settings_hint':
+        return 'These settings affect library import. Use Rename / move to change downloaded files or their folder.';
+      case 'anime_download_task_more_actions':
+        return 'More task actions';
+      case 'anime_download_unfiltered':
+        return 'No Trusted filter';
       default:
         return null;
     }
@@ -162041,6 +162525,23 @@ extension on _StringsNl {
         return 'Last sync: skipped - synced recently';
       case 'sync_last_failed':
         return 'Last sync: failed';
+      case 'anime_download_no_results_detail':
+        return ({required Object query, required Object filters}) =>
+            'The service responded successfully but returned 0 items. Query: ${query}; filters: ${filters}. Try another title or loosen the filters.';
+      case 'anime_download_streaming_ready':
+        return 'In library · download continues';
+      case 'anime_download_task_settings':
+        return 'Task settings';
+      case 'anime_download_task_library_name':
+        return 'Library name';
+      case 'anime_download_task_content_kind':
+        return 'Import as';
+      case 'anime_download_task_settings_hint':
+        return 'These settings affect library import. Use Rename / move to change downloaded files or their folder.';
+      case 'anime_download_task_more_actions':
+        return 'More task actions';
+      case 'anime_download_unfiltered':
+        return 'No Trusted filter';
       default:
         return null;
     }
@@ -167740,6 +168241,23 @@ extension on _StringsPtBr {
         return 'Last sync: skipped - synced recently';
       case 'sync_last_failed':
         return 'Last sync: failed';
+      case 'anime_download_no_results_detail':
+        return ({required Object query, required Object filters}) =>
+            'The service responded successfully but returned 0 items. Query: ${query}; filters: ${filters}. Try another title or loosen the filters.';
+      case 'anime_download_streaming_ready':
+        return 'In library · download continues';
+      case 'anime_download_task_settings':
+        return 'Task settings';
+      case 'anime_download_task_library_name':
+        return 'Library name';
+      case 'anime_download_task_content_kind':
+        return 'Import as';
+      case 'anime_download_task_settings_hint':
+        return 'These settings affect library import. Use Rename / move to change downloaded files or their folder.';
+      case 'anime_download_task_more_actions':
+        return 'More task actions';
+      case 'anime_download_unfiltered':
+        return 'No Trusted filter';
       default:
         return null;
     }
@@ -173444,6 +173962,23 @@ extension on _StringsRu {
         return 'Last sync: skipped - synced recently';
       case 'sync_last_failed':
         return 'Last sync: failed';
+      case 'anime_download_no_results_detail':
+        return ({required Object query, required Object filters}) =>
+            'The service responded successfully but returned 0 items. Query: ${query}; filters: ${filters}. Try another title or loosen the filters.';
+      case 'anime_download_streaming_ready':
+        return 'In library · download continues';
+      case 'anime_download_task_settings':
+        return 'Task settings';
+      case 'anime_download_task_library_name':
+        return 'Library name';
+      case 'anime_download_task_content_kind':
+        return 'Import as';
+      case 'anime_download_task_settings_hint':
+        return 'These settings affect library import. Use Rename / move to change downloaded files or their folder.';
+      case 'anime_download_task_more_actions':
+        return 'More task actions';
+      case 'anime_download_unfiltered':
+        return 'No Trusted filter';
       default:
         return null;
     }
@@ -179132,6 +179667,23 @@ extension on _StringsTh {
         return 'Last sync: skipped - synced recently';
       case 'sync_last_failed':
         return 'Last sync: failed';
+      case 'anime_download_no_results_detail':
+        return ({required Object query, required Object filters}) =>
+            'The service responded successfully but returned 0 items. Query: ${query}; filters: ${filters}. Try another title or loosen the filters.';
+      case 'anime_download_streaming_ready':
+        return 'In library · download continues';
+      case 'anime_download_task_settings':
+        return 'Task settings';
+      case 'anime_download_task_library_name':
+        return 'Library name';
+      case 'anime_download_task_content_kind':
+        return 'Import as';
+      case 'anime_download_task_settings_hint':
+        return 'These settings affect library import. Use Rename / move to change downloaded files or their folder.';
+      case 'anime_download_task_more_actions':
+        return 'More task actions';
+      case 'anime_download_unfiltered':
+        return 'No Trusted filter';
       default:
         return null;
     }
@@ -184829,6 +185381,23 @@ extension on _StringsTr {
         return 'Last sync: skipped - synced recently';
       case 'sync_last_failed':
         return 'Last sync: failed';
+      case 'anime_download_no_results_detail':
+        return ({required Object query, required Object filters}) =>
+            'The service responded successfully but returned 0 items. Query: ${query}; filters: ${filters}. Try another title or loosen the filters.';
+      case 'anime_download_streaming_ready':
+        return 'In library · download continues';
+      case 'anime_download_task_settings':
+        return 'Task settings';
+      case 'anime_download_task_library_name':
+        return 'Library name';
+      case 'anime_download_task_content_kind':
+        return 'Import as';
+      case 'anime_download_task_settings_hint':
+        return 'These settings affect library import. Use Rename / move to change downloaded files or their folder.';
+      case 'anime_download_task_more_actions':
+        return 'More task actions';
+      case 'anime_download_unfiltered':
+        return 'No Trusted filter';
       default:
         return null;
     }
@@ -190521,6 +191090,23 @@ extension on _StringsVi {
         return 'Last sync: skipped - synced recently';
       case 'sync_last_failed':
         return 'Last sync: failed';
+      case 'anime_download_no_results_detail':
+        return ({required Object query, required Object filters}) =>
+            'The service responded successfully but returned 0 items. Query: ${query}; filters: ${filters}. Try another title or loosen the filters.';
+      case 'anime_download_streaming_ready':
+        return 'In library · download continues';
+      case 'anime_download_task_settings':
+        return 'Task settings';
+      case 'anime_download_task_library_name':
+        return 'Library name';
+      case 'anime_download_task_content_kind':
+        return 'Import as';
+      case 'anime_download_task_settings_hint':
+        return 'These settings affect library import. Use Rename / move to change downloaded files or their folder.';
+      case 'anime_download_task_more_actions':
+        return 'More task actions';
+      case 'anime_download_unfiltered':
+        return 'No Trusted filter';
       default:
         return null;
     }
@@ -196165,6 +196751,23 @@ extension on _StringsZhCn {
         return '上次同步：已跳过——刚同步过';
       case 'sync_last_failed':
         return '上次同步：失败';
+      case 'anime_download_no_results_detail':
+        return ({required Object query, required Object filters}) =>
+            '服务已正常响应，但按当前条件返回 0 条。查询：${query}；筛选：${filters}。请尝试别名或放宽筛选。';
+      case 'anime_download_streaming_ready':
+        return '已入库 · 下载继续';
+      case 'anime_download_task_settings':
+        return '任务设置';
+      case 'anime_download_task_library_name':
+        return '入库名称';
+      case 'anime_download_task_content_kind':
+        return '入库类型';
+      case 'anime_download_task_settings_hint':
+        return '这些设置影响入库；要修改下载文件名或目录，请使用“重命名 / 移动”。';
+      case 'anime_download_task_more_actions':
+        return '更多任务操作';
+      case 'anime_download_unfiltered':
+        return '未启用 Trusted 筛选';
       default:
         return null;
     }
@@ -201831,6 +202434,23 @@ extension on _StringsZhHk {
         return 'Last sync: skipped - synced recently';
       case 'sync_last_failed':
         return 'Last sync: failed';
+      case 'anime_download_no_results_detail':
+        return ({required Object query, required Object filters}) =>
+            'The service responded successfully but returned 0 items. Query: ${query}; filters: ${filters}. Try another title or loosen the filters.';
+      case 'anime_download_streaming_ready':
+        return 'In library · download continues';
+      case 'anime_download_task_settings':
+        return 'Task settings';
+      case 'anime_download_task_library_name':
+        return 'Library name';
+      case 'anime_download_task_content_kind':
+        return 'Import as';
+      case 'anime_download_task_settings_hint':
+        return 'These settings affect library import. Use Rename / move to change downloaded files or their folder.';
+      case 'anime_download_task_more_actions':
+        return 'More task actions';
+      case 'anime_download_unfiltered':
+        return 'No Trusted filter';
       default:
         return null;
     }
