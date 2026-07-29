@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 46835 (2755 per locale)
+/// Strings: 46852 (2756 per locale)
 ///
-/// Built on 2026-07-29 at 05:10 UTC
+/// Built on 2026-07-29 at 05:49 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3702,6 +3702,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get game_stat_by_game => 'By game';
   String get stat_clear_all_game_message =>
       'Clear all game play time and session counts? Your game library and activity timeline are kept. This cannot be undone.';
+  String batch_selection_stale_skipped(
+          {required Object m, required Object n}) =>
+      'Skipped ${m} of ${n} selected items that no longer exist';
 }
 
 // Path: <root>
@@ -10007,6 +10010,10 @@ class _StringsAr extends _StringsEn {
   @override
   String get stat_clear_all_game_message =>
       'Clear all game play time and session counts? Your game library and activity timeline are kept. This cannot be undone.';
+  @override
+  String batch_selection_stale_skipped(
+          {required Object m, required Object n}) =>
+      'Skipped ${m} of ${n} selected items that no longer exist';
 }
 
 // Path: <root>
@@ -16380,6 +16387,10 @@ class _StringsDe extends _StringsEn {
   @override
   String get stat_clear_all_game_message =>
       'Clear all game play time and session counts? Your game library and activity timeline are kept. This cannot be undone.';
+  @override
+  String batch_selection_stale_skipped(
+          {required Object m, required Object n}) =>
+      'Skipped ${m} of ${n} selected items that no longer exist';
 }
 
 // Path: <root>
@@ -22769,6 +22780,10 @@ class _StringsEs extends _StringsEn {
   @override
   String get stat_clear_all_game_message =>
       'Clear all game play time and session counts? Your game library and activity timeline are kept. This cannot be undone.';
+  @override
+  String batch_selection_stale_skipped(
+          {required Object m, required Object n}) =>
+      'Skipped ${m} of ${n} selected items that no longer exist';
 }
 
 // Path: <root>
@@ -29169,6 +29184,10 @@ class _StringsFr extends _StringsEn {
   @override
   String get stat_clear_all_game_message =>
       'Clear all game play time and session counts? Your game library and activity timeline are kept. This cannot be undone.';
+  @override
+  String batch_selection_stale_skipped(
+          {required Object m, required Object n}) =>
+      'Skipped ${m} of ${n} selected items that no longer exist';
 }
 
 // Path: <root>
@@ -35498,6 +35517,10 @@ class _StringsId extends _StringsEn {
   @override
   String get stat_clear_all_game_message =>
       'Clear all game play time and session counts? Your game library and activity timeline are kept. This cannot be undone.';
+  @override
+  String batch_selection_stale_skipped(
+          {required Object m, required Object n}) =>
+      'Skipped ${m} of ${n} selected items that no longer exist';
 }
 
 // Path: <root>
@@ -41873,6 +41896,10 @@ class _StringsIt extends _StringsEn {
   @override
   String get stat_clear_all_game_message =>
       'Clear all game play time and session counts? Your game library and activity timeline are kept. This cannot be undone.';
+  @override
+  String batch_selection_stale_skipped(
+          {required Object m, required Object n}) =>
+      'Skipped ${m} of ${n} selected items that no longer exist';
 }
 
 // Path: <root>
@@ -48065,6 +48092,10 @@ class _StringsJa extends _StringsEn {
   @override
   String get stat_clear_all_game_message =>
       'Clear all game play time and session counts? Your game library and activity timeline are kept. This cannot be undone.';
+  @override
+  String batch_selection_stale_skipped(
+          {required Object m, required Object n}) =>
+      'Skipped ${m} of ${n} selected items that no longer exist';
 }
 
 // Path: <root>
@@ -54259,6 +54290,10 @@ class _StringsKo extends _StringsEn {
   @override
   String get stat_clear_all_game_message =>
       'Clear all game play time and session counts? Your game library and activity timeline are kept. This cannot be undone.';
+  @override
+  String batch_selection_stale_skipped(
+          {required Object m, required Object n}) =>
+      'Skipped ${m} of ${n} selected items that no longer exist';
 }
 
 // Path: <root>
@@ -60614,6 +60649,10 @@ class _StringsNl extends _StringsEn {
   @override
   String get stat_clear_all_game_message =>
       'Clear all game play time and session counts? Your game library and activity timeline are kept. This cannot be undone.';
+  @override
+  String batch_selection_stale_skipped(
+          {required Object m, required Object n}) =>
+      'Skipped ${m} of ${n} selected items that no longer exist';
 }
 
 // Path: <root>
@@ -66982,6 +67021,10 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get stat_clear_all_game_message =>
       'Clear all game play time and session counts? Your game library and activity timeline are kept. This cannot be undone.';
+  @override
+  String batch_selection_stale_skipped(
+          {required Object m, required Object n}) =>
+      'Skipped ${m} of ${n} selected items that no longer exist';
 }
 
 // Path: <root>
@@ -73334,6 +73377,10 @@ class _StringsRu extends _StringsEn {
   @override
   String get stat_clear_all_game_message =>
       'Clear all game play time and session counts? Your game library and activity timeline are kept. This cannot be undone.';
+  @override
+  String batch_selection_stale_skipped(
+          {required Object m, required Object n}) =>
+      'Skipped ${m} of ${n} selected items that no longer exist';
 }
 
 // Path: <root>
@@ -79634,6 +79681,10 @@ class _StringsTh extends _StringsEn {
   @override
   String get stat_clear_all_game_message =>
       'Clear all game play time and session counts? Your game library and activity timeline are kept. This cannot be undone.';
+  @override
+  String batch_selection_stale_skipped(
+          {required Object m, required Object n}) =>
+      'Skipped ${m} of ${n} selected items that no longer exist';
 }
 
 // Path: <root>
@@ -85966,6 +86017,10 @@ class _StringsTr extends _StringsEn {
   @override
   String get stat_clear_all_game_message =>
       'Clear all game play time and session counts? Your game library and activity timeline are kept. This cannot be undone.';
+  @override
+  String batch_selection_stale_skipped(
+          {required Object m, required Object n}) =>
+      'Skipped ${m} of ${n} selected items that no longer exist';
 }
 
 // Path: <root>
@@ -92283,6 +92338,10 @@ class _StringsVi extends _StringsEn {
   @override
   String get stat_clear_all_game_message =>
       'Clear all game play time and session counts? Your game library and activity timeline are kept. This cannot be undone.';
+  @override
+  String batch_selection_stale_skipped(
+          {required Object m, required Object n}) =>
+      'Skipped ${m} of ${n} selected items that no longer exist';
 }
 
 // Path: <root>
@@ -98153,6 +98212,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get stat_clear_all_game_message =>
       '确定清空全部游戏统计吗？将删除所有游戏时长和游玩次数。你的游戏库与首页活动流不受影响。此操作不可撤销。';
+  @override
+  String batch_selection_stale_skipped(
+          {required Object n, required Object m}) =>
+      '选中的 ${n} 项中有 ${m} 项已不存在，已跳过';
 }
 
 // Path: <root>
@@ -104266,6 +104329,10 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get stat_clear_all_game_message =>
       'Clear all game play time and session counts? Your game library and activity timeline are kept. This cannot be undone.';
+  @override
+  String batch_selection_stale_skipped(
+          {required Object m, required Object n}) =>
+      'Skipped ${m} of ${n} selected items that no longer exist';
 }
 
 /// Flat map(s) containing all translations.
@@ -109909,6 +109976,9 @@ extension on _StringsEn {
         return 'By game';
       case 'stat_clear_all_game_message':
         return 'Clear all game play time and session counts? Your game library and activity timeline are kept. This cannot be undone.';
+      case 'batch_selection_stale_skipped':
+        return ({required Object m, required Object n}) =>
+            'Skipped ${m} of ${n} selected items that no longer exist';
       default:
         return null;
     }
@@ -115550,6 +115620,9 @@ extension on _StringsAr {
         return 'By game';
       case 'stat_clear_all_game_message':
         return 'Clear all game play time and session counts? Your game library and activity timeline are kept. This cannot be undone.';
+      case 'batch_selection_stale_skipped':
+        return ({required Object m, required Object n}) =>
+            'Skipped ${m} of ${n} selected items that no longer exist';
       default:
         return null;
     }
@@ -121212,6 +121285,9 @@ extension on _StringsDe {
         return 'By game';
       case 'stat_clear_all_game_message':
         return 'Clear all game play time and session counts? Your game library and activity timeline are kept. This cannot be undone.';
+      case 'batch_selection_stale_skipped':
+        return ({required Object m, required Object n}) =>
+            'Skipped ${m} of ${n} selected items that no longer exist';
       default:
         return null;
     }
@@ -126873,6 +126949,9 @@ extension on _StringsEs {
         return 'By game';
       case 'stat_clear_all_game_message':
         return 'Clear all game play time and session counts? Your game library and activity timeline are kept. This cannot be undone.';
+      case 'batch_selection_stale_skipped':
+        return ({required Object m, required Object n}) =>
+            'Skipped ${m} of ${n} selected items that no longer exist';
       default:
         return null;
     }
@@ -132540,6 +132619,9 @@ extension on _StringsFr {
         return 'By game';
       case 'stat_clear_all_game_message':
         return 'Clear all game play time and session counts? Your game library and activity timeline are kept. This cannot be undone.';
+      case 'batch_selection_stale_skipped':
+        return ({required Object m, required Object n}) =>
+            'Skipped ${m} of ${n} selected items that no longer exist';
       default:
         return null;
     }
@@ -138189,6 +138271,9 @@ extension on _StringsId {
         return 'By game';
       case 'stat_clear_all_game_message':
         return 'Clear all game play time and session counts? Your game library and activity timeline are kept. This cannot be undone.';
+      case 'batch_selection_stale_skipped':
+        return ({required Object m, required Object n}) =>
+            'Skipped ${m} of ${n} selected items that no longer exist';
       default:
         return null;
     }
@@ -143853,6 +143938,9 @@ extension on _StringsIt {
         return 'By game';
       case 'stat_clear_all_game_message':
         return 'Clear all game play time and session counts? Your game library and activity timeline are kept. This cannot be undone.';
+      case 'batch_selection_stale_skipped':
+        return ({required Object m, required Object n}) =>
+            'Skipped ${m} of ${n} selected items that no longer exist';
       default:
         return null;
     }
@@ -149479,6 +149567,9 @@ extension on _StringsJa {
         return 'By game';
       case 'stat_clear_all_game_message':
         return 'Clear all game play time and session counts? Your game library and activity timeline are kept. This cannot be undone.';
+      case 'batch_selection_stale_skipped':
+        return ({required Object m, required Object n}) =>
+            'Skipped ${m} of ${n} selected items that no longer exist';
       default:
         return null;
     }
@@ -155109,6 +155200,9 @@ extension on _StringsKo {
         return 'By game';
       case 'stat_clear_all_game_message':
         return 'Clear all game play time and session counts? Your game library and activity timeline are kept. This cannot be undone.';
+      case 'batch_selection_stale_skipped':
+        return ({required Object m, required Object n}) =>
+            'Skipped ${m} of ${n} selected items that no longer exist';
       default:
         return null;
     }
@@ -160766,6 +160860,9 @@ extension on _StringsNl {
         return 'By game';
       case 'stat_clear_all_game_message':
         return 'Clear all game play time and session counts? Your game library and activity timeline are kept. This cannot be undone.';
+      case 'batch_selection_stale_skipped':
+        return ({required Object m, required Object n}) =>
+            'Skipped ${m} of ${n} selected items that no longer exist';
       default:
         return null;
     }
@@ -166420,6 +166517,9 @@ extension on _StringsPtBr {
         return 'By game';
       case 'stat_clear_all_game_message':
         return 'Clear all game play time and session counts? Your game library and activity timeline are kept. This cannot be undone.';
+      case 'batch_selection_stale_skipped':
+        return ({required Object m, required Object n}) =>
+            'Skipped ${m} of ${n} selected items that no longer exist';
       default:
         return null;
     }
@@ -172079,6 +172179,9 @@ extension on _StringsRu {
         return 'By game';
       case 'stat_clear_all_game_message':
         return 'Clear all game play time and session counts? Your game library and activity timeline are kept. This cannot be undone.';
+      case 'batch_selection_stale_skipped':
+        return ({required Object m, required Object n}) =>
+            'Skipped ${m} of ${n} selected items that no longer exist';
       default:
         return null;
     }
@@ -177722,6 +177825,9 @@ extension on _StringsTh {
         return 'By game';
       case 'stat_clear_all_game_message':
         return 'Clear all game play time and session counts? Your game library and activity timeline are kept. This cannot be undone.';
+      case 'batch_selection_stale_skipped':
+        return ({required Object m, required Object n}) =>
+            'Skipped ${m} of ${n} selected items that no longer exist';
       default:
         return null;
     }
@@ -183374,6 +183480,9 @@ extension on _StringsTr {
         return 'By game';
       case 'stat_clear_all_game_message':
         return 'Clear all game play time and session counts? Your game library and activity timeline are kept. This cannot be undone.';
+      case 'batch_selection_stale_skipped':
+        return ({required Object m, required Object n}) =>
+            'Skipped ${m} of ${n} selected items that no longer exist';
       default:
         return null;
     }
@@ -189021,6 +189130,9 @@ extension on _StringsVi {
         return 'By game';
       case 'stat_clear_all_game_message':
         return 'Clear all game play time and session counts? Your game library and activity timeline are kept. This cannot be undone.';
+      case 'batch_selection_stale_skipped':
+        return ({required Object m, required Object n}) =>
+            'Skipped ${m} of ${n} selected items that no longer exist';
       default:
         return null;
     }
@@ -194622,6 +194734,9 @@ extension on _StringsZhCn {
         return '按游戏';
       case 'stat_clear_all_game_message':
         return '确定清空全部游戏统计吗？将删除所有游戏时长和游玩次数。你的游戏库与首页活动流不受影响。此操作不可撤销。';
+      case 'batch_selection_stale_skipped':
+        return ({required Object n, required Object m}) =>
+            '选中的 ${n} 项中有 ${m} 项已不存在，已跳过';
       default:
         return null;
     }
@@ -200243,6 +200358,9 @@ extension on _StringsZhHk {
         return 'By game';
       case 'stat_clear_all_game_message':
         return 'Clear all game play time and session counts? Your game library and activity timeline are kept. This cannot be undone.';
+      case 'batch_selection_stale_skipped':
+        return ({required Object m, required Object n}) =>
+            'Skipped ${m} of ${n} selected items that no longer exist';
       default:
         return null;
     }
