@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 46733 (2749 per locale)
+/// Strings: 46784 (2752 per locale)
 ///
-/// Built on 2026-07-28 at 17:15 UTC
+/// Built on 2026-07-29 at 04:02 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3693,6 +3693,11 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get library_view_media => 'Library';
   String get scrape_failure_detail_show => 'Show details';
   String get scrape_failure_detail_hide => 'Hide details';
+  String get media_tracking_retry_mapping => 'Retry matching';
+  String get media_tracking_retry_matched =>
+      'Matched and queued current progress';
+  String get media_tracking_retry_no_match =>
+      'No match found. Try manual linking.';
 }
 
 // Path: <root>
@@ -9983,6 +9988,14 @@ class _StringsAr extends _StringsEn {
   String get scrape_failure_detail_show => 'Show details';
   @override
   String get scrape_failure_detail_hide => 'Hide details';
+  @override
+  String get media_tracking_retry_mapping => 'Retry matching';
+  @override
+  String get media_tracking_retry_matched =>
+      'Matched and queued current progress';
+  @override
+  String get media_tracking_retry_no_match =>
+      'No match found. Try manual linking.';
 }
 
 // Path: <root>
@@ -16341,6 +16354,14 @@ class _StringsDe extends _StringsEn {
   String get scrape_failure_detail_show => 'Show details';
   @override
   String get scrape_failure_detail_hide => 'Hide details';
+  @override
+  String get media_tracking_retry_mapping => 'Retry matching';
+  @override
+  String get media_tracking_retry_matched =>
+      'Matched and queued current progress';
+  @override
+  String get media_tracking_retry_no_match =>
+      'No match found. Try manual linking.';
 }
 
 // Path: <root>
@@ -22715,6 +22736,14 @@ class _StringsEs extends _StringsEn {
   String get scrape_failure_detail_show => 'Show details';
   @override
   String get scrape_failure_detail_hide => 'Hide details';
+  @override
+  String get media_tracking_retry_mapping => 'Retry matching';
+  @override
+  String get media_tracking_retry_matched =>
+      'Matched and queued current progress';
+  @override
+  String get media_tracking_retry_no_match =>
+      'No match found. Try manual linking.';
 }
 
 // Path: <root>
@@ -29100,6 +29129,14 @@ class _StringsFr extends _StringsEn {
   String get scrape_failure_detail_show => 'Show details';
   @override
   String get scrape_failure_detail_hide => 'Hide details';
+  @override
+  String get media_tracking_retry_mapping => 'Retry matching';
+  @override
+  String get media_tracking_retry_matched =>
+      'Matched and queued current progress';
+  @override
+  String get media_tracking_retry_no_match =>
+      'No match found. Try manual linking.';
 }
 
 // Path: <root>
@@ -35414,6 +35451,14 @@ class _StringsId extends _StringsEn {
   String get scrape_failure_detail_show => 'Show details';
   @override
   String get scrape_failure_detail_hide => 'Hide details';
+  @override
+  String get media_tracking_retry_mapping => 'Retry matching';
+  @override
+  String get media_tracking_retry_matched =>
+      'Matched and queued current progress';
+  @override
+  String get media_tracking_retry_no_match =>
+      'No match found. Try manual linking.';
 }
 
 // Path: <root>
@@ -41774,6 +41819,14 @@ class _StringsIt extends _StringsEn {
   String get scrape_failure_detail_show => 'Show details';
   @override
   String get scrape_failure_detail_hide => 'Hide details';
+  @override
+  String get media_tracking_retry_mapping => 'Retry matching';
+  @override
+  String get media_tracking_retry_matched =>
+      'Matched and queued current progress';
+  @override
+  String get media_tracking_retry_no_match =>
+      'No match found. Try manual linking.';
 }
 
 // Path: <root>
@@ -47951,6 +48004,14 @@ class _StringsJa extends _StringsEn {
   String get scrape_failure_detail_show => 'Show details';
   @override
   String get scrape_failure_detail_hide => 'Hide details';
+  @override
+  String get media_tracking_retry_mapping => 'Retry matching';
+  @override
+  String get media_tracking_retry_matched =>
+      'Matched and queued current progress';
+  @override
+  String get media_tracking_retry_no_match =>
+      'No match found. Try manual linking.';
 }
 
 // Path: <root>
@@ -54130,6 +54191,14 @@ class _StringsKo extends _StringsEn {
   String get scrape_failure_detail_show => 'Show details';
   @override
   String get scrape_failure_detail_hide => 'Hide details';
+  @override
+  String get media_tracking_retry_mapping => 'Retry matching';
+  @override
+  String get media_tracking_retry_matched =>
+      'Matched and queued current progress';
+  @override
+  String get media_tracking_retry_no_match =>
+      'No match found. Try manual linking.';
 }
 
 // Path: <root>
@@ -60470,6 +60539,14 @@ class _StringsNl extends _StringsEn {
   String get scrape_failure_detail_show => 'Show details';
   @override
   String get scrape_failure_detail_hide => 'Hide details';
+  @override
+  String get media_tracking_retry_mapping => 'Retry matching';
+  @override
+  String get media_tracking_retry_matched =>
+      'Matched and queued current progress';
+  @override
+  String get media_tracking_retry_no_match =>
+      'No match found. Try manual linking.';
 }
 
 // Path: <root>
@@ -66823,6 +66900,14 @@ class _StringsPtBr extends _StringsEn {
   String get scrape_failure_detail_show => 'Show details';
   @override
   String get scrape_failure_detail_hide => 'Hide details';
+  @override
+  String get media_tracking_retry_mapping => 'Retry matching';
+  @override
+  String get media_tracking_retry_matched =>
+      'Matched and queued current progress';
+  @override
+  String get media_tracking_retry_no_match =>
+      'No match found. Try manual linking.';
 }
 
 // Path: <root>
@@ -73160,6 +73245,14 @@ class _StringsRu extends _StringsEn {
   String get scrape_failure_detail_show => 'Show details';
   @override
   String get scrape_failure_detail_hide => 'Hide details';
+  @override
+  String get media_tracking_retry_mapping => 'Retry matching';
+  @override
+  String get media_tracking_retry_matched =>
+      'Matched and queued current progress';
+  @override
+  String get media_tracking_retry_no_match =>
+      'No match found. Try manual linking.';
 }
 
 // Path: <root>
@@ -79445,6 +79538,14 @@ class _StringsTh extends _StringsEn {
   String get scrape_failure_detail_show => 'Show details';
   @override
   String get scrape_failure_detail_hide => 'Hide details';
+  @override
+  String get media_tracking_retry_mapping => 'Retry matching';
+  @override
+  String get media_tracking_retry_matched =>
+      'Matched and queued current progress';
+  @override
+  String get media_tracking_retry_no_match =>
+      'No match found. Try manual linking.';
 }
 
 // Path: <root>
@@ -85762,6 +85863,14 @@ class _StringsTr extends _StringsEn {
   String get scrape_failure_detail_show => 'Show details';
   @override
   String get scrape_failure_detail_hide => 'Hide details';
+  @override
+  String get media_tracking_retry_mapping => 'Retry matching';
+  @override
+  String get media_tracking_retry_matched =>
+      'Matched and queued current progress';
+  @override
+  String get media_tracking_retry_no_match =>
+      'No match found. Try manual linking.';
 }
 
 // Path: <root>
@@ -92064,6 +92173,14 @@ class _StringsVi extends _StringsEn {
   String get scrape_failure_detail_show => 'Show details';
   @override
   String get scrape_failure_detail_hide => 'Hide details';
+  @override
+  String get media_tracking_retry_mapping => 'Retry matching';
+  @override
+  String get media_tracking_retry_matched =>
+      'Matched and queued current progress';
+  @override
+  String get media_tracking_retry_no_match =>
+      'No match found. Try manual linking.';
 }
 
 // Path: <root>
@@ -97921,6 +98038,12 @@ class _StringsZhCn extends _StringsEn {
   String get scrape_failure_detail_show => '显示详情';
   @override
   String get scrape_failure_detail_hide => '隐藏详情';
+  @override
+  String get media_tracking_retry_mapping => '重试匹配';
+  @override
+  String get media_tracking_retry_matched => '已重新关联并补发当前进度';
+  @override
+  String get media_tracking_retry_no_match => '仍未匹配到条目，请尝试手动关联';
 }
 
 // Path: <root>
@@ -104019,6 +104142,14 @@ class _StringsZhHk extends _StringsEn {
   String get scrape_failure_detail_show => 'Show details';
   @override
   String get scrape_failure_detail_hide => 'Hide details';
+  @override
+  String get media_tracking_retry_mapping => 'Retry matching';
+  @override
+  String get media_tracking_retry_matched =>
+      'Matched and queued current progress';
+  @override
+  String get media_tracking_retry_no_match =>
+      'No match found. Try manual linking.';
 }
 
 /// Flat map(s) containing all translations.
@@ -109650,6 +109781,12 @@ extension on _StringsEn {
         return 'Show details';
       case 'scrape_failure_detail_hide':
         return 'Hide details';
+      case 'media_tracking_retry_mapping':
+        return 'Retry matching';
+      case 'media_tracking_retry_matched':
+        return 'Matched and queued current progress';
+      case 'media_tracking_retry_no_match':
+        return 'No match found. Try manual linking.';
       default:
         return null;
     }
@@ -115279,6 +115416,12 @@ extension on _StringsAr {
         return 'Show details';
       case 'scrape_failure_detail_hide':
         return 'Hide details';
+      case 'media_tracking_retry_mapping':
+        return 'Retry matching';
+      case 'media_tracking_retry_matched':
+        return 'Matched and queued current progress';
+      case 'media_tracking_retry_no_match':
+        return 'No match found. Try manual linking.';
       default:
         return null;
     }
@@ -120929,6 +121072,12 @@ extension on _StringsDe {
         return 'Show details';
       case 'scrape_failure_detail_hide':
         return 'Hide details';
+      case 'media_tracking_retry_mapping':
+        return 'Retry matching';
+      case 'media_tracking_retry_matched':
+        return 'Matched and queued current progress';
+      case 'media_tracking_retry_no_match':
+        return 'No match found. Try manual linking.';
       default:
         return null;
     }
@@ -126578,6 +126727,12 @@ extension on _StringsEs {
         return 'Show details';
       case 'scrape_failure_detail_hide':
         return 'Hide details';
+      case 'media_tracking_retry_mapping':
+        return 'Retry matching';
+      case 'media_tracking_retry_matched':
+        return 'Matched and queued current progress';
+      case 'media_tracking_retry_no_match':
+        return 'No match found. Try manual linking.';
       default:
         return null;
     }
@@ -132233,6 +132388,12 @@ extension on _StringsFr {
         return 'Show details';
       case 'scrape_failure_detail_hide':
         return 'Hide details';
+      case 'media_tracking_retry_mapping':
+        return 'Retry matching';
+      case 'media_tracking_retry_matched':
+        return 'Matched and queued current progress';
+      case 'media_tracking_retry_no_match':
+        return 'No match found. Try manual linking.';
       default:
         return null;
     }
@@ -137870,6 +138031,12 @@ extension on _StringsId {
         return 'Show details';
       case 'scrape_failure_detail_hide':
         return 'Hide details';
+      case 'media_tracking_retry_mapping':
+        return 'Retry matching';
+      case 'media_tracking_retry_matched':
+        return 'Matched and queued current progress';
+      case 'media_tracking_retry_no_match':
+        return 'No match found. Try manual linking.';
       default:
         return null;
     }
@@ -143522,6 +143689,12 @@ extension on _StringsIt {
         return 'Show details';
       case 'scrape_failure_detail_hide':
         return 'Hide details';
+      case 'media_tracking_retry_mapping':
+        return 'Retry matching';
+      case 'media_tracking_retry_matched':
+        return 'Matched and queued current progress';
+      case 'media_tracking_retry_no_match':
+        return 'No match found. Try manual linking.';
       default:
         return null;
     }
@@ -149136,6 +149309,12 @@ extension on _StringsJa {
         return 'Show details';
       case 'scrape_failure_detail_hide':
         return 'Hide details';
+      case 'media_tracking_retry_mapping':
+        return 'Retry matching';
+      case 'media_tracking_retry_matched':
+        return 'Matched and queued current progress';
+      case 'media_tracking_retry_no_match':
+        return 'No match found. Try manual linking.';
       default:
         return null;
     }
@@ -154754,6 +154933,12 @@ extension on _StringsKo {
         return 'Show details';
       case 'scrape_failure_detail_hide':
         return 'Hide details';
+      case 'media_tracking_retry_mapping':
+        return 'Retry matching';
+      case 'media_tracking_retry_matched':
+        return 'Matched and queued current progress';
+      case 'media_tracking_retry_no_match':
+        return 'No match found. Try manual linking.';
       default:
         return null;
     }
@@ -160399,6 +160584,12 @@ extension on _StringsNl {
         return 'Show details';
       case 'scrape_failure_detail_hide':
         return 'Hide details';
+      case 'media_tracking_retry_mapping':
+        return 'Retry matching';
+      case 'media_tracking_retry_matched':
+        return 'Matched and queued current progress';
+      case 'media_tracking_retry_no_match':
+        return 'No match found. Try manual linking.';
       default:
         return null;
     }
@@ -166041,6 +166232,12 @@ extension on _StringsPtBr {
         return 'Show details';
       case 'scrape_failure_detail_hide':
         return 'Hide details';
+      case 'media_tracking_retry_mapping':
+        return 'Retry matching';
+      case 'media_tracking_retry_matched':
+        return 'Matched and queued current progress';
+      case 'media_tracking_retry_no_match':
+        return 'No match found. Try manual linking.';
       default:
         return null;
     }
@@ -171688,6 +171885,12 @@ extension on _StringsRu {
         return 'Show details';
       case 'scrape_failure_detail_hide':
         return 'Hide details';
+      case 'media_tracking_retry_mapping':
+        return 'Retry matching';
+      case 'media_tracking_retry_matched':
+        return 'Matched and queued current progress';
+      case 'media_tracking_retry_no_match':
+        return 'No match found. Try manual linking.';
       default:
         return null;
     }
@@ -177319,6 +177522,12 @@ extension on _StringsTh {
         return 'Show details';
       case 'scrape_failure_detail_hide':
         return 'Hide details';
+      case 'media_tracking_retry_mapping':
+        return 'Retry matching';
+      case 'media_tracking_retry_matched':
+        return 'Matched and queued current progress';
+      case 'media_tracking_retry_no_match':
+        return 'No match found. Try manual linking.';
       default:
         return null;
     }
@@ -182959,6 +183168,12 @@ extension on _StringsTr {
         return 'Show details';
       case 'scrape_failure_detail_hide':
         return 'Hide details';
+      case 'media_tracking_retry_mapping':
+        return 'Retry matching';
+      case 'media_tracking_retry_matched':
+        return 'Matched and queued current progress';
+      case 'media_tracking_retry_no_match':
+        return 'No match found. Try manual linking.';
       default:
         return null;
     }
@@ -188594,6 +188809,12 @@ extension on _StringsVi {
         return 'Show details';
       case 'scrape_failure_detail_hide':
         return 'Hide details';
+      case 'media_tracking_retry_mapping':
+        return 'Retry matching';
+      case 'media_tracking_retry_matched':
+        return 'Matched and queued current progress';
+      case 'media_tracking_retry_no_match':
+        return 'No match found. Try manual linking.';
       default:
         return null;
     }
@@ -194183,6 +194404,12 @@ extension on _StringsZhCn {
         return '显示详情';
       case 'scrape_failure_detail_hide':
         return '隐藏详情';
+      case 'media_tracking_retry_mapping':
+        return '重试匹配';
+      case 'media_tracking_retry_matched':
+        return '已重新关联并补发当前进度';
+      case 'media_tracking_retry_no_match':
+        return '仍未匹配到条目，请尝试手动关联';
       default:
         return null;
     }
@@ -199792,6 +200019,12 @@ extension on _StringsZhHk {
         return 'Show details';
       case 'scrape_failure_detail_hide':
         return 'Hide details';
+      case 'media_tracking_retry_mapping':
+        return 'Retry matching';
+      case 'media_tracking_retry_matched':
+        return 'Matched and queued current progress';
+      case 'media_tracking_retry_no_match':
+        return 'No match found. Try manual linking.';
       default:
         return null;
     }
