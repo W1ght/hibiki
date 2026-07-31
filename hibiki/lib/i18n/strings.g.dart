@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 48569 (2857 per locale)
+/// Strings: 48586 (2858 per locale)
 ///
-/// Built on 2026-07-31 at 15:33 UTC
+/// Built on 2026-07-31 at 16:20 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3855,6 +3855,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
   String get game_upscaling_error_bundle_invalid =>
       'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
+  String download_test_connection_failed_reason({required Object message}) =>
+      'Connection failed: ${message}';
 }
 
 // Path: <root>
@@ -10416,6 +10418,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get game_upscaling_error_bundle_invalid =>
       'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
+  @override
+  String download_test_connection_failed_reason({required Object message}) =>
+      'Connection failed: ${message}';
 }
 
 // Path: <root>
@@ -17044,6 +17049,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get game_upscaling_error_bundle_invalid =>
       'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
+  @override
+  String download_test_connection_failed_reason({required Object message}) =>
+      'Connection failed: ${message}';
 }
 
 // Path: <root>
@@ -23688,6 +23696,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get game_upscaling_error_bundle_invalid =>
       'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
+  @override
+  String download_test_connection_failed_reason({required Object message}) =>
+      'Connection failed: ${message}';
 }
 
 // Path: <root>
@@ -30343,6 +30354,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get game_upscaling_error_bundle_invalid =>
       'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
+  @override
+  String download_test_connection_failed_reason({required Object message}) =>
+      'Connection failed: ${message}';
 }
 
 // Path: <root>
@@ -36927,6 +36941,9 @@ class _StringsId extends _StringsEn {
   @override
   String get game_upscaling_error_bundle_invalid =>
       'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
+  @override
+  String download_test_connection_failed_reason({required Object message}) =>
+      'Connection failed: ${message}';
 }
 
 // Path: <root>
@@ -43557,6 +43574,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get game_upscaling_error_bundle_invalid =>
       'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
+  @override
+  String download_test_connection_failed_reason({required Object message}) =>
+      'Connection failed: ${message}';
 }
 
 // Path: <root>
@@ -50004,6 +50024,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get game_upscaling_error_bundle_invalid =>
       'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
+  @override
+  String download_test_connection_failed_reason({required Object message}) =>
+      'Connection failed: ${message}';
 }
 
 // Path: <root>
@@ -56453,6 +56476,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get game_upscaling_error_bundle_invalid =>
       'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
+  @override
+  String download_test_connection_failed_reason({required Object message}) =>
+      'Connection failed: ${message}';
 }
 
 // Path: <root>
@@ -63063,6 +63089,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get game_upscaling_error_bundle_invalid =>
       'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
+  @override
+  String download_test_connection_failed_reason({required Object message}) =>
+      'Connection failed: ${message}';
 }
 
 // Path: <root>
@@ -69686,6 +69715,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get game_upscaling_error_bundle_invalid =>
       'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
+  @override
+  String download_test_connection_failed_reason({required Object message}) =>
+      'Connection failed: ${message}';
 }
 
 // Path: <root>
@@ -76293,6 +76325,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get game_upscaling_error_bundle_invalid =>
       'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
+  @override
+  String download_test_connection_failed_reason({required Object message}) =>
+      'Connection failed: ${message}';
 }
 
 // Path: <root>
@@ -82848,6 +82883,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get game_upscaling_error_bundle_invalid =>
       'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
+  @override
+  String download_test_connection_failed_reason({required Object message}) =>
+      'Connection failed: ${message}';
 }
 
 // Path: <root>
@@ -89435,6 +89473,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get game_upscaling_error_bundle_invalid =>
       'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
+  @override
+  String download_test_connection_failed_reason({required Object message}) =>
+      'Connection failed: ${message}';
 }
 
 // Path: <root>
@@ -96007,6 +96048,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get game_upscaling_error_bundle_invalid =>
       'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
+  @override
+  String download_test_connection_failed_reason({required Object message}) =>
+      'Connection failed: ${message}';
 }
 
 // Path: <root>
@@ -102117,6 +102161,9 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get game_upscaling_error_bundle_invalid =>
       '内置 Magpie 组件已损坏或校验失败。请重新安装或更新 Hibiki。';
+  @override
+  String download_test_connection_failed_reason({required Object message}) =>
+      '连接失败：${message}';
 }
 
 // Path: <root>
@@ -108485,6 +108532,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get game_upscaling_error_bundle_invalid =>
       'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
+  @override
+  String download_test_connection_failed_reason({required Object message}) =>
+      'Connection failed: ${message}';
 }
 
 /// Flat map(s) containing all translations.
@@ -114347,6 +114397,8 @@ extension on _StringsEn {
         return 'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
       case 'game_upscaling_error_bundle_invalid':
         return 'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
+      case 'download_test_connection_failed_reason':
+        return ({required Object message}) => 'Connection failed: ${message}';
       default:
         return null;
     }
@@ -120207,6 +120259,8 @@ extension on _StringsAr {
         return 'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
       case 'game_upscaling_error_bundle_invalid':
         return 'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
+      case 'download_test_connection_failed_reason':
+        return ({required Object message}) => 'Connection failed: ${message}';
       default:
         return null;
     }
@@ -126089,6 +126143,8 @@ extension on _StringsDe {
         return 'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
       case 'game_upscaling_error_bundle_invalid':
         return 'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
+      case 'download_test_connection_failed_reason':
+        return ({required Object message}) => 'Connection failed: ${message}';
       default:
         return null;
     }
@@ -131970,6 +132026,8 @@ extension on _StringsEs {
         return 'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
       case 'game_upscaling_error_bundle_invalid':
         return 'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
+      case 'download_test_connection_failed_reason':
+        return ({required Object message}) => 'Connection failed: ${message}';
       default:
         return null;
     }
@@ -137857,6 +137915,8 @@ extension on _StringsFr {
         return 'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
       case 'game_upscaling_error_bundle_invalid':
         return 'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
+      case 'download_test_connection_failed_reason':
+        return ({required Object message}) => 'Connection failed: ${message}';
       default:
         return null;
     }
@@ -143726,6 +143786,8 @@ extension on _StringsId {
         return 'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
       case 'game_upscaling_error_bundle_invalid':
         return 'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
+      case 'download_test_connection_failed_reason':
+        return ({required Object message}) => 'Connection failed: ${message}';
       default:
         return null;
     }
@@ -149609,6 +149671,8 @@ extension on _StringsIt {
         return 'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
       case 'game_upscaling_error_bundle_invalid':
         return 'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
+      case 'download_test_connection_failed_reason':
+        return ({required Object message}) => 'Connection failed: ${message}';
       default:
         return null;
     }
@@ -155454,6 +155518,8 @@ extension on _StringsJa {
         return 'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
       case 'game_upscaling_error_bundle_invalid':
         return 'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
+      case 'download_test_connection_failed_reason':
+        return ({required Object message}) => 'Connection failed: ${message}';
       default:
         return null;
     }
@@ -161303,6 +161369,8 @@ extension on _StringsKo {
         return 'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
       case 'game_upscaling_error_bundle_invalid':
         return 'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
+      case 'download_test_connection_failed_reason':
+        return ({required Object message}) => 'Connection failed: ${message}';
       default:
         return null;
     }
@@ -167180,6 +167248,8 @@ extension on _StringsNl {
         return 'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
       case 'game_upscaling_error_bundle_invalid':
         return 'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
+      case 'download_test_connection_failed_reason':
+        return ({required Object message}) => 'Connection failed: ${message}';
       default:
         return null;
     }
@@ -173054,6 +173124,8 @@ extension on _StringsPtBr {
         return 'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
       case 'game_upscaling_error_bundle_invalid':
         return 'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
+      case 'download_test_connection_failed_reason':
+        return ({required Object message}) => 'Connection failed: ${message}';
       default:
         return null;
     }
@@ -178933,6 +179005,8 @@ extension on _StringsRu {
         return 'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
       case 'game_upscaling_error_bundle_invalid':
         return 'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
+      case 'download_test_connection_failed_reason':
+        return ({required Object message}) => 'Connection failed: ${message}';
       default:
         return null;
     }
@@ -184795,6 +184869,8 @@ extension on _StringsTh {
         return 'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
       case 'game_upscaling_error_bundle_invalid':
         return 'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
+      case 'download_test_connection_failed_reason':
+        return ({required Object message}) => 'Connection failed: ${message}';
       default:
         return null;
     }
@@ -190666,6 +190742,8 @@ extension on _StringsTr {
         return 'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
       case 'game_upscaling_error_bundle_invalid':
         return 'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
+      case 'download_test_connection_failed_reason':
+        return ({required Object message}) => 'Connection failed: ${message}';
       default:
         return null;
     }
@@ -196533,6 +196611,8 @@ extension on _StringsVi {
         return 'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
       case 'game_upscaling_error_bundle_invalid':
         return 'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
+      case 'download_test_connection_failed_reason':
+        return ({required Object message}) => 'Connection failed: ${message}';
       default:
         return null;
     }
@@ -202348,6 +202428,8 @@ extension on _StringsZhCn {
         return 'Hibiki 安装包不完整：缺少内置 Magpie 组件。请重新安装或更新 Hibiki。';
       case 'game_upscaling_error_bundle_invalid':
         return '内置 Magpie 组件已损坏或校验失败。请重新安装或更新 Hibiki。';
+      case 'download_test_connection_failed_reason':
+        return ({required Object message}) => '连接失败：${message}';
       default:
         return null;
     }
@@ -208188,6 +208270,8 @@ extension on _StringsZhHk {
         return 'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
       case 'game_upscaling_error_bundle_invalid':
         return 'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
+      case 'download_test_connection_failed_reason':
+        return ({required Object message}) => 'Connection failed: ${message}';
       default:
         return null;
     }
