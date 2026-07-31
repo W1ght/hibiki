@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 47940 (2820 per locale)
+/// Strings: 47957 (2821 per locale)
 ///
-/// Built on 2026-07-31 at 12:02 UTC
+/// Built on 2026-07-31 at 14:10 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3718,6 +3718,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get selection_web_search => 'Search the web';
   String get selection_web_search_unavailable => 'No app can search the web.';
   String get selection_share_failed => 'Could not open the share sheet.';
+  String get handlebar_phonetic_transcriptions => 'Phonetic transcriptions';
   String get sync_progress_preparing => 'Preparing sync';
   String get sync_progress_collections => 'Syncing collections';
   String get sync_progress_book => 'Syncing book';
@@ -10118,6 +10119,8 @@ class _StringsAr extends _StringsEn {
   String get selection_web_search_unavailable => 'No app can search the web.';
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
+  @override
+  String get handlebar_phonetic_transcriptions => 'Phonetic transcriptions';
   @override
   String get sync_progress_preparing => 'Preparing sync';
   @override
@@ -16639,6 +16642,8 @@ class _StringsDe extends _StringsEn {
   String get selection_web_search_unavailable => 'No app can search the web.';
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
+  @override
+  String get handlebar_phonetic_transcriptions => 'Phonetic transcriptions';
   @override
   String get sync_progress_preparing => 'Preparing sync';
   @override
@@ -23176,6 +23181,8 @@ class _StringsEs extends _StringsEn {
   String get selection_web_search_unavailable => 'No app can search the web.';
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
+  @override
+  String get handlebar_phonetic_transcriptions => 'Phonetic transcriptions';
   @override
   String get sync_progress_preparing => 'Preparing sync';
   @override
@@ -29725,6 +29732,8 @@ class _StringsFr extends _StringsEn {
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
   @override
+  String get handlebar_phonetic_transcriptions => 'Phonetic transcriptions';
+  @override
   String get sync_progress_preparing => 'Preparing sync';
   @override
   String get sync_progress_collections => 'Syncing collections';
@@ -36201,6 +36210,8 @@ class _StringsId extends _StringsEn {
   String get selection_web_search_unavailable => 'No app can search the web.';
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
+  @override
+  String get handlebar_phonetic_transcriptions => 'Phonetic transcriptions';
   @override
   String get sync_progress_preparing => 'Preparing sync';
   @override
@@ -42725,6 +42736,8 @@ class _StringsIt extends _StringsEn {
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
   @override
+  String get handlebar_phonetic_transcriptions => 'Phonetic transcriptions';
+  @override
   String get sync_progress_preparing => 'Preparing sync';
   @override
   String get sync_progress_collections => 'Syncing collections';
@@ -49064,6 +49077,8 @@ class _StringsJa extends _StringsEn {
   String get selection_web_search_unavailable => 'No app can search the web.';
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
+  @override
+  String get handlebar_phonetic_transcriptions => 'Phonetic transcriptions';
   @override
   String get sync_progress_preparing => 'Preparing sync';
   @override
@@ -55406,6 +55421,8 @@ class _StringsKo extends _StringsEn {
   String get selection_web_search_unavailable => 'No app can search the web.';
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
+  @override
+  String get handlebar_phonetic_transcriptions => 'Phonetic transcriptions';
   @override
   String get sync_progress_preparing => 'Preparing sync';
   @override
@@ -61909,6 +61926,8 @@ class _StringsNl extends _StringsEn {
   String get selection_web_search_unavailable => 'No app can search the web.';
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
+  @override
+  String get handlebar_phonetic_transcriptions => 'Phonetic transcriptions';
   @override
   String get sync_progress_preparing => 'Preparing sync';
   @override
@@ -68426,6 +68445,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
   @override
+  String get handlebar_phonetic_transcriptions => 'Phonetic transcriptions';
+  @override
   String get sync_progress_preparing => 'Preparing sync';
   @override
   String get sync_progress_collections => 'Syncing collections';
@@ -74926,6 +74947,8 @@ class _StringsRu extends _StringsEn {
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
   @override
+  String get handlebar_phonetic_transcriptions => 'Phonetic transcriptions';
+  @override
   String get sync_progress_preparing => 'Preparing sync';
   @override
   String get sync_progress_collections => 'Syncing collections';
@@ -81373,6 +81396,8 @@ class _StringsTh extends _StringsEn {
   String get selection_web_search_unavailable => 'No app can search the web.';
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
+  @override
+  String get handlebar_phonetic_transcriptions => 'Phonetic transcriptions';
   @override
   String get sync_progress_preparing => 'Preparing sync';
   @override
@@ -87854,6 +87879,8 @@ class _StringsTr extends _StringsEn {
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
   @override
+  String get handlebar_phonetic_transcriptions => 'Phonetic transcriptions';
+  @override
   String get sync_progress_preparing => 'Preparing sync';
   @override
   String get sync_progress_collections => 'Syncing collections';
@@ -94319,6 +94346,8 @@ class _StringsVi extends _StringsEn {
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
   @override
+  String get handlebar_phonetic_transcriptions => 'Phonetic transcriptions';
+  @override
   String get sync_progress_preparing => 'Preparing sync';
   @override
   String get sync_progress_collections => 'Syncing collections';
@@ -100334,6 +100363,8 @@ class _StringsZhCn extends _StringsEn {
   String get selection_web_search_unavailable => '没有可用的网页搜索应用。';
   @override
   String get selection_share_failed => '无法打开分享面板。';
+  @override
+  String get handlebar_phonetic_transcriptions => '音标';
   @override
   String get sync_progress_preparing => '正在准备同步';
   @override
@@ -106592,6 +106623,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
   @override
+  String get handlebar_phonetic_transcriptions => 'Phonetic transcriptions';
+  @override
   String get sync_progress_preparing => 'Preparing sync';
   @override
   String get sync_progress_collections => 'Syncing collections';
@@ -112379,6 +112412,8 @@ extension on _StringsEn {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'handlebar_phonetic_transcriptions':
+        return 'Phonetic transcriptions';
       case 'sync_progress_preparing':
         return 'Preparing sync';
       case 'sync_progress_collections':
@@ -118154,6 +118189,8 @@ extension on _StringsAr {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'handlebar_phonetic_transcriptions':
+        return 'Phonetic transcriptions';
       case 'sync_progress_preparing':
         return 'Preparing sync';
       case 'sync_progress_collections':
@@ -123951,6 +123988,8 @@ extension on _StringsDe {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'handlebar_phonetic_transcriptions':
+        return 'Phonetic transcriptions';
       case 'sync_progress_preparing':
         return 'Preparing sync';
       case 'sync_progress_collections':
@@ -129747,6 +129786,8 @@ extension on _StringsEs {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'handlebar_phonetic_transcriptions':
+        return 'Phonetic transcriptions';
       case 'sync_progress_preparing':
         return 'Preparing sync';
       case 'sync_progress_collections':
@@ -135549,6 +135590,8 @@ extension on _StringsFr {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'handlebar_phonetic_transcriptions':
+        return 'Phonetic transcriptions';
       case 'sync_progress_preparing':
         return 'Preparing sync';
       case 'sync_progress_collections':
@@ -141333,6 +141376,8 @@ extension on _StringsId {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'handlebar_phonetic_transcriptions':
+        return 'Phonetic transcriptions';
       case 'sync_progress_preparing':
         return 'Preparing sync';
       case 'sync_progress_collections':
@@ -147131,6 +147176,8 @@ extension on _StringsIt {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'handlebar_phonetic_transcriptions':
+        return 'Phonetic transcriptions';
       case 'sync_progress_preparing':
         return 'Preparing sync';
       case 'sync_progress_collections':
@@ -152891,6 +152938,8 @@ extension on _StringsJa {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'handlebar_phonetic_transcriptions':
+        return 'Phonetic transcriptions';
       case 'sync_progress_preparing':
         return 'Preparing sync';
       case 'sync_progress_collections':
@@ -158655,6 +158704,8 @@ extension on _StringsKo {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'handlebar_phonetic_transcriptions':
+        return 'Phonetic transcriptions';
       case 'sync_progress_preparing':
         return 'Preparing sync';
       case 'sync_progress_collections':
@@ -164447,6 +164498,8 @@ extension on _StringsNl {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'handlebar_phonetic_transcriptions':
+        return 'Phonetic transcriptions';
       case 'sync_progress_preparing':
         return 'Preparing sync';
       case 'sync_progress_collections':
@@ -170236,6 +170289,8 @@ extension on _StringsPtBr {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'handlebar_phonetic_transcriptions':
+        return 'Phonetic transcriptions';
       case 'sync_progress_preparing':
         return 'Preparing sync';
       case 'sync_progress_collections':
@@ -176030,6 +176085,8 @@ extension on _StringsRu {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'handlebar_phonetic_transcriptions':
+        return 'Phonetic transcriptions';
       case 'sync_progress_preparing':
         return 'Preparing sync';
       case 'sync_progress_collections':
@@ -181807,6 +181864,8 @@ extension on _StringsTh {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'handlebar_phonetic_transcriptions':
+        return 'Phonetic transcriptions';
       case 'sync_progress_preparing':
         return 'Preparing sync';
       case 'sync_progress_collections':
@@ -187593,6 +187652,8 @@ extension on _StringsTr {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'handlebar_phonetic_transcriptions':
+        return 'Phonetic transcriptions';
       case 'sync_progress_preparing':
         return 'Preparing sync';
       case 'sync_progress_collections':
@@ -193375,6 +193436,8 @@ extension on _StringsVi {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'handlebar_phonetic_transcriptions':
+        return 'Phonetic transcriptions';
       case 'sync_progress_preparing':
         return 'Preparing sync';
       case 'sync_progress_collections':
@@ -199109,6 +199172,8 @@ extension on _StringsZhCn {
         return '没有可用的网页搜索应用。';
       case 'selection_share_failed':
         return '无法打开分享面板。';
+      case 'handlebar_phonetic_transcriptions':
+        return '音标';
       case 'sync_progress_preparing':
         return '正在准备同步';
       case 'sync_progress_collections':
@@ -204863,6 +204928,8 @@ extension on _StringsZhHk {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'handlebar_phonetic_transcriptions':
+        return 'Phonetic transcriptions';
       case 'sync_progress_preparing':
         return 'Preparing sync';
       case 'sync_progress_collections':
