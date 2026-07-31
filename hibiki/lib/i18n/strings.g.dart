@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 48586 (2858 per locale)
+/// Strings: 48773 (2869 per locale)
 ///
-/// Built on 2026-07-31 at 16:42 UTC
+/// Built on 2026-07-31 at 19:42 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -414,8 +414,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Keep audio where it is and play from its original path; the book breaks if the file is moved or deleted.';
   String get audiobook_relocate => 'Relocate file';
   String get audiobook_relocate_done => 'Audio relocated';
-  String get audiobook_remove => 'Remove audiobook';
-  String get audiobook_remove_confirm => 'Remove the attached audiobook?';
   String get auto_add_book_name_to_tags => 'Auto-add book title to tags';
   String auto_chapter({required Object n}) => 'Chapter ${n}';
   String get auto_read_on_lookup => 'Auto read word on lookup';
@@ -871,8 +869,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get delete_collection_also_books => 'Also delete the books in it';
   String get delete_collection_also_videos =>
       'Also delete the videos (keeps your original video files)';
-  String get delete_collection_confirm =>
-      'Deleting the collection won\'t delete its videos.';
   String get delete_custom_theme => 'Delete theme';
   String get delete_custom_theme_confirm =>
       'Delete this custom theme? This cannot be undone.';
@@ -1513,9 +1509,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get game_unread_lines => 'Unread';
   String get game_upscaling => 'Game window upscaling';
   String get game_upscaling_auto => 'Auto';
-  String get game_upscaling_download_body =>
-      'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
-  String get game_upscaling_download_title => 'Download Magpie upscaler?';
   String get game_upscaling_hint_external =>
       'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
   String get game_upscaling_hint_first_run =>
@@ -3671,9 +3664,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get game_hook_reason_protocol_mismatch =>
       'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
   String get game_upscaling_auto_hint =>
-      'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+      'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
   String get game_upscaling_installed_only_hint =>
-      'Only use a Magpie that is already installed. Never downloads anything.';
+      'Only use Magpie if it is already installed or running. Do not unpack Hibiki\'s bundled version.';
   String get game_upscaling_off_hint => 'Never upscale the game window.';
   String get game_helper_bundle_missing =>
       'The galgame hook helper is not bundled with this build. Update Hibiki to get it.';
@@ -3682,7 +3675,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get game_upscaling_pick_body =>
       'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
   String get game_upscaling_hint_not_installed =>
-      'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+      'Magpie is not ready. Set window upscaling to Auto to use the copy bundled with Hibiki; if it still does not start, update or reinstall Hibiki.';
   String media_source_count_manga({required Object n}) => '${n} volumes';
   String get library_view_shelf => 'Shelf';
   String get library_view_browse => 'Browse';
@@ -3854,6 +3847,34 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
   String get anki_lapis_visual_field_dictionary_name_note =>
       'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+  String get game_upscaling_error_bundle_missing =>
+      'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
+  String get game_upscaling_error_bundle_invalid =>
+      'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
+  String download_test_connection_failed_reason({required Object message}) =>
+      'Connection failed: ${message}';
+  String get delete_disclosure_will_delete_label => 'Will be deleted';
+  String get delete_disclosure_will_keep_label => 'Will be kept';
+  String get delete_disclosure_book_records =>
+      'Reading progress, bookmarks, tags and subtitle data';
+  String get delete_disclosure_book_extracted =>
+      'The book files Hibiki extracted into its own storage';
+  String get delete_disclosure_book_audiobook =>
+      'The audio and aligned subtitles of the attached audiobook, if any';
+  String get delete_disclosure_source_kept =>
+      'The original files you imported (book, subtitles, audio)';
+  String get delete_disclosure_stats_kept => 'Reading statistics';
+  String get delete_disclosure_audiobook_files =>
+      'The audio and aligned subtitles Hibiki copied into its own storage';
+  String get delete_disclosure_audiobook_book_kept =>
+      'The book itself and its reading progress';
+  String get delete_disclosure_audiobook_source_kept =>
+      'The original audio files you imported';
+  String get audiobook_delete => 'Delete audiobook';
+  String get audiobook_delete_confirm =>
+      'Delete the attached audiobook? Its audio files are removed from this device.';
+  String get delete_collection_confirm =>
+      'Only the grouping is removed. The items in it are kept.';
   String get shortcut_action_video_enter_caret =>
       'Enter subtitle lookup cursor';
 }
@@ -4277,10 +4298,6 @@ class _StringsAr extends _StringsEn {
   String get audiobook_relocate => 'Relocate file';
   @override
   String get audiobook_relocate_done => 'Audio relocated';
-  @override
-  String get audiobook_remove => 'إزالة الكتاب المسموع';
-  @override
-  String get audiobook_remove_confirm => 'إزالة الكتاب المسموع المرفق؟';
   @override
   String get auto_add_book_name_to_tags =>
       'إضافة عنوان الكتاب تلقائياً إلى الوسوم';
@@ -5096,9 +5113,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get delete_collection_also_videos =>
       'Also delete the videos (keeps your original video files)';
-  @override
-  String get delete_collection_confirm =>
-      'Deleting the collection won\'t delete its videos.';
   @override
   String get delete_custom_theme => 'Delete theme';
   @override
@@ -6235,11 +6249,6 @@ class _StringsAr extends _StringsEn {
   String get game_upscaling => 'Game window upscaling';
   @override
   String get game_upscaling_auto => 'Auto';
-  @override
-  String get game_upscaling_download_body =>
-      'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
-  @override
-  String get game_upscaling_download_title => 'Download Magpie upscaler?';
   @override
   String get game_upscaling_hint_external =>
       'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
@@ -10110,10 +10119,10 @@ class _StringsAr extends _StringsEn {
       'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
   @override
   String get game_upscaling_auto_hint =>
-      'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+      'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
   @override
   String get game_upscaling_installed_only_hint =>
-      'Only use a Magpie that is already installed. Never downloads anything.';
+      'Only use Magpie if it is already installed or running. Do not unpack Hibiki\'s bundled version.';
   @override
   String get game_upscaling_off_hint => 'Never upscale the game window.';
   @override
@@ -10127,7 +10136,7 @@ class _StringsAr extends _StringsEn {
       'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
   @override
   String get game_upscaling_hint_not_installed =>
-      'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+      'Magpie is not ready. Set window upscaling to Auto to use the copy bundled with Hibiki; if it still does not start, update or reinstall Hibiki.';
   @override
   String media_source_count_manga({required Object n}) => '${n} volumes';
   @override
@@ -10416,6 +10425,50 @@ class _StringsAr extends _StringsEn {
   @override
   String get anki_lapis_visual_field_dictionary_name_note =>
       'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+  @override
+  String get game_upscaling_error_bundle_missing =>
+      'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
+  @override
+  String get game_upscaling_error_bundle_invalid =>
+      'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
+  @override
+  String download_test_connection_failed_reason({required Object message}) =>
+      'Connection failed: ${message}';
+  @override
+  String get delete_disclosure_will_delete_label => 'Will be deleted';
+  @override
+  String get delete_disclosure_will_keep_label => 'Will be kept';
+  @override
+  String get delete_disclosure_book_records =>
+      'Reading progress, bookmarks, tags and subtitle data';
+  @override
+  String get delete_disclosure_book_extracted =>
+      'The book files Hibiki extracted into its own storage';
+  @override
+  String get delete_disclosure_book_audiobook =>
+      'The audio and aligned subtitles of the attached audiobook, if any';
+  @override
+  String get delete_disclosure_source_kept =>
+      'The original files you imported (book, subtitles, audio)';
+  @override
+  String get delete_disclosure_stats_kept => 'Reading statistics';
+  @override
+  String get delete_disclosure_audiobook_files =>
+      'The audio and aligned subtitles Hibiki copied into its own storage';
+  @override
+  String get delete_disclosure_audiobook_book_kept =>
+      'The book itself and its reading progress';
+  @override
+  String get delete_disclosure_audiobook_source_kept =>
+      'The original audio files you imported';
+  @override
+  String get audiobook_delete => 'Delete audiobook';
+  @override
+  String get audiobook_delete_confirm =>
+      'Delete the attached audiobook? Its audio files are removed from this device.';
+  @override
+  String get delete_collection_confirm =>
+      'Only the grouping is removed. The items in it are kept.';
   @override
   String get shortcut_action_video_enter_caret =>
       'Enter subtitle lookup cursor';
@@ -10842,10 +10895,6 @@ class _StringsDe extends _StringsEn {
   String get audiobook_relocate => 'Relocate file';
   @override
   String get audiobook_relocate_done => 'Audio relocated';
-  @override
-  String get audiobook_remove => 'Hörbuch entfernen';
-  @override
-  String get audiobook_remove_confirm => 'Angehängtes Hörbuch entfernen?';
   @override
   String get auto_add_book_name_to_tags =>
       'Buchtitel automatisch zu Tags hinzufügen';
@@ -11669,9 +11718,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get delete_collection_also_videos =>
       'Also delete the videos (keeps your original video files)';
-  @override
-  String get delete_collection_confirm =>
-      'Deleting the collection won\'t delete its videos.';
   @override
   String get delete_custom_theme => 'Delete theme';
   @override
@@ -12825,11 +12871,6 @@ class _StringsDe extends _StringsEn {
   String get game_upscaling => 'Game window upscaling';
   @override
   String get game_upscaling_auto => 'Auto';
-  @override
-  String get game_upscaling_download_body =>
-      'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
-  @override
-  String get game_upscaling_download_title => 'Download Magpie upscaler?';
   @override
   String get game_upscaling_hint_external =>
       'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
@@ -16740,10 +16781,10 @@ class _StringsDe extends _StringsEn {
       'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
   @override
   String get game_upscaling_auto_hint =>
-      'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+      'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
   @override
   String get game_upscaling_installed_only_hint =>
-      'Only use a Magpie that is already installed. Never downloads anything.';
+      'Only use Magpie if it is already installed or running. Do not unpack Hibiki\'s bundled version.';
   @override
   String get game_upscaling_off_hint => 'Never upscale the game window.';
   @override
@@ -16757,7 +16798,7 @@ class _StringsDe extends _StringsEn {
       'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
   @override
   String get game_upscaling_hint_not_installed =>
-      'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+      'Magpie is not ready. Set window upscaling to Auto to use the copy bundled with Hibiki; if it still does not start, update or reinstall Hibiki.';
   @override
   String media_source_count_manga({required Object n}) => '${n} volumes';
   @override
@@ -17046,6 +17087,50 @@ class _StringsDe extends _StringsEn {
   @override
   String get anki_lapis_visual_field_dictionary_name_note =>
       'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+  @override
+  String get game_upscaling_error_bundle_missing =>
+      'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
+  @override
+  String get game_upscaling_error_bundle_invalid =>
+      'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
+  @override
+  String download_test_connection_failed_reason({required Object message}) =>
+      'Connection failed: ${message}';
+  @override
+  String get delete_disclosure_will_delete_label => 'Will be deleted';
+  @override
+  String get delete_disclosure_will_keep_label => 'Will be kept';
+  @override
+  String get delete_disclosure_book_records =>
+      'Reading progress, bookmarks, tags and subtitle data';
+  @override
+  String get delete_disclosure_book_extracted =>
+      'The book files Hibiki extracted into its own storage';
+  @override
+  String get delete_disclosure_book_audiobook =>
+      'The audio and aligned subtitles of the attached audiobook, if any';
+  @override
+  String get delete_disclosure_source_kept =>
+      'The original files you imported (book, subtitles, audio)';
+  @override
+  String get delete_disclosure_stats_kept => 'Reading statistics';
+  @override
+  String get delete_disclosure_audiobook_files =>
+      'The audio and aligned subtitles Hibiki copied into its own storage';
+  @override
+  String get delete_disclosure_audiobook_book_kept =>
+      'The book itself and its reading progress';
+  @override
+  String get delete_disclosure_audiobook_source_kept =>
+      'The original audio files you imported';
+  @override
+  String get audiobook_delete => 'Delete audiobook';
+  @override
+  String get audiobook_delete_confirm =>
+      'Delete the attached audiobook? Its audio files are removed from this device.';
+  @override
+  String get delete_collection_confirm =>
+      'Only the grouping is removed. The items in it are kept.';
   @override
   String get shortcut_action_video_enter_caret =>
       'Enter subtitle lookup cursor';
@@ -17473,10 +17558,6 @@ class _StringsEs extends _StringsEn {
   String get audiobook_relocate => 'Relocate file';
   @override
   String get audiobook_relocate_done => 'Audio relocated';
-  @override
-  String get audiobook_remove => 'Eliminar audiolibro';
-  @override
-  String get audiobook_remove_confirm => '?Eliminar el audiolibro adjunto?';
   @override
   String get auto_add_book_name_to_tags =>
       'Añadir título del libro a las etiquetas automáticamente';
@@ -18298,9 +18379,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get delete_collection_also_videos =>
       'Also delete the videos (keeps your original video files)';
-  @override
-  String get delete_collection_confirm =>
-      'Deleting the collection won\'t delete its videos.';
   @override
   String get delete_custom_theme => 'Delete theme';
   @override
@@ -19456,11 +19534,6 @@ class _StringsEs extends _StringsEn {
   String get game_upscaling => 'Game window upscaling';
   @override
   String get game_upscaling_auto => 'Auto';
-  @override
-  String get game_upscaling_download_body =>
-      'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
-  @override
-  String get game_upscaling_download_title => 'Download Magpie upscaler?';
   @override
   String get game_upscaling_hint_external =>
       'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
@@ -23386,10 +23459,10 @@ class _StringsEs extends _StringsEn {
       'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
   @override
   String get game_upscaling_auto_hint =>
-      'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+      'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
   @override
   String get game_upscaling_installed_only_hint =>
-      'Only use a Magpie that is already installed. Never downloads anything.';
+      'Only use Magpie if it is already installed or running. Do not unpack Hibiki\'s bundled version.';
   @override
   String get game_upscaling_off_hint => 'Never upscale the game window.';
   @override
@@ -23403,7 +23476,7 @@ class _StringsEs extends _StringsEn {
       'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
   @override
   String get game_upscaling_hint_not_installed =>
-      'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+      'Magpie is not ready. Set window upscaling to Auto to use the copy bundled with Hibiki; if it still does not start, update or reinstall Hibiki.';
   @override
   String media_source_count_manga({required Object n}) => '${n} volumes';
   @override
@@ -23692,6 +23765,50 @@ class _StringsEs extends _StringsEn {
   @override
   String get anki_lapis_visual_field_dictionary_name_note =>
       'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+  @override
+  String get game_upscaling_error_bundle_missing =>
+      'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
+  @override
+  String get game_upscaling_error_bundle_invalid =>
+      'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
+  @override
+  String download_test_connection_failed_reason({required Object message}) =>
+      'Connection failed: ${message}';
+  @override
+  String get delete_disclosure_will_delete_label => 'Will be deleted';
+  @override
+  String get delete_disclosure_will_keep_label => 'Will be kept';
+  @override
+  String get delete_disclosure_book_records =>
+      'Reading progress, bookmarks, tags and subtitle data';
+  @override
+  String get delete_disclosure_book_extracted =>
+      'The book files Hibiki extracted into its own storage';
+  @override
+  String get delete_disclosure_book_audiobook =>
+      'The audio and aligned subtitles of the attached audiobook, if any';
+  @override
+  String get delete_disclosure_source_kept =>
+      'The original files you imported (book, subtitles, audio)';
+  @override
+  String get delete_disclosure_stats_kept => 'Reading statistics';
+  @override
+  String get delete_disclosure_audiobook_files =>
+      'The audio and aligned subtitles Hibiki copied into its own storage';
+  @override
+  String get delete_disclosure_audiobook_book_kept =>
+      'The book itself and its reading progress';
+  @override
+  String get delete_disclosure_audiobook_source_kept =>
+      'The original audio files you imported';
+  @override
+  String get audiobook_delete => 'Delete audiobook';
+  @override
+  String get audiobook_delete_confirm =>
+      'Delete the attached audiobook? Its audio files are removed from this device.';
+  @override
+  String get delete_collection_confirm =>
+      'Only the grouping is removed. The items in it are kept.';
   @override
   String get shortcut_action_video_enter_caret =>
       'Enter subtitle lookup cursor';
@@ -24119,10 +24236,6 @@ class _StringsFr extends _StringsEn {
   String get audiobook_relocate => 'Relocate file';
   @override
   String get audiobook_relocate_done => 'Audio relocated';
-  @override
-  String get audiobook_remove => 'Supprimer le livre audio';
-  @override
-  String get audiobook_remove_confirm => 'Supprimer le livre audio attaché ?';
   @override
   String get auto_add_book_name_to_tags =>
       'Ajouter automatiquement le titre du livre aux étiquettes';
@@ -24950,9 +25063,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get delete_collection_also_videos =>
       'Also delete the videos (keeps your original video files)';
-  @override
-  String get delete_collection_confirm =>
-      'Deleting the collection won\'t delete its videos.';
   @override
   String get delete_custom_theme => 'Delete theme';
   @override
@@ -26110,11 +26220,6 @@ class _StringsFr extends _StringsEn {
   String get game_upscaling => 'Game window upscaling';
   @override
   String get game_upscaling_auto => 'Auto';
-  @override
-  String get game_upscaling_download_body =>
-      'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
-  @override
-  String get game_upscaling_download_title => 'Download Magpie upscaler?';
   @override
   String get game_upscaling_hint_external =>
       'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
@@ -30043,10 +30148,10 @@ class _StringsFr extends _StringsEn {
       'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
   @override
   String get game_upscaling_auto_hint =>
-      'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+      'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
   @override
   String get game_upscaling_installed_only_hint =>
-      'Only use a Magpie that is already installed. Never downloads anything.';
+      'Only use Magpie if it is already installed or running. Do not unpack Hibiki\'s bundled version.';
   @override
   String get game_upscaling_off_hint => 'Never upscale the game window.';
   @override
@@ -30060,7 +30165,7 @@ class _StringsFr extends _StringsEn {
       'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
   @override
   String get game_upscaling_hint_not_installed =>
-      'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+      'Magpie is not ready. Set window upscaling to Auto to use the copy bundled with Hibiki; if it still does not start, update or reinstall Hibiki.';
   @override
   String media_source_count_manga({required Object n}) => '${n} volumes';
   @override
@@ -30349,6 +30454,50 @@ class _StringsFr extends _StringsEn {
   @override
   String get anki_lapis_visual_field_dictionary_name_note =>
       'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+  @override
+  String get game_upscaling_error_bundle_missing =>
+      'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
+  @override
+  String get game_upscaling_error_bundle_invalid =>
+      'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
+  @override
+  String download_test_connection_failed_reason({required Object message}) =>
+      'Connection failed: ${message}';
+  @override
+  String get delete_disclosure_will_delete_label => 'Will be deleted';
+  @override
+  String get delete_disclosure_will_keep_label => 'Will be kept';
+  @override
+  String get delete_disclosure_book_records =>
+      'Reading progress, bookmarks, tags and subtitle data';
+  @override
+  String get delete_disclosure_book_extracted =>
+      'The book files Hibiki extracted into its own storage';
+  @override
+  String get delete_disclosure_book_audiobook =>
+      'The audio and aligned subtitles of the attached audiobook, if any';
+  @override
+  String get delete_disclosure_source_kept =>
+      'The original files you imported (book, subtitles, audio)';
+  @override
+  String get delete_disclosure_stats_kept => 'Reading statistics';
+  @override
+  String get delete_disclosure_audiobook_files =>
+      'The audio and aligned subtitles Hibiki copied into its own storage';
+  @override
+  String get delete_disclosure_audiobook_book_kept =>
+      'The book itself and its reading progress';
+  @override
+  String get delete_disclosure_audiobook_source_kept =>
+      'The original audio files you imported';
+  @override
+  String get audiobook_delete => 'Delete audiobook';
+  @override
+  String get audiobook_delete_confirm =>
+      'Delete the attached audiobook? Its audio files are removed from this device.';
+  @override
+  String get delete_collection_confirm =>
+      'Only the grouping is removed. The items in it are kept.';
   @override
   String get shortcut_action_video_enter_caret =>
       'Enter subtitle lookup cursor';
@@ -30775,10 +30924,6 @@ class _StringsId extends _StringsEn {
   String get audiobook_relocate => 'Relocate file';
   @override
   String get audiobook_relocate_done => 'Audio relocated';
-  @override
-  String get audiobook_remove => 'Hapus Buku Audio';
-  @override
-  String get audiobook_remove_confirm => 'Hapus buku audio yang terlampir?';
   @override
   String get auto_add_book_name_to_tags =>
       'Tambahkan judul buku ke tag secara otomatis';
@@ -31591,9 +31736,6 @@ class _StringsId extends _StringsEn {
   @override
   String get delete_collection_also_videos =>
       'Also delete the videos (keeps your original video files)';
-  @override
-  String get delete_collection_confirm =>
-      'Deleting the collection won\'t delete its videos.';
   @override
   String get delete_custom_theme => 'Delete theme';
   @override
@@ -32733,11 +32875,6 @@ class _StringsId extends _StringsEn {
   String get game_upscaling => 'Game window upscaling';
   @override
   String get game_upscaling_auto => 'Auto';
-  @override
-  String get game_upscaling_download_body =>
-      'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
-  @override
-  String get game_upscaling_download_title => 'Download Magpie upscaler?';
   @override
   String get game_upscaling_hint_external =>
       'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
@@ -36629,10 +36766,10 @@ class _StringsId extends _StringsEn {
       'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
   @override
   String get game_upscaling_auto_hint =>
-      'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+      'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
   @override
   String get game_upscaling_installed_only_hint =>
-      'Only use a Magpie that is already installed. Never downloads anything.';
+      'Only use Magpie if it is already installed or running. Do not unpack Hibiki\'s bundled version.';
   @override
   String get game_upscaling_off_hint => 'Never upscale the game window.';
   @override
@@ -36646,7 +36783,7 @@ class _StringsId extends _StringsEn {
       'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
   @override
   String get game_upscaling_hint_not_installed =>
-      'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+      'Magpie is not ready. Set window upscaling to Auto to use the copy bundled with Hibiki; if it still does not start, update or reinstall Hibiki.';
   @override
   String media_source_count_manga({required Object n}) => '${n} volumes';
   @override
@@ -36935,6 +37072,50 @@ class _StringsId extends _StringsEn {
   @override
   String get anki_lapis_visual_field_dictionary_name_note =>
       'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+  @override
+  String get game_upscaling_error_bundle_missing =>
+      'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
+  @override
+  String get game_upscaling_error_bundle_invalid =>
+      'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
+  @override
+  String download_test_connection_failed_reason({required Object message}) =>
+      'Connection failed: ${message}';
+  @override
+  String get delete_disclosure_will_delete_label => 'Will be deleted';
+  @override
+  String get delete_disclosure_will_keep_label => 'Will be kept';
+  @override
+  String get delete_disclosure_book_records =>
+      'Reading progress, bookmarks, tags and subtitle data';
+  @override
+  String get delete_disclosure_book_extracted =>
+      'The book files Hibiki extracted into its own storage';
+  @override
+  String get delete_disclosure_book_audiobook =>
+      'The audio and aligned subtitles of the attached audiobook, if any';
+  @override
+  String get delete_disclosure_source_kept =>
+      'The original files you imported (book, subtitles, audio)';
+  @override
+  String get delete_disclosure_stats_kept => 'Reading statistics';
+  @override
+  String get delete_disclosure_audiobook_files =>
+      'The audio and aligned subtitles Hibiki copied into its own storage';
+  @override
+  String get delete_disclosure_audiobook_book_kept =>
+      'The book itself and its reading progress';
+  @override
+  String get delete_disclosure_audiobook_source_kept =>
+      'The original audio files you imported';
+  @override
+  String get audiobook_delete => 'Delete audiobook';
+  @override
+  String get audiobook_delete_confirm =>
+      'Delete the attached audiobook? Its audio files are removed from this device.';
+  @override
+  String get delete_collection_confirm =>
+      'Only the grouping is removed. The items in it are kept.';
   @override
   String get shortcut_action_video_enter_caret =>
       'Enter subtitle lookup cursor';
@@ -37360,10 +37541,6 @@ class _StringsIt extends _StringsEn {
   String get audiobook_relocate => 'Relocate file';
   @override
   String get audiobook_relocate_done => 'Audio relocated';
-  @override
-  String get audiobook_remove => 'Rimuovi audiolibro';
-  @override
-  String get audiobook_remove_confirm => 'Rimuovere l\'audiolibro collegato?';
   @override
   String get auto_add_book_name_to_tags =>
       'Aggiungi automaticamente il titolo del libro alle etichette';
@@ -38186,9 +38363,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get delete_collection_also_videos =>
       'Also delete the videos (keeps your original video files)';
-  @override
-  String get delete_collection_confirm =>
-      'Deleting the collection won\'t delete its videos.';
   @override
   String get delete_custom_theme => 'Delete theme';
   @override
@@ -39339,11 +39513,6 @@ class _StringsIt extends _StringsEn {
   String get game_upscaling => 'Game window upscaling';
   @override
   String get game_upscaling_auto => 'Auto';
-  @override
-  String get game_upscaling_download_body =>
-      'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
-  @override
-  String get game_upscaling_download_title => 'Download Magpie upscaler?';
   @override
   String get game_upscaling_hint_external =>
       'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
@@ -43261,10 +43430,10 @@ class _StringsIt extends _StringsEn {
       'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
   @override
   String get game_upscaling_auto_hint =>
-      'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+      'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
   @override
   String get game_upscaling_installed_only_hint =>
-      'Only use a Magpie that is already installed. Never downloads anything.';
+      'Only use Magpie if it is already installed or running. Do not unpack Hibiki\'s bundled version.';
   @override
   String get game_upscaling_off_hint => 'Never upscale the game window.';
   @override
@@ -43278,7 +43447,7 @@ class _StringsIt extends _StringsEn {
       'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
   @override
   String get game_upscaling_hint_not_installed =>
-      'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+      'Magpie is not ready. Set window upscaling to Auto to use the copy bundled with Hibiki; if it still does not start, update or reinstall Hibiki.';
   @override
   String media_source_count_manga({required Object n}) => '${n} volumes';
   @override
@@ -43567,6 +43736,50 @@ class _StringsIt extends _StringsEn {
   @override
   String get anki_lapis_visual_field_dictionary_name_note =>
       'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+  @override
+  String get game_upscaling_error_bundle_missing =>
+      'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
+  @override
+  String get game_upscaling_error_bundle_invalid =>
+      'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
+  @override
+  String download_test_connection_failed_reason({required Object message}) =>
+      'Connection failed: ${message}';
+  @override
+  String get delete_disclosure_will_delete_label => 'Will be deleted';
+  @override
+  String get delete_disclosure_will_keep_label => 'Will be kept';
+  @override
+  String get delete_disclosure_book_records =>
+      'Reading progress, bookmarks, tags and subtitle data';
+  @override
+  String get delete_disclosure_book_extracted =>
+      'The book files Hibiki extracted into its own storage';
+  @override
+  String get delete_disclosure_book_audiobook =>
+      'The audio and aligned subtitles of the attached audiobook, if any';
+  @override
+  String get delete_disclosure_source_kept =>
+      'The original files you imported (book, subtitles, audio)';
+  @override
+  String get delete_disclosure_stats_kept => 'Reading statistics';
+  @override
+  String get delete_disclosure_audiobook_files =>
+      'The audio and aligned subtitles Hibiki copied into its own storage';
+  @override
+  String get delete_disclosure_audiobook_book_kept =>
+      'The book itself and its reading progress';
+  @override
+  String get delete_disclosure_audiobook_source_kept =>
+      'The original audio files you imported';
+  @override
+  String get audiobook_delete => 'Delete audiobook';
+  @override
+  String get audiobook_delete_confirm =>
+      'Delete the attached audiobook? Its audio files are removed from this device.';
+  @override
+  String get delete_collection_confirm =>
+      'Only the grouping is removed. The items in it are kept.';
   @override
   String get shortcut_action_video_enter_caret =>
       'Enter subtitle lookup cursor';
@@ -43983,10 +44196,6 @@ class _StringsJa extends _StringsEn {
   String get audiobook_relocate => 'Relocate file';
   @override
   String get audiobook_relocate_done => 'Audio relocated';
-  @override
-  String get audiobook_remove => 'オーディオブックを削除';
-  @override
-  String get audiobook_remove_confirm => '紐付けされたオーディオブックを削除しますか？';
   @override
   String get auto_add_book_name_to_tags => 'タグに本のタイトルを自動追加';
   @override
@@ -44790,9 +44999,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get delete_collection_also_videos =>
       'Also delete the videos (keeps your original video files)';
-  @override
-  String get delete_collection_confirm =>
-      'Deleting the collection won\'t delete its videos.';
   @override
   String get delete_custom_theme => 'Delete theme';
   @override
@@ -45916,11 +46122,6 @@ class _StringsJa extends _StringsEn {
   String get game_upscaling => 'Game window upscaling';
   @override
   String get game_upscaling_auto => 'Auto';
-  @override
-  String get game_upscaling_download_body =>
-      'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
-  @override
-  String get game_upscaling_download_title => 'Download Magpie upscaler?';
   @override
   String get game_upscaling_hint_external =>
       'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
@@ -49710,10 +49911,10 @@ class _StringsJa extends _StringsEn {
       'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
   @override
   String get game_upscaling_auto_hint =>
-      'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+      'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
   @override
   String get game_upscaling_installed_only_hint =>
-      'Only use a Magpie that is already installed. Never downloads anything.';
+      'Only use Magpie if it is already installed or running. Do not unpack Hibiki\'s bundled version.';
   @override
   String get game_upscaling_off_hint => 'Never upscale the game window.';
   @override
@@ -49727,7 +49928,7 @@ class _StringsJa extends _StringsEn {
       'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
   @override
   String get game_upscaling_hint_not_installed =>
-      'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+      'Magpie is not ready. Set window upscaling to Auto to use the copy bundled with Hibiki; if it still does not start, update or reinstall Hibiki.';
   @override
   String media_source_count_manga({required Object n}) => '${n} volumes';
   @override
@@ -50016,6 +50217,50 @@ class _StringsJa extends _StringsEn {
   @override
   String get anki_lapis_visual_field_dictionary_name_note =>
       'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+  @override
+  String get game_upscaling_error_bundle_missing =>
+      'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
+  @override
+  String get game_upscaling_error_bundle_invalid =>
+      'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
+  @override
+  String download_test_connection_failed_reason({required Object message}) =>
+      'Connection failed: ${message}';
+  @override
+  String get delete_disclosure_will_delete_label => 'Will be deleted';
+  @override
+  String get delete_disclosure_will_keep_label => 'Will be kept';
+  @override
+  String get delete_disclosure_book_records =>
+      'Reading progress, bookmarks, tags and subtitle data';
+  @override
+  String get delete_disclosure_book_extracted =>
+      'The book files Hibiki extracted into its own storage';
+  @override
+  String get delete_disclosure_book_audiobook =>
+      'The audio and aligned subtitles of the attached audiobook, if any';
+  @override
+  String get delete_disclosure_source_kept =>
+      'The original files you imported (book, subtitles, audio)';
+  @override
+  String get delete_disclosure_stats_kept => 'Reading statistics';
+  @override
+  String get delete_disclosure_audiobook_files =>
+      'The audio and aligned subtitles Hibiki copied into its own storage';
+  @override
+  String get delete_disclosure_audiobook_book_kept =>
+      'The book itself and its reading progress';
+  @override
+  String get delete_disclosure_audiobook_source_kept =>
+      'The original audio files you imported';
+  @override
+  String get audiobook_delete => 'Delete audiobook';
+  @override
+  String get audiobook_delete_confirm =>
+      'Delete the attached audiobook? Its audio files are removed from this device.';
+  @override
+  String get delete_collection_confirm =>
+      'Only the grouping is removed. The items in it are kept.';
   @override
   String get shortcut_action_video_enter_caret =>
       'Enter subtitle lookup cursor';
@@ -50431,10 +50676,6 @@ class _StringsKo extends _StringsEn {
   String get audiobook_relocate => 'Relocate file';
   @override
   String get audiobook_relocate_done => 'Audio relocated';
-  @override
-  String get audiobook_remove => '오디오북 제거';
-  @override
-  String get audiobook_remove_confirm => '연결된 오디오북을 제거하시겠습니까?';
   @override
   String get auto_add_book_name_to_tags => '태그에 책 제목 자동 추가';
   @override
@@ -51241,9 +51482,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get delete_collection_also_videos =>
       'Also delete the videos (keeps your original video files)';
-  @override
-  String get delete_collection_confirm =>
-      'Deleting the collection won\'t delete its videos.';
   @override
   String get delete_custom_theme => 'Delete theme';
   @override
@@ -52365,11 +52603,6 @@ class _StringsKo extends _StringsEn {
   String get game_upscaling => 'Game window upscaling';
   @override
   String get game_upscaling_auto => 'Auto';
-  @override
-  String get game_upscaling_download_body =>
-      'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
-  @override
-  String get game_upscaling_download_title => 'Download Magpie upscaler?';
   @override
   String get game_upscaling_hint_external =>
       'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
@@ -56161,10 +56394,10 @@ class _StringsKo extends _StringsEn {
       'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
   @override
   String get game_upscaling_auto_hint =>
-      'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+      'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
   @override
   String get game_upscaling_installed_only_hint =>
-      'Only use a Magpie that is already installed. Never downloads anything.';
+      'Only use Magpie if it is already installed or running. Do not unpack Hibiki\'s bundled version.';
   @override
   String get game_upscaling_off_hint => 'Never upscale the game window.';
   @override
@@ -56178,7 +56411,7 @@ class _StringsKo extends _StringsEn {
       'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
   @override
   String get game_upscaling_hint_not_installed =>
-      'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+      'Magpie is not ready. Set window upscaling to Auto to use the copy bundled with Hibiki; if it still does not start, update or reinstall Hibiki.';
   @override
   String media_source_count_manga({required Object n}) => '${n} volumes';
   @override
@@ -56467,6 +56700,50 @@ class _StringsKo extends _StringsEn {
   @override
   String get anki_lapis_visual_field_dictionary_name_note =>
       'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+  @override
+  String get game_upscaling_error_bundle_missing =>
+      'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
+  @override
+  String get game_upscaling_error_bundle_invalid =>
+      'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
+  @override
+  String download_test_connection_failed_reason({required Object message}) =>
+      'Connection failed: ${message}';
+  @override
+  String get delete_disclosure_will_delete_label => 'Will be deleted';
+  @override
+  String get delete_disclosure_will_keep_label => 'Will be kept';
+  @override
+  String get delete_disclosure_book_records =>
+      'Reading progress, bookmarks, tags and subtitle data';
+  @override
+  String get delete_disclosure_book_extracted =>
+      'The book files Hibiki extracted into its own storage';
+  @override
+  String get delete_disclosure_book_audiobook =>
+      'The audio and aligned subtitles of the attached audiobook, if any';
+  @override
+  String get delete_disclosure_source_kept =>
+      'The original files you imported (book, subtitles, audio)';
+  @override
+  String get delete_disclosure_stats_kept => 'Reading statistics';
+  @override
+  String get delete_disclosure_audiobook_files =>
+      'The audio and aligned subtitles Hibiki copied into its own storage';
+  @override
+  String get delete_disclosure_audiobook_book_kept =>
+      'The book itself and its reading progress';
+  @override
+  String get delete_disclosure_audiobook_source_kept =>
+      'The original audio files you imported';
+  @override
+  String get audiobook_delete => 'Delete audiobook';
+  @override
+  String get audiobook_delete_confirm =>
+      'Delete the attached audiobook? Its audio files are removed from this device.';
+  @override
+  String get delete_collection_confirm =>
+      'Only the grouping is removed. The items in it are kept.';
   @override
   String get shortcut_action_video_enter_caret =>
       'Enter subtitle lookup cursor';
@@ -56893,10 +57170,6 @@ class _StringsNl extends _StringsEn {
   String get audiobook_relocate => 'Relocate file';
   @override
   String get audiobook_relocate_done => 'Audio relocated';
-  @override
-  String get audiobook_remove => 'Audioboek verwijderen';
-  @override
-  String get audiobook_remove_confirm => 'Gekoppeld audioboek verwijderen?';
   @override
   String get auto_add_book_name_to_tags =>
       'Boektitel automatisch aan labels toevoegen';
@@ -57716,9 +57989,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get delete_collection_also_videos =>
       'Also delete the videos (keeps your original video files)';
-  @override
-  String get delete_collection_confirm =>
-      'Deleting the collection won\'t delete its videos.';
   @override
   String get delete_custom_theme => 'Delete theme';
   @override
@@ -58865,11 +59135,6 @@ class _StringsNl extends _StringsEn {
   String get game_upscaling => 'Game window upscaling';
   @override
   String get game_upscaling_auto => 'Auto';
-  @override
-  String get game_upscaling_download_body =>
-      'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
-  @override
-  String get game_upscaling_download_title => 'Download Magpie upscaler?';
   @override
   String get game_upscaling_hint_external =>
       'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
@@ -62773,10 +63038,10 @@ class _StringsNl extends _StringsEn {
       'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
   @override
   String get game_upscaling_auto_hint =>
-      'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+      'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
   @override
   String get game_upscaling_installed_only_hint =>
-      'Only use a Magpie that is already installed. Never downloads anything.';
+      'Only use Magpie if it is already installed or running. Do not unpack Hibiki\'s bundled version.';
   @override
   String get game_upscaling_off_hint => 'Never upscale the game window.';
   @override
@@ -62790,7 +63055,7 @@ class _StringsNl extends _StringsEn {
       'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
   @override
   String get game_upscaling_hint_not_installed =>
-      'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+      'Magpie is not ready. Set window upscaling to Auto to use the copy bundled with Hibiki; if it still does not start, update or reinstall Hibiki.';
   @override
   String media_source_count_manga({required Object n}) => '${n} volumes';
   @override
@@ -63079,6 +63344,50 @@ class _StringsNl extends _StringsEn {
   @override
   String get anki_lapis_visual_field_dictionary_name_note =>
       'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+  @override
+  String get game_upscaling_error_bundle_missing =>
+      'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
+  @override
+  String get game_upscaling_error_bundle_invalid =>
+      'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
+  @override
+  String download_test_connection_failed_reason({required Object message}) =>
+      'Connection failed: ${message}';
+  @override
+  String get delete_disclosure_will_delete_label => 'Will be deleted';
+  @override
+  String get delete_disclosure_will_keep_label => 'Will be kept';
+  @override
+  String get delete_disclosure_book_records =>
+      'Reading progress, bookmarks, tags and subtitle data';
+  @override
+  String get delete_disclosure_book_extracted =>
+      'The book files Hibiki extracted into its own storage';
+  @override
+  String get delete_disclosure_book_audiobook =>
+      'The audio and aligned subtitles of the attached audiobook, if any';
+  @override
+  String get delete_disclosure_source_kept =>
+      'The original files you imported (book, subtitles, audio)';
+  @override
+  String get delete_disclosure_stats_kept => 'Reading statistics';
+  @override
+  String get delete_disclosure_audiobook_files =>
+      'The audio and aligned subtitles Hibiki copied into its own storage';
+  @override
+  String get delete_disclosure_audiobook_book_kept =>
+      'The book itself and its reading progress';
+  @override
+  String get delete_disclosure_audiobook_source_kept =>
+      'The original audio files you imported';
+  @override
+  String get audiobook_delete => 'Delete audiobook';
+  @override
+  String get audiobook_delete_confirm =>
+      'Delete the attached audiobook? Its audio files are removed from this device.';
+  @override
+  String get delete_collection_confirm =>
+      'Only the grouping is removed. The items in it are kept.';
   @override
   String get shortcut_action_video_enter_caret =>
       'Enter subtitle lookup cursor';
@@ -63507,10 +63816,6 @@ class _StringsPtBr extends _StringsEn {
   String get audiobook_relocate => 'Relocate file';
   @override
   String get audiobook_relocate_done => 'Audio relocated';
-  @override
-  String get audiobook_remove => 'Remover Audiolivro';
-  @override
-  String get audiobook_remove_confirm => 'Remover o audiolivro anexado?';
   @override
   String get auto_add_book_name_to_tags =>
       'Adicionar título do livro às tags automaticamente';
@@ -64333,9 +64638,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get delete_collection_also_videos =>
       'Also delete the videos (keeps your original video files)';
-  @override
-  String get delete_collection_confirm =>
-      'Deleting the collection won\'t delete its videos.';
   @override
   String get delete_custom_theme => 'Delete theme';
   @override
@@ -65485,11 +65787,6 @@ class _StringsPtBr extends _StringsEn {
   String get game_upscaling => 'Game window upscaling';
   @override
   String get game_upscaling_auto => 'Auto';
-  @override
-  String get game_upscaling_download_body =>
-      'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
-  @override
-  String get game_upscaling_download_title => 'Download Magpie upscaler?';
   @override
   String get game_upscaling_hint_external =>
       'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
@@ -69398,10 +69695,10 @@ class _StringsPtBr extends _StringsEn {
       'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
   @override
   String get game_upscaling_auto_hint =>
-      'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+      'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
   @override
   String get game_upscaling_installed_only_hint =>
-      'Only use a Magpie that is already installed. Never downloads anything.';
+      'Only use Magpie if it is already installed or running. Do not unpack Hibiki\'s bundled version.';
   @override
   String get game_upscaling_off_hint => 'Never upscale the game window.';
   @override
@@ -69415,7 +69712,7 @@ class _StringsPtBr extends _StringsEn {
       'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
   @override
   String get game_upscaling_hint_not_installed =>
-      'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+      'Magpie is not ready. Set window upscaling to Auto to use the copy bundled with Hibiki; if it still does not start, update or reinstall Hibiki.';
   @override
   String media_source_count_manga({required Object n}) => '${n} volumes';
   @override
@@ -69704,6 +70001,50 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get anki_lapis_visual_field_dictionary_name_note =>
       'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+  @override
+  String get game_upscaling_error_bundle_missing =>
+      'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
+  @override
+  String get game_upscaling_error_bundle_invalid =>
+      'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
+  @override
+  String download_test_connection_failed_reason({required Object message}) =>
+      'Connection failed: ${message}';
+  @override
+  String get delete_disclosure_will_delete_label => 'Will be deleted';
+  @override
+  String get delete_disclosure_will_keep_label => 'Will be kept';
+  @override
+  String get delete_disclosure_book_records =>
+      'Reading progress, bookmarks, tags and subtitle data';
+  @override
+  String get delete_disclosure_book_extracted =>
+      'The book files Hibiki extracted into its own storage';
+  @override
+  String get delete_disclosure_book_audiobook =>
+      'The audio and aligned subtitles of the attached audiobook, if any';
+  @override
+  String get delete_disclosure_source_kept =>
+      'The original files you imported (book, subtitles, audio)';
+  @override
+  String get delete_disclosure_stats_kept => 'Reading statistics';
+  @override
+  String get delete_disclosure_audiobook_files =>
+      'The audio and aligned subtitles Hibiki copied into its own storage';
+  @override
+  String get delete_disclosure_audiobook_book_kept =>
+      'The book itself and its reading progress';
+  @override
+  String get delete_disclosure_audiobook_source_kept =>
+      'The original audio files you imported';
+  @override
+  String get audiobook_delete => 'Delete audiobook';
+  @override
+  String get audiobook_delete_confirm =>
+      'Delete the attached audiobook? Its audio files are removed from this device.';
+  @override
+  String get delete_collection_confirm =>
+      'Only the grouping is removed. The items in it are kept.';
   @override
   String get shortcut_action_video_enter_caret =>
       'Enter subtitle lookup cursor';
@@ -70130,10 +70471,6 @@ class _StringsRu extends _StringsEn {
   String get audiobook_relocate => 'Relocate file';
   @override
   String get audiobook_relocate_done => 'Audio relocated';
-  @override
-  String get audiobook_remove => 'Удалить аудиокнигу';
-  @override
-  String get audiobook_remove_confirm => 'Удалить привязанную аудиокнигу?';
   @override
   String get auto_add_book_name_to_tags =>
       'Автодобавление названия книги в теги';
@@ -70954,9 +71291,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get delete_collection_also_videos =>
       'Also delete the videos (keeps your original video files)';
-  @override
-  String get delete_collection_confirm =>
-      'Deleting the collection won\'t delete its videos.';
   @override
   String get delete_custom_theme => 'Delete theme';
   @override
@@ -72102,11 +72436,6 @@ class _StringsRu extends _StringsEn {
   String get game_upscaling => 'Game window upscaling';
   @override
   String get game_upscaling_auto => 'Auto';
-  @override
-  String get game_upscaling_download_body =>
-      'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
-  @override
-  String get game_upscaling_download_title => 'Download Magpie upscaler?';
   @override
   String get game_upscaling_hint_external =>
       'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
@@ -76007,10 +76336,10 @@ class _StringsRu extends _StringsEn {
       'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
   @override
   String get game_upscaling_auto_hint =>
-      'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+      'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
   @override
   String get game_upscaling_installed_only_hint =>
-      'Only use a Magpie that is already installed. Never downloads anything.';
+      'Only use Magpie if it is already installed or running. Do not unpack Hibiki\'s bundled version.';
   @override
   String get game_upscaling_off_hint => 'Never upscale the game window.';
   @override
@@ -76024,7 +76353,7 @@ class _StringsRu extends _StringsEn {
       'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
   @override
   String get game_upscaling_hint_not_installed =>
-      'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+      'Magpie is not ready. Set window upscaling to Auto to use the copy bundled with Hibiki; if it still does not start, update or reinstall Hibiki.';
   @override
   String media_source_count_manga({required Object n}) => '${n} volumes';
   @override
@@ -76313,6 +76642,50 @@ class _StringsRu extends _StringsEn {
   @override
   String get anki_lapis_visual_field_dictionary_name_note =>
       'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+  @override
+  String get game_upscaling_error_bundle_missing =>
+      'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
+  @override
+  String get game_upscaling_error_bundle_invalid =>
+      'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
+  @override
+  String download_test_connection_failed_reason({required Object message}) =>
+      'Connection failed: ${message}';
+  @override
+  String get delete_disclosure_will_delete_label => 'Will be deleted';
+  @override
+  String get delete_disclosure_will_keep_label => 'Will be kept';
+  @override
+  String get delete_disclosure_book_records =>
+      'Reading progress, bookmarks, tags and subtitle data';
+  @override
+  String get delete_disclosure_book_extracted =>
+      'The book files Hibiki extracted into its own storage';
+  @override
+  String get delete_disclosure_book_audiobook =>
+      'The audio and aligned subtitles of the attached audiobook, if any';
+  @override
+  String get delete_disclosure_source_kept =>
+      'The original files you imported (book, subtitles, audio)';
+  @override
+  String get delete_disclosure_stats_kept => 'Reading statistics';
+  @override
+  String get delete_disclosure_audiobook_files =>
+      'The audio and aligned subtitles Hibiki copied into its own storage';
+  @override
+  String get delete_disclosure_audiobook_book_kept =>
+      'The book itself and its reading progress';
+  @override
+  String get delete_disclosure_audiobook_source_kept =>
+      'The original audio files you imported';
+  @override
+  String get audiobook_delete => 'Delete audiobook';
+  @override
+  String get audiobook_delete_confirm =>
+      'Delete the attached audiobook? Its audio files are removed from this device.';
+  @override
+  String get delete_collection_confirm =>
+      'Only the grouping is removed. The items in it are kept.';
   @override
   String get shortcut_action_video_enter_caret =>
       'Enter subtitle lookup cursor';
@@ -76736,10 +77109,6 @@ class _StringsTh extends _StringsEn {
   String get audiobook_relocate => 'Relocate file';
   @override
   String get audiobook_relocate_done => 'Audio relocated';
-  @override
-  String get audiobook_remove => 'ลบหนังสือเสียง';
-  @override
-  String get audiobook_remove_confirm => 'ลบหนังสือเสียงที่แนบอยู่?';
   @override
   String get auto_add_book_name_to_tags => 'เพิ่มชื่อหนังสือในแท็กอัตโนมัติ';
   @override
@@ -77550,9 +77919,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get delete_collection_also_videos =>
       'Also delete the videos (keeps your original video files)';
-  @override
-  String get delete_collection_confirm =>
-      'Deleting the collection won\'t delete its videos.';
   @override
   String get delete_custom_theme => 'Delete theme';
   @override
@@ -78689,11 +79055,6 @@ class _StringsTh extends _StringsEn {
   String get game_upscaling => 'Game window upscaling';
   @override
   String get game_upscaling_auto => 'Auto';
-  @override
-  String get game_upscaling_download_body =>
-      'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
-  @override
-  String get game_upscaling_download_title => 'Download Magpie upscaler?';
   @override
   String get game_upscaling_hint_external =>
       'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
@@ -82564,10 +82925,10 @@ class _StringsTh extends _StringsEn {
       'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
   @override
   String get game_upscaling_auto_hint =>
-      'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+      'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
   @override
   String get game_upscaling_installed_only_hint =>
-      'Only use a Magpie that is already installed. Never downloads anything.';
+      'Only use Magpie if it is already installed or running. Do not unpack Hibiki\'s bundled version.';
   @override
   String get game_upscaling_off_hint => 'Never upscale the game window.';
   @override
@@ -82581,7 +82942,7 @@ class _StringsTh extends _StringsEn {
       'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
   @override
   String get game_upscaling_hint_not_installed =>
-      'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+      'Magpie is not ready. Set window upscaling to Auto to use the copy bundled with Hibiki; if it still does not start, update or reinstall Hibiki.';
   @override
   String media_source_count_manga({required Object n}) => '${n} volumes';
   @override
@@ -82870,6 +83231,50 @@ class _StringsTh extends _StringsEn {
   @override
   String get anki_lapis_visual_field_dictionary_name_note =>
       'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+  @override
+  String get game_upscaling_error_bundle_missing =>
+      'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
+  @override
+  String get game_upscaling_error_bundle_invalid =>
+      'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
+  @override
+  String download_test_connection_failed_reason({required Object message}) =>
+      'Connection failed: ${message}';
+  @override
+  String get delete_disclosure_will_delete_label => 'Will be deleted';
+  @override
+  String get delete_disclosure_will_keep_label => 'Will be kept';
+  @override
+  String get delete_disclosure_book_records =>
+      'Reading progress, bookmarks, tags and subtitle data';
+  @override
+  String get delete_disclosure_book_extracted =>
+      'The book files Hibiki extracted into its own storage';
+  @override
+  String get delete_disclosure_book_audiobook =>
+      'The audio and aligned subtitles of the attached audiobook, if any';
+  @override
+  String get delete_disclosure_source_kept =>
+      'The original files you imported (book, subtitles, audio)';
+  @override
+  String get delete_disclosure_stats_kept => 'Reading statistics';
+  @override
+  String get delete_disclosure_audiobook_files =>
+      'The audio and aligned subtitles Hibiki copied into its own storage';
+  @override
+  String get delete_disclosure_audiobook_book_kept =>
+      'The book itself and its reading progress';
+  @override
+  String get delete_disclosure_audiobook_source_kept =>
+      'The original audio files you imported';
+  @override
+  String get audiobook_delete => 'Delete audiobook';
+  @override
+  String get audiobook_delete_confirm =>
+      'Delete the attached audiobook? Its audio files are removed from this device.';
+  @override
+  String get delete_collection_confirm =>
+      'Only the grouping is removed. The items in it are kept.';
   @override
   String get shortcut_action_video_enter_caret =>
       'Enter subtitle lookup cursor';
@@ -83295,10 +83700,6 @@ class _StringsTr extends _StringsEn {
   String get audiobook_relocate => 'Relocate file';
   @override
   String get audiobook_relocate_done => 'Audio relocated';
-  @override
-  String get audiobook_remove => 'Sesli kitabı kaldır';
-  @override
-  String get audiobook_remove_confirm => 'Bağlı sesli kitap kaldırılsın mı?';
   @override
   String get auto_add_book_name_to_tags =>
       'Kitap başlığını otomatik olarak etiketlere ekle';
@@ -84119,9 +84520,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get delete_collection_also_videos =>
       'Also delete the videos (keeps your original video files)';
-  @override
-  String get delete_collection_confirm =>
-      'Deleting the collection won\'t delete its videos.';
   @override
   String get delete_custom_theme => 'Delete theme';
   @override
@@ -85264,11 +85662,6 @@ class _StringsTr extends _StringsEn {
   String get game_upscaling => 'Game window upscaling';
   @override
   String get game_upscaling_auto => 'Auto';
-  @override
-  String get game_upscaling_download_body =>
-      'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
-  @override
-  String get game_upscaling_download_title => 'Download Magpie upscaler?';
   @override
   String get game_upscaling_hint_external =>
       'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
@@ -89153,10 +89546,10 @@ class _StringsTr extends _StringsEn {
       'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
   @override
   String get game_upscaling_auto_hint =>
-      'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+      'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
   @override
   String get game_upscaling_installed_only_hint =>
-      'Only use a Magpie that is already installed. Never downloads anything.';
+      'Only use Magpie if it is already installed or running. Do not unpack Hibiki\'s bundled version.';
   @override
   String get game_upscaling_off_hint => 'Never upscale the game window.';
   @override
@@ -89170,7 +89563,7 @@ class _StringsTr extends _StringsEn {
       'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
   @override
   String get game_upscaling_hint_not_installed =>
-      'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+      'Magpie is not ready. Set window upscaling to Auto to use the copy bundled with Hibiki; if it still does not start, update or reinstall Hibiki.';
   @override
   String media_source_count_manga({required Object n}) => '${n} volumes';
   @override
@@ -89459,6 +89852,50 @@ class _StringsTr extends _StringsEn {
   @override
   String get anki_lapis_visual_field_dictionary_name_note =>
       'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+  @override
+  String get game_upscaling_error_bundle_missing =>
+      'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
+  @override
+  String get game_upscaling_error_bundle_invalid =>
+      'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
+  @override
+  String download_test_connection_failed_reason({required Object message}) =>
+      'Connection failed: ${message}';
+  @override
+  String get delete_disclosure_will_delete_label => 'Will be deleted';
+  @override
+  String get delete_disclosure_will_keep_label => 'Will be kept';
+  @override
+  String get delete_disclosure_book_records =>
+      'Reading progress, bookmarks, tags and subtitle data';
+  @override
+  String get delete_disclosure_book_extracted =>
+      'The book files Hibiki extracted into its own storage';
+  @override
+  String get delete_disclosure_book_audiobook =>
+      'The audio and aligned subtitles of the attached audiobook, if any';
+  @override
+  String get delete_disclosure_source_kept =>
+      'The original files you imported (book, subtitles, audio)';
+  @override
+  String get delete_disclosure_stats_kept => 'Reading statistics';
+  @override
+  String get delete_disclosure_audiobook_files =>
+      'The audio and aligned subtitles Hibiki copied into its own storage';
+  @override
+  String get delete_disclosure_audiobook_book_kept =>
+      'The book itself and its reading progress';
+  @override
+  String get delete_disclosure_audiobook_source_kept =>
+      'The original audio files you imported';
+  @override
+  String get audiobook_delete => 'Delete audiobook';
+  @override
+  String get audiobook_delete_confirm =>
+      'Delete the attached audiobook? Its audio files are removed from this device.';
+  @override
+  String get delete_collection_confirm =>
+      'Only the grouping is removed. The items in it are kept.';
   @override
   String get shortcut_action_video_enter_caret =>
       'Enter subtitle lookup cursor';
@@ -89885,10 +90322,6 @@ class _StringsVi extends _StringsEn {
   String get audiobook_relocate => 'Relocate file';
   @override
   String get audiobook_relocate_done => 'Audio relocated';
-  @override
-  String get audiobook_remove => 'Xóa sách nói';
-  @override
-  String get audiobook_remove_confirm => 'Xóa sách nói đã gắn?';
   @override
   String get auto_add_book_name_to_tags => 'Tự thêm tên sách vào tag';
   @override
@@ -90703,9 +91136,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get delete_collection_also_videos =>
       'Also delete the videos (keeps your original video files)';
-  @override
-  String get delete_collection_confirm =>
-      'Deleting the collection won\'t delete its videos.';
   @override
   String get delete_custom_theme => 'Delete theme';
   @override
@@ -91846,11 +92276,6 @@ class _StringsVi extends _StringsEn {
   String get game_upscaling => 'Game window upscaling';
   @override
   String get game_upscaling_auto => 'Auto';
-  @override
-  String get game_upscaling_download_body =>
-      'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
-  @override
-  String get game_upscaling_download_title => 'Download Magpie upscaler?';
   @override
   String get game_upscaling_hint_external =>
       'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
@@ -95727,10 +96152,10 @@ class _StringsVi extends _StringsEn {
       'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
   @override
   String get game_upscaling_auto_hint =>
-      'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+      'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
   @override
   String get game_upscaling_installed_only_hint =>
-      'Only use a Magpie that is already installed. Never downloads anything.';
+      'Only use Magpie if it is already installed or running. Do not unpack Hibiki\'s bundled version.';
   @override
   String get game_upscaling_off_hint => 'Never upscale the game window.';
   @override
@@ -95744,7 +96169,7 @@ class _StringsVi extends _StringsEn {
       'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
   @override
   String get game_upscaling_hint_not_installed =>
-      'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+      'Magpie is not ready. Set window upscaling to Auto to use the copy bundled with Hibiki; if it still does not start, update or reinstall Hibiki.';
   @override
   String media_source_count_manga({required Object n}) => '${n} volumes';
   @override
@@ -96033,6 +96458,50 @@ class _StringsVi extends _StringsEn {
   @override
   String get anki_lapis_visual_field_dictionary_name_note =>
       'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+  @override
+  String get game_upscaling_error_bundle_missing =>
+      'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
+  @override
+  String get game_upscaling_error_bundle_invalid =>
+      'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
+  @override
+  String download_test_connection_failed_reason({required Object message}) =>
+      'Connection failed: ${message}';
+  @override
+  String get delete_disclosure_will_delete_label => 'Will be deleted';
+  @override
+  String get delete_disclosure_will_keep_label => 'Will be kept';
+  @override
+  String get delete_disclosure_book_records =>
+      'Reading progress, bookmarks, tags and subtitle data';
+  @override
+  String get delete_disclosure_book_extracted =>
+      'The book files Hibiki extracted into its own storage';
+  @override
+  String get delete_disclosure_book_audiobook =>
+      'The audio and aligned subtitles of the attached audiobook, if any';
+  @override
+  String get delete_disclosure_source_kept =>
+      'The original files you imported (book, subtitles, audio)';
+  @override
+  String get delete_disclosure_stats_kept => 'Reading statistics';
+  @override
+  String get delete_disclosure_audiobook_files =>
+      'The audio and aligned subtitles Hibiki copied into its own storage';
+  @override
+  String get delete_disclosure_audiobook_book_kept =>
+      'The book itself and its reading progress';
+  @override
+  String get delete_disclosure_audiobook_source_kept =>
+      'The original audio files you imported';
+  @override
+  String get audiobook_delete => 'Delete audiobook';
+  @override
+  String get audiobook_delete_confirm =>
+      'Delete the attached audiobook? Its audio files are removed from this device.';
+  @override
+  String get delete_collection_confirm =>
+      'Only the grouping is removed. The items in it are kept.';
   @override
   String get shortcut_action_video_enter_caret =>
       'Enter subtitle lookup cursor';
@@ -96424,10 +96893,6 @@ class _StringsZhCn extends _StringsEn {
   String get audiobook_relocate => '重新定位文件';
   @override
   String get audiobook_relocate_done => '音频已重新定位';
-  @override
-  String get audiobook_remove => '移除有声书';
-  @override
-  String get audiobook_remove_confirm => '移除已附加的有声书？';
   @override
   String get auto_add_book_name_to_tags => '自动添加书名到标签';
   @override
@@ -97197,8 +97662,6 @@ class _StringsZhCn extends _StringsEn {
   String get delete_collection_also_books => '同时删除其中的书';
   @override
   String get delete_collection_also_videos => '同时删除其中的视频（保留你的原始视频文件）';
-  @override
-  String get delete_collection_confirm => '删除合集不会删除其中的视频。';
   @override
   String get delete_custom_theme => '删除主题';
   @override
@@ -98255,11 +98718,6 @@ class _StringsZhCn extends _StringsEn {
   String get game_upscaling => '游戏窗口超分';
   @override
   String get game_upscaling_auto => '自动';
-  @override
-  String get game_upscaling_download_body =>
-      '游戏窗口超分需要 Magpie（约 10 MB，GPL-3.0，由我们自行从源码编译）。现在下载吗？';
-  @override
-  String get game_upscaling_download_title => '下载 Magpie 超分组件？';
   @override
   String get game_upscaling_hint_external =>
       '你的电脑上已经开着一个 Magpie，Hibiki 没有去动它。按 Win+Shift+A 就能放大游戏窗口。';
@@ -101858,9 +102316,10 @@ class _StringsZhCn extends _StringsEn {
       '捕获组件版本与 Hibiki 不一致，请更新或重新安装 galgame 捕获组件。';
   @override
   String get game_upscaling_auto_hint =>
-      '优先用机器上已有的 Magpie；没有就在征得同意后下载我们的自编产物（约 10 MB）。';
+      '优先使用机器上正在运行的 Magpie；否则启用 Hibiki 内置版本，不需要下载。';
   @override
-  String get game_upscaling_installed_only_hint => '只用机器上已经装好的 Magpie，绝不联网下载。';
+  String get game_upscaling_installed_only_hint =>
+      '只用机器上已经安装或正在运行的 Magpie，不启用 Hibiki 内置版本。';
   @override
   String get game_upscaling_off_hint => '不放大游戏窗口。';
   @override
@@ -101873,7 +102332,7 @@ class _StringsZhCn extends _StringsEn {
       '捕获会话期间用 Magpie 放大这个游戏的窗口。每个游戏各自设置——只有原生分辨率低于屏幕的游戏才用得上。会占用显卡。';
   @override
   String get game_upscaling_hint_not_installed =>
-      '没有安装 Magpie。在游戏库里右键这个游戏，把「窗口超分」改成「自动」即可下载。';
+      'Magpie 尚未就绪。将该游戏的「窗口超分」设为「自动」即可使用随包的内置版本；仍无法启动时请更新或重装 Hibiki。';
   @override
   String media_source_count_manga({required Object n}) => '${n} 卷';
   @override
@@ -102144,6 +102603,41 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get anki_lapis_visual_field_dictionary_name_note =>
       'Hibiki 生成的卡片把词性标签和词典名放在同一个标签里，两者无法分开设置样式。';
+  @override
+  String get game_upscaling_error_bundle_missing =>
+      'Hibiki 安装包不完整：缺少内置 Magpie 组件。请重新安装或更新 Hibiki。';
+  @override
+  String get game_upscaling_error_bundle_invalid =>
+      '内置 Magpie 组件已损坏或校验失败。请重新安装或更新 Hibiki。';
+  @override
+  String download_test_connection_failed_reason({required Object message}) =>
+      '连接失败：${message}';
+  @override
+  String get delete_disclosure_will_delete_label => '会被删除';
+  @override
+  String get delete_disclosure_will_keep_label => '会被保留';
+  @override
+  String get delete_disclosure_book_records => '阅读进度、书签、标签和字幕数据';
+  @override
+  String get delete_disclosure_book_extracted => 'Hibiki 解压到自己存储目录里的书籍文件';
+  @override
+  String get delete_disclosure_book_audiobook => '配套有声书的音频和对齐字幕（如果有）';
+  @override
+  String get delete_disclosure_source_kept => '你导入时选择的原始文件（书籍、字幕、音频）';
+  @override
+  String get delete_disclosure_stats_kept => '阅读统计';
+  @override
+  String get delete_disclosure_audiobook_files => 'Hibiki 复制到自己存储目录里的音频和对齐字幕';
+  @override
+  String get delete_disclosure_audiobook_book_kept => '书籍本身和它的阅读进度';
+  @override
+  String get delete_disclosure_audiobook_source_kept => '你导入时选择的原始音频文件';
+  @override
+  String get audiobook_delete => '删除有声书';
+  @override
+  String get audiobook_delete_confirm => '删除已附加的有声书？它的音频文件会从本机删除。';
+  @override
+  String get delete_collection_confirm => '只解除分组，其中的条目会保留。';
   @override
   String get shortcut_action_video_enter_caret => '进入字幕选词光标';
 }
@@ -102550,10 +103044,6 @@ class _StringsZhHk extends _StringsEn {
   String get audiobook_relocate => 'Relocate file';
   @override
   String get audiobook_relocate_done => 'Audio relocated';
-  @override
-  String get audiobook_remove => '移除有聲書';
-  @override
-  String get audiobook_remove_confirm => '移除已附加的有聲書？';
   @override
   String get auto_add_book_name_to_tags => '自動將書名加入標籤';
   @override
@@ -103346,9 +103836,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get delete_collection_also_videos =>
       'Also delete the videos (keeps your original video files)';
-  @override
-  String get delete_collection_confirm =>
-      'Deleting the collection won\'t delete its videos.';
   @override
   String get delete_custom_theme => 'Delete theme';
   @override
@@ -104462,11 +104949,6 @@ class _StringsZhHk extends _StringsEn {
   String get game_upscaling => 'Game window upscaling';
   @override
   String get game_upscaling_auto => 'Auto';
-  @override
-  String get game_upscaling_download_body =>
-      'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
-  @override
-  String get game_upscaling_download_title => 'Download Magpie upscaler?';
   @override
   String get game_upscaling_hint_external =>
       'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
@@ -108207,10 +108689,10 @@ class _StringsZhHk extends _StringsEn {
       'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
   @override
   String get game_upscaling_auto_hint =>
-      'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+      'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
   @override
   String get game_upscaling_installed_only_hint =>
-      'Only use a Magpie that is already installed. Never downloads anything.';
+      'Only use Magpie if it is already installed or running. Do not unpack Hibiki\'s bundled version.';
   @override
   String get game_upscaling_off_hint => 'Never upscale the game window.';
   @override
@@ -108224,7 +108706,7 @@ class _StringsZhHk extends _StringsEn {
       'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
   @override
   String get game_upscaling_hint_not_installed =>
-      'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+      'Magpie is not ready. Set window upscaling to Auto to use the copy bundled with Hibiki; if it still does not start, update or reinstall Hibiki.';
   @override
   String media_source_count_manga({required Object n}) => '${n} volumes';
   @override
@@ -108513,6 +108995,50 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get anki_lapis_visual_field_dictionary_name_note =>
       'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+  @override
+  String get game_upscaling_error_bundle_missing =>
+      'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
+  @override
+  String get game_upscaling_error_bundle_invalid =>
+      'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
+  @override
+  String download_test_connection_failed_reason({required Object message}) =>
+      'Connection failed: ${message}';
+  @override
+  String get delete_disclosure_will_delete_label => 'Will be deleted';
+  @override
+  String get delete_disclosure_will_keep_label => 'Will be kept';
+  @override
+  String get delete_disclosure_book_records =>
+      'Reading progress, bookmarks, tags and subtitle data';
+  @override
+  String get delete_disclosure_book_extracted =>
+      'The book files Hibiki extracted into its own storage';
+  @override
+  String get delete_disclosure_book_audiobook =>
+      'The audio and aligned subtitles of the attached audiobook, if any';
+  @override
+  String get delete_disclosure_source_kept =>
+      'The original files you imported (book, subtitles, audio)';
+  @override
+  String get delete_disclosure_stats_kept => 'Reading statistics';
+  @override
+  String get delete_disclosure_audiobook_files =>
+      'The audio and aligned subtitles Hibiki copied into its own storage';
+  @override
+  String get delete_disclosure_audiobook_book_kept =>
+      'The book itself and its reading progress';
+  @override
+  String get delete_disclosure_audiobook_source_kept =>
+      'The original audio files you imported';
+  @override
+  String get audiobook_delete => 'Delete audiobook';
+  @override
+  String get audiobook_delete_confirm =>
+      'Delete the attached audiobook? Its audio files are removed from this device.';
+  @override
+  String get delete_collection_confirm =>
+      'Only the grouping is removed. The items in it are kept.';
   @override
   String get shortcut_action_video_enter_caret =>
       'Enter subtitle lookup cursor';
@@ -108862,10 +109388,6 @@ extension on _StringsEn {
         return 'Relocate file';
       case 'audiobook_relocate_done':
         return 'Audio relocated';
-      case 'audiobook_remove':
-        return 'Remove audiobook';
-      case 'audiobook_remove_confirm':
-        return 'Remove the attached audiobook?';
       case 'auto_add_book_name_to_tags':
         return 'Auto-add book title to tags';
       case 'auto_chapter':
@@ -109608,8 +110130,6 @@ extension on _StringsEn {
         return 'Also delete the books in it';
       case 'delete_collection_also_videos':
         return 'Also delete the videos (keeps your original video files)';
-      case 'delete_collection_confirm':
-        return 'Deleting the collection won\'t delete its videos.';
       case 'delete_custom_theme':
         return 'Delete theme';
       case 'delete_custom_theme_confirm':
@@ -110623,10 +111143,6 @@ extension on _StringsEn {
         return 'Game window upscaling';
       case 'game_upscaling_auto':
         return 'Auto';
-      case 'game_upscaling_download_body':
-        return 'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
-      case 'game_upscaling_download_title':
-        return 'Download Magpie upscaler?';
       case 'game_upscaling_hint_external':
         return 'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
       case 'game_upscaling_hint_first_run':
@@ -114116,9 +114632,9 @@ extension on _StringsEn {
       case 'game_hook_reason_protocol_mismatch':
         return 'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
       case 'game_upscaling_auto_hint':
-        return 'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+        return 'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
       case 'game_upscaling_installed_only_hint':
-        return 'Only use a Magpie that is already installed. Never downloads anything.';
+        return 'Only use Magpie if it is already installed or running. Do not unpack Hibiki\'s bundled version.';
       case 'game_upscaling_off_hint':
         return 'Never upscale the game window.';
       case 'game_helper_bundle_missing':
@@ -114128,7 +114644,7 @@ extension on _StringsEn {
       case 'game_upscaling_pick_body':
         return 'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
       case 'game_upscaling_hint_not_installed':
-        return 'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+        return 'Magpie is not ready. Set window upscaling to Auto to use the copy bundled with Hibiki; if it still does not start, update or reinstall Hibiki.';
       case 'media_source_count_manga':
         return ({required Object n}) => '${n} volumes';
       case 'library_view_shelf':
@@ -114378,6 +114894,38 @@ extension on _StringsEn {
         return 'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
       case 'anki_lapis_visual_field_dictionary_name_note':
         return 'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+      case 'game_upscaling_error_bundle_missing':
+        return 'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
+      case 'game_upscaling_error_bundle_invalid':
+        return 'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
+      case 'download_test_connection_failed_reason':
+        return ({required Object message}) => 'Connection failed: ${message}';
+      case 'delete_disclosure_will_delete_label':
+        return 'Will be deleted';
+      case 'delete_disclosure_will_keep_label':
+        return 'Will be kept';
+      case 'delete_disclosure_book_records':
+        return 'Reading progress, bookmarks, tags and subtitle data';
+      case 'delete_disclosure_book_extracted':
+        return 'The book files Hibiki extracted into its own storage';
+      case 'delete_disclosure_book_audiobook':
+        return 'The audio and aligned subtitles of the attached audiobook, if any';
+      case 'delete_disclosure_source_kept':
+        return 'The original files you imported (book, subtitles, audio)';
+      case 'delete_disclosure_stats_kept':
+        return 'Reading statistics';
+      case 'delete_disclosure_audiobook_files':
+        return 'The audio and aligned subtitles Hibiki copied into its own storage';
+      case 'delete_disclosure_audiobook_book_kept':
+        return 'The book itself and its reading progress';
+      case 'delete_disclosure_audiobook_source_kept':
+        return 'The original audio files you imported';
+      case 'audiobook_delete':
+        return 'Delete audiobook';
+      case 'audiobook_delete_confirm':
+        return 'Delete the attached audiobook? Its audio files are removed from this device.';
+      case 'delete_collection_confirm':
+        return 'Only the grouping is removed. The items in it are kept.';
       case 'shortcut_action_video_enter_caret':
         return 'Enter subtitle lookup cursor';
       default:
@@ -114726,10 +115274,6 @@ extension on _StringsAr {
         return 'Relocate file';
       case 'audiobook_relocate_done':
         return 'Audio relocated';
-      case 'audiobook_remove':
-        return 'إزالة الكتاب المسموع';
-      case 'audiobook_remove_confirm':
-        return 'إزالة الكتاب المسموع المرفق؟';
       case 'auto_add_book_name_to_tags':
         return 'إضافة عنوان الكتاب تلقائياً إلى الوسوم';
       case 'auto_chapter':
@@ -115473,8 +116017,6 @@ extension on _StringsAr {
         return 'Also delete the books in it';
       case 'delete_collection_also_videos':
         return 'Also delete the videos (keeps your original video files)';
-      case 'delete_collection_confirm':
-        return 'Deleting the collection won\'t delete its videos.';
       case 'delete_custom_theme':
         return 'Delete theme';
       case 'delete_custom_theme_confirm':
@@ -116488,10 +117030,6 @@ extension on _StringsAr {
         return 'Game window upscaling';
       case 'game_upscaling_auto':
         return 'Auto';
-      case 'game_upscaling_download_body':
-        return 'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
-      case 'game_upscaling_download_title':
-        return 'Download Magpie upscaler?';
       case 'game_upscaling_hint_external':
         return 'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
       case 'game_upscaling_hint_first_run':
@@ -119978,9 +120516,9 @@ extension on _StringsAr {
       case 'game_hook_reason_protocol_mismatch':
         return 'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
       case 'game_upscaling_auto_hint':
-        return 'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+        return 'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
       case 'game_upscaling_installed_only_hint':
-        return 'Only use a Magpie that is already installed. Never downloads anything.';
+        return 'Only use Magpie if it is already installed or running. Do not unpack Hibiki\'s bundled version.';
       case 'game_upscaling_off_hint':
         return 'Never upscale the game window.';
       case 'game_helper_bundle_missing':
@@ -119990,7 +120528,7 @@ extension on _StringsAr {
       case 'game_upscaling_pick_body':
         return 'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
       case 'game_upscaling_hint_not_installed':
-        return 'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+        return 'Magpie is not ready. Set window upscaling to Auto to use the copy bundled with Hibiki; if it still does not start, update or reinstall Hibiki.';
       case 'media_source_count_manga':
         return ({required Object n}) => '${n} volumes';
       case 'library_view_shelf':
@@ -120240,6 +120778,38 @@ extension on _StringsAr {
         return 'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
       case 'anki_lapis_visual_field_dictionary_name_note':
         return 'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+      case 'game_upscaling_error_bundle_missing':
+        return 'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
+      case 'game_upscaling_error_bundle_invalid':
+        return 'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
+      case 'download_test_connection_failed_reason':
+        return ({required Object message}) => 'Connection failed: ${message}';
+      case 'delete_disclosure_will_delete_label':
+        return 'Will be deleted';
+      case 'delete_disclosure_will_keep_label':
+        return 'Will be kept';
+      case 'delete_disclosure_book_records':
+        return 'Reading progress, bookmarks, tags and subtitle data';
+      case 'delete_disclosure_book_extracted':
+        return 'The book files Hibiki extracted into its own storage';
+      case 'delete_disclosure_book_audiobook':
+        return 'The audio and aligned subtitles of the attached audiobook, if any';
+      case 'delete_disclosure_source_kept':
+        return 'The original files you imported (book, subtitles, audio)';
+      case 'delete_disclosure_stats_kept':
+        return 'Reading statistics';
+      case 'delete_disclosure_audiobook_files':
+        return 'The audio and aligned subtitles Hibiki copied into its own storage';
+      case 'delete_disclosure_audiobook_book_kept':
+        return 'The book itself and its reading progress';
+      case 'delete_disclosure_audiobook_source_kept':
+        return 'The original audio files you imported';
+      case 'audiobook_delete':
+        return 'Delete audiobook';
+      case 'audiobook_delete_confirm':
+        return 'Delete the attached audiobook? Its audio files are removed from this device.';
+      case 'delete_collection_confirm':
+        return 'Only the grouping is removed. The items in it are kept.';
       case 'shortcut_action_video_enter_caret':
         return 'Enter subtitle lookup cursor';
       default:
@@ -120590,10 +121160,6 @@ extension on _StringsDe {
         return 'Relocate file';
       case 'audiobook_relocate_done':
         return 'Audio relocated';
-      case 'audiobook_remove':
-        return 'Hörbuch entfernen';
-      case 'audiobook_remove_confirm':
-        return 'Angehängtes Hörbuch entfernen?';
       case 'auto_add_book_name_to_tags':
         return 'Buchtitel automatisch zu Tags hinzufügen';
       case 'auto_chapter':
@@ -121337,8 +121903,6 @@ extension on _StringsDe {
         return 'Also delete the books in it';
       case 'delete_collection_also_videos':
         return 'Also delete the videos (keeps your original video files)';
-      case 'delete_collection_confirm':
-        return 'Deleting the collection won\'t delete its videos.';
       case 'delete_custom_theme':
         return 'Delete theme';
       case 'delete_custom_theme_confirm':
@@ -122354,10 +122918,6 @@ extension on _StringsDe {
         return 'Game window upscaling';
       case 'game_upscaling_auto':
         return 'Auto';
-      case 'game_upscaling_download_body':
-        return 'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
-      case 'game_upscaling_download_title':
-        return 'Download Magpie upscaler?';
       case 'game_upscaling_hint_external':
         return 'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
       case 'game_upscaling_hint_first_run':
@@ -125862,9 +126422,9 @@ extension on _StringsDe {
       case 'game_hook_reason_protocol_mismatch':
         return 'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
       case 'game_upscaling_auto_hint':
-        return 'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+        return 'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
       case 'game_upscaling_installed_only_hint':
-        return 'Only use a Magpie that is already installed. Never downloads anything.';
+        return 'Only use Magpie if it is already installed or running. Do not unpack Hibiki\'s bundled version.';
       case 'game_upscaling_off_hint':
         return 'Never upscale the game window.';
       case 'game_helper_bundle_missing':
@@ -125874,7 +126434,7 @@ extension on _StringsDe {
       case 'game_upscaling_pick_body':
         return 'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
       case 'game_upscaling_hint_not_installed':
-        return 'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+        return 'Magpie is not ready. Set window upscaling to Auto to use the copy bundled with Hibiki; if it still does not start, update or reinstall Hibiki.';
       case 'media_source_count_manga':
         return ({required Object n}) => '${n} volumes';
       case 'library_view_shelf':
@@ -126124,6 +126684,38 @@ extension on _StringsDe {
         return 'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
       case 'anki_lapis_visual_field_dictionary_name_note':
         return 'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+      case 'game_upscaling_error_bundle_missing':
+        return 'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
+      case 'game_upscaling_error_bundle_invalid':
+        return 'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
+      case 'download_test_connection_failed_reason':
+        return ({required Object message}) => 'Connection failed: ${message}';
+      case 'delete_disclosure_will_delete_label':
+        return 'Will be deleted';
+      case 'delete_disclosure_will_keep_label':
+        return 'Will be kept';
+      case 'delete_disclosure_book_records':
+        return 'Reading progress, bookmarks, tags and subtitle data';
+      case 'delete_disclosure_book_extracted':
+        return 'The book files Hibiki extracted into its own storage';
+      case 'delete_disclosure_book_audiobook':
+        return 'The audio and aligned subtitles of the attached audiobook, if any';
+      case 'delete_disclosure_source_kept':
+        return 'The original files you imported (book, subtitles, audio)';
+      case 'delete_disclosure_stats_kept':
+        return 'Reading statistics';
+      case 'delete_disclosure_audiobook_files':
+        return 'The audio and aligned subtitles Hibiki copied into its own storage';
+      case 'delete_disclosure_audiobook_book_kept':
+        return 'The book itself and its reading progress';
+      case 'delete_disclosure_audiobook_source_kept':
+        return 'The original audio files you imported';
+      case 'audiobook_delete':
+        return 'Delete audiobook';
+      case 'audiobook_delete_confirm':
+        return 'Delete the attached audiobook? Its audio files are removed from this device.';
+      case 'delete_collection_confirm':
+        return 'Only the grouping is removed. The items in it are kept.';
       case 'shortcut_action_video_enter_caret':
         return 'Enter subtitle lookup cursor';
       default:
@@ -126475,10 +127067,6 @@ extension on _StringsEs {
         return 'Relocate file';
       case 'audiobook_relocate_done':
         return 'Audio relocated';
-      case 'audiobook_remove':
-        return 'Eliminar audiolibro';
-      case 'audiobook_remove_confirm':
-        return '?Eliminar el audiolibro adjunto?';
       case 'auto_add_book_name_to_tags':
         return 'Añadir título del libro a las etiquetas automáticamente';
       case 'auto_chapter':
@@ -127222,8 +127810,6 @@ extension on _StringsEs {
         return 'Also delete the books in it';
       case 'delete_collection_also_videos':
         return 'Also delete the videos (keeps your original video files)';
-      case 'delete_collection_confirm':
-        return 'Deleting the collection won\'t delete its videos.';
       case 'delete_custom_theme':
         return 'Delete theme';
       case 'delete_custom_theme_confirm':
@@ -128239,10 +128825,6 @@ extension on _StringsEs {
         return 'Game window upscaling';
       case 'game_upscaling_auto':
         return 'Auto';
-      case 'game_upscaling_download_body':
-        return 'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
-      case 'game_upscaling_download_title':
-        return 'Download Magpie upscaler?';
       case 'game_upscaling_hint_external':
         return 'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
       case 'game_upscaling_hint_first_run':
@@ -131745,9 +132327,9 @@ extension on _StringsEs {
       case 'game_hook_reason_protocol_mismatch':
         return 'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
       case 'game_upscaling_auto_hint':
-        return 'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+        return 'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
       case 'game_upscaling_installed_only_hint':
-        return 'Only use a Magpie that is already installed. Never downloads anything.';
+        return 'Only use Magpie if it is already installed or running. Do not unpack Hibiki\'s bundled version.';
       case 'game_upscaling_off_hint':
         return 'Never upscale the game window.';
       case 'game_helper_bundle_missing':
@@ -131757,7 +132339,7 @@ extension on _StringsEs {
       case 'game_upscaling_pick_body':
         return 'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
       case 'game_upscaling_hint_not_installed':
-        return 'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+        return 'Magpie is not ready. Set window upscaling to Auto to use the copy bundled with Hibiki; if it still does not start, update or reinstall Hibiki.';
       case 'media_source_count_manga':
         return ({required Object n}) => '${n} volumes';
       case 'library_view_shelf':
@@ -132007,6 +132589,38 @@ extension on _StringsEs {
         return 'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
       case 'anki_lapis_visual_field_dictionary_name_note':
         return 'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+      case 'game_upscaling_error_bundle_missing':
+        return 'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
+      case 'game_upscaling_error_bundle_invalid':
+        return 'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
+      case 'download_test_connection_failed_reason':
+        return ({required Object message}) => 'Connection failed: ${message}';
+      case 'delete_disclosure_will_delete_label':
+        return 'Will be deleted';
+      case 'delete_disclosure_will_keep_label':
+        return 'Will be kept';
+      case 'delete_disclosure_book_records':
+        return 'Reading progress, bookmarks, tags and subtitle data';
+      case 'delete_disclosure_book_extracted':
+        return 'The book files Hibiki extracted into its own storage';
+      case 'delete_disclosure_book_audiobook':
+        return 'The audio and aligned subtitles of the attached audiobook, if any';
+      case 'delete_disclosure_source_kept':
+        return 'The original files you imported (book, subtitles, audio)';
+      case 'delete_disclosure_stats_kept':
+        return 'Reading statistics';
+      case 'delete_disclosure_audiobook_files':
+        return 'The audio and aligned subtitles Hibiki copied into its own storage';
+      case 'delete_disclosure_audiobook_book_kept':
+        return 'The book itself and its reading progress';
+      case 'delete_disclosure_audiobook_source_kept':
+        return 'The original audio files you imported';
+      case 'audiobook_delete':
+        return 'Delete audiobook';
+      case 'audiobook_delete_confirm':
+        return 'Delete the attached audiobook? Its audio files are removed from this device.';
+      case 'delete_collection_confirm':
+        return 'Only the grouping is removed. The items in it are kept.';
       case 'shortcut_action_video_enter_caret':
         return 'Enter subtitle lookup cursor';
       default:
@@ -132359,10 +132973,6 @@ extension on _StringsFr {
         return 'Relocate file';
       case 'audiobook_relocate_done':
         return 'Audio relocated';
-      case 'audiobook_remove':
-        return 'Supprimer le livre audio';
-      case 'audiobook_remove_confirm':
-        return 'Supprimer le livre audio attaché ?';
       case 'auto_add_book_name_to_tags':
         return 'Ajouter automatiquement le titre du livre aux étiquettes';
       case 'auto_chapter':
@@ -133106,8 +133716,6 @@ extension on _StringsFr {
         return 'Also delete the books in it';
       case 'delete_collection_also_videos':
         return 'Also delete the videos (keeps your original video files)';
-      case 'delete_collection_confirm':
-        return 'Deleting the collection won\'t delete its videos.';
       case 'delete_custom_theme':
         return 'Delete theme';
       case 'delete_custom_theme_confirm':
@@ -134125,10 +134733,6 @@ extension on _StringsFr {
         return 'Game window upscaling';
       case 'game_upscaling_auto':
         return 'Auto';
-      case 'game_upscaling_download_body':
-        return 'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
-      case 'game_upscaling_download_title':
-        return 'Download Magpie upscaler?';
       case 'game_upscaling_hint_external':
         return 'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
       case 'game_upscaling_hint_first_run':
@@ -137634,9 +138238,9 @@ extension on _StringsFr {
       case 'game_hook_reason_protocol_mismatch':
         return 'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
       case 'game_upscaling_auto_hint':
-        return 'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+        return 'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
       case 'game_upscaling_installed_only_hint':
-        return 'Only use a Magpie that is already installed. Never downloads anything.';
+        return 'Only use Magpie if it is already installed or running. Do not unpack Hibiki\'s bundled version.';
       case 'game_upscaling_off_hint':
         return 'Never upscale the game window.';
       case 'game_helper_bundle_missing':
@@ -137646,7 +138250,7 @@ extension on _StringsFr {
       case 'game_upscaling_pick_body':
         return 'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
       case 'game_upscaling_hint_not_installed':
-        return 'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+        return 'Magpie is not ready. Set window upscaling to Auto to use the copy bundled with Hibiki; if it still does not start, update or reinstall Hibiki.';
       case 'media_source_count_manga':
         return ({required Object n}) => '${n} volumes';
       case 'library_view_shelf':
@@ -137896,6 +138500,38 @@ extension on _StringsFr {
         return 'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
       case 'anki_lapis_visual_field_dictionary_name_note':
         return 'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+      case 'game_upscaling_error_bundle_missing':
+        return 'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
+      case 'game_upscaling_error_bundle_invalid':
+        return 'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
+      case 'download_test_connection_failed_reason':
+        return ({required Object message}) => 'Connection failed: ${message}';
+      case 'delete_disclosure_will_delete_label':
+        return 'Will be deleted';
+      case 'delete_disclosure_will_keep_label':
+        return 'Will be kept';
+      case 'delete_disclosure_book_records':
+        return 'Reading progress, bookmarks, tags and subtitle data';
+      case 'delete_disclosure_book_extracted':
+        return 'The book files Hibiki extracted into its own storage';
+      case 'delete_disclosure_book_audiobook':
+        return 'The audio and aligned subtitles of the attached audiobook, if any';
+      case 'delete_disclosure_source_kept':
+        return 'The original files you imported (book, subtitles, audio)';
+      case 'delete_disclosure_stats_kept':
+        return 'Reading statistics';
+      case 'delete_disclosure_audiobook_files':
+        return 'The audio and aligned subtitles Hibiki copied into its own storage';
+      case 'delete_disclosure_audiobook_book_kept':
+        return 'The book itself and its reading progress';
+      case 'delete_disclosure_audiobook_source_kept':
+        return 'The original audio files you imported';
+      case 'audiobook_delete':
+        return 'Delete audiobook';
+      case 'audiobook_delete_confirm':
+        return 'Delete the attached audiobook? Its audio files are removed from this device.';
+      case 'delete_collection_confirm':
+        return 'Only the grouping is removed. The items in it are kept.';
       case 'shortcut_action_video_enter_caret':
         return 'Enter subtitle lookup cursor';
       default:
@@ -138246,10 +138882,6 @@ extension on _StringsId {
         return 'Relocate file';
       case 'audiobook_relocate_done':
         return 'Audio relocated';
-      case 'audiobook_remove':
-        return 'Hapus Buku Audio';
-      case 'audiobook_remove_confirm':
-        return 'Hapus buku audio yang terlampir?';
       case 'auto_add_book_name_to_tags':
         return 'Tambahkan judul buku ke tag secara otomatis';
       case 'auto_chapter':
@@ -138993,8 +139625,6 @@ extension on _StringsId {
         return 'Also delete the books in it';
       case 'delete_collection_also_videos':
         return 'Also delete the videos (keeps your original video files)';
-      case 'delete_collection_confirm':
-        return 'Deleting the collection won\'t delete its videos.';
       case 'delete_custom_theme':
         return 'Delete theme';
       case 'delete_custom_theme_confirm':
@@ -140009,10 +140639,6 @@ extension on _StringsId {
         return 'Game window upscaling';
       case 'game_upscaling_auto':
         return 'Auto';
-      case 'game_upscaling_download_body':
-        return 'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
-      case 'game_upscaling_download_title':
-        return 'Download Magpie upscaler?';
       case 'game_upscaling_hint_external':
         return 'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
       case 'game_upscaling_hint_first_run':
@@ -143505,9 +144131,9 @@ extension on _StringsId {
       case 'game_hook_reason_protocol_mismatch':
         return 'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
       case 'game_upscaling_auto_hint':
-        return 'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+        return 'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
       case 'game_upscaling_installed_only_hint':
-        return 'Only use a Magpie that is already installed. Never downloads anything.';
+        return 'Only use Magpie if it is already installed or running. Do not unpack Hibiki\'s bundled version.';
       case 'game_upscaling_off_hint':
         return 'Never upscale the game window.';
       case 'game_helper_bundle_missing':
@@ -143517,7 +144143,7 @@ extension on _StringsId {
       case 'game_upscaling_pick_body':
         return 'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
       case 'game_upscaling_hint_not_installed':
-        return 'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+        return 'Magpie is not ready. Set window upscaling to Auto to use the copy bundled with Hibiki; if it still does not start, update or reinstall Hibiki.';
       case 'media_source_count_manga':
         return ({required Object n}) => '${n} volumes';
       case 'library_view_shelf':
@@ -143767,6 +144393,38 @@ extension on _StringsId {
         return 'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
       case 'anki_lapis_visual_field_dictionary_name_note':
         return 'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+      case 'game_upscaling_error_bundle_missing':
+        return 'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
+      case 'game_upscaling_error_bundle_invalid':
+        return 'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
+      case 'download_test_connection_failed_reason':
+        return ({required Object message}) => 'Connection failed: ${message}';
+      case 'delete_disclosure_will_delete_label':
+        return 'Will be deleted';
+      case 'delete_disclosure_will_keep_label':
+        return 'Will be kept';
+      case 'delete_disclosure_book_records':
+        return 'Reading progress, bookmarks, tags and subtitle data';
+      case 'delete_disclosure_book_extracted':
+        return 'The book files Hibiki extracted into its own storage';
+      case 'delete_disclosure_book_audiobook':
+        return 'The audio and aligned subtitles of the attached audiobook, if any';
+      case 'delete_disclosure_source_kept':
+        return 'The original files you imported (book, subtitles, audio)';
+      case 'delete_disclosure_stats_kept':
+        return 'Reading statistics';
+      case 'delete_disclosure_audiobook_files':
+        return 'The audio and aligned subtitles Hibiki copied into its own storage';
+      case 'delete_disclosure_audiobook_book_kept':
+        return 'The book itself and its reading progress';
+      case 'delete_disclosure_audiobook_source_kept':
+        return 'The original audio files you imported';
+      case 'audiobook_delete':
+        return 'Delete audiobook';
+      case 'audiobook_delete_confirm':
+        return 'Delete the attached audiobook? Its audio files are removed from this device.';
+      case 'delete_collection_confirm':
+        return 'Only the grouping is removed. The items in it are kept.';
       case 'shortcut_action_video_enter_caret':
         return 'Enter subtitle lookup cursor';
       default:
@@ -144117,10 +144775,6 @@ extension on _StringsIt {
         return 'Relocate file';
       case 'audiobook_relocate_done':
         return 'Audio relocated';
-      case 'audiobook_remove':
-        return 'Rimuovi audiolibro';
-      case 'audiobook_remove_confirm':
-        return 'Rimuovere l\'audiolibro collegato?';
       case 'auto_add_book_name_to_tags':
         return 'Aggiungi automaticamente il titolo del libro alle etichette';
       case 'auto_chapter':
@@ -144864,8 +145518,6 @@ extension on _StringsIt {
         return 'Also delete the books in it';
       case 'delete_collection_also_videos':
         return 'Also delete the videos (keeps your original video files)';
-      case 'delete_collection_confirm':
-        return 'Deleting the collection won\'t delete its videos.';
       case 'delete_custom_theme':
         return 'Delete theme';
       case 'delete_custom_theme_confirm':
@@ -145881,10 +146533,6 @@ extension on _StringsIt {
         return 'Game window upscaling';
       case 'game_upscaling_auto':
         return 'Auto';
-      case 'game_upscaling_download_body':
-        return 'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
-      case 'game_upscaling_download_title':
-        return 'Download Magpie upscaler?';
       case 'game_upscaling_hint_external':
         return 'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
       case 'game_upscaling_hint_first_run':
@@ -149390,9 +150038,9 @@ extension on _StringsIt {
       case 'game_hook_reason_protocol_mismatch':
         return 'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
       case 'game_upscaling_auto_hint':
-        return 'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+        return 'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
       case 'game_upscaling_installed_only_hint':
-        return 'Only use a Magpie that is already installed. Never downloads anything.';
+        return 'Only use Magpie if it is already installed or running. Do not unpack Hibiki\'s bundled version.';
       case 'game_upscaling_off_hint':
         return 'Never upscale the game window.';
       case 'game_helper_bundle_missing':
@@ -149402,7 +150050,7 @@ extension on _StringsIt {
       case 'game_upscaling_pick_body':
         return 'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
       case 'game_upscaling_hint_not_installed':
-        return 'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+        return 'Magpie is not ready. Set window upscaling to Auto to use the copy bundled with Hibiki; if it still does not start, update or reinstall Hibiki.';
       case 'media_source_count_manga':
         return ({required Object n}) => '${n} volumes';
       case 'library_view_shelf':
@@ -149652,6 +150300,38 @@ extension on _StringsIt {
         return 'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
       case 'anki_lapis_visual_field_dictionary_name_note':
         return 'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+      case 'game_upscaling_error_bundle_missing':
+        return 'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
+      case 'game_upscaling_error_bundle_invalid':
+        return 'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
+      case 'download_test_connection_failed_reason':
+        return ({required Object message}) => 'Connection failed: ${message}';
+      case 'delete_disclosure_will_delete_label':
+        return 'Will be deleted';
+      case 'delete_disclosure_will_keep_label':
+        return 'Will be kept';
+      case 'delete_disclosure_book_records':
+        return 'Reading progress, bookmarks, tags and subtitle data';
+      case 'delete_disclosure_book_extracted':
+        return 'The book files Hibiki extracted into its own storage';
+      case 'delete_disclosure_book_audiobook':
+        return 'The audio and aligned subtitles of the attached audiobook, if any';
+      case 'delete_disclosure_source_kept':
+        return 'The original files you imported (book, subtitles, audio)';
+      case 'delete_disclosure_stats_kept':
+        return 'Reading statistics';
+      case 'delete_disclosure_audiobook_files':
+        return 'The audio and aligned subtitles Hibiki copied into its own storage';
+      case 'delete_disclosure_audiobook_book_kept':
+        return 'The book itself and its reading progress';
+      case 'delete_disclosure_audiobook_source_kept':
+        return 'The original audio files you imported';
+      case 'audiobook_delete':
+        return 'Delete audiobook';
+      case 'audiobook_delete_confirm':
+        return 'Delete the attached audiobook? Its audio files are removed from this device.';
+      case 'delete_collection_confirm':
+        return 'Only the grouping is removed. The items in it are kept.';
       case 'shortcut_action_video_enter_caret':
         return 'Enter subtitle lookup cursor';
       default:
@@ -149998,10 +150678,6 @@ extension on _StringsJa {
         return 'Relocate file';
       case 'audiobook_relocate_done':
         return 'Audio relocated';
-      case 'audiobook_remove':
-        return 'オーディオブックを削除';
-      case 'audiobook_remove_confirm':
-        return '紐付けされたオーディオブックを削除しますか？';
       case 'auto_add_book_name_to_tags':
         return 'タグに本のタイトルを自動追加';
       case 'auto_chapter':
@@ -150740,8 +151416,6 @@ extension on _StringsJa {
         return 'Also delete the books in it';
       case 'delete_collection_also_videos':
         return 'Also delete the videos (keeps your original video files)';
-      case 'delete_collection_confirm':
-        return 'Deleting the collection won\'t delete its videos.';
       case 'delete_custom_theme':
         return 'Delete theme';
       case 'delete_custom_theme_confirm':
@@ -151755,10 +152429,6 @@ extension on _StringsJa {
         return 'Game window upscaling';
       case 'game_upscaling_auto':
         return 'Auto';
-      case 'game_upscaling_download_body':
-        return 'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
-      case 'game_upscaling_download_title':
-        return 'Download Magpie upscaler?';
       case 'game_upscaling_hint_external':
         return 'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
       case 'game_upscaling_hint_first_run':
@@ -155237,9 +155907,9 @@ extension on _StringsJa {
       case 'game_hook_reason_protocol_mismatch':
         return 'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
       case 'game_upscaling_auto_hint':
-        return 'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+        return 'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
       case 'game_upscaling_installed_only_hint':
-        return 'Only use a Magpie that is already installed. Never downloads anything.';
+        return 'Only use Magpie if it is already installed or running. Do not unpack Hibiki\'s bundled version.';
       case 'game_upscaling_off_hint':
         return 'Never upscale the game window.';
       case 'game_helper_bundle_missing':
@@ -155249,7 +155919,7 @@ extension on _StringsJa {
       case 'game_upscaling_pick_body':
         return 'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
       case 'game_upscaling_hint_not_installed':
-        return 'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+        return 'Magpie is not ready. Set window upscaling to Auto to use the copy bundled with Hibiki; if it still does not start, update or reinstall Hibiki.';
       case 'media_source_count_manga':
         return ({required Object n}) => '${n} volumes';
       case 'library_view_shelf':
@@ -155499,6 +156169,38 @@ extension on _StringsJa {
         return 'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
       case 'anki_lapis_visual_field_dictionary_name_note':
         return 'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+      case 'game_upscaling_error_bundle_missing':
+        return 'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
+      case 'game_upscaling_error_bundle_invalid':
+        return 'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
+      case 'download_test_connection_failed_reason':
+        return ({required Object message}) => 'Connection failed: ${message}';
+      case 'delete_disclosure_will_delete_label':
+        return 'Will be deleted';
+      case 'delete_disclosure_will_keep_label':
+        return 'Will be kept';
+      case 'delete_disclosure_book_records':
+        return 'Reading progress, bookmarks, tags and subtitle data';
+      case 'delete_disclosure_book_extracted':
+        return 'The book files Hibiki extracted into its own storage';
+      case 'delete_disclosure_book_audiobook':
+        return 'The audio and aligned subtitles of the attached audiobook, if any';
+      case 'delete_disclosure_source_kept':
+        return 'The original files you imported (book, subtitles, audio)';
+      case 'delete_disclosure_stats_kept':
+        return 'Reading statistics';
+      case 'delete_disclosure_audiobook_files':
+        return 'The audio and aligned subtitles Hibiki copied into its own storage';
+      case 'delete_disclosure_audiobook_book_kept':
+        return 'The book itself and its reading progress';
+      case 'delete_disclosure_audiobook_source_kept':
+        return 'The original audio files you imported';
+      case 'audiobook_delete':
+        return 'Delete audiobook';
+      case 'audiobook_delete_confirm':
+        return 'Delete the attached audiobook? Its audio files are removed from this device.';
+      case 'delete_collection_confirm':
+        return 'Only the grouping is removed. The items in it are kept.';
       case 'shortcut_action_video_enter_caret':
         return 'Enter subtitle lookup cursor';
       default:
@@ -155845,10 +156547,6 @@ extension on _StringsKo {
         return 'Relocate file';
       case 'audiobook_relocate_done':
         return 'Audio relocated';
-      case 'audiobook_remove':
-        return '오디오북 제거';
-      case 'audiobook_remove_confirm':
-        return '연결된 오디오북을 제거하시겠습니까?';
       case 'auto_add_book_name_to_tags':
         return '태그에 책 제목 자동 추가';
       case 'auto_chapter':
@@ -156588,8 +157286,6 @@ extension on _StringsKo {
         return 'Also delete the books in it';
       case 'delete_collection_also_videos':
         return 'Also delete the videos (keeps your original video files)';
-      case 'delete_collection_confirm':
-        return 'Deleting the collection won\'t delete its videos.';
       case 'delete_custom_theme':
         return 'Delete theme';
       case 'delete_custom_theme_confirm':
@@ -157603,10 +158299,6 @@ extension on _StringsKo {
         return 'Game window upscaling';
       case 'game_upscaling_auto':
         return 'Auto';
-      case 'game_upscaling_download_body':
-        return 'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
-      case 'game_upscaling_download_title':
-        return 'Download Magpie upscaler?';
       case 'game_upscaling_hint_external':
         return 'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
       case 'game_upscaling_hint_first_run':
@@ -161088,9 +161780,9 @@ extension on _StringsKo {
       case 'game_hook_reason_protocol_mismatch':
         return 'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
       case 'game_upscaling_auto_hint':
-        return 'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+        return 'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
       case 'game_upscaling_installed_only_hint':
-        return 'Only use a Magpie that is already installed. Never downloads anything.';
+        return 'Only use Magpie if it is already installed or running. Do not unpack Hibiki\'s bundled version.';
       case 'game_upscaling_off_hint':
         return 'Never upscale the game window.';
       case 'game_helper_bundle_missing':
@@ -161100,7 +161792,7 @@ extension on _StringsKo {
       case 'game_upscaling_pick_body':
         return 'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
       case 'game_upscaling_hint_not_installed':
-        return 'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+        return 'Magpie is not ready. Set window upscaling to Auto to use the copy bundled with Hibiki; if it still does not start, update or reinstall Hibiki.';
       case 'media_source_count_manga':
         return ({required Object n}) => '${n} volumes';
       case 'library_view_shelf':
@@ -161350,6 +162042,38 @@ extension on _StringsKo {
         return 'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
       case 'anki_lapis_visual_field_dictionary_name_note':
         return 'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+      case 'game_upscaling_error_bundle_missing':
+        return 'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
+      case 'game_upscaling_error_bundle_invalid':
+        return 'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
+      case 'download_test_connection_failed_reason':
+        return ({required Object message}) => 'Connection failed: ${message}';
+      case 'delete_disclosure_will_delete_label':
+        return 'Will be deleted';
+      case 'delete_disclosure_will_keep_label':
+        return 'Will be kept';
+      case 'delete_disclosure_book_records':
+        return 'Reading progress, bookmarks, tags and subtitle data';
+      case 'delete_disclosure_book_extracted':
+        return 'The book files Hibiki extracted into its own storage';
+      case 'delete_disclosure_book_audiobook':
+        return 'The audio and aligned subtitles of the attached audiobook, if any';
+      case 'delete_disclosure_source_kept':
+        return 'The original files you imported (book, subtitles, audio)';
+      case 'delete_disclosure_stats_kept':
+        return 'Reading statistics';
+      case 'delete_disclosure_audiobook_files':
+        return 'The audio and aligned subtitles Hibiki copied into its own storage';
+      case 'delete_disclosure_audiobook_book_kept':
+        return 'The book itself and its reading progress';
+      case 'delete_disclosure_audiobook_source_kept':
+        return 'The original audio files you imported';
+      case 'audiobook_delete':
+        return 'Delete audiobook';
+      case 'audiobook_delete_confirm':
+        return 'Delete the attached audiobook? Its audio files are removed from this device.';
+      case 'delete_collection_confirm':
+        return 'Only the grouping is removed. The items in it are kept.';
       case 'shortcut_action_video_enter_caret':
         return 'Enter subtitle lookup cursor';
       default:
@@ -161699,10 +162423,6 @@ extension on _StringsNl {
         return 'Relocate file';
       case 'audiobook_relocate_done':
         return 'Audio relocated';
-      case 'audiobook_remove':
-        return 'Audioboek verwijderen';
-      case 'audiobook_remove_confirm':
-        return 'Gekoppeld audioboek verwijderen?';
       case 'auto_add_book_name_to_tags':
         return 'Boektitel automatisch aan labels toevoegen';
       case 'auto_chapter':
@@ -162447,8 +163167,6 @@ extension on _StringsNl {
         return 'Also delete the books in it';
       case 'delete_collection_also_videos':
         return 'Also delete the videos (keeps your original video files)';
-      case 'delete_collection_confirm':
-        return 'Deleting the collection won\'t delete its videos.';
       case 'delete_custom_theme':
         return 'Delete theme';
       case 'delete_custom_theme_confirm':
@@ -163464,10 +164182,6 @@ extension on _StringsNl {
         return 'Game window upscaling';
       case 'game_upscaling_auto':
         return 'Auto';
-      case 'game_upscaling_download_body':
-        return 'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
-      case 'game_upscaling_download_title':
-        return 'Download Magpie upscaler?';
       case 'game_upscaling_hint_external':
         return 'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
       case 'game_upscaling_hint_first_run':
@@ -166967,9 +167681,9 @@ extension on _StringsNl {
       case 'game_hook_reason_protocol_mismatch':
         return 'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
       case 'game_upscaling_auto_hint':
-        return 'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+        return 'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
       case 'game_upscaling_installed_only_hint':
-        return 'Only use a Magpie that is already installed. Never downloads anything.';
+        return 'Only use Magpie if it is already installed or running. Do not unpack Hibiki\'s bundled version.';
       case 'game_upscaling_off_hint':
         return 'Never upscale the game window.';
       case 'game_helper_bundle_missing':
@@ -166979,7 +167693,7 @@ extension on _StringsNl {
       case 'game_upscaling_pick_body':
         return 'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
       case 'game_upscaling_hint_not_installed':
-        return 'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+        return 'Magpie is not ready. Set window upscaling to Auto to use the copy bundled with Hibiki; if it still does not start, update or reinstall Hibiki.';
       case 'media_source_count_manga':
         return ({required Object n}) => '${n} volumes';
       case 'library_view_shelf':
@@ -167229,6 +167943,38 @@ extension on _StringsNl {
         return 'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
       case 'anki_lapis_visual_field_dictionary_name_note':
         return 'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+      case 'game_upscaling_error_bundle_missing':
+        return 'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
+      case 'game_upscaling_error_bundle_invalid':
+        return 'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
+      case 'download_test_connection_failed_reason':
+        return ({required Object message}) => 'Connection failed: ${message}';
+      case 'delete_disclosure_will_delete_label':
+        return 'Will be deleted';
+      case 'delete_disclosure_will_keep_label':
+        return 'Will be kept';
+      case 'delete_disclosure_book_records':
+        return 'Reading progress, bookmarks, tags and subtitle data';
+      case 'delete_disclosure_book_extracted':
+        return 'The book files Hibiki extracted into its own storage';
+      case 'delete_disclosure_book_audiobook':
+        return 'The audio and aligned subtitles of the attached audiobook, if any';
+      case 'delete_disclosure_source_kept':
+        return 'The original files you imported (book, subtitles, audio)';
+      case 'delete_disclosure_stats_kept':
+        return 'Reading statistics';
+      case 'delete_disclosure_audiobook_files':
+        return 'The audio and aligned subtitles Hibiki copied into its own storage';
+      case 'delete_disclosure_audiobook_book_kept':
+        return 'The book itself and its reading progress';
+      case 'delete_disclosure_audiobook_source_kept':
+        return 'The original audio files you imported';
+      case 'audiobook_delete':
+        return 'Delete audiobook';
+      case 'audiobook_delete_confirm':
+        return 'Delete the attached audiobook? Its audio files are removed from this device.';
+      case 'delete_collection_confirm':
+        return 'Only the grouping is removed. The items in it are kept.';
       case 'shortcut_action_video_enter_caret':
         return 'Enter subtitle lookup cursor';
       default:
@@ -167579,10 +168325,6 @@ extension on _StringsPtBr {
         return 'Relocate file';
       case 'audiobook_relocate_done':
         return 'Audio relocated';
-      case 'audiobook_remove':
-        return 'Remover Audiolivro';
-      case 'audiobook_remove_confirm':
-        return 'Remover o audiolivro anexado?';
       case 'auto_add_book_name_to_tags':
         return 'Adicionar título do livro às tags automaticamente';
       case 'auto_chapter':
@@ -168326,8 +169068,6 @@ extension on _StringsPtBr {
         return 'Also delete the books in it';
       case 'delete_collection_also_videos':
         return 'Also delete the videos (keeps your original video files)';
-      case 'delete_collection_confirm':
-        return 'Deleting the collection won\'t delete its videos.';
       case 'delete_custom_theme':
         return 'Delete theme';
       case 'delete_custom_theme_confirm':
@@ -169342,10 +170082,6 @@ extension on _StringsPtBr {
         return 'Game window upscaling';
       case 'game_upscaling_auto':
         return 'Auto';
-      case 'game_upscaling_download_body':
-        return 'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
-      case 'game_upscaling_download_title':
-        return 'Download Magpie upscaler?';
       case 'game_upscaling_hint_external':
         return 'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
       case 'game_upscaling_hint_first_run':
@@ -172843,9 +173579,9 @@ extension on _StringsPtBr {
       case 'game_hook_reason_protocol_mismatch':
         return 'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
       case 'game_upscaling_auto_hint':
-        return 'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+        return 'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
       case 'game_upscaling_installed_only_hint':
-        return 'Only use a Magpie that is already installed. Never downloads anything.';
+        return 'Only use Magpie if it is already installed or running. Do not unpack Hibiki\'s bundled version.';
       case 'game_upscaling_off_hint':
         return 'Never upscale the game window.';
       case 'game_helper_bundle_missing':
@@ -172855,7 +173591,7 @@ extension on _StringsPtBr {
       case 'game_upscaling_pick_body':
         return 'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
       case 'game_upscaling_hint_not_installed':
-        return 'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+        return 'Magpie is not ready. Set window upscaling to Auto to use the copy bundled with Hibiki; if it still does not start, update or reinstall Hibiki.';
       case 'media_source_count_manga':
         return ({required Object n}) => '${n} volumes';
       case 'library_view_shelf':
@@ -173105,6 +173841,38 @@ extension on _StringsPtBr {
         return 'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
       case 'anki_lapis_visual_field_dictionary_name_note':
         return 'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+      case 'game_upscaling_error_bundle_missing':
+        return 'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
+      case 'game_upscaling_error_bundle_invalid':
+        return 'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
+      case 'download_test_connection_failed_reason':
+        return ({required Object message}) => 'Connection failed: ${message}';
+      case 'delete_disclosure_will_delete_label':
+        return 'Will be deleted';
+      case 'delete_disclosure_will_keep_label':
+        return 'Will be kept';
+      case 'delete_disclosure_book_records':
+        return 'Reading progress, bookmarks, tags and subtitle data';
+      case 'delete_disclosure_book_extracted':
+        return 'The book files Hibiki extracted into its own storage';
+      case 'delete_disclosure_book_audiobook':
+        return 'The audio and aligned subtitles of the attached audiobook, if any';
+      case 'delete_disclosure_source_kept':
+        return 'The original files you imported (book, subtitles, audio)';
+      case 'delete_disclosure_stats_kept':
+        return 'Reading statistics';
+      case 'delete_disclosure_audiobook_files':
+        return 'The audio and aligned subtitles Hibiki copied into its own storage';
+      case 'delete_disclosure_audiobook_book_kept':
+        return 'The book itself and its reading progress';
+      case 'delete_disclosure_audiobook_source_kept':
+        return 'The original audio files you imported';
+      case 'audiobook_delete':
+        return 'Delete audiobook';
+      case 'audiobook_delete_confirm':
+        return 'Delete the attached audiobook? Its audio files are removed from this device.';
+      case 'delete_collection_confirm':
+        return 'Only the grouping is removed. The items in it are kept.';
       case 'shortcut_action_video_enter_caret':
         return 'Enter subtitle lookup cursor';
       default:
@@ -173456,10 +174224,6 @@ extension on _StringsRu {
         return 'Relocate file';
       case 'audiobook_relocate_done':
         return 'Audio relocated';
-      case 'audiobook_remove':
-        return 'Удалить аудиокнигу';
-      case 'audiobook_remove_confirm':
-        return 'Удалить привязанную аудиокнигу?';
       case 'auto_add_book_name_to_tags':
         return 'Автодобавление названия книги в теги';
       case 'auto_chapter':
@@ -174204,8 +174968,6 @@ extension on _StringsRu {
         return 'Also delete the books in it';
       case 'delete_collection_also_videos':
         return 'Also delete the videos (keeps your original video files)';
-      case 'delete_collection_confirm':
-        return 'Deleting the collection won\'t delete its videos.';
       case 'delete_custom_theme':
         return 'Delete theme';
       case 'delete_custom_theme_confirm':
@@ -175221,10 +175983,6 @@ extension on _StringsRu {
         return 'Game window upscaling';
       case 'game_upscaling_auto':
         return 'Auto';
-      case 'game_upscaling_download_body':
-        return 'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
-      case 'game_upscaling_download_title':
-        return 'Download Magpie upscaler?';
       case 'game_upscaling_hint_external':
         return 'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
       case 'game_upscaling_hint_first_run':
@@ -178724,9 +179482,9 @@ extension on _StringsRu {
       case 'game_hook_reason_protocol_mismatch':
         return 'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
       case 'game_upscaling_auto_hint':
-        return 'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+        return 'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
       case 'game_upscaling_installed_only_hint':
-        return 'Only use a Magpie that is already installed. Never downloads anything.';
+        return 'Only use Magpie if it is already installed or running. Do not unpack Hibiki\'s bundled version.';
       case 'game_upscaling_off_hint':
         return 'Never upscale the game window.';
       case 'game_helper_bundle_missing':
@@ -178736,7 +179494,7 @@ extension on _StringsRu {
       case 'game_upscaling_pick_body':
         return 'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
       case 'game_upscaling_hint_not_installed':
-        return 'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+        return 'Magpie is not ready. Set window upscaling to Auto to use the copy bundled with Hibiki; if it still does not start, update or reinstall Hibiki.';
       case 'media_source_count_manga':
         return ({required Object n}) => '${n} volumes';
       case 'library_view_shelf':
@@ -178986,6 +179744,38 @@ extension on _StringsRu {
         return 'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
       case 'anki_lapis_visual_field_dictionary_name_note':
         return 'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+      case 'game_upscaling_error_bundle_missing':
+        return 'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
+      case 'game_upscaling_error_bundle_invalid':
+        return 'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
+      case 'download_test_connection_failed_reason':
+        return ({required Object message}) => 'Connection failed: ${message}';
+      case 'delete_disclosure_will_delete_label':
+        return 'Will be deleted';
+      case 'delete_disclosure_will_keep_label':
+        return 'Will be kept';
+      case 'delete_disclosure_book_records':
+        return 'Reading progress, bookmarks, tags and subtitle data';
+      case 'delete_disclosure_book_extracted':
+        return 'The book files Hibiki extracted into its own storage';
+      case 'delete_disclosure_book_audiobook':
+        return 'The audio and aligned subtitles of the attached audiobook, if any';
+      case 'delete_disclosure_source_kept':
+        return 'The original files you imported (book, subtitles, audio)';
+      case 'delete_disclosure_stats_kept':
+        return 'Reading statistics';
+      case 'delete_disclosure_audiobook_files':
+        return 'The audio and aligned subtitles Hibiki copied into its own storage';
+      case 'delete_disclosure_audiobook_book_kept':
+        return 'The book itself and its reading progress';
+      case 'delete_disclosure_audiobook_source_kept':
+        return 'The original audio files you imported';
+      case 'audiobook_delete':
+        return 'Delete audiobook';
+      case 'audiobook_delete_confirm':
+        return 'Delete the attached audiobook? Its audio files are removed from this device.';
+      case 'delete_collection_confirm':
+        return 'Only the grouping is removed. The items in it are kept.';
       case 'shortcut_action_video_enter_caret':
         return 'Enter subtitle lookup cursor';
       default:
@@ -179333,10 +180123,6 @@ extension on _StringsTh {
         return 'Relocate file';
       case 'audiobook_relocate_done':
         return 'Audio relocated';
-      case 'audiobook_remove':
-        return 'ลบหนังสือเสียง';
-      case 'audiobook_remove_confirm':
-        return 'ลบหนังสือเสียงที่แนบอยู่?';
       case 'auto_add_book_name_to_tags':
         return 'เพิ่มชื่อหนังสือในแท็กอัตโนมัติ';
       case 'auto_chapter':
@@ -180079,8 +180865,6 @@ extension on _StringsTh {
         return 'Also delete the books in it';
       case 'delete_collection_also_videos':
         return 'Also delete the videos (keeps your original video files)';
-      case 'delete_collection_confirm':
-        return 'Deleting the collection won\'t delete its videos.';
       case 'delete_custom_theme':
         return 'Delete theme';
       case 'delete_custom_theme_confirm':
@@ -181094,10 +181878,6 @@ extension on _StringsTh {
         return 'Game window upscaling';
       case 'game_upscaling_auto':
         return 'Auto';
-      case 'game_upscaling_download_body':
-        return 'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
-      case 'game_upscaling_download_title':
-        return 'Download Magpie upscaler?';
       case 'game_upscaling_hint_external':
         return 'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
       case 'game_upscaling_hint_first_run':
@@ -184588,9 +185368,9 @@ extension on _StringsTh {
       case 'game_hook_reason_protocol_mismatch':
         return 'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
       case 'game_upscaling_auto_hint':
-        return 'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+        return 'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
       case 'game_upscaling_installed_only_hint':
-        return 'Only use a Magpie that is already installed. Never downloads anything.';
+        return 'Only use Magpie if it is already installed or running. Do not unpack Hibiki\'s bundled version.';
       case 'game_upscaling_off_hint':
         return 'Never upscale the game window.';
       case 'game_helper_bundle_missing':
@@ -184600,7 +185380,7 @@ extension on _StringsTh {
       case 'game_upscaling_pick_body':
         return 'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
       case 'game_upscaling_hint_not_installed':
-        return 'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+        return 'Magpie is not ready. Set window upscaling to Auto to use the copy bundled with Hibiki; if it still does not start, update or reinstall Hibiki.';
       case 'media_source_count_manga':
         return ({required Object n}) => '${n} volumes';
       case 'library_view_shelf':
@@ -184850,6 +185630,38 @@ extension on _StringsTh {
         return 'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
       case 'anki_lapis_visual_field_dictionary_name_note':
         return 'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+      case 'game_upscaling_error_bundle_missing':
+        return 'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
+      case 'game_upscaling_error_bundle_invalid':
+        return 'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
+      case 'download_test_connection_failed_reason':
+        return ({required Object message}) => 'Connection failed: ${message}';
+      case 'delete_disclosure_will_delete_label':
+        return 'Will be deleted';
+      case 'delete_disclosure_will_keep_label':
+        return 'Will be kept';
+      case 'delete_disclosure_book_records':
+        return 'Reading progress, bookmarks, tags and subtitle data';
+      case 'delete_disclosure_book_extracted':
+        return 'The book files Hibiki extracted into its own storage';
+      case 'delete_disclosure_book_audiobook':
+        return 'The audio and aligned subtitles of the attached audiobook, if any';
+      case 'delete_disclosure_source_kept':
+        return 'The original files you imported (book, subtitles, audio)';
+      case 'delete_disclosure_stats_kept':
+        return 'Reading statistics';
+      case 'delete_disclosure_audiobook_files':
+        return 'The audio and aligned subtitles Hibiki copied into its own storage';
+      case 'delete_disclosure_audiobook_book_kept':
+        return 'The book itself and its reading progress';
+      case 'delete_disclosure_audiobook_source_kept':
+        return 'The original audio files you imported';
+      case 'audiobook_delete':
+        return 'Delete audiobook';
+      case 'audiobook_delete_confirm':
+        return 'Delete the attached audiobook? Its audio files are removed from this device.';
+      case 'delete_collection_confirm':
+        return 'Only the grouping is removed. The items in it are kept.';
       case 'shortcut_action_video_enter_caret':
         return 'Enter subtitle lookup cursor';
       default:
@@ -185199,10 +186011,6 @@ extension on _StringsTr {
         return 'Relocate file';
       case 'audiobook_relocate_done':
         return 'Audio relocated';
-      case 'audiobook_remove':
-        return 'Sesli kitabı kaldır';
-      case 'audiobook_remove_confirm':
-        return 'Bağlı sesli kitap kaldırılsın mı?';
       case 'auto_add_book_name_to_tags':
         return 'Kitap başlığını otomatik olarak etiketlere ekle';
       case 'auto_chapter':
@@ -185948,8 +186756,6 @@ extension on _StringsTr {
         return 'Also delete the books in it';
       case 'delete_collection_also_videos':
         return 'Also delete the videos (keeps your original video files)';
-      case 'delete_collection_confirm':
-        return 'Deleting the collection won\'t delete its videos.';
       case 'delete_custom_theme':
         return 'Delete theme';
       case 'delete_custom_theme_confirm':
@@ -186963,10 +187769,6 @@ extension on _StringsTr {
         return 'Game window upscaling';
       case 'game_upscaling_auto':
         return 'Auto';
-      case 'game_upscaling_download_body':
-        return 'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
-      case 'game_upscaling_download_title':
-        return 'Download Magpie upscaler?';
       case 'game_upscaling_hint_external':
         return 'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
       case 'game_upscaling_hint_first_run':
@@ -190461,9 +191263,9 @@ extension on _StringsTr {
       case 'game_hook_reason_protocol_mismatch':
         return 'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
       case 'game_upscaling_auto_hint':
-        return 'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+        return 'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
       case 'game_upscaling_installed_only_hint':
-        return 'Only use a Magpie that is already installed. Never downloads anything.';
+        return 'Only use Magpie if it is already installed or running. Do not unpack Hibiki\'s bundled version.';
       case 'game_upscaling_off_hint':
         return 'Never upscale the game window.';
       case 'game_helper_bundle_missing':
@@ -190473,7 +191275,7 @@ extension on _StringsTr {
       case 'game_upscaling_pick_body':
         return 'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
       case 'game_upscaling_hint_not_installed':
-        return 'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+        return 'Magpie is not ready. Set window upscaling to Auto to use the copy bundled with Hibiki; if it still does not start, update or reinstall Hibiki.';
       case 'media_source_count_manga':
         return ({required Object n}) => '${n} volumes';
       case 'library_view_shelf':
@@ -190723,6 +191525,38 @@ extension on _StringsTr {
         return 'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
       case 'anki_lapis_visual_field_dictionary_name_note':
         return 'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+      case 'game_upscaling_error_bundle_missing':
+        return 'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
+      case 'game_upscaling_error_bundle_invalid':
+        return 'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
+      case 'download_test_connection_failed_reason':
+        return ({required Object message}) => 'Connection failed: ${message}';
+      case 'delete_disclosure_will_delete_label':
+        return 'Will be deleted';
+      case 'delete_disclosure_will_keep_label':
+        return 'Will be kept';
+      case 'delete_disclosure_book_records':
+        return 'Reading progress, bookmarks, tags and subtitle data';
+      case 'delete_disclosure_book_extracted':
+        return 'The book files Hibiki extracted into its own storage';
+      case 'delete_disclosure_book_audiobook':
+        return 'The audio and aligned subtitles of the attached audiobook, if any';
+      case 'delete_disclosure_source_kept':
+        return 'The original files you imported (book, subtitles, audio)';
+      case 'delete_disclosure_stats_kept':
+        return 'Reading statistics';
+      case 'delete_disclosure_audiobook_files':
+        return 'The audio and aligned subtitles Hibiki copied into its own storage';
+      case 'delete_disclosure_audiobook_book_kept':
+        return 'The book itself and its reading progress';
+      case 'delete_disclosure_audiobook_source_kept':
+        return 'The original audio files you imported';
+      case 'audiobook_delete':
+        return 'Delete audiobook';
+      case 'audiobook_delete_confirm':
+        return 'Delete the attached audiobook? Its audio files are removed from this device.';
+      case 'delete_collection_confirm':
+        return 'Only the grouping is removed. The items in it are kept.';
       case 'shortcut_action_video_enter_caret':
         return 'Enter subtitle lookup cursor';
       default:
@@ -191072,10 +191906,6 @@ extension on _StringsVi {
         return 'Relocate file';
       case 'audiobook_relocate_done':
         return 'Audio relocated';
-      case 'audiobook_remove':
-        return 'Xóa sách nói';
-      case 'audiobook_remove_confirm':
-        return 'Xóa sách nói đã gắn?';
       case 'auto_add_book_name_to_tags':
         return 'Tự thêm tên sách vào tag';
       case 'auto_chapter':
@@ -191818,8 +192648,6 @@ extension on _StringsVi {
         return 'Also delete the books in it';
       case 'delete_collection_also_videos':
         return 'Also delete the videos (keeps your original video files)';
-      case 'delete_collection_confirm':
-        return 'Deleting the collection won\'t delete its videos.';
       case 'delete_custom_theme':
         return 'Delete theme';
       case 'delete_custom_theme_confirm':
@@ -192834,10 +193662,6 @@ extension on _StringsVi {
         return 'Game window upscaling';
       case 'game_upscaling_auto':
         return 'Auto';
-      case 'game_upscaling_download_body':
-        return 'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
-      case 'game_upscaling_download_title':
-        return 'Download Magpie upscaler?';
       case 'game_upscaling_hint_external':
         return 'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
       case 'game_upscaling_hint_first_run':
@@ -196330,9 +197154,9 @@ extension on _StringsVi {
       case 'game_hook_reason_protocol_mismatch':
         return 'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
       case 'game_upscaling_auto_hint':
-        return 'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+        return 'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
       case 'game_upscaling_installed_only_hint':
-        return 'Only use a Magpie that is already installed. Never downloads anything.';
+        return 'Only use Magpie if it is already installed or running. Do not unpack Hibiki\'s bundled version.';
       case 'game_upscaling_off_hint':
         return 'Never upscale the game window.';
       case 'game_helper_bundle_missing':
@@ -196342,7 +197166,7 @@ extension on _StringsVi {
       case 'game_upscaling_pick_body':
         return 'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
       case 'game_upscaling_hint_not_installed':
-        return 'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+        return 'Magpie is not ready. Set window upscaling to Auto to use the copy bundled with Hibiki; if it still does not start, update or reinstall Hibiki.';
       case 'media_source_count_manga':
         return ({required Object n}) => '${n} volumes';
       case 'library_view_shelf':
@@ -196592,6 +197416,38 @@ extension on _StringsVi {
         return 'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
       case 'anki_lapis_visual_field_dictionary_name_note':
         return 'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+      case 'game_upscaling_error_bundle_missing':
+        return 'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
+      case 'game_upscaling_error_bundle_invalid':
+        return 'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
+      case 'download_test_connection_failed_reason':
+        return ({required Object message}) => 'Connection failed: ${message}';
+      case 'delete_disclosure_will_delete_label':
+        return 'Will be deleted';
+      case 'delete_disclosure_will_keep_label':
+        return 'Will be kept';
+      case 'delete_disclosure_book_records':
+        return 'Reading progress, bookmarks, tags and subtitle data';
+      case 'delete_disclosure_book_extracted':
+        return 'The book files Hibiki extracted into its own storage';
+      case 'delete_disclosure_book_audiobook':
+        return 'The audio and aligned subtitles of the attached audiobook, if any';
+      case 'delete_disclosure_source_kept':
+        return 'The original files you imported (book, subtitles, audio)';
+      case 'delete_disclosure_stats_kept':
+        return 'Reading statistics';
+      case 'delete_disclosure_audiobook_files':
+        return 'The audio and aligned subtitles Hibiki copied into its own storage';
+      case 'delete_disclosure_audiobook_book_kept':
+        return 'The book itself and its reading progress';
+      case 'delete_disclosure_audiobook_source_kept':
+        return 'The original audio files you imported';
+      case 'audiobook_delete':
+        return 'Delete audiobook';
+      case 'audiobook_delete_confirm':
+        return 'Delete the attached audiobook? Its audio files are removed from this device.';
+      case 'delete_collection_confirm':
+        return 'Only the grouping is removed. The items in it are kept.';
       case 'shortcut_action_video_enter_caret':
         return 'Enter subtitle lookup cursor';
       default:
@@ -196935,10 +197791,6 @@ extension on _StringsZhCn {
         return '重新定位文件';
       case 'audiobook_relocate_done':
         return '音频已重新定位';
-      case 'audiobook_remove':
-        return '移除有声书';
-      case 'audiobook_remove_confirm':
-        return '移除已附加的有声书？';
       case 'auto_add_book_name_to_tags':
         return '自动添加书名到标签';
       case 'auto_chapter':
@@ -197674,8 +198526,6 @@ extension on _StringsZhCn {
         return '同时删除其中的书';
       case 'delete_collection_also_videos':
         return '同时删除其中的视频（保留你的原始视频文件）';
-      case 'delete_collection_confirm':
-        return '删除合集不会删除其中的视频。';
       case 'delete_custom_theme':
         return '删除主题';
       case 'delete_custom_theme_confirm':
@@ -198686,10 +199536,6 @@ extension on _StringsZhCn {
         return '游戏窗口超分';
       case 'game_upscaling_auto':
         return '自动';
-      case 'game_upscaling_download_body':
-        return '游戏窗口超分需要 Magpie（约 10 MB，GPL-3.0，由我们自行从源码编译）。现在下载吗？';
-      case 'game_upscaling_download_title':
-        return '下载 Magpie 超分组件？';
       case 'game_upscaling_hint_external':
         return '你的电脑上已经开着一个 Magpie，Hibiki 没有去动它。按 Win+Shift+A 就能放大游戏窗口。';
       case 'game_upscaling_hint_first_run':
@@ -202152,9 +202998,9 @@ extension on _StringsZhCn {
       case 'game_hook_reason_protocol_mismatch':
         return '捕获组件版本与 Hibiki 不一致，请更新或重新安装 galgame 捕获组件。';
       case 'game_upscaling_auto_hint':
-        return '优先用机器上已有的 Magpie；没有就在征得同意后下载我们的自编产物（约 10 MB）。';
+        return '优先使用机器上正在运行的 Magpie；否则启用 Hibiki 内置版本，不需要下载。';
       case 'game_upscaling_installed_only_hint':
-        return '只用机器上已经装好的 Magpie，绝不联网下载。';
+        return '只用机器上已经安装或正在运行的 Magpie，不启用 Hibiki 内置版本。';
       case 'game_upscaling_off_hint':
         return '不放大游戏窗口。';
       case 'game_helper_bundle_missing':
@@ -202164,7 +203010,7 @@ extension on _StringsZhCn {
       case 'game_upscaling_pick_body':
         return '捕获会话期间用 Magpie 放大这个游戏的窗口。每个游戏各自设置——只有原生分辨率低于屏幕的游戏才用得上。会占用显卡。';
       case 'game_upscaling_hint_not_installed':
-        return '没有安装 Magpie。在游戏库里右键这个游戏，把「窗口超分」改成「自动」即可下载。';
+        return 'Magpie 尚未就绪。将该游戏的「窗口超分」设为「自动」即可使用随包的内置版本；仍无法启动时请更新或重装 Hibiki。';
       case 'media_source_count_manga':
         return ({required Object n}) => '${n} 卷';
       case 'library_view_shelf':
@@ -202409,6 +203255,38 @@ extension on _StringsZhCn {
         return '仅在保留多段释义的卡片上可见；只有一段释义的卡片不会显示。';
       case 'anki_lapis_visual_field_dictionary_name_note':
         return 'Hibiki 生成的卡片把词性标签和词典名放在同一个标签里，两者无法分开设置样式。';
+      case 'game_upscaling_error_bundle_missing':
+        return 'Hibiki 安装包不完整：缺少内置 Magpie 组件。请重新安装或更新 Hibiki。';
+      case 'game_upscaling_error_bundle_invalid':
+        return '内置 Magpie 组件已损坏或校验失败。请重新安装或更新 Hibiki。';
+      case 'download_test_connection_failed_reason':
+        return ({required Object message}) => '连接失败：${message}';
+      case 'delete_disclosure_will_delete_label':
+        return '会被删除';
+      case 'delete_disclosure_will_keep_label':
+        return '会被保留';
+      case 'delete_disclosure_book_records':
+        return '阅读进度、书签、标签和字幕数据';
+      case 'delete_disclosure_book_extracted':
+        return 'Hibiki 解压到自己存储目录里的书籍文件';
+      case 'delete_disclosure_book_audiobook':
+        return '配套有声书的音频和对齐字幕（如果有）';
+      case 'delete_disclosure_source_kept':
+        return '你导入时选择的原始文件（书籍、字幕、音频）';
+      case 'delete_disclosure_stats_kept':
+        return '阅读统计';
+      case 'delete_disclosure_audiobook_files':
+        return 'Hibiki 复制到自己存储目录里的音频和对齐字幕';
+      case 'delete_disclosure_audiobook_book_kept':
+        return '书籍本身和它的阅读进度';
+      case 'delete_disclosure_audiobook_source_kept':
+        return '你导入时选择的原始音频文件';
+      case 'audiobook_delete':
+        return '删除有声书';
+      case 'audiobook_delete_confirm':
+        return '删除已附加的有声书？它的音频文件会从本机删除。';
+      case 'delete_collection_confirm':
+        return '只解除分组，其中的条目会保留。';
       case 'shortcut_action_video_enter_caret':
         return '进入字幕选词光标';
       default:
@@ -202755,10 +203633,6 @@ extension on _StringsZhHk {
         return 'Relocate file';
       case 'audiobook_relocate_done':
         return 'Audio relocated';
-      case 'audiobook_remove':
-        return '移除有聲書';
-      case 'audiobook_remove_confirm':
-        return '移除已附加的有聲書？';
       case 'auto_add_book_name_to_tags':
         return '自動將書名加入標籤';
       case 'auto_chapter':
@@ -203496,8 +204370,6 @@ extension on _StringsZhHk {
         return 'Also delete the books in it';
       case 'delete_collection_also_videos':
         return 'Also delete the videos (keeps your original video files)';
-      case 'delete_collection_confirm':
-        return 'Deleting the collection won\'t delete its videos.';
       case 'delete_custom_theme':
         return 'Delete theme';
       case 'delete_custom_theme_confirm':
@@ -204511,10 +205383,6 @@ extension on _StringsZhHk {
         return 'Game window upscaling';
       case 'game_upscaling_auto':
         return 'Auto';
-      case 'game_upscaling_download_body':
-        return 'Game window upscaling needs Magpie (about 10 MB, GPL-3.0, built by us from source). Download it now?';
-      case 'game_upscaling_download_title':
-        return 'Download Magpie upscaler?';
       case 'game_upscaling_hint_external':
         return 'A copy of Magpie was already running, so Hibiki left it alone. Press Win+Shift+A to upscale the game window.';
       case 'game_upscaling_hint_first_run':
@@ -207989,9 +208857,9 @@ extension on _StringsZhHk {
       case 'game_hook_reason_protocol_mismatch':
         return 'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
       case 'game_upscaling_auto_hint':
-        return 'Use Magpie if present, otherwise download our build (about 10 MB) after asking.';
+        return 'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
       case 'game_upscaling_installed_only_hint':
-        return 'Only use a Magpie that is already installed. Never downloads anything.';
+        return 'Only use Magpie if it is already installed or running. Do not unpack Hibiki\'s bundled version.';
       case 'game_upscaling_off_hint':
         return 'Never upscale the game window.';
       case 'game_helper_bundle_missing':
@@ -208001,7 +208869,7 @@ extension on _StringsZhHk {
       case 'game_upscaling_pick_body':
         return 'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
       case 'game_upscaling_hint_not_installed':
-        return 'Magpie is not installed. Right-click this game in your library and set window upscaling to Auto to download it.';
+        return 'Magpie is not ready. Set window upscaling to Auto to use the copy bundled with Hibiki; if it still does not start, update or reinstall Hibiki.';
       case 'media_source_count_manga':
         return ({required Object n}) => '${n} volumes';
       case 'library_view_shelf':
@@ -208251,6 +209119,38 @@ extension on _StringsZhHk {
         return 'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
       case 'anki_lapis_visual_field_dictionary_name_note':
         return 'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+      case 'game_upscaling_error_bundle_missing':
+        return 'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
+      case 'game_upscaling_error_bundle_invalid':
+        return 'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
+      case 'download_test_connection_failed_reason':
+        return ({required Object message}) => 'Connection failed: ${message}';
+      case 'delete_disclosure_will_delete_label':
+        return 'Will be deleted';
+      case 'delete_disclosure_will_keep_label':
+        return 'Will be kept';
+      case 'delete_disclosure_book_records':
+        return 'Reading progress, bookmarks, tags and subtitle data';
+      case 'delete_disclosure_book_extracted':
+        return 'The book files Hibiki extracted into its own storage';
+      case 'delete_disclosure_book_audiobook':
+        return 'The audio and aligned subtitles of the attached audiobook, if any';
+      case 'delete_disclosure_source_kept':
+        return 'The original files you imported (book, subtitles, audio)';
+      case 'delete_disclosure_stats_kept':
+        return 'Reading statistics';
+      case 'delete_disclosure_audiobook_files':
+        return 'The audio and aligned subtitles Hibiki copied into its own storage';
+      case 'delete_disclosure_audiobook_book_kept':
+        return 'The book itself and its reading progress';
+      case 'delete_disclosure_audiobook_source_kept':
+        return 'The original audio files you imported';
+      case 'audiobook_delete':
+        return 'Delete audiobook';
+      case 'audiobook_delete_confirm':
+        return 'Delete the attached audiobook? Its audio files are removed from this device.';
+      case 'delete_collection_confirm':
+        return 'Only the grouping is removed. The items in it are kept.';
       case 'shortcut_action_video_enter_caret':
         return 'Enter subtitle lookup cursor';
       default:
