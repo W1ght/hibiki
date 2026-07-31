@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 48042 (2826 per locale)
+/// Strings: 48059 (2827 per locale)
 ///
-/// Built on 2026-07-31 at 14:18 UTC
+/// Built on 2026-07-31 at 14:20 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3715,6 +3715,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get manga_import_detected_confirm => 'Import as manga';
   String manga_import_detected_message({required Object name}) =>
       '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+  String get manga_online_source_disabled =>
+      'This internet source is disabled. Enable it in Sources to browse the catalog.';
   String get selection_web_search => 'Search the web';
   String get selection_web_search_unavailable => 'No app can search the web.';
   String get selection_share_failed => 'Could not open the share sheet.';
@@ -10119,6 +10121,9 @@ class _StringsAr extends _StringsEn {
   @override
   String manga_import_detected_message({required Object name}) =>
       '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+  @override
+  String get manga_online_source_disabled =>
+      'This internet source is disabled. Enable it in Sources to browse the catalog.';
   @override
   String get selection_web_search => 'Search the web';
   @override
@@ -16653,6 +16658,9 @@ class _StringsDe extends _StringsEn {
   @override
   String manga_import_detected_message({required Object name}) =>
       '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+  @override
+  String get manga_online_source_disabled =>
+      'This internet source is disabled. Enable it in Sources to browse the catalog.';
   @override
   String get selection_web_search => 'Search the web';
   @override
@@ -23203,6 +23211,9 @@ class _StringsEs extends _StringsEn {
   @override
   String manga_import_detected_message({required Object name}) =>
       '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+  @override
+  String get manga_online_source_disabled =>
+      'This internet source is disabled. Enable it in Sources to browse the catalog.';
   @override
   String get selection_web_search => 'Search the web';
   @override
@@ -29765,6 +29776,9 @@ class _StringsFr extends _StringsEn {
   String manga_import_detected_message({required Object name}) =>
       '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
   @override
+  String get manga_online_source_disabled =>
+      'This internet source is disabled. Enable it in Sources to browse the catalog.';
+  @override
   String get selection_web_search => 'Search the web';
   @override
   String get selection_web_search_unavailable => 'No app can search the web.';
@@ -36254,6 +36268,9 @@ class _StringsId extends _StringsEn {
   @override
   String manga_import_detected_message({required Object name}) =>
       '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+  @override
+  String get manga_online_source_disabled =>
+      'This internet source is disabled. Enable it in Sources to browse the catalog.';
   @override
   String get selection_web_search => 'Search the web';
   @override
@@ -42791,6 +42808,9 @@ class _StringsIt extends _StringsEn {
   String manga_import_detected_message({required Object name}) =>
       '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
   @override
+  String get manga_online_source_disabled =>
+      'This internet source is disabled. Enable it in Sources to browse the catalog.';
+  @override
   String get selection_web_search => 'Search the web';
   @override
   String get selection_web_search_unavailable => 'No app can search the web.';
@@ -49143,6 +49163,9 @@ class _StringsJa extends _StringsEn {
   @override
   String manga_import_detected_message({required Object name}) =>
       '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+  @override
+  String get manga_online_source_disabled =>
+      'This internet source is disabled. Enable it in Sources to browse the catalog.';
   @override
   String get selection_web_search => 'Search the web';
   @override
@@ -55498,6 +55521,9 @@ class _StringsKo extends _StringsEn {
   @override
   String manga_import_detected_message({required Object name}) =>
       '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+  @override
+  String get manga_online_source_disabled =>
+      'This internet source is disabled. Enable it in Sources to browse the catalog.';
   @override
   String get selection_web_search => 'Search the web';
   @override
@@ -62014,6 +62040,9 @@ class _StringsNl extends _StringsEn {
   @override
   String manga_import_detected_message({required Object name}) =>
       '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+  @override
+  String get manga_online_source_disabled =>
+      'This internet source is disabled. Enable it in Sources to browse the catalog.';
   @override
   String get selection_web_search => 'Search the web';
   @override
@@ -68544,6 +68573,9 @@ class _StringsPtBr extends _StringsEn {
   String manga_import_detected_message({required Object name}) =>
       '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
   @override
+  String get manga_online_source_disabled =>
+      'This internet source is disabled. Enable it in Sources to browse the catalog.';
+  @override
   String get selection_web_search => 'Search the web';
   @override
   String get selection_web_search_unavailable => 'No app can search the web.';
@@ -75057,6 +75089,9 @@ class _StringsRu extends _StringsEn {
   String manga_import_detected_message({required Object name}) =>
       '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
   @override
+  String get manga_online_source_disabled =>
+      'This internet source is disabled. Enable it in Sources to browse the catalog.';
+  @override
   String get selection_web_search => 'Search the web';
   @override
   String get selection_web_search_unavailable => 'No app can search the web.';
@@ -81517,6 +81552,9 @@ class _StringsTh extends _StringsEn {
   @override
   String manga_import_detected_message({required Object name}) =>
       '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+  @override
+  String get manga_online_source_disabled =>
+      'This internet source is disabled. Enable it in Sources to browse the catalog.';
   @override
   String get selection_web_search => 'Search the web';
   @override
@@ -88011,6 +88049,9 @@ class _StringsTr extends _StringsEn {
   String manga_import_detected_message({required Object name}) =>
       '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
   @override
+  String get manga_online_source_disabled =>
+      'This internet source is disabled. Enable it in Sources to browse the catalog.';
+  @override
   String get selection_web_search => 'Search the web';
   @override
   String get selection_web_search_unavailable => 'No app can search the web.';
@@ -94489,6 +94530,9 @@ class _StringsVi extends _StringsEn {
   String manga_import_detected_message({required Object name}) =>
       '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
   @override
+  String get manga_online_source_disabled =>
+      'This internet source is disabled. Enable it in Sources to browse the catalog.';
+  @override
   String get selection_web_search => 'Search the web';
   @override
   String get selection_web_search_unavailable => 'No app can search the web.';
@@ -100517,6 +100561,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String manga_import_detected_message({required Object name}) =>
       '「${name}」是漫画文件，将走漫画导入流程，而不是书籍导入流程。';
+  @override
+  String get manga_online_source_disabled => '此互联网来源已关闭，请在「来源」中开启后浏览目录。';
   @override
   String get selection_web_search => '网页搜索';
   @override
@@ -106787,6 +106833,9 @@ class _StringsZhHk extends _StringsEn {
   String manga_import_detected_message({required Object name}) =>
       '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
   @override
+  String get manga_online_source_disabled =>
+      'This internet source is disabled. Enable it in Sources to browse the catalog.';
+  @override
   String get selection_web_search => 'Search the web';
   @override
   String get selection_web_search_unavailable => 'No app can search the web.';
@@ -112587,6 +112636,8 @@ extension on _StringsEn {
       case 'manga_import_detected_message':
         return ({required Object name}) =>
             '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+      case 'manga_online_source_disabled':
+        return 'This internet source is disabled. Enable it in Sources to browse the catalog.';
       case 'selection_web_search':
         return 'Search the web';
       case 'selection_web_search_unavailable':
@@ -118374,6 +118425,8 @@ extension on _StringsAr {
       case 'manga_import_detected_message':
         return ({required Object name}) =>
             '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+      case 'manga_online_source_disabled':
+        return 'This internet source is disabled. Enable it in Sources to browse the catalog.';
       case 'selection_web_search':
         return 'Search the web';
       case 'selection_web_search_unavailable':
@@ -124183,6 +124236,8 @@ extension on _StringsDe {
       case 'manga_import_detected_message':
         return ({required Object name}) =>
             '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+      case 'manga_online_source_disabled':
+        return 'This internet source is disabled. Enable it in Sources to browse the catalog.';
       case 'selection_web_search':
         return 'Search the web';
       case 'selection_web_search_unavailable':
@@ -129991,6 +130046,8 @@ extension on _StringsEs {
       case 'manga_import_detected_message':
         return ({required Object name}) =>
             '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+      case 'manga_online_source_disabled':
+        return 'This internet source is disabled. Enable it in Sources to browse the catalog.';
       case 'selection_web_search':
         return 'Search the web';
       case 'selection_web_search_unavailable':
@@ -135805,6 +135862,8 @@ extension on _StringsFr {
       case 'manga_import_detected_message':
         return ({required Object name}) =>
             '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+      case 'manga_online_source_disabled':
+        return 'This internet source is disabled. Enable it in Sources to browse the catalog.';
       case 'selection_web_search':
         return 'Search the web';
       case 'selection_web_search_unavailable':
@@ -141601,6 +141660,8 @@ extension on _StringsId {
       case 'manga_import_detected_message':
         return ({required Object name}) =>
             '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+      case 'manga_online_source_disabled':
+        return 'This internet source is disabled. Enable it in Sources to browse the catalog.';
       case 'selection_web_search':
         return 'Search the web';
       case 'selection_web_search_unavailable':
@@ -147411,6 +147472,8 @@ extension on _StringsIt {
       case 'manga_import_detected_message':
         return ({required Object name}) =>
             '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+      case 'manga_online_source_disabled':
+        return 'This internet source is disabled. Enable it in Sources to browse the catalog.';
       case 'selection_web_search':
         return 'Search the web';
       case 'selection_web_search_unavailable':
@@ -153183,6 +153246,8 @@ extension on _StringsJa {
       case 'manga_import_detected_message':
         return ({required Object name}) =>
             '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+      case 'manga_online_source_disabled':
+        return 'This internet source is disabled. Enable it in Sources to browse the catalog.';
       case 'selection_web_search':
         return 'Search the web';
       case 'selection_web_search_unavailable':
@@ -158959,6 +159024,8 @@ extension on _StringsKo {
       case 'manga_import_detected_message':
         return ({required Object name}) =>
             '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+      case 'manga_online_source_disabled':
+        return 'This internet source is disabled. Enable it in Sources to browse the catalog.';
       case 'selection_web_search':
         return 'Search the web';
       case 'selection_web_search_unavailable':
@@ -164763,6 +164830,8 @@ extension on _StringsNl {
       case 'manga_import_detected_message':
         return ({required Object name}) =>
             '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+      case 'manga_online_source_disabled':
+        return 'This internet source is disabled. Enable it in Sources to browse the catalog.';
       case 'selection_web_search':
         return 'Search the web';
       case 'selection_web_search_unavailable':
@@ -170564,6 +170633,8 @@ extension on _StringsPtBr {
       case 'manga_import_detected_message':
         return ({required Object name}) =>
             '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+      case 'manga_online_source_disabled':
+        return 'This internet source is disabled. Enable it in Sources to browse the catalog.';
       case 'selection_web_search':
         return 'Search the web';
       case 'selection_web_search_unavailable':
@@ -176370,6 +176441,8 @@ extension on _StringsRu {
       case 'manga_import_detected_message':
         return ({required Object name}) =>
             '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+      case 'manga_online_source_disabled':
+        return 'This internet source is disabled. Enable it in Sources to browse the catalog.';
       case 'selection_web_search':
         return 'Search the web';
       case 'selection_web_search_unavailable':
@@ -182159,6 +182232,8 @@ extension on _StringsTh {
       case 'manga_import_detected_message':
         return ({required Object name}) =>
             '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+      case 'manga_online_source_disabled':
+        return 'This internet source is disabled. Enable it in Sources to browse the catalog.';
       case 'selection_web_search':
         return 'Search the web';
       case 'selection_web_search_unavailable':
@@ -187957,6 +188032,8 @@ extension on _StringsTr {
       case 'manga_import_detected_message':
         return ({required Object name}) =>
             '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+      case 'manga_online_source_disabled':
+        return 'This internet source is disabled. Enable it in Sources to browse the catalog.';
       case 'selection_web_search':
         return 'Search the web';
       case 'selection_web_search_unavailable':
@@ -193751,6 +193828,8 @@ extension on _StringsVi {
       case 'manga_import_detected_message':
         return ({required Object name}) =>
             '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+      case 'manga_online_source_disabled':
+        return 'This internet source is disabled. Enable it in Sources to browse the catalog.';
       case 'selection_web_search':
         return 'Search the web';
       case 'selection_web_search_unavailable':
@@ -199497,6 +199576,8 @@ extension on _StringsZhCn {
         return '按漫画导入';
       case 'manga_import_detected_message':
         return ({required Object name}) => '「${name}」是漫画文件，将走漫画导入流程，而不是书籍导入流程。';
+      case 'manga_online_source_disabled':
+        return '此互联网来源已关闭，请在「来源」中开启后浏览目录。';
       case 'selection_web_search':
         return '网页搜索';
       case 'selection_web_search_unavailable':
@@ -205263,6 +205344,8 @@ extension on _StringsZhHk {
       case 'manga_import_detected_message':
         return ({required Object name}) =>
             '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+      case 'manga_online_source_disabled':
+        return 'This internet source is disabled. Enable it in Sources to browse the catalog.';
       case 'selection_web_search':
         return 'Search the web';
       case 'selection_web_search_unavailable':
