@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 47413 (2789 per locale)
+/// Strings: 49249 (2897 per locale)
 ///
-/// Built on 2026-07-29 at 06:06 UTC
+/// Built on 2026-07-31 at 15:18 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -948,7 +948,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get dict_auto_update => 'Update automatically';
   String get dict_auto_update_hint => 'Check for dictionary updates on launch';
   String dict_auto_update_last({required Object time}) =>
-      'Last update: ${time}';
+      'Last successful check: ${time}';
   String get dict_auto_update_never => 'Never';
   String get dict_category_frequency => 'Frequency';
   String get dict_category_grammar => 'Grammar';
@@ -1484,7 +1484,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get game_text_source_unknown => 'Unknown source';
   String get game_text_source_websocket => 'WebSocket';
   String get game_text_thread => 'Text thread';
-  String get game_text_thread_all => 'All text threads';
   String game_text_thread_audio_count({required Object count}) =>
       '${count} with audio';
   String get game_text_thread_hint =>
@@ -3665,8 +3664,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get media_tracking_all_synced => 'Everything sent';
   String get media_tracking_unauthorized =>
       'Bangumi rejected the access token. Reconnect it in settings.';
-  String get media_tracking_unlinked_hint =>
-      'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
   String get media_tracking_open_subject => 'Open on Bangumi';
   String get media_tracking_manage_links => 'Manage links';
   String get media_tracking_last_error => 'Last error';
@@ -3693,6 +3690,170 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get library_view_media => 'Library';
   String get scrape_failure_detail_show => 'Show details';
   String get scrape_failure_detail_hide => 'Hide details';
+  String get media_tracking_retry_mapping => 'Retry matching';
+  String get media_tracking_retry_matched =>
+      'Matched and queued current progress';
+  String get media_tracking_retry_no_match =>
+      'No match found. Try manual linking.';
+  String get game_statistics => 'Game statistics';
+  String get game_stat_by_game => 'By game';
+  String get stat_clear_all_game_message =>
+      'Clear all game play time and session counts? Your game library and activity timeline are kept. This cannot be undone.';
+  String batch_selection_stale_skipped(
+          {required Object m, required Object n}) =>
+      'Skipped ${m} of ${n} selected items that no longer exist';
+  String get game_text_thread_unset =>
+      'No thread selected — pick one to start capturing';
+  String get media_tracking_watched_show => 'View all watched anime';
+  String get media_tracking_watched_title => 'Watched on Bangumi';
+  String get media_tracking_watched_empty =>
+      'No anime is marked as watched on this Bangumi account.';
+  String media_tracking_watched_load_failed({required Object error}) =>
+      'Could not load watched anime: ${error}';
+  String media_tracking_watched_progress({required Object n}) =>
+      'Watched ${n} episodes';
+  String get media_tracking_manual_required => 'Needs manual link';
+  String media_tracking_manual_required_count({required Object n}) =>
+      '${n} items need manual links';
+  String get media_tracking_manual_required_hint =>
+      'These local items already have progress but are not linked to Bangumi.';
+  String get media_tracking_no_local_history =>
+      'No local watch, reading, or game progress needs linking.';
+  String media_tracking_more_manual_required({required Object n}) =>
+      '${n} more items need manual links';
+  String get manga_import_hint =>
+      'Pick a manga folder, a .cbz/.zip page archive, or a .mokuro file.';
+  String get manga_import_pick_file => 'Pick manga file';
+  String get manga_import_pick_folder => 'Pick manga folder';
+  String get manga_import_missing_input => 'Pick a manga file or folder first.';
+  String get manga_import_detected_title => 'This looks like manga';
+  String get manga_import_detected_confirm => 'Import as manga';
+  String manga_import_detected_message({required Object name}) =>
+      '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+  String get video_jimaku_source_loading => 'Checking subtitle availability...';
+  String get video_jimaku_source_failed =>
+      'Could not check subtitle availability. Try searching again.';
+  String get video_jimaku_language_unknown => 'Language not labeled';
+  String video_jimaku_source_summary(
+          {required Object files,
+          required Object episodes,
+          required Object languages}) =>
+      '${files} subtitle files · ${episodes} episodes · ${languages}';
+  String video_jimaku_episode_unlabeled(
+          {required Object episode, required Object count}) =>
+      'No subtitle labeled episode ${episode}; ${count} unlabeled files may still match';
+  String video_jimaku_episode_unavailable({required Object episode}) =>
+      'No subtitle found for episode ${episode}';
+  String video_jimaku_episode_available(
+          {required Object count, required Object languages}) =>
+      '${count} subtitles available · ${languages}';
+  String get video_scrape_manual_match_hint =>
+      'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+  String get video_scrape_collection_match_hint =>
+      'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+  String get video_scrape_apply_to_collection_hint =>
+      'This writes the same cover to every episode. Leave it off unless that is intentional.';
+  String get video_scrape_tmdb_key_empty =>
+      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+  String get manga_online_source_disabled =>
+      'This internet source is disabled. Enable it in Sources to browse the catalog.';
+  String get selection_web_search => 'Search the web';
+  String get selection_web_search_unavailable => 'No app can search the web.';
+  String get selection_share_failed => 'Could not open the share sheet.';
+  String video_subtitle_youtube_auto_generated({required Object lang}) =>
+      '${lang} (auto-generated)';
+  String get anki_dedup_progress_title => 'Deduplicating media';
+  String anki_dedup_progress_scanning({required Object count}) =>
+      'Scanning media folder… (${count} files found)';
+  String anki_dedup_progress_hashing(
+          {required Object done, required Object total}) =>
+      'Comparing same-size files… (${done} / ${total})';
+  String anki_dedup_progress_resolving(
+          {required Object done, required Object total}) =>
+      'Processing duplicates… (${done} / ${total})';
+  String anki_dedup_progress_freed({required Object size}) =>
+      'Freed ${size} so far';
+  String get anki_dedup_cancelling => 'Cancelling…';
+  String get anki_dedup_cancelled =>
+      'Deduplication cancelled; completed changes are kept.';
+  String get anki_dedup_report_cancelled_note =>
+      'Cancelled early — the numbers below only cover what was completed.';
+  String get anki_dedup_plan_busy_note =>
+      'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
+  String get video_setting_subtitle_position_secondary =>
+      'Secondary subtitle position';
+  String get dict_download_learning_language => 'Learning language';
+  String get dict_category_bilingual => 'Bilingual';
+  String get dict_category_monolingual => 'Monolingual';
+  String get shortcut_action_video_hold_speed => 'Hold for temporary speed';
+  String get handlebar_phonetic_transcriptions => 'Phonetic transcriptions';
+  String get sync_progress_preparing => 'Preparing sync';
+  String get sync_progress_collections => 'Syncing collections';
+  String get sync_progress_book => 'Syncing book';
+  String sync_progress_book_titled({required Object title}) =>
+      'Syncing ${title}';
+  String sync_last_completed({required Object count}) =>
+      'Last sync: done (${count} channels)';
+  String get sync_last_no_channels =>
+      'Last sync: nothing synced - no connected sync channel';
+  String get sync_last_nothing => 'Last sync: nothing to sync';
+  String get sync_last_auto_disabled => 'Last sync: skipped - auto sync is off';
+  String get sync_last_cooled_down => 'Last sync: skipped - synced recently';
+  String get sync_last_failed => 'Last sync: failed';
+  String anime_download_no_results_detail(
+          {required Object query, required Object filters}) =>
+      'The service responded successfully but returned 0 items. Query: ${query}; filters: ${filters}. Try another title or loosen the filters.';
+  String get anime_download_streaming_ready =>
+      'In library · download continues';
+  String get anime_download_unfiltered => 'No Trusted filter';
+  String get interconnect_enable_footer =>
+      'How to use: on the device that holds your library, turn on the sync server switch below; on your other device, add the address of that server to pair with it. A device can act as only one role at a time — server or client.';
+  String get interconnect_peer_list_title => 'Added peers';
+  String get interconnect_peer_list_empty =>
+      'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
+  String get anki_lapis_visual_editor => 'Visual style editor';
+  String get anki_lapis_visual_editor_hint =>
+      'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+  String get anki_lapis_visual_front => 'Front';
+  String get anki_lapis_visual_back => 'Back';
+  String get anki_lapis_visual_preview => 'Lapis card preview';
+  String get anki_lapis_visual_select_field => 'Select a field to highlight';
+  String get anki_lapis_visual_reset_field => 'Reset field';
+  String anki_lapis_visual_font_size({required Object percent}) =>
+      'Font size: ${percent}%';
+  String get anki_lapis_visual_bold => 'Bold';
+  String get anki_lapis_visual_alignment => 'Alignment';
+  String get anki_lapis_visual_color => 'Text color';
+  String get anki_lapis_visual_default => 'Default';
+  String get anki_lapis_visual_advanced_css => 'Advanced CSS';
+  String get anki_lapis_visual_field_expression => 'Word';
+  String get anki_lapis_visual_field_reading => 'Reading';
+  String get anki_lapis_visual_field_sentence => 'Sentence';
+  String get anki_lapis_visual_field_primary_definition => 'Primary definition';
+  String get anki_lapis_visual_field_glossaries => 'Other definitions';
+  String get anki_lapis_visual_target_card_content => 'Card content';
+  String get anki_lapis_visual_target_definition => 'Definition';
+  String get anki_lapis_visual_target_inside_definition => 'Inside definition';
+  String get anki_lapis_visual_field_definition_info => 'Definition indicator';
+  String get anki_lapis_visual_field_definition_box => 'Definition box';
+  String get anki_lapis_visual_field_definition_content => 'Whole definition';
+  String get anki_lapis_visual_field_selected_definition =>
+      'Selected definition';
+  String get anki_lapis_visual_field_dictionary_entry => 'Dictionary entry';
+  String get anki_lapis_visual_field_dictionary_name => 'Dictionary name';
+  String get anki_lapis_visual_field_definition_example => 'Definition example';
+  String get anki_lapis_visual_line_height => 'Line height';
+  String get anki_lapis_visual_background_color => 'Background highlight';
+  String get anki_lapis_visual_box_layout => 'Box appearance';
+  String get anki_lapis_visual_border_width => 'Border';
+  String get anki_lapis_visual_border_color => 'Border color';
+  String get anki_lapis_visual_corner_radius => 'Corner radius';
+  String get anki_lapis_visual_padding => 'Inner spacing';
+  String get anki_lapis_visual_margin => 'Outer spacing';
+  String get anki_lapis_visual_field_definition_info_note =>
+      'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
+  String get anki_lapis_visual_field_dictionary_name_note =>
+      'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
   String get library_view_manga_sources => 'Manga sources';
   String get library_view_manga_extensions => 'Manga extensions';
   String get library_view_source_settings => 'Source settings';
@@ -5121,7 +5282,8 @@ class _StringsAr extends _StringsEn {
   String get dict_auto_update_hint =>
       'التحقق من تحديثات القواميس عند بدء التشغيل';
   @override
-  String dict_auto_update_last({required Object time}) => 'آخر تحديث: ${time}';
+  String dict_auto_update_last({required Object time}) =>
+      'آخر تحقق ناجح: ${time}';
   @override
   String get dict_auto_update_never => 'أبدًا';
   @override
@@ -6066,8 +6228,6 @@ class _StringsAr extends _StringsEn {
   String get game_text_source_websocket => 'WebSocket';
   @override
   String get game_text_thread => 'Text thread';
-  @override
-  String get game_text_thread_all => 'All text threads';
   @override
   String game_text_thread_audio_count({required Object count}) =>
       '${count} with audio';
@@ -9981,9 +10141,6 @@ class _StringsAr extends _StringsEn {
   String get media_tracking_unauthorized =>
       'Bangumi rejected the access token. Reconnect it in settings.';
   @override
-  String get media_tracking_unlinked_hint =>
-      'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
-  @override
   String get media_tracking_open_subject => 'Open on Bangumi';
   @override
   String get media_tracking_manage_links => 'Manage links';
@@ -10028,6 +10185,280 @@ class _StringsAr extends _StringsEn {
   String get scrape_failure_detail_show => 'Show details';
   @override
   String get scrape_failure_detail_hide => 'Hide details';
+  @override
+  String get media_tracking_retry_mapping => 'Retry matching';
+  @override
+  String get media_tracking_retry_matched =>
+      'Matched and queued current progress';
+  @override
+  String get media_tracking_retry_no_match =>
+      'No match found. Try manual linking.';
+  @override
+  String get game_statistics => 'Game statistics';
+  @override
+  String get game_stat_by_game => 'By game';
+  @override
+  String get stat_clear_all_game_message =>
+      'Clear all game play time and session counts? Your game library and activity timeline are kept. This cannot be undone.';
+  @override
+  String batch_selection_stale_skipped(
+          {required Object m, required Object n}) =>
+      'Skipped ${m} of ${n} selected items that no longer exist';
+  @override
+  String get game_text_thread_unset =>
+      'No thread selected — pick one to start capturing';
+  @override
+  String get media_tracking_watched_show => 'View all watched anime';
+  @override
+  String get media_tracking_watched_title => 'Watched on Bangumi';
+  @override
+  String get media_tracking_watched_empty =>
+      'No anime is marked as watched on this Bangumi account.';
+  @override
+  String media_tracking_watched_load_failed({required Object error}) =>
+      'Could not load watched anime: ${error}';
+  @override
+  String media_tracking_watched_progress({required Object n}) =>
+      'Watched ${n} episodes';
+  @override
+  String get media_tracking_manual_required => 'Needs manual link';
+  @override
+  String media_tracking_manual_required_count({required Object n}) =>
+      '${n} items need manual links';
+  @override
+  String get media_tracking_manual_required_hint =>
+      'These local items already have progress but are not linked to Bangumi.';
+  @override
+  String get media_tracking_no_local_history =>
+      'No local watch, reading, or game progress needs linking.';
+  @override
+  String media_tracking_more_manual_required({required Object n}) =>
+      '${n} more items need manual links';
+  @override
+  String get manga_import_hint =>
+      'Pick a manga folder, a .cbz/.zip page archive, or a .mokuro file.';
+  @override
+  String get manga_import_pick_file => 'Pick manga file';
+  @override
+  String get manga_import_pick_folder => 'Pick manga folder';
+  @override
+  String get manga_import_missing_input => 'Pick a manga file or folder first.';
+  @override
+  String get manga_import_detected_title => 'This looks like manga';
+  @override
+  String get manga_import_detected_confirm => 'Import as manga';
+  @override
+  String manga_import_detected_message({required Object name}) =>
+      '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+  @override
+  String get video_jimaku_source_loading => 'Checking subtitle availability...';
+  @override
+  String get video_jimaku_source_failed =>
+      'Could not check subtitle availability. Try searching again.';
+  @override
+  String get video_jimaku_language_unknown => 'Language not labeled';
+  @override
+  String video_jimaku_source_summary(
+          {required Object files,
+          required Object episodes,
+          required Object languages}) =>
+      '${files} subtitle files · ${episodes} episodes · ${languages}';
+  @override
+  String video_jimaku_episode_unlabeled(
+          {required Object episode, required Object count}) =>
+      'No subtitle labeled episode ${episode}; ${count} unlabeled files may still match';
+  @override
+  String video_jimaku_episode_unavailable({required Object episode}) =>
+      'No subtitle found for episode ${episode}';
+  @override
+  String video_jimaku_episode_available(
+          {required Object count, required Object languages}) =>
+      '${count} subtitles available · ${languages}';
+  @override
+  String get video_scrape_manual_match_hint =>
+      'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+  @override
+  String get video_scrape_collection_match_hint =>
+      'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+  @override
+  String get video_scrape_apply_to_collection_hint =>
+      'This writes the same cover to every episode. Leave it off unless that is intentional.';
+  @override
+  String get video_scrape_tmdb_key_empty =>
+      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+  @override
+  String get manga_online_source_disabled =>
+      'This internet source is disabled. Enable it in Sources to browse the catalog.';
+  @override
+  String get selection_web_search => 'Search the web';
+  @override
+  String get selection_web_search_unavailable => 'No app can search the web.';
+  @override
+  String get selection_share_failed => 'Could not open the share sheet.';
+  @override
+  String video_subtitle_youtube_auto_generated({required Object lang}) =>
+      '${lang} (auto-generated)';
+  @override
+  String get anki_dedup_progress_title => 'Deduplicating media';
+  @override
+  String anki_dedup_progress_scanning({required Object count}) =>
+      'Scanning media folder… (${count} files found)';
+  @override
+  String anki_dedup_progress_hashing(
+          {required Object done, required Object total}) =>
+      'Comparing same-size files… (${done} / ${total})';
+  @override
+  String anki_dedup_progress_resolving(
+          {required Object done, required Object total}) =>
+      'Processing duplicates… (${done} / ${total})';
+  @override
+  String anki_dedup_progress_freed({required Object size}) =>
+      'Freed ${size} so far';
+  @override
+  String get anki_dedup_cancelling => 'Cancelling…';
+  @override
+  String get anki_dedup_cancelled =>
+      'Deduplication cancelled; completed changes are kept.';
+  @override
+  String get anki_dedup_report_cancelled_note =>
+      'Cancelled early — the numbers below only cover what was completed.';
+  @override
+  String get anki_dedup_plan_busy_note =>
+      'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
+  @override
+  String get video_setting_subtitle_position_secondary =>
+      'Secondary subtitle position';
+  @override
+  String get dict_download_learning_language => 'Learning language';
+  @override
+  String get dict_category_bilingual => 'Bilingual';
+  @override
+  String get dict_category_monolingual => 'Monolingual';
+  @override
+  String get shortcut_action_video_hold_speed => 'Hold for temporary speed';
+  @override
+  String get handlebar_phonetic_transcriptions => 'Phonetic transcriptions';
+  @override
+  String get sync_progress_preparing => 'Preparing sync';
+  @override
+  String get sync_progress_collections => 'Syncing collections';
+  @override
+  String get sync_progress_book => 'Syncing book';
+  @override
+  String sync_progress_book_titled({required Object title}) =>
+      'Syncing ${title}';
+  @override
+  String sync_last_completed({required Object count}) =>
+      'Last sync: done (${count} channels)';
+  @override
+  String get sync_last_no_channels =>
+      'Last sync: nothing synced - no connected sync channel';
+  @override
+  String get sync_last_nothing => 'Last sync: nothing to sync';
+  @override
+  String get sync_last_auto_disabled => 'Last sync: skipped - auto sync is off';
+  @override
+  String get sync_last_cooled_down => 'Last sync: skipped - synced recently';
+  @override
+  String get sync_last_failed => 'Last sync: failed';
+  @override
+  String anime_download_no_results_detail(
+          {required Object query, required Object filters}) =>
+      'The service responded successfully but returned 0 items. Query: ${query}; filters: ${filters}. Try another title or loosen the filters.';
+  @override
+  String get anime_download_streaming_ready =>
+      'In library · download continues';
+  @override
+  String get anime_download_unfiltered => 'No Trusted filter';
+  @override
+  String get interconnect_enable_footer =>
+      'How to use: on the device that holds your library, turn on the sync server switch below; on your other device, add the address of that server to pair with it. A device can act as only one role at a time — server or client.';
+  @override
+  String get interconnect_peer_list_title => 'Added peers';
+  @override
+  String get interconnect_peer_list_empty =>
+      'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
+  @override
+  String get anki_lapis_visual_editor => 'Visual style editor';
+  @override
+  String get anki_lapis_visual_editor_hint =>
+      'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+  @override
+  String get anki_lapis_visual_front => 'Front';
+  @override
+  String get anki_lapis_visual_back => 'Back';
+  @override
+  String get anki_lapis_visual_preview => 'Lapis card preview';
+  @override
+  String get anki_lapis_visual_select_field => 'Select a field to highlight';
+  @override
+  String get anki_lapis_visual_reset_field => 'Reset field';
+  @override
+  String anki_lapis_visual_font_size({required Object percent}) =>
+      'Font size: ${percent}%';
+  @override
+  String get anki_lapis_visual_bold => 'Bold';
+  @override
+  String get anki_lapis_visual_alignment => 'Alignment';
+  @override
+  String get anki_lapis_visual_color => 'Text color';
+  @override
+  String get anki_lapis_visual_default => 'Default';
+  @override
+  String get anki_lapis_visual_advanced_css => 'Advanced CSS';
+  @override
+  String get anki_lapis_visual_field_expression => 'Word';
+  @override
+  String get anki_lapis_visual_field_reading => 'Reading';
+  @override
+  String get anki_lapis_visual_field_sentence => 'Sentence';
+  @override
+  String get anki_lapis_visual_field_primary_definition => 'Primary definition';
+  @override
+  String get anki_lapis_visual_field_glossaries => 'Other definitions';
+  @override
+  String get anki_lapis_visual_target_card_content => 'Card content';
+  @override
+  String get anki_lapis_visual_target_definition => 'Definition';
+  @override
+  String get anki_lapis_visual_target_inside_definition => 'Inside definition';
+  @override
+  String get anki_lapis_visual_field_definition_info => 'Definition indicator';
+  @override
+  String get anki_lapis_visual_field_definition_box => 'Definition box';
+  @override
+  String get anki_lapis_visual_field_definition_content => 'Whole definition';
+  @override
+  String get anki_lapis_visual_field_selected_definition =>
+      'Selected definition';
+  @override
+  String get anki_lapis_visual_field_dictionary_entry => 'Dictionary entry';
+  @override
+  String get anki_lapis_visual_field_dictionary_name => 'Dictionary name';
+  @override
+  String get anki_lapis_visual_field_definition_example => 'Definition example';
+  @override
+  String get anki_lapis_visual_line_height => 'Line height';
+  @override
+  String get anki_lapis_visual_background_color => 'Background highlight';
+  @override
+  String get anki_lapis_visual_box_layout => 'Box appearance';
+  @override
+  String get anki_lapis_visual_border_width => 'Border';
+  @override
+  String get anki_lapis_visual_border_color => 'Border color';
+  @override
+  String get anki_lapis_visual_corner_radius => 'Corner radius';
+  @override
+  String get anki_lapis_visual_padding => 'Inner spacing';
+  @override
+  String get anki_lapis_visual_margin => 'Outer spacing';
+  @override
+  String get anki_lapis_visual_field_definition_info_note =>
+      'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
+  @override
+  String get anki_lapis_visual_field_dictionary_name_note =>
+      'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
   @override
   String get library_view_manga_sources => 'Manga sources';
   @override
@@ -10100,15 +10531,15 @@ class _StringsAr extends _StringsEn {
   @override
   String get mihon_extension_language_all => 'All languages';
   @override
-  String get mihon_filter_ignore => '忽略';
+  String get mihon_filter_ignore => 'Ignore';
   @override
-  String get mihon_filter_include => '包含';
+  String get mihon_filter_include => 'Include';
   @override
-  String get mihon_filter_exclude => '排除';
+  String get mihon_filter_exclude => 'Exclude';
   @override
-  String get mihon_filter_ascending => '升序';
+  String get mihon_filter_ascending => 'Ascending';
   @override
-  String get mihon_filter_descending => '降序';
+  String get mihon_filter_descending => 'Descending';
   @override
   String get mihon_add_to_bookshelf => 'Add to manga shelf';
   @override
@@ -11508,7 +11939,7 @@ class _StringsDe extends _StringsEn {
       'Beim Start nach Wörterbuch-Updates suchen';
   @override
   String dict_auto_update_last({required Object time}) =>
-      'Letzte Aktualisierung: ${time}';
+      'Letzte erfolgreiche Prüfung: ${time}';
   @override
   String get dict_auto_update_never => 'Nie';
   @override
@@ -12469,8 +12900,6 @@ class _StringsDe extends _StringsEn {
   String get game_text_source_websocket => 'WebSocket';
   @override
   String get game_text_thread => 'Text thread';
-  @override
-  String get game_text_thread_all => 'All text threads';
   @override
   String game_text_thread_audio_count({required Object count}) =>
       '${count} with audio';
@@ -16424,9 +16853,6 @@ class _StringsDe extends _StringsEn {
   String get media_tracking_unauthorized =>
       'Bangumi rejected the access token. Reconnect it in settings.';
   @override
-  String get media_tracking_unlinked_hint =>
-      'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
-  @override
   String get media_tracking_open_subject => 'Open on Bangumi';
   @override
   String get media_tracking_manage_links => 'Manage links';
@@ -16471,6 +16897,280 @@ class _StringsDe extends _StringsEn {
   String get scrape_failure_detail_show => 'Show details';
   @override
   String get scrape_failure_detail_hide => 'Hide details';
+  @override
+  String get media_tracking_retry_mapping => 'Retry matching';
+  @override
+  String get media_tracking_retry_matched =>
+      'Matched and queued current progress';
+  @override
+  String get media_tracking_retry_no_match =>
+      'No match found. Try manual linking.';
+  @override
+  String get game_statistics => 'Game statistics';
+  @override
+  String get game_stat_by_game => 'By game';
+  @override
+  String get stat_clear_all_game_message =>
+      'Clear all game play time and session counts? Your game library and activity timeline are kept. This cannot be undone.';
+  @override
+  String batch_selection_stale_skipped(
+          {required Object m, required Object n}) =>
+      'Skipped ${m} of ${n} selected items that no longer exist';
+  @override
+  String get game_text_thread_unset =>
+      'No thread selected — pick one to start capturing';
+  @override
+  String get media_tracking_watched_show => 'View all watched anime';
+  @override
+  String get media_tracking_watched_title => 'Watched on Bangumi';
+  @override
+  String get media_tracking_watched_empty =>
+      'No anime is marked as watched on this Bangumi account.';
+  @override
+  String media_tracking_watched_load_failed({required Object error}) =>
+      'Could not load watched anime: ${error}';
+  @override
+  String media_tracking_watched_progress({required Object n}) =>
+      'Watched ${n} episodes';
+  @override
+  String get media_tracking_manual_required => 'Needs manual link';
+  @override
+  String media_tracking_manual_required_count({required Object n}) =>
+      '${n} items need manual links';
+  @override
+  String get media_tracking_manual_required_hint =>
+      'These local items already have progress but are not linked to Bangumi.';
+  @override
+  String get media_tracking_no_local_history =>
+      'No local watch, reading, or game progress needs linking.';
+  @override
+  String media_tracking_more_manual_required({required Object n}) =>
+      '${n} more items need manual links';
+  @override
+  String get manga_import_hint =>
+      'Pick a manga folder, a .cbz/.zip page archive, or a .mokuro file.';
+  @override
+  String get manga_import_pick_file => 'Pick manga file';
+  @override
+  String get manga_import_pick_folder => 'Pick manga folder';
+  @override
+  String get manga_import_missing_input => 'Pick a manga file or folder first.';
+  @override
+  String get manga_import_detected_title => 'This looks like manga';
+  @override
+  String get manga_import_detected_confirm => 'Import as manga';
+  @override
+  String manga_import_detected_message({required Object name}) =>
+      '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+  @override
+  String get video_jimaku_source_loading => 'Checking subtitle availability...';
+  @override
+  String get video_jimaku_source_failed =>
+      'Could not check subtitle availability. Try searching again.';
+  @override
+  String get video_jimaku_language_unknown => 'Language not labeled';
+  @override
+  String video_jimaku_source_summary(
+          {required Object files,
+          required Object episodes,
+          required Object languages}) =>
+      '${files} subtitle files · ${episodes} episodes · ${languages}';
+  @override
+  String video_jimaku_episode_unlabeled(
+          {required Object episode, required Object count}) =>
+      'No subtitle labeled episode ${episode}; ${count} unlabeled files may still match';
+  @override
+  String video_jimaku_episode_unavailable({required Object episode}) =>
+      'No subtitle found for episode ${episode}';
+  @override
+  String video_jimaku_episode_available(
+          {required Object count, required Object languages}) =>
+      '${count} subtitles available · ${languages}';
+  @override
+  String get video_scrape_manual_match_hint =>
+      'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+  @override
+  String get video_scrape_collection_match_hint =>
+      'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+  @override
+  String get video_scrape_apply_to_collection_hint =>
+      'This writes the same cover to every episode. Leave it off unless that is intentional.';
+  @override
+  String get video_scrape_tmdb_key_empty =>
+      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+  @override
+  String get manga_online_source_disabled =>
+      'This internet source is disabled. Enable it in Sources to browse the catalog.';
+  @override
+  String get selection_web_search => 'Search the web';
+  @override
+  String get selection_web_search_unavailable => 'No app can search the web.';
+  @override
+  String get selection_share_failed => 'Could not open the share sheet.';
+  @override
+  String video_subtitle_youtube_auto_generated({required Object lang}) =>
+      '${lang} (auto-generated)';
+  @override
+  String get anki_dedup_progress_title => 'Deduplicating media';
+  @override
+  String anki_dedup_progress_scanning({required Object count}) =>
+      'Scanning media folder… (${count} files found)';
+  @override
+  String anki_dedup_progress_hashing(
+          {required Object done, required Object total}) =>
+      'Comparing same-size files… (${done} / ${total})';
+  @override
+  String anki_dedup_progress_resolving(
+          {required Object done, required Object total}) =>
+      'Processing duplicates… (${done} / ${total})';
+  @override
+  String anki_dedup_progress_freed({required Object size}) =>
+      'Freed ${size} so far';
+  @override
+  String get anki_dedup_cancelling => 'Cancelling…';
+  @override
+  String get anki_dedup_cancelled =>
+      'Deduplication cancelled; completed changes are kept.';
+  @override
+  String get anki_dedup_report_cancelled_note =>
+      'Cancelled early — the numbers below only cover what was completed.';
+  @override
+  String get anki_dedup_plan_busy_note =>
+      'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
+  @override
+  String get video_setting_subtitle_position_secondary =>
+      'Secondary subtitle position';
+  @override
+  String get dict_download_learning_language => 'Learning language';
+  @override
+  String get dict_category_bilingual => 'Bilingual';
+  @override
+  String get dict_category_monolingual => 'Monolingual';
+  @override
+  String get shortcut_action_video_hold_speed => 'Hold for temporary speed';
+  @override
+  String get handlebar_phonetic_transcriptions => 'Phonetic transcriptions';
+  @override
+  String get sync_progress_preparing => 'Preparing sync';
+  @override
+  String get sync_progress_collections => 'Syncing collections';
+  @override
+  String get sync_progress_book => 'Syncing book';
+  @override
+  String sync_progress_book_titled({required Object title}) =>
+      'Syncing ${title}';
+  @override
+  String sync_last_completed({required Object count}) =>
+      'Last sync: done (${count} channels)';
+  @override
+  String get sync_last_no_channels =>
+      'Last sync: nothing synced - no connected sync channel';
+  @override
+  String get sync_last_nothing => 'Last sync: nothing to sync';
+  @override
+  String get sync_last_auto_disabled => 'Last sync: skipped - auto sync is off';
+  @override
+  String get sync_last_cooled_down => 'Last sync: skipped - synced recently';
+  @override
+  String get sync_last_failed => 'Last sync: failed';
+  @override
+  String anime_download_no_results_detail(
+          {required Object query, required Object filters}) =>
+      'The service responded successfully but returned 0 items. Query: ${query}; filters: ${filters}. Try another title or loosen the filters.';
+  @override
+  String get anime_download_streaming_ready =>
+      'In library · download continues';
+  @override
+  String get anime_download_unfiltered => 'No Trusted filter';
+  @override
+  String get interconnect_enable_footer =>
+      'How to use: on the device that holds your library, turn on the sync server switch below; on your other device, add the address of that server to pair with it. A device can act as only one role at a time — server or client.';
+  @override
+  String get interconnect_peer_list_title => 'Added peers';
+  @override
+  String get interconnect_peer_list_empty =>
+      'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
+  @override
+  String get anki_lapis_visual_editor => 'Visual style editor';
+  @override
+  String get anki_lapis_visual_editor_hint =>
+      'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+  @override
+  String get anki_lapis_visual_front => 'Front';
+  @override
+  String get anki_lapis_visual_back => 'Back';
+  @override
+  String get anki_lapis_visual_preview => 'Lapis card preview';
+  @override
+  String get anki_lapis_visual_select_field => 'Select a field to highlight';
+  @override
+  String get anki_lapis_visual_reset_field => 'Reset field';
+  @override
+  String anki_lapis_visual_font_size({required Object percent}) =>
+      'Font size: ${percent}%';
+  @override
+  String get anki_lapis_visual_bold => 'Bold';
+  @override
+  String get anki_lapis_visual_alignment => 'Alignment';
+  @override
+  String get anki_lapis_visual_color => 'Text color';
+  @override
+  String get anki_lapis_visual_default => 'Default';
+  @override
+  String get anki_lapis_visual_advanced_css => 'Advanced CSS';
+  @override
+  String get anki_lapis_visual_field_expression => 'Word';
+  @override
+  String get anki_lapis_visual_field_reading => 'Reading';
+  @override
+  String get anki_lapis_visual_field_sentence => 'Sentence';
+  @override
+  String get anki_lapis_visual_field_primary_definition => 'Primary definition';
+  @override
+  String get anki_lapis_visual_field_glossaries => 'Other definitions';
+  @override
+  String get anki_lapis_visual_target_card_content => 'Card content';
+  @override
+  String get anki_lapis_visual_target_definition => 'Definition';
+  @override
+  String get anki_lapis_visual_target_inside_definition => 'Inside definition';
+  @override
+  String get anki_lapis_visual_field_definition_info => 'Definition indicator';
+  @override
+  String get anki_lapis_visual_field_definition_box => 'Definition box';
+  @override
+  String get anki_lapis_visual_field_definition_content => 'Whole definition';
+  @override
+  String get anki_lapis_visual_field_selected_definition =>
+      'Selected definition';
+  @override
+  String get anki_lapis_visual_field_dictionary_entry => 'Dictionary entry';
+  @override
+  String get anki_lapis_visual_field_dictionary_name => 'Dictionary name';
+  @override
+  String get anki_lapis_visual_field_definition_example => 'Definition example';
+  @override
+  String get anki_lapis_visual_line_height => 'Line height';
+  @override
+  String get anki_lapis_visual_background_color => 'Background highlight';
+  @override
+  String get anki_lapis_visual_box_layout => 'Box appearance';
+  @override
+  String get anki_lapis_visual_border_width => 'Border';
+  @override
+  String get anki_lapis_visual_border_color => 'Border color';
+  @override
+  String get anki_lapis_visual_corner_radius => 'Corner radius';
+  @override
+  String get anki_lapis_visual_padding => 'Inner spacing';
+  @override
+  String get anki_lapis_visual_margin => 'Outer spacing';
+  @override
+  String get anki_lapis_visual_field_definition_info_note =>
+      'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
+  @override
+  String get anki_lapis_visual_field_dictionary_name_note =>
+      'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
   @override
   String get library_view_manga_sources => 'Manga sources';
   @override
@@ -16543,15 +17243,15 @@ class _StringsDe extends _StringsEn {
   @override
   String get mihon_extension_language_all => 'All languages';
   @override
-  String get mihon_filter_ignore => '忽略';
+  String get mihon_filter_ignore => 'Ignore';
   @override
-  String get mihon_filter_include => '包含';
+  String get mihon_filter_include => 'Include';
   @override
-  String get mihon_filter_exclude => '排除';
+  String get mihon_filter_exclude => 'Exclude';
   @override
-  String get mihon_filter_ascending => '升序';
+  String get mihon_filter_ascending => 'Ascending';
   @override
-  String get mihon_filter_descending => '降序';
+  String get mihon_filter_descending => 'Descending';
   @override
   String get mihon_add_to_bookshelf => 'Add to manga shelf';
   @override
@@ -17951,7 +18651,7 @@ class _StringsEs extends _StringsEn {
       'Buscar actualizaciones de diccionarios al iniciar';
   @override
   String dict_auto_update_last({required Object time}) =>
-      'Última actualización: ${time}';
+      'Última comprobación correcta: ${time}';
   @override
   String get dict_auto_update_never => 'Nunca';
   @override
@@ -18913,8 +19613,6 @@ class _StringsEs extends _StringsEn {
   String get game_text_source_websocket => 'WebSocket';
   @override
   String get game_text_thread => 'Text thread';
-  @override
-  String get game_text_thread_all => 'All text threads';
   @override
   String game_text_thread_audio_count({required Object count}) =>
       '${count} with audio';
@@ -22883,9 +23581,6 @@ class _StringsEs extends _StringsEn {
   String get media_tracking_unauthorized =>
       'Bangumi rejected the access token. Reconnect it in settings.';
   @override
-  String get media_tracking_unlinked_hint =>
-      'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
-  @override
   String get media_tracking_open_subject => 'Open on Bangumi';
   @override
   String get media_tracking_manage_links => 'Manage links';
@@ -22930,6 +23625,280 @@ class _StringsEs extends _StringsEn {
   String get scrape_failure_detail_show => 'Show details';
   @override
   String get scrape_failure_detail_hide => 'Hide details';
+  @override
+  String get media_tracking_retry_mapping => 'Retry matching';
+  @override
+  String get media_tracking_retry_matched =>
+      'Matched and queued current progress';
+  @override
+  String get media_tracking_retry_no_match =>
+      'No match found. Try manual linking.';
+  @override
+  String get game_statistics => 'Game statistics';
+  @override
+  String get game_stat_by_game => 'By game';
+  @override
+  String get stat_clear_all_game_message =>
+      'Clear all game play time and session counts? Your game library and activity timeline are kept. This cannot be undone.';
+  @override
+  String batch_selection_stale_skipped(
+          {required Object m, required Object n}) =>
+      'Skipped ${m} of ${n} selected items that no longer exist';
+  @override
+  String get game_text_thread_unset =>
+      'No thread selected — pick one to start capturing';
+  @override
+  String get media_tracking_watched_show => 'View all watched anime';
+  @override
+  String get media_tracking_watched_title => 'Watched on Bangumi';
+  @override
+  String get media_tracking_watched_empty =>
+      'No anime is marked as watched on this Bangumi account.';
+  @override
+  String media_tracking_watched_load_failed({required Object error}) =>
+      'Could not load watched anime: ${error}';
+  @override
+  String media_tracking_watched_progress({required Object n}) =>
+      'Watched ${n} episodes';
+  @override
+  String get media_tracking_manual_required => 'Needs manual link';
+  @override
+  String media_tracking_manual_required_count({required Object n}) =>
+      '${n} items need manual links';
+  @override
+  String get media_tracking_manual_required_hint =>
+      'These local items already have progress but are not linked to Bangumi.';
+  @override
+  String get media_tracking_no_local_history =>
+      'No local watch, reading, or game progress needs linking.';
+  @override
+  String media_tracking_more_manual_required({required Object n}) =>
+      '${n} more items need manual links';
+  @override
+  String get manga_import_hint =>
+      'Pick a manga folder, a .cbz/.zip page archive, or a .mokuro file.';
+  @override
+  String get manga_import_pick_file => 'Pick manga file';
+  @override
+  String get manga_import_pick_folder => 'Pick manga folder';
+  @override
+  String get manga_import_missing_input => 'Pick a manga file or folder first.';
+  @override
+  String get manga_import_detected_title => 'This looks like manga';
+  @override
+  String get manga_import_detected_confirm => 'Import as manga';
+  @override
+  String manga_import_detected_message({required Object name}) =>
+      '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+  @override
+  String get video_jimaku_source_loading => 'Checking subtitle availability...';
+  @override
+  String get video_jimaku_source_failed =>
+      'Could not check subtitle availability. Try searching again.';
+  @override
+  String get video_jimaku_language_unknown => 'Language not labeled';
+  @override
+  String video_jimaku_source_summary(
+          {required Object files,
+          required Object episodes,
+          required Object languages}) =>
+      '${files} subtitle files · ${episodes} episodes · ${languages}';
+  @override
+  String video_jimaku_episode_unlabeled(
+          {required Object episode, required Object count}) =>
+      'No subtitle labeled episode ${episode}; ${count} unlabeled files may still match';
+  @override
+  String video_jimaku_episode_unavailable({required Object episode}) =>
+      'No subtitle found for episode ${episode}';
+  @override
+  String video_jimaku_episode_available(
+          {required Object count, required Object languages}) =>
+      '${count} subtitles available · ${languages}';
+  @override
+  String get video_scrape_manual_match_hint =>
+      'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+  @override
+  String get video_scrape_collection_match_hint =>
+      'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+  @override
+  String get video_scrape_apply_to_collection_hint =>
+      'This writes the same cover to every episode. Leave it off unless that is intentional.';
+  @override
+  String get video_scrape_tmdb_key_empty =>
+      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+  @override
+  String get manga_online_source_disabled =>
+      'This internet source is disabled. Enable it in Sources to browse the catalog.';
+  @override
+  String get selection_web_search => 'Search the web';
+  @override
+  String get selection_web_search_unavailable => 'No app can search the web.';
+  @override
+  String get selection_share_failed => 'Could not open the share sheet.';
+  @override
+  String video_subtitle_youtube_auto_generated({required Object lang}) =>
+      '${lang} (auto-generated)';
+  @override
+  String get anki_dedup_progress_title => 'Deduplicating media';
+  @override
+  String anki_dedup_progress_scanning({required Object count}) =>
+      'Scanning media folder… (${count} files found)';
+  @override
+  String anki_dedup_progress_hashing(
+          {required Object done, required Object total}) =>
+      'Comparing same-size files… (${done} / ${total})';
+  @override
+  String anki_dedup_progress_resolving(
+          {required Object done, required Object total}) =>
+      'Processing duplicates… (${done} / ${total})';
+  @override
+  String anki_dedup_progress_freed({required Object size}) =>
+      'Freed ${size} so far';
+  @override
+  String get anki_dedup_cancelling => 'Cancelling…';
+  @override
+  String get anki_dedup_cancelled =>
+      'Deduplication cancelled; completed changes are kept.';
+  @override
+  String get anki_dedup_report_cancelled_note =>
+      'Cancelled early — the numbers below only cover what was completed.';
+  @override
+  String get anki_dedup_plan_busy_note =>
+      'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
+  @override
+  String get video_setting_subtitle_position_secondary =>
+      'Secondary subtitle position';
+  @override
+  String get dict_download_learning_language => 'Learning language';
+  @override
+  String get dict_category_bilingual => 'Bilingual';
+  @override
+  String get dict_category_monolingual => 'Monolingual';
+  @override
+  String get shortcut_action_video_hold_speed => 'Hold for temporary speed';
+  @override
+  String get handlebar_phonetic_transcriptions => 'Phonetic transcriptions';
+  @override
+  String get sync_progress_preparing => 'Preparing sync';
+  @override
+  String get sync_progress_collections => 'Syncing collections';
+  @override
+  String get sync_progress_book => 'Syncing book';
+  @override
+  String sync_progress_book_titled({required Object title}) =>
+      'Syncing ${title}';
+  @override
+  String sync_last_completed({required Object count}) =>
+      'Last sync: done (${count} channels)';
+  @override
+  String get sync_last_no_channels =>
+      'Last sync: nothing synced - no connected sync channel';
+  @override
+  String get sync_last_nothing => 'Last sync: nothing to sync';
+  @override
+  String get sync_last_auto_disabled => 'Last sync: skipped - auto sync is off';
+  @override
+  String get sync_last_cooled_down => 'Last sync: skipped - synced recently';
+  @override
+  String get sync_last_failed => 'Last sync: failed';
+  @override
+  String anime_download_no_results_detail(
+          {required Object query, required Object filters}) =>
+      'The service responded successfully but returned 0 items. Query: ${query}; filters: ${filters}. Try another title or loosen the filters.';
+  @override
+  String get anime_download_streaming_ready =>
+      'In library · download continues';
+  @override
+  String get anime_download_unfiltered => 'No Trusted filter';
+  @override
+  String get interconnect_enable_footer =>
+      'How to use: on the device that holds your library, turn on the sync server switch below; on your other device, add the address of that server to pair with it. A device can act as only one role at a time — server or client.';
+  @override
+  String get interconnect_peer_list_title => 'Added peers';
+  @override
+  String get interconnect_peer_list_empty =>
+      'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
+  @override
+  String get anki_lapis_visual_editor => 'Visual style editor';
+  @override
+  String get anki_lapis_visual_editor_hint =>
+      'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+  @override
+  String get anki_lapis_visual_front => 'Front';
+  @override
+  String get anki_lapis_visual_back => 'Back';
+  @override
+  String get anki_lapis_visual_preview => 'Lapis card preview';
+  @override
+  String get anki_lapis_visual_select_field => 'Select a field to highlight';
+  @override
+  String get anki_lapis_visual_reset_field => 'Reset field';
+  @override
+  String anki_lapis_visual_font_size({required Object percent}) =>
+      'Font size: ${percent}%';
+  @override
+  String get anki_lapis_visual_bold => 'Bold';
+  @override
+  String get anki_lapis_visual_alignment => 'Alignment';
+  @override
+  String get anki_lapis_visual_color => 'Text color';
+  @override
+  String get anki_lapis_visual_default => 'Default';
+  @override
+  String get anki_lapis_visual_advanced_css => 'Advanced CSS';
+  @override
+  String get anki_lapis_visual_field_expression => 'Word';
+  @override
+  String get anki_lapis_visual_field_reading => 'Reading';
+  @override
+  String get anki_lapis_visual_field_sentence => 'Sentence';
+  @override
+  String get anki_lapis_visual_field_primary_definition => 'Primary definition';
+  @override
+  String get anki_lapis_visual_field_glossaries => 'Other definitions';
+  @override
+  String get anki_lapis_visual_target_card_content => 'Card content';
+  @override
+  String get anki_lapis_visual_target_definition => 'Definition';
+  @override
+  String get anki_lapis_visual_target_inside_definition => 'Inside definition';
+  @override
+  String get anki_lapis_visual_field_definition_info => 'Definition indicator';
+  @override
+  String get anki_lapis_visual_field_definition_box => 'Definition box';
+  @override
+  String get anki_lapis_visual_field_definition_content => 'Whole definition';
+  @override
+  String get anki_lapis_visual_field_selected_definition =>
+      'Selected definition';
+  @override
+  String get anki_lapis_visual_field_dictionary_entry => 'Dictionary entry';
+  @override
+  String get anki_lapis_visual_field_dictionary_name => 'Dictionary name';
+  @override
+  String get anki_lapis_visual_field_definition_example => 'Definition example';
+  @override
+  String get anki_lapis_visual_line_height => 'Line height';
+  @override
+  String get anki_lapis_visual_background_color => 'Background highlight';
+  @override
+  String get anki_lapis_visual_box_layout => 'Box appearance';
+  @override
+  String get anki_lapis_visual_border_width => 'Border';
+  @override
+  String get anki_lapis_visual_border_color => 'Border color';
+  @override
+  String get anki_lapis_visual_corner_radius => 'Corner radius';
+  @override
+  String get anki_lapis_visual_padding => 'Inner spacing';
+  @override
+  String get anki_lapis_visual_margin => 'Outer spacing';
+  @override
+  String get anki_lapis_visual_field_definition_info_note =>
+      'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
+  @override
+  String get anki_lapis_visual_field_dictionary_name_note =>
+      'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
   @override
   String get library_view_manga_sources => 'Manga sources';
   @override
@@ -23002,15 +23971,15 @@ class _StringsEs extends _StringsEn {
   @override
   String get mihon_extension_language_all => 'All languages';
   @override
-  String get mihon_filter_ignore => '忽略';
+  String get mihon_filter_ignore => 'Ignore';
   @override
-  String get mihon_filter_include => '包含';
+  String get mihon_filter_include => 'Include';
   @override
-  String get mihon_filter_exclude => '排除';
+  String get mihon_filter_exclude => 'Exclude';
   @override
-  String get mihon_filter_ascending => '升序';
+  String get mihon_filter_ascending => 'Ascending';
   @override
-  String get mihon_filter_descending => '降序';
+  String get mihon_filter_descending => 'Descending';
   @override
   String get mihon_add_to_bookshelf => 'Add to manga shelf';
   @override
@@ -24417,7 +25386,7 @@ class _StringsFr extends _StringsEn {
       'Vérifier les mises à jour des dictionnaires au démarrage';
   @override
   String dict_auto_update_last({required Object time}) =>
-      'Dernière mise à jour : ${time}';
+      'Dernière vérification réussie : ${time}';
   @override
   String get dict_auto_update_never => 'Jamais';
   @override
@@ -25380,8 +26349,6 @@ class _StringsFr extends _StringsEn {
   String get game_text_source_websocket => 'WebSocket';
   @override
   String get game_text_thread => 'Text thread';
-  @override
-  String get game_text_thread_all => 'All text threads';
   @override
   String game_text_thread_audio_count({required Object count}) =>
       '${count} with audio';
@@ -29353,9 +30320,6 @@ class _StringsFr extends _StringsEn {
   String get media_tracking_unauthorized =>
       'Bangumi rejected the access token. Reconnect it in settings.';
   @override
-  String get media_tracking_unlinked_hint =>
-      'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
-  @override
   String get media_tracking_open_subject => 'Open on Bangumi';
   @override
   String get media_tracking_manage_links => 'Manage links';
@@ -29400,6 +30364,280 @@ class _StringsFr extends _StringsEn {
   String get scrape_failure_detail_show => 'Show details';
   @override
   String get scrape_failure_detail_hide => 'Hide details';
+  @override
+  String get media_tracking_retry_mapping => 'Retry matching';
+  @override
+  String get media_tracking_retry_matched =>
+      'Matched and queued current progress';
+  @override
+  String get media_tracking_retry_no_match =>
+      'No match found. Try manual linking.';
+  @override
+  String get game_statistics => 'Game statistics';
+  @override
+  String get game_stat_by_game => 'By game';
+  @override
+  String get stat_clear_all_game_message =>
+      'Clear all game play time and session counts? Your game library and activity timeline are kept. This cannot be undone.';
+  @override
+  String batch_selection_stale_skipped(
+          {required Object m, required Object n}) =>
+      'Skipped ${m} of ${n} selected items that no longer exist';
+  @override
+  String get game_text_thread_unset =>
+      'No thread selected — pick one to start capturing';
+  @override
+  String get media_tracking_watched_show => 'View all watched anime';
+  @override
+  String get media_tracking_watched_title => 'Watched on Bangumi';
+  @override
+  String get media_tracking_watched_empty =>
+      'No anime is marked as watched on this Bangumi account.';
+  @override
+  String media_tracking_watched_load_failed({required Object error}) =>
+      'Could not load watched anime: ${error}';
+  @override
+  String media_tracking_watched_progress({required Object n}) =>
+      'Watched ${n} episodes';
+  @override
+  String get media_tracking_manual_required => 'Needs manual link';
+  @override
+  String media_tracking_manual_required_count({required Object n}) =>
+      '${n} items need manual links';
+  @override
+  String get media_tracking_manual_required_hint =>
+      'These local items already have progress but are not linked to Bangumi.';
+  @override
+  String get media_tracking_no_local_history =>
+      'No local watch, reading, or game progress needs linking.';
+  @override
+  String media_tracking_more_manual_required({required Object n}) =>
+      '${n} more items need manual links';
+  @override
+  String get manga_import_hint =>
+      'Pick a manga folder, a .cbz/.zip page archive, or a .mokuro file.';
+  @override
+  String get manga_import_pick_file => 'Pick manga file';
+  @override
+  String get manga_import_pick_folder => 'Pick manga folder';
+  @override
+  String get manga_import_missing_input => 'Pick a manga file or folder first.';
+  @override
+  String get manga_import_detected_title => 'This looks like manga';
+  @override
+  String get manga_import_detected_confirm => 'Import as manga';
+  @override
+  String manga_import_detected_message({required Object name}) =>
+      '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+  @override
+  String get video_jimaku_source_loading => 'Checking subtitle availability...';
+  @override
+  String get video_jimaku_source_failed =>
+      'Could not check subtitle availability. Try searching again.';
+  @override
+  String get video_jimaku_language_unknown => 'Language not labeled';
+  @override
+  String video_jimaku_source_summary(
+          {required Object files,
+          required Object episodes,
+          required Object languages}) =>
+      '${files} subtitle files · ${episodes} episodes · ${languages}';
+  @override
+  String video_jimaku_episode_unlabeled(
+          {required Object episode, required Object count}) =>
+      'No subtitle labeled episode ${episode}; ${count} unlabeled files may still match';
+  @override
+  String video_jimaku_episode_unavailable({required Object episode}) =>
+      'No subtitle found for episode ${episode}';
+  @override
+  String video_jimaku_episode_available(
+          {required Object count, required Object languages}) =>
+      '${count} subtitles available · ${languages}';
+  @override
+  String get video_scrape_manual_match_hint =>
+      'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+  @override
+  String get video_scrape_collection_match_hint =>
+      'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+  @override
+  String get video_scrape_apply_to_collection_hint =>
+      'This writes the same cover to every episode. Leave it off unless that is intentional.';
+  @override
+  String get video_scrape_tmdb_key_empty =>
+      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+  @override
+  String get manga_online_source_disabled =>
+      'This internet source is disabled. Enable it in Sources to browse the catalog.';
+  @override
+  String get selection_web_search => 'Search the web';
+  @override
+  String get selection_web_search_unavailable => 'No app can search the web.';
+  @override
+  String get selection_share_failed => 'Could not open the share sheet.';
+  @override
+  String video_subtitle_youtube_auto_generated({required Object lang}) =>
+      '${lang} (auto-generated)';
+  @override
+  String get anki_dedup_progress_title => 'Deduplicating media';
+  @override
+  String anki_dedup_progress_scanning({required Object count}) =>
+      'Scanning media folder… (${count} files found)';
+  @override
+  String anki_dedup_progress_hashing(
+          {required Object done, required Object total}) =>
+      'Comparing same-size files… (${done} / ${total})';
+  @override
+  String anki_dedup_progress_resolving(
+          {required Object done, required Object total}) =>
+      'Processing duplicates… (${done} / ${total})';
+  @override
+  String anki_dedup_progress_freed({required Object size}) =>
+      'Freed ${size} so far';
+  @override
+  String get anki_dedup_cancelling => 'Cancelling…';
+  @override
+  String get anki_dedup_cancelled =>
+      'Deduplication cancelled; completed changes are kept.';
+  @override
+  String get anki_dedup_report_cancelled_note =>
+      'Cancelled early — the numbers below only cover what was completed.';
+  @override
+  String get anki_dedup_plan_busy_note =>
+      'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
+  @override
+  String get video_setting_subtitle_position_secondary =>
+      'Secondary subtitle position';
+  @override
+  String get dict_download_learning_language => 'Learning language';
+  @override
+  String get dict_category_bilingual => 'Bilingual';
+  @override
+  String get dict_category_monolingual => 'Monolingual';
+  @override
+  String get shortcut_action_video_hold_speed => 'Hold for temporary speed';
+  @override
+  String get handlebar_phonetic_transcriptions => 'Phonetic transcriptions';
+  @override
+  String get sync_progress_preparing => 'Preparing sync';
+  @override
+  String get sync_progress_collections => 'Syncing collections';
+  @override
+  String get sync_progress_book => 'Syncing book';
+  @override
+  String sync_progress_book_titled({required Object title}) =>
+      'Syncing ${title}';
+  @override
+  String sync_last_completed({required Object count}) =>
+      'Last sync: done (${count} channels)';
+  @override
+  String get sync_last_no_channels =>
+      'Last sync: nothing synced - no connected sync channel';
+  @override
+  String get sync_last_nothing => 'Last sync: nothing to sync';
+  @override
+  String get sync_last_auto_disabled => 'Last sync: skipped - auto sync is off';
+  @override
+  String get sync_last_cooled_down => 'Last sync: skipped - synced recently';
+  @override
+  String get sync_last_failed => 'Last sync: failed';
+  @override
+  String anime_download_no_results_detail(
+          {required Object query, required Object filters}) =>
+      'The service responded successfully but returned 0 items. Query: ${query}; filters: ${filters}. Try another title or loosen the filters.';
+  @override
+  String get anime_download_streaming_ready =>
+      'In library · download continues';
+  @override
+  String get anime_download_unfiltered => 'No Trusted filter';
+  @override
+  String get interconnect_enable_footer =>
+      'How to use: on the device that holds your library, turn on the sync server switch below; on your other device, add the address of that server to pair with it. A device can act as only one role at a time — server or client.';
+  @override
+  String get interconnect_peer_list_title => 'Added peers';
+  @override
+  String get interconnect_peer_list_empty =>
+      'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
+  @override
+  String get anki_lapis_visual_editor => 'Visual style editor';
+  @override
+  String get anki_lapis_visual_editor_hint =>
+      'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+  @override
+  String get anki_lapis_visual_front => 'Front';
+  @override
+  String get anki_lapis_visual_back => 'Back';
+  @override
+  String get anki_lapis_visual_preview => 'Lapis card preview';
+  @override
+  String get anki_lapis_visual_select_field => 'Select a field to highlight';
+  @override
+  String get anki_lapis_visual_reset_field => 'Reset field';
+  @override
+  String anki_lapis_visual_font_size({required Object percent}) =>
+      'Font size: ${percent}%';
+  @override
+  String get anki_lapis_visual_bold => 'Bold';
+  @override
+  String get anki_lapis_visual_alignment => 'Alignment';
+  @override
+  String get anki_lapis_visual_color => 'Text color';
+  @override
+  String get anki_lapis_visual_default => 'Default';
+  @override
+  String get anki_lapis_visual_advanced_css => 'Advanced CSS';
+  @override
+  String get anki_lapis_visual_field_expression => 'Word';
+  @override
+  String get anki_lapis_visual_field_reading => 'Reading';
+  @override
+  String get anki_lapis_visual_field_sentence => 'Sentence';
+  @override
+  String get anki_lapis_visual_field_primary_definition => 'Primary definition';
+  @override
+  String get anki_lapis_visual_field_glossaries => 'Other definitions';
+  @override
+  String get anki_lapis_visual_target_card_content => 'Card content';
+  @override
+  String get anki_lapis_visual_target_definition => 'Definition';
+  @override
+  String get anki_lapis_visual_target_inside_definition => 'Inside definition';
+  @override
+  String get anki_lapis_visual_field_definition_info => 'Definition indicator';
+  @override
+  String get anki_lapis_visual_field_definition_box => 'Definition box';
+  @override
+  String get anki_lapis_visual_field_definition_content => 'Whole definition';
+  @override
+  String get anki_lapis_visual_field_selected_definition =>
+      'Selected definition';
+  @override
+  String get anki_lapis_visual_field_dictionary_entry => 'Dictionary entry';
+  @override
+  String get anki_lapis_visual_field_dictionary_name => 'Dictionary name';
+  @override
+  String get anki_lapis_visual_field_definition_example => 'Definition example';
+  @override
+  String get anki_lapis_visual_line_height => 'Line height';
+  @override
+  String get anki_lapis_visual_background_color => 'Background highlight';
+  @override
+  String get anki_lapis_visual_box_layout => 'Box appearance';
+  @override
+  String get anki_lapis_visual_border_width => 'Border';
+  @override
+  String get anki_lapis_visual_border_color => 'Border color';
+  @override
+  String get anki_lapis_visual_corner_radius => 'Corner radius';
+  @override
+  String get anki_lapis_visual_padding => 'Inner spacing';
+  @override
+  String get anki_lapis_visual_margin => 'Outer spacing';
+  @override
+  String get anki_lapis_visual_field_definition_info_note =>
+      'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
+  @override
+  String get anki_lapis_visual_field_dictionary_name_note =>
+      'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
   @override
   String get library_view_manga_sources => 'Manga sources';
   @override
@@ -29472,15 +30710,15 @@ class _StringsFr extends _StringsEn {
   @override
   String get mihon_extension_language_all => 'All languages';
   @override
-  String get mihon_filter_ignore => '忽略';
+  String get mihon_filter_ignore => 'Ignore';
   @override
-  String get mihon_filter_include => '包含';
+  String get mihon_filter_include => 'Include';
   @override
-  String get mihon_filter_exclude => '排除';
+  String get mihon_filter_exclude => 'Exclude';
   @override
-  String get mihon_filter_ascending => '升序';
+  String get mihon_filter_ascending => 'Ascending';
   @override
-  String get mihon_filter_descending => '降序';
+  String get mihon_filter_descending => 'Descending';
   @override
   String get mihon_add_to_bookshelf => 'Add to manga shelf';
   @override
@@ -30868,7 +32106,7 @@ class _StringsId extends _StringsEn {
       'Periksa pembaruan kamus saat aplikasi dibuka';
   @override
   String dict_auto_update_last({required Object time}) =>
-      'Pembaruan terakhir: ${time}';
+      'Pemeriksaan berhasil terakhir: ${time}';
   @override
   String get dict_auto_update_never => 'Tidak pernah';
   @override
@@ -31816,8 +33054,6 @@ class _StringsId extends _StringsEn {
   String get game_text_source_websocket => 'WebSocket';
   @override
   String get game_text_thread => 'Text thread';
-  @override
-  String get game_text_thread_all => 'All text threads';
   @override
   String game_text_thread_audio_count({required Object count}) =>
       '${count} with audio';
@@ -35752,9 +36988,6 @@ class _StringsId extends _StringsEn {
   String get media_tracking_unauthorized =>
       'Bangumi rejected the access token. Reconnect it in settings.';
   @override
-  String get media_tracking_unlinked_hint =>
-      'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
-  @override
   String get media_tracking_open_subject => 'Open on Bangumi';
   @override
   String get media_tracking_manage_links => 'Manage links';
@@ -35799,6 +37032,280 @@ class _StringsId extends _StringsEn {
   String get scrape_failure_detail_show => 'Show details';
   @override
   String get scrape_failure_detail_hide => 'Hide details';
+  @override
+  String get media_tracking_retry_mapping => 'Retry matching';
+  @override
+  String get media_tracking_retry_matched =>
+      'Matched and queued current progress';
+  @override
+  String get media_tracking_retry_no_match =>
+      'No match found. Try manual linking.';
+  @override
+  String get game_statistics => 'Game statistics';
+  @override
+  String get game_stat_by_game => 'By game';
+  @override
+  String get stat_clear_all_game_message =>
+      'Clear all game play time and session counts? Your game library and activity timeline are kept. This cannot be undone.';
+  @override
+  String batch_selection_stale_skipped(
+          {required Object m, required Object n}) =>
+      'Skipped ${m} of ${n} selected items that no longer exist';
+  @override
+  String get game_text_thread_unset =>
+      'No thread selected — pick one to start capturing';
+  @override
+  String get media_tracking_watched_show => 'View all watched anime';
+  @override
+  String get media_tracking_watched_title => 'Watched on Bangumi';
+  @override
+  String get media_tracking_watched_empty =>
+      'No anime is marked as watched on this Bangumi account.';
+  @override
+  String media_tracking_watched_load_failed({required Object error}) =>
+      'Could not load watched anime: ${error}';
+  @override
+  String media_tracking_watched_progress({required Object n}) =>
+      'Watched ${n} episodes';
+  @override
+  String get media_tracking_manual_required => 'Needs manual link';
+  @override
+  String media_tracking_manual_required_count({required Object n}) =>
+      '${n} items need manual links';
+  @override
+  String get media_tracking_manual_required_hint =>
+      'These local items already have progress but are not linked to Bangumi.';
+  @override
+  String get media_tracking_no_local_history =>
+      'No local watch, reading, or game progress needs linking.';
+  @override
+  String media_tracking_more_manual_required({required Object n}) =>
+      '${n} more items need manual links';
+  @override
+  String get manga_import_hint =>
+      'Pick a manga folder, a .cbz/.zip page archive, or a .mokuro file.';
+  @override
+  String get manga_import_pick_file => 'Pick manga file';
+  @override
+  String get manga_import_pick_folder => 'Pick manga folder';
+  @override
+  String get manga_import_missing_input => 'Pick a manga file or folder first.';
+  @override
+  String get manga_import_detected_title => 'This looks like manga';
+  @override
+  String get manga_import_detected_confirm => 'Import as manga';
+  @override
+  String manga_import_detected_message({required Object name}) =>
+      '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+  @override
+  String get video_jimaku_source_loading => 'Checking subtitle availability...';
+  @override
+  String get video_jimaku_source_failed =>
+      'Could not check subtitle availability. Try searching again.';
+  @override
+  String get video_jimaku_language_unknown => 'Language not labeled';
+  @override
+  String video_jimaku_source_summary(
+          {required Object files,
+          required Object episodes,
+          required Object languages}) =>
+      '${files} subtitle files · ${episodes} episodes · ${languages}';
+  @override
+  String video_jimaku_episode_unlabeled(
+          {required Object episode, required Object count}) =>
+      'No subtitle labeled episode ${episode}; ${count} unlabeled files may still match';
+  @override
+  String video_jimaku_episode_unavailable({required Object episode}) =>
+      'No subtitle found for episode ${episode}';
+  @override
+  String video_jimaku_episode_available(
+          {required Object count, required Object languages}) =>
+      '${count} subtitles available · ${languages}';
+  @override
+  String get video_scrape_manual_match_hint =>
+      'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+  @override
+  String get video_scrape_collection_match_hint =>
+      'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+  @override
+  String get video_scrape_apply_to_collection_hint =>
+      'This writes the same cover to every episode. Leave it off unless that is intentional.';
+  @override
+  String get video_scrape_tmdb_key_empty =>
+      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+  @override
+  String get manga_online_source_disabled =>
+      'This internet source is disabled. Enable it in Sources to browse the catalog.';
+  @override
+  String get selection_web_search => 'Search the web';
+  @override
+  String get selection_web_search_unavailable => 'No app can search the web.';
+  @override
+  String get selection_share_failed => 'Could not open the share sheet.';
+  @override
+  String video_subtitle_youtube_auto_generated({required Object lang}) =>
+      '${lang} (auto-generated)';
+  @override
+  String get anki_dedup_progress_title => 'Deduplicating media';
+  @override
+  String anki_dedup_progress_scanning({required Object count}) =>
+      'Scanning media folder… (${count} files found)';
+  @override
+  String anki_dedup_progress_hashing(
+          {required Object done, required Object total}) =>
+      'Comparing same-size files… (${done} / ${total})';
+  @override
+  String anki_dedup_progress_resolving(
+          {required Object done, required Object total}) =>
+      'Processing duplicates… (${done} / ${total})';
+  @override
+  String anki_dedup_progress_freed({required Object size}) =>
+      'Freed ${size} so far';
+  @override
+  String get anki_dedup_cancelling => 'Cancelling…';
+  @override
+  String get anki_dedup_cancelled =>
+      'Deduplication cancelled; completed changes are kept.';
+  @override
+  String get anki_dedup_report_cancelled_note =>
+      'Cancelled early — the numbers below only cover what was completed.';
+  @override
+  String get anki_dedup_plan_busy_note =>
+      'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
+  @override
+  String get video_setting_subtitle_position_secondary =>
+      'Secondary subtitle position';
+  @override
+  String get dict_download_learning_language => 'Learning language';
+  @override
+  String get dict_category_bilingual => 'Bilingual';
+  @override
+  String get dict_category_monolingual => 'Monolingual';
+  @override
+  String get shortcut_action_video_hold_speed => 'Hold for temporary speed';
+  @override
+  String get handlebar_phonetic_transcriptions => 'Phonetic transcriptions';
+  @override
+  String get sync_progress_preparing => 'Preparing sync';
+  @override
+  String get sync_progress_collections => 'Syncing collections';
+  @override
+  String get sync_progress_book => 'Syncing book';
+  @override
+  String sync_progress_book_titled({required Object title}) =>
+      'Syncing ${title}';
+  @override
+  String sync_last_completed({required Object count}) =>
+      'Last sync: done (${count} channels)';
+  @override
+  String get sync_last_no_channels =>
+      'Last sync: nothing synced - no connected sync channel';
+  @override
+  String get sync_last_nothing => 'Last sync: nothing to sync';
+  @override
+  String get sync_last_auto_disabled => 'Last sync: skipped - auto sync is off';
+  @override
+  String get sync_last_cooled_down => 'Last sync: skipped - synced recently';
+  @override
+  String get sync_last_failed => 'Last sync: failed';
+  @override
+  String anime_download_no_results_detail(
+          {required Object query, required Object filters}) =>
+      'The service responded successfully but returned 0 items. Query: ${query}; filters: ${filters}. Try another title or loosen the filters.';
+  @override
+  String get anime_download_streaming_ready =>
+      'In library · download continues';
+  @override
+  String get anime_download_unfiltered => 'No Trusted filter';
+  @override
+  String get interconnect_enable_footer =>
+      'How to use: on the device that holds your library, turn on the sync server switch below; on your other device, add the address of that server to pair with it. A device can act as only one role at a time — server or client.';
+  @override
+  String get interconnect_peer_list_title => 'Added peers';
+  @override
+  String get interconnect_peer_list_empty =>
+      'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
+  @override
+  String get anki_lapis_visual_editor => 'Visual style editor';
+  @override
+  String get anki_lapis_visual_editor_hint =>
+      'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+  @override
+  String get anki_lapis_visual_front => 'Front';
+  @override
+  String get anki_lapis_visual_back => 'Back';
+  @override
+  String get anki_lapis_visual_preview => 'Lapis card preview';
+  @override
+  String get anki_lapis_visual_select_field => 'Select a field to highlight';
+  @override
+  String get anki_lapis_visual_reset_field => 'Reset field';
+  @override
+  String anki_lapis_visual_font_size({required Object percent}) =>
+      'Font size: ${percent}%';
+  @override
+  String get anki_lapis_visual_bold => 'Bold';
+  @override
+  String get anki_lapis_visual_alignment => 'Alignment';
+  @override
+  String get anki_lapis_visual_color => 'Text color';
+  @override
+  String get anki_lapis_visual_default => 'Default';
+  @override
+  String get anki_lapis_visual_advanced_css => 'Advanced CSS';
+  @override
+  String get anki_lapis_visual_field_expression => 'Word';
+  @override
+  String get anki_lapis_visual_field_reading => 'Reading';
+  @override
+  String get anki_lapis_visual_field_sentence => 'Sentence';
+  @override
+  String get anki_lapis_visual_field_primary_definition => 'Primary definition';
+  @override
+  String get anki_lapis_visual_field_glossaries => 'Other definitions';
+  @override
+  String get anki_lapis_visual_target_card_content => 'Card content';
+  @override
+  String get anki_lapis_visual_target_definition => 'Definition';
+  @override
+  String get anki_lapis_visual_target_inside_definition => 'Inside definition';
+  @override
+  String get anki_lapis_visual_field_definition_info => 'Definition indicator';
+  @override
+  String get anki_lapis_visual_field_definition_box => 'Definition box';
+  @override
+  String get anki_lapis_visual_field_definition_content => 'Whole definition';
+  @override
+  String get anki_lapis_visual_field_selected_definition =>
+      'Selected definition';
+  @override
+  String get anki_lapis_visual_field_dictionary_entry => 'Dictionary entry';
+  @override
+  String get anki_lapis_visual_field_dictionary_name => 'Dictionary name';
+  @override
+  String get anki_lapis_visual_field_definition_example => 'Definition example';
+  @override
+  String get anki_lapis_visual_line_height => 'Line height';
+  @override
+  String get anki_lapis_visual_background_color => 'Background highlight';
+  @override
+  String get anki_lapis_visual_box_layout => 'Box appearance';
+  @override
+  String get anki_lapis_visual_border_width => 'Border';
+  @override
+  String get anki_lapis_visual_border_color => 'Border color';
+  @override
+  String get anki_lapis_visual_corner_radius => 'Corner radius';
+  @override
+  String get anki_lapis_visual_padding => 'Inner spacing';
+  @override
+  String get anki_lapis_visual_margin => 'Outer spacing';
+  @override
+  String get anki_lapis_visual_field_definition_info_note =>
+      'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
+  @override
+  String get anki_lapis_visual_field_dictionary_name_note =>
+      'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
   @override
   String get library_view_manga_sources => 'Manga sources';
   @override
@@ -35871,15 +37378,15 @@ class _StringsId extends _StringsEn {
   @override
   String get mihon_extension_language_all => 'All languages';
   @override
-  String get mihon_filter_ignore => '忽略';
+  String get mihon_filter_ignore => 'Ignore';
   @override
-  String get mihon_filter_include => '包含';
+  String get mihon_filter_include => 'Include';
   @override
-  String get mihon_filter_exclude => '排除';
+  String get mihon_filter_exclude => 'Exclude';
   @override
-  String get mihon_filter_ascending => '升序';
+  String get mihon_filter_ascending => 'Ascending';
   @override
-  String get mihon_filter_descending => '降序';
+  String get mihon_filter_descending => 'Descending';
   @override
   String get mihon_add_to_bookshelf => 'Add to manga shelf';
   @override
@@ -37276,7 +38783,7 @@ class _StringsIt extends _StringsEn {
       'Controlla gli aggiornamenti dei dizionari all’avvio';
   @override
   String dict_auto_update_last({required Object time}) =>
-      'Ultimo aggiornamento: ${time}';
+      'Ultimo controllo riuscito: ${time}';
   @override
   String get dict_auto_update_never => 'Mai';
   @override
@@ -38235,8 +39742,6 @@ class _StringsIt extends _StringsEn {
   String get game_text_source_websocket => 'WebSocket';
   @override
   String get game_text_thread => 'Text thread';
-  @override
-  String get game_text_thread_all => 'All text threads';
   @override
   String game_text_thread_audio_count({required Object count}) =>
       '${count} with audio';
@@ -42197,9 +43702,6 @@ class _StringsIt extends _StringsEn {
   String get media_tracking_unauthorized =>
       'Bangumi rejected the access token. Reconnect it in settings.';
   @override
-  String get media_tracking_unlinked_hint =>
-      'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
-  @override
   String get media_tracking_open_subject => 'Open on Bangumi';
   @override
   String get media_tracking_manage_links => 'Manage links';
@@ -42244,6 +43746,280 @@ class _StringsIt extends _StringsEn {
   String get scrape_failure_detail_show => 'Show details';
   @override
   String get scrape_failure_detail_hide => 'Hide details';
+  @override
+  String get media_tracking_retry_mapping => 'Retry matching';
+  @override
+  String get media_tracking_retry_matched =>
+      'Matched and queued current progress';
+  @override
+  String get media_tracking_retry_no_match =>
+      'No match found. Try manual linking.';
+  @override
+  String get game_statistics => 'Game statistics';
+  @override
+  String get game_stat_by_game => 'By game';
+  @override
+  String get stat_clear_all_game_message =>
+      'Clear all game play time and session counts? Your game library and activity timeline are kept. This cannot be undone.';
+  @override
+  String batch_selection_stale_skipped(
+          {required Object m, required Object n}) =>
+      'Skipped ${m} of ${n} selected items that no longer exist';
+  @override
+  String get game_text_thread_unset =>
+      'No thread selected — pick one to start capturing';
+  @override
+  String get media_tracking_watched_show => 'View all watched anime';
+  @override
+  String get media_tracking_watched_title => 'Watched on Bangumi';
+  @override
+  String get media_tracking_watched_empty =>
+      'No anime is marked as watched on this Bangumi account.';
+  @override
+  String media_tracking_watched_load_failed({required Object error}) =>
+      'Could not load watched anime: ${error}';
+  @override
+  String media_tracking_watched_progress({required Object n}) =>
+      'Watched ${n} episodes';
+  @override
+  String get media_tracking_manual_required => 'Needs manual link';
+  @override
+  String media_tracking_manual_required_count({required Object n}) =>
+      '${n} items need manual links';
+  @override
+  String get media_tracking_manual_required_hint =>
+      'These local items already have progress but are not linked to Bangumi.';
+  @override
+  String get media_tracking_no_local_history =>
+      'No local watch, reading, or game progress needs linking.';
+  @override
+  String media_tracking_more_manual_required({required Object n}) =>
+      '${n} more items need manual links';
+  @override
+  String get manga_import_hint =>
+      'Pick a manga folder, a .cbz/.zip page archive, or a .mokuro file.';
+  @override
+  String get manga_import_pick_file => 'Pick manga file';
+  @override
+  String get manga_import_pick_folder => 'Pick manga folder';
+  @override
+  String get manga_import_missing_input => 'Pick a manga file or folder first.';
+  @override
+  String get manga_import_detected_title => 'This looks like manga';
+  @override
+  String get manga_import_detected_confirm => 'Import as manga';
+  @override
+  String manga_import_detected_message({required Object name}) =>
+      '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+  @override
+  String get video_jimaku_source_loading => 'Checking subtitle availability...';
+  @override
+  String get video_jimaku_source_failed =>
+      'Could not check subtitle availability. Try searching again.';
+  @override
+  String get video_jimaku_language_unknown => 'Language not labeled';
+  @override
+  String video_jimaku_source_summary(
+          {required Object files,
+          required Object episodes,
+          required Object languages}) =>
+      '${files} subtitle files · ${episodes} episodes · ${languages}';
+  @override
+  String video_jimaku_episode_unlabeled(
+          {required Object episode, required Object count}) =>
+      'No subtitle labeled episode ${episode}; ${count} unlabeled files may still match';
+  @override
+  String video_jimaku_episode_unavailable({required Object episode}) =>
+      'No subtitle found for episode ${episode}';
+  @override
+  String video_jimaku_episode_available(
+          {required Object count, required Object languages}) =>
+      '${count} subtitles available · ${languages}';
+  @override
+  String get video_scrape_manual_match_hint =>
+      'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+  @override
+  String get video_scrape_collection_match_hint =>
+      'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+  @override
+  String get video_scrape_apply_to_collection_hint =>
+      'This writes the same cover to every episode. Leave it off unless that is intentional.';
+  @override
+  String get video_scrape_tmdb_key_empty =>
+      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+  @override
+  String get manga_online_source_disabled =>
+      'This internet source is disabled. Enable it in Sources to browse the catalog.';
+  @override
+  String get selection_web_search => 'Search the web';
+  @override
+  String get selection_web_search_unavailable => 'No app can search the web.';
+  @override
+  String get selection_share_failed => 'Could not open the share sheet.';
+  @override
+  String video_subtitle_youtube_auto_generated({required Object lang}) =>
+      '${lang} (auto-generated)';
+  @override
+  String get anki_dedup_progress_title => 'Deduplicating media';
+  @override
+  String anki_dedup_progress_scanning({required Object count}) =>
+      'Scanning media folder… (${count} files found)';
+  @override
+  String anki_dedup_progress_hashing(
+          {required Object done, required Object total}) =>
+      'Comparing same-size files… (${done} / ${total})';
+  @override
+  String anki_dedup_progress_resolving(
+          {required Object done, required Object total}) =>
+      'Processing duplicates… (${done} / ${total})';
+  @override
+  String anki_dedup_progress_freed({required Object size}) =>
+      'Freed ${size} so far';
+  @override
+  String get anki_dedup_cancelling => 'Cancelling…';
+  @override
+  String get anki_dedup_cancelled =>
+      'Deduplication cancelled; completed changes are kept.';
+  @override
+  String get anki_dedup_report_cancelled_note =>
+      'Cancelled early — the numbers below only cover what was completed.';
+  @override
+  String get anki_dedup_plan_busy_note =>
+      'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
+  @override
+  String get video_setting_subtitle_position_secondary =>
+      'Secondary subtitle position';
+  @override
+  String get dict_download_learning_language => 'Learning language';
+  @override
+  String get dict_category_bilingual => 'Bilingual';
+  @override
+  String get dict_category_monolingual => 'Monolingual';
+  @override
+  String get shortcut_action_video_hold_speed => 'Hold for temporary speed';
+  @override
+  String get handlebar_phonetic_transcriptions => 'Phonetic transcriptions';
+  @override
+  String get sync_progress_preparing => 'Preparing sync';
+  @override
+  String get sync_progress_collections => 'Syncing collections';
+  @override
+  String get sync_progress_book => 'Syncing book';
+  @override
+  String sync_progress_book_titled({required Object title}) =>
+      'Syncing ${title}';
+  @override
+  String sync_last_completed({required Object count}) =>
+      'Last sync: done (${count} channels)';
+  @override
+  String get sync_last_no_channels =>
+      'Last sync: nothing synced - no connected sync channel';
+  @override
+  String get sync_last_nothing => 'Last sync: nothing to sync';
+  @override
+  String get sync_last_auto_disabled => 'Last sync: skipped - auto sync is off';
+  @override
+  String get sync_last_cooled_down => 'Last sync: skipped - synced recently';
+  @override
+  String get sync_last_failed => 'Last sync: failed';
+  @override
+  String anime_download_no_results_detail(
+          {required Object query, required Object filters}) =>
+      'The service responded successfully but returned 0 items. Query: ${query}; filters: ${filters}. Try another title or loosen the filters.';
+  @override
+  String get anime_download_streaming_ready =>
+      'In library · download continues';
+  @override
+  String get anime_download_unfiltered => 'No Trusted filter';
+  @override
+  String get interconnect_enable_footer =>
+      'How to use: on the device that holds your library, turn on the sync server switch below; on your other device, add the address of that server to pair with it. A device can act as only one role at a time — server or client.';
+  @override
+  String get interconnect_peer_list_title => 'Added peers';
+  @override
+  String get interconnect_peer_list_empty =>
+      'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
+  @override
+  String get anki_lapis_visual_editor => 'Visual style editor';
+  @override
+  String get anki_lapis_visual_editor_hint =>
+      'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+  @override
+  String get anki_lapis_visual_front => 'Front';
+  @override
+  String get anki_lapis_visual_back => 'Back';
+  @override
+  String get anki_lapis_visual_preview => 'Lapis card preview';
+  @override
+  String get anki_lapis_visual_select_field => 'Select a field to highlight';
+  @override
+  String get anki_lapis_visual_reset_field => 'Reset field';
+  @override
+  String anki_lapis_visual_font_size({required Object percent}) =>
+      'Font size: ${percent}%';
+  @override
+  String get anki_lapis_visual_bold => 'Bold';
+  @override
+  String get anki_lapis_visual_alignment => 'Alignment';
+  @override
+  String get anki_lapis_visual_color => 'Text color';
+  @override
+  String get anki_lapis_visual_default => 'Default';
+  @override
+  String get anki_lapis_visual_advanced_css => 'Advanced CSS';
+  @override
+  String get anki_lapis_visual_field_expression => 'Word';
+  @override
+  String get anki_lapis_visual_field_reading => 'Reading';
+  @override
+  String get anki_lapis_visual_field_sentence => 'Sentence';
+  @override
+  String get anki_lapis_visual_field_primary_definition => 'Primary definition';
+  @override
+  String get anki_lapis_visual_field_glossaries => 'Other definitions';
+  @override
+  String get anki_lapis_visual_target_card_content => 'Card content';
+  @override
+  String get anki_lapis_visual_target_definition => 'Definition';
+  @override
+  String get anki_lapis_visual_target_inside_definition => 'Inside definition';
+  @override
+  String get anki_lapis_visual_field_definition_info => 'Definition indicator';
+  @override
+  String get anki_lapis_visual_field_definition_box => 'Definition box';
+  @override
+  String get anki_lapis_visual_field_definition_content => 'Whole definition';
+  @override
+  String get anki_lapis_visual_field_selected_definition =>
+      'Selected definition';
+  @override
+  String get anki_lapis_visual_field_dictionary_entry => 'Dictionary entry';
+  @override
+  String get anki_lapis_visual_field_dictionary_name => 'Dictionary name';
+  @override
+  String get anki_lapis_visual_field_definition_example => 'Definition example';
+  @override
+  String get anki_lapis_visual_line_height => 'Line height';
+  @override
+  String get anki_lapis_visual_background_color => 'Background highlight';
+  @override
+  String get anki_lapis_visual_box_layout => 'Box appearance';
+  @override
+  String get anki_lapis_visual_border_width => 'Border';
+  @override
+  String get anki_lapis_visual_border_color => 'Border color';
+  @override
+  String get anki_lapis_visual_corner_radius => 'Corner radius';
+  @override
+  String get anki_lapis_visual_padding => 'Inner spacing';
+  @override
+  String get anki_lapis_visual_margin => 'Outer spacing';
+  @override
+  String get anki_lapis_visual_field_definition_info_note =>
+      'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
+  @override
+  String get anki_lapis_visual_field_dictionary_name_note =>
+      'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
   @override
   String get library_view_manga_sources => 'Manga sources';
   @override
@@ -42316,15 +44092,15 @@ class _StringsIt extends _StringsEn {
   @override
   String get mihon_extension_language_all => 'All languages';
   @override
-  String get mihon_filter_ignore => '忽略';
+  String get mihon_filter_ignore => 'Ignore';
   @override
-  String get mihon_filter_include => '包含';
+  String get mihon_filter_include => 'Include';
   @override
-  String get mihon_filter_exclude => '排除';
+  String get mihon_filter_exclude => 'Exclude';
   @override
-  String get mihon_filter_ascending => '升序';
+  String get mihon_filter_ascending => 'Ascending';
   @override
-  String get mihon_filter_descending => '降序';
+  String get mihon_filter_descending => 'Descending';
   @override
   String get mihon_add_to_bookshelf => 'Add to manga shelf';
   @override
@@ -43691,7 +45467,7 @@ class _StringsJa extends _StringsEn {
   @override
   String get dict_auto_update_hint => '起動時に辞書の更新を確認';
   @override
-  String dict_auto_update_last({required Object time}) => '前回の更新: ${time}';
+  String dict_auto_update_last({required Object time}) => '前回の確認成功: ${time}';
   @override
   String get dict_auto_update_never => 'なし';
   @override
@@ -44625,8 +46401,6 @@ class _StringsJa extends _StringsEn {
   String get game_text_source_websocket => 'WebSocket';
   @override
   String get game_text_thread => 'Text thread';
-  @override
-  String get game_text_thread_all => 'All text threads';
   @override
   String game_text_thread_audio_count({required Object count}) =>
       '${count} with audio';
@@ -48459,9 +50233,6 @@ class _StringsJa extends _StringsEn {
   String get media_tracking_unauthorized =>
       'Bangumi rejected the access token. Reconnect it in settings.';
   @override
-  String get media_tracking_unlinked_hint =>
-      'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
-  @override
   String get media_tracking_open_subject => 'Open on Bangumi';
   @override
   String get media_tracking_manage_links => 'Manage links';
@@ -48506,6 +50277,280 @@ class _StringsJa extends _StringsEn {
   String get scrape_failure_detail_show => 'Show details';
   @override
   String get scrape_failure_detail_hide => 'Hide details';
+  @override
+  String get media_tracking_retry_mapping => 'Retry matching';
+  @override
+  String get media_tracking_retry_matched =>
+      'Matched and queued current progress';
+  @override
+  String get media_tracking_retry_no_match =>
+      'No match found. Try manual linking.';
+  @override
+  String get game_statistics => 'Game statistics';
+  @override
+  String get game_stat_by_game => 'By game';
+  @override
+  String get stat_clear_all_game_message =>
+      'Clear all game play time and session counts? Your game library and activity timeline are kept. This cannot be undone.';
+  @override
+  String batch_selection_stale_skipped(
+          {required Object m, required Object n}) =>
+      'Skipped ${m} of ${n} selected items that no longer exist';
+  @override
+  String get game_text_thread_unset =>
+      'No thread selected — pick one to start capturing';
+  @override
+  String get media_tracking_watched_show => 'View all watched anime';
+  @override
+  String get media_tracking_watched_title => 'Watched on Bangumi';
+  @override
+  String get media_tracking_watched_empty =>
+      'No anime is marked as watched on this Bangumi account.';
+  @override
+  String media_tracking_watched_load_failed({required Object error}) =>
+      'Could not load watched anime: ${error}';
+  @override
+  String media_tracking_watched_progress({required Object n}) =>
+      'Watched ${n} episodes';
+  @override
+  String get media_tracking_manual_required => 'Needs manual link';
+  @override
+  String media_tracking_manual_required_count({required Object n}) =>
+      '${n} items need manual links';
+  @override
+  String get media_tracking_manual_required_hint =>
+      'These local items already have progress but are not linked to Bangumi.';
+  @override
+  String get media_tracking_no_local_history =>
+      'No local watch, reading, or game progress needs linking.';
+  @override
+  String media_tracking_more_manual_required({required Object n}) =>
+      '${n} more items need manual links';
+  @override
+  String get manga_import_hint =>
+      'Pick a manga folder, a .cbz/.zip page archive, or a .mokuro file.';
+  @override
+  String get manga_import_pick_file => 'Pick manga file';
+  @override
+  String get manga_import_pick_folder => 'Pick manga folder';
+  @override
+  String get manga_import_missing_input => 'Pick a manga file or folder first.';
+  @override
+  String get manga_import_detected_title => 'This looks like manga';
+  @override
+  String get manga_import_detected_confirm => 'Import as manga';
+  @override
+  String manga_import_detected_message({required Object name}) =>
+      '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+  @override
+  String get video_jimaku_source_loading => 'Checking subtitle availability...';
+  @override
+  String get video_jimaku_source_failed =>
+      'Could not check subtitle availability. Try searching again.';
+  @override
+  String get video_jimaku_language_unknown => 'Language not labeled';
+  @override
+  String video_jimaku_source_summary(
+          {required Object files,
+          required Object episodes,
+          required Object languages}) =>
+      '${files} subtitle files · ${episodes} episodes · ${languages}';
+  @override
+  String video_jimaku_episode_unlabeled(
+          {required Object episode, required Object count}) =>
+      'No subtitle labeled episode ${episode}; ${count} unlabeled files may still match';
+  @override
+  String video_jimaku_episode_unavailable({required Object episode}) =>
+      'No subtitle found for episode ${episode}';
+  @override
+  String video_jimaku_episode_available(
+          {required Object count, required Object languages}) =>
+      '${count} subtitles available · ${languages}';
+  @override
+  String get video_scrape_manual_match_hint =>
+      'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+  @override
+  String get video_scrape_collection_match_hint =>
+      'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+  @override
+  String get video_scrape_apply_to_collection_hint =>
+      'This writes the same cover to every episode. Leave it off unless that is intentional.';
+  @override
+  String get video_scrape_tmdb_key_empty =>
+      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+  @override
+  String get manga_online_source_disabled =>
+      'This internet source is disabled. Enable it in Sources to browse the catalog.';
+  @override
+  String get selection_web_search => 'Search the web';
+  @override
+  String get selection_web_search_unavailable => 'No app can search the web.';
+  @override
+  String get selection_share_failed => 'Could not open the share sheet.';
+  @override
+  String video_subtitle_youtube_auto_generated({required Object lang}) =>
+      '${lang} (auto-generated)';
+  @override
+  String get anki_dedup_progress_title => 'Deduplicating media';
+  @override
+  String anki_dedup_progress_scanning({required Object count}) =>
+      'Scanning media folder… (${count} files found)';
+  @override
+  String anki_dedup_progress_hashing(
+          {required Object done, required Object total}) =>
+      'Comparing same-size files… (${done} / ${total})';
+  @override
+  String anki_dedup_progress_resolving(
+          {required Object done, required Object total}) =>
+      'Processing duplicates… (${done} / ${total})';
+  @override
+  String anki_dedup_progress_freed({required Object size}) =>
+      'Freed ${size} so far';
+  @override
+  String get anki_dedup_cancelling => 'Cancelling…';
+  @override
+  String get anki_dedup_cancelled =>
+      'Deduplication cancelled; completed changes are kept.';
+  @override
+  String get anki_dedup_report_cancelled_note =>
+      'Cancelled early — the numbers below only cover what was completed.';
+  @override
+  String get anki_dedup_plan_busy_note =>
+      'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
+  @override
+  String get video_setting_subtitle_position_secondary =>
+      'Secondary subtitle position';
+  @override
+  String get dict_download_learning_language => 'Learning language';
+  @override
+  String get dict_category_bilingual => 'Bilingual';
+  @override
+  String get dict_category_monolingual => 'Monolingual';
+  @override
+  String get shortcut_action_video_hold_speed => 'Hold for temporary speed';
+  @override
+  String get handlebar_phonetic_transcriptions => 'Phonetic transcriptions';
+  @override
+  String get sync_progress_preparing => 'Preparing sync';
+  @override
+  String get sync_progress_collections => 'Syncing collections';
+  @override
+  String get sync_progress_book => 'Syncing book';
+  @override
+  String sync_progress_book_titled({required Object title}) =>
+      'Syncing ${title}';
+  @override
+  String sync_last_completed({required Object count}) =>
+      'Last sync: done (${count} channels)';
+  @override
+  String get sync_last_no_channels =>
+      'Last sync: nothing synced - no connected sync channel';
+  @override
+  String get sync_last_nothing => 'Last sync: nothing to sync';
+  @override
+  String get sync_last_auto_disabled => 'Last sync: skipped - auto sync is off';
+  @override
+  String get sync_last_cooled_down => 'Last sync: skipped - synced recently';
+  @override
+  String get sync_last_failed => 'Last sync: failed';
+  @override
+  String anime_download_no_results_detail(
+          {required Object query, required Object filters}) =>
+      'The service responded successfully but returned 0 items. Query: ${query}; filters: ${filters}. Try another title or loosen the filters.';
+  @override
+  String get anime_download_streaming_ready =>
+      'In library · download continues';
+  @override
+  String get anime_download_unfiltered => 'No Trusted filter';
+  @override
+  String get interconnect_enable_footer =>
+      'How to use: on the device that holds your library, turn on the sync server switch below; on your other device, add the address of that server to pair with it. A device can act as only one role at a time — server or client.';
+  @override
+  String get interconnect_peer_list_title => 'Added peers';
+  @override
+  String get interconnect_peer_list_empty =>
+      'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
+  @override
+  String get anki_lapis_visual_editor => 'Visual style editor';
+  @override
+  String get anki_lapis_visual_editor_hint =>
+      'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+  @override
+  String get anki_lapis_visual_front => 'Front';
+  @override
+  String get anki_lapis_visual_back => 'Back';
+  @override
+  String get anki_lapis_visual_preview => 'Lapis card preview';
+  @override
+  String get anki_lapis_visual_select_field => 'Select a field to highlight';
+  @override
+  String get anki_lapis_visual_reset_field => 'Reset field';
+  @override
+  String anki_lapis_visual_font_size({required Object percent}) =>
+      'Font size: ${percent}%';
+  @override
+  String get anki_lapis_visual_bold => 'Bold';
+  @override
+  String get anki_lapis_visual_alignment => 'Alignment';
+  @override
+  String get anki_lapis_visual_color => 'Text color';
+  @override
+  String get anki_lapis_visual_default => 'Default';
+  @override
+  String get anki_lapis_visual_advanced_css => 'Advanced CSS';
+  @override
+  String get anki_lapis_visual_field_expression => 'Word';
+  @override
+  String get anki_lapis_visual_field_reading => 'Reading';
+  @override
+  String get anki_lapis_visual_field_sentence => 'Sentence';
+  @override
+  String get anki_lapis_visual_field_primary_definition => 'Primary definition';
+  @override
+  String get anki_lapis_visual_field_glossaries => 'Other definitions';
+  @override
+  String get anki_lapis_visual_target_card_content => 'Card content';
+  @override
+  String get anki_lapis_visual_target_definition => 'Definition';
+  @override
+  String get anki_lapis_visual_target_inside_definition => 'Inside definition';
+  @override
+  String get anki_lapis_visual_field_definition_info => 'Definition indicator';
+  @override
+  String get anki_lapis_visual_field_definition_box => 'Definition box';
+  @override
+  String get anki_lapis_visual_field_definition_content => 'Whole definition';
+  @override
+  String get anki_lapis_visual_field_selected_definition =>
+      'Selected definition';
+  @override
+  String get anki_lapis_visual_field_dictionary_entry => 'Dictionary entry';
+  @override
+  String get anki_lapis_visual_field_dictionary_name => 'Dictionary name';
+  @override
+  String get anki_lapis_visual_field_definition_example => 'Definition example';
+  @override
+  String get anki_lapis_visual_line_height => 'Line height';
+  @override
+  String get anki_lapis_visual_background_color => 'Background highlight';
+  @override
+  String get anki_lapis_visual_box_layout => 'Box appearance';
+  @override
+  String get anki_lapis_visual_border_width => 'Border';
+  @override
+  String get anki_lapis_visual_border_color => 'Border color';
+  @override
+  String get anki_lapis_visual_corner_radius => 'Corner radius';
+  @override
+  String get anki_lapis_visual_padding => 'Inner spacing';
+  @override
+  String get anki_lapis_visual_margin => 'Outer spacing';
+  @override
+  String get anki_lapis_visual_field_definition_info_note =>
+      'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
+  @override
+  String get anki_lapis_visual_field_dictionary_name_note =>
+      'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
   @override
   String get library_view_manga_sources => 'Manga sources';
   @override
@@ -48578,15 +50623,15 @@ class _StringsJa extends _StringsEn {
   @override
   String get mihon_extension_language_all => 'All languages';
   @override
-  String get mihon_filter_ignore => '忽略';
+  String get mihon_filter_ignore => 'Ignore';
   @override
-  String get mihon_filter_include => '包含';
+  String get mihon_filter_include => 'Include';
   @override
-  String get mihon_filter_exclude => '排除';
+  String get mihon_filter_exclude => 'Exclude';
   @override
-  String get mihon_filter_ascending => '升序';
+  String get mihon_filter_ascending => 'Ascending';
   @override
-  String get mihon_filter_descending => '降序';
+  String get mihon_filter_descending => 'Descending';
   @override
   String get mihon_add_to_bookshelf => 'Add to manga shelf';
   @override
@@ -49955,7 +52000,7 @@ class _StringsKo extends _StringsEn {
   @override
   String get dict_auto_update_hint => '실행 시 사전 업데이트 확인';
   @override
-  String dict_auto_update_last({required Object time}) => '마지막 업데이트: ${time}';
+  String dict_auto_update_last({required Object time}) => '마지막 확인 성공: ${time}';
   @override
   String get dict_auto_update_never => '없음';
   @override
@@ -50887,8 +52932,6 @@ class _StringsKo extends _StringsEn {
   String get game_text_source_websocket => 'WebSocket';
   @override
   String get game_text_thread => 'Text thread';
-  @override
-  String get game_text_thread_all => 'All text threads';
   @override
   String game_text_thread_audio_count({required Object count}) =>
       '${count} with audio';
@@ -54723,9 +56766,6 @@ class _StringsKo extends _StringsEn {
   String get media_tracking_unauthorized =>
       'Bangumi rejected the access token. Reconnect it in settings.';
   @override
-  String get media_tracking_unlinked_hint =>
-      'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
-  @override
   String get media_tracking_open_subject => 'Open on Bangumi';
   @override
   String get media_tracking_manage_links => 'Manage links';
@@ -54770,6 +56810,280 @@ class _StringsKo extends _StringsEn {
   String get scrape_failure_detail_show => 'Show details';
   @override
   String get scrape_failure_detail_hide => 'Hide details';
+  @override
+  String get media_tracking_retry_mapping => 'Retry matching';
+  @override
+  String get media_tracking_retry_matched =>
+      'Matched and queued current progress';
+  @override
+  String get media_tracking_retry_no_match =>
+      'No match found. Try manual linking.';
+  @override
+  String get game_statistics => 'Game statistics';
+  @override
+  String get game_stat_by_game => 'By game';
+  @override
+  String get stat_clear_all_game_message =>
+      'Clear all game play time and session counts? Your game library and activity timeline are kept. This cannot be undone.';
+  @override
+  String batch_selection_stale_skipped(
+          {required Object m, required Object n}) =>
+      'Skipped ${m} of ${n} selected items that no longer exist';
+  @override
+  String get game_text_thread_unset =>
+      'No thread selected — pick one to start capturing';
+  @override
+  String get media_tracking_watched_show => 'View all watched anime';
+  @override
+  String get media_tracking_watched_title => 'Watched on Bangumi';
+  @override
+  String get media_tracking_watched_empty =>
+      'No anime is marked as watched on this Bangumi account.';
+  @override
+  String media_tracking_watched_load_failed({required Object error}) =>
+      'Could not load watched anime: ${error}';
+  @override
+  String media_tracking_watched_progress({required Object n}) =>
+      'Watched ${n} episodes';
+  @override
+  String get media_tracking_manual_required => 'Needs manual link';
+  @override
+  String media_tracking_manual_required_count({required Object n}) =>
+      '${n} items need manual links';
+  @override
+  String get media_tracking_manual_required_hint =>
+      'These local items already have progress but are not linked to Bangumi.';
+  @override
+  String get media_tracking_no_local_history =>
+      'No local watch, reading, or game progress needs linking.';
+  @override
+  String media_tracking_more_manual_required({required Object n}) =>
+      '${n} more items need manual links';
+  @override
+  String get manga_import_hint =>
+      'Pick a manga folder, a .cbz/.zip page archive, or a .mokuro file.';
+  @override
+  String get manga_import_pick_file => 'Pick manga file';
+  @override
+  String get manga_import_pick_folder => 'Pick manga folder';
+  @override
+  String get manga_import_missing_input => 'Pick a manga file or folder first.';
+  @override
+  String get manga_import_detected_title => 'This looks like manga';
+  @override
+  String get manga_import_detected_confirm => 'Import as manga';
+  @override
+  String manga_import_detected_message({required Object name}) =>
+      '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+  @override
+  String get video_jimaku_source_loading => 'Checking subtitle availability...';
+  @override
+  String get video_jimaku_source_failed =>
+      'Could not check subtitle availability. Try searching again.';
+  @override
+  String get video_jimaku_language_unknown => 'Language not labeled';
+  @override
+  String video_jimaku_source_summary(
+          {required Object files,
+          required Object episodes,
+          required Object languages}) =>
+      '${files} subtitle files · ${episodes} episodes · ${languages}';
+  @override
+  String video_jimaku_episode_unlabeled(
+          {required Object episode, required Object count}) =>
+      'No subtitle labeled episode ${episode}; ${count} unlabeled files may still match';
+  @override
+  String video_jimaku_episode_unavailable({required Object episode}) =>
+      'No subtitle found for episode ${episode}';
+  @override
+  String video_jimaku_episode_available(
+          {required Object count, required Object languages}) =>
+      '${count} subtitles available · ${languages}';
+  @override
+  String get video_scrape_manual_match_hint =>
+      'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+  @override
+  String get video_scrape_collection_match_hint =>
+      'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+  @override
+  String get video_scrape_apply_to_collection_hint =>
+      'This writes the same cover to every episode. Leave it off unless that is intentional.';
+  @override
+  String get video_scrape_tmdb_key_empty =>
+      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+  @override
+  String get manga_online_source_disabled =>
+      'This internet source is disabled. Enable it in Sources to browse the catalog.';
+  @override
+  String get selection_web_search => 'Search the web';
+  @override
+  String get selection_web_search_unavailable => 'No app can search the web.';
+  @override
+  String get selection_share_failed => 'Could not open the share sheet.';
+  @override
+  String video_subtitle_youtube_auto_generated({required Object lang}) =>
+      '${lang} (auto-generated)';
+  @override
+  String get anki_dedup_progress_title => 'Deduplicating media';
+  @override
+  String anki_dedup_progress_scanning({required Object count}) =>
+      'Scanning media folder… (${count} files found)';
+  @override
+  String anki_dedup_progress_hashing(
+          {required Object done, required Object total}) =>
+      'Comparing same-size files… (${done} / ${total})';
+  @override
+  String anki_dedup_progress_resolving(
+          {required Object done, required Object total}) =>
+      'Processing duplicates… (${done} / ${total})';
+  @override
+  String anki_dedup_progress_freed({required Object size}) =>
+      'Freed ${size} so far';
+  @override
+  String get anki_dedup_cancelling => 'Cancelling…';
+  @override
+  String get anki_dedup_cancelled =>
+      'Deduplication cancelled; completed changes are kept.';
+  @override
+  String get anki_dedup_report_cancelled_note =>
+      'Cancelled early — the numbers below only cover what was completed.';
+  @override
+  String get anki_dedup_plan_busy_note =>
+      'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
+  @override
+  String get video_setting_subtitle_position_secondary =>
+      'Secondary subtitle position';
+  @override
+  String get dict_download_learning_language => 'Learning language';
+  @override
+  String get dict_category_bilingual => 'Bilingual';
+  @override
+  String get dict_category_monolingual => 'Monolingual';
+  @override
+  String get shortcut_action_video_hold_speed => 'Hold for temporary speed';
+  @override
+  String get handlebar_phonetic_transcriptions => 'Phonetic transcriptions';
+  @override
+  String get sync_progress_preparing => 'Preparing sync';
+  @override
+  String get sync_progress_collections => 'Syncing collections';
+  @override
+  String get sync_progress_book => 'Syncing book';
+  @override
+  String sync_progress_book_titled({required Object title}) =>
+      'Syncing ${title}';
+  @override
+  String sync_last_completed({required Object count}) =>
+      'Last sync: done (${count} channels)';
+  @override
+  String get sync_last_no_channels =>
+      'Last sync: nothing synced - no connected sync channel';
+  @override
+  String get sync_last_nothing => 'Last sync: nothing to sync';
+  @override
+  String get sync_last_auto_disabled => 'Last sync: skipped - auto sync is off';
+  @override
+  String get sync_last_cooled_down => 'Last sync: skipped - synced recently';
+  @override
+  String get sync_last_failed => 'Last sync: failed';
+  @override
+  String anime_download_no_results_detail(
+          {required Object query, required Object filters}) =>
+      'The service responded successfully but returned 0 items. Query: ${query}; filters: ${filters}. Try another title or loosen the filters.';
+  @override
+  String get anime_download_streaming_ready =>
+      'In library · download continues';
+  @override
+  String get anime_download_unfiltered => 'No Trusted filter';
+  @override
+  String get interconnect_enable_footer =>
+      'How to use: on the device that holds your library, turn on the sync server switch below; on your other device, add the address of that server to pair with it. A device can act as only one role at a time — server or client.';
+  @override
+  String get interconnect_peer_list_title => 'Added peers';
+  @override
+  String get interconnect_peer_list_empty =>
+      'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
+  @override
+  String get anki_lapis_visual_editor => 'Visual style editor';
+  @override
+  String get anki_lapis_visual_editor_hint =>
+      'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+  @override
+  String get anki_lapis_visual_front => 'Front';
+  @override
+  String get anki_lapis_visual_back => 'Back';
+  @override
+  String get anki_lapis_visual_preview => 'Lapis card preview';
+  @override
+  String get anki_lapis_visual_select_field => 'Select a field to highlight';
+  @override
+  String get anki_lapis_visual_reset_field => 'Reset field';
+  @override
+  String anki_lapis_visual_font_size({required Object percent}) =>
+      'Font size: ${percent}%';
+  @override
+  String get anki_lapis_visual_bold => 'Bold';
+  @override
+  String get anki_lapis_visual_alignment => 'Alignment';
+  @override
+  String get anki_lapis_visual_color => 'Text color';
+  @override
+  String get anki_lapis_visual_default => 'Default';
+  @override
+  String get anki_lapis_visual_advanced_css => 'Advanced CSS';
+  @override
+  String get anki_lapis_visual_field_expression => 'Word';
+  @override
+  String get anki_lapis_visual_field_reading => 'Reading';
+  @override
+  String get anki_lapis_visual_field_sentence => 'Sentence';
+  @override
+  String get anki_lapis_visual_field_primary_definition => 'Primary definition';
+  @override
+  String get anki_lapis_visual_field_glossaries => 'Other definitions';
+  @override
+  String get anki_lapis_visual_target_card_content => 'Card content';
+  @override
+  String get anki_lapis_visual_target_definition => 'Definition';
+  @override
+  String get anki_lapis_visual_target_inside_definition => 'Inside definition';
+  @override
+  String get anki_lapis_visual_field_definition_info => 'Definition indicator';
+  @override
+  String get anki_lapis_visual_field_definition_box => 'Definition box';
+  @override
+  String get anki_lapis_visual_field_definition_content => 'Whole definition';
+  @override
+  String get anki_lapis_visual_field_selected_definition =>
+      'Selected definition';
+  @override
+  String get anki_lapis_visual_field_dictionary_entry => 'Dictionary entry';
+  @override
+  String get anki_lapis_visual_field_dictionary_name => 'Dictionary name';
+  @override
+  String get anki_lapis_visual_field_definition_example => 'Definition example';
+  @override
+  String get anki_lapis_visual_line_height => 'Line height';
+  @override
+  String get anki_lapis_visual_background_color => 'Background highlight';
+  @override
+  String get anki_lapis_visual_box_layout => 'Box appearance';
+  @override
+  String get anki_lapis_visual_border_width => 'Border';
+  @override
+  String get anki_lapis_visual_border_color => 'Border color';
+  @override
+  String get anki_lapis_visual_corner_radius => 'Corner radius';
+  @override
+  String get anki_lapis_visual_padding => 'Inner spacing';
+  @override
+  String get anki_lapis_visual_margin => 'Outer spacing';
+  @override
+  String get anki_lapis_visual_field_definition_info_note =>
+      'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
+  @override
+  String get anki_lapis_visual_field_dictionary_name_note =>
+      'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
   @override
   String get library_view_manga_sources => 'Manga sources';
   @override
@@ -54842,15 +57156,15 @@ class _StringsKo extends _StringsEn {
   @override
   String get mihon_extension_language_all => 'All languages';
   @override
-  String get mihon_filter_ignore => '忽略';
+  String get mihon_filter_ignore => 'Ignore';
   @override
-  String get mihon_filter_include => '包含';
+  String get mihon_filter_include => 'Include';
   @override
-  String get mihon_filter_exclude => '排除';
+  String get mihon_filter_exclude => 'Exclude';
   @override
-  String get mihon_filter_ascending => '升序';
+  String get mihon_filter_ascending => 'Ascending';
   @override
-  String get mihon_filter_descending => '降序';
+  String get mihon_filter_descending => 'Descending';
   @override
   String get mihon_add_to_bookshelf => 'Add to manga shelf';
   @override
@@ -56245,7 +58559,7 @@ class _StringsNl extends _StringsEn {
       'Bij het opstarten controleren op woordenboekupdates';
   @override
   String dict_auto_update_last({required Object time}) =>
-      'Laatste update: ${time}';
+      'Laatste geslaagde controle: ${time}';
   @override
   String get dict_auto_update_never => 'Nooit';
   @override
@@ -57200,8 +59514,6 @@ class _StringsNl extends _StringsEn {
   String get game_text_source_websocket => 'WebSocket';
   @override
   String get game_text_thread => 'Text thread';
-  @override
-  String get game_text_thread_all => 'All text threads';
   @override
   String game_text_thread_audio_count({required Object count}) =>
       '${count} with audio';
@@ -61148,9 +63460,6 @@ class _StringsNl extends _StringsEn {
   String get media_tracking_unauthorized =>
       'Bangumi rejected the access token. Reconnect it in settings.';
   @override
-  String get media_tracking_unlinked_hint =>
-      'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
-  @override
   String get media_tracking_open_subject => 'Open on Bangumi';
   @override
   String get media_tracking_manage_links => 'Manage links';
@@ -61195,6 +63504,280 @@ class _StringsNl extends _StringsEn {
   String get scrape_failure_detail_show => 'Show details';
   @override
   String get scrape_failure_detail_hide => 'Hide details';
+  @override
+  String get media_tracking_retry_mapping => 'Retry matching';
+  @override
+  String get media_tracking_retry_matched =>
+      'Matched and queued current progress';
+  @override
+  String get media_tracking_retry_no_match =>
+      'No match found. Try manual linking.';
+  @override
+  String get game_statistics => 'Game statistics';
+  @override
+  String get game_stat_by_game => 'By game';
+  @override
+  String get stat_clear_all_game_message =>
+      'Clear all game play time and session counts? Your game library and activity timeline are kept. This cannot be undone.';
+  @override
+  String batch_selection_stale_skipped(
+          {required Object m, required Object n}) =>
+      'Skipped ${m} of ${n} selected items that no longer exist';
+  @override
+  String get game_text_thread_unset =>
+      'No thread selected — pick one to start capturing';
+  @override
+  String get media_tracking_watched_show => 'View all watched anime';
+  @override
+  String get media_tracking_watched_title => 'Watched on Bangumi';
+  @override
+  String get media_tracking_watched_empty =>
+      'No anime is marked as watched on this Bangumi account.';
+  @override
+  String media_tracking_watched_load_failed({required Object error}) =>
+      'Could not load watched anime: ${error}';
+  @override
+  String media_tracking_watched_progress({required Object n}) =>
+      'Watched ${n} episodes';
+  @override
+  String get media_tracking_manual_required => 'Needs manual link';
+  @override
+  String media_tracking_manual_required_count({required Object n}) =>
+      '${n} items need manual links';
+  @override
+  String get media_tracking_manual_required_hint =>
+      'These local items already have progress but are not linked to Bangumi.';
+  @override
+  String get media_tracking_no_local_history =>
+      'No local watch, reading, or game progress needs linking.';
+  @override
+  String media_tracking_more_manual_required({required Object n}) =>
+      '${n} more items need manual links';
+  @override
+  String get manga_import_hint =>
+      'Pick a manga folder, a .cbz/.zip page archive, or a .mokuro file.';
+  @override
+  String get manga_import_pick_file => 'Pick manga file';
+  @override
+  String get manga_import_pick_folder => 'Pick manga folder';
+  @override
+  String get manga_import_missing_input => 'Pick a manga file or folder first.';
+  @override
+  String get manga_import_detected_title => 'This looks like manga';
+  @override
+  String get manga_import_detected_confirm => 'Import as manga';
+  @override
+  String manga_import_detected_message({required Object name}) =>
+      '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+  @override
+  String get video_jimaku_source_loading => 'Checking subtitle availability...';
+  @override
+  String get video_jimaku_source_failed =>
+      'Could not check subtitle availability. Try searching again.';
+  @override
+  String get video_jimaku_language_unknown => 'Language not labeled';
+  @override
+  String video_jimaku_source_summary(
+          {required Object files,
+          required Object episodes,
+          required Object languages}) =>
+      '${files} subtitle files · ${episodes} episodes · ${languages}';
+  @override
+  String video_jimaku_episode_unlabeled(
+          {required Object episode, required Object count}) =>
+      'No subtitle labeled episode ${episode}; ${count} unlabeled files may still match';
+  @override
+  String video_jimaku_episode_unavailable({required Object episode}) =>
+      'No subtitle found for episode ${episode}';
+  @override
+  String video_jimaku_episode_available(
+          {required Object count, required Object languages}) =>
+      '${count} subtitles available · ${languages}';
+  @override
+  String get video_scrape_manual_match_hint =>
+      'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+  @override
+  String get video_scrape_collection_match_hint =>
+      'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+  @override
+  String get video_scrape_apply_to_collection_hint =>
+      'This writes the same cover to every episode. Leave it off unless that is intentional.';
+  @override
+  String get video_scrape_tmdb_key_empty =>
+      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+  @override
+  String get manga_online_source_disabled =>
+      'This internet source is disabled. Enable it in Sources to browse the catalog.';
+  @override
+  String get selection_web_search => 'Search the web';
+  @override
+  String get selection_web_search_unavailable => 'No app can search the web.';
+  @override
+  String get selection_share_failed => 'Could not open the share sheet.';
+  @override
+  String video_subtitle_youtube_auto_generated({required Object lang}) =>
+      '${lang} (auto-generated)';
+  @override
+  String get anki_dedup_progress_title => 'Deduplicating media';
+  @override
+  String anki_dedup_progress_scanning({required Object count}) =>
+      'Scanning media folder… (${count} files found)';
+  @override
+  String anki_dedup_progress_hashing(
+          {required Object done, required Object total}) =>
+      'Comparing same-size files… (${done} / ${total})';
+  @override
+  String anki_dedup_progress_resolving(
+          {required Object done, required Object total}) =>
+      'Processing duplicates… (${done} / ${total})';
+  @override
+  String anki_dedup_progress_freed({required Object size}) =>
+      'Freed ${size} so far';
+  @override
+  String get anki_dedup_cancelling => 'Cancelling…';
+  @override
+  String get anki_dedup_cancelled =>
+      'Deduplication cancelled; completed changes are kept.';
+  @override
+  String get anki_dedup_report_cancelled_note =>
+      'Cancelled early — the numbers below only cover what was completed.';
+  @override
+  String get anki_dedup_plan_busy_note =>
+      'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
+  @override
+  String get video_setting_subtitle_position_secondary =>
+      'Secondary subtitle position';
+  @override
+  String get dict_download_learning_language => 'Learning language';
+  @override
+  String get dict_category_bilingual => 'Bilingual';
+  @override
+  String get dict_category_monolingual => 'Monolingual';
+  @override
+  String get shortcut_action_video_hold_speed => 'Hold for temporary speed';
+  @override
+  String get handlebar_phonetic_transcriptions => 'Phonetic transcriptions';
+  @override
+  String get sync_progress_preparing => 'Preparing sync';
+  @override
+  String get sync_progress_collections => 'Syncing collections';
+  @override
+  String get sync_progress_book => 'Syncing book';
+  @override
+  String sync_progress_book_titled({required Object title}) =>
+      'Syncing ${title}';
+  @override
+  String sync_last_completed({required Object count}) =>
+      'Last sync: done (${count} channels)';
+  @override
+  String get sync_last_no_channels =>
+      'Last sync: nothing synced - no connected sync channel';
+  @override
+  String get sync_last_nothing => 'Last sync: nothing to sync';
+  @override
+  String get sync_last_auto_disabled => 'Last sync: skipped - auto sync is off';
+  @override
+  String get sync_last_cooled_down => 'Last sync: skipped - synced recently';
+  @override
+  String get sync_last_failed => 'Last sync: failed';
+  @override
+  String anime_download_no_results_detail(
+          {required Object query, required Object filters}) =>
+      'The service responded successfully but returned 0 items. Query: ${query}; filters: ${filters}. Try another title or loosen the filters.';
+  @override
+  String get anime_download_streaming_ready =>
+      'In library · download continues';
+  @override
+  String get anime_download_unfiltered => 'No Trusted filter';
+  @override
+  String get interconnect_enable_footer =>
+      'How to use: on the device that holds your library, turn on the sync server switch below; on your other device, add the address of that server to pair with it. A device can act as only one role at a time — server or client.';
+  @override
+  String get interconnect_peer_list_title => 'Added peers';
+  @override
+  String get interconnect_peer_list_empty =>
+      'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
+  @override
+  String get anki_lapis_visual_editor => 'Visual style editor';
+  @override
+  String get anki_lapis_visual_editor_hint =>
+      'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+  @override
+  String get anki_lapis_visual_front => 'Front';
+  @override
+  String get anki_lapis_visual_back => 'Back';
+  @override
+  String get anki_lapis_visual_preview => 'Lapis card preview';
+  @override
+  String get anki_lapis_visual_select_field => 'Select a field to highlight';
+  @override
+  String get anki_lapis_visual_reset_field => 'Reset field';
+  @override
+  String anki_lapis_visual_font_size({required Object percent}) =>
+      'Font size: ${percent}%';
+  @override
+  String get anki_lapis_visual_bold => 'Bold';
+  @override
+  String get anki_lapis_visual_alignment => 'Alignment';
+  @override
+  String get anki_lapis_visual_color => 'Text color';
+  @override
+  String get anki_lapis_visual_default => 'Default';
+  @override
+  String get anki_lapis_visual_advanced_css => 'Advanced CSS';
+  @override
+  String get anki_lapis_visual_field_expression => 'Word';
+  @override
+  String get anki_lapis_visual_field_reading => 'Reading';
+  @override
+  String get anki_lapis_visual_field_sentence => 'Sentence';
+  @override
+  String get anki_lapis_visual_field_primary_definition => 'Primary definition';
+  @override
+  String get anki_lapis_visual_field_glossaries => 'Other definitions';
+  @override
+  String get anki_lapis_visual_target_card_content => 'Card content';
+  @override
+  String get anki_lapis_visual_target_definition => 'Definition';
+  @override
+  String get anki_lapis_visual_target_inside_definition => 'Inside definition';
+  @override
+  String get anki_lapis_visual_field_definition_info => 'Definition indicator';
+  @override
+  String get anki_lapis_visual_field_definition_box => 'Definition box';
+  @override
+  String get anki_lapis_visual_field_definition_content => 'Whole definition';
+  @override
+  String get anki_lapis_visual_field_selected_definition =>
+      'Selected definition';
+  @override
+  String get anki_lapis_visual_field_dictionary_entry => 'Dictionary entry';
+  @override
+  String get anki_lapis_visual_field_dictionary_name => 'Dictionary name';
+  @override
+  String get anki_lapis_visual_field_definition_example => 'Definition example';
+  @override
+  String get anki_lapis_visual_line_height => 'Line height';
+  @override
+  String get anki_lapis_visual_background_color => 'Background highlight';
+  @override
+  String get anki_lapis_visual_box_layout => 'Box appearance';
+  @override
+  String get anki_lapis_visual_border_width => 'Border';
+  @override
+  String get anki_lapis_visual_border_color => 'Border color';
+  @override
+  String get anki_lapis_visual_corner_radius => 'Corner radius';
+  @override
+  String get anki_lapis_visual_padding => 'Inner spacing';
+  @override
+  String get anki_lapis_visual_margin => 'Outer spacing';
+  @override
+  String get anki_lapis_visual_field_definition_info_note =>
+      'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
+  @override
+  String get anki_lapis_visual_field_dictionary_name_note =>
+      'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
   @override
   String get library_view_manga_sources => 'Manga sources';
   @override
@@ -61267,15 +63850,15 @@ class _StringsNl extends _StringsEn {
   @override
   String get mihon_extension_language_all => 'All languages';
   @override
-  String get mihon_filter_ignore => '忽略';
+  String get mihon_filter_ignore => 'Ignore';
   @override
-  String get mihon_filter_include => '包含';
+  String get mihon_filter_include => 'Include';
   @override
-  String get mihon_filter_exclude => '排除';
+  String get mihon_filter_exclude => 'Exclude';
   @override
-  String get mihon_filter_ascending => '升序';
+  String get mihon_filter_ascending => 'Ascending';
   @override
-  String get mihon_filter_descending => '降序';
+  String get mihon_filter_descending => 'Descending';
   @override
   String get mihon_add_to_bookshelf => 'Add to manga shelf';
   @override
@@ -62677,7 +65260,7 @@ class _StringsPtBr extends _StringsEn {
       'Verificar atualizações de dicionários ao iniciar';
   @override
   String dict_auto_update_last({required Object time}) =>
-      'Última atualização: ${time}';
+      'Última verificação bem-sucedida: ${time}';
   @override
   String get dict_auto_update_never => 'Nunca';
   @override
@@ -63633,8 +66216,6 @@ class _StringsPtBr extends _StringsEn {
   String get game_text_source_websocket => 'WebSocket';
   @override
   String get game_text_thread => 'Text thread';
-  @override
-  String get game_text_thread_all => 'All text threads';
   @override
   String game_text_thread_audio_count({required Object count}) =>
       '${count} with audio';
@@ -67586,9 +70167,6 @@ class _StringsPtBr extends _StringsEn {
   String get media_tracking_unauthorized =>
       'Bangumi rejected the access token. Reconnect it in settings.';
   @override
-  String get media_tracking_unlinked_hint =>
-      'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
-  @override
   String get media_tracking_open_subject => 'Open on Bangumi';
   @override
   String get media_tracking_manage_links => 'Manage links';
@@ -67633,6 +70211,280 @@ class _StringsPtBr extends _StringsEn {
   String get scrape_failure_detail_show => 'Show details';
   @override
   String get scrape_failure_detail_hide => 'Hide details';
+  @override
+  String get media_tracking_retry_mapping => 'Retry matching';
+  @override
+  String get media_tracking_retry_matched =>
+      'Matched and queued current progress';
+  @override
+  String get media_tracking_retry_no_match =>
+      'No match found. Try manual linking.';
+  @override
+  String get game_statistics => 'Game statistics';
+  @override
+  String get game_stat_by_game => 'By game';
+  @override
+  String get stat_clear_all_game_message =>
+      'Clear all game play time and session counts? Your game library and activity timeline are kept. This cannot be undone.';
+  @override
+  String batch_selection_stale_skipped(
+          {required Object m, required Object n}) =>
+      'Skipped ${m} of ${n} selected items that no longer exist';
+  @override
+  String get game_text_thread_unset =>
+      'No thread selected — pick one to start capturing';
+  @override
+  String get media_tracking_watched_show => 'View all watched anime';
+  @override
+  String get media_tracking_watched_title => 'Watched on Bangumi';
+  @override
+  String get media_tracking_watched_empty =>
+      'No anime is marked as watched on this Bangumi account.';
+  @override
+  String media_tracking_watched_load_failed({required Object error}) =>
+      'Could not load watched anime: ${error}';
+  @override
+  String media_tracking_watched_progress({required Object n}) =>
+      'Watched ${n} episodes';
+  @override
+  String get media_tracking_manual_required => 'Needs manual link';
+  @override
+  String media_tracking_manual_required_count({required Object n}) =>
+      '${n} items need manual links';
+  @override
+  String get media_tracking_manual_required_hint =>
+      'These local items already have progress but are not linked to Bangumi.';
+  @override
+  String get media_tracking_no_local_history =>
+      'No local watch, reading, or game progress needs linking.';
+  @override
+  String media_tracking_more_manual_required({required Object n}) =>
+      '${n} more items need manual links';
+  @override
+  String get manga_import_hint =>
+      'Pick a manga folder, a .cbz/.zip page archive, or a .mokuro file.';
+  @override
+  String get manga_import_pick_file => 'Pick manga file';
+  @override
+  String get manga_import_pick_folder => 'Pick manga folder';
+  @override
+  String get manga_import_missing_input => 'Pick a manga file or folder first.';
+  @override
+  String get manga_import_detected_title => 'This looks like manga';
+  @override
+  String get manga_import_detected_confirm => 'Import as manga';
+  @override
+  String manga_import_detected_message({required Object name}) =>
+      '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+  @override
+  String get video_jimaku_source_loading => 'Checking subtitle availability...';
+  @override
+  String get video_jimaku_source_failed =>
+      'Could not check subtitle availability. Try searching again.';
+  @override
+  String get video_jimaku_language_unknown => 'Language not labeled';
+  @override
+  String video_jimaku_source_summary(
+          {required Object files,
+          required Object episodes,
+          required Object languages}) =>
+      '${files} subtitle files · ${episodes} episodes · ${languages}';
+  @override
+  String video_jimaku_episode_unlabeled(
+          {required Object episode, required Object count}) =>
+      'No subtitle labeled episode ${episode}; ${count} unlabeled files may still match';
+  @override
+  String video_jimaku_episode_unavailable({required Object episode}) =>
+      'No subtitle found for episode ${episode}';
+  @override
+  String video_jimaku_episode_available(
+          {required Object count, required Object languages}) =>
+      '${count} subtitles available · ${languages}';
+  @override
+  String get video_scrape_manual_match_hint =>
+      'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+  @override
+  String get video_scrape_collection_match_hint =>
+      'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+  @override
+  String get video_scrape_apply_to_collection_hint =>
+      'This writes the same cover to every episode. Leave it off unless that is intentional.';
+  @override
+  String get video_scrape_tmdb_key_empty =>
+      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+  @override
+  String get manga_online_source_disabled =>
+      'This internet source is disabled. Enable it in Sources to browse the catalog.';
+  @override
+  String get selection_web_search => 'Search the web';
+  @override
+  String get selection_web_search_unavailable => 'No app can search the web.';
+  @override
+  String get selection_share_failed => 'Could not open the share sheet.';
+  @override
+  String video_subtitle_youtube_auto_generated({required Object lang}) =>
+      '${lang} (auto-generated)';
+  @override
+  String get anki_dedup_progress_title => 'Deduplicating media';
+  @override
+  String anki_dedup_progress_scanning({required Object count}) =>
+      'Scanning media folder… (${count} files found)';
+  @override
+  String anki_dedup_progress_hashing(
+          {required Object done, required Object total}) =>
+      'Comparing same-size files… (${done} / ${total})';
+  @override
+  String anki_dedup_progress_resolving(
+          {required Object done, required Object total}) =>
+      'Processing duplicates… (${done} / ${total})';
+  @override
+  String anki_dedup_progress_freed({required Object size}) =>
+      'Freed ${size} so far';
+  @override
+  String get anki_dedup_cancelling => 'Cancelling…';
+  @override
+  String get anki_dedup_cancelled =>
+      'Deduplication cancelled; completed changes are kept.';
+  @override
+  String get anki_dedup_report_cancelled_note =>
+      'Cancelled early — the numbers below only cover what was completed.';
+  @override
+  String get anki_dedup_plan_busy_note =>
+      'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
+  @override
+  String get video_setting_subtitle_position_secondary =>
+      'Secondary subtitle position';
+  @override
+  String get dict_download_learning_language => 'Learning language';
+  @override
+  String get dict_category_bilingual => 'Bilingual';
+  @override
+  String get dict_category_monolingual => 'Monolingual';
+  @override
+  String get shortcut_action_video_hold_speed => 'Hold for temporary speed';
+  @override
+  String get handlebar_phonetic_transcriptions => 'Phonetic transcriptions';
+  @override
+  String get sync_progress_preparing => 'Preparing sync';
+  @override
+  String get sync_progress_collections => 'Syncing collections';
+  @override
+  String get sync_progress_book => 'Syncing book';
+  @override
+  String sync_progress_book_titled({required Object title}) =>
+      'Syncing ${title}';
+  @override
+  String sync_last_completed({required Object count}) =>
+      'Last sync: done (${count} channels)';
+  @override
+  String get sync_last_no_channels =>
+      'Last sync: nothing synced - no connected sync channel';
+  @override
+  String get sync_last_nothing => 'Last sync: nothing to sync';
+  @override
+  String get sync_last_auto_disabled => 'Last sync: skipped - auto sync is off';
+  @override
+  String get sync_last_cooled_down => 'Last sync: skipped - synced recently';
+  @override
+  String get sync_last_failed => 'Last sync: failed';
+  @override
+  String anime_download_no_results_detail(
+          {required Object query, required Object filters}) =>
+      'The service responded successfully but returned 0 items. Query: ${query}; filters: ${filters}. Try another title or loosen the filters.';
+  @override
+  String get anime_download_streaming_ready =>
+      'In library · download continues';
+  @override
+  String get anime_download_unfiltered => 'No Trusted filter';
+  @override
+  String get interconnect_enable_footer =>
+      'How to use: on the device that holds your library, turn on the sync server switch below; on your other device, add the address of that server to pair with it. A device can act as only one role at a time — server or client.';
+  @override
+  String get interconnect_peer_list_title => 'Added peers';
+  @override
+  String get interconnect_peer_list_empty =>
+      'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
+  @override
+  String get anki_lapis_visual_editor => 'Visual style editor';
+  @override
+  String get anki_lapis_visual_editor_hint =>
+      'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+  @override
+  String get anki_lapis_visual_front => 'Front';
+  @override
+  String get anki_lapis_visual_back => 'Back';
+  @override
+  String get anki_lapis_visual_preview => 'Lapis card preview';
+  @override
+  String get anki_lapis_visual_select_field => 'Select a field to highlight';
+  @override
+  String get anki_lapis_visual_reset_field => 'Reset field';
+  @override
+  String anki_lapis_visual_font_size({required Object percent}) =>
+      'Font size: ${percent}%';
+  @override
+  String get anki_lapis_visual_bold => 'Bold';
+  @override
+  String get anki_lapis_visual_alignment => 'Alignment';
+  @override
+  String get anki_lapis_visual_color => 'Text color';
+  @override
+  String get anki_lapis_visual_default => 'Default';
+  @override
+  String get anki_lapis_visual_advanced_css => 'Advanced CSS';
+  @override
+  String get anki_lapis_visual_field_expression => 'Word';
+  @override
+  String get anki_lapis_visual_field_reading => 'Reading';
+  @override
+  String get anki_lapis_visual_field_sentence => 'Sentence';
+  @override
+  String get anki_lapis_visual_field_primary_definition => 'Primary definition';
+  @override
+  String get anki_lapis_visual_field_glossaries => 'Other definitions';
+  @override
+  String get anki_lapis_visual_target_card_content => 'Card content';
+  @override
+  String get anki_lapis_visual_target_definition => 'Definition';
+  @override
+  String get anki_lapis_visual_target_inside_definition => 'Inside definition';
+  @override
+  String get anki_lapis_visual_field_definition_info => 'Definition indicator';
+  @override
+  String get anki_lapis_visual_field_definition_box => 'Definition box';
+  @override
+  String get anki_lapis_visual_field_definition_content => 'Whole definition';
+  @override
+  String get anki_lapis_visual_field_selected_definition =>
+      'Selected definition';
+  @override
+  String get anki_lapis_visual_field_dictionary_entry => 'Dictionary entry';
+  @override
+  String get anki_lapis_visual_field_dictionary_name => 'Dictionary name';
+  @override
+  String get anki_lapis_visual_field_definition_example => 'Definition example';
+  @override
+  String get anki_lapis_visual_line_height => 'Line height';
+  @override
+  String get anki_lapis_visual_background_color => 'Background highlight';
+  @override
+  String get anki_lapis_visual_box_layout => 'Box appearance';
+  @override
+  String get anki_lapis_visual_border_width => 'Border';
+  @override
+  String get anki_lapis_visual_border_color => 'Border color';
+  @override
+  String get anki_lapis_visual_corner_radius => 'Corner radius';
+  @override
+  String get anki_lapis_visual_padding => 'Inner spacing';
+  @override
+  String get anki_lapis_visual_margin => 'Outer spacing';
+  @override
+  String get anki_lapis_visual_field_definition_info_note =>
+      'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
+  @override
+  String get anki_lapis_visual_field_dictionary_name_note =>
+      'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
   @override
   String get library_view_manga_sources => 'Manga sources';
   @override
@@ -67705,15 +70557,15 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get mihon_extension_language_all => 'All languages';
   @override
-  String get mihon_filter_ignore => '忽略';
+  String get mihon_filter_ignore => 'Ignore';
   @override
-  String get mihon_filter_include => '包含';
+  String get mihon_filter_include => 'Include';
   @override
-  String get mihon_filter_exclude => '排除';
+  String get mihon_filter_exclude => 'Exclude';
   @override
-  String get mihon_filter_ascending => '升序';
+  String get mihon_filter_ascending => 'Ascending';
   @override
-  String get mihon_filter_descending => '降序';
+  String get mihon_filter_descending => 'Descending';
   @override
   String get mihon_add_to_bookshelf => 'Add to manga shelf';
   @override
@@ -69109,7 +71961,7 @@ class _StringsRu extends _StringsEn {
       'Проверять обновления словарей при запуске';
   @override
   String dict_auto_update_last({required Object time}) =>
-      'Последнее обновление: ${time}';
+      'Последняя успешная проверка: ${time}';
   @override
   String get dict_auto_update_never => 'Никогда';
   @override
@@ -70063,8 +72915,6 @@ class _StringsRu extends _StringsEn {
   String get game_text_source_websocket => 'WebSocket';
   @override
   String get game_text_thread => 'Text thread';
-  @override
-  String get game_text_thread_all => 'All text threads';
   @override
   String game_text_thread_audio_count({required Object count}) =>
       '${count} with audio';
@@ -74008,9 +76858,6 @@ class _StringsRu extends _StringsEn {
   String get media_tracking_unauthorized =>
       'Bangumi rejected the access token. Reconnect it in settings.';
   @override
-  String get media_tracking_unlinked_hint =>
-      'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
-  @override
   String get media_tracking_open_subject => 'Open on Bangumi';
   @override
   String get media_tracking_manage_links => 'Manage links';
@@ -74055,6 +76902,280 @@ class _StringsRu extends _StringsEn {
   String get scrape_failure_detail_show => 'Show details';
   @override
   String get scrape_failure_detail_hide => 'Hide details';
+  @override
+  String get media_tracking_retry_mapping => 'Retry matching';
+  @override
+  String get media_tracking_retry_matched =>
+      'Matched and queued current progress';
+  @override
+  String get media_tracking_retry_no_match =>
+      'No match found. Try manual linking.';
+  @override
+  String get game_statistics => 'Game statistics';
+  @override
+  String get game_stat_by_game => 'By game';
+  @override
+  String get stat_clear_all_game_message =>
+      'Clear all game play time and session counts? Your game library and activity timeline are kept. This cannot be undone.';
+  @override
+  String batch_selection_stale_skipped(
+          {required Object m, required Object n}) =>
+      'Skipped ${m} of ${n} selected items that no longer exist';
+  @override
+  String get game_text_thread_unset =>
+      'No thread selected — pick one to start capturing';
+  @override
+  String get media_tracking_watched_show => 'View all watched anime';
+  @override
+  String get media_tracking_watched_title => 'Watched on Bangumi';
+  @override
+  String get media_tracking_watched_empty =>
+      'No anime is marked as watched on this Bangumi account.';
+  @override
+  String media_tracking_watched_load_failed({required Object error}) =>
+      'Could not load watched anime: ${error}';
+  @override
+  String media_tracking_watched_progress({required Object n}) =>
+      'Watched ${n} episodes';
+  @override
+  String get media_tracking_manual_required => 'Needs manual link';
+  @override
+  String media_tracking_manual_required_count({required Object n}) =>
+      '${n} items need manual links';
+  @override
+  String get media_tracking_manual_required_hint =>
+      'These local items already have progress but are not linked to Bangumi.';
+  @override
+  String get media_tracking_no_local_history =>
+      'No local watch, reading, or game progress needs linking.';
+  @override
+  String media_tracking_more_manual_required({required Object n}) =>
+      '${n} more items need manual links';
+  @override
+  String get manga_import_hint =>
+      'Pick a manga folder, a .cbz/.zip page archive, or a .mokuro file.';
+  @override
+  String get manga_import_pick_file => 'Pick manga file';
+  @override
+  String get manga_import_pick_folder => 'Pick manga folder';
+  @override
+  String get manga_import_missing_input => 'Pick a manga file or folder first.';
+  @override
+  String get manga_import_detected_title => 'This looks like manga';
+  @override
+  String get manga_import_detected_confirm => 'Import as manga';
+  @override
+  String manga_import_detected_message({required Object name}) =>
+      '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+  @override
+  String get video_jimaku_source_loading => 'Checking subtitle availability...';
+  @override
+  String get video_jimaku_source_failed =>
+      'Could not check subtitle availability. Try searching again.';
+  @override
+  String get video_jimaku_language_unknown => 'Language not labeled';
+  @override
+  String video_jimaku_source_summary(
+          {required Object files,
+          required Object episodes,
+          required Object languages}) =>
+      '${files} subtitle files · ${episodes} episodes · ${languages}';
+  @override
+  String video_jimaku_episode_unlabeled(
+          {required Object episode, required Object count}) =>
+      'No subtitle labeled episode ${episode}; ${count} unlabeled files may still match';
+  @override
+  String video_jimaku_episode_unavailable({required Object episode}) =>
+      'No subtitle found for episode ${episode}';
+  @override
+  String video_jimaku_episode_available(
+          {required Object count, required Object languages}) =>
+      '${count} subtitles available · ${languages}';
+  @override
+  String get video_scrape_manual_match_hint =>
+      'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+  @override
+  String get video_scrape_collection_match_hint =>
+      'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+  @override
+  String get video_scrape_apply_to_collection_hint =>
+      'This writes the same cover to every episode. Leave it off unless that is intentional.';
+  @override
+  String get video_scrape_tmdb_key_empty =>
+      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+  @override
+  String get manga_online_source_disabled =>
+      'This internet source is disabled. Enable it in Sources to browse the catalog.';
+  @override
+  String get selection_web_search => 'Search the web';
+  @override
+  String get selection_web_search_unavailable => 'No app can search the web.';
+  @override
+  String get selection_share_failed => 'Could not open the share sheet.';
+  @override
+  String video_subtitle_youtube_auto_generated({required Object lang}) =>
+      '${lang} (auto-generated)';
+  @override
+  String get anki_dedup_progress_title => 'Deduplicating media';
+  @override
+  String anki_dedup_progress_scanning({required Object count}) =>
+      'Scanning media folder… (${count} files found)';
+  @override
+  String anki_dedup_progress_hashing(
+          {required Object done, required Object total}) =>
+      'Comparing same-size files… (${done} / ${total})';
+  @override
+  String anki_dedup_progress_resolving(
+          {required Object done, required Object total}) =>
+      'Processing duplicates… (${done} / ${total})';
+  @override
+  String anki_dedup_progress_freed({required Object size}) =>
+      'Freed ${size} so far';
+  @override
+  String get anki_dedup_cancelling => 'Cancelling…';
+  @override
+  String get anki_dedup_cancelled =>
+      'Deduplication cancelled; completed changes are kept.';
+  @override
+  String get anki_dedup_report_cancelled_note =>
+      'Cancelled early — the numbers below only cover what was completed.';
+  @override
+  String get anki_dedup_plan_busy_note =>
+      'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
+  @override
+  String get video_setting_subtitle_position_secondary =>
+      'Secondary subtitle position';
+  @override
+  String get dict_download_learning_language => 'Learning language';
+  @override
+  String get dict_category_bilingual => 'Bilingual';
+  @override
+  String get dict_category_monolingual => 'Monolingual';
+  @override
+  String get shortcut_action_video_hold_speed => 'Hold for temporary speed';
+  @override
+  String get handlebar_phonetic_transcriptions => 'Phonetic transcriptions';
+  @override
+  String get sync_progress_preparing => 'Preparing sync';
+  @override
+  String get sync_progress_collections => 'Syncing collections';
+  @override
+  String get sync_progress_book => 'Syncing book';
+  @override
+  String sync_progress_book_titled({required Object title}) =>
+      'Syncing ${title}';
+  @override
+  String sync_last_completed({required Object count}) =>
+      'Last sync: done (${count} channels)';
+  @override
+  String get sync_last_no_channels =>
+      'Last sync: nothing synced - no connected sync channel';
+  @override
+  String get sync_last_nothing => 'Last sync: nothing to sync';
+  @override
+  String get sync_last_auto_disabled => 'Last sync: skipped - auto sync is off';
+  @override
+  String get sync_last_cooled_down => 'Last sync: skipped - synced recently';
+  @override
+  String get sync_last_failed => 'Last sync: failed';
+  @override
+  String anime_download_no_results_detail(
+          {required Object query, required Object filters}) =>
+      'The service responded successfully but returned 0 items. Query: ${query}; filters: ${filters}. Try another title or loosen the filters.';
+  @override
+  String get anime_download_streaming_ready =>
+      'In library · download continues';
+  @override
+  String get anime_download_unfiltered => 'No Trusted filter';
+  @override
+  String get interconnect_enable_footer =>
+      'How to use: on the device that holds your library, turn on the sync server switch below; on your other device, add the address of that server to pair with it. A device can act as only one role at a time — server or client.';
+  @override
+  String get interconnect_peer_list_title => 'Added peers';
+  @override
+  String get interconnect_peer_list_empty =>
+      'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
+  @override
+  String get anki_lapis_visual_editor => 'Visual style editor';
+  @override
+  String get anki_lapis_visual_editor_hint =>
+      'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+  @override
+  String get anki_lapis_visual_front => 'Front';
+  @override
+  String get anki_lapis_visual_back => 'Back';
+  @override
+  String get anki_lapis_visual_preview => 'Lapis card preview';
+  @override
+  String get anki_lapis_visual_select_field => 'Select a field to highlight';
+  @override
+  String get anki_lapis_visual_reset_field => 'Reset field';
+  @override
+  String anki_lapis_visual_font_size({required Object percent}) =>
+      'Font size: ${percent}%';
+  @override
+  String get anki_lapis_visual_bold => 'Bold';
+  @override
+  String get anki_lapis_visual_alignment => 'Alignment';
+  @override
+  String get anki_lapis_visual_color => 'Text color';
+  @override
+  String get anki_lapis_visual_default => 'Default';
+  @override
+  String get anki_lapis_visual_advanced_css => 'Advanced CSS';
+  @override
+  String get anki_lapis_visual_field_expression => 'Word';
+  @override
+  String get anki_lapis_visual_field_reading => 'Reading';
+  @override
+  String get anki_lapis_visual_field_sentence => 'Sentence';
+  @override
+  String get anki_lapis_visual_field_primary_definition => 'Primary definition';
+  @override
+  String get anki_lapis_visual_field_glossaries => 'Other definitions';
+  @override
+  String get anki_lapis_visual_target_card_content => 'Card content';
+  @override
+  String get anki_lapis_visual_target_definition => 'Definition';
+  @override
+  String get anki_lapis_visual_target_inside_definition => 'Inside definition';
+  @override
+  String get anki_lapis_visual_field_definition_info => 'Definition indicator';
+  @override
+  String get anki_lapis_visual_field_definition_box => 'Definition box';
+  @override
+  String get anki_lapis_visual_field_definition_content => 'Whole definition';
+  @override
+  String get anki_lapis_visual_field_selected_definition =>
+      'Selected definition';
+  @override
+  String get anki_lapis_visual_field_dictionary_entry => 'Dictionary entry';
+  @override
+  String get anki_lapis_visual_field_dictionary_name => 'Dictionary name';
+  @override
+  String get anki_lapis_visual_field_definition_example => 'Definition example';
+  @override
+  String get anki_lapis_visual_line_height => 'Line height';
+  @override
+  String get anki_lapis_visual_background_color => 'Background highlight';
+  @override
+  String get anki_lapis_visual_box_layout => 'Box appearance';
+  @override
+  String get anki_lapis_visual_border_width => 'Border';
+  @override
+  String get anki_lapis_visual_border_color => 'Border color';
+  @override
+  String get anki_lapis_visual_corner_radius => 'Corner radius';
+  @override
+  String get anki_lapis_visual_padding => 'Inner spacing';
+  @override
+  String get anki_lapis_visual_margin => 'Outer spacing';
+  @override
+  String get anki_lapis_visual_field_definition_info_note =>
+      'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
+  @override
+  String get anki_lapis_visual_field_dictionary_name_note =>
+      'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
   @override
   String get library_view_manga_sources => 'Manga sources';
   @override
@@ -74127,15 +77248,15 @@ class _StringsRu extends _StringsEn {
   @override
   String get mihon_extension_language_all => 'All languages';
   @override
-  String get mihon_filter_ignore => '忽略';
+  String get mihon_filter_ignore => 'Ignore';
   @override
-  String get mihon_filter_include => '包含';
+  String get mihon_filter_include => 'Include';
   @override
-  String get mihon_filter_exclude => '排除';
+  String get mihon_filter_exclude => 'Exclude';
   @override
-  String get mihon_filter_ascending => '升序';
+  String get mihon_filter_ascending => 'Ascending';
   @override
-  String get mihon_filter_descending => '降序';
+  String get mihon_filter_descending => 'Descending';
   @override
   String get mihon_add_to_bookshelf => 'Add to manga shelf';
   @override
@@ -75517,7 +78638,7 @@ class _StringsTh extends _StringsEn {
   String get dict_auto_update_hint => 'ตรวจหาการอัปเดตพจนานุกรมเมื่อเปิดแอป';
   @override
   String dict_auto_update_last({required Object time}) =>
-      'อัปเดตล่าสุด: ${time}';
+      'ตรวจสอบสำเร็จล่าสุด: ${time}';
   @override
   String get dict_auto_update_never => 'ไม่เคย';
   @override
@@ -76463,8 +79584,6 @@ class _StringsTh extends _StringsEn {
   String get game_text_source_websocket => 'WebSocket';
   @override
   String get game_text_thread => 'Text thread';
-  @override
-  String get game_text_thread_all => 'All text threads';
   @override
   String game_text_thread_audio_count({required Object count}) =>
       '${count} with audio';
@@ -80378,9 +83497,6 @@ class _StringsTh extends _StringsEn {
   String get media_tracking_unauthorized =>
       'Bangumi rejected the access token. Reconnect it in settings.';
   @override
-  String get media_tracking_unlinked_hint =>
-      'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
-  @override
   String get media_tracking_open_subject => 'Open on Bangumi';
   @override
   String get media_tracking_manage_links => 'Manage links';
@@ -80425,6 +83541,280 @@ class _StringsTh extends _StringsEn {
   String get scrape_failure_detail_show => 'Show details';
   @override
   String get scrape_failure_detail_hide => 'Hide details';
+  @override
+  String get media_tracking_retry_mapping => 'Retry matching';
+  @override
+  String get media_tracking_retry_matched =>
+      'Matched and queued current progress';
+  @override
+  String get media_tracking_retry_no_match =>
+      'No match found. Try manual linking.';
+  @override
+  String get game_statistics => 'Game statistics';
+  @override
+  String get game_stat_by_game => 'By game';
+  @override
+  String get stat_clear_all_game_message =>
+      'Clear all game play time and session counts? Your game library and activity timeline are kept. This cannot be undone.';
+  @override
+  String batch_selection_stale_skipped(
+          {required Object m, required Object n}) =>
+      'Skipped ${m} of ${n} selected items that no longer exist';
+  @override
+  String get game_text_thread_unset =>
+      'No thread selected — pick one to start capturing';
+  @override
+  String get media_tracking_watched_show => 'View all watched anime';
+  @override
+  String get media_tracking_watched_title => 'Watched on Bangumi';
+  @override
+  String get media_tracking_watched_empty =>
+      'No anime is marked as watched on this Bangumi account.';
+  @override
+  String media_tracking_watched_load_failed({required Object error}) =>
+      'Could not load watched anime: ${error}';
+  @override
+  String media_tracking_watched_progress({required Object n}) =>
+      'Watched ${n} episodes';
+  @override
+  String get media_tracking_manual_required => 'Needs manual link';
+  @override
+  String media_tracking_manual_required_count({required Object n}) =>
+      '${n} items need manual links';
+  @override
+  String get media_tracking_manual_required_hint =>
+      'These local items already have progress but are not linked to Bangumi.';
+  @override
+  String get media_tracking_no_local_history =>
+      'No local watch, reading, or game progress needs linking.';
+  @override
+  String media_tracking_more_manual_required({required Object n}) =>
+      '${n} more items need manual links';
+  @override
+  String get manga_import_hint =>
+      'Pick a manga folder, a .cbz/.zip page archive, or a .mokuro file.';
+  @override
+  String get manga_import_pick_file => 'Pick manga file';
+  @override
+  String get manga_import_pick_folder => 'Pick manga folder';
+  @override
+  String get manga_import_missing_input => 'Pick a manga file or folder first.';
+  @override
+  String get manga_import_detected_title => 'This looks like manga';
+  @override
+  String get manga_import_detected_confirm => 'Import as manga';
+  @override
+  String manga_import_detected_message({required Object name}) =>
+      '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+  @override
+  String get video_jimaku_source_loading => 'Checking subtitle availability...';
+  @override
+  String get video_jimaku_source_failed =>
+      'Could not check subtitle availability. Try searching again.';
+  @override
+  String get video_jimaku_language_unknown => 'Language not labeled';
+  @override
+  String video_jimaku_source_summary(
+          {required Object files,
+          required Object episodes,
+          required Object languages}) =>
+      '${files} subtitle files · ${episodes} episodes · ${languages}';
+  @override
+  String video_jimaku_episode_unlabeled(
+          {required Object episode, required Object count}) =>
+      'No subtitle labeled episode ${episode}; ${count} unlabeled files may still match';
+  @override
+  String video_jimaku_episode_unavailable({required Object episode}) =>
+      'No subtitle found for episode ${episode}';
+  @override
+  String video_jimaku_episode_available(
+          {required Object count, required Object languages}) =>
+      '${count} subtitles available · ${languages}';
+  @override
+  String get video_scrape_manual_match_hint =>
+      'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+  @override
+  String get video_scrape_collection_match_hint =>
+      'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+  @override
+  String get video_scrape_apply_to_collection_hint =>
+      'This writes the same cover to every episode. Leave it off unless that is intentional.';
+  @override
+  String get video_scrape_tmdb_key_empty =>
+      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+  @override
+  String get manga_online_source_disabled =>
+      'This internet source is disabled. Enable it in Sources to browse the catalog.';
+  @override
+  String get selection_web_search => 'Search the web';
+  @override
+  String get selection_web_search_unavailable => 'No app can search the web.';
+  @override
+  String get selection_share_failed => 'Could not open the share sheet.';
+  @override
+  String video_subtitle_youtube_auto_generated({required Object lang}) =>
+      '${lang} (auto-generated)';
+  @override
+  String get anki_dedup_progress_title => 'Deduplicating media';
+  @override
+  String anki_dedup_progress_scanning({required Object count}) =>
+      'Scanning media folder… (${count} files found)';
+  @override
+  String anki_dedup_progress_hashing(
+          {required Object done, required Object total}) =>
+      'Comparing same-size files… (${done} / ${total})';
+  @override
+  String anki_dedup_progress_resolving(
+          {required Object done, required Object total}) =>
+      'Processing duplicates… (${done} / ${total})';
+  @override
+  String anki_dedup_progress_freed({required Object size}) =>
+      'Freed ${size} so far';
+  @override
+  String get anki_dedup_cancelling => 'Cancelling…';
+  @override
+  String get anki_dedup_cancelled =>
+      'Deduplication cancelled; completed changes are kept.';
+  @override
+  String get anki_dedup_report_cancelled_note =>
+      'Cancelled early — the numbers below only cover what was completed.';
+  @override
+  String get anki_dedup_plan_busy_note =>
+      'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
+  @override
+  String get video_setting_subtitle_position_secondary =>
+      'Secondary subtitle position';
+  @override
+  String get dict_download_learning_language => 'Learning language';
+  @override
+  String get dict_category_bilingual => 'Bilingual';
+  @override
+  String get dict_category_monolingual => 'Monolingual';
+  @override
+  String get shortcut_action_video_hold_speed => 'Hold for temporary speed';
+  @override
+  String get handlebar_phonetic_transcriptions => 'Phonetic transcriptions';
+  @override
+  String get sync_progress_preparing => 'Preparing sync';
+  @override
+  String get sync_progress_collections => 'Syncing collections';
+  @override
+  String get sync_progress_book => 'Syncing book';
+  @override
+  String sync_progress_book_titled({required Object title}) =>
+      'Syncing ${title}';
+  @override
+  String sync_last_completed({required Object count}) =>
+      'Last sync: done (${count} channels)';
+  @override
+  String get sync_last_no_channels =>
+      'Last sync: nothing synced - no connected sync channel';
+  @override
+  String get sync_last_nothing => 'Last sync: nothing to sync';
+  @override
+  String get sync_last_auto_disabled => 'Last sync: skipped - auto sync is off';
+  @override
+  String get sync_last_cooled_down => 'Last sync: skipped - synced recently';
+  @override
+  String get sync_last_failed => 'Last sync: failed';
+  @override
+  String anime_download_no_results_detail(
+          {required Object query, required Object filters}) =>
+      'The service responded successfully but returned 0 items. Query: ${query}; filters: ${filters}. Try another title or loosen the filters.';
+  @override
+  String get anime_download_streaming_ready =>
+      'In library · download continues';
+  @override
+  String get anime_download_unfiltered => 'No Trusted filter';
+  @override
+  String get interconnect_enable_footer =>
+      'How to use: on the device that holds your library, turn on the sync server switch below; on your other device, add the address of that server to pair with it. A device can act as only one role at a time — server or client.';
+  @override
+  String get interconnect_peer_list_title => 'Added peers';
+  @override
+  String get interconnect_peer_list_empty =>
+      'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
+  @override
+  String get anki_lapis_visual_editor => 'Visual style editor';
+  @override
+  String get anki_lapis_visual_editor_hint =>
+      'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+  @override
+  String get anki_lapis_visual_front => 'Front';
+  @override
+  String get anki_lapis_visual_back => 'Back';
+  @override
+  String get anki_lapis_visual_preview => 'Lapis card preview';
+  @override
+  String get anki_lapis_visual_select_field => 'Select a field to highlight';
+  @override
+  String get anki_lapis_visual_reset_field => 'Reset field';
+  @override
+  String anki_lapis_visual_font_size({required Object percent}) =>
+      'Font size: ${percent}%';
+  @override
+  String get anki_lapis_visual_bold => 'Bold';
+  @override
+  String get anki_lapis_visual_alignment => 'Alignment';
+  @override
+  String get anki_lapis_visual_color => 'Text color';
+  @override
+  String get anki_lapis_visual_default => 'Default';
+  @override
+  String get anki_lapis_visual_advanced_css => 'Advanced CSS';
+  @override
+  String get anki_lapis_visual_field_expression => 'Word';
+  @override
+  String get anki_lapis_visual_field_reading => 'Reading';
+  @override
+  String get anki_lapis_visual_field_sentence => 'Sentence';
+  @override
+  String get anki_lapis_visual_field_primary_definition => 'Primary definition';
+  @override
+  String get anki_lapis_visual_field_glossaries => 'Other definitions';
+  @override
+  String get anki_lapis_visual_target_card_content => 'Card content';
+  @override
+  String get anki_lapis_visual_target_definition => 'Definition';
+  @override
+  String get anki_lapis_visual_target_inside_definition => 'Inside definition';
+  @override
+  String get anki_lapis_visual_field_definition_info => 'Definition indicator';
+  @override
+  String get anki_lapis_visual_field_definition_box => 'Definition box';
+  @override
+  String get anki_lapis_visual_field_definition_content => 'Whole definition';
+  @override
+  String get anki_lapis_visual_field_selected_definition =>
+      'Selected definition';
+  @override
+  String get anki_lapis_visual_field_dictionary_entry => 'Dictionary entry';
+  @override
+  String get anki_lapis_visual_field_dictionary_name => 'Dictionary name';
+  @override
+  String get anki_lapis_visual_field_definition_example => 'Definition example';
+  @override
+  String get anki_lapis_visual_line_height => 'Line height';
+  @override
+  String get anki_lapis_visual_background_color => 'Background highlight';
+  @override
+  String get anki_lapis_visual_box_layout => 'Box appearance';
+  @override
+  String get anki_lapis_visual_border_width => 'Border';
+  @override
+  String get anki_lapis_visual_border_color => 'Border color';
+  @override
+  String get anki_lapis_visual_corner_radius => 'Corner radius';
+  @override
+  String get anki_lapis_visual_padding => 'Inner spacing';
+  @override
+  String get anki_lapis_visual_margin => 'Outer spacing';
+  @override
+  String get anki_lapis_visual_field_definition_info_note =>
+      'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
+  @override
+  String get anki_lapis_visual_field_dictionary_name_note =>
+      'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
   @override
   String get library_view_manga_sources => 'Manga sources';
   @override
@@ -80497,15 +83887,15 @@ class _StringsTh extends _StringsEn {
   @override
   String get mihon_extension_language_all => 'All languages';
   @override
-  String get mihon_filter_ignore => '忽略';
+  String get mihon_filter_ignore => 'Ignore';
   @override
-  String get mihon_filter_include => '包含';
+  String get mihon_filter_include => 'Include';
   @override
-  String get mihon_filter_exclude => '排除';
+  String get mihon_filter_exclude => 'Exclude';
   @override
-  String get mihon_filter_ascending => '升序';
+  String get mihon_filter_ascending => 'Ascending';
   @override
-  String get mihon_filter_descending => '降序';
+  String get mihon_filter_descending => 'Descending';
   @override
   String get mihon_add_to_bookshelf => 'Add to manga shelf';
   @override
@@ -81900,7 +85290,7 @@ class _StringsTr extends _StringsEn {
       'Başlangıçta sözlük güncellemelerini denetle';
   @override
   String dict_auto_update_last({required Object time}) =>
-      'Son güncelleme: ${time}';
+      'Son başarılı denetim: ${time}';
   @override
   String get dict_auto_update_never => 'Hiçbir zaman';
   @override
@@ -82851,8 +86241,6 @@ class _StringsTr extends _StringsEn {
   String get game_text_source_websocket => 'WebSocket';
   @override
   String get game_text_thread => 'Text thread';
-  @override
-  String get game_text_thread_all => 'All text threads';
   @override
   String game_text_thread_audio_count({required Object count}) =>
       '${count} with audio';
@@ -86780,9 +90168,6 @@ class _StringsTr extends _StringsEn {
   String get media_tracking_unauthorized =>
       'Bangumi rejected the access token. Reconnect it in settings.';
   @override
-  String get media_tracking_unlinked_hint =>
-      'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
-  @override
   String get media_tracking_open_subject => 'Open on Bangumi';
   @override
   String get media_tracking_manage_links => 'Manage links';
@@ -86827,6 +90212,280 @@ class _StringsTr extends _StringsEn {
   String get scrape_failure_detail_show => 'Show details';
   @override
   String get scrape_failure_detail_hide => 'Hide details';
+  @override
+  String get media_tracking_retry_mapping => 'Retry matching';
+  @override
+  String get media_tracking_retry_matched =>
+      'Matched and queued current progress';
+  @override
+  String get media_tracking_retry_no_match =>
+      'No match found. Try manual linking.';
+  @override
+  String get game_statistics => 'Game statistics';
+  @override
+  String get game_stat_by_game => 'By game';
+  @override
+  String get stat_clear_all_game_message =>
+      'Clear all game play time and session counts? Your game library and activity timeline are kept. This cannot be undone.';
+  @override
+  String batch_selection_stale_skipped(
+          {required Object m, required Object n}) =>
+      'Skipped ${m} of ${n} selected items that no longer exist';
+  @override
+  String get game_text_thread_unset =>
+      'No thread selected — pick one to start capturing';
+  @override
+  String get media_tracking_watched_show => 'View all watched anime';
+  @override
+  String get media_tracking_watched_title => 'Watched on Bangumi';
+  @override
+  String get media_tracking_watched_empty =>
+      'No anime is marked as watched on this Bangumi account.';
+  @override
+  String media_tracking_watched_load_failed({required Object error}) =>
+      'Could not load watched anime: ${error}';
+  @override
+  String media_tracking_watched_progress({required Object n}) =>
+      'Watched ${n} episodes';
+  @override
+  String get media_tracking_manual_required => 'Needs manual link';
+  @override
+  String media_tracking_manual_required_count({required Object n}) =>
+      '${n} items need manual links';
+  @override
+  String get media_tracking_manual_required_hint =>
+      'These local items already have progress but are not linked to Bangumi.';
+  @override
+  String get media_tracking_no_local_history =>
+      'No local watch, reading, or game progress needs linking.';
+  @override
+  String media_tracking_more_manual_required({required Object n}) =>
+      '${n} more items need manual links';
+  @override
+  String get manga_import_hint =>
+      'Pick a manga folder, a .cbz/.zip page archive, or a .mokuro file.';
+  @override
+  String get manga_import_pick_file => 'Pick manga file';
+  @override
+  String get manga_import_pick_folder => 'Pick manga folder';
+  @override
+  String get manga_import_missing_input => 'Pick a manga file or folder first.';
+  @override
+  String get manga_import_detected_title => 'This looks like manga';
+  @override
+  String get manga_import_detected_confirm => 'Import as manga';
+  @override
+  String manga_import_detected_message({required Object name}) =>
+      '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+  @override
+  String get video_jimaku_source_loading => 'Checking subtitle availability...';
+  @override
+  String get video_jimaku_source_failed =>
+      'Could not check subtitle availability. Try searching again.';
+  @override
+  String get video_jimaku_language_unknown => 'Language not labeled';
+  @override
+  String video_jimaku_source_summary(
+          {required Object files,
+          required Object episodes,
+          required Object languages}) =>
+      '${files} subtitle files · ${episodes} episodes · ${languages}';
+  @override
+  String video_jimaku_episode_unlabeled(
+          {required Object episode, required Object count}) =>
+      'No subtitle labeled episode ${episode}; ${count} unlabeled files may still match';
+  @override
+  String video_jimaku_episode_unavailable({required Object episode}) =>
+      'No subtitle found for episode ${episode}';
+  @override
+  String video_jimaku_episode_available(
+          {required Object count, required Object languages}) =>
+      '${count} subtitles available · ${languages}';
+  @override
+  String get video_scrape_manual_match_hint =>
+      'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+  @override
+  String get video_scrape_collection_match_hint =>
+      'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+  @override
+  String get video_scrape_apply_to_collection_hint =>
+      'This writes the same cover to every episode. Leave it off unless that is intentional.';
+  @override
+  String get video_scrape_tmdb_key_empty =>
+      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+  @override
+  String get manga_online_source_disabled =>
+      'This internet source is disabled. Enable it in Sources to browse the catalog.';
+  @override
+  String get selection_web_search => 'Search the web';
+  @override
+  String get selection_web_search_unavailable => 'No app can search the web.';
+  @override
+  String get selection_share_failed => 'Could not open the share sheet.';
+  @override
+  String video_subtitle_youtube_auto_generated({required Object lang}) =>
+      '${lang} (auto-generated)';
+  @override
+  String get anki_dedup_progress_title => 'Deduplicating media';
+  @override
+  String anki_dedup_progress_scanning({required Object count}) =>
+      'Scanning media folder… (${count} files found)';
+  @override
+  String anki_dedup_progress_hashing(
+          {required Object done, required Object total}) =>
+      'Comparing same-size files… (${done} / ${total})';
+  @override
+  String anki_dedup_progress_resolving(
+          {required Object done, required Object total}) =>
+      'Processing duplicates… (${done} / ${total})';
+  @override
+  String anki_dedup_progress_freed({required Object size}) =>
+      'Freed ${size} so far';
+  @override
+  String get anki_dedup_cancelling => 'Cancelling…';
+  @override
+  String get anki_dedup_cancelled =>
+      'Deduplication cancelled; completed changes are kept.';
+  @override
+  String get anki_dedup_report_cancelled_note =>
+      'Cancelled early — the numbers below only cover what was completed.';
+  @override
+  String get anki_dedup_plan_busy_note =>
+      'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
+  @override
+  String get video_setting_subtitle_position_secondary =>
+      'Secondary subtitle position';
+  @override
+  String get dict_download_learning_language => 'Learning language';
+  @override
+  String get dict_category_bilingual => 'Bilingual';
+  @override
+  String get dict_category_monolingual => 'Monolingual';
+  @override
+  String get shortcut_action_video_hold_speed => 'Hold for temporary speed';
+  @override
+  String get handlebar_phonetic_transcriptions => 'Phonetic transcriptions';
+  @override
+  String get sync_progress_preparing => 'Preparing sync';
+  @override
+  String get sync_progress_collections => 'Syncing collections';
+  @override
+  String get sync_progress_book => 'Syncing book';
+  @override
+  String sync_progress_book_titled({required Object title}) =>
+      'Syncing ${title}';
+  @override
+  String sync_last_completed({required Object count}) =>
+      'Last sync: done (${count} channels)';
+  @override
+  String get sync_last_no_channels =>
+      'Last sync: nothing synced - no connected sync channel';
+  @override
+  String get sync_last_nothing => 'Last sync: nothing to sync';
+  @override
+  String get sync_last_auto_disabled => 'Last sync: skipped - auto sync is off';
+  @override
+  String get sync_last_cooled_down => 'Last sync: skipped - synced recently';
+  @override
+  String get sync_last_failed => 'Last sync: failed';
+  @override
+  String anime_download_no_results_detail(
+          {required Object query, required Object filters}) =>
+      'The service responded successfully but returned 0 items. Query: ${query}; filters: ${filters}. Try another title or loosen the filters.';
+  @override
+  String get anime_download_streaming_ready =>
+      'In library · download continues';
+  @override
+  String get anime_download_unfiltered => 'No Trusted filter';
+  @override
+  String get interconnect_enable_footer =>
+      'How to use: on the device that holds your library, turn on the sync server switch below; on your other device, add the address of that server to pair with it. A device can act as only one role at a time — server or client.';
+  @override
+  String get interconnect_peer_list_title => 'Added peers';
+  @override
+  String get interconnect_peer_list_empty =>
+      'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
+  @override
+  String get anki_lapis_visual_editor => 'Visual style editor';
+  @override
+  String get anki_lapis_visual_editor_hint =>
+      'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+  @override
+  String get anki_lapis_visual_front => 'Front';
+  @override
+  String get anki_lapis_visual_back => 'Back';
+  @override
+  String get anki_lapis_visual_preview => 'Lapis card preview';
+  @override
+  String get anki_lapis_visual_select_field => 'Select a field to highlight';
+  @override
+  String get anki_lapis_visual_reset_field => 'Reset field';
+  @override
+  String anki_lapis_visual_font_size({required Object percent}) =>
+      'Font size: ${percent}%';
+  @override
+  String get anki_lapis_visual_bold => 'Bold';
+  @override
+  String get anki_lapis_visual_alignment => 'Alignment';
+  @override
+  String get anki_lapis_visual_color => 'Text color';
+  @override
+  String get anki_lapis_visual_default => 'Default';
+  @override
+  String get anki_lapis_visual_advanced_css => 'Advanced CSS';
+  @override
+  String get anki_lapis_visual_field_expression => 'Word';
+  @override
+  String get anki_lapis_visual_field_reading => 'Reading';
+  @override
+  String get anki_lapis_visual_field_sentence => 'Sentence';
+  @override
+  String get anki_lapis_visual_field_primary_definition => 'Primary definition';
+  @override
+  String get anki_lapis_visual_field_glossaries => 'Other definitions';
+  @override
+  String get anki_lapis_visual_target_card_content => 'Card content';
+  @override
+  String get anki_lapis_visual_target_definition => 'Definition';
+  @override
+  String get anki_lapis_visual_target_inside_definition => 'Inside definition';
+  @override
+  String get anki_lapis_visual_field_definition_info => 'Definition indicator';
+  @override
+  String get anki_lapis_visual_field_definition_box => 'Definition box';
+  @override
+  String get anki_lapis_visual_field_definition_content => 'Whole definition';
+  @override
+  String get anki_lapis_visual_field_selected_definition =>
+      'Selected definition';
+  @override
+  String get anki_lapis_visual_field_dictionary_entry => 'Dictionary entry';
+  @override
+  String get anki_lapis_visual_field_dictionary_name => 'Dictionary name';
+  @override
+  String get anki_lapis_visual_field_definition_example => 'Definition example';
+  @override
+  String get anki_lapis_visual_line_height => 'Line height';
+  @override
+  String get anki_lapis_visual_background_color => 'Background highlight';
+  @override
+  String get anki_lapis_visual_box_layout => 'Box appearance';
+  @override
+  String get anki_lapis_visual_border_width => 'Border';
+  @override
+  String get anki_lapis_visual_border_color => 'Border color';
+  @override
+  String get anki_lapis_visual_corner_radius => 'Corner radius';
+  @override
+  String get anki_lapis_visual_padding => 'Inner spacing';
+  @override
+  String get anki_lapis_visual_margin => 'Outer spacing';
+  @override
+  String get anki_lapis_visual_field_definition_info_note =>
+      'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
+  @override
+  String get anki_lapis_visual_field_dictionary_name_note =>
+      'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
   @override
   String get library_view_manga_sources => 'Manga sources';
   @override
@@ -86899,15 +90558,15 @@ class _StringsTr extends _StringsEn {
   @override
   String get mihon_extension_language_all => 'All languages';
   @override
-  String get mihon_filter_ignore => '忽略';
+  String get mihon_filter_ignore => 'Ignore';
   @override
-  String get mihon_filter_include => '包含';
+  String get mihon_filter_include => 'Include';
   @override
-  String get mihon_filter_exclude => '排除';
+  String get mihon_filter_exclude => 'Exclude';
   @override
-  String get mihon_filter_ascending => '升序';
+  String get mihon_filter_ascending => 'Ascending';
   @override
-  String get mihon_filter_descending => '降序';
+  String get mihon_filter_descending => 'Descending';
   @override
   String get mihon_add_to_bookshelf => 'Add to manga shelf';
   @override
@@ -88296,7 +91955,7 @@ class _StringsVi extends _StringsEn {
   String get dict_auto_update_hint => 'Kiểm tra cập nhật từ điển khi khởi động';
   @override
   String dict_auto_update_last({required Object time}) =>
-      'Cập nhật lần cuối: ${time}';
+      'Lần kiểm tra thành công gần nhất: ${time}';
   @override
   String get dict_auto_update_never => 'Chưa bao giờ';
   @override
@@ -89246,8 +92905,6 @@ class _StringsVi extends _StringsEn {
   String get game_text_source_websocket => 'WebSocket';
   @override
   String get game_text_thread => 'Text thread';
-  @override
-  String get game_text_thread_all => 'All text threads';
   @override
   String game_text_thread_audio_count({required Object count}) =>
       '${count} with audio';
@@ -93167,9 +96824,6 @@ class _StringsVi extends _StringsEn {
   String get media_tracking_unauthorized =>
       'Bangumi rejected the access token. Reconnect it in settings.';
   @override
-  String get media_tracking_unlinked_hint =>
-      'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
-  @override
   String get media_tracking_open_subject => 'Open on Bangumi';
   @override
   String get media_tracking_manage_links => 'Manage links';
@@ -93214,6 +96868,280 @@ class _StringsVi extends _StringsEn {
   String get scrape_failure_detail_show => 'Show details';
   @override
   String get scrape_failure_detail_hide => 'Hide details';
+  @override
+  String get media_tracking_retry_mapping => 'Retry matching';
+  @override
+  String get media_tracking_retry_matched =>
+      'Matched and queued current progress';
+  @override
+  String get media_tracking_retry_no_match =>
+      'No match found. Try manual linking.';
+  @override
+  String get game_statistics => 'Game statistics';
+  @override
+  String get game_stat_by_game => 'By game';
+  @override
+  String get stat_clear_all_game_message =>
+      'Clear all game play time and session counts? Your game library and activity timeline are kept. This cannot be undone.';
+  @override
+  String batch_selection_stale_skipped(
+          {required Object m, required Object n}) =>
+      'Skipped ${m} of ${n} selected items that no longer exist';
+  @override
+  String get game_text_thread_unset =>
+      'No thread selected — pick one to start capturing';
+  @override
+  String get media_tracking_watched_show => 'View all watched anime';
+  @override
+  String get media_tracking_watched_title => 'Watched on Bangumi';
+  @override
+  String get media_tracking_watched_empty =>
+      'No anime is marked as watched on this Bangumi account.';
+  @override
+  String media_tracking_watched_load_failed({required Object error}) =>
+      'Could not load watched anime: ${error}';
+  @override
+  String media_tracking_watched_progress({required Object n}) =>
+      'Watched ${n} episodes';
+  @override
+  String get media_tracking_manual_required => 'Needs manual link';
+  @override
+  String media_tracking_manual_required_count({required Object n}) =>
+      '${n} items need manual links';
+  @override
+  String get media_tracking_manual_required_hint =>
+      'These local items already have progress but are not linked to Bangumi.';
+  @override
+  String get media_tracking_no_local_history =>
+      'No local watch, reading, or game progress needs linking.';
+  @override
+  String media_tracking_more_manual_required({required Object n}) =>
+      '${n} more items need manual links';
+  @override
+  String get manga_import_hint =>
+      'Pick a manga folder, a .cbz/.zip page archive, or a .mokuro file.';
+  @override
+  String get manga_import_pick_file => 'Pick manga file';
+  @override
+  String get manga_import_pick_folder => 'Pick manga folder';
+  @override
+  String get manga_import_missing_input => 'Pick a manga file or folder first.';
+  @override
+  String get manga_import_detected_title => 'This looks like manga';
+  @override
+  String get manga_import_detected_confirm => 'Import as manga';
+  @override
+  String manga_import_detected_message({required Object name}) =>
+      '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+  @override
+  String get video_jimaku_source_loading => 'Checking subtitle availability...';
+  @override
+  String get video_jimaku_source_failed =>
+      'Could not check subtitle availability. Try searching again.';
+  @override
+  String get video_jimaku_language_unknown => 'Language not labeled';
+  @override
+  String video_jimaku_source_summary(
+          {required Object files,
+          required Object episodes,
+          required Object languages}) =>
+      '${files} subtitle files · ${episodes} episodes · ${languages}';
+  @override
+  String video_jimaku_episode_unlabeled(
+          {required Object episode, required Object count}) =>
+      'No subtitle labeled episode ${episode}; ${count} unlabeled files may still match';
+  @override
+  String video_jimaku_episode_unavailable({required Object episode}) =>
+      'No subtitle found for episode ${episode}';
+  @override
+  String video_jimaku_episode_available(
+          {required Object count, required Object languages}) =>
+      '${count} subtitles available · ${languages}';
+  @override
+  String get video_scrape_manual_match_hint =>
+      'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+  @override
+  String get video_scrape_collection_match_hint =>
+      'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+  @override
+  String get video_scrape_apply_to_collection_hint =>
+      'This writes the same cover to every episode. Leave it off unless that is intentional.';
+  @override
+  String get video_scrape_tmdb_key_empty =>
+      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+  @override
+  String get manga_online_source_disabled =>
+      'This internet source is disabled. Enable it in Sources to browse the catalog.';
+  @override
+  String get selection_web_search => 'Search the web';
+  @override
+  String get selection_web_search_unavailable => 'No app can search the web.';
+  @override
+  String get selection_share_failed => 'Could not open the share sheet.';
+  @override
+  String video_subtitle_youtube_auto_generated({required Object lang}) =>
+      '${lang} (auto-generated)';
+  @override
+  String get anki_dedup_progress_title => 'Deduplicating media';
+  @override
+  String anki_dedup_progress_scanning({required Object count}) =>
+      'Scanning media folder… (${count} files found)';
+  @override
+  String anki_dedup_progress_hashing(
+          {required Object done, required Object total}) =>
+      'Comparing same-size files… (${done} / ${total})';
+  @override
+  String anki_dedup_progress_resolving(
+          {required Object done, required Object total}) =>
+      'Processing duplicates… (${done} / ${total})';
+  @override
+  String anki_dedup_progress_freed({required Object size}) =>
+      'Freed ${size} so far';
+  @override
+  String get anki_dedup_cancelling => 'Cancelling…';
+  @override
+  String get anki_dedup_cancelled =>
+      'Deduplication cancelled; completed changes are kept.';
+  @override
+  String get anki_dedup_report_cancelled_note =>
+      'Cancelled early — the numbers below only cover what was completed.';
+  @override
+  String get anki_dedup_plan_busy_note =>
+      'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
+  @override
+  String get video_setting_subtitle_position_secondary =>
+      'Secondary subtitle position';
+  @override
+  String get dict_download_learning_language => 'Learning language';
+  @override
+  String get dict_category_bilingual => 'Bilingual';
+  @override
+  String get dict_category_monolingual => 'Monolingual';
+  @override
+  String get shortcut_action_video_hold_speed => 'Hold for temporary speed';
+  @override
+  String get handlebar_phonetic_transcriptions => 'Phonetic transcriptions';
+  @override
+  String get sync_progress_preparing => 'Preparing sync';
+  @override
+  String get sync_progress_collections => 'Syncing collections';
+  @override
+  String get sync_progress_book => 'Syncing book';
+  @override
+  String sync_progress_book_titled({required Object title}) =>
+      'Syncing ${title}';
+  @override
+  String sync_last_completed({required Object count}) =>
+      'Last sync: done (${count} channels)';
+  @override
+  String get sync_last_no_channels =>
+      'Last sync: nothing synced - no connected sync channel';
+  @override
+  String get sync_last_nothing => 'Last sync: nothing to sync';
+  @override
+  String get sync_last_auto_disabled => 'Last sync: skipped - auto sync is off';
+  @override
+  String get sync_last_cooled_down => 'Last sync: skipped - synced recently';
+  @override
+  String get sync_last_failed => 'Last sync: failed';
+  @override
+  String anime_download_no_results_detail(
+          {required Object query, required Object filters}) =>
+      'The service responded successfully but returned 0 items. Query: ${query}; filters: ${filters}. Try another title or loosen the filters.';
+  @override
+  String get anime_download_streaming_ready =>
+      'In library · download continues';
+  @override
+  String get anime_download_unfiltered => 'No Trusted filter';
+  @override
+  String get interconnect_enable_footer =>
+      'How to use: on the device that holds your library, turn on the sync server switch below; on your other device, add the address of that server to pair with it. A device can act as only one role at a time — server or client.';
+  @override
+  String get interconnect_peer_list_title => 'Added peers';
+  @override
+  String get interconnect_peer_list_empty =>
+      'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
+  @override
+  String get anki_lapis_visual_editor => 'Visual style editor';
+  @override
+  String get anki_lapis_visual_editor_hint =>
+      'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+  @override
+  String get anki_lapis_visual_front => 'Front';
+  @override
+  String get anki_lapis_visual_back => 'Back';
+  @override
+  String get anki_lapis_visual_preview => 'Lapis card preview';
+  @override
+  String get anki_lapis_visual_select_field => 'Select a field to highlight';
+  @override
+  String get anki_lapis_visual_reset_field => 'Reset field';
+  @override
+  String anki_lapis_visual_font_size({required Object percent}) =>
+      'Font size: ${percent}%';
+  @override
+  String get anki_lapis_visual_bold => 'Bold';
+  @override
+  String get anki_lapis_visual_alignment => 'Alignment';
+  @override
+  String get anki_lapis_visual_color => 'Text color';
+  @override
+  String get anki_lapis_visual_default => 'Default';
+  @override
+  String get anki_lapis_visual_advanced_css => 'Advanced CSS';
+  @override
+  String get anki_lapis_visual_field_expression => 'Word';
+  @override
+  String get anki_lapis_visual_field_reading => 'Reading';
+  @override
+  String get anki_lapis_visual_field_sentence => 'Sentence';
+  @override
+  String get anki_lapis_visual_field_primary_definition => 'Primary definition';
+  @override
+  String get anki_lapis_visual_field_glossaries => 'Other definitions';
+  @override
+  String get anki_lapis_visual_target_card_content => 'Card content';
+  @override
+  String get anki_lapis_visual_target_definition => 'Definition';
+  @override
+  String get anki_lapis_visual_target_inside_definition => 'Inside definition';
+  @override
+  String get anki_lapis_visual_field_definition_info => 'Definition indicator';
+  @override
+  String get anki_lapis_visual_field_definition_box => 'Definition box';
+  @override
+  String get anki_lapis_visual_field_definition_content => 'Whole definition';
+  @override
+  String get anki_lapis_visual_field_selected_definition =>
+      'Selected definition';
+  @override
+  String get anki_lapis_visual_field_dictionary_entry => 'Dictionary entry';
+  @override
+  String get anki_lapis_visual_field_dictionary_name => 'Dictionary name';
+  @override
+  String get anki_lapis_visual_field_definition_example => 'Definition example';
+  @override
+  String get anki_lapis_visual_line_height => 'Line height';
+  @override
+  String get anki_lapis_visual_background_color => 'Background highlight';
+  @override
+  String get anki_lapis_visual_box_layout => 'Box appearance';
+  @override
+  String get anki_lapis_visual_border_width => 'Border';
+  @override
+  String get anki_lapis_visual_border_color => 'Border color';
+  @override
+  String get anki_lapis_visual_corner_radius => 'Corner radius';
+  @override
+  String get anki_lapis_visual_padding => 'Inner spacing';
+  @override
+  String get anki_lapis_visual_margin => 'Outer spacing';
+  @override
+  String get anki_lapis_visual_field_definition_info_note =>
+      'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
+  @override
+  String get anki_lapis_visual_field_dictionary_name_note =>
+      'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
   @override
   String get library_view_manga_sources => 'Manga sources';
   @override
@@ -93286,15 +97214,15 @@ class _StringsVi extends _StringsEn {
   @override
   String get mihon_extension_language_all => 'All languages';
   @override
-  String get mihon_filter_ignore => '忽略';
+  String get mihon_filter_ignore => 'Ignore';
   @override
-  String get mihon_filter_include => '包含';
+  String get mihon_filter_include => 'Include';
   @override
-  String get mihon_filter_exclude => '排除';
+  String get mihon_filter_exclude => 'Exclude';
   @override
-  String get mihon_filter_ascending => '升序';
+  String get mihon_filter_ascending => 'Ascending';
   @override
-  String get mihon_filter_descending => '降序';
+  String get mihon_filter_descending => 'Descending';
   @override
   String get mihon_add_to_bookshelf => 'Add to manga shelf';
   @override
@@ -94593,7 +98521,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get dict_auto_update_hint => '启动时检查词典更新';
   @override
-  String dict_auto_update_last({required Object time}) => '上次更新：${time}';
+  String dict_auto_update_last({required Object time}) => '上次成功检查：${time}';
   @override
   String get dict_auto_update_never => '从未';
   @override
@@ -95472,8 +99400,6 @@ class _StringsZhCn extends _StringsEn {
   String get game_text_source_websocket => 'WebSocket';
   @override
   String get game_text_thread => '文本线程';
-  @override
-  String get game_text_thread_all => '全部文本线程';
   @override
   String game_text_thread_audio_count({required Object count}) =>
       '${count} 行有音频';
@@ -99111,9 +103037,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get media_tracking_unauthorized => 'Bangumi 拒绝了访问令牌，请在设置里重新连接。';
   @override
-  String get media_tracking_unlinked_hint =>
-      '还没有任何条目关联到 Bangumi 条目，所以看完/读完在那边不会有任何变化。自动匹配只在标题唯一命中时才建立关联，其余需要手动关联。';
-  @override
   String get media_tracking_open_subject => '在 Bangumi 打开';
   @override
   String get media_tracking_manage_links => '管理关联';
@@ -99156,6 +103079,262 @@ class _StringsZhCn extends _StringsEn {
   String get scrape_failure_detail_show => '显示详情';
   @override
   String get scrape_failure_detail_hide => '隐藏详情';
+  @override
+  String get media_tracking_retry_mapping => '重试匹配';
+  @override
+  String get media_tracking_retry_matched => '已重新关联并补发当前进度';
+  @override
+  String get media_tracking_retry_no_match => '仍未匹配到条目，请尝试手动关联';
+  @override
+  String get game_statistics => '游戏统计';
+  @override
+  String get game_stat_by_game => '按游戏';
+  @override
+  String get stat_clear_all_game_message =>
+      '确定清空全部游戏统计吗？将删除所有游戏时长和游玩次数。你的游戏库与首页活动流不受影响。此操作不可撤销。';
+  @override
+  String batch_selection_stale_skipped(
+          {required Object n, required Object m}) =>
+      '选中的 ${n} 项中有 ${m} 项已不存在，已跳过';
+  @override
+  String get game_text_thread_unset => '尚未选择线程 · 选一条后开始捕获';
+  @override
+  String get media_tracking_watched_show => '查看全部看过';
+  @override
+  String get media_tracking_watched_title => 'Bangumi 看过';
+  @override
+  String get media_tracking_watched_empty => '这个 Bangumi 账号还没有标记为“看过”的番剧。';
+  @override
+  String media_tracking_watched_load_failed({required Object error}) =>
+      '读取看过记录失败：${error}';
+  @override
+  String media_tracking_watched_progress({required Object n}) => '已看 ${n} 集';
+  @override
+  String get media_tracking_manual_required => '需要手动关联';
+  @override
+  String media_tracking_manual_required_count({required Object n}) =>
+      '${n} 项需要手动关联';
+  @override
+  String get media_tracking_manual_required_hint =>
+      '这些本地条目已有观看、阅读或游玩记录，但还没有关联到 Bangumi。';
+  @override
+  String get media_tracking_no_local_history => '暂无需要关联的本地观看、阅读或游玩记录。';
+  @override
+  String media_tracking_more_manual_required({required Object n}) =>
+      '另有 ${n} 项需要手动关联';
+  @override
+  String get manga_import_hint => '选择漫画文件夹、.cbz/.zip 页图压缩包，或 .mokuro 文件。';
+  @override
+  String get manga_import_pick_file => '选择漫画文件';
+  @override
+  String get manga_import_pick_folder => '选择漫画文件夹';
+  @override
+  String get manga_import_missing_input => '请先选择漫画文件或文件夹。';
+  @override
+  String get manga_import_detected_title => '这看起来是漫画';
+  @override
+  String get manga_import_detected_confirm => '按漫画导入';
+  @override
+  String manga_import_detected_message({required Object name}) =>
+      '「${name}」是漫画文件，将走漫画导入流程，而不是书籍导入流程。';
+  @override
+  String get video_jimaku_source_loading => '正在检查字幕可用性…';
+  @override
+  String get video_jimaku_source_failed => '字幕可用性检查失败，请重新查找。';
+  @override
+  String get video_jimaku_language_unknown => '语言未标注';
+  @override
+  String video_jimaku_source_summary(
+          {required Object files,
+          required Object episodes,
+          required Object languages}) =>
+      '${files} 个字幕文件 · 覆盖 ${episodes} 集 · ${languages}';
+  @override
+  String video_jimaku_episode_unlabeled(
+          {required Object episode, required Object count}) =>
+      '未发现标为第 ${episode} 集的字幕；另有 ${count} 个未标集号文件可尝试';
+  @override
+  String video_jimaku_episode_unavailable({required Object episode}) =>
+      '没有找到第 ${episode} 集字幕';
+  @override
+  String video_jimaku_episode_available(
+          {required Object count, required Object languages}) =>
+      '有 ${count} 个字幕 · ${languages}';
+  @override
+  String get video_scrape_manual_match_hint =>
+      '手动匹配会替换本集封面，并保存来源映射和条目资料。切换来源后，点“搜索”才会请求该来源。';
+  @override
+  String get video_scrape_collection_match_hint =>
+      '这里只替换合集封面，不会修改各集封面或条目资料。切换来源后，点“搜索”才会请求该来源。';
+  @override
+  String get video_scrape_apply_to_collection_hint =>
+      '这会把同一张封面写到每一集；只有确实需要统一单集封面时才开启。';
+  @override
+  String get video_scrape_tmdb_key_empty =>
+      '先保存 TMDB API Key，再点“搜索”。这里不会混入其他来源的结果。';
+  @override
+  String get manga_online_source_disabled => '此互联网来源已关闭，请在「来源」中开启后浏览目录。';
+  @override
+  String get selection_web_search => '网页搜索';
+  @override
+  String get selection_web_search_unavailable => '没有可用的网页搜索应用。';
+  @override
+  String get selection_share_failed => '无法打开分享面板。';
+  @override
+  String video_subtitle_youtube_auto_generated({required Object lang}) =>
+      '${lang}（自动生成）';
+  @override
+  String get anki_dedup_progress_title => '正在去重媒体';
+  @override
+  String anki_dedup_progress_scanning({required Object count}) =>
+      '正在扫描媒体目录…（已发现 ${count} 个文件）';
+  @override
+  String anki_dedup_progress_hashing(
+          {required Object done, required Object total}) =>
+      '正在比对同大小文件…（${done} / ${total}）';
+  @override
+  String anki_dedup_progress_resolving(
+          {required Object done, required Object total}) =>
+      '正在处理重复副本…（${done} / ${total}）';
+  @override
+  String anki_dedup_progress_freed({required Object size}) => '已释放 ${size}';
+  @override
+  String get anki_dedup_cancelling => '正在取消…';
+  @override
+  String get anki_dedup_cancelled => '已取消去重；已完成的改动保留。';
+  @override
+  String get anki_dedup_report_cancelled_note => '已提前取消——以下数字只统计已完成的部分。';
+  @override
+  String get anki_dedup_plan_busy_note => '执行期间 Anki 可能暂时无响应；结束前请不要在 Anki 里操作。';
+  @override
+  String get video_setting_subtitle_position_secondary => '副字幕垂直位置';
+  @override
+  String get dict_download_learning_language => '学习语言';
+  @override
+  String get dict_category_bilingual => '双语';
+  @override
+  String get dict_category_monolingual => '单语';
+  @override
+  String get shortcut_action_video_hold_speed => '按住临时倍速';
+  @override
+  String get handlebar_phonetic_transcriptions => '音标';
+  @override
+  String get sync_progress_preparing => '正在准备同步';
+  @override
+  String get sync_progress_collections => '同步合集';
+  @override
+  String get sync_progress_book => '同步书籍';
+  @override
+  String sync_progress_book_titled({required Object title}) => '同步 ${title}';
+  @override
+  String sync_last_completed({required Object count}) =>
+      '上次同步：已完成（${count} 条通道）';
+  @override
+  String get sync_last_no_channels => '上次同步：未同步——没有已连接的同步通道';
+  @override
+  String get sync_last_nothing => '上次同步：没有可同步的内容';
+  @override
+  String get sync_last_auto_disabled => '上次同步：已跳过——自动同步已关闭';
+  @override
+  String get sync_last_cooled_down => '上次同步：已跳过——刚同步过';
+  @override
+  String get sync_last_failed => '上次同步：失败';
+  @override
+  String anime_download_no_results_detail(
+          {required Object query, required Object filters}) =>
+      '服务已正常响应，但按当前条件返回 0 条。查询：${query}；筛选：${filters}。请尝试别名或放宽筛选。';
+  @override
+  String get anime_download_streaming_ready => '已入库 · 下载继续';
+  @override
+  String get anime_download_unfiltered => '未启用 Trusted 筛选';
+  @override
+  String get interconnect_enable_footer =>
+      '用法：在存放内容的那台设备上开启下方的同步服务器开关；在另一台设备上添加该服务器的地址完成配对。同一台设备同一时间只能担任服务器或客户端其中一种角色。';
+  @override
+  String get interconnect_peer_list_title => '已添加的对端';
+  @override
+  String get interconnect_peer_list_empty =>
+      '尚未添加任何对端。可在下方的局域网设备列表中点击发现的设备自动配对，或手动添加对端地址。';
+  @override
+  String get anki_lapis_visual_editor => '可视化样式编辑';
+  @override
+  String get anki_lapis_visual_editor_hint =>
+      '预览 Lapis 卡片，选择字段后直接调整样式，无需手写 CSS。';
+  @override
+  String get anki_lapis_visual_front => '正面';
+  @override
+  String get anki_lapis_visual_back => '背面';
+  @override
+  String get anki_lapis_visual_preview => 'Lapis 卡片预览';
+  @override
+  String get anki_lapis_visual_select_field => '选择要高亮的字段';
+  @override
+  String get anki_lapis_visual_reset_field => '重置字段';
+  @override
+  String anki_lapis_visual_font_size({required Object percent}) =>
+      '字号：${percent}%';
+  @override
+  String get anki_lapis_visual_bold => '粗体';
+  @override
+  String get anki_lapis_visual_alignment => '对齐';
+  @override
+  String get anki_lapis_visual_color => '文字颜色';
+  @override
+  String get anki_lapis_visual_default => '默认';
+  @override
+  String get anki_lapis_visual_advanced_css => '高级 CSS';
+  @override
+  String get anki_lapis_visual_field_expression => '单词';
+  @override
+  String get anki_lapis_visual_field_reading => '读音';
+  @override
+  String get anki_lapis_visual_field_sentence => '例句';
+  @override
+  String get anki_lapis_visual_field_primary_definition => '首要释义';
+  @override
+  String get anki_lapis_visual_field_glossaries => '其他释义';
+  @override
+  String get anki_lapis_visual_target_card_content => '卡片内容';
+  @override
+  String get anki_lapis_visual_target_definition => '释义';
+  @override
+  String get anki_lapis_visual_target_inside_definition => '释义内部';
+  @override
+  String get anki_lapis_visual_field_definition_info => '释义序号';
+  @override
+  String get anki_lapis_visual_field_definition_box => '释义框';
+  @override
+  String get anki_lapis_visual_field_definition_content => '整段释义';
+  @override
+  String get anki_lapis_visual_field_selected_definition => '选中释义';
+  @override
+  String get anki_lapis_visual_field_dictionary_entry => '词典条目';
+  @override
+  String get anki_lapis_visual_field_dictionary_name => '词典名称';
+  @override
+  String get anki_lapis_visual_field_definition_example => '释义例句';
+  @override
+  String get anki_lapis_visual_line_height => '行高';
+  @override
+  String get anki_lapis_visual_background_color => '背景高亮';
+  @override
+  String get anki_lapis_visual_box_layout => '区域外观';
+  @override
+  String get anki_lapis_visual_border_width => '边框';
+  @override
+  String get anki_lapis_visual_border_color => '边框颜色';
+  @override
+  String get anki_lapis_visual_corner_radius => '圆角';
+  @override
+  String get anki_lapis_visual_padding => '内边距';
+  @override
+  String get anki_lapis_visual_margin => '外边距';
+  @override
+  String get anki_lapis_visual_field_definition_info_note =>
+      '仅在保留多段释义的卡片上可见；只有一段释义的卡片不会显示。';
+  @override
+  String get anki_lapis_visual_field_dictionary_name_note =>
+      'Hibiki 生成的卡片把词性标签和词典名放在同一个标签里，两者无法分开设置样式。';
   @override
   String get library_view_manga_sources => '漫画源';
   @override
@@ -100577,7 +104756,7 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get dict_auto_update_hint => '啟動時檢查詞典更新';
   @override
-  String dict_auto_update_last({required Object time}) => '上次更新：${time}';
+  String dict_auto_update_last({required Object time}) => '上次成功檢查：${time}';
   @override
   String get dict_auto_update_never => '從未';
   @override
@@ -101503,8 +105682,6 @@ class _StringsZhHk extends _StringsEn {
   String get game_text_source_websocket => 'WebSocket';
   @override
   String get game_text_thread => 'Text thread';
-  @override
-  String get game_text_thread_all => 'All text threads';
   @override
   String game_text_thread_audio_count({required Object count}) =>
       '${count} with audio';
@@ -105288,9 +109465,6 @@ class _StringsZhHk extends _StringsEn {
   String get media_tracking_unauthorized =>
       'Bangumi rejected the access token. Reconnect it in settings.';
   @override
-  String get media_tracking_unlinked_hint =>
-      'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
-  @override
   String get media_tracking_open_subject => 'Open on Bangumi';
   @override
   String get media_tracking_manage_links => 'Manage links';
@@ -105335,6 +109509,280 @@ class _StringsZhHk extends _StringsEn {
   String get scrape_failure_detail_show => 'Show details';
   @override
   String get scrape_failure_detail_hide => 'Hide details';
+  @override
+  String get media_tracking_retry_mapping => 'Retry matching';
+  @override
+  String get media_tracking_retry_matched =>
+      'Matched and queued current progress';
+  @override
+  String get media_tracking_retry_no_match =>
+      'No match found. Try manual linking.';
+  @override
+  String get game_statistics => 'Game statistics';
+  @override
+  String get game_stat_by_game => 'By game';
+  @override
+  String get stat_clear_all_game_message =>
+      'Clear all game play time and session counts? Your game library and activity timeline are kept. This cannot be undone.';
+  @override
+  String batch_selection_stale_skipped(
+          {required Object m, required Object n}) =>
+      'Skipped ${m} of ${n} selected items that no longer exist';
+  @override
+  String get game_text_thread_unset =>
+      'No thread selected — pick one to start capturing';
+  @override
+  String get media_tracking_watched_show => 'View all watched anime';
+  @override
+  String get media_tracking_watched_title => 'Watched on Bangumi';
+  @override
+  String get media_tracking_watched_empty =>
+      'No anime is marked as watched on this Bangumi account.';
+  @override
+  String media_tracking_watched_load_failed({required Object error}) =>
+      'Could not load watched anime: ${error}';
+  @override
+  String media_tracking_watched_progress({required Object n}) =>
+      'Watched ${n} episodes';
+  @override
+  String get media_tracking_manual_required => 'Needs manual link';
+  @override
+  String media_tracking_manual_required_count({required Object n}) =>
+      '${n} items need manual links';
+  @override
+  String get media_tracking_manual_required_hint =>
+      'These local items already have progress but are not linked to Bangumi.';
+  @override
+  String get media_tracking_no_local_history =>
+      'No local watch, reading, or game progress needs linking.';
+  @override
+  String media_tracking_more_manual_required({required Object n}) =>
+      '${n} more items need manual links';
+  @override
+  String get manga_import_hint =>
+      'Pick a manga folder, a .cbz/.zip page archive, or a .mokuro file.';
+  @override
+  String get manga_import_pick_file => 'Pick manga file';
+  @override
+  String get manga_import_pick_folder => 'Pick manga folder';
+  @override
+  String get manga_import_missing_input => 'Pick a manga file or folder first.';
+  @override
+  String get manga_import_detected_title => 'This looks like manga';
+  @override
+  String get manga_import_detected_confirm => 'Import as manga';
+  @override
+  String manga_import_detected_message({required Object name}) =>
+      '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+  @override
+  String get video_jimaku_source_loading => 'Checking subtitle availability...';
+  @override
+  String get video_jimaku_source_failed =>
+      'Could not check subtitle availability. Try searching again.';
+  @override
+  String get video_jimaku_language_unknown => 'Language not labeled';
+  @override
+  String video_jimaku_source_summary(
+          {required Object files,
+          required Object episodes,
+          required Object languages}) =>
+      '${files} subtitle files · ${episodes} episodes · ${languages}';
+  @override
+  String video_jimaku_episode_unlabeled(
+          {required Object episode, required Object count}) =>
+      'No subtitle labeled episode ${episode}; ${count} unlabeled files may still match';
+  @override
+  String video_jimaku_episode_unavailable({required Object episode}) =>
+      'No subtitle found for episode ${episode}';
+  @override
+  String video_jimaku_episode_available(
+          {required Object count, required Object languages}) =>
+      '${count} subtitles available · ${languages}';
+  @override
+  String get video_scrape_manual_match_hint =>
+      'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+  @override
+  String get video_scrape_collection_match_hint =>
+      'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+  @override
+  String get video_scrape_apply_to_collection_hint =>
+      'This writes the same cover to every episode. Leave it off unless that is intentional.';
+  @override
+  String get video_scrape_tmdb_key_empty =>
+      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+  @override
+  String get manga_online_source_disabled =>
+      'This internet source is disabled. Enable it in Sources to browse the catalog.';
+  @override
+  String get selection_web_search => 'Search the web';
+  @override
+  String get selection_web_search_unavailable => 'No app can search the web.';
+  @override
+  String get selection_share_failed => 'Could not open the share sheet.';
+  @override
+  String video_subtitle_youtube_auto_generated({required Object lang}) =>
+      '${lang} (auto-generated)';
+  @override
+  String get anki_dedup_progress_title => 'Deduplicating media';
+  @override
+  String anki_dedup_progress_scanning({required Object count}) =>
+      'Scanning media folder… (${count} files found)';
+  @override
+  String anki_dedup_progress_hashing(
+          {required Object done, required Object total}) =>
+      'Comparing same-size files… (${done} / ${total})';
+  @override
+  String anki_dedup_progress_resolving(
+          {required Object done, required Object total}) =>
+      'Processing duplicates… (${done} / ${total})';
+  @override
+  String anki_dedup_progress_freed({required Object size}) =>
+      'Freed ${size} so far';
+  @override
+  String get anki_dedup_cancelling => 'Cancelling…';
+  @override
+  String get anki_dedup_cancelled =>
+      'Deduplication cancelled; completed changes are kept.';
+  @override
+  String get anki_dedup_report_cancelled_note =>
+      'Cancelled early — the numbers below only cover what was completed.';
+  @override
+  String get anki_dedup_plan_busy_note =>
+      'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
+  @override
+  String get video_setting_subtitle_position_secondary =>
+      'Secondary subtitle position';
+  @override
+  String get dict_download_learning_language => 'Learning language';
+  @override
+  String get dict_category_bilingual => 'Bilingual';
+  @override
+  String get dict_category_monolingual => 'Monolingual';
+  @override
+  String get shortcut_action_video_hold_speed => 'Hold for temporary speed';
+  @override
+  String get handlebar_phonetic_transcriptions => 'Phonetic transcriptions';
+  @override
+  String get sync_progress_preparing => 'Preparing sync';
+  @override
+  String get sync_progress_collections => 'Syncing collections';
+  @override
+  String get sync_progress_book => 'Syncing book';
+  @override
+  String sync_progress_book_titled({required Object title}) =>
+      'Syncing ${title}';
+  @override
+  String sync_last_completed({required Object count}) =>
+      'Last sync: done (${count} channels)';
+  @override
+  String get sync_last_no_channels =>
+      'Last sync: nothing synced - no connected sync channel';
+  @override
+  String get sync_last_nothing => 'Last sync: nothing to sync';
+  @override
+  String get sync_last_auto_disabled => 'Last sync: skipped - auto sync is off';
+  @override
+  String get sync_last_cooled_down => 'Last sync: skipped - synced recently';
+  @override
+  String get sync_last_failed => 'Last sync: failed';
+  @override
+  String anime_download_no_results_detail(
+          {required Object query, required Object filters}) =>
+      'The service responded successfully but returned 0 items. Query: ${query}; filters: ${filters}. Try another title or loosen the filters.';
+  @override
+  String get anime_download_streaming_ready =>
+      'In library · download continues';
+  @override
+  String get anime_download_unfiltered => 'No Trusted filter';
+  @override
+  String get interconnect_enable_footer =>
+      'How to use: on the device that holds your library, turn on the sync server switch below; on your other device, add the address of that server to pair with it. A device can act as only one role at a time — server or client.';
+  @override
+  String get interconnect_peer_list_title => 'Added peers';
+  @override
+  String get interconnect_peer_list_empty =>
+      'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
+  @override
+  String get anki_lapis_visual_editor => 'Visual style editor';
+  @override
+  String get anki_lapis_visual_editor_hint =>
+      'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+  @override
+  String get anki_lapis_visual_front => 'Front';
+  @override
+  String get anki_lapis_visual_back => 'Back';
+  @override
+  String get anki_lapis_visual_preview => 'Lapis card preview';
+  @override
+  String get anki_lapis_visual_select_field => 'Select a field to highlight';
+  @override
+  String get anki_lapis_visual_reset_field => 'Reset field';
+  @override
+  String anki_lapis_visual_font_size({required Object percent}) =>
+      'Font size: ${percent}%';
+  @override
+  String get anki_lapis_visual_bold => 'Bold';
+  @override
+  String get anki_lapis_visual_alignment => 'Alignment';
+  @override
+  String get anki_lapis_visual_color => 'Text color';
+  @override
+  String get anki_lapis_visual_default => 'Default';
+  @override
+  String get anki_lapis_visual_advanced_css => 'Advanced CSS';
+  @override
+  String get anki_lapis_visual_field_expression => 'Word';
+  @override
+  String get anki_lapis_visual_field_reading => 'Reading';
+  @override
+  String get anki_lapis_visual_field_sentence => 'Sentence';
+  @override
+  String get anki_lapis_visual_field_primary_definition => 'Primary definition';
+  @override
+  String get anki_lapis_visual_field_glossaries => 'Other definitions';
+  @override
+  String get anki_lapis_visual_target_card_content => 'Card content';
+  @override
+  String get anki_lapis_visual_target_definition => 'Definition';
+  @override
+  String get anki_lapis_visual_target_inside_definition => 'Inside definition';
+  @override
+  String get anki_lapis_visual_field_definition_info => 'Definition indicator';
+  @override
+  String get anki_lapis_visual_field_definition_box => 'Definition box';
+  @override
+  String get anki_lapis_visual_field_definition_content => 'Whole definition';
+  @override
+  String get anki_lapis_visual_field_selected_definition =>
+      'Selected definition';
+  @override
+  String get anki_lapis_visual_field_dictionary_entry => 'Dictionary entry';
+  @override
+  String get anki_lapis_visual_field_dictionary_name => 'Dictionary name';
+  @override
+  String get anki_lapis_visual_field_definition_example => 'Definition example';
+  @override
+  String get anki_lapis_visual_line_height => 'Line height';
+  @override
+  String get anki_lapis_visual_background_color => 'Background highlight';
+  @override
+  String get anki_lapis_visual_box_layout => 'Box appearance';
+  @override
+  String get anki_lapis_visual_border_width => 'Border';
+  @override
+  String get anki_lapis_visual_border_color => 'Border color';
+  @override
+  String get anki_lapis_visual_corner_radius => 'Corner radius';
+  @override
+  String get anki_lapis_visual_padding => 'Inner spacing';
+  @override
+  String get anki_lapis_visual_margin => 'Outer spacing';
+  @override
+  String get anki_lapis_visual_field_definition_info_note =>
+      'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
+  @override
+  String get anki_lapis_visual_field_dictionary_name_note =>
+      'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
   @override
   String get library_view_manga_sources => 'Manga sources';
   @override
@@ -105407,15 +109855,15 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get mihon_extension_language_all => 'All languages';
   @override
-  String get mihon_filter_ignore => '忽略';
+  String get mihon_filter_ignore => 'Ignore';
   @override
-  String get mihon_filter_include => '包含';
+  String get mihon_filter_include => 'Include';
   @override
-  String get mihon_filter_exclude => '排除';
+  String get mihon_filter_exclude => 'Exclude';
   @override
-  String get mihon_filter_ascending => '升序';
+  String get mihon_filter_ascending => 'Ascending';
   @override
-  String get mihon_filter_descending => '降序';
+  String get mihon_filter_descending => 'Descending';
   @override
   String get mihon_add_to_bookshelf => 'Add to manga shelf';
   @override
@@ -106643,7 +111091,7 @@ extension on _StringsEn {
       case 'dict_auto_update_hint':
         return 'Check for dictionary updates on launch';
       case 'dict_auto_update_last':
-        return ({required Object time}) => 'Last update: ${time}';
+        return ({required Object time}) => 'Last successful check: ${time}';
       case 'dict_auto_update_never':
         return 'Never';
       case 'dict_category_frequency':
@@ -107485,8 +111933,6 @@ extension on _StringsEn {
         return 'WebSocket';
       case 'game_text_thread':
         return 'Text thread';
-      case 'game_text_thread_all':
-        return 'All text threads';
       case 'game_text_thread_audio_count':
         return ({required Object count}) => '${count} with audio';
       case 'game_text_thread_hint':
@@ -111011,8 +115457,6 @@ extension on _StringsEn {
         return 'Everything sent';
       case 'media_tracking_unauthorized':
         return 'Bangumi rejected the access token. Reconnect it in settings.';
-      case 'media_tracking_unlinked_hint':
-        return 'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
       case 'media_tracking_open_subject':
         return 'Open on Bangumi';
       case 'media_tracking_manage_links':
@@ -111051,6 +115495,241 @@ extension on _StringsEn {
         return 'Show details';
       case 'scrape_failure_detail_hide':
         return 'Hide details';
+      case 'media_tracking_retry_mapping':
+        return 'Retry matching';
+      case 'media_tracking_retry_matched':
+        return 'Matched and queued current progress';
+      case 'media_tracking_retry_no_match':
+        return 'No match found. Try manual linking.';
+      case 'game_statistics':
+        return 'Game statistics';
+      case 'game_stat_by_game':
+        return 'By game';
+      case 'stat_clear_all_game_message':
+        return 'Clear all game play time and session counts? Your game library and activity timeline are kept. This cannot be undone.';
+      case 'batch_selection_stale_skipped':
+        return ({required Object m, required Object n}) =>
+            'Skipped ${m} of ${n} selected items that no longer exist';
+      case 'game_text_thread_unset':
+        return 'No thread selected — pick one to start capturing';
+      case 'media_tracking_watched_show':
+        return 'View all watched anime';
+      case 'media_tracking_watched_title':
+        return 'Watched on Bangumi';
+      case 'media_tracking_watched_empty':
+        return 'No anime is marked as watched on this Bangumi account.';
+      case 'media_tracking_watched_load_failed':
+        return ({required Object error}) =>
+            'Could not load watched anime: ${error}';
+      case 'media_tracking_watched_progress':
+        return ({required Object n}) => 'Watched ${n} episodes';
+      case 'media_tracking_manual_required':
+        return 'Needs manual link';
+      case 'media_tracking_manual_required_count':
+        return ({required Object n}) => '${n} items need manual links';
+      case 'media_tracking_manual_required_hint':
+        return 'These local items already have progress but are not linked to Bangumi.';
+      case 'media_tracking_no_local_history':
+        return 'No local watch, reading, or game progress needs linking.';
+      case 'media_tracking_more_manual_required':
+        return ({required Object n}) => '${n} more items need manual links';
+      case 'manga_import_hint':
+        return 'Pick a manga folder, a .cbz/.zip page archive, or a .mokuro file.';
+      case 'manga_import_pick_file':
+        return 'Pick manga file';
+      case 'manga_import_pick_folder':
+        return 'Pick manga folder';
+      case 'manga_import_missing_input':
+        return 'Pick a manga file or folder first.';
+      case 'manga_import_detected_title':
+        return 'This looks like manga';
+      case 'manga_import_detected_confirm':
+        return 'Import as manga';
+      case 'manga_import_detected_message':
+        return ({required Object name}) =>
+            '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+      case 'video_jimaku_source_loading':
+        return 'Checking subtitle availability...';
+      case 'video_jimaku_source_failed':
+        return 'Could not check subtitle availability. Try searching again.';
+      case 'video_jimaku_language_unknown':
+        return 'Language not labeled';
+      case 'video_jimaku_source_summary':
+        return (
+                {required Object files,
+                required Object episodes,
+                required Object languages}) =>
+            '${files} subtitle files · ${episodes} episodes · ${languages}';
+      case 'video_jimaku_episode_unlabeled':
+        return ({required Object episode, required Object count}) =>
+            'No subtitle labeled episode ${episode}; ${count} unlabeled files may still match';
+      case 'video_jimaku_episode_unavailable':
+        return ({required Object episode}) =>
+            'No subtitle found for episode ${episode}';
+      case 'video_jimaku_episode_available':
+        return ({required Object count, required Object languages}) =>
+            '${count} subtitles available · ${languages}';
+      case 'video_scrape_manual_match_hint':
+        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+      case 'video_scrape_collection_match_hint':
+        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+      case 'video_scrape_apply_to_collection_hint':
+        return 'This writes the same cover to every episode. Leave it off unless that is intentional.';
+      case 'video_scrape_tmdb_key_empty':
+        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+      case 'manga_online_source_disabled':
+        return 'This internet source is disabled. Enable it in Sources to browse the catalog.';
+      case 'selection_web_search':
+        return 'Search the web';
+      case 'selection_web_search_unavailable':
+        return 'No app can search the web.';
+      case 'selection_share_failed':
+        return 'Could not open the share sheet.';
+      case 'video_subtitle_youtube_auto_generated':
+        return ({required Object lang}) => '${lang} (auto-generated)';
+      case 'anki_dedup_progress_title':
+        return 'Deduplicating media';
+      case 'anki_dedup_progress_scanning':
+        return ({required Object count}) =>
+            'Scanning media folder… (${count} files found)';
+      case 'anki_dedup_progress_hashing':
+        return ({required Object done, required Object total}) =>
+            'Comparing same-size files… (${done} / ${total})';
+      case 'anki_dedup_progress_resolving':
+        return ({required Object done, required Object total}) =>
+            'Processing duplicates… (${done} / ${total})';
+      case 'anki_dedup_progress_freed':
+        return ({required Object size}) => 'Freed ${size} so far';
+      case 'anki_dedup_cancelling':
+        return 'Cancelling…';
+      case 'anki_dedup_cancelled':
+        return 'Deduplication cancelled; completed changes are kept.';
+      case 'anki_dedup_report_cancelled_note':
+        return 'Cancelled early — the numbers below only cover what was completed.';
+      case 'anki_dedup_plan_busy_note':
+        return 'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
+      case 'video_setting_subtitle_position_secondary':
+        return 'Secondary subtitle position';
+      case 'dict_download_learning_language':
+        return 'Learning language';
+      case 'dict_category_bilingual':
+        return 'Bilingual';
+      case 'dict_category_monolingual':
+        return 'Monolingual';
+      case 'shortcut_action_video_hold_speed':
+        return 'Hold for temporary speed';
+      case 'handlebar_phonetic_transcriptions':
+        return 'Phonetic transcriptions';
+      case 'sync_progress_preparing':
+        return 'Preparing sync';
+      case 'sync_progress_collections':
+        return 'Syncing collections';
+      case 'sync_progress_book':
+        return 'Syncing book';
+      case 'sync_progress_book_titled':
+        return ({required Object title}) => 'Syncing ${title}';
+      case 'sync_last_completed':
+        return ({required Object count}) =>
+            'Last sync: done (${count} channels)';
+      case 'sync_last_no_channels':
+        return 'Last sync: nothing synced - no connected sync channel';
+      case 'sync_last_nothing':
+        return 'Last sync: nothing to sync';
+      case 'sync_last_auto_disabled':
+        return 'Last sync: skipped - auto sync is off';
+      case 'sync_last_cooled_down':
+        return 'Last sync: skipped - synced recently';
+      case 'sync_last_failed':
+        return 'Last sync: failed';
+      case 'anime_download_no_results_detail':
+        return ({required Object query, required Object filters}) =>
+            'The service responded successfully but returned 0 items. Query: ${query}; filters: ${filters}. Try another title or loosen the filters.';
+      case 'anime_download_streaming_ready':
+        return 'In library · download continues';
+      case 'anime_download_unfiltered':
+        return 'No Trusted filter';
+      case 'interconnect_enable_footer':
+        return 'How to use: on the device that holds your library, turn on the sync server switch below; on your other device, add the address of that server to pair with it. A device can act as only one role at a time — server or client.';
+      case 'interconnect_peer_list_title':
+        return 'Added peers';
+      case 'interconnect_peer_list_empty':
+        return 'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
+      case 'anki_lapis_visual_editor':
+        return 'Visual style editor';
+      case 'anki_lapis_visual_editor_hint':
+        return 'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+      case 'anki_lapis_visual_front':
+        return 'Front';
+      case 'anki_lapis_visual_back':
+        return 'Back';
+      case 'anki_lapis_visual_preview':
+        return 'Lapis card preview';
+      case 'anki_lapis_visual_select_field':
+        return 'Select a field to highlight';
+      case 'anki_lapis_visual_reset_field':
+        return 'Reset field';
+      case 'anki_lapis_visual_font_size':
+        return ({required Object percent}) => 'Font size: ${percent}%';
+      case 'anki_lapis_visual_bold':
+        return 'Bold';
+      case 'anki_lapis_visual_alignment':
+        return 'Alignment';
+      case 'anki_lapis_visual_color':
+        return 'Text color';
+      case 'anki_lapis_visual_default':
+        return 'Default';
+      case 'anki_lapis_visual_advanced_css':
+        return 'Advanced CSS';
+      case 'anki_lapis_visual_field_expression':
+        return 'Word';
+      case 'anki_lapis_visual_field_reading':
+        return 'Reading';
+      case 'anki_lapis_visual_field_sentence':
+        return 'Sentence';
+      case 'anki_lapis_visual_field_primary_definition':
+        return 'Primary definition';
+      case 'anki_lapis_visual_field_glossaries':
+        return 'Other definitions';
+      case 'anki_lapis_visual_target_card_content':
+        return 'Card content';
+      case 'anki_lapis_visual_target_definition':
+        return 'Definition';
+      case 'anki_lapis_visual_target_inside_definition':
+        return 'Inside definition';
+      case 'anki_lapis_visual_field_definition_info':
+        return 'Definition indicator';
+      case 'anki_lapis_visual_field_definition_box':
+        return 'Definition box';
+      case 'anki_lapis_visual_field_definition_content':
+        return 'Whole definition';
+      case 'anki_lapis_visual_field_selected_definition':
+        return 'Selected definition';
+      case 'anki_lapis_visual_field_dictionary_entry':
+        return 'Dictionary entry';
+      case 'anki_lapis_visual_field_dictionary_name':
+        return 'Dictionary name';
+      case 'anki_lapis_visual_field_definition_example':
+        return 'Definition example';
+      case 'anki_lapis_visual_line_height':
+        return 'Line height';
+      case 'anki_lapis_visual_background_color':
+        return 'Background highlight';
+      case 'anki_lapis_visual_box_layout':
+        return 'Box appearance';
+      case 'anki_lapis_visual_border_width':
+        return 'Border';
+      case 'anki_lapis_visual_border_color':
+        return 'Border color';
+      case 'anki_lapis_visual_corner_radius':
+        return 'Corner radius';
+      case 'anki_lapis_visual_padding':
+        return 'Inner spacing';
+      case 'anki_lapis_visual_margin':
+        return 'Outer spacing';
+      case 'anki_lapis_visual_field_definition_info_note':
+        return 'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
+      case 'anki_lapis_visual_field_dictionary_name_note':
+        return 'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
       case 'library_view_manga_sources':
         return 'Manga sources';
       case 'library_view_manga_extensions':
@@ -112355,7 +117034,7 @@ extension on _StringsAr {
       case 'dict_auto_update_hint':
         return 'التحقق من تحديثات القواميس عند بدء التشغيل';
       case 'dict_auto_update_last':
-        return ({required Object time}) => 'آخر تحديث: ${time}';
+        return ({required Object time}) => 'آخر تحقق ناجح: ${time}';
       case 'dict_auto_update_never':
         return 'أبدًا';
       case 'dict_category_frequency':
@@ -113197,8 +117876,6 @@ extension on _StringsAr {
         return 'WebSocket';
       case 'game_text_thread':
         return 'Text thread';
-      case 'game_text_thread_all':
-        return 'All text threads';
       case 'game_text_thread_audio_count':
         return ({required Object count}) => '${count} with audio';
       case 'game_text_thread_hint':
@@ -116720,8 +121397,6 @@ extension on _StringsAr {
         return 'Everything sent';
       case 'media_tracking_unauthorized':
         return 'Bangumi rejected the access token. Reconnect it in settings.';
-      case 'media_tracking_unlinked_hint':
-        return 'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
       case 'media_tracking_open_subject':
         return 'Open on Bangumi';
       case 'media_tracking_manage_links':
@@ -116760,6 +121435,241 @@ extension on _StringsAr {
         return 'Show details';
       case 'scrape_failure_detail_hide':
         return 'Hide details';
+      case 'media_tracking_retry_mapping':
+        return 'Retry matching';
+      case 'media_tracking_retry_matched':
+        return 'Matched and queued current progress';
+      case 'media_tracking_retry_no_match':
+        return 'No match found. Try manual linking.';
+      case 'game_statistics':
+        return 'Game statistics';
+      case 'game_stat_by_game':
+        return 'By game';
+      case 'stat_clear_all_game_message':
+        return 'Clear all game play time and session counts? Your game library and activity timeline are kept. This cannot be undone.';
+      case 'batch_selection_stale_skipped':
+        return ({required Object m, required Object n}) =>
+            'Skipped ${m} of ${n} selected items that no longer exist';
+      case 'game_text_thread_unset':
+        return 'No thread selected — pick one to start capturing';
+      case 'media_tracking_watched_show':
+        return 'View all watched anime';
+      case 'media_tracking_watched_title':
+        return 'Watched on Bangumi';
+      case 'media_tracking_watched_empty':
+        return 'No anime is marked as watched on this Bangumi account.';
+      case 'media_tracking_watched_load_failed':
+        return ({required Object error}) =>
+            'Could not load watched anime: ${error}';
+      case 'media_tracking_watched_progress':
+        return ({required Object n}) => 'Watched ${n} episodes';
+      case 'media_tracking_manual_required':
+        return 'Needs manual link';
+      case 'media_tracking_manual_required_count':
+        return ({required Object n}) => '${n} items need manual links';
+      case 'media_tracking_manual_required_hint':
+        return 'These local items already have progress but are not linked to Bangumi.';
+      case 'media_tracking_no_local_history':
+        return 'No local watch, reading, or game progress needs linking.';
+      case 'media_tracking_more_manual_required':
+        return ({required Object n}) => '${n} more items need manual links';
+      case 'manga_import_hint':
+        return 'Pick a manga folder, a .cbz/.zip page archive, or a .mokuro file.';
+      case 'manga_import_pick_file':
+        return 'Pick manga file';
+      case 'manga_import_pick_folder':
+        return 'Pick manga folder';
+      case 'manga_import_missing_input':
+        return 'Pick a manga file or folder first.';
+      case 'manga_import_detected_title':
+        return 'This looks like manga';
+      case 'manga_import_detected_confirm':
+        return 'Import as manga';
+      case 'manga_import_detected_message':
+        return ({required Object name}) =>
+            '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+      case 'video_jimaku_source_loading':
+        return 'Checking subtitle availability...';
+      case 'video_jimaku_source_failed':
+        return 'Could not check subtitle availability. Try searching again.';
+      case 'video_jimaku_language_unknown':
+        return 'Language not labeled';
+      case 'video_jimaku_source_summary':
+        return (
+                {required Object files,
+                required Object episodes,
+                required Object languages}) =>
+            '${files} subtitle files · ${episodes} episodes · ${languages}';
+      case 'video_jimaku_episode_unlabeled':
+        return ({required Object episode, required Object count}) =>
+            'No subtitle labeled episode ${episode}; ${count} unlabeled files may still match';
+      case 'video_jimaku_episode_unavailable':
+        return ({required Object episode}) =>
+            'No subtitle found for episode ${episode}';
+      case 'video_jimaku_episode_available':
+        return ({required Object count, required Object languages}) =>
+            '${count} subtitles available · ${languages}';
+      case 'video_scrape_manual_match_hint':
+        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+      case 'video_scrape_collection_match_hint':
+        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+      case 'video_scrape_apply_to_collection_hint':
+        return 'This writes the same cover to every episode. Leave it off unless that is intentional.';
+      case 'video_scrape_tmdb_key_empty':
+        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+      case 'manga_online_source_disabled':
+        return 'This internet source is disabled. Enable it in Sources to browse the catalog.';
+      case 'selection_web_search':
+        return 'Search the web';
+      case 'selection_web_search_unavailable':
+        return 'No app can search the web.';
+      case 'selection_share_failed':
+        return 'Could not open the share sheet.';
+      case 'video_subtitle_youtube_auto_generated':
+        return ({required Object lang}) => '${lang} (auto-generated)';
+      case 'anki_dedup_progress_title':
+        return 'Deduplicating media';
+      case 'anki_dedup_progress_scanning':
+        return ({required Object count}) =>
+            'Scanning media folder… (${count} files found)';
+      case 'anki_dedup_progress_hashing':
+        return ({required Object done, required Object total}) =>
+            'Comparing same-size files… (${done} / ${total})';
+      case 'anki_dedup_progress_resolving':
+        return ({required Object done, required Object total}) =>
+            'Processing duplicates… (${done} / ${total})';
+      case 'anki_dedup_progress_freed':
+        return ({required Object size}) => 'Freed ${size} so far';
+      case 'anki_dedup_cancelling':
+        return 'Cancelling…';
+      case 'anki_dedup_cancelled':
+        return 'Deduplication cancelled; completed changes are kept.';
+      case 'anki_dedup_report_cancelled_note':
+        return 'Cancelled early — the numbers below only cover what was completed.';
+      case 'anki_dedup_plan_busy_note':
+        return 'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
+      case 'video_setting_subtitle_position_secondary':
+        return 'Secondary subtitle position';
+      case 'dict_download_learning_language':
+        return 'Learning language';
+      case 'dict_category_bilingual':
+        return 'Bilingual';
+      case 'dict_category_monolingual':
+        return 'Monolingual';
+      case 'shortcut_action_video_hold_speed':
+        return 'Hold for temporary speed';
+      case 'handlebar_phonetic_transcriptions':
+        return 'Phonetic transcriptions';
+      case 'sync_progress_preparing':
+        return 'Preparing sync';
+      case 'sync_progress_collections':
+        return 'Syncing collections';
+      case 'sync_progress_book':
+        return 'Syncing book';
+      case 'sync_progress_book_titled':
+        return ({required Object title}) => 'Syncing ${title}';
+      case 'sync_last_completed':
+        return ({required Object count}) =>
+            'Last sync: done (${count} channels)';
+      case 'sync_last_no_channels':
+        return 'Last sync: nothing synced - no connected sync channel';
+      case 'sync_last_nothing':
+        return 'Last sync: nothing to sync';
+      case 'sync_last_auto_disabled':
+        return 'Last sync: skipped - auto sync is off';
+      case 'sync_last_cooled_down':
+        return 'Last sync: skipped - synced recently';
+      case 'sync_last_failed':
+        return 'Last sync: failed';
+      case 'anime_download_no_results_detail':
+        return ({required Object query, required Object filters}) =>
+            'The service responded successfully but returned 0 items. Query: ${query}; filters: ${filters}. Try another title or loosen the filters.';
+      case 'anime_download_streaming_ready':
+        return 'In library · download continues';
+      case 'anime_download_unfiltered':
+        return 'No Trusted filter';
+      case 'interconnect_enable_footer':
+        return 'How to use: on the device that holds your library, turn on the sync server switch below; on your other device, add the address of that server to pair with it. A device can act as only one role at a time — server or client.';
+      case 'interconnect_peer_list_title':
+        return 'Added peers';
+      case 'interconnect_peer_list_empty':
+        return 'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
+      case 'anki_lapis_visual_editor':
+        return 'Visual style editor';
+      case 'anki_lapis_visual_editor_hint':
+        return 'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+      case 'anki_lapis_visual_front':
+        return 'Front';
+      case 'anki_lapis_visual_back':
+        return 'Back';
+      case 'anki_lapis_visual_preview':
+        return 'Lapis card preview';
+      case 'anki_lapis_visual_select_field':
+        return 'Select a field to highlight';
+      case 'anki_lapis_visual_reset_field':
+        return 'Reset field';
+      case 'anki_lapis_visual_font_size':
+        return ({required Object percent}) => 'Font size: ${percent}%';
+      case 'anki_lapis_visual_bold':
+        return 'Bold';
+      case 'anki_lapis_visual_alignment':
+        return 'Alignment';
+      case 'anki_lapis_visual_color':
+        return 'Text color';
+      case 'anki_lapis_visual_default':
+        return 'Default';
+      case 'anki_lapis_visual_advanced_css':
+        return 'Advanced CSS';
+      case 'anki_lapis_visual_field_expression':
+        return 'Word';
+      case 'anki_lapis_visual_field_reading':
+        return 'Reading';
+      case 'anki_lapis_visual_field_sentence':
+        return 'Sentence';
+      case 'anki_lapis_visual_field_primary_definition':
+        return 'Primary definition';
+      case 'anki_lapis_visual_field_glossaries':
+        return 'Other definitions';
+      case 'anki_lapis_visual_target_card_content':
+        return 'Card content';
+      case 'anki_lapis_visual_target_definition':
+        return 'Definition';
+      case 'anki_lapis_visual_target_inside_definition':
+        return 'Inside definition';
+      case 'anki_lapis_visual_field_definition_info':
+        return 'Definition indicator';
+      case 'anki_lapis_visual_field_definition_box':
+        return 'Definition box';
+      case 'anki_lapis_visual_field_definition_content':
+        return 'Whole definition';
+      case 'anki_lapis_visual_field_selected_definition':
+        return 'Selected definition';
+      case 'anki_lapis_visual_field_dictionary_entry':
+        return 'Dictionary entry';
+      case 'anki_lapis_visual_field_dictionary_name':
+        return 'Dictionary name';
+      case 'anki_lapis_visual_field_definition_example':
+        return 'Definition example';
+      case 'anki_lapis_visual_line_height':
+        return 'Line height';
+      case 'anki_lapis_visual_background_color':
+        return 'Background highlight';
+      case 'anki_lapis_visual_box_layout':
+        return 'Box appearance';
+      case 'anki_lapis_visual_border_width':
+        return 'Border';
+      case 'anki_lapis_visual_border_color':
+        return 'Border color';
+      case 'anki_lapis_visual_corner_radius':
+        return 'Corner radius';
+      case 'anki_lapis_visual_padding':
+        return 'Inner spacing';
+      case 'anki_lapis_visual_margin':
+        return 'Outer spacing';
+      case 'anki_lapis_visual_field_definition_info_note':
+        return 'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
+      case 'anki_lapis_visual_field_dictionary_name_note':
+        return 'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
       case 'library_view_manga_sources':
         return 'Manga sources';
       case 'library_view_manga_extensions':
@@ -116827,15 +121737,15 @@ extension on _StringsAr {
       case 'mihon_extension_language_all':
         return 'All languages';
       case 'mihon_filter_ignore':
-        return '忽略';
+        return 'Ignore';
       case 'mihon_filter_include':
-        return '包含';
+        return 'Include';
       case 'mihon_filter_exclude':
-        return '排除';
+        return 'Exclude';
       case 'mihon_filter_ascending':
-        return '升序';
+        return 'Ascending';
       case 'mihon_filter_descending':
-        return '降序';
+        return 'Descending';
       case 'mihon_add_to_bookshelf':
         return 'Add to manga shelf';
       case 'mihon_in_bookshelf':
@@ -118066,7 +122976,8 @@ extension on _StringsDe {
       case 'dict_auto_update_hint':
         return 'Beim Start nach Wörterbuch-Updates suchen';
       case 'dict_auto_update_last':
-        return ({required Object time}) => 'Letzte Aktualisierung: ${time}';
+        return ({required Object time}) =>
+            'Letzte erfolgreiche Prüfung: ${time}';
       case 'dict_auto_update_never':
         return 'Nie';
       case 'dict_category_frequency':
@@ -118909,8 +123820,6 @@ extension on _StringsDe {
         return 'WebSocket';
       case 'game_text_thread':
         return 'Text thread';
-      case 'game_text_thread_all':
-        return 'All text threads';
       case 'game_text_thread_audio_count':
         return ({required Object count}) => '${count} with audio';
       case 'game_text_thread_hint':
@@ -122450,8 +127359,6 @@ extension on _StringsDe {
         return 'Everything sent';
       case 'media_tracking_unauthorized':
         return 'Bangumi rejected the access token. Reconnect it in settings.';
-      case 'media_tracking_unlinked_hint':
-        return 'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
       case 'media_tracking_open_subject':
         return 'Open on Bangumi';
       case 'media_tracking_manage_links':
@@ -122490,6 +127397,241 @@ extension on _StringsDe {
         return 'Show details';
       case 'scrape_failure_detail_hide':
         return 'Hide details';
+      case 'media_tracking_retry_mapping':
+        return 'Retry matching';
+      case 'media_tracking_retry_matched':
+        return 'Matched and queued current progress';
+      case 'media_tracking_retry_no_match':
+        return 'No match found. Try manual linking.';
+      case 'game_statistics':
+        return 'Game statistics';
+      case 'game_stat_by_game':
+        return 'By game';
+      case 'stat_clear_all_game_message':
+        return 'Clear all game play time and session counts? Your game library and activity timeline are kept. This cannot be undone.';
+      case 'batch_selection_stale_skipped':
+        return ({required Object m, required Object n}) =>
+            'Skipped ${m} of ${n} selected items that no longer exist';
+      case 'game_text_thread_unset':
+        return 'No thread selected — pick one to start capturing';
+      case 'media_tracking_watched_show':
+        return 'View all watched anime';
+      case 'media_tracking_watched_title':
+        return 'Watched on Bangumi';
+      case 'media_tracking_watched_empty':
+        return 'No anime is marked as watched on this Bangumi account.';
+      case 'media_tracking_watched_load_failed':
+        return ({required Object error}) =>
+            'Could not load watched anime: ${error}';
+      case 'media_tracking_watched_progress':
+        return ({required Object n}) => 'Watched ${n} episodes';
+      case 'media_tracking_manual_required':
+        return 'Needs manual link';
+      case 'media_tracking_manual_required_count':
+        return ({required Object n}) => '${n} items need manual links';
+      case 'media_tracking_manual_required_hint':
+        return 'These local items already have progress but are not linked to Bangumi.';
+      case 'media_tracking_no_local_history':
+        return 'No local watch, reading, or game progress needs linking.';
+      case 'media_tracking_more_manual_required':
+        return ({required Object n}) => '${n} more items need manual links';
+      case 'manga_import_hint':
+        return 'Pick a manga folder, a .cbz/.zip page archive, or a .mokuro file.';
+      case 'manga_import_pick_file':
+        return 'Pick manga file';
+      case 'manga_import_pick_folder':
+        return 'Pick manga folder';
+      case 'manga_import_missing_input':
+        return 'Pick a manga file or folder first.';
+      case 'manga_import_detected_title':
+        return 'This looks like manga';
+      case 'manga_import_detected_confirm':
+        return 'Import as manga';
+      case 'manga_import_detected_message':
+        return ({required Object name}) =>
+            '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+      case 'video_jimaku_source_loading':
+        return 'Checking subtitle availability...';
+      case 'video_jimaku_source_failed':
+        return 'Could not check subtitle availability. Try searching again.';
+      case 'video_jimaku_language_unknown':
+        return 'Language not labeled';
+      case 'video_jimaku_source_summary':
+        return (
+                {required Object files,
+                required Object episodes,
+                required Object languages}) =>
+            '${files} subtitle files · ${episodes} episodes · ${languages}';
+      case 'video_jimaku_episode_unlabeled':
+        return ({required Object episode, required Object count}) =>
+            'No subtitle labeled episode ${episode}; ${count} unlabeled files may still match';
+      case 'video_jimaku_episode_unavailable':
+        return ({required Object episode}) =>
+            'No subtitle found for episode ${episode}';
+      case 'video_jimaku_episode_available':
+        return ({required Object count, required Object languages}) =>
+            '${count} subtitles available · ${languages}';
+      case 'video_scrape_manual_match_hint':
+        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+      case 'video_scrape_collection_match_hint':
+        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+      case 'video_scrape_apply_to_collection_hint':
+        return 'This writes the same cover to every episode. Leave it off unless that is intentional.';
+      case 'video_scrape_tmdb_key_empty':
+        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+      case 'manga_online_source_disabled':
+        return 'This internet source is disabled. Enable it in Sources to browse the catalog.';
+      case 'selection_web_search':
+        return 'Search the web';
+      case 'selection_web_search_unavailable':
+        return 'No app can search the web.';
+      case 'selection_share_failed':
+        return 'Could not open the share sheet.';
+      case 'video_subtitle_youtube_auto_generated':
+        return ({required Object lang}) => '${lang} (auto-generated)';
+      case 'anki_dedup_progress_title':
+        return 'Deduplicating media';
+      case 'anki_dedup_progress_scanning':
+        return ({required Object count}) =>
+            'Scanning media folder… (${count} files found)';
+      case 'anki_dedup_progress_hashing':
+        return ({required Object done, required Object total}) =>
+            'Comparing same-size files… (${done} / ${total})';
+      case 'anki_dedup_progress_resolving':
+        return ({required Object done, required Object total}) =>
+            'Processing duplicates… (${done} / ${total})';
+      case 'anki_dedup_progress_freed':
+        return ({required Object size}) => 'Freed ${size} so far';
+      case 'anki_dedup_cancelling':
+        return 'Cancelling…';
+      case 'anki_dedup_cancelled':
+        return 'Deduplication cancelled; completed changes are kept.';
+      case 'anki_dedup_report_cancelled_note':
+        return 'Cancelled early — the numbers below only cover what was completed.';
+      case 'anki_dedup_plan_busy_note':
+        return 'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
+      case 'video_setting_subtitle_position_secondary':
+        return 'Secondary subtitle position';
+      case 'dict_download_learning_language':
+        return 'Learning language';
+      case 'dict_category_bilingual':
+        return 'Bilingual';
+      case 'dict_category_monolingual':
+        return 'Monolingual';
+      case 'shortcut_action_video_hold_speed':
+        return 'Hold for temporary speed';
+      case 'handlebar_phonetic_transcriptions':
+        return 'Phonetic transcriptions';
+      case 'sync_progress_preparing':
+        return 'Preparing sync';
+      case 'sync_progress_collections':
+        return 'Syncing collections';
+      case 'sync_progress_book':
+        return 'Syncing book';
+      case 'sync_progress_book_titled':
+        return ({required Object title}) => 'Syncing ${title}';
+      case 'sync_last_completed':
+        return ({required Object count}) =>
+            'Last sync: done (${count} channels)';
+      case 'sync_last_no_channels':
+        return 'Last sync: nothing synced - no connected sync channel';
+      case 'sync_last_nothing':
+        return 'Last sync: nothing to sync';
+      case 'sync_last_auto_disabled':
+        return 'Last sync: skipped - auto sync is off';
+      case 'sync_last_cooled_down':
+        return 'Last sync: skipped - synced recently';
+      case 'sync_last_failed':
+        return 'Last sync: failed';
+      case 'anime_download_no_results_detail':
+        return ({required Object query, required Object filters}) =>
+            'The service responded successfully but returned 0 items. Query: ${query}; filters: ${filters}. Try another title or loosen the filters.';
+      case 'anime_download_streaming_ready':
+        return 'In library · download continues';
+      case 'anime_download_unfiltered':
+        return 'No Trusted filter';
+      case 'interconnect_enable_footer':
+        return 'How to use: on the device that holds your library, turn on the sync server switch below; on your other device, add the address of that server to pair with it. A device can act as only one role at a time — server or client.';
+      case 'interconnect_peer_list_title':
+        return 'Added peers';
+      case 'interconnect_peer_list_empty':
+        return 'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
+      case 'anki_lapis_visual_editor':
+        return 'Visual style editor';
+      case 'anki_lapis_visual_editor_hint':
+        return 'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+      case 'anki_lapis_visual_front':
+        return 'Front';
+      case 'anki_lapis_visual_back':
+        return 'Back';
+      case 'anki_lapis_visual_preview':
+        return 'Lapis card preview';
+      case 'anki_lapis_visual_select_field':
+        return 'Select a field to highlight';
+      case 'anki_lapis_visual_reset_field':
+        return 'Reset field';
+      case 'anki_lapis_visual_font_size':
+        return ({required Object percent}) => 'Font size: ${percent}%';
+      case 'anki_lapis_visual_bold':
+        return 'Bold';
+      case 'anki_lapis_visual_alignment':
+        return 'Alignment';
+      case 'anki_lapis_visual_color':
+        return 'Text color';
+      case 'anki_lapis_visual_default':
+        return 'Default';
+      case 'anki_lapis_visual_advanced_css':
+        return 'Advanced CSS';
+      case 'anki_lapis_visual_field_expression':
+        return 'Word';
+      case 'anki_lapis_visual_field_reading':
+        return 'Reading';
+      case 'anki_lapis_visual_field_sentence':
+        return 'Sentence';
+      case 'anki_lapis_visual_field_primary_definition':
+        return 'Primary definition';
+      case 'anki_lapis_visual_field_glossaries':
+        return 'Other definitions';
+      case 'anki_lapis_visual_target_card_content':
+        return 'Card content';
+      case 'anki_lapis_visual_target_definition':
+        return 'Definition';
+      case 'anki_lapis_visual_target_inside_definition':
+        return 'Inside definition';
+      case 'anki_lapis_visual_field_definition_info':
+        return 'Definition indicator';
+      case 'anki_lapis_visual_field_definition_box':
+        return 'Definition box';
+      case 'anki_lapis_visual_field_definition_content':
+        return 'Whole definition';
+      case 'anki_lapis_visual_field_selected_definition':
+        return 'Selected definition';
+      case 'anki_lapis_visual_field_dictionary_entry':
+        return 'Dictionary entry';
+      case 'anki_lapis_visual_field_dictionary_name':
+        return 'Dictionary name';
+      case 'anki_lapis_visual_field_definition_example':
+        return 'Definition example';
+      case 'anki_lapis_visual_line_height':
+        return 'Line height';
+      case 'anki_lapis_visual_background_color':
+        return 'Background highlight';
+      case 'anki_lapis_visual_box_layout':
+        return 'Box appearance';
+      case 'anki_lapis_visual_border_width':
+        return 'Border';
+      case 'anki_lapis_visual_border_color':
+        return 'Border color';
+      case 'anki_lapis_visual_corner_radius':
+        return 'Corner radius';
+      case 'anki_lapis_visual_padding':
+        return 'Inner spacing';
+      case 'anki_lapis_visual_margin':
+        return 'Outer spacing';
+      case 'anki_lapis_visual_field_definition_info_note':
+        return 'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
+      case 'anki_lapis_visual_field_dictionary_name_note':
+        return 'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
       case 'library_view_manga_sources':
         return 'Manga sources';
       case 'library_view_manga_extensions':
@@ -122557,15 +127699,15 @@ extension on _StringsDe {
       case 'mihon_extension_language_all':
         return 'All languages';
       case 'mihon_filter_ignore':
-        return '忽略';
+        return 'Ignore';
       case 'mihon_filter_include':
-        return '包含';
+        return 'Include';
       case 'mihon_filter_exclude':
-        return '排除';
+        return 'Exclude';
       case 'mihon_filter_ascending':
-        return '升序';
+        return 'Ascending';
       case 'mihon_filter_descending':
-        return '降序';
+        return 'Descending';
       case 'mihon_add_to_bookshelf':
         return 'Add to manga shelf';
       case 'mihon_in_bookshelf':
@@ -123797,7 +128939,8 @@ extension on _StringsEs {
       case 'dict_auto_update_hint':
         return 'Buscar actualizaciones de diccionarios al iniciar';
       case 'dict_auto_update_last':
-        return ({required Object time}) => 'Última actualización: ${time}';
+        return ({required Object time}) =>
+            'Última comprobación correcta: ${time}';
       case 'dict_auto_update_never':
         return 'Nunca';
       case 'dict_category_frequency':
@@ -124640,8 +129783,6 @@ extension on _StringsEs {
         return 'WebSocket';
       case 'game_text_thread':
         return 'Text thread';
-      case 'game_text_thread_all':
-        return 'All text threads';
       case 'game_text_thread_audio_count':
         return ({required Object count}) => '${count} with audio';
       case 'game_text_thread_hint':
@@ -128179,8 +133320,6 @@ extension on _StringsEs {
         return 'Everything sent';
       case 'media_tracking_unauthorized':
         return 'Bangumi rejected the access token. Reconnect it in settings.';
-      case 'media_tracking_unlinked_hint':
-        return 'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
       case 'media_tracking_open_subject':
         return 'Open on Bangumi';
       case 'media_tracking_manage_links':
@@ -128219,6 +133358,241 @@ extension on _StringsEs {
         return 'Show details';
       case 'scrape_failure_detail_hide':
         return 'Hide details';
+      case 'media_tracking_retry_mapping':
+        return 'Retry matching';
+      case 'media_tracking_retry_matched':
+        return 'Matched and queued current progress';
+      case 'media_tracking_retry_no_match':
+        return 'No match found. Try manual linking.';
+      case 'game_statistics':
+        return 'Game statistics';
+      case 'game_stat_by_game':
+        return 'By game';
+      case 'stat_clear_all_game_message':
+        return 'Clear all game play time and session counts? Your game library and activity timeline are kept. This cannot be undone.';
+      case 'batch_selection_stale_skipped':
+        return ({required Object m, required Object n}) =>
+            'Skipped ${m} of ${n} selected items that no longer exist';
+      case 'game_text_thread_unset':
+        return 'No thread selected — pick one to start capturing';
+      case 'media_tracking_watched_show':
+        return 'View all watched anime';
+      case 'media_tracking_watched_title':
+        return 'Watched on Bangumi';
+      case 'media_tracking_watched_empty':
+        return 'No anime is marked as watched on this Bangumi account.';
+      case 'media_tracking_watched_load_failed':
+        return ({required Object error}) =>
+            'Could not load watched anime: ${error}';
+      case 'media_tracking_watched_progress':
+        return ({required Object n}) => 'Watched ${n} episodes';
+      case 'media_tracking_manual_required':
+        return 'Needs manual link';
+      case 'media_tracking_manual_required_count':
+        return ({required Object n}) => '${n} items need manual links';
+      case 'media_tracking_manual_required_hint':
+        return 'These local items already have progress but are not linked to Bangumi.';
+      case 'media_tracking_no_local_history':
+        return 'No local watch, reading, or game progress needs linking.';
+      case 'media_tracking_more_manual_required':
+        return ({required Object n}) => '${n} more items need manual links';
+      case 'manga_import_hint':
+        return 'Pick a manga folder, a .cbz/.zip page archive, or a .mokuro file.';
+      case 'manga_import_pick_file':
+        return 'Pick manga file';
+      case 'manga_import_pick_folder':
+        return 'Pick manga folder';
+      case 'manga_import_missing_input':
+        return 'Pick a manga file or folder first.';
+      case 'manga_import_detected_title':
+        return 'This looks like manga';
+      case 'manga_import_detected_confirm':
+        return 'Import as manga';
+      case 'manga_import_detected_message':
+        return ({required Object name}) =>
+            '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+      case 'video_jimaku_source_loading':
+        return 'Checking subtitle availability...';
+      case 'video_jimaku_source_failed':
+        return 'Could not check subtitle availability. Try searching again.';
+      case 'video_jimaku_language_unknown':
+        return 'Language not labeled';
+      case 'video_jimaku_source_summary':
+        return (
+                {required Object files,
+                required Object episodes,
+                required Object languages}) =>
+            '${files} subtitle files · ${episodes} episodes · ${languages}';
+      case 'video_jimaku_episode_unlabeled':
+        return ({required Object episode, required Object count}) =>
+            'No subtitle labeled episode ${episode}; ${count} unlabeled files may still match';
+      case 'video_jimaku_episode_unavailable':
+        return ({required Object episode}) =>
+            'No subtitle found for episode ${episode}';
+      case 'video_jimaku_episode_available':
+        return ({required Object count, required Object languages}) =>
+            '${count} subtitles available · ${languages}';
+      case 'video_scrape_manual_match_hint':
+        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+      case 'video_scrape_collection_match_hint':
+        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+      case 'video_scrape_apply_to_collection_hint':
+        return 'This writes the same cover to every episode. Leave it off unless that is intentional.';
+      case 'video_scrape_tmdb_key_empty':
+        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+      case 'manga_online_source_disabled':
+        return 'This internet source is disabled. Enable it in Sources to browse the catalog.';
+      case 'selection_web_search':
+        return 'Search the web';
+      case 'selection_web_search_unavailable':
+        return 'No app can search the web.';
+      case 'selection_share_failed':
+        return 'Could not open the share sheet.';
+      case 'video_subtitle_youtube_auto_generated':
+        return ({required Object lang}) => '${lang} (auto-generated)';
+      case 'anki_dedup_progress_title':
+        return 'Deduplicating media';
+      case 'anki_dedup_progress_scanning':
+        return ({required Object count}) =>
+            'Scanning media folder… (${count} files found)';
+      case 'anki_dedup_progress_hashing':
+        return ({required Object done, required Object total}) =>
+            'Comparing same-size files… (${done} / ${total})';
+      case 'anki_dedup_progress_resolving':
+        return ({required Object done, required Object total}) =>
+            'Processing duplicates… (${done} / ${total})';
+      case 'anki_dedup_progress_freed':
+        return ({required Object size}) => 'Freed ${size} so far';
+      case 'anki_dedup_cancelling':
+        return 'Cancelling…';
+      case 'anki_dedup_cancelled':
+        return 'Deduplication cancelled; completed changes are kept.';
+      case 'anki_dedup_report_cancelled_note':
+        return 'Cancelled early — the numbers below only cover what was completed.';
+      case 'anki_dedup_plan_busy_note':
+        return 'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
+      case 'video_setting_subtitle_position_secondary':
+        return 'Secondary subtitle position';
+      case 'dict_download_learning_language':
+        return 'Learning language';
+      case 'dict_category_bilingual':
+        return 'Bilingual';
+      case 'dict_category_monolingual':
+        return 'Monolingual';
+      case 'shortcut_action_video_hold_speed':
+        return 'Hold for temporary speed';
+      case 'handlebar_phonetic_transcriptions':
+        return 'Phonetic transcriptions';
+      case 'sync_progress_preparing':
+        return 'Preparing sync';
+      case 'sync_progress_collections':
+        return 'Syncing collections';
+      case 'sync_progress_book':
+        return 'Syncing book';
+      case 'sync_progress_book_titled':
+        return ({required Object title}) => 'Syncing ${title}';
+      case 'sync_last_completed':
+        return ({required Object count}) =>
+            'Last sync: done (${count} channels)';
+      case 'sync_last_no_channels':
+        return 'Last sync: nothing synced - no connected sync channel';
+      case 'sync_last_nothing':
+        return 'Last sync: nothing to sync';
+      case 'sync_last_auto_disabled':
+        return 'Last sync: skipped - auto sync is off';
+      case 'sync_last_cooled_down':
+        return 'Last sync: skipped - synced recently';
+      case 'sync_last_failed':
+        return 'Last sync: failed';
+      case 'anime_download_no_results_detail':
+        return ({required Object query, required Object filters}) =>
+            'The service responded successfully but returned 0 items. Query: ${query}; filters: ${filters}. Try another title or loosen the filters.';
+      case 'anime_download_streaming_ready':
+        return 'In library · download continues';
+      case 'anime_download_unfiltered':
+        return 'No Trusted filter';
+      case 'interconnect_enable_footer':
+        return 'How to use: on the device that holds your library, turn on the sync server switch below; on your other device, add the address of that server to pair with it. A device can act as only one role at a time — server or client.';
+      case 'interconnect_peer_list_title':
+        return 'Added peers';
+      case 'interconnect_peer_list_empty':
+        return 'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
+      case 'anki_lapis_visual_editor':
+        return 'Visual style editor';
+      case 'anki_lapis_visual_editor_hint':
+        return 'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+      case 'anki_lapis_visual_front':
+        return 'Front';
+      case 'anki_lapis_visual_back':
+        return 'Back';
+      case 'anki_lapis_visual_preview':
+        return 'Lapis card preview';
+      case 'anki_lapis_visual_select_field':
+        return 'Select a field to highlight';
+      case 'anki_lapis_visual_reset_field':
+        return 'Reset field';
+      case 'anki_lapis_visual_font_size':
+        return ({required Object percent}) => 'Font size: ${percent}%';
+      case 'anki_lapis_visual_bold':
+        return 'Bold';
+      case 'anki_lapis_visual_alignment':
+        return 'Alignment';
+      case 'anki_lapis_visual_color':
+        return 'Text color';
+      case 'anki_lapis_visual_default':
+        return 'Default';
+      case 'anki_lapis_visual_advanced_css':
+        return 'Advanced CSS';
+      case 'anki_lapis_visual_field_expression':
+        return 'Word';
+      case 'anki_lapis_visual_field_reading':
+        return 'Reading';
+      case 'anki_lapis_visual_field_sentence':
+        return 'Sentence';
+      case 'anki_lapis_visual_field_primary_definition':
+        return 'Primary definition';
+      case 'anki_lapis_visual_field_glossaries':
+        return 'Other definitions';
+      case 'anki_lapis_visual_target_card_content':
+        return 'Card content';
+      case 'anki_lapis_visual_target_definition':
+        return 'Definition';
+      case 'anki_lapis_visual_target_inside_definition':
+        return 'Inside definition';
+      case 'anki_lapis_visual_field_definition_info':
+        return 'Definition indicator';
+      case 'anki_lapis_visual_field_definition_box':
+        return 'Definition box';
+      case 'anki_lapis_visual_field_definition_content':
+        return 'Whole definition';
+      case 'anki_lapis_visual_field_selected_definition':
+        return 'Selected definition';
+      case 'anki_lapis_visual_field_dictionary_entry':
+        return 'Dictionary entry';
+      case 'anki_lapis_visual_field_dictionary_name':
+        return 'Dictionary name';
+      case 'anki_lapis_visual_field_definition_example':
+        return 'Definition example';
+      case 'anki_lapis_visual_line_height':
+        return 'Line height';
+      case 'anki_lapis_visual_background_color':
+        return 'Background highlight';
+      case 'anki_lapis_visual_box_layout':
+        return 'Box appearance';
+      case 'anki_lapis_visual_border_width':
+        return 'Border';
+      case 'anki_lapis_visual_border_color':
+        return 'Border color';
+      case 'anki_lapis_visual_corner_radius':
+        return 'Corner radius';
+      case 'anki_lapis_visual_padding':
+        return 'Inner spacing';
+      case 'anki_lapis_visual_margin':
+        return 'Outer spacing';
+      case 'anki_lapis_visual_field_definition_info_note':
+        return 'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
+      case 'anki_lapis_visual_field_dictionary_name_note':
+        return 'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
       case 'library_view_manga_sources':
         return 'Manga sources';
       case 'library_view_manga_extensions':
@@ -128286,15 +133660,15 @@ extension on _StringsEs {
       case 'mihon_extension_language_all':
         return 'All languages';
       case 'mihon_filter_ignore':
-        return '忽略';
+        return 'Ignore';
       case 'mihon_filter_include':
-        return '包含';
+        return 'Include';
       case 'mihon_filter_exclude':
-        return '排除';
+        return 'Exclude';
       case 'mihon_filter_ascending':
-        return '升序';
+        return 'Ascending';
       case 'mihon_filter_descending':
-        return '降序';
+        return 'Descending';
       case 'mihon_add_to_bookshelf':
         return 'Add to manga shelf';
       case 'mihon_in_bookshelf':
@@ -129527,7 +134901,8 @@ extension on _StringsFr {
       case 'dict_auto_update_hint':
         return 'Vérifier les mises à jour des dictionnaires au démarrage';
       case 'dict_auto_update_last':
-        return ({required Object time}) => 'Dernière mise à jour : ${time}';
+        return ({required Object time}) =>
+            'Dernière vérification réussie : ${time}';
       case 'dict_auto_update_never':
         return 'Jamais';
       case 'dict_category_frequency':
@@ -130372,8 +135747,6 @@ extension on _StringsFr {
         return 'WebSocket';
       case 'game_text_thread':
         return 'Text thread';
-      case 'game_text_thread_all':
-        return 'All text threads';
       case 'game_text_thread_audio_count':
         return ({required Object count}) => '${count} with audio';
       case 'game_text_thread_hint':
@@ -133914,8 +139287,6 @@ extension on _StringsFr {
         return 'Everything sent';
       case 'media_tracking_unauthorized':
         return 'Bangumi rejected the access token. Reconnect it in settings.';
-      case 'media_tracking_unlinked_hint':
-        return 'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
       case 'media_tracking_open_subject':
         return 'Open on Bangumi';
       case 'media_tracking_manage_links':
@@ -133954,6 +139325,241 @@ extension on _StringsFr {
         return 'Show details';
       case 'scrape_failure_detail_hide':
         return 'Hide details';
+      case 'media_tracking_retry_mapping':
+        return 'Retry matching';
+      case 'media_tracking_retry_matched':
+        return 'Matched and queued current progress';
+      case 'media_tracking_retry_no_match':
+        return 'No match found. Try manual linking.';
+      case 'game_statistics':
+        return 'Game statistics';
+      case 'game_stat_by_game':
+        return 'By game';
+      case 'stat_clear_all_game_message':
+        return 'Clear all game play time and session counts? Your game library and activity timeline are kept. This cannot be undone.';
+      case 'batch_selection_stale_skipped':
+        return ({required Object m, required Object n}) =>
+            'Skipped ${m} of ${n} selected items that no longer exist';
+      case 'game_text_thread_unset':
+        return 'No thread selected — pick one to start capturing';
+      case 'media_tracking_watched_show':
+        return 'View all watched anime';
+      case 'media_tracking_watched_title':
+        return 'Watched on Bangumi';
+      case 'media_tracking_watched_empty':
+        return 'No anime is marked as watched on this Bangumi account.';
+      case 'media_tracking_watched_load_failed':
+        return ({required Object error}) =>
+            'Could not load watched anime: ${error}';
+      case 'media_tracking_watched_progress':
+        return ({required Object n}) => 'Watched ${n} episodes';
+      case 'media_tracking_manual_required':
+        return 'Needs manual link';
+      case 'media_tracking_manual_required_count':
+        return ({required Object n}) => '${n} items need manual links';
+      case 'media_tracking_manual_required_hint':
+        return 'These local items already have progress but are not linked to Bangumi.';
+      case 'media_tracking_no_local_history':
+        return 'No local watch, reading, or game progress needs linking.';
+      case 'media_tracking_more_manual_required':
+        return ({required Object n}) => '${n} more items need manual links';
+      case 'manga_import_hint':
+        return 'Pick a manga folder, a .cbz/.zip page archive, or a .mokuro file.';
+      case 'manga_import_pick_file':
+        return 'Pick manga file';
+      case 'manga_import_pick_folder':
+        return 'Pick manga folder';
+      case 'manga_import_missing_input':
+        return 'Pick a manga file or folder first.';
+      case 'manga_import_detected_title':
+        return 'This looks like manga';
+      case 'manga_import_detected_confirm':
+        return 'Import as manga';
+      case 'manga_import_detected_message':
+        return ({required Object name}) =>
+            '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+      case 'video_jimaku_source_loading':
+        return 'Checking subtitle availability...';
+      case 'video_jimaku_source_failed':
+        return 'Could not check subtitle availability. Try searching again.';
+      case 'video_jimaku_language_unknown':
+        return 'Language not labeled';
+      case 'video_jimaku_source_summary':
+        return (
+                {required Object files,
+                required Object episodes,
+                required Object languages}) =>
+            '${files} subtitle files · ${episodes} episodes · ${languages}';
+      case 'video_jimaku_episode_unlabeled':
+        return ({required Object episode, required Object count}) =>
+            'No subtitle labeled episode ${episode}; ${count} unlabeled files may still match';
+      case 'video_jimaku_episode_unavailable':
+        return ({required Object episode}) =>
+            'No subtitle found for episode ${episode}';
+      case 'video_jimaku_episode_available':
+        return ({required Object count, required Object languages}) =>
+            '${count} subtitles available · ${languages}';
+      case 'video_scrape_manual_match_hint':
+        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+      case 'video_scrape_collection_match_hint':
+        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+      case 'video_scrape_apply_to_collection_hint':
+        return 'This writes the same cover to every episode. Leave it off unless that is intentional.';
+      case 'video_scrape_tmdb_key_empty':
+        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+      case 'manga_online_source_disabled':
+        return 'This internet source is disabled. Enable it in Sources to browse the catalog.';
+      case 'selection_web_search':
+        return 'Search the web';
+      case 'selection_web_search_unavailable':
+        return 'No app can search the web.';
+      case 'selection_share_failed':
+        return 'Could not open the share sheet.';
+      case 'video_subtitle_youtube_auto_generated':
+        return ({required Object lang}) => '${lang} (auto-generated)';
+      case 'anki_dedup_progress_title':
+        return 'Deduplicating media';
+      case 'anki_dedup_progress_scanning':
+        return ({required Object count}) =>
+            'Scanning media folder… (${count} files found)';
+      case 'anki_dedup_progress_hashing':
+        return ({required Object done, required Object total}) =>
+            'Comparing same-size files… (${done} / ${total})';
+      case 'anki_dedup_progress_resolving':
+        return ({required Object done, required Object total}) =>
+            'Processing duplicates… (${done} / ${total})';
+      case 'anki_dedup_progress_freed':
+        return ({required Object size}) => 'Freed ${size} so far';
+      case 'anki_dedup_cancelling':
+        return 'Cancelling…';
+      case 'anki_dedup_cancelled':
+        return 'Deduplication cancelled; completed changes are kept.';
+      case 'anki_dedup_report_cancelled_note':
+        return 'Cancelled early — the numbers below only cover what was completed.';
+      case 'anki_dedup_plan_busy_note':
+        return 'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
+      case 'video_setting_subtitle_position_secondary':
+        return 'Secondary subtitle position';
+      case 'dict_download_learning_language':
+        return 'Learning language';
+      case 'dict_category_bilingual':
+        return 'Bilingual';
+      case 'dict_category_monolingual':
+        return 'Monolingual';
+      case 'shortcut_action_video_hold_speed':
+        return 'Hold for temporary speed';
+      case 'handlebar_phonetic_transcriptions':
+        return 'Phonetic transcriptions';
+      case 'sync_progress_preparing':
+        return 'Preparing sync';
+      case 'sync_progress_collections':
+        return 'Syncing collections';
+      case 'sync_progress_book':
+        return 'Syncing book';
+      case 'sync_progress_book_titled':
+        return ({required Object title}) => 'Syncing ${title}';
+      case 'sync_last_completed':
+        return ({required Object count}) =>
+            'Last sync: done (${count} channels)';
+      case 'sync_last_no_channels':
+        return 'Last sync: nothing synced - no connected sync channel';
+      case 'sync_last_nothing':
+        return 'Last sync: nothing to sync';
+      case 'sync_last_auto_disabled':
+        return 'Last sync: skipped - auto sync is off';
+      case 'sync_last_cooled_down':
+        return 'Last sync: skipped - synced recently';
+      case 'sync_last_failed':
+        return 'Last sync: failed';
+      case 'anime_download_no_results_detail':
+        return ({required Object query, required Object filters}) =>
+            'The service responded successfully but returned 0 items. Query: ${query}; filters: ${filters}. Try another title or loosen the filters.';
+      case 'anime_download_streaming_ready':
+        return 'In library · download continues';
+      case 'anime_download_unfiltered':
+        return 'No Trusted filter';
+      case 'interconnect_enable_footer':
+        return 'How to use: on the device that holds your library, turn on the sync server switch below; on your other device, add the address of that server to pair with it. A device can act as only one role at a time — server or client.';
+      case 'interconnect_peer_list_title':
+        return 'Added peers';
+      case 'interconnect_peer_list_empty':
+        return 'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
+      case 'anki_lapis_visual_editor':
+        return 'Visual style editor';
+      case 'anki_lapis_visual_editor_hint':
+        return 'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+      case 'anki_lapis_visual_front':
+        return 'Front';
+      case 'anki_lapis_visual_back':
+        return 'Back';
+      case 'anki_lapis_visual_preview':
+        return 'Lapis card preview';
+      case 'anki_lapis_visual_select_field':
+        return 'Select a field to highlight';
+      case 'anki_lapis_visual_reset_field':
+        return 'Reset field';
+      case 'anki_lapis_visual_font_size':
+        return ({required Object percent}) => 'Font size: ${percent}%';
+      case 'anki_lapis_visual_bold':
+        return 'Bold';
+      case 'anki_lapis_visual_alignment':
+        return 'Alignment';
+      case 'anki_lapis_visual_color':
+        return 'Text color';
+      case 'anki_lapis_visual_default':
+        return 'Default';
+      case 'anki_lapis_visual_advanced_css':
+        return 'Advanced CSS';
+      case 'anki_lapis_visual_field_expression':
+        return 'Word';
+      case 'anki_lapis_visual_field_reading':
+        return 'Reading';
+      case 'anki_lapis_visual_field_sentence':
+        return 'Sentence';
+      case 'anki_lapis_visual_field_primary_definition':
+        return 'Primary definition';
+      case 'anki_lapis_visual_field_glossaries':
+        return 'Other definitions';
+      case 'anki_lapis_visual_target_card_content':
+        return 'Card content';
+      case 'anki_lapis_visual_target_definition':
+        return 'Definition';
+      case 'anki_lapis_visual_target_inside_definition':
+        return 'Inside definition';
+      case 'anki_lapis_visual_field_definition_info':
+        return 'Definition indicator';
+      case 'anki_lapis_visual_field_definition_box':
+        return 'Definition box';
+      case 'anki_lapis_visual_field_definition_content':
+        return 'Whole definition';
+      case 'anki_lapis_visual_field_selected_definition':
+        return 'Selected definition';
+      case 'anki_lapis_visual_field_dictionary_entry':
+        return 'Dictionary entry';
+      case 'anki_lapis_visual_field_dictionary_name':
+        return 'Dictionary name';
+      case 'anki_lapis_visual_field_definition_example':
+        return 'Definition example';
+      case 'anki_lapis_visual_line_height':
+        return 'Line height';
+      case 'anki_lapis_visual_background_color':
+        return 'Background highlight';
+      case 'anki_lapis_visual_box_layout':
+        return 'Box appearance';
+      case 'anki_lapis_visual_border_width':
+        return 'Border';
+      case 'anki_lapis_visual_border_color':
+        return 'Border color';
+      case 'anki_lapis_visual_corner_radius':
+        return 'Corner radius';
+      case 'anki_lapis_visual_padding':
+        return 'Inner spacing';
+      case 'anki_lapis_visual_margin':
+        return 'Outer spacing';
+      case 'anki_lapis_visual_field_definition_info_note':
+        return 'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
+      case 'anki_lapis_visual_field_dictionary_name_note':
+        return 'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
       case 'library_view_manga_sources':
         return 'Manga sources';
       case 'library_view_manga_extensions':
@@ -134021,15 +139627,15 @@ extension on _StringsFr {
       case 'mihon_extension_language_all':
         return 'All languages';
       case 'mihon_filter_ignore':
-        return '忽略';
+        return 'Ignore';
       case 'mihon_filter_include':
-        return '包含';
+        return 'Include';
       case 'mihon_filter_exclude':
-        return '排除';
+        return 'Exclude';
       case 'mihon_filter_ascending':
-        return '升序';
+        return 'Ascending';
       case 'mihon_filter_descending':
-        return '降序';
+        return 'Descending';
       case 'mihon_add_to_bookshelf':
         return 'Add to manga shelf';
       case 'mihon_in_bookshelf':
@@ -135260,7 +140866,8 @@ extension on _StringsId {
       case 'dict_auto_update_hint':
         return 'Periksa pembaruan kamus saat aplikasi dibuka';
       case 'dict_auto_update_last':
-        return ({required Object time}) => 'Pembaruan terakhir: ${time}';
+        return ({required Object time}) =>
+            'Pemeriksaan berhasil terakhir: ${time}';
       case 'dict_auto_update_never':
         return 'Tidak pernah';
       case 'dict_category_frequency':
@@ -136102,8 +141709,6 @@ extension on _StringsId {
         return 'WebSocket';
       case 'game_text_thread':
         return 'Text thread';
-      case 'game_text_thread_all':
-        return 'All text threads';
       case 'game_text_thread_audio_count':
         return ({required Object count}) => '${count} with audio';
       case 'game_text_thread_hint':
@@ -139631,8 +145236,6 @@ extension on _StringsId {
         return 'Everything sent';
       case 'media_tracking_unauthorized':
         return 'Bangumi rejected the access token. Reconnect it in settings.';
-      case 'media_tracking_unlinked_hint':
-        return 'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
       case 'media_tracking_open_subject':
         return 'Open on Bangumi';
       case 'media_tracking_manage_links':
@@ -139671,6 +145274,241 @@ extension on _StringsId {
         return 'Show details';
       case 'scrape_failure_detail_hide':
         return 'Hide details';
+      case 'media_tracking_retry_mapping':
+        return 'Retry matching';
+      case 'media_tracking_retry_matched':
+        return 'Matched and queued current progress';
+      case 'media_tracking_retry_no_match':
+        return 'No match found. Try manual linking.';
+      case 'game_statistics':
+        return 'Game statistics';
+      case 'game_stat_by_game':
+        return 'By game';
+      case 'stat_clear_all_game_message':
+        return 'Clear all game play time and session counts? Your game library and activity timeline are kept. This cannot be undone.';
+      case 'batch_selection_stale_skipped':
+        return ({required Object m, required Object n}) =>
+            'Skipped ${m} of ${n} selected items that no longer exist';
+      case 'game_text_thread_unset':
+        return 'No thread selected — pick one to start capturing';
+      case 'media_tracking_watched_show':
+        return 'View all watched anime';
+      case 'media_tracking_watched_title':
+        return 'Watched on Bangumi';
+      case 'media_tracking_watched_empty':
+        return 'No anime is marked as watched on this Bangumi account.';
+      case 'media_tracking_watched_load_failed':
+        return ({required Object error}) =>
+            'Could not load watched anime: ${error}';
+      case 'media_tracking_watched_progress':
+        return ({required Object n}) => 'Watched ${n} episodes';
+      case 'media_tracking_manual_required':
+        return 'Needs manual link';
+      case 'media_tracking_manual_required_count':
+        return ({required Object n}) => '${n} items need manual links';
+      case 'media_tracking_manual_required_hint':
+        return 'These local items already have progress but are not linked to Bangumi.';
+      case 'media_tracking_no_local_history':
+        return 'No local watch, reading, or game progress needs linking.';
+      case 'media_tracking_more_manual_required':
+        return ({required Object n}) => '${n} more items need manual links';
+      case 'manga_import_hint':
+        return 'Pick a manga folder, a .cbz/.zip page archive, or a .mokuro file.';
+      case 'manga_import_pick_file':
+        return 'Pick manga file';
+      case 'manga_import_pick_folder':
+        return 'Pick manga folder';
+      case 'manga_import_missing_input':
+        return 'Pick a manga file or folder first.';
+      case 'manga_import_detected_title':
+        return 'This looks like manga';
+      case 'manga_import_detected_confirm':
+        return 'Import as manga';
+      case 'manga_import_detected_message':
+        return ({required Object name}) =>
+            '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+      case 'video_jimaku_source_loading':
+        return 'Checking subtitle availability...';
+      case 'video_jimaku_source_failed':
+        return 'Could not check subtitle availability. Try searching again.';
+      case 'video_jimaku_language_unknown':
+        return 'Language not labeled';
+      case 'video_jimaku_source_summary':
+        return (
+                {required Object files,
+                required Object episodes,
+                required Object languages}) =>
+            '${files} subtitle files · ${episodes} episodes · ${languages}';
+      case 'video_jimaku_episode_unlabeled':
+        return ({required Object episode, required Object count}) =>
+            'No subtitle labeled episode ${episode}; ${count} unlabeled files may still match';
+      case 'video_jimaku_episode_unavailable':
+        return ({required Object episode}) =>
+            'No subtitle found for episode ${episode}';
+      case 'video_jimaku_episode_available':
+        return ({required Object count, required Object languages}) =>
+            '${count} subtitles available · ${languages}';
+      case 'video_scrape_manual_match_hint':
+        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+      case 'video_scrape_collection_match_hint':
+        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+      case 'video_scrape_apply_to_collection_hint':
+        return 'This writes the same cover to every episode. Leave it off unless that is intentional.';
+      case 'video_scrape_tmdb_key_empty':
+        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+      case 'manga_online_source_disabled':
+        return 'This internet source is disabled. Enable it in Sources to browse the catalog.';
+      case 'selection_web_search':
+        return 'Search the web';
+      case 'selection_web_search_unavailable':
+        return 'No app can search the web.';
+      case 'selection_share_failed':
+        return 'Could not open the share sheet.';
+      case 'video_subtitle_youtube_auto_generated':
+        return ({required Object lang}) => '${lang} (auto-generated)';
+      case 'anki_dedup_progress_title':
+        return 'Deduplicating media';
+      case 'anki_dedup_progress_scanning':
+        return ({required Object count}) =>
+            'Scanning media folder… (${count} files found)';
+      case 'anki_dedup_progress_hashing':
+        return ({required Object done, required Object total}) =>
+            'Comparing same-size files… (${done} / ${total})';
+      case 'anki_dedup_progress_resolving':
+        return ({required Object done, required Object total}) =>
+            'Processing duplicates… (${done} / ${total})';
+      case 'anki_dedup_progress_freed':
+        return ({required Object size}) => 'Freed ${size} so far';
+      case 'anki_dedup_cancelling':
+        return 'Cancelling…';
+      case 'anki_dedup_cancelled':
+        return 'Deduplication cancelled; completed changes are kept.';
+      case 'anki_dedup_report_cancelled_note':
+        return 'Cancelled early — the numbers below only cover what was completed.';
+      case 'anki_dedup_plan_busy_note':
+        return 'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
+      case 'video_setting_subtitle_position_secondary':
+        return 'Secondary subtitle position';
+      case 'dict_download_learning_language':
+        return 'Learning language';
+      case 'dict_category_bilingual':
+        return 'Bilingual';
+      case 'dict_category_monolingual':
+        return 'Monolingual';
+      case 'shortcut_action_video_hold_speed':
+        return 'Hold for temporary speed';
+      case 'handlebar_phonetic_transcriptions':
+        return 'Phonetic transcriptions';
+      case 'sync_progress_preparing':
+        return 'Preparing sync';
+      case 'sync_progress_collections':
+        return 'Syncing collections';
+      case 'sync_progress_book':
+        return 'Syncing book';
+      case 'sync_progress_book_titled':
+        return ({required Object title}) => 'Syncing ${title}';
+      case 'sync_last_completed':
+        return ({required Object count}) =>
+            'Last sync: done (${count} channels)';
+      case 'sync_last_no_channels':
+        return 'Last sync: nothing synced - no connected sync channel';
+      case 'sync_last_nothing':
+        return 'Last sync: nothing to sync';
+      case 'sync_last_auto_disabled':
+        return 'Last sync: skipped - auto sync is off';
+      case 'sync_last_cooled_down':
+        return 'Last sync: skipped - synced recently';
+      case 'sync_last_failed':
+        return 'Last sync: failed';
+      case 'anime_download_no_results_detail':
+        return ({required Object query, required Object filters}) =>
+            'The service responded successfully but returned 0 items. Query: ${query}; filters: ${filters}. Try another title or loosen the filters.';
+      case 'anime_download_streaming_ready':
+        return 'In library · download continues';
+      case 'anime_download_unfiltered':
+        return 'No Trusted filter';
+      case 'interconnect_enable_footer':
+        return 'How to use: on the device that holds your library, turn on the sync server switch below; on your other device, add the address of that server to pair with it. A device can act as only one role at a time — server or client.';
+      case 'interconnect_peer_list_title':
+        return 'Added peers';
+      case 'interconnect_peer_list_empty':
+        return 'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
+      case 'anki_lapis_visual_editor':
+        return 'Visual style editor';
+      case 'anki_lapis_visual_editor_hint':
+        return 'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+      case 'anki_lapis_visual_front':
+        return 'Front';
+      case 'anki_lapis_visual_back':
+        return 'Back';
+      case 'anki_lapis_visual_preview':
+        return 'Lapis card preview';
+      case 'anki_lapis_visual_select_field':
+        return 'Select a field to highlight';
+      case 'anki_lapis_visual_reset_field':
+        return 'Reset field';
+      case 'anki_lapis_visual_font_size':
+        return ({required Object percent}) => 'Font size: ${percent}%';
+      case 'anki_lapis_visual_bold':
+        return 'Bold';
+      case 'anki_lapis_visual_alignment':
+        return 'Alignment';
+      case 'anki_lapis_visual_color':
+        return 'Text color';
+      case 'anki_lapis_visual_default':
+        return 'Default';
+      case 'anki_lapis_visual_advanced_css':
+        return 'Advanced CSS';
+      case 'anki_lapis_visual_field_expression':
+        return 'Word';
+      case 'anki_lapis_visual_field_reading':
+        return 'Reading';
+      case 'anki_lapis_visual_field_sentence':
+        return 'Sentence';
+      case 'anki_lapis_visual_field_primary_definition':
+        return 'Primary definition';
+      case 'anki_lapis_visual_field_glossaries':
+        return 'Other definitions';
+      case 'anki_lapis_visual_target_card_content':
+        return 'Card content';
+      case 'anki_lapis_visual_target_definition':
+        return 'Definition';
+      case 'anki_lapis_visual_target_inside_definition':
+        return 'Inside definition';
+      case 'anki_lapis_visual_field_definition_info':
+        return 'Definition indicator';
+      case 'anki_lapis_visual_field_definition_box':
+        return 'Definition box';
+      case 'anki_lapis_visual_field_definition_content':
+        return 'Whole definition';
+      case 'anki_lapis_visual_field_selected_definition':
+        return 'Selected definition';
+      case 'anki_lapis_visual_field_dictionary_entry':
+        return 'Dictionary entry';
+      case 'anki_lapis_visual_field_dictionary_name':
+        return 'Dictionary name';
+      case 'anki_lapis_visual_field_definition_example':
+        return 'Definition example';
+      case 'anki_lapis_visual_line_height':
+        return 'Line height';
+      case 'anki_lapis_visual_background_color':
+        return 'Background highlight';
+      case 'anki_lapis_visual_box_layout':
+        return 'Box appearance';
+      case 'anki_lapis_visual_border_width':
+        return 'Border';
+      case 'anki_lapis_visual_border_color':
+        return 'Border color';
+      case 'anki_lapis_visual_corner_radius':
+        return 'Corner radius';
+      case 'anki_lapis_visual_padding':
+        return 'Inner spacing';
+      case 'anki_lapis_visual_margin':
+        return 'Outer spacing';
+      case 'anki_lapis_visual_field_definition_info_note':
+        return 'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
+      case 'anki_lapis_visual_field_dictionary_name_note':
+        return 'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
       case 'library_view_manga_sources':
         return 'Manga sources';
       case 'library_view_manga_extensions':
@@ -139738,15 +145576,15 @@ extension on _StringsId {
       case 'mihon_extension_language_all':
         return 'All languages';
       case 'mihon_filter_ignore':
-        return '忽略';
+        return 'Ignore';
       case 'mihon_filter_include':
-        return '包含';
+        return 'Include';
       case 'mihon_filter_exclude':
-        return '排除';
+        return 'Exclude';
       case 'mihon_filter_ascending':
-        return '升序';
+        return 'Ascending';
       case 'mihon_filter_descending':
-        return '降序';
+        return 'Descending';
       case 'mihon_add_to_bookshelf':
         return 'Add to manga shelf';
       case 'mihon_in_bookshelf':
@@ -140977,7 +146815,7 @@ extension on _StringsIt {
       case 'dict_auto_update_hint':
         return 'Controlla gli aggiornamenti dei dizionari all’avvio';
       case 'dict_auto_update_last':
-        return ({required Object time}) => 'Ultimo aggiornamento: ${time}';
+        return ({required Object time}) => 'Ultimo controllo riuscito: ${time}';
       case 'dict_auto_update_never':
         return 'Mai';
       case 'dict_category_frequency':
@@ -141821,8 +147659,6 @@ extension on _StringsIt {
         return 'WebSocket';
       case 'game_text_thread':
         return 'Text thread';
-      case 'game_text_thread_all':
-        return 'All text threads';
       case 'game_text_thread_audio_count':
         return ({required Object count}) => '${count} with audio';
       case 'game_text_thread_hint':
@@ -145363,8 +151199,6 @@ extension on _StringsIt {
         return 'Everything sent';
       case 'media_tracking_unauthorized':
         return 'Bangumi rejected the access token. Reconnect it in settings.';
-      case 'media_tracking_unlinked_hint':
-        return 'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
       case 'media_tracking_open_subject':
         return 'Open on Bangumi';
       case 'media_tracking_manage_links':
@@ -145403,6 +151237,241 @@ extension on _StringsIt {
         return 'Show details';
       case 'scrape_failure_detail_hide':
         return 'Hide details';
+      case 'media_tracking_retry_mapping':
+        return 'Retry matching';
+      case 'media_tracking_retry_matched':
+        return 'Matched and queued current progress';
+      case 'media_tracking_retry_no_match':
+        return 'No match found. Try manual linking.';
+      case 'game_statistics':
+        return 'Game statistics';
+      case 'game_stat_by_game':
+        return 'By game';
+      case 'stat_clear_all_game_message':
+        return 'Clear all game play time and session counts? Your game library and activity timeline are kept. This cannot be undone.';
+      case 'batch_selection_stale_skipped':
+        return ({required Object m, required Object n}) =>
+            'Skipped ${m} of ${n} selected items that no longer exist';
+      case 'game_text_thread_unset':
+        return 'No thread selected — pick one to start capturing';
+      case 'media_tracking_watched_show':
+        return 'View all watched anime';
+      case 'media_tracking_watched_title':
+        return 'Watched on Bangumi';
+      case 'media_tracking_watched_empty':
+        return 'No anime is marked as watched on this Bangumi account.';
+      case 'media_tracking_watched_load_failed':
+        return ({required Object error}) =>
+            'Could not load watched anime: ${error}';
+      case 'media_tracking_watched_progress':
+        return ({required Object n}) => 'Watched ${n} episodes';
+      case 'media_tracking_manual_required':
+        return 'Needs manual link';
+      case 'media_tracking_manual_required_count':
+        return ({required Object n}) => '${n} items need manual links';
+      case 'media_tracking_manual_required_hint':
+        return 'These local items already have progress but are not linked to Bangumi.';
+      case 'media_tracking_no_local_history':
+        return 'No local watch, reading, or game progress needs linking.';
+      case 'media_tracking_more_manual_required':
+        return ({required Object n}) => '${n} more items need manual links';
+      case 'manga_import_hint':
+        return 'Pick a manga folder, a .cbz/.zip page archive, or a .mokuro file.';
+      case 'manga_import_pick_file':
+        return 'Pick manga file';
+      case 'manga_import_pick_folder':
+        return 'Pick manga folder';
+      case 'manga_import_missing_input':
+        return 'Pick a manga file or folder first.';
+      case 'manga_import_detected_title':
+        return 'This looks like manga';
+      case 'manga_import_detected_confirm':
+        return 'Import as manga';
+      case 'manga_import_detected_message':
+        return ({required Object name}) =>
+            '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+      case 'video_jimaku_source_loading':
+        return 'Checking subtitle availability...';
+      case 'video_jimaku_source_failed':
+        return 'Could not check subtitle availability. Try searching again.';
+      case 'video_jimaku_language_unknown':
+        return 'Language not labeled';
+      case 'video_jimaku_source_summary':
+        return (
+                {required Object files,
+                required Object episodes,
+                required Object languages}) =>
+            '${files} subtitle files · ${episodes} episodes · ${languages}';
+      case 'video_jimaku_episode_unlabeled':
+        return ({required Object episode, required Object count}) =>
+            'No subtitle labeled episode ${episode}; ${count} unlabeled files may still match';
+      case 'video_jimaku_episode_unavailable':
+        return ({required Object episode}) =>
+            'No subtitle found for episode ${episode}';
+      case 'video_jimaku_episode_available':
+        return ({required Object count, required Object languages}) =>
+            '${count} subtitles available · ${languages}';
+      case 'video_scrape_manual_match_hint':
+        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+      case 'video_scrape_collection_match_hint':
+        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+      case 'video_scrape_apply_to_collection_hint':
+        return 'This writes the same cover to every episode. Leave it off unless that is intentional.';
+      case 'video_scrape_tmdb_key_empty':
+        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+      case 'manga_online_source_disabled':
+        return 'This internet source is disabled. Enable it in Sources to browse the catalog.';
+      case 'selection_web_search':
+        return 'Search the web';
+      case 'selection_web_search_unavailable':
+        return 'No app can search the web.';
+      case 'selection_share_failed':
+        return 'Could not open the share sheet.';
+      case 'video_subtitle_youtube_auto_generated':
+        return ({required Object lang}) => '${lang} (auto-generated)';
+      case 'anki_dedup_progress_title':
+        return 'Deduplicating media';
+      case 'anki_dedup_progress_scanning':
+        return ({required Object count}) =>
+            'Scanning media folder… (${count} files found)';
+      case 'anki_dedup_progress_hashing':
+        return ({required Object done, required Object total}) =>
+            'Comparing same-size files… (${done} / ${total})';
+      case 'anki_dedup_progress_resolving':
+        return ({required Object done, required Object total}) =>
+            'Processing duplicates… (${done} / ${total})';
+      case 'anki_dedup_progress_freed':
+        return ({required Object size}) => 'Freed ${size} so far';
+      case 'anki_dedup_cancelling':
+        return 'Cancelling…';
+      case 'anki_dedup_cancelled':
+        return 'Deduplication cancelled; completed changes are kept.';
+      case 'anki_dedup_report_cancelled_note':
+        return 'Cancelled early — the numbers below only cover what was completed.';
+      case 'anki_dedup_plan_busy_note':
+        return 'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
+      case 'video_setting_subtitle_position_secondary':
+        return 'Secondary subtitle position';
+      case 'dict_download_learning_language':
+        return 'Learning language';
+      case 'dict_category_bilingual':
+        return 'Bilingual';
+      case 'dict_category_monolingual':
+        return 'Monolingual';
+      case 'shortcut_action_video_hold_speed':
+        return 'Hold for temporary speed';
+      case 'handlebar_phonetic_transcriptions':
+        return 'Phonetic transcriptions';
+      case 'sync_progress_preparing':
+        return 'Preparing sync';
+      case 'sync_progress_collections':
+        return 'Syncing collections';
+      case 'sync_progress_book':
+        return 'Syncing book';
+      case 'sync_progress_book_titled':
+        return ({required Object title}) => 'Syncing ${title}';
+      case 'sync_last_completed':
+        return ({required Object count}) =>
+            'Last sync: done (${count} channels)';
+      case 'sync_last_no_channels':
+        return 'Last sync: nothing synced - no connected sync channel';
+      case 'sync_last_nothing':
+        return 'Last sync: nothing to sync';
+      case 'sync_last_auto_disabled':
+        return 'Last sync: skipped - auto sync is off';
+      case 'sync_last_cooled_down':
+        return 'Last sync: skipped - synced recently';
+      case 'sync_last_failed':
+        return 'Last sync: failed';
+      case 'anime_download_no_results_detail':
+        return ({required Object query, required Object filters}) =>
+            'The service responded successfully but returned 0 items. Query: ${query}; filters: ${filters}. Try another title or loosen the filters.';
+      case 'anime_download_streaming_ready':
+        return 'In library · download continues';
+      case 'anime_download_unfiltered':
+        return 'No Trusted filter';
+      case 'interconnect_enable_footer':
+        return 'How to use: on the device that holds your library, turn on the sync server switch below; on your other device, add the address of that server to pair with it. A device can act as only one role at a time — server or client.';
+      case 'interconnect_peer_list_title':
+        return 'Added peers';
+      case 'interconnect_peer_list_empty':
+        return 'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
+      case 'anki_lapis_visual_editor':
+        return 'Visual style editor';
+      case 'anki_lapis_visual_editor_hint':
+        return 'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+      case 'anki_lapis_visual_front':
+        return 'Front';
+      case 'anki_lapis_visual_back':
+        return 'Back';
+      case 'anki_lapis_visual_preview':
+        return 'Lapis card preview';
+      case 'anki_lapis_visual_select_field':
+        return 'Select a field to highlight';
+      case 'anki_lapis_visual_reset_field':
+        return 'Reset field';
+      case 'anki_lapis_visual_font_size':
+        return ({required Object percent}) => 'Font size: ${percent}%';
+      case 'anki_lapis_visual_bold':
+        return 'Bold';
+      case 'anki_lapis_visual_alignment':
+        return 'Alignment';
+      case 'anki_lapis_visual_color':
+        return 'Text color';
+      case 'anki_lapis_visual_default':
+        return 'Default';
+      case 'anki_lapis_visual_advanced_css':
+        return 'Advanced CSS';
+      case 'anki_lapis_visual_field_expression':
+        return 'Word';
+      case 'anki_lapis_visual_field_reading':
+        return 'Reading';
+      case 'anki_lapis_visual_field_sentence':
+        return 'Sentence';
+      case 'anki_lapis_visual_field_primary_definition':
+        return 'Primary definition';
+      case 'anki_lapis_visual_field_glossaries':
+        return 'Other definitions';
+      case 'anki_lapis_visual_target_card_content':
+        return 'Card content';
+      case 'anki_lapis_visual_target_definition':
+        return 'Definition';
+      case 'anki_lapis_visual_target_inside_definition':
+        return 'Inside definition';
+      case 'anki_lapis_visual_field_definition_info':
+        return 'Definition indicator';
+      case 'anki_lapis_visual_field_definition_box':
+        return 'Definition box';
+      case 'anki_lapis_visual_field_definition_content':
+        return 'Whole definition';
+      case 'anki_lapis_visual_field_selected_definition':
+        return 'Selected definition';
+      case 'anki_lapis_visual_field_dictionary_entry':
+        return 'Dictionary entry';
+      case 'anki_lapis_visual_field_dictionary_name':
+        return 'Dictionary name';
+      case 'anki_lapis_visual_field_definition_example':
+        return 'Definition example';
+      case 'anki_lapis_visual_line_height':
+        return 'Line height';
+      case 'anki_lapis_visual_background_color':
+        return 'Background highlight';
+      case 'anki_lapis_visual_box_layout':
+        return 'Box appearance';
+      case 'anki_lapis_visual_border_width':
+        return 'Border';
+      case 'anki_lapis_visual_border_color':
+        return 'Border color';
+      case 'anki_lapis_visual_corner_radius':
+        return 'Corner radius';
+      case 'anki_lapis_visual_padding':
+        return 'Inner spacing';
+      case 'anki_lapis_visual_margin':
+        return 'Outer spacing';
+      case 'anki_lapis_visual_field_definition_info_note':
+        return 'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
+      case 'anki_lapis_visual_field_dictionary_name_note':
+        return 'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
       case 'library_view_manga_sources':
         return 'Manga sources';
       case 'library_view_manga_extensions':
@@ -145470,15 +151539,15 @@ extension on _StringsIt {
       case 'mihon_extension_language_all':
         return 'All languages';
       case 'mihon_filter_ignore':
-        return '忽略';
+        return 'Ignore';
       case 'mihon_filter_include':
-        return '包含';
+        return 'Include';
       case 'mihon_filter_exclude':
-        return '排除';
+        return 'Exclude';
       case 'mihon_filter_ascending':
-        return '升序';
+        return 'Ascending';
       case 'mihon_filter_descending':
-        return '降序';
+        return 'Descending';
       case 'mihon_add_to_bookshelf':
         return 'Add to manga shelf';
       case 'mihon_in_bookshelf':
@@ -146700,7 +152769,7 @@ extension on _StringsJa {
       case 'dict_auto_update_hint':
         return '起動時に辞書の更新を確認';
       case 'dict_auto_update_last':
-        return ({required Object time}) => '前回の更新: ${time}';
+        return ({required Object time}) => '前回の確認成功: ${time}';
       case 'dict_auto_update_never':
         return 'なし';
       case 'dict_category_frequency':
@@ -147542,8 +153611,6 @@ extension on _StringsJa {
         return 'WebSocket';
       case 'game_text_thread':
         return 'Text thread';
-      case 'game_text_thread_all':
-        return 'All text threads';
       case 'game_text_thread_audio_count':
         return ({required Object count}) => '${count} with audio';
       case 'game_text_thread_hint':
@@ -151057,8 +157124,6 @@ extension on _StringsJa {
         return 'Everything sent';
       case 'media_tracking_unauthorized':
         return 'Bangumi rejected the access token. Reconnect it in settings.';
-      case 'media_tracking_unlinked_hint':
-        return 'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
       case 'media_tracking_open_subject':
         return 'Open on Bangumi';
       case 'media_tracking_manage_links':
@@ -151097,6 +157162,241 @@ extension on _StringsJa {
         return 'Show details';
       case 'scrape_failure_detail_hide':
         return 'Hide details';
+      case 'media_tracking_retry_mapping':
+        return 'Retry matching';
+      case 'media_tracking_retry_matched':
+        return 'Matched and queued current progress';
+      case 'media_tracking_retry_no_match':
+        return 'No match found. Try manual linking.';
+      case 'game_statistics':
+        return 'Game statistics';
+      case 'game_stat_by_game':
+        return 'By game';
+      case 'stat_clear_all_game_message':
+        return 'Clear all game play time and session counts? Your game library and activity timeline are kept. This cannot be undone.';
+      case 'batch_selection_stale_skipped':
+        return ({required Object m, required Object n}) =>
+            'Skipped ${m} of ${n} selected items that no longer exist';
+      case 'game_text_thread_unset':
+        return 'No thread selected — pick one to start capturing';
+      case 'media_tracking_watched_show':
+        return 'View all watched anime';
+      case 'media_tracking_watched_title':
+        return 'Watched on Bangumi';
+      case 'media_tracking_watched_empty':
+        return 'No anime is marked as watched on this Bangumi account.';
+      case 'media_tracking_watched_load_failed':
+        return ({required Object error}) =>
+            'Could not load watched anime: ${error}';
+      case 'media_tracking_watched_progress':
+        return ({required Object n}) => 'Watched ${n} episodes';
+      case 'media_tracking_manual_required':
+        return 'Needs manual link';
+      case 'media_tracking_manual_required_count':
+        return ({required Object n}) => '${n} items need manual links';
+      case 'media_tracking_manual_required_hint':
+        return 'These local items already have progress but are not linked to Bangumi.';
+      case 'media_tracking_no_local_history':
+        return 'No local watch, reading, or game progress needs linking.';
+      case 'media_tracking_more_manual_required':
+        return ({required Object n}) => '${n} more items need manual links';
+      case 'manga_import_hint':
+        return 'Pick a manga folder, a .cbz/.zip page archive, or a .mokuro file.';
+      case 'manga_import_pick_file':
+        return 'Pick manga file';
+      case 'manga_import_pick_folder':
+        return 'Pick manga folder';
+      case 'manga_import_missing_input':
+        return 'Pick a manga file or folder first.';
+      case 'manga_import_detected_title':
+        return 'This looks like manga';
+      case 'manga_import_detected_confirm':
+        return 'Import as manga';
+      case 'manga_import_detected_message':
+        return ({required Object name}) =>
+            '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+      case 'video_jimaku_source_loading':
+        return 'Checking subtitle availability...';
+      case 'video_jimaku_source_failed':
+        return 'Could not check subtitle availability. Try searching again.';
+      case 'video_jimaku_language_unknown':
+        return 'Language not labeled';
+      case 'video_jimaku_source_summary':
+        return (
+                {required Object files,
+                required Object episodes,
+                required Object languages}) =>
+            '${files} subtitle files · ${episodes} episodes · ${languages}';
+      case 'video_jimaku_episode_unlabeled':
+        return ({required Object episode, required Object count}) =>
+            'No subtitle labeled episode ${episode}; ${count} unlabeled files may still match';
+      case 'video_jimaku_episode_unavailable':
+        return ({required Object episode}) =>
+            'No subtitle found for episode ${episode}';
+      case 'video_jimaku_episode_available':
+        return ({required Object count, required Object languages}) =>
+            '${count} subtitles available · ${languages}';
+      case 'video_scrape_manual_match_hint':
+        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+      case 'video_scrape_collection_match_hint':
+        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+      case 'video_scrape_apply_to_collection_hint':
+        return 'This writes the same cover to every episode. Leave it off unless that is intentional.';
+      case 'video_scrape_tmdb_key_empty':
+        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+      case 'manga_online_source_disabled':
+        return 'This internet source is disabled. Enable it in Sources to browse the catalog.';
+      case 'selection_web_search':
+        return 'Search the web';
+      case 'selection_web_search_unavailable':
+        return 'No app can search the web.';
+      case 'selection_share_failed':
+        return 'Could not open the share sheet.';
+      case 'video_subtitle_youtube_auto_generated':
+        return ({required Object lang}) => '${lang} (auto-generated)';
+      case 'anki_dedup_progress_title':
+        return 'Deduplicating media';
+      case 'anki_dedup_progress_scanning':
+        return ({required Object count}) =>
+            'Scanning media folder… (${count} files found)';
+      case 'anki_dedup_progress_hashing':
+        return ({required Object done, required Object total}) =>
+            'Comparing same-size files… (${done} / ${total})';
+      case 'anki_dedup_progress_resolving':
+        return ({required Object done, required Object total}) =>
+            'Processing duplicates… (${done} / ${total})';
+      case 'anki_dedup_progress_freed':
+        return ({required Object size}) => 'Freed ${size} so far';
+      case 'anki_dedup_cancelling':
+        return 'Cancelling…';
+      case 'anki_dedup_cancelled':
+        return 'Deduplication cancelled; completed changes are kept.';
+      case 'anki_dedup_report_cancelled_note':
+        return 'Cancelled early — the numbers below only cover what was completed.';
+      case 'anki_dedup_plan_busy_note':
+        return 'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
+      case 'video_setting_subtitle_position_secondary':
+        return 'Secondary subtitle position';
+      case 'dict_download_learning_language':
+        return 'Learning language';
+      case 'dict_category_bilingual':
+        return 'Bilingual';
+      case 'dict_category_monolingual':
+        return 'Monolingual';
+      case 'shortcut_action_video_hold_speed':
+        return 'Hold for temporary speed';
+      case 'handlebar_phonetic_transcriptions':
+        return 'Phonetic transcriptions';
+      case 'sync_progress_preparing':
+        return 'Preparing sync';
+      case 'sync_progress_collections':
+        return 'Syncing collections';
+      case 'sync_progress_book':
+        return 'Syncing book';
+      case 'sync_progress_book_titled':
+        return ({required Object title}) => 'Syncing ${title}';
+      case 'sync_last_completed':
+        return ({required Object count}) =>
+            'Last sync: done (${count} channels)';
+      case 'sync_last_no_channels':
+        return 'Last sync: nothing synced - no connected sync channel';
+      case 'sync_last_nothing':
+        return 'Last sync: nothing to sync';
+      case 'sync_last_auto_disabled':
+        return 'Last sync: skipped - auto sync is off';
+      case 'sync_last_cooled_down':
+        return 'Last sync: skipped - synced recently';
+      case 'sync_last_failed':
+        return 'Last sync: failed';
+      case 'anime_download_no_results_detail':
+        return ({required Object query, required Object filters}) =>
+            'The service responded successfully but returned 0 items. Query: ${query}; filters: ${filters}. Try another title or loosen the filters.';
+      case 'anime_download_streaming_ready':
+        return 'In library · download continues';
+      case 'anime_download_unfiltered':
+        return 'No Trusted filter';
+      case 'interconnect_enable_footer':
+        return 'How to use: on the device that holds your library, turn on the sync server switch below; on your other device, add the address of that server to pair with it. A device can act as only one role at a time — server or client.';
+      case 'interconnect_peer_list_title':
+        return 'Added peers';
+      case 'interconnect_peer_list_empty':
+        return 'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
+      case 'anki_lapis_visual_editor':
+        return 'Visual style editor';
+      case 'anki_lapis_visual_editor_hint':
+        return 'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+      case 'anki_lapis_visual_front':
+        return 'Front';
+      case 'anki_lapis_visual_back':
+        return 'Back';
+      case 'anki_lapis_visual_preview':
+        return 'Lapis card preview';
+      case 'anki_lapis_visual_select_field':
+        return 'Select a field to highlight';
+      case 'anki_lapis_visual_reset_field':
+        return 'Reset field';
+      case 'anki_lapis_visual_font_size':
+        return ({required Object percent}) => 'Font size: ${percent}%';
+      case 'anki_lapis_visual_bold':
+        return 'Bold';
+      case 'anki_lapis_visual_alignment':
+        return 'Alignment';
+      case 'anki_lapis_visual_color':
+        return 'Text color';
+      case 'anki_lapis_visual_default':
+        return 'Default';
+      case 'anki_lapis_visual_advanced_css':
+        return 'Advanced CSS';
+      case 'anki_lapis_visual_field_expression':
+        return 'Word';
+      case 'anki_lapis_visual_field_reading':
+        return 'Reading';
+      case 'anki_lapis_visual_field_sentence':
+        return 'Sentence';
+      case 'anki_lapis_visual_field_primary_definition':
+        return 'Primary definition';
+      case 'anki_lapis_visual_field_glossaries':
+        return 'Other definitions';
+      case 'anki_lapis_visual_target_card_content':
+        return 'Card content';
+      case 'anki_lapis_visual_target_definition':
+        return 'Definition';
+      case 'anki_lapis_visual_target_inside_definition':
+        return 'Inside definition';
+      case 'anki_lapis_visual_field_definition_info':
+        return 'Definition indicator';
+      case 'anki_lapis_visual_field_definition_box':
+        return 'Definition box';
+      case 'anki_lapis_visual_field_definition_content':
+        return 'Whole definition';
+      case 'anki_lapis_visual_field_selected_definition':
+        return 'Selected definition';
+      case 'anki_lapis_visual_field_dictionary_entry':
+        return 'Dictionary entry';
+      case 'anki_lapis_visual_field_dictionary_name':
+        return 'Dictionary name';
+      case 'anki_lapis_visual_field_definition_example':
+        return 'Definition example';
+      case 'anki_lapis_visual_line_height':
+        return 'Line height';
+      case 'anki_lapis_visual_background_color':
+        return 'Background highlight';
+      case 'anki_lapis_visual_box_layout':
+        return 'Box appearance';
+      case 'anki_lapis_visual_border_width':
+        return 'Border';
+      case 'anki_lapis_visual_border_color':
+        return 'Border color';
+      case 'anki_lapis_visual_corner_radius':
+        return 'Corner radius';
+      case 'anki_lapis_visual_padding':
+        return 'Inner spacing';
+      case 'anki_lapis_visual_margin':
+        return 'Outer spacing';
+      case 'anki_lapis_visual_field_definition_info_note':
+        return 'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
+      case 'anki_lapis_visual_field_dictionary_name_note':
+        return 'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
       case 'library_view_manga_sources':
         return 'Manga sources';
       case 'library_view_manga_extensions':
@@ -151164,15 +157464,15 @@ extension on _StringsJa {
       case 'mihon_extension_language_all':
         return 'All languages';
       case 'mihon_filter_ignore':
-        return '忽略';
+        return 'Ignore';
       case 'mihon_filter_include':
-        return '包含';
+        return 'Include';
       case 'mihon_filter_exclude':
-        return '排除';
+        return 'Exclude';
       case 'mihon_filter_ascending':
-        return '升序';
+        return 'Ascending';
       case 'mihon_filter_descending':
-        return '降序';
+        return 'Descending';
       case 'mihon_add_to_bookshelf':
         return 'Add to manga shelf';
       case 'mihon_in_bookshelf':
@@ -152395,7 +158695,7 @@ extension on _StringsKo {
       case 'dict_auto_update_hint':
         return '실행 시 사전 업데이트 확인';
       case 'dict_auto_update_last':
-        return ({required Object time}) => '마지막 업데이트: ${time}';
+        return ({required Object time}) => '마지막 확인 성공: ${time}';
       case 'dict_auto_update_never':
         return '없음';
       case 'dict_category_frequency':
@@ -153237,8 +159537,6 @@ extension on _StringsKo {
         return 'WebSocket';
       case 'game_text_thread':
         return 'Text thread';
-      case 'game_text_thread_all':
-        return 'All text threads';
       case 'game_text_thread_audio_count':
         return ({required Object count}) => '${count} with audio';
       case 'game_text_thread_hint':
@@ -156755,8 +163053,6 @@ extension on _StringsKo {
         return 'Everything sent';
       case 'media_tracking_unauthorized':
         return 'Bangumi rejected the access token. Reconnect it in settings.';
-      case 'media_tracking_unlinked_hint':
-        return 'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
       case 'media_tracking_open_subject':
         return 'Open on Bangumi';
       case 'media_tracking_manage_links':
@@ -156795,6 +163091,241 @@ extension on _StringsKo {
         return 'Show details';
       case 'scrape_failure_detail_hide':
         return 'Hide details';
+      case 'media_tracking_retry_mapping':
+        return 'Retry matching';
+      case 'media_tracking_retry_matched':
+        return 'Matched and queued current progress';
+      case 'media_tracking_retry_no_match':
+        return 'No match found. Try manual linking.';
+      case 'game_statistics':
+        return 'Game statistics';
+      case 'game_stat_by_game':
+        return 'By game';
+      case 'stat_clear_all_game_message':
+        return 'Clear all game play time and session counts? Your game library and activity timeline are kept. This cannot be undone.';
+      case 'batch_selection_stale_skipped':
+        return ({required Object m, required Object n}) =>
+            'Skipped ${m} of ${n} selected items that no longer exist';
+      case 'game_text_thread_unset':
+        return 'No thread selected — pick one to start capturing';
+      case 'media_tracking_watched_show':
+        return 'View all watched anime';
+      case 'media_tracking_watched_title':
+        return 'Watched on Bangumi';
+      case 'media_tracking_watched_empty':
+        return 'No anime is marked as watched on this Bangumi account.';
+      case 'media_tracking_watched_load_failed':
+        return ({required Object error}) =>
+            'Could not load watched anime: ${error}';
+      case 'media_tracking_watched_progress':
+        return ({required Object n}) => 'Watched ${n} episodes';
+      case 'media_tracking_manual_required':
+        return 'Needs manual link';
+      case 'media_tracking_manual_required_count':
+        return ({required Object n}) => '${n} items need manual links';
+      case 'media_tracking_manual_required_hint':
+        return 'These local items already have progress but are not linked to Bangumi.';
+      case 'media_tracking_no_local_history':
+        return 'No local watch, reading, or game progress needs linking.';
+      case 'media_tracking_more_manual_required':
+        return ({required Object n}) => '${n} more items need manual links';
+      case 'manga_import_hint':
+        return 'Pick a manga folder, a .cbz/.zip page archive, or a .mokuro file.';
+      case 'manga_import_pick_file':
+        return 'Pick manga file';
+      case 'manga_import_pick_folder':
+        return 'Pick manga folder';
+      case 'manga_import_missing_input':
+        return 'Pick a manga file or folder first.';
+      case 'manga_import_detected_title':
+        return 'This looks like manga';
+      case 'manga_import_detected_confirm':
+        return 'Import as manga';
+      case 'manga_import_detected_message':
+        return ({required Object name}) =>
+            '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+      case 'video_jimaku_source_loading':
+        return 'Checking subtitle availability...';
+      case 'video_jimaku_source_failed':
+        return 'Could not check subtitle availability. Try searching again.';
+      case 'video_jimaku_language_unknown':
+        return 'Language not labeled';
+      case 'video_jimaku_source_summary':
+        return (
+                {required Object files,
+                required Object episodes,
+                required Object languages}) =>
+            '${files} subtitle files · ${episodes} episodes · ${languages}';
+      case 'video_jimaku_episode_unlabeled':
+        return ({required Object episode, required Object count}) =>
+            'No subtitle labeled episode ${episode}; ${count} unlabeled files may still match';
+      case 'video_jimaku_episode_unavailable':
+        return ({required Object episode}) =>
+            'No subtitle found for episode ${episode}';
+      case 'video_jimaku_episode_available':
+        return ({required Object count, required Object languages}) =>
+            '${count} subtitles available · ${languages}';
+      case 'video_scrape_manual_match_hint':
+        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+      case 'video_scrape_collection_match_hint':
+        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+      case 'video_scrape_apply_to_collection_hint':
+        return 'This writes the same cover to every episode. Leave it off unless that is intentional.';
+      case 'video_scrape_tmdb_key_empty':
+        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+      case 'manga_online_source_disabled':
+        return 'This internet source is disabled. Enable it in Sources to browse the catalog.';
+      case 'selection_web_search':
+        return 'Search the web';
+      case 'selection_web_search_unavailable':
+        return 'No app can search the web.';
+      case 'selection_share_failed':
+        return 'Could not open the share sheet.';
+      case 'video_subtitle_youtube_auto_generated':
+        return ({required Object lang}) => '${lang} (auto-generated)';
+      case 'anki_dedup_progress_title':
+        return 'Deduplicating media';
+      case 'anki_dedup_progress_scanning':
+        return ({required Object count}) =>
+            'Scanning media folder… (${count} files found)';
+      case 'anki_dedup_progress_hashing':
+        return ({required Object done, required Object total}) =>
+            'Comparing same-size files… (${done} / ${total})';
+      case 'anki_dedup_progress_resolving':
+        return ({required Object done, required Object total}) =>
+            'Processing duplicates… (${done} / ${total})';
+      case 'anki_dedup_progress_freed':
+        return ({required Object size}) => 'Freed ${size} so far';
+      case 'anki_dedup_cancelling':
+        return 'Cancelling…';
+      case 'anki_dedup_cancelled':
+        return 'Deduplication cancelled; completed changes are kept.';
+      case 'anki_dedup_report_cancelled_note':
+        return 'Cancelled early — the numbers below only cover what was completed.';
+      case 'anki_dedup_plan_busy_note':
+        return 'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
+      case 'video_setting_subtitle_position_secondary':
+        return 'Secondary subtitle position';
+      case 'dict_download_learning_language':
+        return 'Learning language';
+      case 'dict_category_bilingual':
+        return 'Bilingual';
+      case 'dict_category_monolingual':
+        return 'Monolingual';
+      case 'shortcut_action_video_hold_speed':
+        return 'Hold for temporary speed';
+      case 'handlebar_phonetic_transcriptions':
+        return 'Phonetic transcriptions';
+      case 'sync_progress_preparing':
+        return 'Preparing sync';
+      case 'sync_progress_collections':
+        return 'Syncing collections';
+      case 'sync_progress_book':
+        return 'Syncing book';
+      case 'sync_progress_book_titled':
+        return ({required Object title}) => 'Syncing ${title}';
+      case 'sync_last_completed':
+        return ({required Object count}) =>
+            'Last sync: done (${count} channels)';
+      case 'sync_last_no_channels':
+        return 'Last sync: nothing synced - no connected sync channel';
+      case 'sync_last_nothing':
+        return 'Last sync: nothing to sync';
+      case 'sync_last_auto_disabled':
+        return 'Last sync: skipped - auto sync is off';
+      case 'sync_last_cooled_down':
+        return 'Last sync: skipped - synced recently';
+      case 'sync_last_failed':
+        return 'Last sync: failed';
+      case 'anime_download_no_results_detail':
+        return ({required Object query, required Object filters}) =>
+            'The service responded successfully but returned 0 items. Query: ${query}; filters: ${filters}. Try another title or loosen the filters.';
+      case 'anime_download_streaming_ready':
+        return 'In library · download continues';
+      case 'anime_download_unfiltered':
+        return 'No Trusted filter';
+      case 'interconnect_enable_footer':
+        return 'How to use: on the device that holds your library, turn on the sync server switch below; on your other device, add the address of that server to pair with it. A device can act as only one role at a time — server or client.';
+      case 'interconnect_peer_list_title':
+        return 'Added peers';
+      case 'interconnect_peer_list_empty':
+        return 'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
+      case 'anki_lapis_visual_editor':
+        return 'Visual style editor';
+      case 'anki_lapis_visual_editor_hint':
+        return 'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+      case 'anki_lapis_visual_front':
+        return 'Front';
+      case 'anki_lapis_visual_back':
+        return 'Back';
+      case 'anki_lapis_visual_preview':
+        return 'Lapis card preview';
+      case 'anki_lapis_visual_select_field':
+        return 'Select a field to highlight';
+      case 'anki_lapis_visual_reset_field':
+        return 'Reset field';
+      case 'anki_lapis_visual_font_size':
+        return ({required Object percent}) => 'Font size: ${percent}%';
+      case 'anki_lapis_visual_bold':
+        return 'Bold';
+      case 'anki_lapis_visual_alignment':
+        return 'Alignment';
+      case 'anki_lapis_visual_color':
+        return 'Text color';
+      case 'anki_lapis_visual_default':
+        return 'Default';
+      case 'anki_lapis_visual_advanced_css':
+        return 'Advanced CSS';
+      case 'anki_lapis_visual_field_expression':
+        return 'Word';
+      case 'anki_lapis_visual_field_reading':
+        return 'Reading';
+      case 'anki_lapis_visual_field_sentence':
+        return 'Sentence';
+      case 'anki_lapis_visual_field_primary_definition':
+        return 'Primary definition';
+      case 'anki_lapis_visual_field_glossaries':
+        return 'Other definitions';
+      case 'anki_lapis_visual_target_card_content':
+        return 'Card content';
+      case 'anki_lapis_visual_target_definition':
+        return 'Definition';
+      case 'anki_lapis_visual_target_inside_definition':
+        return 'Inside definition';
+      case 'anki_lapis_visual_field_definition_info':
+        return 'Definition indicator';
+      case 'anki_lapis_visual_field_definition_box':
+        return 'Definition box';
+      case 'anki_lapis_visual_field_definition_content':
+        return 'Whole definition';
+      case 'anki_lapis_visual_field_selected_definition':
+        return 'Selected definition';
+      case 'anki_lapis_visual_field_dictionary_entry':
+        return 'Dictionary entry';
+      case 'anki_lapis_visual_field_dictionary_name':
+        return 'Dictionary name';
+      case 'anki_lapis_visual_field_definition_example':
+        return 'Definition example';
+      case 'anki_lapis_visual_line_height':
+        return 'Line height';
+      case 'anki_lapis_visual_background_color':
+        return 'Background highlight';
+      case 'anki_lapis_visual_box_layout':
+        return 'Box appearance';
+      case 'anki_lapis_visual_border_width':
+        return 'Border';
+      case 'anki_lapis_visual_border_color':
+        return 'Border color';
+      case 'anki_lapis_visual_corner_radius':
+        return 'Corner radius';
+      case 'anki_lapis_visual_padding':
+        return 'Inner spacing';
+      case 'anki_lapis_visual_margin':
+        return 'Outer spacing';
+      case 'anki_lapis_visual_field_definition_info_note':
+        return 'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
+      case 'anki_lapis_visual_field_dictionary_name_note':
+        return 'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
       case 'library_view_manga_sources':
         return 'Manga sources';
       case 'library_view_manga_extensions':
@@ -156862,15 +163393,15 @@ extension on _StringsKo {
       case 'mihon_extension_language_all':
         return 'All languages';
       case 'mihon_filter_ignore':
-        return '忽略';
+        return 'Ignore';
       case 'mihon_filter_include':
-        return '包含';
+        return 'Include';
       case 'mihon_filter_exclude':
-        return '排除';
+        return 'Exclude';
       case 'mihon_filter_ascending':
-        return '升序';
+        return 'Ascending';
       case 'mihon_filter_descending':
-        return '降序';
+        return 'Descending';
       case 'mihon_add_to_bookshelf':
         return 'Add to manga shelf';
       case 'mihon_in_bookshelf':
@@ -158101,7 +164632,8 @@ extension on _StringsNl {
       case 'dict_auto_update_hint':
         return 'Bij het opstarten controleren op woordenboekupdates';
       case 'dict_auto_update_last':
-        return ({required Object time}) => 'Laatste update: ${time}';
+        return ({required Object time}) =>
+            'Laatste geslaagde controle: ${time}';
       case 'dict_auto_update_never':
         return 'Nooit';
       case 'dict_category_frequency':
@@ -158944,8 +165476,6 @@ extension on _StringsNl {
         return 'WebSocket';
       case 'game_text_thread':
         return 'Text thread';
-      case 'game_text_thread_all':
-        return 'All text threads';
       case 'game_text_thread_audio_count':
         return ({required Object count}) => '${count} with audio';
       case 'game_text_thread_hint':
@@ -162480,8 +169010,6 @@ extension on _StringsNl {
         return 'Everything sent';
       case 'media_tracking_unauthorized':
         return 'Bangumi rejected the access token. Reconnect it in settings.';
-      case 'media_tracking_unlinked_hint':
-        return 'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
       case 'media_tracking_open_subject':
         return 'Open on Bangumi';
       case 'media_tracking_manage_links':
@@ -162520,6 +169048,241 @@ extension on _StringsNl {
         return 'Show details';
       case 'scrape_failure_detail_hide':
         return 'Hide details';
+      case 'media_tracking_retry_mapping':
+        return 'Retry matching';
+      case 'media_tracking_retry_matched':
+        return 'Matched and queued current progress';
+      case 'media_tracking_retry_no_match':
+        return 'No match found. Try manual linking.';
+      case 'game_statistics':
+        return 'Game statistics';
+      case 'game_stat_by_game':
+        return 'By game';
+      case 'stat_clear_all_game_message':
+        return 'Clear all game play time and session counts? Your game library and activity timeline are kept. This cannot be undone.';
+      case 'batch_selection_stale_skipped':
+        return ({required Object m, required Object n}) =>
+            'Skipped ${m} of ${n} selected items that no longer exist';
+      case 'game_text_thread_unset':
+        return 'No thread selected — pick one to start capturing';
+      case 'media_tracking_watched_show':
+        return 'View all watched anime';
+      case 'media_tracking_watched_title':
+        return 'Watched on Bangumi';
+      case 'media_tracking_watched_empty':
+        return 'No anime is marked as watched on this Bangumi account.';
+      case 'media_tracking_watched_load_failed':
+        return ({required Object error}) =>
+            'Could not load watched anime: ${error}';
+      case 'media_tracking_watched_progress':
+        return ({required Object n}) => 'Watched ${n} episodes';
+      case 'media_tracking_manual_required':
+        return 'Needs manual link';
+      case 'media_tracking_manual_required_count':
+        return ({required Object n}) => '${n} items need manual links';
+      case 'media_tracking_manual_required_hint':
+        return 'These local items already have progress but are not linked to Bangumi.';
+      case 'media_tracking_no_local_history':
+        return 'No local watch, reading, or game progress needs linking.';
+      case 'media_tracking_more_manual_required':
+        return ({required Object n}) => '${n} more items need manual links';
+      case 'manga_import_hint':
+        return 'Pick a manga folder, a .cbz/.zip page archive, or a .mokuro file.';
+      case 'manga_import_pick_file':
+        return 'Pick manga file';
+      case 'manga_import_pick_folder':
+        return 'Pick manga folder';
+      case 'manga_import_missing_input':
+        return 'Pick a manga file or folder first.';
+      case 'manga_import_detected_title':
+        return 'This looks like manga';
+      case 'manga_import_detected_confirm':
+        return 'Import as manga';
+      case 'manga_import_detected_message':
+        return ({required Object name}) =>
+            '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+      case 'video_jimaku_source_loading':
+        return 'Checking subtitle availability...';
+      case 'video_jimaku_source_failed':
+        return 'Could not check subtitle availability. Try searching again.';
+      case 'video_jimaku_language_unknown':
+        return 'Language not labeled';
+      case 'video_jimaku_source_summary':
+        return (
+                {required Object files,
+                required Object episodes,
+                required Object languages}) =>
+            '${files} subtitle files · ${episodes} episodes · ${languages}';
+      case 'video_jimaku_episode_unlabeled':
+        return ({required Object episode, required Object count}) =>
+            'No subtitle labeled episode ${episode}; ${count} unlabeled files may still match';
+      case 'video_jimaku_episode_unavailable':
+        return ({required Object episode}) =>
+            'No subtitle found for episode ${episode}';
+      case 'video_jimaku_episode_available':
+        return ({required Object count, required Object languages}) =>
+            '${count} subtitles available · ${languages}';
+      case 'video_scrape_manual_match_hint':
+        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+      case 'video_scrape_collection_match_hint':
+        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+      case 'video_scrape_apply_to_collection_hint':
+        return 'This writes the same cover to every episode. Leave it off unless that is intentional.';
+      case 'video_scrape_tmdb_key_empty':
+        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+      case 'manga_online_source_disabled':
+        return 'This internet source is disabled. Enable it in Sources to browse the catalog.';
+      case 'selection_web_search':
+        return 'Search the web';
+      case 'selection_web_search_unavailable':
+        return 'No app can search the web.';
+      case 'selection_share_failed':
+        return 'Could not open the share sheet.';
+      case 'video_subtitle_youtube_auto_generated':
+        return ({required Object lang}) => '${lang} (auto-generated)';
+      case 'anki_dedup_progress_title':
+        return 'Deduplicating media';
+      case 'anki_dedup_progress_scanning':
+        return ({required Object count}) =>
+            'Scanning media folder… (${count} files found)';
+      case 'anki_dedup_progress_hashing':
+        return ({required Object done, required Object total}) =>
+            'Comparing same-size files… (${done} / ${total})';
+      case 'anki_dedup_progress_resolving':
+        return ({required Object done, required Object total}) =>
+            'Processing duplicates… (${done} / ${total})';
+      case 'anki_dedup_progress_freed':
+        return ({required Object size}) => 'Freed ${size} so far';
+      case 'anki_dedup_cancelling':
+        return 'Cancelling…';
+      case 'anki_dedup_cancelled':
+        return 'Deduplication cancelled; completed changes are kept.';
+      case 'anki_dedup_report_cancelled_note':
+        return 'Cancelled early — the numbers below only cover what was completed.';
+      case 'anki_dedup_plan_busy_note':
+        return 'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
+      case 'video_setting_subtitle_position_secondary':
+        return 'Secondary subtitle position';
+      case 'dict_download_learning_language':
+        return 'Learning language';
+      case 'dict_category_bilingual':
+        return 'Bilingual';
+      case 'dict_category_monolingual':
+        return 'Monolingual';
+      case 'shortcut_action_video_hold_speed':
+        return 'Hold for temporary speed';
+      case 'handlebar_phonetic_transcriptions':
+        return 'Phonetic transcriptions';
+      case 'sync_progress_preparing':
+        return 'Preparing sync';
+      case 'sync_progress_collections':
+        return 'Syncing collections';
+      case 'sync_progress_book':
+        return 'Syncing book';
+      case 'sync_progress_book_titled':
+        return ({required Object title}) => 'Syncing ${title}';
+      case 'sync_last_completed':
+        return ({required Object count}) =>
+            'Last sync: done (${count} channels)';
+      case 'sync_last_no_channels':
+        return 'Last sync: nothing synced - no connected sync channel';
+      case 'sync_last_nothing':
+        return 'Last sync: nothing to sync';
+      case 'sync_last_auto_disabled':
+        return 'Last sync: skipped - auto sync is off';
+      case 'sync_last_cooled_down':
+        return 'Last sync: skipped - synced recently';
+      case 'sync_last_failed':
+        return 'Last sync: failed';
+      case 'anime_download_no_results_detail':
+        return ({required Object query, required Object filters}) =>
+            'The service responded successfully but returned 0 items. Query: ${query}; filters: ${filters}. Try another title or loosen the filters.';
+      case 'anime_download_streaming_ready':
+        return 'In library · download continues';
+      case 'anime_download_unfiltered':
+        return 'No Trusted filter';
+      case 'interconnect_enable_footer':
+        return 'How to use: on the device that holds your library, turn on the sync server switch below; on your other device, add the address of that server to pair with it. A device can act as only one role at a time — server or client.';
+      case 'interconnect_peer_list_title':
+        return 'Added peers';
+      case 'interconnect_peer_list_empty':
+        return 'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
+      case 'anki_lapis_visual_editor':
+        return 'Visual style editor';
+      case 'anki_lapis_visual_editor_hint':
+        return 'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+      case 'anki_lapis_visual_front':
+        return 'Front';
+      case 'anki_lapis_visual_back':
+        return 'Back';
+      case 'anki_lapis_visual_preview':
+        return 'Lapis card preview';
+      case 'anki_lapis_visual_select_field':
+        return 'Select a field to highlight';
+      case 'anki_lapis_visual_reset_field':
+        return 'Reset field';
+      case 'anki_lapis_visual_font_size':
+        return ({required Object percent}) => 'Font size: ${percent}%';
+      case 'anki_lapis_visual_bold':
+        return 'Bold';
+      case 'anki_lapis_visual_alignment':
+        return 'Alignment';
+      case 'anki_lapis_visual_color':
+        return 'Text color';
+      case 'anki_lapis_visual_default':
+        return 'Default';
+      case 'anki_lapis_visual_advanced_css':
+        return 'Advanced CSS';
+      case 'anki_lapis_visual_field_expression':
+        return 'Word';
+      case 'anki_lapis_visual_field_reading':
+        return 'Reading';
+      case 'anki_lapis_visual_field_sentence':
+        return 'Sentence';
+      case 'anki_lapis_visual_field_primary_definition':
+        return 'Primary definition';
+      case 'anki_lapis_visual_field_glossaries':
+        return 'Other definitions';
+      case 'anki_lapis_visual_target_card_content':
+        return 'Card content';
+      case 'anki_lapis_visual_target_definition':
+        return 'Definition';
+      case 'anki_lapis_visual_target_inside_definition':
+        return 'Inside definition';
+      case 'anki_lapis_visual_field_definition_info':
+        return 'Definition indicator';
+      case 'anki_lapis_visual_field_definition_box':
+        return 'Definition box';
+      case 'anki_lapis_visual_field_definition_content':
+        return 'Whole definition';
+      case 'anki_lapis_visual_field_selected_definition':
+        return 'Selected definition';
+      case 'anki_lapis_visual_field_dictionary_entry':
+        return 'Dictionary entry';
+      case 'anki_lapis_visual_field_dictionary_name':
+        return 'Dictionary name';
+      case 'anki_lapis_visual_field_definition_example':
+        return 'Definition example';
+      case 'anki_lapis_visual_line_height':
+        return 'Line height';
+      case 'anki_lapis_visual_background_color':
+        return 'Background highlight';
+      case 'anki_lapis_visual_box_layout':
+        return 'Box appearance';
+      case 'anki_lapis_visual_border_width':
+        return 'Border';
+      case 'anki_lapis_visual_border_color':
+        return 'Border color';
+      case 'anki_lapis_visual_corner_radius':
+        return 'Corner radius';
+      case 'anki_lapis_visual_padding':
+        return 'Inner spacing';
+      case 'anki_lapis_visual_margin':
+        return 'Outer spacing';
+      case 'anki_lapis_visual_field_definition_info_note':
+        return 'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
+      case 'anki_lapis_visual_field_dictionary_name_note':
+        return 'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
       case 'library_view_manga_sources':
         return 'Manga sources';
       case 'library_view_manga_extensions':
@@ -162587,15 +169350,15 @@ extension on _StringsNl {
       case 'mihon_extension_language_all':
         return 'All languages';
       case 'mihon_filter_ignore':
-        return '忽略';
+        return 'Ignore';
       case 'mihon_filter_include':
-        return '包含';
+        return 'Include';
       case 'mihon_filter_exclude':
-        return '排除';
+        return 'Exclude';
       case 'mihon_filter_ascending':
-        return '升序';
+        return 'Ascending';
       case 'mihon_filter_descending':
-        return '降序';
+        return 'Descending';
       case 'mihon_add_to_bookshelf':
         return 'Add to manga shelf';
       case 'mihon_in_bookshelf':
@@ -163826,7 +170589,8 @@ extension on _StringsPtBr {
       case 'dict_auto_update_hint':
         return 'Verificar atualizações de dicionários ao iniciar';
       case 'dict_auto_update_last':
-        return ({required Object time}) => 'Última atualização: ${time}';
+        return ({required Object time}) =>
+            'Última verificação bem-sucedida: ${time}';
       case 'dict_auto_update_never':
         return 'Nunca';
       case 'dict_category_frequency':
@@ -164668,8 +171432,6 @@ extension on _StringsPtBr {
         return 'WebSocket';
       case 'game_text_thread':
         return 'Text thread';
-      case 'game_text_thread_all':
-        return 'All text threads';
       case 'game_text_thread_audio_count':
         return ({required Object count}) => '${count} with audio';
       case 'game_text_thread_hint':
@@ -168202,8 +174964,6 @@ extension on _StringsPtBr {
         return 'Everything sent';
       case 'media_tracking_unauthorized':
         return 'Bangumi rejected the access token. Reconnect it in settings.';
-      case 'media_tracking_unlinked_hint':
-        return 'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
       case 'media_tracking_open_subject':
         return 'Open on Bangumi';
       case 'media_tracking_manage_links':
@@ -168242,6 +175002,241 @@ extension on _StringsPtBr {
         return 'Show details';
       case 'scrape_failure_detail_hide':
         return 'Hide details';
+      case 'media_tracking_retry_mapping':
+        return 'Retry matching';
+      case 'media_tracking_retry_matched':
+        return 'Matched and queued current progress';
+      case 'media_tracking_retry_no_match':
+        return 'No match found. Try manual linking.';
+      case 'game_statistics':
+        return 'Game statistics';
+      case 'game_stat_by_game':
+        return 'By game';
+      case 'stat_clear_all_game_message':
+        return 'Clear all game play time and session counts? Your game library and activity timeline are kept. This cannot be undone.';
+      case 'batch_selection_stale_skipped':
+        return ({required Object m, required Object n}) =>
+            'Skipped ${m} of ${n} selected items that no longer exist';
+      case 'game_text_thread_unset':
+        return 'No thread selected — pick one to start capturing';
+      case 'media_tracking_watched_show':
+        return 'View all watched anime';
+      case 'media_tracking_watched_title':
+        return 'Watched on Bangumi';
+      case 'media_tracking_watched_empty':
+        return 'No anime is marked as watched on this Bangumi account.';
+      case 'media_tracking_watched_load_failed':
+        return ({required Object error}) =>
+            'Could not load watched anime: ${error}';
+      case 'media_tracking_watched_progress':
+        return ({required Object n}) => 'Watched ${n} episodes';
+      case 'media_tracking_manual_required':
+        return 'Needs manual link';
+      case 'media_tracking_manual_required_count':
+        return ({required Object n}) => '${n} items need manual links';
+      case 'media_tracking_manual_required_hint':
+        return 'These local items already have progress but are not linked to Bangumi.';
+      case 'media_tracking_no_local_history':
+        return 'No local watch, reading, or game progress needs linking.';
+      case 'media_tracking_more_manual_required':
+        return ({required Object n}) => '${n} more items need manual links';
+      case 'manga_import_hint':
+        return 'Pick a manga folder, a .cbz/.zip page archive, or a .mokuro file.';
+      case 'manga_import_pick_file':
+        return 'Pick manga file';
+      case 'manga_import_pick_folder':
+        return 'Pick manga folder';
+      case 'manga_import_missing_input':
+        return 'Pick a manga file or folder first.';
+      case 'manga_import_detected_title':
+        return 'This looks like manga';
+      case 'manga_import_detected_confirm':
+        return 'Import as manga';
+      case 'manga_import_detected_message':
+        return ({required Object name}) =>
+            '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+      case 'video_jimaku_source_loading':
+        return 'Checking subtitle availability...';
+      case 'video_jimaku_source_failed':
+        return 'Could not check subtitle availability. Try searching again.';
+      case 'video_jimaku_language_unknown':
+        return 'Language not labeled';
+      case 'video_jimaku_source_summary':
+        return (
+                {required Object files,
+                required Object episodes,
+                required Object languages}) =>
+            '${files} subtitle files · ${episodes} episodes · ${languages}';
+      case 'video_jimaku_episode_unlabeled':
+        return ({required Object episode, required Object count}) =>
+            'No subtitle labeled episode ${episode}; ${count} unlabeled files may still match';
+      case 'video_jimaku_episode_unavailable':
+        return ({required Object episode}) =>
+            'No subtitle found for episode ${episode}';
+      case 'video_jimaku_episode_available':
+        return ({required Object count, required Object languages}) =>
+            '${count} subtitles available · ${languages}';
+      case 'video_scrape_manual_match_hint':
+        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+      case 'video_scrape_collection_match_hint':
+        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+      case 'video_scrape_apply_to_collection_hint':
+        return 'This writes the same cover to every episode. Leave it off unless that is intentional.';
+      case 'video_scrape_tmdb_key_empty':
+        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+      case 'manga_online_source_disabled':
+        return 'This internet source is disabled. Enable it in Sources to browse the catalog.';
+      case 'selection_web_search':
+        return 'Search the web';
+      case 'selection_web_search_unavailable':
+        return 'No app can search the web.';
+      case 'selection_share_failed':
+        return 'Could not open the share sheet.';
+      case 'video_subtitle_youtube_auto_generated':
+        return ({required Object lang}) => '${lang} (auto-generated)';
+      case 'anki_dedup_progress_title':
+        return 'Deduplicating media';
+      case 'anki_dedup_progress_scanning':
+        return ({required Object count}) =>
+            'Scanning media folder… (${count} files found)';
+      case 'anki_dedup_progress_hashing':
+        return ({required Object done, required Object total}) =>
+            'Comparing same-size files… (${done} / ${total})';
+      case 'anki_dedup_progress_resolving':
+        return ({required Object done, required Object total}) =>
+            'Processing duplicates… (${done} / ${total})';
+      case 'anki_dedup_progress_freed':
+        return ({required Object size}) => 'Freed ${size} so far';
+      case 'anki_dedup_cancelling':
+        return 'Cancelling…';
+      case 'anki_dedup_cancelled':
+        return 'Deduplication cancelled; completed changes are kept.';
+      case 'anki_dedup_report_cancelled_note':
+        return 'Cancelled early — the numbers below only cover what was completed.';
+      case 'anki_dedup_plan_busy_note':
+        return 'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
+      case 'video_setting_subtitle_position_secondary':
+        return 'Secondary subtitle position';
+      case 'dict_download_learning_language':
+        return 'Learning language';
+      case 'dict_category_bilingual':
+        return 'Bilingual';
+      case 'dict_category_monolingual':
+        return 'Monolingual';
+      case 'shortcut_action_video_hold_speed':
+        return 'Hold for temporary speed';
+      case 'handlebar_phonetic_transcriptions':
+        return 'Phonetic transcriptions';
+      case 'sync_progress_preparing':
+        return 'Preparing sync';
+      case 'sync_progress_collections':
+        return 'Syncing collections';
+      case 'sync_progress_book':
+        return 'Syncing book';
+      case 'sync_progress_book_titled':
+        return ({required Object title}) => 'Syncing ${title}';
+      case 'sync_last_completed':
+        return ({required Object count}) =>
+            'Last sync: done (${count} channels)';
+      case 'sync_last_no_channels':
+        return 'Last sync: nothing synced - no connected sync channel';
+      case 'sync_last_nothing':
+        return 'Last sync: nothing to sync';
+      case 'sync_last_auto_disabled':
+        return 'Last sync: skipped - auto sync is off';
+      case 'sync_last_cooled_down':
+        return 'Last sync: skipped - synced recently';
+      case 'sync_last_failed':
+        return 'Last sync: failed';
+      case 'anime_download_no_results_detail':
+        return ({required Object query, required Object filters}) =>
+            'The service responded successfully but returned 0 items. Query: ${query}; filters: ${filters}. Try another title or loosen the filters.';
+      case 'anime_download_streaming_ready':
+        return 'In library · download continues';
+      case 'anime_download_unfiltered':
+        return 'No Trusted filter';
+      case 'interconnect_enable_footer':
+        return 'How to use: on the device that holds your library, turn on the sync server switch below; on your other device, add the address of that server to pair with it. A device can act as only one role at a time — server or client.';
+      case 'interconnect_peer_list_title':
+        return 'Added peers';
+      case 'interconnect_peer_list_empty':
+        return 'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
+      case 'anki_lapis_visual_editor':
+        return 'Visual style editor';
+      case 'anki_lapis_visual_editor_hint':
+        return 'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+      case 'anki_lapis_visual_front':
+        return 'Front';
+      case 'anki_lapis_visual_back':
+        return 'Back';
+      case 'anki_lapis_visual_preview':
+        return 'Lapis card preview';
+      case 'anki_lapis_visual_select_field':
+        return 'Select a field to highlight';
+      case 'anki_lapis_visual_reset_field':
+        return 'Reset field';
+      case 'anki_lapis_visual_font_size':
+        return ({required Object percent}) => 'Font size: ${percent}%';
+      case 'anki_lapis_visual_bold':
+        return 'Bold';
+      case 'anki_lapis_visual_alignment':
+        return 'Alignment';
+      case 'anki_lapis_visual_color':
+        return 'Text color';
+      case 'anki_lapis_visual_default':
+        return 'Default';
+      case 'anki_lapis_visual_advanced_css':
+        return 'Advanced CSS';
+      case 'anki_lapis_visual_field_expression':
+        return 'Word';
+      case 'anki_lapis_visual_field_reading':
+        return 'Reading';
+      case 'anki_lapis_visual_field_sentence':
+        return 'Sentence';
+      case 'anki_lapis_visual_field_primary_definition':
+        return 'Primary definition';
+      case 'anki_lapis_visual_field_glossaries':
+        return 'Other definitions';
+      case 'anki_lapis_visual_target_card_content':
+        return 'Card content';
+      case 'anki_lapis_visual_target_definition':
+        return 'Definition';
+      case 'anki_lapis_visual_target_inside_definition':
+        return 'Inside definition';
+      case 'anki_lapis_visual_field_definition_info':
+        return 'Definition indicator';
+      case 'anki_lapis_visual_field_definition_box':
+        return 'Definition box';
+      case 'anki_lapis_visual_field_definition_content':
+        return 'Whole definition';
+      case 'anki_lapis_visual_field_selected_definition':
+        return 'Selected definition';
+      case 'anki_lapis_visual_field_dictionary_entry':
+        return 'Dictionary entry';
+      case 'anki_lapis_visual_field_dictionary_name':
+        return 'Dictionary name';
+      case 'anki_lapis_visual_field_definition_example':
+        return 'Definition example';
+      case 'anki_lapis_visual_line_height':
+        return 'Line height';
+      case 'anki_lapis_visual_background_color':
+        return 'Background highlight';
+      case 'anki_lapis_visual_box_layout':
+        return 'Box appearance';
+      case 'anki_lapis_visual_border_width':
+        return 'Border';
+      case 'anki_lapis_visual_border_color':
+        return 'Border color';
+      case 'anki_lapis_visual_corner_radius':
+        return 'Corner radius';
+      case 'anki_lapis_visual_padding':
+        return 'Inner spacing';
+      case 'anki_lapis_visual_margin':
+        return 'Outer spacing';
+      case 'anki_lapis_visual_field_definition_info_note':
+        return 'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
+      case 'anki_lapis_visual_field_dictionary_name_note':
+        return 'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
       case 'library_view_manga_sources':
         return 'Manga sources';
       case 'library_view_manga_extensions':
@@ -168309,15 +175304,15 @@ extension on _StringsPtBr {
       case 'mihon_extension_language_all':
         return 'All languages';
       case 'mihon_filter_ignore':
-        return '忽略';
+        return 'Ignore';
       case 'mihon_filter_include':
-        return '包含';
+        return 'Include';
       case 'mihon_filter_exclude':
-        return '排除';
+        return 'Exclude';
       case 'mihon_filter_ascending':
-        return '升序';
+        return 'Ascending';
       case 'mihon_filter_descending':
-        return '降序';
+        return 'Descending';
       case 'mihon_add_to_bookshelf':
         return 'Add to manga shelf';
       case 'mihon_in_bookshelf':
@@ -169550,7 +176545,8 @@ extension on _StringsRu {
       case 'dict_auto_update_hint':
         return 'Проверять обновления словарей при запуске';
       case 'dict_auto_update_last':
-        return ({required Object time}) => 'Последнее обновление: ${time}';
+        return ({required Object time}) =>
+            'Последняя успешная проверка: ${time}';
       case 'dict_auto_update_never':
         return 'Никогда';
       case 'dict_category_frequency':
@@ -170393,8 +177389,6 @@ extension on _StringsRu {
         return 'WebSocket';
       case 'game_text_thread':
         return 'Text thread';
-      case 'game_text_thread_all':
-        return 'All text threads';
       case 'game_text_thread_audio_count':
         return ({required Object count}) => '${count} with audio';
       case 'game_text_thread_hint':
@@ -173929,8 +180923,6 @@ extension on _StringsRu {
         return 'Everything sent';
       case 'media_tracking_unauthorized':
         return 'Bangumi rejected the access token. Reconnect it in settings.';
-      case 'media_tracking_unlinked_hint':
-        return 'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
       case 'media_tracking_open_subject':
         return 'Open on Bangumi';
       case 'media_tracking_manage_links':
@@ -173969,6 +180961,241 @@ extension on _StringsRu {
         return 'Show details';
       case 'scrape_failure_detail_hide':
         return 'Hide details';
+      case 'media_tracking_retry_mapping':
+        return 'Retry matching';
+      case 'media_tracking_retry_matched':
+        return 'Matched and queued current progress';
+      case 'media_tracking_retry_no_match':
+        return 'No match found. Try manual linking.';
+      case 'game_statistics':
+        return 'Game statistics';
+      case 'game_stat_by_game':
+        return 'By game';
+      case 'stat_clear_all_game_message':
+        return 'Clear all game play time and session counts? Your game library and activity timeline are kept. This cannot be undone.';
+      case 'batch_selection_stale_skipped':
+        return ({required Object m, required Object n}) =>
+            'Skipped ${m} of ${n} selected items that no longer exist';
+      case 'game_text_thread_unset':
+        return 'No thread selected — pick one to start capturing';
+      case 'media_tracking_watched_show':
+        return 'View all watched anime';
+      case 'media_tracking_watched_title':
+        return 'Watched on Bangumi';
+      case 'media_tracking_watched_empty':
+        return 'No anime is marked as watched on this Bangumi account.';
+      case 'media_tracking_watched_load_failed':
+        return ({required Object error}) =>
+            'Could not load watched anime: ${error}';
+      case 'media_tracking_watched_progress':
+        return ({required Object n}) => 'Watched ${n} episodes';
+      case 'media_tracking_manual_required':
+        return 'Needs manual link';
+      case 'media_tracking_manual_required_count':
+        return ({required Object n}) => '${n} items need manual links';
+      case 'media_tracking_manual_required_hint':
+        return 'These local items already have progress but are not linked to Bangumi.';
+      case 'media_tracking_no_local_history':
+        return 'No local watch, reading, or game progress needs linking.';
+      case 'media_tracking_more_manual_required':
+        return ({required Object n}) => '${n} more items need manual links';
+      case 'manga_import_hint':
+        return 'Pick a manga folder, a .cbz/.zip page archive, or a .mokuro file.';
+      case 'manga_import_pick_file':
+        return 'Pick manga file';
+      case 'manga_import_pick_folder':
+        return 'Pick manga folder';
+      case 'manga_import_missing_input':
+        return 'Pick a manga file or folder first.';
+      case 'manga_import_detected_title':
+        return 'This looks like manga';
+      case 'manga_import_detected_confirm':
+        return 'Import as manga';
+      case 'manga_import_detected_message':
+        return ({required Object name}) =>
+            '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+      case 'video_jimaku_source_loading':
+        return 'Checking subtitle availability...';
+      case 'video_jimaku_source_failed':
+        return 'Could not check subtitle availability. Try searching again.';
+      case 'video_jimaku_language_unknown':
+        return 'Language not labeled';
+      case 'video_jimaku_source_summary':
+        return (
+                {required Object files,
+                required Object episodes,
+                required Object languages}) =>
+            '${files} subtitle files · ${episodes} episodes · ${languages}';
+      case 'video_jimaku_episode_unlabeled':
+        return ({required Object episode, required Object count}) =>
+            'No subtitle labeled episode ${episode}; ${count} unlabeled files may still match';
+      case 'video_jimaku_episode_unavailable':
+        return ({required Object episode}) =>
+            'No subtitle found for episode ${episode}';
+      case 'video_jimaku_episode_available':
+        return ({required Object count, required Object languages}) =>
+            '${count} subtitles available · ${languages}';
+      case 'video_scrape_manual_match_hint':
+        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+      case 'video_scrape_collection_match_hint':
+        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+      case 'video_scrape_apply_to_collection_hint':
+        return 'This writes the same cover to every episode. Leave it off unless that is intentional.';
+      case 'video_scrape_tmdb_key_empty':
+        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+      case 'manga_online_source_disabled':
+        return 'This internet source is disabled. Enable it in Sources to browse the catalog.';
+      case 'selection_web_search':
+        return 'Search the web';
+      case 'selection_web_search_unavailable':
+        return 'No app can search the web.';
+      case 'selection_share_failed':
+        return 'Could not open the share sheet.';
+      case 'video_subtitle_youtube_auto_generated':
+        return ({required Object lang}) => '${lang} (auto-generated)';
+      case 'anki_dedup_progress_title':
+        return 'Deduplicating media';
+      case 'anki_dedup_progress_scanning':
+        return ({required Object count}) =>
+            'Scanning media folder… (${count} files found)';
+      case 'anki_dedup_progress_hashing':
+        return ({required Object done, required Object total}) =>
+            'Comparing same-size files… (${done} / ${total})';
+      case 'anki_dedup_progress_resolving':
+        return ({required Object done, required Object total}) =>
+            'Processing duplicates… (${done} / ${total})';
+      case 'anki_dedup_progress_freed':
+        return ({required Object size}) => 'Freed ${size} so far';
+      case 'anki_dedup_cancelling':
+        return 'Cancelling…';
+      case 'anki_dedup_cancelled':
+        return 'Deduplication cancelled; completed changes are kept.';
+      case 'anki_dedup_report_cancelled_note':
+        return 'Cancelled early — the numbers below only cover what was completed.';
+      case 'anki_dedup_plan_busy_note':
+        return 'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
+      case 'video_setting_subtitle_position_secondary':
+        return 'Secondary subtitle position';
+      case 'dict_download_learning_language':
+        return 'Learning language';
+      case 'dict_category_bilingual':
+        return 'Bilingual';
+      case 'dict_category_monolingual':
+        return 'Monolingual';
+      case 'shortcut_action_video_hold_speed':
+        return 'Hold for temporary speed';
+      case 'handlebar_phonetic_transcriptions':
+        return 'Phonetic transcriptions';
+      case 'sync_progress_preparing':
+        return 'Preparing sync';
+      case 'sync_progress_collections':
+        return 'Syncing collections';
+      case 'sync_progress_book':
+        return 'Syncing book';
+      case 'sync_progress_book_titled':
+        return ({required Object title}) => 'Syncing ${title}';
+      case 'sync_last_completed':
+        return ({required Object count}) =>
+            'Last sync: done (${count} channels)';
+      case 'sync_last_no_channels':
+        return 'Last sync: nothing synced - no connected sync channel';
+      case 'sync_last_nothing':
+        return 'Last sync: nothing to sync';
+      case 'sync_last_auto_disabled':
+        return 'Last sync: skipped - auto sync is off';
+      case 'sync_last_cooled_down':
+        return 'Last sync: skipped - synced recently';
+      case 'sync_last_failed':
+        return 'Last sync: failed';
+      case 'anime_download_no_results_detail':
+        return ({required Object query, required Object filters}) =>
+            'The service responded successfully but returned 0 items. Query: ${query}; filters: ${filters}. Try another title or loosen the filters.';
+      case 'anime_download_streaming_ready':
+        return 'In library · download continues';
+      case 'anime_download_unfiltered':
+        return 'No Trusted filter';
+      case 'interconnect_enable_footer':
+        return 'How to use: on the device that holds your library, turn on the sync server switch below; on your other device, add the address of that server to pair with it. A device can act as only one role at a time — server or client.';
+      case 'interconnect_peer_list_title':
+        return 'Added peers';
+      case 'interconnect_peer_list_empty':
+        return 'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
+      case 'anki_lapis_visual_editor':
+        return 'Visual style editor';
+      case 'anki_lapis_visual_editor_hint':
+        return 'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+      case 'anki_lapis_visual_front':
+        return 'Front';
+      case 'anki_lapis_visual_back':
+        return 'Back';
+      case 'anki_lapis_visual_preview':
+        return 'Lapis card preview';
+      case 'anki_lapis_visual_select_field':
+        return 'Select a field to highlight';
+      case 'anki_lapis_visual_reset_field':
+        return 'Reset field';
+      case 'anki_lapis_visual_font_size':
+        return ({required Object percent}) => 'Font size: ${percent}%';
+      case 'anki_lapis_visual_bold':
+        return 'Bold';
+      case 'anki_lapis_visual_alignment':
+        return 'Alignment';
+      case 'anki_lapis_visual_color':
+        return 'Text color';
+      case 'anki_lapis_visual_default':
+        return 'Default';
+      case 'anki_lapis_visual_advanced_css':
+        return 'Advanced CSS';
+      case 'anki_lapis_visual_field_expression':
+        return 'Word';
+      case 'anki_lapis_visual_field_reading':
+        return 'Reading';
+      case 'anki_lapis_visual_field_sentence':
+        return 'Sentence';
+      case 'anki_lapis_visual_field_primary_definition':
+        return 'Primary definition';
+      case 'anki_lapis_visual_field_glossaries':
+        return 'Other definitions';
+      case 'anki_lapis_visual_target_card_content':
+        return 'Card content';
+      case 'anki_lapis_visual_target_definition':
+        return 'Definition';
+      case 'anki_lapis_visual_target_inside_definition':
+        return 'Inside definition';
+      case 'anki_lapis_visual_field_definition_info':
+        return 'Definition indicator';
+      case 'anki_lapis_visual_field_definition_box':
+        return 'Definition box';
+      case 'anki_lapis_visual_field_definition_content':
+        return 'Whole definition';
+      case 'anki_lapis_visual_field_selected_definition':
+        return 'Selected definition';
+      case 'anki_lapis_visual_field_dictionary_entry':
+        return 'Dictionary entry';
+      case 'anki_lapis_visual_field_dictionary_name':
+        return 'Dictionary name';
+      case 'anki_lapis_visual_field_definition_example':
+        return 'Definition example';
+      case 'anki_lapis_visual_line_height':
+        return 'Line height';
+      case 'anki_lapis_visual_background_color':
+        return 'Background highlight';
+      case 'anki_lapis_visual_box_layout':
+        return 'Box appearance';
+      case 'anki_lapis_visual_border_width':
+        return 'Border';
+      case 'anki_lapis_visual_border_color':
+        return 'Border color';
+      case 'anki_lapis_visual_corner_radius':
+        return 'Corner radius';
+      case 'anki_lapis_visual_padding':
+        return 'Inner spacing';
+      case 'anki_lapis_visual_margin':
+        return 'Outer spacing';
+      case 'anki_lapis_visual_field_definition_info_note':
+        return 'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
+      case 'anki_lapis_visual_field_dictionary_name_note':
+        return 'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
       case 'library_view_manga_sources':
         return 'Manga sources';
       case 'library_view_manga_extensions':
@@ -174036,15 +181263,15 @@ extension on _StringsRu {
       case 'mihon_extension_language_all':
         return 'All languages';
       case 'mihon_filter_ignore':
-        return '忽略';
+        return 'Ignore';
       case 'mihon_filter_include':
-        return '包含';
+        return 'Include';
       case 'mihon_filter_exclude':
-        return '排除';
+        return 'Exclude';
       case 'mihon_filter_ascending':
-        return '升序';
+        return 'Ascending';
       case 'mihon_filter_descending':
-        return '降序';
+        return 'Descending';
       case 'mihon_add_to_bookshelf':
         return 'Add to manga shelf';
       case 'mihon_in_bookshelf':
@@ -175271,7 +182498,7 @@ extension on _StringsTh {
       case 'dict_auto_update_hint':
         return 'ตรวจหาการอัปเดตพจนานุกรมเมื่อเปิดแอป';
       case 'dict_auto_update_last':
-        return ({required Object time}) => 'อัปเดตล่าสุด: ${time}';
+        return ({required Object time}) => 'ตรวจสอบสำเร็จล่าสุด: ${time}';
       case 'dict_auto_update_never':
         return 'ไม่เคย';
       case 'dict_category_frequency':
@@ -176113,8 +183340,6 @@ extension on _StringsTh {
         return 'WebSocket';
       case 'game_text_thread':
         return 'Text thread';
-      case 'game_text_thread_all':
-        return 'All text threads';
       case 'game_text_thread_audio_count':
         return ({required Object count}) => '${count} with audio';
       case 'game_text_thread_hint':
@@ -179640,8 +186865,6 @@ extension on _StringsTh {
         return 'Everything sent';
       case 'media_tracking_unauthorized':
         return 'Bangumi rejected the access token. Reconnect it in settings.';
-      case 'media_tracking_unlinked_hint':
-        return 'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
       case 'media_tracking_open_subject':
         return 'Open on Bangumi';
       case 'media_tracking_manage_links':
@@ -179680,6 +186903,241 @@ extension on _StringsTh {
         return 'Show details';
       case 'scrape_failure_detail_hide':
         return 'Hide details';
+      case 'media_tracking_retry_mapping':
+        return 'Retry matching';
+      case 'media_tracking_retry_matched':
+        return 'Matched and queued current progress';
+      case 'media_tracking_retry_no_match':
+        return 'No match found. Try manual linking.';
+      case 'game_statistics':
+        return 'Game statistics';
+      case 'game_stat_by_game':
+        return 'By game';
+      case 'stat_clear_all_game_message':
+        return 'Clear all game play time and session counts? Your game library and activity timeline are kept. This cannot be undone.';
+      case 'batch_selection_stale_skipped':
+        return ({required Object m, required Object n}) =>
+            'Skipped ${m} of ${n} selected items that no longer exist';
+      case 'game_text_thread_unset':
+        return 'No thread selected — pick one to start capturing';
+      case 'media_tracking_watched_show':
+        return 'View all watched anime';
+      case 'media_tracking_watched_title':
+        return 'Watched on Bangumi';
+      case 'media_tracking_watched_empty':
+        return 'No anime is marked as watched on this Bangumi account.';
+      case 'media_tracking_watched_load_failed':
+        return ({required Object error}) =>
+            'Could not load watched anime: ${error}';
+      case 'media_tracking_watched_progress':
+        return ({required Object n}) => 'Watched ${n} episodes';
+      case 'media_tracking_manual_required':
+        return 'Needs manual link';
+      case 'media_tracking_manual_required_count':
+        return ({required Object n}) => '${n} items need manual links';
+      case 'media_tracking_manual_required_hint':
+        return 'These local items already have progress but are not linked to Bangumi.';
+      case 'media_tracking_no_local_history':
+        return 'No local watch, reading, or game progress needs linking.';
+      case 'media_tracking_more_manual_required':
+        return ({required Object n}) => '${n} more items need manual links';
+      case 'manga_import_hint':
+        return 'Pick a manga folder, a .cbz/.zip page archive, or a .mokuro file.';
+      case 'manga_import_pick_file':
+        return 'Pick manga file';
+      case 'manga_import_pick_folder':
+        return 'Pick manga folder';
+      case 'manga_import_missing_input':
+        return 'Pick a manga file or folder first.';
+      case 'manga_import_detected_title':
+        return 'This looks like manga';
+      case 'manga_import_detected_confirm':
+        return 'Import as manga';
+      case 'manga_import_detected_message':
+        return ({required Object name}) =>
+            '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+      case 'video_jimaku_source_loading':
+        return 'Checking subtitle availability...';
+      case 'video_jimaku_source_failed':
+        return 'Could not check subtitle availability. Try searching again.';
+      case 'video_jimaku_language_unknown':
+        return 'Language not labeled';
+      case 'video_jimaku_source_summary':
+        return (
+                {required Object files,
+                required Object episodes,
+                required Object languages}) =>
+            '${files} subtitle files · ${episodes} episodes · ${languages}';
+      case 'video_jimaku_episode_unlabeled':
+        return ({required Object episode, required Object count}) =>
+            'No subtitle labeled episode ${episode}; ${count} unlabeled files may still match';
+      case 'video_jimaku_episode_unavailable':
+        return ({required Object episode}) =>
+            'No subtitle found for episode ${episode}';
+      case 'video_jimaku_episode_available':
+        return ({required Object count, required Object languages}) =>
+            '${count} subtitles available · ${languages}';
+      case 'video_scrape_manual_match_hint':
+        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+      case 'video_scrape_collection_match_hint':
+        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+      case 'video_scrape_apply_to_collection_hint':
+        return 'This writes the same cover to every episode. Leave it off unless that is intentional.';
+      case 'video_scrape_tmdb_key_empty':
+        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+      case 'manga_online_source_disabled':
+        return 'This internet source is disabled. Enable it in Sources to browse the catalog.';
+      case 'selection_web_search':
+        return 'Search the web';
+      case 'selection_web_search_unavailable':
+        return 'No app can search the web.';
+      case 'selection_share_failed':
+        return 'Could not open the share sheet.';
+      case 'video_subtitle_youtube_auto_generated':
+        return ({required Object lang}) => '${lang} (auto-generated)';
+      case 'anki_dedup_progress_title':
+        return 'Deduplicating media';
+      case 'anki_dedup_progress_scanning':
+        return ({required Object count}) =>
+            'Scanning media folder… (${count} files found)';
+      case 'anki_dedup_progress_hashing':
+        return ({required Object done, required Object total}) =>
+            'Comparing same-size files… (${done} / ${total})';
+      case 'anki_dedup_progress_resolving':
+        return ({required Object done, required Object total}) =>
+            'Processing duplicates… (${done} / ${total})';
+      case 'anki_dedup_progress_freed':
+        return ({required Object size}) => 'Freed ${size} so far';
+      case 'anki_dedup_cancelling':
+        return 'Cancelling…';
+      case 'anki_dedup_cancelled':
+        return 'Deduplication cancelled; completed changes are kept.';
+      case 'anki_dedup_report_cancelled_note':
+        return 'Cancelled early — the numbers below only cover what was completed.';
+      case 'anki_dedup_plan_busy_note':
+        return 'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
+      case 'video_setting_subtitle_position_secondary':
+        return 'Secondary subtitle position';
+      case 'dict_download_learning_language':
+        return 'Learning language';
+      case 'dict_category_bilingual':
+        return 'Bilingual';
+      case 'dict_category_monolingual':
+        return 'Monolingual';
+      case 'shortcut_action_video_hold_speed':
+        return 'Hold for temporary speed';
+      case 'handlebar_phonetic_transcriptions':
+        return 'Phonetic transcriptions';
+      case 'sync_progress_preparing':
+        return 'Preparing sync';
+      case 'sync_progress_collections':
+        return 'Syncing collections';
+      case 'sync_progress_book':
+        return 'Syncing book';
+      case 'sync_progress_book_titled':
+        return ({required Object title}) => 'Syncing ${title}';
+      case 'sync_last_completed':
+        return ({required Object count}) =>
+            'Last sync: done (${count} channels)';
+      case 'sync_last_no_channels':
+        return 'Last sync: nothing synced - no connected sync channel';
+      case 'sync_last_nothing':
+        return 'Last sync: nothing to sync';
+      case 'sync_last_auto_disabled':
+        return 'Last sync: skipped - auto sync is off';
+      case 'sync_last_cooled_down':
+        return 'Last sync: skipped - synced recently';
+      case 'sync_last_failed':
+        return 'Last sync: failed';
+      case 'anime_download_no_results_detail':
+        return ({required Object query, required Object filters}) =>
+            'The service responded successfully but returned 0 items. Query: ${query}; filters: ${filters}. Try another title or loosen the filters.';
+      case 'anime_download_streaming_ready':
+        return 'In library · download continues';
+      case 'anime_download_unfiltered':
+        return 'No Trusted filter';
+      case 'interconnect_enable_footer':
+        return 'How to use: on the device that holds your library, turn on the sync server switch below; on your other device, add the address of that server to pair with it. A device can act as only one role at a time — server or client.';
+      case 'interconnect_peer_list_title':
+        return 'Added peers';
+      case 'interconnect_peer_list_empty':
+        return 'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
+      case 'anki_lapis_visual_editor':
+        return 'Visual style editor';
+      case 'anki_lapis_visual_editor_hint':
+        return 'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+      case 'anki_lapis_visual_front':
+        return 'Front';
+      case 'anki_lapis_visual_back':
+        return 'Back';
+      case 'anki_lapis_visual_preview':
+        return 'Lapis card preview';
+      case 'anki_lapis_visual_select_field':
+        return 'Select a field to highlight';
+      case 'anki_lapis_visual_reset_field':
+        return 'Reset field';
+      case 'anki_lapis_visual_font_size':
+        return ({required Object percent}) => 'Font size: ${percent}%';
+      case 'anki_lapis_visual_bold':
+        return 'Bold';
+      case 'anki_lapis_visual_alignment':
+        return 'Alignment';
+      case 'anki_lapis_visual_color':
+        return 'Text color';
+      case 'anki_lapis_visual_default':
+        return 'Default';
+      case 'anki_lapis_visual_advanced_css':
+        return 'Advanced CSS';
+      case 'anki_lapis_visual_field_expression':
+        return 'Word';
+      case 'anki_lapis_visual_field_reading':
+        return 'Reading';
+      case 'anki_lapis_visual_field_sentence':
+        return 'Sentence';
+      case 'anki_lapis_visual_field_primary_definition':
+        return 'Primary definition';
+      case 'anki_lapis_visual_field_glossaries':
+        return 'Other definitions';
+      case 'anki_lapis_visual_target_card_content':
+        return 'Card content';
+      case 'anki_lapis_visual_target_definition':
+        return 'Definition';
+      case 'anki_lapis_visual_target_inside_definition':
+        return 'Inside definition';
+      case 'anki_lapis_visual_field_definition_info':
+        return 'Definition indicator';
+      case 'anki_lapis_visual_field_definition_box':
+        return 'Definition box';
+      case 'anki_lapis_visual_field_definition_content':
+        return 'Whole definition';
+      case 'anki_lapis_visual_field_selected_definition':
+        return 'Selected definition';
+      case 'anki_lapis_visual_field_dictionary_entry':
+        return 'Dictionary entry';
+      case 'anki_lapis_visual_field_dictionary_name':
+        return 'Dictionary name';
+      case 'anki_lapis_visual_field_definition_example':
+        return 'Definition example';
+      case 'anki_lapis_visual_line_height':
+        return 'Line height';
+      case 'anki_lapis_visual_background_color':
+        return 'Background highlight';
+      case 'anki_lapis_visual_box_layout':
+        return 'Box appearance';
+      case 'anki_lapis_visual_border_width':
+        return 'Border';
+      case 'anki_lapis_visual_border_color':
+        return 'Border color';
+      case 'anki_lapis_visual_corner_radius':
+        return 'Corner radius';
+      case 'anki_lapis_visual_padding':
+        return 'Inner spacing';
+      case 'anki_lapis_visual_margin':
+        return 'Outer spacing';
+      case 'anki_lapis_visual_field_definition_info_note':
+        return 'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
+      case 'anki_lapis_visual_field_dictionary_name_note':
+        return 'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
       case 'library_view_manga_sources':
         return 'Manga sources';
       case 'library_view_manga_extensions':
@@ -179747,15 +187205,15 @@ extension on _StringsTh {
       case 'mihon_extension_language_all':
         return 'All languages';
       case 'mihon_filter_ignore':
-        return '忽略';
+        return 'Ignore';
       case 'mihon_filter_include':
-        return '包含';
+        return 'Include';
       case 'mihon_filter_exclude':
-        return '排除';
+        return 'Exclude';
       case 'mihon_filter_ascending':
-        return '升序';
+        return 'Ascending';
       case 'mihon_filter_descending':
-        return '降序';
+        return 'Descending';
       case 'mihon_add_to_bookshelf':
         return 'Add to manga shelf';
       case 'mihon_in_bookshelf':
@@ -180987,7 +188445,7 @@ extension on _StringsTr {
       case 'dict_auto_update_hint':
         return 'Başlangıçta sözlük güncellemelerini denetle';
       case 'dict_auto_update_last':
-        return ({required Object time}) => 'Son güncelleme: ${time}';
+        return ({required Object time}) => 'Son başarılı denetim: ${time}';
       case 'dict_auto_update_never':
         return 'Hiçbir zaman';
       case 'dict_category_frequency':
@@ -181829,8 +189287,6 @@ extension on _StringsTr {
         return 'WebSocket';
       case 'game_text_thread':
         return 'Text thread';
-      case 'game_text_thread_all':
-        return 'All text threads';
       case 'game_text_thread_audio_count':
         return ({required Object count}) => '${count} with audio';
       case 'game_text_thread_hint':
@@ -185360,8 +192816,6 @@ extension on _StringsTr {
         return 'Everything sent';
       case 'media_tracking_unauthorized':
         return 'Bangumi rejected the access token. Reconnect it in settings.';
-      case 'media_tracking_unlinked_hint':
-        return 'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
       case 'media_tracking_open_subject':
         return 'Open on Bangumi';
       case 'media_tracking_manage_links':
@@ -185400,6 +192854,241 @@ extension on _StringsTr {
         return 'Show details';
       case 'scrape_failure_detail_hide':
         return 'Hide details';
+      case 'media_tracking_retry_mapping':
+        return 'Retry matching';
+      case 'media_tracking_retry_matched':
+        return 'Matched and queued current progress';
+      case 'media_tracking_retry_no_match':
+        return 'No match found. Try manual linking.';
+      case 'game_statistics':
+        return 'Game statistics';
+      case 'game_stat_by_game':
+        return 'By game';
+      case 'stat_clear_all_game_message':
+        return 'Clear all game play time and session counts? Your game library and activity timeline are kept. This cannot be undone.';
+      case 'batch_selection_stale_skipped':
+        return ({required Object m, required Object n}) =>
+            'Skipped ${m} of ${n} selected items that no longer exist';
+      case 'game_text_thread_unset':
+        return 'No thread selected — pick one to start capturing';
+      case 'media_tracking_watched_show':
+        return 'View all watched anime';
+      case 'media_tracking_watched_title':
+        return 'Watched on Bangumi';
+      case 'media_tracking_watched_empty':
+        return 'No anime is marked as watched on this Bangumi account.';
+      case 'media_tracking_watched_load_failed':
+        return ({required Object error}) =>
+            'Could not load watched anime: ${error}';
+      case 'media_tracking_watched_progress':
+        return ({required Object n}) => 'Watched ${n} episodes';
+      case 'media_tracking_manual_required':
+        return 'Needs manual link';
+      case 'media_tracking_manual_required_count':
+        return ({required Object n}) => '${n} items need manual links';
+      case 'media_tracking_manual_required_hint':
+        return 'These local items already have progress but are not linked to Bangumi.';
+      case 'media_tracking_no_local_history':
+        return 'No local watch, reading, or game progress needs linking.';
+      case 'media_tracking_more_manual_required':
+        return ({required Object n}) => '${n} more items need manual links';
+      case 'manga_import_hint':
+        return 'Pick a manga folder, a .cbz/.zip page archive, or a .mokuro file.';
+      case 'manga_import_pick_file':
+        return 'Pick manga file';
+      case 'manga_import_pick_folder':
+        return 'Pick manga folder';
+      case 'manga_import_missing_input':
+        return 'Pick a manga file or folder first.';
+      case 'manga_import_detected_title':
+        return 'This looks like manga';
+      case 'manga_import_detected_confirm':
+        return 'Import as manga';
+      case 'manga_import_detected_message':
+        return ({required Object name}) =>
+            '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+      case 'video_jimaku_source_loading':
+        return 'Checking subtitle availability...';
+      case 'video_jimaku_source_failed':
+        return 'Could not check subtitle availability. Try searching again.';
+      case 'video_jimaku_language_unknown':
+        return 'Language not labeled';
+      case 'video_jimaku_source_summary':
+        return (
+                {required Object files,
+                required Object episodes,
+                required Object languages}) =>
+            '${files} subtitle files · ${episodes} episodes · ${languages}';
+      case 'video_jimaku_episode_unlabeled':
+        return ({required Object episode, required Object count}) =>
+            'No subtitle labeled episode ${episode}; ${count} unlabeled files may still match';
+      case 'video_jimaku_episode_unavailable':
+        return ({required Object episode}) =>
+            'No subtitle found for episode ${episode}';
+      case 'video_jimaku_episode_available':
+        return ({required Object count, required Object languages}) =>
+            '${count} subtitles available · ${languages}';
+      case 'video_scrape_manual_match_hint':
+        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+      case 'video_scrape_collection_match_hint':
+        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+      case 'video_scrape_apply_to_collection_hint':
+        return 'This writes the same cover to every episode. Leave it off unless that is intentional.';
+      case 'video_scrape_tmdb_key_empty':
+        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+      case 'manga_online_source_disabled':
+        return 'This internet source is disabled. Enable it in Sources to browse the catalog.';
+      case 'selection_web_search':
+        return 'Search the web';
+      case 'selection_web_search_unavailable':
+        return 'No app can search the web.';
+      case 'selection_share_failed':
+        return 'Could not open the share sheet.';
+      case 'video_subtitle_youtube_auto_generated':
+        return ({required Object lang}) => '${lang} (auto-generated)';
+      case 'anki_dedup_progress_title':
+        return 'Deduplicating media';
+      case 'anki_dedup_progress_scanning':
+        return ({required Object count}) =>
+            'Scanning media folder… (${count} files found)';
+      case 'anki_dedup_progress_hashing':
+        return ({required Object done, required Object total}) =>
+            'Comparing same-size files… (${done} / ${total})';
+      case 'anki_dedup_progress_resolving':
+        return ({required Object done, required Object total}) =>
+            'Processing duplicates… (${done} / ${total})';
+      case 'anki_dedup_progress_freed':
+        return ({required Object size}) => 'Freed ${size} so far';
+      case 'anki_dedup_cancelling':
+        return 'Cancelling…';
+      case 'anki_dedup_cancelled':
+        return 'Deduplication cancelled; completed changes are kept.';
+      case 'anki_dedup_report_cancelled_note':
+        return 'Cancelled early — the numbers below only cover what was completed.';
+      case 'anki_dedup_plan_busy_note':
+        return 'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
+      case 'video_setting_subtitle_position_secondary':
+        return 'Secondary subtitle position';
+      case 'dict_download_learning_language':
+        return 'Learning language';
+      case 'dict_category_bilingual':
+        return 'Bilingual';
+      case 'dict_category_monolingual':
+        return 'Monolingual';
+      case 'shortcut_action_video_hold_speed':
+        return 'Hold for temporary speed';
+      case 'handlebar_phonetic_transcriptions':
+        return 'Phonetic transcriptions';
+      case 'sync_progress_preparing':
+        return 'Preparing sync';
+      case 'sync_progress_collections':
+        return 'Syncing collections';
+      case 'sync_progress_book':
+        return 'Syncing book';
+      case 'sync_progress_book_titled':
+        return ({required Object title}) => 'Syncing ${title}';
+      case 'sync_last_completed':
+        return ({required Object count}) =>
+            'Last sync: done (${count} channels)';
+      case 'sync_last_no_channels':
+        return 'Last sync: nothing synced - no connected sync channel';
+      case 'sync_last_nothing':
+        return 'Last sync: nothing to sync';
+      case 'sync_last_auto_disabled':
+        return 'Last sync: skipped - auto sync is off';
+      case 'sync_last_cooled_down':
+        return 'Last sync: skipped - synced recently';
+      case 'sync_last_failed':
+        return 'Last sync: failed';
+      case 'anime_download_no_results_detail':
+        return ({required Object query, required Object filters}) =>
+            'The service responded successfully but returned 0 items. Query: ${query}; filters: ${filters}. Try another title or loosen the filters.';
+      case 'anime_download_streaming_ready':
+        return 'In library · download continues';
+      case 'anime_download_unfiltered':
+        return 'No Trusted filter';
+      case 'interconnect_enable_footer':
+        return 'How to use: on the device that holds your library, turn on the sync server switch below; on your other device, add the address of that server to pair with it. A device can act as only one role at a time — server or client.';
+      case 'interconnect_peer_list_title':
+        return 'Added peers';
+      case 'interconnect_peer_list_empty':
+        return 'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
+      case 'anki_lapis_visual_editor':
+        return 'Visual style editor';
+      case 'anki_lapis_visual_editor_hint':
+        return 'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+      case 'anki_lapis_visual_front':
+        return 'Front';
+      case 'anki_lapis_visual_back':
+        return 'Back';
+      case 'anki_lapis_visual_preview':
+        return 'Lapis card preview';
+      case 'anki_lapis_visual_select_field':
+        return 'Select a field to highlight';
+      case 'anki_lapis_visual_reset_field':
+        return 'Reset field';
+      case 'anki_lapis_visual_font_size':
+        return ({required Object percent}) => 'Font size: ${percent}%';
+      case 'anki_lapis_visual_bold':
+        return 'Bold';
+      case 'anki_lapis_visual_alignment':
+        return 'Alignment';
+      case 'anki_lapis_visual_color':
+        return 'Text color';
+      case 'anki_lapis_visual_default':
+        return 'Default';
+      case 'anki_lapis_visual_advanced_css':
+        return 'Advanced CSS';
+      case 'anki_lapis_visual_field_expression':
+        return 'Word';
+      case 'anki_lapis_visual_field_reading':
+        return 'Reading';
+      case 'anki_lapis_visual_field_sentence':
+        return 'Sentence';
+      case 'anki_lapis_visual_field_primary_definition':
+        return 'Primary definition';
+      case 'anki_lapis_visual_field_glossaries':
+        return 'Other definitions';
+      case 'anki_lapis_visual_target_card_content':
+        return 'Card content';
+      case 'anki_lapis_visual_target_definition':
+        return 'Definition';
+      case 'anki_lapis_visual_target_inside_definition':
+        return 'Inside definition';
+      case 'anki_lapis_visual_field_definition_info':
+        return 'Definition indicator';
+      case 'anki_lapis_visual_field_definition_box':
+        return 'Definition box';
+      case 'anki_lapis_visual_field_definition_content':
+        return 'Whole definition';
+      case 'anki_lapis_visual_field_selected_definition':
+        return 'Selected definition';
+      case 'anki_lapis_visual_field_dictionary_entry':
+        return 'Dictionary entry';
+      case 'anki_lapis_visual_field_dictionary_name':
+        return 'Dictionary name';
+      case 'anki_lapis_visual_field_definition_example':
+        return 'Definition example';
+      case 'anki_lapis_visual_line_height':
+        return 'Line height';
+      case 'anki_lapis_visual_background_color':
+        return 'Background highlight';
+      case 'anki_lapis_visual_box_layout':
+        return 'Box appearance';
+      case 'anki_lapis_visual_border_width':
+        return 'Border';
+      case 'anki_lapis_visual_border_color':
+        return 'Border color';
+      case 'anki_lapis_visual_corner_radius':
+        return 'Corner radius';
+      case 'anki_lapis_visual_padding':
+        return 'Inner spacing';
+      case 'anki_lapis_visual_margin':
+        return 'Outer spacing';
+      case 'anki_lapis_visual_field_definition_info_note':
+        return 'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
+      case 'anki_lapis_visual_field_dictionary_name_note':
+        return 'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
       case 'library_view_manga_sources':
         return 'Manga sources';
       case 'library_view_manga_extensions':
@@ -185467,15 +193156,15 @@ extension on _StringsTr {
       case 'mihon_extension_language_all':
         return 'All languages';
       case 'mihon_filter_ignore':
-        return '忽略';
+        return 'Ignore';
       case 'mihon_filter_include':
-        return '包含';
+        return 'Include';
       case 'mihon_filter_exclude':
-        return '排除';
+        return 'Exclude';
       case 'mihon_filter_ascending':
-        return '升序';
+        return 'Ascending';
       case 'mihon_filter_descending':
-        return '降序';
+        return 'Descending';
       case 'mihon_add_to_bookshelf':
         return 'Add to manga shelf';
       case 'mihon_in_bookshelf':
@@ -186704,7 +194393,8 @@ extension on _StringsVi {
       case 'dict_auto_update_hint':
         return 'Kiểm tra cập nhật từ điển khi khởi động';
       case 'dict_auto_update_last':
-        return ({required Object time}) => 'Cập nhật lần cuối: ${time}';
+        return ({required Object time}) =>
+            'Lần kiểm tra thành công gần nhất: ${time}';
       case 'dict_auto_update_never':
         return 'Chưa bao giờ';
       case 'dict_category_frequency':
@@ -187546,8 +195236,6 @@ extension on _StringsVi {
         return 'WebSocket';
       case 'game_text_thread':
         return 'Text thread';
-      case 'game_text_thread_all':
-        return 'All text threads';
       case 'game_text_thread_audio_count':
         return ({required Object count}) => '${count} with audio';
       case 'game_text_thread_hint':
@@ -191075,8 +198763,6 @@ extension on _StringsVi {
         return 'Everything sent';
       case 'media_tracking_unauthorized':
         return 'Bangumi rejected the access token. Reconnect it in settings.';
-      case 'media_tracking_unlinked_hint':
-        return 'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
       case 'media_tracking_open_subject':
         return 'Open on Bangumi';
       case 'media_tracking_manage_links':
@@ -191115,6 +198801,241 @@ extension on _StringsVi {
         return 'Show details';
       case 'scrape_failure_detail_hide':
         return 'Hide details';
+      case 'media_tracking_retry_mapping':
+        return 'Retry matching';
+      case 'media_tracking_retry_matched':
+        return 'Matched and queued current progress';
+      case 'media_tracking_retry_no_match':
+        return 'No match found. Try manual linking.';
+      case 'game_statistics':
+        return 'Game statistics';
+      case 'game_stat_by_game':
+        return 'By game';
+      case 'stat_clear_all_game_message':
+        return 'Clear all game play time and session counts? Your game library and activity timeline are kept. This cannot be undone.';
+      case 'batch_selection_stale_skipped':
+        return ({required Object m, required Object n}) =>
+            'Skipped ${m} of ${n} selected items that no longer exist';
+      case 'game_text_thread_unset':
+        return 'No thread selected — pick one to start capturing';
+      case 'media_tracking_watched_show':
+        return 'View all watched anime';
+      case 'media_tracking_watched_title':
+        return 'Watched on Bangumi';
+      case 'media_tracking_watched_empty':
+        return 'No anime is marked as watched on this Bangumi account.';
+      case 'media_tracking_watched_load_failed':
+        return ({required Object error}) =>
+            'Could not load watched anime: ${error}';
+      case 'media_tracking_watched_progress':
+        return ({required Object n}) => 'Watched ${n} episodes';
+      case 'media_tracking_manual_required':
+        return 'Needs manual link';
+      case 'media_tracking_manual_required_count':
+        return ({required Object n}) => '${n} items need manual links';
+      case 'media_tracking_manual_required_hint':
+        return 'These local items already have progress but are not linked to Bangumi.';
+      case 'media_tracking_no_local_history':
+        return 'No local watch, reading, or game progress needs linking.';
+      case 'media_tracking_more_manual_required':
+        return ({required Object n}) => '${n} more items need manual links';
+      case 'manga_import_hint':
+        return 'Pick a manga folder, a .cbz/.zip page archive, or a .mokuro file.';
+      case 'manga_import_pick_file':
+        return 'Pick manga file';
+      case 'manga_import_pick_folder':
+        return 'Pick manga folder';
+      case 'manga_import_missing_input':
+        return 'Pick a manga file or folder first.';
+      case 'manga_import_detected_title':
+        return 'This looks like manga';
+      case 'manga_import_detected_confirm':
+        return 'Import as manga';
+      case 'manga_import_detected_message':
+        return ({required Object name}) =>
+            '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+      case 'video_jimaku_source_loading':
+        return 'Checking subtitle availability...';
+      case 'video_jimaku_source_failed':
+        return 'Could not check subtitle availability. Try searching again.';
+      case 'video_jimaku_language_unknown':
+        return 'Language not labeled';
+      case 'video_jimaku_source_summary':
+        return (
+                {required Object files,
+                required Object episodes,
+                required Object languages}) =>
+            '${files} subtitle files · ${episodes} episodes · ${languages}';
+      case 'video_jimaku_episode_unlabeled':
+        return ({required Object episode, required Object count}) =>
+            'No subtitle labeled episode ${episode}; ${count} unlabeled files may still match';
+      case 'video_jimaku_episode_unavailable':
+        return ({required Object episode}) =>
+            'No subtitle found for episode ${episode}';
+      case 'video_jimaku_episode_available':
+        return ({required Object count, required Object languages}) =>
+            '${count} subtitles available · ${languages}';
+      case 'video_scrape_manual_match_hint':
+        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+      case 'video_scrape_collection_match_hint':
+        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+      case 'video_scrape_apply_to_collection_hint':
+        return 'This writes the same cover to every episode. Leave it off unless that is intentional.';
+      case 'video_scrape_tmdb_key_empty':
+        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+      case 'manga_online_source_disabled':
+        return 'This internet source is disabled. Enable it in Sources to browse the catalog.';
+      case 'selection_web_search':
+        return 'Search the web';
+      case 'selection_web_search_unavailable':
+        return 'No app can search the web.';
+      case 'selection_share_failed':
+        return 'Could not open the share sheet.';
+      case 'video_subtitle_youtube_auto_generated':
+        return ({required Object lang}) => '${lang} (auto-generated)';
+      case 'anki_dedup_progress_title':
+        return 'Deduplicating media';
+      case 'anki_dedup_progress_scanning':
+        return ({required Object count}) =>
+            'Scanning media folder… (${count} files found)';
+      case 'anki_dedup_progress_hashing':
+        return ({required Object done, required Object total}) =>
+            'Comparing same-size files… (${done} / ${total})';
+      case 'anki_dedup_progress_resolving':
+        return ({required Object done, required Object total}) =>
+            'Processing duplicates… (${done} / ${total})';
+      case 'anki_dedup_progress_freed':
+        return ({required Object size}) => 'Freed ${size} so far';
+      case 'anki_dedup_cancelling':
+        return 'Cancelling…';
+      case 'anki_dedup_cancelled':
+        return 'Deduplication cancelled; completed changes are kept.';
+      case 'anki_dedup_report_cancelled_note':
+        return 'Cancelled early — the numbers below only cover what was completed.';
+      case 'anki_dedup_plan_busy_note':
+        return 'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
+      case 'video_setting_subtitle_position_secondary':
+        return 'Secondary subtitle position';
+      case 'dict_download_learning_language':
+        return 'Learning language';
+      case 'dict_category_bilingual':
+        return 'Bilingual';
+      case 'dict_category_monolingual':
+        return 'Monolingual';
+      case 'shortcut_action_video_hold_speed':
+        return 'Hold for temporary speed';
+      case 'handlebar_phonetic_transcriptions':
+        return 'Phonetic transcriptions';
+      case 'sync_progress_preparing':
+        return 'Preparing sync';
+      case 'sync_progress_collections':
+        return 'Syncing collections';
+      case 'sync_progress_book':
+        return 'Syncing book';
+      case 'sync_progress_book_titled':
+        return ({required Object title}) => 'Syncing ${title}';
+      case 'sync_last_completed':
+        return ({required Object count}) =>
+            'Last sync: done (${count} channels)';
+      case 'sync_last_no_channels':
+        return 'Last sync: nothing synced - no connected sync channel';
+      case 'sync_last_nothing':
+        return 'Last sync: nothing to sync';
+      case 'sync_last_auto_disabled':
+        return 'Last sync: skipped - auto sync is off';
+      case 'sync_last_cooled_down':
+        return 'Last sync: skipped - synced recently';
+      case 'sync_last_failed':
+        return 'Last sync: failed';
+      case 'anime_download_no_results_detail':
+        return ({required Object query, required Object filters}) =>
+            'The service responded successfully but returned 0 items. Query: ${query}; filters: ${filters}. Try another title or loosen the filters.';
+      case 'anime_download_streaming_ready':
+        return 'In library · download continues';
+      case 'anime_download_unfiltered':
+        return 'No Trusted filter';
+      case 'interconnect_enable_footer':
+        return 'How to use: on the device that holds your library, turn on the sync server switch below; on your other device, add the address of that server to pair with it. A device can act as only one role at a time — server or client.';
+      case 'interconnect_peer_list_title':
+        return 'Added peers';
+      case 'interconnect_peer_list_empty':
+        return 'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
+      case 'anki_lapis_visual_editor':
+        return 'Visual style editor';
+      case 'anki_lapis_visual_editor_hint':
+        return 'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+      case 'anki_lapis_visual_front':
+        return 'Front';
+      case 'anki_lapis_visual_back':
+        return 'Back';
+      case 'anki_lapis_visual_preview':
+        return 'Lapis card preview';
+      case 'anki_lapis_visual_select_field':
+        return 'Select a field to highlight';
+      case 'anki_lapis_visual_reset_field':
+        return 'Reset field';
+      case 'anki_lapis_visual_font_size':
+        return ({required Object percent}) => 'Font size: ${percent}%';
+      case 'anki_lapis_visual_bold':
+        return 'Bold';
+      case 'anki_lapis_visual_alignment':
+        return 'Alignment';
+      case 'anki_lapis_visual_color':
+        return 'Text color';
+      case 'anki_lapis_visual_default':
+        return 'Default';
+      case 'anki_lapis_visual_advanced_css':
+        return 'Advanced CSS';
+      case 'anki_lapis_visual_field_expression':
+        return 'Word';
+      case 'anki_lapis_visual_field_reading':
+        return 'Reading';
+      case 'anki_lapis_visual_field_sentence':
+        return 'Sentence';
+      case 'anki_lapis_visual_field_primary_definition':
+        return 'Primary definition';
+      case 'anki_lapis_visual_field_glossaries':
+        return 'Other definitions';
+      case 'anki_lapis_visual_target_card_content':
+        return 'Card content';
+      case 'anki_lapis_visual_target_definition':
+        return 'Definition';
+      case 'anki_lapis_visual_target_inside_definition':
+        return 'Inside definition';
+      case 'anki_lapis_visual_field_definition_info':
+        return 'Definition indicator';
+      case 'anki_lapis_visual_field_definition_box':
+        return 'Definition box';
+      case 'anki_lapis_visual_field_definition_content':
+        return 'Whole definition';
+      case 'anki_lapis_visual_field_selected_definition':
+        return 'Selected definition';
+      case 'anki_lapis_visual_field_dictionary_entry':
+        return 'Dictionary entry';
+      case 'anki_lapis_visual_field_dictionary_name':
+        return 'Dictionary name';
+      case 'anki_lapis_visual_field_definition_example':
+        return 'Definition example';
+      case 'anki_lapis_visual_line_height':
+        return 'Line height';
+      case 'anki_lapis_visual_background_color':
+        return 'Background highlight';
+      case 'anki_lapis_visual_box_layout':
+        return 'Box appearance';
+      case 'anki_lapis_visual_border_width':
+        return 'Border';
+      case 'anki_lapis_visual_border_color':
+        return 'Border color';
+      case 'anki_lapis_visual_corner_radius':
+        return 'Corner radius';
+      case 'anki_lapis_visual_padding':
+        return 'Inner spacing';
+      case 'anki_lapis_visual_margin':
+        return 'Outer spacing';
+      case 'anki_lapis_visual_field_definition_info_note':
+        return 'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
+      case 'anki_lapis_visual_field_dictionary_name_note':
+        return 'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
       case 'library_view_manga_sources':
         return 'Manga sources';
       case 'library_view_manga_extensions':
@@ -191182,15 +199103,15 @@ extension on _StringsVi {
       case 'mihon_extension_language_all':
         return 'All languages';
       case 'mihon_filter_ignore':
-        return '忽略';
+        return 'Ignore';
       case 'mihon_filter_include':
-        return '包含';
+        return 'Include';
       case 'mihon_filter_exclude':
-        return '排除';
+        return 'Exclude';
       case 'mihon_filter_ascending':
-        return '升序';
+        return 'Ascending';
       case 'mihon_filter_descending':
-        return '降序';
+        return 'Descending';
       case 'mihon_add_to_bookshelf':
         return 'Add to manga shelf';
       case 'mihon_in_bookshelf':
@@ -192406,7 +200327,7 @@ extension on _StringsZhCn {
       case 'dict_auto_update_hint':
         return '启动时检查词典更新';
       case 'dict_auto_update_last':
-        return ({required Object time}) => '上次更新：${time}';
+        return ({required Object time}) => '上次成功检查：${time}';
       case 'dict_auto_update_never':
         return '从未';
       case 'dict_category_frequency':
@@ -193245,8 +201166,6 @@ extension on _StringsZhCn {
         return 'WebSocket';
       case 'game_text_thread':
         return '文本线程';
-      case 'game_text_thread_all':
-        return '全部文本线程';
       case 'game_text_thread_audio_count':
         return ({required Object count}) => '${count} 行有音频';
       case 'game_text_thread_hint':
@@ -196744,8 +204663,6 @@ extension on _StringsZhCn {
         return '全部已发送';
       case 'media_tracking_unauthorized':
         return 'Bangumi 拒绝了访问令牌，请在设置里重新连接。';
-      case 'media_tracking_unlinked_hint':
-        return '还没有任何条目关联到 Bangumi 条目，所以看完/读完在那边不会有任何变化。自动匹配只在标题唯一命中时才建立关联，其余需要手动关联。';
       case 'media_tracking_open_subject':
         return '在 Bangumi 打开';
       case 'media_tracking_manage_links':
@@ -196784,6 +204701,236 @@ extension on _StringsZhCn {
         return '显示详情';
       case 'scrape_failure_detail_hide':
         return '隐藏详情';
+      case 'media_tracking_retry_mapping':
+        return '重试匹配';
+      case 'media_tracking_retry_matched':
+        return '已重新关联并补发当前进度';
+      case 'media_tracking_retry_no_match':
+        return '仍未匹配到条目，请尝试手动关联';
+      case 'game_statistics':
+        return '游戏统计';
+      case 'game_stat_by_game':
+        return '按游戏';
+      case 'stat_clear_all_game_message':
+        return '确定清空全部游戏统计吗？将删除所有游戏时长和游玩次数。你的游戏库与首页活动流不受影响。此操作不可撤销。';
+      case 'batch_selection_stale_skipped':
+        return ({required Object n, required Object m}) =>
+            '选中的 ${n} 项中有 ${m} 项已不存在，已跳过';
+      case 'game_text_thread_unset':
+        return '尚未选择线程 · 选一条后开始捕获';
+      case 'media_tracking_watched_show':
+        return '查看全部看过';
+      case 'media_tracking_watched_title':
+        return 'Bangumi 看过';
+      case 'media_tracking_watched_empty':
+        return '这个 Bangumi 账号还没有标记为“看过”的番剧。';
+      case 'media_tracking_watched_load_failed':
+        return ({required Object error}) => '读取看过记录失败：${error}';
+      case 'media_tracking_watched_progress':
+        return ({required Object n}) => '已看 ${n} 集';
+      case 'media_tracking_manual_required':
+        return '需要手动关联';
+      case 'media_tracking_manual_required_count':
+        return ({required Object n}) => '${n} 项需要手动关联';
+      case 'media_tracking_manual_required_hint':
+        return '这些本地条目已有观看、阅读或游玩记录，但还没有关联到 Bangumi。';
+      case 'media_tracking_no_local_history':
+        return '暂无需要关联的本地观看、阅读或游玩记录。';
+      case 'media_tracking_more_manual_required':
+        return ({required Object n}) => '另有 ${n} 项需要手动关联';
+      case 'manga_import_hint':
+        return '选择漫画文件夹、.cbz/.zip 页图压缩包，或 .mokuro 文件。';
+      case 'manga_import_pick_file':
+        return '选择漫画文件';
+      case 'manga_import_pick_folder':
+        return '选择漫画文件夹';
+      case 'manga_import_missing_input':
+        return '请先选择漫画文件或文件夹。';
+      case 'manga_import_detected_title':
+        return '这看起来是漫画';
+      case 'manga_import_detected_confirm':
+        return '按漫画导入';
+      case 'manga_import_detected_message':
+        return ({required Object name}) => '「${name}」是漫画文件，将走漫画导入流程，而不是书籍导入流程。';
+      case 'video_jimaku_source_loading':
+        return '正在检查字幕可用性…';
+      case 'video_jimaku_source_failed':
+        return '字幕可用性检查失败，请重新查找。';
+      case 'video_jimaku_language_unknown':
+        return '语言未标注';
+      case 'video_jimaku_source_summary':
+        return (
+                {required Object files,
+                required Object episodes,
+                required Object languages}) =>
+            '${files} 个字幕文件 · 覆盖 ${episodes} 集 · ${languages}';
+      case 'video_jimaku_episode_unlabeled':
+        return ({required Object episode, required Object count}) =>
+            '未发现标为第 ${episode} 集的字幕；另有 ${count} 个未标集号文件可尝试';
+      case 'video_jimaku_episode_unavailable':
+        return ({required Object episode}) => '没有找到第 ${episode} 集字幕';
+      case 'video_jimaku_episode_available':
+        return ({required Object count, required Object languages}) =>
+            '有 ${count} 个字幕 · ${languages}';
+      case 'video_scrape_manual_match_hint':
+        return '手动匹配会替换本集封面，并保存来源映射和条目资料。切换来源后，点“搜索”才会请求该来源。';
+      case 'video_scrape_collection_match_hint':
+        return '这里只替换合集封面，不会修改各集封面或条目资料。切换来源后，点“搜索”才会请求该来源。';
+      case 'video_scrape_apply_to_collection_hint':
+        return '这会把同一张封面写到每一集；只有确实需要统一单集封面时才开启。';
+      case 'video_scrape_tmdb_key_empty':
+        return '先保存 TMDB API Key，再点“搜索”。这里不会混入其他来源的结果。';
+      case 'manga_online_source_disabled':
+        return '此互联网来源已关闭，请在「来源」中开启后浏览目录。';
+      case 'selection_web_search':
+        return '网页搜索';
+      case 'selection_web_search_unavailable':
+        return '没有可用的网页搜索应用。';
+      case 'selection_share_failed':
+        return '无法打开分享面板。';
+      case 'video_subtitle_youtube_auto_generated':
+        return ({required Object lang}) => '${lang}（自动生成）';
+      case 'anki_dedup_progress_title':
+        return '正在去重媒体';
+      case 'anki_dedup_progress_scanning':
+        return ({required Object count}) => '正在扫描媒体目录…（已发现 ${count} 个文件）';
+      case 'anki_dedup_progress_hashing':
+        return ({required Object done, required Object total}) =>
+            '正在比对同大小文件…（${done} / ${total}）';
+      case 'anki_dedup_progress_resolving':
+        return ({required Object done, required Object total}) =>
+            '正在处理重复副本…（${done} / ${total}）';
+      case 'anki_dedup_progress_freed':
+        return ({required Object size}) => '已释放 ${size}';
+      case 'anki_dedup_cancelling':
+        return '正在取消…';
+      case 'anki_dedup_cancelled':
+        return '已取消去重；已完成的改动保留。';
+      case 'anki_dedup_report_cancelled_note':
+        return '已提前取消——以下数字只统计已完成的部分。';
+      case 'anki_dedup_plan_busy_note':
+        return '执行期间 Anki 可能暂时无响应；结束前请不要在 Anki 里操作。';
+      case 'video_setting_subtitle_position_secondary':
+        return '副字幕垂直位置';
+      case 'dict_download_learning_language':
+        return '学习语言';
+      case 'dict_category_bilingual':
+        return '双语';
+      case 'dict_category_monolingual':
+        return '单语';
+      case 'shortcut_action_video_hold_speed':
+        return '按住临时倍速';
+      case 'handlebar_phonetic_transcriptions':
+        return '音标';
+      case 'sync_progress_preparing':
+        return '正在准备同步';
+      case 'sync_progress_collections':
+        return '同步合集';
+      case 'sync_progress_book':
+        return '同步书籍';
+      case 'sync_progress_book_titled':
+        return ({required Object title}) => '同步 ${title}';
+      case 'sync_last_completed':
+        return ({required Object count}) => '上次同步：已完成（${count} 条通道）';
+      case 'sync_last_no_channels':
+        return '上次同步：未同步——没有已连接的同步通道';
+      case 'sync_last_nothing':
+        return '上次同步：没有可同步的内容';
+      case 'sync_last_auto_disabled':
+        return '上次同步：已跳过——自动同步已关闭';
+      case 'sync_last_cooled_down':
+        return '上次同步：已跳过——刚同步过';
+      case 'sync_last_failed':
+        return '上次同步：失败';
+      case 'anime_download_no_results_detail':
+        return ({required Object query, required Object filters}) =>
+            '服务已正常响应，但按当前条件返回 0 条。查询：${query}；筛选：${filters}。请尝试别名或放宽筛选。';
+      case 'anime_download_streaming_ready':
+        return '已入库 · 下载继续';
+      case 'anime_download_unfiltered':
+        return '未启用 Trusted 筛选';
+      case 'interconnect_enable_footer':
+        return '用法：在存放内容的那台设备上开启下方的同步服务器开关；在另一台设备上添加该服务器的地址完成配对。同一台设备同一时间只能担任服务器或客户端其中一种角色。';
+      case 'interconnect_peer_list_title':
+        return '已添加的对端';
+      case 'interconnect_peer_list_empty':
+        return '尚未添加任何对端。可在下方的局域网设备列表中点击发现的设备自动配对，或手动添加对端地址。';
+      case 'anki_lapis_visual_editor':
+        return '可视化样式编辑';
+      case 'anki_lapis_visual_editor_hint':
+        return '预览 Lapis 卡片，选择字段后直接调整样式，无需手写 CSS。';
+      case 'anki_lapis_visual_front':
+        return '正面';
+      case 'anki_lapis_visual_back':
+        return '背面';
+      case 'anki_lapis_visual_preview':
+        return 'Lapis 卡片预览';
+      case 'anki_lapis_visual_select_field':
+        return '选择要高亮的字段';
+      case 'anki_lapis_visual_reset_field':
+        return '重置字段';
+      case 'anki_lapis_visual_font_size':
+        return ({required Object percent}) => '字号：${percent}%';
+      case 'anki_lapis_visual_bold':
+        return '粗体';
+      case 'anki_lapis_visual_alignment':
+        return '对齐';
+      case 'anki_lapis_visual_color':
+        return '文字颜色';
+      case 'anki_lapis_visual_default':
+        return '默认';
+      case 'anki_lapis_visual_advanced_css':
+        return '高级 CSS';
+      case 'anki_lapis_visual_field_expression':
+        return '单词';
+      case 'anki_lapis_visual_field_reading':
+        return '读音';
+      case 'anki_lapis_visual_field_sentence':
+        return '例句';
+      case 'anki_lapis_visual_field_primary_definition':
+        return '首要释义';
+      case 'anki_lapis_visual_field_glossaries':
+        return '其他释义';
+      case 'anki_lapis_visual_target_card_content':
+        return '卡片内容';
+      case 'anki_lapis_visual_target_definition':
+        return '释义';
+      case 'anki_lapis_visual_target_inside_definition':
+        return '释义内部';
+      case 'anki_lapis_visual_field_definition_info':
+        return '释义序号';
+      case 'anki_lapis_visual_field_definition_box':
+        return '释义框';
+      case 'anki_lapis_visual_field_definition_content':
+        return '整段释义';
+      case 'anki_lapis_visual_field_selected_definition':
+        return '选中释义';
+      case 'anki_lapis_visual_field_dictionary_entry':
+        return '词典条目';
+      case 'anki_lapis_visual_field_dictionary_name':
+        return '词典名称';
+      case 'anki_lapis_visual_field_definition_example':
+        return '释义例句';
+      case 'anki_lapis_visual_line_height':
+        return '行高';
+      case 'anki_lapis_visual_background_color':
+        return '背景高亮';
+      case 'anki_lapis_visual_box_layout':
+        return '区域外观';
+      case 'anki_lapis_visual_border_width':
+        return '边框';
+      case 'anki_lapis_visual_border_color':
+        return '边框颜色';
+      case 'anki_lapis_visual_corner_radius':
+        return '圆角';
+      case 'anki_lapis_visual_padding':
+        return '内边距';
+      case 'anki_lapis_visual_margin':
+        return '外边距';
+      case 'anki_lapis_visual_field_definition_info_note':
+        return '仅在保留多段释义的卡片上可见；只有一段释义的卡片不会显示。';
+      case 'anki_lapis_visual_field_dictionary_name_note':
+        return 'Hibiki 生成的卡片把词性标签和词典名放在同一个标签里，两者无法分开设置样式。';
       case 'library_view_manga_sources':
         return '漫画源';
       case 'library_view_manga_extensions':
@@ -198080,7 +206227,7 @@ extension on _StringsZhHk {
       case 'dict_auto_update_hint':
         return '啟動時檢查詞典更新';
       case 'dict_auto_update_last':
-        return ({required Object time}) => '上次更新：${time}';
+        return ({required Object time}) => '上次成功檢查：${time}';
       case 'dict_auto_update_never':
         return '從未';
       case 'dict_category_frequency':
@@ -198922,8 +207069,6 @@ extension on _StringsZhHk {
         return 'WebSocket';
       case 'game_text_thread':
         return 'Text thread';
-      case 'game_text_thread_all':
-        return 'All text threads';
       case 'game_text_thread_audio_count':
         return ({required Object count}) => '${count} with audio';
       case 'game_text_thread_hint':
@@ -202433,8 +210578,6 @@ extension on _StringsZhHk {
         return 'Everything sent';
       case 'media_tracking_unauthorized':
         return 'Bangumi rejected the access token. Reconnect it in settings.';
-      case 'media_tracking_unlinked_hint':
-        return 'No item is linked to a Bangumi subject yet, so finishing something changes nothing there. Automatic matching only links a subject when the title matches unambiguously; link the rest by hand.';
       case 'media_tracking_open_subject':
         return 'Open on Bangumi';
       case 'media_tracking_manage_links':
@@ -202473,6 +210616,241 @@ extension on _StringsZhHk {
         return 'Show details';
       case 'scrape_failure_detail_hide':
         return 'Hide details';
+      case 'media_tracking_retry_mapping':
+        return 'Retry matching';
+      case 'media_tracking_retry_matched':
+        return 'Matched and queued current progress';
+      case 'media_tracking_retry_no_match':
+        return 'No match found. Try manual linking.';
+      case 'game_statistics':
+        return 'Game statistics';
+      case 'game_stat_by_game':
+        return 'By game';
+      case 'stat_clear_all_game_message':
+        return 'Clear all game play time and session counts? Your game library and activity timeline are kept. This cannot be undone.';
+      case 'batch_selection_stale_skipped':
+        return ({required Object m, required Object n}) =>
+            'Skipped ${m} of ${n} selected items that no longer exist';
+      case 'game_text_thread_unset':
+        return 'No thread selected — pick one to start capturing';
+      case 'media_tracking_watched_show':
+        return 'View all watched anime';
+      case 'media_tracking_watched_title':
+        return 'Watched on Bangumi';
+      case 'media_tracking_watched_empty':
+        return 'No anime is marked as watched on this Bangumi account.';
+      case 'media_tracking_watched_load_failed':
+        return ({required Object error}) =>
+            'Could not load watched anime: ${error}';
+      case 'media_tracking_watched_progress':
+        return ({required Object n}) => 'Watched ${n} episodes';
+      case 'media_tracking_manual_required':
+        return 'Needs manual link';
+      case 'media_tracking_manual_required_count':
+        return ({required Object n}) => '${n} items need manual links';
+      case 'media_tracking_manual_required_hint':
+        return 'These local items already have progress but are not linked to Bangumi.';
+      case 'media_tracking_no_local_history':
+        return 'No local watch, reading, or game progress needs linking.';
+      case 'media_tracking_more_manual_required':
+        return ({required Object n}) => '${n} more items need manual links';
+      case 'manga_import_hint':
+        return 'Pick a manga folder, a .cbz/.zip page archive, or a .mokuro file.';
+      case 'manga_import_pick_file':
+        return 'Pick manga file';
+      case 'manga_import_pick_folder':
+        return 'Pick manga folder';
+      case 'manga_import_missing_input':
+        return 'Pick a manga file or folder first.';
+      case 'manga_import_detected_title':
+        return 'This looks like manga';
+      case 'manga_import_detected_confirm':
+        return 'Import as manga';
+      case 'manga_import_detected_message':
+        return ({required Object name}) =>
+            '"${name}" is a manga file, so it will go through the manga importer instead of the book importer.';
+      case 'video_jimaku_source_loading':
+        return 'Checking subtitle availability...';
+      case 'video_jimaku_source_failed':
+        return 'Could not check subtitle availability. Try searching again.';
+      case 'video_jimaku_language_unknown':
+        return 'Language not labeled';
+      case 'video_jimaku_source_summary':
+        return (
+                {required Object files,
+                required Object episodes,
+                required Object languages}) =>
+            '${files} subtitle files · ${episodes} episodes · ${languages}';
+      case 'video_jimaku_episode_unlabeled':
+        return ({required Object episode, required Object count}) =>
+            'No subtitle labeled episode ${episode}; ${count} unlabeled files may still match';
+      case 'video_jimaku_episode_unavailable':
+        return ({required Object episode}) =>
+            'No subtitle found for episode ${episode}';
+      case 'video_jimaku_episode_available':
+        return ({required Object count, required Object languages}) =>
+            '${count} subtitles available · ${languages}';
+      case 'video_scrape_manual_match_hint':
+        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+      case 'video_scrape_collection_match_hint':
+        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+      case 'video_scrape_apply_to_collection_hint':
+        return 'This writes the same cover to every episode. Leave it off unless that is intentional.';
+      case 'video_scrape_tmdb_key_empty':
+        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+      case 'manga_online_source_disabled':
+        return 'This internet source is disabled. Enable it in Sources to browse the catalog.';
+      case 'selection_web_search':
+        return 'Search the web';
+      case 'selection_web_search_unavailable':
+        return 'No app can search the web.';
+      case 'selection_share_failed':
+        return 'Could not open the share sheet.';
+      case 'video_subtitle_youtube_auto_generated':
+        return ({required Object lang}) => '${lang} (auto-generated)';
+      case 'anki_dedup_progress_title':
+        return 'Deduplicating media';
+      case 'anki_dedup_progress_scanning':
+        return ({required Object count}) =>
+            'Scanning media folder… (${count} files found)';
+      case 'anki_dedup_progress_hashing':
+        return ({required Object done, required Object total}) =>
+            'Comparing same-size files… (${done} / ${total})';
+      case 'anki_dedup_progress_resolving':
+        return ({required Object done, required Object total}) =>
+            'Processing duplicates… (${done} / ${total})';
+      case 'anki_dedup_progress_freed':
+        return ({required Object size}) => 'Freed ${size} so far';
+      case 'anki_dedup_cancelling':
+        return 'Cancelling…';
+      case 'anki_dedup_cancelled':
+        return 'Deduplication cancelled; completed changes are kept.';
+      case 'anki_dedup_report_cancelled_note':
+        return 'Cancelled early — the numbers below only cover what was completed.';
+      case 'anki_dedup_plan_busy_note':
+        return 'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
+      case 'video_setting_subtitle_position_secondary':
+        return 'Secondary subtitle position';
+      case 'dict_download_learning_language':
+        return 'Learning language';
+      case 'dict_category_bilingual':
+        return 'Bilingual';
+      case 'dict_category_monolingual':
+        return 'Monolingual';
+      case 'shortcut_action_video_hold_speed':
+        return 'Hold for temporary speed';
+      case 'handlebar_phonetic_transcriptions':
+        return 'Phonetic transcriptions';
+      case 'sync_progress_preparing':
+        return 'Preparing sync';
+      case 'sync_progress_collections':
+        return 'Syncing collections';
+      case 'sync_progress_book':
+        return 'Syncing book';
+      case 'sync_progress_book_titled':
+        return ({required Object title}) => 'Syncing ${title}';
+      case 'sync_last_completed':
+        return ({required Object count}) =>
+            'Last sync: done (${count} channels)';
+      case 'sync_last_no_channels':
+        return 'Last sync: nothing synced - no connected sync channel';
+      case 'sync_last_nothing':
+        return 'Last sync: nothing to sync';
+      case 'sync_last_auto_disabled':
+        return 'Last sync: skipped - auto sync is off';
+      case 'sync_last_cooled_down':
+        return 'Last sync: skipped - synced recently';
+      case 'sync_last_failed':
+        return 'Last sync: failed';
+      case 'anime_download_no_results_detail':
+        return ({required Object query, required Object filters}) =>
+            'The service responded successfully but returned 0 items. Query: ${query}; filters: ${filters}. Try another title or loosen the filters.';
+      case 'anime_download_streaming_ready':
+        return 'In library · download continues';
+      case 'anime_download_unfiltered':
+        return 'No Trusted filter';
+      case 'interconnect_enable_footer':
+        return 'How to use: on the device that holds your library, turn on the sync server switch below; on your other device, add the address of that server to pair with it. A device can act as only one role at a time — server or client.';
+      case 'interconnect_peer_list_title':
+        return 'Added peers';
+      case 'interconnect_peer_list_empty':
+        return 'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
+      case 'anki_lapis_visual_editor':
+        return 'Visual style editor';
+      case 'anki_lapis_visual_editor_hint':
+        return 'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+      case 'anki_lapis_visual_front':
+        return 'Front';
+      case 'anki_lapis_visual_back':
+        return 'Back';
+      case 'anki_lapis_visual_preview':
+        return 'Lapis card preview';
+      case 'anki_lapis_visual_select_field':
+        return 'Select a field to highlight';
+      case 'anki_lapis_visual_reset_field':
+        return 'Reset field';
+      case 'anki_lapis_visual_font_size':
+        return ({required Object percent}) => 'Font size: ${percent}%';
+      case 'anki_lapis_visual_bold':
+        return 'Bold';
+      case 'anki_lapis_visual_alignment':
+        return 'Alignment';
+      case 'anki_lapis_visual_color':
+        return 'Text color';
+      case 'anki_lapis_visual_default':
+        return 'Default';
+      case 'anki_lapis_visual_advanced_css':
+        return 'Advanced CSS';
+      case 'anki_lapis_visual_field_expression':
+        return 'Word';
+      case 'anki_lapis_visual_field_reading':
+        return 'Reading';
+      case 'anki_lapis_visual_field_sentence':
+        return 'Sentence';
+      case 'anki_lapis_visual_field_primary_definition':
+        return 'Primary definition';
+      case 'anki_lapis_visual_field_glossaries':
+        return 'Other definitions';
+      case 'anki_lapis_visual_target_card_content':
+        return 'Card content';
+      case 'anki_lapis_visual_target_definition':
+        return 'Definition';
+      case 'anki_lapis_visual_target_inside_definition':
+        return 'Inside definition';
+      case 'anki_lapis_visual_field_definition_info':
+        return 'Definition indicator';
+      case 'anki_lapis_visual_field_definition_box':
+        return 'Definition box';
+      case 'anki_lapis_visual_field_definition_content':
+        return 'Whole definition';
+      case 'anki_lapis_visual_field_selected_definition':
+        return 'Selected definition';
+      case 'anki_lapis_visual_field_dictionary_entry':
+        return 'Dictionary entry';
+      case 'anki_lapis_visual_field_dictionary_name':
+        return 'Dictionary name';
+      case 'anki_lapis_visual_field_definition_example':
+        return 'Definition example';
+      case 'anki_lapis_visual_line_height':
+        return 'Line height';
+      case 'anki_lapis_visual_background_color':
+        return 'Background highlight';
+      case 'anki_lapis_visual_box_layout':
+        return 'Box appearance';
+      case 'anki_lapis_visual_border_width':
+        return 'Border';
+      case 'anki_lapis_visual_border_color':
+        return 'Border color';
+      case 'anki_lapis_visual_corner_radius':
+        return 'Corner radius';
+      case 'anki_lapis_visual_padding':
+        return 'Inner spacing';
+      case 'anki_lapis_visual_margin':
+        return 'Outer spacing';
+      case 'anki_lapis_visual_field_definition_info_note':
+        return 'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
+      case 'anki_lapis_visual_field_dictionary_name_note':
+        return 'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
       case 'library_view_manga_sources':
         return 'Manga sources';
       case 'library_view_manga_extensions':
@@ -202540,15 +210918,15 @@ extension on _StringsZhHk {
       case 'mihon_extension_language_all':
         return 'All languages';
       case 'mihon_filter_ignore':
-        return '忽略';
+        return 'Ignore';
       case 'mihon_filter_include':
-        return '包含';
+        return 'Include';
       case 'mihon_filter_exclude':
-        return '排除';
+        return 'Exclude';
       case 'mihon_filter_ascending':
-        return '升序';
+        return 'Ascending';
       case 'mihon_filter_descending':
-        return '降序';
+        return 'Descending';
       case 'mihon_add_to_bookshelf':
         return 'Add to manga shelf';
       case 'mihon_in_bookshelf':
