@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 47022 (2766 per locale)
+/// Strings: 47192 (2776 per locale)
 ///
-/// Built on 2026-07-29 at 08:08 UTC
+/// Built on 2026-07-31 at 04:34 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3718,6 +3718,19 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get selection_web_search => 'Search the web';
   String get selection_web_search_unavailable => 'No app can search the web.';
   String get selection_share_failed => 'Could not open the share sheet.';
+  String get sync_progress_preparing => 'Preparing sync';
+  String get sync_progress_collections => 'Syncing collections';
+  String get sync_progress_book => 'Syncing book';
+  String sync_progress_book_titled({required Object title}) =>
+      'Syncing ${title}';
+  String sync_last_completed({required Object count}) =>
+      'Last sync: done (${count} channels)';
+  String get sync_last_no_channels =>
+      'Last sync: nothing synced - no connected sync channel';
+  String get sync_last_nothing => 'Last sync: nothing to sync';
+  String get sync_last_auto_disabled => 'Last sync: skipped - auto sync is off';
+  String get sync_last_cooled_down => 'Last sync: skipped - synced recently';
+  String get sync_last_failed => 'Last sync: failed';
 }
 
 // Path: <root>
@@ -10050,6 +10063,29 @@ class _StringsAr extends _StringsEn {
   String get selection_web_search_unavailable => 'No app can search the web.';
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
+  @override
+  String get sync_progress_preparing => 'Preparing sync';
+  @override
+  String get sync_progress_collections => 'Syncing collections';
+  @override
+  String get sync_progress_book => 'Syncing book';
+  @override
+  String sync_progress_book_titled({required Object title}) =>
+      'Syncing ${title}';
+  @override
+  String sync_last_completed({required Object count}) =>
+      'Last sync: done (${count} channels)';
+  @override
+  String get sync_last_no_channels =>
+      'Last sync: nothing synced - no connected sync channel';
+  @override
+  String get sync_last_nothing => 'Last sync: nothing to sync';
+  @override
+  String get sync_last_auto_disabled => 'Last sync: skipped - auto sync is off';
+  @override
+  String get sync_last_cooled_down => 'Last sync: skipped - synced recently';
+  @override
+  String get sync_last_failed => 'Last sync: failed';
 }
 
 // Path: <root>
@@ -16450,6 +16486,29 @@ class _StringsDe extends _StringsEn {
   String get selection_web_search_unavailable => 'No app can search the web.';
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
+  @override
+  String get sync_progress_preparing => 'Preparing sync';
+  @override
+  String get sync_progress_collections => 'Syncing collections';
+  @override
+  String get sync_progress_book => 'Syncing book';
+  @override
+  String sync_progress_book_titled({required Object title}) =>
+      'Syncing ${title}';
+  @override
+  String sync_last_completed({required Object count}) =>
+      'Last sync: done (${count} channels)';
+  @override
+  String get sync_last_no_channels =>
+      'Last sync: nothing synced - no connected sync channel';
+  @override
+  String get sync_last_nothing => 'Last sync: nothing to sync';
+  @override
+  String get sync_last_auto_disabled => 'Last sync: skipped - auto sync is off';
+  @override
+  String get sync_last_cooled_down => 'Last sync: skipped - synced recently';
+  @override
+  String get sync_last_failed => 'Last sync: failed';
 }
 
 // Path: <root>
@@ -22866,6 +22925,29 @@ class _StringsEs extends _StringsEn {
   String get selection_web_search_unavailable => 'No app can search the web.';
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
+  @override
+  String get sync_progress_preparing => 'Preparing sync';
+  @override
+  String get sync_progress_collections => 'Syncing collections';
+  @override
+  String get sync_progress_book => 'Syncing book';
+  @override
+  String sync_progress_book_titled({required Object title}) =>
+      'Syncing ${title}';
+  @override
+  String sync_last_completed({required Object count}) =>
+      'Last sync: done (${count} channels)';
+  @override
+  String get sync_last_no_channels =>
+      'Last sync: nothing synced - no connected sync channel';
+  @override
+  String get sync_last_nothing => 'Last sync: nothing to sync';
+  @override
+  String get sync_last_auto_disabled => 'Last sync: skipped - auto sync is off';
+  @override
+  String get sync_last_cooled_down => 'Last sync: skipped - synced recently';
+  @override
+  String get sync_last_failed => 'Last sync: failed';
 }
 
 // Path: <root>
@@ -29293,6 +29375,29 @@ class _StringsFr extends _StringsEn {
   String get selection_web_search_unavailable => 'No app can search the web.';
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
+  @override
+  String get sync_progress_preparing => 'Preparing sync';
+  @override
+  String get sync_progress_collections => 'Syncing collections';
+  @override
+  String get sync_progress_book => 'Syncing book';
+  @override
+  String sync_progress_book_titled({required Object title}) =>
+      'Syncing ${title}';
+  @override
+  String sync_last_completed({required Object count}) =>
+      'Last sync: done (${count} channels)';
+  @override
+  String get sync_last_no_channels =>
+      'Last sync: nothing synced - no connected sync channel';
+  @override
+  String get sync_last_nothing => 'Last sync: nothing to sync';
+  @override
+  String get sync_last_auto_disabled => 'Last sync: skipped - auto sync is off';
+  @override
+  String get sync_last_cooled_down => 'Last sync: skipped - synced recently';
+  @override
+  String get sync_last_failed => 'Last sync: failed';
 }
 
 // Path: <root>
@@ -35649,6 +35754,29 @@ class _StringsId extends _StringsEn {
   String get selection_web_search_unavailable => 'No app can search the web.';
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
+  @override
+  String get sync_progress_preparing => 'Preparing sync';
+  @override
+  String get sync_progress_collections => 'Syncing collections';
+  @override
+  String get sync_progress_book => 'Syncing book';
+  @override
+  String sync_progress_book_titled({required Object title}) =>
+      'Syncing ${title}';
+  @override
+  String sync_last_completed({required Object count}) =>
+      'Last sync: done (${count} channels)';
+  @override
+  String get sync_last_no_channels =>
+      'Last sync: nothing synced - no connected sync channel';
+  @override
+  String get sync_last_nothing => 'Last sync: nothing to sync';
+  @override
+  String get sync_last_auto_disabled => 'Last sync: skipped - auto sync is off';
+  @override
+  String get sync_last_cooled_down => 'Last sync: skipped - synced recently';
+  @override
+  String get sync_last_failed => 'Last sync: failed';
 }
 
 // Path: <root>
@@ -42051,6 +42179,29 @@ class _StringsIt extends _StringsEn {
   String get selection_web_search_unavailable => 'No app can search the web.';
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
+  @override
+  String get sync_progress_preparing => 'Preparing sync';
+  @override
+  String get sync_progress_collections => 'Syncing collections';
+  @override
+  String get sync_progress_book => 'Syncing book';
+  @override
+  String sync_progress_book_titled({required Object title}) =>
+      'Syncing ${title}';
+  @override
+  String sync_last_completed({required Object count}) =>
+      'Last sync: done (${count} channels)';
+  @override
+  String get sync_last_no_channels =>
+      'Last sync: nothing synced - no connected sync channel';
+  @override
+  String get sync_last_nothing => 'Last sync: nothing to sync';
+  @override
+  String get sync_last_auto_disabled => 'Last sync: skipped - auto sync is off';
+  @override
+  String get sync_last_cooled_down => 'Last sync: skipped - synced recently';
+  @override
+  String get sync_last_failed => 'Last sync: failed';
 }
 
 // Path: <root>
@@ -48270,6 +48421,29 @@ class _StringsJa extends _StringsEn {
   String get selection_web_search_unavailable => 'No app can search the web.';
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
+  @override
+  String get sync_progress_preparing => 'Preparing sync';
+  @override
+  String get sync_progress_collections => 'Syncing collections';
+  @override
+  String get sync_progress_book => 'Syncing book';
+  @override
+  String sync_progress_book_titled({required Object title}) =>
+      'Syncing ${title}';
+  @override
+  String sync_last_completed({required Object count}) =>
+      'Last sync: done (${count} channels)';
+  @override
+  String get sync_last_no_channels =>
+      'Last sync: nothing synced - no connected sync channel';
+  @override
+  String get sync_last_nothing => 'Last sync: nothing to sync';
+  @override
+  String get sync_last_auto_disabled => 'Last sync: skipped - auto sync is off';
+  @override
+  String get sync_last_cooled_down => 'Last sync: skipped - synced recently';
+  @override
+  String get sync_last_failed => 'Last sync: failed';
 }
 
 // Path: <root>
@@ -54491,6 +54665,29 @@ class _StringsKo extends _StringsEn {
   String get selection_web_search_unavailable => 'No app can search the web.';
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
+  @override
+  String get sync_progress_preparing => 'Preparing sync';
+  @override
+  String get sync_progress_collections => 'Syncing collections';
+  @override
+  String get sync_progress_book => 'Syncing book';
+  @override
+  String sync_progress_book_titled({required Object title}) =>
+      'Syncing ${title}';
+  @override
+  String sync_last_completed({required Object count}) =>
+      'Last sync: done (${count} channels)';
+  @override
+  String get sync_last_no_channels =>
+      'Last sync: nothing synced - no connected sync channel';
+  @override
+  String get sync_last_nothing => 'Last sync: nothing to sync';
+  @override
+  String get sync_last_auto_disabled => 'Last sync: skipped - auto sync is off';
+  @override
+  String get sync_last_cooled_down => 'Last sync: skipped - synced recently';
+  @override
+  String get sync_last_failed => 'Last sync: failed';
 }
 
 // Path: <root>
@@ -60873,6 +61070,29 @@ class _StringsNl extends _StringsEn {
   String get selection_web_search_unavailable => 'No app can search the web.';
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
+  @override
+  String get sync_progress_preparing => 'Preparing sync';
+  @override
+  String get sync_progress_collections => 'Syncing collections';
+  @override
+  String get sync_progress_book => 'Syncing book';
+  @override
+  String sync_progress_book_titled({required Object title}) =>
+      'Syncing ${title}';
+  @override
+  String sync_last_completed({required Object count}) =>
+      'Last sync: done (${count} channels)';
+  @override
+  String get sync_last_no_channels =>
+      'Last sync: nothing synced - no connected sync channel';
+  @override
+  String get sync_last_nothing => 'Last sync: nothing to sync';
+  @override
+  String get sync_last_auto_disabled => 'Last sync: skipped - auto sync is off';
+  @override
+  String get sync_last_cooled_down => 'Last sync: skipped - synced recently';
+  @override
+  String get sync_last_failed => 'Last sync: failed';
 }
 
 // Path: <root>
@@ -67268,6 +67488,29 @@ class _StringsPtBr extends _StringsEn {
   String get selection_web_search_unavailable => 'No app can search the web.';
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
+  @override
+  String get sync_progress_preparing => 'Preparing sync';
+  @override
+  String get sync_progress_collections => 'Syncing collections';
+  @override
+  String get sync_progress_book => 'Syncing book';
+  @override
+  String sync_progress_book_titled({required Object title}) =>
+      'Syncing ${title}';
+  @override
+  String sync_last_completed({required Object count}) =>
+      'Last sync: done (${count} channels)';
+  @override
+  String get sync_last_no_channels =>
+      'Last sync: nothing synced - no connected sync channel';
+  @override
+  String get sync_last_nothing => 'Last sync: nothing to sync';
+  @override
+  String get sync_last_auto_disabled => 'Last sync: skipped - auto sync is off';
+  @override
+  String get sync_last_cooled_down => 'Last sync: skipped - synced recently';
+  @override
+  String get sync_last_failed => 'Last sync: failed';
 }
 
 // Path: <root>
@@ -73647,6 +73890,29 @@ class _StringsRu extends _StringsEn {
   String get selection_web_search_unavailable => 'No app can search the web.';
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
+  @override
+  String get sync_progress_preparing => 'Preparing sync';
+  @override
+  String get sync_progress_collections => 'Syncing collections';
+  @override
+  String get sync_progress_book => 'Syncing book';
+  @override
+  String sync_progress_book_titled({required Object title}) =>
+      'Syncing ${title}';
+  @override
+  String sync_last_completed({required Object count}) =>
+      'Last sync: done (${count} channels)';
+  @override
+  String get sync_last_no_channels =>
+      'Last sync: nothing synced - no connected sync channel';
+  @override
+  String get sync_last_nothing => 'Last sync: nothing to sync';
+  @override
+  String get sync_last_auto_disabled => 'Last sync: skipped - auto sync is off';
+  @override
+  String get sync_last_cooled_down => 'Last sync: skipped - synced recently';
+  @override
+  String get sync_last_failed => 'Last sync: failed';
 }
 
 // Path: <root>
@@ -79974,6 +80240,29 @@ class _StringsTh extends _StringsEn {
   String get selection_web_search_unavailable => 'No app can search the web.';
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
+  @override
+  String get sync_progress_preparing => 'Preparing sync';
+  @override
+  String get sync_progress_collections => 'Syncing collections';
+  @override
+  String get sync_progress_book => 'Syncing book';
+  @override
+  String sync_progress_book_titled({required Object title}) =>
+      'Syncing ${title}';
+  @override
+  String sync_last_completed({required Object count}) =>
+      'Last sync: done (${count} channels)';
+  @override
+  String get sync_last_no_channels =>
+      'Last sync: nothing synced - no connected sync channel';
+  @override
+  String get sync_last_nothing => 'Last sync: nothing to sync';
+  @override
+  String get sync_last_auto_disabled => 'Last sync: skipped - auto sync is off';
+  @override
+  String get sync_last_cooled_down => 'Last sync: skipped - synced recently';
+  @override
+  String get sync_last_failed => 'Last sync: failed';
 }
 
 // Path: <root>
@@ -86333,6 +86622,29 @@ class _StringsTr extends _StringsEn {
   String get selection_web_search_unavailable => 'No app can search the web.';
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
+  @override
+  String get sync_progress_preparing => 'Preparing sync';
+  @override
+  String get sync_progress_collections => 'Syncing collections';
+  @override
+  String get sync_progress_book => 'Syncing book';
+  @override
+  String sync_progress_book_titled({required Object title}) =>
+      'Syncing ${title}';
+  @override
+  String sync_last_completed({required Object count}) =>
+      'Last sync: done (${count} channels)';
+  @override
+  String get sync_last_no_channels =>
+      'Last sync: nothing synced - no connected sync channel';
+  @override
+  String get sync_last_nothing => 'Last sync: nothing to sync';
+  @override
+  String get sync_last_auto_disabled => 'Last sync: skipped - auto sync is off';
+  @override
+  String get sync_last_cooled_down => 'Last sync: skipped - synced recently';
+  @override
+  String get sync_last_failed => 'Last sync: failed';
 }
 
 // Path: <root>
@@ -92677,6 +92989,29 @@ class _StringsVi extends _StringsEn {
   String get selection_web_search_unavailable => 'No app can search the web.';
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
+  @override
+  String get sync_progress_preparing => 'Preparing sync';
+  @override
+  String get sync_progress_collections => 'Syncing collections';
+  @override
+  String get sync_progress_book => 'Syncing book';
+  @override
+  String sync_progress_book_titled({required Object title}) =>
+      'Syncing ${title}';
+  @override
+  String sync_last_completed({required Object count}) =>
+      'Last sync: done (${count} channels)';
+  @override
+  String get sync_last_no_channels =>
+      'Last sync: nothing synced - no connected sync channel';
+  @override
+  String get sync_last_nothing => 'Last sync: nothing to sync';
+  @override
+  String get sync_last_auto_disabled => 'Last sync: skipped - auto sync is off';
+  @override
+  String get sync_last_cooled_down => 'Last sync: skipped - synced recently';
+  @override
+  String get sync_last_failed => 'Last sync: failed';
 }
 
 // Path: <root>
@@ -98572,6 +98907,27 @@ class _StringsZhCn extends _StringsEn {
   String get selection_web_search_unavailable => '没有可用的网页搜索应用。';
   @override
   String get selection_share_failed => '无法打开分享面板。';
+  @override
+  String get sync_progress_preparing => '正在准备同步';
+  @override
+  String get sync_progress_collections => '同步合集';
+  @override
+  String get sync_progress_book => '同步书籍';
+  @override
+  String sync_progress_book_titled({required Object title}) => '同步 ${title}';
+  @override
+  String sync_last_completed({required Object count}) =>
+      '上次同步：已完成（${count} 条通道）';
+  @override
+  String get sync_last_no_channels => '上次同步：未同步——没有已连接的同步通道';
+  @override
+  String get sync_last_nothing => '上次同步：没有可同步的内容';
+  @override
+  String get sync_last_auto_disabled => '上次同步：已跳过——自动同步已关闭';
+  @override
+  String get sync_last_cooled_down => '上次同步：已跳过——刚同步过';
+  @override
+  String get sync_last_failed => '上次同步：失败';
 }
 
 // Path: <root>
@@ -104712,6 +105068,29 @@ class _StringsZhHk extends _StringsEn {
   String get selection_web_search_unavailable => 'No app can search the web.';
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
+  @override
+  String get sync_progress_preparing => 'Preparing sync';
+  @override
+  String get sync_progress_collections => 'Syncing collections';
+  @override
+  String get sync_progress_book => 'Syncing book';
+  @override
+  String sync_progress_book_titled({required Object title}) =>
+      'Syncing ${title}';
+  @override
+  String sync_last_completed({required Object count}) =>
+      'Last sync: done (${count} channels)';
+  @override
+  String get sync_last_no_channels =>
+      'Last sync: nothing synced - no connected sync channel';
+  @override
+  String get sync_last_nothing => 'Last sync: nothing to sync';
+  @override
+  String get sync_last_auto_disabled => 'Last sync: skipped - auto sync is off';
+  @override
+  String get sync_last_cooled_down => 'Last sync: skipped - synced recently';
+  @override
+  String get sync_last_failed => 'Last sync: failed';
 }
 
 /// Flat map(s) containing all translations.
@@ -110379,6 +110758,27 @@ extension on _StringsEn {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'sync_progress_preparing':
+        return 'Preparing sync';
+      case 'sync_progress_collections':
+        return 'Syncing collections';
+      case 'sync_progress_book':
+        return 'Syncing book';
+      case 'sync_progress_book_titled':
+        return ({required Object title}) => 'Syncing ${title}';
+      case 'sync_last_completed':
+        return ({required Object count}) =>
+            'Last sync: done (${count} channels)';
+      case 'sync_last_no_channels':
+        return 'Last sync: nothing synced - no connected sync channel';
+      case 'sync_last_nothing':
+        return 'Last sync: nothing to sync';
+      case 'sync_last_auto_disabled':
+        return 'Last sync: skipped - auto sync is off';
+      case 'sync_last_cooled_down':
+        return 'Last sync: skipped - synced recently';
+      case 'sync_last_failed':
+        return 'Last sync: failed';
       default:
         return null;
     }
@@ -116044,6 +116444,27 @@ extension on _StringsAr {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'sync_progress_preparing':
+        return 'Preparing sync';
+      case 'sync_progress_collections':
+        return 'Syncing collections';
+      case 'sync_progress_book':
+        return 'Syncing book';
+      case 'sync_progress_book_titled':
+        return ({required Object title}) => 'Syncing ${title}';
+      case 'sync_last_completed':
+        return ({required Object count}) =>
+            'Last sync: done (${count} channels)';
+      case 'sync_last_no_channels':
+        return 'Last sync: nothing synced - no connected sync channel';
+      case 'sync_last_nothing':
+        return 'Last sync: nothing to sync';
+      case 'sync_last_auto_disabled':
+        return 'Last sync: skipped - auto sync is off';
+      case 'sync_last_cooled_down':
+        return 'Last sync: skipped - synced recently';
+      case 'sync_last_failed':
+        return 'Last sync: failed';
       default:
         return null;
     }
@@ -121730,6 +122151,27 @@ extension on _StringsDe {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'sync_progress_preparing':
+        return 'Preparing sync';
+      case 'sync_progress_collections':
+        return 'Syncing collections';
+      case 'sync_progress_book':
+        return 'Syncing book';
+      case 'sync_progress_book_titled':
+        return ({required Object title}) => 'Syncing ${title}';
+      case 'sync_last_completed':
+        return ({required Object count}) =>
+            'Last sync: done (${count} channels)';
+      case 'sync_last_no_channels':
+        return 'Last sync: nothing synced - no connected sync channel';
+      case 'sync_last_nothing':
+        return 'Last sync: nothing to sync';
+      case 'sync_last_auto_disabled':
+        return 'Last sync: skipped - auto sync is off';
+      case 'sync_last_cooled_down':
+        return 'Last sync: skipped - synced recently';
+      case 'sync_last_failed':
+        return 'Last sync: failed';
       default:
         return null;
     }
@@ -127415,6 +127857,27 @@ extension on _StringsEs {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'sync_progress_preparing':
+        return 'Preparing sync';
+      case 'sync_progress_collections':
+        return 'Syncing collections';
+      case 'sync_progress_book':
+        return 'Syncing book';
+      case 'sync_progress_book_titled':
+        return ({required Object title}) => 'Syncing ${title}';
+      case 'sync_last_completed':
+        return ({required Object count}) =>
+            'Last sync: done (${count} channels)';
+      case 'sync_last_no_channels':
+        return 'Last sync: nothing synced - no connected sync channel';
+      case 'sync_last_nothing':
+        return 'Last sync: nothing to sync';
+      case 'sync_last_auto_disabled':
+        return 'Last sync: skipped - auto sync is off';
+      case 'sync_last_cooled_down':
+        return 'Last sync: skipped - synced recently';
+      case 'sync_last_failed':
+        return 'Last sync: failed';
       default:
         return null;
     }
@@ -133106,6 +133569,27 @@ extension on _StringsFr {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'sync_progress_preparing':
+        return 'Preparing sync';
+      case 'sync_progress_collections':
+        return 'Syncing collections';
+      case 'sync_progress_book':
+        return 'Syncing book';
+      case 'sync_progress_book_titled':
+        return ({required Object title}) => 'Syncing ${title}';
+      case 'sync_last_completed':
+        return ({required Object count}) =>
+            'Last sync: done (${count} channels)';
+      case 'sync_last_no_channels':
+        return 'Last sync: nothing synced - no connected sync channel';
+      case 'sync_last_nothing':
+        return 'Last sync: nothing to sync';
+      case 'sync_last_auto_disabled':
+        return 'Last sync: skipped - auto sync is off';
+      case 'sync_last_cooled_down':
+        return 'Last sync: skipped - synced recently';
+      case 'sync_last_failed':
+        return 'Last sync: failed';
       default:
         return null;
     }
@@ -138779,6 +139263,27 @@ extension on _StringsId {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'sync_progress_preparing':
+        return 'Preparing sync';
+      case 'sync_progress_collections':
+        return 'Syncing collections';
+      case 'sync_progress_book':
+        return 'Syncing book';
+      case 'sync_progress_book_titled':
+        return ({required Object title}) => 'Syncing ${title}';
+      case 'sync_last_completed':
+        return ({required Object count}) =>
+            'Last sync: done (${count} channels)';
+      case 'sync_last_no_channels':
+        return 'Last sync: nothing synced - no connected sync channel';
+      case 'sync_last_nothing':
+        return 'Last sync: nothing to sync';
+      case 'sync_last_auto_disabled':
+        return 'Last sync: skipped - auto sync is off';
+      case 'sync_last_cooled_down':
+        return 'Last sync: skipped - synced recently';
+      case 'sync_last_failed':
+        return 'Last sync: failed';
       default:
         return null;
     }
@@ -144467,6 +144972,27 @@ extension on _StringsIt {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'sync_progress_preparing':
+        return 'Preparing sync';
+      case 'sync_progress_collections':
+        return 'Syncing collections';
+      case 'sync_progress_book':
+        return 'Syncing book';
+      case 'sync_progress_book_titled':
+        return ({required Object title}) => 'Syncing ${title}';
+      case 'sync_last_completed':
+        return ({required Object count}) =>
+            'Last sync: done (${count} channels)';
+      case 'sync_last_no_channels':
+        return 'Last sync: nothing synced - no connected sync channel';
+      case 'sync_last_nothing':
+        return 'Last sync: nothing to sync';
+      case 'sync_last_auto_disabled':
+        return 'Last sync: skipped - auto sync is off';
+      case 'sync_last_cooled_down':
+        return 'Last sync: skipped - synced recently';
+      case 'sync_last_failed':
+        return 'Last sync: failed';
       default:
         return null;
     }
@@ -150117,6 +150643,27 @@ extension on _StringsJa {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'sync_progress_preparing':
+        return 'Preparing sync';
+      case 'sync_progress_collections':
+        return 'Syncing collections';
+      case 'sync_progress_book':
+        return 'Syncing book';
+      case 'sync_progress_book_titled':
+        return ({required Object title}) => 'Syncing ${title}';
+      case 'sync_last_completed':
+        return ({required Object count}) =>
+            'Last sync: done (${count} channels)';
+      case 'sync_last_no_channels':
+        return 'Last sync: nothing synced - no connected sync channel';
+      case 'sync_last_nothing':
+        return 'Last sync: nothing to sync';
+      case 'sync_last_auto_disabled':
+        return 'Last sync: skipped - auto sync is off';
+      case 'sync_last_cooled_down':
+        return 'Last sync: skipped - synced recently';
+      case 'sync_last_failed':
+        return 'Last sync: failed';
       default:
         return null;
     }
@@ -155771,6 +156318,27 @@ extension on _StringsKo {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'sync_progress_preparing':
+        return 'Preparing sync';
+      case 'sync_progress_collections':
+        return 'Syncing collections';
+      case 'sync_progress_book':
+        return 'Syncing book';
+      case 'sync_progress_book_titled':
+        return ({required Object title}) => 'Syncing ${title}';
+      case 'sync_last_completed':
+        return ({required Object count}) =>
+            'Last sync: done (${count} channels)';
+      case 'sync_last_no_channels':
+        return 'Last sync: nothing synced - no connected sync channel';
+      case 'sync_last_nothing':
+        return 'Last sync: nothing to sync';
+      case 'sync_last_auto_disabled':
+        return 'Last sync: skipped - auto sync is off';
+      case 'sync_last_cooled_down':
+        return 'Last sync: skipped - synced recently';
+      case 'sync_last_failed':
+        return 'Last sync: failed';
       default:
         return null;
     }
@@ -161452,6 +162020,27 @@ extension on _StringsNl {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'sync_progress_preparing':
+        return 'Preparing sync';
+      case 'sync_progress_collections':
+        return 'Syncing collections';
+      case 'sync_progress_book':
+        return 'Syncing book';
+      case 'sync_progress_book_titled':
+        return ({required Object title}) => 'Syncing ${title}';
+      case 'sync_last_completed':
+        return ({required Object count}) =>
+            'Last sync: done (${count} channels)';
+      case 'sync_last_no_channels':
+        return 'Last sync: nothing synced - no connected sync channel';
+      case 'sync_last_nothing':
+        return 'Last sync: nothing to sync';
+      case 'sync_last_auto_disabled':
+        return 'Last sync: skipped - auto sync is off';
+      case 'sync_last_cooled_down':
+        return 'Last sync: skipped - synced recently';
+      case 'sync_last_failed':
+        return 'Last sync: failed';
       default:
         return null;
     }
@@ -167130,6 +167719,27 @@ extension on _StringsPtBr {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'sync_progress_preparing':
+        return 'Preparing sync';
+      case 'sync_progress_collections':
+        return 'Syncing collections';
+      case 'sync_progress_book':
+        return 'Syncing book';
+      case 'sync_progress_book_titled':
+        return ({required Object title}) => 'Syncing ${title}';
+      case 'sync_last_completed':
+        return ({required Object count}) =>
+            'Last sync: done (${count} channels)';
+      case 'sync_last_no_channels':
+        return 'Last sync: nothing synced - no connected sync channel';
+      case 'sync_last_nothing':
+        return 'Last sync: nothing to sync';
+      case 'sync_last_auto_disabled':
+        return 'Last sync: skipped - auto sync is off';
+      case 'sync_last_cooled_down':
+        return 'Last sync: skipped - synced recently';
+      case 'sync_last_failed':
+        return 'Last sync: failed';
       default:
         return null;
     }
@@ -172813,6 +173423,27 @@ extension on _StringsRu {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'sync_progress_preparing':
+        return 'Preparing sync';
+      case 'sync_progress_collections':
+        return 'Syncing collections';
+      case 'sync_progress_book':
+        return 'Syncing book';
+      case 'sync_progress_book_titled':
+        return ({required Object title}) => 'Syncing ${title}';
+      case 'sync_last_completed':
+        return ({required Object count}) =>
+            'Last sync: done (${count} channels)';
+      case 'sync_last_no_channels':
+        return 'Last sync: nothing synced - no connected sync channel';
+      case 'sync_last_nothing':
+        return 'Last sync: nothing to sync';
+      case 'sync_last_auto_disabled':
+        return 'Last sync: skipped - auto sync is off';
+      case 'sync_last_cooled_down':
+        return 'Last sync: skipped - synced recently';
+      case 'sync_last_failed':
+        return 'Last sync: failed';
       default:
         return null;
     }
@@ -178480,6 +179111,27 @@ extension on _StringsTh {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'sync_progress_preparing':
+        return 'Preparing sync';
+      case 'sync_progress_collections':
+        return 'Syncing collections';
+      case 'sync_progress_book':
+        return 'Syncing book';
+      case 'sync_progress_book_titled':
+        return ({required Object title}) => 'Syncing ${title}';
+      case 'sync_last_completed':
+        return ({required Object count}) =>
+            'Last sync: done (${count} channels)';
+      case 'sync_last_no_channels':
+        return 'Last sync: nothing synced - no connected sync channel';
+      case 'sync_last_nothing':
+        return 'Last sync: nothing to sync';
+      case 'sync_last_auto_disabled':
+        return 'Last sync: skipped - auto sync is off';
+      case 'sync_last_cooled_down':
+        return 'Last sync: skipped - synced recently';
+      case 'sync_last_failed':
+        return 'Last sync: failed';
       default:
         return null;
     }
@@ -184156,6 +184808,27 @@ extension on _StringsTr {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'sync_progress_preparing':
+        return 'Preparing sync';
+      case 'sync_progress_collections':
+        return 'Syncing collections';
+      case 'sync_progress_book':
+        return 'Syncing book';
+      case 'sync_progress_book_titled':
+        return ({required Object title}) => 'Syncing ${title}';
+      case 'sync_last_completed':
+        return ({required Object count}) =>
+            'Last sync: done (${count} channels)';
+      case 'sync_last_no_channels':
+        return 'Last sync: nothing synced - no connected sync channel';
+      case 'sync_last_nothing':
+        return 'Last sync: nothing to sync';
+      case 'sync_last_auto_disabled':
+        return 'Last sync: skipped - auto sync is off';
+      case 'sync_last_cooled_down':
+        return 'Last sync: skipped - synced recently';
+      case 'sync_last_failed':
+        return 'Last sync: failed';
       default:
         return null;
     }
@@ -189827,6 +190500,27 @@ extension on _StringsVi {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'sync_progress_preparing':
+        return 'Preparing sync';
+      case 'sync_progress_collections':
+        return 'Syncing collections';
+      case 'sync_progress_book':
+        return 'Syncing book';
+      case 'sync_progress_book_titled':
+        return ({required Object title}) => 'Syncing ${title}';
+      case 'sync_last_completed':
+        return ({required Object count}) =>
+            'Last sync: done (${count} channels)';
+      case 'sync_last_no_channels':
+        return 'Last sync: nothing synced - no connected sync channel';
+      case 'sync_last_nothing':
+        return 'Last sync: nothing to sync';
+      case 'sync_last_auto_disabled':
+        return 'Last sync: skipped - auto sync is off';
+      case 'sync_last_cooled_down':
+        return 'Last sync: skipped - synced recently';
+      case 'sync_last_failed':
+        return 'Last sync: failed';
       default:
         return null;
     }
@@ -195451,6 +196145,26 @@ extension on _StringsZhCn {
         return '没有可用的网页搜索应用。';
       case 'selection_share_failed':
         return '无法打开分享面板。';
+      case 'sync_progress_preparing':
+        return '正在准备同步';
+      case 'sync_progress_collections':
+        return '同步合集';
+      case 'sync_progress_book':
+        return '同步书籍';
+      case 'sync_progress_book_titled':
+        return ({required Object title}) => '同步 ${title}';
+      case 'sync_last_completed':
+        return ({required Object count}) => '上次同步：已完成（${count} 条通道）';
+      case 'sync_last_no_channels':
+        return '上次同步：未同步——没有已连接的同步通道';
+      case 'sync_last_nothing':
+        return '上次同步：没有可同步的内容';
+      case 'sync_last_auto_disabled':
+        return '上次同步：已跳过——自动同步已关闭';
+      case 'sync_last_cooled_down':
+        return '上次同步：已跳过——刚同步过';
+      case 'sync_last_failed':
+        return '上次同步：失败';
       default:
         return null;
     }
@@ -201096,6 +201810,27 @@ extension on _StringsZhHk {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'sync_progress_preparing':
+        return 'Preparing sync';
+      case 'sync_progress_collections':
+        return 'Syncing collections';
+      case 'sync_progress_book':
+        return 'Syncing book';
+      case 'sync_progress_book_titled':
+        return ({required Object title}) => 'Syncing ${title}';
+      case 'sync_last_completed':
+        return ({required Object count}) =>
+            'Last sync: done (${count} channels)';
+      case 'sync_last_no_channels':
+        return 'Last sync: nothing synced - no connected sync channel';
+      case 'sync_last_nothing':
+        return 'Last sync: nothing to sync';
+      case 'sync_last_auto_disabled':
+        return 'Last sync: skipped - auto sync is off';
+      case 'sync_last_cooled_down':
+        return 'Last sync: skipped - synced recently';
+      case 'sync_last_failed':
+        return 'Last sync: failed';
       default:
         return null;
     }
