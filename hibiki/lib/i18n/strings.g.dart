@@ -3,7 +3,7 @@
 /// Locales: 17
 /// Strings: 47294 (2782 per locale)
 ///
-/// Built on 2026-07-31 at 11:26 UTC
+/// Built on 2026-07-31 at 11:35 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -948,7 +948,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get dict_auto_update => 'Update automatically';
   String get dict_auto_update_hint => 'Check for dictionary updates on launch';
   String dict_auto_update_last({required Object time}) =>
-      'Last update: ${time}';
+      'Last successful check: ${time}';
   String get dict_auto_update_never => 'Never';
   String get dict_category_frequency => 'Frequency';
   String get dict_category_grammar => 'Grammar';
@@ -5125,7 +5125,8 @@ class _StringsAr extends _StringsEn {
   String get dict_auto_update_hint =>
       'التحقق من تحديثات القواميس عند بدء التشغيل';
   @override
-  String dict_auto_update_last({required Object time}) => 'آخر تحديث: ${time}';
+  String dict_auto_update_last({required Object time}) =>
+      'آخر تحقق ناجح: ${time}';
   @override
   String get dict_auto_update_never => 'أبدًا';
   @override
@@ -11509,7 +11510,7 @@ class _StringsDe extends _StringsEn {
       'Beim Start nach Wörterbuch-Updates suchen';
   @override
   String dict_auto_update_last({required Object time}) =>
-      'Letzte Aktualisierung: ${time}';
+      'Letzte erfolgreiche Prüfung: ${time}';
   @override
   String get dict_auto_update_never => 'Nie';
   @override
@@ -17949,7 +17950,7 @@ class _StringsEs extends _StringsEn {
       'Buscar actualizaciones de diccionarios al iniciar';
   @override
   String dict_auto_update_last({required Object time}) =>
-      'Última actualización: ${time}';
+      'Última comprobación correcta: ${time}';
   @override
   String get dict_auto_update_never => 'Nunca';
   @override
@@ -24412,7 +24413,7 @@ class _StringsFr extends _StringsEn {
       'Vérifier les mises à jour des dictionnaires au démarrage';
   @override
   String dict_auto_update_last({required Object time}) =>
-      'Dernière mise à jour : ${time}';
+      'Dernière vérification réussie : ${time}';
   @override
   String get dict_auto_update_never => 'Jamais';
   @override
@@ -30860,7 +30861,7 @@ class _StringsId extends _StringsEn {
       'Periksa pembaruan kamus saat aplikasi dibuka';
   @override
   String dict_auto_update_last({required Object time}) =>
-      'Pembaruan terakhir: ${time}';
+      'Pemeriksaan berhasil terakhir: ${time}';
   @override
   String get dict_auto_update_never => 'Tidak pernah';
   @override
@@ -37265,7 +37266,7 @@ class _StringsIt extends _StringsEn {
       'Controlla gli aggiornamenti dei dizionari all’avvio';
   @override
   String dict_auto_update_last({required Object time}) =>
-      'Ultimo aggiornamento: ${time}';
+      'Ultimo controllo riuscito: ${time}';
   @override
   String get dict_auto_update_never => 'Mai';
   @override
@@ -43677,7 +43678,7 @@ class _StringsJa extends _StringsEn {
   @override
   String get dict_auto_update_hint => '起動時に辞書の更新を確認';
   @override
-  String dict_auto_update_last({required Object time}) => '前回の更新: ${time}';
+  String dict_auto_update_last({required Object time}) => '前回の確認成功: ${time}';
   @override
   String get dict_auto_update_never => 'なし';
   @override
@@ -49938,7 +49939,7 @@ class _StringsKo extends _StringsEn {
   @override
   String get dict_auto_update_hint => '실행 시 사전 업데이트 확인';
   @override
-  String dict_auto_update_last({required Object time}) => '마지막 업데이트: ${time}';
+  String dict_auto_update_last({required Object time}) => '마지막 확인 성공: ${time}';
   @override
   String get dict_auto_update_never => '없음';
   @override
@@ -56225,7 +56226,7 @@ class _StringsNl extends _StringsEn {
       'Bij het opstarten controleren op woordenboekupdates';
   @override
   String dict_auto_update_last({required Object time}) =>
-      'Laatste update: ${time}';
+      'Laatste geslaagde controle: ${time}';
   @override
   String get dict_auto_update_never => 'Nooit';
   @override
@@ -62654,7 +62655,7 @@ class _StringsPtBr extends _StringsEn {
       'Verificar atualizações de dicionários ao iniciar';
   @override
   String dict_auto_update_last({required Object time}) =>
-      'Última atualização: ${time}';
+      'Última verificação bem-sucedida: ${time}';
   @override
   String get dict_auto_update_never => 'Nunca';
   @override
@@ -69083,7 +69084,7 @@ class _StringsRu extends _StringsEn {
       'Проверять обновления словарей при запуске';
   @override
   String dict_auto_update_last({required Object time}) =>
-      'Последнее обновление: ${time}';
+      'Последняя успешная проверка: ${time}';
   @override
   String get dict_auto_update_never => 'Никогда';
   @override
@@ -75488,7 +75489,7 @@ class _StringsTh extends _StringsEn {
   String get dict_auto_update_hint => 'ตรวจหาการอัปเดตพจนานุกรมเมื่อเปิดแอป';
   @override
   String dict_auto_update_last({required Object time}) =>
-      'อัปเดตล่าสุด: ${time}';
+      'ตรวจสอบสำเร็จล่าสุด: ${time}';
   @override
   String get dict_auto_update_never => 'ไม่เคย';
   @override
@@ -81868,7 +81869,7 @@ class _StringsTr extends _StringsEn {
       'Başlangıçta sözlük güncellemelerini denetle';
   @override
   String dict_auto_update_last({required Object time}) =>
-      'Son güncelleme: ${time}';
+      'Son başarılı denetim: ${time}';
   @override
   String get dict_auto_update_never => 'Hiçbir zaman';
   @override
@@ -88261,7 +88262,7 @@ class _StringsVi extends _StringsEn {
   String get dict_auto_update_hint => 'Kiểm tra cập nhật từ điển khi khởi động';
   @override
   String dict_auto_update_last({required Object time}) =>
-      'Cập nhật lần cuối: ${time}';
+      'Lần kiểm tra thành công gần nhất: ${time}';
   @override
   String get dict_auto_update_never => 'Chưa bao giờ';
   @override
@@ -94555,7 +94556,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get dict_auto_update_hint => '启动时检查词典更新';
   @override
-  String dict_auto_update_last({required Object time}) => '上次更新：${time}';
+  String dict_auto_update_last({required Object time}) => '上次成功检查：${time}';
   @override
   String get dict_auto_update_never => '从未';
   @override
@@ -100533,7 +100534,7 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get dict_auto_update_hint => '啟動時檢查詞典更新';
   @override
-  String dict_auto_update_last({required Object time}) => '上次更新：${time}';
+  String dict_auto_update_last({required Object time}) => '上次成功檢查：${time}';
   @override
   String get dict_auto_update_never => '從未';
   @override
@@ -106596,7 +106597,7 @@ extension on _StringsEn {
       case 'dict_auto_update_hint':
         return 'Check for dictionary updates on launch';
       case 'dict_auto_update_last':
-        return ({required Object time}) => 'Last update: ${time}';
+        return ({required Object time}) => 'Last successful check: ${time}';
       case 'dict_auto_update_never':
         return 'Never';
       case 'dict_category_frequency':
@@ -112298,7 +112299,7 @@ extension on _StringsAr {
       case 'dict_auto_update_hint':
         return 'التحقق من تحديثات القواميس عند بدء التشغيل';
       case 'dict_auto_update_last':
-        return ({required Object time}) => 'آخر تحديث: ${time}';
+        return ({required Object time}) => 'آخر تحقق ناجح: ${time}';
       case 'dict_auto_update_never':
         return 'أبدًا';
       case 'dict_category_frequency':
@@ -117999,7 +118000,8 @@ extension on _StringsDe {
       case 'dict_auto_update_hint':
         return 'Beim Start nach Wörterbuch-Updates suchen';
       case 'dict_auto_update_last':
-        return ({required Object time}) => 'Letzte Aktualisierung: ${time}';
+        return ({required Object time}) =>
+            'Letzte erfolgreiche Prüfung: ${time}';
       case 'dict_auto_update_never':
         return 'Nie';
       case 'dict_category_frequency':
@@ -123720,7 +123722,8 @@ extension on _StringsEs {
       case 'dict_auto_update_hint':
         return 'Buscar actualizaciones de diccionarios al iniciar';
       case 'dict_auto_update_last':
-        return ({required Object time}) => 'Última actualización: ${time}';
+        return ({required Object time}) =>
+            'Última comprobación correcta: ${time}';
       case 'dict_auto_update_never':
         return 'Nunca';
       case 'dict_category_frequency':
@@ -129440,7 +129443,8 @@ extension on _StringsFr {
       case 'dict_auto_update_hint':
         return 'Vérifier les mises à jour des dictionnaires au démarrage';
       case 'dict_auto_update_last':
-        return ({required Object time}) => 'Dernière mise à jour : ${time}';
+        return ({required Object time}) =>
+            'Dernière vérification réussie : ${time}';
       case 'dict_auto_update_never':
         return 'Jamais';
       case 'dict_category_frequency':
@@ -135163,7 +135167,8 @@ extension on _StringsId {
       case 'dict_auto_update_hint':
         return 'Periksa pembaruan kamus saat aplikasi dibuka';
       case 'dict_auto_update_last':
-        return ({required Object time}) => 'Pembaruan terakhir: ${time}';
+        return ({required Object time}) =>
+            'Pemeriksaan berhasil terakhir: ${time}';
       case 'dict_auto_update_never':
         return 'Tidak pernah';
       case 'dict_category_frequency':
@@ -140870,7 +140875,7 @@ extension on _StringsIt {
       case 'dict_auto_update_hint':
         return 'Controlla gli aggiornamenti dei dizionari all’avvio';
       case 'dict_auto_update_last':
-        return ({required Object time}) => 'Ultimo aggiornamento: ${time}';
+        return ({required Object time}) => 'Ultimo controllo riuscito: ${time}';
       case 'dict_auto_update_never':
         return 'Mai';
       case 'dict_category_frequency':
@@ -146583,7 +146588,7 @@ extension on _StringsJa {
       case 'dict_auto_update_hint':
         return '起動時に辞書の更新を確認';
       case 'dict_auto_update_last':
-        return ({required Object time}) => '前回の更新: ${time}';
+        return ({required Object time}) => '前回の確認成功: ${time}';
       case 'dict_auto_update_never':
         return 'なし';
       case 'dict_category_frequency':
@@ -152268,7 +152273,7 @@ extension on _StringsKo {
       case 'dict_auto_update_hint':
         return '실행 시 사전 업데이트 확인';
       case 'dict_auto_update_last':
-        return ({required Object time}) => '마지막 업데이트: ${time}';
+        return ({required Object time}) => '마지막 확인 성공: ${time}';
       case 'dict_auto_update_never':
         return '없음';
       case 'dict_category_frequency':
@@ -157964,7 +157969,8 @@ extension on _StringsNl {
       case 'dict_auto_update_hint':
         return 'Bij het opstarten controleren op woordenboekupdates';
       case 'dict_auto_update_last':
-        return ({required Object time}) => 'Laatste update: ${time}';
+        return ({required Object time}) =>
+            'Laatste geslaagde controle: ${time}';
       case 'dict_auto_update_never':
         return 'Nooit';
       case 'dict_category_frequency':
@@ -163679,7 +163685,8 @@ extension on _StringsPtBr {
       case 'dict_auto_update_hint':
         return 'Verificar atualizações de dicionários ao iniciar';
       case 'dict_auto_update_last':
-        return ({required Object time}) => 'Última atualização: ${time}';
+        return ({required Object time}) =>
+            'Última verificação bem-sucedida: ${time}';
       case 'dict_auto_update_never':
         return 'Nunca';
       case 'dict_category_frequency':
@@ -169393,7 +169400,8 @@ extension on _StringsRu {
       case 'dict_auto_update_hint':
         return 'Проверять обновления словарей при запуске';
       case 'dict_auto_update_last':
-        return ({required Object time}) => 'Последнее обновление: ${time}';
+        return ({required Object time}) =>
+            'Последняя успешная проверка: ${time}';
       case 'dict_auto_update_never':
         return 'Никогда';
       case 'dict_category_frequency':
@@ -175104,7 +175112,7 @@ extension on _StringsTh {
       case 'dict_auto_update_hint':
         return 'ตรวจหาการอัปเดตพจนานุกรมเมื่อเปิดแอป';
       case 'dict_auto_update_last':
-        return ({required Object time}) => 'อัปเดตล่าสุด: ${time}';
+        return ({required Object time}) => 'ตรวจสอบสำเร็จล่าสุด: ${time}';
       case 'dict_auto_update_never':
         return 'ไม่เคย';
       case 'dict_category_frequency':
@@ -180810,7 +180818,7 @@ extension on _StringsTr {
       case 'dict_auto_update_hint':
         return 'Başlangıçta sözlük güncellemelerini denetle';
       case 'dict_auto_update_last':
-        return ({required Object time}) => 'Son güncelleme: ${time}';
+        return ({required Object time}) => 'Son başarılı denetim: ${time}';
       case 'dict_auto_update_never':
         return 'Hiçbir zaman';
       case 'dict_category_frequency':
@@ -186517,7 +186525,8 @@ extension on _StringsVi {
       case 'dict_auto_update_hint':
         return 'Kiểm tra cập nhật từ điển khi khởi động';
       case 'dict_auto_update_last':
-        return ({required Object time}) => 'Cập nhật lần cuối: ${time}';
+        return ({required Object time}) =>
+            'Lần kiểm tra thành công gần nhất: ${time}';
       case 'dict_auto_update_never':
         return 'Chưa bao giờ';
       case 'dict_category_frequency':
@@ -192209,7 +192218,7 @@ extension on _StringsZhCn {
       case 'dict_auto_update_hint':
         return '启动时检查词典更新';
       case 'dict_auto_update_last':
-        return ({required Object time}) => '上次更新：${time}';
+        return ({required Object time}) => '上次成功检查：${time}';
       case 'dict_auto_update_never':
         return '从未';
       case 'dict_category_frequency':
@@ -197871,7 +197880,7 @@ extension on _StringsZhHk {
       case 'dict_auto_update_hint':
         return '啟動時檢查詞典更新';
       case 'dict_auto_update_last':
-        return ({required Object time}) => '上次更新：${time}';
+        return ({required Object time}) => '上次成功檢查：${time}';
       case 'dict_auto_update_never':
         return '從未';
       case 'dict_category_frequency':
