@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 48025 (2825 per locale)
+/// Strings: 48042 (2826 per locale)
 ///
-/// Built on 2026-07-31 at 14:16 UTC
+/// Built on 2026-07-31 at 14:18 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3718,6 +3718,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get selection_web_search => 'Search the web';
   String get selection_web_search_unavailable => 'No app can search the web.';
   String get selection_share_failed => 'Could not open the share sheet.';
+  String get video_setting_subtitle_position_secondary =>
+      'Secondary subtitle position';
   String get dict_download_learning_language => 'Learning language';
   String get dict_category_bilingual => 'Bilingual';
   String get dict_category_monolingual => 'Monolingual';
@@ -10123,6 +10125,9 @@ class _StringsAr extends _StringsEn {
   String get selection_web_search_unavailable => 'No app can search the web.';
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
+  @override
+  String get video_setting_subtitle_position_secondary =>
+      'Secondary subtitle position';
   @override
   String get dict_download_learning_language => 'Learning language';
   @override
@@ -16654,6 +16659,9 @@ class _StringsDe extends _StringsEn {
   String get selection_web_search_unavailable => 'No app can search the web.';
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
+  @override
+  String get video_setting_subtitle_position_secondary =>
+      'Secondary subtitle position';
   @override
   String get dict_download_learning_language => 'Learning language';
   @override
@@ -23201,6 +23209,9 @@ class _StringsEs extends _StringsEn {
   String get selection_web_search_unavailable => 'No app can search the web.';
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
+  @override
+  String get video_setting_subtitle_position_secondary =>
+      'Secondary subtitle position';
   @override
   String get dict_download_learning_language => 'Learning language';
   @override
@@ -29760,6 +29771,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
   @override
+  String get video_setting_subtitle_position_secondary =>
+      'Secondary subtitle position';
+  @override
   String get dict_download_learning_language => 'Learning language';
   @override
   String get dict_category_bilingual => 'Bilingual';
@@ -36246,6 +36260,9 @@ class _StringsId extends _StringsEn {
   String get selection_web_search_unavailable => 'No app can search the web.';
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
+  @override
+  String get video_setting_subtitle_position_secondary =>
+      'Secondary subtitle position';
   @override
   String get dict_download_learning_language => 'Learning language';
   @override
@@ -42780,6 +42797,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
   @override
+  String get video_setting_subtitle_position_secondary =>
+      'Secondary subtitle position';
+  @override
   String get dict_download_learning_language => 'Learning language';
   @override
   String get dict_category_bilingual => 'Bilingual';
@@ -49129,6 +49149,9 @@ class _StringsJa extends _StringsEn {
   String get selection_web_search_unavailable => 'No app can search the web.';
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
+  @override
+  String get video_setting_subtitle_position_secondary =>
+      'Secondary subtitle position';
   @override
   String get dict_download_learning_language => 'Learning language';
   @override
@@ -55481,6 +55504,9 @@ class _StringsKo extends _StringsEn {
   String get selection_web_search_unavailable => 'No app can search the web.';
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
+  @override
+  String get video_setting_subtitle_position_secondary =>
+      'Secondary subtitle position';
   @override
   String get dict_download_learning_language => 'Learning language';
   @override
@@ -61994,6 +62020,9 @@ class _StringsNl extends _StringsEn {
   String get selection_web_search_unavailable => 'No app can search the web.';
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
+  @override
+  String get video_setting_subtitle_position_secondary =>
+      'Secondary subtitle position';
   @override
   String get dict_download_learning_language => 'Learning language';
   @override
@@ -68521,6 +68550,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
   @override
+  String get video_setting_subtitle_position_secondary =>
+      'Secondary subtitle position';
+  @override
   String get dict_download_learning_language => 'Learning language';
   @override
   String get dict_category_bilingual => 'Bilingual';
@@ -75031,6 +75063,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
   @override
+  String get video_setting_subtitle_position_secondary =>
+      'Secondary subtitle position';
+  @override
   String get dict_download_learning_language => 'Learning language';
   @override
   String get dict_category_bilingual => 'Bilingual';
@@ -81488,6 +81523,9 @@ class _StringsTh extends _StringsEn {
   String get selection_web_search_unavailable => 'No app can search the web.';
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
+  @override
+  String get video_setting_subtitle_position_secondary =>
+      'Secondary subtitle position';
   @override
   String get dict_download_learning_language => 'Learning language';
   @override
@@ -87979,6 +88017,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
   @override
+  String get video_setting_subtitle_position_secondary =>
+      'Secondary subtitle position';
+  @override
   String get dict_download_learning_language => 'Learning language';
   @override
   String get dict_category_bilingual => 'Bilingual';
@@ -94454,6 +94495,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
   @override
+  String get video_setting_subtitle_position_secondary =>
+      'Secondary subtitle position';
+  @override
   String get dict_download_learning_language => 'Learning language';
   @override
   String get dict_category_bilingual => 'Bilingual';
@@ -100479,6 +100523,8 @@ class _StringsZhCn extends _StringsEn {
   String get selection_web_search_unavailable => '没有可用的网页搜索应用。';
   @override
   String get selection_share_failed => '无法打开分享面板。';
+  @override
+  String get video_setting_subtitle_position_secondary => '副字幕垂直位置';
   @override
   String get dict_download_learning_language => '学习语言';
   @override
@@ -106747,6 +106793,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
   @override
+  String get video_setting_subtitle_position_secondary =>
+      'Secondary subtitle position';
+  @override
   String get dict_download_learning_language => 'Learning language';
   @override
   String get dict_category_bilingual => 'Bilingual';
@@ -112544,6 +112593,8 @@ extension on _StringsEn {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'video_setting_subtitle_position_secondary':
+        return 'Secondary subtitle position';
       case 'dict_download_learning_language':
         return 'Learning language';
       case 'dict_category_bilingual':
@@ -118329,6 +118380,8 @@ extension on _StringsAr {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'video_setting_subtitle_position_secondary':
+        return 'Secondary subtitle position';
       case 'dict_download_learning_language':
         return 'Learning language';
       case 'dict_category_bilingual':
@@ -124136,6 +124189,8 @@ extension on _StringsDe {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'video_setting_subtitle_position_secondary':
+        return 'Secondary subtitle position';
       case 'dict_download_learning_language':
         return 'Learning language';
       case 'dict_category_bilingual':
@@ -129942,6 +129997,8 @@ extension on _StringsEs {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'video_setting_subtitle_position_secondary':
+        return 'Secondary subtitle position';
       case 'dict_download_learning_language':
         return 'Learning language';
       case 'dict_category_bilingual':
@@ -135754,6 +135811,8 @@ extension on _StringsFr {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'video_setting_subtitle_position_secondary':
+        return 'Secondary subtitle position';
       case 'dict_download_learning_language':
         return 'Learning language';
       case 'dict_category_bilingual':
@@ -141548,6 +141607,8 @@ extension on _StringsId {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'video_setting_subtitle_position_secondary':
+        return 'Secondary subtitle position';
       case 'dict_download_learning_language':
         return 'Learning language';
       case 'dict_category_bilingual':
@@ -147356,6 +147417,8 @@ extension on _StringsIt {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'video_setting_subtitle_position_secondary':
+        return 'Secondary subtitle position';
       case 'dict_download_learning_language':
         return 'Learning language';
       case 'dict_category_bilingual':
@@ -153126,6 +153189,8 @@ extension on _StringsJa {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'video_setting_subtitle_position_secondary':
+        return 'Secondary subtitle position';
       case 'dict_download_learning_language':
         return 'Learning language';
       case 'dict_category_bilingual':
@@ -158900,6 +158965,8 @@ extension on _StringsKo {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'video_setting_subtitle_position_secondary':
+        return 'Secondary subtitle position';
       case 'dict_download_learning_language':
         return 'Learning language';
       case 'dict_category_bilingual':
@@ -164702,6 +164769,8 @@ extension on _StringsNl {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'video_setting_subtitle_position_secondary':
+        return 'Secondary subtitle position';
       case 'dict_download_learning_language':
         return 'Learning language';
       case 'dict_category_bilingual':
@@ -170501,6 +170570,8 @@ extension on _StringsPtBr {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'video_setting_subtitle_position_secondary':
+        return 'Secondary subtitle position';
       case 'dict_download_learning_language':
         return 'Learning language';
       case 'dict_category_bilingual':
@@ -176305,6 +176376,8 @@ extension on _StringsRu {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'video_setting_subtitle_position_secondary':
+        return 'Secondary subtitle position';
       case 'dict_download_learning_language':
         return 'Learning language';
       case 'dict_category_bilingual':
@@ -182092,6 +182165,8 @@ extension on _StringsTh {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'video_setting_subtitle_position_secondary':
+        return 'Secondary subtitle position';
       case 'dict_download_learning_language':
         return 'Learning language';
       case 'dict_category_bilingual':
@@ -187888,6 +187963,8 @@ extension on _StringsTr {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'video_setting_subtitle_position_secondary':
+        return 'Secondary subtitle position';
       case 'dict_download_learning_language':
         return 'Learning language';
       case 'dict_category_bilingual':
@@ -193680,6 +193757,8 @@ extension on _StringsVi {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'video_setting_subtitle_position_secondary':
+        return 'Secondary subtitle position';
       case 'dict_download_learning_language':
         return 'Learning language';
       case 'dict_category_bilingual':
@@ -199424,6 +199503,8 @@ extension on _StringsZhCn {
         return '没有可用的网页搜索应用。';
       case 'selection_share_failed':
         return '无法打开分享面板。';
+      case 'video_setting_subtitle_position_secondary':
+        return '副字幕垂直位置';
       case 'dict_download_learning_language':
         return '学习语言';
       case 'dict_category_bilingual':
@@ -205188,6 +205269,8 @@ extension on _StringsZhHk {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'video_setting_subtitle_position_secondary':
+        return 'Secondary subtitle position';
       case 'dict_download_learning_language':
         return 'Learning language';
       case 'dict_category_bilingual':
