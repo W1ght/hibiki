@@ -3,7 +3,7 @@
 /// Locales: 17
 /// Strings: 48569 (2857 per locale)
 ///
-/// Built on 2026-07-31 at 15:32 UTC
+/// Built on 2026-07-31 at 15:33 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3679,7 +3679,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get game_upscaling_pick_body =>
       'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
   String get game_upscaling_hint_not_installed =>
-      'Magpie is unavailable. Use Auto to enable Hibiki\'s bundled version; if it is still unavailable, update or reinstall Hibiki.';
+      'Magpie is not ready. Set window upscaling to Auto to use the copy bundled with Hibiki; if it still does not start, update or reinstall Hibiki.';
   String media_source_count_manga({required Object n}) => '${n} volumes';
   String get library_view_shelf => 'Shelf';
   String get library_view_browse => 'Browse';
@@ -3854,7 +3854,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get game_upscaling_error_bundle_missing =>
       'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
   String get game_upscaling_error_bundle_invalid =>
-      'The bundled Magpie component is corrupted or failed verification. Reinstall or update Hibiki.';
+      'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
 }
 
 // Path: <root>
@@ -10121,7 +10121,7 @@ class _StringsAr extends _StringsEn {
       'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
   @override
   String get game_upscaling_hint_not_installed =>
-      'Magpie is unavailable. Use Auto to enable Hibiki\'s bundled version; if it is still unavailable, update or reinstall Hibiki.';
+      'Magpie is not ready. Set window upscaling to Auto to use the copy bundled with Hibiki; if it still does not start, update or reinstall Hibiki.';
   @override
   String media_source_count_manga({required Object n}) => '${n} volumes';
   @override
@@ -10415,7 +10415,7 @@ class _StringsAr extends _StringsEn {
       'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
   @override
   String get game_upscaling_error_bundle_invalid =>
-      'The bundled Magpie component is corrupted or failed verification. Reinstall or update Hibiki.';
+      'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
 }
 
 // Path: <root>
@@ -16749,7 +16749,7 @@ class _StringsDe extends _StringsEn {
       'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
   @override
   String get game_upscaling_hint_not_installed =>
-      'Magpie is unavailable. Use Auto to enable Hibiki\'s bundled version; if it is still unavailable, update or reinstall Hibiki.';
+      'Magpie is not ready. Set window upscaling to Auto to use the copy bundled with Hibiki; if it still does not start, update or reinstall Hibiki.';
   @override
   String media_source_count_manga({required Object n}) => '${n} volumes';
   @override
@@ -17043,7 +17043,7 @@ class _StringsDe extends _StringsEn {
       'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
   @override
   String get game_upscaling_error_bundle_invalid =>
-      'The bundled Magpie component is corrupted or failed verification. Reinstall or update Hibiki.';
+      'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
 }
 
 // Path: <root>
@@ -23393,7 +23393,7 @@ class _StringsEs extends _StringsEn {
       'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
   @override
   String get game_upscaling_hint_not_installed =>
-      'Magpie is unavailable. Use Auto to enable Hibiki\'s bundled version; if it is still unavailable, update or reinstall Hibiki.';
+      'Magpie is not ready. Set window upscaling to Auto to use the copy bundled with Hibiki; if it still does not start, update or reinstall Hibiki.';
   @override
   String media_source_count_manga({required Object n}) => '${n} volumes';
   @override
@@ -23687,7 +23687,7 @@ class _StringsEs extends _StringsEn {
       'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
   @override
   String get game_upscaling_error_bundle_invalid =>
-      'The bundled Magpie component is corrupted or failed verification. Reinstall or update Hibiki.';
+      'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
 }
 
 // Path: <root>
@@ -30048,7 +30048,7 @@ class _StringsFr extends _StringsEn {
       'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
   @override
   String get game_upscaling_hint_not_installed =>
-      'Magpie is unavailable. Use Auto to enable Hibiki\'s bundled version; if it is still unavailable, update or reinstall Hibiki.';
+      'Magpie is not ready. Set window upscaling to Auto to use the copy bundled with Hibiki; if it still does not start, update or reinstall Hibiki.';
   @override
   String media_source_count_manga({required Object n}) => '${n} volumes';
   @override
@@ -30342,7 +30342,7 @@ class _StringsFr extends _StringsEn {
       'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
   @override
   String get game_upscaling_error_bundle_invalid =>
-      'The bundled Magpie component is corrupted or failed verification. Reinstall or update Hibiki.';
+      'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
 }
 
 // Path: <root>
@@ -36632,7 +36632,7 @@ class _StringsId extends _StringsEn {
       'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
   @override
   String get game_upscaling_hint_not_installed =>
-      'Magpie is unavailable. Use Auto to enable Hibiki\'s bundled version; if it is still unavailable, update or reinstall Hibiki.';
+      'Magpie is not ready. Set window upscaling to Auto to use the copy bundled with Hibiki; if it still does not start, update or reinstall Hibiki.';
   @override
   String media_source_count_manga({required Object n}) => '${n} volumes';
   @override
@@ -36926,7 +36926,7 @@ class _StringsId extends _StringsEn {
       'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
   @override
   String get game_upscaling_error_bundle_invalid =>
-      'The bundled Magpie component is corrupted or failed verification. Reinstall or update Hibiki.';
+      'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
 }
 
 // Path: <root>
@@ -43262,7 +43262,7 @@ class _StringsIt extends _StringsEn {
       'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
   @override
   String get game_upscaling_hint_not_installed =>
-      'Magpie is unavailable. Use Auto to enable Hibiki\'s bundled version; if it is still unavailable, update or reinstall Hibiki.';
+      'Magpie is not ready. Set window upscaling to Auto to use the copy bundled with Hibiki; if it still does not start, update or reinstall Hibiki.';
   @override
   String media_source_count_manga({required Object n}) => '${n} volumes';
   @override
@@ -43556,7 +43556,7 @@ class _StringsIt extends _StringsEn {
       'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
   @override
   String get game_upscaling_error_bundle_invalid =>
-      'The bundled Magpie component is corrupted or failed verification. Reinstall or update Hibiki.';
+      'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
 }
 
 // Path: <root>
@@ -49709,7 +49709,7 @@ class _StringsJa extends _StringsEn {
       'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
   @override
   String get game_upscaling_hint_not_installed =>
-      'Magpie is unavailable. Use Auto to enable Hibiki\'s bundled version; if it is still unavailable, update or reinstall Hibiki.';
+      'Magpie is not ready. Set window upscaling to Auto to use the copy bundled with Hibiki; if it still does not start, update or reinstall Hibiki.';
   @override
   String media_source_count_manga({required Object n}) => '${n} volumes';
   @override
@@ -50003,7 +50003,7 @@ class _StringsJa extends _StringsEn {
       'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
   @override
   String get game_upscaling_error_bundle_invalid =>
-      'The bundled Magpie component is corrupted or failed verification. Reinstall or update Hibiki.';
+      'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
 }
 
 // Path: <root>
@@ -56158,7 +56158,7 @@ class _StringsKo extends _StringsEn {
       'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
   @override
   String get game_upscaling_hint_not_installed =>
-      'Magpie is unavailable. Use Auto to enable Hibiki\'s bundled version; if it is still unavailable, update or reinstall Hibiki.';
+      'Magpie is not ready. Set window upscaling to Auto to use the copy bundled with Hibiki; if it still does not start, update or reinstall Hibiki.';
   @override
   String media_source_count_manga({required Object n}) => '${n} volumes';
   @override
@@ -56452,7 +56452,7 @@ class _StringsKo extends _StringsEn {
       'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
   @override
   String get game_upscaling_error_bundle_invalid =>
-      'The bundled Magpie component is corrupted or failed verification. Reinstall or update Hibiki.';
+      'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
 }
 
 // Path: <root>
@@ -62768,7 +62768,7 @@ class _StringsNl extends _StringsEn {
       'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
   @override
   String get game_upscaling_hint_not_installed =>
-      'Magpie is unavailable. Use Auto to enable Hibiki\'s bundled version; if it is still unavailable, update or reinstall Hibiki.';
+      'Magpie is not ready. Set window upscaling to Auto to use the copy bundled with Hibiki; if it still does not start, update or reinstall Hibiki.';
   @override
   String media_source_count_manga({required Object n}) => '${n} volumes';
   @override
@@ -63062,7 +63062,7 @@ class _StringsNl extends _StringsEn {
       'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
   @override
   String get game_upscaling_error_bundle_invalid =>
-      'The bundled Magpie component is corrupted or failed verification. Reinstall or update Hibiki.';
+      'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
 }
 
 // Path: <root>
@@ -69391,7 +69391,7 @@ class _StringsPtBr extends _StringsEn {
       'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
   @override
   String get game_upscaling_hint_not_installed =>
-      'Magpie is unavailable. Use Auto to enable Hibiki\'s bundled version; if it is still unavailable, update or reinstall Hibiki.';
+      'Magpie is not ready. Set window upscaling to Auto to use the copy bundled with Hibiki; if it still does not start, update or reinstall Hibiki.';
   @override
   String media_source_count_manga({required Object n}) => '${n} volumes';
   @override
@@ -69685,7 +69685,7 @@ class _StringsPtBr extends _StringsEn {
       'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
   @override
   String get game_upscaling_error_bundle_invalid =>
-      'The bundled Magpie component is corrupted or failed verification. Reinstall or update Hibiki.';
+      'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
 }
 
 // Path: <root>
@@ -75998,7 +75998,7 @@ class _StringsRu extends _StringsEn {
       'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
   @override
   String get game_upscaling_hint_not_installed =>
-      'Magpie is unavailable. Use Auto to enable Hibiki\'s bundled version; if it is still unavailable, update or reinstall Hibiki.';
+      'Magpie is not ready. Set window upscaling to Auto to use the copy bundled with Hibiki; if it still does not start, update or reinstall Hibiki.';
   @override
   String media_source_count_manga({required Object n}) => '${n} volumes';
   @override
@@ -76292,7 +76292,7 @@ class _StringsRu extends _StringsEn {
       'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
   @override
   String get game_upscaling_error_bundle_invalid =>
-      'The bundled Magpie component is corrupted or failed verification. Reinstall or update Hibiki.';
+      'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
 }
 
 // Path: <root>
@@ -82553,7 +82553,7 @@ class _StringsTh extends _StringsEn {
       'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
   @override
   String get game_upscaling_hint_not_installed =>
-      'Magpie is unavailable. Use Auto to enable Hibiki\'s bundled version; if it is still unavailable, update or reinstall Hibiki.';
+      'Magpie is not ready. Set window upscaling to Auto to use the copy bundled with Hibiki; if it still does not start, update or reinstall Hibiki.';
   @override
   String media_source_count_manga({required Object n}) => '${n} volumes';
   @override
@@ -82847,7 +82847,7 @@ class _StringsTh extends _StringsEn {
       'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
   @override
   String get game_upscaling_error_bundle_invalid =>
-      'The bundled Magpie component is corrupted or failed verification. Reinstall or update Hibiki.';
+      'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
 }
 
 // Path: <root>
@@ -89140,7 +89140,7 @@ class _StringsTr extends _StringsEn {
       'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
   @override
   String get game_upscaling_hint_not_installed =>
-      'Magpie is unavailable. Use Auto to enable Hibiki\'s bundled version; if it is still unavailable, update or reinstall Hibiki.';
+      'Magpie is not ready. Set window upscaling to Auto to use the copy bundled with Hibiki; if it still does not start, update or reinstall Hibiki.';
   @override
   String media_source_count_manga({required Object n}) => '${n} volumes';
   @override
@@ -89434,7 +89434,7 @@ class _StringsTr extends _StringsEn {
       'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
   @override
   String get game_upscaling_error_bundle_invalid =>
-      'The bundled Magpie component is corrupted or failed verification. Reinstall or update Hibiki.';
+      'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
 }
 
 // Path: <root>
@@ -95712,7 +95712,7 @@ class _StringsVi extends _StringsEn {
       'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
   @override
   String get game_upscaling_hint_not_installed =>
-      'Magpie is unavailable. Use Auto to enable Hibiki\'s bundled version; if it is still unavailable, update or reinstall Hibiki.';
+      'Magpie is not ready. Set window upscaling to Auto to use the copy bundled with Hibiki; if it still does not start, update or reinstall Hibiki.';
   @override
   String media_source_count_manga({required Object n}) => '${n} volumes';
   @override
@@ -96006,7 +96006,7 @@ class _StringsVi extends _StringsEn {
       'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
   @override
   String get game_upscaling_error_bundle_invalid =>
-      'The bundled Magpie component is corrupted or failed verification. Reinstall or update Hibiki.';
+      'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
 }
 
 // Path: <root>
@@ -101840,7 +101840,7 @@ class _StringsZhCn extends _StringsEn {
       '捕获会话期间用 Magpie 放大这个游戏的窗口。每个游戏各自设置——只有原生分辨率低于屏幕的游戏才用得上。会占用显卡。';
   @override
   String get game_upscaling_hint_not_installed =>
-      'Magpie 当前不可用。将该游戏的「窗口超分」设为「自动」即可启用内置版本；仍不可用时请更新或重装 Hibiki。';
+      'Magpie 尚未就绪。将该游戏的「窗口超分」设为「自动」即可使用随包的内置版本；仍无法启动时请更新或重装 Hibiki。';
   @override
   String media_source_count_manga({required Object n}) => '${n} 卷';
   @override
@@ -108190,7 +108190,7 @@ class _StringsZhHk extends _StringsEn {
       'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
   @override
   String get game_upscaling_hint_not_installed =>
-      'Magpie is unavailable. Use Auto to enable Hibiki\'s bundled version; if it is still unavailable, update or reinstall Hibiki.';
+      'Magpie is not ready. Set window upscaling to Auto to use the copy bundled with Hibiki; if it still does not start, update or reinstall Hibiki.';
   @override
   String media_source_count_manga({required Object n}) => '${n} volumes';
   @override
@@ -108484,7 +108484,7 @@ class _StringsZhHk extends _StringsEn {
       'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
   @override
   String get game_upscaling_error_bundle_invalid =>
-      'The bundled Magpie component is corrupted or failed verification. Reinstall or update Hibiki.';
+      'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
 }
 
 /// Flat map(s) containing all translations.
@@ -114093,7 +114093,7 @@ extension on _StringsEn {
       case 'game_upscaling_pick_body':
         return 'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
       case 'game_upscaling_hint_not_installed':
-        return 'Magpie is unavailable. Use Auto to enable Hibiki\'s bundled version; if it is still unavailable, update or reinstall Hibiki.';
+        return 'Magpie is not ready. Set window upscaling to Auto to use the copy bundled with Hibiki; if it still does not start, update or reinstall Hibiki.';
       case 'media_source_count_manga':
         return ({required Object n}) => '${n} volumes';
       case 'library_view_shelf':
@@ -114346,7 +114346,7 @@ extension on _StringsEn {
       case 'game_upscaling_error_bundle_missing':
         return 'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
       case 'game_upscaling_error_bundle_invalid':
-        return 'The bundled Magpie component is corrupted or failed verification. Reinstall or update Hibiki.';
+        return 'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
       default:
         return null;
     }
@@ -119953,7 +119953,7 @@ extension on _StringsAr {
       case 'game_upscaling_pick_body':
         return 'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
       case 'game_upscaling_hint_not_installed':
-        return 'Magpie is unavailable. Use Auto to enable Hibiki\'s bundled version; if it is still unavailable, update or reinstall Hibiki.';
+        return 'Magpie is not ready. Set window upscaling to Auto to use the copy bundled with Hibiki; if it still does not start, update or reinstall Hibiki.';
       case 'media_source_count_manga':
         return ({required Object n}) => '${n} volumes';
       case 'library_view_shelf':
@@ -120206,7 +120206,7 @@ extension on _StringsAr {
       case 'game_upscaling_error_bundle_missing':
         return 'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
       case 'game_upscaling_error_bundle_invalid':
-        return 'The bundled Magpie component is corrupted or failed verification. Reinstall or update Hibiki.';
+        return 'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
       default:
         return null;
     }
@@ -125835,7 +125835,7 @@ extension on _StringsDe {
       case 'game_upscaling_pick_body':
         return 'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
       case 'game_upscaling_hint_not_installed':
-        return 'Magpie is unavailable. Use Auto to enable Hibiki\'s bundled version; if it is still unavailable, update or reinstall Hibiki.';
+        return 'Magpie is not ready. Set window upscaling to Auto to use the copy bundled with Hibiki; if it still does not start, update or reinstall Hibiki.';
       case 'media_source_count_manga':
         return ({required Object n}) => '${n} volumes';
       case 'library_view_shelf':
@@ -126088,7 +126088,7 @@ extension on _StringsDe {
       case 'game_upscaling_error_bundle_missing':
         return 'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
       case 'game_upscaling_error_bundle_invalid':
-        return 'The bundled Magpie component is corrupted or failed verification. Reinstall or update Hibiki.';
+        return 'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
       default:
         return null;
     }
@@ -131716,7 +131716,7 @@ extension on _StringsEs {
       case 'game_upscaling_pick_body':
         return 'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
       case 'game_upscaling_hint_not_installed':
-        return 'Magpie is unavailable. Use Auto to enable Hibiki\'s bundled version; if it is still unavailable, update or reinstall Hibiki.';
+        return 'Magpie is not ready. Set window upscaling to Auto to use the copy bundled with Hibiki; if it still does not start, update or reinstall Hibiki.';
       case 'media_source_count_manga':
         return ({required Object n}) => '${n} volumes';
       case 'library_view_shelf':
@@ -131969,7 +131969,7 @@ extension on _StringsEs {
       case 'game_upscaling_error_bundle_missing':
         return 'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
       case 'game_upscaling_error_bundle_invalid':
-        return 'The bundled Magpie component is corrupted or failed verification. Reinstall or update Hibiki.';
+        return 'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
       default:
         return null;
     }
@@ -137603,7 +137603,7 @@ extension on _StringsFr {
       case 'game_upscaling_pick_body':
         return 'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
       case 'game_upscaling_hint_not_installed':
-        return 'Magpie is unavailable. Use Auto to enable Hibiki\'s bundled version; if it is still unavailable, update or reinstall Hibiki.';
+        return 'Magpie is not ready. Set window upscaling to Auto to use the copy bundled with Hibiki; if it still does not start, update or reinstall Hibiki.';
       case 'media_source_count_manga':
         return ({required Object n}) => '${n} volumes';
       case 'library_view_shelf':
@@ -137856,7 +137856,7 @@ extension on _StringsFr {
       case 'game_upscaling_error_bundle_missing':
         return 'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
       case 'game_upscaling_error_bundle_invalid':
-        return 'The bundled Magpie component is corrupted or failed verification. Reinstall or update Hibiki.';
+        return 'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
       default:
         return null;
     }
@@ -143472,7 +143472,7 @@ extension on _StringsId {
       case 'game_upscaling_pick_body':
         return 'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
       case 'game_upscaling_hint_not_installed':
-        return 'Magpie is unavailable. Use Auto to enable Hibiki\'s bundled version; if it is still unavailable, update or reinstall Hibiki.';
+        return 'Magpie is not ready. Set window upscaling to Auto to use the copy bundled with Hibiki; if it still does not start, update or reinstall Hibiki.';
       case 'media_source_count_manga':
         return ({required Object n}) => '${n} volumes';
       case 'library_view_shelf':
@@ -143725,7 +143725,7 @@ extension on _StringsId {
       case 'game_upscaling_error_bundle_missing':
         return 'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
       case 'game_upscaling_error_bundle_invalid':
-        return 'The bundled Magpie component is corrupted or failed verification. Reinstall or update Hibiki.';
+        return 'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
       default:
         return null;
     }
@@ -149355,7 +149355,7 @@ extension on _StringsIt {
       case 'game_upscaling_pick_body':
         return 'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
       case 'game_upscaling_hint_not_installed':
-        return 'Magpie is unavailable. Use Auto to enable Hibiki\'s bundled version; if it is still unavailable, update or reinstall Hibiki.';
+        return 'Magpie is not ready. Set window upscaling to Auto to use the copy bundled with Hibiki; if it still does not start, update or reinstall Hibiki.';
       case 'media_source_count_manga':
         return ({required Object n}) => '${n} volumes';
       case 'library_view_shelf':
@@ -149608,7 +149608,7 @@ extension on _StringsIt {
       case 'game_upscaling_error_bundle_missing':
         return 'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
       case 'game_upscaling_error_bundle_invalid':
-        return 'The bundled Magpie component is corrupted or failed verification. Reinstall or update Hibiki.';
+        return 'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
       default:
         return null;
     }
@@ -155200,7 +155200,7 @@ extension on _StringsJa {
       case 'game_upscaling_pick_body':
         return 'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
       case 'game_upscaling_hint_not_installed':
-        return 'Magpie is unavailable. Use Auto to enable Hibiki\'s bundled version; if it is still unavailable, update or reinstall Hibiki.';
+        return 'Magpie is not ready. Set window upscaling to Auto to use the copy bundled with Hibiki; if it still does not start, update or reinstall Hibiki.';
       case 'media_source_count_manga':
         return ({required Object n}) => '${n} volumes';
       case 'library_view_shelf':
@@ -155453,7 +155453,7 @@ extension on _StringsJa {
       case 'game_upscaling_error_bundle_missing':
         return 'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
       case 'game_upscaling_error_bundle_invalid':
-        return 'The bundled Magpie component is corrupted or failed verification. Reinstall or update Hibiki.';
+        return 'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
       default:
         return null;
     }
@@ -161049,7 +161049,7 @@ extension on _StringsKo {
       case 'game_upscaling_pick_body':
         return 'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
       case 'game_upscaling_hint_not_installed':
-        return 'Magpie is unavailable. Use Auto to enable Hibiki\'s bundled version; if it is still unavailable, update or reinstall Hibiki.';
+        return 'Magpie is not ready. Set window upscaling to Auto to use the copy bundled with Hibiki; if it still does not start, update or reinstall Hibiki.';
       case 'media_source_count_manga':
         return ({required Object n}) => '${n} volumes';
       case 'library_view_shelf':
@@ -161302,7 +161302,7 @@ extension on _StringsKo {
       case 'game_upscaling_error_bundle_missing':
         return 'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
       case 'game_upscaling_error_bundle_invalid':
-        return 'The bundled Magpie component is corrupted or failed verification. Reinstall or update Hibiki.';
+        return 'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
       default:
         return null;
     }
@@ -166926,7 +166926,7 @@ extension on _StringsNl {
       case 'game_upscaling_pick_body':
         return 'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
       case 'game_upscaling_hint_not_installed':
-        return 'Magpie is unavailable. Use Auto to enable Hibiki\'s bundled version; if it is still unavailable, update or reinstall Hibiki.';
+        return 'Magpie is not ready. Set window upscaling to Auto to use the copy bundled with Hibiki; if it still does not start, update or reinstall Hibiki.';
       case 'media_source_count_manga':
         return ({required Object n}) => '${n} volumes';
       case 'library_view_shelf':
@@ -167179,7 +167179,7 @@ extension on _StringsNl {
       case 'game_upscaling_error_bundle_missing':
         return 'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
       case 'game_upscaling_error_bundle_invalid':
-        return 'The bundled Magpie component is corrupted or failed verification. Reinstall or update Hibiki.';
+        return 'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
       default:
         return null;
     }
@@ -172800,7 +172800,7 @@ extension on _StringsPtBr {
       case 'game_upscaling_pick_body':
         return 'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
       case 'game_upscaling_hint_not_installed':
-        return 'Magpie is unavailable. Use Auto to enable Hibiki\'s bundled version; if it is still unavailable, update or reinstall Hibiki.';
+        return 'Magpie is not ready. Set window upscaling to Auto to use the copy bundled with Hibiki; if it still does not start, update or reinstall Hibiki.';
       case 'media_source_count_manga':
         return ({required Object n}) => '${n} volumes';
       case 'library_view_shelf':
@@ -173053,7 +173053,7 @@ extension on _StringsPtBr {
       case 'game_upscaling_error_bundle_missing':
         return 'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
       case 'game_upscaling_error_bundle_invalid':
-        return 'The bundled Magpie component is corrupted or failed verification. Reinstall or update Hibiki.';
+        return 'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
       default:
         return null;
     }
@@ -178679,7 +178679,7 @@ extension on _StringsRu {
       case 'game_upscaling_pick_body':
         return 'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
       case 'game_upscaling_hint_not_installed':
-        return 'Magpie is unavailable. Use Auto to enable Hibiki\'s bundled version; if it is still unavailable, update or reinstall Hibiki.';
+        return 'Magpie is not ready. Set window upscaling to Auto to use the copy bundled with Hibiki; if it still does not start, update or reinstall Hibiki.';
       case 'media_source_count_manga':
         return ({required Object n}) => '${n} volumes';
       case 'library_view_shelf':
@@ -178932,7 +178932,7 @@ extension on _StringsRu {
       case 'game_upscaling_error_bundle_missing':
         return 'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
       case 'game_upscaling_error_bundle_invalid':
-        return 'The bundled Magpie component is corrupted or failed verification. Reinstall or update Hibiki.';
+        return 'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
       default:
         return null;
     }
@@ -184541,7 +184541,7 @@ extension on _StringsTh {
       case 'game_upscaling_pick_body':
         return 'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
       case 'game_upscaling_hint_not_installed':
-        return 'Magpie is unavailable. Use Auto to enable Hibiki\'s bundled version; if it is still unavailable, update or reinstall Hibiki.';
+        return 'Magpie is not ready. Set window upscaling to Auto to use the copy bundled with Hibiki; if it still does not start, update or reinstall Hibiki.';
       case 'media_source_count_manga':
         return ({required Object n}) => '${n} volumes';
       case 'library_view_shelf':
@@ -184794,7 +184794,7 @@ extension on _StringsTh {
       case 'game_upscaling_error_bundle_missing':
         return 'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
       case 'game_upscaling_error_bundle_invalid':
-        return 'The bundled Magpie component is corrupted or failed verification. Reinstall or update Hibiki.';
+        return 'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
       default:
         return null;
     }
@@ -190412,7 +190412,7 @@ extension on _StringsTr {
       case 'game_upscaling_pick_body':
         return 'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
       case 'game_upscaling_hint_not_installed':
-        return 'Magpie is unavailable. Use Auto to enable Hibiki\'s bundled version; if it is still unavailable, update or reinstall Hibiki.';
+        return 'Magpie is not ready. Set window upscaling to Auto to use the copy bundled with Hibiki; if it still does not start, update or reinstall Hibiki.';
       case 'media_source_count_manga':
         return ({required Object n}) => '${n} volumes';
       case 'library_view_shelf':
@@ -190665,7 +190665,7 @@ extension on _StringsTr {
       case 'game_upscaling_error_bundle_missing':
         return 'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
       case 'game_upscaling_error_bundle_invalid':
-        return 'The bundled Magpie component is corrupted or failed verification. Reinstall or update Hibiki.';
+        return 'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
       default:
         return null;
     }
@@ -196279,7 +196279,7 @@ extension on _StringsVi {
       case 'game_upscaling_pick_body':
         return 'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
       case 'game_upscaling_hint_not_installed':
-        return 'Magpie is unavailable. Use Auto to enable Hibiki\'s bundled version; if it is still unavailable, update or reinstall Hibiki.';
+        return 'Magpie is not ready. Set window upscaling to Auto to use the copy bundled with Hibiki; if it still does not start, update or reinstall Hibiki.';
       case 'media_source_count_manga':
         return ({required Object n}) => '${n} volumes';
       case 'library_view_shelf':
@@ -196532,7 +196532,7 @@ extension on _StringsVi {
       case 'game_upscaling_error_bundle_missing':
         return 'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
       case 'game_upscaling_error_bundle_invalid':
-        return 'The bundled Magpie component is corrupted or failed verification. Reinstall or update Hibiki.';
+        return 'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
       default:
         return null;
     }
@@ -202099,7 +202099,7 @@ extension on _StringsZhCn {
       case 'game_upscaling_pick_body':
         return '捕获会话期间用 Magpie 放大这个游戏的窗口。每个游戏各自设置——只有原生分辨率低于屏幕的游戏才用得上。会占用显卡。';
       case 'game_upscaling_hint_not_installed':
-        return 'Magpie 当前不可用。将该游戏的「窗口超分」设为「自动」即可启用内置版本；仍不可用时请更新或重装 Hibiki。';
+        return 'Magpie 尚未就绪。将该游戏的「窗口超分」设为「自动」即可使用随包的内置版本；仍无法启动时请更新或重装 Hibiki。';
       case 'media_source_count_manga':
         return ({required Object n}) => '${n} 卷';
       case 'library_view_shelf':
@@ -207934,7 +207934,7 @@ extension on _StringsZhHk {
       case 'game_upscaling_pick_body':
         return 'Upscales this game window with Magpie while a capture session is running. Set per game - it only helps for games whose native resolution is lower than your screen. Uses your GPU.';
       case 'game_upscaling_hint_not_installed':
-        return 'Magpie is unavailable. Use Auto to enable Hibiki\'s bundled version; if it is still unavailable, update or reinstall Hibiki.';
+        return 'Magpie is not ready. Set window upscaling to Auto to use the copy bundled with Hibiki; if it still does not start, update or reinstall Hibiki.';
       case 'media_source_count_manga':
         return ({required Object n}) => '${n} volumes';
       case 'library_view_shelf':
@@ -208187,7 +208187,7 @@ extension on _StringsZhHk {
       case 'game_upscaling_error_bundle_missing':
         return 'Hibiki installation is incomplete: the bundled Magpie component is missing. Reinstall or update Hibiki.';
       case 'game_upscaling_error_bundle_invalid':
-        return 'The bundled Magpie component is corrupted or failed verification. Reinstall or update Hibiki.';
+        return 'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
       default:
         return null;
     }
