@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 47328 (2784 per locale)
+/// Strings: 47243 (2779 per locale)
 ///
-/// Built on 2026-07-31 at 10:25 UTC
+/// Built on 2026-07-31 at 10:28 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3736,12 +3736,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'The service responded successfully but returned 0 items. Query: ${query}; filters: ${filters}. Try another title or loosen the filters.';
   String get anime_download_streaming_ready =>
       'In library · download continues';
-  String get anime_download_task_settings => 'Task settings';
-  String get anime_download_task_library_name => 'Library name';
-  String get anime_download_task_content_kind => 'Import as';
-  String get anime_download_task_settings_hint =>
-      'These settings affect library import. Use Rename / move to change downloaded files or their folder.';
-  String get anime_download_task_more_actions => 'More task actions';
   String get anime_download_unfiltered => 'No Trusted filter';
 }
 
@@ -10105,17 +10099,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get anime_download_streaming_ready =>
       'In library · download continues';
-  @override
-  String get anime_download_task_settings => 'Task settings';
-  @override
-  String get anime_download_task_library_name => 'Library name';
-  @override
-  String get anime_download_task_content_kind => 'Import as';
-  @override
-  String get anime_download_task_settings_hint =>
-      'These settings affect library import. Use Rename / move to change downloaded files or their folder.';
-  @override
-  String get anime_download_task_more_actions => 'More task actions';
   @override
   String get anime_download_unfiltered => 'No Trusted filter';
 }
@@ -16548,17 +16531,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get anime_download_streaming_ready =>
       'In library · download continues';
-  @override
-  String get anime_download_task_settings => 'Task settings';
-  @override
-  String get anime_download_task_library_name => 'Library name';
-  @override
-  String get anime_download_task_content_kind => 'Import as';
-  @override
-  String get anime_download_task_settings_hint =>
-      'These settings affect library import. Use Rename / move to change downloaded files or their folder.';
-  @override
-  String get anime_download_task_more_actions => 'More task actions';
   @override
   String get anime_download_unfiltered => 'No Trusted filter';
 }
@@ -23007,17 +22979,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get anime_download_streaming_ready =>
       'In library · download continues';
-  @override
-  String get anime_download_task_settings => 'Task settings';
-  @override
-  String get anime_download_task_library_name => 'Library name';
-  @override
-  String get anime_download_task_content_kind => 'Import as';
-  @override
-  String get anime_download_task_settings_hint =>
-      'These settings affect library import. Use Rename / move to change downloaded files or their folder.';
-  @override
-  String get anime_download_task_more_actions => 'More task actions';
   @override
   String get anime_download_unfiltered => 'No Trusted filter';
 }
@@ -29478,17 +29439,6 @@ class _StringsFr extends _StringsEn {
   String get anime_download_streaming_ready =>
       'In library · download continues';
   @override
-  String get anime_download_task_settings => 'Task settings';
-  @override
-  String get anime_download_task_library_name => 'Library name';
-  @override
-  String get anime_download_task_content_kind => 'Import as';
-  @override
-  String get anime_download_task_settings_hint =>
-      'These settings affect library import. Use Rename / move to change downloaded files or their folder.';
-  @override
-  String get anime_download_task_more_actions => 'More task actions';
-  @override
   String get anime_download_unfiltered => 'No Trusted filter';
 }
 
@@ -35876,17 +35826,6 @@ class _StringsId extends _StringsEn {
   @override
   String get anime_download_streaming_ready =>
       'In library · download continues';
-  @override
-  String get anime_download_task_settings => 'Task settings';
-  @override
-  String get anime_download_task_library_name => 'Library name';
-  @override
-  String get anime_download_task_content_kind => 'Import as';
-  @override
-  String get anime_download_task_settings_hint =>
-      'These settings affect library import. Use Rename / move to change downloaded files or their folder.';
-  @override
-  String get anime_download_task_more_actions => 'More task actions';
   @override
   String get anime_download_unfiltered => 'No Trusted filter';
 }
@@ -42322,17 +42261,6 @@ class _StringsIt extends _StringsEn {
   String get anime_download_streaming_ready =>
       'In library · download continues';
   @override
-  String get anime_download_task_settings => 'Task settings';
-  @override
-  String get anime_download_task_library_name => 'Library name';
-  @override
-  String get anime_download_task_content_kind => 'Import as';
-  @override
-  String get anime_download_task_settings_hint =>
-      'These settings affect library import. Use Rename / move to change downloaded files or their folder.';
-  @override
-  String get anime_download_task_more_actions => 'More task actions';
-  @override
   String get anime_download_unfiltered => 'No Trusted filter';
 }
 
@@ -48583,17 +48511,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get anime_download_streaming_ready =>
       'In library · download continues';
-  @override
-  String get anime_download_task_settings => 'Task settings';
-  @override
-  String get anime_download_task_library_name => 'Library name';
-  @override
-  String get anime_download_task_content_kind => 'Import as';
-  @override
-  String get anime_download_task_settings_hint =>
-      'These settings affect library import. Use Rename / move to change downloaded files or their folder.';
-  @override
-  String get anime_download_task_more_actions => 'More task actions';
   @override
   String get anime_download_unfiltered => 'No Trusted filter';
 }
@@ -54847,17 +54764,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get anime_download_streaming_ready =>
       'In library · download continues';
-  @override
-  String get anime_download_task_settings => 'Task settings';
-  @override
-  String get anime_download_task_library_name => 'Library name';
-  @override
-  String get anime_download_task_content_kind => 'Import as';
-  @override
-  String get anime_download_task_settings_hint =>
-      'These settings affect library import. Use Rename / move to change downloaded files or their folder.';
-  @override
-  String get anime_download_task_more_actions => 'More task actions';
   @override
   String get anime_download_unfiltered => 'No Trusted filter';
 }
@@ -61272,17 +61178,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get anime_download_streaming_ready =>
       'In library · download continues';
-  @override
-  String get anime_download_task_settings => 'Task settings';
-  @override
-  String get anime_download_task_library_name => 'Library name';
-  @override
-  String get anime_download_task_content_kind => 'Import as';
-  @override
-  String get anime_download_task_settings_hint =>
-      'These settings affect library import. Use Rename / move to change downloaded files or their folder.';
-  @override
-  String get anime_download_task_more_actions => 'More task actions';
   @override
   String get anime_download_unfiltered => 'No Trusted filter';
 }
@@ -67711,17 +67606,6 @@ class _StringsPtBr extends _StringsEn {
   String get anime_download_streaming_ready =>
       'In library · download continues';
   @override
-  String get anime_download_task_settings => 'Task settings';
-  @override
-  String get anime_download_task_library_name => 'Library name';
-  @override
-  String get anime_download_task_content_kind => 'Import as';
-  @override
-  String get anime_download_task_settings_hint =>
-      'These settings affect library import. Use Rename / move to change downloaded files or their folder.';
-  @override
-  String get anime_download_task_more_actions => 'More task actions';
-  @override
   String get anime_download_unfiltered => 'No Trusted filter';
 }
 
@@ -74133,17 +74017,6 @@ class _StringsRu extends _StringsEn {
   String get anime_download_streaming_ready =>
       'In library · download continues';
   @override
-  String get anime_download_task_settings => 'Task settings';
-  @override
-  String get anime_download_task_library_name => 'Library name';
-  @override
-  String get anime_download_task_content_kind => 'Import as';
-  @override
-  String get anime_download_task_settings_hint =>
-      'These settings affect library import. Use Rename / move to change downloaded files or their folder.';
-  @override
-  String get anime_download_task_more_actions => 'More task actions';
-  @override
   String get anime_download_unfiltered => 'No Trusted filter';
 }
 
@@ -80502,17 +80375,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get anime_download_streaming_ready =>
       'In library · download continues';
-  @override
-  String get anime_download_task_settings => 'Task settings';
-  @override
-  String get anime_download_task_library_name => 'Library name';
-  @override
-  String get anime_download_task_content_kind => 'Import as';
-  @override
-  String get anime_download_task_settings_hint =>
-      'These settings affect library import. Use Rename / move to change downloaded files or their folder.';
-  @override
-  String get anime_download_task_more_actions => 'More task actions';
   @override
   String get anime_download_unfiltered => 'No Trusted filter';
 }
@@ -86905,17 +86767,6 @@ class _StringsTr extends _StringsEn {
   String get anime_download_streaming_ready =>
       'In library · download continues';
   @override
-  String get anime_download_task_settings => 'Task settings';
-  @override
-  String get anime_download_task_library_name => 'Library name';
-  @override
-  String get anime_download_task_content_kind => 'Import as';
-  @override
-  String get anime_download_task_settings_hint =>
-      'These settings affect library import. Use Rename / move to change downloaded files or their folder.';
-  @override
-  String get anime_download_task_more_actions => 'More task actions';
-  @override
   String get anime_download_unfiltered => 'No Trusted filter';
 }
 
@@ -93292,17 +93143,6 @@ class _StringsVi extends _StringsEn {
   String get anime_download_streaming_ready =>
       'In library · download continues';
   @override
-  String get anime_download_task_settings => 'Task settings';
-  @override
-  String get anime_download_task_library_name => 'Library name';
-  @override
-  String get anime_download_task_content_kind => 'Import as';
-  @override
-  String get anime_download_task_settings_hint =>
-      'These settings affect library import. Use Rename / move to change downloaded files or their folder.';
-  @override
-  String get anime_download_task_more_actions => 'More task actions';
-  @override
   String get anime_download_unfiltered => 'No Trusted filter';
 }
 
@@ -99226,17 +99066,6 @@ class _StringsZhCn extends _StringsEn {
       '服务已正常响应，但按当前条件返回 0 条。查询：${query}；筛选：${filters}。请尝试别名或放宽筛选。';
   @override
   String get anime_download_streaming_ready => '已入库 · 下载继续';
-  @override
-  String get anime_download_task_settings => '任务设置';
-  @override
-  String get anime_download_task_library_name => '入库名称';
-  @override
-  String get anime_download_task_content_kind => '入库类型';
-  @override
-  String get anime_download_task_settings_hint =>
-      '这些设置影响入库；要修改下载文件名或目录，请使用“重命名 / 移动”。';
-  @override
-  String get anime_download_task_more_actions => '更多任务操作';
   @override
   String get anime_download_unfiltered => '未启用 Trusted 筛选';
 }
@@ -105410,17 +105239,6 @@ class _StringsZhHk extends _StringsEn {
   String get anime_download_streaming_ready =>
       'In library · download continues';
   @override
-  String get anime_download_task_settings => 'Task settings';
-  @override
-  String get anime_download_task_library_name => 'Library name';
-  @override
-  String get anime_download_task_content_kind => 'Import as';
-  @override
-  String get anime_download_task_settings_hint =>
-      'These settings affect library import. Use Rename / move to change downloaded files or their folder.';
-  @override
-  String get anime_download_task_more_actions => 'More task actions';
-  @override
   String get anime_download_unfiltered => 'No Trusted filter';
 }
 
@@ -111115,16 +110933,6 @@ extension on _StringsEn {
             'The service responded successfully but returned 0 items. Query: ${query}; filters: ${filters}. Try another title or loosen the filters.';
       case 'anime_download_streaming_ready':
         return 'In library · download continues';
-      case 'anime_download_task_settings':
-        return 'Task settings';
-      case 'anime_download_task_library_name':
-        return 'Library name';
-      case 'anime_download_task_content_kind':
-        return 'Import as';
-      case 'anime_download_task_settings_hint':
-        return 'These settings affect library import. Use Rename / move to change downloaded files or their folder.';
-      case 'anime_download_task_more_actions':
-        return 'More task actions';
       case 'anime_download_unfiltered':
         return 'No Trusted filter';
       default:
@@ -116818,16 +116626,6 @@ extension on _StringsAr {
             'The service responded successfully but returned 0 items. Query: ${query}; filters: ${filters}. Try another title or loosen the filters.';
       case 'anime_download_streaming_ready':
         return 'In library · download continues';
-      case 'anime_download_task_settings':
-        return 'Task settings';
-      case 'anime_download_task_library_name':
-        return 'Library name';
-      case 'anime_download_task_content_kind':
-        return 'Import as';
-      case 'anime_download_task_settings_hint':
-        return 'These settings affect library import. Use Rename / move to change downloaded files or their folder.';
-      case 'anime_download_task_more_actions':
-        return 'More task actions';
       case 'anime_download_unfiltered':
         return 'No Trusted filter';
       default:
@@ -122542,16 +122340,6 @@ extension on _StringsDe {
             'The service responded successfully but returned 0 items. Query: ${query}; filters: ${filters}. Try another title or loosen the filters.';
       case 'anime_download_streaming_ready':
         return 'In library · download continues';
-      case 'anime_download_task_settings':
-        return 'Task settings';
-      case 'anime_download_task_library_name':
-        return 'Library name';
-      case 'anime_download_task_content_kind':
-        return 'Import as';
-      case 'anime_download_task_settings_hint':
-        return 'These settings affect library import. Use Rename / move to change downloaded files or their folder.';
-      case 'anime_download_task_more_actions':
-        return 'More task actions';
       case 'anime_download_unfiltered':
         return 'No Trusted filter';
       default:
@@ -128265,16 +128053,6 @@ extension on _StringsEs {
             'The service responded successfully but returned 0 items. Query: ${query}; filters: ${filters}. Try another title or loosen the filters.';
       case 'anime_download_streaming_ready':
         return 'In library · download continues';
-      case 'anime_download_task_settings':
-        return 'Task settings';
-      case 'anime_download_task_library_name':
-        return 'Library name';
-      case 'anime_download_task_content_kind':
-        return 'Import as';
-      case 'anime_download_task_settings_hint':
-        return 'These settings affect library import. Use Rename / move to change downloaded files or their folder.';
-      case 'anime_download_task_more_actions':
-        return 'More task actions';
       case 'anime_download_unfiltered':
         return 'No Trusted filter';
       default:
@@ -133994,16 +133772,6 @@ extension on _StringsFr {
             'The service responded successfully but returned 0 items. Query: ${query}; filters: ${filters}. Try another title or loosen the filters.';
       case 'anime_download_streaming_ready':
         return 'In library · download continues';
-      case 'anime_download_task_settings':
-        return 'Task settings';
-      case 'anime_download_task_library_name':
-        return 'Library name';
-      case 'anime_download_task_content_kind':
-        return 'Import as';
-      case 'anime_download_task_settings_hint':
-        return 'These settings affect library import. Use Rename / move to change downloaded files or their folder.';
-      case 'anime_download_task_more_actions':
-        return 'More task actions';
       case 'anime_download_unfiltered':
         return 'No Trusted filter';
       default:
@@ -139705,16 +139473,6 @@ extension on _StringsId {
             'The service responded successfully but returned 0 items. Query: ${query}; filters: ${filters}. Try another title or loosen the filters.';
       case 'anime_download_streaming_ready':
         return 'In library · download continues';
-      case 'anime_download_task_settings':
-        return 'Task settings';
-      case 'anime_download_task_library_name':
-        return 'Library name';
-      case 'anime_download_task_content_kind':
-        return 'Import as';
-      case 'anime_download_task_settings_hint':
-        return 'These settings affect library import. Use Rename / move to change downloaded files or their folder.';
-      case 'anime_download_task_more_actions':
-        return 'More task actions';
       case 'anime_download_unfiltered':
         return 'No Trusted filter';
       default:
@@ -145431,16 +145189,6 @@ extension on _StringsIt {
             'The service responded successfully but returned 0 items. Query: ${query}; filters: ${filters}. Try another title or loosen the filters.';
       case 'anime_download_streaming_ready':
         return 'In library · download continues';
-      case 'anime_download_task_settings':
-        return 'Task settings';
-      case 'anime_download_task_library_name':
-        return 'Library name';
-      case 'anime_download_task_content_kind':
-        return 'Import as';
-      case 'anime_download_task_settings_hint':
-        return 'These settings affect library import. Use Rename / move to change downloaded files or their folder.';
-      case 'anime_download_task_more_actions':
-        return 'More task actions';
       case 'anime_download_unfiltered':
         return 'No Trusted filter';
       default:
@@ -151119,16 +150867,6 @@ extension on _StringsJa {
             'The service responded successfully but returned 0 items. Query: ${query}; filters: ${filters}. Try another title or loosen the filters.';
       case 'anime_download_streaming_ready':
         return 'In library · download continues';
-      case 'anime_download_task_settings':
-        return 'Task settings';
-      case 'anime_download_task_library_name':
-        return 'Library name';
-      case 'anime_download_task_content_kind':
-        return 'Import as';
-      case 'anime_download_task_settings_hint':
-        return 'These settings affect library import. Use Rename / move to change downloaded files or their folder.';
-      case 'anime_download_task_more_actions':
-        return 'More task actions';
       case 'anime_download_unfiltered':
         return 'No Trusted filter';
       default:
@@ -156811,16 +156549,6 @@ extension on _StringsKo {
             'The service responded successfully but returned 0 items. Query: ${query}; filters: ${filters}. Try another title or loosen the filters.';
       case 'anime_download_streaming_ready':
         return 'In library · download continues';
-      case 'anime_download_task_settings':
-        return 'Task settings';
-      case 'anime_download_task_library_name':
-        return 'Library name';
-      case 'anime_download_task_content_kind':
-        return 'Import as';
-      case 'anime_download_task_settings_hint':
-        return 'These settings affect library import. Use Rename / move to change downloaded files or their folder.';
-      case 'anime_download_task_more_actions':
-        return 'More task actions';
       case 'anime_download_unfiltered':
         return 'No Trusted filter';
       default:
@@ -162530,16 +162258,6 @@ extension on _StringsNl {
             'The service responded successfully but returned 0 items. Query: ${query}; filters: ${filters}. Try another title or loosen the filters.';
       case 'anime_download_streaming_ready':
         return 'In library · download continues';
-      case 'anime_download_task_settings':
-        return 'Task settings';
-      case 'anime_download_task_library_name':
-        return 'Library name';
-      case 'anime_download_task_content_kind':
-        return 'Import as';
-      case 'anime_download_task_settings_hint':
-        return 'These settings affect library import. Use Rename / move to change downloaded files or their folder.';
-      case 'anime_download_task_more_actions':
-        return 'More task actions';
       case 'anime_download_unfiltered':
         return 'No Trusted filter';
       default:
@@ -168246,16 +167964,6 @@ extension on _StringsPtBr {
             'The service responded successfully but returned 0 items. Query: ${query}; filters: ${filters}. Try another title or loosen the filters.';
       case 'anime_download_streaming_ready':
         return 'In library · download continues';
-      case 'anime_download_task_settings':
-        return 'Task settings';
-      case 'anime_download_task_library_name':
-        return 'Library name';
-      case 'anime_download_task_content_kind':
-        return 'Import as';
-      case 'anime_download_task_settings_hint':
-        return 'These settings affect library import. Use Rename / move to change downloaded files or their folder.';
-      case 'anime_download_task_more_actions':
-        return 'More task actions';
       case 'anime_download_unfiltered':
         return 'No Trusted filter';
       default:
@@ -173967,16 +173675,6 @@ extension on _StringsRu {
             'The service responded successfully but returned 0 items. Query: ${query}; filters: ${filters}. Try another title or loosen the filters.';
       case 'anime_download_streaming_ready':
         return 'In library · download continues';
-      case 'anime_download_task_settings':
-        return 'Task settings';
-      case 'anime_download_task_library_name':
-        return 'Library name';
-      case 'anime_download_task_content_kind':
-        return 'Import as';
-      case 'anime_download_task_settings_hint':
-        return 'These settings affect library import. Use Rename / move to change downloaded files or their folder.';
-      case 'anime_download_task_more_actions':
-        return 'More task actions';
       case 'anime_download_unfiltered':
         return 'No Trusted filter';
       default:
@@ -179672,16 +179370,6 @@ extension on _StringsTh {
             'The service responded successfully but returned 0 items. Query: ${query}; filters: ${filters}. Try another title or loosen the filters.';
       case 'anime_download_streaming_ready':
         return 'In library · download continues';
-      case 'anime_download_task_settings':
-        return 'Task settings';
-      case 'anime_download_task_library_name':
-        return 'Library name';
-      case 'anime_download_task_content_kind':
-        return 'Import as';
-      case 'anime_download_task_settings_hint':
-        return 'These settings affect library import. Use Rename / move to change downloaded files or their folder.';
-      case 'anime_download_task_more_actions':
-        return 'More task actions';
       case 'anime_download_unfiltered':
         return 'No Trusted filter';
       default:
@@ -185386,16 +185074,6 @@ extension on _StringsTr {
             'The service responded successfully but returned 0 items. Query: ${query}; filters: ${filters}. Try another title or loosen the filters.';
       case 'anime_download_streaming_ready':
         return 'In library · download continues';
-      case 'anime_download_task_settings':
-        return 'Task settings';
-      case 'anime_download_task_library_name':
-        return 'Library name';
-      case 'anime_download_task_content_kind':
-        return 'Import as';
-      case 'anime_download_task_settings_hint':
-        return 'These settings affect library import. Use Rename / move to change downloaded files or their folder.';
-      case 'anime_download_task_more_actions':
-        return 'More task actions';
       case 'anime_download_unfiltered':
         return 'No Trusted filter';
       default:
@@ -191095,16 +190773,6 @@ extension on _StringsVi {
             'The service responded successfully but returned 0 items. Query: ${query}; filters: ${filters}. Try another title or loosen the filters.';
       case 'anime_download_streaming_ready':
         return 'In library · download continues';
-      case 'anime_download_task_settings':
-        return 'Task settings';
-      case 'anime_download_task_library_name':
-        return 'Library name';
-      case 'anime_download_task_content_kind':
-        return 'Import as';
-      case 'anime_download_task_settings_hint':
-        return 'These settings affect library import. Use Rename / move to change downloaded files or their folder.';
-      case 'anime_download_task_more_actions':
-        return 'More task actions';
       case 'anime_download_unfiltered':
         return 'No Trusted filter';
       default:
@@ -196756,16 +196424,6 @@ extension on _StringsZhCn {
             '服务已正常响应，但按当前条件返回 0 条。查询：${query}；筛选：${filters}。请尝试别名或放宽筛选。';
       case 'anime_download_streaming_ready':
         return '已入库 · 下载继续';
-      case 'anime_download_task_settings':
-        return '任务设置';
-      case 'anime_download_task_library_name':
-        return '入库名称';
-      case 'anime_download_task_content_kind':
-        return '入库类型';
-      case 'anime_download_task_settings_hint':
-        return '这些设置影响入库；要修改下载文件名或目录，请使用“重命名 / 移动”。';
-      case 'anime_download_task_more_actions':
-        return '更多任务操作';
       case 'anime_download_unfiltered':
         return '未启用 Trusted 筛选';
       default:
@@ -202439,16 +202097,6 @@ extension on _StringsZhHk {
             'The service responded successfully but returned 0 items. Query: ${query}; filters: ${filters}. Try another title or loosen the filters.';
       case 'anime_download_streaming_ready':
         return 'In library · download continues';
-      case 'anime_download_task_settings':
-        return 'Task settings';
-      case 'anime_download_task_library_name':
-        return 'Library name';
-      case 'anime_download_task_content_kind':
-        return 'Import as';
-      case 'anime_download_task_settings_hint':
-        return 'These settings affect library import. Use Rename / move to change downloaded files or their folder.';
-      case 'anime_download_task_more_actions':
-        return 'More task actions';
       case 'anime_download_unfiltered':
         return 'No Trusted filter';
       default:
