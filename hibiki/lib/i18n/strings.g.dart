@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 48586 (2858 per locale)
+/// Strings: 48756 (2868 per locale)
 ///
-/// Built on 2026-07-31 at 16:20 UTC
+/// Built on 2026-07-31 at 18:02 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -414,8 +414,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Keep audio where it is and play from its original path; the book breaks if the file is moved or deleted.';
   String get audiobook_relocate => 'Relocate file';
   String get audiobook_relocate_done => 'Audio relocated';
-  String get audiobook_remove => 'Remove audiobook';
-  String get audiobook_remove_confirm => 'Remove the attached audiobook?';
   String get auto_add_book_name_to_tags => 'Auto-add book title to tags';
   String auto_chapter({required Object n}) => 'Chapter ${n}';
   String get auto_read_on_lookup => 'Auto read word on lookup';
@@ -3857,6 +3855,26 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
   String download_test_connection_failed_reason({required Object message}) =>
       'Connection failed: ${message}';
+  String get delete_disclosure_will_delete_label => 'Will be deleted';
+  String get delete_disclosure_will_keep_label => 'Will be kept';
+  String get delete_disclosure_book_records =>
+      'Reading progress, bookmarks, tags and subtitle data';
+  String get delete_disclosure_book_extracted =>
+      'The book files Hibiki extracted into its own storage';
+  String get delete_disclosure_book_audiobook =>
+      'The audio and aligned subtitles of the attached audiobook, if any';
+  String get delete_disclosure_source_kept =>
+      'The original files you imported (book, subtitles, audio)';
+  String get delete_disclosure_stats_kept => 'Reading statistics';
+  String get delete_disclosure_audiobook_files =>
+      'The audio and aligned subtitles Hibiki copied into its own storage';
+  String get delete_disclosure_audiobook_book_kept =>
+      'The book itself and its reading progress';
+  String get delete_disclosure_audiobook_source_kept =>
+      'The original audio files you imported';
+  String get audiobook_delete => 'Delete audiobook';
+  String get audiobook_delete_confirm =>
+      'Delete the attached audiobook? Its audio files are removed from this device.';
 }
 
 // Path: <root>
@@ -4278,10 +4296,6 @@ class _StringsAr extends _StringsEn {
   String get audiobook_relocate => 'Relocate file';
   @override
   String get audiobook_relocate_done => 'Audio relocated';
-  @override
-  String get audiobook_remove => 'إزالة الكتاب المسموع';
-  @override
-  String get audiobook_remove_confirm => 'إزالة الكتاب المسموع المرفق؟';
   @override
   String get auto_add_book_name_to_tags =>
       'إضافة عنوان الكتاب تلقائياً إلى الوسوم';
@@ -10421,6 +10435,38 @@ class _StringsAr extends _StringsEn {
   @override
   String download_test_connection_failed_reason({required Object message}) =>
       'Connection failed: ${message}';
+  @override
+  String get delete_disclosure_will_delete_label => 'Will be deleted';
+  @override
+  String get delete_disclosure_will_keep_label => 'Will be kept';
+  @override
+  String get delete_disclosure_book_records =>
+      'Reading progress, bookmarks, tags and subtitle data';
+  @override
+  String get delete_disclosure_book_extracted =>
+      'The book files Hibiki extracted into its own storage';
+  @override
+  String get delete_disclosure_book_audiobook =>
+      'The audio and aligned subtitles of the attached audiobook, if any';
+  @override
+  String get delete_disclosure_source_kept =>
+      'The original files you imported (book, subtitles, audio)';
+  @override
+  String get delete_disclosure_stats_kept => 'Reading statistics';
+  @override
+  String get delete_disclosure_audiobook_files =>
+      'The audio and aligned subtitles Hibiki copied into its own storage';
+  @override
+  String get delete_disclosure_audiobook_book_kept =>
+      'The book itself and its reading progress';
+  @override
+  String get delete_disclosure_audiobook_source_kept =>
+      'The original audio files you imported';
+  @override
+  String get audiobook_delete => 'Delete audiobook';
+  @override
+  String get audiobook_delete_confirm =>
+      'Delete the attached audiobook? Its audio files are removed from this device.';
 }
 
 // Path: <root>
@@ -10844,10 +10890,6 @@ class _StringsDe extends _StringsEn {
   String get audiobook_relocate => 'Relocate file';
   @override
   String get audiobook_relocate_done => 'Audio relocated';
-  @override
-  String get audiobook_remove => 'Hörbuch entfernen';
-  @override
-  String get audiobook_remove_confirm => 'Angehängtes Hörbuch entfernen?';
   @override
   String get auto_add_book_name_to_tags =>
       'Buchtitel automatisch zu Tags hinzufügen';
@@ -17052,6 +17094,38 @@ class _StringsDe extends _StringsEn {
   @override
   String download_test_connection_failed_reason({required Object message}) =>
       'Connection failed: ${message}';
+  @override
+  String get delete_disclosure_will_delete_label => 'Will be deleted';
+  @override
+  String get delete_disclosure_will_keep_label => 'Will be kept';
+  @override
+  String get delete_disclosure_book_records =>
+      'Reading progress, bookmarks, tags and subtitle data';
+  @override
+  String get delete_disclosure_book_extracted =>
+      'The book files Hibiki extracted into its own storage';
+  @override
+  String get delete_disclosure_book_audiobook =>
+      'The audio and aligned subtitles of the attached audiobook, if any';
+  @override
+  String get delete_disclosure_source_kept =>
+      'The original files you imported (book, subtitles, audio)';
+  @override
+  String get delete_disclosure_stats_kept => 'Reading statistics';
+  @override
+  String get delete_disclosure_audiobook_files =>
+      'The audio and aligned subtitles Hibiki copied into its own storage';
+  @override
+  String get delete_disclosure_audiobook_book_kept =>
+      'The book itself and its reading progress';
+  @override
+  String get delete_disclosure_audiobook_source_kept =>
+      'The original audio files you imported';
+  @override
+  String get audiobook_delete => 'Delete audiobook';
+  @override
+  String get audiobook_delete_confirm =>
+      'Delete the attached audiobook? Its audio files are removed from this device.';
 }
 
 // Path: <root>
@@ -17476,10 +17550,6 @@ class _StringsEs extends _StringsEn {
   String get audiobook_relocate => 'Relocate file';
   @override
   String get audiobook_relocate_done => 'Audio relocated';
-  @override
-  String get audiobook_remove => 'Eliminar audiolibro';
-  @override
-  String get audiobook_remove_confirm => '?Eliminar el audiolibro adjunto?';
   @override
   String get auto_add_book_name_to_tags =>
       'Añadir título del libro a las etiquetas automáticamente';
@@ -23699,6 +23769,38 @@ class _StringsEs extends _StringsEn {
   @override
   String download_test_connection_failed_reason({required Object message}) =>
       'Connection failed: ${message}';
+  @override
+  String get delete_disclosure_will_delete_label => 'Will be deleted';
+  @override
+  String get delete_disclosure_will_keep_label => 'Will be kept';
+  @override
+  String get delete_disclosure_book_records =>
+      'Reading progress, bookmarks, tags and subtitle data';
+  @override
+  String get delete_disclosure_book_extracted =>
+      'The book files Hibiki extracted into its own storage';
+  @override
+  String get delete_disclosure_book_audiobook =>
+      'The audio and aligned subtitles of the attached audiobook, if any';
+  @override
+  String get delete_disclosure_source_kept =>
+      'The original files you imported (book, subtitles, audio)';
+  @override
+  String get delete_disclosure_stats_kept => 'Reading statistics';
+  @override
+  String get delete_disclosure_audiobook_files =>
+      'The audio and aligned subtitles Hibiki copied into its own storage';
+  @override
+  String get delete_disclosure_audiobook_book_kept =>
+      'The book itself and its reading progress';
+  @override
+  String get delete_disclosure_audiobook_source_kept =>
+      'The original audio files you imported';
+  @override
+  String get audiobook_delete => 'Delete audiobook';
+  @override
+  String get audiobook_delete_confirm =>
+      'Delete the attached audiobook? Its audio files are removed from this device.';
 }
 
 // Path: <root>
@@ -24123,10 +24225,6 @@ class _StringsFr extends _StringsEn {
   String get audiobook_relocate => 'Relocate file';
   @override
   String get audiobook_relocate_done => 'Audio relocated';
-  @override
-  String get audiobook_remove => 'Supprimer le livre audio';
-  @override
-  String get audiobook_remove_confirm => 'Supprimer le livre audio attaché ?';
   @override
   String get auto_add_book_name_to_tags =>
       'Ajouter automatiquement le titre du livre aux étiquettes';
@@ -30357,6 +30455,38 @@ class _StringsFr extends _StringsEn {
   @override
   String download_test_connection_failed_reason({required Object message}) =>
       'Connection failed: ${message}';
+  @override
+  String get delete_disclosure_will_delete_label => 'Will be deleted';
+  @override
+  String get delete_disclosure_will_keep_label => 'Will be kept';
+  @override
+  String get delete_disclosure_book_records =>
+      'Reading progress, bookmarks, tags and subtitle data';
+  @override
+  String get delete_disclosure_book_extracted =>
+      'The book files Hibiki extracted into its own storage';
+  @override
+  String get delete_disclosure_book_audiobook =>
+      'The audio and aligned subtitles of the attached audiobook, if any';
+  @override
+  String get delete_disclosure_source_kept =>
+      'The original files you imported (book, subtitles, audio)';
+  @override
+  String get delete_disclosure_stats_kept => 'Reading statistics';
+  @override
+  String get delete_disclosure_audiobook_files =>
+      'The audio and aligned subtitles Hibiki copied into its own storage';
+  @override
+  String get delete_disclosure_audiobook_book_kept =>
+      'The book itself and its reading progress';
+  @override
+  String get delete_disclosure_audiobook_source_kept =>
+      'The original audio files you imported';
+  @override
+  String get audiobook_delete => 'Delete audiobook';
+  @override
+  String get audiobook_delete_confirm =>
+      'Delete the attached audiobook? Its audio files are removed from this device.';
 }
 
 // Path: <root>
@@ -30780,10 +30910,6 @@ class _StringsId extends _StringsEn {
   String get audiobook_relocate => 'Relocate file';
   @override
   String get audiobook_relocate_done => 'Audio relocated';
-  @override
-  String get audiobook_remove => 'Hapus Buku Audio';
-  @override
-  String get audiobook_remove_confirm => 'Hapus buku audio yang terlampir?';
   @override
   String get auto_add_book_name_to_tags =>
       'Tambahkan judul buku ke tag secara otomatis';
@@ -36944,6 +37070,38 @@ class _StringsId extends _StringsEn {
   @override
   String download_test_connection_failed_reason({required Object message}) =>
       'Connection failed: ${message}';
+  @override
+  String get delete_disclosure_will_delete_label => 'Will be deleted';
+  @override
+  String get delete_disclosure_will_keep_label => 'Will be kept';
+  @override
+  String get delete_disclosure_book_records =>
+      'Reading progress, bookmarks, tags and subtitle data';
+  @override
+  String get delete_disclosure_book_extracted =>
+      'The book files Hibiki extracted into its own storage';
+  @override
+  String get delete_disclosure_book_audiobook =>
+      'The audio and aligned subtitles of the attached audiobook, if any';
+  @override
+  String get delete_disclosure_source_kept =>
+      'The original files you imported (book, subtitles, audio)';
+  @override
+  String get delete_disclosure_stats_kept => 'Reading statistics';
+  @override
+  String get delete_disclosure_audiobook_files =>
+      'The audio and aligned subtitles Hibiki copied into its own storage';
+  @override
+  String get delete_disclosure_audiobook_book_kept =>
+      'The book itself and its reading progress';
+  @override
+  String get delete_disclosure_audiobook_source_kept =>
+      'The original audio files you imported';
+  @override
+  String get audiobook_delete => 'Delete audiobook';
+  @override
+  String get audiobook_delete_confirm =>
+      'Delete the attached audiobook? Its audio files are removed from this device.';
 }
 
 // Path: <root>
@@ -37366,10 +37524,6 @@ class _StringsIt extends _StringsEn {
   String get audiobook_relocate => 'Relocate file';
   @override
   String get audiobook_relocate_done => 'Audio relocated';
-  @override
-  String get audiobook_remove => 'Rimuovi audiolibro';
-  @override
-  String get audiobook_remove_confirm => 'Rimuovere l\'audiolibro collegato?';
   @override
   String get auto_add_book_name_to_tags =>
       'Aggiungi automaticamente il titolo del libro alle etichette';
@@ -43577,6 +43731,38 @@ class _StringsIt extends _StringsEn {
   @override
   String download_test_connection_failed_reason({required Object message}) =>
       'Connection failed: ${message}';
+  @override
+  String get delete_disclosure_will_delete_label => 'Will be deleted';
+  @override
+  String get delete_disclosure_will_keep_label => 'Will be kept';
+  @override
+  String get delete_disclosure_book_records =>
+      'Reading progress, bookmarks, tags and subtitle data';
+  @override
+  String get delete_disclosure_book_extracted =>
+      'The book files Hibiki extracted into its own storage';
+  @override
+  String get delete_disclosure_book_audiobook =>
+      'The audio and aligned subtitles of the attached audiobook, if any';
+  @override
+  String get delete_disclosure_source_kept =>
+      'The original files you imported (book, subtitles, audio)';
+  @override
+  String get delete_disclosure_stats_kept => 'Reading statistics';
+  @override
+  String get delete_disclosure_audiobook_files =>
+      'The audio and aligned subtitles Hibiki copied into its own storage';
+  @override
+  String get delete_disclosure_audiobook_book_kept =>
+      'The book itself and its reading progress';
+  @override
+  String get delete_disclosure_audiobook_source_kept =>
+      'The original audio files you imported';
+  @override
+  String get audiobook_delete => 'Delete audiobook';
+  @override
+  String get audiobook_delete_confirm =>
+      'Delete the attached audiobook? Its audio files are removed from this device.';
 }
 
 // Path: <root>
@@ -43990,10 +44176,6 @@ class _StringsJa extends _StringsEn {
   String get audiobook_relocate => 'Relocate file';
   @override
   String get audiobook_relocate_done => 'Audio relocated';
-  @override
-  String get audiobook_remove => 'オーディオブックを削除';
-  @override
-  String get audiobook_remove_confirm => '紐付けされたオーディオブックを削除しますか？';
   @override
   String get auto_add_book_name_to_tags => 'タグに本のタイトルを自動追加';
   @override
@@ -50027,6 +50209,38 @@ class _StringsJa extends _StringsEn {
   @override
   String download_test_connection_failed_reason({required Object message}) =>
       'Connection failed: ${message}';
+  @override
+  String get delete_disclosure_will_delete_label => 'Will be deleted';
+  @override
+  String get delete_disclosure_will_keep_label => 'Will be kept';
+  @override
+  String get delete_disclosure_book_records =>
+      'Reading progress, bookmarks, tags and subtitle data';
+  @override
+  String get delete_disclosure_book_extracted =>
+      'The book files Hibiki extracted into its own storage';
+  @override
+  String get delete_disclosure_book_audiobook =>
+      'The audio and aligned subtitles of the attached audiobook, if any';
+  @override
+  String get delete_disclosure_source_kept =>
+      'The original files you imported (book, subtitles, audio)';
+  @override
+  String get delete_disclosure_stats_kept => 'Reading statistics';
+  @override
+  String get delete_disclosure_audiobook_files =>
+      'The audio and aligned subtitles Hibiki copied into its own storage';
+  @override
+  String get delete_disclosure_audiobook_book_kept =>
+      'The book itself and its reading progress';
+  @override
+  String get delete_disclosure_audiobook_source_kept =>
+      'The original audio files you imported';
+  @override
+  String get audiobook_delete => 'Delete audiobook';
+  @override
+  String get audiobook_delete_confirm =>
+      'Delete the attached audiobook? Its audio files are removed from this device.';
 }
 
 // Path: <root>
@@ -50439,10 +50653,6 @@ class _StringsKo extends _StringsEn {
   String get audiobook_relocate => 'Relocate file';
   @override
   String get audiobook_relocate_done => 'Audio relocated';
-  @override
-  String get audiobook_remove => '오디오북 제거';
-  @override
-  String get audiobook_remove_confirm => '연결된 오디오북을 제거하시겠습니까?';
   @override
   String get auto_add_book_name_to_tags => '태그에 책 제목 자동 추가';
   @override
@@ -56479,6 +56689,38 @@ class _StringsKo extends _StringsEn {
   @override
   String download_test_connection_failed_reason({required Object message}) =>
       'Connection failed: ${message}';
+  @override
+  String get delete_disclosure_will_delete_label => 'Will be deleted';
+  @override
+  String get delete_disclosure_will_keep_label => 'Will be kept';
+  @override
+  String get delete_disclosure_book_records =>
+      'Reading progress, bookmarks, tags and subtitle data';
+  @override
+  String get delete_disclosure_book_extracted =>
+      'The book files Hibiki extracted into its own storage';
+  @override
+  String get delete_disclosure_book_audiobook =>
+      'The audio and aligned subtitles of the attached audiobook, if any';
+  @override
+  String get delete_disclosure_source_kept =>
+      'The original files you imported (book, subtitles, audio)';
+  @override
+  String get delete_disclosure_stats_kept => 'Reading statistics';
+  @override
+  String get delete_disclosure_audiobook_files =>
+      'The audio and aligned subtitles Hibiki copied into its own storage';
+  @override
+  String get delete_disclosure_audiobook_book_kept =>
+      'The book itself and its reading progress';
+  @override
+  String get delete_disclosure_audiobook_source_kept =>
+      'The original audio files you imported';
+  @override
+  String get audiobook_delete => 'Delete audiobook';
+  @override
+  String get audiobook_delete_confirm =>
+      'Delete the attached audiobook? Its audio files are removed from this device.';
 }
 
 // Path: <root>
@@ -56902,10 +57144,6 @@ class _StringsNl extends _StringsEn {
   String get audiobook_relocate => 'Relocate file';
   @override
   String get audiobook_relocate_done => 'Audio relocated';
-  @override
-  String get audiobook_remove => 'Audioboek verwijderen';
-  @override
-  String get audiobook_remove_confirm => 'Gekoppeld audioboek verwijderen?';
   @override
   String get auto_add_book_name_to_tags =>
       'Boektitel automatisch aan labels toevoegen';
@@ -63092,6 +63330,38 @@ class _StringsNl extends _StringsEn {
   @override
   String download_test_connection_failed_reason({required Object message}) =>
       'Connection failed: ${message}';
+  @override
+  String get delete_disclosure_will_delete_label => 'Will be deleted';
+  @override
+  String get delete_disclosure_will_keep_label => 'Will be kept';
+  @override
+  String get delete_disclosure_book_records =>
+      'Reading progress, bookmarks, tags and subtitle data';
+  @override
+  String get delete_disclosure_book_extracted =>
+      'The book files Hibiki extracted into its own storage';
+  @override
+  String get delete_disclosure_book_audiobook =>
+      'The audio and aligned subtitles of the attached audiobook, if any';
+  @override
+  String get delete_disclosure_source_kept =>
+      'The original files you imported (book, subtitles, audio)';
+  @override
+  String get delete_disclosure_stats_kept => 'Reading statistics';
+  @override
+  String get delete_disclosure_audiobook_files =>
+      'The audio and aligned subtitles Hibiki copied into its own storage';
+  @override
+  String get delete_disclosure_audiobook_book_kept =>
+      'The book itself and its reading progress';
+  @override
+  String get delete_disclosure_audiobook_source_kept =>
+      'The original audio files you imported';
+  @override
+  String get audiobook_delete => 'Delete audiobook';
+  @override
+  String get audiobook_delete_confirm =>
+      'Delete the attached audiobook? Its audio files are removed from this device.';
 }
 
 // Path: <root>
@@ -63517,10 +63787,6 @@ class _StringsPtBr extends _StringsEn {
   String get audiobook_relocate => 'Relocate file';
   @override
   String get audiobook_relocate_done => 'Audio relocated';
-  @override
-  String get audiobook_remove => 'Remover Audiolivro';
-  @override
-  String get audiobook_remove_confirm => 'Remover o audiolivro anexado?';
   @override
   String get auto_add_book_name_to_tags =>
       'Adicionar título do livro às tags automaticamente';
@@ -69718,6 +69984,38 @@ class _StringsPtBr extends _StringsEn {
   @override
   String download_test_connection_failed_reason({required Object message}) =>
       'Connection failed: ${message}';
+  @override
+  String get delete_disclosure_will_delete_label => 'Will be deleted';
+  @override
+  String get delete_disclosure_will_keep_label => 'Will be kept';
+  @override
+  String get delete_disclosure_book_records =>
+      'Reading progress, bookmarks, tags and subtitle data';
+  @override
+  String get delete_disclosure_book_extracted =>
+      'The book files Hibiki extracted into its own storage';
+  @override
+  String get delete_disclosure_book_audiobook =>
+      'The audio and aligned subtitles of the attached audiobook, if any';
+  @override
+  String get delete_disclosure_source_kept =>
+      'The original files you imported (book, subtitles, audio)';
+  @override
+  String get delete_disclosure_stats_kept => 'Reading statistics';
+  @override
+  String get delete_disclosure_audiobook_files =>
+      'The audio and aligned subtitles Hibiki copied into its own storage';
+  @override
+  String get delete_disclosure_audiobook_book_kept =>
+      'The book itself and its reading progress';
+  @override
+  String get delete_disclosure_audiobook_source_kept =>
+      'The original audio files you imported';
+  @override
+  String get audiobook_delete => 'Delete audiobook';
+  @override
+  String get audiobook_delete_confirm =>
+      'Delete the attached audiobook? Its audio files are removed from this device.';
 }
 
 // Path: <root>
@@ -70141,10 +70439,6 @@ class _StringsRu extends _StringsEn {
   String get audiobook_relocate => 'Relocate file';
   @override
   String get audiobook_relocate_done => 'Audio relocated';
-  @override
-  String get audiobook_remove => 'Удалить аудиокнигу';
-  @override
-  String get audiobook_remove_confirm => 'Удалить привязанную аудиокнигу?';
   @override
   String get auto_add_book_name_to_tags =>
       'Автодобавление названия книги в теги';
@@ -76328,6 +76622,38 @@ class _StringsRu extends _StringsEn {
   @override
   String download_test_connection_failed_reason({required Object message}) =>
       'Connection failed: ${message}';
+  @override
+  String get delete_disclosure_will_delete_label => 'Will be deleted';
+  @override
+  String get delete_disclosure_will_keep_label => 'Will be kept';
+  @override
+  String get delete_disclosure_book_records =>
+      'Reading progress, bookmarks, tags and subtitle data';
+  @override
+  String get delete_disclosure_book_extracted =>
+      'The book files Hibiki extracted into its own storage';
+  @override
+  String get delete_disclosure_book_audiobook =>
+      'The audio and aligned subtitles of the attached audiobook, if any';
+  @override
+  String get delete_disclosure_source_kept =>
+      'The original files you imported (book, subtitles, audio)';
+  @override
+  String get delete_disclosure_stats_kept => 'Reading statistics';
+  @override
+  String get delete_disclosure_audiobook_files =>
+      'The audio and aligned subtitles Hibiki copied into its own storage';
+  @override
+  String get delete_disclosure_audiobook_book_kept =>
+      'The book itself and its reading progress';
+  @override
+  String get delete_disclosure_audiobook_source_kept =>
+      'The original audio files you imported';
+  @override
+  String get audiobook_delete => 'Delete audiobook';
+  @override
+  String get audiobook_delete_confirm =>
+      'Delete the attached audiobook? Its audio files are removed from this device.';
 }
 
 // Path: <root>
@@ -76748,10 +77074,6 @@ class _StringsTh extends _StringsEn {
   String get audiobook_relocate => 'Relocate file';
   @override
   String get audiobook_relocate_done => 'Audio relocated';
-  @override
-  String get audiobook_remove => 'ลบหนังสือเสียง';
-  @override
-  String get audiobook_remove_confirm => 'ลบหนังสือเสียงที่แนบอยู่?';
   @override
   String get auto_add_book_name_to_tags => 'เพิ่มชื่อหนังสือในแท็กอัตโนมัติ';
   @override
@@ -82886,6 +83208,38 @@ class _StringsTh extends _StringsEn {
   @override
   String download_test_connection_failed_reason({required Object message}) =>
       'Connection failed: ${message}';
+  @override
+  String get delete_disclosure_will_delete_label => 'Will be deleted';
+  @override
+  String get delete_disclosure_will_keep_label => 'Will be kept';
+  @override
+  String get delete_disclosure_book_records =>
+      'Reading progress, bookmarks, tags and subtitle data';
+  @override
+  String get delete_disclosure_book_extracted =>
+      'The book files Hibiki extracted into its own storage';
+  @override
+  String get delete_disclosure_book_audiobook =>
+      'The audio and aligned subtitles of the attached audiobook, if any';
+  @override
+  String get delete_disclosure_source_kept =>
+      'The original files you imported (book, subtitles, audio)';
+  @override
+  String get delete_disclosure_stats_kept => 'Reading statistics';
+  @override
+  String get delete_disclosure_audiobook_files =>
+      'The audio and aligned subtitles Hibiki copied into its own storage';
+  @override
+  String get delete_disclosure_audiobook_book_kept =>
+      'The book itself and its reading progress';
+  @override
+  String get delete_disclosure_audiobook_source_kept =>
+      'The original audio files you imported';
+  @override
+  String get audiobook_delete => 'Delete audiobook';
+  @override
+  String get audiobook_delete_confirm =>
+      'Delete the attached audiobook? Its audio files are removed from this device.';
 }
 
 // Path: <root>
@@ -83308,10 +83662,6 @@ class _StringsTr extends _StringsEn {
   String get audiobook_relocate => 'Relocate file';
   @override
   String get audiobook_relocate_done => 'Audio relocated';
-  @override
-  String get audiobook_remove => 'Sesli kitabı kaldır';
-  @override
-  String get audiobook_remove_confirm => 'Bağlı sesli kitap kaldırılsın mı?';
   @override
   String get auto_add_book_name_to_tags =>
       'Kitap başlığını otomatik olarak etiketlere ekle';
@@ -89476,6 +89826,38 @@ class _StringsTr extends _StringsEn {
   @override
   String download_test_connection_failed_reason({required Object message}) =>
       'Connection failed: ${message}';
+  @override
+  String get delete_disclosure_will_delete_label => 'Will be deleted';
+  @override
+  String get delete_disclosure_will_keep_label => 'Will be kept';
+  @override
+  String get delete_disclosure_book_records =>
+      'Reading progress, bookmarks, tags and subtitle data';
+  @override
+  String get delete_disclosure_book_extracted =>
+      'The book files Hibiki extracted into its own storage';
+  @override
+  String get delete_disclosure_book_audiobook =>
+      'The audio and aligned subtitles of the attached audiobook, if any';
+  @override
+  String get delete_disclosure_source_kept =>
+      'The original files you imported (book, subtitles, audio)';
+  @override
+  String get delete_disclosure_stats_kept => 'Reading statistics';
+  @override
+  String get delete_disclosure_audiobook_files =>
+      'The audio and aligned subtitles Hibiki copied into its own storage';
+  @override
+  String get delete_disclosure_audiobook_book_kept =>
+      'The book itself and its reading progress';
+  @override
+  String get delete_disclosure_audiobook_source_kept =>
+      'The original audio files you imported';
+  @override
+  String get audiobook_delete => 'Delete audiobook';
+  @override
+  String get audiobook_delete_confirm =>
+      'Delete the attached audiobook? Its audio files are removed from this device.';
 }
 
 // Path: <root>
@@ -89899,10 +90281,6 @@ class _StringsVi extends _StringsEn {
   String get audiobook_relocate => 'Relocate file';
   @override
   String get audiobook_relocate_done => 'Audio relocated';
-  @override
-  String get audiobook_remove => 'Xóa sách nói';
-  @override
-  String get audiobook_remove_confirm => 'Xóa sách nói đã gắn?';
   @override
   String get auto_add_book_name_to_tags => 'Tự thêm tên sách vào tag';
   @override
@@ -96051,6 +96429,38 @@ class _StringsVi extends _StringsEn {
   @override
   String download_test_connection_failed_reason({required Object message}) =>
       'Connection failed: ${message}';
+  @override
+  String get delete_disclosure_will_delete_label => 'Will be deleted';
+  @override
+  String get delete_disclosure_will_keep_label => 'Will be kept';
+  @override
+  String get delete_disclosure_book_records =>
+      'Reading progress, bookmarks, tags and subtitle data';
+  @override
+  String get delete_disclosure_book_extracted =>
+      'The book files Hibiki extracted into its own storage';
+  @override
+  String get delete_disclosure_book_audiobook =>
+      'The audio and aligned subtitles of the attached audiobook, if any';
+  @override
+  String get delete_disclosure_source_kept =>
+      'The original files you imported (book, subtitles, audio)';
+  @override
+  String get delete_disclosure_stats_kept => 'Reading statistics';
+  @override
+  String get delete_disclosure_audiobook_files =>
+      'The audio and aligned subtitles Hibiki copied into its own storage';
+  @override
+  String get delete_disclosure_audiobook_book_kept =>
+      'The book itself and its reading progress';
+  @override
+  String get delete_disclosure_audiobook_source_kept =>
+      'The original audio files you imported';
+  @override
+  String get audiobook_delete => 'Delete audiobook';
+  @override
+  String get audiobook_delete_confirm =>
+      'Delete the attached audiobook? Its audio files are removed from this device.';
 }
 
 // Path: <root>
@@ -96439,10 +96849,6 @@ class _StringsZhCn extends _StringsEn {
   String get audiobook_relocate => '重新定位文件';
   @override
   String get audiobook_relocate_done => '音频已重新定位';
-  @override
-  String get audiobook_remove => '移除有声书';
-  @override
-  String get audiobook_remove_confirm => '移除已附加的有声书？';
   @override
   String get auto_add_book_name_to_tags => '自动添加书名到标签';
   @override
@@ -102164,6 +102570,30 @@ class _StringsZhCn extends _StringsEn {
   @override
   String download_test_connection_failed_reason({required Object message}) =>
       '连接失败：${message}';
+  @override
+  String get delete_disclosure_will_delete_label => '会被删除';
+  @override
+  String get delete_disclosure_will_keep_label => '会被保留';
+  @override
+  String get delete_disclosure_book_records => '阅读进度、书签、标签和字幕数据';
+  @override
+  String get delete_disclosure_book_extracted => 'Hibiki 解压到自己存储目录里的书籍文件';
+  @override
+  String get delete_disclosure_book_audiobook => '配套有声书的音频和对齐字幕（如果有）';
+  @override
+  String get delete_disclosure_source_kept => '你导入时选择的原始文件（书籍、字幕、音频）';
+  @override
+  String get delete_disclosure_stats_kept => '阅读统计';
+  @override
+  String get delete_disclosure_audiobook_files => 'Hibiki 复制到自己存储目录里的音频和对齐字幕';
+  @override
+  String get delete_disclosure_audiobook_book_kept => '书籍本身和它的阅读进度';
+  @override
+  String get delete_disclosure_audiobook_source_kept => '你导入时选择的原始音频文件';
+  @override
+  String get audiobook_delete => '删除有声书';
+  @override
+  String get audiobook_delete_confirm => '删除已附加的有声书？它的音频文件会从本机删除。';
 }
 
 // Path: <root>
@@ -102568,10 +102998,6 @@ class _StringsZhHk extends _StringsEn {
   String get audiobook_relocate => 'Relocate file';
   @override
   String get audiobook_relocate_done => 'Audio relocated';
-  @override
-  String get audiobook_remove => '移除有聲書';
-  @override
-  String get audiobook_remove_confirm => '移除已附加的有聲書？';
   @override
   String get auto_add_book_name_to_tags => '自動將書名加入標籤';
   @override
@@ -108535,6 +108961,38 @@ class _StringsZhHk extends _StringsEn {
   @override
   String download_test_connection_failed_reason({required Object message}) =>
       'Connection failed: ${message}';
+  @override
+  String get delete_disclosure_will_delete_label => 'Will be deleted';
+  @override
+  String get delete_disclosure_will_keep_label => 'Will be kept';
+  @override
+  String get delete_disclosure_book_records =>
+      'Reading progress, bookmarks, tags and subtitle data';
+  @override
+  String get delete_disclosure_book_extracted =>
+      'The book files Hibiki extracted into its own storage';
+  @override
+  String get delete_disclosure_book_audiobook =>
+      'The audio and aligned subtitles of the attached audiobook, if any';
+  @override
+  String get delete_disclosure_source_kept =>
+      'The original files you imported (book, subtitles, audio)';
+  @override
+  String get delete_disclosure_stats_kept => 'Reading statistics';
+  @override
+  String get delete_disclosure_audiobook_files =>
+      'The audio and aligned subtitles Hibiki copied into its own storage';
+  @override
+  String get delete_disclosure_audiobook_book_kept =>
+      'The book itself and its reading progress';
+  @override
+  String get delete_disclosure_audiobook_source_kept =>
+      'The original audio files you imported';
+  @override
+  String get audiobook_delete => 'Delete audiobook';
+  @override
+  String get audiobook_delete_confirm =>
+      'Delete the attached audiobook? Its audio files are removed from this device.';
 }
 
 /// Flat map(s) containing all translations.
@@ -108881,10 +109339,6 @@ extension on _StringsEn {
         return 'Relocate file';
       case 'audiobook_relocate_done':
         return 'Audio relocated';
-      case 'audiobook_remove':
-        return 'Remove audiobook';
-      case 'audiobook_remove_confirm':
-        return 'Remove the attached audiobook?';
       case 'auto_add_book_name_to_tags':
         return 'Auto-add book title to tags';
       case 'auto_chapter':
@@ -114399,6 +114853,30 @@ extension on _StringsEn {
         return 'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
       case 'download_test_connection_failed_reason':
         return ({required Object message}) => 'Connection failed: ${message}';
+      case 'delete_disclosure_will_delete_label':
+        return 'Will be deleted';
+      case 'delete_disclosure_will_keep_label':
+        return 'Will be kept';
+      case 'delete_disclosure_book_records':
+        return 'Reading progress, bookmarks, tags and subtitle data';
+      case 'delete_disclosure_book_extracted':
+        return 'The book files Hibiki extracted into its own storage';
+      case 'delete_disclosure_book_audiobook':
+        return 'The audio and aligned subtitles of the attached audiobook, if any';
+      case 'delete_disclosure_source_kept':
+        return 'The original files you imported (book, subtitles, audio)';
+      case 'delete_disclosure_stats_kept':
+        return 'Reading statistics';
+      case 'delete_disclosure_audiobook_files':
+        return 'The audio and aligned subtitles Hibiki copied into its own storage';
+      case 'delete_disclosure_audiobook_book_kept':
+        return 'The book itself and its reading progress';
+      case 'delete_disclosure_audiobook_source_kept':
+        return 'The original audio files you imported';
+      case 'audiobook_delete':
+        return 'Delete audiobook';
+      case 'audiobook_delete_confirm':
+        return 'Delete the attached audiobook? Its audio files are removed from this device.';
       default:
         return null;
     }
@@ -114745,10 +115223,6 @@ extension on _StringsAr {
         return 'Relocate file';
       case 'audiobook_relocate_done':
         return 'Audio relocated';
-      case 'audiobook_remove':
-        return 'إزالة الكتاب المسموع';
-      case 'audiobook_remove_confirm':
-        return 'إزالة الكتاب المسموع المرفق؟';
       case 'auto_add_book_name_to_tags':
         return 'إضافة عنوان الكتاب تلقائياً إلى الوسوم';
       case 'auto_chapter':
@@ -120261,6 +120735,30 @@ extension on _StringsAr {
         return 'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
       case 'download_test_connection_failed_reason':
         return ({required Object message}) => 'Connection failed: ${message}';
+      case 'delete_disclosure_will_delete_label':
+        return 'Will be deleted';
+      case 'delete_disclosure_will_keep_label':
+        return 'Will be kept';
+      case 'delete_disclosure_book_records':
+        return 'Reading progress, bookmarks, tags and subtitle data';
+      case 'delete_disclosure_book_extracted':
+        return 'The book files Hibiki extracted into its own storage';
+      case 'delete_disclosure_book_audiobook':
+        return 'The audio and aligned subtitles of the attached audiobook, if any';
+      case 'delete_disclosure_source_kept':
+        return 'The original files you imported (book, subtitles, audio)';
+      case 'delete_disclosure_stats_kept':
+        return 'Reading statistics';
+      case 'delete_disclosure_audiobook_files':
+        return 'The audio and aligned subtitles Hibiki copied into its own storage';
+      case 'delete_disclosure_audiobook_book_kept':
+        return 'The book itself and its reading progress';
+      case 'delete_disclosure_audiobook_source_kept':
+        return 'The original audio files you imported';
+      case 'audiobook_delete':
+        return 'Delete audiobook';
+      case 'audiobook_delete_confirm':
+        return 'Delete the attached audiobook? Its audio files are removed from this device.';
       default:
         return null;
     }
@@ -120609,10 +121107,6 @@ extension on _StringsDe {
         return 'Relocate file';
       case 'audiobook_relocate_done':
         return 'Audio relocated';
-      case 'audiobook_remove':
-        return 'Hörbuch entfernen';
-      case 'audiobook_remove_confirm':
-        return 'Angehängtes Hörbuch entfernen?';
       case 'auto_add_book_name_to_tags':
         return 'Buchtitel automatisch zu Tags hinzufügen';
       case 'auto_chapter':
@@ -126145,6 +126639,30 @@ extension on _StringsDe {
         return 'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
       case 'download_test_connection_failed_reason':
         return ({required Object message}) => 'Connection failed: ${message}';
+      case 'delete_disclosure_will_delete_label':
+        return 'Will be deleted';
+      case 'delete_disclosure_will_keep_label':
+        return 'Will be kept';
+      case 'delete_disclosure_book_records':
+        return 'Reading progress, bookmarks, tags and subtitle data';
+      case 'delete_disclosure_book_extracted':
+        return 'The book files Hibiki extracted into its own storage';
+      case 'delete_disclosure_book_audiobook':
+        return 'The audio and aligned subtitles of the attached audiobook, if any';
+      case 'delete_disclosure_source_kept':
+        return 'The original files you imported (book, subtitles, audio)';
+      case 'delete_disclosure_stats_kept':
+        return 'Reading statistics';
+      case 'delete_disclosure_audiobook_files':
+        return 'The audio and aligned subtitles Hibiki copied into its own storage';
+      case 'delete_disclosure_audiobook_book_kept':
+        return 'The book itself and its reading progress';
+      case 'delete_disclosure_audiobook_source_kept':
+        return 'The original audio files you imported';
+      case 'audiobook_delete':
+        return 'Delete audiobook';
+      case 'audiobook_delete_confirm':
+        return 'Delete the attached audiobook? Its audio files are removed from this device.';
       default:
         return null;
     }
@@ -126494,10 +127012,6 @@ extension on _StringsEs {
         return 'Relocate file';
       case 'audiobook_relocate_done':
         return 'Audio relocated';
-      case 'audiobook_remove':
-        return 'Eliminar audiolibro';
-      case 'audiobook_remove_confirm':
-        return '?Eliminar el audiolibro adjunto?';
       case 'auto_add_book_name_to_tags':
         return 'Añadir título del libro a las etiquetas automáticamente';
       case 'auto_chapter':
@@ -132028,6 +132542,30 @@ extension on _StringsEs {
         return 'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
       case 'download_test_connection_failed_reason':
         return ({required Object message}) => 'Connection failed: ${message}';
+      case 'delete_disclosure_will_delete_label':
+        return 'Will be deleted';
+      case 'delete_disclosure_will_keep_label':
+        return 'Will be kept';
+      case 'delete_disclosure_book_records':
+        return 'Reading progress, bookmarks, tags and subtitle data';
+      case 'delete_disclosure_book_extracted':
+        return 'The book files Hibiki extracted into its own storage';
+      case 'delete_disclosure_book_audiobook':
+        return 'The audio and aligned subtitles of the attached audiobook, if any';
+      case 'delete_disclosure_source_kept':
+        return 'The original files you imported (book, subtitles, audio)';
+      case 'delete_disclosure_stats_kept':
+        return 'Reading statistics';
+      case 'delete_disclosure_audiobook_files':
+        return 'The audio and aligned subtitles Hibiki copied into its own storage';
+      case 'delete_disclosure_audiobook_book_kept':
+        return 'The book itself and its reading progress';
+      case 'delete_disclosure_audiobook_source_kept':
+        return 'The original audio files you imported';
+      case 'audiobook_delete':
+        return 'Delete audiobook';
+      case 'audiobook_delete_confirm':
+        return 'Delete the attached audiobook? Its audio files are removed from this device.';
       default:
         return null;
     }
@@ -132378,10 +132916,6 @@ extension on _StringsFr {
         return 'Relocate file';
       case 'audiobook_relocate_done':
         return 'Audio relocated';
-      case 'audiobook_remove':
-        return 'Supprimer le livre audio';
-      case 'audiobook_remove_confirm':
-        return 'Supprimer le livre audio attaché ?';
       case 'auto_add_book_name_to_tags':
         return 'Ajouter automatiquement le titre du livre aux étiquettes';
       case 'auto_chapter':
@@ -137917,6 +138451,30 @@ extension on _StringsFr {
         return 'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
       case 'download_test_connection_failed_reason':
         return ({required Object message}) => 'Connection failed: ${message}';
+      case 'delete_disclosure_will_delete_label':
+        return 'Will be deleted';
+      case 'delete_disclosure_will_keep_label':
+        return 'Will be kept';
+      case 'delete_disclosure_book_records':
+        return 'Reading progress, bookmarks, tags and subtitle data';
+      case 'delete_disclosure_book_extracted':
+        return 'The book files Hibiki extracted into its own storage';
+      case 'delete_disclosure_book_audiobook':
+        return 'The audio and aligned subtitles of the attached audiobook, if any';
+      case 'delete_disclosure_source_kept':
+        return 'The original files you imported (book, subtitles, audio)';
+      case 'delete_disclosure_stats_kept':
+        return 'Reading statistics';
+      case 'delete_disclosure_audiobook_files':
+        return 'The audio and aligned subtitles Hibiki copied into its own storage';
+      case 'delete_disclosure_audiobook_book_kept':
+        return 'The book itself and its reading progress';
+      case 'delete_disclosure_audiobook_source_kept':
+        return 'The original audio files you imported';
+      case 'audiobook_delete':
+        return 'Delete audiobook';
+      case 'audiobook_delete_confirm':
+        return 'Delete the attached audiobook? Its audio files are removed from this device.';
       default:
         return null;
     }
@@ -138265,10 +138823,6 @@ extension on _StringsId {
         return 'Relocate file';
       case 'audiobook_relocate_done':
         return 'Audio relocated';
-      case 'audiobook_remove':
-        return 'Hapus Buku Audio';
-      case 'audiobook_remove_confirm':
-        return 'Hapus buku audio yang terlampir?';
       case 'auto_add_book_name_to_tags':
         return 'Tambahkan judul buku ke tag secara otomatis';
       case 'auto_chapter':
@@ -143788,6 +144342,30 @@ extension on _StringsId {
         return 'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
       case 'download_test_connection_failed_reason':
         return ({required Object message}) => 'Connection failed: ${message}';
+      case 'delete_disclosure_will_delete_label':
+        return 'Will be deleted';
+      case 'delete_disclosure_will_keep_label':
+        return 'Will be kept';
+      case 'delete_disclosure_book_records':
+        return 'Reading progress, bookmarks, tags and subtitle data';
+      case 'delete_disclosure_book_extracted':
+        return 'The book files Hibiki extracted into its own storage';
+      case 'delete_disclosure_book_audiobook':
+        return 'The audio and aligned subtitles of the attached audiobook, if any';
+      case 'delete_disclosure_source_kept':
+        return 'The original files you imported (book, subtitles, audio)';
+      case 'delete_disclosure_stats_kept':
+        return 'Reading statistics';
+      case 'delete_disclosure_audiobook_files':
+        return 'The audio and aligned subtitles Hibiki copied into its own storage';
+      case 'delete_disclosure_audiobook_book_kept':
+        return 'The book itself and its reading progress';
+      case 'delete_disclosure_audiobook_source_kept':
+        return 'The original audio files you imported';
+      case 'audiobook_delete':
+        return 'Delete audiobook';
+      case 'audiobook_delete_confirm':
+        return 'Delete the attached audiobook? Its audio files are removed from this device.';
       default:
         return null;
     }
@@ -144136,10 +144714,6 @@ extension on _StringsIt {
         return 'Relocate file';
       case 'audiobook_relocate_done':
         return 'Audio relocated';
-      case 'audiobook_remove':
-        return 'Rimuovi audiolibro';
-      case 'audiobook_remove_confirm':
-        return 'Rimuovere l\'audiolibro collegato?';
       case 'auto_add_book_name_to_tags':
         return 'Aggiungi automaticamente il titolo del libro alle etichette';
       case 'auto_chapter':
@@ -149673,6 +150247,30 @@ extension on _StringsIt {
         return 'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
       case 'download_test_connection_failed_reason':
         return ({required Object message}) => 'Connection failed: ${message}';
+      case 'delete_disclosure_will_delete_label':
+        return 'Will be deleted';
+      case 'delete_disclosure_will_keep_label':
+        return 'Will be kept';
+      case 'delete_disclosure_book_records':
+        return 'Reading progress, bookmarks, tags and subtitle data';
+      case 'delete_disclosure_book_extracted':
+        return 'The book files Hibiki extracted into its own storage';
+      case 'delete_disclosure_book_audiobook':
+        return 'The audio and aligned subtitles of the attached audiobook, if any';
+      case 'delete_disclosure_source_kept':
+        return 'The original files you imported (book, subtitles, audio)';
+      case 'delete_disclosure_stats_kept':
+        return 'Reading statistics';
+      case 'delete_disclosure_audiobook_files':
+        return 'The audio and aligned subtitles Hibiki copied into its own storage';
+      case 'delete_disclosure_audiobook_book_kept':
+        return 'The book itself and its reading progress';
+      case 'delete_disclosure_audiobook_source_kept':
+        return 'The original audio files you imported';
+      case 'audiobook_delete':
+        return 'Delete audiobook';
+      case 'audiobook_delete_confirm':
+        return 'Delete the attached audiobook? Its audio files are removed from this device.';
       default:
         return null;
     }
@@ -150017,10 +150615,6 @@ extension on _StringsJa {
         return 'Relocate file';
       case 'audiobook_relocate_done':
         return 'Audio relocated';
-      case 'audiobook_remove':
-        return 'オーディオブックを削除';
-      case 'audiobook_remove_confirm':
-        return '紐付けされたオーディオブックを削除しますか？';
       case 'auto_add_book_name_to_tags':
         return 'タグに本のタイトルを自動追加';
       case 'auto_chapter':
@@ -155520,6 +156114,30 @@ extension on _StringsJa {
         return 'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
       case 'download_test_connection_failed_reason':
         return ({required Object message}) => 'Connection failed: ${message}';
+      case 'delete_disclosure_will_delete_label':
+        return 'Will be deleted';
+      case 'delete_disclosure_will_keep_label':
+        return 'Will be kept';
+      case 'delete_disclosure_book_records':
+        return 'Reading progress, bookmarks, tags and subtitle data';
+      case 'delete_disclosure_book_extracted':
+        return 'The book files Hibiki extracted into its own storage';
+      case 'delete_disclosure_book_audiobook':
+        return 'The audio and aligned subtitles of the attached audiobook, if any';
+      case 'delete_disclosure_source_kept':
+        return 'The original files you imported (book, subtitles, audio)';
+      case 'delete_disclosure_stats_kept':
+        return 'Reading statistics';
+      case 'delete_disclosure_audiobook_files':
+        return 'The audio and aligned subtitles Hibiki copied into its own storage';
+      case 'delete_disclosure_audiobook_book_kept':
+        return 'The book itself and its reading progress';
+      case 'delete_disclosure_audiobook_source_kept':
+        return 'The original audio files you imported';
+      case 'audiobook_delete':
+        return 'Delete audiobook';
+      case 'audiobook_delete_confirm':
+        return 'Delete the attached audiobook? Its audio files are removed from this device.';
       default:
         return null;
     }
@@ -155864,10 +156482,6 @@ extension on _StringsKo {
         return 'Relocate file';
       case 'audiobook_relocate_done':
         return 'Audio relocated';
-      case 'audiobook_remove':
-        return '오디오북 제거';
-      case 'audiobook_remove_confirm':
-        return '연결된 오디오북을 제거하시겠습니까?';
       case 'auto_add_book_name_to_tags':
         return '태그에 책 제목 자동 추가';
       case 'auto_chapter':
@@ -161371,6 +161985,30 @@ extension on _StringsKo {
         return 'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
       case 'download_test_connection_failed_reason':
         return ({required Object message}) => 'Connection failed: ${message}';
+      case 'delete_disclosure_will_delete_label':
+        return 'Will be deleted';
+      case 'delete_disclosure_will_keep_label':
+        return 'Will be kept';
+      case 'delete_disclosure_book_records':
+        return 'Reading progress, bookmarks, tags and subtitle data';
+      case 'delete_disclosure_book_extracted':
+        return 'The book files Hibiki extracted into its own storage';
+      case 'delete_disclosure_book_audiobook':
+        return 'The audio and aligned subtitles of the attached audiobook, if any';
+      case 'delete_disclosure_source_kept':
+        return 'The original files you imported (book, subtitles, audio)';
+      case 'delete_disclosure_stats_kept':
+        return 'Reading statistics';
+      case 'delete_disclosure_audiobook_files':
+        return 'The audio and aligned subtitles Hibiki copied into its own storage';
+      case 'delete_disclosure_audiobook_book_kept':
+        return 'The book itself and its reading progress';
+      case 'delete_disclosure_audiobook_source_kept':
+        return 'The original audio files you imported';
+      case 'audiobook_delete':
+        return 'Delete audiobook';
+      case 'audiobook_delete_confirm':
+        return 'Delete the attached audiobook? Its audio files are removed from this device.';
       default:
         return null;
     }
@@ -161718,10 +162356,6 @@ extension on _StringsNl {
         return 'Relocate file';
       case 'audiobook_relocate_done':
         return 'Audio relocated';
-      case 'audiobook_remove':
-        return 'Audioboek verwijderen';
-      case 'audiobook_remove_confirm':
-        return 'Gekoppeld audioboek verwijderen?';
       case 'auto_add_book_name_to_tags':
         return 'Boektitel automatisch aan labels toevoegen';
       case 'auto_chapter':
@@ -167250,6 +167884,30 @@ extension on _StringsNl {
         return 'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
       case 'download_test_connection_failed_reason':
         return ({required Object message}) => 'Connection failed: ${message}';
+      case 'delete_disclosure_will_delete_label':
+        return 'Will be deleted';
+      case 'delete_disclosure_will_keep_label':
+        return 'Will be kept';
+      case 'delete_disclosure_book_records':
+        return 'Reading progress, bookmarks, tags and subtitle data';
+      case 'delete_disclosure_book_extracted':
+        return 'The book files Hibiki extracted into its own storage';
+      case 'delete_disclosure_book_audiobook':
+        return 'The audio and aligned subtitles of the attached audiobook, if any';
+      case 'delete_disclosure_source_kept':
+        return 'The original files you imported (book, subtitles, audio)';
+      case 'delete_disclosure_stats_kept':
+        return 'Reading statistics';
+      case 'delete_disclosure_audiobook_files':
+        return 'The audio and aligned subtitles Hibiki copied into its own storage';
+      case 'delete_disclosure_audiobook_book_kept':
+        return 'The book itself and its reading progress';
+      case 'delete_disclosure_audiobook_source_kept':
+        return 'The original audio files you imported';
+      case 'audiobook_delete':
+        return 'Delete audiobook';
+      case 'audiobook_delete_confirm':
+        return 'Delete the attached audiobook? Its audio files are removed from this device.';
       default:
         return null;
     }
@@ -167598,10 +168256,6 @@ extension on _StringsPtBr {
         return 'Relocate file';
       case 'audiobook_relocate_done':
         return 'Audio relocated';
-      case 'audiobook_remove':
-        return 'Remover Audiolivro';
-      case 'audiobook_remove_confirm':
-        return 'Remover o audiolivro anexado?';
       case 'auto_add_book_name_to_tags':
         return 'Adicionar título do livro às tags automaticamente';
       case 'auto_chapter':
@@ -173126,6 +173780,30 @@ extension on _StringsPtBr {
         return 'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
       case 'download_test_connection_failed_reason':
         return ({required Object message}) => 'Connection failed: ${message}';
+      case 'delete_disclosure_will_delete_label':
+        return 'Will be deleted';
+      case 'delete_disclosure_will_keep_label':
+        return 'Will be kept';
+      case 'delete_disclosure_book_records':
+        return 'Reading progress, bookmarks, tags and subtitle data';
+      case 'delete_disclosure_book_extracted':
+        return 'The book files Hibiki extracted into its own storage';
+      case 'delete_disclosure_book_audiobook':
+        return 'The audio and aligned subtitles of the attached audiobook, if any';
+      case 'delete_disclosure_source_kept':
+        return 'The original files you imported (book, subtitles, audio)';
+      case 'delete_disclosure_stats_kept':
+        return 'Reading statistics';
+      case 'delete_disclosure_audiobook_files':
+        return 'The audio and aligned subtitles Hibiki copied into its own storage';
+      case 'delete_disclosure_audiobook_book_kept':
+        return 'The book itself and its reading progress';
+      case 'delete_disclosure_audiobook_source_kept':
+        return 'The original audio files you imported';
+      case 'audiobook_delete':
+        return 'Delete audiobook';
+      case 'audiobook_delete_confirm':
+        return 'Delete the attached audiobook? Its audio files are removed from this device.';
       default:
         return null;
     }
@@ -173475,10 +174153,6 @@ extension on _StringsRu {
         return 'Relocate file';
       case 'audiobook_relocate_done':
         return 'Audio relocated';
-      case 'audiobook_remove':
-        return 'Удалить аудиокнигу';
-      case 'audiobook_remove_confirm':
-        return 'Удалить привязанную аудиокнигу?';
       case 'auto_add_book_name_to_tags':
         return 'Автодобавление названия книги в теги';
       case 'auto_chapter':
@@ -179007,6 +179681,30 @@ extension on _StringsRu {
         return 'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
       case 'download_test_connection_failed_reason':
         return ({required Object message}) => 'Connection failed: ${message}';
+      case 'delete_disclosure_will_delete_label':
+        return 'Will be deleted';
+      case 'delete_disclosure_will_keep_label':
+        return 'Will be kept';
+      case 'delete_disclosure_book_records':
+        return 'Reading progress, bookmarks, tags and subtitle data';
+      case 'delete_disclosure_book_extracted':
+        return 'The book files Hibiki extracted into its own storage';
+      case 'delete_disclosure_book_audiobook':
+        return 'The audio and aligned subtitles of the attached audiobook, if any';
+      case 'delete_disclosure_source_kept':
+        return 'The original files you imported (book, subtitles, audio)';
+      case 'delete_disclosure_stats_kept':
+        return 'Reading statistics';
+      case 'delete_disclosure_audiobook_files':
+        return 'The audio and aligned subtitles Hibiki copied into its own storage';
+      case 'delete_disclosure_audiobook_book_kept':
+        return 'The book itself and its reading progress';
+      case 'delete_disclosure_audiobook_source_kept':
+        return 'The original audio files you imported';
+      case 'audiobook_delete':
+        return 'Delete audiobook';
+      case 'audiobook_delete_confirm':
+        return 'Delete the attached audiobook? Its audio files are removed from this device.';
       default:
         return null;
     }
@@ -179352,10 +180050,6 @@ extension on _StringsTh {
         return 'Relocate file';
       case 'audiobook_relocate_done':
         return 'Audio relocated';
-      case 'audiobook_remove':
-        return 'ลบหนังสือเสียง';
-      case 'audiobook_remove_confirm':
-        return 'ลบหนังสือเสียงที่แนบอยู่?';
       case 'auto_add_book_name_to_tags':
         return 'เพิ่มชื่อหนังสือในแท็กอัตโนมัติ';
       case 'auto_chapter':
@@ -184871,6 +185565,30 @@ extension on _StringsTh {
         return 'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
       case 'download_test_connection_failed_reason':
         return ({required Object message}) => 'Connection failed: ${message}';
+      case 'delete_disclosure_will_delete_label':
+        return 'Will be deleted';
+      case 'delete_disclosure_will_keep_label':
+        return 'Will be kept';
+      case 'delete_disclosure_book_records':
+        return 'Reading progress, bookmarks, tags and subtitle data';
+      case 'delete_disclosure_book_extracted':
+        return 'The book files Hibiki extracted into its own storage';
+      case 'delete_disclosure_book_audiobook':
+        return 'The audio and aligned subtitles of the attached audiobook, if any';
+      case 'delete_disclosure_source_kept':
+        return 'The original files you imported (book, subtitles, audio)';
+      case 'delete_disclosure_stats_kept':
+        return 'Reading statistics';
+      case 'delete_disclosure_audiobook_files':
+        return 'The audio and aligned subtitles Hibiki copied into its own storage';
+      case 'delete_disclosure_audiobook_book_kept':
+        return 'The book itself and its reading progress';
+      case 'delete_disclosure_audiobook_source_kept':
+        return 'The original audio files you imported';
+      case 'audiobook_delete':
+        return 'Delete audiobook';
+      case 'audiobook_delete_confirm':
+        return 'Delete the attached audiobook? Its audio files are removed from this device.';
       default:
         return null;
     }
@@ -185218,10 +185936,6 @@ extension on _StringsTr {
         return 'Relocate file';
       case 'audiobook_relocate_done':
         return 'Audio relocated';
-      case 'audiobook_remove':
-        return 'Sesli kitabı kaldır';
-      case 'audiobook_remove_confirm':
-        return 'Bağlı sesli kitap kaldırılsın mı?';
       case 'auto_add_book_name_to_tags':
         return 'Kitap başlığını otomatik olarak etiketlere ekle';
       case 'auto_chapter':
@@ -190744,6 +191458,30 @@ extension on _StringsTr {
         return 'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
       case 'download_test_connection_failed_reason':
         return ({required Object message}) => 'Connection failed: ${message}';
+      case 'delete_disclosure_will_delete_label':
+        return 'Will be deleted';
+      case 'delete_disclosure_will_keep_label':
+        return 'Will be kept';
+      case 'delete_disclosure_book_records':
+        return 'Reading progress, bookmarks, tags and subtitle data';
+      case 'delete_disclosure_book_extracted':
+        return 'The book files Hibiki extracted into its own storage';
+      case 'delete_disclosure_book_audiobook':
+        return 'The audio and aligned subtitles of the attached audiobook, if any';
+      case 'delete_disclosure_source_kept':
+        return 'The original files you imported (book, subtitles, audio)';
+      case 'delete_disclosure_stats_kept':
+        return 'Reading statistics';
+      case 'delete_disclosure_audiobook_files':
+        return 'The audio and aligned subtitles Hibiki copied into its own storage';
+      case 'delete_disclosure_audiobook_book_kept':
+        return 'The book itself and its reading progress';
+      case 'delete_disclosure_audiobook_source_kept':
+        return 'The original audio files you imported';
+      case 'audiobook_delete':
+        return 'Delete audiobook';
+      case 'audiobook_delete_confirm':
+        return 'Delete the attached audiobook? Its audio files are removed from this device.';
       default:
         return null;
     }
@@ -191091,10 +191829,6 @@ extension on _StringsVi {
         return 'Relocate file';
       case 'audiobook_relocate_done':
         return 'Audio relocated';
-      case 'audiobook_remove':
-        return 'Xóa sách nói';
-      case 'audiobook_remove_confirm':
-        return 'Xóa sách nói đã gắn?';
       case 'auto_add_book_name_to_tags':
         return 'Tự thêm tên sách vào tag';
       case 'auto_chapter':
@@ -196613,6 +197347,30 @@ extension on _StringsVi {
         return 'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
       case 'download_test_connection_failed_reason':
         return ({required Object message}) => 'Connection failed: ${message}';
+      case 'delete_disclosure_will_delete_label':
+        return 'Will be deleted';
+      case 'delete_disclosure_will_keep_label':
+        return 'Will be kept';
+      case 'delete_disclosure_book_records':
+        return 'Reading progress, bookmarks, tags and subtitle data';
+      case 'delete_disclosure_book_extracted':
+        return 'The book files Hibiki extracted into its own storage';
+      case 'delete_disclosure_book_audiobook':
+        return 'The audio and aligned subtitles of the attached audiobook, if any';
+      case 'delete_disclosure_source_kept':
+        return 'The original files you imported (book, subtitles, audio)';
+      case 'delete_disclosure_stats_kept':
+        return 'Reading statistics';
+      case 'delete_disclosure_audiobook_files':
+        return 'The audio and aligned subtitles Hibiki copied into its own storage';
+      case 'delete_disclosure_audiobook_book_kept':
+        return 'The book itself and its reading progress';
+      case 'delete_disclosure_audiobook_source_kept':
+        return 'The original audio files you imported';
+      case 'audiobook_delete':
+        return 'Delete audiobook';
+      case 'audiobook_delete_confirm':
+        return 'Delete the attached audiobook? Its audio files are removed from this device.';
       default:
         return null;
     }
@@ -196954,10 +197712,6 @@ extension on _StringsZhCn {
         return '重新定位文件';
       case 'audiobook_relocate_done':
         return '音频已重新定位';
-      case 'audiobook_remove':
-        return '移除有声书';
-      case 'audiobook_remove_confirm':
-        return '移除已附加的有声书？';
       case 'auto_add_book_name_to_tags':
         return '自动添加书名到标签';
       case 'auto_chapter':
@@ -202430,6 +203184,30 @@ extension on _StringsZhCn {
         return '内置 Magpie 组件已损坏或校验失败。请重新安装或更新 Hibiki。';
       case 'download_test_connection_failed_reason':
         return ({required Object message}) => '连接失败：${message}';
+      case 'delete_disclosure_will_delete_label':
+        return '会被删除';
+      case 'delete_disclosure_will_keep_label':
+        return '会被保留';
+      case 'delete_disclosure_book_records':
+        return '阅读进度、书签、标签和字幕数据';
+      case 'delete_disclosure_book_extracted':
+        return 'Hibiki 解压到自己存储目录里的书籍文件';
+      case 'delete_disclosure_book_audiobook':
+        return '配套有声书的音频和对齐字幕（如果有）';
+      case 'delete_disclosure_source_kept':
+        return '你导入时选择的原始文件（书籍、字幕、音频）';
+      case 'delete_disclosure_stats_kept':
+        return '阅读统计';
+      case 'delete_disclosure_audiobook_files':
+        return 'Hibiki 复制到自己存储目录里的音频和对齐字幕';
+      case 'delete_disclosure_audiobook_book_kept':
+        return '书籍本身和它的阅读进度';
+      case 'delete_disclosure_audiobook_source_kept':
+        return '你导入时选择的原始音频文件';
+      case 'audiobook_delete':
+        return '删除有声书';
+      case 'audiobook_delete_confirm':
+        return '删除已附加的有声书？它的音频文件会从本机删除。';
       default:
         return null;
     }
@@ -202774,10 +203552,6 @@ extension on _StringsZhHk {
         return 'Relocate file';
       case 'audiobook_relocate_done':
         return 'Audio relocated';
-      case 'audiobook_remove':
-        return '移除有聲書';
-      case 'audiobook_remove_confirm':
-        return '移除已附加的有聲書？';
       case 'auto_add_book_name_to_tags':
         return '自動將書名加入標籤';
       case 'auto_chapter':
@@ -208272,6 +209046,30 @@ extension on _StringsZhHk {
         return 'The bundled Magpie component is corrupted or did not pass verification. Reinstall or update Hibiki.';
       case 'download_test_connection_failed_reason':
         return ({required Object message}) => 'Connection failed: ${message}';
+      case 'delete_disclosure_will_delete_label':
+        return 'Will be deleted';
+      case 'delete_disclosure_will_keep_label':
+        return 'Will be kept';
+      case 'delete_disclosure_book_records':
+        return 'Reading progress, bookmarks, tags and subtitle data';
+      case 'delete_disclosure_book_extracted':
+        return 'The book files Hibiki extracted into its own storage';
+      case 'delete_disclosure_book_audiobook':
+        return 'The audio and aligned subtitles of the attached audiobook, if any';
+      case 'delete_disclosure_source_kept':
+        return 'The original files you imported (book, subtitles, audio)';
+      case 'delete_disclosure_stats_kept':
+        return 'Reading statistics';
+      case 'delete_disclosure_audiobook_files':
+        return 'The audio and aligned subtitles Hibiki copied into its own storage';
+      case 'delete_disclosure_audiobook_book_kept':
+        return 'The book itself and its reading progress';
+      case 'delete_disclosure_audiobook_source_kept':
+        return 'The original audio files you imported';
+      case 'audiobook_delete':
+        return 'Delete audiobook';
+      case 'audiobook_delete_confirm':
+        return 'Delete the attached audiobook? Its audio files are removed from this device.';
       default:
         return null;
     }
