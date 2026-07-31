@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 48875 (2875 per locale)
+/// Strings: 48994 (2882 per locale)
 ///
-/// Built on 2026-08-01 at 04:14 UTC
+/// Built on 2026-08-01 at 04:54 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3886,6 +3886,15 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get collection_group_extras => 'Extras & PV';
   String collection_group_season({required Object n}) => 'Season ${n}';
   String get collection_sort_by_season => 'Sort by season';
+  String get mining_animated_format_avif => 'AVIF (smallest)';
+  String get mining_animated_format_webp => 'WebP (wider support)';
+  String get mining_animated_format_gif => 'GIF (most compatible)';
+  String get video_mining_animated_format => 'Video card animation format';
+  String get video_mining_animated_format_hint =>
+      'AVIF is far smaller than GIF at the same quality, and its top quality tier allows a higher resolution and frame rate than GIF or WebP. Falls back to GIF automatically when the bundled encoder cannot produce it.';
+  String get gal_mining_animated_format => 'Game card animation format';
+  String get gal_mining_animated_format_hint =>
+      'Same formats as video cards, stored separately: a galgame frame barely moves within one line, so the trade-off differs.';
 }
 
 // Path: <root>
@@ -10496,6 +10505,22 @@ class _StringsAr extends _StringsEn {
   String collection_group_season({required Object n}) => 'Season ${n}';
   @override
   String get collection_sort_by_season => 'Sort by season';
+  @override
+  String get mining_animated_format_avif => 'AVIF (smallest)';
+  @override
+  String get mining_animated_format_webp => 'WebP (wider support)';
+  @override
+  String get mining_animated_format_gif => 'GIF (most compatible)';
+  @override
+  String get video_mining_animated_format => 'Video card animation format';
+  @override
+  String get video_mining_animated_format_hint =>
+      'AVIF is far smaller than GIF at the same quality, and its top quality tier allows a higher resolution and frame rate than GIF or WebP. Falls back to GIF automatically when the bundled encoder cannot produce it.';
+  @override
+  String get gal_mining_animated_format => 'Game card animation format';
+  @override
+  String get gal_mining_animated_format_hint =>
+      'Same formats as video cards, stored separately: a galgame frame barely moves within one line, so the trade-off differs.';
 }
 
 // Path: <root>
@@ -17173,6 +17198,22 @@ class _StringsDe extends _StringsEn {
   String collection_group_season({required Object n}) => 'Season ${n}';
   @override
   String get collection_sort_by_season => 'Sort by season';
+  @override
+  String get mining_animated_format_avif => 'AVIF (smallest)';
+  @override
+  String get mining_animated_format_webp => 'WebP (wider support)';
+  @override
+  String get mining_animated_format_gif => 'GIF (most compatible)';
+  @override
+  String get video_mining_animated_format => 'Video card animation format';
+  @override
+  String get video_mining_animated_format_hint =>
+      'AVIF is far smaller than GIF at the same quality, and its top quality tier allows a higher resolution and frame rate than GIF or WebP. Falls back to GIF automatically when the bundled encoder cannot produce it.';
+  @override
+  String get gal_mining_animated_format => 'Game card animation format';
+  @override
+  String get gal_mining_animated_format_hint =>
+      'Same formats as video cards, stored separately: a galgame frame barely moves within one line, so the trade-off differs.';
 }
 
 // Path: <root>
@@ -23866,6 +23907,22 @@ class _StringsEs extends _StringsEn {
   String collection_group_season({required Object n}) => 'Season ${n}';
   @override
   String get collection_sort_by_season => 'Sort by season';
+  @override
+  String get mining_animated_format_avif => 'AVIF (smallest)';
+  @override
+  String get mining_animated_format_webp => 'WebP (wider support)';
+  @override
+  String get mining_animated_format_gif => 'GIF (most compatible)';
+  @override
+  String get video_mining_animated_format => 'Video card animation format';
+  @override
+  String get video_mining_animated_format_hint =>
+      'AVIF is far smaller than GIF at the same quality, and its top quality tier allows a higher resolution and frame rate than GIF or WebP. Falls back to GIF automatically when the bundled encoder cannot produce it.';
+  @override
+  String get gal_mining_animated_format => 'Game card animation format';
+  @override
+  String get gal_mining_animated_format_hint =>
+      'Same formats as video cards, stored separately: a galgame frame barely moves within one line, so the trade-off differs.';
 }
 
 // Path: <root>
@@ -30570,6 +30627,22 @@ class _StringsFr extends _StringsEn {
   String collection_group_season({required Object n}) => 'Season ${n}';
   @override
   String get collection_sort_by_season => 'Sort by season';
+  @override
+  String get mining_animated_format_avif => 'AVIF (smallest)';
+  @override
+  String get mining_animated_format_webp => 'WebP (wider support)';
+  @override
+  String get mining_animated_format_gif => 'GIF (most compatible)';
+  @override
+  String get video_mining_animated_format => 'Video card animation format';
+  @override
+  String get video_mining_animated_format_hint =>
+      'AVIF is far smaller than GIF at the same quality, and its top quality tier allows a higher resolution and frame rate than GIF or WebP. Falls back to GIF automatically when the bundled encoder cannot produce it.';
+  @override
+  String get gal_mining_animated_format => 'Game card animation format';
+  @override
+  String get gal_mining_animated_format_hint =>
+      'Same formats as video cards, stored separately: a galgame frame barely moves within one line, so the trade-off differs.';
 }
 
 // Path: <root>
@@ -37203,6 +37276,22 @@ class _StringsId extends _StringsEn {
   String collection_group_season({required Object n}) => 'Season ${n}';
   @override
   String get collection_sort_by_season => 'Sort by season';
+  @override
+  String get mining_animated_format_avif => 'AVIF (smallest)';
+  @override
+  String get mining_animated_format_webp => 'WebP (wider support)';
+  @override
+  String get mining_animated_format_gif => 'GIF (most compatible)';
+  @override
+  String get video_mining_animated_format => 'Video card animation format';
+  @override
+  String get video_mining_animated_format_hint =>
+      'AVIF is far smaller than GIF at the same quality, and its top quality tier allows a higher resolution and frame rate than GIF or WebP. Falls back to GIF automatically when the bundled encoder cannot produce it.';
+  @override
+  String get gal_mining_animated_format => 'Game card animation format';
+  @override
+  String get gal_mining_animated_format_hint =>
+      'Same formats as video cards, stored separately: a galgame frame barely moves within one line, so the trade-off differs.';
 }
 
 // Path: <root>
@@ -43882,6 +43971,22 @@ class _StringsIt extends _StringsEn {
   String collection_group_season({required Object n}) => 'Season ${n}';
   @override
   String get collection_sort_by_season => 'Sort by season';
+  @override
+  String get mining_animated_format_avif => 'AVIF (smallest)';
+  @override
+  String get mining_animated_format_webp => 'WebP (wider support)';
+  @override
+  String get mining_animated_format_gif => 'GIF (most compatible)';
+  @override
+  String get video_mining_animated_format => 'Video card animation format';
+  @override
+  String get video_mining_animated_format_hint =>
+      'AVIF is far smaller than GIF at the same quality, and its top quality tier allows a higher resolution and frame rate than GIF or WebP. Falls back to GIF automatically when the bundled encoder cannot produce it.';
+  @override
+  String get gal_mining_animated_format => 'Game card animation format';
+  @override
+  String get gal_mining_animated_format_hint =>
+      'Same formats as video cards, stored separately: a galgame frame barely moves within one line, so the trade-off differs.';
 }
 
 // Path: <root>
@@ -50378,6 +50483,22 @@ class _StringsJa extends _StringsEn {
   String collection_group_season({required Object n}) => 'Season ${n}';
   @override
   String get collection_sort_by_season => 'Sort by season';
+  @override
+  String get mining_animated_format_avif => 'AVIF (smallest)';
+  @override
+  String get mining_animated_format_webp => 'WebP (wider support)';
+  @override
+  String get mining_animated_format_gif => 'GIF (most compatible)';
+  @override
+  String get video_mining_animated_format => 'Video card animation format';
+  @override
+  String get video_mining_animated_format_hint =>
+      'AVIF is far smaller than GIF at the same quality, and its top quality tier allows a higher resolution and frame rate than GIF or WebP. Falls back to GIF automatically when the bundled encoder cannot produce it.';
+  @override
+  String get gal_mining_animated_format => 'Game card animation format';
+  @override
+  String get gal_mining_animated_format_hint =>
+      'Same formats as video cards, stored separately: a galgame frame barely moves within one line, so the trade-off differs.';
 }
 
 // Path: <root>
@@ -56876,6 +56997,22 @@ class _StringsKo extends _StringsEn {
   String collection_group_season({required Object n}) => 'Season ${n}';
   @override
   String get collection_sort_by_season => 'Sort by season';
+  @override
+  String get mining_animated_format_avif => 'AVIF (smallest)';
+  @override
+  String get mining_animated_format_webp => 'WebP (wider support)';
+  @override
+  String get mining_animated_format_gif => 'GIF (most compatible)';
+  @override
+  String get video_mining_animated_format => 'Video card animation format';
+  @override
+  String get video_mining_animated_format_hint =>
+      'AVIF is far smaller than GIF at the same quality, and its top quality tier allows a higher resolution and frame rate than GIF or WebP. Falls back to GIF automatically when the bundled encoder cannot produce it.';
+  @override
+  String get gal_mining_animated_format => 'Game card animation format';
+  @override
+  String get gal_mining_animated_format_hint =>
+      'Same formats as video cards, stored separately: a galgame frame barely moves within one line, so the trade-off differs.';
 }
 
 // Path: <root>
@@ -63535,6 +63672,22 @@ class _StringsNl extends _StringsEn {
   String collection_group_season({required Object n}) => 'Season ${n}';
   @override
   String get collection_sort_by_season => 'Sort by season';
+  @override
+  String get mining_animated_format_avif => 'AVIF (smallest)';
+  @override
+  String get mining_animated_format_webp => 'WebP (wider support)';
+  @override
+  String get mining_animated_format_gif => 'GIF (most compatible)';
+  @override
+  String get video_mining_animated_format => 'Video card animation format';
+  @override
+  String get video_mining_animated_format_hint =>
+      'AVIF is far smaller than GIF at the same quality, and its top quality tier allows a higher resolution and frame rate than GIF or WebP. Falls back to GIF automatically when the bundled encoder cannot produce it.';
+  @override
+  String get gal_mining_animated_format => 'Game card animation format';
+  @override
+  String get gal_mining_animated_format_hint =>
+      'Same formats as video cards, stored separately: a galgame frame barely moves within one line, so the trade-off differs.';
 }
 
 // Path: <root>
@@ -70207,6 +70360,22 @@ class _StringsPtBr extends _StringsEn {
   String collection_group_season({required Object n}) => 'Season ${n}';
   @override
   String get collection_sort_by_season => 'Sort by season';
+  @override
+  String get mining_animated_format_avif => 'AVIF (smallest)';
+  @override
+  String get mining_animated_format_webp => 'WebP (wider support)';
+  @override
+  String get mining_animated_format_gif => 'GIF (most compatible)';
+  @override
+  String get video_mining_animated_format => 'Video card animation format';
+  @override
+  String get video_mining_animated_format_hint =>
+      'AVIF is far smaller than GIF at the same quality, and its top quality tier allows a higher resolution and frame rate than GIF or WebP. Falls back to GIF automatically when the bundled encoder cannot produce it.';
+  @override
+  String get gal_mining_animated_format => 'Game card animation format';
+  @override
+  String get gal_mining_animated_format_hint =>
+      'Same formats as video cards, stored separately: a galgame frame barely moves within one line, so the trade-off differs.';
 }
 
 // Path: <root>
@@ -76863,6 +77032,22 @@ class _StringsRu extends _StringsEn {
   String collection_group_season({required Object n}) => 'Season ${n}';
   @override
   String get collection_sort_by_season => 'Sort by season';
+  @override
+  String get mining_animated_format_avif => 'AVIF (smallest)';
+  @override
+  String get mining_animated_format_webp => 'WebP (wider support)';
+  @override
+  String get mining_animated_format_gif => 'GIF (most compatible)';
+  @override
+  String get video_mining_animated_format => 'Video card animation format';
+  @override
+  String get video_mining_animated_format_hint =>
+      'AVIF is far smaller than GIF at the same quality, and its top quality tier allows a higher resolution and frame rate than GIF or WebP. Falls back to GIF automatically when the bundled encoder cannot produce it.';
+  @override
+  String get gal_mining_animated_format => 'Game card animation format';
+  @override
+  String get gal_mining_animated_format_hint =>
+      'Same formats as video cards, stored separately: a galgame frame barely moves within one line, so the trade-off differs.';
 }
 
 // Path: <root>
@@ -83467,6 +83652,22 @@ class _StringsTh extends _StringsEn {
   String collection_group_season({required Object n}) => 'Season ${n}';
   @override
   String get collection_sort_by_season => 'Sort by season';
+  @override
+  String get mining_animated_format_avif => 'AVIF (smallest)';
+  @override
+  String get mining_animated_format_webp => 'WebP (wider support)';
+  @override
+  String get mining_animated_format_gif => 'GIF (most compatible)';
+  @override
+  String get video_mining_animated_format => 'Video card animation format';
+  @override
+  String get video_mining_animated_format_hint =>
+      'AVIF is far smaller than GIF at the same quality, and its top quality tier allows a higher resolution and frame rate than GIF or WebP. Falls back to GIF automatically when the bundled encoder cannot produce it.';
+  @override
+  String get gal_mining_animated_format => 'Game card animation format';
+  @override
+  String get gal_mining_animated_format_hint =>
+      'Same formats as video cards, stored separately: a galgame frame barely moves within one line, so the trade-off differs.';
 }
 
 // Path: <root>
@@ -90103,6 +90304,22 @@ class _StringsTr extends _StringsEn {
   String collection_group_season({required Object n}) => 'Season ${n}';
   @override
   String get collection_sort_by_season => 'Sort by season';
+  @override
+  String get mining_animated_format_avif => 'AVIF (smallest)';
+  @override
+  String get mining_animated_format_webp => 'WebP (wider support)';
+  @override
+  String get mining_animated_format_gif => 'GIF (most compatible)';
+  @override
+  String get video_mining_animated_format => 'Video card animation format';
+  @override
+  String get video_mining_animated_format_hint =>
+      'AVIF is far smaller than GIF at the same quality, and its top quality tier allows a higher resolution and frame rate than GIF or WebP. Falls back to GIF automatically when the bundled encoder cannot produce it.';
+  @override
+  String get gal_mining_animated_format => 'Game card animation format';
+  @override
+  String get gal_mining_animated_format_hint =>
+      'Same formats as video cards, stored separately: a galgame frame barely moves within one line, so the trade-off differs.';
 }
 
 // Path: <root>
@@ -96724,6 +96941,22 @@ class _StringsVi extends _StringsEn {
   String collection_group_season({required Object n}) => 'Season ${n}';
   @override
   String get collection_sort_by_season => 'Sort by season';
+  @override
+  String get mining_animated_format_avif => 'AVIF (smallest)';
+  @override
+  String get mining_animated_format_webp => 'WebP (wider support)';
+  @override
+  String get mining_animated_format_gif => 'GIF (most compatible)';
+  @override
+  String get video_mining_animated_format => 'Video card animation format';
+  @override
+  String get video_mining_animated_format_hint =>
+      'AVIF is far smaller than GIF at the same quality, and its top quality tier allows a higher resolution and frame rate than GIF or WebP. Falls back to GIF automatically when the bundled encoder cannot produce it.';
+  @override
+  String get gal_mining_animated_format => 'Game card animation format';
+  @override
+  String get gal_mining_animated_format_hint =>
+      'Same formats as video cards, stored separately: a galgame frame barely moves within one line, so the trade-off differs.';
 }
 
 // Path: <root>
@@ -102872,6 +103105,22 @@ class _StringsZhCn extends _StringsEn {
   String collection_group_season({required Object n}) => '第 ${n} 季';
   @override
   String get collection_sort_by_season => '按季排序';
+  @override
+  String get mining_animated_format_avif => 'AVIF（体积最小）';
+  @override
+  String get mining_animated_format_webp => 'WebP（兼容性更广）';
+  @override
+  String get mining_animated_format_gif => 'GIF（兼容性最好）';
+  @override
+  String get video_mining_animated_format => '视频制卡动图格式';
+  @override
+  String get video_mining_animated_format_hint =>
+      '同画质下 AVIF 体积远小于 GIF，最高清晰度档也允许比 GIF/WebP 更高的分辨率与帧率。捆绑的编码器产不出时会自动回退 GIF。';
+  @override
+  String get gal_mining_animated_format => '游戏制卡动图格式';
+  @override
+  String get gal_mining_animated_format_hint =>
+      '与视频制卡同样的格式，但分开保存：galgame 一句台词内画面基本静止，取舍不同。';
 }
 
 // Path: <root>
@@ -109289,6 +109538,22 @@ class _StringsZhHk extends _StringsEn {
   String collection_group_season({required Object n}) => 'Season ${n}';
   @override
   String get collection_sort_by_season => 'Sort by season';
+  @override
+  String get mining_animated_format_avif => 'AVIF (smallest)';
+  @override
+  String get mining_animated_format_webp => 'WebP (wider support)';
+  @override
+  String get mining_animated_format_gif => 'GIF (most compatible)';
+  @override
+  String get video_mining_animated_format => 'Video card animation format';
+  @override
+  String get video_mining_animated_format_hint =>
+      'AVIF is far smaller than GIF at the same quality, and its top quality tier allows a higher resolution and frame rate than GIF or WebP. Falls back to GIF automatically when the bundled encoder cannot produce it.';
+  @override
+  String get gal_mining_animated_format => 'Game card animation format';
+  @override
+  String get gal_mining_animated_format_hint =>
+      'Same formats as video cards, stored separately: a galgame frame barely moves within one line, so the trade-off differs.';
 }
 
 /// Flat map(s) containing all translations.
@@ -115188,6 +115453,20 @@ extension on _StringsEn {
         return ({required Object n}) => 'Season ${n}';
       case 'collection_sort_by_season':
         return 'Sort by season';
+      case 'mining_animated_format_avif':
+        return 'AVIF (smallest)';
+      case 'mining_animated_format_webp':
+        return 'WebP (wider support)';
+      case 'mining_animated_format_gif':
+        return 'GIF (most compatible)';
+      case 'video_mining_animated_format':
+        return 'Video card animation format';
+      case 'video_mining_animated_format_hint':
+        return 'AVIF is far smaller than GIF at the same quality, and its top quality tier allows a higher resolution and frame rate than GIF or WebP. Falls back to GIF automatically when the bundled encoder cannot produce it.';
+      case 'gal_mining_animated_format':
+        return 'Game card animation format';
+      case 'gal_mining_animated_format_hint':
+        return 'Same formats as video cards, stored separately: a galgame frame barely moves within one line, so the trade-off differs.';
       default:
         return null;
     }
@@ -121085,6 +121364,20 @@ extension on _StringsAr {
         return ({required Object n}) => 'Season ${n}';
       case 'collection_sort_by_season':
         return 'Sort by season';
+      case 'mining_animated_format_avif':
+        return 'AVIF (smallest)';
+      case 'mining_animated_format_webp':
+        return 'WebP (wider support)';
+      case 'mining_animated_format_gif':
+        return 'GIF (most compatible)';
+      case 'video_mining_animated_format':
+        return 'Video card animation format';
+      case 'video_mining_animated_format_hint':
+        return 'AVIF is far smaller than GIF at the same quality, and its top quality tier allows a higher resolution and frame rate than GIF or WebP. Falls back to GIF automatically when the bundled encoder cannot produce it.';
+      case 'gal_mining_animated_format':
+        return 'Game card animation format';
+      case 'gal_mining_animated_format_hint':
+        return 'Same formats as video cards, stored separately: a galgame frame barely moves within one line, so the trade-off differs.';
       default:
         return null;
     }
@@ -127004,6 +127297,20 @@ extension on _StringsDe {
         return ({required Object n}) => 'Season ${n}';
       case 'collection_sort_by_season':
         return 'Sort by season';
+      case 'mining_animated_format_avif':
+        return 'AVIF (smallest)';
+      case 'mining_animated_format_webp':
+        return 'WebP (wider support)';
+      case 'mining_animated_format_gif':
+        return 'GIF (most compatible)';
+      case 'video_mining_animated_format':
+        return 'Video card animation format';
+      case 'video_mining_animated_format_hint':
+        return 'AVIF is far smaller than GIF at the same quality, and its top quality tier allows a higher resolution and frame rate than GIF or WebP. Falls back to GIF automatically when the bundled encoder cannot produce it.';
+      case 'gal_mining_animated_format':
+        return 'Game card animation format';
+      case 'gal_mining_animated_format_hint':
+        return 'Same formats as video cards, stored separately: a galgame frame barely moves within one line, so the trade-off differs.';
       default:
         return null;
     }
@@ -132922,6 +133229,20 @@ extension on _StringsEs {
         return ({required Object n}) => 'Season ${n}';
       case 'collection_sort_by_season':
         return 'Sort by season';
+      case 'mining_animated_format_avif':
+        return 'AVIF (smallest)';
+      case 'mining_animated_format_webp':
+        return 'WebP (wider support)';
+      case 'mining_animated_format_gif':
+        return 'GIF (most compatible)';
+      case 'video_mining_animated_format':
+        return 'Video card animation format';
+      case 'video_mining_animated_format_hint':
+        return 'AVIF is far smaller than GIF at the same quality, and its top quality tier allows a higher resolution and frame rate than GIF or WebP. Falls back to GIF automatically when the bundled encoder cannot produce it.';
+      case 'gal_mining_animated_format':
+        return 'Game card animation format';
+      case 'gal_mining_animated_format_hint':
+        return 'Same formats as video cards, stored separately: a galgame frame barely moves within one line, so the trade-off differs.';
       default:
         return null;
     }
@@ -138846,6 +139167,20 @@ extension on _StringsFr {
         return ({required Object n}) => 'Season ${n}';
       case 'collection_sort_by_season':
         return 'Sort by season';
+      case 'mining_animated_format_avif':
+        return 'AVIF (smallest)';
+      case 'mining_animated_format_webp':
+        return 'WebP (wider support)';
+      case 'mining_animated_format_gif':
+        return 'GIF (most compatible)';
+      case 'video_mining_animated_format':
+        return 'Video card animation format';
+      case 'video_mining_animated_format_hint':
+        return 'AVIF is far smaller than GIF at the same quality, and its top quality tier allows a higher resolution and frame rate than GIF or WebP. Falls back to GIF automatically when the bundled encoder cannot produce it.';
+      case 'gal_mining_animated_format':
+        return 'Game card animation format';
+      case 'gal_mining_animated_format_hint':
+        return 'Same formats as video cards, stored separately: a galgame frame barely moves within one line, so the trade-off differs.';
       default:
         return null;
     }
@@ -144752,6 +145087,20 @@ extension on _StringsId {
         return ({required Object n}) => 'Season ${n}';
       case 'collection_sort_by_season':
         return 'Sort by season';
+      case 'mining_animated_format_avif':
+        return 'AVIF (smallest)';
+      case 'mining_animated_format_webp':
+        return 'WebP (wider support)';
+      case 'mining_animated_format_gif':
+        return 'GIF (most compatible)';
+      case 'video_mining_animated_format':
+        return 'Video card animation format';
+      case 'video_mining_animated_format_hint':
+        return 'AVIF is far smaller than GIF at the same quality, and its top quality tier allows a higher resolution and frame rate than GIF or WebP. Falls back to GIF automatically when the bundled encoder cannot produce it.';
+      case 'gal_mining_animated_format':
+        return 'Game card animation format';
+      case 'gal_mining_animated_format_hint':
+        return 'Same formats as video cards, stored separately: a galgame frame barely moves within one line, so the trade-off differs.';
       default:
         return null;
     }
@@ -150672,6 +151021,20 @@ extension on _StringsIt {
         return ({required Object n}) => 'Season ${n}';
       case 'collection_sort_by_season':
         return 'Sort by season';
+      case 'mining_animated_format_avif':
+        return 'AVIF (smallest)';
+      case 'mining_animated_format_webp':
+        return 'WebP (wider support)';
+      case 'mining_animated_format_gif':
+        return 'GIF (most compatible)';
+      case 'video_mining_animated_format':
+        return 'Video card animation format';
+      case 'video_mining_animated_format_hint':
+        return 'AVIF is far smaller than GIF at the same quality, and its top quality tier allows a higher resolution and frame rate than GIF or WebP. Falls back to GIF automatically when the bundled encoder cannot produce it.';
+      case 'gal_mining_animated_format':
+        return 'Game card animation format';
+      case 'gal_mining_animated_format_hint':
+        return 'Same formats as video cards, stored separately: a galgame frame barely moves within one line, so the trade-off differs.';
       default:
         return null;
     }
@@ -156554,6 +156917,20 @@ extension on _StringsJa {
         return ({required Object n}) => 'Season ${n}';
       case 'collection_sort_by_season':
         return 'Sort by season';
+      case 'mining_animated_format_avif':
+        return 'AVIF (smallest)';
+      case 'mining_animated_format_webp':
+        return 'WebP (wider support)';
+      case 'mining_animated_format_gif':
+        return 'GIF (most compatible)';
+      case 'video_mining_animated_format':
+        return 'Video card animation format';
+      case 'video_mining_animated_format_hint':
+        return 'AVIF is far smaller than GIF at the same quality, and its top quality tier allows a higher resolution and frame rate than GIF or WebP. Falls back to GIF automatically when the bundled encoder cannot produce it.';
+      case 'gal_mining_animated_format':
+        return 'Game card animation format';
+      case 'gal_mining_animated_format_hint':
+        return 'Same formats as video cards, stored separately: a galgame frame barely moves within one line, so the trade-off differs.';
       default:
         return null;
     }
@@ -162440,6 +162817,20 @@ extension on _StringsKo {
         return ({required Object n}) => 'Season ${n}';
       case 'collection_sort_by_season':
         return 'Sort by season';
+      case 'mining_animated_format_avif':
+        return 'AVIF (smallest)';
+      case 'mining_animated_format_webp':
+        return 'WebP (wider support)';
+      case 'mining_animated_format_gif':
+        return 'GIF (most compatible)';
+      case 'video_mining_animated_format':
+        return 'Video card animation format';
+      case 'video_mining_animated_format_hint':
+        return 'AVIF is far smaller than GIF at the same quality, and its top quality tier allows a higher resolution and frame rate than GIF or WebP. Falls back to GIF automatically when the bundled encoder cannot produce it.';
+      case 'gal_mining_animated_format':
+        return 'Game card animation format';
+      case 'gal_mining_animated_format_hint':
+        return 'Same formats as video cards, stored separately: a galgame frame barely moves within one line, so the trade-off differs.';
       default:
         return null;
     }
@@ -168354,6 +168745,20 @@ extension on _StringsNl {
         return ({required Object n}) => 'Season ${n}';
       case 'collection_sort_by_season':
         return 'Sort by season';
+      case 'mining_animated_format_avif':
+        return 'AVIF (smallest)';
+      case 'mining_animated_format_webp':
+        return 'WebP (wider support)';
+      case 'mining_animated_format_gif':
+        return 'GIF (most compatible)';
+      case 'video_mining_animated_format':
+        return 'Video card animation format';
+      case 'video_mining_animated_format_hint':
+        return 'AVIF is far smaller than GIF at the same quality, and its top quality tier allows a higher resolution and frame rate than GIF or WebP. Falls back to GIF automatically when the bundled encoder cannot produce it.';
+      case 'gal_mining_animated_format':
+        return 'Game card animation format';
+      case 'gal_mining_animated_format_hint':
+        return 'Same formats as video cards, stored separately: a galgame frame barely moves within one line, so the trade-off differs.';
       default:
         return null;
     }
@@ -174265,6 +174670,20 @@ extension on _StringsPtBr {
         return ({required Object n}) => 'Season ${n}';
       case 'collection_sort_by_season':
         return 'Sort by season';
+      case 'mining_animated_format_avif':
+        return 'AVIF (smallest)';
+      case 'mining_animated_format_webp':
+        return 'WebP (wider support)';
+      case 'mining_animated_format_gif':
+        return 'GIF (most compatible)';
+      case 'video_mining_animated_format':
+        return 'Video card animation format';
+      case 'video_mining_animated_format_hint':
+        return 'AVIF is far smaller than GIF at the same quality, and its top quality tier allows a higher resolution and frame rate than GIF or WebP. Falls back to GIF automatically when the bundled encoder cannot produce it.';
+      case 'gal_mining_animated_format':
+        return 'Game card animation format';
+      case 'gal_mining_animated_format_hint':
+        return 'Same formats as video cards, stored separately: a galgame frame barely moves within one line, so the trade-off differs.';
       default:
         return null;
     }
@@ -180181,6 +180600,20 @@ extension on _StringsRu {
         return ({required Object n}) => 'Season ${n}';
       case 'collection_sort_by_season':
         return 'Sort by season';
+      case 'mining_animated_format_avif':
+        return 'AVIF (smallest)';
+      case 'mining_animated_format_webp':
+        return 'WebP (wider support)';
+      case 'mining_animated_format_gif':
+        return 'GIF (most compatible)';
+      case 'video_mining_animated_format':
+        return 'Video card animation format';
+      case 'video_mining_animated_format_hint':
+        return 'AVIF is far smaller than GIF at the same quality, and its top quality tier allows a higher resolution and frame rate than GIF or WebP. Falls back to GIF automatically when the bundled encoder cannot produce it.';
+      case 'gal_mining_animated_format':
+        return 'Game card animation format';
+      case 'gal_mining_animated_format_hint':
+        return 'Same formats as video cards, stored separately: a galgame frame barely moves within one line, so the trade-off differs.';
       default:
         return null;
     }
@@ -186080,6 +186513,20 @@ extension on _StringsTh {
         return ({required Object n}) => 'Season ${n}';
       case 'collection_sort_by_season':
         return 'Sort by season';
+      case 'mining_animated_format_avif':
+        return 'AVIF (smallest)';
+      case 'mining_animated_format_webp':
+        return 'WebP (wider support)';
+      case 'mining_animated_format_gif':
+        return 'GIF (most compatible)';
+      case 'video_mining_animated_format':
+        return 'Video card animation format';
+      case 'video_mining_animated_format_hint':
+        return 'AVIF is far smaller than GIF at the same quality, and its top quality tier allows a higher resolution and frame rate than GIF or WebP. Falls back to GIF automatically when the bundled encoder cannot produce it.';
+      case 'gal_mining_animated_format':
+        return 'Game card animation format';
+      case 'gal_mining_animated_format_hint':
+        return 'Same formats as video cards, stored separately: a galgame frame barely moves within one line, so the trade-off differs.';
       default:
         return null;
     }
@@ -191988,6 +192435,20 @@ extension on _StringsTr {
         return ({required Object n}) => 'Season ${n}';
       case 'collection_sort_by_season':
         return 'Sort by season';
+      case 'mining_animated_format_avif':
+        return 'AVIF (smallest)';
+      case 'mining_animated_format_webp':
+        return 'WebP (wider support)';
+      case 'mining_animated_format_gif':
+        return 'GIF (most compatible)';
+      case 'video_mining_animated_format':
+        return 'Video card animation format';
+      case 'video_mining_animated_format_hint':
+        return 'AVIF is far smaller than GIF at the same quality, and its top quality tier allows a higher resolution and frame rate than GIF or WebP. Falls back to GIF automatically when the bundled encoder cannot produce it.';
+      case 'gal_mining_animated_format':
+        return 'Game card animation format';
+      case 'gal_mining_animated_format_hint':
+        return 'Same formats as video cards, stored separately: a galgame frame barely moves within one line, so the trade-off differs.';
       default:
         return null;
     }
@@ -197892,6 +198353,20 @@ extension on _StringsVi {
         return ({required Object n}) => 'Season ${n}';
       case 'collection_sort_by_season':
         return 'Sort by season';
+      case 'mining_animated_format_avif':
+        return 'AVIF (smallest)';
+      case 'mining_animated_format_webp':
+        return 'WebP (wider support)';
+      case 'mining_animated_format_gif':
+        return 'GIF (most compatible)';
+      case 'video_mining_animated_format':
+        return 'Video card animation format';
+      case 'video_mining_animated_format_hint':
+        return 'AVIF is far smaller than GIF at the same quality, and its top quality tier allows a higher resolution and frame rate than GIF or WebP. Falls back to GIF automatically when the bundled encoder cannot produce it.';
+      case 'gal_mining_animated_format':
+        return 'Game card animation format';
+      case 'gal_mining_animated_format_hint':
+        return 'Same formats as video cards, stored separately: a galgame frame barely moves within one line, so the trade-off differs.';
       default:
         return null;
     }
@@ -203743,6 +204218,20 @@ extension on _StringsZhCn {
         return ({required Object n}) => '第 ${n} 季';
       case 'collection_sort_by_season':
         return '按季排序';
+      case 'mining_animated_format_avif':
+        return 'AVIF（体积最小）';
+      case 'mining_animated_format_webp':
+        return 'WebP（兼容性更广）';
+      case 'mining_animated_format_gif':
+        return 'GIF（兼容性最好）';
+      case 'video_mining_animated_format':
+        return '视频制卡动图格式';
+      case 'video_mining_animated_format_hint':
+        return '同画质下 AVIF 体积远小于 GIF，最高清晰度档也允许比 GIF/WebP 更高的分辨率与帧率。捆绑的编码器产不出时会自动回退 GIF。';
+      case 'gal_mining_animated_format':
+        return '游戏制卡动图格式';
+      case 'gal_mining_animated_format_hint':
+        return '与视频制卡同样的格式，但分开保存：galgame 一句台词内画面基本静止，取舍不同。';
       default:
         return null;
     }
@@ -209620,6 +210109,20 @@ extension on _StringsZhHk {
         return ({required Object n}) => 'Season ${n}';
       case 'collection_sort_by_season':
         return 'Sort by season';
+      case 'mining_animated_format_avif':
+        return 'AVIF (smallest)';
+      case 'mining_animated_format_webp':
+        return 'WebP (wider support)';
+      case 'mining_animated_format_gif':
+        return 'GIF (most compatible)';
+      case 'video_mining_animated_format':
+        return 'Video card animation format';
+      case 'video_mining_animated_format_hint':
+        return 'AVIF is far smaller than GIF at the same quality, and its top quality tier allows a higher resolution and frame rate than GIF or WebP. Falls back to GIF automatically when the bundled encoder cannot produce it.';
+      case 'gal_mining_animated_format':
+        return 'Game card animation format';
+      case 'gal_mining_animated_format_hint':
+        return 'Same formats as video cards, stored separately: a galgame frame barely moves within one line, so the trade-off differs.';
       default:
         return null;
     }
