@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 47243 (2779 per locale)
+/// Strings: 47294 (2782 per locale)
 ///
-/// Built on 2026-07-31 at 10:28 UTC
+/// Built on 2026-07-31 at 11:26 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3737,6 +3737,11 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get anime_download_streaming_ready =>
       'In library · download continues';
   String get anime_download_unfiltered => 'No Trusted filter';
+  String get interconnect_enable_footer =>
+      'How to use: on the device that holds your library, turn on the sync server switch below; on your other device, add the address of that server to pair with it. A device can act as only one role at a time — server or client.';
+  String get interconnect_peer_list_title => 'Added peers';
+  String get interconnect_peer_list_empty =>
+      'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
 }
 
 // Path: <root>
@@ -10101,6 +10106,14 @@ class _StringsAr extends _StringsEn {
       'In library · download continues';
   @override
   String get anime_download_unfiltered => 'No Trusted filter';
+  @override
+  String get interconnect_enable_footer =>
+      'How to use: on the device that holds your library, turn on the sync server switch below; on your other device, add the address of that server to pair with it. A device can act as only one role at a time — server or client.';
+  @override
+  String get interconnect_peer_list_title => 'Added peers';
+  @override
+  String get interconnect_peer_list_empty =>
+      'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
 }
 
 // Path: <root>
@@ -16533,6 +16546,14 @@ class _StringsDe extends _StringsEn {
       'In library · download continues';
   @override
   String get anime_download_unfiltered => 'No Trusted filter';
+  @override
+  String get interconnect_enable_footer =>
+      'How to use: on the device that holds your library, turn on the sync server switch below; on your other device, add the address of that server to pair with it. A device can act as only one role at a time — server or client.';
+  @override
+  String get interconnect_peer_list_title => 'Added peers';
+  @override
+  String get interconnect_peer_list_empty =>
+      'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
 }
 
 // Path: <root>
@@ -22981,6 +23002,14 @@ class _StringsEs extends _StringsEn {
       'In library · download continues';
   @override
   String get anime_download_unfiltered => 'No Trusted filter';
+  @override
+  String get interconnect_enable_footer =>
+      'How to use: on the device that holds your library, turn on the sync server switch below; on your other device, add the address of that server to pair with it. A device can act as only one role at a time — server or client.';
+  @override
+  String get interconnect_peer_list_title => 'Added peers';
+  @override
+  String get interconnect_peer_list_empty =>
+      'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
 }
 
 // Path: <root>
@@ -29440,6 +29469,14 @@ class _StringsFr extends _StringsEn {
       'In library · download continues';
   @override
   String get anime_download_unfiltered => 'No Trusted filter';
+  @override
+  String get interconnect_enable_footer =>
+      'How to use: on the device that holds your library, turn on the sync server switch below; on your other device, add the address of that server to pair with it. A device can act as only one role at a time — server or client.';
+  @override
+  String get interconnect_peer_list_title => 'Added peers';
+  @override
+  String get interconnect_peer_list_empty =>
+      'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
 }
 
 // Path: <root>
@@ -35828,6 +35865,14 @@ class _StringsId extends _StringsEn {
       'In library · download continues';
   @override
   String get anime_download_unfiltered => 'No Trusted filter';
+  @override
+  String get interconnect_enable_footer =>
+      'How to use: on the device that holds your library, turn on the sync server switch below; on your other device, add the address of that server to pair with it. A device can act as only one role at a time — server or client.';
+  @override
+  String get interconnect_peer_list_title => 'Added peers';
+  @override
+  String get interconnect_peer_list_empty =>
+      'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
 }
 
 // Path: <root>
@@ -42262,6 +42307,14 @@ class _StringsIt extends _StringsEn {
       'In library · download continues';
   @override
   String get anime_download_unfiltered => 'No Trusted filter';
+  @override
+  String get interconnect_enable_footer =>
+      'How to use: on the device that holds your library, turn on the sync server switch below; on your other device, add the address of that server to pair with it. A device can act as only one role at a time — server or client.';
+  @override
+  String get interconnect_peer_list_title => 'Added peers';
+  @override
+  String get interconnect_peer_list_empty =>
+      'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
 }
 
 // Path: <root>
@@ -48513,6 +48566,14 @@ class _StringsJa extends _StringsEn {
       'In library · download continues';
   @override
   String get anime_download_unfiltered => 'No Trusted filter';
+  @override
+  String get interconnect_enable_footer =>
+      'How to use: on the device that holds your library, turn on the sync server switch below; on your other device, add the address of that server to pair with it. A device can act as only one role at a time — server or client.';
+  @override
+  String get interconnect_peer_list_title => 'Added peers';
+  @override
+  String get interconnect_peer_list_empty =>
+      'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
 }
 
 // Path: <root>
@@ -54766,6 +54827,14 @@ class _StringsKo extends _StringsEn {
       'In library · download continues';
   @override
   String get anime_download_unfiltered => 'No Trusted filter';
+  @override
+  String get interconnect_enable_footer =>
+      'How to use: on the device that holds your library, turn on the sync server switch below; on your other device, add the address of that server to pair with it. A device can act as only one role at a time — server or client.';
+  @override
+  String get interconnect_peer_list_title => 'Added peers';
+  @override
+  String get interconnect_peer_list_empty =>
+      'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
 }
 
 // Path: <root>
@@ -61180,6 +61249,14 @@ class _StringsNl extends _StringsEn {
       'In library · download continues';
   @override
   String get anime_download_unfiltered => 'No Trusted filter';
+  @override
+  String get interconnect_enable_footer =>
+      'How to use: on the device that holds your library, turn on the sync server switch below; on your other device, add the address of that server to pair with it. A device can act as only one role at a time — server or client.';
+  @override
+  String get interconnect_peer_list_title => 'Added peers';
+  @override
+  String get interconnect_peer_list_empty =>
+      'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
 }
 
 // Path: <root>
@@ -67607,6 +67684,14 @@ class _StringsPtBr extends _StringsEn {
       'In library · download continues';
   @override
   String get anime_download_unfiltered => 'No Trusted filter';
+  @override
+  String get interconnect_enable_footer =>
+      'How to use: on the device that holds your library, turn on the sync server switch below; on your other device, add the address of that server to pair with it. A device can act as only one role at a time — server or client.';
+  @override
+  String get interconnect_peer_list_title => 'Added peers';
+  @override
+  String get interconnect_peer_list_empty =>
+      'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
 }
 
 // Path: <root>
@@ -74018,6 +74103,14 @@ class _StringsRu extends _StringsEn {
       'In library · download continues';
   @override
   String get anime_download_unfiltered => 'No Trusted filter';
+  @override
+  String get interconnect_enable_footer =>
+      'How to use: on the device that holds your library, turn on the sync server switch below; on your other device, add the address of that server to pair with it. A device can act as only one role at a time — server or client.';
+  @override
+  String get interconnect_peer_list_title => 'Added peers';
+  @override
+  String get interconnect_peer_list_empty =>
+      'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
 }
 
 // Path: <root>
@@ -80377,6 +80470,14 @@ class _StringsTh extends _StringsEn {
       'In library · download continues';
   @override
   String get anime_download_unfiltered => 'No Trusted filter';
+  @override
+  String get interconnect_enable_footer =>
+      'How to use: on the device that holds your library, turn on the sync server switch below; on your other device, add the address of that server to pair with it. A device can act as only one role at a time — server or client.';
+  @override
+  String get interconnect_peer_list_title => 'Added peers';
+  @override
+  String get interconnect_peer_list_empty =>
+      'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
 }
 
 // Path: <root>
@@ -86768,6 +86869,14 @@ class _StringsTr extends _StringsEn {
       'In library · download continues';
   @override
   String get anime_download_unfiltered => 'No Trusted filter';
+  @override
+  String get interconnect_enable_footer =>
+      'How to use: on the device that holds your library, turn on the sync server switch below; on your other device, add the address of that server to pair with it. A device can act as only one role at a time — server or client.';
+  @override
+  String get interconnect_peer_list_title => 'Added peers';
+  @override
+  String get interconnect_peer_list_empty =>
+      'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
 }
 
 // Path: <root>
@@ -93144,6 +93253,14 @@ class _StringsVi extends _StringsEn {
       'In library · download continues';
   @override
   String get anime_download_unfiltered => 'No Trusted filter';
+  @override
+  String get interconnect_enable_footer =>
+      'How to use: on the device that holds your library, turn on the sync server switch below; on your other device, add the address of that server to pair with it. A device can act as only one role at a time — server or client.';
+  @override
+  String get interconnect_peer_list_title => 'Added peers';
+  @override
+  String get interconnect_peer_list_empty =>
+      'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
 }
 
 // Path: <root>
@@ -99068,6 +99185,14 @@ class _StringsZhCn extends _StringsEn {
   String get anime_download_streaming_ready => '已入库 · 下载继续';
   @override
   String get anime_download_unfiltered => '未启用 Trusted 筛选';
+  @override
+  String get interconnect_enable_footer =>
+      '用法：在存放内容的那台设备上开启下方的同步服务器开关；在另一台设备上添加该服务器的地址完成配对。同一台设备同一时间只能担任服务器或客户端其中一种角色。';
+  @override
+  String get interconnect_peer_list_title => '已添加的对端';
+  @override
+  String get interconnect_peer_list_empty =>
+      '尚未添加任何对端。可在下方的局域网设备列表中点击发现的设备自动配对，或手动添加对端地址。';
 }
 
 // Path: <root>
@@ -105240,6 +105365,14 @@ class _StringsZhHk extends _StringsEn {
       'In library · download continues';
   @override
   String get anime_download_unfiltered => 'No Trusted filter';
+  @override
+  String get interconnect_enable_footer =>
+      'How to use: on the device that holds your library, turn on the sync server switch below; on your other device, add the address of that server to pair with it. A device can act as only one role at a time — server or client.';
+  @override
+  String get interconnect_peer_list_title => 'Added peers';
+  @override
+  String get interconnect_peer_list_empty =>
+      'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
 }
 
 /// Flat map(s) containing all translations.
@@ -110935,6 +111068,12 @@ extension on _StringsEn {
         return 'In library · download continues';
       case 'anime_download_unfiltered':
         return 'No Trusted filter';
+      case 'interconnect_enable_footer':
+        return 'How to use: on the device that holds your library, turn on the sync server switch below; on your other device, add the address of that server to pair with it. A device can act as only one role at a time — server or client.';
+      case 'interconnect_peer_list_title':
+        return 'Added peers';
+      case 'interconnect_peer_list_empty':
+        return 'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
       default:
         return null;
     }
@@ -116628,6 +116767,12 @@ extension on _StringsAr {
         return 'In library · download continues';
       case 'anime_download_unfiltered':
         return 'No Trusted filter';
+      case 'interconnect_enable_footer':
+        return 'How to use: on the device that holds your library, turn on the sync server switch below; on your other device, add the address of that server to pair with it. A device can act as only one role at a time — server or client.';
+      case 'interconnect_peer_list_title':
+        return 'Added peers';
+      case 'interconnect_peer_list_empty':
+        return 'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
       default:
         return null;
     }
@@ -122342,6 +122487,12 @@ extension on _StringsDe {
         return 'In library · download continues';
       case 'anime_download_unfiltered':
         return 'No Trusted filter';
+      case 'interconnect_enable_footer':
+        return 'How to use: on the device that holds your library, turn on the sync server switch below; on your other device, add the address of that server to pair with it. A device can act as only one role at a time — server or client.';
+      case 'interconnect_peer_list_title':
+        return 'Added peers';
+      case 'interconnect_peer_list_empty':
+        return 'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
       default:
         return null;
     }
@@ -128055,6 +128206,12 @@ extension on _StringsEs {
         return 'In library · download continues';
       case 'anime_download_unfiltered':
         return 'No Trusted filter';
+      case 'interconnect_enable_footer':
+        return 'How to use: on the device that holds your library, turn on the sync server switch below; on your other device, add the address of that server to pair with it. A device can act as only one role at a time — server or client.';
+      case 'interconnect_peer_list_title':
+        return 'Added peers';
+      case 'interconnect_peer_list_empty':
+        return 'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
       default:
         return null;
     }
@@ -133774,6 +133931,12 @@ extension on _StringsFr {
         return 'In library · download continues';
       case 'anime_download_unfiltered':
         return 'No Trusted filter';
+      case 'interconnect_enable_footer':
+        return 'How to use: on the device that holds your library, turn on the sync server switch below; on your other device, add the address of that server to pair with it. A device can act as only one role at a time — server or client.';
+      case 'interconnect_peer_list_title':
+        return 'Added peers';
+      case 'interconnect_peer_list_empty':
+        return 'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
       default:
         return null;
     }
@@ -139475,6 +139638,12 @@ extension on _StringsId {
         return 'In library · download continues';
       case 'anime_download_unfiltered':
         return 'No Trusted filter';
+      case 'interconnect_enable_footer':
+        return 'How to use: on the device that holds your library, turn on the sync server switch below; on your other device, add the address of that server to pair with it. A device can act as only one role at a time — server or client.';
+      case 'interconnect_peer_list_title':
+        return 'Added peers';
+      case 'interconnect_peer_list_empty':
+        return 'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
       default:
         return null;
     }
@@ -145191,6 +145360,12 @@ extension on _StringsIt {
         return 'In library · download continues';
       case 'anime_download_unfiltered':
         return 'No Trusted filter';
+      case 'interconnect_enable_footer':
+        return 'How to use: on the device that holds your library, turn on the sync server switch below; on your other device, add the address of that server to pair with it. A device can act as only one role at a time — server or client.';
+      case 'interconnect_peer_list_title':
+        return 'Added peers';
+      case 'interconnect_peer_list_empty':
+        return 'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
       default:
         return null;
     }
@@ -150869,6 +151044,12 @@ extension on _StringsJa {
         return 'In library · download continues';
       case 'anime_download_unfiltered':
         return 'No Trusted filter';
+      case 'interconnect_enable_footer':
+        return 'How to use: on the device that holds your library, turn on the sync server switch below; on your other device, add the address of that server to pair with it. A device can act as only one role at a time — server or client.';
+      case 'interconnect_peer_list_title':
+        return 'Added peers';
+      case 'interconnect_peer_list_empty':
+        return 'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
       default:
         return null;
     }
@@ -156551,6 +156732,12 @@ extension on _StringsKo {
         return 'In library · download continues';
       case 'anime_download_unfiltered':
         return 'No Trusted filter';
+      case 'interconnect_enable_footer':
+        return 'How to use: on the device that holds your library, turn on the sync server switch below; on your other device, add the address of that server to pair with it. A device can act as only one role at a time — server or client.';
+      case 'interconnect_peer_list_title':
+        return 'Added peers';
+      case 'interconnect_peer_list_empty':
+        return 'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
       default:
         return null;
     }
@@ -162260,6 +162447,12 @@ extension on _StringsNl {
         return 'In library · download continues';
       case 'anime_download_unfiltered':
         return 'No Trusted filter';
+      case 'interconnect_enable_footer':
+        return 'How to use: on the device that holds your library, turn on the sync server switch below; on your other device, add the address of that server to pair with it. A device can act as only one role at a time — server or client.';
+      case 'interconnect_peer_list_title':
+        return 'Added peers';
+      case 'interconnect_peer_list_empty':
+        return 'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
       default:
         return null;
     }
@@ -167966,6 +168159,12 @@ extension on _StringsPtBr {
         return 'In library · download continues';
       case 'anime_download_unfiltered':
         return 'No Trusted filter';
+      case 'interconnect_enable_footer':
+        return 'How to use: on the device that holds your library, turn on the sync server switch below; on your other device, add the address of that server to pair with it. A device can act as only one role at a time — server or client.';
+      case 'interconnect_peer_list_title':
+        return 'Added peers';
+      case 'interconnect_peer_list_empty':
+        return 'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
       default:
         return null;
     }
@@ -173677,6 +173876,12 @@ extension on _StringsRu {
         return 'In library · download continues';
       case 'anime_download_unfiltered':
         return 'No Trusted filter';
+      case 'interconnect_enable_footer':
+        return 'How to use: on the device that holds your library, turn on the sync server switch below; on your other device, add the address of that server to pair with it. A device can act as only one role at a time — server or client.';
+      case 'interconnect_peer_list_title':
+        return 'Added peers';
+      case 'interconnect_peer_list_empty':
+        return 'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
       default:
         return null;
     }
@@ -179372,6 +179577,12 @@ extension on _StringsTh {
         return 'In library · download continues';
       case 'anime_download_unfiltered':
         return 'No Trusted filter';
+      case 'interconnect_enable_footer':
+        return 'How to use: on the device that holds your library, turn on the sync server switch below; on your other device, add the address of that server to pair with it. A device can act as only one role at a time — server or client.';
+      case 'interconnect_peer_list_title':
+        return 'Added peers';
+      case 'interconnect_peer_list_empty':
+        return 'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
       default:
         return null;
     }
@@ -185076,6 +185287,12 @@ extension on _StringsTr {
         return 'In library · download continues';
       case 'anime_download_unfiltered':
         return 'No Trusted filter';
+      case 'interconnect_enable_footer':
+        return 'How to use: on the device that holds your library, turn on the sync server switch below; on your other device, add the address of that server to pair with it. A device can act as only one role at a time — server or client.';
+      case 'interconnect_peer_list_title':
+        return 'Added peers';
+      case 'interconnect_peer_list_empty':
+        return 'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
       default:
         return null;
     }
@@ -190775,6 +190992,12 @@ extension on _StringsVi {
         return 'In library · download continues';
       case 'anime_download_unfiltered':
         return 'No Trusted filter';
+      case 'interconnect_enable_footer':
+        return 'How to use: on the device that holds your library, turn on the sync server switch below; on your other device, add the address of that server to pair with it. A device can act as only one role at a time — server or client.';
+      case 'interconnect_peer_list_title':
+        return 'Added peers';
+      case 'interconnect_peer_list_empty':
+        return 'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
       default:
         return null;
     }
@@ -196426,6 +196649,12 @@ extension on _StringsZhCn {
         return '已入库 · 下载继续';
       case 'anime_download_unfiltered':
         return '未启用 Trusted 筛选';
+      case 'interconnect_enable_footer':
+        return '用法：在存放内容的那台设备上开启下方的同步服务器开关；在另一台设备上添加该服务器的地址完成配对。同一台设备同一时间只能担任服务器或客户端其中一种角色。';
+      case 'interconnect_peer_list_title':
+        return '已添加的对端';
+      case 'interconnect_peer_list_empty':
+        return '尚未添加任何对端。可在下方的局域网设备列表中点击发现的设备自动配对，或手动添加对端地址。';
       default:
         return null;
     }
@@ -202099,6 +202328,12 @@ extension on _StringsZhHk {
         return 'In library · download continues';
       case 'anime_download_unfiltered':
         return 'No Trusted filter';
+      case 'interconnect_enable_footer':
+        return 'How to use: on the device that holds your library, turn on the sync server switch below; on your other device, add the address of that server to pair with it. A device can act as only one role at a time — server or client.';
+      case 'interconnect_peer_list_title':
+        return 'Added peers';
+      case 'interconnect_peer_list_empty':
+        return 'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
       default:
         return null;
     }
