@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 47294 (2782 per locale)
+/// Strings: 47940 (2820 per locale)
 ///
-/// Built on 2026-07-31 at 11:35 UTC
+/// Built on 2026-07-31 at 12:02 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3742,6 +3742,49 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get interconnect_peer_list_title => 'Added peers';
   String get interconnect_peer_list_empty =>
       'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
+  String get anki_lapis_visual_editor => 'Visual style editor';
+  String get anki_lapis_visual_editor_hint =>
+      'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+  String get anki_lapis_visual_front => 'Front';
+  String get anki_lapis_visual_back => 'Back';
+  String get anki_lapis_visual_preview => 'Lapis card preview';
+  String get anki_lapis_visual_select_field => 'Select a field to highlight';
+  String get anki_lapis_visual_reset_field => 'Reset field';
+  String anki_lapis_visual_font_size({required Object percent}) =>
+      'Font size: ${percent}%';
+  String get anki_lapis_visual_bold => 'Bold';
+  String get anki_lapis_visual_alignment => 'Alignment';
+  String get anki_lapis_visual_color => 'Text color';
+  String get anki_lapis_visual_default => 'Default';
+  String get anki_lapis_visual_advanced_css => 'Advanced CSS';
+  String get anki_lapis_visual_field_expression => 'Word';
+  String get anki_lapis_visual_field_reading => 'Reading';
+  String get anki_lapis_visual_field_sentence => 'Sentence';
+  String get anki_lapis_visual_field_primary_definition => 'Primary definition';
+  String get anki_lapis_visual_field_glossaries => 'Other definitions';
+  String get anki_lapis_visual_target_card_content => 'Card content';
+  String get anki_lapis_visual_target_definition => 'Definition';
+  String get anki_lapis_visual_target_inside_definition => 'Inside definition';
+  String get anki_lapis_visual_field_definition_info => 'Definition indicator';
+  String get anki_lapis_visual_field_definition_box => 'Definition box';
+  String get anki_lapis_visual_field_definition_content => 'Whole definition';
+  String get anki_lapis_visual_field_selected_definition =>
+      'Selected definition';
+  String get anki_lapis_visual_field_dictionary_entry => 'Dictionary entry';
+  String get anki_lapis_visual_field_dictionary_name => 'Dictionary name';
+  String get anki_lapis_visual_field_definition_example => 'Definition example';
+  String get anki_lapis_visual_line_height => 'Line height';
+  String get anki_lapis_visual_background_color => 'Background highlight';
+  String get anki_lapis_visual_box_layout => 'Box appearance';
+  String get anki_lapis_visual_border_width => 'Border';
+  String get anki_lapis_visual_border_color => 'Border color';
+  String get anki_lapis_visual_corner_radius => 'Corner radius';
+  String get anki_lapis_visual_padding => 'Inner spacing';
+  String get anki_lapis_visual_margin => 'Outer spacing';
+  String get anki_lapis_visual_field_definition_info_note =>
+      'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
+  String get anki_lapis_visual_field_dictionary_name_note =>
+      'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
 }
 
 // Path: <root>
@@ -10115,6 +10158,87 @@ class _StringsAr extends _StringsEn {
   @override
   String get interconnect_peer_list_empty =>
       'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
+  @override
+  String get anki_lapis_visual_editor => 'Visual style editor';
+  @override
+  String get anki_lapis_visual_editor_hint =>
+      'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+  @override
+  String get anki_lapis_visual_front => 'Front';
+  @override
+  String get anki_lapis_visual_back => 'Back';
+  @override
+  String get anki_lapis_visual_preview => 'Lapis card preview';
+  @override
+  String get anki_lapis_visual_select_field => 'Select a field to highlight';
+  @override
+  String get anki_lapis_visual_reset_field => 'Reset field';
+  @override
+  String anki_lapis_visual_font_size({required Object percent}) =>
+      'Font size: ${percent}%';
+  @override
+  String get anki_lapis_visual_bold => 'Bold';
+  @override
+  String get anki_lapis_visual_alignment => 'Alignment';
+  @override
+  String get anki_lapis_visual_color => 'Text color';
+  @override
+  String get anki_lapis_visual_default => 'Default';
+  @override
+  String get anki_lapis_visual_advanced_css => 'Advanced CSS';
+  @override
+  String get anki_lapis_visual_field_expression => 'Word';
+  @override
+  String get anki_lapis_visual_field_reading => 'Reading';
+  @override
+  String get anki_lapis_visual_field_sentence => 'Sentence';
+  @override
+  String get anki_lapis_visual_field_primary_definition => 'Primary definition';
+  @override
+  String get anki_lapis_visual_field_glossaries => 'Other definitions';
+  @override
+  String get anki_lapis_visual_target_card_content => 'Card content';
+  @override
+  String get anki_lapis_visual_target_definition => 'Definition';
+  @override
+  String get anki_lapis_visual_target_inside_definition => 'Inside definition';
+  @override
+  String get anki_lapis_visual_field_definition_info => 'Definition indicator';
+  @override
+  String get anki_lapis_visual_field_definition_box => 'Definition box';
+  @override
+  String get anki_lapis_visual_field_definition_content => 'Whole definition';
+  @override
+  String get anki_lapis_visual_field_selected_definition =>
+      'Selected definition';
+  @override
+  String get anki_lapis_visual_field_dictionary_entry => 'Dictionary entry';
+  @override
+  String get anki_lapis_visual_field_dictionary_name => 'Dictionary name';
+  @override
+  String get anki_lapis_visual_field_definition_example => 'Definition example';
+  @override
+  String get anki_lapis_visual_line_height => 'Line height';
+  @override
+  String get anki_lapis_visual_background_color => 'Background highlight';
+  @override
+  String get anki_lapis_visual_box_layout => 'Box appearance';
+  @override
+  String get anki_lapis_visual_border_width => 'Border';
+  @override
+  String get anki_lapis_visual_border_color => 'Border color';
+  @override
+  String get anki_lapis_visual_corner_radius => 'Corner radius';
+  @override
+  String get anki_lapis_visual_padding => 'Inner spacing';
+  @override
+  String get anki_lapis_visual_margin => 'Outer spacing';
+  @override
+  String get anki_lapis_visual_field_definition_info_note =>
+      'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
+  @override
+  String get anki_lapis_visual_field_dictionary_name_note =>
+      'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
 }
 
 // Path: <root>
@@ -16555,6 +16679,87 @@ class _StringsDe extends _StringsEn {
   @override
   String get interconnect_peer_list_empty =>
       'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
+  @override
+  String get anki_lapis_visual_editor => 'Visual style editor';
+  @override
+  String get anki_lapis_visual_editor_hint =>
+      'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+  @override
+  String get anki_lapis_visual_front => 'Front';
+  @override
+  String get anki_lapis_visual_back => 'Back';
+  @override
+  String get anki_lapis_visual_preview => 'Lapis card preview';
+  @override
+  String get anki_lapis_visual_select_field => 'Select a field to highlight';
+  @override
+  String get anki_lapis_visual_reset_field => 'Reset field';
+  @override
+  String anki_lapis_visual_font_size({required Object percent}) =>
+      'Font size: ${percent}%';
+  @override
+  String get anki_lapis_visual_bold => 'Bold';
+  @override
+  String get anki_lapis_visual_alignment => 'Alignment';
+  @override
+  String get anki_lapis_visual_color => 'Text color';
+  @override
+  String get anki_lapis_visual_default => 'Default';
+  @override
+  String get anki_lapis_visual_advanced_css => 'Advanced CSS';
+  @override
+  String get anki_lapis_visual_field_expression => 'Word';
+  @override
+  String get anki_lapis_visual_field_reading => 'Reading';
+  @override
+  String get anki_lapis_visual_field_sentence => 'Sentence';
+  @override
+  String get anki_lapis_visual_field_primary_definition => 'Primary definition';
+  @override
+  String get anki_lapis_visual_field_glossaries => 'Other definitions';
+  @override
+  String get anki_lapis_visual_target_card_content => 'Card content';
+  @override
+  String get anki_lapis_visual_target_definition => 'Definition';
+  @override
+  String get anki_lapis_visual_target_inside_definition => 'Inside definition';
+  @override
+  String get anki_lapis_visual_field_definition_info => 'Definition indicator';
+  @override
+  String get anki_lapis_visual_field_definition_box => 'Definition box';
+  @override
+  String get anki_lapis_visual_field_definition_content => 'Whole definition';
+  @override
+  String get anki_lapis_visual_field_selected_definition =>
+      'Selected definition';
+  @override
+  String get anki_lapis_visual_field_dictionary_entry => 'Dictionary entry';
+  @override
+  String get anki_lapis_visual_field_dictionary_name => 'Dictionary name';
+  @override
+  String get anki_lapis_visual_field_definition_example => 'Definition example';
+  @override
+  String get anki_lapis_visual_line_height => 'Line height';
+  @override
+  String get anki_lapis_visual_background_color => 'Background highlight';
+  @override
+  String get anki_lapis_visual_box_layout => 'Box appearance';
+  @override
+  String get anki_lapis_visual_border_width => 'Border';
+  @override
+  String get anki_lapis_visual_border_color => 'Border color';
+  @override
+  String get anki_lapis_visual_corner_radius => 'Corner radius';
+  @override
+  String get anki_lapis_visual_padding => 'Inner spacing';
+  @override
+  String get anki_lapis_visual_margin => 'Outer spacing';
+  @override
+  String get anki_lapis_visual_field_definition_info_note =>
+      'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
+  @override
+  String get anki_lapis_visual_field_dictionary_name_note =>
+      'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
 }
 
 // Path: <root>
@@ -23011,6 +23216,87 @@ class _StringsEs extends _StringsEn {
   @override
   String get interconnect_peer_list_empty =>
       'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
+  @override
+  String get anki_lapis_visual_editor => 'Visual style editor';
+  @override
+  String get anki_lapis_visual_editor_hint =>
+      'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+  @override
+  String get anki_lapis_visual_front => 'Front';
+  @override
+  String get anki_lapis_visual_back => 'Back';
+  @override
+  String get anki_lapis_visual_preview => 'Lapis card preview';
+  @override
+  String get anki_lapis_visual_select_field => 'Select a field to highlight';
+  @override
+  String get anki_lapis_visual_reset_field => 'Reset field';
+  @override
+  String anki_lapis_visual_font_size({required Object percent}) =>
+      'Font size: ${percent}%';
+  @override
+  String get anki_lapis_visual_bold => 'Bold';
+  @override
+  String get anki_lapis_visual_alignment => 'Alignment';
+  @override
+  String get anki_lapis_visual_color => 'Text color';
+  @override
+  String get anki_lapis_visual_default => 'Default';
+  @override
+  String get anki_lapis_visual_advanced_css => 'Advanced CSS';
+  @override
+  String get anki_lapis_visual_field_expression => 'Word';
+  @override
+  String get anki_lapis_visual_field_reading => 'Reading';
+  @override
+  String get anki_lapis_visual_field_sentence => 'Sentence';
+  @override
+  String get anki_lapis_visual_field_primary_definition => 'Primary definition';
+  @override
+  String get anki_lapis_visual_field_glossaries => 'Other definitions';
+  @override
+  String get anki_lapis_visual_target_card_content => 'Card content';
+  @override
+  String get anki_lapis_visual_target_definition => 'Definition';
+  @override
+  String get anki_lapis_visual_target_inside_definition => 'Inside definition';
+  @override
+  String get anki_lapis_visual_field_definition_info => 'Definition indicator';
+  @override
+  String get anki_lapis_visual_field_definition_box => 'Definition box';
+  @override
+  String get anki_lapis_visual_field_definition_content => 'Whole definition';
+  @override
+  String get anki_lapis_visual_field_selected_definition =>
+      'Selected definition';
+  @override
+  String get anki_lapis_visual_field_dictionary_entry => 'Dictionary entry';
+  @override
+  String get anki_lapis_visual_field_dictionary_name => 'Dictionary name';
+  @override
+  String get anki_lapis_visual_field_definition_example => 'Definition example';
+  @override
+  String get anki_lapis_visual_line_height => 'Line height';
+  @override
+  String get anki_lapis_visual_background_color => 'Background highlight';
+  @override
+  String get anki_lapis_visual_box_layout => 'Box appearance';
+  @override
+  String get anki_lapis_visual_border_width => 'Border';
+  @override
+  String get anki_lapis_visual_border_color => 'Border color';
+  @override
+  String get anki_lapis_visual_corner_radius => 'Corner radius';
+  @override
+  String get anki_lapis_visual_padding => 'Inner spacing';
+  @override
+  String get anki_lapis_visual_margin => 'Outer spacing';
+  @override
+  String get anki_lapis_visual_field_definition_info_note =>
+      'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
+  @override
+  String get anki_lapis_visual_field_dictionary_name_note =>
+      'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
 }
 
 // Path: <root>
@@ -29478,6 +29764,87 @@ class _StringsFr extends _StringsEn {
   @override
   String get interconnect_peer_list_empty =>
       'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
+  @override
+  String get anki_lapis_visual_editor => 'Visual style editor';
+  @override
+  String get anki_lapis_visual_editor_hint =>
+      'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+  @override
+  String get anki_lapis_visual_front => 'Front';
+  @override
+  String get anki_lapis_visual_back => 'Back';
+  @override
+  String get anki_lapis_visual_preview => 'Lapis card preview';
+  @override
+  String get anki_lapis_visual_select_field => 'Select a field to highlight';
+  @override
+  String get anki_lapis_visual_reset_field => 'Reset field';
+  @override
+  String anki_lapis_visual_font_size({required Object percent}) =>
+      'Font size: ${percent}%';
+  @override
+  String get anki_lapis_visual_bold => 'Bold';
+  @override
+  String get anki_lapis_visual_alignment => 'Alignment';
+  @override
+  String get anki_lapis_visual_color => 'Text color';
+  @override
+  String get anki_lapis_visual_default => 'Default';
+  @override
+  String get anki_lapis_visual_advanced_css => 'Advanced CSS';
+  @override
+  String get anki_lapis_visual_field_expression => 'Word';
+  @override
+  String get anki_lapis_visual_field_reading => 'Reading';
+  @override
+  String get anki_lapis_visual_field_sentence => 'Sentence';
+  @override
+  String get anki_lapis_visual_field_primary_definition => 'Primary definition';
+  @override
+  String get anki_lapis_visual_field_glossaries => 'Other definitions';
+  @override
+  String get anki_lapis_visual_target_card_content => 'Card content';
+  @override
+  String get anki_lapis_visual_target_definition => 'Definition';
+  @override
+  String get anki_lapis_visual_target_inside_definition => 'Inside definition';
+  @override
+  String get anki_lapis_visual_field_definition_info => 'Definition indicator';
+  @override
+  String get anki_lapis_visual_field_definition_box => 'Definition box';
+  @override
+  String get anki_lapis_visual_field_definition_content => 'Whole definition';
+  @override
+  String get anki_lapis_visual_field_selected_definition =>
+      'Selected definition';
+  @override
+  String get anki_lapis_visual_field_dictionary_entry => 'Dictionary entry';
+  @override
+  String get anki_lapis_visual_field_dictionary_name => 'Dictionary name';
+  @override
+  String get anki_lapis_visual_field_definition_example => 'Definition example';
+  @override
+  String get anki_lapis_visual_line_height => 'Line height';
+  @override
+  String get anki_lapis_visual_background_color => 'Background highlight';
+  @override
+  String get anki_lapis_visual_box_layout => 'Box appearance';
+  @override
+  String get anki_lapis_visual_border_width => 'Border';
+  @override
+  String get anki_lapis_visual_border_color => 'Border color';
+  @override
+  String get anki_lapis_visual_corner_radius => 'Corner radius';
+  @override
+  String get anki_lapis_visual_padding => 'Inner spacing';
+  @override
+  String get anki_lapis_visual_margin => 'Outer spacing';
+  @override
+  String get anki_lapis_visual_field_definition_info_note =>
+      'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
+  @override
+  String get anki_lapis_visual_field_dictionary_name_note =>
+      'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
 }
 
 // Path: <root>
@@ -35874,6 +36241,87 @@ class _StringsId extends _StringsEn {
   @override
   String get interconnect_peer_list_empty =>
       'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
+  @override
+  String get anki_lapis_visual_editor => 'Visual style editor';
+  @override
+  String get anki_lapis_visual_editor_hint =>
+      'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+  @override
+  String get anki_lapis_visual_front => 'Front';
+  @override
+  String get anki_lapis_visual_back => 'Back';
+  @override
+  String get anki_lapis_visual_preview => 'Lapis card preview';
+  @override
+  String get anki_lapis_visual_select_field => 'Select a field to highlight';
+  @override
+  String get anki_lapis_visual_reset_field => 'Reset field';
+  @override
+  String anki_lapis_visual_font_size({required Object percent}) =>
+      'Font size: ${percent}%';
+  @override
+  String get anki_lapis_visual_bold => 'Bold';
+  @override
+  String get anki_lapis_visual_alignment => 'Alignment';
+  @override
+  String get anki_lapis_visual_color => 'Text color';
+  @override
+  String get anki_lapis_visual_default => 'Default';
+  @override
+  String get anki_lapis_visual_advanced_css => 'Advanced CSS';
+  @override
+  String get anki_lapis_visual_field_expression => 'Word';
+  @override
+  String get anki_lapis_visual_field_reading => 'Reading';
+  @override
+  String get anki_lapis_visual_field_sentence => 'Sentence';
+  @override
+  String get anki_lapis_visual_field_primary_definition => 'Primary definition';
+  @override
+  String get anki_lapis_visual_field_glossaries => 'Other definitions';
+  @override
+  String get anki_lapis_visual_target_card_content => 'Card content';
+  @override
+  String get anki_lapis_visual_target_definition => 'Definition';
+  @override
+  String get anki_lapis_visual_target_inside_definition => 'Inside definition';
+  @override
+  String get anki_lapis_visual_field_definition_info => 'Definition indicator';
+  @override
+  String get anki_lapis_visual_field_definition_box => 'Definition box';
+  @override
+  String get anki_lapis_visual_field_definition_content => 'Whole definition';
+  @override
+  String get anki_lapis_visual_field_selected_definition =>
+      'Selected definition';
+  @override
+  String get anki_lapis_visual_field_dictionary_entry => 'Dictionary entry';
+  @override
+  String get anki_lapis_visual_field_dictionary_name => 'Dictionary name';
+  @override
+  String get anki_lapis_visual_field_definition_example => 'Definition example';
+  @override
+  String get anki_lapis_visual_line_height => 'Line height';
+  @override
+  String get anki_lapis_visual_background_color => 'Background highlight';
+  @override
+  String get anki_lapis_visual_box_layout => 'Box appearance';
+  @override
+  String get anki_lapis_visual_border_width => 'Border';
+  @override
+  String get anki_lapis_visual_border_color => 'Border color';
+  @override
+  String get anki_lapis_visual_corner_radius => 'Corner radius';
+  @override
+  String get anki_lapis_visual_padding => 'Inner spacing';
+  @override
+  String get anki_lapis_visual_margin => 'Outer spacing';
+  @override
+  String get anki_lapis_visual_field_definition_info_note =>
+      'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
+  @override
+  String get anki_lapis_visual_field_dictionary_name_note =>
+      'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
 }
 
 // Path: <root>
@@ -42316,6 +42764,87 @@ class _StringsIt extends _StringsEn {
   @override
   String get interconnect_peer_list_empty =>
       'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
+  @override
+  String get anki_lapis_visual_editor => 'Visual style editor';
+  @override
+  String get anki_lapis_visual_editor_hint =>
+      'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+  @override
+  String get anki_lapis_visual_front => 'Front';
+  @override
+  String get anki_lapis_visual_back => 'Back';
+  @override
+  String get anki_lapis_visual_preview => 'Lapis card preview';
+  @override
+  String get anki_lapis_visual_select_field => 'Select a field to highlight';
+  @override
+  String get anki_lapis_visual_reset_field => 'Reset field';
+  @override
+  String anki_lapis_visual_font_size({required Object percent}) =>
+      'Font size: ${percent}%';
+  @override
+  String get anki_lapis_visual_bold => 'Bold';
+  @override
+  String get anki_lapis_visual_alignment => 'Alignment';
+  @override
+  String get anki_lapis_visual_color => 'Text color';
+  @override
+  String get anki_lapis_visual_default => 'Default';
+  @override
+  String get anki_lapis_visual_advanced_css => 'Advanced CSS';
+  @override
+  String get anki_lapis_visual_field_expression => 'Word';
+  @override
+  String get anki_lapis_visual_field_reading => 'Reading';
+  @override
+  String get anki_lapis_visual_field_sentence => 'Sentence';
+  @override
+  String get anki_lapis_visual_field_primary_definition => 'Primary definition';
+  @override
+  String get anki_lapis_visual_field_glossaries => 'Other definitions';
+  @override
+  String get anki_lapis_visual_target_card_content => 'Card content';
+  @override
+  String get anki_lapis_visual_target_definition => 'Definition';
+  @override
+  String get anki_lapis_visual_target_inside_definition => 'Inside definition';
+  @override
+  String get anki_lapis_visual_field_definition_info => 'Definition indicator';
+  @override
+  String get anki_lapis_visual_field_definition_box => 'Definition box';
+  @override
+  String get anki_lapis_visual_field_definition_content => 'Whole definition';
+  @override
+  String get anki_lapis_visual_field_selected_definition =>
+      'Selected definition';
+  @override
+  String get anki_lapis_visual_field_dictionary_entry => 'Dictionary entry';
+  @override
+  String get anki_lapis_visual_field_dictionary_name => 'Dictionary name';
+  @override
+  String get anki_lapis_visual_field_definition_example => 'Definition example';
+  @override
+  String get anki_lapis_visual_line_height => 'Line height';
+  @override
+  String get anki_lapis_visual_background_color => 'Background highlight';
+  @override
+  String get anki_lapis_visual_box_layout => 'Box appearance';
+  @override
+  String get anki_lapis_visual_border_width => 'Border';
+  @override
+  String get anki_lapis_visual_border_color => 'Border color';
+  @override
+  String get anki_lapis_visual_corner_radius => 'Corner radius';
+  @override
+  String get anki_lapis_visual_padding => 'Inner spacing';
+  @override
+  String get anki_lapis_visual_margin => 'Outer spacing';
+  @override
+  String get anki_lapis_visual_field_definition_info_note =>
+      'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
+  @override
+  String get anki_lapis_visual_field_dictionary_name_note =>
+      'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
 }
 
 // Path: <root>
@@ -48575,6 +49104,87 @@ class _StringsJa extends _StringsEn {
   @override
   String get interconnect_peer_list_empty =>
       'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
+  @override
+  String get anki_lapis_visual_editor => 'Visual style editor';
+  @override
+  String get anki_lapis_visual_editor_hint =>
+      'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+  @override
+  String get anki_lapis_visual_front => 'Front';
+  @override
+  String get anki_lapis_visual_back => 'Back';
+  @override
+  String get anki_lapis_visual_preview => 'Lapis card preview';
+  @override
+  String get anki_lapis_visual_select_field => 'Select a field to highlight';
+  @override
+  String get anki_lapis_visual_reset_field => 'Reset field';
+  @override
+  String anki_lapis_visual_font_size({required Object percent}) =>
+      'Font size: ${percent}%';
+  @override
+  String get anki_lapis_visual_bold => 'Bold';
+  @override
+  String get anki_lapis_visual_alignment => 'Alignment';
+  @override
+  String get anki_lapis_visual_color => 'Text color';
+  @override
+  String get anki_lapis_visual_default => 'Default';
+  @override
+  String get anki_lapis_visual_advanced_css => 'Advanced CSS';
+  @override
+  String get anki_lapis_visual_field_expression => 'Word';
+  @override
+  String get anki_lapis_visual_field_reading => 'Reading';
+  @override
+  String get anki_lapis_visual_field_sentence => 'Sentence';
+  @override
+  String get anki_lapis_visual_field_primary_definition => 'Primary definition';
+  @override
+  String get anki_lapis_visual_field_glossaries => 'Other definitions';
+  @override
+  String get anki_lapis_visual_target_card_content => 'Card content';
+  @override
+  String get anki_lapis_visual_target_definition => 'Definition';
+  @override
+  String get anki_lapis_visual_target_inside_definition => 'Inside definition';
+  @override
+  String get anki_lapis_visual_field_definition_info => 'Definition indicator';
+  @override
+  String get anki_lapis_visual_field_definition_box => 'Definition box';
+  @override
+  String get anki_lapis_visual_field_definition_content => 'Whole definition';
+  @override
+  String get anki_lapis_visual_field_selected_definition =>
+      'Selected definition';
+  @override
+  String get anki_lapis_visual_field_dictionary_entry => 'Dictionary entry';
+  @override
+  String get anki_lapis_visual_field_dictionary_name => 'Dictionary name';
+  @override
+  String get anki_lapis_visual_field_definition_example => 'Definition example';
+  @override
+  String get anki_lapis_visual_line_height => 'Line height';
+  @override
+  String get anki_lapis_visual_background_color => 'Background highlight';
+  @override
+  String get anki_lapis_visual_box_layout => 'Box appearance';
+  @override
+  String get anki_lapis_visual_border_width => 'Border';
+  @override
+  String get anki_lapis_visual_border_color => 'Border color';
+  @override
+  String get anki_lapis_visual_corner_radius => 'Corner radius';
+  @override
+  String get anki_lapis_visual_padding => 'Inner spacing';
+  @override
+  String get anki_lapis_visual_margin => 'Outer spacing';
+  @override
+  String get anki_lapis_visual_field_definition_info_note =>
+      'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
+  @override
+  String get anki_lapis_visual_field_dictionary_name_note =>
+      'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
 }
 
 // Path: <root>
@@ -54836,6 +55446,87 @@ class _StringsKo extends _StringsEn {
   @override
   String get interconnect_peer_list_empty =>
       'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
+  @override
+  String get anki_lapis_visual_editor => 'Visual style editor';
+  @override
+  String get anki_lapis_visual_editor_hint =>
+      'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+  @override
+  String get anki_lapis_visual_front => 'Front';
+  @override
+  String get anki_lapis_visual_back => 'Back';
+  @override
+  String get anki_lapis_visual_preview => 'Lapis card preview';
+  @override
+  String get anki_lapis_visual_select_field => 'Select a field to highlight';
+  @override
+  String get anki_lapis_visual_reset_field => 'Reset field';
+  @override
+  String anki_lapis_visual_font_size({required Object percent}) =>
+      'Font size: ${percent}%';
+  @override
+  String get anki_lapis_visual_bold => 'Bold';
+  @override
+  String get anki_lapis_visual_alignment => 'Alignment';
+  @override
+  String get anki_lapis_visual_color => 'Text color';
+  @override
+  String get anki_lapis_visual_default => 'Default';
+  @override
+  String get anki_lapis_visual_advanced_css => 'Advanced CSS';
+  @override
+  String get anki_lapis_visual_field_expression => 'Word';
+  @override
+  String get anki_lapis_visual_field_reading => 'Reading';
+  @override
+  String get anki_lapis_visual_field_sentence => 'Sentence';
+  @override
+  String get anki_lapis_visual_field_primary_definition => 'Primary definition';
+  @override
+  String get anki_lapis_visual_field_glossaries => 'Other definitions';
+  @override
+  String get anki_lapis_visual_target_card_content => 'Card content';
+  @override
+  String get anki_lapis_visual_target_definition => 'Definition';
+  @override
+  String get anki_lapis_visual_target_inside_definition => 'Inside definition';
+  @override
+  String get anki_lapis_visual_field_definition_info => 'Definition indicator';
+  @override
+  String get anki_lapis_visual_field_definition_box => 'Definition box';
+  @override
+  String get anki_lapis_visual_field_definition_content => 'Whole definition';
+  @override
+  String get anki_lapis_visual_field_selected_definition =>
+      'Selected definition';
+  @override
+  String get anki_lapis_visual_field_dictionary_entry => 'Dictionary entry';
+  @override
+  String get anki_lapis_visual_field_dictionary_name => 'Dictionary name';
+  @override
+  String get anki_lapis_visual_field_definition_example => 'Definition example';
+  @override
+  String get anki_lapis_visual_line_height => 'Line height';
+  @override
+  String get anki_lapis_visual_background_color => 'Background highlight';
+  @override
+  String get anki_lapis_visual_box_layout => 'Box appearance';
+  @override
+  String get anki_lapis_visual_border_width => 'Border';
+  @override
+  String get anki_lapis_visual_border_color => 'Border color';
+  @override
+  String get anki_lapis_visual_corner_radius => 'Corner radius';
+  @override
+  String get anki_lapis_visual_padding => 'Inner spacing';
+  @override
+  String get anki_lapis_visual_margin => 'Outer spacing';
+  @override
+  String get anki_lapis_visual_field_definition_info_note =>
+      'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
+  @override
+  String get anki_lapis_visual_field_dictionary_name_note =>
+      'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
 }
 
 // Path: <root>
@@ -61258,6 +61949,87 @@ class _StringsNl extends _StringsEn {
   @override
   String get interconnect_peer_list_empty =>
       'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
+  @override
+  String get anki_lapis_visual_editor => 'Visual style editor';
+  @override
+  String get anki_lapis_visual_editor_hint =>
+      'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+  @override
+  String get anki_lapis_visual_front => 'Front';
+  @override
+  String get anki_lapis_visual_back => 'Back';
+  @override
+  String get anki_lapis_visual_preview => 'Lapis card preview';
+  @override
+  String get anki_lapis_visual_select_field => 'Select a field to highlight';
+  @override
+  String get anki_lapis_visual_reset_field => 'Reset field';
+  @override
+  String anki_lapis_visual_font_size({required Object percent}) =>
+      'Font size: ${percent}%';
+  @override
+  String get anki_lapis_visual_bold => 'Bold';
+  @override
+  String get anki_lapis_visual_alignment => 'Alignment';
+  @override
+  String get anki_lapis_visual_color => 'Text color';
+  @override
+  String get anki_lapis_visual_default => 'Default';
+  @override
+  String get anki_lapis_visual_advanced_css => 'Advanced CSS';
+  @override
+  String get anki_lapis_visual_field_expression => 'Word';
+  @override
+  String get anki_lapis_visual_field_reading => 'Reading';
+  @override
+  String get anki_lapis_visual_field_sentence => 'Sentence';
+  @override
+  String get anki_lapis_visual_field_primary_definition => 'Primary definition';
+  @override
+  String get anki_lapis_visual_field_glossaries => 'Other definitions';
+  @override
+  String get anki_lapis_visual_target_card_content => 'Card content';
+  @override
+  String get anki_lapis_visual_target_definition => 'Definition';
+  @override
+  String get anki_lapis_visual_target_inside_definition => 'Inside definition';
+  @override
+  String get anki_lapis_visual_field_definition_info => 'Definition indicator';
+  @override
+  String get anki_lapis_visual_field_definition_box => 'Definition box';
+  @override
+  String get anki_lapis_visual_field_definition_content => 'Whole definition';
+  @override
+  String get anki_lapis_visual_field_selected_definition =>
+      'Selected definition';
+  @override
+  String get anki_lapis_visual_field_dictionary_entry => 'Dictionary entry';
+  @override
+  String get anki_lapis_visual_field_dictionary_name => 'Dictionary name';
+  @override
+  String get anki_lapis_visual_field_definition_example => 'Definition example';
+  @override
+  String get anki_lapis_visual_line_height => 'Line height';
+  @override
+  String get anki_lapis_visual_background_color => 'Background highlight';
+  @override
+  String get anki_lapis_visual_box_layout => 'Box appearance';
+  @override
+  String get anki_lapis_visual_border_width => 'Border';
+  @override
+  String get anki_lapis_visual_border_color => 'Border color';
+  @override
+  String get anki_lapis_visual_corner_radius => 'Corner radius';
+  @override
+  String get anki_lapis_visual_padding => 'Inner spacing';
+  @override
+  String get anki_lapis_visual_margin => 'Outer spacing';
+  @override
+  String get anki_lapis_visual_field_definition_info_note =>
+      'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
+  @override
+  String get anki_lapis_visual_field_dictionary_name_note =>
+      'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
 }
 
 // Path: <root>
@@ -67693,6 +68465,87 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get interconnect_peer_list_empty =>
       'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
+  @override
+  String get anki_lapis_visual_editor => 'Visual style editor';
+  @override
+  String get anki_lapis_visual_editor_hint =>
+      'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+  @override
+  String get anki_lapis_visual_front => 'Front';
+  @override
+  String get anki_lapis_visual_back => 'Back';
+  @override
+  String get anki_lapis_visual_preview => 'Lapis card preview';
+  @override
+  String get anki_lapis_visual_select_field => 'Select a field to highlight';
+  @override
+  String get anki_lapis_visual_reset_field => 'Reset field';
+  @override
+  String anki_lapis_visual_font_size({required Object percent}) =>
+      'Font size: ${percent}%';
+  @override
+  String get anki_lapis_visual_bold => 'Bold';
+  @override
+  String get anki_lapis_visual_alignment => 'Alignment';
+  @override
+  String get anki_lapis_visual_color => 'Text color';
+  @override
+  String get anki_lapis_visual_default => 'Default';
+  @override
+  String get anki_lapis_visual_advanced_css => 'Advanced CSS';
+  @override
+  String get anki_lapis_visual_field_expression => 'Word';
+  @override
+  String get anki_lapis_visual_field_reading => 'Reading';
+  @override
+  String get anki_lapis_visual_field_sentence => 'Sentence';
+  @override
+  String get anki_lapis_visual_field_primary_definition => 'Primary definition';
+  @override
+  String get anki_lapis_visual_field_glossaries => 'Other definitions';
+  @override
+  String get anki_lapis_visual_target_card_content => 'Card content';
+  @override
+  String get anki_lapis_visual_target_definition => 'Definition';
+  @override
+  String get anki_lapis_visual_target_inside_definition => 'Inside definition';
+  @override
+  String get anki_lapis_visual_field_definition_info => 'Definition indicator';
+  @override
+  String get anki_lapis_visual_field_definition_box => 'Definition box';
+  @override
+  String get anki_lapis_visual_field_definition_content => 'Whole definition';
+  @override
+  String get anki_lapis_visual_field_selected_definition =>
+      'Selected definition';
+  @override
+  String get anki_lapis_visual_field_dictionary_entry => 'Dictionary entry';
+  @override
+  String get anki_lapis_visual_field_dictionary_name => 'Dictionary name';
+  @override
+  String get anki_lapis_visual_field_definition_example => 'Definition example';
+  @override
+  String get anki_lapis_visual_line_height => 'Line height';
+  @override
+  String get anki_lapis_visual_background_color => 'Background highlight';
+  @override
+  String get anki_lapis_visual_box_layout => 'Box appearance';
+  @override
+  String get anki_lapis_visual_border_width => 'Border';
+  @override
+  String get anki_lapis_visual_border_color => 'Border color';
+  @override
+  String get anki_lapis_visual_corner_radius => 'Corner radius';
+  @override
+  String get anki_lapis_visual_padding => 'Inner spacing';
+  @override
+  String get anki_lapis_visual_margin => 'Outer spacing';
+  @override
+  String get anki_lapis_visual_field_definition_info_note =>
+      'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
+  @override
+  String get anki_lapis_visual_field_dictionary_name_note =>
+      'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
 }
 
 // Path: <root>
@@ -74112,6 +74965,87 @@ class _StringsRu extends _StringsEn {
   @override
   String get interconnect_peer_list_empty =>
       'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
+  @override
+  String get anki_lapis_visual_editor => 'Visual style editor';
+  @override
+  String get anki_lapis_visual_editor_hint =>
+      'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+  @override
+  String get anki_lapis_visual_front => 'Front';
+  @override
+  String get anki_lapis_visual_back => 'Back';
+  @override
+  String get anki_lapis_visual_preview => 'Lapis card preview';
+  @override
+  String get anki_lapis_visual_select_field => 'Select a field to highlight';
+  @override
+  String get anki_lapis_visual_reset_field => 'Reset field';
+  @override
+  String anki_lapis_visual_font_size({required Object percent}) =>
+      'Font size: ${percent}%';
+  @override
+  String get anki_lapis_visual_bold => 'Bold';
+  @override
+  String get anki_lapis_visual_alignment => 'Alignment';
+  @override
+  String get anki_lapis_visual_color => 'Text color';
+  @override
+  String get anki_lapis_visual_default => 'Default';
+  @override
+  String get anki_lapis_visual_advanced_css => 'Advanced CSS';
+  @override
+  String get anki_lapis_visual_field_expression => 'Word';
+  @override
+  String get anki_lapis_visual_field_reading => 'Reading';
+  @override
+  String get anki_lapis_visual_field_sentence => 'Sentence';
+  @override
+  String get anki_lapis_visual_field_primary_definition => 'Primary definition';
+  @override
+  String get anki_lapis_visual_field_glossaries => 'Other definitions';
+  @override
+  String get anki_lapis_visual_target_card_content => 'Card content';
+  @override
+  String get anki_lapis_visual_target_definition => 'Definition';
+  @override
+  String get anki_lapis_visual_target_inside_definition => 'Inside definition';
+  @override
+  String get anki_lapis_visual_field_definition_info => 'Definition indicator';
+  @override
+  String get anki_lapis_visual_field_definition_box => 'Definition box';
+  @override
+  String get anki_lapis_visual_field_definition_content => 'Whole definition';
+  @override
+  String get anki_lapis_visual_field_selected_definition =>
+      'Selected definition';
+  @override
+  String get anki_lapis_visual_field_dictionary_entry => 'Dictionary entry';
+  @override
+  String get anki_lapis_visual_field_dictionary_name => 'Dictionary name';
+  @override
+  String get anki_lapis_visual_field_definition_example => 'Definition example';
+  @override
+  String get anki_lapis_visual_line_height => 'Line height';
+  @override
+  String get anki_lapis_visual_background_color => 'Background highlight';
+  @override
+  String get anki_lapis_visual_box_layout => 'Box appearance';
+  @override
+  String get anki_lapis_visual_border_width => 'Border';
+  @override
+  String get anki_lapis_visual_border_color => 'Border color';
+  @override
+  String get anki_lapis_visual_corner_radius => 'Corner radius';
+  @override
+  String get anki_lapis_visual_padding => 'Inner spacing';
+  @override
+  String get anki_lapis_visual_margin => 'Outer spacing';
+  @override
+  String get anki_lapis_visual_field_definition_info_note =>
+      'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
+  @override
+  String get anki_lapis_visual_field_dictionary_name_note =>
+      'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
 }
 
 // Path: <root>
@@ -80479,6 +81413,87 @@ class _StringsTh extends _StringsEn {
   @override
   String get interconnect_peer_list_empty =>
       'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
+  @override
+  String get anki_lapis_visual_editor => 'Visual style editor';
+  @override
+  String get anki_lapis_visual_editor_hint =>
+      'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+  @override
+  String get anki_lapis_visual_front => 'Front';
+  @override
+  String get anki_lapis_visual_back => 'Back';
+  @override
+  String get anki_lapis_visual_preview => 'Lapis card preview';
+  @override
+  String get anki_lapis_visual_select_field => 'Select a field to highlight';
+  @override
+  String get anki_lapis_visual_reset_field => 'Reset field';
+  @override
+  String anki_lapis_visual_font_size({required Object percent}) =>
+      'Font size: ${percent}%';
+  @override
+  String get anki_lapis_visual_bold => 'Bold';
+  @override
+  String get anki_lapis_visual_alignment => 'Alignment';
+  @override
+  String get anki_lapis_visual_color => 'Text color';
+  @override
+  String get anki_lapis_visual_default => 'Default';
+  @override
+  String get anki_lapis_visual_advanced_css => 'Advanced CSS';
+  @override
+  String get anki_lapis_visual_field_expression => 'Word';
+  @override
+  String get anki_lapis_visual_field_reading => 'Reading';
+  @override
+  String get anki_lapis_visual_field_sentence => 'Sentence';
+  @override
+  String get anki_lapis_visual_field_primary_definition => 'Primary definition';
+  @override
+  String get anki_lapis_visual_field_glossaries => 'Other definitions';
+  @override
+  String get anki_lapis_visual_target_card_content => 'Card content';
+  @override
+  String get anki_lapis_visual_target_definition => 'Definition';
+  @override
+  String get anki_lapis_visual_target_inside_definition => 'Inside definition';
+  @override
+  String get anki_lapis_visual_field_definition_info => 'Definition indicator';
+  @override
+  String get anki_lapis_visual_field_definition_box => 'Definition box';
+  @override
+  String get anki_lapis_visual_field_definition_content => 'Whole definition';
+  @override
+  String get anki_lapis_visual_field_selected_definition =>
+      'Selected definition';
+  @override
+  String get anki_lapis_visual_field_dictionary_entry => 'Dictionary entry';
+  @override
+  String get anki_lapis_visual_field_dictionary_name => 'Dictionary name';
+  @override
+  String get anki_lapis_visual_field_definition_example => 'Definition example';
+  @override
+  String get anki_lapis_visual_line_height => 'Line height';
+  @override
+  String get anki_lapis_visual_background_color => 'Background highlight';
+  @override
+  String get anki_lapis_visual_box_layout => 'Box appearance';
+  @override
+  String get anki_lapis_visual_border_width => 'Border';
+  @override
+  String get anki_lapis_visual_border_color => 'Border color';
+  @override
+  String get anki_lapis_visual_corner_radius => 'Corner radius';
+  @override
+  String get anki_lapis_visual_padding => 'Inner spacing';
+  @override
+  String get anki_lapis_visual_margin => 'Outer spacing';
+  @override
+  String get anki_lapis_visual_field_definition_info_note =>
+      'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
+  @override
+  String get anki_lapis_visual_field_dictionary_name_note =>
+      'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
 }
 
 // Path: <root>
@@ -86878,6 +87893,87 @@ class _StringsTr extends _StringsEn {
   @override
   String get interconnect_peer_list_empty =>
       'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
+  @override
+  String get anki_lapis_visual_editor => 'Visual style editor';
+  @override
+  String get anki_lapis_visual_editor_hint =>
+      'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+  @override
+  String get anki_lapis_visual_front => 'Front';
+  @override
+  String get anki_lapis_visual_back => 'Back';
+  @override
+  String get anki_lapis_visual_preview => 'Lapis card preview';
+  @override
+  String get anki_lapis_visual_select_field => 'Select a field to highlight';
+  @override
+  String get anki_lapis_visual_reset_field => 'Reset field';
+  @override
+  String anki_lapis_visual_font_size({required Object percent}) =>
+      'Font size: ${percent}%';
+  @override
+  String get anki_lapis_visual_bold => 'Bold';
+  @override
+  String get anki_lapis_visual_alignment => 'Alignment';
+  @override
+  String get anki_lapis_visual_color => 'Text color';
+  @override
+  String get anki_lapis_visual_default => 'Default';
+  @override
+  String get anki_lapis_visual_advanced_css => 'Advanced CSS';
+  @override
+  String get anki_lapis_visual_field_expression => 'Word';
+  @override
+  String get anki_lapis_visual_field_reading => 'Reading';
+  @override
+  String get anki_lapis_visual_field_sentence => 'Sentence';
+  @override
+  String get anki_lapis_visual_field_primary_definition => 'Primary definition';
+  @override
+  String get anki_lapis_visual_field_glossaries => 'Other definitions';
+  @override
+  String get anki_lapis_visual_target_card_content => 'Card content';
+  @override
+  String get anki_lapis_visual_target_definition => 'Definition';
+  @override
+  String get anki_lapis_visual_target_inside_definition => 'Inside definition';
+  @override
+  String get anki_lapis_visual_field_definition_info => 'Definition indicator';
+  @override
+  String get anki_lapis_visual_field_definition_box => 'Definition box';
+  @override
+  String get anki_lapis_visual_field_definition_content => 'Whole definition';
+  @override
+  String get anki_lapis_visual_field_selected_definition =>
+      'Selected definition';
+  @override
+  String get anki_lapis_visual_field_dictionary_entry => 'Dictionary entry';
+  @override
+  String get anki_lapis_visual_field_dictionary_name => 'Dictionary name';
+  @override
+  String get anki_lapis_visual_field_definition_example => 'Definition example';
+  @override
+  String get anki_lapis_visual_line_height => 'Line height';
+  @override
+  String get anki_lapis_visual_background_color => 'Background highlight';
+  @override
+  String get anki_lapis_visual_box_layout => 'Box appearance';
+  @override
+  String get anki_lapis_visual_border_width => 'Border';
+  @override
+  String get anki_lapis_visual_border_color => 'Border color';
+  @override
+  String get anki_lapis_visual_corner_radius => 'Corner radius';
+  @override
+  String get anki_lapis_visual_padding => 'Inner spacing';
+  @override
+  String get anki_lapis_visual_margin => 'Outer spacing';
+  @override
+  String get anki_lapis_visual_field_definition_info_note =>
+      'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
+  @override
+  String get anki_lapis_visual_field_dictionary_name_note =>
+      'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
 }
 
 // Path: <root>
@@ -93262,6 +94358,87 @@ class _StringsVi extends _StringsEn {
   @override
   String get interconnect_peer_list_empty =>
       'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
+  @override
+  String get anki_lapis_visual_editor => 'Visual style editor';
+  @override
+  String get anki_lapis_visual_editor_hint =>
+      'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+  @override
+  String get anki_lapis_visual_front => 'Front';
+  @override
+  String get anki_lapis_visual_back => 'Back';
+  @override
+  String get anki_lapis_visual_preview => 'Lapis card preview';
+  @override
+  String get anki_lapis_visual_select_field => 'Select a field to highlight';
+  @override
+  String get anki_lapis_visual_reset_field => 'Reset field';
+  @override
+  String anki_lapis_visual_font_size({required Object percent}) =>
+      'Font size: ${percent}%';
+  @override
+  String get anki_lapis_visual_bold => 'Bold';
+  @override
+  String get anki_lapis_visual_alignment => 'Alignment';
+  @override
+  String get anki_lapis_visual_color => 'Text color';
+  @override
+  String get anki_lapis_visual_default => 'Default';
+  @override
+  String get anki_lapis_visual_advanced_css => 'Advanced CSS';
+  @override
+  String get anki_lapis_visual_field_expression => 'Word';
+  @override
+  String get anki_lapis_visual_field_reading => 'Reading';
+  @override
+  String get anki_lapis_visual_field_sentence => 'Sentence';
+  @override
+  String get anki_lapis_visual_field_primary_definition => 'Primary definition';
+  @override
+  String get anki_lapis_visual_field_glossaries => 'Other definitions';
+  @override
+  String get anki_lapis_visual_target_card_content => 'Card content';
+  @override
+  String get anki_lapis_visual_target_definition => 'Definition';
+  @override
+  String get anki_lapis_visual_target_inside_definition => 'Inside definition';
+  @override
+  String get anki_lapis_visual_field_definition_info => 'Definition indicator';
+  @override
+  String get anki_lapis_visual_field_definition_box => 'Definition box';
+  @override
+  String get anki_lapis_visual_field_definition_content => 'Whole definition';
+  @override
+  String get anki_lapis_visual_field_selected_definition =>
+      'Selected definition';
+  @override
+  String get anki_lapis_visual_field_dictionary_entry => 'Dictionary entry';
+  @override
+  String get anki_lapis_visual_field_dictionary_name => 'Dictionary name';
+  @override
+  String get anki_lapis_visual_field_definition_example => 'Definition example';
+  @override
+  String get anki_lapis_visual_line_height => 'Line height';
+  @override
+  String get anki_lapis_visual_background_color => 'Background highlight';
+  @override
+  String get anki_lapis_visual_box_layout => 'Box appearance';
+  @override
+  String get anki_lapis_visual_border_width => 'Border';
+  @override
+  String get anki_lapis_visual_border_color => 'Border color';
+  @override
+  String get anki_lapis_visual_corner_radius => 'Corner radius';
+  @override
+  String get anki_lapis_visual_padding => 'Inner spacing';
+  @override
+  String get anki_lapis_visual_margin => 'Outer spacing';
+  @override
+  String get anki_lapis_visual_field_definition_info_note =>
+      'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
+  @override
+  String get anki_lapis_visual_field_dictionary_name_note =>
+      'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
 }
 
 // Path: <root>
@@ -99194,6 +100371,86 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get interconnect_peer_list_empty =>
       '尚未添加任何对端。可在下方的局域网设备列表中点击发现的设备自动配对，或手动添加对端地址。';
+  @override
+  String get anki_lapis_visual_editor => '可视化样式编辑';
+  @override
+  String get anki_lapis_visual_editor_hint =>
+      '预览 Lapis 卡片，选择字段后直接调整样式，无需手写 CSS。';
+  @override
+  String get anki_lapis_visual_front => '正面';
+  @override
+  String get anki_lapis_visual_back => '背面';
+  @override
+  String get anki_lapis_visual_preview => 'Lapis 卡片预览';
+  @override
+  String get anki_lapis_visual_select_field => '选择要高亮的字段';
+  @override
+  String get anki_lapis_visual_reset_field => '重置字段';
+  @override
+  String anki_lapis_visual_font_size({required Object percent}) =>
+      '字号：${percent}%';
+  @override
+  String get anki_lapis_visual_bold => '粗体';
+  @override
+  String get anki_lapis_visual_alignment => '对齐';
+  @override
+  String get anki_lapis_visual_color => '文字颜色';
+  @override
+  String get anki_lapis_visual_default => '默认';
+  @override
+  String get anki_lapis_visual_advanced_css => '高级 CSS';
+  @override
+  String get anki_lapis_visual_field_expression => '单词';
+  @override
+  String get anki_lapis_visual_field_reading => '读音';
+  @override
+  String get anki_lapis_visual_field_sentence => '例句';
+  @override
+  String get anki_lapis_visual_field_primary_definition => '首要释义';
+  @override
+  String get anki_lapis_visual_field_glossaries => '其他释义';
+  @override
+  String get anki_lapis_visual_target_card_content => '卡片内容';
+  @override
+  String get anki_lapis_visual_target_definition => '释义';
+  @override
+  String get anki_lapis_visual_target_inside_definition => '释义内部';
+  @override
+  String get anki_lapis_visual_field_definition_info => '释义序号';
+  @override
+  String get anki_lapis_visual_field_definition_box => '释义框';
+  @override
+  String get anki_lapis_visual_field_definition_content => '整段释义';
+  @override
+  String get anki_lapis_visual_field_selected_definition => '选中释义';
+  @override
+  String get anki_lapis_visual_field_dictionary_entry => '词典条目';
+  @override
+  String get anki_lapis_visual_field_dictionary_name => '词典名称';
+  @override
+  String get anki_lapis_visual_field_definition_example => '释义例句';
+  @override
+  String get anki_lapis_visual_line_height => '行高';
+  @override
+  String get anki_lapis_visual_background_color => '背景高亮';
+  @override
+  String get anki_lapis_visual_box_layout => '区域外观';
+  @override
+  String get anki_lapis_visual_border_width => '边框';
+  @override
+  String get anki_lapis_visual_border_color => '边框颜色';
+  @override
+  String get anki_lapis_visual_corner_radius => '圆角';
+  @override
+  String get anki_lapis_visual_padding => '内边距';
+  @override
+  String get anki_lapis_visual_margin => '外边距';
+  @override
+  String get anki_lapis_visual_field_definition_info_note =>
+      '仅在保留多段释义的卡片上可见；只有一段释义的卡片不会显示。';
+  @override
+  String get anki_lapis_visual_field_dictionary_name_note =>
+      'Hibiki 生成的卡片把词性标签和词典名放在同一个标签里，两者无法分开设置样式。';
 }
 
 // Path: <root>
@@ -105374,6 +106631,87 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get interconnect_peer_list_empty =>
       'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
+  @override
+  String get anki_lapis_visual_editor => 'Visual style editor';
+  @override
+  String get anki_lapis_visual_editor_hint =>
+      'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+  @override
+  String get anki_lapis_visual_front => 'Front';
+  @override
+  String get anki_lapis_visual_back => 'Back';
+  @override
+  String get anki_lapis_visual_preview => 'Lapis card preview';
+  @override
+  String get anki_lapis_visual_select_field => 'Select a field to highlight';
+  @override
+  String get anki_lapis_visual_reset_field => 'Reset field';
+  @override
+  String anki_lapis_visual_font_size({required Object percent}) =>
+      'Font size: ${percent}%';
+  @override
+  String get anki_lapis_visual_bold => 'Bold';
+  @override
+  String get anki_lapis_visual_alignment => 'Alignment';
+  @override
+  String get anki_lapis_visual_color => 'Text color';
+  @override
+  String get anki_lapis_visual_default => 'Default';
+  @override
+  String get anki_lapis_visual_advanced_css => 'Advanced CSS';
+  @override
+  String get anki_lapis_visual_field_expression => 'Word';
+  @override
+  String get anki_lapis_visual_field_reading => 'Reading';
+  @override
+  String get anki_lapis_visual_field_sentence => 'Sentence';
+  @override
+  String get anki_lapis_visual_field_primary_definition => 'Primary definition';
+  @override
+  String get anki_lapis_visual_field_glossaries => 'Other definitions';
+  @override
+  String get anki_lapis_visual_target_card_content => 'Card content';
+  @override
+  String get anki_lapis_visual_target_definition => 'Definition';
+  @override
+  String get anki_lapis_visual_target_inside_definition => 'Inside definition';
+  @override
+  String get anki_lapis_visual_field_definition_info => 'Definition indicator';
+  @override
+  String get anki_lapis_visual_field_definition_box => 'Definition box';
+  @override
+  String get anki_lapis_visual_field_definition_content => 'Whole definition';
+  @override
+  String get anki_lapis_visual_field_selected_definition =>
+      'Selected definition';
+  @override
+  String get anki_lapis_visual_field_dictionary_entry => 'Dictionary entry';
+  @override
+  String get anki_lapis_visual_field_dictionary_name => 'Dictionary name';
+  @override
+  String get anki_lapis_visual_field_definition_example => 'Definition example';
+  @override
+  String get anki_lapis_visual_line_height => 'Line height';
+  @override
+  String get anki_lapis_visual_background_color => 'Background highlight';
+  @override
+  String get anki_lapis_visual_box_layout => 'Box appearance';
+  @override
+  String get anki_lapis_visual_border_width => 'Border';
+  @override
+  String get anki_lapis_visual_border_color => 'Border color';
+  @override
+  String get anki_lapis_visual_corner_radius => 'Corner radius';
+  @override
+  String get anki_lapis_visual_padding => 'Inner spacing';
+  @override
+  String get anki_lapis_visual_margin => 'Outer spacing';
+  @override
+  String get anki_lapis_visual_field_definition_info_note =>
+      'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
+  @override
+  String get anki_lapis_visual_field_dictionary_name_note =>
+      'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
 }
 
 /// Flat map(s) containing all translations.
@@ -111075,6 +112413,82 @@ extension on _StringsEn {
         return 'Added peers';
       case 'interconnect_peer_list_empty':
         return 'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
+      case 'anki_lapis_visual_editor':
+        return 'Visual style editor';
+      case 'anki_lapis_visual_editor_hint':
+        return 'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+      case 'anki_lapis_visual_front':
+        return 'Front';
+      case 'anki_lapis_visual_back':
+        return 'Back';
+      case 'anki_lapis_visual_preview':
+        return 'Lapis card preview';
+      case 'anki_lapis_visual_select_field':
+        return 'Select a field to highlight';
+      case 'anki_lapis_visual_reset_field':
+        return 'Reset field';
+      case 'anki_lapis_visual_font_size':
+        return ({required Object percent}) => 'Font size: ${percent}%';
+      case 'anki_lapis_visual_bold':
+        return 'Bold';
+      case 'anki_lapis_visual_alignment':
+        return 'Alignment';
+      case 'anki_lapis_visual_color':
+        return 'Text color';
+      case 'anki_lapis_visual_default':
+        return 'Default';
+      case 'anki_lapis_visual_advanced_css':
+        return 'Advanced CSS';
+      case 'anki_lapis_visual_field_expression':
+        return 'Word';
+      case 'anki_lapis_visual_field_reading':
+        return 'Reading';
+      case 'anki_lapis_visual_field_sentence':
+        return 'Sentence';
+      case 'anki_lapis_visual_field_primary_definition':
+        return 'Primary definition';
+      case 'anki_lapis_visual_field_glossaries':
+        return 'Other definitions';
+      case 'anki_lapis_visual_target_card_content':
+        return 'Card content';
+      case 'anki_lapis_visual_target_definition':
+        return 'Definition';
+      case 'anki_lapis_visual_target_inside_definition':
+        return 'Inside definition';
+      case 'anki_lapis_visual_field_definition_info':
+        return 'Definition indicator';
+      case 'anki_lapis_visual_field_definition_box':
+        return 'Definition box';
+      case 'anki_lapis_visual_field_definition_content':
+        return 'Whole definition';
+      case 'anki_lapis_visual_field_selected_definition':
+        return 'Selected definition';
+      case 'anki_lapis_visual_field_dictionary_entry':
+        return 'Dictionary entry';
+      case 'anki_lapis_visual_field_dictionary_name':
+        return 'Dictionary name';
+      case 'anki_lapis_visual_field_definition_example':
+        return 'Definition example';
+      case 'anki_lapis_visual_line_height':
+        return 'Line height';
+      case 'anki_lapis_visual_background_color':
+        return 'Background highlight';
+      case 'anki_lapis_visual_box_layout':
+        return 'Box appearance';
+      case 'anki_lapis_visual_border_width':
+        return 'Border';
+      case 'anki_lapis_visual_border_color':
+        return 'Border color';
+      case 'anki_lapis_visual_corner_radius':
+        return 'Corner radius';
+      case 'anki_lapis_visual_padding':
+        return 'Inner spacing';
+      case 'anki_lapis_visual_margin':
+        return 'Outer spacing';
+      case 'anki_lapis_visual_field_definition_info_note':
+        return 'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
+      case 'anki_lapis_visual_field_dictionary_name_note':
+        return 'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
       default:
         return null;
     }
@@ -116774,6 +118188,82 @@ extension on _StringsAr {
         return 'Added peers';
       case 'interconnect_peer_list_empty':
         return 'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
+      case 'anki_lapis_visual_editor':
+        return 'Visual style editor';
+      case 'anki_lapis_visual_editor_hint':
+        return 'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+      case 'anki_lapis_visual_front':
+        return 'Front';
+      case 'anki_lapis_visual_back':
+        return 'Back';
+      case 'anki_lapis_visual_preview':
+        return 'Lapis card preview';
+      case 'anki_lapis_visual_select_field':
+        return 'Select a field to highlight';
+      case 'anki_lapis_visual_reset_field':
+        return 'Reset field';
+      case 'anki_lapis_visual_font_size':
+        return ({required Object percent}) => 'Font size: ${percent}%';
+      case 'anki_lapis_visual_bold':
+        return 'Bold';
+      case 'anki_lapis_visual_alignment':
+        return 'Alignment';
+      case 'anki_lapis_visual_color':
+        return 'Text color';
+      case 'anki_lapis_visual_default':
+        return 'Default';
+      case 'anki_lapis_visual_advanced_css':
+        return 'Advanced CSS';
+      case 'anki_lapis_visual_field_expression':
+        return 'Word';
+      case 'anki_lapis_visual_field_reading':
+        return 'Reading';
+      case 'anki_lapis_visual_field_sentence':
+        return 'Sentence';
+      case 'anki_lapis_visual_field_primary_definition':
+        return 'Primary definition';
+      case 'anki_lapis_visual_field_glossaries':
+        return 'Other definitions';
+      case 'anki_lapis_visual_target_card_content':
+        return 'Card content';
+      case 'anki_lapis_visual_target_definition':
+        return 'Definition';
+      case 'anki_lapis_visual_target_inside_definition':
+        return 'Inside definition';
+      case 'anki_lapis_visual_field_definition_info':
+        return 'Definition indicator';
+      case 'anki_lapis_visual_field_definition_box':
+        return 'Definition box';
+      case 'anki_lapis_visual_field_definition_content':
+        return 'Whole definition';
+      case 'anki_lapis_visual_field_selected_definition':
+        return 'Selected definition';
+      case 'anki_lapis_visual_field_dictionary_entry':
+        return 'Dictionary entry';
+      case 'anki_lapis_visual_field_dictionary_name':
+        return 'Dictionary name';
+      case 'anki_lapis_visual_field_definition_example':
+        return 'Definition example';
+      case 'anki_lapis_visual_line_height':
+        return 'Line height';
+      case 'anki_lapis_visual_background_color':
+        return 'Background highlight';
+      case 'anki_lapis_visual_box_layout':
+        return 'Box appearance';
+      case 'anki_lapis_visual_border_width':
+        return 'Border';
+      case 'anki_lapis_visual_border_color':
+        return 'Border color';
+      case 'anki_lapis_visual_corner_radius':
+        return 'Corner radius';
+      case 'anki_lapis_visual_padding':
+        return 'Inner spacing';
+      case 'anki_lapis_visual_margin':
+        return 'Outer spacing';
+      case 'anki_lapis_visual_field_definition_info_note':
+        return 'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
+      case 'anki_lapis_visual_field_dictionary_name_note':
+        return 'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
       default:
         return null;
     }
@@ -122495,6 +123985,82 @@ extension on _StringsDe {
         return 'Added peers';
       case 'interconnect_peer_list_empty':
         return 'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
+      case 'anki_lapis_visual_editor':
+        return 'Visual style editor';
+      case 'anki_lapis_visual_editor_hint':
+        return 'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+      case 'anki_lapis_visual_front':
+        return 'Front';
+      case 'anki_lapis_visual_back':
+        return 'Back';
+      case 'anki_lapis_visual_preview':
+        return 'Lapis card preview';
+      case 'anki_lapis_visual_select_field':
+        return 'Select a field to highlight';
+      case 'anki_lapis_visual_reset_field':
+        return 'Reset field';
+      case 'anki_lapis_visual_font_size':
+        return ({required Object percent}) => 'Font size: ${percent}%';
+      case 'anki_lapis_visual_bold':
+        return 'Bold';
+      case 'anki_lapis_visual_alignment':
+        return 'Alignment';
+      case 'anki_lapis_visual_color':
+        return 'Text color';
+      case 'anki_lapis_visual_default':
+        return 'Default';
+      case 'anki_lapis_visual_advanced_css':
+        return 'Advanced CSS';
+      case 'anki_lapis_visual_field_expression':
+        return 'Word';
+      case 'anki_lapis_visual_field_reading':
+        return 'Reading';
+      case 'anki_lapis_visual_field_sentence':
+        return 'Sentence';
+      case 'anki_lapis_visual_field_primary_definition':
+        return 'Primary definition';
+      case 'anki_lapis_visual_field_glossaries':
+        return 'Other definitions';
+      case 'anki_lapis_visual_target_card_content':
+        return 'Card content';
+      case 'anki_lapis_visual_target_definition':
+        return 'Definition';
+      case 'anki_lapis_visual_target_inside_definition':
+        return 'Inside definition';
+      case 'anki_lapis_visual_field_definition_info':
+        return 'Definition indicator';
+      case 'anki_lapis_visual_field_definition_box':
+        return 'Definition box';
+      case 'anki_lapis_visual_field_definition_content':
+        return 'Whole definition';
+      case 'anki_lapis_visual_field_selected_definition':
+        return 'Selected definition';
+      case 'anki_lapis_visual_field_dictionary_entry':
+        return 'Dictionary entry';
+      case 'anki_lapis_visual_field_dictionary_name':
+        return 'Dictionary name';
+      case 'anki_lapis_visual_field_definition_example':
+        return 'Definition example';
+      case 'anki_lapis_visual_line_height':
+        return 'Line height';
+      case 'anki_lapis_visual_background_color':
+        return 'Background highlight';
+      case 'anki_lapis_visual_box_layout':
+        return 'Box appearance';
+      case 'anki_lapis_visual_border_width':
+        return 'Border';
+      case 'anki_lapis_visual_border_color':
+        return 'Border color';
+      case 'anki_lapis_visual_corner_radius':
+        return 'Corner radius';
+      case 'anki_lapis_visual_padding':
+        return 'Inner spacing';
+      case 'anki_lapis_visual_margin':
+        return 'Outer spacing';
+      case 'anki_lapis_visual_field_definition_info_note':
+        return 'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
+      case 'anki_lapis_visual_field_dictionary_name_note':
+        return 'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
       default:
         return null;
     }
@@ -128215,6 +129781,82 @@ extension on _StringsEs {
         return 'Added peers';
       case 'interconnect_peer_list_empty':
         return 'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
+      case 'anki_lapis_visual_editor':
+        return 'Visual style editor';
+      case 'anki_lapis_visual_editor_hint':
+        return 'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+      case 'anki_lapis_visual_front':
+        return 'Front';
+      case 'anki_lapis_visual_back':
+        return 'Back';
+      case 'anki_lapis_visual_preview':
+        return 'Lapis card preview';
+      case 'anki_lapis_visual_select_field':
+        return 'Select a field to highlight';
+      case 'anki_lapis_visual_reset_field':
+        return 'Reset field';
+      case 'anki_lapis_visual_font_size':
+        return ({required Object percent}) => 'Font size: ${percent}%';
+      case 'anki_lapis_visual_bold':
+        return 'Bold';
+      case 'anki_lapis_visual_alignment':
+        return 'Alignment';
+      case 'anki_lapis_visual_color':
+        return 'Text color';
+      case 'anki_lapis_visual_default':
+        return 'Default';
+      case 'anki_lapis_visual_advanced_css':
+        return 'Advanced CSS';
+      case 'anki_lapis_visual_field_expression':
+        return 'Word';
+      case 'anki_lapis_visual_field_reading':
+        return 'Reading';
+      case 'anki_lapis_visual_field_sentence':
+        return 'Sentence';
+      case 'anki_lapis_visual_field_primary_definition':
+        return 'Primary definition';
+      case 'anki_lapis_visual_field_glossaries':
+        return 'Other definitions';
+      case 'anki_lapis_visual_target_card_content':
+        return 'Card content';
+      case 'anki_lapis_visual_target_definition':
+        return 'Definition';
+      case 'anki_lapis_visual_target_inside_definition':
+        return 'Inside definition';
+      case 'anki_lapis_visual_field_definition_info':
+        return 'Definition indicator';
+      case 'anki_lapis_visual_field_definition_box':
+        return 'Definition box';
+      case 'anki_lapis_visual_field_definition_content':
+        return 'Whole definition';
+      case 'anki_lapis_visual_field_selected_definition':
+        return 'Selected definition';
+      case 'anki_lapis_visual_field_dictionary_entry':
+        return 'Dictionary entry';
+      case 'anki_lapis_visual_field_dictionary_name':
+        return 'Dictionary name';
+      case 'anki_lapis_visual_field_definition_example':
+        return 'Definition example';
+      case 'anki_lapis_visual_line_height':
+        return 'Line height';
+      case 'anki_lapis_visual_background_color':
+        return 'Background highlight';
+      case 'anki_lapis_visual_box_layout':
+        return 'Box appearance';
+      case 'anki_lapis_visual_border_width':
+        return 'Border';
+      case 'anki_lapis_visual_border_color':
+        return 'Border color';
+      case 'anki_lapis_visual_corner_radius':
+        return 'Corner radius';
+      case 'anki_lapis_visual_padding':
+        return 'Inner spacing';
+      case 'anki_lapis_visual_margin':
+        return 'Outer spacing';
+      case 'anki_lapis_visual_field_definition_info_note':
+        return 'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
+      case 'anki_lapis_visual_field_dictionary_name_note':
+        return 'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
       default:
         return null;
     }
@@ -133941,6 +135583,82 @@ extension on _StringsFr {
         return 'Added peers';
       case 'interconnect_peer_list_empty':
         return 'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
+      case 'anki_lapis_visual_editor':
+        return 'Visual style editor';
+      case 'anki_lapis_visual_editor_hint':
+        return 'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+      case 'anki_lapis_visual_front':
+        return 'Front';
+      case 'anki_lapis_visual_back':
+        return 'Back';
+      case 'anki_lapis_visual_preview':
+        return 'Lapis card preview';
+      case 'anki_lapis_visual_select_field':
+        return 'Select a field to highlight';
+      case 'anki_lapis_visual_reset_field':
+        return 'Reset field';
+      case 'anki_lapis_visual_font_size':
+        return ({required Object percent}) => 'Font size: ${percent}%';
+      case 'anki_lapis_visual_bold':
+        return 'Bold';
+      case 'anki_lapis_visual_alignment':
+        return 'Alignment';
+      case 'anki_lapis_visual_color':
+        return 'Text color';
+      case 'anki_lapis_visual_default':
+        return 'Default';
+      case 'anki_lapis_visual_advanced_css':
+        return 'Advanced CSS';
+      case 'anki_lapis_visual_field_expression':
+        return 'Word';
+      case 'anki_lapis_visual_field_reading':
+        return 'Reading';
+      case 'anki_lapis_visual_field_sentence':
+        return 'Sentence';
+      case 'anki_lapis_visual_field_primary_definition':
+        return 'Primary definition';
+      case 'anki_lapis_visual_field_glossaries':
+        return 'Other definitions';
+      case 'anki_lapis_visual_target_card_content':
+        return 'Card content';
+      case 'anki_lapis_visual_target_definition':
+        return 'Definition';
+      case 'anki_lapis_visual_target_inside_definition':
+        return 'Inside definition';
+      case 'anki_lapis_visual_field_definition_info':
+        return 'Definition indicator';
+      case 'anki_lapis_visual_field_definition_box':
+        return 'Definition box';
+      case 'anki_lapis_visual_field_definition_content':
+        return 'Whole definition';
+      case 'anki_lapis_visual_field_selected_definition':
+        return 'Selected definition';
+      case 'anki_lapis_visual_field_dictionary_entry':
+        return 'Dictionary entry';
+      case 'anki_lapis_visual_field_dictionary_name':
+        return 'Dictionary name';
+      case 'anki_lapis_visual_field_definition_example':
+        return 'Definition example';
+      case 'anki_lapis_visual_line_height':
+        return 'Line height';
+      case 'anki_lapis_visual_background_color':
+        return 'Background highlight';
+      case 'anki_lapis_visual_box_layout':
+        return 'Box appearance';
+      case 'anki_lapis_visual_border_width':
+        return 'Border';
+      case 'anki_lapis_visual_border_color':
+        return 'Border color';
+      case 'anki_lapis_visual_corner_radius':
+        return 'Corner radius';
+      case 'anki_lapis_visual_padding':
+        return 'Inner spacing';
+      case 'anki_lapis_visual_margin':
+        return 'Outer spacing';
+      case 'anki_lapis_visual_field_definition_info_note':
+        return 'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
+      case 'anki_lapis_visual_field_dictionary_name_note':
+        return 'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
       default:
         return null;
     }
@@ -139649,6 +141367,82 @@ extension on _StringsId {
         return 'Added peers';
       case 'interconnect_peer_list_empty':
         return 'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
+      case 'anki_lapis_visual_editor':
+        return 'Visual style editor';
+      case 'anki_lapis_visual_editor_hint':
+        return 'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+      case 'anki_lapis_visual_front':
+        return 'Front';
+      case 'anki_lapis_visual_back':
+        return 'Back';
+      case 'anki_lapis_visual_preview':
+        return 'Lapis card preview';
+      case 'anki_lapis_visual_select_field':
+        return 'Select a field to highlight';
+      case 'anki_lapis_visual_reset_field':
+        return 'Reset field';
+      case 'anki_lapis_visual_font_size':
+        return ({required Object percent}) => 'Font size: ${percent}%';
+      case 'anki_lapis_visual_bold':
+        return 'Bold';
+      case 'anki_lapis_visual_alignment':
+        return 'Alignment';
+      case 'anki_lapis_visual_color':
+        return 'Text color';
+      case 'anki_lapis_visual_default':
+        return 'Default';
+      case 'anki_lapis_visual_advanced_css':
+        return 'Advanced CSS';
+      case 'anki_lapis_visual_field_expression':
+        return 'Word';
+      case 'anki_lapis_visual_field_reading':
+        return 'Reading';
+      case 'anki_lapis_visual_field_sentence':
+        return 'Sentence';
+      case 'anki_lapis_visual_field_primary_definition':
+        return 'Primary definition';
+      case 'anki_lapis_visual_field_glossaries':
+        return 'Other definitions';
+      case 'anki_lapis_visual_target_card_content':
+        return 'Card content';
+      case 'anki_lapis_visual_target_definition':
+        return 'Definition';
+      case 'anki_lapis_visual_target_inside_definition':
+        return 'Inside definition';
+      case 'anki_lapis_visual_field_definition_info':
+        return 'Definition indicator';
+      case 'anki_lapis_visual_field_definition_box':
+        return 'Definition box';
+      case 'anki_lapis_visual_field_definition_content':
+        return 'Whole definition';
+      case 'anki_lapis_visual_field_selected_definition':
+        return 'Selected definition';
+      case 'anki_lapis_visual_field_dictionary_entry':
+        return 'Dictionary entry';
+      case 'anki_lapis_visual_field_dictionary_name':
+        return 'Dictionary name';
+      case 'anki_lapis_visual_field_definition_example':
+        return 'Definition example';
+      case 'anki_lapis_visual_line_height':
+        return 'Line height';
+      case 'anki_lapis_visual_background_color':
+        return 'Background highlight';
+      case 'anki_lapis_visual_box_layout':
+        return 'Box appearance';
+      case 'anki_lapis_visual_border_width':
+        return 'Border';
+      case 'anki_lapis_visual_border_color':
+        return 'Border color';
+      case 'anki_lapis_visual_corner_radius':
+        return 'Corner radius';
+      case 'anki_lapis_visual_padding':
+        return 'Inner spacing';
+      case 'anki_lapis_visual_margin':
+        return 'Outer spacing';
+      case 'anki_lapis_visual_field_definition_info_note':
+        return 'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
+      case 'anki_lapis_visual_field_dictionary_name_note':
+        return 'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
       default:
         return null;
     }
@@ -145371,6 +147165,82 @@ extension on _StringsIt {
         return 'Added peers';
       case 'interconnect_peer_list_empty':
         return 'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
+      case 'anki_lapis_visual_editor':
+        return 'Visual style editor';
+      case 'anki_lapis_visual_editor_hint':
+        return 'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+      case 'anki_lapis_visual_front':
+        return 'Front';
+      case 'anki_lapis_visual_back':
+        return 'Back';
+      case 'anki_lapis_visual_preview':
+        return 'Lapis card preview';
+      case 'anki_lapis_visual_select_field':
+        return 'Select a field to highlight';
+      case 'anki_lapis_visual_reset_field':
+        return 'Reset field';
+      case 'anki_lapis_visual_font_size':
+        return ({required Object percent}) => 'Font size: ${percent}%';
+      case 'anki_lapis_visual_bold':
+        return 'Bold';
+      case 'anki_lapis_visual_alignment':
+        return 'Alignment';
+      case 'anki_lapis_visual_color':
+        return 'Text color';
+      case 'anki_lapis_visual_default':
+        return 'Default';
+      case 'anki_lapis_visual_advanced_css':
+        return 'Advanced CSS';
+      case 'anki_lapis_visual_field_expression':
+        return 'Word';
+      case 'anki_lapis_visual_field_reading':
+        return 'Reading';
+      case 'anki_lapis_visual_field_sentence':
+        return 'Sentence';
+      case 'anki_lapis_visual_field_primary_definition':
+        return 'Primary definition';
+      case 'anki_lapis_visual_field_glossaries':
+        return 'Other definitions';
+      case 'anki_lapis_visual_target_card_content':
+        return 'Card content';
+      case 'anki_lapis_visual_target_definition':
+        return 'Definition';
+      case 'anki_lapis_visual_target_inside_definition':
+        return 'Inside definition';
+      case 'anki_lapis_visual_field_definition_info':
+        return 'Definition indicator';
+      case 'anki_lapis_visual_field_definition_box':
+        return 'Definition box';
+      case 'anki_lapis_visual_field_definition_content':
+        return 'Whole definition';
+      case 'anki_lapis_visual_field_selected_definition':
+        return 'Selected definition';
+      case 'anki_lapis_visual_field_dictionary_entry':
+        return 'Dictionary entry';
+      case 'anki_lapis_visual_field_dictionary_name':
+        return 'Dictionary name';
+      case 'anki_lapis_visual_field_definition_example':
+        return 'Definition example';
+      case 'anki_lapis_visual_line_height':
+        return 'Line height';
+      case 'anki_lapis_visual_background_color':
+        return 'Background highlight';
+      case 'anki_lapis_visual_box_layout':
+        return 'Box appearance';
+      case 'anki_lapis_visual_border_width':
+        return 'Border';
+      case 'anki_lapis_visual_border_color':
+        return 'Border color';
+      case 'anki_lapis_visual_corner_radius':
+        return 'Corner radius';
+      case 'anki_lapis_visual_padding':
+        return 'Inner spacing';
+      case 'anki_lapis_visual_margin':
+        return 'Outer spacing';
+      case 'anki_lapis_visual_field_definition_info_note':
+        return 'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
+      case 'anki_lapis_visual_field_dictionary_name_note':
+        return 'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
       default:
         return null;
     }
@@ -151055,6 +152925,82 @@ extension on _StringsJa {
         return 'Added peers';
       case 'interconnect_peer_list_empty':
         return 'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
+      case 'anki_lapis_visual_editor':
+        return 'Visual style editor';
+      case 'anki_lapis_visual_editor_hint':
+        return 'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+      case 'anki_lapis_visual_front':
+        return 'Front';
+      case 'anki_lapis_visual_back':
+        return 'Back';
+      case 'anki_lapis_visual_preview':
+        return 'Lapis card preview';
+      case 'anki_lapis_visual_select_field':
+        return 'Select a field to highlight';
+      case 'anki_lapis_visual_reset_field':
+        return 'Reset field';
+      case 'anki_lapis_visual_font_size':
+        return ({required Object percent}) => 'Font size: ${percent}%';
+      case 'anki_lapis_visual_bold':
+        return 'Bold';
+      case 'anki_lapis_visual_alignment':
+        return 'Alignment';
+      case 'anki_lapis_visual_color':
+        return 'Text color';
+      case 'anki_lapis_visual_default':
+        return 'Default';
+      case 'anki_lapis_visual_advanced_css':
+        return 'Advanced CSS';
+      case 'anki_lapis_visual_field_expression':
+        return 'Word';
+      case 'anki_lapis_visual_field_reading':
+        return 'Reading';
+      case 'anki_lapis_visual_field_sentence':
+        return 'Sentence';
+      case 'anki_lapis_visual_field_primary_definition':
+        return 'Primary definition';
+      case 'anki_lapis_visual_field_glossaries':
+        return 'Other definitions';
+      case 'anki_lapis_visual_target_card_content':
+        return 'Card content';
+      case 'anki_lapis_visual_target_definition':
+        return 'Definition';
+      case 'anki_lapis_visual_target_inside_definition':
+        return 'Inside definition';
+      case 'anki_lapis_visual_field_definition_info':
+        return 'Definition indicator';
+      case 'anki_lapis_visual_field_definition_box':
+        return 'Definition box';
+      case 'anki_lapis_visual_field_definition_content':
+        return 'Whole definition';
+      case 'anki_lapis_visual_field_selected_definition':
+        return 'Selected definition';
+      case 'anki_lapis_visual_field_dictionary_entry':
+        return 'Dictionary entry';
+      case 'anki_lapis_visual_field_dictionary_name':
+        return 'Dictionary name';
+      case 'anki_lapis_visual_field_definition_example':
+        return 'Definition example';
+      case 'anki_lapis_visual_line_height':
+        return 'Line height';
+      case 'anki_lapis_visual_background_color':
+        return 'Background highlight';
+      case 'anki_lapis_visual_box_layout':
+        return 'Box appearance';
+      case 'anki_lapis_visual_border_width':
+        return 'Border';
+      case 'anki_lapis_visual_border_color':
+        return 'Border color';
+      case 'anki_lapis_visual_corner_radius':
+        return 'Corner radius';
+      case 'anki_lapis_visual_padding':
+        return 'Inner spacing';
+      case 'anki_lapis_visual_margin':
+        return 'Outer spacing';
+      case 'anki_lapis_visual_field_definition_info_note':
+        return 'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
+      case 'anki_lapis_visual_field_dictionary_name_note':
+        return 'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
       default:
         return null;
     }
@@ -156743,6 +158689,82 @@ extension on _StringsKo {
         return 'Added peers';
       case 'interconnect_peer_list_empty':
         return 'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
+      case 'anki_lapis_visual_editor':
+        return 'Visual style editor';
+      case 'anki_lapis_visual_editor_hint':
+        return 'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+      case 'anki_lapis_visual_front':
+        return 'Front';
+      case 'anki_lapis_visual_back':
+        return 'Back';
+      case 'anki_lapis_visual_preview':
+        return 'Lapis card preview';
+      case 'anki_lapis_visual_select_field':
+        return 'Select a field to highlight';
+      case 'anki_lapis_visual_reset_field':
+        return 'Reset field';
+      case 'anki_lapis_visual_font_size':
+        return ({required Object percent}) => 'Font size: ${percent}%';
+      case 'anki_lapis_visual_bold':
+        return 'Bold';
+      case 'anki_lapis_visual_alignment':
+        return 'Alignment';
+      case 'anki_lapis_visual_color':
+        return 'Text color';
+      case 'anki_lapis_visual_default':
+        return 'Default';
+      case 'anki_lapis_visual_advanced_css':
+        return 'Advanced CSS';
+      case 'anki_lapis_visual_field_expression':
+        return 'Word';
+      case 'anki_lapis_visual_field_reading':
+        return 'Reading';
+      case 'anki_lapis_visual_field_sentence':
+        return 'Sentence';
+      case 'anki_lapis_visual_field_primary_definition':
+        return 'Primary definition';
+      case 'anki_lapis_visual_field_glossaries':
+        return 'Other definitions';
+      case 'anki_lapis_visual_target_card_content':
+        return 'Card content';
+      case 'anki_lapis_visual_target_definition':
+        return 'Definition';
+      case 'anki_lapis_visual_target_inside_definition':
+        return 'Inside definition';
+      case 'anki_lapis_visual_field_definition_info':
+        return 'Definition indicator';
+      case 'anki_lapis_visual_field_definition_box':
+        return 'Definition box';
+      case 'anki_lapis_visual_field_definition_content':
+        return 'Whole definition';
+      case 'anki_lapis_visual_field_selected_definition':
+        return 'Selected definition';
+      case 'anki_lapis_visual_field_dictionary_entry':
+        return 'Dictionary entry';
+      case 'anki_lapis_visual_field_dictionary_name':
+        return 'Dictionary name';
+      case 'anki_lapis_visual_field_definition_example':
+        return 'Definition example';
+      case 'anki_lapis_visual_line_height':
+        return 'Line height';
+      case 'anki_lapis_visual_background_color':
+        return 'Background highlight';
+      case 'anki_lapis_visual_box_layout':
+        return 'Box appearance';
+      case 'anki_lapis_visual_border_width':
+        return 'Border';
+      case 'anki_lapis_visual_border_color':
+        return 'Border color';
+      case 'anki_lapis_visual_corner_radius':
+        return 'Corner radius';
+      case 'anki_lapis_visual_padding':
+        return 'Inner spacing';
+      case 'anki_lapis_visual_margin':
+        return 'Outer spacing';
+      case 'anki_lapis_visual_field_definition_info_note':
+        return 'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
+      case 'anki_lapis_visual_field_dictionary_name_note':
+        return 'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
       default:
         return null;
     }
@@ -162459,6 +164481,82 @@ extension on _StringsNl {
         return 'Added peers';
       case 'interconnect_peer_list_empty':
         return 'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
+      case 'anki_lapis_visual_editor':
+        return 'Visual style editor';
+      case 'anki_lapis_visual_editor_hint':
+        return 'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+      case 'anki_lapis_visual_front':
+        return 'Front';
+      case 'anki_lapis_visual_back':
+        return 'Back';
+      case 'anki_lapis_visual_preview':
+        return 'Lapis card preview';
+      case 'anki_lapis_visual_select_field':
+        return 'Select a field to highlight';
+      case 'anki_lapis_visual_reset_field':
+        return 'Reset field';
+      case 'anki_lapis_visual_font_size':
+        return ({required Object percent}) => 'Font size: ${percent}%';
+      case 'anki_lapis_visual_bold':
+        return 'Bold';
+      case 'anki_lapis_visual_alignment':
+        return 'Alignment';
+      case 'anki_lapis_visual_color':
+        return 'Text color';
+      case 'anki_lapis_visual_default':
+        return 'Default';
+      case 'anki_lapis_visual_advanced_css':
+        return 'Advanced CSS';
+      case 'anki_lapis_visual_field_expression':
+        return 'Word';
+      case 'anki_lapis_visual_field_reading':
+        return 'Reading';
+      case 'anki_lapis_visual_field_sentence':
+        return 'Sentence';
+      case 'anki_lapis_visual_field_primary_definition':
+        return 'Primary definition';
+      case 'anki_lapis_visual_field_glossaries':
+        return 'Other definitions';
+      case 'anki_lapis_visual_target_card_content':
+        return 'Card content';
+      case 'anki_lapis_visual_target_definition':
+        return 'Definition';
+      case 'anki_lapis_visual_target_inside_definition':
+        return 'Inside definition';
+      case 'anki_lapis_visual_field_definition_info':
+        return 'Definition indicator';
+      case 'anki_lapis_visual_field_definition_box':
+        return 'Definition box';
+      case 'anki_lapis_visual_field_definition_content':
+        return 'Whole definition';
+      case 'anki_lapis_visual_field_selected_definition':
+        return 'Selected definition';
+      case 'anki_lapis_visual_field_dictionary_entry':
+        return 'Dictionary entry';
+      case 'anki_lapis_visual_field_dictionary_name':
+        return 'Dictionary name';
+      case 'anki_lapis_visual_field_definition_example':
+        return 'Definition example';
+      case 'anki_lapis_visual_line_height':
+        return 'Line height';
+      case 'anki_lapis_visual_background_color':
+        return 'Background highlight';
+      case 'anki_lapis_visual_box_layout':
+        return 'Box appearance';
+      case 'anki_lapis_visual_border_width':
+        return 'Border';
+      case 'anki_lapis_visual_border_color':
+        return 'Border color';
+      case 'anki_lapis_visual_corner_radius':
+        return 'Corner radius';
+      case 'anki_lapis_visual_padding':
+        return 'Inner spacing';
+      case 'anki_lapis_visual_margin':
+        return 'Outer spacing';
+      case 'anki_lapis_visual_field_definition_info_note':
+        return 'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
+      case 'anki_lapis_visual_field_dictionary_name_note':
+        return 'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
       default:
         return null;
     }
@@ -168172,6 +170270,82 @@ extension on _StringsPtBr {
         return 'Added peers';
       case 'interconnect_peer_list_empty':
         return 'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
+      case 'anki_lapis_visual_editor':
+        return 'Visual style editor';
+      case 'anki_lapis_visual_editor_hint':
+        return 'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+      case 'anki_lapis_visual_front':
+        return 'Front';
+      case 'anki_lapis_visual_back':
+        return 'Back';
+      case 'anki_lapis_visual_preview':
+        return 'Lapis card preview';
+      case 'anki_lapis_visual_select_field':
+        return 'Select a field to highlight';
+      case 'anki_lapis_visual_reset_field':
+        return 'Reset field';
+      case 'anki_lapis_visual_font_size':
+        return ({required Object percent}) => 'Font size: ${percent}%';
+      case 'anki_lapis_visual_bold':
+        return 'Bold';
+      case 'anki_lapis_visual_alignment':
+        return 'Alignment';
+      case 'anki_lapis_visual_color':
+        return 'Text color';
+      case 'anki_lapis_visual_default':
+        return 'Default';
+      case 'anki_lapis_visual_advanced_css':
+        return 'Advanced CSS';
+      case 'anki_lapis_visual_field_expression':
+        return 'Word';
+      case 'anki_lapis_visual_field_reading':
+        return 'Reading';
+      case 'anki_lapis_visual_field_sentence':
+        return 'Sentence';
+      case 'anki_lapis_visual_field_primary_definition':
+        return 'Primary definition';
+      case 'anki_lapis_visual_field_glossaries':
+        return 'Other definitions';
+      case 'anki_lapis_visual_target_card_content':
+        return 'Card content';
+      case 'anki_lapis_visual_target_definition':
+        return 'Definition';
+      case 'anki_lapis_visual_target_inside_definition':
+        return 'Inside definition';
+      case 'anki_lapis_visual_field_definition_info':
+        return 'Definition indicator';
+      case 'anki_lapis_visual_field_definition_box':
+        return 'Definition box';
+      case 'anki_lapis_visual_field_definition_content':
+        return 'Whole definition';
+      case 'anki_lapis_visual_field_selected_definition':
+        return 'Selected definition';
+      case 'anki_lapis_visual_field_dictionary_entry':
+        return 'Dictionary entry';
+      case 'anki_lapis_visual_field_dictionary_name':
+        return 'Dictionary name';
+      case 'anki_lapis_visual_field_definition_example':
+        return 'Definition example';
+      case 'anki_lapis_visual_line_height':
+        return 'Line height';
+      case 'anki_lapis_visual_background_color':
+        return 'Background highlight';
+      case 'anki_lapis_visual_box_layout':
+        return 'Box appearance';
+      case 'anki_lapis_visual_border_width':
+        return 'Border';
+      case 'anki_lapis_visual_border_color':
+        return 'Border color';
+      case 'anki_lapis_visual_corner_radius':
+        return 'Corner radius';
+      case 'anki_lapis_visual_padding':
+        return 'Inner spacing';
+      case 'anki_lapis_visual_margin':
+        return 'Outer spacing';
+      case 'anki_lapis_visual_field_definition_info_note':
+        return 'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
+      case 'anki_lapis_visual_field_dictionary_name_note':
+        return 'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
       default:
         return null;
     }
@@ -173890,6 +176064,82 @@ extension on _StringsRu {
         return 'Added peers';
       case 'interconnect_peer_list_empty':
         return 'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
+      case 'anki_lapis_visual_editor':
+        return 'Visual style editor';
+      case 'anki_lapis_visual_editor_hint':
+        return 'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+      case 'anki_lapis_visual_front':
+        return 'Front';
+      case 'anki_lapis_visual_back':
+        return 'Back';
+      case 'anki_lapis_visual_preview':
+        return 'Lapis card preview';
+      case 'anki_lapis_visual_select_field':
+        return 'Select a field to highlight';
+      case 'anki_lapis_visual_reset_field':
+        return 'Reset field';
+      case 'anki_lapis_visual_font_size':
+        return ({required Object percent}) => 'Font size: ${percent}%';
+      case 'anki_lapis_visual_bold':
+        return 'Bold';
+      case 'anki_lapis_visual_alignment':
+        return 'Alignment';
+      case 'anki_lapis_visual_color':
+        return 'Text color';
+      case 'anki_lapis_visual_default':
+        return 'Default';
+      case 'anki_lapis_visual_advanced_css':
+        return 'Advanced CSS';
+      case 'anki_lapis_visual_field_expression':
+        return 'Word';
+      case 'anki_lapis_visual_field_reading':
+        return 'Reading';
+      case 'anki_lapis_visual_field_sentence':
+        return 'Sentence';
+      case 'anki_lapis_visual_field_primary_definition':
+        return 'Primary definition';
+      case 'anki_lapis_visual_field_glossaries':
+        return 'Other definitions';
+      case 'anki_lapis_visual_target_card_content':
+        return 'Card content';
+      case 'anki_lapis_visual_target_definition':
+        return 'Definition';
+      case 'anki_lapis_visual_target_inside_definition':
+        return 'Inside definition';
+      case 'anki_lapis_visual_field_definition_info':
+        return 'Definition indicator';
+      case 'anki_lapis_visual_field_definition_box':
+        return 'Definition box';
+      case 'anki_lapis_visual_field_definition_content':
+        return 'Whole definition';
+      case 'anki_lapis_visual_field_selected_definition':
+        return 'Selected definition';
+      case 'anki_lapis_visual_field_dictionary_entry':
+        return 'Dictionary entry';
+      case 'anki_lapis_visual_field_dictionary_name':
+        return 'Dictionary name';
+      case 'anki_lapis_visual_field_definition_example':
+        return 'Definition example';
+      case 'anki_lapis_visual_line_height':
+        return 'Line height';
+      case 'anki_lapis_visual_background_color':
+        return 'Background highlight';
+      case 'anki_lapis_visual_box_layout':
+        return 'Box appearance';
+      case 'anki_lapis_visual_border_width':
+        return 'Border';
+      case 'anki_lapis_visual_border_color':
+        return 'Border color';
+      case 'anki_lapis_visual_corner_radius':
+        return 'Corner radius';
+      case 'anki_lapis_visual_padding':
+        return 'Inner spacing';
+      case 'anki_lapis_visual_margin':
+        return 'Outer spacing';
+      case 'anki_lapis_visual_field_definition_info_note':
+        return 'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
+      case 'anki_lapis_visual_field_dictionary_name_note':
+        return 'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
       default:
         return null;
     }
@@ -179591,6 +181841,82 @@ extension on _StringsTh {
         return 'Added peers';
       case 'interconnect_peer_list_empty':
         return 'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
+      case 'anki_lapis_visual_editor':
+        return 'Visual style editor';
+      case 'anki_lapis_visual_editor_hint':
+        return 'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+      case 'anki_lapis_visual_front':
+        return 'Front';
+      case 'anki_lapis_visual_back':
+        return 'Back';
+      case 'anki_lapis_visual_preview':
+        return 'Lapis card preview';
+      case 'anki_lapis_visual_select_field':
+        return 'Select a field to highlight';
+      case 'anki_lapis_visual_reset_field':
+        return 'Reset field';
+      case 'anki_lapis_visual_font_size':
+        return ({required Object percent}) => 'Font size: ${percent}%';
+      case 'anki_lapis_visual_bold':
+        return 'Bold';
+      case 'anki_lapis_visual_alignment':
+        return 'Alignment';
+      case 'anki_lapis_visual_color':
+        return 'Text color';
+      case 'anki_lapis_visual_default':
+        return 'Default';
+      case 'anki_lapis_visual_advanced_css':
+        return 'Advanced CSS';
+      case 'anki_lapis_visual_field_expression':
+        return 'Word';
+      case 'anki_lapis_visual_field_reading':
+        return 'Reading';
+      case 'anki_lapis_visual_field_sentence':
+        return 'Sentence';
+      case 'anki_lapis_visual_field_primary_definition':
+        return 'Primary definition';
+      case 'anki_lapis_visual_field_glossaries':
+        return 'Other definitions';
+      case 'anki_lapis_visual_target_card_content':
+        return 'Card content';
+      case 'anki_lapis_visual_target_definition':
+        return 'Definition';
+      case 'anki_lapis_visual_target_inside_definition':
+        return 'Inside definition';
+      case 'anki_lapis_visual_field_definition_info':
+        return 'Definition indicator';
+      case 'anki_lapis_visual_field_definition_box':
+        return 'Definition box';
+      case 'anki_lapis_visual_field_definition_content':
+        return 'Whole definition';
+      case 'anki_lapis_visual_field_selected_definition':
+        return 'Selected definition';
+      case 'anki_lapis_visual_field_dictionary_entry':
+        return 'Dictionary entry';
+      case 'anki_lapis_visual_field_dictionary_name':
+        return 'Dictionary name';
+      case 'anki_lapis_visual_field_definition_example':
+        return 'Definition example';
+      case 'anki_lapis_visual_line_height':
+        return 'Line height';
+      case 'anki_lapis_visual_background_color':
+        return 'Background highlight';
+      case 'anki_lapis_visual_box_layout':
+        return 'Box appearance';
+      case 'anki_lapis_visual_border_width':
+        return 'Border';
+      case 'anki_lapis_visual_border_color':
+        return 'Border color';
+      case 'anki_lapis_visual_corner_radius':
+        return 'Corner radius';
+      case 'anki_lapis_visual_padding':
+        return 'Inner spacing';
+      case 'anki_lapis_visual_margin':
+        return 'Outer spacing';
+      case 'anki_lapis_visual_field_definition_info_note':
+        return 'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
+      case 'anki_lapis_visual_field_dictionary_name_note':
+        return 'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
       default:
         return null;
     }
@@ -185301,6 +187627,82 @@ extension on _StringsTr {
         return 'Added peers';
       case 'interconnect_peer_list_empty':
         return 'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
+      case 'anki_lapis_visual_editor':
+        return 'Visual style editor';
+      case 'anki_lapis_visual_editor_hint':
+        return 'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+      case 'anki_lapis_visual_front':
+        return 'Front';
+      case 'anki_lapis_visual_back':
+        return 'Back';
+      case 'anki_lapis_visual_preview':
+        return 'Lapis card preview';
+      case 'anki_lapis_visual_select_field':
+        return 'Select a field to highlight';
+      case 'anki_lapis_visual_reset_field':
+        return 'Reset field';
+      case 'anki_lapis_visual_font_size':
+        return ({required Object percent}) => 'Font size: ${percent}%';
+      case 'anki_lapis_visual_bold':
+        return 'Bold';
+      case 'anki_lapis_visual_alignment':
+        return 'Alignment';
+      case 'anki_lapis_visual_color':
+        return 'Text color';
+      case 'anki_lapis_visual_default':
+        return 'Default';
+      case 'anki_lapis_visual_advanced_css':
+        return 'Advanced CSS';
+      case 'anki_lapis_visual_field_expression':
+        return 'Word';
+      case 'anki_lapis_visual_field_reading':
+        return 'Reading';
+      case 'anki_lapis_visual_field_sentence':
+        return 'Sentence';
+      case 'anki_lapis_visual_field_primary_definition':
+        return 'Primary definition';
+      case 'anki_lapis_visual_field_glossaries':
+        return 'Other definitions';
+      case 'anki_lapis_visual_target_card_content':
+        return 'Card content';
+      case 'anki_lapis_visual_target_definition':
+        return 'Definition';
+      case 'anki_lapis_visual_target_inside_definition':
+        return 'Inside definition';
+      case 'anki_lapis_visual_field_definition_info':
+        return 'Definition indicator';
+      case 'anki_lapis_visual_field_definition_box':
+        return 'Definition box';
+      case 'anki_lapis_visual_field_definition_content':
+        return 'Whole definition';
+      case 'anki_lapis_visual_field_selected_definition':
+        return 'Selected definition';
+      case 'anki_lapis_visual_field_dictionary_entry':
+        return 'Dictionary entry';
+      case 'anki_lapis_visual_field_dictionary_name':
+        return 'Dictionary name';
+      case 'anki_lapis_visual_field_definition_example':
+        return 'Definition example';
+      case 'anki_lapis_visual_line_height':
+        return 'Line height';
+      case 'anki_lapis_visual_background_color':
+        return 'Background highlight';
+      case 'anki_lapis_visual_box_layout':
+        return 'Box appearance';
+      case 'anki_lapis_visual_border_width':
+        return 'Border';
+      case 'anki_lapis_visual_border_color':
+        return 'Border color';
+      case 'anki_lapis_visual_corner_radius':
+        return 'Corner radius';
+      case 'anki_lapis_visual_padding':
+        return 'Inner spacing';
+      case 'anki_lapis_visual_margin':
+        return 'Outer spacing';
+      case 'anki_lapis_visual_field_definition_info_note':
+        return 'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
+      case 'anki_lapis_visual_field_dictionary_name_note':
+        return 'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
       default:
         return null;
     }
@@ -191007,6 +193409,82 @@ extension on _StringsVi {
         return 'Added peers';
       case 'interconnect_peer_list_empty':
         return 'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
+      case 'anki_lapis_visual_editor':
+        return 'Visual style editor';
+      case 'anki_lapis_visual_editor_hint':
+        return 'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+      case 'anki_lapis_visual_front':
+        return 'Front';
+      case 'anki_lapis_visual_back':
+        return 'Back';
+      case 'anki_lapis_visual_preview':
+        return 'Lapis card preview';
+      case 'anki_lapis_visual_select_field':
+        return 'Select a field to highlight';
+      case 'anki_lapis_visual_reset_field':
+        return 'Reset field';
+      case 'anki_lapis_visual_font_size':
+        return ({required Object percent}) => 'Font size: ${percent}%';
+      case 'anki_lapis_visual_bold':
+        return 'Bold';
+      case 'anki_lapis_visual_alignment':
+        return 'Alignment';
+      case 'anki_lapis_visual_color':
+        return 'Text color';
+      case 'anki_lapis_visual_default':
+        return 'Default';
+      case 'anki_lapis_visual_advanced_css':
+        return 'Advanced CSS';
+      case 'anki_lapis_visual_field_expression':
+        return 'Word';
+      case 'anki_lapis_visual_field_reading':
+        return 'Reading';
+      case 'anki_lapis_visual_field_sentence':
+        return 'Sentence';
+      case 'anki_lapis_visual_field_primary_definition':
+        return 'Primary definition';
+      case 'anki_lapis_visual_field_glossaries':
+        return 'Other definitions';
+      case 'anki_lapis_visual_target_card_content':
+        return 'Card content';
+      case 'anki_lapis_visual_target_definition':
+        return 'Definition';
+      case 'anki_lapis_visual_target_inside_definition':
+        return 'Inside definition';
+      case 'anki_lapis_visual_field_definition_info':
+        return 'Definition indicator';
+      case 'anki_lapis_visual_field_definition_box':
+        return 'Definition box';
+      case 'anki_lapis_visual_field_definition_content':
+        return 'Whole definition';
+      case 'anki_lapis_visual_field_selected_definition':
+        return 'Selected definition';
+      case 'anki_lapis_visual_field_dictionary_entry':
+        return 'Dictionary entry';
+      case 'anki_lapis_visual_field_dictionary_name':
+        return 'Dictionary name';
+      case 'anki_lapis_visual_field_definition_example':
+        return 'Definition example';
+      case 'anki_lapis_visual_line_height':
+        return 'Line height';
+      case 'anki_lapis_visual_background_color':
+        return 'Background highlight';
+      case 'anki_lapis_visual_box_layout':
+        return 'Box appearance';
+      case 'anki_lapis_visual_border_width':
+        return 'Border';
+      case 'anki_lapis_visual_border_color':
+        return 'Border color';
+      case 'anki_lapis_visual_corner_radius':
+        return 'Corner radius';
+      case 'anki_lapis_visual_padding':
+        return 'Inner spacing';
+      case 'anki_lapis_visual_margin':
+        return 'Outer spacing';
+      case 'anki_lapis_visual_field_definition_info_note':
+        return 'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
+      case 'anki_lapis_visual_field_dictionary_name_note':
+        return 'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
       default:
         return null;
     }
@@ -196664,6 +199142,82 @@ extension on _StringsZhCn {
         return '已添加的对端';
       case 'interconnect_peer_list_empty':
         return '尚未添加任何对端。可在下方的局域网设备列表中点击发现的设备自动配对，或手动添加对端地址。';
+      case 'anki_lapis_visual_editor':
+        return '可视化样式编辑';
+      case 'anki_lapis_visual_editor_hint':
+        return '预览 Lapis 卡片，选择字段后直接调整样式，无需手写 CSS。';
+      case 'anki_lapis_visual_front':
+        return '正面';
+      case 'anki_lapis_visual_back':
+        return '背面';
+      case 'anki_lapis_visual_preview':
+        return 'Lapis 卡片预览';
+      case 'anki_lapis_visual_select_field':
+        return '选择要高亮的字段';
+      case 'anki_lapis_visual_reset_field':
+        return '重置字段';
+      case 'anki_lapis_visual_font_size':
+        return ({required Object percent}) => '字号：${percent}%';
+      case 'anki_lapis_visual_bold':
+        return '粗体';
+      case 'anki_lapis_visual_alignment':
+        return '对齐';
+      case 'anki_lapis_visual_color':
+        return '文字颜色';
+      case 'anki_lapis_visual_default':
+        return '默认';
+      case 'anki_lapis_visual_advanced_css':
+        return '高级 CSS';
+      case 'anki_lapis_visual_field_expression':
+        return '单词';
+      case 'anki_lapis_visual_field_reading':
+        return '读音';
+      case 'anki_lapis_visual_field_sentence':
+        return '例句';
+      case 'anki_lapis_visual_field_primary_definition':
+        return '首要释义';
+      case 'anki_lapis_visual_field_glossaries':
+        return '其他释义';
+      case 'anki_lapis_visual_target_card_content':
+        return '卡片内容';
+      case 'anki_lapis_visual_target_definition':
+        return '释义';
+      case 'anki_lapis_visual_target_inside_definition':
+        return '释义内部';
+      case 'anki_lapis_visual_field_definition_info':
+        return '释义序号';
+      case 'anki_lapis_visual_field_definition_box':
+        return '释义框';
+      case 'anki_lapis_visual_field_definition_content':
+        return '整段释义';
+      case 'anki_lapis_visual_field_selected_definition':
+        return '选中释义';
+      case 'anki_lapis_visual_field_dictionary_entry':
+        return '词典条目';
+      case 'anki_lapis_visual_field_dictionary_name':
+        return '词典名称';
+      case 'anki_lapis_visual_field_definition_example':
+        return '释义例句';
+      case 'anki_lapis_visual_line_height':
+        return '行高';
+      case 'anki_lapis_visual_background_color':
+        return '背景高亮';
+      case 'anki_lapis_visual_box_layout':
+        return '区域外观';
+      case 'anki_lapis_visual_border_width':
+        return '边框';
+      case 'anki_lapis_visual_border_color':
+        return '边框颜色';
+      case 'anki_lapis_visual_corner_radius':
+        return '圆角';
+      case 'anki_lapis_visual_padding':
+        return '内边距';
+      case 'anki_lapis_visual_margin':
+        return '外边距';
+      case 'anki_lapis_visual_field_definition_info_note':
+        return '仅在保留多段释义的卡片上可见；只有一段释义的卡片不会显示。';
+      case 'anki_lapis_visual_field_dictionary_name_note':
+        return 'Hibiki 生成的卡片把词性标签和词典名放在同一个标签里，两者无法分开设置样式。';
       default:
         return null;
     }
@@ -202343,6 +204897,82 @@ extension on _StringsZhHk {
         return 'Added peers';
       case 'interconnect_peer_list_empty':
         return 'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
+      case 'anki_lapis_visual_editor':
+        return 'Visual style editor';
+      case 'anki_lapis_visual_editor_hint':
+        return 'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+      case 'anki_lapis_visual_front':
+        return 'Front';
+      case 'anki_lapis_visual_back':
+        return 'Back';
+      case 'anki_lapis_visual_preview':
+        return 'Lapis card preview';
+      case 'anki_lapis_visual_select_field':
+        return 'Select a field to highlight';
+      case 'anki_lapis_visual_reset_field':
+        return 'Reset field';
+      case 'anki_lapis_visual_font_size':
+        return ({required Object percent}) => 'Font size: ${percent}%';
+      case 'anki_lapis_visual_bold':
+        return 'Bold';
+      case 'anki_lapis_visual_alignment':
+        return 'Alignment';
+      case 'anki_lapis_visual_color':
+        return 'Text color';
+      case 'anki_lapis_visual_default':
+        return 'Default';
+      case 'anki_lapis_visual_advanced_css':
+        return 'Advanced CSS';
+      case 'anki_lapis_visual_field_expression':
+        return 'Word';
+      case 'anki_lapis_visual_field_reading':
+        return 'Reading';
+      case 'anki_lapis_visual_field_sentence':
+        return 'Sentence';
+      case 'anki_lapis_visual_field_primary_definition':
+        return 'Primary definition';
+      case 'anki_lapis_visual_field_glossaries':
+        return 'Other definitions';
+      case 'anki_lapis_visual_target_card_content':
+        return 'Card content';
+      case 'anki_lapis_visual_target_definition':
+        return 'Definition';
+      case 'anki_lapis_visual_target_inside_definition':
+        return 'Inside definition';
+      case 'anki_lapis_visual_field_definition_info':
+        return 'Definition indicator';
+      case 'anki_lapis_visual_field_definition_box':
+        return 'Definition box';
+      case 'anki_lapis_visual_field_definition_content':
+        return 'Whole definition';
+      case 'anki_lapis_visual_field_selected_definition':
+        return 'Selected definition';
+      case 'anki_lapis_visual_field_dictionary_entry':
+        return 'Dictionary entry';
+      case 'anki_lapis_visual_field_dictionary_name':
+        return 'Dictionary name';
+      case 'anki_lapis_visual_field_definition_example':
+        return 'Definition example';
+      case 'anki_lapis_visual_line_height':
+        return 'Line height';
+      case 'anki_lapis_visual_background_color':
+        return 'Background highlight';
+      case 'anki_lapis_visual_box_layout':
+        return 'Box appearance';
+      case 'anki_lapis_visual_border_width':
+        return 'Border';
+      case 'anki_lapis_visual_border_color':
+        return 'Border color';
+      case 'anki_lapis_visual_corner_radius':
+        return 'Corner radius';
+      case 'anki_lapis_visual_padding':
+        return 'Inner spacing';
+      case 'anki_lapis_visual_margin':
+        return 'Outer spacing';
+      case 'anki_lapis_visual_field_definition_info_note':
+        return 'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
+      case 'anki_lapis_visual_field_dictionary_name_note':
+        return 'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
       default:
         return null;
     }
