@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 48059 (2827 per locale)
+/// Strings: 48212 (2836 per locale)
 ///
-/// Built on 2026-07-31 at 14:20 UTC
+/// Built on 2026-07-31 at 14:24 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3720,6 +3720,24 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get selection_web_search => 'Search the web';
   String get selection_web_search_unavailable => 'No app can search the web.';
   String get selection_share_failed => 'Could not open the share sheet.';
+  String get anki_dedup_progress_title => 'Deduplicating media';
+  String anki_dedup_progress_scanning({required Object count}) =>
+      'Scanning media folder… (${count} files found)';
+  String anki_dedup_progress_hashing(
+          {required Object done, required Object total}) =>
+      'Comparing same-size files… (${done} / ${total})';
+  String anki_dedup_progress_resolving(
+          {required Object done, required Object total}) =>
+      'Processing duplicates… (${done} / ${total})';
+  String anki_dedup_progress_freed({required Object size}) =>
+      'Freed ${size} so far';
+  String get anki_dedup_cancelling => 'Cancelling…';
+  String get anki_dedup_cancelled =>
+      'Deduplication cancelled; completed changes are kept.';
+  String get anki_dedup_report_cancelled_note =>
+      'Cancelled early — the numbers below only cover what was completed.';
+  String get anki_dedup_plan_busy_note =>
+      'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
   String get video_setting_subtitle_position_secondary =>
       'Secondary subtitle position';
   String get dict_download_learning_language => 'Learning language';
@@ -10130,6 +10148,33 @@ class _StringsAr extends _StringsEn {
   String get selection_web_search_unavailable => 'No app can search the web.';
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
+  @override
+  String get anki_dedup_progress_title => 'Deduplicating media';
+  @override
+  String anki_dedup_progress_scanning({required Object count}) =>
+      'Scanning media folder… (${count} files found)';
+  @override
+  String anki_dedup_progress_hashing(
+          {required Object done, required Object total}) =>
+      'Comparing same-size files… (${done} / ${total})';
+  @override
+  String anki_dedup_progress_resolving(
+          {required Object done, required Object total}) =>
+      'Processing duplicates… (${done} / ${total})';
+  @override
+  String anki_dedup_progress_freed({required Object size}) =>
+      'Freed ${size} so far';
+  @override
+  String get anki_dedup_cancelling => 'Cancelling…';
+  @override
+  String get anki_dedup_cancelled =>
+      'Deduplication cancelled; completed changes are kept.';
+  @override
+  String get anki_dedup_report_cancelled_note =>
+      'Cancelled early — the numbers below only cover what was completed.';
+  @override
+  String get anki_dedup_plan_busy_note =>
+      'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
   @override
   String get video_setting_subtitle_position_secondary =>
       'Secondary subtitle position';
@@ -16667,6 +16712,33 @@ class _StringsDe extends _StringsEn {
   String get selection_web_search_unavailable => 'No app can search the web.';
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
+  @override
+  String get anki_dedup_progress_title => 'Deduplicating media';
+  @override
+  String anki_dedup_progress_scanning({required Object count}) =>
+      'Scanning media folder… (${count} files found)';
+  @override
+  String anki_dedup_progress_hashing(
+          {required Object done, required Object total}) =>
+      'Comparing same-size files… (${done} / ${total})';
+  @override
+  String anki_dedup_progress_resolving(
+          {required Object done, required Object total}) =>
+      'Processing duplicates… (${done} / ${total})';
+  @override
+  String anki_dedup_progress_freed({required Object size}) =>
+      'Freed ${size} so far';
+  @override
+  String get anki_dedup_cancelling => 'Cancelling…';
+  @override
+  String get anki_dedup_cancelled =>
+      'Deduplication cancelled; completed changes are kept.';
+  @override
+  String get anki_dedup_report_cancelled_note =>
+      'Cancelled early — the numbers below only cover what was completed.';
+  @override
+  String get anki_dedup_plan_busy_note =>
+      'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
   @override
   String get video_setting_subtitle_position_secondary =>
       'Secondary subtitle position';
@@ -23220,6 +23292,33 @@ class _StringsEs extends _StringsEn {
   String get selection_web_search_unavailable => 'No app can search the web.';
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
+  @override
+  String get anki_dedup_progress_title => 'Deduplicating media';
+  @override
+  String anki_dedup_progress_scanning({required Object count}) =>
+      'Scanning media folder… (${count} files found)';
+  @override
+  String anki_dedup_progress_hashing(
+          {required Object done, required Object total}) =>
+      'Comparing same-size files… (${done} / ${total})';
+  @override
+  String anki_dedup_progress_resolving(
+          {required Object done, required Object total}) =>
+      'Processing duplicates… (${done} / ${total})';
+  @override
+  String anki_dedup_progress_freed({required Object size}) =>
+      'Freed ${size} so far';
+  @override
+  String get anki_dedup_cancelling => 'Cancelling…';
+  @override
+  String get anki_dedup_cancelled =>
+      'Deduplication cancelled; completed changes are kept.';
+  @override
+  String get anki_dedup_report_cancelled_note =>
+      'Cancelled early — the numbers below only cover what was completed.';
+  @override
+  String get anki_dedup_plan_busy_note =>
+      'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
   @override
   String get video_setting_subtitle_position_secondary =>
       'Secondary subtitle position';
@@ -29785,6 +29884,33 @@ class _StringsFr extends _StringsEn {
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
   @override
+  String get anki_dedup_progress_title => 'Deduplicating media';
+  @override
+  String anki_dedup_progress_scanning({required Object count}) =>
+      'Scanning media folder… (${count} files found)';
+  @override
+  String anki_dedup_progress_hashing(
+          {required Object done, required Object total}) =>
+      'Comparing same-size files… (${done} / ${total})';
+  @override
+  String anki_dedup_progress_resolving(
+          {required Object done, required Object total}) =>
+      'Processing duplicates… (${done} / ${total})';
+  @override
+  String anki_dedup_progress_freed({required Object size}) =>
+      'Freed ${size} so far';
+  @override
+  String get anki_dedup_cancelling => 'Cancelling…';
+  @override
+  String get anki_dedup_cancelled =>
+      'Deduplication cancelled; completed changes are kept.';
+  @override
+  String get anki_dedup_report_cancelled_note =>
+      'Cancelled early — the numbers below only cover what was completed.';
+  @override
+  String get anki_dedup_plan_busy_note =>
+      'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
+  @override
   String get video_setting_subtitle_position_secondary =>
       'Secondary subtitle position';
   @override
@@ -36277,6 +36403,33 @@ class _StringsId extends _StringsEn {
   String get selection_web_search_unavailable => 'No app can search the web.';
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
+  @override
+  String get anki_dedup_progress_title => 'Deduplicating media';
+  @override
+  String anki_dedup_progress_scanning({required Object count}) =>
+      'Scanning media folder… (${count} files found)';
+  @override
+  String anki_dedup_progress_hashing(
+          {required Object done, required Object total}) =>
+      'Comparing same-size files… (${done} / ${total})';
+  @override
+  String anki_dedup_progress_resolving(
+          {required Object done, required Object total}) =>
+      'Processing duplicates… (${done} / ${total})';
+  @override
+  String anki_dedup_progress_freed({required Object size}) =>
+      'Freed ${size} so far';
+  @override
+  String get anki_dedup_cancelling => 'Cancelling…';
+  @override
+  String get anki_dedup_cancelled =>
+      'Deduplication cancelled; completed changes are kept.';
+  @override
+  String get anki_dedup_report_cancelled_note =>
+      'Cancelled early — the numbers below only cover what was completed.';
+  @override
+  String get anki_dedup_plan_busy_note =>
+      'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
   @override
   String get video_setting_subtitle_position_secondary =>
       'Secondary subtitle position';
@@ -42817,6 +42970,33 @@ class _StringsIt extends _StringsEn {
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
   @override
+  String get anki_dedup_progress_title => 'Deduplicating media';
+  @override
+  String anki_dedup_progress_scanning({required Object count}) =>
+      'Scanning media folder… (${count} files found)';
+  @override
+  String anki_dedup_progress_hashing(
+          {required Object done, required Object total}) =>
+      'Comparing same-size files… (${done} / ${total})';
+  @override
+  String anki_dedup_progress_resolving(
+          {required Object done, required Object total}) =>
+      'Processing duplicates… (${done} / ${total})';
+  @override
+  String anki_dedup_progress_freed({required Object size}) =>
+      'Freed ${size} so far';
+  @override
+  String get anki_dedup_cancelling => 'Cancelling…';
+  @override
+  String get anki_dedup_cancelled =>
+      'Deduplication cancelled; completed changes are kept.';
+  @override
+  String get anki_dedup_report_cancelled_note =>
+      'Cancelled early — the numbers below only cover what was completed.';
+  @override
+  String get anki_dedup_plan_busy_note =>
+      'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
+  @override
   String get video_setting_subtitle_position_secondary =>
       'Secondary subtitle position';
   @override
@@ -49172,6 +49352,33 @@ class _StringsJa extends _StringsEn {
   String get selection_web_search_unavailable => 'No app can search the web.';
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
+  @override
+  String get anki_dedup_progress_title => 'Deduplicating media';
+  @override
+  String anki_dedup_progress_scanning({required Object count}) =>
+      'Scanning media folder… (${count} files found)';
+  @override
+  String anki_dedup_progress_hashing(
+          {required Object done, required Object total}) =>
+      'Comparing same-size files… (${done} / ${total})';
+  @override
+  String anki_dedup_progress_resolving(
+          {required Object done, required Object total}) =>
+      'Processing duplicates… (${done} / ${total})';
+  @override
+  String anki_dedup_progress_freed({required Object size}) =>
+      'Freed ${size} so far';
+  @override
+  String get anki_dedup_cancelling => 'Cancelling…';
+  @override
+  String get anki_dedup_cancelled =>
+      'Deduplication cancelled; completed changes are kept.';
+  @override
+  String get anki_dedup_report_cancelled_note =>
+      'Cancelled early — the numbers below only cover what was completed.';
+  @override
+  String get anki_dedup_plan_busy_note =>
+      'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
   @override
   String get video_setting_subtitle_position_secondary =>
       'Secondary subtitle position';
@@ -55530,6 +55737,33 @@ class _StringsKo extends _StringsEn {
   String get selection_web_search_unavailable => 'No app can search the web.';
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
+  @override
+  String get anki_dedup_progress_title => 'Deduplicating media';
+  @override
+  String anki_dedup_progress_scanning({required Object count}) =>
+      'Scanning media folder… (${count} files found)';
+  @override
+  String anki_dedup_progress_hashing(
+          {required Object done, required Object total}) =>
+      'Comparing same-size files… (${done} / ${total})';
+  @override
+  String anki_dedup_progress_resolving(
+          {required Object done, required Object total}) =>
+      'Processing duplicates… (${done} / ${total})';
+  @override
+  String anki_dedup_progress_freed({required Object size}) =>
+      'Freed ${size} so far';
+  @override
+  String get anki_dedup_cancelling => 'Cancelling…';
+  @override
+  String get anki_dedup_cancelled =>
+      'Deduplication cancelled; completed changes are kept.';
+  @override
+  String get anki_dedup_report_cancelled_note =>
+      'Cancelled early — the numbers below only cover what was completed.';
+  @override
+  String get anki_dedup_plan_busy_note =>
+      'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
   @override
   String get video_setting_subtitle_position_secondary =>
       'Secondary subtitle position';
@@ -62049,6 +62283,33 @@ class _StringsNl extends _StringsEn {
   String get selection_web_search_unavailable => 'No app can search the web.';
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
+  @override
+  String get anki_dedup_progress_title => 'Deduplicating media';
+  @override
+  String anki_dedup_progress_scanning({required Object count}) =>
+      'Scanning media folder… (${count} files found)';
+  @override
+  String anki_dedup_progress_hashing(
+          {required Object done, required Object total}) =>
+      'Comparing same-size files… (${done} / ${total})';
+  @override
+  String anki_dedup_progress_resolving(
+          {required Object done, required Object total}) =>
+      'Processing duplicates… (${done} / ${total})';
+  @override
+  String anki_dedup_progress_freed({required Object size}) =>
+      'Freed ${size} so far';
+  @override
+  String get anki_dedup_cancelling => 'Cancelling…';
+  @override
+  String get anki_dedup_cancelled =>
+      'Deduplication cancelled; completed changes are kept.';
+  @override
+  String get anki_dedup_report_cancelled_note =>
+      'Cancelled early — the numbers below only cover what was completed.';
+  @override
+  String get anki_dedup_plan_busy_note =>
+      'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
   @override
   String get video_setting_subtitle_position_secondary =>
       'Secondary subtitle position';
@@ -68582,6 +68843,33 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
   @override
+  String get anki_dedup_progress_title => 'Deduplicating media';
+  @override
+  String anki_dedup_progress_scanning({required Object count}) =>
+      'Scanning media folder… (${count} files found)';
+  @override
+  String anki_dedup_progress_hashing(
+          {required Object done, required Object total}) =>
+      'Comparing same-size files… (${done} / ${total})';
+  @override
+  String anki_dedup_progress_resolving(
+          {required Object done, required Object total}) =>
+      'Processing duplicates… (${done} / ${total})';
+  @override
+  String anki_dedup_progress_freed({required Object size}) =>
+      'Freed ${size} so far';
+  @override
+  String get anki_dedup_cancelling => 'Cancelling…';
+  @override
+  String get anki_dedup_cancelled =>
+      'Deduplication cancelled; completed changes are kept.';
+  @override
+  String get anki_dedup_report_cancelled_note =>
+      'Cancelled early — the numbers below only cover what was completed.';
+  @override
+  String get anki_dedup_plan_busy_note =>
+      'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
+  @override
   String get video_setting_subtitle_position_secondary =>
       'Secondary subtitle position';
   @override
@@ -75098,6 +75386,33 @@ class _StringsRu extends _StringsEn {
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
   @override
+  String get anki_dedup_progress_title => 'Deduplicating media';
+  @override
+  String anki_dedup_progress_scanning({required Object count}) =>
+      'Scanning media folder… (${count} files found)';
+  @override
+  String anki_dedup_progress_hashing(
+          {required Object done, required Object total}) =>
+      'Comparing same-size files… (${done} / ${total})';
+  @override
+  String anki_dedup_progress_resolving(
+          {required Object done, required Object total}) =>
+      'Processing duplicates… (${done} / ${total})';
+  @override
+  String anki_dedup_progress_freed({required Object size}) =>
+      'Freed ${size} so far';
+  @override
+  String get anki_dedup_cancelling => 'Cancelling…';
+  @override
+  String get anki_dedup_cancelled =>
+      'Deduplication cancelled; completed changes are kept.';
+  @override
+  String get anki_dedup_report_cancelled_note =>
+      'Cancelled early — the numbers below only cover what was completed.';
+  @override
+  String get anki_dedup_plan_busy_note =>
+      'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
+  @override
   String get video_setting_subtitle_position_secondary =>
       'Secondary subtitle position';
   @override
@@ -81561,6 +81876,33 @@ class _StringsTh extends _StringsEn {
   String get selection_web_search_unavailable => 'No app can search the web.';
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
+  @override
+  String get anki_dedup_progress_title => 'Deduplicating media';
+  @override
+  String anki_dedup_progress_scanning({required Object count}) =>
+      'Scanning media folder… (${count} files found)';
+  @override
+  String anki_dedup_progress_hashing(
+          {required Object done, required Object total}) =>
+      'Comparing same-size files… (${done} / ${total})';
+  @override
+  String anki_dedup_progress_resolving(
+          {required Object done, required Object total}) =>
+      'Processing duplicates… (${done} / ${total})';
+  @override
+  String anki_dedup_progress_freed({required Object size}) =>
+      'Freed ${size} so far';
+  @override
+  String get anki_dedup_cancelling => 'Cancelling…';
+  @override
+  String get anki_dedup_cancelled =>
+      'Deduplication cancelled; completed changes are kept.';
+  @override
+  String get anki_dedup_report_cancelled_note =>
+      'Cancelled early — the numbers below only cover what was completed.';
+  @override
+  String get anki_dedup_plan_busy_note =>
+      'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
   @override
   String get video_setting_subtitle_position_secondary =>
       'Secondary subtitle position';
@@ -88058,6 +88400,33 @@ class _StringsTr extends _StringsEn {
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
   @override
+  String get anki_dedup_progress_title => 'Deduplicating media';
+  @override
+  String anki_dedup_progress_scanning({required Object count}) =>
+      'Scanning media folder… (${count} files found)';
+  @override
+  String anki_dedup_progress_hashing(
+          {required Object done, required Object total}) =>
+      'Comparing same-size files… (${done} / ${total})';
+  @override
+  String anki_dedup_progress_resolving(
+          {required Object done, required Object total}) =>
+      'Processing duplicates… (${done} / ${total})';
+  @override
+  String anki_dedup_progress_freed({required Object size}) =>
+      'Freed ${size} so far';
+  @override
+  String get anki_dedup_cancelling => 'Cancelling…';
+  @override
+  String get anki_dedup_cancelled =>
+      'Deduplication cancelled; completed changes are kept.';
+  @override
+  String get anki_dedup_report_cancelled_note =>
+      'Cancelled early — the numbers below only cover what was completed.';
+  @override
+  String get anki_dedup_plan_busy_note =>
+      'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
+  @override
   String get video_setting_subtitle_position_secondary =>
       'Secondary subtitle position';
   @override
@@ -94539,6 +94908,33 @@ class _StringsVi extends _StringsEn {
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
   @override
+  String get anki_dedup_progress_title => 'Deduplicating media';
+  @override
+  String anki_dedup_progress_scanning({required Object count}) =>
+      'Scanning media folder… (${count} files found)';
+  @override
+  String anki_dedup_progress_hashing(
+          {required Object done, required Object total}) =>
+      'Comparing same-size files… (${done} / ${total})';
+  @override
+  String anki_dedup_progress_resolving(
+          {required Object done, required Object total}) =>
+      'Processing duplicates… (${done} / ${total})';
+  @override
+  String anki_dedup_progress_freed({required Object size}) =>
+      'Freed ${size} so far';
+  @override
+  String get anki_dedup_cancelling => 'Cancelling…';
+  @override
+  String get anki_dedup_cancelled =>
+      'Deduplication cancelled; completed changes are kept.';
+  @override
+  String get anki_dedup_report_cancelled_note =>
+      'Cancelled early — the numbers below only cover what was completed.';
+  @override
+  String get anki_dedup_plan_busy_note =>
+      'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
+  @override
   String get video_setting_subtitle_position_secondary =>
       'Secondary subtitle position';
   @override
@@ -100569,6 +100965,29 @@ class _StringsZhCn extends _StringsEn {
   String get selection_web_search_unavailable => '没有可用的网页搜索应用。';
   @override
   String get selection_share_failed => '无法打开分享面板。';
+  @override
+  String get anki_dedup_progress_title => '正在去重媒体';
+  @override
+  String anki_dedup_progress_scanning({required Object count}) =>
+      '正在扫描媒体目录…（已发现 ${count} 个文件）';
+  @override
+  String anki_dedup_progress_hashing(
+          {required Object done, required Object total}) =>
+      '正在比对同大小文件…（${done} / ${total}）';
+  @override
+  String anki_dedup_progress_resolving(
+          {required Object done, required Object total}) =>
+      '正在处理重复副本…（${done} / ${total}）';
+  @override
+  String anki_dedup_progress_freed({required Object size}) => '已释放 ${size}';
+  @override
+  String get anki_dedup_cancelling => '正在取消…';
+  @override
+  String get anki_dedup_cancelled => '已取消去重；已完成的改动保留。';
+  @override
+  String get anki_dedup_report_cancelled_note => '已提前取消——以下数字只统计已完成的部分。';
+  @override
+  String get anki_dedup_plan_busy_note => '执行期间 Anki 可能暂时无响应；结束前请不要在 Anki 里操作。';
   @override
   String get video_setting_subtitle_position_secondary => '副字幕垂直位置';
   @override
@@ -106842,6 +107261,33 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
   @override
+  String get anki_dedup_progress_title => 'Deduplicating media';
+  @override
+  String anki_dedup_progress_scanning({required Object count}) =>
+      'Scanning media folder… (${count} files found)';
+  @override
+  String anki_dedup_progress_hashing(
+          {required Object done, required Object total}) =>
+      'Comparing same-size files… (${done} / ${total})';
+  @override
+  String anki_dedup_progress_resolving(
+          {required Object done, required Object total}) =>
+      'Processing duplicates… (${done} / ${total})';
+  @override
+  String anki_dedup_progress_freed({required Object size}) =>
+      'Freed ${size} so far';
+  @override
+  String get anki_dedup_cancelling => 'Cancelling…';
+  @override
+  String get anki_dedup_cancelled =>
+      'Deduplication cancelled; completed changes are kept.';
+  @override
+  String get anki_dedup_report_cancelled_note =>
+      'Cancelled early — the numbers below only cover what was completed.';
+  @override
+  String get anki_dedup_plan_busy_note =>
+      'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
+  @override
   String get video_setting_subtitle_position_secondary =>
       'Secondary subtitle position';
   @override
@@ -112644,6 +113090,27 @@ extension on _StringsEn {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'anki_dedup_progress_title':
+        return 'Deduplicating media';
+      case 'anki_dedup_progress_scanning':
+        return ({required Object count}) =>
+            'Scanning media folder… (${count} files found)';
+      case 'anki_dedup_progress_hashing':
+        return ({required Object done, required Object total}) =>
+            'Comparing same-size files… (${done} / ${total})';
+      case 'anki_dedup_progress_resolving':
+        return ({required Object done, required Object total}) =>
+            'Processing duplicates… (${done} / ${total})';
+      case 'anki_dedup_progress_freed':
+        return ({required Object size}) => 'Freed ${size} so far';
+      case 'anki_dedup_cancelling':
+        return 'Cancelling…';
+      case 'anki_dedup_cancelled':
+        return 'Deduplication cancelled; completed changes are kept.';
+      case 'anki_dedup_report_cancelled_note':
+        return 'Cancelled early — the numbers below only cover what was completed.';
+      case 'anki_dedup_plan_busy_note':
+        return 'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
       case 'video_setting_subtitle_position_secondary':
         return 'Secondary subtitle position';
       case 'dict_download_learning_language':
@@ -118433,6 +118900,27 @@ extension on _StringsAr {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'anki_dedup_progress_title':
+        return 'Deduplicating media';
+      case 'anki_dedup_progress_scanning':
+        return ({required Object count}) =>
+            'Scanning media folder… (${count} files found)';
+      case 'anki_dedup_progress_hashing':
+        return ({required Object done, required Object total}) =>
+            'Comparing same-size files… (${done} / ${total})';
+      case 'anki_dedup_progress_resolving':
+        return ({required Object done, required Object total}) =>
+            'Processing duplicates… (${done} / ${total})';
+      case 'anki_dedup_progress_freed':
+        return ({required Object size}) => 'Freed ${size} so far';
+      case 'anki_dedup_cancelling':
+        return 'Cancelling…';
+      case 'anki_dedup_cancelled':
+        return 'Deduplication cancelled; completed changes are kept.';
+      case 'anki_dedup_report_cancelled_note':
+        return 'Cancelled early — the numbers below only cover what was completed.';
+      case 'anki_dedup_plan_busy_note':
+        return 'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
       case 'video_setting_subtitle_position_secondary':
         return 'Secondary subtitle position';
       case 'dict_download_learning_language':
@@ -124244,6 +124732,27 @@ extension on _StringsDe {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'anki_dedup_progress_title':
+        return 'Deduplicating media';
+      case 'anki_dedup_progress_scanning':
+        return ({required Object count}) =>
+            'Scanning media folder… (${count} files found)';
+      case 'anki_dedup_progress_hashing':
+        return ({required Object done, required Object total}) =>
+            'Comparing same-size files… (${done} / ${total})';
+      case 'anki_dedup_progress_resolving':
+        return ({required Object done, required Object total}) =>
+            'Processing duplicates… (${done} / ${total})';
+      case 'anki_dedup_progress_freed':
+        return ({required Object size}) => 'Freed ${size} so far';
+      case 'anki_dedup_cancelling':
+        return 'Cancelling…';
+      case 'anki_dedup_cancelled':
+        return 'Deduplication cancelled; completed changes are kept.';
+      case 'anki_dedup_report_cancelled_note':
+        return 'Cancelled early — the numbers below only cover what was completed.';
+      case 'anki_dedup_plan_busy_note':
+        return 'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
       case 'video_setting_subtitle_position_secondary':
         return 'Secondary subtitle position';
       case 'dict_download_learning_language':
@@ -130054,6 +130563,27 @@ extension on _StringsEs {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'anki_dedup_progress_title':
+        return 'Deduplicating media';
+      case 'anki_dedup_progress_scanning':
+        return ({required Object count}) =>
+            'Scanning media folder… (${count} files found)';
+      case 'anki_dedup_progress_hashing':
+        return ({required Object done, required Object total}) =>
+            'Comparing same-size files… (${done} / ${total})';
+      case 'anki_dedup_progress_resolving':
+        return ({required Object done, required Object total}) =>
+            'Processing duplicates… (${done} / ${total})';
+      case 'anki_dedup_progress_freed':
+        return ({required Object size}) => 'Freed ${size} so far';
+      case 'anki_dedup_cancelling':
+        return 'Cancelling…';
+      case 'anki_dedup_cancelled':
+        return 'Deduplication cancelled; completed changes are kept.';
+      case 'anki_dedup_report_cancelled_note':
+        return 'Cancelled early — the numbers below only cover what was completed.';
+      case 'anki_dedup_plan_busy_note':
+        return 'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
       case 'video_setting_subtitle_position_secondary':
         return 'Secondary subtitle position';
       case 'dict_download_learning_language':
@@ -135870,6 +136400,27 @@ extension on _StringsFr {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'anki_dedup_progress_title':
+        return 'Deduplicating media';
+      case 'anki_dedup_progress_scanning':
+        return ({required Object count}) =>
+            'Scanning media folder… (${count} files found)';
+      case 'anki_dedup_progress_hashing':
+        return ({required Object done, required Object total}) =>
+            'Comparing same-size files… (${done} / ${total})';
+      case 'anki_dedup_progress_resolving':
+        return ({required Object done, required Object total}) =>
+            'Processing duplicates… (${done} / ${total})';
+      case 'anki_dedup_progress_freed':
+        return ({required Object size}) => 'Freed ${size} so far';
+      case 'anki_dedup_cancelling':
+        return 'Cancelling…';
+      case 'anki_dedup_cancelled':
+        return 'Deduplication cancelled; completed changes are kept.';
+      case 'anki_dedup_report_cancelled_note':
+        return 'Cancelled early — the numbers below only cover what was completed.';
+      case 'anki_dedup_plan_busy_note':
+        return 'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
       case 'video_setting_subtitle_position_secondary':
         return 'Secondary subtitle position';
       case 'dict_download_learning_language':
@@ -141668,6 +142219,27 @@ extension on _StringsId {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'anki_dedup_progress_title':
+        return 'Deduplicating media';
+      case 'anki_dedup_progress_scanning':
+        return ({required Object count}) =>
+            'Scanning media folder… (${count} files found)';
+      case 'anki_dedup_progress_hashing':
+        return ({required Object done, required Object total}) =>
+            'Comparing same-size files… (${done} / ${total})';
+      case 'anki_dedup_progress_resolving':
+        return ({required Object done, required Object total}) =>
+            'Processing duplicates… (${done} / ${total})';
+      case 'anki_dedup_progress_freed':
+        return ({required Object size}) => 'Freed ${size} so far';
+      case 'anki_dedup_cancelling':
+        return 'Cancelling…';
+      case 'anki_dedup_cancelled':
+        return 'Deduplication cancelled; completed changes are kept.';
+      case 'anki_dedup_report_cancelled_note':
+        return 'Cancelled early — the numbers below only cover what was completed.';
+      case 'anki_dedup_plan_busy_note':
+        return 'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
       case 'video_setting_subtitle_position_secondary':
         return 'Secondary subtitle position';
       case 'dict_download_learning_language':
@@ -147480,6 +148052,27 @@ extension on _StringsIt {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'anki_dedup_progress_title':
+        return 'Deduplicating media';
+      case 'anki_dedup_progress_scanning':
+        return ({required Object count}) =>
+            'Scanning media folder… (${count} files found)';
+      case 'anki_dedup_progress_hashing':
+        return ({required Object done, required Object total}) =>
+            'Comparing same-size files… (${done} / ${total})';
+      case 'anki_dedup_progress_resolving':
+        return ({required Object done, required Object total}) =>
+            'Processing duplicates… (${done} / ${total})';
+      case 'anki_dedup_progress_freed':
+        return ({required Object size}) => 'Freed ${size} so far';
+      case 'anki_dedup_cancelling':
+        return 'Cancelling…';
+      case 'anki_dedup_cancelled':
+        return 'Deduplication cancelled; completed changes are kept.';
+      case 'anki_dedup_report_cancelled_note':
+        return 'Cancelled early — the numbers below only cover what was completed.';
+      case 'anki_dedup_plan_busy_note':
+        return 'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
       case 'video_setting_subtitle_position_secondary':
         return 'Secondary subtitle position';
       case 'dict_download_learning_language':
@@ -153254,6 +153847,27 @@ extension on _StringsJa {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'anki_dedup_progress_title':
+        return 'Deduplicating media';
+      case 'anki_dedup_progress_scanning':
+        return ({required Object count}) =>
+            'Scanning media folder… (${count} files found)';
+      case 'anki_dedup_progress_hashing':
+        return ({required Object done, required Object total}) =>
+            'Comparing same-size files… (${done} / ${total})';
+      case 'anki_dedup_progress_resolving':
+        return ({required Object done, required Object total}) =>
+            'Processing duplicates… (${done} / ${total})';
+      case 'anki_dedup_progress_freed':
+        return ({required Object size}) => 'Freed ${size} so far';
+      case 'anki_dedup_cancelling':
+        return 'Cancelling…';
+      case 'anki_dedup_cancelled':
+        return 'Deduplication cancelled; completed changes are kept.';
+      case 'anki_dedup_report_cancelled_note':
+        return 'Cancelled early — the numbers below only cover what was completed.';
+      case 'anki_dedup_plan_busy_note':
+        return 'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
       case 'video_setting_subtitle_position_secondary':
         return 'Secondary subtitle position';
       case 'dict_download_learning_language':
@@ -159032,6 +159646,27 @@ extension on _StringsKo {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'anki_dedup_progress_title':
+        return 'Deduplicating media';
+      case 'anki_dedup_progress_scanning':
+        return ({required Object count}) =>
+            'Scanning media folder… (${count} files found)';
+      case 'anki_dedup_progress_hashing':
+        return ({required Object done, required Object total}) =>
+            'Comparing same-size files… (${done} / ${total})';
+      case 'anki_dedup_progress_resolving':
+        return ({required Object done, required Object total}) =>
+            'Processing duplicates… (${done} / ${total})';
+      case 'anki_dedup_progress_freed':
+        return ({required Object size}) => 'Freed ${size} so far';
+      case 'anki_dedup_cancelling':
+        return 'Cancelling…';
+      case 'anki_dedup_cancelled':
+        return 'Deduplication cancelled; completed changes are kept.';
+      case 'anki_dedup_report_cancelled_note':
+        return 'Cancelled early — the numbers below only cover what was completed.';
+      case 'anki_dedup_plan_busy_note':
+        return 'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
       case 'video_setting_subtitle_position_secondary':
         return 'Secondary subtitle position';
       case 'dict_download_learning_language':
@@ -164838,6 +165473,27 @@ extension on _StringsNl {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'anki_dedup_progress_title':
+        return 'Deduplicating media';
+      case 'anki_dedup_progress_scanning':
+        return ({required Object count}) =>
+            'Scanning media folder… (${count} files found)';
+      case 'anki_dedup_progress_hashing':
+        return ({required Object done, required Object total}) =>
+            'Comparing same-size files… (${done} / ${total})';
+      case 'anki_dedup_progress_resolving':
+        return ({required Object done, required Object total}) =>
+            'Processing duplicates… (${done} / ${total})';
+      case 'anki_dedup_progress_freed':
+        return ({required Object size}) => 'Freed ${size} so far';
+      case 'anki_dedup_cancelling':
+        return 'Cancelling…';
+      case 'anki_dedup_cancelled':
+        return 'Deduplication cancelled; completed changes are kept.';
+      case 'anki_dedup_report_cancelled_note':
+        return 'Cancelled early — the numbers below only cover what was completed.';
+      case 'anki_dedup_plan_busy_note':
+        return 'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
       case 'video_setting_subtitle_position_secondary':
         return 'Secondary subtitle position';
       case 'dict_download_learning_language':
@@ -170641,6 +171297,27 @@ extension on _StringsPtBr {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'anki_dedup_progress_title':
+        return 'Deduplicating media';
+      case 'anki_dedup_progress_scanning':
+        return ({required Object count}) =>
+            'Scanning media folder… (${count} files found)';
+      case 'anki_dedup_progress_hashing':
+        return ({required Object done, required Object total}) =>
+            'Comparing same-size files… (${done} / ${total})';
+      case 'anki_dedup_progress_resolving':
+        return ({required Object done, required Object total}) =>
+            'Processing duplicates… (${done} / ${total})';
+      case 'anki_dedup_progress_freed':
+        return ({required Object size}) => 'Freed ${size} so far';
+      case 'anki_dedup_cancelling':
+        return 'Cancelling…';
+      case 'anki_dedup_cancelled':
+        return 'Deduplication cancelled; completed changes are kept.';
+      case 'anki_dedup_report_cancelled_note':
+        return 'Cancelled early — the numbers below only cover what was completed.';
+      case 'anki_dedup_plan_busy_note':
+        return 'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
       case 'video_setting_subtitle_position_secondary':
         return 'Secondary subtitle position';
       case 'dict_download_learning_language':
@@ -176449,6 +177126,27 @@ extension on _StringsRu {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'anki_dedup_progress_title':
+        return 'Deduplicating media';
+      case 'anki_dedup_progress_scanning':
+        return ({required Object count}) =>
+            'Scanning media folder… (${count} files found)';
+      case 'anki_dedup_progress_hashing':
+        return ({required Object done, required Object total}) =>
+            'Comparing same-size files… (${done} / ${total})';
+      case 'anki_dedup_progress_resolving':
+        return ({required Object done, required Object total}) =>
+            'Processing duplicates… (${done} / ${total})';
+      case 'anki_dedup_progress_freed':
+        return ({required Object size}) => 'Freed ${size} so far';
+      case 'anki_dedup_cancelling':
+        return 'Cancelling…';
+      case 'anki_dedup_cancelled':
+        return 'Deduplication cancelled; completed changes are kept.';
+      case 'anki_dedup_report_cancelled_note':
+        return 'Cancelled early — the numbers below only cover what was completed.';
+      case 'anki_dedup_plan_busy_note':
+        return 'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
       case 'video_setting_subtitle_position_secondary':
         return 'Secondary subtitle position';
       case 'dict_download_learning_language':
@@ -182240,6 +182938,27 @@ extension on _StringsTh {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'anki_dedup_progress_title':
+        return 'Deduplicating media';
+      case 'anki_dedup_progress_scanning':
+        return ({required Object count}) =>
+            'Scanning media folder… (${count} files found)';
+      case 'anki_dedup_progress_hashing':
+        return ({required Object done, required Object total}) =>
+            'Comparing same-size files… (${done} / ${total})';
+      case 'anki_dedup_progress_resolving':
+        return ({required Object done, required Object total}) =>
+            'Processing duplicates… (${done} / ${total})';
+      case 'anki_dedup_progress_freed':
+        return ({required Object size}) => 'Freed ${size} so far';
+      case 'anki_dedup_cancelling':
+        return 'Cancelling…';
+      case 'anki_dedup_cancelled':
+        return 'Deduplication cancelled; completed changes are kept.';
+      case 'anki_dedup_report_cancelled_note':
+        return 'Cancelled early — the numbers below only cover what was completed.';
+      case 'anki_dedup_plan_busy_note':
+        return 'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
       case 'video_setting_subtitle_position_secondary':
         return 'Secondary subtitle position';
       case 'dict_download_learning_language':
@@ -188040,6 +188759,27 @@ extension on _StringsTr {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'anki_dedup_progress_title':
+        return 'Deduplicating media';
+      case 'anki_dedup_progress_scanning':
+        return ({required Object count}) =>
+            'Scanning media folder… (${count} files found)';
+      case 'anki_dedup_progress_hashing':
+        return ({required Object done, required Object total}) =>
+            'Comparing same-size files… (${done} / ${total})';
+      case 'anki_dedup_progress_resolving':
+        return ({required Object done, required Object total}) =>
+            'Processing duplicates… (${done} / ${total})';
+      case 'anki_dedup_progress_freed':
+        return ({required Object size}) => 'Freed ${size} so far';
+      case 'anki_dedup_cancelling':
+        return 'Cancelling…';
+      case 'anki_dedup_cancelled':
+        return 'Deduplication cancelled; completed changes are kept.';
+      case 'anki_dedup_report_cancelled_note':
+        return 'Cancelled early — the numbers below only cover what was completed.';
+      case 'anki_dedup_plan_busy_note':
+        return 'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
       case 'video_setting_subtitle_position_secondary':
         return 'Secondary subtitle position';
       case 'dict_download_learning_language':
@@ -193836,6 +194576,27 @@ extension on _StringsVi {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'anki_dedup_progress_title':
+        return 'Deduplicating media';
+      case 'anki_dedup_progress_scanning':
+        return ({required Object count}) =>
+            'Scanning media folder… (${count} files found)';
+      case 'anki_dedup_progress_hashing':
+        return ({required Object done, required Object total}) =>
+            'Comparing same-size files… (${done} / ${total})';
+      case 'anki_dedup_progress_resolving':
+        return ({required Object done, required Object total}) =>
+            'Processing duplicates… (${done} / ${total})';
+      case 'anki_dedup_progress_freed':
+        return ({required Object size}) => 'Freed ${size} so far';
+      case 'anki_dedup_cancelling':
+        return 'Cancelling…';
+      case 'anki_dedup_cancelled':
+        return 'Deduplication cancelled; completed changes are kept.';
+      case 'anki_dedup_report_cancelled_note':
+        return 'Cancelled early — the numbers below only cover what was completed.';
+      case 'anki_dedup_plan_busy_note':
+        return 'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
       case 'video_setting_subtitle_position_secondary':
         return 'Secondary subtitle position';
       case 'dict_download_learning_language':
@@ -199584,6 +200345,26 @@ extension on _StringsZhCn {
         return '没有可用的网页搜索应用。';
       case 'selection_share_failed':
         return '无法打开分享面板。';
+      case 'anki_dedup_progress_title':
+        return '正在去重媒体';
+      case 'anki_dedup_progress_scanning':
+        return ({required Object count}) => '正在扫描媒体目录…（已发现 ${count} 个文件）';
+      case 'anki_dedup_progress_hashing':
+        return ({required Object done, required Object total}) =>
+            '正在比对同大小文件…（${done} / ${total}）';
+      case 'anki_dedup_progress_resolving':
+        return ({required Object done, required Object total}) =>
+            '正在处理重复副本…（${done} / ${total}）';
+      case 'anki_dedup_progress_freed':
+        return ({required Object size}) => '已释放 ${size}';
+      case 'anki_dedup_cancelling':
+        return '正在取消…';
+      case 'anki_dedup_cancelled':
+        return '已取消去重；已完成的改动保留。';
+      case 'anki_dedup_report_cancelled_note':
+        return '已提前取消——以下数字只统计已完成的部分。';
+      case 'anki_dedup_plan_busy_note':
+        return '执行期间 Anki 可能暂时无响应；结束前请不要在 Anki 里操作。';
       case 'video_setting_subtitle_position_secondary':
         return '副字幕垂直位置';
       case 'dict_download_learning_language':
@@ -205352,6 +206133,27 @@ extension on _StringsZhHk {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'anki_dedup_progress_title':
+        return 'Deduplicating media';
+      case 'anki_dedup_progress_scanning':
+        return ({required Object count}) =>
+            'Scanning media folder… (${count} files found)';
+      case 'anki_dedup_progress_hashing':
+        return ({required Object done, required Object total}) =>
+            'Comparing same-size files… (${done} / ${total})';
+      case 'anki_dedup_progress_resolving':
+        return ({required Object done, required Object total}) =>
+            'Processing duplicates… (${done} / ${total})';
+      case 'anki_dedup_progress_freed':
+        return ({required Object size}) => 'Freed ${size} so far';
+      case 'anki_dedup_cancelling':
+        return 'Cancelling…';
+      case 'anki_dedup_cancelled':
+        return 'Deduplication cancelled; completed changes are kept.';
+      case 'anki_dedup_report_cancelled_note':
+        return 'Cancelled early — the numbers below only cover what was completed.';
+      case 'anki_dedup_plan_busy_note':
+        return 'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
       case 'video_setting_subtitle_position_secondary':
         return 'Secondary subtitle position';
       case 'dict_download_learning_language':
