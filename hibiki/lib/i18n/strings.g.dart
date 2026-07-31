@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 47022 (2766 per locale)
+/// Strings: 47039 (2767 per locale)
 ///
-/// Built on 2026-07-29 at 08:08 UTC
+/// Built on 2026-07-31 at 05:16 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3718,6 +3718,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get selection_web_search => 'Search the web';
   String get selection_web_search_unavailable => 'No app can search the web.';
   String get selection_share_failed => 'Could not open the share sheet.';
+  String get audiobook_export_clip_too_long =>
+      'Selection audio is too long to export (limit: 5 minutes)';
 }
 
 // Path: <root>
@@ -10050,6 +10052,9 @@ class _StringsAr extends _StringsEn {
   String get selection_web_search_unavailable => 'No app can search the web.';
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
+  @override
+  String get audiobook_export_clip_too_long =>
+      'Selection audio is too long to export (limit: 5 minutes)';
 }
 
 // Path: <root>
@@ -16450,6 +16455,9 @@ class _StringsDe extends _StringsEn {
   String get selection_web_search_unavailable => 'No app can search the web.';
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
+  @override
+  String get audiobook_export_clip_too_long =>
+      'Selection audio is too long to export (limit: 5 minutes)';
 }
 
 // Path: <root>
@@ -22866,6 +22874,9 @@ class _StringsEs extends _StringsEn {
   String get selection_web_search_unavailable => 'No app can search the web.';
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
+  @override
+  String get audiobook_export_clip_too_long =>
+      'Selection audio is too long to export (limit: 5 minutes)';
 }
 
 // Path: <root>
@@ -29293,6 +29304,9 @@ class _StringsFr extends _StringsEn {
   String get selection_web_search_unavailable => 'No app can search the web.';
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
+  @override
+  String get audiobook_export_clip_too_long =>
+      'Selection audio is too long to export (limit: 5 minutes)';
 }
 
 // Path: <root>
@@ -35649,6 +35663,9 @@ class _StringsId extends _StringsEn {
   String get selection_web_search_unavailable => 'No app can search the web.';
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
+  @override
+  String get audiobook_export_clip_too_long =>
+      'Selection audio is too long to export (limit: 5 minutes)';
 }
 
 // Path: <root>
@@ -42051,6 +42068,9 @@ class _StringsIt extends _StringsEn {
   String get selection_web_search_unavailable => 'No app can search the web.';
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
+  @override
+  String get audiobook_export_clip_too_long =>
+      'Selection audio is too long to export (limit: 5 minutes)';
 }
 
 // Path: <root>
@@ -48270,6 +48290,9 @@ class _StringsJa extends _StringsEn {
   String get selection_web_search_unavailable => 'No app can search the web.';
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
+  @override
+  String get audiobook_export_clip_too_long =>
+      'Selection audio is too long to export (limit: 5 minutes)';
 }
 
 // Path: <root>
@@ -54491,6 +54514,9 @@ class _StringsKo extends _StringsEn {
   String get selection_web_search_unavailable => 'No app can search the web.';
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
+  @override
+  String get audiobook_export_clip_too_long =>
+      'Selection audio is too long to export (limit: 5 minutes)';
 }
 
 // Path: <root>
@@ -60873,6 +60899,9 @@ class _StringsNl extends _StringsEn {
   String get selection_web_search_unavailable => 'No app can search the web.';
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
+  @override
+  String get audiobook_export_clip_too_long =>
+      'Selection audio is too long to export (limit: 5 minutes)';
 }
 
 // Path: <root>
@@ -67268,6 +67297,9 @@ class _StringsPtBr extends _StringsEn {
   String get selection_web_search_unavailable => 'No app can search the web.';
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
+  @override
+  String get audiobook_export_clip_too_long =>
+      'Selection audio is too long to export (limit: 5 minutes)';
 }
 
 // Path: <root>
@@ -73647,6 +73679,9 @@ class _StringsRu extends _StringsEn {
   String get selection_web_search_unavailable => 'No app can search the web.';
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
+  @override
+  String get audiobook_export_clip_too_long =>
+      'Selection audio is too long to export (limit: 5 minutes)';
 }
 
 // Path: <root>
@@ -79974,6 +80009,9 @@ class _StringsTh extends _StringsEn {
   String get selection_web_search_unavailable => 'No app can search the web.';
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
+  @override
+  String get audiobook_export_clip_too_long =>
+      'Selection audio is too long to export (limit: 5 minutes)';
 }
 
 // Path: <root>
@@ -86333,6 +86371,9 @@ class _StringsTr extends _StringsEn {
   String get selection_web_search_unavailable => 'No app can search the web.';
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
+  @override
+  String get audiobook_export_clip_too_long =>
+      'Selection audio is too long to export (limit: 5 minutes)';
 }
 
 // Path: <root>
@@ -92677,6 +92718,9 @@ class _StringsVi extends _StringsEn {
   String get selection_web_search_unavailable => 'No app can search the web.';
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
+  @override
+  String get audiobook_export_clip_too_long =>
+      'Selection audio is too long to export (limit: 5 minutes)';
 }
 
 // Path: <root>
@@ -98572,6 +98616,8 @@ class _StringsZhCn extends _StringsEn {
   String get selection_web_search_unavailable => '没有可用的网页搜索应用。';
   @override
   String get selection_share_failed => '无法打开分享面板。';
+  @override
+  String get audiobook_export_clip_too_long => '选区音频过长，暂不支持导出（上限 5 分钟）';
 }
 
 // Path: <root>
@@ -104712,6 +104758,9 @@ class _StringsZhHk extends _StringsEn {
   String get selection_web_search_unavailable => 'No app can search the web.';
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
+  @override
+  String get audiobook_export_clip_too_long =>
+      'Selection audio is too long to export (limit: 5 minutes)';
 }
 
 /// Flat map(s) containing all translations.
@@ -110379,6 +110428,8 @@ extension on _StringsEn {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'audiobook_export_clip_too_long':
+        return 'Selection audio is too long to export (limit: 5 minutes)';
       default:
         return null;
     }
@@ -116044,6 +116095,8 @@ extension on _StringsAr {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'audiobook_export_clip_too_long':
+        return 'Selection audio is too long to export (limit: 5 minutes)';
       default:
         return null;
     }
@@ -121730,6 +121783,8 @@ extension on _StringsDe {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'audiobook_export_clip_too_long':
+        return 'Selection audio is too long to export (limit: 5 minutes)';
       default:
         return null;
     }
@@ -127415,6 +127470,8 @@ extension on _StringsEs {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'audiobook_export_clip_too_long':
+        return 'Selection audio is too long to export (limit: 5 minutes)';
       default:
         return null;
     }
@@ -133106,6 +133163,8 @@ extension on _StringsFr {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'audiobook_export_clip_too_long':
+        return 'Selection audio is too long to export (limit: 5 minutes)';
       default:
         return null;
     }
@@ -138779,6 +138838,8 @@ extension on _StringsId {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'audiobook_export_clip_too_long':
+        return 'Selection audio is too long to export (limit: 5 minutes)';
       default:
         return null;
     }
@@ -144467,6 +144528,8 @@ extension on _StringsIt {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'audiobook_export_clip_too_long':
+        return 'Selection audio is too long to export (limit: 5 minutes)';
       default:
         return null;
     }
@@ -150117,6 +150180,8 @@ extension on _StringsJa {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'audiobook_export_clip_too_long':
+        return 'Selection audio is too long to export (limit: 5 minutes)';
       default:
         return null;
     }
@@ -155771,6 +155836,8 @@ extension on _StringsKo {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'audiobook_export_clip_too_long':
+        return 'Selection audio is too long to export (limit: 5 minutes)';
       default:
         return null;
     }
@@ -161452,6 +161519,8 @@ extension on _StringsNl {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'audiobook_export_clip_too_long':
+        return 'Selection audio is too long to export (limit: 5 minutes)';
       default:
         return null;
     }
@@ -167130,6 +167199,8 @@ extension on _StringsPtBr {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'audiobook_export_clip_too_long':
+        return 'Selection audio is too long to export (limit: 5 minutes)';
       default:
         return null;
     }
@@ -172813,6 +172884,8 @@ extension on _StringsRu {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'audiobook_export_clip_too_long':
+        return 'Selection audio is too long to export (limit: 5 minutes)';
       default:
         return null;
     }
@@ -178480,6 +178553,8 @@ extension on _StringsTh {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'audiobook_export_clip_too_long':
+        return 'Selection audio is too long to export (limit: 5 minutes)';
       default:
         return null;
     }
@@ -184156,6 +184231,8 @@ extension on _StringsTr {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'audiobook_export_clip_too_long':
+        return 'Selection audio is too long to export (limit: 5 minutes)';
       default:
         return null;
     }
@@ -189827,6 +189904,8 @@ extension on _StringsVi {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'audiobook_export_clip_too_long':
+        return 'Selection audio is too long to export (limit: 5 minutes)';
       default:
         return null;
     }
@@ -195451,6 +195530,8 @@ extension on _StringsZhCn {
         return '没有可用的网页搜索应用。';
       case 'selection_share_failed':
         return '无法打开分享面板。';
+      case 'audiobook_export_clip_too_long':
+        return '选区音频过长，暂不支持导出（上限 5 分钟）';
       default:
         return null;
     }
@@ -201096,6 +201177,8 @@ extension on _StringsZhHk {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'audiobook_export_clip_too_long':
+        return 'Selection audio is too long to export (limit: 5 minutes)';
       default:
         return null;
     }
