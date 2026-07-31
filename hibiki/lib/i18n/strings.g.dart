@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 48212 (2836 per locale)
+/// Strings: 48229 (2837 per locale)
 ///
-/// Built on 2026-07-31 at 14:24 UTC
+/// Built on 2026-07-31 at 14:28 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3720,6 +3720,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get selection_web_search => 'Search the web';
   String get selection_web_search_unavailable => 'No app can search the web.';
   String get selection_share_failed => 'Could not open the share sheet.';
+  String video_subtitle_youtube_auto_generated({required Object lang}) =>
+      '${lang} (auto-generated)';
   String get anki_dedup_progress_title => 'Deduplicating media';
   String anki_dedup_progress_scanning({required Object count}) =>
       'Scanning media folder… (${count} files found)';
@@ -10148,6 +10150,9 @@ class _StringsAr extends _StringsEn {
   String get selection_web_search_unavailable => 'No app can search the web.';
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
+  @override
+  String video_subtitle_youtube_auto_generated({required Object lang}) =>
+      '${lang} (auto-generated)';
   @override
   String get anki_dedup_progress_title => 'Deduplicating media';
   @override
@@ -16712,6 +16717,9 @@ class _StringsDe extends _StringsEn {
   String get selection_web_search_unavailable => 'No app can search the web.';
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
+  @override
+  String video_subtitle_youtube_auto_generated({required Object lang}) =>
+      '${lang} (auto-generated)';
   @override
   String get anki_dedup_progress_title => 'Deduplicating media';
   @override
@@ -23292,6 +23300,9 @@ class _StringsEs extends _StringsEn {
   String get selection_web_search_unavailable => 'No app can search the web.';
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
+  @override
+  String video_subtitle_youtube_auto_generated({required Object lang}) =>
+      '${lang} (auto-generated)';
   @override
   String get anki_dedup_progress_title => 'Deduplicating media';
   @override
@@ -29884,6 +29895,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
   @override
+  String video_subtitle_youtube_auto_generated({required Object lang}) =>
+      '${lang} (auto-generated)';
+  @override
   String get anki_dedup_progress_title => 'Deduplicating media';
   @override
   String anki_dedup_progress_scanning({required Object count}) =>
@@ -36403,6 +36417,9 @@ class _StringsId extends _StringsEn {
   String get selection_web_search_unavailable => 'No app can search the web.';
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
+  @override
+  String video_subtitle_youtube_auto_generated({required Object lang}) =>
+      '${lang} (auto-generated)';
   @override
   String get anki_dedup_progress_title => 'Deduplicating media';
   @override
@@ -42970,6 +42987,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
   @override
+  String video_subtitle_youtube_auto_generated({required Object lang}) =>
+      '${lang} (auto-generated)';
+  @override
   String get anki_dedup_progress_title => 'Deduplicating media';
   @override
   String anki_dedup_progress_scanning({required Object count}) =>
@@ -49352,6 +49372,9 @@ class _StringsJa extends _StringsEn {
   String get selection_web_search_unavailable => 'No app can search the web.';
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
+  @override
+  String video_subtitle_youtube_auto_generated({required Object lang}) =>
+      '${lang} (auto-generated)';
   @override
   String get anki_dedup_progress_title => 'Deduplicating media';
   @override
@@ -55737,6 +55760,9 @@ class _StringsKo extends _StringsEn {
   String get selection_web_search_unavailable => 'No app can search the web.';
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
+  @override
+  String video_subtitle_youtube_auto_generated({required Object lang}) =>
+      '${lang} (auto-generated)';
   @override
   String get anki_dedup_progress_title => 'Deduplicating media';
   @override
@@ -62283,6 +62309,9 @@ class _StringsNl extends _StringsEn {
   String get selection_web_search_unavailable => 'No app can search the web.';
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
+  @override
+  String video_subtitle_youtube_auto_generated({required Object lang}) =>
+      '${lang} (auto-generated)';
   @override
   String get anki_dedup_progress_title => 'Deduplicating media';
   @override
@@ -68843,6 +68872,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
   @override
+  String video_subtitle_youtube_auto_generated({required Object lang}) =>
+      '${lang} (auto-generated)';
+  @override
   String get anki_dedup_progress_title => 'Deduplicating media';
   @override
   String anki_dedup_progress_scanning({required Object count}) =>
@@ -75386,6 +75418,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
   @override
+  String video_subtitle_youtube_auto_generated({required Object lang}) =>
+      '${lang} (auto-generated)';
+  @override
   String get anki_dedup_progress_title => 'Deduplicating media';
   @override
   String anki_dedup_progress_scanning({required Object count}) =>
@@ -81876,6 +81911,9 @@ class _StringsTh extends _StringsEn {
   String get selection_web_search_unavailable => 'No app can search the web.';
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
+  @override
+  String video_subtitle_youtube_auto_generated({required Object lang}) =>
+      '${lang} (auto-generated)';
   @override
   String get anki_dedup_progress_title => 'Deduplicating media';
   @override
@@ -88400,6 +88438,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
   @override
+  String video_subtitle_youtube_auto_generated({required Object lang}) =>
+      '${lang} (auto-generated)';
+  @override
   String get anki_dedup_progress_title => 'Deduplicating media';
   @override
   String anki_dedup_progress_scanning({required Object count}) =>
@@ -94908,6 +94949,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
   @override
+  String video_subtitle_youtube_auto_generated({required Object lang}) =>
+      '${lang} (auto-generated)';
+  @override
   String get anki_dedup_progress_title => 'Deduplicating media';
   @override
   String anki_dedup_progress_scanning({required Object count}) =>
@@ -100965,6 +101009,9 @@ class _StringsZhCn extends _StringsEn {
   String get selection_web_search_unavailable => '没有可用的网页搜索应用。';
   @override
   String get selection_share_failed => '无法打开分享面板。';
+  @override
+  String video_subtitle_youtube_auto_generated({required Object lang}) =>
+      '${lang}（自动生成）';
   @override
   String get anki_dedup_progress_title => '正在去重媒体';
   @override
@@ -107261,6 +107308,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
   @override
+  String video_subtitle_youtube_auto_generated({required Object lang}) =>
+      '${lang} (auto-generated)';
+  @override
   String get anki_dedup_progress_title => 'Deduplicating media';
   @override
   String anki_dedup_progress_scanning({required Object count}) =>
@@ -113090,6 +113140,8 @@ extension on _StringsEn {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'video_subtitle_youtube_auto_generated':
+        return ({required Object lang}) => '${lang} (auto-generated)';
       case 'anki_dedup_progress_title':
         return 'Deduplicating media';
       case 'anki_dedup_progress_scanning':
@@ -118900,6 +118952,8 @@ extension on _StringsAr {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'video_subtitle_youtube_auto_generated':
+        return ({required Object lang}) => '${lang} (auto-generated)';
       case 'anki_dedup_progress_title':
         return 'Deduplicating media';
       case 'anki_dedup_progress_scanning':
@@ -124732,6 +124786,8 @@ extension on _StringsDe {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'video_subtitle_youtube_auto_generated':
+        return ({required Object lang}) => '${lang} (auto-generated)';
       case 'anki_dedup_progress_title':
         return 'Deduplicating media';
       case 'anki_dedup_progress_scanning':
@@ -130563,6 +130619,8 @@ extension on _StringsEs {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'video_subtitle_youtube_auto_generated':
+        return ({required Object lang}) => '${lang} (auto-generated)';
       case 'anki_dedup_progress_title':
         return 'Deduplicating media';
       case 'anki_dedup_progress_scanning':
@@ -136400,6 +136458,8 @@ extension on _StringsFr {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'video_subtitle_youtube_auto_generated':
+        return ({required Object lang}) => '${lang} (auto-generated)';
       case 'anki_dedup_progress_title':
         return 'Deduplicating media';
       case 'anki_dedup_progress_scanning':
@@ -142219,6 +142279,8 @@ extension on _StringsId {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'video_subtitle_youtube_auto_generated':
+        return ({required Object lang}) => '${lang} (auto-generated)';
       case 'anki_dedup_progress_title':
         return 'Deduplicating media';
       case 'anki_dedup_progress_scanning':
@@ -148052,6 +148114,8 @@ extension on _StringsIt {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'video_subtitle_youtube_auto_generated':
+        return ({required Object lang}) => '${lang} (auto-generated)';
       case 'anki_dedup_progress_title':
         return 'Deduplicating media';
       case 'anki_dedup_progress_scanning':
@@ -153847,6 +153911,8 @@ extension on _StringsJa {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'video_subtitle_youtube_auto_generated':
+        return ({required Object lang}) => '${lang} (auto-generated)';
       case 'anki_dedup_progress_title':
         return 'Deduplicating media';
       case 'anki_dedup_progress_scanning':
@@ -159646,6 +159712,8 @@ extension on _StringsKo {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'video_subtitle_youtube_auto_generated':
+        return ({required Object lang}) => '${lang} (auto-generated)';
       case 'anki_dedup_progress_title':
         return 'Deduplicating media';
       case 'anki_dedup_progress_scanning':
@@ -165473,6 +165541,8 @@ extension on _StringsNl {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'video_subtitle_youtube_auto_generated':
+        return ({required Object lang}) => '${lang} (auto-generated)';
       case 'anki_dedup_progress_title':
         return 'Deduplicating media';
       case 'anki_dedup_progress_scanning':
@@ -171297,6 +171367,8 @@ extension on _StringsPtBr {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'video_subtitle_youtube_auto_generated':
+        return ({required Object lang}) => '${lang} (auto-generated)';
       case 'anki_dedup_progress_title':
         return 'Deduplicating media';
       case 'anki_dedup_progress_scanning':
@@ -177126,6 +177198,8 @@ extension on _StringsRu {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'video_subtitle_youtube_auto_generated':
+        return ({required Object lang}) => '${lang} (auto-generated)';
       case 'anki_dedup_progress_title':
         return 'Deduplicating media';
       case 'anki_dedup_progress_scanning':
@@ -182938,6 +183012,8 @@ extension on _StringsTh {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'video_subtitle_youtube_auto_generated':
+        return ({required Object lang}) => '${lang} (auto-generated)';
       case 'anki_dedup_progress_title':
         return 'Deduplicating media';
       case 'anki_dedup_progress_scanning':
@@ -188759,6 +188835,8 @@ extension on _StringsTr {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'video_subtitle_youtube_auto_generated':
+        return ({required Object lang}) => '${lang} (auto-generated)';
       case 'anki_dedup_progress_title':
         return 'Deduplicating media';
       case 'anki_dedup_progress_scanning':
@@ -194576,6 +194654,8 @@ extension on _StringsVi {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'video_subtitle_youtube_auto_generated':
+        return ({required Object lang}) => '${lang} (auto-generated)';
       case 'anki_dedup_progress_title':
         return 'Deduplicating media';
       case 'anki_dedup_progress_scanning':
@@ -200345,6 +200425,8 @@ extension on _StringsZhCn {
         return '没有可用的网页搜索应用。';
       case 'selection_share_failed':
         return '无法打开分享面板。';
+      case 'video_subtitle_youtube_auto_generated':
+        return ({required Object lang}) => '${lang}（自动生成）';
       case 'anki_dedup_progress_title':
         return '正在去重媒体';
       case 'anki_dedup_progress_scanning':
@@ -206133,6 +206215,8 @@ extension on _StringsZhHk {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'video_subtitle_youtube_auto_generated':
+        return ({required Object lang}) => '${lang} (auto-generated)';
       case 'anki_dedup_progress_title':
         return 'Deduplicating media';
       case 'anki_dedup_progress_scanning':
