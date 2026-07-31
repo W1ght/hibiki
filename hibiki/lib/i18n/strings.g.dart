@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 48756 (2868 per locale)
+/// Strings: 48773 (2869 per locale)
 ///
-/// Built on 2026-07-31 at 18:02 UTC
+/// Built on 2026-07-31 at 19:42 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -869,8 +869,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get delete_collection_also_books => 'Also delete the books in it';
   String get delete_collection_also_videos =>
       'Also delete the videos (keeps your original video files)';
-  String get delete_collection_confirm =>
-      'Deleting the collection won\'t delete its videos.';
   String get delete_custom_theme => 'Delete theme';
   String get delete_custom_theme_confirm =>
       'Delete this custom theme? This cannot be undone.';
@@ -3875,6 +3873,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get audiobook_delete => 'Delete audiobook';
   String get audiobook_delete_confirm =>
       'Delete the attached audiobook? Its audio files are removed from this device.';
+  String get delete_collection_confirm =>
+      'Only the grouping is removed. The items in it are kept.';
+  String get shortcut_action_video_enter_caret =>
+      'Enter subtitle lookup cursor';
 }
 
 // Path: <root>
@@ -5111,9 +5113,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get delete_collection_also_videos =>
       'Also delete the videos (keeps your original video files)';
-  @override
-  String get delete_collection_confirm =>
-      'Deleting the collection won\'t delete its videos.';
   @override
   String get delete_custom_theme => 'Delete theme';
   @override
@@ -10467,6 +10466,12 @@ class _StringsAr extends _StringsEn {
   @override
   String get audiobook_delete_confirm =>
       'Delete the attached audiobook? Its audio files are removed from this device.';
+  @override
+  String get delete_collection_confirm =>
+      'Only the grouping is removed. The items in it are kept.';
+  @override
+  String get shortcut_action_video_enter_caret =>
+      'Enter subtitle lookup cursor';
 }
 
 // Path: <root>
@@ -11713,9 +11718,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get delete_collection_also_videos =>
       'Also delete the videos (keeps your original video files)';
-  @override
-  String get delete_collection_confirm =>
-      'Deleting the collection won\'t delete its videos.';
   @override
   String get delete_custom_theme => 'Delete theme';
   @override
@@ -17126,6 +17128,12 @@ class _StringsDe extends _StringsEn {
   @override
   String get audiobook_delete_confirm =>
       'Delete the attached audiobook? Its audio files are removed from this device.';
+  @override
+  String get delete_collection_confirm =>
+      'Only the grouping is removed. The items in it are kept.';
+  @override
+  String get shortcut_action_video_enter_caret =>
+      'Enter subtitle lookup cursor';
 }
 
 // Path: <root>
@@ -18371,9 +18379,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get delete_collection_also_videos =>
       'Also delete the videos (keeps your original video files)';
-  @override
-  String get delete_collection_confirm =>
-      'Deleting the collection won\'t delete its videos.';
   @override
   String get delete_custom_theme => 'Delete theme';
   @override
@@ -23801,6 +23806,12 @@ class _StringsEs extends _StringsEn {
   @override
   String get audiobook_delete_confirm =>
       'Delete the attached audiobook? Its audio files are removed from this device.';
+  @override
+  String get delete_collection_confirm =>
+      'Only the grouping is removed. The items in it are kept.';
+  @override
+  String get shortcut_action_video_enter_caret =>
+      'Enter subtitle lookup cursor';
 }
 
 // Path: <root>
@@ -25052,9 +25063,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get delete_collection_also_videos =>
       'Also delete the videos (keeps your original video files)';
-  @override
-  String get delete_collection_confirm =>
-      'Deleting the collection won\'t delete its videos.';
   @override
   String get delete_custom_theme => 'Delete theme';
   @override
@@ -30487,6 +30495,12 @@ class _StringsFr extends _StringsEn {
   @override
   String get audiobook_delete_confirm =>
       'Delete the attached audiobook? Its audio files are removed from this device.';
+  @override
+  String get delete_collection_confirm =>
+      'Only the grouping is removed. The items in it are kept.';
+  @override
+  String get shortcut_action_video_enter_caret =>
+      'Enter subtitle lookup cursor';
 }
 
 // Path: <root>
@@ -31722,9 +31736,6 @@ class _StringsId extends _StringsEn {
   @override
   String get delete_collection_also_videos =>
       'Also delete the videos (keeps your original video files)';
-  @override
-  String get delete_collection_confirm =>
-      'Deleting the collection won\'t delete its videos.';
   @override
   String get delete_custom_theme => 'Delete theme';
   @override
@@ -37102,6 +37113,12 @@ class _StringsId extends _StringsEn {
   @override
   String get audiobook_delete_confirm =>
       'Delete the attached audiobook? Its audio files are removed from this device.';
+  @override
+  String get delete_collection_confirm =>
+      'Only the grouping is removed. The items in it are kept.';
+  @override
+  String get shortcut_action_video_enter_caret =>
+      'Enter subtitle lookup cursor';
 }
 
 // Path: <root>
@@ -38346,9 +38363,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get delete_collection_also_videos =>
       'Also delete the videos (keeps your original video files)';
-  @override
-  String get delete_collection_confirm =>
-      'Deleting the collection won\'t delete its videos.';
   @override
   String get delete_custom_theme => 'Delete theme';
   @override
@@ -43763,6 +43777,12 @@ class _StringsIt extends _StringsEn {
   @override
   String get audiobook_delete_confirm =>
       'Delete the attached audiobook? Its audio files are removed from this device.';
+  @override
+  String get delete_collection_confirm =>
+      'Only the grouping is removed. The items in it are kept.';
+  @override
+  String get shortcut_action_video_enter_caret =>
+      'Enter subtitle lookup cursor';
 }
 
 // Path: <root>
@@ -44979,9 +44999,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get delete_collection_also_videos =>
       'Also delete the videos (keeps your original video files)';
-  @override
-  String get delete_collection_confirm =>
-      'Deleting the collection won\'t delete its videos.';
   @override
   String get delete_custom_theme => 'Delete theme';
   @override
@@ -50241,6 +50258,12 @@ class _StringsJa extends _StringsEn {
   @override
   String get audiobook_delete_confirm =>
       'Delete the attached audiobook? Its audio files are removed from this device.';
+  @override
+  String get delete_collection_confirm =>
+      'Only the grouping is removed. The items in it are kept.';
+  @override
+  String get shortcut_action_video_enter_caret =>
+      'Enter subtitle lookup cursor';
 }
 
 // Path: <root>
@@ -51459,9 +51482,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get delete_collection_also_videos =>
       'Also delete the videos (keeps your original video files)';
-  @override
-  String get delete_collection_confirm =>
-      'Deleting the collection won\'t delete its videos.';
   @override
   String get delete_custom_theme => 'Delete theme';
   @override
@@ -56721,6 +56741,12 @@ class _StringsKo extends _StringsEn {
   @override
   String get audiobook_delete_confirm =>
       'Delete the attached audiobook? Its audio files are removed from this device.';
+  @override
+  String get delete_collection_confirm =>
+      'Only the grouping is removed. The items in it are kept.';
+  @override
+  String get shortcut_action_video_enter_caret =>
+      'Enter subtitle lookup cursor';
 }
 
 // Path: <root>
@@ -57963,9 +57989,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get delete_collection_also_videos =>
       'Also delete the videos (keeps your original video files)';
-  @override
-  String get delete_collection_confirm =>
-      'Deleting the collection won\'t delete its videos.';
   @override
   String get delete_custom_theme => 'Delete theme';
   @override
@@ -63362,6 +63385,12 @@ class _StringsNl extends _StringsEn {
   @override
   String get audiobook_delete_confirm =>
       'Delete the attached audiobook? Its audio files are removed from this device.';
+  @override
+  String get delete_collection_confirm =>
+      'Only the grouping is removed. The items in it are kept.';
+  @override
+  String get shortcut_action_video_enter_caret =>
+      'Enter subtitle lookup cursor';
 }
 
 // Path: <root>
@@ -64609,9 +64638,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get delete_collection_also_videos =>
       'Also delete the videos (keeps your original video files)';
-  @override
-  String get delete_collection_confirm =>
-      'Deleting the collection won\'t delete its videos.';
   @override
   String get delete_custom_theme => 'Delete theme';
   @override
@@ -70016,6 +70042,12 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get audiobook_delete_confirm =>
       'Delete the attached audiobook? Its audio files are removed from this device.';
+  @override
+  String get delete_collection_confirm =>
+      'Only the grouping is removed. The items in it are kept.';
+  @override
+  String get shortcut_action_video_enter_caret =>
+      'Enter subtitle lookup cursor';
 }
 
 // Path: <root>
@@ -71259,9 +71291,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get delete_collection_also_videos =>
       'Also delete the videos (keeps your original video files)';
-  @override
-  String get delete_collection_confirm =>
-      'Deleting the collection won\'t delete its videos.';
   @override
   String get delete_custom_theme => 'Delete theme';
   @override
@@ -76654,6 +76683,12 @@ class _StringsRu extends _StringsEn {
   @override
   String get audiobook_delete_confirm =>
       'Delete the attached audiobook? Its audio files are removed from this device.';
+  @override
+  String get delete_collection_confirm =>
+      'Only the grouping is removed. The items in it are kept.';
+  @override
+  String get shortcut_action_video_enter_caret =>
+      'Enter subtitle lookup cursor';
 }
 
 // Path: <root>
@@ -77884,9 +77919,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get delete_collection_also_videos =>
       'Also delete the videos (keeps your original video files)';
-  @override
-  String get delete_collection_confirm =>
-      'Deleting the collection won\'t delete its videos.';
   @override
   String get delete_custom_theme => 'Delete theme';
   @override
@@ -83240,6 +83272,12 @@ class _StringsTh extends _StringsEn {
   @override
   String get audiobook_delete_confirm =>
       'Delete the attached audiobook? Its audio files are removed from this device.';
+  @override
+  String get delete_collection_confirm =>
+      'Only the grouping is removed. The items in it are kept.';
+  @override
+  String get shortcut_action_video_enter_caret =>
+      'Enter subtitle lookup cursor';
 }
 
 // Path: <root>
@@ -84482,9 +84520,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get delete_collection_also_videos =>
       'Also delete the videos (keeps your original video files)';
-  @override
-  String get delete_collection_confirm =>
-      'Deleting the collection won\'t delete its videos.';
   @override
   String get delete_custom_theme => 'Delete theme';
   @override
@@ -89858,6 +89893,12 @@ class _StringsTr extends _StringsEn {
   @override
   String get audiobook_delete_confirm =>
       'Delete the attached audiobook? Its audio files are removed from this device.';
+  @override
+  String get delete_collection_confirm =>
+      'Only the grouping is removed. The items in it are kept.';
+  @override
+  String get shortcut_action_video_enter_caret =>
+      'Enter subtitle lookup cursor';
 }
 
 // Path: <root>
@@ -91095,9 +91136,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get delete_collection_also_videos =>
       'Also delete the videos (keeps your original video files)';
-  @override
-  String get delete_collection_confirm =>
-      'Deleting the collection won\'t delete its videos.';
   @override
   String get delete_custom_theme => 'Delete theme';
   @override
@@ -96461,6 +96499,12 @@ class _StringsVi extends _StringsEn {
   @override
   String get audiobook_delete_confirm =>
       'Delete the attached audiobook? Its audio files are removed from this device.';
+  @override
+  String get delete_collection_confirm =>
+      'Only the grouping is removed. The items in it are kept.';
+  @override
+  String get shortcut_action_video_enter_caret =>
+      'Enter subtitle lookup cursor';
 }
 
 // Path: <root>
@@ -97618,8 +97662,6 @@ class _StringsZhCn extends _StringsEn {
   String get delete_collection_also_books => '同时删除其中的书';
   @override
   String get delete_collection_also_videos => '同时删除其中的视频（保留你的原始视频文件）';
-  @override
-  String get delete_collection_confirm => '删除合集不会删除其中的视频。';
   @override
   String get delete_custom_theme => '删除主题';
   @override
@@ -102594,6 +102636,10 @@ class _StringsZhCn extends _StringsEn {
   String get audiobook_delete => '删除有声书';
   @override
   String get audiobook_delete_confirm => '删除已附加的有声书？它的音频文件会从本机删除。';
+  @override
+  String get delete_collection_confirm => '只解除分组，其中的条目会保留。';
+  @override
+  String get shortcut_action_video_enter_caret => '进入字幕选词光标';
 }
 
 // Path: <root>
@@ -103790,9 +103836,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get delete_collection_also_videos =>
       'Also delete the videos (keeps your original video files)';
-  @override
-  String get delete_collection_confirm =>
-      'Deleting the collection won\'t delete its videos.';
   @override
   String get delete_custom_theme => 'Delete theme';
   @override
@@ -108993,6 +109036,12 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get audiobook_delete_confirm =>
       'Delete the attached audiobook? Its audio files are removed from this device.';
+  @override
+  String get delete_collection_confirm =>
+      'Only the grouping is removed. The items in it are kept.';
+  @override
+  String get shortcut_action_video_enter_caret =>
+      'Enter subtitle lookup cursor';
 }
 
 /// Flat map(s) containing all translations.
@@ -110081,8 +110130,6 @@ extension on _StringsEn {
         return 'Also delete the books in it';
       case 'delete_collection_also_videos':
         return 'Also delete the videos (keeps your original video files)';
-      case 'delete_collection_confirm':
-        return 'Deleting the collection won\'t delete its videos.';
       case 'delete_custom_theme':
         return 'Delete theme';
       case 'delete_custom_theme_confirm':
@@ -114877,6 +114924,10 @@ extension on _StringsEn {
         return 'Delete audiobook';
       case 'audiobook_delete_confirm':
         return 'Delete the attached audiobook? Its audio files are removed from this device.';
+      case 'delete_collection_confirm':
+        return 'Only the grouping is removed. The items in it are kept.';
+      case 'shortcut_action_video_enter_caret':
+        return 'Enter subtitle lookup cursor';
       default:
         return null;
     }
@@ -115966,8 +116017,6 @@ extension on _StringsAr {
         return 'Also delete the books in it';
       case 'delete_collection_also_videos':
         return 'Also delete the videos (keeps your original video files)';
-      case 'delete_collection_confirm':
-        return 'Deleting the collection won\'t delete its videos.';
       case 'delete_custom_theme':
         return 'Delete theme';
       case 'delete_custom_theme_confirm':
@@ -120759,6 +120808,10 @@ extension on _StringsAr {
         return 'Delete audiobook';
       case 'audiobook_delete_confirm':
         return 'Delete the attached audiobook? Its audio files are removed from this device.';
+      case 'delete_collection_confirm':
+        return 'Only the grouping is removed. The items in it are kept.';
+      case 'shortcut_action_video_enter_caret':
+        return 'Enter subtitle lookup cursor';
       default:
         return null;
     }
@@ -121850,8 +121903,6 @@ extension on _StringsDe {
         return 'Also delete the books in it';
       case 'delete_collection_also_videos':
         return 'Also delete the videos (keeps your original video files)';
-      case 'delete_collection_confirm':
-        return 'Deleting the collection won\'t delete its videos.';
       case 'delete_custom_theme':
         return 'Delete theme';
       case 'delete_custom_theme_confirm':
@@ -126663,6 +126714,10 @@ extension on _StringsDe {
         return 'Delete audiobook';
       case 'audiobook_delete_confirm':
         return 'Delete the attached audiobook? Its audio files are removed from this device.';
+      case 'delete_collection_confirm':
+        return 'Only the grouping is removed. The items in it are kept.';
+      case 'shortcut_action_video_enter_caret':
+        return 'Enter subtitle lookup cursor';
       default:
         return null;
     }
@@ -127755,8 +127810,6 @@ extension on _StringsEs {
         return 'Also delete the books in it';
       case 'delete_collection_also_videos':
         return 'Also delete the videos (keeps your original video files)';
-      case 'delete_collection_confirm':
-        return 'Deleting the collection won\'t delete its videos.';
       case 'delete_custom_theme':
         return 'Delete theme';
       case 'delete_custom_theme_confirm':
@@ -132566,6 +132619,10 @@ extension on _StringsEs {
         return 'Delete audiobook';
       case 'audiobook_delete_confirm':
         return 'Delete the attached audiobook? Its audio files are removed from this device.';
+      case 'delete_collection_confirm':
+        return 'Only the grouping is removed. The items in it are kept.';
+      case 'shortcut_action_video_enter_caret':
+        return 'Enter subtitle lookup cursor';
       default:
         return null;
     }
@@ -133659,8 +133716,6 @@ extension on _StringsFr {
         return 'Also delete the books in it';
       case 'delete_collection_also_videos':
         return 'Also delete the videos (keeps your original video files)';
-      case 'delete_collection_confirm':
-        return 'Deleting the collection won\'t delete its videos.';
       case 'delete_custom_theme':
         return 'Delete theme';
       case 'delete_custom_theme_confirm':
@@ -138475,6 +138530,10 @@ extension on _StringsFr {
         return 'Delete audiobook';
       case 'audiobook_delete_confirm':
         return 'Delete the attached audiobook? Its audio files are removed from this device.';
+      case 'delete_collection_confirm':
+        return 'Only the grouping is removed. The items in it are kept.';
+      case 'shortcut_action_video_enter_caret':
+        return 'Enter subtitle lookup cursor';
       default:
         return null;
     }
@@ -139566,8 +139625,6 @@ extension on _StringsId {
         return 'Also delete the books in it';
       case 'delete_collection_also_videos':
         return 'Also delete the videos (keeps your original video files)';
-      case 'delete_collection_confirm':
-        return 'Deleting the collection won\'t delete its videos.';
       case 'delete_custom_theme':
         return 'Delete theme';
       case 'delete_custom_theme_confirm':
@@ -144366,6 +144423,10 @@ extension on _StringsId {
         return 'Delete audiobook';
       case 'audiobook_delete_confirm':
         return 'Delete the attached audiobook? Its audio files are removed from this device.';
+      case 'delete_collection_confirm':
+        return 'Only the grouping is removed. The items in it are kept.';
+      case 'shortcut_action_video_enter_caret':
+        return 'Enter subtitle lookup cursor';
       default:
         return null;
     }
@@ -145457,8 +145518,6 @@ extension on _StringsIt {
         return 'Also delete the books in it';
       case 'delete_collection_also_videos':
         return 'Also delete the videos (keeps your original video files)';
-      case 'delete_collection_confirm':
-        return 'Deleting the collection won\'t delete its videos.';
       case 'delete_custom_theme':
         return 'Delete theme';
       case 'delete_custom_theme_confirm':
@@ -150271,6 +150330,10 @@ extension on _StringsIt {
         return 'Delete audiobook';
       case 'audiobook_delete_confirm':
         return 'Delete the attached audiobook? Its audio files are removed from this device.';
+      case 'delete_collection_confirm':
+        return 'Only the grouping is removed. The items in it are kept.';
+      case 'shortcut_action_video_enter_caret':
+        return 'Enter subtitle lookup cursor';
       default:
         return null;
     }
@@ -151353,8 +151416,6 @@ extension on _StringsJa {
         return 'Also delete the books in it';
       case 'delete_collection_also_videos':
         return 'Also delete the videos (keeps your original video files)';
-      case 'delete_collection_confirm':
-        return 'Deleting the collection won\'t delete its videos.';
       case 'delete_custom_theme':
         return 'Delete theme';
       case 'delete_custom_theme_confirm':
@@ -156138,6 +156199,10 @@ extension on _StringsJa {
         return 'Delete audiobook';
       case 'audiobook_delete_confirm':
         return 'Delete the attached audiobook? Its audio files are removed from this device.';
+      case 'delete_collection_confirm':
+        return 'Only the grouping is removed. The items in it are kept.';
+      case 'shortcut_action_video_enter_caret':
+        return 'Enter subtitle lookup cursor';
       default:
         return null;
     }
@@ -157221,8 +157286,6 @@ extension on _StringsKo {
         return 'Also delete the books in it';
       case 'delete_collection_also_videos':
         return 'Also delete the videos (keeps your original video files)';
-      case 'delete_collection_confirm':
-        return 'Deleting the collection won\'t delete its videos.';
       case 'delete_custom_theme':
         return 'Delete theme';
       case 'delete_custom_theme_confirm':
@@ -162009,6 +162072,10 @@ extension on _StringsKo {
         return 'Delete audiobook';
       case 'audiobook_delete_confirm':
         return 'Delete the attached audiobook? Its audio files are removed from this device.';
+      case 'delete_collection_confirm':
+        return 'Only the grouping is removed. The items in it are kept.';
+      case 'shortcut_action_video_enter_caret':
+        return 'Enter subtitle lookup cursor';
       default:
         return null;
     }
@@ -163100,8 +163167,6 @@ extension on _StringsNl {
         return 'Also delete the books in it';
       case 'delete_collection_also_videos':
         return 'Also delete the videos (keeps your original video files)';
-      case 'delete_collection_confirm':
-        return 'Deleting the collection won\'t delete its videos.';
       case 'delete_custom_theme':
         return 'Delete theme';
       case 'delete_custom_theme_confirm':
@@ -167908,6 +167973,10 @@ extension on _StringsNl {
         return 'Delete audiobook';
       case 'audiobook_delete_confirm':
         return 'Delete the attached audiobook? Its audio files are removed from this device.';
+      case 'delete_collection_confirm':
+        return 'Only the grouping is removed. The items in it are kept.';
+      case 'shortcut_action_video_enter_caret':
+        return 'Enter subtitle lookup cursor';
       default:
         return null;
     }
@@ -168999,8 +169068,6 @@ extension on _StringsPtBr {
         return 'Also delete the books in it';
       case 'delete_collection_also_videos':
         return 'Also delete the videos (keeps your original video files)';
-      case 'delete_collection_confirm':
-        return 'Deleting the collection won\'t delete its videos.';
       case 'delete_custom_theme':
         return 'Delete theme';
       case 'delete_custom_theme_confirm':
@@ -173804,6 +173871,10 @@ extension on _StringsPtBr {
         return 'Delete audiobook';
       case 'audiobook_delete_confirm':
         return 'Delete the attached audiobook? Its audio files are removed from this device.';
+      case 'delete_collection_confirm':
+        return 'Only the grouping is removed. The items in it are kept.';
+      case 'shortcut_action_video_enter_caret':
+        return 'Enter subtitle lookup cursor';
       default:
         return null;
     }
@@ -174897,8 +174968,6 @@ extension on _StringsRu {
         return 'Also delete the books in it';
       case 'delete_collection_also_videos':
         return 'Also delete the videos (keeps your original video files)';
-      case 'delete_collection_confirm':
-        return 'Deleting the collection won\'t delete its videos.';
       case 'delete_custom_theme':
         return 'Delete theme';
       case 'delete_custom_theme_confirm':
@@ -179705,6 +179774,10 @@ extension on _StringsRu {
         return 'Delete audiobook';
       case 'audiobook_delete_confirm':
         return 'Delete the attached audiobook? Its audio files are removed from this device.';
+      case 'delete_collection_confirm':
+        return 'Only the grouping is removed. The items in it are kept.';
+      case 'shortcut_action_video_enter_caret':
+        return 'Enter subtitle lookup cursor';
       default:
         return null;
     }
@@ -180792,8 +180865,6 @@ extension on _StringsTh {
         return 'Also delete the books in it';
       case 'delete_collection_also_videos':
         return 'Also delete the videos (keeps your original video files)';
-      case 'delete_collection_confirm':
-        return 'Deleting the collection won\'t delete its videos.';
       case 'delete_custom_theme':
         return 'Delete theme';
       case 'delete_custom_theme_confirm':
@@ -185589,6 +185660,10 @@ extension on _StringsTh {
         return 'Delete audiobook';
       case 'audiobook_delete_confirm':
         return 'Delete the attached audiobook? Its audio files are removed from this device.';
+      case 'delete_collection_confirm':
+        return 'Only the grouping is removed. The items in it are kept.';
+      case 'shortcut_action_video_enter_caret':
+        return 'Enter subtitle lookup cursor';
       default:
         return null;
     }
@@ -186681,8 +186756,6 @@ extension on _StringsTr {
         return 'Also delete the books in it';
       case 'delete_collection_also_videos':
         return 'Also delete the videos (keeps your original video files)';
-      case 'delete_collection_confirm':
-        return 'Deleting the collection won\'t delete its videos.';
       case 'delete_custom_theme':
         return 'Delete theme';
       case 'delete_custom_theme_confirm':
@@ -191482,6 +191555,10 @@ extension on _StringsTr {
         return 'Delete audiobook';
       case 'audiobook_delete_confirm':
         return 'Delete the attached audiobook? Its audio files are removed from this device.';
+      case 'delete_collection_confirm':
+        return 'Only the grouping is removed. The items in it are kept.';
+      case 'shortcut_action_video_enter_caret':
+        return 'Enter subtitle lookup cursor';
       default:
         return null;
     }
@@ -192571,8 +192648,6 @@ extension on _StringsVi {
         return 'Also delete the books in it';
       case 'delete_collection_also_videos':
         return 'Also delete the videos (keeps your original video files)';
-      case 'delete_collection_confirm':
-        return 'Deleting the collection won\'t delete its videos.';
       case 'delete_custom_theme':
         return 'Delete theme';
       case 'delete_custom_theme_confirm':
@@ -197371,6 +197446,10 @@ extension on _StringsVi {
         return 'Delete audiobook';
       case 'audiobook_delete_confirm':
         return 'Delete the attached audiobook? Its audio files are removed from this device.';
+      case 'delete_collection_confirm':
+        return 'Only the grouping is removed. The items in it are kept.';
+      case 'shortcut_action_video_enter_caret':
+        return 'Enter subtitle lookup cursor';
       default:
         return null;
     }
@@ -198447,8 +198526,6 @@ extension on _StringsZhCn {
         return '同时删除其中的书';
       case 'delete_collection_also_videos':
         return '同时删除其中的视频（保留你的原始视频文件）';
-      case 'delete_collection_confirm':
-        return '删除合集不会删除其中的视频。';
       case 'delete_custom_theme':
         return '删除主题';
       case 'delete_custom_theme_confirm':
@@ -203208,6 +203285,10 @@ extension on _StringsZhCn {
         return '删除有声书';
       case 'audiobook_delete_confirm':
         return '删除已附加的有声书？它的音频文件会从本机删除。';
+      case 'delete_collection_confirm':
+        return '只解除分组，其中的条目会保留。';
+      case 'shortcut_action_video_enter_caret':
+        return '进入字幕选词光标';
       default:
         return null;
     }
@@ -204289,8 +204370,6 @@ extension on _StringsZhHk {
         return 'Also delete the books in it';
       case 'delete_collection_also_videos':
         return 'Also delete the videos (keeps your original video files)';
-      case 'delete_collection_confirm':
-        return 'Deleting the collection won\'t delete its videos.';
       case 'delete_custom_theme':
         return 'Delete theme';
       case 'delete_custom_theme_confirm':
@@ -209070,6 +209149,10 @@ extension on _StringsZhHk {
         return 'Delete audiobook';
       case 'audiobook_delete_confirm':
         return 'Delete the attached audiobook? Its audio files are removed from this device.';
+      case 'delete_collection_confirm':
+        return 'Only the grouping is removed. The items in it are kept.';
+      case 'shortcut_action_video_enter_caret':
+        return 'Enter subtitle lookup cursor';
       default:
         return null;
     }
