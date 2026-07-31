@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 47022 (2766 per locale)
+/// Strings: 47175 (2775 per locale)
 ///
-/// Built on 2026-07-29 at 08:08 UTC
+/// Built on 2026-07-31 at 05:03 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3718,6 +3718,24 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get selection_web_search => 'Search the web';
   String get selection_web_search_unavailable => 'No app can search the web.';
   String get selection_share_failed => 'Could not open the share sheet.';
+  String get anki_dedup_progress_title => 'Deduplicating media';
+  String anki_dedup_progress_scanning({required Object count}) =>
+      'Scanning media folder… (${count} files found)';
+  String anki_dedup_progress_hashing(
+          {required Object done, required Object total}) =>
+      'Comparing same-size files… (${done} / ${total})';
+  String anki_dedup_progress_resolving(
+          {required Object done, required Object total}) =>
+      'Processing duplicates… (${done} / ${total})';
+  String anki_dedup_progress_freed({required Object size}) =>
+      'Freed ${size} so far';
+  String get anki_dedup_cancelling => 'Cancelling…';
+  String get anki_dedup_cancelled =>
+      'Deduplication cancelled; completed changes are kept.';
+  String get anki_dedup_report_cancelled_note =>
+      'Cancelled early — the numbers below only cover what was completed.';
+  String get anki_dedup_plan_busy_note =>
+      'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
 }
 
 // Path: <root>
@@ -10050,6 +10068,33 @@ class _StringsAr extends _StringsEn {
   String get selection_web_search_unavailable => 'No app can search the web.';
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
+  @override
+  String get anki_dedup_progress_title => 'Deduplicating media';
+  @override
+  String anki_dedup_progress_scanning({required Object count}) =>
+      'Scanning media folder… (${count} files found)';
+  @override
+  String anki_dedup_progress_hashing(
+          {required Object done, required Object total}) =>
+      'Comparing same-size files… (${done} / ${total})';
+  @override
+  String anki_dedup_progress_resolving(
+          {required Object done, required Object total}) =>
+      'Processing duplicates… (${done} / ${total})';
+  @override
+  String anki_dedup_progress_freed({required Object size}) =>
+      'Freed ${size} so far';
+  @override
+  String get anki_dedup_cancelling => 'Cancelling…';
+  @override
+  String get anki_dedup_cancelled =>
+      'Deduplication cancelled; completed changes are kept.';
+  @override
+  String get anki_dedup_report_cancelled_note =>
+      'Cancelled early — the numbers below only cover what was completed.';
+  @override
+  String get anki_dedup_plan_busy_note =>
+      'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
 }
 
 // Path: <root>
@@ -16450,6 +16495,33 @@ class _StringsDe extends _StringsEn {
   String get selection_web_search_unavailable => 'No app can search the web.';
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
+  @override
+  String get anki_dedup_progress_title => 'Deduplicating media';
+  @override
+  String anki_dedup_progress_scanning({required Object count}) =>
+      'Scanning media folder… (${count} files found)';
+  @override
+  String anki_dedup_progress_hashing(
+          {required Object done, required Object total}) =>
+      'Comparing same-size files… (${done} / ${total})';
+  @override
+  String anki_dedup_progress_resolving(
+          {required Object done, required Object total}) =>
+      'Processing duplicates… (${done} / ${total})';
+  @override
+  String anki_dedup_progress_freed({required Object size}) =>
+      'Freed ${size} so far';
+  @override
+  String get anki_dedup_cancelling => 'Cancelling…';
+  @override
+  String get anki_dedup_cancelled =>
+      'Deduplication cancelled; completed changes are kept.';
+  @override
+  String get anki_dedup_report_cancelled_note =>
+      'Cancelled early — the numbers below only cover what was completed.';
+  @override
+  String get anki_dedup_plan_busy_note =>
+      'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
 }
 
 // Path: <root>
@@ -22866,6 +22938,33 @@ class _StringsEs extends _StringsEn {
   String get selection_web_search_unavailable => 'No app can search the web.';
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
+  @override
+  String get anki_dedup_progress_title => 'Deduplicating media';
+  @override
+  String anki_dedup_progress_scanning({required Object count}) =>
+      'Scanning media folder… (${count} files found)';
+  @override
+  String anki_dedup_progress_hashing(
+          {required Object done, required Object total}) =>
+      'Comparing same-size files… (${done} / ${total})';
+  @override
+  String anki_dedup_progress_resolving(
+          {required Object done, required Object total}) =>
+      'Processing duplicates… (${done} / ${total})';
+  @override
+  String anki_dedup_progress_freed({required Object size}) =>
+      'Freed ${size} so far';
+  @override
+  String get anki_dedup_cancelling => 'Cancelling…';
+  @override
+  String get anki_dedup_cancelled =>
+      'Deduplication cancelled; completed changes are kept.';
+  @override
+  String get anki_dedup_report_cancelled_note =>
+      'Cancelled early — the numbers below only cover what was completed.';
+  @override
+  String get anki_dedup_plan_busy_note =>
+      'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
 }
 
 // Path: <root>
@@ -29293,6 +29392,33 @@ class _StringsFr extends _StringsEn {
   String get selection_web_search_unavailable => 'No app can search the web.';
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
+  @override
+  String get anki_dedup_progress_title => 'Deduplicating media';
+  @override
+  String anki_dedup_progress_scanning({required Object count}) =>
+      'Scanning media folder… (${count} files found)';
+  @override
+  String anki_dedup_progress_hashing(
+          {required Object done, required Object total}) =>
+      'Comparing same-size files… (${done} / ${total})';
+  @override
+  String anki_dedup_progress_resolving(
+          {required Object done, required Object total}) =>
+      'Processing duplicates… (${done} / ${total})';
+  @override
+  String anki_dedup_progress_freed({required Object size}) =>
+      'Freed ${size} so far';
+  @override
+  String get anki_dedup_cancelling => 'Cancelling…';
+  @override
+  String get anki_dedup_cancelled =>
+      'Deduplication cancelled; completed changes are kept.';
+  @override
+  String get anki_dedup_report_cancelled_note =>
+      'Cancelled early — the numbers below only cover what was completed.';
+  @override
+  String get anki_dedup_plan_busy_note =>
+      'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
 }
 
 // Path: <root>
@@ -35649,6 +35775,33 @@ class _StringsId extends _StringsEn {
   String get selection_web_search_unavailable => 'No app can search the web.';
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
+  @override
+  String get anki_dedup_progress_title => 'Deduplicating media';
+  @override
+  String anki_dedup_progress_scanning({required Object count}) =>
+      'Scanning media folder… (${count} files found)';
+  @override
+  String anki_dedup_progress_hashing(
+          {required Object done, required Object total}) =>
+      'Comparing same-size files… (${done} / ${total})';
+  @override
+  String anki_dedup_progress_resolving(
+          {required Object done, required Object total}) =>
+      'Processing duplicates… (${done} / ${total})';
+  @override
+  String anki_dedup_progress_freed({required Object size}) =>
+      'Freed ${size} so far';
+  @override
+  String get anki_dedup_cancelling => 'Cancelling…';
+  @override
+  String get anki_dedup_cancelled =>
+      'Deduplication cancelled; completed changes are kept.';
+  @override
+  String get anki_dedup_report_cancelled_note =>
+      'Cancelled early — the numbers below only cover what was completed.';
+  @override
+  String get anki_dedup_plan_busy_note =>
+      'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
 }
 
 // Path: <root>
@@ -42051,6 +42204,33 @@ class _StringsIt extends _StringsEn {
   String get selection_web_search_unavailable => 'No app can search the web.';
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
+  @override
+  String get anki_dedup_progress_title => 'Deduplicating media';
+  @override
+  String anki_dedup_progress_scanning({required Object count}) =>
+      'Scanning media folder… (${count} files found)';
+  @override
+  String anki_dedup_progress_hashing(
+          {required Object done, required Object total}) =>
+      'Comparing same-size files… (${done} / ${total})';
+  @override
+  String anki_dedup_progress_resolving(
+          {required Object done, required Object total}) =>
+      'Processing duplicates… (${done} / ${total})';
+  @override
+  String anki_dedup_progress_freed({required Object size}) =>
+      'Freed ${size} so far';
+  @override
+  String get anki_dedup_cancelling => 'Cancelling…';
+  @override
+  String get anki_dedup_cancelled =>
+      'Deduplication cancelled; completed changes are kept.';
+  @override
+  String get anki_dedup_report_cancelled_note =>
+      'Cancelled early — the numbers below only cover what was completed.';
+  @override
+  String get anki_dedup_plan_busy_note =>
+      'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
 }
 
 // Path: <root>
@@ -48270,6 +48450,33 @@ class _StringsJa extends _StringsEn {
   String get selection_web_search_unavailable => 'No app can search the web.';
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
+  @override
+  String get anki_dedup_progress_title => 'Deduplicating media';
+  @override
+  String anki_dedup_progress_scanning({required Object count}) =>
+      'Scanning media folder… (${count} files found)';
+  @override
+  String anki_dedup_progress_hashing(
+          {required Object done, required Object total}) =>
+      'Comparing same-size files… (${done} / ${total})';
+  @override
+  String anki_dedup_progress_resolving(
+          {required Object done, required Object total}) =>
+      'Processing duplicates… (${done} / ${total})';
+  @override
+  String anki_dedup_progress_freed({required Object size}) =>
+      'Freed ${size} so far';
+  @override
+  String get anki_dedup_cancelling => 'Cancelling…';
+  @override
+  String get anki_dedup_cancelled =>
+      'Deduplication cancelled; completed changes are kept.';
+  @override
+  String get anki_dedup_report_cancelled_note =>
+      'Cancelled early — the numbers below only cover what was completed.';
+  @override
+  String get anki_dedup_plan_busy_note =>
+      'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
 }
 
 // Path: <root>
@@ -54491,6 +54698,33 @@ class _StringsKo extends _StringsEn {
   String get selection_web_search_unavailable => 'No app can search the web.';
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
+  @override
+  String get anki_dedup_progress_title => 'Deduplicating media';
+  @override
+  String anki_dedup_progress_scanning({required Object count}) =>
+      'Scanning media folder… (${count} files found)';
+  @override
+  String anki_dedup_progress_hashing(
+          {required Object done, required Object total}) =>
+      'Comparing same-size files… (${done} / ${total})';
+  @override
+  String anki_dedup_progress_resolving(
+          {required Object done, required Object total}) =>
+      'Processing duplicates… (${done} / ${total})';
+  @override
+  String anki_dedup_progress_freed({required Object size}) =>
+      'Freed ${size} so far';
+  @override
+  String get anki_dedup_cancelling => 'Cancelling…';
+  @override
+  String get anki_dedup_cancelled =>
+      'Deduplication cancelled; completed changes are kept.';
+  @override
+  String get anki_dedup_report_cancelled_note =>
+      'Cancelled early — the numbers below only cover what was completed.';
+  @override
+  String get anki_dedup_plan_busy_note =>
+      'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
 }
 
 // Path: <root>
@@ -60873,6 +61107,33 @@ class _StringsNl extends _StringsEn {
   String get selection_web_search_unavailable => 'No app can search the web.';
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
+  @override
+  String get anki_dedup_progress_title => 'Deduplicating media';
+  @override
+  String anki_dedup_progress_scanning({required Object count}) =>
+      'Scanning media folder… (${count} files found)';
+  @override
+  String anki_dedup_progress_hashing(
+          {required Object done, required Object total}) =>
+      'Comparing same-size files… (${done} / ${total})';
+  @override
+  String anki_dedup_progress_resolving(
+          {required Object done, required Object total}) =>
+      'Processing duplicates… (${done} / ${total})';
+  @override
+  String anki_dedup_progress_freed({required Object size}) =>
+      'Freed ${size} so far';
+  @override
+  String get anki_dedup_cancelling => 'Cancelling…';
+  @override
+  String get anki_dedup_cancelled =>
+      'Deduplication cancelled; completed changes are kept.';
+  @override
+  String get anki_dedup_report_cancelled_note =>
+      'Cancelled early — the numbers below only cover what was completed.';
+  @override
+  String get anki_dedup_plan_busy_note =>
+      'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
 }
 
 // Path: <root>
@@ -67268,6 +67529,33 @@ class _StringsPtBr extends _StringsEn {
   String get selection_web_search_unavailable => 'No app can search the web.';
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
+  @override
+  String get anki_dedup_progress_title => 'Deduplicating media';
+  @override
+  String anki_dedup_progress_scanning({required Object count}) =>
+      'Scanning media folder… (${count} files found)';
+  @override
+  String anki_dedup_progress_hashing(
+          {required Object done, required Object total}) =>
+      'Comparing same-size files… (${done} / ${total})';
+  @override
+  String anki_dedup_progress_resolving(
+          {required Object done, required Object total}) =>
+      'Processing duplicates… (${done} / ${total})';
+  @override
+  String anki_dedup_progress_freed({required Object size}) =>
+      'Freed ${size} so far';
+  @override
+  String get anki_dedup_cancelling => 'Cancelling…';
+  @override
+  String get anki_dedup_cancelled =>
+      'Deduplication cancelled; completed changes are kept.';
+  @override
+  String get anki_dedup_report_cancelled_note =>
+      'Cancelled early — the numbers below only cover what was completed.';
+  @override
+  String get anki_dedup_plan_busy_note =>
+      'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
 }
 
 // Path: <root>
@@ -73647,6 +73935,33 @@ class _StringsRu extends _StringsEn {
   String get selection_web_search_unavailable => 'No app can search the web.';
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
+  @override
+  String get anki_dedup_progress_title => 'Deduplicating media';
+  @override
+  String anki_dedup_progress_scanning({required Object count}) =>
+      'Scanning media folder… (${count} files found)';
+  @override
+  String anki_dedup_progress_hashing(
+          {required Object done, required Object total}) =>
+      'Comparing same-size files… (${done} / ${total})';
+  @override
+  String anki_dedup_progress_resolving(
+          {required Object done, required Object total}) =>
+      'Processing duplicates… (${done} / ${total})';
+  @override
+  String anki_dedup_progress_freed({required Object size}) =>
+      'Freed ${size} so far';
+  @override
+  String get anki_dedup_cancelling => 'Cancelling…';
+  @override
+  String get anki_dedup_cancelled =>
+      'Deduplication cancelled; completed changes are kept.';
+  @override
+  String get anki_dedup_report_cancelled_note =>
+      'Cancelled early — the numbers below only cover what was completed.';
+  @override
+  String get anki_dedup_plan_busy_note =>
+      'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
 }
 
 // Path: <root>
@@ -79974,6 +80289,33 @@ class _StringsTh extends _StringsEn {
   String get selection_web_search_unavailable => 'No app can search the web.';
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
+  @override
+  String get anki_dedup_progress_title => 'Deduplicating media';
+  @override
+  String anki_dedup_progress_scanning({required Object count}) =>
+      'Scanning media folder… (${count} files found)';
+  @override
+  String anki_dedup_progress_hashing(
+          {required Object done, required Object total}) =>
+      'Comparing same-size files… (${done} / ${total})';
+  @override
+  String anki_dedup_progress_resolving(
+          {required Object done, required Object total}) =>
+      'Processing duplicates… (${done} / ${total})';
+  @override
+  String anki_dedup_progress_freed({required Object size}) =>
+      'Freed ${size} so far';
+  @override
+  String get anki_dedup_cancelling => 'Cancelling…';
+  @override
+  String get anki_dedup_cancelled =>
+      'Deduplication cancelled; completed changes are kept.';
+  @override
+  String get anki_dedup_report_cancelled_note =>
+      'Cancelled early — the numbers below only cover what was completed.';
+  @override
+  String get anki_dedup_plan_busy_note =>
+      'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
 }
 
 // Path: <root>
@@ -86333,6 +86675,33 @@ class _StringsTr extends _StringsEn {
   String get selection_web_search_unavailable => 'No app can search the web.';
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
+  @override
+  String get anki_dedup_progress_title => 'Deduplicating media';
+  @override
+  String anki_dedup_progress_scanning({required Object count}) =>
+      'Scanning media folder… (${count} files found)';
+  @override
+  String anki_dedup_progress_hashing(
+          {required Object done, required Object total}) =>
+      'Comparing same-size files… (${done} / ${total})';
+  @override
+  String anki_dedup_progress_resolving(
+          {required Object done, required Object total}) =>
+      'Processing duplicates… (${done} / ${total})';
+  @override
+  String anki_dedup_progress_freed({required Object size}) =>
+      'Freed ${size} so far';
+  @override
+  String get anki_dedup_cancelling => 'Cancelling…';
+  @override
+  String get anki_dedup_cancelled =>
+      'Deduplication cancelled; completed changes are kept.';
+  @override
+  String get anki_dedup_report_cancelled_note =>
+      'Cancelled early — the numbers below only cover what was completed.';
+  @override
+  String get anki_dedup_plan_busy_note =>
+      'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
 }
 
 // Path: <root>
@@ -92677,6 +93046,33 @@ class _StringsVi extends _StringsEn {
   String get selection_web_search_unavailable => 'No app can search the web.';
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
+  @override
+  String get anki_dedup_progress_title => 'Deduplicating media';
+  @override
+  String anki_dedup_progress_scanning({required Object count}) =>
+      'Scanning media folder… (${count} files found)';
+  @override
+  String anki_dedup_progress_hashing(
+          {required Object done, required Object total}) =>
+      'Comparing same-size files… (${done} / ${total})';
+  @override
+  String anki_dedup_progress_resolving(
+          {required Object done, required Object total}) =>
+      'Processing duplicates… (${done} / ${total})';
+  @override
+  String anki_dedup_progress_freed({required Object size}) =>
+      'Freed ${size} so far';
+  @override
+  String get anki_dedup_cancelling => 'Cancelling…';
+  @override
+  String get anki_dedup_cancelled =>
+      'Deduplication cancelled; completed changes are kept.';
+  @override
+  String get anki_dedup_report_cancelled_note =>
+      'Cancelled early — the numbers below only cover what was completed.';
+  @override
+  String get anki_dedup_plan_busy_note =>
+      'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
 }
 
 // Path: <root>
@@ -98572,6 +98968,29 @@ class _StringsZhCn extends _StringsEn {
   String get selection_web_search_unavailable => '没有可用的网页搜索应用。';
   @override
   String get selection_share_failed => '无法打开分享面板。';
+  @override
+  String get anki_dedup_progress_title => '正在去重媒体';
+  @override
+  String anki_dedup_progress_scanning({required Object count}) =>
+      '正在扫描媒体目录…（已发现 ${count} 个文件）';
+  @override
+  String anki_dedup_progress_hashing(
+          {required Object done, required Object total}) =>
+      '正在比对同大小文件…（${done} / ${total}）';
+  @override
+  String anki_dedup_progress_resolving(
+          {required Object done, required Object total}) =>
+      '正在处理重复副本…（${done} / ${total}）';
+  @override
+  String anki_dedup_progress_freed({required Object size}) => '已释放 ${size}';
+  @override
+  String get anki_dedup_cancelling => '正在取消…';
+  @override
+  String get anki_dedup_cancelled => '已取消去重；已完成的改动保留。';
+  @override
+  String get anki_dedup_report_cancelled_note => '已提前取消——以下数字只统计已完成的部分。';
+  @override
+  String get anki_dedup_plan_busy_note => '执行期间 Anki 可能暂时无响应；结束前请不要在 Anki 里操作。';
 }
 
 // Path: <root>
@@ -104712,6 +105131,33 @@ class _StringsZhHk extends _StringsEn {
   String get selection_web_search_unavailable => 'No app can search the web.';
   @override
   String get selection_share_failed => 'Could not open the share sheet.';
+  @override
+  String get anki_dedup_progress_title => 'Deduplicating media';
+  @override
+  String anki_dedup_progress_scanning({required Object count}) =>
+      'Scanning media folder… (${count} files found)';
+  @override
+  String anki_dedup_progress_hashing(
+          {required Object done, required Object total}) =>
+      'Comparing same-size files… (${done} / ${total})';
+  @override
+  String anki_dedup_progress_resolving(
+          {required Object done, required Object total}) =>
+      'Processing duplicates… (${done} / ${total})';
+  @override
+  String anki_dedup_progress_freed({required Object size}) =>
+      'Freed ${size} so far';
+  @override
+  String get anki_dedup_cancelling => 'Cancelling…';
+  @override
+  String get anki_dedup_cancelled =>
+      'Deduplication cancelled; completed changes are kept.';
+  @override
+  String get anki_dedup_report_cancelled_note =>
+      'Cancelled early — the numbers below only cover what was completed.';
+  @override
+  String get anki_dedup_plan_busy_note =>
+      'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
 }
 
 /// Flat map(s) containing all translations.
@@ -110379,6 +110825,27 @@ extension on _StringsEn {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'anki_dedup_progress_title':
+        return 'Deduplicating media';
+      case 'anki_dedup_progress_scanning':
+        return ({required Object count}) =>
+            'Scanning media folder… (${count} files found)';
+      case 'anki_dedup_progress_hashing':
+        return ({required Object done, required Object total}) =>
+            'Comparing same-size files… (${done} / ${total})';
+      case 'anki_dedup_progress_resolving':
+        return ({required Object done, required Object total}) =>
+            'Processing duplicates… (${done} / ${total})';
+      case 'anki_dedup_progress_freed':
+        return ({required Object size}) => 'Freed ${size} so far';
+      case 'anki_dedup_cancelling':
+        return 'Cancelling…';
+      case 'anki_dedup_cancelled':
+        return 'Deduplication cancelled; completed changes are kept.';
+      case 'anki_dedup_report_cancelled_note':
+        return 'Cancelled early — the numbers below only cover what was completed.';
+      case 'anki_dedup_plan_busy_note':
+        return 'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
       default:
         return null;
     }
@@ -116044,6 +116511,27 @@ extension on _StringsAr {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'anki_dedup_progress_title':
+        return 'Deduplicating media';
+      case 'anki_dedup_progress_scanning':
+        return ({required Object count}) =>
+            'Scanning media folder… (${count} files found)';
+      case 'anki_dedup_progress_hashing':
+        return ({required Object done, required Object total}) =>
+            'Comparing same-size files… (${done} / ${total})';
+      case 'anki_dedup_progress_resolving':
+        return ({required Object done, required Object total}) =>
+            'Processing duplicates… (${done} / ${total})';
+      case 'anki_dedup_progress_freed':
+        return ({required Object size}) => 'Freed ${size} so far';
+      case 'anki_dedup_cancelling':
+        return 'Cancelling…';
+      case 'anki_dedup_cancelled':
+        return 'Deduplication cancelled; completed changes are kept.';
+      case 'anki_dedup_report_cancelled_note':
+        return 'Cancelled early — the numbers below only cover what was completed.';
+      case 'anki_dedup_plan_busy_note':
+        return 'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
       default:
         return null;
     }
@@ -121730,6 +122218,27 @@ extension on _StringsDe {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'anki_dedup_progress_title':
+        return 'Deduplicating media';
+      case 'anki_dedup_progress_scanning':
+        return ({required Object count}) =>
+            'Scanning media folder… (${count} files found)';
+      case 'anki_dedup_progress_hashing':
+        return ({required Object done, required Object total}) =>
+            'Comparing same-size files… (${done} / ${total})';
+      case 'anki_dedup_progress_resolving':
+        return ({required Object done, required Object total}) =>
+            'Processing duplicates… (${done} / ${total})';
+      case 'anki_dedup_progress_freed':
+        return ({required Object size}) => 'Freed ${size} so far';
+      case 'anki_dedup_cancelling':
+        return 'Cancelling…';
+      case 'anki_dedup_cancelled':
+        return 'Deduplication cancelled; completed changes are kept.';
+      case 'anki_dedup_report_cancelled_note':
+        return 'Cancelled early — the numbers below only cover what was completed.';
+      case 'anki_dedup_plan_busy_note':
+        return 'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
       default:
         return null;
     }
@@ -127415,6 +127924,27 @@ extension on _StringsEs {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'anki_dedup_progress_title':
+        return 'Deduplicating media';
+      case 'anki_dedup_progress_scanning':
+        return ({required Object count}) =>
+            'Scanning media folder… (${count} files found)';
+      case 'anki_dedup_progress_hashing':
+        return ({required Object done, required Object total}) =>
+            'Comparing same-size files… (${done} / ${total})';
+      case 'anki_dedup_progress_resolving':
+        return ({required Object done, required Object total}) =>
+            'Processing duplicates… (${done} / ${total})';
+      case 'anki_dedup_progress_freed':
+        return ({required Object size}) => 'Freed ${size} so far';
+      case 'anki_dedup_cancelling':
+        return 'Cancelling…';
+      case 'anki_dedup_cancelled':
+        return 'Deduplication cancelled; completed changes are kept.';
+      case 'anki_dedup_report_cancelled_note':
+        return 'Cancelled early — the numbers below only cover what was completed.';
+      case 'anki_dedup_plan_busy_note':
+        return 'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
       default:
         return null;
     }
@@ -133106,6 +133636,27 @@ extension on _StringsFr {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'anki_dedup_progress_title':
+        return 'Deduplicating media';
+      case 'anki_dedup_progress_scanning':
+        return ({required Object count}) =>
+            'Scanning media folder… (${count} files found)';
+      case 'anki_dedup_progress_hashing':
+        return ({required Object done, required Object total}) =>
+            'Comparing same-size files… (${done} / ${total})';
+      case 'anki_dedup_progress_resolving':
+        return ({required Object done, required Object total}) =>
+            'Processing duplicates… (${done} / ${total})';
+      case 'anki_dedup_progress_freed':
+        return ({required Object size}) => 'Freed ${size} so far';
+      case 'anki_dedup_cancelling':
+        return 'Cancelling…';
+      case 'anki_dedup_cancelled':
+        return 'Deduplication cancelled; completed changes are kept.';
+      case 'anki_dedup_report_cancelled_note':
+        return 'Cancelled early — the numbers below only cover what was completed.';
+      case 'anki_dedup_plan_busy_note':
+        return 'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
       default:
         return null;
     }
@@ -138779,6 +139330,27 @@ extension on _StringsId {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'anki_dedup_progress_title':
+        return 'Deduplicating media';
+      case 'anki_dedup_progress_scanning':
+        return ({required Object count}) =>
+            'Scanning media folder… (${count} files found)';
+      case 'anki_dedup_progress_hashing':
+        return ({required Object done, required Object total}) =>
+            'Comparing same-size files… (${done} / ${total})';
+      case 'anki_dedup_progress_resolving':
+        return ({required Object done, required Object total}) =>
+            'Processing duplicates… (${done} / ${total})';
+      case 'anki_dedup_progress_freed':
+        return ({required Object size}) => 'Freed ${size} so far';
+      case 'anki_dedup_cancelling':
+        return 'Cancelling…';
+      case 'anki_dedup_cancelled':
+        return 'Deduplication cancelled; completed changes are kept.';
+      case 'anki_dedup_report_cancelled_note':
+        return 'Cancelled early — the numbers below only cover what was completed.';
+      case 'anki_dedup_plan_busy_note':
+        return 'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
       default:
         return null;
     }
@@ -144467,6 +145039,27 @@ extension on _StringsIt {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'anki_dedup_progress_title':
+        return 'Deduplicating media';
+      case 'anki_dedup_progress_scanning':
+        return ({required Object count}) =>
+            'Scanning media folder… (${count} files found)';
+      case 'anki_dedup_progress_hashing':
+        return ({required Object done, required Object total}) =>
+            'Comparing same-size files… (${done} / ${total})';
+      case 'anki_dedup_progress_resolving':
+        return ({required Object done, required Object total}) =>
+            'Processing duplicates… (${done} / ${total})';
+      case 'anki_dedup_progress_freed':
+        return ({required Object size}) => 'Freed ${size} so far';
+      case 'anki_dedup_cancelling':
+        return 'Cancelling…';
+      case 'anki_dedup_cancelled':
+        return 'Deduplication cancelled; completed changes are kept.';
+      case 'anki_dedup_report_cancelled_note':
+        return 'Cancelled early — the numbers below only cover what was completed.';
+      case 'anki_dedup_plan_busy_note':
+        return 'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
       default:
         return null;
     }
@@ -150117,6 +150710,27 @@ extension on _StringsJa {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'anki_dedup_progress_title':
+        return 'Deduplicating media';
+      case 'anki_dedup_progress_scanning':
+        return ({required Object count}) =>
+            'Scanning media folder… (${count} files found)';
+      case 'anki_dedup_progress_hashing':
+        return ({required Object done, required Object total}) =>
+            'Comparing same-size files… (${done} / ${total})';
+      case 'anki_dedup_progress_resolving':
+        return ({required Object done, required Object total}) =>
+            'Processing duplicates… (${done} / ${total})';
+      case 'anki_dedup_progress_freed':
+        return ({required Object size}) => 'Freed ${size} so far';
+      case 'anki_dedup_cancelling':
+        return 'Cancelling…';
+      case 'anki_dedup_cancelled':
+        return 'Deduplication cancelled; completed changes are kept.';
+      case 'anki_dedup_report_cancelled_note':
+        return 'Cancelled early — the numbers below only cover what was completed.';
+      case 'anki_dedup_plan_busy_note':
+        return 'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
       default:
         return null;
     }
@@ -155771,6 +156385,27 @@ extension on _StringsKo {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'anki_dedup_progress_title':
+        return 'Deduplicating media';
+      case 'anki_dedup_progress_scanning':
+        return ({required Object count}) =>
+            'Scanning media folder… (${count} files found)';
+      case 'anki_dedup_progress_hashing':
+        return ({required Object done, required Object total}) =>
+            'Comparing same-size files… (${done} / ${total})';
+      case 'anki_dedup_progress_resolving':
+        return ({required Object done, required Object total}) =>
+            'Processing duplicates… (${done} / ${total})';
+      case 'anki_dedup_progress_freed':
+        return ({required Object size}) => 'Freed ${size} so far';
+      case 'anki_dedup_cancelling':
+        return 'Cancelling…';
+      case 'anki_dedup_cancelled':
+        return 'Deduplication cancelled; completed changes are kept.';
+      case 'anki_dedup_report_cancelled_note':
+        return 'Cancelled early — the numbers below only cover what was completed.';
+      case 'anki_dedup_plan_busy_note':
+        return 'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
       default:
         return null;
     }
@@ -161452,6 +162087,27 @@ extension on _StringsNl {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'anki_dedup_progress_title':
+        return 'Deduplicating media';
+      case 'anki_dedup_progress_scanning':
+        return ({required Object count}) =>
+            'Scanning media folder… (${count} files found)';
+      case 'anki_dedup_progress_hashing':
+        return ({required Object done, required Object total}) =>
+            'Comparing same-size files… (${done} / ${total})';
+      case 'anki_dedup_progress_resolving':
+        return ({required Object done, required Object total}) =>
+            'Processing duplicates… (${done} / ${total})';
+      case 'anki_dedup_progress_freed':
+        return ({required Object size}) => 'Freed ${size} so far';
+      case 'anki_dedup_cancelling':
+        return 'Cancelling…';
+      case 'anki_dedup_cancelled':
+        return 'Deduplication cancelled; completed changes are kept.';
+      case 'anki_dedup_report_cancelled_note':
+        return 'Cancelled early — the numbers below only cover what was completed.';
+      case 'anki_dedup_plan_busy_note':
+        return 'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
       default:
         return null;
     }
@@ -167130,6 +167786,27 @@ extension on _StringsPtBr {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'anki_dedup_progress_title':
+        return 'Deduplicating media';
+      case 'anki_dedup_progress_scanning':
+        return ({required Object count}) =>
+            'Scanning media folder… (${count} files found)';
+      case 'anki_dedup_progress_hashing':
+        return ({required Object done, required Object total}) =>
+            'Comparing same-size files… (${done} / ${total})';
+      case 'anki_dedup_progress_resolving':
+        return ({required Object done, required Object total}) =>
+            'Processing duplicates… (${done} / ${total})';
+      case 'anki_dedup_progress_freed':
+        return ({required Object size}) => 'Freed ${size} so far';
+      case 'anki_dedup_cancelling':
+        return 'Cancelling…';
+      case 'anki_dedup_cancelled':
+        return 'Deduplication cancelled; completed changes are kept.';
+      case 'anki_dedup_report_cancelled_note':
+        return 'Cancelled early — the numbers below only cover what was completed.';
+      case 'anki_dedup_plan_busy_note':
+        return 'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
       default:
         return null;
     }
@@ -172813,6 +173490,27 @@ extension on _StringsRu {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'anki_dedup_progress_title':
+        return 'Deduplicating media';
+      case 'anki_dedup_progress_scanning':
+        return ({required Object count}) =>
+            'Scanning media folder… (${count} files found)';
+      case 'anki_dedup_progress_hashing':
+        return ({required Object done, required Object total}) =>
+            'Comparing same-size files… (${done} / ${total})';
+      case 'anki_dedup_progress_resolving':
+        return ({required Object done, required Object total}) =>
+            'Processing duplicates… (${done} / ${total})';
+      case 'anki_dedup_progress_freed':
+        return ({required Object size}) => 'Freed ${size} so far';
+      case 'anki_dedup_cancelling':
+        return 'Cancelling…';
+      case 'anki_dedup_cancelled':
+        return 'Deduplication cancelled; completed changes are kept.';
+      case 'anki_dedup_report_cancelled_note':
+        return 'Cancelled early — the numbers below only cover what was completed.';
+      case 'anki_dedup_plan_busy_note':
+        return 'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
       default:
         return null;
     }
@@ -178480,6 +179178,27 @@ extension on _StringsTh {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'anki_dedup_progress_title':
+        return 'Deduplicating media';
+      case 'anki_dedup_progress_scanning':
+        return ({required Object count}) =>
+            'Scanning media folder… (${count} files found)';
+      case 'anki_dedup_progress_hashing':
+        return ({required Object done, required Object total}) =>
+            'Comparing same-size files… (${done} / ${total})';
+      case 'anki_dedup_progress_resolving':
+        return ({required Object done, required Object total}) =>
+            'Processing duplicates… (${done} / ${total})';
+      case 'anki_dedup_progress_freed':
+        return ({required Object size}) => 'Freed ${size} so far';
+      case 'anki_dedup_cancelling':
+        return 'Cancelling…';
+      case 'anki_dedup_cancelled':
+        return 'Deduplication cancelled; completed changes are kept.';
+      case 'anki_dedup_report_cancelled_note':
+        return 'Cancelled early — the numbers below only cover what was completed.';
+      case 'anki_dedup_plan_busy_note':
+        return 'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
       default:
         return null;
     }
@@ -184156,6 +184875,27 @@ extension on _StringsTr {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'anki_dedup_progress_title':
+        return 'Deduplicating media';
+      case 'anki_dedup_progress_scanning':
+        return ({required Object count}) =>
+            'Scanning media folder… (${count} files found)';
+      case 'anki_dedup_progress_hashing':
+        return ({required Object done, required Object total}) =>
+            'Comparing same-size files… (${done} / ${total})';
+      case 'anki_dedup_progress_resolving':
+        return ({required Object done, required Object total}) =>
+            'Processing duplicates… (${done} / ${total})';
+      case 'anki_dedup_progress_freed':
+        return ({required Object size}) => 'Freed ${size} so far';
+      case 'anki_dedup_cancelling':
+        return 'Cancelling…';
+      case 'anki_dedup_cancelled':
+        return 'Deduplication cancelled; completed changes are kept.';
+      case 'anki_dedup_report_cancelled_note':
+        return 'Cancelled early — the numbers below only cover what was completed.';
+      case 'anki_dedup_plan_busy_note':
+        return 'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
       default:
         return null;
     }
@@ -189827,6 +190567,27 @@ extension on _StringsVi {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'anki_dedup_progress_title':
+        return 'Deduplicating media';
+      case 'anki_dedup_progress_scanning':
+        return ({required Object count}) =>
+            'Scanning media folder… (${count} files found)';
+      case 'anki_dedup_progress_hashing':
+        return ({required Object done, required Object total}) =>
+            'Comparing same-size files… (${done} / ${total})';
+      case 'anki_dedup_progress_resolving':
+        return ({required Object done, required Object total}) =>
+            'Processing duplicates… (${done} / ${total})';
+      case 'anki_dedup_progress_freed':
+        return ({required Object size}) => 'Freed ${size} so far';
+      case 'anki_dedup_cancelling':
+        return 'Cancelling…';
+      case 'anki_dedup_cancelled':
+        return 'Deduplication cancelled; completed changes are kept.';
+      case 'anki_dedup_report_cancelled_note':
+        return 'Cancelled early — the numbers below only cover what was completed.';
+      case 'anki_dedup_plan_busy_note':
+        return 'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
       default:
         return null;
     }
@@ -195451,6 +196212,26 @@ extension on _StringsZhCn {
         return '没有可用的网页搜索应用。';
       case 'selection_share_failed':
         return '无法打开分享面板。';
+      case 'anki_dedup_progress_title':
+        return '正在去重媒体';
+      case 'anki_dedup_progress_scanning':
+        return ({required Object count}) => '正在扫描媒体目录…（已发现 ${count} 个文件）';
+      case 'anki_dedup_progress_hashing':
+        return ({required Object done, required Object total}) =>
+            '正在比对同大小文件…（${done} / ${total}）';
+      case 'anki_dedup_progress_resolving':
+        return ({required Object done, required Object total}) =>
+            '正在处理重复副本…（${done} / ${total}）';
+      case 'anki_dedup_progress_freed':
+        return ({required Object size}) => '已释放 ${size}';
+      case 'anki_dedup_cancelling':
+        return '正在取消…';
+      case 'anki_dedup_cancelled':
+        return '已取消去重；已完成的改动保留。';
+      case 'anki_dedup_report_cancelled_note':
+        return '已提前取消——以下数字只统计已完成的部分。';
+      case 'anki_dedup_plan_busy_note':
+        return '执行期间 Anki 可能暂时无响应；结束前请不要在 Anki 里操作。';
       default:
         return null;
     }
@@ -201096,6 +201877,27 @@ extension on _StringsZhHk {
         return 'No app can search the web.';
       case 'selection_share_failed':
         return 'Could not open the share sheet.';
+      case 'anki_dedup_progress_title':
+        return 'Deduplicating media';
+      case 'anki_dedup_progress_scanning':
+        return ({required Object count}) =>
+            'Scanning media folder… (${count} files found)';
+      case 'anki_dedup_progress_hashing':
+        return ({required Object done, required Object total}) =>
+            'Comparing same-size files… (${done} / ${total})';
+      case 'anki_dedup_progress_resolving':
+        return ({required Object done, required Object total}) =>
+            'Processing duplicates… (${done} / ${total})';
+      case 'anki_dedup_progress_freed':
+        return ({required Object size}) => 'Freed ${size} so far';
+      case 'anki_dedup_cancelling':
+        return 'Cancelling…';
+      case 'anki_dedup_cancelled':
+        return 'Deduplication cancelled; completed changes are kept.';
+      case 'anki_dedup_report_cancelled_note':
+        return 'Cancelled early — the numbers below only cover what was completed.';
+      case 'anki_dedup_plan_busy_note':
+        return 'Anki may be unresponsive while this runs; avoid using Anki until it finishes.';
       default:
         return null;
     }
