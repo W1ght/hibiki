@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 48569 (2857 per locale)
+/// Strings: 48586 (2858 per locale)
 ///
-/// Built on 2026-07-31 at 14:41 UTC
+/// Built on 2026-07-31 at 16:42 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3854,6 +3854,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
   String get anki_lapis_visual_field_dictionary_name_note =>
       'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+  String get shortcut_action_video_enter_caret =>
+      'Enter subtitle lookup cursor';
 }
 
 // Path: <root>
@@ -10414,6 +10416,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get anki_lapis_visual_field_dictionary_name_note =>
       'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+  @override
+  String get shortcut_action_video_enter_caret =>
+      'Enter subtitle lookup cursor';
 }
 
 // Path: <root>
@@ -17041,6 +17046,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get anki_lapis_visual_field_dictionary_name_note =>
       'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+  @override
+  String get shortcut_action_video_enter_caret =>
+      'Enter subtitle lookup cursor';
 }
 
 // Path: <root>
@@ -23684,6 +23692,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get anki_lapis_visual_field_dictionary_name_note =>
       'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+  @override
+  String get shortcut_action_video_enter_caret =>
+      'Enter subtitle lookup cursor';
 }
 
 // Path: <root>
@@ -30338,6 +30349,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get anki_lapis_visual_field_dictionary_name_note =>
       'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+  @override
+  String get shortcut_action_video_enter_caret =>
+      'Enter subtitle lookup cursor';
 }
 
 // Path: <root>
@@ -36921,6 +36935,9 @@ class _StringsId extends _StringsEn {
   @override
   String get anki_lapis_visual_field_dictionary_name_note =>
       'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+  @override
+  String get shortcut_action_video_enter_caret =>
+      'Enter subtitle lookup cursor';
 }
 
 // Path: <root>
@@ -43550,6 +43567,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get anki_lapis_visual_field_dictionary_name_note =>
       'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+  @override
+  String get shortcut_action_video_enter_caret =>
+      'Enter subtitle lookup cursor';
 }
 
 // Path: <root>
@@ -49996,6 +50016,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get anki_lapis_visual_field_dictionary_name_note =>
       'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+  @override
+  String get shortcut_action_video_enter_caret =>
+      'Enter subtitle lookup cursor';
 }
 
 // Path: <root>
@@ -56444,6 +56467,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get anki_lapis_visual_field_dictionary_name_note =>
       'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+  @override
+  String get shortcut_action_video_enter_caret =>
+      'Enter subtitle lookup cursor';
 }
 
 // Path: <root>
@@ -63053,6 +63079,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get anki_lapis_visual_field_dictionary_name_note =>
       'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+  @override
+  String get shortcut_action_video_enter_caret =>
+      'Enter subtitle lookup cursor';
 }
 
 // Path: <root>
@@ -69675,6 +69704,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get anki_lapis_visual_field_dictionary_name_note =>
       'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+  @override
+  String get shortcut_action_video_enter_caret =>
+      'Enter subtitle lookup cursor';
 }
 
 // Path: <root>
@@ -76281,6 +76313,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get anki_lapis_visual_field_dictionary_name_note =>
       'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+  @override
+  String get shortcut_action_video_enter_caret =>
+      'Enter subtitle lookup cursor';
 }
 
 // Path: <root>
@@ -82835,6 +82870,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get anki_lapis_visual_field_dictionary_name_note =>
       'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+  @override
+  String get shortcut_action_video_enter_caret =>
+      'Enter subtitle lookup cursor';
 }
 
 // Path: <root>
@@ -89421,6 +89459,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get anki_lapis_visual_field_dictionary_name_note =>
       'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+  @override
+  String get shortcut_action_video_enter_caret =>
+      'Enter subtitle lookup cursor';
 }
 
 // Path: <root>
@@ -95992,6 +96033,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get anki_lapis_visual_field_dictionary_name_note =>
       'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+  @override
+  String get shortcut_action_video_enter_caret =>
+      'Enter subtitle lookup cursor';
 }
 
 // Path: <root>
@@ -102100,6 +102144,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get anki_lapis_visual_field_dictionary_name_note =>
       'Hibiki 生成的卡片把词性标签和词典名放在同一个标签里，两者无法分开设置样式。';
+  @override
+  String get shortcut_action_video_enter_caret => '进入字幕选词光标';
 }
 
 // Path: <root>
@@ -108467,6 +108513,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get anki_lapis_visual_field_dictionary_name_note =>
       'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+  @override
+  String get shortcut_action_video_enter_caret =>
+      'Enter subtitle lookup cursor';
 }
 
 /// Flat map(s) containing all translations.
@@ -114329,6 +114378,8 @@ extension on _StringsEn {
         return 'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
       case 'anki_lapis_visual_field_dictionary_name_note':
         return 'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+      case 'shortcut_action_video_enter_caret':
+        return 'Enter subtitle lookup cursor';
       default:
         return null;
     }
@@ -120189,6 +120240,8 @@ extension on _StringsAr {
         return 'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
       case 'anki_lapis_visual_field_dictionary_name_note':
         return 'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+      case 'shortcut_action_video_enter_caret':
+        return 'Enter subtitle lookup cursor';
       default:
         return null;
     }
@@ -126071,6 +126124,8 @@ extension on _StringsDe {
         return 'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
       case 'anki_lapis_visual_field_dictionary_name_note':
         return 'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+      case 'shortcut_action_video_enter_caret':
+        return 'Enter subtitle lookup cursor';
       default:
         return null;
     }
@@ -131952,6 +132007,8 @@ extension on _StringsEs {
         return 'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
       case 'anki_lapis_visual_field_dictionary_name_note':
         return 'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+      case 'shortcut_action_video_enter_caret':
+        return 'Enter subtitle lookup cursor';
       default:
         return null;
     }
@@ -137839,6 +137896,8 @@ extension on _StringsFr {
         return 'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
       case 'anki_lapis_visual_field_dictionary_name_note':
         return 'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+      case 'shortcut_action_video_enter_caret':
+        return 'Enter subtitle lookup cursor';
       default:
         return null;
     }
@@ -143708,6 +143767,8 @@ extension on _StringsId {
         return 'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
       case 'anki_lapis_visual_field_dictionary_name_note':
         return 'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+      case 'shortcut_action_video_enter_caret':
+        return 'Enter subtitle lookup cursor';
       default:
         return null;
     }
@@ -149591,6 +149652,8 @@ extension on _StringsIt {
         return 'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
       case 'anki_lapis_visual_field_dictionary_name_note':
         return 'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+      case 'shortcut_action_video_enter_caret':
+        return 'Enter subtitle lookup cursor';
       default:
         return null;
     }
@@ -155436,6 +155499,8 @@ extension on _StringsJa {
         return 'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
       case 'anki_lapis_visual_field_dictionary_name_note':
         return 'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+      case 'shortcut_action_video_enter_caret':
+        return 'Enter subtitle lookup cursor';
       default:
         return null;
     }
@@ -161285,6 +161350,8 @@ extension on _StringsKo {
         return 'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
       case 'anki_lapis_visual_field_dictionary_name_note':
         return 'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+      case 'shortcut_action_video_enter_caret':
+        return 'Enter subtitle lookup cursor';
       default:
         return null;
     }
@@ -167162,6 +167229,8 @@ extension on _StringsNl {
         return 'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
       case 'anki_lapis_visual_field_dictionary_name_note':
         return 'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+      case 'shortcut_action_video_enter_caret':
+        return 'Enter subtitle lookup cursor';
       default:
         return null;
     }
@@ -173036,6 +173105,8 @@ extension on _StringsPtBr {
         return 'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
       case 'anki_lapis_visual_field_dictionary_name_note':
         return 'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+      case 'shortcut_action_video_enter_caret':
+        return 'Enter subtitle lookup cursor';
       default:
         return null;
     }
@@ -178915,6 +178986,8 @@ extension on _StringsRu {
         return 'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
       case 'anki_lapis_visual_field_dictionary_name_note':
         return 'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+      case 'shortcut_action_video_enter_caret':
+        return 'Enter subtitle lookup cursor';
       default:
         return null;
     }
@@ -184777,6 +184850,8 @@ extension on _StringsTh {
         return 'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
       case 'anki_lapis_visual_field_dictionary_name_note':
         return 'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+      case 'shortcut_action_video_enter_caret':
+        return 'Enter subtitle lookup cursor';
       default:
         return null;
     }
@@ -190648,6 +190723,8 @@ extension on _StringsTr {
         return 'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
       case 'anki_lapis_visual_field_dictionary_name_note':
         return 'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+      case 'shortcut_action_video_enter_caret':
+        return 'Enter subtitle lookup cursor';
       default:
         return null;
     }
@@ -196515,6 +196592,8 @@ extension on _StringsVi {
         return 'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
       case 'anki_lapis_visual_field_dictionary_name_note':
         return 'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+      case 'shortcut_action_video_enter_caret':
+        return 'Enter subtitle lookup cursor';
       default:
         return null;
     }
@@ -202330,6 +202409,8 @@ extension on _StringsZhCn {
         return '仅在保留多段释义的卡片上可见；只有一段释义的卡片不会显示。';
       case 'anki_lapis_visual_field_dictionary_name_note':
         return 'Hibiki 生成的卡片把词性标签和词典名放在同一个标签里，两者无法分开设置样式。';
+      case 'shortcut_action_video_enter_caret':
+        return '进入字幕选词光标';
       default:
         return null;
     }
@@ -208170,6 +208251,8 @@ extension on _StringsZhHk {
         return 'Only visible on cards that keep more than one definition block; single-definition cards hide it.';
       case 'anki_lapis_visual_field_dictionary_name_note':
         return 'On Hibiki cards this label also carries the part-of-speech tags, so the two cannot be styled separately.';
+      case 'shortcut_action_video_enter_caret':
+        return 'Enter subtitle lookup cursor';
       default:
         return null;
     }
