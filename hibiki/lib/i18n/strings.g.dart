@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 49708 (2924 per locale)
+/// Strings: 49487 (2911 per locale)
 ///
-/// Built on 2026-08-01 at 06:44 UTC
+/// Built on 2026-08-01 at 06:16 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2995,7 +2995,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_jimaku_downloaded => 'Subtitle downloaded and applied';
   String get video_jimaku_episode => 'Episode (optional)';
   String get video_jimaku_episode_hint => 'Leave empty to list all';
-  String get video_jimaku_fetch => 'Fetch subtitles (Jimaku)';
+  String get video_jimaku_fetch => 'Auto-fetch subtitles (Jimaku)';
   String get video_jimaku_filter => 'Filter results (e.g. WEBRip, BD)';
   String get video_jimaku_find_sources => 'Find subtitles';
   String get video_jimaku_language => 'Language';
@@ -3089,9 +3089,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_scrape_source_offline => 'Offline';
   String get video_scrape_summary => 'Synopsis';
   String get video_scrape_tags => 'Tags';
-  String get video_scrape_tmdb_key_hint => 'Enter TMDB API key';
-  String get video_scrape_tmdb_key_required => 'TMDB requires an API key';
-  String get video_scrape_tmdb_key_save => 'Save';
   String get video_scrape_use => 'Use';
   String get video_scrape_view_subject => 'View on Bangumi';
   String get video_screenshot => 'Screenshot';
@@ -3741,13 +3738,11 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
           {required Object count, required Object languages}) =>
       '${count} subtitles available · ${languages}';
   String get video_scrape_manual_match_hint =>
-      'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+      'Manual matching replaces this episode cover and saves its source mapping and title metadata. All available sources are searched together and results are ranked by match confidence.';
   String get video_scrape_collection_match_hint =>
-      'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+      'This only replaces the collection cover. Episode covers and title metadata are not changed. All available sources are searched together and results are ranked by match confidence.';
   String get video_scrape_apply_to_collection_hint =>
       'This writes the same cover to every episode. Leave it off unless that is intentional.';
-  String get video_scrape_tmdb_key_empty =>
-      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
   String get manga_online_source_disabled =>
       'This internet source is disabled. Enable it in Sources to browse the catalog.';
   String get selection_web_search => 'Search the web';
@@ -3937,21 +3932,11 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get download_task_status_error => 'Error';
   String get download_task_pause => 'Pause';
   String get download_task_resume => 'Resume';
-  String get download_airing_calendar_title => 'Airing calendar';
-  String get download_airing_calendar_show_all => 'Show all this season';
-  String get download_airing_calendar_empty_guidance =>
-      'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
-  String get download_airing_calendar_error =>
-      'Failed to load the airing schedule';
-  String get download_airing_calendar_in_library => 'In library';
-  String get download_airing_calendar_subscribed => 'Subscribed';
-  String download_airing_calendar_episode_label({required Object episode}) =>
-      'Ep ${episode}';
-  String get download_airing_calendar_week_prev => 'Previous week';
-  String get download_airing_calendar_week_next => 'Next week';
-  String get download_airing_calendar_week_empty => 'Nothing airing this week';
-  String get video_jimaku_format => 'Format';
-  String get video_jimaku_format_all => 'All';
+  String get video_setting_tmdb_key => 'Custom TMDB API key';
+  String get video_setting_tmdb_key_hint =>
+      'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
+  String get about_tmdb_attribution =>
+      'This product uses the TMDB API but is not endorsed or certified by TMDB.';
 }
 
 // Path: <root>
@@ -9028,7 +9013,7 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_jimaku_episode_hint => 'Leave empty to list all';
   @override
-  String get video_jimaku_fetch => 'جلب الترجمات (Jimaku)';
+  String get video_jimaku_fetch => 'جلب الترجمات تلقائيًا (Jimaku)';
   @override
   String get video_jimaku_filter => 'تصفية النتائج (مثل WEBRip وBD)';
   @override
@@ -9198,12 +9183,6 @@ class _StringsAr extends _StringsEn {
   String get video_scrape_summary => 'Synopsis';
   @override
   String get video_scrape_tags => 'Tags';
-  @override
-  String get video_scrape_tmdb_key_hint => 'Enter TMDB API Key';
-  @override
-  String get video_scrape_tmdb_key_required => 'TMDB requires an API key';
-  @override
-  String get video_scrape_tmdb_key_save => 'Save';
   @override
   String get video_scrape_use => 'Use';
   @override
@@ -10317,16 +10296,13 @@ class _StringsAr extends _StringsEn {
       '${count} subtitles available · ${languages}';
   @override
   String get video_scrape_manual_match_hint =>
-      'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+      'Manual matching replaces this episode cover and saves its source mapping and title metadata. All available sources are searched together and results are ranked by match confidence.';
   @override
   String get video_scrape_collection_match_hint =>
-      'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+      'This only replaces the collection cover. Episode covers and title metadata are not changed. All available sources are searched together and results are ranked by match confidence.';
   @override
   String get video_scrape_apply_to_collection_hint =>
       'This writes the same cover to every episode. Leave it off unless that is intentional.';
-  @override
-  String get video_scrape_tmdb_key_empty =>
-      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
   @override
   String get manga_online_source_disabled =>
       'This internet source is disabled. Enable it in Sources to browse the catalog.';
@@ -10651,32 +10627,13 @@ class _StringsAr extends _StringsEn {
   @override
   String get download_task_resume => 'Resume';
   @override
-  String get download_airing_calendar_title => 'Airing calendar';
+  String get video_setting_tmdb_key => 'Custom TMDB API key';
   @override
-  String get download_airing_calendar_show_all => 'Show all this season';
+  String get video_setting_tmdb_key_hint =>
+      'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
   @override
-  String get download_airing_calendar_empty_guidance =>
-      'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
-  @override
-  String get download_airing_calendar_error =>
-      'Failed to load the airing schedule';
-  @override
-  String get download_airing_calendar_in_library => 'In library';
-  @override
-  String get download_airing_calendar_subscribed => 'Subscribed';
-  @override
-  String download_airing_calendar_episode_label({required Object episode}) =>
-      'Ep ${episode}';
-  @override
-  String get download_airing_calendar_week_prev => 'Previous week';
-  @override
-  String get download_airing_calendar_week_next => 'Next week';
-  @override
-  String get download_airing_calendar_week_empty => 'Nothing airing this week';
-  @override
-  String get video_jimaku_format => 'Format';
-  @override
-  String get video_jimaku_format_all => 'All';
+  String get about_tmdb_attribution =>
+      'This product uses the TMDB API but is not endorsed or certified by TMDB.';
 }
 
 // Path: <root>
@@ -15810,7 +15767,7 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_jimaku_episode_hint => 'Leave empty to list all';
   @override
-  String get video_jimaku_fetch => 'Untertitel holen (Jimaku)';
+  String get video_jimaku_fetch => 'Untertitel automatisch holen (Jimaku)';
   @override
   String get video_jimaku_filter => 'Ergebnisse filtern (z. B. WEBRip, BD)';
   @override
@@ -15981,12 +15938,6 @@ class _StringsDe extends _StringsEn {
   String get video_scrape_summary => 'Synopsis';
   @override
   String get video_scrape_tags => 'Tags';
-  @override
-  String get video_scrape_tmdb_key_hint => 'Enter TMDB API Key';
-  @override
-  String get video_scrape_tmdb_key_required => 'TMDB requires an API key';
-  @override
-  String get video_scrape_tmdb_key_save => 'Save';
   @override
   String get video_scrape_use => 'Use';
   @override
@@ -17109,16 +17060,13 @@ class _StringsDe extends _StringsEn {
       '${count} subtitles available · ${languages}';
   @override
   String get video_scrape_manual_match_hint =>
-      'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+      'Manual matching replaces this episode cover and saves its source mapping and title metadata. All available sources are searched together and results are ranked by match confidence.';
   @override
   String get video_scrape_collection_match_hint =>
-      'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+      'This only replaces the collection cover. Episode covers and title metadata are not changed. All available sources are searched together and results are ranked by match confidence.';
   @override
   String get video_scrape_apply_to_collection_hint =>
       'This writes the same cover to every episode. Leave it off unless that is intentional.';
-  @override
-  String get video_scrape_tmdb_key_empty =>
-      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
   @override
   String get manga_online_source_disabled =>
       'This internet source is disabled. Enable it in Sources to browse the catalog.';
@@ -17443,32 +17391,13 @@ class _StringsDe extends _StringsEn {
   @override
   String get download_task_resume => 'Resume';
   @override
-  String get download_airing_calendar_title => 'Airing calendar';
+  String get video_setting_tmdb_key => 'Custom TMDB API key';
   @override
-  String get download_airing_calendar_show_all => 'Show all this season';
+  String get video_setting_tmdb_key_hint =>
+      'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
   @override
-  String get download_airing_calendar_empty_guidance =>
-      'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
-  @override
-  String get download_airing_calendar_error =>
-      'Failed to load the airing schedule';
-  @override
-  String get download_airing_calendar_in_library => 'In library';
-  @override
-  String get download_airing_calendar_subscribed => 'Subscribed';
-  @override
-  String download_airing_calendar_episode_label({required Object episode}) =>
-      'Ep ${episode}';
-  @override
-  String get download_airing_calendar_week_prev => 'Previous week';
-  @override
-  String get download_airing_calendar_week_next => 'Next week';
-  @override
-  String get download_airing_calendar_week_empty => 'Nothing airing this week';
-  @override
-  String get video_jimaku_format => 'Format';
-  @override
-  String get video_jimaku_format_all => 'All';
+  String get about_tmdb_attribution =>
+      'This product uses the TMDB API but is not endorsed or certified by TMDB.';
 }
 
 // Path: <root>
@@ -22616,7 +22545,8 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_jimaku_episode_hint => 'Leave empty to list all';
   @override
-  String get video_jimaku_fetch => 'Obtener subtítulos (Jimaku)';
+  String get video_jimaku_fetch =>
+      'Obtener subtítulos automáticamente (Jimaku)';
   @override
   String get video_jimaku_filter => 'Filtrar resultados (p. ej. WEBRip, BD)';
   @override
@@ -22786,12 +22716,6 @@ class _StringsEs extends _StringsEn {
   String get video_scrape_summary => 'Synopsis';
   @override
   String get video_scrape_tags => 'Tags';
-  @override
-  String get video_scrape_tmdb_key_hint => 'Enter TMDB API Key';
-  @override
-  String get video_scrape_tmdb_key_required => 'TMDB requires an API key';
-  @override
-  String get video_scrape_tmdb_key_save => 'Save';
   @override
   String get video_scrape_use => 'Use';
   @override
@@ -23916,16 +23840,13 @@ class _StringsEs extends _StringsEn {
       '${count} subtitles available · ${languages}';
   @override
   String get video_scrape_manual_match_hint =>
-      'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+      'Manual matching replaces this episode cover and saves its source mapping and title metadata. All available sources are searched together and results are ranked by match confidence.';
   @override
   String get video_scrape_collection_match_hint =>
-      'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+      'This only replaces the collection cover. Episode covers and title metadata are not changed. All available sources are searched together and results are ranked by match confidence.';
   @override
   String get video_scrape_apply_to_collection_hint =>
       'This writes the same cover to every episode. Leave it off unless that is intentional.';
-  @override
-  String get video_scrape_tmdb_key_empty =>
-      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
   @override
   String get manga_online_source_disabled =>
       'This internet source is disabled. Enable it in Sources to browse the catalog.';
@@ -24250,32 +24171,13 @@ class _StringsEs extends _StringsEn {
   @override
   String get download_task_resume => 'Resume';
   @override
-  String get download_airing_calendar_title => 'Airing calendar';
+  String get video_setting_tmdb_key => 'Custom TMDB API key';
   @override
-  String get download_airing_calendar_show_all => 'Show all this season';
+  String get video_setting_tmdb_key_hint =>
+      'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
   @override
-  String get download_airing_calendar_empty_guidance =>
-      'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
-  @override
-  String get download_airing_calendar_error =>
-      'Failed to load the airing schedule';
-  @override
-  String get download_airing_calendar_in_library => 'In library';
-  @override
-  String get download_airing_calendar_subscribed => 'Subscribed';
-  @override
-  String download_airing_calendar_episode_label({required Object episode}) =>
-      'Ep ${episode}';
-  @override
-  String get download_airing_calendar_week_prev => 'Previous week';
-  @override
-  String get download_airing_calendar_week_next => 'Next week';
-  @override
-  String get download_airing_calendar_week_empty => 'Nothing airing this week';
-  @override
-  String get video_jimaku_format => 'Format';
-  @override
-  String get video_jimaku_format_all => 'All';
+  String get about_tmdb_attribution =>
+      'This product uses the TMDB API but is not endorsed or certified by TMDB.';
 }
 
 // Path: <root>
@@ -29435,7 +29337,7 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_jimaku_episode_hint => 'Leave empty to list all';
   @override
-  String get video_jimaku_fetch => 'Récupérer les sous-titres (Jimaku)';
+  String get video_jimaku_fetch => 'Récupération auto des sous-titres (Jimaku)';
   @override
   String get video_jimaku_filter => 'Filtrer les résultats (ex. WEBRip, BD)';
   @override
@@ -29605,12 +29507,6 @@ class _StringsFr extends _StringsEn {
   String get video_scrape_summary => 'Synopsis';
   @override
   String get video_scrape_tags => 'Tags';
-  @override
-  String get video_scrape_tmdb_key_hint => 'Enter TMDB API Key';
-  @override
-  String get video_scrape_tmdb_key_required => 'TMDB requires an API key';
-  @override
-  String get video_scrape_tmdb_key_save => 'Save';
   @override
   String get video_scrape_use => 'Use';
   @override
@@ -30735,16 +30631,13 @@ class _StringsFr extends _StringsEn {
       '${count} subtitles available · ${languages}';
   @override
   String get video_scrape_manual_match_hint =>
-      'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+      'Manual matching replaces this episode cover and saves its source mapping and title metadata. All available sources are searched together and results are ranked by match confidence.';
   @override
   String get video_scrape_collection_match_hint =>
-      'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+      'This only replaces the collection cover. Episode covers and title metadata are not changed. All available sources are searched together and results are ranked by match confidence.';
   @override
   String get video_scrape_apply_to_collection_hint =>
       'This writes the same cover to every episode. Leave it off unless that is intentional.';
-  @override
-  String get video_scrape_tmdb_key_empty =>
-      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
   @override
   String get manga_online_source_disabled =>
       'This internet source is disabled. Enable it in Sources to browse the catalog.';
@@ -31069,32 +30962,13 @@ class _StringsFr extends _StringsEn {
   @override
   String get download_task_resume => 'Resume';
   @override
-  String get download_airing_calendar_title => 'Airing calendar';
+  String get video_setting_tmdb_key => 'Custom TMDB API key';
   @override
-  String get download_airing_calendar_show_all => 'Show all this season';
+  String get video_setting_tmdb_key_hint =>
+      'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
   @override
-  String get download_airing_calendar_empty_guidance =>
-      'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
-  @override
-  String get download_airing_calendar_error =>
-      'Failed to load the airing schedule';
-  @override
-  String get download_airing_calendar_in_library => 'In library';
-  @override
-  String get download_airing_calendar_subscribed => 'Subscribed';
-  @override
-  String download_airing_calendar_episode_label({required Object episode}) =>
-      'Ep ${episode}';
-  @override
-  String get download_airing_calendar_week_prev => 'Previous week';
-  @override
-  String get download_airing_calendar_week_next => 'Next week';
-  @override
-  String get download_airing_calendar_week_empty => 'Nothing airing this week';
-  @override
-  String get video_jimaku_format => 'Format';
-  @override
-  String get video_jimaku_format_all => 'All';
+  String get about_tmdb_attribution =>
+      'This product uses the TMDB API but is not endorsed or certified by TMDB.';
 }
 
 // Path: <root>
@@ -36192,7 +36066,7 @@ class _StringsId extends _StringsEn {
   @override
   String get video_jimaku_episode_hint => 'Leave empty to list all';
   @override
-  String get video_jimaku_fetch => 'Ambil subtitle (Jimaku)';
+  String get video_jimaku_fetch => 'Ambil subtitle otomatis (Jimaku)';
   @override
   String get video_jimaku_filter => 'Saring hasil (mis. WEBRip, BD)';
   @override
@@ -36362,12 +36236,6 @@ class _StringsId extends _StringsEn {
   String get video_scrape_summary => 'Synopsis';
   @override
   String get video_scrape_tags => 'Tags';
-  @override
-  String get video_scrape_tmdb_key_hint => 'Enter TMDB API Key';
-  @override
-  String get video_scrape_tmdb_key_required => 'TMDB requires an API key';
-  @override
-  String get video_scrape_tmdb_key_save => 'Save';
   @override
   String get video_scrape_use => 'Use';
   @override
@@ -37483,16 +37351,13 @@ class _StringsId extends _StringsEn {
       '${count} subtitles available · ${languages}';
   @override
   String get video_scrape_manual_match_hint =>
-      'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+      'Manual matching replaces this episode cover and saves its source mapping and title metadata. All available sources are searched together and results are ranked by match confidence.';
   @override
   String get video_scrape_collection_match_hint =>
-      'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+      'This only replaces the collection cover. Episode covers and title metadata are not changed. All available sources are searched together and results are ranked by match confidence.';
   @override
   String get video_scrape_apply_to_collection_hint =>
       'This writes the same cover to every episode. Leave it off unless that is intentional.';
-  @override
-  String get video_scrape_tmdb_key_empty =>
-      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
   @override
   String get manga_online_source_disabled =>
       'This internet source is disabled. Enable it in Sources to browse the catalog.';
@@ -37817,32 +37682,13 @@ class _StringsId extends _StringsEn {
   @override
   String get download_task_resume => 'Resume';
   @override
-  String get download_airing_calendar_title => 'Airing calendar';
+  String get video_setting_tmdb_key => 'Custom TMDB API key';
   @override
-  String get download_airing_calendar_show_all => 'Show all this season';
+  String get video_setting_tmdb_key_hint =>
+      'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
   @override
-  String get download_airing_calendar_empty_guidance =>
-      'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
-  @override
-  String get download_airing_calendar_error =>
-      'Failed to load the airing schedule';
-  @override
-  String get download_airing_calendar_in_library => 'In library';
-  @override
-  String get download_airing_calendar_subscribed => 'Subscribed';
-  @override
-  String download_airing_calendar_episode_label({required Object episode}) =>
-      'Ep ${episode}';
-  @override
-  String get download_airing_calendar_week_prev => 'Previous week';
-  @override
-  String get download_airing_calendar_week_next => 'Next week';
-  @override
-  String get download_airing_calendar_week_empty => 'Nothing airing this week';
-  @override
-  String get video_jimaku_format => 'Format';
-  @override
-  String get video_jimaku_format_all => 'All';
+  String get about_tmdb_attribution =>
+      'This product uses the TMDB API but is not endorsed or certified by TMDB.';
 }
 
 // Path: <root>
@@ -42979,7 +42825,7 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_jimaku_episode_hint => 'Leave empty to list all';
   @override
-  String get video_jimaku_fetch => 'Recupera sottotitoli (Jimaku)';
+  String get video_jimaku_fetch => 'Recupero automatico sottotitoli (Jimaku)';
   @override
   String get video_jimaku_filter => 'Filtra risultati (es. WEBRip, BD)';
   @override
@@ -43149,12 +42995,6 @@ class _StringsIt extends _StringsEn {
   String get video_scrape_summary => 'Synopsis';
   @override
   String get video_scrape_tags => 'Tags';
-  @override
-  String get video_scrape_tmdb_key_hint => 'Enter TMDB API Key';
-  @override
-  String get video_scrape_tmdb_key_required => 'TMDB requires an API key';
-  @override
-  String get video_scrape_tmdb_key_save => 'Save';
   @override
   String get video_scrape_use => 'Use';
   @override
@@ -44277,16 +44117,13 @@ class _StringsIt extends _StringsEn {
       '${count} subtitles available · ${languages}';
   @override
   String get video_scrape_manual_match_hint =>
-      'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+      'Manual matching replaces this episode cover and saves its source mapping and title metadata. All available sources are searched together and results are ranked by match confidence.';
   @override
   String get video_scrape_collection_match_hint =>
-      'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+      'This only replaces the collection cover. Episode covers and title metadata are not changed. All available sources are searched together and results are ranked by match confidence.';
   @override
   String get video_scrape_apply_to_collection_hint =>
       'This writes the same cover to every episode. Leave it off unless that is intentional.';
-  @override
-  String get video_scrape_tmdb_key_empty =>
-      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
   @override
   String get manga_online_source_disabled =>
       'This internet source is disabled. Enable it in Sources to browse the catalog.';
@@ -44611,32 +44448,13 @@ class _StringsIt extends _StringsEn {
   @override
   String get download_task_resume => 'Resume';
   @override
-  String get download_airing_calendar_title => 'Airing calendar';
+  String get video_setting_tmdb_key => 'Custom TMDB API key';
   @override
-  String get download_airing_calendar_show_all => 'Show all this season';
+  String get video_setting_tmdb_key_hint =>
+      'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
   @override
-  String get download_airing_calendar_empty_guidance =>
-      'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
-  @override
-  String get download_airing_calendar_error =>
-      'Failed to load the airing schedule';
-  @override
-  String get download_airing_calendar_in_library => 'In library';
-  @override
-  String get download_airing_calendar_subscribed => 'Subscribed';
-  @override
-  String download_airing_calendar_episode_label({required Object episode}) =>
-      'Ep ${episode}';
-  @override
-  String get download_airing_calendar_week_prev => 'Previous week';
-  @override
-  String get download_airing_calendar_week_next => 'Next week';
-  @override
-  String get download_airing_calendar_week_empty => 'Nothing airing this week';
-  @override
-  String get video_jimaku_format => 'Format';
-  @override
-  String get video_jimaku_format_all => 'All';
+  String get about_tmdb_attribution =>
+      'This product uses the TMDB API but is not endorsed or certified by TMDB.';
 }
 
 // Path: <root>
@@ -49618,7 +49436,7 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_jimaku_episode_hint => 'Leave empty to list all';
   @override
-  String get video_jimaku_fetch => '字幕を取得（Jimaku）';
+  String get video_jimaku_fetch => '字幕を自動取得（Jimaku）';
   @override
   String get video_jimaku_filter => '結果を絞り込み（WEBRip、BD など）';
   @override
@@ -49788,12 +49606,6 @@ class _StringsJa extends _StringsEn {
   String get video_scrape_summary => 'Synopsis';
   @override
   String get video_scrape_tags => 'Tags';
-  @override
-  String get video_scrape_tmdb_key_hint => 'Enter TMDB API Key';
-  @override
-  String get video_scrape_tmdb_key_required => 'TMDB requires an API key';
-  @override
-  String get video_scrape_tmdb_key_save => 'Save';
   @override
   String get video_scrape_use => 'Use';
   @override
@@ -50888,16 +50700,13 @@ class _StringsJa extends _StringsEn {
       '${count} subtitles available · ${languages}';
   @override
   String get video_scrape_manual_match_hint =>
-      'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+      'Manual matching replaces this episode cover and saves its source mapping and title metadata. All available sources are searched together and results are ranked by match confidence.';
   @override
   String get video_scrape_collection_match_hint =>
-      'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+      'This only replaces the collection cover. Episode covers and title metadata are not changed. All available sources are searched together and results are ranked by match confidence.';
   @override
   String get video_scrape_apply_to_collection_hint =>
       'This writes the same cover to every episode. Leave it off unless that is intentional.';
-  @override
-  String get video_scrape_tmdb_key_empty =>
-      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
   @override
   String get manga_online_source_disabled =>
       'This internet source is disabled. Enable it in Sources to browse the catalog.';
@@ -51222,32 +51031,13 @@ class _StringsJa extends _StringsEn {
   @override
   String get download_task_resume => 'Resume';
   @override
-  String get download_airing_calendar_title => 'Airing calendar';
+  String get video_setting_tmdb_key => 'Custom TMDB API key';
   @override
-  String get download_airing_calendar_show_all => 'Show all this season';
+  String get video_setting_tmdb_key_hint =>
+      'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
   @override
-  String get download_airing_calendar_empty_guidance =>
-      'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
-  @override
-  String get download_airing_calendar_error =>
-      'Failed to load the airing schedule';
-  @override
-  String get download_airing_calendar_in_library => 'In library';
-  @override
-  String get download_airing_calendar_subscribed => 'Subscribed';
-  @override
-  String download_airing_calendar_episode_label({required Object episode}) =>
-      'Ep ${episode}';
-  @override
-  String get download_airing_calendar_week_prev => 'Previous week';
-  @override
-  String get download_airing_calendar_week_next => 'Next week';
-  @override
-  String get download_airing_calendar_week_empty => 'Nothing airing this week';
-  @override
-  String get video_jimaku_format => 'Format';
-  @override
-  String get video_jimaku_format_all => 'All';
+  String get about_tmdb_attribution =>
+      'This product uses the TMDB API but is not endorsed or certified by TMDB.';
 }
 
 // Path: <root>
@@ -56228,7 +56018,7 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_jimaku_episode_hint => 'Leave empty to list all';
   @override
-  String get video_jimaku_fetch => '자막 가져오기(Jimaku)';
+  String get video_jimaku_fetch => '자막 자동 가져오기(Jimaku)';
   @override
   String get video_jimaku_filter => '결과 필터(예: WEBRip, BD)';
   @override
@@ -56398,12 +56188,6 @@ class _StringsKo extends _StringsEn {
   String get video_scrape_summary => 'Synopsis';
   @override
   String get video_scrape_tags => 'Tags';
-  @override
-  String get video_scrape_tmdb_key_hint => 'Enter TMDB API Key';
-  @override
-  String get video_scrape_tmdb_key_required => 'TMDB requires an API key';
-  @override
-  String get video_scrape_tmdb_key_save => 'Save';
   @override
   String get video_scrape_use => 'Use';
   @override
@@ -57501,16 +57285,13 @@ class _StringsKo extends _StringsEn {
       '${count} subtitles available · ${languages}';
   @override
   String get video_scrape_manual_match_hint =>
-      'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+      'Manual matching replaces this episode cover and saves its source mapping and title metadata. All available sources are searched together and results are ranked by match confidence.';
   @override
   String get video_scrape_collection_match_hint =>
-      'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+      'This only replaces the collection cover. Episode covers and title metadata are not changed. All available sources are searched together and results are ranked by match confidence.';
   @override
   String get video_scrape_apply_to_collection_hint =>
       'This writes the same cover to every episode. Leave it off unless that is intentional.';
-  @override
-  String get video_scrape_tmdb_key_empty =>
-      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
   @override
   String get manga_online_source_disabled =>
       'This internet source is disabled. Enable it in Sources to browse the catalog.';
@@ -57835,32 +57616,13 @@ class _StringsKo extends _StringsEn {
   @override
   String get download_task_resume => 'Resume';
   @override
-  String get download_airing_calendar_title => 'Airing calendar';
+  String get video_setting_tmdb_key => 'Custom TMDB API key';
   @override
-  String get download_airing_calendar_show_all => 'Show all this season';
+  String get video_setting_tmdb_key_hint =>
+      'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
   @override
-  String get download_airing_calendar_empty_guidance =>
-      'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
-  @override
-  String get download_airing_calendar_error =>
-      'Failed to load the airing schedule';
-  @override
-  String get download_airing_calendar_in_library => 'In library';
-  @override
-  String get download_airing_calendar_subscribed => 'Subscribed';
-  @override
-  String download_airing_calendar_episode_label({required Object episode}) =>
-      'Ep ${episode}';
-  @override
-  String get download_airing_calendar_week_prev => 'Previous week';
-  @override
-  String get download_airing_calendar_week_next => 'Next week';
-  @override
-  String get download_airing_calendar_week_empty => 'Nothing airing this week';
-  @override
-  String get video_jimaku_format => 'Format';
-  @override
-  String get video_jimaku_format_all => 'All';
+  String get about_tmdb_attribution =>
+      'This product uses the TMDB API but is not endorsed or certified by TMDB.';
 }
 
 // Path: <root>
@@ -62981,7 +62743,7 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_jimaku_episode_hint => 'Leave empty to list all';
   @override
-  String get video_jimaku_fetch => 'Ondertitels ophalen (Jimaku)';
+  String get video_jimaku_fetch => 'Ondertitels automatisch ophalen (Jimaku)';
   @override
   String get video_jimaku_filter => 'Resultaten filteren (bijv. WEBRip, BD)';
   @override
@@ -63151,12 +62913,6 @@ class _StringsNl extends _StringsEn {
   String get video_scrape_summary => 'Synopsis';
   @override
   String get video_scrape_tags => 'Tags';
-  @override
-  String get video_scrape_tmdb_key_hint => 'Enter TMDB API Key';
-  @override
-  String get video_scrape_tmdb_key_required => 'TMDB requires an API key';
-  @override
-  String get video_scrape_tmdb_key_save => 'Save';
   @override
   String get video_scrape_use => 'Use';
   @override
@@ -64275,16 +64031,13 @@ class _StringsNl extends _StringsEn {
       '${count} subtitles available · ${languages}';
   @override
   String get video_scrape_manual_match_hint =>
-      'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+      'Manual matching replaces this episode cover and saves its source mapping and title metadata. All available sources are searched together and results are ranked by match confidence.';
   @override
   String get video_scrape_collection_match_hint =>
-      'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+      'This only replaces the collection cover. Episode covers and title metadata are not changed. All available sources are searched together and results are ranked by match confidence.';
   @override
   String get video_scrape_apply_to_collection_hint =>
       'This writes the same cover to every episode. Leave it off unless that is intentional.';
-  @override
-  String get video_scrape_tmdb_key_empty =>
-      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
   @override
   String get manga_online_source_disabled =>
       'This internet source is disabled. Enable it in Sources to browse the catalog.';
@@ -64609,32 +64362,13 @@ class _StringsNl extends _StringsEn {
   @override
   String get download_task_resume => 'Resume';
   @override
-  String get download_airing_calendar_title => 'Airing calendar';
+  String get video_setting_tmdb_key => 'Custom TMDB API key';
   @override
-  String get download_airing_calendar_show_all => 'Show all this season';
+  String get video_setting_tmdb_key_hint =>
+      'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
   @override
-  String get download_airing_calendar_empty_guidance =>
-      'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
-  @override
-  String get download_airing_calendar_error =>
-      'Failed to load the airing schedule';
-  @override
-  String get download_airing_calendar_in_library => 'In library';
-  @override
-  String get download_airing_calendar_subscribed => 'Subscribed';
-  @override
-  String download_airing_calendar_episode_label({required Object episode}) =>
-      'Ep ${episode}';
-  @override
-  String get download_airing_calendar_week_prev => 'Previous week';
-  @override
-  String get download_airing_calendar_week_next => 'Next week';
-  @override
-  String get download_airing_calendar_week_empty => 'Nothing airing this week';
-  @override
-  String get video_jimaku_format => 'Format';
-  @override
-  String get video_jimaku_format_all => 'All';
+  String get about_tmdb_attribution =>
+      'This product uses the TMDB API but is not endorsed or certified by TMDB.';
 }
 
 // Path: <root>
@@ -69765,7 +69499,7 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_jimaku_episode_hint => 'Leave empty to list all';
   @override
-  String get video_jimaku_fetch => 'Buscar legendas (Jimaku)';
+  String get video_jimaku_fetch => 'Buscar legendas automaticamente (Jimaku)';
   @override
   String get video_jimaku_filter => 'Filtrar resultados (ex.: WEBRip, BD)';
   @override
@@ -69935,12 +69669,6 @@ class _StringsPtBr extends _StringsEn {
   String get video_scrape_summary => 'Synopsis';
   @override
   String get video_scrape_tags => 'Tags';
-  @override
-  String get video_scrape_tmdb_key_hint => 'Enter TMDB API Key';
-  @override
-  String get video_scrape_tmdb_key_required => 'TMDB requires an API key';
-  @override
-  String get video_scrape_tmdb_key_save => 'Save';
   @override
   String get video_scrape_use => 'Use';
   @override
@@ -71062,16 +70790,13 @@ class _StringsPtBr extends _StringsEn {
       '${count} subtitles available · ${languages}';
   @override
   String get video_scrape_manual_match_hint =>
-      'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+      'Manual matching replaces this episode cover and saves its source mapping and title metadata. All available sources are searched together and results are ranked by match confidence.';
   @override
   String get video_scrape_collection_match_hint =>
-      'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+      'This only replaces the collection cover. Episode covers and title metadata are not changed. All available sources are searched together and results are ranked by match confidence.';
   @override
   String get video_scrape_apply_to_collection_hint =>
       'This writes the same cover to every episode. Leave it off unless that is intentional.';
-  @override
-  String get video_scrape_tmdb_key_empty =>
-      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
   @override
   String get manga_online_source_disabled =>
       'This internet source is disabled. Enable it in Sources to browse the catalog.';
@@ -71396,32 +71121,13 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get download_task_resume => 'Resume';
   @override
-  String get download_airing_calendar_title => 'Airing calendar';
+  String get video_setting_tmdb_key => 'Custom TMDB API key';
   @override
-  String get download_airing_calendar_show_all => 'Show all this season';
+  String get video_setting_tmdb_key_hint =>
+      'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
   @override
-  String get download_airing_calendar_empty_guidance =>
-      'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
-  @override
-  String get download_airing_calendar_error =>
-      'Failed to load the airing schedule';
-  @override
-  String get download_airing_calendar_in_library => 'In library';
-  @override
-  String get download_airing_calendar_subscribed => 'Subscribed';
-  @override
-  String download_airing_calendar_episode_label({required Object episode}) =>
-      'Ep ${episode}';
-  @override
-  String get download_airing_calendar_week_prev => 'Previous week';
-  @override
-  String get download_airing_calendar_week_next => 'Next week';
-  @override
-  String get download_airing_calendar_week_empty => 'Nothing airing this week';
-  @override
-  String get video_jimaku_format => 'Format';
-  @override
-  String get video_jimaku_format_all => 'All';
+  String get about_tmdb_attribution =>
+      'This product uses the TMDB API but is not endorsed or certified by TMDB.';
 }
 
 // Path: <root>
@@ -76540,7 +76246,7 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_jimaku_episode_hint => 'Leave empty to list all';
   @override
-  String get video_jimaku_fetch => 'Загрузить субтитры (Jimaku)';
+  String get video_jimaku_fetch => 'Авто-загрузка субтитров (Jimaku)';
   @override
   String get video_jimaku_filter => 'Фильтр результатов (например, WEBRip, BD)';
   @override
@@ -76710,12 +76416,6 @@ class _StringsRu extends _StringsEn {
   String get video_scrape_summary => 'Synopsis';
   @override
   String get video_scrape_tags => 'Tags';
-  @override
-  String get video_scrape_tmdb_key_hint => 'Enter TMDB API Key';
-  @override
-  String get video_scrape_tmdb_key_required => 'TMDB requires an API key';
-  @override
-  String get video_scrape_tmdb_key_save => 'Save';
   @override
   String get video_scrape_use => 'Use';
   @override
@@ -77833,16 +77533,13 @@ class _StringsRu extends _StringsEn {
       '${count} subtitles available · ${languages}';
   @override
   String get video_scrape_manual_match_hint =>
-      'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+      'Manual matching replaces this episode cover and saves its source mapping and title metadata. All available sources are searched together and results are ranked by match confidence.';
   @override
   String get video_scrape_collection_match_hint =>
-      'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+      'This only replaces the collection cover. Episode covers and title metadata are not changed. All available sources are searched together and results are ranked by match confidence.';
   @override
   String get video_scrape_apply_to_collection_hint =>
       'This writes the same cover to every episode. Leave it off unless that is intentional.';
-  @override
-  String get video_scrape_tmdb_key_empty =>
-      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
   @override
   String get manga_online_source_disabled =>
       'This internet source is disabled. Enable it in Sources to browse the catalog.';
@@ -78167,32 +77864,13 @@ class _StringsRu extends _StringsEn {
   @override
   String get download_task_resume => 'Resume';
   @override
-  String get download_airing_calendar_title => 'Airing calendar';
+  String get video_setting_tmdb_key => 'Custom TMDB API key';
   @override
-  String get download_airing_calendar_show_all => 'Show all this season';
+  String get video_setting_tmdb_key_hint =>
+      'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
   @override
-  String get download_airing_calendar_empty_guidance =>
-      'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
-  @override
-  String get download_airing_calendar_error =>
-      'Failed to load the airing schedule';
-  @override
-  String get download_airing_calendar_in_library => 'In library';
-  @override
-  String get download_airing_calendar_subscribed => 'Subscribed';
-  @override
-  String download_airing_calendar_episode_label({required Object episode}) =>
-      'Ep ${episode}';
-  @override
-  String get download_airing_calendar_week_prev => 'Previous week';
-  @override
-  String get download_airing_calendar_week_next => 'Next week';
-  @override
-  String get download_airing_calendar_week_empty => 'Nothing airing this week';
-  @override
-  String get video_jimaku_format => 'Format';
-  @override
-  String get video_jimaku_format_all => 'All';
+  String get about_tmdb_attribution =>
+      'This product uses the TMDB API but is not endorsed or certified by TMDB.';
 }
 
 // Path: <root>
@@ -83265,7 +82943,7 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_jimaku_episode_hint => 'Leave empty to list all';
   @override
-  String get video_jimaku_fetch => 'ดึงคำบรรยาย (Jimaku)';
+  String get video_jimaku_fetch => 'ดึงคำบรรยายอัตโนมัติ (Jimaku)';
   @override
   String get video_jimaku_filter => 'กรองผลลัพธ์ (เช่น WEBRip, BD)';
   @override
@@ -83435,12 +83113,6 @@ class _StringsTh extends _StringsEn {
   String get video_scrape_summary => 'Synopsis';
   @override
   String get video_scrape_tags => 'Tags';
-  @override
-  String get video_scrape_tmdb_key_hint => 'Enter TMDB API Key';
-  @override
-  String get video_scrape_tmdb_key_required => 'TMDB requires an API key';
-  @override
-  String get video_scrape_tmdb_key_save => 'Save';
   @override
   String get video_scrape_use => 'Use';
   @override
@@ -84552,16 +84224,13 @@ class _StringsTh extends _StringsEn {
       '${count} subtitles available · ${languages}';
   @override
   String get video_scrape_manual_match_hint =>
-      'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+      'Manual matching replaces this episode cover and saves its source mapping and title metadata. All available sources are searched together and results are ranked by match confidence.';
   @override
   String get video_scrape_collection_match_hint =>
-      'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+      'This only replaces the collection cover. Episode covers and title metadata are not changed. All available sources are searched together and results are ranked by match confidence.';
   @override
   String get video_scrape_apply_to_collection_hint =>
       'This writes the same cover to every episode. Leave it off unless that is intentional.';
-  @override
-  String get video_scrape_tmdb_key_empty =>
-      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
   @override
   String get manga_online_source_disabled =>
       'This internet source is disabled. Enable it in Sources to browse the catalog.';
@@ -84886,32 +84555,13 @@ class _StringsTh extends _StringsEn {
   @override
   String get download_task_resume => 'Resume';
   @override
-  String get download_airing_calendar_title => 'Airing calendar';
+  String get video_setting_tmdb_key => 'Custom TMDB API key';
   @override
-  String get download_airing_calendar_show_all => 'Show all this season';
+  String get video_setting_tmdb_key_hint =>
+      'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
   @override
-  String get download_airing_calendar_empty_guidance =>
-      'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
-  @override
-  String get download_airing_calendar_error =>
-      'Failed to load the airing schedule';
-  @override
-  String get download_airing_calendar_in_library => 'In library';
-  @override
-  String get download_airing_calendar_subscribed => 'Subscribed';
-  @override
-  String download_airing_calendar_episode_label({required Object episode}) =>
-      'Ep ${episode}';
-  @override
-  String get download_airing_calendar_week_prev => 'Previous week';
-  @override
-  String get download_airing_calendar_week_next => 'Next week';
-  @override
-  String get download_airing_calendar_week_empty => 'Nothing airing this week';
-  @override
-  String get video_jimaku_format => 'Format';
-  @override
-  String get video_jimaku_format_all => 'All';
+  String get about_tmdb_attribution =>
+      'This product uses the TMDB API but is not endorsed or certified by TMDB.';
 }
 
 // Path: <root>
@@ -90012,7 +89662,7 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_jimaku_episode_hint => 'Leave empty to list all';
   @override
-  String get video_jimaku_fetch => 'Altyazıları getir (Jimaku)';
+  String get video_jimaku_fetch => 'Altyazıları otomatik getir (Jimaku)';
   @override
   String get video_jimaku_filter => 'Sonuçları filtrele (ör. WEBRip, BD)';
   @override
@@ -90182,12 +89832,6 @@ class _StringsTr extends _StringsEn {
   String get video_scrape_summary => 'Synopsis';
   @override
   String get video_scrape_tags => 'Tags';
-  @override
-  String get video_scrape_tmdb_key_hint => 'Enter TMDB API Key';
-  @override
-  String get video_scrape_tmdb_key_required => 'TMDB requires an API key';
-  @override
-  String get video_scrape_tmdb_key_save => 'Save';
   @override
   String get video_scrape_use => 'Use';
   @override
@@ -91303,16 +90947,13 @@ class _StringsTr extends _StringsEn {
       '${count} subtitles available · ${languages}';
   @override
   String get video_scrape_manual_match_hint =>
-      'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+      'Manual matching replaces this episode cover and saves its source mapping and title metadata. All available sources are searched together and results are ranked by match confidence.';
   @override
   String get video_scrape_collection_match_hint =>
-      'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+      'This only replaces the collection cover. Episode covers and title metadata are not changed. All available sources are searched together and results are ranked by match confidence.';
   @override
   String get video_scrape_apply_to_collection_hint =>
       'This writes the same cover to every episode. Leave it off unless that is intentional.';
-  @override
-  String get video_scrape_tmdb_key_empty =>
-      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
   @override
   String get manga_online_source_disabled =>
       'This internet source is disabled. Enable it in Sources to browse the catalog.';
@@ -91637,32 +91278,13 @@ class _StringsTr extends _StringsEn {
   @override
   String get download_task_resume => 'Resume';
   @override
-  String get download_airing_calendar_title => 'Airing calendar';
+  String get video_setting_tmdb_key => 'Custom TMDB API key';
   @override
-  String get download_airing_calendar_show_all => 'Show all this season';
+  String get video_setting_tmdb_key_hint =>
+      'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
   @override
-  String get download_airing_calendar_empty_guidance =>
-      'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
-  @override
-  String get download_airing_calendar_error =>
-      'Failed to load the airing schedule';
-  @override
-  String get download_airing_calendar_in_library => 'In library';
-  @override
-  String get download_airing_calendar_subscribed => 'Subscribed';
-  @override
-  String download_airing_calendar_episode_label({required Object episode}) =>
-      'Ep ${episode}';
-  @override
-  String get download_airing_calendar_week_prev => 'Previous week';
-  @override
-  String get download_airing_calendar_week_next => 'Next week';
-  @override
-  String get download_airing_calendar_week_empty => 'Nothing airing this week';
-  @override
-  String get video_jimaku_format => 'Format';
-  @override
-  String get video_jimaku_format_all => 'All';
+  String get about_tmdb_attribution =>
+      'This product uses the TMDB API but is not endorsed or certified by TMDB.';
 }
 
 // Path: <root>
@@ -96752,7 +96374,7 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_jimaku_episode_hint => 'Leave empty to list all';
   @override
-  String get video_jimaku_fetch => 'Lấy phụ đề (Jimaku)';
+  String get video_jimaku_fetch => 'Tự lấy phụ đề (Jimaku)';
   @override
   String get video_jimaku_filter => 'Lọc kết quả (vd WEBRip, BD)';
   @override
@@ -96922,12 +96544,6 @@ class _StringsVi extends _StringsEn {
   String get video_scrape_summary => 'Synopsis';
   @override
   String get video_scrape_tags => 'Tags';
-  @override
-  String get video_scrape_tmdb_key_hint => 'Enter TMDB API Key';
-  @override
-  String get video_scrape_tmdb_key_required => 'TMDB requires an API key';
-  @override
-  String get video_scrape_tmdb_key_save => 'Save';
   @override
   String get video_scrape_use => 'Use';
   @override
@@ -98039,16 +97655,13 @@ class _StringsVi extends _StringsEn {
       '${count} subtitles available · ${languages}';
   @override
   String get video_scrape_manual_match_hint =>
-      'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+      'Manual matching replaces this episode cover and saves its source mapping and title metadata. All available sources are searched together and results are ranked by match confidence.';
   @override
   String get video_scrape_collection_match_hint =>
-      'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+      'This only replaces the collection cover. Episode covers and title metadata are not changed. All available sources are searched together and results are ranked by match confidence.';
   @override
   String get video_scrape_apply_to_collection_hint =>
       'This writes the same cover to every episode. Leave it off unless that is intentional.';
-  @override
-  String get video_scrape_tmdb_key_empty =>
-      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
   @override
   String get manga_online_source_disabled =>
       'This internet source is disabled. Enable it in Sources to browse the catalog.';
@@ -98373,32 +97986,13 @@ class _StringsVi extends _StringsEn {
   @override
   String get download_task_resume => 'Resume';
   @override
-  String get download_airing_calendar_title => 'Airing calendar';
+  String get video_setting_tmdb_key => 'Custom TMDB API key';
   @override
-  String get download_airing_calendar_show_all => 'Show all this season';
+  String get video_setting_tmdb_key_hint =>
+      'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
   @override
-  String get download_airing_calendar_empty_guidance =>
-      'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
-  @override
-  String get download_airing_calendar_error =>
-      'Failed to load the airing schedule';
-  @override
-  String get download_airing_calendar_in_library => 'In library';
-  @override
-  String get download_airing_calendar_subscribed => 'Subscribed';
-  @override
-  String download_airing_calendar_episode_label({required Object episode}) =>
-      'Ep ${episode}';
-  @override
-  String get download_airing_calendar_week_prev => 'Previous week';
-  @override
-  String get download_airing_calendar_week_next => 'Next week';
-  @override
-  String get download_airing_calendar_week_empty => 'Nothing airing this week';
-  @override
-  String get video_jimaku_format => 'Format';
-  @override
-  String get video_jimaku_format_all => 'All';
+  String get about_tmdb_attribution =>
+      'This product uses the TMDB API but is not endorsed or certified by TMDB.';
 }
 
 // Path: <root>
@@ -103142,7 +102736,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_jimaku_episode_hint => '留空列出全部';
   @override
-  String get video_jimaku_fetch => '获取字幕（Jimaku）';
+  String get video_jimaku_fetch => '自动获取字幕（Jimaku）';
   @override
   String get video_jimaku_filter => '筛选结果（如 WEBRip、BD）';
   @override
@@ -103299,12 +102893,6 @@ class _StringsZhCn extends _StringsEn {
   String get video_scrape_summary => '简介';
   @override
   String get video_scrape_tags => '标签';
-  @override
-  String get video_scrape_tmdb_key_hint => '输入 TMDB API Key';
-  @override
-  String get video_scrape_tmdb_key_required => 'TMDB 需要 API Key';
-  @override
-  String get video_scrape_tmdb_key_save => '保存';
   @override
   String get video_scrape_use => '使用';
   @override
@@ -104324,16 +103912,13 @@ class _StringsZhCn extends _StringsEn {
       '有 ${count} 个字幕 · ${languages}';
   @override
   String get video_scrape_manual_match_hint =>
-      '手动匹配会替换本集封面，并保存来源映射和条目资料。切换来源后，点“搜索”才会请求该来源。';
+      '手动匹配会替换本集封面，并保存来源映射和条目资料。会同时搜索全部可用来源，结果按匹配度排序。';
   @override
   String get video_scrape_collection_match_hint =>
-      '这里只替换合集封面，不会修改各集封面或条目资料。切换来源后，点“搜索”才会请求该来源。';
+      '这里只替换合集封面，不会修改各集封面或条目资料。会同时搜索全部可用来源，结果按匹配度排序。';
   @override
   String get video_scrape_apply_to_collection_hint =>
       '这会把同一张封面写到每一集；只有确实需要统一单集封面时才开启。';
-  @override
-  String get video_scrape_tmdb_key_empty =>
-      '先保存 TMDB API Key，再点“搜索”。这里不会混入其他来源的结果。';
   @override
   String get manga_online_source_disabled => '此互联网来源已关闭，请在「来源」中开启后浏览目录。';
   @override
@@ -104635,31 +104220,13 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get download_task_resume => '恢复';
   @override
-  String get download_airing_calendar_title => '放送日历';
+  String get video_setting_tmdb_key => '自定义 TMDB API Key';
   @override
-  String get download_airing_calendar_show_all => '显示本季全部';
+  String get video_setting_tmdb_key_hint =>
+      '可留空，默认用内置 Key。仅当刮削失效或你想用自己的配额时才需要填写。';
   @override
-  String get download_airing_calendar_empty_guidance =>
-      '暂无可显示的放送信息：给合集绑定 AniList 或添加下载订阅后，这里会显示对应的放送时间。';
-  @override
-  String get download_airing_calendar_error => '放送时间表加载失败';
-  @override
-  String get download_airing_calendar_in_library => '已入库';
-  @override
-  String get download_airing_calendar_subscribed => '订阅中';
-  @override
-  String download_airing_calendar_episode_label({required Object episode}) =>
-      '第 ${episode} 集';
-  @override
-  String get download_airing_calendar_week_prev => '上一周';
-  @override
-  String get download_airing_calendar_week_next => '下一周';
-  @override
-  String get download_airing_calendar_week_empty => '本周没有相关放送';
-  @override
-  String get video_jimaku_format => '类型';
-  @override
-  String get video_jimaku_format_all => '全部';
+  String get about_tmdb_attribution =>
+      'This product uses the TMDB API but is not endorsed or certified by TMDB.';
 }
 
 // Path: <root>
@@ -109571,7 +109138,7 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_jimaku_episode_hint => 'Leave empty to list all';
   @override
-  String get video_jimaku_fetch => '取得字幕（Jimaku）';
+  String get video_jimaku_fetch => '自動取得字幕（Jimaku）';
   @override
   String get video_jimaku_filter => '篩選結果（如 WEBRip、BD）';
   @override
@@ -109741,12 +109308,6 @@ class _StringsZhHk extends _StringsEn {
   String get video_scrape_summary => 'Synopsis';
   @override
   String get video_scrape_tags => 'Tags';
-  @override
-  String get video_scrape_tmdb_key_hint => 'Enter TMDB API Key';
-  @override
-  String get video_scrape_tmdb_key_required => 'TMDB requires an API key';
-  @override
-  String get video_scrape_tmdb_key_save => 'Save';
   @override
   String get video_scrape_use => 'Use';
   @override
@@ -110832,16 +110393,13 @@ class _StringsZhHk extends _StringsEn {
       '${count} subtitles available · ${languages}';
   @override
   String get video_scrape_manual_match_hint =>
-      'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+      'Manual matching replaces this episode cover and saves its source mapping and title metadata. All available sources are searched together and results are ranked by match confidence.';
   @override
   String get video_scrape_collection_match_hint =>
-      'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+      'This only replaces the collection cover. Episode covers and title metadata are not changed. All available sources are searched together and results are ranked by match confidence.';
   @override
   String get video_scrape_apply_to_collection_hint =>
       'This writes the same cover to every episode. Leave it off unless that is intentional.';
-  @override
-  String get video_scrape_tmdb_key_empty =>
-      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
   @override
   String get manga_online_source_disabled =>
       'This internet source is disabled. Enable it in Sources to browse the catalog.';
@@ -111166,32 +110724,13 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get download_task_resume => 'Resume';
   @override
-  String get download_airing_calendar_title => 'Airing calendar';
+  String get video_setting_tmdb_key => 'Custom TMDB API key';
   @override
-  String get download_airing_calendar_show_all => 'Show all this season';
+  String get video_setting_tmdb_key_hint =>
+      'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
   @override
-  String get download_airing_calendar_empty_guidance =>
-      'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
-  @override
-  String get download_airing_calendar_error =>
-      'Failed to load the airing schedule';
-  @override
-  String get download_airing_calendar_in_library => 'In library';
-  @override
-  String get download_airing_calendar_subscribed => 'Subscribed';
-  @override
-  String download_airing_calendar_episode_label({required Object episode}) =>
-      'Ep ${episode}';
-  @override
-  String get download_airing_calendar_week_prev => 'Previous week';
-  @override
-  String get download_airing_calendar_week_next => 'Next week';
-  @override
-  String get download_airing_calendar_week_empty => 'Nothing airing this week';
-  @override
-  String get video_jimaku_format => 'Format';
-  @override
-  String get video_jimaku_format_all => 'All';
+  String get about_tmdb_attribution =>
+      'This product uses the TMDB API but is not endorsed or certified by TMDB.';
 }
 
 /// Flat map(s) containing all translations.
@@ -115765,7 +115304,7 @@ extension on _StringsEn {
       case 'video_jimaku_episode_hint':
         return 'Leave empty to list all';
       case 'video_jimaku_fetch':
-        return 'Fetch subtitles (Jimaku)';
+        return 'Auto-fetch subtitles (Jimaku)';
       case 'video_jimaku_filter':
         return 'Filter results (e.g. WEBRip, BD)';
       case 'video_jimaku_find_sources':
@@ -115920,12 +115459,6 @@ extension on _StringsEn {
         return 'Synopsis';
       case 'video_scrape_tags':
         return 'Tags';
-      case 'video_scrape_tmdb_key_hint':
-        return 'Enter TMDB API key';
-      case 'video_scrape_tmdb_key_required':
-        return 'TMDB requires an API key';
-      case 'video_scrape_tmdb_key_save':
-        return 'Save';
       case 'video_scrape_use':
         return 'Use';
       case 'video_scrape_view_subject':
@@ -116884,13 +116417,11 @@ extension on _StringsEn {
         return ({required Object count, required Object languages}) =>
             '${count} subtitles available · ${languages}';
       case 'video_scrape_manual_match_hint':
-        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. All available sources are searched together and results are ranked by match confidence.';
       case 'video_scrape_collection_match_hint':
-        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. All available sources are searched together and results are ranked by match confidence.';
       case 'video_scrape_apply_to_collection_hint':
         return 'This writes the same cover to every episode. Leave it off unless that is intentional.';
-      case 'video_scrape_tmdb_key_empty':
-        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
       case 'manga_online_source_disabled':
         return 'This internet source is disabled. Enable it in Sources to browse the catalog.';
       case 'selection_web_search':
@@ -117172,30 +116703,12 @@ extension on _StringsEn {
         return 'Pause';
       case 'download_task_resume':
         return 'Resume';
-      case 'download_airing_calendar_title':
-        return 'Airing calendar';
-      case 'download_airing_calendar_show_all':
-        return 'Show all this season';
-      case 'download_airing_calendar_empty_guidance':
-        return 'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
-      case 'download_airing_calendar_error':
-        return 'Failed to load the airing schedule';
-      case 'download_airing_calendar_in_library':
-        return 'In library';
-      case 'download_airing_calendar_subscribed':
-        return 'Subscribed';
-      case 'download_airing_calendar_episode_label':
-        return ({required Object episode}) => 'Ep ${episode}';
-      case 'download_airing_calendar_week_prev':
-        return 'Previous week';
-      case 'download_airing_calendar_week_next':
-        return 'Next week';
-      case 'download_airing_calendar_week_empty':
-        return 'Nothing airing this week';
-      case 'video_jimaku_format':
-        return 'Format';
-      case 'video_jimaku_format_all':
-        return 'All';
+      case 'video_setting_tmdb_key':
+        return 'Custom TMDB API key';
+      case 'video_setting_tmdb_key_hint':
+        return 'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
+      case 'about_tmdb_attribution':
+        return 'This product uses the TMDB API but is not endorsed or certified by TMDB.';
       default:
         return null;
     }
@@ -121766,7 +121279,7 @@ extension on _StringsAr {
       case 'video_jimaku_episode_hint':
         return 'Leave empty to list all';
       case 'video_jimaku_fetch':
-        return 'جلب الترجمات (Jimaku)';
+        return 'جلب الترجمات تلقائيًا (Jimaku)';
       case 'video_jimaku_filter':
         return 'تصفية النتائج (مثل WEBRip وBD)';
       case 'video_jimaku_find_sources':
@@ -121921,12 +121434,6 @@ extension on _StringsAr {
         return 'Synopsis';
       case 'video_scrape_tags':
         return 'Tags';
-      case 'video_scrape_tmdb_key_hint':
-        return 'Enter TMDB API Key';
-      case 'video_scrape_tmdb_key_required':
-        return 'TMDB requires an API key';
-      case 'video_scrape_tmdb_key_save':
-        return 'Save';
       case 'video_scrape_use':
         return 'Use';
       case 'video_scrape_view_subject':
@@ -122886,13 +122393,11 @@ extension on _StringsAr {
         return ({required Object count, required Object languages}) =>
             '${count} subtitles available · ${languages}';
       case 'video_scrape_manual_match_hint':
-        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. All available sources are searched together and results are ranked by match confidence.';
       case 'video_scrape_collection_match_hint':
-        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. All available sources are searched together and results are ranked by match confidence.';
       case 'video_scrape_apply_to_collection_hint':
         return 'This writes the same cover to every episode. Leave it off unless that is intentional.';
-      case 'video_scrape_tmdb_key_empty':
-        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
       case 'manga_online_source_disabled':
         return 'This internet source is disabled. Enable it in Sources to browse the catalog.';
       case 'selection_web_search':
@@ -123174,30 +122679,12 @@ extension on _StringsAr {
         return 'Pause';
       case 'download_task_resume':
         return 'Resume';
-      case 'download_airing_calendar_title':
-        return 'Airing calendar';
-      case 'download_airing_calendar_show_all':
-        return 'Show all this season';
-      case 'download_airing_calendar_empty_guidance':
-        return 'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
-      case 'download_airing_calendar_error':
-        return 'Failed to load the airing schedule';
-      case 'download_airing_calendar_in_library':
-        return 'In library';
-      case 'download_airing_calendar_subscribed':
-        return 'Subscribed';
-      case 'download_airing_calendar_episode_label':
-        return ({required Object episode}) => 'Ep ${episode}';
-      case 'download_airing_calendar_week_prev':
-        return 'Previous week';
-      case 'download_airing_calendar_week_next':
-        return 'Next week';
-      case 'download_airing_calendar_week_empty':
-        return 'Nothing airing this week';
-      case 'video_jimaku_format':
-        return 'Format';
-      case 'video_jimaku_format_all':
-        return 'All';
+      case 'video_setting_tmdb_key':
+        return 'Custom TMDB API key';
+      case 'video_setting_tmdb_key_hint':
+        return 'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
+      case 'about_tmdb_attribution':
+        return 'This product uses the TMDB API but is not endorsed or certified by TMDB.';
       default:
         return null;
     }
@@ -127789,7 +127276,7 @@ extension on _StringsDe {
       case 'video_jimaku_episode_hint':
         return 'Leave empty to list all';
       case 'video_jimaku_fetch':
-        return 'Untertitel holen (Jimaku)';
+        return 'Untertitel automatisch holen (Jimaku)';
       case 'video_jimaku_filter':
         return 'Ergebnisse filtern (z. B. WEBRip, BD)';
       case 'video_jimaku_find_sources':
@@ -127944,12 +127431,6 @@ extension on _StringsDe {
         return 'Synopsis';
       case 'video_scrape_tags':
         return 'Tags';
-      case 'video_scrape_tmdb_key_hint':
-        return 'Enter TMDB API Key';
-      case 'video_scrape_tmdb_key_required':
-        return 'TMDB requires an API key';
-      case 'video_scrape_tmdb_key_save':
-        return 'Save';
       case 'video_scrape_use':
         return 'Use';
       case 'video_scrape_view_subject':
@@ -128910,13 +128391,11 @@ extension on _StringsDe {
         return ({required Object count, required Object languages}) =>
             '${count} subtitles available · ${languages}';
       case 'video_scrape_manual_match_hint':
-        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. All available sources are searched together and results are ranked by match confidence.';
       case 'video_scrape_collection_match_hint':
-        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. All available sources are searched together and results are ranked by match confidence.';
       case 'video_scrape_apply_to_collection_hint':
         return 'This writes the same cover to every episode. Leave it off unless that is intentional.';
-      case 'video_scrape_tmdb_key_empty':
-        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
       case 'manga_online_source_disabled':
         return 'This internet source is disabled. Enable it in Sources to browse the catalog.';
       case 'selection_web_search':
@@ -129198,30 +128677,12 @@ extension on _StringsDe {
         return 'Pause';
       case 'download_task_resume':
         return 'Resume';
-      case 'download_airing_calendar_title':
-        return 'Airing calendar';
-      case 'download_airing_calendar_show_all':
-        return 'Show all this season';
-      case 'download_airing_calendar_empty_guidance':
-        return 'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
-      case 'download_airing_calendar_error':
-        return 'Failed to load the airing schedule';
-      case 'download_airing_calendar_in_library':
-        return 'In library';
-      case 'download_airing_calendar_subscribed':
-        return 'Subscribed';
-      case 'download_airing_calendar_episode_label':
-        return ({required Object episode}) => 'Ep ${episode}';
-      case 'download_airing_calendar_week_prev':
-        return 'Previous week';
-      case 'download_airing_calendar_week_next':
-        return 'Next week';
-      case 'download_airing_calendar_week_empty':
-        return 'Nothing airing this week';
-      case 'video_jimaku_format':
-        return 'Format';
-      case 'video_jimaku_format_all':
-        return 'All';
+      case 'video_setting_tmdb_key':
+        return 'Custom TMDB API key';
+      case 'video_setting_tmdb_key_hint':
+        return 'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
+      case 'about_tmdb_attribution':
+        return 'This product uses the TMDB API but is not endorsed or certified by TMDB.';
       default:
         return null;
     }
@@ -133813,7 +133274,7 @@ extension on _StringsEs {
       case 'video_jimaku_episode_hint':
         return 'Leave empty to list all';
       case 'video_jimaku_fetch':
-        return 'Obtener subtítulos (Jimaku)';
+        return 'Obtener subtítulos automáticamente (Jimaku)';
       case 'video_jimaku_filter':
         return 'Filtrar resultados (p. ej. WEBRip, BD)';
       case 'video_jimaku_find_sources':
@@ -133968,12 +133429,6 @@ extension on _StringsEs {
         return 'Synopsis';
       case 'video_scrape_tags':
         return 'Tags';
-      case 'video_scrape_tmdb_key_hint':
-        return 'Enter TMDB API Key';
-      case 'video_scrape_tmdb_key_required':
-        return 'TMDB requires an API key';
-      case 'video_scrape_tmdb_key_save':
-        return 'Save';
       case 'video_scrape_use':
         return 'Use';
       case 'video_scrape_view_subject':
@@ -134933,13 +134388,11 @@ extension on _StringsEs {
         return ({required Object count, required Object languages}) =>
             '${count} subtitles available · ${languages}';
       case 'video_scrape_manual_match_hint':
-        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. All available sources are searched together and results are ranked by match confidence.';
       case 'video_scrape_collection_match_hint':
-        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. All available sources are searched together and results are ranked by match confidence.';
       case 'video_scrape_apply_to_collection_hint':
         return 'This writes the same cover to every episode. Leave it off unless that is intentional.';
-      case 'video_scrape_tmdb_key_empty':
-        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
       case 'manga_online_source_disabled':
         return 'This internet source is disabled. Enable it in Sources to browse the catalog.';
       case 'selection_web_search':
@@ -135221,30 +134674,12 @@ extension on _StringsEs {
         return 'Pause';
       case 'download_task_resume':
         return 'Resume';
-      case 'download_airing_calendar_title':
-        return 'Airing calendar';
-      case 'download_airing_calendar_show_all':
-        return 'Show all this season';
-      case 'download_airing_calendar_empty_guidance':
-        return 'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
-      case 'download_airing_calendar_error':
-        return 'Failed to load the airing schedule';
-      case 'download_airing_calendar_in_library':
-        return 'In library';
-      case 'download_airing_calendar_subscribed':
-        return 'Subscribed';
-      case 'download_airing_calendar_episode_label':
-        return ({required Object episode}) => 'Ep ${episode}';
-      case 'download_airing_calendar_week_prev':
-        return 'Previous week';
-      case 'download_airing_calendar_week_next':
-        return 'Next week';
-      case 'download_airing_calendar_week_empty':
-        return 'Nothing airing this week';
-      case 'video_jimaku_format':
-        return 'Format';
-      case 'video_jimaku_format_all':
-        return 'All';
+      case 'video_setting_tmdb_key':
+        return 'Custom TMDB API key';
+      case 'video_setting_tmdb_key_hint':
+        return 'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
+      case 'about_tmdb_attribution':
+        return 'This product uses the TMDB API but is not endorsed or certified by TMDB.';
       default:
         return null;
     }
@@ -139841,7 +139276,7 @@ extension on _StringsFr {
       case 'video_jimaku_episode_hint':
         return 'Leave empty to list all';
       case 'video_jimaku_fetch':
-        return 'Récupérer les sous-titres (Jimaku)';
+        return 'Récupération auto des sous-titres (Jimaku)';
       case 'video_jimaku_filter':
         return 'Filtrer les résultats (ex. WEBRip, BD)';
       case 'video_jimaku_find_sources':
@@ -139996,12 +139431,6 @@ extension on _StringsFr {
         return 'Synopsis';
       case 'video_scrape_tags':
         return 'Tags';
-      case 'video_scrape_tmdb_key_hint':
-        return 'Enter TMDB API Key';
-      case 'video_scrape_tmdb_key_required':
-        return 'TMDB requires an API key';
-      case 'video_scrape_tmdb_key_save':
-        return 'Save';
       case 'video_scrape_use':
         return 'Use';
       case 'video_scrape_view_subject':
@@ -140962,13 +140391,11 @@ extension on _StringsFr {
         return ({required Object count, required Object languages}) =>
             '${count} subtitles available · ${languages}';
       case 'video_scrape_manual_match_hint':
-        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. All available sources are searched together and results are ranked by match confidence.';
       case 'video_scrape_collection_match_hint':
-        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. All available sources are searched together and results are ranked by match confidence.';
       case 'video_scrape_apply_to_collection_hint':
         return 'This writes the same cover to every episode. Leave it off unless that is intentional.';
-      case 'video_scrape_tmdb_key_empty':
-        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
       case 'manga_online_source_disabled':
         return 'This internet source is disabled. Enable it in Sources to browse the catalog.';
       case 'selection_web_search':
@@ -141250,30 +140677,12 @@ extension on _StringsFr {
         return 'Pause';
       case 'download_task_resume':
         return 'Resume';
-      case 'download_airing_calendar_title':
-        return 'Airing calendar';
-      case 'download_airing_calendar_show_all':
-        return 'Show all this season';
-      case 'download_airing_calendar_empty_guidance':
-        return 'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
-      case 'download_airing_calendar_error':
-        return 'Failed to load the airing schedule';
-      case 'download_airing_calendar_in_library':
-        return 'In library';
-      case 'download_airing_calendar_subscribed':
-        return 'Subscribed';
-      case 'download_airing_calendar_episode_label':
-        return ({required Object episode}) => 'Ep ${episode}';
-      case 'download_airing_calendar_week_prev':
-        return 'Previous week';
-      case 'download_airing_calendar_week_next':
-        return 'Next week';
-      case 'download_airing_calendar_week_empty':
-        return 'Nothing airing this week';
-      case 'video_jimaku_format':
-        return 'Format';
-      case 'video_jimaku_format_all':
-        return 'All';
+      case 'video_setting_tmdb_key':
+        return 'Custom TMDB API key';
+      case 'video_setting_tmdb_key_hint':
+        return 'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
+      case 'about_tmdb_attribution':
+        return 'This product uses the TMDB API but is not endorsed or certified by TMDB.';
       default:
         return null;
     }
@@ -145853,7 +145262,7 @@ extension on _StringsId {
       case 'video_jimaku_episode_hint':
         return 'Leave empty to list all';
       case 'video_jimaku_fetch':
-        return 'Ambil subtitle (Jimaku)';
+        return 'Ambil subtitle otomatis (Jimaku)';
       case 'video_jimaku_filter':
         return 'Saring hasil (mis. WEBRip, BD)';
       case 'video_jimaku_find_sources':
@@ -146008,12 +145417,6 @@ extension on _StringsId {
         return 'Synopsis';
       case 'video_scrape_tags':
         return 'Tags';
-      case 'video_scrape_tmdb_key_hint':
-        return 'Enter TMDB API Key';
-      case 'video_scrape_tmdb_key_required':
-        return 'TMDB requires an API key';
-      case 'video_scrape_tmdb_key_save':
-        return 'Save';
       case 'video_scrape_use':
         return 'Use';
       case 'video_scrape_view_subject':
@@ -146973,13 +146376,11 @@ extension on _StringsId {
         return ({required Object count, required Object languages}) =>
             '${count} subtitles available · ${languages}';
       case 'video_scrape_manual_match_hint':
-        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. All available sources are searched together and results are ranked by match confidence.';
       case 'video_scrape_collection_match_hint':
-        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. All available sources are searched together and results are ranked by match confidence.';
       case 'video_scrape_apply_to_collection_hint':
         return 'This writes the same cover to every episode. Leave it off unless that is intentional.';
-      case 'video_scrape_tmdb_key_empty':
-        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
       case 'manga_online_source_disabled':
         return 'This internet source is disabled. Enable it in Sources to browse the catalog.';
       case 'selection_web_search':
@@ -147261,30 +146662,12 @@ extension on _StringsId {
         return 'Pause';
       case 'download_task_resume':
         return 'Resume';
-      case 'download_airing_calendar_title':
-        return 'Airing calendar';
-      case 'download_airing_calendar_show_all':
-        return 'Show all this season';
-      case 'download_airing_calendar_empty_guidance':
-        return 'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
-      case 'download_airing_calendar_error':
-        return 'Failed to load the airing schedule';
-      case 'download_airing_calendar_in_library':
-        return 'In library';
-      case 'download_airing_calendar_subscribed':
-        return 'Subscribed';
-      case 'download_airing_calendar_episode_label':
-        return ({required Object episode}) => 'Ep ${episode}';
-      case 'download_airing_calendar_week_prev':
-        return 'Previous week';
-      case 'download_airing_calendar_week_next':
-        return 'Next week';
-      case 'download_airing_calendar_week_empty':
-        return 'Nothing airing this week';
-      case 'video_jimaku_format':
-        return 'Format';
-      case 'video_jimaku_format_all':
-        return 'All';
+      case 'video_setting_tmdb_key':
+        return 'Custom TMDB API key';
+      case 'video_setting_tmdb_key_hint':
+        return 'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
+      case 'about_tmdb_attribution':
+        return 'This product uses the TMDB API but is not endorsed or certified by TMDB.';
       default:
         return null;
     }
@@ -151877,7 +151260,7 @@ extension on _StringsIt {
       case 'video_jimaku_episode_hint':
         return 'Leave empty to list all';
       case 'video_jimaku_fetch':
-        return 'Recupera sottotitoli (Jimaku)';
+        return 'Recupero automatico sottotitoli (Jimaku)';
       case 'video_jimaku_filter':
         return 'Filtra risultati (es. WEBRip, BD)';
       case 'video_jimaku_find_sources':
@@ -152032,12 +151415,6 @@ extension on _StringsIt {
         return 'Synopsis';
       case 'video_scrape_tags':
         return 'Tags';
-      case 'video_scrape_tmdb_key_hint':
-        return 'Enter TMDB API Key';
-      case 'video_scrape_tmdb_key_required':
-        return 'TMDB requires an API key';
-      case 'video_scrape_tmdb_key_save':
-        return 'Save';
       case 'video_scrape_use':
         return 'Use';
       case 'video_scrape_view_subject':
@@ -152998,13 +152375,11 @@ extension on _StringsIt {
         return ({required Object count, required Object languages}) =>
             '${count} subtitles available · ${languages}';
       case 'video_scrape_manual_match_hint':
-        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. All available sources are searched together and results are ranked by match confidence.';
       case 'video_scrape_collection_match_hint':
-        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. All available sources are searched together and results are ranked by match confidence.';
       case 'video_scrape_apply_to_collection_hint':
         return 'This writes the same cover to every episode. Leave it off unless that is intentional.';
-      case 'video_scrape_tmdb_key_empty':
-        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
       case 'manga_online_source_disabled':
         return 'This internet source is disabled. Enable it in Sources to browse the catalog.';
       case 'selection_web_search':
@@ -153286,30 +152661,12 @@ extension on _StringsIt {
         return 'Pause';
       case 'download_task_resume':
         return 'Resume';
-      case 'download_airing_calendar_title':
-        return 'Airing calendar';
-      case 'download_airing_calendar_show_all':
-        return 'Show all this season';
-      case 'download_airing_calendar_empty_guidance':
-        return 'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
-      case 'download_airing_calendar_error':
-        return 'Failed to load the airing schedule';
-      case 'download_airing_calendar_in_library':
-        return 'In library';
-      case 'download_airing_calendar_subscribed':
-        return 'Subscribed';
-      case 'download_airing_calendar_episode_label':
-        return ({required Object episode}) => 'Ep ${episode}';
-      case 'download_airing_calendar_week_prev':
-        return 'Previous week';
-      case 'download_airing_calendar_week_next':
-        return 'Next week';
-      case 'download_airing_calendar_week_empty':
-        return 'Nothing airing this week';
-      case 'video_jimaku_format':
-        return 'Format';
-      case 'video_jimaku_format_all':
-        return 'All';
+      case 'video_setting_tmdb_key':
+        return 'Custom TMDB API key';
+      case 'video_setting_tmdb_key_hint':
+        return 'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
+      case 'about_tmdb_attribution':
+        return 'This product uses the TMDB API but is not endorsed or certified by TMDB.';
       default:
         return null;
     }
@@ -157867,7 +157224,7 @@ extension on _StringsJa {
       case 'video_jimaku_episode_hint':
         return 'Leave empty to list all';
       case 'video_jimaku_fetch':
-        return '字幕を取得（Jimaku）';
+        return '字幕を自動取得（Jimaku）';
       case 'video_jimaku_filter':
         return '結果を絞り込み（WEBRip、BD など）';
       case 'video_jimaku_find_sources':
@@ -158022,12 +157379,6 @@ extension on _StringsJa {
         return 'Synopsis';
       case 'video_scrape_tags':
         return 'Tags';
-      case 'video_scrape_tmdb_key_hint':
-        return 'Enter TMDB API Key';
-      case 'video_scrape_tmdb_key_required':
-        return 'TMDB requires an API key';
-      case 'video_scrape_tmdb_key_save':
-        return 'Save';
       case 'video_scrape_use':
         return 'Use';
       case 'video_scrape_view_subject':
@@ -158985,13 +158336,11 @@ extension on _StringsJa {
         return ({required Object count, required Object languages}) =>
             '${count} subtitles available · ${languages}';
       case 'video_scrape_manual_match_hint':
-        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. All available sources are searched together and results are ranked by match confidence.';
       case 'video_scrape_collection_match_hint':
-        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. All available sources are searched together and results are ranked by match confidence.';
       case 'video_scrape_apply_to_collection_hint':
         return 'This writes the same cover to every episode. Leave it off unless that is intentional.';
-      case 'video_scrape_tmdb_key_empty':
-        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
       case 'manga_online_source_disabled':
         return 'This internet source is disabled. Enable it in Sources to browse the catalog.';
       case 'selection_web_search':
@@ -159273,30 +158622,12 @@ extension on _StringsJa {
         return 'Pause';
       case 'download_task_resume':
         return 'Resume';
-      case 'download_airing_calendar_title':
-        return 'Airing calendar';
-      case 'download_airing_calendar_show_all':
-        return 'Show all this season';
-      case 'download_airing_calendar_empty_guidance':
-        return 'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
-      case 'download_airing_calendar_error':
-        return 'Failed to load the airing schedule';
-      case 'download_airing_calendar_in_library':
-        return 'In library';
-      case 'download_airing_calendar_subscribed':
-        return 'Subscribed';
-      case 'download_airing_calendar_episode_label':
-        return ({required Object episode}) => 'Ep ${episode}';
-      case 'download_airing_calendar_week_prev':
-        return 'Previous week';
-      case 'download_airing_calendar_week_next':
-        return 'Next week';
-      case 'download_airing_calendar_week_empty':
-        return 'Nothing airing this week';
-      case 'video_jimaku_format':
-        return 'Format';
-      case 'video_jimaku_format_all':
-        return 'All';
+      case 'video_setting_tmdb_key':
+        return 'Custom TMDB API key';
+      case 'video_setting_tmdb_key_hint':
+        return 'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
+      case 'about_tmdb_attribution':
+        return 'This product uses the TMDB API but is not endorsed or certified by TMDB.';
       default:
         return null;
     }
@@ -163857,7 +163188,7 @@ extension on _StringsKo {
       case 'video_jimaku_episode_hint':
         return 'Leave empty to list all';
       case 'video_jimaku_fetch':
-        return '자막 가져오기(Jimaku)';
+        return '자막 자동 가져오기(Jimaku)';
       case 'video_jimaku_filter':
         return '결과 필터(예: WEBRip, BD)';
       case 'video_jimaku_find_sources':
@@ -164012,12 +163343,6 @@ extension on _StringsKo {
         return 'Synopsis';
       case 'video_scrape_tags':
         return 'Tags';
-      case 'video_scrape_tmdb_key_hint':
-        return 'Enter TMDB API Key';
-      case 'video_scrape_tmdb_key_required':
-        return 'TMDB requires an API key';
-      case 'video_scrape_tmdb_key_save':
-        return 'Save';
       case 'video_scrape_use':
         return 'Use';
       case 'video_scrape_view_subject':
@@ -164976,13 +164301,11 @@ extension on _StringsKo {
         return ({required Object count, required Object languages}) =>
             '${count} subtitles available · ${languages}';
       case 'video_scrape_manual_match_hint':
-        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. All available sources are searched together and results are ranked by match confidence.';
       case 'video_scrape_collection_match_hint':
-        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. All available sources are searched together and results are ranked by match confidence.';
       case 'video_scrape_apply_to_collection_hint':
         return 'This writes the same cover to every episode. Leave it off unless that is intentional.';
-      case 'video_scrape_tmdb_key_empty':
-        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
       case 'manga_online_source_disabled':
         return 'This internet source is disabled. Enable it in Sources to browse the catalog.';
       case 'selection_web_search':
@@ -165264,30 +164587,12 @@ extension on _StringsKo {
         return 'Pause';
       case 'download_task_resume':
         return 'Resume';
-      case 'download_airing_calendar_title':
-        return 'Airing calendar';
-      case 'download_airing_calendar_show_all':
-        return 'Show all this season';
-      case 'download_airing_calendar_empty_guidance':
-        return 'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
-      case 'download_airing_calendar_error':
-        return 'Failed to load the airing schedule';
-      case 'download_airing_calendar_in_library':
-        return 'In library';
-      case 'download_airing_calendar_subscribed':
-        return 'Subscribed';
-      case 'download_airing_calendar_episode_label':
-        return ({required Object episode}) => 'Ep ${episode}';
-      case 'download_airing_calendar_week_prev':
-        return 'Previous week';
-      case 'download_airing_calendar_week_next':
-        return 'Next week';
-      case 'download_airing_calendar_week_empty':
-        return 'Nothing airing this week';
-      case 'video_jimaku_format':
-        return 'Format';
-      case 'video_jimaku_format_all':
-        return 'All';
+      case 'video_setting_tmdb_key':
+        return 'Custom TMDB API key';
+      case 'video_setting_tmdb_key_hint':
+        return 'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
+      case 'about_tmdb_attribution':
+        return 'This product uses the TMDB API but is not endorsed or certified by TMDB.';
       default:
         return null;
     }
@@ -169873,7 +169178,7 @@ extension on _StringsNl {
       case 'video_jimaku_episode_hint':
         return 'Leave empty to list all';
       case 'video_jimaku_fetch':
-        return 'Ondertitels ophalen (Jimaku)';
+        return 'Ondertitels automatisch ophalen (Jimaku)';
       case 'video_jimaku_filter':
         return 'Resultaten filteren (bijv. WEBRip, BD)';
       case 'video_jimaku_find_sources':
@@ -170028,12 +169333,6 @@ extension on _StringsNl {
         return 'Synopsis';
       case 'video_scrape_tags':
         return 'Tags';
-      case 'video_scrape_tmdb_key_hint':
-        return 'Enter TMDB API Key';
-      case 'video_scrape_tmdb_key_required':
-        return 'TMDB requires an API key';
-      case 'video_scrape_tmdb_key_save':
-        return 'Save';
       case 'video_scrape_use':
         return 'Use';
       case 'video_scrape_view_subject':
@@ -170995,13 +170294,11 @@ extension on _StringsNl {
         return ({required Object count, required Object languages}) =>
             '${count} subtitles available · ${languages}';
       case 'video_scrape_manual_match_hint':
-        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. All available sources are searched together and results are ranked by match confidence.';
       case 'video_scrape_collection_match_hint':
-        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. All available sources are searched together and results are ranked by match confidence.';
       case 'video_scrape_apply_to_collection_hint':
         return 'This writes the same cover to every episode. Leave it off unless that is intentional.';
-      case 'video_scrape_tmdb_key_empty':
-        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
       case 'manga_online_source_disabled':
         return 'This internet source is disabled. Enable it in Sources to browse the catalog.';
       case 'selection_web_search':
@@ -171283,30 +170580,12 @@ extension on _StringsNl {
         return 'Pause';
       case 'download_task_resume':
         return 'Resume';
-      case 'download_airing_calendar_title':
-        return 'Airing calendar';
-      case 'download_airing_calendar_show_all':
-        return 'Show all this season';
-      case 'download_airing_calendar_empty_guidance':
-        return 'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
-      case 'download_airing_calendar_error':
-        return 'Failed to load the airing schedule';
-      case 'download_airing_calendar_in_library':
-        return 'In library';
-      case 'download_airing_calendar_subscribed':
-        return 'Subscribed';
-      case 'download_airing_calendar_episode_label':
-        return ({required Object episode}) => 'Ep ${episode}';
-      case 'download_airing_calendar_week_prev':
-        return 'Previous week';
-      case 'download_airing_calendar_week_next':
-        return 'Next week';
-      case 'download_airing_calendar_week_empty':
-        return 'Nothing airing this week';
-      case 'video_jimaku_format':
-        return 'Format';
-      case 'video_jimaku_format_all':
-        return 'All';
+      case 'video_setting_tmdb_key':
+        return 'Custom TMDB API key';
+      case 'video_setting_tmdb_key_hint':
+        return 'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
+      case 'about_tmdb_attribution':
+        return 'This product uses the TMDB API but is not endorsed or certified by TMDB.';
       default:
         return null;
     }
@@ -175891,7 +175170,7 @@ extension on _StringsPtBr {
       case 'video_jimaku_episode_hint':
         return 'Leave empty to list all';
       case 'video_jimaku_fetch':
-        return 'Buscar legendas (Jimaku)';
+        return 'Buscar legendas automaticamente (Jimaku)';
       case 'video_jimaku_filter':
         return 'Filtrar resultados (ex.: WEBRip, BD)';
       case 'video_jimaku_find_sources':
@@ -176046,12 +175325,6 @@ extension on _StringsPtBr {
         return 'Synopsis';
       case 'video_scrape_tags':
         return 'Tags';
-      case 'video_scrape_tmdb_key_hint':
-        return 'Enter TMDB API Key';
-      case 'video_scrape_tmdb_key_required':
-        return 'TMDB requires an API key';
-      case 'video_scrape_tmdb_key_save':
-        return 'Save';
       case 'video_scrape_use':
         return 'Use';
       case 'video_scrape_view_subject':
@@ -177011,13 +176284,11 @@ extension on _StringsPtBr {
         return ({required Object count, required Object languages}) =>
             '${count} subtitles available · ${languages}';
       case 'video_scrape_manual_match_hint':
-        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. All available sources are searched together and results are ranked by match confidence.';
       case 'video_scrape_collection_match_hint':
-        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. All available sources are searched together and results are ranked by match confidence.';
       case 'video_scrape_apply_to_collection_hint':
         return 'This writes the same cover to every episode. Leave it off unless that is intentional.';
-      case 'video_scrape_tmdb_key_empty':
-        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
       case 'manga_online_source_disabled':
         return 'This internet source is disabled. Enable it in Sources to browse the catalog.';
       case 'selection_web_search':
@@ -177299,30 +176570,12 @@ extension on _StringsPtBr {
         return 'Pause';
       case 'download_task_resume':
         return 'Resume';
-      case 'download_airing_calendar_title':
-        return 'Airing calendar';
-      case 'download_airing_calendar_show_all':
-        return 'Show all this season';
-      case 'download_airing_calendar_empty_guidance':
-        return 'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
-      case 'download_airing_calendar_error':
-        return 'Failed to load the airing schedule';
-      case 'download_airing_calendar_in_library':
-        return 'In library';
-      case 'download_airing_calendar_subscribed':
-        return 'Subscribed';
-      case 'download_airing_calendar_episode_label':
-        return ({required Object episode}) => 'Ep ${episode}';
-      case 'download_airing_calendar_week_prev':
-        return 'Previous week';
-      case 'download_airing_calendar_week_next':
-        return 'Next week';
-      case 'download_airing_calendar_week_empty':
-        return 'Nothing airing this week';
-      case 'video_jimaku_format':
-        return 'Format';
-      case 'video_jimaku_format_all':
-        return 'All';
+      case 'video_setting_tmdb_key':
+        return 'Custom TMDB API key';
+      case 'video_setting_tmdb_key_hint':
+        return 'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
+      case 'about_tmdb_attribution':
+        return 'This product uses the TMDB API but is not endorsed or certified by TMDB.';
       default:
         return null;
     }
@@ -181912,7 +181165,7 @@ extension on _StringsRu {
       case 'video_jimaku_episode_hint':
         return 'Leave empty to list all';
       case 'video_jimaku_fetch':
-        return 'Загрузить субтитры (Jimaku)';
+        return 'Авто-загрузка субтитров (Jimaku)';
       case 'video_jimaku_filter':
         return 'Фильтр результатов (например, WEBRip, BD)';
       case 'video_jimaku_find_sources':
@@ -182067,12 +181320,6 @@ extension on _StringsRu {
         return 'Synopsis';
       case 'video_scrape_tags':
         return 'Tags';
-      case 'video_scrape_tmdb_key_hint':
-        return 'Enter TMDB API Key';
-      case 'video_scrape_tmdb_key_required':
-        return 'TMDB requires an API key';
-      case 'video_scrape_tmdb_key_save':
-        return 'Save';
       case 'video_scrape_use':
         return 'Use';
       case 'video_scrape_view_subject':
@@ -183032,13 +182279,11 @@ extension on _StringsRu {
         return ({required Object count, required Object languages}) =>
             '${count} subtitles available · ${languages}';
       case 'video_scrape_manual_match_hint':
-        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. All available sources are searched together and results are ranked by match confidence.';
       case 'video_scrape_collection_match_hint':
-        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. All available sources are searched together and results are ranked by match confidence.';
       case 'video_scrape_apply_to_collection_hint':
         return 'This writes the same cover to every episode. Leave it off unless that is intentional.';
-      case 'video_scrape_tmdb_key_empty':
-        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
       case 'manga_online_source_disabled':
         return 'This internet source is disabled. Enable it in Sources to browse the catalog.';
       case 'selection_web_search':
@@ -183320,30 +182565,12 @@ extension on _StringsRu {
         return 'Pause';
       case 'download_task_resume':
         return 'Resume';
-      case 'download_airing_calendar_title':
-        return 'Airing calendar';
-      case 'download_airing_calendar_show_all':
-        return 'Show all this season';
-      case 'download_airing_calendar_empty_guidance':
-        return 'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
-      case 'download_airing_calendar_error':
-        return 'Failed to load the airing schedule';
-      case 'download_airing_calendar_in_library':
-        return 'In library';
-      case 'download_airing_calendar_subscribed':
-        return 'Subscribed';
-      case 'download_airing_calendar_episode_label':
-        return ({required Object episode}) => 'Ep ${episode}';
-      case 'download_airing_calendar_week_prev':
-        return 'Previous week';
-      case 'download_airing_calendar_week_next':
-        return 'Next week';
-      case 'download_airing_calendar_week_empty':
-        return 'Nothing airing this week';
-      case 'video_jimaku_format':
-        return 'Format';
-      case 'video_jimaku_format_all':
-        return 'All';
+      case 'video_setting_tmdb_key':
+        return 'Custom TMDB API key';
+      case 'video_setting_tmdb_key_hint':
+        return 'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
+      case 'about_tmdb_attribution':
+        return 'This product uses the TMDB API but is not endorsed or certified by TMDB.';
       default:
         return null;
     }
@@ -187916,7 +187143,7 @@ extension on _StringsTh {
       case 'video_jimaku_episode_hint':
         return 'Leave empty to list all';
       case 'video_jimaku_fetch':
-        return 'ดึงคำบรรยาย (Jimaku)';
+        return 'ดึงคำบรรยายอัตโนมัติ (Jimaku)';
       case 'video_jimaku_filter':
         return 'กรองผลลัพธ์ (เช่น WEBRip, BD)';
       case 'video_jimaku_find_sources':
@@ -188071,12 +187298,6 @@ extension on _StringsTh {
         return 'Synopsis';
       case 'video_scrape_tags':
         return 'Tags';
-      case 'video_scrape_tmdb_key_hint':
-        return 'Enter TMDB API Key';
-      case 'video_scrape_tmdb_key_required':
-        return 'TMDB requires an API key';
-      case 'video_scrape_tmdb_key_save':
-        return 'Save';
       case 'video_scrape_use':
         return 'Use';
       case 'video_scrape_view_subject':
@@ -189036,13 +188257,11 @@ extension on _StringsTh {
         return ({required Object count, required Object languages}) =>
             '${count} subtitles available · ${languages}';
       case 'video_scrape_manual_match_hint':
-        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. All available sources are searched together and results are ranked by match confidence.';
       case 'video_scrape_collection_match_hint':
-        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. All available sources are searched together and results are ranked by match confidence.';
       case 'video_scrape_apply_to_collection_hint':
         return 'This writes the same cover to every episode. Leave it off unless that is intentional.';
-      case 'video_scrape_tmdb_key_empty':
-        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
       case 'manga_online_source_disabled':
         return 'This internet source is disabled. Enable it in Sources to browse the catalog.';
       case 'selection_web_search':
@@ -189324,30 +188543,12 @@ extension on _StringsTh {
         return 'Pause';
       case 'download_task_resume':
         return 'Resume';
-      case 'download_airing_calendar_title':
-        return 'Airing calendar';
-      case 'download_airing_calendar_show_all':
-        return 'Show all this season';
-      case 'download_airing_calendar_empty_guidance':
-        return 'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
-      case 'download_airing_calendar_error':
-        return 'Failed to load the airing schedule';
-      case 'download_airing_calendar_in_library':
-        return 'In library';
-      case 'download_airing_calendar_subscribed':
-        return 'Subscribed';
-      case 'download_airing_calendar_episode_label':
-        return ({required Object episode}) => 'Ep ${episode}';
-      case 'download_airing_calendar_week_prev':
-        return 'Previous week';
-      case 'download_airing_calendar_week_next':
-        return 'Next week';
-      case 'download_airing_calendar_week_empty':
-        return 'Nothing airing this week';
-      case 'video_jimaku_format':
-        return 'Format';
-      case 'video_jimaku_format_all':
-        return 'All';
+      case 'video_setting_tmdb_key':
+        return 'Custom TMDB API key';
+      case 'video_setting_tmdb_key_hint':
+        return 'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
+      case 'about_tmdb_attribution':
+        return 'This product uses the TMDB API but is not endorsed or certified by TMDB.';
       default:
         return null;
     }
@@ -193928,7 +193129,7 @@ extension on _StringsTr {
       case 'video_jimaku_episode_hint':
         return 'Leave empty to list all';
       case 'video_jimaku_fetch':
-        return 'Altyazıları getir (Jimaku)';
+        return 'Altyazıları otomatik getir (Jimaku)';
       case 'video_jimaku_filter':
         return 'Sonuçları filtrele (ör. WEBRip, BD)';
       case 'video_jimaku_find_sources':
@@ -194083,12 +193284,6 @@ extension on _StringsTr {
         return 'Synopsis';
       case 'video_scrape_tags':
         return 'Tags';
-      case 'video_scrape_tmdb_key_hint':
-        return 'Enter TMDB API Key';
-      case 'video_scrape_tmdb_key_required':
-        return 'TMDB requires an API key';
-      case 'video_scrape_tmdb_key_save':
-        return 'Save';
       case 'video_scrape_use':
         return 'Use';
       case 'video_scrape_view_subject':
@@ -195049,13 +194244,11 @@ extension on _StringsTr {
         return ({required Object count, required Object languages}) =>
             '${count} subtitles available · ${languages}';
       case 'video_scrape_manual_match_hint':
-        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. All available sources are searched together and results are ranked by match confidence.';
       case 'video_scrape_collection_match_hint':
-        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. All available sources are searched together and results are ranked by match confidence.';
       case 'video_scrape_apply_to_collection_hint':
         return 'This writes the same cover to every episode. Leave it off unless that is intentional.';
-      case 'video_scrape_tmdb_key_empty':
-        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
       case 'manga_online_source_disabled':
         return 'This internet source is disabled. Enable it in Sources to browse the catalog.';
       case 'selection_web_search':
@@ -195337,30 +194530,12 @@ extension on _StringsTr {
         return 'Pause';
       case 'download_task_resume':
         return 'Resume';
-      case 'download_airing_calendar_title':
-        return 'Airing calendar';
-      case 'download_airing_calendar_show_all':
-        return 'Show all this season';
-      case 'download_airing_calendar_empty_guidance':
-        return 'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
-      case 'download_airing_calendar_error':
-        return 'Failed to load the airing schedule';
-      case 'download_airing_calendar_in_library':
-        return 'In library';
-      case 'download_airing_calendar_subscribed':
-        return 'Subscribed';
-      case 'download_airing_calendar_episode_label':
-        return ({required Object episode}) => 'Ep ${episode}';
-      case 'download_airing_calendar_week_prev':
-        return 'Previous week';
-      case 'download_airing_calendar_week_next':
-        return 'Next week';
-      case 'download_airing_calendar_week_empty':
-        return 'Nothing airing this week';
-      case 'video_jimaku_format':
-        return 'Format';
-      case 'video_jimaku_format_all':
-        return 'All';
+      case 'video_setting_tmdb_key':
+        return 'Custom TMDB API key';
+      case 'video_setting_tmdb_key_hint':
+        return 'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
+      case 'about_tmdb_attribution':
+        return 'This product uses the TMDB API but is not endorsed or certified by TMDB.';
       default:
         return null;
     }
@@ -199938,7 +199113,7 @@ extension on _StringsVi {
       case 'video_jimaku_episode_hint':
         return 'Leave empty to list all';
       case 'video_jimaku_fetch':
-        return 'Lấy phụ đề (Jimaku)';
+        return 'Tự lấy phụ đề (Jimaku)';
       case 'video_jimaku_filter':
         return 'Lọc kết quả (vd WEBRip, BD)';
       case 'video_jimaku_find_sources':
@@ -200093,12 +199268,6 @@ extension on _StringsVi {
         return 'Synopsis';
       case 'video_scrape_tags':
         return 'Tags';
-      case 'video_scrape_tmdb_key_hint':
-        return 'Enter TMDB API Key';
-      case 'video_scrape_tmdb_key_required':
-        return 'TMDB requires an API key';
-      case 'video_scrape_tmdb_key_save':
-        return 'Save';
       case 'video_scrape_use':
         return 'Use';
       case 'video_scrape_view_subject':
@@ -201058,13 +200227,11 @@ extension on _StringsVi {
         return ({required Object count, required Object languages}) =>
             '${count} subtitles available · ${languages}';
       case 'video_scrape_manual_match_hint':
-        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. All available sources are searched together and results are ranked by match confidence.';
       case 'video_scrape_collection_match_hint':
-        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. All available sources are searched together and results are ranked by match confidence.';
       case 'video_scrape_apply_to_collection_hint':
         return 'This writes the same cover to every episode. Leave it off unless that is intentional.';
-      case 'video_scrape_tmdb_key_empty':
-        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
       case 'manga_online_source_disabled':
         return 'This internet source is disabled. Enable it in Sources to browse the catalog.';
       case 'selection_web_search':
@@ -201346,30 +200513,12 @@ extension on _StringsVi {
         return 'Pause';
       case 'download_task_resume':
         return 'Resume';
-      case 'download_airing_calendar_title':
-        return 'Airing calendar';
-      case 'download_airing_calendar_show_all':
-        return 'Show all this season';
-      case 'download_airing_calendar_empty_guidance':
-        return 'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
-      case 'download_airing_calendar_error':
-        return 'Failed to load the airing schedule';
-      case 'download_airing_calendar_in_library':
-        return 'In library';
-      case 'download_airing_calendar_subscribed':
-        return 'Subscribed';
-      case 'download_airing_calendar_episode_label':
-        return ({required Object episode}) => 'Ep ${episode}';
-      case 'download_airing_calendar_week_prev':
-        return 'Previous week';
-      case 'download_airing_calendar_week_next':
-        return 'Next week';
-      case 'download_airing_calendar_week_empty':
-        return 'Nothing airing this week';
-      case 'video_jimaku_format':
-        return 'Format';
-      case 'video_jimaku_format_all':
-        return 'All';
+      case 'video_setting_tmdb_key':
+        return 'Custom TMDB API key';
+      case 'video_setting_tmdb_key_hint':
+        return 'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
+      case 'about_tmdb_attribution':
+        return 'This product uses the TMDB API but is not endorsed or certified by TMDB.';
       default:
         return null;
     }
@@ -205907,7 +205056,7 @@ extension on _StringsZhCn {
       case 'video_jimaku_episode_hint':
         return '留空列出全部';
       case 'video_jimaku_fetch':
-        return '获取字幕（Jimaku）';
+        return '自动获取字幕（Jimaku）';
       case 'video_jimaku_filter':
         return '筛选结果（如 WEBRip、BD）';
       case 'video_jimaku_find_sources':
@@ -206061,12 +205210,6 @@ extension on _StringsZhCn {
         return '简介';
       case 'video_scrape_tags':
         return '标签';
-      case 'video_scrape_tmdb_key_hint':
-        return '输入 TMDB API Key';
-      case 'video_scrape_tmdb_key_required':
-        return 'TMDB 需要 API Key';
-      case 'video_scrape_tmdb_key_save':
-        return '保存';
       case 'video_scrape_use':
         return '使用';
       case 'video_scrape_view_subject':
@@ -207017,13 +206160,11 @@ extension on _StringsZhCn {
         return ({required Object count, required Object languages}) =>
             '有 ${count} 个字幕 · ${languages}';
       case 'video_scrape_manual_match_hint':
-        return '手动匹配会替换本集封面，并保存来源映射和条目资料。切换来源后，点“搜索”才会请求该来源。';
+        return '手动匹配会替换本集封面，并保存来源映射和条目资料。会同时搜索全部可用来源，结果按匹配度排序。';
       case 'video_scrape_collection_match_hint':
-        return '这里只替换合集封面，不会修改各集封面或条目资料。切换来源后，点“搜索”才会请求该来源。';
+        return '这里只替换合集封面，不会修改各集封面或条目资料。会同时搜索全部可用来源，结果按匹配度排序。';
       case 'video_scrape_apply_to_collection_hint':
         return '这会把同一张封面写到每一集；只有确实需要统一单集封面时才开启。';
-      case 'video_scrape_tmdb_key_empty':
-        return '先保存 TMDB API Key，再点“搜索”。这里不会混入其他来源的结果。';
       case 'manga_online_source_disabled':
         return '此互联网来源已关闭，请在「来源」中开启后浏览目录。';
       case 'selection_web_search':
@@ -207302,30 +206443,12 @@ extension on _StringsZhCn {
         return '暂停';
       case 'download_task_resume':
         return '恢复';
-      case 'download_airing_calendar_title':
-        return '放送日历';
-      case 'download_airing_calendar_show_all':
-        return '显示本季全部';
-      case 'download_airing_calendar_empty_guidance':
-        return '暂无可显示的放送信息：给合集绑定 AniList 或添加下载订阅后，这里会显示对应的放送时间。';
-      case 'download_airing_calendar_error':
-        return '放送时间表加载失败';
-      case 'download_airing_calendar_in_library':
-        return '已入库';
-      case 'download_airing_calendar_subscribed':
-        return '订阅中';
-      case 'download_airing_calendar_episode_label':
-        return ({required Object episode}) => '第 ${episode} 集';
-      case 'download_airing_calendar_week_prev':
-        return '上一周';
-      case 'download_airing_calendar_week_next':
-        return '下一周';
-      case 'download_airing_calendar_week_empty':
-        return '本周没有相关放送';
-      case 'video_jimaku_format':
-        return '类型';
-      case 'video_jimaku_format_all':
-        return '全部';
+      case 'video_setting_tmdb_key':
+        return '自定义 TMDB API Key';
+      case 'video_setting_tmdb_key_hint':
+        return '可留空，默认用内置 Key。仅当刮削失效或你想用自己的配额时才需要填写。';
+      case 'about_tmdb_attribution':
+        return 'This product uses the TMDB API but is not endorsed or certified by TMDB.';
       default:
         return null;
     }
@@ -211879,7 +211002,7 @@ extension on _StringsZhHk {
       case 'video_jimaku_episode_hint':
         return 'Leave empty to list all';
       case 'video_jimaku_fetch':
-        return '取得字幕（Jimaku）';
+        return '自動取得字幕（Jimaku）';
       case 'video_jimaku_filter':
         return '篩選結果（如 WEBRip、BD）';
       case 'video_jimaku_find_sources':
@@ -212034,12 +211157,6 @@ extension on _StringsZhHk {
         return 'Synopsis';
       case 'video_scrape_tags':
         return 'Tags';
-      case 'video_scrape_tmdb_key_hint':
-        return 'Enter TMDB API Key';
-      case 'video_scrape_tmdb_key_required':
-        return 'TMDB requires an API key';
-      case 'video_scrape_tmdb_key_save':
-        return 'Save';
       case 'video_scrape_use':
         return 'Use';
       case 'video_scrape_view_subject':
@@ -212996,13 +212113,11 @@ extension on _StringsZhHk {
         return ({required Object count, required Object languages}) =>
             '${count} subtitles available · ${languages}';
       case 'video_scrape_manual_match_hint':
-        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. All available sources are searched together and results are ranked by match confidence.';
       case 'video_scrape_collection_match_hint':
-        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. All available sources are searched together and results are ranked by match confidence.';
       case 'video_scrape_apply_to_collection_hint':
         return 'This writes the same cover to every episode. Leave it off unless that is intentional.';
-      case 'video_scrape_tmdb_key_empty':
-        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
       case 'manga_online_source_disabled':
         return 'This internet source is disabled. Enable it in Sources to browse the catalog.';
       case 'selection_web_search':
@@ -213284,30 +212399,12 @@ extension on _StringsZhHk {
         return 'Pause';
       case 'download_task_resume':
         return 'Resume';
-      case 'download_airing_calendar_title':
-        return 'Airing calendar';
-      case 'download_airing_calendar_show_all':
-        return 'Show all this season';
-      case 'download_airing_calendar_empty_guidance':
-        return 'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
-      case 'download_airing_calendar_error':
-        return 'Failed to load the airing schedule';
-      case 'download_airing_calendar_in_library':
-        return 'In library';
-      case 'download_airing_calendar_subscribed':
-        return 'Subscribed';
-      case 'download_airing_calendar_episode_label':
-        return ({required Object episode}) => 'Ep ${episode}';
-      case 'download_airing_calendar_week_prev':
-        return 'Previous week';
-      case 'download_airing_calendar_week_next':
-        return 'Next week';
-      case 'download_airing_calendar_week_empty':
-        return 'Nothing airing this week';
-      case 'video_jimaku_format':
-        return 'Format';
-      case 'video_jimaku_format_all':
-        return 'All';
+      case 'video_setting_tmdb_key':
+        return 'Custom TMDB API key';
+      case 'video_setting_tmdb_key_hint':
+        return 'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
+      case 'about_tmdb_attribution':
+        return 'This product uses the TMDB API but is not endorsed or certified by TMDB.';
       default:
         return null;
     }
