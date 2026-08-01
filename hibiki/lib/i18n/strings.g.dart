@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 51884 (3052 per locale)
+/// Strings: 51901 (3053 per locale)
 ///
-/// Built on 2026-08-01 at 17:48 UTC
+/// Built on 2026-08-01 at 18:39 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -4084,8 +4084,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get collection_split_keep_original => 'Keep the original collection';
   String get collection_split_confirm => 'Split';
   String get collection_episode_open_bangumi => 'Open this episode on Bangumi';
-  String get collection_episode_bangumi_not_found =>
-      'Episode not found on Bangumi';
   String collection_relation_bound({required Object name}) =>
       'Bound to ${name}';
   String collection_episode_scrape_result(
@@ -4101,6 +4099,11 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Watched to ${position}';
   String collection_episode_bangumi_open_failed({required Object error}) =>
       'Could not resolve the episode on Bangumi: ${error}';
+  String collection_episode_rename_partial(
+          {required Object n, required Object m}) =>
+      'Renamed ${n} episodes, ${m} failed';
+  String get collection_episode_bangumi_not_found =>
+      'Episode not found on Bangumi; opened the subject page instead';
 }
 
 // Path: <root>
@@ -11079,9 +11082,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get collection_episode_open_bangumi => 'Open this episode on Bangumi';
   @override
-  String get collection_episode_bangumi_not_found =>
-      'Episode not found on Bangumi';
-  @override
   String collection_relation_bound({required Object name}) =>
       'Bound to ${name}';
   @override
@@ -11103,6 +11103,13 @@ class _StringsAr extends _StringsEn {
   @override
   String collection_episode_bangumi_open_failed({required Object error}) =>
       'Could not resolve the episode on Bangumi: ${error}';
+  @override
+  String collection_episode_rename_partial(
+          {required Object n, required Object m}) =>
+      'Renamed ${n} episodes, ${m} failed';
+  @override
+  String get collection_episode_bangumi_not_found =>
+      'Episode not found on Bangumi; opened the subject page instead';
 }
 
 // Path: <root>
@@ -18148,9 +18155,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get collection_episode_open_bangumi => 'Open this episode on Bangumi';
   @override
-  String get collection_episode_bangumi_not_found =>
-      'Episode not found on Bangumi';
-  @override
   String collection_relation_bound({required Object name}) =>
       'Bound to ${name}';
   @override
@@ -18172,6 +18176,13 @@ class _StringsDe extends _StringsEn {
   @override
   String collection_episode_bangumi_open_failed({required Object error}) =>
       'Could not resolve the episode on Bangumi: ${error}';
+  @override
+  String collection_episode_rename_partial(
+          {required Object n, required Object m}) =>
+      'Renamed ${n} episodes, ${m} failed';
+  @override
+  String get collection_episode_bangumi_not_found =>
+      'Episode not found on Bangumi; opened the subject page instead';
 }
 
 // Path: <root>
@@ -25232,9 +25243,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get collection_episode_open_bangumi => 'Open this episode on Bangumi';
   @override
-  String get collection_episode_bangumi_not_found =>
-      'Episode not found on Bangumi';
-  @override
   String collection_relation_bound({required Object name}) =>
       'Bound to ${name}';
   @override
@@ -25256,6 +25264,13 @@ class _StringsEs extends _StringsEn {
   @override
   String collection_episode_bangumi_open_failed({required Object error}) =>
       'Could not resolve the episode on Bangumi: ${error}';
+  @override
+  String collection_episode_rename_partial(
+          {required Object n, required Object m}) =>
+      'Renamed ${n} episodes, ${m} failed';
+  @override
+  String get collection_episode_bangumi_not_found =>
+      'Episode not found on Bangumi; opened the subject page instead';
 }
 
 // Path: <root>
@@ -32328,9 +32343,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get collection_episode_open_bangumi => 'Open this episode on Bangumi';
   @override
-  String get collection_episode_bangumi_not_found =>
-      'Episode not found on Bangumi';
-  @override
   String collection_relation_bound({required Object name}) =>
       'Bound to ${name}';
   @override
@@ -32352,6 +32364,13 @@ class _StringsFr extends _StringsEn {
   @override
   String collection_episode_bangumi_open_failed({required Object error}) =>
       'Could not resolve the episode on Bangumi: ${error}';
+  @override
+  String collection_episode_rename_partial(
+          {required Object n, required Object m}) =>
+      'Renamed ${n} episodes, ${m} failed';
+  @override
+  String get collection_episode_bangumi_not_found =>
+      'Episode not found on Bangumi; opened the subject page instead';
 }
 
 // Path: <root>
@@ -39353,9 +39372,6 @@ class _StringsId extends _StringsEn {
   @override
   String get collection_episode_open_bangumi => 'Open this episode on Bangumi';
   @override
-  String get collection_episode_bangumi_not_found =>
-      'Episode not found on Bangumi';
-  @override
   String collection_relation_bound({required Object name}) =>
       'Bound to ${name}';
   @override
@@ -39377,6 +39393,13 @@ class _StringsId extends _StringsEn {
   @override
   String collection_episode_bangumi_open_failed({required Object error}) =>
       'Could not resolve the episode on Bangumi: ${error}';
+  @override
+  String collection_episode_rename_partial(
+          {required Object n, required Object m}) =>
+      'Renamed ${n} episodes, ${m} failed';
+  @override
+  String get collection_episode_bangumi_not_found =>
+      'Episode not found on Bangumi; opened the subject page instead';
 }
 
 // Path: <root>
@@ -46424,9 +46447,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get collection_episode_open_bangumi => 'Open this episode on Bangumi';
   @override
-  String get collection_episode_bangumi_not_found =>
-      'Episode not found on Bangumi';
-  @override
   String collection_relation_bound({required Object name}) =>
       'Bound to ${name}';
   @override
@@ -46448,6 +46468,13 @@ class _StringsIt extends _StringsEn {
   @override
   String collection_episode_bangumi_open_failed({required Object error}) =>
       'Could not resolve the episode on Bangumi: ${error}';
+  @override
+  String collection_episode_rename_partial(
+          {required Object n, required Object m}) =>
+      'Renamed ${n} episodes, ${m} failed';
+  @override
+  String get collection_episode_bangumi_not_found =>
+      'Episode not found on Bangumi; opened the subject page instead';
 }
 
 // Path: <root>
@@ -53312,9 +53339,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get collection_episode_open_bangumi => 'Open this episode on Bangumi';
   @override
-  String get collection_episode_bangumi_not_found =>
-      'Episode not found on Bangumi';
-  @override
   String collection_relation_bound({required Object name}) =>
       'Bound to ${name}';
   @override
@@ -53336,6 +53360,13 @@ class _StringsJa extends _StringsEn {
   @override
   String collection_episode_bangumi_open_failed({required Object error}) =>
       'Could not resolve the episode on Bangumi: ${error}';
+  @override
+  String collection_episode_rename_partial(
+          {required Object n, required Object m}) =>
+      'Renamed ${n} episodes, ${m} failed';
+  @override
+  String get collection_episode_bangumi_not_found =>
+      'Episode not found on Bangumi; opened the subject page instead';
 }
 
 // Path: <root>
@@ -60202,9 +60233,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get collection_episode_open_bangumi => 'Open this episode on Bangumi';
   @override
-  String get collection_episode_bangumi_not_found =>
-      'Episode not found on Bangumi';
-  @override
   String collection_relation_bound({required Object name}) =>
       'Bound to ${name}';
   @override
@@ -60226,6 +60254,13 @@ class _StringsKo extends _StringsEn {
   @override
   String collection_episode_bangumi_open_failed({required Object error}) =>
       'Could not resolve the episode on Bangumi: ${error}';
+  @override
+  String collection_episode_rename_partial(
+          {required Object n, required Object m}) =>
+      'Renamed ${n} episodes, ${m} failed';
+  @override
+  String get collection_episode_bangumi_not_found =>
+      'Episode not found on Bangumi; opened the subject page instead';
 }
 
 // Path: <root>
@@ -67253,9 +67288,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get collection_episode_open_bangumi => 'Open this episode on Bangumi';
   @override
-  String get collection_episode_bangumi_not_found =>
-      'Episode not found on Bangumi';
-  @override
   String collection_relation_bound({required Object name}) =>
       'Bound to ${name}';
   @override
@@ -67277,6 +67309,13 @@ class _StringsNl extends _StringsEn {
   @override
   String collection_episode_bangumi_open_failed({required Object error}) =>
       'Could not resolve the episode on Bangumi: ${error}';
+  @override
+  String collection_episode_rename_partial(
+          {required Object n, required Object m}) =>
+      'Renamed ${n} episodes, ${m} failed';
+  @override
+  String get collection_episode_bangumi_not_found =>
+      'Episode not found on Bangumi; opened the subject page instead';
 }
 
 // Path: <root>
@@ -74317,9 +74356,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get collection_episode_open_bangumi => 'Open this episode on Bangumi';
   @override
-  String get collection_episode_bangumi_not_found =>
-      'Episode not found on Bangumi';
-  @override
   String collection_relation_bound({required Object name}) =>
       'Bound to ${name}';
   @override
@@ -74341,6 +74377,13 @@ class _StringsPtBr extends _StringsEn {
   @override
   String collection_episode_bangumi_open_failed({required Object error}) =>
       'Could not resolve the episode on Bangumi: ${error}';
+  @override
+  String collection_episode_rename_partial(
+          {required Object n, required Object m}) =>
+      'Renamed ${n} episodes, ${m} failed';
+  @override
+  String get collection_episode_bangumi_not_found =>
+      'Episode not found on Bangumi; opened the subject page instead';
 }
 
 // Path: <root>
@@ -81365,9 +81408,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get collection_episode_open_bangumi => 'Open this episode on Bangumi';
   @override
-  String get collection_episode_bangumi_not_found =>
-      'Episode not found on Bangumi';
-  @override
   String collection_relation_bound({required Object name}) =>
       'Bound to ${name}';
   @override
@@ -81389,6 +81429,13 @@ class _StringsRu extends _StringsEn {
   @override
   String collection_episode_bangumi_open_failed({required Object error}) =>
       'Could not resolve the episode on Bangumi: ${error}';
+  @override
+  String collection_episode_rename_partial(
+          {required Object n, required Object m}) =>
+      'Renamed ${n} episodes, ${m} failed';
+  @override
+  String get collection_episode_bangumi_not_found =>
+      'Episode not found on Bangumi; opened the subject page instead';
 }
 
 // Path: <root>
@@ -88361,9 +88408,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get collection_episode_open_bangumi => 'Open this episode on Bangumi';
   @override
-  String get collection_episode_bangumi_not_found =>
-      'Episode not found on Bangumi';
-  @override
   String collection_relation_bound({required Object name}) =>
       'Bound to ${name}';
   @override
@@ -88385,6 +88429,13 @@ class _StringsTh extends _StringsEn {
   @override
   String collection_episode_bangumi_open_failed({required Object error}) =>
       'Could not resolve the episode on Bangumi: ${error}';
+  @override
+  String collection_episode_rename_partial(
+          {required Object n, required Object m}) =>
+      'Renamed ${n} episodes, ${m} failed';
+  @override
+  String get collection_episode_bangumi_not_found =>
+      'Episode not found on Bangumi; opened the subject page instead';
 }
 
 // Path: <root>
@@ -95389,9 +95440,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get collection_episode_open_bangumi => 'Open this episode on Bangumi';
   @override
-  String get collection_episode_bangumi_not_found =>
-      'Episode not found on Bangumi';
-  @override
   String collection_relation_bound({required Object name}) =>
       'Bound to ${name}';
   @override
@@ -95413,6 +95461,13 @@ class _StringsTr extends _StringsEn {
   @override
   String collection_episode_bangumi_open_failed({required Object error}) =>
       'Could not resolve the episode on Bangumi: ${error}';
+  @override
+  String collection_episode_rename_partial(
+          {required Object n, required Object m}) =>
+      'Renamed ${n} episodes, ${m} failed';
+  @override
+  String get collection_episode_bangumi_not_found =>
+      'Episode not found on Bangumi; opened the subject page instead';
 }
 
 // Path: <root>
@@ -102402,9 +102457,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get collection_episode_open_bangumi => 'Open this episode on Bangumi';
   @override
-  String get collection_episode_bangumi_not_found =>
-      'Episode not found on Bangumi';
-  @override
   String collection_relation_bound({required Object name}) =>
       'Bound to ${name}';
   @override
@@ -102426,6 +102478,13 @@ class _StringsVi extends _StringsEn {
   @override
   String collection_episode_bangumi_open_failed({required Object error}) =>
       'Could not resolve the episode on Bangumi: ${error}';
+  @override
+  String collection_episode_rename_partial(
+          {required Object n, required Object m}) =>
+      'Renamed ${n} episodes, ${m} failed';
+  @override
+  String get collection_episode_bangumi_not_found =>
+      'Episode not found on Bangumi; opened the subject page instead';
 }
 
 // Path: <root>
@@ -108932,8 +108991,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get collection_episode_open_bangumi => '在 Bangumi 打开本集';
   @override
-  String get collection_episode_bangumi_not_found => 'Bangumi 上没有找到本集';
-  @override
   String collection_relation_bound({required Object name}) => '已绑定到 ${name}';
   @override
   String collection_episode_scrape_result(
@@ -108952,6 +109009,12 @@ class _StringsZhCn extends _StringsEn {
   @override
   String collection_episode_bangumi_open_failed({required Object error}) =>
       '解析 Bangumi 章节失败：${error}';
+  @override
+  String collection_episode_rename_partial(
+          {required Object n, required Object m}) =>
+      '已重命名 ${n} 集 · ${m} 集失败';
+  @override
+  String get collection_episode_bangumi_not_found => '未找到对应集，已打开条目页';
 }
 
 // Path: <root>
@@ -115737,9 +115800,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get collection_episode_open_bangumi => 'Open this episode on Bangumi';
   @override
-  String get collection_episode_bangumi_not_found =>
-      'Episode not found on Bangumi';
-  @override
   String collection_relation_bound({required Object name}) =>
       'Bound to ${name}';
   @override
@@ -115761,6 +115821,13 @@ class _StringsZhHk extends _StringsEn {
   @override
   String collection_episode_bangumi_open_failed({required Object error}) =>
       'Could not resolve the episode on Bangumi: ${error}';
+  @override
+  String collection_episode_rename_partial(
+          {required Object n, required Object m}) =>
+      'Renamed ${n} episodes, ${m} failed';
+  @override
+  String get collection_episode_bangumi_not_found =>
+      'Episode not found on Bangumi; opened the subject page instead';
 }
 
 /// Flat map(s) containing all translations.
@@ -122005,8 +122072,6 @@ extension on _StringsEn {
         return 'Split';
       case 'collection_episode_open_bangumi':
         return 'Open this episode on Bangumi';
-      case 'collection_episode_bangumi_not_found':
-        return 'Episode not found on Bangumi';
       case 'collection_relation_bound':
         return ({required Object name}) => 'Bound to ${name}';
       case 'collection_episode_scrape_result':
@@ -122023,6 +122088,11 @@ extension on _StringsEn {
       case 'collection_episode_bangumi_open_failed':
         return ({required Object error}) =>
             'Could not resolve the episode on Bangumi: ${error}';
+      case 'collection_episode_rename_partial':
+        return ({required Object n, required Object m}) =>
+            'Renamed ${n} episodes, ${m} failed';
+      case 'collection_episode_bangumi_not_found':
+        return 'Episode not found on Bangumi; opened the subject page instead';
       default:
         return null;
     }
@@ -128265,8 +128335,6 @@ extension on _StringsAr {
         return 'Split';
       case 'collection_episode_open_bangumi':
         return 'Open this episode on Bangumi';
-      case 'collection_episode_bangumi_not_found':
-        return 'Episode not found on Bangumi';
       case 'collection_relation_bound':
         return ({required Object name}) => 'Bound to ${name}';
       case 'collection_episode_scrape_result':
@@ -128283,6 +128351,11 @@ extension on _StringsAr {
       case 'collection_episode_bangumi_open_failed':
         return ({required Object error}) =>
             'Could not resolve the episode on Bangumi: ${error}';
+      case 'collection_episode_rename_partial':
+        return ({required Object n, required Object m}) =>
+            'Renamed ${n} episodes, ${m} failed';
+      case 'collection_episode_bangumi_not_found':
+        return 'Episode not found on Bangumi; opened the subject page instead';
       default:
         return null;
     }
@@ -134547,8 +134620,6 @@ extension on _StringsDe {
         return 'Split';
       case 'collection_episode_open_bangumi':
         return 'Open this episode on Bangumi';
-      case 'collection_episode_bangumi_not_found':
-        return 'Episode not found on Bangumi';
       case 'collection_relation_bound':
         return ({required Object name}) => 'Bound to ${name}';
       case 'collection_episode_scrape_result':
@@ -134565,6 +134636,11 @@ extension on _StringsDe {
       case 'collection_episode_bangumi_open_failed':
         return ({required Object error}) =>
             'Could not resolve the episode on Bangumi: ${error}';
+      case 'collection_episode_rename_partial':
+        return ({required Object n, required Object m}) =>
+            'Renamed ${n} episodes, ${m} failed';
+      case 'collection_episode_bangumi_not_found':
+        return 'Episode not found on Bangumi; opened the subject page instead';
       default:
         return null;
     }
@@ -140828,8 +140904,6 @@ extension on _StringsEs {
         return 'Split';
       case 'collection_episode_open_bangumi':
         return 'Open this episode on Bangumi';
-      case 'collection_episode_bangumi_not_found':
-        return 'Episode not found on Bangumi';
       case 'collection_relation_bound':
         return ({required Object name}) => 'Bound to ${name}';
       case 'collection_episode_scrape_result':
@@ -140846,6 +140920,11 @@ extension on _StringsEs {
       case 'collection_episode_bangumi_open_failed':
         return ({required Object error}) =>
             'Could not resolve the episode on Bangumi: ${error}';
+      case 'collection_episode_rename_partial':
+        return ({required Object n, required Object m}) =>
+            'Renamed ${n} episodes, ${m} failed';
+      case 'collection_episode_bangumi_not_found':
+        return 'Episode not found on Bangumi; opened the subject page instead';
       default:
         return null;
     }
@@ -147115,8 +147194,6 @@ extension on _StringsFr {
         return 'Split';
       case 'collection_episode_open_bangumi':
         return 'Open this episode on Bangumi';
-      case 'collection_episode_bangumi_not_found':
-        return 'Episode not found on Bangumi';
       case 'collection_relation_bound':
         return ({required Object name}) => 'Bound to ${name}';
       case 'collection_episode_scrape_result':
@@ -147133,6 +147210,11 @@ extension on _StringsFr {
       case 'collection_episode_bangumi_open_failed':
         return ({required Object error}) =>
             'Could not resolve the episode on Bangumi: ${error}';
+      case 'collection_episode_rename_partial':
+        return ({required Object n, required Object m}) =>
+            'Renamed ${n} episodes, ${m} failed';
+      case 'collection_episode_bangumi_not_found':
+        return 'Episode not found on Bangumi; opened the subject page instead';
       default:
         return null;
     }
@@ -153384,8 +153466,6 @@ extension on _StringsId {
         return 'Split';
       case 'collection_episode_open_bangumi':
         return 'Open this episode on Bangumi';
-      case 'collection_episode_bangumi_not_found':
-        return 'Episode not found on Bangumi';
       case 'collection_relation_bound':
         return ({required Object name}) => 'Bound to ${name}';
       case 'collection_episode_scrape_result':
@@ -153402,6 +153482,11 @@ extension on _StringsId {
       case 'collection_episode_bangumi_open_failed':
         return ({required Object error}) =>
             'Could not resolve the episode on Bangumi: ${error}';
+      case 'collection_episode_rename_partial':
+        return ({required Object n, required Object m}) =>
+            'Renamed ${n} episodes, ${m} failed';
+      case 'collection_episode_bangumi_not_found':
+        return 'Episode not found on Bangumi; opened the subject page instead';
       default:
         return null;
     }
@@ -159667,8 +159752,6 @@ extension on _StringsIt {
         return 'Split';
       case 'collection_episode_open_bangumi':
         return 'Open this episode on Bangumi';
-      case 'collection_episode_bangumi_not_found':
-        return 'Episode not found on Bangumi';
       case 'collection_relation_bound':
         return ({required Object name}) => 'Bound to ${name}';
       case 'collection_episode_scrape_result':
@@ -159685,6 +159768,11 @@ extension on _StringsIt {
       case 'collection_episode_bangumi_open_failed':
         return ({required Object error}) =>
             'Could not resolve the episode on Bangumi: ${error}';
+      case 'collection_episode_rename_partial':
+        return ({required Object n, required Object m}) =>
+            'Renamed ${n} episodes, ${m} failed';
+      case 'collection_episode_bangumi_not_found':
+        return 'Episode not found on Bangumi; opened the subject page instead';
       default:
         return null;
     }
@@ -165912,8 +166000,6 @@ extension on _StringsJa {
         return 'Split';
       case 'collection_episode_open_bangumi':
         return 'Open this episode on Bangumi';
-      case 'collection_episode_bangumi_not_found':
-        return 'Episode not found on Bangumi';
       case 'collection_relation_bound':
         return ({required Object name}) => 'Bound to ${name}';
       case 'collection_episode_scrape_result':
@@ -165930,6 +166016,11 @@ extension on _StringsJa {
       case 'collection_episode_bangumi_open_failed':
         return ({required Object error}) =>
             'Could not resolve the episode on Bangumi: ${error}';
+      case 'collection_episode_rename_partial':
+        return ({required Object n, required Object m}) =>
+            'Renamed ${n} episodes, ${m} failed';
+      case 'collection_episode_bangumi_not_found':
+        return 'Episode not found on Bangumi; opened the subject page instead';
       default:
         return null;
     }
@@ -172161,8 +172252,6 @@ extension on _StringsKo {
         return 'Split';
       case 'collection_episode_open_bangumi':
         return 'Open this episode on Bangumi';
-      case 'collection_episode_bangumi_not_found':
-        return 'Episode not found on Bangumi';
       case 'collection_relation_bound':
         return ({required Object name}) => 'Bound to ${name}';
       case 'collection_episode_scrape_result':
@@ -172179,6 +172268,11 @@ extension on _StringsKo {
       case 'collection_episode_bangumi_open_failed':
         return ({required Object error}) =>
             'Could not resolve the episode on Bangumi: ${error}';
+      case 'collection_episode_rename_partial':
+        return ({required Object n, required Object m}) =>
+            'Renamed ${n} episodes, ${m} failed';
+      case 'collection_episode_bangumi_not_found':
+        return 'Episode not found on Bangumi; opened the subject page instead';
       default:
         return null;
     }
@@ -178438,8 +178532,6 @@ extension on _StringsNl {
         return 'Split';
       case 'collection_episode_open_bangumi':
         return 'Open this episode on Bangumi';
-      case 'collection_episode_bangumi_not_found':
-        return 'Episode not found on Bangumi';
       case 'collection_relation_bound':
         return ({required Object name}) => 'Bound to ${name}';
       case 'collection_episode_scrape_result':
@@ -178456,6 +178548,11 @@ extension on _StringsNl {
       case 'collection_episode_bangumi_open_failed':
         return ({required Object error}) =>
             'Could not resolve the episode on Bangumi: ${error}';
+      case 'collection_episode_rename_partial':
+        return ({required Object n, required Object m}) =>
+            'Renamed ${n} episodes, ${m} failed';
+      case 'collection_episode_bangumi_not_found':
+        return 'Episode not found on Bangumi; opened the subject page instead';
       default:
         return null;
     }
@@ -184712,8 +184809,6 @@ extension on _StringsPtBr {
         return 'Split';
       case 'collection_episode_open_bangumi':
         return 'Open this episode on Bangumi';
-      case 'collection_episode_bangumi_not_found':
-        return 'Episode not found on Bangumi';
       case 'collection_relation_bound':
         return ({required Object name}) => 'Bound to ${name}';
       case 'collection_episode_scrape_result':
@@ -184730,6 +184825,11 @@ extension on _StringsPtBr {
       case 'collection_episode_bangumi_open_failed':
         return ({required Object error}) =>
             'Could not resolve the episode on Bangumi: ${error}';
+      case 'collection_episode_rename_partial':
+        return ({required Object n, required Object m}) =>
+            'Renamed ${n} episodes, ${m} failed';
+      case 'collection_episode_bangumi_not_found':
+        return 'Episode not found on Bangumi; opened the subject page instead';
       default:
         return null;
     }
@@ -190991,8 +191091,6 @@ extension on _StringsRu {
         return 'Split';
       case 'collection_episode_open_bangumi':
         return 'Open this episode on Bangumi';
-      case 'collection_episode_bangumi_not_found':
-        return 'Episode not found on Bangumi';
       case 'collection_relation_bound':
         return ({required Object name}) => 'Bound to ${name}';
       case 'collection_episode_scrape_result':
@@ -191009,6 +191107,11 @@ extension on _StringsRu {
       case 'collection_episode_bangumi_open_failed':
         return ({required Object error}) =>
             'Could not resolve the episode on Bangumi: ${error}';
+      case 'collection_episode_rename_partial':
+        return ({required Object n, required Object m}) =>
+            'Renamed ${n} episodes, ${m} failed';
+      case 'collection_episode_bangumi_not_found':
+        return 'Episode not found on Bangumi; opened the subject page instead';
       default:
         return null;
     }
@@ -197253,8 +197356,6 @@ extension on _StringsTh {
         return 'Split';
       case 'collection_episode_open_bangumi':
         return 'Open this episode on Bangumi';
-      case 'collection_episode_bangumi_not_found':
-        return 'Episode not found on Bangumi';
       case 'collection_relation_bound':
         return ({required Object name}) => 'Bound to ${name}';
       case 'collection_episode_scrape_result':
@@ -197271,6 +197372,11 @@ extension on _StringsTh {
       case 'collection_episode_bangumi_open_failed':
         return ({required Object error}) =>
             'Could not resolve the episode on Bangumi: ${error}';
+      case 'collection_episode_rename_partial':
+        return ({required Object n, required Object m}) =>
+            'Renamed ${n} episodes, ${m} failed';
+      case 'collection_episode_bangumi_not_found':
+        return 'Episode not found on Bangumi; opened the subject page instead';
       default:
         return null;
     }
@@ -203524,8 +203630,6 @@ extension on _StringsTr {
         return 'Split';
       case 'collection_episode_open_bangumi':
         return 'Open this episode on Bangumi';
-      case 'collection_episode_bangumi_not_found':
-        return 'Episode not found on Bangumi';
       case 'collection_relation_bound':
         return ({required Object name}) => 'Bound to ${name}';
       case 'collection_episode_scrape_result':
@@ -203542,6 +203646,11 @@ extension on _StringsTr {
       case 'collection_episode_bangumi_open_failed':
         return ({required Object error}) =>
             'Could not resolve the episode on Bangumi: ${error}';
+      case 'collection_episode_rename_partial':
+        return ({required Object n, required Object m}) =>
+            'Renamed ${n} episodes, ${m} failed';
+      case 'collection_episode_bangumi_not_found':
+        return 'Episode not found on Bangumi; opened the subject page instead';
       default:
         return null;
     }
@@ -209791,8 +209900,6 @@ extension on _StringsVi {
         return 'Split';
       case 'collection_episode_open_bangumi':
         return 'Open this episode on Bangumi';
-      case 'collection_episode_bangumi_not_found':
-        return 'Episode not found on Bangumi';
       case 'collection_relation_bound':
         return ({required Object name}) => 'Bound to ${name}';
       case 'collection_episode_scrape_result':
@@ -209809,6 +209916,11 @@ extension on _StringsVi {
       case 'collection_episode_bangumi_open_failed':
         return ({required Object error}) =>
             'Could not resolve the episode on Bangumi: ${error}';
+      case 'collection_episode_rename_partial':
+        return ({required Object n, required Object m}) =>
+            'Renamed ${n} episodes, ${m} failed';
+      case 'collection_episode_bangumi_not_found':
+        return 'Episode not found on Bangumi; opened the subject page instead';
       default:
         return null;
     }
@@ -216005,8 +216117,6 @@ extension on _StringsZhCn {
         return '拆分';
       case 'collection_episode_open_bangumi':
         return '在 Bangumi 打开本集';
-      case 'collection_episode_bangumi_not_found':
-        return 'Bangumi 上没有找到本集';
       case 'collection_relation_bound':
         return ({required Object name}) => '已绑定到 ${name}';
       case 'collection_episode_scrape_result':
@@ -216022,6 +216132,11 @@ extension on _StringsZhCn {
         return ({required Object position}) => '看到 ${position}';
       case 'collection_episode_bangumi_open_failed':
         return ({required Object error}) => '解析 Bangumi 章节失败：${error}';
+      case 'collection_episode_rename_partial':
+        return ({required Object n, required Object m}) =>
+            '已重命名 ${n} 集 · ${m} 集失败';
+      case 'collection_episode_bangumi_not_found':
+        return '未找到对应集，已打开条目页';
       default:
         return null;
     }
@@ -222244,8 +222359,6 @@ extension on _StringsZhHk {
         return 'Split';
       case 'collection_episode_open_bangumi':
         return 'Open this episode on Bangumi';
-      case 'collection_episode_bangumi_not_found':
-        return 'Episode not found on Bangumi';
       case 'collection_relation_bound':
         return ({required Object name}) => 'Bound to ${name}';
       case 'collection_episode_scrape_result':
@@ -222262,6 +222375,11 @@ extension on _StringsZhHk {
       case 'collection_episode_bangumi_open_failed':
         return ({required Object error}) =>
             'Could not resolve the episode on Bangumi: ${error}';
+      case 'collection_episode_rename_partial':
+        return ({required Object n, required Object m}) =>
+            'Renamed ${n} episodes, ${m} failed';
+      case 'collection_episode_bangumi_not_found':
+        return 'Episode not found on Bangumi; opened the subject page instead';
       default:
         return null;
     }
