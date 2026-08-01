@@ -3,7 +3,7 @@
 /// Locales: 17
 /// Strings: 51391 (3023 per locale)
 ///
-/// Built on 2026-08-01 at 16:22 UTC
+/// Built on 2026-08-01 at 17:56 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3890,8 +3890,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Same formats as video cards, stored separately: a galgame frame barely moves within one line, so the trade-off differs.';
   String get scrape_all => 'Scrape all';
   String scrape_all_title({required Object kind}) => 'Scrape all ${kind}';
-  String scrape_all_confirm({required Object n}) =>
-      'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
   String scrape_all_running({required Object current, required Object total}) =>
       'Scraping ${current} / ${total}';
   String scrape_all_item({required Object title}) => 'Processing: ${title}';
@@ -4063,6 +4061,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get media_source_local_roots => 'Local scan roots';
   String get game_hook_reason_protocol_mismatch =>
       'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+  String scrape_all_confirm({required Object n}) =>
+      'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
 }
 
 // Path: <root>
@@ -10682,9 +10682,6 @@ class _StringsAr extends _StringsEn {
   @override
   String scrape_all_title({required Object kind}) => 'Scrape all ${kind}';
   @override
-  String scrape_all_confirm({required Object n}) =>
-      'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
-  @override
   String scrape_all_running({required Object current, required Object total}) =>
       'Scraping ${current} / ${total}';
   @override
@@ -10998,6 +10995,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get game_hook_reason_protocol_mismatch =>
       'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+  @override
+  String scrape_all_confirm({required Object n}) =>
+      'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
 }
 
 // Path: <root>
@@ -17684,9 +17684,6 @@ class _StringsDe extends _StringsEn {
   @override
   String scrape_all_title({required Object kind}) => 'Scrape all ${kind}';
   @override
-  String scrape_all_confirm({required Object n}) =>
-      'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
-  @override
   String scrape_all_running({required Object current, required Object total}) =>
       'Scraping ${current} / ${total}';
   @override
@@ -18000,6 +17997,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get game_hook_reason_protocol_mismatch =>
       'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+  @override
+  String scrape_all_confirm({required Object n}) =>
+      'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
 }
 
 // Path: <root>
@@ -24701,9 +24701,6 @@ class _StringsEs extends _StringsEn {
   @override
   String scrape_all_title({required Object kind}) => 'Scrape all ${kind}';
   @override
-  String scrape_all_confirm({required Object n}) =>
-      'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
-  @override
   String scrape_all_running({required Object current, required Object total}) =>
       'Scraping ${current} / ${total}';
   @override
@@ -25017,6 +25014,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get game_hook_reason_protocol_mismatch =>
       'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+  @override
+  String scrape_all_confirm({required Object n}) =>
+      'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
 }
 
 // Path: <root>
@@ -31730,9 +31730,6 @@ class _StringsFr extends _StringsEn {
   @override
   String scrape_all_title({required Object kind}) => 'Scrape all ${kind}';
   @override
-  String scrape_all_confirm({required Object n}) =>
-      'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
-  @override
   String scrape_all_running({required Object current, required Object total}) =>
       'Scraping ${current} / ${total}';
   @override
@@ -32046,6 +32043,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get game_hook_reason_protocol_mismatch =>
       'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+  @override
+  String scrape_all_confirm({required Object n}) =>
+      'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
 }
 
 // Path: <root>
@@ -38688,9 +38688,6 @@ class _StringsId extends _StringsEn {
   @override
   String scrape_all_title({required Object kind}) => 'Scrape all ${kind}';
   @override
-  String scrape_all_confirm({required Object n}) =>
-      'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
-  @override
   String scrape_all_running({required Object current, required Object total}) =>
       'Scraping ${current} / ${total}';
   @override
@@ -39004,6 +39001,9 @@ class _StringsId extends _StringsEn {
   @override
   String get game_hook_reason_protocol_mismatch =>
       'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+  @override
+  String scrape_all_confirm({required Object n}) =>
+      'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
 }
 
 // Path: <root>
@@ -45692,9 +45692,6 @@ class _StringsIt extends _StringsEn {
   @override
   String scrape_all_title({required Object kind}) => 'Scrape all ${kind}';
   @override
-  String scrape_all_confirm({required Object n}) =>
-      'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
-  @override
   String scrape_all_running({required Object current, required Object total}) =>
       'Scraping ${current} / ${total}';
   @override
@@ -46008,6 +46005,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get game_hook_reason_protocol_mismatch =>
       'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+  @override
+  String scrape_all_confirm({required Object n}) =>
+      'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
 }
 
 // Path: <root>
@@ -52513,9 +52513,6 @@ class _StringsJa extends _StringsEn {
   @override
   String scrape_all_title({required Object kind}) => 'Scrape all ${kind}';
   @override
-  String scrape_all_confirm({required Object n}) =>
-      'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
-  @override
   String scrape_all_running({required Object current, required Object total}) =>
       'Scraping ${current} / ${total}';
   @override
@@ -52829,6 +52826,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get game_hook_reason_protocol_mismatch =>
       'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+  @override
+  String scrape_all_confirm({required Object n}) =>
+      'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
 }
 
 // Path: <root>
@@ -59336,9 +59336,6 @@ class _StringsKo extends _StringsEn {
   @override
   String scrape_all_title({required Object kind}) => 'Scrape all ${kind}';
   @override
-  String scrape_all_confirm({required Object n}) =>
-      'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
-  @override
   String scrape_all_running({required Object current, required Object total}) =>
       'Scraping ${current} / ${total}';
   @override
@@ -59652,6 +59649,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get game_hook_reason_protocol_mismatch =>
       'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+  @override
+  String scrape_all_confirm({required Object n}) =>
+      'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
 }
 
 // Path: <root>
@@ -66320,9 +66320,6 @@ class _StringsNl extends _StringsEn {
   @override
   String scrape_all_title({required Object kind}) => 'Scrape all ${kind}';
   @override
-  String scrape_all_confirm({required Object n}) =>
-      'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
-  @override
   String scrape_all_running({required Object current, required Object total}) =>
       'Scraping ${current} / ${total}';
   @override
@@ -66636,6 +66633,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get game_hook_reason_protocol_mismatch =>
       'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+  @override
+  String scrape_all_confirm({required Object n}) =>
+      'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
 }
 
 // Path: <root>
@@ -73317,9 +73317,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String scrape_all_title({required Object kind}) => 'Scrape all ${kind}';
   @override
-  String scrape_all_confirm({required Object n}) =>
-      'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
-  @override
   String scrape_all_running({required Object current, required Object total}) =>
       'Scraping ${current} / ${total}';
   @override
@@ -73633,6 +73630,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get game_hook_reason_protocol_mismatch =>
       'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+  @override
+  String scrape_all_confirm({required Object n}) =>
+      'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
 }
 
 // Path: <root>
@@ -80298,9 +80298,6 @@ class _StringsRu extends _StringsEn {
   @override
   String scrape_all_title({required Object kind}) => 'Scrape all ${kind}';
   @override
-  String scrape_all_confirm({required Object n}) =>
-      'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
-  @override
   String scrape_all_running({required Object current, required Object total}) =>
       'Scraping ${current} / ${total}';
   @override
@@ -80614,6 +80611,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get game_hook_reason_protocol_mismatch =>
       'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+  @override
+  String scrape_all_confirm({required Object n}) =>
+      'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
 }
 
 // Path: <root>
@@ -87227,9 +87227,6 @@ class _StringsTh extends _StringsEn {
   @override
   String scrape_all_title({required Object kind}) => 'Scrape all ${kind}';
   @override
-  String scrape_all_confirm({required Object n}) =>
-      'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
-  @override
   String scrape_all_running({required Object current, required Object total}) =>
       'Scraping ${current} / ${total}';
   @override
@@ -87543,6 +87540,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get game_hook_reason_protocol_mismatch =>
       'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+  @override
+  String scrape_all_confirm({required Object n}) =>
+      'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
 }
 
 // Path: <root>
@@ -94188,9 +94188,6 @@ class _StringsTr extends _StringsEn {
   @override
   String scrape_all_title({required Object kind}) => 'Scrape all ${kind}';
   @override
-  String scrape_all_confirm({required Object n}) =>
-      'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
-  @override
   String scrape_all_running({required Object current, required Object total}) =>
       'Scraping ${current} / ${total}';
   @override
@@ -94504,6 +94501,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get game_hook_reason_protocol_mismatch =>
       'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+  @override
+  String scrape_all_confirm({required Object n}) =>
+      'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
 }
 
 // Path: <root>
@@ -101134,9 +101134,6 @@ class _StringsVi extends _StringsEn {
   @override
   String scrape_all_title({required Object kind}) => 'Scrape all ${kind}';
   @override
-  String scrape_all_confirm({required Object n}) =>
-      'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
-  @override
   String scrape_all_running({required Object current, required Object total}) =>
       'Scraping ${current} / ${total}';
   @override
@@ -101450,6 +101447,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get game_hook_reason_protocol_mismatch =>
       'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+  @override
+  String scrape_all_confirm({required Object n}) =>
+      'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
 }
 
 // Path: <root>
@@ -107607,9 +107607,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String scrape_all_title({required Object kind}) => '刮削全部${kind}';
   @override
-  String scrape_all_confirm({required Object n}) =>
-      '将按标题匹配库中的 ${n} 个条目。只自动应用唯一的精确匹配；已有手动封面会保留，歧义结果留待手动确认。';
-  @override
   String scrape_all_running({required Object current, required Object total}) =>
       '正在刮削 ${current} / ${total}';
   @override
@@ -107913,6 +107910,9 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get game_hook_reason_protocol_mismatch =>
       '捕获组件与本体版本不一致。捕获组件已内置在 Hibiki 里、随本体一起更新，请更新 Hibiki 到最新版；若已是最新版，请把这条提示反馈给我们。';
+  @override
+  String scrape_all_confirm({required Object n}) =>
+      '将按标题匹配库中的 ${n} 个条目。只自动应用唯一的精确匹配；你自己定的封面一律不覆盖（手动设置的本地图、在匹配弹窗里亲手选定的条目、目录里自带的 poster 图），歧义结果留待手动确认。';
 }
 
 // Path: <root>
@@ -114339,9 +114339,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String scrape_all_title({required Object kind}) => 'Scrape all ${kind}';
   @override
-  String scrape_all_confirm({required Object n}) =>
-      'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
-  @override
   String scrape_all_running({required Object current, required Object total}) =>
       'Scraping ${current} / ${total}';
   @override
@@ -114655,6 +114652,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get game_hook_reason_protocol_mismatch =>
       'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+  @override
+  String scrape_all_confirm({required Object n}) =>
+      'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
 }
 
 /// Flat map(s) containing all translations.
@@ -120562,9 +120562,6 @@ extension on _StringsEn {
         return 'Scrape all';
       case 'scrape_all_title':
         return ({required Object kind}) => 'Scrape all ${kind}';
-      case 'scrape_all_confirm':
-        return ({required Object n}) =>
-            'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
       case 'scrape_all_running':
         return ({required Object current, required Object total}) =>
             'Scraping ${current} / ${total}';
@@ -120857,6 +120854,9 @@ extension on _StringsEn {
         return 'Local scan roots';
       case 'game_hook_reason_protocol_mismatch':
         return 'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+      case 'scrape_all_confirm':
+        return ({required Object n}) =>
+            'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
       default:
         return null;
     }
@@ -126762,9 +126762,6 @@ extension on _StringsAr {
         return 'Scrape all';
       case 'scrape_all_title':
         return ({required Object kind}) => 'Scrape all ${kind}';
-      case 'scrape_all_confirm':
-        return ({required Object n}) =>
-            'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
       case 'scrape_all_running':
         return ({required Object current, required Object total}) =>
             'Scraping ${current} / ${total}';
@@ -127057,6 +127054,9 @@ extension on _StringsAr {
         return 'Local scan roots';
       case 'game_hook_reason_protocol_mismatch':
         return 'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+      case 'scrape_all_confirm':
+        return ({required Object n}) =>
+            'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
       default:
         return null;
     }
@@ -132984,9 +132984,6 @@ extension on _StringsDe {
         return 'Scrape all';
       case 'scrape_all_title':
         return ({required Object kind}) => 'Scrape all ${kind}';
-      case 'scrape_all_confirm':
-        return ({required Object n}) =>
-            'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
       case 'scrape_all_running':
         return ({required Object current, required Object total}) =>
             'Scraping ${current} / ${total}';
@@ -133279,6 +133276,9 @@ extension on _StringsDe {
         return 'Local scan roots';
       case 'game_hook_reason_protocol_mismatch':
         return 'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+      case 'scrape_all_confirm':
+        return ({required Object n}) =>
+            'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
       default:
         return null;
     }
@@ -139205,9 +139205,6 @@ extension on _StringsEs {
         return 'Scrape all';
       case 'scrape_all_title':
         return ({required Object kind}) => 'Scrape all ${kind}';
-      case 'scrape_all_confirm':
-        return ({required Object n}) =>
-            'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
       case 'scrape_all_running':
         return ({required Object current, required Object total}) =>
             'Scraping ${current} / ${total}';
@@ -139500,6 +139497,9 @@ extension on _StringsEs {
         return 'Local scan roots';
       case 'game_hook_reason_protocol_mismatch':
         return 'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+      case 'scrape_all_confirm':
+        return ({required Object n}) =>
+            'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
       default:
         return null;
     }
@@ -145432,9 +145432,6 @@ extension on _StringsFr {
         return 'Scrape all';
       case 'scrape_all_title':
         return ({required Object kind}) => 'Scrape all ${kind}';
-      case 'scrape_all_confirm':
-        return ({required Object n}) =>
-            'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
       case 'scrape_all_running':
         return ({required Object current, required Object total}) =>
             'Scraping ${current} / ${total}';
@@ -145727,6 +145724,9 @@ extension on _StringsFr {
         return 'Local scan roots';
       case 'game_hook_reason_protocol_mismatch':
         return 'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+      case 'scrape_all_confirm':
+        return ({required Object n}) =>
+            'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
       default:
         return null;
     }
@@ -151641,9 +151641,6 @@ extension on _StringsId {
         return 'Scrape all';
       case 'scrape_all_title':
         return ({required Object kind}) => 'Scrape all ${kind}';
-      case 'scrape_all_confirm':
-        return ({required Object n}) =>
-            'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
       case 'scrape_all_running':
         return ({required Object current, required Object total}) =>
             'Scraping ${current} / ${total}';
@@ -151936,6 +151933,9 @@ extension on _StringsId {
         return 'Local scan roots';
       case 'game_hook_reason_protocol_mismatch':
         return 'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+      case 'scrape_all_confirm':
+        return ({required Object n}) =>
+            'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
       default:
         return null;
     }
@@ -157864,9 +157864,6 @@ extension on _StringsIt {
         return 'Scrape all';
       case 'scrape_all_title':
         return ({required Object kind}) => 'Scrape all ${kind}';
-      case 'scrape_all_confirm':
-        return ({required Object n}) =>
-            'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
       case 'scrape_all_running':
         return ({required Object current, required Object total}) =>
             'Scraping ${current} / ${total}';
@@ -158159,6 +158156,9 @@ extension on _StringsIt {
         return 'Local scan roots';
       case 'game_hook_reason_protocol_mismatch':
         return 'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+      case 'scrape_all_confirm':
+        return ({required Object n}) =>
+            'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
       default:
         return null;
     }
@@ -164049,9 +164049,6 @@ extension on _StringsJa {
         return 'Scrape all';
       case 'scrape_all_title':
         return ({required Object kind}) => 'Scrape all ${kind}';
-      case 'scrape_all_confirm':
-        return ({required Object n}) =>
-            'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
       case 'scrape_all_running':
         return ({required Object current, required Object total}) =>
             'Scraping ${current} / ${total}';
@@ -164344,6 +164341,9 @@ extension on _StringsJa {
         return 'Local scan roots';
       case 'game_hook_reason_protocol_mismatch':
         return 'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+      case 'scrape_all_confirm':
+        return ({required Object n}) =>
+            'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
       default:
         return null;
     }
@@ -170238,9 +170238,6 @@ extension on _StringsKo {
         return 'Scrape all';
       case 'scrape_all_title':
         return ({required Object kind}) => 'Scrape all ${kind}';
-      case 'scrape_all_confirm':
-        return ({required Object n}) =>
-            'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
       case 'scrape_all_running':
         return ({required Object current, required Object total}) =>
             'Scraping ${current} / ${total}';
@@ -170533,6 +170530,9 @@ extension on _StringsKo {
         return 'Local scan roots';
       case 'game_hook_reason_protocol_mismatch':
         return 'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+      case 'scrape_all_confirm':
+        return ({required Object n}) =>
+            'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
       default:
         return null;
     }
@@ -176455,9 +176455,6 @@ extension on _StringsNl {
         return 'Scrape all';
       case 'scrape_all_title':
         return ({required Object kind}) => 'Scrape all ${kind}';
-      case 'scrape_all_confirm':
-        return ({required Object n}) =>
-            'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
       case 'scrape_all_running':
         return ({required Object current, required Object total}) =>
             'Scraping ${current} / ${total}';
@@ -176750,6 +176747,9 @@ extension on _StringsNl {
         return 'Local scan roots';
       case 'game_hook_reason_protocol_mismatch':
         return 'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+      case 'scrape_all_confirm':
+        return ({required Object n}) =>
+            'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
       default:
         return null;
     }
@@ -182669,9 +182669,6 @@ extension on _StringsPtBr {
         return 'Scrape all';
       case 'scrape_all_title':
         return ({required Object kind}) => 'Scrape all ${kind}';
-      case 'scrape_all_confirm':
-        return ({required Object n}) =>
-            'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
       case 'scrape_all_running':
         return ({required Object current, required Object total}) =>
             'Scraping ${current} / ${total}';
@@ -182964,6 +182961,9 @@ extension on _StringsPtBr {
         return 'Local scan roots';
       case 'game_hook_reason_protocol_mismatch':
         return 'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+      case 'scrape_all_confirm':
+        return ({required Object n}) =>
+            'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
       default:
         return null;
     }
@@ -188888,9 +188888,6 @@ extension on _StringsRu {
         return 'Scrape all';
       case 'scrape_all_title':
         return ({required Object kind}) => 'Scrape all ${kind}';
-      case 'scrape_all_confirm':
-        return ({required Object n}) =>
-            'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
       case 'scrape_all_running':
         return ({required Object current, required Object total}) =>
             'Scraping ${current} / ${total}';
@@ -189183,6 +189180,9 @@ extension on _StringsRu {
         return 'Local scan roots';
       case 'game_hook_reason_protocol_mismatch':
         return 'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+      case 'scrape_all_confirm':
+        return ({required Object n}) =>
+            'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
       default:
         return null;
     }
@@ -195090,9 +195090,6 @@ extension on _StringsTh {
         return 'Scrape all';
       case 'scrape_all_title':
         return ({required Object kind}) => 'Scrape all ${kind}';
-      case 'scrape_all_confirm':
-        return ({required Object n}) =>
-            'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
       case 'scrape_all_running':
         return ({required Object current, required Object total}) =>
             'Scraping ${current} / ${total}';
@@ -195385,6 +195382,9 @@ extension on _StringsTh {
         return 'Local scan roots';
       case 'game_hook_reason_protocol_mismatch':
         return 'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+      case 'scrape_all_confirm':
+        return ({required Object n}) =>
+            'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
       default:
         return null;
     }
@@ -201301,9 +201301,6 @@ extension on _StringsTr {
         return 'Scrape all';
       case 'scrape_all_title':
         return ({required Object kind}) => 'Scrape all ${kind}';
-      case 'scrape_all_confirm':
-        return ({required Object n}) =>
-            'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
       case 'scrape_all_running':
         return ({required Object current, required Object total}) =>
             'Scraping ${current} / ${total}';
@@ -201596,6 +201593,9 @@ extension on _StringsTr {
         return 'Local scan roots';
       case 'game_hook_reason_protocol_mismatch':
         return 'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+      case 'scrape_all_confirm':
+        return ({required Object n}) =>
+            'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
       default:
         return null;
     }
@@ -207508,9 +207508,6 @@ extension on _StringsVi {
         return 'Scrape all';
       case 'scrape_all_title':
         return ({required Object kind}) => 'Scrape all ${kind}';
-      case 'scrape_all_confirm':
-        return ({required Object n}) =>
-            'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
       case 'scrape_all_running':
         return ({required Object current, required Object total}) =>
             'Scraping ${current} / ${total}';
@@ -207803,6 +207800,9 @@ extension on _StringsVi {
         return 'Local scan roots';
       case 'game_hook_reason_protocol_mismatch':
         return 'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+      case 'scrape_all_confirm':
+        return ({required Object n}) =>
+            'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
       default:
         return null;
     }
@@ -213662,9 +213662,6 @@ extension on _StringsZhCn {
         return '全部刮削';
       case 'scrape_all_title':
         return ({required Object kind}) => '刮削全部${kind}';
-      case 'scrape_all_confirm':
-        return ({required Object n}) =>
-            '将按标题匹配库中的 ${n} 个条目。只自动应用唯一的精确匹配；已有手动封面会保留，歧义结果留待手动确认。';
       case 'scrape_all_running':
         return ({required Object current, required Object total}) =>
             '正在刮削 ${current} / ${total}';
@@ -213957,6 +213954,9 @@ extension on _StringsZhCn {
         return '本地扫描根';
       case 'game_hook_reason_protocol_mismatch':
         return '捕获组件与本体版本不一致。捕获组件已内置在 Hibiki 里、随本体一起更新，请更新 Hibiki 到最新版；若已是最新版，请把这条提示反馈给我们。';
+      case 'scrape_all_confirm':
+        return ({required Object n}) =>
+            '将按标题匹配库中的 ${n} 个条目。只自动应用唯一的精确匹配；你自己定的封面一律不覆盖（手动设置的本地图、在匹配弹窗里亲手选定的条目、目录里自带的 poster 图），歧义结果留待手动确认。';
       default:
         return null;
     }
@@ -219842,9 +219842,6 @@ extension on _StringsZhHk {
         return 'Scrape all';
       case 'scrape_all_title':
         return ({required Object kind}) => 'Scrape all ${kind}';
-      case 'scrape_all_confirm':
-        return ({required Object n}) =>
-            'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
       case 'scrape_all_running':
         return ({required Object current, required Object total}) =>
             'Scraping ${current} / ${total}';
@@ -220137,6 +220134,9 @@ extension on _StringsZhHk {
         return 'Local scan roots';
       case 'game_hook_reason_protocol_mismatch':
         return 'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+      case 'scrape_all_confirm':
+        return ({required Object n}) =>
+            'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
       default:
         return null;
     }
