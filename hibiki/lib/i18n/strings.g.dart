@@ -3,7 +3,7 @@
 /// Locales: 17
 /// Strings: 52105 (3065 per locale)
 ///
-/// Built on 2026-08-01 at 19:32 UTC
+/// Built on 2026-08-02 at 01:33 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -4060,7 +4060,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get mihon_in_bookshelf => 'In manga shelf';
   String get media_source_local_roots => 'Local scan roots';
   String get game_hook_reason_protocol_mismatch =>
-      'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+      'The capture component does not match this Hibiki build. It ships inside Hibiki, so there is nothing to install separately: fully close the game and launch it again, since the game process may still hold the component injected by a previous session. If it still mismatches, this build did not ship a matching component.';
   String scrape_all_confirm({required Object n}) =>
       'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
   String get collection_related_title => 'Related works';
@@ -11050,7 +11050,7 @@ class _StringsAr extends _StringsEn {
   String get media_source_local_roots => 'Local scan roots';
   @override
   String get game_hook_reason_protocol_mismatch =>
-      'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+      'The capture component does not match this Hibiki build. It ships inside Hibiki, so there is nothing to install separately: fully close the game and launch it again, since the game process may still hold the component injected by a previous session. If it still mismatches, this build did not ship a matching component.';
   @override
   String scrape_all_confirm({required Object n}) =>
       'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
@@ -18150,7 +18150,7 @@ class _StringsDe extends _StringsEn {
   String get media_source_local_roots => 'Local scan roots';
   @override
   String get game_hook_reason_protocol_mismatch =>
-      'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+      'The capture component does not match this Hibiki build. It ships inside Hibiki, so there is nothing to install separately: fully close the game and launch it again, since the game process may still hold the component injected by a previous session. If it still mismatches, this build did not ship a matching component.';
   @override
   String scrape_all_confirm({required Object n}) =>
       'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
@@ -25265,7 +25265,7 @@ class _StringsEs extends _StringsEn {
   String get media_source_local_roots => 'Local scan roots';
   @override
   String get game_hook_reason_protocol_mismatch =>
-      'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+      'The capture component does not match this Hibiki build. It ships inside Hibiki, so there is nothing to install separately: fully close the game and launch it again, since the game process may still hold the component injected by a previous session. If it still mismatches, this build did not ship a matching component.';
   @override
   String scrape_all_confirm({required Object n}) =>
       'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
@@ -32392,7 +32392,7 @@ class _StringsFr extends _StringsEn {
   String get media_source_local_roots => 'Local scan roots';
   @override
   String get game_hook_reason_protocol_mismatch =>
-      'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+      'The capture component does not match this Hibiki build. It ships inside Hibiki, so there is nothing to install separately: fully close the game and launch it again, since the game process may still hold the component injected by a previous session. If it still mismatches, this build did not ship a matching component.';
   @override
   String scrape_all_confirm({required Object n}) =>
       'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
@@ -39448,7 +39448,7 @@ class _StringsId extends _StringsEn {
   String get media_source_local_roots => 'Local scan roots';
   @override
   String get game_hook_reason_protocol_mismatch =>
-      'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+      'The capture component does not match this Hibiki build. It ships inside Hibiki, so there is nothing to install separately: fully close the game and launch it again, since the game process may still hold the component injected by a previous session. If it still mismatches, this build did not ship a matching component.';
   @override
   String scrape_all_confirm({required Object n}) =>
       'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
@@ -46550,7 +46550,7 @@ class _StringsIt extends _StringsEn {
   String get media_source_local_roots => 'Local scan roots';
   @override
   String get game_hook_reason_protocol_mismatch =>
-      'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+      'The capture component does not match this Hibiki build. It ships inside Hibiki, so there is nothing to install separately: fully close the game and launch it again, since the game process may still hold the component injected by a previous session. If it still mismatches, this build did not ship a matching component.';
   @override
   String scrape_all_confirm({required Object n}) =>
       'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
@@ -53469,7 +53469,7 @@ class _StringsJa extends _StringsEn {
   String get media_source_local_roots => 'Local scan roots';
   @override
   String get game_hook_reason_protocol_mismatch =>
-      'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+      'The capture component does not match this Hibiki build. It ships inside Hibiki, so there is nothing to install separately: fully close the game and launch it again, since the game process may still hold the component injected by a previous session. If it still mismatches, this build did not ship a matching component.';
   @override
   String scrape_all_confirm({required Object n}) =>
       'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
@@ -60390,7 +60390,7 @@ class _StringsKo extends _StringsEn {
   String get media_source_local_roots => 'Local scan roots';
   @override
   String get game_hook_reason_protocol_mismatch =>
-      'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+      'The capture component does not match this Hibiki build. It ships inside Hibiki, so there is nothing to install separately: fully close the game and launch it again, since the game process may still hold the component injected by a previous session. If it still mismatches, this build did not ship a matching component.';
   @override
   String scrape_all_confirm({required Object n}) =>
       'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
@@ -67472,7 +67472,7 @@ class _StringsNl extends _StringsEn {
   String get media_source_local_roots => 'Local scan roots';
   @override
   String get game_hook_reason_protocol_mismatch =>
-      'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+      'The capture component does not match this Hibiki build. It ships inside Hibiki, so there is nothing to install separately: fully close the game and launch it again, since the game process may still hold the component injected by a previous session. If it still mismatches, this build did not ship a matching component.';
   @override
   String scrape_all_confirm({required Object n}) =>
       'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
@@ -74567,7 +74567,7 @@ class _StringsPtBr extends _StringsEn {
   String get media_source_local_roots => 'Local scan roots';
   @override
   String get game_hook_reason_protocol_mismatch =>
-      'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+      'The capture component does not match this Hibiki build. It ships inside Hibiki, so there is nothing to install separately: fully close the game and launch it again, since the game process may still hold the component injected by a previous session. If it still mismatches, this build did not ship a matching component.';
   @override
   String scrape_all_confirm({required Object n}) =>
       'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
@@ -81646,7 +81646,7 @@ class _StringsRu extends _StringsEn {
   String get media_source_local_roots => 'Local scan roots';
   @override
   String get game_hook_reason_protocol_mismatch =>
-      'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+      'The capture component does not match this Hibiki build. It ships inside Hibiki, so there is nothing to install separately: fully close the game and launch it again, since the game process may still hold the component injected by a previous session. If it still mismatches, this build did not ship a matching component.';
   @override
   String scrape_all_confirm({required Object n}) =>
       'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
@@ -88673,7 +88673,7 @@ class _StringsTh extends _StringsEn {
   String get media_source_local_roots => 'Local scan roots';
   @override
   String get game_hook_reason_protocol_mismatch =>
-      'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+      'The capture component does not match this Hibiki build. It ships inside Hibiki, so there is nothing to install separately: fully close the game and launch it again, since the game process may still hold the component injected by a previous session. If it still mismatches, this build did not ship a matching component.';
   @override
   String scrape_all_confirm({required Object n}) =>
       'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
@@ -95732,7 +95732,7 @@ class _StringsTr extends _StringsEn {
   String get media_source_local_roots => 'Local scan roots';
   @override
   String get game_hook_reason_protocol_mismatch =>
-      'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+      'The capture component does not match this Hibiki build. It ships inside Hibiki, so there is nothing to install separately: fully close the game and launch it again, since the game process may still hold the component injected by a previous session. If it still mismatches, this build did not ship a matching component.';
   @override
   String scrape_all_confirm({required Object n}) =>
       'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
@@ -102776,7 +102776,7 @@ class _StringsVi extends _StringsEn {
   String get media_source_local_roots => 'Local scan roots';
   @override
   String get game_hook_reason_protocol_mismatch =>
-      'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+      'The capture component does not match this Hibiki build. It ships inside Hibiki, so there is nothing to install separately: fully close the game and launch it again, since the game process may still hold the component injected by a previous session. If it still mismatches, this build did not ship a matching component.';
   @override
   String scrape_all_confirm({required Object n}) =>
       'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
@@ -109338,7 +109338,7 @@ class _StringsZhCn extends _StringsEn {
   String get media_source_local_roots => '本地扫描根';
   @override
   String get game_hook_reason_protocol_mismatch =>
-      '捕获组件与本体版本不一致。捕获组件已内置在 Hibiki 里、随本体一起更新，请更新 Hibiki 到最新版；若已是最新版，请把这条提示反馈给我们。';
+      '捕获组件与本体版本不一致。组件已内置在 Hibiki 里，不需要单独安装：先彻底关掉游戏再重开一次（游戏进程里可能还挂着上一次注入的旧组件）。若重开后仍提示不一致，说明这份 Hibiki 没带上与之匹配的组件。';
   @override
   String scrape_all_confirm({required Object n}) =>
       '将按标题匹配库中的 ${n} 个条目。只自动应用唯一的精确匹配；你自己定的封面一律不覆盖（手动设置的本地图、在匹配弹窗里亲手选定的条目、目录里自带的 poster 图），歧义结果留待手动确认。';
@@ -116172,7 +116172,7 @@ class _StringsZhHk extends _StringsEn {
   String get media_source_local_roots => 'Local scan roots';
   @override
   String get game_hook_reason_protocol_mismatch =>
-      'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+      'The capture component does not match this Hibiki build. It ships inside Hibiki, so there is nothing to install separately: fully close the game and launch it again, since the game process may still hold the component injected by a previous session. If it still mismatches, this build did not ship a matching component.';
   @override
   String scrape_all_confirm({required Object n}) =>
       'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
@@ -122472,7 +122472,7 @@ extension on _StringsEn {
       case 'media_source_local_roots':
         return 'Local scan roots';
       case 'game_hook_reason_protocol_mismatch':
-        return 'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+        return 'The capture component does not match this Hibiki build. It ships inside Hibiki, so there is nothing to install separately: fully close the game and launch it again, since the game process may still hold the component injected by a previous session. If it still mismatches, this build did not ship a matching component.';
       case 'scrape_all_confirm':
         return ({required Object n}) =>
             'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
@@ -128759,7 +128759,7 @@ extension on _StringsAr {
       case 'media_source_local_roots':
         return 'Local scan roots';
       case 'game_hook_reason_protocol_mismatch':
-        return 'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+        return 'The capture component does not match this Hibiki build. It ships inside Hibiki, so there is nothing to install separately: fully close the game and launch it again, since the game process may still hold the component injected by a previous session. If it still mismatches, this build did not ship a matching component.';
       case 'scrape_all_confirm':
         return ({required Object n}) =>
             'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
@@ -135068,7 +135068,7 @@ extension on _StringsDe {
       case 'media_source_local_roots':
         return 'Local scan roots';
       case 'game_hook_reason_protocol_mismatch':
-        return 'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+        return 'The capture component does not match this Hibiki build. It ships inside Hibiki, so there is nothing to install separately: fully close the game and launch it again, since the game process may still hold the component injected by a previous session. If it still mismatches, this build did not ship a matching component.';
       case 'scrape_all_confirm':
         return ({required Object n}) =>
             'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
@@ -141376,7 +141376,7 @@ extension on _StringsEs {
       case 'media_source_local_roots':
         return 'Local scan roots';
       case 'game_hook_reason_protocol_mismatch':
-        return 'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+        return 'The capture component does not match this Hibiki build. It ships inside Hibiki, so there is nothing to install separately: fully close the game and launch it again, since the game process may still hold the component injected by a previous session. If it still mismatches, this build did not ship a matching component.';
       case 'scrape_all_confirm':
         return ({required Object n}) =>
             'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
@@ -147690,7 +147690,7 @@ extension on _StringsFr {
       case 'media_source_local_roots':
         return 'Local scan roots';
       case 'game_hook_reason_protocol_mismatch':
-        return 'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+        return 'The capture component does not match this Hibiki build. It ships inside Hibiki, so there is nothing to install separately: fully close the game and launch it again, since the game process may still hold the component injected by a previous session. If it still mismatches, this build did not ship a matching component.';
       case 'scrape_all_confirm':
         return ({required Object n}) =>
             'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
@@ -153986,7 +153986,7 @@ extension on _StringsId {
       case 'media_source_local_roots':
         return 'Local scan roots';
       case 'game_hook_reason_protocol_mismatch':
-        return 'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+        return 'The capture component does not match this Hibiki build. It ships inside Hibiki, so there is nothing to install separately: fully close the game and launch it again, since the game process may still hold the component injected by a previous session. If it still mismatches, this build did not ship a matching component.';
       case 'scrape_all_confirm':
         return ({required Object n}) =>
             'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
@@ -160296,7 +160296,7 @@ extension on _StringsIt {
       case 'media_source_local_roots':
         return 'Local scan roots';
       case 'game_hook_reason_protocol_mismatch':
-        return 'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+        return 'The capture component does not match this Hibiki build. It ships inside Hibiki, so there is nothing to install separately: fully close the game and launch it again, since the game process may still hold the component injected by a previous session. If it still mismatches, this build did not ship a matching component.';
       case 'scrape_all_confirm':
         return ({required Object n}) =>
             'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
@@ -166568,7 +166568,7 @@ extension on _StringsJa {
       case 'media_source_local_roots':
         return 'Local scan roots';
       case 'game_hook_reason_protocol_mismatch':
-        return 'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+        return 'The capture component does not match this Hibiki build. It ships inside Hibiki, so there is nothing to install separately: fully close the game and launch it again, since the game process may still hold the component injected by a previous session. If it still mismatches, this build did not ship a matching component.';
       case 'scrape_all_confirm':
         return ({required Object n}) =>
             'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
@@ -172844,7 +172844,7 @@ extension on _StringsKo {
       case 'media_source_local_roots':
         return 'Local scan roots';
       case 'game_hook_reason_protocol_mismatch':
-        return 'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+        return 'The capture component does not match this Hibiki build. It ships inside Hibiki, so there is nothing to install separately: fully close the game and launch it again, since the game process may still hold the component injected by a previous session. If it still mismatches, this build did not ship a matching component.';
       case 'scrape_all_confirm':
         return ({required Object n}) =>
             'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
@@ -179148,7 +179148,7 @@ extension on _StringsNl {
       case 'media_source_local_roots':
         return 'Local scan roots';
       case 'game_hook_reason_protocol_mismatch':
-        return 'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+        return 'The capture component does not match this Hibiki build. It ships inside Hibiki, so there is nothing to install separately: fully close the game and launch it again, since the game process may still hold the component injected by a previous session. If it still mismatches, this build did not ship a matching component.';
       case 'scrape_all_confirm':
         return ({required Object n}) =>
             'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
@@ -185449,7 +185449,7 @@ extension on _StringsPtBr {
       case 'media_source_local_roots':
         return 'Local scan roots';
       case 'game_hook_reason_protocol_mismatch':
-        return 'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+        return 'The capture component does not match this Hibiki build. It ships inside Hibiki, so there is nothing to install separately: fully close the game and launch it again, since the game process may still hold the component injected by a previous session. If it still mismatches, this build did not ship a matching component.';
       case 'scrape_all_confirm':
         return ({required Object n}) =>
             'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
@@ -191755,7 +191755,7 @@ extension on _StringsRu {
       case 'media_source_local_roots':
         return 'Local scan roots';
       case 'game_hook_reason_protocol_mismatch':
-        return 'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+        return 'The capture component does not match this Hibiki build. It ships inside Hibiki, so there is nothing to install separately: fully close the game and launch it again, since the game process may still hold the component injected by a previous session. If it still mismatches, this build did not ship a matching component.';
       case 'scrape_all_confirm':
         return ({required Object n}) =>
             'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
@@ -198044,7 +198044,7 @@ extension on _StringsTh {
       case 'media_source_local_roots':
         return 'Local scan roots';
       case 'game_hook_reason_protocol_mismatch':
-        return 'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+        return 'The capture component does not match this Hibiki build. It ships inside Hibiki, so there is nothing to install separately: fully close the game and launch it again, since the game process may still hold the component injected by a previous session. If it still mismatches, this build did not ship a matching component.';
       case 'scrape_all_confirm':
         return ({required Object n}) =>
             'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
@@ -204342,7 +204342,7 @@ extension on _StringsTr {
       case 'media_source_local_roots':
         return 'Local scan roots';
       case 'game_hook_reason_protocol_mismatch':
-        return 'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+        return 'The capture component does not match this Hibiki build. It ships inside Hibiki, so there is nothing to install separately: fully close the game and launch it again, since the game process may still hold the component injected by a previous session. If it still mismatches, this build did not ship a matching component.';
       case 'scrape_all_confirm':
         return ({required Object n}) =>
             'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
@@ -210636,7 +210636,7 @@ extension on _StringsVi {
       case 'media_source_local_roots':
         return 'Local scan roots';
       case 'game_hook_reason_protocol_mismatch':
-        return 'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+        return 'The capture component does not match this Hibiki build. It ships inside Hibiki, so there is nothing to install separately: fully close the game and launch it again, since the game process may still hold the component injected by a previous session. If it still mismatches, this build did not ship a matching component.';
       case 'scrape_all_confirm':
         return ({required Object n}) =>
             'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
@@ -216877,7 +216877,7 @@ extension on _StringsZhCn {
       case 'media_source_local_roots':
         return '本地扫描根';
       case 'game_hook_reason_protocol_mismatch':
-        return '捕获组件与本体版本不一致。捕获组件已内置在 Hibiki 里、随本体一起更新，请更新 Hibiki 到最新版；若已是最新版，请把这条提示反馈给我们。';
+        return '捕获组件与本体版本不一致。组件已内置在 Hibiki 里，不需要单独安装：先彻底关掉游戏再重开一次（游戏进程里可能还挂着上一次注入的旧组件）。若重开后仍提示不一致，说明这份 Hibiki 没带上与之匹配的组件。';
       case 'scrape_all_confirm':
         return ({required Object n}) =>
             '将按标题匹配库中的 ${n} 个条目。只自动应用唯一的精确匹配；你自己定的封面一律不覆盖（手动设置的本地图、在匹配弹窗里亲手选定的条目、目录里自带的 poster 图），歧义结果留待手动确认。';
@@ -223143,7 +223143,7 @@ extension on _StringsZhHk {
       case 'media_source_local_roots':
         return 'Local scan roots';
       case 'game_hook_reason_protocol_mismatch':
-        return 'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+        return 'The capture component does not match this Hibiki build. It ships inside Hibiki, so there is nothing to install separately: fully close the game and launch it again, since the game process may still hold the component injected by a previous session. If it still mismatches, this build did not ship a matching component.';
       case 'scrape_all_confirm':
         return ({required Object n}) =>
             'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
