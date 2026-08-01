@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 51918 (3054 per locale)
+/// Strings: 52105 (3065 per locale)
 ///
-/// Built on 2026-08-01 at 19:01 UTC
+/// Built on 2026-08-01 at 19:32 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -4106,6 +4106,19 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Episode not found on Bangumi; opened the subject page instead';
   String get sync_err_browser_timeout =>
       'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
+  String get manga_rescan_run => 'Box OCR';
+  String get manga_rescan_hint =>
+      'Drag a box around the text you want to recognize.';
+  String get manga_rescan_model_missing =>
+      'Download the manga OCR models in Settings first.';
+  String get manga_rescan_running => 'Recognizing the selected box...';
+  String get manga_rescan_failed => 'Box OCR failed';
+  String get manga_rescan_empty => 'No text was recognized in this box.';
+  String get manga_rescan_local_source => 'Local OCR';
+  String get manga_rescan_lookup => 'Look up';
+  String get manga_rescan_writeback => 'Save to page';
+  String get manga_rescan_writeback_done => 'Saved to manga.json';
+  String get manga_rescan_writeback_failed => 'Failed to save to manga.json';
 }
 
 // Path: <root>
@@ -11115,6 +11128,30 @@ class _StringsAr extends _StringsEn {
   @override
   String get sync_err_browser_timeout =>
       'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
+  @override
+  String get manga_rescan_run => 'Box OCR';
+  @override
+  String get manga_rescan_hint =>
+      'Drag a box around the text you want to recognize.';
+  @override
+  String get manga_rescan_model_missing =>
+      'Download the manga OCR models in Settings first.';
+  @override
+  String get manga_rescan_running => 'Recognizing the selected box...';
+  @override
+  String get manga_rescan_failed => 'Box OCR failed';
+  @override
+  String get manga_rescan_empty => 'No text was recognized in this box.';
+  @override
+  String get manga_rescan_local_source => 'Local OCR';
+  @override
+  String get manga_rescan_lookup => 'Look up';
+  @override
+  String get manga_rescan_writeback => 'Save to page';
+  @override
+  String get manga_rescan_writeback_done => 'Saved to manga.json';
+  @override
+  String get manga_rescan_writeback_failed => 'Failed to save to manga.json';
 }
 
 // Path: <root>
@@ -18191,6 +18228,30 @@ class _StringsDe extends _StringsEn {
   @override
   String get sync_err_browser_timeout =>
       'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
+  @override
+  String get manga_rescan_run => 'Box OCR';
+  @override
+  String get manga_rescan_hint =>
+      'Drag a box around the text you want to recognize.';
+  @override
+  String get manga_rescan_model_missing =>
+      'Download the manga OCR models in Settings first.';
+  @override
+  String get manga_rescan_running => 'Recognizing the selected box...';
+  @override
+  String get manga_rescan_failed => 'Box OCR failed';
+  @override
+  String get manga_rescan_empty => 'No text was recognized in this box.';
+  @override
+  String get manga_rescan_local_source => 'Local OCR';
+  @override
+  String get manga_rescan_lookup => 'Look up';
+  @override
+  String get manga_rescan_writeback => 'Save to page';
+  @override
+  String get manga_rescan_writeback_done => 'Saved to manga.json';
+  @override
+  String get manga_rescan_writeback_failed => 'Failed to save to manga.json';
 }
 
 // Path: <root>
@@ -25282,6 +25343,30 @@ class _StringsEs extends _StringsEn {
   @override
   String get sync_err_browser_timeout =>
       'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
+  @override
+  String get manga_rescan_run => 'Box OCR';
+  @override
+  String get manga_rescan_hint =>
+      'Drag a box around the text you want to recognize.';
+  @override
+  String get manga_rescan_model_missing =>
+      'Download the manga OCR models in Settings first.';
+  @override
+  String get manga_rescan_running => 'Recognizing the selected box...';
+  @override
+  String get manga_rescan_failed => 'Box OCR failed';
+  @override
+  String get manga_rescan_empty => 'No text was recognized in this box.';
+  @override
+  String get manga_rescan_local_source => 'Local OCR';
+  @override
+  String get manga_rescan_lookup => 'Look up';
+  @override
+  String get manga_rescan_writeback => 'Save to page';
+  @override
+  String get manga_rescan_writeback_done => 'Saved to manga.json';
+  @override
+  String get manga_rescan_writeback_failed => 'Failed to save to manga.json';
 }
 
 // Path: <root>
@@ -32385,6 +32470,30 @@ class _StringsFr extends _StringsEn {
   @override
   String get sync_err_browser_timeout =>
       'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
+  @override
+  String get manga_rescan_run => 'Box OCR';
+  @override
+  String get manga_rescan_hint =>
+      'Drag a box around the text you want to recognize.';
+  @override
+  String get manga_rescan_model_missing =>
+      'Download the manga OCR models in Settings first.';
+  @override
+  String get manga_rescan_running => 'Recognizing the selected box...';
+  @override
+  String get manga_rescan_failed => 'Box OCR failed';
+  @override
+  String get manga_rescan_empty => 'No text was recognized in this box.';
+  @override
+  String get manga_rescan_local_source => 'Local OCR';
+  @override
+  String get manga_rescan_lookup => 'Look up';
+  @override
+  String get manga_rescan_writeback => 'Save to page';
+  @override
+  String get manga_rescan_writeback_done => 'Saved to manga.json';
+  @override
+  String get manga_rescan_writeback_failed => 'Failed to save to manga.json';
 }
 
 // Path: <root>
@@ -39417,6 +39526,30 @@ class _StringsId extends _StringsEn {
   @override
   String get sync_err_browser_timeout =>
       'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
+  @override
+  String get manga_rescan_run => 'Box OCR';
+  @override
+  String get manga_rescan_hint =>
+      'Drag a box around the text you want to recognize.';
+  @override
+  String get manga_rescan_model_missing =>
+      'Download the manga OCR models in Settings first.';
+  @override
+  String get manga_rescan_running => 'Recognizing the selected box...';
+  @override
+  String get manga_rescan_failed => 'Box OCR failed';
+  @override
+  String get manga_rescan_empty => 'No text was recognized in this box.';
+  @override
+  String get manga_rescan_local_source => 'Local OCR';
+  @override
+  String get manga_rescan_lookup => 'Look up';
+  @override
+  String get manga_rescan_writeback => 'Save to page';
+  @override
+  String get manga_rescan_writeback_done => 'Saved to manga.json';
+  @override
+  String get manga_rescan_writeback_failed => 'Failed to save to manga.json';
 }
 
 // Path: <root>
@@ -46495,6 +46628,30 @@ class _StringsIt extends _StringsEn {
   @override
   String get sync_err_browser_timeout =>
       'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
+  @override
+  String get manga_rescan_run => 'Box OCR';
+  @override
+  String get manga_rescan_hint =>
+      'Drag a box around the text you want to recognize.';
+  @override
+  String get manga_rescan_model_missing =>
+      'Download the manga OCR models in Settings first.';
+  @override
+  String get manga_rescan_running => 'Recognizing the selected box...';
+  @override
+  String get manga_rescan_failed => 'Box OCR failed';
+  @override
+  String get manga_rescan_empty => 'No text was recognized in this box.';
+  @override
+  String get manga_rescan_local_source => 'Local OCR';
+  @override
+  String get manga_rescan_lookup => 'Look up';
+  @override
+  String get manga_rescan_writeback => 'Save to page';
+  @override
+  String get manga_rescan_writeback_done => 'Saved to manga.json';
+  @override
+  String get manga_rescan_writeback_failed => 'Failed to save to manga.json';
 }
 
 // Path: <root>
@@ -53390,6 +53547,30 @@ class _StringsJa extends _StringsEn {
   @override
   String get sync_err_browser_timeout =>
       'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
+  @override
+  String get manga_rescan_run => 'Box OCR';
+  @override
+  String get manga_rescan_hint =>
+      'Drag a box around the text you want to recognize.';
+  @override
+  String get manga_rescan_model_missing =>
+      'Download the manga OCR models in Settings first.';
+  @override
+  String get manga_rescan_running => 'Recognizing the selected box...';
+  @override
+  String get manga_rescan_failed => 'Box OCR failed';
+  @override
+  String get manga_rescan_empty => 'No text was recognized in this box.';
+  @override
+  String get manga_rescan_local_source => 'Local OCR';
+  @override
+  String get manga_rescan_lookup => 'Look up';
+  @override
+  String get manga_rescan_writeback => 'Save to page';
+  @override
+  String get manga_rescan_writeback_done => 'Saved to manga.json';
+  @override
+  String get manga_rescan_writeback_failed => 'Failed to save to manga.json';
 }
 
 // Path: <root>
@@ -60287,6 +60468,30 @@ class _StringsKo extends _StringsEn {
   @override
   String get sync_err_browser_timeout =>
       'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
+  @override
+  String get manga_rescan_run => 'Box OCR';
+  @override
+  String get manga_rescan_hint =>
+      'Drag a box around the text you want to recognize.';
+  @override
+  String get manga_rescan_model_missing =>
+      'Download the manga OCR models in Settings first.';
+  @override
+  String get manga_rescan_running => 'Recognizing the selected box...';
+  @override
+  String get manga_rescan_failed => 'Box OCR failed';
+  @override
+  String get manga_rescan_empty => 'No text was recognized in this box.';
+  @override
+  String get manga_rescan_local_source => 'Local OCR';
+  @override
+  String get manga_rescan_lookup => 'Look up';
+  @override
+  String get manga_rescan_writeback => 'Save to page';
+  @override
+  String get manga_rescan_writeback_done => 'Saved to manga.json';
+  @override
+  String get manga_rescan_writeback_failed => 'Failed to save to manga.json';
 }
 
 // Path: <root>
@@ -67345,6 +67550,30 @@ class _StringsNl extends _StringsEn {
   @override
   String get sync_err_browser_timeout =>
       'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
+  @override
+  String get manga_rescan_run => 'Box OCR';
+  @override
+  String get manga_rescan_hint =>
+      'Drag a box around the text you want to recognize.';
+  @override
+  String get manga_rescan_model_missing =>
+      'Download the manga OCR models in Settings first.';
+  @override
+  String get manga_rescan_running => 'Recognizing the selected box...';
+  @override
+  String get manga_rescan_failed => 'Box OCR failed';
+  @override
+  String get manga_rescan_empty => 'No text was recognized in this box.';
+  @override
+  String get manga_rescan_local_source => 'Local OCR';
+  @override
+  String get manga_rescan_lookup => 'Look up';
+  @override
+  String get manga_rescan_writeback => 'Save to page';
+  @override
+  String get manga_rescan_writeback_done => 'Saved to manga.json';
+  @override
+  String get manga_rescan_writeback_failed => 'Failed to save to manga.json';
 }
 
 // Path: <root>
@@ -74416,6 +74645,30 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get sync_err_browser_timeout =>
       'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
+  @override
+  String get manga_rescan_run => 'Box OCR';
+  @override
+  String get manga_rescan_hint =>
+      'Drag a box around the text you want to recognize.';
+  @override
+  String get manga_rescan_model_missing =>
+      'Download the manga OCR models in Settings first.';
+  @override
+  String get manga_rescan_running => 'Recognizing the selected box...';
+  @override
+  String get manga_rescan_failed => 'Box OCR failed';
+  @override
+  String get manga_rescan_empty => 'No text was recognized in this box.';
+  @override
+  String get manga_rescan_local_source => 'Local OCR';
+  @override
+  String get manga_rescan_lookup => 'Look up';
+  @override
+  String get manga_rescan_writeback => 'Save to page';
+  @override
+  String get manga_rescan_writeback_done => 'Saved to manga.json';
+  @override
+  String get manga_rescan_writeback_failed => 'Failed to save to manga.json';
 }
 
 // Path: <root>
@@ -81471,6 +81724,30 @@ class _StringsRu extends _StringsEn {
   @override
   String get sync_err_browser_timeout =>
       'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
+  @override
+  String get manga_rescan_run => 'Box OCR';
+  @override
+  String get manga_rescan_hint =>
+      'Drag a box around the text you want to recognize.';
+  @override
+  String get manga_rescan_model_missing =>
+      'Download the manga OCR models in Settings first.';
+  @override
+  String get manga_rescan_running => 'Recognizing the selected box...';
+  @override
+  String get manga_rescan_failed => 'Box OCR failed';
+  @override
+  String get manga_rescan_empty => 'No text was recognized in this box.';
+  @override
+  String get manga_rescan_local_source => 'Local OCR';
+  @override
+  String get manga_rescan_lookup => 'Look up';
+  @override
+  String get manga_rescan_writeback => 'Save to page';
+  @override
+  String get manga_rescan_writeback_done => 'Saved to manga.json';
+  @override
+  String get manga_rescan_writeback_failed => 'Failed to save to manga.json';
 }
 
 // Path: <root>
@@ -88474,6 +88751,30 @@ class _StringsTh extends _StringsEn {
   @override
   String get sync_err_browser_timeout =>
       'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
+  @override
+  String get manga_rescan_run => 'Box OCR';
+  @override
+  String get manga_rescan_hint =>
+      'Drag a box around the text you want to recognize.';
+  @override
+  String get manga_rescan_model_missing =>
+      'Download the manga OCR models in Settings first.';
+  @override
+  String get manga_rescan_running => 'Recognizing the selected box...';
+  @override
+  String get manga_rescan_failed => 'Box OCR failed';
+  @override
+  String get manga_rescan_empty => 'No text was recognized in this box.';
+  @override
+  String get manga_rescan_local_source => 'Local OCR';
+  @override
+  String get manga_rescan_lookup => 'Look up';
+  @override
+  String get manga_rescan_writeback => 'Save to page';
+  @override
+  String get manga_rescan_writeback_done => 'Saved to manga.json';
+  @override
+  String get manga_rescan_writeback_failed => 'Failed to save to manga.json';
 }
 
 // Path: <root>
@@ -95509,6 +95810,30 @@ class _StringsTr extends _StringsEn {
   @override
   String get sync_err_browser_timeout =>
       'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
+  @override
+  String get manga_rescan_run => 'Box OCR';
+  @override
+  String get manga_rescan_hint =>
+      'Drag a box around the text you want to recognize.';
+  @override
+  String get manga_rescan_model_missing =>
+      'Download the manga OCR models in Settings first.';
+  @override
+  String get manga_rescan_running => 'Recognizing the selected box...';
+  @override
+  String get manga_rescan_failed => 'Box OCR failed';
+  @override
+  String get manga_rescan_empty => 'No text was recognized in this box.';
+  @override
+  String get manga_rescan_local_source => 'Local OCR';
+  @override
+  String get manga_rescan_lookup => 'Look up';
+  @override
+  String get manga_rescan_writeback => 'Save to page';
+  @override
+  String get manga_rescan_writeback_done => 'Saved to manga.json';
+  @override
+  String get manga_rescan_writeback_failed => 'Failed to save to manga.json';
 }
 
 // Path: <root>
@@ -102529,6 +102854,30 @@ class _StringsVi extends _StringsEn {
   @override
   String get sync_err_browser_timeout =>
       'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
+  @override
+  String get manga_rescan_run => 'Box OCR';
+  @override
+  String get manga_rescan_hint =>
+      'Drag a box around the text you want to recognize.';
+  @override
+  String get manga_rescan_model_missing =>
+      'Download the manga OCR models in Settings first.';
+  @override
+  String get manga_rescan_running => 'Recognizing the selected box...';
+  @override
+  String get manga_rescan_failed => 'Box OCR failed';
+  @override
+  String get manga_rescan_empty => 'No text was recognized in this box.';
+  @override
+  String get manga_rescan_local_source => 'Local OCR';
+  @override
+  String get manga_rescan_lookup => 'Look up';
+  @override
+  String get manga_rescan_writeback => 'Save to page';
+  @override
+  String get manga_rescan_writeback_done => 'Saved to manga.json';
+  @override
+  String get manga_rescan_writeback_failed => 'Failed to save to manga.json';
 }
 
 // Path: <root>
@@ -109063,6 +109412,28 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get sync_err_browser_timeout =>
       '浏览器授权没有返回到应用。请重试，并确认代理放行了本机回环地址 127.0.0.1。';
+  @override
+  String get manga_rescan_run => '框选识别';
+  @override
+  String get manga_rescan_hint => '拖动框选想要识别的文字。';
+  @override
+  String get manga_rescan_model_missing => '请先在设置里下载漫画 OCR 模型。';
+  @override
+  String get manga_rescan_running => '正在识别所选区域…';
+  @override
+  String get manga_rescan_failed => '框选识别失败';
+  @override
+  String get manga_rescan_empty => '该区域未识别出文字。';
+  @override
+  String get manga_rescan_local_source => '本地识别';
+  @override
+  String get manga_rescan_lookup => '查词';
+  @override
+  String get manga_rescan_writeback => '回写本页';
+  @override
+  String get manga_rescan_writeback_done => '已回写 manga.json';
+  @override
+  String get manga_rescan_writeback_failed => '回写 manga.json 失败';
 }
 
 // Path: <root>
@@ -115879,6 +116250,30 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get sync_err_browser_timeout =>
       'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
+  @override
+  String get manga_rescan_run => 'Box OCR';
+  @override
+  String get manga_rescan_hint =>
+      'Drag a box around the text you want to recognize.';
+  @override
+  String get manga_rescan_model_missing =>
+      'Download the manga OCR models in Settings first.';
+  @override
+  String get manga_rescan_running => 'Recognizing the selected box...';
+  @override
+  String get manga_rescan_failed => 'Box OCR failed';
+  @override
+  String get manga_rescan_empty => 'No text was recognized in this box.';
+  @override
+  String get manga_rescan_local_source => 'Local OCR';
+  @override
+  String get manga_rescan_lookup => 'Look up';
+  @override
+  String get manga_rescan_writeback => 'Save to page';
+  @override
+  String get manga_rescan_writeback_done => 'Saved to manga.json';
+  @override
+  String get manga_rescan_writeback_failed => 'Failed to save to manga.json';
 }
 
 /// Flat map(s) containing all translations.
@@ -122146,6 +122541,28 @@ extension on _StringsEn {
         return 'Episode not found on Bangumi; opened the subject page instead';
       case 'sync_err_browser_timeout':
         return 'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
+      case 'manga_rescan_run':
+        return 'Box OCR';
+      case 'manga_rescan_hint':
+        return 'Drag a box around the text you want to recognize.';
+      case 'manga_rescan_model_missing':
+        return 'Download the manga OCR models in Settings first.';
+      case 'manga_rescan_running':
+        return 'Recognizing the selected box...';
+      case 'manga_rescan_failed':
+        return 'Box OCR failed';
+      case 'manga_rescan_empty':
+        return 'No text was recognized in this box.';
+      case 'manga_rescan_local_source':
+        return 'Local OCR';
+      case 'manga_rescan_lookup':
+        return 'Look up';
+      case 'manga_rescan_writeback':
+        return 'Save to page';
+      case 'manga_rescan_writeback_done':
+        return 'Saved to manga.json';
+      case 'manga_rescan_writeback_failed':
+        return 'Failed to save to manga.json';
       default:
         return null;
     }
@@ -128411,6 +128828,28 @@ extension on _StringsAr {
         return 'Episode not found on Bangumi; opened the subject page instead';
       case 'sync_err_browser_timeout':
         return 'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
+      case 'manga_rescan_run':
+        return 'Box OCR';
+      case 'manga_rescan_hint':
+        return 'Drag a box around the text you want to recognize.';
+      case 'manga_rescan_model_missing':
+        return 'Download the manga OCR models in Settings first.';
+      case 'manga_rescan_running':
+        return 'Recognizing the selected box...';
+      case 'manga_rescan_failed':
+        return 'Box OCR failed';
+      case 'manga_rescan_empty':
+        return 'No text was recognized in this box.';
+      case 'manga_rescan_local_source':
+        return 'Local OCR';
+      case 'manga_rescan_lookup':
+        return 'Look up';
+      case 'manga_rescan_writeback':
+        return 'Save to page';
+      case 'manga_rescan_writeback_done':
+        return 'Saved to manga.json';
+      case 'manga_rescan_writeback_failed':
+        return 'Failed to save to manga.json';
       default:
         return null;
     }
@@ -134698,6 +135137,28 @@ extension on _StringsDe {
         return 'Episode not found on Bangumi; opened the subject page instead';
       case 'sync_err_browser_timeout':
         return 'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
+      case 'manga_rescan_run':
+        return 'Box OCR';
+      case 'manga_rescan_hint':
+        return 'Drag a box around the text you want to recognize.';
+      case 'manga_rescan_model_missing':
+        return 'Download the manga OCR models in Settings first.';
+      case 'manga_rescan_running':
+        return 'Recognizing the selected box...';
+      case 'manga_rescan_failed':
+        return 'Box OCR failed';
+      case 'manga_rescan_empty':
+        return 'No text was recognized in this box.';
+      case 'manga_rescan_local_source':
+        return 'Local OCR';
+      case 'manga_rescan_lookup':
+        return 'Look up';
+      case 'manga_rescan_writeback':
+        return 'Save to page';
+      case 'manga_rescan_writeback_done':
+        return 'Saved to manga.json';
+      case 'manga_rescan_writeback_failed':
+        return 'Failed to save to manga.json';
       default:
         return null;
     }
@@ -140984,6 +141445,28 @@ extension on _StringsEs {
         return 'Episode not found on Bangumi; opened the subject page instead';
       case 'sync_err_browser_timeout':
         return 'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
+      case 'manga_rescan_run':
+        return 'Box OCR';
+      case 'manga_rescan_hint':
+        return 'Drag a box around the text you want to recognize.';
+      case 'manga_rescan_model_missing':
+        return 'Download the manga OCR models in Settings first.';
+      case 'manga_rescan_running':
+        return 'Recognizing the selected box...';
+      case 'manga_rescan_failed':
+        return 'Box OCR failed';
+      case 'manga_rescan_empty':
+        return 'No text was recognized in this box.';
+      case 'manga_rescan_local_source':
+        return 'Local OCR';
+      case 'manga_rescan_lookup':
+        return 'Look up';
+      case 'manga_rescan_writeback':
+        return 'Save to page';
+      case 'manga_rescan_writeback_done':
+        return 'Saved to manga.json';
+      case 'manga_rescan_writeback_failed':
+        return 'Failed to save to manga.json';
       default:
         return null;
     }
@@ -147276,6 +147759,28 @@ extension on _StringsFr {
         return 'Episode not found on Bangumi; opened the subject page instead';
       case 'sync_err_browser_timeout':
         return 'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
+      case 'manga_rescan_run':
+        return 'Box OCR';
+      case 'manga_rescan_hint':
+        return 'Drag a box around the text you want to recognize.';
+      case 'manga_rescan_model_missing':
+        return 'Download the manga OCR models in Settings first.';
+      case 'manga_rescan_running':
+        return 'Recognizing the selected box...';
+      case 'manga_rescan_failed':
+        return 'Box OCR failed';
+      case 'manga_rescan_empty':
+        return 'No text was recognized in this box.';
+      case 'manga_rescan_local_source':
+        return 'Local OCR';
+      case 'manga_rescan_lookup':
+        return 'Look up';
+      case 'manga_rescan_writeback':
+        return 'Save to page';
+      case 'manga_rescan_writeback_done':
+        return 'Saved to manga.json';
+      case 'manga_rescan_writeback_failed':
+        return 'Failed to save to manga.json';
       default:
         return null;
     }
@@ -153550,6 +154055,28 @@ extension on _StringsId {
         return 'Episode not found on Bangumi; opened the subject page instead';
       case 'sync_err_browser_timeout':
         return 'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
+      case 'manga_rescan_run':
+        return 'Box OCR';
+      case 'manga_rescan_hint':
+        return 'Drag a box around the text you want to recognize.';
+      case 'manga_rescan_model_missing':
+        return 'Download the manga OCR models in Settings first.';
+      case 'manga_rescan_running':
+        return 'Recognizing the selected box...';
+      case 'manga_rescan_failed':
+        return 'Box OCR failed';
+      case 'manga_rescan_empty':
+        return 'No text was recognized in this box.';
+      case 'manga_rescan_local_source':
+        return 'Local OCR';
+      case 'manga_rescan_lookup':
+        return 'Look up';
+      case 'manga_rescan_writeback':
+        return 'Save to page';
+      case 'manga_rescan_writeback_done':
+        return 'Saved to manga.json';
+      case 'manga_rescan_writeback_failed':
+        return 'Failed to save to manga.json';
       default:
         return null;
     }
@@ -159838,6 +160365,28 @@ extension on _StringsIt {
         return 'Episode not found on Bangumi; opened the subject page instead';
       case 'sync_err_browser_timeout':
         return 'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
+      case 'manga_rescan_run':
+        return 'Box OCR';
+      case 'manga_rescan_hint':
+        return 'Drag a box around the text you want to recognize.';
+      case 'manga_rescan_model_missing':
+        return 'Download the manga OCR models in Settings first.';
+      case 'manga_rescan_running':
+        return 'Recognizing the selected box...';
+      case 'manga_rescan_failed':
+        return 'Box OCR failed';
+      case 'manga_rescan_empty':
+        return 'No text was recognized in this box.';
+      case 'manga_rescan_local_source':
+        return 'Local OCR';
+      case 'manga_rescan_lookup':
+        return 'Look up';
+      case 'manga_rescan_writeback':
+        return 'Save to page';
+      case 'manga_rescan_writeback_done':
+        return 'Saved to manga.json';
+      case 'manga_rescan_writeback_failed':
+        return 'Failed to save to manga.json';
       default:
         return null;
     }
@@ -166088,6 +166637,28 @@ extension on _StringsJa {
         return 'Episode not found on Bangumi; opened the subject page instead';
       case 'sync_err_browser_timeout':
         return 'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
+      case 'manga_rescan_run':
+        return 'Box OCR';
+      case 'manga_rescan_hint':
+        return 'Drag a box around the text you want to recognize.';
+      case 'manga_rescan_model_missing':
+        return 'Download the manga OCR models in Settings first.';
+      case 'manga_rescan_running':
+        return 'Recognizing the selected box...';
+      case 'manga_rescan_failed':
+        return 'Box OCR failed';
+      case 'manga_rescan_empty':
+        return 'No text was recognized in this box.';
+      case 'manga_rescan_local_source':
+        return 'Local OCR';
+      case 'manga_rescan_lookup':
+        return 'Look up';
+      case 'manga_rescan_writeback':
+        return 'Save to page';
+      case 'manga_rescan_writeback_done':
+        return 'Saved to manga.json';
+      case 'manga_rescan_writeback_failed':
+        return 'Failed to save to manga.json';
       default:
         return null;
     }
@@ -172342,6 +172913,28 @@ extension on _StringsKo {
         return 'Episode not found on Bangumi; opened the subject page instead';
       case 'sync_err_browser_timeout':
         return 'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
+      case 'manga_rescan_run':
+        return 'Box OCR';
+      case 'manga_rescan_hint':
+        return 'Drag a box around the text you want to recognize.';
+      case 'manga_rescan_model_missing':
+        return 'Download the manga OCR models in Settings first.';
+      case 'manga_rescan_running':
+        return 'Recognizing the selected box...';
+      case 'manga_rescan_failed':
+        return 'Box OCR failed';
+      case 'manga_rescan_empty':
+        return 'No text was recognized in this box.';
+      case 'manga_rescan_local_source':
+        return 'Local OCR';
+      case 'manga_rescan_lookup':
+        return 'Look up';
+      case 'manga_rescan_writeback':
+        return 'Save to page';
+      case 'manga_rescan_writeback_done':
+        return 'Saved to manga.json';
+      case 'manga_rescan_writeback_failed':
+        return 'Failed to save to manga.json';
       default:
         return null;
     }
@@ -178624,6 +179217,28 @@ extension on _StringsNl {
         return 'Episode not found on Bangumi; opened the subject page instead';
       case 'sync_err_browser_timeout':
         return 'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
+      case 'manga_rescan_run':
+        return 'Box OCR';
+      case 'manga_rescan_hint':
+        return 'Drag a box around the text you want to recognize.';
+      case 'manga_rescan_model_missing':
+        return 'Download the manga OCR models in Settings first.';
+      case 'manga_rescan_running':
+        return 'Recognizing the selected box...';
+      case 'manga_rescan_failed':
+        return 'Box OCR failed';
+      case 'manga_rescan_empty':
+        return 'No text was recognized in this box.';
+      case 'manga_rescan_local_source':
+        return 'Local OCR';
+      case 'manga_rescan_lookup':
+        return 'Look up';
+      case 'manga_rescan_writeback':
+        return 'Save to page';
+      case 'manga_rescan_writeback_done':
+        return 'Saved to manga.json';
+      case 'manga_rescan_writeback_failed':
+        return 'Failed to save to manga.json';
       default:
         return null;
     }
@@ -184903,6 +185518,28 @@ extension on _StringsPtBr {
         return 'Episode not found on Bangumi; opened the subject page instead';
       case 'sync_err_browser_timeout':
         return 'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
+      case 'manga_rescan_run':
+        return 'Box OCR';
+      case 'manga_rescan_hint':
+        return 'Drag a box around the text you want to recognize.';
+      case 'manga_rescan_model_missing':
+        return 'Download the manga OCR models in Settings first.';
+      case 'manga_rescan_running':
+        return 'Recognizing the selected box...';
+      case 'manga_rescan_failed':
+        return 'Box OCR failed';
+      case 'manga_rescan_empty':
+        return 'No text was recognized in this box.';
+      case 'manga_rescan_local_source':
+        return 'Local OCR';
+      case 'manga_rescan_lookup':
+        return 'Look up';
+      case 'manga_rescan_writeback':
+        return 'Save to page';
+      case 'manga_rescan_writeback_done':
+        return 'Saved to manga.json';
+      case 'manga_rescan_writeback_failed':
+        return 'Failed to save to manga.json';
       default:
         return null;
     }
@@ -191187,6 +191824,28 @@ extension on _StringsRu {
         return 'Episode not found on Bangumi; opened the subject page instead';
       case 'sync_err_browser_timeout':
         return 'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
+      case 'manga_rescan_run':
+        return 'Box OCR';
+      case 'manga_rescan_hint':
+        return 'Drag a box around the text you want to recognize.';
+      case 'manga_rescan_model_missing':
+        return 'Download the manga OCR models in Settings first.';
+      case 'manga_rescan_running':
+        return 'Recognizing the selected box...';
+      case 'manga_rescan_failed':
+        return 'Box OCR failed';
+      case 'manga_rescan_empty':
+        return 'No text was recognized in this box.';
+      case 'manga_rescan_local_source':
+        return 'Local OCR';
+      case 'manga_rescan_lookup':
+        return 'Look up';
+      case 'manga_rescan_writeback':
+        return 'Save to page';
+      case 'manga_rescan_writeback_done':
+        return 'Saved to manga.json';
+      case 'manga_rescan_writeback_failed':
+        return 'Failed to save to manga.json';
       default:
         return null;
     }
@@ -197454,6 +198113,28 @@ extension on _StringsTh {
         return 'Episode not found on Bangumi; opened the subject page instead';
       case 'sync_err_browser_timeout':
         return 'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
+      case 'manga_rescan_run':
+        return 'Box OCR';
+      case 'manga_rescan_hint':
+        return 'Drag a box around the text you want to recognize.';
+      case 'manga_rescan_model_missing':
+        return 'Download the manga OCR models in Settings first.';
+      case 'manga_rescan_running':
+        return 'Recognizing the selected box...';
+      case 'manga_rescan_failed':
+        return 'Box OCR failed';
+      case 'manga_rescan_empty':
+        return 'No text was recognized in this box.';
+      case 'manga_rescan_local_source':
+        return 'Local OCR';
+      case 'manga_rescan_lookup':
+        return 'Look up';
+      case 'manga_rescan_writeback':
+        return 'Save to page';
+      case 'manga_rescan_writeback_done':
+        return 'Saved to manga.json';
+      case 'manga_rescan_writeback_failed':
+        return 'Failed to save to manga.json';
       default:
         return null;
     }
@@ -203730,6 +204411,28 @@ extension on _StringsTr {
         return 'Episode not found on Bangumi; opened the subject page instead';
       case 'sync_err_browser_timeout':
         return 'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
+      case 'manga_rescan_run':
+        return 'Box OCR';
+      case 'manga_rescan_hint':
+        return 'Drag a box around the text you want to recognize.';
+      case 'manga_rescan_model_missing':
+        return 'Download the manga OCR models in Settings first.';
+      case 'manga_rescan_running':
+        return 'Recognizing the selected box...';
+      case 'manga_rescan_failed':
+        return 'Box OCR failed';
+      case 'manga_rescan_empty':
+        return 'No text was recognized in this box.';
+      case 'manga_rescan_local_source':
+        return 'Local OCR';
+      case 'manga_rescan_lookup':
+        return 'Look up';
+      case 'manga_rescan_writeback':
+        return 'Save to page';
+      case 'manga_rescan_writeback_done':
+        return 'Saved to manga.json';
+      case 'manga_rescan_writeback_failed':
+        return 'Failed to save to manga.json';
       default:
         return null;
     }
@@ -210002,6 +210705,28 @@ extension on _StringsVi {
         return 'Episode not found on Bangumi; opened the subject page instead';
       case 'sync_err_browser_timeout':
         return 'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
+      case 'manga_rescan_run':
+        return 'Box OCR';
+      case 'manga_rescan_hint':
+        return 'Drag a box around the text you want to recognize.';
+      case 'manga_rescan_model_missing':
+        return 'Download the manga OCR models in Settings first.';
+      case 'manga_rescan_running':
+        return 'Recognizing the selected box...';
+      case 'manga_rescan_failed':
+        return 'Box OCR failed';
+      case 'manga_rescan_empty':
+        return 'No text was recognized in this box.';
+      case 'manga_rescan_local_source':
+        return 'Local OCR';
+      case 'manga_rescan_lookup':
+        return 'Look up';
+      case 'manga_rescan_writeback':
+        return 'Save to page';
+      case 'manga_rescan_writeback_done':
+        return 'Saved to manga.json';
+      case 'manga_rescan_writeback_failed':
+        return 'Failed to save to manga.json';
       default:
         return null;
     }
@@ -216220,6 +216945,28 @@ extension on _StringsZhCn {
         return '未找到对应集，已打开条目页';
       case 'sync_err_browser_timeout':
         return '浏览器授权没有返回到应用。请重试，并确认代理放行了本机回环地址 127.0.0.1。';
+      case 'manga_rescan_run':
+        return '框选识别';
+      case 'manga_rescan_hint':
+        return '拖动框选想要识别的文字。';
+      case 'manga_rescan_model_missing':
+        return '请先在设置里下载漫画 OCR 模型。';
+      case 'manga_rescan_running':
+        return '正在识别所选区域…';
+      case 'manga_rescan_failed':
+        return '框选识别失败';
+      case 'manga_rescan_empty':
+        return '该区域未识别出文字。';
+      case 'manga_rescan_local_source':
+        return '本地识别';
+      case 'manga_rescan_lookup':
+        return '查词';
+      case 'manga_rescan_writeback':
+        return '回写本页';
+      case 'manga_rescan_writeback_done':
+        return '已回写 manga.json';
+      case 'manga_rescan_writeback_failed':
+        return '回写 manga.json 失败';
       default:
         return null;
     }
@@ -222465,6 +223212,28 @@ extension on _StringsZhHk {
         return 'Episode not found on Bangumi; opened the subject page instead';
       case 'sync_err_browser_timeout':
         return 'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
+      case 'manga_rescan_run':
+        return 'Box OCR';
+      case 'manga_rescan_hint':
+        return 'Drag a box around the text you want to recognize.';
+      case 'manga_rescan_model_missing':
+        return 'Download the manga OCR models in Settings first.';
+      case 'manga_rescan_running':
+        return 'Recognizing the selected box...';
+      case 'manga_rescan_failed':
+        return 'Box OCR failed';
+      case 'manga_rescan_empty':
+        return 'No text was recognized in this box.';
+      case 'manga_rescan_local_source':
+        return 'Local OCR';
+      case 'manga_rescan_lookup':
+        return 'Look up';
+      case 'manga_rescan_writeback':
+        return 'Save to page';
+      case 'manga_rescan_writeback_done':
+        return 'Saved to manga.json';
+      case 'manga_rescan_writeback_failed':
+        return 'Failed to save to manga.json';
       default:
         return null;
     }
