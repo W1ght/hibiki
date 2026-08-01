@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 48790 (2870 per locale)
+/// Strings: 48824 (2872 per locale)
 ///
-/// Built on 2026-08-01 at 00:00 UTC
+/// Built on 2026-08-01 at 00:46 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3879,6 +3879,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Enter subtitle lookup cursor';
   String get audiobook_export_clip_too_long =>
       'Selection audio is too long to export (limit: 5 minutes)';
+  String get sync_err_forbidden =>
+      'The server refused this request. Your sign-in is fine - check the server\'s settings.';
+  String sync_err_forbidden_detail({required Object reason}) =>
+      'The server refused this request: ${reason} (your sign-in is fine)';
 }
 
 // Path: <root>
@@ -10477,6 +10481,12 @@ class _StringsAr extends _StringsEn {
   @override
   String get audiobook_export_clip_too_long =>
       'Selection audio is too long to export (limit: 5 minutes)';
+  @override
+  String get sync_err_forbidden =>
+      'The server refused this request. Your sign-in is fine - check the server\'s settings.';
+  @override
+  String sync_err_forbidden_detail({required Object reason}) =>
+      'The server refused this request: ${reason} (your sign-in is fine)';
 }
 
 // Path: <root>
@@ -17142,6 +17152,12 @@ class _StringsDe extends _StringsEn {
   @override
   String get audiobook_export_clip_too_long =>
       'Selection audio is too long to export (limit: 5 minutes)';
+  @override
+  String get sync_err_forbidden =>
+      'The server refused this request. Your sign-in is fine - check the server\'s settings.';
+  @override
+  String sync_err_forbidden_detail({required Object reason}) =>
+      'The server refused this request: ${reason} (your sign-in is fine)';
 }
 
 // Path: <root>
@@ -23823,6 +23839,12 @@ class _StringsEs extends _StringsEn {
   @override
   String get audiobook_export_clip_too_long =>
       'Selection audio is too long to export (limit: 5 minutes)';
+  @override
+  String get sync_err_forbidden =>
+      'The server refused this request. Your sign-in is fine - check the server\'s settings.';
+  @override
+  String sync_err_forbidden_detail({required Object reason}) =>
+      'The server refused this request: ${reason} (your sign-in is fine)';
 }
 
 // Path: <root>
@@ -30515,6 +30537,12 @@ class _StringsFr extends _StringsEn {
   @override
   String get audiobook_export_clip_too_long =>
       'Selection audio is too long to export (limit: 5 minutes)';
+  @override
+  String get sync_err_forbidden =>
+      'The server refused this request. Your sign-in is fine - check the server\'s settings.';
+  @override
+  String sync_err_forbidden_detail({required Object reason}) =>
+      'The server refused this request: ${reason} (your sign-in is fine)';
 }
 
 // Path: <root>
@@ -37136,6 +37164,12 @@ class _StringsId extends _StringsEn {
   @override
   String get audiobook_export_clip_too_long =>
       'Selection audio is too long to export (limit: 5 minutes)';
+  @override
+  String get sync_err_forbidden =>
+      'The server refused this request. Your sign-in is fine - check the server\'s settings.';
+  @override
+  String sync_err_forbidden_detail({required Object reason}) =>
+      'The server refused this request: ${reason} (your sign-in is fine)';
 }
 
 // Path: <root>
@@ -43803,6 +43837,12 @@ class _StringsIt extends _StringsEn {
   @override
   String get audiobook_export_clip_too_long =>
       'Selection audio is too long to export (limit: 5 minutes)';
+  @override
+  String get sync_err_forbidden =>
+      'The server refused this request. Your sign-in is fine - check the server\'s settings.';
+  @override
+  String sync_err_forbidden_detail({required Object reason}) =>
+      'The server refused this request: ${reason} (your sign-in is fine)';
 }
 
 // Path: <root>
@@ -50287,6 +50327,12 @@ class _StringsJa extends _StringsEn {
   @override
   String get audiobook_export_clip_too_long =>
       'Selection audio is too long to export (limit: 5 minutes)';
+  @override
+  String get sync_err_forbidden =>
+      'The server refused this request. Your sign-in is fine - check the server\'s settings.';
+  @override
+  String sync_err_forbidden_detail({required Object reason}) =>
+      'The server refused this request: ${reason} (your sign-in is fine)';
 }
 
 // Path: <root>
@@ -56773,6 +56819,12 @@ class _StringsKo extends _StringsEn {
   @override
   String get audiobook_export_clip_too_long =>
       'Selection audio is too long to export (limit: 5 minutes)';
+  @override
+  String get sync_err_forbidden =>
+      'The server refused this request. Your sign-in is fine - check the server\'s settings.';
+  @override
+  String sync_err_forbidden_detail({required Object reason}) =>
+      'The server refused this request: ${reason} (your sign-in is fine)';
 }
 
 // Path: <root>
@@ -63420,6 +63472,12 @@ class _StringsNl extends _StringsEn {
   @override
   String get audiobook_export_clip_too_long =>
       'Selection audio is too long to export (limit: 5 minutes)';
+  @override
+  String get sync_err_forbidden =>
+      'The server refused this request. Your sign-in is fine - check the server\'s settings.';
+  @override
+  String sync_err_forbidden_detail({required Object reason}) =>
+      'The server refused this request: ${reason} (your sign-in is fine)';
 }
 
 // Path: <root>
@@ -70080,6 +70138,12 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get audiobook_export_clip_too_long =>
       'Selection audio is too long to export (limit: 5 minutes)';
+  @override
+  String get sync_err_forbidden =>
+      'The server refused this request. Your sign-in is fine - check the server\'s settings.';
+  @override
+  String sync_err_forbidden_detail({required Object reason}) =>
+      'The server refused this request: ${reason} (your sign-in is fine)';
 }
 
 // Path: <root>
@@ -76724,6 +76788,12 @@ class _StringsRu extends _StringsEn {
   @override
   String get audiobook_export_clip_too_long =>
       'Selection audio is too long to export (limit: 5 minutes)';
+  @override
+  String get sync_err_forbidden =>
+      'The server refused this request. Your sign-in is fine - check the server\'s settings.';
+  @override
+  String sync_err_forbidden_detail({required Object reason}) =>
+      'The server refused this request: ${reason} (your sign-in is fine)';
 }
 
 // Path: <root>
@@ -83316,6 +83386,12 @@ class _StringsTh extends _StringsEn {
   @override
   String get audiobook_export_clip_too_long =>
       'Selection audio is too long to export (limit: 5 minutes)';
+  @override
+  String get sync_err_forbidden =>
+      'The server refused this request. Your sign-in is fine - check the server\'s settings.';
+  @override
+  String sync_err_forbidden_detail({required Object reason}) =>
+      'The server refused this request: ${reason} (your sign-in is fine)';
 }
 
 // Path: <root>
@@ -89940,6 +90016,12 @@ class _StringsTr extends _StringsEn {
   @override
   String get audiobook_export_clip_too_long =>
       'Selection audio is too long to export (limit: 5 minutes)';
+  @override
+  String get sync_err_forbidden =>
+      'The server refused this request. Your sign-in is fine - check the server\'s settings.';
+  @override
+  String sync_err_forbidden_detail({required Object reason}) =>
+      'The server refused this request: ${reason} (your sign-in is fine)';
 }
 
 // Path: <root>
@@ -96549,6 +96631,12 @@ class _StringsVi extends _StringsEn {
   @override
   String get audiobook_export_clip_too_long =>
       'Selection audio is too long to export (limit: 5 minutes)';
+  @override
+  String get sync_err_forbidden =>
+      'The server refused this request. Your sign-in is fine - check the server\'s settings.';
+  @override
+  String sync_err_forbidden_detail({required Object reason}) =>
+      'The server refused this request: ${reason} (your sign-in is fine)';
 }
 
 // Path: <root>
@@ -102686,6 +102774,11 @@ class _StringsZhCn extends _StringsEn {
   String get shortcut_action_video_enter_caret => '进入字幕选词光标';
   @override
   String get audiobook_export_clip_too_long => '选区音频过长，暂不支持导出（上限 5 分钟）';
+  @override
+  String get sync_err_forbidden => '服务端拒绝了这次请求。登录没问题，请检查服务端设置。';
+  @override
+  String sync_err_forbidden_detail({required Object reason}) =>
+      '服务端拒绝了这次请求：${reason}（登录没问题）';
 }
 
 // Path: <root>
@@ -109091,6 +109184,12 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get audiobook_export_clip_too_long =>
       'Selection audio is too long to export (limit: 5 minutes)';
+  @override
+  String get sync_err_forbidden =>
+      'The server refused this request. Your sign-in is fine - check the server\'s settings.';
+  @override
+  String sync_err_forbidden_detail({required Object reason}) =>
+      'The server refused this request: ${reason} (your sign-in is fine)';
 }
 
 /// Flat map(s) containing all translations.
@@ -114979,6 +115078,11 @@ extension on _StringsEn {
         return 'Enter subtitle lookup cursor';
       case 'audiobook_export_clip_too_long':
         return 'Selection audio is too long to export (limit: 5 minutes)';
+      case 'sync_err_forbidden':
+        return 'The server refused this request. Your sign-in is fine - check the server\'s settings.';
+      case 'sync_err_forbidden_detail':
+        return ({required Object reason}) =>
+            'The server refused this request: ${reason} (your sign-in is fine)';
       default:
         return null;
     }
@@ -120865,6 +120969,11 @@ extension on _StringsAr {
         return 'Enter subtitle lookup cursor';
       case 'audiobook_export_clip_too_long':
         return 'Selection audio is too long to export (limit: 5 minutes)';
+      case 'sync_err_forbidden':
+        return 'The server refused this request. Your sign-in is fine - check the server\'s settings.';
+      case 'sync_err_forbidden_detail':
+        return ({required Object reason}) =>
+            'The server refused this request: ${reason} (your sign-in is fine)';
       default:
         return null;
     }
@@ -126773,6 +126882,11 @@ extension on _StringsDe {
         return 'Enter subtitle lookup cursor';
       case 'audiobook_export_clip_too_long':
         return 'Selection audio is too long to export (limit: 5 minutes)';
+      case 'sync_err_forbidden':
+        return 'The server refused this request. Your sign-in is fine - check the server\'s settings.';
+      case 'sync_err_forbidden_detail':
+        return ({required Object reason}) =>
+            'The server refused this request: ${reason} (your sign-in is fine)';
       default:
         return null;
     }
@@ -132680,6 +132794,11 @@ extension on _StringsEs {
         return 'Enter subtitle lookup cursor';
       case 'audiobook_export_clip_too_long':
         return 'Selection audio is too long to export (limit: 5 minutes)';
+      case 'sync_err_forbidden':
+        return 'The server refused this request. Your sign-in is fine - check the server\'s settings.';
+      case 'sync_err_forbidden_detail':
+        return ({required Object reason}) =>
+            'The server refused this request: ${reason} (your sign-in is fine)';
       default:
         return null;
     }
@@ -138593,6 +138712,11 @@ extension on _StringsFr {
         return 'Enter subtitle lookup cursor';
       case 'audiobook_export_clip_too_long':
         return 'Selection audio is too long to export (limit: 5 minutes)';
+      case 'sync_err_forbidden':
+        return 'The server refused this request. Your sign-in is fine - check the server\'s settings.';
+      case 'sync_err_forbidden_detail':
+        return ({required Object reason}) =>
+            'The server refused this request: ${reason} (your sign-in is fine)';
       default:
         return null;
     }
@@ -144488,6 +144612,11 @@ extension on _StringsId {
         return 'Enter subtitle lookup cursor';
       case 'audiobook_export_clip_too_long':
         return 'Selection audio is too long to export (limit: 5 minutes)';
+      case 'sync_err_forbidden':
+        return 'The server refused this request. Your sign-in is fine - check the server\'s settings.';
+      case 'sync_err_forbidden_detail':
+        return ({required Object reason}) =>
+            'The server refused this request: ${reason} (your sign-in is fine)';
       default:
         return null;
     }
@@ -150397,6 +150526,11 @@ extension on _StringsIt {
         return 'Enter subtitle lookup cursor';
       case 'audiobook_export_clip_too_long':
         return 'Selection audio is too long to export (limit: 5 minutes)';
+      case 'sync_err_forbidden':
+        return 'The server refused this request. Your sign-in is fine - check the server\'s settings.';
+      case 'sync_err_forbidden_detail':
+        return ({required Object reason}) =>
+            'The server refused this request: ${reason} (your sign-in is fine)';
       default:
         return null;
     }
@@ -156268,6 +156402,11 @@ extension on _StringsJa {
         return 'Enter subtitle lookup cursor';
       case 'audiobook_export_clip_too_long':
         return 'Selection audio is too long to export (limit: 5 minutes)';
+      case 'sync_err_forbidden':
+        return 'The server refused this request. Your sign-in is fine - check the server\'s settings.';
+      case 'sync_err_forbidden_detail':
+        return ({required Object reason}) =>
+            'The server refused this request: ${reason} (your sign-in is fine)';
       default:
         return null;
     }
@@ -162143,6 +162282,11 @@ extension on _StringsKo {
         return 'Enter subtitle lookup cursor';
       case 'audiobook_export_clip_too_long':
         return 'Selection audio is too long to export (limit: 5 minutes)';
+      case 'sync_err_forbidden':
+        return 'The server refused this request. Your sign-in is fine - check the server\'s settings.';
+      case 'sync_err_forbidden_detail':
+        return ({required Object reason}) =>
+            'The server refused this request: ${reason} (your sign-in is fine)';
       default:
         return null;
     }
@@ -168046,6 +168190,11 @@ extension on _StringsNl {
         return 'Enter subtitle lookup cursor';
       case 'audiobook_export_clip_too_long':
         return 'Selection audio is too long to export (limit: 5 minutes)';
+      case 'sync_err_forbidden':
+        return 'The server refused this request. Your sign-in is fine - check the server\'s settings.';
+      case 'sync_err_forbidden_detail':
+        return ({required Object reason}) =>
+            'The server refused this request: ${reason} (your sign-in is fine)';
       default:
         return null;
     }
@@ -173946,6 +174095,11 @@ extension on _StringsPtBr {
         return 'Enter subtitle lookup cursor';
       case 'audiobook_export_clip_too_long':
         return 'Selection audio is too long to export (limit: 5 minutes)';
+      case 'sync_err_forbidden':
+        return 'The server refused this request. Your sign-in is fine - check the server\'s settings.';
+      case 'sync_err_forbidden_detail':
+        return ({required Object reason}) =>
+            'The server refused this request: ${reason} (your sign-in is fine)';
       default:
         return null;
     }
@@ -179851,6 +180005,11 @@ extension on _StringsRu {
         return 'Enter subtitle lookup cursor';
       case 'audiobook_export_clip_too_long':
         return 'Selection audio is too long to export (limit: 5 minutes)';
+      case 'sync_err_forbidden':
+        return 'The server refused this request. Your sign-in is fine - check the server\'s settings.';
+      case 'sync_err_forbidden_detail':
+        return ({required Object reason}) =>
+            'The server refused this request: ${reason} (your sign-in is fine)';
       default:
         return null;
     }
@@ -185739,6 +185898,11 @@ extension on _StringsTh {
         return 'Enter subtitle lookup cursor';
       case 'audiobook_export_clip_too_long':
         return 'Selection audio is too long to export (limit: 5 minutes)';
+      case 'sync_err_forbidden':
+        return 'The server refused this request. Your sign-in is fine - check the server\'s settings.';
+      case 'sync_err_forbidden_detail':
+        return ({required Object reason}) =>
+            'The server refused this request: ${reason} (your sign-in is fine)';
       default:
         return null;
     }
@@ -191636,6 +191800,11 @@ extension on _StringsTr {
         return 'Enter subtitle lookup cursor';
       case 'audiobook_export_clip_too_long':
         return 'Selection audio is too long to export (limit: 5 minutes)';
+      case 'sync_err_forbidden':
+        return 'The server refused this request. Your sign-in is fine - check the server\'s settings.';
+      case 'sync_err_forbidden_detail':
+        return ({required Object reason}) =>
+            'The server refused this request: ${reason} (your sign-in is fine)';
       default:
         return null;
     }
@@ -197529,6 +197698,11 @@ extension on _StringsVi {
         return 'Enter subtitle lookup cursor';
       case 'audiobook_export_clip_too_long':
         return 'Selection audio is too long to export (limit: 5 minutes)';
+      case 'sync_err_forbidden':
+        return 'The server refused this request. Your sign-in is fine - check the server\'s settings.';
+      case 'sync_err_forbidden_detail':
+        return ({required Object reason}) =>
+            'The server refused this request: ${reason} (your sign-in is fine)';
       default:
         return null;
     }
@@ -203370,6 +203544,10 @@ extension on _StringsZhCn {
         return '进入字幕选词光标';
       case 'audiobook_export_clip_too_long':
         return '选区音频过长，暂不支持导出（上限 5 分钟）';
+      case 'sync_err_forbidden':
+        return '服务端拒绝了这次请求。登录没问题，请检查服务端设置。';
+      case 'sync_err_forbidden_detail':
+        return ({required Object reason}) => '服务端拒绝了这次请求：${reason}（登录没问题）';
       default:
         return null;
     }
@@ -209236,6 +209414,11 @@ extension on _StringsZhHk {
         return 'Enter subtitle lookup cursor';
       case 'audiobook_export_clip_too_long':
         return 'Selection audio is too long to export (limit: 5 minutes)';
+      case 'sync_err_forbidden':
+        return 'The server refused this request. Your sign-in is fine - check the server\'s settings.';
+      case 'sync_err_forbidden_detail':
+        return ({required Object reason}) =>
+            'The server refused this request: ${reason} (your sign-in is fine)';
       default:
         return null;
     }
