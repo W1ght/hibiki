@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 51391 (3023 per locale)
+/// Strings: 51918 (3054 per locale)
 ///
-/// Built on 2026-08-01 at 09:43 UTC
+/// Built on 2026-08-01 at 19:01 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2526,7 +2526,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get sync_err_scope_upgrade =>
       'Sync permissions changed — please sign in to Google again to continue syncing.';
   String get sync_err_timeout =>
-      'Connection timed out — the server did not respond in time.';
+      'Connection timed out — the server did not respond in time. Check your network or proxy settings.';
   String sync_error({required Object message}) => 'Sync error: ${message}';
   String get sync_exit_warning =>
       'Sync is still in progress. Exiting now may cause data loss.';
@@ -2757,11 +2757,11 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get update_checking_now => 'Checking for updates…';
   String get update_connecting => 'Connecting…';
   String get update_custom_proxy_auto_hint =>
-      'Leave blank to use environment variables, then the enabled system proxy.';
+      'Used for update checks, cloud sync and downloads. Leave blank to use environment variables, then the enabled system proxy.';
   String get update_custom_proxy_hint =>
       'host:port, e.g. 127.0.0.1:7890 (IPv4/host only)';
   String get update_custom_proxy_invalid => 'Invalid proxy. Use host:port';
-  String get update_custom_proxy_label => 'Custom update proxy';
+  String get update_custom_proxy_label => 'Custom network proxy';
   String get update_debug_channel => 'Debug update channel';
   String get update_debug_channel_warning =>
       'Debug channel builds may be unstable. Use at your own risk.';
@@ -3658,8 +3658,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get media_tracking_manage_links => 'Manage links';
   String get media_tracking_last_error => 'Last error';
   String get shortcut_action_popup_mine_entry => 'Create card (mine)';
-  String get game_hook_reason_protocol_mismatch =>
-      'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
   String get game_upscaling_auto_hint =>
       'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
   String get game_upscaling_installed_only_hint =>
@@ -3892,8 +3890,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Same formats as video cards, stored separately: a galgame frame barely moves within one line, so the trade-off differs.';
   String get scrape_all => 'Scrape all';
   String scrape_all_title({required Object kind}) => 'Scrape all ${kind}';
-  String scrape_all_confirm({required Object n}) =>
-      'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
   String scrape_all_running({required Object current, required Object total}) =>
       'Scraping ${current} / ${total}';
   String scrape_all_item({required Object title}) => 'Processing: ${title}';
@@ -4063,6 +4059,53 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get mihon_add_to_bookshelf => 'Add to manga shelf';
   String get mihon_in_bookshelf => 'In manga shelf';
   String get media_source_local_roots => 'Local scan roots';
+  String get game_hook_reason_protocol_mismatch =>
+      'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+  String scrape_all_confirm({required Object n}) =>
+      'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
+  String get collection_related_title => 'Related works';
+  String get collection_relation_prequel => 'Prequel';
+  String get collection_relation_sequel => 'Sequel';
+  String get collection_relation_side_story => 'Side story';
+  String get collection_relation_movie => 'Movie';
+  String get collection_relation_spin_off => 'Spin-off';
+  String get collection_relation_other => 'Related';
+  String get collection_relation_download => 'Download';
+  String get collection_relation_bind => 'Bind to existing collection';
+  String get collection_episode_scrape => 'Fetch episode details';
+  String get collection_episode_scrape_unbound => 'Scrape the collection first';
+  String get collection_episode_rename => 'Rename episodes from scrape';
+  String get collection_episode_rename_title => 'Rename episodes';
+  String get collection_episode_rename_empty => 'Nothing to rename';
+  String get collection_episode_download => 'Download this episode';
+  String get collection_episode_fill_missing => 'Fill missing episodes';
+  String get collection_episode_no_missing => 'No missing episodes';
+  String get collection_split_by_season => 'Split by season';
+  String get collection_split_keep_original => 'Keep the original collection';
+  String get collection_split_confirm => 'Split';
+  String get collection_episode_open_bangumi => 'Open this episode on Bangumi';
+  String collection_relation_bound({required Object name}) =>
+      'Bound to ${name}';
+  String collection_episode_scrape_result(
+          {required Object updated, required Object skipped}) =>
+      'Updated ${updated} episodes, skipped ${skipped}';
+  String collection_episode_scrape_failed({required Object error}) =>
+      'Episode scrape failed: ${error}';
+  String collection_episode_rename_apply({required Object n}) =>
+      'Rename ${n} episodes';
+  String collection_split_done({required Object n}) =>
+      'Split into ${n} collections';
+  String collection_episode_watched_at({required Object position}) =>
+      'Watched to ${position}';
+  String collection_episode_bangumi_open_failed({required Object error}) =>
+      'Could not resolve the episode on Bangumi: ${error}';
+  String collection_episode_rename_partial(
+          {required Object n, required Object m}) =>
+      'Renamed ${n} episodes, ${m} failed';
+  String get collection_episode_bangumi_not_found =>
+      'Episode not found on Bangumi; opened the subject page instead';
+  String get sync_err_browser_timeout =>
+      'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
 }
 
 // Path: <root>
@@ -10295,9 +10338,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get shortcut_action_popup_mine_entry => 'Create card (mine)';
   @override
-  String get game_hook_reason_protocol_mismatch =>
-      'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
-  @override
   String get game_upscaling_auto_hint =>
       'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
   @override
@@ -10685,9 +10725,6 @@ class _StringsAr extends _StringsEn {
   @override
   String scrape_all_title({required Object kind}) => 'Scrape all ${kind}';
   @override
-  String scrape_all_confirm({required Object n}) =>
-      'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
-  @override
   String scrape_all_running({required Object current, required Object total}) =>
       'Scraping ${current} / ${total}';
   @override
@@ -10998,6 +11035,86 @@ class _StringsAr extends _StringsEn {
   String get mihon_in_bookshelf => 'In manga shelf';
   @override
   String get media_source_local_roots => 'Local scan roots';
+  @override
+  String get game_hook_reason_protocol_mismatch =>
+      'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+  @override
+  String scrape_all_confirm({required Object n}) =>
+      'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
+  @override
+  String get collection_related_title => 'Related works';
+  @override
+  String get collection_relation_prequel => 'Prequel';
+  @override
+  String get collection_relation_sequel => 'Sequel';
+  @override
+  String get collection_relation_side_story => 'Side story';
+  @override
+  String get collection_relation_movie => 'Movie';
+  @override
+  String get collection_relation_spin_off => 'Spin-off';
+  @override
+  String get collection_relation_other => 'Related';
+  @override
+  String get collection_relation_download => 'Download';
+  @override
+  String get collection_relation_bind => 'Bind to existing collection';
+  @override
+  String get collection_episode_scrape => 'Fetch episode details';
+  @override
+  String get collection_episode_scrape_unbound => 'Scrape the collection first';
+  @override
+  String get collection_episode_rename => 'Rename episodes from scrape';
+  @override
+  String get collection_episode_rename_title => 'Rename episodes';
+  @override
+  String get collection_episode_rename_empty => 'Nothing to rename';
+  @override
+  String get collection_episode_download => 'Download this episode';
+  @override
+  String get collection_episode_fill_missing => 'Fill missing episodes';
+  @override
+  String get collection_episode_no_missing => 'No missing episodes';
+  @override
+  String get collection_split_by_season => 'Split by season';
+  @override
+  String get collection_split_keep_original => 'Keep the original collection';
+  @override
+  String get collection_split_confirm => 'Split';
+  @override
+  String get collection_episode_open_bangumi => 'Open this episode on Bangumi';
+  @override
+  String collection_relation_bound({required Object name}) =>
+      'Bound to ${name}';
+  @override
+  String collection_episode_scrape_result(
+          {required Object updated, required Object skipped}) =>
+      'Updated ${updated} episodes, skipped ${skipped}';
+  @override
+  String collection_episode_scrape_failed({required Object error}) =>
+      'Episode scrape failed: ${error}';
+  @override
+  String collection_episode_rename_apply({required Object n}) =>
+      'Rename ${n} episodes';
+  @override
+  String collection_split_done({required Object n}) =>
+      'Split into ${n} collections';
+  @override
+  String collection_episode_watched_at({required Object position}) =>
+      'Watched to ${position}';
+  @override
+  String collection_episode_bangumi_open_failed({required Object error}) =>
+      'Could not resolve the episode on Bangumi: ${error}';
+  @override
+  String collection_episode_rename_partial(
+          {required Object n, required Object m}) =>
+      'Renamed ${n} episodes, ${m} failed';
+  @override
+  String get collection_episode_bangumi_not_found =>
+      'Episode not found on Bangumi; opened the subject page instead';
+  @override
+  String get sync_err_browser_timeout =>
+      'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
 }
 
 // Path: <root>
@@ -17297,9 +17414,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get shortcut_action_popup_mine_entry => 'Create card (mine)';
   @override
-  String get game_hook_reason_protocol_mismatch =>
-      'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
-  @override
   String get game_upscaling_auto_hint =>
       'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
   @override
@@ -17687,9 +17801,6 @@ class _StringsDe extends _StringsEn {
   @override
   String scrape_all_title({required Object kind}) => 'Scrape all ${kind}';
   @override
-  String scrape_all_confirm({required Object n}) =>
-      'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
-  @override
   String scrape_all_running({required Object current, required Object total}) =>
       'Scraping ${current} / ${total}';
   @override
@@ -18000,6 +18111,86 @@ class _StringsDe extends _StringsEn {
   String get mihon_in_bookshelf => 'In manga shelf';
   @override
   String get media_source_local_roots => 'Local scan roots';
+  @override
+  String get game_hook_reason_protocol_mismatch =>
+      'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+  @override
+  String scrape_all_confirm({required Object n}) =>
+      'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
+  @override
+  String get collection_related_title => 'Related works';
+  @override
+  String get collection_relation_prequel => 'Prequel';
+  @override
+  String get collection_relation_sequel => 'Sequel';
+  @override
+  String get collection_relation_side_story => 'Side story';
+  @override
+  String get collection_relation_movie => 'Movie';
+  @override
+  String get collection_relation_spin_off => 'Spin-off';
+  @override
+  String get collection_relation_other => 'Related';
+  @override
+  String get collection_relation_download => 'Download';
+  @override
+  String get collection_relation_bind => 'Bind to existing collection';
+  @override
+  String get collection_episode_scrape => 'Fetch episode details';
+  @override
+  String get collection_episode_scrape_unbound => 'Scrape the collection first';
+  @override
+  String get collection_episode_rename => 'Rename episodes from scrape';
+  @override
+  String get collection_episode_rename_title => 'Rename episodes';
+  @override
+  String get collection_episode_rename_empty => 'Nothing to rename';
+  @override
+  String get collection_episode_download => 'Download this episode';
+  @override
+  String get collection_episode_fill_missing => 'Fill missing episodes';
+  @override
+  String get collection_episode_no_missing => 'No missing episodes';
+  @override
+  String get collection_split_by_season => 'Split by season';
+  @override
+  String get collection_split_keep_original => 'Keep the original collection';
+  @override
+  String get collection_split_confirm => 'Split';
+  @override
+  String get collection_episode_open_bangumi => 'Open this episode on Bangumi';
+  @override
+  String collection_relation_bound({required Object name}) =>
+      'Bound to ${name}';
+  @override
+  String collection_episode_scrape_result(
+          {required Object updated, required Object skipped}) =>
+      'Updated ${updated} episodes, skipped ${skipped}';
+  @override
+  String collection_episode_scrape_failed({required Object error}) =>
+      'Episode scrape failed: ${error}';
+  @override
+  String collection_episode_rename_apply({required Object n}) =>
+      'Rename ${n} episodes';
+  @override
+  String collection_split_done({required Object n}) =>
+      'Split into ${n} collections';
+  @override
+  String collection_episode_watched_at({required Object position}) =>
+      'Watched to ${position}';
+  @override
+  String collection_episode_bangumi_open_failed({required Object error}) =>
+      'Could not resolve the episode on Bangumi: ${error}';
+  @override
+  String collection_episode_rename_partial(
+          {required Object n, required Object m}) =>
+      'Renamed ${n} episodes, ${m} failed';
+  @override
+  String get collection_episode_bangumi_not_found =>
+      'Episode not found on Bangumi; opened the subject page instead';
+  @override
+  String get sync_err_browser_timeout =>
+      'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
 }
 
 // Path: <root>
@@ -24314,9 +24505,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get shortcut_action_popup_mine_entry => 'Create card (mine)';
   @override
-  String get game_hook_reason_protocol_mismatch =>
-      'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
-  @override
   String get game_upscaling_auto_hint =>
       'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
   @override
@@ -24704,9 +24892,6 @@ class _StringsEs extends _StringsEn {
   @override
   String scrape_all_title({required Object kind}) => 'Scrape all ${kind}';
   @override
-  String scrape_all_confirm({required Object n}) =>
-      'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
-  @override
   String scrape_all_running({required Object current, required Object total}) =>
       'Scraping ${current} / ${total}';
   @override
@@ -25017,6 +25202,86 @@ class _StringsEs extends _StringsEn {
   String get mihon_in_bookshelf => 'In manga shelf';
   @override
   String get media_source_local_roots => 'Local scan roots';
+  @override
+  String get game_hook_reason_protocol_mismatch =>
+      'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+  @override
+  String scrape_all_confirm({required Object n}) =>
+      'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
+  @override
+  String get collection_related_title => 'Related works';
+  @override
+  String get collection_relation_prequel => 'Prequel';
+  @override
+  String get collection_relation_sequel => 'Sequel';
+  @override
+  String get collection_relation_side_story => 'Side story';
+  @override
+  String get collection_relation_movie => 'Movie';
+  @override
+  String get collection_relation_spin_off => 'Spin-off';
+  @override
+  String get collection_relation_other => 'Related';
+  @override
+  String get collection_relation_download => 'Download';
+  @override
+  String get collection_relation_bind => 'Bind to existing collection';
+  @override
+  String get collection_episode_scrape => 'Fetch episode details';
+  @override
+  String get collection_episode_scrape_unbound => 'Scrape the collection first';
+  @override
+  String get collection_episode_rename => 'Rename episodes from scrape';
+  @override
+  String get collection_episode_rename_title => 'Rename episodes';
+  @override
+  String get collection_episode_rename_empty => 'Nothing to rename';
+  @override
+  String get collection_episode_download => 'Download this episode';
+  @override
+  String get collection_episode_fill_missing => 'Fill missing episodes';
+  @override
+  String get collection_episode_no_missing => 'No missing episodes';
+  @override
+  String get collection_split_by_season => 'Split by season';
+  @override
+  String get collection_split_keep_original => 'Keep the original collection';
+  @override
+  String get collection_split_confirm => 'Split';
+  @override
+  String get collection_episode_open_bangumi => 'Open this episode on Bangumi';
+  @override
+  String collection_relation_bound({required Object name}) =>
+      'Bound to ${name}';
+  @override
+  String collection_episode_scrape_result(
+          {required Object updated, required Object skipped}) =>
+      'Updated ${updated} episodes, skipped ${skipped}';
+  @override
+  String collection_episode_scrape_failed({required Object error}) =>
+      'Episode scrape failed: ${error}';
+  @override
+  String collection_episode_rename_apply({required Object n}) =>
+      'Rename ${n} episodes';
+  @override
+  String collection_split_done({required Object n}) =>
+      'Split into ${n} collections';
+  @override
+  String collection_episode_watched_at({required Object position}) =>
+      'Watched to ${position}';
+  @override
+  String collection_episode_bangumi_open_failed({required Object error}) =>
+      'Could not resolve the episode on Bangumi: ${error}';
+  @override
+  String collection_episode_rename_partial(
+          {required Object n, required Object m}) =>
+      'Renamed ${n} episodes, ${m} failed';
+  @override
+  String get collection_episode_bangumi_not_found =>
+      'Episode not found on Bangumi; opened the subject page instead';
+  @override
+  String get sync_err_browser_timeout =>
+      'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
 }
 
 // Path: <root>
@@ -31343,9 +31608,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get shortcut_action_popup_mine_entry => 'Create card (mine)';
   @override
-  String get game_hook_reason_protocol_mismatch =>
-      'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
-  @override
   String get game_upscaling_auto_hint =>
       'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
   @override
@@ -31733,9 +31995,6 @@ class _StringsFr extends _StringsEn {
   @override
   String scrape_all_title({required Object kind}) => 'Scrape all ${kind}';
   @override
-  String scrape_all_confirm({required Object n}) =>
-      'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
-  @override
   String scrape_all_running({required Object current, required Object total}) =>
       'Scraping ${current} / ${total}';
   @override
@@ -32046,6 +32305,86 @@ class _StringsFr extends _StringsEn {
   String get mihon_in_bookshelf => 'In manga shelf';
   @override
   String get media_source_local_roots => 'Local scan roots';
+  @override
+  String get game_hook_reason_protocol_mismatch =>
+      'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+  @override
+  String scrape_all_confirm({required Object n}) =>
+      'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
+  @override
+  String get collection_related_title => 'Related works';
+  @override
+  String get collection_relation_prequel => 'Prequel';
+  @override
+  String get collection_relation_sequel => 'Sequel';
+  @override
+  String get collection_relation_side_story => 'Side story';
+  @override
+  String get collection_relation_movie => 'Movie';
+  @override
+  String get collection_relation_spin_off => 'Spin-off';
+  @override
+  String get collection_relation_other => 'Related';
+  @override
+  String get collection_relation_download => 'Download';
+  @override
+  String get collection_relation_bind => 'Bind to existing collection';
+  @override
+  String get collection_episode_scrape => 'Fetch episode details';
+  @override
+  String get collection_episode_scrape_unbound => 'Scrape the collection first';
+  @override
+  String get collection_episode_rename => 'Rename episodes from scrape';
+  @override
+  String get collection_episode_rename_title => 'Rename episodes';
+  @override
+  String get collection_episode_rename_empty => 'Nothing to rename';
+  @override
+  String get collection_episode_download => 'Download this episode';
+  @override
+  String get collection_episode_fill_missing => 'Fill missing episodes';
+  @override
+  String get collection_episode_no_missing => 'No missing episodes';
+  @override
+  String get collection_split_by_season => 'Split by season';
+  @override
+  String get collection_split_keep_original => 'Keep the original collection';
+  @override
+  String get collection_split_confirm => 'Split';
+  @override
+  String get collection_episode_open_bangumi => 'Open this episode on Bangumi';
+  @override
+  String collection_relation_bound({required Object name}) =>
+      'Bound to ${name}';
+  @override
+  String collection_episode_scrape_result(
+          {required Object updated, required Object skipped}) =>
+      'Updated ${updated} episodes, skipped ${skipped}';
+  @override
+  String collection_episode_scrape_failed({required Object error}) =>
+      'Episode scrape failed: ${error}';
+  @override
+  String collection_episode_rename_apply({required Object n}) =>
+      'Rename ${n} episodes';
+  @override
+  String collection_split_done({required Object n}) =>
+      'Split into ${n} collections';
+  @override
+  String collection_episode_watched_at({required Object position}) =>
+      'Watched to ${position}';
+  @override
+  String collection_episode_bangumi_open_failed({required Object error}) =>
+      'Could not resolve the episode on Bangumi: ${error}';
+  @override
+  String collection_episode_rename_partial(
+          {required Object n, required Object m}) =>
+      'Renamed ${n} episodes, ${m} failed';
+  @override
+  String get collection_episode_bangumi_not_found =>
+      'Episode not found on Bangumi; opened the subject page instead';
+  @override
+  String get sync_err_browser_timeout =>
+      'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
 }
 
 // Path: <root>
@@ -38301,9 +38640,6 @@ class _StringsId extends _StringsEn {
   @override
   String get shortcut_action_popup_mine_entry => 'Create card (mine)';
   @override
-  String get game_hook_reason_protocol_mismatch =>
-      'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
-  @override
   String get game_upscaling_auto_hint =>
       'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
   @override
@@ -38691,9 +39027,6 @@ class _StringsId extends _StringsEn {
   @override
   String scrape_all_title({required Object kind}) => 'Scrape all ${kind}';
   @override
-  String scrape_all_confirm({required Object n}) =>
-      'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
-  @override
   String scrape_all_running({required Object current, required Object total}) =>
       'Scraping ${current} / ${total}';
   @override
@@ -39004,6 +39337,86 @@ class _StringsId extends _StringsEn {
   String get mihon_in_bookshelf => 'In manga shelf';
   @override
   String get media_source_local_roots => 'Local scan roots';
+  @override
+  String get game_hook_reason_protocol_mismatch =>
+      'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+  @override
+  String scrape_all_confirm({required Object n}) =>
+      'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
+  @override
+  String get collection_related_title => 'Related works';
+  @override
+  String get collection_relation_prequel => 'Prequel';
+  @override
+  String get collection_relation_sequel => 'Sequel';
+  @override
+  String get collection_relation_side_story => 'Side story';
+  @override
+  String get collection_relation_movie => 'Movie';
+  @override
+  String get collection_relation_spin_off => 'Spin-off';
+  @override
+  String get collection_relation_other => 'Related';
+  @override
+  String get collection_relation_download => 'Download';
+  @override
+  String get collection_relation_bind => 'Bind to existing collection';
+  @override
+  String get collection_episode_scrape => 'Fetch episode details';
+  @override
+  String get collection_episode_scrape_unbound => 'Scrape the collection first';
+  @override
+  String get collection_episode_rename => 'Rename episodes from scrape';
+  @override
+  String get collection_episode_rename_title => 'Rename episodes';
+  @override
+  String get collection_episode_rename_empty => 'Nothing to rename';
+  @override
+  String get collection_episode_download => 'Download this episode';
+  @override
+  String get collection_episode_fill_missing => 'Fill missing episodes';
+  @override
+  String get collection_episode_no_missing => 'No missing episodes';
+  @override
+  String get collection_split_by_season => 'Split by season';
+  @override
+  String get collection_split_keep_original => 'Keep the original collection';
+  @override
+  String get collection_split_confirm => 'Split';
+  @override
+  String get collection_episode_open_bangumi => 'Open this episode on Bangumi';
+  @override
+  String collection_relation_bound({required Object name}) =>
+      'Bound to ${name}';
+  @override
+  String collection_episode_scrape_result(
+          {required Object updated, required Object skipped}) =>
+      'Updated ${updated} episodes, skipped ${skipped}';
+  @override
+  String collection_episode_scrape_failed({required Object error}) =>
+      'Episode scrape failed: ${error}';
+  @override
+  String collection_episode_rename_apply({required Object n}) =>
+      'Rename ${n} episodes';
+  @override
+  String collection_split_done({required Object n}) =>
+      'Split into ${n} collections';
+  @override
+  String collection_episode_watched_at({required Object position}) =>
+      'Watched to ${position}';
+  @override
+  String collection_episode_bangumi_open_failed({required Object error}) =>
+      'Could not resolve the episode on Bangumi: ${error}';
+  @override
+  String collection_episode_rename_partial(
+          {required Object n, required Object m}) =>
+      'Renamed ${n} episodes, ${m} failed';
+  @override
+  String get collection_episode_bangumi_not_found =>
+      'Episode not found on Bangumi; opened the subject page instead';
+  @override
+  String get sync_err_browser_timeout =>
+      'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
 }
 
 // Path: <root>
@@ -45305,9 +45718,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get shortcut_action_popup_mine_entry => 'Create card (mine)';
   @override
-  String get game_hook_reason_protocol_mismatch =>
-      'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
-  @override
   String get game_upscaling_auto_hint =>
       'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
   @override
@@ -45695,9 +46105,6 @@ class _StringsIt extends _StringsEn {
   @override
   String scrape_all_title({required Object kind}) => 'Scrape all ${kind}';
   @override
-  String scrape_all_confirm({required Object n}) =>
-      'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
-  @override
   String scrape_all_running({required Object current, required Object total}) =>
       'Scraping ${current} / ${total}';
   @override
@@ -46008,6 +46415,86 @@ class _StringsIt extends _StringsEn {
   String get mihon_in_bookshelf => 'In manga shelf';
   @override
   String get media_source_local_roots => 'Local scan roots';
+  @override
+  String get game_hook_reason_protocol_mismatch =>
+      'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+  @override
+  String scrape_all_confirm({required Object n}) =>
+      'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
+  @override
+  String get collection_related_title => 'Related works';
+  @override
+  String get collection_relation_prequel => 'Prequel';
+  @override
+  String get collection_relation_sequel => 'Sequel';
+  @override
+  String get collection_relation_side_story => 'Side story';
+  @override
+  String get collection_relation_movie => 'Movie';
+  @override
+  String get collection_relation_spin_off => 'Spin-off';
+  @override
+  String get collection_relation_other => 'Related';
+  @override
+  String get collection_relation_download => 'Download';
+  @override
+  String get collection_relation_bind => 'Bind to existing collection';
+  @override
+  String get collection_episode_scrape => 'Fetch episode details';
+  @override
+  String get collection_episode_scrape_unbound => 'Scrape the collection first';
+  @override
+  String get collection_episode_rename => 'Rename episodes from scrape';
+  @override
+  String get collection_episode_rename_title => 'Rename episodes';
+  @override
+  String get collection_episode_rename_empty => 'Nothing to rename';
+  @override
+  String get collection_episode_download => 'Download this episode';
+  @override
+  String get collection_episode_fill_missing => 'Fill missing episodes';
+  @override
+  String get collection_episode_no_missing => 'No missing episodes';
+  @override
+  String get collection_split_by_season => 'Split by season';
+  @override
+  String get collection_split_keep_original => 'Keep the original collection';
+  @override
+  String get collection_split_confirm => 'Split';
+  @override
+  String get collection_episode_open_bangumi => 'Open this episode on Bangumi';
+  @override
+  String collection_relation_bound({required Object name}) =>
+      'Bound to ${name}';
+  @override
+  String collection_episode_scrape_result(
+          {required Object updated, required Object skipped}) =>
+      'Updated ${updated} episodes, skipped ${skipped}';
+  @override
+  String collection_episode_scrape_failed({required Object error}) =>
+      'Episode scrape failed: ${error}';
+  @override
+  String collection_episode_rename_apply({required Object n}) =>
+      'Rename ${n} episodes';
+  @override
+  String collection_split_done({required Object n}) =>
+      'Split into ${n} collections';
+  @override
+  String collection_episode_watched_at({required Object position}) =>
+      'Watched to ${position}';
+  @override
+  String collection_episode_bangumi_open_failed({required Object error}) =>
+      'Could not resolve the episode on Bangumi: ${error}';
+  @override
+  String collection_episode_rename_partial(
+          {required Object n, required Object m}) =>
+      'Renamed ${n} episodes, ${m} failed';
+  @override
+  String get collection_episode_bangumi_not_found =>
+      'Episode not found on Bangumi; opened the subject page instead';
+  @override
+  String get sync_err_browser_timeout =>
+      'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
 }
 
 // Path: <root>
@@ -52126,9 +52613,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get shortcut_action_popup_mine_entry => 'Create card (mine)';
   @override
-  String get game_hook_reason_protocol_mismatch =>
-      'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
-  @override
   String get game_upscaling_auto_hint =>
       'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
   @override
@@ -52516,9 +53000,6 @@ class _StringsJa extends _StringsEn {
   @override
   String scrape_all_title({required Object kind}) => 'Scrape all ${kind}';
   @override
-  String scrape_all_confirm({required Object n}) =>
-      'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
-  @override
   String scrape_all_running({required Object current, required Object total}) =>
       'Scraping ${current} / ${total}';
   @override
@@ -52829,6 +53310,86 @@ class _StringsJa extends _StringsEn {
   String get mihon_in_bookshelf => 'In manga shelf';
   @override
   String get media_source_local_roots => 'Local scan roots';
+  @override
+  String get game_hook_reason_protocol_mismatch =>
+      'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+  @override
+  String scrape_all_confirm({required Object n}) =>
+      'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
+  @override
+  String get collection_related_title => 'Related works';
+  @override
+  String get collection_relation_prequel => 'Prequel';
+  @override
+  String get collection_relation_sequel => 'Sequel';
+  @override
+  String get collection_relation_side_story => 'Side story';
+  @override
+  String get collection_relation_movie => 'Movie';
+  @override
+  String get collection_relation_spin_off => 'Spin-off';
+  @override
+  String get collection_relation_other => 'Related';
+  @override
+  String get collection_relation_download => 'Download';
+  @override
+  String get collection_relation_bind => 'Bind to existing collection';
+  @override
+  String get collection_episode_scrape => 'Fetch episode details';
+  @override
+  String get collection_episode_scrape_unbound => 'Scrape the collection first';
+  @override
+  String get collection_episode_rename => 'Rename episodes from scrape';
+  @override
+  String get collection_episode_rename_title => 'Rename episodes';
+  @override
+  String get collection_episode_rename_empty => 'Nothing to rename';
+  @override
+  String get collection_episode_download => 'Download this episode';
+  @override
+  String get collection_episode_fill_missing => 'Fill missing episodes';
+  @override
+  String get collection_episode_no_missing => 'No missing episodes';
+  @override
+  String get collection_split_by_season => 'Split by season';
+  @override
+  String get collection_split_keep_original => 'Keep the original collection';
+  @override
+  String get collection_split_confirm => 'Split';
+  @override
+  String get collection_episode_open_bangumi => 'Open this episode on Bangumi';
+  @override
+  String collection_relation_bound({required Object name}) =>
+      'Bound to ${name}';
+  @override
+  String collection_episode_scrape_result(
+          {required Object updated, required Object skipped}) =>
+      'Updated ${updated} episodes, skipped ${skipped}';
+  @override
+  String collection_episode_scrape_failed({required Object error}) =>
+      'Episode scrape failed: ${error}';
+  @override
+  String collection_episode_rename_apply({required Object n}) =>
+      'Rename ${n} episodes';
+  @override
+  String collection_split_done({required Object n}) =>
+      'Split into ${n} collections';
+  @override
+  String collection_episode_watched_at({required Object position}) =>
+      'Watched to ${position}';
+  @override
+  String collection_episode_bangumi_open_failed({required Object error}) =>
+      'Could not resolve the episode on Bangumi: ${error}';
+  @override
+  String collection_episode_rename_partial(
+          {required Object n, required Object m}) =>
+      'Renamed ${n} episodes, ${m} failed';
+  @override
+  String get collection_episode_bangumi_not_found =>
+      'Episode not found on Bangumi; opened the subject page instead';
+  @override
+  String get sync_err_browser_timeout =>
+      'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
 }
 
 // Path: <root>
@@ -58949,9 +59510,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get shortcut_action_popup_mine_entry => 'Create card (mine)';
   @override
-  String get game_hook_reason_protocol_mismatch =>
-      'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
-  @override
   String get game_upscaling_auto_hint =>
       'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
   @override
@@ -59339,9 +59897,6 @@ class _StringsKo extends _StringsEn {
   @override
   String scrape_all_title({required Object kind}) => 'Scrape all ${kind}';
   @override
-  String scrape_all_confirm({required Object n}) =>
-      'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
-  @override
   String scrape_all_running({required Object current, required Object total}) =>
       'Scraping ${current} / ${total}';
   @override
@@ -59652,6 +60207,86 @@ class _StringsKo extends _StringsEn {
   String get mihon_in_bookshelf => 'In manga shelf';
   @override
   String get media_source_local_roots => 'Local scan roots';
+  @override
+  String get game_hook_reason_protocol_mismatch =>
+      'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+  @override
+  String scrape_all_confirm({required Object n}) =>
+      'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
+  @override
+  String get collection_related_title => 'Related works';
+  @override
+  String get collection_relation_prequel => 'Prequel';
+  @override
+  String get collection_relation_sequel => 'Sequel';
+  @override
+  String get collection_relation_side_story => 'Side story';
+  @override
+  String get collection_relation_movie => 'Movie';
+  @override
+  String get collection_relation_spin_off => 'Spin-off';
+  @override
+  String get collection_relation_other => 'Related';
+  @override
+  String get collection_relation_download => 'Download';
+  @override
+  String get collection_relation_bind => 'Bind to existing collection';
+  @override
+  String get collection_episode_scrape => 'Fetch episode details';
+  @override
+  String get collection_episode_scrape_unbound => 'Scrape the collection first';
+  @override
+  String get collection_episode_rename => 'Rename episodes from scrape';
+  @override
+  String get collection_episode_rename_title => 'Rename episodes';
+  @override
+  String get collection_episode_rename_empty => 'Nothing to rename';
+  @override
+  String get collection_episode_download => 'Download this episode';
+  @override
+  String get collection_episode_fill_missing => 'Fill missing episodes';
+  @override
+  String get collection_episode_no_missing => 'No missing episodes';
+  @override
+  String get collection_split_by_season => 'Split by season';
+  @override
+  String get collection_split_keep_original => 'Keep the original collection';
+  @override
+  String get collection_split_confirm => 'Split';
+  @override
+  String get collection_episode_open_bangumi => 'Open this episode on Bangumi';
+  @override
+  String collection_relation_bound({required Object name}) =>
+      'Bound to ${name}';
+  @override
+  String collection_episode_scrape_result(
+          {required Object updated, required Object skipped}) =>
+      'Updated ${updated} episodes, skipped ${skipped}';
+  @override
+  String collection_episode_scrape_failed({required Object error}) =>
+      'Episode scrape failed: ${error}';
+  @override
+  String collection_episode_rename_apply({required Object n}) =>
+      'Rename ${n} episodes';
+  @override
+  String collection_split_done({required Object n}) =>
+      'Split into ${n} collections';
+  @override
+  String collection_episode_watched_at({required Object position}) =>
+      'Watched to ${position}';
+  @override
+  String collection_episode_bangumi_open_failed({required Object error}) =>
+      'Could not resolve the episode on Bangumi: ${error}';
+  @override
+  String collection_episode_rename_partial(
+          {required Object n, required Object m}) =>
+      'Renamed ${n} episodes, ${m} failed';
+  @override
+  String get collection_episode_bangumi_not_found =>
+      'Episode not found on Bangumi; opened the subject page instead';
+  @override
+  String get sync_err_browser_timeout =>
+      'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
 }
 
 // Path: <root>
@@ -65933,9 +66568,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get shortcut_action_popup_mine_entry => 'Create card (mine)';
   @override
-  String get game_hook_reason_protocol_mismatch =>
-      'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
-  @override
   String get game_upscaling_auto_hint =>
       'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
   @override
@@ -66323,9 +66955,6 @@ class _StringsNl extends _StringsEn {
   @override
   String scrape_all_title({required Object kind}) => 'Scrape all ${kind}';
   @override
-  String scrape_all_confirm({required Object n}) =>
-      'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
-  @override
   String scrape_all_running({required Object current, required Object total}) =>
       'Scraping ${current} / ${total}';
   @override
@@ -66636,6 +67265,86 @@ class _StringsNl extends _StringsEn {
   String get mihon_in_bookshelf => 'In manga shelf';
   @override
   String get media_source_local_roots => 'Local scan roots';
+  @override
+  String get game_hook_reason_protocol_mismatch =>
+      'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+  @override
+  String scrape_all_confirm({required Object n}) =>
+      'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
+  @override
+  String get collection_related_title => 'Related works';
+  @override
+  String get collection_relation_prequel => 'Prequel';
+  @override
+  String get collection_relation_sequel => 'Sequel';
+  @override
+  String get collection_relation_side_story => 'Side story';
+  @override
+  String get collection_relation_movie => 'Movie';
+  @override
+  String get collection_relation_spin_off => 'Spin-off';
+  @override
+  String get collection_relation_other => 'Related';
+  @override
+  String get collection_relation_download => 'Download';
+  @override
+  String get collection_relation_bind => 'Bind to existing collection';
+  @override
+  String get collection_episode_scrape => 'Fetch episode details';
+  @override
+  String get collection_episode_scrape_unbound => 'Scrape the collection first';
+  @override
+  String get collection_episode_rename => 'Rename episodes from scrape';
+  @override
+  String get collection_episode_rename_title => 'Rename episodes';
+  @override
+  String get collection_episode_rename_empty => 'Nothing to rename';
+  @override
+  String get collection_episode_download => 'Download this episode';
+  @override
+  String get collection_episode_fill_missing => 'Fill missing episodes';
+  @override
+  String get collection_episode_no_missing => 'No missing episodes';
+  @override
+  String get collection_split_by_season => 'Split by season';
+  @override
+  String get collection_split_keep_original => 'Keep the original collection';
+  @override
+  String get collection_split_confirm => 'Split';
+  @override
+  String get collection_episode_open_bangumi => 'Open this episode on Bangumi';
+  @override
+  String collection_relation_bound({required Object name}) =>
+      'Bound to ${name}';
+  @override
+  String collection_episode_scrape_result(
+          {required Object updated, required Object skipped}) =>
+      'Updated ${updated} episodes, skipped ${skipped}';
+  @override
+  String collection_episode_scrape_failed({required Object error}) =>
+      'Episode scrape failed: ${error}';
+  @override
+  String collection_episode_rename_apply({required Object n}) =>
+      'Rename ${n} episodes';
+  @override
+  String collection_split_done({required Object n}) =>
+      'Split into ${n} collections';
+  @override
+  String collection_episode_watched_at({required Object position}) =>
+      'Watched to ${position}';
+  @override
+  String collection_episode_bangumi_open_failed({required Object error}) =>
+      'Could not resolve the episode on Bangumi: ${error}';
+  @override
+  String collection_episode_rename_partial(
+          {required Object n, required Object m}) =>
+      'Renamed ${n} episodes, ${m} failed';
+  @override
+  String get collection_episode_bangumi_not_found =>
+      'Episode not found on Bangumi; opened the subject page instead';
+  @override
+  String get sync_err_browser_timeout =>
+      'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
 }
 
 // Path: <root>
@@ -72930,9 +73639,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get shortcut_action_popup_mine_entry => 'Create card (mine)';
   @override
-  String get game_hook_reason_protocol_mismatch =>
-      'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
-  @override
   String get game_upscaling_auto_hint =>
       'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
   @override
@@ -73320,9 +74026,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String scrape_all_title({required Object kind}) => 'Scrape all ${kind}';
   @override
-  String scrape_all_confirm({required Object n}) =>
-      'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
-  @override
   String scrape_all_running({required Object current, required Object total}) =>
       'Scraping ${current} / ${total}';
   @override
@@ -73633,6 +74336,86 @@ class _StringsPtBr extends _StringsEn {
   String get mihon_in_bookshelf => 'In manga shelf';
   @override
   String get media_source_local_roots => 'Local scan roots';
+  @override
+  String get game_hook_reason_protocol_mismatch =>
+      'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+  @override
+  String scrape_all_confirm({required Object n}) =>
+      'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
+  @override
+  String get collection_related_title => 'Related works';
+  @override
+  String get collection_relation_prequel => 'Prequel';
+  @override
+  String get collection_relation_sequel => 'Sequel';
+  @override
+  String get collection_relation_side_story => 'Side story';
+  @override
+  String get collection_relation_movie => 'Movie';
+  @override
+  String get collection_relation_spin_off => 'Spin-off';
+  @override
+  String get collection_relation_other => 'Related';
+  @override
+  String get collection_relation_download => 'Download';
+  @override
+  String get collection_relation_bind => 'Bind to existing collection';
+  @override
+  String get collection_episode_scrape => 'Fetch episode details';
+  @override
+  String get collection_episode_scrape_unbound => 'Scrape the collection first';
+  @override
+  String get collection_episode_rename => 'Rename episodes from scrape';
+  @override
+  String get collection_episode_rename_title => 'Rename episodes';
+  @override
+  String get collection_episode_rename_empty => 'Nothing to rename';
+  @override
+  String get collection_episode_download => 'Download this episode';
+  @override
+  String get collection_episode_fill_missing => 'Fill missing episodes';
+  @override
+  String get collection_episode_no_missing => 'No missing episodes';
+  @override
+  String get collection_split_by_season => 'Split by season';
+  @override
+  String get collection_split_keep_original => 'Keep the original collection';
+  @override
+  String get collection_split_confirm => 'Split';
+  @override
+  String get collection_episode_open_bangumi => 'Open this episode on Bangumi';
+  @override
+  String collection_relation_bound({required Object name}) =>
+      'Bound to ${name}';
+  @override
+  String collection_episode_scrape_result(
+          {required Object updated, required Object skipped}) =>
+      'Updated ${updated} episodes, skipped ${skipped}';
+  @override
+  String collection_episode_scrape_failed({required Object error}) =>
+      'Episode scrape failed: ${error}';
+  @override
+  String collection_episode_rename_apply({required Object n}) =>
+      'Rename ${n} episodes';
+  @override
+  String collection_split_done({required Object n}) =>
+      'Split into ${n} collections';
+  @override
+  String collection_episode_watched_at({required Object position}) =>
+      'Watched to ${position}';
+  @override
+  String collection_episode_bangumi_open_failed({required Object error}) =>
+      'Could not resolve the episode on Bangumi: ${error}';
+  @override
+  String collection_episode_rename_partial(
+          {required Object n, required Object m}) =>
+      'Renamed ${n} episodes, ${m} failed';
+  @override
+  String get collection_episode_bangumi_not_found =>
+      'Episode not found on Bangumi; opened the subject page instead';
+  @override
+  String get sync_err_browser_timeout =>
+      'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
 }
 
 // Path: <root>
@@ -79911,9 +80694,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get shortcut_action_popup_mine_entry => 'Create card (mine)';
   @override
-  String get game_hook_reason_protocol_mismatch =>
-      'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
-  @override
   String get game_upscaling_auto_hint =>
       'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
   @override
@@ -80301,9 +81081,6 @@ class _StringsRu extends _StringsEn {
   @override
   String scrape_all_title({required Object kind}) => 'Scrape all ${kind}';
   @override
-  String scrape_all_confirm({required Object n}) =>
-      'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
-  @override
   String scrape_all_running({required Object current, required Object total}) =>
       'Scraping ${current} / ${total}';
   @override
@@ -80614,6 +81391,86 @@ class _StringsRu extends _StringsEn {
   String get mihon_in_bookshelf => 'In manga shelf';
   @override
   String get media_source_local_roots => 'Local scan roots';
+  @override
+  String get game_hook_reason_protocol_mismatch =>
+      'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+  @override
+  String scrape_all_confirm({required Object n}) =>
+      'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
+  @override
+  String get collection_related_title => 'Related works';
+  @override
+  String get collection_relation_prequel => 'Prequel';
+  @override
+  String get collection_relation_sequel => 'Sequel';
+  @override
+  String get collection_relation_side_story => 'Side story';
+  @override
+  String get collection_relation_movie => 'Movie';
+  @override
+  String get collection_relation_spin_off => 'Spin-off';
+  @override
+  String get collection_relation_other => 'Related';
+  @override
+  String get collection_relation_download => 'Download';
+  @override
+  String get collection_relation_bind => 'Bind to existing collection';
+  @override
+  String get collection_episode_scrape => 'Fetch episode details';
+  @override
+  String get collection_episode_scrape_unbound => 'Scrape the collection first';
+  @override
+  String get collection_episode_rename => 'Rename episodes from scrape';
+  @override
+  String get collection_episode_rename_title => 'Rename episodes';
+  @override
+  String get collection_episode_rename_empty => 'Nothing to rename';
+  @override
+  String get collection_episode_download => 'Download this episode';
+  @override
+  String get collection_episode_fill_missing => 'Fill missing episodes';
+  @override
+  String get collection_episode_no_missing => 'No missing episodes';
+  @override
+  String get collection_split_by_season => 'Split by season';
+  @override
+  String get collection_split_keep_original => 'Keep the original collection';
+  @override
+  String get collection_split_confirm => 'Split';
+  @override
+  String get collection_episode_open_bangumi => 'Open this episode on Bangumi';
+  @override
+  String collection_relation_bound({required Object name}) =>
+      'Bound to ${name}';
+  @override
+  String collection_episode_scrape_result(
+          {required Object updated, required Object skipped}) =>
+      'Updated ${updated} episodes, skipped ${skipped}';
+  @override
+  String collection_episode_scrape_failed({required Object error}) =>
+      'Episode scrape failed: ${error}';
+  @override
+  String collection_episode_rename_apply({required Object n}) =>
+      'Rename ${n} episodes';
+  @override
+  String collection_split_done({required Object n}) =>
+      'Split into ${n} collections';
+  @override
+  String collection_episode_watched_at({required Object position}) =>
+      'Watched to ${position}';
+  @override
+  String collection_episode_bangumi_open_failed({required Object error}) =>
+      'Could not resolve the episode on Bangumi: ${error}';
+  @override
+  String collection_episode_rename_partial(
+          {required Object n, required Object m}) =>
+      'Renamed ${n} episodes, ${m} failed';
+  @override
+  String get collection_episode_bangumi_not_found =>
+      'Episode not found on Bangumi; opened the subject page instead';
+  @override
+  String get sync_err_browser_timeout =>
+      'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
 }
 
 // Path: <root>
@@ -86840,9 +87697,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get shortcut_action_popup_mine_entry => 'Create card (mine)';
   @override
-  String get game_hook_reason_protocol_mismatch =>
-      'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
-  @override
   String get game_upscaling_auto_hint =>
       'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
   @override
@@ -87230,9 +88084,6 @@ class _StringsTh extends _StringsEn {
   @override
   String scrape_all_title({required Object kind}) => 'Scrape all ${kind}';
   @override
-  String scrape_all_confirm({required Object n}) =>
-      'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
-  @override
   String scrape_all_running({required Object current, required Object total}) =>
       'Scraping ${current} / ${total}';
   @override
@@ -87543,6 +88394,86 @@ class _StringsTh extends _StringsEn {
   String get mihon_in_bookshelf => 'In manga shelf';
   @override
   String get media_source_local_roots => 'Local scan roots';
+  @override
+  String get game_hook_reason_protocol_mismatch =>
+      'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+  @override
+  String scrape_all_confirm({required Object n}) =>
+      'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
+  @override
+  String get collection_related_title => 'Related works';
+  @override
+  String get collection_relation_prequel => 'Prequel';
+  @override
+  String get collection_relation_sequel => 'Sequel';
+  @override
+  String get collection_relation_side_story => 'Side story';
+  @override
+  String get collection_relation_movie => 'Movie';
+  @override
+  String get collection_relation_spin_off => 'Spin-off';
+  @override
+  String get collection_relation_other => 'Related';
+  @override
+  String get collection_relation_download => 'Download';
+  @override
+  String get collection_relation_bind => 'Bind to existing collection';
+  @override
+  String get collection_episode_scrape => 'Fetch episode details';
+  @override
+  String get collection_episode_scrape_unbound => 'Scrape the collection first';
+  @override
+  String get collection_episode_rename => 'Rename episodes from scrape';
+  @override
+  String get collection_episode_rename_title => 'Rename episodes';
+  @override
+  String get collection_episode_rename_empty => 'Nothing to rename';
+  @override
+  String get collection_episode_download => 'Download this episode';
+  @override
+  String get collection_episode_fill_missing => 'Fill missing episodes';
+  @override
+  String get collection_episode_no_missing => 'No missing episodes';
+  @override
+  String get collection_split_by_season => 'Split by season';
+  @override
+  String get collection_split_keep_original => 'Keep the original collection';
+  @override
+  String get collection_split_confirm => 'Split';
+  @override
+  String get collection_episode_open_bangumi => 'Open this episode on Bangumi';
+  @override
+  String collection_relation_bound({required Object name}) =>
+      'Bound to ${name}';
+  @override
+  String collection_episode_scrape_result(
+          {required Object updated, required Object skipped}) =>
+      'Updated ${updated} episodes, skipped ${skipped}';
+  @override
+  String collection_episode_scrape_failed({required Object error}) =>
+      'Episode scrape failed: ${error}';
+  @override
+  String collection_episode_rename_apply({required Object n}) =>
+      'Rename ${n} episodes';
+  @override
+  String collection_split_done({required Object n}) =>
+      'Split into ${n} collections';
+  @override
+  String collection_episode_watched_at({required Object position}) =>
+      'Watched to ${position}';
+  @override
+  String collection_episode_bangumi_open_failed({required Object error}) =>
+      'Could not resolve the episode on Bangumi: ${error}';
+  @override
+  String collection_episode_rename_partial(
+          {required Object n, required Object m}) =>
+      'Renamed ${n} episodes, ${m} failed';
+  @override
+  String get collection_episode_bangumi_not_found =>
+      'Episode not found on Bangumi; opened the subject page instead';
+  @override
+  String get sync_err_browser_timeout =>
+      'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
 }
 
 // Path: <root>
@@ -93801,9 +94732,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get shortcut_action_popup_mine_entry => 'Create card (mine)';
   @override
-  String get game_hook_reason_protocol_mismatch =>
-      'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
-  @override
   String get game_upscaling_auto_hint =>
       'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
   @override
@@ -94191,9 +95119,6 @@ class _StringsTr extends _StringsEn {
   @override
   String scrape_all_title({required Object kind}) => 'Scrape all ${kind}';
   @override
-  String scrape_all_confirm({required Object n}) =>
-      'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
-  @override
   String scrape_all_running({required Object current, required Object total}) =>
       'Scraping ${current} / ${total}';
   @override
@@ -94504,6 +95429,86 @@ class _StringsTr extends _StringsEn {
   String get mihon_in_bookshelf => 'In manga shelf';
   @override
   String get media_source_local_roots => 'Local scan roots';
+  @override
+  String get game_hook_reason_protocol_mismatch =>
+      'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+  @override
+  String scrape_all_confirm({required Object n}) =>
+      'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
+  @override
+  String get collection_related_title => 'Related works';
+  @override
+  String get collection_relation_prequel => 'Prequel';
+  @override
+  String get collection_relation_sequel => 'Sequel';
+  @override
+  String get collection_relation_side_story => 'Side story';
+  @override
+  String get collection_relation_movie => 'Movie';
+  @override
+  String get collection_relation_spin_off => 'Spin-off';
+  @override
+  String get collection_relation_other => 'Related';
+  @override
+  String get collection_relation_download => 'Download';
+  @override
+  String get collection_relation_bind => 'Bind to existing collection';
+  @override
+  String get collection_episode_scrape => 'Fetch episode details';
+  @override
+  String get collection_episode_scrape_unbound => 'Scrape the collection first';
+  @override
+  String get collection_episode_rename => 'Rename episodes from scrape';
+  @override
+  String get collection_episode_rename_title => 'Rename episodes';
+  @override
+  String get collection_episode_rename_empty => 'Nothing to rename';
+  @override
+  String get collection_episode_download => 'Download this episode';
+  @override
+  String get collection_episode_fill_missing => 'Fill missing episodes';
+  @override
+  String get collection_episode_no_missing => 'No missing episodes';
+  @override
+  String get collection_split_by_season => 'Split by season';
+  @override
+  String get collection_split_keep_original => 'Keep the original collection';
+  @override
+  String get collection_split_confirm => 'Split';
+  @override
+  String get collection_episode_open_bangumi => 'Open this episode on Bangumi';
+  @override
+  String collection_relation_bound({required Object name}) =>
+      'Bound to ${name}';
+  @override
+  String collection_episode_scrape_result(
+          {required Object updated, required Object skipped}) =>
+      'Updated ${updated} episodes, skipped ${skipped}';
+  @override
+  String collection_episode_scrape_failed({required Object error}) =>
+      'Episode scrape failed: ${error}';
+  @override
+  String collection_episode_rename_apply({required Object n}) =>
+      'Rename ${n} episodes';
+  @override
+  String collection_split_done({required Object n}) =>
+      'Split into ${n} collections';
+  @override
+  String collection_episode_watched_at({required Object position}) =>
+      'Watched to ${position}';
+  @override
+  String collection_episode_bangumi_open_failed({required Object error}) =>
+      'Could not resolve the episode on Bangumi: ${error}';
+  @override
+  String collection_episode_rename_partial(
+          {required Object n, required Object m}) =>
+      'Renamed ${n} episodes, ${m} failed';
+  @override
+  String get collection_episode_bangumi_not_found =>
+      'Episode not found on Bangumi; opened the subject page instead';
+  @override
+  String get sync_err_browser_timeout =>
+      'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
 }
 
 // Path: <root>
@@ -100747,9 +101752,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get shortcut_action_popup_mine_entry => 'Create card (mine)';
   @override
-  String get game_hook_reason_protocol_mismatch =>
-      'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
-  @override
   String get game_upscaling_auto_hint =>
       'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
   @override
@@ -101137,9 +102139,6 @@ class _StringsVi extends _StringsEn {
   @override
   String scrape_all_title({required Object kind}) => 'Scrape all ${kind}';
   @override
-  String scrape_all_confirm({required Object n}) =>
-      'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
-  @override
   String scrape_all_running({required Object current, required Object total}) =>
       'Scraping ${current} / ${total}';
   @override
@@ -101450,6 +102449,86 @@ class _StringsVi extends _StringsEn {
   String get mihon_in_bookshelf => 'In manga shelf';
   @override
   String get media_source_local_roots => 'Local scan roots';
+  @override
+  String get game_hook_reason_protocol_mismatch =>
+      'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+  @override
+  String scrape_all_confirm({required Object n}) =>
+      'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
+  @override
+  String get collection_related_title => 'Related works';
+  @override
+  String get collection_relation_prequel => 'Prequel';
+  @override
+  String get collection_relation_sequel => 'Sequel';
+  @override
+  String get collection_relation_side_story => 'Side story';
+  @override
+  String get collection_relation_movie => 'Movie';
+  @override
+  String get collection_relation_spin_off => 'Spin-off';
+  @override
+  String get collection_relation_other => 'Related';
+  @override
+  String get collection_relation_download => 'Download';
+  @override
+  String get collection_relation_bind => 'Bind to existing collection';
+  @override
+  String get collection_episode_scrape => 'Fetch episode details';
+  @override
+  String get collection_episode_scrape_unbound => 'Scrape the collection first';
+  @override
+  String get collection_episode_rename => 'Rename episodes from scrape';
+  @override
+  String get collection_episode_rename_title => 'Rename episodes';
+  @override
+  String get collection_episode_rename_empty => 'Nothing to rename';
+  @override
+  String get collection_episode_download => 'Download this episode';
+  @override
+  String get collection_episode_fill_missing => 'Fill missing episodes';
+  @override
+  String get collection_episode_no_missing => 'No missing episodes';
+  @override
+  String get collection_split_by_season => 'Split by season';
+  @override
+  String get collection_split_keep_original => 'Keep the original collection';
+  @override
+  String get collection_split_confirm => 'Split';
+  @override
+  String get collection_episode_open_bangumi => 'Open this episode on Bangumi';
+  @override
+  String collection_relation_bound({required Object name}) =>
+      'Bound to ${name}';
+  @override
+  String collection_episode_scrape_result(
+          {required Object updated, required Object skipped}) =>
+      'Updated ${updated} episodes, skipped ${skipped}';
+  @override
+  String collection_episode_scrape_failed({required Object error}) =>
+      'Episode scrape failed: ${error}';
+  @override
+  String collection_episode_rename_apply({required Object n}) =>
+      'Rename ${n} episodes';
+  @override
+  String collection_split_done({required Object n}) =>
+      'Split into ${n} collections';
+  @override
+  String collection_episode_watched_at({required Object position}) =>
+      'Watched to ${position}';
+  @override
+  String collection_episode_bangumi_open_failed({required Object error}) =>
+      'Could not resolve the episode on Bangumi: ${error}';
+  @override
+  String collection_episode_rename_partial(
+          {required Object n, required Object m}) =>
+      'Renamed ${n} episodes, ${m} failed';
+  @override
+  String get collection_episode_bangumi_not_found =>
+      'Episode not found on Bangumi; opened the subject page instead';
+  @override
+  String get sync_err_browser_timeout =>
+      'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
 }
 
 // Path: <root>
@@ -104715,7 +105794,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get section_interface => '界面';
   @override
-  String get section_layout => '布局与显示';
+  String get section_layout => '布局显示';
   @override
   String get section_navigation => '导航';
   @override
@@ -105413,7 +106492,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get sync_err_scope_upgrade => '同步权限已更新，请重新登录 Google 账号以继续同步。';
   @override
-  String get sync_err_timeout => '连接超时——服务器未在限定时间内响应。';
+  String get sync_err_timeout => '连接超时——服务器未在限定时间内响应。请检查网络或代理设置。';
   @override
   String sync_error({required Object message}) => '同步错误：${message}';
   @override
@@ -105812,14 +106891,15 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get update_connecting => '正在连接更新源…';
   @override
-  String get update_custom_proxy_auto_hint => '留空时自动读取环境变量，再读取已启用的系统代理。';
+  String get update_custom_proxy_auto_hint =>
+      '用于更新检查、云同步和下载。留空时自动读取环境变量，再读取已启用的系统代理。';
   @override
   String get update_custom_proxy_hint =>
       'host:port，例如 127.0.0.1:7890（仅 IPv4/域名）';
   @override
   String get update_custom_proxy_invalid => '代理格式无效，请用 host:port';
   @override
-  String get update_custom_proxy_label => '自定义更新代理';
+  String get update_custom_proxy_label => '自定义网络代理';
   @override
   String get update_debug_channel => '调试更新通道';
   @override
@@ -107251,9 +108331,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get shortcut_action_popup_mine_entry => '制卡（加号）';
   @override
-  String get game_hook_reason_protocol_mismatch =>
-      '捕获组件版本与 Hibiki 不一致，请更新或重新安装 galgame 捕获组件。';
-  @override
   String get game_upscaling_auto_hint =>
       '优先使用机器上正在运行的 Magpie；否则启用 Hibiki 内置版本，不需要下载。';
   @override
@@ -107610,9 +108687,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String scrape_all_title({required Object kind}) => '刮削全部${kind}';
   @override
-  String scrape_all_confirm({required Object n}) =>
-      '将按标题匹配库中的 ${n} 个条目。只自动应用唯一的精确匹配；已有手动封面会保留，歧义结果留待手动确认。';
-  @override
   String scrape_all_running({required Object current, required Object total}) =>
       '正在刮削 ${current} / ${total}';
   @override
@@ -107913,6 +108987,82 @@ class _StringsZhCn extends _StringsEn {
   String get mihon_in_bookshelf => '已加入漫画书架';
   @override
   String get media_source_local_roots => '本地扫描根';
+  @override
+  String get game_hook_reason_protocol_mismatch =>
+      '捕获组件与本体版本不一致。捕获组件已内置在 Hibiki 里、随本体一起更新，请更新 Hibiki 到最新版；若已是最新版，请把这条提示反馈给我们。';
+  @override
+  String scrape_all_confirm({required Object n}) =>
+      '将按标题匹配库中的 ${n} 个条目。只自动应用唯一的精确匹配；你自己定的封面一律不覆盖（手动设置的本地图、在匹配弹窗里亲手选定的条目、目录里自带的 poster 图），歧义结果留待手动确认。';
+  @override
+  String get collection_related_title => '相关作品';
+  @override
+  String get collection_relation_prequel => '前传';
+  @override
+  String get collection_relation_sequel => '续作';
+  @override
+  String get collection_relation_side_story => '番外';
+  @override
+  String get collection_relation_movie => '剧场版';
+  @override
+  String get collection_relation_spin_off => '衍生';
+  @override
+  String get collection_relation_other => '相关';
+  @override
+  String get collection_relation_download => '去下载';
+  @override
+  String get collection_relation_bind => '绑定到已有合集';
+  @override
+  String get collection_episode_scrape => '刮削分集资料';
+  @override
+  String get collection_episode_scrape_unbound => '请先刮削合集资料';
+  @override
+  String get collection_episode_rename => '按刮削重命名各集';
+  @override
+  String get collection_episode_rename_title => '批量重命名各集';
+  @override
+  String get collection_episode_rename_empty => '没有可改的集名';
+  @override
+  String get collection_episode_download => '下载本集';
+  @override
+  String get collection_episode_fill_missing => '补齐缺集';
+  @override
+  String get collection_episode_no_missing => '没有缺集';
+  @override
+  String get collection_split_by_season => '按季拆分合集';
+  @override
+  String get collection_split_keep_original => '保留原合集';
+  @override
+  String get collection_split_confirm => '拆分';
+  @override
+  String get collection_episode_open_bangumi => '在 Bangumi 打开本集';
+  @override
+  String collection_relation_bound({required Object name}) => '已绑定到 ${name}';
+  @override
+  String collection_episode_scrape_result(
+          {required Object updated, required Object skipped}) =>
+      '已更新 ${updated} 集 · 跳过 ${skipped} 集';
+  @override
+  String collection_episode_scrape_failed({required Object error}) =>
+      '分集刮削失败：${error}';
+  @override
+  String collection_episode_rename_apply({required Object n}) => '重命名 ${n} 集';
+  @override
+  String collection_split_done({required Object n}) => '已拆分为 ${n} 个合集';
+  @override
+  String collection_episode_watched_at({required Object position}) =>
+      '看到 ${position}';
+  @override
+  String collection_episode_bangumi_open_failed({required Object error}) =>
+      '解析 Bangumi 章节失败：${error}';
+  @override
+  String collection_episode_rename_partial(
+          {required Object n, required Object m}) =>
+      '已重命名 ${n} 集 · ${m} 集失败';
+  @override
+  String get collection_episode_bangumi_not_found => '未找到对应集，已打开条目页';
+  @override
+  String get sync_err_browser_timeout =>
+      '浏览器授权没有返回到应用。请重试，并确认代理放行了本机回环地址 127.0.0.1。';
 }
 
 // Path: <root>
@@ -111318,7 +112468,7 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get section_interface => '介面';
   @override
-  String get section_layout => '版面與顯示';
+  String get section_layout => '版面顯示';
   @override
   String get section_navigation => '導覽';
   @override
@@ -113952,9 +115102,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get shortcut_action_popup_mine_entry => 'Create card (mine)';
   @override
-  String get game_hook_reason_protocol_mismatch =>
-      'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
-  @override
   String get game_upscaling_auto_hint =>
       'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
   @override
@@ -114342,9 +115489,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String scrape_all_title({required Object kind}) => 'Scrape all ${kind}';
   @override
-  String scrape_all_confirm({required Object n}) =>
-      'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
-  @override
   String scrape_all_running({required Object current, required Object total}) =>
       'Scraping ${current} / ${total}';
   @override
@@ -114655,6 +115799,86 @@ class _StringsZhHk extends _StringsEn {
   String get mihon_in_bookshelf => 'In manga shelf';
   @override
   String get media_source_local_roots => 'Local scan roots';
+  @override
+  String get game_hook_reason_protocol_mismatch =>
+      'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+  @override
+  String scrape_all_confirm({required Object n}) =>
+      'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
+  @override
+  String get collection_related_title => 'Related works';
+  @override
+  String get collection_relation_prequel => 'Prequel';
+  @override
+  String get collection_relation_sequel => 'Sequel';
+  @override
+  String get collection_relation_side_story => 'Side story';
+  @override
+  String get collection_relation_movie => 'Movie';
+  @override
+  String get collection_relation_spin_off => 'Spin-off';
+  @override
+  String get collection_relation_other => 'Related';
+  @override
+  String get collection_relation_download => 'Download';
+  @override
+  String get collection_relation_bind => 'Bind to existing collection';
+  @override
+  String get collection_episode_scrape => 'Fetch episode details';
+  @override
+  String get collection_episode_scrape_unbound => 'Scrape the collection first';
+  @override
+  String get collection_episode_rename => 'Rename episodes from scrape';
+  @override
+  String get collection_episode_rename_title => 'Rename episodes';
+  @override
+  String get collection_episode_rename_empty => 'Nothing to rename';
+  @override
+  String get collection_episode_download => 'Download this episode';
+  @override
+  String get collection_episode_fill_missing => 'Fill missing episodes';
+  @override
+  String get collection_episode_no_missing => 'No missing episodes';
+  @override
+  String get collection_split_by_season => 'Split by season';
+  @override
+  String get collection_split_keep_original => 'Keep the original collection';
+  @override
+  String get collection_split_confirm => 'Split';
+  @override
+  String get collection_episode_open_bangumi => 'Open this episode on Bangumi';
+  @override
+  String collection_relation_bound({required Object name}) =>
+      'Bound to ${name}';
+  @override
+  String collection_episode_scrape_result(
+          {required Object updated, required Object skipped}) =>
+      'Updated ${updated} episodes, skipped ${skipped}';
+  @override
+  String collection_episode_scrape_failed({required Object error}) =>
+      'Episode scrape failed: ${error}';
+  @override
+  String collection_episode_rename_apply({required Object n}) =>
+      'Rename ${n} episodes';
+  @override
+  String collection_split_done({required Object n}) =>
+      'Split into ${n} collections';
+  @override
+  String collection_episode_watched_at({required Object position}) =>
+      'Watched to ${position}';
+  @override
+  String collection_episode_bangumi_open_failed({required Object error}) =>
+      'Could not resolve the episode on Bangumi: ${error}';
+  @override
+  String collection_episode_rename_partial(
+          {required Object n, required Object m}) =>
+      'Renamed ${n} episodes, ${m} failed';
+  @override
+  String get collection_episode_bangumi_not_found =>
+      'Episode not found on Bangumi; opened the subject page instead';
+  @override
+  String get sync_err_browser_timeout =>
+      'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
 }
 
 /// Flat map(s) containing all translations.
@@ -118475,7 +119699,7 @@ extension on _StringsEn {
       case 'sync_err_scope_upgrade':
         return 'Sync permissions changed — please sign in to Google again to continue syncing.';
       case 'sync_err_timeout':
-        return 'Connection timed out — the server did not respond in time.';
+        return 'Connection timed out — the server did not respond in time. Check your network or proxy settings.';
       case 'sync_error':
         return ({required Object message}) => 'Sync error: ${message}';
       case 'sync_exit_warning':
@@ -118869,13 +120093,13 @@ extension on _StringsEn {
       case 'update_connecting':
         return 'Connecting…';
       case 'update_custom_proxy_auto_hint':
-        return 'Leave blank to use environment variables, then the enabled system proxy.';
+        return 'Used for update checks, cloud sync and downloads. Leave blank to use environment variables, then the enabled system proxy.';
       case 'update_custom_proxy_hint':
         return 'host:port, e.g. 127.0.0.1:7890 (IPv4/host only)';
       case 'update_custom_proxy_invalid':
         return 'Invalid proxy. Use host:port';
       case 'update_custom_proxy_label':
-        return 'Custom update proxy';
+        return 'Custom network proxy';
       case 'update_debug_channel':
         return 'Debug update channel';
       case 'update_debug_channel_warning':
@@ -120236,8 +121460,6 @@ extension on _StringsEn {
         return 'Last error';
       case 'shortcut_action_popup_mine_entry':
         return 'Create card (mine)';
-      case 'game_hook_reason_protocol_mismatch':
-        return 'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
       case 'game_upscaling_auto_hint':
         return 'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
       case 'game_upscaling_installed_only_hint':
@@ -120564,9 +121786,6 @@ extension on _StringsEn {
         return 'Scrape all';
       case 'scrape_all_title':
         return ({required Object kind}) => 'Scrape all ${kind}';
-      case 'scrape_all_confirm':
-        return ({required Object n}) =>
-            'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
       case 'scrape_all_running':
         return ({required Object current, required Object total}) =>
             'Scraping ${current} / ${total}';
@@ -120857,6 +122076,76 @@ extension on _StringsEn {
         return 'In manga shelf';
       case 'media_source_local_roots':
         return 'Local scan roots';
+      case 'game_hook_reason_protocol_mismatch':
+        return 'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+      case 'scrape_all_confirm':
+        return ({required Object n}) =>
+            'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
+      case 'collection_related_title':
+        return 'Related works';
+      case 'collection_relation_prequel':
+        return 'Prequel';
+      case 'collection_relation_sequel':
+        return 'Sequel';
+      case 'collection_relation_side_story':
+        return 'Side story';
+      case 'collection_relation_movie':
+        return 'Movie';
+      case 'collection_relation_spin_off':
+        return 'Spin-off';
+      case 'collection_relation_other':
+        return 'Related';
+      case 'collection_relation_download':
+        return 'Download';
+      case 'collection_relation_bind':
+        return 'Bind to existing collection';
+      case 'collection_episode_scrape':
+        return 'Fetch episode details';
+      case 'collection_episode_scrape_unbound':
+        return 'Scrape the collection first';
+      case 'collection_episode_rename':
+        return 'Rename episodes from scrape';
+      case 'collection_episode_rename_title':
+        return 'Rename episodes';
+      case 'collection_episode_rename_empty':
+        return 'Nothing to rename';
+      case 'collection_episode_download':
+        return 'Download this episode';
+      case 'collection_episode_fill_missing':
+        return 'Fill missing episodes';
+      case 'collection_episode_no_missing':
+        return 'No missing episodes';
+      case 'collection_split_by_season':
+        return 'Split by season';
+      case 'collection_split_keep_original':
+        return 'Keep the original collection';
+      case 'collection_split_confirm':
+        return 'Split';
+      case 'collection_episode_open_bangumi':
+        return 'Open this episode on Bangumi';
+      case 'collection_relation_bound':
+        return ({required Object name}) => 'Bound to ${name}';
+      case 'collection_episode_scrape_result':
+        return ({required Object updated, required Object skipped}) =>
+            'Updated ${updated} episodes, skipped ${skipped}';
+      case 'collection_episode_scrape_failed':
+        return ({required Object error}) => 'Episode scrape failed: ${error}';
+      case 'collection_episode_rename_apply':
+        return ({required Object n}) => 'Rename ${n} episodes';
+      case 'collection_split_done':
+        return ({required Object n}) => 'Split into ${n} collections';
+      case 'collection_episode_watched_at':
+        return ({required Object position}) => 'Watched to ${position}';
+      case 'collection_episode_bangumi_open_failed':
+        return ({required Object error}) =>
+            'Could not resolve the episode on Bangumi: ${error}';
+      case 'collection_episode_rename_partial':
+        return ({required Object n, required Object m}) =>
+            'Renamed ${n} episodes, ${m} failed';
+      case 'collection_episode_bangumi_not_found':
+        return 'Episode not found on Bangumi; opened the subject page instead';
+      case 'sync_err_browser_timeout':
+        return 'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
       default:
         return null;
     }
@@ -126436,8 +127725,6 @@ extension on _StringsAr {
         return 'Last error';
       case 'shortcut_action_popup_mine_entry':
         return 'Create card (mine)';
-      case 'game_hook_reason_protocol_mismatch':
-        return 'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
       case 'game_upscaling_auto_hint':
         return 'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
       case 'game_upscaling_installed_only_hint':
@@ -126764,9 +128051,6 @@ extension on _StringsAr {
         return 'Scrape all';
       case 'scrape_all_title':
         return ({required Object kind}) => 'Scrape all ${kind}';
-      case 'scrape_all_confirm':
-        return ({required Object n}) =>
-            'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
       case 'scrape_all_running':
         return ({required Object current, required Object total}) =>
             'Scraping ${current} / ${total}';
@@ -127057,6 +128341,76 @@ extension on _StringsAr {
         return 'In manga shelf';
       case 'media_source_local_roots':
         return 'Local scan roots';
+      case 'game_hook_reason_protocol_mismatch':
+        return 'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+      case 'scrape_all_confirm':
+        return ({required Object n}) =>
+            'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
+      case 'collection_related_title':
+        return 'Related works';
+      case 'collection_relation_prequel':
+        return 'Prequel';
+      case 'collection_relation_sequel':
+        return 'Sequel';
+      case 'collection_relation_side_story':
+        return 'Side story';
+      case 'collection_relation_movie':
+        return 'Movie';
+      case 'collection_relation_spin_off':
+        return 'Spin-off';
+      case 'collection_relation_other':
+        return 'Related';
+      case 'collection_relation_download':
+        return 'Download';
+      case 'collection_relation_bind':
+        return 'Bind to existing collection';
+      case 'collection_episode_scrape':
+        return 'Fetch episode details';
+      case 'collection_episode_scrape_unbound':
+        return 'Scrape the collection first';
+      case 'collection_episode_rename':
+        return 'Rename episodes from scrape';
+      case 'collection_episode_rename_title':
+        return 'Rename episodes';
+      case 'collection_episode_rename_empty':
+        return 'Nothing to rename';
+      case 'collection_episode_download':
+        return 'Download this episode';
+      case 'collection_episode_fill_missing':
+        return 'Fill missing episodes';
+      case 'collection_episode_no_missing':
+        return 'No missing episodes';
+      case 'collection_split_by_season':
+        return 'Split by season';
+      case 'collection_split_keep_original':
+        return 'Keep the original collection';
+      case 'collection_split_confirm':
+        return 'Split';
+      case 'collection_episode_open_bangumi':
+        return 'Open this episode on Bangumi';
+      case 'collection_relation_bound':
+        return ({required Object name}) => 'Bound to ${name}';
+      case 'collection_episode_scrape_result':
+        return ({required Object updated, required Object skipped}) =>
+            'Updated ${updated} episodes, skipped ${skipped}';
+      case 'collection_episode_scrape_failed':
+        return ({required Object error}) => 'Episode scrape failed: ${error}';
+      case 'collection_episode_rename_apply':
+        return ({required Object n}) => 'Rename ${n} episodes';
+      case 'collection_split_done':
+        return ({required Object n}) => 'Split into ${n} collections';
+      case 'collection_episode_watched_at':
+        return ({required Object position}) => 'Watched to ${position}';
+      case 'collection_episode_bangumi_open_failed':
+        return ({required Object error}) =>
+            'Could not resolve the episode on Bangumi: ${error}';
+      case 'collection_episode_rename_partial':
+        return ({required Object n, required Object m}) =>
+            'Renamed ${n} episodes, ${m} failed';
+      case 'collection_episode_bangumi_not_found':
+        return 'Episode not found on Bangumi; opened the subject page instead';
+      case 'sync_err_browser_timeout':
+        return 'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
       default:
         return null;
     }
@@ -132658,8 +134012,6 @@ extension on _StringsDe {
         return 'Last error';
       case 'shortcut_action_popup_mine_entry':
         return 'Create card (mine)';
-      case 'game_hook_reason_protocol_mismatch':
-        return 'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
       case 'game_upscaling_auto_hint':
         return 'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
       case 'game_upscaling_installed_only_hint':
@@ -132986,9 +134338,6 @@ extension on _StringsDe {
         return 'Scrape all';
       case 'scrape_all_title':
         return ({required Object kind}) => 'Scrape all ${kind}';
-      case 'scrape_all_confirm':
-        return ({required Object n}) =>
-            'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
       case 'scrape_all_running':
         return ({required Object current, required Object total}) =>
             'Scraping ${current} / ${total}';
@@ -133279,6 +134628,76 @@ extension on _StringsDe {
         return 'In manga shelf';
       case 'media_source_local_roots':
         return 'Local scan roots';
+      case 'game_hook_reason_protocol_mismatch':
+        return 'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+      case 'scrape_all_confirm':
+        return ({required Object n}) =>
+            'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
+      case 'collection_related_title':
+        return 'Related works';
+      case 'collection_relation_prequel':
+        return 'Prequel';
+      case 'collection_relation_sequel':
+        return 'Sequel';
+      case 'collection_relation_side_story':
+        return 'Side story';
+      case 'collection_relation_movie':
+        return 'Movie';
+      case 'collection_relation_spin_off':
+        return 'Spin-off';
+      case 'collection_relation_other':
+        return 'Related';
+      case 'collection_relation_download':
+        return 'Download';
+      case 'collection_relation_bind':
+        return 'Bind to existing collection';
+      case 'collection_episode_scrape':
+        return 'Fetch episode details';
+      case 'collection_episode_scrape_unbound':
+        return 'Scrape the collection first';
+      case 'collection_episode_rename':
+        return 'Rename episodes from scrape';
+      case 'collection_episode_rename_title':
+        return 'Rename episodes';
+      case 'collection_episode_rename_empty':
+        return 'Nothing to rename';
+      case 'collection_episode_download':
+        return 'Download this episode';
+      case 'collection_episode_fill_missing':
+        return 'Fill missing episodes';
+      case 'collection_episode_no_missing':
+        return 'No missing episodes';
+      case 'collection_split_by_season':
+        return 'Split by season';
+      case 'collection_split_keep_original':
+        return 'Keep the original collection';
+      case 'collection_split_confirm':
+        return 'Split';
+      case 'collection_episode_open_bangumi':
+        return 'Open this episode on Bangumi';
+      case 'collection_relation_bound':
+        return ({required Object name}) => 'Bound to ${name}';
+      case 'collection_episode_scrape_result':
+        return ({required Object updated, required Object skipped}) =>
+            'Updated ${updated} episodes, skipped ${skipped}';
+      case 'collection_episode_scrape_failed':
+        return ({required Object error}) => 'Episode scrape failed: ${error}';
+      case 'collection_episode_rename_apply':
+        return ({required Object n}) => 'Rename ${n} episodes';
+      case 'collection_split_done':
+        return ({required Object n}) => 'Split into ${n} collections';
+      case 'collection_episode_watched_at':
+        return ({required Object position}) => 'Watched to ${position}';
+      case 'collection_episode_bangumi_open_failed':
+        return ({required Object error}) =>
+            'Could not resolve the episode on Bangumi: ${error}';
+      case 'collection_episode_rename_partial':
+        return ({required Object n, required Object m}) =>
+            'Renamed ${n} episodes, ${m} failed';
+      case 'collection_episode_bangumi_not_found':
+        return 'Episode not found on Bangumi; opened the subject page instead';
+      case 'sync_err_browser_timeout':
+        return 'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
       default:
         return null;
     }
@@ -138879,8 +140298,6 @@ extension on _StringsEs {
         return 'Last error';
       case 'shortcut_action_popup_mine_entry':
         return 'Create card (mine)';
-      case 'game_hook_reason_protocol_mismatch':
-        return 'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
       case 'game_upscaling_auto_hint':
         return 'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
       case 'game_upscaling_installed_only_hint':
@@ -139207,9 +140624,6 @@ extension on _StringsEs {
         return 'Scrape all';
       case 'scrape_all_title':
         return ({required Object kind}) => 'Scrape all ${kind}';
-      case 'scrape_all_confirm':
-        return ({required Object n}) =>
-            'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
       case 'scrape_all_running':
         return ({required Object current, required Object total}) =>
             'Scraping ${current} / ${total}';
@@ -139500,6 +140914,76 @@ extension on _StringsEs {
         return 'In manga shelf';
       case 'media_source_local_roots':
         return 'Local scan roots';
+      case 'game_hook_reason_protocol_mismatch':
+        return 'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+      case 'scrape_all_confirm':
+        return ({required Object n}) =>
+            'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
+      case 'collection_related_title':
+        return 'Related works';
+      case 'collection_relation_prequel':
+        return 'Prequel';
+      case 'collection_relation_sequel':
+        return 'Sequel';
+      case 'collection_relation_side_story':
+        return 'Side story';
+      case 'collection_relation_movie':
+        return 'Movie';
+      case 'collection_relation_spin_off':
+        return 'Spin-off';
+      case 'collection_relation_other':
+        return 'Related';
+      case 'collection_relation_download':
+        return 'Download';
+      case 'collection_relation_bind':
+        return 'Bind to existing collection';
+      case 'collection_episode_scrape':
+        return 'Fetch episode details';
+      case 'collection_episode_scrape_unbound':
+        return 'Scrape the collection first';
+      case 'collection_episode_rename':
+        return 'Rename episodes from scrape';
+      case 'collection_episode_rename_title':
+        return 'Rename episodes';
+      case 'collection_episode_rename_empty':
+        return 'Nothing to rename';
+      case 'collection_episode_download':
+        return 'Download this episode';
+      case 'collection_episode_fill_missing':
+        return 'Fill missing episodes';
+      case 'collection_episode_no_missing':
+        return 'No missing episodes';
+      case 'collection_split_by_season':
+        return 'Split by season';
+      case 'collection_split_keep_original':
+        return 'Keep the original collection';
+      case 'collection_split_confirm':
+        return 'Split';
+      case 'collection_episode_open_bangumi':
+        return 'Open this episode on Bangumi';
+      case 'collection_relation_bound':
+        return ({required Object name}) => 'Bound to ${name}';
+      case 'collection_episode_scrape_result':
+        return ({required Object updated, required Object skipped}) =>
+            'Updated ${updated} episodes, skipped ${skipped}';
+      case 'collection_episode_scrape_failed':
+        return ({required Object error}) => 'Episode scrape failed: ${error}';
+      case 'collection_episode_rename_apply':
+        return ({required Object n}) => 'Rename ${n} episodes';
+      case 'collection_split_done':
+        return ({required Object n}) => 'Split into ${n} collections';
+      case 'collection_episode_watched_at':
+        return ({required Object position}) => 'Watched to ${position}';
+      case 'collection_episode_bangumi_open_failed':
+        return ({required Object error}) =>
+            'Could not resolve the episode on Bangumi: ${error}';
+      case 'collection_episode_rename_partial':
+        return ({required Object n, required Object m}) =>
+            'Renamed ${n} episodes, ${m} failed';
+      case 'collection_episode_bangumi_not_found':
+        return 'Episode not found on Bangumi; opened the subject page instead';
+      case 'sync_err_browser_timeout':
+        return 'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
       default:
         return null;
     }
@@ -145106,8 +146590,6 @@ extension on _StringsFr {
         return 'Last error';
       case 'shortcut_action_popup_mine_entry':
         return 'Create card (mine)';
-      case 'game_hook_reason_protocol_mismatch':
-        return 'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
       case 'game_upscaling_auto_hint':
         return 'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
       case 'game_upscaling_installed_only_hint':
@@ -145434,9 +146916,6 @@ extension on _StringsFr {
         return 'Scrape all';
       case 'scrape_all_title':
         return ({required Object kind}) => 'Scrape all ${kind}';
-      case 'scrape_all_confirm':
-        return ({required Object n}) =>
-            'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
       case 'scrape_all_running':
         return ({required Object current, required Object total}) =>
             'Scraping ${current} / ${total}';
@@ -145727,6 +147206,76 @@ extension on _StringsFr {
         return 'In manga shelf';
       case 'media_source_local_roots':
         return 'Local scan roots';
+      case 'game_hook_reason_protocol_mismatch':
+        return 'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+      case 'scrape_all_confirm':
+        return ({required Object n}) =>
+            'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
+      case 'collection_related_title':
+        return 'Related works';
+      case 'collection_relation_prequel':
+        return 'Prequel';
+      case 'collection_relation_sequel':
+        return 'Sequel';
+      case 'collection_relation_side_story':
+        return 'Side story';
+      case 'collection_relation_movie':
+        return 'Movie';
+      case 'collection_relation_spin_off':
+        return 'Spin-off';
+      case 'collection_relation_other':
+        return 'Related';
+      case 'collection_relation_download':
+        return 'Download';
+      case 'collection_relation_bind':
+        return 'Bind to existing collection';
+      case 'collection_episode_scrape':
+        return 'Fetch episode details';
+      case 'collection_episode_scrape_unbound':
+        return 'Scrape the collection first';
+      case 'collection_episode_rename':
+        return 'Rename episodes from scrape';
+      case 'collection_episode_rename_title':
+        return 'Rename episodes';
+      case 'collection_episode_rename_empty':
+        return 'Nothing to rename';
+      case 'collection_episode_download':
+        return 'Download this episode';
+      case 'collection_episode_fill_missing':
+        return 'Fill missing episodes';
+      case 'collection_episode_no_missing':
+        return 'No missing episodes';
+      case 'collection_split_by_season':
+        return 'Split by season';
+      case 'collection_split_keep_original':
+        return 'Keep the original collection';
+      case 'collection_split_confirm':
+        return 'Split';
+      case 'collection_episode_open_bangumi':
+        return 'Open this episode on Bangumi';
+      case 'collection_relation_bound':
+        return ({required Object name}) => 'Bound to ${name}';
+      case 'collection_episode_scrape_result':
+        return ({required Object updated, required Object skipped}) =>
+            'Updated ${updated} episodes, skipped ${skipped}';
+      case 'collection_episode_scrape_failed':
+        return ({required Object error}) => 'Episode scrape failed: ${error}';
+      case 'collection_episode_rename_apply':
+        return ({required Object n}) => 'Rename ${n} episodes';
+      case 'collection_split_done':
+        return ({required Object n}) => 'Split into ${n} collections';
+      case 'collection_episode_watched_at':
+        return ({required Object position}) => 'Watched to ${position}';
+      case 'collection_episode_bangumi_open_failed':
+        return ({required Object error}) =>
+            'Could not resolve the episode on Bangumi: ${error}';
+      case 'collection_episode_rename_partial':
+        return ({required Object n, required Object m}) =>
+            'Renamed ${n} episodes, ${m} failed';
+      case 'collection_episode_bangumi_not_found':
+        return 'Episode not found on Bangumi; opened the subject page instead';
+      case 'sync_err_browser_timeout':
+        return 'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
       default:
         return null;
     }
@@ -151315,8 +152864,6 @@ extension on _StringsId {
         return 'Last error';
       case 'shortcut_action_popup_mine_entry':
         return 'Create card (mine)';
-      case 'game_hook_reason_protocol_mismatch':
-        return 'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
       case 'game_upscaling_auto_hint':
         return 'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
       case 'game_upscaling_installed_only_hint':
@@ -151643,9 +153190,6 @@ extension on _StringsId {
         return 'Scrape all';
       case 'scrape_all_title':
         return ({required Object kind}) => 'Scrape all ${kind}';
-      case 'scrape_all_confirm':
-        return ({required Object n}) =>
-            'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
       case 'scrape_all_running':
         return ({required Object current, required Object total}) =>
             'Scraping ${current} / ${total}';
@@ -151936,6 +153480,76 @@ extension on _StringsId {
         return 'In manga shelf';
       case 'media_source_local_roots':
         return 'Local scan roots';
+      case 'game_hook_reason_protocol_mismatch':
+        return 'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+      case 'scrape_all_confirm':
+        return ({required Object n}) =>
+            'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
+      case 'collection_related_title':
+        return 'Related works';
+      case 'collection_relation_prequel':
+        return 'Prequel';
+      case 'collection_relation_sequel':
+        return 'Sequel';
+      case 'collection_relation_side_story':
+        return 'Side story';
+      case 'collection_relation_movie':
+        return 'Movie';
+      case 'collection_relation_spin_off':
+        return 'Spin-off';
+      case 'collection_relation_other':
+        return 'Related';
+      case 'collection_relation_download':
+        return 'Download';
+      case 'collection_relation_bind':
+        return 'Bind to existing collection';
+      case 'collection_episode_scrape':
+        return 'Fetch episode details';
+      case 'collection_episode_scrape_unbound':
+        return 'Scrape the collection first';
+      case 'collection_episode_rename':
+        return 'Rename episodes from scrape';
+      case 'collection_episode_rename_title':
+        return 'Rename episodes';
+      case 'collection_episode_rename_empty':
+        return 'Nothing to rename';
+      case 'collection_episode_download':
+        return 'Download this episode';
+      case 'collection_episode_fill_missing':
+        return 'Fill missing episodes';
+      case 'collection_episode_no_missing':
+        return 'No missing episodes';
+      case 'collection_split_by_season':
+        return 'Split by season';
+      case 'collection_split_keep_original':
+        return 'Keep the original collection';
+      case 'collection_split_confirm':
+        return 'Split';
+      case 'collection_episode_open_bangumi':
+        return 'Open this episode on Bangumi';
+      case 'collection_relation_bound':
+        return ({required Object name}) => 'Bound to ${name}';
+      case 'collection_episode_scrape_result':
+        return ({required Object updated, required Object skipped}) =>
+            'Updated ${updated} episodes, skipped ${skipped}';
+      case 'collection_episode_scrape_failed':
+        return ({required Object error}) => 'Episode scrape failed: ${error}';
+      case 'collection_episode_rename_apply':
+        return ({required Object n}) => 'Rename ${n} episodes';
+      case 'collection_split_done':
+        return ({required Object n}) => 'Split into ${n} collections';
+      case 'collection_episode_watched_at':
+        return ({required Object position}) => 'Watched to ${position}';
+      case 'collection_episode_bangumi_open_failed':
+        return ({required Object error}) =>
+            'Could not resolve the episode on Bangumi: ${error}';
+      case 'collection_episode_rename_partial':
+        return ({required Object n, required Object m}) =>
+            'Renamed ${n} episodes, ${m} failed';
+      case 'collection_episode_bangumi_not_found':
+        return 'Episode not found on Bangumi; opened the subject page instead';
+      case 'sync_err_browser_timeout':
+        return 'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
       default:
         return null;
     }
@@ -157538,8 +159152,6 @@ extension on _StringsIt {
         return 'Last error';
       case 'shortcut_action_popup_mine_entry':
         return 'Create card (mine)';
-      case 'game_hook_reason_protocol_mismatch':
-        return 'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
       case 'game_upscaling_auto_hint':
         return 'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
       case 'game_upscaling_installed_only_hint':
@@ -157866,9 +159478,6 @@ extension on _StringsIt {
         return 'Scrape all';
       case 'scrape_all_title':
         return ({required Object kind}) => 'Scrape all ${kind}';
-      case 'scrape_all_confirm':
-        return ({required Object n}) =>
-            'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
       case 'scrape_all_running':
         return ({required Object current, required Object total}) =>
             'Scraping ${current} / ${total}';
@@ -158159,6 +159768,76 @@ extension on _StringsIt {
         return 'In manga shelf';
       case 'media_source_local_roots':
         return 'Local scan roots';
+      case 'game_hook_reason_protocol_mismatch':
+        return 'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+      case 'scrape_all_confirm':
+        return ({required Object n}) =>
+            'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
+      case 'collection_related_title':
+        return 'Related works';
+      case 'collection_relation_prequel':
+        return 'Prequel';
+      case 'collection_relation_sequel':
+        return 'Sequel';
+      case 'collection_relation_side_story':
+        return 'Side story';
+      case 'collection_relation_movie':
+        return 'Movie';
+      case 'collection_relation_spin_off':
+        return 'Spin-off';
+      case 'collection_relation_other':
+        return 'Related';
+      case 'collection_relation_download':
+        return 'Download';
+      case 'collection_relation_bind':
+        return 'Bind to existing collection';
+      case 'collection_episode_scrape':
+        return 'Fetch episode details';
+      case 'collection_episode_scrape_unbound':
+        return 'Scrape the collection first';
+      case 'collection_episode_rename':
+        return 'Rename episodes from scrape';
+      case 'collection_episode_rename_title':
+        return 'Rename episodes';
+      case 'collection_episode_rename_empty':
+        return 'Nothing to rename';
+      case 'collection_episode_download':
+        return 'Download this episode';
+      case 'collection_episode_fill_missing':
+        return 'Fill missing episodes';
+      case 'collection_episode_no_missing':
+        return 'No missing episodes';
+      case 'collection_split_by_season':
+        return 'Split by season';
+      case 'collection_split_keep_original':
+        return 'Keep the original collection';
+      case 'collection_split_confirm':
+        return 'Split';
+      case 'collection_episode_open_bangumi':
+        return 'Open this episode on Bangumi';
+      case 'collection_relation_bound':
+        return ({required Object name}) => 'Bound to ${name}';
+      case 'collection_episode_scrape_result':
+        return ({required Object updated, required Object skipped}) =>
+            'Updated ${updated} episodes, skipped ${skipped}';
+      case 'collection_episode_scrape_failed':
+        return ({required Object error}) => 'Episode scrape failed: ${error}';
+      case 'collection_episode_rename_apply':
+        return ({required Object n}) => 'Rename ${n} episodes';
+      case 'collection_split_done':
+        return ({required Object n}) => 'Split into ${n} collections';
+      case 'collection_episode_watched_at':
+        return ({required Object position}) => 'Watched to ${position}';
+      case 'collection_episode_bangumi_open_failed':
+        return ({required Object error}) =>
+            'Could not resolve the episode on Bangumi: ${error}';
+      case 'collection_episode_rename_partial':
+        return ({required Object n, required Object m}) =>
+            'Renamed ${n} episodes, ${m} failed';
+      case 'collection_episode_bangumi_not_found':
+        return 'Episode not found on Bangumi; opened the subject page instead';
+      case 'sync_err_browser_timeout':
+        return 'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
       default:
         return null;
     }
@@ -163723,8 +165402,6 @@ extension on _StringsJa {
         return 'Last error';
       case 'shortcut_action_popup_mine_entry':
         return 'Create card (mine)';
-      case 'game_hook_reason_protocol_mismatch':
-        return 'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
       case 'game_upscaling_auto_hint':
         return 'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
       case 'game_upscaling_installed_only_hint':
@@ -164051,9 +165728,6 @@ extension on _StringsJa {
         return 'Scrape all';
       case 'scrape_all_title':
         return ({required Object kind}) => 'Scrape all ${kind}';
-      case 'scrape_all_confirm':
-        return ({required Object n}) =>
-            'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
       case 'scrape_all_running':
         return ({required Object current, required Object total}) =>
             'Scraping ${current} / ${total}';
@@ -164344,6 +166018,76 @@ extension on _StringsJa {
         return 'In manga shelf';
       case 'media_source_local_roots':
         return 'Local scan roots';
+      case 'game_hook_reason_protocol_mismatch':
+        return 'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+      case 'scrape_all_confirm':
+        return ({required Object n}) =>
+            'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
+      case 'collection_related_title':
+        return 'Related works';
+      case 'collection_relation_prequel':
+        return 'Prequel';
+      case 'collection_relation_sequel':
+        return 'Sequel';
+      case 'collection_relation_side_story':
+        return 'Side story';
+      case 'collection_relation_movie':
+        return 'Movie';
+      case 'collection_relation_spin_off':
+        return 'Spin-off';
+      case 'collection_relation_other':
+        return 'Related';
+      case 'collection_relation_download':
+        return 'Download';
+      case 'collection_relation_bind':
+        return 'Bind to existing collection';
+      case 'collection_episode_scrape':
+        return 'Fetch episode details';
+      case 'collection_episode_scrape_unbound':
+        return 'Scrape the collection first';
+      case 'collection_episode_rename':
+        return 'Rename episodes from scrape';
+      case 'collection_episode_rename_title':
+        return 'Rename episodes';
+      case 'collection_episode_rename_empty':
+        return 'Nothing to rename';
+      case 'collection_episode_download':
+        return 'Download this episode';
+      case 'collection_episode_fill_missing':
+        return 'Fill missing episodes';
+      case 'collection_episode_no_missing':
+        return 'No missing episodes';
+      case 'collection_split_by_season':
+        return 'Split by season';
+      case 'collection_split_keep_original':
+        return 'Keep the original collection';
+      case 'collection_split_confirm':
+        return 'Split';
+      case 'collection_episode_open_bangumi':
+        return 'Open this episode on Bangumi';
+      case 'collection_relation_bound':
+        return ({required Object name}) => 'Bound to ${name}';
+      case 'collection_episode_scrape_result':
+        return ({required Object updated, required Object skipped}) =>
+            'Updated ${updated} episodes, skipped ${skipped}';
+      case 'collection_episode_scrape_failed':
+        return ({required Object error}) => 'Episode scrape failed: ${error}';
+      case 'collection_episode_rename_apply':
+        return ({required Object n}) => 'Rename ${n} episodes';
+      case 'collection_split_done':
+        return ({required Object n}) => 'Split into ${n} collections';
+      case 'collection_episode_watched_at':
+        return ({required Object position}) => 'Watched to ${position}';
+      case 'collection_episode_bangumi_open_failed':
+        return ({required Object error}) =>
+            'Could not resolve the episode on Bangumi: ${error}';
+      case 'collection_episode_rename_partial':
+        return ({required Object n, required Object m}) =>
+            'Renamed ${n} episodes, ${m} failed';
+      case 'collection_episode_bangumi_not_found':
+        return 'Episode not found on Bangumi; opened the subject page instead';
+      case 'sync_err_browser_timeout':
+        return 'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
       default:
         return null;
     }
@@ -169912,8 +171656,6 @@ extension on _StringsKo {
         return 'Last error';
       case 'shortcut_action_popup_mine_entry':
         return 'Create card (mine)';
-      case 'game_hook_reason_protocol_mismatch':
-        return 'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
       case 'game_upscaling_auto_hint':
         return 'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
       case 'game_upscaling_installed_only_hint':
@@ -170240,9 +171982,6 @@ extension on _StringsKo {
         return 'Scrape all';
       case 'scrape_all_title':
         return ({required Object kind}) => 'Scrape all ${kind}';
-      case 'scrape_all_confirm':
-        return ({required Object n}) =>
-            'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
       case 'scrape_all_running':
         return ({required Object current, required Object total}) =>
             'Scraping ${current} / ${total}';
@@ -170533,6 +172272,76 @@ extension on _StringsKo {
         return 'In manga shelf';
       case 'media_source_local_roots':
         return 'Local scan roots';
+      case 'game_hook_reason_protocol_mismatch':
+        return 'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+      case 'scrape_all_confirm':
+        return ({required Object n}) =>
+            'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
+      case 'collection_related_title':
+        return 'Related works';
+      case 'collection_relation_prequel':
+        return 'Prequel';
+      case 'collection_relation_sequel':
+        return 'Sequel';
+      case 'collection_relation_side_story':
+        return 'Side story';
+      case 'collection_relation_movie':
+        return 'Movie';
+      case 'collection_relation_spin_off':
+        return 'Spin-off';
+      case 'collection_relation_other':
+        return 'Related';
+      case 'collection_relation_download':
+        return 'Download';
+      case 'collection_relation_bind':
+        return 'Bind to existing collection';
+      case 'collection_episode_scrape':
+        return 'Fetch episode details';
+      case 'collection_episode_scrape_unbound':
+        return 'Scrape the collection first';
+      case 'collection_episode_rename':
+        return 'Rename episodes from scrape';
+      case 'collection_episode_rename_title':
+        return 'Rename episodes';
+      case 'collection_episode_rename_empty':
+        return 'Nothing to rename';
+      case 'collection_episode_download':
+        return 'Download this episode';
+      case 'collection_episode_fill_missing':
+        return 'Fill missing episodes';
+      case 'collection_episode_no_missing':
+        return 'No missing episodes';
+      case 'collection_split_by_season':
+        return 'Split by season';
+      case 'collection_split_keep_original':
+        return 'Keep the original collection';
+      case 'collection_split_confirm':
+        return 'Split';
+      case 'collection_episode_open_bangumi':
+        return 'Open this episode on Bangumi';
+      case 'collection_relation_bound':
+        return ({required Object name}) => 'Bound to ${name}';
+      case 'collection_episode_scrape_result':
+        return ({required Object updated, required Object skipped}) =>
+            'Updated ${updated} episodes, skipped ${skipped}';
+      case 'collection_episode_scrape_failed':
+        return ({required Object error}) => 'Episode scrape failed: ${error}';
+      case 'collection_episode_rename_apply':
+        return ({required Object n}) => 'Rename ${n} episodes';
+      case 'collection_split_done':
+        return ({required Object n}) => 'Split into ${n} collections';
+      case 'collection_episode_watched_at':
+        return ({required Object position}) => 'Watched to ${position}';
+      case 'collection_episode_bangumi_open_failed':
+        return ({required Object error}) =>
+            'Could not resolve the episode on Bangumi: ${error}';
+      case 'collection_episode_rename_partial':
+        return ({required Object n, required Object m}) =>
+            'Renamed ${n} episodes, ${m} failed';
+      case 'collection_episode_bangumi_not_found':
+        return 'Episode not found on Bangumi; opened the subject page instead';
+      case 'sync_err_browser_timeout':
+        return 'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
       default:
         return null;
     }
@@ -176129,8 +177938,6 @@ extension on _StringsNl {
         return 'Last error';
       case 'shortcut_action_popup_mine_entry':
         return 'Create card (mine)';
-      case 'game_hook_reason_protocol_mismatch':
-        return 'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
       case 'game_upscaling_auto_hint':
         return 'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
       case 'game_upscaling_installed_only_hint':
@@ -176457,9 +178264,6 @@ extension on _StringsNl {
         return 'Scrape all';
       case 'scrape_all_title':
         return ({required Object kind}) => 'Scrape all ${kind}';
-      case 'scrape_all_confirm':
-        return ({required Object n}) =>
-            'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
       case 'scrape_all_running':
         return ({required Object current, required Object total}) =>
             'Scraping ${current} / ${total}';
@@ -176750,6 +178554,76 @@ extension on _StringsNl {
         return 'In manga shelf';
       case 'media_source_local_roots':
         return 'Local scan roots';
+      case 'game_hook_reason_protocol_mismatch':
+        return 'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+      case 'scrape_all_confirm':
+        return ({required Object n}) =>
+            'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
+      case 'collection_related_title':
+        return 'Related works';
+      case 'collection_relation_prequel':
+        return 'Prequel';
+      case 'collection_relation_sequel':
+        return 'Sequel';
+      case 'collection_relation_side_story':
+        return 'Side story';
+      case 'collection_relation_movie':
+        return 'Movie';
+      case 'collection_relation_spin_off':
+        return 'Spin-off';
+      case 'collection_relation_other':
+        return 'Related';
+      case 'collection_relation_download':
+        return 'Download';
+      case 'collection_relation_bind':
+        return 'Bind to existing collection';
+      case 'collection_episode_scrape':
+        return 'Fetch episode details';
+      case 'collection_episode_scrape_unbound':
+        return 'Scrape the collection first';
+      case 'collection_episode_rename':
+        return 'Rename episodes from scrape';
+      case 'collection_episode_rename_title':
+        return 'Rename episodes';
+      case 'collection_episode_rename_empty':
+        return 'Nothing to rename';
+      case 'collection_episode_download':
+        return 'Download this episode';
+      case 'collection_episode_fill_missing':
+        return 'Fill missing episodes';
+      case 'collection_episode_no_missing':
+        return 'No missing episodes';
+      case 'collection_split_by_season':
+        return 'Split by season';
+      case 'collection_split_keep_original':
+        return 'Keep the original collection';
+      case 'collection_split_confirm':
+        return 'Split';
+      case 'collection_episode_open_bangumi':
+        return 'Open this episode on Bangumi';
+      case 'collection_relation_bound':
+        return ({required Object name}) => 'Bound to ${name}';
+      case 'collection_episode_scrape_result':
+        return ({required Object updated, required Object skipped}) =>
+            'Updated ${updated} episodes, skipped ${skipped}';
+      case 'collection_episode_scrape_failed':
+        return ({required Object error}) => 'Episode scrape failed: ${error}';
+      case 'collection_episode_rename_apply':
+        return ({required Object n}) => 'Rename ${n} episodes';
+      case 'collection_split_done':
+        return ({required Object n}) => 'Split into ${n} collections';
+      case 'collection_episode_watched_at':
+        return ({required Object position}) => 'Watched to ${position}';
+      case 'collection_episode_bangumi_open_failed':
+        return ({required Object error}) =>
+            'Could not resolve the episode on Bangumi: ${error}';
+      case 'collection_episode_rename_partial':
+        return ({required Object n, required Object m}) =>
+            'Renamed ${n} episodes, ${m} failed';
+      case 'collection_episode_bangumi_not_found':
+        return 'Episode not found on Bangumi; opened the subject page instead';
+      case 'sync_err_browser_timeout':
+        return 'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
       default:
         return null;
     }
@@ -182343,8 +184217,6 @@ extension on _StringsPtBr {
         return 'Last error';
       case 'shortcut_action_popup_mine_entry':
         return 'Create card (mine)';
-      case 'game_hook_reason_protocol_mismatch':
-        return 'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
       case 'game_upscaling_auto_hint':
         return 'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
       case 'game_upscaling_installed_only_hint':
@@ -182671,9 +184543,6 @@ extension on _StringsPtBr {
         return 'Scrape all';
       case 'scrape_all_title':
         return ({required Object kind}) => 'Scrape all ${kind}';
-      case 'scrape_all_confirm':
-        return ({required Object n}) =>
-            'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
       case 'scrape_all_running':
         return ({required Object current, required Object total}) =>
             'Scraping ${current} / ${total}';
@@ -182964,6 +184833,76 @@ extension on _StringsPtBr {
         return 'In manga shelf';
       case 'media_source_local_roots':
         return 'Local scan roots';
+      case 'game_hook_reason_protocol_mismatch':
+        return 'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+      case 'scrape_all_confirm':
+        return ({required Object n}) =>
+            'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
+      case 'collection_related_title':
+        return 'Related works';
+      case 'collection_relation_prequel':
+        return 'Prequel';
+      case 'collection_relation_sequel':
+        return 'Sequel';
+      case 'collection_relation_side_story':
+        return 'Side story';
+      case 'collection_relation_movie':
+        return 'Movie';
+      case 'collection_relation_spin_off':
+        return 'Spin-off';
+      case 'collection_relation_other':
+        return 'Related';
+      case 'collection_relation_download':
+        return 'Download';
+      case 'collection_relation_bind':
+        return 'Bind to existing collection';
+      case 'collection_episode_scrape':
+        return 'Fetch episode details';
+      case 'collection_episode_scrape_unbound':
+        return 'Scrape the collection first';
+      case 'collection_episode_rename':
+        return 'Rename episodes from scrape';
+      case 'collection_episode_rename_title':
+        return 'Rename episodes';
+      case 'collection_episode_rename_empty':
+        return 'Nothing to rename';
+      case 'collection_episode_download':
+        return 'Download this episode';
+      case 'collection_episode_fill_missing':
+        return 'Fill missing episodes';
+      case 'collection_episode_no_missing':
+        return 'No missing episodes';
+      case 'collection_split_by_season':
+        return 'Split by season';
+      case 'collection_split_keep_original':
+        return 'Keep the original collection';
+      case 'collection_split_confirm':
+        return 'Split';
+      case 'collection_episode_open_bangumi':
+        return 'Open this episode on Bangumi';
+      case 'collection_relation_bound':
+        return ({required Object name}) => 'Bound to ${name}';
+      case 'collection_episode_scrape_result':
+        return ({required Object updated, required Object skipped}) =>
+            'Updated ${updated} episodes, skipped ${skipped}';
+      case 'collection_episode_scrape_failed':
+        return ({required Object error}) => 'Episode scrape failed: ${error}';
+      case 'collection_episode_rename_apply':
+        return ({required Object n}) => 'Rename ${n} episodes';
+      case 'collection_split_done':
+        return ({required Object n}) => 'Split into ${n} collections';
+      case 'collection_episode_watched_at':
+        return ({required Object position}) => 'Watched to ${position}';
+      case 'collection_episode_bangumi_open_failed':
+        return ({required Object error}) =>
+            'Could not resolve the episode on Bangumi: ${error}';
+      case 'collection_episode_rename_partial':
+        return ({required Object n, required Object m}) =>
+            'Renamed ${n} episodes, ${m} failed';
+      case 'collection_episode_bangumi_not_found':
+        return 'Episode not found on Bangumi; opened the subject page instead';
+      case 'sync_err_browser_timeout':
+        return 'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
       default:
         return null;
     }
@@ -188562,8 +190501,6 @@ extension on _StringsRu {
         return 'Last error';
       case 'shortcut_action_popup_mine_entry':
         return 'Create card (mine)';
-      case 'game_hook_reason_protocol_mismatch':
-        return 'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
       case 'game_upscaling_auto_hint':
         return 'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
       case 'game_upscaling_installed_only_hint':
@@ -188890,9 +190827,6 @@ extension on _StringsRu {
         return 'Scrape all';
       case 'scrape_all_title':
         return ({required Object kind}) => 'Scrape all ${kind}';
-      case 'scrape_all_confirm':
-        return ({required Object n}) =>
-            'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
       case 'scrape_all_running':
         return ({required Object current, required Object total}) =>
             'Scraping ${current} / ${total}';
@@ -189183,6 +191117,76 @@ extension on _StringsRu {
         return 'In manga shelf';
       case 'media_source_local_roots':
         return 'Local scan roots';
+      case 'game_hook_reason_protocol_mismatch':
+        return 'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+      case 'scrape_all_confirm':
+        return ({required Object n}) =>
+            'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
+      case 'collection_related_title':
+        return 'Related works';
+      case 'collection_relation_prequel':
+        return 'Prequel';
+      case 'collection_relation_sequel':
+        return 'Sequel';
+      case 'collection_relation_side_story':
+        return 'Side story';
+      case 'collection_relation_movie':
+        return 'Movie';
+      case 'collection_relation_spin_off':
+        return 'Spin-off';
+      case 'collection_relation_other':
+        return 'Related';
+      case 'collection_relation_download':
+        return 'Download';
+      case 'collection_relation_bind':
+        return 'Bind to existing collection';
+      case 'collection_episode_scrape':
+        return 'Fetch episode details';
+      case 'collection_episode_scrape_unbound':
+        return 'Scrape the collection first';
+      case 'collection_episode_rename':
+        return 'Rename episodes from scrape';
+      case 'collection_episode_rename_title':
+        return 'Rename episodes';
+      case 'collection_episode_rename_empty':
+        return 'Nothing to rename';
+      case 'collection_episode_download':
+        return 'Download this episode';
+      case 'collection_episode_fill_missing':
+        return 'Fill missing episodes';
+      case 'collection_episode_no_missing':
+        return 'No missing episodes';
+      case 'collection_split_by_season':
+        return 'Split by season';
+      case 'collection_split_keep_original':
+        return 'Keep the original collection';
+      case 'collection_split_confirm':
+        return 'Split';
+      case 'collection_episode_open_bangumi':
+        return 'Open this episode on Bangumi';
+      case 'collection_relation_bound':
+        return ({required Object name}) => 'Bound to ${name}';
+      case 'collection_episode_scrape_result':
+        return ({required Object updated, required Object skipped}) =>
+            'Updated ${updated} episodes, skipped ${skipped}';
+      case 'collection_episode_scrape_failed':
+        return ({required Object error}) => 'Episode scrape failed: ${error}';
+      case 'collection_episode_rename_apply':
+        return ({required Object n}) => 'Rename ${n} episodes';
+      case 'collection_split_done':
+        return ({required Object n}) => 'Split into ${n} collections';
+      case 'collection_episode_watched_at':
+        return ({required Object position}) => 'Watched to ${position}';
+      case 'collection_episode_bangumi_open_failed':
+        return ({required Object error}) =>
+            'Could not resolve the episode on Bangumi: ${error}';
+      case 'collection_episode_rename_partial':
+        return ({required Object n, required Object m}) =>
+            'Renamed ${n} episodes, ${m} failed';
+      case 'collection_episode_bangumi_not_found':
+        return 'Episode not found on Bangumi; opened the subject page instead';
+      case 'sync_err_browser_timeout':
+        return 'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
       default:
         return null;
     }
@@ -194764,8 +196768,6 @@ extension on _StringsTh {
         return 'Last error';
       case 'shortcut_action_popup_mine_entry':
         return 'Create card (mine)';
-      case 'game_hook_reason_protocol_mismatch':
-        return 'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
       case 'game_upscaling_auto_hint':
         return 'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
       case 'game_upscaling_installed_only_hint':
@@ -195092,9 +197094,6 @@ extension on _StringsTh {
         return 'Scrape all';
       case 'scrape_all_title':
         return ({required Object kind}) => 'Scrape all ${kind}';
-      case 'scrape_all_confirm':
-        return ({required Object n}) =>
-            'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
       case 'scrape_all_running':
         return ({required Object current, required Object total}) =>
             'Scraping ${current} / ${total}';
@@ -195385,6 +197384,76 @@ extension on _StringsTh {
         return 'In manga shelf';
       case 'media_source_local_roots':
         return 'Local scan roots';
+      case 'game_hook_reason_protocol_mismatch':
+        return 'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+      case 'scrape_all_confirm':
+        return ({required Object n}) =>
+            'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
+      case 'collection_related_title':
+        return 'Related works';
+      case 'collection_relation_prequel':
+        return 'Prequel';
+      case 'collection_relation_sequel':
+        return 'Sequel';
+      case 'collection_relation_side_story':
+        return 'Side story';
+      case 'collection_relation_movie':
+        return 'Movie';
+      case 'collection_relation_spin_off':
+        return 'Spin-off';
+      case 'collection_relation_other':
+        return 'Related';
+      case 'collection_relation_download':
+        return 'Download';
+      case 'collection_relation_bind':
+        return 'Bind to existing collection';
+      case 'collection_episode_scrape':
+        return 'Fetch episode details';
+      case 'collection_episode_scrape_unbound':
+        return 'Scrape the collection first';
+      case 'collection_episode_rename':
+        return 'Rename episodes from scrape';
+      case 'collection_episode_rename_title':
+        return 'Rename episodes';
+      case 'collection_episode_rename_empty':
+        return 'Nothing to rename';
+      case 'collection_episode_download':
+        return 'Download this episode';
+      case 'collection_episode_fill_missing':
+        return 'Fill missing episodes';
+      case 'collection_episode_no_missing':
+        return 'No missing episodes';
+      case 'collection_split_by_season':
+        return 'Split by season';
+      case 'collection_split_keep_original':
+        return 'Keep the original collection';
+      case 'collection_split_confirm':
+        return 'Split';
+      case 'collection_episode_open_bangumi':
+        return 'Open this episode on Bangumi';
+      case 'collection_relation_bound':
+        return ({required Object name}) => 'Bound to ${name}';
+      case 'collection_episode_scrape_result':
+        return ({required Object updated, required Object skipped}) =>
+            'Updated ${updated} episodes, skipped ${skipped}';
+      case 'collection_episode_scrape_failed':
+        return ({required Object error}) => 'Episode scrape failed: ${error}';
+      case 'collection_episode_rename_apply':
+        return ({required Object n}) => 'Rename ${n} episodes';
+      case 'collection_split_done':
+        return ({required Object n}) => 'Split into ${n} collections';
+      case 'collection_episode_watched_at':
+        return ({required Object position}) => 'Watched to ${position}';
+      case 'collection_episode_bangumi_open_failed':
+        return ({required Object error}) =>
+            'Could not resolve the episode on Bangumi: ${error}';
+      case 'collection_episode_rename_partial':
+        return ({required Object n, required Object m}) =>
+            'Renamed ${n} episodes, ${m} failed';
+      case 'collection_episode_bangumi_not_found':
+        return 'Episode not found on Bangumi; opened the subject page instead';
+      case 'sync_err_browser_timeout':
+        return 'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
       default:
         return null;
     }
@@ -200975,8 +203044,6 @@ extension on _StringsTr {
         return 'Last error';
       case 'shortcut_action_popup_mine_entry':
         return 'Create card (mine)';
-      case 'game_hook_reason_protocol_mismatch':
-        return 'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
       case 'game_upscaling_auto_hint':
         return 'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
       case 'game_upscaling_installed_only_hint':
@@ -201303,9 +203370,6 @@ extension on _StringsTr {
         return 'Scrape all';
       case 'scrape_all_title':
         return ({required Object kind}) => 'Scrape all ${kind}';
-      case 'scrape_all_confirm':
-        return ({required Object n}) =>
-            'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
       case 'scrape_all_running':
         return ({required Object current, required Object total}) =>
             'Scraping ${current} / ${total}';
@@ -201596,6 +203660,76 @@ extension on _StringsTr {
         return 'In manga shelf';
       case 'media_source_local_roots':
         return 'Local scan roots';
+      case 'game_hook_reason_protocol_mismatch':
+        return 'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+      case 'scrape_all_confirm':
+        return ({required Object n}) =>
+            'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
+      case 'collection_related_title':
+        return 'Related works';
+      case 'collection_relation_prequel':
+        return 'Prequel';
+      case 'collection_relation_sequel':
+        return 'Sequel';
+      case 'collection_relation_side_story':
+        return 'Side story';
+      case 'collection_relation_movie':
+        return 'Movie';
+      case 'collection_relation_spin_off':
+        return 'Spin-off';
+      case 'collection_relation_other':
+        return 'Related';
+      case 'collection_relation_download':
+        return 'Download';
+      case 'collection_relation_bind':
+        return 'Bind to existing collection';
+      case 'collection_episode_scrape':
+        return 'Fetch episode details';
+      case 'collection_episode_scrape_unbound':
+        return 'Scrape the collection first';
+      case 'collection_episode_rename':
+        return 'Rename episodes from scrape';
+      case 'collection_episode_rename_title':
+        return 'Rename episodes';
+      case 'collection_episode_rename_empty':
+        return 'Nothing to rename';
+      case 'collection_episode_download':
+        return 'Download this episode';
+      case 'collection_episode_fill_missing':
+        return 'Fill missing episodes';
+      case 'collection_episode_no_missing':
+        return 'No missing episodes';
+      case 'collection_split_by_season':
+        return 'Split by season';
+      case 'collection_split_keep_original':
+        return 'Keep the original collection';
+      case 'collection_split_confirm':
+        return 'Split';
+      case 'collection_episode_open_bangumi':
+        return 'Open this episode on Bangumi';
+      case 'collection_relation_bound':
+        return ({required Object name}) => 'Bound to ${name}';
+      case 'collection_episode_scrape_result':
+        return ({required Object updated, required Object skipped}) =>
+            'Updated ${updated} episodes, skipped ${skipped}';
+      case 'collection_episode_scrape_failed':
+        return ({required Object error}) => 'Episode scrape failed: ${error}';
+      case 'collection_episode_rename_apply':
+        return ({required Object n}) => 'Rename ${n} episodes';
+      case 'collection_split_done':
+        return ({required Object n}) => 'Split into ${n} collections';
+      case 'collection_episode_watched_at':
+        return ({required Object position}) => 'Watched to ${position}';
+      case 'collection_episode_bangumi_open_failed':
+        return ({required Object error}) =>
+            'Could not resolve the episode on Bangumi: ${error}';
+      case 'collection_episode_rename_partial':
+        return ({required Object n, required Object m}) =>
+            'Renamed ${n} episodes, ${m} failed';
+      case 'collection_episode_bangumi_not_found':
+        return 'Episode not found on Bangumi; opened the subject page instead';
+      case 'sync_err_browser_timeout':
+        return 'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
       default:
         return null;
     }
@@ -207182,8 +209316,6 @@ extension on _StringsVi {
         return 'Last error';
       case 'shortcut_action_popup_mine_entry':
         return 'Create card (mine)';
-      case 'game_hook_reason_protocol_mismatch':
-        return 'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
       case 'game_upscaling_auto_hint':
         return 'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
       case 'game_upscaling_installed_only_hint':
@@ -207510,9 +209642,6 @@ extension on _StringsVi {
         return 'Scrape all';
       case 'scrape_all_title':
         return ({required Object kind}) => 'Scrape all ${kind}';
-      case 'scrape_all_confirm':
-        return ({required Object n}) =>
-            'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
       case 'scrape_all_running':
         return ({required Object current, required Object total}) =>
             'Scraping ${current} / ${total}';
@@ -207803,6 +209932,76 @@ extension on _StringsVi {
         return 'In manga shelf';
       case 'media_source_local_roots':
         return 'Local scan roots';
+      case 'game_hook_reason_protocol_mismatch':
+        return 'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+      case 'scrape_all_confirm':
+        return ({required Object n}) =>
+            'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
+      case 'collection_related_title':
+        return 'Related works';
+      case 'collection_relation_prequel':
+        return 'Prequel';
+      case 'collection_relation_sequel':
+        return 'Sequel';
+      case 'collection_relation_side_story':
+        return 'Side story';
+      case 'collection_relation_movie':
+        return 'Movie';
+      case 'collection_relation_spin_off':
+        return 'Spin-off';
+      case 'collection_relation_other':
+        return 'Related';
+      case 'collection_relation_download':
+        return 'Download';
+      case 'collection_relation_bind':
+        return 'Bind to existing collection';
+      case 'collection_episode_scrape':
+        return 'Fetch episode details';
+      case 'collection_episode_scrape_unbound':
+        return 'Scrape the collection first';
+      case 'collection_episode_rename':
+        return 'Rename episodes from scrape';
+      case 'collection_episode_rename_title':
+        return 'Rename episodes';
+      case 'collection_episode_rename_empty':
+        return 'Nothing to rename';
+      case 'collection_episode_download':
+        return 'Download this episode';
+      case 'collection_episode_fill_missing':
+        return 'Fill missing episodes';
+      case 'collection_episode_no_missing':
+        return 'No missing episodes';
+      case 'collection_split_by_season':
+        return 'Split by season';
+      case 'collection_split_keep_original':
+        return 'Keep the original collection';
+      case 'collection_split_confirm':
+        return 'Split';
+      case 'collection_episode_open_bangumi':
+        return 'Open this episode on Bangumi';
+      case 'collection_relation_bound':
+        return ({required Object name}) => 'Bound to ${name}';
+      case 'collection_episode_scrape_result':
+        return ({required Object updated, required Object skipped}) =>
+            'Updated ${updated} episodes, skipped ${skipped}';
+      case 'collection_episode_scrape_failed':
+        return ({required Object error}) => 'Episode scrape failed: ${error}';
+      case 'collection_episode_rename_apply':
+        return ({required Object n}) => 'Rename ${n} episodes';
+      case 'collection_split_done':
+        return ({required Object n}) => 'Split into ${n} collections';
+      case 'collection_episode_watched_at':
+        return ({required Object position}) => 'Watched to ${position}';
+      case 'collection_episode_bangumi_open_failed':
+        return ({required Object error}) =>
+            'Could not resolve the episode on Bangumi: ${error}';
+      case 'collection_episode_rename_partial':
+        return ({required Object n, required Object m}) =>
+            'Renamed ${n} episodes, ${m} failed';
+      case 'collection_episode_bangumi_not_found':
+        return 'Episode not found on Bangumi; opened the subject page instead';
+      case 'sync_err_browser_timeout':
+        return 'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
       default:
         return null;
     }
@@ -210910,7 +213109,7 @@ extension on _StringsZhCn {
       case 'section_interface':
         return '界面';
       case 'section_layout':
-        return '布局与显示';
+        return '布局显示';
       case 'section_navigation':
         return '导航';
       case 'section_page_turn_direction':
@@ -211597,7 +213796,7 @@ extension on _StringsZhCn {
       case 'sync_err_scope_upgrade':
         return '同步权限已更新，请重新登录 Google 账号以继续同步。';
       case 'sync_err_timeout':
-        return '连接超时——服务器未在限定时间内响应。';
+        return '连接超时——服务器未在限定时间内响应。请检查网络或代理设置。';
       case 'sync_error':
         return ({required Object message}) => '同步错误：${message}';
       case 'sync_exit_warning':
@@ -211986,13 +214185,13 @@ extension on _StringsZhCn {
       case 'update_connecting':
         return '正在连接更新源…';
       case 'update_custom_proxy_auto_hint':
-        return '留空时自动读取环境变量，再读取已启用的系统代理。';
+        return '用于更新检查、云同步和下载。留空时自动读取环境变量，再读取已启用的系统代理。';
       case 'update_custom_proxy_hint':
         return 'host:port，例如 127.0.0.1:7890（仅 IPv4/域名）';
       case 'update_custom_proxy_invalid':
         return '代理格式无效，请用 host:port';
       case 'update_custom_proxy_label':
-        return '自定义更新代理';
+        return '自定义网络代理';
       case 'update_debug_channel':
         return '调试更新通道';
       case 'update_debug_channel_warning':
@@ -213342,8 +215541,6 @@ extension on _StringsZhCn {
         return '上次错误';
       case 'shortcut_action_popup_mine_entry':
         return '制卡（加号）';
-      case 'game_hook_reason_protocol_mismatch':
-        return '捕获组件版本与 Hibiki 不一致，请更新或重新安装 galgame 捕获组件。';
       case 'game_upscaling_auto_hint':
         return '优先使用机器上正在运行的 Magpie；否则启用 Hibiki 内置版本，不需要下载。';
       case 'game_upscaling_installed_only_hint':
@@ -213664,9 +215861,6 @@ extension on _StringsZhCn {
         return '全部刮削';
       case 'scrape_all_title':
         return ({required Object kind}) => '刮削全部${kind}';
-      case 'scrape_all_confirm':
-        return ({required Object n}) =>
-            '将按标题匹配库中的 ${n} 个条目。只自动应用唯一的精确匹配；已有手动封面会保留，歧义结果留待手动确认。';
       case 'scrape_all_running':
         return ({required Object current, required Object total}) =>
             '正在刮削 ${current} / ${total}';
@@ -213957,6 +216151,75 @@ extension on _StringsZhCn {
         return '已加入漫画书架';
       case 'media_source_local_roots':
         return '本地扫描根';
+      case 'game_hook_reason_protocol_mismatch':
+        return '捕获组件与本体版本不一致。捕获组件已内置在 Hibiki 里、随本体一起更新，请更新 Hibiki 到最新版；若已是最新版，请把这条提示反馈给我们。';
+      case 'scrape_all_confirm':
+        return ({required Object n}) =>
+            '将按标题匹配库中的 ${n} 个条目。只自动应用唯一的精确匹配；你自己定的封面一律不覆盖（手动设置的本地图、在匹配弹窗里亲手选定的条目、目录里自带的 poster 图），歧义结果留待手动确认。';
+      case 'collection_related_title':
+        return '相关作品';
+      case 'collection_relation_prequel':
+        return '前传';
+      case 'collection_relation_sequel':
+        return '续作';
+      case 'collection_relation_side_story':
+        return '番外';
+      case 'collection_relation_movie':
+        return '剧场版';
+      case 'collection_relation_spin_off':
+        return '衍生';
+      case 'collection_relation_other':
+        return '相关';
+      case 'collection_relation_download':
+        return '去下载';
+      case 'collection_relation_bind':
+        return '绑定到已有合集';
+      case 'collection_episode_scrape':
+        return '刮削分集资料';
+      case 'collection_episode_scrape_unbound':
+        return '请先刮削合集资料';
+      case 'collection_episode_rename':
+        return '按刮削重命名各集';
+      case 'collection_episode_rename_title':
+        return '批量重命名各集';
+      case 'collection_episode_rename_empty':
+        return '没有可改的集名';
+      case 'collection_episode_download':
+        return '下载本集';
+      case 'collection_episode_fill_missing':
+        return '补齐缺集';
+      case 'collection_episode_no_missing':
+        return '没有缺集';
+      case 'collection_split_by_season':
+        return '按季拆分合集';
+      case 'collection_split_keep_original':
+        return '保留原合集';
+      case 'collection_split_confirm':
+        return '拆分';
+      case 'collection_episode_open_bangumi':
+        return '在 Bangumi 打开本集';
+      case 'collection_relation_bound':
+        return ({required Object name}) => '已绑定到 ${name}';
+      case 'collection_episode_scrape_result':
+        return ({required Object updated, required Object skipped}) =>
+            '已更新 ${updated} 集 · 跳过 ${skipped} 集';
+      case 'collection_episode_scrape_failed':
+        return ({required Object error}) => '分集刮削失败：${error}';
+      case 'collection_episode_rename_apply':
+        return ({required Object n}) => '重命名 ${n} 集';
+      case 'collection_split_done':
+        return ({required Object n}) => '已拆分为 ${n} 个合集';
+      case 'collection_episode_watched_at':
+        return ({required Object position}) => '看到 ${position}';
+      case 'collection_episode_bangumi_open_failed':
+        return ({required Object error}) => '解析 Bangumi 章节失败：${error}';
+      case 'collection_episode_rename_partial':
+        return ({required Object n, required Object m}) =>
+            '已重命名 ${n} 集 · ${m} 集失败';
+      case 'collection_episode_bangumi_not_found':
+        return '未找到对应集，已打开条目页';
+      case 'sync_err_browser_timeout':
+        return '浏览器授权没有返回到应用。请重试，并确认代理放行了本机回环地址 127.0.0.1。';
       default:
         return null;
     }
@@ -217074,7 +219337,7 @@ extension on _StringsZhHk {
       case 'section_interface':
         return '介面';
       case 'section_layout':
-        return '版面與顯示';
+        return '版面顯示';
       case 'section_navigation':
         return '導覽';
       case 'section_page_turn_direction':
@@ -219516,8 +221779,6 @@ extension on _StringsZhHk {
         return 'Last error';
       case 'shortcut_action_popup_mine_entry':
         return 'Create card (mine)';
-      case 'game_hook_reason_protocol_mismatch':
-        return 'The capture helper version does not match Hibiki. Update or reinstall the galgame capture helper.';
       case 'game_upscaling_auto_hint':
         return 'Use Magpie if it is already running; otherwise use the version bundled with Hibiki. No download is needed.';
       case 'game_upscaling_installed_only_hint':
@@ -219844,9 +222105,6 @@ extension on _StringsZhHk {
         return 'Scrape all';
       case 'scrape_all_title':
         return ({required Object kind}) => 'Scrape all ${kind}';
-      case 'scrape_all_confirm':
-        return ({required Object n}) =>
-            'Match all ${n} library items by title. Only a unique exact match is applied automatically; existing manual covers are kept, and ambiguous results stay pending for manual review.';
       case 'scrape_all_running':
         return ({required Object current, required Object total}) =>
             'Scraping ${current} / ${total}';
@@ -220137,6 +222395,76 @@ extension on _StringsZhHk {
         return 'In manga shelf';
       case 'media_source_local_roots':
         return 'Local scan roots';
+      case 'game_hook_reason_protocol_mismatch':
+        return 'The capture component does not match this Hibiki build. It is built into Hibiki and updates together with the app, so update Hibiki to the latest version.';
+      case 'scrape_all_confirm':
+        return ({required Object n}) =>
+            'Match all ${n} library items by title. Only a unique exact match is applied automatically; covers you chose yourself are never overwritten (local images you set, entries you picked in the match dialog, and poster files placed in the folder), and ambiguous results stay pending for manual review.';
+      case 'collection_related_title':
+        return 'Related works';
+      case 'collection_relation_prequel':
+        return 'Prequel';
+      case 'collection_relation_sequel':
+        return 'Sequel';
+      case 'collection_relation_side_story':
+        return 'Side story';
+      case 'collection_relation_movie':
+        return 'Movie';
+      case 'collection_relation_spin_off':
+        return 'Spin-off';
+      case 'collection_relation_other':
+        return 'Related';
+      case 'collection_relation_download':
+        return 'Download';
+      case 'collection_relation_bind':
+        return 'Bind to existing collection';
+      case 'collection_episode_scrape':
+        return 'Fetch episode details';
+      case 'collection_episode_scrape_unbound':
+        return 'Scrape the collection first';
+      case 'collection_episode_rename':
+        return 'Rename episodes from scrape';
+      case 'collection_episode_rename_title':
+        return 'Rename episodes';
+      case 'collection_episode_rename_empty':
+        return 'Nothing to rename';
+      case 'collection_episode_download':
+        return 'Download this episode';
+      case 'collection_episode_fill_missing':
+        return 'Fill missing episodes';
+      case 'collection_episode_no_missing':
+        return 'No missing episodes';
+      case 'collection_split_by_season':
+        return 'Split by season';
+      case 'collection_split_keep_original':
+        return 'Keep the original collection';
+      case 'collection_split_confirm':
+        return 'Split';
+      case 'collection_episode_open_bangumi':
+        return 'Open this episode on Bangumi';
+      case 'collection_relation_bound':
+        return ({required Object name}) => 'Bound to ${name}';
+      case 'collection_episode_scrape_result':
+        return ({required Object updated, required Object skipped}) =>
+            'Updated ${updated} episodes, skipped ${skipped}';
+      case 'collection_episode_scrape_failed':
+        return ({required Object error}) => 'Episode scrape failed: ${error}';
+      case 'collection_episode_rename_apply':
+        return ({required Object n}) => 'Rename ${n} episodes';
+      case 'collection_split_done':
+        return ({required Object n}) => 'Split into ${n} collections';
+      case 'collection_episode_watched_at':
+        return ({required Object position}) => 'Watched to ${position}';
+      case 'collection_episode_bangumi_open_failed':
+        return ({required Object error}) =>
+            'Could not resolve the episode on Bangumi: ${error}';
+      case 'collection_episode_rename_partial':
+        return ({required Object n, required Object m}) =>
+            'Renamed ${n} episodes, ${m} failed';
+      case 'collection_episode_bangumi_not_found':
+        return 'Episode not found on Bangumi; opened the subject page instead';
+      case 'sync_err_browser_timeout':
+        return 'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
       default:
         return null;
     }
