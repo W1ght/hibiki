@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 49130 (2890 per locale)
+/// Strings: 49249 (2897 per locale)
 ///
-/// Built on 2026-08-01 at 05:05 UTC
+/// Built on 2026-08-01 at 05:20 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3911,6 +3911,17 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get scrape_all_empty =>
       'There are no items to scrape in this library.';
   String get scrape_all_start => 'Start';
+  String collection_hero_total_episodes({required Object count}) =>
+      '${count} episodes';
+  String get video_scrape_collection_rename_title => 'Rename this collection?';
+  String get video_scrape_collection_rename_body =>
+      'The matched entry has a different name. Renaming is optional: the cover and details are saved either way, and a rename also replaces the old name on your other synced devices.';
+  String video_scrape_collection_rename_from({required Object name}) =>
+      'Current name: ${name}';
+  String video_scrape_collection_rename_to({required Object name}) =>
+      'New name: ${name}';
+  String get video_scrape_collection_rename_keep => 'Keep current name';
+  String get video_scrape_collection_rename_confirm => 'Rename';
 }
 
 // Path: <root>
@@ -10561,6 +10572,24 @@ class _StringsAr extends _StringsEn {
       'There are no items to scrape in this library.';
   @override
   String get scrape_all_start => 'Start';
+  @override
+  String collection_hero_total_episodes({required Object count}) =>
+      '${count} episodes';
+  @override
+  String get video_scrape_collection_rename_title => 'Rename this collection?';
+  @override
+  String get video_scrape_collection_rename_body =>
+      'The matched entry has a different name. Renaming is optional: the cover and details are saved either way, and a rename also replaces the old name on your other synced devices.';
+  @override
+  String video_scrape_collection_rename_from({required Object name}) =>
+      'Current name: ${name}';
+  @override
+  String video_scrape_collection_rename_to({required Object name}) =>
+      'New name: ${name}';
+  @override
+  String get video_scrape_collection_rename_keep => 'Keep current name';
+  @override
+  String get video_scrape_collection_rename_confirm => 'Rename';
 }
 
 // Path: <root>
@@ -17278,6 +17307,24 @@ class _StringsDe extends _StringsEn {
       'There are no items to scrape in this library.';
   @override
   String get scrape_all_start => 'Start';
+  @override
+  String collection_hero_total_episodes({required Object count}) =>
+      '${count} episodes';
+  @override
+  String get video_scrape_collection_rename_title => 'Rename this collection?';
+  @override
+  String get video_scrape_collection_rename_body =>
+      'The matched entry has a different name. Renaming is optional: the cover and details are saved either way, and a rename also replaces the old name on your other synced devices.';
+  @override
+  String video_scrape_collection_rename_from({required Object name}) =>
+      'Current name: ${name}';
+  @override
+  String video_scrape_collection_rename_to({required Object name}) =>
+      'New name: ${name}';
+  @override
+  String get video_scrape_collection_rename_keep => 'Keep current name';
+  @override
+  String get video_scrape_collection_rename_confirm => 'Rename';
 }
 
 // Path: <root>
@@ -24011,6 +24058,24 @@ class _StringsEs extends _StringsEn {
       'There are no items to scrape in this library.';
   @override
   String get scrape_all_start => 'Start';
+  @override
+  String collection_hero_total_episodes({required Object count}) =>
+      '${count} episodes';
+  @override
+  String get video_scrape_collection_rename_title => 'Rename this collection?';
+  @override
+  String get video_scrape_collection_rename_body =>
+      'The matched entry has a different name. Renaming is optional: the cover and details are saved either way, and a rename also replaces the old name on your other synced devices.';
+  @override
+  String video_scrape_collection_rename_from({required Object name}) =>
+      'Current name: ${name}';
+  @override
+  String video_scrape_collection_rename_to({required Object name}) =>
+      'New name: ${name}';
+  @override
+  String get video_scrape_collection_rename_keep => 'Keep current name';
+  @override
+  String get video_scrape_collection_rename_confirm => 'Rename';
 }
 
 // Path: <root>
@@ -30755,6 +30820,24 @@ class _StringsFr extends _StringsEn {
       'There are no items to scrape in this library.';
   @override
   String get scrape_all_start => 'Start';
+  @override
+  String collection_hero_total_episodes({required Object count}) =>
+      '${count} episodes';
+  @override
+  String get video_scrape_collection_rename_title => 'Rename this collection?';
+  @override
+  String get video_scrape_collection_rename_body =>
+      'The matched entry has a different name. Renaming is optional: the cover and details are saved either way, and a rename also replaces the old name on your other synced devices.';
+  @override
+  String video_scrape_collection_rename_from({required Object name}) =>
+      'Current name: ${name}';
+  @override
+  String video_scrape_collection_rename_to({required Object name}) =>
+      'New name: ${name}';
+  @override
+  String get video_scrape_collection_rename_keep => 'Keep current name';
+  @override
+  String get video_scrape_collection_rename_confirm => 'Rename';
 }
 
 // Path: <root>
@@ -37428,6 +37511,24 @@ class _StringsId extends _StringsEn {
       'There are no items to scrape in this library.';
   @override
   String get scrape_all_start => 'Start';
+  @override
+  String collection_hero_total_episodes({required Object count}) =>
+      '${count} episodes';
+  @override
+  String get video_scrape_collection_rename_title => 'Rename this collection?';
+  @override
+  String get video_scrape_collection_rename_body =>
+      'The matched entry has a different name. Renaming is optional: the cover and details are saved either way, and a rename also replaces the old name on your other synced devices.';
+  @override
+  String video_scrape_collection_rename_from({required Object name}) =>
+      'Current name: ${name}';
+  @override
+  String video_scrape_collection_rename_to({required Object name}) =>
+      'New name: ${name}';
+  @override
+  String get video_scrape_collection_rename_keep => 'Keep current name';
+  @override
+  String get video_scrape_collection_rename_confirm => 'Rename';
 }
 
 // Path: <root>
@@ -44147,6 +44248,24 @@ class _StringsIt extends _StringsEn {
       'There are no items to scrape in this library.';
   @override
   String get scrape_all_start => 'Start';
+  @override
+  String collection_hero_total_episodes({required Object count}) =>
+      '${count} episodes';
+  @override
+  String get video_scrape_collection_rename_title => 'Rename this collection?';
+  @override
+  String get video_scrape_collection_rename_body =>
+      'The matched entry has a different name. Renaming is optional: the cover and details are saved either way, and a rename also replaces the old name on your other synced devices.';
+  @override
+  String video_scrape_collection_rename_from({required Object name}) =>
+      'Current name: ${name}';
+  @override
+  String video_scrape_collection_rename_to({required Object name}) =>
+      'New name: ${name}';
+  @override
+  String get video_scrape_collection_rename_keep => 'Keep current name';
+  @override
+  String get video_scrape_collection_rename_confirm => 'Rename';
 }
 
 // Path: <root>
@@ -50683,6 +50802,24 @@ class _StringsJa extends _StringsEn {
       'There are no items to scrape in this library.';
   @override
   String get scrape_all_start => 'Start';
+  @override
+  String collection_hero_total_episodes({required Object count}) =>
+      '${count} episodes';
+  @override
+  String get video_scrape_collection_rename_title => 'Rename this collection?';
+  @override
+  String get video_scrape_collection_rename_body =>
+      'The matched entry has a different name. Renaming is optional: the cover and details are saved either way, and a rename also replaces the old name on your other synced devices.';
+  @override
+  String video_scrape_collection_rename_from({required Object name}) =>
+      'Current name: ${name}';
+  @override
+  String video_scrape_collection_rename_to({required Object name}) =>
+      'New name: ${name}';
+  @override
+  String get video_scrape_collection_rename_keep => 'Keep current name';
+  @override
+  String get video_scrape_collection_rename_confirm => 'Rename';
 }
 
 // Path: <root>
@@ -57221,6 +57358,24 @@ class _StringsKo extends _StringsEn {
       'There are no items to scrape in this library.';
   @override
   String get scrape_all_start => 'Start';
+  @override
+  String collection_hero_total_episodes({required Object count}) =>
+      '${count} episodes';
+  @override
+  String get video_scrape_collection_rename_title => 'Rename this collection?';
+  @override
+  String get video_scrape_collection_rename_body =>
+      'The matched entry has a different name. Renaming is optional: the cover and details are saved either way, and a rename also replaces the old name on your other synced devices.';
+  @override
+  String video_scrape_collection_rename_from({required Object name}) =>
+      'Current name: ${name}';
+  @override
+  String video_scrape_collection_rename_to({required Object name}) =>
+      'New name: ${name}';
+  @override
+  String get video_scrape_collection_rename_keep => 'Keep current name';
+  @override
+  String get video_scrape_collection_rename_confirm => 'Rename';
 }
 
 // Path: <root>
@@ -63920,6 +64075,24 @@ class _StringsNl extends _StringsEn {
       'There are no items to scrape in this library.';
   @override
   String get scrape_all_start => 'Start';
+  @override
+  String collection_hero_total_episodes({required Object count}) =>
+      '${count} episodes';
+  @override
+  String get video_scrape_collection_rename_title => 'Rename this collection?';
+  @override
+  String get video_scrape_collection_rename_body =>
+      'The matched entry has a different name. Renaming is optional: the cover and details are saved either way, and a rename also replaces the old name on your other synced devices.';
+  @override
+  String video_scrape_collection_rename_from({required Object name}) =>
+      'Current name: ${name}';
+  @override
+  String video_scrape_collection_rename_to({required Object name}) =>
+      'New name: ${name}';
+  @override
+  String get video_scrape_collection_rename_keep => 'Keep current name';
+  @override
+  String get video_scrape_collection_rename_confirm => 'Rename';
 }
 
 // Path: <root>
@@ -70632,6 +70805,24 @@ class _StringsPtBr extends _StringsEn {
       'There are no items to scrape in this library.';
   @override
   String get scrape_all_start => 'Start';
+  @override
+  String collection_hero_total_episodes({required Object count}) =>
+      '${count} episodes';
+  @override
+  String get video_scrape_collection_rename_title => 'Rename this collection?';
+  @override
+  String get video_scrape_collection_rename_body =>
+      'The matched entry has a different name. Renaming is optional: the cover and details are saved either way, and a rename also replaces the old name on your other synced devices.';
+  @override
+  String video_scrape_collection_rename_from({required Object name}) =>
+      'Current name: ${name}';
+  @override
+  String video_scrape_collection_rename_to({required Object name}) =>
+      'New name: ${name}';
+  @override
+  String get video_scrape_collection_rename_keep => 'Keep current name';
+  @override
+  String get video_scrape_collection_rename_confirm => 'Rename';
 }
 
 // Path: <root>
@@ -77328,6 +77519,24 @@ class _StringsRu extends _StringsEn {
       'There are no items to scrape in this library.';
   @override
   String get scrape_all_start => 'Start';
+  @override
+  String collection_hero_total_episodes({required Object count}) =>
+      '${count} episodes';
+  @override
+  String get video_scrape_collection_rename_title => 'Rename this collection?';
+  @override
+  String get video_scrape_collection_rename_body =>
+      'The matched entry has a different name. Renaming is optional: the cover and details are saved either way, and a rename also replaces the old name on your other synced devices.';
+  @override
+  String video_scrape_collection_rename_from({required Object name}) =>
+      'Current name: ${name}';
+  @override
+  String video_scrape_collection_rename_to({required Object name}) =>
+      'New name: ${name}';
+  @override
+  String get video_scrape_collection_rename_keep => 'Keep current name';
+  @override
+  String get video_scrape_collection_rename_confirm => 'Rename';
 }
 
 // Path: <root>
@@ -83972,6 +84181,24 @@ class _StringsTh extends _StringsEn {
       'There are no items to scrape in this library.';
   @override
   String get scrape_all_start => 'Start';
+  @override
+  String collection_hero_total_episodes({required Object count}) =>
+      '${count} episodes';
+  @override
+  String get video_scrape_collection_rename_title => 'Rename this collection?';
+  @override
+  String get video_scrape_collection_rename_body =>
+      'The matched entry has a different name. Renaming is optional: the cover and details are saved either way, and a rename also replaces the old name on your other synced devices.';
+  @override
+  String video_scrape_collection_rename_from({required Object name}) =>
+      'Current name: ${name}';
+  @override
+  String video_scrape_collection_rename_to({required Object name}) =>
+      'New name: ${name}';
+  @override
+  String get video_scrape_collection_rename_keep => 'Keep current name';
+  @override
+  String get video_scrape_collection_rename_confirm => 'Rename';
 }
 
 // Path: <root>
@@ -90648,6 +90875,24 @@ class _StringsTr extends _StringsEn {
       'There are no items to scrape in this library.';
   @override
   String get scrape_all_start => 'Start';
+  @override
+  String collection_hero_total_episodes({required Object count}) =>
+      '${count} episodes';
+  @override
+  String get video_scrape_collection_rename_title => 'Rename this collection?';
+  @override
+  String get video_scrape_collection_rename_body =>
+      'The matched entry has a different name. Renaming is optional: the cover and details are saved either way, and a rename also replaces the old name on your other synced devices.';
+  @override
+  String video_scrape_collection_rename_from({required Object name}) =>
+      'Current name: ${name}';
+  @override
+  String video_scrape_collection_rename_to({required Object name}) =>
+      'New name: ${name}';
+  @override
+  String get video_scrape_collection_rename_keep => 'Keep current name';
+  @override
+  String get video_scrape_collection_rename_confirm => 'Rename';
 }
 
 // Path: <root>
@@ -97309,6 +97554,24 @@ class _StringsVi extends _StringsEn {
       'There are no items to scrape in this library.';
   @override
   String get scrape_all_start => 'Start';
+  @override
+  String collection_hero_total_episodes({required Object count}) =>
+      '${count} episodes';
+  @override
+  String get video_scrape_collection_rename_title => 'Rename this collection?';
+  @override
+  String get video_scrape_collection_rename_body =>
+      'The matched entry has a different name. Renaming is optional: the cover and details are saved either way, and a rename also replaces the old name on your other synced devices.';
+  @override
+  String video_scrape_collection_rename_from({required Object name}) =>
+      'Current name: ${name}';
+  @override
+  String video_scrape_collection_rename_to({required Object name}) =>
+      'New name: ${name}';
+  @override
+  String get video_scrape_collection_rename_keep => 'Keep current name';
+  @override
+  String get video_scrape_collection_rename_confirm => 'Rename';
 }
 
 // Path: <root>
@@ -103496,6 +103759,24 @@ class _StringsZhCn extends _StringsEn {
   String get scrape_all_empty => '当前库没有可刮削的条目。';
   @override
   String get scrape_all_start => '开始';
+  @override
+  String collection_hero_total_episodes({required Object count}) =>
+      '全 ${count} 话';
+  @override
+  String get video_scrape_collection_rename_title => '要重命名这个合集吗？';
+  @override
+  String get video_scrape_collection_rename_body =>
+      '匹配到的条目名称与当前不同。改名是可选的：无论选哪个，封面和资料都会保存；确认改名还会把其他已同步设备上的旧名一并替换。';
+  @override
+  String video_scrape_collection_rename_from({required Object name}) =>
+      '当前名称：${name}';
+  @override
+  String video_scrape_collection_rename_to({required Object name}) =>
+      '新名称：${name}';
+  @override
+  String get video_scrape_collection_rename_keep => '保留当前名称';
+  @override
+  String get video_scrape_collection_rename_confirm => '重命名';
 }
 
 // Path: <root>
@@ -109953,6 +110234,24 @@ class _StringsZhHk extends _StringsEn {
       'There are no items to scrape in this library.';
   @override
   String get scrape_all_start => 'Start';
+  @override
+  String collection_hero_total_episodes({required Object count}) =>
+      '${count} episodes';
+  @override
+  String get video_scrape_collection_rename_title => 'Rename this collection?';
+  @override
+  String get video_scrape_collection_rename_body =>
+      'The matched entry has a different name. Renaming is optional: the cover and details are saved either way, and a rename also replaces the old name on your other synced devices.';
+  @override
+  String video_scrape_collection_rename_from({required Object name}) =>
+      'Current name: ${name}';
+  @override
+  String video_scrape_collection_rename_to({required Object name}) =>
+      'New name: ${name}';
+  @override
+  String get video_scrape_collection_rename_keep => 'Keep current name';
+  @override
+  String get video_scrape_collection_rename_confirm => 'Rename';
 }
 
 /// Flat map(s) containing all translations.
@@ -115889,6 +116188,20 @@ extension on _StringsEn {
         return 'There are no items to scrape in this library.';
       case 'scrape_all_start':
         return 'Start';
+      case 'collection_hero_total_episodes':
+        return ({required Object count}) => '${count} episodes';
+      case 'video_scrape_collection_rename_title':
+        return 'Rename this collection?';
+      case 'video_scrape_collection_rename_body':
+        return 'The matched entry has a different name. Renaming is optional: the cover and details are saved either way, and a rename also replaces the old name on your other synced devices.';
+      case 'video_scrape_collection_rename_from':
+        return ({required Object name}) => 'Current name: ${name}';
+      case 'video_scrape_collection_rename_to':
+        return ({required Object name}) => 'New name: ${name}';
+      case 'video_scrape_collection_rename_keep':
+        return 'Keep current name';
+      case 'video_scrape_collection_rename_confirm':
+        return 'Rename';
       default:
         return null;
     }
@@ -121823,6 +122136,20 @@ extension on _StringsAr {
         return 'There are no items to scrape in this library.';
       case 'scrape_all_start':
         return 'Start';
+      case 'collection_hero_total_episodes':
+        return ({required Object count}) => '${count} episodes';
+      case 'video_scrape_collection_rename_title':
+        return 'Rename this collection?';
+      case 'video_scrape_collection_rename_body':
+        return 'The matched entry has a different name. Renaming is optional: the cover and details are saved either way, and a rename also replaces the old name on your other synced devices.';
+      case 'video_scrape_collection_rename_from':
+        return ({required Object name}) => 'Current name: ${name}';
+      case 'video_scrape_collection_rename_to':
+        return ({required Object name}) => 'New name: ${name}';
+      case 'video_scrape_collection_rename_keep':
+        return 'Keep current name';
+      case 'video_scrape_collection_rename_confirm':
+        return 'Rename';
       default:
         return null;
     }
@@ -127779,6 +128106,20 @@ extension on _StringsDe {
         return 'There are no items to scrape in this library.';
       case 'scrape_all_start':
         return 'Start';
+      case 'collection_hero_total_episodes':
+        return ({required Object count}) => '${count} episodes';
+      case 'video_scrape_collection_rename_title':
+        return 'Rename this collection?';
+      case 'video_scrape_collection_rename_body':
+        return 'The matched entry has a different name. Renaming is optional: the cover and details are saved either way, and a rename also replaces the old name on your other synced devices.';
+      case 'video_scrape_collection_rename_from':
+        return ({required Object name}) => 'Current name: ${name}';
+      case 'video_scrape_collection_rename_to':
+        return ({required Object name}) => 'New name: ${name}';
+      case 'video_scrape_collection_rename_keep':
+        return 'Keep current name';
+      case 'video_scrape_collection_rename_confirm':
+        return 'Rename';
       default:
         return null;
     }
@@ -133734,6 +134075,20 @@ extension on _StringsEs {
         return 'There are no items to scrape in this library.';
       case 'scrape_all_start':
         return 'Start';
+      case 'collection_hero_total_episodes':
+        return ({required Object count}) => '${count} episodes';
+      case 'video_scrape_collection_rename_title':
+        return 'Rename this collection?';
+      case 'video_scrape_collection_rename_body':
+        return 'The matched entry has a different name. Renaming is optional: the cover and details are saved either way, and a rename also replaces the old name on your other synced devices.';
+      case 'video_scrape_collection_rename_from':
+        return ({required Object name}) => 'Current name: ${name}';
+      case 'video_scrape_collection_rename_to':
+        return ({required Object name}) => 'New name: ${name}';
+      case 'video_scrape_collection_rename_keep':
+        return 'Keep current name';
+      case 'video_scrape_collection_rename_confirm':
+        return 'Rename';
       default:
         return null;
     }
@@ -139695,6 +140050,20 @@ extension on _StringsFr {
         return 'There are no items to scrape in this library.';
       case 'scrape_all_start':
         return 'Start';
+      case 'collection_hero_total_episodes':
+        return ({required Object count}) => '${count} episodes';
+      case 'video_scrape_collection_rename_title':
+        return 'Rename this collection?';
+      case 'video_scrape_collection_rename_body':
+        return 'The matched entry has a different name. Renaming is optional: the cover and details are saved either way, and a rename also replaces the old name on your other synced devices.';
+      case 'video_scrape_collection_rename_from':
+        return ({required Object name}) => 'Current name: ${name}';
+      case 'video_scrape_collection_rename_to':
+        return ({required Object name}) => 'New name: ${name}';
+      case 'video_scrape_collection_rename_keep':
+        return 'Keep current name';
+      case 'video_scrape_collection_rename_confirm':
+        return 'Rename';
       default:
         return null;
     }
@@ -145638,6 +146007,20 @@ extension on _StringsId {
         return 'There are no items to scrape in this library.';
       case 'scrape_all_start':
         return 'Start';
+      case 'collection_hero_total_episodes':
+        return ({required Object count}) => '${count} episodes';
+      case 'video_scrape_collection_rename_title':
+        return 'Rename this collection?';
+      case 'video_scrape_collection_rename_body':
+        return 'The matched entry has a different name. Renaming is optional: the cover and details are saved either way, and a rename also replaces the old name on your other synced devices.';
+      case 'video_scrape_collection_rename_from':
+        return ({required Object name}) => 'Current name: ${name}';
+      case 'video_scrape_collection_rename_to':
+        return ({required Object name}) => 'New name: ${name}';
+      case 'video_scrape_collection_rename_keep':
+        return 'Keep current name';
+      case 'video_scrape_collection_rename_confirm':
+        return 'Rename';
       default:
         return null;
     }
@@ -151595,6 +151978,20 @@ extension on _StringsIt {
         return 'There are no items to scrape in this library.';
       case 'scrape_all_start':
         return 'Start';
+      case 'collection_hero_total_episodes':
+        return ({required Object count}) => '${count} episodes';
+      case 'video_scrape_collection_rename_title':
+        return 'Rename this collection?';
+      case 'video_scrape_collection_rename_body':
+        return 'The matched entry has a different name. Renaming is optional: the cover and details are saved either way, and a rename also replaces the old name on your other synced devices.';
+      case 'video_scrape_collection_rename_from':
+        return ({required Object name}) => 'Current name: ${name}';
+      case 'video_scrape_collection_rename_to':
+        return ({required Object name}) => 'New name: ${name}';
+      case 'video_scrape_collection_rename_keep':
+        return 'Keep current name';
+      case 'video_scrape_collection_rename_confirm':
+        return 'Rename';
       default:
         return null;
     }
@@ -157514,6 +157911,20 @@ extension on _StringsJa {
         return 'There are no items to scrape in this library.';
       case 'scrape_all_start':
         return 'Start';
+      case 'collection_hero_total_episodes':
+        return ({required Object count}) => '${count} episodes';
+      case 'video_scrape_collection_rename_title':
+        return 'Rename this collection?';
+      case 'video_scrape_collection_rename_body':
+        return 'The matched entry has a different name. Renaming is optional: the cover and details are saved either way, and a rename also replaces the old name on your other synced devices.';
+      case 'video_scrape_collection_rename_from':
+        return ({required Object name}) => 'Current name: ${name}';
+      case 'video_scrape_collection_rename_to':
+        return ({required Object name}) => 'New name: ${name}';
+      case 'video_scrape_collection_rename_keep':
+        return 'Keep current name';
+      case 'video_scrape_collection_rename_confirm':
+        return 'Rename';
       default:
         return null;
     }
@@ -163437,6 +163848,20 @@ extension on _StringsKo {
         return 'There are no items to scrape in this library.';
       case 'scrape_all_start':
         return 'Start';
+      case 'collection_hero_total_episodes':
+        return ({required Object count}) => '${count} episodes';
+      case 'video_scrape_collection_rename_title':
+        return 'Rename this collection?';
+      case 'video_scrape_collection_rename_body':
+        return 'The matched entry has a different name. Renaming is optional: the cover and details are saved either way, and a rename also replaces the old name on your other synced devices.';
+      case 'video_scrape_collection_rename_from':
+        return ({required Object name}) => 'Current name: ${name}';
+      case 'video_scrape_collection_rename_to':
+        return ({required Object name}) => 'New name: ${name}';
+      case 'video_scrape_collection_rename_keep':
+        return 'Keep current name';
+      case 'video_scrape_collection_rename_confirm':
+        return 'Rename';
       default:
         return null;
     }
@@ -169388,6 +169813,20 @@ extension on _StringsNl {
         return 'There are no items to scrape in this library.';
       case 'scrape_all_start':
         return 'Start';
+      case 'collection_hero_total_episodes':
+        return ({required Object count}) => '${count} episodes';
+      case 'video_scrape_collection_rename_title':
+        return 'Rename this collection?';
+      case 'video_scrape_collection_rename_body':
+        return 'The matched entry has a different name. Renaming is optional: the cover and details are saved either way, and a rename also replaces the old name on your other synced devices.';
+      case 'video_scrape_collection_rename_from':
+        return ({required Object name}) => 'Current name: ${name}';
+      case 'video_scrape_collection_rename_to':
+        return ({required Object name}) => 'New name: ${name}';
+      case 'video_scrape_collection_rename_keep':
+        return 'Keep current name';
+      case 'video_scrape_collection_rename_confirm':
+        return 'Rename';
       default:
         return null;
     }
@@ -175336,6 +175775,20 @@ extension on _StringsPtBr {
         return 'There are no items to scrape in this library.';
       case 'scrape_all_start':
         return 'Start';
+      case 'collection_hero_total_episodes':
+        return ({required Object count}) => '${count} episodes';
+      case 'video_scrape_collection_rename_title':
+        return 'Rename this collection?';
+      case 'video_scrape_collection_rename_body':
+        return 'The matched entry has a different name. Renaming is optional: the cover and details are saved either way, and a rename also replaces the old name on your other synced devices.';
+      case 'video_scrape_collection_rename_from':
+        return ({required Object name}) => 'Current name: ${name}';
+      case 'video_scrape_collection_rename_to':
+        return ({required Object name}) => 'New name: ${name}';
+      case 'video_scrape_collection_rename_keep':
+        return 'Keep current name';
+      case 'video_scrape_collection_rename_confirm':
+        return 'Rename';
       default:
         return null;
     }
@@ -181289,6 +181742,20 @@ extension on _StringsRu {
         return 'There are no items to scrape in this library.';
       case 'scrape_all_start':
         return 'Start';
+      case 'collection_hero_total_episodes':
+        return ({required Object count}) => '${count} episodes';
+      case 'video_scrape_collection_rename_title':
+        return 'Rename this collection?';
+      case 'video_scrape_collection_rename_body':
+        return 'The matched entry has a different name. Renaming is optional: the cover and details are saved either way, and a rename also replaces the old name on your other synced devices.';
+      case 'video_scrape_collection_rename_from':
+        return ({required Object name}) => 'Current name: ${name}';
+      case 'video_scrape_collection_rename_to':
+        return ({required Object name}) => 'New name: ${name}';
+      case 'video_scrape_collection_rename_keep':
+        return 'Keep current name';
+      case 'video_scrape_collection_rename_confirm':
+        return 'Rename';
       default:
         return null;
     }
@@ -187225,6 +187692,20 @@ extension on _StringsTh {
         return 'There are no items to scrape in this library.';
       case 'scrape_all_start':
         return 'Start';
+      case 'collection_hero_total_episodes':
+        return ({required Object count}) => '${count} episodes';
+      case 'video_scrape_collection_rename_title':
+        return 'Rename this collection?';
+      case 'video_scrape_collection_rename_body':
+        return 'The matched entry has a different name. Renaming is optional: the cover and details are saved either way, and a rename also replaces the old name on your other synced devices.';
+      case 'video_scrape_collection_rename_from':
+        return ({required Object name}) => 'Current name: ${name}';
+      case 'video_scrape_collection_rename_to':
+        return ({required Object name}) => 'New name: ${name}';
+      case 'video_scrape_collection_rename_keep':
+        return 'Keep current name';
+      case 'video_scrape_collection_rename_confirm':
+        return 'Rename';
       default:
         return null;
     }
@@ -193170,6 +193651,20 @@ extension on _StringsTr {
         return 'There are no items to scrape in this library.';
       case 'scrape_all_start':
         return 'Start';
+      case 'collection_hero_total_episodes':
+        return ({required Object count}) => '${count} episodes';
+      case 'video_scrape_collection_rename_title':
+        return 'Rename this collection?';
+      case 'video_scrape_collection_rename_body':
+        return 'The matched entry has a different name. Renaming is optional: the cover and details are saved either way, and a rename also replaces the old name on your other synced devices.';
+      case 'video_scrape_collection_rename_from':
+        return ({required Object name}) => 'Current name: ${name}';
+      case 'video_scrape_collection_rename_to':
+        return ({required Object name}) => 'New name: ${name}';
+      case 'video_scrape_collection_rename_keep':
+        return 'Keep current name';
+      case 'video_scrape_collection_rename_confirm':
+        return 'Rename';
       default:
         return null;
     }
@@ -199111,6 +199606,20 @@ extension on _StringsVi {
         return 'There are no items to scrape in this library.';
       case 'scrape_all_start':
         return 'Start';
+      case 'collection_hero_total_episodes':
+        return ({required Object count}) => '${count} episodes';
+      case 'video_scrape_collection_rename_title':
+        return 'Rename this collection?';
+      case 'video_scrape_collection_rename_body':
+        return 'The matched entry has a different name. Renaming is optional: the cover and details are saved either way, and a rename also replaces the old name on your other synced devices.';
+      case 'video_scrape_collection_rename_from':
+        return ({required Object name}) => 'Current name: ${name}';
+      case 'video_scrape_collection_rename_to':
+        return ({required Object name}) => 'New name: ${name}';
+      case 'video_scrape_collection_rename_keep':
+        return 'Keep current name';
+      case 'video_scrape_collection_rename_confirm':
+        return 'Rename';
       default:
         return null;
     }
@@ -204999,6 +205508,20 @@ extension on _StringsZhCn {
         return '当前库没有可刮削的条目。';
       case 'scrape_all_start':
         return '开始';
+      case 'collection_hero_total_episodes':
+        return ({required Object count}) => '全 ${count} 话';
+      case 'video_scrape_collection_rename_title':
+        return '要重命名这个合集吗？';
+      case 'video_scrape_collection_rename_body':
+        return '匹配到的条目名称与当前不同。改名是可选的：无论选哪个，封面和资料都会保存；确认改名还会把其他已同步设备上的旧名一并替换。';
+      case 'video_scrape_collection_rename_from':
+        return ({required Object name}) => '当前名称：${name}';
+      case 'video_scrape_collection_rename_to':
+        return ({required Object name}) => '新名称：${name}';
+      case 'video_scrape_collection_rename_keep':
+        return '保留当前名称';
+      case 'video_scrape_collection_rename_confirm':
+        return '重命名';
       default:
         return null;
     }
@@ -210913,6 +211436,20 @@ extension on _StringsZhHk {
         return 'There are no items to scrape in this library.';
       case 'scrape_all_start':
         return 'Start';
+      case 'collection_hero_total_episodes':
+        return ({required Object count}) => '${count} episodes';
+      case 'video_scrape_collection_rename_title':
+        return 'Rename this collection?';
+      case 'video_scrape_collection_rename_body':
+        return 'The matched entry has a different name. Renaming is optional: the cover and details are saved either way, and a rename also replaces the old name on your other synced devices.';
+      case 'video_scrape_collection_rename_from':
+        return ({required Object name}) => 'Current name: ${name}';
+      case 'video_scrape_collection_rename_to':
+        return ({required Object name}) => 'New name: ${name}';
+      case 'video_scrape_collection_rename_keep':
+        return 'Keep current name';
+      case 'video_scrape_collection_rename_confirm':
+        return 'Rename';
       default:
         return null;
     }
