@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 50524 (2972 per locale)
+/// Strings: 50745 (2985 per locale)
 ///
-/// Built on 2026-08-01 at 07:42 UTC
+/// Built on 2026-08-01 at 08:46 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -4006,6 +4006,19 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get download_detail_tracker_disabled => 'Disabled';
   String get download_detail_no_peers => 'No connected peers';
   String get download_detail_no_trackers => 'No trackers';
+  String get video_filter_year => 'Year';
+  String get video_filter_year_unknown => 'Unknown year';
+  String get video_filter_watch_status => 'Watch status';
+  String get video_filter_watch_status_unwatched => 'Unwatched';
+  String get video_filter_watch_status_watching => 'Watching';
+  String get video_filter_watch_status_completed => 'Completed';
+  String get video_hero_detail_view => 'Details';
+  String video_hero_episodes_watched({required Object n}) => '${n} eps watched';
+  String get video_recently_added_badge => 'NEW';
+  String get video_air_season_winter => 'Winter';
+  String get video_air_season_spring => 'Spring';
+  String get video_air_season_summer => 'Summer';
+  String get video_air_season_autumn => 'Fall';
 }
 
 // Path: <root>
@@ -10833,6 +10846,32 @@ class _StringsAr extends _StringsEn {
   String get download_detail_no_peers => 'No connected peers';
   @override
   String get download_detail_no_trackers => 'No trackers';
+  @override
+  String get video_filter_year => 'Year';
+  @override
+  String get video_filter_year_unknown => 'Unknown year';
+  @override
+  String get video_filter_watch_status => 'Watch status';
+  @override
+  String get video_filter_watch_status_unwatched => 'Unwatched';
+  @override
+  String get video_filter_watch_status_watching => 'Watching';
+  @override
+  String get video_filter_watch_status_completed => 'Completed';
+  @override
+  String get video_hero_detail_view => 'Details';
+  @override
+  String video_hero_episodes_watched({required Object n}) => '${n} eps watched';
+  @override
+  String get video_recently_added_badge => 'NEW';
+  @override
+  String get video_air_season_winter => 'Winter';
+  @override
+  String get video_air_season_spring => 'Spring';
+  @override
+  String get video_air_season_summer => 'Summer';
+  @override
+  String get video_air_season_autumn => 'Fall';
 }
 
 // Path: <root>
@@ -17727,6 +17766,32 @@ class _StringsDe extends _StringsEn {
   String get download_detail_no_peers => 'No connected peers';
   @override
   String get download_detail_no_trackers => 'No trackers';
+  @override
+  String get video_filter_year => 'Year';
+  @override
+  String get video_filter_year_unknown => 'Unknown year';
+  @override
+  String get video_filter_watch_status => 'Watch status';
+  @override
+  String get video_filter_watch_status_unwatched => 'Unwatched';
+  @override
+  String get video_filter_watch_status_watching => 'Watching';
+  @override
+  String get video_filter_watch_status_completed => 'Completed';
+  @override
+  String get video_hero_detail_view => 'Details';
+  @override
+  String video_hero_episodes_watched({required Object n}) => '${n} eps watched';
+  @override
+  String get video_recently_added_badge => 'NEW';
+  @override
+  String get video_air_season_winter => 'Winter';
+  @override
+  String get video_air_season_spring => 'Spring';
+  @override
+  String get video_air_season_summer => 'Summer';
+  @override
+  String get video_air_season_autumn => 'Fall';
 }
 
 // Path: <root>
@@ -24636,6 +24701,32 @@ class _StringsEs extends _StringsEn {
   String get download_detail_no_peers => 'No connected peers';
   @override
   String get download_detail_no_trackers => 'No trackers';
+  @override
+  String get video_filter_year => 'Year';
+  @override
+  String get video_filter_year_unknown => 'Unknown year';
+  @override
+  String get video_filter_watch_status => 'Watch status';
+  @override
+  String get video_filter_watch_status_unwatched => 'Unwatched';
+  @override
+  String get video_filter_watch_status_watching => 'Watching';
+  @override
+  String get video_filter_watch_status_completed => 'Completed';
+  @override
+  String get video_hero_detail_view => 'Details';
+  @override
+  String video_hero_episodes_watched({required Object n}) => '${n} eps watched';
+  @override
+  String get video_recently_added_badge => 'NEW';
+  @override
+  String get video_air_season_winter => 'Winter';
+  @override
+  String get video_air_season_spring => 'Spring';
+  @override
+  String get video_air_season_summer => 'Summer';
+  @override
+  String get video_air_season_autumn => 'Fall';
 }
 
 // Path: <root>
@@ -31557,6 +31648,32 @@ class _StringsFr extends _StringsEn {
   String get download_detail_no_peers => 'No connected peers';
   @override
   String get download_detail_no_trackers => 'No trackers';
+  @override
+  String get video_filter_year => 'Year';
+  @override
+  String get video_filter_year_unknown => 'Unknown year';
+  @override
+  String get video_filter_watch_status => 'Watch status';
+  @override
+  String get video_filter_watch_status_unwatched => 'Unwatched';
+  @override
+  String get video_filter_watch_status_watching => 'Watching';
+  @override
+  String get video_filter_watch_status_completed => 'Completed';
+  @override
+  String get video_hero_detail_view => 'Details';
+  @override
+  String video_hero_episodes_watched({required Object n}) => '${n} eps watched';
+  @override
+  String get video_recently_added_badge => 'NEW';
+  @override
+  String get video_air_season_winter => 'Winter';
+  @override
+  String get video_air_season_spring => 'Spring';
+  @override
+  String get video_air_season_summer => 'Summer';
+  @override
+  String get video_air_season_autumn => 'Fall';
 }
 
 // Path: <root>
@@ -38407,6 +38524,32 @@ class _StringsId extends _StringsEn {
   String get download_detail_no_peers => 'No connected peers';
   @override
   String get download_detail_no_trackers => 'No trackers';
+  @override
+  String get video_filter_year => 'Year';
+  @override
+  String get video_filter_year_unknown => 'Unknown year';
+  @override
+  String get video_filter_watch_status => 'Watch status';
+  @override
+  String get video_filter_watch_status_unwatched => 'Unwatched';
+  @override
+  String get video_filter_watch_status_watching => 'Watching';
+  @override
+  String get video_filter_watch_status_completed => 'Completed';
+  @override
+  String get video_hero_detail_view => 'Details';
+  @override
+  String video_hero_episodes_watched({required Object n}) => '${n} eps watched';
+  @override
+  String get video_recently_added_badge => 'NEW';
+  @override
+  String get video_air_season_winter => 'Winter';
+  @override
+  String get video_air_season_spring => 'Spring';
+  @override
+  String get video_air_season_summer => 'Summer';
+  @override
+  String get video_air_season_autumn => 'Fall';
 }
 
 // Path: <root>
@@ -45303,6 +45446,32 @@ class _StringsIt extends _StringsEn {
   String get download_detail_no_peers => 'No connected peers';
   @override
   String get download_detail_no_trackers => 'No trackers';
+  @override
+  String get video_filter_year => 'Year';
+  @override
+  String get video_filter_year_unknown => 'Unknown year';
+  @override
+  String get video_filter_watch_status => 'Watch status';
+  @override
+  String get video_filter_watch_status_unwatched => 'Unwatched';
+  @override
+  String get video_filter_watch_status_watching => 'Watching';
+  @override
+  String get video_filter_watch_status_completed => 'Completed';
+  @override
+  String get video_hero_detail_view => 'Details';
+  @override
+  String video_hero_episodes_watched({required Object n}) => '${n} eps watched';
+  @override
+  String get video_recently_added_badge => 'NEW';
+  @override
+  String get video_air_season_winter => 'Winter';
+  @override
+  String get video_air_season_spring => 'Spring';
+  @override
+  String get video_air_season_summer => 'Summer';
+  @override
+  String get video_air_season_autumn => 'Fall';
 }
 
 // Path: <root>
@@ -52016,6 +52185,32 @@ class _StringsJa extends _StringsEn {
   String get download_detail_no_peers => 'No connected peers';
   @override
   String get download_detail_no_trackers => 'No trackers';
+  @override
+  String get video_filter_year => 'Year';
+  @override
+  String get video_filter_year_unknown => 'Unknown year';
+  @override
+  String get video_filter_watch_status => 'Watch status';
+  @override
+  String get video_filter_watch_status_unwatched => 'Unwatched';
+  @override
+  String get video_filter_watch_status_watching => 'Watching';
+  @override
+  String get video_filter_watch_status_completed => 'Completed';
+  @override
+  String get video_hero_detail_view => 'Details';
+  @override
+  String video_hero_episodes_watched({required Object n}) => '${n} eps watched';
+  @override
+  String get video_recently_added_badge => 'NEW';
+  @override
+  String get video_air_season_winter => 'Winter';
+  @override
+  String get video_air_season_spring => 'Spring';
+  @override
+  String get video_air_season_summer => 'Summer';
+  @override
+  String get video_air_season_autumn => 'Fall';
 }
 
 // Path: <root>
@@ -58731,6 +58926,32 @@ class _StringsKo extends _StringsEn {
   String get download_detail_no_peers => 'No connected peers';
   @override
   String get download_detail_no_trackers => 'No trackers';
+  @override
+  String get video_filter_year => 'Year';
+  @override
+  String get video_filter_year_unknown => 'Unknown year';
+  @override
+  String get video_filter_watch_status => 'Watch status';
+  @override
+  String get video_filter_watch_status_unwatched => 'Unwatched';
+  @override
+  String get video_filter_watch_status_watching => 'Watching';
+  @override
+  String get video_filter_watch_status_completed => 'Completed';
+  @override
+  String get video_hero_detail_view => 'Details';
+  @override
+  String video_hero_episodes_watched({required Object n}) => '${n} eps watched';
+  @override
+  String get video_recently_added_badge => 'NEW';
+  @override
+  String get video_air_season_winter => 'Winter';
+  @override
+  String get video_air_season_spring => 'Spring';
+  @override
+  String get video_air_season_summer => 'Summer';
+  @override
+  String get video_air_season_autumn => 'Fall';
 }
 
 // Path: <root>
@@ -65607,6 +65828,32 @@ class _StringsNl extends _StringsEn {
   String get download_detail_no_peers => 'No connected peers';
   @override
   String get download_detail_no_trackers => 'No trackers';
+  @override
+  String get video_filter_year => 'Year';
+  @override
+  String get video_filter_year_unknown => 'Unknown year';
+  @override
+  String get video_filter_watch_status => 'Watch status';
+  @override
+  String get video_filter_watch_status_unwatched => 'Unwatched';
+  @override
+  String get video_filter_watch_status_watching => 'Watching';
+  @override
+  String get video_filter_watch_status_completed => 'Completed';
+  @override
+  String get video_hero_detail_view => 'Details';
+  @override
+  String video_hero_episodes_watched({required Object n}) => '${n} eps watched';
+  @override
+  String get video_recently_added_badge => 'NEW';
+  @override
+  String get video_air_season_winter => 'Winter';
+  @override
+  String get video_air_season_spring => 'Spring';
+  @override
+  String get video_air_season_summer => 'Summer';
+  @override
+  String get video_air_season_autumn => 'Fall';
 }
 
 // Path: <root>
@@ -72496,6 +72743,32 @@ class _StringsPtBr extends _StringsEn {
   String get download_detail_no_peers => 'No connected peers';
   @override
   String get download_detail_no_trackers => 'No trackers';
+  @override
+  String get video_filter_year => 'Year';
+  @override
+  String get video_filter_year_unknown => 'Unknown year';
+  @override
+  String get video_filter_watch_status => 'Watch status';
+  @override
+  String get video_filter_watch_status_unwatched => 'Unwatched';
+  @override
+  String get video_filter_watch_status_watching => 'Watching';
+  @override
+  String get video_filter_watch_status_completed => 'Completed';
+  @override
+  String get video_hero_detail_view => 'Details';
+  @override
+  String video_hero_episodes_watched({required Object n}) => '${n} eps watched';
+  @override
+  String get video_recently_added_badge => 'NEW';
+  @override
+  String get video_air_season_winter => 'Winter';
+  @override
+  String get video_air_season_spring => 'Spring';
+  @override
+  String get video_air_season_summer => 'Summer';
+  @override
+  String get video_air_season_autumn => 'Fall';
 }
 
 // Path: <root>
@@ -79369,6 +79642,32 @@ class _StringsRu extends _StringsEn {
   String get download_detail_no_peers => 'No connected peers';
   @override
   String get download_detail_no_trackers => 'No trackers';
+  @override
+  String get video_filter_year => 'Year';
+  @override
+  String get video_filter_year_unknown => 'Unknown year';
+  @override
+  String get video_filter_watch_status => 'Watch status';
+  @override
+  String get video_filter_watch_status_unwatched => 'Unwatched';
+  @override
+  String get video_filter_watch_status_watching => 'Watching';
+  @override
+  String get video_filter_watch_status_completed => 'Completed';
+  @override
+  String get video_hero_detail_view => 'Details';
+  @override
+  String video_hero_episodes_watched({required Object n}) => '${n} eps watched';
+  @override
+  String get video_recently_added_badge => 'NEW';
+  @override
+  String get video_air_season_winter => 'Winter';
+  @override
+  String get video_air_season_spring => 'Spring';
+  @override
+  String get video_air_season_summer => 'Summer';
+  @override
+  String get video_air_season_autumn => 'Fall';
 }
 
 // Path: <root>
@@ -86190,6 +86489,32 @@ class _StringsTh extends _StringsEn {
   String get download_detail_no_peers => 'No connected peers';
   @override
   String get download_detail_no_trackers => 'No trackers';
+  @override
+  String get video_filter_year => 'Year';
+  @override
+  String get video_filter_year_unknown => 'Unknown year';
+  @override
+  String get video_filter_watch_status => 'Watch status';
+  @override
+  String get video_filter_watch_status_unwatched => 'Unwatched';
+  @override
+  String get video_filter_watch_status_watching => 'Watching';
+  @override
+  String get video_filter_watch_status_completed => 'Completed';
+  @override
+  String get video_hero_detail_view => 'Details';
+  @override
+  String video_hero_episodes_watched({required Object n}) => '${n} eps watched';
+  @override
+  String get video_recently_added_badge => 'NEW';
+  @override
+  String get video_air_season_winter => 'Winter';
+  @override
+  String get video_air_season_spring => 'Spring';
+  @override
+  String get video_air_season_summer => 'Summer';
+  @override
+  String get video_air_season_autumn => 'Fall';
 }
 
 // Path: <root>
@@ -93043,6 +93368,32 @@ class _StringsTr extends _StringsEn {
   String get download_detail_no_peers => 'No connected peers';
   @override
   String get download_detail_no_trackers => 'No trackers';
+  @override
+  String get video_filter_year => 'Year';
+  @override
+  String get video_filter_year_unknown => 'Unknown year';
+  @override
+  String get video_filter_watch_status => 'Watch status';
+  @override
+  String get video_filter_watch_status_unwatched => 'Unwatched';
+  @override
+  String get video_filter_watch_status_watching => 'Watching';
+  @override
+  String get video_filter_watch_status_completed => 'Completed';
+  @override
+  String get video_hero_detail_view => 'Details';
+  @override
+  String video_hero_episodes_watched({required Object n}) => '${n} eps watched';
+  @override
+  String get video_recently_added_badge => 'NEW';
+  @override
+  String get video_air_season_winter => 'Winter';
+  @override
+  String get video_air_season_spring => 'Spring';
+  @override
+  String get video_air_season_summer => 'Summer';
+  @override
+  String get video_air_season_autumn => 'Fall';
 }
 
 // Path: <root>
@@ -99881,6 +100232,32 @@ class _StringsVi extends _StringsEn {
   String get download_detail_no_peers => 'No connected peers';
   @override
   String get download_detail_no_trackers => 'No trackers';
+  @override
+  String get video_filter_year => 'Year';
+  @override
+  String get video_filter_year_unknown => 'Unknown year';
+  @override
+  String get video_filter_watch_status => 'Watch status';
+  @override
+  String get video_filter_watch_status_unwatched => 'Unwatched';
+  @override
+  String get video_filter_watch_status_watching => 'Watching';
+  @override
+  String get video_filter_watch_status_completed => 'Completed';
+  @override
+  String get video_hero_detail_view => 'Details';
+  @override
+  String video_hero_episodes_watched({required Object n}) => '${n} eps watched';
+  @override
+  String get video_recently_added_badge => 'NEW';
+  @override
+  String get video_air_season_winter => 'Winter';
+  @override
+  String get video_air_season_spring => 'Spring';
+  @override
+  String get video_air_season_summer => 'Summer';
+  @override
+  String get video_air_season_autumn => 'Fall';
 }
 
 // Path: <root>
@@ -106241,6 +106618,32 @@ class _StringsZhCn extends _StringsEn {
   String get download_detail_no_peers => '暂无已连接节点';
   @override
   String get download_detail_no_trackers => '无 Tracker';
+  @override
+  String get video_filter_year => '年份';
+  @override
+  String get video_filter_year_unknown => '未知年份';
+  @override
+  String get video_filter_watch_status => '看完状态';
+  @override
+  String get video_filter_watch_status_unwatched => '未看';
+  @override
+  String get video_filter_watch_status_watching => '在看';
+  @override
+  String get video_filter_watch_status_completed => '已看完';
+  @override
+  String get video_hero_detail_view => '详情';
+  @override
+  String video_hero_episodes_watched({required Object n}) => '已看 ${n} 集';
+  @override
+  String get video_recently_added_badge => '新';
+  @override
+  String get video_air_season_winter => '冬';
+  @override
+  String get video_air_season_spring => '春';
+  @override
+  String get video_air_season_summer => '夏';
+  @override
+  String get video_air_season_autumn => '秋';
 }
 
 // Path: <root>
@@ -112875,6 +113278,32 @@ class _StringsZhHk extends _StringsEn {
   String get download_detail_no_peers => 'No connected peers';
   @override
   String get download_detail_no_trackers => 'No trackers';
+  @override
+  String get video_filter_year => 'Year';
+  @override
+  String get video_filter_year_unknown => 'Unknown year';
+  @override
+  String get video_filter_watch_status => 'Watch status';
+  @override
+  String get video_filter_watch_status_unwatched => 'Unwatched';
+  @override
+  String get video_filter_watch_status_watching => 'Watching';
+  @override
+  String get video_filter_watch_status_completed => 'Completed';
+  @override
+  String get video_hero_detail_view => 'Details';
+  @override
+  String video_hero_episodes_watched({required Object n}) => '${n} eps watched';
+  @override
+  String get video_recently_added_badge => 'NEW';
+  @override
+  String get video_air_season_winter => 'Winter';
+  @override
+  String get video_air_season_spring => 'Spring';
+  @override
+  String get video_air_season_summer => 'Summer';
+  @override
+  String get video_air_season_autumn => 'Fall';
 }
 
 /// Flat map(s) containing all translations.
@@ -118975,6 +119404,32 @@ extension on _StringsEn {
         return 'No connected peers';
       case 'download_detail_no_trackers':
         return 'No trackers';
+      case 'video_filter_year':
+        return 'Year';
+      case 'video_filter_year_unknown':
+        return 'Unknown year';
+      case 'video_filter_watch_status':
+        return 'Watch status';
+      case 'video_filter_watch_status_unwatched':
+        return 'Unwatched';
+      case 'video_filter_watch_status_watching':
+        return 'Watching';
+      case 'video_filter_watch_status_completed':
+        return 'Completed';
+      case 'video_hero_detail_view':
+        return 'Details';
+      case 'video_hero_episodes_watched':
+        return ({required Object n}) => '${n} eps watched';
+      case 'video_recently_added_badge':
+        return 'NEW';
+      case 'video_air_season_winter':
+        return 'Winter';
+      case 'video_air_season_spring':
+        return 'Spring';
+      case 'video_air_season_summer':
+        return 'Summer';
+      case 'video_air_season_autumn':
+        return 'Fall';
       default:
         return null;
     }
@@ -125073,6 +125528,32 @@ extension on _StringsAr {
         return 'No connected peers';
       case 'download_detail_no_trackers':
         return 'No trackers';
+      case 'video_filter_year':
+        return 'Year';
+      case 'video_filter_year_unknown':
+        return 'Unknown year';
+      case 'video_filter_watch_status':
+        return 'Watch status';
+      case 'video_filter_watch_status_unwatched':
+        return 'Unwatched';
+      case 'video_filter_watch_status_watching':
+        return 'Watching';
+      case 'video_filter_watch_status_completed':
+        return 'Completed';
+      case 'video_hero_detail_view':
+        return 'Details';
+      case 'video_hero_episodes_watched':
+        return ({required Object n}) => '${n} eps watched';
+      case 'video_recently_added_badge':
+        return 'NEW';
+      case 'video_air_season_winter':
+        return 'Winter';
+      case 'video_air_season_spring':
+        return 'Spring';
+      case 'video_air_season_summer':
+        return 'Summer';
+      case 'video_air_season_autumn':
+        return 'Fall';
       default:
         return null;
     }
@@ -131193,6 +131674,32 @@ extension on _StringsDe {
         return 'No connected peers';
       case 'download_detail_no_trackers':
         return 'No trackers';
+      case 'video_filter_year':
+        return 'Year';
+      case 'video_filter_year_unknown':
+        return 'Unknown year';
+      case 'video_filter_watch_status':
+        return 'Watch status';
+      case 'video_filter_watch_status_unwatched':
+        return 'Unwatched';
+      case 'video_filter_watch_status_watching':
+        return 'Watching';
+      case 'video_filter_watch_status_completed':
+        return 'Completed';
+      case 'video_hero_detail_view':
+        return 'Details';
+      case 'video_hero_episodes_watched':
+        return ({required Object n}) => '${n} eps watched';
+      case 'video_recently_added_badge':
+        return 'NEW';
+      case 'video_air_season_winter':
+        return 'Winter';
+      case 'video_air_season_spring':
+        return 'Spring';
+      case 'video_air_season_summer':
+        return 'Summer';
+      case 'video_air_season_autumn':
+        return 'Fall';
       default:
         return null;
     }
@@ -137312,6 +137819,32 @@ extension on _StringsEs {
         return 'No connected peers';
       case 'download_detail_no_trackers':
         return 'No trackers';
+      case 'video_filter_year':
+        return 'Year';
+      case 'video_filter_year_unknown':
+        return 'Unknown year';
+      case 'video_filter_watch_status':
+        return 'Watch status';
+      case 'video_filter_watch_status_unwatched':
+        return 'Unwatched';
+      case 'video_filter_watch_status_watching':
+        return 'Watching';
+      case 'video_filter_watch_status_completed':
+        return 'Completed';
+      case 'video_hero_detail_view':
+        return 'Details';
+      case 'video_hero_episodes_watched':
+        return ({required Object n}) => '${n} eps watched';
+      case 'video_recently_added_badge':
+        return 'NEW';
+      case 'video_air_season_winter':
+        return 'Winter';
+      case 'video_air_season_spring':
+        return 'Spring';
+      case 'video_air_season_summer':
+        return 'Summer';
+      case 'video_air_season_autumn':
+        return 'Fall';
       default:
         return null;
     }
@@ -143437,6 +143970,32 @@ extension on _StringsFr {
         return 'No connected peers';
       case 'download_detail_no_trackers':
         return 'No trackers';
+      case 'video_filter_year':
+        return 'Year';
+      case 'video_filter_year_unknown':
+        return 'Unknown year';
+      case 'video_filter_watch_status':
+        return 'Watch status';
+      case 'video_filter_watch_status_unwatched':
+        return 'Unwatched';
+      case 'video_filter_watch_status_watching':
+        return 'Watching';
+      case 'video_filter_watch_status_completed':
+        return 'Completed';
+      case 'video_hero_detail_view':
+        return 'Details';
+      case 'video_hero_episodes_watched':
+        return ({required Object n}) => '${n} eps watched';
+      case 'video_recently_added_badge':
+        return 'NEW';
+      case 'video_air_season_winter':
+        return 'Winter';
+      case 'video_air_season_spring':
+        return 'Spring';
+      case 'video_air_season_summer':
+        return 'Summer';
+      case 'video_air_season_autumn':
+        return 'Fall';
       default:
         return null;
     }
@@ -149544,6 +150103,32 @@ extension on _StringsId {
         return 'No connected peers';
       case 'download_detail_no_trackers':
         return 'No trackers';
+      case 'video_filter_year':
+        return 'Year';
+      case 'video_filter_year_unknown':
+        return 'Unknown year';
+      case 'video_filter_watch_status':
+        return 'Watch status';
+      case 'video_filter_watch_status_unwatched':
+        return 'Unwatched';
+      case 'video_filter_watch_status_watching':
+        return 'Watching';
+      case 'video_filter_watch_status_completed':
+        return 'Completed';
+      case 'video_hero_detail_view':
+        return 'Details';
+      case 'video_hero_episodes_watched':
+        return ({required Object n}) => '${n} eps watched';
+      case 'video_recently_added_badge':
+        return 'NEW';
+      case 'video_air_season_winter':
+        return 'Winter';
+      case 'video_air_season_spring':
+        return 'Spring';
+      case 'video_air_season_summer':
+        return 'Summer';
+      case 'video_air_season_autumn':
+        return 'Fall';
       default:
         return null;
     }
@@ -155665,6 +156250,32 @@ extension on _StringsIt {
         return 'No connected peers';
       case 'download_detail_no_trackers':
         return 'No trackers';
+      case 'video_filter_year':
+        return 'Year';
+      case 'video_filter_year_unknown':
+        return 'Unknown year';
+      case 'video_filter_watch_status':
+        return 'Watch status';
+      case 'video_filter_watch_status_unwatched':
+        return 'Unwatched';
+      case 'video_filter_watch_status_watching':
+        return 'Watching';
+      case 'video_filter_watch_status_completed':
+        return 'Completed';
+      case 'video_hero_detail_view':
+        return 'Details';
+      case 'video_hero_episodes_watched':
+        return ({required Object n}) => '${n} eps watched';
+      case 'video_recently_added_badge':
+        return 'NEW';
+      case 'video_air_season_winter':
+        return 'Winter';
+      case 'video_air_season_spring':
+        return 'Spring';
+      case 'video_air_season_summer':
+        return 'Summer';
+      case 'video_air_season_autumn':
+        return 'Fall';
       default:
         return null;
     }
@@ -161748,6 +162359,32 @@ extension on _StringsJa {
         return 'No connected peers';
       case 'download_detail_no_trackers':
         return 'No trackers';
+      case 'video_filter_year':
+        return 'Year';
+      case 'video_filter_year_unknown':
+        return 'Unknown year';
+      case 'video_filter_watch_status':
+        return 'Watch status';
+      case 'video_filter_watch_status_unwatched':
+        return 'Unwatched';
+      case 'video_filter_watch_status_watching':
+        return 'Watching';
+      case 'video_filter_watch_status_completed':
+        return 'Completed';
+      case 'video_hero_detail_view':
+        return 'Details';
+      case 'video_hero_episodes_watched':
+        return ({required Object n}) => '${n} eps watched';
+      case 'video_recently_added_badge':
+        return 'NEW';
+      case 'video_air_season_winter':
+        return 'Winter';
+      case 'video_air_season_spring':
+        return 'Spring';
+      case 'video_air_season_summer':
+        return 'Summer';
+      case 'video_air_season_autumn':
+        return 'Fall';
       default:
         return null;
     }
@@ -167835,6 +168472,32 @@ extension on _StringsKo {
         return 'No connected peers';
       case 'download_detail_no_trackers':
         return 'No trackers';
+      case 'video_filter_year':
+        return 'Year';
+      case 'video_filter_year_unknown':
+        return 'Unknown year';
+      case 'video_filter_watch_status':
+        return 'Watch status';
+      case 'video_filter_watch_status_unwatched':
+        return 'Unwatched';
+      case 'video_filter_watch_status_watching':
+        return 'Watching';
+      case 'video_filter_watch_status_completed':
+        return 'Completed';
+      case 'video_hero_detail_view':
+        return 'Details';
+      case 'video_hero_episodes_watched':
+        return ({required Object n}) => '${n} eps watched';
+      case 'video_recently_added_badge':
+        return 'NEW';
+      case 'video_air_season_winter':
+        return 'Winter';
+      case 'video_air_season_spring':
+        return 'Spring';
+      case 'video_air_season_summer':
+        return 'Summer';
+      case 'video_air_season_autumn':
+        return 'Fall';
       default:
         return null;
     }
@@ -173950,6 +174613,32 @@ extension on _StringsNl {
         return 'No connected peers';
       case 'download_detail_no_trackers':
         return 'No trackers';
+      case 'video_filter_year':
+        return 'Year';
+      case 'video_filter_year_unknown':
+        return 'Unknown year';
+      case 'video_filter_watch_status':
+        return 'Watch status';
+      case 'video_filter_watch_status_unwatched':
+        return 'Unwatched';
+      case 'video_filter_watch_status_watching':
+        return 'Watching';
+      case 'video_filter_watch_status_completed':
+        return 'Completed';
+      case 'video_hero_detail_view':
+        return 'Details';
+      case 'video_hero_episodes_watched':
+        return ({required Object n}) => '${n} eps watched';
+      case 'video_recently_added_badge':
+        return 'NEW';
+      case 'video_air_season_winter':
+        return 'Winter';
+      case 'video_air_season_spring':
+        return 'Spring';
+      case 'video_air_season_summer':
+        return 'Summer';
+      case 'video_air_season_autumn':
+        return 'Fall';
       default:
         return null;
     }
@@ -180062,6 +180751,32 @@ extension on _StringsPtBr {
         return 'No connected peers';
       case 'download_detail_no_trackers':
         return 'No trackers';
+      case 'video_filter_year':
+        return 'Year';
+      case 'video_filter_year_unknown':
+        return 'Unknown year';
+      case 'video_filter_watch_status':
+        return 'Watch status';
+      case 'video_filter_watch_status_unwatched':
+        return 'Unwatched';
+      case 'video_filter_watch_status_watching':
+        return 'Watching';
+      case 'video_filter_watch_status_completed':
+        return 'Completed';
+      case 'video_hero_detail_view':
+        return 'Details';
+      case 'video_hero_episodes_watched':
+        return ({required Object n}) => '${n} eps watched';
+      case 'video_recently_added_badge':
+        return 'NEW';
+      case 'video_air_season_winter':
+        return 'Winter';
+      case 'video_air_season_spring':
+        return 'Spring';
+      case 'video_air_season_summer':
+        return 'Summer';
+      case 'video_air_season_autumn':
+        return 'Fall';
       default:
         return null;
     }
@@ -186179,6 +186894,32 @@ extension on _StringsRu {
         return 'No connected peers';
       case 'download_detail_no_trackers':
         return 'No trackers';
+      case 'video_filter_year':
+        return 'Year';
+      case 'video_filter_year_unknown':
+        return 'Unknown year';
+      case 'video_filter_watch_status':
+        return 'Watch status';
+      case 'video_filter_watch_status_unwatched':
+        return 'Unwatched';
+      case 'video_filter_watch_status_watching':
+        return 'Watching';
+      case 'video_filter_watch_status_completed':
+        return 'Completed';
+      case 'video_hero_detail_view':
+        return 'Details';
+      case 'video_hero_episodes_watched':
+        return ({required Object n}) => '${n} eps watched';
+      case 'video_recently_added_badge':
+        return 'NEW';
+      case 'video_air_season_winter':
+        return 'Winter';
+      case 'video_air_season_spring':
+        return 'Spring';
+      case 'video_air_season_summer':
+        return 'Summer';
+      case 'video_air_season_autumn':
+        return 'Fall';
       default:
         return null;
     }
@@ -192279,6 +193020,32 @@ extension on _StringsTh {
         return 'No connected peers';
       case 'download_detail_no_trackers':
         return 'No trackers';
+      case 'video_filter_year':
+        return 'Year';
+      case 'video_filter_year_unknown':
+        return 'Unknown year';
+      case 'video_filter_watch_status':
+        return 'Watch status';
+      case 'video_filter_watch_status_unwatched':
+        return 'Unwatched';
+      case 'video_filter_watch_status_watching':
+        return 'Watching';
+      case 'video_filter_watch_status_completed':
+        return 'Completed';
+      case 'video_hero_detail_view':
+        return 'Details';
+      case 'video_hero_episodes_watched':
+        return ({required Object n}) => '${n} eps watched';
+      case 'video_recently_added_badge':
+        return 'NEW';
+      case 'video_air_season_winter':
+        return 'Winter';
+      case 'video_air_season_spring':
+        return 'Spring';
+      case 'video_air_season_summer':
+        return 'Summer';
+      case 'video_air_season_autumn':
+        return 'Fall';
       default:
         return null;
     }
@@ -198388,6 +199155,32 @@ extension on _StringsTr {
         return 'No connected peers';
       case 'download_detail_no_trackers':
         return 'No trackers';
+      case 'video_filter_year':
+        return 'Year';
+      case 'video_filter_year_unknown':
+        return 'Unknown year';
+      case 'video_filter_watch_status':
+        return 'Watch status';
+      case 'video_filter_watch_status_unwatched':
+        return 'Unwatched';
+      case 'video_filter_watch_status_watching':
+        return 'Watching';
+      case 'video_filter_watch_status_completed':
+        return 'Completed';
+      case 'video_hero_detail_view':
+        return 'Details';
+      case 'video_hero_episodes_watched':
+        return ({required Object n}) => '${n} eps watched';
+      case 'video_recently_added_badge':
+        return 'NEW';
+      case 'video_air_season_winter':
+        return 'Winter';
+      case 'video_air_season_spring':
+        return 'Spring';
+      case 'video_air_season_summer':
+        return 'Summer';
+      case 'video_air_season_autumn':
+        return 'Fall';
       default:
         return null;
     }
@@ -204493,6 +205286,32 @@ extension on _StringsVi {
         return 'No connected peers';
       case 'download_detail_no_trackers':
         return 'No trackers';
+      case 'video_filter_year':
+        return 'Year';
+      case 'video_filter_year_unknown':
+        return 'Unknown year';
+      case 'video_filter_watch_status':
+        return 'Watch status';
+      case 'video_filter_watch_status_unwatched':
+        return 'Unwatched';
+      case 'video_filter_watch_status_watching':
+        return 'Watching';
+      case 'video_filter_watch_status_completed':
+        return 'Completed';
+      case 'video_hero_detail_view':
+        return 'Details';
+      case 'video_hero_episodes_watched':
+        return ({required Object n}) => '${n} eps watched';
+      case 'video_recently_added_badge':
+        return 'NEW';
+      case 'video_air_season_winter':
+        return 'Winter';
+      case 'video_air_season_spring':
+        return 'Spring';
+      case 'video_air_season_summer':
+        return 'Summer';
+      case 'video_air_season_autumn':
+        return 'Fall';
       default:
         return null;
     }
@@ -210545,6 +211364,32 @@ extension on _StringsZhCn {
         return '暂无已连接节点';
       case 'download_detail_no_trackers':
         return '无 Tracker';
+      case 'video_filter_year':
+        return '年份';
+      case 'video_filter_year_unknown':
+        return '未知年份';
+      case 'video_filter_watch_status':
+        return '看完状态';
+      case 'video_filter_watch_status_unwatched':
+        return '未看';
+      case 'video_filter_watch_status_watching':
+        return '在看';
+      case 'video_filter_watch_status_completed':
+        return '已看完';
+      case 'video_hero_detail_view':
+        return '详情';
+      case 'video_hero_episodes_watched':
+        return ({required Object n}) => '已看 ${n} 集';
+      case 'video_recently_added_badge':
+        return '新';
+      case 'video_air_season_winter':
+        return '冬';
+      case 'video_air_season_spring':
+        return '春';
+      case 'video_air_season_summer':
+        return '夏';
+      case 'video_air_season_autumn':
+        return '秋';
       default:
         return null;
     }
@@ -216623,6 +217468,32 @@ extension on _StringsZhHk {
         return 'No connected peers';
       case 'download_detail_no_trackers':
         return 'No trackers';
+      case 'video_filter_year':
+        return 'Year';
+      case 'video_filter_year_unknown':
+        return 'Unknown year';
+      case 'video_filter_watch_status':
+        return 'Watch status';
+      case 'video_filter_watch_status_unwatched':
+        return 'Unwatched';
+      case 'video_filter_watch_status_watching':
+        return 'Watching';
+      case 'video_filter_watch_status_completed':
+        return 'Completed';
+      case 'video_hero_detail_view':
+        return 'Details';
+      case 'video_hero_episodes_watched':
+        return ({required Object n}) => '${n} eps watched';
+      case 'video_recently_added_badge':
+        return 'NEW';
+      case 'video_air_season_winter':
+        return 'Winter';
+      case 'video_air_season_spring':
+        return 'Spring';
+      case 'video_air_season_summer':
+        return 'Summer';
+      case 'video_air_season_autumn':
+        return 'Fall';
       default:
         return null;
     }
