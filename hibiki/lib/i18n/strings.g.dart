@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 49504 (2912 per locale)
+/// Strings: 50014 (2942 per locale)
 ///
-/// Built on 2026-08-01 at 05:47 UTC
+/// Built on 2026-08-01 at 06:29 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3937,6 +3937,37 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get download_task_status_error => 'Error';
   String get download_task_pause => 'Pause';
   String get download_task_resume => 'Resume';
+  String get download_detail_title => 'Task details';
+  String get download_detail_tab_overview => 'Overview';
+  String get download_detail_tab_files => 'Files';
+  String get download_detail_tab_peers => 'Peers';
+  String get download_detail_tab_trackers => 'Trackers';
+  String get download_detail_backend_unsupported =>
+      'Not supported by current download backend';
+  String get download_detail_task_gone => 'Task not found in backend';
+  String get download_detail_section_transfer => 'Transfer';
+  String get download_detail_section_network => 'Network';
+  String get download_detail_seeds_label => 'Seeds';
+  String get download_detail_leechers_label => 'Leechers';
+  String get download_detail_connections_label => 'Connections';
+  String get download_detail_time_active => 'Active time';
+  String get download_detail_time_seeding => 'Seeding time';
+  String get download_detail_listen_port => 'Listen port';
+  String get download_detail_dht_nodes => 'DHT nodes';
+  String get download_detail_port_mapping => 'Port mapping';
+  String get download_detail_session_rates => 'Session rates';
+  String get download_detail_pieces_label => 'Pieces';
+  String get download_detail_priority_skip => 'Don\'t download';
+  String get download_detail_priority_normal => 'Normal';
+  String get download_detail_priority_high => 'High';
+  String get download_detail_tracker_working => 'Working';
+  String get download_detail_tracker_updating => 'Updating';
+  String get download_detail_tracker_not_contacted => 'Not contacted yet';
+  String get download_detail_tracker_not_working => 'Not working';
+  String get download_detail_tracker_disabled => 'Disabled';
+  String get download_detail_no_peers => 'No connected peers';
+  String get download_detail_no_trackers => 'No trackers';
+  String get download_detail_priority_mixed => 'Mixed';
 }
 
 // Path: <root>
@@ -10635,6 +10666,67 @@ class _StringsAr extends _StringsEn {
   String get download_task_pause => 'Pause';
   @override
   String get download_task_resume => 'Resume';
+  @override
+  String get download_detail_title => 'Task details';
+  @override
+  String get download_detail_tab_overview => 'Overview';
+  @override
+  String get download_detail_tab_files => 'Files';
+  @override
+  String get download_detail_tab_peers => 'Peers';
+  @override
+  String get download_detail_tab_trackers => 'Trackers';
+  @override
+  String get download_detail_backend_unsupported =>
+      'Not supported by current download backend';
+  @override
+  String get download_detail_task_gone => 'Task not found in backend';
+  @override
+  String get download_detail_section_transfer => 'Transfer';
+  @override
+  String get download_detail_section_network => 'Network';
+  @override
+  String get download_detail_seeds_label => 'Seeds';
+  @override
+  String get download_detail_leechers_label => 'Leechers';
+  @override
+  String get download_detail_connections_label => 'Connections';
+  @override
+  String get download_detail_time_active => 'Active time';
+  @override
+  String get download_detail_time_seeding => 'Seeding time';
+  @override
+  String get download_detail_listen_port => 'Listen port';
+  @override
+  String get download_detail_dht_nodes => 'DHT nodes';
+  @override
+  String get download_detail_port_mapping => 'Port mapping';
+  @override
+  String get download_detail_session_rates => 'Session rates';
+  @override
+  String get download_detail_pieces_label => 'Pieces';
+  @override
+  String get download_detail_priority_skip => 'Don\'t download';
+  @override
+  String get download_detail_priority_normal => 'Normal';
+  @override
+  String get download_detail_priority_high => 'High';
+  @override
+  String get download_detail_tracker_working => 'Working';
+  @override
+  String get download_detail_tracker_updating => 'Updating';
+  @override
+  String get download_detail_tracker_not_contacted => 'Not contacted yet';
+  @override
+  String get download_detail_tracker_not_working => 'Not working';
+  @override
+  String get download_detail_tracker_disabled => 'Disabled';
+  @override
+  String get download_detail_no_peers => 'No connected peers';
+  @override
+  String get download_detail_no_trackers => 'No trackers';
+  @override
+  String get download_detail_priority_mixed => 'Mixed';
 }
 
 // Path: <root>
@@ -17400,6 +17492,67 @@ class _StringsDe extends _StringsEn {
   String get download_task_pause => 'Pause';
   @override
   String get download_task_resume => 'Resume';
+  @override
+  String get download_detail_title => 'Task details';
+  @override
+  String get download_detail_tab_overview => 'Overview';
+  @override
+  String get download_detail_tab_files => 'Files';
+  @override
+  String get download_detail_tab_peers => 'Peers';
+  @override
+  String get download_detail_tab_trackers => 'Trackers';
+  @override
+  String get download_detail_backend_unsupported =>
+      'Not supported by current download backend';
+  @override
+  String get download_detail_task_gone => 'Task not found in backend';
+  @override
+  String get download_detail_section_transfer => 'Transfer';
+  @override
+  String get download_detail_section_network => 'Network';
+  @override
+  String get download_detail_seeds_label => 'Seeds';
+  @override
+  String get download_detail_leechers_label => 'Leechers';
+  @override
+  String get download_detail_connections_label => 'Connections';
+  @override
+  String get download_detail_time_active => 'Active time';
+  @override
+  String get download_detail_time_seeding => 'Seeding time';
+  @override
+  String get download_detail_listen_port => 'Listen port';
+  @override
+  String get download_detail_dht_nodes => 'DHT nodes';
+  @override
+  String get download_detail_port_mapping => 'Port mapping';
+  @override
+  String get download_detail_session_rates => 'Session rates';
+  @override
+  String get download_detail_pieces_label => 'Pieces';
+  @override
+  String get download_detail_priority_skip => 'Don\'t download';
+  @override
+  String get download_detail_priority_normal => 'Normal';
+  @override
+  String get download_detail_priority_high => 'High';
+  @override
+  String get download_detail_tracker_working => 'Working';
+  @override
+  String get download_detail_tracker_updating => 'Updating';
+  @override
+  String get download_detail_tracker_not_contacted => 'Not contacted yet';
+  @override
+  String get download_detail_tracker_not_working => 'Not working';
+  @override
+  String get download_detail_tracker_disabled => 'Disabled';
+  @override
+  String get download_detail_no_peers => 'No connected peers';
+  @override
+  String get download_detail_no_trackers => 'No trackers';
+  @override
+  String get download_detail_priority_mixed => 'Mixed';
 }
 
 // Path: <root>
@@ -24181,6 +24334,67 @@ class _StringsEs extends _StringsEn {
   String get download_task_pause => 'Pause';
   @override
   String get download_task_resume => 'Resume';
+  @override
+  String get download_detail_title => 'Task details';
+  @override
+  String get download_detail_tab_overview => 'Overview';
+  @override
+  String get download_detail_tab_files => 'Files';
+  @override
+  String get download_detail_tab_peers => 'Peers';
+  @override
+  String get download_detail_tab_trackers => 'Trackers';
+  @override
+  String get download_detail_backend_unsupported =>
+      'Not supported by current download backend';
+  @override
+  String get download_detail_task_gone => 'Task not found in backend';
+  @override
+  String get download_detail_section_transfer => 'Transfer';
+  @override
+  String get download_detail_section_network => 'Network';
+  @override
+  String get download_detail_seeds_label => 'Seeds';
+  @override
+  String get download_detail_leechers_label => 'Leechers';
+  @override
+  String get download_detail_connections_label => 'Connections';
+  @override
+  String get download_detail_time_active => 'Active time';
+  @override
+  String get download_detail_time_seeding => 'Seeding time';
+  @override
+  String get download_detail_listen_port => 'Listen port';
+  @override
+  String get download_detail_dht_nodes => 'DHT nodes';
+  @override
+  String get download_detail_port_mapping => 'Port mapping';
+  @override
+  String get download_detail_session_rates => 'Session rates';
+  @override
+  String get download_detail_pieces_label => 'Pieces';
+  @override
+  String get download_detail_priority_skip => 'Don\'t download';
+  @override
+  String get download_detail_priority_normal => 'Normal';
+  @override
+  String get download_detail_priority_high => 'High';
+  @override
+  String get download_detail_tracker_working => 'Working';
+  @override
+  String get download_detail_tracker_updating => 'Updating';
+  @override
+  String get download_detail_tracker_not_contacted => 'Not contacted yet';
+  @override
+  String get download_detail_tracker_not_working => 'Not working';
+  @override
+  String get download_detail_tracker_disabled => 'Disabled';
+  @override
+  String get download_detail_no_peers => 'No connected peers';
+  @override
+  String get download_detail_no_trackers => 'No trackers';
+  @override
+  String get download_detail_priority_mixed => 'Mixed';
 }
 
 // Path: <root>
@@ -30973,6 +31187,67 @@ class _StringsFr extends _StringsEn {
   String get download_task_pause => 'Pause';
   @override
   String get download_task_resume => 'Resume';
+  @override
+  String get download_detail_title => 'Task details';
+  @override
+  String get download_detail_tab_overview => 'Overview';
+  @override
+  String get download_detail_tab_files => 'Files';
+  @override
+  String get download_detail_tab_peers => 'Peers';
+  @override
+  String get download_detail_tab_trackers => 'Trackers';
+  @override
+  String get download_detail_backend_unsupported =>
+      'Not supported by current download backend';
+  @override
+  String get download_detail_task_gone => 'Task not found in backend';
+  @override
+  String get download_detail_section_transfer => 'Transfer';
+  @override
+  String get download_detail_section_network => 'Network';
+  @override
+  String get download_detail_seeds_label => 'Seeds';
+  @override
+  String get download_detail_leechers_label => 'Leechers';
+  @override
+  String get download_detail_connections_label => 'Connections';
+  @override
+  String get download_detail_time_active => 'Active time';
+  @override
+  String get download_detail_time_seeding => 'Seeding time';
+  @override
+  String get download_detail_listen_port => 'Listen port';
+  @override
+  String get download_detail_dht_nodes => 'DHT nodes';
+  @override
+  String get download_detail_port_mapping => 'Port mapping';
+  @override
+  String get download_detail_session_rates => 'Session rates';
+  @override
+  String get download_detail_pieces_label => 'Pieces';
+  @override
+  String get download_detail_priority_skip => 'Don\'t download';
+  @override
+  String get download_detail_priority_normal => 'Normal';
+  @override
+  String get download_detail_priority_high => 'High';
+  @override
+  String get download_detail_tracker_working => 'Working';
+  @override
+  String get download_detail_tracker_updating => 'Updating';
+  @override
+  String get download_detail_tracker_not_contacted => 'Not contacted yet';
+  @override
+  String get download_detail_tracker_not_working => 'Not working';
+  @override
+  String get download_detail_tracker_disabled => 'Disabled';
+  @override
+  String get download_detail_no_peers => 'No connected peers';
+  @override
+  String get download_detail_no_trackers => 'No trackers';
+  @override
+  String get download_detail_priority_mixed => 'Mixed';
 }
 
 // Path: <root>
@@ -37694,6 +37969,67 @@ class _StringsId extends _StringsEn {
   String get download_task_pause => 'Pause';
   @override
   String get download_task_resume => 'Resume';
+  @override
+  String get download_detail_title => 'Task details';
+  @override
+  String get download_detail_tab_overview => 'Overview';
+  @override
+  String get download_detail_tab_files => 'Files';
+  @override
+  String get download_detail_tab_peers => 'Peers';
+  @override
+  String get download_detail_tab_trackers => 'Trackers';
+  @override
+  String get download_detail_backend_unsupported =>
+      'Not supported by current download backend';
+  @override
+  String get download_detail_task_gone => 'Task not found in backend';
+  @override
+  String get download_detail_section_transfer => 'Transfer';
+  @override
+  String get download_detail_section_network => 'Network';
+  @override
+  String get download_detail_seeds_label => 'Seeds';
+  @override
+  String get download_detail_leechers_label => 'Leechers';
+  @override
+  String get download_detail_connections_label => 'Connections';
+  @override
+  String get download_detail_time_active => 'Active time';
+  @override
+  String get download_detail_time_seeding => 'Seeding time';
+  @override
+  String get download_detail_listen_port => 'Listen port';
+  @override
+  String get download_detail_dht_nodes => 'DHT nodes';
+  @override
+  String get download_detail_port_mapping => 'Port mapping';
+  @override
+  String get download_detail_session_rates => 'Session rates';
+  @override
+  String get download_detail_pieces_label => 'Pieces';
+  @override
+  String get download_detail_priority_skip => 'Don\'t download';
+  @override
+  String get download_detail_priority_normal => 'Normal';
+  @override
+  String get download_detail_priority_high => 'High';
+  @override
+  String get download_detail_tracker_working => 'Working';
+  @override
+  String get download_detail_tracker_updating => 'Updating';
+  @override
+  String get download_detail_tracker_not_contacted => 'Not contacted yet';
+  @override
+  String get download_detail_tracker_not_working => 'Not working';
+  @override
+  String get download_detail_tracker_disabled => 'Disabled';
+  @override
+  String get download_detail_no_peers => 'No connected peers';
+  @override
+  String get download_detail_no_trackers => 'No trackers';
+  @override
+  String get download_detail_priority_mixed => 'Mixed';
 }
 
 // Path: <root>
@@ -44461,6 +44797,67 @@ class _StringsIt extends _StringsEn {
   String get download_task_pause => 'Pause';
   @override
   String get download_task_resume => 'Resume';
+  @override
+  String get download_detail_title => 'Task details';
+  @override
+  String get download_detail_tab_overview => 'Overview';
+  @override
+  String get download_detail_tab_files => 'Files';
+  @override
+  String get download_detail_tab_peers => 'Peers';
+  @override
+  String get download_detail_tab_trackers => 'Trackers';
+  @override
+  String get download_detail_backend_unsupported =>
+      'Not supported by current download backend';
+  @override
+  String get download_detail_task_gone => 'Task not found in backend';
+  @override
+  String get download_detail_section_transfer => 'Transfer';
+  @override
+  String get download_detail_section_network => 'Network';
+  @override
+  String get download_detail_seeds_label => 'Seeds';
+  @override
+  String get download_detail_leechers_label => 'Leechers';
+  @override
+  String get download_detail_connections_label => 'Connections';
+  @override
+  String get download_detail_time_active => 'Active time';
+  @override
+  String get download_detail_time_seeding => 'Seeding time';
+  @override
+  String get download_detail_listen_port => 'Listen port';
+  @override
+  String get download_detail_dht_nodes => 'DHT nodes';
+  @override
+  String get download_detail_port_mapping => 'Port mapping';
+  @override
+  String get download_detail_session_rates => 'Session rates';
+  @override
+  String get download_detail_pieces_label => 'Pieces';
+  @override
+  String get download_detail_priority_skip => 'Don\'t download';
+  @override
+  String get download_detail_priority_normal => 'Normal';
+  @override
+  String get download_detail_priority_high => 'High';
+  @override
+  String get download_detail_tracker_working => 'Working';
+  @override
+  String get download_detail_tracker_updating => 'Updating';
+  @override
+  String get download_detail_tracker_not_contacted => 'Not contacted yet';
+  @override
+  String get download_detail_tracker_not_working => 'Not working';
+  @override
+  String get download_detail_tracker_disabled => 'Disabled';
+  @override
+  String get download_detail_no_peers => 'No connected peers';
+  @override
+  String get download_detail_no_trackers => 'No trackers';
+  @override
+  String get download_detail_priority_mixed => 'Mixed';
 }
 
 // Path: <root>
@@ -51045,6 +51442,67 @@ class _StringsJa extends _StringsEn {
   String get download_task_pause => 'Pause';
   @override
   String get download_task_resume => 'Resume';
+  @override
+  String get download_detail_title => 'Task details';
+  @override
+  String get download_detail_tab_overview => 'Overview';
+  @override
+  String get download_detail_tab_files => 'Files';
+  @override
+  String get download_detail_tab_peers => 'Peers';
+  @override
+  String get download_detail_tab_trackers => 'Trackers';
+  @override
+  String get download_detail_backend_unsupported =>
+      'Not supported by current download backend';
+  @override
+  String get download_detail_task_gone => 'Task not found in backend';
+  @override
+  String get download_detail_section_transfer => 'Transfer';
+  @override
+  String get download_detail_section_network => 'Network';
+  @override
+  String get download_detail_seeds_label => 'Seeds';
+  @override
+  String get download_detail_leechers_label => 'Leechers';
+  @override
+  String get download_detail_connections_label => 'Connections';
+  @override
+  String get download_detail_time_active => 'Active time';
+  @override
+  String get download_detail_time_seeding => 'Seeding time';
+  @override
+  String get download_detail_listen_port => 'Listen port';
+  @override
+  String get download_detail_dht_nodes => 'DHT nodes';
+  @override
+  String get download_detail_port_mapping => 'Port mapping';
+  @override
+  String get download_detail_session_rates => 'Session rates';
+  @override
+  String get download_detail_pieces_label => 'Pieces';
+  @override
+  String get download_detail_priority_skip => 'Don\'t download';
+  @override
+  String get download_detail_priority_normal => 'Normal';
+  @override
+  String get download_detail_priority_high => 'High';
+  @override
+  String get download_detail_tracker_working => 'Working';
+  @override
+  String get download_detail_tracker_updating => 'Updating';
+  @override
+  String get download_detail_tracker_not_contacted => 'Not contacted yet';
+  @override
+  String get download_detail_tracker_not_working => 'Not working';
+  @override
+  String get download_detail_tracker_disabled => 'Disabled';
+  @override
+  String get download_detail_no_peers => 'No connected peers';
+  @override
+  String get download_detail_no_trackers => 'No trackers';
+  @override
+  String get download_detail_priority_mixed => 'Mixed';
 }
 
 // Path: <root>
@@ -57631,6 +58089,67 @@ class _StringsKo extends _StringsEn {
   String get download_task_pause => 'Pause';
   @override
   String get download_task_resume => 'Resume';
+  @override
+  String get download_detail_title => 'Task details';
+  @override
+  String get download_detail_tab_overview => 'Overview';
+  @override
+  String get download_detail_tab_files => 'Files';
+  @override
+  String get download_detail_tab_peers => 'Peers';
+  @override
+  String get download_detail_tab_trackers => 'Trackers';
+  @override
+  String get download_detail_backend_unsupported =>
+      'Not supported by current download backend';
+  @override
+  String get download_detail_task_gone => 'Task not found in backend';
+  @override
+  String get download_detail_section_transfer => 'Transfer';
+  @override
+  String get download_detail_section_network => 'Network';
+  @override
+  String get download_detail_seeds_label => 'Seeds';
+  @override
+  String get download_detail_leechers_label => 'Leechers';
+  @override
+  String get download_detail_connections_label => 'Connections';
+  @override
+  String get download_detail_time_active => 'Active time';
+  @override
+  String get download_detail_time_seeding => 'Seeding time';
+  @override
+  String get download_detail_listen_port => 'Listen port';
+  @override
+  String get download_detail_dht_nodes => 'DHT nodes';
+  @override
+  String get download_detail_port_mapping => 'Port mapping';
+  @override
+  String get download_detail_session_rates => 'Session rates';
+  @override
+  String get download_detail_pieces_label => 'Pieces';
+  @override
+  String get download_detail_priority_skip => 'Don\'t download';
+  @override
+  String get download_detail_priority_normal => 'Normal';
+  @override
+  String get download_detail_priority_high => 'High';
+  @override
+  String get download_detail_tracker_working => 'Working';
+  @override
+  String get download_detail_tracker_updating => 'Updating';
+  @override
+  String get download_detail_tracker_not_contacted => 'Not contacted yet';
+  @override
+  String get download_detail_tracker_not_working => 'Not working';
+  @override
+  String get download_detail_tracker_disabled => 'Disabled';
+  @override
+  String get download_detail_no_peers => 'No connected peers';
+  @override
+  String get download_detail_no_trackers => 'No trackers';
+  @override
+  String get download_detail_priority_mixed => 'Mixed';
 }
 
 // Path: <root>
@@ -64378,6 +64897,67 @@ class _StringsNl extends _StringsEn {
   String get download_task_pause => 'Pause';
   @override
   String get download_task_resume => 'Resume';
+  @override
+  String get download_detail_title => 'Task details';
+  @override
+  String get download_detail_tab_overview => 'Overview';
+  @override
+  String get download_detail_tab_files => 'Files';
+  @override
+  String get download_detail_tab_peers => 'Peers';
+  @override
+  String get download_detail_tab_trackers => 'Trackers';
+  @override
+  String get download_detail_backend_unsupported =>
+      'Not supported by current download backend';
+  @override
+  String get download_detail_task_gone => 'Task not found in backend';
+  @override
+  String get download_detail_section_transfer => 'Transfer';
+  @override
+  String get download_detail_section_network => 'Network';
+  @override
+  String get download_detail_seeds_label => 'Seeds';
+  @override
+  String get download_detail_leechers_label => 'Leechers';
+  @override
+  String get download_detail_connections_label => 'Connections';
+  @override
+  String get download_detail_time_active => 'Active time';
+  @override
+  String get download_detail_time_seeding => 'Seeding time';
+  @override
+  String get download_detail_listen_port => 'Listen port';
+  @override
+  String get download_detail_dht_nodes => 'DHT nodes';
+  @override
+  String get download_detail_port_mapping => 'Port mapping';
+  @override
+  String get download_detail_session_rates => 'Session rates';
+  @override
+  String get download_detail_pieces_label => 'Pieces';
+  @override
+  String get download_detail_priority_skip => 'Don\'t download';
+  @override
+  String get download_detail_priority_normal => 'Normal';
+  @override
+  String get download_detail_priority_high => 'High';
+  @override
+  String get download_detail_tracker_working => 'Working';
+  @override
+  String get download_detail_tracker_updating => 'Updating';
+  @override
+  String get download_detail_tracker_not_contacted => 'Not contacted yet';
+  @override
+  String get download_detail_tracker_not_working => 'Not working';
+  @override
+  String get download_detail_tracker_disabled => 'Disabled';
+  @override
+  String get download_detail_no_peers => 'No connected peers';
+  @override
+  String get download_detail_no_trackers => 'No trackers';
+  @override
+  String get download_detail_priority_mixed => 'Mixed';
 }
 
 // Path: <root>
@@ -71138,6 +71718,67 @@ class _StringsPtBr extends _StringsEn {
   String get download_task_pause => 'Pause';
   @override
   String get download_task_resume => 'Resume';
+  @override
+  String get download_detail_title => 'Task details';
+  @override
+  String get download_detail_tab_overview => 'Overview';
+  @override
+  String get download_detail_tab_files => 'Files';
+  @override
+  String get download_detail_tab_peers => 'Peers';
+  @override
+  String get download_detail_tab_trackers => 'Trackers';
+  @override
+  String get download_detail_backend_unsupported =>
+      'Not supported by current download backend';
+  @override
+  String get download_detail_task_gone => 'Task not found in backend';
+  @override
+  String get download_detail_section_transfer => 'Transfer';
+  @override
+  String get download_detail_section_network => 'Network';
+  @override
+  String get download_detail_seeds_label => 'Seeds';
+  @override
+  String get download_detail_leechers_label => 'Leechers';
+  @override
+  String get download_detail_connections_label => 'Connections';
+  @override
+  String get download_detail_time_active => 'Active time';
+  @override
+  String get download_detail_time_seeding => 'Seeding time';
+  @override
+  String get download_detail_listen_port => 'Listen port';
+  @override
+  String get download_detail_dht_nodes => 'DHT nodes';
+  @override
+  String get download_detail_port_mapping => 'Port mapping';
+  @override
+  String get download_detail_session_rates => 'Session rates';
+  @override
+  String get download_detail_pieces_label => 'Pieces';
+  @override
+  String get download_detail_priority_skip => 'Don\'t download';
+  @override
+  String get download_detail_priority_normal => 'Normal';
+  @override
+  String get download_detail_priority_high => 'High';
+  @override
+  String get download_detail_tracker_working => 'Working';
+  @override
+  String get download_detail_tracker_updating => 'Updating';
+  @override
+  String get download_detail_tracker_not_contacted => 'Not contacted yet';
+  @override
+  String get download_detail_tracker_not_working => 'Not working';
+  @override
+  String get download_detail_tracker_disabled => 'Disabled';
+  @override
+  String get download_detail_no_peers => 'No connected peers';
+  @override
+  String get download_detail_no_trackers => 'No trackers';
+  @override
+  String get download_detail_priority_mixed => 'Mixed';
 }
 
 // Path: <root>
@@ -77882,6 +78523,67 @@ class _StringsRu extends _StringsEn {
   String get download_task_pause => 'Pause';
   @override
   String get download_task_resume => 'Resume';
+  @override
+  String get download_detail_title => 'Task details';
+  @override
+  String get download_detail_tab_overview => 'Overview';
+  @override
+  String get download_detail_tab_files => 'Files';
+  @override
+  String get download_detail_tab_peers => 'Peers';
+  @override
+  String get download_detail_tab_trackers => 'Trackers';
+  @override
+  String get download_detail_backend_unsupported =>
+      'Not supported by current download backend';
+  @override
+  String get download_detail_task_gone => 'Task not found in backend';
+  @override
+  String get download_detail_section_transfer => 'Transfer';
+  @override
+  String get download_detail_section_network => 'Network';
+  @override
+  String get download_detail_seeds_label => 'Seeds';
+  @override
+  String get download_detail_leechers_label => 'Leechers';
+  @override
+  String get download_detail_connections_label => 'Connections';
+  @override
+  String get download_detail_time_active => 'Active time';
+  @override
+  String get download_detail_time_seeding => 'Seeding time';
+  @override
+  String get download_detail_listen_port => 'Listen port';
+  @override
+  String get download_detail_dht_nodes => 'DHT nodes';
+  @override
+  String get download_detail_port_mapping => 'Port mapping';
+  @override
+  String get download_detail_session_rates => 'Session rates';
+  @override
+  String get download_detail_pieces_label => 'Pieces';
+  @override
+  String get download_detail_priority_skip => 'Don\'t download';
+  @override
+  String get download_detail_priority_normal => 'Normal';
+  @override
+  String get download_detail_priority_high => 'High';
+  @override
+  String get download_detail_tracker_working => 'Working';
+  @override
+  String get download_detail_tracker_updating => 'Updating';
+  @override
+  String get download_detail_tracker_not_contacted => 'Not contacted yet';
+  @override
+  String get download_detail_tracker_not_working => 'Not working';
+  @override
+  String get download_detail_tracker_disabled => 'Disabled';
+  @override
+  String get download_detail_no_peers => 'No connected peers';
+  @override
+  String get download_detail_no_trackers => 'No trackers';
+  @override
+  String get download_detail_priority_mixed => 'Mixed';
 }
 
 // Path: <root>
@@ -84574,6 +85276,67 @@ class _StringsTh extends _StringsEn {
   String get download_task_pause => 'Pause';
   @override
   String get download_task_resume => 'Resume';
+  @override
+  String get download_detail_title => 'Task details';
+  @override
+  String get download_detail_tab_overview => 'Overview';
+  @override
+  String get download_detail_tab_files => 'Files';
+  @override
+  String get download_detail_tab_peers => 'Peers';
+  @override
+  String get download_detail_tab_trackers => 'Trackers';
+  @override
+  String get download_detail_backend_unsupported =>
+      'Not supported by current download backend';
+  @override
+  String get download_detail_task_gone => 'Task not found in backend';
+  @override
+  String get download_detail_section_transfer => 'Transfer';
+  @override
+  String get download_detail_section_network => 'Network';
+  @override
+  String get download_detail_seeds_label => 'Seeds';
+  @override
+  String get download_detail_leechers_label => 'Leechers';
+  @override
+  String get download_detail_connections_label => 'Connections';
+  @override
+  String get download_detail_time_active => 'Active time';
+  @override
+  String get download_detail_time_seeding => 'Seeding time';
+  @override
+  String get download_detail_listen_port => 'Listen port';
+  @override
+  String get download_detail_dht_nodes => 'DHT nodes';
+  @override
+  String get download_detail_port_mapping => 'Port mapping';
+  @override
+  String get download_detail_session_rates => 'Session rates';
+  @override
+  String get download_detail_pieces_label => 'Pieces';
+  @override
+  String get download_detail_priority_skip => 'Don\'t download';
+  @override
+  String get download_detail_priority_normal => 'Normal';
+  @override
+  String get download_detail_priority_high => 'High';
+  @override
+  String get download_detail_tracker_working => 'Working';
+  @override
+  String get download_detail_tracker_updating => 'Updating';
+  @override
+  String get download_detail_tracker_not_contacted => 'Not contacted yet';
+  @override
+  String get download_detail_tracker_not_working => 'Not working';
+  @override
+  String get download_detail_tracker_disabled => 'Disabled';
+  @override
+  String get download_detail_no_peers => 'No connected peers';
+  @override
+  String get download_detail_no_trackers => 'No trackers';
+  @override
+  String get download_detail_priority_mixed => 'Mixed';
 }
 
 // Path: <root>
@@ -91298,6 +92061,67 @@ class _StringsTr extends _StringsEn {
   String get download_task_pause => 'Pause';
   @override
   String get download_task_resume => 'Resume';
+  @override
+  String get download_detail_title => 'Task details';
+  @override
+  String get download_detail_tab_overview => 'Overview';
+  @override
+  String get download_detail_tab_files => 'Files';
+  @override
+  String get download_detail_tab_peers => 'Peers';
+  @override
+  String get download_detail_tab_trackers => 'Trackers';
+  @override
+  String get download_detail_backend_unsupported =>
+      'Not supported by current download backend';
+  @override
+  String get download_detail_task_gone => 'Task not found in backend';
+  @override
+  String get download_detail_section_transfer => 'Transfer';
+  @override
+  String get download_detail_section_network => 'Network';
+  @override
+  String get download_detail_seeds_label => 'Seeds';
+  @override
+  String get download_detail_leechers_label => 'Leechers';
+  @override
+  String get download_detail_connections_label => 'Connections';
+  @override
+  String get download_detail_time_active => 'Active time';
+  @override
+  String get download_detail_time_seeding => 'Seeding time';
+  @override
+  String get download_detail_listen_port => 'Listen port';
+  @override
+  String get download_detail_dht_nodes => 'DHT nodes';
+  @override
+  String get download_detail_port_mapping => 'Port mapping';
+  @override
+  String get download_detail_session_rates => 'Session rates';
+  @override
+  String get download_detail_pieces_label => 'Pieces';
+  @override
+  String get download_detail_priority_skip => 'Don\'t download';
+  @override
+  String get download_detail_priority_normal => 'Normal';
+  @override
+  String get download_detail_priority_high => 'High';
+  @override
+  String get download_detail_tracker_working => 'Working';
+  @override
+  String get download_detail_tracker_updating => 'Updating';
+  @override
+  String get download_detail_tracker_not_contacted => 'Not contacted yet';
+  @override
+  String get download_detail_tracker_not_working => 'Not working';
+  @override
+  String get download_detail_tracker_disabled => 'Disabled';
+  @override
+  String get download_detail_no_peers => 'No connected peers';
+  @override
+  String get download_detail_no_trackers => 'No trackers';
+  @override
+  String get download_detail_priority_mixed => 'Mixed';
 }
 
 // Path: <root>
@@ -98007,6 +98831,67 @@ class _StringsVi extends _StringsEn {
   String get download_task_pause => 'Pause';
   @override
   String get download_task_resume => 'Resume';
+  @override
+  String get download_detail_title => 'Task details';
+  @override
+  String get download_detail_tab_overview => 'Overview';
+  @override
+  String get download_detail_tab_files => 'Files';
+  @override
+  String get download_detail_tab_peers => 'Peers';
+  @override
+  String get download_detail_tab_trackers => 'Trackers';
+  @override
+  String get download_detail_backend_unsupported =>
+      'Not supported by current download backend';
+  @override
+  String get download_detail_task_gone => 'Task not found in backend';
+  @override
+  String get download_detail_section_transfer => 'Transfer';
+  @override
+  String get download_detail_section_network => 'Network';
+  @override
+  String get download_detail_seeds_label => 'Seeds';
+  @override
+  String get download_detail_leechers_label => 'Leechers';
+  @override
+  String get download_detail_connections_label => 'Connections';
+  @override
+  String get download_detail_time_active => 'Active time';
+  @override
+  String get download_detail_time_seeding => 'Seeding time';
+  @override
+  String get download_detail_listen_port => 'Listen port';
+  @override
+  String get download_detail_dht_nodes => 'DHT nodes';
+  @override
+  String get download_detail_port_mapping => 'Port mapping';
+  @override
+  String get download_detail_session_rates => 'Session rates';
+  @override
+  String get download_detail_pieces_label => 'Pieces';
+  @override
+  String get download_detail_priority_skip => 'Don\'t download';
+  @override
+  String get download_detail_priority_normal => 'Normal';
+  @override
+  String get download_detail_priority_high => 'High';
+  @override
+  String get download_detail_tracker_working => 'Working';
+  @override
+  String get download_detail_tracker_updating => 'Updating';
+  @override
+  String get download_detail_tracker_not_contacted => 'Not contacted yet';
+  @override
+  String get download_detail_tracker_not_working => 'Not working';
+  @override
+  String get download_detail_tracker_disabled => 'Disabled';
+  @override
+  String get download_detail_no_peers => 'No connected peers';
+  @override
+  String get download_detail_no_trackers => 'No trackers';
+  @override
+  String get download_detail_priority_mixed => 'Mixed';
 }
 
 // Path: <root>
@@ -104242,6 +105127,66 @@ class _StringsZhCn extends _StringsEn {
   String get download_task_pause => '暂停';
   @override
   String get download_task_resume => '恢复';
+  @override
+  String get download_detail_title => '任务详情';
+  @override
+  String get download_detail_tab_overview => '总览';
+  @override
+  String get download_detail_tab_files => '文件';
+  @override
+  String get download_detail_tab_peers => '节点';
+  @override
+  String get download_detail_tab_trackers => 'Tracker';
+  @override
+  String get download_detail_backend_unsupported => '当前下载后端不支持';
+  @override
+  String get download_detail_task_gone => '后端中找不到该任务';
+  @override
+  String get download_detail_section_transfer => '传输';
+  @override
+  String get download_detail_section_network => '网络';
+  @override
+  String get download_detail_seeds_label => '做种';
+  @override
+  String get download_detail_leechers_label => '下载者';
+  @override
+  String get download_detail_connections_label => '连接数';
+  @override
+  String get download_detail_time_active => '活跃时长';
+  @override
+  String get download_detail_time_seeding => '做种时长';
+  @override
+  String get download_detail_listen_port => '监听端口';
+  @override
+  String get download_detail_dht_nodes => 'DHT 节点';
+  @override
+  String get download_detail_port_mapping => '端口映射';
+  @override
+  String get download_detail_session_rates => '会话速率';
+  @override
+  String get download_detail_pieces_label => '分片';
+  @override
+  String get download_detail_priority_skip => '不下载';
+  @override
+  String get download_detail_priority_normal => '普通';
+  @override
+  String get download_detail_priority_high => '高';
+  @override
+  String get download_detail_tracker_working => '工作中';
+  @override
+  String get download_detail_tracker_updating => '更新中';
+  @override
+  String get download_detail_tracker_not_contacted => '尚未联系';
+  @override
+  String get download_detail_tracker_not_working => '不工作';
+  @override
+  String get download_detail_tracker_disabled => '已禁用';
+  @override
+  String get download_detail_no_peers => '暂无已连接节点';
+  @override
+  String get download_detail_no_trackers => '无 Tracker';
+  @override
+  String get download_detail_priority_mixed => '混合';
 }
 
 // Path: <root>
@@ -110747,6 +111692,67 @@ class _StringsZhHk extends _StringsEn {
   String get download_task_pause => 'Pause';
   @override
   String get download_task_resume => 'Resume';
+  @override
+  String get download_detail_title => 'Task details';
+  @override
+  String get download_detail_tab_overview => 'Overview';
+  @override
+  String get download_detail_tab_files => 'Files';
+  @override
+  String get download_detail_tab_peers => 'Peers';
+  @override
+  String get download_detail_tab_trackers => 'Trackers';
+  @override
+  String get download_detail_backend_unsupported =>
+      'Not supported by current download backend';
+  @override
+  String get download_detail_task_gone => 'Task not found in backend';
+  @override
+  String get download_detail_section_transfer => 'Transfer';
+  @override
+  String get download_detail_section_network => 'Network';
+  @override
+  String get download_detail_seeds_label => 'Seeds';
+  @override
+  String get download_detail_leechers_label => 'Leechers';
+  @override
+  String get download_detail_connections_label => 'Connections';
+  @override
+  String get download_detail_time_active => 'Active time';
+  @override
+  String get download_detail_time_seeding => 'Seeding time';
+  @override
+  String get download_detail_listen_port => 'Listen port';
+  @override
+  String get download_detail_dht_nodes => 'DHT nodes';
+  @override
+  String get download_detail_port_mapping => 'Port mapping';
+  @override
+  String get download_detail_session_rates => 'Session rates';
+  @override
+  String get download_detail_pieces_label => 'Pieces';
+  @override
+  String get download_detail_priority_skip => 'Don\'t download';
+  @override
+  String get download_detail_priority_normal => 'Normal';
+  @override
+  String get download_detail_priority_high => 'High';
+  @override
+  String get download_detail_tracker_working => 'Working';
+  @override
+  String get download_detail_tracker_updating => 'Updating';
+  @override
+  String get download_detail_tracker_not_contacted => 'Not contacted yet';
+  @override
+  String get download_detail_tracker_not_working => 'Not working';
+  @override
+  String get download_detail_tracker_disabled => 'Disabled';
+  @override
+  String get download_detail_no_peers => 'No connected peers';
+  @override
+  String get download_detail_no_trackers => 'No trackers';
+  @override
+  String get download_detail_priority_mixed => 'Mixed';
 }
 
 /// Flat map(s) containing all translations.
@@ -116727,6 +117733,66 @@ extension on _StringsEn {
         return 'Pause';
       case 'download_task_resume':
         return 'Resume';
+      case 'download_detail_title':
+        return 'Task details';
+      case 'download_detail_tab_overview':
+        return 'Overview';
+      case 'download_detail_tab_files':
+        return 'Files';
+      case 'download_detail_tab_peers':
+        return 'Peers';
+      case 'download_detail_tab_trackers':
+        return 'Trackers';
+      case 'download_detail_backend_unsupported':
+        return 'Not supported by current download backend';
+      case 'download_detail_task_gone':
+        return 'Task not found in backend';
+      case 'download_detail_section_transfer':
+        return 'Transfer';
+      case 'download_detail_section_network':
+        return 'Network';
+      case 'download_detail_seeds_label':
+        return 'Seeds';
+      case 'download_detail_leechers_label':
+        return 'Leechers';
+      case 'download_detail_connections_label':
+        return 'Connections';
+      case 'download_detail_time_active':
+        return 'Active time';
+      case 'download_detail_time_seeding':
+        return 'Seeding time';
+      case 'download_detail_listen_port':
+        return 'Listen port';
+      case 'download_detail_dht_nodes':
+        return 'DHT nodes';
+      case 'download_detail_port_mapping':
+        return 'Port mapping';
+      case 'download_detail_session_rates':
+        return 'Session rates';
+      case 'download_detail_pieces_label':
+        return 'Pieces';
+      case 'download_detail_priority_skip':
+        return 'Don\'t download';
+      case 'download_detail_priority_normal':
+        return 'Normal';
+      case 'download_detail_priority_high':
+        return 'High';
+      case 'download_detail_tracker_working':
+        return 'Working';
+      case 'download_detail_tracker_updating':
+        return 'Updating';
+      case 'download_detail_tracker_not_contacted':
+        return 'Not contacted yet';
+      case 'download_detail_tracker_not_working':
+        return 'Not working';
+      case 'download_detail_tracker_disabled':
+        return 'Disabled';
+      case 'download_detail_no_peers':
+        return 'No connected peers';
+      case 'download_detail_no_trackers':
+        return 'No trackers';
+      case 'download_detail_priority_mixed':
+        return 'Mixed';
       default:
         return null;
     }
@@ -122705,6 +123771,66 @@ extension on _StringsAr {
         return 'Pause';
       case 'download_task_resume':
         return 'Resume';
+      case 'download_detail_title':
+        return 'Task details';
+      case 'download_detail_tab_overview':
+        return 'Overview';
+      case 'download_detail_tab_files':
+        return 'Files';
+      case 'download_detail_tab_peers':
+        return 'Peers';
+      case 'download_detail_tab_trackers':
+        return 'Trackers';
+      case 'download_detail_backend_unsupported':
+        return 'Not supported by current download backend';
+      case 'download_detail_task_gone':
+        return 'Task not found in backend';
+      case 'download_detail_section_transfer':
+        return 'Transfer';
+      case 'download_detail_section_network':
+        return 'Network';
+      case 'download_detail_seeds_label':
+        return 'Seeds';
+      case 'download_detail_leechers_label':
+        return 'Leechers';
+      case 'download_detail_connections_label':
+        return 'Connections';
+      case 'download_detail_time_active':
+        return 'Active time';
+      case 'download_detail_time_seeding':
+        return 'Seeding time';
+      case 'download_detail_listen_port':
+        return 'Listen port';
+      case 'download_detail_dht_nodes':
+        return 'DHT nodes';
+      case 'download_detail_port_mapping':
+        return 'Port mapping';
+      case 'download_detail_session_rates':
+        return 'Session rates';
+      case 'download_detail_pieces_label':
+        return 'Pieces';
+      case 'download_detail_priority_skip':
+        return 'Don\'t download';
+      case 'download_detail_priority_normal':
+        return 'Normal';
+      case 'download_detail_priority_high':
+        return 'High';
+      case 'download_detail_tracker_working':
+        return 'Working';
+      case 'download_detail_tracker_updating':
+        return 'Updating';
+      case 'download_detail_tracker_not_contacted':
+        return 'Not contacted yet';
+      case 'download_detail_tracker_not_working':
+        return 'Not working';
+      case 'download_detail_tracker_disabled':
+        return 'Disabled';
+      case 'download_detail_no_peers':
+        return 'No connected peers';
+      case 'download_detail_no_trackers':
+        return 'No trackers';
+      case 'download_detail_priority_mixed':
+        return 'Mixed';
       default:
         return null;
     }
@@ -128705,6 +129831,66 @@ extension on _StringsDe {
         return 'Pause';
       case 'download_task_resume':
         return 'Resume';
+      case 'download_detail_title':
+        return 'Task details';
+      case 'download_detail_tab_overview':
+        return 'Overview';
+      case 'download_detail_tab_files':
+        return 'Files';
+      case 'download_detail_tab_peers':
+        return 'Peers';
+      case 'download_detail_tab_trackers':
+        return 'Trackers';
+      case 'download_detail_backend_unsupported':
+        return 'Not supported by current download backend';
+      case 'download_detail_task_gone':
+        return 'Task not found in backend';
+      case 'download_detail_section_transfer':
+        return 'Transfer';
+      case 'download_detail_section_network':
+        return 'Network';
+      case 'download_detail_seeds_label':
+        return 'Seeds';
+      case 'download_detail_leechers_label':
+        return 'Leechers';
+      case 'download_detail_connections_label':
+        return 'Connections';
+      case 'download_detail_time_active':
+        return 'Active time';
+      case 'download_detail_time_seeding':
+        return 'Seeding time';
+      case 'download_detail_listen_port':
+        return 'Listen port';
+      case 'download_detail_dht_nodes':
+        return 'DHT nodes';
+      case 'download_detail_port_mapping':
+        return 'Port mapping';
+      case 'download_detail_session_rates':
+        return 'Session rates';
+      case 'download_detail_pieces_label':
+        return 'Pieces';
+      case 'download_detail_priority_skip':
+        return 'Don\'t download';
+      case 'download_detail_priority_normal':
+        return 'Normal';
+      case 'download_detail_priority_high':
+        return 'High';
+      case 'download_detail_tracker_working':
+        return 'Working';
+      case 'download_detail_tracker_updating':
+        return 'Updating';
+      case 'download_detail_tracker_not_contacted':
+        return 'Not contacted yet';
+      case 'download_detail_tracker_not_working':
+        return 'Not working';
+      case 'download_detail_tracker_disabled':
+        return 'Disabled';
+      case 'download_detail_no_peers':
+        return 'No connected peers';
+      case 'download_detail_no_trackers':
+        return 'No trackers';
+      case 'download_detail_priority_mixed':
+        return 'Mixed';
       default:
         return null;
     }
@@ -134704,6 +135890,66 @@ extension on _StringsEs {
         return 'Pause';
       case 'download_task_resume':
         return 'Resume';
+      case 'download_detail_title':
+        return 'Task details';
+      case 'download_detail_tab_overview':
+        return 'Overview';
+      case 'download_detail_tab_files':
+        return 'Files';
+      case 'download_detail_tab_peers':
+        return 'Peers';
+      case 'download_detail_tab_trackers':
+        return 'Trackers';
+      case 'download_detail_backend_unsupported':
+        return 'Not supported by current download backend';
+      case 'download_detail_task_gone':
+        return 'Task not found in backend';
+      case 'download_detail_section_transfer':
+        return 'Transfer';
+      case 'download_detail_section_network':
+        return 'Network';
+      case 'download_detail_seeds_label':
+        return 'Seeds';
+      case 'download_detail_leechers_label':
+        return 'Leechers';
+      case 'download_detail_connections_label':
+        return 'Connections';
+      case 'download_detail_time_active':
+        return 'Active time';
+      case 'download_detail_time_seeding':
+        return 'Seeding time';
+      case 'download_detail_listen_port':
+        return 'Listen port';
+      case 'download_detail_dht_nodes':
+        return 'DHT nodes';
+      case 'download_detail_port_mapping':
+        return 'Port mapping';
+      case 'download_detail_session_rates':
+        return 'Session rates';
+      case 'download_detail_pieces_label':
+        return 'Pieces';
+      case 'download_detail_priority_skip':
+        return 'Don\'t download';
+      case 'download_detail_priority_normal':
+        return 'Normal';
+      case 'download_detail_priority_high':
+        return 'High';
+      case 'download_detail_tracker_working':
+        return 'Working';
+      case 'download_detail_tracker_updating':
+        return 'Updating';
+      case 'download_detail_tracker_not_contacted':
+        return 'Not contacted yet';
+      case 'download_detail_tracker_not_working':
+        return 'Not working';
+      case 'download_detail_tracker_disabled':
+        return 'Disabled';
+      case 'download_detail_no_peers':
+        return 'No connected peers';
+      case 'download_detail_no_trackers':
+        return 'No trackers';
+      case 'download_detail_priority_mixed':
+        return 'Mixed';
       default:
         return null;
     }
@@ -140709,6 +141955,66 @@ extension on _StringsFr {
         return 'Pause';
       case 'download_task_resume':
         return 'Resume';
+      case 'download_detail_title':
+        return 'Task details';
+      case 'download_detail_tab_overview':
+        return 'Overview';
+      case 'download_detail_tab_files':
+        return 'Files';
+      case 'download_detail_tab_peers':
+        return 'Peers';
+      case 'download_detail_tab_trackers':
+        return 'Trackers';
+      case 'download_detail_backend_unsupported':
+        return 'Not supported by current download backend';
+      case 'download_detail_task_gone':
+        return 'Task not found in backend';
+      case 'download_detail_section_transfer':
+        return 'Transfer';
+      case 'download_detail_section_network':
+        return 'Network';
+      case 'download_detail_seeds_label':
+        return 'Seeds';
+      case 'download_detail_leechers_label':
+        return 'Leechers';
+      case 'download_detail_connections_label':
+        return 'Connections';
+      case 'download_detail_time_active':
+        return 'Active time';
+      case 'download_detail_time_seeding':
+        return 'Seeding time';
+      case 'download_detail_listen_port':
+        return 'Listen port';
+      case 'download_detail_dht_nodes':
+        return 'DHT nodes';
+      case 'download_detail_port_mapping':
+        return 'Port mapping';
+      case 'download_detail_session_rates':
+        return 'Session rates';
+      case 'download_detail_pieces_label':
+        return 'Pieces';
+      case 'download_detail_priority_skip':
+        return 'Don\'t download';
+      case 'download_detail_priority_normal':
+        return 'Normal';
+      case 'download_detail_priority_high':
+        return 'High';
+      case 'download_detail_tracker_working':
+        return 'Working';
+      case 'download_detail_tracker_updating':
+        return 'Updating';
+      case 'download_detail_tracker_not_contacted':
+        return 'Not contacted yet';
+      case 'download_detail_tracker_not_working':
+        return 'Not working';
+      case 'download_detail_tracker_disabled':
+        return 'Disabled';
+      case 'download_detail_no_peers':
+        return 'No connected peers';
+      case 'download_detail_no_trackers':
+        return 'No trackers';
+      case 'download_detail_priority_mixed':
+        return 'Mixed';
       default:
         return null;
     }
@@ -146696,6 +148002,66 @@ extension on _StringsId {
         return 'Pause';
       case 'download_task_resume':
         return 'Resume';
+      case 'download_detail_title':
+        return 'Task details';
+      case 'download_detail_tab_overview':
+        return 'Overview';
+      case 'download_detail_tab_files':
+        return 'Files';
+      case 'download_detail_tab_peers':
+        return 'Peers';
+      case 'download_detail_tab_trackers':
+        return 'Trackers';
+      case 'download_detail_backend_unsupported':
+        return 'Not supported by current download backend';
+      case 'download_detail_task_gone':
+        return 'Task not found in backend';
+      case 'download_detail_section_transfer':
+        return 'Transfer';
+      case 'download_detail_section_network':
+        return 'Network';
+      case 'download_detail_seeds_label':
+        return 'Seeds';
+      case 'download_detail_leechers_label':
+        return 'Leechers';
+      case 'download_detail_connections_label':
+        return 'Connections';
+      case 'download_detail_time_active':
+        return 'Active time';
+      case 'download_detail_time_seeding':
+        return 'Seeding time';
+      case 'download_detail_listen_port':
+        return 'Listen port';
+      case 'download_detail_dht_nodes':
+        return 'DHT nodes';
+      case 'download_detail_port_mapping':
+        return 'Port mapping';
+      case 'download_detail_session_rates':
+        return 'Session rates';
+      case 'download_detail_pieces_label':
+        return 'Pieces';
+      case 'download_detail_priority_skip':
+        return 'Don\'t download';
+      case 'download_detail_priority_normal':
+        return 'Normal';
+      case 'download_detail_priority_high':
+        return 'High';
+      case 'download_detail_tracker_working':
+        return 'Working';
+      case 'download_detail_tracker_updating':
+        return 'Updating';
+      case 'download_detail_tracker_not_contacted':
+        return 'Not contacted yet';
+      case 'download_detail_tracker_not_working':
+        return 'Not working';
+      case 'download_detail_tracker_disabled':
+        return 'Disabled';
+      case 'download_detail_no_peers':
+        return 'No connected peers';
+      case 'download_detail_no_trackers':
+        return 'No trackers';
+      case 'download_detail_priority_mixed':
+        return 'Mixed';
       default:
         return null;
     }
@@ -152697,6 +154063,66 @@ extension on _StringsIt {
         return 'Pause';
       case 'download_task_resume':
         return 'Resume';
+      case 'download_detail_title':
+        return 'Task details';
+      case 'download_detail_tab_overview':
+        return 'Overview';
+      case 'download_detail_tab_files':
+        return 'Files';
+      case 'download_detail_tab_peers':
+        return 'Peers';
+      case 'download_detail_tab_trackers':
+        return 'Trackers';
+      case 'download_detail_backend_unsupported':
+        return 'Not supported by current download backend';
+      case 'download_detail_task_gone':
+        return 'Task not found in backend';
+      case 'download_detail_section_transfer':
+        return 'Transfer';
+      case 'download_detail_section_network':
+        return 'Network';
+      case 'download_detail_seeds_label':
+        return 'Seeds';
+      case 'download_detail_leechers_label':
+        return 'Leechers';
+      case 'download_detail_connections_label':
+        return 'Connections';
+      case 'download_detail_time_active':
+        return 'Active time';
+      case 'download_detail_time_seeding':
+        return 'Seeding time';
+      case 'download_detail_listen_port':
+        return 'Listen port';
+      case 'download_detail_dht_nodes':
+        return 'DHT nodes';
+      case 'download_detail_port_mapping':
+        return 'Port mapping';
+      case 'download_detail_session_rates':
+        return 'Session rates';
+      case 'download_detail_pieces_label':
+        return 'Pieces';
+      case 'download_detail_priority_skip':
+        return 'Don\'t download';
+      case 'download_detail_priority_normal':
+        return 'Normal';
+      case 'download_detail_priority_high':
+        return 'High';
+      case 'download_detail_tracker_working':
+        return 'Working';
+      case 'download_detail_tracker_updating':
+        return 'Updating';
+      case 'download_detail_tracker_not_contacted':
+        return 'Not contacted yet';
+      case 'download_detail_tracker_not_working':
+        return 'Not working';
+      case 'download_detail_tracker_disabled':
+        return 'Disabled';
+      case 'download_detail_no_peers':
+        return 'No connected peers';
+      case 'download_detail_no_trackers':
+        return 'No trackers';
+      case 'download_detail_priority_mixed':
+        return 'Mixed';
       default:
         return null;
     }
@@ -158660,6 +160086,66 @@ extension on _StringsJa {
         return 'Pause';
       case 'download_task_resume':
         return 'Resume';
+      case 'download_detail_title':
+        return 'Task details';
+      case 'download_detail_tab_overview':
+        return 'Overview';
+      case 'download_detail_tab_files':
+        return 'Files';
+      case 'download_detail_tab_peers':
+        return 'Peers';
+      case 'download_detail_tab_trackers':
+        return 'Trackers';
+      case 'download_detail_backend_unsupported':
+        return 'Not supported by current download backend';
+      case 'download_detail_task_gone':
+        return 'Task not found in backend';
+      case 'download_detail_section_transfer':
+        return 'Transfer';
+      case 'download_detail_section_network':
+        return 'Network';
+      case 'download_detail_seeds_label':
+        return 'Seeds';
+      case 'download_detail_leechers_label':
+        return 'Leechers';
+      case 'download_detail_connections_label':
+        return 'Connections';
+      case 'download_detail_time_active':
+        return 'Active time';
+      case 'download_detail_time_seeding':
+        return 'Seeding time';
+      case 'download_detail_listen_port':
+        return 'Listen port';
+      case 'download_detail_dht_nodes':
+        return 'DHT nodes';
+      case 'download_detail_port_mapping':
+        return 'Port mapping';
+      case 'download_detail_session_rates':
+        return 'Session rates';
+      case 'download_detail_pieces_label':
+        return 'Pieces';
+      case 'download_detail_priority_skip':
+        return 'Don\'t download';
+      case 'download_detail_priority_normal':
+        return 'Normal';
+      case 'download_detail_priority_high':
+        return 'High';
+      case 'download_detail_tracker_working':
+        return 'Working';
+      case 'download_detail_tracker_updating':
+        return 'Updating';
+      case 'download_detail_tracker_not_contacted':
+        return 'Not contacted yet';
+      case 'download_detail_tracker_not_working':
+        return 'Not working';
+      case 'download_detail_tracker_disabled':
+        return 'Disabled';
+      case 'download_detail_no_peers':
+        return 'No connected peers';
+      case 'download_detail_no_trackers':
+        return 'No trackers';
+      case 'download_detail_priority_mixed':
+        return 'Mixed';
       default:
         return null;
     }
@@ -164627,6 +166113,66 @@ extension on _StringsKo {
         return 'Pause';
       case 'download_task_resume':
         return 'Resume';
+      case 'download_detail_title':
+        return 'Task details';
+      case 'download_detail_tab_overview':
+        return 'Overview';
+      case 'download_detail_tab_files':
+        return 'Files';
+      case 'download_detail_tab_peers':
+        return 'Peers';
+      case 'download_detail_tab_trackers':
+        return 'Trackers';
+      case 'download_detail_backend_unsupported':
+        return 'Not supported by current download backend';
+      case 'download_detail_task_gone':
+        return 'Task not found in backend';
+      case 'download_detail_section_transfer':
+        return 'Transfer';
+      case 'download_detail_section_network':
+        return 'Network';
+      case 'download_detail_seeds_label':
+        return 'Seeds';
+      case 'download_detail_leechers_label':
+        return 'Leechers';
+      case 'download_detail_connections_label':
+        return 'Connections';
+      case 'download_detail_time_active':
+        return 'Active time';
+      case 'download_detail_time_seeding':
+        return 'Seeding time';
+      case 'download_detail_listen_port':
+        return 'Listen port';
+      case 'download_detail_dht_nodes':
+        return 'DHT nodes';
+      case 'download_detail_port_mapping':
+        return 'Port mapping';
+      case 'download_detail_session_rates':
+        return 'Session rates';
+      case 'download_detail_pieces_label':
+        return 'Pieces';
+      case 'download_detail_priority_skip':
+        return 'Don\'t download';
+      case 'download_detail_priority_normal':
+        return 'Normal';
+      case 'download_detail_priority_high':
+        return 'High';
+      case 'download_detail_tracker_working':
+        return 'Working';
+      case 'download_detail_tracker_updating':
+        return 'Updating';
+      case 'download_detail_tracker_not_contacted':
+        return 'Not contacted yet';
+      case 'download_detail_tracker_not_working':
+        return 'Not working';
+      case 'download_detail_tracker_disabled':
+        return 'Disabled';
+      case 'download_detail_no_peers':
+        return 'No connected peers';
+      case 'download_detail_no_trackers':
+        return 'No trackers';
+      case 'download_detail_priority_mixed':
+        return 'Mixed';
       default:
         return null;
     }
@@ -170622,6 +172168,66 @@ extension on _StringsNl {
         return 'Pause';
       case 'download_task_resume':
         return 'Resume';
+      case 'download_detail_title':
+        return 'Task details';
+      case 'download_detail_tab_overview':
+        return 'Overview';
+      case 'download_detail_tab_files':
+        return 'Files';
+      case 'download_detail_tab_peers':
+        return 'Peers';
+      case 'download_detail_tab_trackers':
+        return 'Trackers';
+      case 'download_detail_backend_unsupported':
+        return 'Not supported by current download backend';
+      case 'download_detail_task_gone':
+        return 'Task not found in backend';
+      case 'download_detail_section_transfer':
+        return 'Transfer';
+      case 'download_detail_section_network':
+        return 'Network';
+      case 'download_detail_seeds_label':
+        return 'Seeds';
+      case 'download_detail_leechers_label':
+        return 'Leechers';
+      case 'download_detail_connections_label':
+        return 'Connections';
+      case 'download_detail_time_active':
+        return 'Active time';
+      case 'download_detail_time_seeding':
+        return 'Seeding time';
+      case 'download_detail_listen_port':
+        return 'Listen port';
+      case 'download_detail_dht_nodes':
+        return 'DHT nodes';
+      case 'download_detail_port_mapping':
+        return 'Port mapping';
+      case 'download_detail_session_rates':
+        return 'Session rates';
+      case 'download_detail_pieces_label':
+        return 'Pieces';
+      case 'download_detail_priority_skip':
+        return 'Don\'t download';
+      case 'download_detail_priority_normal':
+        return 'Normal';
+      case 'download_detail_priority_high':
+        return 'High';
+      case 'download_detail_tracker_working':
+        return 'Working';
+      case 'download_detail_tracker_updating':
+        return 'Updating';
+      case 'download_detail_tracker_not_contacted':
+        return 'Not contacted yet';
+      case 'download_detail_tracker_not_working':
+        return 'Not working';
+      case 'download_detail_tracker_disabled':
+        return 'Disabled';
+      case 'download_detail_no_peers':
+        return 'No connected peers';
+      case 'download_detail_no_trackers':
+        return 'No trackers';
+      case 'download_detail_priority_mixed':
+        return 'Mixed';
       default:
         return null;
     }
@@ -176614,6 +178220,66 @@ extension on _StringsPtBr {
         return 'Pause';
       case 'download_task_resume':
         return 'Resume';
+      case 'download_detail_title':
+        return 'Task details';
+      case 'download_detail_tab_overview':
+        return 'Overview';
+      case 'download_detail_tab_files':
+        return 'Files';
+      case 'download_detail_tab_peers':
+        return 'Peers';
+      case 'download_detail_tab_trackers':
+        return 'Trackers';
+      case 'download_detail_backend_unsupported':
+        return 'Not supported by current download backend';
+      case 'download_detail_task_gone':
+        return 'Task not found in backend';
+      case 'download_detail_section_transfer':
+        return 'Transfer';
+      case 'download_detail_section_network':
+        return 'Network';
+      case 'download_detail_seeds_label':
+        return 'Seeds';
+      case 'download_detail_leechers_label':
+        return 'Leechers';
+      case 'download_detail_connections_label':
+        return 'Connections';
+      case 'download_detail_time_active':
+        return 'Active time';
+      case 'download_detail_time_seeding':
+        return 'Seeding time';
+      case 'download_detail_listen_port':
+        return 'Listen port';
+      case 'download_detail_dht_nodes':
+        return 'DHT nodes';
+      case 'download_detail_port_mapping':
+        return 'Port mapping';
+      case 'download_detail_session_rates':
+        return 'Session rates';
+      case 'download_detail_pieces_label':
+        return 'Pieces';
+      case 'download_detail_priority_skip':
+        return 'Don\'t download';
+      case 'download_detail_priority_normal':
+        return 'Normal';
+      case 'download_detail_priority_high':
+        return 'High';
+      case 'download_detail_tracker_working':
+        return 'Working';
+      case 'download_detail_tracker_updating':
+        return 'Updating';
+      case 'download_detail_tracker_not_contacted':
+        return 'Not contacted yet';
+      case 'download_detail_tracker_not_working':
+        return 'Not working';
+      case 'download_detail_tracker_disabled':
+        return 'Disabled';
+      case 'download_detail_no_peers':
+        return 'No connected peers';
+      case 'download_detail_no_trackers':
+        return 'No trackers';
+      case 'download_detail_priority_mixed':
+        return 'Mixed';
       default:
         return null;
     }
@@ -182611,6 +184277,66 @@ extension on _StringsRu {
         return 'Pause';
       case 'download_task_resume':
         return 'Resume';
+      case 'download_detail_title':
+        return 'Task details';
+      case 'download_detail_tab_overview':
+        return 'Overview';
+      case 'download_detail_tab_files':
+        return 'Files';
+      case 'download_detail_tab_peers':
+        return 'Peers';
+      case 'download_detail_tab_trackers':
+        return 'Trackers';
+      case 'download_detail_backend_unsupported':
+        return 'Not supported by current download backend';
+      case 'download_detail_task_gone':
+        return 'Task not found in backend';
+      case 'download_detail_section_transfer':
+        return 'Transfer';
+      case 'download_detail_section_network':
+        return 'Network';
+      case 'download_detail_seeds_label':
+        return 'Seeds';
+      case 'download_detail_leechers_label':
+        return 'Leechers';
+      case 'download_detail_connections_label':
+        return 'Connections';
+      case 'download_detail_time_active':
+        return 'Active time';
+      case 'download_detail_time_seeding':
+        return 'Seeding time';
+      case 'download_detail_listen_port':
+        return 'Listen port';
+      case 'download_detail_dht_nodes':
+        return 'DHT nodes';
+      case 'download_detail_port_mapping':
+        return 'Port mapping';
+      case 'download_detail_session_rates':
+        return 'Session rates';
+      case 'download_detail_pieces_label':
+        return 'Pieces';
+      case 'download_detail_priority_skip':
+        return 'Don\'t download';
+      case 'download_detail_priority_normal':
+        return 'Normal';
+      case 'download_detail_priority_high':
+        return 'High';
+      case 'download_detail_tracker_working':
+        return 'Working';
+      case 'download_detail_tracker_updating':
+        return 'Updating';
+      case 'download_detail_tracker_not_contacted':
+        return 'Not contacted yet';
+      case 'download_detail_tracker_not_working':
+        return 'Not working';
+      case 'download_detail_tracker_disabled':
+        return 'Disabled';
+      case 'download_detail_no_peers':
+        return 'No connected peers';
+      case 'download_detail_no_trackers':
+        return 'No trackers';
+      case 'download_detail_priority_mixed':
+        return 'Mixed';
       default:
         return null;
     }
@@ -188591,6 +190317,66 @@ extension on _StringsTh {
         return 'Pause';
       case 'download_task_resume':
         return 'Resume';
+      case 'download_detail_title':
+        return 'Task details';
+      case 'download_detail_tab_overview':
+        return 'Overview';
+      case 'download_detail_tab_files':
+        return 'Files';
+      case 'download_detail_tab_peers':
+        return 'Peers';
+      case 'download_detail_tab_trackers':
+        return 'Trackers';
+      case 'download_detail_backend_unsupported':
+        return 'Not supported by current download backend';
+      case 'download_detail_task_gone':
+        return 'Task not found in backend';
+      case 'download_detail_section_transfer':
+        return 'Transfer';
+      case 'download_detail_section_network':
+        return 'Network';
+      case 'download_detail_seeds_label':
+        return 'Seeds';
+      case 'download_detail_leechers_label':
+        return 'Leechers';
+      case 'download_detail_connections_label':
+        return 'Connections';
+      case 'download_detail_time_active':
+        return 'Active time';
+      case 'download_detail_time_seeding':
+        return 'Seeding time';
+      case 'download_detail_listen_port':
+        return 'Listen port';
+      case 'download_detail_dht_nodes':
+        return 'DHT nodes';
+      case 'download_detail_port_mapping':
+        return 'Port mapping';
+      case 'download_detail_session_rates':
+        return 'Session rates';
+      case 'download_detail_pieces_label':
+        return 'Pieces';
+      case 'download_detail_priority_skip':
+        return 'Don\'t download';
+      case 'download_detail_priority_normal':
+        return 'Normal';
+      case 'download_detail_priority_high':
+        return 'High';
+      case 'download_detail_tracker_working':
+        return 'Working';
+      case 'download_detail_tracker_updating':
+        return 'Updating';
+      case 'download_detail_tracker_not_contacted':
+        return 'Not contacted yet';
+      case 'download_detail_tracker_not_working':
+        return 'Not working';
+      case 'download_detail_tracker_disabled':
+        return 'Disabled';
+      case 'download_detail_no_peers':
+        return 'No connected peers';
+      case 'download_detail_no_trackers':
+        return 'No trackers';
+      case 'download_detail_priority_mixed':
+        return 'Mixed';
       default:
         return null;
     }
@@ -194580,6 +196366,66 @@ extension on _StringsTr {
         return 'Pause';
       case 'download_task_resume':
         return 'Resume';
+      case 'download_detail_title':
+        return 'Task details';
+      case 'download_detail_tab_overview':
+        return 'Overview';
+      case 'download_detail_tab_files':
+        return 'Files';
+      case 'download_detail_tab_peers':
+        return 'Peers';
+      case 'download_detail_tab_trackers':
+        return 'Trackers';
+      case 'download_detail_backend_unsupported':
+        return 'Not supported by current download backend';
+      case 'download_detail_task_gone':
+        return 'Task not found in backend';
+      case 'download_detail_section_transfer':
+        return 'Transfer';
+      case 'download_detail_section_network':
+        return 'Network';
+      case 'download_detail_seeds_label':
+        return 'Seeds';
+      case 'download_detail_leechers_label':
+        return 'Leechers';
+      case 'download_detail_connections_label':
+        return 'Connections';
+      case 'download_detail_time_active':
+        return 'Active time';
+      case 'download_detail_time_seeding':
+        return 'Seeding time';
+      case 'download_detail_listen_port':
+        return 'Listen port';
+      case 'download_detail_dht_nodes':
+        return 'DHT nodes';
+      case 'download_detail_port_mapping':
+        return 'Port mapping';
+      case 'download_detail_session_rates':
+        return 'Session rates';
+      case 'download_detail_pieces_label':
+        return 'Pieces';
+      case 'download_detail_priority_skip':
+        return 'Don\'t download';
+      case 'download_detail_priority_normal':
+        return 'Normal';
+      case 'download_detail_priority_high':
+        return 'High';
+      case 'download_detail_tracker_working':
+        return 'Working';
+      case 'download_detail_tracker_updating':
+        return 'Updating';
+      case 'download_detail_tracker_not_contacted':
+        return 'Not contacted yet';
+      case 'download_detail_tracker_not_working':
+        return 'Not working';
+      case 'download_detail_tracker_disabled':
+        return 'Disabled';
+      case 'download_detail_no_peers':
+        return 'No connected peers';
+      case 'download_detail_no_trackers':
+        return 'No trackers';
+      case 'download_detail_priority_mixed':
+        return 'Mixed';
       default:
         return null;
     }
@@ -200565,6 +202411,66 @@ extension on _StringsVi {
         return 'Pause';
       case 'download_task_resume':
         return 'Resume';
+      case 'download_detail_title':
+        return 'Task details';
+      case 'download_detail_tab_overview':
+        return 'Overview';
+      case 'download_detail_tab_files':
+        return 'Files';
+      case 'download_detail_tab_peers':
+        return 'Peers';
+      case 'download_detail_tab_trackers':
+        return 'Trackers';
+      case 'download_detail_backend_unsupported':
+        return 'Not supported by current download backend';
+      case 'download_detail_task_gone':
+        return 'Task not found in backend';
+      case 'download_detail_section_transfer':
+        return 'Transfer';
+      case 'download_detail_section_network':
+        return 'Network';
+      case 'download_detail_seeds_label':
+        return 'Seeds';
+      case 'download_detail_leechers_label':
+        return 'Leechers';
+      case 'download_detail_connections_label':
+        return 'Connections';
+      case 'download_detail_time_active':
+        return 'Active time';
+      case 'download_detail_time_seeding':
+        return 'Seeding time';
+      case 'download_detail_listen_port':
+        return 'Listen port';
+      case 'download_detail_dht_nodes':
+        return 'DHT nodes';
+      case 'download_detail_port_mapping':
+        return 'Port mapping';
+      case 'download_detail_session_rates':
+        return 'Session rates';
+      case 'download_detail_pieces_label':
+        return 'Pieces';
+      case 'download_detail_priority_skip':
+        return 'Don\'t download';
+      case 'download_detail_priority_normal':
+        return 'Normal';
+      case 'download_detail_priority_high':
+        return 'High';
+      case 'download_detail_tracker_working':
+        return 'Working';
+      case 'download_detail_tracker_updating':
+        return 'Updating';
+      case 'download_detail_tracker_not_contacted':
+        return 'Not contacted yet';
+      case 'download_detail_tracker_not_working':
+        return 'Not working';
+      case 'download_detail_tracker_disabled':
+        return 'Disabled';
+      case 'download_detail_no_peers':
+        return 'No connected peers';
+      case 'download_detail_no_trackers':
+        return 'No trackers';
+      case 'download_detail_priority_mixed':
+        return 'Mixed';
       default:
         return null;
     }
@@ -206497,6 +208403,66 @@ extension on _StringsZhCn {
         return '暂停';
       case 'download_task_resume':
         return '恢复';
+      case 'download_detail_title':
+        return '任务详情';
+      case 'download_detail_tab_overview':
+        return '总览';
+      case 'download_detail_tab_files':
+        return '文件';
+      case 'download_detail_tab_peers':
+        return '节点';
+      case 'download_detail_tab_trackers':
+        return 'Tracker';
+      case 'download_detail_backend_unsupported':
+        return '当前下载后端不支持';
+      case 'download_detail_task_gone':
+        return '后端中找不到该任务';
+      case 'download_detail_section_transfer':
+        return '传输';
+      case 'download_detail_section_network':
+        return '网络';
+      case 'download_detail_seeds_label':
+        return '做种';
+      case 'download_detail_leechers_label':
+        return '下载者';
+      case 'download_detail_connections_label':
+        return '连接数';
+      case 'download_detail_time_active':
+        return '活跃时长';
+      case 'download_detail_time_seeding':
+        return '做种时长';
+      case 'download_detail_listen_port':
+        return '监听端口';
+      case 'download_detail_dht_nodes':
+        return 'DHT 节点';
+      case 'download_detail_port_mapping':
+        return '端口映射';
+      case 'download_detail_session_rates':
+        return '会话速率';
+      case 'download_detail_pieces_label':
+        return '分片';
+      case 'download_detail_priority_skip':
+        return '不下载';
+      case 'download_detail_priority_normal':
+        return '普通';
+      case 'download_detail_priority_high':
+        return '高';
+      case 'download_detail_tracker_working':
+        return '工作中';
+      case 'download_detail_tracker_updating':
+        return '更新中';
+      case 'download_detail_tracker_not_contacted':
+        return '尚未联系';
+      case 'download_detail_tracker_not_working':
+        return '不工作';
+      case 'download_detail_tracker_disabled':
+        return '已禁用';
+      case 'download_detail_no_peers':
+        return '暂无已连接节点';
+      case 'download_detail_no_trackers':
+        return '无 Tracker';
+      case 'download_detail_priority_mixed':
+        return '混合';
       default:
         return null;
     }
@@ -212455,6 +214421,66 @@ extension on _StringsZhHk {
         return 'Pause';
       case 'download_task_resume':
         return 'Resume';
+      case 'download_detail_title':
+        return 'Task details';
+      case 'download_detail_tab_overview':
+        return 'Overview';
+      case 'download_detail_tab_files':
+        return 'Files';
+      case 'download_detail_tab_peers':
+        return 'Peers';
+      case 'download_detail_tab_trackers':
+        return 'Trackers';
+      case 'download_detail_backend_unsupported':
+        return 'Not supported by current download backend';
+      case 'download_detail_task_gone':
+        return 'Task not found in backend';
+      case 'download_detail_section_transfer':
+        return 'Transfer';
+      case 'download_detail_section_network':
+        return 'Network';
+      case 'download_detail_seeds_label':
+        return 'Seeds';
+      case 'download_detail_leechers_label':
+        return 'Leechers';
+      case 'download_detail_connections_label':
+        return 'Connections';
+      case 'download_detail_time_active':
+        return 'Active time';
+      case 'download_detail_time_seeding':
+        return 'Seeding time';
+      case 'download_detail_listen_port':
+        return 'Listen port';
+      case 'download_detail_dht_nodes':
+        return 'DHT nodes';
+      case 'download_detail_port_mapping':
+        return 'Port mapping';
+      case 'download_detail_session_rates':
+        return 'Session rates';
+      case 'download_detail_pieces_label':
+        return 'Pieces';
+      case 'download_detail_priority_skip':
+        return 'Don\'t download';
+      case 'download_detail_priority_normal':
+        return 'Normal';
+      case 'download_detail_priority_high':
+        return 'High';
+      case 'download_detail_tracker_working':
+        return 'Working';
+      case 'download_detail_tracker_updating':
+        return 'Updating';
+      case 'download_detail_tracker_not_contacted':
+        return 'Not contacted yet';
+      case 'download_detail_tracker_not_working':
+        return 'Not working';
+      case 'download_detail_tracker_disabled':
+        return 'Disabled';
+      case 'download_detail_no_peers':
+        return 'No connected peers';
+      case 'download_detail_no_trackers':
+        return 'No trackers';
+      case 'download_detail_priority_mixed':
+        return 'Mixed';
       default:
         return null;
     }
