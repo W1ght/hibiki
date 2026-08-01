@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 49504 (2912 per locale)
+/// Strings: 49674 (2922 per locale)
 ///
-/// Built on 2026-08-01 at 05:47 UTC
+/// Built on 2026-08-01 at 06:18 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3937,6 +3937,19 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get download_task_status_error => 'Error';
   String get download_task_pause => 'Pause';
   String get download_task_resume => 'Resume';
+  String get download_airing_calendar_title => 'Airing calendar';
+  String get download_airing_calendar_show_all => 'Show all this season';
+  String get download_airing_calendar_empty_guidance =>
+      'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+  String get download_airing_calendar_error =>
+      'Failed to load the airing schedule';
+  String get download_airing_calendar_in_library => 'In library';
+  String get download_airing_calendar_subscribed => 'Subscribed';
+  String download_airing_calendar_episode_label({required Object episode}) =>
+      'Ep ${episode}';
+  String get download_airing_calendar_week_prev => 'Previous week';
+  String get download_airing_calendar_week_next => 'Next week';
+  String get download_airing_calendar_week_empty => 'Nothing airing this week';
 }
 
 // Path: <root>
@@ -10635,6 +10648,29 @@ class _StringsAr extends _StringsEn {
   String get download_task_pause => 'Pause';
   @override
   String get download_task_resume => 'Resume';
+  @override
+  String get download_airing_calendar_title => 'Airing calendar';
+  @override
+  String get download_airing_calendar_show_all => 'Show all this season';
+  @override
+  String get download_airing_calendar_empty_guidance =>
+      'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+  @override
+  String get download_airing_calendar_error =>
+      'Failed to load the airing schedule';
+  @override
+  String get download_airing_calendar_in_library => 'In library';
+  @override
+  String get download_airing_calendar_subscribed => 'Subscribed';
+  @override
+  String download_airing_calendar_episode_label({required Object episode}) =>
+      'Ep ${episode}';
+  @override
+  String get download_airing_calendar_week_prev => 'Previous week';
+  @override
+  String get download_airing_calendar_week_next => 'Next week';
+  @override
+  String get download_airing_calendar_week_empty => 'Nothing airing this week';
 }
 
 // Path: <root>
@@ -17400,6 +17436,29 @@ class _StringsDe extends _StringsEn {
   String get download_task_pause => 'Pause';
   @override
   String get download_task_resume => 'Resume';
+  @override
+  String get download_airing_calendar_title => 'Airing calendar';
+  @override
+  String get download_airing_calendar_show_all => 'Show all this season';
+  @override
+  String get download_airing_calendar_empty_guidance =>
+      'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+  @override
+  String get download_airing_calendar_error =>
+      'Failed to load the airing schedule';
+  @override
+  String get download_airing_calendar_in_library => 'In library';
+  @override
+  String get download_airing_calendar_subscribed => 'Subscribed';
+  @override
+  String download_airing_calendar_episode_label({required Object episode}) =>
+      'Ep ${episode}';
+  @override
+  String get download_airing_calendar_week_prev => 'Previous week';
+  @override
+  String get download_airing_calendar_week_next => 'Next week';
+  @override
+  String get download_airing_calendar_week_empty => 'Nothing airing this week';
 }
 
 // Path: <root>
@@ -24181,6 +24240,29 @@ class _StringsEs extends _StringsEn {
   String get download_task_pause => 'Pause';
   @override
   String get download_task_resume => 'Resume';
+  @override
+  String get download_airing_calendar_title => 'Airing calendar';
+  @override
+  String get download_airing_calendar_show_all => 'Show all this season';
+  @override
+  String get download_airing_calendar_empty_guidance =>
+      'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+  @override
+  String get download_airing_calendar_error =>
+      'Failed to load the airing schedule';
+  @override
+  String get download_airing_calendar_in_library => 'In library';
+  @override
+  String get download_airing_calendar_subscribed => 'Subscribed';
+  @override
+  String download_airing_calendar_episode_label({required Object episode}) =>
+      'Ep ${episode}';
+  @override
+  String get download_airing_calendar_week_prev => 'Previous week';
+  @override
+  String get download_airing_calendar_week_next => 'Next week';
+  @override
+  String get download_airing_calendar_week_empty => 'Nothing airing this week';
 }
 
 // Path: <root>
@@ -30973,6 +31055,29 @@ class _StringsFr extends _StringsEn {
   String get download_task_pause => 'Pause';
   @override
   String get download_task_resume => 'Resume';
+  @override
+  String get download_airing_calendar_title => 'Airing calendar';
+  @override
+  String get download_airing_calendar_show_all => 'Show all this season';
+  @override
+  String get download_airing_calendar_empty_guidance =>
+      'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+  @override
+  String get download_airing_calendar_error =>
+      'Failed to load the airing schedule';
+  @override
+  String get download_airing_calendar_in_library => 'In library';
+  @override
+  String get download_airing_calendar_subscribed => 'Subscribed';
+  @override
+  String download_airing_calendar_episode_label({required Object episode}) =>
+      'Ep ${episode}';
+  @override
+  String get download_airing_calendar_week_prev => 'Previous week';
+  @override
+  String get download_airing_calendar_week_next => 'Next week';
+  @override
+  String get download_airing_calendar_week_empty => 'Nothing airing this week';
 }
 
 // Path: <root>
@@ -37694,6 +37799,29 @@ class _StringsId extends _StringsEn {
   String get download_task_pause => 'Pause';
   @override
   String get download_task_resume => 'Resume';
+  @override
+  String get download_airing_calendar_title => 'Airing calendar';
+  @override
+  String get download_airing_calendar_show_all => 'Show all this season';
+  @override
+  String get download_airing_calendar_empty_guidance =>
+      'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+  @override
+  String get download_airing_calendar_error =>
+      'Failed to load the airing schedule';
+  @override
+  String get download_airing_calendar_in_library => 'In library';
+  @override
+  String get download_airing_calendar_subscribed => 'Subscribed';
+  @override
+  String download_airing_calendar_episode_label({required Object episode}) =>
+      'Ep ${episode}';
+  @override
+  String get download_airing_calendar_week_prev => 'Previous week';
+  @override
+  String get download_airing_calendar_week_next => 'Next week';
+  @override
+  String get download_airing_calendar_week_empty => 'Nothing airing this week';
 }
 
 // Path: <root>
@@ -44461,6 +44589,29 @@ class _StringsIt extends _StringsEn {
   String get download_task_pause => 'Pause';
   @override
   String get download_task_resume => 'Resume';
+  @override
+  String get download_airing_calendar_title => 'Airing calendar';
+  @override
+  String get download_airing_calendar_show_all => 'Show all this season';
+  @override
+  String get download_airing_calendar_empty_guidance =>
+      'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+  @override
+  String get download_airing_calendar_error =>
+      'Failed to load the airing schedule';
+  @override
+  String get download_airing_calendar_in_library => 'In library';
+  @override
+  String get download_airing_calendar_subscribed => 'Subscribed';
+  @override
+  String download_airing_calendar_episode_label({required Object episode}) =>
+      'Ep ${episode}';
+  @override
+  String get download_airing_calendar_week_prev => 'Previous week';
+  @override
+  String get download_airing_calendar_week_next => 'Next week';
+  @override
+  String get download_airing_calendar_week_empty => 'Nothing airing this week';
 }
 
 // Path: <root>
@@ -51045,6 +51196,29 @@ class _StringsJa extends _StringsEn {
   String get download_task_pause => 'Pause';
   @override
   String get download_task_resume => 'Resume';
+  @override
+  String get download_airing_calendar_title => 'Airing calendar';
+  @override
+  String get download_airing_calendar_show_all => 'Show all this season';
+  @override
+  String get download_airing_calendar_empty_guidance =>
+      'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+  @override
+  String get download_airing_calendar_error =>
+      'Failed to load the airing schedule';
+  @override
+  String get download_airing_calendar_in_library => 'In library';
+  @override
+  String get download_airing_calendar_subscribed => 'Subscribed';
+  @override
+  String download_airing_calendar_episode_label({required Object episode}) =>
+      'Ep ${episode}';
+  @override
+  String get download_airing_calendar_week_prev => 'Previous week';
+  @override
+  String get download_airing_calendar_week_next => 'Next week';
+  @override
+  String get download_airing_calendar_week_empty => 'Nothing airing this week';
 }
 
 // Path: <root>
@@ -57631,6 +57805,29 @@ class _StringsKo extends _StringsEn {
   String get download_task_pause => 'Pause';
   @override
   String get download_task_resume => 'Resume';
+  @override
+  String get download_airing_calendar_title => 'Airing calendar';
+  @override
+  String get download_airing_calendar_show_all => 'Show all this season';
+  @override
+  String get download_airing_calendar_empty_guidance =>
+      'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+  @override
+  String get download_airing_calendar_error =>
+      'Failed to load the airing schedule';
+  @override
+  String get download_airing_calendar_in_library => 'In library';
+  @override
+  String get download_airing_calendar_subscribed => 'Subscribed';
+  @override
+  String download_airing_calendar_episode_label({required Object episode}) =>
+      'Ep ${episode}';
+  @override
+  String get download_airing_calendar_week_prev => 'Previous week';
+  @override
+  String get download_airing_calendar_week_next => 'Next week';
+  @override
+  String get download_airing_calendar_week_empty => 'Nothing airing this week';
 }
 
 // Path: <root>
@@ -64378,6 +64575,29 @@ class _StringsNl extends _StringsEn {
   String get download_task_pause => 'Pause';
   @override
   String get download_task_resume => 'Resume';
+  @override
+  String get download_airing_calendar_title => 'Airing calendar';
+  @override
+  String get download_airing_calendar_show_all => 'Show all this season';
+  @override
+  String get download_airing_calendar_empty_guidance =>
+      'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+  @override
+  String get download_airing_calendar_error =>
+      'Failed to load the airing schedule';
+  @override
+  String get download_airing_calendar_in_library => 'In library';
+  @override
+  String get download_airing_calendar_subscribed => 'Subscribed';
+  @override
+  String download_airing_calendar_episode_label({required Object episode}) =>
+      'Ep ${episode}';
+  @override
+  String get download_airing_calendar_week_prev => 'Previous week';
+  @override
+  String get download_airing_calendar_week_next => 'Next week';
+  @override
+  String get download_airing_calendar_week_empty => 'Nothing airing this week';
 }
 
 // Path: <root>
@@ -71138,6 +71358,29 @@ class _StringsPtBr extends _StringsEn {
   String get download_task_pause => 'Pause';
   @override
   String get download_task_resume => 'Resume';
+  @override
+  String get download_airing_calendar_title => 'Airing calendar';
+  @override
+  String get download_airing_calendar_show_all => 'Show all this season';
+  @override
+  String get download_airing_calendar_empty_guidance =>
+      'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+  @override
+  String get download_airing_calendar_error =>
+      'Failed to load the airing schedule';
+  @override
+  String get download_airing_calendar_in_library => 'In library';
+  @override
+  String get download_airing_calendar_subscribed => 'Subscribed';
+  @override
+  String download_airing_calendar_episode_label({required Object episode}) =>
+      'Ep ${episode}';
+  @override
+  String get download_airing_calendar_week_prev => 'Previous week';
+  @override
+  String get download_airing_calendar_week_next => 'Next week';
+  @override
+  String get download_airing_calendar_week_empty => 'Nothing airing this week';
 }
 
 // Path: <root>
@@ -77882,6 +78125,29 @@ class _StringsRu extends _StringsEn {
   String get download_task_pause => 'Pause';
   @override
   String get download_task_resume => 'Resume';
+  @override
+  String get download_airing_calendar_title => 'Airing calendar';
+  @override
+  String get download_airing_calendar_show_all => 'Show all this season';
+  @override
+  String get download_airing_calendar_empty_guidance =>
+      'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+  @override
+  String get download_airing_calendar_error =>
+      'Failed to load the airing schedule';
+  @override
+  String get download_airing_calendar_in_library => 'In library';
+  @override
+  String get download_airing_calendar_subscribed => 'Subscribed';
+  @override
+  String download_airing_calendar_episode_label({required Object episode}) =>
+      'Ep ${episode}';
+  @override
+  String get download_airing_calendar_week_prev => 'Previous week';
+  @override
+  String get download_airing_calendar_week_next => 'Next week';
+  @override
+  String get download_airing_calendar_week_empty => 'Nothing airing this week';
 }
 
 // Path: <root>
@@ -84574,6 +84840,29 @@ class _StringsTh extends _StringsEn {
   String get download_task_pause => 'Pause';
   @override
   String get download_task_resume => 'Resume';
+  @override
+  String get download_airing_calendar_title => 'Airing calendar';
+  @override
+  String get download_airing_calendar_show_all => 'Show all this season';
+  @override
+  String get download_airing_calendar_empty_guidance =>
+      'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+  @override
+  String get download_airing_calendar_error =>
+      'Failed to load the airing schedule';
+  @override
+  String get download_airing_calendar_in_library => 'In library';
+  @override
+  String get download_airing_calendar_subscribed => 'Subscribed';
+  @override
+  String download_airing_calendar_episode_label({required Object episode}) =>
+      'Ep ${episode}';
+  @override
+  String get download_airing_calendar_week_prev => 'Previous week';
+  @override
+  String get download_airing_calendar_week_next => 'Next week';
+  @override
+  String get download_airing_calendar_week_empty => 'Nothing airing this week';
 }
 
 // Path: <root>
@@ -91298,6 +91587,29 @@ class _StringsTr extends _StringsEn {
   String get download_task_pause => 'Pause';
   @override
   String get download_task_resume => 'Resume';
+  @override
+  String get download_airing_calendar_title => 'Airing calendar';
+  @override
+  String get download_airing_calendar_show_all => 'Show all this season';
+  @override
+  String get download_airing_calendar_empty_guidance =>
+      'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+  @override
+  String get download_airing_calendar_error =>
+      'Failed to load the airing schedule';
+  @override
+  String get download_airing_calendar_in_library => 'In library';
+  @override
+  String get download_airing_calendar_subscribed => 'Subscribed';
+  @override
+  String download_airing_calendar_episode_label({required Object episode}) =>
+      'Ep ${episode}';
+  @override
+  String get download_airing_calendar_week_prev => 'Previous week';
+  @override
+  String get download_airing_calendar_week_next => 'Next week';
+  @override
+  String get download_airing_calendar_week_empty => 'Nothing airing this week';
 }
 
 // Path: <root>
@@ -98007,6 +98319,29 @@ class _StringsVi extends _StringsEn {
   String get download_task_pause => 'Pause';
   @override
   String get download_task_resume => 'Resume';
+  @override
+  String get download_airing_calendar_title => 'Airing calendar';
+  @override
+  String get download_airing_calendar_show_all => 'Show all this season';
+  @override
+  String get download_airing_calendar_empty_guidance =>
+      'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+  @override
+  String get download_airing_calendar_error =>
+      'Failed to load the airing schedule';
+  @override
+  String get download_airing_calendar_in_library => 'In library';
+  @override
+  String get download_airing_calendar_subscribed => 'Subscribed';
+  @override
+  String download_airing_calendar_episode_label({required Object episode}) =>
+      'Ep ${episode}';
+  @override
+  String get download_airing_calendar_week_prev => 'Previous week';
+  @override
+  String get download_airing_calendar_week_next => 'Next week';
+  @override
+  String get download_airing_calendar_week_empty => 'Nothing airing this week';
 }
 
 // Path: <root>
@@ -104242,6 +104577,28 @@ class _StringsZhCn extends _StringsEn {
   String get download_task_pause => '暂停';
   @override
   String get download_task_resume => '恢复';
+  @override
+  String get download_airing_calendar_title => '放送日历';
+  @override
+  String get download_airing_calendar_show_all => '显示本季全部';
+  @override
+  String get download_airing_calendar_empty_guidance =>
+      '暂无可显示的放送信息：给合集绑定 AniList 或添加下载订阅后，这里会显示对应的放送时间。';
+  @override
+  String get download_airing_calendar_error => '放送时间表加载失败';
+  @override
+  String get download_airing_calendar_in_library => '已入库';
+  @override
+  String get download_airing_calendar_subscribed => '订阅中';
+  @override
+  String download_airing_calendar_episode_label({required Object episode}) =>
+      '第 ${episode} 集';
+  @override
+  String get download_airing_calendar_week_prev => '上一周';
+  @override
+  String get download_airing_calendar_week_next => '下一周';
+  @override
+  String get download_airing_calendar_week_empty => '本周没有相关放送';
 }
 
 // Path: <root>
@@ -110747,6 +111104,29 @@ class _StringsZhHk extends _StringsEn {
   String get download_task_pause => 'Pause';
   @override
   String get download_task_resume => 'Resume';
+  @override
+  String get download_airing_calendar_title => 'Airing calendar';
+  @override
+  String get download_airing_calendar_show_all => 'Show all this season';
+  @override
+  String get download_airing_calendar_empty_guidance =>
+      'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+  @override
+  String get download_airing_calendar_error =>
+      'Failed to load the airing schedule';
+  @override
+  String get download_airing_calendar_in_library => 'In library';
+  @override
+  String get download_airing_calendar_subscribed => 'Subscribed';
+  @override
+  String download_airing_calendar_episode_label({required Object episode}) =>
+      'Ep ${episode}';
+  @override
+  String get download_airing_calendar_week_prev => 'Previous week';
+  @override
+  String get download_airing_calendar_week_next => 'Next week';
+  @override
+  String get download_airing_calendar_week_empty => 'Nothing airing this week';
 }
 
 /// Flat map(s) containing all translations.
@@ -116727,6 +117107,26 @@ extension on _StringsEn {
         return 'Pause';
       case 'download_task_resume':
         return 'Resume';
+      case 'download_airing_calendar_title':
+        return 'Airing calendar';
+      case 'download_airing_calendar_show_all':
+        return 'Show all this season';
+      case 'download_airing_calendar_empty_guidance':
+        return 'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+      case 'download_airing_calendar_error':
+        return 'Failed to load the airing schedule';
+      case 'download_airing_calendar_in_library':
+        return 'In library';
+      case 'download_airing_calendar_subscribed':
+        return 'Subscribed';
+      case 'download_airing_calendar_episode_label':
+        return ({required Object episode}) => 'Ep ${episode}';
+      case 'download_airing_calendar_week_prev':
+        return 'Previous week';
+      case 'download_airing_calendar_week_next':
+        return 'Next week';
+      case 'download_airing_calendar_week_empty':
+        return 'Nothing airing this week';
       default:
         return null;
     }
@@ -122705,6 +123105,26 @@ extension on _StringsAr {
         return 'Pause';
       case 'download_task_resume':
         return 'Resume';
+      case 'download_airing_calendar_title':
+        return 'Airing calendar';
+      case 'download_airing_calendar_show_all':
+        return 'Show all this season';
+      case 'download_airing_calendar_empty_guidance':
+        return 'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+      case 'download_airing_calendar_error':
+        return 'Failed to load the airing schedule';
+      case 'download_airing_calendar_in_library':
+        return 'In library';
+      case 'download_airing_calendar_subscribed':
+        return 'Subscribed';
+      case 'download_airing_calendar_episode_label':
+        return ({required Object episode}) => 'Ep ${episode}';
+      case 'download_airing_calendar_week_prev':
+        return 'Previous week';
+      case 'download_airing_calendar_week_next':
+        return 'Next week';
+      case 'download_airing_calendar_week_empty':
+        return 'Nothing airing this week';
       default:
         return null;
     }
@@ -128705,6 +129125,26 @@ extension on _StringsDe {
         return 'Pause';
       case 'download_task_resume':
         return 'Resume';
+      case 'download_airing_calendar_title':
+        return 'Airing calendar';
+      case 'download_airing_calendar_show_all':
+        return 'Show all this season';
+      case 'download_airing_calendar_empty_guidance':
+        return 'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+      case 'download_airing_calendar_error':
+        return 'Failed to load the airing schedule';
+      case 'download_airing_calendar_in_library':
+        return 'In library';
+      case 'download_airing_calendar_subscribed':
+        return 'Subscribed';
+      case 'download_airing_calendar_episode_label':
+        return ({required Object episode}) => 'Ep ${episode}';
+      case 'download_airing_calendar_week_prev':
+        return 'Previous week';
+      case 'download_airing_calendar_week_next':
+        return 'Next week';
+      case 'download_airing_calendar_week_empty':
+        return 'Nothing airing this week';
       default:
         return null;
     }
@@ -134704,6 +135144,26 @@ extension on _StringsEs {
         return 'Pause';
       case 'download_task_resume':
         return 'Resume';
+      case 'download_airing_calendar_title':
+        return 'Airing calendar';
+      case 'download_airing_calendar_show_all':
+        return 'Show all this season';
+      case 'download_airing_calendar_empty_guidance':
+        return 'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+      case 'download_airing_calendar_error':
+        return 'Failed to load the airing schedule';
+      case 'download_airing_calendar_in_library':
+        return 'In library';
+      case 'download_airing_calendar_subscribed':
+        return 'Subscribed';
+      case 'download_airing_calendar_episode_label':
+        return ({required Object episode}) => 'Ep ${episode}';
+      case 'download_airing_calendar_week_prev':
+        return 'Previous week';
+      case 'download_airing_calendar_week_next':
+        return 'Next week';
+      case 'download_airing_calendar_week_empty':
+        return 'Nothing airing this week';
       default:
         return null;
     }
@@ -140709,6 +141169,26 @@ extension on _StringsFr {
         return 'Pause';
       case 'download_task_resume':
         return 'Resume';
+      case 'download_airing_calendar_title':
+        return 'Airing calendar';
+      case 'download_airing_calendar_show_all':
+        return 'Show all this season';
+      case 'download_airing_calendar_empty_guidance':
+        return 'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+      case 'download_airing_calendar_error':
+        return 'Failed to load the airing schedule';
+      case 'download_airing_calendar_in_library':
+        return 'In library';
+      case 'download_airing_calendar_subscribed':
+        return 'Subscribed';
+      case 'download_airing_calendar_episode_label':
+        return ({required Object episode}) => 'Ep ${episode}';
+      case 'download_airing_calendar_week_prev':
+        return 'Previous week';
+      case 'download_airing_calendar_week_next':
+        return 'Next week';
+      case 'download_airing_calendar_week_empty':
+        return 'Nothing airing this week';
       default:
         return null;
     }
@@ -146696,6 +147176,26 @@ extension on _StringsId {
         return 'Pause';
       case 'download_task_resume':
         return 'Resume';
+      case 'download_airing_calendar_title':
+        return 'Airing calendar';
+      case 'download_airing_calendar_show_all':
+        return 'Show all this season';
+      case 'download_airing_calendar_empty_guidance':
+        return 'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+      case 'download_airing_calendar_error':
+        return 'Failed to load the airing schedule';
+      case 'download_airing_calendar_in_library':
+        return 'In library';
+      case 'download_airing_calendar_subscribed':
+        return 'Subscribed';
+      case 'download_airing_calendar_episode_label':
+        return ({required Object episode}) => 'Ep ${episode}';
+      case 'download_airing_calendar_week_prev':
+        return 'Previous week';
+      case 'download_airing_calendar_week_next':
+        return 'Next week';
+      case 'download_airing_calendar_week_empty':
+        return 'Nothing airing this week';
       default:
         return null;
     }
@@ -152697,6 +153197,26 @@ extension on _StringsIt {
         return 'Pause';
       case 'download_task_resume':
         return 'Resume';
+      case 'download_airing_calendar_title':
+        return 'Airing calendar';
+      case 'download_airing_calendar_show_all':
+        return 'Show all this season';
+      case 'download_airing_calendar_empty_guidance':
+        return 'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+      case 'download_airing_calendar_error':
+        return 'Failed to load the airing schedule';
+      case 'download_airing_calendar_in_library':
+        return 'In library';
+      case 'download_airing_calendar_subscribed':
+        return 'Subscribed';
+      case 'download_airing_calendar_episode_label':
+        return ({required Object episode}) => 'Ep ${episode}';
+      case 'download_airing_calendar_week_prev':
+        return 'Previous week';
+      case 'download_airing_calendar_week_next':
+        return 'Next week';
+      case 'download_airing_calendar_week_empty':
+        return 'Nothing airing this week';
       default:
         return null;
     }
@@ -158660,6 +159180,26 @@ extension on _StringsJa {
         return 'Pause';
       case 'download_task_resume':
         return 'Resume';
+      case 'download_airing_calendar_title':
+        return 'Airing calendar';
+      case 'download_airing_calendar_show_all':
+        return 'Show all this season';
+      case 'download_airing_calendar_empty_guidance':
+        return 'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+      case 'download_airing_calendar_error':
+        return 'Failed to load the airing schedule';
+      case 'download_airing_calendar_in_library':
+        return 'In library';
+      case 'download_airing_calendar_subscribed':
+        return 'Subscribed';
+      case 'download_airing_calendar_episode_label':
+        return ({required Object episode}) => 'Ep ${episode}';
+      case 'download_airing_calendar_week_prev':
+        return 'Previous week';
+      case 'download_airing_calendar_week_next':
+        return 'Next week';
+      case 'download_airing_calendar_week_empty':
+        return 'Nothing airing this week';
       default:
         return null;
     }
@@ -164627,6 +165167,26 @@ extension on _StringsKo {
         return 'Pause';
       case 'download_task_resume':
         return 'Resume';
+      case 'download_airing_calendar_title':
+        return 'Airing calendar';
+      case 'download_airing_calendar_show_all':
+        return 'Show all this season';
+      case 'download_airing_calendar_empty_guidance':
+        return 'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+      case 'download_airing_calendar_error':
+        return 'Failed to load the airing schedule';
+      case 'download_airing_calendar_in_library':
+        return 'In library';
+      case 'download_airing_calendar_subscribed':
+        return 'Subscribed';
+      case 'download_airing_calendar_episode_label':
+        return ({required Object episode}) => 'Ep ${episode}';
+      case 'download_airing_calendar_week_prev':
+        return 'Previous week';
+      case 'download_airing_calendar_week_next':
+        return 'Next week';
+      case 'download_airing_calendar_week_empty':
+        return 'Nothing airing this week';
       default:
         return null;
     }
@@ -170622,6 +171182,26 @@ extension on _StringsNl {
         return 'Pause';
       case 'download_task_resume':
         return 'Resume';
+      case 'download_airing_calendar_title':
+        return 'Airing calendar';
+      case 'download_airing_calendar_show_all':
+        return 'Show all this season';
+      case 'download_airing_calendar_empty_guidance':
+        return 'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+      case 'download_airing_calendar_error':
+        return 'Failed to load the airing schedule';
+      case 'download_airing_calendar_in_library':
+        return 'In library';
+      case 'download_airing_calendar_subscribed':
+        return 'Subscribed';
+      case 'download_airing_calendar_episode_label':
+        return ({required Object episode}) => 'Ep ${episode}';
+      case 'download_airing_calendar_week_prev':
+        return 'Previous week';
+      case 'download_airing_calendar_week_next':
+        return 'Next week';
+      case 'download_airing_calendar_week_empty':
+        return 'Nothing airing this week';
       default:
         return null;
     }
@@ -176614,6 +177194,26 @@ extension on _StringsPtBr {
         return 'Pause';
       case 'download_task_resume':
         return 'Resume';
+      case 'download_airing_calendar_title':
+        return 'Airing calendar';
+      case 'download_airing_calendar_show_all':
+        return 'Show all this season';
+      case 'download_airing_calendar_empty_guidance':
+        return 'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+      case 'download_airing_calendar_error':
+        return 'Failed to load the airing schedule';
+      case 'download_airing_calendar_in_library':
+        return 'In library';
+      case 'download_airing_calendar_subscribed':
+        return 'Subscribed';
+      case 'download_airing_calendar_episode_label':
+        return ({required Object episode}) => 'Ep ${episode}';
+      case 'download_airing_calendar_week_prev':
+        return 'Previous week';
+      case 'download_airing_calendar_week_next':
+        return 'Next week';
+      case 'download_airing_calendar_week_empty':
+        return 'Nothing airing this week';
       default:
         return null;
     }
@@ -182611,6 +183211,26 @@ extension on _StringsRu {
         return 'Pause';
       case 'download_task_resume':
         return 'Resume';
+      case 'download_airing_calendar_title':
+        return 'Airing calendar';
+      case 'download_airing_calendar_show_all':
+        return 'Show all this season';
+      case 'download_airing_calendar_empty_guidance':
+        return 'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+      case 'download_airing_calendar_error':
+        return 'Failed to load the airing schedule';
+      case 'download_airing_calendar_in_library':
+        return 'In library';
+      case 'download_airing_calendar_subscribed':
+        return 'Subscribed';
+      case 'download_airing_calendar_episode_label':
+        return ({required Object episode}) => 'Ep ${episode}';
+      case 'download_airing_calendar_week_prev':
+        return 'Previous week';
+      case 'download_airing_calendar_week_next':
+        return 'Next week';
+      case 'download_airing_calendar_week_empty':
+        return 'Nothing airing this week';
       default:
         return null;
     }
@@ -188591,6 +189211,26 @@ extension on _StringsTh {
         return 'Pause';
       case 'download_task_resume':
         return 'Resume';
+      case 'download_airing_calendar_title':
+        return 'Airing calendar';
+      case 'download_airing_calendar_show_all':
+        return 'Show all this season';
+      case 'download_airing_calendar_empty_guidance':
+        return 'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+      case 'download_airing_calendar_error':
+        return 'Failed to load the airing schedule';
+      case 'download_airing_calendar_in_library':
+        return 'In library';
+      case 'download_airing_calendar_subscribed':
+        return 'Subscribed';
+      case 'download_airing_calendar_episode_label':
+        return ({required Object episode}) => 'Ep ${episode}';
+      case 'download_airing_calendar_week_prev':
+        return 'Previous week';
+      case 'download_airing_calendar_week_next':
+        return 'Next week';
+      case 'download_airing_calendar_week_empty':
+        return 'Nothing airing this week';
       default:
         return null;
     }
@@ -194580,6 +195220,26 @@ extension on _StringsTr {
         return 'Pause';
       case 'download_task_resume':
         return 'Resume';
+      case 'download_airing_calendar_title':
+        return 'Airing calendar';
+      case 'download_airing_calendar_show_all':
+        return 'Show all this season';
+      case 'download_airing_calendar_empty_guidance':
+        return 'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+      case 'download_airing_calendar_error':
+        return 'Failed to load the airing schedule';
+      case 'download_airing_calendar_in_library':
+        return 'In library';
+      case 'download_airing_calendar_subscribed':
+        return 'Subscribed';
+      case 'download_airing_calendar_episode_label':
+        return ({required Object episode}) => 'Ep ${episode}';
+      case 'download_airing_calendar_week_prev':
+        return 'Previous week';
+      case 'download_airing_calendar_week_next':
+        return 'Next week';
+      case 'download_airing_calendar_week_empty':
+        return 'Nothing airing this week';
       default:
         return null;
     }
@@ -200565,6 +201225,26 @@ extension on _StringsVi {
         return 'Pause';
       case 'download_task_resume':
         return 'Resume';
+      case 'download_airing_calendar_title':
+        return 'Airing calendar';
+      case 'download_airing_calendar_show_all':
+        return 'Show all this season';
+      case 'download_airing_calendar_empty_guidance':
+        return 'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+      case 'download_airing_calendar_error':
+        return 'Failed to load the airing schedule';
+      case 'download_airing_calendar_in_library':
+        return 'In library';
+      case 'download_airing_calendar_subscribed':
+        return 'Subscribed';
+      case 'download_airing_calendar_episode_label':
+        return ({required Object episode}) => 'Ep ${episode}';
+      case 'download_airing_calendar_week_prev':
+        return 'Previous week';
+      case 'download_airing_calendar_week_next':
+        return 'Next week';
+      case 'download_airing_calendar_week_empty':
+        return 'Nothing airing this week';
       default:
         return null;
     }
@@ -206497,6 +207177,26 @@ extension on _StringsZhCn {
         return '暂停';
       case 'download_task_resume':
         return '恢复';
+      case 'download_airing_calendar_title':
+        return '放送日历';
+      case 'download_airing_calendar_show_all':
+        return '显示本季全部';
+      case 'download_airing_calendar_empty_guidance':
+        return '暂无可显示的放送信息：给合集绑定 AniList 或添加下载订阅后，这里会显示对应的放送时间。';
+      case 'download_airing_calendar_error':
+        return '放送时间表加载失败';
+      case 'download_airing_calendar_in_library':
+        return '已入库';
+      case 'download_airing_calendar_subscribed':
+        return '订阅中';
+      case 'download_airing_calendar_episode_label':
+        return ({required Object episode}) => '第 ${episode} 集';
+      case 'download_airing_calendar_week_prev':
+        return '上一周';
+      case 'download_airing_calendar_week_next':
+        return '下一周';
+      case 'download_airing_calendar_week_empty':
+        return '本周没有相关放送';
       default:
         return null;
     }
@@ -212455,6 +213155,26 @@ extension on _StringsZhHk {
         return 'Pause';
       case 'download_task_resume':
         return 'Resume';
+      case 'download_airing_calendar_title':
+        return 'Airing calendar';
+      case 'download_airing_calendar_show_all':
+        return 'Show all this season';
+      case 'download_airing_calendar_empty_guidance':
+        return 'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+      case 'download_airing_calendar_error':
+        return 'Failed to load the airing schedule';
+      case 'download_airing_calendar_in_library':
+        return 'In library';
+      case 'download_airing_calendar_subscribed':
+        return 'Subscribed';
+      case 'download_airing_calendar_episode_label':
+        return ({required Object episode}) => 'Ep ${episode}';
+      case 'download_airing_calendar_week_prev':
+        return 'Previous week';
+      case 'download_airing_calendar_week_next':
+        return 'Next week';
+      case 'download_airing_calendar_week_empty':
+        return 'Nothing airing this week';
       default:
         return null;
     }
