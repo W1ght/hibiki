@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 49487 (2911 per locale)
+/// Strings: 49657 (2921 per locale)
 ///
-/// Built on 2026-08-01 at 06:16 UTC
+/// Built on 2026-08-01 at 07:08 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3932,11 +3932,24 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get download_task_status_error => 'Error';
   String get download_task_pause => 'Pause';
   String get download_task_resume => 'Resume';
+  String get download_airing_calendar_title => 'Airing calendar';
+  String get download_airing_calendar_show_all => 'Show all this season';
+  String get download_airing_calendar_empty_guidance =>
+      'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+  String get download_airing_calendar_error =>
+      'Failed to load the airing schedule';
+  String get download_airing_calendar_in_library => 'In library';
+  String get download_airing_calendar_subscribed => 'Subscribed';
+  String download_airing_calendar_episode_label({required Object episode}) =>
+      'Ep ${episode}';
+  String get download_airing_calendar_week_prev => 'Previous week';
+  String get download_airing_calendar_week_next => 'Next week';
+  String get download_airing_calendar_week_empty => 'Nothing airing this week';
   String get video_setting_tmdb_key => 'Custom TMDB API key';
   String get video_setting_tmdb_key_hint =>
       'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
   String get about_tmdb_attribution =>
-      'This product uses the TMDB API but is not endorsed or certified by TMDB.';
+      'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
 }
 
 // Path: <root>
@@ -10627,13 +10640,36 @@ class _StringsAr extends _StringsEn {
   @override
   String get download_task_resume => 'Resume';
   @override
+  String get download_airing_calendar_title => 'Airing calendar';
+  @override
+  String get download_airing_calendar_show_all => 'Show all this season';
+  @override
+  String get download_airing_calendar_empty_guidance =>
+      'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+  @override
+  String get download_airing_calendar_error =>
+      'Failed to load the airing schedule';
+  @override
+  String get download_airing_calendar_in_library => 'In library';
+  @override
+  String get download_airing_calendar_subscribed => 'Subscribed';
+  @override
+  String download_airing_calendar_episode_label({required Object episode}) =>
+      'Ep ${episode}';
+  @override
+  String get download_airing_calendar_week_prev => 'Previous week';
+  @override
+  String get download_airing_calendar_week_next => 'Next week';
+  @override
+  String get download_airing_calendar_week_empty => 'Nothing airing this week';
+  @override
   String get video_setting_tmdb_key => 'Custom TMDB API key';
   @override
   String get video_setting_tmdb_key_hint =>
       'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
   @override
   String get about_tmdb_attribution =>
-      'This product uses the TMDB API but is not endorsed or certified by TMDB.';
+      'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
 }
 
 // Path: <root>
@@ -17391,13 +17427,36 @@ class _StringsDe extends _StringsEn {
   @override
   String get download_task_resume => 'Resume';
   @override
+  String get download_airing_calendar_title => 'Airing calendar';
+  @override
+  String get download_airing_calendar_show_all => 'Show all this season';
+  @override
+  String get download_airing_calendar_empty_guidance =>
+      'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+  @override
+  String get download_airing_calendar_error =>
+      'Failed to load the airing schedule';
+  @override
+  String get download_airing_calendar_in_library => 'In library';
+  @override
+  String get download_airing_calendar_subscribed => 'Subscribed';
+  @override
+  String download_airing_calendar_episode_label({required Object episode}) =>
+      'Ep ${episode}';
+  @override
+  String get download_airing_calendar_week_prev => 'Previous week';
+  @override
+  String get download_airing_calendar_week_next => 'Next week';
+  @override
+  String get download_airing_calendar_week_empty => 'Nothing airing this week';
+  @override
   String get video_setting_tmdb_key => 'Custom TMDB API key';
   @override
   String get video_setting_tmdb_key_hint =>
       'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
   @override
   String get about_tmdb_attribution =>
-      'This product uses the TMDB API but is not endorsed or certified by TMDB.';
+      'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
 }
 
 // Path: <root>
@@ -24171,13 +24230,36 @@ class _StringsEs extends _StringsEn {
   @override
   String get download_task_resume => 'Resume';
   @override
+  String get download_airing_calendar_title => 'Airing calendar';
+  @override
+  String get download_airing_calendar_show_all => 'Show all this season';
+  @override
+  String get download_airing_calendar_empty_guidance =>
+      'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+  @override
+  String get download_airing_calendar_error =>
+      'Failed to load the airing schedule';
+  @override
+  String get download_airing_calendar_in_library => 'In library';
+  @override
+  String get download_airing_calendar_subscribed => 'Subscribed';
+  @override
+  String download_airing_calendar_episode_label({required Object episode}) =>
+      'Ep ${episode}';
+  @override
+  String get download_airing_calendar_week_prev => 'Previous week';
+  @override
+  String get download_airing_calendar_week_next => 'Next week';
+  @override
+  String get download_airing_calendar_week_empty => 'Nothing airing this week';
+  @override
   String get video_setting_tmdb_key => 'Custom TMDB API key';
   @override
   String get video_setting_tmdb_key_hint =>
       'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
   @override
   String get about_tmdb_attribution =>
-      'This product uses the TMDB API but is not endorsed or certified by TMDB.';
+      'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
 }
 
 // Path: <root>
@@ -30962,13 +31044,36 @@ class _StringsFr extends _StringsEn {
   @override
   String get download_task_resume => 'Resume';
   @override
+  String get download_airing_calendar_title => 'Airing calendar';
+  @override
+  String get download_airing_calendar_show_all => 'Show all this season';
+  @override
+  String get download_airing_calendar_empty_guidance =>
+      'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+  @override
+  String get download_airing_calendar_error =>
+      'Failed to load the airing schedule';
+  @override
+  String get download_airing_calendar_in_library => 'In library';
+  @override
+  String get download_airing_calendar_subscribed => 'Subscribed';
+  @override
+  String download_airing_calendar_episode_label({required Object episode}) =>
+      'Ep ${episode}';
+  @override
+  String get download_airing_calendar_week_prev => 'Previous week';
+  @override
+  String get download_airing_calendar_week_next => 'Next week';
+  @override
+  String get download_airing_calendar_week_empty => 'Nothing airing this week';
+  @override
   String get video_setting_tmdb_key => 'Custom TMDB API key';
   @override
   String get video_setting_tmdb_key_hint =>
       'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
   @override
   String get about_tmdb_attribution =>
-      'This product uses the TMDB API but is not endorsed or certified by TMDB.';
+      'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
 }
 
 // Path: <root>
@@ -37682,13 +37787,36 @@ class _StringsId extends _StringsEn {
   @override
   String get download_task_resume => 'Resume';
   @override
+  String get download_airing_calendar_title => 'Airing calendar';
+  @override
+  String get download_airing_calendar_show_all => 'Show all this season';
+  @override
+  String get download_airing_calendar_empty_guidance =>
+      'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+  @override
+  String get download_airing_calendar_error =>
+      'Failed to load the airing schedule';
+  @override
+  String get download_airing_calendar_in_library => 'In library';
+  @override
+  String get download_airing_calendar_subscribed => 'Subscribed';
+  @override
+  String download_airing_calendar_episode_label({required Object episode}) =>
+      'Ep ${episode}';
+  @override
+  String get download_airing_calendar_week_prev => 'Previous week';
+  @override
+  String get download_airing_calendar_week_next => 'Next week';
+  @override
+  String get download_airing_calendar_week_empty => 'Nothing airing this week';
+  @override
   String get video_setting_tmdb_key => 'Custom TMDB API key';
   @override
   String get video_setting_tmdb_key_hint =>
       'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
   @override
   String get about_tmdb_attribution =>
-      'This product uses the TMDB API but is not endorsed or certified by TMDB.';
+      'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
 }
 
 // Path: <root>
@@ -44448,13 +44576,36 @@ class _StringsIt extends _StringsEn {
   @override
   String get download_task_resume => 'Resume';
   @override
+  String get download_airing_calendar_title => 'Airing calendar';
+  @override
+  String get download_airing_calendar_show_all => 'Show all this season';
+  @override
+  String get download_airing_calendar_empty_guidance =>
+      'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+  @override
+  String get download_airing_calendar_error =>
+      'Failed to load the airing schedule';
+  @override
+  String get download_airing_calendar_in_library => 'In library';
+  @override
+  String get download_airing_calendar_subscribed => 'Subscribed';
+  @override
+  String download_airing_calendar_episode_label({required Object episode}) =>
+      'Ep ${episode}';
+  @override
+  String get download_airing_calendar_week_prev => 'Previous week';
+  @override
+  String get download_airing_calendar_week_next => 'Next week';
+  @override
+  String get download_airing_calendar_week_empty => 'Nothing airing this week';
+  @override
   String get video_setting_tmdb_key => 'Custom TMDB API key';
   @override
   String get video_setting_tmdb_key_hint =>
       'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
   @override
   String get about_tmdb_attribution =>
-      'This product uses the TMDB API but is not endorsed or certified by TMDB.';
+      'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
 }
 
 // Path: <root>
@@ -51031,13 +51182,36 @@ class _StringsJa extends _StringsEn {
   @override
   String get download_task_resume => 'Resume';
   @override
+  String get download_airing_calendar_title => 'Airing calendar';
+  @override
+  String get download_airing_calendar_show_all => 'Show all this season';
+  @override
+  String get download_airing_calendar_empty_guidance =>
+      'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+  @override
+  String get download_airing_calendar_error =>
+      'Failed to load the airing schedule';
+  @override
+  String get download_airing_calendar_in_library => 'In library';
+  @override
+  String get download_airing_calendar_subscribed => 'Subscribed';
+  @override
+  String download_airing_calendar_episode_label({required Object episode}) =>
+      'Ep ${episode}';
+  @override
+  String get download_airing_calendar_week_prev => 'Previous week';
+  @override
+  String get download_airing_calendar_week_next => 'Next week';
+  @override
+  String get download_airing_calendar_week_empty => 'Nothing airing this week';
+  @override
   String get video_setting_tmdb_key => 'Custom TMDB API key';
   @override
   String get video_setting_tmdb_key_hint =>
       'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
   @override
   String get about_tmdb_attribution =>
-      'This product uses the TMDB API but is not endorsed or certified by TMDB.';
+      'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
 }
 
 // Path: <root>
@@ -57616,13 +57790,36 @@ class _StringsKo extends _StringsEn {
   @override
   String get download_task_resume => 'Resume';
   @override
+  String get download_airing_calendar_title => 'Airing calendar';
+  @override
+  String get download_airing_calendar_show_all => 'Show all this season';
+  @override
+  String get download_airing_calendar_empty_guidance =>
+      'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+  @override
+  String get download_airing_calendar_error =>
+      'Failed to load the airing schedule';
+  @override
+  String get download_airing_calendar_in_library => 'In library';
+  @override
+  String get download_airing_calendar_subscribed => 'Subscribed';
+  @override
+  String download_airing_calendar_episode_label({required Object episode}) =>
+      'Ep ${episode}';
+  @override
+  String get download_airing_calendar_week_prev => 'Previous week';
+  @override
+  String get download_airing_calendar_week_next => 'Next week';
+  @override
+  String get download_airing_calendar_week_empty => 'Nothing airing this week';
+  @override
   String get video_setting_tmdb_key => 'Custom TMDB API key';
   @override
   String get video_setting_tmdb_key_hint =>
       'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
   @override
   String get about_tmdb_attribution =>
-      'This product uses the TMDB API but is not endorsed or certified by TMDB.';
+      'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
 }
 
 // Path: <root>
@@ -64362,13 +64559,36 @@ class _StringsNl extends _StringsEn {
   @override
   String get download_task_resume => 'Resume';
   @override
+  String get download_airing_calendar_title => 'Airing calendar';
+  @override
+  String get download_airing_calendar_show_all => 'Show all this season';
+  @override
+  String get download_airing_calendar_empty_guidance =>
+      'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+  @override
+  String get download_airing_calendar_error =>
+      'Failed to load the airing schedule';
+  @override
+  String get download_airing_calendar_in_library => 'In library';
+  @override
+  String get download_airing_calendar_subscribed => 'Subscribed';
+  @override
+  String download_airing_calendar_episode_label({required Object episode}) =>
+      'Ep ${episode}';
+  @override
+  String get download_airing_calendar_week_prev => 'Previous week';
+  @override
+  String get download_airing_calendar_week_next => 'Next week';
+  @override
+  String get download_airing_calendar_week_empty => 'Nothing airing this week';
+  @override
   String get video_setting_tmdb_key => 'Custom TMDB API key';
   @override
   String get video_setting_tmdb_key_hint =>
       'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
   @override
   String get about_tmdb_attribution =>
-      'This product uses the TMDB API but is not endorsed or certified by TMDB.';
+      'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
 }
 
 // Path: <root>
@@ -71121,13 +71341,36 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get download_task_resume => 'Resume';
   @override
+  String get download_airing_calendar_title => 'Airing calendar';
+  @override
+  String get download_airing_calendar_show_all => 'Show all this season';
+  @override
+  String get download_airing_calendar_empty_guidance =>
+      'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+  @override
+  String get download_airing_calendar_error =>
+      'Failed to load the airing schedule';
+  @override
+  String get download_airing_calendar_in_library => 'In library';
+  @override
+  String get download_airing_calendar_subscribed => 'Subscribed';
+  @override
+  String download_airing_calendar_episode_label({required Object episode}) =>
+      'Ep ${episode}';
+  @override
+  String get download_airing_calendar_week_prev => 'Previous week';
+  @override
+  String get download_airing_calendar_week_next => 'Next week';
+  @override
+  String get download_airing_calendar_week_empty => 'Nothing airing this week';
+  @override
   String get video_setting_tmdb_key => 'Custom TMDB API key';
   @override
   String get video_setting_tmdb_key_hint =>
       'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
   @override
   String get about_tmdb_attribution =>
-      'This product uses the TMDB API but is not endorsed or certified by TMDB.';
+      'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
 }
 
 // Path: <root>
@@ -77864,13 +78107,36 @@ class _StringsRu extends _StringsEn {
   @override
   String get download_task_resume => 'Resume';
   @override
+  String get download_airing_calendar_title => 'Airing calendar';
+  @override
+  String get download_airing_calendar_show_all => 'Show all this season';
+  @override
+  String get download_airing_calendar_empty_guidance =>
+      'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+  @override
+  String get download_airing_calendar_error =>
+      'Failed to load the airing schedule';
+  @override
+  String get download_airing_calendar_in_library => 'In library';
+  @override
+  String get download_airing_calendar_subscribed => 'Subscribed';
+  @override
+  String download_airing_calendar_episode_label({required Object episode}) =>
+      'Ep ${episode}';
+  @override
+  String get download_airing_calendar_week_prev => 'Previous week';
+  @override
+  String get download_airing_calendar_week_next => 'Next week';
+  @override
+  String get download_airing_calendar_week_empty => 'Nothing airing this week';
+  @override
   String get video_setting_tmdb_key => 'Custom TMDB API key';
   @override
   String get video_setting_tmdb_key_hint =>
       'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
   @override
   String get about_tmdb_attribution =>
-      'This product uses the TMDB API but is not endorsed or certified by TMDB.';
+      'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
 }
 
 // Path: <root>
@@ -84555,13 +84821,36 @@ class _StringsTh extends _StringsEn {
   @override
   String get download_task_resume => 'Resume';
   @override
+  String get download_airing_calendar_title => 'Airing calendar';
+  @override
+  String get download_airing_calendar_show_all => 'Show all this season';
+  @override
+  String get download_airing_calendar_empty_guidance =>
+      'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+  @override
+  String get download_airing_calendar_error =>
+      'Failed to load the airing schedule';
+  @override
+  String get download_airing_calendar_in_library => 'In library';
+  @override
+  String get download_airing_calendar_subscribed => 'Subscribed';
+  @override
+  String download_airing_calendar_episode_label({required Object episode}) =>
+      'Ep ${episode}';
+  @override
+  String get download_airing_calendar_week_prev => 'Previous week';
+  @override
+  String get download_airing_calendar_week_next => 'Next week';
+  @override
+  String get download_airing_calendar_week_empty => 'Nothing airing this week';
+  @override
   String get video_setting_tmdb_key => 'Custom TMDB API key';
   @override
   String get video_setting_tmdb_key_hint =>
       'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
   @override
   String get about_tmdb_attribution =>
-      'This product uses the TMDB API but is not endorsed or certified by TMDB.';
+      'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
 }
 
 // Path: <root>
@@ -91278,13 +91567,36 @@ class _StringsTr extends _StringsEn {
   @override
   String get download_task_resume => 'Resume';
   @override
+  String get download_airing_calendar_title => 'Airing calendar';
+  @override
+  String get download_airing_calendar_show_all => 'Show all this season';
+  @override
+  String get download_airing_calendar_empty_guidance =>
+      'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+  @override
+  String get download_airing_calendar_error =>
+      'Failed to load the airing schedule';
+  @override
+  String get download_airing_calendar_in_library => 'In library';
+  @override
+  String get download_airing_calendar_subscribed => 'Subscribed';
+  @override
+  String download_airing_calendar_episode_label({required Object episode}) =>
+      'Ep ${episode}';
+  @override
+  String get download_airing_calendar_week_prev => 'Previous week';
+  @override
+  String get download_airing_calendar_week_next => 'Next week';
+  @override
+  String get download_airing_calendar_week_empty => 'Nothing airing this week';
+  @override
   String get video_setting_tmdb_key => 'Custom TMDB API key';
   @override
   String get video_setting_tmdb_key_hint =>
       'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
   @override
   String get about_tmdb_attribution =>
-      'This product uses the TMDB API but is not endorsed or certified by TMDB.';
+      'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
 }
 
 // Path: <root>
@@ -97986,13 +98298,36 @@ class _StringsVi extends _StringsEn {
   @override
   String get download_task_resume => 'Resume';
   @override
+  String get download_airing_calendar_title => 'Airing calendar';
+  @override
+  String get download_airing_calendar_show_all => 'Show all this season';
+  @override
+  String get download_airing_calendar_empty_guidance =>
+      'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+  @override
+  String get download_airing_calendar_error =>
+      'Failed to load the airing schedule';
+  @override
+  String get download_airing_calendar_in_library => 'In library';
+  @override
+  String get download_airing_calendar_subscribed => 'Subscribed';
+  @override
+  String download_airing_calendar_episode_label({required Object episode}) =>
+      'Ep ${episode}';
+  @override
+  String get download_airing_calendar_week_prev => 'Previous week';
+  @override
+  String get download_airing_calendar_week_next => 'Next week';
+  @override
+  String get download_airing_calendar_week_empty => 'Nothing airing this week';
+  @override
   String get video_setting_tmdb_key => 'Custom TMDB API key';
   @override
   String get video_setting_tmdb_key_hint =>
       'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
   @override
   String get about_tmdb_attribution =>
-      'This product uses the TMDB API but is not endorsed or certified by TMDB.';
+      'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
 }
 
 // Path: <root>
@@ -104220,13 +104555,35 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get download_task_resume => '恢复';
   @override
+  String get download_airing_calendar_title => '放送日历';
+  @override
+  String get download_airing_calendar_show_all => '显示本季全部';
+  @override
+  String get download_airing_calendar_empty_guidance =>
+      '暂无可显示的放送信息：给合集绑定 AniList 或添加下载订阅后，这里会显示对应的放送时间。';
+  @override
+  String get download_airing_calendar_error => '放送时间表加载失败';
+  @override
+  String get download_airing_calendar_in_library => '已入库';
+  @override
+  String get download_airing_calendar_subscribed => '订阅中';
+  @override
+  String download_airing_calendar_episode_label({required Object episode}) =>
+      '第 ${episode} 集';
+  @override
+  String get download_airing_calendar_week_prev => '上一周';
+  @override
+  String get download_airing_calendar_week_next => '下一周';
+  @override
+  String get download_airing_calendar_week_empty => '本周没有相关放送';
+  @override
   String get video_setting_tmdb_key => '自定义 TMDB API Key';
   @override
   String get video_setting_tmdb_key_hint =>
       '可留空，默认用内置 Key。仅当刮削失效或你想用自己的配额时才需要填写。';
   @override
   String get about_tmdb_attribution =>
-      'This product uses the TMDB API but is not endorsed or certified by TMDB.';
+      'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
 }
 
 // Path: <root>
@@ -110724,13 +111081,36 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get download_task_resume => 'Resume';
   @override
+  String get download_airing_calendar_title => 'Airing calendar';
+  @override
+  String get download_airing_calendar_show_all => 'Show all this season';
+  @override
+  String get download_airing_calendar_empty_guidance =>
+      'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+  @override
+  String get download_airing_calendar_error =>
+      'Failed to load the airing schedule';
+  @override
+  String get download_airing_calendar_in_library => 'In library';
+  @override
+  String get download_airing_calendar_subscribed => 'Subscribed';
+  @override
+  String download_airing_calendar_episode_label({required Object episode}) =>
+      'Ep ${episode}';
+  @override
+  String get download_airing_calendar_week_prev => 'Previous week';
+  @override
+  String get download_airing_calendar_week_next => 'Next week';
+  @override
+  String get download_airing_calendar_week_empty => 'Nothing airing this week';
+  @override
   String get video_setting_tmdb_key => 'Custom TMDB API key';
   @override
   String get video_setting_tmdb_key_hint =>
       'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
   @override
   String get about_tmdb_attribution =>
-      'This product uses the TMDB API but is not endorsed or certified by TMDB.';
+      'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
 }
 
 /// Flat map(s) containing all translations.
@@ -116703,12 +117083,32 @@ extension on _StringsEn {
         return 'Pause';
       case 'download_task_resume':
         return 'Resume';
+      case 'download_airing_calendar_title':
+        return 'Airing calendar';
+      case 'download_airing_calendar_show_all':
+        return 'Show all this season';
+      case 'download_airing_calendar_empty_guidance':
+        return 'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+      case 'download_airing_calendar_error':
+        return 'Failed to load the airing schedule';
+      case 'download_airing_calendar_in_library':
+        return 'In library';
+      case 'download_airing_calendar_subscribed':
+        return 'Subscribed';
+      case 'download_airing_calendar_episode_label':
+        return ({required Object episode}) => 'Ep ${episode}';
+      case 'download_airing_calendar_week_prev':
+        return 'Previous week';
+      case 'download_airing_calendar_week_next':
+        return 'Next week';
+      case 'download_airing_calendar_week_empty':
+        return 'Nothing airing this week';
       case 'video_setting_tmdb_key':
         return 'Custom TMDB API key';
       case 'video_setting_tmdb_key_hint':
         return 'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
       case 'about_tmdb_attribution':
-        return 'This product uses the TMDB API but is not endorsed or certified by TMDB.';
+        return 'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
       default:
         return null;
     }
@@ -122679,12 +123079,32 @@ extension on _StringsAr {
         return 'Pause';
       case 'download_task_resume':
         return 'Resume';
+      case 'download_airing_calendar_title':
+        return 'Airing calendar';
+      case 'download_airing_calendar_show_all':
+        return 'Show all this season';
+      case 'download_airing_calendar_empty_guidance':
+        return 'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+      case 'download_airing_calendar_error':
+        return 'Failed to load the airing schedule';
+      case 'download_airing_calendar_in_library':
+        return 'In library';
+      case 'download_airing_calendar_subscribed':
+        return 'Subscribed';
+      case 'download_airing_calendar_episode_label':
+        return ({required Object episode}) => 'Ep ${episode}';
+      case 'download_airing_calendar_week_prev':
+        return 'Previous week';
+      case 'download_airing_calendar_week_next':
+        return 'Next week';
+      case 'download_airing_calendar_week_empty':
+        return 'Nothing airing this week';
       case 'video_setting_tmdb_key':
         return 'Custom TMDB API key';
       case 'video_setting_tmdb_key_hint':
         return 'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
       case 'about_tmdb_attribution':
-        return 'This product uses the TMDB API but is not endorsed or certified by TMDB.';
+        return 'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
       default:
         return null;
     }
@@ -128677,12 +129097,32 @@ extension on _StringsDe {
         return 'Pause';
       case 'download_task_resume':
         return 'Resume';
+      case 'download_airing_calendar_title':
+        return 'Airing calendar';
+      case 'download_airing_calendar_show_all':
+        return 'Show all this season';
+      case 'download_airing_calendar_empty_guidance':
+        return 'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+      case 'download_airing_calendar_error':
+        return 'Failed to load the airing schedule';
+      case 'download_airing_calendar_in_library':
+        return 'In library';
+      case 'download_airing_calendar_subscribed':
+        return 'Subscribed';
+      case 'download_airing_calendar_episode_label':
+        return ({required Object episode}) => 'Ep ${episode}';
+      case 'download_airing_calendar_week_prev':
+        return 'Previous week';
+      case 'download_airing_calendar_week_next':
+        return 'Next week';
+      case 'download_airing_calendar_week_empty':
+        return 'Nothing airing this week';
       case 'video_setting_tmdb_key':
         return 'Custom TMDB API key';
       case 'video_setting_tmdb_key_hint':
         return 'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
       case 'about_tmdb_attribution':
-        return 'This product uses the TMDB API but is not endorsed or certified by TMDB.';
+        return 'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
       default:
         return null;
     }
@@ -134674,12 +135114,32 @@ extension on _StringsEs {
         return 'Pause';
       case 'download_task_resume':
         return 'Resume';
+      case 'download_airing_calendar_title':
+        return 'Airing calendar';
+      case 'download_airing_calendar_show_all':
+        return 'Show all this season';
+      case 'download_airing_calendar_empty_guidance':
+        return 'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+      case 'download_airing_calendar_error':
+        return 'Failed to load the airing schedule';
+      case 'download_airing_calendar_in_library':
+        return 'In library';
+      case 'download_airing_calendar_subscribed':
+        return 'Subscribed';
+      case 'download_airing_calendar_episode_label':
+        return ({required Object episode}) => 'Ep ${episode}';
+      case 'download_airing_calendar_week_prev':
+        return 'Previous week';
+      case 'download_airing_calendar_week_next':
+        return 'Next week';
+      case 'download_airing_calendar_week_empty':
+        return 'Nothing airing this week';
       case 'video_setting_tmdb_key':
         return 'Custom TMDB API key';
       case 'video_setting_tmdb_key_hint':
         return 'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
       case 'about_tmdb_attribution':
-        return 'This product uses the TMDB API but is not endorsed or certified by TMDB.';
+        return 'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
       default:
         return null;
     }
@@ -140677,12 +141137,32 @@ extension on _StringsFr {
         return 'Pause';
       case 'download_task_resume':
         return 'Resume';
+      case 'download_airing_calendar_title':
+        return 'Airing calendar';
+      case 'download_airing_calendar_show_all':
+        return 'Show all this season';
+      case 'download_airing_calendar_empty_guidance':
+        return 'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+      case 'download_airing_calendar_error':
+        return 'Failed to load the airing schedule';
+      case 'download_airing_calendar_in_library':
+        return 'In library';
+      case 'download_airing_calendar_subscribed':
+        return 'Subscribed';
+      case 'download_airing_calendar_episode_label':
+        return ({required Object episode}) => 'Ep ${episode}';
+      case 'download_airing_calendar_week_prev':
+        return 'Previous week';
+      case 'download_airing_calendar_week_next':
+        return 'Next week';
+      case 'download_airing_calendar_week_empty':
+        return 'Nothing airing this week';
       case 'video_setting_tmdb_key':
         return 'Custom TMDB API key';
       case 'video_setting_tmdb_key_hint':
         return 'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
       case 'about_tmdb_attribution':
-        return 'This product uses the TMDB API but is not endorsed or certified by TMDB.';
+        return 'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
       default:
         return null;
     }
@@ -146662,12 +147142,32 @@ extension on _StringsId {
         return 'Pause';
       case 'download_task_resume':
         return 'Resume';
+      case 'download_airing_calendar_title':
+        return 'Airing calendar';
+      case 'download_airing_calendar_show_all':
+        return 'Show all this season';
+      case 'download_airing_calendar_empty_guidance':
+        return 'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+      case 'download_airing_calendar_error':
+        return 'Failed to load the airing schedule';
+      case 'download_airing_calendar_in_library':
+        return 'In library';
+      case 'download_airing_calendar_subscribed':
+        return 'Subscribed';
+      case 'download_airing_calendar_episode_label':
+        return ({required Object episode}) => 'Ep ${episode}';
+      case 'download_airing_calendar_week_prev':
+        return 'Previous week';
+      case 'download_airing_calendar_week_next':
+        return 'Next week';
+      case 'download_airing_calendar_week_empty':
+        return 'Nothing airing this week';
       case 'video_setting_tmdb_key':
         return 'Custom TMDB API key';
       case 'video_setting_tmdb_key_hint':
         return 'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
       case 'about_tmdb_attribution':
-        return 'This product uses the TMDB API but is not endorsed or certified by TMDB.';
+        return 'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
       default:
         return null;
     }
@@ -152661,12 +153161,32 @@ extension on _StringsIt {
         return 'Pause';
       case 'download_task_resume':
         return 'Resume';
+      case 'download_airing_calendar_title':
+        return 'Airing calendar';
+      case 'download_airing_calendar_show_all':
+        return 'Show all this season';
+      case 'download_airing_calendar_empty_guidance':
+        return 'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+      case 'download_airing_calendar_error':
+        return 'Failed to load the airing schedule';
+      case 'download_airing_calendar_in_library':
+        return 'In library';
+      case 'download_airing_calendar_subscribed':
+        return 'Subscribed';
+      case 'download_airing_calendar_episode_label':
+        return ({required Object episode}) => 'Ep ${episode}';
+      case 'download_airing_calendar_week_prev':
+        return 'Previous week';
+      case 'download_airing_calendar_week_next':
+        return 'Next week';
+      case 'download_airing_calendar_week_empty':
+        return 'Nothing airing this week';
       case 'video_setting_tmdb_key':
         return 'Custom TMDB API key';
       case 'video_setting_tmdb_key_hint':
         return 'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
       case 'about_tmdb_attribution':
-        return 'This product uses the TMDB API but is not endorsed or certified by TMDB.';
+        return 'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
       default:
         return null;
     }
@@ -158622,12 +159142,32 @@ extension on _StringsJa {
         return 'Pause';
       case 'download_task_resume':
         return 'Resume';
+      case 'download_airing_calendar_title':
+        return 'Airing calendar';
+      case 'download_airing_calendar_show_all':
+        return 'Show all this season';
+      case 'download_airing_calendar_empty_guidance':
+        return 'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+      case 'download_airing_calendar_error':
+        return 'Failed to load the airing schedule';
+      case 'download_airing_calendar_in_library':
+        return 'In library';
+      case 'download_airing_calendar_subscribed':
+        return 'Subscribed';
+      case 'download_airing_calendar_episode_label':
+        return ({required Object episode}) => 'Ep ${episode}';
+      case 'download_airing_calendar_week_prev':
+        return 'Previous week';
+      case 'download_airing_calendar_week_next':
+        return 'Next week';
+      case 'download_airing_calendar_week_empty':
+        return 'Nothing airing this week';
       case 'video_setting_tmdb_key':
         return 'Custom TMDB API key';
       case 'video_setting_tmdb_key_hint':
         return 'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
       case 'about_tmdb_attribution':
-        return 'This product uses the TMDB API but is not endorsed or certified by TMDB.';
+        return 'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
       default:
         return null;
     }
@@ -164587,12 +165127,32 @@ extension on _StringsKo {
         return 'Pause';
       case 'download_task_resume':
         return 'Resume';
+      case 'download_airing_calendar_title':
+        return 'Airing calendar';
+      case 'download_airing_calendar_show_all':
+        return 'Show all this season';
+      case 'download_airing_calendar_empty_guidance':
+        return 'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+      case 'download_airing_calendar_error':
+        return 'Failed to load the airing schedule';
+      case 'download_airing_calendar_in_library':
+        return 'In library';
+      case 'download_airing_calendar_subscribed':
+        return 'Subscribed';
+      case 'download_airing_calendar_episode_label':
+        return ({required Object episode}) => 'Ep ${episode}';
+      case 'download_airing_calendar_week_prev':
+        return 'Previous week';
+      case 'download_airing_calendar_week_next':
+        return 'Next week';
+      case 'download_airing_calendar_week_empty':
+        return 'Nothing airing this week';
       case 'video_setting_tmdb_key':
         return 'Custom TMDB API key';
       case 'video_setting_tmdb_key_hint':
         return 'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
       case 'about_tmdb_attribution':
-        return 'This product uses the TMDB API but is not endorsed or certified by TMDB.';
+        return 'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
       default:
         return null;
     }
@@ -170580,12 +171140,32 @@ extension on _StringsNl {
         return 'Pause';
       case 'download_task_resume':
         return 'Resume';
+      case 'download_airing_calendar_title':
+        return 'Airing calendar';
+      case 'download_airing_calendar_show_all':
+        return 'Show all this season';
+      case 'download_airing_calendar_empty_guidance':
+        return 'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+      case 'download_airing_calendar_error':
+        return 'Failed to load the airing schedule';
+      case 'download_airing_calendar_in_library':
+        return 'In library';
+      case 'download_airing_calendar_subscribed':
+        return 'Subscribed';
+      case 'download_airing_calendar_episode_label':
+        return ({required Object episode}) => 'Ep ${episode}';
+      case 'download_airing_calendar_week_prev':
+        return 'Previous week';
+      case 'download_airing_calendar_week_next':
+        return 'Next week';
+      case 'download_airing_calendar_week_empty':
+        return 'Nothing airing this week';
       case 'video_setting_tmdb_key':
         return 'Custom TMDB API key';
       case 'video_setting_tmdb_key_hint':
         return 'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
       case 'about_tmdb_attribution':
-        return 'This product uses the TMDB API but is not endorsed or certified by TMDB.';
+        return 'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
       default:
         return null;
     }
@@ -176570,12 +177150,32 @@ extension on _StringsPtBr {
         return 'Pause';
       case 'download_task_resume':
         return 'Resume';
+      case 'download_airing_calendar_title':
+        return 'Airing calendar';
+      case 'download_airing_calendar_show_all':
+        return 'Show all this season';
+      case 'download_airing_calendar_empty_guidance':
+        return 'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+      case 'download_airing_calendar_error':
+        return 'Failed to load the airing schedule';
+      case 'download_airing_calendar_in_library':
+        return 'In library';
+      case 'download_airing_calendar_subscribed':
+        return 'Subscribed';
+      case 'download_airing_calendar_episode_label':
+        return ({required Object episode}) => 'Ep ${episode}';
+      case 'download_airing_calendar_week_prev':
+        return 'Previous week';
+      case 'download_airing_calendar_week_next':
+        return 'Next week';
+      case 'download_airing_calendar_week_empty':
+        return 'Nothing airing this week';
       case 'video_setting_tmdb_key':
         return 'Custom TMDB API key';
       case 'video_setting_tmdb_key_hint':
         return 'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
       case 'about_tmdb_attribution':
-        return 'This product uses the TMDB API but is not endorsed or certified by TMDB.';
+        return 'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
       default:
         return null;
     }
@@ -182565,12 +183165,32 @@ extension on _StringsRu {
         return 'Pause';
       case 'download_task_resume':
         return 'Resume';
+      case 'download_airing_calendar_title':
+        return 'Airing calendar';
+      case 'download_airing_calendar_show_all':
+        return 'Show all this season';
+      case 'download_airing_calendar_empty_guidance':
+        return 'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+      case 'download_airing_calendar_error':
+        return 'Failed to load the airing schedule';
+      case 'download_airing_calendar_in_library':
+        return 'In library';
+      case 'download_airing_calendar_subscribed':
+        return 'Subscribed';
+      case 'download_airing_calendar_episode_label':
+        return ({required Object episode}) => 'Ep ${episode}';
+      case 'download_airing_calendar_week_prev':
+        return 'Previous week';
+      case 'download_airing_calendar_week_next':
+        return 'Next week';
+      case 'download_airing_calendar_week_empty':
+        return 'Nothing airing this week';
       case 'video_setting_tmdb_key':
         return 'Custom TMDB API key';
       case 'video_setting_tmdb_key_hint':
         return 'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
       case 'about_tmdb_attribution':
-        return 'This product uses the TMDB API but is not endorsed or certified by TMDB.';
+        return 'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
       default:
         return null;
     }
@@ -188543,12 +189163,32 @@ extension on _StringsTh {
         return 'Pause';
       case 'download_task_resume':
         return 'Resume';
+      case 'download_airing_calendar_title':
+        return 'Airing calendar';
+      case 'download_airing_calendar_show_all':
+        return 'Show all this season';
+      case 'download_airing_calendar_empty_guidance':
+        return 'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+      case 'download_airing_calendar_error':
+        return 'Failed to load the airing schedule';
+      case 'download_airing_calendar_in_library':
+        return 'In library';
+      case 'download_airing_calendar_subscribed':
+        return 'Subscribed';
+      case 'download_airing_calendar_episode_label':
+        return ({required Object episode}) => 'Ep ${episode}';
+      case 'download_airing_calendar_week_prev':
+        return 'Previous week';
+      case 'download_airing_calendar_week_next':
+        return 'Next week';
+      case 'download_airing_calendar_week_empty':
+        return 'Nothing airing this week';
       case 'video_setting_tmdb_key':
         return 'Custom TMDB API key';
       case 'video_setting_tmdb_key_hint':
         return 'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
       case 'about_tmdb_attribution':
-        return 'This product uses the TMDB API but is not endorsed or certified by TMDB.';
+        return 'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
       default:
         return null;
     }
@@ -194530,12 +195170,32 @@ extension on _StringsTr {
         return 'Pause';
       case 'download_task_resume':
         return 'Resume';
+      case 'download_airing_calendar_title':
+        return 'Airing calendar';
+      case 'download_airing_calendar_show_all':
+        return 'Show all this season';
+      case 'download_airing_calendar_empty_guidance':
+        return 'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+      case 'download_airing_calendar_error':
+        return 'Failed to load the airing schedule';
+      case 'download_airing_calendar_in_library':
+        return 'In library';
+      case 'download_airing_calendar_subscribed':
+        return 'Subscribed';
+      case 'download_airing_calendar_episode_label':
+        return ({required Object episode}) => 'Ep ${episode}';
+      case 'download_airing_calendar_week_prev':
+        return 'Previous week';
+      case 'download_airing_calendar_week_next':
+        return 'Next week';
+      case 'download_airing_calendar_week_empty':
+        return 'Nothing airing this week';
       case 'video_setting_tmdb_key':
         return 'Custom TMDB API key';
       case 'video_setting_tmdb_key_hint':
         return 'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
       case 'about_tmdb_attribution':
-        return 'This product uses the TMDB API but is not endorsed or certified by TMDB.';
+        return 'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
       default:
         return null;
     }
@@ -200513,12 +201173,32 @@ extension on _StringsVi {
         return 'Pause';
       case 'download_task_resume':
         return 'Resume';
+      case 'download_airing_calendar_title':
+        return 'Airing calendar';
+      case 'download_airing_calendar_show_all':
+        return 'Show all this season';
+      case 'download_airing_calendar_empty_guidance':
+        return 'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+      case 'download_airing_calendar_error':
+        return 'Failed to load the airing schedule';
+      case 'download_airing_calendar_in_library':
+        return 'In library';
+      case 'download_airing_calendar_subscribed':
+        return 'Subscribed';
+      case 'download_airing_calendar_episode_label':
+        return ({required Object episode}) => 'Ep ${episode}';
+      case 'download_airing_calendar_week_prev':
+        return 'Previous week';
+      case 'download_airing_calendar_week_next':
+        return 'Next week';
+      case 'download_airing_calendar_week_empty':
+        return 'Nothing airing this week';
       case 'video_setting_tmdb_key':
         return 'Custom TMDB API key';
       case 'video_setting_tmdb_key_hint':
         return 'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
       case 'about_tmdb_attribution':
-        return 'This product uses the TMDB API but is not endorsed or certified by TMDB.';
+        return 'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
       default:
         return null;
     }
@@ -206443,12 +207123,32 @@ extension on _StringsZhCn {
         return '暂停';
       case 'download_task_resume':
         return '恢复';
+      case 'download_airing_calendar_title':
+        return '放送日历';
+      case 'download_airing_calendar_show_all':
+        return '显示本季全部';
+      case 'download_airing_calendar_empty_guidance':
+        return '暂无可显示的放送信息：给合集绑定 AniList 或添加下载订阅后，这里会显示对应的放送时间。';
+      case 'download_airing_calendar_error':
+        return '放送时间表加载失败';
+      case 'download_airing_calendar_in_library':
+        return '已入库';
+      case 'download_airing_calendar_subscribed':
+        return '订阅中';
+      case 'download_airing_calendar_episode_label':
+        return ({required Object episode}) => '第 ${episode} 集';
+      case 'download_airing_calendar_week_prev':
+        return '上一周';
+      case 'download_airing_calendar_week_next':
+        return '下一周';
+      case 'download_airing_calendar_week_empty':
+        return '本周没有相关放送';
       case 'video_setting_tmdb_key':
         return '自定义 TMDB API Key';
       case 'video_setting_tmdb_key_hint':
         return '可留空，默认用内置 Key。仅当刮削失效或你想用自己的配额时才需要填写。';
       case 'about_tmdb_attribution':
-        return 'This product uses the TMDB API but is not endorsed or certified by TMDB.';
+        return 'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
       default:
         return null;
     }
@@ -212399,12 +213099,32 @@ extension on _StringsZhHk {
         return 'Pause';
       case 'download_task_resume':
         return 'Resume';
+      case 'download_airing_calendar_title':
+        return 'Airing calendar';
+      case 'download_airing_calendar_show_all':
+        return 'Show all this season';
+      case 'download_airing_calendar_empty_guidance':
+        return 'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+      case 'download_airing_calendar_error':
+        return 'Failed to load the airing schedule';
+      case 'download_airing_calendar_in_library':
+        return 'In library';
+      case 'download_airing_calendar_subscribed':
+        return 'Subscribed';
+      case 'download_airing_calendar_episode_label':
+        return ({required Object episode}) => 'Ep ${episode}';
+      case 'download_airing_calendar_week_prev':
+        return 'Previous week';
+      case 'download_airing_calendar_week_next':
+        return 'Next week';
+      case 'download_airing_calendar_week_empty':
+        return 'Nothing airing this week';
       case 'video_setting_tmdb_key':
         return 'Custom TMDB API key';
       case 'video_setting_tmdb_key_hint':
         return 'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
       case 'about_tmdb_attribution':
-        return 'This product uses the TMDB API but is not endorsed or certified by TMDB.';
+        return 'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
       default:
         return null;
     }
