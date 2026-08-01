@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 48824 (2872 per locale)
+/// Strings: 48875 (2875 per locale)
 ///
-/// Built on 2026-08-01 at 00:46 UTC
+/// Built on 2026-08-01 at 04:14 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3883,6 +3883,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'The server refused this request. Your sign-in is fine - check the server\'s settings.';
   String sync_err_forbidden_detail({required Object reason}) =>
       'The server refused this request: ${reason} (your sign-in is fine)';
+  String get collection_group_extras => 'Extras & PV';
+  String collection_group_season({required Object n}) => 'Season ${n}';
+  String get collection_sort_by_season => 'Sort by season';
 }
 
 // Path: <root>
@@ -10487,6 +10490,12 @@ class _StringsAr extends _StringsEn {
   @override
   String sync_err_forbidden_detail({required Object reason}) =>
       'The server refused this request: ${reason} (your sign-in is fine)';
+  @override
+  String get collection_group_extras => 'Extras & PV';
+  @override
+  String collection_group_season({required Object n}) => 'Season ${n}';
+  @override
+  String get collection_sort_by_season => 'Sort by season';
 }
 
 // Path: <root>
@@ -17158,6 +17167,12 @@ class _StringsDe extends _StringsEn {
   @override
   String sync_err_forbidden_detail({required Object reason}) =>
       'The server refused this request: ${reason} (your sign-in is fine)';
+  @override
+  String get collection_group_extras => 'Extras & PV';
+  @override
+  String collection_group_season({required Object n}) => 'Season ${n}';
+  @override
+  String get collection_sort_by_season => 'Sort by season';
 }
 
 // Path: <root>
@@ -23845,6 +23860,12 @@ class _StringsEs extends _StringsEn {
   @override
   String sync_err_forbidden_detail({required Object reason}) =>
       'The server refused this request: ${reason} (your sign-in is fine)';
+  @override
+  String get collection_group_extras => 'Extras & PV';
+  @override
+  String collection_group_season({required Object n}) => 'Season ${n}';
+  @override
+  String get collection_sort_by_season => 'Sort by season';
 }
 
 // Path: <root>
@@ -30543,6 +30564,12 @@ class _StringsFr extends _StringsEn {
   @override
   String sync_err_forbidden_detail({required Object reason}) =>
       'The server refused this request: ${reason} (your sign-in is fine)';
+  @override
+  String get collection_group_extras => 'Extras & PV';
+  @override
+  String collection_group_season({required Object n}) => 'Season ${n}';
+  @override
+  String get collection_sort_by_season => 'Sort by season';
 }
 
 // Path: <root>
@@ -37170,6 +37197,12 @@ class _StringsId extends _StringsEn {
   @override
   String sync_err_forbidden_detail({required Object reason}) =>
       'The server refused this request: ${reason} (your sign-in is fine)';
+  @override
+  String get collection_group_extras => 'Extras & PV';
+  @override
+  String collection_group_season({required Object n}) => 'Season ${n}';
+  @override
+  String get collection_sort_by_season => 'Sort by season';
 }
 
 // Path: <root>
@@ -43843,6 +43876,12 @@ class _StringsIt extends _StringsEn {
   @override
   String sync_err_forbidden_detail({required Object reason}) =>
       'The server refused this request: ${reason} (your sign-in is fine)';
+  @override
+  String get collection_group_extras => 'Extras & PV';
+  @override
+  String collection_group_season({required Object n}) => 'Season ${n}';
+  @override
+  String get collection_sort_by_season => 'Sort by season';
 }
 
 // Path: <root>
@@ -50333,6 +50372,12 @@ class _StringsJa extends _StringsEn {
   @override
   String sync_err_forbidden_detail({required Object reason}) =>
       'The server refused this request: ${reason} (your sign-in is fine)';
+  @override
+  String get collection_group_extras => 'Extras & PV';
+  @override
+  String collection_group_season({required Object n}) => 'Season ${n}';
+  @override
+  String get collection_sort_by_season => 'Sort by season';
 }
 
 // Path: <root>
@@ -56825,6 +56870,12 @@ class _StringsKo extends _StringsEn {
   @override
   String sync_err_forbidden_detail({required Object reason}) =>
       'The server refused this request: ${reason} (your sign-in is fine)';
+  @override
+  String get collection_group_extras => 'Extras & PV';
+  @override
+  String collection_group_season({required Object n}) => 'Season ${n}';
+  @override
+  String get collection_sort_by_season => 'Sort by season';
 }
 
 // Path: <root>
@@ -63478,6 +63529,12 @@ class _StringsNl extends _StringsEn {
   @override
   String sync_err_forbidden_detail({required Object reason}) =>
       'The server refused this request: ${reason} (your sign-in is fine)';
+  @override
+  String get collection_group_extras => 'Extras & PV';
+  @override
+  String collection_group_season({required Object n}) => 'Season ${n}';
+  @override
+  String get collection_sort_by_season => 'Sort by season';
 }
 
 // Path: <root>
@@ -70144,6 +70201,12 @@ class _StringsPtBr extends _StringsEn {
   @override
   String sync_err_forbidden_detail({required Object reason}) =>
       'The server refused this request: ${reason} (your sign-in is fine)';
+  @override
+  String get collection_group_extras => 'Extras & PV';
+  @override
+  String collection_group_season({required Object n}) => 'Season ${n}';
+  @override
+  String get collection_sort_by_season => 'Sort by season';
 }
 
 // Path: <root>
@@ -76794,6 +76857,12 @@ class _StringsRu extends _StringsEn {
   @override
   String sync_err_forbidden_detail({required Object reason}) =>
       'The server refused this request: ${reason} (your sign-in is fine)';
+  @override
+  String get collection_group_extras => 'Extras & PV';
+  @override
+  String collection_group_season({required Object n}) => 'Season ${n}';
+  @override
+  String get collection_sort_by_season => 'Sort by season';
 }
 
 // Path: <root>
@@ -83392,6 +83461,12 @@ class _StringsTh extends _StringsEn {
   @override
   String sync_err_forbidden_detail({required Object reason}) =>
       'The server refused this request: ${reason} (your sign-in is fine)';
+  @override
+  String get collection_group_extras => 'Extras & PV';
+  @override
+  String collection_group_season({required Object n}) => 'Season ${n}';
+  @override
+  String get collection_sort_by_season => 'Sort by season';
 }
 
 // Path: <root>
@@ -90022,6 +90097,12 @@ class _StringsTr extends _StringsEn {
   @override
   String sync_err_forbidden_detail({required Object reason}) =>
       'The server refused this request: ${reason} (your sign-in is fine)';
+  @override
+  String get collection_group_extras => 'Extras & PV';
+  @override
+  String collection_group_season({required Object n}) => 'Season ${n}';
+  @override
+  String get collection_sort_by_season => 'Sort by season';
 }
 
 // Path: <root>
@@ -96637,6 +96718,12 @@ class _StringsVi extends _StringsEn {
   @override
   String sync_err_forbidden_detail({required Object reason}) =>
       'The server refused this request: ${reason} (your sign-in is fine)';
+  @override
+  String get collection_group_extras => 'Extras & PV';
+  @override
+  String collection_group_season({required Object n}) => 'Season ${n}';
+  @override
+  String get collection_sort_by_season => 'Sort by season';
 }
 
 // Path: <root>
@@ -102779,6 +102866,12 @@ class _StringsZhCn extends _StringsEn {
   @override
   String sync_err_forbidden_detail({required Object reason}) =>
       '服务端拒绝了这次请求：${reason}（登录没问题）';
+  @override
+  String get collection_group_extras => 'PV·特典';
+  @override
+  String collection_group_season({required Object n}) => '第 ${n} 季';
+  @override
+  String get collection_sort_by_season => '按季排序';
 }
 
 // Path: <root>
@@ -109190,6 +109283,12 @@ class _StringsZhHk extends _StringsEn {
   @override
   String sync_err_forbidden_detail({required Object reason}) =>
       'The server refused this request: ${reason} (your sign-in is fine)';
+  @override
+  String get collection_group_extras => 'Extras & PV';
+  @override
+  String collection_group_season({required Object n}) => 'Season ${n}';
+  @override
+  String get collection_sort_by_season => 'Sort by season';
 }
 
 /// Flat map(s) containing all translations.
@@ -115083,6 +115182,12 @@ extension on _StringsEn {
       case 'sync_err_forbidden_detail':
         return ({required Object reason}) =>
             'The server refused this request: ${reason} (your sign-in is fine)';
+      case 'collection_group_extras':
+        return 'Extras & PV';
+      case 'collection_group_season':
+        return ({required Object n}) => 'Season ${n}';
+      case 'collection_sort_by_season':
+        return 'Sort by season';
       default:
         return null;
     }
@@ -120974,6 +121079,12 @@ extension on _StringsAr {
       case 'sync_err_forbidden_detail':
         return ({required Object reason}) =>
             'The server refused this request: ${reason} (your sign-in is fine)';
+      case 'collection_group_extras':
+        return 'Extras & PV';
+      case 'collection_group_season':
+        return ({required Object n}) => 'Season ${n}';
+      case 'collection_sort_by_season':
+        return 'Sort by season';
       default:
         return null;
     }
@@ -126887,6 +126998,12 @@ extension on _StringsDe {
       case 'sync_err_forbidden_detail':
         return ({required Object reason}) =>
             'The server refused this request: ${reason} (your sign-in is fine)';
+      case 'collection_group_extras':
+        return 'Extras & PV';
+      case 'collection_group_season':
+        return ({required Object n}) => 'Season ${n}';
+      case 'collection_sort_by_season':
+        return 'Sort by season';
       default:
         return null;
     }
@@ -132799,6 +132916,12 @@ extension on _StringsEs {
       case 'sync_err_forbidden_detail':
         return ({required Object reason}) =>
             'The server refused this request: ${reason} (your sign-in is fine)';
+      case 'collection_group_extras':
+        return 'Extras & PV';
+      case 'collection_group_season':
+        return ({required Object n}) => 'Season ${n}';
+      case 'collection_sort_by_season':
+        return 'Sort by season';
       default:
         return null;
     }
@@ -138717,6 +138840,12 @@ extension on _StringsFr {
       case 'sync_err_forbidden_detail':
         return ({required Object reason}) =>
             'The server refused this request: ${reason} (your sign-in is fine)';
+      case 'collection_group_extras':
+        return 'Extras & PV';
+      case 'collection_group_season':
+        return ({required Object n}) => 'Season ${n}';
+      case 'collection_sort_by_season':
+        return 'Sort by season';
       default:
         return null;
     }
@@ -144617,6 +144746,12 @@ extension on _StringsId {
       case 'sync_err_forbidden_detail':
         return ({required Object reason}) =>
             'The server refused this request: ${reason} (your sign-in is fine)';
+      case 'collection_group_extras':
+        return 'Extras & PV';
+      case 'collection_group_season':
+        return ({required Object n}) => 'Season ${n}';
+      case 'collection_sort_by_season':
+        return 'Sort by season';
       default:
         return null;
     }
@@ -150531,6 +150666,12 @@ extension on _StringsIt {
       case 'sync_err_forbidden_detail':
         return ({required Object reason}) =>
             'The server refused this request: ${reason} (your sign-in is fine)';
+      case 'collection_group_extras':
+        return 'Extras & PV';
+      case 'collection_group_season':
+        return ({required Object n}) => 'Season ${n}';
+      case 'collection_sort_by_season':
+        return 'Sort by season';
       default:
         return null;
     }
@@ -156407,6 +156548,12 @@ extension on _StringsJa {
       case 'sync_err_forbidden_detail':
         return ({required Object reason}) =>
             'The server refused this request: ${reason} (your sign-in is fine)';
+      case 'collection_group_extras':
+        return 'Extras & PV';
+      case 'collection_group_season':
+        return ({required Object n}) => 'Season ${n}';
+      case 'collection_sort_by_season':
+        return 'Sort by season';
       default:
         return null;
     }
@@ -162287,6 +162434,12 @@ extension on _StringsKo {
       case 'sync_err_forbidden_detail':
         return ({required Object reason}) =>
             'The server refused this request: ${reason} (your sign-in is fine)';
+      case 'collection_group_extras':
+        return 'Extras & PV';
+      case 'collection_group_season':
+        return ({required Object n}) => 'Season ${n}';
+      case 'collection_sort_by_season':
+        return 'Sort by season';
       default:
         return null;
     }
@@ -168195,6 +168348,12 @@ extension on _StringsNl {
       case 'sync_err_forbidden_detail':
         return ({required Object reason}) =>
             'The server refused this request: ${reason} (your sign-in is fine)';
+      case 'collection_group_extras':
+        return 'Extras & PV';
+      case 'collection_group_season':
+        return ({required Object n}) => 'Season ${n}';
+      case 'collection_sort_by_season':
+        return 'Sort by season';
       default:
         return null;
     }
@@ -174100,6 +174259,12 @@ extension on _StringsPtBr {
       case 'sync_err_forbidden_detail':
         return ({required Object reason}) =>
             'The server refused this request: ${reason} (your sign-in is fine)';
+      case 'collection_group_extras':
+        return 'Extras & PV';
+      case 'collection_group_season':
+        return ({required Object n}) => 'Season ${n}';
+      case 'collection_sort_by_season':
+        return 'Sort by season';
       default:
         return null;
     }
@@ -180010,6 +180175,12 @@ extension on _StringsRu {
       case 'sync_err_forbidden_detail':
         return ({required Object reason}) =>
             'The server refused this request: ${reason} (your sign-in is fine)';
+      case 'collection_group_extras':
+        return 'Extras & PV';
+      case 'collection_group_season':
+        return ({required Object n}) => 'Season ${n}';
+      case 'collection_sort_by_season':
+        return 'Sort by season';
       default:
         return null;
     }
@@ -185903,6 +186074,12 @@ extension on _StringsTh {
       case 'sync_err_forbidden_detail':
         return ({required Object reason}) =>
             'The server refused this request: ${reason} (your sign-in is fine)';
+      case 'collection_group_extras':
+        return 'Extras & PV';
+      case 'collection_group_season':
+        return ({required Object n}) => 'Season ${n}';
+      case 'collection_sort_by_season':
+        return 'Sort by season';
       default:
         return null;
     }
@@ -191805,6 +191982,12 @@ extension on _StringsTr {
       case 'sync_err_forbidden_detail':
         return ({required Object reason}) =>
             'The server refused this request: ${reason} (your sign-in is fine)';
+      case 'collection_group_extras':
+        return 'Extras & PV';
+      case 'collection_group_season':
+        return ({required Object n}) => 'Season ${n}';
+      case 'collection_sort_by_season':
+        return 'Sort by season';
       default:
         return null;
     }
@@ -197703,6 +197886,12 @@ extension on _StringsVi {
       case 'sync_err_forbidden_detail':
         return ({required Object reason}) =>
             'The server refused this request: ${reason} (your sign-in is fine)';
+      case 'collection_group_extras':
+        return 'Extras & PV';
+      case 'collection_group_season':
+        return ({required Object n}) => 'Season ${n}';
+      case 'collection_sort_by_season':
+        return 'Sort by season';
       default:
         return null;
     }
@@ -203548,6 +203737,12 @@ extension on _StringsZhCn {
         return '服务端拒绝了这次请求。登录没问题，请检查服务端设置。';
       case 'sync_err_forbidden_detail':
         return ({required Object reason}) => '服务端拒绝了这次请求：${reason}（登录没问题）';
+      case 'collection_group_extras':
+        return 'PV·特典';
+      case 'collection_group_season':
+        return ({required Object n}) => '第 ${n} 季';
+      case 'collection_sort_by_season':
+        return '按季排序';
       default:
         return null;
     }
@@ -209419,6 +209614,12 @@ extension on _StringsZhHk {
       case 'sync_err_forbidden_detail':
         return ({required Object reason}) =>
             'The server refused this request: ${reason} (your sign-in is fine)';
+      case 'collection_group_extras':
+        return 'Extras & PV';
+      case 'collection_group_season':
+        return ({required Object n}) => 'Season ${n}';
+      case 'collection_sort_by_season':
+        return 'Sort by season';
       default:
         return null;
     }
