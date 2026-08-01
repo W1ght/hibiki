@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 48773 (2869 per locale)
+/// Strings: 48790 (2870 per locale)
 ///
-/// Built on 2026-07-31 at 19:42 UTC
+/// Built on 2026-08-01 at 00:00 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3877,6 +3877,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Only the grouping is removed. The items in it are kept.';
   String get shortcut_action_video_enter_caret =>
       'Enter subtitle lookup cursor';
+  String get audiobook_export_clip_too_long =>
+      'Selection audio is too long to export (limit: 5 minutes)';
 }
 
 // Path: <root>
@@ -10472,6 +10474,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get shortcut_action_video_enter_caret =>
       'Enter subtitle lookup cursor';
+  @override
+  String get audiobook_export_clip_too_long =>
+      'Selection audio is too long to export (limit: 5 minutes)';
 }
 
 // Path: <root>
@@ -17134,6 +17139,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get shortcut_action_video_enter_caret =>
       'Enter subtitle lookup cursor';
+  @override
+  String get audiobook_export_clip_too_long =>
+      'Selection audio is too long to export (limit: 5 minutes)';
 }
 
 // Path: <root>
@@ -23812,6 +23820,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get shortcut_action_video_enter_caret =>
       'Enter subtitle lookup cursor';
+  @override
+  String get audiobook_export_clip_too_long =>
+      'Selection audio is too long to export (limit: 5 minutes)';
 }
 
 // Path: <root>
@@ -30501,6 +30512,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get shortcut_action_video_enter_caret =>
       'Enter subtitle lookup cursor';
+  @override
+  String get audiobook_export_clip_too_long =>
+      'Selection audio is too long to export (limit: 5 minutes)';
 }
 
 // Path: <root>
@@ -37119,6 +37133,9 @@ class _StringsId extends _StringsEn {
   @override
   String get shortcut_action_video_enter_caret =>
       'Enter subtitle lookup cursor';
+  @override
+  String get audiobook_export_clip_too_long =>
+      'Selection audio is too long to export (limit: 5 minutes)';
 }
 
 // Path: <root>
@@ -43783,6 +43800,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get shortcut_action_video_enter_caret =>
       'Enter subtitle lookup cursor';
+  @override
+  String get audiobook_export_clip_too_long =>
+      'Selection audio is too long to export (limit: 5 minutes)';
 }
 
 // Path: <root>
@@ -50264,6 +50284,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get shortcut_action_video_enter_caret =>
       'Enter subtitle lookup cursor';
+  @override
+  String get audiobook_export_clip_too_long =>
+      'Selection audio is too long to export (limit: 5 minutes)';
 }
 
 // Path: <root>
@@ -56747,6 +56770,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get shortcut_action_video_enter_caret =>
       'Enter subtitle lookup cursor';
+  @override
+  String get audiobook_export_clip_too_long =>
+      'Selection audio is too long to export (limit: 5 minutes)';
 }
 
 // Path: <root>
@@ -63391,6 +63417,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get shortcut_action_video_enter_caret =>
       'Enter subtitle lookup cursor';
+  @override
+  String get audiobook_export_clip_too_long =>
+      'Selection audio is too long to export (limit: 5 minutes)';
 }
 
 // Path: <root>
@@ -70048,6 +70077,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get shortcut_action_video_enter_caret =>
       'Enter subtitle lookup cursor';
+  @override
+  String get audiobook_export_clip_too_long =>
+      'Selection audio is too long to export (limit: 5 minutes)';
 }
 
 // Path: <root>
@@ -76689,6 +76721,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get shortcut_action_video_enter_caret =>
       'Enter subtitle lookup cursor';
+  @override
+  String get audiobook_export_clip_too_long =>
+      'Selection audio is too long to export (limit: 5 minutes)';
 }
 
 // Path: <root>
@@ -83278,6 +83313,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get shortcut_action_video_enter_caret =>
       'Enter subtitle lookup cursor';
+  @override
+  String get audiobook_export_clip_too_long =>
+      'Selection audio is too long to export (limit: 5 minutes)';
 }
 
 // Path: <root>
@@ -89899,6 +89937,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get shortcut_action_video_enter_caret =>
       'Enter subtitle lookup cursor';
+  @override
+  String get audiobook_export_clip_too_long =>
+      'Selection audio is too long to export (limit: 5 minutes)';
 }
 
 // Path: <root>
@@ -96505,6 +96546,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get shortcut_action_video_enter_caret =>
       'Enter subtitle lookup cursor';
+  @override
+  String get audiobook_export_clip_too_long =>
+      'Selection audio is too long to export (limit: 5 minutes)';
 }
 
 // Path: <root>
@@ -102640,6 +102684,8 @@ class _StringsZhCn extends _StringsEn {
   String get delete_collection_confirm => '只解除分组，其中的条目会保留。';
   @override
   String get shortcut_action_video_enter_caret => '进入字幕选词光标';
+  @override
+  String get audiobook_export_clip_too_long => '选区音频过长，暂不支持导出（上限 5 分钟）';
 }
 
 // Path: <root>
@@ -109042,6 +109088,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get shortcut_action_video_enter_caret =>
       'Enter subtitle lookup cursor';
+  @override
+  String get audiobook_export_clip_too_long =>
+      'Selection audio is too long to export (limit: 5 minutes)';
 }
 
 /// Flat map(s) containing all translations.
@@ -114928,6 +114977,8 @@ extension on _StringsEn {
         return 'Only the grouping is removed. The items in it are kept.';
       case 'shortcut_action_video_enter_caret':
         return 'Enter subtitle lookup cursor';
+      case 'audiobook_export_clip_too_long':
+        return 'Selection audio is too long to export (limit: 5 minutes)';
       default:
         return null;
     }
@@ -120812,6 +120863,8 @@ extension on _StringsAr {
         return 'Only the grouping is removed. The items in it are kept.';
       case 'shortcut_action_video_enter_caret':
         return 'Enter subtitle lookup cursor';
+      case 'audiobook_export_clip_too_long':
+        return 'Selection audio is too long to export (limit: 5 minutes)';
       default:
         return null;
     }
@@ -126718,6 +126771,8 @@ extension on _StringsDe {
         return 'Only the grouping is removed. The items in it are kept.';
       case 'shortcut_action_video_enter_caret':
         return 'Enter subtitle lookup cursor';
+      case 'audiobook_export_clip_too_long':
+        return 'Selection audio is too long to export (limit: 5 minutes)';
       default:
         return null;
     }
@@ -132623,6 +132678,8 @@ extension on _StringsEs {
         return 'Only the grouping is removed. The items in it are kept.';
       case 'shortcut_action_video_enter_caret':
         return 'Enter subtitle lookup cursor';
+      case 'audiobook_export_clip_too_long':
+        return 'Selection audio is too long to export (limit: 5 minutes)';
       default:
         return null;
     }
@@ -138534,6 +138591,8 @@ extension on _StringsFr {
         return 'Only the grouping is removed. The items in it are kept.';
       case 'shortcut_action_video_enter_caret':
         return 'Enter subtitle lookup cursor';
+      case 'audiobook_export_clip_too_long':
+        return 'Selection audio is too long to export (limit: 5 minutes)';
       default:
         return null;
     }
@@ -144427,6 +144486,8 @@ extension on _StringsId {
         return 'Only the grouping is removed. The items in it are kept.';
       case 'shortcut_action_video_enter_caret':
         return 'Enter subtitle lookup cursor';
+      case 'audiobook_export_clip_too_long':
+        return 'Selection audio is too long to export (limit: 5 minutes)';
       default:
         return null;
     }
@@ -150334,6 +150395,8 @@ extension on _StringsIt {
         return 'Only the grouping is removed. The items in it are kept.';
       case 'shortcut_action_video_enter_caret':
         return 'Enter subtitle lookup cursor';
+      case 'audiobook_export_clip_too_long':
+        return 'Selection audio is too long to export (limit: 5 minutes)';
       default:
         return null;
     }
@@ -156203,6 +156266,8 @@ extension on _StringsJa {
         return 'Only the grouping is removed. The items in it are kept.';
       case 'shortcut_action_video_enter_caret':
         return 'Enter subtitle lookup cursor';
+      case 'audiobook_export_clip_too_long':
+        return 'Selection audio is too long to export (limit: 5 minutes)';
       default:
         return null;
     }
@@ -162076,6 +162141,8 @@ extension on _StringsKo {
         return 'Only the grouping is removed. The items in it are kept.';
       case 'shortcut_action_video_enter_caret':
         return 'Enter subtitle lookup cursor';
+      case 'audiobook_export_clip_too_long':
+        return 'Selection audio is too long to export (limit: 5 minutes)';
       default:
         return null;
     }
@@ -167977,6 +168044,8 @@ extension on _StringsNl {
         return 'Only the grouping is removed. The items in it are kept.';
       case 'shortcut_action_video_enter_caret':
         return 'Enter subtitle lookup cursor';
+      case 'audiobook_export_clip_too_long':
+        return 'Selection audio is too long to export (limit: 5 minutes)';
       default:
         return null;
     }
@@ -173875,6 +173944,8 @@ extension on _StringsPtBr {
         return 'Only the grouping is removed. The items in it are kept.';
       case 'shortcut_action_video_enter_caret':
         return 'Enter subtitle lookup cursor';
+      case 'audiobook_export_clip_too_long':
+        return 'Selection audio is too long to export (limit: 5 minutes)';
       default:
         return null;
     }
@@ -179778,6 +179849,8 @@ extension on _StringsRu {
         return 'Only the grouping is removed. The items in it are kept.';
       case 'shortcut_action_video_enter_caret':
         return 'Enter subtitle lookup cursor';
+      case 'audiobook_export_clip_too_long':
+        return 'Selection audio is too long to export (limit: 5 minutes)';
       default:
         return null;
     }
@@ -185664,6 +185737,8 @@ extension on _StringsTh {
         return 'Only the grouping is removed. The items in it are kept.';
       case 'shortcut_action_video_enter_caret':
         return 'Enter subtitle lookup cursor';
+      case 'audiobook_export_clip_too_long':
+        return 'Selection audio is too long to export (limit: 5 minutes)';
       default:
         return null;
     }
@@ -191559,6 +191634,8 @@ extension on _StringsTr {
         return 'Only the grouping is removed. The items in it are kept.';
       case 'shortcut_action_video_enter_caret':
         return 'Enter subtitle lookup cursor';
+      case 'audiobook_export_clip_too_long':
+        return 'Selection audio is too long to export (limit: 5 minutes)';
       default:
         return null;
     }
@@ -197450,6 +197527,8 @@ extension on _StringsVi {
         return 'Only the grouping is removed. The items in it are kept.';
       case 'shortcut_action_video_enter_caret':
         return 'Enter subtitle lookup cursor';
+      case 'audiobook_export_clip_too_long':
+        return 'Selection audio is too long to export (limit: 5 minutes)';
       default:
         return null;
     }
@@ -203289,6 +203368,8 @@ extension on _StringsZhCn {
         return '只解除分组，其中的条目会保留。';
       case 'shortcut_action_video_enter_caret':
         return '进入字幕选词光标';
+      case 'audiobook_export_clip_too_long':
+        return '选区音频过长，暂不支持导出（上限 5 分钟）';
       default:
         return null;
     }
@@ -209153,6 +209234,8 @@ extension on _StringsZhHk {
         return 'Only the grouping is removed. The items in it are kept.';
       case 'shortcut_action_video_enter_caret':
         return 'Enter subtitle lookup cursor';
+      case 'audiobook_export_clip_too_long':
+        return 'Selection audio is too long to export (limit: 5 minutes)';
       default:
         return null;
     }
