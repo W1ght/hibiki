@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 51867 (3051 per locale)
+/// Strings: 51884 (3052 per locale)
 ///
-/// Built on 2026-08-01 at 17:07 UTC
+/// Built on 2026-08-01 at 17:48 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -4099,6 +4099,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Split into ${n} collections';
   String collection_episode_watched_at({required Object position}) =>
       'Watched to ${position}';
+  String collection_episode_bangumi_open_failed({required Object error}) =>
+      'Could not resolve the episode on Bangumi: ${error}';
 }
 
 // Path: <root>
@@ -11098,6 +11100,9 @@ class _StringsAr extends _StringsEn {
   @override
   String collection_episode_watched_at({required Object position}) =>
       'Watched to ${position}';
+  @override
+  String collection_episode_bangumi_open_failed({required Object error}) =>
+      'Could not resolve the episode on Bangumi: ${error}';
 }
 
 // Path: <root>
@@ -18164,6 +18169,9 @@ class _StringsDe extends _StringsEn {
   @override
   String collection_episode_watched_at({required Object position}) =>
       'Watched to ${position}';
+  @override
+  String collection_episode_bangumi_open_failed({required Object error}) =>
+      'Could not resolve the episode on Bangumi: ${error}';
 }
 
 // Path: <root>
@@ -25245,6 +25253,9 @@ class _StringsEs extends _StringsEn {
   @override
   String collection_episode_watched_at({required Object position}) =>
       'Watched to ${position}';
+  @override
+  String collection_episode_bangumi_open_failed({required Object error}) =>
+      'Could not resolve the episode on Bangumi: ${error}';
 }
 
 // Path: <root>
@@ -32338,6 +32349,9 @@ class _StringsFr extends _StringsEn {
   @override
   String collection_episode_watched_at({required Object position}) =>
       'Watched to ${position}';
+  @override
+  String collection_episode_bangumi_open_failed({required Object error}) =>
+      'Could not resolve the episode on Bangumi: ${error}';
 }
 
 // Path: <root>
@@ -39360,6 +39374,9 @@ class _StringsId extends _StringsEn {
   @override
   String collection_episode_watched_at({required Object position}) =>
       'Watched to ${position}';
+  @override
+  String collection_episode_bangumi_open_failed({required Object error}) =>
+      'Could not resolve the episode on Bangumi: ${error}';
 }
 
 // Path: <root>
@@ -46428,6 +46445,9 @@ class _StringsIt extends _StringsEn {
   @override
   String collection_episode_watched_at({required Object position}) =>
       'Watched to ${position}';
+  @override
+  String collection_episode_bangumi_open_failed({required Object error}) =>
+      'Could not resolve the episode on Bangumi: ${error}';
 }
 
 // Path: <root>
@@ -53313,6 +53333,9 @@ class _StringsJa extends _StringsEn {
   @override
   String collection_episode_watched_at({required Object position}) =>
       'Watched to ${position}';
+  @override
+  String collection_episode_bangumi_open_failed({required Object error}) =>
+      'Could not resolve the episode on Bangumi: ${error}';
 }
 
 // Path: <root>
@@ -60200,6 +60223,9 @@ class _StringsKo extends _StringsEn {
   @override
   String collection_episode_watched_at({required Object position}) =>
       'Watched to ${position}';
+  @override
+  String collection_episode_bangumi_open_failed({required Object error}) =>
+      'Could not resolve the episode on Bangumi: ${error}';
 }
 
 // Path: <root>
@@ -67248,6 +67274,9 @@ class _StringsNl extends _StringsEn {
   @override
   String collection_episode_watched_at({required Object position}) =>
       'Watched to ${position}';
+  @override
+  String collection_episode_bangumi_open_failed({required Object error}) =>
+      'Could not resolve the episode on Bangumi: ${error}';
 }
 
 // Path: <root>
@@ -74309,6 +74338,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String collection_episode_watched_at({required Object position}) =>
       'Watched to ${position}';
+  @override
+  String collection_episode_bangumi_open_failed({required Object error}) =>
+      'Could not resolve the episode on Bangumi: ${error}';
 }
 
 // Path: <root>
@@ -81354,6 +81386,9 @@ class _StringsRu extends _StringsEn {
   @override
   String collection_episode_watched_at({required Object position}) =>
       'Watched to ${position}';
+  @override
+  String collection_episode_bangumi_open_failed({required Object error}) =>
+      'Could not resolve the episode on Bangumi: ${error}';
 }
 
 // Path: <root>
@@ -88347,6 +88382,9 @@ class _StringsTh extends _StringsEn {
   @override
   String collection_episode_watched_at({required Object position}) =>
       'Watched to ${position}';
+  @override
+  String collection_episode_bangumi_open_failed({required Object error}) =>
+      'Could not resolve the episode on Bangumi: ${error}';
 }
 
 // Path: <root>
@@ -95372,6 +95410,9 @@ class _StringsTr extends _StringsEn {
   @override
   String collection_episode_watched_at({required Object position}) =>
       'Watched to ${position}';
+  @override
+  String collection_episode_bangumi_open_failed({required Object error}) =>
+      'Could not resolve the episode on Bangumi: ${error}';
 }
 
 // Path: <root>
@@ -102382,6 +102423,9 @@ class _StringsVi extends _StringsEn {
   @override
   String collection_episode_watched_at({required Object position}) =>
       'Watched to ${position}';
+  @override
+  String collection_episode_bangumi_open_failed({required Object error}) =>
+      'Could not resolve the episode on Bangumi: ${error}';
 }
 
 // Path: <root>
@@ -108905,6 +108949,9 @@ class _StringsZhCn extends _StringsEn {
   @override
   String collection_episode_watched_at({required Object position}) =>
       '看到 ${position}';
+  @override
+  String collection_episode_bangumi_open_failed({required Object error}) =>
+      '解析 Bangumi 章节失败：${error}';
 }
 
 // Path: <root>
@@ -115711,6 +115758,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String collection_episode_watched_at({required Object position}) =>
       'Watched to ${position}';
+  @override
+  String collection_episode_bangumi_open_failed({required Object error}) =>
+      'Could not resolve the episode on Bangumi: ${error}';
 }
 
 /// Flat map(s) containing all translations.
@@ -121970,6 +122020,9 @@ extension on _StringsEn {
         return ({required Object n}) => 'Split into ${n} collections';
       case 'collection_episode_watched_at':
         return ({required Object position}) => 'Watched to ${position}';
+      case 'collection_episode_bangumi_open_failed':
+        return ({required Object error}) =>
+            'Could not resolve the episode on Bangumi: ${error}';
       default:
         return null;
     }
@@ -128227,6 +128280,9 @@ extension on _StringsAr {
         return ({required Object n}) => 'Split into ${n} collections';
       case 'collection_episode_watched_at':
         return ({required Object position}) => 'Watched to ${position}';
+      case 'collection_episode_bangumi_open_failed':
+        return ({required Object error}) =>
+            'Could not resolve the episode on Bangumi: ${error}';
       default:
         return null;
     }
@@ -134506,6 +134562,9 @@ extension on _StringsDe {
         return ({required Object n}) => 'Split into ${n} collections';
       case 'collection_episode_watched_at':
         return ({required Object position}) => 'Watched to ${position}';
+      case 'collection_episode_bangumi_open_failed':
+        return ({required Object error}) =>
+            'Could not resolve the episode on Bangumi: ${error}';
       default:
         return null;
     }
@@ -140784,6 +140843,9 @@ extension on _StringsEs {
         return ({required Object n}) => 'Split into ${n} collections';
       case 'collection_episode_watched_at':
         return ({required Object position}) => 'Watched to ${position}';
+      case 'collection_episode_bangumi_open_failed':
+        return ({required Object error}) =>
+            'Could not resolve the episode on Bangumi: ${error}';
       default:
         return null;
     }
@@ -147068,6 +147130,9 @@ extension on _StringsFr {
         return ({required Object n}) => 'Split into ${n} collections';
       case 'collection_episode_watched_at':
         return ({required Object position}) => 'Watched to ${position}';
+      case 'collection_episode_bangumi_open_failed':
+        return ({required Object error}) =>
+            'Could not resolve the episode on Bangumi: ${error}';
       default:
         return null;
     }
@@ -153334,6 +153399,9 @@ extension on _StringsId {
         return ({required Object n}) => 'Split into ${n} collections';
       case 'collection_episode_watched_at':
         return ({required Object position}) => 'Watched to ${position}';
+      case 'collection_episode_bangumi_open_failed':
+        return ({required Object error}) =>
+            'Could not resolve the episode on Bangumi: ${error}';
       default:
         return null;
     }
@@ -159614,6 +159682,9 @@ extension on _StringsIt {
         return ({required Object n}) => 'Split into ${n} collections';
       case 'collection_episode_watched_at':
         return ({required Object position}) => 'Watched to ${position}';
+      case 'collection_episode_bangumi_open_failed':
+        return ({required Object error}) =>
+            'Could not resolve the episode on Bangumi: ${error}';
       default:
         return null;
     }
@@ -165856,6 +165927,9 @@ extension on _StringsJa {
         return ({required Object n}) => 'Split into ${n} collections';
       case 'collection_episode_watched_at':
         return ({required Object position}) => 'Watched to ${position}';
+      case 'collection_episode_bangumi_open_failed':
+        return ({required Object error}) =>
+            'Could not resolve the episode on Bangumi: ${error}';
       default:
         return null;
     }
@@ -172102,6 +172176,9 @@ extension on _StringsKo {
         return ({required Object n}) => 'Split into ${n} collections';
       case 'collection_episode_watched_at':
         return ({required Object position}) => 'Watched to ${position}';
+      case 'collection_episode_bangumi_open_failed':
+        return ({required Object error}) =>
+            'Could not resolve the episode on Bangumi: ${error}';
       default:
         return null;
     }
@@ -178376,6 +178453,9 @@ extension on _StringsNl {
         return ({required Object n}) => 'Split into ${n} collections';
       case 'collection_episode_watched_at':
         return ({required Object position}) => 'Watched to ${position}';
+      case 'collection_episode_bangumi_open_failed':
+        return ({required Object error}) =>
+            'Could not resolve the episode on Bangumi: ${error}';
       default:
         return null;
     }
@@ -184647,6 +184727,9 @@ extension on _StringsPtBr {
         return ({required Object n}) => 'Split into ${n} collections';
       case 'collection_episode_watched_at':
         return ({required Object position}) => 'Watched to ${position}';
+      case 'collection_episode_bangumi_open_failed':
+        return ({required Object error}) =>
+            'Could not resolve the episode on Bangumi: ${error}';
       default:
         return null;
     }
@@ -190923,6 +191006,9 @@ extension on _StringsRu {
         return ({required Object n}) => 'Split into ${n} collections';
       case 'collection_episode_watched_at':
         return ({required Object position}) => 'Watched to ${position}';
+      case 'collection_episode_bangumi_open_failed':
+        return ({required Object error}) =>
+            'Could not resolve the episode on Bangumi: ${error}';
       default:
         return null;
     }
@@ -197182,6 +197268,9 @@ extension on _StringsTh {
         return ({required Object n}) => 'Split into ${n} collections';
       case 'collection_episode_watched_at':
         return ({required Object position}) => 'Watched to ${position}';
+      case 'collection_episode_bangumi_open_failed':
+        return ({required Object error}) =>
+            'Could not resolve the episode on Bangumi: ${error}';
       default:
         return null;
     }
@@ -203450,6 +203539,9 @@ extension on _StringsTr {
         return ({required Object n}) => 'Split into ${n} collections';
       case 'collection_episode_watched_at':
         return ({required Object position}) => 'Watched to ${position}';
+      case 'collection_episode_bangumi_open_failed':
+        return ({required Object error}) =>
+            'Could not resolve the episode on Bangumi: ${error}';
       default:
         return null;
     }
@@ -209714,6 +209806,9 @@ extension on _StringsVi {
         return ({required Object n}) => 'Split into ${n} collections';
       case 'collection_episode_watched_at':
         return ({required Object position}) => 'Watched to ${position}';
+      case 'collection_episode_bangumi_open_failed':
+        return ({required Object error}) =>
+            'Could not resolve the episode on Bangumi: ${error}';
       default:
         return null;
     }
@@ -215925,6 +216020,8 @@ extension on _StringsZhCn {
         return ({required Object n}) => '已拆分为 ${n} 个合集';
       case 'collection_episode_watched_at':
         return ({required Object position}) => '看到 ${position}';
+      case 'collection_episode_bangumi_open_failed':
+        return ({required Object error}) => '解析 Bangumi 章节失败：${error}';
       default:
         return null;
     }
@@ -222162,6 +222259,9 @@ extension on _StringsZhHk {
         return ({required Object n}) => 'Split into ${n} collections';
       case 'collection_episode_watched_at':
         return ({required Object position}) => 'Watched to ${position}';
+      case 'collection_episode_bangumi_open_failed':
+        return ({required Object error}) =>
+            'Could not resolve the episode on Bangumi: ${error}';
       default:
         return null;
     }
