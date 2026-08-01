@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 49691 (2923 per locale)
+/// Strings: 50235 (2955 per locale)
 ///
-/// Built on 2026-08-01 at 07:15 UTC
+/// Built on 2026-08-01 at 07:30 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3952,6 +3952,40 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
   String get about_tmdb_attribution =>
       'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+  String get video_scrape_tmdb_key_required => 'TMDB requires an API key';
+  String get video_scrape_tmdb_key_save => 'Save';
+  String get video_scrape_tmdb_key_empty =>
+      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+  String get download_detail_tab_overview => 'Overview';
+  String get download_detail_tab_files => 'Files';
+  String get download_detail_tab_peers => 'Peers';
+  String get download_detail_tab_trackers => 'Trackers';
+  String get download_detail_backend_unsupported =>
+      'Not supported by current download backend';
+  String get download_detail_task_gone => 'Task not found in backend';
+  String get download_detail_section_transfer => 'Transfer';
+  String get download_detail_section_network => 'Network';
+  String get download_detail_seeds_label => 'Seeds';
+  String get download_detail_leechers_label => 'Leechers';
+  String get download_detail_connections_label => 'Connections';
+  String get download_detail_time_active => 'Active time';
+  String get download_detail_time_seeding => 'Seeding time';
+  String get download_detail_listen_port => 'Listen port';
+  String get download_detail_dht_nodes => 'DHT nodes';
+  String get download_detail_port_mapping => 'Port mapping';
+  String get download_detail_session_rates => 'Session rates';
+  String get download_detail_pieces_label => 'Pieces';
+  String get download_detail_priority_skip => 'Don\'t download';
+  String get download_detail_priority_normal => 'Normal';
+  String get download_detail_priority_high => 'High';
+  String get download_detail_tracker_working => 'Working';
+  String get download_detail_tracker_updating => 'Updating';
+  String get download_detail_tracker_not_contacted => 'Not contacted yet';
+  String get download_detail_tracker_not_working => 'Not working';
+  String get download_detail_tracker_disabled => 'Disabled';
+  String get download_detail_no_peers => 'No connected peers';
+  String get download_detail_no_trackers => 'No trackers';
+  String get video_scrape_tmdb_key_hint => 'Enter TMDB API key';
 }
 
 // Path: <root>
@@ -10676,6 +10710,72 @@ class _StringsAr extends _StringsEn {
   @override
   String get about_tmdb_attribution =>
       'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+  @override
+  String get video_scrape_tmdb_key_required => 'TMDB requires an API key';
+  @override
+  String get video_scrape_tmdb_key_save => 'Save';
+  @override
+  String get video_scrape_tmdb_key_empty =>
+      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+  @override
+  String get download_detail_tab_overview => 'Overview';
+  @override
+  String get download_detail_tab_files => 'Files';
+  @override
+  String get download_detail_tab_peers => 'Peers';
+  @override
+  String get download_detail_tab_trackers => 'Trackers';
+  @override
+  String get download_detail_backend_unsupported =>
+      'Not supported by current download backend';
+  @override
+  String get download_detail_task_gone => 'Task not found in backend';
+  @override
+  String get download_detail_section_transfer => 'Transfer';
+  @override
+  String get download_detail_section_network => 'Network';
+  @override
+  String get download_detail_seeds_label => 'Seeds';
+  @override
+  String get download_detail_leechers_label => 'Leechers';
+  @override
+  String get download_detail_connections_label => 'Connections';
+  @override
+  String get download_detail_time_active => 'Active time';
+  @override
+  String get download_detail_time_seeding => 'Seeding time';
+  @override
+  String get download_detail_listen_port => 'Listen port';
+  @override
+  String get download_detail_dht_nodes => 'DHT nodes';
+  @override
+  String get download_detail_port_mapping => 'Port mapping';
+  @override
+  String get download_detail_session_rates => 'Session rates';
+  @override
+  String get download_detail_pieces_label => 'Pieces';
+  @override
+  String get download_detail_priority_skip => 'Don\'t download';
+  @override
+  String get download_detail_priority_normal => 'Normal';
+  @override
+  String get download_detail_priority_high => 'High';
+  @override
+  String get download_detail_tracker_working => 'Working';
+  @override
+  String get download_detail_tracker_updating => 'Updating';
+  @override
+  String get download_detail_tracker_not_contacted => 'Not contacted yet';
+  @override
+  String get download_detail_tracker_not_working => 'Not working';
+  @override
+  String get download_detail_tracker_disabled => 'Disabled';
+  @override
+  String get download_detail_no_peers => 'No connected peers';
+  @override
+  String get download_detail_no_trackers => 'No trackers';
+  @override
+  String get video_scrape_tmdb_key_hint => 'Enter TMDB API key';
 }
 
 // Path: <root>
@@ -17467,6 +17567,72 @@ class _StringsDe extends _StringsEn {
   @override
   String get about_tmdb_attribution =>
       'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+  @override
+  String get video_scrape_tmdb_key_required => 'TMDB requires an API key';
+  @override
+  String get video_scrape_tmdb_key_save => 'Save';
+  @override
+  String get video_scrape_tmdb_key_empty =>
+      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+  @override
+  String get download_detail_tab_overview => 'Overview';
+  @override
+  String get download_detail_tab_files => 'Files';
+  @override
+  String get download_detail_tab_peers => 'Peers';
+  @override
+  String get download_detail_tab_trackers => 'Trackers';
+  @override
+  String get download_detail_backend_unsupported =>
+      'Not supported by current download backend';
+  @override
+  String get download_detail_task_gone => 'Task not found in backend';
+  @override
+  String get download_detail_section_transfer => 'Transfer';
+  @override
+  String get download_detail_section_network => 'Network';
+  @override
+  String get download_detail_seeds_label => 'Seeds';
+  @override
+  String get download_detail_leechers_label => 'Leechers';
+  @override
+  String get download_detail_connections_label => 'Connections';
+  @override
+  String get download_detail_time_active => 'Active time';
+  @override
+  String get download_detail_time_seeding => 'Seeding time';
+  @override
+  String get download_detail_listen_port => 'Listen port';
+  @override
+  String get download_detail_dht_nodes => 'DHT nodes';
+  @override
+  String get download_detail_port_mapping => 'Port mapping';
+  @override
+  String get download_detail_session_rates => 'Session rates';
+  @override
+  String get download_detail_pieces_label => 'Pieces';
+  @override
+  String get download_detail_priority_skip => 'Don\'t download';
+  @override
+  String get download_detail_priority_normal => 'Normal';
+  @override
+  String get download_detail_priority_high => 'High';
+  @override
+  String get download_detail_tracker_working => 'Working';
+  @override
+  String get download_detail_tracker_updating => 'Updating';
+  @override
+  String get download_detail_tracker_not_contacted => 'Not contacted yet';
+  @override
+  String get download_detail_tracker_not_working => 'Not working';
+  @override
+  String get download_detail_tracker_disabled => 'Disabled';
+  @override
+  String get download_detail_no_peers => 'No connected peers';
+  @override
+  String get download_detail_no_trackers => 'No trackers';
+  @override
+  String get video_scrape_tmdb_key_hint => 'Enter TMDB API key';
 }
 
 // Path: <root>
@@ -24273,6 +24439,72 @@ class _StringsEs extends _StringsEn {
   @override
   String get about_tmdb_attribution =>
       'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+  @override
+  String get video_scrape_tmdb_key_required => 'TMDB requires an API key';
+  @override
+  String get video_scrape_tmdb_key_save => 'Save';
+  @override
+  String get video_scrape_tmdb_key_empty =>
+      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+  @override
+  String get download_detail_tab_overview => 'Overview';
+  @override
+  String get download_detail_tab_files => 'Files';
+  @override
+  String get download_detail_tab_peers => 'Peers';
+  @override
+  String get download_detail_tab_trackers => 'Trackers';
+  @override
+  String get download_detail_backend_unsupported =>
+      'Not supported by current download backend';
+  @override
+  String get download_detail_task_gone => 'Task not found in backend';
+  @override
+  String get download_detail_section_transfer => 'Transfer';
+  @override
+  String get download_detail_section_network => 'Network';
+  @override
+  String get download_detail_seeds_label => 'Seeds';
+  @override
+  String get download_detail_leechers_label => 'Leechers';
+  @override
+  String get download_detail_connections_label => 'Connections';
+  @override
+  String get download_detail_time_active => 'Active time';
+  @override
+  String get download_detail_time_seeding => 'Seeding time';
+  @override
+  String get download_detail_listen_port => 'Listen port';
+  @override
+  String get download_detail_dht_nodes => 'DHT nodes';
+  @override
+  String get download_detail_port_mapping => 'Port mapping';
+  @override
+  String get download_detail_session_rates => 'Session rates';
+  @override
+  String get download_detail_pieces_label => 'Pieces';
+  @override
+  String get download_detail_priority_skip => 'Don\'t download';
+  @override
+  String get download_detail_priority_normal => 'Normal';
+  @override
+  String get download_detail_priority_high => 'High';
+  @override
+  String get download_detail_tracker_working => 'Working';
+  @override
+  String get download_detail_tracker_updating => 'Updating';
+  @override
+  String get download_detail_tracker_not_contacted => 'Not contacted yet';
+  @override
+  String get download_detail_tracker_not_working => 'Not working';
+  @override
+  String get download_detail_tracker_disabled => 'Disabled';
+  @override
+  String get download_detail_no_peers => 'No connected peers';
+  @override
+  String get download_detail_no_trackers => 'No trackers';
+  @override
+  String get video_scrape_tmdb_key_hint => 'Enter TMDB API key';
 }
 
 // Path: <root>
@@ -31091,6 +31323,72 @@ class _StringsFr extends _StringsEn {
   @override
   String get about_tmdb_attribution =>
       'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+  @override
+  String get video_scrape_tmdb_key_required => 'TMDB requires an API key';
+  @override
+  String get video_scrape_tmdb_key_save => 'Save';
+  @override
+  String get video_scrape_tmdb_key_empty =>
+      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+  @override
+  String get download_detail_tab_overview => 'Overview';
+  @override
+  String get download_detail_tab_files => 'Files';
+  @override
+  String get download_detail_tab_peers => 'Peers';
+  @override
+  String get download_detail_tab_trackers => 'Trackers';
+  @override
+  String get download_detail_backend_unsupported =>
+      'Not supported by current download backend';
+  @override
+  String get download_detail_task_gone => 'Task not found in backend';
+  @override
+  String get download_detail_section_transfer => 'Transfer';
+  @override
+  String get download_detail_section_network => 'Network';
+  @override
+  String get download_detail_seeds_label => 'Seeds';
+  @override
+  String get download_detail_leechers_label => 'Leechers';
+  @override
+  String get download_detail_connections_label => 'Connections';
+  @override
+  String get download_detail_time_active => 'Active time';
+  @override
+  String get download_detail_time_seeding => 'Seeding time';
+  @override
+  String get download_detail_listen_port => 'Listen port';
+  @override
+  String get download_detail_dht_nodes => 'DHT nodes';
+  @override
+  String get download_detail_port_mapping => 'Port mapping';
+  @override
+  String get download_detail_session_rates => 'Session rates';
+  @override
+  String get download_detail_pieces_label => 'Pieces';
+  @override
+  String get download_detail_priority_skip => 'Don\'t download';
+  @override
+  String get download_detail_priority_normal => 'Normal';
+  @override
+  String get download_detail_priority_high => 'High';
+  @override
+  String get download_detail_tracker_working => 'Working';
+  @override
+  String get download_detail_tracker_updating => 'Updating';
+  @override
+  String get download_detail_tracker_not_contacted => 'Not contacted yet';
+  @override
+  String get download_detail_tracker_not_working => 'Not working';
+  @override
+  String get download_detail_tracker_disabled => 'Disabled';
+  @override
+  String get download_detail_no_peers => 'No connected peers';
+  @override
+  String get download_detail_no_trackers => 'No trackers';
+  @override
+  String get video_scrape_tmdb_key_hint => 'Enter TMDB API key';
 }
 
 // Path: <root>
@@ -37838,6 +38136,72 @@ class _StringsId extends _StringsEn {
   @override
   String get about_tmdb_attribution =>
       'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+  @override
+  String get video_scrape_tmdb_key_required => 'TMDB requires an API key';
+  @override
+  String get video_scrape_tmdb_key_save => 'Save';
+  @override
+  String get video_scrape_tmdb_key_empty =>
+      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+  @override
+  String get download_detail_tab_overview => 'Overview';
+  @override
+  String get download_detail_tab_files => 'Files';
+  @override
+  String get download_detail_tab_peers => 'Peers';
+  @override
+  String get download_detail_tab_trackers => 'Trackers';
+  @override
+  String get download_detail_backend_unsupported =>
+      'Not supported by current download backend';
+  @override
+  String get download_detail_task_gone => 'Task not found in backend';
+  @override
+  String get download_detail_section_transfer => 'Transfer';
+  @override
+  String get download_detail_section_network => 'Network';
+  @override
+  String get download_detail_seeds_label => 'Seeds';
+  @override
+  String get download_detail_leechers_label => 'Leechers';
+  @override
+  String get download_detail_connections_label => 'Connections';
+  @override
+  String get download_detail_time_active => 'Active time';
+  @override
+  String get download_detail_time_seeding => 'Seeding time';
+  @override
+  String get download_detail_listen_port => 'Listen port';
+  @override
+  String get download_detail_dht_nodes => 'DHT nodes';
+  @override
+  String get download_detail_port_mapping => 'Port mapping';
+  @override
+  String get download_detail_session_rates => 'Session rates';
+  @override
+  String get download_detail_pieces_label => 'Pieces';
+  @override
+  String get download_detail_priority_skip => 'Don\'t download';
+  @override
+  String get download_detail_priority_normal => 'Normal';
+  @override
+  String get download_detail_priority_high => 'High';
+  @override
+  String get download_detail_tracker_working => 'Working';
+  @override
+  String get download_detail_tracker_updating => 'Updating';
+  @override
+  String get download_detail_tracker_not_contacted => 'Not contacted yet';
+  @override
+  String get download_detail_tracker_not_working => 'Not working';
+  @override
+  String get download_detail_tracker_disabled => 'Disabled';
+  @override
+  String get download_detail_no_peers => 'No connected peers';
+  @override
+  String get download_detail_no_trackers => 'No trackers';
+  @override
+  String get video_scrape_tmdb_key_hint => 'Enter TMDB API key';
 }
 
 // Path: <root>
@@ -44631,6 +44995,72 @@ class _StringsIt extends _StringsEn {
   @override
   String get about_tmdb_attribution =>
       'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+  @override
+  String get video_scrape_tmdb_key_required => 'TMDB requires an API key';
+  @override
+  String get video_scrape_tmdb_key_save => 'Save';
+  @override
+  String get video_scrape_tmdb_key_empty =>
+      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+  @override
+  String get download_detail_tab_overview => 'Overview';
+  @override
+  String get download_detail_tab_files => 'Files';
+  @override
+  String get download_detail_tab_peers => 'Peers';
+  @override
+  String get download_detail_tab_trackers => 'Trackers';
+  @override
+  String get download_detail_backend_unsupported =>
+      'Not supported by current download backend';
+  @override
+  String get download_detail_task_gone => 'Task not found in backend';
+  @override
+  String get download_detail_section_transfer => 'Transfer';
+  @override
+  String get download_detail_section_network => 'Network';
+  @override
+  String get download_detail_seeds_label => 'Seeds';
+  @override
+  String get download_detail_leechers_label => 'Leechers';
+  @override
+  String get download_detail_connections_label => 'Connections';
+  @override
+  String get download_detail_time_active => 'Active time';
+  @override
+  String get download_detail_time_seeding => 'Seeding time';
+  @override
+  String get download_detail_listen_port => 'Listen port';
+  @override
+  String get download_detail_dht_nodes => 'DHT nodes';
+  @override
+  String get download_detail_port_mapping => 'Port mapping';
+  @override
+  String get download_detail_session_rates => 'Session rates';
+  @override
+  String get download_detail_pieces_label => 'Pieces';
+  @override
+  String get download_detail_priority_skip => 'Don\'t download';
+  @override
+  String get download_detail_priority_normal => 'Normal';
+  @override
+  String get download_detail_priority_high => 'High';
+  @override
+  String get download_detail_tracker_working => 'Working';
+  @override
+  String get download_detail_tracker_updating => 'Updating';
+  @override
+  String get download_detail_tracker_not_contacted => 'Not contacted yet';
+  @override
+  String get download_detail_tracker_not_working => 'Not working';
+  @override
+  String get download_detail_tracker_disabled => 'Disabled';
+  @override
+  String get download_detail_no_peers => 'No connected peers';
+  @override
+  String get download_detail_no_trackers => 'No trackers';
+  @override
+  String get video_scrape_tmdb_key_hint => 'Enter TMDB API key';
 }
 
 // Path: <root>
@@ -51241,6 +51671,72 @@ class _StringsJa extends _StringsEn {
   @override
   String get about_tmdb_attribution =>
       'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+  @override
+  String get video_scrape_tmdb_key_required => 'TMDB requires an API key';
+  @override
+  String get video_scrape_tmdb_key_save => 'Save';
+  @override
+  String get video_scrape_tmdb_key_empty =>
+      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+  @override
+  String get download_detail_tab_overview => 'Overview';
+  @override
+  String get download_detail_tab_files => 'Files';
+  @override
+  String get download_detail_tab_peers => 'Peers';
+  @override
+  String get download_detail_tab_trackers => 'Trackers';
+  @override
+  String get download_detail_backend_unsupported =>
+      'Not supported by current download backend';
+  @override
+  String get download_detail_task_gone => 'Task not found in backend';
+  @override
+  String get download_detail_section_transfer => 'Transfer';
+  @override
+  String get download_detail_section_network => 'Network';
+  @override
+  String get download_detail_seeds_label => 'Seeds';
+  @override
+  String get download_detail_leechers_label => 'Leechers';
+  @override
+  String get download_detail_connections_label => 'Connections';
+  @override
+  String get download_detail_time_active => 'Active time';
+  @override
+  String get download_detail_time_seeding => 'Seeding time';
+  @override
+  String get download_detail_listen_port => 'Listen port';
+  @override
+  String get download_detail_dht_nodes => 'DHT nodes';
+  @override
+  String get download_detail_port_mapping => 'Port mapping';
+  @override
+  String get download_detail_session_rates => 'Session rates';
+  @override
+  String get download_detail_pieces_label => 'Pieces';
+  @override
+  String get download_detail_priority_skip => 'Don\'t download';
+  @override
+  String get download_detail_priority_normal => 'Normal';
+  @override
+  String get download_detail_priority_high => 'High';
+  @override
+  String get download_detail_tracker_working => 'Working';
+  @override
+  String get download_detail_tracker_updating => 'Updating';
+  @override
+  String get download_detail_tracker_not_contacted => 'Not contacted yet';
+  @override
+  String get download_detail_tracker_not_working => 'Not working';
+  @override
+  String get download_detail_tracker_disabled => 'Disabled';
+  @override
+  String get download_detail_no_peers => 'No connected peers';
+  @override
+  String get download_detail_no_trackers => 'No trackers';
+  @override
+  String get video_scrape_tmdb_key_hint => 'Enter TMDB API key';
 }
 
 // Path: <root>
@@ -57853,6 +58349,72 @@ class _StringsKo extends _StringsEn {
   @override
   String get about_tmdb_attribution =>
       'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+  @override
+  String get video_scrape_tmdb_key_required => 'TMDB requires an API key';
+  @override
+  String get video_scrape_tmdb_key_save => 'Save';
+  @override
+  String get video_scrape_tmdb_key_empty =>
+      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+  @override
+  String get download_detail_tab_overview => 'Overview';
+  @override
+  String get download_detail_tab_files => 'Files';
+  @override
+  String get download_detail_tab_peers => 'Peers';
+  @override
+  String get download_detail_tab_trackers => 'Trackers';
+  @override
+  String get download_detail_backend_unsupported =>
+      'Not supported by current download backend';
+  @override
+  String get download_detail_task_gone => 'Task not found in backend';
+  @override
+  String get download_detail_section_transfer => 'Transfer';
+  @override
+  String get download_detail_section_network => 'Network';
+  @override
+  String get download_detail_seeds_label => 'Seeds';
+  @override
+  String get download_detail_leechers_label => 'Leechers';
+  @override
+  String get download_detail_connections_label => 'Connections';
+  @override
+  String get download_detail_time_active => 'Active time';
+  @override
+  String get download_detail_time_seeding => 'Seeding time';
+  @override
+  String get download_detail_listen_port => 'Listen port';
+  @override
+  String get download_detail_dht_nodes => 'DHT nodes';
+  @override
+  String get download_detail_port_mapping => 'Port mapping';
+  @override
+  String get download_detail_session_rates => 'Session rates';
+  @override
+  String get download_detail_pieces_label => 'Pieces';
+  @override
+  String get download_detail_priority_skip => 'Don\'t download';
+  @override
+  String get download_detail_priority_normal => 'Normal';
+  @override
+  String get download_detail_priority_high => 'High';
+  @override
+  String get download_detail_tracker_working => 'Working';
+  @override
+  String get download_detail_tracker_updating => 'Updating';
+  @override
+  String get download_detail_tracker_not_contacted => 'Not contacted yet';
+  @override
+  String get download_detail_tracker_not_working => 'Not working';
+  @override
+  String get download_detail_tracker_disabled => 'Disabled';
+  @override
+  String get download_detail_no_peers => 'No connected peers';
+  @override
+  String get download_detail_no_trackers => 'No trackers';
+  @override
+  String get video_scrape_tmdb_key_hint => 'Enter TMDB API key';
 }
 
 // Path: <root>
@@ -64626,6 +65188,72 @@ class _StringsNl extends _StringsEn {
   @override
   String get about_tmdb_attribution =>
       'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+  @override
+  String get video_scrape_tmdb_key_required => 'TMDB requires an API key';
+  @override
+  String get video_scrape_tmdb_key_save => 'Save';
+  @override
+  String get video_scrape_tmdb_key_empty =>
+      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+  @override
+  String get download_detail_tab_overview => 'Overview';
+  @override
+  String get download_detail_tab_files => 'Files';
+  @override
+  String get download_detail_tab_peers => 'Peers';
+  @override
+  String get download_detail_tab_trackers => 'Trackers';
+  @override
+  String get download_detail_backend_unsupported =>
+      'Not supported by current download backend';
+  @override
+  String get download_detail_task_gone => 'Task not found in backend';
+  @override
+  String get download_detail_section_transfer => 'Transfer';
+  @override
+  String get download_detail_section_network => 'Network';
+  @override
+  String get download_detail_seeds_label => 'Seeds';
+  @override
+  String get download_detail_leechers_label => 'Leechers';
+  @override
+  String get download_detail_connections_label => 'Connections';
+  @override
+  String get download_detail_time_active => 'Active time';
+  @override
+  String get download_detail_time_seeding => 'Seeding time';
+  @override
+  String get download_detail_listen_port => 'Listen port';
+  @override
+  String get download_detail_dht_nodes => 'DHT nodes';
+  @override
+  String get download_detail_port_mapping => 'Port mapping';
+  @override
+  String get download_detail_session_rates => 'Session rates';
+  @override
+  String get download_detail_pieces_label => 'Pieces';
+  @override
+  String get download_detail_priority_skip => 'Don\'t download';
+  @override
+  String get download_detail_priority_normal => 'Normal';
+  @override
+  String get download_detail_priority_high => 'High';
+  @override
+  String get download_detail_tracker_working => 'Working';
+  @override
+  String get download_detail_tracker_updating => 'Updating';
+  @override
+  String get download_detail_tracker_not_contacted => 'Not contacted yet';
+  @override
+  String get download_detail_tracker_not_working => 'Not working';
+  @override
+  String get download_detail_tracker_disabled => 'Disabled';
+  @override
+  String get download_detail_no_peers => 'No connected peers';
+  @override
+  String get download_detail_no_trackers => 'No trackers';
+  @override
+  String get video_scrape_tmdb_key_hint => 'Enter TMDB API key';
 }
 
 // Path: <root>
@@ -71412,6 +72040,72 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get about_tmdb_attribution =>
       'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+  @override
+  String get video_scrape_tmdb_key_required => 'TMDB requires an API key';
+  @override
+  String get video_scrape_tmdb_key_save => 'Save';
+  @override
+  String get video_scrape_tmdb_key_empty =>
+      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+  @override
+  String get download_detail_tab_overview => 'Overview';
+  @override
+  String get download_detail_tab_files => 'Files';
+  @override
+  String get download_detail_tab_peers => 'Peers';
+  @override
+  String get download_detail_tab_trackers => 'Trackers';
+  @override
+  String get download_detail_backend_unsupported =>
+      'Not supported by current download backend';
+  @override
+  String get download_detail_task_gone => 'Task not found in backend';
+  @override
+  String get download_detail_section_transfer => 'Transfer';
+  @override
+  String get download_detail_section_network => 'Network';
+  @override
+  String get download_detail_seeds_label => 'Seeds';
+  @override
+  String get download_detail_leechers_label => 'Leechers';
+  @override
+  String get download_detail_connections_label => 'Connections';
+  @override
+  String get download_detail_time_active => 'Active time';
+  @override
+  String get download_detail_time_seeding => 'Seeding time';
+  @override
+  String get download_detail_listen_port => 'Listen port';
+  @override
+  String get download_detail_dht_nodes => 'DHT nodes';
+  @override
+  String get download_detail_port_mapping => 'Port mapping';
+  @override
+  String get download_detail_session_rates => 'Session rates';
+  @override
+  String get download_detail_pieces_label => 'Pieces';
+  @override
+  String get download_detail_priority_skip => 'Don\'t download';
+  @override
+  String get download_detail_priority_normal => 'Normal';
+  @override
+  String get download_detail_priority_high => 'High';
+  @override
+  String get download_detail_tracker_working => 'Working';
+  @override
+  String get download_detail_tracker_updating => 'Updating';
+  @override
+  String get download_detail_tracker_not_contacted => 'Not contacted yet';
+  @override
+  String get download_detail_tracker_not_working => 'Not working';
+  @override
+  String get download_detail_tracker_disabled => 'Disabled';
+  @override
+  String get download_detail_no_peers => 'No connected peers';
+  @override
+  String get download_detail_no_trackers => 'No trackers';
+  @override
+  String get video_scrape_tmdb_key_hint => 'Enter TMDB API key';
 }
 
 // Path: <root>
@@ -78182,6 +78876,72 @@ class _StringsRu extends _StringsEn {
   @override
   String get about_tmdb_attribution =>
       'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+  @override
+  String get video_scrape_tmdb_key_required => 'TMDB requires an API key';
+  @override
+  String get video_scrape_tmdb_key_save => 'Save';
+  @override
+  String get video_scrape_tmdb_key_empty =>
+      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+  @override
+  String get download_detail_tab_overview => 'Overview';
+  @override
+  String get download_detail_tab_files => 'Files';
+  @override
+  String get download_detail_tab_peers => 'Peers';
+  @override
+  String get download_detail_tab_trackers => 'Trackers';
+  @override
+  String get download_detail_backend_unsupported =>
+      'Not supported by current download backend';
+  @override
+  String get download_detail_task_gone => 'Task not found in backend';
+  @override
+  String get download_detail_section_transfer => 'Transfer';
+  @override
+  String get download_detail_section_network => 'Network';
+  @override
+  String get download_detail_seeds_label => 'Seeds';
+  @override
+  String get download_detail_leechers_label => 'Leechers';
+  @override
+  String get download_detail_connections_label => 'Connections';
+  @override
+  String get download_detail_time_active => 'Active time';
+  @override
+  String get download_detail_time_seeding => 'Seeding time';
+  @override
+  String get download_detail_listen_port => 'Listen port';
+  @override
+  String get download_detail_dht_nodes => 'DHT nodes';
+  @override
+  String get download_detail_port_mapping => 'Port mapping';
+  @override
+  String get download_detail_session_rates => 'Session rates';
+  @override
+  String get download_detail_pieces_label => 'Pieces';
+  @override
+  String get download_detail_priority_skip => 'Don\'t download';
+  @override
+  String get download_detail_priority_normal => 'Normal';
+  @override
+  String get download_detail_priority_high => 'High';
+  @override
+  String get download_detail_tracker_working => 'Working';
+  @override
+  String get download_detail_tracker_updating => 'Updating';
+  @override
+  String get download_detail_tracker_not_contacted => 'Not contacted yet';
+  @override
+  String get download_detail_tracker_not_working => 'Not working';
+  @override
+  String get download_detail_tracker_disabled => 'Disabled';
+  @override
+  String get download_detail_no_peers => 'No connected peers';
+  @override
+  String get download_detail_no_trackers => 'No trackers';
+  @override
+  String get video_scrape_tmdb_key_hint => 'Enter TMDB API key';
 }
 
 // Path: <root>
@@ -84900,6 +85660,72 @@ class _StringsTh extends _StringsEn {
   @override
   String get about_tmdb_attribution =>
       'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+  @override
+  String get video_scrape_tmdb_key_required => 'TMDB requires an API key';
+  @override
+  String get video_scrape_tmdb_key_save => 'Save';
+  @override
+  String get video_scrape_tmdb_key_empty =>
+      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+  @override
+  String get download_detail_tab_overview => 'Overview';
+  @override
+  String get download_detail_tab_files => 'Files';
+  @override
+  String get download_detail_tab_peers => 'Peers';
+  @override
+  String get download_detail_tab_trackers => 'Trackers';
+  @override
+  String get download_detail_backend_unsupported =>
+      'Not supported by current download backend';
+  @override
+  String get download_detail_task_gone => 'Task not found in backend';
+  @override
+  String get download_detail_section_transfer => 'Transfer';
+  @override
+  String get download_detail_section_network => 'Network';
+  @override
+  String get download_detail_seeds_label => 'Seeds';
+  @override
+  String get download_detail_leechers_label => 'Leechers';
+  @override
+  String get download_detail_connections_label => 'Connections';
+  @override
+  String get download_detail_time_active => 'Active time';
+  @override
+  String get download_detail_time_seeding => 'Seeding time';
+  @override
+  String get download_detail_listen_port => 'Listen port';
+  @override
+  String get download_detail_dht_nodes => 'DHT nodes';
+  @override
+  String get download_detail_port_mapping => 'Port mapping';
+  @override
+  String get download_detail_session_rates => 'Session rates';
+  @override
+  String get download_detail_pieces_label => 'Pieces';
+  @override
+  String get download_detail_priority_skip => 'Don\'t download';
+  @override
+  String get download_detail_priority_normal => 'Normal';
+  @override
+  String get download_detail_priority_high => 'High';
+  @override
+  String get download_detail_tracker_working => 'Working';
+  @override
+  String get download_detail_tracker_updating => 'Updating';
+  @override
+  String get download_detail_tracker_not_contacted => 'Not contacted yet';
+  @override
+  String get download_detail_tracker_not_working => 'Not working';
+  @override
+  String get download_detail_tracker_disabled => 'Disabled';
+  @override
+  String get download_detail_no_peers => 'No connected peers';
+  @override
+  String get download_detail_no_trackers => 'No trackers';
+  @override
+  String get video_scrape_tmdb_key_hint => 'Enter TMDB API key';
 }
 
 // Path: <root>
@@ -91650,6 +92476,72 @@ class _StringsTr extends _StringsEn {
   @override
   String get about_tmdb_attribution =>
       'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+  @override
+  String get video_scrape_tmdb_key_required => 'TMDB requires an API key';
+  @override
+  String get video_scrape_tmdb_key_save => 'Save';
+  @override
+  String get video_scrape_tmdb_key_empty =>
+      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+  @override
+  String get download_detail_tab_overview => 'Overview';
+  @override
+  String get download_detail_tab_files => 'Files';
+  @override
+  String get download_detail_tab_peers => 'Peers';
+  @override
+  String get download_detail_tab_trackers => 'Trackers';
+  @override
+  String get download_detail_backend_unsupported =>
+      'Not supported by current download backend';
+  @override
+  String get download_detail_task_gone => 'Task not found in backend';
+  @override
+  String get download_detail_section_transfer => 'Transfer';
+  @override
+  String get download_detail_section_network => 'Network';
+  @override
+  String get download_detail_seeds_label => 'Seeds';
+  @override
+  String get download_detail_leechers_label => 'Leechers';
+  @override
+  String get download_detail_connections_label => 'Connections';
+  @override
+  String get download_detail_time_active => 'Active time';
+  @override
+  String get download_detail_time_seeding => 'Seeding time';
+  @override
+  String get download_detail_listen_port => 'Listen port';
+  @override
+  String get download_detail_dht_nodes => 'DHT nodes';
+  @override
+  String get download_detail_port_mapping => 'Port mapping';
+  @override
+  String get download_detail_session_rates => 'Session rates';
+  @override
+  String get download_detail_pieces_label => 'Pieces';
+  @override
+  String get download_detail_priority_skip => 'Don\'t download';
+  @override
+  String get download_detail_priority_normal => 'Normal';
+  @override
+  String get download_detail_priority_high => 'High';
+  @override
+  String get download_detail_tracker_working => 'Working';
+  @override
+  String get download_detail_tracker_updating => 'Updating';
+  @override
+  String get download_detail_tracker_not_contacted => 'Not contacted yet';
+  @override
+  String get download_detail_tracker_not_working => 'Not working';
+  @override
+  String get download_detail_tracker_disabled => 'Disabled';
+  @override
+  String get download_detail_no_peers => 'No connected peers';
+  @override
+  String get download_detail_no_trackers => 'No trackers';
+  @override
+  String get video_scrape_tmdb_key_hint => 'Enter TMDB API key';
 }
 
 // Path: <root>
@@ -98385,6 +99277,72 @@ class _StringsVi extends _StringsEn {
   @override
   String get about_tmdb_attribution =>
       'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+  @override
+  String get video_scrape_tmdb_key_required => 'TMDB requires an API key';
+  @override
+  String get video_scrape_tmdb_key_save => 'Save';
+  @override
+  String get video_scrape_tmdb_key_empty =>
+      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+  @override
+  String get download_detail_tab_overview => 'Overview';
+  @override
+  String get download_detail_tab_files => 'Files';
+  @override
+  String get download_detail_tab_peers => 'Peers';
+  @override
+  String get download_detail_tab_trackers => 'Trackers';
+  @override
+  String get download_detail_backend_unsupported =>
+      'Not supported by current download backend';
+  @override
+  String get download_detail_task_gone => 'Task not found in backend';
+  @override
+  String get download_detail_section_transfer => 'Transfer';
+  @override
+  String get download_detail_section_network => 'Network';
+  @override
+  String get download_detail_seeds_label => 'Seeds';
+  @override
+  String get download_detail_leechers_label => 'Leechers';
+  @override
+  String get download_detail_connections_label => 'Connections';
+  @override
+  String get download_detail_time_active => 'Active time';
+  @override
+  String get download_detail_time_seeding => 'Seeding time';
+  @override
+  String get download_detail_listen_port => 'Listen port';
+  @override
+  String get download_detail_dht_nodes => 'DHT nodes';
+  @override
+  String get download_detail_port_mapping => 'Port mapping';
+  @override
+  String get download_detail_session_rates => 'Session rates';
+  @override
+  String get download_detail_pieces_label => 'Pieces';
+  @override
+  String get download_detail_priority_skip => 'Don\'t download';
+  @override
+  String get download_detail_priority_normal => 'Normal';
+  @override
+  String get download_detail_priority_high => 'High';
+  @override
+  String get download_detail_tracker_working => 'Working';
+  @override
+  String get download_detail_tracker_updating => 'Updating';
+  @override
+  String get download_detail_tracker_not_contacted => 'Not contacted yet';
+  @override
+  String get download_detail_tracker_not_working => 'Not working';
+  @override
+  String get download_detail_tracker_disabled => 'Disabled';
+  @override
+  String get download_detail_no_peers => 'No connected peers';
+  @override
+  String get download_detail_no_trackers => 'No trackers';
+  @override
+  String get video_scrape_tmdb_key_hint => 'Enter TMDB API key';
 }
 
 // Path: <root>
@@ -104645,6 +105603,71 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get about_tmdb_attribution =>
       'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+  @override
+  String get video_scrape_tmdb_key_required => 'TMDB 需要 API Key';
+  @override
+  String get video_scrape_tmdb_key_save => '保存';
+  @override
+  String get video_scrape_tmdb_key_empty =>
+      '先保存 TMDB API Key，再点“搜索”。这里不会混入其他来源的结果。';
+  @override
+  String get download_detail_tab_overview => '总览';
+  @override
+  String get download_detail_tab_files => '文件';
+  @override
+  String get download_detail_tab_peers => '节点';
+  @override
+  String get download_detail_tab_trackers => 'Tracker';
+  @override
+  String get download_detail_backend_unsupported => '当前下载后端不支持';
+  @override
+  String get download_detail_task_gone => '后端中找不到该任务';
+  @override
+  String get download_detail_section_transfer => '传输';
+  @override
+  String get download_detail_section_network => '网络';
+  @override
+  String get download_detail_seeds_label => '做种';
+  @override
+  String get download_detail_leechers_label => '下载者';
+  @override
+  String get download_detail_connections_label => '连接数';
+  @override
+  String get download_detail_time_active => '活跃时长';
+  @override
+  String get download_detail_time_seeding => '做种时长';
+  @override
+  String get download_detail_listen_port => '监听端口';
+  @override
+  String get download_detail_dht_nodes => 'DHT 节点';
+  @override
+  String get download_detail_port_mapping => '端口映射';
+  @override
+  String get download_detail_session_rates => '会话速率';
+  @override
+  String get download_detail_pieces_label => '分片';
+  @override
+  String get download_detail_priority_skip => '不下载';
+  @override
+  String get download_detail_priority_normal => '普通';
+  @override
+  String get download_detail_priority_high => '高';
+  @override
+  String get download_detail_tracker_working => '工作中';
+  @override
+  String get download_detail_tracker_updating => '更新中';
+  @override
+  String get download_detail_tracker_not_contacted => '尚未联系';
+  @override
+  String get download_detail_tracker_not_working => '不工作';
+  @override
+  String get download_detail_tracker_disabled => '已禁用';
+  @override
+  String get download_detail_no_peers => '暂无已连接节点';
+  @override
+  String get download_detail_no_trackers => '无 Tracker';
+  @override
+  String get video_scrape_tmdb_key_hint => 'ÊäÈë TMDB API Key';
 }
 
 // Path: <root>
@@ -111176,6 +112199,72 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get about_tmdb_attribution =>
       'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+  @override
+  String get video_scrape_tmdb_key_required => 'TMDB requires an API key';
+  @override
+  String get video_scrape_tmdb_key_save => 'Save';
+  @override
+  String get video_scrape_tmdb_key_empty =>
+      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+  @override
+  String get download_detail_tab_overview => 'Overview';
+  @override
+  String get download_detail_tab_files => 'Files';
+  @override
+  String get download_detail_tab_peers => 'Peers';
+  @override
+  String get download_detail_tab_trackers => 'Trackers';
+  @override
+  String get download_detail_backend_unsupported =>
+      'Not supported by current download backend';
+  @override
+  String get download_detail_task_gone => 'Task not found in backend';
+  @override
+  String get download_detail_section_transfer => 'Transfer';
+  @override
+  String get download_detail_section_network => 'Network';
+  @override
+  String get download_detail_seeds_label => 'Seeds';
+  @override
+  String get download_detail_leechers_label => 'Leechers';
+  @override
+  String get download_detail_connections_label => 'Connections';
+  @override
+  String get download_detail_time_active => 'Active time';
+  @override
+  String get download_detail_time_seeding => 'Seeding time';
+  @override
+  String get download_detail_listen_port => 'Listen port';
+  @override
+  String get download_detail_dht_nodes => 'DHT nodes';
+  @override
+  String get download_detail_port_mapping => 'Port mapping';
+  @override
+  String get download_detail_session_rates => 'Session rates';
+  @override
+  String get download_detail_pieces_label => 'Pieces';
+  @override
+  String get download_detail_priority_skip => 'Don\'t download';
+  @override
+  String get download_detail_priority_normal => 'Normal';
+  @override
+  String get download_detail_priority_high => 'High';
+  @override
+  String get download_detail_tracker_working => 'Working';
+  @override
+  String get download_detail_tracker_updating => 'Updating';
+  @override
+  String get download_detail_tracker_not_contacted => 'Not contacted yet';
+  @override
+  String get download_detail_tracker_not_working => 'Not working';
+  @override
+  String get download_detail_tracker_disabled => 'Disabled';
+  @override
+  String get download_detail_no_peers => 'No connected peers';
+  @override
+  String get download_detail_no_trackers => 'No trackers';
+  @override
+  String get video_scrape_tmdb_key_hint => 'Enter TMDB API key';
 }
 
 /// Flat map(s) containing all translations.
@@ -117178,6 +118267,70 @@ extension on _StringsEn {
         return 'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
       case 'about_tmdb_attribution':
         return 'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+      case 'video_scrape_tmdb_key_required':
+        return 'TMDB requires an API key';
+      case 'video_scrape_tmdb_key_save':
+        return 'Save';
+      case 'video_scrape_tmdb_key_empty':
+        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+      case 'download_detail_tab_overview':
+        return 'Overview';
+      case 'download_detail_tab_files':
+        return 'Files';
+      case 'download_detail_tab_peers':
+        return 'Peers';
+      case 'download_detail_tab_trackers':
+        return 'Trackers';
+      case 'download_detail_backend_unsupported':
+        return 'Not supported by current download backend';
+      case 'download_detail_task_gone':
+        return 'Task not found in backend';
+      case 'download_detail_section_transfer':
+        return 'Transfer';
+      case 'download_detail_section_network':
+        return 'Network';
+      case 'download_detail_seeds_label':
+        return 'Seeds';
+      case 'download_detail_leechers_label':
+        return 'Leechers';
+      case 'download_detail_connections_label':
+        return 'Connections';
+      case 'download_detail_time_active':
+        return 'Active time';
+      case 'download_detail_time_seeding':
+        return 'Seeding time';
+      case 'download_detail_listen_port':
+        return 'Listen port';
+      case 'download_detail_dht_nodes':
+        return 'DHT nodes';
+      case 'download_detail_port_mapping':
+        return 'Port mapping';
+      case 'download_detail_session_rates':
+        return 'Session rates';
+      case 'download_detail_pieces_label':
+        return 'Pieces';
+      case 'download_detail_priority_skip':
+        return 'Don\'t download';
+      case 'download_detail_priority_normal':
+        return 'Normal';
+      case 'download_detail_priority_high':
+        return 'High';
+      case 'download_detail_tracker_working':
+        return 'Working';
+      case 'download_detail_tracker_updating':
+        return 'Updating';
+      case 'download_detail_tracker_not_contacted':
+        return 'Not contacted yet';
+      case 'download_detail_tracker_not_working':
+        return 'Not working';
+      case 'download_detail_tracker_disabled':
+        return 'Disabled';
+      case 'download_detail_no_peers':
+        return 'No connected peers';
+      case 'download_detail_no_trackers':
+        return 'No trackers';
+      case 'video_scrape_tmdb_key_hint':
+        return 'Enter TMDB API key';
       default:
         return null;
     }
@@ -123178,6 +124331,70 @@ extension on _StringsAr {
         return 'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
       case 'about_tmdb_attribution':
         return 'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+      case 'video_scrape_tmdb_key_required':
+        return 'TMDB requires an API key';
+      case 'video_scrape_tmdb_key_save':
+        return 'Save';
+      case 'video_scrape_tmdb_key_empty':
+        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+      case 'download_detail_tab_overview':
+        return 'Overview';
+      case 'download_detail_tab_files':
+        return 'Files';
+      case 'download_detail_tab_peers':
+        return 'Peers';
+      case 'download_detail_tab_trackers':
+        return 'Trackers';
+      case 'download_detail_backend_unsupported':
+        return 'Not supported by current download backend';
+      case 'download_detail_task_gone':
+        return 'Task not found in backend';
+      case 'download_detail_section_transfer':
+        return 'Transfer';
+      case 'download_detail_section_network':
+        return 'Network';
+      case 'download_detail_seeds_label':
+        return 'Seeds';
+      case 'download_detail_leechers_label':
+        return 'Leechers';
+      case 'download_detail_connections_label':
+        return 'Connections';
+      case 'download_detail_time_active':
+        return 'Active time';
+      case 'download_detail_time_seeding':
+        return 'Seeding time';
+      case 'download_detail_listen_port':
+        return 'Listen port';
+      case 'download_detail_dht_nodes':
+        return 'DHT nodes';
+      case 'download_detail_port_mapping':
+        return 'Port mapping';
+      case 'download_detail_session_rates':
+        return 'Session rates';
+      case 'download_detail_pieces_label':
+        return 'Pieces';
+      case 'download_detail_priority_skip':
+        return 'Don\'t download';
+      case 'download_detail_priority_normal':
+        return 'Normal';
+      case 'download_detail_priority_high':
+        return 'High';
+      case 'download_detail_tracker_working':
+        return 'Working';
+      case 'download_detail_tracker_updating':
+        return 'Updating';
+      case 'download_detail_tracker_not_contacted':
+        return 'Not contacted yet';
+      case 'download_detail_tracker_not_working':
+        return 'Not working';
+      case 'download_detail_tracker_disabled':
+        return 'Disabled';
+      case 'download_detail_no_peers':
+        return 'No connected peers';
+      case 'download_detail_no_trackers':
+        return 'No trackers';
+      case 'video_scrape_tmdb_key_hint':
+        return 'Enter TMDB API key';
       default:
         return null;
     }
@@ -129200,6 +130417,70 @@ extension on _StringsDe {
         return 'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
       case 'about_tmdb_attribution':
         return 'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+      case 'video_scrape_tmdb_key_required':
+        return 'TMDB requires an API key';
+      case 'video_scrape_tmdb_key_save':
+        return 'Save';
+      case 'video_scrape_tmdb_key_empty':
+        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+      case 'download_detail_tab_overview':
+        return 'Overview';
+      case 'download_detail_tab_files':
+        return 'Files';
+      case 'download_detail_tab_peers':
+        return 'Peers';
+      case 'download_detail_tab_trackers':
+        return 'Trackers';
+      case 'download_detail_backend_unsupported':
+        return 'Not supported by current download backend';
+      case 'download_detail_task_gone':
+        return 'Task not found in backend';
+      case 'download_detail_section_transfer':
+        return 'Transfer';
+      case 'download_detail_section_network':
+        return 'Network';
+      case 'download_detail_seeds_label':
+        return 'Seeds';
+      case 'download_detail_leechers_label':
+        return 'Leechers';
+      case 'download_detail_connections_label':
+        return 'Connections';
+      case 'download_detail_time_active':
+        return 'Active time';
+      case 'download_detail_time_seeding':
+        return 'Seeding time';
+      case 'download_detail_listen_port':
+        return 'Listen port';
+      case 'download_detail_dht_nodes':
+        return 'DHT nodes';
+      case 'download_detail_port_mapping':
+        return 'Port mapping';
+      case 'download_detail_session_rates':
+        return 'Session rates';
+      case 'download_detail_pieces_label':
+        return 'Pieces';
+      case 'download_detail_priority_skip':
+        return 'Don\'t download';
+      case 'download_detail_priority_normal':
+        return 'Normal';
+      case 'download_detail_priority_high':
+        return 'High';
+      case 'download_detail_tracker_working':
+        return 'Working';
+      case 'download_detail_tracker_updating':
+        return 'Updating';
+      case 'download_detail_tracker_not_contacted':
+        return 'Not contacted yet';
+      case 'download_detail_tracker_not_working':
+        return 'Not working';
+      case 'download_detail_tracker_disabled':
+        return 'Disabled';
+      case 'download_detail_no_peers':
+        return 'No connected peers';
+      case 'download_detail_no_trackers':
+        return 'No trackers';
+      case 'video_scrape_tmdb_key_hint':
+        return 'Enter TMDB API key';
       default:
         return null;
     }
@@ -135221,6 +136502,70 @@ extension on _StringsEs {
         return 'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
       case 'about_tmdb_attribution':
         return 'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+      case 'video_scrape_tmdb_key_required':
+        return 'TMDB requires an API key';
+      case 'video_scrape_tmdb_key_save':
+        return 'Save';
+      case 'video_scrape_tmdb_key_empty':
+        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+      case 'download_detail_tab_overview':
+        return 'Overview';
+      case 'download_detail_tab_files':
+        return 'Files';
+      case 'download_detail_tab_peers':
+        return 'Peers';
+      case 'download_detail_tab_trackers':
+        return 'Trackers';
+      case 'download_detail_backend_unsupported':
+        return 'Not supported by current download backend';
+      case 'download_detail_task_gone':
+        return 'Task not found in backend';
+      case 'download_detail_section_transfer':
+        return 'Transfer';
+      case 'download_detail_section_network':
+        return 'Network';
+      case 'download_detail_seeds_label':
+        return 'Seeds';
+      case 'download_detail_leechers_label':
+        return 'Leechers';
+      case 'download_detail_connections_label':
+        return 'Connections';
+      case 'download_detail_time_active':
+        return 'Active time';
+      case 'download_detail_time_seeding':
+        return 'Seeding time';
+      case 'download_detail_listen_port':
+        return 'Listen port';
+      case 'download_detail_dht_nodes':
+        return 'DHT nodes';
+      case 'download_detail_port_mapping':
+        return 'Port mapping';
+      case 'download_detail_session_rates':
+        return 'Session rates';
+      case 'download_detail_pieces_label':
+        return 'Pieces';
+      case 'download_detail_priority_skip':
+        return 'Don\'t download';
+      case 'download_detail_priority_normal':
+        return 'Normal';
+      case 'download_detail_priority_high':
+        return 'High';
+      case 'download_detail_tracker_working':
+        return 'Working';
+      case 'download_detail_tracker_updating':
+        return 'Updating';
+      case 'download_detail_tracker_not_contacted':
+        return 'Not contacted yet';
+      case 'download_detail_tracker_not_working':
+        return 'Not working';
+      case 'download_detail_tracker_disabled':
+        return 'Disabled';
+      case 'download_detail_no_peers':
+        return 'No connected peers';
+      case 'download_detail_no_trackers':
+        return 'No trackers';
+      case 'video_scrape_tmdb_key_hint':
+        return 'Enter TMDB API key';
       default:
         return null;
     }
@@ -141248,6 +142593,70 @@ extension on _StringsFr {
         return 'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
       case 'about_tmdb_attribution':
         return 'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+      case 'video_scrape_tmdb_key_required':
+        return 'TMDB requires an API key';
+      case 'video_scrape_tmdb_key_save':
+        return 'Save';
+      case 'video_scrape_tmdb_key_empty':
+        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+      case 'download_detail_tab_overview':
+        return 'Overview';
+      case 'download_detail_tab_files':
+        return 'Files';
+      case 'download_detail_tab_peers':
+        return 'Peers';
+      case 'download_detail_tab_trackers':
+        return 'Trackers';
+      case 'download_detail_backend_unsupported':
+        return 'Not supported by current download backend';
+      case 'download_detail_task_gone':
+        return 'Task not found in backend';
+      case 'download_detail_section_transfer':
+        return 'Transfer';
+      case 'download_detail_section_network':
+        return 'Network';
+      case 'download_detail_seeds_label':
+        return 'Seeds';
+      case 'download_detail_leechers_label':
+        return 'Leechers';
+      case 'download_detail_connections_label':
+        return 'Connections';
+      case 'download_detail_time_active':
+        return 'Active time';
+      case 'download_detail_time_seeding':
+        return 'Seeding time';
+      case 'download_detail_listen_port':
+        return 'Listen port';
+      case 'download_detail_dht_nodes':
+        return 'DHT nodes';
+      case 'download_detail_port_mapping':
+        return 'Port mapping';
+      case 'download_detail_session_rates':
+        return 'Session rates';
+      case 'download_detail_pieces_label':
+        return 'Pieces';
+      case 'download_detail_priority_skip':
+        return 'Don\'t download';
+      case 'download_detail_priority_normal':
+        return 'Normal';
+      case 'download_detail_priority_high':
+        return 'High';
+      case 'download_detail_tracker_working':
+        return 'Working';
+      case 'download_detail_tracker_updating':
+        return 'Updating';
+      case 'download_detail_tracker_not_contacted':
+        return 'Not contacted yet';
+      case 'download_detail_tracker_not_working':
+        return 'Not working';
+      case 'download_detail_tracker_disabled':
+        return 'Disabled';
+      case 'download_detail_no_peers':
+        return 'No connected peers';
+      case 'download_detail_no_trackers':
+        return 'No trackers';
+      case 'video_scrape_tmdb_key_hint':
+        return 'Enter TMDB API key';
       default:
         return null;
     }
@@ -147257,6 +148666,70 @@ extension on _StringsId {
         return 'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
       case 'about_tmdb_attribution':
         return 'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+      case 'video_scrape_tmdb_key_required':
+        return 'TMDB requires an API key';
+      case 'video_scrape_tmdb_key_save':
+        return 'Save';
+      case 'video_scrape_tmdb_key_empty':
+        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+      case 'download_detail_tab_overview':
+        return 'Overview';
+      case 'download_detail_tab_files':
+        return 'Files';
+      case 'download_detail_tab_peers':
+        return 'Peers';
+      case 'download_detail_tab_trackers':
+        return 'Trackers';
+      case 'download_detail_backend_unsupported':
+        return 'Not supported by current download backend';
+      case 'download_detail_task_gone':
+        return 'Task not found in backend';
+      case 'download_detail_section_transfer':
+        return 'Transfer';
+      case 'download_detail_section_network':
+        return 'Network';
+      case 'download_detail_seeds_label':
+        return 'Seeds';
+      case 'download_detail_leechers_label':
+        return 'Leechers';
+      case 'download_detail_connections_label':
+        return 'Connections';
+      case 'download_detail_time_active':
+        return 'Active time';
+      case 'download_detail_time_seeding':
+        return 'Seeding time';
+      case 'download_detail_listen_port':
+        return 'Listen port';
+      case 'download_detail_dht_nodes':
+        return 'DHT nodes';
+      case 'download_detail_port_mapping':
+        return 'Port mapping';
+      case 'download_detail_session_rates':
+        return 'Session rates';
+      case 'download_detail_pieces_label':
+        return 'Pieces';
+      case 'download_detail_priority_skip':
+        return 'Don\'t download';
+      case 'download_detail_priority_normal':
+        return 'Normal';
+      case 'download_detail_priority_high':
+        return 'High';
+      case 'download_detail_tracker_working':
+        return 'Working';
+      case 'download_detail_tracker_updating':
+        return 'Updating';
+      case 'download_detail_tracker_not_contacted':
+        return 'Not contacted yet';
+      case 'download_detail_tracker_not_working':
+        return 'Not working';
+      case 'download_detail_tracker_disabled':
+        return 'Disabled';
+      case 'download_detail_no_peers':
+        return 'No connected peers';
+      case 'download_detail_no_trackers':
+        return 'No trackers';
+      case 'video_scrape_tmdb_key_hint':
+        return 'Enter TMDB API key';
       default:
         return null;
     }
@@ -153280,6 +154753,70 @@ extension on _StringsIt {
         return 'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
       case 'about_tmdb_attribution':
         return 'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+      case 'video_scrape_tmdb_key_required':
+        return 'TMDB requires an API key';
+      case 'video_scrape_tmdb_key_save':
+        return 'Save';
+      case 'video_scrape_tmdb_key_empty':
+        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+      case 'download_detail_tab_overview':
+        return 'Overview';
+      case 'download_detail_tab_files':
+        return 'Files';
+      case 'download_detail_tab_peers':
+        return 'Peers';
+      case 'download_detail_tab_trackers':
+        return 'Trackers';
+      case 'download_detail_backend_unsupported':
+        return 'Not supported by current download backend';
+      case 'download_detail_task_gone':
+        return 'Task not found in backend';
+      case 'download_detail_section_transfer':
+        return 'Transfer';
+      case 'download_detail_section_network':
+        return 'Network';
+      case 'download_detail_seeds_label':
+        return 'Seeds';
+      case 'download_detail_leechers_label':
+        return 'Leechers';
+      case 'download_detail_connections_label':
+        return 'Connections';
+      case 'download_detail_time_active':
+        return 'Active time';
+      case 'download_detail_time_seeding':
+        return 'Seeding time';
+      case 'download_detail_listen_port':
+        return 'Listen port';
+      case 'download_detail_dht_nodes':
+        return 'DHT nodes';
+      case 'download_detail_port_mapping':
+        return 'Port mapping';
+      case 'download_detail_session_rates':
+        return 'Session rates';
+      case 'download_detail_pieces_label':
+        return 'Pieces';
+      case 'download_detail_priority_skip':
+        return 'Don\'t download';
+      case 'download_detail_priority_normal':
+        return 'Normal';
+      case 'download_detail_priority_high':
+        return 'High';
+      case 'download_detail_tracker_working':
+        return 'Working';
+      case 'download_detail_tracker_updating':
+        return 'Updating';
+      case 'download_detail_tracker_not_contacted':
+        return 'Not contacted yet';
+      case 'download_detail_tracker_not_working':
+        return 'Not working';
+      case 'download_detail_tracker_disabled':
+        return 'Disabled';
+      case 'download_detail_no_peers':
+        return 'No connected peers';
+      case 'download_detail_no_trackers':
+        return 'No trackers';
+      case 'video_scrape_tmdb_key_hint':
+        return 'Enter TMDB API key';
       default:
         return null;
     }
@@ -159265,6 +160802,70 @@ extension on _StringsJa {
         return 'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
       case 'about_tmdb_attribution':
         return 'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+      case 'video_scrape_tmdb_key_required':
+        return 'TMDB requires an API key';
+      case 'video_scrape_tmdb_key_save':
+        return 'Save';
+      case 'video_scrape_tmdb_key_empty':
+        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+      case 'download_detail_tab_overview':
+        return 'Overview';
+      case 'download_detail_tab_files':
+        return 'Files';
+      case 'download_detail_tab_peers':
+        return 'Peers';
+      case 'download_detail_tab_trackers':
+        return 'Trackers';
+      case 'download_detail_backend_unsupported':
+        return 'Not supported by current download backend';
+      case 'download_detail_task_gone':
+        return 'Task not found in backend';
+      case 'download_detail_section_transfer':
+        return 'Transfer';
+      case 'download_detail_section_network':
+        return 'Network';
+      case 'download_detail_seeds_label':
+        return 'Seeds';
+      case 'download_detail_leechers_label':
+        return 'Leechers';
+      case 'download_detail_connections_label':
+        return 'Connections';
+      case 'download_detail_time_active':
+        return 'Active time';
+      case 'download_detail_time_seeding':
+        return 'Seeding time';
+      case 'download_detail_listen_port':
+        return 'Listen port';
+      case 'download_detail_dht_nodes':
+        return 'DHT nodes';
+      case 'download_detail_port_mapping':
+        return 'Port mapping';
+      case 'download_detail_session_rates':
+        return 'Session rates';
+      case 'download_detail_pieces_label':
+        return 'Pieces';
+      case 'download_detail_priority_skip':
+        return 'Don\'t download';
+      case 'download_detail_priority_normal':
+        return 'Normal';
+      case 'download_detail_priority_high':
+        return 'High';
+      case 'download_detail_tracker_working':
+        return 'Working';
+      case 'download_detail_tracker_updating':
+        return 'Updating';
+      case 'download_detail_tracker_not_contacted':
+        return 'Not contacted yet';
+      case 'download_detail_tracker_not_working':
+        return 'Not working';
+      case 'download_detail_tracker_disabled':
+        return 'Disabled';
+      case 'download_detail_no_peers':
+        return 'No connected peers';
+      case 'download_detail_no_trackers':
+        return 'No trackers';
+      case 'video_scrape_tmdb_key_hint':
+        return 'Enter TMDB API key';
       default:
         return null;
     }
@@ -165254,6 +166855,70 @@ extension on _StringsKo {
         return 'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
       case 'about_tmdb_attribution':
         return 'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+      case 'video_scrape_tmdb_key_required':
+        return 'TMDB requires an API key';
+      case 'video_scrape_tmdb_key_save':
+        return 'Save';
+      case 'video_scrape_tmdb_key_empty':
+        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+      case 'download_detail_tab_overview':
+        return 'Overview';
+      case 'download_detail_tab_files':
+        return 'Files';
+      case 'download_detail_tab_peers':
+        return 'Peers';
+      case 'download_detail_tab_trackers':
+        return 'Trackers';
+      case 'download_detail_backend_unsupported':
+        return 'Not supported by current download backend';
+      case 'download_detail_task_gone':
+        return 'Task not found in backend';
+      case 'download_detail_section_transfer':
+        return 'Transfer';
+      case 'download_detail_section_network':
+        return 'Network';
+      case 'download_detail_seeds_label':
+        return 'Seeds';
+      case 'download_detail_leechers_label':
+        return 'Leechers';
+      case 'download_detail_connections_label':
+        return 'Connections';
+      case 'download_detail_time_active':
+        return 'Active time';
+      case 'download_detail_time_seeding':
+        return 'Seeding time';
+      case 'download_detail_listen_port':
+        return 'Listen port';
+      case 'download_detail_dht_nodes':
+        return 'DHT nodes';
+      case 'download_detail_port_mapping':
+        return 'Port mapping';
+      case 'download_detail_session_rates':
+        return 'Session rates';
+      case 'download_detail_pieces_label':
+        return 'Pieces';
+      case 'download_detail_priority_skip':
+        return 'Don\'t download';
+      case 'download_detail_priority_normal':
+        return 'Normal';
+      case 'download_detail_priority_high':
+        return 'High';
+      case 'download_detail_tracker_working':
+        return 'Working';
+      case 'download_detail_tracker_updating':
+        return 'Updating';
+      case 'download_detail_tracker_not_contacted':
+        return 'Not contacted yet';
+      case 'download_detail_tracker_not_working':
+        return 'Not working';
+      case 'download_detail_tracker_disabled':
+        return 'Disabled';
+      case 'download_detail_no_peers':
+        return 'No connected peers';
+      case 'download_detail_no_trackers':
+        return 'No trackers';
+      case 'video_scrape_tmdb_key_hint':
+        return 'Enter TMDB API key';
       default:
         return null;
     }
@@ -171271,6 +172936,70 @@ extension on _StringsNl {
         return 'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
       case 'about_tmdb_attribution':
         return 'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+      case 'video_scrape_tmdb_key_required':
+        return 'TMDB requires an API key';
+      case 'video_scrape_tmdb_key_save':
+        return 'Save';
+      case 'video_scrape_tmdb_key_empty':
+        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+      case 'download_detail_tab_overview':
+        return 'Overview';
+      case 'download_detail_tab_files':
+        return 'Files';
+      case 'download_detail_tab_peers':
+        return 'Peers';
+      case 'download_detail_tab_trackers':
+        return 'Trackers';
+      case 'download_detail_backend_unsupported':
+        return 'Not supported by current download backend';
+      case 'download_detail_task_gone':
+        return 'Task not found in backend';
+      case 'download_detail_section_transfer':
+        return 'Transfer';
+      case 'download_detail_section_network':
+        return 'Network';
+      case 'download_detail_seeds_label':
+        return 'Seeds';
+      case 'download_detail_leechers_label':
+        return 'Leechers';
+      case 'download_detail_connections_label':
+        return 'Connections';
+      case 'download_detail_time_active':
+        return 'Active time';
+      case 'download_detail_time_seeding':
+        return 'Seeding time';
+      case 'download_detail_listen_port':
+        return 'Listen port';
+      case 'download_detail_dht_nodes':
+        return 'DHT nodes';
+      case 'download_detail_port_mapping':
+        return 'Port mapping';
+      case 'download_detail_session_rates':
+        return 'Session rates';
+      case 'download_detail_pieces_label':
+        return 'Pieces';
+      case 'download_detail_priority_skip':
+        return 'Don\'t download';
+      case 'download_detail_priority_normal':
+        return 'Normal';
+      case 'download_detail_priority_high':
+        return 'High';
+      case 'download_detail_tracker_working':
+        return 'Working';
+      case 'download_detail_tracker_updating':
+        return 'Updating';
+      case 'download_detail_tracker_not_contacted':
+        return 'Not contacted yet';
+      case 'download_detail_tracker_not_working':
+        return 'Not working';
+      case 'download_detail_tracker_disabled':
+        return 'Disabled';
+      case 'download_detail_no_peers':
+        return 'No connected peers';
+      case 'download_detail_no_trackers':
+        return 'No trackers';
+      case 'video_scrape_tmdb_key_hint':
+        return 'Enter TMDB API key';
       default:
         return null;
     }
@@ -177285,6 +179014,70 @@ extension on _StringsPtBr {
         return 'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
       case 'about_tmdb_attribution':
         return 'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+      case 'video_scrape_tmdb_key_required':
+        return 'TMDB requires an API key';
+      case 'video_scrape_tmdb_key_save':
+        return 'Save';
+      case 'video_scrape_tmdb_key_empty':
+        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+      case 'download_detail_tab_overview':
+        return 'Overview';
+      case 'download_detail_tab_files':
+        return 'Files';
+      case 'download_detail_tab_peers':
+        return 'Peers';
+      case 'download_detail_tab_trackers':
+        return 'Trackers';
+      case 'download_detail_backend_unsupported':
+        return 'Not supported by current download backend';
+      case 'download_detail_task_gone':
+        return 'Task not found in backend';
+      case 'download_detail_section_transfer':
+        return 'Transfer';
+      case 'download_detail_section_network':
+        return 'Network';
+      case 'download_detail_seeds_label':
+        return 'Seeds';
+      case 'download_detail_leechers_label':
+        return 'Leechers';
+      case 'download_detail_connections_label':
+        return 'Connections';
+      case 'download_detail_time_active':
+        return 'Active time';
+      case 'download_detail_time_seeding':
+        return 'Seeding time';
+      case 'download_detail_listen_port':
+        return 'Listen port';
+      case 'download_detail_dht_nodes':
+        return 'DHT nodes';
+      case 'download_detail_port_mapping':
+        return 'Port mapping';
+      case 'download_detail_session_rates':
+        return 'Session rates';
+      case 'download_detail_pieces_label':
+        return 'Pieces';
+      case 'download_detail_priority_skip':
+        return 'Don\'t download';
+      case 'download_detail_priority_normal':
+        return 'Normal';
+      case 'download_detail_priority_high':
+        return 'High';
+      case 'download_detail_tracker_working':
+        return 'Working';
+      case 'download_detail_tracker_updating':
+        return 'Updating';
+      case 'download_detail_tracker_not_contacted':
+        return 'Not contacted yet';
+      case 'download_detail_tracker_not_working':
+        return 'Not working';
+      case 'download_detail_tracker_disabled':
+        return 'Disabled';
+      case 'download_detail_no_peers':
+        return 'No connected peers';
+      case 'download_detail_no_trackers':
+        return 'No trackers';
+      case 'video_scrape_tmdb_key_hint':
+        return 'Enter TMDB API key';
       default:
         return null;
     }
@@ -183304,6 +185097,70 @@ extension on _StringsRu {
         return 'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
       case 'about_tmdb_attribution':
         return 'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+      case 'video_scrape_tmdb_key_required':
+        return 'TMDB requires an API key';
+      case 'video_scrape_tmdb_key_save':
+        return 'Save';
+      case 'video_scrape_tmdb_key_empty':
+        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+      case 'download_detail_tab_overview':
+        return 'Overview';
+      case 'download_detail_tab_files':
+        return 'Files';
+      case 'download_detail_tab_peers':
+        return 'Peers';
+      case 'download_detail_tab_trackers':
+        return 'Trackers';
+      case 'download_detail_backend_unsupported':
+        return 'Not supported by current download backend';
+      case 'download_detail_task_gone':
+        return 'Task not found in backend';
+      case 'download_detail_section_transfer':
+        return 'Transfer';
+      case 'download_detail_section_network':
+        return 'Network';
+      case 'download_detail_seeds_label':
+        return 'Seeds';
+      case 'download_detail_leechers_label':
+        return 'Leechers';
+      case 'download_detail_connections_label':
+        return 'Connections';
+      case 'download_detail_time_active':
+        return 'Active time';
+      case 'download_detail_time_seeding':
+        return 'Seeding time';
+      case 'download_detail_listen_port':
+        return 'Listen port';
+      case 'download_detail_dht_nodes':
+        return 'DHT nodes';
+      case 'download_detail_port_mapping':
+        return 'Port mapping';
+      case 'download_detail_session_rates':
+        return 'Session rates';
+      case 'download_detail_pieces_label':
+        return 'Pieces';
+      case 'download_detail_priority_skip':
+        return 'Don\'t download';
+      case 'download_detail_priority_normal':
+        return 'Normal';
+      case 'download_detail_priority_high':
+        return 'High';
+      case 'download_detail_tracker_working':
+        return 'Working';
+      case 'download_detail_tracker_updating':
+        return 'Updating';
+      case 'download_detail_tracker_not_contacted':
+        return 'Not contacted yet';
+      case 'download_detail_tracker_not_working':
+        return 'Not working';
+      case 'download_detail_tracker_disabled':
+        return 'Disabled';
+      case 'download_detail_no_peers':
+        return 'No connected peers';
+      case 'download_detail_no_trackers':
+        return 'No trackers';
+      case 'video_scrape_tmdb_key_hint':
+        return 'Enter TMDB API key';
       default:
         return null;
     }
@@ -189306,6 +191163,70 @@ extension on _StringsTh {
         return 'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
       case 'about_tmdb_attribution':
         return 'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+      case 'video_scrape_tmdb_key_required':
+        return 'TMDB requires an API key';
+      case 'video_scrape_tmdb_key_save':
+        return 'Save';
+      case 'video_scrape_tmdb_key_empty':
+        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+      case 'download_detail_tab_overview':
+        return 'Overview';
+      case 'download_detail_tab_files':
+        return 'Files';
+      case 'download_detail_tab_peers':
+        return 'Peers';
+      case 'download_detail_tab_trackers':
+        return 'Trackers';
+      case 'download_detail_backend_unsupported':
+        return 'Not supported by current download backend';
+      case 'download_detail_task_gone':
+        return 'Task not found in backend';
+      case 'download_detail_section_transfer':
+        return 'Transfer';
+      case 'download_detail_section_network':
+        return 'Network';
+      case 'download_detail_seeds_label':
+        return 'Seeds';
+      case 'download_detail_leechers_label':
+        return 'Leechers';
+      case 'download_detail_connections_label':
+        return 'Connections';
+      case 'download_detail_time_active':
+        return 'Active time';
+      case 'download_detail_time_seeding':
+        return 'Seeding time';
+      case 'download_detail_listen_port':
+        return 'Listen port';
+      case 'download_detail_dht_nodes':
+        return 'DHT nodes';
+      case 'download_detail_port_mapping':
+        return 'Port mapping';
+      case 'download_detail_session_rates':
+        return 'Session rates';
+      case 'download_detail_pieces_label':
+        return 'Pieces';
+      case 'download_detail_priority_skip':
+        return 'Don\'t download';
+      case 'download_detail_priority_normal':
+        return 'Normal';
+      case 'download_detail_priority_high':
+        return 'High';
+      case 'download_detail_tracker_working':
+        return 'Working';
+      case 'download_detail_tracker_updating':
+        return 'Updating';
+      case 'download_detail_tracker_not_contacted':
+        return 'Not contacted yet';
+      case 'download_detail_tracker_not_working':
+        return 'Not working';
+      case 'download_detail_tracker_disabled':
+        return 'Disabled';
+      case 'download_detail_no_peers':
+        return 'No connected peers';
+      case 'download_detail_no_trackers':
+        return 'No trackers';
+      case 'video_scrape_tmdb_key_hint':
+        return 'Enter TMDB API key';
       default:
         return null;
     }
@@ -195317,6 +197238,70 @@ extension on _StringsTr {
         return 'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
       case 'about_tmdb_attribution':
         return 'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+      case 'video_scrape_tmdb_key_required':
+        return 'TMDB requires an API key';
+      case 'video_scrape_tmdb_key_save':
+        return 'Save';
+      case 'video_scrape_tmdb_key_empty':
+        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+      case 'download_detail_tab_overview':
+        return 'Overview';
+      case 'download_detail_tab_files':
+        return 'Files';
+      case 'download_detail_tab_peers':
+        return 'Peers';
+      case 'download_detail_tab_trackers':
+        return 'Trackers';
+      case 'download_detail_backend_unsupported':
+        return 'Not supported by current download backend';
+      case 'download_detail_task_gone':
+        return 'Task not found in backend';
+      case 'download_detail_section_transfer':
+        return 'Transfer';
+      case 'download_detail_section_network':
+        return 'Network';
+      case 'download_detail_seeds_label':
+        return 'Seeds';
+      case 'download_detail_leechers_label':
+        return 'Leechers';
+      case 'download_detail_connections_label':
+        return 'Connections';
+      case 'download_detail_time_active':
+        return 'Active time';
+      case 'download_detail_time_seeding':
+        return 'Seeding time';
+      case 'download_detail_listen_port':
+        return 'Listen port';
+      case 'download_detail_dht_nodes':
+        return 'DHT nodes';
+      case 'download_detail_port_mapping':
+        return 'Port mapping';
+      case 'download_detail_session_rates':
+        return 'Session rates';
+      case 'download_detail_pieces_label':
+        return 'Pieces';
+      case 'download_detail_priority_skip':
+        return 'Don\'t download';
+      case 'download_detail_priority_normal':
+        return 'Normal';
+      case 'download_detail_priority_high':
+        return 'High';
+      case 'download_detail_tracker_working':
+        return 'Working';
+      case 'download_detail_tracker_updating':
+        return 'Updating';
+      case 'download_detail_tracker_not_contacted':
+        return 'Not contacted yet';
+      case 'download_detail_tracker_not_working':
+        return 'Not working';
+      case 'download_detail_tracker_disabled':
+        return 'Disabled';
+      case 'download_detail_no_peers':
+        return 'No connected peers';
+      case 'download_detail_no_trackers':
+        return 'No trackers';
+      case 'video_scrape_tmdb_key_hint':
+        return 'Enter TMDB API key';
       default:
         return null;
     }
@@ -201324,6 +203309,70 @@ extension on _StringsVi {
         return 'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
       case 'about_tmdb_attribution':
         return 'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+      case 'video_scrape_tmdb_key_required':
+        return 'TMDB requires an API key';
+      case 'video_scrape_tmdb_key_save':
+        return 'Save';
+      case 'video_scrape_tmdb_key_empty':
+        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+      case 'download_detail_tab_overview':
+        return 'Overview';
+      case 'download_detail_tab_files':
+        return 'Files';
+      case 'download_detail_tab_peers':
+        return 'Peers';
+      case 'download_detail_tab_trackers':
+        return 'Trackers';
+      case 'download_detail_backend_unsupported':
+        return 'Not supported by current download backend';
+      case 'download_detail_task_gone':
+        return 'Task not found in backend';
+      case 'download_detail_section_transfer':
+        return 'Transfer';
+      case 'download_detail_section_network':
+        return 'Network';
+      case 'download_detail_seeds_label':
+        return 'Seeds';
+      case 'download_detail_leechers_label':
+        return 'Leechers';
+      case 'download_detail_connections_label':
+        return 'Connections';
+      case 'download_detail_time_active':
+        return 'Active time';
+      case 'download_detail_time_seeding':
+        return 'Seeding time';
+      case 'download_detail_listen_port':
+        return 'Listen port';
+      case 'download_detail_dht_nodes':
+        return 'DHT nodes';
+      case 'download_detail_port_mapping':
+        return 'Port mapping';
+      case 'download_detail_session_rates':
+        return 'Session rates';
+      case 'download_detail_pieces_label':
+        return 'Pieces';
+      case 'download_detail_priority_skip':
+        return 'Don\'t download';
+      case 'download_detail_priority_normal':
+        return 'Normal';
+      case 'download_detail_priority_high':
+        return 'High';
+      case 'download_detail_tracker_working':
+        return 'Working';
+      case 'download_detail_tracker_updating':
+        return 'Updating';
+      case 'download_detail_tracker_not_contacted':
+        return 'Not contacted yet';
+      case 'download_detail_tracker_not_working':
+        return 'Not working';
+      case 'download_detail_tracker_disabled':
+        return 'Disabled';
+      case 'download_detail_no_peers':
+        return 'No connected peers';
+      case 'download_detail_no_trackers':
+        return 'No trackers';
+      case 'video_scrape_tmdb_key_hint':
+        return 'Enter TMDB API key';
       default:
         return null;
     }
@@ -207278,6 +209327,70 @@ extension on _StringsZhCn {
         return '可留空，默认用内置 Key。仅当刮削失效或你想用自己的配额时才需要填写。';
       case 'about_tmdb_attribution':
         return 'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+      case 'video_scrape_tmdb_key_required':
+        return 'TMDB 需要 API Key';
+      case 'video_scrape_tmdb_key_save':
+        return '保存';
+      case 'video_scrape_tmdb_key_empty':
+        return '先保存 TMDB API Key，再点“搜索”。这里不会混入其他来源的结果。';
+      case 'download_detail_tab_overview':
+        return '总览';
+      case 'download_detail_tab_files':
+        return '文件';
+      case 'download_detail_tab_peers':
+        return '节点';
+      case 'download_detail_tab_trackers':
+        return 'Tracker';
+      case 'download_detail_backend_unsupported':
+        return '当前下载后端不支持';
+      case 'download_detail_task_gone':
+        return '后端中找不到该任务';
+      case 'download_detail_section_transfer':
+        return '传输';
+      case 'download_detail_section_network':
+        return '网络';
+      case 'download_detail_seeds_label':
+        return '做种';
+      case 'download_detail_leechers_label':
+        return '下载者';
+      case 'download_detail_connections_label':
+        return '连接数';
+      case 'download_detail_time_active':
+        return '活跃时长';
+      case 'download_detail_time_seeding':
+        return '做种时长';
+      case 'download_detail_listen_port':
+        return '监听端口';
+      case 'download_detail_dht_nodes':
+        return 'DHT 节点';
+      case 'download_detail_port_mapping':
+        return '端口映射';
+      case 'download_detail_session_rates':
+        return '会话速率';
+      case 'download_detail_pieces_label':
+        return '分片';
+      case 'download_detail_priority_skip':
+        return '不下载';
+      case 'download_detail_priority_normal':
+        return '普通';
+      case 'download_detail_priority_high':
+        return '高';
+      case 'download_detail_tracker_working':
+        return '工作中';
+      case 'download_detail_tracker_updating':
+        return '更新中';
+      case 'download_detail_tracker_not_contacted':
+        return '尚未联系';
+      case 'download_detail_tracker_not_working':
+        return '不工作';
+      case 'download_detail_tracker_disabled':
+        return '已禁用';
+      case 'download_detail_no_peers':
+        return '暂无已连接节点';
+      case 'download_detail_no_trackers':
+        return '无 Tracker';
+      case 'video_scrape_tmdb_key_hint':
+        return 'ÊäÈë TMDB API Key';
       default:
         return null;
     }
@@ -213258,6 +215371,70 @@ extension on _StringsZhHk {
         return 'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
       case 'about_tmdb_attribution':
         return 'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+      case 'video_scrape_tmdb_key_required':
+        return 'TMDB requires an API key';
+      case 'video_scrape_tmdb_key_save':
+        return 'Save';
+      case 'video_scrape_tmdb_key_empty':
+        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+      case 'download_detail_tab_overview':
+        return 'Overview';
+      case 'download_detail_tab_files':
+        return 'Files';
+      case 'download_detail_tab_peers':
+        return 'Peers';
+      case 'download_detail_tab_trackers':
+        return 'Trackers';
+      case 'download_detail_backend_unsupported':
+        return 'Not supported by current download backend';
+      case 'download_detail_task_gone':
+        return 'Task not found in backend';
+      case 'download_detail_section_transfer':
+        return 'Transfer';
+      case 'download_detail_section_network':
+        return 'Network';
+      case 'download_detail_seeds_label':
+        return 'Seeds';
+      case 'download_detail_leechers_label':
+        return 'Leechers';
+      case 'download_detail_connections_label':
+        return 'Connections';
+      case 'download_detail_time_active':
+        return 'Active time';
+      case 'download_detail_time_seeding':
+        return 'Seeding time';
+      case 'download_detail_listen_port':
+        return 'Listen port';
+      case 'download_detail_dht_nodes':
+        return 'DHT nodes';
+      case 'download_detail_port_mapping':
+        return 'Port mapping';
+      case 'download_detail_session_rates':
+        return 'Session rates';
+      case 'download_detail_pieces_label':
+        return 'Pieces';
+      case 'download_detail_priority_skip':
+        return 'Don\'t download';
+      case 'download_detail_priority_normal':
+        return 'Normal';
+      case 'download_detail_priority_high':
+        return 'High';
+      case 'download_detail_tracker_working':
+        return 'Working';
+      case 'download_detail_tracker_updating':
+        return 'Updating';
+      case 'download_detail_tracker_not_contacted':
+        return 'Not contacted yet';
+      case 'download_detail_tracker_not_working':
+        return 'Not working';
+      case 'download_detail_tracker_disabled':
+        return 'Disabled';
+      case 'download_detail_no_peers':
+        return 'No connected peers';
+      case 'download_detail_no_trackers':
+        return 'No trackers';
+      case 'video_scrape_tmdb_key_hint':
+        return 'Enter TMDB API key';
       default:
         return null;
     }
