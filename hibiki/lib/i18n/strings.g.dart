@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 50320 (2960 per locale)
+/// Strings: 50337 (2961 per locale)
 ///
-/// Built on 2026-08-01 at 07:12 UTC
+/// Built on 2026-08-01 at 07:56 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3993,6 +3993,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get download_airing_calendar_week_empty => 'Nothing airing this week';
   String get video_jimaku_format => 'Format';
   String get video_jimaku_format_all => 'All';
+  String get media_source_local_roots => 'Local scan roots';
 }
 
 // Path: <root>
@@ -10795,6 +10796,8 @@ class _StringsAr extends _StringsEn {
   String get video_jimaku_format => 'Format';
   @override
   String get video_jimaku_format_all => 'All';
+  @override
+  String get media_source_local_roots => 'Local scan roots';
 }
 
 // Path: <root>
@@ -17664,6 +17667,8 @@ class _StringsDe extends _StringsEn {
   String get video_jimaku_format => 'Format';
   @override
   String get video_jimaku_format_all => 'All';
+  @override
+  String get media_source_local_roots => 'Local scan roots';
 }
 
 // Path: <root>
@@ -24548,6 +24553,8 @@ class _StringsEs extends _StringsEn {
   String get video_jimaku_format => 'Format';
   @override
   String get video_jimaku_format_all => 'All';
+  @override
+  String get media_source_local_roots => 'Local scan roots';
 }
 
 // Path: <root>
@@ -31444,6 +31451,8 @@ class _StringsFr extends _StringsEn {
   String get video_jimaku_format => 'Format';
   @override
   String get video_jimaku_format_all => 'All';
+  @override
+  String get media_source_local_roots => 'Local scan roots';
 }
 
 // Path: <root>
@@ -38269,6 +38278,8 @@ class _StringsId extends _StringsEn {
   String get video_jimaku_format => 'Format';
   @override
   String get video_jimaku_format_all => 'All';
+  @override
+  String get media_source_local_roots => 'Local scan roots';
 }
 
 // Path: <root>
@@ -45140,6 +45151,8 @@ class _StringsIt extends _StringsEn {
   String get video_jimaku_format => 'Format';
   @override
   String get video_jimaku_format_all => 'All';
+  @override
+  String get media_source_local_roots => 'Local scan roots';
 }
 
 // Path: <root>
@@ -51828,6 +51841,8 @@ class _StringsJa extends _StringsEn {
   String get video_jimaku_format => 'Format';
   @override
   String get video_jimaku_format_all => 'All';
+  @override
+  String get media_source_local_roots => 'Local scan roots';
 }
 
 // Path: <root>
@@ -58518,6 +58533,8 @@ class _StringsKo extends _StringsEn {
   String get video_jimaku_format => 'Format';
   @override
   String get video_jimaku_format_all => 'All';
+  @override
+  String get media_source_local_roots => 'Local scan roots';
 }
 
 // Path: <root>
@@ -65369,6 +65386,8 @@ class _StringsNl extends _StringsEn {
   String get video_jimaku_format => 'Format';
   @override
   String get video_jimaku_format_all => 'All';
+  @override
+  String get media_source_local_roots => 'Local scan roots';
 }
 
 // Path: <root>
@@ -72233,6 +72252,8 @@ class _StringsPtBr extends _StringsEn {
   String get video_jimaku_format => 'Format';
   @override
   String get video_jimaku_format_all => 'All';
+  @override
+  String get media_source_local_roots => 'Local scan roots';
 }
 
 // Path: <root>
@@ -79081,6 +79102,8 @@ class _StringsRu extends _StringsEn {
   String get video_jimaku_format => 'Format';
   @override
   String get video_jimaku_format_all => 'All';
+  @override
+  String get media_source_local_roots => 'Local scan roots';
 }
 
 // Path: <root>
@@ -85877,6 +85900,8 @@ class _StringsTh extends _StringsEn {
   String get video_jimaku_format => 'Format';
   @override
   String get video_jimaku_format_all => 'All';
+  @override
+  String get media_source_local_roots => 'Local scan roots';
 }
 
 // Path: <root>
@@ -92705,6 +92730,8 @@ class _StringsTr extends _StringsEn {
   String get video_jimaku_format => 'Format';
   @override
   String get video_jimaku_format_all => 'All';
+  @override
+  String get media_source_local_roots => 'Local scan roots';
 }
 
 // Path: <root>
@@ -99518,6 +99545,8 @@ class _StringsVi extends _StringsEn {
   String get video_jimaku_format => 'Format';
   @override
   String get video_jimaku_format_all => 'All';
+  @override
+  String get media_source_local_roots => 'Local scan roots';
 }
 
 // Path: <root>
@@ -105852,6 +105881,8 @@ class _StringsZhCn extends _StringsEn {
   String get video_jimaku_format => '类型';
   @override
   String get video_jimaku_format_all => '全部';
+  @override
+  String get media_source_local_roots => '本地扫描根';
 }
 
 // Path: <root>
@@ -112461,6 +112492,8 @@ class _StringsZhHk extends _StringsEn {
   String get video_jimaku_format => 'Format';
   @override
   String get video_jimaku_format_all => 'All';
+  @override
+  String get media_source_local_roots => 'Local scan roots';
 }
 
 /// Flat map(s) containing all translations.
@@ -118537,6 +118570,8 @@ extension on _StringsEn {
         return 'Format';
       case 'video_jimaku_format_all':
         return 'All';
+      case 'media_source_local_roots':
+        return 'Local scan roots';
       default:
         return null;
     }
@@ -124611,6 +124646,8 @@ extension on _StringsAr {
         return 'Format';
       case 'video_jimaku_format_all':
         return 'All';
+      case 'media_source_local_roots':
+        return 'Local scan roots';
       default:
         return null;
     }
@@ -130707,6 +130744,8 @@ extension on _StringsDe {
         return 'Format';
       case 'video_jimaku_format_all':
         return 'All';
+      case 'media_source_local_roots':
+        return 'Local scan roots';
       default:
         return null;
     }
@@ -136802,6 +136841,8 @@ extension on _StringsEs {
         return 'Format';
       case 'video_jimaku_format_all':
         return 'All';
+      case 'media_source_local_roots':
+        return 'Local scan roots';
       default:
         return null;
     }
@@ -142903,6 +142944,8 @@ extension on _StringsFr {
         return 'Format';
       case 'video_jimaku_format_all':
         return 'All';
+      case 'media_source_local_roots':
+        return 'Local scan roots';
       default:
         return null;
     }
@@ -148986,6 +149029,8 @@ extension on _StringsId {
         return 'Format';
       case 'video_jimaku_format_all':
         return 'All';
+      case 'media_source_local_roots':
+        return 'Local scan roots';
       default:
         return null;
     }
@@ -155083,6 +155128,8 @@ extension on _StringsIt {
         return 'Format';
       case 'video_jimaku_format_all':
         return 'All';
+      case 'media_source_local_roots':
+        return 'Local scan roots';
       default:
         return null;
     }
@@ -161142,6 +161189,8 @@ extension on _StringsJa {
         return 'Format';
       case 'video_jimaku_format_all':
         return 'All';
+      case 'media_source_local_roots':
+        return 'Local scan roots';
       default:
         return null;
     }
@@ -167205,6 +167254,8 @@ extension on _StringsKo {
         return 'Format';
       case 'video_jimaku_format_all':
         return 'All';
+      case 'media_source_local_roots':
+        return 'Local scan roots';
       default:
         return null;
     }
@@ -173296,6 +173347,8 @@ extension on _StringsNl {
         return 'Format';
       case 'video_jimaku_format_all':
         return 'All';
+      case 'media_source_local_roots':
+        return 'Local scan roots';
       default:
         return null;
     }
@@ -179384,6 +179437,8 @@ extension on _StringsPtBr {
         return 'Format';
       case 'video_jimaku_format_all':
         return 'All';
+      case 'media_source_local_roots':
+        return 'Local scan roots';
       default:
         return null;
     }
@@ -185477,6 +185532,8 @@ extension on _StringsRu {
         return 'Format';
       case 'video_jimaku_format_all':
         return 'All';
+      case 'media_source_local_roots':
+        return 'Local scan roots';
       default:
         return null;
     }
@@ -191553,6 +191610,8 @@ extension on _StringsTh {
         return 'Format';
       case 'video_jimaku_format_all':
         return 'All';
+      case 'media_source_local_roots':
+        return 'Local scan roots';
       default:
         return null;
     }
@@ -197638,6 +197697,8 @@ extension on _StringsTr {
         return 'Format';
       case 'video_jimaku_format_all':
         return 'All';
+      case 'media_source_local_roots':
+        return 'Local scan roots';
       default:
         return null;
     }
@@ -203719,6 +203780,8 @@ extension on _StringsVi {
         return 'Format';
       case 'video_jimaku_format_all':
         return 'All';
+      case 'media_source_local_roots':
+        return 'Local scan roots';
       default:
         return null;
     }
@@ -209747,6 +209810,8 @@ extension on _StringsZhCn {
         return '类型';
       case 'video_jimaku_format_all':
         return '全部';
+      case 'media_source_local_roots':
+        return '本地扫描根';
       default:
         return null;
     }
@@ -215801,6 +215866,8 @@ extension on _StringsZhHk {
         return 'Format';
       case 'video_jimaku_format_all':
         return 'All';
+      case 'media_source_local_roots':
+        return 'Local scan roots';
       default:
         return null;
     }
