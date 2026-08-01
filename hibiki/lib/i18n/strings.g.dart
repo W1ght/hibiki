@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 51901 (3053 per locale)
+/// Strings: 51918 (3054 per locale)
 ///
-/// Built on 2026-08-01 at 18:46 UTC
+/// Built on 2026-08-01 at 19:01 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2526,7 +2526,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get sync_err_scope_upgrade =>
       'Sync permissions changed — please sign in to Google again to continue syncing.';
   String get sync_err_timeout =>
-      'Connection timed out — the server did not respond in time.';
+      'Connection timed out — the server did not respond in time. Check your network or proxy settings.';
   String sync_error({required Object message}) => 'Sync error: ${message}';
   String get sync_exit_warning =>
       'Sync is still in progress. Exiting now may cause data loss.';
@@ -2757,11 +2757,11 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get update_checking_now => 'Checking for updates…';
   String get update_connecting => 'Connecting…';
   String get update_custom_proxy_auto_hint =>
-      'Leave blank to use environment variables, then the enabled system proxy.';
+      'Used for update checks, cloud sync and downloads. Leave blank to use environment variables, then the enabled system proxy.';
   String get update_custom_proxy_hint =>
       'host:port, e.g. 127.0.0.1:7890 (IPv4/host only)';
   String get update_custom_proxy_invalid => 'Invalid proxy. Use host:port';
-  String get update_custom_proxy_label => 'Custom update proxy';
+  String get update_custom_proxy_label => 'Custom network proxy';
   String get update_debug_channel => 'Debug update channel';
   String get update_debug_channel_warning =>
       'Debug channel builds may be unstable. Use at your own risk.';
@@ -4104,6 +4104,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Renamed ${n} episodes, ${m} failed';
   String get collection_episode_bangumi_not_found =>
       'Episode not found on Bangumi; opened the subject page instead';
+  String get sync_err_browser_timeout =>
+      'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
 }
 
 // Path: <root>
@@ -11110,6 +11112,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get collection_episode_bangumi_not_found =>
       'Episode not found on Bangumi; opened the subject page instead';
+  @override
+  String get sync_err_browser_timeout =>
+      'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
 }
 
 // Path: <root>
@@ -18183,6 +18188,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get collection_episode_bangumi_not_found =>
       'Episode not found on Bangumi; opened the subject page instead';
+  @override
+  String get sync_err_browser_timeout =>
+      'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
 }
 
 // Path: <root>
@@ -25271,6 +25279,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get collection_episode_bangumi_not_found =>
       'Episode not found on Bangumi; opened the subject page instead';
+  @override
+  String get sync_err_browser_timeout =>
+      'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
 }
 
 // Path: <root>
@@ -32371,6 +32382,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get collection_episode_bangumi_not_found =>
       'Episode not found on Bangumi; opened the subject page instead';
+  @override
+  String get sync_err_browser_timeout =>
+      'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
 }
 
 // Path: <root>
@@ -39400,6 +39414,9 @@ class _StringsId extends _StringsEn {
   @override
   String get collection_episode_bangumi_not_found =>
       'Episode not found on Bangumi; opened the subject page instead';
+  @override
+  String get sync_err_browser_timeout =>
+      'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
 }
 
 // Path: <root>
@@ -46475,6 +46492,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get collection_episode_bangumi_not_found =>
       'Episode not found on Bangumi; opened the subject page instead';
+  @override
+  String get sync_err_browser_timeout =>
+      'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
 }
 
 // Path: <root>
@@ -53367,6 +53387,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get collection_episode_bangumi_not_found =>
       'Episode not found on Bangumi; opened the subject page instead';
+  @override
+  String get sync_err_browser_timeout =>
+      'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
 }
 
 // Path: <root>
@@ -60261,6 +60284,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get collection_episode_bangumi_not_found =>
       'Episode not found on Bangumi; opened the subject page instead';
+  @override
+  String get sync_err_browser_timeout =>
+      'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
 }
 
 // Path: <root>
@@ -67316,6 +67342,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get collection_episode_bangumi_not_found =>
       'Episode not found on Bangumi; opened the subject page instead';
+  @override
+  String get sync_err_browser_timeout =>
+      'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
 }
 
 // Path: <root>
@@ -74384,6 +74413,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get collection_episode_bangumi_not_found =>
       'Episode not found on Bangumi; opened the subject page instead';
+  @override
+  String get sync_err_browser_timeout =>
+      'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
 }
 
 // Path: <root>
@@ -81436,6 +81468,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get collection_episode_bangumi_not_found =>
       'Episode not found on Bangumi; opened the subject page instead';
+  @override
+  String get sync_err_browser_timeout =>
+      'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
 }
 
 // Path: <root>
@@ -88436,6 +88471,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get collection_episode_bangumi_not_found =>
       'Episode not found on Bangumi; opened the subject page instead';
+  @override
+  String get sync_err_browser_timeout =>
+      'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
 }
 
 // Path: <root>
@@ -95468,6 +95506,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get collection_episode_bangumi_not_found =>
       'Episode not found on Bangumi; opened the subject page instead';
+  @override
+  String get sync_err_browser_timeout =>
+      'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
 }
 
 // Path: <root>
@@ -102485,6 +102526,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get collection_episode_bangumi_not_found =>
       'Episode not found on Bangumi; opened the subject page instead';
+  @override
+  String get sync_err_browser_timeout =>
+      'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
 }
 
 // Path: <root>
@@ -106448,7 +106492,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get sync_err_scope_upgrade => '同步权限已更新，请重新登录 Google 账号以继续同步。';
   @override
-  String get sync_err_timeout => '连接超时——服务器未在限定时间内响应。';
+  String get sync_err_timeout => '连接超时——服务器未在限定时间内响应。请检查网络或代理设置。';
   @override
   String sync_error({required Object message}) => '同步错误：${message}';
   @override
@@ -106847,14 +106891,15 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get update_connecting => '正在连接更新源…';
   @override
-  String get update_custom_proxy_auto_hint => '留空时自动读取环境变量，再读取已启用的系统代理。';
+  String get update_custom_proxy_auto_hint =>
+      '用于更新检查、云同步和下载。留空时自动读取环境变量，再读取已启用的系统代理。';
   @override
   String get update_custom_proxy_hint =>
       'host:port，例如 127.0.0.1:7890（仅 IPv4/域名）';
   @override
   String get update_custom_proxy_invalid => '代理格式无效，请用 host:port';
   @override
-  String get update_custom_proxy_label => '自定义更新代理';
+  String get update_custom_proxy_label => '自定义网络代理';
   @override
   String get update_debug_channel => '调试更新通道';
   @override
@@ -109015,6 +109060,9 @@ class _StringsZhCn extends _StringsEn {
       '已重命名 ${n} 集 · ${m} 集失败';
   @override
   String get collection_episode_bangumi_not_found => '未找到对应集，已打开条目页';
+  @override
+  String get sync_err_browser_timeout =>
+      '浏览器授权没有返回到应用。请重试，并确认代理放行了本机回环地址 127.0.0.1。';
 }
 
 // Path: <root>
@@ -115828,6 +115876,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get collection_episode_bangumi_not_found =>
       'Episode not found on Bangumi; opened the subject page instead';
+  @override
+  String get sync_err_browser_timeout =>
+      'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
 }
 
 /// Flat map(s) containing all translations.
@@ -119648,7 +119699,7 @@ extension on _StringsEn {
       case 'sync_err_scope_upgrade':
         return 'Sync permissions changed — please sign in to Google again to continue syncing.';
       case 'sync_err_timeout':
-        return 'Connection timed out — the server did not respond in time.';
+        return 'Connection timed out — the server did not respond in time. Check your network or proxy settings.';
       case 'sync_error':
         return ({required Object message}) => 'Sync error: ${message}';
       case 'sync_exit_warning':
@@ -120042,13 +120093,13 @@ extension on _StringsEn {
       case 'update_connecting':
         return 'Connecting…';
       case 'update_custom_proxy_auto_hint':
-        return 'Leave blank to use environment variables, then the enabled system proxy.';
+        return 'Used for update checks, cloud sync and downloads. Leave blank to use environment variables, then the enabled system proxy.';
       case 'update_custom_proxy_hint':
         return 'host:port, e.g. 127.0.0.1:7890 (IPv4/host only)';
       case 'update_custom_proxy_invalid':
         return 'Invalid proxy. Use host:port';
       case 'update_custom_proxy_label':
-        return 'Custom update proxy';
+        return 'Custom network proxy';
       case 'update_debug_channel':
         return 'Debug update channel';
       case 'update_debug_channel_warning':
@@ -122093,6 +122144,8 @@ extension on _StringsEn {
             'Renamed ${n} episodes, ${m} failed';
       case 'collection_episode_bangumi_not_found':
         return 'Episode not found on Bangumi; opened the subject page instead';
+      case 'sync_err_browser_timeout':
+        return 'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
       default:
         return null;
     }
@@ -128356,6 +128409,8 @@ extension on _StringsAr {
             'Renamed ${n} episodes, ${m} failed';
       case 'collection_episode_bangumi_not_found':
         return 'Episode not found on Bangumi; opened the subject page instead';
+      case 'sync_err_browser_timeout':
+        return 'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
       default:
         return null;
     }
@@ -134641,6 +134696,8 @@ extension on _StringsDe {
             'Renamed ${n} episodes, ${m} failed';
       case 'collection_episode_bangumi_not_found':
         return 'Episode not found on Bangumi; opened the subject page instead';
+      case 'sync_err_browser_timeout':
+        return 'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
       default:
         return null;
     }
@@ -140925,6 +140982,8 @@ extension on _StringsEs {
             'Renamed ${n} episodes, ${m} failed';
       case 'collection_episode_bangumi_not_found':
         return 'Episode not found on Bangumi; opened the subject page instead';
+      case 'sync_err_browser_timeout':
+        return 'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
       default:
         return null;
     }
@@ -147215,6 +147274,8 @@ extension on _StringsFr {
             'Renamed ${n} episodes, ${m} failed';
       case 'collection_episode_bangumi_not_found':
         return 'Episode not found on Bangumi; opened the subject page instead';
+      case 'sync_err_browser_timeout':
+        return 'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
       default:
         return null;
     }
@@ -153487,6 +153548,8 @@ extension on _StringsId {
             'Renamed ${n} episodes, ${m} failed';
       case 'collection_episode_bangumi_not_found':
         return 'Episode not found on Bangumi; opened the subject page instead';
+      case 'sync_err_browser_timeout':
+        return 'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
       default:
         return null;
     }
@@ -159773,6 +159836,8 @@ extension on _StringsIt {
             'Renamed ${n} episodes, ${m} failed';
       case 'collection_episode_bangumi_not_found':
         return 'Episode not found on Bangumi; opened the subject page instead';
+      case 'sync_err_browser_timeout':
+        return 'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
       default:
         return null;
     }
@@ -166021,6 +166086,8 @@ extension on _StringsJa {
             'Renamed ${n} episodes, ${m} failed';
       case 'collection_episode_bangumi_not_found':
         return 'Episode not found on Bangumi; opened the subject page instead';
+      case 'sync_err_browser_timeout':
+        return 'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
       default:
         return null;
     }
@@ -172273,6 +172340,8 @@ extension on _StringsKo {
             'Renamed ${n} episodes, ${m} failed';
       case 'collection_episode_bangumi_not_found':
         return 'Episode not found on Bangumi; opened the subject page instead';
+      case 'sync_err_browser_timeout':
+        return 'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
       default:
         return null;
     }
@@ -178553,6 +178622,8 @@ extension on _StringsNl {
             'Renamed ${n} episodes, ${m} failed';
       case 'collection_episode_bangumi_not_found':
         return 'Episode not found on Bangumi; opened the subject page instead';
+      case 'sync_err_browser_timeout':
+        return 'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
       default:
         return null;
     }
@@ -184830,6 +184901,8 @@ extension on _StringsPtBr {
             'Renamed ${n} episodes, ${m} failed';
       case 'collection_episode_bangumi_not_found':
         return 'Episode not found on Bangumi; opened the subject page instead';
+      case 'sync_err_browser_timeout':
+        return 'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
       default:
         return null;
     }
@@ -191112,6 +191185,8 @@ extension on _StringsRu {
             'Renamed ${n} episodes, ${m} failed';
       case 'collection_episode_bangumi_not_found':
         return 'Episode not found on Bangumi; opened the subject page instead';
+      case 'sync_err_browser_timeout':
+        return 'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
       default:
         return null;
     }
@@ -197377,6 +197452,8 @@ extension on _StringsTh {
             'Renamed ${n} episodes, ${m} failed';
       case 'collection_episode_bangumi_not_found':
         return 'Episode not found on Bangumi; opened the subject page instead';
+      case 'sync_err_browser_timeout':
+        return 'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
       default:
         return null;
     }
@@ -203651,6 +203728,8 @@ extension on _StringsTr {
             'Renamed ${n} episodes, ${m} failed';
       case 'collection_episode_bangumi_not_found':
         return 'Episode not found on Bangumi; opened the subject page instead';
+      case 'sync_err_browser_timeout':
+        return 'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
       default:
         return null;
     }
@@ -209921,6 +210000,8 @@ extension on _StringsVi {
             'Renamed ${n} episodes, ${m} failed';
       case 'collection_episode_bangumi_not_found':
         return 'Episode not found on Bangumi; opened the subject page instead';
+      case 'sync_err_browser_timeout':
+        return 'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
       default:
         return null;
     }
@@ -213715,7 +213796,7 @@ extension on _StringsZhCn {
       case 'sync_err_scope_upgrade':
         return '同步权限已更新，请重新登录 Google 账号以继续同步。';
       case 'sync_err_timeout':
-        return '连接超时——服务器未在限定时间内响应。';
+        return '连接超时——服务器未在限定时间内响应。请检查网络或代理设置。';
       case 'sync_error':
         return ({required Object message}) => '同步错误：${message}';
       case 'sync_exit_warning':
@@ -214104,13 +214185,13 @@ extension on _StringsZhCn {
       case 'update_connecting':
         return '正在连接更新源…';
       case 'update_custom_proxy_auto_hint':
-        return '留空时自动读取环境变量，再读取已启用的系统代理。';
+        return '用于更新检查、云同步和下载。留空时自动读取环境变量，再读取已启用的系统代理。';
       case 'update_custom_proxy_hint':
         return 'host:port，例如 127.0.0.1:7890（仅 IPv4/域名）';
       case 'update_custom_proxy_invalid':
         return '代理格式无效，请用 host:port';
       case 'update_custom_proxy_label':
-        return '自定义更新代理';
+        return '自定义网络代理';
       case 'update_debug_channel':
         return '调试更新通道';
       case 'update_debug_channel_warning':
@@ -216137,6 +216218,8 @@ extension on _StringsZhCn {
             '已重命名 ${n} 集 · ${m} 集失败';
       case 'collection_episode_bangumi_not_found':
         return '未找到对应集，已打开条目页';
+      case 'sync_err_browser_timeout':
+        return '浏览器授权没有返回到应用。请重试，并确认代理放行了本机回环地址 127.0.0.1。';
       default:
         return null;
     }
@@ -222380,6 +222463,8 @@ extension on _StringsZhHk {
             'Renamed ${n} episodes, ${m} failed';
       case 'collection_episode_bangumi_not_found':
         return 'Episode not found on Bangumi; opened the subject page instead';
+      case 'sync_err_browser_timeout':
+        return 'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
       default:
         return null;
     }
