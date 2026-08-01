@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 48824 (2872 per locale)
+/// Strings: 49079 (2887 per locale)
 ///
-/// Built on 2026-08-01 at 00:46 UTC
+/// Built on 2026-08-01 at 04:50 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3883,6 +3883,21 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'The server refused this request. Your sign-in is fine - check the server\'s settings.';
   String sync_err_forbidden_detail({required Object reason}) =>
       'The server refused this request: ${reason} (your sign-in is fine)';
+  String get download_task_status_stalled => 'Stalled';
+  String get download_task_status_checking => 'Checking';
+  String get download_task_status_metadata => 'Fetching metadata';
+  String get download_task_status_moving => 'Moving';
+  String get download_task_status_error => 'Error';
+  String get download_task_pause => 'Pause';
+  String get download_task_resume => 'Resume';
+  String get download_task_toggle_failed => 'Pause/resume failed';
+  String get download_task_eta => 'ETA';
+  String get download_task_ratio => 'Ratio';
+  String get download_task_status_downloading => 'Downloading';
+  String get download_task_status_seeding => 'Seeding';
+  String get download_task_status_completed => 'Completed';
+  String get download_task_status_paused => 'Paused';
+  String get download_task_status_queued => 'Queued';
 }
 
 // Path: <root>
@@ -10487,6 +10502,36 @@ class _StringsAr extends _StringsEn {
   @override
   String sync_err_forbidden_detail({required Object reason}) =>
       'The server refused this request: ${reason} (your sign-in is fine)';
+  @override
+  String get download_task_status_stalled => 'Stalled';
+  @override
+  String get download_task_status_checking => 'Checking';
+  @override
+  String get download_task_status_metadata => 'Fetching metadata';
+  @override
+  String get download_task_status_moving => 'Moving';
+  @override
+  String get download_task_status_error => 'Error';
+  @override
+  String get download_task_pause => 'Pause';
+  @override
+  String get download_task_resume => 'Resume';
+  @override
+  String get download_task_toggle_failed => 'Pause/resume failed';
+  @override
+  String get download_task_eta => 'ETA';
+  @override
+  String get download_task_ratio => 'Ratio';
+  @override
+  String get download_task_status_downloading => 'Downloading';
+  @override
+  String get download_task_status_seeding => 'Seeding';
+  @override
+  String get download_task_status_completed => 'Completed';
+  @override
+  String get download_task_status_paused => 'Paused';
+  @override
+  String get download_task_status_queued => 'Queued';
 }
 
 // Path: <root>
@@ -17158,6 +17203,36 @@ class _StringsDe extends _StringsEn {
   @override
   String sync_err_forbidden_detail({required Object reason}) =>
       'The server refused this request: ${reason} (your sign-in is fine)';
+  @override
+  String get download_task_status_stalled => 'Stalled';
+  @override
+  String get download_task_status_checking => 'Checking';
+  @override
+  String get download_task_status_metadata => 'Fetching metadata';
+  @override
+  String get download_task_status_moving => 'Moving';
+  @override
+  String get download_task_status_error => 'Error';
+  @override
+  String get download_task_pause => 'Pause';
+  @override
+  String get download_task_resume => 'Resume';
+  @override
+  String get download_task_toggle_failed => 'Pause/resume failed';
+  @override
+  String get download_task_eta => 'ETA';
+  @override
+  String get download_task_ratio => 'Ratio';
+  @override
+  String get download_task_status_downloading => 'Downloading';
+  @override
+  String get download_task_status_seeding => 'Seeding';
+  @override
+  String get download_task_status_completed => 'Completed';
+  @override
+  String get download_task_status_paused => 'Paused';
+  @override
+  String get download_task_status_queued => 'Queued';
 }
 
 // Path: <root>
@@ -23845,6 +23920,36 @@ class _StringsEs extends _StringsEn {
   @override
   String sync_err_forbidden_detail({required Object reason}) =>
       'The server refused this request: ${reason} (your sign-in is fine)';
+  @override
+  String get download_task_status_stalled => 'Stalled';
+  @override
+  String get download_task_status_checking => 'Checking';
+  @override
+  String get download_task_status_metadata => 'Fetching metadata';
+  @override
+  String get download_task_status_moving => 'Moving';
+  @override
+  String get download_task_status_error => 'Error';
+  @override
+  String get download_task_pause => 'Pause';
+  @override
+  String get download_task_resume => 'Resume';
+  @override
+  String get download_task_toggle_failed => 'Pause/resume failed';
+  @override
+  String get download_task_eta => 'ETA';
+  @override
+  String get download_task_ratio => 'Ratio';
+  @override
+  String get download_task_status_downloading => 'Downloading';
+  @override
+  String get download_task_status_seeding => 'Seeding';
+  @override
+  String get download_task_status_completed => 'Completed';
+  @override
+  String get download_task_status_paused => 'Paused';
+  @override
+  String get download_task_status_queued => 'Queued';
 }
 
 // Path: <root>
@@ -30543,6 +30648,36 @@ class _StringsFr extends _StringsEn {
   @override
   String sync_err_forbidden_detail({required Object reason}) =>
       'The server refused this request: ${reason} (your sign-in is fine)';
+  @override
+  String get download_task_status_stalled => 'Stalled';
+  @override
+  String get download_task_status_checking => 'Checking';
+  @override
+  String get download_task_status_metadata => 'Fetching metadata';
+  @override
+  String get download_task_status_moving => 'Moving';
+  @override
+  String get download_task_status_error => 'Error';
+  @override
+  String get download_task_pause => 'Pause';
+  @override
+  String get download_task_resume => 'Resume';
+  @override
+  String get download_task_toggle_failed => 'Pause/resume failed';
+  @override
+  String get download_task_eta => 'ETA';
+  @override
+  String get download_task_ratio => 'Ratio';
+  @override
+  String get download_task_status_downloading => 'Downloading';
+  @override
+  String get download_task_status_seeding => 'Seeding';
+  @override
+  String get download_task_status_completed => 'Completed';
+  @override
+  String get download_task_status_paused => 'Paused';
+  @override
+  String get download_task_status_queued => 'Queued';
 }
 
 // Path: <root>
@@ -37170,6 +37305,36 @@ class _StringsId extends _StringsEn {
   @override
   String sync_err_forbidden_detail({required Object reason}) =>
       'The server refused this request: ${reason} (your sign-in is fine)';
+  @override
+  String get download_task_status_stalled => 'Stalled';
+  @override
+  String get download_task_status_checking => 'Checking';
+  @override
+  String get download_task_status_metadata => 'Fetching metadata';
+  @override
+  String get download_task_status_moving => 'Moving';
+  @override
+  String get download_task_status_error => 'Error';
+  @override
+  String get download_task_pause => 'Pause';
+  @override
+  String get download_task_resume => 'Resume';
+  @override
+  String get download_task_toggle_failed => 'Pause/resume failed';
+  @override
+  String get download_task_eta => 'ETA';
+  @override
+  String get download_task_ratio => 'Ratio';
+  @override
+  String get download_task_status_downloading => 'Downloading';
+  @override
+  String get download_task_status_seeding => 'Seeding';
+  @override
+  String get download_task_status_completed => 'Completed';
+  @override
+  String get download_task_status_paused => 'Paused';
+  @override
+  String get download_task_status_queued => 'Queued';
 }
 
 // Path: <root>
@@ -43843,6 +44008,36 @@ class _StringsIt extends _StringsEn {
   @override
   String sync_err_forbidden_detail({required Object reason}) =>
       'The server refused this request: ${reason} (your sign-in is fine)';
+  @override
+  String get download_task_status_stalled => 'Stalled';
+  @override
+  String get download_task_status_checking => 'Checking';
+  @override
+  String get download_task_status_metadata => 'Fetching metadata';
+  @override
+  String get download_task_status_moving => 'Moving';
+  @override
+  String get download_task_status_error => 'Error';
+  @override
+  String get download_task_pause => 'Pause';
+  @override
+  String get download_task_resume => 'Resume';
+  @override
+  String get download_task_toggle_failed => 'Pause/resume failed';
+  @override
+  String get download_task_eta => 'ETA';
+  @override
+  String get download_task_ratio => 'Ratio';
+  @override
+  String get download_task_status_downloading => 'Downloading';
+  @override
+  String get download_task_status_seeding => 'Seeding';
+  @override
+  String get download_task_status_completed => 'Completed';
+  @override
+  String get download_task_status_paused => 'Paused';
+  @override
+  String get download_task_status_queued => 'Queued';
 }
 
 // Path: <root>
@@ -50333,6 +50528,36 @@ class _StringsJa extends _StringsEn {
   @override
   String sync_err_forbidden_detail({required Object reason}) =>
       'The server refused this request: ${reason} (your sign-in is fine)';
+  @override
+  String get download_task_status_stalled => 'Stalled';
+  @override
+  String get download_task_status_checking => 'Checking';
+  @override
+  String get download_task_status_metadata => 'Fetching metadata';
+  @override
+  String get download_task_status_moving => 'Moving';
+  @override
+  String get download_task_status_error => 'Error';
+  @override
+  String get download_task_pause => 'Pause';
+  @override
+  String get download_task_resume => 'Resume';
+  @override
+  String get download_task_toggle_failed => 'Pause/resume failed';
+  @override
+  String get download_task_eta => 'ETA';
+  @override
+  String get download_task_ratio => 'Ratio';
+  @override
+  String get download_task_status_downloading => 'Downloading';
+  @override
+  String get download_task_status_seeding => 'Seeding';
+  @override
+  String get download_task_status_completed => 'Completed';
+  @override
+  String get download_task_status_paused => 'Paused';
+  @override
+  String get download_task_status_queued => 'Queued';
 }
 
 // Path: <root>
@@ -56825,6 +57050,36 @@ class _StringsKo extends _StringsEn {
   @override
   String sync_err_forbidden_detail({required Object reason}) =>
       'The server refused this request: ${reason} (your sign-in is fine)';
+  @override
+  String get download_task_status_stalled => 'Stalled';
+  @override
+  String get download_task_status_checking => 'Checking';
+  @override
+  String get download_task_status_metadata => 'Fetching metadata';
+  @override
+  String get download_task_status_moving => 'Moving';
+  @override
+  String get download_task_status_error => 'Error';
+  @override
+  String get download_task_pause => 'Pause';
+  @override
+  String get download_task_resume => 'Resume';
+  @override
+  String get download_task_toggle_failed => 'Pause/resume failed';
+  @override
+  String get download_task_eta => 'ETA';
+  @override
+  String get download_task_ratio => 'Ratio';
+  @override
+  String get download_task_status_downloading => 'Downloading';
+  @override
+  String get download_task_status_seeding => 'Seeding';
+  @override
+  String get download_task_status_completed => 'Completed';
+  @override
+  String get download_task_status_paused => 'Paused';
+  @override
+  String get download_task_status_queued => 'Queued';
 }
 
 // Path: <root>
@@ -63478,6 +63733,36 @@ class _StringsNl extends _StringsEn {
   @override
   String sync_err_forbidden_detail({required Object reason}) =>
       'The server refused this request: ${reason} (your sign-in is fine)';
+  @override
+  String get download_task_status_stalled => 'Stalled';
+  @override
+  String get download_task_status_checking => 'Checking';
+  @override
+  String get download_task_status_metadata => 'Fetching metadata';
+  @override
+  String get download_task_status_moving => 'Moving';
+  @override
+  String get download_task_status_error => 'Error';
+  @override
+  String get download_task_pause => 'Pause';
+  @override
+  String get download_task_resume => 'Resume';
+  @override
+  String get download_task_toggle_failed => 'Pause/resume failed';
+  @override
+  String get download_task_eta => 'ETA';
+  @override
+  String get download_task_ratio => 'Ratio';
+  @override
+  String get download_task_status_downloading => 'Downloading';
+  @override
+  String get download_task_status_seeding => 'Seeding';
+  @override
+  String get download_task_status_completed => 'Completed';
+  @override
+  String get download_task_status_paused => 'Paused';
+  @override
+  String get download_task_status_queued => 'Queued';
 }
 
 // Path: <root>
@@ -70144,6 +70429,36 @@ class _StringsPtBr extends _StringsEn {
   @override
   String sync_err_forbidden_detail({required Object reason}) =>
       'The server refused this request: ${reason} (your sign-in is fine)';
+  @override
+  String get download_task_status_stalled => 'Stalled';
+  @override
+  String get download_task_status_checking => 'Checking';
+  @override
+  String get download_task_status_metadata => 'Fetching metadata';
+  @override
+  String get download_task_status_moving => 'Moving';
+  @override
+  String get download_task_status_error => 'Error';
+  @override
+  String get download_task_pause => 'Pause';
+  @override
+  String get download_task_resume => 'Resume';
+  @override
+  String get download_task_toggle_failed => 'Pause/resume failed';
+  @override
+  String get download_task_eta => 'ETA';
+  @override
+  String get download_task_ratio => 'Ratio';
+  @override
+  String get download_task_status_downloading => 'Downloading';
+  @override
+  String get download_task_status_seeding => 'Seeding';
+  @override
+  String get download_task_status_completed => 'Completed';
+  @override
+  String get download_task_status_paused => 'Paused';
+  @override
+  String get download_task_status_queued => 'Queued';
 }
 
 // Path: <root>
@@ -76794,6 +77109,36 @@ class _StringsRu extends _StringsEn {
   @override
   String sync_err_forbidden_detail({required Object reason}) =>
       'The server refused this request: ${reason} (your sign-in is fine)';
+  @override
+  String get download_task_status_stalled => 'Stalled';
+  @override
+  String get download_task_status_checking => 'Checking';
+  @override
+  String get download_task_status_metadata => 'Fetching metadata';
+  @override
+  String get download_task_status_moving => 'Moving';
+  @override
+  String get download_task_status_error => 'Error';
+  @override
+  String get download_task_pause => 'Pause';
+  @override
+  String get download_task_resume => 'Resume';
+  @override
+  String get download_task_toggle_failed => 'Pause/resume failed';
+  @override
+  String get download_task_eta => 'ETA';
+  @override
+  String get download_task_ratio => 'Ratio';
+  @override
+  String get download_task_status_downloading => 'Downloading';
+  @override
+  String get download_task_status_seeding => 'Seeding';
+  @override
+  String get download_task_status_completed => 'Completed';
+  @override
+  String get download_task_status_paused => 'Paused';
+  @override
+  String get download_task_status_queued => 'Queued';
 }
 
 // Path: <root>
@@ -83392,6 +83737,36 @@ class _StringsTh extends _StringsEn {
   @override
   String sync_err_forbidden_detail({required Object reason}) =>
       'The server refused this request: ${reason} (your sign-in is fine)';
+  @override
+  String get download_task_status_stalled => 'Stalled';
+  @override
+  String get download_task_status_checking => 'Checking';
+  @override
+  String get download_task_status_metadata => 'Fetching metadata';
+  @override
+  String get download_task_status_moving => 'Moving';
+  @override
+  String get download_task_status_error => 'Error';
+  @override
+  String get download_task_pause => 'Pause';
+  @override
+  String get download_task_resume => 'Resume';
+  @override
+  String get download_task_toggle_failed => 'Pause/resume failed';
+  @override
+  String get download_task_eta => 'ETA';
+  @override
+  String get download_task_ratio => 'Ratio';
+  @override
+  String get download_task_status_downloading => 'Downloading';
+  @override
+  String get download_task_status_seeding => 'Seeding';
+  @override
+  String get download_task_status_completed => 'Completed';
+  @override
+  String get download_task_status_paused => 'Paused';
+  @override
+  String get download_task_status_queued => 'Queued';
 }
 
 // Path: <root>
@@ -90022,6 +90397,36 @@ class _StringsTr extends _StringsEn {
   @override
   String sync_err_forbidden_detail({required Object reason}) =>
       'The server refused this request: ${reason} (your sign-in is fine)';
+  @override
+  String get download_task_status_stalled => 'Stalled';
+  @override
+  String get download_task_status_checking => 'Checking';
+  @override
+  String get download_task_status_metadata => 'Fetching metadata';
+  @override
+  String get download_task_status_moving => 'Moving';
+  @override
+  String get download_task_status_error => 'Error';
+  @override
+  String get download_task_pause => 'Pause';
+  @override
+  String get download_task_resume => 'Resume';
+  @override
+  String get download_task_toggle_failed => 'Pause/resume failed';
+  @override
+  String get download_task_eta => 'ETA';
+  @override
+  String get download_task_ratio => 'Ratio';
+  @override
+  String get download_task_status_downloading => 'Downloading';
+  @override
+  String get download_task_status_seeding => 'Seeding';
+  @override
+  String get download_task_status_completed => 'Completed';
+  @override
+  String get download_task_status_paused => 'Paused';
+  @override
+  String get download_task_status_queued => 'Queued';
 }
 
 // Path: <root>
@@ -96637,6 +97042,36 @@ class _StringsVi extends _StringsEn {
   @override
   String sync_err_forbidden_detail({required Object reason}) =>
       'The server refused this request: ${reason} (your sign-in is fine)';
+  @override
+  String get download_task_status_stalled => 'Stalled';
+  @override
+  String get download_task_status_checking => 'Checking';
+  @override
+  String get download_task_status_metadata => 'Fetching metadata';
+  @override
+  String get download_task_status_moving => 'Moving';
+  @override
+  String get download_task_status_error => 'Error';
+  @override
+  String get download_task_pause => 'Pause';
+  @override
+  String get download_task_resume => 'Resume';
+  @override
+  String get download_task_toggle_failed => 'Pause/resume failed';
+  @override
+  String get download_task_eta => 'ETA';
+  @override
+  String get download_task_ratio => 'Ratio';
+  @override
+  String get download_task_status_downloading => 'Downloading';
+  @override
+  String get download_task_status_seeding => 'Seeding';
+  @override
+  String get download_task_status_completed => 'Completed';
+  @override
+  String get download_task_status_paused => 'Paused';
+  @override
+  String get download_task_status_queued => 'Queued';
 }
 
 // Path: <root>
@@ -102779,6 +103214,36 @@ class _StringsZhCn extends _StringsEn {
   @override
   String sync_err_forbidden_detail({required Object reason}) =>
       '服务端拒绝了这次请求：${reason}（登录没问题）';
+  @override
+  String get download_task_status_stalled => '等待资源';
+  @override
+  String get download_task_status_checking => '校验中';
+  @override
+  String get download_task_status_metadata => '获取元数据';
+  @override
+  String get download_task_status_moving => '移动中';
+  @override
+  String get download_task_status_error => '出错';
+  @override
+  String get download_task_pause => '暂停';
+  @override
+  String get download_task_resume => '恢复';
+  @override
+  String get download_task_toggle_failed => '暂停/恢复操作失败';
+  @override
+  String get download_task_eta => '剩余';
+  @override
+  String get download_task_ratio => '分享率';
+  @override
+  String get download_task_status_downloading => '下载中';
+  @override
+  String get download_task_status_seeding => '做种中';
+  @override
+  String get download_task_status_completed => '已完成';
+  @override
+  String get download_task_status_paused => '已暂停';
+  @override
+  String get download_task_status_queued => '排队中';
 }
 
 // Path: <root>
@@ -109190,6 +109655,36 @@ class _StringsZhHk extends _StringsEn {
   @override
   String sync_err_forbidden_detail({required Object reason}) =>
       'The server refused this request: ${reason} (your sign-in is fine)';
+  @override
+  String get download_task_status_stalled => 'Stalled';
+  @override
+  String get download_task_status_checking => 'Checking';
+  @override
+  String get download_task_status_metadata => 'Fetching metadata';
+  @override
+  String get download_task_status_moving => 'Moving';
+  @override
+  String get download_task_status_error => 'Error';
+  @override
+  String get download_task_pause => 'Pause';
+  @override
+  String get download_task_resume => 'Resume';
+  @override
+  String get download_task_toggle_failed => 'Pause/resume failed';
+  @override
+  String get download_task_eta => 'ETA';
+  @override
+  String get download_task_ratio => 'Ratio';
+  @override
+  String get download_task_status_downloading => 'Downloading';
+  @override
+  String get download_task_status_seeding => 'Seeding';
+  @override
+  String get download_task_status_completed => 'Completed';
+  @override
+  String get download_task_status_paused => 'Paused';
+  @override
+  String get download_task_status_queued => 'Queued';
 }
 
 /// Flat map(s) containing all translations.
@@ -115083,6 +115578,36 @@ extension on _StringsEn {
       case 'sync_err_forbidden_detail':
         return ({required Object reason}) =>
             'The server refused this request: ${reason} (your sign-in is fine)';
+      case 'download_task_status_stalled':
+        return 'Stalled';
+      case 'download_task_status_checking':
+        return 'Checking';
+      case 'download_task_status_metadata':
+        return 'Fetching metadata';
+      case 'download_task_status_moving':
+        return 'Moving';
+      case 'download_task_status_error':
+        return 'Error';
+      case 'download_task_pause':
+        return 'Pause';
+      case 'download_task_resume':
+        return 'Resume';
+      case 'download_task_toggle_failed':
+        return 'Pause/resume failed';
+      case 'download_task_eta':
+        return 'ETA';
+      case 'download_task_ratio':
+        return 'Ratio';
+      case 'download_task_status_downloading':
+        return 'Downloading';
+      case 'download_task_status_seeding':
+        return 'Seeding';
+      case 'download_task_status_completed':
+        return 'Completed';
+      case 'download_task_status_paused':
+        return 'Paused';
+      case 'download_task_status_queued':
+        return 'Queued';
       default:
         return null;
     }
@@ -120974,6 +121499,36 @@ extension on _StringsAr {
       case 'sync_err_forbidden_detail':
         return ({required Object reason}) =>
             'The server refused this request: ${reason} (your sign-in is fine)';
+      case 'download_task_status_stalled':
+        return 'Stalled';
+      case 'download_task_status_checking':
+        return 'Checking';
+      case 'download_task_status_metadata':
+        return 'Fetching metadata';
+      case 'download_task_status_moving':
+        return 'Moving';
+      case 'download_task_status_error':
+        return 'Error';
+      case 'download_task_pause':
+        return 'Pause';
+      case 'download_task_resume':
+        return 'Resume';
+      case 'download_task_toggle_failed':
+        return 'Pause/resume failed';
+      case 'download_task_eta':
+        return 'ETA';
+      case 'download_task_ratio':
+        return 'Ratio';
+      case 'download_task_status_downloading':
+        return 'Downloading';
+      case 'download_task_status_seeding':
+        return 'Seeding';
+      case 'download_task_status_completed':
+        return 'Completed';
+      case 'download_task_status_paused':
+        return 'Paused';
+      case 'download_task_status_queued':
+        return 'Queued';
       default:
         return null;
     }
@@ -126887,6 +127442,36 @@ extension on _StringsDe {
       case 'sync_err_forbidden_detail':
         return ({required Object reason}) =>
             'The server refused this request: ${reason} (your sign-in is fine)';
+      case 'download_task_status_stalled':
+        return 'Stalled';
+      case 'download_task_status_checking':
+        return 'Checking';
+      case 'download_task_status_metadata':
+        return 'Fetching metadata';
+      case 'download_task_status_moving':
+        return 'Moving';
+      case 'download_task_status_error':
+        return 'Error';
+      case 'download_task_pause':
+        return 'Pause';
+      case 'download_task_resume':
+        return 'Resume';
+      case 'download_task_toggle_failed':
+        return 'Pause/resume failed';
+      case 'download_task_eta':
+        return 'ETA';
+      case 'download_task_ratio':
+        return 'Ratio';
+      case 'download_task_status_downloading':
+        return 'Downloading';
+      case 'download_task_status_seeding':
+        return 'Seeding';
+      case 'download_task_status_completed':
+        return 'Completed';
+      case 'download_task_status_paused':
+        return 'Paused';
+      case 'download_task_status_queued':
+        return 'Queued';
       default:
         return null;
     }
@@ -132799,6 +133384,36 @@ extension on _StringsEs {
       case 'sync_err_forbidden_detail':
         return ({required Object reason}) =>
             'The server refused this request: ${reason} (your sign-in is fine)';
+      case 'download_task_status_stalled':
+        return 'Stalled';
+      case 'download_task_status_checking':
+        return 'Checking';
+      case 'download_task_status_metadata':
+        return 'Fetching metadata';
+      case 'download_task_status_moving':
+        return 'Moving';
+      case 'download_task_status_error':
+        return 'Error';
+      case 'download_task_pause':
+        return 'Pause';
+      case 'download_task_resume':
+        return 'Resume';
+      case 'download_task_toggle_failed':
+        return 'Pause/resume failed';
+      case 'download_task_eta':
+        return 'ETA';
+      case 'download_task_ratio':
+        return 'Ratio';
+      case 'download_task_status_downloading':
+        return 'Downloading';
+      case 'download_task_status_seeding':
+        return 'Seeding';
+      case 'download_task_status_completed':
+        return 'Completed';
+      case 'download_task_status_paused':
+        return 'Paused';
+      case 'download_task_status_queued':
+        return 'Queued';
       default:
         return null;
     }
@@ -138717,6 +139332,36 @@ extension on _StringsFr {
       case 'sync_err_forbidden_detail':
         return ({required Object reason}) =>
             'The server refused this request: ${reason} (your sign-in is fine)';
+      case 'download_task_status_stalled':
+        return 'Stalled';
+      case 'download_task_status_checking':
+        return 'Checking';
+      case 'download_task_status_metadata':
+        return 'Fetching metadata';
+      case 'download_task_status_moving':
+        return 'Moving';
+      case 'download_task_status_error':
+        return 'Error';
+      case 'download_task_pause':
+        return 'Pause';
+      case 'download_task_resume':
+        return 'Resume';
+      case 'download_task_toggle_failed':
+        return 'Pause/resume failed';
+      case 'download_task_eta':
+        return 'ETA';
+      case 'download_task_ratio':
+        return 'Ratio';
+      case 'download_task_status_downloading':
+        return 'Downloading';
+      case 'download_task_status_seeding':
+        return 'Seeding';
+      case 'download_task_status_completed':
+        return 'Completed';
+      case 'download_task_status_paused':
+        return 'Paused';
+      case 'download_task_status_queued':
+        return 'Queued';
       default:
         return null;
     }
@@ -144617,6 +145262,36 @@ extension on _StringsId {
       case 'sync_err_forbidden_detail':
         return ({required Object reason}) =>
             'The server refused this request: ${reason} (your sign-in is fine)';
+      case 'download_task_status_stalled':
+        return 'Stalled';
+      case 'download_task_status_checking':
+        return 'Checking';
+      case 'download_task_status_metadata':
+        return 'Fetching metadata';
+      case 'download_task_status_moving':
+        return 'Moving';
+      case 'download_task_status_error':
+        return 'Error';
+      case 'download_task_pause':
+        return 'Pause';
+      case 'download_task_resume':
+        return 'Resume';
+      case 'download_task_toggle_failed':
+        return 'Pause/resume failed';
+      case 'download_task_eta':
+        return 'ETA';
+      case 'download_task_ratio':
+        return 'Ratio';
+      case 'download_task_status_downloading':
+        return 'Downloading';
+      case 'download_task_status_seeding':
+        return 'Seeding';
+      case 'download_task_status_completed':
+        return 'Completed';
+      case 'download_task_status_paused':
+        return 'Paused';
+      case 'download_task_status_queued':
+        return 'Queued';
       default:
         return null;
     }
@@ -150531,6 +151206,36 @@ extension on _StringsIt {
       case 'sync_err_forbidden_detail':
         return ({required Object reason}) =>
             'The server refused this request: ${reason} (your sign-in is fine)';
+      case 'download_task_status_stalled':
+        return 'Stalled';
+      case 'download_task_status_checking':
+        return 'Checking';
+      case 'download_task_status_metadata':
+        return 'Fetching metadata';
+      case 'download_task_status_moving':
+        return 'Moving';
+      case 'download_task_status_error':
+        return 'Error';
+      case 'download_task_pause':
+        return 'Pause';
+      case 'download_task_resume':
+        return 'Resume';
+      case 'download_task_toggle_failed':
+        return 'Pause/resume failed';
+      case 'download_task_eta':
+        return 'ETA';
+      case 'download_task_ratio':
+        return 'Ratio';
+      case 'download_task_status_downloading':
+        return 'Downloading';
+      case 'download_task_status_seeding':
+        return 'Seeding';
+      case 'download_task_status_completed':
+        return 'Completed';
+      case 'download_task_status_paused':
+        return 'Paused';
+      case 'download_task_status_queued':
+        return 'Queued';
       default:
         return null;
     }
@@ -156407,6 +157112,36 @@ extension on _StringsJa {
       case 'sync_err_forbidden_detail':
         return ({required Object reason}) =>
             'The server refused this request: ${reason} (your sign-in is fine)';
+      case 'download_task_status_stalled':
+        return 'Stalled';
+      case 'download_task_status_checking':
+        return 'Checking';
+      case 'download_task_status_metadata':
+        return 'Fetching metadata';
+      case 'download_task_status_moving':
+        return 'Moving';
+      case 'download_task_status_error':
+        return 'Error';
+      case 'download_task_pause':
+        return 'Pause';
+      case 'download_task_resume':
+        return 'Resume';
+      case 'download_task_toggle_failed':
+        return 'Pause/resume failed';
+      case 'download_task_eta':
+        return 'ETA';
+      case 'download_task_ratio':
+        return 'Ratio';
+      case 'download_task_status_downloading':
+        return 'Downloading';
+      case 'download_task_status_seeding':
+        return 'Seeding';
+      case 'download_task_status_completed':
+        return 'Completed';
+      case 'download_task_status_paused':
+        return 'Paused';
+      case 'download_task_status_queued':
+        return 'Queued';
       default:
         return null;
     }
@@ -162287,6 +163022,36 @@ extension on _StringsKo {
       case 'sync_err_forbidden_detail':
         return ({required Object reason}) =>
             'The server refused this request: ${reason} (your sign-in is fine)';
+      case 'download_task_status_stalled':
+        return 'Stalled';
+      case 'download_task_status_checking':
+        return 'Checking';
+      case 'download_task_status_metadata':
+        return 'Fetching metadata';
+      case 'download_task_status_moving':
+        return 'Moving';
+      case 'download_task_status_error':
+        return 'Error';
+      case 'download_task_pause':
+        return 'Pause';
+      case 'download_task_resume':
+        return 'Resume';
+      case 'download_task_toggle_failed':
+        return 'Pause/resume failed';
+      case 'download_task_eta':
+        return 'ETA';
+      case 'download_task_ratio':
+        return 'Ratio';
+      case 'download_task_status_downloading':
+        return 'Downloading';
+      case 'download_task_status_seeding':
+        return 'Seeding';
+      case 'download_task_status_completed':
+        return 'Completed';
+      case 'download_task_status_paused':
+        return 'Paused';
+      case 'download_task_status_queued':
+        return 'Queued';
       default:
         return null;
     }
@@ -168195,6 +168960,36 @@ extension on _StringsNl {
       case 'sync_err_forbidden_detail':
         return ({required Object reason}) =>
             'The server refused this request: ${reason} (your sign-in is fine)';
+      case 'download_task_status_stalled':
+        return 'Stalled';
+      case 'download_task_status_checking':
+        return 'Checking';
+      case 'download_task_status_metadata':
+        return 'Fetching metadata';
+      case 'download_task_status_moving':
+        return 'Moving';
+      case 'download_task_status_error':
+        return 'Error';
+      case 'download_task_pause':
+        return 'Pause';
+      case 'download_task_resume':
+        return 'Resume';
+      case 'download_task_toggle_failed':
+        return 'Pause/resume failed';
+      case 'download_task_eta':
+        return 'ETA';
+      case 'download_task_ratio':
+        return 'Ratio';
+      case 'download_task_status_downloading':
+        return 'Downloading';
+      case 'download_task_status_seeding':
+        return 'Seeding';
+      case 'download_task_status_completed':
+        return 'Completed';
+      case 'download_task_status_paused':
+        return 'Paused';
+      case 'download_task_status_queued':
+        return 'Queued';
       default:
         return null;
     }
@@ -174100,6 +174895,36 @@ extension on _StringsPtBr {
       case 'sync_err_forbidden_detail':
         return ({required Object reason}) =>
             'The server refused this request: ${reason} (your sign-in is fine)';
+      case 'download_task_status_stalled':
+        return 'Stalled';
+      case 'download_task_status_checking':
+        return 'Checking';
+      case 'download_task_status_metadata':
+        return 'Fetching metadata';
+      case 'download_task_status_moving':
+        return 'Moving';
+      case 'download_task_status_error':
+        return 'Error';
+      case 'download_task_pause':
+        return 'Pause';
+      case 'download_task_resume':
+        return 'Resume';
+      case 'download_task_toggle_failed':
+        return 'Pause/resume failed';
+      case 'download_task_eta':
+        return 'ETA';
+      case 'download_task_ratio':
+        return 'Ratio';
+      case 'download_task_status_downloading':
+        return 'Downloading';
+      case 'download_task_status_seeding':
+        return 'Seeding';
+      case 'download_task_status_completed':
+        return 'Completed';
+      case 'download_task_status_paused':
+        return 'Paused';
+      case 'download_task_status_queued':
+        return 'Queued';
       default:
         return null;
     }
@@ -180010,6 +180835,36 @@ extension on _StringsRu {
       case 'sync_err_forbidden_detail':
         return ({required Object reason}) =>
             'The server refused this request: ${reason} (your sign-in is fine)';
+      case 'download_task_status_stalled':
+        return 'Stalled';
+      case 'download_task_status_checking':
+        return 'Checking';
+      case 'download_task_status_metadata':
+        return 'Fetching metadata';
+      case 'download_task_status_moving':
+        return 'Moving';
+      case 'download_task_status_error':
+        return 'Error';
+      case 'download_task_pause':
+        return 'Pause';
+      case 'download_task_resume':
+        return 'Resume';
+      case 'download_task_toggle_failed':
+        return 'Pause/resume failed';
+      case 'download_task_eta':
+        return 'ETA';
+      case 'download_task_ratio':
+        return 'Ratio';
+      case 'download_task_status_downloading':
+        return 'Downloading';
+      case 'download_task_status_seeding':
+        return 'Seeding';
+      case 'download_task_status_completed':
+        return 'Completed';
+      case 'download_task_status_paused':
+        return 'Paused';
+      case 'download_task_status_queued':
+        return 'Queued';
       default:
         return null;
     }
@@ -185903,6 +186758,36 @@ extension on _StringsTh {
       case 'sync_err_forbidden_detail':
         return ({required Object reason}) =>
             'The server refused this request: ${reason} (your sign-in is fine)';
+      case 'download_task_status_stalled':
+        return 'Stalled';
+      case 'download_task_status_checking':
+        return 'Checking';
+      case 'download_task_status_metadata':
+        return 'Fetching metadata';
+      case 'download_task_status_moving':
+        return 'Moving';
+      case 'download_task_status_error':
+        return 'Error';
+      case 'download_task_pause':
+        return 'Pause';
+      case 'download_task_resume':
+        return 'Resume';
+      case 'download_task_toggle_failed':
+        return 'Pause/resume failed';
+      case 'download_task_eta':
+        return 'ETA';
+      case 'download_task_ratio':
+        return 'Ratio';
+      case 'download_task_status_downloading':
+        return 'Downloading';
+      case 'download_task_status_seeding':
+        return 'Seeding';
+      case 'download_task_status_completed':
+        return 'Completed';
+      case 'download_task_status_paused':
+        return 'Paused';
+      case 'download_task_status_queued':
+        return 'Queued';
       default:
         return null;
     }
@@ -191805,6 +192690,36 @@ extension on _StringsTr {
       case 'sync_err_forbidden_detail':
         return ({required Object reason}) =>
             'The server refused this request: ${reason} (your sign-in is fine)';
+      case 'download_task_status_stalled':
+        return 'Stalled';
+      case 'download_task_status_checking':
+        return 'Checking';
+      case 'download_task_status_metadata':
+        return 'Fetching metadata';
+      case 'download_task_status_moving':
+        return 'Moving';
+      case 'download_task_status_error':
+        return 'Error';
+      case 'download_task_pause':
+        return 'Pause';
+      case 'download_task_resume':
+        return 'Resume';
+      case 'download_task_toggle_failed':
+        return 'Pause/resume failed';
+      case 'download_task_eta':
+        return 'ETA';
+      case 'download_task_ratio':
+        return 'Ratio';
+      case 'download_task_status_downloading':
+        return 'Downloading';
+      case 'download_task_status_seeding':
+        return 'Seeding';
+      case 'download_task_status_completed':
+        return 'Completed';
+      case 'download_task_status_paused':
+        return 'Paused';
+      case 'download_task_status_queued':
+        return 'Queued';
       default:
         return null;
     }
@@ -197703,6 +198618,36 @@ extension on _StringsVi {
       case 'sync_err_forbidden_detail':
         return ({required Object reason}) =>
             'The server refused this request: ${reason} (your sign-in is fine)';
+      case 'download_task_status_stalled':
+        return 'Stalled';
+      case 'download_task_status_checking':
+        return 'Checking';
+      case 'download_task_status_metadata':
+        return 'Fetching metadata';
+      case 'download_task_status_moving':
+        return 'Moving';
+      case 'download_task_status_error':
+        return 'Error';
+      case 'download_task_pause':
+        return 'Pause';
+      case 'download_task_resume':
+        return 'Resume';
+      case 'download_task_toggle_failed':
+        return 'Pause/resume failed';
+      case 'download_task_eta':
+        return 'ETA';
+      case 'download_task_ratio':
+        return 'Ratio';
+      case 'download_task_status_downloading':
+        return 'Downloading';
+      case 'download_task_status_seeding':
+        return 'Seeding';
+      case 'download_task_status_completed':
+        return 'Completed';
+      case 'download_task_status_paused':
+        return 'Paused';
+      case 'download_task_status_queued':
+        return 'Queued';
       default:
         return null;
     }
@@ -203548,6 +204493,36 @@ extension on _StringsZhCn {
         return '服务端拒绝了这次请求。登录没问题，请检查服务端设置。';
       case 'sync_err_forbidden_detail':
         return ({required Object reason}) => '服务端拒绝了这次请求：${reason}（登录没问题）';
+      case 'download_task_status_stalled':
+        return '等待资源';
+      case 'download_task_status_checking':
+        return '校验中';
+      case 'download_task_status_metadata':
+        return '获取元数据';
+      case 'download_task_status_moving':
+        return '移动中';
+      case 'download_task_status_error':
+        return '出错';
+      case 'download_task_pause':
+        return '暂停';
+      case 'download_task_resume':
+        return '恢复';
+      case 'download_task_toggle_failed':
+        return '暂停/恢复操作失败';
+      case 'download_task_eta':
+        return '剩余';
+      case 'download_task_ratio':
+        return '分享率';
+      case 'download_task_status_downloading':
+        return '下载中';
+      case 'download_task_status_seeding':
+        return '做种中';
+      case 'download_task_status_completed':
+        return '已完成';
+      case 'download_task_status_paused':
+        return '已暂停';
+      case 'download_task_status_queued':
+        return '排队中';
       default:
         return null;
     }
@@ -209419,6 +210394,36 @@ extension on _StringsZhHk {
       case 'sync_err_forbidden_detail':
         return ({required Object reason}) =>
             'The server refused this request: ${reason} (your sign-in is fine)';
+      case 'download_task_status_stalled':
+        return 'Stalled';
+      case 'download_task_status_checking':
+        return 'Checking';
+      case 'download_task_status_metadata':
+        return 'Fetching metadata';
+      case 'download_task_status_moving':
+        return 'Moving';
+      case 'download_task_status_error':
+        return 'Error';
+      case 'download_task_pause':
+        return 'Pause';
+      case 'download_task_resume':
+        return 'Resume';
+      case 'download_task_toggle_failed':
+        return 'Pause/resume failed';
+      case 'download_task_eta':
+        return 'ETA';
+      case 'download_task_ratio':
+        return 'Ratio';
+      case 'download_task_status_downloading':
+        return 'Downloading';
+      case 'download_task_status_seeding':
+        return 'Seeding';
+      case 'download_task_status_completed':
+        return 'Completed';
+      case 'download_task_status_paused':
+        return 'Paused';
+      case 'download_task_status_queued':
+        return 'Queued';
       default:
         return null;
     }
