@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 50745 (2985 per locale)
+/// Strings: 50762 (2986 per locale)
 ///
-/// Built on 2026-08-01 at 08:46 UTC
+/// Built on 2026-08-01 at 09:11 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -4019,6 +4019,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_air_season_spring => 'Spring';
   String get video_air_season_summer => 'Summer';
   String get video_air_season_autumn => 'Fall';
+  String get delete_scope_no_channel =>
+      'No sync configured - this deletion only affects this device';
 }
 
 // Path: <root>
@@ -10872,6 +10874,9 @@ class _StringsAr extends _StringsEn {
   String get video_air_season_summer => 'Summer';
   @override
   String get video_air_season_autumn => 'Fall';
+  @override
+  String get delete_scope_no_channel =>
+      'No sync configured - this deletion only affects this device';
 }
 
 // Path: <root>
@@ -17792,6 +17797,9 @@ class _StringsDe extends _StringsEn {
   String get video_air_season_summer => 'Summer';
   @override
   String get video_air_season_autumn => 'Fall';
+  @override
+  String get delete_scope_no_channel =>
+      'No sync configured - this deletion only affects this device';
 }
 
 // Path: <root>
@@ -24727,6 +24735,9 @@ class _StringsEs extends _StringsEn {
   String get video_air_season_summer => 'Summer';
   @override
   String get video_air_season_autumn => 'Fall';
+  @override
+  String get delete_scope_no_channel =>
+      'No sync configured - this deletion only affects this device';
 }
 
 // Path: <root>
@@ -31674,6 +31685,9 @@ class _StringsFr extends _StringsEn {
   String get video_air_season_summer => 'Summer';
   @override
   String get video_air_season_autumn => 'Fall';
+  @override
+  String get delete_scope_no_channel =>
+      'No sync configured - this deletion only affects this device';
 }
 
 // Path: <root>
@@ -38550,6 +38564,9 @@ class _StringsId extends _StringsEn {
   String get video_air_season_summer => 'Summer';
   @override
   String get video_air_season_autumn => 'Fall';
+  @override
+  String get delete_scope_no_channel =>
+      'No sync configured - this deletion only affects this device';
 }
 
 // Path: <root>
@@ -45472,6 +45489,9 @@ class _StringsIt extends _StringsEn {
   String get video_air_season_summer => 'Summer';
   @override
   String get video_air_season_autumn => 'Fall';
+  @override
+  String get delete_scope_no_channel =>
+      'No sync configured - this deletion only affects this device';
 }
 
 // Path: <root>
@@ -52211,6 +52231,9 @@ class _StringsJa extends _StringsEn {
   String get video_air_season_summer => 'Summer';
   @override
   String get video_air_season_autumn => 'Fall';
+  @override
+  String get delete_scope_no_channel =>
+      'No sync configured - this deletion only affects this device';
 }
 
 // Path: <root>
@@ -58952,6 +58975,9 @@ class _StringsKo extends _StringsEn {
   String get video_air_season_summer => 'Summer';
   @override
   String get video_air_season_autumn => 'Fall';
+  @override
+  String get delete_scope_no_channel =>
+      'No sync configured - this deletion only affects this device';
 }
 
 // Path: <root>
@@ -65854,6 +65880,9 @@ class _StringsNl extends _StringsEn {
   String get video_air_season_summer => 'Summer';
   @override
   String get video_air_season_autumn => 'Fall';
+  @override
+  String get delete_scope_no_channel =>
+      'No sync configured - this deletion only affects this device';
 }
 
 // Path: <root>
@@ -72769,6 +72798,9 @@ class _StringsPtBr extends _StringsEn {
   String get video_air_season_summer => 'Summer';
   @override
   String get video_air_season_autumn => 'Fall';
+  @override
+  String get delete_scope_no_channel =>
+      'No sync configured - this deletion only affects this device';
 }
 
 // Path: <root>
@@ -79668,6 +79700,9 @@ class _StringsRu extends _StringsEn {
   String get video_air_season_summer => 'Summer';
   @override
   String get video_air_season_autumn => 'Fall';
+  @override
+  String get delete_scope_no_channel =>
+      'No sync configured - this deletion only affects this device';
 }
 
 // Path: <root>
@@ -86515,6 +86550,9 @@ class _StringsTh extends _StringsEn {
   String get video_air_season_summer => 'Summer';
   @override
   String get video_air_season_autumn => 'Fall';
+  @override
+  String get delete_scope_no_channel =>
+      'No sync configured - this deletion only affects this device';
 }
 
 // Path: <root>
@@ -93394,6 +93432,9 @@ class _StringsTr extends _StringsEn {
   String get video_air_season_summer => 'Summer';
   @override
   String get video_air_season_autumn => 'Fall';
+  @override
+  String get delete_scope_no_channel =>
+      'No sync configured - this deletion only affects this device';
 }
 
 // Path: <root>
@@ -100258,6 +100299,9 @@ class _StringsVi extends _StringsEn {
   String get video_air_season_summer => 'Summer';
   @override
   String get video_air_season_autumn => 'Fall';
+  @override
+  String get delete_scope_no_channel =>
+      'No sync configured - this deletion only affects this device';
 }
 
 // Path: <root>
@@ -106644,6 +106688,8 @@ class _StringsZhCn extends _StringsEn {
   String get video_air_season_summer => '夏';
   @override
   String get video_air_season_autumn => '秋';
+  @override
+  String get delete_scope_no_channel => '未配置同步，本次删除只影响这台设备';
 }
 
 // Path: <root>
@@ -113304,6 +113350,9 @@ class _StringsZhHk extends _StringsEn {
   String get video_air_season_summer => 'Summer';
   @override
   String get video_air_season_autumn => 'Fall';
+  @override
+  String get delete_scope_no_channel =>
+      'No sync configured - this deletion only affects this device';
 }
 
 /// Flat map(s) containing all translations.
@@ -119430,6 +119479,8 @@ extension on _StringsEn {
         return 'Summer';
       case 'video_air_season_autumn':
         return 'Fall';
+      case 'delete_scope_no_channel':
+        return 'No sync configured - this deletion only affects this device';
       default:
         return null;
     }
@@ -125554,6 +125605,8 @@ extension on _StringsAr {
         return 'Summer';
       case 'video_air_season_autumn':
         return 'Fall';
+      case 'delete_scope_no_channel':
+        return 'No sync configured - this deletion only affects this device';
       default:
         return null;
     }
@@ -131700,6 +131753,8 @@ extension on _StringsDe {
         return 'Summer';
       case 'video_air_season_autumn':
         return 'Fall';
+      case 'delete_scope_no_channel':
+        return 'No sync configured - this deletion only affects this device';
       default:
         return null;
     }
@@ -137845,6 +137900,8 @@ extension on _StringsEs {
         return 'Summer';
       case 'video_air_season_autumn':
         return 'Fall';
+      case 'delete_scope_no_channel':
+        return 'No sync configured - this deletion only affects this device';
       default:
         return null;
     }
@@ -143996,6 +144053,8 @@ extension on _StringsFr {
         return 'Summer';
       case 'video_air_season_autumn':
         return 'Fall';
+      case 'delete_scope_no_channel':
+        return 'No sync configured - this deletion only affects this device';
       default:
         return null;
     }
@@ -150129,6 +150188,8 @@ extension on _StringsId {
         return 'Summer';
       case 'video_air_season_autumn':
         return 'Fall';
+      case 'delete_scope_no_channel':
+        return 'No sync configured - this deletion only affects this device';
       default:
         return null;
     }
@@ -156276,6 +156337,8 @@ extension on _StringsIt {
         return 'Summer';
       case 'video_air_season_autumn':
         return 'Fall';
+      case 'delete_scope_no_channel':
+        return 'No sync configured - this deletion only affects this device';
       default:
         return null;
     }
@@ -162385,6 +162448,8 @@ extension on _StringsJa {
         return 'Summer';
       case 'video_air_season_autumn':
         return 'Fall';
+      case 'delete_scope_no_channel':
+        return 'No sync configured - this deletion only affects this device';
       default:
         return null;
     }
@@ -168498,6 +168563,8 @@ extension on _StringsKo {
         return 'Summer';
       case 'video_air_season_autumn':
         return 'Fall';
+      case 'delete_scope_no_channel':
+        return 'No sync configured - this deletion only affects this device';
       default:
         return null;
     }
@@ -174639,6 +174706,8 @@ extension on _StringsNl {
         return 'Summer';
       case 'video_air_season_autumn':
         return 'Fall';
+      case 'delete_scope_no_channel':
+        return 'No sync configured - this deletion only affects this device';
       default:
         return null;
     }
@@ -180777,6 +180846,8 @@ extension on _StringsPtBr {
         return 'Summer';
       case 'video_air_season_autumn':
         return 'Fall';
+      case 'delete_scope_no_channel':
+        return 'No sync configured - this deletion only affects this device';
       default:
         return null;
     }
@@ -186920,6 +186991,8 @@ extension on _StringsRu {
         return 'Summer';
       case 'video_air_season_autumn':
         return 'Fall';
+      case 'delete_scope_no_channel':
+        return 'No sync configured - this deletion only affects this device';
       default:
         return null;
     }
@@ -193046,6 +193119,8 @@ extension on _StringsTh {
         return 'Summer';
       case 'video_air_season_autumn':
         return 'Fall';
+      case 'delete_scope_no_channel':
+        return 'No sync configured - this deletion only affects this device';
       default:
         return null;
     }
@@ -199181,6 +199256,8 @@ extension on _StringsTr {
         return 'Summer';
       case 'video_air_season_autumn':
         return 'Fall';
+      case 'delete_scope_no_channel':
+        return 'No sync configured - this deletion only affects this device';
       default:
         return null;
     }
@@ -205312,6 +205389,8 @@ extension on _StringsVi {
         return 'Summer';
       case 'video_air_season_autumn':
         return 'Fall';
+      case 'delete_scope_no_channel':
+        return 'No sync configured - this deletion only affects this device';
       default:
         return null;
     }
@@ -211390,6 +211469,8 @@ extension on _StringsZhCn {
         return '夏';
       case 'video_air_season_autumn':
         return '秋';
+      case 'delete_scope_no_channel':
+        return '未配置同步，本次删除只影响这台设备';
       default:
         return null;
     }
@@ -217494,6 +217575,8 @@ extension on _StringsZhHk {
         return 'Summer';
       case 'video_air_season_autumn':
         return 'Fall';
+      case 'delete_scope_no_channel':
+        return 'No sync configured - this deletion only affects this device';
       default:
         return null;
     }
