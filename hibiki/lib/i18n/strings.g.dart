@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 51374 (3022 per locale)
+/// Strings: 51391 (3023 per locale)
 ///
-/// Built on 2026-08-01 at 09:22 UTC
+/// Built on 2026-08-01 at 09:43 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -4019,6 +4019,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_air_season_spring => 'Spring';
   String get video_air_season_summer => 'Summer';
   String get video_air_season_autumn => 'Fall';
+  String get delete_scope_no_channel =>
+      'No sync configured - this deletion only affects this device';
   String get mihon_sources_title => 'Manga sources';
   String get mihon_extensions_title => 'Manga extensions';
   String get mihon_store_add => 'Add extension store';
@@ -10914,6 +10916,9 @@ class _StringsAr extends _StringsEn {
   String get video_air_season_summer => 'Summer';
   @override
   String get video_air_season_autumn => 'Fall';
+  @override
+  String get delete_scope_no_channel =>
+      'No sync configured - this deletion only affects this device';
   @override
   String get mihon_sources_title => 'Manga sources';
   @override
@@ -17913,6 +17918,9 @@ class _StringsDe extends _StringsEn {
   String get video_air_season_summer => 'Summer';
   @override
   String get video_air_season_autumn => 'Fall';
+  @override
+  String get delete_scope_no_channel =>
+      'No sync configured - this deletion only affects this device';
   @override
   String get mihon_sources_title => 'Manga sources';
   @override
@@ -24927,6 +24935,9 @@ class _StringsEs extends _StringsEn {
   String get video_air_season_summer => 'Summer';
   @override
   String get video_air_season_autumn => 'Fall';
+  @override
+  String get delete_scope_no_channel =>
+      'No sync configured - this deletion only affects this device';
   @override
   String get mihon_sources_title => 'Manga sources';
   @override
@@ -31954,6 +31965,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_air_season_autumn => 'Fall';
   @override
+  String get delete_scope_no_channel =>
+      'No sync configured - this deletion only affects this device';
+  @override
   String get mihon_sources_title => 'Manga sources';
   @override
   String get mihon_extensions_title => 'Manga extensions';
@@ -38908,6 +38922,9 @@ class _StringsId extends _StringsEn {
   String get video_air_season_summer => 'Summer';
   @override
   String get video_air_season_autumn => 'Fall';
+  @override
+  String get delete_scope_no_channel =>
+      'No sync configured - this deletion only affects this device';
   @override
   String get mihon_sources_title => 'Manga sources';
   @override
@@ -45910,6 +45927,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_air_season_autumn => 'Fall';
   @override
+  String get delete_scope_no_channel =>
+      'No sync configured - this deletion only affects this device';
+  @override
   String get mihon_sources_title => 'Manga sources';
   @override
   String get mihon_extensions_title => 'Manga extensions';
@@ -52727,6 +52747,9 @@ class _StringsJa extends _StringsEn {
   String get video_air_season_summer => 'Summer';
   @override
   String get video_air_season_autumn => 'Fall';
+  @override
+  String get delete_scope_no_channel =>
+      'No sync configured - this deletion only affects this device';
   @override
   String get mihon_sources_title => 'Manga sources';
   @override
@@ -59547,6 +59570,9 @@ class _StringsKo extends _StringsEn {
   String get video_air_season_summer => 'Summer';
   @override
   String get video_air_season_autumn => 'Fall';
+  @override
+  String get delete_scope_no_channel =>
+      'No sync configured - this deletion only affects this device';
   @override
   String get mihon_sources_title => 'Manga sources';
   @override
@@ -66528,6 +66554,9 @@ class _StringsNl extends _StringsEn {
   String get video_air_season_summer => 'Summer';
   @override
   String get video_air_season_autumn => 'Fall';
+  @override
+  String get delete_scope_no_channel =>
+      'No sync configured - this deletion only affects this device';
   @override
   String get mihon_sources_title => 'Manga sources';
   @override
@@ -73523,6 +73552,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_air_season_autumn => 'Fall';
   @override
+  String get delete_scope_no_channel =>
+      'No sync configured - this deletion only affects this device';
+  @override
   String get mihon_sources_title => 'Manga sources';
   @override
   String get mihon_extensions_title => 'Manga extensions';
@@ -80501,6 +80533,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_air_season_autumn => 'Fall';
   @override
+  String get delete_scope_no_channel =>
+      'No sync configured - this deletion only affects this device';
+  @override
   String get mihon_sources_title => 'Manga sources';
   @override
   String get mihon_extensions_title => 'Manga extensions';
@@ -87426,6 +87461,9 @@ class _StringsTh extends _StringsEn {
   String get video_air_season_summer => 'Summer';
   @override
   String get video_air_season_autumn => 'Fall';
+  @override
+  String get delete_scope_no_channel =>
+      'No sync configured - this deletion only affects this device';
   @override
   String get mihon_sources_title => 'Manga sources';
   @override
@@ -94385,6 +94423,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_air_season_autumn => 'Fall';
   @override
+  String get delete_scope_no_channel =>
+      'No sync configured - this deletion only affects this device';
+  @override
   String get mihon_sources_title => 'Manga sources';
   @override
   String get mihon_extensions_title => 'Manga extensions';
@@ -101328,6 +101369,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_air_season_autumn => 'Fall';
   @override
+  String get delete_scope_no_channel =>
+      'No sync configured - this deletion only affects this device';
+  @override
   String get mihon_sources_title => 'Manga sources';
   @override
   String get mihon_extensions_title => 'Manga extensions';
@@ -107792,6 +107836,8 @@ class _StringsZhCn extends _StringsEn {
   String get video_air_season_summer => '夏';
   @override
   String get video_air_season_autumn => '秋';
+  @override
+  String get delete_scope_no_channel => '未配置同步，本次删除只影响这台设备';
   @override
   String get mihon_sources_title => '漫画源';
   @override
@@ -114528,6 +114574,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_air_season_autumn => 'Fall';
   @override
+  String get delete_scope_no_channel =>
+      'No sync configured - this deletion only affects this device';
+  @override
   String get mihon_sources_title => 'Manga sources';
   @override
   String get mihon_extensions_title => 'Manga extensions';
@@ -120732,6 +120781,8 @@ extension on _StringsEn {
         return 'Summer';
       case 'video_air_season_autumn':
         return 'Fall';
+      case 'delete_scope_no_channel':
+        return 'No sync configured - this deletion only affects this device';
       case 'mihon_sources_title':
         return 'Manga sources';
       case 'mihon_extensions_title':
@@ -126930,6 +126981,8 @@ extension on _StringsAr {
         return 'Summer';
       case 'video_air_season_autumn':
         return 'Fall';
+      case 'delete_scope_no_channel':
+        return 'No sync configured - this deletion only affects this device';
       case 'mihon_sources_title':
         return 'Manga sources';
       case 'mihon_extensions_title':
@@ -133150,6 +133203,8 @@ extension on _StringsDe {
         return 'Summer';
       case 'video_air_season_autumn':
         return 'Fall';
+      case 'delete_scope_no_channel':
+        return 'No sync configured - this deletion only affects this device';
       case 'mihon_sources_title':
         return 'Manga sources';
       case 'mihon_extensions_title':
@@ -139369,6 +139424,8 @@ extension on _StringsEs {
         return 'Summer';
       case 'video_air_season_autumn':
         return 'Fall';
+      case 'delete_scope_no_channel':
+        return 'No sync configured - this deletion only affects this device';
       case 'mihon_sources_title':
         return 'Manga sources';
       case 'mihon_extensions_title':
@@ -145594,6 +145651,8 @@ extension on _StringsFr {
         return 'Summer';
       case 'video_air_season_autumn':
         return 'Fall';
+      case 'delete_scope_no_channel':
+        return 'No sync configured - this deletion only affects this device';
       case 'mihon_sources_title':
         return 'Manga sources';
       case 'mihon_extensions_title':
@@ -151801,6 +151860,8 @@ extension on _StringsId {
         return 'Summer';
       case 'video_air_season_autumn':
         return 'Fall';
+      case 'delete_scope_no_channel':
+        return 'No sync configured - this deletion only affects this device';
       case 'mihon_sources_title':
         return 'Manga sources';
       case 'mihon_extensions_title':
@@ -158022,6 +158083,8 @@ extension on _StringsIt {
         return 'Summer';
       case 'video_air_season_autumn':
         return 'Fall';
+      case 'delete_scope_no_channel':
+        return 'No sync configured - this deletion only affects this device';
       case 'mihon_sources_title':
         return 'Manga sources';
       case 'mihon_extensions_title':
@@ -164205,6 +164268,8 @@ extension on _StringsJa {
         return 'Summer';
       case 'video_air_season_autumn':
         return 'Fall';
+      case 'delete_scope_no_channel':
+        return 'No sync configured - this deletion only affects this device';
       case 'mihon_sources_title':
         return 'Manga sources';
       case 'mihon_extensions_title':
@@ -170392,6 +170457,8 @@ extension on _StringsKo {
         return 'Summer';
       case 'video_air_season_autumn':
         return 'Fall';
+      case 'delete_scope_no_channel':
+        return 'No sync configured - this deletion only affects this device';
       case 'mihon_sources_title':
         return 'Manga sources';
       case 'mihon_extensions_title':
@@ -176607,6 +176674,8 @@ extension on _StringsNl {
         return 'Summer';
       case 'video_air_season_autumn':
         return 'Fall';
+      case 'delete_scope_no_channel':
+        return 'No sync configured - this deletion only affects this device';
       case 'mihon_sources_title':
         return 'Manga sources';
       case 'mihon_extensions_title':
@@ -182819,6 +182888,8 @@ extension on _StringsPtBr {
         return 'Summer';
       case 'video_air_season_autumn':
         return 'Fall';
+      case 'delete_scope_no_channel':
+        return 'No sync configured - this deletion only affects this device';
       case 'mihon_sources_title':
         return 'Manga sources';
       case 'mihon_extensions_title':
@@ -189036,6 +189107,8 @@ extension on _StringsRu {
         return 'Summer';
       case 'video_air_season_autumn':
         return 'Fall';
+      case 'delete_scope_no_channel':
+        return 'No sync configured - this deletion only affects this device';
       case 'mihon_sources_title':
         return 'Manga sources';
       case 'mihon_extensions_title':
@@ -195236,6 +195309,8 @@ extension on _StringsTh {
         return 'Summer';
       case 'video_air_season_autumn':
         return 'Fall';
+      case 'delete_scope_no_channel':
+        return 'No sync configured - this deletion only affects this device';
       case 'mihon_sources_title':
         return 'Manga sources';
       case 'mihon_extensions_title':
@@ -201445,6 +201520,8 @@ extension on _StringsTr {
         return 'Summer';
       case 'video_air_season_autumn':
         return 'Fall';
+      case 'delete_scope_no_channel':
+        return 'No sync configured - this deletion only affects this device';
       case 'mihon_sources_title':
         return 'Manga sources';
       case 'mihon_extensions_title':
@@ -207650,6 +207727,8 @@ extension on _StringsVi {
         return 'Summer';
       case 'video_air_season_autumn':
         return 'Fall';
+      case 'delete_scope_no_channel':
+        return 'No sync configured - this deletion only affects this device';
       case 'mihon_sources_title':
         return 'Manga sources';
       case 'mihon_extensions_title':
@@ -213802,6 +213881,8 @@ extension on _StringsZhCn {
         return '夏';
       case 'video_air_season_autumn':
         return '秋';
+      case 'delete_scope_no_channel':
+        return '未配置同步，本次删除只影响这台设备';
       case 'mihon_sources_title':
         return '漫画源';
       case 'mihon_extensions_title':
@@ -219980,6 +220061,8 @@ extension on _StringsZhHk {
         return 'Summer';
       case 'video_air_season_autumn':
         return 'Fall';
+      case 'delete_scope_no_channel':
+        return 'No sync configured - this deletion only affects this device';
       case 'mihon_sources_title':
         return 'Manga sources';
       case 'mihon_extensions_title':
