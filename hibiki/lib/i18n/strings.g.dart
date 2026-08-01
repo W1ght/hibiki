@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 49249 (2897 per locale)
+/// Strings: 49504 (2912 per locale)
 ///
-/// Built on 2026-08-01 at 05:20 UTC
+/// Built on 2026-08-01 at 05:47 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3922,6 +3922,21 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'New name: ${name}';
   String get video_scrape_collection_rename_keep => 'Keep current name';
   String get video_scrape_collection_rename_confirm => 'Rename';
+  String get download_task_toggle_failed => 'Pause/resume failed';
+  String get download_task_eta => 'ETA';
+  String get download_task_ratio => 'Ratio';
+  String get download_task_status_downloading => 'Downloading';
+  String get download_task_status_seeding => 'Seeding';
+  String get download_task_status_completed => 'Completed';
+  String get download_task_status_paused => 'Paused';
+  String get download_task_status_queued => 'Queued';
+  String get download_task_status_stalled => 'Stalled';
+  String get download_task_status_checking => 'Checking';
+  String get download_task_status_metadata => 'Fetching metadata';
+  String get download_task_status_moving => 'Moving';
+  String get download_task_status_error => 'Error';
+  String get download_task_pause => 'Pause';
+  String get download_task_resume => 'Resume';
 }
 
 // Path: <root>
@@ -10590,6 +10605,36 @@ class _StringsAr extends _StringsEn {
   String get video_scrape_collection_rename_keep => 'Keep current name';
   @override
   String get video_scrape_collection_rename_confirm => 'Rename';
+  @override
+  String get download_task_toggle_failed => 'Pause/resume failed';
+  @override
+  String get download_task_eta => 'ETA';
+  @override
+  String get download_task_ratio => 'Ratio';
+  @override
+  String get download_task_status_downloading => 'Downloading';
+  @override
+  String get download_task_status_seeding => 'Seeding';
+  @override
+  String get download_task_status_completed => 'Completed';
+  @override
+  String get download_task_status_paused => 'Paused';
+  @override
+  String get download_task_status_queued => 'Queued';
+  @override
+  String get download_task_status_stalled => 'Stalled';
+  @override
+  String get download_task_status_checking => 'Checking';
+  @override
+  String get download_task_status_metadata => 'Fetching metadata';
+  @override
+  String get download_task_status_moving => 'Moving';
+  @override
+  String get download_task_status_error => 'Error';
+  @override
+  String get download_task_pause => 'Pause';
+  @override
+  String get download_task_resume => 'Resume';
 }
 
 // Path: <root>
@@ -17325,6 +17370,36 @@ class _StringsDe extends _StringsEn {
   String get video_scrape_collection_rename_keep => 'Keep current name';
   @override
   String get video_scrape_collection_rename_confirm => 'Rename';
+  @override
+  String get download_task_toggle_failed => 'Pause/resume failed';
+  @override
+  String get download_task_eta => 'ETA';
+  @override
+  String get download_task_ratio => 'Ratio';
+  @override
+  String get download_task_status_downloading => 'Downloading';
+  @override
+  String get download_task_status_seeding => 'Seeding';
+  @override
+  String get download_task_status_completed => 'Completed';
+  @override
+  String get download_task_status_paused => 'Paused';
+  @override
+  String get download_task_status_queued => 'Queued';
+  @override
+  String get download_task_status_stalled => 'Stalled';
+  @override
+  String get download_task_status_checking => 'Checking';
+  @override
+  String get download_task_status_metadata => 'Fetching metadata';
+  @override
+  String get download_task_status_moving => 'Moving';
+  @override
+  String get download_task_status_error => 'Error';
+  @override
+  String get download_task_pause => 'Pause';
+  @override
+  String get download_task_resume => 'Resume';
 }
 
 // Path: <root>
@@ -24076,6 +24151,36 @@ class _StringsEs extends _StringsEn {
   String get video_scrape_collection_rename_keep => 'Keep current name';
   @override
   String get video_scrape_collection_rename_confirm => 'Rename';
+  @override
+  String get download_task_toggle_failed => 'Pause/resume failed';
+  @override
+  String get download_task_eta => 'ETA';
+  @override
+  String get download_task_ratio => 'Ratio';
+  @override
+  String get download_task_status_downloading => 'Downloading';
+  @override
+  String get download_task_status_seeding => 'Seeding';
+  @override
+  String get download_task_status_completed => 'Completed';
+  @override
+  String get download_task_status_paused => 'Paused';
+  @override
+  String get download_task_status_queued => 'Queued';
+  @override
+  String get download_task_status_stalled => 'Stalled';
+  @override
+  String get download_task_status_checking => 'Checking';
+  @override
+  String get download_task_status_metadata => 'Fetching metadata';
+  @override
+  String get download_task_status_moving => 'Moving';
+  @override
+  String get download_task_status_error => 'Error';
+  @override
+  String get download_task_pause => 'Pause';
+  @override
+  String get download_task_resume => 'Resume';
 }
 
 // Path: <root>
@@ -30838,6 +30943,36 @@ class _StringsFr extends _StringsEn {
   String get video_scrape_collection_rename_keep => 'Keep current name';
   @override
   String get video_scrape_collection_rename_confirm => 'Rename';
+  @override
+  String get download_task_toggle_failed => 'Pause/resume failed';
+  @override
+  String get download_task_eta => 'ETA';
+  @override
+  String get download_task_ratio => 'Ratio';
+  @override
+  String get download_task_status_downloading => 'Downloading';
+  @override
+  String get download_task_status_seeding => 'Seeding';
+  @override
+  String get download_task_status_completed => 'Completed';
+  @override
+  String get download_task_status_paused => 'Paused';
+  @override
+  String get download_task_status_queued => 'Queued';
+  @override
+  String get download_task_status_stalled => 'Stalled';
+  @override
+  String get download_task_status_checking => 'Checking';
+  @override
+  String get download_task_status_metadata => 'Fetching metadata';
+  @override
+  String get download_task_status_moving => 'Moving';
+  @override
+  String get download_task_status_error => 'Error';
+  @override
+  String get download_task_pause => 'Pause';
+  @override
+  String get download_task_resume => 'Resume';
 }
 
 // Path: <root>
@@ -37529,6 +37664,36 @@ class _StringsId extends _StringsEn {
   String get video_scrape_collection_rename_keep => 'Keep current name';
   @override
   String get video_scrape_collection_rename_confirm => 'Rename';
+  @override
+  String get download_task_toggle_failed => 'Pause/resume failed';
+  @override
+  String get download_task_eta => 'ETA';
+  @override
+  String get download_task_ratio => 'Ratio';
+  @override
+  String get download_task_status_downloading => 'Downloading';
+  @override
+  String get download_task_status_seeding => 'Seeding';
+  @override
+  String get download_task_status_completed => 'Completed';
+  @override
+  String get download_task_status_paused => 'Paused';
+  @override
+  String get download_task_status_queued => 'Queued';
+  @override
+  String get download_task_status_stalled => 'Stalled';
+  @override
+  String get download_task_status_checking => 'Checking';
+  @override
+  String get download_task_status_metadata => 'Fetching metadata';
+  @override
+  String get download_task_status_moving => 'Moving';
+  @override
+  String get download_task_status_error => 'Error';
+  @override
+  String get download_task_pause => 'Pause';
+  @override
+  String get download_task_resume => 'Resume';
 }
 
 // Path: <root>
@@ -44266,6 +44431,36 @@ class _StringsIt extends _StringsEn {
   String get video_scrape_collection_rename_keep => 'Keep current name';
   @override
   String get video_scrape_collection_rename_confirm => 'Rename';
+  @override
+  String get download_task_toggle_failed => 'Pause/resume failed';
+  @override
+  String get download_task_eta => 'ETA';
+  @override
+  String get download_task_ratio => 'Ratio';
+  @override
+  String get download_task_status_downloading => 'Downloading';
+  @override
+  String get download_task_status_seeding => 'Seeding';
+  @override
+  String get download_task_status_completed => 'Completed';
+  @override
+  String get download_task_status_paused => 'Paused';
+  @override
+  String get download_task_status_queued => 'Queued';
+  @override
+  String get download_task_status_stalled => 'Stalled';
+  @override
+  String get download_task_status_checking => 'Checking';
+  @override
+  String get download_task_status_metadata => 'Fetching metadata';
+  @override
+  String get download_task_status_moving => 'Moving';
+  @override
+  String get download_task_status_error => 'Error';
+  @override
+  String get download_task_pause => 'Pause';
+  @override
+  String get download_task_resume => 'Resume';
 }
 
 // Path: <root>
@@ -50820,6 +51015,36 @@ class _StringsJa extends _StringsEn {
   String get video_scrape_collection_rename_keep => 'Keep current name';
   @override
   String get video_scrape_collection_rename_confirm => 'Rename';
+  @override
+  String get download_task_toggle_failed => 'Pause/resume failed';
+  @override
+  String get download_task_eta => 'ETA';
+  @override
+  String get download_task_ratio => 'Ratio';
+  @override
+  String get download_task_status_downloading => 'Downloading';
+  @override
+  String get download_task_status_seeding => 'Seeding';
+  @override
+  String get download_task_status_completed => 'Completed';
+  @override
+  String get download_task_status_paused => 'Paused';
+  @override
+  String get download_task_status_queued => 'Queued';
+  @override
+  String get download_task_status_stalled => 'Stalled';
+  @override
+  String get download_task_status_checking => 'Checking';
+  @override
+  String get download_task_status_metadata => 'Fetching metadata';
+  @override
+  String get download_task_status_moving => 'Moving';
+  @override
+  String get download_task_status_error => 'Error';
+  @override
+  String get download_task_pause => 'Pause';
+  @override
+  String get download_task_resume => 'Resume';
 }
 
 // Path: <root>
@@ -57376,6 +57601,36 @@ class _StringsKo extends _StringsEn {
   String get video_scrape_collection_rename_keep => 'Keep current name';
   @override
   String get video_scrape_collection_rename_confirm => 'Rename';
+  @override
+  String get download_task_toggle_failed => 'Pause/resume failed';
+  @override
+  String get download_task_eta => 'ETA';
+  @override
+  String get download_task_ratio => 'Ratio';
+  @override
+  String get download_task_status_downloading => 'Downloading';
+  @override
+  String get download_task_status_seeding => 'Seeding';
+  @override
+  String get download_task_status_completed => 'Completed';
+  @override
+  String get download_task_status_paused => 'Paused';
+  @override
+  String get download_task_status_queued => 'Queued';
+  @override
+  String get download_task_status_stalled => 'Stalled';
+  @override
+  String get download_task_status_checking => 'Checking';
+  @override
+  String get download_task_status_metadata => 'Fetching metadata';
+  @override
+  String get download_task_status_moving => 'Moving';
+  @override
+  String get download_task_status_error => 'Error';
+  @override
+  String get download_task_pause => 'Pause';
+  @override
+  String get download_task_resume => 'Resume';
 }
 
 // Path: <root>
@@ -64093,6 +64348,36 @@ class _StringsNl extends _StringsEn {
   String get video_scrape_collection_rename_keep => 'Keep current name';
   @override
   String get video_scrape_collection_rename_confirm => 'Rename';
+  @override
+  String get download_task_toggle_failed => 'Pause/resume failed';
+  @override
+  String get download_task_eta => 'ETA';
+  @override
+  String get download_task_ratio => 'Ratio';
+  @override
+  String get download_task_status_downloading => 'Downloading';
+  @override
+  String get download_task_status_seeding => 'Seeding';
+  @override
+  String get download_task_status_completed => 'Completed';
+  @override
+  String get download_task_status_paused => 'Paused';
+  @override
+  String get download_task_status_queued => 'Queued';
+  @override
+  String get download_task_status_stalled => 'Stalled';
+  @override
+  String get download_task_status_checking => 'Checking';
+  @override
+  String get download_task_status_metadata => 'Fetching metadata';
+  @override
+  String get download_task_status_moving => 'Moving';
+  @override
+  String get download_task_status_error => 'Error';
+  @override
+  String get download_task_pause => 'Pause';
+  @override
+  String get download_task_resume => 'Resume';
 }
 
 // Path: <root>
@@ -70823,6 +71108,36 @@ class _StringsPtBr extends _StringsEn {
   String get video_scrape_collection_rename_keep => 'Keep current name';
   @override
   String get video_scrape_collection_rename_confirm => 'Rename';
+  @override
+  String get download_task_toggle_failed => 'Pause/resume failed';
+  @override
+  String get download_task_eta => 'ETA';
+  @override
+  String get download_task_ratio => 'Ratio';
+  @override
+  String get download_task_status_downloading => 'Downloading';
+  @override
+  String get download_task_status_seeding => 'Seeding';
+  @override
+  String get download_task_status_completed => 'Completed';
+  @override
+  String get download_task_status_paused => 'Paused';
+  @override
+  String get download_task_status_queued => 'Queued';
+  @override
+  String get download_task_status_stalled => 'Stalled';
+  @override
+  String get download_task_status_checking => 'Checking';
+  @override
+  String get download_task_status_metadata => 'Fetching metadata';
+  @override
+  String get download_task_status_moving => 'Moving';
+  @override
+  String get download_task_status_error => 'Error';
+  @override
+  String get download_task_pause => 'Pause';
+  @override
+  String get download_task_resume => 'Resume';
 }
 
 // Path: <root>
@@ -77537,6 +77852,36 @@ class _StringsRu extends _StringsEn {
   String get video_scrape_collection_rename_keep => 'Keep current name';
   @override
   String get video_scrape_collection_rename_confirm => 'Rename';
+  @override
+  String get download_task_toggle_failed => 'Pause/resume failed';
+  @override
+  String get download_task_eta => 'ETA';
+  @override
+  String get download_task_ratio => 'Ratio';
+  @override
+  String get download_task_status_downloading => 'Downloading';
+  @override
+  String get download_task_status_seeding => 'Seeding';
+  @override
+  String get download_task_status_completed => 'Completed';
+  @override
+  String get download_task_status_paused => 'Paused';
+  @override
+  String get download_task_status_queued => 'Queued';
+  @override
+  String get download_task_status_stalled => 'Stalled';
+  @override
+  String get download_task_status_checking => 'Checking';
+  @override
+  String get download_task_status_metadata => 'Fetching metadata';
+  @override
+  String get download_task_status_moving => 'Moving';
+  @override
+  String get download_task_status_error => 'Error';
+  @override
+  String get download_task_pause => 'Pause';
+  @override
+  String get download_task_resume => 'Resume';
 }
 
 // Path: <root>
@@ -84199,6 +84544,36 @@ class _StringsTh extends _StringsEn {
   String get video_scrape_collection_rename_keep => 'Keep current name';
   @override
   String get video_scrape_collection_rename_confirm => 'Rename';
+  @override
+  String get download_task_toggle_failed => 'Pause/resume failed';
+  @override
+  String get download_task_eta => 'ETA';
+  @override
+  String get download_task_ratio => 'Ratio';
+  @override
+  String get download_task_status_downloading => 'Downloading';
+  @override
+  String get download_task_status_seeding => 'Seeding';
+  @override
+  String get download_task_status_completed => 'Completed';
+  @override
+  String get download_task_status_paused => 'Paused';
+  @override
+  String get download_task_status_queued => 'Queued';
+  @override
+  String get download_task_status_stalled => 'Stalled';
+  @override
+  String get download_task_status_checking => 'Checking';
+  @override
+  String get download_task_status_metadata => 'Fetching metadata';
+  @override
+  String get download_task_status_moving => 'Moving';
+  @override
+  String get download_task_status_error => 'Error';
+  @override
+  String get download_task_pause => 'Pause';
+  @override
+  String get download_task_resume => 'Resume';
 }
 
 // Path: <root>
@@ -90893,6 +91268,36 @@ class _StringsTr extends _StringsEn {
   String get video_scrape_collection_rename_keep => 'Keep current name';
   @override
   String get video_scrape_collection_rename_confirm => 'Rename';
+  @override
+  String get download_task_toggle_failed => 'Pause/resume failed';
+  @override
+  String get download_task_eta => 'ETA';
+  @override
+  String get download_task_ratio => 'Ratio';
+  @override
+  String get download_task_status_downloading => 'Downloading';
+  @override
+  String get download_task_status_seeding => 'Seeding';
+  @override
+  String get download_task_status_completed => 'Completed';
+  @override
+  String get download_task_status_paused => 'Paused';
+  @override
+  String get download_task_status_queued => 'Queued';
+  @override
+  String get download_task_status_stalled => 'Stalled';
+  @override
+  String get download_task_status_checking => 'Checking';
+  @override
+  String get download_task_status_metadata => 'Fetching metadata';
+  @override
+  String get download_task_status_moving => 'Moving';
+  @override
+  String get download_task_status_error => 'Error';
+  @override
+  String get download_task_pause => 'Pause';
+  @override
+  String get download_task_resume => 'Resume';
 }
 
 // Path: <root>
@@ -97572,6 +97977,36 @@ class _StringsVi extends _StringsEn {
   String get video_scrape_collection_rename_keep => 'Keep current name';
   @override
   String get video_scrape_collection_rename_confirm => 'Rename';
+  @override
+  String get download_task_toggle_failed => 'Pause/resume failed';
+  @override
+  String get download_task_eta => 'ETA';
+  @override
+  String get download_task_ratio => 'Ratio';
+  @override
+  String get download_task_status_downloading => 'Downloading';
+  @override
+  String get download_task_status_seeding => 'Seeding';
+  @override
+  String get download_task_status_completed => 'Completed';
+  @override
+  String get download_task_status_paused => 'Paused';
+  @override
+  String get download_task_status_queued => 'Queued';
+  @override
+  String get download_task_status_stalled => 'Stalled';
+  @override
+  String get download_task_status_checking => 'Checking';
+  @override
+  String get download_task_status_metadata => 'Fetching metadata';
+  @override
+  String get download_task_status_moving => 'Moving';
+  @override
+  String get download_task_status_error => 'Error';
+  @override
+  String get download_task_pause => 'Pause';
+  @override
+  String get download_task_resume => 'Resume';
 }
 
 // Path: <root>
@@ -103777,6 +104212,36 @@ class _StringsZhCn extends _StringsEn {
   String get video_scrape_collection_rename_keep => '保留当前名称';
   @override
   String get video_scrape_collection_rename_confirm => '重命名';
+  @override
+  String get download_task_toggle_failed => '暂停/恢复操作失败';
+  @override
+  String get download_task_eta => '剩余';
+  @override
+  String get download_task_ratio => '分享率';
+  @override
+  String get download_task_status_downloading => '下载中';
+  @override
+  String get download_task_status_seeding => '做种中';
+  @override
+  String get download_task_status_completed => '已完成';
+  @override
+  String get download_task_status_paused => '已暂停';
+  @override
+  String get download_task_status_queued => '排队中';
+  @override
+  String get download_task_status_stalled => '等待资源';
+  @override
+  String get download_task_status_checking => '校验中';
+  @override
+  String get download_task_status_metadata => '获取元数据';
+  @override
+  String get download_task_status_moving => '移动中';
+  @override
+  String get download_task_status_error => '出错';
+  @override
+  String get download_task_pause => '暂停';
+  @override
+  String get download_task_resume => '恢复';
 }
 
 // Path: <root>
@@ -110252,6 +110717,36 @@ class _StringsZhHk extends _StringsEn {
   String get video_scrape_collection_rename_keep => 'Keep current name';
   @override
   String get video_scrape_collection_rename_confirm => 'Rename';
+  @override
+  String get download_task_toggle_failed => 'Pause/resume failed';
+  @override
+  String get download_task_eta => 'ETA';
+  @override
+  String get download_task_ratio => 'Ratio';
+  @override
+  String get download_task_status_downloading => 'Downloading';
+  @override
+  String get download_task_status_seeding => 'Seeding';
+  @override
+  String get download_task_status_completed => 'Completed';
+  @override
+  String get download_task_status_paused => 'Paused';
+  @override
+  String get download_task_status_queued => 'Queued';
+  @override
+  String get download_task_status_stalled => 'Stalled';
+  @override
+  String get download_task_status_checking => 'Checking';
+  @override
+  String get download_task_status_metadata => 'Fetching metadata';
+  @override
+  String get download_task_status_moving => 'Moving';
+  @override
+  String get download_task_status_error => 'Error';
+  @override
+  String get download_task_pause => 'Pause';
+  @override
+  String get download_task_resume => 'Resume';
 }
 
 /// Flat map(s) containing all translations.
@@ -116202,6 +116697,36 @@ extension on _StringsEn {
         return 'Keep current name';
       case 'video_scrape_collection_rename_confirm':
         return 'Rename';
+      case 'download_task_toggle_failed':
+        return 'Pause/resume failed';
+      case 'download_task_eta':
+        return 'ETA';
+      case 'download_task_ratio':
+        return 'Ratio';
+      case 'download_task_status_downloading':
+        return 'Downloading';
+      case 'download_task_status_seeding':
+        return 'Seeding';
+      case 'download_task_status_completed':
+        return 'Completed';
+      case 'download_task_status_paused':
+        return 'Paused';
+      case 'download_task_status_queued':
+        return 'Queued';
+      case 'download_task_status_stalled':
+        return 'Stalled';
+      case 'download_task_status_checking':
+        return 'Checking';
+      case 'download_task_status_metadata':
+        return 'Fetching metadata';
+      case 'download_task_status_moving':
+        return 'Moving';
+      case 'download_task_status_error':
+        return 'Error';
+      case 'download_task_pause':
+        return 'Pause';
+      case 'download_task_resume':
+        return 'Resume';
       default:
         return null;
     }
@@ -122150,6 +122675,36 @@ extension on _StringsAr {
         return 'Keep current name';
       case 'video_scrape_collection_rename_confirm':
         return 'Rename';
+      case 'download_task_toggle_failed':
+        return 'Pause/resume failed';
+      case 'download_task_eta':
+        return 'ETA';
+      case 'download_task_ratio':
+        return 'Ratio';
+      case 'download_task_status_downloading':
+        return 'Downloading';
+      case 'download_task_status_seeding':
+        return 'Seeding';
+      case 'download_task_status_completed':
+        return 'Completed';
+      case 'download_task_status_paused':
+        return 'Paused';
+      case 'download_task_status_queued':
+        return 'Queued';
+      case 'download_task_status_stalled':
+        return 'Stalled';
+      case 'download_task_status_checking':
+        return 'Checking';
+      case 'download_task_status_metadata':
+        return 'Fetching metadata';
+      case 'download_task_status_moving':
+        return 'Moving';
+      case 'download_task_status_error':
+        return 'Error';
+      case 'download_task_pause':
+        return 'Pause';
+      case 'download_task_resume':
+        return 'Resume';
       default:
         return null;
     }
@@ -128120,6 +128675,36 @@ extension on _StringsDe {
         return 'Keep current name';
       case 'video_scrape_collection_rename_confirm':
         return 'Rename';
+      case 'download_task_toggle_failed':
+        return 'Pause/resume failed';
+      case 'download_task_eta':
+        return 'ETA';
+      case 'download_task_ratio':
+        return 'Ratio';
+      case 'download_task_status_downloading':
+        return 'Downloading';
+      case 'download_task_status_seeding':
+        return 'Seeding';
+      case 'download_task_status_completed':
+        return 'Completed';
+      case 'download_task_status_paused':
+        return 'Paused';
+      case 'download_task_status_queued':
+        return 'Queued';
+      case 'download_task_status_stalled':
+        return 'Stalled';
+      case 'download_task_status_checking':
+        return 'Checking';
+      case 'download_task_status_metadata':
+        return 'Fetching metadata';
+      case 'download_task_status_moving':
+        return 'Moving';
+      case 'download_task_status_error':
+        return 'Error';
+      case 'download_task_pause':
+        return 'Pause';
+      case 'download_task_resume':
+        return 'Resume';
       default:
         return null;
     }
@@ -134089,6 +134674,36 @@ extension on _StringsEs {
         return 'Keep current name';
       case 'video_scrape_collection_rename_confirm':
         return 'Rename';
+      case 'download_task_toggle_failed':
+        return 'Pause/resume failed';
+      case 'download_task_eta':
+        return 'ETA';
+      case 'download_task_ratio':
+        return 'Ratio';
+      case 'download_task_status_downloading':
+        return 'Downloading';
+      case 'download_task_status_seeding':
+        return 'Seeding';
+      case 'download_task_status_completed':
+        return 'Completed';
+      case 'download_task_status_paused':
+        return 'Paused';
+      case 'download_task_status_queued':
+        return 'Queued';
+      case 'download_task_status_stalled':
+        return 'Stalled';
+      case 'download_task_status_checking':
+        return 'Checking';
+      case 'download_task_status_metadata':
+        return 'Fetching metadata';
+      case 'download_task_status_moving':
+        return 'Moving';
+      case 'download_task_status_error':
+        return 'Error';
+      case 'download_task_pause':
+        return 'Pause';
+      case 'download_task_resume':
+        return 'Resume';
       default:
         return null;
     }
@@ -140064,6 +140679,36 @@ extension on _StringsFr {
         return 'Keep current name';
       case 'video_scrape_collection_rename_confirm':
         return 'Rename';
+      case 'download_task_toggle_failed':
+        return 'Pause/resume failed';
+      case 'download_task_eta':
+        return 'ETA';
+      case 'download_task_ratio':
+        return 'Ratio';
+      case 'download_task_status_downloading':
+        return 'Downloading';
+      case 'download_task_status_seeding':
+        return 'Seeding';
+      case 'download_task_status_completed':
+        return 'Completed';
+      case 'download_task_status_paused':
+        return 'Paused';
+      case 'download_task_status_queued':
+        return 'Queued';
+      case 'download_task_status_stalled':
+        return 'Stalled';
+      case 'download_task_status_checking':
+        return 'Checking';
+      case 'download_task_status_metadata':
+        return 'Fetching metadata';
+      case 'download_task_status_moving':
+        return 'Moving';
+      case 'download_task_status_error':
+        return 'Error';
+      case 'download_task_pause':
+        return 'Pause';
+      case 'download_task_resume':
+        return 'Resume';
       default:
         return null;
     }
@@ -146021,6 +146666,36 @@ extension on _StringsId {
         return 'Keep current name';
       case 'video_scrape_collection_rename_confirm':
         return 'Rename';
+      case 'download_task_toggle_failed':
+        return 'Pause/resume failed';
+      case 'download_task_eta':
+        return 'ETA';
+      case 'download_task_ratio':
+        return 'Ratio';
+      case 'download_task_status_downloading':
+        return 'Downloading';
+      case 'download_task_status_seeding':
+        return 'Seeding';
+      case 'download_task_status_completed':
+        return 'Completed';
+      case 'download_task_status_paused':
+        return 'Paused';
+      case 'download_task_status_queued':
+        return 'Queued';
+      case 'download_task_status_stalled':
+        return 'Stalled';
+      case 'download_task_status_checking':
+        return 'Checking';
+      case 'download_task_status_metadata':
+        return 'Fetching metadata';
+      case 'download_task_status_moving':
+        return 'Moving';
+      case 'download_task_status_error':
+        return 'Error';
+      case 'download_task_pause':
+        return 'Pause';
+      case 'download_task_resume':
+        return 'Resume';
       default:
         return null;
     }
@@ -151992,6 +152667,36 @@ extension on _StringsIt {
         return 'Keep current name';
       case 'video_scrape_collection_rename_confirm':
         return 'Rename';
+      case 'download_task_toggle_failed':
+        return 'Pause/resume failed';
+      case 'download_task_eta':
+        return 'ETA';
+      case 'download_task_ratio':
+        return 'Ratio';
+      case 'download_task_status_downloading':
+        return 'Downloading';
+      case 'download_task_status_seeding':
+        return 'Seeding';
+      case 'download_task_status_completed':
+        return 'Completed';
+      case 'download_task_status_paused':
+        return 'Paused';
+      case 'download_task_status_queued':
+        return 'Queued';
+      case 'download_task_status_stalled':
+        return 'Stalled';
+      case 'download_task_status_checking':
+        return 'Checking';
+      case 'download_task_status_metadata':
+        return 'Fetching metadata';
+      case 'download_task_status_moving':
+        return 'Moving';
+      case 'download_task_status_error':
+        return 'Error';
+      case 'download_task_pause':
+        return 'Pause';
+      case 'download_task_resume':
+        return 'Resume';
       default:
         return null;
     }
@@ -157925,6 +158630,36 @@ extension on _StringsJa {
         return 'Keep current name';
       case 'video_scrape_collection_rename_confirm':
         return 'Rename';
+      case 'download_task_toggle_failed':
+        return 'Pause/resume failed';
+      case 'download_task_eta':
+        return 'ETA';
+      case 'download_task_ratio':
+        return 'Ratio';
+      case 'download_task_status_downloading':
+        return 'Downloading';
+      case 'download_task_status_seeding':
+        return 'Seeding';
+      case 'download_task_status_completed':
+        return 'Completed';
+      case 'download_task_status_paused':
+        return 'Paused';
+      case 'download_task_status_queued':
+        return 'Queued';
+      case 'download_task_status_stalled':
+        return 'Stalled';
+      case 'download_task_status_checking':
+        return 'Checking';
+      case 'download_task_status_metadata':
+        return 'Fetching metadata';
+      case 'download_task_status_moving':
+        return 'Moving';
+      case 'download_task_status_error':
+        return 'Error';
+      case 'download_task_pause':
+        return 'Pause';
+      case 'download_task_resume':
+        return 'Resume';
       default:
         return null;
     }
@@ -163862,6 +164597,36 @@ extension on _StringsKo {
         return 'Keep current name';
       case 'video_scrape_collection_rename_confirm':
         return 'Rename';
+      case 'download_task_toggle_failed':
+        return 'Pause/resume failed';
+      case 'download_task_eta':
+        return 'ETA';
+      case 'download_task_ratio':
+        return 'Ratio';
+      case 'download_task_status_downloading':
+        return 'Downloading';
+      case 'download_task_status_seeding':
+        return 'Seeding';
+      case 'download_task_status_completed':
+        return 'Completed';
+      case 'download_task_status_paused':
+        return 'Paused';
+      case 'download_task_status_queued':
+        return 'Queued';
+      case 'download_task_status_stalled':
+        return 'Stalled';
+      case 'download_task_status_checking':
+        return 'Checking';
+      case 'download_task_status_metadata':
+        return 'Fetching metadata';
+      case 'download_task_status_moving':
+        return 'Moving';
+      case 'download_task_status_error':
+        return 'Error';
+      case 'download_task_pause':
+        return 'Pause';
+      case 'download_task_resume':
+        return 'Resume';
       default:
         return null;
     }
@@ -169827,6 +170592,36 @@ extension on _StringsNl {
         return 'Keep current name';
       case 'video_scrape_collection_rename_confirm':
         return 'Rename';
+      case 'download_task_toggle_failed':
+        return 'Pause/resume failed';
+      case 'download_task_eta':
+        return 'ETA';
+      case 'download_task_ratio':
+        return 'Ratio';
+      case 'download_task_status_downloading':
+        return 'Downloading';
+      case 'download_task_status_seeding':
+        return 'Seeding';
+      case 'download_task_status_completed':
+        return 'Completed';
+      case 'download_task_status_paused':
+        return 'Paused';
+      case 'download_task_status_queued':
+        return 'Queued';
+      case 'download_task_status_stalled':
+        return 'Stalled';
+      case 'download_task_status_checking':
+        return 'Checking';
+      case 'download_task_status_metadata':
+        return 'Fetching metadata';
+      case 'download_task_status_moving':
+        return 'Moving';
+      case 'download_task_status_error':
+        return 'Error';
+      case 'download_task_pause':
+        return 'Pause';
+      case 'download_task_resume':
+        return 'Resume';
       default:
         return null;
     }
@@ -175789,6 +176584,36 @@ extension on _StringsPtBr {
         return 'Keep current name';
       case 'video_scrape_collection_rename_confirm':
         return 'Rename';
+      case 'download_task_toggle_failed':
+        return 'Pause/resume failed';
+      case 'download_task_eta':
+        return 'ETA';
+      case 'download_task_ratio':
+        return 'Ratio';
+      case 'download_task_status_downloading':
+        return 'Downloading';
+      case 'download_task_status_seeding':
+        return 'Seeding';
+      case 'download_task_status_completed':
+        return 'Completed';
+      case 'download_task_status_paused':
+        return 'Paused';
+      case 'download_task_status_queued':
+        return 'Queued';
+      case 'download_task_status_stalled':
+        return 'Stalled';
+      case 'download_task_status_checking':
+        return 'Checking';
+      case 'download_task_status_metadata':
+        return 'Fetching metadata';
+      case 'download_task_status_moving':
+        return 'Moving';
+      case 'download_task_status_error':
+        return 'Error';
+      case 'download_task_pause':
+        return 'Pause';
+      case 'download_task_resume':
+        return 'Resume';
       default:
         return null;
     }
@@ -181756,6 +182581,36 @@ extension on _StringsRu {
         return 'Keep current name';
       case 'video_scrape_collection_rename_confirm':
         return 'Rename';
+      case 'download_task_toggle_failed':
+        return 'Pause/resume failed';
+      case 'download_task_eta':
+        return 'ETA';
+      case 'download_task_ratio':
+        return 'Ratio';
+      case 'download_task_status_downloading':
+        return 'Downloading';
+      case 'download_task_status_seeding':
+        return 'Seeding';
+      case 'download_task_status_completed':
+        return 'Completed';
+      case 'download_task_status_paused':
+        return 'Paused';
+      case 'download_task_status_queued':
+        return 'Queued';
+      case 'download_task_status_stalled':
+        return 'Stalled';
+      case 'download_task_status_checking':
+        return 'Checking';
+      case 'download_task_status_metadata':
+        return 'Fetching metadata';
+      case 'download_task_status_moving':
+        return 'Moving';
+      case 'download_task_status_error':
+        return 'Error';
+      case 'download_task_pause':
+        return 'Pause';
+      case 'download_task_resume':
+        return 'Resume';
       default:
         return null;
     }
@@ -187706,6 +188561,36 @@ extension on _StringsTh {
         return 'Keep current name';
       case 'video_scrape_collection_rename_confirm':
         return 'Rename';
+      case 'download_task_toggle_failed':
+        return 'Pause/resume failed';
+      case 'download_task_eta':
+        return 'ETA';
+      case 'download_task_ratio':
+        return 'Ratio';
+      case 'download_task_status_downloading':
+        return 'Downloading';
+      case 'download_task_status_seeding':
+        return 'Seeding';
+      case 'download_task_status_completed':
+        return 'Completed';
+      case 'download_task_status_paused':
+        return 'Paused';
+      case 'download_task_status_queued':
+        return 'Queued';
+      case 'download_task_status_stalled':
+        return 'Stalled';
+      case 'download_task_status_checking':
+        return 'Checking';
+      case 'download_task_status_metadata':
+        return 'Fetching metadata';
+      case 'download_task_status_moving':
+        return 'Moving';
+      case 'download_task_status_error':
+        return 'Error';
+      case 'download_task_pause':
+        return 'Pause';
+      case 'download_task_resume':
+        return 'Resume';
       default:
         return null;
     }
@@ -193665,6 +194550,36 @@ extension on _StringsTr {
         return 'Keep current name';
       case 'video_scrape_collection_rename_confirm':
         return 'Rename';
+      case 'download_task_toggle_failed':
+        return 'Pause/resume failed';
+      case 'download_task_eta':
+        return 'ETA';
+      case 'download_task_ratio':
+        return 'Ratio';
+      case 'download_task_status_downloading':
+        return 'Downloading';
+      case 'download_task_status_seeding':
+        return 'Seeding';
+      case 'download_task_status_completed':
+        return 'Completed';
+      case 'download_task_status_paused':
+        return 'Paused';
+      case 'download_task_status_queued':
+        return 'Queued';
+      case 'download_task_status_stalled':
+        return 'Stalled';
+      case 'download_task_status_checking':
+        return 'Checking';
+      case 'download_task_status_metadata':
+        return 'Fetching metadata';
+      case 'download_task_status_moving':
+        return 'Moving';
+      case 'download_task_status_error':
+        return 'Error';
+      case 'download_task_pause':
+        return 'Pause';
+      case 'download_task_resume':
+        return 'Resume';
       default:
         return null;
     }
@@ -199620,6 +200535,36 @@ extension on _StringsVi {
         return 'Keep current name';
       case 'video_scrape_collection_rename_confirm':
         return 'Rename';
+      case 'download_task_toggle_failed':
+        return 'Pause/resume failed';
+      case 'download_task_eta':
+        return 'ETA';
+      case 'download_task_ratio':
+        return 'Ratio';
+      case 'download_task_status_downloading':
+        return 'Downloading';
+      case 'download_task_status_seeding':
+        return 'Seeding';
+      case 'download_task_status_completed':
+        return 'Completed';
+      case 'download_task_status_paused':
+        return 'Paused';
+      case 'download_task_status_queued':
+        return 'Queued';
+      case 'download_task_status_stalled':
+        return 'Stalled';
+      case 'download_task_status_checking':
+        return 'Checking';
+      case 'download_task_status_metadata':
+        return 'Fetching metadata';
+      case 'download_task_status_moving':
+        return 'Moving';
+      case 'download_task_status_error':
+        return 'Error';
+      case 'download_task_pause':
+        return 'Pause';
+      case 'download_task_resume':
+        return 'Resume';
       default:
         return null;
     }
@@ -205522,6 +206467,36 @@ extension on _StringsZhCn {
         return '保留当前名称';
       case 'video_scrape_collection_rename_confirm':
         return '重命名';
+      case 'download_task_toggle_failed':
+        return '暂停/恢复操作失败';
+      case 'download_task_eta':
+        return '剩余';
+      case 'download_task_ratio':
+        return '分享率';
+      case 'download_task_status_downloading':
+        return '下载中';
+      case 'download_task_status_seeding':
+        return '做种中';
+      case 'download_task_status_completed':
+        return '已完成';
+      case 'download_task_status_paused':
+        return '已暂停';
+      case 'download_task_status_queued':
+        return '排队中';
+      case 'download_task_status_stalled':
+        return '等待资源';
+      case 'download_task_status_checking':
+        return '校验中';
+      case 'download_task_status_metadata':
+        return '获取元数据';
+      case 'download_task_status_moving':
+        return '移动中';
+      case 'download_task_status_error':
+        return '出错';
+      case 'download_task_pause':
+        return '暂停';
+      case 'download_task_resume':
+        return '恢复';
       default:
         return null;
     }
@@ -211450,6 +212425,36 @@ extension on _StringsZhHk {
         return 'Keep current name';
       case 'video_scrape_collection_rename_confirm':
         return 'Rename';
+      case 'download_task_toggle_failed':
+        return 'Pause/resume failed';
+      case 'download_task_eta':
+        return 'ETA';
+      case 'download_task_ratio':
+        return 'Ratio';
+      case 'download_task_status_downloading':
+        return 'Downloading';
+      case 'download_task_status_seeding':
+        return 'Seeding';
+      case 'download_task_status_completed':
+        return 'Completed';
+      case 'download_task_status_paused':
+        return 'Paused';
+      case 'download_task_status_queued':
+        return 'Queued';
+      case 'download_task_status_stalled':
+        return 'Stalled';
+      case 'download_task_status_checking':
+        return 'Checking';
+      case 'download_task_status_metadata':
+        return 'Fetching metadata';
+      case 'download_task_status_moving':
+        return 'Moving';
+      case 'download_task_status_error':
+        return 'Error';
+      case 'download_task_pause':
+        return 'Pause';
+      case 'download_task_resume':
+        return 'Resume';
       default:
         return null;
     }
