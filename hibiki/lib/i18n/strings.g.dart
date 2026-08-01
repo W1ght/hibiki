@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 49691 (2923 per locale)
+/// Strings: 49980 (2940 per locale)
 ///
-/// Built on 2026-08-01 at 07:15 UTC
+/// Built on 2026-08-01 at 07:27 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3799,9 +3799,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get interconnect_peer_list_title => 'Added peers';
   String get interconnect_peer_list_empty =>
       'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
-  String get anki_lapis_visual_editor => 'Visual style editor';
+  String get anki_lapis_visual_editor => 'Visual editor';
   String get anki_lapis_visual_editor_hint =>
-      'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+      'Preview the Lapis card, then change each area\'s style, position and field mapping without writing CSS.';
   String get anki_lapis_visual_front => 'Front';
   String get anki_lapis_visual_back => 'Back';
   String get anki_lapis_visual_preview => 'Lapis card preview';
@@ -3952,6 +3952,26 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
   String get about_tmdb_attribution =>
       'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+  String get anki_lapis_visual_layout => 'Layout';
+  String get anki_lapis_visual_layout_hint =>
+      'Uses Lapis\' own layout switches, so desktop and mobile Anki both follow it.';
+  String get anki_lapis_visual_layout_sentence => 'Sentence position';
+  String get anki_lapis_visual_layout_sentence_above => 'Above definitions';
+  String get anki_lapis_visual_layout_sentence_below => 'Below definitions';
+  String get anki_lapis_visual_layout_picture => 'Image position';
+  String get anki_lapis_visual_layout_picture_right => 'Right of the word';
+  String get anki_lapis_visual_layout_picture_left => 'Left of the word';
+  String get anki_lapis_visual_layout_picture_alt => 'Inside the sentence';
+  String get anki_lapis_visual_layout_audio => 'Audio buttons';
+  String get anki_lapis_visual_layout_audio_header => 'Next to the reading';
+  String get anki_lapis_visual_layout_audio_fixed => 'Pinned to the bottom';
+  String get anki_lapis_visual_layout_audio_alt => 'Inside the sentence';
+  String get anki_lapis_visual_mapping_hint =>
+      'Anki fields that fill the selected area. Changes are saved together with the style.';
+  String get anki_lapis_visual_mapping_none =>
+      'This area is drawn by the template itself and has no field of its own.';
+  String get anki_lapis_visual_color_custom => 'Custom';
+  String get anki_lapis_visual_color_picker_title => 'Pick a color';
 }
 
 // Path: <root>
@@ -10411,10 +10431,10 @@ class _StringsAr extends _StringsEn {
   String get interconnect_peer_list_empty =>
       'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
   @override
-  String get anki_lapis_visual_editor => 'Visual style editor';
+  String get anki_lapis_visual_editor => 'Visual editor';
   @override
   String get anki_lapis_visual_editor_hint =>
-      'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+      'Preview the Lapis card, then change each area\'s style, position and field mapping without writing CSS.';
   @override
   String get anki_lapis_visual_front => 'Front';
   @override
@@ -10676,6 +10696,43 @@ class _StringsAr extends _StringsEn {
   @override
   String get about_tmdb_attribution =>
       'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+  @override
+  String get anki_lapis_visual_layout => 'Layout';
+  @override
+  String get anki_lapis_visual_layout_hint =>
+      'Uses Lapis\' own layout switches, so desktop and mobile Anki both follow it.';
+  @override
+  String get anki_lapis_visual_layout_sentence => 'Sentence position';
+  @override
+  String get anki_lapis_visual_layout_sentence_above => 'Above definitions';
+  @override
+  String get anki_lapis_visual_layout_sentence_below => 'Below definitions';
+  @override
+  String get anki_lapis_visual_layout_picture => 'Image position';
+  @override
+  String get anki_lapis_visual_layout_picture_right => 'Right of the word';
+  @override
+  String get anki_lapis_visual_layout_picture_left => 'Left of the word';
+  @override
+  String get anki_lapis_visual_layout_picture_alt => 'Inside the sentence';
+  @override
+  String get anki_lapis_visual_layout_audio => 'Audio buttons';
+  @override
+  String get anki_lapis_visual_layout_audio_header => 'Next to the reading';
+  @override
+  String get anki_lapis_visual_layout_audio_fixed => 'Pinned to the bottom';
+  @override
+  String get anki_lapis_visual_layout_audio_alt => 'Inside the sentence';
+  @override
+  String get anki_lapis_visual_mapping_hint =>
+      'Anki fields that fill the selected area. Changes are saved together with the style.';
+  @override
+  String get anki_lapis_visual_mapping_none =>
+      'This area is drawn by the template itself and has no field of its own.';
+  @override
+  String get anki_lapis_visual_color_custom => 'Custom';
+  @override
+  String get anki_lapis_visual_color_picker_title => 'Pick a color';
 }
 
 // Path: <root>
@@ -17202,10 +17259,10 @@ class _StringsDe extends _StringsEn {
   String get interconnect_peer_list_empty =>
       'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
   @override
-  String get anki_lapis_visual_editor => 'Visual style editor';
+  String get anki_lapis_visual_editor => 'Visual editor';
   @override
   String get anki_lapis_visual_editor_hint =>
-      'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+      'Preview the Lapis card, then change each area\'s style, position and field mapping without writing CSS.';
   @override
   String get anki_lapis_visual_front => 'Front';
   @override
@@ -17467,6 +17524,43 @@ class _StringsDe extends _StringsEn {
   @override
   String get about_tmdb_attribution =>
       'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+  @override
+  String get anki_lapis_visual_layout => 'Layout';
+  @override
+  String get anki_lapis_visual_layout_hint =>
+      'Uses Lapis\' own layout switches, so desktop and mobile Anki both follow it.';
+  @override
+  String get anki_lapis_visual_layout_sentence => 'Sentence position';
+  @override
+  String get anki_lapis_visual_layout_sentence_above => 'Above definitions';
+  @override
+  String get anki_lapis_visual_layout_sentence_below => 'Below definitions';
+  @override
+  String get anki_lapis_visual_layout_picture => 'Image position';
+  @override
+  String get anki_lapis_visual_layout_picture_right => 'Right of the word';
+  @override
+  String get anki_lapis_visual_layout_picture_left => 'Left of the word';
+  @override
+  String get anki_lapis_visual_layout_picture_alt => 'Inside the sentence';
+  @override
+  String get anki_lapis_visual_layout_audio => 'Audio buttons';
+  @override
+  String get anki_lapis_visual_layout_audio_header => 'Next to the reading';
+  @override
+  String get anki_lapis_visual_layout_audio_fixed => 'Pinned to the bottom';
+  @override
+  String get anki_lapis_visual_layout_audio_alt => 'Inside the sentence';
+  @override
+  String get anki_lapis_visual_mapping_hint =>
+      'Anki fields that fill the selected area. Changes are saved together with the style.';
+  @override
+  String get anki_lapis_visual_mapping_none =>
+      'This area is drawn by the template itself and has no field of its own.';
+  @override
+  String get anki_lapis_visual_color_custom => 'Custom';
+  @override
+  String get anki_lapis_visual_color_picker_title => 'Pick a color';
 }
 
 // Path: <root>
@@ -24008,10 +24102,10 @@ class _StringsEs extends _StringsEn {
   String get interconnect_peer_list_empty =>
       'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
   @override
-  String get anki_lapis_visual_editor => 'Visual style editor';
+  String get anki_lapis_visual_editor => 'Visual editor';
   @override
   String get anki_lapis_visual_editor_hint =>
-      'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+      'Preview the Lapis card, then change each area\'s style, position and field mapping without writing CSS.';
   @override
   String get anki_lapis_visual_front => 'Front';
   @override
@@ -24273,6 +24367,43 @@ class _StringsEs extends _StringsEn {
   @override
   String get about_tmdb_attribution =>
       'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+  @override
+  String get anki_lapis_visual_layout => 'Layout';
+  @override
+  String get anki_lapis_visual_layout_hint =>
+      'Uses Lapis\' own layout switches, so desktop and mobile Anki both follow it.';
+  @override
+  String get anki_lapis_visual_layout_sentence => 'Sentence position';
+  @override
+  String get anki_lapis_visual_layout_sentence_above => 'Above definitions';
+  @override
+  String get anki_lapis_visual_layout_sentence_below => 'Below definitions';
+  @override
+  String get anki_lapis_visual_layout_picture => 'Image position';
+  @override
+  String get anki_lapis_visual_layout_picture_right => 'Right of the word';
+  @override
+  String get anki_lapis_visual_layout_picture_left => 'Left of the word';
+  @override
+  String get anki_lapis_visual_layout_picture_alt => 'Inside the sentence';
+  @override
+  String get anki_lapis_visual_layout_audio => 'Audio buttons';
+  @override
+  String get anki_lapis_visual_layout_audio_header => 'Next to the reading';
+  @override
+  String get anki_lapis_visual_layout_audio_fixed => 'Pinned to the bottom';
+  @override
+  String get anki_lapis_visual_layout_audio_alt => 'Inside the sentence';
+  @override
+  String get anki_lapis_visual_mapping_hint =>
+      'Anki fields that fill the selected area. Changes are saved together with the style.';
+  @override
+  String get anki_lapis_visual_mapping_none =>
+      'This area is drawn by the template itself and has no field of its own.';
+  @override
+  String get anki_lapis_visual_color_custom => 'Custom';
+  @override
+  String get anki_lapis_visual_color_picker_title => 'Pick a color';
 }
 
 // Path: <root>
@@ -30826,10 +30957,10 @@ class _StringsFr extends _StringsEn {
   String get interconnect_peer_list_empty =>
       'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
   @override
-  String get anki_lapis_visual_editor => 'Visual style editor';
+  String get anki_lapis_visual_editor => 'Visual editor';
   @override
   String get anki_lapis_visual_editor_hint =>
-      'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+      'Preview the Lapis card, then change each area\'s style, position and field mapping without writing CSS.';
   @override
   String get anki_lapis_visual_front => 'Front';
   @override
@@ -31091,6 +31222,43 @@ class _StringsFr extends _StringsEn {
   @override
   String get about_tmdb_attribution =>
       'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+  @override
+  String get anki_lapis_visual_layout => 'Layout';
+  @override
+  String get anki_lapis_visual_layout_hint =>
+      'Uses Lapis\' own layout switches, so desktop and mobile Anki both follow it.';
+  @override
+  String get anki_lapis_visual_layout_sentence => 'Sentence position';
+  @override
+  String get anki_lapis_visual_layout_sentence_above => 'Above definitions';
+  @override
+  String get anki_lapis_visual_layout_sentence_below => 'Below definitions';
+  @override
+  String get anki_lapis_visual_layout_picture => 'Image position';
+  @override
+  String get anki_lapis_visual_layout_picture_right => 'Right of the word';
+  @override
+  String get anki_lapis_visual_layout_picture_left => 'Left of the word';
+  @override
+  String get anki_lapis_visual_layout_picture_alt => 'Inside the sentence';
+  @override
+  String get anki_lapis_visual_layout_audio => 'Audio buttons';
+  @override
+  String get anki_lapis_visual_layout_audio_header => 'Next to the reading';
+  @override
+  String get anki_lapis_visual_layout_audio_fixed => 'Pinned to the bottom';
+  @override
+  String get anki_lapis_visual_layout_audio_alt => 'Inside the sentence';
+  @override
+  String get anki_lapis_visual_mapping_hint =>
+      'Anki fields that fill the selected area. Changes are saved together with the style.';
+  @override
+  String get anki_lapis_visual_mapping_none =>
+      'This area is drawn by the template itself and has no field of its own.';
+  @override
+  String get anki_lapis_visual_color_custom => 'Custom';
+  @override
+  String get anki_lapis_visual_color_picker_title => 'Pick a color';
 }
 
 // Path: <root>
@@ -37573,10 +37741,10 @@ class _StringsId extends _StringsEn {
   String get interconnect_peer_list_empty =>
       'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
   @override
-  String get anki_lapis_visual_editor => 'Visual style editor';
+  String get anki_lapis_visual_editor => 'Visual editor';
   @override
   String get anki_lapis_visual_editor_hint =>
-      'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+      'Preview the Lapis card, then change each area\'s style, position and field mapping without writing CSS.';
   @override
   String get anki_lapis_visual_front => 'Front';
   @override
@@ -37838,6 +38006,43 @@ class _StringsId extends _StringsEn {
   @override
   String get about_tmdb_attribution =>
       'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+  @override
+  String get anki_lapis_visual_layout => 'Layout';
+  @override
+  String get anki_lapis_visual_layout_hint =>
+      'Uses Lapis\' own layout switches, so desktop and mobile Anki both follow it.';
+  @override
+  String get anki_lapis_visual_layout_sentence => 'Sentence position';
+  @override
+  String get anki_lapis_visual_layout_sentence_above => 'Above definitions';
+  @override
+  String get anki_lapis_visual_layout_sentence_below => 'Below definitions';
+  @override
+  String get anki_lapis_visual_layout_picture => 'Image position';
+  @override
+  String get anki_lapis_visual_layout_picture_right => 'Right of the word';
+  @override
+  String get anki_lapis_visual_layout_picture_left => 'Left of the word';
+  @override
+  String get anki_lapis_visual_layout_picture_alt => 'Inside the sentence';
+  @override
+  String get anki_lapis_visual_layout_audio => 'Audio buttons';
+  @override
+  String get anki_lapis_visual_layout_audio_header => 'Next to the reading';
+  @override
+  String get anki_lapis_visual_layout_audio_fixed => 'Pinned to the bottom';
+  @override
+  String get anki_lapis_visual_layout_audio_alt => 'Inside the sentence';
+  @override
+  String get anki_lapis_visual_mapping_hint =>
+      'Anki fields that fill the selected area. Changes are saved together with the style.';
+  @override
+  String get anki_lapis_visual_mapping_none =>
+      'This area is drawn by the template itself and has no field of its own.';
+  @override
+  String get anki_lapis_visual_color_custom => 'Custom';
+  @override
+  String get anki_lapis_visual_color_picker_title => 'Pick a color';
 }
 
 // Path: <root>
@@ -44366,10 +44571,10 @@ class _StringsIt extends _StringsEn {
   String get interconnect_peer_list_empty =>
       'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
   @override
-  String get anki_lapis_visual_editor => 'Visual style editor';
+  String get anki_lapis_visual_editor => 'Visual editor';
   @override
   String get anki_lapis_visual_editor_hint =>
-      'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+      'Preview the Lapis card, then change each area\'s style, position and field mapping without writing CSS.';
   @override
   String get anki_lapis_visual_front => 'Front';
   @override
@@ -44631,6 +44836,43 @@ class _StringsIt extends _StringsEn {
   @override
   String get about_tmdb_attribution =>
       'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+  @override
+  String get anki_lapis_visual_layout => 'Layout';
+  @override
+  String get anki_lapis_visual_layout_hint =>
+      'Uses Lapis\' own layout switches, so desktop and mobile Anki both follow it.';
+  @override
+  String get anki_lapis_visual_layout_sentence => 'Sentence position';
+  @override
+  String get anki_lapis_visual_layout_sentence_above => 'Above definitions';
+  @override
+  String get anki_lapis_visual_layout_sentence_below => 'Below definitions';
+  @override
+  String get anki_lapis_visual_layout_picture => 'Image position';
+  @override
+  String get anki_lapis_visual_layout_picture_right => 'Right of the word';
+  @override
+  String get anki_lapis_visual_layout_picture_left => 'Left of the word';
+  @override
+  String get anki_lapis_visual_layout_picture_alt => 'Inside the sentence';
+  @override
+  String get anki_lapis_visual_layout_audio => 'Audio buttons';
+  @override
+  String get anki_lapis_visual_layout_audio_header => 'Next to the reading';
+  @override
+  String get anki_lapis_visual_layout_audio_fixed => 'Pinned to the bottom';
+  @override
+  String get anki_lapis_visual_layout_audio_alt => 'Inside the sentence';
+  @override
+  String get anki_lapis_visual_mapping_hint =>
+      'Anki fields that fill the selected area. Changes are saved together with the style.';
+  @override
+  String get anki_lapis_visual_mapping_none =>
+      'This area is drawn by the template itself and has no field of its own.';
+  @override
+  String get anki_lapis_visual_color_custom => 'Custom';
+  @override
+  String get anki_lapis_visual_color_picker_title => 'Pick a color';
 }
 
 // Path: <root>
@@ -50976,10 +51218,10 @@ class _StringsJa extends _StringsEn {
   String get interconnect_peer_list_empty =>
       'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
   @override
-  String get anki_lapis_visual_editor => 'Visual style editor';
+  String get anki_lapis_visual_editor => 'Visual editor';
   @override
   String get anki_lapis_visual_editor_hint =>
-      'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+      'Preview the Lapis card, then change each area\'s style, position and field mapping without writing CSS.';
   @override
   String get anki_lapis_visual_front => 'Front';
   @override
@@ -51241,6 +51483,43 @@ class _StringsJa extends _StringsEn {
   @override
   String get about_tmdb_attribution =>
       'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+  @override
+  String get anki_lapis_visual_layout => 'Layout';
+  @override
+  String get anki_lapis_visual_layout_hint =>
+      'Uses Lapis\' own layout switches, so desktop and mobile Anki both follow it.';
+  @override
+  String get anki_lapis_visual_layout_sentence => 'Sentence position';
+  @override
+  String get anki_lapis_visual_layout_sentence_above => 'Above definitions';
+  @override
+  String get anki_lapis_visual_layout_sentence_below => 'Below definitions';
+  @override
+  String get anki_lapis_visual_layout_picture => 'Image position';
+  @override
+  String get anki_lapis_visual_layout_picture_right => 'Right of the word';
+  @override
+  String get anki_lapis_visual_layout_picture_left => 'Left of the word';
+  @override
+  String get anki_lapis_visual_layout_picture_alt => 'Inside the sentence';
+  @override
+  String get anki_lapis_visual_layout_audio => 'Audio buttons';
+  @override
+  String get anki_lapis_visual_layout_audio_header => 'Next to the reading';
+  @override
+  String get anki_lapis_visual_layout_audio_fixed => 'Pinned to the bottom';
+  @override
+  String get anki_lapis_visual_layout_audio_alt => 'Inside the sentence';
+  @override
+  String get anki_lapis_visual_mapping_hint =>
+      'Anki fields that fill the selected area. Changes are saved together with the style.';
+  @override
+  String get anki_lapis_visual_mapping_none =>
+      'This area is drawn by the template itself and has no field of its own.';
+  @override
+  String get anki_lapis_visual_color_custom => 'Custom';
+  @override
+  String get anki_lapis_visual_color_picker_title => 'Pick a color';
 }
 
 // Path: <root>
@@ -57588,10 +57867,10 @@ class _StringsKo extends _StringsEn {
   String get interconnect_peer_list_empty =>
       'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
   @override
-  String get anki_lapis_visual_editor => 'Visual style editor';
+  String get anki_lapis_visual_editor => 'Visual editor';
   @override
   String get anki_lapis_visual_editor_hint =>
-      'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+      'Preview the Lapis card, then change each area\'s style, position and field mapping without writing CSS.';
   @override
   String get anki_lapis_visual_front => 'Front';
   @override
@@ -57853,6 +58132,43 @@ class _StringsKo extends _StringsEn {
   @override
   String get about_tmdb_attribution =>
       'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+  @override
+  String get anki_lapis_visual_layout => 'Layout';
+  @override
+  String get anki_lapis_visual_layout_hint =>
+      'Uses Lapis\' own layout switches, so desktop and mobile Anki both follow it.';
+  @override
+  String get anki_lapis_visual_layout_sentence => 'Sentence position';
+  @override
+  String get anki_lapis_visual_layout_sentence_above => 'Above definitions';
+  @override
+  String get anki_lapis_visual_layout_sentence_below => 'Below definitions';
+  @override
+  String get anki_lapis_visual_layout_picture => 'Image position';
+  @override
+  String get anki_lapis_visual_layout_picture_right => 'Right of the word';
+  @override
+  String get anki_lapis_visual_layout_picture_left => 'Left of the word';
+  @override
+  String get anki_lapis_visual_layout_picture_alt => 'Inside the sentence';
+  @override
+  String get anki_lapis_visual_layout_audio => 'Audio buttons';
+  @override
+  String get anki_lapis_visual_layout_audio_header => 'Next to the reading';
+  @override
+  String get anki_lapis_visual_layout_audio_fixed => 'Pinned to the bottom';
+  @override
+  String get anki_lapis_visual_layout_audio_alt => 'Inside the sentence';
+  @override
+  String get anki_lapis_visual_mapping_hint =>
+      'Anki fields that fill the selected area. Changes are saved together with the style.';
+  @override
+  String get anki_lapis_visual_mapping_none =>
+      'This area is drawn by the template itself and has no field of its own.';
+  @override
+  String get anki_lapis_visual_color_custom => 'Custom';
+  @override
+  String get anki_lapis_visual_color_picker_title => 'Pick a color';
 }
 
 // Path: <root>
@@ -64361,10 +64677,10 @@ class _StringsNl extends _StringsEn {
   String get interconnect_peer_list_empty =>
       'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
   @override
-  String get anki_lapis_visual_editor => 'Visual style editor';
+  String get anki_lapis_visual_editor => 'Visual editor';
   @override
   String get anki_lapis_visual_editor_hint =>
-      'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+      'Preview the Lapis card, then change each area\'s style, position and field mapping without writing CSS.';
   @override
   String get anki_lapis_visual_front => 'Front';
   @override
@@ -64626,6 +64942,43 @@ class _StringsNl extends _StringsEn {
   @override
   String get about_tmdb_attribution =>
       'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+  @override
+  String get anki_lapis_visual_layout => 'Layout';
+  @override
+  String get anki_lapis_visual_layout_hint =>
+      'Uses Lapis\' own layout switches, so desktop and mobile Anki both follow it.';
+  @override
+  String get anki_lapis_visual_layout_sentence => 'Sentence position';
+  @override
+  String get anki_lapis_visual_layout_sentence_above => 'Above definitions';
+  @override
+  String get anki_lapis_visual_layout_sentence_below => 'Below definitions';
+  @override
+  String get anki_lapis_visual_layout_picture => 'Image position';
+  @override
+  String get anki_lapis_visual_layout_picture_right => 'Right of the word';
+  @override
+  String get anki_lapis_visual_layout_picture_left => 'Left of the word';
+  @override
+  String get anki_lapis_visual_layout_picture_alt => 'Inside the sentence';
+  @override
+  String get anki_lapis_visual_layout_audio => 'Audio buttons';
+  @override
+  String get anki_lapis_visual_layout_audio_header => 'Next to the reading';
+  @override
+  String get anki_lapis_visual_layout_audio_fixed => 'Pinned to the bottom';
+  @override
+  String get anki_lapis_visual_layout_audio_alt => 'Inside the sentence';
+  @override
+  String get anki_lapis_visual_mapping_hint =>
+      'Anki fields that fill the selected area. Changes are saved together with the style.';
+  @override
+  String get anki_lapis_visual_mapping_none =>
+      'This area is drawn by the template itself and has no field of its own.';
+  @override
+  String get anki_lapis_visual_color_custom => 'Custom';
+  @override
+  String get anki_lapis_visual_color_picker_title => 'Pick a color';
 }
 
 // Path: <root>
@@ -71147,10 +71500,10 @@ class _StringsPtBr extends _StringsEn {
   String get interconnect_peer_list_empty =>
       'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
   @override
-  String get anki_lapis_visual_editor => 'Visual style editor';
+  String get anki_lapis_visual_editor => 'Visual editor';
   @override
   String get anki_lapis_visual_editor_hint =>
-      'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+      'Preview the Lapis card, then change each area\'s style, position and field mapping without writing CSS.';
   @override
   String get anki_lapis_visual_front => 'Front';
   @override
@@ -71412,6 +71765,43 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get about_tmdb_attribution =>
       'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+  @override
+  String get anki_lapis_visual_layout => 'Layout';
+  @override
+  String get anki_lapis_visual_layout_hint =>
+      'Uses Lapis\' own layout switches, so desktop and mobile Anki both follow it.';
+  @override
+  String get anki_lapis_visual_layout_sentence => 'Sentence position';
+  @override
+  String get anki_lapis_visual_layout_sentence_above => 'Above definitions';
+  @override
+  String get anki_lapis_visual_layout_sentence_below => 'Below definitions';
+  @override
+  String get anki_lapis_visual_layout_picture => 'Image position';
+  @override
+  String get anki_lapis_visual_layout_picture_right => 'Right of the word';
+  @override
+  String get anki_lapis_visual_layout_picture_left => 'Left of the word';
+  @override
+  String get anki_lapis_visual_layout_picture_alt => 'Inside the sentence';
+  @override
+  String get anki_lapis_visual_layout_audio => 'Audio buttons';
+  @override
+  String get anki_lapis_visual_layout_audio_header => 'Next to the reading';
+  @override
+  String get anki_lapis_visual_layout_audio_fixed => 'Pinned to the bottom';
+  @override
+  String get anki_lapis_visual_layout_audio_alt => 'Inside the sentence';
+  @override
+  String get anki_lapis_visual_mapping_hint =>
+      'Anki fields that fill the selected area. Changes are saved together with the style.';
+  @override
+  String get anki_lapis_visual_mapping_none =>
+      'This area is drawn by the template itself and has no field of its own.';
+  @override
+  String get anki_lapis_visual_color_custom => 'Custom';
+  @override
+  String get anki_lapis_visual_color_picker_title => 'Pick a color';
 }
 
 // Path: <root>
@@ -77917,10 +78307,10 @@ class _StringsRu extends _StringsEn {
   String get interconnect_peer_list_empty =>
       'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
   @override
-  String get anki_lapis_visual_editor => 'Visual style editor';
+  String get anki_lapis_visual_editor => 'Visual editor';
   @override
   String get anki_lapis_visual_editor_hint =>
-      'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+      'Preview the Lapis card, then change each area\'s style, position and field mapping without writing CSS.';
   @override
   String get anki_lapis_visual_front => 'Front';
   @override
@@ -78182,6 +78572,43 @@ class _StringsRu extends _StringsEn {
   @override
   String get about_tmdb_attribution =>
       'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+  @override
+  String get anki_lapis_visual_layout => 'Layout';
+  @override
+  String get anki_lapis_visual_layout_hint =>
+      'Uses Lapis\' own layout switches, so desktop and mobile Anki both follow it.';
+  @override
+  String get anki_lapis_visual_layout_sentence => 'Sentence position';
+  @override
+  String get anki_lapis_visual_layout_sentence_above => 'Above definitions';
+  @override
+  String get anki_lapis_visual_layout_sentence_below => 'Below definitions';
+  @override
+  String get anki_lapis_visual_layout_picture => 'Image position';
+  @override
+  String get anki_lapis_visual_layout_picture_right => 'Right of the word';
+  @override
+  String get anki_lapis_visual_layout_picture_left => 'Left of the word';
+  @override
+  String get anki_lapis_visual_layout_picture_alt => 'Inside the sentence';
+  @override
+  String get anki_lapis_visual_layout_audio => 'Audio buttons';
+  @override
+  String get anki_lapis_visual_layout_audio_header => 'Next to the reading';
+  @override
+  String get anki_lapis_visual_layout_audio_fixed => 'Pinned to the bottom';
+  @override
+  String get anki_lapis_visual_layout_audio_alt => 'Inside the sentence';
+  @override
+  String get anki_lapis_visual_mapping_hint =>
+      'Anki fields that fill the selected area. Changes are saved together with the style.';
+  @override
+  String get anki_lapis_visual_mapping_none =>
+      'This area is drawn by the template itself and has no field of its own.';
+  @override
+  String get anki_lapis_visual_color_custom => 'Custom';
+  @override
+  String get anki_lapis_visual_color_picker_title => 'Pick a color';
 }
 
 // Path: <root>
@@ -84635,10 +85062,10 @@ class _StringsTh extends _StringsEn {
   String get interconnect_peer_list_empty =>
       'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
   @override
-  String get anki_lapis_visual_editor => 'Visual style editor';
+  String get anki_lapis_visual_editor => 'Visual editor';
   @override
   String get anki_lapis_visual_editor_hint =>
-      'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+      'Preview the Lapis card, then change each area\'s style, position and field mapping without writing CSS.';
   @override
   String get anki_lapis_visual_front => 'Front';
   @override
@@ -84900,6 +85327,43 @@ class _StringsTh extends _StringsEn {
   @override
   String get about_tmdb_attribution =>
       'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+  @override
+  String get anki_lapis_visual_layout => 'Layout';
+  @override
+  String get anki_lapis_visual_layout_hint =>
+      'Uses Lapis\' own layout switches, so desktop and mobile Anki both follow it.';
+  @override
+  String get anki_lapis_visual_layout_sentence => 'Sentence position';
+  @override
+  String get anki_lapis_visual_layout_sentence_above => 'Above definitions';
+  @override
+  String get anki_lapis_visual_layout_sentence_below => 'Below definitions';
+  @override
+  String get anki_lapis_visual_layout_picture => 'Image position';
+  @override
+  String get anki_lapis_visual_layout_picture_right => 'Right of the word';
+  @override
+  String get anki_lapis_visual_layout_picture_left => 'Left of the word';
+  @override
+  String get anki_lapis_visual_layout_picture_alt => 'Inside the sentence';
+  @override
+  String get anki_lapis_visual_layout_audio => 'Audio buttons';
+  @override
+  String get anki_lapis_visual_layout_audio_header => 'Next to the reading';
+  @override
+  String get anki_lapis_visual_layout_audio_fixed => 'Pinned to the bottom';
+  @override
+  String get anki_lapis_visual_layout_audio_alt => 'Inside the sentence';
+  @override
+  String get anki_lapis_visual_mapping_hint =>
+      'Anki fields that fill the selected area. Changes are saved together with the style.';
+  @override
+  String get anki_lapis_visual_mapping_none =>
+      'This area is drawn by the template itself and has no field of its own.';
+  @override
+  String get anki_lapis_visual_color_custom => 'Custom';
+  @override
+  String get anki_lapis_visual_color_picker_title => 'Pick a color';
 }
 
 // Path: <root>
@@ -91385,10 +91849,10 @@ class _StringsTr extends _StringsEn {
   String get interconnect_peer_list_empty =>
       'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
   @override
-  String get anki_lapis_visual_editor => 'Visual style editor';
+  String get anki_lapis_visual_editor => 'Visual editor';
   @override
   String get anki_lapis_visual_editor_hint =>
-      'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+      'Preview the Lapis card, then change each area\'s style, position and field mapping without writing CSS.';
   @override
   String get anki_lapis_visual_front => 'Front';
   @override
@@ -91650,6 +92114,43 @@ class _StringsTr extends _StringsEn {
   @override
   String get about_tmdb_attribution =>
       'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+  @override
+  String get anki_lapis_visual_layout => 'Layout';
+  @override
+  String get anki_lapis_visual_layout_hint =>
+      'Uses Lapis\' own layout switches, so desktop and mobile Anki both follow it.';
+  @override
+  String get anki_lapis_visual_layout_sentence => 'Sentence position';
+  @override
+  String get anki_lapis_visual_layout_sentence_above => 'Above definitions';
+  @override
+  String get anki_lapis_visual_layout_sentence_below => 'Below definitions';
+  @override
+  String get anki_lapis_visual_layout_picture => 'Image position';
+  @override
+  String get anki_lapis_visual_layout_picture_right => 'Right of the word';
+  @override
+  String get anki_lapis_visual_layout_picture_left => 'Left of the word';
+  @override
+  String get anki_lapis_visual_layout_picture_alt => 'Inside the sentence';
+  @override
+  String get anki_lapis_visual_layout_audio => 'Audio buttons';
+  @override
+  String get anki_lapis_visual_layout_audio_header => 'Next to the reading';
+  @override
+  String get anki_lapis_visual_layout_audio_fixed => 'Pinned to the bottom';
+  @override
+  String get anki_lapis_visual_layout_audio_alt => 'Inside the sentence';
+  @override
+  String get anki_lapis_visual_mapping_hint =>
+      'Anki fields that fill the selected area. Changes are saved together with the style.';
+  @override
+  String get anki_lapis_visual_mapping_none =>
+      'This area is drawn by the template itself and has no field of its own.';
+  @override
+  String get anki_lapis_visual_color_custom => 'Custom';
+  @override
+  String get anki_lapis_visual_color_picker_title => 'Pick a color';
 }
 
 // Path: <root>
@@ -98120,10 +98621,10 @@ class _StringsVi extends _StringsEn {
   String get interconnect_peer_list_empty =>
       'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
   @override
-  String get anki_lapis_visual_editor => 'Visual style editor';
+  String get anki_lapis_visual_editor => 'Visual editor';
   @override
   String get anki_lapis_visual_editor_hint =>
-      'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+      'Preview the Lapis card, then change each area\'s style, position and field mapping without writing CSS.';
   @override
   String get anki_lapis_visual_front => 'Front';
   @override
@@ -98385,6 +98886,43 @@ class _StringsVi extends _StringsEn {
   @override
   String get about_tmdb_attribution =>
       'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+  @override
+  String get anki_lapis_visual_layout => 'Layout';
+  @override
+  String get anki_lapis_visual_layout_hint =>
+      'Uses Lapis\' own layout switches, so desktop and mobile Anki both follow it.';
+  @override
+  String get anki_lapis_visual_layout_sentence => 'Sentence position';
+  @override
+  String get anki_lapis_visual_layout_sentence_above => 'Above definitions';
+  @override
+  String get anki_lapis_visual_layout_sentence_below => 'Below definitions';
+  @override
+  String get anki_lapis_visual_layout_picture => 'Image position';
+  @override
+  String get anki_lapis_visual_layout_picture_right => 'Right of the word';
+  @override
+  String get anki_lapis_visual_layout_picture_left => 'Left of the word';
+  @override
+  String get anki_lapis_visual_layout_picture_alt => 'Inside the sentence';
+  @override
+  String get anki_lapis_visual_layout_audio => 'Audio buttons';
+  @override
+  String get anki_lapis_visual_layout_audio_header => 'Next to the reading';
+  @override
+  String get anki_lapis_visual_layout_audio_fixed => 'Pinned to the bottom';
+  @override
+  String get anki_lapis_visual_layout_audio_alt => 'Inside the sentence';
+  @override
+  String get anki_lapis_visual_mapping_hint =>
+      'Anki fields that fill the selected area. Changes are saved together with the style.';
+  @override
+  String get anki_lapis_visual_mapping_none =>
+      'This area is drawn by the template itself and has no field of its own.';
+  @override
+  String get anki_lapis_visual_color_custom => 'Custom';
+  @override
+  String get anki_lapis_visual_color_picker_title => 'Pick a color';
 }
 
 // Path: <root>
@@ -104395,10 +104933,10 @@ class _StringsZhCn extends _StringsEn {
   String get interconnect_peer_list_empty =>
       '尚未添加任何对端。可在下方的局域网设备列表中点击发现的设备自动配对，或手动添加对端地址。';
   @override
-  String get anki_lapis_visual_editor => '可视化样式编辑';
+  String get anki_lapis_visual_editor => '可视化编辑';
   @override
   String get anki_lapis_visual_editor_hint =>
-      '预览 Lapis 卡片，选择字段后直接调整样式，无需手写 CSS。';
+      '预览 Lapis 卡片，选中区域后直接改样式、位置和字段映射，无需手写 CSS。';
   @override
   String get anki_lapis_visual_front => '正面';
   @override
@@ -104645,6 +105183,41 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get about_tmdb_attribution =>
       'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+  @override
+  String get anki_lapis_visual_layout => '布局';
+  @override
+  String get anki_lapis_visual_layout_hint =>
+      '复用 Lapis 自带的布局开关，桌面与手机 Anki 同时生效。';
+  @override
+  String get anki_lapis_visual_layout_sentence => '例句位置';
+  @override
+  String get anki_lapis_visual_layout_sentence_above => '释义框上方';
+  @override
+  String get anki_lapis_visual_layout_sentence_below => '释义框下方';
+  @override
+  String get anki_lapis_visual_layout_picture => '图片位置';
+  @override
+  String get anki_lapis_visual_layout_picture_right => '单词右侧';
+  @override
+  String get anki_lapis_visual_layout_picture_left => '单词左侧';
+  @override
+  String get anki_lapis_visual_layout_picture_alt => '例句内';
+  @override
+  String get anki_lapis_visual_layout_audio => '音频按钮';
+  @override
+  String get anki_lapis_visual_layout_audio_header => '读音旁';
+  @override
+  String get anki_lapis_visual_layout_audio_fixed => '固定在底部';
+  @override
+  String get anki_lapis_visual_layout_audio_alt => '例句内';
+  @override
+  String get anki_lapis_visual_mapping_hint => '填充选中区域的 Anki 字段；改动随样式一起保存。';
+  @override
+  String get anki_lapis_visual_mapping_none => '该区域由模板自己绘制，没有对应字段。';
+  @override
+  String get anki_lapis_visual_color_custom => '自定义';
+  @override
+  String get anki_lapis_visual_color_picker_title => '选择颜色';
 }
 
 // Path: <root>
@@ -110911,10 +111484,10 @@ class _StringsZhHk extends _StringsEn {
   String get interconnect_peer_list_empty =>
       'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
   @override
-  String get anki_lapis_visual_editor => 'Visual style editor';
+  String get anki_lapis_visual_editor => 'Visual editor';
   @override
   String get anki_lapis_visual_editor_hint =>
-      'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+      'Preview the Lapis card, then change each area\'s style, position and field mapping without writing CSS.';
   @override
   String get anki_lapis_visual_front => 'Front';
   @override
@@ -111176,6 +111749,43 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get about_tmdb_attribution =>
       'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+  @override
+  String get anki_lapis_visual_layout => 'Layout';
+  @override
+  String get anki_lapis_visual_layout_hint =>
+      'Uses Lapis\' own layout switches, so desktop and mobile Anki both follow it.';
+  @override
+  String get anki_lapis_visual_layout_sentence => 'Sentence position';
+  @override
+  String get anki_lapis_visual_layout_sentence_above => 'Above definitions';
+  @override
+  String get anki_lapis_visual_layout_sentence_below => 'Below definitions';
+  @override
+  String get anki_lapis_visual_layout_picture => 'Image position';
+  @override
+  String get anki_lapis_visual_layout_picture_right => 'Right of the word';
+  @override
+  String get anki_lapis_visual_layout_picture_left => 'Left of the word';
+  @override
+  String get anki_lapis_visual_layout_picture_alt => 'Inside the sentence';
+  @override
+  String get anki_lapis_visual_layout_audio => 'Audio buttons';
+  @override
+  String get anki_lapis_visual_layout_audio_header => 'Next to the reading';
+  @override
+  String get anki_lapis_visual_layout_audio_fixed => 'Pinned to the bottom';
+  @override
+  String get anki_lapis_visual_layout_audio_alt => 'Inside the sentence';
+  @override
+  String get anki_lapis_visual_mapping_hint =>
+      'Anki fields that fill the selected area. Changes are saved together with the style.';
+  @override
+  String get anki_lapis_visual_mapping_none =>
+      'This area is drawn by the template itself and has no field of its own.';
+  @override
+  String get anki_lapis_visual_color_custom => 'Custom';
+  @override
+  String get anki_lapis_visual_color_picker_title => 'Pick a color';
 }
 
 /// Flat map(s) containing all translations.
@@ -116945,9 +117555,9 @@ extension on _StringsEn {
       case 'interconnect_peer_list_empty':
         return 'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
       case 'anki_lapis_visual_editor':
-        return 'Visual style editor';
+        return 'Visual editor';
       case 'anki_lapis_visual_editor_hint':
-        return 'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+        return 'Preview the Lapis card, then change each area\'s style, position and field mapping without writing CSS.';
       case 'anki_lapis_visual_front':
         return 'Front';
       case 'anki_lapis_visual_back':
@@ -117178,6 +117788,40 @@ extension on _StringsEn {
         return 'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
       case 'about_tmdb_attribution':
         return 'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+      case 'anki_lapis_visual_layout':
+        return 'Layout';
+      case 'anki_lapis_visual_layout_hint':
+        return 'Uses Lapis\' own layout switches, so desktop and mobile Anki both follow it.';
+      case 'anki_lapis_visual_layout_sentence':
+        return 'Sentence position';
+      case 'anki_lapis_visual_layout_sentence_above':
+        return 'Above definitions';
+      case 'anki_lapis_visual_layout_sentence_below':
+        return 'Below definitions';
+      case 'anki_lapis_visual_layout_picture':
+        return 'Image position';
+      case 'anki_lapis_visual_layout_picture_right':
+        return 'Right of the word';
+      case 'anki_lapis_visual_layout_picture_left':
+        return 'Left of the word';
+      case 'anki_lapis_visual_layout_picture_alt':
+        return 'Inside the sentence';
+      case 'anki_lapis_visual_layout_audio':
+        return 'Audio buttons';
+      case 'anki_lapis_visual_layout_audio_header':
+        return 'Next to the reading';
+      case 'anki_lapis_visual_layout_audio_fixed':
+        return 'Pinned to the bottom';
+      case 'anki_lapis_visual_layout_audio_alt':
+        return 'Inside the sentence';
+      case 'anki_lapis_visual_mapping_hint':
+        return 'Anki fields that fill the selected area. Changes are saved together with the style.';
+      case 'anki_lapis_visual_mapping_none':
+        return 'This area is drawn by the template itself and has no field of its own.';
+      case 'anki_lapis_visual_color_custom':
+        return 'Custom';
+      case 'anki_lapis_visual_color_picker_title':
+        return 'Pick a color';
       default:
         return null;
     }
@@ -122945,9 +123589,9 @@ extension on _StringsAr {
       case 'interconnect_peer_list_empty':
         return 'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
       case 'anki_lapis_visual_editor':
-        return 'Visual style editor';
+        return 'Visual editor';
       case 'anki_lapis_visual_editor_hint':
-        return 'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+        return 'Preview the Lapis card, then change each area\'s style, position and field mapping without writing CSS.';
       case 'anki_lapis_visual_front':
         return 'Front';
       case 'anki_lapis_visual_back':
@@ -123178,6 +123822,40 @@ extension on _StringsAr {
         return 'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
       case 'about_tmdb_attribution':
         return 'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+      case 'anki_lapis_visual_layout':
+        return 'Layout';
+      case 'anki_lapis_visual_layout_hint':
+        return 'Uses Lapis\' own layout switches, so desktop and mobile Anki both follow it.';
+      case 'anki_lapis_visual_layout_sentence':
+        return 'Sentence position';
+      case 'anki_lapis_visual_layout_sentence_above':
+        return 'Above definitions';
+      case 'anki_lapis_visual_layout_sentence_below':
+        return 'Below definitions';
+      case 'anki_lapis_visual_layout_picture':
+        return 'Image position';
+      case 'anki_lapis_visual_layout_picture_right':
+        return 'Right of the word';
+      case 'anki_lapis_visual_layout_picture_left':
+        return 'Left of the word';
+      case 'anki_lapis_visual_layout_picture_alt':
+        return 'Inside the sentence';
+      case 'anki_lapis_visual_layout_audio':
+        return 'Audio buttons';
+      case 'anki_lapis_visual_layout_audio_header':
+        return 'Next to the reading';
+      case 'anki_lapis_visual_layout_audio_fixed':
+        return 'Pinned to the bottom';
+      case 'anki_lapis_visual_layout_audio_alt':
+        return 'Inside the sentence';
+      case 'anki_lapis_visual_mapping_hint':
+        return 'Anki fields that fill the selected area. Changes are saved together with the style.';
+      case 'anki_lapis_visual_mapping_none':
+        return 'This area is drawn by the template itself and has no field of its own.';
+      case 'anki_lapis_visual_color_custom':
+        return 'Custom';
+      case 'anki_lapis_visual_color_picker_title':
+        return 'Pick a color';
       default:
         return null;
     }
@@ -128967,9 +129645,9 @@ extension on _StringsDe {
       case 'interconnect_peer_list_empty':
         return 'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
       case 'anki_lapis_visual_editor':
-        return 'Visual style editor';
+        return 'Visual editor';
       case 'anki_lapis_visual_editor_hint':
-        return 'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+        return 'Preview the Lapis card, then change each area\'s style, position and field mapping without writing CSS.';
       case 'anki_lapis_visual_front':
         return 'Front';
       case 'anki_lapis_visual_back':
@@ -129200,6 +129878,40 @@ extension on _StringsDe {
         return 'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
       case 'about_tmdb_attribution':
         return 'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+      case 'anki_lapis_visual_layout':
+        return 'Layout';
+      case 'anki_lapis_visual_layout_hint':
+        return 'Uses Lapis\' own layout switches, so desktop and mobile Anki both follow it.';
+      case 'anki_lapis_visual_layout_sentence':
+        return 'Sentence position';
+      case 'anki_lapis_visual_layout_sentence_above':
+        return 'Above definitions';
+      case 'anki_lapis_visual_layout_sentence_below':
+        return 'Below definitions';
+      case 'anki_lapis_visual_layout_picture':
+        return 'Image position';
+      case 'anki_lapis_visual_layout_picture_right':
+        return 'Right of the word';
+      case 'anki_lapis_visual_layout_picture_left':
+        return 'Left of the word';
+      case 'anki_lapis_visual_layout_picture_alt':
+        return 'Inside the sentence';
+      case 'anki_lapis_visual_layout_audio':
+        return 'Audio buttons';
+      case 'anki_lapis_visual_layout_audio_header':
+        return 'Next to the reading';
+      case 'anki_lapis_visual_layout_audio_fixed':
+        return 'Pinned to the bottom';
+      case 'anki_lapis_visual_layout_audio_alt':
+        return 'Inside the sentence';
+      case 'anki_lapis_visual_mapping_hint':
+        return 'Anki fields that fill the selected area. Changes are saved together with the style.';
+      case 'anki_lapis_visual_mapping_none':
+        return 'This area is drawn by the template itself and has no field of its own.';
+      case 'anki_lapis_visual_color_custom':
+        return 'Custom';
+      case 'anki_lapis_visual_color_picker_title':
+        return 'Pick a color';
       default:
         return null;
     }
@@ -134988,9 +135700,9 @@ extension on _StringsEs {
       case 'interconnect_peer_list_empty':
         return 'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
       case 'anki_lapis_visual_editor':
-        return 'Visual style editor';
+        return 'Visual editor';
       case 'anki_lapis_visual_editor_hint':
-        return 'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+        return 'Preview the Lapis card, then change each area\'s style, position and field mapping without writing CSS.';
       case 'anki_lapis_visual_front':
         return 'Front';
       case 'anki_lapis_visual_back':
@@ -135221,6 +135933,40 @@ extension on _StringsEs {
         return 'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
       case 'about_tmdb_attribution':
         return 'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+      case 'anki_lapis_visual_layout':
+        return 'Layout';
+      case 'anki_lapis_visual_layout_hint':
+        return 'Uses Lapis\' own layout switches, so desktop and mobile Anki both follow it.';
+      case 'anki_lapis_visual_layout_sentence':
+        return 'Sentence position';
+      case 'anki_lapis_visual_layout_sentence_above':
+        return 'Above definitions';
+      case 'anki_lapis_visual_layout_sentence_below':
+        return 'Below definitions';
+      case 'anki_lapis_visual_layout_picture':
+        return 'Image position';
+      case 'anki_lapis_visual_layout_picture_right':
+        return 'Right of the word';
+      case 'anki_lapis_visual_layout_picture_left':
+        return 'Left of the word';
+      case 'anki_lapis_visual_layout_picture_alt':
+        return 'Inside the sentence';
+      case 'anki_lapis_visual_layout_audio':
+        return 'Audio buttons';
+      case 'anki_lapis_visual_layout_audio_header':
+        return 'Next to the reading';
+      case 'anki_lapis_visual_layout_audio_fixed':
+        return 'Pinned to the bottom';
+      case 'anki_lapis_visual_layout_audio_alt':
+        return 'Inside the sentence';
+      case 'anki_lapis_visual_mapping_hint':
+        return 'Anki fields that fill the selected area. Changes are saved together with the style.';
+      case 'anki_lapis_visual_mapping_none':
+        return 'This area is drawn by the template itself and has no field of its own.';
+      case 'anki_lapis_visual_color_custom':
+        return 'Custom';
+      case 'anki_lapis_visual_color_picker_title':
+        return 'Pick a color';
       default:
         return null;
     }
@@ -141015,9 +141761,9 @@ extension on _StringsFr {
       case 'interconnect_peer_list_empty':
         return 'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
       case 'anki_lapis_visual_editor':
-        return 'Visual style editor';
+        return 'Visual editor';
       case 'anki_lapis_visual_editor_hint':
-        return 'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+        return 'Preview the Lapis card, then change each area\'s style, position and field mapping without writing CSS.';
       case 'anki_lapis_visual_front':
         return 'Front';
       case 'anki_lapis_visual_back':
@@ -141248,6 +141994,40 @@ extension on _StringsFr {
         return 'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
       case 'about_tmdb_attribution':
         return 'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+      case 'anki_lapis_visual_layout':
+        return 'Layout';
+      case 'anki_lapis_visual_layout_hint':
+        return 'Uses Lapis\' own layout switches, so desktop and mobile Anki both follow it.';
+      case 'anki_lapis_visual_layout_sentence':
+        return 'Sentence position';
+      case 'anki_lapis_visual_layout_sentence_above':
+        return 'Above definitions';
+      case 'anki_lapis_visual_layout_sentence_below':
+        return 'Below definitions';
+      case 'anki_lapis_visual_layout_picture':
+        return 'Image position';
+      case 'anki_lapis_visual_layout_picture_right':
+        return 'Right of the word';
+      case 'anki_lapis_visual_layout_picture_left':
+        return 'Left of the word';
+      case 'anki_lapis_visual_layout_picture_alt':
+        return 'Inside the sentence';
+      case 'anki_lapis_visual_layout_audio':
+        return 'Audio buttons';
+      case 'anki_lapis_visual_layout_audio_header':
+        return 'Next to the reading';
+      case 'anki_lapis_visual_layout_audio_fixed':
+        return 'Pinned to the bottom';
+      case 'anki_lapis_visual_layout_audio_alt':
+        return 'Inside the sentence';
+      case 'anki_lapis_visual_mapping_hint':
+        return 'Anki fields that fill the selected area. Changes are saved together with the style.';
+      case 'anki_lapis_visual_mapping_none':
+        return 'This area is drawn by the template itself and has no field of its own.';
+      case 'anki_lapis_visual_color_custom':
+        return 'Custom';
+      case 'anki_lapis_visual_color_picker_title':
+        return 'Pick a color';
       default:
         return null;
     }
@@ -147024,9 +147804,9 @@ extension on _StringsId {
       case 'interconnect_peer_list_empty':
         return 'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
       case 'anki_lapis_visual_editor':
-        return 'Visual style editor';
+        return 'Visual editor';
       case 'anki_lapis_visual_editor_hint':
-        return 'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+        return 'Preview the Lapis card, then change each area\'s style, position and field mapping without writing CSS.';
       case 'anki_lapis_visual_front':
         return 'Front';
       case 'anki_lapis_visual_back':
@@ -147257,6 +148037,40 @@ extension on _StringsId {
         return 'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
       case 'about_tmdb_attribution':
         return 'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+      case 'anki_lapis_visual_layout':
+        return 'Layout';
+      case 'anki_lapis_visual_layout_hint':
+        return 'Uses Lapis\' own layout switches, so desktop and mobile Anki both follow it.';
+      case 'anki_lapis_visual_layout_sentence':
+        return 'Sentence position';
+      case 'anki_lapis_visual_layout_sentence_above':
+        return 'Above definitions';
+      case 'anki_lapis_visual_layout_sentence_below':
+        return 'Below definitions';
+      case 'anki_lapis_visual_layout_picture':
+        return 'Image position';
+      case 'anki_lapis_visual_layout_picture_right':
+        return 'Right of the word';
+      case 'anki_lapis_visual_layout_picture_left':
+        return 'Left of the word';
+      case 'anki_lapis_visual_layout_picture_alt':
+        return 'Inside the sentence';
+      case 'anki_lapis_visual_layout_audio':
+        return 'Audio buttons';
+      case 'anki_lapis_visual_layout_audio_header':
+        return 'Next to the reading';
+      case 'anki_lapis_visual_layout_audio_fixed':
+        return 'Pinned to the bottom';
+      case 'anki_lapis_visual_layout_audio_alt':
+        return 'Inside the sentence';
+      case 'anki_lapis_visual_mapping_hint':
+        return 'Anki fields that fill the selected area. Changes are saved together with the style.';
+      case 'anki_lapis_visual_mapping_none':
+        return 'This area is drawn by the template itself and has no field of its own.';
+      case 'anki_lapis_visual_color_custom':
+        return 'Custom';
+      case 'anki_lapis_visual_color_picker_title':
+        return 'Pick a color';
       default:
         return null;
     }
@@ -153047,9 +153861,9 @@ extension on _StringsIt {
       case 'interconnect_peer_list_empty':
         return 'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
       case 'anki_lapis_visual_editor':
-        return 'Visual style editor';
+        return 'Visual editor';
       case 'anki_lapis_visual_editor_hint':
-        return 'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+        return 'Preview the Lapis card, then change each area\'s style, position and field mapping without writing CSS.';
       case 'anki_lapis_visual_front':
         return 'Front';
       case 'anki_lapis_visual_back':
@@ -153280,6 +154094,40 @@ extension on _StringsIt {
         return 'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
       case 'about_tmdb_attribution':
         return 'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+      case 'anki_lapis_visual_layout':
+        return 'Layout';
+      case 'anki_lapis_visual_layout_hint':
+        return 'Uses Lapis\' own layout switches, so desktop and mobile Anki both follow it.';
+      case 'anki_lapis_visual_layout_sentence':
+        return 'Sentence position';
+      case 'anki_lapis_visual_layout_sentence_above':
+        return 'Above definitions';
+      case 'anki_lapis_visual_layout_sentence_below':
+        return 'Below definitions';
+      case 'anki_lapis_visual_layout_picture':
+        return 'Image position';
+      case 'anki_lapis_visual_layout_picture_right':
+        return 'Right of the word';
+      case 'anki_lapis_visual_layout_picture_left':
+        return 'Left of the word';
+      case 'anki_lapis_visual_layout_picture_alt':
+        return 'Inside the sentence';
+      case 'anki_lapis_visual_layout_audio':
+        return 'Audio buttons';
+      case 'anki_lapis_visual_layout_audio_header':
+        return 'Next to the reading';
+      case 'anki_lapis_visual_layout_audio_fixed':
+        return 'Pinned to the bottom';
+      case 'anki_lapis_visual_layout_audio_alt':
+        return 'Inside the sentence';
+      case 'anki_lapis_visual_mapping_hint':
+        return 'Anki fields that fill the selected area. Changes are saved together with the style.';
+      case 'anki_lapis_visual_mapping_none':
+        return 'This area is drawn by the template itself and has no field of its own.';
+      case 'anki_lapis_visual_color_custom':
+        return 'Custom';
+      case 'anki_lapis_visual_color_picker_title':
+        return 'Pick a color';
       default:
         return null;
     }
@@ -159032,9 +159880,9 @@ extension on _StringsJa {
       case 'interconnect_peer_list_empty':
         return 'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
       case 'anki_lapis_visual_editor':
-        return 'Visual style editor';
+        return 'Visual editor';
       case 'anki_lapis_visual_editor_hint':
-        return 'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+        return 'Preview the Lapis card, then change each area\'s style, position and field mapping without writing CSS.';
       case 'anki_lapis_visual_front':
         return 'Front';
       case 'anki_lapis_visual_back':
@@ -159265,6 +160113,40 @@ extension on _StringsJa {
         return 'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
       case 'about_tmdb_attribution':
         return 'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+      case 'anki_lapis_visual_layout':
+        return 'Layout';
+      case 'anki_lapis_visual_layout_hint':
+        return 'Uses Lapis\' own layout switches, so desktop and mobile Anki both follow it.';
+      case 'anki_lapis_visual_layout_sentence':
+        return 'Sentence position';
+      case 'anki_lapis_visual_layout_sentence_above':
+        return 'Above definitions';
+      case 'anki_lapis_visual_layout_sentence_below':
+        return 'Below definitions';
+      case 'anki_lapis_visual_layout_picture':
+        return 'Image position';
+      case 'anki_lapis_visual_layout_picture_right':
+        return 'Right of the word';
+      case 'anki_lapis_visual_layout_picture_left':
+        return 'Left of the word';
+      case 'anki_lapis_visual_layout_picture_alt':
+        return 'Inside the sentence';
+      case 'anki_lapis_visual_layout_audio':
+        return 'Audio buttons';
+      case 'anki_lapis_visual_layout_audio_header':
+        return 'Next to the reading';
+      case 'anki_lapis_visual_layout_audio_fixed':
+        return 'Pinned to the bottom';
+      case 'anki_lapis_visual_layout_audio_alt':
+        return 'Inside the sentence';
+      case 'anki_lapis_visual_mapping_hint':
+        return 'Anki fields that fill the selected area. Changes are saved together with the style.';
+      case 'anki_lapis_visual_mapping_none':
+        return 'This area is drawn by the template itself and has no field of its own.';
+      case 'anki_lapis_visual_color_custom':
+        return 'Custom';
+      case 'anki_lapis_visual_color_picker_title':
+        return 'Pick a color';
       default:
         return null;
     }
@@ -165021,9 +165903,9 @@ extension on _StringsKo {
       case 'interconnect_peer_list_empty':
         return 'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
       case 'anki_lapis_visual_editor':
-        return 'Visual style editor';
+        return 'Visual editor';
       case 'anki_lapis_visual_editor_hint':
-        return 'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+        return 'Preview the Lapis card, then change each area\'s style, position and field mapping without writing CSS.';
       case 'anki_lapis_visual_front':
         return 'Front';
       case 'anki_lapis_visual_back':
@@ -165254,6 +166136,40 @@ extension on _StringsKo {
         return 'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
       case 'about_tmdb_attribution':
         return 'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+      case 'anki_lapis_visual_layout':
+        return 'Layout';
+      case 'anki_lapis_visual_layout_hint':
+        return 'Uses Lapis\' own layout switches, so desktop and mobile Anki both follow it.';
+      case 'anki_lapis_visual_layout_sentence':
+        return 'Sentence position';
+      case 'anki_lapis_visual_layout_sentence_above':
+        return 'Above definitions';
+      case 'anki_lapis_visual_layout_sentence_below':
+        return 'Below definitions';
+      case 'anki_lapis_visual_layout_picture':
+        return 'Image position';
+      case 'anki_lapis_visual_layout_picture_right':
+        return 'Right of the word';
+      case 'anki_lapis_visual_layout_picture_left':
+        return 'Left of the word';
+      case 'anki_lapis_visual_layout_picture_alt':
+        return 'Inside the sentence';
+      case 'anki_lapis_visual_layout_audio':
+        return 'Audio buttons';
+      case 'anki_lapis_visual_layout_audio_header':
+        return 'Next to the reading';
+      case 'anki_lapis_visual_layout_audio_fixed':
+        return 'Pinned to the bottom';
+      case 'anki_lapis_visual_layout_audio_alt':
+        return 'Inside the sentence';
+      case 'anki_lapis_visual_mapping_hint':
+        return 'Anki fields that fill the selected area. Changes are saved together with the style.';
+      case 'anki_lapis_visual_mapping_none':
+        return 'This area is drawn by the template itself and has no field of its own.';
+      case 'anki_lapis_visual_color_custom':
+        return 'Custom';
+      case 'anki_lapis_visual_color_picker_title':
+        return 'Pick a color';
       default:
         return null;
     }
@@ -171038,9 +171954,9 @@ extension on _StringsNl {
       case 'interconnect_peer_list_empty':
         return 'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
       case 'anki_lapis_visual_editor':
-        return 'Visual style editor';
+        return 'Visual editor';
       case 'anki_lapis_visual_editor_hint':
-        return 'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+        return 'Preview the Lapis card, then change each area\'s style, position and field mapping without writing CSS.';
       case 'anki_lapis_visual_front':
         return 'Front';
       case 'anki_lapis_visual_back':
@@ -171271,6 +172187,40 @@ extension on _StringsNl {
         return 'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
       case 'about_tmdb_attribution':
         return 'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+      case 'anki_lapis_visual_layout':
+        return 'Layout';
+      case 'anki_lapis_visual_layout_hint':
+        return 'Uses Lapis\' own layout switches, so desktop and mobile Anki both follow it.';
+      case 'anki_lapis_visual_layout_sentence':
+        return 'Sentence position';
+      case 'anki_lapis_visual_layout_sentence_above':
+        return 'Above definitions';
+      case 'anki_lapis_visual_layout_sentence_below':
+        return 'Below definitions';
+      case 'anki_lapis_visual_layout_picture':
+        return 'Image position';
+      case 'anki_lapis_visual_layout_picture_right':
+        return 'Right of the word';
+      case 'anki_lapis_visual_layout_picture_left':
+        return 'Left of the word';
+      case 'anki_lapis_visual_layout_picture_alt':
+        return 'Inside the sentence';
+      case 'anki_lapis_visual_layout_audio':
+        return 'Audio buttons';
+      case 'anki_lapis_visual_layout_audio_header':
+        return 'Next to the reading';
+      case 'anki_lapis_visual_layout_audio_fixed':
+        return 'Pinned to the bottom';
+      case 'anki_lapis_visual_layout_audio_alt':
+        return 'Inside the sentence';
+      case 'anki_lapis_visual_mapping_hint':
+        return 'Anki fields that fill the selected area. Changes are saved together with the style.';
+      case 'anki_lapis_visual_mapping_none':
+        return 'This area is drawn by the template itself and has no field of its own.';
+      case 'anki_lapis_visual_color_custom':
+        return 'Custom';
+      case 'anki_lapis_visual_color_picker_title':
+        return 'Pick a color';
       default:
         return null;
     }
@@ -177052,9 +178002,9 @@ extension on _StringsPtBr {
       case 'interconnect_peer_list_empty':
         return 'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
       case 'anki_lapis_visual_editor':
-        return 'Visual style editor';
+        return 'Visual editor';
       case 'anki_lapis_visual_editor_hint':
-        return 'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+        return 'Preview the Lapis card, then change each area\'s style, position and field mapping without writing CSS.';
       case 'anki_lapis_visual_front':
         return 'Front';
       case 'anki_lapis_visual_back':
@@ -177285,6 +178235,40 @@ extension on _StringsPtBr {
         return 'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
       case 'about_tmdb_attribution':
         return 'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+      case 'anki_lapis_visual_layout':
+        return 'Layout';
+      case 'anki_lapis_visual_layout_hint':
+        return 'Uses Lapis\' own layout switches, so desktop and mobile Anki both follow it.';
+      case 'anki_lapis_visual_layout_sentence':
+        return 'Sentence position';
+      case 'anki_lapis_visual_layout_sentence_above':
+        return 'Above definitions';
+      case 'anki_lapis_visual_layout_sentence_below':
+        return 'Below definitions';
+      case 'anki_lapis_visual_layout_picture':
+        return 'Image position';
+      case 'anki_lapis_visual_layout_picture_right':
+        return 'Right of the word';
+      case 'anki_lapis_visual_layout_picture_left':
+        return 'Left of the word';
+      case 'anki_lapis_visual_layout_picture_alt':
+        return 'Inside the sentence';
+      case 'anki_lapis_visual_layout_audio':
+        return 'Audio buttons';
+      case 'anki_lapis_visual_layout_audio_header':
+        return 'Next to the reading';
+      case 'anki_lapis_visual_layout_audio_fixed':
+        return 'Pinned to the bottom';
+      case 'anki_lapis_visual_layout_audio_alt':
+        return 'Inside the sentence';
+      case 'anki_lapis_visual_mapping_hint':
+        return 'Anki fields that fill the selected area. Changes are saved together with the style.';
+      case 'anki_lapis_visual_mapping_none':
+        return 'This area is drawn by the template itself and has no field of its own.';
+      case 'anki_lapis_visual_color_custom':
+        return 'Custom';
+      case 'anki_lapis_visual_color_picker_title':
+        return 'Pick a color';
       default:
         return null;
     }
@@ -183071,9 +184055,9 @@ extension on _StringsRu {
       case 'interconnect_peer_list_empty':
         return 'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
       case 'anki_lapis_visual_editor':
-        return 'Visual style editor';
+        return 'Visual editor';
       case 'anki_lapis_visual_editor_hint':
-        return 'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+        return 'Preview the Lapis card, then change each area\'s style, position and field mapping without writing CSS.';
       case 'anki_lapis_visual_front':
         return 'Front';
       case 'anki_lapis_visual_back':
@@ -183304,6 +184288,40 @@ extension on _StringsRu {
         return 'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
       case 'about_tmdb_attribution':
         return 'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+      case 'anki_lapis_visual_layout':
+        return 'Layout';
+      case 'anki_lapis_visual_layout_hint':
+        return 'Uses Lapis\' own layout switches, so desktop and mobile Anki both follow it.';
+      case 'anki_lapis_visual_layout_sentence':
+        return 'Sentence position';
+      case 'anki_lapis_visual_layout_sentence_above':
+        return 'Above definitions';
+      case 'anki_lapis_visual_layout_sentence_below':
+        return 'Below definitions';
+      case 'anki_lapis_visual_layout_picture':
+        return 'Image position';
+      case 'anki_lapis_visual_layout_picture_right':
+        return 'Right of the word';
+      case 'anki_lapis_visual_layout_picture_left':
+        return 'Left of the word';
+      case 'anki_lapis_visual_layout_picture_alt':
+        return 'Inside the sentence';
+      case 'anki_lapis_visual_layout_audio':
+        return 'Audio buttons';
+      case 'anki_lapis_visual_layout_audio_header':
+        return 'Next to the reading';
+      case 'anki_lapis_visual_layout_audio_fixed':
+        return 'Pinned to the bottom';
+      case 'anki_lapis_visual_layout_audio_alt':
+        return 'Inside the sentence';
+      case 'anki_lapis_visual_mapping_hint':
+        return 'Anki fields that fill the selected area. Changes are saved together with the style.';
+      case 'anki_lapis_visual_mapping_none':
+        return 'This area is drawn by the template itself and has no field of its own.';
+      case 'anki_lapis_visual_color_custom':
+        return 'Custom';
+      case 'anki_lapis_visual_color_picker_title':
+        return 'Pick a color';
       default:
         return null;
     }
@@ -189073,9 +190091,9 @@ extension on _StringsTh {
       case 'interconnect_peer_list_empty':
         return 'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
       case 'anki_lapis_visual_editor':
-        return 'Visual style editor';
+        return 'Visual editor';
       case 'anki_lapis_visual_editor_hint':
-        return 'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+        return 'Preview the Lapis card, then change each area\'s style, position and field mapping without writing CSS.';
       case 'anki_lapis_visual_front':
         return 'Front';
       case 'anki_lapis_visual_back':
@@ -189306,6 +190324,40 @@ extension on _StringsTh {
         return 'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
       case 'about_tmdb_attribution':
         return 'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+      case 'anki_lapis_visual_layout':
+        return 'Layout';
+      case 'anki_lapis_visual_layout_hint':
+        return 'Uses Lapis\' own layout switches, so desktop and mobile Anki both follow it.';
+      case 'anki_lapis_visual_layout_sentence':
+        return 'Sentence position';
+      case 'anki_lapis_visual_layout_sentence_above':
+        return 'Above definitions';
+      case 'anki_lapis_visual_layout_sentence_below':
+        return 'Below definitions';
+      case 'anki_lapis_visual_layout_picture':
+        return 'Image position';
+      case 'anki_lapis_visual_layout_picture_right':
+        return 'Right of the word';
+      case 'anki_lapis_visual_layout_picture_left':
+        return 'Left of the word';
+      case 'anki_lapis_visual_layout_picture_alt':
+        return 'Inside the sentence';
+      case 'anki_lapis_visual_layout_audio':
+        return 'Audio buttons';
+      case 'anki_lapis_visual_layout_audio_header':
+        return 'Next to the reading';
+      case 'anki_lapis_visual_layout_audio_fixed':
+        return 'Pinned to the bottom';
+      case 'anki_lapis_visual_layout_audio_alt':
+        return 'Inside the sentence';
+      case 'anki_lapis_visual_mapping_hint':
+        return 'Anki fields that fill the selected area. Changes are saved together with the style.';
+      case 'anki_lapis_visual_mapping_none':
+        return 'This area is drawn by the template itself and has no field of its own.';
+      case 'anki_lapis_visual_color_custom':
+        return 'Custom';
+      case 'anki_lapis_visual_color_picker_title':
+        return 'Pick a color';
       default:
         return null;
     }
@@ -195084,9 +196136,9 @@ extension on _StringsTr {
       case 'interconnect_peer_list_empty':
         return 'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
       case 'anki_lapis_visual_editor':
-        return 'Visual style editor';
+        return 'Visual editor';
       case 'anki_lapis_visual_editor_hint':
-        return 'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+        return 'Preview the Lapis card, then change each area\'s style, position and field mapping without writing CSS.';
       case 'anki_lapis_visual_front':
         return 'Front';
       case 'anki_lapis_visual_back':
@@ -195317,6 +196369,40 @@ extension on _StringsTr {
         return 'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
       case 'about_tmdb_attribution':
         return 'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+      case 'anki_lapis_visual_layout':
+        return 'Layout';
+      case 'anki_lapis_visual_layout_hint':
+        return 'Uses Lapis\' own layout switches, so desktop and mobile Anki both follow it.';
+      case 'anki_lapis_visual_layout_sentence':
+        return 'Sentence position';
+      case 'anki_lapis_visual_layout_sentence_above':
+        return 'Above definitions';
+      case 'anki_lapis_visual_layout_sentence_below':
+        return 'Below definitions';
+      case 'anki_lapis_visual_layout_picture':
+        return 'Image position';
+      case 'anki_lapis_visual_layout_picture_right':
+        return 'Right of the word';
+      case 'anki_lapis_visual_layout_picture_left':
+        return 'Left of the word';
+      case 'anki_lapis_visual_layout_picture_alt':
+        return 'Inside the sentence';
+      case 'anki_lapis_visual_layout_audio':
+        return 'Audio buttons';
+      case 'anki_lapis_visual_layout_audio_header':
+        return 'Next to the reading';
+      case 'anki_lapis_visual_layout_audio_fixed':
+        return 'Pinned to the bottom';
+      case 'anki_lapis_visual_layout_audio_alt':
+        return 'Inside the sentence';
+      case 'anki_lapis_visual_mapping_hint':
+        return 'Anki fields that fill the selected area. Changes are saved together with the style.';
+      case 'anki_lapis_visual_mapping_none':
+        return 'This area is drawn by the template itself and has no field of its own.';
+      case 'anki_lapis_visual_color_custom':
+        return 'Custom';
+      case 'anki_lapis_visual_color_picker_title':
+        return 'Pick a color';
       default:
         return null;
     }
@@ -201091,9 +202177,9 @@ extension on _StringsVi {
       case 'interconnect_peer_list_empty':
         return 'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
       case 'anki_lapis_visual_editor':
-        return 'Visual style editor';
+        return 'Visual editor';
       case 'anki_lapis_visual_editor_hint':
-        return 'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+        return 'Preview the Lapis card, then change each area\'s style, position and field mapping without writing CSS.';
       case 'anki_lapis_visual_front':
         return 'Front';
       case 'anki_lapis_visual_back':
@@ -201324,6 +202410,40 @@ extension on _StringsVi {
         return 'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
       case 'about_tmdb_attribution':
         return 'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+      case 'anki_lapis_visual_layout':
+        return 'Layout';
+      case 'anki_lapis_visual_layout_hint':
+        return 'Uses Lapis\' own layout switches, so desktop and mobile Anki both follow it.';
+      case 'anki_lapis_visual_layout_sentence':
+        return 'Sentence position';
+      case 'anki_lapis_visual_layout_sentence_above':
+        return 'Above definitions';
+      case 'anki_lapis_visual_layout_sentence_below':
+        return 'Below definitions';
+      case 'anki_lapis_visual_layout_picture':
+        return 'Image position';
+      case 'anki_lapis_visual_layout_picture_right':
+        return 'Right of the word';
+      case 'anki_lapis_visual_layout_picture_left':
+        return 'Left of the word';
+      case 'anki_lapis_visual_layout_picture_alt':
+        return 'Inside the sentence';
+      case 'anki_lapis_visual_layout_audio':
+        return 'Audio buttons';
+      case 'anki_lapis_visual_layout_audio_header':
+        return 'Next to the reading';
+      case 'anki_lapis_visual_layout_audio_fixed':
+        return 'Pinned to the bottom';
+      case 'anki_lapis_visual_layout_audio_alt':
+        return 'Inside the sentence';
+      case 'anki_lapis_visual_mapping_hint':
+        return 'Anki fields that fill the selected area. Changes are saved together with the style.';
+      case 'anki_lapis_visual_mapping_none':
+        return 'This area is drawn by the template itself and has no field of its own.';
+      case 'anki_lapis_visual_color_custom':
+        return 'Custom';
+      case 'anki_lapis_visual_color_picker_title':
+        return 'Pick a color';
       default:
         return null;
     }
@@ -207046,9 +208166,9 @@ extension on _StringsZhCn {
       case 'interconnect_peer_list_empty':
         return '尚未添加任何对端。可在下方的局域网设备列表中点击发现的设备自动配对，或手动添加对端地址。';
       case 'anki_lapis_visual_editor':
-        return '可视化样式编辑';
+        return '可视化编辑';
       case 'anki_lapis_visual_editor_hint':
-        return '预览 Lapis 卡片，选择字段后直接调整样式，无需手写 CSS。';
+        return '预览 Lapis 卡片，选中区域后直接改样式、位置和字段映射，无需手写 CSS。';
       case 'anki_lapis_visual_front':
         return '正面';
       case 'anki_lapis_visual_back':
@@ -207278,6 +208398,40 @@ extension on _StringsZhCn {
         return '可留空，默认用内置 Key。仅当刮削失效或你想用自己的配额时才需要填写。';
       case 'about_tmdb_attribution':
         return 'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+      case 'anki_lapis_visual_layout':
+        return '布局';
+      case 'anki_lapis_visual_layout_hint':
+        return '复用 Lapis 自带的布局开关，桌面与手机 Anki 同时生效。';
+      case 'anki_lapis_visual_layout_sentence':
+        return '例句位置';
+      case 'anki_lapis_visual_layout_sentence_above':
+        return '释义框上方';
+      case 'anki_lapis_visual_layout_sentence_below':
+        return '释义框下方';
+      case 'anki_lapis_visual_layout_picture':
+        return '图片位置';
+      case 'anki_lapis_visual_layout_picture_right':
+        return '单词右侧';
+      case 'anki_lapis_visual_layout_picture_left':
+        return '单词左侧';
+      case 'anki_lapis_visual_layout_picture_alt':
+        return '例句内';
+      case 'anki_lapis_visual_layout_audio':
+        return '音频按钮';
+      case 'anki_lapis_visual_layout_audio_header':
+        return '读音旁';
+      case 'anki_lapis_visual_layout_audio_fixed':
+        return '固定在底部';
+      case 'anki_lapis_visual_layout_audio_alt':
+        return '例句内';
+      case 'anki_lapis_visual_mapping_hint':
+        return '填充选中区域的 Anki 字段；改动随样式一起保存。';
+      case 'anki_lapis_visual_mapping_none':
+        return '该区域由模板自己绘制，没有对应字段。';
+      case 'anki_lapis_visual_color_custom':
+        return '自定义';
+      case 'anki_lapis_visual_color_picker_title':
+        return '选择颜色';
       default:
         return null;
     }
@@ -213025,9 +214179,9 @@ extension on _StringsZhHk {
       case 'interconnect_peer_list_empty':
         return 'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
       case 'anki_lapis_visual_editor':
-        return 'Visual style editor';
+        return 'Visual editor';
       case 'anki_lapis_visual_editor_hint':
-        return 'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+        return 'Preview the Lapis card, then change each area\'s style, position and field mapping without writing CSS.';
       case 'anki_lapis_visual_front':
         return 'Front';
       case 'anki_lapis_visual_back':
@@ -213258,6 +214412,40 @@ extension on _StringsZhHk {
         return 'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
       case 'about_tmdb_attribution':
         return 'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+      case 'anki_lapis_visual_layout':
+        return 'Layout';
+      case 'anki_lapis_visual_layout_hint':
+        return 'Uses Lapis\' own layout switches, so desktop and mobile Anki both follow it.';
+      case 'anki_lapis_visual_layout_sentence':
+        return 'Sentence position';
+      case 'anki_lapis_visual_layout_sentence_above':
+        return 'Above definitions';
+      case 'anki_lapis_visual_layout_sentence_below':
+        return 'Below definitions';
+      case 'anki_lapis_visual_layout_picture':
+        return 'Image position';
+      case 'anki_lapis_visual_layout_picture_right':
+        return 'Right of the word';
+      case 'anki_lapis_visual_layout_picture_left':
+        return 'Left of the word';
+      case 'anki_lapis_visual_layout_picture_alt':
+        return 'Inside the sentence';
+      case 'anki_lapis_visual_layout_audio':
+        return 'Audio buttons';
+      case 'anki_lapis_visual_layout_audio_header':
+        return 'Next to the reading';
+      case 'anki_lapis_visual_layout_audio_fixed':
+        return 'Pinned to the bottom';
+      case 'anki_lapis_visual_layout_audio_alt':
+        return 'Inside the sentence';
+      case 'anki_lapis_visual_mapping_hint':
+        return 'Anki fields that fill the selected area. Changes are saved together with the style.';
+      case 'anki_lapis_visual_mapping_none':
+        return 'This area is drawn by the template itself and has no field of its own.';
+      case 'anki_lapis_visual_color_custom':
+        return 'Custom';
+      case 'anki_lapis_visual_color_picker_title':
+        return 'Pick a color';
       default:
         return null;
     }
