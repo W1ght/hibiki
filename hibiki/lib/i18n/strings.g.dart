@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 50116 (2948 per locale)
+/// Strings: 50320 (2960 per locale)
 ///
-/// Built on 2026-08-01 at 06:40 UTC
+/// Built on 2026-08-01 at 07:12 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2995,7 +2995,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_jimaku_downloaded => 'Subtitle downloaded and applied';
   String get video_jimaku_episode => 'Episode (optional)';
   String get video_jimaku_episode_hint => 'Leave empty to list all';
-  String get video_jimaku_fetch => 'Auto-fetch subtitles (Jimaku)';
+  String get video_jimaku_fetch => 'Fetch subtitles (Jimaku)';
   String get video_jimaku_filter => 'Filter results (e.g. WEBRip, BD)';
   String get video_jimaku_find_sources => 'Find subtitles';
   String get video_jimaku_language => 'Language';
@@ -3978,6 +3978,21 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get mihon_filter_descending => 'Descending';
   String get mihon_add_to_bookshelf => 'Add to manga shelf';
   String get mihon_in_bookshelf => 'In manga shelf';
+  String get download_airing_calendar_title => 'Airing calendar';
+  String get download_airing_calendar_show_all => 'Show all this season';
+  String get download_airing_calendar_empty_guidance =>
+      'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+  String get download_airing_calendar_error =>
+      'Failed to load the airing schedule';
+  String get download_airing_calendar_in_library => 'In library';
+  String get download_airing_calendar_subscribed => 'Subscribed';
+  String download_airing_calendar_episode_label({required Object episode}) =>
+      'Ep ${episode}';
+  String get download_airing_calendar_week_prev => 'Previous week';
+  String get download_airing_calendar_week_next => 'Next week';
+  String get download_airing_calendar_week_empty => 'Nothing airing this week';
+  String get video_jimaku_format => 'Format';
+  String get video_jimaku_format_all => 'All';
 }
 
 // Path: <root>
@@ -9054,7 +9069,7 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_jimaku_episode_hint => 'Leave empty to list all';
   @override
-  String get video_jimaku_fetch => 'جلب الترجمات تلقائيًا (Jimaku)';
+  String get video_jimaku_fetch => 'جلب الترجمات (Jimaku)';
   @override
   String get video_jimaku_filter => 'تصفية النتائج (مثل WEBRip وBD)';
   @override
@@ -10753,6 +10768,33 @@ class _StringsAr extends _StringsEn {
   String get mihon_add_to_bookshelf => 'Add to manga shelf';
   @override
   String get mihon_in_bookshelf => 'In manga shelf';
+  @override
+  String get download_airing_calendar_title => 'Airing calendar';
+  @override
+  String get download_airing_calendar_show_all => 'Show all this season';
+  @override
+  String get download_airing_calendar_empty_guidance =>
+      'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+  @override
+  String get download_airing_calendar_error =>
+      'Failed to load the airing schedule';
+  @override
+  String get download_airing_calendar_in_library => 'In library';
+  @override
+  String get download_airing_calendar_subscribed => 'Subscribed';
+  @override
+  String download_airing_calendar_episode_label({required Object episode}) =>
+      'Ep ${episode}';
+  @override
+  String get download_airing_calendar_week_prev => 'Previous week';
+  @override
+  String get download_airing_calendar_week_next => 'Next week';
+  @override
+  String get download_airing_calendar_week_empty => 'Nothing airing this week';
+  @override
+  String get video_jimaku_format => 'Format';
+  @override
+  String get video_jimaku_format_all => 'All';
 }
 
 // Path: <root>
@@ -15886,7 +15928,7 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_jimaku_episode_hint => 'Leave empty to list all';
   @override
-  String get video_jimaku_fetch => 'Untertitel automatisch holen (Jimaku)';
+  String get video_jimaku_fetch => 'Untertitel holen (Jimaku)';
   @override
   String get video_jimaku_filter => 'Ergebnisse filtern (z. B. WEBRip, BD)';
   @override
@@ -17595,6 +17637,33 @@ class _StringsDe extends _StringsEn {
   String get mihon_add_to_bookshelf => 'Add to manga shelf';
   @override
   String get mihon_in_bookshelf => 'In manga shelf';
+  @override
+  String get download_airing_calendar_title => 'Airing calendar';
+  @override
+  String get download_airing_calendar_show_all => 'Show all this season';
+  @override
+  String get download_airing_calendar_empty_guidance =>
+      'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+  @override
+  String get download_airing_calendar_error =>
+      'Failed to load the airing schedule';
+  @override
+  String get download_airing_calendar_in_library => 'In library';
+  @override
+  String get download_airing_calendar_subscribed => 'Subscribed';
+  @override
+  String download_airing_calendar_episode_label({required Object episode}) =>
+      'Ep ${episode}';
+  @override
+  String get download_airing_calendar_week_prev => 'Previous week';
+  @override
+  String get download_airing_calendar_week_next => 'Next week';
+  @override
+  String get download_airing_calendar_week_empty => 'Nothing airing this week';
+  @override
+  String get video_jimaku_format => 'Format';
+  @override
+  String get video_jimaku_format_all => 'All';
 }
 
 // Path: <root>
@@ -22742,8 +22811,7 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_jimaku_episode_hint => 'Leave empty to list all';
   @override
-  String get video_jimaku_fetch =>
-      'Obtener subtítulos automáticamente (Jimaku)';
+  String get video_jimaku_fetch => 'Obtener subtítulos (Jimaku)';
   @override
   String get video_jimaku_filter => 'Filtrar resultados (p. ej. WEBRip, BD)';
   @override
@@ -24453,6 +24521,33 @@ class _StringsEs extends _StringsEn {
   String get mihon_add_to_bookshelf => 'Add to manga shelf';
   @override
   String get mihon_in_bookshelf => 'In manga shelf';
+  @override
+  String get download_airing_calendar_title => 'Airing calendar';
+  @override
+  String get download_airing_calendar_show_all => 'Show all this season';
+  @override
+  String get download_airing_calendar_empty_guidance =>
+      'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+  @override
+  String get download_airing_calendar_error =>
+      'Failed to load the airing schedule';
+  @override
+  String get download_airing_calendar_in_library => 'In library';
+  @override
+  String get download_airing_calendar_subscribed => 'Subscribed';
+  @override
+  String download_airing_calendar_episode_label({required Object episode}) =>
+      'Ep ${episode}';
+  @override
+  String get download_airing_calendar_week_prev => 'Previous week';
+  @override
+  String get download_airing_calendar_week_next => 'Next week';
+  @override
+  String get download_airing_calendar_week_empty => 'Nothing airing this week';
+  @override
+  String get video_jimaku_format => 'Format';
+  @override
+  String get video_jimaku_format_all => 'All';
 }
 
 // Path: <root>
@@ -29612,7 +29707,7 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_jimaku_episode_hint => 'Leave empty to list all';
   @override
-  String get video_jimaku_fetch => 'Récupération auto des sous-titres (Jimaku)';
+  String get video_jimaku_fetch => 'Récupérer les sous-titres (Jimaku)';
   @override
   String get video_jimaku_filter => 'Filtrer les résultats (ex. WEBRip, BD)';
   @override
@@ -31322,6 +31417,33 @@ class _StringsFr extends _StringsEn {
   String get mihon_add_to_bookshelf => 'Add to manga shelf';
   @override
   String get mihon_in_bookshelf => 'In manga shelf';
+  @override
+  String get download_airing_calendar_title => 'Airing calendar';
+  @override
+  String get download_airing_calendar_show_all => 'Show all this season';
+  @override
+  String get download_airing_calendar_empty_guidance =>
+      'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+  @override
+  String get download_airing_calendar_error =>
+      'Failed to load the airing schedule';
+  @override
+  String get download_airing_calendar_in_library => 'In library';
+  @override
+  String get download_airing_calendar_subscribed => 'Subscribed';
+  @override
+  String download_airing_calendar_episode_label({required Object episode}) =>
+      'Ep ${episode}';
+  @override
+  String get download_airing_calendar_week_prev => 'Previous week';
+  @override
+  String get download_airing_calendar_week_next => 'Next week';
+  @override
+  String get download_airing_calendar_week_empty => 'Nothing airing this week';
+  @override
+  String get video_jimaku_format => 'Format';
+  @override
+  String get video_jimaku_format_all => 'All';
 }
 
 // Path: <root>
@@ -36419,7 +36541,7 @@ class _StringsId extends _StringsEn {
   @override
   String get video_jimaku_episode_hint => 'Leave empty to list all';
   @override
-  String get video_jimaku_fetch => 'Ambil subtitle otomatis (Jimaku)';
+  String get video_jimaku_fetch => 'Ambil subtitle (Jimaku)';
   @override
   String get video_jimaku_filter => 'Saring hasil (mis. WEBRip, BD)';
   @override
@@ -38120,6 +38242,33 @@ class _StringsId extends _StringsEn {
   String get mihon_add_to_bookshelf => 'Add to manga shelf';
   @override
   String get mihon_in_bookshelf => 'In manga shelf';
+  @override
+  String get download_airing_calendar_title => 'Airing calendar';
+  @override
+  String get download_airing_calendar_show_all => 'Show all this season';
+  @override
+  String get download_airing_calendar_empty_guidance =>
+      'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+  @override
+  String get download_airing_calendar_error =>
+      'Failed to load the airing schedule';
+  @override
+  String get download_airing_calendar_in_library => 'In library';
+  @override
+  String get download_airing_calendar_subscribed => 'Subscribed';
+  @override
+  String download_airing_calendar_episode_label({required Object episode}) =>
+      'Ep ${episode}';
+  @override
+  String get download_airing_calendar_week_prev => 'Previous week';
+  @override
+  String get download_airing_calendar_week_next => 'Next week';
+  @override
+  String get download_airing_calendar_week_empty => 'Nothing airing this week';
+  @override
+  String get video_jimaku_format => 'Format';
+  @override
+  String get video_jimaku_format_all => 'All';
 }
 
 // Path: <root>
@@ -43256,7 +43405,7 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_jimaku_episode_hint => 'Leave empty to list all';
   @override
-  String get video_jimaku_fetch => 'Recupero automatico sottotitoli (Jimaku)';
+  String get video_jimaku_fetch => 'Recupera sottotitoli (Jimaku)';
   @override
   String get video_jimaku_filter => 'Filtra risultati (es. WEBRip, BD)';
   @override
@@ -44964,6 +45113,33 @@ class _StringsIt extends _StringsEn {
   String get mihon_add_to_bookshelf => 'Add to manga shelf';
   @override
   String get mihon_in_bookshelf => 'In manga shelf';
+  @override
+  String get download_airing_calendar_title => 'Airing calendar';
+  @override
+  String get download_airing_calendar_show_all => 'Show all this season';
+  @override
+  String get download_airing_calendar_empty_guidance =>
+      'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+  @override
+  String get download_airing_calendar_error =>
+      'Failed to load the airing schedule';
+  @override
+  String get download_airing_calendar_in_library => 'In library';
+  @override
+  String get download_airing_calendar_subscribed => 'Subscribed';
+  @override
+  String download_airing_calendar_episode_label({required Object episode}) =>
+      'Ep ${episode}';
+  @override
+  String get download_airing_calendar_week_prev => 'Previous week';
+  @override
+  String get download_airing_calendar_week_next => 'Next week';
+  @override
+  String get download_airing_calendar_week_empty => 'Nothing airing this week';
+  @override
+  String get video_jimaku_format => 'Format';
+  @override
+  String get video_jimaku_format_all => 'All';
 }
 
 // Path: <root>
@@ -49945,7 +50121,7 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_jimaku_episode_hint => 'Leave empty to list all';
   @override
-  String get video_jimaku_fetch => '字幕を自動取得（Jimaku）';
+  String get video_jimaku_fetch => '字幕を取得（Jimaku）';
   @override
   String get video_jimaku_filter => '結果を絞り込み（WEBRip、BD など）';
   @override
@@ -51625,6 +51801,33 @@ class _StringsJa extends _StringsEn {
   String get mihon_add_to_bookshelf => 'Add to manga shelf';
   @override
   String get mihon_in_bookshelf => 'In manga shelf';
+  @override
+  String get download_airing_calendar_title => 'Airing calendar';
+  @override
+  String get download_airing_calendar_show_all => 'Show all this season';
+  @override
+  String get download_airing_calendar_empty_guidance =>
+      'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+  @override
+  String get download_airing_calendar_error =>
+      'Failed to load the airing schedule';
+  @override
+  String get download_airing_calendar_in_library => 'In library';
+  @override
+  String get download_airing_calendar_subscribed => 'Subscribed';
+  @override
+  String download_airing_calendar_episode_label({required Object episode}) =>
+      'Ep ${episode}';
+  @override
+  String get download_airing_calendar_week_prev => 'Previous week';
+  @override
+  String get download_airing_calendar_week_next => 'Next week';
+  @override
+  String get download_airing_calendar_week_empty => 'Nothing airing this week';
+  @override
+  String get video_jimaku_format => 'Format';
+  @override
+  String get video_jimaku_format_all => 'All';
 }
 
 // Path: <root>
@@ -56605,7 +56808,7 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_jimaku_episode_hint => 'Leave empty to list all';
   @override
-  String get video_jimaku_fetch => '자막 자동 가져오기(Jimaku)';
+  String get video_jimaku_fetch => '자막 가져오기(Jimaku)';
   @override
   String get video_jimaku_filter => '결과 필터(예: WEBRip, BD)';
   @override
@@ -58288,6 +58491,33 @@ class _StringsKo extends _StringsEn {
   String get mihon_add_to_bookshelf => 'Add to manga shelf';
   @override
   String get mihon_in_bookshelf => 'In manga shelf';
+  @override
+  String get download_airing_calendar_title => 'Airing calendar';
+  @override
+  String get download_airing_calendar_show_all => 'Show all this season';
+  @override
+  String get download_airing_calendar_empty_guidance =>
+      'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+  @override
+  String get download_airing_calendar_error =>
+      'Failed to load the airing schedule';
+  @override
+  String get download_airing_calendar_in_library => 'In library';
+  @override
+  String get download_airing_calendar_subscribed => 'Subscribed';
+  @override
+  String download_airing_calendar_episode_label({required Object episode}) =>
+      'Ep ${episode}';
+  @override
+  String get download_airing_calendar_week_prev => 'Previous week';
+  @override
+  String get download_airing_calendar_week_next => 'Next week';
+  @override
+  String get download_airing_calendar_week_empty => 'Nothing airing this week';
+  @override
+  String get video_jimaku_format => 'Format';
+  @override
+  String get video_jimaku_format_all => 'All';
 }
 
 // Path: <root>
@@ -63408,7 +63638,7 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_jimaku_episode_hint => 'Leave empty to list all';
   @override
-  String get video_jimaku_fetch => 'Ondertitels automatisch ophalen (Jimaku)';
+  String get video_jimaku_fetch => 'Ondertitels ophalen (Jimaku)';
   @override
   String get video_jimaku_filter => 'Resultaten filteren (bijv. WEBRip, BD)';
   @override
@@ -65112,6 +65342,33 @@ class _StringsNl extends _StringsEn {
   String get mihon_add_to_bookshelf => 'Add to manga shelf';
   @override
   String get mihon_in_bookshelf => 'In manga shelf';
+  @override
+  String get download_airing_calendar_title => 'Airing calendar';
+  @override
+  String get download_airing_calendar_show_all => 'Show all this season';
+  @override
+  String get download_airing_calendar_empty_guidance =>
+      'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+  @override
+  String get download_airing_calendar_error =>
+      'Failed to load the airing schedule';
+  @override
+  String get download_airing_calendar_in_library => 'In library';
+  @override
+  String get download_airing_calendar_subscribed => 'Subscribed';
+  @override
+  String download_airing_calendar_episode_label({required Object episode}) =>
+      'Ep ${episode}';
+  @override
+  String get download_airing_calendar_week_prev => 'Previous week';
+  @override
+  String get download_airing_calendar_week_next => 'Next week';
+  @override
+  String get download_airing_calendar_week_empty => 'Nothing airing this week';
+  @override
+  String get video_jimaku_format => 'Format';
+  @override
+  String get video_jimaku_format_all => 'All';
 }
 
 // Path: <root>
@@ -70242,7 +70499,7 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_jimaku_episode_hint => 'Leave empty to list all';
   @override
-  String get video_jimaku_fetch => 'Buscar legendas automaticamente (Jimaku)';
+  String get video_jimaku_fetch => 'Buscar legendas (Jimaku)';
   @override
   String get video_jimaku_filter => 'Filtrar resultados (ex.: WEBRip, BD)';
   @override
@@ -71949,6 +72206,33 @@ class _StringsPtBr extends _StringsEn {
   String get mihon_add_to_bookshelf => 'Add to manga shelf';
   @override
   String get mihon_in_bookshelf => 'In manga shelf';
+  @override
+  String get download_airing_calendar_title => 'Airing calendar';
+  @override
+  String get download_airing_calendar_show_all => 'Show all this season';
+  @override
+  String get download_airing_calendar_empty_guidance =>
+      'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+  @override
+  String get download_airing_calendar_error =>
+      'Failed to load the airing schedule';
+  @override
+  String get download_airing_calendar_in_library => 'In library';
+  @override
+  String get download_airing_calendar_subscribed => 'Subscribed';
+  @override
+  String download_airing_calendar_episode_label({required Object episode}) =>
+      'Ep ${episode}';
+  @override
+  String get download_airing_calendar_week_prev => 'Previous week';
+  @override
+  String get download_airing_calendar_week_next => 'Next week';
+  @override
+  String get download_airing_calendar_week_empty => 'Nothing airing this week';
+  @override
+  String get video_jimaku_format => 'Format';
+  @override
+  String get video_jimaku_format_all => 'All';
 }
 
 // Path: <root>
@@ -77067,7 +77351,7 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_jimaku_episode_hint => 'Leave empty to list all';
   @override
-  String get video_jimaku_fetch => 'Авто-загрузка субтитров (Jimaku)';
+  String get video_jimaku_fetch => 'Загрузить субтитры (Jimaku)';
   @override
   String get video_jimaku_filter => 'Фильтр результатов (например, WEBRip, BD)';
   @override
@@ -78770,6 +79054,33 @@ class _StringsRu extends _StringsEn {
   String get mihon_add_to_bookshelf => 'Add to manga shelf';
   @override
   String get mihon_in_bookshelf => 'In manga shelf';
+  @override
+  String get download_airing_calendar_title => 'Airing calendar';
+  @override
+  String get download_airing_calendar_show_all => 'Show all this season';
+  @override
+  String get download_airing_calendar_empty_guidance =>
+      'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+  @override
+  String get download_airing_calendar_error =>
+      'Failed to load the airing schedule';
+  @override
+  String get download_airing_calendar_in_library => 'In library';
+  @override
+  String get download_airing_calendar_subscribed => 'Subscribed';
+  @override
+  String download_airing_calendar_episode_label({required Object episode}) =>
+      'Ep ${episode}';
+  @override
+  String get download_airing_calendar_week_prev => 'Previous week';
+  @override
+  String get download_airing_calendar_week_next => 'Next week';
+  @override
+  String get download_airing_calendar_week_empty => 'Nothing airing this week';
+  @override
+  String get video_jimaku_format => 'Format';
+  @override
+  String get video_jimaku_format_all => 'All';
 }
 
 // Path: <root>
@@ -83842,7 +84153,7 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_jimaku_episode_hint => 'Leave empty to list all';
   @override
-  String get video_jimaku_fetch => 'ดึงคำบรรยายอัตโนมัติ (Jimaku)';
+  String get video_jimaku_fetch => 'ดึงคำบรรยาย (Jimaku)';
   @override
   String get video_jimaku_filter => 'กรองผลลัพธ์ (เช่น WEBRip, BD)';
   @override
@@ -85539,6 +85850,33 @@ class _StringsTh extends _StringsEn {
   String get mihon_add_to_bookshelf => 'Add to manga shelf';
   @override
   String get mihon_in_bookshelf => 'In manga shelf';
+  @override
+  String get download_airing_calendar_title => 'Airing calendar';
+  @override
+  String get download_airing_calendar_show_all => 'Show all this season';
+  @override
+  String get download_airing_calendar_empty_guidance =>
+      'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+  @override
+  String get download_airing_calendar_error =>
+      'Failed to load the airing schedule';
+  @override
+  String get download_airing_calendar_in_library => 'In library';
+  @override
+  String get download_airing_calendar_subscribed => 'Subscribed';
+  @override
+  String download_airing_calendar_episode_label({required Object episode}) =>
+      'Ep ${episode}';
+  @override
+  String get download_airing_calendar_week_prev => 'Previous week';
+  @override
+  String get download_airing_calendar_week_next => 'Next week';
+  @override
+  String get download_airing_calendar_week_empty => 'Nothing airing this week';
+  @override
+  String get video_jimaku_format => 'Format';
+  @override
+  String get video_jimaku_format_all => 'All';
 }
 
 // Path: <root>
@@ -90639,7 +90977,7 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_jimaku_episode_hint => 'Leave empty to list all';
   @override
-  String get video_jimaku_fetch => 'Altyazıları otomatik getir (Jimaku)';
+  String get video_jimaku_fetch => 'Altyazıları getir (Jimaku)';
   @override
   String get video_jimaku_filter => 'Sonuçları filtrele (ör. WEBRip, BD)';
   @override
@@ -92340,6 +92678,33 @@ class _StringsTr extends _StringsEn {
   String get mihon_add_to_bookshelf => 'Add to manga shelf';
   @override
   String get mihon_in_bookshelf => 'In manga shelf';
+  @override
+  String get download_airing_calendar_title => 'Airing calendar';
+  @override
+  String get download_airing_calendar_show_all => 'Show all this season';
+  @override
+  String get download_airing_calendar_empty_guidance =>
+      'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+  @override
+  String get download_airing_calendar_error =>
+      'Failed to load the airing schedule';
+  @override
+  String get download_airing_calendar_in_library => 'In library';
+  @override
+  String get download_airing_calendar_subscribed => 'Subscribed';
+  @override
+  String download_airing_calendar_episode_label({required Object episode}) =>
+      'Ep ${episode}';
+  @override
+  String get download_airing_calendar_week_prev => 'Previous week';
+  @override
+  String get download_airing_calendar_week_next => 'Next week';
+  @override
+  String get download_airing_calendar_week_empty => 'Nothing airing this week';
+  @override
+  String get video_jimaku_format => 'Format';
+  @override
+  String get video_jimaku_format_all => 'All';
 }
 
 // Path: <root>
@@ -97429,7 +97794,7 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_jimaku_episode_hint => 'Leave empty to list all';
   @override
-  String get video_jimaku_fetch => 'Tự lấy phụ đề (Jimaku)';
+  String get video_jimaku_fetch => 'Lấy phụ đề (Jimaku)';
   @override
   String get video_jimaku_filter => 'Lọc kết quả (vd WEBRip, BD)';
   @override
@@ -99126,6 +99491,33 @@ class _StringsVi extends _StringsEn {
   String get mihon_add_to_bookshelf => 'Add to manga shelf';
   @override
   String get mihon_in_bookshelf => 'In manga shelf';
+  @override
+  String get download_airing_calendar_title => 'Airing calendar';
+  @override
+  String get download_airing_calendar_show_all => 'Show all this season';
+  @override
+  String get download_airing_calendar_empty_guidance =>
+      'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+  @override
+  String get download_airing_calendar_error =>
+      'Failed to load the airing schedule';
+  @override
+  String get download_airing_calendar_in_library => 'In library';
+  @override
+  String get download_airing_calendar_subscribed => 'Subscribed';
+  @override
+  String download_airing_calendar_episode_label({required Object episode}) =>
+      'Ep ${episode}';
+  @override
+  String get download_airing_calendar_week_prev => 'Previous week';
+  @override
+  String get download_airing_calendar_week_next => 'Next week';
+  @override
+  String get download_airing_calendar_week_empty => 'Nothing airing this week';
+  @override
+  String get video_jimaku_format => 'Format';
+  @override
+  String get video_jimaku_format_all => 'All';
 }
 
 // Path: <root>
@@ -103869,7 +104261,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_jimaku_episode_hint => '留空列出全部';
   @override
-  String get video_jimaku_fetch => '自动获取字幕（Jimaku）';
+  String get video_jimaku_fetch => '获取字幕（Jimaku）';
   @override
   String get video_jimaku_filter => '筛选结果（如 WEBRip、BD）';
   @override
@@ -105434,6 +105826,32 @@ class _StringsZhCn extends _StringsEn {
   String get mihon_add_to_bookshelf => '加入漫画书架';
   @override
   String get mihon_in_bookshelf => '已加入漫画书架';
+  @override
+  String get download_airing_calendar_title => '放送日历';
+  @override
+  String get download_airing_calendar_show_all => '显示本季全部';
+  @override
+  String get download_airing_calendar_empty_guidance =>
+      '暂无可显示的放送信息：给合集绑定 AniList 或添加下载订阅后，这里会显示对应的放送时间。';
+  @override
+  String get download_airing_calendar_error => '放送时间表加载失败';
+  @override
+  String get download_airing_calendar_in_library => '已入库';
+  @override
+  String get download_airing_calendar_subscribed => '订阅中';
+  @override
+  String download_airing_calendar_episode_label({required Object episode}) =>
+      '第 ${episode} 集';
+  @override
+  String get download_airing_calendar_week_prev => '上一周';
+  @override
+  String get download_airing_calendar_week_next => '下一周';
+  @override
+  String get download_airing_calendar_week_empty => '本周没有相关放送';
+  @override
+  String get video_jimaku_format => '类型';
+  @override
+  String get video_jimaku_format_all => '全部';
 }
 
 // Path: <root>
@@ -110345,7 +110763,7 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_jimaku_episode_hint => 'Leave empty to list all';
   @override
-  String get video_jimaku_fetch => '自動取得字幕（Jimaku）';
+  String get video_jimaku_fetch => '取得字幕（Jimaku）';
   @override
   String get video_jimaku_filter => '篩選結果（如 WEBRip、BD）';
   @override
@@ -112016,6 +112434,33 @@ class _StringsZhHk extends _StringsEn {
   String get mihon_add_to_bookshelf => 'Add to manga shelf';
   @override
   String get mihon_in_bookshelf => 'In manga shelf';
+  @override
+  String get download_airing_calendar_title => 'Airing calendar';
+  @override
+  String get download_airing_calendar_show_all => 'Show all this season';
+  @override
+  String get download_airing_calendar_empty_guidance =>
+      'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+  @override
+  String get download_airing_calendar_error =>
+      'Failed to load the airing schedule';
+  @override
+  String get download_airing_calendar_in_library => 'In library';
+  @override
+  String get download_airing_calendar_subscribed => 'Subscribed';
+  @override
+  String download_airing_calendar_episode_label({required Object episode}) =>
+      'Ep ${episode}';
+  @override
+  String get download_airing_calendar_week_prev => 'Previous week';
+  @override
+  String get download_airing_calendar_week_next => 'Next week';
+  @override
+  String get download_airing_calendar_week_empty => 'Nothing airing this week';
+  @override
+  String get video_jimaku_format => 'Format';
+  @override
+  String get video_jimaku_format_all => 'All';
 }
 
 /// Flat map(s) containing all translations.
@@ -116589,7 +117034,7 @@ extension on _StringsEn {
       case 'video_jimaku_episode_hint':
         return 'Leave empty to list all';
       case 'video_jimaku_fetch':
-        return 'Auto-fetch subtitles (Jimaku)';
+        return 'Fetch subtitles (Jimaku)';
       case 'video_jimaku_filter':
         return 'Filter results (e.g. WEBRip, BD)';
       case 'video_jimaku_find_sources':
@@ -118068,6 +118513,30 @@ extension on _StringsEn {
         return 'Add to manga shelf';
       case 'mihon_in_bookshelf':
         return 'In manga shelf';
+      case 'download_airing_calendar_title':
+        return 'Airing calendar';
+      case 'download_airing_calendar_show_all':
+        return 'Show all this season';
+      case 'download_airing_calendar_empty_guidance':
+        return 'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+      case 'download_airing_calendar_error':
+        return 'Failed to load the airing schedule';
+      case 'download_airing_calendar_in_library':
+        return 'In library';
+      case 'download_airing_calendar_subscribed':
+        return 'Subscribed';
+      case 'download_airing_calendar_episode_label':
+        return ({required Object episode}) => 'Ep ${episode}';
+      case 'download_airing_calendar_week_prev':
+        return 'Previous week';
+      case 'download_airing_calendar_week_next':
+        return 'Next week';
+      case 'download_airing_calendar_week_empty':
+        return 'Nothing airing this week';
+      case 'video_jimaku_format':
+        return 'Format';
+      case 'video_jimaku_format_all':
+        return 'All';
       default:
         return null;
     }
@@ -122638,7 +123107,7 @@ extension on _StringsAr {
       case 'video_jimaku_episode_hint':
         return 'Leave empty to list all';
       case 'video_jimaku_fetch':
-        return 'جلب الترجمات تلقائيًا (Jimaku)';
+        return 'جلب الترجمات (Jimaku)';
       case 'video_jimaku_filter':
         return 'تصفية النتائج (مثل WEBRip وBD)';
       case 'video_jimaku_find_sources':
@@ -124118,6 +124587,30 @@ extension on _StringsAr {
         return 'Add to manga shelf';
       case 'mihon_in_bookshelf':
         return 'In manga shelf';
+      case 'download_airing_calendar_title':
+        return 'Airing calendar';
+      case 'download_airing_calendar_show_all':
+        return 'Show all this season';
+      case 'download_airing_calendar_empty_guidance':
+        return 'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+      case 'download_airing_calendar_error':
+        return 'Failed to load the airing schedule';
+      case 'download_airing_calendar_in_library':
+        return 'In library';
+      case 'download_airing_calendar_subscribed':
+        return 'Subscribed';
+      case 'download_airing_calendar_episode_label':
+        return ({required Object episode}) => 'Ep ${episode}';
+      case 'download_airing_calendar_week_prev':
+        return 'Previous week';
+      case 'download_airing_calendar_week_next':
+        return 'Next week';
+      case 'download_airing_calendar_week_empty':
+        return 'Nothing airing this week';
+      case 'video_jimaku_format':
+        return 'Format';
+      case 'video_jimaku_format_all':
+        return 'All';
       default:
         return null;
     }
@@ -128709,7 +129202,7 @@ extension on _StringsDe {
       case 'video_jimaku_episode_hint':
         return 'Leave empty to list all';
       case 'video_jimaku_fetch':
-        return 'Untertitel automatisch holen (Jimaku)';
+        return 'Untertitel holen (Jimaku)';
       case 'video_jimaku_filter':
         return 'Ergebnisse filtern (z. B. WEBRip, BD)';
       case 'video_jimaku_find_sources':
@@ -130190,6 +130683,30 @@ extension on _StringsDe {
         return 'Add to manga shelf';
       case 'mihon_in_bookshelf':
         return 'In manga shelf';
+      case 'download_airing_calendar_title':
+        return 'Airing calendar';
+      case 'download_airing_calendar_show_all':
+        return 'Show all this season';
+      case 'download_airing_calendar_empty_guidance':
+        return 'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+      case 'download_airing_calendar_error':
+        return 'Failed to load the airing schedule';
+      case 'download_airing_calendar_in_library':
+        return 'In library';
+      case 'download_airing_calendar_subscribed':
+        return 'Subscribed';
+      case 'download_airing_calendar_episode_label':
+        return ({required Object episode}) => 'Ep ${episode}';
+      case 'download_airing_calendar_week_prev':
+        return 'Previous week';
+      case 'download_airing_calendar_week_next':
+        return 'Next week';
+      case 'download_airing_calendar_week_empty':
+        return 'Nothing airing this week';
+      case 'video_jimaku_format':
+        return 'Format';
+      case 'video_jimaku_format_all':
+        return 'All';
       default:
         return null;
     }
@@ -134781,7 +135298,7 @@ extension on _StringsEs {
       case 'video_jimaku_episode_hint':
         return 'Leave empty to list all';
       case 'video_jimaku_fetch':
-        return 'Obtener subtítulos automáticamente (Jimaku)';
+        return 'Obtener subtítulos (Jimaku)';
       case 'video_jimaku_filter':
         return 'Filtrar resultados (p. ej. WEBRip, BD)';
       case 'video_jimaku_find_sources':
@@ -136261,6 +136778,30 @@ extension on _StringsEs {
         return 'Add to manga shelf';
       case 'mihon_in_bookshelf':
         return 'In manga shelf';
+      case 'download_airing_calendar_title':
+        return 'Airing calendar';
+      case 'download_airing_calendar_show_all':
+        return 'Show all this season';
+      case 'download_airing_calendar_empty_guidance':
+        return 'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+      case 'download_airing_calendar_error':
+        return 'Failed to load the airing schedule';
+      case 'download_airing_calendar_in_library':
+        return 'In library';
+      case 'download_airing_calendar_subscribed':
+        return 'Subscribed';
+      case 'download_airing_calendar_episode_label':
+        return ({required Object episode}) => 'Ep ${episode}';
+      case 'download_airing_calendar_week_prev':
+        return 'Previous week';
+      case 'download_airing_calendar_week_next':
+        return 'Next week';
+      case 'download_airing_calendar_week_empty':
+        return 'Nothing airing this week';
+      case 'video_jimaku_format':
+        return 'Format';
+      case 'video_jimaku_format_all':
+        return 'All';
       default:
         return null;
     }
@@ -140857,7 +141398,7 @@ extension on _StringsFr {
       case 'video_jimaku_episode_hint':
         return 'Leave empty to list all';
       case 'video_jimaku_fetch':
-        return 'Récupération auto des sous-titres (Jimaku)';
+        return 'Récupérer les sous-titres (Jimaku)';
       case 'video_jimaku_filter':
         return 'Filtrer les résultats (ex. WEBRip, BD)';
       case 'video_jimaku_find_sources':
@@ -142338,6 +142879,30 @@ extension on _StringsFr {
         return 'Add to manga shelf';
       case 'mihon_in_bookshelf':
         return 'In manga shelf';
+      case 'download_airing_calendar_title':
+        return 'Airing calendar';
+      case 'download_airing_calendar_show_all':
+        return 'Show all this season';
+      case 'download_airing_calendar_empty_guidance':
+        return 'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+      case 'download_airing_calendar_error':
+        return 'Failed to load the airing schedule';
+      case 'download_airing_calendar_in_library':
+        return 'In library';
+      case 'download_airing_calendar_subscribed':
+        return 'Subscribed';
+      case 'download_airing_calendar_episode_label':
+        return ({required Object episode}) => 'Ep ${episode}';
+      case 'download_airing_calendar_week_prev':
+        return 'Previous week';
+      case 'download_airing_calendar_week_next':
+        return 'Next week';
+      case 'download_airing_calendar_week_empty':
+        return 'Nothing airing this week';
+      case 'video_jimaku_format':
+        return 'Format';
+      case 'video_jimaku_format_all':
+        return 'All';
       default:
         return null;
     }
@@ -146917,7 +147482,7 @@ extension on _StringsId {
       case 'video_jimaku_episode_hint':
         return 'Leave empty to list all';
       case 'video_jimaku_fetch':
-        return 'Ambil subtitle otomatis (Jimaku)';
+        return 'Ambil subtitle (Jimaku)';
       case 'video_jimaku_filter':
         return 'Saring hasil (mis. WEBRip, BD)';
       case 'video_jimaku_find_sources':
@@ -148397,6 +148962,30 @@ extension on _StringsId {
         return 'Add to manga shelf';
       case 'mihon_in_bookshelf':
         return 'In manga shelf';
+      case 'download_airing_calendar_title':
+        return 'Airing calendar';
+      case 'download_airing_calendar_show_all':
+        return 'Show all this season';
+      case 'download_airing_calendar_empty_guidance':
+        return 'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+      case 'download_airing_calendar_error':
+        return 'Failed to load the airing schedule';
+      case 'download_airing_calendar_in_library':
+        return 'In library';
+      case 'download_airing_calendar_subscribed':
+        return 'Subscribed';
+      case 'download_airing_calendar_episode_label':
+        return ({required Object episode}) => 'Ep ${episode}';
+      case 'download_airing_calendar_week_prev':
+        return 'Previous week';
+      case 'download_airing_calendar_week_next':
+        return 'Next week';
+      case 'download_airing_calendar_week_empty':
+        return 'Nothing airing this week';
+      case 'video_jimaku_format':
+        return 'Format';
+      case 'video_jimaku_format_all':
+        return 'All';
       default:
         return null;
     }
@@ -152989,7 +153578,7 @@ extension on _StringsIt {
       case 'video_jimaku_episode_hint':
         return 'Leave empty to list all';
       case 'video_jimaku_fetch':
-        return 'Recupero automatico sottotitoli (Jimaku)';
+        return 'Recupera sottotitoli (Jimaku)';
       case 'video_jimaku_filter':
         return 'Filtra risultati (es. WEBRip, BD)';
       case 'video_jimaku_find_sources':
@@ -154470,6 +155059,30 @@ extension on _StringsIt {
         return 'Add to manga shelf';
       case 'mihon_in_bookshelf':
         return 'In manga shelf';
+      case 'download_airing_calendar_title':
+        return 'Airing calendar';
+      case 'download_airing_calendar_show_all':
+        return 'Show all this season';
+      case 'download_airing_calendar_empty_guidance':
+        return 'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+      case 'download_airing_calendar_error':
+        return 'Failed to load the airing schedule';
+      case 'download_airing_calendar_in_library':
+        return 'In library';
+      case 'download_airing_calendar_subscribed':
+        return 'Subscribed';
+      case 'download_airing_calendar_episode_label':
+        return ({required Object episode}) => 'Ep ${episode}';
+      case 'download_airing_calendar_week_prev':
+        return 'Previous week';
+      case 'download_airing_calendar_week_next':
+        return 'Next week';
+      case 'download_airing_calendar_week_empty':
+        return 'Nothing airing this week';
+      case 'video_jimaku_format':
+        return 'Format';
+      case 'video_jimaku_format_all':
+        return 'All';
       default:
         return null;
     }
@@ -159027,7 +159640,7 @@ extension on _StringsJa {
       case 'video_jimaku_episode_hint':
         return 'Leave empty to list all';
       case 'video_jimaku_fetch':
-        return '字幕を自動取得（Jimaku）';
+        return '字幕を取得（Jimaku）';
       case 'video_jimaku_filter':
         return '結果を絞り込み（WEBRip、BD など）';
       case 'video_jimaku_find_sources':
@@ -160505,6 +161118,30 @@ extension on _StringsJa {
         return 'Add to manga shelf';
       case 'mihon_in_bookshelf':
         return 'In manga shelf';
+      case 'download_airing_calendar_title':
+        return 'Airing calendar';
+      case 'download_airing_calendar_show_all':
+        return 'Show all this season';
+      case 'download_airing_calendar_empty_guidance':
+        return 'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+      case 'download_airing_calendar_error':
+        return 'Failed to load the airing schedule';
+      case 'download_airing_calendar_in_library':
+        return 'In library';
+      case 'download_airing_calendar_subscribed':
+        return 'Subscribed';
+      case 'download_airing_calendar_episode_label':
+        return ({required Object episode}) => 'Ep ${episode}';
+      case 'download_airing_calendar_week_prev':
+        return 'Previous week';
+      case 'download_airing_calendar_week_next':
+        return 'Next week';
+      case 'download_airing_calendar_week_empty':
+        return 'Nothing airing this week';
+      case 'video_jimaku_format':
+        return 'Format';
+      case 'video_jimaku_format_all':
+        return 'All';
       default:
         return null;
     }
@@ -165065,7 +165702,7 @@ extension on _StringsKo {
       case 'video_jimaku_episode_hint':
         return 'Leave empty to list all';
       case 'video_jimaku_fetch':
-        return '자막 자동 가져오기(Jimaku)';
+        return '자막 가져오기(Jimaku)';
       case 'video_jimaku_filter':
         return '결과 필터(예: WEBRip, BD)';
       case 'video_jimaku_find_sources':
@@ -166544,6 +167181,30 @@ extension on _StringsKo {
         return 'Add to manga shelf';
       case 'mihon_in_bookshelf':
         return 'In manga shelf';
+      case 'download_airing_calendar_title':
+        return 'Airing calendar';
+      case 'download_airing_calendar_show_all':
+        return 'Show all this season';
+      case 'download_airing_calendar_empty_guidance':
+        return 'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+      case 'download_airing_calendar_error':
+        return 'Failed to load the airing schedule';
+      case 'download_airing_calendar_in_library':
+        return 'In library';
+      case 'download_airing_calendar_subscribed':
+        return 'Subscribed';
+      case 'download_airing_calendar_episode_label':
+        return ({required Object episode}) => 'Ep ${episode}';
+      case 'download_airing_calendar_week_prev':
+        return 'Previous week';
+      case 'download_airing_calendar_week_next':
+        return 'Next week';
+      case 'download_airing_calendar_week_empty':
+        return 'Nothing airing this week';
+      case 'video_jimaku_format':
+        return 'Format';
+      case 'video_jimaku_format_all':
+        return 'All';
       default:
         return null;
     }
@@ -171129,7 +171790,7 @@ extension on _StringsNl {
       case 'video_jimaku_episode_hint':
         return 'Leave empty to list all';
       case 'video_jimaku_fetch':
-        return 'Ondertitels automatisch ophalen (Jimaku)';
+        return 'Ondertitels ophalen (Jimaku)';
       case 'video_jimaku_filter':
         return 'Resultaten filteren (bijv. WEBRip, BD)';
       case 'video_jimaku_find_sources':
@@ -172611,6 +173272,30 @@ extension on _StringsNl {
         return 'Add to manga shelf';
       case 'mihon_in_bookshelf':
         return 'In manga shelf';
+      case 'download_airing_calendar_title':
+        return 'Airing calendar';
+      case 'download_airing_calendar_show_all':
+        return 'Show all this season';
+      case 'download_airing_calendar_empty_guidance':
+        return 'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+      case 'download_airing_calendar_error':
+        return 'Failed to load the airing schedule';
+      case 'download_airing_calendar_in_library':
+        return 'In library';
+      case 'download_airing_calendar_subscribed':
+        return 'Subscribed';
+      case 'download_airing_calendar_episode_label':
+        return ({required Object episode}) => 'Ep ${episode}';
+      case 'download_airing_calendar_week_prev':
+        return 'Previous week';
+      case 'download_airing_calendar_week_next':
+        return 'Next week';
+      case 'download_airing_calendar_week_empty':
+        return 'Nothing airing this week';
+      case 'video_jimaku_format':
+        return 'Format';
+      case 'video_jimaku_format_all':
+        return 'All';
       default:
         return null;
     }
@@ -177195,7 +177880,7 @@ extension on _StringsPtBr {
       case 'video_jimaku_episode_hint':
         return 'Leave empty to list all';
       case 'video_jimaku_fetch':
-        return 'Buscar legendas automaticamente (Jimaku)';
+        return 'Buscar legendas (Jimaku)';
       case 'video_jimaku_filter':
         return 'Filtrar resultados (ex.: WEBRip, BD)';
       case 'video_jimaku_find_sources':
@@ -178675,6 +179360,30 @@ extension on _StringsPtBr {
         return 'Add to manga shelf';
       case 'mihon_in_bookshelf':
         return 'In manga shelf';
+      case 'download_airing_calendar_title':
+        return 'Airing calendar';
+      case 'download_airing_calendar_show_all':
+        return 'Show all this season';
+      case 'download_airing_calendar_empty_guidance':
+        return 'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+      case 'download_airing_calendar_error':
+        return 'Failed to load the airing schedule';
+      case 'download_airing_calendar_in_library':
+        return 'In library';
+      case 'download_airing_calendar_subscribed':
+        return 'Subscribed';
+      case 'download_airing_calendar_episode_label':
+        return ({required Object episode}) => 'Ep ${episode}';
+      case 'download_airing_calendar_week_prev':
+        return 'Previous week';
+      case 'download_airing_calendar_week_next':
+        return 'Next week';
+      case 'download_airing_calendar_week_empty':
+        return 'Nothing airing this week';
+      case 'video_jimaku_format':
+        return 'Format';
+      case 'video_jimaku_format_all':
+        return 'All';
       default:
         return null;
     }
@@ -183264,7 +183973,7 @@ extension on _StringsRu {
       case 'video_jimaku_episode_hint':
         return 'Leave empty to list all';
       case 'video_jimaku_fetch':
-        return 'Авто-загрузка субтитров (Jimaku)';
+        return 'Загрузить субтитры (Jimaku)';
       case 'video_jimaku_filter':
         return 'Фильтр результатов (например, WEBRip, BD)';
       case 'video_jimaku_find_sources':
@@ -184744,6 +185453,30 @@ extension on _StringsRu {
         return 'Add to manga shelf';
       case 'mihon_in_bookshelf':
         return 'In manga shelf';
+      case 'download_airing_calendar_title':
+        return 'Airing calendar';
+      case 'download_airing_calendar_show_all':
+        return 'Show all this season';
+      case 'download_airing_calendar_empty_guidance':
+        return 'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+      case 'download_airing_calendar_error':
+        return 'Failed to load the airing schedule';
+      case 'download_airing_calendar_in_library':
+        return 'In library';
+      case 'download_airing_calendar_subscribed':
+        return 'Subscribed';
+      case 'download_airing_calendar_episode_label':
+        return ({required Object episode}) => 'Ep ${episode}';
+      case 'download_airing_calendar_week_prev':
+        return 'Previous week';
+      case 'download_airing_calendar_week_next':
+        return 'Next week';
+      case 'download_airing_calendar_week_empty':
+        return 'Nothing airing this week';
+      case 'video_jimaku_format':
+        return 'Format';
+      case 'video_jimaku_format_all':
+        return 'All';
       default:
         return null;
     }
@@ -189316,7 +190049,7 @@ extension on _StringsTh {
       case 'video_jimaku_episode_hint':
         return 'Leave empty to list all';
       case 'video_jimaku_fetch':
-        return 'ดึงคำบรรยายอัตโนมัติ (Jimaku)';
+        return 'ดึงคำบรรยาย (Jimaku)';
       case 'video_jimaku_filter':
         return 'กรองผลลัพธ์ (เช่น WEBRip, BD)';
       case 'video_jimaku_find_sources':
@@ -190796,6 +191529,30 @@ extension on _StringsTh {
         return 'Add to manga shelf';
       case 'mihon_in_bookshelf':
         return 'In manga shelf';
+      case 'download_airing_calendar_title':
+        return 'Airing calendar';
+      case 'download_airing_calendar_show_all':
+        return 'Show all this season';
+      case 'download_airing_calendar_empty_guidance':
+        return 'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+      case 'download_airing_calendar_error':
+        return 'Failed to load the airing schedule';
+      case 'download_airing_calendar_in_library':
+        return 'In library';
+      case 'download_airing_calendar_subscribed':
+        return 'Subscribed';
+      case 'download_airing_calendar_episode_label':
+        return ({required Object episode}) => 'Ep ${episode}';
+      case 'download_airing_calendar_week_prev':
+        return 'Previous week';
+      case 'download_airing_calendar_week_next':
+        return 'Next week';
+      case 'download_airing_calendar_week_empty':
+        return 'Nothing airing this week';
+      case 'video_jimaku_format':
+        return 'Format';
+      case 'video_jimaku_format_all':
+        return 'All';
       default:
         return null;
     }
@@ -195376,7 +196133,7 @@ extension on _StringsTr {
       case 'video_jimaku_episode_hint':
         return 'Leave empty to list all';
       case 'video_jimaku_fetch':
-        return 'Altyazıları otomatik getir (Jimaku)';
+        return 'Altyazıları getir (Jimaku)';
       case 'video_jimaku_filter':
         return 'Sonuçları filtrele (ör. WEBRip, BD)';
       case 'video_jimaku_find_sources':
@@ -196857,6 +197614,30 @@ extension on _StringsTr {
         return 'Add to manga shelf';
       case 'mihon_in_bookshelf':
         return 'In manga shelf';
+      case 'download_airing_calendar_title':
+        return 'Airing calendar';
+      case 'download_airing_calendar_show_all':
+        return 'Show all this season';
+      case 'download_airing_calendar_empty_guidance':
+        return 'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+      case 'download_airing_calendar_error':
+        return 'Failed to load the airing schedule';
+      case 'download_airing_calendar_in_library':
+        return 'In library';
+      case 'download_airing_calendar_subscribed':
+        return 'Subscribed';
+      case 'download_airing_calendar_episode_label':
+        return ({required Object episode}) => 'Ep ${episode}';
+      case 'download_airing_calendar_week_prev':
+        return 'Previous week';
+      case 'download_airing_calendar_week_next':
+        return 'Next week';
+      case 'download_airing_calendar_week_empty':
+        return 'Nothing airing this week';
+      case 'video_jimaku_format':
+        return 'Format';
+      case 'video_jimaku_format_all':
+        return 'All';
       default:
         return null;
     }
@@ -201434,7 +202215,7 @@ extension on _StringsVi {
       case 'video_jimaku_episode_hint':
         return 'Leave empty to list all';
       case 'video_jimaku_fetch':
-        return 'Tự lấy phụ đề (Jimaku)';
+        return 'Lấy phụ đề (Jimaku)';
       case 'video_jimaku_filter':
         return 'Lọc kết quả (vd WEBRip, BD)';
       case 'video_jimaku_find_sources':
@@ -202914,6 +203695,30 @@ extension on _StringsVi {
         return 'Add to manga shelf';
       case 'mihon_in_bookshelf':
         return 'In manga shelf';
+      case 'download_airing_calendar_title':
+        return 'Airing calendar';
+      case 'download_airing_calendar_show_all':
+        return 'Show all this season';
+      case 'download_airing_calendar_empty_guidance':
+        return 'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+      case 'download_airing_calendar_error':
+        return 'Failed to load the airing schedule';
+      case 'download_airing_calendar_in_library':
+        return 'In library';
+      case 'download_airing_calendar_subscribed':
+        return 'Subscribed';
+      case 'download_airing_calendar_episode_label':
+        return ({required Object episode}) => 'Ep ${episode}';
+      case 'download_airing_calendar_week_prev':
+        return 'Previous week';
+      case 'download_airing_calendar_week_next':
+        return 'Next week';
+      case 'download_airing_calendar_week_empty':
+        return 'Nothing airing this week';
+      case 'video_jimaku_format':
+        return 'Format';
+      case 'video_jimaku_format_all':
+        return 'All';
       default:
         return null;
     }
@@ -207451,7 +208256,7 @@ extension on _StringsZhCn {
       case 'video_jimaku_episode_hint':
         return '留空列出全部';
       case 'video_jimaku_fetch':
-        return '自动获取字幕（Jimaku）';
+        return '获取字幕（Jimaku）';
       case 'video_jimaku_filter':
         return '筛选结果（如 WEBRip、BD）';
       case 'video_jimaku_find_sources':
@@ -208918,6 +209723,30 @@ extension on _StringsZhCn {
         return '加入漫画书架';
       case 'mihon_in_bookshelf':
         return '已加入漫画书架';
+      case 'download_airing_calendar_title':
+        return '放送日历';
+      case 'download_airing_calendar_show_all':
+        return '显示本季全部';
+      case 'download_airing_calendar_empty_guidance':
+        return '暂无可显示的放送信息：给合集绑定 AniList 或添加下载订阅后，这里会显示对应的放送时间。';
+      case 'download_airing_calendar_error':
+        return '放送时间表加载失败';
+      case 'download_airing_calendar_in_library':
+        return '已入库';
+      case 'download_airing_calendar_subscribed':
+        return '订阅中';
+      case 'download_airing_calendar_episode_label':
+        return ({required Object episode}) => '第 ${episode} 集';
+      case 'download_airing_calendar_week_prev':
+        return '上一周';
+      case 'download_airing_calendar_week_next':
+        return '下一周';
+      case 'download_airing_calendar_week_empty':
+        return '本周没有相关放送';
+      case 'video_jimaku_format':
+        return '类型';
+      case 'video_jimaku_format_all':
+        return '全部';
       default:
         return null;
     }
@@ -213471,7 +214300,7 @@ extension on _StringsZhHk {
       case 'video_jimaku_episode_hint':
         return 'Leave empty to list all';
       case 'video_jimaku_fetch':
-        return '自動取得字幕（Jimaku）';
+        return '取得字幕（Jimaku）';
       case 'video_jimaku_filter':
         return '篩選結果（如 WEBRip、BD）';
       case 'video_jimaku_find_sources':
@@ -214948,6 +215777,30 @@ extension on _StringsZhHk {
         return 'Add to manga shelf';
       case 'mihon_in_bookshelf':
         return 'In manga shelf';
+      case 'download_airing_calendar_title':
+        return 'Airing calendar';
+      case 'download_airing_calendar_show_all':
+        return 'Show all this season';
+      case 'download_airing_calendar_empty_guidance':
+        return 'Nothing to show yet: bind a collection to AniList or add a download subscription, and their airing times will appear here.';
+      case 'download_airing_calendar_error':
+        return 'Failed to load the airing schedule';
+      case 'download_airing_calendar_in_library':
+        return 'In library';
+      case 'download_airing_calendar_subscribed':
+        return 'Subscribed';
+      case 'download_airing_calendar_episode_label':
+        return ({required Object episode}) => 'Ep ${episode}';
+      case 'download_airing_calendar_week_prev':
+        return 'Previous week';
+      case 'download_airing_calendar_week_next':
+        return 'Next week';
+      case 'download_airing_calendar_week_empty':
+        return 'Nothing airing this week';
+      case 'video_jimaku_format':
+        return 'Format';
+      case 'video_jimaku_format_all':
+        return 'All';
       default:
         return null;
     }
