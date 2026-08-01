@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 50337 (2961 per locale)
+/// Strings: 51153 (3009 per locale)
 ///
-/// Built on 2026-08-01 at 07:56 UTC
+/// Built on 2026-08-01 at 08:32 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3089,9 +3089,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_scrape_source_offline => 'Offline';
   String get video_scrape_summary => 'Synopsis';
   String get video_scrape_tags => 'Tags';
-  String get video_scrape_tmdb_key_hint => 'Enter TMDB API key';
-  String get video_scrape_tmdb_key_required => 'TMDB requires an API key';
-  String get video_scrape_tmdb_key_save => 'Save';
   String get video_scrape_use => 'Use';
   String get video_scrape_view_subject => 'View on Bangumi';
   String get video_screenshot => 'Screenshot';
@@ -3741,13 +3738,11 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
           {required Object count, required Object languages}) =>
       '${count} subtitles available · ${languages}';
   String get video_scrape_manual_match_hint =>
-      'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+      'Manual matching replaces this episode cover and saves its source mapping and title metadata. All available sources are searched together and results are ranked by match confidence.';
   String get video_scrape_collection_match_hint =>
-      'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+      'This only replaces the collection cover. Episode covers and title metadata are not changed. All available sources are searched together and results are ranked by match confidence.';
   String get video_scrape_apply_to_collection_hint =>
       'This writes the same cover to every episode. Leave it off unless that is intentional.';
-  String get video_scrape_tmdb_key_empty =>
-      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
   String get manga_online_source_disabled =>
       'This internet source is disabled. Enable it in Sources to browse the catalog.';
   String get selection_web_search => 'Search the web';
@@ -3804,9 +3799,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get interconnect_peer_list_title => 'Added peers';
   String get interconnect_peer_list_empty =>
       'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
-  String get anki_lapis_visual_editor => 'Visual style editor';
+  String get anki_lapis_visual_editor => 'Visual editor';
   String get anki_lapis_visual_editor_hint =>
-      'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+      'Preview the Lapis card, then change each area\'s style, position and field mapping without writing CSS.';
   String get anki_lapis_visual_front => 'Front';
   String get anki_lapis_visual_back => 'Back';
   String get anki_lapis_visual_preview => 'Lapis card preview';
@@ -3994,6 +3989,65 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_jimaku_format => 'Format';
   String get video_jimaku_format_all => 'All';
   String get media_source_local_roots => 'Local scan roots';
+  String get video_setting_tmdb_key => 'Custom TMDB API key';
+  String get video_setting_tmdb_key_hint =>
+      'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
+  String get about_tmdb_attribution =>
+      'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+  String get anki_lapis_visual_layout => 'Layout';
+  String get anki_lapis_visual_layout_hint =>
+      'Uses Lapis\' own layout switches, so desktop and mobile Anki both follow it.';
+  String get anki_lapis_visual_layout_sentence => 'Sentence position';
+  String get anki_lapis_visual_layout_sentence_above => 'Above definitions';
+  String get anki_lapis_visual_layout_sentence_below => 'Below definitions';
+  String get anki_lapis_visual_layout_picture => 'Image position';
+  String get anki_lapis_visual_layout_picture_right => 'Right of the word';
+  String get anki_lapis_visual_layout_picture_left => 'Left of the word';
+  String get anki_lapis_visual_layout_picture_alt => 'Inside the sentence';
+  String get anki_lapis_visual_layout_audio => 'Audio buttons';
+  String get anki_lapis_visual_layout_audio_header => 'Next to the reading';
+  String get anki_lapis_visual_layout_audio_fixed => 'Pinned to the bottom';
+  String get anki_lapis_visual_layout_audio_alt => 'Inside the sentence';
+  String get anki_lapis_visual_mapping_hint =>
+      'Anki fields that fill the selected area. Changes are saved together with the style.';
+  String get anki_lapis_visual_mapping_none =>
+      'This area is drawn by the template itself and has no field of its own.';
+  String get anki_lapis_visual_color_custom => 'Custom';
+  String get anki_lapis_visual_color_picker_title => 'Pick a color';
+  String get video_scrape_tmdb_key_hint => 'Enter TMDB API key';
+  String get video_scrape_tmdb_key_required => 'TMDB requires an API key';
+  String get video_scrape_tmdb_key_save => 'Save';
+  String get video_scrape_tmdb_key_empty =>
+      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+  String get download_detail_tab_overview => 'Overview';
+  String get download_detail_tab_files => 'Files';
+  String get download_detail_tab_peers => 'Peers';
+  String get download_detail_tab_trackers => 'Trackers';
+  String get download_detail_backend_unsupported =>
+      'Not supported by current download backend';
+  String get download_detail_task_gone => 'Task not found in backend';
+  String get download_detail_section_transfer => 'Transfer';
+  String get download_detail_section_network => 'Network';
+  String get download_detail_seeds_label => 'Seeds';
+  String get download_detail_leechers_label => 'Leechers';
+  String get download_detail_connections_label => 'Connections';
+  String get download_detail_time_active => 'Active time';
+  String get download_detail_time_seeding => 'Seeding time';
+  String get download_detail_listen_port => 'Listen port';
+  String get download_detail_dht_nodes => 'DHT nodes';
+  String get download_detail_port_mapping => 'Port mapping';
+  String get download_detail_session_rates => 'Session rates';
+  String get download_detail_pieces_label => 'Pieces';
+  String get download_detail_priority_skip => 'Don\'t download';
+  String get download_detail_priority_normal => 'Normal';
+  String get download_detail_priority_high => 'High';
+  String get download_detail_tracker_working => 'Working';
+  String get download_detail_tracker_updating => 'Updating';
+  String get download_detail_tracker_not_contacted => 'Not contacted yet';
+  String get download_detail_tracker_not_working => 'Not working';
+  String get download_detail_tracker_disabled => 'Disabled';
+  String get download_detail_no_peers => 'No connected peers';
+  String get download_detail_no_trackers => 'No trackers';
 }
 
 // Path: <root>
@@ -9241,12 +9295,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_scrape_tags => 'Tags';
   @override
-  String get video_scrape_tmdb_key_hint => 'Enter TMDB API Key';
-  @override
-  String get video_scrape_tmdb_key_required => 'TMDB requires an API key';
-  @override
-  String get video_scrape_tmdb_key_save => 'Save';
-  @override
   String get video_scrape_use => 'Use';
   @override
   String get video_scrape_view_subject => 'View on Bangumi';
@@ -10359,16 +10407,13 @@ class _StringsAr extends _StringsEn {
       '${count} subtitles available · ${languages}';
   @override
   String get video_scrape_manual_match_hint =>
-      'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+      'Manual matching replaces this episode cover and saves its source mapping and title metadata. All available sources are searched together and results are ranked by match confidence.';
   @override
   String get video_scrape_collection_match_hint =>
-      'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+      'This only replaces the collection cover. Episode covers and title metadata are not changed. All available sources are searched together and results are ranked by match confidence.';
   @override
   String get video_scrape_apply_to_collection_hint =>
       'This writes the same cover to every episode. Leave it off unless that is intentional.';
-  @override
-  String get video_scrape_tmdb_key_empty =>
-      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
   @override
   String get manga_online_source_disabled =>
       'This internet source is disabled. Enable it in Sources to browse the catalog.';
@@ -10462,10 +10507,10 @@ class _StringsAr extends _StringsEn {
   String get interconnect_peer_list_empty =>
       'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
   @override
-  String get anki_lapis_visual_editor => 'Visual style editor';
+  String get anki_lapis_visual_editor => 'Visual editor';
   @override
   String get anki_lapis_visual_editor_hint =>
-      'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+      'Preview the Lapis card, then change each area\'s style, position and field mapping without writing CSS.';
   @override
   String get anki_lapis_visual_front => 'Front';
   @override
@@ -10798,6 +10843,117 @@ class _StringsAr extends _StringsEn {
   String get video_jimaku_format_all => 'All';
   @override
   String get media_source_local_roots => 'Local scan roots';
+  @override
+  String get video_setting_tmdb_key => 'Custom TMDB API key';
+  @override
+  String get video_setting_tmdb_key_hint =>
+      'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
+  @override
+  String get about_tmdb_attribution =>
+      'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+  @override
+  String get anki_lapis_visual_layout => 'Layout';
+  @override
+  String get anki_lapis_visual_layout_hint =>
+      'Uses Lapis\' own layout switches, so desktop and mobile Anki both follow it.';
+  @override
+  String get anki_lapis_visual_layout_sentence => 'Sentence position';
+  @override
+  String get anki_lapis_visual_layout_sentence_above => 'Above definitions';
+  @override
+  String get anki_lapis_visual_layout_sentence_below => 'Below definitions';
+  @override
+  String get anki_lapis_visual_layout_picture => 'Image position';
+  @override
+  String get anki_lapis_visual_layout_picture_right => 'Right of the word';
+  @override
+  String get anki_lapis_visual_layout_picture_left => 'Left of the word';
+  @override
+  String get anki_lapis_visual_layout_picture_alt => 'Inside the sentence';
+  @override
+  String get anki_lapis_visual_layout_audio => 'Audio buttons';
+  @override
+  String get anki_lapis_visual_layout_audio_header => 'Next to the reading';
+  @override
+  String get anki_lapis_visual_layout_audio_fixed => 'Pinned to the bottom';
+  @override
+  String get anki_lapis_visual_layout_audio_alt => 'Inside the sentence';
+  @override
+  String get anki_lapis_visual_mapping_hint =>
+      'Anki fields that fill the selected area. Changes are saved together with the style.';
+  @override
+  String get anki_lapis_visual_mapping_none =>
+      'This area is drawn by the template itself and has no field of its own.';
+  @override
+  String get anki_lapis_visual_color_custom => 'Custom';
+  @override
+  String get anki_lapis_visual_color_picker_title => 'Pick a color';
+  @override
+  String get video_scrape_tmdb_key_hint => 'Enter TMDB API key';
+  @override
+  String get video_scrape_tmdb_key_required => 'TMDB requires an API key';
+  @override
+  String get video_scrape_tmdb_key_save => 'Save';
+  @override
+  String get video_scrape_tmdb_key_empty =>
+      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+  @override
+  String get download_detail_tab_overview => 'Overview';
+  @override
+  String get download_detail_tab_files => 'Files';
+  @override
+  String get download_detail_tab_peers => 'Peers';
+  @override
+  String get download_detail_tab_trackers => 'Trackers';
+  @override
+  String get download_detail_backend_unsupported =>
+      'Not supported by current download backend';
+  @override
+  String get download_detail_task_gone => 'Task not found in backend';
+  @override
+  String get download_detail_section_transfer => 'Transfer';
+  @override
+  String get download_detail_section_network => 'Network';
+  @override
+  String get download_detail_seeds_label => 'Seeds';
+  @override
+  String get download_detail_leechers_label => 'Leechers';
+  @override
+  String get download_detail_connections_label => 'Connections';
+  @override
+  String get download_detail_time_active => 'Active time';
+  @override
+  String get download_detail_time_seeding => 'Seeding time';
+  @override
+  String get download_detail_listen_port => 'Listen port';
+  @override
+  String get download_detail_dht_nodes => 'DHT nodes';
+  @override
+  String get download_detail_port_mapping => 'Port mapping';
+  @override
+  String get download_detail_session_rates => 'Session rates';
+  @override
+  String get download_detail_pieces_label => 'Pieces';
+  @override
+  String get download_detail_priority_skip => 'Don\'t download';
+  @override
+  String get download_detail_priority_normal => 'Normal';
+  @override
+  String get download_detail_priority_high => 'High';
+  @override
+  String get download_detail_tracker_working => 'Working';
+  @override
+  String get download_detail_tracker_updating => 'Updating';
+  @override
+  String get download_detail_tracker_not_contacted => 'Not contacted yet';
+  @override
+  String get download_detail_tracker_not_working => 'Not working';
+  @override
+  String get download_detail_tracker_disabled => 'Disabled';
+  @override
+  String get download_detail_no_peers => 'No connected peers';
+  @override
+  String get download_detail_no_trackers => 'No trackers';
 }
 
 // Path: <root>
@@ -16103,12 +16259,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_scrape_tags => 'Tags';
   @override
-  String get video_scrape_tmdb_key_hint => 'Enter TMDB API Key';
-  @override
-  String get video_scrape_tmdb_key_required => 'TMDB requires an API key';
-  @override
-  String get video_scrape_tmdb_key_save => 'Save';
-  @override
   String get video_scrape_use => 'Use';
   @override
   String get video_scrape_view_subject => 'View on Bangumi';
@@ -17230,16 +17380,13 @@ class _StringsDe extends _StringsEn {
       '${count} subtitles available · ${languages}';
   @override
   String get video_scrape_manual_match_hint =>
-      'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+      'Manual matching replaces this episode cover and saves its source mapping and title metadata. All available sources are searched together and results are ranked by match confidence.';
   @override
   String get video_scrape_collection_match_hint =>
-      'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+      'This only replaces the collection cover. Episode covers and title metadata are not changed. All available sources are searched together and results are ranked by match confidence.';
   @override
   String get video_scrape_apply_to_collection_hint =>
       'This writes the same cover to every episode. Leave it off unless that is intentional.';
-  @override
-  String get video_scrape_tmdb_key_empty =>
-      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
   @override
   String get manga_online_source_disabled =>
       'This internet source is disabled. Enable it in Sources to browse the catalog.';
@@ -17333,10 +17480,10 @@ class _StringsDe extends _StringsEn {
   String get interconnect_peer_list_empty =>
       'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
   @override
-  String get anki_lapis_visual_editor => 'Visual style editor';
+  String get anki_lapis_visual_editor => 'Visual editor';
   @override
   String get anki_lapis_visual_editor_hint =>
-      'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+      'Preview the Lapis card, then change each area\'s style, position and field mapping without writing CSS.';
   @override
   String get anki_lapis_visual_front => 'Front';
   @override
@@ -17669,6 +17816,117 @@ class _StringsDe extends _StringsEn {
   String get video_jimaku_format_all => 'All';
   @override
   String get media_source_local_roots => 'Local scan roots';
+  @override
+  String get video_setting_tmdb_key => 'Custom TMDB API key';
+  @override
+  String get video_setting_tmdb_key_hint =>
+      'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
+  @override
+  String get about_tmdb_attribution =>
+      'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+  @override
+  String get anki_lapis_visual_layout => 'Layout';
+  @override
+  String get anki_lapis_visual_layout_hint =>
+      'Uses Lapis\' own layout switches, so desktop and mobile Anki both follow it.';
+  @override
+  String get anki_lapis_visual_layout_sentence => 'Sentence position';
+  @override
+  String get anki_lapis_visual_layout_sentence_above => 'Above definitions';
+  @override
+  String get anki_lapis_visual_layout_sentence_below => 'Below definitions';
+  @override
+  String get anki_lapis_visual_layout_picture => 'Image position';
+  @override
+  String get anki_lapis_visual_layout_picture_right => 'Right of the word';
+  @override
+  String get anki_lapis_visual_layout_picture_left => 'Left of the word';
+  @override
+  String get anki_lapis_visual_layout_picture_alt => 'Inside the sentence';
+  @override
+  String get anki_lapis_visual_layout_audio => 'Audio buttons';
+  @override
+  String get anki_lapis_visual_layout_audio_header => 'Next to the reading';
+  @override
+  String get anki_lapis_visual_layout_audio_fixed => 'Pinned to the bottom';
+  @override
+  String get anki_lapis_visual_layout_audio_alt => 'Inside the sentence';
+  @override
+  String get anki_lapis_visual_mapping_hint =>
+      'Anki fields that fill the selected area. Changes are saved together with the style.';
+  @override
+  String get anki_lapis_visual_mapping_none =>
+      'This area is drawn by the template itself and has no field of its own.';
+  @override
+  String get anki_lapis_visual_color_custom => 'Custom';
+  @override
+  String get anki_lapis_visual_color_picker_title => 'Pick a color';
+  @override
+  String get video_scrape_tmdb_key_hint => 'Enter TMDB API key';
+  @override
+  String get video_scrape_tmdb_key_required => 'TMDB requires an API key';
+  @override
+  String get video_scrape_tmdb_key_save => 'Save';
+  @override
+  String get video_scrape_tmdb_key_empty =>
+      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+  @override
+  String get download_detail_tab_overview => 'Overview';
+  @override
+  String get download_detail_tab_files => 'Files';
+  @override
+  String get download_detail_tab_peers => 'Peers';
+  @override
+  String get download_detail_tab_trackers => 'Trackers';
+  @override
+  String get download_detail_backend_unsupported =>
+      'Not supported by current download backend';
+  @override
+  String get download_detail_task_gone => 'Task not found in backend';
+  @override
+  String get download_detail_section_transfer => 'Transfer';
+  @override
+  String get download_detail_section_network => 'Network';
+  @override
+  String get download_detail_seeds_label => 'Seeds';
+  @override
+  String get download_detail_leechers_label => 'Leechers';
+  @override
+  String get download_detail_connections_label => 'Connections';
+  @override
+  String get download_detail_time_active => 'Active time';
+  @override
+  String get download_detail_time_seeding => 'Seeding time';
+  @override
+  String get download_detail_listen_port => 'Listen port';
+  @override
+  String get download_detail_dht_nodes => 'DHT nodes';
+  @override
+  String get download_detail_port_mapping => 'Port mapping';
+  @override
+  String get download_detail_session_rates => 'Session rates';
+  @override
+  String get download_detail_pieces_label => 'Pieces';
+  @override
+  String get download_detail_priority_skip => 'Don\'t download';
+  @override
+  String get download_detail_priority_normal => 'Normal';
+  @override
+  String get download_detail_priority_high => 'High';
+  @override
+  String get download_detail_tracker_working => 'Working';
+  @override
+  String get download_detail_tracker_updating => 'Updating';
+  @override
+  String get download_detail_tracker_not_contacted => 'Not contacted yet';
+  @override
+  String get download_detail_tracker_not_working => 'Not working';
+  @override
+  String get download_detail_tracker_disabled => 'Disabled';
+  @override
+  String get download_detail_no_peers => 'No connected peers';
+  @override
+  String get download_detail_no_trackers => 'No trackers';
 }
 
 // Path: <root>
@@ -22987,12 +23245,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_scrape_tags => 'Tags';
   @override
-  String get video_scrape_tmdb_key_hint => 'Enter TMDB API Key';
-  @override
-  String get video_scrape_tmdb_key_required => 'TMDB requires an API key';
-  @override
-  String get video_scrape_tmdb_key_save => 'Save';
-  @override
   String get video_scrape_use => 'Use';
   @override
   String get video_scrape_view_subject => 'View on Bangumi';
@@ -24116,16 +24368,13 @@ class _StringsEs extends _StringsEn {
       '${count} subtitles available · ${languages}';
   @override
   String get video_scrape_manual_match_hint =>
-      'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+      'Manual matching replaces this episode cover and saves its source mapping and title metadata. All available sources are searched together and results are ranked by match confidence.';
   @override
   String get video_scrape_collection_match_hint =>
-      'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+      'This only replaces the collection cover. Episode covers and title metadata are not changed. All available sources are searched together and results are ranked by match confidence.';
   @override
   String get video_scrape_apply_to_collection_hint =>
       'This writes the same cover to every episode. Leave it off unless that is intentional.';
-  @override
-  String get video_scrape_tmdb_key_empty =>
-      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
   @override
   String get manga_online_source_disabled =>
       'This internet source is disabled. Enable it in Sources to browse the catalog.';
@@ -24219,10 +24468,10 @@ class _StringsEs extends _StringsEn {
   String get interconnect_peer_list_empty =>
       'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
   @override
-  String get anki_lapis_visual_editor => 'Visual style editor';
+  String get anki_lapis_visual_editor => 'Visual editor';
   @override
   String get anki_lapis_visual_editor_hint =>
-      'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+      'Preview the Lapis card, then change each area\'s style, position and field mapping without writing CSS.';
   @override
   String get anki_lapis_visual_front => 'Front';
   @override
@@ -24555,6 +24804,117 @@ class _StringsEs extends _StringsEn {
   String get video_jimaku_format_all => 'All';
   @override
   String get media_source_local_roots => 'Local scan roots';
+  @override
+  String get video_setting_tmdb_key => 'Custom TMDB API key';
+  @override
+  String get video_setting_tmdb_key_hint =>
+      'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
+  @override
+  String get about_tmdb_attribution =>
+      'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+  @override
+  String get anki_lapis_visual_layout => 'Layout';
+  @override
+  String get anki_lapis_visual_layout_hint =>
+      'Uses Lapis\' own layout switches, so desktop and mobile Anki both follow it.';
+  @override
+  String get anki_lapis_visual_layout_sentence => 'Sentence position';
+  @override
+  String get anki_lapis_visual_layout_sentence_above => 'Above definitions';
+  @override
+  String get anki_lapis_visual_layout_sentence_below => 'Below definitions';
+  @override
+  String get anki_lapis_visual_layout_picture => 'Image position';
+  @override
+  String get anki_lapis_visual_layout_picture_right => 'Right of the word';
+  @override
+  String get anki_lapis_visual_layout_picture_left => 'Left of the word';
+  @override
+  String get anki_lapis_visual_layout_picture_alt => 'Inside the sentence';
+  @override
+  String get anki_lapis_visual_layout_audio => 'Audio buttons';
+  @override
+  String get anki_lapis_visual_layout_audio_header => 'Next to the reading';
+  @override
+  String get anki_lapis_visual_layout_audio_fixed => 'Pinned to the bottom';
+  @override
+  String get anki_lapis_visual_layout_audio_alt => 'Inside the sentence';
+  @override
+  String get anki_lapis_visual_mapping_hint =>
+      'Anki fields that fill the selected area. Changes are saved together with the style.';
+  @override
+  String get anki_lapis_visual_mapping_none =>
+      'This area is drawn by the template itself and has no field of its own.';
+  @override
+  String get anki_lapis_visual_color_custom => 'Custom';
+  @override
+  String get anki_lapis_visual_color_picker_title => 'Pick a color';
+  @override
+  String get video_scrape_tmdb_key_hint => 'Enter TMDB API key';
+  @override
+  String get video_scrape_tmdb_key_required => 'TMDB requires an API key';
+  @override
+  String get video_scrape_tmdb_key_save => 'Save';
+  @override
+  String get video_scrape_tmdb_key_empty =>
+      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+  @override
+  String get download_detail_tab_overview => 'Overview';
+  @override
+  String get download_detail_tab_files => 'Files';
+  @override
+  String get download_detail_tab_peers => 'Peers';
+  @override
+  String get download_detail_tab_trackers => 'Trackers';
+  @override
+  String get download_detail_backend_unsupported =>
+      'Not supported by current download backend';
+  @override
+  String get download_detail_task_gone => 'Task not found in backend';
+  @override
+  String get download_detail_section_transfer => 'Transfer';
+  @override
+  String get download_detail_section_network => 'Network';
+  @override
+  String get download_detail_seeds_label => 'Seeds';
+  @override
+  String get download_detail_leechers_label => 'Leechers';
+  @override
+  String get download_detail_connections_label => 'Connections';
+  @override
+  String get download_detail_time_active => 'Active time';
+  @override
+  String get download_detail_time_seeding => 'Seeding time';
+  @override
+  String get download_detail_listen_port => 'Listen port';
+  @override
+  String get download_detail_dht_nodes => 'DHT nodes';
+  @override
+  String get download_detail_port_mapping => 'Port mapping';
+  @override
+  String get download_detail_session_rates => 'Session rates';
+  @override
+  String get download_detail_pieces_label => 'Pieces';
+  @override
+  String get download_detail_priority_skip => 'Don\'t download';
+  @override
+  String get download_detail_priority_normal => 'Normal';
+  @override
+  String get download_detail_priority_high => 'High';
+  @override
+  String get download_detail_tracker_working => 'Working';
+  @override
+  String get download_detail_tracker_updating => 'Updating';
+  @override
+  String get download_detail_tracker_not_contacted => 'Not contacted yet';
+  @override
+  String get download_detail_tracker_not_working => 'Not working';
+  @override
+  String get download_detail_tracker_disabled => 'Disabled';
+  @override
+  String get download_detail_no_peers => 'No connected peers';
+  @override
+  String get download_detail_no_trackers => 'No trackers';
 }
 
 // Path: <root>
@@ -29885,12 +30245,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_scrape_tags => 'Tags';
   @override
-  String get video_scrape_tmdb_key_hint => 'Enter TMDB API Key';
-  @override
-  String get video_scrape_tmdb_key_required => 'TMDB requires an API key';
-  @override
-  String get video_scrape_tmdb_key_save => 'Save';
-  @override
   String get video_scrape_use => 'Use';
   @override
   String get video_scrape_view_subject => 'View on Bangumi';
@@ -31014,16 +31368,13 @@ class _StringsFr extends _StringsEn {
       '${count} subtitles available · ${languages}';
   @override
   String get video_scrape_manual_match_hint =>
-      'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+      'Manual matching replaces this episode cover and saves its source mapping and title metadata. All available sources are searched together and results are ranked by match confidence.';
   @override
   String get video_scrape_collection_match_hint =>
-      'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+      'This only replaces the collection cover. Episode covers and title metadata are not changed. All available sources are searched together and results are ranked by match confidence.';
   @override
   String get video_scrape_apply_to_collection_hint =>
       'This writes the same cover to every episode. Leave it off unless that is intentional.';
-  @override
-  String get video_scrape_tmdb_key_empty =>
-      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
   @override
   String get manga_online_source_disabled =>
       'This internet source is disabled. Enable it in Sources to browse the catalog.';
@@ -31117,10 +31468,10 @@ class _StringsFr extends _StringsEn {
   String get interconnect_peer_list_empty =>
       'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
   @override
-  String get anki_lapis_visual_editor => 'Visual style editor';
+  String get anki_lapis_visual_editor => 'Visual editor';
   @override
   String get anki_lapis_visual_editor_hint =>
-      'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+      'Preview the Lapis card, then change each area\'s style, position and field mapping without writing CSS.';
   @override
   String get anki_lapis_visual_front => 'Front';
   @override
@@ -31453,6 +31804,117 @@ class _StringsFr extends _StringsEn {
   String get video_jimaku_format_all => 'All';
   @override
   String get media_source_local_roots => 'Local scan roots';
+  @override
+  String get video_setting_tmdb_key => 'Custom TMDB API key';
+  @override
+  String get video_setting_tmdb_key_hint =>
+      'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
+  @override
+  String get about_tmdb_attribution =>
+      'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+  @override
+  String get anki_lapis_visual_layout => 'Layout';
+  @override
+  String get anki_lapis_visual_layout_hint =>
+      'Uses Lapis\' own layout switches, so desktop and mobile Anki both follow it.';
+  @override
+  String get anki_lapis_visual_layout_sentence => 'Sentence position';
+  @override
+  String get anki_lapis_visual_layout_sentence_above => 'Above definitions';
+  @override
+  String get anki_lapis_visual_layout_sentence_below => 'Below definitions';
+  @override
+  String get anki_lapis_visual_layout_picture => 'Image position';
+  @override
+  String get anki_lapis_visual_layout_picture_right => 'Right of the word';
+  @override
+  String get anki_lapis_visual_layout_picture_left => 'Left of the word';
+  @override
+  String get anki_lapis_visual_layout_picture_alt => 'Inside the sentence';
+  @override
+  String get anki_lapis_visual_layout_audio => 'Audio buttons';
+  @override
+  String get anki_lapis_visual_layout_audio_header => 'Next to the reading';
+  @override
+  String get anki_lapis_visual_layout_audio_fixed => 'Pinned to the bottom';
+  @override
+  String get anki_lapis_visual_layout_audio_alt => 'Inside the sentence';
+  @override
+  String get anki_lapis_visual_mapping_hint =>
+      'Anki fields that fill the selected area. Changes are saved together with the style.';
+  @override
+  String get anki_lapis_visual_mapping_none =>
+      'This area is drawn by the template itself and has no field of its own.';
+  @override
+  String get anki_lapis_visual_color_custom => 'Custom';
+  @override
+  String get anki_lapis_visual_color_picker_title => 'Pick a color';
+  @override
+  String get video_scrape_tmdb_key_hint => 'Enter TMDB API key';
+  @override
+  String get video_scrape_tmdb_key_required => 'TMDB requires an API key';
+  @override
+  String get video_scrape_tmdb_key_save => 'Save';
+  @override
+  String get video_scrape_tmdb_key_empty =>
+      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+  @override
+  String get download_detail_tab_overview => 'Overview';
+  @override
+  String get download_detail_tab_files => 'Files';
+  @override
+  String get download_detail_tab_peers => 'Peers';
+  @override
+  String get download_detail_tab_trackers => 'Trackers';
+  @override
+  String get download_detail_backend_unsupported =>
+      'Not supported by current download backend';
+  @override
+  String get download_detail_task_gone => 'Task not found in backend';
+  @override
+  String get download_detail_section_transfer => 'Transfer';
+  @override
+  String get download_detail_section_network => 'Network';
+  @override
+  String get download_detail_seeds_label => 'Seeds';
+  @override
+  String get download_detail_leechers_label => 'Leechers';
+  @override
+  String get download_detail_connections_label => 'Connections';
+  @override
+  String get download_detail_time_active => 'Active time';
+  @override
+  String get download_detail_time_seeding => 'Seeding time';
+  @override
+  String get download_detail_listen_port => 'Listen port';
+  @override
+  String get download_detail_dht_nodes => 'DHT nodes';
+  @override
+  String get download_detail_port_mapping => 'Port mapping';
+  @override
+  String get download_detail_session_rates => 'Session rates';
+  @override
+  String get download_detail_pieces_label => 'Pieces';
+  @override
+  String get download_detail_priority_skip => 'Don\'t download';
+  @override
+  String get download_detail_priority_normal => 'Normal';
+  @override
+  String get download_detail_priority_high => 'High';
+  @override
+  String get download_detail_tracker_working => 'Working';
+  @override
+  String get download_detail_tracker_updating => 'Updating';
+  @override
+  String get download_detail_tracker_not_contacted => 'Not contacted yet';
+  @override
+  String get download_detail_tracker_not_working => 'Not working';
+  @override
+  String get download_detail_tracker_disabled => 'Disabled';
+  @override
+  String get download_detail_no_peers => 'No connected peers';
+  @override
+  String get download_detail_no_trackers => 'No trackers';
 }
 
 // Path: <root>
@@ -36721,12 +37183,6 @@ class _StringsId extends _StringsEn {
   @override
   String get video_scrape_tags => 'Tags';
   @override
-  String get video_scrape_tmdb_key_hint => 'Enter TMDB API Key';
-  @override
-  String get video_scrape_tmdb_key_required => 'TMDB requires an API key';
-  @override
-  String get video_scrape_tmdb_key_save => 'Save';
-  @override
   String get video_scrape_use => 'Use';
   @override
   String get video_scrape_view_subject => 'View on Bangumi';
@@ -37841,16 +38297,13 @@ class _StringsId extends _StringsEn {
       '${count} subtitles available · ${languages}';
   @override
   String get video_scrape_manual_match_hint =>
-      'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+      'Manual matching replaces this episode cover and saves its source mapping and title metadata. All available sources are searched together and results are ranked by match confidence.';
   @override
   String get video_scrape_collection_match_hint =>
-      'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+      'This only replaces the collection cover. Episode covers and title metadata are not changed. All available sources are searched together and results are ranked by match confidence.';
   @override
   String get video_scrape_apply_to_collection_hint =>
       'This writes the same cover to every episode. Leave it off unless that is intentional.';
-  @override
-  String get video_scrape_tmdb_key_empty =>
-      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
   @override
   String get manga_online_source_disabled =>
       'This internet source is disabled. Enable it in Sources to browse the catalog.';
@@ -37944,10 +38397,10 @@ class _StringsId extends _StringsEn {
   String get interconnect_peer_list_empty =>
       'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
   @override
-  String get anki_lapis_visual_editor => 'Visual style editor';
+  String get anki_lapis_visual_editor => 'Visual editor';
   @override
   String get anki_lapis_visual_editor_hint =>
-      'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+      'Preview the Lapis card, then change each area\'s style, position and field mapping without writing CSS.';
   @override
   String get anki_lapis_visual_front => 'Front';
   @override
@@ -38280,6 +38733,117 @@ class _StringsId extends _StringsEn {
   String get video_jimaku_format_all => 'All';
   @override
   String get media_source_local_roots => 'Local scan roots';
+  @override
+  String get video_setting_tmdb_key => 'Custom TMDB API key';
+  @override
+  String get video_setting_tmdb_key_hint =>
+      'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
+  @override
+  String get about_tmdb_attribution =>
+      'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+  @override
+  String get anki_lapis_visual_layout => 'Layout';
+  @override
+  String get anki_lapis_visual_layout_hint =>
+      'Uses Lapis\' own layout switches, so desktop and mobile Anki both follow it.';
+  @override
+  String get anki_lapis_visual_layout_sentence => 'Sentence position';
+  @override
+  String get anki_lapis_visual_layout_sentence_above => 'Above definitions';
+  @override
+  String get anki_lapis_visual_layout_sentence_below => 'Below definitions';
+  @override
+  String get anki_lapis_visual_layout_picture => 'Image position';
+  @override
+  String get anki_lapis_visual_layout_picture_right => 'Right of the word';
+  @override
+  String get anki_lapis_visual_layout_picture_left => 'Left of the word';
+  @override
+  String get anki_lapis_visual_layout_picture_alt => 'Inside the sentence';
+  @override
+  String get anki_lapis_visual_layout_audio => 'Audio buttons';
+  @override
+  String get anki_lapis_visual_layout_audio_header => 'Next to the reading';
+  @override
+  String get anki_lapis_visual_layout_audio_fixed => 'Pinned to the bottom';
+  @override
+  String get anki_lapis_visual_layout_audio_alt => 'Inside the sentence';
+  @override
+  String get anki_lapis_visual_mapping_hint =>
+      'Anki fields that fill the selected area. Changes are saved together with the style.';
+  @override
+  String get anki_lapis_visual_mapping_none =>
+      'This area is drawn by the template itself and has no field of its own.';
+  @override
+  String get anki_lapis_visual_color_custom => 'Custom';
+  @override
+  String get anki_lapis_visual_color_picker_title => 'Pick a color';
+  @override
+  String get video_scrape_tmdb_key_hint => 'Enter TMDB API key';
+  @override
+  String get video_scrape_tmdb_key_required => 'TMDB requires an API key';
+  @override
+  String get video_scrape_tmdb_key_save => 'Save';
+  @override
+  String get video_scrape_tmdb_key_empty =>
+      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+  @override
+  String get download_detail_tab_overview => 'Overview';
+  @override
+  String get download_detail_tab_files => 'Files';
+  @override
+  String get download_detail_tab_peers => 'Peers';
+  @override
+  String get download_detail_tab_trackers => 'Trackers';
+  @override
+  String get download_detail_backend_unsupported =>
+      'Not supported by current download backend';
+  @override
+  String get download_detail_task_gone => 'Task not found in backend';
+  @override
+  String get download_detail_section_transfer => 'Transfer';
+  @override
+  String get download_detail_section_network => 'Network';
+  @override
+  String get download_detail_seeds_label => 'Seeds';
+  @override
+  String get download_detail_leechers_label => 'Leechers';
+  @override
+  String get download_detail_connections_label => 'Connections';
+  @override
+  String get download_detail_time_active => 'Active time';
+  @override
+  String get download_detail_time_seeding => 'Seeding time';
+  @override
+  String get download_detail_listen_port => 'Listen port';
+  @override
+  String get download_detail_dht_nodes => 'DHT nodes';
+  @override
+  String get download_detail_port_mapping => 'Port mapping';
+  @override
+  String get download_detail_session_rates => 'Session rates';
+  @override
+  String get download_detail_pieces_label => 'Pieces';
+  @override
+  String get download_detail_priority_skip => 'Don\'t download';
+  @override
+  String get download_detail_priority_normal => 'Normal';
+  @override
+  String get download_detail_priority_high => 'High';
+  @override
+  String get download_detail_tracker_working => 'Working';
+  @override
+  String get download_detail_tracker_updating => 'Updating';
+  @override
+  String get download_detail_tracker_not_contacted => 'Not contacted yet';
+  @override
+  String get download_detail_tracker_not_working => 'Not working';
+  @override
+  String get download_detail_tracker_disabled => 'Disabled';
+  @override
+  String get download_detail_no_peers => 'No connected peers';
+  @override
+  String get download_detail_no_trackers => 'No trackers';
 }
 
 // Path: <root>
@@ -43587,12 +44151,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_scrape_tags => 'Tags';
   @override
-  String get video_scrape_tmdb_key_hint => 'Enter TMDB API Key';
-  @override
-  String get video_scrape_tmdb_key_required => 'TMDB requires an API key';
-  @override
-  String get video_scrape_tmdb_key_save => 'Save';
-  @override
   String get video_scrape_use => 'Use';
   @override
   String get video_scrape_view_subject => 'View on Bangumi';
@@ -44714,16 +45272,13 @@ class _StringsIt extends _StringsEn {
       '${count} subtitles available · ${languages}';
   @override
   String get video_scrape_manual_match_hint =>
-      'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+      'Manual matching replaces this episode cover and saves its source mapping and title metadata. All available sources are searched together and results are ranked by match confidence.';
   @override
   String get video_scrape_collection_match_hint =>
-      'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+      'This only replaces the collection cover. Episode covers and title metadata are not changed. All available sources are searched together and results are ranked by match confidence.';
   @override
   String get video_scrape_apply_to_collection_hint =>
       'This writes the same cover to every episode. Leave it off unless that is intentional.';
-  @override
-  String get video_scrape_tmdb_key_empty =>
-      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
   @override
   String get manga_online_source_disabled =>
       'This internet source is disabled. Enable it in Sources to browse the catalog.';
@@ -44817,10 +45372,10 @@ class _StringsIt extends _StringsEn {
   String get interconnect_peer_list_empty =>
       'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
   @override
-  String get anki_lapis_visual_editor => 'Visual style editor';
+  String get anki_lapis_visual_editor => 'Visual editor';
   @override
   String get anki_lapis_visual_editor_hint =>
-      'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+      'Preview the Lapis card, then change each area\'s style, position and field mapping without writing CSS.';
   @override
   String get anki_lapis_visual_front => 'Front';
   @override
@@ -45153,6 +45708,117 @@ class _StringsIt extends _StringsEn {
   String get video_jimaku_format_all => 'All';
   @override
   String get media_source_local_roots => 'Local scan roots';
+  @override
+  String get video_setting_tmdb_key => 'Custom TMDB API key';
+  @override
+  String get video_setting_tmdb_key_hint =>
+      'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
+  @override
+  String get about_tmdb_attribution =>
+      'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+  @override
+  String get anki_lapis_visual_layout => 'Layout';
+  @override
+  String get anki_lapis_visual_layout_hint =>
+      'Uses Lapis\' own layout switches, so desktop and mobile Anki both follow it.';
+  @override
+  String get anki_lapis_visual_layout_sentence => 'Sentence position';
+  @override
+  String get anki_lapis_visual_layout_sentence_above => 'Above definitions';
+  @override
+  String get anki_lapis_visual_layout_sentence_below => 'Below definitions';
+  @override
+  String get anki_lapis_visual_layout_picture => 'Image position';
+  @override
+  String get anki_lapis_visual_layout_picture_right => 'Right of the word';
+  @override
+  String get anki_lapis_visual_layout_picture_left => 'Left of the word';
+  @override
+  String get anki_lapis_visual_layout_picture_alt => 'Inside the sentence';
+  @override
+  String get anki_lapis_visual_layout_audio => 'Audio buttons';
+  @override
+  String get anki_lapis_visual_layout_audio_header => 'Next to the reading';
+  @override
+  String get anki_lapis_visual_layout_audio_fixed => 'Pinned to the bottom';
+  @override
+  String get anki_lapis_visual_layout_audio_alt => 'Inside the sentence';
+  @override
+  String get anki_lapis_visual_mapping_hint =>
+      'Anki fields that fill the selected area. Changes are saved together with the style.';
+  @override
+  String get anki_lapis_visual_mapping_none =>
+      'This area is drawn by the template itself and has no field of its own.';
+  @override
+  String get anki_lapis_visual_color_custom => 'Custom';
+  @override
+  String get anki_lapis_visual_color_picker_title => 'Pick a color';
+  @override
+  String get video_scrape_tmdb_key_hint => 'Enter TMDB API key';
+  @override
+  String get video_scrape_tmdb_key_required => 'TMDB requires an API key';
+  @override
+  String get video_scrape_tmdb_key_save => 'Save';
+  @override
+  String get video_scrape_tmdb_key_empty =>
+      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+  @override
+  String get download_detail_tab_overview => 'Overview';
+  @override
+  String get download_detail_tab_files => 'Files';
+  @override
+  String get download_detail_tab_peers => 'Peers';
+  @override
+  String get download_detail_tab_trackers => 'Trackers';
+  @override
+  String get download_detail_backend_unsupported =>
+      'Not supported by current download backend';
+  @override
+  String get download_detail_task_gone => 'Task not found in backend';
+  @override
+  String get download_detail_section_transfer => 'Transfer';
+  @override
+  String get download_detail_section_network => 'Network';
+  @override
+  String get download_detail_seeds_label => 'Seeds';
+  @override
+  String get download_detail_leechers_label => 'Leechers';
+  @override
+  String get download_detail_connections_label => 'Connections';
+  @override
+  String get download_detail_time_active => 'Active time';
+  @override
+  String get download_detail_time_seeding => 'Seeding time';
+  @override
+  String get download_detail_listen_port => 'Listen port';
+  @override
+  String get download_detail_dht_nodes => 'DHT nodes';
+  @override
+  String get download_detail_port_mapping => 'Port mapping';
+  @override
+  String get download_detail_session_rates => 'Session rates';
+  @override
+  String get download_detail_pieces_label => 'Pieces';
+  @override
+  String get download_detail_priority_skip => 'Don\'t download';
+  @override
+  String get download_detail_priority_normal => 'Normal';
+  @override
+  String get download_detail_priority_high => 'High';
+  @override
+  String get download_detail_tracker_working => 'Working';
+  @override
+  String get download_detail_tracker_updating => 'Updating';
+  @override
+  String get download_detail_tracker_not_contacted => 'Not contacted yet';
+  @override
+  String get download_detail_tracker_not_working => 'Not working';
+  @override
+  String get download_detail_tracker_disabled => 'Disabled';
+  @override
+  String get download_detail_no_peers => 'No connected peers';
+  @override
+  String get download_detail_no_trackers => 'No trackers';
 }
 
 // Path: <root>
@@ -50305,12 +50971,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_scrape_tags => 'Tags';
   @override
-  String get video_scrape_tmdb_key_hint => 'Enter TMDB API Key';
-  @override
-  String get video_scrape_tmdb_key_required => 'TMDB requires an API key';
-  @override
-  String get video_scrape_tmdb_key_save => 'Save';
-  @override
   String get video_scrape_use => 'Use';
   @override
   String get video_scrape_view_subject => 'View on Bangumi';
@@ -51404,16 +52064,13 @@ class _StringsJa extends _StringsEn {
       '${count} subtitles available · ${languages}';
   @override
   String get video_scrape_manual_match_hint =>
-      'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+      'Manual matching replaces this episode cover and saves its source mapping and title metadata. All available sources are searched together and results are ranked by match confidence.';
   @override
   String get video_scrape_collection_match_hint =>
-      'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+      'This only replaces the collection cover. Episode covers and title metadata are not changed. All available sources are searched together and results are ranked by match confidence.';
   @override
   String get video_scrape_apply_to_collection_hint =>
       'This writes the same cover to every episode. Leave it off unless that is intentional.';
-  @override
-  String get video_scrape_tmdb_key_empty =>
-      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
   @override
   String get manga_online_source_disabled =>
       'This internet source is disabled. Enable it in Sources to browse the catalog.';
@@ -51507,10 +52164,10 @@ class _StringsJa extends _StringsEn {
   String get interconnect_peer_list_empty =>
       'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
   @override
-  String get anki_lapis_visual_editor => 'Visual style editor';
+  String get anki_lapis_visual_editor => 'Visual editor';
   @override
   String get anki_lapis_visual_editor_hint =>
-      'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+      'Preview the Lapis card, then change each area\'s style, position and field mapping without writing CSS.';
   @override
   String get anki_lapis_visual_front => 'Front';
   @override
@@ -51843,6 +52500,117 @@ class _StringsJa extends _StringsEn {
   String get video_jimaku_format_all => 'All';
   @override
   String get media_source_local_roots => 'Local scan roots';
+  @override
+  String get video_setting_tmdb_key => 'Custom TMDB API key';
+  @override
+  String get video_setting_tmdb_key_hint =>
+      'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
+  @override
+  String get about_tmdb_attribution =>
+      'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+  @override
+  String get anki_lapis_visual_layout => 'Layout';
+  @override
+  String get anki_lapis_visual_layout_hint =>
+      'Uses Lapis\' own layout switches, so desktop and mobile Anki both follow it.';
+  @override
+  String get anki_lapis_visual_layout_sentence => 'Sentence position';
+  @override
+  String get anki_lapis_visual_layout_sentence_above => 'Above definitions';
+  @override
+  String get anki_lapis_visual_layout_sentence_below => 'Below definitions';
+  @override
+  String get anki_lapis_visual_layout_picture => 'Image position';
+  @override
+  String get anki_lapis_visual_layout_picture_right => 'Right of the word';
+  @override
+  String get anki_lapis_visual_layout_picture_left => 'Left of the word';
+  @override
+  String get anki_lapis_visual_layout_picture_alt => 'Inside the sentence';
+  @override
+  String get anki_lapis_visual_layout_audio => 'Audio buttons';
+  @override
+  String get anki_lapis_visual_layout_audio_header => 'Next to the reading';
+  @override
+  String get anki_lapis_visual_layout_audio_fixed => 'Pinned to the bottom';
+  @override
+  String get anki_lapis_visual_layout_audio_alt => 'Inside the sentence';
+  @override
+  String get anki_lapis_visual_mapping_hint =>
+      'Anki fields that fill the selected area. Changes are saved together with the style.';
+  @override
+  String get anki_lapis_visual_mapping_none =>
+      'This area is drawn by the template itself and has no field of its own.';
+  @override
+  String get anki_lapis_visual_color_custom => 'Custom';
+  @override
+  String get anki_lapis_visual_color_picker_title => 'Pick a color';
+  @override
+  String get video_scrape_tmdb_key_hint => 'Enter TMDB API key';
+  @override
+  String get video_scrape_tmdb_key_required => 'TMDB requires an API key';
+  @override
+  String get video_scrape_tmdb_key_save => 'Save';
+  @override
+  String get video_scrape_tmdb_key_empty =>
+      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+  @override
+  String get download_detail_tab_overview => 'Overview';
+  @override
+  String get download_detail_tab_files => 'Files';
+  @override
+  String get download_detail_tab_peers => 'Peers';
+  @override
+  String get download_detail_tab_trackers => 'Trackers';
+  @override
+  String get download_detail_backend_unsupported =>
+      'Not supported by current download backend';
+  @override
+  String get download_detail_task_gone => 'Task not found in backend';
+  @override
+  String get download_detail_section_transfer => 'Transfer';
+  @override
+  String get download_detail_section_network => 'Network';
+  @override
+  String get download_detail_seeds_label => 'Seeds';
+  @override
+  String get download_detail_leechers_label => 'Leechers';
+  @override
+  String get download_detail_connections_label => 'Connections';
+  @override
+  String get download_detail_time_active => 'Active time';
+  @override
+  String get download_detail_time_seeding => 'Seeding time';
+  @override
+  String get download_detail_listen_port => 'Listen port';
+  @override
+  String get download_detail_dht_nodes => 'DHT nodes';
+  @override
+  String get download_detail_port_mapping => 'Port mapping';
+  @override
+  String get download_detail_session_rates => 'Session rates';
+  @override
+  String get download_detail_pieces_label => 'Pieces';
+  @override
+  String get download_detail_priority_skip => 'Don\'t download';
+  @override
+  String get download_detail_priority_normal => 'Normal';
+  @override
+  String get download_detail_priority_high => 'High';
+  @override
+  String get download_detail_tracker_working => 'Working';
+  @override
+  String get download_detail_tracker_updating => 'Updating';
+  @override
+  String get download_detail_tracker_not_contacted => 'Not contacted yet';
+  @override
+  String get download_detail_tracker_not_working => 'Not working';
+  @override
+  String get download_detail_tracker_disabled => 'Disabled';
+  @override
+  String get download_detail_no_peers => 'No connected peers';
+  @override
+  String get download_detail_no_trackers => 'No trackers';
 }
 
 // Path: <root>
@@ -56994,12 +57762,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_scrape_tags => 'Tags';
   @override
-  String get video_scrape_tmdb_key_hint => 'Enter TMDB API Key';
-  @override
-  String get video_scrape_tmdb_key_required => 'TMDB requires an API key';
-  @override
-  String get video_scrape_tmdb_key_save => 'Save';
-  @override
   String get video_scrape_use => 'Use';
   @override
   String get video_scrape_view_subject => 'View on Bangumi';
@@ -58096,16 +58858,13 @@ class _StringsKo extends _StringsEn {
       '${count} subtitles available · ${languages}';
   @override
   String get video_scrape_manual_match_hint =>
-      'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+      'Manual matching replaces this episode cover and saves its source mapping and title metadata. All available sources are searched together and results are ranked by match confidence.';
   @override
   String get video_scrape_collection_match_hint =>
-      'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+      'This only replaces the collection cover. Episode covers and title metadata are not changed. All available sources are searched together and results are ranked by match confidence.';
   @override
   String get video_scrape_apply_to_collection_hint =>
       'This writes the same cover to every episode. Leave it off unless that is intentional.';
-  @override
-  String get video_scrape_tmdb_key_empty =>
-      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
   @override
   String get manga_online_source_disabled =>
       'This internet source is disabled. Enable it in Sources to browse the catalog.';
@@ -58199,10 +58958,10 @@ class _StringsKo extends _StringsEn {
   String get interconnect_peer_list_empty =>
       'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
   @override
-  String get anki_lapis_visual_editor => 'Visual style editor';
+  String get anki_lapis_visual_editor => 'Visual editor';
   @override
   String get anki_lapis_visual_editor_hint =>
-      'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+      'Preview the Lapis card, then change each area\'s style, position and field mapping without writing CSS.';
   @override
   String get anki_lapis_visual_front => 'Front';
   @override
@@ -58535,6 +59294,117 @@ class _StringsKo extends _StringsEn {
   String get video_jimaku_format_all => 'All';
   @override
   String get media_source_local_roots => 'Local scan roots';
+  @override
+  String get video_setting_tmdb_key => 'Custom TMDB API key';
+  @override
+  String get video_setting_tmdb_key_hint =>
+      'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
+  @override
+  String get about_tmdb_attribution =>
+      'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+  @override
+  String get anki_lapis_visual_layout => 'Layout';
+  @override
+  String get anki_lapis_visual_layout_hint =>
+      'Uses Lapis\' own layout switches, so desktop and mobile Anki both follow it.';
+  @override
+  String get anki_lapis_visual_layout_sentence => 'Sentence position';
+  @override
+  String get anki_lapis_visual_layout_sentence_above => 'Above definitions';
+  @override
+  String get anki_lapis_visual_layout_sentence_below => 'Below definitions';
+  @override
+  String get anki_lapis_visual_layout_picture => 'Image position';
+  @override
+  String get anki_lapis_visual_layout_picture_right => 'Right of the word';
+  @override
+  String get anki_lapis_visual_layout_picture_left => 'Left of the word';
+  @override
+  String get anki_lapis_visual_layout_picture_alt => 'Inside the sentence';
+  @override
+  String get anki_lapis_visual_layout_audio => 'Audio buttons';
+  @override
+  String get anki_lapis_visual_layout_audio_header => 'Next to the reading';
+  @override
+  String get anki_lapis_visual_layout_audio_fixed => 'Pinned to the bottom';
+  @override
+  String get anki_lapis_visual_layout_audio_alt => 'Inside the sentence';
+  @override
+  String get anki_lapis_visual_mapping_hint =>
+      'Anki fields that fill the selected area. Changes are saved together with the style.';
+  @override
+  String get anki_lapis_visual_mapping_none =>
+      'This area is drawn by the template itself and has no field of its own.';
+  @override
+  String get anki_lapis_visual_color_custom => 'Custom';
+  @override
+  String get anki_lapis_visual_color_picker_title => 'Pick a color';
+  @override
+  String get video_scrape_tmdb_key_hint => 'Enter TMDB API key';
+  @override
+  String get video_scrape_tmdb_key_required => 'TMDB requires an API key';
+  @override
+  String get video_scrape_tmdb_key_save => 'Save';
+  @override
+  String get video_scrape_tmdb_key_empty =>
+      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+  @override
+  String get download_detail_tab_overview => 'Overview';
+  @override
+  String get download_detail_tab_files => 'Files';
+  @override
+  String get download_detail_tab_peers => 'Peers';
+  @override
+  String get download_detail_tab_trackers => 'Trackers';
+  @override
+  String get download_detail_backend_unsupported =>
+      'Not supported by current download backend';
+  @override
+  String get download_detail_task_gone => 'Task not found in backend';
+  @override
+  String get download_detail_section_transfer => 'Transfer';
+  @override
+  String get download_detail_section_network => 'Network';
+  @override
+  String get download_detail_seeds_label => 'Seeds';
+  @override
+  String get download_detail_leechers_label => 'Leechers';
+  @override
+  String get download_detail_connections_label => 'Connections';
+  @override
+  String get download_detail_time_active => 'Active time';
+  @override
+  String get download_detail_time_seeding => 'Seeding time';
+  @override
+  String get download_detail_listen_port => 'Listen port';
+  @override
+  String get download_detail_dht_nodes => 'DHT nodes';
+  @override
+  String get download_detail_port_mapping => 'Port mapping';
+  @override
+  String get download_detail_session_rates => 'Session rates';
+  @override
+  String get download_detail_pieces_label => 'Pieces';
+  @override
+  String get download_detail_priority_skip => 'Don\'t download';
+  @override
+  String get download_detail_priority_normal => 'Normal';
+  @override
+  String get download_detail_priority_high => 'High';
+  @override
+  String get download_detail_tracker_working => 'Working';
+  @override
+  String get download_detail_tracker_updating => 'Updating';
+  @override
+  String get download_detail_tracker_not_contacted => 'Not contacted yet';
+  @override
+  String get download_detail_tracker_not_working => 'Not working';
+  @override
+  String get download_detail_tracker_disabled => 'Disabled';
+  @override
+  String get download_detail_no_peers => 'No connected peers';
+  @override
+  String get download_detail_no_trackers => 'No trackers';
 }
 
 // Path: <root>
@@ -63826,12 +64696,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_scrape_tags => 'Tags';
   @override
-  String get video_scrape_tmdb_key_hint => 'Enter TMDB API Key';
-  @override
-  String get video_scrape_tmdb_key_required => 'TMDB requires an API key';
-  @override
-  String get video_scrape_tmdb_key_save => 'Save';
-  @override
   String get video_scrape_use => 'Use';
   @override
   String get video_scrape_view_subject => 'View on Bangumi';
@@ -64949,16 +65813,13 @@ class _StringsNl extends _StringsEn {
       '${count} subtitles available · ${languages}';
   @override
   String get video_scrape_manual_match_hint =>
-      'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+      'Manual matching replaces this episode cover and saves its source mapping and title metadata. All available sources are searched together and results are ranked by match confidence.';
   @override
   String get video_scrape_collection_match_hint =>
-      'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+      'This only replaces the collection cover. Episode covers and title metadata are not changed. All available sources are searched together and results are ranked by match confidence.';
   @override
   String get video_scrape_apply_to_collection_hint =>
       'This writes the same cover to every episode. Leave it off unless that is intentional.';
-  @override
-  String get video_scrape_tmdb_key_empty =>
-      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
   @override
   String get manga_online_source_disabled =>
       'This internet source is disabled. Enable it in Sources to browse the catalog.';
@@ -65052,10 +65913,10 @@ class _StringsNl extends _StringsEn {
   String get interconnect_peer_list_empty =>
       'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
   @override
-  String get anki_lapis_visual_editor => 'Visual style editor';
+  String get anki_lapis_visual_editor => 'Visual editor';
   @override
   String get anki_lapis_visual_editor_hint =>
-      'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+      'Preview the Lapis card, then change each area\'s style, position and field mapping without writing CSS.';
   @override
   String get anki_lapis_visual_front => 'Front';
   @override
@@ -65388,6 +66249,117 @@ class _StringsNl extends _StringsEn {
   String get video_jimaku_format_all => 'All';
   @override
   String get media_source_local_roots => 'Local scan roots';
+  @override
+  String get video_setting_tmdb_key => 'Custom TMDB API key';
+  @override
+  String get video_setting_tmdb_key_hint =>
+      'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
+  @override
+  String get about_tmdb_attribution =>
+      'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+  @override
+  String get anki_lapis_visual_layout => 'Layout';
+  @override
+  String get anki_lapis_visual_layout_hint =>
+      'Uses Lapis\' own layout switches, so desktop and mobile Anki both follow it.';
+  @override
+  String get anki_lapis_visual_layout_sentence => 'Sentence position';
+  @override
+  String get anki_lapis_visual_layout_sentence_above => 'Above definitions';
+  @override
+  String get anki_lapis_visual_layout_sentence_below => 'Below definitions';
+  @override
+  String get anki_lapis_visual_layout_picture => 'Image position';
+  @override
+  String get anki_lapis_visual_layout_picture_right => 'Right of the word';
+  @override
+  String get anki_lapis_visual_layout_picture_left => 'Left of the word';
+  @override
+  String get anki_lapis_visual_layout_picture_alt => 'Inside the sentence';
+  @override
+  String get anki_lapis_visual_layout_audio => 'Audio buttons';
+  @override
+  String get anki_lapis_visual_layout_audio_header => 'Next to the reading';
+  @override
+  String get anki_lapis_visual_layout_audio_fixed => 'Pinned to the bottom';
+  @override
+  String get anki_lapis_visual_layout_audio_alt => 'Inside the sentence';
+  @override
+  String get anki_lapis_visual_mapping_hint =>
+      'Anki fields that fill the selected area. Changes are saved together with the style.';
+  @override
+  String get anki_lapis_visual_mapping_none =>
+      'This area is drawn by the template itself and has no field of its own.';
+  @override
+  String get anki_lapis_visual_color_custom => 'Custom';
+  @override
+  String get anki_lapis_visual_color_picker_title => 'Pick a color';
+  @override
+  String get video_scrape_tmdb_key_hint => 'Enter TMDB API key';
+  @override
+  String get video_scrape_tmdb_key_required => 'TMDB requires an API key';
+  @override
+  String get video_scrape_tmdb_key_save => 'Save';
+  @override
+  String get video_scrape_tmdb_key_empty =>
+      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+  @override
+  String get download_detail_tab_overview => 'Overview';
+  @override
+  String get download_detail_tab_files => 'Files';
+  @override
+  String get download_detail_tab_peers => 'Peers';
+  @override
+  String get download_detail_tab_trackers => 'Trackers';
+  @override
+  String get download_detail_backend_unsupported =>
+      'Not supported by current download backend';
+  @override
+  String get download_detail_task_gone => 'Task not found in backend';
+  @override
+  String get download_detail_section_transfer => 'Transfer';
+  @override
+  String get download_detail_section_network => 'Network';
+  @override
+  String get download_detail_seeds_label => 'Seeds';
+  @override
+  String get download_detail_leechers_label => 'Leechers';
+  @override
+  String get download_detail_connections_label => 'Connections';
+  @override
+  String get download_detail_time_active => 'Active time';
+  @override
+  String get download_detail_time_seeding => 'Seeding time';
+  @override
+  String get download_detail_listen_port => 'Listen port';
+  @override
+  String get download_detail_dht_nodes => 'DHT nodes';
+  @override
+  String get download_detail_port_mapping => 'Port mapping';
+  @override
+  String get download_detail_session_rates => 'Session rates';
+  @override
+  String get download_detail_pieces_label => 'Pieces';
+  @override
+  String get download_detail_priority_skip => 'Don\'t download';
+  @override
+  String get download_detail_priority_normal => 'Normal';
+  @override
+  String get download_detail_priority_high => 'High';
+  @override
+  String get download_detail_tracker_working => 'Working';
+  @override
+  String get download_detail_tracker_updating => 'Updating';
+  @override
+  String get download_detail_tracker_not_contacted => 'Not contacted yet';
+  @override
+  String get download_detail_tracker_not_working => 'Not working';
+  @override
+  String get download_detail_tracker_disabled => 'Disabled';
+  @override
+  String get download_detail_no_peers => 'No connected peers';
+  @override
+  String get download_detail_no_trackers => 'No trackers';
 }
 
 // Path: <root>
@@ -70689,12 +71661,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_scrape_tags => 'Tags';
   @override
-  String get video_scrape_tmdb_key_hint => 'Enter TMDB API Key';
-  @override
-  String get video_scrape_tmdb_key_required => 'TMDB requires an API key';
-  @override
-  String get video_scrape_tmdb_key_save => 'Save';
-  @override
   String get video_scrape_use => 'Use';
   @override
   String get video_scrape_view_subject => 'View on Bangumi';
@@ -71815,16 +72781,13 @@ class _StringsPtBr extends _StringsEn {
       '${count} subtitles available · ${languages}';
   @override
   String get video_scrape_manual_match_hint =>
-      'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+      'Manual matching replaces this episode cover and saves its source mapping and title metadata. All available sources are searched together and results are ranked by match confidence.';
   @override
   String get video_scrape_collection_match_hint =>
-      'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+      'This only replaces the collection cover. Episode covers and title metadata are not changed. All available sources are searched together and results are ranked by match confidence.';
   @override
   String get video_scrape_apply_to_collection_hint =>
       'This writes the same cover to every episode. Leave it off unless that is intentional.';
-  @override
-  String get video_scrape_tmdb_key_empty =>
-      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
   @override
   String get manga_online_source_disabled =>
       'This internet source is disabled. Enable it in Sources to browse the catalog.';
@@ -71918,10 +72881,10 @@ class _StringsPtBr extends _StringsEn {
   String get interconnect_peer_list_empty =>
       'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
   @override
-  String get anki_lapis_visual_editor => 'Visual style editor';
+  String get anki_lapis_visual_editor => 'Visual editor';
   @override
   String get anki_lapis_visual_editor_hint =>
-      'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+      'Preview the Lapis card, then change each area\'s style, position and field mapping without writing CSS.';
   @override
   String get anki_lapis_visual_front => 'Front';
   @override
@@ -72254,6 +73217,117 @@ class _StringsPtBr extends _StringsEn {
   String get video_jimaku_format_all => 'All';
   @override
   String get media_source_local_roots => 'Local scan roots';
+  @override
+  String get video_setting_tmdb_key => 'Custom TMDB API key';
+  @override
+  String get video_setting_tmdb_key_hint =>
+      'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
+  @override
+  String get about_tmdb_attribution =>
+      'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+  @override
+  String get anki_lapis_visual_layout => 'Layout';
+  @override
+  String get anki_lapis_visual_layout_hint =>
+      'Uses Lapis\' own layout switches, so desktop and mobile Anki both follow it.';
+  @override
+  String get anki_lapis_visual_layout_sentence => 'Sentence position';
+  @override
+  String get anki_lapis_visual_layout_sentence_above => 'Above definitions';
+  @override
+  String get anki_lapis_visual_layout_sentence_below => 'Below definitions';
+  @override
+  String get anki_lapis_visual_layout_picture => 'Image position';
+  @override
+  String get anki_lapis_visual_layout_picture_right => 'Right of the word';
+  @override
+  String get anki_lapis_visual_layout_picture_left => 'Left of the word';
+  @override
+  String get anki_lapis_visual_layout_picture_alt => 'Inside the sentence';
+  @override
+  String get anki_lapis_visual_layout_audio => 'Audio buttons';
+  @override
+  String get anki_lapis_visual_layout_audio_header => 'Next to the reading';
+  @override
+  String get anki_lapis_visual_layout_audio_fixed => 'Pinned to the bottom';
+  @override
+  String get anki_lapis_visual_layout_audio_alt => 'Inside the sentence';
+  @override
+  String get anki_lapis_visual_mapping_hint =>
+      'Anki fields that fill the selected area. Changes are saved together with the style.';
+  @override
+  String get anki_lapis_visual_mapping_none =>
+      'This area is drawn by the template itself and has no field of its own.';
+  @override
+  String get anki_lapis_visual_color_custom => 'Custom';
+  @override
+  String get anki_lapis_visual_color_picker_title => 'Pick a color';
+  @override
+  String get video_scrape_tmdb_key_hint => 'Enter TMDB API key';
+  @override
+  String get video_scrape_tmdb_key_required => 'TMDB requires an API key';
+  @override
+  String get video_scrape_tmdb_key_save => 'Save';
+  @override
+  String get video_scrape_tmdb_key_empty =>
+      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+  @override
+  String get download_detail_tab_overview => 'Overview';
+  @override
+  String get download_detail_tab_files => 'Files';
+  @override
+  String get download_detail_tab_peers => 'Peers';
+  @override
+  String get download_detail_tab_trackers => 'Trackers';
+  @override
+  String get download_detail_backend_unsupported =>
+      'Not supported by current download backend';
+  @override
+  String get download_detail_task_gone => 'Task not found in backend';
+  @override
+  String get download_detail_section_transfer => 'Transfer';
+  @override
+  String get download_detail_section_network => 'Network';
+  @override
+  String get download_detail_seeds_label => 'Seeds';
+  @override
+  String get download_detail_leechers_label => 'Leechers';
+  @override
+  String get download_detail_connections_label => 'Connections';
+  @override
+  String get download_detail_time_active => 'Active time';
+  @override
+  String get download_detail_time_seeding => 'Seeding time';
+  @override
+  String get download_detail_listen_port => 'Listen port';
+  @override
+  String get download_detail_dht_nodes => 'DHT nodes';
+  @override
+  String get download_detail_port_mapping => 'Port mapping';
+  @override
+  String get download_detail_session_rates => 'Session rates';
+  @override
+  String get download_detail_pieces_label => 'Pieces';
+  @override
+  String get download_detail_priority_skip => 'Don\'t download';
+  @override
+  String get download_detail_priority_normal => 'Normal';
+  @override
+  String get download_detail_priority_high => 'High';
+  @override
+  String get download_detail_tracker_working => 'Working';
+  @override
+  String get download_detail_tracker_updating => 'Updating';
+  @override
+  String get download_detail_tracker_not_contacted => 'Not contacted yet';
+  @override
+  String get download_detail_tracker_not_working => 'Not working';
+  @override
+  String get download_detail_tracker_disabled => 'Disabled';
+  @override
+  String get download_detail_no_peers => 'No connected peers';
+  @override
+  String get download_detail_no_trackers => 'No trackers';
 }
 
 // Path: <root>
@@ -77543,12 +78617,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_scrape_tags => 'Tags';
   @override
-  String get video_scrape_tmdb_key_hint => 'Enter TMDB API Key';
-  @override
-  String get video_scrape_tmdb_key_required => 'TMDB requires an API key';
-  @override
-  String get video_scrape_tmdb_key_save => 'Save';
-  @override
   String get video_scrape_use => 'Use';
   @override
   String get video_scrape_view_subject => 'View on Bangumi';
@@ -78665,16 +79733,13 @@ class _StringsRu extends _StringsEn {
       '${count} subtitles available · ${languages}';
   @override
   String get video_scrape_manual_match_hint =>
-      'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+      'Manual matching replaces this episode cover and saves its source mapping and title metadata. All available sources are searched together and results are ranked by match confidence.';
   @override
   String get video_scrape_collection_match_hint =>
-      'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+      'This only replaces the collection cover. Episode covers and title metadata are not changed. All available sources are searched together and results are ranked by match confidence.';
   @override
   String get video_scrape_apply_to_collection_hint =>
       'This writes the same cover to every episode. Leave it off unless that is intentional.';
-  @override
-  String get video_scrape_tmdb_key_empty =>
-      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
   @override
   String get manga_online_source_disabled =>
       'This internet source is disabled. Enable it in Sources to browse the catalog.';
@@ -78768,10 +79833,10 @@ class _StringsRu extends _StringsEn {
   String get interconnect_peer_list_empty =>
       'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
   @override
-  String get anki_lapis_visual_editor => 'Visual style editor';
+  String get anki_lapis_visual_editor => 'Visual editor';
   @override
   String get anki_lapis_visual_editor_hint =>
-      'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+      'Preview the Lapis card, then change each area\'s style, position and field mapping without writing CSS.';
   @override
   String get anki_lapis_visual_front => 'Front';
   @override
@@ -79104,6 +80169,117 @@ class _StringsRu extends _StringsEn {
   String get video_jimaku_format_all => 'All';
   @override
   String get media_source_local_roots => 'Local scan roots';
+  @override
+  String get video_setting_tmdb_key => 'Custom TMDB API key';
+  @override
+  String get video_setting_tmdb_key_hint =>
+      'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
+  @override
+  String get about_tmdb_attribution =>
+      'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+  @override
+  String get anki_lapis_visual_layout => 'Layout';
+  @override
+  String get anki_lapis_visual_layout_hint =>
+      'Uses Lapis\' own layout switches, so desktop and mobile Anki both follow it.';
+  @override
+  String get anki_lapis_visual_layout_sentence => 'Sentence position';
+  @override
+  String get anki_lapis_visual_layout_sentence_above => 'Above definitions';
+  @override
+  String get anki_lapis_visual_layout_sentence_below => 'Below definitions';
+  @override
+  String get anki_lapis_visual_layout_picture => 'Image position';
+  @override
+  String get anki_lapis_visual_layout_picture_right => 'Right of the word';
+  @override
+  String get anki_lapis_visual_layout_picture_left => 'Left of the word';
+  @override
+  String get anki_lapis_visual_layout_picture_alt => 'Inside the sentence';
+  @override
+  String get anki_lapis_visual_layout_audio => 'Audio buttons';
+  @override
+  String get anki_lapis_visual_layout_audio_header => 'Next to the reading';
+  @override
+  String get anki_lapis_visual_layout_audio_fixed => 'Pinned to the bottom';
+  @override
+  String get anki_lapis_visual_layout_audio_alt => 'Inside the sentence';
+  @override
+  String get anki_lapis_visual_mapping_hint =>
+      'Anki fields that fill the selected area. Changes are saved together with the style.';
+  @override
+  String get anki_lapis_visual_mapping_none =>
+      'This area is drawn by the template itself and has no field of its own.';
+  @override
+  String get anki_lapis_visual_color_custom => 'Custom';
+  @override
+  String get anki_lapis_visual_color_picker_title => 'Pick a color';
+  @override
+  String get video_scrape_tmdb_key_hint => 'Enter TMDB API key';
+  @override
+  String get video_scrape_tmdb_key_required => 'TMDB requires an API key';
+  @override
+  String get video_scrape_tmdb_key_save => 'Save';
+  @override
+  String get video_scrape_tmdb_key_empty =>
+      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+  @override
+  String get download_detail_tab_overview => 'Overview';
+  @override
+  String get download_detail_tab_files => 'Files';
+  @override
+  String get download_detail_tab_peers => 'Peers';
+  @override
+  String get download_detail_tab_trackers => 'Trackers';
+  @override
+  String get download_detail_backend_unsupported =>
+      'Not supported by current download backend';
+  @override
+  String get download_detail_task_gone => 'Task not found in backend';
+  @override
+  String get download_detail_section_transfer => 'Transfer';
+  @override
+  String get download_detail_section_network => 'Network';
+  @override
+  String get download_detail_seeds_label => 'Seeds';
+  @override
+  String get download_detail_leechers_label => 'Leechers';
+  @override
+  String get download_detail_connections_label => 'Connections';
+  @override
+  String get download_detail_time_active => 'Active time';
+  @override
+  String get download_detail_time_seeding => 'Seeding time';
+  @override
+  String get download_detail_listen_port => 'Listen port';
+  @override
+  String get download_detail_dht_nodes => 'DHT nodes';
+  @override
+  String get download_detail_port_mapping => 'Port mapping';
+  @override
+  String get download_detail_session_rates => 'Session rates';
+  @override
+  String get download_detail_pieces_label => 'Pieces';
+  @override
+  String get download_detail_priority_skip => 'Don\'t download';
+  @override
+  String get download_detail_priority_normal => 'Normal';
+  @override
+  String get download_detail_priority_high => 'High';
+  @override
+  String get download_detail_tracker_working => 'Working';
+  @override
+  String get download_detail_tracker_updating => 'Updating';
+  @override
+  String get download_detail_tracker_not_contacted => 'Not contacted yet';
+  @override
+  String get download_detail_tracker_not_working => 'Not working';
+  @override
+  String get download_detail_tracker_disabled => 'Disabled';
+  @override
+  String get download_detail_no_peers => 'No connected peers';
+  @override
+  String get download_detail_no_trackers => 'No trackers';
 }
 
 // Path: <root>
@@ -84347,12 +85523,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_scrape_tags => 'Tags';
   @override
-  String get video_scrape_tmdb_key_hint => 'Enter TMDB API Key';
-  @override
-  String get video_scrape_tmdb_key_required => 'TMDB requires an API key';
-  @override
-  String get video_scrape_tmdb_key_save => 'Save';
-  @override
   String get video_scrape_use => 'Use';
   @override
   String get video_scrape_view_subject => 'View on Bangumi';
@@ -85463,16 +86633,13 @@ class _StringsTh extends _StringsEn {
       '${count} subtitles available · ${languages}';
   @override
   String get video_scrape_manual_match_hint =>
-      'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+      'Manual matching replaces this episode cover and saves its source mapping and title metadata. All available sources are searched together and results are ranked by match confidence.';
   @override
   String get video_scrape_collection_match_hint =>
-      'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+      'This only replaces the collection cover. Episode covers and title metadata are not changed. All available sources are searched together and results are ranked by match confidence.';
   @override
   String get video_scrape_apply_to_collection_hint =>
       'This writes the same cover to every episode. Leave it off unless that is intentional.';
-  @override
-  String get video_scrape_tmdb_key_empty =>
-      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
   @override
   String get manga_online_source_disabled =>
       'This internet source is disabled. Enable it in Sources to browse the catalog.';
@@ -85566,10 +86733,10 @@ class _StringsTh extends _StringsEn {
   String get interconnect_peer_list_empty =>
       'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
   @override
-  String get anki_lapis_visual_editor => 'Visual style editor';
+  String get anki_lapis_visual_editor => 'Visual editor';
   @override
   String get anki_lapis_visual_editor_hint =>
-      'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+      'Preview the Lapis card, then change each area\'s style, position and field mapping without writing CSS.';
   @override
   String get anki_lapis_visual_front => 'Front';
   @override
@@ -85902,6 +87069,117 @@ class _StringsTh extends _StringsEn {
   String get video_jimaku_format_all => 'All';
   @override
   String get media_source_local_roots => 'Local scan roots';
+  @override
+  String get video_setting_tmdb_key => 'Custom TMDB API key';
+  @override
+  String get video_setting_tmdb_key_hint =>
+      'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
+  @override
+  String get about_tmdb_attribution =>
+      'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+  @override
+  String get anki_lapis_visual_layout => 'Layout';
+  @override
+  String get anki_lapis_visual_layout_hint =>
+      'Uses Lapis\' own layout switches, so desktop and mobile Anki both follow it.';
+  @override
+  String get anki_lapis_visual_layout_sentence => 'Sentence position';
+  @override
+  String get anki_lapis_visual_layout_sentence_above => 'Above definitions';
+  @override
+  String get anki_lapis_visual_layout_sentence_below => 'Below definitions';
+  @override
+  String get anki_lapis_visual_layout_picture => 'Image position';
+  @override
+  String get anki_lapis_visual_layout_picture_right => 'Right of the word';
+  @override
+  String get anki_lapis_visual_layout_picture_left => 'Left of the word';
+  @override
+  String get anki_lapis_visual_layout_picture_alt => 'Inside the sentence';
+  @override
+  String get anki_lapis_visual_layout_audio => 'Audio buttons';
+  @override
+  String get anki_lapis_visual_layout_audio_header => 'Next to the reading';
+  @override
+  String get anki_lapis_visual_layout_audio_fixed => 'Pinned to the bottom';
+  @override
+  String get anki_lapis_visual_layout_audio_alt => 'Inside the sentence';
+  @override
+  String get anki_lapis_visual_mapping_hint =>
+      'Anki fields that fill the selected area. Changes are saved together with the style.';
+  @override
+  String get anki_lapis_visual_mapping_none =>
+      'This area is drawn by the template itself and has no field of its own.';
+  @override
+  String get anki_lapis_visual_color_custom => 'Custom';
+  @override
+  String get anki_lapis_visual_color_picker_title => 'Pick a color';
+  @override
+  String get video_scrape_tmdb_key_hint => 'Enter TMDB API key';
+  @override
+  String get video_scrape_tmdb_key_required => 'TMDB requires an API key';
+  @override
+  String get video_scrape_tmdb_key_save => 'Save';
+  @override
+  String get video_scrape_tmdb_key_empty =>
+      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+  @override
+  String get download_detail_tab_overview => 'Overview';
+  @override
+  String get download_detail_tab_files => 'Files';
+  @override
+  String get download_detail_tab_peers => 'Peers';
+  @override
+  String get download_detail_tab_trackers => 'Trackers';
+  @override
+  String get download_detail_backend_unsupported =>
+      'Not supported by current download backend';
+  @override
+  String get download_detail_task_gone => 'Task not found in backend';
+  @override
+  String get download_detail_section_transfer => 'Transfer';
+  @override
+  String get download_detail_section_network => 'Network';
+  @override
+  String get download_detail_seeds_label => 'Seeds';
+  @override
+  String get download_detail_leechers_label => 'Leechers';
+  @override
+  String get download_detail_connections_label => 'Connections';
+  @override
+  String get download_detail_time_active => 'Active time';
+  @override
+  String get download_detail_time_seeding => 'Seeding time';
+  @override
+  String get download_detail_listen_port => 'Listen port';
+  @override
+  String get download_detail_dht_nodes => 'DHT nodes';
+  @override
+  String get download_detail_port_mapping => 'Port mapping';
+  @override
+  String get download_detail_session_rates => 'Session rates';
+  @override
+  String get download_detail_pieces_label => 'Pieces';
+  @override
+  String get download_detail_priority_skip => 'Don\'t download';
+  @override
+  String get download_detail_priority_normal => 'Normal';
+  @override
+  String get download_detail_priority_high => 'High';
+  @override
+  String get download_detail_tracker_working => 'Working';
+  @override
+  String get download_detail_tracker_updating => 'Updating';
+  @override
+  String get download_detail_tracker_not_contacted => 'Not contacted yet';
+  @override
+  String get download_detail_tracker_not_working => 'Not working';
+  @override
+  String get download_detail_tracker_disabled => 'Disabled';
+  @override
+  String get download_detail_no_peers => 'No connected peers';
+  @override
+  String get download_detail_no_trackers => 'No trackers';
 }
 
 // Path: <root>
@@ -91173,12 +92451,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_scrape_tags => 'Tags';
   @override
-  String get video_scrape_tmdb_key_hint => 'Enter TMDB API Key';
-  @override
-  String get video_scrape_tmdb_key_required => 'TMDB requires an API key';
-  @override
-  String get video_scrape_tmdb_key_save => 'Save';
-  @override
   String get video_scrape_use => 'Use';
   @override
   String get video_scrape_view_subject => 'View on Bangumi';
@@ -92293,16 +93565,13 @@ class _StringsTr extends _StringsEn {
       '${count} subtitles available · ${languages}';
   @override
   String get video_scrape_manual_match_hint =>
-      'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+      'Manual matching replaces this episode cover and saves its source mapping and title metadata. All available sources are searched together and results are ranked by match confidence.';
   @override
   String get video_scrape_collection_match_hint =>
-      'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+      'This only replaces the collection cover. Episode covers and title metadata are not changed. All available sources are searched together and results are ranked by match confidence.';
   @override
   String get video_scrape_apply_to_collection_hint =>
       'This writes the same cover to every episode. Leave it off unless that is intentional.';
-  @override
-  String get video_scrape_tmdb_key_empty =>
-      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
   @override
   String get manga_online_source_disabled =>
       'This internet source is disabled. Enable it in Sources to browse the catalog.';
@@ -92396,10 +93665,10 @@ class _StringsTr extends _StringsEn {
   String get interconnect_peer_list_empty =>
       'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
   @override
-  String get anki_lapis_visual_editor => 'Visual style editor';
+  String get anki_lapis_visual_editor => 'Visual editor';
   @override
   String get anki_lapis_visual_editor_hint =>
-      'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+      'Preview the Lapis card, then change each area\'s style, position and field mapping without writing CSS.';
   @override
   String get anki_lapis_visual_front => 'Front';
   @override
@@ -92732,6 +94001,117 @@ class _StringsTr extends _StringsEn {
   String get video_jimaku_format_all => 'All';
   @override
   String get media_source_local_roots => 'Local scan roots';
+  @override
+  String get video_setting_tmdb_key => 'Custom TMDB API key';
+  @override
+  String get video_setting_tmdb_key_hint =>
+      'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
+  @override
+  String get about_tmdb_attribution =>
+      'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+  @override
+  String get anki_lapis_visual_layout => 'Layout';
+  @override
+  String get anki_lapis_visual_layout_hint =>
+      'Uses Lapis\' own layout switches, so desktop and mobile Anki both follow it.';
+  @override
+  String get anki_lapis_visual_layout_sentence => 'Sentence position';
+  @override
+  String get anki_lapis_visual_layout_sentence_above => 'Above definitions';
+  @override
+  String get anki_lapis_visual_layout_sentence_below => 'Below definitions';
+  @override
+  String get anki_lapis_visual_layout_picture => 'Image position';
+  @override
+  String get anki_lapis_visual_layout_picture_right => 'Right of the word';
+  @override
+  String get anki_lapis_visual_layout_picture_left => 'Left of the word';
+  @override
+  String get anki_lapis_visual_layout_picture_alt => 'Inside the sentence';
+  @override
+  String get anki_lapis_visual_layout_audio => 'Audio buttons';
+  @override
+  String get anki_lapis_visual_layout_audio_header => 'Next to the reading';
+  @override
+  String get anki_lapis_visual_layout_audio_fixed => 'Pinned to the bottom';
+  @override
+  String get anki_lapis_visual_layout_audio_alt => 'Inside the sentence';
+  @override
+  String get anki_lapis_visual_mapping_hint =>
+      'Anki fields that fill the selected area. Changes are saved together with the style.';
+  @override
+  String get anki_lapis_visual_mapping_none =>
+      'This area is drawn by the template itself and has no field of its own.';
+  @override
+  String get anki_lapis_visual_color_custom => 'Custom';
+  @override
+  String get anki_lapis_visual_color_picker_title => 'Pick a color';
+  @override
+  String get video_scrape_tmdb_key_hint => 'Enter TMDB API key';
+  @override
+  String get video_scrape_tmdb_key_required => 'TMDB requires an API key';
+  @override
+  String get video_scrape_tmdb_key_save => 'Save';
+  @override
+  String get video_scrape_tmdb_key_empty =>
+      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+  @override
+  String get download_detail_tab_overview => 'Overview';
+  @override
+  String get download_detail_tab_files => 'Files';
+  @override
+  String get download_detail_tab_peers => 'Peers';
+  @override
+  String get download_detail_tab_trackers => 'Trackers';
+  @override
+  String get download_detail_backend_unsupported =>
+      'Not supported by current download backend';
+  @override
+  String get download_detail_task_gone => 'Task not found in backend';
+  @override
+  String get download_detail_section_transfer => 'Transfer';
+  @override
+  String get download_detail_section_network => 'Network';
+  @override
+  String get download_detail_seeds_label => 'Seeds';
+  @override
+  String get download_detail_leechers_label => 'Leechers';
+  @override
+  String get download_detail_connections_label => 'Connections';
+  @override
+  String get download_detail_time_active => 'Active time';
+  @override
+  String get download_detail_time_seeding => 'Seeding time';
+  @override
+  String get download_detail_listen_port => 'Listen port';
+  @override
+  String get download_detail_dht_nodes => 'DHT nodes';
+  @override
+  String get download_detail_port_mapping => 'Port mapping';
+  @override
+  String get download_detail_session_rates => 'Session rates';
+  @override
+  String get download_detail_pieces_label => 'Pieces';
+  @override
+  String get download_detail_priority_skip => 'Don\'t download';
+  @override
+  String get download_detail_priority_normal => 'Normal';
+  @override
+  String get download_detail_priority_high => 'High';
+  @override
+  String get download_detail_tracker_working => 'Working';
+  @override
+  String get download_detail_tracker_updating => 'Updating';
+  @override
+  String get download_detail_tracker_not_contacted => 'Not contacted yet';
+  @override
+  String get download_detail_tracker_not_working => 'Not working';
+  @override
+  String get download_detail_tracker_disabled => 'Disabled';
+  @override
+  String get download_detail_no_peers => 'No connected peers';
+  @override
+  String get download_detail_no_trackers => 'No trackers';
 }
 
 // Path: <root>
@@ -97992,12 +99372,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_scrape_tags => 'Tags';
   @override
-  String get video_scrape_tmdb_key_hint => 'Enter TMDB API Key';
-  @override
-  String get video_scrape_tmdb_key_required => 'TMDB requires an API key';
-  @override
-  String get video_scrape_tmdb_key_save => 'Save';
-  @override
   String get video_scrape_use => 'Use';
   @override
   String get video_scrape_view_subject => 'View on Bangumi';
@@ -99108,16 +100482,13 @@ class _StringsVi extends _StringsEn {
       '${count} subtitles available · ${languages}';
   @override
   String get video_scrape_manual_match_hint =>
-      'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+      'Manual matching replaces this episode cover and saves its source mapping and title metadata. All available sources are searched together and results are ranked by match confidence.';
   @override
   String get video_scrape_collection_match_hint =>
-      'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+      'This only replaces the collection cover. Episode covers and title metadata are not changed. All available sources are searched together and results are ranked by match confidence.';
   @override
   String get video_scrape_apply_to_collection_hint =>
       'This writes the same cover to every episode. Leave it off unless that is intentional.';
-  @override
-  String get video_scrape_tmdb_key_empty =>
-      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
   @override
   String get manga_online_source_disabled =>
       'This internet source is disabled. Enable it in Sources to browse the catalog.';
@@ -99211,10 +100582,10 @@ class _StringsVi extends _StringsEn {
   String get interconnect_peer_list_empty =>
       'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
   @override
-  String get anki_lapis_visual_editor => 'Visual style editor';
+  String get anki_lapis_visual_editor => 'Visual editor';
   @override
   String get anki_lapis_visual_editor_hint =>
-      'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+      'Preview the Lapis card, then change each area\'s style, position and field mapping without writing CSS.';
   @override
   String get anki_lapis_visual_front => 'Front';
   @override
@@ -99547,6 +100918,117 @@ class _StringsVi extends _StringsEn {
   String get video_jimaku_format_all => 'All';
   @override
   String get media_source_local_roots => 'Local scan roots';
+  @override
+  String get video_setting_tmdb_key => 'Custom TMDB API key';
+  @override
+  String get video_setting_tmdb_key_hint =>
+      'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
+  @override
+  String get about_tmdb_attribution =>
+      'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+  @override
+  String get anki_lapis_visual_layout => 'Layout';
+  @override
+  String get anki_lapis_visual_layout_hint =>
+      'Uses Lapis\' own layout switches, so desktop and mobile Anki both follow it.';
+  @override
+  String get anki_lapis_visual_layout_sentence => 'Sentence position';
+  @override
+  String get anki_lapis_visual_layout_sentence_above => 'Above definitions';
+  @override
+  String get anki_lapis_visual_layout_sentence_below => 'Below definitions';
+  @override
+  String get anki_lapis_visual_layout_picture => 'Image position';
+  @override
+  String get anki_lapis_visual_layout_picture_right => 'Right of the word';
+  @override
+  String get anki_lapis_visual_layout_picture_left => 'Left of the word';
+  @override
+  String get anki_lapis_visual_layout_picture_alt => 'Inside the sentence';
+  @override
+  String get anki_lapis_visual_layout_audio => 'Audio buttons';
+  @override
+  String get anki_lapis_visual_layout_audio_header => 'Next to the reading';
+  @override
+  String get anki_lapis_visual_layout_audio_fixed => 'Pinned to the bottom';
+  @override
+  String get anki_lapis_visual_layout_audio_alt => 'Inside the sentence';
+  @override
+  String get anki_lapis_visual_mapping_hint =>
+      'Anki fields that fill the selected area. Changes are saved together with the style.';
+  @override
+  String get anki_lapis_visual_mapping_none =>
+      'This area is drawn by the template itself and has no field of its own.';
+  @override
+  String get anki_lapis_visual_color_custom => 'Custom';
+  @override
+  String get anki_lapis_visual_color_picker_title => 'Pick a color';
+  @override
+  String get video_scrape_tmdb_key_hint => 'Enter TMDB API key';
+  @override
+  String get video_scrape_tmdb_key_required => 'TMDB requires an API key';
+  @override
+  String get video_scrape_tmdb_key_save => 'Save';
+  @override
+  String get video_scrape_tmdb_key_empty =>
+      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+  @override
+  String get download_detail_tab_overview => 'Overview';
+  @override
+  String get download_detail_tab_files => 'Files';
+  @override
+  String get download_detail_tab_peers => 'Peers';
+  @override
+  String get download_detail_tab_trackers => 'Trackers';
+  @override
+  String get download_detail_backend_unsupported =>
+      'Not supported by current download backend';
+  @override
+  String get download_detail_task_gone => 'Task not found in backend';
+  @override
+  String get download_detail_section_transfer => 'Transfer';
+  @override
+  String get download_detail_section_network => 'Network';
+  @override
+  String get download_detail_seeds_label => 'Seeds';
+  @override
+  String get download_detail_leechers_label => 'Leechers';
+  @override
+  String get download_detail_connections_label => 'Connections';
+  @override
+  String get download_detail_time_active => 'Active time';
+  @override
+  String get download_detail_time_seeding => 'Seeding time';
+  @override
+  String get download_detail_listen_port => 'Listen port';
+  @override
+  String get download_detail_dht_nodes => 'DHT nodes';
+  @override
+  String get download_detail_port_mapping => 'Port mapping';
+  @override
+  String get download_detail_session_rates => 'Session rates';
+  @override
+  String get download_detail_pieces_label => 'Pieces';
+  @override
+  String get download_detail_priority_skip => 'Don\'t download';
+  @override
+  String get download_detail_priority_normal => 'Normal';
+  @override
+  String get download_detail_priority_high => 'High';
+  @override
+  String get download_detail_tracker_working => 'Working';
+  @override
+  String get download_detail_tracker_updating => 'Updating';
+  @override
+  String get download_detail_tracker_not_contacted => 'Not contacted yet';
+  @override
+  String get download_detail_tracker_not_working => 'Not working';
+  @override
+  String get download_detail_tracker_disabled => 'Disabled';
+  @override
+  String get download_detail_no_peers => 'No connected peers';
+  @override
+  String get download_detail_no_trackers => 'No trackers';
 }
 
 // Path: <root>
@@ -104448,12 +105930,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_scrape_tags => '标签';
   @override
-  String get video_scrape_tmdb_key_hint => '输入 TMDB API Key';
-  @override
-  String get video_scrape_tmdb_key_required => 'TMDB 需要 API Key';
-  @override
-  String get video_scrape_tmdb_key_save => '保存';
-  @override
   String get video_scrape_use => '使用';
   @override
   String get video_scrape_view_subject => '在 Bangumi 查看';
@@ -105472,16 +106948,13 @@ class _StringsZhCn extends _StringsEn {
       '有 ${count} 个字幕 · ${languages}';
   @override
   String get video_scrape_manual_match_hint =>
-      '手动匹配会替换本集封面，并保存来源映射和条目资料。切换来源后，点“搜索”才会请求该来源。';
+      '手动匹配会替换本集封面，并保存来源映射和条目资料。会同时搜索全部可用来源，结果按匹配度排序。';
   @override
   String get video_scrape_collection_match_hint =>
-      '这里只替换合集封面，不会修改各集封面或条目资料。切换来源后，点“搜索”才会请求该来源。';
+      '这里只替换合集封面，不会修改各集封面或条目资料。会同时搜索全部可用来源，结果按匹配度排序。';
   @override
   String get video_scrape_apply_to_collection_hint =>
       '这会把同一张封面写到每一集；只有确实需要统一单集封面时才开启。';
-  @override
-  String get video_scrape_tmdb_key_empty =>
-      '先保存 TMDB API Key，再点“搜索”。这里不会混入其他来源的结果。';
   @override
   String get manga_online_source_disabled => '此互联网来源已关闭，请在「来源」中开启后浏览目录。';
   @override
@@ -105566,10 +107039,10 @@ class _StringsZhCn extends _StringsEn {
   String get interconnect_peer_list_empty =>
       '尚未添加任何对端。可在下方的局域网设备列表中点击发现的设备自动配对，或手动添加对端地址。';
   @override
-  String get anki_lapis_visual_editor => '可视化样式编辑';
+  String get anki_lapis_visual_editor => '可视化编辑';
   @override
   String get anki_lapis_visual_editor_hint =>
-      '预览 Lapis 卡片，选择字段后直接调整样式，无需手写 CSS。';
+      '预览 Lapis 卡片，选中区域后直接改样式、位置和字段映射，无需手写 CSS。';
   @override
   String get anki_lapis_visual_front => '正面';
   @override
@@ -105883,6 +107356,114 @@ class _StringsZhCn extends _StringsEn {
   String get video_jimaku_format_all => '全部';
   @override
   String get media_source_local_roots => '本地扫描根';
+  @override
+  String get video_setting_tmdb_key => '自定义 TMDB API Key';
+  @override
+  String get video_setting_tmdb_key_hint =>
+      '可留空，默认用内置 Key。仅当刮削失效或你想用自己的配额时才需要填写。';
+  @override
+  String get about_tmdb_attribution =>
+      'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+  @override
+  String get anki_lapis_visual_layout => '布局';
+  @override
+  String get anki_lapis_visual_layout_hint =>
+      '复用 Lapis 自带的布局开关，桌面与手机 Anki 同时生效。';
+  @override
+  String get anki_lapis_visual_layout_sentence => '例句位置';
+  @override
+  String get anki_lapis_visual_layout_sentence_above => '释义框上方';
+  @override
+  String get anki_lapis_visual_layout_sentence_below => '释义框下方';
+  @override
+  String get anki_lapis_visual_layout_picture => '图片位置';
+  @override
+  String get anki_lapis_visual_layout_picture_right => '单词右侧';
+  @override
+  String get anki_lapis_visual_layout_picture_left => '单词左侧';
+  @override
+  String get anki_lapis_visual_layout_picture_alt => '例句内';
+  @override
+  String get anki_lapis_visual_layout_audio => '音频按钮';
+  @override
+  String get anki_lapis_visual_layout_audio_header => '读音旁';
+  @override
+  String get anki_lapis_visual_layout_audio_fixed => '固定在底部';
+  @override
+  String get anki_lapis_visual_layout_audio_alt => '例句内';
+  @override
+  String get anki_lapis_visual_mapping_hint => '填充选中区域的 Anki 字段；改动随样式一起保存。';
+  @override
+  String get anki_lapis_visual_mapping_none => '该区域由模板自己绘制，没有对应字段。';
+  @override
+  String get anki_lapis_visual_color_custom => '自定义';
+  @override
+  String get anki_lapis_visual_color_picker_title => '选择颜色';
+  @override
+  String get video_scrape_tmdb_key_hint => '输入 TMDB API Key';
+  @override
+  String get video_scrape_tmdb_key_required => 'TMDB 需要 API Key';
+  @override
+  String get video_scrape_tmdb_key_save => '保存';
+  @override
+  String get video_scrape_tmdb_key_empty =>
+      '先保存 TMDB API Key，再点“搜索”。这里不会混入其他来源的结果。';
+  @override
+  String get download_detail_tab_overview => '总览';
+  @override
+  String get download_detail_tab_files => '文件';
+  @override
+  String get download_detail_tab_peers => '节点';
+  @override
+  String get download_detail_tab_trackers => 'Tracker';
+  @override
+  String get download_detail_backend_unsupported => '当前下载后端不支持';
+  @override
+  String get download_detail_task_gone => '后端中找不到该任务';
+  @override
+  String get download_detail_section_transfer => '传输';
+  @override
+  String get download_detail_section_network => '网络';
+  @override
+  String get download_detail_seeds_label => '做种';
+  @override
+  String get download_detail_leechers_label => '下载者';
+  @override
+  String get download_detail_connections_label => '连接数';
+  @override
+  String get download_detail_time_active => '活跃时长';
+  @override
+  String get download_detail_time_seeding => '做种时长';
+  @override
+  String get download_detail_listen_port => '监听端口';
+  @override
+  String get download_detail_dht_nodes => 'DHT 节点';
+  @override
+  String get download_detail_port_mapping => '端口映射';
+  @override
+  String get download_detail_session_rates => '会话速率';
+  @override
+  String get download_detail_pieces_label => '分片';
+  @override
+  String get download_detail_priority_skip => '不下载';
+  @override
+  String get download_detail_priority_normal => '普通';
+  @override
+  String get download_detail_priority_high => '高';
+  @override
+  String get download_detail_tracker_working => '工作中';
+  @override
+  String get download_detail_tracker_updating => '更新中';
+  @override
+  String get download_detail_tracker_not_contacted => '尚未联系';
+  @override
+  String get download_detail_tracker_not_working => '不工作';
+  @override
+  String get download_detail_tracker_disabled => '已禁用';
+  @override
+  String get download_detail_no_peers => '暂无已连接节点';
+  @override
+  String get download_detail_no_trackers => '无 Tracker';
 }
 
 // Path: <root>
@@ -110965,12 +112546,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_scrape_tags => 'Tags';
   @override
-  String get video_scrape_tmdb_key_hint => 'Enter TMDB API Key';
-  @override
-  String get video_scrape_tmdb_key_required => 'TMDB requires an API key';
-  @override
-  String get video_scrape_tmdb_key_save => 'Save';
-  @override
   String get video_scrape_use => 'Use';
   @override
   String get video_scrape_view_subject => 'View on Bangumi';
@@ -112055,16 +113630,13 @@ class _StringsZhHk extends _StringsEn {
       '${count} subtitles available · ${languages}';
   @override
   String get video_scrape_manual_match_hint =>
-      'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+      'Manual matching replaces this episode cover and saves its source mapping and title metadata. All available sources are searched together and results are ranked by match confidence.';
   @override
   String get video_scrape_collection_match_hint =>
-      'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+      'This only replaces the collection cover. Episode covers and title metadata are not changed. All available sources are searched together and results are ranked by match confidence.';
   @override
   String get video_scrape_apply_to_collection_hint =>
       'This writes the same cover to every episode. Leave it off unless that is intentional.';
-  @override
-  String get video_scrape_tmdb_key_empty =>
-      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
   @override
   String get manga_online_source_disabled =>
       'This internet source is disabled. Enable it in Sources to browse the catalog.';
@@ -112158,10 +113730,10 @@ class _StringsZhHk extends _StringsEn {
   String get interconnect_peer_list_empty =>
       'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
   @override
-  String get anki_lapis_visual_editor => 'Visual style editor';
+  String get anki_lapis_visual_editor => 'Visual editor';
   @override
   String get anki_lapis_visual_editor_hint =>
-      'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+      'Preview the Lapis card, then change each area\'s style, position and field mapping without writing CSS.';
   @override
   String get anki_lapis_visual_front => 'Front';
   @override
@@ -112494,6 +114066,117 @@ class _StringsZhHk extends _StringsEn {
   String get video_jimaku_format_all => 'All';
   @override
   String get media_source_local_roots => 'Local scan roots';
+  @override
+  String get video_setting_tmdb_key => 'Custom TMDB API key';
+  @override
+  String get video_setting_tmdb_key_hint =>
+      'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
+  @override
+  String get about_tmdb_attribution =>
+      'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+  @override
+  String get anki_lapis_visual_layout => 'Layout';
+  @override
+  String get anki_lapis_visual_layout_hint =>
+      'Uses Lapis\' own layout switches, so desktop and mobile Anki both follow it.';
+  @override
+  String get anki_lapis_visual_layout_sentence => 'Sentence position';
+  @override
+  String get anki_lapis_visual_layout_sentence_above => 'Above definitions';
+  @override
+  String get anki_lapis_visual_layout_sentence_below => 'Below definitions';
+  @override
+  String get anki_lapis_visual_layout_picture => 'Image position';
+  @override
+  String get anki_lapis_visual_layout_picture_right => 'Right of the word';
+  @override
+  String get anki_lapis_visual_layout_picture_left => 'Left of the word';
+  @override
+  String get anki_lapis_visual_layout_picture_alt => 'Inside the sentence';
+  @override
+  String get anki_lapis_visual_layout_audio => 'Audio buttons';
+  @override
+  String get anki_lapis_visual_layout_audio_header => 'Next to the reading';
+  @override
+  String get anki_lapis_visual_layout_audio_fixed => 'Pinned to the bottom';
+  @override
+  String get anki_lapis_visual_layout_audio_alt => 'Inside the sentence';
+  @override
+  String get anki_lapis_visual_mapping_hint =>
+      'Anki fields that fill the selected area. Changes are saved together with the style.';
+  @override
+  String get anki_lapis_visual_mapping_none =>
+      'This area is drawn by the template itself and has no field of its own.';
+  @override
+  String get anki_lapis_visual_color_custom => 'Custom';
+  @override
+  String get anki_lapis_visual_color_picker_title => 'Pick a color';
+  @override
+  String get video_scrape_tmdb_key_hint => 'Enter TMDB API key';
+  @override
+  String get video_scrape_tmdb_key_required => 'TMDB requires an API key';
+  @override
+  String get video_scrape_tmdb_key_save => 'Save';
+  @override
+  String get video_scrape_tmdb_key_empty =>
+      'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+  @override
+  String get download_detail_tab_overview => 'Overview';
+  @override
+  String get download_detail_tab_files => 'Files';
+  @override
+  String get download_detail_tab_peers => 'Peers';
+  @override
+  String get download_detail_tab_trackers => 'Trackers';
+  @override
+  String get download_detail_backend_unsupported =>
+      'Not supported by current download backend';
+  @override
+  String get download_detail_task_gone => 'Task not found in backend';
+  @override
+  String get download_detail_section_transfer => 'Transfer';
+  @override
+  String get download_detail_section_network => 'Network';
+  @override
+  String get download_detail_seeds_label => 'Seeds';
+  @override
+  String get download_detail_leechers_label => 'Leechers';
+  @override
+  String get download_detail_connections_label => 'Connections';
+  @override
+  String get download_detail_time_active => 'Active time';
+  @override
+  String get download_detail_time_seeding => 'Seeding time';
+  @override
+  String get download_detail_listen_port => 'Listen port';
+  @override
+  String get download_detail_dht_nodes => 'DHT nodes';
+  @override
+  String get download_detail_port_mapping => 'Port mapping';
+  @override
+  String get download_detail_session_rates => 'Session rates';
+  @override
+  String get download_detail_pieces_label => 'Pieces';
+  @override
+  String get download_detail_priority_skip => 'Don\'t download';
+  @override
+  String get download_detail_priority_normal => 'Normal';
+  @override
+  String get download_detail_priority_high => 'High';
+  @override
+  String get download_detail_tracker_working => 'Working';
+  @override
+  String get download_detail_tracker_updating => 'Updating';
+  @override
+  String get download_detail_tracker_not_contacted => 'Not contacted yet';
+  @override
+  String get download_detail_tracker_not_working => 'Not working';
+  @override
+  String get download_detail_tracker_disabled => 'Disabled';
+  @override
+  String get download_detail_no_peers => 'No connected peers';
+  @override
+  String get download_detail_no_trackers => 'No trackers';
 }
 
 /// Flat map(s) containing all translations.
@@ -117222,12 +118905,6 @@ extension on _StringsEn {
         return 'Synopsis';
       case 'video_scrape_tags':
         return 'Tags';
-      case 'video_scrape_tmdb_key_hint':
-        return 'Enter TMDB API key';
-      case 'video_scrape_tmdb_key_required':
-        return 'TMDB requires an API key';
-      case 'video_scrape_tmdb_key_save':
-        return 'Save';
       case 'video_scrape_use':
         return 'Use';
       case 'video_scrape_view_subject':
@@ -118186,13 +119863,11 @@ extension on _StringsEn {
         return ({required Object count, required Object languages}) =>
             '${count} subtitles available · ${languages}';
       case 'video_scrape_manual_match_hint':
-        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. All available sources are searched together and results are ranked by match confidence.';
       case 'video_scrape_collection_match_hint':
-        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. All available sources are searched together and results are ranked by match confidence.';
       case 'video_scrape_apply_to_collection_hint':
         return 'This writes the same cover to every episode. Leave it off unless that is intentional.';
-      case 'video_scrape_tmdb_key_empty':
-        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
       case 'manga_online_source_disabled':
         return 'This internet source is disabled. Enable it in Sources to browse the catalog.';
       case 'selection_web_search':
@@ -118271,9 +119946,9 @@ extension on _StringsEn {
       case 'interconnect_peer_list_empty':
         return 'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
       case 'anki_lapis_visual_editor':
-        return 'Visual style editor';
+        return 'Visual editor';
       case 'anki_lapis_visual_editor_hint':
-        return 'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+        return 'Preview the Lapis card, then change each area\'s style, position and field mapping without writing CSS.';
       case 'anki_lapis_visual_front':
         return 'Front';
       case 'anki_lapis_visual_back':
@@ -118572,6 +120247,110 @@ extension on _StringsEn {
         return 'All';
       case 'media_source_local_roots':
         return 'Local scan roots';
+      case 'video_setting_tmdb_key':
+        return 'Custom TMDB API key';
+      case 'video_setting_tmdb_key_hint':
+        return 'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
+      case 'about_tmdb_attribution':
+        return 'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+      case 'anki_lapis_visual_layout':
+        return 'Layout';
+      case 'anki_lapis_visual_layout_hint':
+        return 'Uses Lapis\' own layout switches, so desktop and mobile Anki both follow it.';
+      case 'anki_lapis_visual_layout_sentence':
+        return 'Sentence position';
+      case 'anki_lapis_visual_layout_sentence_above':
+        return 'Above definitions';
+      case 'anki_lapis_visual_layout_sentence_below':
+        return 'Below definitions';
+      case 'anki_lapis_visual_layout_picture':
+        return 'Image position';
+      case 'anki_lapis_visual_layout_picture_right':
+        return 'Right of the word';
+      case 'anki_lapis_visual_layout_picture_left':
+        return 'Left of the word';
+      case 'anki_lapis_visual_layout_picture_alt':
+        return 'Inside the sentence';
+      case 'anki_lapis_visual_layout_audio':
+        return 'Audio buttons';
+      case 'anki_lapis_visual_layout_audio_header':
+        return 'Next to the reading';
+      case 'anki_lapis_visual_layout_audio_fixed':
+        return 'Pinned to the bottom';
+      case 'anki_lapis_visual_layout_audio_alt':
+        return 'Inside the sentence';
+      case 'anki_lapis_visual_mapping_hint':
+        return 'Anki fields that fill the selected area. Changes are saved together with the style.';
+      case 'anki_lapis_visual_mapping_none':
+        return 'This area is drawn by the template itself and has no field of its own.';
+      case 'anki_lapis_visual_color_custom':
+        return 'Custom';
+      case 'anki_lapis_visual_color_picker_title':
+        return 'Pick a color';
+      case 'video_scrape_tmdb_key_hint':
+        return 'Enter TMDB API key';
+      case 'video_scrape_tmdb_key_required':
+        return 'TMDB requires an API key';
+      case 'video_scrape_tmdb_key_save':
+        return 'Save';
+      case 'video_scrape_tmdb_key_empty':
+        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+      case 'download_detail_tab_overview':
+        return 'Overview';
+      case 'download_detail_tab_files':
+        return 'Files';
+      case 'download_detail_tab_peers':
+        return 'Peers';
+      case 'download_detail_tab_trackers':
+        return 'Trackers';
+      case 'download_detail_backend_unsupported':
+        return 'Not supported by current download backend';
+      case 'download_detail_task_gone':
+        return 'Task not found in backend';
+      case 'download_detail_section_transfer':
+        return 'Transfer';
+      case 'download_detail_section_network':
+        return 'Network';
+      case 'download_detail_seeds_label':
+        return 'Seeds';
+      case 'download_detail_leechers_label':
+        return 'Leechers';
+      case 'download_detail_connections_label':
+        return 'Connections';
+      case 'download_detail_time_active':
+        return 'Active time';
+      case 'download_detail_time_seeding':
+        return 'Seeding time';
+      case 'download_detail_listen_port':
+        return 'Listen port';
+      case 'download_detail_dht_nodes':
+        return 'DHT nodes';
+      case 'download_detail_port_mapping':
+        return 'Port mapping';
+      case 'download_detail_session_rates':
+        return 'Session rates';
+      case 'download_detail_pieces_label':
+        return 'Pieces';
+      case 'download_detail_priority_skip':
+        return 'Don\'t download';
+      case 'download_detail_priority_normal':
+        return 'Normal';
+      case 'download_detail_priority_high':
+        return 'High';
+      case 'download_detail_tracker_working':
+        return 'Working';
+      case 'download_detail_tracker_updating':
+        return 'Updating';
+      case 'download_detail_tracker_not_contacted':
+        return 'Not contacted yet';
+      case 'download_detail_tracker_not_working':
+        return 'Not working';
+      case 'download_detail_tracker_disabled':
+        return 'Disabled';
+      case 'download_detail_no_peers':
+        return 'No connected peers';
+      case 'download_detail_no_trackers':
+        return 'No trackers';
       default:
         return null;
     }
@@ -123297,12 +125076,6 @@ extension on _StringsAr {
         return 'Synopsis';
       case 'video_scrape_tags':
         return 'Tags';
-      case 'video_scrape_tmdb_key_hint':
-        return 'Enter TMDB API Key';
-      case 'video_scrape_tmdb_key_required':
-        return 'TMDB requires an API key';
-      case 'video_scrape_tmdb_key_save':
-        return 'Save';
       case 'video_scrape_use':
         return 'Use';
       case 'video_scrape_view_subject':
@@ -124262,13 +126035,11 @@ extension on _StringsAr {
         return ({required Object count, required Object languages}) =>
             '${count} subtitles available · ${languages}';
       case 'video_scrape_manual_match_hint':
-        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. All available sources are searched together and results are ranked by match confidence.';
       case 'video_scrape_collection_match_hint':
-        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. All available sources are searched together and results are ranked by match confidence.';
       case 'video_scrape_apply_to_collection_hint':
         return 'This writes the same cover to every episode. Leave it off unless that is intentional.';
-      case 'video_scrape_tmdb_key_empty':
-        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
       case 'manga_online_source_disabled':
         return 'This internet source is disabled. Enable it in Sources to browse the catalog.';
       case 'selection_web_search':
@@ -124347,9 +126118,9 @@ extension on _StringsAr {
       case 'interconnect_peer_list_empty':
         return 'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
       case 'anki_lapis_visual_editor':
-        return 'Visual style editor';
+        return 'Visual editor';
       case 'anki_lapis_visual_editor_hint':
-        return 'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+        return 'Preview the Lapis card, then change each area\'s style, position and field mapping without writing CSS.';
       case 'anki_lapis_visual_front':
         return 'Front';
       case 'anki_lapis_visual_back':
@@ -124648,6 +126419,110 @@ extension on _StringsAr {
         return 'All';
       case 'media_source_local_roots':
         return 'Local scan roots';
+      case 'video_setting_tmdb_key':
+        return 'Custom TMDB API key';
+      case 'video_setting_tmdb_key_hint':
+        return 'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
+      case 'about_tmdb_attribution':
+        return 'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+      case 'anki_lapis_visual_layout':
+        return 'Layout';
+      case 'anki_lapis_visual_layout_hint':
+        return 'Uses Lapis\' own layout switches, so desktop and mobile Anki both follow it.';
+      case 'anki_lapis_visual_layout_sentence':
+        return 'Sentence position';
+      case 'anki_lapis_visual_layout_sentence_above':
+        return 'Above definitions';
+      case 'anki_lapis_visual_layout_sentence_below':
+        return 'Below definitions';
+      case 'anki_lapis_visual_layout_picture':
+        return 'Image position';
+      case 'anki_lapis_visual_layout_picture_right':
+        return 'Right of the word';
+      case 'anki_lapis_visual_layout_picture_left':
+        return 'Left of the word';
+      case 'anki_lapis_visual_layout_picture_alt':
+        return 'Inside the sentence';
+      case 'anki_lapis_visual_layout_audio':
+        return 'Audio buttons';
+      case 'anki_lapis_visual_layout_audio_header':
+        return 'Next to the reading';
+      case 'anki_lapis_visual_layout_audio_fixed':
+        return 'Pinned to the bottom';
+      case 'anki_lapis_visual_layout_audio_alt':
+        return 'Inside the sentence';
+      case 'anki_lapis_visual_mapping_hint':
+        return 'Anki fields that fill the selected area. Changes are saved together with the style.';
+      case 'anki_lapis_visual_mapping_none':
+        return 'This area is drawn by the template itself and has no field of its own.';
+      case 'anki_lapis_visual_color_custom':
+        return 'Custom';
+      case 'anki_lapis_visual_color_picker_title':
+        return 'Pick a color';
+      case 'video_scrape_tmdb_key_hint':
+        return 'Enter TMDB API key';
+      case 'video_scrape_tmdb_key_required':
+        return 'TMDB requires an API key';
+      case 'video_scrape_tmdb_key_save':
+        return 'Save';
+      case 'video_scrape_tmdb_key_empty':
+        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+      case 'download_detail_tab_overview':
+        return 'Overview';
+      case 'download_detail_tab_files':
+        return 'Files';
+      case 'download_detail_tab_peers':
+        return 'Peers';
+      case 'download_detail_tab_trackers':
+        return 'Trackers';
+      case 'download_detail_backend_unsupported':
+        return 'Not supported by current download backend';
+      case 'download_detail_task_gone':
+        return 'Task not found in backend';
+      case 'download_detail_section_transfer':
+        return 'Transfer';
+      case 'download_detail_section_network':
+        return 'Network';
+      case 'download_detail_seeds_label':
+        return 'Seeds';
+      case 'download_detail_leechers_label':
+        return 'Leechers';
+      case 'download_detail_connections_label':
+        return 'Connections';
+      case 'download_detail_time_active':
+        return 'Active time';
+      case 'download_detail_time_seeding':
+        return 'Seeding time';
+      case 'download_detail_listen_port':
+        return 'Listen port';
+      case 'download_detail_dht_nodes':
+        return 'DHT nodes';
+      case 'download_detail_port_mapping':
+        return 'Port mapping';
+      case 'download_detail_session_rates':
+        return 'Session rates';
+      case 'download_detail_pieces_label':
+        return 'Pieces';
+      case 'download_detail_priority_skip':
+        return 'Don\'t download';
+      case 'download_detail_priority_normal':
+        return 'Normal';
+      case 'download_detail_priority_high':
+        return 'High';
+      case 'download_detail_tracker_working':
+        return 'Working';
+      case 'download_detail_tracker_updating':
+        return 'Updating';
+      case 'download_detail_tracker_not_contacted':
+        return 'Not contacted yet';
+      case 'download_detail_tracker_not_working':
+        return 'Not working';
+      case 'download_detail_tracker_disabled':
+        return 'Disabled';
+      case 'download_detail_no_peers':
+        return 'No connected peers';
+      case 'download_detail_no_trackers':
+        return 'No trackers';
       default:
         return null;
     }
@@ -129394,12 +131269,6 @@ extension on _StringsDe {
         return 'Synopsis';
       case 'video_scrape_tags':
         return 'Tags';
-      case 'video_scrape_tmdb_key_hint':
-        return 'Enter TMDB API Key';
-      case 'video_scrape_tmdb_key_required':
-        return 'TMDB requires an API key';
-      case 'video_scrape_tmdb_key_save':
-        return 'Save';
       case 'video_scrape_use':
         return 'Use';
       case 'video_scrape_view_subject':
@@ -130360,13 +132229,11 @@ extension on _StringsDe {
         return ({required Object count, required Object languages}) =>
             '${count} subtitles available · ${languages}';
       case 'video_scrape_manual_match_hint':
-        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. All available sources are searched together and results are ranked by match confidence.';
       case 'video_scrape_collection_match_hint':
-        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. All available sources are searched together and results are ranked by match confidence.';
       case 'video_scrape_apply_to_collection_hint':
         return 'This writes the same cover to every episode. Leave it off unless that is intentional.';
-      case 'video_scrape_tmdb_key_empty':
-        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
       case 'manga_online_source_disabled':
         return 'This internet source is disabled. Enable it in Sources to browse the catalog.';
       case 'selection_web_search':
@@ -130445,9 +132312,9 @@ extension on _StringsDe {
       case 'interconnect_peer_list_empty':
         return 'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
       case 'anki_lapis_visual_editor':
-        return 'Visual style editor';
+        return 'Visual editor';
       case 'anki_lapis_visual_editor_hint':
-        return 'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+        return 'Preview the Lapis card, then change each area\'s style, position and field mapping without writing CSS.';
       case 'anki_lapis_visual_front':
         return 'Front';
       case 'anki_lapis_visual_back':
@@ -130746,6 +132613,110 @@ extension on _StringsDe {
         return 'All';
       case 'media_source_local_roots':
         return 'Local scan roots';
+      case 'video_setting_tmdb_key':
+        return 'Custom TMDB API key';
+      case 'video_setting_tmdb_key_hint':
+        return 'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
+      case 'about_tmdb_attribution':
+        return 'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+      case 'anki_lapis_visual_layout':
+        return 'Layout';
+      case 'anki_lapis_visual_layout_hint':
+        return 'Uses Lapis\' own layout switches, so desktop and mobile Anki both follow it.';
+      case 'anki_lapis_visual_layout_sentence':
+        return 'Sentence position';
+      case 'anki_lapis_visual_layout_sentence_above':
+        return 'Above definitions';
+      case 'anki_lapis_visual_layout_sentence_below':
+        return 'Below definitions';
+      case 'anki_lapis_visual_layout_picture':
+        return 'Image position';
+      case 'anki_lapis_visual_layout_picture_right':
+        return 'Right of the word';
+      case 'anki_lapis_visual_layout_picture_left':
+        return 'Left of the word';
+      case 'anki_lapis_visual_layout_picture_alt':
+        return 'Inside the sentence';
+      case 'anki_lapis_visual_layout_audio':
+        return 'Audio buttons';
+      case 'anki_lapis_visual_layout_audio_header':
+        return 'Next to the reading';
+      case 'anki_lapis_visual_layout_audio_fixed':
+        return 'Pinned to the bottom';
+      case 'anki_lapis_visual_layout_audio_alt':
+        return 'Inside the sentence';
+      case 'anki_lapis_visual_mapping_hint':
+        return 'Anki fields that fill the selected area. Changes are saved together with the style.';
+      case 'anki_lapis_visual_mapping_none':
+        return 'This area is drawn by the template itself and has no field of its own.';
+      case 'anki_lapis_visual_color_custom':
+        return 'Custom';
+      case 'anki_lapis_visual_color_picker_title':
+        return 'Pick a color';
+      case 'video_scrape_tmdb_key_hint':
+        return 'Enter TMDB API key';
+      case 'video_scrape_tmdb_key_required':
+        return 'TMDB requires an API key';
+      case 'video_scrape_tmdb_key_save':
+        return 'Save';
+      case 'video_scrape_tmdb_key_empty':
+        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+      case 'download_detail_tab_overview':
+        return 'Overview';
+      case 'download_detail_tab_files':
+        return 'Files';
+      case 'download_detail_tab_peers':
+        return 'Peers';
+      case 'download_detail_tab_trackers':
+        return 'Trackers';
+      case 'download_detail_backend_unsupported':
+        return 'Not supported by current download backend';
+      case 'download_detail_task_gone':
+        return 'Task not found in backend';
+      case 'download_detail_section_transfer':
+        return 'Transfer';
+      case 'download_detail_section_network':
+        return 'Network';
+      case 'download_detail_seeds_label':
+        return 'Seeds';
+      case 'download_detail_leechers_label':
+        return 'Leechers';
+      case 'download_detail_connections_label':
+        return 'Connections';
+      case 'download_detail_time_active':
+        return 'Active time';
+      case 'download_detail_time_seeding':
+        return 'Seeding time';
+      case 'download_detail_listen_port':
+        return 'Listen port';
+      case 'download_detail_dht_nodes':
+        return 'DHT nodes';
+      case 'download_detail_port_mapping':
+        return 'Port mapping';
+      case 'download_detail_session_rates':
+        return 'Session rates';
+      case 'download_detail_pieces_label':
+        return 'Pieces';
+      case 'download_detail_priority_skip':
+        return 'Don\'t download';
+      case 'download_detail_priority_normal':
+        return 'Normal';
+      case 'download_detail_priority_high':
+        return 'High';
+      case 'download_detail_tracker_working':
+        return 'Working';
+      case 'download_detail_tracker_updating':
+        return 'Updating';
+      case 'download_detail_tracker_not_contacted':
+        return 'Not contacted yet';
+      case 'download_detail_tracker_not_working':
+        return 'Not working';
+      case 'download_detail_tracker_disabled':
+        return 'Disabled';
+      case 'download_detail_no_peers':
+        return 'No connected peers';
+      case 'download_detail_no_trackers':
+        return 'No trackers';
       default:
         return null;
     }
@@ -135492,12 +137463,6 @@ extension on _StringsEs {
         return 'Synopsis';
       case 'video_scrape_tags':
         return 'Tags';
-      case 'video_scrape_tmdb_key_hint':
-        return 'Enter TMDB API Key';
-      case 'video_scrape_tmdb_key_required':
-        return 'TMDB requires an API key';
-      case 'video_scrape_tmdb_key_save':
-        return 'Save';
       case 'video_scrape_use':
         return 'Use';
       case 'video_scrape_view_subject':
@@ -136457,13 +138422,11 @@ extension on _StringsEs {
         return ({required Object count, required Object languages}) =>
             '${count} subtitles available · ${languages}';
       case 'video_scrape_manual_match_hint':
-        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. All available sources are searched together and results are ranked by match confidence.';
       case 'video_scrape_collection_match_hint':
-        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. All available sources are searched together and results are ranked by match confidence.';
       case 'video_scrape_apply_to_collection_hint':
         return 'This writes the same cover to every episode. Leave it off unless that is intentional.';
-      case 'video_scrape_tmdb_key_empty':
-        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
       case 'manga_online_source_disabled':
         return 'This internet source is disabled. Enable it in Sources to browse the catalog.';
       case 'selection_web_search':
@@ -136542,9 +138505,9 @@ extension on _StringsEs {
       case 'interconnect_peer_list_empty':
         return 'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
       case 'anki_lapis_visual_editor':
-        return 'Visual style editor';
+        return 'Visual editor';
       case 'anki_lapis_visual_editor_hint':
-        return 'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+        return 'Preview the Lapis card, then change each area\'s style, position and field mapping without writing CSS.';
       case 'anki_lapis_visual_front':
         return 'Front';
       case 'anki_lapis_visual_back':
@@ -136843,6 +138806,110 @@ extension on _StringsEs {
         return 'All';
       case 'media_source_local_roots':
         return 'Local scan roots';
+      case 'video_setting_tmdb_key':
+        return 'Custom TMDB API key';
+      case 'video_setting_tmdb_key_hint':
+        return 'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
+      case 'about_tmdb_attribution':
+        return 'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+      case 'anki_lapis_visual_layout':
+        return 'Layout';
+      case 'anki_lapis_visual_layout_hint':
+        return 'Uses Lapis\' own layout switches, so desktop and mobile Anki both follow it.';
+      case 'anki_lapis_visual_layout_sentence':
+        return 'Sentence position';
+      case 'anki_lapis_visual_layout_sentence_above':
+        return 'Above definitions';
+      case 'anki_lapis_visual_layout_sentence_below':
+        return 'Below definitions';
+      case 'anki_lapis_visual_layout_picture':
+        return 'Image position';
+      case 'anki_lapis_visual_layout_picture_right':
+        return 'Right of the word';
+      case 'anki_lapis_visual_layout_picture_left':
+        return 'Left of the word';
+      case 'anki_lapis_visual_layout_picture_alt':
+        return 'Inside the sentence';
+      case 'anki_lapis_visual_layout_audio':
+        return 'Audio buttons';
+      case 'anki_lapis_visual_layout_audio_header':
+        return 'Next to the reading';
+      case 'anki_lapis_visual_layout_audio_fixed':
+        return 'Pinned to the bottom';
+      case 'anki_lapis_visual_layout_audio_alt':
+        return 'Inside the sentence';
+      case 'anki_lapis_visual_mapping_hint':
+        return 'Anki fields that fill the selected area. Changes are saved together with the style.';
+      case 'anki_lapis_visual_mapping_none':
+        return 'This area is drawn by the template itself and has no field of its own.';
+      case 'anki_lapis_visual_color_custom':
+        return 'Custom';
+      case 'anki_lapis_visual_color_picker_title':
+        return 'Pick a color';
+      case 'video_scrape_tmdb_key_hint':
+        return 'Enter TMDB API key';
+      case 'video_scrape_tmdb_key_required':
+        return 'TMDB requires an API key';
+      case 'video_scrape_tmdb_key_save':
+        return 'Save';
+      case 'video_scrape_tmdb_key_empty':
+        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+      case 'download_detail_tab_overview':
+        return 'Overview';
+      case 'download_detail_tab_files':
+        return 'Files';
+      case 'download_detail_tab_peers':
+        return 'Peers';
+      case 'download_detail_tab_trackers':
+        return 'Trackers';
+      case 'download_detail_backend_unsupported':
+        return 'Not supported by current download backend';
+      case 'download_detail_task_gone':
+        return 'Task not found in backend';
+      case 'download_detail_section_transfer':
+        return 'Transfer';
+      case 'download_detail_section_network':
+        return 'Network';
+      case 'download_detail_seeds_label':
+        return 'Seeds';
+      case 'download_detail_leechers_label':
+        return 'Leechers';
+      case 'download_detail_connections_label':
+        return 'Connections';
+      case 'download_detail_time_active':
+        return 'Active time';
+      case 'download_detail_time_seeding':
+        return 'Seeding time';
+      case 'download_detail_listen_port':
+        return 'Listen port';
+      case 'download_detail_dht_nodes':
+        return 'DHT nodes';
+      case 'download_detail_port_mapping':
+        return 'Port mapping';
+      case 'download_detail_session_rates':
+        return 'Session rates';
+      case 'download_detail_pieces_label':
+        return 'Pieces';
+      case 'download_detail_priority_skip':
+        return 'Don\'t download';
+      case 'download_detail_priority_normal':
+        return 'Normal';
+      case 'download_detail_priority_high':
+        return 'High';
+      case 'download_detail_tracker_working':
+        return 'Working';
+      case 'download_detail_tracker_updating':
+        return 'Updating';
+      case 'download_detail_tracker_not_contacted':
+        return 'Not contacted yet';
+      case 'download_detail_tracker_not_working':
+        return 'Not working';
+      case 'download_detail_tracker_disabled':
+        return 'Disabled';
+      case 'download_detail_no_peers':
+        return 'No connected peers';
+      case 'download_detail_no_trackers':
+        return 'No trackers';
       default:
         return null;
     }
@@ -141594,12 +143661,6 @@ extension on _StringsFr {
         return 'Synopsis';
       case 'video_scrape_tags':
         return 'Tags';
-      case 'video_scrape_tmdb_key_hint':
-        return 'Enter TMDB API Key';
-      case 'video_scrape_tmdb_key_required':
-        return 'TMDB requires an API key';
-      case 'video_scrape_tmdb_key_save':
-        return 'Save';
       case 'video_scrape_use':
         return 'Use';
       case 'video_scrape_view_subject':
@@ -142560,13 +144621,11 @@ extension on _StringsFr {
         return ({required Object count, required Object languages}) =>
             '${count} subtitles available · ${languages}';
       case 'video_scrape_manual_match_hint':
-        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. All available sources are searched together and results are ranked by match confidence.';
       case 'video_scrape_collection_match_hint':
-        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. All available sources are searched together and results are ranked by match confidence.';
       case 'video_scrape_apply_to_collection_hint':
         return 'This writes the same cover to every episode. Leave it off unless that is intentional.';
-      case 'video_scrape_tmdb_key_empty':
-        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
       case 'manga_online_source_disabled':
         return 'This internet source is disabled. Enable it in Sources to browse the catalog.';
       case 'selection_web_search':
@@ -142645,9 +144704,9 @@ extension on _StringsFr {
       case 'interconnect_peer_list_empty':
         return 'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
       case 'anki_lapis_visual_editor':
-        return 'Visual style editor';
+        return 'Visual editor';
       case 'anki_lapis_visual_editor_hint':
-        return 'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+        return 'Preview the Lapis card, then change each area\'s style, position and field mapping without writing CSS.';
       case 'anki_lapis_visual_front':
         return 'Front';
       case 'anki_lapis_visual_back':
@@ -142946,6 +145005,110 @@ extension on _StringsFr {
         return 'All';
       case 'media_source_local_roots':
         return 'Local scan roots';
+      case 'video_setting_tmdb_key':
+        return 'Custom TMDB API key';
+      case 'video_setting_tmdb_key_hint':
+        return 'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
+      case 'about_tmdb_attribution':
+        return 'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+      case 'anki_lapis_visual_layout':
+        return 'Layout';
+      case 'anki_lapis_visual_layout_hint':
+        return 'Uses Lapis\' own layout switches, so desktop and mobile Anki both follow it.';
+      case 'anki_lapis_visual_layout_sentence':
+        return 'Sentence position';
+      case 'anki_lapis_visual_layout_sentence_above':
+        return 'Above definitions';
+      case 'anki_lapis_visual_layout_sentence_below':
+        return 'Below definitions';
+      case 'anki_lapis_visual_layout_picture':
+        return 'Image position';
+      case 'anki_lapis_visual_layout_picture_right':
+        return 'Right of the word';
+      case 'anki_lapis_visual_layout_picture_left':
+        return 'Left of the word';
+      case 'anki_lapis_visual_layout_picture_alt':
+        return 'Inside the sentence';
+      case 'anki_lapis_visual_layout_audio':
+        return 'Audio buttons';
+      case 'anki_lapis_visual_layout_audio_header':
+        return 'Next to the reading';
+      case 'anki_lapis_visual_layout_audio_fixed':
+        return 'Pinned to the bottom';
+      case 'anki_lapis_visual_layout_audio_alt':
+        return 'Inside the sentence';
+      case 'anki_lapis_visual_mapping_hint':
+        return 'Anki fields that fill the selected area. Changes are saved together with the style.';
+      case 'anki_lapis_visual_mapping_none':
+        return 'This area is drawn by the template itself and has no field of its own.';
+      case 'anki_lapis_visual_color_custom':
+        return 'Custom';
+      case 'anki_lapis_visual_color_picker_title':
+        return 'Pick a color';
+      case 'video_scrape_tmdb_key_hint':
+        return 'Enter TMDB API key';
+      case 'video_scrape_tmdb_key_required':
+        return 'TMDB requires an API key';
+      case 'video_scrape_tmdb_key_save':
+        return 'Save';
+      case 'video_scrape_tmdb_key_empty':
+        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+      case 'download_detail_tab_overview':
+        return 'Overview';
+      case 'download_detail_tab_files':
+        return 'Files';
+      case 'download_detail_tab_peers':
+        return 'Peers';
+      case 'download_detail_tab_trackers':
+        return 'Trackers';
+      case 'download_detail_backend_unsupported':
+        return 'Not supported by current download backend';
+      case 'download_detail_task_gone':
+        return 'Task not found in backend';
+      case 'download_detail_section_transfer':
+        return 'Transfer';
+      case 'download_detail_section_network':
+        return 'Network';
+      case 'download_detail_seeds_label':
+        return 'Seeds';
+      case 'download_detail_leechers_label':
+        return 'Leechers';
+      case 'download_detail_connections_label':
+        return 'Connections';
+      case 'download_detail_time_active':
+        return 'Active time';
+      case 'download_detail_time_seeding':
+        return 'Seeding time';
+      case 'download_detail_listen_port':
+        return 'Listen port';
+      case 'download_detail_dht_nodes':
+        return 'DHT nodes';
+      case 'download_detail_port_mapping':
+        return 'Port mapping';
+      case 'download_detail_session_rates':
+        return 'Session rates';
+      case 'download_detail_pieces_label':
+        return 'Pieces';
+      case 'download_detail_priority_skip':
+        return 'Don\'t download';
+      case 'download_detail_priority_normal':
+        return 'Normal';
+      case 'download_detail_priority_high':
+        return 'High';
+      case 'download_detail_tracker_working':
+        return 'Working';
+      case 'download_detail_tracker_updating':
+        return 'Updating';
+      case 'download_detail_tracker_not_contacted':
+        return 'Not contacted yet';
+      case 'download_detail_tracker_not_working':
+        return 'Not working';
+      case 'download_detail_tracker_disabled':
+        return 'Disabled';
+      case 'download_detail_no_peers':
+        return 'No connected peers';
+      case 'download_detail_no_trackers':
+        return 'No trackers';
       default:
         return null;
     }
@@ -147680,12 +149843,6 @@ extension on _StringsId {
         return 'Synopsis';
       case 'video_scrape_tags':
         return 'Tags';
-      case 'video_scrape_tmdb_key_hint':
-        return 'Enter TMDB API Key';
-      case 'video_scrape_tmdb_key_required':
-        return 'TMDB requires an API key';
-      case 'video_scrape_tmdb_key_save':
-        return 'Save';
       case 'video_scrape_use':
         return 'Use';
       case 'video_scrape_view_subject':
@@ -148645,13 +150802,11 @@ extension on _StringsId {
         return ({required Object count, required Object languages}) =>
             '${count} subtitles available · ${languages}';
       case 'video_scrape_manual_match_hint':
-        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. All available sources are searched together and results are ranked by match confidence.';
       case 'video_scrape_collection_match_hint':
-        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. All available sources are searched together and results are ranked by match confidence.';
       case 'video_scrape_apply_to_collection_hint':
         return 'This writes the same cover to every episode. Leave it off unless that is intentional.';
-      case 'video_scrape_tmdb_key_empty':
-        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
       case 'manga_online_source_disabled':
         return 'This internet source is disabled. Enable it in Sources to browse the catalog.';
       case 'selection_web_search':
@@ -148730,9 +150885,9 @@ extension on _StringsId {
       case 'interconnect_peer_list_empty':
         return 'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
       case 'anki_lapis_visual_editor':
-        return 'Visual style editor';
+        return 'Visual editor';
       case 'anki_lapis_visual_editor_hint':
-        return 'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+        return 'Preview the Lapis card, then change each area\'s style, position and field mapping without writing CSS.';
       case 'anki_lapis_visual_front':
         return 'Front';
       case 'anki_lapis_visual_back':
@@ -149031,6 +151186,110 @@ extension on _StringsId {
         return 'All';
       case 'media_source_local_roots':
         return 'Local scan roots';
+      case 'video_setting_tmdb_key':
+        return 'Custom TMDB API key';
+      case 'video_setting_tmdb_key_hint':
+        return 'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
+      case 'about_tmdb_attribution':
+        return 'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+      case 'anki_lapis_visual_layout':
+        return 'Layout';
+      case 'anki_lapis_visual_layout_hint':
+        return 'Uses Lapis\' own layout switches, so desktop and mobile Anki both follow it.';
+      case 'anki_lapis_visual_layout_sentence':
+        return 'Sentence position';
+      case 'anki_lapis_visual_layout_sentence_above':
+        return 'Above definitions';
+      case 'anki_lapis_visual_layout_sentence_below':
+        return 'Below definitions';
+      case 'anki_lapis_visual_layout_picture':
+        return 'Image position';
+      case 'anki_lapis_visual_layout_picture_right':
+        return 'Right of the word';
+      case 'anki_lapis_visual_layout_picture_left':
+        return 'Left of the word';
+      case 'anki_lapis_visual_layout_picture_alt':
+        return 'Inside the sentence';
+      case 'anki_lapis_visual_layout_audio':
+        return 'Audio buttons';
+      case 'anki_lapis_visual_layout_audio_header':
+        return 'Next to the reading';
+      case 'anki_lapis_visual_layout_audio_fixed':
+        return 'Pinned to the bottom';
+      case 'anki_lapis_visual_layout_audio_alt':
+        return 'Inside the sentence';
+      case 'anki_lapis_visual_mapping_hint':
+        return 'Anki fields that fill the selected area. Changes are saved together with the style.';
+      case 'anki_lapis_visual_mapping_none':
+        return 'This area is drawn by the template itself and has no field of its own.';
+      case 'anki_lapis_visual_color_custom':
+        return 'Custom';
+      case 'anki_lapis_visual_color_picker_title':
+        return 'Pick a color';
+      case 'video_scrape_tmdb_key_hint':
+        return 'Enter TMDB API key';
+      case 'video_scrape_tmdb_key_required':
+        return 'TMDB requires an API key';
+      case 'video_scrape_tmdb_key_save':
+        return 'Save';
+      case 'video_scrape_tmdb_key_empty':
+        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+      case 'download_detail_tab_overview':
+        return 'Overview';
+      case 'download_detail_tab_files':
+        return 'Files';
+      case 'download_detail_tab_peers':
+        return 'Peers';
+      case 'download_detail_tab_trackers':
+        return 'Trackers';
+      case 'download_detail_backend_unsupported':
+        return 'Not supported by current download backend';
+      case 'download_detail_task_gone':
+        return 'Task not found in backend';
+      case 'download_detail_section_transfer':
+        return 'Transfer';
+      case 'download_detail_section_network':
+        return 'Network';
+      case 'download_detail_seeds_label':
+        return 'Seeds';
+      case 'download_detail_leechers_label':
+        return 'Leechers';
+      case 'download_detail_connections_label':
+        return 'Connections';
+      case 'download_detail_time_active':
+        return 'Active time';
+      case 'download_detail_time_seeding':
+        return 'Seeding time';
+      case 'download_detail_listen_port':
+        return 'Listen port';
+      case 'download_detail_dht_nodes':
+        return 'DHT nodes';
+      case 'download_detail_port_mapping':
+        return 'Port mapping';
+      case 'download_detail_session_rates':
+        return 'Session rates';
+      case 'download_detail_pieces_label':
+        return 'Pieces';
+      case 'download_detail_priority_skip':
+        return 'Don\'t download';
+      case 'download_detail_priority_normal':
+        return 'Normal';
+      case 'download_detail_priority_high':
+        return 'High';
+      case 'download_detail_tracker_working':
+        return 'Working';
+      case 'download_detail_tracker_updating':
+        return 'Updating';
+      case 'download_detail_tracker_not_contacted':
+        return 'Not contacted yet';
+      case 'download_detail_tracker_not_working':
+        return 'Not working';
+      case 'download_detail_tracker_disabled':
+        return 'Disabled';
+      case 'download_detail_no_peers':
+        return 'No connected peers';
+      case 'download_detail_no_trackers':
+        return 'No trackers';
       default:
         return null;
     }
@@ -153778,12 +156037,6 @@ extension on _StringsIt {
         return 'Synopsis';
       case 'video_scrape_tags':
         return 'Tags';
-      case 'video_scrape_tmdb_key_hint':
-        return 'Enter TMDB API Key';
-      case 'video_scrape_tmdb_key_required':
-        return 'TMDB requires an API key';
-      case 'video_scrape_tmdb_key_save':
-        return 'Save';
       case 'video_scrape_use':
         return 'Use';
       case 'video_scrape_view_subject':
@@ -154744,13 +156997,11 @@ extension on _StringsIt {
         return ({required Object count, required Object languages}) =>
             '${count} subtitles available · ${languages}';
       case 'video_scrape_manual_match_hint':
-        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. All available sources are searched together and results are ranked by match confidence.';
       case 'video_scrape_collection_match_hint':
-        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. All available sources are searched together and results are ranked by match confidence.';
       case 'video_scrape_apply_to_collection_hint':
         return 'This writes the same cover to every episode. Leave it off unless that is intentional.';
-      case 'video_scrape_tmdb_key_empty':
-        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
       case 'manga_online_source_disabled':
         return 'This internet source is disabled. Enable it in Sources to browse the catalog.';
       case 'selection_web_search':
@@ -154829,9 +157080,9 @@ extension on _StringsIt {
       case 'interconnect_peer_list_empty':
         return 'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
       case 'anki_lapis_visual_editor':
-        return 'Visual style editor';
+        return 'Visual editor';
       case 'anki_lapis_visual_editor_hint':
-        return 'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+        return 'Preview the Lapis card, then change each area\'s style, position and field mapping without writing CSS.';
       case 'anki_lapis_visual_front':
         return 'Front';
       case 'anki_lapis_visual_back':
@@ -155130,6 +157381,110 @@ extension on _StringsIt {
         return 'All';
       case 'media_source_local_roots':
         return 'Local scan roots';
+      case 'video_setting_tmdb_key':
+        return 'Custom TMDB API key';
+      case 'video_setting_tmdb_key_hint':
+        return 'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
+      case 'about_tmdb_attribution':
+        return 'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+      case 'anki_lapis_visual_layout':
+        return 'Layout';
+      case 'anki_lapis_visual_layout_hint':
+        return 'Uses Lapis\' own layout switches, so desktop and mobile Anki both follow it.';
+      case 'anki_lapis_visual_layout_sentence':
+        return 'Sentence position';
+      case 'anki_lapis_visual_layout_sentence_above':
+        return 'Above definitions';
+      case 'anki_lapis_visual_layout_sentence_below':
+        return 'Below definitions';
+      case 'anki_lapis_visual_layout_picture':
+        return 'Image position';
+      case 'anki_lapis_visual_layout_picture_right':
+        return 'Right of the word';
+      case 'anki_lapis_visual_layout_picture_left':
+        return 'Left of the word';
+      case 'anki_lapis_visual_layout_picture_alt':
+        return 'Inside the sentence';
+      case 'anki_lapis_visual_layout_audio':
+        return 'Audio buttons';
+      case 'anki_lapis_visual_layout_audio_header':
+        return 'Next to the reading';
+      case 'anki_lapis_visual_layout_audio_fixed':
+        return 'Pinned to the bottom';
+      case 'anki_lapis_visual_layout_audio_alt':
+        return 'Inside the sentence';
+      case 'anki_lapis_visual_mapping_hint':
+        return 'Anki fields that fill the selected area. Changes are saved together with the style.';
+      case 'anki_lapis_visual_mapping_none':
+        return 'This area is drawn by the template itself and has no field of its own.';
+      case 'anki_lapis_visual_color_custom':
+        return 'Custom';
+      case 'anki_lapis_visual_color_picker_title':
+        return 'Pick a color';
+      case 'video_scrape_tmdb_key_hint':
+        return 'Enter TMDB API key';
+      case 'video_scrape_tmdb_key_required':
+        return 'TMDB requires an API key';
+      case 'video_scrape_tmdb_key_save':
+        return 'Save';
+      case 'video_scrape_tmdb_key_empty':
+        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+      case 'download_detail_tab_overview':
+        return 'Overview';
+      case 'download_detail_tab_files':
+        return 'Files';
+      case 'download_detail_tab_peers':
+        return 'Peers';
+      case 'download_detail_tab_trackers':
+        return 'Trackers';
+      case 'download_detail_backend_unsupported':
+        return 'Not supported by current download backend';
+      case 'download_detail_task_gone':
+        return 'Task not found in backend';
+      case 'download_detail_section_transfer':
+        return 'Transfer';
+      case 'download_detail_section_network':
+        return 'Network';
+      case 'download_detail_seeds_label':
+        return 'Seeds';
+      case 'download_detail_leechers_label':
+        return 'Leechers';
+      case 'download_detail_connections_label':
+        return 'Connections';
+      case 'download_detail_time_active':
+        return 'Active time';
+      case 'download_detail_time_seeding':
+        return 'Seeding time';
+      case 'download_detail_listen_port':
+        return 'Listen port';
+      case 'download_detail_dht_nodes':
+        return 'DHT nodes';
+      case 'download_detail_port_mapping':
+        return 'Port mapping';
+      case 'download_detail_session_rates':
+        return 'Session rates';
+      case 'download_detail_pieces_label':
+        return 'Pieces';
+      case 'download_detail_priority_skip':
+        return 'Don\'t download';
+      case 'download_detail_priority_normal':
+        return 'Normal';
+      case 'download_detail_priority_high':
+        return 'High';
+      case 'download_detail_tracker_working':
+        return 'Working';
+      case 'download_detail_tracker_updating':
+        return 'Updating';
+      case 'download_detail_tracker_not_contacted':
+        return 'Not contacted yet';
+      case 'download_detail_tracker_not_working':
+        return 'Not working';
+      case 'download_detail_tracker_disabled':
+        return 'Disabled';
+      case 'download_detail_no_peers':
+        return 'No connected peers';
+      case 'download_detail_no_trackers':
+        return 'No trackers';
       default:
         return null;
     }
@@ -159842,12 +162197,6 @@ extension on _StringsJa {
         return 'Synopsis';
       case 'video_scrape_tags':
         return 'Tags';
-      case 'video_scrape_tmdb_key_hint':
-        return 'Enter TMDB API Key';
-      case 'video_scrape_tmdb_key_required':
-        return 'TMDB requires an API key';
-      case 'video_scrape_tmdb_key_save':
-        return 'Save';
       case 'video_scrape_use':
         return 'Use';
       case 'video_scrape_view_subject':
@@ -160805,13 +163154,11 @@ extension on _StringsJa {
         return ({required Object count, required Object languages}) =>
             '${count} subtitles available · ${languages}';
       case 'video_scrape_manual_match_hint':
-        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. All available sources are searched together and results are ranked by match confidence.';
       case 'video_scrape_collection_match_hint':
-        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. All available sources are searched together and results are ranked by match confidence.';
       case 'video_scrape_apply_to_collection_hint':
         return 'This writes the same cover to every episode. Leave it off unless that is intentional.';
-      case 'video_scrape_tmdb_key_empty':
-        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
       case 'manga_online_source_disabled':
         return 'This internet source is disabled. Enable it in Sources to browse the catalog.';
       case 'selection_web_search':
@@ -160890,9 +163237,9 @@ extension on _StringsJa {
       case 'interconnect_peer_list_empty':
         return 'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
       case 'anki_lapis_visual_editor':
-        return 'Visual style editor';
+        return 'Visual editor';
       case 'anki_lapis_visual_editor_hint':
-        return 'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+        return 'Preview the Lapis card, then change each area\'s style, position and field mapping without writing CSS.';
       case 'anki_lapis_visual_front':
         return 'Front';
       case 'anki_lapis_visual_back':
@@ -161191,6 +163538,110 @@ extension on _StringsJa {
         return 'All';
       case 'media_source_local_roots':
         return 'Local scan roots';
+      case 'video_setting_tmdb_key':
+        return 'Custom TMDB API key';
+      case 'video_setting_tmdb_key_hint':
+        return 'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
+      case 'about_tmdb_attribution':
+        return 'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+      case 'anki_lapis_visual_layout':
+        return 'Layout';
+      case 'anki_lapis_visual_layout_hint':
+        return 'Uses Lapis\' own layout switches, so desktop and mobile Anki both follow it.';
+      case 'anki_lapis_visual_layout_sentence':
+        return 'Sentence position';
+      case 'anki_lapis_visual_layout_sentence_above':
+        return 'Above definitions';
+      case 'anki_lapis_visual_layout_sentence_below':
+        return 'Below definitions';
+      case 'anki_lapis_visual_layout_picture':
+        return 'Image position';
+      case 'anki_lapis_visual_layout_picture_right':
+        return 'Right of the word';
+      case 'anki_lapis_visual_layout_picture_left':
+        return 'Left of the word';
+      case 'anki_lapis_visual_layout_picture_alt':
+        return 'Inside the sentence';
+      case 'anki_lapis_visual_layout_audio':
+        return 'Audio buttons';
+      case 'anki_lapis_visual_layout_audio_header':
+        return 'Next to the reading';
+      case 'anki_lapis_visual_layout_audio_fixed':
+        return 'Pinned to the bottom';
+      case 'anki_lapis_visual_layout_audio_alt':
+        return 'Inside the sentence';
+      case 'anki_lapis_visual_mapping_hint':
+        return 'Anki fields that fill the selected area. Changes are saved together with the style.';
+      case 'anki_lapis_visual_mapping_none':
+        return 'This area is drawn by the template itself and has no field of its own.';
+      case 'anki_lapis_visual_color_custom':
+        return 'Custom';
+      case 'anki_lapis_visual_color_picker_title':
+        return 'Pick a color';
+      case 'video_scrape_tmdb_key_hint':
+        return 'Enter TMDB API key';
+      case 'video_scrape_tmdb_key_required':
+        return 'TMDB requires an API key';
+      case 'video_scrape_tmdb_key_save':
+        return 'Save';
+      case 'video_scrape_tmdb_key_empty':
+        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+      case 'download_detail_tab_overview':
+        return 'Overview';
+      case 'download_detail_tab_files':
+        return 'Files';
+      case 'download_detail_tab_peers':
+        return 'Peers';
+      case 'download_detail_tab_trackers':
+        return 'Trackers';
+      case 'download_detail_backend_unsupported':
+        return 'Not supported by current download backend';
+      case 'download_detail_task_gone':
+        return 'Task not found in backend';
+      case 'download_detail_section_transfer':
+        return 'Transfer';
+      case 'download_detail_section_network':
+        return 'Network';
+      case 'download_detail_seeds_label':
+        return 'Seeds';
+      case 'download_detail_leechers_label':
+        return 'Leechers';
+      case 'download_detail_connections_label':
+        return 'Connections';
+      case 'download_detail_time_active':
+        return 'Active time';
+      case 'download_detail_time_seeding':
+        return 'Seeding time';
+      case 'download_detail_listen_port':
+        return 'Listen port';
+      case 'download_detail_dht_nodes':
+        return 'DHT nodes';
+      case 'download_detail_port_mapping':
+        return 'Port mapping';
+      case 'download_detail_session_rates':
+        return 'Session rates';
+      case 'download_detail_pieces_label':
+        return 'Pieces';
+      case 'download_detail_priority_skip':
+        return 'Don\'t download';
+      case 'download_detail_priority_normal':
+        return 'Normal';
+      case 'download_detail_priority_high':
+        return 'High';
+      case 'download_detail_tracker_working':
+        return 'Working';
+      case 'download_detail_tracker_updating':
+        return 'Updating';
+      case 'download_detail_tracker_not_contacted':
+        return 'Not contacted yet';
+      case 'download_detail_tracker_not_working':
+        return 'Not working';
+      case 'download_detail_tracker_disabled':
+        return 'Disabled';
+      case 'download_detail_no_peers':
+        return 'No connected peers';
+      case 'download_detail_no_trackers':
+        return 'No trackers';
       default:
         return null;
     }
@@ -165906,12 +168357,6 @@ extension on _StringsKo {
         return 'Synopsis';
       case 'video_scrape_tags':
         return 'Tags';
-      case 'video_scrape_tmdb_key_hint':
-        return 'Enter TMDB API Key';
-      case 'video_scrape_tmdb_key_required':
-        return 'TMDB requires an API key';
-      case 'video_scrape_tmdb_key_save':
-        return 'Save';
       case 'video_scrape_use':
         return 'Use';
       case 'video_scrape_view_subject':
@@ -166870,13 +169315,11 @@ extension on _StringsKo {
         return ({required Object count, required Object languages}) =>
             '${count} subtitles available · ${languages}';
       case 'video_scrape_manual_match_hint':
-        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. All available sources are searched together and results are ranked by match confidence.';
       case 'video_scrape_collection_match_hint':
-        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. All available sources are searched together and results are ranked by match confidence.';
       case 'video_scrape_apply_to_collection_hint':
         return 'This writes the same cover to every episode. Leave it off unless that is intentional.';
-      case 'video_scrape_tmdb_key_empty':
-        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
       case 'manga_online_source_disabled':
         return 'This internet source is disabled. Enable it in Sources to browse the catalog.';
       case 'selection_web_search':
@@ -166955,9 +169398,9 @@ extension on _StringsKo {
       case 'interconnect_peer_list_empty':
         return 'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
       case 'anki_lapis_visual_editor':
-        return 'Visual style editor';
+        return 'Visual editor';
       case 'anki_lapis_visual_editor_hint':
-        return 'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+        return 'Preview the Lapis card, then change each area\'s style, position and field mapping without writing CSS.';
       case 'anki_lapis_visual_front':
         return 'Front';
       case 'anki_lapis_visual_back':
@@ -167256,6 +169699,110 @@ extension on _StringsKo {
         return 'All';
       case 'media_source_local_roots':
         return 'Local scan roots';
+      case 'video_setting_tmdb_key':
+        return 'Custom TMDB API key';
+      case 'video_setting_tmdb_key_hint':
+        return 'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
+      case 'about_tmdb_attribution':
+        return 'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+      case 'anki_lapis_visual_layout':
+        return 'Layout';
+      case 'anki_lapis_visual_layout_hint':
+        return 'Uses Lapis\' own layout switches, so desktop and mobile Anki both follow it.';
+      case 'anki_lapis_visual_layout_sentence':
+        return 'Sentence position';
+      case 'anki_lapis_visual_layout_sentence_above':
+        return 'Above definitions';
+      case 'anki_lapis_visual_layout_sentence_below':
+        return 'Below definitions';
+      case 'anki_lapis_visual_layout_picture':
+        return 'Image position';
+      case 'anki_lapis_visual_layout_picture_right':
+        return 'Right of the word';
+      case 'anki_lapis_visual_layout_picture_left':
+        return 'Left of the word';
+      case 'anki_lapis_visual_layout_picture_alt':
+        return 'Inside the sentence';
+      case 'anki_lapis_visual_layout_audio':
+        return 'Audio buttons';
+      case 'anki_lapis_visual_layout_audio_header':
+        return 'Next to the reading';
+      case 'anki_lapis_visual_layout_audio_fixed':
+        return 'Pinned to the bottom';
+      case 'anki_lapis_visual_layout_audio_alt':
+        return 'Inside the sentence';
+      case 'anki_lapis_visual_mapping_hint':
+        return 'Anki fields that fill the selected area. Changes are saved together with the style.';
+      case 'anki_lapis_visual_mapping_none':
+        return 'This area is drawn by the template itself and has no field of its own.';
+      case 'anki_lapis_visual_color_custom':
+        return 'Custom';
+      case 'anki_lapis_visual_color_picker_title':
+        return 'Pick a color';
+      case 'video_scrape_tmdb_key_hint':
+        return 'Enter TMDB API key';
+      case 'video_scrape_tmdb_key_required':
+        return 'TMDB requires an API key';
+      case 'video_scrape_tmdb_key_save':
+        return 'Save';
+      case 'video_scrape_tmdb_key_empty':
+        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+      case 'download_detail_tab_overview':
+        return 'Overview';
+      case 'download_detail_tab_files':
+        return 'Files';
+      case 'download_detail_tab_peers':
+        return 'Peers';
+      case 'download_detail_tab_trackers':
+        return 'Trackers';
+      case 'download_detail_backend_unsupported':
+        return 'Not supported by current download backend';
+      case 'download_detail_task_gone':
+        return 'Task not found in backend';
+      case 'download_detail_section_transfer':
+        return 'Transfer';
+      case 'download_detail_section_network':
+        return 'Network';
+      case 'download_detail_seeds_label':
+        return 'Seeds';
+      case 'download_detail_leechers_label':
+        return 'Leechers';
+      case 'download_detail_connections_label':
+        return 'Connections';
+      case 'download_detail_time_active':
+        return 'Active time';
+      case 'download_detail_time_seeding':
+        return 'Seeding time';
+      case 'download_detail_listen_port':
+        return 'Listen port';
+      case 'download_detail_dht_nodes':
+        return 'DHT nodes';
+      case 'download_detail_port_mapping':
+        return 'Port mapping';
+      case 'download_detail_session_rates':
+        return 'Session rates';
+      case 'download_detail_pieces_label':
+        return 'Pieces';
+      case 'download_detail_priority_skip':
+        return 'Don\'t download';
+      case 'download_detail_priority_normal':
+        return 'Normal';
+      case 'download_detail_priority_high':
+        return 'High';
+      case 'download_detail_tracker_working':
+        return 'Working';
+      case 'download_detail_tracker_updating':
+        return 'Updating';
+      case 'download_detail_tracker_not_contacted':
+        return 'Not contacted yet';
+      case 'download_detail_tracker_not_working':
+        return 'Not working';
+      case 'download_detail_tracker_disabled':
+        return 'Disabled';
+      case 'download_detail_no_peers':
+        return 'No connected peers';
+      case 'download_detail_no_trackers':
+        return 'No trackers';
       default:
         return null;
     }
@@ -171996,12 +174543,6 @@ extension on _StringsNl {
         return 'Synopsis';
       case 'video_scrape_tags':
         return 'Tags';
-      case 'video_scrape_tmdb_key_hint':
-        return 'Enter TMDB API Key';
-      case 'video_scrape_tmdb_key_required':
-        return 'TMDB requires an API key';
-      case 'video_scrape_tmdb_key_save':
-        return 'Save';
       case 'video_scrape_use':
         return 'Use';
       case 'video_scrape_view_subject':
@@ -172963,13 +175504,11 @@ extension on _StringsNl {
         return ({required Object count, required Object languages}) =>
             '${count} subtitles available · ${languages}';
       case 'video_scrape_manual_match_hint':
-        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. All available sources are searched together and results are ranked by match confidence.';
       case 'video_scrape_collection_match_hint':
-        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. All available sources are searched together and results are ranked by match confidence.';
       case 'video_scrape_apply_to_collection_hint':
         return 'This writes the same cover to every episode. Leave it off unless that is intentional.';
-      case 'video_scrape_tmdb_key_empty':
-        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
       case 'manga_online_source_disabled':
         return 'This internet source is disabled. Enable it in Sources to browse the catalog.';
       case 'selection_web_search':
@@ -173048,9 +175587,9 @@ extension on _StringsNl {
       case 'interconnect_peer_list_empty':
         return 'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
       case 'anki_lapis_visual_editor':
-        return 'Visual style editor';
+        return 'Visual editor';
       case 'anki_lapis_visual_editor_hint':
-        return 'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+        return 'Preview the Lapis card, then change each area\'s style, position and field mapping without writing CSS.';
       case 'anki_lapis_visual_front':
         return 'Front';
       case 'anki_lapis_visual_back':
@@ -173349,6 +175888,110 @@ extension on _StringsNl {
         return 'All';
       case 'media_source_local_roots':
         return 'Local scan roots';
+      case 'video_setting_tmdb_key':
+        return 'Custom TMDB API key';
+      case 'video_setting_tmdb_key_hint':
+        return 'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
+      case 'about_tmdb_attribution':
+        return 'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+      case 'anki_lapis_visual_layout':
+        return 'Layout';
+      case 'anki_lapis_visual_layout_hint':
+        return 'Uses Lapis\' own layout switches, so desktop and mobile Anki both follow it.';
+      case 'anki_lapis_visual_layout_sentence':
+        return 'Sentence position';
+      case 'anki_lapis_visual_layout_sentence_above':
+        return 'Above definitions';
+      case 'anki_lapis_visual_layout_sentence_below':
+        return 'Below definitions';
+      case 'anki_lapis_visual_layout_picture':
+        return 'Image position';
+      case 'anki_lapis_visual_layout_picture_right':
+        return 'Right of the word';
+      case 'anki_lapis_visual_layout_picture_left':
+        return 'Left of the word';
+      case 'anki_lapis_visual_layout_picture_alt':
+        return 'Inside the sentence';
+      case 'anki_lapis_visual_layout_audio':
+        return 'Audio buttons';
+      case 'anki_lapis_visual_layout_audio_header':
+        return 'Next to the reading';
+      case 'anki_lapis_visual_layout_audio_fixed':
+        return 'Pinned to the bottom';
+      case 'anki_lapis_visual_layout_audio_alt':
+        return 'Inside the sentence';
+      case 'anki_lapis_visual_mapping_hint':
+        return 'Anki fields that fill the selected area. Changes are saved together with the style.';
+      case 'anki_lapis_visual_mapping_none':
+        return 'This area is drawn by the template itself and has no field of its own.';
+      case 'anki_lapis_visual_color_custom':
+        return 'Custom';
+      case 'anki_lapis_visual_color_picker_title':
+        return 'Pick a color';
+      case 'video_scrape_tmdb_key_hint':
+        return 'Enter TMDB API key';
+      case 'video_scrape_tmdb_key_required':
+        return 'TMDB requires an API key';
+      case 'video_scrape_tmdb_key_save':
+        return 'Save';
+      case 'video_scrape_tmdb_key_empty':
+        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+      case 'download_detail_tab_overview':
+        return 'Overview';
+      case 'download_detail_tab_files':
+        return 'Files';
+      case 'download_detail_tab_peers':
+        return 'Peers';
+      case 'download_detail_tab_trackers':
+        return 'Trackers';
+      case 'download_detail_backend_unsupported':
+        return 'Not supported by current download backend';
+      case 'download_detail_task_gone':
+        return 'Task not found in backend';
+      case 'download_detail_section_transfer':
+        return 'Transfer';
+      case 'download_detail_section_network':
+        return 'Network';
+      case 'download_detail_seeds_label':
+        return 'Seeds';
+      case 'download_detail_leechers_label':
+        return 'Leechers';
+      case 'download_detail_connections_label':
+        return 'Connections';
+      case 'download_detail_time_active':
+        return 'Active time';
+      case 'download_detail_time_seeding':
+        return 'Seeding time';
+      case 'download_detail_listen_port':
+        return 'Listen port';
+      case 'download_detail_dht_nodes':
+        return 'DHT nodes';
+      case 'download_detail_port_mapping':
+        return 'Port mapping';
+      case 'download_detail_session_rates':
+        return 'Session rates';
+      case 'download_detail_pieces_label':
+        return 'Pieces';
+      case 'download_detail_priority_skip':
+        return 'Don\'t download';
+      case 'download_detail_priority_normal':
+        return 'Normal';
+      case 'download_detail_priority_high':
+        return 'High';
+      case 'download_detail_tracker_working':
+        return 'Working';
+      case 'download_detail_tracker_updating':
+        return 'Updating';
+      case 'download_detail_tracker_not_contacted':
+        return 'Not contacted yet';
+      case 'download_detail_tracker_not_working':
+        return 'Not working';
+      case 'download_detail_tracker_disabled':
+        return 'Disabled';
+      case 'download_detail_no_peers':
+        return 'No connected peers';
+      case 'download_detail_no_trackers':
+        return 'No trackers';
       default:
         return null;
     }
@@ -178088,12 +180731,6 @@ extension on _StringsPtBr {
         return 'Synopsis';
       case 'video_scrape_tags':
         return 'Tags';
-      case 'video_scrape_tmdb_key_hint':
-        return 'Enter TMDB API Key';
-      case 'video_scrape_tmdb_key_required':
-        return 'TMDB requires an API key';
-      case 'video_scrape_tmdb_key_save':
-        return 'Save';
       case 'video_scrape_use':
         return 'Use';
       case 'video_scrape_view_subject':
@@ -179053,13 +181690,11 @@ extension on _StringsPtBr {
         return ({required Object count, required Object languages}) =>
             '${count} subtitles available · ${languages}';
       case 'video_scrape_manual_match_hint':
-        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. All available sources are searched together and results are ranked by match confidence.';
       case 'video_scrape_collection_match_hint':
-        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. All available sources are searched together and results are ranked by match confidence.';
       case 'video_scrape_apply_to_collection_hint':
         return 'This writes the same cover to every episode. Leave it off unless that is intentional.';
-      case 'video_scrape_tmdb_key_empty':
-        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
       case 'manga_online_source_disabled':
         return 'This internet source is disabled. Enable it in Sources to browse the catalog.';
       case 'selection_web_search':
@@ -179138,9 +181773,9 @@ extension on _StringsPtBr {
       case 'interconnect_peer_list_empty':
         return 'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
       case 'anki_lapis_visual_editor':
-        return 'Visual style editor';
+        return 'Visual editor';
       case 'anki_lapis_visual_editor_hint':
-        return 'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+        return 'Preview the Lapis card, then change each area\'s style, position and field mapping without writing CSS.';
       case 'anki_lapis_visual_front':
         return 'Front';
       case 'anki_lapis_visual_back':
@@ -179439,6 +182074,110 @@ extension on _StringsPtBr {
         return 'All';
       case 'media_source_local_roots':
         return 'Local scan roots';
+      case 'video_setting_tmdb_key':
+        return 'Custom TMDB API key';
+      case 'video_setting_tmdb_key_hint':
+        return 'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
+      case 'about_tmdb_attribution':
+        return 'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+      case 'anki_lapis_visual_layout':
+        return 'Layout';
+      case 'anki_lapis_visual_layout_hint':
+        return 'Uses Lapis\' own layout switches, so desktop and mobile Anki both follow it.';
+      case 'anki_lapis_visual_layout_sentence':
+        return 'Sentence position';
+      case 'anki_lapis_visual_layout_sentence_above':
+        return 'Above definitions';
+      case 'anki_lapis_visual_layout_sentence_below':
+        return 'Below definitions';
+      case 'anki_lapis_visual_layout_picture':
+        return 'Image position';
+      case 'anki_lapis_visual_layout_picture_right':
+        return 'Right of the word';
+      case 'anki_lapis_visual_layout_picture_left':
+        return 'Left of the word';
+      case 'anki_lapis_visual_layout_picture_alt':
+        return 'Inside the sentence';
+      case 'anki_lapis_visual_layout_audio':
+        return 'Audio buttons';
+      case 'anki_lapis_visual_layout_audio_header':
+        return 'Next to the reading';
+      case 'anki_lapis_visual_layout_audio_fixed':
+        return 'Pinned to the bottom';
+      case 'anki_lapis_visual_layout_audio_alt':
+        return 'Inside the sentence';
+      case 'anki_lapis_visual_mapping_hint':
+        return 'Anki fields that fill the selected area. Changes are saved together with the style.';
+      case 'anki_lapis_visual_mapping_none':
+        return 'This area is drawn by the template itself and has no field of its own.';
+      case 'anki_lapis_visual_color_custom':
+        return 'Custom';
+      case 'anki_lapis_visual_color_picker_title':
+        return 'Pick a color';
+      case 'video_scrape_tmdb_key_hint':
+        return 'Enter TMDB API key';
+      case 'video_scrape_tmdb_key_required':
+        return 'TMDB requires an API key';
+      case 'video_scrape_tmdb_key_save':
+        return 'Save';
+      case 'video_scrape_tmdb_key_empty':
+        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+      case 'download_detail_tab_overview':
+        return 'Overview';
+      case 'download_detail_tab_files':
+        return 'Files';
+      case 'download_detail_tab_peers':
+        return 'Peers';
+      case 'download_detail_tab_trackers':
+        return 'Trackers';
+      case 'download_detail_backend_unsupported':
+        return 'Not supported by current download backend';
+      case 'download_detail_task_gone':
+        return 'Task not found in backend';
+      case 'download_detail_section_transfer':
+        return 'Transfer';
+      case 'download_detail_section_network':
+        return 'Network';
+      case 'download_detail_seeds_label':
+        return 'Seeds';
+      case 'download_detail_leechers_label':
+        return 'Leechers';
+      case 'download_detail_connections_label':
+        return 'Connections';
+      case 'download_detail_time_active':
+        return 'Active time';
+      case 'download_detail_time_seeding':
+        return 'Seeding time';
+      case 'download_detail_listen_port':
+        return 'Listen port';
+      case 'download_detail_dht_nodes':
+        return 'DHT nodes';
+      case 'download_detail_port_mapping':
+        return 'Port mapping';
+      case 'download_detail_session_rates':
+        return 'Session rates';
+      case 'download_detail_pieces_label':
+        return 'Pieces';
+      case 'download_detail_priority_skip':
+        return 'Don\'t download';
+      case 'download_detail_priority_normal':
+        return 'Normal';
+      case 'download_detail_priority_high':
+        return 'High';
+      case 'download_detail_tracker_working':
+        return 'Working';
+      case 'download_detail_tracker_updating':
+        return 'Updating';
+      case 'download_detail_tracker_not_contacted':
+        return 'Not contacted yet';
+      case 'download_detail_tracker_not_working':
+        return 'Not working';
+      case 'download_detail_tracker_disabled':
+        return 'Disabled';
+      case 'download_detail_no_peers':
+        return 'No connected peers';
+      case 'download_detail_no_trackers':
+        return 'No trackers';
       default:
         return null;
     }
@@ -184183,12 +186922,6 @@ extension on _StringsRu {
         return 'Synopsis';
       case 'video_scrape_tags':
         return 'Tags';
-      case 'video_scrape_tmdb_key_hint':
-        return 'Enter TMDB API Key';
-      case 'video_scrape_tmdb_key_required':
-        return 'TMDB requires an API key';
-      case 'video_scrape_tmdb_key_save':
-        return 'Save';
       case 'video_scrape_use':
         return 'Use';
       case 'video_scrape_view_subject':
@@ -185148,13 +187881,11 @@ extension on _StringsRu {
         return ({required Object count, required Object languages}) =>
             '${count} subtitles available · ${languages}';
       case 'video_scrape_manual_match_hint':
-        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. All available sources are searched together and results are ranked by match confidence.';
       case 'video_scrape_collection_match_hint':
-        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. All available sources are searched together and results are ranked by match confidence.';
       case 'video_scrape_apply_to_collection_hint':
         return 'This writes the same cover to every episode. Leave it off unless that is intentional.';
-      case 'video_scrape_tmdb_key_empty':
-        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
       case 'manga_online_source_disabled':
         return 'This internet source is disabled. Enable it in Sources to browse the catalog.';
       case 'selection_web_search':
@@ -185233,9 +187964,9 @@ extension on _StringsRu {
       case 'interconnect_peer_list_empty':
         return 'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
       case 'anki_lapis_visual_editor':
-        return 'Visual style editor';
+        return 'Visual editor';
       case 'anki_lapis_visual_editor_hint':
-        return 'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+        return 'Preview the Lapis card, then change each area\'s style, position and field mapping without writing CSS.';
       case 'anki_lapis_visual_front':
         return 'Front';
       case 'anki_lapis_visual_back':
@@ -185534,6 +188265,110 @@ extension on _StringsRu {
         return 'All';
       case 'media_source_local_roots':
         return 'Local scan roots';
+      case 'video_setting_tmdb_key':
+        return 'Custom TMDB API key';
+      case 'video_setting_tmdb_key_hint':
+        return 'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
+      case 'about_tmdb_attribution':
+        return 'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+      case 'anki_lapis_visual_layout':
+        return 'Layout';
+      case 'anki_lapis_visual_layout_hint':
+        return 'Uses Lapis\' own layout switches, so desktop and mobile Anki both follow it.';
+      case 'anki_lapis_visual_layout_sentence':
+        return 'Sentence position';
+      case 'anki_lapis_visual_layout_sentence_above':
+        return 'Above definitions';
+      case 'anki_lapis_visual_layout_sentence_below':
+        return 'Below definitions';
+      case 'anki_lapis_visual_layout_picture':
+        return 'Image position';
+      case 'anki_lapis_visual_layout_picture_right':
+        return 'Right of the word';
+      case 'anki_lapis_visual_layout_picture_left':
+        return 'Left of the word';
+      case 'anki_lapis_visual_layout_picture_alt':
+        return 'Inside the sentence';
+      case 'anki_lapis_visual_layout_audio':
+        return 'Audio buttons';
+      case 'anki_lapis_visual_layout_audio_header':
+        return 'Next to the reading';
+      case 'anki_lapis_visual_layout_audio_fixed':
+        return 'Pinned to the bottom';
+      case 'anki_lapis_visual_layout_audio_alt':
+        return 'Inside the sentence';
+      case 'anki_lapis_visual_mapping_hint':
+        return 'Anki fields that fill the selected area. Changes are saved together with the style.';
+      case 'anki_lapis_visual_mapping_none':
+        return 'This area is drawn by the template itself and has no field of its own.';
+      case 'anki_lapis_visual_color_custom':
+        return 'Custom';
+      case 'anki_lapis_visual_color_picker_title':
+        return 'Pick a color';
+      case 'video_scrape_tmdb_key_hint':
+        return 'Enter TMDB API key';
+      case 'video_scrape_tmdb_key_required':
+        return 'TMDB requires an API key';
+      case 'video_scrape_tmdb_key_save':
+        return 'Save';
+      case 'video_scrape_tmdb_key_empty':
+        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+      case 'download_detail_tab_overview':
+        return 'Overview';
+      case 'download_detail_tab_files':
+        return 'Files';
+      case 'download_detail_tab_peers':
+        return 'Peers';
+      case 'download_detail_tab_trackers':
+        return 'Trackers';
+      case 'download_detail_backend_unsupported':
+        return 'Not supported by current download backend';
+      case 'download_detail_task_gone':
+        return 'Task not found in backend';
+      case 'download_detail_section_transfer':
+        return 'Transfer';
+      case 'download_detail_section_network':
+        return 'Network';
+      case 'download_detail_seeds_label':
+        return 'Seeds';
+      case 'download_detail_leechers_label':
+        return 'Leechers';
+      case 'download_detail_connections_label':
+        return 'Connections';
+      case 'download_detail_time_active':
+        return 'Active time';
+      case 'download_detail_time_seeding':
+        return 'Seeding time';
+      case 'download_detail_listen_port':
+        return 'Listen port';
+      case 'download_detail_dht_nodes':
+        return 'DHT nodes';
+      case 'download_detail_port_mapping':
+        return 'Port mapping';
+      case 'download_detail_session_rates':
+        return 'Session rates';
+      case 'download_detail_pieces_label':
+        return 'Pieces';
+      case 'download_detail_priority_skip':
+        return 'Don\'t download';
+      case 'download_detail_priority_normal':
+        return 'Normal';
+      case 'download_detail_priority_high':
+        return 'High';
+      case 'download_detail_tracker_working':
+        return 'Working';
+      case 'download_detail_tracker_updating':
+        return 'Updating';
+      case 'download_detail_tracker_not_contacted':
+        return 'Not contacted yet';
+      case 'download_detail_tracker_not_working':
+        return 'Not working';
+      case 'download_detail_tracker_disabled':
+        return 'Disabled';
+      case 'download_detail_no_peers':
+        return 'No connected peers';
+      case 'download_detail_no_trackers':
+        return 'No trackers';
       default:
         return null;
     }
@@ -190261,12 +193096,6 @@ extension on _StringsTh {
         return 'Synopsis';
       case 'video_scrape_tags':
         return 'Tags';
-      case 'video_scrape_tmdb_key_hint':
-        return 'Enter TMDB API Key';
-      case 'video_scrape_tmdb_key_required':
-        return 'TMDB requires an API key';
-      case 'video_scrape_tmdb_key_save':
-        return 'Save';
       case 'video_scrape_use':
         return 'Use';
       case 'video_scrape_view_subject':
@@ -191226,13 +194055,11 @@ extension on _StringsTh {
         return ({required Object count, required Object languages}) =>
             '${count} subtitles available · ${languages}';
       case 'video_scrape_manual_match_hint':
-        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. All available sources are searched together and results are ranked by match confidence.';
       case 'video_scrape_collection_match_hint':
-        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. All available sources are searched together and results are ranked by match confidence.';
       case 'video_scrape_apply_to_collection_hint':
         return 'This writes the same cover to every episode. Leave it off unless that is intentional.';
-      case 'video_scrape_tmdb_key_empty':
-        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
       case 'manga_online_source_disabled':
         return 'This internet source is disabled. Enable it in Sources to browse the catalog.';
       case 'selection_web_search':
@@ -191311,9 +194138,9 @@ extension on _StringsTh {
       case 'interconnect_peer_list_empty':
         return 'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
       case 'anki_lapis_visual_editor':
-        return 'Visual style editor';
+        return 'Visual editor';
       case 'anki_lapis_visual_editor_hint':
-        return 'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+        return 'Preview the Lapis card, then change each area\'s style, position and field mapping without writing CSS.';
       case 'anki_lapis_visual_front':
         return 'Front';
       case 'anki_lapis_visual_back':
@@ -191612,6 +194439,110 @@ extension on _StringsTh {
         return 'All';
       case 'media_source_local_roots':
         return 'Local scan roots';
+      case 'video_setting_tmdb_key':
+        return 'Custom TMDB API key';
+      case 'video_setting_tmdb_key_hint':
+        return 'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
+      case 'about_tmdb_attribution':
+        return 'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+      case 'anki_lapis_visual_layout':
+        return 'Layout';
+      case 'anki_lapis_visual_layout_hint':
+        return 'Uses Lapis\' own layout switches, so desktop and mobile Anki both follow it.';
+      case 'anki_lapis_visual_layout_sentence':
+        return 'Sentence position';
+      case 'anki_lapis_visual_layout_sentence_above':
+        return 'Above definitions';
+      case 'anki_lapis_visual_layout_sentence_below':
+        return 'Below definitions';
+      case 'anki_lapis_visual_layout_picture':
+        return 'Image position';
+      case 'anki_lapis_visual_layout_picture_right':
+        return 'Right of the word';
+      case 'anki_lapis_visual_layout_picture_left':
+        return 'Left of the word';
+      case 'anki_lapis_visual_layout_picture_alt':
+        return 'Inside the sentence';
+      case 'anki_lapis_visual_layout_audio':
+        return 'Audio buttons';
+      case 'anki_lapis_visual_layout_audio_header':
+        return 'Next to the reading';
+      case 'anki_lapis_visual_layout_audio_fixed':
+        return 'Pinned to the bottom';
+      case 'anki_lapis_visual_layout_audio_alt':
+        return 'Inside the sentence';
+      case 'anki_lapis_visual_mapping_hint':
+        return 'Anki fields that fill the selected area. Changes are saved together with the style.';
+      case 'anki_lapis_visual_mapping_none':
+        return 'This area is drawn by the template itself and has no field of its own.';
+      case 'anki_lapis_visual_color_custom':
+        return 'Custom';
+      case 'anki_lapis_visual_color_picker_title':
+        return 'Pick a color';
+      case 'video_scrape_tmdb_key_hint':
+        return 'Enter TMDB API key';
+      case 'video_scrape_tmdb_key_required':
+        return 'TMDB requires an API key';
+      case 'video_scrape_tmdb_key_save':
+        return 'Save';
+      case 'video_scrape_tmdb_key_empty':
+        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+      case 'download_detail_tab_overview':
+        return 'Overview';
+      case 'download_detail_tab_files':
+        return 'Files';
+      case 'download_detail_tab_peers':
+        return 'Peers';
+      case 'download_detail_tab_trackers':
+        return 'Trackers';
+      case 'download_detail_backend_unsupported':
+        return 'Not supported by current download backend';
+      case 'download_detail_task_gone':
+        return 'Task not found in backend';
+      case 'download_detail_section_transfer':
+        return 'Transfer';
+      case 'download_detail_section_network':
+        return 'Network';
+      case 'download_detail_seeds_label':
+        return 'Seeds';
+      case 'download_detail_leechers_label':
+        return 'Leechers';
+      case 'download_detail_connections_label':
+        return 'Connections';
+      case 'download_detail_time_active':
+        return 'Active time';
+      case 'download_detail_time_seeding':
+        return 'Seeding time';
+      case 'download_detail_listen_port':
+        return 'Listen port';
+      case 'download_detail_dht_nodes':
+        return 'DHT nodes';
+      case 'download_detail_port_mapping':
+        return 'Port mapping';
+      case 'download_detail_session_rates':
+        return 'Session rates';
+      case 'download_detail_pieces_label':
+        return 'Pieces';
+      case 'download_detail_priority_skip':
+        return 'Don\'t download';
+      case 'download_detail_priority_normal':
+        return 'Normal';
+      case 'download_detail_priority_high':
+        return 'High';
+      case 'download_detail_tracker_working':
+        return 'Working';
+      case 'download_detail_tracker_updating':
+        return 'Updating';
+      case 'download_detail_tracker_not_contacted':
+        return 'Not contacted yet';
+      case 'download_detail_tracker_not_working':
+        return 'Not working';
+      case 'download_detail_tracker_disabled':
+        return 'Disabled';
+      case 'download_detail_no_peers':
+        return 'No connected peers';
+      case 'download_detail_no_trackers':
+        return 'No trackers';
       default:
         return null;
     }
@@ -196347,12 +199278,6 @@ extension on _StringsTr {
         return 'Synopsis';
       case 'video_scrape_tags':
         return 'Tags';
-      case 'video_scrape_tmdb_key_hint':
-        return 'Enter TMDB API Key';
-      case 'video_scrape_tmdb_key_required':
-        return 'TMDB requires an API key';
-      case 'video_scrape_tmdb_key_save':
-        return 'Save';
       case 'video_scrape_use':
         return 'Use';
       case 'video_scrape_view_subject':
@@ -197313,13 +200238,11 @@ extension on _StringsTr {
         return ({required Object count, required Object languages}) =>
             '${count} subtitles available · ${languages}';
       case 'video_scrape_manual_match_hint':
-        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. All available sources are searched together and results are ranked by match confidence.';
       case 'video_scrape_collection_match_hint':
-        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. All available sources are searched together and results are ranked by match confidence.';
       case 'video_scrape_apply_to_collection_hint':
         return 'This writes the same cover to every episode. Leave it off unless that is intentional.';
-      case 'video_scrape_tmdb_key_empty':
-        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
       case 'manga_online_source_disabled':
         return 'This internet source is disabled. Enable it in Sources to browse the catalog.';
       case 'selection_web_search':
@@ -197398,9 +200321,9 @@ extension on _StringsTr {
       case 'interconnect_peer_list_empty':
         return 'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
       case 'anki_lapis_visual_editor':
-        return 'Visual style editor';
+        return 'Visual editor';
       case 'anki_lapis_visual_editor_hint':
-        return 'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+        return 'Preview the Lapis card, then change each area\'s style, position and field mapping without writing CSS.';
       case 'anki_lapis_visual_front':
         return 'Front';
       case 'anki_lapis_visual_back':
@@ -197699,6 +200622,110 @@ extension on _StringsTr {
         return 'All';
       case 'media_source_local_roots':
         return 'Local scan roots';
+      case 'video_setting_tmdb_key':
+        return 'Custom TMDB API key';
+      case 'video_setting_tmdb_key_hint':
+        return 'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
+      case 'about_tmdb_attribution':
+        return 'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+      case 'anki_lapis_visual_layout':
+        return 'Layout';
+      case 'anki_lapis_visual_layout_hint':
+        return 'Uses Lapis\' own layout switches, so desktop and mobile Anki both follow it.';
+      case 'anki_lapis_visual_layout_sentence':
+        return 'Sentence position';
+      case 'anki_lapis_visual_layout_sentence_above':
+        return 'Above definitions';
+      case 'anki_lapis_visual_layout_sentence_below':
+        return 'Below definitions';
+      case 'anki_lapis_visual_layout_picture':
+        return 'Image position';
+      case 'anki_lapis_visual_layout_picture_right':
+        return 'Right of the word';
+      case 'anki_lapis_visual_layout_picture_left':
+        return 'Left of the word';
+      case 'anki_lapis_visual_layout_picture_alt':
+        return 'Inside the sentence';
+      case 'anki_lapis_visual_layout_audio':
+        return 'Audio buttons';
+      case 'anki_lapis_visual_layout_audio_header':
+        return 'Next to the reading';
+      case 'anki_lapis_visual_layout_audio_fixed':
+        return 'Pinned to the bottom';
+      case 'anki_lapis_visual_layout_audio_alt':
+        return 'Inside the sentence';
+      case 'anki_lapis_visual_mapping_hint':
+        return 'Anki fields that fill the selected area. Changes are saved together with the style.';
+      case 'anki_lapis_visual_mapping_none':
+        return 'This area is drawn by the template itself and has no field of its own.';
+      case 'anki_lapis_visual_color_custom':
+        return 'Custom';
+      case 'anki_lapis_visual_color_picker_title':
+        return 'Pick a color';
+      case 'video_scrape_tmdb_key_hint':
+        return 'Enter TMDB API key';
+      case 'video_scrape_tmdb_key_required':
+        return 'TMDB requires an API key';
+      case 'video_scrape_tmdb_key_save':
+        return 'Save';
+      case 'video_scrape_tmdb_key_empty':
+        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+      case 'download_detail_tab_overview':
+        return 'Overview';
+      case 'download_detail_tab_files':
+        return 'Files';
+      case 'download_detail_tab_peers':
+        return 'Peers';
+      case 'download_detail_tab_trackers':
+        return 'Trackers';
+      case 'download_detail_backend_unsupported':
+        return 'Not supported by current download backend';
+      case 'download_detail_task_gone':
+        return 'Task not found in backend';
+      case 'download_detail_section_transfer':
+        return 'Transfer';
+      case 'download_detail_section_network':
+        return 'Network';
+      case 'download_detail_seeds_label':
+        return 'Seeds';
+      case 'download_detail_leechers_label':
+        return 'Leechers';
+      case 'download_detail_connections_label':
+        return 'Connections';
+      case 'download_detail_time_active':
+        return 'Active time';
+      case 'download_detail_time_seeding':
+        return 'Seeding time';
+      case 'download_detail_listen_port':
+        return 'Listen port';
+      case 'download_detail_dht_nodes':
+        return 'DHT nodes';
+      case 'download_detail_port_mapping':
+        return 'Port mapping';
+      case 'download_detail_session_rates':
+        return 'Session rates';
+      case 'download_detail_pieces_label':
+        return 'Pieces';
+      case 'download_detail_priority_skip':
+        return 'Don\'t download';
+      case 'download_detail_priority_normal':
+        return 'Normal';
+      case 'download_detail_priority_high':
+        return 'High';
+      case 'download_detail_tracker_working':
+        return 'Working';
+      case 'download_detail_tracker_updating':
+        return 'Updating';
+      case 'download_detail_tracker_not_contacted':
+        return 'Not contacted yet';
+      case 'download_detail_tracker_not_working':
+        return 'Not working';
+      case 'download_detail_tracker_disabled':
+        return 'Disabled';
+      case 'download_detail_no_peers':
+        return 'No connected peers';
+      case 'download_detail_no_trackers':
+        return 'No trackers';
       default:
         return null;
     }
@@ -202431,12 +205458,6 @@ extension on _StringsVi {
         return 'Synopsis';
       case 'video_scrape_tags':
         return 'Tags';
-      case 'video_scrape_tmdb_key_hint':
-        return 'Enter TMDB API Key';
-      case 'video_scrape_tmdb_key_required':
-        return 'TMDB requires an API key';
-      case 'video_scrape_tmdb_key_save':
-        return 'Save';
       case 'video_scrape_use':
         return 'Use';
       case 'video_scrape_view_subject':
@@ -203396,13 +206417,11 @@ extension on _StringsVi {
         return ({required Object count, required Object languages}) =>
             '${count} subtitles available · ${languages}';
       case 'video_scrape_manual_match_hint':
-        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. All available sources are searched together and results are ranked by match confidence.';
       case 'video_scrape_collection_match_hint':
-        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. All available sources are searched together and results are ranked by match confidence.';
       case 'video_scrape_apply_to_collection_hint':
         return 'This writes the same cover to every episode. Leave it off unless that is intentional.';
-      case 'video_scrape_tmdb_key_empty':
-        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
       case 'manga_online_source_disabled':
         return 'This internet source is disabled. Enable it in Sources to browse the catalog.';
       case 'selection_web_search':
@@ -203481,9 +206500,9 @@ extension on _StringsVi {
       case 'interconnect_peer_list_empty':
         return 'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
       case 'anki_lapis_visual_editor':
-        return 'Visual style editor';
+        return 'Visual editor';
       case 'anki_lapis_visual_editor_hint':
-        return 'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+        return 'Preview the Lapis card, then change each area\'s style, position and field mapping without writing CSS.';
       case 'anki_lapis_visual_front':
         return 'Front';
       case 'anki_lapis_visual_back':
@@ -203782,6 +206801,110 @@ extension on _StringsVi {
         return 'All';
       case 'media_source_local_roots':
         return 'Local scan roots';
+      case 'video_setting_tmdb_key':
+        return 'Custom TMDB API key';
+      case 'video_setting_tmdb_key_hint':
+        return 'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
+      case 'about_tmdb_attribution':
+        return 'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+      case 'anki_lapis_visual_layout':
+        return 'Layout';
+      case 'anki_lapis_visual_layout_hint':
+        return 'Uses Lapis\' own layout switches, so desktop and mobile Anki both follow it.';
+      case 'anki_lapis_visual_layout_sentence':
+        return 'Sentence position';
+      case 'anki_lapis_visual_layout_sentence_above':
+        return 'Above definitions';
+      case 'anki_lapis_visual_layout_sentence_below':
+        return 'Below definitions';
+      case 'anki_lapis_visual_layout_picture':
+        return 'Image position';
+      case 'anki_lapis_visual_layout_picture_right':
+        return 'Right of the word';
+      case 'anki_lapis_visual_layout_picture_left':
+        return 'Left of the word';
+      case 'anki_lapis_visual_layout_picture_alt':
+        return 'Inside the sentence';
+      case 'anki_lapis_visual_layout_audio':
+        return 'Audio buttons';
+      case 'anki_lapis_visual_layout_audio_header':
+        return 'Next to the reading';
+      case 'anki_lapis_visual_layout_audio_fixed':
+        return 'Pinned to the bottom';
+      case 'anki_lapis_visual_layout_audio_alt':
+        return 'Inside the sentence';
+      case 'anki_lapis_visual_mapping_hint':
+        return 'Anki fields that fill the selected area. Changes are saved together with the style.';
+      case 'anki_lapis_visual_mapping_none':
+        return 'This area is drawn by the template itself and has no field of its own.';
+      case 'anki_lapis_visual_color_custom':
+        return 'Custom';
+      case 'anki_lapis_visual_color_picker_title':
+        return 'Pick a color';
+      case 'video_scrape_tmdb_key_hint':
+        return 'Enter TMDB API key';
+      case 'video_scrape_tmdb_key_required':
+        return 'TMDB requires an API key';
+      case 'video_scrape_tmdb_key_save':
+        return 'Save';
+      case 'video_scrape_tmdb_key_empty':
+        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+      case 'download_detail_tab_overview':
+        return 'Overview';
+      case 'download_detail_tab_files':
+        return 'Files';
+      case 'download_detail_tab_peers':
+        return 'Peers';
+      case 'download_detail_tab_trackers':
+        return 'Trackers';
+      case 'download_detail_backend_unsupported':
+        return 'Not supported by current download backend';
+      case 'download_detail_task_gone':
+        return 'Task not found in backend';
+      case 'download_detail_section_transfer':
+        return 'Transfer';
+      case 'download_detail_section_network':
+        return 'Network';
+      case 'download_detail_seeds_label':
+        return 'Seeds';
+      case 'download_detail_leechers_label':
+        return 'Leechers';
+      case 'download_detail_connections_label':
+        return 'Connections';
+      case 'download_detail_time_active':
+        return 'Active time';
+      case 'download_detail_time_seeding':
+        return 'Seeding time';
+      case 'download_detail_listen_port':
+        return 'Listen port';
+      case 'download_detail_dht_nodes':
+        return 'DHT nodes';
+      case 'download_detail_port_mapping':
+        return 'Port mapping';
+      case 'download_detail_session_rates':
+        return 'Session rates';
+      case 'download_detail_pieces_label':
+        return 'Pieces';
+      case 'download_detail_priority_skip':
+        return 'Don\'t download';
+      case 'download_detail_priority_normal':
+        return 'Normal';
+      case 'download_detail_priority_high':
+        return 'High';
+      case 'download_detail_tracker_working':
+        return 'Working';
+      case 'download_detail_tracker_updating':
+        return 'Updating';
+      case 'download_detail_tracker_not_contacted':
+        return 'Not contacted yet';
+      case 'download_detail_tracker_not_working':
+        return 'Not working';
+      case 'download_detail_tracker_disabled':
+        return 'Disabled';
+      case 'download_detail_no_peers':
+        return 'No connected peers';
+      case 'download_detail_no_trackers':
+        return 'No trackers';
       default:
         return null;
     }
@@ -208473,12 +211596,6 @@ extension on _StringsZhCn {
         return '简介';
       case 'video_scrape_tags':
         return '标签';
-      case 'video_scrape_tmdb_key_hint':
-        return '输入 TMDB API Key';
-      case 'video_scrape_tmdb_key_required':
-        return 'TMDB 需要 API Key';
-      case 'video_scrape_tmdb_key_save':
-        return '保存';
       case 'video_scrape_use':
         return '使用';
       case 'video_scrape_view_subject':
@@ -209429,13 +212546,11 @@ extension on _StringsZhCn {
         return ({required Object count, required Object languages}) =>
             '有 ${count} 个字幕 · ${languages}';
       case 'video_scrape_manual_match_hint':
-        return '手动匹配会替换本集封面，并保存来源映射和条目资料。切换来源后，点“搜索”才会请求该来源。';
+        return '手动匹配会替换本集封面，并保存来源映射和条目资料。会同时搜索全部可用来源，结果按匹配度排序。';
       case 'video_scrape_collection_match_hint':
-        return '这里只替换合集封面，不会修改各集封面或条目资料。切换来源后，点“搜索”才会请求该来源。';
+        return '这里只替换合集封面，不会修改各集封面或条目资料。会同时搜索全部可用来源，结果按匹配度排序。';
       case 'video_scrape_apply_to_collection_hint':
         return '这会把同一张封面写到每一集；只有确实需要统一单集封面时才开启。';
-      case 'video_scrape_tmdb_key_empty':
-        return '先保存 TMDB API Key，再点“搜索”。这里不会混入其他来源的结果。';
       case 'manga_online_source_disabled':
         return '此互联网来源已关闭，请在「来源」中开启后浏览目录。';
       case 'selection_web_search':
@@ -209512,9 +212627,9 @@ extension on _StringsZhCn {
       case 'interconnect_peer_list_empty':
         return '尚未添加任何对端。可在下方的局域网设备列表中点击发现的设备自动配对，或手动添加对端地址。';
       case 'anki_lapis_visual_editor':
-        return '可视化样式编辑';
+        return '可视化编辑';
       case 'anki_lapis_visual_editor_hint':
-        return '预览 Lapis 卡片，选择字段后直接调整样式，无需手写 CSS。';
+        return '预览 Lapis 卡片，选中区域后直接改样式、位置和字段映射，无需手写 CSS。';
       case 'anki_lapis_visual_front':
         return '正面';
       case 'anki_lapis_visual_back':
@@ -209812,6 +212927,110 @@ extension on _StringsZhCn {
         return '全部';
       case 'media_source_local_roots':
         return '本地扫描根';
+      case 'video_setting_tmdb_key':
+        return '自定义 TMDB API Key';
+      case 'video_setting_tmdb_key_hint':
+        return '可留空，默认用内置 Key。仅当刮削失效或你想用自己的配额时才需要填写。';
+      case 'about_tmdb_attribution':
+        return 'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+      case 'anki_lapis_visual_layout':
+        return '布局';
+      case 'anki_lapis_visual_layout_hint':
+        return '复用 Lapis 自带的布局开关，桌面与手机 Anki 同时生效。';
+      case 'anki_lapis_visual_layout_sentence':
+        return '例句位置';
+      case 'anki_lapis_visual_layout_sentence_above':
+        return '释义框上方';
+      case 'anki_lapis_visual_layout_sentence_below':
+        return '释义框下方';
+      case 'anki_lapis_visual_layout_picture':
+        return '图片位置';
+      case 'anki_lapis_visual_layout_picture_right':
+        return '单词右侧';
+      case 'anki_lapis_visual_layout_picture_left':
+        return '单词左侧';
+      case 'anki_lapis_visual_layout_picture_alt':
+        return '例句内';
+      case 'anki_lapis_visual_layout_audio':
+        return '音频按钮';
+      case 'anki_lapis_visual_layout_audio_header':
+        return '读音旁';
+      case 'anki_lapis_visual_layout_audio_fixed':
+        return '固定在底部';
+      case 'anki_lapis_visual_layout_audio_alt':
+        return '例句内';
+      case 'anki_lapis_visual_mapping_hint':
+        return '填充选中区域的 Anki 字段；改动随样式一起保存。';
+      case 'anki_lapis_visual_mapping_none':
+        return '该区域由模板自己绘制，没有对应字段。';
+      case 'anki_lapis_visual_color_custom':
+        return '自定义';
+      case 'anki_lapis_visual_color_picker_title':
+        return '选择颜色';
+      case 'video_scrape_tmdb_key_hint':
+        return '输入 TMDB API Key';
+      case 'video_scrape_tmdb_key_required':
+        return 'TMDB 需要 API Key';
+      case 'video_scrape_tmdb_key_save':
+        return '保存';
+      case 'video_scrape_tmdb_key_empty':
+        return '先保存 TMDB API Key，再点“搜索”。这里不会混入其他来源的结果。';
+      case 'download_detail_tab_overview':
+        return '总览';
+      case 'download_detail_tab_files':
+        return '文件';
+      case 'download_detail_tab_peers':
+        return '节点';
+      case 'download_detail_tab_trackers':
+        return 'Tracker';
+      case 'download_detail_backend_unsupported':
+        return '当前下载后端不支持';
+      case 'download_detail_task_gone':
+        return '后端中找不到该任务';
+      case 'download_detail_section_transfer':
+        return '传输';
+      case 'download_detail_section_network':
+        return '网络';
+      case 'download_detail_seeds_label':
+        return '做种';
+      case 'download_detail_leechers_label':
+        return '下载者';
+      case 'download_detail_connections_label':
+        return '连接数';
+      case 'download_detail_time_active':
+        return '活跃时长';
+      case 'download_detail_time_seeding':
+        return '做种时长';
+      case 'download_detail_listen_port':
+        return '监听端口';
+      case 'download_detail_dht_nodes':
+        return 'DHT 节点';
+      case 'download_detail_port_mapping':
+        return '端口映射';
+      case 'download_detail_session_rates':
+        return '会话速率';
+      case 'download_detail_pieces_label':
+        return '分片';
+      case 'download_detail_priority_skip':
+        return '不下载';
+      case 'download_detail_priority_normal':
+        return '普通';
+      case 'download_detail_priority_high':
+        return '高';
+      case 'download_detail_tracker_working':
+        return '工作中';
+      case 'download_detail_tracker_updating':
+        return '更新中';
+      case 'download_detail_tracker_not_contacted':
+        return '尚未联系';
+      case 'download_detail_tracker_not_working':
+        return '不工作';
+      case 'download_detail_tracker_disabled':
+        return '已禁用';
+      case 'download_detail_no_peers':
+        return '暂无已连接节点';
+      case 'download_detail_no_trackers':
+        return '无 Tracker';
       default:
         return null;
     }
@@ -214520,12 +217739,6 @@ extension on _StringsZhHk {
         return 'Synopsis';
       case 'video_scrape_tags':
         return 'Tags';
-      case 'video_scrape_tmdb_key_hint':
-        return 'Enter TMDB API Key';
-      case 'video_scrape_tmdb_key_required':
-        return 'TMDB requires an API key';
-      case 'video_scrape_tmdb_key_save':
-        return 'Save';
       case 'video_scrape_use':
         return 'Use';
       case 'video_scrape_view_subject':
@@ -215482,13 +218695,11 @@ extension on _StringsZhHk {
         return ({required Object count, required Object languages}) =>
             '${count} subtitles available · ${languages}';
       case 'video_scrape_manual_match_hint':
-        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. Switching sources does not search until you press Search.';
+        return 'Manual matching replaces this episode cover and saves its source mapping and title metadata. All available sources are searched together and results are ranked by match confidence.';
       case 'video_scrape_collection_match_hint':
-        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. Switching sources does not search until you press Search.';
+        return 'This only replaces the collection cover. Episode covers and title metadata are not changed. All available sources are searched together and results are ranked by match confidence.';
       case 'video_scrape_apply_to_collection_hint':
         return 'This writes the same cover to every episode. Leave it off unless that is intentional.';
-      case 'video_scrape_tmdb_key_empty':
-        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
       case 'manga_online_source_disabled':
         return 'This internet source is disabled. Enable it in Sources to browse the catalog.';
       case 'selection_web_search':
@@ -215567,9 +218778,9 @@ extension on _StringsZhHk {
       case 'interconnect_peer_list_empty':
         return 'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
       case 'anki_lapis_visual_editor':
-        return 'Visual style editor';
+        return 'Visual editor';
       case 'anki_lapis_visual_editor_hint':
-        return 'Preview the Lapis card, select a field, and adjust its style without writing CSS.';
+        return 'Preview the Lapis card, then change each area\'s style, position and field mapping without writing CSS.';
       case 'anki_lapis_visual_front':
         return 'Front';
       case 'anki_lapis_visual_back':
@@ -215868,6 +219079,110 @@ extension on _StringsZhHk {
         return 'All';
       case 'media_source_local_roots':
         return 'Local scan roots';
+      case 'video_setting_tmdb_key':
+        return 'Custom TMDB API key';
+      case 'video_setting_tmdb_key_hint':
+        return 'Optional. Leave empty to use the built-in key. Fill in your own only if scraping stops working or you want to use your own quota.';
+      case 'about_tmdb_attribution':
+        return 'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+      case 'anki_lapis_visual_layout':
+        return 'Layout';
+      case 'anki_lapis_visual_layout_hint':
+        return 'Uses Lapis\' own layout switches, so desktop and mobile Anki both follow it.';
+      case 'anki_lapis_visual_layout_sentence':
+        return 'Sentence position';
+      case 'anki_lapis_visual_layout_sentence_above':
+        return 'Above definitions';
+      case 'anki_lapis_visual_layout_sentence_below':
+        return 'Below definitions';
+      case 'anki_lapis_visual_layout_picture':
+        return 'Image position';
+      case 'anki_lapis_visual_layout_picture_right':
+        return 'Right of the word';
+      case 'anki_lapis_visual_layout_picture_left':
+        return 'Left of the word';
+      case 'anki_lapis_visual_layout_picture_alt':
+        return 'Inside the sentence';
+      case 'anki_lapis_visual_layout_audio':
+        return 'Audio buttons';
+      case 'anki_lapis_visual_layout_audio_header':
+        return 'Next to the reading';
+      case 'anki_lapis_visual_layout_audio_fixed':
+        return 'Pinned to the bottom';
+      case 'anki_lapis_visual_layout_audio_alt':
+        return 'Inside the sentence';
+      case 'anki_lapis_visual_mapping_hint':
+        return 'Anki fields that fill the selected area. Changes are saved together with the style.';
+      case 'anki_lapis_visual_mapping_none':
+        return 'This area is drawn by the template itself and has no field of its own.';
+      case 'anki_lapis_visual_color_custom':
+        return 'Custom';
+      case 'anki_lapis_visual_color_picker_title':
+        return 'Pick a color';
+      case 'video_scrape_tmdb_key_hint':
+        return 'Enter TMDB API key';
+      case 'video_scrape_tmdb_key_required':
+        return 'TMDB requires an API key';
+      case 'video_scrape_tmdb_key_save':
+        return 'Save';
+      case 'video_scrape_tmdb_key_empty':
+        return 'Save a TMDB API key, then press Search. Results from other sources are not shown here.';
+      case 'download_detail_tab_overview':
+        return 'Overview';
+      case 'download_detail_tab_files':
+        return 'Files';
+      case 'download_detail_tab_peers':
+        return 'Peers';
+      case 'download_detail_tab_trackers':
+        return 'Trackers';
+      case 'download_detail_backend_unsupported':
+        return 'Not supported by current download backend';
+      case 'download_detail_task_gone':
+        return 'Task not found in backend';
+      case 'download_detail_section_transfer':
+        return 'Transfer';
+      case 'download_detail_section_network':
+        return 'Network';
+      case 'download_detail_seeds_label':
+        return 'Seeds';
+      case 'download_detail_leechers_label':
+        return 'Leechers';
+      case 'download_detail_connections_label':
+        return 'Connections';
+      case 'download_detail_time_active':
+        return 'Active time';
+      case 'download_detail_time_seeding':
+        return 'Seeding time';
+      case 'download_detail_listen_port':
+        return 'Listen port';
+      case 'download_detail_dht_nodes':
+        return 'DHT nodes';
+      case 'download_detail_port_mapping':
+        return 'Port mapping';
+      case 'download_detail_session_rates':
+        return 'Session rates';
+      case 'download_detail_pieces_label':
+        return 'Pieces';
+      case 'download_detail_priority_skip':
+        return 'Don\'t download';
+      case 'download_detail_priority_normal':
+        return 'Normal';
+      case 'download_detail_priority_high':
+        return 'High';
+      case 'download_detail_tracker_working':
+        return 'Working';
+      case 'download_detail_tracker_updating':
+        return 'Updating';
+      case 'download_detail_tracker_not_contacted':
+        return 'Not contacted yet';
+      case 'download_detail_tracker_not_working':
+        return 'Not working';
+      case 'download_detail_tracker_disabled':
+        return 'Disabled';
+      case 'download_detail_no_peers':
+        return 'No connected peers';
+      case 'download_detail_no_trackers':
+        return 'No trackers';
       default:
         return null;
     }
