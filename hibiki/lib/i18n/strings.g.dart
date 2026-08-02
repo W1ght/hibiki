@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 52326 (3078 per locale)
+/// Strings: 52343 (3079 per locale)
 ///
-/// Built on 2026-08-02 at 06:53 UTC
+/// Built on 2026-08-02 at 07:05 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -4139,6 +4139,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get manga_ocr_wizard_already_ocred =>
       'This volume already has OCR data on every page. Running OCR again would overwrite it.';
   String get shortcut_scope_universal => 'Back / Exit';
+  String get game_attach_and_capture => 'Attach and capture';
 }
 
 // Path: <root>
@@ -11205,6 +11206,8 @@ class _StringsAr extends _StringsEn {
       'This volume already has OCR data on every page. Running OCR again would overwrite it.';
   @override
   String get shortcut_scope_universal => 'Back / Exit';
+  @override
+  String get game_attach_and_capture => 'Attach and capture';
 }
 
 // Path: <root>
@@ -18338,6 +18341,8 @@ class _StringsDe extends _StringsEn {
       'This volume already has OCR data on every page. Running OCR again would overwrite it.';
   @override
   String get shortcut_scope_universal => 'Back / Exit';
+  @override
+  String get game_attach_and_capture => 'Attach and capture';
 }
 
 // Path: <root>
@@ -25486,6 +25491,8 @@ class _StringsEs extends _StringsEn {
       'This volume already has OCR data on every page. Running OCR again would overwrite it.';
   @override
   String get shortcut_scope_universal => 'Back / Exit';
+  @override
+  String get game_attach_and_capture => 'Attach and capture';
 }
 
 // Path: <root>
@@ -32646,6 +32653,8 @@ class _StringsFr extends _StringsEn {
       'This volume already has OCR data on every page. Running OCR again would overwrite it.';
   @override
   String get shortcut_scope_universal => 'Back / Exit';
+  @override
+  String get game_attach_and_capture => 'Attach and capture';
 }
 
 // Path: <root>
@@ -39735,6 +39744,8 @@ class _StringsId extends _StringsEn {
       'This volume already has OCR data on every page. Running OCR again would overwrite it.';
   @override
   String get shortcut_scope_universal => 'Back / Exit';
+  @override
+  String get game_attach_and_capture => 'Attach and capture';
 }
 
 // Path: <root>
@@ -46870,6 +46881,8 @@ class _StringsIt extends _StringsEn {
       'This volume already has OCR data on every page. Running OCR again would overwrite it.';
   @override
   String get shortcut_scope_universal => 'Back / Exit';
+  @override
+  String get game_attach_and_capture => 'Attach and capture';
 }
 
 // Path: <root>
@@ -53822,6 +53835,8 @@ class _StringsJa extends _StringsEn {
       'This volume already has OCR data on every page. Running OCR again would overwrite it.';
   @override
   String get shortcut_scope_universal => 'Back / Exit';
+  @override
+  String get game_attach_and_capture => 'Attach and capture';
 }
 
 // Path: <root>
@@ -60776,6 +60791,8 @@ class _StringsKo extends _StringsEn {
       'This volume already has OCR data on every page. Running OCR again would overwrite it.';
   @override
   String get shortcut_scope_universal => 'Back / Exit';
+  @override
+  String get game_attach_and_capture => 'Attach and capture';
 }
 
 // Path: <root>
@@ -67891,6 +67908,8 @@ class _StringsNl extends _StringsEn {
       'This volume already has OCR data on every page. Running OCR again would overwrite it.';
   @override
   String get shortcut_scope_universal => 'Back / Exit';
+  @override
+  String get game_attach_and_capture => 'Attach and capture';
 }
 
 // Path: <root>
@@ -75019,6 +75038,8 @@ class _StringsPtBr extends _StringsEn {
       'This volume already has OCR data on every page. Running OCR again would overwrite it.';
   @override
   String get shortcut_scope_universal => 'Back / Exit';
+  @override
+  String get game_attach_and_capture => 'Attach and capture';
 }
 
 // Path: <root>
@@ -82131,6 +82152,8 @@ class _StringsRu extends _StringsEn {
       'This volume already has OCR data on every page. Running OCR again would overwrite it.';
   @override
   String get shortcut_scope_universal => 'Back / Exit';
+  @override
+  String get game_attach_and_capture => 'Attach and capture';
 }
 
 // Path: <root>
@@ -89191,6 +89214,8 @@ class _StringsTh extends _StringsEn {
       'This volume already has OCR data on every page. Running OCR again would overwrite it.';
   @override
   String get shortcut_scope_universal => 'Back / Exit';
+  @override
+  String get game_attach_and_capture => 'Attach and capture';
 }
 
 // Path: <root>
@@ -96283,6 +96308,8 @@ class _StringsTr extends _StringsEn {
       'This volume already has OCR data on every page. Running OCR again would overwrite it.';
   @override
   String get shortcut_scope_universal => 'Back / Exit';
+  @override
+  String get game_attach_and_capture => 'Attach and capture';
 }
 
 // Path: <root>
@@ -103360,6 +103387,8 @@ class _StringsVi extends _StringsEn {
       'This volume already has OCR data on every page. Running OCR again would overwrite it.';
   @override
   String get shortcut_scope_universal => 'Back / Exit';
+  @override
+  String get game_attach_and_capture => 'Attach and capture';
 }
 
 // Path: <root>
@@ -109945,6 +109974,8 @@ class _StringsZhCn extends _StringsEn {
       '本卷每一页都已有 OCR 数据，无需再跑（重跑会覆盖现有数据）。';
   @override
   String get shortcut_scope_universal => '返回·退出';
+  @override
+  String get game_attach_and_capture => '附着并捕获';
 }
 
 // Path: <root>
@@ -116818,6 +116849,8 @@ class _StringsZhHk extends _StringsEn {
       'This volume already has OCR data on every page. Running OCR again would overwrite it.';
   @override
   String get shortcut_scope_universal => '返回·退出';
+  @override
+  String get game_attach_and_capture => 'Attach and capture';
 }
 
 /// Flat map(s) containing all translations.
@@ -123134,6 +123167,8 @@ extension on _StringsEn {
         return 'This volume already has OCR data on every page. Running OCR again would overwrite it.';
       case 'shortcut_scope_universal':
         return 'Back / Exit';
+      case 'game_attach_and_capture':
+        return 'Attach and capture';
       default:
         return null;
     }
@@ -129448,6 +129483,8 @@ extension on _StringsAr {
         return 'This volume already has OCR data on every page. Running OCR again would overwrite it.';
       case 'shortcut_scope_universal':
         return 'Back / Exit';
+      case 'game_attach_and_capture':
+        return 'Attach and capture';
       default:
         return null;
     }
@@ -135784,6 +135821,8 @@ extension on _StringsDe {
         return 'This volume already has OCR data on every page. Running OCR again would overwrite it.';
       case 'shortcut_scope_universal':
         return 'Back / Exit';
+      case 'game_attach_and_capture':
+        return 'Attach and capture';
       default:
         return null;
     }
@@ -142119,6 +142158,8 @@ extension on _StringsEs {
         return 'This volume already has OCR data on every page. Running OCR again would overwrite it.';
       case 'shortcut_scope_universal':
         return 'Back / Exit';
+      case 'game_attach_and_capture':
+        return 'Attach and capture';
       default:
         return null;
     }
@@ -148460,6 +148501,8 @@ extension on _StringsFr {
         return 'This volume already has OCR data on every page. Running OCR again would overwrite it.';
       case 'shortcut_scope_universal':
         return 'Back / Exit';
+      case 'game_attach_and_capture':
+        return 'Attach and capture';
       default:
         return null;
     }
@@ -154783,6 +154826,8 @@ extension on _StringsId {
         return 'This volume already has OCR data on every page. Running OCR again would overwrite it.';
       case 'shortcut_scope_universal':
         return 'Back / Exit';
+      case 'game_attach_and_capture':
+        return 'Attach and capture';
       default:
         return null;
     }
@@ -161120,6 +161165,8 @@ extension on _StringsIt {
         return 'This volume already has OCR data on every page. Running OCR again would overwrite it.';
       case 'shortcut_scope_universal':
         return 'Back / Exit';
+      case 'game_attach_and_capture':
+        return 'Attach and capture';
       default:
         return null;
     }
@@ -167419,6 +167466,8 @@ extension on _StringsJa {
         return 'This volume already has OCR data on every page. Running OCR again would overwrite it.';
       case 'shortcut_scope_universal':
         return 'Back / Exit';
+      case 'game_attach_and_capture':
+        return 'Attach and capture';
       default:
         return null;
     }
@@ -173722,6 +173771,8 @@ extension on _StringsKo {
         return 'This volume already has OCR data on every page. Running OCR again would overwrite it.';
       case 'shortcut_scope_universal':
         return 'Back / Exit';
+      case 'game_attach_and_capture':
+        return 'Attach and capture';
       default:
         return null;
     }
@@ -180053,6 +180104,8 @@ extension on _StringsNl {
         return 'This volume already has OCR data on every page. Running OCR again would overwrite it.';
       case 'shortcut_scope_universal':
         return 'Back / Exit';
+      case 'game_attach_and_capture':
+        return 'Attach and capture';
       default:
         return null;
     }
@@ -186381,6 +186434,8 @@ extension on _StringsPtBr {
         return 'This volume already has OCR data on every page. Running OCR again would overwrite it.';
       case 'shortcut_scope_universal':
         return 'Back / Exit';
+      case 'game_attach_and_capture':
+        return 'Attach and capture';
       default:
         return null;
     }
@@ -192714,6 +192769,8 @@ extension on _StringsRu {
         return 'This volume already has OCR data on every page. Running OCR again would overwrite it.';
       case 'shortcut_scope_universal':
         return 'Back / Exit';
+      case 'game_attach_and_capture':
+        return 'Attach and capture';
       default:
         return null;
     }
@@ -199030,6 +199087,8 @@ extension on _StringsTh {
         return 'This volume already has OCR data on every page. Running OCR again would overwrite it.';
       case 'shortcut_scope_universal':
         return 'Back / Exit';
+      case 'game_attach_and_capture':
+        return 'Attach and capture';
       default:
         return null;
     }
@@ -205355,6 +205414,8 @@ extension on _StringsTr {
         return 'This volume already has OCR data on every page. Running OCR again would overwrite it.';
       case 'shortcut_scope_universal':
         return 'Back / Exit';
+      case 'game_attach_and_capture':
+        return 'Attach and capture';
       default:
         return null;
     }
@@ -211676,6 +211737,8 @@ extension on _StringsVi {
         return 'This volume already has OCR data on every page. Running OCR again would overwrite it.';
       case 'shortcut_scope_universal':
         return 'Back / Exit';
+      case 'game_attach_and_capture':
+        return 'Attach and capture';
       default:
         return null;
     }
@@ -217943,6 +218006,8 @@ extension on _StringsZhCn {
         return '本卷每一页都已有 OCR 数据，无需再跑（重跑会覆盖现有数据）。';
       case 'shortcut_scope_universal':
         return '返回·退出';
+      case 'game_attach_and_capture':
+        return '附着并捕获';
       default:
         return null;
     }
@@ -224237,6 +224302,8 @@ extension on _StringsZhHk {
         return 'This volume already has OCR data on every page. Running OCR again would overwrite it.';
       case 'shortcut_scope_universal':
         return '返回·退出';
+      case 'game_attach_and_capture':
+        return 'Attach and capture';
       default:
         return null;
     }
