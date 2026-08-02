@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 52309 (3077 per locale)
+/// Strings: 52343 (3079 per locale)
 ///
-/// Built on 2026-08-02 at 05:31 UTC
+/// Built on 2026-08-02 at 06:17 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -4135,6 +4135,11 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'This manga was imported from images, so there is no original book to convert back to.';
   String get book_convert_blocked_source_missing =>
       'The source files are gone from disk.';
+  String manga_online_retry_waiting(
+          {required Object attempt, required Object total}) =>
+      'Retrying automatically (${attempt}/${total})';
+  String get manga_ocr_wizard_already_ocred =>
+      'This volume already has OCR data on every page. Running OCR again would overwrite it.';
 }
 
 // Path: <root>
@@ -11196,6 +11201,13 @@ class _StringsAr extends _StringsEn {
   @override
   String get book_convert_blocked_source_missing =>
       'The source files are gone from disk.';
+  @override
+  String manga_online_retry_waiting(
+          {required Object attempt, required Object total}) =>
+      'Retrying automatically (${attempt}/${total})';
+  @override
+  String get manga_ocr_wizard_already_ocred =>
+      'This volume already has OCR data on every page. Running OCR again would overwrite it.';
 }
 
 // Path: <root>
@@ -18324,6 +18336,13 @@ class _StringsDe extends _StringsEn {
   @override
   String get book_convert_blocked_source_missing =>
       'The source files are gone from disk.';
+  @override
+  String manga_online_retry_waiting(
+          {required Object attempt, required Object total}) =>
+      'Retrying automatically (${attempt}/${total})';
+  @override
+  String get manga_ocr_wizard_already_ocred =>
+      'This volume already has OCR data on every page. Running OCR again would overwrite it.';
 }
 
 // Path: <root>
@@ -25467,6 +25486,13 @@ class _StringsEs extends _StringsEn {
   @override
   String get book_convert_blocked_source_missing =>
       'The source files are gone from disk.';
+  @override
+  String manga_online_retry_waiting(
+          {required Object attempt, required Object total}) =>
+      'Retrying automatically (${attempt}/${total})';
+  @override
+  String get manga_ocr_wizard_already_ocred =>
+      'This volume already has OCR data on every page. Running OCR again would overwrite it.';
 }
 
 // Path: <root>
@@ -32622,6 +32648,13 @@ class _StringsFr extends _StringsEn {
   @override
   String get book_convert_blocked_source_missing =>
       'The source files are gone from disk.';
+  @override
+  String manga_online_retry_waiting(
+          {required Object attempt, required Object total}) =>
+      'Retrying automatically (${attempt}/${total})';
+  @override
+  String get manga_ocr_wizard_already_ocred =>
+      'This volume already has OCR data on every page. Running OCR again would overwrite it.';
 }
 
 // Path: <root>
@@ -39706,6 +39739,13 @@ class _StringsId extends _StringsEn {
   @override
   String get book_convert_blocked_source_missing =>
       'The source files are gone from disk.';
+  @override
+  String manga_online_retry_waiting(
+          {required Object attempt, required Object total}) =>
+      'Retrying automatically (${attempt}/${total})';
+  @override
+  String get manga_ocr_wizard_already_ocred =>
+      'This volume already has OCR data on every page. Running OCR again would overwrite it.';
 }
 
 // Path: <root>
@@ -46836,6 +46876,13 @@ class _StringsIt extends _StringsEn {
   @override
   String get book_convert_blocked_source_missing =>
       'The source files are gone from disk.';
+  @override
+  String manga_online_retry_waiting(
+          {required Object attempt, required Object total}) =>
+      'Retrying automatically (${attempt}/${total})';
+  @override
+  String get manga_ocr_wizard_already_ocred =>
+      'This volume already has OCR data on every page. Running OCR again would overwrite it.';
 }
 
 // Path: <root>
@@ -53783,6 +53830,13 @@ class _StringsJa extends _StringsEn {
   @override
   String get book_convert_blocked_source_missing =>
       'The source files are gone from disk.';
+  @override
+  String manga_online_retry_waiting(
+          {required Object attempt, required Object total}) =>
+      'Retrying automatically (${attempt}/${total})';
+  @override
+  String get manga_ocr_wizard_already_ocred =>
+      'This volume already has OCR data on every page. Running OCR again would overwrite it.';
 }
 
 // Path: <root>
@@ -60732,6 +60786,13 @@ class _StringsKo extends _StringsEn {
   @override
   String get book_convert_blocked_source_missing =>
       'The source files are gone from disk.';
+  @override
+  String manga_online_retry_waiting(
+          {required Object attempt, required Object total}) =>
+      'Retrying automatically (${attempt}/${total})';
+  @override
+  String get manga_ocr_wizard_already_ocred =>
+      'This volume already has OCR data on every page. Running OCR again would overwrite it.';
 }
 
 // Path: <root>
@@ -67842,6 +67903,13 @@ class _StringsNl extends _StringsEn {
   @override
   String get book_convert_blocked_source_missing =>
       'The source files are gone from disk.';
+  @override
+  String manga_online_retry_waiting(
+          {required Object attempt, required Object total}) =>
+      'Retrying automatically (${attempt}/${total})';
+  @override
+  String get manga_ocr_wizard_already_ocred =>
+      'This volume already has OCR data on every page. Running OCR again would overwrite it.';
 }
 
 // Path: <root>
@@ -74965,6 +75033,13 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get book_convert_blocked_source_missing =>
       'The source files are gone from disk.';
+  @override
+  String manga_online_retry_waiting(
+          {required Object attempt, required Object total}) =>
+      'Retrying automatically (${attempt}/${total})';
+  @override
+  String get manga_ocr_wizard_already_ocred =>
+      'This volume already has OCR data on every page. Running OCR again would overwrite it.';
 }
 
 // Path: <root>
@@ -82072,6 +82147,13 @@ class _StringsRu extends _StringsEn {
   @override
   String get book_convert_blocked_source_missing =>
       'The source files are gone from disk.';
+  @override
+  String manga_online_retry_waiting(
+          {required Object attempt, required Object total}) =>
+      'Retrying automatically (${attempt}/${total})';
+  @override
+  String get manga_ocr_wizard_already_ocred =>
+      'This volume already has OCR data on every page. Running OCR again would overwrite it.';
 }
 
 // Path: <root>
@@ -89127,6 +89209,13 @@ class _StringsTh extends _StringsEn {
   @override
   String get book_convert_blocked_source_missing =>
       'The source files are gone from disk.';
+  @override
+  String manga_online_retry_waiting(
+          {required Object attempt, required Object total}) =>
+      'Retrying automatically (${attempt}/${total})';
+  @override
+  String get manga_ocr_wizard_already_ocred =>
+      'This volume already has OCR data on every page. Running OCR again would overwrite it.';
 }
 
 // Path: <root>
@@ -96214,6 +96303,13 @@ class _StringsTr extends _StringsEn {
   @override
   String get book_convert_blocked_source_missing =>
       'The source files are gone from disk.';
+  @override
+  String manga_online_retry_waiting(
+          {required Object attempt, required Object total}) =>
+      'Retrying automatically (${attempt}/${total})';
+  @override
+  String get manga_ocr_wizard_already_ocred =>
+      'This volume already has OCR data on every page. Running OCR again would overwrite it.';
 }
 
 // Path: <root>
@@ -103286,6 +103382,13 @@ class _StringsVi extends _StringsEn {
   @override
   String get book_convert_blocked_source_missing =>
       'The source files are gone from disk.';
+  @override
+  String manga_online_retry_waiting(
+          {required Object attempt, required Object total}) =>
+      'Retrying automatically (${attempt}/${total})';
+  @override
+  String get manga_ocr_wizard_already_ocred =>
+      'This volume already has OCR data on every page. Running OCR again would overwrite it.';
 }
 
 // Path: <root>
@@ -109866,6 +109969,13 @@ class _StringsZhCn extends _StringsEn {
   String get book_convert_blocked_no_original => '这本漫画是从图片导入的，没有可还原的原书。';
   @override
   String get book_convert_blocked_source_missing => '源文件已从磁盘上消失。';
+  @override
+  String manga_online_retry_waiting(
+          {required Object attempt, required Object total}) =>
+      '即将自动重试 (${attempt}/${total})';
+  @override
+  String get manga_ocr_wizard_already_ocred =>
+      '本卷每一页都已有 OCR 数据，无需再跑（重跑会覆盖现有数据）。';
 }
 
 // Path: <root>
@@ -116734,6 +116844,13 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get book_convert_blocked_source_missing =>
       'The source files are gone from disk.';
+  @override
+  String manga_online_retry_waiting(
+          {required Object attempt, required Object total}) =>
+      'Retrying automatically (${attempt}/${total})';
+  @override
+  String get manga_ocr_wizard_already_ocred =>
+      'This volume already has OCR data on every page. Running OCR again would overwrite it.';
 }
 
 /// Flat map(s) containing all translations.
@@ -123047,6 +123164,11 @@ extension on _StringsEn {
         return 'This manga was imported from images, so there is no original book to convert back to.';
       case 'book_convert_blocked_source_missing':
         return 'The source files are gone from disk.';
+      case 'manga_online_retry_waiting':
+        return ({required Object attempt, required Object total}) =>
+            'Retrying automatically (${attempt}/${total})';
+      case 'manga_ocr_wizard_already_ocred':
+        return 'This volume already has OCR data on every page. Running OCR again would overwrite it.';
       default:
         return null;
     }
@@ -129358,6 +129480,11 @@ extension on _StringsAr {
         return 'This manga was imported from images, so there is no original book to convert back to.';
       case 'book_convert_blocked_source_missing':
         return 'The source files are gone from disk.';
+      case 'manga_online_retry_waiting':
+        return ({required Object attempt, required Object total}) =>
+            'Retrying automatically (${attempt}/${total})';
+      case 'manga_ocr_wizard_already_ocred':
+        return 'This volume already has OCR data on every page. Running OCR again would overwrite it.';
       default:
         return null;
     }
@@ -135691,6 +135818,11 @@ extension on _StringsDe {
         return 'This manga was imported from images, so there is no original book to convert back to.';
       case 'book_convert_blocked_source_missing':
         return 'The source files are gone from disk.';
+      case 'manga_online_retry_waiting':
+        return ({required Object attempt, required Object total}) =>
+            'Retrying automatically (${attempt}/${total})';
+      case 'manga_ocr_wizard_already_ocred':
+        return 'This volume already has OCR data on every page. Running OCR again would overwrite it.';
       default:
         return null;
     }
@@ -142023,6 +142155,11 @@ extension on _StringsEs {
         return 'This manga was imported from images, so there is no original book to convert back to.';
       case 'book_convert_blocked_source_missing':
         return 'The source files are gone from disk.';
+      case 'manga_online_retry_waiting':
+        return ({required Object attempt, required Object total}) =>
+            'Retrying automatically (${attempt}/${total})';
+      case 'manga_ocr_wizard_already_ocred':
+        return 'This volume already has OCR data on every page. Running OCR again would overwrite it.';
       default:
         return null;
     }
@@ -148361,6 +148498,11 @@ extension on _StringsFr {
         return 'This manga was imported from images, so there is no original book to convert back to.';
       case 'book_convert_blocked_source_missing':
         return 'The source files are gone from disk.';
+      case 'manga_online_retry_waiting':
+        return ({required Object attempt, required Object total}) =>
+            'Retrying automatically (${attempt}/${total})';
+      case 'manga_ocr_wizard_already_ocred':
+        return 'This volume already has OCR data on every page. Running OCR again would overwrite it.';
       default:
         return null;
     }
@@ -154681,6 +154823,11 @@ extension on _StringsId {
         return 'This manga was imported from images, so there is no original book to convert back to.';
       case 'book_convert_blocked_source_missing':
         return 'The source files are gone from disk.';
+      case 'manga_online_retry_waiting':
+        return ({required Object attempt, required Object total}) =>
+            'Retrying automatically (${attempt}/${total})';
+      case 'manga_ocr_wizard_already_ocred':
+        return 'This volume already has OCR data on every page. Running OCR again would overwrite it.';
       default:
         return null;
     }
@@ -161015,6 +161162,11 @@ extension on _StringsIt {
         return 'This manga was imported from images, so there is no original book to convert back to.';
       case 'book_convert_blocked_source_missing':
         return 'The source files are gone from disk.';
+      case 'manga_online_retry_waiting':
+        return ({required Object attempt, required Object total}) =>
+            'Retrying automatically (${attempt}/${total})';
+      case 'manga_ocr_wizard_already_ocred':
+        return 'This volume already has OCR data on every page. Running OCR again would overwrite it.';
       default:
         return null;
     }
@@ -167311,6 +167463,11 @@ extension on _StringsJa {
         return 'This manga was imported from images, so there is no original book to convert back to.';
       case 'book_convert_blocked_source_missing':
         return 'The source files are gone from disk.';
+      case 'manga_online_retry_waiting':
+        return ({required Object attempt, required Object total}) =>
+            'Retrying automatically (${attempt}/${total})';
+      case 'manga_ocr_wizard_already_ocred':
+        return 'This volume already has OCR data on every page. Running OCR again would overwrite it.';
       default:
         return null;
     }
@@ -173611,6 +173768,11 @@ extension on _StringsKo {
         return 'This manga was imported from images, so there is no original book to convert back to.';
       case 'book_convert_blocked_source_missing':
         return 'The source files are gone from disk.';
+      case 'manga_online_retry_waiting':
+        return ({required Object attempt, required Object total}) =>
+            'Retrying automatically (${attempt}/${total})';
+      case 'manga_ocr_wizard_already_ocred':
+        return 'This volume already has OCR data on every page. Running OCR again would overwrite it.';
       default:
         return null;
     }
@@ -179939,6 +180101,11 @@ extension on _StringsNl {
         return 'This manga was imported from images, so there is no original book to convert back to.';
       case 'book_convert_blocked_source_missing':
         return 'The source files are gone from disk.';
+      case 'manga_online_retry_waiting':
+        return ({required Object attempt, required Object total}) =>
+            'Retrying automatically (${attempt}/${total})';
+      case 'manga_ocr_wizard_already_ocred':
+        return 'This volume already has OCR data on every page. Running OCR again would overwrite it.';
       default:
         return null;
     }
@@ -186264,6 +186431,11 @@ extension on _StringsPtBr {
         return 'This manga was imported from images, so there is no original book to convert back to.';
       case 'book_convert_blocked_source_missing':
         return 'The source files are gone from disk.';
+      case 'manga_online_retry_waiting':
+        return ({required Object attempt, required Object total}) =>
+            'Retrying automatically (${attempt}/${total})';
+      case 'manga_ocr_wizard_already_ocred':
+        return 'This volume already has OCR data on every page. Running OCR again would overwrite it.';
       default:
         return null;
     }
@@ -192594,6 +192766,11 @@ extension on _StringsRu {
         return 'This manga was imported from images, so there is no original book to convert back to.';
       case 'book_convert_blocked_source_missing':
         return 'The source files are gone from disk.';
+      case 'manga_online_retry_waiting':
+        return ({required Object attempt, required Object total}) =>
+            'Retrying automatically (${attempt}/${total})';
+      case 'manga_ocr_wizard_already_ocred':
+        return 'This volume already has OCR data on every page. Running OCR again would overwrite it.';
       default:
         return null;
     }
@@ -198907,6 +199084,11 @@ extension on _StringsTh {
         return 'This manga was imported from images, so there is no original book to convert back to.';
       case 'book_convert_blocked_source_missing':
         return 'The source files are gone from disk.';
+      case 'manga_online_retry_waiting':
+        return ({required Object attempt, required Object total}) =>
+            'Retrying automatically (${attempt}/${total})';
+      case 'manga_ocr_wizard_already_ocred':
+        return 'This volume already has OCR data on every page. Running OCR again would overwrite it.';
       default:
         return null;
     }
@@ -205229,6 +205411,11 @@ extension on _StringsTr {
         return 'This manga was imported from images, so there is no original book to convert back to.';
       case 'book_convert_blocked_source_missing':
         return 'The source files are gone from disk.';
+      case 'manga_online_retry_waiting':
+        return ({required Object attempt, required Object total}) =>
+            'Retrying automatically (${attempt}/${total})';
+      case 'manga_ocr_wizard_already_ocred':
+        return 'This volume already has OCR data on every page. Running OCR again would overwrite it.';
       default:
         return null;
     }
@@ -211547,6 +211734,11 @@ extension on _StringsVi {
         return 'This manga was imported from images, so there is no original book to convert back to.';
       case 'book_convert_blocked_source_missing':
         return 'The source files are gone from disk.';
+      case 'manga_online_retry_waiting':
+        return ({required Object attempt, required Object total}) =>
+            'Retrying automatically (${attempt}/${total})';
+      case 'manga_ocr_wizard_already_ocred':
+        return 'This volume already has OCR data on every page. Running OCR again would overwrite it.';
       default:
         return null;
     }
@@ -217811,6 +218003,11 @@ extension on _StringsZhCn {
         return '这本漫画是从图片导入的，没有可还原的原书。';
       case 'book_convert_blocked_source_missing':
         return '源文件已从磁盘上消失。';
+      case 'manga_online_retry_waiting':
+        return ({required Object attempt, required Object total}) =>
+            '即将自动重试 (${attempt}/${total})';
+      case 'manga_ocr_wizard_already_ocred':
+        return '本卷每一页都已有 OCR 数据，无需再跑（重跑会覆盖现有数据）。';
       default:
         return null;
     }
@@ -224102,6 +224299,11 @@ extension on _StringsZhHk {
         return 'This manga was imported from images, so there is no original book to convert back to.';
       case 'book_convert_blocked_source_missing':
         return 'The source files are gone from disk.';
+      case 'manga_online_retry_waiting':
+        return ({required Object attempt, required Object total}) =>
+            'Retrying automatically (${attempt}/${total})';
+      case 'manga_ocr_wizard_already_ocred':
+        return 'This volume already has OCR data on every page. Running OCR again would overwrite it.';
       default:
         return null;
     }
