@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 53159 (3127 per locale)
+/// Strings: 53227 (3131 per locale)
 ///
-/// Built on 2026-08-02 at 16:30 UTC
+/// Built on 2026-08-02 at 17:37 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -280,8 +280,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get anki_compact_glossaries_hint =>
       'Use compact format for glossary entries';
   String get anki_connect_api_key => 'API Key';
-  String get anki_connect_api_key_hint =>
-      'Leave empty unless AnkiConnect requires a key';
   String get anki_connect_host => 'Host';
   String get anki_connect_port => 'Port';
   String get anki_create_lapis => 'Create Lapis deck';
@@ -4207,6 +4205,15 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get game_audio_requires_thread =>
       'The audio capture source may be ready, but sentence audio does not exist until a thread is selected and a line is received.';
   String get game_session_waiting_thread => 'Waiting for a dialogue thread';
+  String get anki_connect_use_on_android => 'Use AnkiConnect on Android';
+  String get anki_connect_use_on_android_hint =>
+      'Use only on a trusted network. AnkiConnect uses cleartext HTTP; configure a matching API key, then refresh decks and note types after switching.';
+  String get anki_connect_api_key_hint =>
+      'Required for remote AnkiConnect; must match the key configured in the add-on';
+  String get anki_connect_android_api_key_required =>
+      'Configure a matching AnkiConnect API key before enabling the Android backend.';
+  String anki_connect_backend_switch_failed({required Object error}) =>
+      'Could not switch Anki backend: ${error}';
 }
 
 // Path: <root>
@@ -4394,9 +4401,6 @@ class _StringsAr extends _StringsEn {
       'استخدام تنسيق مختصر لإدخالات المعاني';
   @override
   String get anki_connect_api_key => 'مفتاح API';
-  @override
-  String get anki_connect_api_key_hint =>
-      'اتركه فارغًا ما لم يطلب AnkiConnect مفتاحًا';
   @override
   String get anki_connect_host => 'المضيف';
   @override
@@ -11390,6 +11394,20 @@ class _StringsAr extends _StringsEn {
       'The audio capture source may be ready, but sentence audio does not exist until a thread is selected and a line is received.';
   @override
   String get game_session_waiting_thread => 'Waiting for a dialogue thread';
+  @override
+  String get anki_connect_use_on_android => 'Use AnkiConnect on Android';
+  @override
+  String get anki_connect_use_on_android_hint =>
+      'Use only on a trusted network. AnkiConnect uses cleartext HTTP; configure a matching API key, then refresh decks and note types after switching.';
+  @override
+  String get anki_connect_api_key_hint =>
+      'Required for remote AnkiConnect; must match the key configured in the add-on';
+  @override
+  String get anki_connect_android_api_key_required =>
+      'Configure a matching AnkiConnect API key before enabling the Android backend.';
+  @override
+  String anki_connect_backend_switch_failed({required Object error}) =>
+      'Could not switch Anki backend: ${error}';
 }
 
 // Path: <root>
@@ -11577,9 +11595,6 @@ class _StringsDe extends _StringsEn {
       'Kompaktes Format für Glossareinträge verwenden';
   @override
   String get anki_connect_api_key => 'API-Schlüssel';
-  @override
-  String get anki_connect_api_key_hint =>
-      'Leer lassen, sofern AnkiConnect keinen Schlüssel erfordert';
   @override
   String get anki_connect_host => 'Host';
   @override
@@ -18640,6 +18655,20 @@ class _StringsDe extends _StringsEn {
       'The audio capture source may be ready, but sentence audio does not exist until a thread is selected and a line is received.';
   @override
   String get game_session_waiting_thread => 'Waiting for a dialogue thread';
+  @override
+  String get anki_connect_use_on_android => 'Use AnkiConnect on Android';
+  @override
+  String get anki_connect_use_on_android_hint =>
+      'Use only on a trusted network. AnkiConnect uses cleartext HTTP; configure a matching API key, then refresh decks and note types after switching.';
+  @override
+  String get anki_connect_api_key_hint =>
+      'Required for remote AnkiConnect; must match the key configured in the add-on';
+  @override
+  String get anki_connect_android_api_key_required =>
+      'Configure a matching AnkiConnect API key before enabling the Android backend.';
+  @override
+  String anki_connect_backend_switch_failed({required Object error}) =>
+      'Could not switch Anki backend: ${error}';
 }
 
 // Path: <root>
@@ -18827,9 +18856,6 @@ class _StringsEs extends _StringsEn {
       'Usar formato compacto para las entradas del glosario';
   @override
   String get anki_connect_api_key => 'Clave de API';
-  @override
-  String get anki_connect_api_key_hint =>
-      'Déjalo vacío salvo que AnkiConnect requiera una clave';
   @override
   String get anki_connect_host => 'Servidor';
   @override
@@ -25905,6 +25931,20 @@ class _StringsEs extends _StringsEn {
       'The audio capture source may be ready, but sentence audio does not exist until a thread is selected and a line is received.';
   @override
   String get game_session_waiting_thread => 'Waiting for a dialogue thread';
+  @override
+  String get anki_connect_use_on_android => 'Use AnkiConnect on Android';
+  @override
+  String get anki_connect_use_on_android_hint =>
+      'Use only on a trusted network. AnkiConnect uses cleartext HTTP; configure a matching API key, then refresh decks and note types after switching.';
+  @override
+  String get anki_connect_api_key_hint =>
+      'Required for remote AnkiConnect; must match the key configured in the add-on';
+  @override
+  String get anki_connect_android_api_key_required =>
+      'Configure a matching AnkiConnect API key before enabling the Android backend.';
+  @override
+  String anki_connect_backend_switch_failed({required Object error}) =>
+      'Could not switch Anki backend: ${error}';
 }
 
 // Path: <root>
@@ -26092,9 +26132,6 @@ class _StringsFr extends _StringsEn {
       'Utiliser un format compact pour les entrées de glossaire';
   @override
   String get anki_connect_api_key => 'Clé API';
-  @override
-  String get anki_connect_api_key_hint =>
-      'Laisser vide sauf si AnkiConnect requiert une clé';
   @override
   String get anki_connect_host => 'Hôte';
   @override
@@ -33182,6 +33219,20 @@ class _StringsFr extends _StringsEn {
       'The audio capture source may be ready, but sentence audio does not exist until a thread is selected and a line is received.';
   @override
   String get game_session_waiting_thread => 'Waiting for a dialogue thread';
+  @override
+  String get anki_connect_use_on_android => 'Use AnkiConnect on Android';
+  @override
+  String get anki_connect_use_on_android_hint =>
+      'Use only on a trusted network. AnkiConnect uses cleartext HTTP; configure a matching API key, then refresh decks and note types after switching.';
+  @override
+  String get anki_connect_api_key_hint =>
+      'Required for remote AnkiConnect; must match the key configured in the add-on';
+  @override
+  String get anki_connect_android_api_key_required =>
+      'Configure a matching AnkiConnect API key before enabling the Android backend.';
+  @override
+  String anki_connect_backend_switch_failed({required Object error}) =>
+      'Could not switch Anki backend: ${error}';
 }
 
 // Path: <root>
@@ -33369,9 +33420,6 @@ class _StringsId extends _StringsEn {
       'Gunakan format ringkas untuk entri glosarium';
   @override
   String get anki_connect_api_key => 'Kunci API';
-  @override
-  String get anki_connect_api_key_hint =>
-      'Biarkan kosong kecuali AnkiConnect memerlukan kunci';
   @override
   String get anki_connect_host => 'Host';
   @override
@@ -40388,6 +40436,20 @@ class _StringsId extends _StringsEn {
       'The audio capture source may be ready, but sentence audio does not exist until a thread is selected and a line is received.';
   @override
   String get game_session_waiting_thread => 'Waiting for a dialogue thread';
+  @override
+  String get anki_connect_use_on_android => 'Use AnkiConnect on Android';
+  @override
+  String get anki_connect_use_on_android_hint =>
+      'Use only on a trusted network. AnkiConnect uses cleartext HTTP; configure a matching API key, then refresh decks and note types after switching.';
+  @override
+  String get anki_connect_api_key_hint =>
+      'Required for remote AnkiConnect; must match the key configured in the add-on';
+  @override
+  String get anki_connect_android_api_key_required =>
+      'Configure a matching AnkiConnect API key before enabling the Android backend.';
+  @override
+  String anki_connect_backend_switch_failed({required Object error}) =>
+      'Could not switch Anki backend: ${error}';
 }
 
 // Path: <root>
@@ -40575,9 +40637,6 @@ class _StringsIt extends _StringsEn {
       'Usa il formato compatto per le voci del glossario';
   @override
   String get anki_connect_api_key => 'Chiave API';
-  @override
-  String get anki_connect_api_key_hint =>
-      'Lascia vuoto a meno che AnkiConnect non richieda una chiave';
   @override
   String get anki_connect_host => 'Host';
   @override
@@ -47640,6 +47699,20 @@ class _StringsIt extends _StringsEn {
       'The audio capture source may be ready, but sentence audio does not exist until a thread is selected and a line is received.';
   @override
   String get game_session_waiting_thread => 'Waiting for a dialogue thread';
+  @override
+  String get anki_connect_use_on_android => 'Use AnkiConnect on Android';
+  @override
+  String get anki_connect_use_on_android_hint =>
+      'Use only on a trusted network. AnkiConnect uses cleartext HTTP; configure a matching API key, then refresh decks and note types after switching.';
+  @override
+  String get anki_connect_api_key_hint =>
+      'Required for remote AnkiConnect; must match the key configured in the add-on';
+  @override
+  String get anki_connect_android_api_key_required =>
+      'Configure a matching AnkiConnect API key before enabling the Android backend.';
+  @override
+  String anki_connect_backend_switch_failed({required Object error}) =>
+      'Could not switch Anki backend: ${error}';
 }
 
 // Path: <root>
@@ -47825,9 +47898,6 @@ class _StringsJa extends _StringsEn {
   String get anki_compact_glossaries_hint => '釈義をコンパクトな形式で表示';
   @override
   String get anki_connect_api_key => 'APIキー';
-  @override
-  String get anki_connect_api_key_hint =>
-      'AnkiConnectがキーを必要とする場合以外は空欄のままにしてください';
   @override
   String get anki_connect_host => 'ホスト';
   @override
@@ -54709,6 +54779,20 @@ class _StringsJa extends _StringsEn {
       'The audio capture source may be ready, but sentence audio does not exist until a thread is selected and a line is received.';
   @override
   String get game_session_waiting_thread => 'Waiting for a dialogue thread';
+  @override
+  String get anki_connect_use_on_android => 'Use AnkiConnect on Android';
+  @override
+  String get anki_connect_use_on_android_hint =>
+      'Use only on a trusted network. AnkiConnect uses cleartext HTTP; configure a matching API key, then refresh decks and note types after switching.';
+  @override
+  String get anki_connect_api_key_hint =>
+      'Required for remote AnkiConnect; must match the key configured in the add-on';
+  @override
+  String get anki_connect_android_api_key_required =>
+      'Configure a matching AnkiConnect API key before enabling the Android backend.';
+  @override
+  String anki_connect_backend_switch_failed({required Object error}) =>
+      'Could not switch Anki backend: ${error}';
 }
 
 // Path: <root>
@@ -54894,8 +54978,6 @@ class _StringsKo extends _StringsEn {
   String get anki_compact_glossaries_hint => '용어 해설 항목에 간결한 형식을 사용합니다';
   @override
   String get anki_connect_api_key => 'API 키';
-  @override
-  String get anki_connect_api_key_hint => 'AnkiConnect에 키가 필요하지 않으면 비워 두세요';
   @override
   String get anki_connect_host => '호스트';
   @override
@@ -61780,6 +61862,20 @@ class _StringsKo extends _StringsEn {
       'The audio capture source may be ready, but sentence audio does not exist until a thread is selected and a line is received.';
   @override
   String get game_session_waiting_thread => 'Waiting for a dialogue thread';
+  @override
+  String get anki_connect_use_on_android => 'Use AnkiConnect on Android';
+  @override
+  String get anki_connect_use_on_android_hint =>
+      'Use only on a trusted network. AnkiConnect uses cleartext HTTP; configure a matching API key, then refresh decks and note types after switching.';
+  @override
+  String get anki_connect_api_key_hint =>
+      'Required for remote AnkiConnect; must match the key configured in the add-on';
+  @override
+  String get anki_connect_android_api_key_required =>
+      'Configure a matching AnkiConnect API key before enabling the Android backend.';
+  @override
+  String anki_connect_backend_switch_failed({required Object error}) =>
+      'Could not switch Anki backend: ${error}';
 }
 
 // Path: <root>
@@ -61967,9 +62063,6 @@ class _StringsNl extends _StringsEn {
       'Compact formaat gebruiken voor woordenlijstvermeldingen';
   @override
   String get anki_connect_api_key => 'API-sleutel';
-  @override
-  String get anki_connect_api_key_hint =>
-      'Laat leeg tenzij AnkiConnect een sleutel vereist';
   @override
   String get anki_connect_host => 'Host';
   @override
@@ -69012,6 +69105,20 @@ class _StringsNl extends _StringsEn {
       'The audio capture source may be ready, but sentence audio does not exist until a thread is selected and a line is received.';
   @override
   String get game_session_waiting_thread => 'Waiting for a dialogue thread';
+  @override
+  String get anki_connect_use_on_android => 'Use AnkiConnect on Android';
+  @override
+  String get anki_connect_use_on_android_hint =>
+      'Use only on a trusted network. AnkiConnect uses cleartext HTTP; configure a matching API key, then refresh decks and note types after switching.';
+  @override
+  String get anki_connect_api_key_hint =>
+      'Required for remote AnkiConnect; must match the key configured in the add-on';
+  @override
+  String get anki_connect_android_api_key_required =>
+      'Configure a matching AnkiConnect API key before enabling the Android backend.';
+  @override
+  String anki_connect_backend_switch_failed({required Object error}) =>
+      'Could not switch Anki backend: ${error}';
 }
 
 // Path: <root>
@@ -69199,9 +69306,6 @@ class _StringsPtBr extends _StringsEn {
       'Usar formato compacto para entradas do glossário';
   @override
   String get anki_connect_api_key => 'Chave de API';
-  @override
-  String get anki_connect_api_key_hint =>
-      'Deixe em branco, a menos que o AnkiConnect exija uma chave';
   @override
   String get anki_connect_host => 'Host';
   @override
@@ -76257,6 +76361,20 @@ class _StringsPtBr extends _StringsEn {
       'The audio capture source may be ready, but sentence audio does not exist until a thread is selected and a line is received.';
   @override
   String get game_session_waiting_thread => 'Waiting for a dialogue thread';
+  @override
+  String get anki_connect_use_on_android => 'Use AnkiConnect on Android';
+  @override
+  String get anki_connect_use_on_android_hint =>
+      'Use only on a trusted network. AnkiConnect uses cleartext HTTP; configure a matching API key, then refresh decks and note types after switching.';
+  @override
+  String get anki_connect_api_key_hint =>
+      'Required for remote AnkiConnect; must match the key configured in the add-on';
+  @override
+  String get anki_connect_android_api_key_required =>
+      'Configure a matching AnkiConnect API key before enabling the Android backend.';
+  @override
+  String anki_connect_backend_switch_failed({required Object error}) =>
+      'Could not switch Anki backend: ${error}';
 }
 
 // Path: <root>
@@ -76444,9 +76562,6 @@ class _StringsRu extends _StringsEn {
       'Использовать компактный формат для записей глоссария';
   @override
   String get anki_connect_api_key => 'Ключ API';
-  @override
-  String get anki_connect_api_key_hint =>
-      'Оставьте пустым, если AnkiConnect не требует ключ';
   @override
   String get anki_connect_host => 'Хост';
   @override
@@ -83486,6 +83601,20 @@ class _StringsRu extends _StringsEn {
       'The audio capture source may be ready, but sentence audio does not exist until a thread is selected and a line is received.';
   @override
   String get game_session_waiting_thread => 'Waiting for a dialogue thread';
+  @override
+  String get anki_connect_use_on_android => 'Use AnkiConnect on Android';
+  @override
+  String get anki_connect_use_on_android_hint =>
+      'Use only on a trusted network. AnkiConnect uses cleartext HTTP; configure a matching API key, then refresh decks and note types after switching.';
+  @override
+  String get anki_connect_api_key_hint =>
+      'Required for remote AnkiConnect; must match the key configured in the add-on';
+  @override
+  String get anki_connect_android_api_key_required =>
+      'Configure a matching AnkiConnect API key before enabling the Android backend.';
+  @override
+  String anki_connect_backend_switch_failed({required Object error}) =>
+      'Could not switch Anki backend: ${error}';
 }
 
 // Path: <root>
@@ -83672,9 +83801,6 @@ class _StringsTh extends _StringsEn {
       'ใช้รูปแบบกะทัดรัดสำหรับรายการอภิธานศัพท์';
   @override
   String get anki_connect_api_key => 'API Key';
-  @override
-  String get anki_connect_api_key_hint =>
-      'ปล่อยว่างไว้ เว้นแต่ AnkiConnect ต้องใช้คีย์';
   @override
   String get anki_connect_host => 'โฮสต์';
   @override
@@ -90663,6 +90789,20 @@ class _StringsTh extends _StringsEn {
       'The audio capture source may be ready, but sentence audio does not exist until a thread is selected and a line is received.';
   @override
   String get game_session_waiting_thread => 'Waiting for a dialogue thread';
+  @override
+  String get anki_connect_use_on_android => 'Use AnkiConnect on Android';
+  @override
+  String get anki_connect_use_on_android_hint =>
+      'Use only on a trusted network. AnkiConnect uses cleartext HTTP; configure a matching API key, then refresh decks and note types after switching.';
+  @override
+  String get anki_connect_api_key_hint =>
+      'Required for remote AnkiConnect; must match the key configured in the add-on';
+  @override
+  String get anki_connect_android_api_key_required =>
+      'Configure a matching AnkiConnect API key before enabling the Android backend.';
+  @override
+  String anki_connect_backend_switch_failed({required Object error}) =>
+      'Could not switch Anki backend: ${error}';
 }
 
 // Path: <root>
@@ -90850,9 +90990,6 @@ class _StringsTr extends _StringsEn {
       'Sözlükçe girişleri için kompakt biçim kullan';
   @override
   String get anki_connect_api_key => 'API Anahtarı';
-  @override
-  String get anki_connect_api_key_hint =>
-      'AnkiConnect bir anahtar gerektirmediği sürece boş bırakın';
   @override
   String get anki_connect_host => 'Sunucu';
   @override
@@ -97872,6 +98009,20 @@ class _StringsTr extends _StringsEn {
       'The audio capture source may be ready, but sentence audio does not exist until a thread is selected and a line is received.';
   @override
   String get game_session_waiting_thread => 'Waiting for a dialogue thread';
+  @override
+  String get anki_connect_use_on_android => 'Use AnkiConnect on Android';
+  @override
+  String get anki_connect_use_on_android_hint =>
+      'Use only on a trusted network. AnkiConnect uses cleartext HTTP; configure a matching API key, then refresh decks and note types after switching.';
+  @override
+  String get anki_connect_api_key_hint =>
+      'Required for remote AnkiConnect; must match the key configured in the add-on';
+  @override
+  String get anki_connect_android_api_key_required =>
+      'Configure a matching AnkiConnect API key before enabling the Android backend.';
+  @override
+  String anki_connect_backend_switch_failed({required Object error}) =>
+      'Could not switch Anki backend: ${error}';
 }
 
 // Path: <root>
@@ -98059,9 +98210,6 @@ class _StringsVi extends _StringsEn {
       'Dùng định dạng thu gọn cho các mục giải nghĩa';
   @override
   String get anki_connect_api_key => 'API Key';
-  @override
-  String get anki_connect_api_key_hint =>
-      'Để trống trừ khi AnkiConnect yêu cầu khóa';
   @override
   String get anki_connect_host => 'Máy chủ';
   @override
@@ -105066,6 +105214,20 @@ class _StringsVi extends _StringsEn {
       'The audio capture source may be ready, but sentence audio does not exist until a thread is selected and a line is received.';
   @override
   String get game_session_waiting_thread => 'Waiting for a dialogue thread';
+  @override
+  String get anki_connect_use_on_android => 'Use AnkiConnect on Android';
+  @override
+  String get anki_connect_use_on_android_hint =>
+      'Use only on a trusted network. AnkiConnect uses cleartext HTTP; configure a matching API key, then refresh decks and note types after switching.';
+  @override
+  String get anki_connect_api_key_hint =>
+      'Required for remote AnkiConnect; must match the key configured in the add-on';
+  @override
+  String get anki_connect_android_api_key_required =>
+      'Configure a matching AnkiConnect API key before enabling the Android backend.';
+  @override
+  String anki_connect_backend_switch_failed({required Object error}) =>
+      'Could not switch Anki backend: ${error}';
 }
 
 // Path: <root>
@@ -105241,8 +105403,6 @@ class _StringsZhCn extends _StringsEn {
   String get anki_compact_glossaries_hint => '使用紧凑格式显示释义';
   @override
   String get anki_connect_api_key => 'API 密钥';
-  @override
-  String get anki_connect_api_key_hint => '若 AnkiConnect 未设置密钥则留空';
   @override
   String get anki_connect_host => '主机';
   @override
@@ -111755,6 +111915,19 @@ class _StringsZhCn extends _StringsEn {
   String get game_audio_requires_thread => '音频采集源可能已经就绪，但选择线程并收到台词之前，不存在本句音频。';
   @override
   String get game_session_waiting_thread => '等待选择台词线程';
+  @override
+  String get anki_connect_use_on_android => '在 Android 上使用 AnkiConnect';
+  @override
+  String get anki_connect_use_on_android_hint =>
+      '仅在可信网络中使用。AnkiConnect 使用明文 HTTP；请配置匹配的 API key，切换后再刷新牌组与笔记类型。';
+  @override
+  String get anki_connect_api_key_hint => '远程 AnkiConnect 必填；必须与插件中配置的 key 一致';
+  @override
+  String get anki_connect_android_api_key_required =>
+      '请先配置匹配的 AnkiConnect API key，再启用 Android 后端。';
+  @override
+  String anki_connect_backend_switch_failed({required Object error}) =>
+      '无法切换 Anki 后端：${error}';
 }
 
 // Path: <root>
@@ -111940,8 +112113,6 @@ class _StringsZhHk extends _StringsEn {
   String get anki_compact_glossaries_hint => '使用精簡格式顯示釋義';
   @override
   String get anki_connect_api_key => 'API 金鑰';
-  @override
-  String get anki_connect_api_key_hint => '除非 AnkiConnect 需要金鑰，否則留空';
   @override
   String get anki_connect_host => '主機';
   @override
@@ -118745,6 +118916,20 @@ class _StringsZhHk extends _StringsEn {
       'The audio capture source may be ready, but sentence audio does not exist until a thread is selected and a line is received.';
   @override
   String get game_session_waiting_thread => 'Waiting for a dialogue thread';
+  @override
+  String get anki_connect_use_on_android => 'Use AnkiConnect on Android';
+  @override
+  String get anki_connect_use_on_android_hint =>
+      'Use only on a trusted network. AnkiConnect uses cleartext HTTP; configure a matching API key, then refresh decks and note types after switching.';
+  @override
+  String get anki_connect_api_key_hint =>
+      'Required for remote AnkiConnect; must match the key configured in the add-on';
+  @override
+  String get anki_connect_android_api_key_required =>
+      'Configure a matching AnkiConnect API key before enabling the Android backend.';
+  @override
+  String anki_connect_backend_switch_failed({required Object error}) =>
+      'Could not switch Anki backend: ${error}';
 }
 
 /// Flat map(s) containing all translations.
@@ -118888,8 +119073,6 @@ extension on _StringsEn {
         return 'Use compact format for glossary entries';
       case 'anki_connect_api_key':
         return 'API Key';
-      case 'anki_connect_api_key_hint':
-        return 'Leave empty unless AnkiConnect requires a key';
       case 'anki_connect_host':
         return 'Host';
       case 'anki_connect_port':
@@ -125159,6 +125342,17 @@ extension on _StringsEn {
         return 'The audio capture source may be ready, but sentence audio does not exist until a thread is selected and a line is received.';
       case 'game_session_waiting_thread':
         return 'Waiting for a dialogue thread';
+      case 'anki_connect_use_on_android':
+        return 'Use AnkiConnect on Android';
+      case 'anki_connect_use_on_android_hint':
+        return 'Use only on a trusted network. AnkiConnect uses cleartext HTTP; configure a matching API key, then refresh decks and note types after switching.';
+      case 'anki_connect_api_key_hint':
+        return 'Required for remote AnkiConnect; must match the key configured in the add-on';
+      case 'anki_connect_android_api_key_required':
+        return 'Configure a matching AnkiConnect API key before enabling the Android backend.';
+      case 'anki_connect_backend_switch_failed':
+        return ({required Object error}) =>
+            'Could not switch Anki backend: ${error}';
       default:
         return null;
     }
@@ -125303,8 +125497,6 @@ extension on _StringsAr {
         return 'استخدام تنسيق مختصر لإدخالات المعاني';
       case 'anki_connect_api_key':
         return 'مفتاح API';
-      case 'anki_connect_api_key_hint':
-        return 'اتركه فارغًا ما لم يطلب AnkiConnect مفتاحًا';
       case 'anki_connect_host':
         return 'المضيف';
       case 'anki_connect_port':
@@ -131571,6 +131763,17 @@ extension on _StringsAr {
         return 'The audio capture source may be ready, but sentence audio does not exist until a thread is selected and a line is received.';
       case 'game_session_waiting_thread':
         return 'Waiting for a dialogue thread';
+      case 'anki_connect_use_on_android':
+        return 'Use AnkiConnect on Android';
+      case 'anki_connect_use_on_android_hint':
+        return 'Use only on a trusted network. AnkiConnect uses cleartext HTTP; configure a matching API key, then refresh decks and note types after switching.';
+      case 'anki_connect_api_key_hint':
+        return 'Required for remote AnkiConnect; must match the key configured in the add-on';
+      case 'anki_connect_android_api_key_required':
+        return 'Configure a matching AnkiConnect API key before enabling the Android backend.';
+      case 'anki_connect_backend_switch_failed':
+        return ({required Object error}) =>
+            'Could not switch Anki backend: ${error}';
       default:
         return null;
     }
@@ -131715,8 +131918,6 @@ extension on _StringsDe {
         return 'Kompaktes Format für Glossareinträge verwenden';
       case 'anki_connect_api_key':
         return 'API-Schlüssel';
-      case 'anki_connect_api_key_hint':
-        return 'Leer lassen, sofern AnkiConnect keinen Schlüssel erfordert';
       case 'anki_connect_host':
         return 'Host';
       case 'anki_connect_port':
@@ -138005,6 +138206,17 @@ extension on _StringsDe {
         return 'The audio capture source may be ready, but sentence audio does not exist until a thread is selected and a line is received.';
       case 'game_session_waiting_thread':
         return 'Waiting for a dialogue thread';
+      case 'anki_connect_use_on_android':
+        return 'Use AnkiConnect on Android';
+      case 'anki_connect_use_on_android_hint':
+        return 'Use only on a trusted network. AnkiConnect uses cleartext HTTP; configure a matching API key, then refresh decks and note types after switching.';
+      case 'anki_connect_api_key_hint':
+        return 'Required for remote AnkiConnect; must match the key configured in the add-on';
+      case 'anki_connect_android_api_key_required':
+        return 'Configure a matching AnkiConnect API key before enabling the Android backend.';
+      case 'anki_connect_backend_switch_failed':
+        return ({required Object error}) =>
+            'Could not switch Anki backend: ${error}';
       default:
         return null;
     }
@@ -138149,8 +138361,6 @@ extension on _StringsEs {
         return 'Usar formato compacto para las entradas del glosario';
       case 'anki_connect_api_key':
         return 'Clave de API';
-      case 'anki_connect_api_key_hint':
-        return 'Déjalo vacío salvo que AnkiConnect requiera una clave';
       case 'anki_connect_host':
         return 'Servidor';
       case 'anki_connect_port':
@@ -144438,6 +144648,17 @@ extension on _StringsEs {
         return 'The audio capture source may be ready, but sentence audio does not exist until a thread is selected and a line is received.';
       case 'game_session_waiting_thread':
         return 'Waiting for a dialogue thread';
+      case 'anki_connect_use_on_android':
+        return 'Use AnkiConnect on Android';
+      case 'anki_connect_use_on_android_hint':
+        return 'Use only on a trusted network. AnkiConnect uses cleartext HTTP; configure a matching API key, then refresh decks and note types after switching.';
+      case 'anki_connect_api_key_hint':
+        return 'Required for remote AnkiConnect; must match the key configured in the add-on';
+      case 'anki_connect_android_api_key_required':
+        return 'Configure a matching AnkiConnect API key before enabling the Android backend.';
+      case 'anki_connect_backend_switch_failed':
+        return ({required Object error}) =>
+            'Could not switch Anki backend: ${error}';
       default:
         return null;
     }
@@ -144582,8 +144803,6 @@ extension on _StringsFr {
         return 'Utiliser un format compact pour les entrées de glossaire';
       case 'anki_connect_api_key':
         return 'Clé API';
-      case 'anki_connect_api_key_hint':
-        return 'Laisser vide sauf si AnkiConnect requiert une clé';
       case 'anki_connect_host':
         return 'Hôte';
       case 'anki_connect_port':
@@ -150877,6 +151096,17 @@ extension on _StringsFr {
         return 'The audio capture source may be ready, but sentence audio does not exist until a thread is selected and a line is received.';
       case 'game_session_waiting_thread':
         return 'Waiting for a dialogue thread';
+      case 'anki_connect_use_on_android':
+        return 'Use AnkiConnect on Android';
+      case 'anki_connect_use_on_android_hint':
+        return 'Use only on a trusted network. AnkiConnect uses cleartext HTTP; configure a matching API key, then refresh decks and note types after switching.';
+      case 'anki_connect_api_key_hint':
+        return 'Required for remote AnkiConnect; must match the key configured in the add-on';
+      case 'anki_connect_android_api_key_required':
+        return 'Configure a matching AnkiConnect API key before enabling the Android backend.';
+      case 'anki_connect_backend_switch_failed':
+        return ({required Object error}) =>
+            'Could not switch Anki backend: ${error}';
       default:
         return null;
     }
@@ -151021,8 +151251,6 @@ extension on _StringsId {
         return 'Gunakan format ringkas untuk entri glosarium';
       case 'anki_connect_api_key':
         return 'Kunci API';
-      case 'anki_connect_api_key_hint':
-        return 'Biarkan kosong kecuali AnkiConnect memerlukan kunci';
       case 'anki_connect_host':
         return 'Host';
       case 'anki_connect_port':
@@ -157298,6 +157526,17 @@ extension on _StringsId {
         return 'The audio capture source may be ready, but sentence audio does not exist until a thread is selected and a line is received.';
       case 'game_session_waiting_thread':
         return 'Waiting for a dialogue thread';
+      case 'anki_connect_use_on_android':
+        return 'Use AnkiConnect on Android';
+      case 'anki_connect_use_on_android_hint':
+        return 'Use only on a trusted network. AnkiConnect uses cleartext HTTP; configure a matching API key, then refresh decks and note types after switching.';
+      case 'anki_connect_api_key_hint':
+        return 'Required for remote AnkiConnect; must match the key configured in the add-on';
+      case 'anki_connect_android_api_key_required':
+        return 'Configure a matching AnkiConnect API key before enabling the Android backend.';
+      case 'anki_connect_backend_switch_failed':
+        return ({required Object error}) =>
+            'Could not switch Anki backend: ${error}';
       default:
         return null;
     }
@@ -157442,8 +157681,6 @@ extension on _StringsIt {
         return 'Usa il formato compatto per le voci del glossario';
       case 'anki_connect_api_key':
         return 'Chiave API';
-      case 'anki_connect_api_key_hint':
-        return 'Lascia vuoto a meno che AnkiConnect non richieda una chiave';
       case 'anki_connect_host':
         return 'Host';
       case 'anki_connect_port':
@@ -163733,6 +163970,17 @@ extension on _StringsIt {
         return 'The audio capture source may be ready, but sentence audio does not exist until a thread is selected and a line is received.';
       case 'game_session_waiting_thread':
         return 'Waiting for a dialogue thread';
+      case 'anki_connect_use_on_android':
+        return 'Use AnkiConnect on Android';
+      case 'anki_connect_use_on_android_hint':
+        return 'Use only on a trusted network. AnkiConnect uses cleartext HTTP; configure a matching API key, then refresh decks and note types after switching.';
+      case 'anki_connect_api_key_hint':
+        return 'Required for remote AnkiConnect; must match the key configured in the add-on';
+      case 'anki_connect_android_api_key_required':
+        return 'Configure a matching AnkiConnect API key before enabling the Android backend.';
+      case 'anki_connect_backend_switch_failed':
+        return ({required Object error}) =>
+            'Could not switch Anki backend: ${error}';
       default:
         return null;
     }
@@ -163877,8 +164125,6 @@ extension on _StringsJa {
         return '釈義をコンパクトな形式で表示';
       case 'anki_connect_api_key':
         return 'APIキー';
-      case 'anki_connect_api_key_hint':
-        return 'AnkiConnectがキーを必要とする場合以外は空欄のままにしてください';
       case 'anki_connect_host':
         return 'ホスト';
       case 'anki_connect_port':
@@ -170130,6 +170376,17 @@ extension on _StringsJa {
         return 'The audio capture source may be ready, but sentence audio does not exist until a thread is selected and a line is received.';
       case 'game_session_waiting_thread':
         return 'Waiting for a dialogue thread';
+      case 'anki_connect_use_on_android':
+        return 'Use AnkiConnect on Android';
+      case 'anki_connect_use_on_android_hint':
+        return 'Use only on a trusted network. AnkiConnect uses cleartext HTTP; configure a matching API key, then refresh decks and note types after switching.';
+      case 'anki_connect_api_key_hint':
+        return 'Required for remote AnkiConnect; must match the key configured in the add-on';
+      case 'anki_connect_android_api_key_required':
+        return 'Configure a matching AnkiConnect API key before enabling the Android backend.';
+      case 'anki_connect_backend_switch_failed':
+        return ({required Object error}) =>
+            'Could not switch Anki backend: ${error}';
       default:
         return null;
     }
@@ -170274,8 +170531,6 @@ extension on _StringsKo {
         return '용어 해설 항목에 간결한 형식을 사용합니다';
       case 'anki_connect_api_key':
         return 'API 키';
-      case 'anki_connect_api_key_hint':
-        return 'AnkiConnect에 키가 필요하지 않으면 비워 두세요';
       case 'anki_connect_host':
         return '호스트';
       case 'anki_connect_port':
@@ -176531,6 +176786,17 @@ extension on _StringsKo {
         return 'The audio capture source may be ready, but sentence audio does not exist until a thread is selected and a line is received.';
       case 'game_session_waiting_thread':
         return 'Waiting for a dialogue thread';
+      case 'anki_connect_use_on_android':
+        return 'Use AnkiConnect on Android';
+      case 'anki_connect_use_on_android_hint':
+        return 'Use only on a trusted network. AnkiConnect uses cleartext HTTP; configure a matching API key, then refresh decks and note types after switching.';
+      case 'anki_connect_api_key_hint':
+        return 'Required for remote AnkiConnect; must match the key configured in the add-on';
+      case 'anki_connect_android_api_key_required':
+        return 'Configure a matching AnkiConnect API key before enabling the Android backend.';
+      case 'anki_connect_backend_switch_failed':
+        return ({required Object error}) =>
+            'Could not switch Anki backend: ${error}';
       default:
         return null;
     }
@@ -176675,8 +176941,6 @@ extension on _StringsNl {
         return 'Compact formaat gebruiken voor woordenlijstvermeldingen';
       case 'anki_connect_api_key':
         return 'API-sleutel';
-      case 'anki_connect_api_key_hint':
-        return 'Laat leeg tenzij AnkiConnect een sleutel vereist';
       case 'anki_connect_host':
         return 'Host';
       case 'anki_connect_port':
@@ -182960,6 +183224,17 @@ extension on _StringsNl {
         return 'The audio capture source may be ready, but sentence audio does not exist until a thread is selected and a line is received.';
       case 'game_session_waiting_thread':
         return 'Waiting for a dialogue thread';
+      case 'anki_connect_use_on_android':
+        return 'Use AnkiConnect on Android';
+      case 'anki_connect_use_on_android_hint':
+        return 'Use only on a trusted network. AnkiConnect uses cleartext HTTP; configure a matching API key, then refresh decks and note types after switching.';
+      case 'anki_connect_api_key_hint':
+        return 'Required for remote AnkiConnect; must match the key configured in the add-on';
+      case 'anki_connect_android_api_key_required':
+        return 'Configure a matching AnkiConnect API key before enabling the Android backend.';
+      case 'anki_connect_backend_switch_failed':
+        return ({required Object error}) =>
+            'Could not switch Anki backend: ${error}';
       default:
         return null;
     }
@@ -183104,8 +183379,6 @@ extension on _StringsPtBr {
         return 'Usar formato compacto para entradas do glossário';
       case 'anki_connect_api_key':
         return 'Chave de API';
-      case 'anki_connect_api_key_hint':
-        return 'Deixe em branco, a menos que o AnkiConnect exija uma chave';
       case 'anki_connect_host':
         return 'Host';
       case 'anki_connect_port':
@@ -189386,6 +189659,17 @@ extension on _StringsPtBr {
         return 'The audio capture source may be ready, but sentence audio does not exist until a thread is selected and a line is received.';
       case 'game_session_waiting_thread':
         return 'Waiting for a dialogue thread';
+      case 'anki_connect_use_on_android':
+        return 'Use AnkiConnect on Android';
+      case 'anki_connect_use_on_android_hint':
+        return 'Use only on a trusted network. AnkiConnect uses cleartext HTTP; configure a matching API key, then refresh decks and note types after switching.';
+      case 'anki_connect_api_key_hint':
+        return 'Required for remote AnkiConnect; must match the key configured in the add-on';
+      case 'anki_connect_android_api_key_required':
+        return 'Configure a matching AnkiConnect API key before enabling the Android backend.';
+      case 'anki_connect_backend_switch_failed':
+        return ({required Object error}) =>
+            'Could not switch Anki backend: ${error}';
       default:
         return null;
     }
@@ -189530,8 +189814,6 @@ extension on _StringsRu {
         return 'Использовать компактный формат для записей глоссария';
       case 'anki_connect_api_key':
         return 'Ключ API';
-      case 'anki_connect_api_key_hint':
-        return 'Оставьте пустым, если AnkiConnect не требует ключ';
       case 'anki_connect_host':
         return 'Хост';
       case 'anki_connect_port':
@@ -195817,6 +196099,17 @@ extension on _StringsRu {
         return 'The audio capture source may be ready, but sentence audio does not exist until a thread is selected and a line is received.';
       case 'game_session_waiting_thread':
         return 'Waiting for a dialogue thread';
+      case 'anki_connect_use_on_android':
+        return 'Use AnkiConnect on Android';
+      case 'anki_connect_use_on_android_hint':
+        return 'Use only on a trusted network. AnkiConnect uses cleartext HTTP; configure a matching API key, then refresh decks and note types after switching.';
+      case 'anki_connect_api_key_hint':
+        return 'Required for remote AnkiConnect; must match the key configured in the add-on';
+      case 'anki_connect_android_api_key_required':
+        return 'Configure a matching AnkiConnect API key before enabling the Android backend.';
+      case 'anki_connect_backend_switch_failed':
+        return ({required Object error}) =>
+            'Could not switch Anki backend: ${error}';
       default:
         return null;
     }
@@ -195961,8 +196254,6 @@ extension on _StringsTh {
         return 'ใช้รูปแบบกะทัดรัดสำหรับรายการอภิธานศัพท์';
       case 'anki_connect_api_key':
         return 'API Key';
-      case 'anki_connect_api_key_hint':
-        return 'ปล่อยว่างไว้ เว้นแต่ AnkiConnect ต้องใช้คีย์';
       case 'anki_connect_host':
         return 'โฮสต์';
       case 'anki_connect_port':
@@ -202231,6 +202522,17 @@ extension on _StringsTh {
         return 'The audio capture source may be ready, but sentence audio does not exist until a thread is selected and a line is received.';
       case 'game_session_waiting_thread':
         return 'Waiting for a dialogue thread';
+      case 'anki_connect_use_on_android':
+        return 'Use AnkiConnect on Android';
+      case 'anki_connect_use_on_android_hint':
+        return 'Use only on a trusted network. AnkiConnect uses cleartext HTTP; configure a matching API key, then refresh decks and note types after switching.';
+      case 'anki_connect_api_key_hint':
+        return 'Required for remote AnkiConnect; must match the key configured in the add-on';
+      case 'anki_connect_android_api_key_required':
+        return 'Configure a matching AnkiConnect API key before enabling the Android backend.';
+      case 'anki_connect_backend_switch_failed':
+        return ({required Object error}) =>
+            'Could not switch Anki backend: ${error}';
       default:
         return null;
     }
@@ -202375,8 +202677,6 @@ extension on _StringsTr {
         return 'Sözlükçe girişleri için kompakt biçim kullan';
       case 'anki_connect_api_key':
         return 'API Anahtarı';
-      case 'anki_connect_api_key_hint':
-        return 'AnkiConnect bir anahtar gerektirmediği sürece boş bırakın';
       case 'anki_connect_host':
         return 'Sunucu';
       case 'anki_connect_port':
@@ -208654,6 +208954,17 @@ extension on _StringsTr {
         return 'The audio capture source may be ready, but sentence audio does not exist until a thread is selected and a line is received.';
       case 'game_session_waiting_thread':
         return 'Waiting for a dialogue thread';
+      case 'anki_connect_use_on_android':
+        return 'Use AnkiConnect on Android';
+      case 'anki_connect_use_on_android_hint':
+        return 'Use only on a trusted network. AnkiConnect uses cleartext HTTP; configure a matching API key, then refresh decks and note types after switching.';
+      case 'anki_connect_api_key_hint':
+        return 'Required for remote AnkiConnect; must match the key configured in the add-on';
+      case 'anki_connect_android_api_key_required':
+        return 'Configure a matching AnkiConnect API key before enabling the Android backend.';
+      case 'anki_connect_backend_switch_failed':
+        return ({required Object error}) =>
+            'Could not switch Anki backend: ${error}';
       default:
         return null;
     }
@@ -208798,8 +209109,6 @@ extension on _StringsVi {
         return 'Dùng định dạng thu gọn cho các mục giải nghĩa';
       case 'anki_connect_api_key':
         return 'API Key';
-      case 'anki_connect_api_key_hint':
-        return 'Để trống trừ khi AnkiConnect yêu cầu khóa';
       case 'anki_connect_host':
         return 'Máy chủ';
       case 'anki_connect_port':
@@ -215073,6 +215382,17 @@ extension on _StringsVi {
         return 'The audio capture source may be ready, but sentence audio does not exist until a thread is selected and a line is received.';
       case 'game_session_waiting_thread':
         return 'Waiting for a dialogue thread';
+      case 'anki_connect_use_on_android':
+        return 'Use AnkiConnect on Android';
+      case 'anki_connect_use_on_android_hint':
+        return 'Use only on a trusted network. AnkiConnect uses cleartext HTTP; configure a matching API key, then refresh decks and note types after switching.';
+      case 'anki_connect_api_key_hint':
+        return 'Required for remote AnkiConnect; must match the key configured in the add-on';
+      case 'anki_connect_android_api_key_required':
+        return 'Configure a matching AnkiConnect API key before enabling the Android backend.';
+      case 'anki_connect_backend_switch_failed':
+        return ({required Object error}) =>
+            'Could not switch Anki backend: ${error}';
       default:
         return null;
     }
@@ -215214,8 +215534,6 @@ extension on _StringsZhCn {
         return '使用紧凑格式显示释义';
       case 'anki_connect_api_key':
         return 'API 密钥';
-      case 'anki_connect_api_key_hint':
-        return '若 AnkiConnect 未设置密钥则留空';
       case 'anki_connect_host':
         return '主机';
       case 'anki_connect_port':
@@ -221438,6 +221756,16 @@ extension on _StringsZhCn {
         return '音频采集源可能已经就绪，但选择线程并收到台词之前，不存在本句音频。';
       case 'game_session_waiting_thread':
         return '等待选择台词线程';
+      case 'anki_connect_use_on_android':
+        return '在 Android 上使用 AnkiConnect';
+      case 'anki_connect_use_on_android_hint':
+        return '仅在可信网络中使用。AnkiConnect 使用明文 HTTP；请配置匹配的 API key，切换后再刷新牌组与笔记类型。';
+      case 'anki_connect_api_key_hint':
+        return '远程 AnkiConnect 必填；必须与插件中配置的 key 一致';
+      case 'anki_connect_android_api_key_required':
+        return '请先配置匹配的 AnkiConnect API key，再启用 Android 后端。';
+      case 'anki_connect_backend_switch_failed':
+        return ({required Object error}) => '无法切换 Anki 后端：${error}';
       default:
         return null;
     }
@@ -221582,8 +221910,6 @@ extension on _StringsZhHk {
         return '使用精簡格式顯示釋義';
       case 'anki_connect_api_key':
         return 'API 金鑰';
-      case 'anki_connect_api_key_hint':
-        return '除非 AnkiConnect 需要金鑰，否則留空';
       case 'anki_connect_host':
         return '主機';
       case 'anki_connect_port':
@@ -227830,6 +228156,17 @@ extension on _StringsZhHk {
         return 'The audio capture source may be ready, but sentence audio does not exist until a thread is selected and a line is received.';
       case 'game_session_waiting_thread':
         return 'Waiting for a dialogue thread';
+      case 'anki_connect_use_on_android':
+        return 'Use AnkiConnect on Android';
+      case 'anki_connect_use_on_android_hint':
+        return 'Use only on a trusted network. AnkiConnect uses cleartext HTTP; configure a matching API key, then refresh decks and note types after switching.';
+      case 'anki_connect_api_key_hint':
+        return 'Required for remote AnkiConnect; must match the key configured in the add-on';
+      case 'anki_connect_android_api_key_required':
+        return 'Configure a matching AnkiConnect API key before enabling the Android backend.';
+      case 'anki_connect_backend_switch_failed':
+        return ({required Object error}) =>
+            'Could not switch Anki backend: ${error}';
       default:
         return null;
     }
