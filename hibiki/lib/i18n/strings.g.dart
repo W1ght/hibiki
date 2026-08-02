@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 52853 (3109 per locale)
+/// Strings: 52870 (3110 per locale)
 ///
-/// Built on 2026-08-02 at 12:21 UTC
+/// Built on 2026-08-02 at 12:49 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -4184,6 +4184,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get mihon_extension_preview_read_only =>
       'Preview is read-only. Install the extension to open and read.';
   String get selection_copy_empty => 'No text selected.';
+  String get video_subtitle_replay => 'Replay this line';
 }
 
 // Path: <root>
@@ -11326,6 +11327,8 @@ class _StringsAr extends _StringsEn {
       'Preview is read-only. Install the extension to open and read.';
   @override
   String get selection_copy_empty => 'No text selected.';
+  @override
+  String get video_subtitle_replay => 'Replay this line';
 }
 
 // Path: <root>
@@ -18535,6 +18538,8 @@ class _StringsDe extends _StringsEn {
       'Preview is read-only. Install the extension to open and read.';
   @override
   String get selection_copy_empty => 'No text selected.';
+  @override
+  String get video_subtitle_replay => 'Replay this line';
 }
 
 // Path: <root>
@@ -25759,6 +25764,8 @@ class _StringsEs extends _StringsEn {
       'Preview is read-only. Install the extension to open and read.';
   @override
   String get selection_copy_empty => 'No text selected.';
+  @override
+  String get video_subtitle_replay => 'Replay this line';
 }
 
 // Path: <root>
@@ -32995,6 +33002,8 @@ class _StringsFr extends _StringsEn {
       'Preview is read-only. Install the extension to open and read.';
   @override
   String get selection_copy_empty => 'No text selected.';
+  @override
+  String get video_subtitle_replay => 'Replay this line';
 }
 
 // Path: <root>
@@ -40160,6 +40169,8 @@ class _StringsId extends _StringsEn {
       'Preview is read-only. Install the extension to open and read.';
   @override
   String get selection_copy_empty => 'No text selected.';
+  @override
+  String get video_subtitle_replay => 'Replay this line';
 }
 
 // Path: <root>
@@ -47371,6 +47382,8 @@ class _StringsIt extends _StringsEn {
       'Preview is read-only. Install the extension to open and read.';
   @override
   String get selection_copy_empty => 'No text selected.';
+  @override
+  String get video_subtitle_replay => 'Replay this line';
 }
 
 // Path: <root>
@@ -54399,6 +54412,8 @@ class _StringsJa extends _StringsEn {
       'Preview is read-only. Install the extension to open and read.';
   @override
   String get selection_copy_empty => 'No text selected.';
+  @override
+  String get video_subtitle_replay => 'Replay this line';
 }
 
 // Path: <root>
@@ -61429,6 +61444,8 @@ class _StringsKo extends _StringsEn {
       'Preview is read-only. Install the extension to open and read.';
   @override
   String get selection_copy_empty => 'No text selected.';
+  @override
+  String get video_subtitle_replay => 'Replay this line';
 }
 
 // Path: <root>
@@ -68620,6 +68637,8 @@ class _StringsNl extends _StringsEn {
       'Preview is read-only. Install the extension to open and read.';
   @override
   String get selection_copy_empty => 'No text selected.';
+  @override
+  String get video_subtitle_replay => 'Replay this line';
 }
 
 // Path: <root>
@@ -75824,6 +75843,8 @@ class _StringsPtBr extends _StringsEn {
       'Preview is read-only. Install the extension to open and read.';
   @override
   String get selection_copy_empty => 'No text selected.';
+  @override
+  String get video_subtitle_replay => 'Replay this line';
 }
 
 // Path: <root>
@@ -83012,6 +83033,8 @@ class _StringsRu extends _StringsEn {
       'Preview is read-only. Install the extension to open and read.';
   @override
   String get selection_copy_empty => 'No text selected.';
+  @override
+  String get video_subtitle_replay => 'Replay this line';
 }
 
 // Path: <root>
@@ -90148,6 +90171,8 @@ class _StringsTh extends _StringsEn {
       'Preview is read-only. Install the extension to open and read.';
   @override
   String get selection_copy_empty => 'No text selected.';
+  @override
+  String get video_subtitle_replay => 'Replay this line';
 }
 
 // Path: <root>
@@ -97316,6 +97341,8 @@ class _StringsTr extends _StringsEn {
       'Preview is read-only. Install the extension to open and read.';
   @override
   String get selection_copy_empty => 'No text selected.';
+  @override
+  String get video_subtitle_replay => 'Replay this line';
 }
 
 // Path: <root>
@@ -104469,6 +104496,8 @@ class _StringsVi extends _StringsEn {
       'Preview is read-only. Install the extension to open and read.';
   @override
   String get selection_copy_empty => 'No text selected.';
+  @override
+  String get video_subtitle_replay => 'Replay this line';
 }
 
 // Path: <root>
@@ -111122,6 +111151,8 @@ class _StringsZhCn extends _StringsEn {
   String get mihon_extension_preview_read_only => '预览是只读的。安装扩展后才能打开阅读。';
   @override
   String get selection_copy_empty => '未选中文本。';
+  @override
+  String get video_subtitle_replay => '重播本句';
 }
 
 // Path: <root>
@@ -118071,6 +118102,8 @@ class _StringsZhHk extends _StringsEn {
       'Preview is read-only. Install the extension to open and read.';
   @override
   String get selection_copy_empty => 'No text selected.';
+  @override
+  String get video_subtitle_replay => 'Replay this line';
 }
 
 /// Flat map(s) containing all translations.
@@ -124449,6 +124482,8 @@ extension on _StringsEn {
         return 'Preview is read-only. Install the extension to open and read.';
       case 'selection_copy_empty':
         return 'No text selected.';
+      case 'video_subtitle_replay':
+        return 'Replay this line';
       default:
         return null;
     }
@@ -130825,6 +130860,8 @@ extension on _StringsAr {
         return 'Preview is read-only. Install the extension to open and read.';
       case 'selection_copy_empty':
         return 'No text selected.';
+      case 'video_subtitle_replay':
+        return 'Replay this line';
       default:
         return null;
     }
@@ -137223,6 +137260,8 @@ extension on _StringsDe {
         return 'Preview is read-only. Install the extension to open and read.';
       case 'selection_copy_empty':
         return 'No text selected.';
+      case 'video_subtitle_replay':
+        return 'Replay this line';
       default:
         return null;
     }
@@ -143620,6 +143659,8 @@ extension on _StringsEs {
         return 'Preview is read-only. Install the extension to open and read.';
       case 'selection_copy_empty':
         return 'No text selected.';
+      case 'video_subtitle_replay':
+        return 'Replay this line';
       default:
         return null;
     }
@@ -150023,6 +150064,8 @@ extension on _StringsFr {
         return 'Preview is read-only. Install the extension to open and read.';
       case 'selection_copy_empty':
         return 'No text selected.';
+      case 'video_subtitle_replay':
+        return 'Replay this line';
       default:
         return null;
     }
@@ -156408,6 +156451,8 @@ extension on _StringsId {
         return 'Preview is read-only. Install the extension to open and read.';
       case 'selection_copy_empty':
         return 'No text selected.';
+      case 'video_subtitle_replay':
+        return 'Replay this line';
       default:
         return null;
     }
@@ -162807,6 +162852,8 @@ extension on _StringsIt {
         return 'Preview is read-only. Install the extension to open and read.';
       case 'selection_copy_empty':
         return 'No text selected.';
+      case 'video_subtitle_replay':
+        return 'Replay this line';
       default:
         return null;
     }
@@ -169168,6 +169215,8 @@ extension on _StringsJa {
         return 'Preview is read-only. Install the extension to open and read.';
       case 'selection_copy_empty':
         return 'No text selected.';
+      case 'video_subtitle_replay':
+        return 'Replay this line';
       default:
         return null;
     }
@@ -175533,6 +175582,8 @@ extension on _StringsKo {
         return 'Preview is read-only. Install the extension to open and read.';
       case 'selection_copy_empty':
         return 'No text selected.';
+      case 'video_subtitle_replay':
+        return 'Replay this line';
       default:
         return null;
     }
@@ -181926,6 +181977,8 @@ extension on _StringsNl {
         return 'Preview is read-only. Install the extension to open and read.';
       case 'selection_copy_empty':
         return 'No text selected.';
+      case 'video_subtitle_replay':
+        return 'Replay this line';
       default:
         return null;
     }
@@ -188316,6 +188369,8 @@ extension on _StringsPtBr {
         return 'Preview is read-only. Install the extension to open and read.';
       case 'selection_copy_empty':
         return 'No text selected.';
+      case 'video_subtitle_replay':
+        return 'Replay this line';
       default:
         return null;
     }
@@ -194711,6 +194766,8 @@ extension on _StringsRu {
         return 'Preview is read-only. Install the extension to open and read.';
       case 'selection_copy_empty':
         return 'No text selected.';
+      case 'video_subtitle_replay':
+        return 'Replay this line';
       default:
         return null;
     }
@@ -201089,6 +201146,8 @@ extension on _StringsTh {
         return 'Preview is read-only. Install the extension to open and read.';
       case 'selection_copy_empty':
         return 'No text selected.';
+      case 'video_subtitle_replay':
+        return 'Replay this line';
       default:
         return null;
     }
@@ -207476,6 +207535,8 @@ extension on _StringsTr {
         return 'Preview is read-only. Install the extension to open and read.';
       case 'selection_copy_empty':
         return 'No text selected.';
+      case 'video_subtitle_replay':
+        return 'Replay this line';
       default:
         return null;
     }
@@ -213859,6 +213920,8 @@ extension on _StringsVi {
         return 'Preview is read-only. Install the extension to open and read.';
       case 'selection_copy_empty':
         return 'No text selected.';
+      case 'video_subtitle_replay':
+        return 'Replay this line';
       default:
         return null;
     }
@@ -220188,6 +220251,8 @@ extension on _StringsZhCn {
         return '预览是只读的。安装扩展后才能打开阅读。';
       case 'selection_copy_empty':
         return '未选中文本。';
+      case 'video_subtitle_replay':
+        return '重播本句';
       default:
         return null;
     }
@@ -226544,6 +226609,8 @@ extension on _StringsZhHk {
         return 'Preview is read-only. Install the extension to open and read.';
       case 'selection_copy_empty':
         return 'No text selected.';
+      case 'video_subtitle_replay':
+        return 'Replay this line';
       default:
         return null;
     }
