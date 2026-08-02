@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 52377 (3081 per locale)
+/// Strings: 52734 (3102 per locale)
 ///
-/// Built on 2026-08-02 at 07:34 UTC
+/// Built on 2026-08-02 at 07:45 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3798,7 +3798,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get anki_lapis_visual_front => 'Front';
   String get anki_lapis_visual_back => 'Back';
   String get anki_lapis_visual_preview => 'Lapis card preview';
-  String get anki_lapis_visual_select_field => 'Select a field to highlight';
+  String get anki_lapis_visual_select_field => 'Choose what to edit';
   String get anki_lapis_visual_reset_field => 'Reset field';
   String anki_lapis_visual_font_size({required Object percent}) =>
       'Font size: ${percent}%';
@@ -4143,6 +4143,37 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get remote_delete_failed => 'Could not delete it on the paired device';
   String get remote_delete_unsupported =>
       'The paired device is too old to support remote deletion. Update Hibiki there first.';
+  String get anki_lapis_visual_blocks => 'Custom areas';
+  String get anki_lapis_visual_blocks_hint =>
+      'Show existing fields somewhere else on the card. Display only: no Anki field is added or deleted.';
+  String get anki_lapis_visual_block_add => 'Add area';
+  String get anki_lapis_visual_block_delete => 'Delete area';
+  String anki_lapis_visual_block_name({required Object index}) =>
+      'Area ${index}';
+  String get anki_lapis_visual_block_anchor => 'Position on the card';
+  String get anki_lapis_visual_block_anchor_top => 'Top of the card';
+  String get anki_lapis_visual_block_anchor_above_sentence => 'Below the word';
+  String get anki_lapis_visual_block_anchor_above_definition =>
+      'Below the sentence';
+  String get anki_lapis_visual_block_anchor_below_definition =>
+      'Below the definitions';
+  String get anki_lapis_visual_block_anchor_bottom => 'Bottom of the card';
+  String get anki_lapis_visual_block_fields => 'Fields shown here';
+  String get anki_lapis_visual_block_no_fields => 'No fields selected yet';
+  String get anki_lapis_visual_block_needs_note_type =>
+      'Pick a note type first to choose fields.';
+  String get anki_lapis_restore_factory => 'Restore factory Lapis';
+  String get anki_lapis_restore_factory_hint =>
+      'Overwrite the Lapis note type in Anki with the version bundled in Hibiki and clear every customisation here.';
+  String get anki_lapis_restore_factory_confirm =>
+      'This overwrites the Lapis styling and card templates in Anki with Hibiki\'s bundled version, and resets font size, custom CSS and custom areas. A backup of the current state is saved first. Card data is not touched.';
+  String get anki_lapis_restore_factory_done =>
+      'Lapis restored to factory defaults';
+  String anki_lapis_restore_factory_failed({required Object error}) =>
+      'Restore failed: ${error}';
+  String get anki_lapis_visual_select_field_hint =>
+      'Click any part of the preview, or pick one below. What you pick is what the controls underneath edit.';
+  String get anki_lapis_visual_editing_now => 'Editing';
 }
 
 // Path: <root>
@@ -10601,7 +10632,7 @@ class _StringsAr extends _StringsEn {
   @override
   String get anki_lapis_visual_preview => 'Lapis card preview';
   @override
-  String get anki_lapis_visual_select_field => 'Select a field to highlight';
+  String get anki_lapis_visual_select_field => 'Choose what to edit';
   @override
   String get anki_lapis_visual_reset_field => 'Reset field';
   @override
@@ -11216,6 +11247,58 @@ class _StringsAr extends _StringsEn {
   @override
   String get remote_delete_unsupported =>
       'The paired device is too old to support remote deletion. Update Hibiki there first.';
+  @override
+  String get anki_lapis_visual_blocks => 'Custom areas';
+  @override
+  String get anki_lapis_visual_blocks_hint =>
+      'Show existing fields somewhere else on the card. Display only: no Anki field is added or deleted.';
+  @override
+  String get anki_lapis_visual_block_add => 'Add area';
+  @override
+  String get anki_lapis_visual_block_delete => 'Delete area';
+  @override
+  String anki_lapis_visual_block_name({required Object index}) =>
+      'Area ${index}';
+  @override
+  String get anki_lapis_visual_block_anchor => 'Position on the card';
+  @override
+  String get anki_lapis_visual_block_anchor_top => 'Top of the card';
+  @override
+  String get anki_lapis_visual_block_anchor_above_sentence => 'Below the word';
+  @override
+  String get anki_lapis_visual_block_anchor_above_definition =>
+      'Below the sentence';
+  @override
+  String get anki_lapis_visual_block_anchor_below_definition =>
+      'Below the definitions';
+  @override
+  String get anki_lapis_visual_block_anchor_bottom => 'Bottom of the card';
+  @override
+  String get anki_lapis_visual_block_fields => 'Fields shown here';
+  @override
+  String get anki_lapis_visual_block_no_fields => 'No fields selected yet';
+  @override
+  String get anki_lapis_visual_block_needs_note_type =>
+      'Pick a note type first to choose fields.';
+  @override
+  String get anki_lapis_restore_factory => 'Restore factory Lapis';
+  @override
+  String get anki_lapis_restore_factory_hint =>
+      'Overwrite the Lapis note type in Anki with the version bundled in Hibiki and clear every customisation here.';
+  @override
+  String get anki_lapis_restore_factory_confirm =>
+      'This overwrites the Lapis styling and card templates in Anki with Hibiki\'s bundled version, and resets font size, custom CSS and custom areas. A backup of the current state is saved first. Card data is not touched.';
+  @override
+  String get anki_lapis_restore_factory_done =>
+      'Lapis restored to factory defaults';
+  @override
+  String anki_lapis_restore_factory_failed({required Object error}) =>
+      'Restore failed: ${error}';
+  @override
+  String get anki_lapis_visual_select_field_hint =>
+      'Click any part of the preview, or pick one below. What you pick is what the controls underneath edit.';
+  @override
+  String get anki_lapis_visual_editing_now => 'Editing';
 }
 
 // Path: <root>
@@ -17741,7 +17824,7 @@ class _StringsDe extends _StringsEn {
   @override
   String get anki_lapis_visual_preview => 'Lapis card preview';
   @override
-  String get anki_lapis_visual_select_field => 'Select a field to highlight';
+  String get anki_lapis_visual_select_field => 'Choose what to edit';
   @override
   String get anki_lapis_visual_reset_field => 'Reset field';
   @override
@@ -18356,6 +18439,58 @@ class _StringsDe extends _StringsEn {
   @override
   String get remote_delete_unsupported =>
       'The paired device is too old to support remote deletion. Update Hibiki there first.';
+  @override
+  String get anki_lapis_visual_blocks => 'Custom areas';
+  @override
+  String get anki_lapis_visual_blocks_hint =>
+      'Show existing fields somewhere else on the card. Display only: no Anki field is added or deleted.';
+  @override
+  String get anki_lapis_visual_block_add => 'Add area';
+  @override
+  String get anki_lapis_visual_block_delete => 'Delete area';
+  @override
+  String anki_lapis_visual_block_name({required Object index}) =>
+      'Area ${index}';
+  @override
+  String get anki_lapis_visual_block_anchor => 'Position on the card';
+  @override
+  String get anki_lapis_visual_block_anchor_top => 'Top of the card';
+  @override
+  String get anki_lapis_visual_block_anchor_above_sentence => 'Below the word';
+  @override
+  String get anki_lapis_visual_block_anchor_above_definition =>
+      'Below the sentence';
+  @override
+  String get anki_lapis_visual_block_anchor_below_definition =>
+      'Below the definitions';
+  @override
+  String get anki_lapis_visual_block_anchor_bottom => 'Bottom of the card';
+  @override
+  String get anki_lapis_visual_block_fields => 'Fields shown here';
+  @override
+  String get anki_lapis_visual_block_no_fields => 'No fields selected yet';
+  @override
+  String get anki_lapis_visual_block_needs_note_type =>
+      'Pick a note type first to choose fields.';
+  @override
+  String get anki_lapis_restore_factory => 'Restore factory Lapis';
+  @override
+  String get anki_lapis_restore_factory_hint =>
+      'Overwrite the Lapis note type in Anki with the version bundled in Hibiki and clear every customisation here.';
+  @override
+  String get anki_lapis_restore_factory_confirm =>
+      'This overwrites the Lapis styling and card templates in Anki with Hibiki\'s bundled version, and resets font size, custom CSS and custom areas. A backup of the current state is saved first. Card data is not touched.';
+  @override
+  String get anki_lapis_restore_factory_done =>
+      'Lapis restored to factory defaults';
+  @override
+  String anki_lapis_restore_factory_failed({required Object error}) =>
+      'Restore failed: ${error}';
+  @override
+  String get anki_lapis_visual_select_field_hint =>
+      'Click any part of the preview, or pick one below. What you pick is what the controls underneath edit.';
+  @override
+  String get anki_lapis_visual_editing_now => 'Editing';
 }
 
 // Path: <root>
@@ -24896,7 +25031,7 @@ class _StringsEs extends _StringsEn {
   @override
   String get anki_lapis_visual_preview => 'Lapis card preview';
   @override
-  String get anki_lapis_visual_select_field => 'Select a field to highlight';
+  String get anki_lapis_visual_select_field => 'Choose what to edit';
   @override
   String get anki_lapis_visual_reset_field => 'Reset field';
   @override
@@ -25511,6 +25646,58 @@ class _StringsEs extends _StringsEn {
   @override
   String get remote_delete_unsupported =>
       'The paired device is too old to support remote deletion. Update Hibiki there first.';
+  @override
+  String get anki_lapis_visual_blocks => 'Custom areas';
+  @override
+  String get anki_lapis_visual_blocks_hint =>
+      'Show existing fields somewhere else on the card. Display only: no Anki field is added or deleted.';
+  @override
+  String get anki_lapis_visual_block_add => 'Add area';
+  @override
+  String get anki_lapis_visual_block_delete => 'Delete area';
+  @override
+  String anki_lapis_visual_block_name({required Object index}) =>
+      'Area ${index}';
+  @override
+  String get anki_lapis_visual_block_anchor => 'Position on the card';
+  @override
+  String get anki_lapis_visual_block_anchor_top => 'Top of the card';
+  @override
+  String get anki_lapis_visual_block_anchor_above_sentence => 'Below the word';
+  @override
+  String get anki_lapis_visual_block_anchor_above_definition =>
+      'Below the sentence';
+  @override
+  String get anki_lapis_visual_block_anchor_below_definition =>
+      'Below the definitions';
+  @override
+  String get anki_lapis_visual_block_anchor_bottom => 'Bottom of the card';
+  @override
+  String get anki_lapis_visual_block_fields => 'Fields shown here';
+  @override
+  String get anki_lapis_visual_block_no_fields => 'No fields selected yet';
+  @override
+  String get anki_lapis_visual_block_needs_note_type =>
+      'Pick a note type first to choose fields.';
+  @override
+  String get anki_lapis_restore_factory => 'Restore factory Lapis';
+  @override
+  String get anki_lapis_restore_factory_hint =>
+      'Overwrite the Lapis note type in Anki with the version bundled in Hibiki and clear every customisation here.';
+  @override
+  String get anki_lapis_restore_factory_confirm =>
+      'This overwrites the Lapis styling and card templates in Anki with Hibiki\'s bundled version, and resets font size, custom CSS and custom areas. A backup of the current state is saved first. Card data is not touched.';
+  @override
+  String get anki_lapis_restore_factory_done =>
+      'Lapis restored to factory defaults';
+  @override
+  String anki_lapis_restore_factory_failed({required Object error}) =>
+      'Restore failed: ${error}';
+  @override
+  String get anki_lapis_visual_select_field_hint =>
+      'Click any part of the preview, or pick one below. What you pick is what the controls underneath edit.';
+  @override
+  String get anki_lapis_visual_editing_now => 'Editing';
 }
 
 // Path: <root>
@@ -32063,7 +32250,7 @@ class _StringsFr extends _StringsEn {
   @override
   String get anki_lapis_visual_preview => 'Lapis card preview';
   @override
-  String get anki_lapis_visual_select_field => 'Select a field to highlight';
+  String get anki_lapis_visual_select_field => 'Choose what to edit';
   @override
   String get anki_lapis_visual_reset_field => 'Reset field';
   @override
@@ -32678,6 +32865,58 @@ class _StringsFr extends _StringsEn {
   @override
   String get remote_delete_unsupported =>
       'The paired device is too old to support remote deletion. Update Hibiki there first.';
+  @override
+  String get anki_lapis_visual_blocks => 'Custom areas';
+  @override
+  String get anki_lapis_visual_blocks_hint =>
+      'Show existing fields somewhere else on the card. Display only: no Anki field is added or deleted.';
+  @override
+  String get anki_lapis_visual_block_add => 'Add area';
+  @override
+  String get anki_lapis_visual_block_delete => 'Delete area';
+  @override
+  String anki_lapis_visual_block_name({required Object index}) =>
+      'Area ${index}';
+  @override
+  String get anki_lapis_visual_block_anchor => 'Position on the card';
+  @override
+  String get anki_lapis_visual_block_anchor_top => 'Top of the card';
+  @override
+  String get anki_lapis_visual_block_anchor_above_sentence => 'Below the word';
+  @override
+  String get anki_lapis_visual_block_anchor_above_definition =>
+      'Below the sentence';
+  @override
+  String get anki_lapis_visual_block_anchor_below_definition =>
+      'Below the definitions';
+  @override
+  String get anki_lapis_visual_block_anchor_bottom => 'Bottom of the card';
+  @override
+  String get anki_lapis_visual_block_fields => 'Fields shown here';
+  @override
+  String get anki_lapis_visual_block_no_fields => 'No fields selected yet';
+  @override
+  String get anki_lapis_visual_block_needs_note_type =>
+      'Pick a note type first to choose fields.';
+  @override
+  String get anki_lapis_restore_factory => 'Restore factory Lapis';
+  @override
+  String get anki_lapis_restore_factory_hint =>
+      'Overwrite the Lapis note type in Anki with the version bundled in Hibiki and clear every customisation here.';
+  @override
+  String get anki_lapis_restore_factory_confirm =>
+      'This overwrites the Lapis styling and card templates in Anki with Hibiki\'s bundled version, and resets font size, custom CSS and custom areas. A backup of the current state is saved first. Card data is not touched.';
+  @override
+  String get anki_lapis_restore_factory_done =>
+      'Lapis restored to factory defaults';
+  @override
+  String anki_lapis_restore_factory_failed({required Object error}) =>
+      'Restore failed: ${error}';
+  @override
+  String get anki_lapis_visual_select_field_hint =>
+      'Click any part of the preview, or pick one below. What you pick is what the controls underneath edit.';
+  @override
+  String get anki_lapis_visual_editing_now => 'Editing';
 }
 
 // Path: <root>
@@ -39159,7 +39398,7 @@ class _StringsId extends _StringsEn {
   @override
   String get anki_lapis_visual_preview => 'Lapis card preview';
   @override
-  String get anki_lapis_visual_select_field => 'Select a field to highlight';
+  String get anki_lapis_visual_select_field => 'Choose what to edit';
   @override
   String get anki_lapis_visual_reset_field => 'Reset field';
   @override
@@ -39774,6 +40013,58 @@ class _StringsId extends _StringsEn {
   @override
   String get remote_delete_unsupported =>
       'The paired device is too old to support remote deletion. Update Hibiki there first.';
+  @override
+  String get anki_lapis_visual_blocks => 'Custom areas';
+  @override
+  String get anki_lapis_visual_blocks_hint =>
+      'Show existing fields somewhere else on the card. Display only: no Anki field is added or deleted.';
+  @override
+  String get anki_lapis_visual_block_add => 'Add area';
+  @override
+  String get anki_lapis_visual_block_delete => 'Delete area';
+  @override
+  String anki_lapis_visual_block_name({required Object index}) =>
+      'Area ${index}';
+  @override
+  String get anki_lapis_visual_block_anchor => 'Position on the card';
+  @override
+  String get anki_lapis_visual_block_anchor_top => 'Top of the card';
+  @override
+  String get anki_lapis_visual_block_anchor_above_sentence => 'Below the word';
+  @override
+  String get anki_lapis_visual_block_anchor_above_definition =>
+      'Below the sentence';
+  @override
+  String get anki_lapis_visual_block_anchor_below_definition =>
+      'Below the definitions';
+  @override
+  String get anki_lapis_visual_block_anchor_bottom => 'Bottom of the card';
+  @override
+  String get anki_lapis_visual_block_fields => 'Fields shown here';
+  @override
+  String get anki_lapis_visual_block_no_fields => 'No fields selected yet';
+  @override
+  String get anki_lapis_visual_block_needs_note_type =>
+      'Pick a note type first to choose fields.';
+  @override
+  String get anki_lapis_restore_factory => 'Restore factory Lapis';
+  @override
+  String get anki_lapis_restore_factory_hint =>
+      'Overwrite the Lapis note type in Anki with the version bundled in Hibiki and clear every customisation here.';
+  @override
+  String get anki_lapis_restore_factory_confirm =>
+      'This overwrites the Lapis styling and card templates in Anki with Hibiki\'s bundled version, and resets font size, custom CSS and custom areas. A backup of the current state is saved first. Card data is not touched.';
+  @override
+  String get anki_lapis_restore_factory_done =>
+      'Lapis restored to factory defaults';
+  @override
+  String anki_lapis_restore_factory_failed({required Object error}) =>
+      'Restore failed: ${error}';
+  @override
+  String get anki_lapis_visual_select_field_hint =>
+      'Click any part of the preview, or pick one below. What you pick is what the controls underneath edit.';
+  @override
+  String get anki_lapis_visual_editing_now => 'Editing';
 }
 
 // Path: <root>
@@ -46301,7 +46592,7 @@ class _StringsIt extends _StringsEn {
   @override
   String get anki_lapis_visual_preview => 'Lapis card preview';
   @override
-  String get anki_lapis_visual_select_field => 'Select a field to highlight';
+  String get anki_lapis_visual_select_field => 'Choose what to edit';
   @override
   String get anki_lapis_visual_reset_field => 'Reset field';
   @override
@@ -46916,6 +47207,58 @@ class _StringsIt extends _StringsEn {
   @override
   String get remote_delete_unsupported =>
       'The paired device is too old to support remote deletion. Update Hibiki there first.';
+  @override
+  String get anki_lapis_visual_blocks => 'Custom areas';
+  @override
+  String get anki_lapis_visual_blocks_hint =>
+      'Show existing fields somewhere else on the card. Display only: no Anki field is added or deleted.';
+  @override
+  String get anki_lapis_visual_block_add => 'Add area';
+  @override
+  String get anki_lapis_visual_block_delete => 'Delete area';
+  @override
+  String anki_lapis_visual_block_name({required Object index}) =>
+      'Area ${index}';
+  @override
+  String get anki_lapis_visual_block_anchor => 'Position on the card';
+  @override
+  String get anki_lapis_visual_block_anchor_top => 'Top of the card';
+  @override
+  String get anki_lapis_visual_block_anchor_above_sentence => 'Below the word';
+  @override
+  String get anki_lapis_visual_block_anchor_above_definition =>
+      'Below the sentence';
+  @override
+  String get anki_lapis_visual_block_anchor_below_definition =>
+      'Below the definitions';
+  @override
+  String get anki_lapis_visual_block_anchor_bottom => 'Bottom of the card';
+  @override
+  String get anki_lapis_visual_block_fields => 'Fields shown here';
+  @override
+  String get anki_lapis_visual_block_no_fields => 'No fields selected yet';
+  @override
+  String get anki_lapis_visual_block_needs_note_type =>
+      'Pick a note type first to choose fields.';
+  @override
+  String get anki_lapis_restore_factory => 'Restore factory Lapis';
+  @override
+  String get anki_lapis_restore_factory_hint =>
+      'Overwrite the Lapis note type in Anki with the version bundled in Hibiki and clear every customisation here.';
+  @override
+  String get anki_lapis_restore_factory_confirm =>
+      'This overwrites the Lapis styling and card templates in Anki with Hibiki\'s bundled version, and resets font size, custom CSS and custom areas. A backup of the current state is saved first. Card data is not touched.';
+  @override
+  String get anki_lapis_restore_factory_done =>
+      'Lapis restored to factory defaults';
+  @override
+  String anki_lapis_restore_factory_failed({required Object error}) =>
+      'Restore failed: ${error}';
+  @override
+  String get anki_lapis_visual_select_field_hint =>
+      'Click any part of the preview, or pick one below. What you pick is what the controls underneath edit.';
+  @override
+  String get anki_lapis_visual_editing_now => 'Editing';
 }
 
 // Path: <root>
@@ -53260,7 +53603,7 @@ class _StringsJa extends _StringsEn {
   @override
   String get anki_lapis_visual_preview => 'Lapis card preview';
   @override
-  String get anki_lapis_visual_select_field => 'Select a field to highlight';
+  String get anki_lapis_visual_select_field => 'Choose what to edit';
   @override
   String get anki_lapis_visual_reset_field => 'Reset field';
   @override
@@ -53875,6 +54218,58 @@ class _StringsJa extends _StringsEn {
   @override
   String get remote_delete_unsupported =>
       'The paired device is too old to support remote deletion. Update Hibiki there first.';
+  @override
+  String get anki_lapis_visual_blocks => 'Custom areas';
+  @override
+  String get anki_lapis_visual_blocks_hint =>
+      'Show existing fields somewhere else on the card. Display only: no Anki field is added or deleted.';
+  @override
+  String get anki_lapis_visual_block_add => 'Add area';
+  @override
+  String get anki_lapis_visual_block_delete => 'Delete area';
+  @override
+  String anki_lapis_visual_block_name({required Object index}) =>
+      'Area ${index}';
+  @override
+  String get anki_lapis_visual_block_anchor => 'Position on the card';
+  @override
+  String get anki_lapis_visual_block_anchor_top => 'Top of the card';
+  @override
+  String get anki_lapis_visual_block_anchor_above_sentence => 'Below the word';
+  @override
+  String get anki_lapis_visual_block_anchor_above_definition =>
+      'Below the sentence';
+  @override
+  String get anki_lapis_visual_block_anchor_below_definition =>
+      'Below the definitions';
+  @override
+  String get anki_lapis_visual_block_anchor_bottom => 'Bottom of the card';
+  @override
+  String get anki_lapis_visual_block_fields => 'Fields shown here';
+  @override
+  String get anki_lapis_visual_block_no_fields => 'No fields selected yet';
+  @override
+  String get anki_lapis_visual_block_needs_note_type =>
+      'Pick a note type first to choose fields.';
+  @override
+  String get anki_lapis_restore_factory => 'Restore factory Lapis';
+  @override
+  String get anki_lapis_restore_factory_hint =>
+      'Overwrite the Lapis note type in Anki with the version bundled in Hibiki and clear every customisation here.';
+  @override
+  String get anki_lapis_restore_factory_confirm =>
+      'This overwrites the Lapis styling and card templates in Anki with Hibiki\'s bundled version, and resets font size, custom CSS and custom areas. A backup of the current state is saved first. Card data is not touched.';
+  @override
+  String get anki_lapis_restore_factory_done =>
+      'Lapis restored to factory defaults';
+  @override
+  String anki_lapis_restore_factory_failed({required Object error}) =>
+      'Restore failed: ${error}';
+  @override
+  String get anki_lapis_visual_select_field_hint =>
+      'Click any part of the preview, or pick one below. What you pick is what the controls underneath edit.';
+  @override
+  String get anki_lapis_visual_editing_now => 'Editing';
 }
 
 // Path: <root>
@@ -60221,7 +60616,7 @@ class _StringsKo extends _StringsEn {
   @override
   String get anki_lapis_visual_preview => 'Lapis card preview';
   @override
-  String get anki_lapis_visual_select_field => 'Select a field to highlight';
+  String get anki_lapis_visual_select_field => 'Choose what to edit';
   @override
   String get anki_lapis_visual_reset_field => 'Reset field';
   @override
@@ -60836,6 +61231,58 @@ class _StringsKo extends _StringsEn {
   @override
   String get remote_delete_unsupported =>
       'The paired device is too old to support remote deletion. Update Hibiki there first.';
+  @override
+  String get anki_lapis_visual_blocks => 'Custom areas';
+  @override
+  String get anki_lapis_visual_blocks_hint =>
+      'Show existing fields somewhere else on the card. Display only: no Anki field is added or deleted.';
+  @override
+  String get anki_lapis_visual_block_add => 'Add area';
+  @override
+  String get anki_lapis_visual_block_delete => 'Delete area';
+  @override
+  String anki_lapis_visual_block_name({required Object index}) =>
+      'Area ${index}';
+  @override
+  String get anki_lapis_visual_block_anchor => 'Position on the card';
+  @override
+  String get anki_lapis_visual_block_anchor_top => 'Top of the card';
+  @override
+  String get anki_lapis_visual_block_anchor_above_sentence => 'Below the word';
+  @override
+  String get anki_lapis_visual_block_anchor_above_definition =>
+      'Below the sentence';
+  @override
+  String get anki_lapis_visual_block_anchor_below_definition =>
+      'Below the definitions';
+  @override
+  String get anki_lapis_visual_block_anchor_bottom => 'Bottom of the card';
+  @override
+  String get anki_lapis_visual_block_fields => 'Fields shown here';
+  @override
+  String get anki_lapis_visual_block_no_fields => 'No fields selected yet';
+  @override
+  String get anki_lapis_visual_block_needs_note_type =>
+      'Pick a note type first to choose fields.';
+  @override
+  String get anki_lapis_restore_factory => 'Restore factory Lapis';
+  @override
+  String get anki_lapis_restore_factory_hint =>
+      'Overwrite the Lapis note type in Anki with the version bundled in Hibiki and clear every customisation here.';
+  @override
+  String get anki_lapis_restore_factory_confirm =>
+      'This overwrites the Lapis styling and card templates in Anki with Hibiki\'s bundled version, and resets font size, custom CSS and custom areas. A backup of the current state is saved first. Card data is not touched.';
+  @override
+  String get anki_lapis_restore_factory_done =>
+      'Lapis restored to factory defaults';
+  @override
+  String anki_lapis_restore_factory_failed({required Object error}) =>
+      'Restore failed: ${error}';
+  @override
+  String get anki_lapis_visual_select_field_hint =>
+      'Click any part of the preview, or pick one below. What you pick is what the controls underneath edit.';
+  @override
+  String get anki_lapis_visual_editing_now => 'Editing';
 }
 
 // Path: <root>
@@ -67343,7 +67790,7 @@ class _StringsNl extends _StringsEn {
   @override
   String get anki_lapis_visual_preview => 'Lapis card preview';
   @override
-  String get anki_lapis_visual_select_field => 'Select a field to highlight';
+  String get anki_lapis_visual_select_field => 'Choose what to edit';
   @override
   String get anki_lapis_visual_reset_field => 'Reset field';
   @override
@@ -67958,6 +68405,58 @@ class _StringsNl extends _StringsEn {
   @override
   String get remote_delete_unsupported =>
       'The paired device is too old to support remote deletion. Update Hibiki there first.';
+  @override
+  String get anki_lapis_visual_blocks => 'Custom areas';
+  @override
+  String get anki_lapis_visual_blocks_hint =>
+      'Show existing fields somewhere else on the card. Display only: no Anki field is added or deleted.';
+  @override
+  String get anki_lapis_visual_block_add => 'Add area';
+  @override
+  String get anki_lapis_visual_block_delete => 'Delete area';
+  @override
+  String anki_lapis_visual_block_name({required Object index}) =>
+      'Area ${index}';
+  @override
+  String get anki_lapis_visual_block_anchor => 'Position on the card';
+  @override
+  String get anki_lapis_visual_block_anchor_top => 'Top of the card';
+  @override
+  String get anki_lapis_visual_block_anchor_above_sentence => 'Below the word';
+  @override
+  String get anki_lapis_visual_block_anchor_above_definition =>
+      'Below the sentence';
+  @override
+  String get anki_lapis_visual_block_anchor_below_definition =>
+      'Below the definitions';
+  @override
+  String get anki_lapis_visual_block_anchor_bottom => 'Bottom of the card';
+  @override
+  String get anki_lapis_visual_block_fields => 'Fields shown here';
+  @override
+  String get anki_lapis_visual_block_no_fields => 'No fields selected yet';
+  @override
+  String get anki_lapis_visual_block_needs_note_type =>
+      'Pick a note type first to choose fields.';
+  @override
+  String get anki_lapis_restore_factory => 'Restore factory Lapis';
+  @override
+  String get anki_lapis_restore_factory_hint =>
+      'Overwrite the Lapis note type in Anki with the version bundled in Hibiki and clear every customisation here.';
+  @override
+  String get anki_lapis_restore_factory_confirm =>
+      'This overwrites the Lapis styling and card templates in Anki with Hibiki\'s bundled version, and resets font size, custom CSS and custom areas. A backup of the current state is saved first. Card data is not touched.';
+  @override
+  String get anki_lapis_restore_factory_done =>
+      'Lapis restored to factory defaults';
+  @override
+  String anki_lapis_restore_factory_failed({required Object error}) =>
+      'Restore failed: ${error}';
+  @override
+  String get anki_lapis_visual_select_field_hint =>
+      'Click any part of the preview, or pick one below. What you pick is what the controls underneath edit.';
+  @override
+  String get anki_lapis_visual_editing_now => 'Editing';
 }
 
 // Path: <root>
@@ -74478,7 +74977,7 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get anki_lapis_visual_preview => 'Lapis card preview';
   @override
-  String get anki_lapis_visual_select_field => 'Select a field to highlight';
+  String get anki_lapis_visual_select_field => 'Choose what to edit';
   @override
   String get anki_lapis_visual_reset_field => 'Reset field';
   @override
@@ -75093,6 +75592,58 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get remote_delete_unsupported =>
       'The paired device is too old to support remote deletion. Update Hibiki there first.';
+  @override
+  String get anki_lapis_visual_blocks => 'Custom areas';
+  @override
+  String get anki_lapis_visual_blocks_hint =>
+      'Show existing fields somewhere else on the card. Display only: no Anki field is added or deleted.';
+  @override
+  String get anki_lapis_visual_block_add => 'Add area';
+  @override
+  String get anki_lapis_visual_block_delete => 'Delete area';
+  @override
+  String anki_lapis_visual_block_name({required Object index}) =>
+      'Area ${index}';
+  @override
+  String get anki_lapis_visual_block_anchor => 'Position on the card';
+  @override
+  String get anki_lapis_visual_block_anchor_top => 'Top of the card';
+  @override
+  String get anki_lapis_visual_block_anchor_above_sentence => 'Below the word';
+  @override
+  String get anki_lapis_visual_block_anchor_above_definition =>
+      'Below the sentence';
+  @override
+  String get anki_lapis_visual_block_anchor_below_definition =>
+      'Below the definitions';
+  @override
+  String get anki_lapis_visual_block_anchor_bottom => 'Bottom of the card';
+  @override
+  String get anki_lapis_visual_block_fields => 'Fields shown here';
+  @override
+  String get anki_lapis_visual_block_no_fields => 'No fields selected yet';
+  @override
+  String get anki_lapis_visual_block_needs_note_type =>
+      'Pick a note type first to choose fields.';
+  @override
+  String get anki_lapis_restore_factory => 'Restore factory Lapis';
+  @override
+  String get anki_lapis_restore_factory_hint =>
+      'Overwrite the Lapis note type in Anki with the version bundled in Hibiki and clear every customisation here.';
+  @override
+  String get anki_lapis_restore_factory_confirm =>
+      'This overwrites the Lapis styling and card templates in Anki with Hibiki\'s bundled version, and resets font size, custom CSS and custom areas. A backup of the current state is saved first. Card data is not touched.';
+  @override
+  String get anki_lapis_restore_factory_done =>
+      'Lapis restored to factory defaults';
+  @override
+  String anki_lapis_restore_factory_failed({required Object error}) =>
+      'Restore failed: ${error}';
+  @override
+  String get anki_lapis_visual_select_field_hint =>
+      'Click any part of the preview, or pick one below. What you pick is what the controls underneath edit.';
+  @override
+  String get anki_lapis_visual_editing_now => 'Editing';
 }
 
 // Path: <root>
@@ -81597,7 +82148,7 @@ class _StringsRu extends _StringsEn {
   @override
   String get anki_lapis_visual_preview => 'Lapis card preview';
   @override
-  String get anki_lapis_visual_select_field => 'Select a field to highlight';
+  String get anki_lapis_visual_select_field => 'Choose what to edit';
   @override
   String get anki_lapis_visual_reset_field => 'Reset field';
   @override
@@ -82212,6 +82763,58 @@ class _StringsRu extends _StringsEn {
   @override
   String get remote_delete_unsupported =>
       'The paired device is too old to support remote deletion. Update Hibiki there first.';
+  @override
+  String get anki_lapis_visual_blocks => 'Custom areas';
+  @override
+  String get anki_lapis_visual_blocks_hint =>
+      'Show existing fields somewhere else on the card. Display only: no Anki field is added or deleted.';
+  @override
+  String get anki_lapis_visual_block_add => 'Add area';
+  @override
+  String get anki_lapis_visual_block_delete => 'Delete area';
+  @override
+  String anki_lapis_visual_block_name({required Object index}) =>
+      'Area ${index}';
+  @override
+  String get anki_lapis_visual_block_anchor => 'Position on the card';
+  @override
+  String get anki_lapis_visual_block_anchor_top => 'Top of the card';
+  @override
+  String get anki_lapis_visual_block_anchor_above_sentence => 'Below the word';
+  @override
+  String get anki_lapis_visual_block_anchor_above_definition =>
+      'Below the sentence';
+  @override
+  String get anki_lapis_visual_block_anchor_below_definition =>
+      'Below the definitions';
+  @override
+  String get anki_lapis_visual_block_anchor_bottom => 'Bottom of the card';
+  @override
+  String get anki_lapis_visual_block_fields => 'Fields shown here';
+  @override
+  String get anki_lapis_visual_block_no_fields => 'No fields selected yet';
+  @override
+  String get anki_lapis_visual_block_needs_note_type =>
+      'Pick a note type first to choose fields.';
+  @override
+  String get anki_lapis_restore_factory => 'Restore factory Lapis';
+  @override
+  String get anki_lapis_restore_factory_hint =>
+      'Overwrite the Lapis note type in Anki with the version bundled in Hibiki and clear every customisation here.';
+  @override
+  String get anki_lapis_restore_factory_confirm =>
+      'This overwrites the Lapis styling and card templates in Anki with Hibiki\'s bundled version, and resets font size, custom CSS and custom areas. A backup of the current state is saved first. Card data is not touched.';
+  @override
+  String get anki_lapis_restore_factory_done =>
+      'Lapis restored to factory defaults';
+  @override
+  String anki_lapis_restore_factory_failed({required Object error}) =>
+      'Restore failed: ${error}';
+  @override
+  String get anki_lapis_visual_select_field_hint =>
+      'Click any part of the preview, or pick one below. What you pick is what the controls underneath edit.';
+  @override
+  String get anki_lapis_visual_editing_now => 'Editing';
 }
 
 // Path: <root>
@@ -88664,7 +89267,7 @@ class _StringsTh extends _StringsEn {
   @override
   String get anki_lapis_visual_preview => 'Lapis card preview';
   @override
-  String get anki_lapis_visual_select_field => 'Select a field to highlight';
+  String get anki_lapis_visual_select_field => 'Choose what to edit';
   @override
   String get anki_lapis_visual_reset_field => 'Reset field';
   @override
@@ -89279,6 +89882,58 @@ class _StringsTh extends _StringsEn {
   @override
   String get remote_delete_unsupported =>
       'The paired device is too old to support remote deletion. Update Hibiki there first.';
+  @override
+  String get anki_lapis_visual_blocks => 'Custom areas';
+  @override
+  String get anki_lapis_visual_blocks_hint =>
+      'Show existing fields somewhere else on the card. Display only: no Anki field is added or deleted.';
+  @override
+  String get anki_lapis_visual_block_add => 'Add area';
+  @override
+  String get anki_lapis_visual_block_delete => 'Delete area';
+  @override
+  String anki_lapis_visual_block_name({required Object index}) =>
+      'Area ${index}';
+  @override
+  String get anki_lapis_visual_block_anchor => 'Position on the card';
+  @override
+  String get anki_lapis_visual_block_anchor_top => 'Top of the card';
+  @override
+  String get anki_lapis_visual_block_anchor_above_sentence => 'Below the word';
+  @override
+  String get anki_lapis_visual_block_anchor_above_definition =>
+      'Below the sentence';
+  @override
+  String get anki_lapis_visual_block_anchor_below_definition =>
+      'Below the definitions';
+  @override
+  String get anki_lapis_visual_block_anchor_bottom => 'Bottom of the card';
+  @override
+  String get anki_lapis_visual_block_fields => 'Fields shown here';
+  @override
+  String get anki_lapis_visual_block_no_fields => 'No fields selected yet';
+  @override
+  String get anki_lapis_visual_block_needs_note_type =>
+      'Pick a note type first to choose fields.';
+  @override
+  String get anki_lapis_restore_factory => 'Restore factory Lapis';
+  @override
+  String get anki_lapis_restore_factory_hint =>
+      'Overwrite the Lapis note type in Anki with the version bundled in Hibiki and clear every customisation here.';
+  @override
+  String get anki_lapis_restore_factory_confirm =>
+      'This overwrites the Lapis styling and card templates in Anki with Hibiki\'s bundled version, and resets font size, custom CSS and custom areas. A backup of the current state is saved first. Card data is not touched.';
+  @override
+  String get anki_lapis_restore_factory_done =>
+      'Lapis restored to factory defaults';
+  @override
+  String anki_lapis_restore_factory_failed({required Object error}) =>
+      'Restore failed: ${error}';
+  @override
+  String get anki_lapis_visual_select_field_hint =>
+      'Click any part of the preview, or pick one below. What you pick is what the controls underneath edit.';
+  @override
+  String get anki_lapis_visual_editing_now => 'Editing';
 }
 
 // Path: <root>
@@ -95763,7 +96418,7 @@ class _StringsTr extends _StringsEn {
   @override
   String get anki_lapis_visual_preview => 'Lapis card preview';
   @override
-  String get anki_lapis_visual_select_field => 'Select a field to highlight';
+  String get anki_lapis_visual_select_field => 'Choose what to edit';
   @override
   String get anki_lapis_visual_reset_field => 'Reset field';
   @override
@@ -96378,6 +97033,58 @@ class _StringsTr extends _StringsEn {
   @override
   String get remote_delete_unsupported =>
       'The paired device is too old to support remote deletion. Update Hibiki there first.';
+  @override
+  String get anki_lapis_visual_blocks => 'Custom areas';
+  @override
+  String get anki_lapis_visual_blocks_hint =>
+      'Show existing fields somewhere else on the card. Display only: no Anki field is added or deleted.';
+  @override
+  String get anki_lapis_visual_block_add => 'Add area';
+  @override
+  String get anki_lapis_visual_block_delete => 'Delete area';
+  @override
+  String anki_lapis_visual_block_name({required Object index}) =>
+      'Area ${index}';
+  @override
+  String get anki_lapis_visual_block_anchor => 'Position on the card';
+  @override
+  String get anki_lapis_visual_block_anchor_top => 'Top of the card';
+  @override
+  String get anki_lapis_visual_block_anchor_above_sentence => 'Below the word';
+  @override
+  String get anki_lapis_visual_block_anchor_above_definition =>
+      'Below the sentence';
+  @override
+  String get anki_lapis_visual_block_anchor_below_definition =>
+      'Below the definitions';
+  @override
+  String get anki_lapis_visual_block_anchor_bottom => 'Bottom of the card';
+  @override
+  String get anki_lapis_visual_block_fields => 'Fields shown here';
+  @override
+  String get anki_lapis_visual_block_no_fields => 'No fields selected yet';
+  @override
+  String get anki_lapis_visual_block_needs_note_type =>
+      'Pick a note type first to choose fields.';
+  @override
+  String get anki_lapis_restore_factory => 'Restore factory Lapis';
+  @override
+  String get anki_lapis_restore_factory_hint =>
+      'Overwrite the Lapis note type in Anki with the version bundled in Hibiki and clear every customisation here.';
+  @override
+  String get anki_lapis_restore_factory_confirm =>
+      'This overwrites the Lapis styling and card templates in Anki with Hibiki\'s bundled version, and resets font size, custom CSS and custom areas. A backup of the current state is saved first. Card data is not touched.';
+  @override
+  String get anki_lapis_restore_factory_done =>
+      'Lapis restored to factory defaults';
+  @override
+  String anki_lapis_restore_factory_failed({required Object error}) =>
+      'Restore failed: ${error}';
+  @override
+  String get anki_lapis_visual_select_field_hint =>
+      'Click any part of the preview, or pick one below. What you pick is what the controls underneath edit.';
+  @override
+  String get anki_lapis_visual_editing_now => 'Editing';
 }
 
 // Path: <root>
@@ -102847,7 +103554,7 @@ class _StringsVi extends _StringsEn {
   @override
   String get anki_lapis_visual_preview => 'Lapis card preview';
   @override
-  String get anki_lapis_visual_select_field => 'Select a field to highlight';
+  String get anki_lapis_visual_select_field => 'Choose what to edit';
   @override
   String get anki_lapis_visual_reset_field => 'Reset field';
   @override
@@ -103462,6 +104169,58 @@ class _StringsVi extends _StringsEn {
   @override
   String get remote_delete_unsupported =>
       'The paired device is too old to support remote deletion. Update Hibiki there first.';
+  @override
+  String get anki_lapis_visual_blocks => 'Custom areas';
+  @override
+  String get anki_lapis_visual_blocks_hint =>
+      'Show existing fields somewhere else on the card. Display only: no Anki field is added or deleted.';
+  @override
+  String get anki_lapis_visual_block_add => 'Add area';
+  @override
+  String get anki_lapis_visual_block_delete => 'Delete area';
+  @override
+  String anki_lapis_visual_block_name({required Object index}) =>
+      'Area ${index}';
+  @override
+  String get anki_lapis_visual_block_anchor => 'Position on the card';
+  @override
+  String get anki_lapis_visual_block_anchor_top => 'Top of the card';
+  @override
+  String get anki_lapis_visual_block_anchor_above_sentence => 'Below the word';
+  @override
+  String get anki_lapis_visual_block_anchor_above_definition =>
+      'Below the sentence';
+  @override
+  String get anki_lapis_visual_block_anchor_below_definition =>
+      'Below the definitions';
+  @override
+  String get anki_lapis_visual_block_anchor_bottom => 'Bottom of the card';
+  @override
+  String get anki_lapis_visual_block_fields => 'Fields shown here';
+  @override
+  String get anki_lapis_visual_block_no_fields => 'No fields selected yet';
+  @override
+  String get anki_lapis_visual_block_needs_note_type =>
+      'Pick a note type first to choose fields.';
+  @override
+  String get anki_lapis_restore_factory => 'Restore factory Lapis';
+  @override
+  String get anki_lapis_restore_factory_hint =>
+      'Overwrite the Lapis note type in Anki with the version bundled in Hibiki and clear every customisation here.';
+  @override
+  String get anki_lapis_restore_factory_confirm =>
+      'This overwrites the Lapis styling and card templates in Anki with Hibiki\'s bundled version, and resets font size, custom CSS and custom areas. A backup of the current state is saved first. Card data is not touched.';
+  @override
+  String get anki_lapis_restore_factory_done =>
+      'Lapis restored to factory defaults';
+  @override
+  String anki_lapis_restore_factory_failed({required Object error}) =>
+      'Restore failed: ${error}';
+  @override
+  String get anki_lapis_visual_select_field_hint =>
+      'Click any part of the preview, or pick one below. What you pick is what the controls underneath edit.';
+  @override
+  String get anki_lapis_visual_editing_now => 'Editing';
 }
 
 // Path: <root>
@@ -109472,7 +110231,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get anki_lapis_visual_preview => 'Lapis 卡片预览';
   @override
-  String get anki_lapis_visual_select_field => '选择要高亮的字段';
+  String get anki_lapis_visual_select_field => '选择要编辑的部分';
   @override
   String get anki_lapis_visual_reset_field => '重置字段';
   @override
@@ -110053,6 +110812,53 @@ class _StringsZhCn extends _StringsEn {
   String get remote_delete_failed => '无法在对端设备上删除';
   @override
   String get remote_delete_unsupported => '对端设备版本过旧，不支持远端删除，请先升级对端 Hibiki';
+  @override
+  String get anki_lapis_visual_blocks => '自定义区域';
+  @override
+  String get anki_lapis_visual_blocks_hint =>
+      '把已有字段摆到卡片的其它位置。只改显示，不新增也不删除 Anki 字段。';
+  @override
+  String get anki_lapis_visual_block_add => '添加区域';
+  @override
+  String get anki_lapis_visual_block_delete => '删除区域';
+  @override
+  String anki_lapis_visual_block_name({required Object index}) => '区域 ${index}';
+  @override
+  String get anki_lapis_visual_block_anchor => '在卡片上的位置';
+  @override
+  String get anki_lapis_visual_block_anchor_top => '卡片顶部';
+  @override
+  String get anki_lapis_visual_block_anchor_above_sentence => '单词区下方';
+  @override
+  String get anki_lapis_visual_block_anchor_above_definition => '例句下方';
+  @override
+  String get anki_lapis_visual_block_anchor_below_definition => '释义框下方';
+  @override
+  String get anki_lapis_visual_block_anchor_bottom => '卡片底部';
+  @override
+  String get anki_lapis_visual_block_fields => '这里显示的字段';
+  @override
+  String get anki_lapis_visual_block_no_fields => '还没选字段';
+  @override
+  String get anki_lapis_visual_block_needs_note_type => '先选好卡片类型才能挑字段。';
+  @override
+  String get anki_lapis_restore_factory => '恢复出厂 Lapis';
+  @override
+  String get anki_lapis_restore_factory_hint =>
+      '用 Hibiki 内置版本覆盖 Anki 里的 Lapis 卡型（样式与正反面模板），并清空这里的全部客制化。';
+  @override
+  String get anki_lapis_restore_factory_confirm =>
+      '这会用 Hibiki 内置版本覆盖 Anki 里 Lapis 的样式与正反面模板，并把字号、自定义 CSS、自定义区域全部重置。执行前会先自动备份当前状态。卡片数据不受影响。';
+  @override
+  String get anki_lapis_restore_factory_done => 'Lapis 已恢复出厂状态';
+  @override
+  String anki_lapis_restore_factory_failed({required Object error}) =>
+      '恢复失败：${error}';
+  @override
+  String get anki_lapis_visual_select_field_hint =>
+      '点预览里的任意部分，或从下面挑一个。选中的就是下方那些控件正在编辑的对象。';
+  @override
+  String get anki_lapis_visual_editing_now => '正在编辑';
 }
 
 // Path: <root>
@@ -116318,7 +117124,7 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get anki_lapis_visual_preview => 'Lapis card preview';
   @override
-  String get anki_lapis_visual_select_field => 'Select a field to highlight';
+  String get anki_lapis_visual_select_field => 'Choose what to edit';
   @override
   String get anki_lapis_visual_reset_field => 'Reset field';
   @override
@@ -116933,6 +117739,58 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get remote_delete_unsupported =>
       'The paired device is too old to support remote deletion. Update Hibiki there first.';
+  @override
+  String get anki_lapis_visual_blocks => 'Custom areas';
+  @override
+  String get anki_lapis_visual_blocks_hint =>
+      'Show existing fields somewhere else on the card. Display only: no Anki field is added or deleted.';
+  @override
+  String get anki_lapis_visual_block_add => 'Add area';
+  @override
+  String get anki_lapis_visual_block_delete => 'Delete area';
+  @override
+  String anki_lapis_visual_block_name({required Object index}) =>
+      'Area ${index}';
+  @override
+  String get anki_lapis_visual_block_anchor => 'Position on the card';
+  @override
+  String get anki_lapis_visual_block_anchor_top => 'Top of the card';
+  @override
+  String get anki_lapis_visual_block_anchor_above_sentence => 'Below the word';
+  @override
+  String get anki_lapis_visual_block_anchor_above_definition =>
+      'Below the sentence';
+  @override
+  String get anki_lapis_visual_block_anchor_below_definition =>
+      'Below the definitions';
+  @override
+  String get anki_lapis_visual_block_anchor_bottom => 'Bottom of the card';
+  @override
+  String get anki_lapis_visual_block_fields => 'Fields shown here';
+  @override
+  String get anki_lapis_visual_block_no_fields => 'No fields selected yet';
+  @override
+  String get anki_lapis_visual_block_needs_note_type =>
+      'Pick a note type first to choose fields.';
+  @override
+  String get anki_lapis_restore_factory => 'Restore factory Lapis';
+  @override
+  String get anki_lapis_restore_factory_hint =>
+      'Overwrite the Lapis note type in Anki with the version bundled in Hibiki and clear every customisation here.';
+  @override
+  String get anki_lapis_restore_factory_confirm =>
+      'This overwrites the Lapis styling and card templates in Anki with Hibiki\'s bundled version, and resets font size, custom CSS and custom areas. A backup of the current state is saved first. Card data is not touched.';
+  @override
+  String get anki_lapis_restore_factory_done =>
+      'Lapis restored to factory defaults';
+  @override
+  String anki_lapis_restore_factory_failed({required Object error}) =>
+      'Restore failed: ${error}';
+  @override
+  String get anki_lapis_visual_select_field_hint =>
+      'Click any part of the preview, or pick one below. What you pick is what the controls underneath edit.';
+  @override
+  String get anki_lapis_visual_editing_now => 'Editing';
 }
 
 /// Flat map(s) containing all translations.
@@ -122702,7 +123560,7 @@ extension on _StringsEn {
       case 'anki_lapis_visual_preview':
         return 'Lapis card preview';
       case 'anki_lapis_visual_select_field':
-        return 'Select a field to highlight';
+        return 'Choose what to edit';
       case 'anki_lapis_visual_reset_field':
         return 'Reset field';
       case 'anki_lapis_visual_font_size':
@@ -123255,6 +124113,48 @@ extension on _StringsEn {
         return 'Could not delete it on the paired device';
       case 'remote_delete_unsupported':
         return 'The paired device is too old to support remote deletion. Update Hibiki there first.';
+      case 'anki_lapis_visual_blocks':
+        return 'Custom areas';
+      case 'anki_lapis_visual_blocks_hint':
+        return 'Show existing fields somewhere else on the card. Display only: no Anki field is added or deleted.';
+      case 'anki_lapis_visual_block_add':
+        return 'Add area';
+      case 'anki_lapis_visual_block_delete':
+        return 'Delete area';
+      case 'anki_lapis_visual_block_name':
+        return ({required Object index}) => 'Area ${index}';
+      case 'anki_lapis_visual_block_anchor':
+        return 'Position on the card';
+      case 'anki_lapis_visual_block_anchor_top':
+        return 'Top of the card';
+      case 'anki_lapis_visual_block_anchor_above_sentence':
+        return 'Below the word';
+      case 'anki_lapis_visual_block_anchor_above_definition':
+        return 'Below the sentence';
+      case 'anki_lapis_visual_block_anchor_below_definition':
+        return 'Below the definitions';
+      case 'anki_lapis_visual_block_anchor_bottom':
+        return 'Bottom of the card';
+      case 'anki_lapis_visual_block_fields':
+        return 'Fields shown here';
+      case 'anki_lapis_visual_block_no_fields':
+        return 'No fields selected yet';
+      case 'anki_lapis_visual_block_needs_note_type':
+        return 'Pick a note type first to choose fields.';
+      case 'anki_lapis_restore_factory':
+        return 'Restore factory Lapis';
+      case 'anki_lapis_restore_factory_hint':
+        return 'Overwrite the Lapis note type in Anki with the version bundled in Hibiki and clear every customisation here.';
+      case 'anki_lapis_restore_factory_confirm':
+        return 'This overwrites the Lapis styling and card templates in Anki with Hibiki\'s bundled version, and resets font size, custom CSS and custom areas. A backup of the current state is saved first. Card data is not touched.';
+      case 'anki_lapis_restore_factory_done':
+        return 'Lapis restored to factory defaults';
+      case 'anki_lapis_restore_factory_failed':
+        return ({required Object error}) => 'Restore failed: ${error}';
+      case 'anki_lapis_visual_select_field_hint':
+        return 'Click any part of the preview, or pick one below. What you pick is what the controls underneath edit.';
+      case 'anki_lapis_visual_editing_now':
+        return 'Editing';
       default:
         return null;
     }
@@ -129022,7 +129922,7 @@ extension on _StringsAr {
       case 'anki_lapis_visual_preview':
         return 'Lapis card preview';
       case 'anki_lapis_visual_select_field':
-        return 'Select a field to highlight';
+        return 'Choose what to edit';
       case 'anki_lapis_visual_reset_field':
         return 'Reset field';
       case 'anki_lapis_visual_font_size':
@@ -129575,6 +130475,48 @@ extension on _StringsAr {
         return 'Could not delete it on the paired device';
       case 'remote_delete_unsupported':
         return 'The paired device is too old to support remote deletion. Update Hibiki there first.';
+      case 'anki_lapis_visual_blocks':
+        return 'Custom areas';
+      case 'anki_lapis_visual_blocks_hint':
+        return 'Show existing fields somewhere else on the card. Display only: no Anki field is added or deleted.';
+      case 'anki_lapis_visual_block_add':
+        return 'Add area';
+      case 'anki_lapis_visual_block_delete':
+        return 'Delete area';
+      case 'anki_lapis_visual_block_name':
+        return ({required Object index}) => 'Area ${index}';
+      case 'anki_lapis_visual_block_anchor':
+        return 'Position on the card';
+      case 'anki_lapis_visual_block_anchor_top':
+        return 'Top of the card';
+      case 'anki_lapis_visual_block_anchor_above_sentence':
+        return 'Below the word';
+      case 'anki_lapis_visual_block_anchor_above_definition':
+        return 'Below the sentence';
+      case 'anki_lapis_visual_block_anchor_below_definition':
+        return 'Below the definitions';
+      case 'anki_lapis_visual_block_anchor_bottom':
+        return 'Bottom of the card';
+      case 'anki_lapis_visual_block_fields':
+        return 'Fields shown here';
+      case 'anki_lapis_visual_block_no_fields':
+        return 'No fields selected yet';
+      case 'anki_lapis_visual_block_needs_note_type':
+        return 'Pick a note type first to choose fields.';
+      case 'anki_lapis_restore_factory':
+        return 'Restore factory Lapis';
+      case 'anki_lapis_restore_factory_hint':
+        return 'Overwrite the Lapis note type in Anki with the version bundled in Hibiki and clear every customisation here.';
+      case 'anki_lapis_restore_factory_confirm':
+        return 'This overwrites the Lapis styling and card templates in Anki with Hibiki\'s bundled version, and resets font size, custom CSS and custom areas. A backup of the current state is saved first. Card data is not touched.';
+      case 'anki_lapis_restore_factory_done':
+        return 'Lapis restored to factory defaults';
+      case 'anki_lapis_restore_factory_failed':
+        return ({required Object error}) => 'Restore failed: ${error}';
+      case 'anki_lapis_visual_select_field_hint':
+        return 'Click any part of the preview, or pick one below. What you pick is what the controls underneath edit.';
+      case 'anki_lapis_visual_editing_now':
+        return 'Editing';
       default:
         return null;
     }
@@ -135364,7 +136306,7 @@ extension on _StringsDe {
       case 'anki_lapis_visual_preview':
         return 'Lapis card preview';
       case 'anki_lapis_visual_select_field':
-        return 'Select a field to highlight';
+        return 'Choose what to edit';
       case 'anki_lapis_visual_reset_field':
         return 'Reset field';
       case 'anki_lapis_visual_font_size':
@@ -135917,6 +136859,48 @@ extension on _StringsDe {
         return 'Could not delete it on the paired device';
       case 'remote_delete_unsupported':
         return 'The paired device is too old to support remote deletion. Update Hibiki there first.';
+      case 'anki_lapis_visual_blocks':
+        return 'Custom areas';
+      case 'anki_lapis_visual_blocks_hint':
+        return 'Show existing fields somewhere else on the card. Display only: no Anki field is added or deleted.';
+      case 'anki_lapis_visual_block_add':
+        return 'Add area';
+      case 'anki_lapis_visual_block_delete':
+        return 'Delete area';
+      case 'anki_lapis_visual_block_name':
+        return ({required Object index}) => 'Area ${index}';
+      case 'anki_lapis_visual_block_anchor':
+        return 'Position on the card';
+      case 'anki_lapis_visual_block_anchor_top':
+        return 'Top of the card';
+      case 'anki_lapis_visual_block_anchor_above_sentence':
+        return 'Below the word';
+      case 'anki_lapis_visual_block_anchor_above_definition':
+        return 'Below the sentence';
+      case 'anki_lapis_visual_block_anchor_below_definition':
+        return 'Below the definitions';
+      case 'anki_lapis_visual_block_anchor_bottom':
+        return 'Bottom of the card';
+      case 'anki_lapis_visual_block_fields':
+        return 'Fields shown here';
+      case 'anki_lapis_visual_block_no_fields':
+        return 'No fields selected yet';
+      case 'anki_lapis_visual_block_needs_note_type':
+        return 'Pick a note type first to choose fields.';
+      case 'anki_lapis_restore_factory':
+        return 'Restore factory Lapis';
+      case 'anki_lapis_restore_factory_hint':
+        return 'Overwrite the Lapis note type in Anki with the version bundled in Hibiki and clear every customisation here.';
+      case 'anki_lapis_restore_factory_confirm':
+        return 'This overwrites the Lapis styling and card templates in Anki with Hibiki\'s bundled version, and resets font size, custom CSS and custom areas. A backup of the current state is saved first. Card data is not touched.';
+      case 'anki_lapis_restore_factory_done':
+        return 'Lapis restored to factory defaults';
+      case 'anki_lapis_restore_factory_failed':
+        return ({required Object error}) => 'Restore failed: ${error}';
+      case 'anki_lapis_visual_select_field_hint':
+        return 'Click any part of the preview, or pick one below. What you pick is what the controls underneath edit.';
+      case 'anki_lapis_visual_editing_now':
+        return 'Editing';
       default:
         return null;
     }
@@ -141705,7 +142689,7 @@ extension on _StringsEs {
       case 'anki_lapis_visual_preview':
         return 'Lapis card preview';
       case 'anki_lapis_visual_select_field':
-        return 'Select a field to highlight';
+        return 'Choose what to edit';
       case 'anki_lapis_visual_reset_field':
         return 'Reset field';
       case 'anki_lapis_visual_font_size':
@@ -142258,6 +143242,48 @@ extension on _StringsEs {
         return 'Could not delete it on the paired device';
       case 'remote_delete_unsupported':
         return 'The paired device is too old to support remote deletion. Update Hibiki there first.';
+      case 'anki_lapis_visual_blocks':
+        return 'Custom areas';
+      case 'anki_lapis_visual_blocks_hint':
+        return 'Show existing fields somewhere else on the card. Display only: no Anki field is added or deleted.';
+      case 'anki_lapis_visual_block_add':
+        return 'Add area';
+      case 'anki_lapis_visual_block_delete':
+        return 'Delete area';
+      case 'anki_lapis_visual_block_name':
+        return ({required Object index}) => 'Area ${index}';
+      case 'anki_lapis_visual_block_anchor':
+        return 'Position on the card';
+      case 'anki_lapis_visual_block_anchor_top':
+        return 'Top of the card';
+      case 'anki_lapis_visual_block_anchor_above_sentence':
+        return 'Below the word';
+      case 'anki_lapis_visual_block_anchor_above_definition':
+        return 'Below the sentence';
+      case 'anki_lapis_visual_block_anchor_below_definition':
+        return 'Below the definitions';
+      case 'anki_lapis_visual_block_anchor_bottom':
+        return 'Bottom of the card';
+      case 'anki_lapis_visual_block_fields':
+        return 'Fields shown here';
+      case 'anki_lapis_visual_block_no_fields':
+        return 'No fields selected yet';
+      case 'anki_lapis_visual_block_needs_note_type':
+        return 'Pick a note type first to choose fields.';
+      case 'anki_lapis_restore_factory':
+        return 'Restore factory Lapis';
+      case 'anki_lapis_restore_factory_hint':
+        return 'Overwrite the Lapis note type in Anki with the version bundled in Hibiki and clear every customisation here.';
+      case 'anki_lapis_restore_factory_confirm':
+        return 'This overwrites the Lapis styling and card templates in Anki with Hibiki\'s bundled version, and resets font size, custom CSS and custom areas. A backup of the current state is saved first. Card data is not touched.';
+      case 'anki_lapis_restore_factory_done':
+        return 'Lapis restored to factory defaults';
+      case 'anki_lapis_restore_factory_failed':
+        return ({required Object error}) => 'Restore failed: ${error}';
+      case 'anki_lapis_visual_select_field_hint':
+        return 'Click any part of the preview, or pick one below. What you pick is what the controls underneath edit.';
+      case 'anki_lapis_visual_editing_now':
+        return 'Editing';
       default:
         return null;
     }
@@ -148052,7 +149078,7 @@ extension on _StringsFr {
       case 'anki_lapis_visual_preview':
         return 'Lapis card preview';
       case 'anki_lapis_visual_select_field':
-        return 'Select a field to highlight';
+        return 'Choose what to edit';
       case 'anki_lapis_visual_reset_field':
         return 'Reset field';
       case 'anki_lapis_visual_font_size':
@@ -148605,6 +149631,48 @@ extension on _StringsFr {
         return 'Could not delete it on the paired device';
       case 'remote_delete_unsupported':
         return 'The paired device is too old to support remote deletion. Update Hibiki there first.';
+      case 'anki_lapis_visual_blocks':
+        return 'Custom areas';
+      case 'anki_lapis_visual_blocks_hint':
+        return 'Show existing fields somewhere else on the card. Display only: no Anki field is added or deleted.';
+      case 'anki_lapis_visual_block_add':
+        return 'Add area';
+      case 'anki_lapis_visual_block_delete':
+        return 'Delete area';
+      case 'anki_lapis_visual_block_name':
+        return ({required Object index}) => 'Area ${index}';
+      case 'anki_lapis_visual_block_anchor':
+        return 'Position on the card';
+      case 'anki_lapis_visual_block_anchor_top':
+        return 'Top of the card';
+      case 'anki_lapis_visual_block_anchor_above_sentence':
+        return 'Below the word';
+      case 'anki_lapis_visual_block_anchor_above_definition':
+        return 'Below the sentence';
+      case 'anki_lapis_visual_block_anchor_below_definition':
+        return 'Below the definitions';
+      case 'anki_lapis_visual_block_anchor_bottom':
+        return 'Bottom of the card';
+      case 'anki_lapis_visual_block_fields':
+        return 'Fields shown here';
+      case 'anki_lapis_visual_block_no_fields':
+        return 'No fields selected yet';
+      case 'anki_lapis_visual_block_needs_note_type':
+        return 'Pick a note type first to choose fields.';
+      case 'anki_lapis_restore_factory':
+        return 'Restore factory Lapis';
+      case 'anki_lapis_restore_factory_hint':
+        return 'Overwrite the Lapis note type in Anki with the version bundled in Hibiki and clear every customisation here.';
+      case 'anki_lapis_restore_factory_confirm':
+        return 'This overwrites the Lapis styling and card templates in Anki with Hibiki\'s bundled version, and resets font size, custom CSS and custom areas. A backup of the current state is saved first. Card data is not touched.';
+      case 'anki_lapis_restore_factory_done':
+        return 'Lapis restored to factory defaults';
+      case 'anki_lapis_restore_factory_failed':
+        return ({required Object error}) => 'Restore failed: ${error}';
+      case 'anki_lapis_visual_select_field_hint':
+        return 'Click any part of the preview, or pick one below. What you pick is what the controls underneath edit.';
+      case 'anki_lapis_visual_editing_now':
+        return 'Editing';
       default:
         return null;
     }
@@ -154381,7 +155449,7 @@ extension on _StringsId {
       case 'anki_lapis_visual_preview':
         return 'Lapis card preview';
       case 'anki_lapis_visual_select_field':
-        return 'Select a field to highlight';
+        return 'Choose what to edit';
       case 'anki_lapis_visual_reset_field':
         return 'Reset field';
       case 'anki_lapis_visual_font_size':
@@ -154934,6 +156002,48 @@ extension on _StringsId {
         return 'Could not delete it on the paired device';
       case 'remote_delete_unsupported':
         return 'The paired device is too old to support remote deletion. Update Hibiki there first.';
+      case 'anki_lapis_visual_blocks':
+        return 'Custom areas';
+      case 'anki_lapis_visual_blocks_hint':
+        return 'Show existing fields somewhere else on the card. Display only: no Anki field is added or deleted.';
+      case 'anki_lapis_visual_block_add':
+        return 'Add area';
+      case 'anki_lapis_visual_block_delete':
+        return 'Delete area';
+      case 'anki_lapis_visual_block_name':
+        return ({required Object index}) => 'Area ${index}';
+      case 'anki_lapis_visual_block_anchor':
+        return 'Position on the card';
+      case 'anki_lapis_visual_block_anchor_top':
+        return 'Top of the card';
+      case 'anki_lapis_visual_block_anchor_above_sentence':
+        return 'Below the word';
+      case 'anki_lapis_visual_block_anchor_above_definition':
+        return 'Below the sentence';
+      case 'anki_lapis_visual_block_anchor_below_definition':
+        return 'Below the definitions';
+      case 'anki_lapis_visual_block_anchor_bottom':
+        return 'Bottom of the card';
+      case 'anki_lapis_visual_block_fields':
+        return 'Fields shown here';
+      case 'anki_lapis_visual_block_no_fields':
+        return 'No fields selected yet';
+      case 'anki_lapis_visual_block_needs_note_type':
+        return 'Pick a note type first to choose fields.';
+      case 'anki_lapis_restore_factory':
+        return 'Restore factory Lapis';
+      case 'anki_lapis_restore_factory_hint':
+        return 'Overwrite the Lapis note type in Anki with the version bundled in Hibiki and clear every customisation here.';
+      case 'anki_lapis_restore_factory_confirm':
+        return 'This overwrites the Lapis styling and card templates in Anki with Hibiki\'s bundled version, and resets font size, custom CSS and custom areas. A backup of the current state is saved first. Card data is not touched.';
+      case 'anki_lapis_restore_factory_done':
+        return 'Lapis restored to factory defaults';
+      case 'anki_lapis_restore_factory_failed':
+        return ({required Object error}) => 'Restore failed: ${error}';
+      case 'anki_lapis_visual_select_field_hint':
+        return 'Click any part of the preview, or pick one below. What you pick is what the controls underneath edit.';
+      case 'anki_lapis_visual_editing_now':
+        return 'Editing';
       default:
         return null;
     }
@@ -160724,7 +161834,7 @@ extension on _StringsIt {
       case 'anki_lapis_visual_preview':
         return 'Lapis card preview';
       case 'anki_lapis_visual_select_field':
-        return 'Select a field to highlight';
+        return 'Choose what to edit';
       case 'anki_lapis_visual_reset_field':
         return 'Reset field';
       case 'anki_lapis_visual_font_size':
@@ -161277,6 +162387,48 @@ extension on _StringsIt {
         return 'Could not delete it on the paired device';
       case 'remote_delete_unsupported':
         return 'The paired device is too old to support remote deletion. Update Hibiki there first.';
+      case 'anki_lapis_visual_blocks':
+        return 'Custom areas';
+      case 'anki_lapis_visual_blocks_hint':
+        return 'Show existing fields somewhere else on the card. Display only: no Anki field is added or deleted.';
+      case 'anki_lapis_visual_block_add':
+        return 'Add area';
+      case 'anki_lapis_visual_block_delete':
+        return 'Delete area';
+      case 'anki_lapis_visual_block_name':
+        return ({required Object index}) => 'Area ${index}';
+      case 'anki_lapis_visual_block_anchor':
+        return 'Position on the card';
+      case 'anki_lapis_visual_block_anchor_top':
+        return 'Top of the card';
+      case 'anki_lapis_visual_block_anchor_above_sentence':
+        return 'Below the word';
+      case 'anki_lapis_visual_block_anchor_above_definition':
+        return 'Below the sentence';
+      case 'anki_lapis_visual_block_anchor_below_definition':
+        return 'Below the definitions';
+      case 'anki_lapis_visual_block_anchor_bottom':
+        return 'Bottom of the card';
+      case 'anki_lapis_visual_block_fields':
+        return 'Fields shown here';
+      case 'anki_lapis_visual_block_no_fields':
+        return 'No fields selected yet';
+      case 'anki_lapis_visual_block_needs_note_type':
+        return 'Pick a note type first to choose fields.';
+      case 'anki_lapis_restore_factory':
+        return 'Restore factory Lapis';
+      case 'anki_lapis_restore_factory_hint':
+        return 'Overwrite the Lapis note type in Anki with the version bundled in Hibiki and clear every customisation here.';
+      case 'anki_lapis_restore_factory_confirm':
+        return 'This overwrites the Lapis styling and card templates in Anki with Hibiki\'s bundled version, and resets font size, custom CSS and custom areas. A backup of the current state is saved first. Card data is not touched.';
+      case 'anki_lapis_restore_factory_done':
+        return 'Lapis restored to factory defaults';
+      case 'anki_lapis_restore_factory_failed':
+        return ({required Object error}) => 'Restore failed: ${error}';
+      case 'anki_lapis_visual_select_field_hint':
+        return 'Click any part of the preview, or pick one below. What you pick is what the controls underneath edit.';
+      case 'anki_lapis_visual_editing_now':
+        return 'Editing';
       default:
         return null;
     }
@@ -167029,7 +168181,7 @@ extension on _StringsJa {
       case 'anki_lapis_visual_preview':
         return 'Lapis card preview';
       case 'anki_lapis_visual_select_field':
-        return 'Select a field to highlight';
+        return 'Choose what to edit';
       case 'anki_lapis_visual_reset_field':
         return 'Reset field';
       case 'anki_lapis_visual_font_size':
@@ -167582,6 +168734,48 @@ extension on _StringsJa {
         return 'Could not delete it on the paired device';
       case 'remote_delete_unsupported':
         return 'The paired device is too old to support remote deletion. Update Hibiki there first.';
+      case 'anki_lapis_visual_blocks':
+        return 'Custom areas';
+      case 'anki_lapis_visual_blocks_hint':
+        return 'Show existing fields somewhere else on the card. Display only: no Anki field is added or deleted.';
+      case 'anki_lapis_visual_block_add':
+        return 'Add area';
+      case 'anki_lapis_visual_block_delete':
+        return 'Delete area';
+      case 'anki_lapis_visual_block_name':
+        return ({required Object index}) => 'Area ${index}';
+      case 'anki_lapis_visual_block_anchor':
+        return 'Position on the card';
+      case 'anki_lapis_visual_block_anchor_top':
+        return 'Top of the card';
+      case 'anki_lapis_visual_block_anchor_above_sentence':
+        return 'Below the word';
+      case 'anki_lapis_visual_block_anchor_above_definition':
+        return 'Below the sentence';
+      case 'anki_lapis_visual_block_anchor_below_definition':
+        return 'Below the definitions';
+      case 'anki_lapis_visual_block_anchor_bottom':
+        return 'Bottom of the card';
+      case 'anki_lapis_visual_block_fields':
+        return 'Fields shown here';
+      case 'anki_lapis_visual_block_no_fields':
+        return 'No fields selected yet';
+      case 'anki_lapis_visual_block_needs_note_type':
+        return 'Pick a note type first to choose fields.';
+      case 'anki_lapis_restore_factory':
+        return 'Restore factory Lapis';
+      case 'anki_lapis_restore_factory_hint':
+        return 'Overwrite the Lapis note type in Anki with the version bundled in Hibiki and clear every customisation here.';
+      case 'anki_lapis_restore_factory_confirm':
+        return 'This overwrites the Lapis styling and card templates in Anki with Hibiki\'s bundled version, and resets font size, custom CSS and custom areas. A backup of the current state is saved first. Card data is not touched.';
+      case 'anki_lapis_restore_factory_done':
+        return 'Lapis restored to factory defaults';
+      case 'anki_lapis_restore_factory_failed':
+        return ({required Object error}) => 'Restore failed: ${error}';
+      case 'anki_lapis_visual_select_field_hint':
+        return 'Click any part of the preview, or pick one below. What you pick is what the controls underneath edit.';
+      case 'anki_lapis_visual_editing_now':
+        return 'Editing';
       default:
         return null;
     }
@@ -173338,7 +174532,7 @@ extension on _StringsKo {
       case 'anki_lapis_visual_preview':
         return 'Lapis card preview';
       case 'anki_lapis_visual_select_field':
-        return 'Select a field to highlight';
+        return 'Choose what to edit';
       case 'anki_lapis_visual_reset_field':
         return 'Reset field';
       case 'anki_lapis_visual_font_size':
@@ -173891,6 +175085,48 @@ extension on _StringsKo {
         return 'Could not delete it on the paired device';
       case 'remote_delete_unsupported':
         return 'The paired device is too old to support remote deletion. Update Hibiki there first.';
+      case 'anki_lapis_visual_blocks':
+        return 'Custom areas';
+      case 'anki_lapis_visual_blocks_hint':
+        return 'Show existing fields somewhere else on the card. Display only: no Anki field is added or deleted.';
+      case 'anki_lapis_visual_block_add':
+        return 'Add area';
+      case 'anki_lapis_visual_block_delete':
+        return 'Delete area';
+      case 'anki_lapis_visual_block_name':
+        return ({required Object index}) => 'Area ${index}';
+      case 'anki_lapis_visual_block_anchor':
+        return 'Position on the card';
+      case 'anki_lapis_visual_block_anchor_top':
+        return 'Top of the card';
+      case 'anki_lapis_visual_block_anchor_above_sentence':
+        return 'Below the word';
+      case 'anki_lapis_visual_block_anchor_above_definition':
+        return 'Below the sentence';
+      case 'anki_lapis_visual_block_anchor_below_definition':
+        return 'Below the definitions';
+      case 'anki_lapis_visual_block_anchor_bottom':
+        return 'Bottom of the card';
+      case 'anki_lapis_visual_block_fields':
+        return 'Fields shown here';
+      case 'anki_lapis_visual_block_no_fields':
+        return 'No fields selected yet';
+      case 'anki_lapis_visual_block_needs_note_type':
+        return 'Pick a note type first to choose fields.';
+      case 'anki_lapis_restore_factory':
+        return 'Restore factory Lapis';
+      case 'anki_lapis_restore_factory_hint':
+        return 'Overwrite the Lapis note type in Anki with the version bundled in Hibiki and clear every customisation here.';
+      case 'anki_lapis_restore_factory_confirm':
+        return 'This overwrites the Lapis styling and card templates in Anki with Hibiki\'s bundled version, and resets font size, custom CSS and custom areas. A backup of the current state is saved first. Card data is not touched.';
+      case 'anki_lapis_restore_factory_done':
+        return 'Lapis restored to factory defaults';
+      case 'anki_lapis_restore_factory_failed':
+        return ({required Object error}) => 'Restore failed: ${error}';
+      case 'anki_lapis_visual_select_field_hint':
+        return 'Click any part of the preview, or pick one below. What you pick is what the controls underneath edit.';
+      case 'anki_lapis_visual_editing_now':
+        return 'Editing';
       default:
         return null;
     }
@@ -179675,7 +180911,7 @@ extension on _StringsNl {
       case 'anki_lapis_visual_preview':
         return 'Lapis card preview';
       case 'anki_lapis_visual_select_field':
-        return 'Select a field to highlight';
+        return 'Choose what to edit';
       case 'anki_lapis_visual_reset_field':
         return 'Reset field';
       case 'anki_lapis_visual_font_size':
@@ -180228,6 +181464,48 @@ extension on _StringsNl {
         return 'Could not delete it on the paired device';
       case 'remote_delete_unsupported':
         return 'The paired device is too old to support remote deletion. Update Hibiki there first.';
+      case 'anki_lapis_visual_blocks':
+        return 'Custom areas';
+      case 'anki_lapis_visual_blocks_hint':
+        return 'Show existing fields somewhere else on the card. Display only: no Anki field is added or deleted.';
+      case 'anki_lapis_visual_block_add':
+        return 'Add area';
+      case 'anki_lapis_visual_block_delete':
+        return 'Delete area';
+      case 'anki_lapis_visual_block_name':
+        return ({required Object index}) => 'Area ${index}';
+      case 'anki_lapis_visual_block_anchor':
+        return 'Position on the card';
+      case 'anki_lapis_visual_block_anchor_top':
+        return 'Top of the card';
+      case 'anki_lapis_visual_block_anchor_above_sentence':
+        return 'Below the word';
+      case 'anki_lapis_visual_block_anchor_above_definition':
+        return 'Below the sentence';
+      case 'anki_lapis_visual_block_anchor_below_definition':
+        return 'Below the definitions';
+      case 'anki_lapis_visual_block_anchor_bottom':
+        return 'Bottom of the card';
+      case 'anki_lapis_visual_block_fields':
+        return 'Fields shown here';
+      case 'anki_lapis_visual_block_no_fields':
+        return 'No fields selected yet';
+      case 'anki_lapis_visual_block_needs_note_type':
+        return 'Pick a note type first to choose fields.';
+      case 'anki_lapis_restore_factory':
+        return 'Restore factory Lapis';
+      case 'anki_lapis_restore_factory_hint':
+        return 'Overwrite the Lapis note type in Anki with the version bundled in Hibiki and clear every customisation here.';
+      case 'anki_lapis_restore_factory_confirm':
+        return 'This overwrites the Lapis styling and card templates in Anki with Hibiki\'s bundled version, and resets font size, custom CSS and custom areas. A backup of the current state is saved first. Card data is not touched.';
+      case 'anki_lapis_restore_factory_done':
+        return 'Lapis restored to factory defaults';
+      case 'anki_lapis_restore_factory_failed':
+        return ({required Object error}) => 'Restore failed: ${error}';
+      case 'anki_lapis_visual_select_field_hint':
+        return 'Click any part of the preview, or pick one below. What you pick is what the controls underneath edit.';
+      case 'anki_lapis_visual_editing_now':
+        return 'Editing';
       default:
         return null;
     }
@@ -186009,7 +187287,7 @@ extension on _StringsPtBr {
       case 'anki_lapis_visual_preview':
         return 'Lapis card preview';
       case 'anki_lapis_visual_select_field':
-        return 'Select a field to highlight';
+        return 'Choose what to edit';
       case 'anki_lapis_visual_reset_field':
         return 'Reset field';
       case 'anki_lapis_visual_font_size':
@@ -186562,6 +187840,48 @@ extension on _StringsPtBr {
         return 'Could not delete it on the paired device';
       case 'remote_delete_unsupported':
         return 'The paired device is too old to support remote deletion. Update Hibiki there first.';
+      case 'anki_lapis_visual_blocks':
+        return 'Custom areas';
+      case 'anki_lapis_visual_blocks_hint':
+        return 'Show existing fields somewhere else on the card. Display only: no Anki field is added or deleted.';
+      case 'anki_lapis_visual_block_add':
+        return 'Add area';
+      case 'anki_lapis_visual_block_delete':
+        return 'Delete area';
+      case 'anki_lapis_visual_block_name':
+        return ({required Object index}) => 'Area ${index}';
+      case 'anki_lapis_visual_block_anchor':
+        return 'Position on the card';
+      case 'anki_lapis_visual_block_anchor_top':
+        return 'Top of the card';
+      case 'anki_lapis_visual_block_anchor_above_sentence':
+        return 'Below the word';
+      case 'anki_lapis_visual_block_anchor_above_definition':
+        return 'Below the sentence';
+      case 'anki_lapis_visual_block_anchor_below_definition':
+        return 'Below the definitions';
+      case 'anki_lapis_visual_block_anchor_bottom':
+        return 'Bottom of the card';
+      case 'anki_lapis_visual_block_fields':
+        return 'Fields shown here';
+      case 'anki_lapis_visual_block_no_fields':
+        return 'No fields selected yet';
+      case 'anki_lapis_visual_block_needs_note_type':
+        return 'Pick a note type first to choose fields.';
+      case 'anki_lapis_restore_factory':
+        return 'Restore factory Lapis';
+      case 'anki_lapis_restore_factory_hint':
+        return 'Overwrite the Lapis note type in Anki with the version bundled in Hibiki and clear every customisation here.';
+      case 'anki_lapis_restore_factory_confirm':
+        return 'This overwrites the Lapis styling and card templates in Anki with Hibiki\'s bundled version, and resets font size, custom CSS and custom areas. A backup of the current state is saved first. Card data is not touched.';
+      case 'anki_lapis_restore_factory_done':
+        return 'Lapis restored to factory defaults';
+      case 'anki_lapis_restore_factory_failed':
+        return ({required Object error}) => 'Restore failed: ${error}';
+      case 'anki_lapis_visual_select_field_hint':
+        return 'Click any part of the preview, or pick one below. What you pick is what the controls underneath edit.';
+      case 'anki_lapis_visual_editing_now':
+        return 'Editing';
       default:
         return null;
     }
@@ -192348,7 +193668,7 @@ extension on _StringsRu {
       case 'anki_lapis_visual_preview':
         return 'Lapis card preview';
       case 'anki_lapis_visual_select_field':
-        return 'Select a field to highlight';
+        return 'Choose what to edit';
       case 'anki_lapis_visual_reset_field':
         return 'Reset field';
       case 'anki_lapis_visual_font_size':
@@ -192901,6 +194221,48 @@ extension on _StringsRu {
         return 'Could not delete it on the paired device';
       case 'remote_delete_unsupported':
         return 'The paired device is too old to support remote deletion. Update Hibiki there first.';
+      case 'anki_lapis_visual_blocks':
+        return 'Custom areas';
+      case 'anki_lapis_visual_blocks_hint':
+        return 'Show existing fields somewhere else on the card. Display only: no Anki field is added or deleted.';
+      case 'anki_lapis_visual_block_add':
+        return 'Add area';
+      case 'anki_lapis_visual_block_delete':
+        return 'Delete area';
+      case 'anki_lapis_visual_block_name':
+        return ({required Object index}) => 'Area ${index}';
+      case 'anki_lapis_visual_block_anchor':
+        return 'Position on the card';
+      case 'anki_lapis_visual_block_anchor_top':
+        return 'Top of the card';
+      case 'anki_lapis_visual_block_anchor_above_sentence':
+        return 'Below the word';
+      case 'anki_lapis_visual_block_anchor_above_definition':
+        return 'Below the sentence';
+      case 'anki_lapis_visual_block_anchor_below_definition':
+        return 'Below the definitions';
+      case 'anki_lapis_visual_block_anchor_bottom':
+        return 'Bottom of the card';
+      case 'anki_lapis_visual_block_fields':
+        return 'Fields shown here';
+      case 'anki_lapis_visual_block_no_fields':
+        return 'No fields selected yet';
+      case 'anki_lapis_visual_block_needs_note_type':
+        return 'Pick a note type first to choose fields.';
+      case 'anki_lapis_restore_factory':
+        return 'Restore factory Lapis';
+      case 'anki_lapis_restore_factory_hint':
+        return 'Overwrite the Lapis note type in Anki with the version bundled in Hibiki and clear every customisation here.';
+      case 'anki_lapis_restore_factory_confirm':
+        return 'This overwrites the Lapis styling and card templates in Anki with Hibiki\'s bundled version, and resets font size, custom CSS and custom areas. A backup of the current state is saved first. Card data is not touched.';
+      case 'anki_lapis_restore_factory_done':
+        return 'Lapis restored to factory defaults';
+      case 'anki_lapis_restore_factory_failed':
+        return ({required Object error}) => 'Restore failed: ${error}';
+      case 'anki_lapis_visual_select_field_hint':
+        return 'Click any part of the preview, or pick one below. What you pick is what the controls underneath edit.';
+      case 'anki_lapis_visual_editing_now':
+        return 'Editing';
       default:
         return null;
     }
@@ -198670,7 +200032,7 @@ extension on _StringsTh {
       case 'anki_lapis_visual_preview':
         return 'Lapis card preview';
       case 'anki_lapis_visual_select_field':
-        return 'Select a field to highlight';
+        return 'Choose what to edit';
       case 'anki_lapis_visual_reset_field':
         return 'Reset field';
       case 'anki_lapis_visual_font_size':
@@ -199223,6 +200585,48 @@ extension on _StringsTh {
         return 'Could not delete it on the paired device';
       case 'remote_delete_unsupported':
         return 'The paired device is too old to support remote deletion. Update Hibiki there first.';
+      case 'anki_lapis_visual_blocks':
+        return 'Custom areas';
+      case 'anki_lapis_visual_blocks_hint':
+        return 'Show existing fields somewhere else on the card. Display only: no Anki field is added or deleted.';
+      case 'anki_lapis_visual_block_add':
+        return 'Add area';
+      case 'anki_lapis_visual_block_delete':
+        return 'Delete area';
+      case 'anki_lapis_visual_block_name':
+        return ({required Object index}) => 'Area ${index}';
+      case 'anki_lapis_visual_block_anchor':
+        return 'Position on the card';
+      case 'anki_lapis_visual_block_anchor_top':
+        return 'Top of the card';
+      case 'anki_lapis_visual_block_anchor_above_sentence':
+        return 'Below the word';
+      case 'anki_lapis_visual_block_anchor_above_definition':
+        return 'Below the sentence';
+      case 'anki_lapis_visual_block_anchor_below_definition':
+        return 'Below the definitions';
+      case 'anki_lapis_visual_block_anchor_bottom':
+        return 'Bottom of the card';
+      case 'anki_lapis_visual_block_fields':
+        return 'Fields shown here';
+      case 'anki_lapis_visual_block_no_fields':
+        return 'No fields selected yet';
+      case 'anki_lapis_visual_block_needs_note_type':
+        return 'Pick a note type first to choose fields.';
+      case 'anki_lapis_restore_factory':
+        return 'Restore factory Lapis';
+      case 'anki_lapis_restore_factory_hint':
+        return 'Overwrite the Lapis note type in Anki with the version bundled in Hibiki and clear every customisation here.';
+      case 'anki_lapis_restore_factory_confirm':
+        return 'This overwrites the Lapis styling and card templates in Anki with Hibiki\'s bundled version, and resets font size, custom CSS and custom areas. A backup of the current state is saved first. Card data is not touched.';
+      case 'anki_lapis_restore_factory_done':
+        return 'Lapis restored to factory defaults';
+      case 'anki_lapis_restore_factory_failed':
+        return ({required Object error}) => 'Restore failed: ${error}';
+      case 'anki_lapis_visual_select_field_hint':
+        return 'Click any part of the preview, or pick one below. What you pick is what the controls underneath edit.';
+      case 'anki_lapis_visual_editing_now':
+        return 'Editing';
       default:
         return null;
     }
@@ -205001,7 +206405,7 @@ extension on _StringsTr {
       case 'anki_lapis_visual_preview':
         return 'Lapis card preview';
       case 'anki_lapis_visual_select_field':
-        return 'Select a field to highlight';
+        return 'Choose what to edit';
       case 'anki_lapis_visual_reset_field':
         return 'Reset field';
       case 'anki_lapis_visual_font_size':
@@ -205554,6 +206958,48 @@ extension on _StringsTr {
         return 'Could not delete it on the paired device';
       case 'remote_delete_unsupported':
         return 'The paired device is too old to support remote deletion. Update Hibiki there first.';
+      case 'anki_lapis_visual_blocks':
+        return 'Custom areas';
+      case 'anki_lapis_visual_blocks_hint':
+        return 'Show existing fields somewhere else on the card. Display only: no Anki field is added or deleted.';
+      case 'anki_lapis_visual_block_add':
+        return 'Add area';
+      case 'anki_lapis_visual_block_delete':
+        return 'Delete area';
+      case 'anki_lapis_visual_block_name':
+        return ({required Object index}) => 'Area ${index}';
+      case 'anki_lapis_visual_block_anchor':
+        return 'Position on the card';
+      case 'anki_lapis_visual_block_anchor_top':
+        return 'Top of the card';
+      case 'anki_lapis_visual_block_anchor_above_sentence':
+        return 'Below the word';
+      case 'anki_lapis_visual_block_anchor_above_definition':
+        return 'Below the sentence';
+      case 'anki_lapis_visual_block_anchor_below_definition':
+        return 'Below the definitions';
+      case 'anki_lapis_visual_block_anchor_bottom':
+        return 'Bottom of the card';
+      case 'anki_lapis_visual_block_fields':
+        return 'Fields shown here';
+      case 'anki_lapis_visual_block_no_fields':
+        return 'No fields selected yet';
+      case 'anki_lapis_visual_block_needs_note_type':
+        return 'Pick a note type first to choose fields.';
+      case 'anki_lapis_restore_factory':
+        return 'Restore factory Lapis';
+      case 'anki_lapis_restore_factory_hint':
+        return 'Overwrite the Lapis note type in Anki with the version bundled in Hibiki and clear every customisation here.';
+      case 'anki_lapis_restore_factory_confirm':
+        return 'This overwrites the Lapis styling and card templates in Anki with Hibiki\'s bundled version, and resets font size, custom CSS and custom areas. A backup of the current state is saved first. Card data is not touched.';
+      case 'anki_lapis_restore_factory_done':
+        return 'Lapis restored to factory defaults';
+      case 'anki_lapis_restore_factory_failed':
+        return ({required Object error}) => 'Restore failed: ${error}';
+      case 'anki_lapis_visual_select_field_hint':
+        return 'Click any part of the preview, or pick one below. What you pick is what the controls underneath edit.';
+      case 'anki_lapis_visual_editing_now':
+        return 'Editing';
       default:
         return null;
     }
@@ -211328,7 +212774,7 @@ extension on _StringsVi {
       case 'anki_lapis_visual_preview':
         return 'Lapis card preview';
       case 'anki_lapis_visual_select_field':
-        return 'Select a field to highlight';
+        return 'Choose what to edit';
       case 'anki_lapis_visual_reset_field':
         return 'Reset field';
       case 'anki_lapis_visual_font_size':
@@ -211881,6 +213327,48 @@ extension on _StringsVi {
         return 'Could not delete it on the paired device';
       case 'remote_delete_unsupported':
         return 'The paired device is too old to support remote deletion. Update Hibiki there first.';
+      case 'anki_lapis_visual_blocks':
+        return 'Custom areas';
+      case 'anki_lapis_visual_blocks_hint':
+        return 'Show existing fields somewhere else on the card. Display only: no Anki field is added or deleted.';
+      case 'anki_lapis_visual_block_add':
+        return 'Add area';
+      case 'anki_lapis_visual_block_delete':
+        return 'Delete area';
+      case 'anki_lapis_visual_block_name':
+        return ({required Object index}) => 'Area ${index}';
+      case 'anki_lapis_visual_block_anchor':
+        return 'Position on the card';
+      case 'anki_lapis_visual_block_anchor_top':
+        return 'Top of the card';
+      case 'anki_lapis_visual_block_anchor_above_sentence':
+        return 'Below the word';
+      case 'anki_lapis_visual_block_anchor_above_definition':
+        return 'Below the sentence';
+      case 'anki_lapis_visual_block_anchor_below_definition':
+        return 'Below the definitions';
+      case 'anki_lapis_visual_block_anchor_bottom':
+        return 'Bottom of the card';
+      case 'anki_lapis_visual_block_fields':
+        return 'Fields shown here';
+      case 'anki_lapis_visual_block_no_fields':
+        return 'No fields selected yet';
+      case 'anki_lapis_visual_block_needs_note_type':
+        return 'Pick a note type first to choose fields.';
+      case 'anki_lapis_restore_factory':
+        return 'Restore factory Lapis';
+      case 'anki_lapis_restore_factory_hint':
+        return 'Overwrite the Lapis note type in Anki with the version bundled in Hibiki and clear every customisation here.';
+      case 'anki_lapis_restore_factory_confirm':
+        return 'This overwrites the Lapis styling and card templates in Anki with Hibiki\'s bundled version, and resets font size, custom CSS and custom areas. A backup of the current state is saved first. Card data is not touched.';
+      case 'anki_lapis_restore_factory_done':
+        return 'Lapis restored to factory defaults';
+      case 'anki_lapis_restore_factory_failed':
+        return ({required Object error}) => 'Restore failed: ${error}';
+      case 'anki_lapis_visual_select_field_hint':
+        return 'Click any part of the preview, or pick one below. What you pick is what the controls underneath edit.';
+      case 'anki_lapis_visual_editing_now':
+        return 'Editing';
       default:
         return null;
     }
@@ -217603,7 +219091,7 @@ extension on _StringsZhCn {
       case 'anki_lapis_visual_preview':
         return 'Lapis 卡片预览';
       case 'anki_lapis_visual_select_field':
-        return '选择要高亮的字段';
+        return '选择要编辑的部分';
       case 'anki_lapis_visual_reset_field':
         return '重置字段';
       case 'anki_lapis_visual_font_size':
@@ -218154,6 +219642,48 @@ extension on _StringsZhCn {
         return '无法在对端设备上删除';
       case 'remote_delete_unsupported':
         return '对端设备版本过旧，不支持远端删除，请先升级对端 Hibiki';
+      case 'anki_lapis_visual_blocks':
+        return '自定义区域';
+      case 'anki_lapis_visual_blocks_hint':
+        return '把已有字段摆到卡片的其它位置。只改显示，不新增也不删除 Anki 字段。';
+      case 'anki_lapis_visual_block_add':
+        return '添加区域';
+      case 'anki_lapis_visual_block_delete':
+        return '删除区域';
+      case 'anki_lapis_visual_block_name':
+        return ({required Object index}) => '区域 ${index}';
+      case 'anki_lapis_visual_block_anchor':
+        return '在卡片上的位置';
+      case 'anki_lapis_visual_block_anchor_top':
+        return '卡片顶部';
+      case 'anki_lapis_visual_block_anchor_above_sentence':
+        return '单词区下方';
+      case 'anki_lapis_visual_block_anchor_above_definition':
+        return '例句下方';
+      case 'anki_lapis_visual_block_anchor_below_definition':
+        return '释义框下方';
+      case 'anki_lapis_visual_block_anchor_bottom':
+        return '卡片底部';
+      case 'anki_lapis_visual_block_fields':
+        return '这里显示的字段';
+      case 'anki_lapis_visual_block_no_fields':
+        return '还没选字段';
+      case 'anki_lapis_visual_block_needs_note_type':
+        return '先选好卡片类型才能挑字段。';
+      case 'anki_lapis_restore_factory':
+        return '恢复出厂 Lapis';
+      case 'anki_lapis_restore_factory_hint':
+        return '用 Hibiki 内置版本覆盖 Anki 里的 Lapis 卡型（样式与正反面模板），并清空这里的全部客制化。';
+      case 'anki_lapis_restore_factory_confirm':
+        return '这会用 Hibiki 内置版本覆盖 Anki 里 Lapis 的样式与正反面模板，并把字号、自定义 CSS、自定义区域全部重置。执行前会先自动备份当前状态。卡片数据不受影响。';
+      case 'anki_lapis_restore_factory_done':
+        return 'Lapis 已恢复出厂状态';
+      case 'anki_lapis_restore_factory_failed':
+        return ({required Object error}) => '恢复失败：${error}';
+      case 'anki_lapis_visual_select_field_hint':
+        return '点预览里的任意部分，或从下面挑一个。选中的就是下方那些控件正在编辑的对象。';
+      case 'anki_lapis_visual_editing_now':
+        return '正在编辑';
       default:
         return null;
     }
@@ -223901,7 +225431,7 @@ extension on _StringsZhHk {
       case 'anki_lapis_visual_preview':
         return 'Lapis card preview';
       case 'anki_lapis_visual_select_field':
-        return 'Select a field to highlight';
+        return 'Choose what to edit';
       case 'anki_lapis_visual_reset_field':
         return 'Reset field';
       case 'anki_lapis_visual_font_size':
@@ -224454,6 +225984,48 @@ extension on _StringsZhHk {
         return 'Could not delete it on the paired device';
       case 'remote_delete_unsupported':
         return 'The paired device is too old to support remote deletion. Update Hibiki there first.';
+      case 'anki_lapis_visual_blocks':
+        return 'Custom areas';
+      case 'anki_lapis_visual_blocks_hint':
+        return 'Show existing fields somewhere else on the card. Display only: no Anki field is added or deleted.';
+      case 'anki_lapis_visual_block_add':
+        return 'Add area';
+      case 'anki_lapis_visual_block_delete':
+        return 'Delete area';
+      case 'anki_lapis_visual_block_name':
+        return ({required Object index}) => 'Area ${index}';
+      case 'anki_lapis_visual_block_anchor':
+        return 'Position on the card';
+      case 'anki_lapis_visual_block_anchor_top':
+        return 'Top of the card';
+      case 'anki_lapis_visual_block_anchor_above_sentence':
+        return 'Below the word';
+      case 'anki_lapis_visual_block_anchor_above_definition':
+        return 'Below the sentence';
+      case 'anki_lapis_visual_block_anchor_below_definition':
+        return 'Below the definitions';
+      case 'anki_lapis_visual_block_anchor_bottom':
+        return 'Bottom of the card';
+      case 'anki_lapis_visual_block_fields':
+        return 'Fields shown here';
+      case 'anki_lapis_visual_block_no_fields':
+        return 'No fields selected yet';
+      case 'anki_lapis_visual_block_needs_note_type':
+        return 'Pick a note type first to choose fields.';
+      case 'anki_lapis_restore_factory':
+        return 'Restore factory Lapis';
+      case 'anki_lapis_restore_factory_hint':
+        return 'Overwrite the Lapis note type in Anki with the version bundled in Hibiki and clear every customisation here.';
+      case 'anki_lapis_restore_factory_confirm':
+        return 'This overwrites the Lapis styling and card templates in Anki with Hibiki\'s bundled version, and resets font size, custom CSS and custom areas. A backup of the current state is saved first. Card data is not touched.';
+      case 'anki_lapis_restore_factory_done':
+        return 'Lapis restored to factory defaults';
+      case 'anki_lapis_restore_factory_failed':
+        return ({required Object error}) => 'Restore failed: ${error}';
+      case 'anki_lapis_visual_select_field_hint':
+        return 'Click any part of the preview, or pick one below. What you pick is what the controls underneath edit.';
+      case 'anki_lapis_visual_editing_now':
+        return 'Editing';
       default:
         return null;
     }
