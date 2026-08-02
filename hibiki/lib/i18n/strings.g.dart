@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 52734 (3102 per locale)
+/// Strings: 52836 (3108 per locale)
 ///
-/// Built on 2026-08-02 at 07:45 UTC
+/// Built on 2026-08-02 at 08:03 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -4174,6 +4174,15 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get anki_lapis_visual_select_field_hint =>
       'Click any part of the preview, or pick one below. What you pick is what the controls underneath edit.';
   String get anki_lapis_visual_editing_now => 'Editing';
+  String get mihon_extension_preview => 'Preview';
+  String get mihon_extension_preview_warning =>
+      'Previewing runs this extension\'s code before it is installed. Nothing is added to your library until you choose to install.';
+  String get mihon_extension_preview_discard => 'Discard';
+  String get mihon_extension_preview_source_select =>
+      'Pick a source to preview';
+  String get mihon_extension_sources_included => 'Included sources';
+  String get mihon_extension_preview_read_only =>
+      'Preview is read-only. Install the extension to open and read.';
 }
 
 // Path: <root>
@@ -11299,6 +11308,21 @@ class _StringsAr extends _StringsEn {
       'Click any part of the preview, or pick one below. What you pick is what the controls underneath edit.';
   @override
   String get anki_lapis_visual_editing_now => 'Editing';
+  @override
+  String get mihon_extension_preview => 'Preview';
+  @override
+  String get mihon_extension_preview_warning =>
+      'Previewing runs this extension\'s code before it is installed. Nothing is added to your library until you choose to install.';
+  @override
+  String get mihon_extension_preview_discard => 'Discard';
+  @override
+  String get mihon_extension_preview_source_select =>
+      'Pick a source to preview';
+  @override
+  String get mihon_extension_sources_included => 'Included sources';
+  @override
+  String get mihon_extension_preview_read_only =>
+      'Preview is read-only. Install the extension to open and read.';
 }
 
 // Path: <root>
@@ -18491,6 +18515,21 @@ class _StringsDe extends _StringsEn {
       'Click any part of the preview, or pick one below. What you pick is what the controls underneath edit.';
   @override
   String get anki_lapis_visual_editing_now => 'Editing';
+  @override
+  String get mihon_extension_preview => 'Preview';
+  @override
+  String get mihon_extension_preview_warning =>
+      'Previewing runs this extension\'s code before it is installed. Nothing is added to your library until you choose to install.';
+  @override
+  String get mihon_extension_preview_discard => 'Discard';
+  @override
+  String get mihon_extension_preview_source_select =>
+      'Pick a source to preview';
+  @override
+  String get mihon_extension_sources_included => 'Included sources';
+  @override
+  String get mihon_extension_preview_read_only =>
+      'Preview is read-only. Install the extension to open and read.';
 }
 
 // Path: <root>
@@ -25698,6 +25737,21 @@ class _StringsEs extends _StringsEn {
       'Click any part of the preview, or pick one below. What you pick is what the controls underneath edit.';
   @override
   String get anki_lapis_visual_editing_now => 'Editing';
+  @override
+  String get mihon_extension_preview => 'Preview';
+  @override
+  String get mihon_extension_preview_warning =>
+      'Previewing runs this extension\'s code before it is installed. Nothing is added to your library until you choose to install.';
+  @override
+  String get mihon_extension_preview_discard => 'Discard';
+  @override
+  String get mihon_extension_preview_source_select =>
+      'Pick a source to preview';
+  @override
+  String get mihon_extension_sources_included => 'Included sources';
+  @override
+  String get mihon_extension_preview_read_only =>
+      'Preview is read-only. Install the extension to open and read.';
 }
 
 // Path: <root>
@@ -32917,6 +32971,21 @@ class _StringsFr extends _StringsEn {
       'Click any part of the preview, or pick one below. What you pick is what the controls underneath edit.';
   @override
   String get anki_lapis_visual_editing_now => 'Editing';
+  @override
+  String get mihon_extension_preview => 'Preview';
+  @override
+  String get mihon_extension_preview_warning =>
+      'Previewing runs this extension\'s code before it is installed. Nothing is added to your library until you choose to install.';
+  @override
+  String get mihon_extension_preview_discard => 'Discard';
+  @override
+  String get mihon_extension_preview_source_select =>
+      'Pick a source to preview';
+  @override
+  String get mihon_extension_sources_included => 'Included sources';
+  @override
+  String get mihon_extension_preview_read_only =>
+      'Preview is read-only. Install the extension to open and read.';
 }
 
 // Path: <root>
@@ -40065,6 +40134,21 @@ class _StringsId extends _StringsEn {
       'Click any part of the preview, or pick one below. What you pick is what the controls underneath edit.';
   @override
   String get anki_lapis_visual_editing_now => 'Editing';
+  @override
+  String get mihon_extension_preview => 'Preview';
+  @override
+  String get mihon_extension_preview_warning =>
+      'Previewing runs this extension\'s code before it is installed. Nothing is added to your library until you choose to install.';
+  @override
+  String get mihon_extension_preview_discard => 'Discard';
+  @override
+  String get mihon_extension_preview_source_select =>
+      'Pick a source to preview';
+  @override
+  String get mihon_extension_sources_included => 'Included sources';
+  @override
+  String get mihon_extension_preview_read_only =>
+      'Preview is read-only. Install the extension to open and read.';
 }
 
 // Path: <root>
@@ -47259,6 +47343,21 @@ class _StringsIt extends _StringsEn {
       'Click any part of the preview, or pick one below. What you pick is what the controls underneath edit.';
   @override
   String get anki_lapis_visual_editing_now => 'Editing';
+  @override
+  String get mihon_extension_preview => 'Preview';
+  @override
+  String get mihon_extension_preview_warning =>
+      'Previewing runs this extension\'s code before it is installed. Nothing is added to your library until you choose to install.';
+  @override
+  String get mihon_extension_preview_discard => 'Discard';
+  @override
+  String get mihon_extension_preview_source_select =>
+      'Pick a source to preview';
+  @override
+  String get mihon_extension_sources_included => 'Included sources';
+  @override
+  String get mihon_extension_preview_read_only =>
+      'Preview is read-only. Install the extension to open and read.';
 }
 
 // Path: <root>
@@ -54270,6 +54369,21 @@ class _StringsJa extends _StringsEn {
       'Click any part of the preview, or pick one below. What you pick is what the controls underneath edit.';
   @override
   String get anki_lapis_visual_editing_now => 'Editing';
+  @override
+  String get mihon_extension_preview => 'Preview';
+  @override
+  String get mihon_extension_preview_warning =>
+      'Previewing runs this extension\'s code before it is installed. Nothing is added to your library until you choose to install.';
+  @override
+  String get mihon_extension_preview_discard => 'Discard';
+  @override
+  String get mihon_extension_preview_source_select =>
+      'Pick a source to preview';
+  @override
+  String get mihon_extension_sources_included => 'Included sources';
+  @override
+  String get mihon_extension_preview_read_only =>
+      'Preview is read-only. Install the extension to open and read.';
 }
 
 // Path: <root>
@@ -61283,6 +61397,21 @@ class _StringsKo extends _StringsEn {
       'Click any part of the preview, or pick one below. What you pick is what the controls underneath edit.';
   @override
   String get anki_lapis_visual_editing_now => 'Editing';
+  @override
+  String get mihon_extension_preview => 'Preview';
+  @override
+  String get mihon_extension_preview_warning =>
+      'Previewing runs this extension\'s code before it is installed. Nothing is added to your library until you choose to install.';
+  @override
+  String get mihon_extension_preview_discard => 'Discard';
+  @override
+  String get mihon_extension_preview_source_select =>
+      'Pick a source to preview';
+  @override
+  String get mihon_extension_sources_included => 'Included sources';
+  @override
+  String get mihon_extension_preview_read_only =>
+      'Preview is read-only. Install the extension to open and read.';
 }
 
 // Path: <root>
@@ -68457,6 +68586,21 @@ class _StringsNl extends _StringsEn {
       'Click any part of the preview, or pick one below. What you pick is what the controls underneath edit.';
   @override
   String get anki_lapis_visual_editing_now => 'Editing';
+  @override
+  String get mihon_extension_preview => 'Preview';
+  @override
+  String get mihon_extension_preview_warning =>
+      'Previewing runs this extension\'s code before it is installed. Nothing is added to your library until you choose to install.';
+  @override
+  String get mihon_extension_preview_discard => 'Discard';
+  @override
+  String get mihon_extension_preview_source_select =>
+      'Pick a source to preview';
+  @override
+  String get mihon_extension_sources_included => 'Included sources';
+  @override
+  String get mihon_extension_preview_read_only =>
+      'Preview is read-only. Install the extension to open and read.';
 }
 
 // Path: <root>
@@ -75644,6 +75788,21 @@ class _StringsPtBr extends _StringsEn {
       'Click any part of the preview, or pick one below. What you pick is what the controls underneath edit.';
   @override
   String get anki_lapis_visual_editing_now => 'Editing';
+  @override
+  String get mihon_extension_preview => 'Preview';
+  @override
+  String get mihon_extension_preview_warning =>
+      'Previewing runs this extension\'s code before it is installed. Nothing is added to your library until you choose to install.';
+  @override
+  String get mihon_extension_preview_discard => 'Discard';
+  @override
+  String get mihon_extension_preview_source_select =>
+      'Pick a source to preview';
+  @override
+  String get mihon_extension_sources_included => 'Included sources';
+  @override
+  String get mihon_extension_preview_read_only =>
+      'Preview is read-only. Install the extension to open and read.';
 }
 
 // Path: <root>
@@ -82815,6 +82974,21 @@ class _StringsRu extends _StringsEn {
       'Click any part of the preview, or pick one below. What you pick is what the controls underneath edit.';
   @override
   String get anki_lapis_visual_editing_now => 'Editing';
+  @override
+  String get mihon_extension_preview => 'Preview';
+  @override
+  String get mihon_extension_preview_warning =>
+      'Previewing runs this extension\'s code before it is installed. Nothing is added to your library until you choose to install.';
+  @override
+  String get mihon_extension_preview_discard => 'Discard';
+  @override
+  String get mihon_extension_preview_source_select =>
+      'Pick a source to preview';
+  @override
+  String get mihon_extension_sources_included => 'Included sources';
+  @override
+  String get mihon_extension_preview_read_only =>
+      'Preview is read-only. Install the extension to open and read.';
 }
 
 // Path: <root>
@@ -89934,6 +90108,21 @@ class _StringsTh extends _StringsEn {
       'Click any part of the preview, or pick one below. What you pick is what the controls underneath edit.';
   @override
   String get anki_lapis_visual_editing_now => 'Editing';
+  @override
+  String get mihon_extension_preview => 'Preview';
+  @override
+  String get mihon_extension_preview_warning =>
+      'Previewing runs this extension\'s code before it is installed. Nothing is added to your library until you choose to install.';
+  @override
+  String get mihon_extension_preview_discard => 'Discard';
+  @override
+  String get mihon_extension_preview_source_select =>
+      'Pick a source to preview';
+  @override
+  String get mihon_extension_sources_included => 'Included sources';
+  @override
+  String get mihon_extension_preview_read_only =>
+      'Preview is read-only. Install the extension to open and read.';
 }
 
 // Path: <root>
@@ -97085,6 +97274,21 @@ class _StringsTr extends _StringsEn {
       'Click any part of the preview, or pick one below. What you pick is what the controls underneath edit.';
   @override
   String get anki_lapis_visual_editing_now => 'Editing';
+  @override
+  String get mihon_extension_preview => 'Preview';
+  @override
+  String get mihon_extension_preview_warning =>
+      'Previewing runs this extension\'s code before it is installed. Nothing is added to your library until you choose to install.';
+  @override
+  String get mihon_extension_preview_discard => 'Discard';
+  @override
+  String get mihon_extension_preview_source_select =>
+      'Pick a source to preview';
+  @override
+  String get mihon_extension_sources_included => 'Included sources';
+  @override
+  String get mihon_extension_preview_read_only =>
+      'Preview is read-only. Install the extension to open and read.';
 }
 
 // Path: <root>
@@ -104221,6 +104425,21 @@ class _StringsVi extends _StringsEn {
       'Click any part of the preview, or pick one below. What you pick is what the controls underneath edit.';
   @override
   String get anki_lapis_visual_editing_now => 'Editing';
+  @override
+  String get mihon_extension_preview => 'Preview';
+  @override
+  String get mihon_extension_preview_warning =>
+      'Previewing runs this extension\'s code before it is installed. Nothing is added to your library until you choose to install.';
+  @override
+  String get mihon_extension_preview_discard => 'Discard';
+  @override
+  String get mihon_extension_preview_source_select =>
+      'Pick a source to preview';
+  @override
+  String get mihon_extension_sources_included => 'Included sources';
+  @override
+  String get mihon_extension_preview_read_only =>
+      'Preview is read-only. Install the extension to open and read.';
 }
 
 // Path: <root>
@@ -110859,6 +111078,19 @@ class _StringsZhCn extends _StringsEn {
       '点预览里的任意部分，或从下面挑一个。选中的就是下方那些控件正在编辑的对象。';
   @override
   String get anki_lapis_visual_editing_now => '正在编辑';
+  @override
+  String get mihon_extension_preview => '预览';
+  @override
+  String get mihon_extension_preview_warning =>
+      '预览会在安装前运行该扩展的代码。在你选择安装之前，不会有任何东西写进你的库。';
+  @override
+  String get mihon_extension_preview_discard => '放弃';
+  @override
+  String get mihon_extension_preview_source_select => '选择要预览的源';
+  @override
+  String get mihon_extension_sources_included => '包含的源';
+  @override
+  String get mihon_extension_preview_read_only => '预览是只读的。安装扩展后才能打开阅读。';
 }
 
 // Path: <root>
@@ -117791,6 +118023,21 @@ class _StringsZhHk extends _StringsEn {
       'Click any part of the preview, or pick one below. What you pick is what the controls underneath edit.';
   @override
   String get anki_lapis_visual_editing_now => 'Editing';
+  @override
+  String get mihon_extension_preview => 'Preview';
+  @override
+  String get mihon_extension_preview_warning =>
+      'Previewing runs this extension\'s code before it is installed. Nothing is added to your library until you choose to install.';
+  @override
+  String get mihon_extension_preview_discard => 'Discard';
+  @override
+  String get mihon_extension_preview_source_select =>
+      'Pick a source to preview';
+  @override
+  String get mihon_extension_sources_included => 'Included sources';
+  @override
+  String get mihon_extension_preview_read_only =>
+      'Preview is read-only. Install the extension to open and read.';
 }
 
 /// Flat map(s) containing all translations.
@@ -124155,6 +124402,18 @@ extension on _StringsEn {
         return 'Click any part of the preview, or pick one below. What you pick is what the controls underneath edit.';
       case 'anki_lapis_visual_editing_now':
         return 'Editing';
+      case 'mihon_extension_preview':
+        return 'Preview';
+      case 'mihon_extension_preview_warning':
+        return 'Previewing runs this extension\'s code before it is installed. Nothing is added to your library until you choose to install.';
+      case 'mihon_extension_preview_discard':
+        return 'Discard';
+      case 'mihon_extension_preview_source_select':
+        return 'Pick a source to preview';
+      case 'mihon_extension_sources_included':
+        return 'Included sources';
+      case 'mihon_extension_preview_read_only':
+        return 'Preview is read-only. Install the extension to open and read.';
       default:
         return null;
     }
@@ -130517,6 +130776,18 @@ extension on _StringsAr {
         return 'Click any part of the preview, or pick one below. What you pick is what the controls underneath edit.';
       case 'anki_lapis_visual_editing_now':
         return 'Editing';
+      case 'mihon_extension_preview':
+        return 'Preview';
+      case 'mihon_extension_preview_warning':
+        return 'Previewing runs this extension\'s code before it is installed. Nothing is added to your library until you choose to install.';
+      case 'mihon_extension_preview_discard':
+        return 'Discard';
+      case 'mihon_extension_preview_source_select':
+        return 'Pick a source to preview';
+      case 'mihon_extension_sources_included':
+        return 'Included sources';
+      case 'mihon_extension_preview_read_only':
+        return 'Preview is read-only. Install the extension to open and read.';
       default:
         return null;
     }
@@ -136901,6 +137172,18 @@ extension on _StringsDe {
         return 'Click any part of the preview, or pick one below. What you pick is what the controls underneath edit.';
       case 'anki_lapis_visual_editing_now':
         return 'Editing';
+      case 'mihon_extension_preview':
+        return 'Preview';
+      case 'mihon_extension_preview_warning':
+        return 'Previewing runs this extension\'s code before it is installed. Nothing is added to your library until you choose to install.';
+      case 'mihon_extension_preview_discard':
+        return 'Discard';
+      case 'mihon_extension_preview_source_select':
+        return 'Pick a source to preview';
+      case 'mihon_extension_sources_included':
+        return 'Included sources';
+      case 'mihon_extension_preview_read_only':
+        return 'Preview is read-only. Install the extension to open and read.';
       default:
         return null;
     }
@@ -143284,6 +143567,18 @@ extension on _StringsEs {
         return 'Click any part of the preview, or pick one below. What you pick is what the controls underneath edit.';
       case 'anki_lapis_visual_editing_now':
         return 'Editing';
+      case 'mihon_extension_preview':
+        return 'Preview';
+      case 'mihon_extension_preview_warning':
+        return 'Previewing runs this extension\'s code before it is installed. Nothing is added to your library until you choose to install.';
+      case 'mihon_extension_preview_discard':
+        return 'Discard';
+      case 'mihon_extension_preview_source_select':
+        return 'Pick a source to preview';
+      case 'mihon_extension_sources_included':
+        return 'Included sources';
+      case 'mihon_extension_preview_read_only':
+        return 'Preview is read-only. Install the extension to open and read.';
       default:
         return null;
     }
@@ -149673,6 +149968,18 @@ extension on _StringsFr {
         return 'Click any part of the preview, or pick one below. What you pick is what the controls underneath edit.';
       case 'anki_lapis_visual_editing_now':
         return 'Editing';
+      case 'mihon_extension_preview':
+        return 'Preview';
+      case 'mihon_extension_preview_warning':
+        return 'Previewing runs this extension\'s code before it is installed. Nothing is added to your library until you choose to install.';
+      case 'mihon_extension_preview_discard':
+        return 'Discard';
+      case 'mihon_extension_preview_source_select':
+        return 'Pick a source to preview';
+      case 'mihon_extension_sources_included':
+        return 'Included sources';
+      case 'mihon_extension_preview_read_only':
+        return 'Preview is read-only. Install the extension to open and read.';
       default:
         return null;
     }
@@ -156044,6 +156351,18 @@ extension on _StringsId {
         return 'Click any part of the preview, or pick one below. What you pick is what the controls underneath edit.';
       case 'anki_lapis_visual_editing_now':
         return 'Editing';
+      case 'mihon_extension_preview':
+        return 'Preview';
+      case 'mihon_extension_preview_warning':
+        return 'Previewing runs this extension\'s code before it is installed. Nothing is added to your library until you choose to install.';
+      case 'mihon_extension_preview_discard':
+        return 'Discard';
+      case 'mihon_extension_preview_source_select':
+        return 'Pick a source to preview';
+      case 'mihon_extension_sources_included':
+        return 'Included sources';
+      case 'mihon_extension_preview_read_only':
+        return 'Preview is read-only. Install the extension to open and read.';
       default:
         return null;
     }
@@ -162429,6 +162748,18 @@ extension on _StringsIt {
         return 'Click any part of the preview, or pick one below. What you pick is what the controls underneath edit.';
       case 'anki_lapis_visual_editing_now':
         return 'Editing';
+      case 'mihon_extension_preview':
+        return 'Preview';
+      case 'mihon_extension_preview_warning':
+        return 'Previewing runs this extension\'s code before it is installed. Nothing is added to your library until you choose to install.';
+      case 'mihon_extension_preview_discard':
+        return 'Discard';
+      case 'mihon_extension_preview_source_select':
+        return 'Pick a source to preview';
+      case 'mihon_extension_sources_included':
+        return 'Included sources';
+      case 'mihon_extension_preview_read_only':
+        return 'Preview is read-only. Install the extension to open and read.';
       default:
         return null;
     }
@@ -168776,6 +169107,18 @@ extension on _StringsJa {
         return 'Click any part of the preview, or pick one below. What you pick is what the controls underneath edit.';
       case 'anki_lapis_visual_editing_now':
         return 'Editing';
+      case 'mihon_extension_preview':
+        return 'Preview';
+      case 'mihon_extension_preview_warning':
+        return 'Previewing runs this extension\'s code before it is installed. Nothing is added to your library until you choose to install.';
+      case 'mihon_extension_preview_discard':
+        return 'Discard';
+      case 'mihon_extension_preview_source_select':
+        return 'Pick a source to preview';
+      case 'mihon_extension_sources_included':
+        return 'Included sources';
+      case 'mihon_extension_preview_read_only':
+        return 'Preview is read-only. Install the extension to open and read.';
       default:
         return null;
     }
@@ -175127,6 +175470,18 @@ extension on _StringsKo {
         return 'Click any part of the preview, or pick one below. What you pick is what the controls underneath edit.';
       case 'anki_lapis_visual_editing_now':
         return 'Editing';
+      case 'mihon_extension_preview':
+        return 'Preview';
+      case 'mihon_extension_preview_warning':
+        return 'Previewing runs this extension\'s code before it is installed. Nothing is added to your library until you choose to install.';
+      case 'mihon_extension_preview_discard':
+        return 'Discard';
+      case 'mihon_extension_preview_source_select':
+        return 'Pick a source to preview';
+      case 'mihon_extension_sources_included':
+        return 'Included sources';
+      case 'mihon_extension_preview_read_only':
+        return 'Preview is read-only. Install the extension to open and read.';
       default:
         return null;
     }
@@ -181506,6 +181861,18 @@ extension on _StringsNl {
         return 'Click any part of the preview, or pick one below. What you pick is what the controls underneath edit.';
       case 'anki_lapis_visual_editing_now':
         return 'Editing';
+      case 'mihon_extension_preview':
+        return 'Preview';
+      case 'mihon_extension_preview_warning':
+        return 'Previewing runs this extension\'s code before it is installed. Nothing is added to your library until you choose to install.';
+      case 'mihon_extension_preview_discard':
+        return 'Discard';
+      case 'mihon_extension_preview_source_select':
+        return 'Pick a source to preview';
+      case 'mihon_extension_sources_included':
+        return 'Included sources';
+      case 'mihon_extension_preview_read_only':
+        return 'Preview is read-only. Install the extension to open and read.';
       default:
         return null;
     }
@@ -187882,6 +188249,18 @@ extension on _StringsPtBr {
         return 'Click any part of the preview, or pick one below. What you pick is what the controls underneath edit.';
       case 'anki_lapis_visual_editing_now':
         return 'Editing';
+      case 'mihon_extension_preview':
+        return 'Preview';
+      case 'mihon_extension_preview_warning':
+        return 'Previewing runs this extension\'s code before it is installed. Nothing is added to your library until you choose to install.';
+      case 'mihon_extension_preview_discard':
+        return 'Discard';
+      case 'mihon_extension_preview_source_select':
+        return 'Pick a source to preview';
+      case 'mihon_extension_sources_included':
+        return 'Included sources';
+      case 'mihon_extension_preview_read_only':
+        return 'Preview is read-only. Install the extension to open and read.';
       default:
         return null;
     }
@@ -194263,6 +194642,18 @@ extension on _StringsRu {
         return 'Click any part of the preview, or pick one below. What you pick is what the controls underneath edit.';
       case 'anki_lapis_visual_editing_now':
         return 'Editing';
+      case 'mihon_extension_preview':
+        return 'Preview';
+      case 'mihon_extension_preview_warning':
+        return 'Previewing runs this extension\'s code before it is installed. Nothing is added to your library until you choose to install.';
+      case 'mihon_extension_preview_discard':
+        return 'Discard';
+      case 'mihon_extension_preview_source_select':
+        return 'Pick a source to preview';
+      case 'mihon_extension_sources_included':
+        return 'Included sources';
+      case 'mihon_extension_preview_read_only':
+        return 'Preview is read-only. Install the extension to open and read.';
       default:
         return null;
     }
@@ -200627,6 +201018,18 @@ extension on _StringsTh {
         return 'Click any part of the preview, or pick one below. What you pick is what the controls underneath edit.';
       case 'anki_lapis_visual_editing_now':
         return 'Editing';
+      case 'mihon_extension_preview':
+        return 'Preview';
+      case 'mihon_extension_preview_warning':
+        return 'Previewing runs this extension\'s code before it is installed. Nothing is added to your library until you choose to install.';
+      case 'mihon_extension_preview_discard':
+        return 'Discard';
+      case 'mihon_extension_preview_source_select':
+        return 'Pick a source to preview';
+      case 'mihon_extension_sources_included':
+        return 'Included sources';
+      case 'mihon_extension_preview_read_only':
+        return 'Preview is read-only. Install the extension to open and read.';
       default:
         return null;
     }
@@ -207000,6 +207403,18 @@ extension on _StringsTr {
         return 'Click any part of the preview, or pick one below. What you pick is what the controls underneath edit.';
       case 'anki_lapis_visual_editing_now':
         return 'Editing';
+      case 'mihon_extension_preview':
+        return 'Preview';
+      case 'mihon_extension_preview_warning':
+        return 'Previewing runs this extension\'s code before it is installed. Nothing is added to your library until you choose to install.';
+      case 'mihon_extension_preview_discard':
+        return 'Discard';
+      case 'mihon_extension_preview_source_select':
+        return 'Pick a source to preview';
+      case 'mihon_extension_sources_included':
+        return 'Included sources';
+      case 'mihon_extension_preview_read_only':
+        return 'Preview is read-only. Install the extension to open and read.';
       default:
         return null;
     }
@@ -213369,6 +213784,18 @@ extension on _StringsVi {
         return 'Click any part of the preview, or pick one below. What you pick is what the controls underneath edit.';
       case 'anki_lapis_visual_editing_now':
         return 'Editing';
+      case 'mihon_extension_preview':
+        return 'Preview';
+      case 'mihon_extension_preview_warning':
+        return 'Previewing runs this extension\'s code before it is installed. Nothing is added to your library until you choose to install.';
+      case 'mihon_extension_preview_discard':
+        return 'Discard';
+      case 'mihon_extension_preview_source_select':
+        return 'Pick a source to preview';
+      case 'mihon_extension_sources_included':
+        return 'Included sources';
+      case 'mihon_extension_preview_read_only':
+        return 'Preview is read-only. Install the extension to open and read.';
       default:
         return null;
     }
@@ -219684,6 +220111,18 @@ extension on _StringsZhCn {
         return '点预览里的任意部分，或从下面挑一个。选中的就是下方那些控件正在编辑的对象。';
       case 'anki_lapis_visual_editing_now':
         return '正在编辑';
+      case 'mihon_extension_preview':
+        return '预览';
+      case 'mihon_extension_preview_warning':
+        return '预览会在安装前运行该扩展的代码。在你选择安装之前，不会有任何东西写进你的库。';
+      case 'mihon_extension_preview_discard':
+        return '放弃';
+      case 'mihon_extension_preview_source_select':
+        return '选择要预览的源';
+      case 'mihon_extension_sources_included':
+        return '包含的源';
+      case 'mihon_extension_preview_read_only':
+        return '预览是只读的。安装扩展后才能打开阅读。';
       default:
         return null;
     }
@@ -226026,6 +226465,18 @@ extension on _StringsZhHk {
         return 'Click any part of the preview, or pick one below. What you pick is what the controls underneath edit.';
       case 'anki_lapis_visual_editing_now':
         return 'Editing';
+      case 'mihon_extension_preview':
+        return 'Preview';
+      case 'mihon_extension_preview_warning':
+        return 'Previewing runs this extension\'s code before it is installed. Nothing is added to your library until you choose to install.';
+      case 'mihon_extension_preview_discard':
+        return 'Discard';
+      case 'mihon_extension_preview_source_select':
+        return 'Pick a source to preview';
+      case 'mihon_extension_sources_included':
+        return 'Included sources';
+      case 'mihon_extension_preview_read_only':
+        return 'Preview is read-only. Install the extension to open and read.';
       default:
         return null;
     }
