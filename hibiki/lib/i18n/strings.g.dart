@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 52343 (3079 per locale)
+/// Strings: 52377 (3081 per locale)
 ///
-/// Built on 2026-08-02 at 07:05 UTC
+/// Built on 2026-08-02 at 07:34 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -4140,6 +4140,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'This volume already has OCR data on every page. Running OCR again would overwrite it.';
   String get shortcut_scope_universal => 'Back / Exit';
   String get game_attach_and_capture => 'Attach and capture';
+  String get remote_delete_failed => 'Could not delete it on the paired device';
+  String get remote_delete_unsupported =>
+      'The paired device is too old to support remote deletion. Update Hibiki there first.';
 }
 
 // Path: <root>
@@ -11208,6 +11211,11 @@ class _StringsAr extends _StringsEn {
   String get shortcut_scope_universal => 'Back / Exit';
   @override
   String get game_attach_and_capture => 'Attach and capture';
+  @override
+  String get remote_delete_failed => 'Could not delete it on the paired device';
+  @override
+  String get remote_delete_unsupported =>
+      'The paired device is too old to support remote deletion. Update Hibiki there first.';
 }
 
 // Path: <root>
@@ -18343,6 +18351,11 @@ class _StringsDe extends _StringsEn {
   String get shortcut_scope_universal => 'Back / Exit';
   @override
   String get game_attach_and_capture => 'Attach and capture';
+  @override
+  String get remote_delete_failed => 'Could not delete it on the paired device';
+  @override
+  String get remote_delete_unsupported =>
+      'The paired device is too old to support remote deletion. Update Hibiki there first.';
 }
 
 // Path: <root>
@@ -25493,6 +25506,11 @@ class _StringsEs extends _StringsEn {
   String get shortcut_scope_universal => 'Back / Exit';
   @override
   String get game_attach_and_capture => 'Attach and capture';
+  @override
+  String get remote_delete_failed => 'Could not delete it on the paired device';
+  @override
+  String get remote_delete_unsupported =>
+      'The paired device is too old to support remote deletion. Update Hibiki there first.';
 }
 
 // Path: <root>
@@ -32655,6 +32673,11 @@ class _StringsFr extends _StringsEn {
   String get shortcut_scope_universal => 'Back / Exit';
   @override
   String get game_attach_and_capture => 'Attach and capture';
+  @override
+  String get remote_delete_failed => 'Could not delete it on the paired device';
+  @override
+  String get remote_delete_unsupported =>
+      'The paired device is too old to support remote deletion. Update Hibiki there first.';
 }
 
 // Path: <root>
@@ -39746,6 +39769,11 @@ class _StringsId extends _StringsEn {
   String get shortcut_scope_universal => 'Back / Exit';
   @override
   String get game_attach_and_capture => 'Attach and capture';
+  @override
+  String get remote_delete_failed => 'Could not delete it on the paired device';
+  @override
+  String get remote_delete_unsupported =>
+      'The paired device is too old to support remote deletion. Update Hibiki there first.';
 }
 
 // Path: <root>
@@ -46883,6 +46911,11 @@ class _StringsIt extends _StringsEn {
   String get shortcut_scope_universal => 'Back / Exit';
   @override
   String get game_attach_and_capture => 'Attach and capture';
+  @override
+  String get remote_delete_failed => 'Could not delete it on the paired device';
+  @override
+  String get remote_delete_unsupported =>
+      'The paired device is too old to support remote deletion. Update Hibiki there first.';
 }
 
 // Path: <root>
@@ -53837,6 +53870,11 @@ class _StringsJa extends _StringsEn {
   String get shortcut_scope_universal => 'Back / Exit';
   @override
   String get game_attach_and_capture => 'Attach and capture';
+  @override
+  String get remote_delete_failed => 'Could not delete it on the paired device';
+  @override
+  String get remote_delete_unsupported =>
+      'The paired device is too old to support remote deletion. Update Hibiki there first.';
 }
 
 // Path: <root>
@@ -60793,6 +60831,11 @@ class _StringsKo extends _StringsEn {
   String get shortcut_scope_universal => 'Back / Exit';
   @override
   String get game_attach_and_capture => 'Attach and capture';
+  @override
+  String get remote_delete_failed => 'Could not delete it on the paired device';
+  @override
+  String get remote_delete_unsupported =>
+      'The paired device is too old to support remote deletion. Update Hibiki there first.';
 }
 
 // Path: <root>
@@ -67910,6 +67953,11 @@ class _StringsNl extends _StringsEn {
   String get shortcut_scope_universal => 'Back / Exit';
   @override
   String get game_attach_and_capture => 'Attach and capture';
+  @override
+  String get remote_delete_failed => 'Could not delete it on the paired device';
+  @override
+  String get remote_delete_unsupported =>
+      'The paired device is too old to support remote deletion. Update Hibiki there first.';
 }
 
 // Path: <root>
@@ -75040,6 +75088,11 @@ class _StringsPtBr extends _StringsEn {
   String get shortcut_scope_universal => 'Back / Exit';
   @override
   String get game_attach_and_capture => 'Attach and capture';
+  @override
+  String get remote_delete_failed => 'Could not delete it on the paired device';
+  @override
+  String get remote_delete_unsupported =>
+      'The paired device is too old to support remote deletion. Update Hibiki there first.';
 }
 
 // Path: <root>
@@ -82154,6 +82207,11 @@ class _StringsRu extends _StringsEn {
   String get shortcut_scope_universal => 'Back / Exit';
   @override
   String get game_attach_and_capture => 'Attach and capture';
+  @override
+  String get remote_delete_failed => 'Could not delete it on the paired device';
+  @override
+  String get remote_delete_unsupported =>
+      'The paired device is too old to support remote deletion. Update Hibiki there first.';
 }
 
 // Path: <root>
@@ -89216,6 +89274,11 @@ class _StringsTh extends _StringsEn {
   String get shortcut_scope_universal => 'Back / Exit';
   @override
   String get game_attach_and_capture => 'Attach and capture';
+  @override
+  String get remote_delete_failed => 'Could not delete it on the paired device';
+  @override
+  String get remote_delete_unsupported =>
+      'The paired device is too old to support remote deletion. Update Hibiki there first.';
 }
 
 // Path: <root>
@@ -96310,6 +96373,11 @@ class _StringsTr extends _StringsEn {
   String get shortcut_scope_universal => 'Back / Exit';
   @override
   String get game_attach_and_capture => 'Attach and capture';
+  @override
+  String get remote_delete_failed => 'Could not delete it on the paired device';
+  @override
+  String get remote_delete_unsupported =>
+      'The paired device is too old to support remote deletion. Update Hibiki there first.';
 }
 
 // Path: <root>
@@ -103389,6 +103457,11 @@ class _StringsVi extends _StringsEn {
   String get shortcut_scope_universal => 'Back / Exit';
   @override
   String get game_attach_and_capture => 'Attach and capture';
+  @override
+  String get remote_delete_failed => 'Could not delete it on the paired device';
+  @override
+  String get remote_delete_unsupported =>
+      'The paired device is too old to support remote deletion. Update Hibiki there first.';
 }
 
 // Path: <root>
@@ -109976,6 +110049,10 @@ class _StringsZhCn extends _StringsEn {
   String get shortcut_scope_universal => '返回·退出';
   @override
   String get game_attach_and_capture => '附着并捕获';
+  @override
+  String get remote_delete_failed => '无法在对端设备上删除';
+  @override
+  String get remote_delete_unsupported => '对端设备版本过旧，不支持远端删除，请先升级对端 Hibiki';
 }
 
 // Path: <root>
@@ -116851,6 +116928,11 @@ class _StringsZhHk extends _StringsEn {
   String get shortcut_scope_universal => '返回·退出';
   @override
   String get game_attach_and_capture => 'Attach and capture';
+  @override
+  String get remote_delete_failed => 'Could not delete it on the paired device';
+  @override
+  String get remote_delete_unsupported =>
+      'The paired device is too old to support remote deletion. Update Hibiki there first.';
 }
 
 /// Flat map(s) containing all translations.
@@ -123169,6 +123251,10 @@ extension on _StringsEn {
         return 'Back / Exit';
       case 'game_attach_and_capture':
         return 'Attach and capture';
+      case 'remote_delete_failed':
+        return 'Could not delete it on the paired device';
+      case 'remote_delete_unsupported':
+        return 'The paired device is too old to support remote deletion. Update Hibiki there first.';
       default:
         return null;
     }
@@ -129485,6 +129571,10 @@ extension on _StringsAr {
         return 'Back / Exit';
       case 'game_attach_and_capture':
         return 'Attach and capture';
+      case 'remote_delete_failed':
+        return 'Could not delete it on the paired device';
+      case 'remote_delete_unsupported':
+        return 'The paired device is too old to support remote deletion. Update Hibiki there first.';
       default:
         return null;
     }
@@ -135823,6 +135913,10 @@ extension on _StringsDe {
         return 'Back / Exit';
       case 'game_attach_and_capture':
         return 'Attach and capture';
+      case 'remote_delete_failed':
+        return 'Could not delete it on the paired device';
+      case 'remote_delete_unsupported':
+        return 'The paired device is too old to support remote deletion. Update Hibiki there first.';
       default:
         return null;
     }
@@ -142160,6 +142254,10 @@ extension on _StringsEs {
         return 'Back / Exit';
       case 'game_attach_and_capture':
         return 'Attach and capture';
+      case 'remote_delete_failed':
+        return 'Could not delete it on the paired device';
+      case 'remote_delete_unsupported':
+        return 'The paired device is too old to support remote deletion. Update Hibiki there first.';
       default:
         return null;
     }
@@ -148503,6 +148601,10 @@ extension on _StringsFr {
         return 'Back / Exit';
       case 'game_attach_and_capture':
         return 'Attach and capture';
+      case 'remote_delete_failed':
+        return 'Could not delete it on the paired device';
+      case 'remote_delete_unsupported':
+        return 'The paired device is too old to support remote deletion. Update Hibiki there first.';
       default:
         return null;
     }
@@ -154828,6 +154930,10 @@ extension on _StringsId {
         return 'Back / Exit';
       case 'game_attach_and_capture':
         return 'Attach and capture';
+      case 'remote_delete_failed':
+        return 'Could not delete it on the paired device';
+      case 'remote_delete_unsupported':
+        return 'The paired device is too old to support remote deletion. Update Hibiki there first.';
       default:
         return null;
     }
@@ -161167,6 +161273,10 @@ extension on _StringsIt {
         return 'Back / Exit';
       case 'game_attach_and_capture':
         return 'Attach and capture';
+      case 'remote_delete_failed':
+        return 'Could not delete it on the paired device';
+      case 'remote_delete_unsupported':
+        return 'The paired device is too old to support remote deletion. Update Hibiki there first.';
       default:
         return null;
     }
@@ -167468,6 +167578,10 @@ extension on _StringsJa {
         return 'Back / Exit';
       case 'game_attach_and_capture':
         return 'Attach and capture';
+      case 'remote_delete_failed':
+        return 'Could not delete it on the paired device';
+      case 'remote_delete_unsupported':
+        return 'The paired device is too old to support remote deletion. Update Hibiki there first.';
       default:
         return null;
     }
@@ -173773,6 +173887,10 @@ extension on _StringsKo {
         return 'Back / Exit';
       case 'game_attach_and_capture':
         return 'Attach and capture';
+      case 'remote_delete_failed':
+        return 'Could not delete it on the paired device';
+      case 'remote_delete_unsupported':
+        return 'The paired device is too old to support remote deletion. Update Hibiki there first.';
       default:
         return null;
     }
@@ -180106,6 +180224,10 @@ extension on _StringsNl {
         return 'Back / Exit';
       case 'game_attach_and_capture':
         return 'Attach and capture';
+      case 'remote_delete_failed':
+        return 'Could not delete it on the paired device';
+      case 'remote_delete_unsupported':
+        return 'The paired device is too old to support remote deletion. Update Hibiki there first.';
       default:
         return null;
     }
@@ -186436,6 +186558,10 @@ extension on _StringsPtBr {
         return 'Back / Exit';
       case 'game_attach_and_capture':
         return 'Attach and capture';
+      case 'remote_delete_failed':
+        return 'Could not delete it on the paired device';
+      case 'remote_delete_unsupported':
+        return 'The paired device is too old to support remote deletion. Update Hibiki there first.';
       default:
         return null;
     }
@@ -192771,6 +192897,10 @@ extension on _StringsRu {
         return 'Back / Exit';
       case 'game_attach_and_capture':
         return 'Attach and capture';
+      case 'remote_delete_failed':
+        return 'Could not delete it on the paired device';
+      case 'remote_delete_unsupported':
+        return 'The paired device is too old to support remote deletion. Update Hibiki there first.';
       default:
         return null;
     }
@@ -199089,6 +199219,10 @@ extension on _StringsTh {
         return 'Back / Exit';
       case 'game_attach_and_capture':
         return 'Attach and capture';
+      case 'remote_delete_failed':
+        return 'Could not delete it on the paired device';
+      case 'remote_delete_unsupported':
+        return 'The paired device is too old to support remote deletion. Update Hibiki there first.';
       default:
         return null;
     }
@@ -205416,6 +205550,10 @@ extension on _StringsTr {
         return 'Back / Exit';
       case 'game_attach_and_capture':
         return 'Attach and capture';
+      case 'remote_delete_failed':
+        return 'Could not delete it on the paired device';
+      case 'remote_delete_unsupported':
+        return 'The paired device is too old to support remote deletion. Update Hibiki there first.';
       default:
         return null;
     }
@@ -211739,6 +211877,10 @@ extension on _StringsVi {
         return 'Back / Exit';
       case 'game_attach_and_capture':
         return 'Attach and capture';
+      case 'remote_delete_failed':
+        return 'Could not delete it on the paired device';
+      case 'remote_delete_unsupported':
+        return 'The paired device is too old to support remote deletion. Update Hibiki there first.';
       default:
         return null;
     }
@@ -218008,6 +218150,10 @@ extension on _StringsZhCn {
         return '返回·退出';
       case 'game_attach_and_capture':
         return '附着并捕获';
+      case 'remote_delete_failed':
+        return '无法在对端设备上删除';
+      case 'remote_delete_unsupported':
+        return '对端设备版本过旧，不支持远端删除，请先升级对端 Hibiki';
       default:
         return null;
     }
@@ -224304,6 +224450,10 @@ extension on _StringsZhHk {
         return '返回·退出';
       case 'game_attach_and_capture':
         return 'Attach and capture';
+      case 'remote_delete_failed':
+        return 'Could not delete it on the paired device';
+      case 'remote_delete_unsupported':
+        return 'The paired device is too old to support remote deletion. Update Hibiki there first.';
       default:
         return null;
     }
