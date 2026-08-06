@@ -3,7 +3,7 @@
 /// Locales: 17
 /// Strings: 53227 (3131 per locale)
 ///
-/// Built on 2026-08-02 at 17:37 UTC
+/// Built on 2026-08-06 at 18:43 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2698,39 +2698,39 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get torrent_upload_intro_enable => 'Enable upload / seeding';
   String get torrent_upload_intro_keep_off => 'Keep off';
   String get torrent_upload_intro_title => 'Upload / seeding';
-  String get ttu_blur_images => 'Blur images (spoiler guard)';
-  String get ttu_font_size => 'Font size';
-  String get ttu_font_vpal => 'VPAL (vertical alt)';
-  String get ttu_furigana_hide => 'Hide';
-  String get ttu_furigana_mode => 'Furigana';
-  String get ttu_furigana_mode_hint => '';
-  String get ttu_furigana_partial => 'Partial';
-  String get ttu_furigana_show => 'Show';
-  String get ttu_furigana_toggle => 'Toggle';
-  String get ttu_horizontal => 'Horizontal';
-  String get ttu_line_height => 'Line height';
-  String get ttu_merge_image_pages => 'Merge illustration pages into text';
-  String get ttu_merge_image_pages_subtitle =>
+  String get reader_blur_images => 'Blur images (spoiler guard)';
+  String get reader_font_size => 'Font size';
+  String get reader_font_vpal => 'VPAL (vertical alt)';
+  String get reader_furigana_hide => 'Hide';
+  String get reader_furigana_mode => 'Furigana';
+  String get reader_furigana_mode_hint => '';
+  String get reader_furigana_partial => 'Partial';
+  String get reader_furigana_show => 'Show';
+  String get reader_furigana_toggle => 'Toggle';
+  String get reader_horizontal => 'Horizontal';
+  String get reader_line_height => 'Line height';
+  String get reader_merge_image_pages => 'Merge illustration pages into text';
+  String get reader_merge_image_pages_subtitle =>
       'Standalone single-image chapters render inline in the adjacent text chapter instead of on their own page';
-  String get ttu_no_books_added => 'No books in library';
-  String get ttu_not_bound_cannot_rematch =>
+  String get reader_no_books_added => 'No books in library';
+  String get reader_not_bound_cannot_rematch =>
       'Audiobook not bound to a book, cannot re-match';
-  String get ttu_orient_mixed => 'Mixed';
-  String get ttu_orient_upright => 'Upright';
-  String get ttu_page_columns_auto => 'Auto';
-  String get ttu_paginated => 'Paginated';
-  String get ttu_paragraph_spacing => 'Paragraph spacing';
-  String get ttu_reader_styles => 'Prioritize book styles';
-  String get ttu_scroll => 'Scroll';
-  String get ttu_text_indentation => 'Paragraph indent';
-  String get ttu_text_justify => 'Text justification';
-  String get ttu_theme => 'Theme';
-  String get ttu_vert_kerning => 'Font kerning (vertical)';
-  String get ttu_vert_text_orient => 'Text orientation';
-  String get ttu_vertical => 'Vertical';
-  String get ttu_view_mode_label => 'Page / scroll';
-  String get ttu_vn => 'Visual novel';
-  String get ttu_writing_direction => 'Writing direction';
+  String get reader_orient_mixed => 'Mixed';
+  String get reader_orient_upright => 'Upright';
+  String get reader_page_columns_auto => 'Auto';
+  String get reader_paginated => 'Paginated';
+  String get reader_paragraph_spacing => 'Paragraph spacing';
+  String get reader_reader_styles => 'Prioritize book styles';
+  String get reader_scroll => 'Scroll';
+  String get reader_text_indentation => 'Paragraph indent';
+  String get reader_text_justify => 'Text justification';
+  String get reader_theme => 'Theme';
+  String get reader_vert_kerning => 'Font kerning (vertical)';
+  String get reader_vert_text_orient => 'Text orientation';
+  String get reader_vertical => 'Vertical';
+  String get reader_view_mode_label => 'Page / scroll';
+  String get reader_vn => 'Visual novel';
+  String get reader_writing_direction => 'Writing direction';
   String get undo => 'Undo';
   String get unit_milliseconds => 'ms';
   String get unit_pixels => 'px';
@@ -8766,69 +8766,69 @@ class _StringsAr extends _StringsEn {
   @override
   String get torrent_upload_intro_title => 'Upload / seeding';
   @override
-  String get ttu_blur_images => 'Blur images (spoiler guard)';
+  String get reader_blur_images => 'Blur images (spoiler guard)';
   @override
-  String get ttu_font_size => 'حجم الخط';
+  String get reader_font_size => 'حجم الخط';
   @override
-  String get ttu_font_vpal => 'VPAL (بديل عمودي)';
+  String get reader_font_vpal => 'VPAL (بديل عمودي)';
   @override
-  String get ttu_furigana_hide => 'إخفاء';
+  String get reader_furigana_hide => 'إخفاء';
   @override
-  String get ttu_furigana_mode => 'فوريغانا';
+  String get reader_furigana_mode => 'فوريغانا';
   @override
-  String get ttu_furigana_mode_hint => '';
+  String get reader_furigana_mode_hint => '';
   @override
-  String get ttu_furigana_partial => 'جزئي';
+  String get reader_furigana_partial => 'جزئي';
   @override
-  String get ttu_furigana_show => 'عرض';
+  String get reader_furigana_show => 'عرض';
   @override
-  String get ttu_furigana_toggle => 'تبديل';
+  String get reader_furigana_toggle => 'تبديل';
   @override
-  String get ttu_horizontal => 'أفقي';
+  String get reader_horizontal => 'أفقي';
   @override
-  String get ttu_line_height => 'ارتفاع السطر';
+  String get reader_line_height => 'ارتفاع السطر';
   @override
-  String get ttu_merge_image_pages => 'Merge illustration pages into text';
+  String get reader_merge_image_pages => 'Merge illustration pages into text';
   @override
-  String get ttu_merge_image_pages_subtitle =>
+  String get reader_merge_image_pages_subtitle =>
       'Standalone single-image chapters render inline in the adjacent text chapter instead of on their own page';
   @override
-  String get ttu_no_books_added => 'لا توجد كتب في المكتبة';
+  String get reader_no_books_added => 'لا توجد كتب في المكتبة';
   @override
-  String get ttu_not_bound_cannot_rematch =>
+  String get reader_not_bound_cannot_rematch =>
       'الكتاب الصوتي غير مرتبط بكتاب، لا يمكن إعادة المطابقة';
   @override
-  String get ttu_orient_mixed => 'مختلط';
+  String get reader_orient_mixed => 'مختلط';
   @override
-  String get ttu_orient_upright => 'قائم';
+  String get reader_orient_upright => 'قائم';
   @override
-  String get ttu_page_columns_auto => 'تلقائي';
+  String get reader_page_columns_auto => 'تلقائي';
   @override
-  String get ttu_paginated => 'صفحات';
+  String get reader_paginated => 'صفحات';
   @override
-  String get ttu_paragraph_spacing => 'Paragraph spacing';
+  String get reader_paragraph_spacing => 'Paragraph spacing';
   @override
-  String get ttu_reader_styles => 'أولوية أنماط الكتاب';
+  String get reader_reader_styles => 'أولوية أنماط الكتاب';
   @override
-  String get ttu_scroll => 'تمرير';
+  String get reader_scroll => 'تمرير';
   @override
-  String get ttu_text_indentation => 'مسافة بادئة الفقرة';
+  String get reader_text_indentation => 'مسافة بادئة الفقرة';
   @override
-  String get ttu_text_justify => 'ضبط النص';
+  String get reader_text_justify => 'ضبط النص';
   @override
-  String get ttu_theme => 'المظهر';
+  String get reader_theme => 'المظهر';
   @override
-  String get ttu_vert_kerning => 'تقنين الحروف (عمودي)';
+  String get reader_vert_kerning => 'تقنين الحروف (عمودي)';
   @override
-  String get ttu_vert_text_orient => 'اتجاه النص';
+  String get reader_vert_text_orient => 'اتجاه النص';
   @override
-  String get ttu_vertical => 'عمودي';
+  String get reader_vertical => 'عمودي';
   @override
-  String get ttu_view_mode_label => 'صفحات / تمرير';
+  String get reader_view_mode_label => 'صفحات / تمرير';
   @override
-  String get ttu_vn => 'Visual Novel';
+  String get reader_vn => 'Visual Novel';
   @override
-  String get ttu_writing_direction => 'اتجاه الكتابة';
+  String get reader_writing_direction => 'اتجاه الكتابة';
   @override
   String get undo => 'تراجع';
   @override
@@ -16009,69 +16009,69 @@ class _StringsDe extends _StringsEn {
   @override
   String get torrent_upload_intro_title => 'Upload / seeding';
   @override
-  String get ttu_blur_images => 'Blur images (spoiler guard)';
+  String get reader_blur_images => 'Blur images (spoiler guard)';
   @override
-  String get ttu_font_size => 'Schriftgröße';
+  String get reader_font_size => 'Schriftgröße';
   @override
-  String get ttu_font_vpal => 'VPAL (Vertikale Alt.)';
+  String get reader_font_vpal => 'VPAL (Vertikale Alt.)';
   @override
-  String get ttu_furigana_hide => 'Ausblenden';
+  String get reader_furigana_hide => 'Ausblenden';
   @override
-  String get ttu_furigana_mode => 'Furigana';
+  String get reader_furigana_mode => 'Furigana';
   @override
-  String get ttu_furigana_mode_hint => '';
+  String get reader_furigana_mode_hint => '';
   @override
-  String get ttu_furigana_partial => 'Teilweise';
+  String get reader_furigana_partial => 'Teilweise';
   @override
-  String get ttu_furigana_show => 'Anzeigen';
+  String get reader_furigana_show => 'Anzeigen';
   @override
-  String get ttu_furigana_toggle => 'Umschalten';
+  String get reader_furigana_toggle => 'Umschalten';
   @override
-  String get ttu_horizontal => 'Horizontal';
+  String get reader_horizontal => 'Horizontal';
   @override
-  String get ttu_line_height => 'Zeilenhöhe';
+  String get reader_line_height => 'Zeilenhöhe';
   @override
-  String get ttu_merge_image_pages => 'Merge illustration pages into text';
+  String get reader_merge_image_pages => 'Merge illustration pages into text';
   @override
-  String get ttu_merge_image_pages_subtitle =>
+  String get reader_merge_image_pages_subtitle =>
       'Standalone single-image chapters render inline in the adjacent text chapter instead of on their own page';
   @override
-  String get ttu_no_books_added => 'Keine Bücher in der Bibliothek';
+  String get reader_no_books_added => 'Keine Bücher in der Bibliothek';
   @override
-  String get ttu_not_bound_cannot_rematch =>
+  String get reader_not_bound_cannot_rematch =>
       'Hörbuch nicht mit einem Buch verknüpft, Neuabgleich nicht möglich';
   @override
-  String get ttu_orient_mixed => 'Gemischt';
+  String get reader_orient_mixed => 'Gemischt';
   @override
-  String get ttu_orient_upright => 'Aufrecht';
+  String get reader_orient_upright => 'Aufrecht';
   @override
-  String get ttu_page_columns_auto => 'Automatisch';
+  String get reader_page_columns_auto => 'Automatisch';
   @override
-  String get ttu_paginated => 'Seitenweise';
+  String get reader_paginated => 'Seitenweise';
   @override
-  String get ttu_paragraph_spacing => 'Paragraph spacing';
+  String get reader_paragraph_spacing => 'Paragraph spacing';
   @override
-  String get ttu_reader_styles => 'Buchstile bevorzugen';
+  String get reader_reader_styles => 'Buchstile bevorzugen';
   @override
-  String get ttu_scroll => 'Scrollen';
+  String get reader_scroll => 'Scrollen';
   @override
-  String get ttu_text_indentation => 'Absatzeinzug';
+  String get reader_text_indentation => 'Absatzeinzug';
   @override
-  String get ttu_text_justify => 'Blocksatz';
+  String get reader_text_justify => 'Blocksatz';
   @override
-  String get ttu_theme => 'Design';
+  String get reader_theme => 'Design';
   @override
-  String get ttu_vert_kerning => 'Zeichenabstand (vertikal)';
+  String get reader_vert_kerning => 'Zeichenabstand (vertikal)';
   @override
-  String get ttu_vert_text_orient => 'Textausrichtung';
+  String get reader_vert_text_orient => 'Textausrichtung';
   @override
-  String get ttu_vertical => 'Vertikal';
+  String get reader_vertical => 'Vertikal';
   @override
-  String get ttu_view_mode_label => 'Seiten / Scrollen';
+  String get reader_view_mode_label => 'Seiten / Scrollen';
   @override
-  String get ttu_vn => 'Visual Novel';
+  String get reader_vn => 'Visual Novel';
   @override
-  String get ttu_writing_direction => 'Schreibrichtung';
+  String get reader_writing_direction => 'Schreibrichtung';
   @override
   String get undo => 'Rückgängig';
   @override
@@ -23282,69 +23282,69 @@ class _StringsEs extends _StringsEn {
   @override
   String get torrent_upload_intro_title => 'Upload / seeding';
   @override
-  String get ttu_blur_images => 'Blur images (spoiler guard)';
+  String get reader_blur_images => 'Blur images (spoiler guard)';
   @override
-  String get ttu_font_size => 'Tamaño de fuente';
+  String get reader_font_size => 'Tamaño de fuente';
   @override
-  String get ttu_font_vpal => 'VPAL (alt. vertical)';
+  String get reader_font_vpal => 'VPAL (alt. vertical)';
   @override
-  String get ttu_furigana_hide => 'Ocultar';
+  String get reader_furigana_hide => 'Ocultar';
   @override
-  String get ttu_furigana_mode => 'Furigana';
+  String get reader_furigana_mode => 'Furigana';
   @override
-  String get ttu_furigana_mode_hint => '';
+  String get reader_furigana_mode_hint => '';
   @override
-  String get ttu_furigana_partial => 'Parcial';
+  String get reader_furigana_partial => 'Parcial';
   @override
-  String get ttu_furigana_show => 'Mostrar';
+  String get reader_furigana_show => 'Mostrar';
   @override
-  String get ttu_furigana_toggle => 'Alternar';
+  String get reader_furigana_toggle => 'Alternar';
   @override
-  String get ttu_horizontal => 'Horizontal';
+  String get reader_horizontal => 'Horizontal';
   @override
-  String get ttu_line_height => 'Altura de línea';
+  String get reader_line_height => 'Altura de línea';
   @override
-  String get ttu_merge_image_pages => 'Merge illustration pages into text';
+  String get reader_merge_image_pages => 'Merge illustration pages into text';
   @override
-  String get ttu_merge_image_pages_subtitle =>
+  String get reader_merge_image_pages_subtitle =>
       'Standalone single-image chapters render inline in the adjacent text chapter instead of on their own page';
   @override
-  String get ttu_no_books_added => 'No hay libros en la biblioteca';
+  String get reader_no_books_added => 'No hay libros en la biblioteca';
   @override
-  String get ttu_not_bound_cannot_rematch =>
+  String get reader_not_bound_cannot_rematch =>
       'El audiolibro no está vinculado a un libro, no se puede re-emparejar';
   @override
-  String get ttu_orient_mixed => 'Mixto';
+  String get reader_orient_mixed => 'Mixto';
   @override
-  String get ttu_orient_upright => 'Vertical';
+  String get reader_orient_upright => 'Vertical';
   @override
-  String get ttu_page_columns_auto => 'Automático';
+  String get reader_page_columns_auto => 'Automático';
   @override
-  String get ttu_paginated => 'Paginado';
+  String get reader_paginated => 'Paginado';
   @override
-  String get ttu_paragraph_spacing => 'Paragraph spacing';
+  String get reader_paragraph_spacing => 'Paragraph spacing';
   @override
-  String get ttu_reader_styles => 'Priorizar estilos del libro';
+  String get reader_reader_styles => 'Priorizar estilos del libro';
   @override
-  String get ttu_scroll => 'Desplazamiento';
+  String get reader_scroll => 'Desplazamiento';
   @override
-  String get ttu_text_indentation => 'Sangría de párrafo';
+  String get reader_text_indentation => 'Sangría de párrafo';
   @override
-  String get ttu_text_justify => 'Justificación de texto';
+  String get reader_text_justify => 'Justificación de texto';
   @override
-  String get ttu_theme => 'Tema';
+  String get reader_theme => 'Tema';
   @override
-  String get ttu_vert_kerning => 'Interletraje (vertical)';
+  String get reader_vert_kerning => 'Interletraje (vertical)';
   @override
-  String get ttu_vert_text_orient => 'Orientación del texto';
+  String get reader_vert_text_orient => 'Orientación del texto';
   @override
-  String get ttu_vertical => 'Vertical';
+  String get reader_vertical => 'Vertical';
   @override
-  String get ttu_view_mode_label => 'Páginas / Desplazamiento';
+  String get reader_view_mode_label => 'Páginas / Desplazamiento';
   @override
-  String get ttu_vn => 'Visual Novel';
+  String get reader_vn => 'Visual Novel';
   @override
-  String get ttu_writing_direction => 'Dirección de escritura';
+  String get reader_writing_direction => 'Dirección de escritura';
   @override
   String get undo => 'Deshacer';
   @override
@@ -30571,69 +30571,69 @@ class _StringsFr extends _StringsEn {
   @override
   String get torrent_upload_intro_title => 'Upload / seeding';
   @override
-  String get ttu_blur_images => 'Blur images (spoiler guard)';
+  String get reader_blur_images => 'Blur images (spoiler guard)';
   @override
-  String get ttu_font_size => 'Taille de police';
+  String get reader_font_size => 'Taille de police';
   @override
-  String get ttu_font_vpal => 'VPAL (alt. vertical)';
+  String get reader_font_vpal => 'VPAL (alt. vertical)';
   @override
-  String get ttu_furigana_hide => 'Masquer';
+  String get reader_furigana_hide => 'Masquer';
   @override
-  String get ttu_furigana_mode => 'Furigana';
+  String get reader_furigana_mode => 'Furigana';
   @override
-  String get ttu_furigana_mode_hint => '';
+  String get reader_furigana_mode_hint => '';
   @override
-  String get ttu_furigana_partial => 'Partiel';
+  String get reader_furigana_partial => 'Partiel';
   @override
-  String get ttu_furigana_show => 'Afficher';
+  String get reader_furigana_show => 'Afficher';
   @override
-  String get ttu_furigana_toggle => 'Basculer';
+  String get reader_furigana_toggle => 'Basculer';
   @override
-  String get ttu_horizontal => 'Horizontal';
+  String get reader_horizontal => 'Horizontal';
   @override
-  String get ttu_line_height => 'Hauteur de ligne';
+  String get reader_line_height => 'Hauteur de ligne';
   @override
-  String get ttu_merge_image_pages => 'Merge illustration pages into text';
+  String get reader_merge_image_pages => 'Merge illustration pages into text';
   @override
-  String get ttu_merge_image_pages_subtitle =>
+  String get reader_merge_image_pages_subtitle =>
       'Standalone single-image chapters render inline in the adjacent text chapter instead of on their own page';
   @override
-  String get ttu_no_books_added => 'Aucun livre dans la bibliothèque';
+  String get reader_no_books_added => 'Aucun livre dans la bibliothèque';
   @override
-  String get ttu_not_bound_cannot_rematch =>
+  String get reader_not_bound_cannot_rematch =>
       'Le livre audio n\'est pas lié à un livre, impossible de relancer la correspondance';
   @override
-  String get ttu_orient_mixed => 'Mixte';
+  String get reader_orient_mixed => 'Mixte';
   @override
-  String get ttu_orient_upright => 'Droit';
+  String get reader_orient_upright => 'Droit';
   @override
-  String get ttu_page_columns_auto => 'Automatique';
+  String get reader_page_columns_auto => 'Automatique';
   @override
-  String get ttu_paginated => 'Paginé';
+  String get reader_paginated => 'Paginé';
   @override
-  String get ttu_paragraph_spacing => 'Paragraph spacing';
+  String get reader_paragraph_spacing => 'Paragraph spacing';
   @override
-  String get ttu_reader_styles => 'Prioriser les styles du livre';
+  String get reader_reader_styles => 'Prioriser les styles du livre';
   @override
-  String get ttu_scroll => 'Défilement';
+  String get reader_scroll => 'Défilement';
   @override
-  String get ttu_text_indentation => 'Retrait de paragraphe';
+  String get reader_text_indentation => 'Retrait de paragraphe';
   @override
-  String get ttu_text_justify => 'Justification du texte';
+  String get reader_text_justify => 'Justification du texte';
   @override
-  String get ttu_theme => 'Thème';
+  String get reader_theme => 'Thème';
   @override
-  String get ttu_vert_kerning => 'Crénage (vertical)';
+  String get reader_vert_kerning => 'Crénage (vertical)';
   @override
-  String get ttu_vert_text_orient => 'Orientation du texte';
+  String get reader_vert_text_orient => 'Orientation du texte';
   @override
-  String get ttu_vertical => 'Vertical';
+  String get reader_vertical => 'Vertical';
   @override
-  String get ttu_view_mode_label => 'Pages / Défilement';
+  String get reader_view_mode_label => 'Pages / Défilement';
   @override
-  String get ttu_vn => 'Visual Novel';
+  String get reader_vn => 'Visual Novel';
   @override
-  String get ttu_writing_direction => 'Direction d\'écriture';
+  String get reader_writing_direction => 'Direction d\'écriture';
   @override
   String get undo => 'Annuler';
   @override
@@ -37800,69 +37800,69 @@ class _StringsId extends _StringsEn {
   @override
   String get torrent_upload_intro_title => 'Upload / seeding';
   @override
-  String get ttu_blur_images => 'Blur images (spoiler guard)';
+  String get reader_blur_images => 'Blur images (spoiler guard)';
   @override
-  String get ttu_font_size => 'Ukuran Font';
+  String get reader_font_size => 'Ukuran Font';
   @override
-  String get ttu_font_vpal => 'VPAL (Alt Vertikal)';
+  String get reader_font_vpal => 'VPAL (Alt Vertikal)';
   @override
-  String get ttu_furigana_hide => 'Sembunyikan';
+  String get reader_furigana_hide => 'Sembunyikan';
   @override
-  String get ttu_furigana_mode => 'Furigana';
+  String get reader_furigana_mode => 'Furigana';
   @override
-  String get ttu_furigana_mode_hint => '';
+  String get reader_furigana_mode_hint => '';
   @override
-  String get ttu_furigana_partial => 'Sebagian';
+  String get reader_furigana_partial => 'Sebagian';
   @override
-  String get ttu_furigana_show => 'Tampilkan';
+  String get reader_furigana_show => 'Tampilkan';
   @override
-  String get ttu_furigana_toggle => 'Alihkan';
+  String get reader_furigana_toggle => 'Alihkan';
   @override
-  String get ttu_horizontal => 'Horizontal';
+  String get reader_horizontal => 'Horizontal';
   @override
-  String get ttu_line_height => 'Tinggi Baris';
+  String get reader_line_height => 'Tinggi Baris';
   @override
-  String get ttu_merge_image_pages => 'Merge illustration pages into text';
+  String get reader_merge_image_pages => 'Merge illustration pages into text';
   @override
-  String get ttu_merge_image_pages_subtitle =>
+  String get reader_merge_image_pages_subtitle =>
       'Standalone single-image chapters render inline in the adjacent text chapter instead of on their own page';
   @override
-  String get ttu_no_books_added => 'Belum ada buku di perpustakaan';
+  String get reader_no_books_added => 'Belum ada buku di perpustakaan';
   @override
-  String get ttu_not_bound_cannot_rematch =>
+  String get reader_not_bound_cannot_rematch =>
       'Buku audio tidak terikat ke buku, tidak dapat mencocokkan ulang';
   @override
-  String get ttu_orient_mixed => 'Campuran';
+  String get reader_orient_mixed => 'Campuran';
   @override
-  String get ttu_orient_upright => 'Tegak';
+  String get reader_orient_upright => 'Tegak';
   @override
-  String get ttu_page_columns_auto => 'Otomatis';
+  String get reader_page_columns_auto => 'Otomatis';
   @override
-  String get ttu_paginated => 'Paginasi';
+  String get reader_paginated => 'Paginasi';
   @override
-  String get ttu_paragraph_spacing => 'Paragraph spacing';
+  String get reader_paragraph_spacing => 'Paragraph spacing';
   @override
-  String get ttu_reader_styles => 'Prioritaskan Gaya Buku';
+  String get reader_reader_styles => 'Prioritaskan Gaya Buku';
   @override
-  String get ttu_scroll => 'Gulir';
+  String get reader_scroll => 'Gulir';
   @override
-  String get ttu_text_indentation => 'Indentasi Paragraf';
+  String get reader_text_indentation => 'Indentasi Paragraf';
   @override
-  String get ttu_text_justify => 'Perataan Teks';
+  String get reader_text_justify => 'Perataan Teks';
   @override
-  String get ttu_theme => 'Tema';
+  String get reader_theme => 'Tema';
   @override
-  String get ttu_vert_kerning => 'Kerning Font (Vertikal)';
+  String get reader_vert_kerning => 'Kerning Font (Vertikal)';
   @override
-  String get ttu_vert_text_orient => 'Orientasi Teks';
+  String get reader_vert_text_orient => 'Orientasi Teks';
   @override
-  String get ttu_vertical => 'Vertikal';
+  String get reader_vertical => 'Vertikal';
   @override
-  String get ttu_view_mode_label => 'Halaman / Gulir';
+  String get reader_view_mode_label => 'Halaman / Gulir';
   @override
-  String get ttu_vn => 'Visual Novel';
+  String get reader_vn => 'Visual Novel';
   @override
-  String get ttu_writing_direction => 'Arah Penulisan';
+  String get reader_writing_direction => 'Arah Penulisan';
   @override
   String get undo => 'Urungkan';
   @override
@@ -45052,69 +45052,69 @@ class _StringsIt extends _StringsEn {
   @override
   String get torrent_upload_intro_title => 'Upload / seeding';
   @override
-  String get ttu_blur_images => 'Blur images (spoiler guard)';
+  String get reader_blur_images => 'Blur images (spoiler guard)';
   @override
-  String get ttu_font_size => 'Dimensione carattere';
+  String get reader_font_size => 'Dimensione carattere';
   @override
-  String get ttu_font_vpal => 'VPAL (alt. verticale)';
+  String get reader_font_vpal => 'VPAL (alt. verticale)';
   @override
-  String get ttu_furigana_hide => 'Nascondi';
+  String get reader_furigana_hide => 'Nascondi';
   @override
-  String get ttu_furigana_mode => 'Furigana';
+  String get reader_furigana_mode => 'Furigana';
   @override
-  String get ttu_furigana_mode_hint => '';
+  String get reader_furigana_mode_hint => '';
   @override
-  String get ttu_furigana_partial => 'Parziale';
+  String get reader_furigana_partial => 'Parziale';
   @override
-  String get ttu_furigana_show => 'Mostra';
+  String get reader_furigana_show => 'Mostra';
   @override
-  String get ttu_furigana_toggle => 'Alterna';
+  String get reader_furigana_toggle => 'Alterna';
   @override
-  String get ttu_horizontal => 'Orizzontale';
+  String get reader_horizontal => 'Orizzontale';
   @override
-  String get ttu_line_height => 'Altezza riga';
+  String get reader_line_height => 'Altezza riga';
   @override
-  String get ttu_merge_image_pages => 'Merge illustration pages into text';
+  String get reader_merge_image_pages => 'Merge illustration pages into text';
   @override
-  String get ttu_merge_image_pages_subtitle =>
+  String get reader_merge_image_pages_subtitle =>
       'Standalone single-image chapters render inline in the adjacent text chapter instead of on their own page';
   @override
-  String get ttu_no_books_added => 'Nessun libro nella libreria';
+  String get reader_no_books_added => 'Nessun libro nella libreria';
   @override
-  String get ttu_not_bound_cannot_rematch =>
+  String get reader_not_bound_cannot_rematch =>
       'L\'audiolibro non è collegato a un libro, impossibile riavviare la corrispondenza';
   @override
-  String get ttu_orient_mixed => 'Misto';
+  String get reader_orient_mixed => 'Misto';
   @override
-  String get ttu_orient_upright => 'Diritto';
+  String get reader_orient_upright => 'Diritto';
   @override
-  String get ttu_page_columns_auto => 'Automatico';
+  String get reader_page_columns_auto => 'Automatico';
   @override
-  String get ttu_paginated => 'Paginato';
+  String get reader_paginated => 'Paginato';
   @override
-  String get ttu_paragraph_spacing => 'Paragraph spacing';
+  String get reader_paragraph_spacing => 'Paragraph spacing';
   @override
-  String get ttu_reader_styles => 'Priorità stili del libro';
+  String get reader_reader_styles => 'Priorità stili del libro';
   @override
-  String get ttu_scroll => 'Scorrimento';
+  String get reader_scroll => 'Scorrimento';
   @override
-  String get ttu_text_indentation => 'Rientro paragrafo';
+  String get reader_text_indentation => 'Rientro paragrafo';
   @override
-  String get ttu_text_justify => 'Giustificazione testo';
+  String get reader_text_justify => 'Giustificazione testo';
   @override
-  String get ttu_theme => 'Tema';
+  String get reader_theme => 'Tema';
   @override
-  String get ttu_vert_kerning => 'Crenatura (verticale)';
+  String get reader_vert_kerning => 'Crenatura (verticale)';
   @override
-  String get ttu_vert_text_orient => 'Orientamento testo';
+  String get reader_vert_text_orient => 'Orientamento testo';
   @override
-  String get ttu_vertical => 'Verticale';
+  String get reader_vertical => 'Verticale';
   @override
-  String get ttu_view_mode_label => 'Pagine / Scorrimento';
+  String get reader_view_mode_label => 'Pagine / Scorrimento';
   @override
-  String get ttu_vn => 'Visual Novel';
+  String get reader_vn => 'Visual Novel';
   @override
-  String get ttu_writing_direction => 'Direzione di scrittura';
+  String get reader_writing_direction => 'Direzione di scrittura';
   @override
   String get undo => 'Annulla';
   @override
@@ -52183,68 +52183,68 @@ class _StringsJa extends _StringsEn {
   @override
   String get torrent_upload_intro_title => 'Upload / seeding';
   @override
-  String get ttu_blur_images => 'Blur images (spoiler guard)';
+  String get reader_blur_images => 'Blur images (spoiler guard)';
   @override
-  String get ttu_font_size => 'フォントサイズ';
+  String get reader_font_size => 'フォントサイズ';
   @override
-  String get ttu_font_vpal => 'VPAL（縦書き代替）';
+  String get reader_font_vpal => 'VPAL（縦書き代替）';
   @override
-  String get ttu_furigana_hide => '非表示';
+  String get reader_furigana_hide => '非表示';
   @override
-  String get ttu_furigana_mode => 'ふりがな';
+  String get reader_furigana_mode => 'ふりがな';
   @override
-  String get ttu_furigana_mode_hint => '';
+  String get reader_furigana_mode_hint => '';
   @override
-  String get ttu_furigana_partial => '一部';
+  String get reader_furigana_partial => '一部';
   @override
-  String get ttu_furigana_show => '表示';
+  String get reader_furigana_show => '表示';
   @override
-  String get ttu_furigana_toggle => '切替';
+  String get reader_furigana_toggle => '切替';
   @override
-  String get ttu_horizontal => '横書き';
+  String get reader_horizontal => '横書き';
   @override
-  String get ttu_line_height => '行の高さ';
+  String get reader_line_height => '行の高さ';
   @override
-  String get ttu_merge_image_pages => 'Merge illustration pages into text';
+  String get reader_merge_image_pages => 'Merge illustration pages into text';
   @override
-  String get ttu_merge_image_pages_subtitle =>
+  String get reader_merge_image_pages_subtitle =>
       'Standalone single-image chapters render inline in the adjacent text chapter instead of on their own page';
   @override
-  String get ttu_no_books_added => '書庫に本がありません';
+  String get reader_no_books_added => '書庫に本がありません';
   @override
-  String get ttu_not_bound_cannot_rematch => '本に紐付けされていないため、再マッチングできません';
+  String get reader_not_bound_cannot_rematch => '本に紐付けされていないため、再マッチングできません';
   @override
-  String get ttu_orient_mixed => '混合';
+  String get reader_orient_mixed => '混合';
   @override
-  String get ttu_orient_upright => '正立';
+  String get reader_orient_upright => '正立';
   @override
-  String get ttu_page_columns_auto => '自動';
+  String get reader_page_columns_auto => '自動';
   @override
-  String get ttu_paginated => 'ページ送り';
+  String get reader_paginated => 'ページ送り';
   @override
-  String get ttu_paragraph_spacing => 'Paragraph spacing';
+  String get reader_paragraph_spacing => 'Paragraph spacing';
   @override
-  String get ttu_reader_styles => '書籍スタイル優先';
+  String get reader_reader_styles => '書籍スタイル優先';
   @override
-  String get ttu_scroll => 'スクロール';
+  String get reader_scroll => 'スクロール';
   @override
-  String get ttu_text_indentation => '段落インデント';
+  String get reader_text_indentation => '段落インデント';
   @override
-  String get ttu_text_justify => '両端揃え';
+  String get reader_text_justify => '両端揃え';
   @override
-  String get ttu_theme => 'テーマ';
+  String get reader_theme => 'テーマ';
   @override
-  String get ttu_vert_kerning => 'カーニング（縦書き）';
+  String get reader_vert_kerning => 'カーニング（縦書き）';
   @override
-  String get ttu_vert_text_orient => '文字の向き';
+  String get reader_vert_text_orient => '文字の向き';
   @override
-  String get ttu_vertical => '縦書き';
+  String get reader_vertical => '縦書き';
   @override
-  String get ttu_view_mode_label => 'ページ / スクロール';
+  String get reader_view_mode_label => 'ページ / スクロール';
   @override
-  String get ttu_vn => 'Visual Novel';
+  String get reader_vn => 'Visual Novel';
   @override
-  String get ttu_writing_direction => '組方向';
+  String get reader_writing_direction => '組方向';
   @override
   String get undo => '元に戻す';
   @override
@@ -59263,68 +59263,69 @@ class _StringsKo extends _StringsEn {
   @override
   String get torrent_upload_intro_title => 'Upload / seeding';
   @override
-  String get ttu_blur_images => 'Blur images (spoiler guard)';
+  String get reader_blur_images => 'Blur images (spoiler guard)';
   @override
-  String get ttu_font_size => '글꼴 크기';
+  String get reader_font_size => '글꼴 크기';
   @override
-  String get ttu_font_vpal => 'VPAL (세로 대체)';
+  String get reader_font_vpal => 'VPAL (세로 대체)';
   @override
-  String get ttu_furigana_hide => '숨기기';
+  String get reader_furigana_hide => '숨기기';
   @override
-  String get ttu_furigana_mode => '후리가나';
+  String get reader_furigana_mode => '후리가나';
   @override
-  String get ttu_furigana_mode_hint => '';
+  String get reader_furigana_mode_hint => '';
   @override
-  String get ttu_furigana_partial => '부분';
+  String get reader_furigana_partial => '부분';
   @override
-  String get ttu_furigana_show => '표시';
+  String get reader_furigana_show => '표시';
   @override
-  String get ttu_furigana_toggle => '전환';
+  String get reader_furigana_toggle => '전환';
   @override
-  String get ttu_horizontal => '가로';
+  String get reader_horizontal => '가로';
   @override
-  String get ttu_line_height => '줄 간격';
+  String get reader_line_height => '줄 간격';
   @override
-  String get ttu_merge_image_pages => 'Merge illustration pages into text';
+  String get reader_merge_image_pages => 'Merge illustration pages into text';
   @override
-  String get ttu_merge_image_pages_subtitle =>
+  String get reader_merge_image_pages_subtitle =>
       'Standalone single-image chapters render inline in the adjacent text chapter instead of on their own page';
   @override
-  String get ttu_no_books_added => '서재에 책이 없습니다';
+  String get reader_no_books_added => '서재에 책이 없습니다';
   @override
-  String get ttu_not_bound_cannot_rematch => '오디오북이 책에 바인딩되지 않아 다시 매칭할 수 없습니다';
+  String get reader_not_bound_cannot_rematch =>
+      '오디오북이 책에 바인딩되지 않아 다시 매칭할 수 없습니다';
   @override
-  String get ttu_orient_mixed => '혼합';
+  String get reader_orient_mixed => '혼합';
   @override
-  String get ttu_orient_upright => '직립';
+  String get reader_orient_upright => '직립';
   @override
-  String get ttu_page_columns_auto => '자동';
+  String get reader_page_columns_auto => '자동';
   @override
-  String get ttu_paginated => '페이지 넘김';
+  String get reader_paginated => '페이지 넘김';
   @override
-  String get ttu_paragraph_spacing => 'Paragraph spacing';
+  String get reader_paragraph_spacing => 'Paragraph spacing';
   @override
-  String get ttu_reader_styles => '책 스타일 우선';
+  String get reader_reader_styles => '책 스타일 우선';
   @override
-  String get ttu_scroll => '스크롤';
+  String get reader_scroll => '스크롤';
   @override
-  String get ttu_text_indentation => '문단 들여쓰기';
+  String get reader_text_indentation => '문단 들여쓰기';
   @override
-  String get ttu_text_justify => '양쪽 정렬';
+  String get reader_text_justify => '양쪽 정렬';
   @override
-  String get ttu_theme => '테마';
+  String get reader_theme => '테마';
   @override
-  String get ttu_vert_kerning => '커닝 (세로)';
+  String get reader_vert_kerning => '커닝 (세로)';
   @override
-  String get ttu_vert_text_orient => '글자 방향';
+  String get reader_vert_text_orient => '글자 방향';
   @override
-  String get ttu_vertical => '세로';
+  String get reader_vertical => '세로';
   @override
-  String get ttu_view_mode_label => '페이지 / 스크롤';
+  String get reader_view_mode_label => '페이지 / 스크롤';
   @override
-  String get ttu_vn => 'Visual Novel';
+  String get reader_vn => 'Visual Novel';
   @override
-  String get ttu_writing_direction => '글쓰기 방향';
+  String get reader_writing_direction => '글쓰기 방향';
   @override
   String get undo => '되돌리기';
   @override
@@ -66466,69 +66467,69 @@ class _StringsNl extends _StringsEn {
   @override
   String get torrent_upload_intro_title => 'Upload / seeding';
   @override
-  String get ttu_blur_images => 'Blur images (spoiler guard)';
+  String get reader_blur_images => 'Blur images (spoiler guard)';
   @override
-  String get ttu_font_size => 'Lettergrootte';
+  String get reader_font_size => 'Lettergrootte';
   @override
-  String get ttu_font_vpal => 'VPAL (vert. alt.)';
+  String get reader_font_vpal => 'VPAL (vert. alt.)';
   @override
-  String get ttu_furigana_hide => 'Verbergen';
+  String get reader_furigana_hide => 'Verbergen';
   @override
-  String get ttu_furigana_mode => 'Furigana';
+  String get reader_furigana_mode => 'Furigana';
   @override
-  String get ttu_furigana_mode_hint => '';
+  String get reader_furigana_mode_hint => '';
   @override
-  String get ttu_furigana_partial => 'Gedeeltelijk';
+  String get reader_furigana_partial => 'Gedeeltelijk';
   @override
-  String get ttu_furigana_show => 'Tonen';
+  String get reader_furigana_show => 'Tonen';
   @override
-  String get ttu_furigana_toggle => 'Wisselen';
+  String get reader_furigana_toggle => 'Wisselen';
   @override
-  String get ttu_horizontal => 'Horizontaal';
+  String get reader_horizontal => 'Horizontaal';
   @override
-  String get ttu_line_height => 'Regelhoogte';
+  String get reader_line_height => 'Regelhoogte';
   @override
-  String get ttu_merge_image_pages => 'Merge illustration pages into text';
+  String get reader_merge_image_pages => 'Merge illustration pages into text';
   @override
-  String get ttu_merge_image_pages_subtitle =>
+  String get reader_merge_image_pages_subtitle =>
       'Standalone single-image chapters render inline in the adjacent text chapter instead of on their own page';
   @override
-  String get ttu_no_books_added => 'Geen boeken in de bibliotheek';
+  String get reader_no_books_added => 'Geen boeken in de bibliotheek';
   @override
-  String get ttu_not_bound_cannot_rematch =>
+  String get reader_not_bound_cannot_rematch =>
       'Luisterboek niet gekoppeld aan een boek, kan niet opnieuw matchen';
   @override
-  String get ttu_orient_mixed => 'Gemengd';
+  String get reader_orient_mixed => 'Gemengd';
   @override
-  String get ttu_orient_upright => 'Rechtop';
+  String get reader_orient_upright => 'Rechtop';
   @override
-  String get ttu_page_columns_auto => 'Automatisch';
+  String get reader_page_columns_auto => 'Automatisch';
   @override
-  String get ttu_paginated => 'Gepagineerd';
+  String get reader_paginated => 'Gepagineerd';
   @override
-  String get ttu_paragraph_spacing => 'Paragraph spacing';
+  String get reader_paragraph_spacing => 'Paragraph spacing';
   @override
-  String get ttu_reader_styles => 'Boekstijlen prioriteit geven';
+  String get reader_reader_styles => 'Boekstijlen prioriteit geven';
   @override
-  String get ttu_scroll => 'Scrollen';
+  String get reader_scroll => 'Scrollen';
   @override
-  String get ttu_text_indentation => 'Alinea-inspringing';
+  String get reader_text_indentation => 'Alinea-inspringing';
   @override
-  String get ttu_text_justify => 'Tekstuitlijning';
+  String get reader_text_justify => 'Tekstuitlijning';
   @override
-  String get ttu_theme => 'Thema';
+  String get reader_theme => 'Thema';
   @override
-  String get ttu_vert_kerning => 'Tekenafstand (verticaal)';
+  String get reader_vert_kerning => 'Tekenafstand (verticaal)';
   @override
-  String get ttu_vert_text_orient => 'Tekstoriëntatie';
+  String get reader_vert_text_orient => 'Tekstoriëntatie';
   @override
-  String get ttu_vertical => 'Verticaal';
+  String get reader_vertical => 'Verticaal';
   @override
-  String get ttu_view_mode_label => 'Pagina\'s / Scrollen';
+  String get reader_view_mode_label => 'Pagina\'s / Scrollen';
   @override
-  String get ttu_vn => 'Visual Novel';
+  String get reader_vn => 'Visual Novel';
   @override
-  String get ttu_writing_direction => 'Schrijfrichting';
+  String get reader_writing_direction => 'Schrijfrichting';
   @override
   String get undo => 'Ongedaan maken';
   @override
@@ -73716,69 +73717,69 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get torrent_upload_intro_title => 'Upload / seeding';
   @override
-  String get ttu_blur_images => 'Blur images (spoiler guard)';
+  String get reader_blur_images => 'Blur images (spoiler guard)';
   @override
-  String get ttu_font_size => 'Tamanho da Fonte';
+  String get reader_font_size => 'Tamanho da Fonte';
   @override
-  String get ttu_font_vpal => 'VPAL (alt. vertical)';
+  String get reader_font_vpal => 'VPAL (alt. vertical)';
   @override
-  String get ttu_furigana_hide => 'Ocultar';
+  String get reader_furigana_hide => 'Ocultar';
   @override
-  String get ttu_furigana_mode => 'Furigana';
+  String get reader_furigana_mode => 'Furigana';
   @override
-  String get ttu_furigana_mode_hint => '';
+  String get reader_furigana_mode_hint => '';
   @override
-  String get ttu_furigana_partial => 'Parcial';
+  String get reader_furigana_partial => 'Parcial';
   @override
-  String get ttu_furigana_show => 'Mostrar';
+  String get reader_furigana_show => 'Mostrar';
   @override
-  String get ttu_furigana_toggle => 'Alternar';
+  String get reader_furigana_toggle => 'Alternar';
   @override
-  String get ttu_horizontal => 'Horizontal';
+  String get reader_horizontal => 'Horizontal';
   @override
-  String get ttu_line_height => 'Altura da Linha';
+  String get reader_line_height => 'Altura da Linha';
   @override
-  String get ttu_merge_image_pages => 'Merge illustration pages into text';
+  String get reader_merge_image_pages => 'Merge illustration pages into text';
   @override
-  String get ttu_merge_image_pages_subtitle =>
+  String get reader_merge_image_pages_subtitle =>
       'Standalone single-image chapters render inline in the adjacent text chapter instead of on their own page';
   @override
-  String get ttu_no_books_added => 'Nenhum livro na biblioteca';
+  String get reader_no_books_added => 'Nenhum livro na biblioteca';
   @override
-  String get ttu_not_bound_cannot_rematch =>
+  String get reader_not_bound_cannot_rematch =>
       'Audiolivro não vinculado a um livro, não é possível corresponder novamente';
   @override
-  String get ttu_orient_mixed => 'Misto';
+  String get reader_orient_mixed => 'Misto';
   @override
-  String get ttu_orient_upright => 'Vertical';
+  String get reader_orient_upright => 'Vertical';
   @override
-  String get ttu_page_columns_auto => 'Automático';
+  String get reader_page_columns_auto => 'Automático';
   @override
-  String get ttu_paginated => 'Paginado';
+  String get reader_paginated => 'Paginado';
   @override
-  String get ttu_paragraph_spacing => 'Paragraph spacing';
+  String get reader_paragraph_spacing => 'Paragraph spacing';
   @override
-  String get ttu_reader_styles => 'Priorizar estilos do livro';
+  String get reader_reader_styles => 'Priorizar estilos do livro';
   @override
-  String get ttu_scroll => 'Rolagem';
+  String get reader_scroll => 'Rolagem';
   @override
-  String get ttu_text_indentation => 'Recuo de parágrafo';
+  String get reader_text_indentation => 'Recuo de parágrafo';
   @override
-  String get ttu_text_justify => 'Justificação do texto';
+  String get reader_text_justify => 'Justificação do texto';
   @override
-  String get ttu_theme => 'Tema';
+  String get reader_theme => 'Tema';
   @override
-  String get ttu_vert_kerning => 'Kerning (vertical)';
+  String get reader_vert_kerning => 'Kerning (vertical)';
   @override
-  String get ttu_vert_text_orient => 'Orientação do texto';
+  String get reader_vert_text_orient => 'Orientação do texto';
   @override
-  String get ttu_vertical => 'Vertical';
+  String get reader_vertical => 'Vertical';
   @override
-  String get ttu_view_mode_label => 'Páginas / Rolagem';
+  String get reader_view_mode_label => 'Páginas / Rolagem';
   @override
-  String get ttu_vn => 'Visual Novel';
+  String get reader_vn => 'Visual Novel';
   @override
-  String get ttu_writing_direction => 'Direção da Escrita';
+  String get reader_writing_direction => 'Direção da Escrita';
   @override
   String get undo => 'Desfazer';
   @override
@@ -80963,69 +80964,69 @@ class _StringsRu extends _StringsEn {
   @override
   String get torrent_upload_intro_title => 'Upload / seeding';
   @override
-  String get ttu_blur_images => 'Blur images (spoiler guard)';
+  String get reader_blur_images => 'Blur images (spoiler guard)';
   @override
-  String get ttu_font_size => 'Размер шрифта';
+  String get reader_font_size => 'Размер шрифта';
   @override
-  String get ttu_font_vpal => 'VPAL (верт. альт.)';
+  String get reader_font_vpal => 'VPAL (верт. альт.)';
   @override
-  String get ttu_furigana_hide => 'Скрыть';
+  String get reader_furigana_hide => 'Скрыть';
   @override
-  String get ttu_furigana_mode => 'Фуригана';
+  String get reader_furigana_mode => 'Фуригана';
   @override
-  String get ttu_furigana_mode_hint => '';
+  String get reader_furigana_mode_hint => '';
   @override
-  String get ttu_furigana_partial => 'Частично';
+  String get reader_furigana_partial => 'Частично';
   @override
-  String get ttu_furigana_show => 'Показать';
+  String get reader_furigana_show => 'Показать';
   @override
-  String get ttu_furigana_toggle => 'Переключить';
+  String get reader_furigana_toggle => 'Переключить';
   @override
-  String get ttu_horizontal => 'Горизонтальное';
+  String get reader_horizontal => 'Горизонтальное';
   @override
-  String get ttu_line_height => 'Высота строки';
+  String get reader_line_height => 'Высота строки';
   @override
-  String get ttu_merge_image_pages => 'Merge illustration pages into text';
+  String get reader_merge_image_pages => 'Merge illustration pages into text';
   @override
-  String get ttu_merge_image_pages_subtitle =>
+  String get reader_merge_image_pages_subtitle =>
       'Standalone single-image chapters render inline in the adjacent text chapter instead of on their own page';
   @override
-  String get ttu_no_books_added => 'В библиотеке нет книг';
+  String get reader_no_books_added => 'В библиотеке нет книг';
   @override
-  String get ttu_not_bound_cannot_rematch =>
+  String get reader_not_bound_cannot_rematch =>
       'Аудиокнига не привязана к книге, пересопоставление невозможно';
   @override
-  String get ttu_orient_mixed => 'Смешанная';
+  String get reader_orient_mixed => 'Смешанная';
   @override
-  String get ttu_orient_upright => 'Прямая';
+  String get reader_orient_upright => 'Прямая';
   @override
-  String get ttu_page_columns_auto => 'Авто';
+  String get reader_page_columns_auto => 'Авто';
   @override
-  String get ttu_paginated => 'Постраничный';
+  String get reader_paginated => 'Постраничный';
   @override
-  String get ttu_paragraph_spacing => 'Paragraph spacing';
+  String get reader_paragraph_spacing => 'Paragraph spacing';
   @override
-  String get ttu_reader_styles => 'Приоритет стилей книги';
+  String get reader_reader_styles => 'Приоритет стилей книги';
   @override
-  String get ttu_scroll => 'Прокрутка';
+  String get reader_scroll => 'Прокрутка';
   @override
-  String get ttu_text_indentation => 'Отступ абзаца';
+  String get reader_text_indentation => 'Отступ абзаца';
   @override
-  String get ttu_text_justify => 'Выравнивание текста';
+  String get reader_text_justify => 'Выравнивание текста';
   @override
-  String get ttu_theme => 'Тема';
+  String get reader_theme => 'Тема';
   @override
-  String get ttu_vert_kerning => 'Кернинг (вертикальный)';
+  String get reader_vert_kerning => 'Кернинг (вертикальный)';
   @override
-  String get ttu_vert_text_orient => 'Ориентация текста';
+  String get reader_vert_text_orient => 'Ориентация текста';
   @override
-  String get ttu_vertical => 'Вертикальное';
+  String get reader_vertical => 'Вертикальное';
   @override
-  String get ttu_view_mode_label => 'Страницы / Прокрутка';
+  String get reader_view_mode_label => 'Страницы / Прокрутка';
   @override
-  String get ttu_vn => 'Visual Novel';
+  String get reader_vn => 'Visual Novel';
   @override
-  String get ttu_writing_direction => 'Направление письма';
+  String get reader_writing_direction => 'Направление письма';
   @override
   String get undo => 'Отменить';
   @override
@@ -88162,69 +88163,69 @@ class _StringsTh extends _StringsEn {
   @override
   String get torrent_upload_intro_title => 'Upload / seeding';
   @override
-  String get ttu_blur_images => 'Blur images (spoiler guard)';
+  String get reader_blur_images => 'Blur images (spoiler guard)';
   @override
-  String get ttu_font_size => 'ขนาดฟอนต์';
+  String get reader_font_size => 'ขนาดฟอนต์';
   @override
-  String get ttu_font_vpal => 'VPAL (ตัวอักษรทดแทน)';
+  String get reader_font_vpal => 'VPAL (ตัวอักษรทดแทน)';
   @override
-  String get ttu_furigana_hide => 'ซ่อน';
+  String get reader_furigana_hide => 'ซ่อน';
   @override
-  String get ttu_furigana_mode => 'ฟุริงานะ';
+  String get reader_furigana_mode => 'ฟุริงานะ';
   @override
-  String get ttu_furigana_mode_hint => '';
+  String get reader_furigana_mode_hint => '';
   @override
-  String get ttu_furigana_partial => 'บางส่วน';
+  String get reader_furigana_partial => 'บางส่วน';
   @override
-  String get ttu_furigana_show => 'แสดง';
+  String get reader_furigana_show => 'แสดง';
   @override
-  String get ttu_furigana_toggle => 'สลับ';
+  String get reader_furigana_toggle => 'สลับ';
   @override
-  String get ttu_horizontal => 'แนวนอน';
+  String get reader_horizontal => 'แนวนอน';
   @override
-  String get ttu_line_height => 'ระยะห่างบรรทัด';
+  String get reader_line_height => 'ระยะห่างบรรทัด';
   @override
-  String get ttu_merge_image_pages => 'Merge illustration pages into text';
+  String get reader_merge_image_pages => 'Merge illustration pages into text';
   @override
-  String get ttu_merge_image_pages_subtitle =>
+  String get reader_merge_image_pages_subtitle =>
       'Standalone single-image chapters render inline in the adjacent text chapter instead of on their own page';
   @override
-  String get ttu_no_books_added => 'ไม่มีหนังสือในคลัง';
+  String get reader_no_books_added => 'ไม่มีหนังสือในคลัง';
   @override
-  String get ttu_not_bound_cannot_rematch =>
+  String get reader_not_bound_cannot_rematch =>
       'หนังสือเสียงไม่ได้ผูกกับหนังสือ ไม่สามารถจับคู่ใหม่ได้';
   @override
-  String get ttu_orient_mixed => 'ผสม';
+  String get reader_orient_mixed => 'ผสม';
   @override
-  String get ttu_orient_upright => 'ตั้งตรง';
+  String get reader_orient_upright => 'ตั้งตรง';
   @override
-  String get ttu_page_columns_auto => 'อัตโนมัติ';
+  String get reader_page_columns_auto => 'อัตโนมัติ';
   @override
-  String get ttu_paginated => 'แบ่งหน้า';
+  String get reader_paginated => 'แบ่งหน้า';
   @override
-  String get ttu_paragraph_spacing => 'Paragraph spacing';
+  String get reader_paragraph_spacing => 'Paragraph spacing';
   @override
-  String get ttu_reader_styles => 'ใช้สไตล์หนังสือ';
+  String get reader_reader_styles => 'ใช้สไตล์หนังสือ';
   @override
-  String get ttu_scroll => 'เลื่อน';
+  String get reader_scroll => 'เลื่อน';
   @override
-  String get ttu_text_indentation => 'ย่อหน้า';
+  String get reader_text_indentation => 'ย่อหน้า';
   @override
-  String get ttu_text_justify => 'จัดชิดสองด้าน';
+  String get reader_text_justify => 'จัดชิดสองด้าน';
   @override
-  String get ttu_theme => 'ธีม';
+  String get reader_theme => 'ธีม';
   @override
-  String get ttu_vert_kerning => 'ระยะตัวอักษร (แนวตั้ง)';
+  String get reader_vert_kerning => 'ระยะตัวอักษร (แนวตั้ง)';
   @override
-  String get ttu_vert_text_orient => 'ทิศทางตัวอักษร';
+  String get reader_vert_text_orient => 'ทิศทางตัวอักษร';
   @override
-  String get ttu_vertical => 'แนวตั้ง';
+  String get reader_vertical => 'แนวตั้ง';
   @override
-  String get ttu_view_mode_label => 'หน้า / เลื่อน';
+  String get reader_view_mode_label => 'หน้า / เลื่อน';
   @override
-  String get ttu_vn => 'Visual Novel';
+  String get reader_vn => 'Visual Novel';
   @override
-  String get ttu_writing_direction => 'ทิศทางการเขียน';
+  String get reader_writing_direction => 'ทิศทางการเขียน';
   @override
   String get undo => 'เลิกทำ';
   @override
@@ -95375,69 +95376,69 @@ class _StringsTr extends _StringsEn {
   @override
   String get torrent_upload_intro_title => 'Upload / seeding';
   @override
-  String get ttu_blur_images => 'Blur images (spoiler guard)';
+  String get reader_blur_images => 'Blur images (spoiler guard)';
   @override
-  String get ttu_font_size => 'Yazı tipi boyutu';
+  String get reader_font_size => 'Yazı tipi boyutu';
   @override
-  String get ttu_font_vpal => 'VPAL (dikey alt.)';
+  String get reader_font_vpal => 'VPAL (dikey alt.)';
   @override
-  String get ttu_furigana_hide => 'Gizle';
+  String get reader_furigana_hide => 'Gizle';
   @override
-  String get ttu_furigana_mode => 'Furigana';
+  String get reader_furigana_mode => 'Furigana';
   @override
-  String get ttu_furigana_mode_hint => '';
+  String get reader_furigana_mode_hint => '';
   @override
-  String get ttu_furigana_partial => 'Kısmi';
+  String get reader_furigana_partial => 'Kısmi';
   @override
-  String get ttu_furigana_show => 'Göster';
+  String get reader_furigana_show => 'Göster';
   @override
-  String get ttu_furigana_toggle => 'Değiştir';
+  String get reader_furigana_toggle => 'Değiştir';
   @override
-  String get ttu_horizontal => 'Yatay';
+  String get reader_horizontal => 'Yatay';
   @override
-  String get ttu_line_height => 'Satır yüksekliği';
+  String get reader_line_height => 'Satır yüksekliği';
   @override
-  String get ttu_merge_image_pages => 'Merge illustration pages into text';
+  String get reader_merge_image_pages => 'Merge illustration pages into text';
   @override
-  String get ttu_merge_image_pages_subtitle =>
+  String get reader_merge_image_pages_subtitle =>
       'Standalone single-image chapters render inline in the adjacent text chapter instead of on their own page';
   @override
-  String get ttu_no_books_added => 'Kütüphanede kitap yok';
+  String get reader_no_books_added => 'Kütüphanede kitap yok';
   @override
-  String get ttu_not_bound_cannot_rematch =>
+  String get reader_not_bound_cannot_rematch =>
       'Sesli kitap bir kitaba bağlı değil, yeniden eşleştirme yapılamaz';
   @override
-  String get ttu_orient_mixed => 'Karışık';
+  String get reader_orient_mixed => 'Karışık';
   @override
-  String get ttu_orient_upright => 'Dik';
+  String get reader_orient_upright => 'Dik';
   @override
-  String get ttu_page_columns_auto => 'Otomatik';
+  String get reader_page_columns_auto => 'Otomatik';
   @override
-  String get ttu_paginated => 'Sayfalı';
+  String get reader_paginated => 'Sayfalı';
   @override
-  String get ttu_paragraph_spacing => 'Paragraph spacing';
+  String get reader_paragraph_spacing => 'Paragraph spacing';
   @override
-  String get ttu_reader_styles => 'Kitap stillerine öncelik ver';
+  String get reader_reader_styles => 'Kitap stillerine öncelik ver';
   @override
-  String get ttu_scroll => 'Kaydırma';
+  String get reader_scroll => 'Kaydırma';
   @override
-  String get ttu_text_indentation => 'Paragraf girintisi';
+  String get reader_text_indentation => 'Paragraf girintisi';
   @override
-  String get ttu_text_justify => 'Metin hizalama';
+  String get reader_text_justify => 'Metin hizalama';
   @override
-  String get ttu_theme => 'Tema';
+  String get reader_theme => 'Tema';
   @override
-  String get ttu_vert_kerning => 'Karakter aralığı (dikey)';
+  String get reader_vert_kerning => 'Karakter aralığı (dikey)';
   @override
-  String get ttu_vert_text_orient => 'Metin yönü';
+  String get reader_vert_text_orient => 'Metin yönü';
   @override
-  String get ttu_vertical => 'Dikey';
+  String get reader_vertical => 'Dikey';
   @override
-  String get ttu_view_mode_label => 'Sayfa / Kaydırma';
+  String get reader_view_mode_label => 'Sayfa / Kaydırma';
   @override
-  String get ttu_vn => 'Visual Novel';
+  String get reader_vn => 'Visual Novel';
   @override
-  String get ttu_writing_direction => 'Yazı yönü';
+  String get reader_writing_direction => 'Yazı yönü';
   @override
   String get undo => 'Geri al';
   @override
@@ -102585,69 +102586,69 @@ class _StringsVi extends _StringsEn {
   @override
   String get torrent_upload_intro_title => 'Upload / seeding';
   @override
-  String get ttu_blur_images => 'Blur images (spoiler guard)';
+  String get reader_blur_images => 'Blur images (spoiler guard)';
   @override
-  String get ttu_font_size => 'Cỡ chữ';
+  String get reader_font_size => 'Cỡ chữ';
   @override
-  String get ttu_font_vpal => 'VPAL (thay thế dọc)';
+  String get reader_font_vpal => 'VPAL (thay thế dọc)';
   @override
-  String get ttu_furigana_hide => 'Ẩn';
+  String get reader_furigana_hide => 'Ẩn';
   @override
-  String get ttu_furigana_mode => 'Furigana';
+  String get reader_furigana_mode => 'Furigana';
   @override
-  String get ttu_furigana_mode_hint => '';
+  String get reader_furigana_mode_hint => '';
   @override
-  String get ttu_furigana_partial => 'Một phần';
+  String get reader_furigana_partial => 'Một phần';
   @override
-  String get ttu_furigana_show => 'Hiện';
+  String get reader_furigana_show => 'Hiện';
   @override
-  String get ttu_furigana_toggle => 'Chuyển đổi';
+  String get reader_furigana_toggle => 'Chuyển đổi';
   @override
-  String get ttu_horizontal => 'Ngang';
+  String get reader_horizontal => 'Ngang';
   @override
-  String get ttu_line_height => 'Chiều cao dòng';
+  String get reader_line_height => 'Chiều cao dòng';
   @override
-  String get ttu_merge_image_pages => 'Merge illustration pages into text';
+  String get reader_merge_image_pages => 'Merge illustration pages into text';
   @override
-  String get ttu_merge_image_pages_subtitle =>
+  String get reader_merge_image_pages_subtitle =>
       'Standalone single-image chapters render inline in the adjacent text chapter instead of on their own page';
   @override
-  String get ttu_no_books_added => 'Chưa có sách nào trong thư viện';
+  String get reader_no_books_added => 'Chưa có sách nào trong thư viện';
   @override
-  String get ttu_not_bound_cannot_rematch =>
+  String get reader_not_bound_cannot_rematch =>
       'Sách nói chưa liên kết với sách, không thể khớp lại';
   @override
-  String get ttu_orient_mixed => 'Hỗn hợp';
+  String get reader_orient_mixed => 'Hỗn hợp';
   @override
-  String get ttu_orient_upright => 'Thẳng đứng';
+  String get reader_orient_upright => 'Thẳng đứng';
   @override
-  String get ttu_page_columns_auto => 'Tự động';
+  String get reader_page_columns_auto => 'Tự động';
   @override
-  String get ttu_paginated => 'Phân trang';
+  String get reader_paginated => 'Phân trang';
   @override
-  String get ttu_paragraph_spacing => 'Paragraph spacing';
+  String get reader_paragraph_spacing => 'Paragraph spacing';
   @override
-  String get ttu_reader_styles => 'Ưu tiên kiểu sách';
+  String get reader_reader_styles => 'Ưu tiên kiểu sách';
   @override
-  String get ttu_scroll => 'Cuộn';
+  String get reader_scroll => 'Cuộn';
   @override
-  String get ttu_text_indentation => 'Thụt đầu đoạn';
+  String get reader_text_indentation => 'Thụt đầu đoạn';
   @override
-  String get ttu_text_justify => 'Căn đều văn bản';
+  String get reader_text_justify => 'Căn đều văn bản';
   @override
-  String get ttu_theme => 'Giao diện';
+  String get reader_theme => 'Giao diện';
   @override
-  String get ttu_vert_kerning => 'Khoảng cách chữ (dọc)';
+  String get reader_vert_kerning => 'Khoảng cách chữ (dọc)';
   @override
-  String get ttu_vert_text_orient => 'Hướng văn bản';
+  String get reader_vert_text_orient => 'Hướng văn bản';
   @override
-  String get ttu_vertical => 'Dọc';
+  String get reader_vertical => 'Dọc';
   @override
-  String get ttu_view_mode_label => 'Trang / Cuộn';
+  String get reader_view_mode_label => 'Trang / Cuộn';
   @override
-  String get ttu_vn => 'Visual Novel';
+  String get reader_vn => 'Visual Novel';
   @override
-  String get ttu_writing_direction => 'Hướng viết';
+  String get reader_writing_direction => 'Hướng viết';
   @override
   String get undo => 'Hoàn tác';
   @override
@@ -109482,67 +109483,68 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get torrent_upload_intro_title => '上传 / 做种';
   @override
-  String get ttu_blur_images => '图片模糊（防剧透）';
+  String get reader_blur_images => '图片模糊（防剧透）';
   @override
-  String get ttu_font_size => '字体大小';
+  String get reader_font_size => '字体大小';
   @override
-  String get ttu_font_vpal => 'VPAL 纵排替代';
+  String get reader_font_vpal => 'VPAL 纵排替代';
   @override
-  String get ttu_furigana_hide => '隐藏';
+  String get reader_furigana_hide => '隐藏';
   @override
-  String get ttu_furigana_mode => '振假名';
+  String get reader_furigana_mode => '振假名';
   @override
-  String get ttu_furigana_mode_hint => '';
+  String get reader_furigana_mode_hint => '';
   @override
-  String get ttu_furigana_partial => '部分';
+  String get reader_furigana_partial => '部分';
   @override
-  String get ttu_furigana_show => '显示';
+  String get reader_furigana_show => '显示';
   @override
-  String get ttu_furigana_toggle => '切换';
+  String get reader_furigana_toggle => '切换';
   @override
-  String get ttu_horizontal => '横排';
+  String get reader_horizontal => '横排';
   @override
-  String get ttu_line_height => '行高';
+  String get reader_line_height => '行高';
   @override
-  String get ttu_merge_image_pages => '将插图页并入正文';
+  String get reader_merge_image_pages => '将插图页并入正文';
   @override
-  String get ttu_merge_image_pages_subtitle => '把只含一张图的独立章节并入相邻正文章连续显示，不再单独占一页';
+  String get reader_merge_image_pages_subtitle =>
+      '把只含一张图的独立章节并入相邻正文章连续显示，不再单独占一页';
   @override
-  String get ttu_no_books_added => '尚未添加任何书籍';
+  String get reader_no_books_added => '尚未添加任何书籍';
   @override
-  String get ttu_not_bound_cannot_rematch => '有声书未绑定书籍，无法重跑匹配';
+  String get reader_not_bound_cannot_rematch => '有声书未绑定书籍，无法重跑匹配';
   @override
-  String get ttu_orient_mixed => '混合';
+  String get reader_orient_mixed => '混合';
   @override
-  String get ttu_orient_upright => '竖直';
+  String get reader_orient_upright => '竖直';
   @override
-  String get ttu_page_columns_auto => '自动';
+  String get reader_page_columns_auto => '自动';
   @override
-  String get ttu_paginated => '翻页';
+  String get reader_paginated => '翻页';
   @override
-  String get ttu_paragraph_spacing => '段落间距';
+  String get reader_paragraph_spacing => '段落间距';
   @override
-  String get ttu_reader_styles => '优先书籍样式';
+  String get reader_reader_styles => '优先书籍样式';
   @override
-  String get ttu_scroll => '滚动';
+  String get reader_scroll => '滚动';
   @override
-  String get ttu_text_indentation => '段落缩进';
+  String get reader_text_indentation => '段落缩进';
   @override
-  String get ttu_text_justify => '两端对齐';
+  String get reader_text_justify => '两端对齐';
   @override
-  String get ttu_theme => '主题';
+  String get reader_theme => '主题';
   @override
-  String get ttu_vert_kerning => '字偶间距（纵排）';
+  String get reader_vert_kerning => '字偶间距（纵排）';
   @override
-  String get ttu_vert_text_orient => '文字方向';
+  String get reader_vert_text_orient => '文字方向';
   @override
-  String get ttu_vertical => '竖排';
+  String get reader_vertical => '竖排';
   @override
-  String get ttu_view_mode_label => '翻页 / 滚动';
+  String get reader_view_mode_label => '翻页 / 滚动';
   @override
-  String get ttu_vn => '视觉小说';
+  String get reader_vn => '视觉小说';
   @override
-  String get ttu_writing_direction => '排版方向';
+  String get reader_writing_direction => '排版方向';
   @override
   String get undo => '撤销';
   @override
@@ -116341,68 +116343,68 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get torrent_upload_intro_title => 'Upload / seeding';
   @override
-  String get ttu_blur_images => 'Blur images (spoiler guard)';
+  String get reader_blur_images => 'Blur images (spoiler guard)';
   @override
-  String get ttu_font_size => '字型大小';
+  String get reader_font_size => '字型大小';
   @override
-  String get ttu_font_vpal => 'VPAL 直排替代';
+  String get reader_font_vpal => 'VPAL 直排替代';
   @override
-  String get ttu_furigana_hide => '隱藏';
+  String get reader_furigana_hide => '隱藏';
   @override
-  String get ttu_furigana_mode => '振假名';
+  String get reader_furigana_mode => '振假名';
   @override
-  String get ttu_furigana_mode_hint => '';
+  String get reader_furigana_mode_hint => '';
   @override
-  String get ttu_furigana_partial => '部分';
+  String get reader_furigana_partial => '部分';
   @override
-  String get ttu_furigana_show => '顯示';
+  String get reader_furigana_show => '顯示';
   @override
-  String get ttu_furigana_toggle => '切換';
+  String get reader_furigana_toggle => '切換';
   @override
-  String get ttu_horizontal => '橫排';
+  String get reader_horizontal => '橫排';
   @override
-  String get ttu_line_height => '行高';
+  String get reader_line_height => '行高';
   @override
-  String get ttu_merge_image_pages => 'Merge illustration pages into text';
+  String get reader_merge_image_pages => 'Merge illustration pages into text';
   @override
-  String get ttu_merge_image_pages_subtitle =>
+  String get reader_merge_image_pages_subtitle =>
       'Standalone single-image chapters render inline in the adjacent text chapter instead of on their own page';
   @override
-  String get ttu_no_books_added => '書架中尚未有任何書籍';
+  String get reader_no_books_added => '書架中尚未有任何書籍';
   @override
-  String get ttu_not_bound_cannot_rematch => '有聲書未繫結書籍，無法重跑比對';
+  String get reader_not_bound_cannot_rematch => '有聲書未繫結書籍，無法重跑比對';
   @override
-  String get ttu_orient_mixed => '混合';
+  String get reader_orient_mixed => '混合';
   @override
-  String get ttu_orient_upright => '豎直';
+  String get reader_orient_upright => '豎直';
   @override
-  String get ttu_page_columns_auto => '自動';
+  String get reader_page_columns_auto => '自動';
   @override
-  String get ttu_paginated => '翻頁';
+  String get reader_paginated => '翻頁';
   @override
-  String get ttu_paragraph_spacing => 'Paragraph spacing';
+  String get reader_paragraph_spacing => 'Paragraph spacing';
   @override
-  String get ttu_reader_styles => '優先書籍樣式';
+  String get reader_reader_styles => '優先書籍樣式';
   @override
-  String get ttu_scroll => '捲動';
+  String get reader_scroll => '捲動';
   @override
-  String get ttu_text_indentation => '段落縮排';
+  String get reader_text_indentation => '段落縮排';
   @override
-  String get ttu_text_justify => '兩端對齊';
+  String get reader_text_justify => '兩端對齊';
   @override
-  String get ttu_theme => '主題';
+  String get reader_theme => '主題';
   @override
-  String get ttu_vert_kerning => '字偶間距（直排）';
+  String get reader_vert_kerning => '字偶間距（直排）';
   @override
-  String get ttu_vert_text_orient => '文字方向';
+  String get reader_vert_text_orient => '文字方向';
   @override
-  String get ttu_vertical => '直排';
+  String get reader_vertical => '直排';
   @override
-  String get ttu_view_mode_label => '翻頁 / 捲動';
+  String get reader_view_mode_label => '翻頁 / 捲動';
   @override
-  String get ttu_vn => 'Visual Novel';
+  String get reader_vn => 'Visual Novel';
   @override
-  String get ttu_writing_direction => '排版方向';
+  String get reader_writing_direction => '排版方向';
   @override
   String get undo => '復原';
   @override
@@ -123035,67 +123037,67 @@ extension on _StringsEn {
         return 'Keep off';
       case 'torrent_upload_intro_title':
         return 'Upload / seeding';
-      case 'ttu_blur_images':
+      case 'reader_blur_images':
         return 'Blur images (spoiler guard)';
-      case 'ttu_font_size':
+      case 'reader_font_size':
         return 'Font size';
-      case 'ttu_font_vpal':
+      case 'reader_font_vpal':
         return 'VPAL (vertical alt)';
-      case 'ttu_furigana_hide':
+      case 'reader_furigana_hide':
         return 'Hide';
-      case 'ttu_furigana_mode':
+      case 'reader_furigana_mode':
         return 'Furigana';
-      case 'ttu_furigana_mode_hint':
+      case 'reader_furigana_mode_hint':
         return '';
-      case 'ttu_furigana_partial':
+      case 'reader_furigana_partial':
         return 'Partial';
-      case 'ttu_furigana_show':
+      case 'reader_furigana_show':
         return 'Show';
-      case 'ttu_furigana_toggle':
+      case 'reader_furigana_toggle':
         return 'Toggle';
-      case 'ttu_horizontal':
+      case 'reader_horizontal':
         return 'Horizontal';
-      case 'ttu_line_height':
+      case 'reader_line_height':
         return 'Line height';
-      case 'ttu_merge_image_pages':
+      case 'reader_merge_image_pages':
         return 'Merge illustration pages into text';
-      case 'ttu_merge_image_pages_subtitle':
+      case 'reader_merge_image_pages_subtitle':
         return 'Standalone single-image chapters render inline in the adjacent text chapter instead of on their own page';
-      case 'ttu_no_books_added':
+      case 'reader_no_books_added':
         return 'No books in library';
-      case 'ttu_not_bound_cannot_rematch':
+      case 'reader_not_bound_cannot_rematch':
         return 'Audiobook not bound to a book, cannot re-match';
-      case 'ttu_orient_mixed':
+      case 'reader_orient_mixed':
         return 'Mixed';
-      case 'ttu_orient_upright':
+      case 'reader_orient_upright':
         return 'Upright';
-      case 'ttu_page_columns_auto':
+      case 'reader_page_columns_auto':
         return 'Auto';
-      case 'ttu_paginated':
+      case 'reader_paginated':
         return 'Paginated';
-      case 'ttu_paragraph_spacing':
+      case 'reader_paragraph_spacing':
         return 'Paragraph spacing';
-      case 'ttu_reader_styles':
+      case 'reader_reader_styles':
         return 'Prioritize book styles';
-      case 'ttu_scroll':
+      case 'reader_scroll':
         return 'Scroll';
-      case 'ttu_text_indentation':
+      case 'reader_text_indentation':
         return 'Paragraph indent';
-      case 'ttu_text_justify':
+      case 'reader_text_justify':
         return 'Text justification';
-      case 'ttu_theme':
+      case 'reader_theme':
         return 'Theme';
-      case 'ttu_vert_kerning':
+      case 'reader_vert_kerning':
         return 'Font kerning (vertical)';
-      case 'ttu_vert_text_orient':
+      case 'reader_vert_text_orient':
         return 'Text orientation';
-      case 'ttu_vertical':
+      case 'reader_vertical':
         return 'Vertical';
-      case 'ttu_view_mode_label':
+      case 'reader_view_mode_label':
         return 'Page / scroll';
-      case 'ttu_vn':
+      case 'reader_vn':
         return 'Visual novel';
-      case 'ttu_writing_direction':
+      case 'reader_writing_direction':
         return 'Writing direction';
       case 'undo':
         return 'Undo';
@@ -129456,67 +129458,67 @@ extension on _StringsAr {
         return 'Keep off';
       case 'torrent_upload_intro_title':
         return 'Upload / seeding';
-      case 'ttu_blur_images':
+      case 'reader_blur_images':
         return 'Blur images (spoiler guard)';
-      case 'ttu_font_size':
+      case 'reader_font_size':
         return 'حجم الخط';
-      case 'ttu_font_vpal':
+      case 'reader_font_vpal':
         return 'VPAL (بديل عمودي)';
-      case 'ttu_furigana_hide':
+      case 'reader_furigana_hide':
         return 'إخفاء';
-      case 'ttu_furigana_mode':
+      case 'reader_furigana_mode':
         return 'فوريغانا';
-      case 'ttu_furigana_mode_hint':
+      case 'reader_furigana_mode_hint':
         return '';
-      case 'ttu_furigana_partial':
+      case 'reader_furigana_partial':
         return 'جزئي';
-      case 'ttu_furigana_show':
+      case 'reader_furigana_show':
         return 'عرض';
-      case 'ttu_furigana_toggle':
+      case 'reader_furigana_toggle':
         return 'تبديل';
-      case 'ttu_horizontal':
+      case 'reader_horizontal':
         return 'أفقي';
-      case 'ttu_line_height':
+      case 'reader_line_height':
         return 'ارتفاع السطر';
-      case 'ttu_merge_image_pages':
+      case 'reader_merge_image_pages':
         return 'Merge illustration pages into text';
-      case 'ttu_merge_image_pages_subtitle':
+      case 'reader_merge_image_pages_subtitle':
         return 'Standalone single-image chapters render inline in the adjacent text chapter instead of on their own page';
-      case 'ttu_no_books_added':
+      case 'reader_no_books_added':
         return 'لا توجد كتب في المكتبة';
-      case 'ttu_not_bound_cannot_rematch':
+      case 'reader_not_bound_cannot_rematch':
         return 'الكتاب الصوتي غير مرتبط بكتاب، لا يمكن إعادة المطابقة';
-      case 'ttu_orient_mixed':
+      case 'reader_orient_mixed':
         return 'مختلط';
-      case 'ttu_orient_upright':
+      case 'reader_orient_upright':
         return 'قائم';
-      case 'ttu_page_columns_auto':
+      case 'reader_page_columns_auto':
         return 'تلقائي';
-      case 'ttu_paginated':
+      case 'reader_paginated':
         return 'صفحات';
-      case 'ttu_paragraph_spacing':
+      case 'reader_paragraph_spacing':
         return 'Paragraph spacing';
-      case 'ttu_reader_styles':
+      case 'reader_reader_styles':
         return 'أولوية أنماط الكتاب';
-      case 'ttu_scroll':
+      case 'reader_scroll':
         return 'تمرير';
-      case 'ttu_text_indentation':
+      case 'reader_text_indentation':
         return 'مسافة بادئة الفقرة';
-      case 'ttu_text_justify':
+      case 'reader_text_justify':
         return 'ضبط النص';
-      case 'ttu_theme':
+      case 'reader_theme':
         return 'المظهر';
-      case 'ttu_vert_kerning':
+      case 'reader_vert_kerning':
         return 'تقنين الحروف (عمودي)';
-      case 'ttu_vert_text_orient':
+      case 'reader_vert_text_orient':
         return 'اتجاه النص';
-      case 'ttu_vertical':
+      case 'reader_vertical':
         return 'عمودي';
-      case 'ttu_view_mode_label':
+      case 'reader_view_mode_label':
         return 'صفحات / تمرير';
-      case 'ttu_vn':
+      case 'reader_vn':
         return 'Visual Novel';
-      case 'ttu_writing_direction':
+      case 'reader_writing_direction':
         return 'اتجاه الكتابة';
       case 'undo':
         return 'تراجع';
@@ -135896,67 +135898,67 @@ extension on _StringsDe {
         return 'Keep off';
       case 'torrent_upload_intro_title':
         return 'Upload / seeding';
-      case 'ttu_blur_images':
+      case 'reader_blur_images':
         return 'Blur images (spoiler guard)';
-      case 'ttu_font_size':
+      case 'reader_font_size':
         return 'Schriftgröße';
-      case 'ttu_font_vpal':
+      case 'reader_font_vpal':
         return 'VPAL (Vertikale Alt.)';
-      case 'ttu_furigana_hide':
+      case 'reader_furigana_hide':
         return 'Ausblenden';
-      case 'ttu_furigana_mode':
+      case 'reader_furigana_mode':
         return 'Furigana';
-      case 'ttu_furigana_mode_hint':
+      case 'reader_furigana_mode_hint':
         return '';
-      case 'ttu_furigana_partial':
+      case 'reader_furigana_partial':
         return 'Teilweise';
-      case 'ttu_furigana_show':
+      case 'reader_furigana_show':
         return 'Anzeigen';
-      case 'ttu_furigana_toggle':
+      case 'reader_furigana_toggle':
         return 'Umschalten';
-      case 'ttu_horizontal':
+      case 'reader_horizontal':
         return 'Horizontal';
-      case 'ttu_line_height':
+      case 'reader_line_height':
         return 'Zeilenhöhe';
-      case 'ttu_merge_image_pages':
+      case 'reader_merge_image_pages':
         return 'Merge illustration pages into text';
-      case 'ttu_merge_image_pages_subtitle':
+      case 'reader_merge_image_pages_subtitle':
         return 'Standalone single-image chapters render inline in the adjacent text chapter instead of on their own page';
-      case 'ttu_no_books_added':
+      case 'reader_no_books_added':
         return 'Keine Bücher in der Bibliothek';
-      case 'ttu_not_bound_cannot_rematch':
+      case 'reader_not_bound_cannot_rematch':
         return 'Hörbuch nicht mit einem Buch verknüpft, Neuabgleich nicht möglich';
-      case 'ttu_orient_mixed':
+      case 'reader_orient_mixed':
         return 'Gemischt';
-      case 'ttu_orient_upright':
+      case 'reader_orient_upright':
         return 'Aufrecht';
-      case 'ttu_page_columns_auto':
+      case 'reader_page_columns_auto':
         return 'Automatisch';
-      case 'ttu_paginated':
+      case 'reader_paginated':
         return 'Seitenweise';
-      case 'ttu_paragraph_spacing':
+      case 'reader_paragraph_spacing':
         return 'Paragraph spacing';
-      case 'ttu_reader_styles':
+      case 'reader_reader_styles':
         return 'Buchstile bevorzugen';
-      case 'ttu_scroll':
+      case 'reader_scroll':
         return 'Scrollen';
-      case 'ttu_text_indentation':
+      case 'reader_text_indentation':
         return 'Absatzeinzug';
-      case 'ttu_text_justify':
+      case 'reader_text_justify':
         return 'Blocksatz';
-      case 'ttu_theme':
+      case 'reader_theme':
         return 'Design';
-      case 'ttu_vert_kerning':
+      case 'reader_vert_kerning':
         return 'Zeichenabstand (vertikal)';
-      case 'ttu_vert_text_orient':
+      case 'reader_vert_text_orient':
         return 'Textausrichtung';
-      case 'ttu_vertical':
+      case 'reader_vertical':
         return 'Vertikal';
-      case 'ttu_view_mode_label':
+      case 'reader_view_mode_label':
         return 'Seiten / Scrollen';
-      case 'ttu_vn':
+      case 'reader_vn':
         return 'Visual Novel';
-      case 'ttu_writing_direction':
+      case 'reader_writing_direction':
         return 'Schreibrichtung';
       case 'undo':
         return 'Rückgängig';
@@ -142337,67 +142339,67 @@ extension on _StringsEs {
         return 'Keep off';
       case 'torrent_upload_intro_title':
         return 'Upload / seeding';
-      case 'ttu_blur_images':
+      case 'reader_blur_images':
         return 'Blur images (spoiler guard)';
-      case 'ttu_font_size':
+      case 'reader_font_size':
         return 'Tamaño de fuente';
-      case 'ttu_font_vpal':
+      case 'reader_font_vpal':
         return 'VPAL (alt. vertical)';
-      case 'ttu_furigana_hide':
+      case 'reader_furigana_hide':
         return 'Ocultar';
-      case 'ttu_furigana_mode':
+      case 'reader_furigana_mode':
         return 'Furigana';
-      case 'ttu_furigana_mode_hint':
+      case 'reader_furigana_mode_hint':
         return '';
-      case 'ttu_furigana_partial':
+      case 'reader_furigana_partial':
         return 'Parcial';
-      case 'ttu_furigana_show':
+      case 'reader_furigana_show':
         return 'Mostrar';
-      case 'ttu_furigana_toggle':
+      case 'reader_furigana_toggle':
         return 'Alternar';
-      case 'ttu_horizontal':
+      case 'reader_horizontal':
         return 'Horizontal';
-      case 'ttu_line_height':
+      case 'reader_line_height':
         return 'Altura de línea';
-      case 'ttu_merge_image_pages':
+      case 'reader_merge_image_pages':
         return 'Merge illustration pages into text';
-      case 'ttu_merge_image_pages_subtitle':
+      case 'reader_merge_image_pages_subtitle':
         return 'Standalone single-image chapters render inline in the adjacent text chapter instead of on their own page';
-      case 'ttu_no_books_added':
+      case 'reader_no_books_added':
         return 'No hay libros en la biblioteca';
-      case 'ttu_not_bound_cannot_rematch':
+      case 'reader_not_bound_cannot_rematch':
         return 'El audiolibro no está vinculado a un libro, no se puede re-emparejar';
-      case 'ttu_orient_mixed':
+      case 'reader_orient_mixed':
         return 'Mixto';
-      case 'ttu_orient_upright':
+      case 'reader_orient_upright':
         return 'Vertical';
-      case 'ttu_page_columns_auto':
+      case 'reader_page_columns_auto':
         return 'Automático';
-      case 'ttu_paginated':
+      case 'reader_paginated':
         return 'Paginado';
-      case 'ttu_paragraph_spacing':
+      case 'reader_paragraph_spacing':
         return 'Paragraph spacing';
-      case 'ttu_reader_styles':
+      case 'reader_reader_styles':
         return 'Priorizar estilos del libro';
-      case 'ttu_scroll':
+      case 'reader_scroll':
         return 'Desplazamiento';
-      case 'ttu_text_indentation':
+      case 'reader_text_indentation':
         return 'Sangría de párrafo';
-      case 'ttu_text_justify':
+      case 'reader_text_justify':
         return 'Justificación de texto';
-      case 'ttu_theme':
+      case 'reader_theme':
         return 'Tema';
-      case 'ttu_vert_kerning':
+      case 'reader_vert_kerning':
         return 'Interletraje (vertical)';
-      case 'ttu_vert_text_orient':
+      case 'reader_vert_text_orient':
         return 'Orientación del texto';
-      case 'ttu_vertical':
+      case 'reader_vertical':
         return 'Vertical';
-      case 'ttu_view_mode_label':
+      case 'reader_view_mode_label':
         return 'Páginas / Desplazamiento';
-      case 'ttu_vn':
+      case 'reader_vn':
         return 'Visual Novel';
-      case 'ttu_writing_direction':
+      case 'reader_writing_direction':
         return 'Dirección de escritura';
       case 'undo':
         return 'Deshacer';
@@ -148783,67 +148785,67 @@ extension on _StringsFr {
         return 'Keep off';
       case 'torrent_upload_intro_title':
         return 'Upload / seeding';
-      case 'ttu_blur_images':
+      case 'reader_blur_images':
         return 'Blur images (spoiler guard)';
-      case 'ttu_font_size':
+      case 'reader_font_size':
         return 'Taille de police';
-      case 'ttu_font_vpal':
+      case 'reader_font_vpal':
         return 'VPAL (alt. vertical)';
-      case 'ttu_furigana_hide':
+      case 'reader_furigana_hide':
         return 'Masquer';
-      case 'ttu_furigana_mode':
+      case 'reader_furigana_mode':
         return 'Furigana';
-      case 'ttu_furigana_mode_hint':
+      case 'reader_furigana_mode_hint':
         return '';
-      case 'ttu_furigana_partial':
+      case 'reader_furigana_partial':
         return 'Partiel';
-      case 'ttu_furigana_show':
+      case 'reader_furigana_show':
         return 'Afficher';
-      case 'ttu_furigana_toggle':
+      case 'reader_furigana_toggle':
         return 'Basculer';
-      case 'ttu_horizontal':
+      case 'reader_horizontal':
         return 'Horizontal';
-      case 'ttu_line_height':
+      case 'reader_line_height':
         return 'Hauteur de ligne';
-      case 'ttu_merge_image_pages':
+      case 'reader_merge_image_pages':
         return 'Merge illustration pages into text';
-      case 'ttu_merge_image_pages_subtitle':
+      case 'reader_merge_image_pages_subtitle':
         return 'Standalone single-image chapters render inline in the adjacent text chapter instead of on their own page';
-      case 'ttu_no_books_added':
+      case 'reader_no_books_added':
         return 'Aucun livre dans la bibliothèque';
-      case 'ttu_not_bound_cannot_rematch':
+      case 'reader_not_bound_cannot_rematch':
         return 'Le livre audio n\'est pas lié à un livre, impossible de relancer la correspondance';
-      case 'ttu_orient_mixed':
+      case 'reader_orient_mixed':
         return 'Mixte';
-      case 'ttu_orient_upright':
+      case 'reader_orient_upright':
         return 'Droit';
-      case 'ttu_page_columns_auto':
+      case 'reader_page_columns_auto':
         return 'Automatique';
-      case 'ttu_paginated':
+      case 'reader_paginated':
         return 'Paginé';
-      case 'ttu_paragraph_spacing':
+      case 'reader_paragraph_spacing':
         return 'Paragraph spacing';
-      case 'ttu_reader_styles':
+      case 'reader_reader_styles':
         return 'Prioriser les styles du livre';
-      case 'ttu_scroll':
+      case 'reader_scroll':
         return 'Défilement';
-      case 'ttu_text_indentation':
+      case 'reader_text_indentation':
         return 'Retrait de paragraphe';
-      case 'ttu_text_justify':
+      case 'reader_text_justify':
         return 'Justification du texte';
-      case 'ttu_theme':
+      case 'reader_theme':
         return 'Thème';
-      case 'ttu_vert_kerning':
+      case 'reader_vert_kerning':
         return 'Crénage (vertical)';
-      case 'ttu_vert_text_orient':
+      case 'reader_vert_text_orient':
         return 'Orientation du texte';
-      case 'ttu_vertical':
+      case 'reader_vertical':
         return 'Vertical';
-      case 'ttu_view_mode_label':
+      case 'reader_view_mode_label':
         return 'Pages / Défilement';
-      case 'ttu_vn':
+      case 'reader_vn':
         return 'Visual Novel';
-      case 'ttu_writing_direction':
+      case 'reader_writing_direction':
         return 'Direction d\'écriture';
       case 'undo':
         return 'Annuler';
@@ -155218,67 +155220,67 @@ extension on _StringsId {
         return 'Keep off';
       case 'torrent_upload_intro_title':
         return 'Upload / seeding';
-      case 'ttu_blur_images':
+      case 'reader_blur_images':
         return 'Blur images (spoiler guard)';
-      case 'ttu_font_size':
+      case 'reader_font_size':
         return 'Ukuran Font';
-      case 'ttu_font_vpal':
+      case 'reader_font_vpal':
         return 'VPAL (Alt Vertikal)';
-      case 'ttu_furigana_hide':
+      case 'reader_furigana_hide':
         return 'Sembunyikan';
-      case 'ttu_furigana_mode':
+      case 'reader_furigana_mode':
         return 'Furigana';
-      case 'ttu_furigana_mode_hint':
+      case 'reader_furigana_mode_hint':
         return '';
-      case 'ttu_furigana_partial':
+      case 'reader_furigana_partial':
         return 'Sebagian';
-      case 'ttu_furigana_show':
+      case 'reader_furigana_show':
         return 'Tampilkan';
-      case 'ttu_furigana_toggle':
+      case 'reader_furigana_toggle':
         return 'Alihkan';
-      case 'ttu_horizontal':
+      case 'reader_horizontal':
         return 'Horizontal';
-      case 'ttu_line_height':
+      case 'reader_line_height':
         return 'Tinggi Baris';
-      case 'ttu_merge_image_pages':
+      case 'reader_merge_image_pages':
         return 'Merge illustration pages into text';
-      case 'ttu_merge_image_pages_subtitle':
+      case 'reader_merge_image_pages_subtitle':
         return 'Standalone single-image chapters render inline in the adjacent text chapter instead of on their own page';
-      case 'ttu_no_books_added':
+      case 'reader_no_books_added':
         return 'Belum ada buku di perpustakaan';
-      case 'ttu_not_bound_cannot_rematch':
+      case 'reader_not_bound_cannot_rematch':
         return 'Buku audio tidak terikat ke buku, tidak dapat mencocokkan ulang';
-      case 'ttu_orient_mixed':
+      case 'reader_orient_mixed':
         return 'Campuran';
-      case 'ttu_orient_upright':
+      case 'reader_orient_upright':
         return 'Tegak';
-      case 'ttu_page_columns_auto':
+      case 'reader_page_columns_auto':
         return 'Otomatis';
-      case 'ttu_paginated':
+      case 'reader_paginated':
         return 'Paginasi';
-      case 'ttu_paragraph_spacing':
+      case 'reader_paragraph_spacing':
         return 'Paragraph spacing';
-      case 'ttu_reader_styles':
+      case 'reader_reader_styles':
         return 'Prioritaskan Gaya Buku';
-      case 'ttu_scroll':
+      case 'reader_scroll':
         return 'Gulir';
-      case 'ttu_text_indentation':
+      case 'reader_text_indentation':
         return 'Indentasi Paragraf';
-      case 'ttu_text_justify':
+      case 'reader_text_justify':
         return 'Perataan Teks';
-      case 'ttu_theme':
+      case 'reader_theme':
         return 'Tema';
-      case 'ttu_vert_kerning':
+      case 'reader_vert_kerning':
         return 'Kerning Font (Vertikal)';
-      case 'ttu_vert_text_orient':
+      case 'reader_vert_text_orient':
         return 'Orientasi Teks';
-      case 'ttu_vertical':
+      case 'reader_vertical':
         return 'Vertikal';
-      case 'ttu_view_mode_label':
+      case 'reader_view_mode_label':
         return 'Halaman / Gulir';
-      case 'ttu_vn':
+      case 'reader_vn':
         return 'Visual Novel';
-      case 'ttu_writing_direction':
+      case 'reader_writing_direction':
         return 'Arah Penulisan';
       case 'undo':
         return 'Urungkan';
@@ -161656,67 +161658,67 @@ extension on _StringsIt {
         return 'Keep off';
       case 'torrent_upload_intro_title':
         return 'Upload / seeding';
-      case 'ttu_blur_images':
+      case 'reader_blur_images':
         return 'Blur images (spoiler guard)';
-      case 'ttu_font_size':
+      case 'reader_font_size':
         return 'Dimensione carattere';
-      case 'ttu_font_vpal':
+      case 'reader_font_vpal':
         return 'VPAL (alt. verticale)';
-      case 'ttu_furigana_hide':
+      case 'reader_furigana_hide':
         return 'Nascondi';
-      case 'ttu_furigana_mode':
+      case 'reader_furigana_mode':
         return 'Furigana';
-      case 'ttu_furigana_mode_hint':
+      case 'reader_furigana_mode_hint':
         return '';
-      case 'ttu_furigana_partial':
+      case 'reader_furigana_partial':
         return 'Parziale';
-      case 'ttu_furigana_show':
+      case 'reader_furigana_show':
         return 'Mostra';
-      case 'ttu_furigana_toggle':
+      case 'reader_furigana_toggle':
         return 'Alterna';
-      case 'ttu_horizontal':
+      case 'reader_horizontal':
         return 'Orizzontale';
-      case 'ttu_line_height':
+      case 'reader_line_height':
         return 'Altezza riga';
-      case 'ttu_merge_image_pages':
+      case 'reader_merge_image_pages':
         return 'Merge illustration pages into text';
-      case 'ttu_merge_image_pages_subtitle':
+      case 'reader_merge_image_pages_subtitle':
         return 'Standalone single-image chapters render inline in the adjacent text chapter instead of on their own page';
-      case 'ttu_no_books_added':
+      case 'reader_no_books_added':
         return 'Nessun libro nella libreria';
-      case 'ttu_not_bound_cannot_rematch':
+      case 'reader_not_bound_cannot_rematch':
         return 'L\'audiolibro non è collegato a un libro, impossibile riavviare la corrispondenza';
-      case 'ttu_orient_mixed':
+      case 'reader_orient_mixed':
         return 'Misto';
-      case 'ttu_orient_upright':
+      case 'reader_orient_upright':
         return 'Diritto';
-      case 'ttu_page_columns_auto':
+      case 'reader_page_columns_auto':
         return 'Automatico';
-      case 'ttu_paginated':
+      case 'reader_paginated':
         return 'Paginato';
-      case 'ttu_paragraph_spacing':
+      case 'reader_paragraph_spacing':
         return 'Paragraph spacing';
-      case 'ttu_reader_styles':
+      case 'reader_reader_styles':
         return 'Priorità stili del libro';
-      case 'ttu_scroll':
+      case 'reader_scroll':
         return 'Scorrimento';
-      case 'ttu_text_indentation':
+      case 'reader_text_indentation':
         return 'Rientro paragrafo';
-      case 'ttu_text_justify':
+      case 'reader_text_justify':
         return 'Giustificazione testo';
-      case 'ttu_theme':
+      case 'reader_theme':
         return 'Tema';
-      case 'ttu_vert_kerning':
+      case 'reader_vert_kerning':
         return 'Crenatura (verticale)';
-      case 'ttu_vert_text_orient':
+      case 'reader_vert_text_orient':
         return 'Orientamento testo';
-      case 'ttu_vertical':
+      case 'reader_vertical':
         return 'Verticale';
-      case 'ttu_view_mode_label':
+      case 'reader_view_mode_label':
         return 'Pagine / Scorrimento';
-      case 'ttu_vn':
+      case 'reader_vn':
         return 'Visual Novel';
-      case 'ttu_writing_direction':
+      case 'reader_writing_direction':
         return 'Direzione di scrittura';
       case 'undo':
         return 'Annulla';
@@ -168073,67 +168075,67 @@ extension on _StringsJa {
         return 'Keep off';
       case 'torrent_upload_intro_title':
         return 'Upload / seeding';
-      case 'ttu_blur_images':
+      case 'reader_blur_images':
         return 'Blur images (spoiler guard)';
-      case 'ttu_font_size':
+      case 'reader_font_size':
         return 'フォントサイズ';
-      case 'ttu_font_vpal':
+      case 'reader_font_vpal':
         return 'VPAL（縦書き代替）';
-      case 'ttu_furigana_hide':
+      case 'reader_furigana_hide':
         return '非表示';
-      case 'ttu_furigana_mode':
+      case 'reader_furigana_mode':
         return 'ふりがな';
-      case 'ttu_furigana_mode_hint':
+      case 'reader_furigana_mode_hint':
         return '';
-      case 'ttu_furigana_partial':
+      case 'reader_furigana_partial':
         return '一部';
-      case 'ttu_furigana_show':
+      case 'reader_furigana_show':
         return '表示';
-      case 'ttu_furigana_toggle':
+      case 'reader_furigana_toggle':
         return '切替';
-      case 'ttu_horizontal':
+      case 'reader_horizontal':
         return '横書き';
-      case 'ttu_line_height':
+      case 'reader_line_height':
         return '行の高さ';
-      case 'ttu_merge_image_pages':
+      case 'reader_merge_image_pages':
         return 'Merge illustration pages into text';
-      case 'ttu_merge_image_pages_subtitle':
+      case 'reader_merge_image_pages_subtitle':
         return 'Standalone single-image chapters render inline in the adjacent text chapter instead of on their own page';
-      case 'ttu_no_books_added':
+      case 'reader_no_books_added':
         return '書庫に本がありません';
-      case 'ttu_not_bound_cannot_rematch':
+      case 'reader_not_bound_cannot_rematch':
         return '本に紐付けされていないため、再マッチングできません';
-      case 'ttu_orient_mixed':
+      case 'reader_orient_mixed':
         return '混合';
-      case 'ttu_orient_upright':
+      case 'reader_orient_upright':
         return '正立';
-      case 'ttu_page_columns_auto':
+      case 'reader_page_columns_auto':
         return '自動';
-      case 'ttu_paginated':
+      case 'reader_paginated':
         return 'ページ送り';
-      case 'ttu_paragraph_spacing':
+      case 'reader_paragraph_spacing':
         return 'Paragraph spacing';
-      case 'ttu_reader_styles':
+      case 'reader_reader_styles':
         return '書籍スタイル優先';
-      case 'ttu_scroll':
+      case 'reader_scroll':
         return 'スクロール';
-      case 'ttu_text_indentation':
+      case 'reader_text_indentation':
         return '段落インデント';
-      case 'ttu_text_justify':
+      case 'reader_text_justify':
         return '両端揃え';
-      case 'ttu_theme':
+      case 'reader_theme':
         return 'テーマ';
-      case 'ttu_vert_kerning':
+      case 'reader_vert_kerning':
         return 'カーニング（縦書き）';
-      case 'ttu_vert_text_orient':
+      case 'reader_vert_text_orient':
         return '文字の向き';
-      case 'ttu_vertical':
+      case 'reader_vertical':
         return '縦書き';
-      case 'ttu_view_mode_label':
+      case 'reader_view_mode_label':
         return 'ページ / スクロール';
-      case 'ttu_vn':
+      case 'reader_vn':
         return 'Visual Novel';
-      case 'ttu_writing_direction':
+      case 'reader_writing_direction':
         return '組方向';
       case 'undo':
         return '元に戻す';
@@ -174482,67 +174484,67 @@ extension on _StringsKo {
         return 'Keep off';
       case 'torrent_upload_intro_title':
         return 'Upload / seeding';
-      case 'ttu_blur_images':
+      case 'reader_blur_images':
         return 'Blur images (spoiler guard)';
-      case 'ttu_font_size':
+      case 'reader_font_size':
         return '글꼴 크기';
-      case 'ttu_font_vpal':
+      case 'reader_font_vpal':
         return 'VPAL (세로 대체)';
-      case 'ttu_furigana_hide':
+      case 'reader_furigana_hide':
         return '숨기기';
-      case 'ttu_furigana_mode':
+      case 'reader_furigana_mode':
         return '후리가나';
-      case 'ttu_furigana_mode_hint':
+      case 'reader_furigana_mode_hint':
         return '';
-      case 'ttu_furigana_partial':
+      case 'reader_furigana_partial':
         return '부분';
-      case 'ttu_furigana_show':
+      case 'reader_furigana_show':
         return '표시';
-      case 'ttu_furigana_toggle':
+      case 'reader_furigana_toggle':
         return '전환';
-      case 'ttu_horizontal':
+      case 'reader_horizontal':
         return '가로';
-      case 'ttu_line_height':
+      case 'reader_line_height':
         return '줄 간격';
-      case 'ttu_merge_image_pages':
+      case 'reader_merge_image_pages':
         return 'Merge illustration pages into text';
-      case 'ttu_merge_image_pages_subtitle':
+      case 'reader_merge_image_pages_subtitle':
         return 'Standalone single-image chapters render inline in the adjacent text chapter instead of on their own page';
-      case 'ttu_no_books_added':
+      case 'reader_no_books_added':
         return '서재에 책이 없습니다';
-      case 'ttu_not_bound_cannot_rematch':
+      case 'reader_not_bound_cannot_rematch':
         return '오디오북이 책에 바인딩되지 않아 다시 매칭할 수 없습니다';
-      case 'ttu_orient_mixed':
+      case 'reader_orient_mixed':
         return '혼합';
-      case 'ttu_orient_upright':
+      case 'reader_orient_upright':
         return '직립';
-      case 'ttu_page_columns_auto':
+      case 'reader_page_columns_auto':
         return '자동';
-      case 'ttu_paginated':
+      case 'reader_paginated':
         return '페이지 넘김';
-      case 'ttu_paragraph_spacing':
+      case 'reader_paragraph_spacing':
         return 'Paragraph spacing';
-      case 'ttu_reader_styles':
+      case 'reader_reader_styles':
         return '책 스타일 우선';
-      case 'ttu_scroll':
+      case 'reader_scroll':
         return '스크롤';
-      case 'ttu_text_indentation':
+      case 'reader_text_indentation':
         return '문단 들여쓰기';
-      case 'ttu_text_justify':
+      case 'reader_text_justify':
         return '양쪽 정렬';
-      case 'ttu_theme':
+      case 'reader_theme':
         return '테마';
-      case 'ttu_vert_kerning':
+      case 'reader_vert_kerning':
         return '커닝 (세로)';
-      case 'ttu_vert_text_orient':
+      case 'reader_vert_text_orient':
         return '글자 방향';
-      case 'ttu_vertical':
+      case 'reader_vertical':
         return '세로';
-      case 'ttu_view_mode_label':
+      case 'reader_view_mode_label':
         return '페이지 / 스크롤';
-      case 'ttu_vn':
+      case 'reader_vn':
         return 'Visual Novel';
-      case 'ttu_writing_direction':
+      case 'reader_writing_direction':
         return '글쓰기 방향';
       case 'undo':
         return '되돌리기';
@@ -180912,67 +180914,67 @@ extension on _StringsNl {
         return 'Keep off';
       case 'torrent_upload_intro_title':
         return 'Upload / seeding';
-      case 'ttu_blur_images':
+      case 'reader_blur_images':
         return 'Blur images (spoiler guard)';
-      case 'ttu_font_size':
+      case 'reader_font_size':
         return 'Lettergrootte';
-      case 'ttu_font_vpal':
+      case 'reader_font_vpal':
         return 'VPAL (vert. alt.)';
-      case 'ttu_furigana_hide':
+      case 'reader_furigana_hide':
         return 'Verbergen';
-      case 'ttu_furigana_mode':
+      case 'reader_furigana_mode':
         return 'Furigana';
-      case 'ttu_furigana_mode_hint':
+      case 'reader_furigana_mode_hint':
         return '';
-      case 'ttu_furigana_partial':
+      case 'reader_furigana_partial':
         return 'Gedeeltelijk';
-      case 'ttu_furigana_show':
+      case 'reader_furigana_show':
         return 'Tonen';
-      case 'ttu_furigana_toggle':
+      case 'reader_furigana_toggle':
         return 'Wisselen';
-      case 'ttu_horizontal':
+      case 'reader_horizontal':
         return 'Horizontaal';
-      case 'ttu_line_height':
+      case 'reader_line_height':
         return 'Regelhoogte';
-      case 'ttu_merge_image_pages':
+      case 'reader_merge_image_pages':
         return 'Merge illustration pages into text';
-      case 'ttu_merge_image_pages_subtitle':
+      case 'reader_merge_image_pages_subtitle':
         return 'Standalone single-image chapters render inline in the adjacent text chapter instead of on their own page';
-      case 'ttu_no_books_added':
+      case 'reader_no_books_added':
         return 'Geen boeken in de bibliotheek';
-      case 'ttu_not_bound_cannot_rematch':
+      case 'reader_not_bound_cannot_rematch':
         return 'Luisterboek niet gekoppeld aan een boek, kan niet opnieuw matchen';
-      case 'ttu_orient_mixed':
+      case 'reader_orient_mixed':
         return 'Gemengd';
-      case 'ttu_orient_upright':
+      case 'reader_orient_upright':
         return 'Rechtop';
-      case 'ttu_page_columns_auto':
+      case 'reader_page_columns_auto':
         return 'Automatisch';
-      case 'ttu_paginated':
+      case 'reader_paginated':
         return 'Gepagineerd';
-      case 'ttu_paragraph_spacing':
+      case 'reader_paragraph_spacing':
         return 'Paragraph spacing';
-      case 'ttu_reader_styles':
+      case 'reader_reader_styles':
         return 'Boekstijlen prioriteit geven';
-      case 'ttu_scroll':
+      case 'reader_scroll':
         return 'Scrollen';
-      case 'ttu_text_indentation':
+      case 'reader_text_indentation':
         return 'Alinea-inspringing';
-      case 'ttu_text_justify':
+      case 'reader_text_justify':
         return 'Tekstuitlijning';
-      case 'ttu_theme':
+      case 'reader_theme':
         return 'Thema';
-      case 'ttu_vert_kerning':
+      case 'reader_vert_kerning':
         return 'Tekenafstand (verticaal)';
-      case 'ttu_vert_text_orient':
+      case 'reader_vert_text_orient':
         return 'Tekstoriëntatie';
-      case 'ttu_vertical':
+      case 'reader_vertical':
         return 'Verticaal';
-      case 'ttu_view_mode_label':
+      case 'reader_view_mode_label':
         return 'Pagina\'s / Scrollen';
-      case 'ttu_vn':
+      case 'reader_vn':
         return 'Visual Novel';
-      case 'ttu_writing_direction':
+      case 'reader_writing_direction':
         return 'Schrijfrichting';
       case 'undo':
         return 'Ongedaan maken';
@@ -187349,67 +187351,67 @@ extension on _StringsPtBr {
         return 'Keep off';
       case 'torrent_upload_intro_title':
         return 'Upload / seeding';
-      case 'ttu_blur_images':
+      case 'reader_blur_images':
         return 'Blur images (spoiler guard)';
-      case 'ttu_font_size':
+      case 'reader_font_size':
         return 'Tamanho da Fonte';
-      case 'ttu_font_vpal':
+      case 'reader_font_vpal':
         return 'VPAL (alt. vertical)';
-      case 'ttu_furigana_hide':
+      case 'reader_furigana_hide':
         return 'Ocultar';
-      case 'ttu_furigana_mode':
+      case 'reader_furigana_mode':
         return 'Furigana';
-      case 'ttu_furigana_mode_hint':
+      case 'reader_furigana_mode_hint':
         return '';
-      case 'ttu_furigana_partial':
+      case 'reader_furigana_partial':
         return 'Parcial';
-      case 'ttu_furigana_show':
+      case 'reader_furigana_show':
         return 'Mostrar';
-      case 'ttu_furigana_toggle':
+      case 'reader_furigana_toggle':
         return 'Alternar';
-      case 'ttu_horizontal':
+      case 'reader_horizontal':
         return 'Horizontal';
-      case 'ttu_line_height':
+      case 'reader_line_height':
         return 'Altura da Linha';
-      case 'ttu_merge_image_pages':
+      case 'reader_merge_image_pages':
         return 'Merge illustration pages into text';
-      case 'ttu_merge_image_pages_subtitle':
+      case 'reader_merge_image_pages_subtitle':
         return 'Standalone single-image chapters render inline in the adjacent text chapter instead of on their own page';
-      case 'ttu_no_books_added':
+      case 'reader_no_books_added':
         return 'Nenhum livro na biblioteca';
-      case 'ttu_not_bound_cannot_rematch':
+      case 'reader_not_bound_cannot_rematch':
         return 'Audiolivro não vinculado a um livro, não é possível corresponder novamente';
-      case 'ttu_orient_mixed':
+      case 'reader_orient_mixed':
         return 'Misto';
-      case 'ttu_orient_upright':
+      case 'reader_orient_upright':
         return 'Vertical';
-      case 'ttu_page_columns_auto':
+      case 'reader_page_columns_auto':
         return 'Automático';
-      case 'ttu_paginated':
+      case 'reader_paginated':
         return 'Paginado';
-      case 'ttu_paragraph_spacing':
+      case 'reader_paragraph_spacing':
         return 'Paragraph spacing';
-      case 'ttu_reader_styles':
+      case 'reader_reader_styles':
         return 'Priorizar estilos do livro';
-      case 'ttu_scroll':
+      case 'reader_scroll':
         return 'Rolagem';
-      case 'ttu_text_indentation':
+      case 'reader_text_indentation':
         return 'Recuo de parágrafo';
-      case 'ttu_text_justify':
+      case 'reader_text_justify':
         return 'Justificação do texto';
-      case 'ttu_theme':
+      case 'reader_theme':
         return 'Tema';
-      case 'ttu_vert_kerning':
+      case 'reader_vert_kerning':
         return 'Kerning (vertical)';
-      case 'ttu_vert_text_orient':
+      case 'reader_vert_text_orient':
         return 'Orientação do texto';
-      case 'ttu_vertical':
+      case 'reader_vertical':
         return 'Vertical';
-      case 'ttu_view_mode_label':
+      case 'reader_view_mode_label':
         return 'Páginas / Rolagem';
-      case 'ttu_vn':
+      case 'reader_vn':
         return 'Visual Novel';
-      case 'ttu_writing_direction':
+      case 'reader_writing_direction':
         return 'Direção da Escrita';
       case 'undo':
         return 'Desfazer';
@@ -193788,67 +193790,67 @@ extension on _StringsRu {
         return 'Keep off';
       case 'torrent_upload_intro_title':
         return 'Upload / seeding';
-      case 'ttu_blur_images':
+      case 'reader_blur_images':
         return 'Blur images (spoiler guard)';
-      case 'ttu_font_size':
+      case 'reader_font_size':
         return 'Размер шрифта';
-      case 'ttu_font_vpal':
+      case 'reader_font_vpal':
         return 'VPAL (верт. альт.)';
-      case 'ttu_furigana_hide':
+      case 'reader_furigana_hide':
         return 'Скрыть';
-      case 'ttu_furigana_mode':
+      case 'reader_furigana_mode':
         return 'Фуригана';
-      case 'ttu_furigana_mode_hint':
+      case 'reader_furigana_mode_hint':
         return '';
-      case 'ttu_furigana_partial':
+      case 'reader_furigana_partial':
         return 'Частично';
-      case 'ttu_furigana_show':
+      case 'reader_furigana_show':
         return 'Показать';
-      case 'ttu_furigana_toggle':
+      case 'reader_furigana_toggle':
         return 'Переключить';
-      case 'ttu_horizontal':
+      case 'reader_horizontal':
         return 'Горизонтальное';
-      case 'ttu_line_height':
+      case 'reader_line_height':
         return 'Высота строки';
-      case 'ttu_merge_image_pages':
+      case 'reader_merge_image_pages':
         return 'Merge illustration pages into text';
-      case 'ttu_merge_image_pages_subtitle':
+      case 'reader_merge_image_pages_subtitle':
         return 'Standalone single-image chapters render inline in the adjacent text chapter instead of on their own page';
-      case 'ttu_no_books_added':
+      case 'reader_no_books_added':
         return 'В библиотеке нет книг';
-      case 'ttu_not_bound_cannot_rematch':
+      case 'reader_not_bound_cannot_rematch':
         return 'Аудиокнига не привязана к книге, пересопоставление невозможно';
-      case 'ttu_orient_mixed':
+      case 'reader_orient_mixed':
         return 'Смешанная';
-      case 'ttu_orient_upright':
+      case 'reader_orient_upright':
         return 'Прямая';
-      case 'ttu_page_columns_auto':
+      case 'reader_page_columns_auto':
         return 'Авто';
-      case 'ttu_paginated':
+      case 'reader_paginated':
         return 'Постраничный';
-      case 'ttu_paragraph_spacing':
+      case 'reader_paragraph_spacing':
         return 'Paragraph spacing';
-      case 'ttu_reader_styles':
+      case 'reader_reader_styles':
         return 'Приоритет стилей книги';
-      case 'ttu_scroll':
+      case 'reader_scroll':
         return 'Прокрутка';
-      case 'ttu_text_indentation':
+      case 'reader_text_indentation':
         return 'Отступ абзаца';
-      case 'ttu_text_justify':
+      case 'reader_text_justify':
         return 'Выравнивание текста';
-      case 'ttu_theme':
+      case 'reader_theme':
         return 'Тема';
-      case 'ttu_vert_kerning':
+      case 'reader_vert_kerning':
         return 'Кернинг (вертикальный)';
-      case 'ttu_vert_text_orient':
+      case 'reader_vert_text_orient':
         return 'Ориентация текста';
-      case 'ttu_vertical':
+      case 'reader_vertical':
         return 'Вертикальное';
-      case 'ttu_view_mode_label':
+      case 'reader_view_mode_label':
         return 'Страницы / Прокрутка';
-      case 'ttu_vn':
+      case 'reader_vn':
         return 'Visual Novel';
-      case 'ttu_writing_direction':
+      case 'reader_writing_direction':
         return 'Направление письма';
       case 'undo':
         return 'Отменить';
@@ -200214,67 +200216,67 @@ extension on _StringsTh {
         return 'Keep off';
       case 'torrent_upload_intro_title':
         return 'Upload / seeding';
-      case 'ttu_blur_images':
+      case 'reader_blur_images':
         return 'Blur images (spoiler guard)';
-      case 'ttu_font_size':
+      case 'reader_font_size':
         return 'ขนาดฟอนต์';
-      case 'ttu_font_vpal':
+      case 'reader_font_vpal':
         return 'VPAL (ตัวอักษรทดแทน)';
-      case 'ttu_furigana_hide':
+      case 'reader_furigana_hide':
         return 'ซ่อน';
-      case 'ttu_furigana_mode':
+      case 'reader_furigana_mode':
         return 'ฟุริงานะ';
-      case 'ttu_furigana_mode_hint':
+      case 'reader_furigana_mode_hint':
         return '';
-      case 'ttu_furigana_partial':
+      case 'reader_furigana_partial':
         return 'บางส่วน';
-      case 'ttu_furigana_show':
+      case 'reader_furigana_show':
         return 'แสดง';
-      case 'ttu_furigana_toggle':
+      case 'reader_furigana_toggle':
         return 'สลับ';
-      case 'ttu_horizontal':
+      case 'reader_horizontal':
         return 'แนวนอน';
-      case 'ttu_line_height':
+      case 'reader_line_height':
         return 'ระยะห่างบรรทัด';
-      case 'ttu_merge_image_pages':
+      case 'reader_merge_image_pages':
         return 'Merge illustration pages into text';
-      case 'ttu_merge_image_pages_subtitle':
+      case 'reader_merge_image_pages_subtitle':
         return 'Standalone single-image chapters render inline in the adjacent text chapter instead of on their own page';
-      case 'ttu_no_books_added':
+      case 'reader_no_books_added':
         return 'ไม่มีหนังสือในคลัง';
-      case 'ttu_not_bound_cannot_rematch':
+      case 'reader_not_bound_cannot_rematch':
         return 'หนังสือเสียงไม่ได้ผูกกับหนังสือ ไม่สามารถจับคู่ใหม่ได้';
-      case 'ttu_orient_mixed':
+      case 'reader_orient_mixed':
         return 'ผสม';
-      case 'ttu_orient_upright':
+      case 'reader_orient_upright':
         return 'ตั้งตรง';
-      case 'ttu_page_columns_auto':
+      case 'reader_page_columns_auto':
         return 'อัตโนมัติ';
-      case 'ttu_paginated':
+      case 'reader_paginated':
         return 'แบ่งหน้า';
-      case 'ttu_paragraph_spacing':
+      case 'reader_paragraph_spacing':
         return 'Paragraph spacing';
-      case 'ttu_reader_styles':
+      case 'reader_reader_styles':
         return 'ใช้สไตล์หนังสือ';
-      case 'ttu_scroll':
+      case 'reader_scroll':
         return 'เลื่อน';
-      case 'ttu_text_indentation':
+      case 'reader_text_indentation':
         return 'ย่อหน้า';
-      case 'ttu_text_justify':
+      case 'reader_text_justify':
         return 'จัดชิดสองด้าน';
-      case 'ttu_theme':
+      case 'reader_theme':
         return 'ธีม';
-      case 'ttu_vert_kerning':
+      case 'reader_vert_kerning':
         return 'ระยะตัวอักษร (แนวตั้ง)';
-      case 'ttu_vert_text_orient':
+      case 'reader_vert_text_orient':
         return 'ทิศทางตัวอักษร';
-      case 'ttu_vertical':
+      case 'reader_vertical':
         return 'แนวตั้ง';
-      case 'ttu_view_mode_label':
+      case 'reader_view_mode_label':
         return 'หน้า / เลื่อน';
-      case 'ttu_vn':
+      case 'reader_vn':
         return 'Visual Novel';
-      case 'ttu_writing_direction':
+      case 'reader_writing_direction':
         return 'ทิศทางการเขียน';
       case 'undo':
         return 'เลิกทำ';
@@ -206643,67 +206645,67 @@ extension on _StringsTr {
         return 'Keep off';
       case 'torrent_upload_intro_title':
         return 'Upload / seeding';
-      case 'ttu_blur_images':
+      case 'reader_blur_images':
         return 'Blur images (spoiler guard)';
-      case 'ttu_font_size':
+      case 'reader_font_size':
         return 'Yazı tipi boyutu';
-      case 'ttu_font_vpal':
+      case 'reader_font_vpal':
         return 'VPAL (dikey alt.)';
-      case 'ttu_furigana_hide':
+      case 'reader_furigana_hide':
         return 'Gizle';
-      case 'ttu_furigana_mode':
+      case 'reader_furigana_mode':
         return 'Furigana';
-      case 'ttu_furigana_mode_hint':
+      case 'reader_furigana_mode_hint':
         return '';
-      case 'ttu_furigana_partial':
+      case 'reader_furigana_partial':
         return 'Kısmi';
-      case 'ttu_furigana_show':
+      case 'reader_furigana_show':
         return 'Göster';
-      case 'ttu_furigana_toggle':
+      case 'reader_furigana_toggle':
         return 'Değiştir';
-      case 'ttu_horizontal':
+      case 'reader_horizontal':
         return 'Yatay';
-      case 'ttu_line_height':
+      case 'reader_line_height':
         return 'Satır yüksekliği';
-      case 'ttu_merge_image_pages':
+      case 'reader_merge_image_pages':
         return 'Merge illustration pages into text';
-      case 'ttu_merge_image_pages_subtitle':
+      case 'reader_merge_image_pages_subtitle':
         return 'Standalone single-image chapters render inline in the adjacent text chapter instead of on their own page';
-      case 'ttu_no_books_added':
+      case 'reader_no_books_added':
         return 'Kütüphanede kitap yok';
-      case 'ttu_not_bound_cannot_rematch':
+      case 'reader_not_bound_cannot_rematch':
         return 'Sesli kitap bir kitaba bağlı değil, yeniden eşleştirme yapılamaz';
-      case 'ttu_orient_mixed':
+      case 'reader_orient_mixed':
         return 'Karışık';
-      case 'ttu_orient_upright':
+      case 'reader_orient_upright':
         return 'Dik';
-      case 'ttu_page_columns_auto':
+      case 'reader_page_columns_auto':
         return 'Otomatik';
-      case 'ttu_paginated':
+      case 'reader_paginated':
         return 'Sayfalı';
-      case 'ttu_paragraph_spacing':
+      case 'reader_paragraph_spacing':
         return 'Paragraph spacing';
-      case 'ttu_reader_styles':
+      case 'reader_reader_styles':
         return 'Kitap stillerine öncelik ver';
-      case 'ttu_scroll':
+      case 'reader_scroll':
         return 'Kaydırma';
-      case 'ttu_text_indentation':
+      case 'reader_text_indentation':
         return 'Paragraf girintisi';
-      case 'ttu_text_justify':
+      case 'reader_text_justify':
         return 'Metin hizalama';
-      case 'ttu_theme':
+      case 'reader_theme':
         return 'Tema';
-      case 'ttu_vert_kerning':
+      case 'reader_vert_kerning':
         return 'Karakter aralığı (dikey)';
-      case 'ttu_vert_text_orient':
+      case 'reader_vert_text_orient':
         return 'Metin yönü';
-      case 'ttu_vertical':
+      case 'reader_vertical':
         return 'Dikey';
-      case 'ttu_view_mode_label':
+      case 'reader_view_mode_label':
         return 'Sayfa / Kaydırma';
-      case 'ttu_vn':
+      case 'reader_vn':
         return 'Visual Novel';
-      case 'ttu_writing_direction':
+      case 'reader_writing_direction':
         return 'Yazı yönü';
       case 'undo':
         return 'Geri al';
@@ -213073,67 +213075,67 @@ extension on _StringsVi {
         return 'Keep off';
       case 'torrent_upload_intro_title':
         return 'Upload / seeding';
-      case 'ttu_blur_images':
+      case 'reader_blur_images':
         return 'Blur images (spoiler guard)';
-      case 'ttu_font_size':
+      case 'reader_font_size':
         return 'Cỡ chữ';
-      case 'ttu_font_vpal':
+      case 'reader_font_vpal':
         return 'VPAL (thay thế dọc)';
-      case 'ttu_furigana_hide':
+      case 'reader_furigana_hide':
         return 'Ẩn';
-      case 'ttu_furigana_mode':
+      case 'reader_furigana_mode':
         return 'Furigana';
-      case 'ttu_furigana_mode_hint':
+      case 'reader_furigana_mode_hint':
         return '';
-      case 'ttu_furigana_partial':
+      case 'reader_furigana_partial':
         return 'Một phần';
-      case 'ttu_furigana_show':
+      case 'reader_furigana_show':
         return 'Hiện';
-      case 'ttu_furigana_toggle':
+      case 'reader_furigana_toggle':
         return 'Chuyển đổi';
-      case 'ttu_horizontal':
+      case 'reader_horizontal':
         return 'Ngang';
-      case 'ttu_line_height':
+      case 'reader_line_height':
         return 'Chiều cao dòng';
-      case 'ttu_merge_image_pages':
+      case 'reader_merge_image_pages':
         return 'Merge illustration pages into text';
-      case 'ttu_merge_image_pages_subtitle':
+      case 'reader_merge_image_pages_subtitle':
         return 'Standalone single-image chapters render inline in the adjacent text chapter instead of on their own page';
-      case 'ttu_no_books_added':
+      case 'reader_no_books_added':
         return 'Chưa có sách nào trong thư viện';
-      case 'ttu_not_bound_cannot_rematch':
+      case 'reader_not_bound_cannot_rematch':
         return 'Sách nói chưa liên kết với sách, không thể khớp lại';
-      case 'ttu_orient_mixed':
+      case 'reader_orient_mixed':
         return 'Hỗn hợp';
-      case 'ttu_orient_upright':
+      case 'reader_orient_upright':
         return 'Thẳng đứng';
-      case 'ttu_page_columns_auto':
+      case 'reader_page_columns_auto':
         return 'Tự động';
-      case 'ttu_paginated':
+      case 'reader_paginated':
         return 'Phân trang';
-      case 'ttu_paragraph_spacing':
+      case 'reader_paragraph_spacing':
         return 'Paragraph spacing';
-      case 'ttu_reader_styles':
+      case 'reader_reader_styles':
         return 'Ưu tiên kiểu sách';
-      case 'ttu_scroll':
+      case 'reader_scroll':
         return 'Cuộn';
-      case 'ttu_text_indentation':
+      case 'reader_text_indentation':
         return 'Thụt đầu đoạn';
-      case 'ttu_text_justify':
+      case 'reader_text_justify':
         return 'Căn đều văn bản';
-      case 'ttu_theme':
+      case 'reader_theme':
         return 'Giao diện';
-      case 'ttu_vert_kerning':
+      case 'reader_vert_kerning':
         return 'Khoảng cách chữ (dọc)';
-      case 'ttu_vert_text_orient':
+      case 'reader_vert_text_orient':
         return 'Hướng văn bản';
-      case 'ttu_vertical':
+      case 'reader_vertical':
         return 'Dọc';
-      case 'ttu_view_mode_label':
+      case 'reader_view_mode_label':
         return 'Trang / Cuộn';
-      case 'ttu_vn':
+      case 'reader_vn':
         return 'Visual Novel';
-      case 'ttu_writing_direction':
+      case 'reader_writing_direction':
         return 'Hướng viết';
       case 'undo':
         return 'Hoàn tác';
@@ -219469,67 +219471,67 @@ extension on _StringsZhCn {
         return '保持关闭';
       case 'torrent_upload_intro_title':
         return '上传 / 做种';
-      case 'ttu_blur_images':
+      case 'reader_blur_images':
         return '图片模糊（防剧透）';
-      case 'ttu_font_size':
+      case 'reader_font_size':
         return '字体大小';
-      case 'ttu_font_vpal':
+      case 'reader_font_vpal':
         return 'VPAL 纵排替代';
-      case 'ttu_furigana_hide':
+      case 'reader_furigana_hide':
         return '隐藏';
-      case 'ttu_furigana_mode':
+      case 'reader_furigana_mode':
         return '振假名';
-      case 'ttu_furigana_mode_hint':
+      case 'reader_furigana_mode_hint':
         return '';
-      case 'ttu_furigana_partial':
+      case 'reader_furigana_partial':
         return '部分';
-      case 'ttu_furigana_show':
+      case 'reader_furigana_show':
         return '显示';
-      case 'ttu_furigana_toggle':
+      case 'reader_furigana_toggle':
         return '切换';
-      case 'ttu_horizontal':
+      case 'reader_horizontal':
         return '横排';
-      case 'ttu_line_height':
+      case 'reader_line_height':
         return '行高';
-      case 'ttu_merge_image_pages':
+      case 'reader_merge_image_pages':
         return '将插图页并入正文';
-      case 'ttu_merge_image_pages_subtitle':
+      case 'reader_merge_image_pages_subtitle':
         return '把只含一张图的独立章节并入相邻正文章连续显示，不再单独占一页';
-      case 'ttu_no_books_added':
+      case 'reader_no_books_added':
         return '尚未添加任何书籍';
-      case 'ttu_not_bound_cannot_rematch':
+      case 'reader_not_bound_cannot_rematch':
         return '有声书未绑定书籍，无法重跑匹配';
-      case 'ttu_orient_mixed':
+      case 'reader_orient_mixed':
         return '混合';
-      case 'ttu_orient_upright':
+      case 'reader_orient_upright':
         return '竖直';
-      case 'ttu_page_columns_auto':
+      case 'reader_page_columns_auto':
         return '自动';
-      case 'ttu_paginated':
+      case 'reader_paginated':
         return '翻页';
-      case 'ttu_paragraph_spacing':
+      case 'reader_paragraph_spacing':
         return '段落间距';
-      case 'ttu_reader_styles':
+      case 'reader_reader_styles':
         return '优先书籍样式';
-      case 'ttu_scroll':
+      case 'reader_scroll':
         return '滚动';
-      case 'ttu_text_indentation':
+      case 'reader_text_indentation':
         return '段落缩进';
-      case 'ttu_text_justify':
+      case 'reader_text_justify':
         return '两端对齐';
-      case 'ttu_theme':
+      case 'reader_theme':
         return '主题';
-      case 'ttu_vert_kerning':
+      case 'reader_vert_kerning':
         return '字偶间距（纵排）';
-      case 'ttu_vert_text_orient':
+      case 'reader_vert_text_orient':
         return '文字方向';
-      case 'ttu_vertical':
+      case 'reader_vertical':
         return '竖排';
-      case 'ttu_view_mode_label':
+      case 'reader_view_mode_label':
         return '翻页 / 滚动';
-      case 'ttu_vn':
+      case 'reader_vn':
         return '视觉小说';
-      case 'ttu_writing_direction':
+      case 'reader_writing_direction':
         return '排版方向';
       case 'undo':
         return '撤销';
@@ -225855,67 +225857,67 @@ extension on _StringsZhHk {
         return 'Keep off';
       case 'torrent_upload_intro_title':
         return 'Upload / seeding';
-      case 'ttu_blur_images':
+      case 'reader_blur_images':
         return 'Blur images (spoiler guard)';
-      case 'ttu_font_size':
+      case 'reader_font_size':
         return '字型大小';
-      case 'ttu_font_vpal':
+      case 'reader_font_vpal':
         return 'VPAL 直排替代';
-      case 'ttu_furigana_hide':
+      case 'reader_furigana_hide':
         return '隱藏';
-      case 'ttu_furigana_mode':
+      case 'reader_furigana_mode':
         return '振假名';
-      case 'ttu_furigana_mode_hint':
+      case 'reader_furigana_mode_hint':
         return '';
-      case 'ttu_furigana_partial':
+      case 'reader_furigana_partial':
         return '部分';
-      case 'ttu_furigana_show':
+      case 'reader_furigana_show':
         return '顯示';
-      case 'ttu_furigana_toggle':
+      case 'reader_furigana_toggle':
         return '切換';
-      case 'ttu_horizontal':
+      case 'reader_horizontal':
         return '橫排';
-      case 'ttu_line_height':
+      case 'reader_line_height':
         return '行高';
-      case 'ttu_merge_image_pages':
+      case 'reader_merge_image_pages':
         return 'Merge illustration pages into text';
-      case 'ttu_merge_image_pages_subtitle':
+      case 'reader_merge_image_pages_subtitle':
         return 'Standalone single-image chapters render inline in the adjacent text chapter instead of on their own page';
-      case 'ttu_no_books_added':
+      case 'reader_no_books_added':
         return '書架中尚未有任何書籍';
-      case 'ttu_not_bound_cannot_rematch':
+      case 'reader_not_bound_cannot_rematch':
         return '有聲書未繫結書籍，無法重跑比對';
-      case 'ttu_orient_mixed':
+      case 'reader_orient_mixed':
         return '混合';
-      case 'ttu_orient_upright':
+      case 'reader_orient_upright':
         return '豎直';
-      case 'ttu_page_columns_auto':
+      case 'reader_page_columns_auto':
         return '自動';
-      case 'ttu_paginated':
+      case 'reader_paginated':
         return '翻頁';
-      case 'ttu_paragraph_spacing':
+      case 'reader_paragraph_spacing':
         return 'Paragraph spacing';
-      case 'ttu_reader_styles':
+      case 'reader_reader_styles':
         return '優先書籍樣式';
-      case 'ttu_scroll':
+      case 'reader_scroll':
         return '捲動';
-      case 'ttu_text_indentation':
+      case 'reader_text_indentation':
         return '段落縮排';
-      case 'ttu_text_justify':
+      case 'reader_text_justify':
         return '兩端對齊';
-      case 'ttu_theme':
+      case 'reader_theme':
         return '主題';
-      case 'ttu_vert_kerning':
+      case 'reader_vert_kerning':
         return '字偶間距（直排）';
-      case 'ttu_vert_text_orient':
+      case 'reader_vert_text_orient':
         return '文字方向';
-      case 'ttu_vertical':
+      case 'reader_vertical':
         return '直排';
-      case 'ttu_view_mode_label':
+      case 'reader_view_mode_label':
         return '翻頁 / 捲動';
-      case 'ttu_vn':
+      case 'reader_vn':
         return 'Visual Novel';
-      case 'ttu_writing_direction':
+      case 'reader_writing_direction':
         return '排版方向';
       case 'undo':
         return '復原';
