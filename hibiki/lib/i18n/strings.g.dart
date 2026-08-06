@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 53227 (3131 per locale)
+/// Strings: 53482 (3146 per locale)
 ///
-/// Built on 2026-08-06 at 18:43 UTC
+/// Built on 2026-08-06 at 19:29 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -4214,6 +4214,29 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Configure a matching AnkiConnect API key before enabling the Android backend.';
   String anki_connect_backend_switch_failed({required Object error}) =>
       'Could not switch Anki backend: ${error}';
+  String get migration_settings_entry => 'Migrate to Fushi';
+  String get migration_settings_entry_subtitle =>
+      'Move all data to the new Fushi app';
+  String get migration_intro =>
+      'Fushi is the new name of this app. Migration exports all your data in batches to a transfer folder, then Fushi imports and verifies it. Your data here stays untouched until you uninstall this app.';
+  String get migration_target_missing =>
+      'Fushi is not installed yet. Install Fushi first, then return here.';
+  String get migration_download_fushi => 'Get Fushi';
+  String get migration_start => 'Start migration';
+  String get migration_open_fushi => 'Open Fushi';
+  String get migration_include_local_audio =>
+      'Also export local pronunciation audio (can be large)';
+  String migration_batch_running({required Object batch}) =>
+      'Exporting ${batch}…';
+  String migration_batch_done({required Object batch}) => '${batch} exported';
+  String get migration_export_done =>
+      'Export complete. Open Fushi to import and verify.';
+  String migration_export_failed({required Object error}) =>
+      'Export failed: ${error}';
+  String get migration_readonly_note =>
+      'Your data has been exported to Fushi. This app is now read-only: use Fushi for reading and mining. You can re-export at any time if Fushi reports missing data.';
+  String get migration_reexport => 'Re-export';
+  String get migration_batch_core_label => 'Settings, progress & statistics';
 }
 
 // Path: <root>
@@ -11408,6 +11431,44 @@ class _StringsAr extends _StringsEn {
   @override
   String anki_connect_backend_switch_failed({required Object error}) =>
       'Could not switch Anki backend: ${error}';
+  @override
+  String get migration_settings_entry => 'Migrate to Fushi';
+  @override
+  String get migration_settings_entry_subtitle =>
+      'Move all data to the new Fushi app';
+  @override
+  String get migration_intro =>
+      'Fushi is the new name of this app. Migration exports all your data in batches to a transfer folder, then Fushi imports and verifies it. Your data here stays untouched until you uninstall this app.';
+  @override
+  String get migration_target_missing =>
+      'Fushi is not installed yet. Install Fushi first, then return here.';
+  @override
+  String get migration_download_fushi => 'Get Fushi';
+  @override
+  String get migration_start => 'Start migration';
+  @override
+  String get migration_open_fushi => 'Open Fushi';
+  @override
+  String get migration_include_local_audio =>
+      'Also export local pronunciation audio (can be large)';
+  @override
+  String migration_batch_running({required Object batch}) =>
+      'Exporting ${batch}…';
+  @override
+  String migration_batch_done({required Object batch}) => '${batch} exported';
+  @override
+  String get migration_export_done =>
+      'Export complete. Open Fushi to import and verify.';
+  @override
+  String migration_export_failed({required Object error}) =>
+      'Export failed: ${error}';
+  @override
+  String get migration_readonly_note =>
+      'Your data has been exported to Fushi. This app is now read-only: use Fushi for reading and mining. You can re-export at any time if Fushi reports missing data.';
+  @override
+  String get migration_reexport => 'Re-export';
+  @override
+  String get migration_batch_core_label => 'Settings, progress & statistics';
 }
 
 // Path: <root>
@@ -18669,6 +18730,44 @@ class _StringsDe extends _StringsEn {
   @override
   String anki_connect_backend_switch_failed({required Object error}) =>
       'Could not switch Anki backend: ${error}';
+  @override
+  String get migration_settings_entry => 'Migrate to Fushi';
+  @override
+  String get migration_settings_entry_subtitle =>
+      'Move all data to the new Fushi app';
+  @override
+  String get migration_intro =>
+      'Fushi is the new name of this app. Migration exports all your data in batches to a transfer folder, then Fushi imports and verifies it. Your data here stays untouched until you uninstall this app.';
+  @override
+  String get migration_target_missing =>
+      'Fushi is not installed yet. Install Fushi first, then return here.';
+  @override
+  String get migration_download_fushi => 'Get Fushi';
+  @override
+  String get migration_start => 'Start migration';
+  @override
+  String get migration_open_fushi => 'Open Fushi';
+  @override
+  String get migration_include_local_audio =>
+      'Also export local pronunciation audio (can be large)';
+  @override
+  String migration_batch_running({required Object batch}) =>
+      'Exporting ${batch}…';
+  @override
+  String migration_batch_done({required Object batch}) => '${batch} exported';
+  @override
+  String get migration_export_done =>
+      'Export complete. Open Fushi to import and verify.';
+  @override
+  String migration_export_failed({required Object error}) =>
+      'Export failed: ${error}';
+  @override
+  String get migration_readonly_note =>
+      'Your data has been exported to Fushi. This app is now read-only: use Fushi for reading and mining. You can re-export at any time if Fushi reports missing data.';
+  @override
+  String get migration_reexport => 'Re-export';
+  @override
+  String get migration_batch_core_label => 'Settings, progress & statistics';
 }
 
 // Path: <root>
@@ -25945,6 +26044,44 @@ class _StringsEs extends _StringsEn {
   @override
   String anki_connect_backend_switch_failed({required Object error}) =>
       'Could not switch Anki backend: ${error}';
+  @override
+  String get migration_settings_entry => 'Migrate to Fushi';
+  @override
+  String get migration_settings_entry_subtitle =>
+      'Move all data to the new Fushi app';
+  @override
+  String get migration_intro =>
+      'Fushi is the new name of this app. Migration exports all your data in batches to a transfer folder, then Fushi imports and verifies it. Your data here stays untouched until you uninstall this app.';
+  @override
+  String get migration_target_missing =>
+      'Fushi is not installed yet. Install Fushi first, then return here.';
+  @override
+  String get migration_download_fushi => 'Get Fushi';
+  @override
+  String get migration_start => 'Start migration';
+  @override
+  String get migration_open_fushi => 'Open Fushi';
+  @override
+  String get migration_include_local_audio =>
+      'Also export local pronunciation audio (can be large)';
+  @override
+  String migration_batch_running({required Object batch}) =>
+      'Exporting ${batch}…';
+  @override
+  String migration_batch_done({required Object batch}) => '${batch} exported';
+  @override
+  String get migration_export_done =>
+      'Export complete. Open Fushi to import and verify.';
+  @override
+  String migration_export_failed({required Object error}) =>
+      'Export failed: ${error}';
+  @override
+  String get migration_readonly_note =>
+      'Your data has been exported to Fushi. This app is now read-only: use Fushi for reading and mining. You can re-export at any time if Fushi reports missing data.';
+  @override
+  String get migration_reexport => 'Re-export';
+  @override
+  String get migration_batch_core_label => 'Settings, progress & statistics';
 }
 
 // Path: <root>
@@ -33233,6 +33370,44 @@ class _StringsFr extends _StringsEn {
   @override
   String anki_connect_backend_switch_failed({required Object error}) =>
       'Could not switch Anki backend: ${error}';
+  @override
+  String get migration_settings_entry => 'Migrate to Fushi';
+  @override
+  String get migration_settings_entry_subtitle =>
+      'Move all data to the new Fushi app';
+  @override
+  String get migration_intro =>
+      'Fushi is the new name of this app. Migration exports all your data in batches to a transfer folder, then Fushi imports and verifies it. Your data here stays untouched until you uninstall this app.';
+  @override
+  String get migration_target_missing =>
+      'Fushi is not installed yet. Install Fushi first, then return here.';
+  @override
+  String get migration_download_fushi => 'Get Fushi';
+  @override
+  String get migration_start => 'Start migration';
+  @override
+  String get migration_open_fushi => 'Open Fushi';
+  @override
+  String get migration_include_local_audio =>
+      'Also export local pronunciation audio (can be large)';
+  @override
+  String migration_batch_running({required Object batch}) =>
+      'Exporting ${batch}…';
+  @override
+  String migration_batch_done({required Object batch}) => '${batch} exported';
+  @override
+  String get migration_export_done =>
+      'Export complete. Open Fushi to import and verify.';
+  @override
+  String migration_export_failed({required Object error}) =>
+      'Export failed: ${error}';
+  @override
+  String get migration_readonly_note =>
+      'Your data has been exported to Fushi. This app is now read-only: use Fushi for reading and mining. You can re-export at any time if Fushi reports missing data.';
+  @override
+  String get migration_reexport => 'Re-export';
+  @override
+  String get migration_batch_core_label => 'Settings, progress & statistics';
 }
 
 // Path: <root>
@@ -40450,6 +40625,44 @@ class _StringsId extends _StringsEn {
   @override
   String anki_connect_backend_switch_failed({required Object error}) =>
       'Could not switch Anki backend: ${error}';
+  @override
+  String get migration_settings_entry => 'Migrate to Fushi';
+  @override
+  String get migration_settings_entry_subtitle =>
+      'Move all data to the new Fushi app';
+  @override
+  String get migration_intro =>
+      'Fushi is the new name of this app. Migration exports all your data in batches to a transfer folder, then Fushi imports and verifies it. Your data here stays untouched until you uninstall this app.';
+  @override
+  String get migration_target_missing =>
+      'Fushi is not installed yet. Install Fushi first, then return here.';
+  @override
+  String get migration_download_fushi => 'Get Fushi';
+  @override
+  String get migration_start => 'Start migration';
+  @override
+  String get migration_open_fushi => 'Open Fushi';
+  @override
+  String get migration_include_local_audio =>
+      'Also export local pronunciation audio (can be large)';
+  @override
+  String migration_batch_running({required Object batch}) =>
+      'Exporting ${batch}…';
+  @override
+  String migration_batch_done({required Object batch}) => '${batch} exported';
+  @override
+  String get migration_export_done =>
+      'Export complete. Open Fushi to import and verify.';
+  @override
+  String migration_export_failed({required Object error}) =>
+      'Export failed: ${error}';
+  @override
+  String get migration_readonly_note =>
+      'Your data has been exported to Fushi. This app is now read-only: use Fushi for reading and mining. You can re-export at any time if Fushi reports missing data.';
+  @override
+  String get migration_reexport => 'Re-export';
+  @override
+  String get migration_batch_core_label => 'Settings, progress & statistics';
 }
 
 // Path: <root>
@@ -47713,6 +47926,44 @@ class _StringsIt extends _StringsEn {
   @override
   String anki_connect_backend_switch_failed({required Object error}) =>
       'Could not switch Anki backend: ${error}';
+  @override
+  String get migration_settings_entry => 'Migrate to Fushi';
+  @override
+  String get migration_settings_entry_subtitle =>
+      'Move all data to the new Fushi app';
+  @override
+  String get migration_intro =>
+      'Fushi is the new name of this app. Migration exports all your data in batches to a transfer folder, then Fushi imports and verifies it. Your data here stays untouched until you uninstall this app.';
+  @override
+  String get migration_target_missing =>
+      'Fushi is not installed yet. Install Fushi first, then return here.';
+  @override
+  String get migration_download_fushi => 'Get Fushi';
+  @override
+  String get migration_start => 'Start migration';
+  @override
+  String get migration_open_fushi => 'Open Fushi';
+  @override
+  String get migration_include_local_audio =>
+      'Also export local pronunciation audio (can be large)';
+  @override
+  String migration_batch_running({required Object batch}) =>
+      'Exporting ${batch}…';
+  @override
+  String migration_batch_done({required Object batch}) => '${batch} exported';
+  @override
+  String get migration_export_done =>
+      'Export complete. Open Fushi to import and verify.';
+  @override
+  String migration_export_failed({required Object error}) =>
+      'Export failed: ${error}';
+  @override
+  String get migration_readonly_note =>
+      'Your data has been exported to Fushi. This app is now read-only: use Fushi for reading and mining. You can re-export at any time if Fushi reports missing data.';
+  @override
+  String get migration_reexport => 'Re-export';
+  @override
+  String get migration_batch_core_label => 'Settings, progress & statistics';
 }
 
 // Path: <root>
@@ -54793,6 +55044,44 @@ class _StringsJa extends _StringsEn {
   @override
   String anki_connect_backend_switch_failed({required Object error}) =>
       'Could not switch Anki backend: ${error}';
+  @override
+  String get migration_settings_entry => 'Migrate to Fushi';
+  @override
+  String get migration_settings_entry_subtitle =>
+      'Move all data to the new Fushi app';
+  @override
+  String get migration_intro =>
+      'Fushi is the new name of this app. Migration exports all your data in batches to a transfer folder, then Fushi imports and verifies it. Your data here stays untouched until you uninstall this app.';
+  @override
+  String get migration_target_missing =>
+      'Fushi is not installed yet. Install Fushi first, then return here.';
+  @override
+  String get migration_download_fushi => 'Get Fushi';
+  @override
+  String get migration_start => 'Start migration';
+  @override
+  String get migration_open_fushi => 'Open Fushi';
+  @override
+  String get migration_include_local_audio =>
+      'Also export local pronunciation audio (can be large)';
+  @override
+  String migration_batch_running({required Object batch}) =>
+      'Exporting ${batch}…';
+  @override
+  String migration_batch_done({required Object batch}) => '${batch} exported';
+  @override
+  String get migration_export_done =>
+      'Export complete. Open Fushi to import and verify.';
+  @override
+  String migration_export_failed({required Object error}) =>
+      'Export failed: ${error}';
+  @override
+  String get migration_readonly_note =>
+      'Your data has been exported to Fushi. This app is now read-only: use Fushi for reading and mining. You can re-export at any time if Fushi reports missing data.';
+  @override
+  String get migration_reexport => 'Re-export';
+  @override
+  String get migration_batch_core_label => 'Settings, progress & statistics';
 }
 
 // Path: <root>
@@ -61877,6 +62166,44 @@ class _StringsKo extends _StringsEn {
   @override
   String anki_connect_backend_switch_failed({required Object error}) =>
       'Could not switch Anki backend: ${error}';
+  @override
+  String get migration_settings_entry => 'Migrate to Fushi';
+  @override
+  String get migration_settings_entry_subtitle =>
+      'Move all data to the new Fushi app';
+  @override
+  String get migration_intro =>
+      'Fushi is the new name of this app. Migration exports all your data in batches to a transfer folder, then Fushi imports and verifies it. Your data here stays untouched until you uninstall this app.';
+  @override
+  String get migration_target_missing =>
+      'Fushi is not installed yet. Install Fushi first, then return here.';
+  @override
+  String get migration_download_fushi => 'Get Fushi';
+  @override
+  String get migration_start => 'Start migration';
+  @override
+  String get migration_open_fushi => 'Open Fushi';
+  @override
+  String get migration_include_local_audio =>
+      'Also export local pronunciation audio (can be large)';
+  @override
+  String migration_batch_running({required Object batch}) =>
+      'Exporting ${batch}…';
+  @override
+  String migration_batch_done({required Object batch}) => '${batch} exported';
+  @override
+  String get migration_export_done =>
+      'Export complete. Open Fushi to import and verify.';
+  @override
+  String migration_export_failed({required Object error}) =>
+      'Export failed: ${error}';
+  @override
+  String get migration_readonly_note =>
+      'Your data has been exported to Fushi. This app is now read-only: use Fushi for reading and mining. You can re-export at any time if Fushi reports missing data.';
+  @override
+  String get migration_reexport => 'Re-export';
+  @override
+  String get migration_batch_core_label => 'Settings, progress & statistics';
 }
 
 // Path: <root>
@@ -69120,6 +69447,44 @@ class _StringsNl extends _StringsEn {
   @override
   String anki_connect_backend_switch_failed({required Object error}) =>
       'Could not switch Anki backend: ${error}';
+  @override
+  String get migration_settings_entry => 'Migrate to Fushi';
+  @override
+  String get migration_settings_entry_subtitle =>
+      'Move all data to the new Fushi app';
+  @override
+  String get migration_intro =>
+      'Fushi is the new name of this app. Migration exports all your data in batches to a transfer folder, then Fushi imports and verifies it. Your data here stays untouched until you uninstall this app.';
+  @override
+  String get migration_target_missing =>
+      'Fushi is not installed yet. Install Fushi first, then return here.';
+  @override
+  String get migration_download_fushi => 'Get Fushi';
+  @override
+  String get migration_start => 'Start migration';
+  @override
+  String get migration_open_fushi => 'Open Fushi';
+  @override
+  String get migration_include_local_audio =>
+      'Also export local pronunciation audio (can be large)';
+  @override
+  String migration_batch_running({required Object batch}) =>
+      'Exporting ${batch}…';
+  @override
+  String migration_batch_done({required Object batch}) => '${batch} exported';
+  @override
+  String get migration_export_done =>
+      'Export complete. Open Fushi to import and verify.';
+  @override
+  String migration_export_failed({required Object error}) =>
+      'Export failed: ${error}';
+  @override
+  String get migration_readonly_note =>
+      'Your data has been exported to Fushi. This app is now read-only: use Fushi for reading and mining. You can re-export at any time if Fushi reports missing data.';
+  @override
+  String get migration_reexport => 'Re-export';
+  @override
+  String get migration_batch_core_label => 'Settings, progress & statistics';
 }
 
 // Path: <root>
@@ -76376,6 +76741,44 @@ class _StringsPtBr extends _StringsEn {
   @override
   String anki_connect_backend_switch_failed({required Object error}) =>
       'Could not switch Anki backend: ${error}';
+  @override
+  String get migration_settings_entry => 'Migrate to Fushi';
+  @override
+  String get migration_settings_entry_subtitle =>
+      'Move all data to the new Fushi app';
+  @override
+  String get migration_intro =>
+      'Fushi is the new name of this app. Migration exports all your data in batches to a transfer folder, then Fushi imports and verifies it. Your data here stays untouched until you uninstall this app.';
+  @override
+  String get migration_target_missing =>
+      'Fushi is not installed yet. Install Fushi first, then return here.';
+  @override
+  String get migration_download_fushi => 'Get Fushi';
+  @override
+  String get migration_start => 'Start migration';
+  @override
+  String get migration_open_fushi => 'Open Fushi';
+  @override
+  String get migration_include_local_audio =>
+      'Also export local pronunciation audio (can be large)';
+  @override
+  String migration_batch_running({required Object batch}) =>
+      'Exporting ${batch}…';
+  @override
+  String migration_batch_done({required Object batch}) => '${batch} exported';
+  @override
+  String get migration_export_done =>
+      'Export complete. Open Fushi to import and verify.';
+  @override
+  String migration_export_failed({required Object error}) =>
+      'Export failed: ${error}';
+  @override
+  String get migration_readonly_note =>
+      'Your data has been exported to Fushi. This app is now read-only: use Fushi for reading and mining. You can re-export at any time if Fushi reports missing data.';
+  @override
+  String get migration_reexport => 'Re-export';
+  @override
+  String get migration_batch_core_label => 'Settings, progress & statistics';
 }
 
 // Path: <root>
@@ -83616,6 +84019,44 @@ class _StringsRu extends _StringsEn {
   @override
   String anki_connect_backend_switch_failed({required Object error}) =>
       'Could not switch Anki backend: ${error}';
+  @override
+  String get migration_settings_entry => 'Migrate to Fushi';
+  @override
+  String get migration_settings_entry_subtitle =>
+      'Move all data to the new Fushi app';
+  @override
+  String get migration_intro =>
+      'Fushi is the new name of this app. Migration exports all your data in batches to a transfer folder, then Fushi imports and verifies it. Your data here stays untouched until you uninstall this app.';
+  @override
+  String get migration_target_missing =>
+      'Fushi is not installed yet. Install Fushi first, then return here.';
+  @override
+  String get migration_download_fushi => 'Get Fushi';
+  @override
+  String get migration_start => 'Start migration';
+  @override
+  String get migration_open_fushi => 'Open Fushi';
+  @override
+  String get migration_include_local_audio =>
+      'Also export local pronunciation audio (can be large)';
+  @override
+  String migration_batch_running({required Object batch}) =>
+      'Exporting ${batch}…';
+  @override
+  String migration_batch_done({required Object batch}) => '${batch} exported';
+  @override
+  String get migration_export_done =>
+      'Export complete. Open Fushi to import and verify.';
+  @override
+  String migration_export_failed({required Object error}) =>
+      'Export failed: ${error}';
+  @override
+  String get migration_readonly_note =>
+      'Your data has been exported to Fushi. This app is now read-only: use Fushi for reading and mining. You can re-export at any time if Fushi reports missing data.';
+  @override
+  String get migration_reexport => 'Re-export';
+  @override
+  String get migration_batch_core_label => 'Settings, progress & statistics';
 }
 
 // Path: <root>
@@ -90804,6 +91245,44 @@ class _StringsTh extends _StringsEn {
   @override
   String anki_connect_backend_switch_failed({required Object error}) =>
       'Could not switch Anki backend: ${error}';
+  @override
+  String get migration_settings_entry => 'Migrate to Fushi';
+  @override
+  String get migration_settings_entry_subtitle =>
+      'Move all data to the new Fushi app';
+  @override
+  String get migration_intro =>
+      'Fushi is the new name of this app. Migration exports all your data in batches to a transfer folder, then Fushi imports and verifies it. Your data here stays untouched until you uninstall this app.';
+  @override
+  String get migration_target_missing =>
+      'Fushi is not installed yet. Install Fushi first, then return here.';
+  @override
+  String get migration_download_fushi => 'Get Fushi';
+  @override
+  String get migration_start => 'Start migration';
+  @override
+  String get migration_open_fushi => 'Open Fushi';
+  @override
+  String get migration_include_local_audio =>
+      'Also export local pronunciation audio (can be large)';
+  @override
+  String migration_batch_running({required Object batch}) =>
+      'Exporting ${batch}…';
+  @override
+  String migration_batch_done({required Object batch}) => '${batch} exported';
+  @override
+  String get migration_export_done =>
+      'Export complete. Open Fushi to import and verify.';
+  @override
+  String migration_export_failed({required Object error}) =>
+      'Export failed: ${error}';
+  @override
+  String get migration_readonly_note =>
+      'Your data has been exported to Fushi. This app is now read-only: use Fushi for reading and mining. You can re-export at any time if Fushi reports missing data.';
+  @override
+  String get migration_reexport => 'Re-export';
+  @override
+  String get migration_batch_core_label => 'Settings, progress & statistics';
 }
 
 // Path: <root>
@@ -98024,6 +98503,44 @@ class _StringsTr extends _StringsEn {
   @override
   String anki_connect_backend_switch_failed({required Object error}) =>
       'Could not switch Anki backend: ${error}';
+  @override
+  String get migration_settings_entry => 'Migrate to Fushi';
+  @override
+  String get migration_settings_entry_subtitle =>
+      'Move all data to the new Fushi app';
+  @override
+  String get migration_intro =>
+      'Fushi is the new name of this app. Migration exports all your data in batches to a transfer folder, then Fushi imports and verifies it. Your data here stays untouched until you uninstall this app.';
+  @override
+  String get migration_target_missing =>
+      'Fushi is not installed yet. Install Fushi first, then return here.';
+  @override
+  String get migration_download_fushi => 'Get Fushi';
+  @override
+  String get migration_start => 'Start migration';
+  @override
+  String get migration_open_fushi => 'Open Fushi';
+  @override
+  String get migration_include_local_audio =>
+      'Also export local pronunciation audio (can be large)';
+  @override
+  String migration_batch_running({required Object batch}) =>
+      'Exporting ${batch}…';
+  @override
+  String migration_batch_done({required Object batch}) => '${batch} exported';
+  @override
+  String get migration_export_done =>
+      'Export complete. Open Fushi to import and verify.';
+  @override
+  String migration_export_failed({required Object error}) =>
+      'Export failed: ${error}';
+  @override
+  String get migration_readonly_note =>
+      'Your data has been exported to Fushi. This app is now read-only: use Fushi for reading and mining. You can re-export at any time if Fushi reports missing data.';
+  @override
+  String get migration_reexport => 'Re-export';
+  @override
+  String get migration_batch_core_label => 'Settings, progress & statistics';
 }
 
 // Path: <root>
@@ -105229,6 +105746,44 @@ class _StringsVi extends _StringsEn {
   @override
   String anki_connect_backend_switch_failed({required Object error}) =>
       'Could not switch Anki backend: ${error}';
+  @override
+  String get migration_settings_entry => 'Migrate to Fushi';
+  @override
+  String get migration_settings_entry_subtitle =>
+      'Move all data to the new Fushi app';
+  @override
+  String get migration_intro =>
+      'Fushi is the new name of this app. Migration exports all your data in batches to a transfer folder, then Fushi imports and verifies it. Your data here stays untouched until you uninstall this app.';
+  @override
+  String get migration_target_missing =>
+      'Fushi is not installed yet. Install Fushi first, then return here.';
+  @override
+  String get migration_download_fushi => 'Get Fushi';
+  @override
+  String get migration_start => 'Start migration';
+  @override
+  String get migration_open_fushi => 'Open Fushi';
+  @override
+  String get migration_include_local_audio =>
+      'Also export local pronunciation audio (can be large)';
+  @override
+  String migration_batch_running({required Object batch}) =>
+      'Exporting ${batch}…';
+  @override
+  String migration_batch_done({required Object batch}) => '${batch} exported';
+  @override
+  String get migration_export_done =>
+      'Export complete. Open Fushi to import and verify.';
+  @override
+  String migration_export_failed({required Object error}) =>
+      'Export failed: ${error}';
+  @override
+  String get migration_readonly_note =>
+      'Your data has been exported to Fushi. This app is now read-only: use Fushi for reading and mining. You can re-export at any time if Fushi reports missing data.';
+  @override
+  String get migration_reexport => 'Re-export';
+  @override
+  String get migration_batch_core_label => 'Settings, progress & statistics';
 }
 
 // Path: <root>
@@ -111930,6 +112485,38 @@ class _StringsZhCn extends _StringsEn {
   @override
   String anki_connect_backend_switch_failed({required Object error}) =>
       '无法切换 Anki 后端：${error}';
+  @override
+  String get migration_settings_entry => '迁移到 Fushi';
+  @override
+  String get migration_settings_entry_subtitle => '把全部数据搬到新的 Fushi 应用';
+  @override
+  String get migration_intro =>
+      'Fushi 是本应用的新名字。迁移会把你的全部数据分批导出到中转目录，再由 Fushi 导入并逐项校验。在你卸载旧版之前，这里的数据原样保留。';
+  @override
+  String get migration_target_missing => '尚未安装 Fushi。请先安装 Fushi，再回到这里。';
+  @override
+  String get migration_download_fushi => '下载 Fushi';
+  @override
+  String get migration_start => '开始迁移';
+  @override
+  String get migration_open_fushi => '打开 Fushi';
+  @override
+  String get migration_include_local_audio => '一并导出本地发音库（体积可能很大）';
+  @override
+  String migration_batch_running({required Object batch}) => '正在导出 ${batch}…';
+  @override
+  String migration_batch_done({required Object batch}) => '${batch} 已导出';
+  @override
+  String get migration_export_done => '导出完成。打开 Fushi 完成导入与校验。';
+  @override
+  String migration_export_failed({required Object error}) => '导出失败：${error}';
+  @override
+  String get migration_readonly_note =>
+      '数据已导出到 Fushi。本应用已进入只读模式：请改用 Fushi 阅读和制卡。若 Fushi 校验发现缺失，可随时在此重新导出。';
+  @override
+  String get migration_reexport => '重新导出';
+  @override
+  String get migration_batch_core_label => '设置、进度与统计';
 }
 
 // Path: <root>
@@ -118932,6 +119519,44 @@ class _StringsZhHk extends _StringsEn {
   @override
   String anki_connect_backend_switch_failed({required Object error}) =>
       'Could not switch Anki backend: ${error}';
+  @override
+  String get migration_settings_entry => 'Migrate to Fushi';
+  @override
+  String get migration_settings_entry_subtitle =>
+      'Move all data to the new Fushi app';
+  @override
+  String get migration_intro =>
+      'Fushi is the new name of this app. Migration exports all your data in batches to a transfer folder, then Fushi imports and verifies it. Your data here stays untouched until you uninstall this app.';
+  @override
+  String get migration_target_missing =>
+      'Fushi is not installed yet. Install Fushi first, then return here.';
+  @override
+  String get migration_download_fushi => 'Get Fushi';
+  @override
+  String get migration_start => 'Start migration';
+  @override
+  String get migration_open_fushi => 'Open Fushi';
+  @override
+  String get migration_include_local_audio =>
+      'Also export local pronunciation audio (can be large)';
+  @override
+  String migration_batch_running({required Object batch}) =>
+      'Exporting ${batch}…';
+  @override
+  String migration_batch_done({required Object batch}) => '${batch} exported';
+  @override
+  String get migration_export_done =>
+      'Export complete. Open Fushi to import and verify.';
+  @override
+  String migration_export_failed({required Object error}) =>
+      'Export failed: ${error}';
+  @override
+  String get migration_readonly_note =>
+      'Your data has been exported to Fushi. This app is now read-only: use Fushi for reading and mining. You can re-export at any time if Fushi reports missing data.';
+  @override
+  String get migration_reexport => 'Re-export';
+  @override
+  String get migration_batch_core_label => 'Settings, progress & statistics';
 }
 
 /// Flat map(s) containing all translations.
@@ -125355,6 +125980,36 @@ extension on _StringsEn {
       case 'anki_connect_backend_switch_failed':
         return ({required Object error}) =>
             'Could not switch Anki backend: ${error}';
+      case 'migration_settings_entry':
+        return 'Migrate to Fushi';
+      case 'migration_settings_entry_subtitle':
+        return 'Move all data to the new Fushi app';
+      case 'migration_intro':
+        return 'Fushi is the new name of this app. Migration exports all your data in batches to a transfer folder, then Fushi imports and verifies it. Your data here stays untouched until you uninstall this app.';
+      case 'migration_target_missing':
+        return 'Fushi is not installed yet. Install Fushi first, then return here.';
+      case 'migration_download_fushi':
+        return 'Get Fushi';
+      case 'migration_start':
+        return 'Start migration';
+      case 'migration_open_fushi':
+        return 'Open Fushi';
+      case 'migration_include_local_audio':
+        return 'Also export local pronunciation audio (can be large)';
+      case 'migration_batch_running':
+        return ({required Object batch}) => 'Exporting ${batch}…';
+      case 'migration_batch_done':
+        return ({required Object batch}) => '${batch} exported';
+      case 'migration_export_done':
+        return 'Export complete. Open Fushi to import and verify.';
+      case 'migration_export_failed':
+        return ({required Object error}) => 'Export failed: ${error}';
+      case 'migration_readonly_note':
+        return 'Your data has been exported to Fushi. This app is now read-only: use Fushi for reading and mining. You can re-export at any time if Fushi reports missing data.';
+      case 'migration_reexport':
+        return 'Re-export';
+      case 'migration_batch_core_label':
+        return 'Settings, progress & statistics';
       default:
         return null;
     }
@@ -131776,6 +132431,36 @@ extension on _StringsAr {
       case 'anki_connect_backend_switch_failed':
         return ({required Object error}) =>
             'Could not switch Anki backend: ${error}';
+      case 'migration_settings_entry':
+        return 'Migrate to Fushi';
+      case 'migration_settings_entry_subtitle':
+        return 'Move all data to the new Fushi app';
+      case 'migration_intro':
+        return 'Fushi is the new name of this app. Migration exports all your data in batches to a transfer folder, then Fushi imports and verifies it. Your data here stays untouched until you uninstall this app.';
+      case 'migration_target_missing':
+        return 'Fushi is not installed yet. Install Fushi first, then return here.';
+      case 'migration_download_fushi':
+        return 'Get Fushi';
+      case 'migration_start':
+        return 'Start migration';
+      case 'migration_open_fushi':
+        return 'Open Fushi';
+      case 'migration_include_local_audio':
+        return 'Also export local pronunciation audio (can be large)';
+      case 'migration_batch_running':
+        return ({required Object batch}) => 'Exporting ${batch}…';
+      case 'migration_batch_done':
+        return ({required Object batch}) => '${batch} exported';
+      case 'migration_export_done':
+        return 'Export complete. Open Fushi to import and verify.';
+      case 'migration_export_failed':
+        return ({required Object error}) => 'Export failed: ${error}';
+      case 'migration_readonly_note':
+        return 'Your data has been exported to Fushi. This app is now read-only: use Fushi for reading and mining. You can re-export at any time if Fushi reports missing data.';
+      case 'migration_reexport':
+        return 'Re-export';
+      case 'migration_batch_core_label':
+        return 'Settings, progress & statistics';
       default:
         return null;
     }
@@ -138219,6 +138904,36 @@ extension on _StringsDe {
       case 'anki_connect_backend_switch_failed':
         return ({required Object error}) =>
             'Could not switch Anki backend: ${error}';
+      case 'migration_settings_entry':
+        return 'Migrate to Fushi';
+      case 'migration_settings_entry_subtitle':
+        return 'Move all data to the new Fushi app';
+      case 'migration_intro':
+        return 'Fushi is the new name of this app. Migration exports all your data in batches to a transfer folder, then Fushi imports and verifies it. Your data here stays untouched until you uninstall this app.';
+      case 'migration_target_missing':
+        return 'Fushi is not installed yet. Install Fushi first, then return here.';
+      case 'migration_download_fushi':
+        return 'Get Fushi';
+      case 'migration_start':
+        return 'Start migration';
+      case 'migration_open_fushi':
+        return 'Open Fushi';
+      case 'migration_include_local_audio':
+        return 'Also export local pronunciation audio (can be large)';
+      case 'migration_batch_running':
+        return ({required Object batch}) => 'Exporting ${batch}…';
+      case 'migration_batch_done':
+        return ({required Object batch}) => '${batch} exported';
+      case 'migration_export_done':
+        return 'Export complete. Open Fushi to import and verify.';
+      case 'migration_export_failed':
+        return ({required Object error}) => 'Export failed: ${error}';
+      case 'migration_readonly_note':
+        return 'Your data has been exported to Fushi. This app is now read-only: use Fushi for reading and mining. You can re-export at any time if Fushi reports missing data.';
+      case 'migration_reexport':
+        return 'Re-export';
+      case 'migration_batch_core_label':
+        return 'Settings, progress & statistics';
       default:
         return null;
     }
@@ -144661,6 +145376,36 @@ extension on _StringsEs {
       case 'anki_connect_backend_switch_failed':
         return ({required Object error}) =>
             'Could not switch Anki backend: ${error}';
+      case 'migration_settings_entry':
+        return 'Migrate to Fushi';
+      case 'migration_settings_entry_subtitle':
+        return 'Move all data to the new Fushi app';
+      case 'migration_intro':
+        return 'Fushi is the new name of this app. Migration exports all your data in batches to a transfer folder, then Fushi imports and verifies it. Your data here stays untouched until you uninstall this app.';
+      case 'migration_target_missing':
+        return 'Fushi is not installed yet. Install Fushi first, then return here.';
+      case 'migration_download_fushi':
+        return 'Get Fushi';
+      case 'migration_start':
+        return 'Start migration';
+      case 'migration_open_fushi':
+        return 'Open Fushi';
+      case 'migration_include_local_audio':
+        return 'Also export local pronunciation audio (can be large)';
+      case 'migration_batch_running':
+        return ({required Object batch}) => 'Exporting ${batch}…';
+      case 'migration_batch_done':
+        return ({required Object batch}) => '${batch} exported';
+      case 'migration_export_done':
+        return 'Export complete. Open Fushi to import and verify.';
+      case 'migration_export_failed':
+        return ({required Object error}) => 'Export failed: ${error}';
+      case 'migration_readonly_note':
+        return 'Your data has been exported to Fushi. This app is now read-only: use Fushi for reading and mining. You can re-export at any time if Fushi reports missing data.';
+      case 'migration_reexport':
+        return 'Re-export';
+      case 'migration_batch_core_label':
+        return 'Settings, progress & statistics';
       default:
         return null;
     }
@@ -151109,6 +151854,36 @@ extension on _StringsFr {
       case 'anki_connect_backend_switch_failed':
         return ({required Object error}) =>
             'Could not switch Anki backend: ${error}';
+      case 'migration_settings_entry':
+        return 'Migrate to Fushi';
+      case 'migration_settings_entry_subtitle':
+        return 'Move all data to the new Fushi app';
+      case 'migration_intro':
+        return 'Fushi is the new name of this app. Migration exports all your data in batches to a transfer folder, then Fushi imports and verifies it. Your data here stays untouched until you uninstall this app.';
+      case 'migration_target_missing':
+        return 'Fushi is not installed yet. Install Fushi first, then return here.';
+      case 'migration_download_fushi':
+        return 'Get Fushi';
+      case 'migration_start':
+        return 'Start migration';
+      case 'migration_open_fushi':
+        return 'Open Fushi';
+      case 'migration_include_local_audio':
+        return 'Also export local pronunciation audio (can be large)';
+      case 'migration_batch_running':
+        return ({required Object batch}) => 'Exporting ${batch}…';
+      case 'migration_batch_done':
+        return ({required Object batch}) => '${batch} exported';
+      case 'migration_export_done':
+        return 'Export complete. Open Fushi to import and verify.';
+      case 'migration_export_failed':
+        return ({required Object error}) => 'Export failed: ${error}';
+      case 'migration_readonly_note':
+        return 'Your data has been exported to Fushi. This app is now read-only: use Fushi for reading and mining. You can re-export at any time if Fushi reports missing data.';
+      case 'migration_reexport':
+        return 'Re-export';
+      case 'migration_batch_core_label':
+        return 'Settings, progress & statistics';
       default:
         return null;
     }
@@ -157539,6 +158314,36 @@ extension on _StringsId {
       case 'anki_connect_backend_switch_failed':
         return ({required Object error}) =>
             'Could not switch Anki backend: ${error}';
+      case 'migration_settings_entry':
+        return 'Migrate to Fushi';
+      case 'migration_settings_entry_subtitle':
+        return 'Move all data to the new Fushi app';
+      case 'migration_intro':
+        return 'Fushi is the new name of this app. Migration exports all your data in batches to a transfer folder, then Fushi imports and verifies it. Your data here stays untouched until you uninstall this app.';
+      case 'migration_target_missing':
+        return 'Fushi is not installed yet. Install Fushi first, then return here.';
+      case 'migration_download_fushi':
+        return 'Get Fushi';
+      case 'migration_start':
+        return 'Start migration';
+      case 'migration_open_fushi':
+        return 'Open Fushi';
+      case 'migration_include_local_audio':
+        return 'Also export local pronunciation audio (can be large)';
+      case 'migration_batch_running':
+        return ({required Object batch}) => 'Exporting ${batch}…';
+      case 'migration_batch_done':
+        return ({required Object batch}) => '${batch} exported';
+      case 'migration_export_done':
+        return 'Export complete. Open Fushi to import and verify.';
+      case 'migration_export_failed':
+        return ({required Object error}) => 'Export failed: ${error}';
+      case 'migration_readonly_note':
+        return 'Your data has been exported to Fushi. This app is now read-only: use Fushi for reading and mining. You can re-export at any time if Fushi reports missing data.';
+      case 'migration_reexport':
+        return 'Re-export';
+      case 'migration_batch_core_label':
+        return 'Settings, progress & statistics';
       default:
         return null;
     }
@@ -163983,6 +164788,36 @@ extension on _StringsIt {
       case 'anki_connect_backend_switch_failed':
         return ({required Object error}) =>
             'Could not switch Anki backend: ${error}';
+      case 'migration_settings_entry':
+        return 'Migrate to Fushi';
+      case 'migration_settings_entry_subtitle':
+        return 'Move all data to the new Fushi app';
+      case 'migration_intro':
+        return 'Fushi is the new name of this app. Migration exports all your data in batches to a transfer folder, then Fushi imports and verifies it. Your data here stays untouched until you uninstall this app.';
+      case 'migration_target_missing':
+        return 'Fushi is not installed yet. Install Fushi first, then return here.';
+      case 'migration_download_fushi':
+        return 'Get Fushi';
+      case 'migration_start':
+        return 'Start migration';
+      case 'migration_open_fushi':
+        return 'Open Fushi';
+      case 'migration_include_local_audio':
+        return 'Also export local pronunciation audio (can be large)';
+      case 'migration_batch_running':
+        return ({required Object batch}) => 'Exporting ${batch}…';
+      case 'migration_batch_done':
+        return ({required Object batch}) => '${batch} exported';
+      case 'migration_export_done':
+        return 'Export complete. Open Fushi to import and verify.';
+      case 'migration_export_failed':
+        return ({required Object error}) => 'Export failed: ${error}';
+      case 'migration_readonly_note':
+        return 'Your data has been exported to Fushi. This app is now read-only: use Fushi for reading and mining. You can re-export at any time if Fushi reports missing data.';
+      case 'migration_reexport':
+        return 'Re-export';
+      case 'migration_batch_core_label':
+        return 'Settings, progress & statistics';
       default:
         return null;
     }
@@ -170389,6 +171224,36 @@ extension on _StringsJa {
       case 'anki_connect_backend_switch_failed':
         return ({required Object error}) =>
             'Could not switch Anki backend: ${error}';
+      case 'migration_settings_entry':
+        return 'Migrate to Fushi';
+      case 'migration_settings_entry_subtitle':
+        return 'Move all data to the new Fushi app';
+      case 'migration_intro':
+        return 'Fushi is the new name of this app. Migration exports all your data in batches to a transfer folder, then Fushi imports and verifies it. Your data here stays untouched until you uninstall this app.';
+      case 'migration_target_missing':
+        return 'Fushi is not installed yet. Install Fushi first, then return here.';
+      case 'migration_download_fushi':
+        return 'Get Fushi';
+      case 'migration_start':
+        return 'Start migration';
+      case 'migration_open_fushi':
+        return 'Open Fushi';
+      case 'migration_include_local_audio':
+        return 'Also export local pronunciation audio (can be large)';
+      case 'migration_batch_running':
+        return ({required Object batch}) => 'Exporting ${batch}…';
+      case 'migration_batch_done':
+        return ({required Object batch}) => '${batch} exported';
+      case 'migration_export_done':
+        return 'Export complete. Open Fushi to import and verify.';
+      case 'migration_export_failed':
+        return ({required Object error}) => 'Export failed: ${error}';
+      case 'migration_readonly_note':
+        return 'Your data has been exported to Fushi. This app is now read-only: use Fushi for reading and mining. You can re-export at any time if Fushi reports missing data.';
+      case 'migration_reexport':
+        return 'Re-export';
+      case 'migration_batch_core_label':
+        return 'Settings, progress & statistics';
       default:
         return null;
     }
@@ -176799,6 +177664,36 @@ extension on _StringsKo {
       case 'anki_connect_backend_switch_failed':
         return ({required Object error}) =>
             'Could not switch Anki backend: ${error}';
+      case 'migration_settings_entry':
+        return 'Migrate to Fushi';
+      case 'migration_settings_entry_subtitle':
+        return 'Move all data to the new Fushi app';
+      case 'migration_intro':
+        return 'Fushi is the new name of this app. Migration exports all your data in batches to a transfer folder, then Fushi imports and verifies it. Your data here stays untouched until you uninstall this app.';
+      case 'migration_target_missing':
+        return 'Fushi is not installed yet. Install Fushi first, then return here.';
+      case 'migration_download_fushi':
+        return 'Get Fushi';
+      case 'migration_start':
+        return 'Start migration';
+      case 'migration_open_fushi':
+        return 'Open Fushi';
+      case 'migration_include_local_audio':
+        return 'Also export local pronunciation audio (can be large)';
+      case 'migration_batch_running':
+        return ({required Object batch}) => 'Exporting ${batch}…';
+      case 'migration_batch_done':
+        return ({required Object batch}) => '${batch} exported';
+      case 'migration_export_done':
+        return 'Export complete. Open Fushi to import and verify.';
+      case 'migration_export_failed':
+        return ({required Object error}) => 'Export failed: ${error}';
+      case 'migration_readonly_note':
+        return 'Your data has been exported to Fushi. This app is now read-only: use Fushi for reading and mining. You can re-export at any time if Fushi reports missing data.';
+      case 'migration_reexport':
+        return 'Re-export';
+      case 'migration_batch_core_label':
+        return 'Settings, progress & statistics';
       default:
         return null;
     }
@@ -183237,6 +184132,36 @@ extension on _StringsNl {
       case 'anki_connect_backend_switch_failed':
         return ({required Object error}) =>
             'Could not switch Anki backend: ${error}';
+      case 'migration_settings_entry':
+        return 'Migrate to Fushi';
+      case 'migration_settings_entry_subtitle':
+        return 'Move all data to the new Fushi app';
+      case 'migration_intro':
+        return 'Fushi is the new name of this app. Migration exports all your data in batches to a transfer folder, then Fushi imports and verifies it. Your data here stays untouched until you uninstall this app.';
+      case 'migration_target_missing':
+        return 'Fushi is not installed yet. Install Fushi first, then return here.';
+      case 'migration_download_fushi':
+        return 'Get Fushi';
+      case 'migration_start':
+        return 'Start migration';
+      case 'migration_open_fushi':
+        return 'Open Fushi';
+      case 'migration_include_local_audio':
+        return 'Also export local pronunciation audio (can be large)';
+      case 'migration_batch_running':
+        return ({required Object batch}) => 'Exporting ${batch}…';
+      case 'migration_batch_done':
+        return ({required Object batch}) => '${batch} exported';
+      case 'migration_export_done':
+        return 'Export complete. Open Fushi to import and verify.';
+      case 'migration_export_failed':
+        return ({required Object error}) => 'Export failed: ${error}';
+      case 'migration_readonly_note':
+        return 'Your data has been exported to Fushi. This app is now read-only: use Fushi for reading and mining. You can re-export at any time if Fushi reports missing data.';
+      case 'migration_reexport':
+        return 'Re-export';
+      case 'migration_batch_core_label':
+        return 'Settings, progress & statistics';
       default:
         return null;
     }
@@ -189672,6 +190597,36 @@ extension on _StringsPtBr {
       case 'anki_connect_backend_switch_failed':
         return ({required Object error}) =>
             'Could not switch Anki backend: ${error}';
+      case 'migration_settings_entry':
+        return 'Migrate to Fushi';
+      case 'migration_settings_entry_subtitle':
+        return 'Move all data to the new Fushi app';
+      case 'migration_intro':
+        return 'Fushi is the new name of this app. Migration exports all your data in batches to a transfer folder, then Fushi imports and verifies it. Your data here stays untouched until you uninstall this app.';
+      case 'migration_target_missing':
+        return 'Fushi is not installed yet. Install Fushi first, then return here.';
+      case 'migration_download_fushi':
+        return 'Get Fushi';
+      case 'migration_start':
+        return 'Start migration';
+      case 'migration_open_fushi':
+        return 'Open Fushi';
+      case 'migration_include_local_audio':
+        return 'Also export local pronunciation audio (can be large)';
+      case 'migration_batch_running':
+        return ({required Object batch}) => 'Exporting ${batch}…';
+      case 'migration_batch_done':
+        return ({required Object batch}) => '${batch} exported';
+      case 'migration_export_done':
+        return 'Export complete. Open Fushi to import and verify.';
+      case 'migration_export_failed':
+        return ({required Object error}) => 'Export failed: ${error}';
+      case 'migration_readonly_note':
+        return 'Your data has been exported to Fushi. This app is now read-only: use Fushi for reading and mining. You can re-export at any time if Fushi reports missing data.';
+      case 'migration_reexport':
+        return 'Re-export';
+      case 'migration_batch_core_label':
+        return 'Settings, progress & statistics';
       default:
         return null;
     }
@@ -196112,6 +197067,36 @@ extension on _StringsRu {
       case 'anki_connect_backend_switch_failed':
         return ({required Object error}) =>
             'Could not switch Anki backend: ${error}';
+      case 'migration_settings_entry':
+        return 'Migrate to Fushi';
+      case 'migration_settings_entry_subtitle':
+        return 'Move all data to the new Fushi app';
+      case 'migration_intro':
+        return 'Fushi is the new name of this app. Migration exports all your data in batches to a transfer folder, then Fushi imports and verifies it. Your data here stays untouched until you uninstall this app.';
+      case 'migration_target_missing':
+        return 'Fushi is not installed yet. Install Fushi first, then return here.';
+      case 'migration_download_fushi':
+        return 'Get Fushi';
+      case 'migration_start':
+        return 'Start migration';
+      case 'migration_open_fushi':
+        return 'Open Fushi';
+      case 'migration_include_local_audio':
+        return 'Also export local pronunciation audio (can be large)';
+      case 'migration_batch_running':
+        return ({required Object batch}) => 'Exporting ${batch}…';
+      case 'migration_batch_done':
+        return ({required Object batch}) => '${batch} exported';
+      case 'migration_export_done':
+        return 'Export complete. Open Fushi to import and verify.';
+      case 'migration_export_failed':
+        return ({required Object error}) => 'Export failed: ${error}';
+      case 'migration_readonly_note':
+        return 'Your data has been exported to Fushi. This app is now read-only: use Fushi for reading and mining. You can re-export at any time if Fushi reports missing data.';
+      case 'migration_reexport':
+        return 'Re-export';
+      case 'migration_batch_core_label':
+        return 'Settings, progress & statistics';
       default:
         return null;
     }
@@ -202535,6 +203520,36 @@ extension on _StringsTh {
       case 'anki_connect_backend_switch_failed':
         return ({required Object error}) =>
             'Could not switch Anki backend: ${error}';
+      case 'migration_settings_entry':
+        return 'Migrate to Fushi';
+      case 'migration_settings_entry_subtitle':
+        return 'Move all data to the new Fushi app';
+      case 'migration_intro':
+        return 'Fushi is the new name of this app. Migration exports all your data in batches to a transfer folder, then Fushi imports and verifies it. Your data here stays untouched until you uninstall this app.';
+      case 'migration_target_missing':
+        return 'Fushi is not installed yet. Install Fushi first, then return here.';
+      case 'migration_download_fushi':
+        return 'Get Fushi';
+      case 'migration_start':
+        return 'Start migration';
+      case 'migration_open_fushi':
+        return 'Open Fushi';
+      case 'migration_include_local_audio':
+        return 'Also export local pronunciation audio (can be large)';
+      case 'migration_batch_running':
+        return ({required Object batch}) => 'Exporting ${batch}…';
+      case 'migration_batch_done':
+        return ({required Object batch}) => '${batch} exported';
+      case 'migration_export_done':
+        return 'Export complete. Open Fushi to import and verify.';
+      case 'migration_export_failed':
+        return ({required Object error}) => 'Export failed: ${error}';
+      case 'migration_readonly_note':
+        return 'Your data has been exported to Fushi. This app is now read-only: use Fushi for reading and mining. You can re-export at any time if Fushi reports missing data.';
+      case 'migration_reexport':
+        return 'Re-export';
+      case 'migration_batch_core_label':
+        return 'Settings, progress & statistics';
       default:
         return null;
     }
@@ -208967,6 +209982,36 @@ extension on _StringsTr {
       case 'anki_connect_backend_switch_failed':
         return ({required Object error}) =>
             'Could not switch Anki backend: ${error}';
+      case 'migration_settings_entry':
+        return 'Migrate to Fushi';
+      case 'migration_settings_entry_subtitle':
+        return 'Move all data to the new Fushi app';
+      case 'migration_intro':
+        return 'Fushi is the new name of this app. Migration exports all your data in batches to a transfer folder, then Fushi imports and verifies it. Your data here stays untouched until you uninstall this app.';
+      case 'migration_target_missing':
+        return 'Fushi is not installed yet. Install Fushi first, then return here.';
+      case 'migration_download_fushi':
+        return 'Get Fushi';
+      case 'migration_start':
+        return 'Start migration';
+      case 'migration_open_fushi':
+        return 'Open Fushi';
+      case 'migration_include_local_audio':
+        return 'Also export local pronunciation audio (can be large)';
+      case 'migration_batch_running':
+        return ({required Object batch}) => 'Exporting ${batch}…';
+      case 'migration_batch_done':
+        return ({required Object batch}) => '${batch} exported';
+      case 'migration_export_done':
+        return 'Export complete. Open Fushi to import and verify.';
+      case 'migration_export_failed':
+        return ({required Object error}) => 'Export failed: ${error}';
+      case 'migration_readonly_note':
+        return 'Your data has been exported to Fushi. This app is now read-only: use Fushi for reading and mining. You can re-export at any time if Fushi reports missing data.';
+      case 'migration_reexport':
+        return 'Re-export';
+      case 'migration_batch_core_label':
+        return 'Settings, progress & statistics';
       default:
         return null;
     }
@@ -215395,6 +216440,36 @@ extension on _StringsVi {
       case 'anki_connect_backend_switch_failed':
         return ({required Object error}) =>
             'Could not switch Anki backend: ${error}';
+      case 'migration_settings_entry':
+        return 'Migrate to Fushi';
+      case 'migration_settings_entry_subtitle':
+        return 'Move all data to the new Fushi app';
+      case 'migration_intro':
+        return 'Fushi is the new name of this app. Migration exports all your data in batches to a transfer folder, then Fushi imports and verifies it. Your data here stays untouched until you uninstall this app.';
+      case 'migration_target_missing':
+        return 'Fushi is not installed yet. Install Fushi first, then return here.';
+      case 'migration_download_fushi':
+        return 'Get Fushi';
+      case 'migration_start':
+        return 'Start migration';
+      case 'migration_open_fushi':
+        return 'Open Fushi';
+      case 'migration_include_local_audio':
+        return 'Also export local pronunciation audio (can be large)';
+      case 'migration_batch_running':
+        return ({required Object batch}) => 'Exporting ${batch}…';
+      case 'migration_batch_done':
+        return ({required Object batch}) => '${batch} exported';
+      case 'migration_export_done':
+        return 'Export complete. Open Fushi to import and verify.';
+      case 'migration_export_failed':
+        return ({required Object error}) => 'Export failed: ${error}';
+      case 'migration_readonly_note':
+        return 'Your data has been exported to Fushi. This app is now read-only: use Fushi for reading and mining. You can re-export at any time if Fushi reports missing data.';
+      case 'migration_reexport':
+        return 'Re-export';
+      case 'migration_batch_core_label':
+        return 'Settings, progress & statistics';
       default:
         return null;
     }
@@ -221768,6 +222843,36 @@ extension on _StringsZhCn {
         return '请先配置匹配的 AnkiConnect API key，再启用 Android 后端。';
       case 'anki_connect_backend_switch_failed':
         return ({required Object error}) => '无法切换 Anki 后端：${error}';
+      case 'migration_settings_entry':
+        return '迁移到 Fushi';
+      case 'migration_settings_entry_subtitle':
+        return '把全部数据搬到新的 Fushi 应用';
+      case 'migration_intro':
+        return 'Fushi 是本应用的新名字。迁移会把你的全部数据分批导出到中转目录，再由 Fushi 导入并逐项校验。在你卸载旧版之前，这里的数据原样保留。';
+      case 'migration_target_missing':
+        return '尚未安装 Fushi。请先安装 Fushi，再回到这里。';
+      case 'migration_download_fushi':
+        return '下载 Fushi';
+      case 'migration_start':
+        return '开始迁移';
+      case 'migration_open_fushi':
+        return '打开 Fushi';
+      case 'migration_include_local_audio':
+        return '一并导出本地发音库（体积可能很大）';
+      case 'migration_batch_running':
+        return ({required Object batch}) => '正在导出 ${batch}…';
+      case 'migration_batch_done':
+        return ({required Object batch}) => '${batch} 已导出';
+      case 'migration_export_done':
+        return '导出完成。打开 Fushi 完成导入与校验。';
+      case 'migration_export_failed':
+        return ({required Object error}) => '导出失败：${error}';
+      case 'migration_readonly_note':
+        return '数据已导出到 Fushi。本应用已进入只读模式：请改用 Fushi 阅读和制卡。若 Fushi 校验发现缺失，可随时在此重新导出。';
+      case 'migration_reexport':
+        return '重新导出';
+      case 'migration_batch_core_label':
+        return '设置、进度与统计';
       default:
         return null;
     }
@@ -228169,6 +229274,36 @@ extension on _StringsZhHk {
       case 'anki_connect_backend_switch_failed':
         return ({required Object error}) =>
             'Could not switch Anki backend: ${error}';
+      case 'migration_settings_entry':
+        return 'Migrate to Fushi';
+      case 'migration_settings_entry_subtitle':
+        return 'Move all data to the new Fushi app';
+      case 'migration_intro':
+        return 'Fushi is the new name of this app. Migration exports all your data in batches to a transfer folder, then Fushi imports and verifies it. Your data here stays untouched until you uninstall this app.';
+      case 'migration_target_missing':
+        return 'Fushi is not installed yet. Install Fushi first, then return here.';
+      case 'migration_download_fushi':
+        return 'Get Fushi';
+      case 'migration_start':
+        return 'Start migration';
+      case 'migration_open_fushi':
+        return 'Open Fushi';
+      case 'migration_include_local_audio':
+        return 'Also export local pronunciation audio (can be large)';
+      case 'migration_batch_running':
+        return ({required Object batch}) => 'Exporting ${batch}…';
+      case 'migration_batch_done':
+        return ({required Object batch}) => '${batch} exported';
+      case 'migration_export_done':
+        return 'Export complete. Open Fushi to import and verify.';
+      case 'migration_export_failed':
+        return ({required Object error}) => 'Export failed: ${error}';
+      case 'migration_readonly_note':
+        return 'Your data has been exported to Fushi. This app is now read-only: use Fushi for reading and mining. You can re-export at any time if Fushi reports missing data.';
+      case 'migration_reexport':
+        return 'Re-export';
+      case 'migration_batch_core_label':
+        return 'Settings, progress & statistics';
       default:
         return null;
     }
