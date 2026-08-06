@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 53482 (3146 per locale)
+/// Strings: 53686 (3158 per locale)
 ///
-/// Built on 2026-08-06 at 19:29 UTC
+/// Built on 2026-08-06 at 20:21 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -4237,6 +4237,27 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Your data has been exported to Fushi. This app is now read-only: use Fushi for reading and mining. You can re-export at any time if Fushi reports missing data.';
   String get migration_reexport => 'Re-export';
   String get migration_batch_core_label => 'Settings, progress & statistics';
+  String get migration_import_entry => 'Import from Hibiki';
+  String get migration_import_entry_subtitle =>
+      'Import data exported by the old Hibiki app';
+  String get migration_import_detected =>
+      'Hibiki migration data detected. Import it now?';
+  String get migration_import_start => 'Start import';
+  String migration_import_running({required Object batch}) =>
+      'Importing ${batch}…';
+  String migration_import_verify_failed(
+          {required Object batch, required Object detail}) =>
+      '${batch} failed verification and was kept for re-export: ${detail}';
+  String migration_import_counts_failed({required Object detail}) =>
+      'Imported data is incomplete: ${detail}. Re-export the missing parts from Hibiki, then import again.';
+  String get migration_import_success => 'Import complete and verified.';
+  String get migration_import_nothing =>
+      'No migration data found in the transfer folder.';
+  String get migration_uninstall_prompt =>
+      'Migration finished. Uninstall the old Hibiki app?';
+  String get migration_uninstall_button => 'Uninstall Hibiki';
+  String get migration_uninstall_still_installed =>
+      'Hibiki is still installed. You can uninstall it any time.';
 }
 
 // Path: <root>
@@ -11469,6 +11490,39 @@ class _StringsAr extends _StringsEn {
   String get migration_reexport => 'Re-export';
   @override
   String get migration_batch_core_label => 'Settings, progress & statistics';
+  @override
+  String get migration_import_entry => 'Import from Hibiki';
+  @override
+  String get migration_import_entry_subtitle =>
+      'Import data exported by the old Hibiki app';
+  @override
+  String get migration_import_detected =>
+      'Hibiki migration data detected. Import it now?';
+  @override
+  String get migration_import_start => 'Start import';
+  @override
+  String migration_import_running({required Object batch}) =>
+      'Importing ${batch}…';
+  @override
+  String migration_import_verify_failed(
+          {required Object batch, required Object detail}) =>
+      '${batch} failed verification and was kept for re-export: ${detail}';
+  @override
+  String migration_import_counts_failed({required Object detail}) =>
+      'Imported data is incomplete: ${detail}. Re-export the missing parts from Hibiki, then import again.';
+  @override
+  String get migration_import_success => 'Import complete and verified.';
+  @override
+  String get migration_import_nothing =>
+      'No migration data found in the transfer folder.';
+  @override
+  String get migration_uninstall_prompt =>
+      'Migration finished. Uninstall the old Hibiki app?';
+  @override
+  String get migration_uninstall_button => 'Uninstall Hibiki';
+  @override
+  String get migration_uninstall_still_installed =>
+      'Hibiki is still installed. You can uninstall it any time.';
 }
 
 // Path: <root>
@@ -18768,6 +18822,39 @@ class _StringsDe extends _StringsEn {
   String get migration_reexport => 'Re-export';
   @override
   String get migration_batch_core_label => 'Settings, progress & statistics';
+  @override
+  String get migration_import_entry => 'Import from Hibiki';
+  @override
+  String get migration_import_entry_subtitle =>
+      'Import data exported by the old Hibiki app';
+  @override
+  String get migration_import_detected =>
+      'Hibiki migration data detected. Import it now?';
+  @override
+  String get migration_import_start => 'Start import';
+  @override
+  String migration_import_running({required Object batch}) =>
+      'Importing ${batch}…';
+  @override
+  String migration_import_verify_failed(
+          {required Object batch, required Object detail}) =>
+      '${batch} failed verification and was kept for re-export: ${detail}';
+  @override
+  String migration_import_counts_failed({required Object detail}) =>
+      'Imported data is incomplete: ${detail}. Re-export the missing parts from Hibiki, then import again.';
+  @override
+  String get migration_import_success => 'Import complete and verified.';
+  @override
+  String get migration_import_nothing =>
+      'No migration data found in the transfer folder.';
+  @override
+  String get migration_uninstall_prompt =>
+      'Migration finished. Uninstall the old Hibiki app?';
+  @override
+  String get migration_uninstall_button => 'Uninstall Hibiki';
+  @override
+  String get migration_uninstall_still_installed =>
+      'Hibiki is still installed. You can uninstall it any time.';
 }
 
 // Path: <root>
@@ -26082,6 +26169,39 @@ class _StringsEs extends _StringsEn {
   String get migration_reexport => 'Re-export';
   @override
   String get migration_batch_core_label => 'Settings, progress & statistics';
+  @override
+  String get migration_import_entry => 'Import from Hibiki';
+  @override
+  String get migration_import_entry_subtitle =>
+      'Import data exported by the old Hibiki app';
+  @override
+  String get migration_import_detected =>
+      'Hibiki migration data detected. Import it now?';
+  @override
+  String get migration_import_start => 'Start import';
+  @override
+  String migration_import_running({required Object batch}) =>
+      'Importing ${batch}…';
+  @override
+  String migration_import_verify_failed(
+          {required Object batch, required Object detail}) =>
+      '${batch} failed verification and was kept for re-export: ${detail}';
+  @override
+  String migration_import_counts_failed({required Object detail}) =>
+      'Imported data is incomplete: ${detail}. Re-export the missing parts from Hibiki, then import again.';
+  @override
+  String get migration_import_success => 'Import complete and verified.';
+  @override
+  String get migration_import_nothing =>
+      'No migration data found in the transfer folder.';
+  @override
+  String get migration_uninstall_prompt =>
+      'Migration finished. Uninstall the old Hibiki app?';
+  @override
+  String get migration_uninstall_button => 'Uninstall Hibiki';
+  @override
+  String get migration_uninstall_still_installed =>
+      'Hibiki is still installed. You can uninstall it any time.';
 }
 
 // Path: <root>
@@ -33408,6 +33528,39 @@ class _StringsFr extends _StringsEn {
   String get migration_reexport => 'Re-export';
   @override
   String get migration_batch_core_label => 'Settings, progress & statistics';
+  @override
+  String get migration_import_entry => 'Import from Hibiki';
+  @override
+  String get migration_import_entry_subtitle =>
+      'Import data exported by the old Hibiki app';
+  @override
+  String get migration_import_detected =>
+      'Hibiki migration data detected. Import it now?';
+  @override
+  String get migration_import_start => 'Start import';
+  @override
+  String migration_import_running({required Object batch}) =>
+      'Importing ${batch}…';
+  @override
+  String migration_import_verify_failed(
+          {required Object batch, required Object detail}) =>
+      '${batch} failed verification and was kept for re-export: ${detail}';
+  @override
+  String migration_import_counts_failed({required Object detail}) =>
+      'Imported data is incomplete: ${detail}. Re-export the missing parts from Hibiki, then import again.';
+  @override
+  String get migration_import_success => 'Import complete and verified.';
+  @override
+  String get migration_import_nothing =>
+      'No migration data found in the transfer folder.';
+  @override
+  String get migration_uninstall_prompt =>
+      'Migration finished. Uninstall the old Hibiki app?';
+  @override
+  String get migration_uninstall_button => 'Uninstall Hibiki';
+  @override
+  String get migration_uninstall_still_installed =>
+      'Hibiki is still installed. You can uninstall it any time.';
 }
 
 // Path: <root>
@@ -40663,6 +40816,39 @@ class _StringsId extends _StringsEn {
   String get migration_reexport => 'Re-export';
   @override
   String get migration_batch_core_label => 'Settings, progress & statistics';
+  @override
+  String get migration_import_entry => 'Import from Hibiki';
+  @override
+  String get migration_import_entry_subtitle =>
+      'Import data exported by the old Hibiki app';
+  @override
+  String get migration_import_detected =>
+      'Hibiki migration data detected. Import it now?';
+  @override
+  String get migration_import_start => 'Start import';
+  @override
+  String migration_import_running({required Object batch}) =>
+      'Importing ${batch}…';
+  @override
+  String migration_import_verify_failed(
+          {required Object batch, required Object detail}) =>
+      '${batch} failed verification and was kept for re-export: ${detail}';
+  @override
+  String migration_import_counts_failed({required Object detail}) =>
+      'Imported data is incomplete: ${detail}. Re-export the missing parts from Hibiki, then import again.';
+  @override
+  String get migration_import_success => 'Import complete and verified.';
+  @override
+  String get migration_import_nothing =>
+      'No migration data found in the transfer folder.';
+  @override
+  String get migration_uninstall_prompt =>
+      'Migration finished. Uninstall the old Hibiki app?';
+  @override
+  String get migration_uninstall_button => 'Uninstall Hibiki';
+  @override
+  String get migration_uninstall_still_installed =>
+      'Hibiki is still installed. You can uninstall it any time.';
 }
 
 // Path: <root>
@@ -47964,6 +48150,39 @@ class _StringsIt extends _StringsEn {
   String get migration_reexport => 'Re-export';
   @override
   String get migration_batch_core_label => 'Settings, progress & statistics';
+  @override
+  String get migration_import_entry => 'Import from Hibiki';
+  @override
+  String get migration_import_entry_subtitle =>
+      'Import data exported by the old Hibiki app';
+  @override
+  String get migration_import_detected =>
+      'Hibiki migration data detected. Import it now?';
+  @override
+  String get migration_import_start => 'Start import';
+  @override
+  String migration_import_running({required Object batch}) =>
+      'Importing ${batch}…';
+  @override
+  String migration_import_verify_failed(
+          {required Object batch, required Object detail}) =>
+      '${batch} failed verification and was kept for re-export: ${detail}';
+  @override
+  String migration_import_counts_failed({required Object detail}) =>
+      'Imported data is incomplete: ${detail}. Re-export the missing parts from Hibiki, then import again.';
+  @override
+  String get migration_import_success => 'Import complete and verified.';
+  @override
+  String get migration_import_nothing =>
+      'No migration data found in the transfer folder.';
+  @override
+  String get migration_uninstall_prompt =>
+      'Migration finished. Uninstall the old Hibiki app?';
+  @override
+  String get migration_uninstall_button => 'Uninstall Hibiki';
+  @override
+  String get migration_uninstall_still_installed =>
+      'Hibiki is still installed. You can uninstall it any time.';
 }
 
 // Path: <root>
@@ -55082,6 +55301,39 @@ class _StringsJa extends _StringsEn {
   String get migration_reexport => 'Re-export';
   @override
   String get migration_batch_core_label => 'Settings, progress & statistics';
+  @override
+  String get migration_import_entry => 'Import from Hibiki';
+  @override
+  String get migration_import_entry_subtitle =>
+      'Import data exported by the old Hibiki app';
+  @override
+  String get migration_import_detected =>
+      'Hibiki migration data detected. Import it now?';
+  @override
+  String get migration_import_start => 'Start import';
+  @override
+  String migration_import_running({required Object batch}) =>
+      'Importing ${batch}…';
+  @override
+  String migration_import_verify_failed(
+          {required Object batch, required Object detail}) =>
+      '${batch} failed verification and was kept for re-export: ${detail}';
+  @override
+  String migration_import_counts_failed({required Object detail}) =>
+      'Imported data is incomplete: ${detail}. Re-export the missing parts from Hibiki, then import again.';
+  @override
+  String get migration_import_success => 'Import complete and verified.';
+  @override
+  String get migration_import_nothing =>
+      'No migration data found in the transfer folder.';
+  @override
+  String get migration_uninstall_prompt =>
+      'Migration finished. Uninstall the old Hibiki app?';
+  @override
+  String get migration_uninstall_button => 'Uninstall Hibiki';
+  @override
+  String get migration_uninstall_still_installed =>
+      'Hibiki is still installed. You can uninstall it any time.';
 }
 
 // Path: <root>
@@ -62204,6 +62456,39 @@ class _StringsKo extends _StringsEn {
   String get migration_reexport => 'Re-export';
   @override
   String get migration_batch_core_label => 'Settings, progress & statistics';
+  @override
+  String get migration_import_entry => 'Import from Hibiki';
+  @override
+  String get migration_import_entry_subtitle =>
+      'Import data exported by the old Hibiki app';
+  @override
+  String get migration_import_detected =>
+      'Hibiki migration data detected. Import it now?';
+  @override
+  String get migration_import_start => 'Start import';
+  @override
+  String migration_import_running({required Object batch}) =>
+      'Importing ${batch}…';
+  @override
+  String migration_import_verify_failed(
+          {required Object batch, required Object detail}) =>
+      '${batch} failed verification and was kept for re-export: ${detail}';
+  @override
+  String migration_import_counts_failed({required Object detail}) =>
+      'Imported data is incomplete: ${detail}. Re-export the missing parts from Hibiki, then import again.';
+  @override
+  String get migration_import_success => 'Import complete and verified.';
+  @override
+  String get migration_import_nothing =>
+      'No migration data found in the transfer folder.';
+  @override
+  String get migration_uninstall_prompt =>
+      'Migration finished. Uninstall the old Hibiki app?';
+  @override
+  String get migration_uninstall_button => 'Uninstall Hibiki';
+  @override
+  String get migration_uninstall_still_installed =>
+      'Hibiki is still installed. You can uninstall it any time.';
 }
 
 // Path: <root>
@@ -69485,6 +69770,39 @@ class _StringsNl extends _StringsEn {
   String get migration_reexport => 'Re-export';
   @override
   String get migration_batch_core_label => 'Settings, progress & statistics';
+  @override
+  String get migration_import_entry => 'Import from Hibiki';
+  @override
+  String get migration_import_entry_subtitle =>
+      'Import data exported by the old Hibiki app';
+  @override
+  String get migration_import_detected =>
+      'Hibiki migration data detected. Import it now?';
+  @override
+  String get migration_import_start => 'Start import';
+  @override
+  String migration_import_running({required Object batch}) =>
+      'Importing ${batch}…';
+  @override
+  String migration_import_verify_failed(
+          {required Object batch, required Object detail}) =>
+      '${batch} failed verification and was kept for re-export: ${detail}';
+  @override
+  String migration_import_counts_failed({required Object detail}) =>
+      'Imported data is incomplete: ${detail}. Re-export the missing parts from Hibiki, then import again.';
+  @override
+  String get migration_import_success => 'Import complete and verified.';
+  @override
+  String get migration_import_nothing =>
+      'No migration data found in the transfer folder.';
+  @override
+  String get migration_uninstall_prompt =>
+      'Migration finished. Uninstall the old Hibiki app?';
+  @override
+  String get migration_uninstall_button => 'Uninstall Hibiki';
+  @override
+  String get migration_uninstall_still_installed =>
+      'Hibiki is still installed. You can uninstall it any time.';
 }
 
 // Path: <root>
@@ -76779,6 +77097,39 @@ class _StringsPtBr extends _StringsEn {
   String get migration_reexport => 'Re-export';
   @override
   String get migration_batch_core_label => 'Settings, progress & statistics';
+  @override
+  String get migration_import_entry => 'Import from Hibiki';
+  @override
+  String get migration_import_entry_subtitle =>
+      'Import data exported by the old Hibiki app';
+  @override
+  String get migration_import_detected =>
+      'Hibiki migration data detected. Import it now?';
+  @override
+  String get migration_import_start => 'Start import';
+  @override
+  String migration_import_running({required Object batch}) =>
+      'Importing ${batch}…';
+  @override
+  String migration_import_verify_failed(
+          {required Object batch, required Object detail}) =>
+      '${batch} failed verification and was kept for re-export: ${detail}';
+  @override
+  String migration_import_counts_failed({required Object detail}) =>
+      'Imported data is incomplete: ${detail}. Re-export the missing parts from Hibiki, then import again.';
+  @override
+  String get migration_import_success => 'Import complete and verified.';
+  @override
+  String get migration_import_nothing =>
+      'No migration data found in the transfer folder.';
+  @override
+  String get migration_uninstall_prompt =>
+      'Migration finished. Uninstall the old Hibiki app?';
+  @override
+  String get migration_uninstall_button => 'Uninstall Hibiki';
+  @override
+  String get migration_uninstall_still_installed =>
+      'Hibiki is still installed. You can uninstall it any time.';
 }
 
 // Path: <root>
@@ -84057,6 +84408,39 @@ class _StringsRu extends _StringsEn {
   String get migration_reexport => 'Re-export';
   @override
   String get migration_batch_core_label => 'Settings, progress & statistics';
+  @override
+  String get migration_import_entry => 'Import from Hibiki';
+  @override
+  String get migration_import_entry_subtitle =>
+      'Import data exported by the old Hibiki app';
+  @override
+  String get migration_import_detected =>
+      'Hibiki migration data detected. Import it now?';
+  @override
+  String get migration_import_start => 'Start import';
+  @override
+  String migration_import_running({required Object batch}) =>
+      'Importing ${batch}…';
+  @override
+  String migration_import_verify_failed(
+          {required Object batch, required Object detail}) =>
+      '${batch} failed verification and was kept for re-export: ${detail}';
+  @override
+  String migration_import_counts_failed({required Object detail}) =>
+      'Imported data is incomplete: ${detail}. Re-export the missing parts from Hibiki, then import again.';
+  @override
+  String get migration_import_success => 'Import complete and verified.';
+  @override
+  String get migration_import_nothing =>
+      'No migration data found in the transfer folder.';
+  @override
+  String get migration_uninstall_prompt =>
+      'Migration finished. Uninstall the old Hibiki app?';
+  @override
+  String get migration_uninstall_button => 'Uninstall Hibiki';
+  @override
+  String get migration_uninstall_still_installed =>
+      'Hibiki is still installed. You can uninstall it any time.';
 }
 
 // Path: <root>
@@ -91283,6 +91667,39 @@ class _StringsTh extends _StringsEn {
   String get migration_reexport => 'Re-export';
   @override
   String get migration_batch_core_label => 'Settings, progress & statistics';
+  @override
+  String get migration_import_entry => 'Import from Hibiki';
+  @override
+  String get migration_import_entry_subtitle =>
+      'Import data exported by the old Hibiki app';
+  @override
+  String get migration_import_detected =>
+      'Hibiki migration data detected. Import it now?';
+  @override
+  String get migration_import_start => 'Start import';
+  @override
+  String migration_import_running({required Object batch}) =>
+      'Importing ${batch}…';
+  @override
+  String migration_import_verify_failed(
+          {required Object batch, required Object detail}) =>
+      '${batch} failed verification and was kept for re-export: ${detail}';
+  @override
+  String migration_import_counts_failed({required Object detail}) =>
+      'Imported data is incomplete: ${detail}. Re-export the missing parts from Hibiki, then import again.';
+  @override
+  String get migration_import_success => 'Import complete and verified.';
+  @override
+  String get migration_import_nothing =>
+      'No migration data found in the transfer folder.';
+  @override
+  String get migration_uninstall_prompt =>
+      'Migration finished. Uninstall the old Hibiki app?';
+  @override
+  String get migration_uninstall_button => 'Uninstall Hibiki';
+  @override
+  String get migration_uninstall_still_installed =>
+      'Hibiki is still installed. You can uninstall it any time.';
 }
 
 // Path: <root>
@@ -98541,6 +98958,39 @@ class _StringsTr extends _StringsEn {
   String get migration_reexport => 'Re-export';
   @override
   String get migration_batch_core_label => 'Settings, progress & statistics';
+  @override
+  String get migration_import_entry => 'Import from Hibiki';
+  @override
+  String get migration_import_entry_subtitle =>
+      'Import data exported by the old Hibiki app';
+  @override
+  String get migration_import_detected =>
+      'Hibiki migration data detected. Import it now?';
+  @override
+  String get migration_import_start => 'Start import';
+  @override
+  String migration_import_running({required Object batch}) =>
+      'Importing ${batch}…';
+  @override
+  String migration_import_verify_failed(
+          {required Object batch, required Object detail}) =>
+      '${batch} failed verification and was kept for re-export: ${detail}';
+  @override
+  String migration_import_counts_failed({required Object detail}) =>
+      'Imported data is incomplete: ${detail}. Re-export the missing parts from Hibiki, then import again.';
+  @override
+  String get migration_import_success => 'Import complete and verified.';
+  @override
+  String get migration_import_nothing =>
+      'No migration data found in the transfer folder.';
+  @override
+  String get migration_uninstall_prompt =>
+      'Migration finished. Uninstall the old Hibiki app?';
+  @override
+  String get migration_uninstall_button => 'Uninstall Hibiki';
+  @override
+  String get migration_uninstall_still_installed =>
+      'Hibiki is still installed. You can uninstall it any time.';
 }
 
 // Path: <root>
@@ -105784,6 +106234,39 @@ class _StringsVi extends _StringsEn {
   String get migration_reexport => 'Re-export';
   @override
   String get migration_batch_core_label => 'Settings, progress & statistics';
+  @override
+  String get migration_import_entry => 'Import from Hibiki';
+  @override
+  String get migration_import_entry_subtitle =>
+      'Import data exported by the old Hibiki app';
+  @override
+  String get migration_import_detected =>
+      'Hibiki migration data detected. Import it now?';
+  @override
+  String get migration_import_start => 'Start import';
+  @override
+  String migration_import_running({required Object batch}) =>
+      'Importing ${batch}…';
+  @override
+  String migration_import_verify_failed(
+          {required Object batch, required Object detail}) =>
+      '${batch} failed verification and was kept for re-export: ${detail}';
+  @override
+  String migration_import_counts_failed({required Object detail}) =>
+      'Imported data is incomplete: ${detail}. Re-export the missing parts from Hibiki, then import again.';
+  @override
+  String get migration_import_success => 'Import complete and verified.';
+  @override
+  String get migration_import_nothing =>
+      'No migration data found in the transfer folder.';
+  @override
+  String get migration_uninstall_prompt =>
+      'Migration finished. Uninstall the old Hibiki app?';
+  @override
+  String get migration_uninstall_button => 'Uninstall Hibiki';
+  @override
+  String get migration_uninstall_still_installed =>
+      'Hibiki is still installed. You can uninstall it any time.';
 }
 
 // Path: <root>
@@ -112517,6 +113000,33 @@ class _StringsZhCn extends _StringsEn {
   String get migration_reexport => '重新导出';
   @override
   String get migration_batch_core_label => '设置、进度与统计';
+  @override
+  String get migration_import_entry => '从 Hibiki 导入';
+  @override
+  String get migration_import_entry_subtitle => '导入旧版 Hibiki 导出的数据';
+  @override
+  String get migration_import_detected => '检测到 Hibiki 迁移数据，现在导入？';
+  @override
+  String get migration_import_start => '开始导入';
+  @override
+  String migration_import_running({required Object batch}) => '正在导入 ${batch}…';
+  @override
+  String migration_import_verify_failed(
+          {required Object batch, required Object detail}) =>
+      '${batch} 校验未通过，已保留待重传：${detail}';
+  @override
+  String migration_import_counts_failed({required Object detail}) =>
+      '导入数据不完整：${detail}。请回 Hibiki 重新导出缺失部分后再导入。';
+  @override
+  String get migration_import_success => '导入完成，校验通过。';
+  @override
+  String get migration_import_nothing => '中转目录中没有找到迁移数据。';
+  @override
+  String get migration_uninstall_prompt => '迁移完成。卸载旧版 Hibiki？';
+  @override
+  String get migration_uninstall_button => '卸载 Hibiki';
+  @override
+  String get migration_uninstall_still_installed => '旧版 Hibiki 仍安装在设备上，可随时卸载。';
 }
 
 // Path: <root>
@@ -119557,6 +120067,39 @@ class _StringsZhHk extends _StringsEn {
   String get migration_reexport => 'Re-export';
   @override
   String get migration_batch_core_label => 'Settings, progress & statistics';
+  @override
+  String get migration_import_entry => 'Import from Hibiki';
+  @override
+  String get migration_import_entry_subtitle =>
+      'Import data exported by the old Hibiki app';
+  @override
+  String get migration_import_detected =>
+      'Hibiki migration data detected. Import it now?';
+  @override
+  String get migration_import_start => 'Start import';
+  @override
+  String migration_import_running({required Object batch}) =>
+      'Importing ${batch}…';
+  @override
+  String migration_import_verify_failed(
+          {required Object batch, required Object detail}) =>
+      '${batch} failed verification and was kept for re-export: ${detail}';
+  @override
+  String migration_import_counts_failed({required Object detail}) =>
+      'Imported data is incomplete: ${detail}. Re-export the missing parts from Hibiki, then import again.';
+  @override
+  String get migration_import_success => 'Import complete and verified.';
+  @override
+  String get migration_import_nothing =>
+      'No migration data found in the transfer folder.';
+  @override
+  String get migration_uninstall_prompt =>
+      'Migration finished. Uninstall the old Hibiki app?';
+  @override
+  String get migration_uninstall_button => 'Uninstall Hibiki';
+  @override
+  String get migration_uninstall_still_installed =>
+      'Hibiki is still installed. You can uninstall it any time.';
 }
 
 /// Flat map(s) containing all translations.
@@ -126010,6 +126553,32 @@ extension on _StringsEn {
         return 'Re-export';
       case 'migration_batch_core_label':
         return 'Settings, progress & statistics';
+      case 'migration_import_entry':
+        return 'Import from Hibiki';
+      case 'migration_import_entry_subtitle':
+        return 'Import data exported by the old Hibiki app';
+      case 'migration_import_detected':
+        return 'Hibiki migration data detected. Import it now?';
+      case 'migration_import_start':
+        return 'Start import';
+      case 'migration_import_running':
+        return ({required Object batch}) => 'Importing ${batch}…';
+      case 'migration_import_verify_failed':
+        return ({required Object batch, required Object detail}) =>
+            '${batch} failed verification and was kept for re-export: ${detail}';
+      case 'migration_import_counts_failed':
+        return ({required Object detail}) =>
+            'Imported data is incomplete: ${detail}. Re-export the missing parts from Hibiki, then import again.';
+      case 'migration_import_success':
+        return 'Import complete and verified.';
+      case 'migration_import_nothing':
+        return 'No migration data found in the transfer folder.';
+      case 'migration_uninstall_prompt':
+        return 'Migration finished. Uninstall the old Hibiki app?';
+      case 'migration_uninstall_button':
+        return 'Uninstall Hibiki';
+      case 'migration_uninstall_still_installed':
+        return 'Hibiki is still installed. You can uninstall it any time.';
       default:
         return null;
     }
@@ -132461,6 +133030,32 @@ extension on _StringsAr {
         return 'Re-export';
       case 'migration_batch_core_label':
         return 'Settings, progress & statistics';
+      case 'migration_import_entry':
+        return 'Import from Hibiki';
+      case 'migration_import_entry_subtitle':
+        return 'Import data exported by the old Hibiki app';
+      case 'migration_import_detected':
+        return 'Hibiki migration data detected. Import it now?';
+      case 'migration_import_start':
+        return 'Start import';
+      case 'migration_import_running':
+        return ({required Object batch}) => 'Importing ${batch}…';
+      case 'migration_import_verify_failed':
+        return ({required Object batch, required Object detail}) =>
+            '${batch} failed verification and was kept for re-export: ${detail}';
+      case 'migration_import_counts_failed':
+        return ({required Object detail}) =>
+            'Imported data is incomplete: ${detail}. Re-export the missing parts from Hibiki, then import again.';
+      case 'migration_import_success':
+        return 'Import complete and verified.';
+      case 'migration_import_nothing':
+        return 'No migration data found in the transfer folder.';
+      case 'migration_uninstall_prompt':
+        return 'Migration finished. Uninstall the old Hibiki app?';
+      case 'migration_uninstall_button':
+        return 'Uninstall Hibiki';
+      case 'migration_uninstall_still_installed':
+        return 'Hibiki is still installed. You can uninstall it any time.';
       default:
         return null;
     }
@@ -138934,6 +139529,32 @@ extension on _StringsDe {
         return 'Re-export';
       case 'migration_batch_core_label':
         return 'Settings, progress & statistics';
+      case 'migration_import_entry':
+        return 'Import from Hibiki';
+      case 'migration_import_entry_subtitle':
+        return 'Import data exported by the old Hibiki app';
+      case 'migration_import_detected':
+        return 'Hibiki migration data detected. Import it now?';
+      case 'migration_import_start':
+        return 'Start import';
+      case 'migration_import_running':
+        return ({required Object batch}) => 'Importing ${batch}…';
+      case 'migration_import_verify_failed':
+        return ({required Object batch, required Object detail}) =>
+            '${batch} failed verification and was kept for re-export: ${detail}';
+      case 'migration_import_counts_failed':
+        return ({required Object detail}) =>
+            'Imported data is incomplete: ${detail}. Re-export the missing parts from Hibiki, then import again.';
+      case 'migration_import_success':
+        return 'Import complete and verified.';
+      case 'migration_import_nothing':
+        return 'No migration data found in the transfer folder.';
+      case 'migration_uninstall_prompt':
+        return 'Migration finished. Uninstall the old Hibiki app?';
+      case 'migration_uninstall_button':
+        return 'Uninstall Hibiki';
+      case 'migration_uninstall_still_installed':
+        return 'Hibiki is still installed. You can uninstall it any time.';
       default:
         return null;
     }
@@ -145406,6 +146027,32 @@ extension on _StringsEs {
         return 'Re-export';
       case 'migration_batch_core_label':
         return 'Settings, progress & statistics';
+      case 'migration_import_entry':
+        return 'Import from Hibiki';
+      case 'migration_import_entry_subtitle':
+        return 'Import data exported by the old Hibiki app';
+      case 'migration_import_detected':
+        return 'Hibiki migration data detected. Import it now?';
+      case 'migration_import_start':
+        return 'Start import';
+      case 'migration_import_running':
+        return ({required Object batch}) => 'Importing ${batch}…';
+      case 'migration_import_verify_failed':
+        return ({required Object batch, required Object detail}) =>
+            '${batch} failed verification and was kept for re-export: ${detail}';
+      case 'migration_import_counts_failed':
+        return ({required Object detail}) =>
+            'Imported data is incomplete: ${detail}. Re-export the missing parts from Hibiki, then import again.';
+      case 'migration_import_success':
+        return 'Import complete and verified.';
+      case 'migration_import_nothing':
+        return 'No migration data found in the transfer folder.';
+      case 'migration_uninstall_prompt':
+        return 'Migration finished. Uninstall the old Hibiki app?';
+      case 'migration_uninstall_button':
+        return 'Uninstall Hibiki';
+      case 'migration_uninstall_still_installed':
+        return 'Hibiki is still installed. You can uninstall it any time.';
       default:
         return null;
     }
@@ -151884,6 +152531,32 @@ extension on _StringsFr {
         return 'Re-export';
       case 'migration_batch_core_label':
         return 'Settings, progress & statistics';
+      case 'migration_import_entry':
+        return 'Import from Hibiki';
+      case 'migration_import_entry_subtitle':
+        return 'Import data exported by the old Hibiki app';
+      case 'migration_import_detected':
+        return 'Hibiki migration data detected. Import it now?';
+      case 'migration_import_start':
+        return 'Start import';
+      case 'migration_import_running':
+        return ({required Object batch}) => 'Importing ${batch}…';
+      case 'migration_import_verify_failed':
+        return ({required Object batch, required Object detail}) =>
+            '${batch} failed verification and was kept for re-export: ${detail}';
+      case 'migration_import_counts_failed':
+        return ({required Object detail}) =>
+            'Imported data is incomplete: ${detail}. Re-export the missing parts from Hibiki, then import again.';
+      case 'migration_import_success':
+        return 'Import complete and verified.';
+      case 'migration_import_nothing':
+        return 'No migration data found in the transfer folder.';
+      case 'migration_uninstall_prompt':
+        return 'Migration finished. Uninstall the old Hibiki app?';
+      case 'migration_uninstall_button':
+        return 'Uninstall Hibiki';
+      case 'migration_uninstall_still_installed':
+        return 'Hibiki is still installed. You can uninstall it any time.';
       default:
         return null;
     }
@@ -158344,6 +159017,32 @@ extension on _StringsId {
         return 'Re-export';
       case 'migration_batch_core_label':
         return 'Settings, progress & statistics';
+      case 'migration_import_entry':
+        return 'Import from Hibiki';
+      case 'migration_import_entry_subtitle':
+        return 'Import data exported by the old Hibiki app';
+      case 'migration_import_detected':
+        return 'Hibiki migration data detected. Import it now?';
+      case 'migration_import_start':
+        return 'Start import';
+      case 'migration_import_running':
+        return ({required Object batch}) => 'Importing ${batch}…';
+      case 'migration_import_verify_failed':
+        return ({required Object batch, required Object detail}) =>
+            '${batch} failed verification and was kept for re-export: ${detail}';
+      case 'migration_import_counts_failed':
+        return ({required Object detail}) =>
+            'Imported data is incomplete: ${detail}. Re-export the missing parts from Hibiki, then import again.';
+      case 'migration_import_success':
+        return 'Import complete and verified.';
+      case 'migration_import_nothing':
+        return 'No migration data found in the transfer folder.';
+      case 'migration_uninstall_prompt':
+        return 'Migration finished. Uninstall the old Hibiki app?';
+      case 'migration_uninstall_button':
+        return 'Uninstall Hibiki';
+      case 'migration_uninstall_still_installed':
+        return 'Hibiki is still installed. You can uninstall it any time.';
       default:
         return null;
     }
@@ -164818,6 +165517,32 @@ extension on _StringsIt {
         return 'Re-export';
       case 'migration_batch_core_label':
         return 'Settings, progress & statistics';
+      case 'migration_import_entry':
+        return 'Import from Hibiki';
+      case 'migration_import_entry_subtitle':
+        return 'Import data exported by the old Hibiki app';
+      case 'migration_import_detected':
+        return 'Hibiki migration data detected. Import it now?';
+      case 'migration_import_start':
+        return 'Start import';
+      case 'migration_import_running':
+        return ({required Object batch}) => 'Importing ${batch}…';
+      case 'migration_import_verify_failed':
+        return ({required Object batch, required Object detail}) =>
+            '${batch} failed verification and was kept for re-export: ${detail}';
+      case 'migration_import_counts_failed':
+        return ({required Object detail}) =>
+            'Imported data is incomplete: ${detail}. Re-export the missing parts from Hibiki, then import again.';
+      case 'migration_import_success':
+        return 'Import complete and verified.';
+      case 'migration_import_nothing':
+        return 'No migration data found in the transfer folder.';
+      case 'migration_uninstall_prompt':
+        return 'Migration finished. Uninstall the old Hibiki app?';
+      case 'migration_uninstall_button':
+        return 'Uninstall Hibiki';
+      case 'migration_uninstall_still_installed':
+        return 'Hibiki is still installed. You can uninstall it any time.';
       default:
         return null;
     }
@@ -171254,6 +171979,32 @@ extension on _StringsJa {
         return 'Re-export';
       case 'migration_batch_core_label':
         return 'Settings, progress & statistics';
+      case 'migration_import_entry':
+        return 'Import from Hibiki';
+      case 'migration_import_entry_subtitle':
+        return 'Import data exported by the old Hibiki app';
+      case 'migration_import_detected':
+        return 'Hibiki migration data detected. Import it now?';
+      case 'migration_import_start':
+        return 'Start import';
+      case 'migration_import_running':
+        return ({required Object batch}) => 'Importing ${batch}…';
+      case 'migration_import_verify_failed':
+        return ({required Object batch, required Object detail}) =>
+            '${batch} failed verification and was kept for re-export: ${detail}';
+      case 'migration_import_counts_failed':
+        return ({required Object detail}) =>
+            'Imported data is incomplete: ${detail}. Re-export the missing parts from Hibiki, then import again.';
+      case 'migration_import_success':
+        return 'Import complete and verified.';
+      case 'migration_import_nothing':
+        return 'No migration data found in the transfer folder.';
+      case 'migration_uninstall_prompt':
+        return 'Migration finished. Uninstall the old Hibiki app?';
+      case 'migration_uninstall_button':
+        return 'Uninstall Hibiki';
+      case 'migration_uninstall_still_installed':
+        return 'Hibiki is still installed. You can uninstall it any time.';
       default:
         return null;
     }
@@ -177694,6 +178445,32 @@ extension on _StringsKo {
         return 'Re-export';
       case 'migration_batch_core_label':
         return 'Settings, progress & statistics';
+      case 'migration_import_entry':
+        return 'Import from Hibiki';
+      case 'migration_import_entry_subtitle':
+        return 'Import data exported by the old Hibiki app';
+      case 'migration_import_detected':
+        return 'Hibiki migration data detected. Import it now?';
+      case 'migration_import_start':
+        return 'Start import';
+      case 'migration_import_running':
+        return ({required Object batch}) => 'Importing ${batch}…';
+      case 'migration_import_verify_failed':
+        return ({required Object batch, required Object detail}) =>
+            '${batch} failed verification and was kept for re-export: ${detail}';
+      case 'migration_import_counts_failed':
+        return ({required Object detail}) =>
+            'Imported data is incomplete: ${detail}. Re-export the missing parts from Hibiki, then import again.';
+      case 'migration_import_success':
+        return 'Import complete and verified.';
+      case 'migration_import_nothing':
+        return 'No migration data found in the transfer folder.';
+      case 'migration_uninstall_prompt':
+        return 'Migration finished. Uninstall the old Hibiki app?';
+      case 'migration_uninstall_button':
+        return 'Uninstall Hibiki';
+      case 'migration_uninstall_still_installed':
+        return 'Hibiki is still installed. You can uninstall it any time.';
       default:
         return null;
     }
@@ -184162,6 +184939,32 @@ extension on _StringsNl {
         return 'Re-export';
       case 'migration_batch_core_label':
         return 'Settings, progress & statistics';
+      case 'migration_import_entry':
+        return 'Import from Hibiki';
+      case 'migration_import_entry_subtitle':
+        return 'Import data exported by the old Hibiki app';
+      case 'migration_import_detected':
+        return 'Hibiki migration data detected. Import it now?';
+      case 'migration_import_start':
+        return 'Start import';
+      case 'migration_import_running':
+        return ({required Object batch}) => 'Importing ${batch}…';
+      case 'migration_import_verify_failed':
+        return ({required Object batch, required Object detail}) =>
+            '${batch} failed verification and was kept for re-export: ${detail}';
+      case 'migration_import_counts_failed':
+        return ({required Object detail}) =>
+            'Imported data is incomplete: ${detail}. Re-export the missing parts from Hibiki, then import again.';
+      case 'migration_import_success':
+        return 'Import complete and verified.';
+      case 'migration_import_nothing':
+        return 'No migration data found in the transfer folder.';
+      case 'migration_uninstall_prompt':
+        return 'Migration finished. Uninstall the old Hibiki app?';
+      case 'migration_uninstall_button':
+        return 'Uninstall Hibiki';
+      case 'migration_uninstall_still_installed':
+        return 'Hibiki is still installed. You can uninstall it any time.';
       default:
         return null;
     }
@@ -190627,6 +191430,32 @@ extension on _StringsPtBr {
         return 'Re-export';
       case 'migration_batch_core_label':
         return 'Settings, progress & statistics';
+      case 'migration_import_entry':
+        return 'Import from Hibiki';
+      case 'migration_import_entry_subtitle':
+        return 'Import data exported by the old Hibiki app';
+      case 'migration_import_detected':
+        return 'Hibiki migration data detected. Import it now?';
+      case 'migration_import_start':
+        return 'Start import';
+      case 'migration_import_running':
+        return ({required Object batch}) => 'Importing ${batch}…';
+      case 'migration_import_verify_failed':
+        return ({required Object batch, required Object detail}) =>
+            '${batch} failed verification and was kept for re-export: ${detail}';
+      case 'migration_import_counts_failed':
+        return ({required Object detail}) =>
+            'Imported data is incomplete: ${detail}. Re-export the missing parts from Hibiki, then import again.';
+      case 'migration_import_success':
+        return 'Import complete and verified.';
+      case 'migration_import_nothing':
+        return 'No migration data found in the transfer folder.';
+      case 'migration_uninstall_prompt':
+        return 'Migration finished. Uninstall the old Hibiki app?';
+      case 'migration_uninstall_button':
+        return 'Uninstall Hibiki';
+      case 'migration_uninstall_still_installed':
+        return 'Hibiki is still installed. You can uninstall it any time.';
       default:
         return null;
     }
@@ -197097,6 +197926,32 @@ extension on _StringsRu {
         return 'Re-export';
       case 'migration_batch_core_label':
         return 'Settings, progress & statistics';
+      case 'migration_import_entry':
+        return 'Import from Hibiki';
+      case 'migration_import_entry_subtitle':
+        return 'Import data exported by the old Hibiki app';
+      case 'migration_import_detected':
+        return 'Hibiki migration data detected. Import it now?';
+      case 'migration_import_start':
+        return 'Start import';
+      case 'migration_import_running':
+        return ({required Object batch}) => 'Importing ${batch}…';
+      case 'migration_import_verify_failed':
+        return ({required Object batch, required Object detail}) =>
+            '${batch} failed verification and was kept for re-export: ${detail}';
+      case 'migration_import_counts_failed':
+        return ({required Object detail}) =>
+            'Imported data is incomplete: ${detail}. Re-export the missing parts from Hibiki, then import again.';
+      case 'migration_import_success':
+        return 'Import complete and verified.';
+      case 'migration_import_nothing':
+        return 'No migration data found in the transfer folder.';
+      case 'migration_uninstall_prompt':
+        return 'Migration finished. Uninstall the old Hibiki app?';
+      case 'migration_uninstall_button':
+        return 'Uninstall Hibiki';
+      case 'migration_uninstall_still_installed':
+        return 'Hibiki is still installed. You can uninstall it any time.';
       default:
         return null;
     }
@@ -203550,6 +204405,32 @@ extension on _StringsTh {
         return 'Re-export';
       case 'migration_batch_core_label':
         return 'Settings, progress & statistics';
+      case 'migration_import_entry':
+        return 'Import from Hibiki';
+      case 'migration_import_entry_subtitle':
+        return 'Import data exported by the old Hibiki app';
+      case 'migration_import_detected':
+        return 'Hibiki migration data detected. Import it now?';
+      case 'migration_import_start':
+        return 'Start import';
+      case 'migration_import_running':
+        return ({required Object batch}) => 'Importing ${batch}…';
+      case 'migration_import_verify_failed':
+        return ({required Object batch, required Object detail}) =>
+            '${batch} failed verification and was kept for re-export: ${detail}';
+      case 'migration_import_counts_failed':
+        return ({required Object detail}) =>
+            'Imported data is incomplete: ${detail}. Re-export the missing parts from Hibiki, then import again.';
+      case 'migration_import_success':
+        return 'Import complete and verified.';
+      case 'migration_import_nothing':
+        return 'No migration data found in the transfer folder.';
+      case 'migration_uninstall_prompt':
+        return 'Migration finished. Uninstall the old Hibiki app?';
+      case 'migration_uninstall_button':
+        return 'Uninstall Hibiki';
+      case 'migration_uninstall_still_installed':
+        return 'Hibiki is still installed. You can uninstall it any time.';
       default:
         return null;
     }
@@ -210012,6 +210893,32 @@ extension on _StringsTr {
         return 'Re-export';
       case 'migration_batch_core_label':
         return 'Settings, progress & statistics';
+      case 'migration_import_entry':
+        return 'Import from Hibiki';
+      case 'migration_import_entry_subtitle':
+        return 'Import data exported by the old Hibiki app';
+      case 'migration_import_detected':
+        return 'Hibiki migration data detected. Import it now?';
+      case 'migration_import_start':
+        return 'Start import';
+      case 'migration_import_running':
+        return ({required Object batch}) => 'Importing ${batch}…';
+      case 'migration_import_verify_failed':
+        return ({required Object batch, required Object detail}) =>
+            '${batch} failed verification and was kept for re-export: ${detail}';
+      case 'migration_import_counts_failed':
+        return ({required Object detail}) =>
+            'Imported data is incomplete: ${detail}. Re-export the missing parts from Hibiki, then import again.';
+      case 'migration_import_success':
+        return 'Import complete and verified.';
+      case 'migration_import_nothing':
+        return 'No migration data found in the transfer folder.';
+      case 'migration_uninstall_prompt':
+        return 'Migration finished. Uninstall the old Hibiki app?';
+      case 'migration_uninstall_button':
+        return 'Uninstall Hibiki';
+      case 'migration_uninstall_still_installed':
+        return 'Hibiki is still installed. You can uninstall it any time.';
       default:
         return null;
     }
@@ -216470,6 +217377,32 @@ extension on _StringsVi {
         return 'Re-export';
       case 'migration_batch_core_label':
         return 'Settings, progress & statistics';
+      case 'migration_import_entry':
+        return 'Import from Hibiki';
+      case 'migration_import_entry_subtitle':
+        return 'Import data exported by the old Hibiki app';
+      case 'migration_import_detected':
+        return 'Hibiki migration data detected. Import it now?';
+      case 'migration_import_start':
+        return 'Start import';
+      case 'migration_import_running':
+        return ({required Object batch}) => 'Importing ${batch}…';
+      case 'migration_import_verify_failed':
+        return ({required Object batch, required Object detail}) =>
+            '${batch} failed verification and was kept for re-export: ${detail}';
+      case 'migration_import_counts_failed':
+        return ({required Object detail}) =>
+            'Imported data is incomplete: ${detail}. Re-export the missing parts from Hibiki, then import again.';
+      case 'migration_import_success':
+        return 'Import complete and verified.';
+      case 'migration_import_nothing':
+        return 'No migration data found in the transfer folder.';
+      case 'migration_uninstall_prompt':
+        return 'Migration finished. Uninstall the old Hibiki app?';
+      case 'migration_uninstall_button':
+        return 'Uninstall Hibiki';
+      case 'migration_uninstall_still_installed':
+        return 'Hibiki is still installed. You can uninstall it any time.';
       default:
         return null;
     }
@@ -222873,6 +223806,32 @@ extension on _StringsZhCn {
         return '重新导出';
       case 'migration_batch_core_label':
         return '设置、进度与统计';
+      case 'migration_import_entry':
+        return '从 Hibiki 导入';
+      case 'migration_import_entry_subtitle':
+        return '导入旧版 Hibiki 导出的数据';
+      case 'migration_import_detected':
+        return '检测到 Hibiki 迁移数据，现在导入？';
+      case 'migration_import_start':
+        return '开始导入';
+      case 'migration_import_running':
+        return ({required Object batch}) => '正在导入 ${batch}…';
+      case 'migration_import_verify_failed':
+        return ({required Object batch, required Object detail}) =>
+            '${batch} 校验未通过，已保留待重传：${detail}';
+      case 'migration_import_counts_failed':
+        return ({required Object detail}) =>
+            '导入数据不完整：${detail}。请回 Hibiki 重新导出缺失部分后再导入。';
+      case 'migration_import_success':
+        return '导入完成，校验通过。';
+      case 'migration_import_nothing':
+        return '中转目录中没有找到迁移数据。';
+      case 'migration_uninstall_prompt':
+        return '迁移完成。卸载旧版 Hibiki？';
+      case 'migration_uninstall_button':
+        return '卸载 Hibiki';
+      case 'migration_uninstall_still_installed':
+        return '旧版 Hibiki 仍安装在设备上，可随时卸载。';
       default:
         return null;
     }
@@ -229304,6 +230263,32 @@ extension on _StringsZhHk {
         return 'Re-export';
       case 'migration_batch_core_label':
         return 'Settings, progress & statistics';
+      case 'migration_import_entry':
+        return 'Import from Hibiki';
+      case 'migration_import_entry_subtitle':
+        return 'Import data exported by the old Hibiki app';
+      case 'migration_import_detected':
+        return 'Hibiki migration data detected. Import it now?';
+      case 'migration_import_start':
+        return 'Start import';
+      case 'migration_import_running':
+        return ({required Object batch}) => 'Importing ${batch}…';
+      case 'migration_import_verify_failed':
+        return ({required Object batch, required Object detail}) =>
+            '${batch} failed verification and was kept for re-export: ${detail}';
+      case 'migration_import_counts_failed':
+        return ({required Object detail}) =>
+            'Imported data is incomplete: ${detail}. Re-export the missing parts from Hibiki, then import again.';
+      case 'migration_import_success':
+        return 'Import complete and verified.';
+      case 'migration_import_nothing':
+        return 'No migration data found in the transfer folder.';
+      case 'migration_uninstall_prompt':
+        return 'Migration finished. Uninstall the old Hibiki app?';
+      case 'migration_uninstall_button':
+        return 'Uninstall Hibiki';
+      case 'migration_uninstall_still_installed':
+        return 'Hibiki is still installed. You can uninstall it any time.';
       default:
         return null;
     }
