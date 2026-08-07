@@ -3,7 +3,7 @@
 /// Locales: 17
 /// Strings: 53652 (3156 per locale)
 ///
-/// Built on 2026-08-07 at 11:19 UTC
+/// Built on 2026-08-07 at 14:17 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2100,7 +2100,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get audiobook_rematch_no_chapters => 'EPUB has no chapter text';
   String get audiobook_rematch_no_cues_to_match => 'No cues to match';
   String get audiobook_rematch_no_sections =>
-      'No ttu chapter text found, cannot auto-match';
+      'No chapter text found, cannot auto-match';
   String get audiobook_rematch_no_stored_cues =>
       'No stored cues, cannot re-run';
   String audiobook_rematch_failed({required Object error}) =>
@@ -7705,7 +7705,7 @@ class _StringsAr extends _StringsEn {
   String get audiobook_rematch_no_cues_to_match => 'لا توجد ترجمات للمطابقة';
   @override
   String get audiobook_rematch_no_sections =>
-      'لم يتم العثور على نص فصل ttu، لا يمكن المطابقة التلقائية';
+      'لم يتم العثور على نص فصل، لا يمكن المطابقة التلقائية';
   @override
   String get audiobook_rematch_no_stored_cues =>
       'لا توجد ترجمات مخزّنة، لا يمكن إعادة التشغيل';
@@ -15002,7 +15002,7 @@ class _StringsDe extends _StringsEn {
   String get audiobook_rematch_no_cues_to_match => 'Keine Cues zum Abgleichen';
   @override
   String get audiobook_rematch_no_sections =>
-      'Kein ttu-Kapiteltext gefunden, automatischer Abgleich nicht möglich';
+      'Kein Kapiteltext gefunden, automatischer Abgleich nicht möglich';
   @override
   String get audiobook_rematch_no_stored_cues =>
       'Keine gespeicherten Cues, erneuter Abgleich nicht möglich';
@@ -22339,7 +22339,7 @@ class _StringsEs extends _StringsEn {
       'No hay marcas para emparejar';
   @override
   String get audiobook_rematch_no_sections =>
-      'No se encontró texto de capítulo en ttu, no se puede emparejar automáticamente';
+      'No se encontró texto de capítulo, no se puede emparejar automáticamente';
   @override
   String get audiobook_rematch_no_stored_cues =>
       'No hay marcas almacenadas, no se puede re-ejecutar';
@@ -29695,7 +29695,7 @@ class _StringsFr extends _StringsEn {
       'Aucun repère à faire correspondre';
   @override
   String get audiobook_rematch_no_sections =>
-      'Aucun texte de chapitre ttu trouvé, correspondance automatique impossible';
+      'Aucun texte de chapitre trouvé, correspondance automatique impossible';
   @override
   String get audiobook_rematch_no_stored_cues =>
       'Aucun repère enregistré, impossible de relancer';
@@ -37014,7 +37014,7 @@ class _StringsId extends _StringsEn {
       'Tidak ada cue untuk dicocokkan';
   @override
   String get audiobook_rematch_no_sections =>
-      'Teks bab ttu tidak ditemukan, tidak dapat mencocokkan otomatis';
+      'Teks bab tidak ditemukan, tidak dapat mencocokkan otomatis';
   @override
   String get audiobook_rematch_no_stored_cues =>
       'Tidak ada cue tersimpan, tidak dapat menjalankan ulang';
@@ -44326,7 +44326,7 @@ class _StringsIt extends _StringsEn {
       'Nessun riferimento da far corrispondere';
   @override
   String get audiobook_rematch_no_sections =>
-      'Nessun testo di capitolo ttu trovato, corrispondenza automatica impossibile';
+      'Nessun testo di capitolo trovato, corrispondenza automatica impossibile';
   @override
   String get audiobook_rematch_no_stored_cues =>
       'Nessun riferimento memorizzato, impossibile riavviare';
@@ -51576,8 +51576,7 @@ class _StringsJa extends _StringsEn {
   @override
   String get audiobook_rematch_no_cues_to_match => 'マッチングするキューがありません';
   @override
-  String get audiobook_rematch_no_sections =>
-      'ttuのチャプターテキストが見つかりません。自動マッチングできません';
+  String get audiobook_rematch_no_sections => 'チャプターテキストが見つかりません。自動マッチングできません';
   @override
   String get audiobook_rematch_no_stored_cues => '保存されたキューがないため、再実行できません';
   @override
@@ -58725,7 +58724,7 @@ class _StringsKo extends _StringsEn {
   @override
   String get audiobook_rematch_no_cues_to_match => '매칭할 큐가 없습니다';
   @override
-  String get audiobook_rematch_no_sections => 'ttu 챕터 텍스트를 찾을 수 없어 자동 매칭 불가';
+  String get audiobook_rematch_no_sections => '챕터 텍스트를 찾을 수 없어 자동 매칭 불가';
   @override
   String get audiobook_rematch_no_stored_cues => '저장된 큐가 없어 다시 실행할 수 없습니다';
   @override
@@ -65949,7 +65948,7 @@ class _StringsNl extends _StringsEn {
       'Geen referenties om te matchen';
   @override
   String get audiobook_rematch_no_sections =>
-      'Geen ttu-hoofdstuktekst gevonden, automatisch matchen niet mogelijk';
+      'Geen hoofdstuktekst gevonden, automatisch matchen niet mogelijk';
   @override
   String get audiobook_rematch_no_stored_cues =>
       'Geen opgeslagen referenties, kan niet opnieuw uitvoeren';
@@ -73273,7 +73272,7 @@ class _StringsPtBr extends _StringsEn {
       'Nenhuma frase para corresponder';
   @override
   String get audiobook_rematch_no_sections =>
-      'Nenhum texto de capítulo ttu encontrado, não é possível corresponder automaticamente';
+      'Nenhum texto de capítulo encontrado, não é possível corresponder automaticamente';
   @override
   String get audiobook_rematch_no_stored_cues =>
       'Nenhuma frase armazenada, não é possível reexecutar';
@@ -80590,7 +80589,7 @@ class _StringsRu extends _StringsEn {
       'Нет меток для сопоставления';
   @override
   String get audiobook_rematch_no_sections =>
-      'Текст глав ttu не найден, автосопоставление невозможно';
+      'Текст глав не найден, автосопоставление невозможно';
   @override
   String get audiobook_rematch_no_stored_cues =>
       'Нет сохранённых меток, перезапуск невозможен';
@@ -87871,7 +87870,7 @@ class _StringsTh extends _StringsEn {
   String get audiobook_rematch_no_cues_to_match => 'ไม่มี cue ที่จะจับคู่';
   @override
   String get audiobook_rematch_no_sections =>
-      'ไม่พบข้อความบทจาก ttu ไม่สามารถจับคู่อัตโนมัติ';
+      'ไม่พบข้อความบท ไม่สามารถจับคู่อัตโนมัติ';
   @override
   String get audiobook_rematch_no_stored_cues =>
       'ไม่มี cue ที่เก็บไว้ ไม่สามารถเรียกใช้ใหม่';
@@ -95150,7 +95149,7 @@ class _StringsTr extends _StringsEn {
       'Eşleştirilecek referans yok';
   @override
   String get audiobook_rematch_no_sections =>
-      'ttu bölüm metni bulunamadı, otomatik eşleştirme yapılamaz';
+      'Bölüm metni bulunamadı, otomatik eşleştirme yapılamaz';
   @override
   String get audiobook_rematch_no_stored_cues =>
       'Kayıtlı referans yok, yeniden çalıştırılamaz';
@@ -102433,7 +102432,7 @@ class _StringsVi extends _StringsEn {
   String get audiobook_rematch_no_cues_to_match => 'Không có cue để khớp';
   @override
   String get audiobook_rematch_no_sections =>
-      'Không tìm thấy văn bản chương ttu, không thể tự động khớp';
+      'Không tìm thấy văn bản chương, không thể tự động khớp';
   @override
   String get audiobook_rematch_no_stored_cues =>
       'Không có cue đã lưu, không thể chạy lại';
@@ -109473,7 +109472,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get audiobook_rematch_no_cues_to_match => '没有字幕条目可供匹配';
   @override
-  String get audiobook_rematch_no_sections => '未读到 ttu 章节文本，无法自动匹配';
+  String get audiobook_rematch_no_sections => '未读到章节文本，无法自动匹配';
   @override
   String get audiobook_rematch_no_stored_cues => '没有已存字幕条目，无法重跑';
   @override
@@ -116369,7 +116368,7 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get audiobook_rematch_no_cues_to_match => '沒有字幕條目可供比對';
   @override
-  String get audiobook_rematch_no_sections => '未讀到 ttu 章節文字，無法自動比對';
+  String get audiobook_rematch_no_sections => '未讀到章節文字，無法自動比對';
   @override
   String get audiobook_rematch_no_stored_cues => '沒有已存字幕條目，無法重跑';
   @override
@@ -123162,7 +123161,7 @@ extension on _StringsEn {
       case 'audiobook_rematch_no_cues_to_match':
         return 'No cues to match';
       case 'audiobook_rematch_no_sections':
-        return 'No ttu chapter text found, cannot auto-match';
+        return 'No chapter text found, cannot auto-match';
       case 'audiobook_rematch_no_stored_cues':
         return 'No stored cues, cannot re-run';
       case 'audiobook_rematch_failed':
@@ -129637,7 +129636,7 @@ extension on _StringsAr {
       case 'audiobook_rematch_no_cues_to_match':
         return 'لا توجد ترجمات للمطابقة';
       case 'audiobook_rematch_no_sections':
-        return 'لم يتم العثور على نص فصل ttu، لا يمكن المطابقة التلقائية';
+        return 'لم يتم العثور على نص فصل، لا يمكن المطابقة التلقائية';
       case 'audiobook_rematch_no_stored_cues':
         return 'لا توجد ترجمات مخزّنة، لا يمكن إعادة التشغيل';
       case 'audiobook_rematch_failed':
@@ -136121,7 +136120,7 @@ extension on _StringsDe {
       case 'audiobook_rematch_no_cues_to_match':
         return 'Keine Cues zum Abgleichen';
       case 'audiobook_rematch_no_sections':
-        return 'Kein ttu-Kapiteltext gefunden, automatischer Abgleich nicht möglich';
+        return 'Kein Kapiteltext gefunden, automatischer Abgleich nicht möglich';
       case 'audiobook_rematch_no_stored_cues':
         return 'Keine gespeicherten Cues, erneuter Abgleich nicht möglich';
       case 'audiobook_rematch_failed':
@@ -142617,7 +142616,7 @@ extension on _StringsEs {
       case 'audiobook_rematch_no_cues_to_match':
         return 'No hay marcas para emparejar';
       case 'audiobook_rematch_no_sections':
-        return 'No se encontró texto de capítulo en ttu, no se puede emparejar automáticamente';
+        return 'No se encontró texto de capítulo, no se puede emparejar automáticamente';
       case 'audiobook_rematch_no_stored_cues':
         return 'No hay marcas almacenadas, no se puede re-ejecutar';
       case 'audiobook_rematch_failed':
@@ -149115,7 +149114,7 @@ extension on _StringsFr {
       case 'audiobook_rematch_no_cues_to_match':
         return 'Aucun repère à faire correspondre';
       case 'audiobook_rematch_no_sections':
-        return 'Aucun texte de chapitre ttu trouvé, correspondance automatique impossible';
+        return 'Aucun texte de chapitre trouvé, correspondance automatique impossible';
       case 'audiobook_rematch_no_stored_cues':
         return 'Aucun repère enregistré, impossible de relancer';
       case 'audiobook_rematch_failed':
@@ -155605,7 +155604,7 @@ extension on _StringsId {
       case 'audiobook_rematch_no_cues_to_match':
         return 'Tidak ada cue untuk dicocokkan';
       case 'audiobook_rematch_no_sections':
-        return 'Teks bab ttu tidak ditemukan, tidak dapat mencocokkan otomatis';
+        return 'Teks bab tidak ditemukan, tidak dapat mencocokkan otomatis';
       case 'audiobook_rematch_no_stored_cues':
         return 'Tidak ada cue tersimpan, tidak dapat menjalankan ulang';
       case 'audiobook_rematch_failed':
@@ -162091,7 +162090,7 @@ extension on _StringsIt {
       case 'audiobook_rematch_no_cues_to_match':
         return 'Nessun riferimento da far corrispondere';
       case 'audiobook_rematch_no_sections':
-        return 'Nessun testo di capitolo ttu trovato, corrispondenza automatica impossibile';
+        return 'Nessun testo di capitolo trovato, corrispondenza automatica impossibile';
       case 'audiobook_rematch_no_stored_cues':
         return 'Nessun riferimento memorizzato, impossibile riavviare';
       case 'audiobook_rematch_failed':
@@ -168569,7 +168568,7 @@ extension on _StringsJa {
       case 'audiobook_rematch_no_cues_to_match':
         return 'マッチングするキューがありません';
       case 'audiobook_rematch_no_sections':
-        return 'ttuのチャプターテキストが見つかりません。自動マッチングできません';
+        return 'チャプターテキストが見つかりません。自動マッチングできません';
       case 'audiobook_rematch_no_stored_cues':
         return '保存されたキューがないため、再実行できません';
       case 'audiobook_rematch_failed':
@@ -175029,7 +175028,7 @@ extension on _StringsKo {
       case 'audiobook_rematch_no_cues_to_match':
         return '매칭할 큐가 없습니다';
       case 'audiobook_rematch_no_sections':
-        return 'ttu 챕터 텍스트를 찾을 수 없어 자동 매칭 불가';
+        return '챕터 텍스트를 찾을 수 없어 자동 매칭 불가';
       case 'audiobook_rematch_no_stored_cues':
         return '저장된 큐가 없어 다시 실행할 수 없습니다';
       case 'audiobook_rematch_failed':
@@ -181507,7 +181506,7 @@ extension on _StringsNl {
       case 'audiobook_rematch_no_cues_to_match':
         return 'Geen referenties om te matchen';
       case 'audiobook_rematch_no_sections':
-        return 'Geen ttu-hoofdstuktekst gevonden, automatisch matchen niet mogelijk';
+        return 'Geen hoofdstuktekst gevonden, automatisch matchen niet mogelijk';
       case 'audiobook_rematch_no_stored_cues':
         return 'Geen opgeslagen referenties, kan niet opnieuw uitvoeren';
       case 'audiobook_rematch_failed':
@@ -187996,7 +187995,7 @@ extension on _StringsPtBr {
       case 'audiobook_rematch_no_cues_to_match':
         return 'Nenhuma frase para corresponder';
       case 'audiobook_rematch_no_sections':
-        return 'Nenhum texto de capítulo ttu encontrado, não é possível corresponder automaticamente';
+        return 'Nenhum texto de capítulo encontrado, não é possível corresponder automaticamente';
       case 'audiobook_rematch_no_stored_cues':
         return 'Nenhuma frase armazenada, não é possível reexecutar';
       case 'audiobook_rematch_failed':
@@ -194486,7 +194485,7 @@ extension on _StringsRu {
       case 'audiobook_rematch_no_cues_to_match':
         return 'Нет меток для сопоставления';
       case 'audiobook_rematch_no_sections':
-        return 'Текст глав ttu не найден, автосопоставление невозможно';
+        return 'Текст глав не найден, автосопоставление невозможно';
       case 'audiobook_rematch_no_stored_cues':
         return 'Нет сохранённых меток, перезапуск невозможен';
       case 'audiobook_rematch_failed':
@@ -200966,7 +200965,7 @@ extension on _StringsTh {
       case 'audiobook_rematch_no_cues_to_match':
         return 'ไม่มี cue ที่จะจับคู่';
       case 'audiobook_rematch_no_sections':
-        return 'ไม่พบข้อความบทจาก ttu ไม่สามารถจับคู่อัตโนมัติ';
+        return 'ไม่พบข้อความบท ไม่สามารถจับคู่อัตโนมัติ';
       case 'audiobook_rematch_no_stored_cues':
         return 'ไม่มี cue ที่เก็บไว้ ไม่สามารถเรียกใช้ใหม่';
       case 'audiobook_rematch_failed':
@@ -207446,7 +207445,7 @@ extension on _StringsTr {
       case 'audiobook_rematch_no_cues_to_match':
         return 'Eşleştirilecek referans yok';
       case 'audiobook_rematch_no_sections':
-        return 'ttu bölüm metni bulunamadı, otomatik eşleştirme yapılamaz';
+        return 'Bölüm metni bulunamadı, otomatik eşleştirme yapılamaz';
       case 'audiobook_rematch_no_stored_cues':
         return 'Kayıtlı referans yok, yeniden çalıştırılamaz';
       case 'audiobook_rematch_failed':
@@ -213929,7 +213928,7 @@ extension on _StringsVi {
       case 'audiobook_rematch_no_cues_to_match':
         return 'Không có cue để khớp';
       case 'audiobook_rematch_no_sections':
-        return 'Không tìm thấy văn bản chương ttu, không thể tự động khớp';
+        return 'Không tìm thấy văn bản chương, không thể tự động khớp';
       case 'audiobook_rematch_no_stored_cues':
         return 'Không có cue đã lưu, không thể chạy lại';
       case 'audiobook_rematch_failed':
@@ -220386,7 +220385,7 @@ extension on _StringsZhCn {
       case 'audiobook_rematch_no_cues_to_match':
         return '没有字幕条目可供匹配';
       case 'audiobook_rematch_no_sections':
-        return '未读到 ttu 章节文本，无法自动匹配';
+        return '未读到章节文本，无法自动匹配';
       case 'audiobook_rematch_no_stored_cues':
         return '没有已存字幕条目，无法重跑';
       case 'audiobook_rematch_failed':
@@ -226821,7 +226820,7 @@ extension on _StringsZhHk {
       case 'audiobook_rematch_no_cues_to_match':
         return '沒有字幕條目可供比對';
       case 'audiobook_rematch_no_sections':
-        return '未讀到 ttu 章節文字，無法自動比對';
+        return '未讀到章節文字，無法自動比對';
       case 'audiobook_rematch_no_stored_cues':
         return '沒有已存字幕條目，無法重跑';
       case 'audiobook_rematch_failed':
