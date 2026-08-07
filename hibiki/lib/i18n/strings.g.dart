@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 53686 (3158 per locale)
+/// Strings: 53652 (3156 per locale)
 ///
-/// Built on 2026-08-07 at 05:53 UTC
+/// Built on 2026-08-07 at 06:16 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2530,9 +2530,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get sync_exit_warning =>
       'Sync is still in progress. Exiting now may cause data loss.';
   String get sync_exit_warning_title => 'Sync in progress';
-  String get sync_google_drive_hoshi_compat => 'Share progress with Hoshi / ッツ';
-  String get sync_google_drive_hoshi_compat_desc =>
-      'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
   String get sync_host => 'Host';
   String get sync_lan_discovery => 'LAN devices';
   String get sync_lan_no_devices => 'No devices found';
@@ -8505,11 +8502,6 @@ class _StringsAr extends _StringsEn {
       'المزامنة لا تزال قيد التنفيذ. قد يؤدي الخروج الآن إلى فقدان البيانات.';
   @override
   String get sync_exit_warning_title => 'المزامنة قيد التنفيذ';
-  @override
-  String get sync_google_drive_hoshi_compat => 'Share progress with Hoshi / ッツ';
-  @override
-  String get sync_google_drive_hoshi_compat_desc =>
-      'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
   @override
   String get sync_host => 'المضيف';
   @override
@@ -15818,11 +15810,6 @@ class _StringsDe extends _StringsEn {
       'Die Synchronisierung läuft noch. Wenn du jetzt beendest, können Daten verloren gehen.';
   @override
   String get sync_exit_warning_title => 'Sync läuft';
-  @override
-  String get sync_google_drive_hoshi_compat => 'Share progress with Hoshi / ッツ';
-  @override
-  String get sync_google_drive_hoshi_compat_desc =>
-      'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
   @override
   String get sync_host => 'Host';
   @override
@@ -23165,11 +23152,6 @@ class _StringsEs extends _StringsEn {
       'La sincronización aún está en curso. Salir ahora puede provocar pérdida de datos.';
   @override
   String get sync_exit_warning_title => 'Sincronización en curso';
-  @override
-  String get sync_google_drive_hoshi_compat => 'Share progress with Hoshi / ッツ';
-  @override
-  String get sync_google_drive_hoshi_compat_desc =>
-      'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
   @override
   String get sync_host => 'Servidor';
   @override
@@ -30530,11 +30512,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get sync_exit_warning_title => 'Sync en cours';
   @override
-  String get sync_google_drive_hoshi_compat => 'Share progress with Hoshi / ッツ';
-  @override
-  String get sync_google_drive_hoshi_compat_desc =>
-      'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
-  @override
   String get sync_host => 'Hôte';
   @override
   String get sync_lan_discovery => 'Appareils du réseau local';
@@ -37839,11 +37816,6 @@ class _StringsId extends _StringsEn {
       'Sinkronisasi masih berlangsung. Keluar sekarang dapat menyebabkan kehilangan data.';
   @override
   String get sync_exit_warning_title => 'Sinkronisasi Berlangsung';
-  @override
-  String get sync_google_drive_hoshi_compat => 'Share progress with Hoshi / ッツ';
-  @override
-  String get sync_google_drive_hoshi_compat_desc =>
-      'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
   @override
   String get sync_host => 'Host';
   @override
@@ -45164,11 +45136,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get sync_exit_warning_title => 'Sincronizzazione in corso';
   @override
-  String get sync_google_drive_hoshi_compat => 'Share progress with Hoshi / ッツ';
-  @override
-  String get sync_google_drive_hoshi_compat_desc =>
-      'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
-  @override
   String get sync_host => 'Host';
   @override
   String get sync_lan_discovery => 'Dispositivi LAN';
@@ -52379,11 +52346,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get sync_exit_warning_title => '同期中';
   @override
-  String get sync_google_drive_hoshi_compat => 'Share progress with Hoshi / ッツ';
-  @override
-  String get sync_google_drive_hoshi_compat_desc =>
-      'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
-  @override
   String get sync_host => 'ホスト';
   @override
   String get sync_lan_discovery => 'LAN内のデバイス';
@@ -59533,11 +59495,6 @@ class _StringsKo extends _StringsEn {
   String get sync_exit_warning => '동기화가 아직 진행 중입니다. 지금 종료하면 데이터가 손실될 수 있습니다.';
   @override
   String get sync_exit_warning_title => '동기화 진행 중';
-  @override
-  String get sync_google_drive_hoshi_compat => 'Share progress with Hoshi / ッツ';
-  @override
-  String get sync_google_drive_hoshi_compat_desc =>
-      'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
   @override
   String get sync_host => '호스트';
   @override
@@ -66799,11 +66756,6 @@ class _StringsNl extends _StringsEn {
       'De synchronisatie is nog bezig. Nu afsluiten kan tot gegevensverlies leiden.';
   @override
   String get sync_exit_warning_title => 'Synchronisatie bezig';
-  @override
-  String get sync_google_drive_hoshi_compat => 'Share progress with Hoshi / ッツ';
-  @override
-  String get sync_google_drive_hoshi_compat_desc =>
-      'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
   @override
   String get sync_host => 'Host';
   @override
@@ -74128,11 +74080,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get sync_exit_warning_title => 'Sincronização em andamento';
   @override
-  String get sync_google_drive_hoshi_compat => 'Share progress with Hoshi / ッツ';
-  @override
-  String get sync_google_drive_hoshi_compat_desc =>
-      'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
-  @override
   String get sync_host => 'Host';
   @override
   String get sync_lan_discovery => 'Dispositivos na rede local';
@@ -81451,11 +81398,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get sync_exit_warning_title => 'Идёт синхронизация';
   @override
-  String get sync_google_drive_hoshi_compat => 'Share progress with Hoshi / ッツ';
-  @override
-  String get sync_google_drive_hoshi_compat_desc =>
-      'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
-  @override
   String get sync_host => 'Хост';
   @override
   String get sync_lan_discovery => 'Устройства в сети';
@@ -88725,11 +88667,6 @@ class _StringsTh extends _StringsEn {
       'ยังซิงค์ไม่เสร็จ การออกตอนนี้อาจทำให้ข้อมูลสูญหาย';
   @override
   String get sync_exit_warning_title => 'กำลังซิงค์';
-  @override
-  String get sync_google_drive_hoshi_compat => 'Share progress with Hoshi / ッツ';
-  @override
-  String get sync_google_drive_hoshi_compat_desc =>
-      'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
   @override
   String get sync_host => 'โฮสต์';
   @override
@@ -96017,11 +95954,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get sync_exit_warning_title => 'Eşitleme Sürüyor';
   @override
-  String get sync_google_drive_hoshi_compat => 'Share progress with Hoshi / ッツ';
-  @override
-  String get sync_google_drive_hoshi_compat_desc =>
-      'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
-  @override
   String get sync_host => 'Sunucu';
   @override
   String get sync_lan_discovery => 'LAN cihazları';
@@ -103302,11 +103234,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get sync_exit_warning_title => 'Đang đồng bộ';
   @override
-  String get sync_google_drive_hoshi_compat => 'Share progress with Hoshi / ッツ';
-  @override
-  String get sync_google_drive_hoshi_compat_desc =>
-      'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
-  @override
   String get sync_host => 'Máy chủ';
   @override
   String get sync_lan_discovery => 'Thiết bị trong mạng LAN';
@@ -110296,11 +110223,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get sync_exit_warning_title => '同步进行中';
   @override
-  String get sync_google_drive_hoshi_compat => '与 Hoshi / ッツ 共享进度';
-  @override
-  String get sync_google_drive_hoshi_compat_desc =>
-      '通过共享的 Google Drive 文件夹（ttu-reader-data）同步阅读进度。需完整 Drive 权限并重新登录。';
-  @override
   String get sync_host => '主机';
   @override
   String get sync_lan_discovery => '局域网设备';
@@ -117212,11 +117134,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get sync_exit_warning_title => '同步進行中';
   @override
-  String get sync_google_drive_hoshi_compat => 'Share progress with Hoshi / ッツ';
-  @override
-  String get sync_google_drive_hoshi_compat_desc =>
-      'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
-  @override
   String get sync_host => '主機';
   @override
   String get sync_lan_discovery => '區域網絡裝置';
@@ -123988,10 +123905,6 @@ extension on _StringsEn {
         return 'Sync is still in progress. Exiting now may cause data loss.';
       case 'sync_exit_warning_title':
         return 'Sync in progress';
-      case 'sync_google_drive_hoshi_compat':
-        return 'Share progress with Hoshi / ッツ';
-      case 'sync_google_drive_hoshi_compat_desc':
-        return 'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
       case 'sync_host':
         return 'Host';
       case 'sync_lan_discovery':
@@ -130464,10 +130377,6 @@ extension on _StringsAr {
         return 'المزامنة لا تزال قيد التنفيذ. قد يؤدي الخروج الآن إلى فقدان البيانات.';
       case 'sync_exit_warning_title':
         return 'المزامنة قيد التنفيذ';
-      case 'sync_google_drive_hoshi_compat':
-        return 'Share progress with Hoshi / ッツ';
-      case 'sync_google_drive_hoshi_compat_desc':
-        return 'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
       case 'sync_host':
         return 'المضيف';
       case 'sync_lan_discovery':
@@ -136958,10 +136867,6 @@ extension on _StringsDe {
         return 'Die Synchronisierung läuft noch. Wenn du jetzt beendest, können Daten verloren gehen.';
       case 'sync_exit_warning_title':
         return 'Sync läuft';
-      case 'sync_google_drive_hoshi_compat':
-        return 'Share progress with Hoshi / ッツ';
-      case 'sync_google_drive_hoshi_compat_desc':
-        return 'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
       case 'sync_host':
         return 'Host';
       case 'sync_lan_discovery':
@@ -143457,10 +143362,6 @@ extension on _StringsEs {
         return 'La sincronización aún está en curso. Salir ahora puede provocar pérdida de datos.';
       case 'sync_exit_warning_title':
         return 'Sincronización en curso';
-      case 'sync_google_drive_hoshi_compat':
-        return 'Share progress with Hoshi / ッツ';
-      case 'sync_google_drive_hoshi_compat_desc':
-        return 'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
       case 'sync_host':
         return 'Servidor';
       case 'sync_lan_discovery':
@@ -149958,10 +149859,6 @@ extension on _StringsFr {
         return 'La synchronisation est toujours en cours. Quitter maintenant peut entraîner une perte de données.';
       case 'sync_exit_warning_title':
         return 'Sync en cours';
-      case 'sync_google_drive_hoshi_compat':
-        return 'Share progress with Hoshi / ッツ';
-      case 'sync_google_drive_hoshi_compat_desc':
-        return 'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
       case 'sync_host':
         return 'Hôte';
       case 'sync_lan_discovery':
@@ -156451,10 +156348,6 @@ extension on _StringsId {
         return 'Sinkronisasi masih berlangsung. Keluar sekarang dapat menyebabkan kehilangan data.';
       case 'sync_exit_warning_title':
         return 'Sinkronisasi Berlangsung';
-      case 'sync_google_drive_hoshi_compat':
-        return 'Share progress with Hoshi / ッツ';
-      case 'sync_google_drive_hoshi_compat_desc':
-        return 'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
       case 'sync_host':
         return 'Host';
       case 'sync_lan_discovery':
@@ -162942,10 +162835,6 @@ extension on _StringsIt {
         return 'La sincronizzazione è ancora in corso. Uscire ora potrebbe causare la perdita di dati.';
       case 'sync_exit_warning_title':
         return 'Sincronizzazione in corso';
-      case 'sync_google_drive_hoshi_compat':
-        return 'Share progress with Hoshi / ッツ';
-      case 'sync_google_drive_hoshi_compat_desc':
-        return 'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
       case 'sync_host':
         return 'Host';
       case 'sync_lan_discovery':
@@ -169419,10 +169308,6 @@ extension on _StringsJa {
         return '同期がまだ進行中です。今終了するとデータが失われる可能性があります。';
       case 'sync_exit_warning_title':
         return '同期中';
-      case 'sync_google_drive_hoshi_compat':
-        return 'Share progress with Hoshi / ッツ';
-      case 'sync_google_drive_hoshi_compat_desc':
-        return 'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
       case 'sync_host':
         return 'ホスト';
       case 'sync_lan_discovery':
@@ -175884,10 +175769,6 @@ extension on _StringsKo {
         return '동기화가 아직 진행 중입니다. 지금 종료하면 데이터가 손실될 수 있습니다.';
       case 'sync_exit_warning_title':
         return '동기화 진행 중';
-      case 'sync_google_drive_hoshi_compat':
-        return 'Share progress with Hoshi / ッツ';
-      case 'sync_google_drive_hoshi_compat_desc':
-        return 'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
       case 'sync_host':
         return '호스트';
       case 'sync_lan_discovery':
@@ -182369,10 +182250,6 @@ extension on _StringsNl {
         return 'De synchronisatie is nog bezig. Nu afsluiten kan tot gegevensverlies leiden.';
       case 'sync_exit_warning_title':
         return 'Synchronisatie bezig';
-      case 'sync_google_drive_hoshi_compat':
-        return 'Share progress with Hoshi / ッツ';
-      case 'sync_google_drive_hoshi_compat_desc':
-        return 'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
       case 'sync_host':
         return 'Host';
       case 'sync_lan_discovery':
@@ -188862,10 +188739,6 @@ extension on _StringsPtBr {
         return 'A sincronização ainda está em andamento. Sair agora pode causar perda de dados.';
       case 'sync_exit_warning_title':
         return 'Sincronização em andamento';
-      case 'sync_google_drive_hoshi_compat':
-        return 'Share progress with Hoshi / ッツ';
-      case 'sync_google_drive_hoshi_compat_desc':
-        return 'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
       case 'sync_host':
         return 'Host';
       case 'sync_lan_discovery':
@@ -195357,10 +195230,6 @@ extension on _StringsRu {
         return 'Синхронизация ещё не завершена. Выход сейчас может привести к потере данных.';
       case 'sync_exit_warning_title':
         return 'Идёт синхронизация';
-      case 'sync_google_drive_hoshi_compat':
-        return 'Share progress with Hoshi / ッツ';
-      case 'sync_google_drive_hoshi_compat_desc':
-        return 'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
       case 'sync_host':
         return 'Хост';
       case 'sync_lan_discovery':
@@ -201839,10 +201708,6 @@ extension on _StringsTh {
         return 'ยังซิงค์ไม่เสร็จ การออกตอนนี้อาจทำให้ข้อมูลสูญหาย';
       case 'sync_exit_warning_title':
         return 'กำลังซิงค์';
-      case 'sync_google_drive_hoshi_compat':
-        return 'Share progress with Hoshi / ッツ';
-      case 'sync_google_drive_hoshi_compat_desc':
-        return 'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
       case 'sync_host':
         return 'โฮสต์';
       case 'sync_lan_discovery':
@@ -208324,10 +208189,6 @@ extension on _StringsTr {
         return 'Eşitleme hâlâ sürüyor. Şimdi çıkmak veri kaybına yol açabilir.';
       case 'sync_exit_warning_title':
         return 'Eşitleme Sürüyor';
-      case 'sync_google_drive_hoshi_compat':
-        return 'Share progress with Hoshi / ッツ';
-      case 'sync_google_drive_hoshi_compat_desc':
-        return 'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
       case 'sync_host':
         return 'Sunucu';
       case 'sync_lan_discovery':
@@ -214810,10 +214671,6 @@ extension on _StringsVi {
         return 'Quá trình đồng bộ vẫn đang diễn ra. Thoát ngay bây giờ có thể gây mất dữ liệu.';
       case 'sync_exit_warning_title':
         return 'Đang đồng bộ';
-      case 'sync_google_drive_hoshi_compat':
-        return 'Share progress with Hoshi / ッツ';
-      case 'sync_google_drive_hoshi_compat_desc':
-        return 'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
       case 'sync_host':
         return 'Máy chủ';
       case 'sync_lan_discovery':
@@ -221265,10 +221122,6 @@ extension on _StringsZhCn {
         return '同步尚未完成，现在退出可能会丢失数据。';
       case 'sync_exit_warning_title':
         return '同步进行中';
-      case 'sync_google_drive_hoshi_compat':
-        return '与 Hoshi / ッツ 共享进度';
-      case 'sync_google_drive_hoshi_compat_desc':
-        return '通过共享的 Google Drive 文件夹（ttu-reader-data）同步阅读进度。需完整 Drive 权限并重新登录。';
       case 'sync_host':
         return '主机';
       case 'sync_lan_discovery':
@@ -227706,10 +227559,6 @@ extension on _StringsZhHk {
         return '同步尚未完成，現在退出可能會遺失資料。';
       case 'sync_exit_warning_title':
         return '同步進行中';
-      case 'sync_google_drive_hoshi_compat':
-        return 'Share progress with Hoshi / ッツ';
-      case 'sync_google_drive_hoshi_compat_desc':
-        return 'Sync reading progress via a shared Google Drive folder (ttu-reader-data). Needs full Drive access and re-sign-in.';
       case 'sync_host':
         return '主機';
       case 'sync_lan_discovery':
