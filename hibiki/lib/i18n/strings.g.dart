@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 53652 (3156 per locale)
+/// Strings: 53635 (3155 per locale)
 ///
-/// Built on 2026-08-07 at 14:17 UTC
+/// Built on 2026-08-07 at 14:55 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -1555,7 +1555,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get handlebar_pitch_accent_positions => 'Pitch positions';
   String get handlebar_popup_selection_text => 'Popup selection text';
   String get handlebar_reading => 'Reading';
-  String get handlebar_sasayaki_audio => 'Sasayaki audio';
   String get handlebar_selected_glossary => 'Selected glossary';
   String get handlebar_sentence => 'Sentence';
   String get handlebar_sentence_audio => 'Sentence audio';
@@ -1620,7 +1619,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String import_step_copying_file({required Object name}) => 'Copying ${name}…';
   String get import_step_done => 'Done';
   String get import_step_importing_epub => 'Importing EPUB…';
-  String get import_step_matching => 'Sasayaki alignment…';
+  String get import_step_matching => 'Audio alignment…';
   String get import_step_parsing => 'Parsing subtitles…';
   String get import_step_persisting => 'Saving files…';
   String get import_step_reading => 'Reading file…';
@@ -5241,7 +5240,7 @@ class _StringsAr extends _StringsEn {
   @override
   String get color_primary_desc => 'تمييز الصوت، الأزرار، المفاتيح';
   @override
-  String get color_sentence_audio_highlight => 'تمييز Sasayaki';
+  String get color_sentence_audio_highlight => 'تمييز الصوت';
   @override
   String get color_sentence_audio_highlight_desc =>
       'تمييز مزامنة ترجمة الكتاب المسموع';
@@ -6713,8 +6712,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get handlebar_reading => 'القراءة';
   @override
-  String get handlebar_sasayaki_audio => 'صوت Sasayaki';
-  @override
   String get handlebar_selected_glossary => 'المعنى المحدد';
   @override
   String get handlebar_sentence => 'الجملة';
@@ -6835,7 +6832,7 @@ class _StringsAr extends _StringsEn {
   @override
   String get import_step_importing_epub => 'استيراد EPUB…';
   @override
-  String get import_step_matching => 'محاذاة Sasayaki…';
+  String get import_step_matching => 'محاذاة الصوت…';
   @override
   String get import_step_parsing => 'تحليل الترجمات…';
   @override
@@ -12512,7 +12509,7 @@ class _StringsDe extends _StringsEn {
   String get color_primary_desc =>
       'Audio-Hervorhebung, Schaltflächen, Schalter';
   @override
-  String get color_sentence_audio_highlight => 'Sasayaki-Hervorhebung';
+  String get color_sentence_audio_highlight => 'Audio-Hervorhebung';
   @override
   String get color_sentence_audio_highlight_desc =>
       'Untertitel-Synchronisierung des Hörbuchs';
@@ -14004,8 +14001,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get handlebar_reading => 'Lesung';
   @override
-  String get handlebar_sasayaki_audio => 'Sasayaki-Audio';
-  @override
   String get handlebar_selected_glossary => 'Ausgewähltes Glossar';
   @override
   String get handlebar_sentence => 'Satz';
@@ -14127,7 +14122,7 @@ class _StringsDe extends _StringsEn {
   @override
   String get import_step_importing_epub => 'EPUB wird importiert…';
   @override
-  String get import_step_matching => 'Sasayaki-Abgleich…';
+  String get import_step_matching => 'Audio-Abgleich…';
   @override
   String get import_step_parsing => 'Untertitel werden analysiert…';
   @override
@@ -19841,7 +19836,7 @@ class _StringsEs extends _StringsEn {
   @override
   String get color_primary_desc => 'Resaltado de audio, botones, interruptores';
   @override
-  String get color_sentence_audio_highlight => 'Resaltado Sasayaki';
+  String get color_sentence_audio_highlight => 'Resaltado de audio';
   @override
   String get color_sentence_audio_highlight_desc =>
       'Resaltado de sincronización de subtítulos del audiolibro';
@@ -21335,8 +21330,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get handlebar_reading => 'Lectura';
   @override
-  String get handlebar_sasayaki_audio => 'Audio Sasayaki';
-  @override
   String get handlebar_selected_glossary => 'Glosario seleccionado';
   @override
   String get handlebar_sentence => 'Oración';
@@ -21458,7 +21451,7 @@ class _StringsEs extends _StringsEn {
   @override
   String get import_step_importing_epub => 'Importando EPUB…';
   @override
-  String get import_step_matching => 'Alineación Sasayaki…';
+  String get import_step_matching => 'Alineación de audio…';
   @override
   String get import_step_parsing => 'Analizando subtítulos…';
   @override
@@ -27191,7 +27184,7 @@ class _StringsFr extends _StringsEn {
   @override
   String get color_primary_desc => 'Surlignage audio, boutons, commutateurs';
   @override
-  String get color_sentence_audio_highlight => 'Surlignage Sasayaki';
+  String get color_sentence_audio_highlight => 'Surlignage audio';
   @override
   String get color_sentence_audio_highlight_desc =>
       'Surlignage de synchronisation des sous-titres du livre audio';
@@ -28690,8 +28683,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get handlebar_reading => 'Lecture';
   @override
-  String get handlebar_sasayaki_audio => 'Audio Sasayaki';
-  @override
   String get handlebar_selected_glossary => 'Glossaire sélectionné';
   @override
   String get handlebar_sentence => 'Phrase';
@@ -28814,7 +28805,7 @@ class _StringsFr extends _StringsEn {
   @override
   String get import_step_importing_epub => 'Importation de l\'EPUB…';
   @override
-  String get import_step_matching => 'Alignement Sasayaki…';
+  String get import_step_matching => 'Alignement audio…';
   @override
   String get import_step_parsing => 'Analyse des sous-titres…';
   @override
@@ -34540,7 +34531,7 @@ class _StringsId extends _StringsEn {
   @override
   String get color_primary_desc => 'Sorotan audio, tombol, sakelar';
   @override
-  String get color_sentence_audio_highlight => 'Sorotan Sasayaki';
+  String get color_sentence_audio_highlight => 'Sorotan audio';
   @override
   String get color_sentence_audio_highlight_desc =>
       'Sorotan sinkronisasi subtitle buku audio';
@@ -36016,8 +36007,6 @@ class _StringsId extends _StringsEn {
   @override
   String get handlebar_reading => 'Bacaan';
   @override
-  String get handlebar_sasayaki_audio => 'Audio Sasayaki';
-  @override
   String get handlebar_selected_glossary => 'Glosarium terpilih';
   @override
   String get handlebar_sentence => 'Kalimat';
@@ -36138,7 +36127,7 @@ class _StringsId extends _StringsEn {
   @override
   String get import_step_importing_epub => 'Mengimpor EPUB…';
   @override
-  String get import_step_matching => 'Penyelarasan Sasayaki…';
+  String get import_step_matching => 'Penyelarasan audio…';
   @override
   String get import_step_parsing => 'Mengurai subtitle…';
   @override
@@ -41834,7 +41823,7 @@ class _StringsIt extends _StringsEn {
   String get color_primary_desc =>
       'Evidenziazione audio, pulsanti, interruttori';
   @override
-  String get color_sentence_audio_highlight => 'Evidenziazione Sasayaki';
+  String get color_sentence_audio_highlight => 'Evidenziazione audio';
   @override
   String get color_sentence_audio_highlight_desc =>
       'Evidenziazione sincronizzazione sottotitoli audiolibro';
@@ -43322,8 +43311,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get handlebar_reading => 'Lettura';
   @override
-  String get handlebar_sasayaki_audio => 'Audio Sasayaki';
-  @override
   String get handlebar_selected_glossary => 'Glossario selezionato';
   @override
   String get handlebar_sentence => 'Frase';
@@ -43446,7 +43433,7 @@ class _StringsIt extends _StringsEn {
   @override
   String get import_step_importing_epub => 'Importazione EPUB…';
   @override
-  String get import_step_matching => 'Allineamento Sasayaki…';
+  String get import_step_matching => 'Allineamento audio…';
   @override
   String get import_step_parsing => 'Analisi sottotitoli…';
   @override
@@ -49143,7 +49130,7 @@ class _StringsJa extends _StringsEn {
   @override
   String get color_primary_desc => '音声ハイライト、ボタン、スイッチ';
   @override
-  String get color_sentence_audio_highlight => 'ささやきハイライト';
+  String get color_sentence_audio_highlight => '音声ハイライト';
   @override
   String get color_sentence_audio_highlight_desc => 'オーディオブック字幕同期ハイライト';
   @override
@@ -50600,8 +50587,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get handlebar_reading => '読み';
   @override
-  String get handlebar_sasayaki_audio => 'Sasayaki 音声';
-  @override
   String get handlebar_selected_glossary => '選択した用語集';
   @override
   String get handlebar_sentence => '例文';
@@ -50717,7 +50702,7 @@ class _StringsJa extends _StringsEn {
   @override
   String get import_step_importing_epub => 'EPUBをインポート中…';
   @override
-  String get import_step_matching => 'Sasayakiアラインメント中…';
+  String get import_step_matching => '音声アラインメント中…';
   @override
   String get import_step_parsing => '字幕を解析中…';
   @override
@@ -56293,7 +56278,7 @@ class _StringsKo extends _StringsEn {
   @override
   String get color_primary_desc => '오디오 하이라이트, 버튼, 스위치';
   @override
-  String get color_sentence_audio_highlight => '사사야키 하이라이트';
+  String get color_sentence_audio_highlight => '오디오 하이라이트';
   @override
   String get color_sentence_audio_highlight_desc => '오디오북 자막 동기화 하이라이트';
   @override
@@ -57748,8 +57733,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get handlebar_reading => '읽기';
   @override
-  String get handlebar_sasayaki_audio => 'Sasayaki 오디오';
-  @override
   String get handlebar_selected_glossary => '선택된 해설';
   @override
   String get handlebar_sentence => '예문';
@@ -57865,7 +57848,7 @@ class _StringsKo extends _StringsEn {
   @override
   String get import_step_importing_epub => 'EPUB 가져오는 중…';
   @override
-  String get import_step_matching => 'Sasayaki 정렬 중…';
+  String get import_step_matching => '오디오 정렬 중…';
   @override
   String get import_step_parsing => '자막 분석 중…';
   @override
@@ -63466,7 +63449,7 @@ class _StringsNl extends _StringsEn {
   @override
   String get color_primary_desc => 'Audiomarkering, knoppen, schakelaars';
   @override
-  String get color_sentence_audio_highlight => 'Sasayaki-markering';
+  String get color_sentence_audio_highlight => 'Audiomarkering';
   @override
   String get color_sentence_audio_highlight_desc =>
       'Markering van ondertitelsynchronisatie van het luisterboek';
@@ -64950,8 +64933,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get handlebar_reading => 'Lezing';
   @override
-  String get handlebar_sasayaki_audio => 'Sasayaki-audio';
-  @override
   String get handlebar_selected_glossary => 'Geselecteerde woordenlijst';
   @override
   String get handlebar_sentence => 'Zin';
@@ -65073,7 +65054,7 @@ class _StringsNl extends _StringsEn {
   @override
   String get import_step_importing_epub => 'EPUB wordt geïmporteerd…';
   @override
-  String get import_step_matching => 'Sasayaki-afstemming…';
+  String get import_step_matching => 'Audio-afstemming…';
   @override
   String get import_step_parsing => 'Ondertitels analyseren…';
   @override
@@ -70782,7 +70763,7 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get color_primary_desc => 'Destaque de áudio, botões, interruptores';
   @override
-  String get color_sentence_audio_highlight => 'Destaque Sasayaki';
+  String get color_sentence_audio_highlight => 'Destaque de áudio';
   @override
   String get color_sentence_audio_highlight_desc =>
       'Destaque de sincronização de legendas do audiolivro';
@@ -72271,8 +72252,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get handlebar_reading => 'Leitura';
   @override
-  String get handlebar_sasayaki_audio => 'Áudio Sasayaki';
-  @override
   String get handlebar_selected_glossary => 'Glossário selecionado';
   @override
   String get handlebar_sentence => 'Frase';
@@ -72394,7 +72373,7 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get import_step_importing_epub => 'Importando EPUB…';
   @override
-  String get import_step_matching => 'Alinhamento Sasayaki…';
+  String get import_step_matching => 'Alinhamento de áudio…';
   @override
   String get import_step_parsing => 'Analisando legendas…';
   @override
@@ -78103,7 +78082,7 @@ class _StringsRu extends _StringsEn {
   @override
   String get color_primary_desc => 'Подсветка аудио, кнопки, переключатели';
   @override
-  String get color_sentence_audio_highlight => 'Подсветка Sasayaki';
+  String get color_sentence_audio_highlight => 'Подсветка аудио';
   @override
   String get color_sentence_audio_highlight_desc =>
       'Подсветка синхронизации субтитров аудиокниги';
@@ -79589,8 +79568,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get handlebar_reading => 'Чтение';
   @override
-  String get handlebar_sasayaki_audio => 'Sasayaki аудио';
-  @override
   String get handlebar_selected_glossary => 'Выбранный глоссарий';
   @override
   String get handlebar_sentence => 'Предложение';
@@ -79711,7 +79688,7 @@ class _StringsRu extends _StringsEn {
   @override
   String get import_step_importing_epub => 'Импорт EPUB…';
   @override
-  String get import_step_matching => 'Сопоставление Sasayaki…';
+  String get import_step_matching => 'Сопоставление аудио…';
   @override
   String get import_step_parsing => 'Разбор субтитров…';
   @override
@@ -85407,7 +85384,7 @@ class _StringsTh extends _StringsEn {
   @override
   String get color_primary_desc => 'ไฮไลต์เสียง ปุ่ม สวิตช์';
   @override
-  String get color_sentence_audio_highlight => 'ไฮไลท์ Sasayaki';
+  String get color_sentence_audio_highlight => 'ไฮไลท์เสียง';
   @override
   String get color_sentence_audio_highlight_desc =>
       'ไฮไลท์การซิงค์คำบรรยายหนังสือเสียง';
@@ -86878,8 +86855,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get handlebar_reading => 'การอ่าน';
   @override
-  String get handlebar_sasayaki_audio => 'เสียง Sasayaki';
-  @override
   String get handlebar_selected_glossary => 'อภิธานที่เลือก';
   @override
   String get handlebar_sentence => 'ประโยค';
@@ -86999,7 +86974,7 @@ class _StringsTh extends _StringsEn {
   @override
   String get import_step_importing_epub => 'กำลังนำเข้า EPUB…';
   @override
-  String get import_step_matching => 'กำลังจับคู่ Sasayaki…';
+  String get import_step_matching => 'กำลังจับคู่เสียง…';
   @override
   String get import_step_parsing => 'กำลังวิเคราะห์ซับไตเติล…';
   @override
@@ -92674,7 +92649,7 @@ class _StringsTr extends _StringsEn {
   @override
   String get color_primary_desc => 'Ses vurgusu, düğmeler, anahtarlar';
   @override
-  String get color_sentence_audio_highlight => 'Sasayaki vurgusu';
+  String get color_sentence_audio_highlight => 'Ses vurgusu';
   @override
   String get color_sentence_audio_highlight_desc =>
       'Sesli kitap altyazı senkronizasyon vurgusu';
@@ -94154,8 +94129,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get handlebar_reading => 'Okuma';
   @override
-  String get handlebar_sasayaki_audio => 'Sasayaki Ses';
-  @override
   String get handlebar_selected_glossary => 'Seçili sözlük';
   @override
   String get handlebar_sentence => 'Cümle';
@@ -94276,7 +94249,7 @@ class _StringsTr extends _StringsEn {
   @override
   String get import_step_importing_epub => 'EPUB içe aktarılıyor…';
   @override
-  String get import_step_matching => 'Sasayaki eşleştirmesi…';
+  String get import_step_matching => 'Ses eşleştirmesi…';
   @override
   String get import_step_parsing => 'Altyazılar ayrıştırılıyor…';
   @override
@@ -99960,7 +99933,7 @@ class _StringsVi extends _StringsEn {
   @override
   String get color_primary_desc => 'Đánh dấu âm thanh, nút, công tắc';
   @override
-  String get color_sentence_audio_highlight => 'Tô sáng Sasayaki';
+  String get color_sentence_audio_highlight => 'Tô sáng âm thanh';
   @override
   String get color_sentence_audio_highlight_desc =>
       'Tô sáng đồng bộ phụ đề sách nói';
@@ -101438,8 +101411,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get handlebar_reading => 'Phiên âm';
   @override
-  String get handlebar_sasayaki_audio => 'Âm thanh Sasayaki';
-  @override
   String get handlebar_selected_glossary => 'Giải nghĩa đã chọn';
   @override
   String get handlebar_sentence => 'Câu';
@@ -101559,7 +101530,7 @@ class _StringsVi extends _StringsEn {
   @override
   String get import_step_importing_epub => 'Đang nhập EPUB…';
   @override
-  String get import_step_matching => 'Đang căn chỉnh Sasayaki…';
+  String get import_step_matching => 'Đang căn chỉnh âm thanh…';
   @override
   String get import_step_parsing => 'Đang phân tích phụ đề…';
   @override
@@ -108544,8 +108515,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get handlebar_reading => '读音';
   @override
-  String get handlebar_sasayaki_audio => 'Sasayaki 音频';
-  @override
   String get handlebar_selected_glossary => '选中的释义';
   @override
   String get handlebar_sentence => '例句';
@@ -108658,7 +108627,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get import_step_importing_epub => '导入 EPUB…';
   @override
-  String get import_step_matching => 'Sasayaki 对齐…';
+  String get import_step_matching => '音频对齐…';
   @override
   String get import_step_parsing => '解析字幕…';
   @override
@@ -115401,8 +115370,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get handlebar_reading => '讀音';
   @override
-  String get handlebar_sasayaki_audio => 'Sasayaki 音訊';
-  @override
   String get handlebar_selected_glossary => '已選釋義';
   @override
   String get handlebar_sentence => '例句';
@@ -115516,7 +115483,7 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get import_step_importing_epub => '匯入 EPUB…';
   @override
-  String get import_step_matching => 'Sasayaki 對齊…';
+  String get import_step_matching => '音訊對齊…';
   @override
   String get import_step_parsing => '解析字幕…';
   @override
@@ -122256,8 +122223,6 @@ extension on _StringsEn {
         return 'Popup selection text';
       case 'handlebar_reading':
         return 'Reading';
-      case 'handlebar_sasayaki_audio':
-        return 'Sasayaki audio';
       case 'handlebar_selected_glossary':
         return 'Selected glossary';
       case 'handlebar_sentence':
@@ -122372,7 +122337,7 @@ extension on _StringsEn {
       case 'import_step_importing_epub':
         return 'Importing EPUB…';
       case 'import_step_matching':
-        return 'Sasayaki alignment…';
+        return 'Audio alignment…';
       case 'import_step_parsing':
         return 'Parsing subtitles…';
       case 'import_step_persisting':
@@ -127408,7 +127373,7 @@ extension on _StringsAr {
       case 'color_primary_desc':
         return 'تمييز الصوت، الأزرار، المفاتيح';
       case 'color_sentence_audio_highlight':
-        return 'تمييز Sasayaki';
+        return 'تمييز الصوت';
       case 'color_sentence_audio_highlight_desc':
         return 'تمييز مزامنة ترجمة الكتاب المسموع';
       case 'color_secondary':
@@ -128732,8 +128697,6 @@ extension on _StringsAr {
         return 'نص التحديد المنبثق';
       case 'handlebar_reading':
         return 'القراءة';
-      case 'handlebar_sasayaki_audio':
-        return 'صوت Sasayaki';
       case 'handlebar_selected_glossary':
         return 'المعنى المحدد';
       case 'handlebar_sentence':
@@ -128847,7 +128810,7 @@ extension on _StringsAr {
       case 'import_step_importing_epub':
         return 'استيراد EPUB…';
       case 'import_step_matching':
-        return 'محاذاة Sasayaki…';
+        return 'محاذاة الصوت…';
       case 'import_step_parsing':
         return 'تحليل الترجمات…';
       case 'import_step_persisting':
@@ -133883,7 +133846,7 @@ extension on _StringsDe {
       case 'color_primary_desc':
         return 'Audio-Hervorhebung, Schaltflächen, Schalter';
       case 'color_sentence_audio_highlight':
-        return 'Sasayaki-Hervorhebung';
+        return 'Audio-Hervorhebung';
       case 'color_sentence_audio_highlight_desc':
         return 'Untertitel-Synchronisierung des Hörbuchs';
       case 'color_secondary':
@@ -135209,8 +135172,6 @@ extension on _StringsDe {
         return 'Popup-Auswahltext';
       case 'handlebar_reading':
         return 'Lesung';
-      case 'handlebar_sasayaki_audio':
-        return 'Sasayaki-Audio';
       case 'handlebar_selected_glossary':
         return 'Ausgewähltes Glossar';
       case 'handlebar_sentence':
@@ -135326,7 +135287,7 @@ extension on _StringsDe {
       case 'import_step_importing_epub':
         return 'EPUB wird importiert…';
       case 'import_step_matching':
-        return 'Sasayaki-Abgleich…';
+        return 'Audio-Abgleich…';
       case 'import_step_parsing':
         return 'Untertitel werden analysiert…';
       case 'import_step_persisting':
@@ -140379,7 +140340,7 @@ extension on _StringsEs {
       case 'color_primary_desc':
         return 'Resaltado de audio, botones, interruptores';
       case 'color_sentence_audio_highlight':
-        return 'Resaltado Sasayaki';
+        return 'Resaltado de audio';
       case 'color_sentence_audio_highlight_desc':
         return 'Resaltado de sincronización de subtítulos del audiolibro';
       case 'color_secondary':
@@ -141705,8 +141666,6 @@ extension on _StringsEs {
         return 'Texto de selección del popup';
       case 'handlebar_reading':
         return 'Lectura';
-      case 'handlebar_sasayaki_audio':
-        return 'Audio Sasayaki';
       case 'handlebar_selected_glossary':
         return 'Glosario seleccionado';
       case 'handlebar_sentence':
@@ -141822,7 +141781,7 @@ extension on _StringsEs {
       case 'import_step_importing_epub':
         return 'Importando EPUB…';
       case 'import_step_matching':
-        return 'Alineación Sasayaki…';
+        return 'Alineación de audio…';
       case 'import_step_parsing':
         return 'Analizando subtítulos…';
       case 'import_step_persisting':
@@ -146874,7 +146833,7 @@ extension on _StringsFr {
       case 'color_primary_desc':
         return 'Surlignage audio, boutons, commutateurs';
       case 'color_sentence_audio_highlight':
-        return 'Surlignage Sasayaki';
+        return 'Surlignage audio';
       case 'color_sentence_audio_highlight_desc':
         return 'Surlignage de synchronisation des sous-titres du livre audio';
       case 'color_secondary':
@@ -148202,8 +148161,6 @@ extension on _StringsFr {
         return 'Texte de sélection du popup';
       case 'handlebar_reading':
         return 'Lecture';
-      case 'handlebar_sasayaki_audio':
-        return 'Audio Sasayaki';
       case 'handlebar_selected_glossary':
         return 'Glossaire sélectionné';
       case 'handlebar_sentence':
@@ -148319,7 +148276,7 @@ extension on _StringsFr {
       case 'import_step_importing_epub':
         return 'Importation de l\'EPUB…';
       case 'import_step_matching':
-        return 'Alignement Sasayaki…';
+        return 'Alignement audio…';
       case 'import_step_parsing':
         return 'Analyse des sous-titres…';
       case 'import_step_persisting':
@@ -153372,7 +153329,7 @@ extension on _StringsId {
       case 'color_primary_desc':
         return 'Sorotan audio, tombol, sakelar';
       case 'color_sentence_audio_highlight':
-        return 'Sorotan Sasayaki';
+        return 'Sorotan audio';
       case 'color_sentence_audio_highlight_desc':
         return 'Sorotan sinkronisasi subtitle buku audio';
       case 'color_secondary':
@@ -154697,8 +154654,6 @@ extension on _StringsId {
         return 'Teks pilihan popup';
       case 'handlebar_reading':
         return 'Bacaan';
-      case 'handlebar_sasayaki_audio':
-        return 'Audio Sasayaki';
       case 'handlebar_selected_glossary':
         return 'Glosarium terpilih';
       case 'handlebar_sentence':
@@ -154814,7 +154769,7 @@ extension on _StringsId {
       case 'import_step_importing_epub':
         return 'Mengimpor EPUB…';
       case 'import_step_matching':
-        return 'Penyelarasan Sasayaki…';
+        return 'Penyelarasan audio…';
       case 'import_step_parsing':
         return 'Mengurai subtitle…';
       case 'import_step_persisting':
@@ -159854,7 +159809,7 @@ extension on _StringsIt {
       case 'color_primary_desc':
         return 'Evidenziazione audio, pulsanti, interruttori';
       case 'color_sentence_audio_highlight':
-        return 'Evidenziazione Sasayaki';
+        return 'Evidenziazione audio';
       case 'color_sentence_audio_highlight_desc':
         return 'Evidenziazione sincronizzazione sottotitoli audiolibro';
       case 'color_secondary':
@@ -161180,8 +161135,6 @@ extension on _StringsIt {
         return 'Testo di selezione del popup';
       case 'handlebar_reading':
         return 'Lettura';
-      case 'handlebar_sasayaki_audio':
-        return 'Audio Sasayaki';
       case 'handlebar_selected_glossary':
         return 'Glossario selezionato';
       case 'handlebar_sentence':
@@ -161297,7 +161250,7 @@ extension on _StringsIt {
       case 'import_step_importing_epub':
         return 'Importazione EPUB…';
       case 'import_step_matching':
-        return 'Allineamento Sasayaki…';
+        return 'Allineamento audio…';
       case 'import_step_parsing':
         return 'Analisi sottotitoli…';
       case 'import_step_persisting':
@@ -166341,7 +166294,7 @@ extension on _StringsJa {
       case 'color_primary_desc':
         return '音声ハイライト、ボタン、スイッチ';
       case 'color_sentence_audio_highlight':
-        return 'ささやきハイライト';
+        return '音声ハイライト';
       case 'color_sentence_audio_highlight_desc':
         return 'オーディオブック字幕同期ハイライト';
       case 'color_secondary':
@@ -167665,8 +167618,6 @@ extension on _StringsJa {
         return 'ポップアップ選択テキスト';
       case 'handlebar_reading':
         return '読み';
-      case 'handlebar_sasayaki_audio':
-        return 'Sasayaki 音声';
       case 'handlebar_selected_glossary':
         return '選択した用語集';
       case 'handlebar_sentence':
@@ -167779,7 +167730,7 @@ extension on _StringsJa {
       case 'import_step_importing_epub':
         return 'EPUBをインポート中…';
       case 'import_step_matching':
-        return 'Sasayakiアラインメント中…';
+        return '音声アラインメント中…';
       case 'import_step_parsing':
         return '字幕を解析中…';
       case 'import_step_persisting':
@@ -172800,7 +172751,7 @@ extension on _StringsKo {
       case 'color_primary_desc':
         return '오디오 하이라이트, 버튼, 스위치';
       case 'color_sentence_audio_highlight':
-        return '사사야키 하이라이트';
+        return '오디오 하이라이트';
       case 'color_sentence_audio_highlight_desc':
         return '오디오북 자막 동기화 하이라이트';
       case 'color_secondary':
@@ -174124,8 +174075,6 @@ extension on _StringsKo {
         return '팝업 선택 텍스트';
       case 'handlebar_reading':
         return '읽기';
-      case 'handlebar_sasayaki_audio':
-        return 'Sasayaki 오디오';
       case 'handlebar_selected_glossary':
         return '선택된 해설';
       case 'handlebar_sentence':
@@ -174239,7 +174188,7 @@ extension on _StringsKo {
       case 'import_step_importing_epub':
         return 'EPUB 가져오는 중…';
       case 'import_step_matching':
-        return 'Sasayaki 정렬 중…';
+        return '오디오 정렬 중…';
       case 'import_step_parsing':
         return '자막 분석 중…';
       case 'import_step_persisting':
@@ -179269,7 +179218,7 @@ extension on _StringsNl {
       case 'color_primary_desc':
         return 'Audiomarkering, knoppen, schakelaars';
       case 'color_sentence_audio_highlight':
-        return 'Sasayaki-markering';
+        return 'Audiomarkering';
       case 'color_sentence_audio_highlight_desc':
         return 'Markering van ondertitelsynchronisatie van het luisterboek';
       case 'color_secondary':
@@ -180596,8 +180545,6 @@ extension on _StringsNl {
         return 'Popup-selectietekst';
       case 'handlebar_reading':
         return 'Lezing';
-      case 'handlebar_sasayaki_audio':
-        return 'Sasayaki-audio';
       case 'handlebar_selected_glossary':
         return 'Geselecteerde woordenlijst';
       case 'handlebar_sentence':
@@ -180713,7 +180660,7 @@ extension on _StringsNl {
       case 'import_step_importing_epub':
         return 'EPUB wordt geïmporteerd…';
       case 'import_step_matching':
-        return 'Sasayaki-afstemming…';
+        return 'Audio-afstemming…';
       case 'import_step_parsing':
         return 'Ondertitels analyseren…';
       case 'import_step_persisting':
@@ -185760,7 +185707,7 @@ extension on _StringsPtBr {
       case 'color_primary_desc':
         return 'Destaque de áudio, botões, interruptores';
       case 'color_sentence_audio_highlight':
-        return 'Destaque Sasayaki';
+        return 'Destaque de áudio';
       case 'color_sentence_audio_highlight_desc':
         return 'Destaque de sincronização de legendas do audiolivro';
       case 'color_secondary':
@@ -187085,8 +187032,6 @@ extension on _StringsPtBr {
         return 'Texto de seleção do popup';
       case 'handlebar_reading':
         return 'Leitura';
-      case 'handlebar_sasayaki_audio':
-        return 'Áudio Sasayaki';
       case 'handlebar_selected_glossary':
         return 'Glossário selecionado';
       case 'handlebar_sentence':
@@ -187202,7 +187147,7 @@ extension on _StringsPtBr {
       case 'import_step_importing_epub':
         return 'Importando EPUB…';
       case 'import_step_matching':
-        return 'Alinhamento Sasayaki…';
+        return 'Alinhamento de áudio…';
       case 'import_step_parsing':
         return 'Analisando legendas…';
       case 'import_step_persisting':
@@ -192249,7 +192194,7 @@ extension on _StringsRu {
       case 'color_primary_desc':
         return 'Подсветка аудио, кнопки, переключатели';
       case 'color_sentence_audio_highlight':
-        return 'Подсветка Sasayaki';
+        return 'Подсветка аудио';
       case 'color_sentence_audio_highlight_desc':
         return 'Подсветка синхронизации субтитров аудиокниги';
       case 'color_secondary':
@@ -193575,8 +193520,6 @@ extension on _StringsRu {
         return 'Текст выделения во всплывающем окне';
       case 'handlebar_reading':
         return 'Чтение';
-      case 'handlebar_sasayaki_audio':
-        return 'Sasayaki аудио';
       case 'handlebar_selected_glossary':
         return 'Выбранный глоссарий';
       case 'handlebar_sentence':
@@ -193692,7 +193635,7 @@ extension on _StringsRu {
       case 'import_step_importing_epub':
         return 'Импорт EPUB…';
       case 'import_step_matching':
-        return 'Сопоставление Sasayaki…';
+        return 'Сопоставление аудио…';
       case 'import_step_parsing':
         return 'Разбор субтитров…';
       case 'import_step_persisting':
@@ -198735,7 +198678,7 @@ extension on _StringsTh {
       case 'color_primary_desc':
         return 'ไฮไลต์เสียง ปุ่ม สวิตช์';
       case 'color_sentence_audio_highlight':
-        return 'ไฮไลท์ Sasayaki';
+        return 'ไฮไลท์เสียง';
       case 'color_sentence_audio_highlight_desc':
         return 'ไฮไลท์การซิงค์คำบรรยายหนังสือเสียง';
       case 'color_secondary':
@@ -200059,8 +200002,6 @@ extension on _StringsTh {
         return 'ข้อความที่เลือกในป๊อปอัป';
       case 'handlebar_reading':
         return 'การอ่าน';
-      case 'handlebar_sasayaki_audio':
-        return 'เสียง Sasayaki';
       case 'handlebar_selected_glossary':
         return 'อภิธานที่เลือก';
       case 'handlebar_sentence':
@@ -200175,7 +200116,7 @@ extension on _StringsTh {
       case 'import_step_importing_epub':
         return 'กำลังนำเข้า EPUB…';
       case 'import_step_matching':
-        return 'กำลังจับคู่ Sasayaki…';
+        return 'กำลังจับคู่เสียง…';
       case 'import_step_parsing':
         return 'กำลังวิเคราะห์ซับไตเติล…';
       case 'import_step_persisting':
@@ -205215,7 +205156,7 @@ extension on _StringsTr {
       case 'color_primary_desc':
         return 'Ses vurgusu, düğmeler, anahtarlar';
       case 'color_sentence_audio_highlight':
-        return 'Sasayaki vurgusu';
+        return 'Ses vurgusu';
       case 'color_sentence_audio_highlight_desc':
         return 'Sesli kitap altyazı senkronizasyon vurgusu';
       case 'color_secondary':
@@ -206539,8 +206480,6 @@ extension on _StringsTr {
         return 'Açılır pencere seçim metni';
       case 'handlebar_reading':
         return 'Okuma';
-      case 'handlebar_sasayaki_audio':
-        return 'Sasayaki Ses';
       case 'handlebar_selected_glossary':
         return 'Seçili sözlük';
       case 'handlebar_sentence':
@@ -206655,7 +206594,7 @@ extension on _StringsTr {
       case 'import_step_importing_epub':
         return 'EPUB içe aktarılıyor…';
       case 'import_step_matching':
-        return 'Sasayaki eşleştirmesi…';
+        return 'Ses eşleştirmesi…';
       case 'import_step_parsing':
         return 'Altyazılar ayrıştırılıyor…';
       case 'import_step_persisting':
@@ -211696,7 +211635,7 @@ extension on _StringsVi {
       case 'color_primary_desc':
         return 'Đánh dấu âm thanh, nút, công tắc';
       case 'color_sentence_audio_highlight':
-        return 'Tô sáng Sasayaki';
+        return 'Tô sáng âm thanh';
       case 'color_sentence_audio_highlight_desc':
         return 'Tô sáng đồng bộ phụ đề sách nói';
       case 'color_secondary':
@@ -213021,8 +212960,6 @@ extension on _StringsVi {
         return 'Văn bản chọn trong popup';
       case 'handlebar_reading':
         return 'Phiên âm';
-      case 'handlebar_sasayaki_audio':
-        return 'Âm thanh Sasayaki';
       case 'handlebar_selected_glossary':
         return 'Giải nghĩa đã chọn';
       case 'handlebar_sentence':
@@ -213136,7 +213073,7 @@ extension on _StringsVi {
       case 'import_step_importing_epub':
         return 'Đang nhập EPUB…';
       case 'import_step_matching':
-        return 'Đang căn chỉnh Sasayaki…';
+        return 'Đang căn chỉnh âm thanh…';
       case 'import_step_parsing':
         return 'Đang phân tích phụ đề…';
       case 'import_step_persisting':
@@ -219484,8 +219421,6 @@ extension on _StringsZhCn {
         return '弹窗选中文本';
       case 'handlebar_reading':
         return '读音';
-      case 'handlebar_sasayaki_audio':
-        return 'Sasayaki 音频';
       case 'handlebar_selected_glossary':
         return '选中的释义';
       case 'handlebar_sentence':
@@ -219598,7 +219533,7 @@ extension on _StringsZhCn {
       case 'import_step_importing_epub':
         return '导入 EPUB…';
       case 'import_step_matching':
-        return 'Sasayaki 对齐…';
+        return '音频对齐…';
       case 'import_step_parsing':
         return '解析字幕…';
       case 'import_step_persisting':
@@ -225917,8 +225852,6 @@ extension on _StringsZhHk {
         return '彈窗選中文字';
       case 'handlebar_reading':
         return '讀音';
-      case 'handlebar_sasayaki_audio':
-        return 'Sasayaki 音訊';
       case 'handlebar_selected_glossary':
         return '已選釋義';
       case 'handlebar_sentence':
@@ -226031,7 +225964,7 @@ extension on _StringsZhHk {
       case 'import_step_importing_epub':
         return '匯入 EPUB…';
       case 'import_step_matching':
-        return 'Sasayaki 對齊…';
+        return '音訊對齊…';
       case 'import_step_parsing':
         return '解析字幕…';
       case 'import_step_persisting':
