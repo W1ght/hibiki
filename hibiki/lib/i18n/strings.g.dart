@@ -3,7 +3,7 @@
 /// Locales: 17
 /// Strings: 53635 (3155 per locale)
 ///
-/// Built on 2026-08-07 at 14:55 UTC
+/// Built on 2026-08-07 at 17:50 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -346,8 +346,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get anki_tag_include_category => 'Add source category tag';
   String get anki_tag_include_category_hint =>
       'Books get "book", videos get "video", games get "game"';
-  String get anki_tag_include_hibiki => 'Add "hibiki" tag';
-  String get anki_tag_include_hibiki_hint => 'Mark every card mined by Fushi';
+  String get anki_tag_include_fushi => 'Add "fushi" tag';
+  String get anki_tag_include_fushi_hint => 'Mark every card mined by Fushi';
   String get anki_tags => 'Tags';
   String get anki_tags_hint => 'Space-separated tags added to every card';
   String get app_icon_label => 'App icon';
@@ -4560,9 +4560,9 @@ class _StringsAr extends _StringsEn {
   String get anki_tag_include_category_hint =>
       'تحصل الكتب على "book" والفيديوهات على "video" والألعاب على "game"';
   @override
-  String get anki_tag_include_hibiki => 'إضافة وسم "hibiki"';
+  String get anki_tag_include_fushi => 'إضافة وسم "fushi"';
   @override
-  String get anki_tag_include_hibiki_hint => 'وسم كل بطاقة أنشأها Fushi';
+  String get anki_tag_include_fushi_hint => 'وسم كل بطاقة أنشأها Fushi';
   @override
   String get anki_tags => 'الوسوم';
   @override
@@ -11822,9 +11822,9 @@ class _StringsDe extends _StringsEn {
   String get anki_tag_include_category_hint =>
       'Bücher erhalten „book“, Videos „video“, Spiele „game“';
   @override
-  String get anki_tag_include_hibiki => 'Tag „hibiki“ hinzufügen';
+  String get anki_tag_include_fushi => 'Tag „fushi“ hinzufügen';
   @override
-  String get anki_tag_include_hibiki_hint =>
+  String get anki_tag_include_fushi_hint =>
       'Jede von Fushi erstellte Karte kennzeichnen';
   @override
   String get anki_tags => 'Tags';
@@ -19151,9 +19151,9 @@ class _StringsEs extends _StringsEn {
   String get anki_tag_include_category_hint =>
       'Los libros llevan «book», los vídeos «video» y los juegos «game»';
   @override
-  String get anki_tag_include_hibiki => 'Añadir la etiqueta «hibiki»';
+  String get anki_tag_include_fushi => 'Añadir la etiqueta «fushi»';
   @override
-  String get anki_tag_include_hibiki_hint =>
+  String get anki_tag_include_fushi_hint =>
       'Marca todas las tarjetas creadas por Fushi';
   @override
   String get anki_tags => 'Etiquetas';
@@ -26496,9 +26496,9 @@ class _StringsFr extends _StringsEn {
   String get anki_tag_include_category_hint =>
       'Les livres reçoivent « book », les vidéos « video », les jeux « game »';
   @override
-  String get anki_tag_include_hibiki => 'Ajouter l\'étiquette « hibiki »';
+  String get anki_tag_include_fushi => 'Ajouter l\'étiquette « fushi »';
   @override
-  String get anki_tag_include_hibiki_hint =>
+  String get anki_tag_include_fushi_hint =>
       'Marquer chaque carte créée par Fushi';
   @override
   String get anki_tags => 'Étiquettes';
@@ -33853,9 +33853,9 @@ class _StringsId extends _StringsEn {
   String get anki_tag_include_category_hint =>
       'Buku diberi "book", video diberi "video", gim diberi "game"';
   @override
-  String get anki_tag_include_hibiki => 'Tambahkan tag "hibiki"';
+  String get anki_tag_include_fushi => 'Tambahkan tag "fushi"';
   @override
-  String get anki_tag_include_hibiki_hint =>
+  String get anki_tag_include_fushi_hint =>
       'Tandai setiap kartu yang dibuat oleh Fushi';
   @override
   String get anki_tags => 'Tag';
@@ -41138,9 +41138,9 @@ class _StringsIt extends _StringsEn {
   String get anki_tag_include_category_hint =>
       'I libri ricevono "book", i video "video", i giochi "game"';
   @override
-  String get anki_tag_include_hibiki => 'Aggiungi etichetta "hibiki"';
+  String get anki_tag_include_fushi => 'Aggiungi etichetta "fushi"';
   @override
-  String get anki_tag_include_hibiki_hint =>
+  String get anki_tag_include_fushi_hint =>
       'Contrassegna ogni carta creata con Fushi';
   @override
   String get anki_tags => 'Tag';
@@ -48462,9 +48462,9 @@ class _StringsJa extends _StringsEn {
   String get anki_tag_include_category_hint =>
       '書籍には「book」、動画には「video」、ゲームには「game」';
   @override
-  String get anki_tag_include_hibiki => '「hibiki」タグを追加';
+  String get anki_tag_include_fushi => '「fushi」タグを追加';
   @override
-  String get anki_tag_include_hibiki_hint => 'Fushi で作成したすべてのカードに目印を付けます';
+  String get anki_tag_include_fushi_hint => 'Fushi で作成したすべてのカードに目印を付けます';
   @override
   String get anki_tags => 'タグ';
   @override
@@ -55607,9 +55607,9 @@ class _StringsKo extends _StringsEn {
   String get anki_tag_include_category_hint =>
       '책은 "book", 비디오는 "video", 게임은 "game"';
   @override
-  String get anki_tag_include_hibiki => '"hibiki" 태그 추가';
+  String get anki_tag_include_fushi => '"fushi" 태그 추가';
   @override
-  String get anki_tag_include_hibiki_hint => 'Fushi로 만든 모든 카드에 표시합니다';
+  String get anki_tag_include_fushi_hint => 'Fushi로 만든 모든 카드에 표시합니다';
   @override
   String get anki_tags => '태그';
   @override
@@ -62766,9 +62766,9 @@ class _StringsNl extends _StringsEn {
   String get anki_tag_include_category_hint =>
       'Boeken krijgen "book", video\'s krijgen "video", games krijgen "game"';
   @override
-  String get anki_tag_include_hibiki => 'Tag "hibiki" toevoegen';
+  String get anki_tag_include_fushi => 'Tag "fushi" toevoegen';
   @override
-  String get anki_tag_include_hibiki_hint =>
+  String get anki_tag_include_fushi_hint =>
       'Markeer elke kaart die met Fushi is gemaakt';
   @override
   String get anki_tags => 'Tags';
@@ -70078,9 +70078,9 @@ class _StringsPtBr extends _StringsEn {
   String get anki_tag_include_category_hint =>
       'Livros recebem "book", vídeos recebem "video", jogos recebem "game"';
   @override
-  String get anki_tag_include_hibiki => 'Adicionar tag "hibiki"';
+  String get anki_tag_include_fushi => 'Adicionar tag "fushi"';
   @override
-  String get anki_tag_include_hibiki_hint =>
+  String get anki_tag_include_fushi_hint =>
       'Marca todo cartão criado pelo Fushi';
   @override
   String get anki_tags => 'Etiquetas';
@@ -77399,9 +77399,9 @@ class _StringsRu extends _StringsEn {
   String get anki_tag_include_category_hint =>
       'Книги получают «book», видео — «video», игры — «game»';
   @override
-  String get anki_tag_include_hibiki => 'Добавлять тег «hibiki»';
+  String get anki_tag_include_fushi => 'Добавлять тег «fushi»';
   @override
-  String get anki_tag_include_hibiki_hint =>
+  String get anki_tag_include_fushi_hint =>
       'Помечать каждую карточку, созданную в Fushi';
   @override
   String get anki_tags => 'Теги';
@@ -84707,9 +84707,9 @@ class _StringsTh extends _StringsEn {
   String get anki_tag_include_category_hint =>
       'หนังสือได้แท็ก "book" วิดีโอได้แท็ก "video" เกมได้แท็ก "game"';
   @override
-  String get anki_tag_include_hibiki => 'เพิ่มแท็ก "hibiki"';
+  String get anki_tag_include_fushi => 'เพิ่มแท็ก "fushi"';
   @override
-  String get anki_tag_include_hibiki_hint =>
+  String get anki_tag_include_fushi_hint =>
       'ทำเครื่องหมายทุกการ์ดที่สร้างโดย Fushi';
   @override
   String get anki_tags => 'แท็ก';
@@ -91966,9 +91966,9 @@ class _StringsTr extends _StringsEn {
   String get anki_tag_include_category_hint =>
       'Kitaplara "book", videolara "video", oyunlara "game"';
   @override
-  String get anki_tag_include_hibiki => '"hibiki" etiketi ekle';
+  String get anki_tag_include_fushi => '"fushi" etiketi ekle';
   @override
-  String get anki_tag_include_hibiki_hint =>
+  String get anki_tag_include_fushi_hint =>
       'Fushi ile çıkarılan her kartı işaretle';
   @override
   String get anki_tags => 'Etiketler';
@@ -99254,9 +99254,9 @@ class _StringsVi extends _StringsEn {
   String get anki_tag_include_category_hint =>
       'Sách gắn "book", video gắn "video", trò chơi gắn "game"';
   @override
-  String get anki_tag_include_hibiki => 'Thêm thẻ "hibiki"';
+  String get anki_tag_include_fushi => 'Thêm thẻ "fushi"';
   @override
-  String get anki_tag_include_hibiki_hint =>
+  String get anki_tag_include_fushi_hint =>
       'Đánh dấu mọi thẻ được tạo bởi Fushi';
   @override
   String get anki_tags => 'Thẻ tag';
@@ -106503,9 +106503,9 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get anki_tag_include_category_hint => '书籍标「book」、视频标「video」、游戏标「game」';
   @override
-  String get anki_tag_include_hibiki => '添加「hibiki」标签';
+  String get anki_tag_include_fushi => '添加「fushi」标签';
   @override
-  String get anki_tag_include_hibiki_hint => '为每张 Fushi 制出的卡片打上标记';
+  String get anki_tag_include_fushi_hint => '为每张 Fushi 制出的卡片打上标记';
   @override
   String get anki_tags => '标签';
   @override
@@ -113268,9 +113268,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get anki_tag_include_category_hint => '書籍標「book」、影片標「video」、遊戲標「game」';
   @override
-  String get anki_tag_include_hibiki => '加入「hibiki」標籤';
+  String get anki_tag_include_fushi => '加入「fushi」標籤';
   @override
-  String get anki_tag_include_hibiki_hint => '為每張由 Fushi 製作的卡片打上標記';
+  String get anki_tag_include_fushi_hint => '為每張由 Fushi 製作的卡片打上標記';
   @override
   String get anki_tags => '標籤';
   @override
@@ -120287,9 +120287,9 @@ extension on _StringsEn {
         return 'Add source category tag';
       case 'anki_tag_include_category_hint':
         return 'Books get "book", videos get "video", games get "game"';
-      case 'anki_tag_include_hibiki':
-        return 'Add "hibiki" tag';
-      case 'anki_tag_include_hibiki_hint':
+      case 'anki_tag_include_fushi':
+        return 'Add "fushi" tag';
+      case 'anki_tag_include_fushi_hint':
         return 'Mark every card mined by Fushi';
       case 'anki_tags':
         return 'Tags';
@@ -126761,9 +126761,9 @@ extension on _StringsAr {
         return 'إضافة وسم فئة المصدر';
       case 'anki_tag_include_category_hint':
         return 'تحصل الكتب على "book" والفيديوهات على "video" والألعاب على "game"';
-      case 'anki_tag_include_hibiki':
-        return 'إضافة وسم "hibiki"';
-      case 'anki_tag_include_hibiki_hint':
+      case 'anki_tag_include_fushi':
+        return 'إضافة وسم "fushi"';
+      case 'anki_tag_include_fushi_hint':
         return 'وسم كل بطاقة أنشأها Fushi';
       case 'anki_tags':
         return 'الوسوم';
@@ -133232,9 +133232,9 @@ extension on _StringsDe {
         return 'Tag für Quellkategorie hinzufügen';
       case 'anki_tag_include_category_hint':
         return 'Bücher erhalten „book“, Videos „video“, Spiele „game“';
-      case 'anki_tag_include_hibiki':
-        return 'Tag „hibiki“ hinzufügen';
-      case 'anki_tag_include_hibiki_hint':
+      case 'anki_tag_include_fushi':
+        return 'Tag „fushi“ hinzufügen';
+      case 'anki_tag_include_fushi_hint':
         return 'Jede von Fushi erstellte Karte kennzeichnen';
       case 'anki_tags':
         return 'Tags';
@@ -139725,9 +139725,9 @@ extension on _StringsEs {
         return 'Añadir etiqueta de categoría de origen';
       case 'anki_tag_include_category_hint':
         return 'Los libros llevan «book», los vídeos «video» y los juegos «game»';
-      case 'anki_tag_include_hibiki':
-        return 'Añadir la etiqueta «hibiki»';
-      case 'anki_tag_include_hibiki_hint':
+      case 'anki_tag_include_fushi':
+        return 'Añadir la etiqueta «fushi»';
+      case 'anki_tag_include_fushi_hint':
         return 'Marca todas las tarjetas creadas por Fushi';
       case 'anki_tags':
         return 'Etiquetas';
@@ -146218,9 +146218,9 @@ extension on _StringsFr {
         return 'Ajouter une étiquette de catégorie source';
       case 'anki_tag_include_category_hint':
         return 'Les livres reçoivent « book », les vidéos « video », les jeux « game »';
-      case 'anki_tag_include_hibiki':
-        return 'Ajouter l\'étiquette « hibiki »';
-      case 'anki_tag_include_hibiki_hint':
+      case 'anki_tag_include_fushi':
+        return 'Ajouter l\'étiquette « fushi »';
+      case 'anki_tag_include_fushi_hint':
         return 'Marquer chaque carte créée par Fushi';
       case 'anki_tags':
         return 'Étiquettes';
@@ -152715,9 +152715,9 @@ extension on _StringsId {
         return 'Tambahkan tag kategori sumber';
       case 'anki_tag_include_category_hint':
         return 'Buku diberi "book", video diberi "video", gim diberi "game"';
-      case 'anki_tag_include_hibiki':
-        return 'Tambahkan tag "hibiki"';
-      case 'anki_tag_include_hibiki_hint':
+      case 'anki_tag_include_fushi':
+        return 'Tambahkan tag "fushi"';
+      case 'anki_tag_include_fushi_hint':
         return 'Tandai setiap kartu yang dibuat oleh Fushi';
       case 'anki_tags':
         return 'Tag';
@@ -159195,9 +159195,9 @@ extension on _StringsIt {
         return 'Aggiungi etichetta categoria di origine';
       case 'anki_tag_include_category_hint':
         return 'I libri ricevono "book", i video "video", i giochi "game"';
-      case 'anki_tag_include_hibiki':
-        return 'Aggiungi etichetta "hibiki"';
-      case 'anki_tag_include_hibiki_hint':
+      case 'anki_tag_include_fushi':
+        return 'Aggiungi etichetta "fushi"';
+      case 'anki_tag_include_fushi_hint':
         return 'Contrassegna ogni carta creata con Fushi';
       case 'anki_tags':
         return 'Tag';
@@ -165688,9 +165688,9 @@ extension on _StringsJa {
         return 'ソース分類タグを追加';
       case 'anki_tag_include_category_hint':
         return '書籍には「book」、動画には「video」、ゲームには「game」';
-      case 'anki_tag_include_hibiki':
-        return '「hibiki」タグを追加';
-      case 'anki_tag_include_hibiki_hint':
+      case 'anki_tag_include_fushi':
+        return '「fushi」タグを追加';
+      case 'anki_tag_include_fushi_hint':
         return 'Fushi で作成したすべてのカードに目印を付けます';
       case 'anki_tags':
         return 'タグ';
@@ -172144,9 +172144,9 @@ extension on _StringsKo {
         return '소스 분류 태그 추가';
       case 'anki_tag_include_category_hint':
         return '책은 "book", 비디오는 "video", 게임은 "game"';
-      case 'anki_tag_include_hibiki':
-        return '"hibiki" 태그 추가';
-      case 'anki_tag_include_hibiki_hint':
+      case 'anki_tag_include_fushi':
+        return '"fushi" 태그 추가';
+      case 'anki_tag_include_fushi_hint':
         return 'Fushi로 만든 모든 카드에 표시합니다';
       case 'anki_tags':
         return '태그';
@@ -178605,9 +178605,9 @@ extension on _StringsNl {
         return 'Tag voor broncategorie toevoegen';
       case 'anki_tag_include_category_hint':
         return 'Boeken krijgen "book", video\'s krijgen "video", games krijgen "game"';
-      case 'anki_tag_include_hibiki':
-        return 'Tag "hibiki" toevoegen';
-      case 'anki_tag_include_hibiki_hint':
+      case 'anki_tag_include_fushi':
+        return 'Tag "fushi" toevoegen';
+      case 'anki_tag_include_fushi_hint':
         return 'Markeer elke kaart die met Fushi is gemaakt';
       case 'anki_tags':
         return 'Tags';
@@ -185093,9 +185093,9 @@ extension on _StringsPtBr {
         return 'Adicionar tag de categoria de origem';
       case 'anki_tag_include_category_hint':
         return 'Livros recebem "book", vídeos recebem "video", jogos recebem "game"';
-      case 'anki_tag_include_hibiki':
-        return 'Adicionar tag "hibiki"';
-      case 'anki_tag_include_hibiki_hint':
+      case 'anki_tag_include_fushi':
+        return 'Adicionar tag "fushi"';
+      case 'anki_tag_include_fushi_hint':
         return 'Marca todo cartão criado pelo Fushi';
       case 'anki_tags':
         return 'Etiquetas';
@@ -191578,9 +191578,9 @@ extension on _StringsRu {
         return 'Добавлять тег категории источника';
       case 'anki_tag_include_category_hint':
         return 'Книги получают «book», видео — «video», игры — «game»';
-      case 'anki_tag_include_hibiki':
-        return 'Добавлять тег «hibiki»';
-      case 'anki_tag_include_hibiki_hint':
+      case 'anki_tag_include_fushi':
+        return 'Добавлять тег «fushi»';
+      case 'anki_tag_include_fushi_hint':
         return 'Помечать каждую карточку, созданную в Fushi';
       case 'anki_tags':
         return 'Теги';
@@ -198067,9 +198067,9 @@ extension on _StringsTh {
         return 'เพิ่มแท็กหมวดหมู่แหล่งที่มา';
       case 'anki_tag_include_category_hint':
         return 'หนังสือได้แท็ก "book" วิดีโอได้แท็ก "video" เกมได้แท็ก "game"';
-      case 'anki_tag_include_hibiki':
-        return 'เพิ่มแท็ก "hibiki"';
-      case 'anki_tag_include_hibiki_hint':
+      case 'anki_tag_include_fushi':
+        return 'เพิ่มแท็ก "fushi"';
+      case 'anki_tag_include_fushi_hint':
         return 'ทำเครื่องหมายทุกการ์ดที่สร้างโดย Fushi';
       case 'anki_tags':
         return 'แท็ก';
@@ -204541,9 +204541,9 @@ extension on _StringsTr {
         return 'Kaynak kategorisi etiketi ekle';
       case 'anki_tag_include_category_hint':
         return 'Kitaplara "book", videolara "video", oyunlara "game"';
-      case 'anki_tag_include_hibiki':
-        return '"hibiki" etiketi ekle';
-      case 'anki_tag_include_hibiki_hint':
+      case 'anki_tag_include_fushi':
+        return '"fushi" etiketi ekle';
+      case 'anki_tag_include_fushi_hint':
         return 'Fushi ile çıkarılan her kartı işaretle';
       case 'anki_tags':
         return 'Etiketler';
@@ -211023,9 +211023,9 @@ extension on _StringsVi {
         return 'Thêm thẻ phân loại nguồn';
       case 'anki_tag_include_category_hint':
         return 'Sách gắn "book", video gắn "video", trò chơi gắn "game"';
-      case 'anki_tag_include_hibiki':
-        return 'Thêm thẻ "hibiki"';
-      case 'anki_tag_include_hibiki_hint':
+      case 'anki_tag_include_fushi':
+        return 'Thêm thẻ "fushi"';
+      case 'anki_tag_include_fushi_hint':
         return 'Đánh dấu mọi thẻ được tạo bởi Fushi';
       case 'anki_tags':
         return 'Thẻ tag';
@@ -217497,9 +217497,9 @@ extension on _StringsZhCn {
         return '添加来源分类标签';
       case 'anki_tag_include_category_hint':
         return '书籍标「book」、视频标「video」、游戏标「game」';
-      case 'anki_tag_include_hibiki':
-        return '添加「hibiki」标签';
-      case 'anki_tag_include_hibiki_hint':
+      case 'anki_tag_include_fushi':
+        return '添加「fushi」标签';
+      case 'anki_tag_include_fushi_hint':
         return '为每张 Fushi 制出的卡片打上标记';
       case 'anki_tags':
         return '标签';
@@ -223923,9 +223923,9 @@ extension on _StringsZhHk {
         return '加入來源分類標籤';
       case 'anki_tag_include_category_hint':
         return '書籍標「book」、影片標「video」、遊戲標「game」';
-      case 'anki_tag_include_hibiki':
-        return '加入「hibiki」標籤';
-      case 'anki_tag_include_hibiki_hint':
+      case 'anki_tag_include_fushi':
+        return '加入「fushi」標籤';
+      case 'anki_tag_include_fushi_hint':
         return '為每張由 Fushi 製作的卡片打上標記';
       case 'anki_tags':
         return '標籤';
