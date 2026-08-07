@@ -3,7 +3,7 @@
 /// Locales: 17
 /// Strings: 53686 (3158 per locale)
 ///
-/// Built on 2026-08-06 at 22:08 UTC
+/// Built on 2026-08-07 at 05:53 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -731,8 +731,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get color_link_desc => 'Reader hyperlink color';
   String get color_primary => 'Primary';
   String get color_primary_desc => 'Audio highlight, buttons, switches';
-  String get color_sasayaki => 'Audio highlight';
-  String get color_sasayaki_desc =>
+  String get color_sentence_audio_highlight => 'Audio highlight';
+  String get color_sentence_audio_highlight_desc =>
       'Current-sentence highlight that follows audiobook playback';
   String get color_secondary => 'Secondary';
   String get color_secondary_desc => 'Dictionary entries, bookshelf badges';
@@ -2084,32 +2084,35 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Reverse keyboard left/right page-turn direction';
   String get reverse_navigation_bar => 'Reverse navigation bar';
   String get reverse_reader_bottom_bar => 'Reverse reader bottom bar';
-  String get sasayaki_all_zero =>
+  String get audiobook_rematch_all_zero =>
       'All windows scored 0%, please adjust manually';
-  String sasayaki_auto_failed({required Object error}) =>
+  String audiobook_rematch_auto_failed({required Object error}) =>
       'Auto-match failed: ${error}';
-  String get sasayaki_auto_match => 'Auto match';
-  String sasayaki_auto_picked({required Object window, required Object pct}) =>
+  String get audiobook_rematch_auto_match => 'Auto match';
+  String audiobook_rematch_auto_picked(
+          {required Object window, required Object pct}) =>
       'Auto-selected ${window} (hit ${pct}%)';
-  String sasayaki_default_value({required Object n}) => 'Default ${n}';
-  String sasayaki_health_label({required Object pct, required Object detail}) =>
+  String audiobook_rematch_default_value({required Object n}) => 'Default ${n}';
+  String audiobook_rematch_health_label(
+          {required Object pct, required Object detail}) =>
       '${pct} matched — ${detail}';
-  String get sasayaki_matching => 'Matching...';
-  String get sasayaki_no_chapters => 'EPUB has no chapter text';
-  String get sasayaki_no_cues_to_match => 'No cues to match';
-  String get sasayaki_no_sections =>
+  String get audiobook_rematch_matching => 'Matching...';
+  String get audiobook_rematch_no_chapters => 'EPUB has no chapter text';
+  String get audiobook_rematch_no_cues_to_match => 'No cues to match';
+  String get audiobook_rematch_no_sections =>
       'No ttu chapter text found, cannot auto-match';
-  String get sasayaki_no_stored_cues => 'No stored cues, cannot re-run';
-  String sasayaki_rematch_failed({required Object error}) =>
+  String get audiobook_rematch_no_stored_cues =>
+      'No stored cues, cannot re-run';
+  String audiobook_rematch_failed({required Object error}) =>
       'Re-match failed: ${error}';
-  String sasayaki_rematch_result(
+  String audiobook_rematch_result(
           {required Object pct, required Object window}) =>
       'Rematched: ${pct}% (window: ${window})';
-  String get sasayaki_search_window => 'Search window';
-  String get sasayaki_similarity_threshold => 'Similarity threshold';
-  String get sasayaki_threshold_hint =>
+  String get audiobook_rematch_search_window => 'Search window';
+  String get audiobook_rematch_similarity_threshold => 'Similarity threshold';
+  String get audiobook_rematch_threshold_hint =>
       'Minimum similarity for fuzzy matching (Dice coefficient). Lower to tolerate more text differences, but too low causes false matches.';
-  String get sasayaki_window_hint =>
+  String get audiobook_rematch_window_hint =>
       'Number of characters to search forward per cue in the text. Adjust if hit rate is low; too large may skew cursor with short noisy cues.';
   String get saved_tags => 'Tags saved.';
   String get scan_non_japanese_text => 'Scan non-Japanese text';
@@ -5241,9 +5244,10 @@ class _StringsAr extends _StringsEn {
   @override
   String get color_primary_desc => 'تمييز الصوت، الأزرار، المفاتيح';
   @override
-  String get color_sasayaki => 'تمييز Sasayaki';
+  String get color_sentence_audio_highlight => 'تمييز Sasayaki';
   @override
-  String get color_sasayaki_desc => 'تمييز مزامنة ترجمة الكتاب المسموع';
+  String get color_sentence_audio_highlight_desc =>
+      'تمييز مزامنة ترجمة الكتاب المسموع';
   @override
   String get color_secondary => 'ثانوي';
   @override
@@ -7679,48 +7683,51 @@ class _StringsAr extends _StringsEn {
   @override
   String get reverse_reader_bottom_bar => 'عكس الشريط السفلي للقارئ';
   @override
-  String get sasayaki_all_zero => 'جميع النوافذ سجّلت 0%، يرجى الضبط يدوياً';
+  String get audiobook_rematch_all_zero =>
+      'جميع النوافذ سجّلت 0%، يرجى الضبط يدوياً';
   @override
-  String sasayaki_auto_failed({required Object error}) =>
+  String audiobook_rematch_auto_failed({required Object error}) =>
       'فشلت المطابقة التلقائية: ${error}';
   @override
-  String get sasayaki_auto_match => 'مطابقة تلقائية';
+  String get audiobook_rematch_auto_match => 'مطابقة تلقائية';
   @override
-  String sasayaki_auto_picked({required Object window, required Object pct}) =>
+  String audiobook_rematch_auto_picked(
+          {required Object window, required Object pct}) =>
       'تم اختيار ${window} تلقائياً (نسبة ${pct}%)';
   @override
-  String sasayaki_default_value({required Object n}) => 'افتراضي ${n}';
+  String audiobook_rematch_default_value({required Object n}) => 'افتراضي ${n}';
   @override
-  String sasayaki_health_label({required Object pct, required Object detail}) =>
+  String audiobook_rematch_health_label(
+          {required Object pct, required Object detail}) =>
       '${pct} مطابق — ${detail}';
   @override
-  String get sasayaki_matching => 'جارٍ المطابقة...';
+  String get audiobook_rematch_matching => 'جارٍ المطابقة...';
   @override
-  String get sasayaki_no_chapters => 'EPUB لا يحتوي على نص فصول';
+  String get audiobook_rematch_no_chapters => 'EPUB لا يحتوي على نص فصول';
   @override
-  String get sasayaki_no_cues_to_match => 'لا توجد ترجمات للمطابقة';
+  String get audiobook_rematch_no_cues_to_match => 'لا توجد ترجمات للمطابقة';
   @override
-  String get sasayaki_no_sections =>
+  String get audiobook_rematch_no_sections =>
       'لم يتم العثور على نص فصل ttu، لا يمكن المطابقة التلقائية';
   @override
-  String get sasayaki_no_stored_cues =>
+  String get audiobook_rematch_no_stored_cues =>
       'لا توجد ترجمات مخزّنة، لا يمكن إعادة التشغيل';
   @override
-  String sasayaki_rematch_failed({required Object error}) =>
+  String audiobook_rematch_failed({required Object error}) =>
       'فشلت إعادة المطابقة: ${error}';
   @override
-  String sasayaki_rematch_result(
+  String audiobook_rematch_result(
           {required Object pct, required Object window}) =>
       'أُعيدت المطابقة: ${pct}% (نافذة: ${window})';
   @override
-  String get sasayaki_search_window => 'نافذة البحث';
+  String get audiobook_rematch_search_window => 'نافذة البحث';
   @override
-  String get sasayaki_similarity_threshold => 'عتبة التشابه';
+  String get audiobook_rematch_similarity_threshold => 'عتبة التشابه';
   @override
-  String get sasayaki_threshold_hint =>
+  String get audiobook_rematch_threshold_hint =>
       'الحد الأدنى للتشابه في المطابقة الضبابية (معامل Dice). خفّض لتحمّل مزيد من الاختلافات، لكن قيمة منخفضة جداً تسبب مطابقات خاطئة.';
   @override
-  String get sasayaki_window_hint =>
+  String get audiobook_rematch_window_hint =>
       'عدد الأحرف للبحث للأمام لكل ترجمة في النص. اضبط إذا كانت نسبة الإصابة منخفضة؛ قيمة كبيرة جداً قد تُنحرف المؤشر مع الترجمات القصيرة.';
   @override
   String get saved_tags => 'تم حفظ الوسوم.';
@@ -12513,9 +12520,10 @@ class _StringsDe extends _StringsEn {
   String get color_primary_desc =>
       'Audio-Hervorhebung, Schaltflächen, Schalter';
   @override
-  String get color_sasayaki => 'Sasayaki-Hervorhebung';
+  String get color_sentence_audio_highlight => 'Sasayaki-Hervorhebung';
   @override
-  String get color_sasayaki_desc => 'Untertitel-Synchronisierung des Hörbuchs';
+  String get color_sentence_audio_highlight_desc =>
+      'Untertitel-Synchronisierung des Hörbuchs';
   @override
   String get color_secondary => 'Sekundär';
   @override
@@ -14976,49 +14984,52 @@ class _StringsDe extends _StringsEn {
   @override
   String get reverse_reader_bottom_bar => 'Untere Leserleiste umkehren';
   @override
-  String get sasayaki_all_zero =>
+  String get audiobook_rematch_all_zero =>
       'Alle Fenster mit 0% bewertet, bitte manuell anpassen';
   @override
-  String sasayaki_auto_failed({required Object error}) =>
+  String audiobook_rematch_auto_failed({required Object error}) =>
       'Automatischer Abgleich fehlgeschlagen: ${error}';
   @override
-  String get sasayaki_auto_match => 'Automatischer Abgleich';
+  String get audiobook_rematch_auto_match => 'Automatischer Abgleich';
   @override
-  String sasayaki_auto_picked({required Object window, required Object pct}) =>
+  String audiobook_rematch_auto_picked(
+          {required Object window, required Object pct}) =>
       'Automatisch ${window} ausgewählt (Treffer ${pct}%)';
   @override
-  String sasayaki_default_value({required Object n}) => 'Standard ${n}';
+  String audiobook_rematch_default_value({required Object n}) =>
+      'Standard ${n}';
   @override
-  String sasayaki_health_label({required Object pct, required Object detail}) =>
+  String audiobook_rematch_health_label(
+          {required Object pct, required Object detail}) =>
       '${pct} übereinstimmend — ${detail}';
   @override
-  String get sasayaki_matching => 'Abgleich läuft...';
+  String get audiobook_rematch_matching => 'Abgleich läuft...';
   @override
-  String get sasayaki_no_chapters => 'EPUB hat keinen Kapiteltext';
+  String get audiobook_rematch_no_chapters => 'EPUB hat keinen Kapiteltext';
   @override
-  String get sasayaki_no_cues_to_match => 'Keine Cues zum Abgleichen';
+  String get audiobook_rematch_no_cues_to_match => 'Keine Cues zum Abgleichen';
   @override
-  String get sasayaki_no_sections =>
+  String get audiobook_rematch_no_sections =>
       'Kein ttu-Kapiteltext gefunden, automatischer Abgleich nicht möglich';
   @override
-  String get sasayaki_no_stored_cues =>
+  String get audiobook_rematch_no_stored_cues =>
       'Keine gespeicherten Cues, erneuter Abgleich nicht möglich';
   @override
-  String sasayaki_rematch_failed({required Object error}) =>
+  String audiobook_rematch_failed({required Object error}) =>
       'Neuabgleich fehlgeschlagen: ${error}';
   @override
-  String sasayaki_rematch_result(
+  String audiobook_rematch_result(
           {required Object pct, required Object window}) =>
       'Neu abgeglichen: ${pct}% (Fenster: ${window})';
   @override
-  String get sasayaki_search_window => 'Suchfenster';
+  String get audiobook_rematch_search_window => 'Suchfenster';
   @override
-  String get sasayaki_similarity_threshold => 'Ähnlichkeitsschwelle';
+  String get audiobook_rematch_similarity_threshold => 'Ähnlichkeitsschwelle';
   @override
-  String get sasayaki_threshold_hint =>
+  String get audiobook_rematch_threshold_hint =>
       'Mindestähnlichkeit für unscharfen Abgleich (Dice-Koeffizient). Senken, um mehr Textunterschiede zu tolerieren, aber zu niedrig verursacht Fehlabgleiche.';
   @override
-  String get sasayaki_window_hint =>
+  String get audiobook_rematch_window_hint =>
       'Anzahl der Zeichen, die pro Cue im Text vorwärts durchsucht werden. Anpassen, wenn die Trefferquote niedrig ist; zu groß kann den Cursor bei kurzen verrauschten Cues verzerren.';
   @override
   String get saved_tags => 'Tags gespeichert.';
@@ -19843,9 +19854,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get color_primary_desc => 'Resaltado de audio, botones, interruptores';
   @override
-  String get color_sasayaki => 'Resaltado Sasayaki';
+  String get color_sentence_audio_highlight => 'Resaltado Sasayaki';
   @override
-  String get color_sasayaki_desc =>
+  String get color_sentence_audio_highlight_desc =>
       'Resaltado de sincronización de subtítulos del audiolibro';
   @override
   String get color_secondary => 'Secundario';
@@ -22313,49 +22324,54 @@ class _StringsEs extends _StringsEn {
   @override
   String get reverse_reader_bottom_bar => 'Invertir barra inferior del lector';
   @override
-  String get sasayaki_all_zero =>
+  String get audiobook_rematch_all_zero =>
       'Todas las ventanas obtuvieron 0%, ajusta manualmente';
   @override
-  String sasayaki_auto_failed({required Object error}) =>
+  String audiobook_rematch_auto_failed({required Object error}) =>
       'Emparejamiento automático fallido: ${error}';
   @override
-  String get sasayaki_auto_match => 'Emparejamiento automático';
+  String get audiobook_rematch_auto_match => 'Emparejamiento automático';
   @override
-  String sasayaki_auto_picked({required Object window, required Object pct}) =>
+  String audiobook_rematch_auto_picked(
+          {required Object window, required Object pct}) =>
       'Selección automática ${window} (acierto ${pct}%)';
   @override
-  String sasayaki_default_value({required Object n}) => 'Predeterminado ${n}';
+  String audiobook_rematch_default_value({required Object n}) =>
+      'Predeterminado ${n}';
   @override
-  String sasayaki_health_label({required Object pct, required Object detail}) =>
+  String audiobook_rematch_health_label(
+          {required Object pct, required Object detail}) =>
       '${pct} coincidencia — ${detail}';
   @override
-  String get sasayaki_matching => 'Emparejando...';
+  String get audiobook_rematch_matching => 'Emparejando...';
   @override
-  String get sasayaki_no_chapters => 'EPUB no tiene texto de capítulos';
+  String get audiobook_rematch_no_chapters =>
+      'EPUB no tiene texto de capítulos';
   @override
-  String get sasayaki_no_cues_to_match => 'No hay marcas para emparejar';
+  String get audiobook_rematch_no_cues_to_match =>
+      'No hay marcas para emparejar';
   @override
-  String get sasayaki_no_sections =>
+  String get audiobook_rematch_no_sections =>
       'No se encontró texto de capítulo en ttu, no se puede emparejar automáticamente';
   @override
-  String get sasayaki_no_stored_cues =>
+  String get audiobook_rematch_no_stored_cues =>
       'No hay marcas almacenadas, no se puede re-ejecutar';
   @override
-  String sasayaki_rematch_failed({required Object error}) =>
+  String audiobook_rematch_failed({required Object error}) =>
       'Re-emparejamiento fallido: ${error}';
   @override
-  String sasayaki_rematch_result(
+  String audiobook_rematch_result(
           {required Object pct, required Object window}) =>
       'Reemparejado: ${pct}% (ventana: ${window})';
   @override
-  String get sasayaki_search_window => 'Ventana de búsqueda';
+  String get audiobook_rematch_search_window => 'Ventana de búsqueda';
   @override
-  String get sasayaki_similarity_threshold => 'Umbral de similitud';
+  String get audiobook_rematch_similarity_threshold => 'Umbral de similitud';
   @override
-  String get sasayaki_threshold_hint =>
+  String get audiobook_rematch_threshold_hint =>
       'Similitud mínima para emparejamiento difuso (coeficiente de Dice). Reduce para tolerar más diferencias de texto, pero un valor demasiado bajo causa coincidencias falsas.';
   @override
-  String get sasayaki_window_hint =>
+  String get audiobook_rematch_window_hint =>
       'Número de caracteres a buscar hacia adelante por marca en el texto. Ajusta si la tasa de aciertos es baja; demasiado grande puede desviar el cursor con marcas cortas y ruidosas.';
   @override
   String get saved_tags => 'Etiquetas guardadas.';
@@ -27193,9 +27209,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get color_primary_desc => 'Surlignage audio, boutons, commutateurs';
   @override
-  String get color_sasayaki => 'Surlignage Sasayaki';
+  String get color_sentence_audio_highlight => 'Surlignage Sasayaki';
   @override
-  String get color_sasayaki_desc =>
+  String get color_sentence_audio_highlight_desc =>
       'Surlignage de synchronisation des sous-titres du livre audio';
   @override
   String get color_secondary => 'Secondaire';
@@ -29669,49 +29685,54 @@ class _StringsFr extends _StringsEn {
   String get reverse_reader_bottom_bar =>
       'Inverser la barre inférieure du lecteur';
   @override
-  String get sasayaki_all_zero =>
+  String get audiobook_rematch_all_zero =>
       'Toutes les fenêtres ont obtenu 0 %, veuillez ajuster manuellement';
   @override
-  String sasayaki_auto_failed({required Object error}) =>
+  String audiobook_rematch_auto_failed({required Object error}) =>
       'échec de la correspondance automatique : ${error}';
   @override
-  String get sasayaki_auto_match => 'Correspondance automatique';
+  String get audiobook_rematch_auto_match => 'Correspondance automatique';
   @override
-  String sasayaki_auto_picked({required Object window, required Object pct}) =>
+  String audiobook_rematch_auto_picked(
+          {required Object window, required Object pct}) =>
       'Sélection automatique de ${window} (taux ${pct}%)';
   @override
-  String sasayaki_default_value({required Object n}) => 'Par défaut ${n}';
+  String audiobook_rematch_default_value({required Object n}) =>
+      'Par défaut ${n}';
   @override
-  String sasayaki_health_label({required Object pct, required Object detail}) =>
+  String audiobook_rematch_health_label(
+          {required Object pct, required Object detail}) =>
       '${pct} correspondance — ${detail}';
   @override
-  String get sasayaki_matching => 'Correspondance en cours...';
+  String get audiobook_rematch_matching => 'Correspondance en cours...';
   @override
-  String get sasayaki_no_chapters => 'EPUB ne contient aucun texte de chapitre';
+  String get audiobook_rematch_no_chapters =>
+      'EPUB ne contient aucun texte de chapitre';
   @override
-  String get sasayaki_no_cues_to_match => 'Aucun repère à faire correspondre';
+  String get audiobook_rematch_no_cues_to_match =>
+      'Aucun repère à faire correspondre';
   @override
-  String get sasayaki_no_sections =>
+  String get audiobook_rematch_no_sections =>
       'Aucun texte de chapitre ttu trouvé, correspondance automatique impossible';
   @override
-  String get sasayaki_no_stored_cues =>
+  String get audiobook_rematch_no_stored_cues =>
       'Aucun repère enregistré, impossible de relancer';
   @override
-  String sasayaki_rematch_failed({required Object error}) =>
+  String audiobook_rematch_failed({required Object error}) =>
       'échec de la correspondance : ${error}';
   @override
-  String sasayaki_rematch_result(
+  String audiobook_rematch_result(
           {required Object pct, required Object window}) =>
       'Recorrespondance : ${pct}% (fenêtre : ${window})';
   @override
-  String get sasayaki_search_window => 'Fenêtre de recherche';
+  String get audiobook_rematch_search_window => 'Fenêtre de recherche';
   @override
-  String get sasayaki_similarity_threshold => 'Seuil de similarité';
+  String get audiobook_rematch_similarity_threshold => 'Seuil de similarité';
   @override
-  String get sasayaki_threshold_hint =>
+  String get audiobook_rematch_threshold_hint =>
       'Similarité minimale pour la correspondance floue (coefficient de Dice). Abaissez pour tolérer plus de différences, mais une valeur trop basse provoque de fausses correspondances.';
   @override
-  String get sasayaki_window_hint =>
+  String get audiobook_rematch_window_hint =>
       'Nombre de caractères à rechercher en avant par repère dans le texte. Ajustez si le taux de correspondance est faible ; une valeur trop élevée peut fausser le curseur avec des repères courts et bruités.';
   @override
   String get saved_tags => 'étiquettes enregistrées.';
@@ -34542,9 +34563,10 @@ class _StringsId extends _StringsEn {
   @override
   String get color_primary_desc => 'Sorotan audio, tombol, sakelar';
   @override
-  String get color_sasayaki => 'Sorotan Sasayaki';
+  String get color_sentence_audio_highlight => 'Sorotan Sasayaki';
   @override
-  String get color_sasayaki_desc => 'Sorotan sinkronisasi subtitle buku audio';
+  String get color_sentence_audio_highlight_desc =>
+      'Sorotan sinkronisasi subtitle buku audio';
   @override
   String get color_secondary => 'Sekunder';
   @override
@@ -36989,49 +37011,52 @@ class _StringsId extends _StringsEn {
   @override
   String get reverse_reader_bottom_bar => 'Balik bilah bawah pembaca';
   @override
-  String get sasayaki_all_zero =>
+  String get audiobook_rematch_all_zero =>
       'Semua jendela skor 0%, silakan sesuaikan secara manual';
   @override
-  String sasayaki_auto_failed({required Object error}) =>
+  String audiobook_rematch_auto_failed({required Object error}) =>
       'Pencocokan otomatis gagal: ${error}';
   @override
-  String get sasayaki_auto_match => 'Pencocokan Otomatis';
+  String get audiobook_rematch_auto_match => 'Pencocokan Otomatis';
   @override
-  String sasayaki_auto_picked({required Object window, required Object pct}) =>
+  String audiobook_rematch_auto_picked(
+          {required Object window, required Object pct}) =>
       'Otomatis memilih ${window} (cocok ${pct}%)';
   @override
-  String sasayaki_default_value({required Object n}) => 'Default ${n}';
+  String audiobook_rematch_default_value({required Object n}) => 'Default ${n}';
   @override
-  String sasayaki_health_label({required Object pct, required Object detail}) =>
+  String audiobook_rematch_health_label(
+          {required Object pct, required Object detail}) =>
       '${pct} cocok — ${detail}';
   @override
-  String get sasayaki_matching => 'Mencocokkan...';
+  String get audiobook_rematch_matching => 'Mencocokkan...';
   @override
-  String get sasayaki_no_chapters => 'EPUB tidak memiliki teks bab';
+  String get audiobook_rematch_no_chapters => 'EPUB tidak memiliki teks bab';
   @override
-  String get sasayaki_no_cues_to_match => 'Tidak ada cue untuk dicocokkan';
+  String get audiobook_rematch_no_cues_to_match =>
+      'Tidak ada cue untuk dicocokkan';
   @override
-  String get sasayaki_no_sections =>
+  String get audiobook_rematch_no_sections =>
       'Teks bab ttu tidak ditemukan, tidak dapat mencocokkan otomatis';
   @override
-  String get sasayaki_no_stored_cues =>
+  String get audiobook_rematch_no_stored_cues =>
       'Tidak ada cue tersimpan, tidak dapat menjalankan ulang';
   @override
-  String sasayaki_rematch_failed({required Object error}) =>
+  String audiobook_rematch_failed({required Object error}) =>
       'Pencocokan ulang gagal: ${error}';
   @override
-  String sasayaki_rematch_result(
+  String audiobook_rematch_result(
           {required Object pct, required Object window}) =>
       'Dicocokkan ulang: ${pct}% (jendela: ${window})';
   @override
-  String get sasayaki_search_window => 'Jendela Pencarian';
+  String get audiobook_rematch_search_window => 'Jendela Pencarian';
   @override
-  String get sasayaki_similarity_threshold => 'Ambang Kemiripan';
+  String get audiobook_rematch_similarity_threshold => 'Ambang Kemiripan';
   @override
-  String get sasayaki_threshold_hint =>
+  String get audiobook_rematch_threshold_hint =>
       'Kemiripan minimum untuk pencocokan fuzzy (koefisien Dice). Turunkan untuk mentoleransi lebih banyak perbedaan teks, tapi terlalu rendah menyebabkan kecocokan palsu.';
   @override
-  String get sasayaki_window_hint =>
+  String get audiobook_rematch_window_hint =>
       'Jumlah karakter untuk dicari ke depan per cue dalam teks. Sesuaikan jika tingkat kecocokan rendah; terlalu besar dapat menggeser kursor dengan cue pendek yang berisik.';
   @override
   String get saved_tags => 'Tag disimpan.';
@@ -41837,9 +41862,9 @@ class _StringsIt extends _StringsEn {
   String get color_primary_desc =>
       'Evidenziazione audio, pulsanti, interruttori';
   @override
-  String get color_sasayaki => 'Evidenziazione Sasayaki';
+  String get color_sentence_audio_highlight => 'Evidenziazione Sasayaki';
   @override
-  String get color_sasayaki_desc =>
+  String get color_sentence_audio_highlight_desc =>
       'Evidenziazione sincronizzazione sottotitoli audiolibro';
   @override
   String get color_secondary => 'Secondario';
@@ -44301,50 +44326,54 @@ class _StringsIt extends _StringsEn {
   @override
   String get reverse_reader_bottom_bar => 'Inverti barra inferiore del lettore';
   @override
-  String get sasayaki_all_zero =>
+  String get audiobook_rematch_all_zero =>
       'Tutte le finestre hanno ottenuto 0%, regolare manualmente';
   @override
-  String sasayaki_auto_failed({required Object error}) =>
+  String audiobook_rematch_auto_failed({required Object error}) =>
       'Corrispondenza automatica fallita: ${error}';
   @override
-  String get sasayaki_auto_match => 'Corrispondenza automatica';
+  String get audiobook_rematch_auto_match => 'Corrispondenza automatica';
   @override
-  String sasayaki_auto_picked({required Object window, required Object pct}) =>
+  String audiobook_rematch_auto_picked(
+          {required Object window, required Object pct}) =>
       'Selezione automatica di ${window} (tasso ${pct}%)';
   @override
-  String sasayaki_default_value({required Object n}) => 'Predefinito ${n}';
+  String audiobook_rematch_default_value({required Object n}) =>
+      'Predefinito ${n}';
   @override
-  String sasayaki_health_label({required Object pct, required Object detail}) =>
+  String audiobook_rematch_health_label(
+          {required Object pct, required Object detail}) =>
       '${pct} corrispondente — ${detail}';
   @override
-  String get sasayaki_matching => 'Corrispondenza in corso...';
+  String get audiobook_rematch_matching => 'Corrispondenza in corso...';
   @override
-  String get sasayaki_no_chapters => 'EPUB non contiene testo di capitolo';
+  String get audiobook_rematch_no_chapters =>
+      'EPUB non contiene testo di capitolo';
   @override
-  String get sasayaki_no_cues_to_match =>
+  String get audiobook_rematch_no_cues_to_match =>
       'Nessun riferimento da far corrispondere';
   @override
-  String get sasayaki_no_sections =>
+  String get audiobook_rematch_no_sections =>
       'Nessun testo di capitolo ttu trovato, corrispondenza automatica impossibile';
   @override
-  String get sasayaki_no_stored_cues =>
+  String get audiobook_rematch_no_stored_cues =>
       'Nessun riferimento memorizzato, impossibile riavviare';
   @override
-  String sasayaki_rematch_failed({required Object error}) =>
+  String audiobook_rematch_failed({required Object error}) =>
       'Corrispondenza fallita: ${error}';
   @override
-  String sasayaki_rematch_result(
+  String audiobook_rematch_result(
           {required Object pct, required Object window}) =>
       'Ricalcolato: ${pct}% (finestra: ${window})';
   @override
-  String get sasayaki_search_window => 'Finestra di ricerca';
+  String get audiobook_rematch_search_window => 'Finestra di ricerca';
   @override
-  String get sasayaki_similarity_threshold => 'Soglia di similarità';
+  String get audiobook_rematch_similarity_threshold => 'Soglia di similarità';
   @override
-  String get sasayaki_threshold_hint =>
+  String get audiobook_rematch_threshold_hint =>
       'Similarità minima per la corrispondenza fuzzy (coefficiente di Dice). Abbassare per tollerare più differenze, ma un valore troppo basso causa false corrispondenze.';
   @override
-  String get sasayaki_window_hint =>
+  String get audiobook_rematch_window_hint =>
       'Numero di caratteri da cercare in avanti per riferimento nel testo. Regola se il tasso di corrispondenza è basso; un valore troppo alto può falsare il cursore con riferimenti brevi e rumorosi.';
   @override
   String get saved_tags => 'Etichette salvate.';
@@ -49147,9 +49176,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get color_primary_desc => '音声ハイライト、ボタン、スイッチ';
   @override
-  String get color_sasayaki => 'ささやきハイライト';
+  String get color_sentence_audio_highlight => 'ささやきハイライト';
   @override
-  String get color_sasayaki_desc => 'オーディオブック字幕同期ハイライト';
+  String get color_sentence_audio_highlight_desc => 'オーディオブック字幕同期ハイライト';
   @override
   String get color_secondary => 'セカンダリ';
   @override
@@ -51558,46 +51587,49 @@ class _StringsJa extends _StringsEn {
   @override
   String get reverse_reader_bottom_bar => 'リーダーの下部バーを反転';
   @override
-  String get sasayaki_all_zero => 'すべてのウィンドウのスコアが0%です。手動で調整してください';
+  String get audiobook_rematch_all_zero => 'すべてのウィンドウのスコアが0%です。手動で調整してください';
   @override
-  String sasayaki_auto_failed({required Object error}) =>
+  String audiobook_rematch_auto_failed({required Object error}) =>
       '自動マッチングに失敗しました：${error}';
   @override
-  String get sasayaki_auto_match => '自動マッチング';
+  String get audiobook_rematch_auto_match => '自動マッチング';
   @override
-  String sasayaki_auto_picked({required Object window, required Object pct}) =>
+  String audiobook_rematch_auto_picked(
+          {required Object window, required Object pct}) =>
       '${window} を自動選択しました（ヒット率 ${pct}%）';
   @override
-  String sasayaki_default_value({required Object n}) => 'デフォルト ${n}';
+  String audiobook_rematch_default_value({required Object n}) => 'デフォルト ${n}';
   @override
-  String sasayaki_health_label({required Object pct, required Object detail}) =>
+  String audiobook_rematch_health_label(
+          {required Object pct, required Object detail}) =>
       '${pct} マッチ — ${detail}';
   @override
-  String get sasayaki_matching => 'マッチング中...';
+  String get audiobook_rematch_matching => 'マッチング中...';
   @override
-  String get sasayaki_no_chapters => 'EPUBにチャプターテキストがありません';
+  String get audiobook_rematch_no_chapters => 'EPUBにチャプターテキストがありません';
   @override
-  String get sasayaki_no_cues_to_match => 'マッチングするキューがありません';
+  String get audiobook_rematch_no_cues_to_match => 'マッチングするキューがありません';
   @override
-  String get sasayaki_no_sections => 'ttuのチャプターテキストが見つかりません。自動マッチングできません';
+  String get audiobook_rematch_no_sections =>
+      'ttuのチャプターテキストが見つかりません。自動マッチングできません';
   @override
-  String get sasayaki_no_stored_cues => '保存されたキューがないため、再実行できません';
+  String get audiobook_rematch_no_stored_cues => '保存されたキューがないため、再実行できません';
   @override
-  String sasayaki_rematch_failed({required Object error}) =>
+  String audiobook_rematch_failed({required Object error}) =>
       '再マッチングに失敗しました：${error}';
   @override
-  String sasayaki_rematch_result(
+  String audiobook_rematch_result(
           {required Object pct, required Object window}) =>
       '再マッチング結果：${pct}%（ウィンドウ：${window}）';
   @override
-  String get sasayaki_search_window => '検索ウィンドウ';
+  String get audiobook_rematch_search_window => '検索ウィンドウ';
   @override
-  String get sasayaki_similarity_threshold => '類似度しきい値';
+  String get audiobook_rematch_similarity_threshold => '類似度しきい値';
   @override
-  String get sasayaki_threshold_hint =>
+  String get audiobook_rematch_threshold_hint =>
       'ファジーマッチングの最小類似度（Dice係数）。テキストの差異を許容するには下げてください。ただし低すぎると誤マッチが発生します。';
   @override
-  String get sasayaki_window_hint =>
+  String get audiobook_rematch_window_hint =>
       'テキスト内で各キューごとに前方検索する文字数。ヒット率が低い場合は調整してください。大きすぎると短い/ノイズの多いキューでカーソルがずれる場合があります。';
   @override
   String get saved_tags => 'タグを保存しました。';
@@ -56301,9 +56333,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get color_primary_desc => '오디오 하이라이트, 버튼, 스위치';
   @override
-  String get color_sasayaki => '사사야키 하이라이트';
+  String get color_sentence_audio_highlight => '사사야키 하이라이트';
   @override
-  String get color_sasayaki_desc => '오디오북 자막 동기화 하이라이트';
+  String get color_sentence_audio_highlight_desc => '오디오북 자막 동기화 하이라이트';
   @override
   String get color_secondary => '보조색';
   @override
@@ -58709,44 +58741,48 @@ class _StringsKo extends _StringsEn {
   @override
   String get reverse_reader_bottom_bar => '리더 하단 바 반전';
   @override
-  String get sasayaki_all_zero => '모든 윈도우 점수가 0%입니다. 수동으로 조정하세요';
+  String get audiobook_rematch_all_zero => '모든 윈도우 점수가 0%입니다. 수동으로 조정하세요';
   @override
-  String sasayaki_auto_failed({required Object error}) => '자동 매칭 실패: ${error}';
+  String audiobook_rematch_auto_failed({required Object error}) =>
+      '자동 매칭 실패: ${error}';
   @override
-  String get sasayaki_auto_match => '자동 매칭';
+  String get audiobook_rematch_auto_match => '자동 매칭';
   @override
-  String sasayaki_auto_picked({required Object window, required Object pct}) =>
+  String audiobook_rematch_auto_picked(
+          {required Object window, required Object pct}) =>
       '${window} 자동 선택됨 (적중률 ${pct}%)';
   @override
-  String sasayaki_default_value({required Object n}) => '기본값 ${n}';
+  String audiobook_rematch_default_value({required Object n}) => '기본값 ${n}';
   @override
-  String sasayaki_health_label({required Object pct, required Object detail}) =>
+  String audiobook_rematch_health_label(
+          {required Object pct, required Object detail}) =>
       '${pct} 일치 — ${detail}';
   @override
-  String get sasayaki_matching => '매칭 중...';
+  String get audiobook_rematch_matching => '매칭 중...';
   @override
-  String get sasayaki_no_chapters => 'EPUB에 챕터 텍스트가 없습니다';
+  String get audiobook_rematch_no_chapters => 'EPUB에 챕터 텍스트가 없습니다';
   @override
-  String get sasayaki_no_cues_to_match => '매칭할 큐가 없습니다';
+  String get audiobook_rematch_no_cues_to_match => '매칭할 큐가 없습니다';
   @override
-  String get sasayaki_no_sections => 'ttu 챕터 텍스트를 찾을 수 없어 자동 매칭 불가';
+  String get audiobook_rematch_no_sections => 'ttu 챕터 텍스트를 찾을 수 없어 자동 매칭 불가';
   @override
-  String get sasayaki_no_stored_cues => '저장된 큐가 없어 다시 실행할 수 없습니다';
+  String get audiobook_rematch_no_stored_cues => '저장된 큐가 없어 다시 실행할 수 없습니다';
   @override
-  String sasayaki_rematch_failed({required Object error}) => '재매칭 실패: ${error}';
+  String audiobook_rematch_failed({required Object error}) =>
+      '재매칭 실패: ${error}';
   @override
-  String sasayaki_rematch_result(
+  String audiobook_rematch_result(
           {required Object pct, required Object window}) =>
       '재매칭: ${pct}% (윈도우: ${window})';
   @override
-  String get sasayaki_search_window => '검색 윈도우';
+  String get audiobook_rematch_search_window => '검색 윈도우';
   @override
-  String get sasayaki_similarity_threshold => '유사도 임계값';
+  String get audiobook_rematch_similarity_threshold => '유사도 임계값';
   @override
-  String get sasayaki_threshold_hint =>
+  String get audiobook_rematch_threshold_hint =>
       '퍼지 매칭의 최소 유사도 (Dice 계수)입니다. 낮추면 텍스트 차이를 더 허용하지만, 너무 낮으면 잘못된 매칭이 발생합니다.';
   @override
-  String get sasayaki_window_hint =>
+  String get audiobook_rematch_window_hint =>
       '텍스트에서 큐당 앞으로 검색할 문자 수입니다. 적중률이 낮으면 조정하세요. 너무 크면 짧은 노이즈 큐에서 커서가 어긋날 수 있습니다.';
   @override
   String get saved_tags => '태그가 저장되었습니다.';
@@ -63475,9 +63511,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get color_primary_desc => 'Audiomarkering, knoppen, schakelaars';
   @override
-  String get color_sasayaki => 'Sasayaki-markering';
+  String get color_sentence_audio_highlight => 'Sasayaki-markering';
   @override
-  String get color_sasayaki_desc =>
+  String get color_sentence_audio_highlight_desc =>
       'Markering van ondertitelsynchronisatie van het luisterboek';
   @override
   String get color_secondary => 'Secundair';
@@ -65930,49 +65966,53 @@ class _StringsNl extends _StringsEn {
   @override
   String get reverse_reader_bottom_bar => 'Onderbalk van lezer omkeren';
   @override
-  String get sasayaki_all_zero =>
+  String get audiobook_rematch_all_zero =>
       'Alle vensters scoorden 0%, pas handmatig aan';
   @override
-  String sasayaki_auto_failed({required Object error}) =>
+  String audiobook_rematch_auto_failed({required Object error}) =>
       'Automatisch matchen mislukt: ${error}';
   @override
-  String get sasayaki_auto_match => 'Automatisch matchen';
+  String get audiobook_rematch_auto_match => 'Automatisch matchen';
   @override
-  String sasayaki_auto_picked({required Object window, required Object pct}) =>
+  String audiobook_rematch_auto_picked(
+          {required Object window, required Object pct}) =>
       'Automatisch geselecteerd ${window} (treffers ${pct}%)';
   @override
-  String sasayaki_default_value({required Object n}) => 'Standaard ${n}';
+  String audiobook_rematch_default_value({required Object n}) =>
+      'Standaard ${n}';
   @override
-  String sasayaki_health_label({required Object pct, required Object detail}) =>
+  String audiobook_rematch_health_label(
+          {required Object pct, required Object detail}) =>
       '${pct} overeenkomst — ${detail}';
   @override
-  String get sasayaki_matching => 'Matchen...';
+  String get audiobook_rematch_matching => 'Matchen...';
   @override
-  String get sasayaki_no_chapters => 'EPUB bevat geen hoofdstuktekst';
+  String get audiobook_rematch_no_chapters => 'EPUB bevat geen hoofdstuktekst';
   @override
-  String get sasayaki_no_cues_to_match => 'Geen referenties om te matchen';
+  String get audiobook_rematch_no_cues_to_match =>
+      'Geen referenties om te matchen';
   @override
-  String get sasayaki_no_sections =>
+  String get audiobook_rematch_no_sections =>
       'Geen ttu-hoofdstuktekst gevonden, automatisch matchen niet mogelijk';
   @override
-  String get sasayaki_no_stored_cues =>
+  String get audiobook_rematch_no_stored_cues =>
       'Geen opgeslagen referenties, kan niet opnieuw uitvoeren';
   @override
-  String sasayaki_rematch_failed({required Object error}) =>
+  String audiobook_rematch_failed({required Object error}) =>
       'Opnieuw matchen mislukt: ${error}';
   @override
-  String sasayaki_rematch_result(
+  String audiobook_rematch_result(
           {required Object pct, required Object window}) =>
       'Opnieuw gematcht: ${pct}% (venster: ${window})';
   @override
-  String get sasayaki_search_window => 'Zoekvenster';
+  String get audiobook_rematch_search_window => 'Zoekvenster';
   @override
-  String get sasayaki_similarity_threshold => 'Similariteitsdrempel';
+  String get audiobook_rematch_similarity_threshold => 'Similariteitsdrempel';
   @override
-  String get sasayaki_threshold_hint =>
+  String get audiobook_rematch_threshold_hint =>
       'Minimale overeenkomst voor fuzzy matching (Dice-coëfficiënt). Verlaag om meer tekstverschillen te tolereren, maar te laag veroorzaakt foutieve matches.';
   @override
-  String get sasayaki_window_hint =>
+  String get audiobook_rematch_window_hint =>
       'Aantal tekens om vooruit te zoeken per referentie in de tekst. Pas aan als het trefpercentage laag is; te hoog kan de cursor verschuiven bij korte, ruizige referenties.';
   @override
   String get saved_tags => 'Labels opgeslagen.';
@@ -70792,9 +70832,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get color_primary_desc => 'Destaque de áudio, botões, interruptores';
   @override
-  String get color_sasayaki => 'Destaque Sasayaki';
+  String get color_sentence_audio_highlight => 'Destaque Sasayaki';
   @override
-  String get color_sasayaki_desc =>
+  String get color_sentence_audio_highlight_desc =>
       'Destaque de sincronização de legendas do audiolivro';
   @override
   String get color_secondary => 'Secundária';
@@ -73256,49 +73296,52 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get reverse_reader_bottom_bar => 'Inverter barra inferior do leitor';
   @override
-  String get sasayaki_all_zero =>
+  String get audiobook_rematch_all_zero =>
       'Todas as janelas pontuaram 0%, ajuste manualmente';
   @override
-  String sasayaki_auto_failed({required Object error}) =>
+  String audiobook_rematch_auto_failed({required Object error}) =>
       'Correspondência automática falhou: ${error}';
   @override
-  String get sasayaki_auto_match => 'Correspondência Automática';
+  String get audiobook_rematch_auto_match => 'Correspondência Automática';
   @override
-  String sasayaki_auto_picked({required Object window, required Object pct}) =>
+  String audiobook_rematch_auto_picked(
+          {required Object window, required Object pct}) =>
       'Selecionado automaticamente ${window} (acerto ${pct}%)';
   @override
-  String sasayaki_default_value({required Object n}) => 'Padrão ${n}';
+  String audiobook_rematch_default_value({required Object n}) => 'Padrão ${n}';
   @override
-  String sasayaki_health_label({required Object pct, required Object detail}) =>
+  String audiobook_rematch_health_label(
+          {required Object pct, required Object detail}) =>
       '${pct} correspondência — ${detail}';
   @override
-  String get sasayaki_matching => 'Correspondendo...';
+  String get audiobook_rematch_matching => 'Correspondendo...';
   @override
-  String get sasayaki_no_chapters => 'EPUB não tem texto de capítulo';
+  String get audiobook_rematch_no_chapters => 'EPUB não tem texto de capítulo';
   @override
-  String get sasayaki_no_cues_to_match => 'Nenhuma frase para corresponder';
+  String get audiobook_rematch_no_cues_to_match =>
+      'Nenhuma frase para corresponder';
   @override
-  String get sasayaki_no_sections =>
+  String get audiobook_rematch_no_sections =>
       'Nenhum texto de capítulo ttu encontrado, não é possível corresponder automaticamente';
   @override
-  String get sasayaki_no_stored_cues =>
+  String get audiobook_rematch_no_stored_cues =>
       'Nenhuma frase armazenada, não é possível reexecutar';
   @override
-  String sasayaki_rematch_failed({required Object error}) =>
+  String audiobook_rematch_failed({required Object error}) =>
       'Falha na correspondência: ${error}';
   @override
-  String sasayaki_rematch_result(
+  String audiobook_rematch_result(
           {required Object pct, required Object window}) =>
       'Recorrespondido: ${pct}% (janela: ${window})';
   @override
-  String get sasayaki_search_window => 'Janela de Busca';
+  String get audiobook_rematch_search_window => 'Janela de Busca';
   @override
-  String get sasayaki_similarity_threshold => 'Limite de Similaridade';
+  String get audiobook_rematch_similarity_threshold => 'Limite de Similaridade';
   @override
-  String get sasayaki_threshold_hint =>
+  String get audiobook_rematch_threshold_hint =>
       'Similaridade mínima para correspondência aproximada (coeficiente de Dice). Diminua para tolerar mais diferenças no texto, mas valores muito baixos causam correspondências falsas.';
   @override
-  String get sasayaki_window_hint =>
+  String get audiobook_rematch_window_hint =>
       'Número de caracteres a buscar à frente por frase no texto. Ajuste se a taxa de acerto estiver baixa; valores muito altos podem deslocar o cursor com frases curtas e ruidosas.';
   @override
   String get saved_tags => 'Tags salvas.';
@@ -78115,9 +78158,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get color_primary_desc => 'Подсветка аудио, кнопки, переключатели';
   @override
-  String get color_sasayaki => 'Подсветка Sasayaki';
+  String get color_sentence_audio_highlight => 'Подсветка Sasayaki';
   @override
-  String get color_sasayaki_desc =>
+  String get color_sentence_audio_highlight_desc =>
       'Подсветка синхронизации субтитров аудиокниги';
   @override
   String get color_secondary => 'Вторичный';
@@ -80574,48 +80617,53 @@ class _StringsRu extends _StringsEn {
   @override
   String get reverse_reader_bottom_bar => 'Обратить нижнюю панель читалки';
   @override
-  String get sasayaki_all_zero => 'Все окна показали 0%, настройте вручную';
+  String get audiobook_rematch_all_zero =>
+      'Все окна показали 0%, настройте вручную';
   @override
-  String sasayaki_auto_failed({required Object error}) =>
+  String audiobook_rematch_auto_failed({required Object error}) =>
       'Автосопоставление не удалось: ${error}';
   @override
-  String get sasayaki_auto_match => 'Автосопоставление';
+  String get audiobook_rematch_auto_match => 'Автосопоставление';
   @override
-  String sasayaki_auto_picked({required Object window, required Object pct}) =>
+  String audiobook_rematch_auto_picked(
+          {required Object window, required Object pct}) =>
       'Автоматически выбрано ${window} (совпадение ${pct}%)';
   @override
-  String sasayaki_default_value({required Object n}) => 'По умолчанию ${n}';
+  String audiobook_rematch_default_value({required Object n}) =>
+      'По умолчанию ${n}';
   @override
-  String sasayaki_health_label({required Object pct, required Object detail}) =>
+  String audiobook_rematch_health_label(
+          {required Object pct, required Object detail}) =>
       '${pct} совпадение — ${detail}';
   @override
-  String get sasayaki_matching => 'Сопоставление...';
+  String get audiobook_rematch_matching => 'Сопоставление...';
   @override
-  String get sasayaki_no_chapters => 'В EPUB нет текста глав';
+  String get audiobook_rematch_no_chapters => 'В EPUB нет текста глав';
   @override
-  String get sasayaki_no_cues_to_match => 'Нет меток для сопоставления';
+  String get audiobook_rematch_no_cues_to_match =>
+      'Нет меток для сопоставления';
   @override
-  String get sasayaki_no_sections =>
+  String get audiobook_rematch_no_sections =>
       'Текст глав ttu не найден, автосопоставление невозможно';
   @override
-  String get sasayaki_no_stored_cues =>
+  String get audiobook_rematch_no_stored_cues =>
       'Нет сохранённых меток, перезапуск невозможен';
   @override
-  String sasayaki_rematch_failed({required Object error}) =>
+  String audiobook_rematch_failed({required Object error}) =>
       'Пересопоставление не удалось: ${error}';
   @override
-  String sasayaki_rematch_result(
+  String audiobook_rematch_result(
           {required Object pct, required Object window}) =>
       'Пересопоставлено: ${pct}% (окно: ${window})';
   @override
-  String get sasayaki_search_window => 'Окно поиска';
+  String get audiobook_rematch_search_window => 'Окно поиска';
   @override
-  String get sasayaki_similarity_threshold => 'Порог сходства';
+  String get audiobook_rematch_similarity_threshold => 'Порог сходства';
   @override
-  String get sasayaki_threshold_hint =>
+  String get audiobook_rematch_threshold_hint =>
       'Минимальное сходство для нечёткого сопоставления (коэффициент Дайса). Уменьшите для допуска больших различий, но слишком низкое значение даёт ложные совпадения.';
   @override
-  String get sasayaki_window_hint =>
+  String get audiobook_rematch_window_hint =>
       'Количество символов для поиска вперёд на каждую метку. Увеличьте, если процент совпадений низкий; слишком большое значение может сместить курсор при коротких шумных метках.';
   @override
   String get saved_tags => 'Теги сохранены.';
@@ -85419,9 +85467,10 @@ class _StringsTh extends _StringsEn {
   @override
   String get color_primary_desc => 'ไฮไลต์เสียง ปุ่ม สวิตช์';
   @override
-  String get color_sasayaki => 'ไฮไลท์ Sasayaki';
+  String get color_sentence_audio_highlight => 'ไฮไลท์ Sasayaki';
   @override
-  String get color_sasayaki_desc => 'ไฮไลท์การซิงค์คำบรรยายหนังสือเสียง';
+  String get color_sentence_audio_highlight_desc =>
+      'ไฮไลท์การซิงค์คำบรรยายหนังสือเสียง';
   @override
   String get color_secondary => 'สีรอง';
   @override
@@ -87855,48 +87904,52 @@ class _StringsTh extends _StringsEn {
   @override
   String get reverse_reader_bottom_bar => 'สลับด้านแถบล่างของโปรแกรมอ่าน';
   @override
-  String get sasayaki_all_zero => 'ทุกหน้าต่างได้คะแนน 0% กรุณาปรับด้วยตนเอง';
+  String get audiobook_rematch_all_zero =>
+      'ทุกหน้าต่างได้คะแนน 0% กรุณาปรับด้วยตนเอง';
   @override
-  String sasayaki_auto_failed({required Object error}) =>
+  String audiobook_rematch_auto_failed({required Object error}) =>
       'การจับคู่อัตโนมัติล้มเหลว: ${error}';
   @override
-  String get sasayaki_auto_match => 'จับคู่อัตโนมัติ';
+  String get audiobook_rematch_auto_match => 'จับคู่อัตโนมัติ';
   @override
-  String sasayaki_auto_picked({required Object window, required Object pct}) =>
+  String audiobook_rematch_auto_picked(
+          {required Object window, required Object pct}) =>
       'เลือกอัตโนมัติ ${window} (ตรง ${pct}%)';
   @override
-  String sasayaki_default_value({required Object n}) => 'ค่าเริ่มต้น ${n}';
+  String audiobook_rematch_default_value({required Object n}) =>
+      'ค่าเริ่มต้น ${n}';
   @override
-  String sasayaki_health_label({required Object pct, required Object detail}) =>
+  String audiobook_rematch_health_label(
+          {required Object pct, required Object detail}) =>
       '${pct} ตรง — ${detail}';
   @override
-  String get sasayaki_matching => 'กำลังจับคู่...';
+  String get audiobook_rematch_matching => 'กำลังจับคู่...';
   @override
-  String get sasayaki_no_chapters => 'EPUB ไม่มีข้อความบท';
+  String get audiobook_rematch_no_chapters => 'EPUB ไม่มีข้อความบท';
   @override
-  String get sasayaki_no_cues_to_match => 'ไม่มี cue ที่จะจับคู่';
+  String get audiobook_rematch_no_cues_to_match => 'ไม่มี cue ที่จะจับคู่';
   @override
-  String get sasayaki_no_sections =>
+  String get audiobook_rematch_no_sections =>
       'ไม่พบข้อความบทจาก ttu ไม่สามารถจับคู่อัตโนมัติ';
   @override
-  String get sasayaki_no_stored_cues =>
+  String get audiobook_rematch_no_stored_cues =>
       'ไม่มี cue ที่เก็บไว้ ไม่สามารถเรียกใช้ใหม่';
   @override
-  String sasayaki_rematch_failed({required Object error}) =>
+  String audiobook_rematch_failed({required Object error}) =>
       'การจับคู่ใหม่ล้มเหลว: ${error}';
   @override
-  String sasayaki_rematch_result(
+  String audiobook_rematch_result(
           {required Object pct, required Object window}) =>
       'จับคู่ใหม่: ${pct}% (หน้าต่าง: ${window})';
   @override
-  String get sasayaki_search_window => 'หน้าต่างค้นหา';
+  String get audiobook_rematch_search_window => 'หน้าต่างค้นหา';
   @override
-  String get sasayaki_similarity_threshold => 'เกณฑ์ความคล้าย';
+  String get audiobook_rematch_similarity_threshold => 'เกณฑ์ความคล้าย';
   @override
-  String get sasayaki_threshold_hint =>
+  String get audiobook_rematch_threshold_hint =>
       'ค่าความคล้ายขั้นต่ำสำหรับการจับคู่แบบคลุมเครือ (สัมประสิทธิ์ Dice) ลดค่าเพื่อยอมรับความแตกต่างมากขึ้น แต่ต่ำเกินไปอาจทำให้จับคู่ผิด';
   @override
-  String get sasayaki_window_hint =>
+  String get audiobook_rematch_window_hint =>
       'จำนวนอักขระที่จะค้นหาไปข้างหน้าต่อ cue ในข้อความ ปรับถ้าอัตราตรงต่ำ ค่าสูงเกินอาจทำให้เคอร์เซอร์คลาดเคลื่อนกับ cue สั้นที่มีสัญญาณรบกวน';
   @override
   String get saved_tags => 'บันทึกแท็กแล้ว';
@@ -92686,9 +92739,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get color_primary_desc => 'Ses vurgusu, düğmeler, anahtarlar';
   @override
-  String get color_sasayaki => 'Sasayaki vurgusu';
+  String get color_sentence_audio_highlight => 'Sasayaki vurgusu';
   @override
-  String get color_sasayaki_desc =>
+  String get color_sentence_audio_highlight_desc =>
       'Sesli kitap altyazı senkronizasyon vurgusu';
   @override
   String get color_secondary => 'İkincil';
@@ -95134,49 +95187,53 @@ class _StringsTr extends _StringsEn {
   @override
   String get reverse_reader_bottom_bar => 'Okuyucu alt çubuğunu ters çevir';
   @override
-  String get sasayaki_all_zero =>
+  String get audiobook_rematch_all_zero =>
       'Tüm pencereler %0 skorladı, lütfen manuel ayarlayın';
   @override
-  String sasayaki_auto_failed({required Object error}) =>
+  String audiobook_rematch_auto_failed({required Object error}) =>
       'Otomatik eşleştirme başarısız: ${error}';
   @override
-  String get sasayaki_auto_match => 'Otomatik eşleştir';
+  String get audiobook_rematch_auto_match => 'Otomatik eşleştir';
   @override
-  String sasayaki_auto_picked({required Object window, required Object pct}) =>
+  String audiobook_rematch_auto_picked(
+          {required Object window, required Object pct}) =>
       '${window} otomatik seçildi (isabet ${pct}%)';
   @override
-  String sasayaki_default_value({required Object n}) => 'Varsayılan ${n}';
+  String audiobook_rematch_default_value({required Object n}) =>
+      'Varsayılan ${n}';
   @override
-  String sasayaki_health_label({required Object pct, required Object detail}) =>
+  String audiobook_rematch_health_label(
+          {required Object pct, required Object detail}) =>
       '${pct} eşleşti — ${detail}';
   @override
-  String get sasayaki_matching => 'Eşleştiriliyor...';
+  String get audiobook_rematch_matching => 'Eşleştiriliyor...';
   @override
-  String get sasayaki_no_chapters => 'EPUB\'de bölüm metni yok';
+  String get audiobook_rematch_no_chapters => 'EPUB\'de bölüm metni yok';
   @override
-  String get sasayaki_no_cues_to_match => 'Eşleştirilecek referans yok';
+  String get audiobook_rematch_no_cues_to_match =>
+      'Eşleştirilecek referans yok';
   @override
-  String get sasayaki_no_sections =>
+  String get audiobook_rematch_no_sections =>
       'ttu bölüm metni bulunamadı, otomatik eşleştirme yapılamaz';
   @override
-  String get sasayaki_no_stored_cues =>
+  String get audiobook_rematch_no_stored_cues =>
       'Kayıtlı referans yok, yeniden çalıştırılamaz';
   @override
-  String sasayaki_rematch_failed({required Object error}) =>
+  String audiobook_rematch_failed({required Object error}) =>
       'Yeniden eşleştirme başarısız: ${error}';
   @override
-  String sasayaki_rematch_result(
+  String audiobook_rematch_result(
           {required Object pct, required Object window}) =>
       'Yeniden eşleştirildi: ${pct}% (pencere: ${window})';
   @override
-  String get sasayaki_search_window => 'Arama penceresi';
+  String get audiobook_rematch_search_window => 'Arama penceresi';
   @override
-  String get sasayaki_similarity_threshold => 'Benzerlik eşiği';
+  String get audiobook_rematch_similarity_threshold => 'Benzerlik eşiği';
   @override
-  String get sasayaki_threshold_hint =>
+  String get audiobook_rematch_threshold_hint =>
       'Bulanık eşleştirme için minimum benzerlik (Dice katsayısı). Daha fazla metin farkını tolere etmek için düşürün, ancak çok düşük yanlış eşleşmelere neden olur.';
   @override
-  String get sasayaki_window_hint =>
+  String get audiobook_rematch_window_hint =>
       'Metinde referans başına ileri aranacak karakter sayısı. İsabet oranı düşükse ayarlayın; çok büyük değer kısa ve gürültülü referanslarda imleci kaydırabilir.';
   @override
   String get saved_tags => 'Etiketler kaydedildi.';
@@ -99973,9 +100030,10 @@ class _StringsVi extends _StringsEn {
   @override
   String get color_primary_desc => 'Đánh dấu âm thanh, nút, công tắc';
   @override
-  String get color_sasayaki => 'Tô sáng Sasayaki';
+  String get color_sentence_audio_highlight => 'Tô sáng Sasayaki';
   @override
-  String get color_sasayaki_desc => 'Tô sáng đồng bộ phụ đề sách nói';
+  String get color_sentence_audio_highlight_desc =>
+      'Tô sáng đồng bộ phụ đề sách nói';
   @override
   String get color_secondary => 'Phụ';
   @override
@@ -102418,49 +102476,52 @@ class _StringsVi extends _StringsEn {
   @override
   String get reverse_reader_bottom_bar => 'Đảo ngược thanh dưới trình đọc';
   @override
-  String get sasayaki_all_zero =>
+  String get audiobook_rematch_all_zero =>
       'Tất cả cửa sổ có tỷ lệ 0%, vui lòng điều chỉnh thủ công';
   @override
-  String sasayaki_auto_failed({required Object error}) =>
+  String audiobook_rematch_auto_failed({required Object error}) =>
       'Tự động khớp thất bại: ${error}';
   @override
-  String get sasayaki_auto_match => 'Tự động khớp';
+  String get audiobook_rematch_auto_match => 'Tự động khớp';
   @override
-  String sasayaki_auto_picked({required Object window, required Object pct}) =>
+  String audiobook_rematch_auto_picked(
+          {required Object window, required Object pct}) =>
       'Đã tự động chọn ${window} (khớp ${pct}%)';
   @override
-  String sasayaki_default_value({required Object n}) => 'Mặc định ${n}';
+  String audiobook_rematch_default_value({required Object n}) =>
+      'Mặc định ${n}';
   @override
-  String sasayaki_health_label({required Object pct, required Object detail}) =>
+  String audiobook_rematch_health_label(
+          {required Object pct, required Object detail}) =>
       '${pct} khớp — ${detail}';
   @override
-  String get sasayaki_matching => 'Đang khớp…';
+  String get audiobook_rematch_matching => 'Đang khớp…';
   @override
-  String get sasayaki_no_chapters => 'EPUB không có văn bản chương';
+  String get audiobook_rematch_no_chapters => 'EPUB không có văn bản chương';
   @override
-  String get sasayaki_no_cues_to_match => 'Không có cue để khớp';
+  String get audiobook_rematch_no_cues_to_match => 'Không có cue để khớp';
   @override
-  String get sasayaki_no_sections =>
+  String get audiobook_rematch_no_sections =>
       'Không tìm thấy văn bản chương ttu, không thể tự động khớp';
   @override
-  String get sasayaki_no_stored_cues =>
+  String get audiobook_rematch_no_stored_cues =>
       'Không có cue đã lưu, không thể chạy lại';
   @override
-  String sasayaki_rematch_failed({required Object error}) =>
+  String audiobook_rematch_failed({required Object error}) =>
       'Khớp lại thất bại: ${error}';
   @override
-  String sasayaki_rematch_result(
+  String audiobook_rematch_result(
           {required Object pct, required Object window}) =>
       'Đã khớp lại: ${pct}% (cửa sổ: ${window})';
   @override
-  String get sasayaki_search_window => 'Cửa sổ tìm kiếm';
+  String get audiobook_rematch_search_window => 'Cửa sổ tìm kiếm';
   @override
-  String get sasayaki_similarity_threshold => 'Ngưỡng tương đồng';
+  String get audiobook_rematch_similarity_threshold => 'Ngưỡng tương đồng';
   @override
-  String get sasayaki_threshold_hint =>
+  String get audiobook_rematch_threshold_hint =>
       'Độ tương đồng tối thiểu cho khớp mờ (hệ số Dice). Giảm để chấp nhận nhiều khác biệt văn bản hơn, nhưng quá thấp sẽ gây khớp sai.';
   @override
-  String get sasayaki_window_hint =>
+  String get audiobook_rematch_window_hint =>
       'Số ký tự tìm kiếm phía trước mỗi cue trong văn bản. Điều chỉnh nếu tỷ lệ khớp thấp; quá lớn có thể lệch con trỏ với cue ngắn nhiễu.';
   @override
   String get saved_tags => 'Đã lưu thẻ tag.';
@@ -107178,9 +107239,9 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get color_primary_desc => '音频高亮、按钮、开关';
   @override
-  String get color_sasayaki => '音频高亮';
+  String get color_sentence_audio_highlight => '音频高亮';
   @override
-  String get color_sasayaki_desc => '有声书播放时跟随当前句的高亮颜色';
+  String get color_sentence_audio_highlight_desc => '有声书播放时跟随当前句的高亮颜色';
   @override
   String get color_secondary => '辅色';
   @override
@@ -109464,44 +109525,47 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get reverse_reader_bottom_bar => '反转阅读器底栏';
   @override
-  String get sasayaki_all_zero => '所有窗口命中率都是 0，请人工调整';
+  String get audiobook_rematch_all_zero => '所有窗口命中率都是 0，请人工调整';
   @override
-  String sasayaki_auto_failed({required Object error}) => '自动匹配失败：${error}';
+  String audiobook_rematch_auto_failed({required Object error}) =>
+      '自动匹配失败：${error}';
   @override
-  String get sasayaki_auto_match => '自动匹配';
+  String get audiobook_rematch_auto_match => '自动匹配';
   @override
-  String sasayaki_auto_picked({required Object window, required Object pct}) =>
+  String audiobook_rematch_auto_picked(
+          {required Object window, required Object pct}) =>
       '自动选定 ${window}（命中 ${pct}%）';
   @override
-  String sasayaki_default_value({required Object n}) => '默认 ${n}';
+  String audiobook_rematch_default_value({required Object n}) => '默认 ${n}';
   @override
-  String sasayaki_health_label({required Object pct, required Object detail}) =>
+  String audiobook_rematch_health_label(
+          {required Object pct, required Object detail}) =>
       '${pct} 匹配 — ${detail}';
   @override
-  String get sasayaki_matching => '匹配中…';
+  String get audiobook_rematch_matching => '匹配中…';
   @override
-  String get sasayaki_no_chapters => 'EPUB 没有章节文本';
+  String get audiobook_rematch_no_chapters => 'EPUB 没有章节文本';
   @override
-  String get sasayaki_no_cues_to_match => '没有字幕条目可供匹配';
+  String get audiobook_rematch_no_cues_to_match => '没有字幕条目可供匹配';
   @override
-  String get sasayaki_no_sections => '未读到 ttu 章节文本，无法自动匹配';
+  String get audiobook_rematch_no_sections => '未读到 ttu 章节文本，无法自动匹配';
   @override
-  String get sasayaki_no_stored_cues => '没有已存字幕条目，无法重跑';
+  String get audiobook_rematch_no_stored_cues => '没有已存字幕条目，无法重跑';
   @override
-  String sasayaki_rematch_failed({required Object error}) => '重跑失败：${error}';
+  String audiobook_rematch_failed({required Object error}) => '重跑失败：${error}';
   @override
-  String sasayaki_rematch_result(
+  String audiobook_rematch_result(
           {required Object pct, required Object window}) =>
       '重新匹配：${pct}%（窗口：${window}）';
   @override
-  String get sasayaki_search_window => '搜索窗口';
+  String get audiobook_rematch_search_window => '搜索窗口';
   @override
-  String get sasayaki_similarity_threshold => '相似度阈值';
+  String get audiobook_rematch_similarity_threshold => '相似度阈值';
   @override
-  String get sasayaki_threshold_hint =>
+  String get audiobook_rematch_threshold_hint =>
       '模糊匹配的最低相似度（Dice 系数）。降低可容忍更多文本差异，但太低会误匹配。';
   @override
-  String get sasayaki_window_hint =>
+  String get audiobook_rematch_window_hint =>
       '每条字幕在正文里向前找的字符数。命中率低时可左右调整，过大容易被短噪声字幕拉偏光标。';
   @override
   String get saved_tags => '标签已保存。';
@@ -113972,9 +114036,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get color_primary_desc => '音訊醒目標示、按鈕、開關';
   @override
-  String get color_sasayaki => '音訊醒目標示';
+  String get color_sentence_audio_highlight => '音訊醒目標示';
   @override
-  String get color_sasayaki_desc => '有聲書播放時跟隨當前句的醒目標示顏色';
+  String get color_sentence_audio_highlight_desc => '有聲書播放時跟隨當前句的醒目標示顏色';
   @override
   String get color_secondary => '輔色';
   @override
@@ -116363,44 +116427,47 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get reverse_reader_bottom_bar => '反轉閱讀器底欄';
   @override
-  String get sasayaki_all_zero => '所有視窗命中率都是 0，請手動調整';
+  String get audiobook_rematch_all_zero => '所有視窗命中率都是 0，請手動調整';
   @override
-  String sasayaki_auto_failed({required Object error}) => '自動比對失敗：${error}';
+  String audiobook_rematch_auto_failed({required Object error}) =>
+      '自動比對失敗：${error}';
   @override
-  String get sasayaki_auto_match => '自動比對';
+  String get audiobook_rematch_auto_match => '自動比對';
   @override
-  String sasayaki_auto_picked({required Object window, required Object pct}) =>
+  String audiobook_rematch_auto_picked(
+          {required Object window, required Object pct}) =>
       '自動選定 ${window}（命中 ${pct}%）';
   @override
-  String sasayaki_default_value({required Object n}) => '預設 ${n}';
+  String audiobook_rematch_default_value({required Object n}) => '預設 ${n}';
   @override
-  String sasayaki_health_label({required Object pct, required Object detail}) =>
+  String audiobook_rematch_health_label(
+          {required Object pct, required Object detail}) =>
       '${pct} 比對 — ${detail}';
   @override
-  String get sasayaki_matching => '比對中…';
+  String get audiobook_rematch_matching => '比對中…';
   @override
-  String get sasayaki_no_chapters => 'EPUB 沒有章節文字';
+  String get audiobook_rematch_no_chapters => 'EPUB 沒有章節文字';
   @override
-  String get sasayaki_no_cues_to_match => '沒有字幕條目可供比對';
+  String get audiobook_rematch_no_cues_to_match => '沒有字幕條目可供比對';
   @override
-  String get sasayaki_no_sections => '未讀到 ttu 章節文字，無法自動比對';
+  String get audiobook_rematch_no_sections => '未讀到 ttu 章節文字，無法自動比對';
   @override
-  String get sasayaki_no_stored_cues => '沒有已存字幕條目，無法重跑';
+  String get audiobook_rematch_no_stored_cues => '沒有已存字幕條目，無法重跑';
   @override
-  String sasayaki_rematch_failed({required Object error}) => '重跑失敗：${error}';
+  String audiobook_rematch_failed({required Object error}) => '重跑失敗：${error}';
   @override
-  String sasayaki_rematch_result(
+  String audiobook_rematch_result(
           {required Object pct, required Object window}) =>
       '重新比對：${pct}%（視窗：${window}）';
   @override
-  String get sasayaki_search_window => '搜尋視窗';
+  String get audiobook_rematch_search_window => '搜尋視窗';
   @override
-  String get sasayaki_similarity_threshold => '相似度閾值';
+  String get audiobook_rematch_similarity_threshold => '相似度閾值';
   @override
-  String get sasayaki_threshold_hint =>
+  String get audiobook_rematch_threshold_hint =>
       '模糊比對的最低相似度（Dice 係數）。降低可容忍更多文字差異，但太低會誤比對。';
   @override
-  String get sasayaki_window_hint =>
+  String get audiobook_rematch_window_hint =>
       '每條字幕在正文裡向前找的字元數。命中率低時可左右調整，過大容易被短雜訊字幕拉偏游標。';
   @override
   String get saved_tags => '標籤已儲存。';
@@ -120951,9 +121018,9 @@ extension on _StringsEn {
         return 'Primary';
       case 'color_primary_desc':
         return 'Audio highlight, buttons, switches';
-      case 'color_sasayaki':
+      case 'color_sentence_audio_highlight':
         return 'Audio highlight';
-      case 'color_sasayaki_desc':
+      case 'color_sentence_audio_highlight_desc':
         return 'Current-sentence highlight that follows audiobook playback';
       case 'color_secondary':
         return 'Secondary';
@@ -123160,42 +123227,42 @@ extension on _StringsEn {
         return 'Reverse navigation bar';
       case 'reverse_reader_bottom_bar':
         return 'Reverse reader bottom bar';
-      case 'sasayaki_all_zero':
+      case 'audiobook_rematch_all_zero':
         return 'All windows scored 0%, please adjust manually';
-      case 'sasayaki_auto_failed':
+      case 'audiobook_rematch_auto_failed':
         return ({required Object error}) => 'Auto-match failed: ${error}';
-      case 'sasayaki_auto_match':
+      case 'audiobook_rematch_auto_match':
         return 'Auto match';
-      case 'sasayaki_auto_picked':
+      case 'audiobook_rematch_auto_picked':
         return ({required Object window, required Object pct}) =>
             'Auto-selected ${window} (hit ${pct}%)';
-      case 'sasayaki_default_value':
+      case 'audiobook_rematch_default_value':
         return ({required Object n}) => 'Default ${n}';
-      case 'sasayaki_health_label':
+      case 'audiobook_rematch_health_label':
         return ({required Object pct, required Object detail}) =>
             '${pct} matched — ${detail}';
-      case 'sasayaki_matching':
+      case 'audiobook_rematch_matching':
         return 'Matching...';
-      case 'sasayaki_no_chapters':
+      case 'audiobook_rematch_no_chapters':
         return 'EPUB has no chapter text';
-      case 'sasayaki_no_cues_to_match':
+      case 'audiobook_rematch_no_cues_to_match':
         return 'No cues to match';
-      case 'sasayaki_no_sections':
+      case 'audiobook_rematch_no_sections':
         return 'No ttu chapter text found, cannot auto-match';
-      case 'sasayaki_no_stored_cues':
+      case 'audiobook_rematch_no_stored_cues':
         return 'No stored cues, cannot re-run';
-      case 'sasayaki_rematch_failed':
+      case 'audiobook_rematch_failed':
         return ({required Object error}) => 'Re-match failed: ${error}';
-      case 'sasayaki_rematch_result':
+      case 'audiobook_rematch_result':
         return ({required Object pct, required Object window}) =>
             'Rematched: ${pct}% (window: ${window})';
-      case 'sasayaki_search_window':
+      case 'audiobook_rematch_search_window':
         return 'Search window';
-      case 'sasayaki_similarity_threshold':
+      case 'audiobook_rematch_similarity_threshold':
         return 'Similarity threshold';
-      case 'sasayaki_threshold_hint':
+      case 'audiobook_rematch_threshold_hint':
         return 'Minimum similarity for fuzzy matching (Dice coefficient). Lower to tolerate more text differences, but too low causes false matches.';
-      case 'sasayaki_window_hint':
+      case 'audiobook_rematch_window_hint':
         return 'Number of characters to search forward per cue in the text. Adjust if hit rate is low; too large may skew cursor with short noisy cues.';
       case 'saved_tags':
         return 'Tags saved.';
@@ -127431,9 +127498,9 @@ extension on _StringsAr {
         return 'أساسي';
       case 'color_primary_desc':
         return 'تمييز الصوت، الأزرار، المفاتيح';
-      case 'color_sasayaki':
+      case 'color_sentence_audio_highlight':
         return 'تمييز Sasayaki';
-      case 'color_sasayaki_desc':
+      case 'color_sentence_audio_highlight_desc':
         return 'تمييز مزامنة ترجمة الكتاب المسموع';
       case 'color_secondary':
         return 'ثانوي';
@@ -129639,42 +129706,42 @@ extension on _StringsAr {
         return 'عكس شريط التنقّل';
       case 'reverse_reader_bottom_bar':
         return 'عكس الشريط السفلي للقارئ';
-      case 'sasayaki_all_zero':
+      case 'audiobook_rematch_all_zero':
         return 'جميع النوافذ سجّلت 0%، يرجى الضبط يدوياً';
-      case 'sasayaki_auto_failed':
+      case 'audiobook_rematch_auto_failed':
         return ({required Object error}) => 'فشلت المطابقة التلقائية: ${error}';
-      case 'sasayaki_auto_match':
+      case 'audiobook_rematch_auto_match':
         return 'مطابقة تلقائية';
-      case 'sasayaki_auto_picked':
+      case 'audiobook_rematch_auto_picked':
         return ({required Object window, required Object pct}) =>
             'تم اختيار ${window} تلقائياً (نسبة ${pct}%)';
-      case 'sasayaki_default_value':
+      case 'audiobook_rematch_default_value':
         return ({required Object n}) => 'افتراضي ${n}';
-      case 'sasayaki_health_label':
+      case 'audiobook_rematch_health_label':
         return ({required Object pct, required Object detail}) =>
             '${pct} مطابق — ${detail}';
-      case 'sasayaki_matching':
+      case 'audiobook_rematch_matching':
         return 'جارٍ المطابقة...';
-      case 'sasayaki_no_chapters':
+      case 'audiobook_rematch_no_chapters':
         return 'EPUB لا يحتوي على نص فصول';
-      case 'sasayaki_no_cues_to_match':
+      case 'audiobook_rematch_no_cues_to_match':
         return 'لا توجد ترجمات للمطابقة';
-      case 'sasayaki_no_sections':
+      case 'audiobook_rematch_no_sections':
         return 'لم يتم العثور على نص فصل ttu، لا يمكن المطابقة التلقائية';
-      case 'sasayaki_no_stored_cues':
+      case 'audiobook_rematch_no_stored_cues':
         return 'لا توجد ترجمات مخزّنة، لا يمكن إعادة التشغيل';
-      case 'sasayaki_rematch_failed':
+      case 'audiobook_rematch_failed':
         return ({required Object error}) => 'فشلت إعادة المطابقة: ${error}';
-      case 'sasayaki_rematch_result':
+      case 'audiobook_rematch_result':
         return ({required Object pct, required Object window}) =>
             'أُعيدت المطابقة: ${pct}% (نافذة: ${window})';
-      case 'sasayaki_search_window':
+      case 'audiobook_rematch_search_window':
         return 'نافذة البحث';
-      case 'sasayaki_similarity_threshold':
+      case 'audiobook_rematch_similarity_threshold':
         return 'عتبة التشابه';
-      case 'sasayaki_threshold_hint':
+      case 'audiobook_rematch_threshold_hint':
         return 'الحد الأدنى للتشابه في المطابقة الضبابية (معامل Dice). خفّض لتحمّل مزيد من الاختلافات، لكن قيمة منخفضة جداً تسبب مطابقات خاطئة.';
-      case 'sasayaki_window_hint':
+      case 'audiobook_rematch_window_hint':
         return 'عدد الأحرف للبحث للأمام لكل ترجمة في النص. اضبط إذا كانت نسبة الإصابة منخفضة؛ قيمة كبيرة جداً قد تُنحرف المؤشر مع الترجمات القصيرة.';
       case 'saved_tags':
         return 'تم حفظ الوسوم.';
@@ -133910,9 +133977,9 @@ extension on _StringsDe {
         return 'Primär';
       case 'color_primary_desc':
         return 'Audio-Hervorhebung, Schaltflächen, Schalter';
-      case 'color_sasayaki':
+      case 'color_sentence_audio_highlight':
         return 'Sasayaki-Hervorhebung';
-      case 'color_sasayaki_desc':
+      case 'color_sentence_audio_highlight_desc':
         return 'Untertitel-Synchronisierung des Hörbuchs';
       case 'color_secondary':
         return 'Sekundär';
@@ -136126,44 +136193,44 @@ extension on _StringsDe {
         return 'Navigationsleiste umkehren';
       case 'reverse_reader_bottom_bar':
         return 'Untere Leserleiste umkehren';
-      case 'sasayaki_all_zero':
+      case 'audiobook_rematch_all_zero':
         return 'Alle Fenster mit 0% bewertet, bitte manuell anpassen';
-      case 'sasayaki_auto_failed':
+      case 'audiobook_rematch_auto_failed':
         return ({required Object error}) =>
             'Automatischer Abgleich fehlgeschlagen: ${error}';
-      case 'sasayaki_auto_match':
+      case 'audiobook_rematch_auto_match':
         return 'Automatischer Abgleich';
-      case 'sasayaki_auto_picked':
+      case 'audiobook_rematch_auto_picked':
         return ({required Object window, required Object pct}) =>
             'Automatisch ${window} ausgewählt (Treffer ${pct}%)';
-      case 'sasayaki_default_value':
+      case 'audiobook_rematch_default_value':
         return ({required Object n}) => 'Standard ${n}';
-      case 'sasayaki_health_label':
+      case 'audiobook_rematch_health_label':
         return ({required Object pct, required Object detail}) =>
             '${pct} übereinstimmend — ${detail}';
-      case 'sasayaki_matching':
+      case 'audiobook_rematch_matching':
         return 'Abgleich läuft...';
-      case 'sasayaki_no_chapters':
+      case 'audiobook_rematch_no_chapters':
         return 'EPUB hat keinen Kapiteltext';
-      case 'sasayaki_no_cues_to_match':
+      case 'audiobook_rematch_no_cues_to_match':
         return 'Keine Cues zum Abgleichen';
-      case 'sasayaki_no_sections':
+      case 'audiobook_rematch_no_sections':
         return 'Kein ttu-Kapiteltext gefunden, automatischer Abgleich nicht möglich';
-      case 'sasayaki_no_stored_cues':
+      case 'audiobook_rematch_no_stored_cues':
         return 'Keine gespeicherten Cues, erneuter Abgleich nicht möglich';
-      case 'sasayaki_rematch_failed':
+      case 'audiobook_rematch_failed':
         return ({required Object error}) =>
             'Neuabgleich fehlgeschlagen: ${error}';
-      case 'sasayaki_rematch_result':
+      case 'audiobook_rematch_result':
         return ({required Object pct, required Object window}) =>
             'Neu abgeglichen: ${pct}% (Fenster: ${window})';
-      case 'sasayaki_search_window':
+      case 'audiobook_rematch_search_window':
         return 'Suchfenster';
-      case 'sasayaki_similarity_threshold':
+      case 'audiobook_rematch_similarity_threshold':
         return 'Ähnlichkeitsschwelle';
-      case 'sasayaki_threshold_hint':
+      case 'audiobook_rematch_threshold_hint':
         return 'Mindestähnlichkeit für unscharfen Abgleich (Dice-Koeffizient). Senken, um mehr Textunterschiede zu tolerieren, aber zu niedrig verursacht Fehlabgleiche.';
-      case 'sasayaki_window_hint':
+      case 'audiobook_rematch_window_hint':
         return 'Anzahl der Zeichen, die pro Cue im Text vorwärts durchsucht werden. Anpassen, wenn die Trefferquote niedrig ist; zu groß kann den Cursor bei kurzen verrauschten Cues verzerren.';
       case 'saved_tags':
         return 'Tags gespeichert.';
@@ -140410,9 +140477,9 @@ extension on _StringsEs {
         return 'Primario';
       case 'color_primary_desc':
         return 'Resaltado de audio, botones, interruptores';
-      case 'color_sasayaki':
+      case 'color_sentence_audio_highlight':
         return 'Resaltado Sasayaki';
-      case 'color_sasayaki_desc':
+      case 'color_sentence_audio_highlight_desc':
         return 'Resaltado de sincronización de subtítulos del audiolibro';
       case 'color_secondary':
         return 'Secundario';
@@ -142626,44 +142693,44 @@ extension on _StringsEs {
         return 'Invertir barra de navegación';
       case 'reverse_reader_bottom_bar':
         return 'Invertir barra inferior del lector';
-      case 'sasayaki_all_zero':
+      case 'audiobook_rematch_all_zero':
         return 'Todas las ventanas obtuvieron 0%, ajusta manualmente';
-      case 'sasayaki_auto_failed':
+      case 'audiobook_rematch_auto_failed':
         return ({required Object error}) =>
             'Emparejamiento automático fallido: ${error}';
-      case 'sasayaki_auto_match':
+      case 'audiobook_rematch_auto_match':
         return 'Emparejamiento automático';
-      case 'sasayaki_auto_picked':
+      case 'audiobook_rematch_auto_picked':
         return ({required Object window, required Object pct}) =>
             'Selección automática ${window} (acierto ${pct}%)';
-      case 'sasayaki_default_value':
+      case 'audiobook_rematch_default_value':
         return ({required Object n}) => 'Predeterminado ${n}';
-      case 'sasayaki_health_label':
+      case 'audiobook_rematch_health_label':
         return ({required Object pct, required Object detail}) =>
             '${pct} coincidencia — ${detail}';
-      case 'sasayaki_matching':
+      case 'audiobook_rematch_matching':
         return 'Emparejando...';
-      case 'sasayaki_no_chapters':
+      case 'audiobook_rematch_no_chapters':
         return 'EPUB no tiene texto de capítulos';
-      case 'sasayaki_no_cues_to_match':
+      case 'audiobook_rematch_no_cues_to_match':
         return 'No hay marcas para emparejar';
-      case 'sasayaki_no_sections':
+      case 'audiobook_rematch_no_sections':
         return 'No se encontró texto de capítulo en ttu, no se puede emparejar automáticamente';
-      case 'sasayaki_no_stored_cues':
+      case 'audiobook_rematch_no_stored_cues':
         return 'No hay marcas almacenadas, no se puede re-ejecutar';
-      case 'sasayaki_rematch_failed':
+      case 'audiobook_rematch_failed':
         return ({required Object error}) =>
             'Re-emparejamiento fallido: ${error}';
-      case 'sasayaki_rematch_result':
+      case 'audiobook_rematch_result':
         return ({required Object pct, required Object window}) =>
             'Reemparejado: ${pct}% (ventana: ${window})';
-      case 'sasayaki_search_window':
+      case 'audiobook_rematch_search_window':
         return 'Ventana de búsqueda';
-      case 'sasayaki_similarity_threshold':
+      case 'audiobook_rematch_similarity_threshold':
         return 'Umbral de similitud';
-      case 'sasayaki_threshold_hint':
+      case 'audiobook_rematch_threshold_hint':
         return 'Similitud mínima para emparejamiento difuso (coeficiente de Dice). Reduce para tolerar más diferencias de texto, pero un valor demasiado bajo causa coincidencias falsas.';
-      case 'sasayaki_window_hint':
+      case 'audiobook_rematch_window_hint':
         return 'Número de caracteres a buscar hacia adelante por marca en el texto. Ajusta si la tasa de aciertos es baja; demasiado grande puede desviar el cursor con marcas cortas y ruidosas.';
       case 'saved_tags':
         return 'Etiquetas guardadas.';
@@ -146909,9 +146976,9 @@ extension on _StringsFr {
         return 'Primaire';
       case 'color_primary_desc':
         return 'Surlignage audio, boutons, commutateurs';
-      case 'color_sasayaki':
+      case 'color_sentence_audio_highlight':
         return 'Surlignage Sasayaki';
-      case 'color_sasayaki_desc':
+      case 'color_sentence_audio_highlight_desc':
         return 'Surlignage de synchronisation des sous-titres du livre audio';
       case 'color_secondary':
         return 'Secondaire';
@@ -149128,44 +149195,44 @@ extension on _StringsFr {
         return 'Inverser la barre de navigation';
       case 'reverse_reader_bottom_bar':
         return 'Inverser la barre inférieure du lecteur';
-      case 'sasayaki_all_zero':
+      case 'audiobook_rematch_all_zero':
         return 'Toutes les fenêtres ont obtenu 0 %, veuillez ajuster manuellement';
-      case 'sasayaki_auto_failed':
+      case 'audiobook_rematch_auto_failed':
         return ({required Object error}) =>
             'échec de la correspondance automatique : ${error}';
-      case 'sasayaki_auto_match':
+      case 'audiobook_rematch_auto_match':
         return 'Correspondance automatique';
-      case 'sasayaki_auto_picked':
+      case 'audiobook_rematch_auto_picked':
         return ({required Object window, required Object pct}) =>
             'Sélection automatique de ${window} (taux ${pct}%)';
-      case 'sasayaki_default_value':
+      case 'audiobook_rematch_default_value':
         return ({required Object n}) => 'Par défaut ${n}';
-      case 'sasayaki_health_label':
+      case 'audiobook_rematch_health_label':
         return ({required Object pct, required Object detail}) =>
             '${pct} correspondance — ${detail}';
-      case 'sasayaki_matching':
+      case 'audiobook_rematch_matching':
         return 'Correspondance en cours...';
-      case 'sasayaki_no_chapters':
+      case 'audiobook_rematch_no_chapters':
         return 'EPUB ne contient aucun texte de chapitre';
-      case 'sasayaki_no_cues_to_match':
+      case 'audiobook_rematch_no_cues_to_match':
         return 'Aucun repère à faire correspondre';
-      case 'sasayaki_no_sections':
+      case 'audiobook_rematch_no_sections':
         return 'Aucun texte de chapitre ttu trouvé, correspondance automatique impossible';
-      case 'sasayaki_no_stored_cues':
+      case 'audiobook_rematch_no_stored_cues':
         return 'Aucun repère enregistré, impossible de relancer';
-      case 'sasayaki_rematch_failed':
+      case 'audiobook_rematch_failed':
         return ({required Object error}) =>
             'échec de la correspondance : ${error}';
-      case 'sasayaki_rematch_result':
+      case 'audiobook_rematch_result':
         return ({required Object pct, required Object window}) =>
             'Recorrespondance : ${pct}% (fenêtre : ${window})';
-      case 'sasayaki_search_window':
+      case 'audiobook_rematch_search_window':
         return 'Fenêtre de recherche';
-      case 'sasayaki_similarity_threshold':
+      case 'audiobook_rematch_similarity_threshold':
         return 'Seuil de similarité';
-      case 'sasayaki_threshold_hint':
+      case 'audiobook_rematch_threshold_hint':
         return 'Similarité minimale pour la correspondance floue (coefficient de Dice). Abaissez pour tolérer plus de différences, mais une valeur trop basse provoque de fausses correspondances.';
-      case 'sasayaki_window_hint':
+      case 'audiobook_rematch_window_hint':
         return 'Nombre de caractères à rechercher en avant par repère dans le texte. Ajustez si le taux de correspondance est faible ; une valeur trop élevée peut fausser le curseur avec des repères courts et bruités.';
       case 'saved_tags':
         return 'étiquettes enregistrées.';
@@ -153411,9 +153478,9 @@ extension on _StringsId {
         return 'Primer';
       case 'color_primary_desc':
         return 'Sorotan audio, tombol, sakelar';
-      case 'color_sasayaki':
+      case 'color_sentence_audio_highlight':
         return 'Sorotan Sasayaki';
-      case 'color_sasayaki_desc':
+      case 'color_sentence_audio_highlight_desc':
         return 'Sorotan sinkronisasi subtitle buku audio';
       case 'color_secondary':
         return 'Sekunder';
@@ -155622,43 +155689,43 @@ extension on _StringsId {
         return 'Balik bilah navigasi';
       case 'reverse_reader_bottom_bar':
         return 'Balik bilah bawah pembaca';
-      case 'sasayaki_all_zero':
+      case 'audiobook_rematch_all_zero':
         return 'Semua jendela skor 0%, silakan sesuaikan secara manual';
-      case 'sasayaki_auto_failed':
+      case 'audiobook_rematch_auto_failed':
         return ({required Object error}) =>
             'Pencocokan otomatis gagal: ${error}';
-      case 'sasayaki_auto_match':
+      case 'audiobook_rematch_auto_match':
         return 'Pencocokan Otomatis';
-      case 'sasayaki_auto_picked':
+      case 'audiobook_rematch_auto_picked':
         return ({required Object window, required Object pct}) =>
             'Otomatis memilih ${window} (cocok ${pct}%)';
-      case 'sasayaki_default_value':
+      case 'audiobook_rematch_default_value':
         return ({required Object n}) => 'Default ${n}';
-      case 'sasayaki_health_label':
+      case 'audiobook_rematch_health_label':
         return ({required Object pct, required Object detail}) =>
             '${pct} cocok — ${detail}';
-      case 'sasayaki_matching':
+      case 'audiobook_rematch_matching':
         return 'Mencocokkan...';
-      case 'sasayaki_no_chapters':
+      case 'audiobook_rematch_no_chapters':
         return 'EPUB tidak memiliki teks bab';
-      case 'sasayaki_no_cues_to_match':
+      case 'audiobook_rematch_no_cues_to_match':
         return 'Tidak ada cue untuk dicocokkan';
-      case 'sasayaki_no_sections':
+      case 'audiobook_rematch_no_sections':
         return 'Teks bab ttu tidak ditemukan, tidak dapat mencocokkan otomatis';
-      case 'sasayaki_no_stored_cues':
+      case 'audiobook_rematch_no_stored_cues':
         return 'Tidak ada cue tersimpan, tidak dapat menjalankan ulang';
-      case 'sasayaki_rematch_failed':
+      case 'audiobook_rematch_failed':
         return ({required Object error}) => 'Pencocokan ulang gagal: ${error}';
-      case 'sasayaki_rematch_result':
+      case 'audiobook_rematch_result':
         return ({required Object pct, required Object window}) =>
             'Dicocokkan ulang: ${pct}% (jendela: ${window})';
-      case 'sasayaki_search_window':
+      case 'audiobook_rematch_search_window':
         return 'Jendela Pencarian';
-      case 'sasayaki_similarity_threshold':
+      case 'audiobook_rematch_similarity_threshold':
         return 'Ambang Kemiripan';
-      case 'sasayaki_threshold_hint':
+      case 'audiobook_rematch_threshold_hint':
         return 'Kemiripan minimum untuk pencocokan fuzzy (koefisien Dice). Turunkan untuk mentoleransi lebih banyak perbedaan teks, tapi terlalu rendah menyebabkan kecocokan palsu.';
-      case 'sasayaki_window_hint':
+      case 'audiobook_rematch_window_hint':
         return 'Jumlah karakter untuk dicari ke depan per cue dalam teks. Sesuaikan jika tingkat kecocokan rendah; terlalu besar dapat menggeser kursor dengan cue pendek yang berisik.';
       case 'saved_tags':
         return 'Tag disimpan.';
@@ -159897,9 +159964,9 @@ extension on _StringsIt {
         return 'Primario';
       case 'color_primary_desc':
         return 'Evidenziazione audio, pulsanti, interruttori';
-      case 'color_sasayaki':
+      case 'color_sentence_audio_highlight':
         return 'Evidenziazione Sasayaki';
-      case 'color_sasayaki_desc':
+      case 'color_sentence_audio_highlight_desc':
         return 'Evidenziazione sincronizzazione sottotitoli audiolibro';
       case 'color_secondary':
         return 'Secondario';
@@ -162112,43 +162179,43 @@ extension on _StringsIt {
         return 'Inverti barra di navigazione';
       case 'reverse_reader_bottom_bar':
         return 'Inverti barra inferiore del lettore';
-      case 'sasayaki_all_zero':
+      case 'audiobook_rematch_all_zero':
         return 'Tutte le finestre hanno ottenuto 0%, regolare manualmente';
-      case 'sasayaki_auto_failed':
+      case 'audiobook_rematch_auto_failed':
         return ({required Object error}) =>
             'Corrispondenza automatica fallita: ${error}';
-      case 'sasayaki_auto_match':
+      case 'audiobook_rematch_auto_match':
         return 'Corrispondenza automatica';
-      case 'sasayaki_auto_picked':
+      case 'audiobook_rematch_auto_picked':
         return ({required Object window, required Object pct}) =>
             'Selezione automatica di ${window} (tasso ${pct}%)';
-      case 'sasayaki_default_value':
+      case 'audiobook_rematch_default_value':
         return ({required Object n}) => 'Predefinito ${n}';
-      case 'sasayaki_health_label':
+      case 'audiobook_rematch_health_label':
         return ({required Object pct, required Object detail}) =>
             '${pct} corrispondente — ${detail}';
-      case 'sasayaki_matching':
+      case 'audiobook_rematch_matching':
         return 'Corrispondenza in corso...';
-      case 'sasayaki_no_chapters':
+      case 'audiobook_rematch_no_chapters':
         return 'EPUB non contiene testo di capitolo';
-      case 'sasayaki_no_cues_to_match':
+      case 'audiobook_rematch_no_cues_to_match':
         return 'Nessun riferimento da far corrispondere';
-      case 'sasayaki_no_sections':
+      case 'audiobook_rematch_no_sections':
         return 'Nessun testo di capitolo ttu trovato, corrispondenza automatica impossibile';
-      case 'sasayaki_no_stored_cues':
+      case 'audiobook_rematch_no_stored_cues':
         return 'Nessun riferimento memorizzato, impossibile riavviare';
-      case 'sasayaki_rematch_failed':
+      case 'audiobook_rematch_failed':
         return ({required Object error}) => 'Corrispondenza fallita: ${error}';
-      case 'sasayaki_rematch_result':
+      case 'audiobook_rematch_result':
         return ({required Object pct, required Object window}) =>
             'Ricalcolato: ${pct}% (finestra: ${window})';
-      case 'sasayaki_search_window':
+      case 'audiobook_rematch_search_window':
         return 'Finestra di ricerca';
-      case 'sasayaki_similarity_threshold':
+      case 'audiobook_rematch_similarity_threshold':
         return 'Soglia di similarità';
-      case 'sasayaki_threshold_hint':
+      case 'audiobook_rematch_threshold_hint':
         return 'Similarità minima per la corrispondenza fuzzy (coefficiente di Dice). Abbassare per tollerare più differenze, ma un valore troppo basso causa false corrispondenze.';
-      case 'sasayaki_window_hint':
+      case 'audiobook_rematch_window_hint':
         return 'Numero di caratteri da cercare in avanti per riferimento nel testo. Regola se il tasso di corrispondenza è basso; un valore troppo alto può falsare il cursore con riferimenti brevi e rumorosi.';
       case 'saved_tags':
         return 'Etichette salvate.';
@@ -166388,9 +166455,9 @@ extension on _StringsJa {
         return 'プライマリ';
       case 'color_primary_desc':
         return '音声ハイライト、ボタン、スイッチ';
-      case 'color_sasayaki':
+      case 'color_sentence_audio_highlight':
         return 'ささやきハイライト';
-      case 'color_sasayaki_desc':
+      case 'color_sentence_audio_highlight_desc':
         return 'オーディオブック字幕同期ハイライト';
       case 'color_secondary':
         return 'セカンダリ';
@@ -168595,42 +168662,42 @@ extension on _StringsJa {
         return 'ナビゲーションバーを反転';
       case 'reverse_reader_bottom_bar':
         return 'リーダーの下部バーを反転';
-      case 'sasayaki_all_zero':
+      case 'audiobook_rematch_all_zero':
         return 'すべてのウィンドウのスコアが0%です。手動で調整してください';
-      case 'sasayaki_auto_failed':
+      case 'audiobook_rematch_auto_failed':
         return ({required Object error}) => '自動マッチングに失敗しました：${error}';
-      case 'sasayaki_auto_match':
+      case 'audiobook_rematch_auto_match':
         return '自動マッチング';
-      case 'sasayaki_auto_picked':
+      case 'audiobook_rematch_auto_picked':
         return ({required Object window, required Object pct}) =>
             '${window} を自動選択しました（ヒット率 ${pct}%）';
-      case 'sasayaki_default_value':
+      case 'audiobook_rematch_default_value':
         return ({required Object n}) => 'デフォルト ${n}';
-      case 'sasayaki_health_label':
+      case 'audiobook_rematch_health_label':
         return ({required Object pct, required Object detail}) =>
             '${pct} マッチ — ${detail}';
-      case 'sasayaki_matching':
+      case 'audiobook_rematch_matching':
         return 'マッチング中...';
-      case 'sasayaki_no_chapters':
+      case 'audiobook_rematch_no_chapters':
         return 'EPUBにチャプターテキストがありません';
-      case 'sasayaki_no_cues_to_match':
+      case 'audiobook_rematch_no_cues_to_match':
         return 'マッチングするキューがありません';
-      case 'sasayaki_no_sections':
+      case 'audiobook_rematch_no_sections':
         return 'ttuのチャプターテキストが見つかりません。自動マッチングできません';
-      case 'sasayaki_no_stored_cues':
+      case 'audiobook_rematch_no_stored_cues':
         return '保存されたキューがないため、再実行できません';
-      case 'sasayaki_rematch_failed':
+      case 'audiobook_rematch_failed':
         return ({required Object error}) => '再マッチングに失敗しました：${error}';
-      case 'sasayaki_rematch_result':
+      case 'audiobook_rematch_result':
         return ({required Object pct, required Object window}) =>
             '再マッチング結果：${pct}%（ウィンドウ：${window}）';
-      case 'sasayaki_search_window':
+      case 'audiobook_rematch_search_window':
         return '検索ウィンドウ';
-      case 'sasayaki_similarity_threshold':
+      case 'audiobook_rematch_similarity_threshold':
         return '類似度しきい値';
-      case 'sasayaki_threshold_hint':
+      case 'audiobook_rematch_threshold_hint':
         return 'ファジーマッチングの最小類似度（Dice係数）。テキストの差異を許容するには下げてください。ただし低すぎると誤マッチが発生します。';
-      case 'sasayaki_window_hint':
+      case 'audiobook_rematch_window_hint':
         return 'テキスト内で各キューごとに前方検索する文字数。ヒット率が低い場合は調整してください。大きすぎると短い/ノイズの多いキューでカーソルがずれる場合があります。';
       case 'saved_tags':
         return 'タグを保存しました。';
@@ -172851,9 +172918,9 @@ extension on _StringsKo {
         return '기본색';
       case 'color_primary_desc':
         return '오디오 하이라이트, 버튼, 스위치';
-      case 'color_sasayaki':
+      case 'color_sentence_audio_highlight':
         return '사사야키 하이라이트';
-      case 'color_sasayaki_desc':
+      case 'color_sentence_audio_highlight_desc':
         return '오디오북 자막 동기화 하이라이트';
       case 'color_secondary':
         return '보조색';
@@ -175059,42 +175126,42 @@ extension on _StringsKo {
         return '내비게이션 바 반전';
       case 'reverse_reader_bottom_bar':
         return '리더 하단 바 반전';
-      case 'sasayaki_all_zero':
+      case 'audiobook_rematch_all_zero':
         return '모든 윈도우 점수가 0%입니다. 수동으로 조정하세요';
-      case 'sasayaki_auto_failed':
+      case 'audiobook_rematch_auto_failed':
         return ({required Object error}) => '자동 매칭 실패: ${error}';
-      case 'sasayaki_auto_match':
+      case 'audiobook_rematch_auto_match':
         return '자동 매칭';
-      case 'sasayaki_auto_picked':
+      case 'audiobook_rematch_auto_picked':
         return ({required Object window, required Object pct}) =>
             '${window} 자동 선택됨 (적중률 ${pct}%)';
-      case 'sasayaki_default_value':
+      case 'audiobook_rematch_default_value':
         return ({required Object n}) => '기본값 ${n}';
-      case 'sasayaki_health_label':
+      case 'audiobook_rematch_health_label':
         return ({required Object pct, required Object detail}) =>
             '${pct} 일치 — ${detail}';
-      case 'sasayaki_matching':
+      case 'audiobook_rematch_matching':
         return '매칭 중...';
-      case 'sasayaki_no_chapters':
+      case 'audiobook_rematch_no_chapters':
         return 'EPUB에 챕터 텍스트가 없습니다';
-      case 'sasayaki_no_cues_to_match':
+      case 'audiobook_rematch_no_cues_to_match':
         return '매칭할 큐가 없습니다';
-      case 'sasayaki_no_sections':
+      case 'audiobook_rematch_no_sections':
         return 'ttu 챕터 텍스트를 찾을 수 없어 자동 매칭 불가';
-      case 'sasayaki_no_stored_cues':
+      case 'audiobook_rematch_no_stored_cues':
         return '저장된 큐가 없어 다시 실행할 수 없습니다';
-      case 'sasayaki_rematch_failed':
+      case 'audiobook_rematch_failed':
         return ({required Object error}) => '재매칭 실패: ${error}';
-      case 'sasayaki_rematch_result':
+      case 'audiobook_rematch_result':
         return ({required Object pct, required Object window}) =>
             '재매칭: ${pct}% (윈도우: ${window})';
-      case 'sasayaki_search_window':
+      case 'audiobook_rematch_search_window':
         return '검색 윈도우';
-      case 'sasayaki_similarity_threshold':
+      case 'audiobook_rematch_similarity_threshold':
         return '유사도 임계값';
-      case 'sasayaki_threshold_hint':
+      case 'audiobook_rematch_threshold_hint':
         return '퍼지 매칭의 최소 유사도 (Dice 계수)입니다. 낮추면 텍스트 차이를 더 허용하지만, 너무 낮으면 잘못된 매칭이 발생합니다.';
-      case 'sasayaki_window_hint':
+      case 'audiobook_rematch_window_hint':
         return '텍스트에서 큐당 앞으로 검색할 문자 수입니다. 적중률이 낮으면 조정하세요. 너무 크면 짧은 노이즈 큐에서 커서가 어긋날 수 있습니다.';
       case 'saved_tags':
         return '태그가 저장되었습니다.';
@@ -179324,9 +179391,9 @@ extension on _StringsNl {
         return 'Primair';
       case 'color_primary_desc':
         return 'Audiomarkering, knoppen, schakelaars';
-      case 'color_sasayaki':
+      case 'color_sentence_audio_highlight':
         return 'Sasayaki-markering';
-      case 'color_sasayaki_desc':
+      case 'color_sentence_audio_highlight_desc':
         return 'Markering van ondertitelsynchronisatie van het luisterboek';
       case 'color_secondary':
         return 'Secundair';
@@ -181540,43 +181607,43 @@ extension on _StringsNl {
         return 'Navigatiebalk omkeren';
       case 'reverse_reader_bottom_bar':
         return 'Onderbalk van lezer omkeren';
-      case 'sasayaki_all_zero':
+      case 'audiobook_rematch_all_zero':
         return 'Alle vensters scoorden 0%, pas handmatig aan';
-      case 'sasayaki_auto_failed':
+      case 'audiobook_rematch_auto_failed':
         return ({required Object error}) =>
             'Automatisch matchen mislukt: ${error}';
-      case 'sasayaki_auto_match':
+      case 'audiobook_rematch_auto_match':
         return 'Automatisch matchen';
-      case 'sasayaki_auto_picked':
+      case 'audiobook_rematch_auto_picked':
         return ({required Object window, required Object pct}) =>
             'Automatisch geselecteerd ${window} (treffers ${pct}%)';
-      case 'sasayaki_default_value':
+      case 'audiobook_rematch_default_value':
         return ({required Object n}) => 'Standaard ${n}';
-      case 'sasayaki_health_label':
+      case 'audiobook_rematch_health_label':
         return ({required Object pct, required Object detail}) =>
             '${pct} overeenkomst — ${detail}';
-      case 'sasayaki_matching':
+      case 'audiobook_rematch_matching':
         return 'Matchen...';
-      case 'sasayaki_no_chapters':
+      case 'audiobook_rematch_no_chapters':
         return 'EPUB bevat geen hoofdstuktekst';
-      case 'sasayaki_no_cues_to_match':
+      case 'audiobook_rematch_no_cues_to_match':
         return 'Geen referenties om te matchen';
-      case 'sasayaki_no_sections':
+      case 'audiobook_rematch_no_sections':
         return 'Geen ttu-hoofdstuktekst gevonden, automatisch matchen niet mogelijk';
-      case 'sasayaki_no_stored_cues':
+      case 'audiobook_rematch_no_stored_cues':
         return 'Geen opgeslagen referenties, kan niet opnieuw uitvoeren';
-      case 'sasayaki_rematch_failed':
+      case 'audiobook_rematch_failed':
         return ({required Object error}) => 'Opnieuw matchen mislukt: ${error}';
-      case 'sasayaki_rematch_result':
+      case 'audiobook_rematch_result':
         return ({required Object pct, required Object window}) =>
             'Opnieuw gematcht: ${pct}% (venster: ${window})';
-      case 'sasayaki_search_window':
+      case 'audiobook_rematch_search_window':
         return 'Zoekvenster';
-      case 'sasayaki_similarity_threshold':
+      case 'audiobook_rematch_similarity_threshold':
         return 'Similariteitsdrempel';
-      case 'sasayaki_threshold_hint':
+      case 'audiobook_rematch_threshold_hint':
         return 'Minimale overeenkomst voor fuzzy matching (Dice-coëfficiënt). Verlaag om meer tekstverschillen te tolereren, maar te laag veroorzaakt foutieve matches.';
-      case 'sasayaki_window_hint':
+      case 'audiobook_rematch_window_hint':
         return 'Aantal tekens om vooruit te zoeken per referentie in de tekst. Pas aan als het trefpercentage laag is; te hoog kan de cursor verschuiven bij korte, ruizige referenties.';
       case 'saved_tags':
         return 'Labels opgeslagen.';
@@ -185819,9 +185886,9 @@ extension on _StringsPtBr {
         return 'Primária';
       case 'color_primary_desc':
         return 'Destaque de áudio, botões, interruptores';
-      case 'color_sasayaki':
+      case 'color_sentence_audio_highlight':
         return 'Destaque Sasayaki';
-      case 'color_sasayaki_desc':
+      case 'color_sentence_audio_highlight_desc':
         return 'Destaque de sincronização de legendas do audiolivro';
       case 'color_secondary':
         return 'Secundária';
@@ -188033,44 +188100,44 @@ extension on _StringsPtBr {
         return 'Inverter barra de navegação';
       case 'reverse_reader_bottom_bar':
         return 'Inverter barra inferior do leitor';
-      case 'sasayaki_all_zero':
+      case 'audiobook_rematch_all_zero':
         return 'Todas as janelas pontuaram 0%, ajuste manualmente';
-      case 'sasayaki_auto_failed':
+      case 'audiobook_rematch_auto_failed':
         return ({required Object error}) =>
             'Correspondência automática falhou: ${error}';
-      case 'sasayaki_auto_match':
+      case 'audiobook_rematch_auto_match':
         return 'Correspondência Automática';
-      case 'sasayaki_auto_picked':
+      case 'audiobook_rematch_auto_picked':
         return ({required Object window, required Object pct}) =>
             'Selecionado automaticamente ${window} (acerto ${pct}%)';
-      case 'sasayaki_default_value':
+      case 'audiobook_rematch_default_value':
         return ({required Object n}) => 'Padrão ${n}';
-      case 'sasayaki_health_label':
+      case 'audiobook_rematch_health_label':
         return ({required Object pct, required Object detail}) =>
             '${pct} correspondência — ${detail}';
-      case 'sasayaki_matching':
+      case 'audiobook_rematch_matching':
         return 'Correspondendo...';
-      case 'sasayaki_no_chapters':
+      case 'audiobook_rematch_no_chapters':
         return 'EPUB não tem texto de capítulo';
-      case 'sasayaki_no_cues_to_match':
+      case 'audiobook_rematch_no_cues_to_match':
         return 'Nenhuma frase para corresponder';
-      case 'sasayaki_no_sections':
+      case 'audiobook_rematch_no_sections':
         return 'Nenhum texto de capítulo ttu encontrado, não é possível corresponder automaticamente';
-      case 'sasayaki_no_stored_cues':
+      case 'audiobook_rematch_no_stored_cues':
         return 'Nenhuma frase armazenada, não é possível reexecutar';
-      case 'sasayaki_rematch_failed':
+      case 'audiobook_rematch_failed':
         return ({required Object error}) =>
             'Falha na correspondência: ${error}';
-      case 'sasayaki_rematch_result':
+      case 'audiobook_rematch_result':
         return ({required Object pct, required Object window}) =>
             'Recorrespondido: ${pct}% (janela: ${window})';
-      case 'sasayaki_search_window':
+      case 'audiobook_rematch_search_window':
         return 'Janela de Busca';
-      case 'sasayaki_similarity_threshold':
+      case 'audiobook_rematch_similarity_threshold':
         return 'Limite de Similaridade';
-      case 'sasayaki_threshold_hint':
+      case 'audiobook_rematch_threshold_hint':
         return 'Similaridade mínima para correspondência aproximada (coeficiente de Dice). Diminua para tolerar mais diferenças no texto, mas valores muito baixos causam correspondências falsas.';
-      case 'sasayaki_window_hint':
+      case 'audiobook_rematch_window_hint':
         return 'Número de caracteres a buscar à frente por frase no texto. Ajuste se a taxa de acerto estiver baixa; valores muito altos podem deslocar o cursor com frases curtas e ruidosas.';
       case 'saved_tags':
         return 'Tags salvas.';
@@ -192312,9 +192379,9 @@ extension on _StringsRu {
         return 'Основной';
       case 'color_primary_desc':
         return 'Подсветка аудио, кнопки, переключатели';
-      case 'color_sasayaki':
+      case 'color_sentence_audio_highlight':
         return 'Подсветка Sasayaki';
-      case 'color_sasayaki_desc':
+      case 'color_sentence_audio_highlight_desc':
         return 'Подсветка синхронизации субтитров аудиокниги';
       case 'color_secondary':
         return 'Вторичный';
@@ -194527,44 +194594,44 @@ extension on _StringsRu {
         return 'Обратить панель навигации';
       case 'reverse_reader_bottom_bar':
         return 'Обратить нижнюю панель читалки';
-      case 'sasayaki_all_zero':
+      case 'audiobook_rematch_all_zero':
         return 'Все окна показали 0%, настройте вручную';
-      case 'sasayaki_auto_failed':
+      case 'audiobook_rematch_auto_failed':
         return ({required Object error}) =>
             'Автосопоставление не удалось: ${error}';
-      case 'sasayaki_auto_match':
+      case 'audiobook_rematch_auto_match':
         return 'Автосопоставление';
-      case 'sasayaki_auto_picked':
+      case 'audiobook_rematch_auto_picked':
         return ({required Object window, required Object pct}) =>
             'Автоматически выбрано ${window} (совпадение ${pct}%)';
-      case 'sasayaki_default_value':
+      case 'audiobook_rematch_default_value':
         return ({required Object n}) => 'По умолчанию ${n}';
-      case 'sasayaki_health_label':
+      case 'audiobook_rematch_health_label':
         return ({required Object pct, required Object detail}) =>
             '${pct} совпадение — ${detail}';
-      case 'sasayaki_matching':
+      case 'audiobook_rematch_matching':
         return 'Сопоставление...';
-      case 'sasayaki_no_chapters':
+      case 'audiobook_rematch_no_chapters':
         return 'В EPUB нет текста глав';
-      case 'sasayaki_no_cues_to_match':
+      case 'audiobook_rematch_no_cues_to_match':
         return 'Нет меток для сопоставления';
-      case 'sasayaki_no_sections':
+      case 'audiobook_rematch_no_sections':
         return 'Текст глав ttu не найден, автосопоставление невозможно';
-      case 'sasayaki_no_stored_cues':
+      case 'audiobook_rematch_no_stored_cues':
         return 'Нет сохранённых меток, перезапуск невозможен';
-      case 'sasayaki_rematch_failed':
+      case 'audiobook_rematch_failed':
         return ({required Object error}) =>
             'Пересопоставление не удалось: ${error}';
-      case 'sasayaki_rematch_result':
+      case 'audiobook_rematch_result':
         return ({required Object pct, required Object window}) =>
             'Пересопоставлено: ${pct}% (окно: ${window})';
-      case 'sasayaki_search_window':
+      case 'audiobook_rematch_search_window':
         return 'Окно поиска';
-      case 'sasayaki_similarity_threshold':
+      case 'audiobook_rematch_similarity_threshold':
         return 'Порог сходства';
-      case 'sasayaki_threshold_hint':
+      case 'audiobook_rematch_threshold_hint':
         return 'Минимальное сходство для нечёткого сопоставления (коэффициент Дайса). Уменьшите для допуска больших различий, но слишком низкое значение даёт ложные совпадения.';
-      case 'sasayaki_window_hint':
+      case 'audiobook_rematch_window_hint':
         return 'Количество символов для поиска вперёд на каждую метку. Увеличьте, если процент совпадений низкий; слишком большое значение может сместить курсор при коротких шумных метках.';
       case 'saved_tags':
         return 'Теги сохранены.';
@@ -198802,9 +198869,9 @@ extension on _StringsTh {
         return 'สีหลัก';
       case 'color_primary_desc':
         return 'ไฮไลต์เสียง ปุ่ม สวิตช์';
-      case 'color_sasayaki':
+      case 'color_sentence_audio_highlight':
         return 'ไฮไลท์ Sasayaki';
-      case 'color_sasayaki_desc':
+      case 'color_sentence_audio_highlight_desc':
         return 'ไฮไลท์การซิงค์คำบรรยายหนังสือเสียง';
       case 'color_secondary':
         return 'สีรอง';
@@ -201011,43 +201078,43 @@ extension on _StringsTh {
         return 'สลับด้านแถบนำทาง';
       case 'reverse_reader_bottom_bar':
         return 'สลับด้านแถบล่างของโปรแกรมอ่าน';
-      case 'sasayaki_all_zero':
+      case 'audiobook_rematch_all_zero':
         return 'ทุกหน้าต่างได้คะแนน 0% กรุณาปรับด้วยตนเอง';
-      case 'sasayaki_auto_failed':
+      case 'audiobook_rematch_auto_failed':
         return ({required Object error}) =>
             'การจับคู่อัตโนมัติล้มเหลว: ${error}';
-      case 'sasayaki_auto_match':
+      case 'audiobook_rematch_auto_match':
         return 'จับคู่อัตโนมัติ';
-      case 'sasayaki_auto_picked':
+      case 'audiobook_rematch_auto_picked':
         return ({required Object window, required Object pct}) =>
             'เลือกอัตโนมัติ ${window} (ตรง ${pct}%)';
-      case 'sasayaki_default_value':
+      case 'audiobook_rematch_default_value':
         return ({required Object n}) => 'ค่าเริ่มต้น ${n}';
-      case 'sasayaki_health_label':
+      case 'audiobook_rematch_health_label':
         return ({required Object pct, required Object detail}) =>
             '${pct} ตรง — ${detail}';
-      case 'sasayaki_matching':
+      case 'audiobook_rematch_matching':
         return 'กำลังจับคู่...';
-      case 'sasayaki_no_chapters':
+      case 'audiobook_rematch_no_chapters':
         return 'EPUB ไม่มีข้อความบท';
-      case 'sasayaki_no_cues_to_match':
+      case 'audiobook_rematch_no_cues_to_match':
         return 'ไม่มี cue ที่จะจับคู่';
-      case 'sasayaki_no_sections':
+      case 'audiobook_rematch_no_sections':
         return 'ไม่พบข้อความบทจาก ttu ไม่สามารถจับคู่อัตโนมัติ';
-      case 'sasayaki_no_stored_cues':
+      case 'audiobook_rematch_no_stored_cues':
         return 'ไม่มี cue ที่เก็บไว้ ไม่สามารถเรียกใช้ใหม่';
-      case 'sasayaki_rematch_failed':
+      case 'audiobook_rematch_failed':
         return ({required Object error}) => 'การจับคู่ใหม่ล้มเหลว: ${error}';
-      case 'sasayaki_rematch_result':
+      case 'audiobook_rematch_result':
         return ({required Object pct, required Object window}) =>
             'จับคู่ใหม่: ${pct}% (หน้าต่าง: ${window})';
-      case 'sasayaki_search_window':
+      case 'audiobook_rematch_search_window':
         return 'หน้าต่างค้นหา';
-      case 'sasayaki_similarity_threshold':
+      case 'audiobook_rematch_similarity_threshold':
         return 'เกณฑ์ความคล้าย';
-      case 'sasayaki_threshold_hint':
+      case 'audiobook_rematch_threshold_hint':
         return 'ค่าความคล้ายขั้นต่ำสำหรับการจับคู่แบบคลุมเครือ (สัมประสิทธิ์ Dice) ลดค่าเพื่อยอมรับความแตกต่างมากขึ้น แต่ต่ำเกินไปอาจทำให้จับคู่ผิด';
-      case 'sasayaki_window_hint':
+      case 'audiobook_rematch_window_hint':
         return 'จำนวนอักขระที่จะค้นหาไปข้างหน้าต่อ cue ในข้อความ ปรับถ้าอัตราตรงต่ำ ค่าสูงเกินอาจทำให้เคอร์เซอร์คลาดเคลื่อนกับ cue สั้นที่มีสัญญาณรบกวน';
       case 'saved_tags':
         return 'บันทึกแท็กแล้ว';
@@ -205286,9 +205353,9 @@ extension on _StringsTr {
         return 'Birincil';
       case 'color_primary_desc':
         return 'Ses vurgusu, düğmeler, anahtarlar';
-      case 'color_sasayaki':
+      case 'color_sentence_audio_highlight':
         return 'Sasayaki vurgusu';
-      case 'color_sasayaki_desc':
+      case 'color_sentence_audio_highlight_desc':
         return 'Sesli kitap altyazı senkronizasyon vurgusu';
       case 'color_secondary':
         return 'İkincil';
@@ -207495,44 +207562,44 @@ extension on _StringsTr {
         return 'Gezinme çubuğunu ters çevir';
       case 'reverse_reader_bottom_bar':
         return 'Okuyucu alt çubuğunu ters çevir';
-      case 'sasayaki_all_zero':
+      case 'audiobook_rematch_all_zero':
         return 'Tüm pencereler %0 skorladı, lütfen manuel ayarlayın';
-      case 'sasayaki_auto_failed':
+      case 'audiobook_rematch_auto_failed':
         return ({required Object error}) =>
             'Otomatik eşleştirme başarısız: ${error}';
-      case 'sasayaki_auto_match':
+      case 'audiobook_rematch_auto_match':
         return 'Otomatik eşleştir';
-      case 'sasayaki_auto_picked':
+      case 'audiobook_rematch_auto_picked':
         return ({required Object window, required Object pct}) =>
             '${window} otomatik seçildi (isabet ${pct}%)';
-      case 'sasayaki_default_value':
+      case 'audiobook_rematch_default_value':
         return ({required Object n}) => 'Varsayılan ${n}';
-      case 'sasayaki_health_label':
+      case 'audiobook_rematch_health_label':
         return ({required Object pct, required Object detail}) =>
             '${pct} eşleşti — ${detail}';
-      case 'sasayaki_matching':
+      case 'audiobook_rematch_matching':
         return 'Eşleştiriliyor...';
-      case 'sasayaki_no_chapters':
+      case 'audiobook_rematch_no_chapters':
         return 'EPUB\'de bölüm metni yok';
-      case 'sasayaki_no_cues_to_match':
+      case 'audiobook_rematch_no_cues_to_match':
         return 'Eşleştirilecek referans yok';
-      case 'sasayaki_no_sections':
+      case 'audiobook_rematch_no_sections':
         return 'ttu bölüm metni bulunamadı, otomatik eşleştirme yapılamaz';
-      case 'sasayaki_no_stored_cues':
+      case 'audiobook_rematch_no_stored_cues':
         return 'Kayıtlı referans yok, yeniden çalıştırılamaz';
-      case 'sasayaki_rematch_failed':
+      case 'audiobook_rematch_failed':
         return ({required Object error}) =>
             'Yeniden eşleştirme başarısız: ${error}';
-      case 'sasayaki_rematch_result':
+      case 'audiobook_rematch_result':
         return ({required Object pct, required Object window}) =>
             'Yeniden eşleştirildi: ${pct}% (pencere: ${window})';
-      case 'sasayaki_search_window':
+      case 'audiobook_rematch_search_window':
         return 'Arama penceresi';
-      case 'sasayaki_similarity_threshold':
+      case 'audiobook_rematch_similarity_threshold':
         return 'Benzerlik eşiği';
-      case 'sasayaki_threshold_hint':
+      case 'audiobook_rematch_threshold_hint':
         return 'Bulanık eşleştirme için minimum benzerlik (Dice katsayısı). Daha fazla metin farkını tolere etmek için düşürün, ancak çok düşük yanlış eşleşmelere neden olur.';
-      case 'sasayaki_window_hint':
+      case 'audiobook_rematch_window_hint':
         return 'Metinde referans başına ileri aranacak karakter sayısı. İsabet oranı düşükse ayarlayın; çok büyük değer kısa ve gürültülü referanslarda imleci kaydırabilir.';
       case 'saved_tags':
         return 'Etiketler kaydedildi.';
@@ -211771,9 +211838,9 @@ extension on _StringsVi {
         return 'Chính';
       case 'color_primary_desc':
         return 'Đánh dấu âm thanh, nút, công tắc';
-      case 'color_sasayaki':
+      case 'color_sentence_audio_highlight':
         return 'Tô sáng Sasayaki';
-      case 'color_sasayaki_desc':
+      case 'color_sentence_audio_highlight_desc':
         return 'Tô sáng đồng bộ phụ đề sách nói';
       case 'color_secondary':
         return 'Phụ';
@@ -213983,42 +214050,42 @@ extension on _StringsVi {
         return 'Đảo ngược thanh điều hướng';
       case 'reverse_reader_bottom_bar':
         return 'Đảo ngược thanh dưới trình đọc';
-      case 'sasayaki_all_zero':
+      case 'audiobook_rematch_all_zero':
         return 'Tất cả cửa sổ có tỷ lệ 0%, vui lòng điều chỉnh thủ công';
-      case 'sasayaki_auto_failed':
+      case 'audiobook_rematch_auto_failed':
         return ({required Object error}) => 'Tự động khớp thất bại: ${error}';
-      case 'sasayaki_auto_match':
+      case 'audiobook_rematch_auto_match':
         return 'Tự động khớp';
-      case 'sasayaki_auto_picked':
+      case 'audiobook_rematch_auto_picked':
         return ({required Object window, required Object pct}) =>
             'Đã tự động chọn ${window} (khớp ${pct}%)';
-      case 'sasayaki_default_value':
+      case 'audiobook_rematch_default_value':
         return ({required Object n}) => 'Mặc định ${n}';
-      case 'sasayaki_health_label':
+      case 'audiobook_rematch_health_label':
         return ({required Object pct, required Object detail}) =>
             '${pct} khớp — ${detail}';
-      case 'sasayaki_matching':
+      case 'audiobook_rematch_matching':
         return 'Đang khớp…';
-      case 'sasayaki_no_chapters':
+      case 'audiobook_rematch_no_chapters':
         return 'EPUB không có văn bản chương';
-      case 'sasayaki_no_cues_to_match':
+      case 'audiobook_rematch_no_cues_to_match':
         return 'Không có cue để khớp';
-      case 'sasayaki_no_sections':
+      case 'audiobook_rematch_no_sections':
         return 'Không tìm thấy văn bản chương ttu, không thể tự động khớp';
-      case 'sasayaki_no_stored_cues':
+      case 'audiobook_rematch_no_stored_cues':
         return 'Không có cue đã lưu, không thể chạy lại';
-      case 'sasayaki_rematch_failed':
+      case 'audiobook_rematch_failed':
         return ({required Object error}) => 'Khớp lại thất bại: ${error}';
-      case 'sasayaki_rematch_result':
+      case 'audiobook_rematch_result':
         return ({required Object pct, required Object window}) =>
             'Đã khớp lại: ${pct}% (cửa sổ: ${window})';
-      case 'sasayaki_search_window':
+      case 'audiobook_rematch_search_window':
         return 'Cửa sổ tìm kiếm';
-      case 'sasayaki_similarity_threshold':
+      case 'audiobook_rematch_similarity_threshold':
         return 'Ngưỡng tương đồng';
-      case 'sasayaki_threshold_hint':
+      case 'audiobook_rematch_threshold_hint':
         return 'Độ tương đồng tối thiểu cho khớp mờ (hệ số Dice). Giảm để chấp nhận nhiều khác biệt văn bản hơn, nhưng quá thấp sẽ gây khớp sai.';
-      case 'sasayaki_window_hint':
+      case 'audiobook_rematch_window_hint':
         return 'Số ký tự tìm kiếm phía trước mỗi cue trong văn bản. Điều chỉnh nếu tỷ lệ khớp thấp; quá lớn có thể lệch con trỏ với cue ngắn nhiễu.';
       case 'saved_tags':
         return 'Đã lưu thẻ tag.';
@@ -218242,9 +218309,9 @@ extension on _StringsZhCn {
         return '主色';
       case 'color_primary_desc':
         return '音频高亮、按钮、开关';
-      case 'color_sasayaki':
+      case 'color_sentence_audio_highlight':
         return '音频高亮';
-      case 'color_sasayaki_desc':
+      case 'color_sentence_audio_highlight_desc':
         return '有声书播放时跟随当前句的高亮颜色';
       case 'color_secondary':
         return '辅色';
@@ -220444,42 +220511,42 @@ extension on _StringsZhCn {
         return '反转底栏方向';
       case 'reverse_reader_bottom_bar':
         return '反转阅读器底栏';
-      case 'sasayaki_all_zero':
+      case 'audiobook_rematch_all_zero':
         return '所有窗口命中率都是 0，请人工调整';
-      case 'sasayaki_auto_failed':
+      case 'audiobook_rematch_auto_failed':
         return ({required Object error}) => '自动匹配失败：${error}';
-      case 'sasayaki_auto_match':
+      case 'audiobook_rematch_auto_match':
         return '自动匹配';
-      case 'sasayaki_auto_picked':
+      case 'audiobook_rematch_auto_picked':
         return ({required Object window, required Object pct}) =>
             '自动选定 ${window}（命中 ${pct}%）';
-      case 'sasayaki_default_value':
+      case 'audiobook_rematch_default_value':
         return ({required Object n}) => '默认 ${n}';
-      case 'sasayaki_health_label':
+      case 'audiobook_rematch_health_label':
         return ({required Object pct, required Object detail}) =>
             '${pct} 匹配 — ${detail}';
-      case 'sasayaki_matching':
+      case 'audiobook_rematch_matching':
         return '匹配中…';
-      case 'sasayaki_no_chapters':
+      case 'audiobook_rematch_no_chapters':
         return 'EPUB 没有章节文本';
-      case 'sasayaki_no_cues_to_match':
+      case 'audiobook_rematch_no_cues_to_match':
         return '没有字幕条目可供匹配';
-      case 'sasayaki_no_sections':
+      case 'audiobook_rematch_no_sections':
         return '未读到 ttu 章节文本，无法自动匹配';
-      case 'sasayaki_no_stored_cues':
+      case 'audiobook_rematch_no_stored_cues':
         return '没有已存字幕条目，无法重跑';
-      case 'sasayaki_rematch_failed':
+      case 'audiobook_rematch_failed':
         return ({required Object error}) => '重跑失败：${error}';
-      case 'sasayaki_rematch_result':
+      case 'audiobook_rematch_result':
         return ({required Object pct, required Object window}) =>
             '重新匹配：${pct}%（窗口：${window}）';
-      case 'sasayaki_search_window':
+      case 'audiobook_rematch_search_window':
         return '搜索窗口';
-      case 'sasayaki_similarity_threshold':
+      case 'audiobook_rematch_similarity_threshold':
         return '相似度阈值';
-      case 'sasayaki_threshold_hint':
+      case 'audiobook_rematch_threshold_hint':
         return '模糊匹配的最低相似度（Dice 系数）。降低可容忍更多文本差异，但太低会误匹配。';
-      case 'sasayaki_window_hint':
+      case 'audiobook_rematch_window_hint':
         return '每条字幕在正文里向前找的字符数。命中率低时可左右调整，过大容易被短噪声字幕拉偏光标。';
       case 'saved_tags':
         return '标签已保存。';
@@ -224676,9 +224743,9 @@ extension on _StringsZhHk {
         return '主色';
       case 'color_primary_desc':
         return '音訊醒目標示、按鈕、開關';
-      case 'color_sasayaki':
+      case 'color_sentence_audio_highlight':
         return '音訊醒目標示';
-      case 'color_sasayaki_desc':
+      case 'color_sentence_audio_highlight_desc':
         return '有聲書播放時跟隨當前句的醒目標示顏色';
       case 'color_secondary':
         return '輔色';
@@ -226883,42 +226950,42 @@ extension on _StringsZhHk {
         return '反轉底欄方向';
       case 'reverse_reader_bottom_bar':
         return '反轉閱讀器底欄';
-      case 'sasayaki_all_zero':
+      case 'audiobook_rematch_all_zero':
         return '所有視窗命中率都是 0，請手動調整';
-      case 'sasayaki_auto_failed':
+      case 'audiobook_rematch_auto_failed':
         return ({required Object error}) => '自動比對失敗：${error}';
-      case 'sasayaki_auto_match':
+      case 'audiobook_rematch_auto_match':
         return '自動比對';
-      case 'sasayaki_auto_picked':
+      case 'audiobook_rematch_auto_picked':
         return ({required Object window, required Object pct}) =>
             '自動選定 ${window}（命中 ${pct}%）';
-      case 'sasayaki_default_value':
+      case 'audiobook_rematch_default_value':
         return ({required Object n}) => '預設 ${n}';
-      case 'sasayaki_health_label':
+      case 'audiobook_rematch_health_label':
         return ({required Object pct, required Object detail}) =>
             '${pct} 比對 — ${detail}';
-      case 'sasayaki_matching':
+      case 'audiobook_rematch_matching':
         return '比對中…';
-      case 'sasayaki_no_chapters':
+      case 'audiobook_rematch_no_chapters':
         return 'EPUB 沒有章節文字';
-      case 'sasayaki_no_cues_to_match':
+      case 'audiobook_rematch_no_cues_to_match':
         return '沒有字幕條目可供比對';
-      case 'sasayaki_no_sections':
+      case 'audiobook_rematch_no_sections':
         return '未讀到 ttu 章節文字，無法自動比對';
-      case 'sasayaki_no_stored_cues':
+      case 'audiobook_rematch_no_stored_cues':
         return '沒有已存字幕條目，無法重跑';
-      case 'sasayaki_rematch_failed':
+      case 'audiobook_rematch_failed':
         return ({required Object error}) => '重跑失敗：${error}';
-      case 'sasayaki_rematch_result':
+      case 'audiobook_rematch_result':
         return ({required Object pct, required Object window}) =>
             '重新比對：${pct}%（視窗：${window}）';
-      case 'sasayaki_search_window':
+      case 'audiobook_rematch_search_window':
         return '搜尋視窗';
-      case 'sasayaki_similarity_threshold':
+      case 'audiobook_rematch_similarity_threshold':
         return '相似度閾值';
-      case 'sasayaki_threshold_hint':
+      case 'audiobook_rematch_threshold_hint':
         return '模糊比對的最低相似度（Dice 係數）。降低可容忍更多文字差異，但太低會誤比對。';
-      case 'sasayaki_window_hint':
+      case 'audiobook_rematch_window_hint':
         return '每條字幕在正文裡向前找的字元數。命中率低時可左右調整，過大容易被短雜訊字幕拉偏游標。';
       case 'saved_tags':
         return '標籤已儲存。';
