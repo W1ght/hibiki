@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 53805 (3165 per locale)
+/// Strings: 53907 (3171 per locale)
 ///
-/// Built on 2026-08-08 at 14:32 UTC
+/// Built on 2026-08-08 at 15:41 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -4265,6 +4265,13 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_work_extras => 'Extras';
   String get video_work_details => 'Details';
   String get video_work_external_ids => 'External IDs';
+  String get video_work_metadata_pending =>
+      'Detailed metadata has not been scraped yet. Retry this source from Sources, then reopen the work.';
+  String get video_work_genres => 'Genres';
+  String get video_work_keywords => 'Keywords';
+  String get video_work_studios => 'Studios';
+  String get video_work_countries => 'Countries';
+  String get video_work_content_rating => 'Content rating';
 }
 
 // Path: <root>
@@ -11544,6 +11551,19 @@ class _StringsAr extends _StringsEn {
   String get video_work_details => 'Details';
   @override
   String get video_work_external_ids => 'External IDs';
+  @override
+  String get video_work_metadata_pending =>
+      'Detailed metadata has not been scraped yet. Retry this source from Sources, then reopen the work.';
+  @override
+  String get video_work_genres => 'Genres';
+  @override
+  String get video_work_keywords => 'Keywords';
+  @override
+  String get video_work_studios => 'Studios';
+  @override
+  String get video_work_countries => 'Countries';
+  @override
+  String get video_work_content_rating => 'Content rating';
 }
 
 // Path: <root>
@@ -18890,6 +18910,19 @@ class _StringsDe extends _StringsEn {
   String get video_work_details => 'Details';
   @override
   String get video_work_external_ids => 'External IDs';
+  @override
+  String get video_work_metadata_pending =>
+      'Detailed metadata has not been scraped yet. Retry this source from Sources, then reopen the work.';
+  @override
+  String get video_work_genres => 'Genres';
+  @override
+  String get video_work_keywords => 'Keywords';
+  @override
+  String get video_work_studios => 'Studios';
+  @override
+  String get video_work_countries => 'Countries';
+  @override
+  String get video_work_content_rating => 'Content rating';
 }
 
 // Path: <root>
@@ -26251,6 +26284,19 @@ class _StringsEs extends _StringsEn {
   String get video_work_details => 'Details';
   @override
   String get video_work_external_ids => 'External IDs';
+  @override
+  String get video_work_metadata_pending =>
+      'Detailed metadata has not been scraped yet. Retry this source from Sources, then reopen the work.';
+  @override
+  String get video_work_genres => 'Genres';
+  @override
+  String get video_work_keywords => 'Keywords';
+  @override
+  String get video_work_studios => 'Studios';
+  @override
+  String get video_work_countries => 'Countries';
+  @override
+  String get video_work_content_rating => 'Content rating';
 }
 
 // Path: <root>
@@ -33624,6 +33670,19 @@ class _StringsFr extends _StringsEn {
   String get video_work_details => 'Details';
   @override
   String get video_work_external_ids => 'External IDs';
+  @override
+  String get video_work_metadata_pending =>
+      'Detailed metadata has not been scraped yet. Retry this source from Sources, then reopen the work.';
+  @override
+  String get video_work_genres => 'Genres';
+  @override
+  String get video_work_keywords => 'Keywords';
+  @override
+  String get video_work_studios => 'Studios';
+  @override
+  String get video_work_countries => 'Countries';
+  @override
+  String get video_work_content_rating => 'Content rating';
 }
 
 // Path: <root>
@@ -40926,6 +40985,19 @@ class _StringsId extends _StringsEn {
   String get video_work_details => 'Details';
   @override
   String get video_work_external_ids => 'External IDs';
+  @override
+  String get video_work_metadata_pending =>
+      'Detailed metadata has not been scraped yet. Retry this source from Sources, then reopen the work.';
+  @override
+  String get video_work_genres => 'Genres';
+  @override
+  String get video_work_keywords => 'Keywords';
+  @override
+  String get video_work_studios => 'Studios';
+  @override
+  String get video_work_countries => 'Countries';
+  @override
+  String get video_work_content_rating => 'Content rating';
 }
 
 // Path: <root>
@@ -48274,6 +48346,19 @@ class _StringsIt extends _StringsEn {
   String get video_work_details => 'Details';
   @override
   String get video_work_external_ids => 'External IDs';
+  @override
+  String get video_work_metadata_pending =>
+      'Detailed metadata has not been scraped yet. Retry this source from Sources, then reopen the work.';
+  @override
+  String get video_work_genres => 'Genres';
+  @override
+  String get video_work_keywords => 'Keywords';
+  @override
+  String get video_work_studios => 'Studios';
+  @override
+  String get video_work_countries => 'Countries';
+  @override
+  String get video_work_content_rating => 'Content rating';
 }
 
 // Path: <root>
@@ -55439,6 +55524,19 @@ class _StringsJa extends _StringsEn {
   String get video_work_details => 'Details';
   @override
   String get video_work_external_ids => 'External IDs';
+  @override
+  String get video_work_metadata_pending =>
+      'Detailed metadata has not been scraped yet. Retry this source from Sources, then reopen the work.';
+  @override
+  String get video_work_genres => 'Genres';
+  @override
+  String get video_work_keywords => 'Keywords';
+  @override
+  String get video_work_studios => 'Studios';
+  @override
+  String get video_work_countries => 'Countries';
+  @override
+  String get video_work_content_rating => 'Content rating';
 }
 
 // Path: <root>
@@ -62606,6 +62704,19 @@ class _StringsKo extends _StringsEn {
   String get video_work_details => 'Details';
   @override
   String get video_work_external_ids => 'External IDs';
+  @override
+  String get video_work_metadata_pending =>
+      'Detailed metadata has not been scraped yet. Retry this source from Sources, then reopen the work.';
+  @override
+  String get video_work_genres => 'Genres';
+  @override
+  String get video_work_keywords => 'Keywords';
+  @override
+  String get video_work_studios => 'Studios';
+  @override
+  String get video_work_countries => 'Countries';
+  @override
+  String get video_work_content_rating => 'Content rating';
 }
 
 // Path: <root>
@@ -69934,6 +70045,19 @@ class _StringsNl extends _StringsEn {
   String get video_work_details => 'Details';
   @override
   String get video_work_external_ids => 'External IDs';
+  @override
+  String get video_work_metadata_pending =>
+      'Detailed metadata has not been scraped yet. Retry this source from Sources, then reopen the work.';
+  @override
+  String get video_work_genres => 'Genres';
+  @override
+  String get video_work_keywords => 'Keywords';
+  @override
+  String get video_work_studios => 'Studios';
+  @override
+  String get video_work_countries => 'Countries';
+  @override
+  String get video_work_content_rating => 'Content rating';
 }
 
 // Path: <root>
@@ -77275,6 +77399,19 @@ class _StringsPtBr extends _StringsEn {
   String get video_work_details => 'Details';
   @override
   String get video_work_external_ids => 'External IDs';
+  @override
+  String get video_work_metadata_pending =>
+      'Detailed metadata has not been scraped yet. Retry this source from Sources, then reopen the work.';
+  @override
+  String get video_work_genres => 'Genres';
+  @override
+  String get video_work_keywords => 'Keywords';
+  @override
+  String get video_work_studios => 'Studios';
+  @override
+  String get video_work_countries => 'Countries';
+  @override
+  String get video_work_content_rating => 'Content rating';
 }
 
 // Path: <root>
@@ -84600,6 +84737,19 @@ class _StringsRu extends _StringsEn {
   String get video_work_details => 'Details';
   @override
   String get video_work_external_ids => 'External IDs';
+  @override
+  String get video_work_metadata_pending =>
+      'Detailed metadata has not been scraped yet. Retry this source from Sources, then reopen the work.';
+  @override
+  String get video_work_genres => 'Genres';
+  @override
+  String get video_work_keywords => 'Keywords';
+  @override
+  String get video_work_studios => 'Studios';
+  @override
+  String get video_work_countries => 'Countries';
+  @override
+  String get video_work_content_rating => 'Content rating';
 }
 
 // Path: <root>
@@ -91873,6 +92023,19 @@ class _StringsTh extends _StringsEn {
   String get video_work_details => 'Details';
   @override
   String get video_work_external_ids => 'External IDs';
+  @override
+  String get video_work_metadata_pending =>
+      'Detailed metadata has not been scraped yet. Retry this source from Sources, then reopen the work.';
+  @override
+  String get video_work_genres => 'Genres';
+  @override
+  String get video_work_keywords => 'Keywords';
+  @override
+  String get video_work_studios => 'Studios';
+  @override
+  String get video_work_countries => 'Countries';
+  @override
+  String get video_work_content_rating => 'Content rating';
 }
 
 // Path: <root>
@@ -99178,6 +99341,19 @@ class _StringsTr extends _StringsEn {
   String get video_work_details => 'Details';
   @override
   String get video_work_external_ids => 'External IDs';
+  @override
+  String get video_work_metadata_pending =>
+      'Detailed metadata has not been scraped yet. Retry this source from Sources, then reopen the work.';
+  @override
+  String get video_work_genres => 'Genres';
+  @override
+  String get video_work_keywords => 'Keywords';
+  @override
+  String get video_work_studios => 'Studios';
+  @override
+  String get video_work_countries => 'Countries';
+  @override
+  String get video_work_content_rating => 'Content rating';
 }
 
 // Path: <root>
@@ -106468,6 +106644,19 @@ class _StringsVi extends _StringsEn {
   String get video_work_details => 'Details';
   @override
   String get video_work_external_ids => 'External IDs';
+  @override
+  String get video_work_metadata_pending =>
+      'Detailed metadata has not been scraped yet. Retry this source from Sources, then reopen the work.';
+  @override
+  String get video_work_genres => 'Genres';
+  @override
+  String get video_work_keywords => 'Keywords';
+  @override
+  String get video_work_studios => 'Studios';
+  @override
+  String get video_work_countries => 'Countries';
+  @override
+  String get video_work_content_rating => 'Content rating';
 }
 
 // Path: <root>
@@ -113248,6 +113437,18 @@ class _StringsZhCn extends _StringsEn {
   String get video_work_details => '作品资料';
   @override
   String get video_work_external_ids => '外部 ID';
+  @override
+  String get video_work_metadata_pending => '暂无详细资料。请在';
+  @override
+  String get video_work_genres => '类型';
+  @override
+  String get video_work_keywords => '标签';
+  @override
+  String get video_work_studios => '工作室';
+  @override
+  String get video_work_countries => '国家';
+  @override
+  String get video_work_content_rating => '分级';
 }
 
 // Path: <root>
@@ -120333,6 +120534,19 @@ class _StringsZhHk extends _StringsEn {
   String get video_work_details => 'Details';
   @override
   String get video_work_external_ids => 'External IDs';
+  @override
+  String get video_work_metadata_pending =>
+      'Detailed metadata has not been scraped yet. Retry this source from Sources, then reopen the work.';
+  @override
+  String get video_work_genres => 'Genres';
+  @override
+  String get video_work_keywords => 'Keywords';
+  @override
+  String get video_work_studios => 'Studios';
+  @override
+  String get video_work_countries => 'Countries';
+  @override
+  String get video_work_content_rating => 'Content rating';
 }
 
 /// Flat map(s) containing all translations.
@@ -126832,6 +127046,18 @@ extension on _StringsEn {
         return 'Details';
       case 'video_work_external_ids':
         return 'External IDs';
+      case 'video_work_metadata_pending':
+        return 'Detailed metadata has not been scraped yet. Retry this source from Sources, then reopen the work.';
+      case 'video_work_genres':
+        return 'Genres';
+      case 'video_work_keywords':
+        return 'Keywords';
+      case 'video_work_studios':
+        return 'Studios';
+      case 'video_work_countries':
+        return 'Countries';
+      case 'video_work_content_rating':
+        return 'Content rating';
       default:
         return null;
     }
@@ -133329,6 +133555,18 @@ extension on _StringsAr {
         return 'Details';
       case 'video_work_external_ids':
         return 'External IDs';
+      case 'video_work_metadata_pending':
+        return 'Detailed metadata has not been scraped yet. Retry this source from Sources, then reopen the work.';
+      case 'video_work_genres':
+        return 'Genres';
+      case 'video_work_keywords':
+        return 'Keywords';
+      case 'video_work_studios':
+        return 'Studios';
+      case 'video_work_countries':
+        return 'Countries';
+      case 'video_work_content_rating':
+        return 'Content rating';
       default:
         return null;
     }
@@ -139848,6 +140086,18 @@ extension on _StringsDe {
         return 'Details';
       case 'video_work_external_ids':
         return 'External IDs';
+      case 'video_work_metadata_pending':
+        return 'Detailed metadata has not been scraped yet. Retry this source from Sources, then reopen the work.';
+      case 'video_work_genres':
+        return 'Genres';
+      case 'video_work_keywords':
+        return 'Keywords';
+      case 'video_work_studios':
+        return 'Studios';
+      case 'video_work_countries':
+        return 'Countries';
+      case 'video_work_content_rating':
+        return 'Content rating';
       default:
         return null;
     }
@@ -146366,6 +146616,18 @@ extension on _StringsEs {
         return 'Details';
       case 'video_work_external_ids':
         return 'External IDs';
+      case 'video_work_metadata_pending':
+        return 'Detailed metadata has not been scraped yet. Retry this source from Sources, then reopen the work.';
+      case 'video_work_genres':
+        return 'Genres';
+      case 'video_work_keywords':
+        return 'Keywords';
+      case 'video_work_studios':
+        return 'Studios';
+      case 'video_work_countries':
+        return 'Countries';
+      case 'video_work_content_rating':
+        return 'Content rating';
       default:
         return null;
     }
@@ -152890,6 +153152,18 @@ extension on _StringsFr {
         return 'Details';
       case 'video_work_external_ids':
         return 'External IDs';
+      case 'video_work_metadata_pending':
+        return 'Detailed metadata has not been scraped yet. Retry this source from Sources, then reopen the work.';
+      case 'video_work_genres':
+        return 'Genres';
+      case 'video_work_keywords':
+        return 'Keywords';
+      case 'video_work_studios':
+        return 'Studios';
+      case 'video_work_countries':
+        return 'Countries';
+      case 'video_work_content_rating':
+        return 'Content rating';
       default:
         return null;
     }
@@ -159396,6 +159670,18 @@ extension on _StringsId {
         return 'Details';
       case 'video_work_external_ids':
         return 'External IDs';
+      case 'video_work_metadata_pending':
+        return 'Detailed metadata has not been scraped yet. Retry this source from Sources, then reopen the work.';
+      case 'video_work_genres':
+        return 'Genres';
+      case 'video_work_keywords':
+        return 'Keywords';
+      case 'video_work_studios':
+        return 'Studios';
+      case 'video_work_countries':
+        return 'Countries';
+      case 'video_work_content_rating':
+        return 'Content rating';
       default:
         return null;
     }
@@ -165916,6 +166202,18 @@ extension on _StringsIt {
         return 'Details';
       case 'video_work_external_ids':
         return 'External IDs';
+      case 'video_work_metadata_pending':
+        return 'Detailed metadata has not been scraped yet. Retry this source from Sources, then reopen the work.';
+      case 'video_work_genres':
+        return 'Genres';
+      case 'video_work_keywords':
+        return 'Keywords';
+      case 'video_work_studios':
+        return 'Studios';
+      case 'video_work_countries':
+        return 'Countries';
+      case 'video_work_content_rating':
+        return 'Content rating';
       default:
         return null;
     }
@@ -172398,6 +172696,18 @@ extension on _StringsJa {
         return 'Details';
       case 'video_work_external_ids':
         return 'External IDs';
+      case 'video_work_metadata_pending':
+        return 'Detailed metadata has not been scraped yet. Retry this source from Sources, then reopen the work.';
+      case 'video_work_genres':
+        return 'Genres';
+      case 'video_work_keywords':
+        return 'Keywords';
+      case 'video_work_studios':
+        return 'Studios';
+      case 'video_work_countries':
+        return 'Countries';
+      case 'video_work_content_rating':
+        return 'Content rating';
       default:
         return null;
     }
@@ -178884,6 +179194,18 @@ extension on _StringsKo {
         return 'Details';
       case 'video_work_external_ids':
         return 'External IDs';
+      case 'video_work_metadata_pending':
+        return 'Detailed metadata has not been scraped yet. Retry this source from Sources, then reopen the work.';
+      case 'video_work_genres':
+        return 'Genres';
+      case 'video_work_keywords':
+        return 'Keywords';
+      case 'video_work_studios':
+        return 'Studios';
+      case 'video_work_countries':
+        return 'Countries';
+      case 'video_work_content_rating':
+        return 'Content rating';
       default:
         return null;
     }
@@ -185398,6 +185720,18 @@ extension on _StringsNl {
         return 'Details';
       case 'video_work_external_ids':
         return 'External IDs';
+      case 'video_work_metadata_pending':
+        return 'Detailed metadata has not been scraped yet. Retry this source from Sources, then reopen the work.';
+      case 'video_work_genres':
+        return 'Genres';
+      case 'video_work_keywords':
+        return 'Keywords';
+      case 'video_work_studios':
+        return 'Studios';
+      case 'video_work_countries':
+        return 'Countries';
+      case 'video_work_content_rating':
+        return 'Content rating';
       default:
         return null;
     }
@@ -191909,6 +192243,18 @@ extension on _StringsPtBr {
         return 'Details';
       case 'video_work_external_ids':
         return 'External IDs';
+      case 'video_work_metadata_pending':
+        return 'Detailed metadata has not been scraped yet. Retry this source from Sources, then reopen the work.';
+      case 'video_work_genres':
+        return 'Genres';
+      case 'video_work_keywords':
+        return 'Keywords';
+      case 'video_work_studios':
+        return 'Studios';
+      case 'video_work_countries':
+        return 'Countries';
+      case 'video_work_content_rating':
+        return 'Content rating';
       default:
         return null;
     }
@@ -198425,6 +198771,18 @@ extension on _StringsRu {
         return 'Details';
       case 'video_work_external_ids':
         return 'External IDs';
+      case 'video_work_metadata_pending':
+        return 'Detailed metadata has not been scraped yet. Retry this source from Sources, then reopen the work.';
+      case 'video_work_genres':
+        return 'Genres';
+      case 'video_work_keywords':
+        return 'Keywords';
+      case 'video_work_studios':
+        return 'Studios';
+      case 'video_work_countries':
+        return 'Countries';
+      case 'video_work_content_rating':
+        return 'Content rating';
       default:
         return null;
     }
@@ -204924,6 +205282,18 @@ extension on _StringsTh {
         return 'Details';
       case 'video_work_external_ids':
         return 'External IDs';
+      case 'video_work_metadata_pending':
+        return 'Detailed metadata has not been scraped yet. Retry this source from Sources, then reopen the work.';
+      case 'video_work_genres':
+        return 'Genres';
+      case 'video_work_keywords':
+        return 'Keywords';
+      case 'video_work_studios':
+        return 'Studios';
+      case 'video_work_countries':
+        return 'Countries';
+      case 'video_work_content_rating':
+        return 'Content rating';
       default:
         return null;
     }
@@ -211432,6 +211802,18 @@ extension on _StringsTr {
         return 'Details';
       case 'video_work_external_ids':
         return 'External IDs';
+      case 'video_work_metadata_pending':
+        return 'Detailed metadata has not been scraped yet. Retry this source from Sources, then reopen the work.';
+      case 'video_work_genres':
+        return 'Genres';
+      case 'video_work_keywords':
+        return 'Keywords';
+      case 'video_work_studios':
+        return 'Studios';
+      case 'video_work_countries':
+        return 'Countries';
+      case 'video_work_content_rating':
+        return 'Content rating';
       default:
         return null;
     }
@@ -217936,6 +218318,18 @@ extension on _StringsVi {
         return 'Details';
       case 'video_work_external_ids':
         return 'External IDs';
+      case 'video_work_metadata_pending':
+        return 'Detailed metadata has not been scraped yet. Retry this source from Sources, then reopen the work.';
+      case 'video_work_genres':
+        return 'Genres';
+      case 'video_work_keywords':
+        return 'Keywords';
+      case 'video_work_studios':
+        return 'Studios';
+      case 'video_work_countries':
+        return 'Countries';
+      case 'video_work_content_rating':
+        return 'Content rating';
       default:
         return null;
     }
@@ -224386,6 +224780,18 @@ extension on _StringsZhCn {
         return '作品资料';
       case 'video_work_external_ids':
         return '外部 ID';
+      case 'video_work_metadata_pending':
+        return '暂无详细资料。请在';
+      case 'video_work_genres':
+        return '类型';
+      case 'video_work_keywords':
+        return '标签';
+      case 'video_work_studios':
+        return '工作室';
+      case 'video_work_countries':
+        return '国家';
+      case 'video_work_content_rating':
+        return '分级';
       default:
         return null;
     }
@@ -230863,6 +231269,18 @@ extension on _StringsZhHk {
         return 'Details';
       case 'video_work_external_ids':
         return 'External IDs';
+      case 'video_work_metadata_pending':
+        return 'Detailed metadata has not been scraped yet. Retry this source from Sources, then reopen the work.';
+      case 'video_work_genres':
+        return 'Genres';
+      case 'video_work_keywords':
+        return 'Keywords';
+      case 'video_work_studios':
+        return 'Studios';
+      case 'video_work_countries':
+        return 'Countries';
+      case 'video_work_content_rating':
+        return 'Content rating';
       default:
         return null;
     }
