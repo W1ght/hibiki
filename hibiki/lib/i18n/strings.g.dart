@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 53907 (3171 per locale)
+/// Strings: 53941 (3173 per locale)
 ///
-/// Built on 2026-08-08 at 15:41 UTC
+/// Built on 2026-08-08 at 16:44 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -4272,6 +4272,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_work_studios => 'Studios';
   String get video_work_countries => 'Countries';
   String get video_work_content_rating => 'Content rating';
+  String get video_all_videos_list_view => 'List view';
+  String get video_all_videos_grid_view => 'Grid view';
 }
 
 // Path: <root>
@@ -11564,6 +11566,10 @@ class _StringsAr extends _StringsEn {
   String get video_work_countries => 'Countries';
   @override
   String get video_work_content_rating => 'Content rating';
+  @override
+  String get video_all_videos_list_view => 'List view';
+  @override
+  String get video_all_videos_grid_view => 'Grid view';
 }
 
 // Path: <root>
@@ -18923,6 +18929,10 @@ class _StringsDe extends _StringsEn {
   String get video_work_countries => 'Countries';
   @override
   String get video_work_content_rating => 'Content rating';
+  @override
+  String get video_all_videos_list_view => 'List view';
+  @override
+  String get video_all_videos_grid_view => 'Grid view';
 }
 
 // Path: <root>
@@ -26297,6 +26307,10 @@ class _StringsEs extends _StringsEn {
   String get video_work_countries => 'Countries';
   @override
   String get video_work_content_rating => 'Content rating';
+  @override
+  String get video_all_videos_list_view => 'List view';
+  @override
+  String get video_all_videos_grid_view => 'Grid view';
 }
 
 // Path: <root>
@@ -33683,6 +33697,10 @@ class _StringsFr extends _StringsEn {
   String get video_work_countries => 'Countries';
   @override
   String get video_work_content_rating => 'Content rating';
+  @override
+  String get video_all_videos_list_view => 'List view';
+  @override
+  String get video_all_videos_grid_view => 'Grid view';
 }
 
 // Path: <root>
@@ -40998,6 +41016,10 @@ class _StringsId extends _StringsEn {
   String get video_work_countries => 'Countries';
   @override
   String get video_work_content_rating => 'Content rating';
+  @override
+  String get video_all_videos_list_view => 'List view';
+  @override
+  String get video_all_videos_grid_view => 'Grid view';
 }
 
 // Path: <root>
@@ -48359,6 +48381,10 @@ class _StringsIt extends _StringsEn {
   String get video_work_countries => 'Countries';
   @override
   String get video_work_content_rating => 'Content rating';
+  @override
+  String get video_all_videos_list_view => 'List view';
+  @override
+  String get video_all_videos_grid_view => 'Grid view';
 }
 
 // Path: <root>
@@ -55537,6 +55563,10 @@ class _StringsJa extends _StringsEn {
   String get video_work_countries => 'Countries';
   @override
   String get video_work_content_rating => 'Content rating';
+  @override
+  String get video_all_videos_list_view => 'List view';
+  @override
+  String get video_all_videos_grid_view => 'Grid view';
 }
 
 // Path: <root>
@@ -62717,6 +62747,10 @@ class _StringsKo extends _StringsEn {
   String get video_work_countries => 'Countries';
   @override
   String get video_work_content_rating => 'Content rating';
+  @override
+  String get video_all_videos_list_view => 'List view';
+  @override
+  String get video_all_videos_grid_view => 'Grid view';
 }
 
 // Path: <root>
@@ -70058,6 +70092,10 @@ class _StringsNl extends _StringsEn {
   String get video_work_countries => 'Countries';
   @override
   String get video_work_content_rating => 'Content rating';
+  @override
+  String get video_all_videos_list_view => 'List view';
+  @override
+  String get video_all_videos_grid_view => 'Grid view';
 }
 
 // Path: <root>
@@ -77412,6 +77450,10 @@ class _StringsPtBr extends _StringsEn {
   String get video_work_countries => 'Countries';
   @override
   String get video_work_content_rating => 'Content rating';
+  @override
+  String get video_all_videos_list_view => 'List view';
+  @override
+  String get video_all_videos_grid_view => 'Grid view';
 }
 
 // Path: <root>
@@ -84750,6 +84792,10 @@ class _StringsRu extends _StringsEn {
   String get video_work_countries => 'Countries';
   @override
   String get video_work_content_rating => 'Content rating';
+  @override
+  String get video_all_videos_list_view => 'List view';
+  @override
+  String get video_all_videos_grid_view => 'Grid view';
 }
 
 // Path: <root>
@@ -92036,6 +92082,10 @@ class _StringsTh extends _StringsEn {
   String get video_work_countries => 'Countries';
   @override
   String get video_work_content_rating => 'Content rating';
+  @override
+  String get video_all_videos_list_view => 'List view';
+  @override
+  String get video_all_videos_grid_view => 'Grid view';
 }
 
 // Path: <root>
@@ -99354,6 +99404,10 @@ class _StringsTr extends _StringsEn {
   String get video_work_countries => 'Countries';
   @override
   String get video_work_content_rating => 'Content rating';
+  @override
+  String get video_all_videos_list_view => 'List view';
+  @override
+  String get video_all_videos_grid_view => 'Grid view';
 }
 
 // Path: <root>
@@ -106657,6 +106711,10 @@ class _StringsVi extends _StringsEn {
   String get video_work_countries => 'Countries';
   @override
   String get video_work_content_rating => 'Content rating';
+  @override
+  String get video_all_videos_list_view => 'List view';
+  @override
+  String get video_all_videos_grid_view => 'Grid view';
 }
 
 // Path: <root>
@@ -113449,6 +113507,10 @@ class _StringsZhCn extends _StringsEn {
   String get video_work_countries => '国家';
   @override
   String get video_work_content_rating => '分级';
+  @override
+  String get video_all_videos_list_view => '列表视图';
+  @override
+  String get video_all_videos_grid_view => '网格视图';
 }
 
 // Path: <root>
@@ -120547,6 +120609,10 @@ class _StringsZhHk extends _StringsEn {
   String get video_work_countries => 'Countries';
   @override
   String get video_work_content_rating => 'Content rating';
+  @override
+  String get video_all_videos_list_view => 'List view';
+  @override
+  String get video_all_videos_grid_view => 'Grid view';
 }
 
 /// Flat map(s) containing all translations.
@@ -127058,6 +127124,10 @@ extension on _StringsEn {
         return 'Countries';
       case 'video_work_content_rating':
         return 'Content rating';
+      case 'video_all_videos_list_view':
+        return 'List view';
+      case 'video_all_videos_grid_view':
+        return 'Grid view';
       default:
         return null;
     }
@@ -133567,6 +133637,10 @@ extension on _StringsAr {
         return 'Countries';
       case 'video_work_content_rating':
         return 'Content rating';
+      case 'video_all_videos_list_view':
+        return 'List view';
+      case 'video_all_videos_grid_view':
+        return 'Grid view';
       default:
         return null;
     }
@@ -140098,6 +140172,10 @@ extension on _StringsDe {
         return 'Countries';
       case 'video_work_content_rating':
         return 'Content rating';
+      case 'video_all_videos_list_view':
+        return 'List view';
+      case 'video_all_videos_grid_view':
+        return 'Grid view';
       default:
         return null;
     }
@@ -146628,6 +146706,10 @@ extension on _StringsEs {
         return 'Countries';
       case 'video_work_content_rating':
         return 'Content rating';
+      case 'video_all_videos_list_view':
+        return 'List view';
+      case 'video_all_videos_grid_view':
+        return 'Grid view';
       default:
         return null;
     }
@@ -153164,6 +153246,10 @@ extension on _StringsFr {
         return 'Countries';
       case 'video_work_content_rating':
         return 'Content rating';
+      case 'video_all_videos_list_view':
+        return 'List view';
+      case 'video_all_videos_grid_view':
+        return 'Grid view';
       default:
         return null;
     }
@@ -159682,6 +159768,10 @@ extension on _StringsId {
         return 'Countries';
       case 'video_work_content_rating':
         return 'Content rating';
+      case 'video_all_videos_list_view':
+        return 'List view';
+      case 'video_all_videos_grid_view':
+        return 'Grid view';
       default:
         return null;
     }
@@ -166214,6 +166304,10 @@ extension on _StringsIt {
         return 'Countries';
       case 'video_work_content_rating':
         return 'Content rating';
+      case 'video_all_videos_list_view':
+        return 'List view';
+      case 'video_all_videos_grid_view':
+        return 'Grid view';
       default:
         return null;
     }
@@ -172708,6 +172802,10 @@ extension on _StringsJa {
         return 'Countries';
       case 'video_work_content_rating':
         return 'Content rating';
+      case 'video_all_videos_list_view':
+        return 'List view';
+      case 'video_all_videos_grid_view':
+        return 'Grid view';
       default:
         return null;
     }
@@ -179206,6 +179304,10 @@ extension on _StringsKo {
         return 'Countries';
       case 'video_work_content_rating':
         return 'Content rating';
+      case 'video_all_videos_list_view':
+        return 'List view';
+      case 'video_all_videos_grid_view':
+        return 'Grid view';
       default:
         return null;
     }
@@ -185732,6 +185834,10 @@ extension on _StringsNl {
         return 'Countries';
       case 'video_work_content_rating':
         return 'Content rating';
+      case 'video_all_videos_list_view':
+        return 'List view';
+      case 'video_all_videos_grid_view':
+        return 'Grid view';
       default:
         return null;
     }
@@ -192255,6 +192361,10 @@ extension on _StringsPtBr {
         return 'Countries';
       case 'video_work_content_rating':
         return 'Content rating';
+      case 'video_all_videos_list_view':
+        return 'List view';
+      case 'video_all_videos_grid_view':
+        return 'Grid view';
       default:
         return null;
     }
@@ -198783,6 +198893,10 @@ extension on _StringsRu {
         return 'Countries';
       case 'video_work_content_rating':
         return 'Content rating';
+      case 'video_all_videos_list_view':
+        return 'List view';
+      case 'video_all_videos_grid_view':
+        return 'Grid view';
       default:
         return null;
     }
@@ -205294,6 +205408,10 @@ extension on _StringsTh {
         return 'Countries';
       case 'video_work_content_rating':
         return 'Content rating';
+      case 'video_all_videos_list_view':
+        return 'List view';
+      case 'video_all_videos_grid_view':
+        return 'Grid view';
       default:
         return null;
     }
@@ -211814,6 +211932,10 @@ extension on _StringsTr {
         return 'Countries';
       case 'video_work_content_rating':
         return 'Content rating';
+      case 'video_all_videos_list_view':
+        return 'List view';
+      case 'video_all_videos_grid_view':
+        return 'Grid view';
       default:
         return null;
     }
@@ -218330,6 +218452,10 @@ extension on _StringsVi {
         return 'Countries';
       case 'video_work_content_rating':
         return 'Content rating';
+      case 'video_all_videos_list_view':
+        return 'List view';
+      case 'video_all_videos_grid_view':
+        return 'Grid view';
       default:
         return null;
     }
@@ -224792,6 +224918,10 @@ extension on _StringsZhCn {
         return '国家';
       case 'video_work_content_rating':
         return '分级';
+      case 'video_all_videos_list_view':
+        return '列表视图';
+      case 'video_all_videos_grid_view':
+        return '网格视图';
       default:
         return null;
     }
@@ -231281,6 +231411,10 @@ extension on _StringsZhHk {
         return 'Countries';
       case 'video_work_content_rating':
         return 'Content rating';
+      case 'video_all_videos_list_view':
+        return 'List view';
+      case 'video_all_videos_grid_view':
+        return 'Grid view';
       default:
         return null;
     }
