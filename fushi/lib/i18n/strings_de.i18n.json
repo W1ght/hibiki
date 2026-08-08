@@ -3153,5 +3153,11 @@
   "migration_import_nothing": "No migration data found in the transfer folder.",
   "migration_uninstall_prompt": "Migration finished. Uninstall the old Hibiki app?",
   "migration_uninstall_button": "Uninstall Hibiki",
-  "migration_uninstall_still_installed": "Hibiki is still installed. You can uninstall it any time."
+  "migration_uninstall_still_installed": "Hibiki is still installed. You can uninstall it any time.",
+  "video_scrape_diagnostic_export": "Export scrape diagnostics",
+  "video_scrape_diagnostic_confirm_title": "Export scrape diagnostics?",
+  "video_scrape_diagnostic_saved": "Diagnostic package saved",
+  "video_scrape_diagnostic_failed": "Could not export diagnostic package: $reason",
+  "video_scrape_diagnostic_share_subject": "Fushi video scrape diagnostics",
+  "video_scrape_diagnostic_confirm_body": "The package includes relative file and folder names, scrape summaries, and original NFO contents. It does not add videos, subtitles, images, absolute paths, app configuration, or app credentials. Original NFO files are preserved unchanged and may contain personal information or secrets; review the package before sharing publicly."
 }
