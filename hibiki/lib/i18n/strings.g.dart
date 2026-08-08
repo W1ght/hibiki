@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 52870 (3110 per locale)
+/// Strings: 53567 (3151 per locale)
 ///
-/// Built on 2026-08-08 at 08:33 UTC
+/// Built on 2026-08-08 at 11:06 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -4186,6 +4186,69 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get selection_copy_empty => 'No text selected.';
   String get video_library_empty_source_hint =>
       'Add a video folder from Sources to build your library';
+  String get video_source_scrape_action => 'Scrape this source';
+  String get video_source_scrape_settings => 'Source scrape settings';
+  String get video_source_scrape_provider => 'Primary metadata source';
+  String get video_source_scrape_provider_inherit => 'Use global default';
+  String get video_source_scrape_auto_after_scan => 'Scrape after scanning';
+  String get video_source_scrape_auto_after_scan_hint =>
+      'Run metadata scraping automatically after this source is scanned';
+  String get video_source_scrape_write_nfo => 'Write NFO files';
+  String get video_source_scrape_write_images => 'Write image files';
+  String get video_source_scrape_use_fanart => 'Use Fanart images';
+  String video_source_scrape_progress(
+          {required Object phase,
+          required Object current,
+          required Object total}) =>
+      '${phase} · ${current}/${total}';
+  String video_source_scrape_last_summary(
+          {required Object status,
+          required Object succeeded,
+          required Object pending,
+          required Object failed}) =>
+      'Last scrape (${status}): ${succeeded} succeeded, ${pending} pending, ${failed} failed';
+  String get video_source_scrape_phase_planning => 'Planning';
+  String get video_source_scrape_phase_recognizing => 'Matching';
+  String get video_source_scrape_phase_fetching => 'Fetching metadata';
+  String get video_source_scrape_phase_applying => 'Saving metadata';
+  String get video_source_scrape_phase_writing_sidecars => 'Writing sidecars';
+  String get video_source_scrape_status_interrupted => 'Interrupted';
+  String get video_source_scrape_global_provider => 'Default metadata source';
+  String get video_source_scrape_global_provider_hint =>
+      'Used by video sources that inherit the global setting';
+  String get video_source_scrape_fanart_key => 'Fanart API key';
+  String get video_source_scrape_fanart_key_hint =>
+      'Optional key used to fill missing artwork from Fanart';
+  String get video_source_scrape_bangumi_token => 'Bangumi access token';
+  String get video_source_scrape_bangumi_token_hint =>
+      'Optional access token for the official Bangumi API v0';
+  String get video_source_scrape_douban_endpoint =>
+      'Authorized Douban API endpoint';
+  String get video_source_scrape_douban_endpoint_hint =>
+      'Douban is unavailable unless both an authorized endpoint and token are configured';
+  String get video_source_scrape_douban_token => 'Authorized Douban API token';
+  String get video_source_scrape_douban_token_hint =>
+      'Douban is unavailable unless both an authorized endpoint and token are configured';
+  String get video_source_scrape_locale => 'Metadata language';
+  String get video_source_scrape_locale_hint =>
+      'Preferred language for titles, summaries and images';
+  String get video_source_scrape_confirmation_title => 'Confirm metadata match';
+  String get video_source_scrape_confirmation_hint =>
+      'Multiple exact matches were found. Choose the correct work to save its provider binding.';
+  String get video_source_scrape_confirmation_skip => 'Skip this work';
+  String get video_source_scrape_nfo_policy => 'NFO write policy';
+  String get video_source_scrape_image_policy => 'Image write policy';
+  String get video_source_scrape_policy_skip => 'Do not write';
+  String get video_source_scrape_policy_missing_only => 'Only when missing';
+  String get video_source_scrape_policy_overwrite => 'Update Hibiki files';
+  String get video_source_scrape_external_overwrite =>
+      'Allow protected sidecar overwrite';
+  String get video_source_scrape_external_overwrite_hint =>
+      'Third-party or user-modified files remain protected until you confirm each manual scrape batch again.';
+  String get video_source_scrape_external_overwrite_confirm_title =>
+      'Overwrite protected sidecars?';
+  String get video_source_scrape_external_overwrite_confirm_body =>
+      'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
 }
 
 // Path: <root>
@@ -11331,6 +11394,110 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_library_empty_source_hint =>
       'Add a video folder from Sources to build your library';
+  @override
+  String get video_source_scrape_action => 'Scrape this source';
+  @override
+  String get video_source_scrape_settings => 'Source scrape settings';
+  @override
+  String get video_source_scrape_provider => 'Primary metadata source';
+  @override
+  String get video_source_scrape_provider_inherit => 'Use global default';
+  @override
+  String get video_source_scrape_auto_after_scan => 'Scrape after scanning';
+  @override
+  String get video_source_scrape_auto_after_scan_hint =>
+      'Run metadata scraping automatically after this source is scanned';
+  @override
+  String get video_source_scrape_write_nfo => 'Write NFO files';
+  @override
+  String get video_source_scrape_write_images => 'Write image files';
+  @override
+  String get video_source_scrape_use_fanart => 'Use Fanart images';
+  @override
+  String video_source_scrape_progress(
+          {required Object phase,
+          required Object current,
+          required Object total}) =>
+      '${phase} · ${current}/${total}';
+  @override
+  String video_source_scrape_last_summary(
+          {required Object status,
+          required Object succeeded,
+          required Object pending,
+          required Object failed}) =>
+      'Last scrape (${status}): ${succeeded} succeeded, ${pending} pending, ${failed} failed';
+  @override
+  String get video_source_scrape_phase_planning => 'Planning';
+  @override
+  String get video_source_scrape_phase_recognizing => 'Matching';
+  @override
+  String get video_source_scrape_phase_fetching => 'Fetching metadata';
+  @override
+  String get video_source_scrape_phase_applying => 'Saving metadata';
+  @override
+  String get video_source_scrape_phase_writing_sidecars => 'Writing sidecars';
+  @override
+  String get video_source_scrape_status_interrupted => 'Interrupted';
+  @override
+  String get video_source_scrape_global_provider => 'Default metadata source';
+  @override
+  String get video_source_scrape_global_provider_hint =>
+      'Used by video sources that inherit the global setting';
+  @override
+  String get video_source_scrape_fanart_key => 'Fanart API key';
+  @override
+  String get video_source_scrape_fanart_key_hint =>
+      'Optional key used to fill missing artwork from Fanart';
+  @override
+  String get video_source_scrape_bangumi_token => 'Bangumi access token';
+  @override
+  String get video_source_scrape_bangumi_token_hint =>
+      'Optional access token for the official Bangumi API v0';
+  @override
+  String get video_source_scrape_douban_endpoint =>
+      'Authorized Douban API endpoint';
+  @override
+  String get video_source_scrape_douban_endpoint_hint =>
+      'Douban is unavailable unless both an authorized endpoint and token are configured';
+  @override
+  String get video_source_scrape_douban_token => 'Authorized Douban API token';
+  @override
+  String get video_source_scrape_douban_token_hint =>
+      'Douban is unavailable unless both an authorized endpoint and token are configured';
+  @override
+  String get video_source_scrape_locale => 'Metadata language';
+  @override
+  String get video_source_scrape_locale_hint =>
+      'Preferred language for titles, summaries and images';
+  @override
+  String get video_source_scrape_confirmation_title => 'Confirm metadata match';
+  @override
+  String get video_source_scrape_confirmation_hint =>
+      'Multiple exact matches were found. Choose the correct work to save its provider binding.';
+  @override
+  String get video_source_scrape_confirmation_skip => 'Skip this work';
+  @override
+  String get video_source_scrape_nfo_policy => 'NFO write policy';
+  @override
+  String get video_source_scrape_image_policy => 'Image write policy';
+  @override
+  String get video_source_scrape_policy_skip => 'Do not write';
+  @override
+  String get video_source_scrape_policy_missing_only => 'Only when missing';
+  @override
+  String get video_source_scrape_policy_overwrite => 'Update Hibiki files';
+  @override
+  String get video_source_scrape_external_overwrite =>
+      'Allow protected sidecar overwrite';
+  @override
+  String get video_source_scrape_external_overwrite_hint =>
+      'Third-party or user-modified files remain protected until you confirm each manual scrape batch again.';
+  @override
+  String get video_source_scrape_external_overwrite_confirm_title =>
+      'Overwrite protected sidecars?';
+  @override
+  String get video_source_scrape_external_overwrite_confirm_body =>
+      'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
 }
 
 // Path: <root>
@@ -18543,6 +18710,110 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_library_empty_source_hint =>
       'Add a video folder from Sources to build your library';
+  @override
+  String get video_source_scrape_action => 'Scrape this source';
+  @override
+  String get video_source_scrape_settings => 'Source scrape settings';
+  @override
+  String get video_source_scrape_provider => 'Primary metadata source';
+  @override
+  String get video_source_scrape_provider_inherit => 'Use global default';
+  @override
+  String get video_source_scrape_auto_after_scan => 'Scrape after scanning';
+  @override
+  String get video_source_scrape_auto_after_scan_hint =>
+      'Run metadata scraping automatically after this source is scanned';
+  @override
+  String get video_source_scrape_write_nfo => 'Write NFO files';
+  @override
+  String get video_source_scrape_write_images => 'Write image files';
+  @override
+  String get video_source_scrape_use_fanart => 'Use Fanart images';
+  @override
+  String video_source_scrape_progress(
+          {required Object phase,
+          required Object current,
+          required Object total}) =>
+      '${phase} · ${current}/${total}';
+  @override
+  String video_source_scrape_last_summary(
+          {required Object status,
+          required Object succeeded,
+          required Object pending,
+          required Object failed}) =>
+      'Last scrape (${status}): ${succeeded} succeeded, ${pending} pending, ${failed} failed';
+  @override
+  String get video_source_scrape_phase_planning => 'Planning';
+  @override
+  String get video_source_scrape_phase_recognizing => 'Matching';
+  @override
+  String get video_source_scrape_phase_fetching => 'Fetching metadata';
+  @override
+  String get video_source_scrape_phase_applying => 'Saving metadata';
+  @override
+  String get video_source_scrape_phase_writing_sidecars => 'Writing sidecars';
+  @override
+  String get video_source_scrape_status_interrupted => 'Interrupted';
+  @override
+  String get video_source_scrape_global_provider => 'Default metadata source';
+  @override
+  String get video_source_scrape_global_provider_hint =>
+      'Used by video sources that inherit the global setting';
+  @override
+  String get video_source_scrape_fanart_key => 'Fanart API key';
+  @override
+  String get video_source_scrape_fanart_key_hint =>
+      'Optional key used to fill missing artwork from Fanart';
+  @override
+  String get video_source_scrape_bangumi_token => 'Bangumi access token';
+  @override
+  String get video_source_scrape_bangumi_token_hint =>
+      'Optional access token for the official Bangumi API v0';
+  @override
+  String get video_source_scrape_douban_endpoint =>
+      'Authorized Douban API endpoint';
+  @override
+  String get video_source_scrape_douban_endpoint_hint =>
+      'Douban is unavailable unless both an authorized endpoint and token are configured';
+  @override
+  String get video_source_scrape_douban_token => 'Authorized Douban API token';
+  @override
+  String get video_source_scrape_douban_token_hint =>
+      'Douban is unavailable unless both an authorized endpoint and token are configured';
+  @override
+  String get video_source_scrape_locale => 'Metadata language';
+  @override
+  String get video_source_scrape_locale_hint =>
+      'Preferred language for titles, summaries and images';
+  @override
+  String get video_source_scrape_confirmation_title => 'Confirm metadata match';
+  @override
+  String get video_source_scrape_confirmation_hint =>
+      'Multiple exact matches were found. Choose the correct work to save its provider binding.';
+  @override
+  String get video_source_scrape_confirmation_skip => 'Skip this work';
+  @override
+  String get video_source_scrape_nfo_policy => 'NFO write policy';
+  @override
+  String get video_source_scrape_image_policy => 'Image write policy';
+  @override
+  String get video_source_scrape_policy_skip => 'Do not write';
+  @override
+  String get video_source_scrape_policy_missing_only => 'Only when missing';
+  @override
+  String get video_source_scrape_policy_overwrite => 'Update Hibiki files';
+  @override
+  String get video_source_scrape_external_overwrite =>
+      'Allow protected sidecar overwrite';
+  @override
+  String get video_source_scrape_external_overwrite_hint =>
+      'Third-party or user-modified files remain protected until you confirm each manual scrape batch again.';
+  @override
+  String get video_source_scrape_external_overwrite_confirm_title =>
+      'Overwrite protected sidecars?';
+  @override
+  String get video_source_scrape_external_overwrite_confirm_body =>
+      'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
 }
 
 // Path: <root>
@@ -25770,6 +26041,110 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_library_empty_source_hint =>
       'Add a video folder from Sources to build your library';
+  @override
+  String get video_source_scrape_action => 'Scrape this source';
+  @override
+  String get video_source_scrape_settings => 'Source scrape settings';
+  @override
+  String get video_source_scrape_provider => 'Primary metadata source';
+  @override
+  String get video_source_scrape_provider_inherit => 'Use global default';
+  @override
+  String get video_source_scrape_auto_after_scan => 'Scrape after scanning';
+  @override
+  String get video_source_scrape_auto_after_scan_hint =>
+      'Run metadata scraping automatically after this source is scanned';
+  @override
+  String get video_source_scrape_write_nfo => 'Write NFO files';
+  @override
+  String get video_source_scrape_write_images => 'Write image files';
+  @override
+  String get video_source_scrape_use_fanart => 'Use Fanart images';
+  @override
+  String video_source_scrape_progress(
+          {required Object phase,
+          required Object current,
+          required Object total}) =>
+      '${phase} · ${current}/${total}';
+  @override
+  String video_source_scrape_last_summary(
+          {required Object status,
+          required Object succeeded,
+          required Object pending,
+          required Object failed}) =>
+      'Last scrape (${status}): ${succeeded} succeeded, ${pending} pending, ${failed} failed';
+  @override
+  String get video_source_scrape_phase_planning => 'Planning';
+  @override
+  String get video_source_scrape_phase_recognizing => 'Matching';
+  @override
+  String get video_source_scrape_phase_fetching => 'Fetching metadata';
+  @override
+  String get video_source_scrape_phase_applying => 'Saving metadata';
+  @override
+  String get video_source_scrape_phase_writing_sidecars => 'Writing sidecars';
+  @override
+  String get video_source_scrape_status_interrupted => 'Interrupted';
+  @override
+  String get video_source_scrape_global_provider => 'Default metadata source';
+  @override
+  String get video_source_scrape_global_provider_hint =>
+      'Used by video sources that inherit the global setting';
+  @override
+  String get video_source_scrape_fanart_key => 'Fanart API key';
+  @override
+  String get video_source_scrape_fanart_key_hint =>
+      'Optional key used to fill missing artwork from Fanart';
+  @override
+  String get video_source_scrape_bangumi_token => 'Bangumi access token';
+  @override
+  String get video_source_scrape_bangumi_token_hint =>
+      'Optional access token for the official Bangumi API v0';
+  @override
+  String get video_source_scrape_douban_endpoint =>
+      'Authorized Douban API endpoint';
+  @override
+  String get video_source_scrape_douban_endpoint_hint =>
+      'Douban is unavailable unless both an authorized endpoint and token are configured';
+  @override
+  String get video_source_scrape_douban_token => 'Authorized Douban API token';
+  @override
+  String get video_source_scrape_douban_token_hint =>
+      'Douban is unavailable unless both an authorized endpoint and token are configured';
+  @override
+  String get video_source_scrape_locale => 'Metadata language';
+  @override
+  String get video_source_scrape_locale_hint =>
+      'Preferred language for titles, summaries and images';
+  @override
+  String get video_source_scrape_confirmation_title => 'Confirm metadata match';
+  @override
+  String get video_source_scrape_confirmation_hint =>
+      'Multiple exact matches were found. Choose the correct work to save its provider binding.';
+  @override
+  String get video_source_scrape_confirmation_skip => 'Skip this work';
+  @override
+  String get video_source_scrape_nfo_policy => 'NFO write policy';
+  @override
+  String get video_source_scrape_image_policy => 'Image write policy';
+  @override
+  String get video_source_scrape_policy_skip => 'Do not write';
+  @override
+  String get video_source_scrape_policy_missing_only => 'Only when missing';
+  @override
+  String get video_source_scrape_policy_overwrite => 'Update Hibiki files';
+  @override
+  String get video_source_scrape_external_overwrite =>
+      'Allow protected sidecar overwrite';
+  @override
+  String get video_source_scrape_external_overwrite_hint =>
+      'Third-party or user-modified files remain protected until you confirm each manual scrape batch again.';
+  @override
+  String get video_source_scrape_external_overwrite_confirm_title =>
+      'Overwrite protected sidecars?';
+  @override
+  String get video_source_scrape_external_overwrite_confirm_body =>
+      'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
 }
 
 // Path: <root>
@@ -33009,6 +33384,110 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_library_empty_source_hint =>
       'Add a video folder from Sources to build your library';
+  @override
+  String get video_source_scrape_action => 'Scrape this source';
+  @override
+  String get video_source_scrape_settings => 'Source scrape settings';
+  @override
+  String get video_source_scrape_provider => 'Primary metadata source';
+  @override
+  String get video_source_scrape_provider_inherit => 'Use global default';
+  @override
+  String get video_source_scrape_auto_after_scan => 'Scrape after scanning';
+  @override
+  String get video_source_scrape_auto_after_scan_hint =>
+      'Run metadata scraping automatically after this source is scanned';
+  @override
+  String get video_source_scrape_write_nfo => 'Write NFO files';
+  @override
+  String get video_source_scrape_write_images => 'Write image files';
+  @override
+  String get video_source_scrape_use_fanart => 'Use Fanart images';
+  @override
+  String video_source_scrape_progress(
+          {required Object phase,
+          required Object current,
+          required Object total}) =>
+      '${phase} · ${current}/${total}';
+  @override
+  String video_source_scrape_last_summary(
+          {required Object status,
+          required Object succeeded,
+          required Object pending,
+          required Object failed}) =>
+      'Last scrape (${status}): ${succeeded} succeeded, ${pending} pending, ${failed} failed';
+  @override
+  String get video_source_scrape_phase_planning => 'Planning';
+  @override
+  String get video_source_scrape_phase_recognizing => 'Matching';
+  @override
+  String get video_source_scrape_phase_fetching => 'Fetching metadata';
+  @override
+  String get video_source_scrape_phase_applying => 'Saving metadata';
+  @override
+  String get video_source_scrape_phase_writing_sidecars => 'Writing sidecars';
+  @override
+  String get video_source_scrape_status_interrupted => 'Interrupted';
+  @override
+  String get video_source_scrape_global_provider => 'Default metadata source';
+  @override
+  String get video_source_scrape_global_provider_hint =>
+      'Used by video sources that inherit the global setting';
+  @override
+  String get video_source_scrape_fanart_key => 'Fanart API key';
+  @override
+  String get video_source_scrape_fanart_key_hint =>
+      'Optional key used to fill missing artwork from Fanart';
+  @override
+  String get video_source_scrape_bangumi_token => 'Bangumi access token';
+  @override
+  String get video_source_scrape_bangumi_token_hint =>
+      'Optional access token for the official Bangumi API v0';
+  @override
+  String get video_source_scrape_douban_endpoint =>
+      'Authorized Douban API endpoint';
+  @override
+  String get video_source_scrape_douban_endpoint_hint =>
+      'Douban is unavailable unless both an authorized endpoint and token are configured';
+  @override
+  String get video_source_scrape_douban_token => 'Authorized Douban API token';
+  @override
+  String get video_source_scrape_douban_token_hint =>
+      'Douban is unavailable unless both an authorized endpoint and token are configured';
+  @override
+  String get video_source_scrape_locale => 'Metadata language';
+  @override
+  String get video_source_scrape_locale_hint =>
+      'Preferred language for titles, summaries and images';
+  @override
+  String get video_source_scrape_confirmation_title => 'Confirm metadata match';
+  @override
+  String get video_source_scrape_confirmation_hint =>
+      'Multiple exact matches were found. Choose the correct work to save its provider binding.';
+  @override
+  String get video_source_scrape_confirmation_skip => 'Skip this work';
+  @override
+  String get video_source_scrape_nfo_policy => 'NFO write policy';
+  @override
+  String get video_source_scrape_image_policy => 'Image write policy';
+  @override
+  String get video_source_scrape_policy_skip => 'Do not write';
+  @override
+  String get video_source_scrape_policy_missing_only => 'Only when missing';
+  @override
+  String get video_source_scrape_policy_overwrite => 'Update Hibiki files';
+  @override
+  String get video_source_scrape_external_overwrite =>
+      'Allow protected sidecar overwrite';
+  @override
+  String get video_source_scrape_external_overwrite_hint =>
+      'Third-party or user-modified files remain protected until you confirm each manual scrape batch again.';
+  @override
+  String get video_source_scrape_external_overwrite_confirm_title =>
+      'Overwrite protected sidecars?';
+  @override
+  String get video_source_scrape_external_overwrite_confirm_body =>
+      'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
 }
 
 // Path: <root>
@@ -40177,6 +40656,110 @@ class _StringsId extends _StringsEn {
   @override
   String get video_library_empty_source_hint =>
       'Add a video folder from Sources to build your library';
+  @override
+  String get video_source_scrape_action => 'Scrape this source';
+  @override
+  String get video_source_scrape_settings => 'Source scrape settings';
+  @override
+  String get video_source_scrape_provider => 'Primary metadata source';
+  @override
+  String get video_source_scrape_provider_inherit => 'Use global default';
+  @override
+  String get video_source_scrape_auto_after_scan => 'Scrape after scanning';
+  @override
+  String get video_source_scrape_auto_after_scan_hint =>
+      'Run metadata scraping automatically after this source is scanned';
+  @override
+  String get video_source_scrape_write_nfo => 'Write NFO files';
+  @override
+  String get video_source_scrape_write_images => 'Write image files';
+  @override
+  String get video_source_scrape_use_fanart => 'Use Fanart images';
+  @override
+  String video_source_scrape_progress(
+          {required Object phase,
+          required Object current,
+          required Object total}) =>
+      '${phase} · ${current}/${total}';
+  @override
+  String video_source_scrape_last_summary(
+          {required Object status,
+          required Object succeeded,
+          required Object pending,
+          required Object failed}) =>
+      'Last scrape (${status}): ${succeeded} succeeded, ${pending} pending, ${failed} failed';
+  @override
+  String get video_source_scrape_phase_planning => 'Planning';
+  @override
+  String get video_source_scrape_phase_recognizing => 'Matching';
+  @override
+  String get video_source_scrape_phase_fetching => 'Fetching metadata';
+  @override
+  String get video_source_scrape_phase_applying => 'Saving metadata';
+  @override
+  String get video_source_scrape_phase_writing_sidecars => 'Writing sidecars';
+  @override
+  String get video_source_scrape_status_interrupted => 'Interrupted';
+  @override
+  String get video_source_scrape_global_provider => 'Default metadata source';
+  @override
+  String get video_source_scrape_global_provider_hint =>
+      'Used by video sources that inherit the global setting';
+  @override
+  String get video_source_scrape_fanart_key => 'Fanart API key';
+  @override
+  String get video_source_scrape_fanart_key_hint =>
+      'Optional key used to fill missing artwork from Fanart';
+  @override
+  String get video_source_scrape_bangumi_token => 'Bangumi access token';
+  @override
+  String get video_source_scrape_bangumi_token_hint =>
+      'Optional access token for the official Bangumi API v0';
+  @override
+  String get video_source_scrape_douban_endpoint =>
+      'Authorized Douban API endpoint';
+  @override
+  String get video_source_scrape_douban_endpoint_hint =>
+      'Douban is unavailable unless both an authorized endpoint and token are configured';
+  @override
+  String get video_source_scrape_douban_token => 'Authorized Douban API token';
+  @override
+  String get video_source_scrape_douban_token_hint =>
+      'Douban is unavailable unless both an authorized endpoint and token are configured';
+  @override
+  String get video_source_scrape_locale => 'Metadata language';
+  @override
+  String get video_source_scrape_locale_hint =>
+      'Preferred language for titles, summaries and images';
+  @override
+  String get video_source_scrape_confirmation_title => 'Confirm metadata match';
+  @override
+  String get video_source_scrape_confirmation_hint =>
+      'Multiple exact matches were found. Choose the correct work to save its provider binding.';
+  @override
+  String get video_source_scrape_confirmation_skip => 'Skip this work';
+  @override
+  String get video_source_scrape_nfo_policy => 'NFO write policy';
+  @override
+  String get video_source_scrape_image_policy => 'Image write policy';
+  @override
+  String get video_source_scrape_policy_skip => 'Do not write';
+  @override
+  String get video_source_scrape_policy_missing_only => 'Only when missing';
+  @override
+  String get video_source_scrape_policy_overwrite => 'Update Hibiki files';
+  @override
+  String get video_source_scrape_external_overwrite =>
+      'Allow protected sidecar overwrite';
+  @override
+  String get video_source_scrape_external_overwrite_hint =>
+      'Third-party or user-modified files remain protected until you confirm each manual scrape batch again.';
+  @override
+  String get video_source_scrape_external_overwrite_confirm_title =>
+      'Overwrite protected sidecars?';
+  @override
+  String get video_source_scrape_external_overwrite_confirm_body =>
+      'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
 }
 
 // Path: <root>
@@ -47391,6 +47974,110 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_library_empty_source_hint =>
       'Add a video folder from Sources to build your library';
+  @override
+  String get video_source_scrape_action => 'Scrape this source';
+  @override
+  String get video_source_scrape_settings => 'Source scrape settings';
+  @override
+  String get video_source_scrape_provider => 'Primary metadata source';
+  @override
+  String get video_source_scrape_provider_inherit => 'Use global default';
+  @override
+  String get video_source_scrape_auto_after_scan => 'Scrape after scanning';
+  @override
+  String get video_source_scrape_auto_after_scan_hint =>
+      'Run metadata scraping automatically after this source is scanned';
+  @override
+  String get video_source_scrape_write_nfo => 'Write NFO files';
+  @override
+  String get video_source_scrape_write_images => 'Write image files';
+  @override
+  String get video_source_scrape_use_fanart => 'Use Fanart images';
+  @override
+  String video_source_scrape_progress(
+          {required Object phase,
+          required Object current,
+          required Object total}) =>
+      '${phase} · ${current}/${total}';
+  @override
+  String video_source_scrape_last_summary(
+          {required Object status,
+          required Object succeeded,
+          required Object pending,
+          required Object failed}) =>
+      'Last scrape (${status}): ${succeeded} succeeded, ${pending} pending, ${failed} failed';
+  @override
+  String get video_source_scrape_phase_planning => 'Planning';
+  @override
+  String get video_source_scrape_phase_recognizing => 'Matching';
+  @override
+  String get video_source_scrape_phase_fetching => 'Fetching metadata';
+  @override
+  String get video_source_scrape_phase_applying => 'Saving metadata';
+  @override
+  String get video_source_scrape_phase_writing_sidecars => 'Writing sidecars';
+  @override
+  String get video_source_scrape_status_interrupted => 'Interrupted';
+  @override
+  String get video_source_scrape_global_provider => 'Default metadata source';
+  @override
+  String get video_source_scrape_global_provider_hint =>
+      'Used by video sources that inherit the global setting';
+  @override
+  String get video_source_scrape_fanart_key => 'Fanart API key';
+  @override
+  String get video_source_scrape_fanart_key_hint =>
+      'Optional key used to fill missing artwork from Fanart';
+  @override
+  String get video_source_scrape_bangumi_token => 'Bangumi access token';
+  @override
+  String get video_source_scrape_bangumi_token_hint =>
+      'Optional access token for the official Bangumi API v0';
+  @override
+  String get video_source_scrape_douban_endpoint =>
+      'Authorized Douban API endpoint';
+  @override
+  String get video_source_scrape_douban_endpoint_hint =>
+      'Douban is unavailable unless both an authorized endpoint and token are configured';
+  @override
+  String get video_source_scrape_douban_token => 'Authorized Douban API token';
+  @override
+  String get video_source_scrape_douban_token_hint =>
+      'Douban is unavailable unless both an authorized endpoint and token are configured';
+  @override
+  String get video_source_scrape_locale => 'Metadata language';
+  @override
+  String get video_source_scrape_locale_hint =>
+      'Preferred language for titles, summaries and images';
+  @override
+  String get video_source_scrape_confirmation_title => 'Confirm metadata match';
+  @override
+  String get video_source_scrape_confirmation_hint =>
+      'Multiple exact matches were found. Choose the correct work to save its provider binding.';
+  @override
+  String get video_source_scrape_confirmation_skip => 'Skip this work';
+  @override
+  String get video_source_scrape_nfo_policy => 'NFO write policy';
+  @override
+  String get video_source_scrape_image_policy => 'Image write policy';
+  @override
+  String get video_source_scrape_policy_skip => 'Do not write';
+  @override
+  String get video_source_scrape_policy_missing_only => 'Only when missing';
+  @override
+  String get video_source_scrape_policy_overwrite => 'Update Hibiki files';
+  @override
+  String get video_source_scrape_external_overwrite =>
+      'Allow protected sidecar overwrite';
+  @override
+  String get video_source_scrape_external_overwrite_hint =>
+      'Third-party or user-modified files remain protected until you confirm each manual scrape batch again.';
+  @override
+  String get video_source_scrape_external_overwrite_confirm_title =>
+      'Overwrite protected sidecars?';
+  @override
+  String get video_source_scrape_external_overwrite_confirm_body =>
+      'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
 }
 
 // Path: <root>
@@ -54422,6 +55109,110 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_library_empty_source_hint =>
       'Add a video folder from Sources to build your library';
+  @override
+  String get video_source_scrape_action => 'Scrape this source';
+  @override
+  String get video_source_scrape_settings => 'Source scrape settings';
+  @override
+  String get video_source_scrape_provider => 'Primary metadata source';
+  @override
+  String get video_source_scrape_provider_inherit => 'Use global default';
+  @override
+  String get video_source_scrape_auto_after_scan => 'Scrape after scanning';
+  @override
+  String get video_source_scrape_auto_after_scan_hint =>
+      'Run metadata scraping automatically after this source is scanned';
+  @override
+  String get video_source_scrape_write_nfo => 'Write NFO files';
+  @override
+  String get video_source_scrape_write_images => 'Write image files';
+  @override
+  String get video_source_scrape_use_fanart => 'Use Fanart images';
+  @override
+  String video_source_scrape_progress(
+          {required Object phase,
+          required Object current,
+          required Object total}) =>
+      '${phase} · ${current}/${total}';
+  @override
+  String video_source_scrape_last_summary(
+          {required Object status,
+          required Object succeeded,
+          required Object pending,
+          required Object failed}) =>
+      'Last scrape (${status}): ${succeeded} succeeded, ${pending} pending, ${failed} failed';
+  @override
+  String get video_source_scrape_phase_planning => 'Planning';
+  @override
+  String get video_source_scrape_phase_recognizing => 'Matching';
+  @override
+  String get video_source_scrape_phase_fetching => 'Fetching metadata';
+  @override
+  String get video_source_scrape_phase_applying => 'Saving metadata';
+  @override
+  String get video_source_scrape_phase_writing_sidecars => 'Writing sidecars';
+  @override
+  String get video_source_scrape_status_interrupted => 'Interrupted';
+  @override
+  String get video_source_scrape_global_provider => 'Default metadata source';
+  @override
+  String get video_source_scrape_global_provider_hint =>
+      'Used by video sources that inherit the global setting';
+  @override
+  String get video_source_scrape_fanart_key => 'Fanart API key';
+  @override
+  String get video_source_scrape_fanart_key_hint =>
+      'Optional key used to fill missing artwork from Fanart';
+  @override
+  String get video_source_scrape_bangumi_token => 'Bangumi access token';
+  @override
+  String get video_source_scrape_bangumi_token_hint =>
+      'Optional access token for the official Bangumi API v0';
+  @override
+  String get video_source_scrape_douban_endpoint =>
+      'Authorized Douban API endpoint';
+  @override
+  String get video_source_scrape_douban_endpoint_hint =>
+      'Douban is unavailable unless both an authorized endpoint and token are configured';
+  @override
+  String get video_source_scrape_douban_token => 'Authorized Douban API token';
+  @override
+  String get video_source_scrape_douban_token_hint =>
+      'Douban is unavailable unless both an authorized endpoint and token are configured';
+  @override
+  String get video_source_scrape_locale => 'Metadata language';
+  @override
+  String get video_source_scrape_locale_hint =>
+      'Preferred language for titles, summaries and images';
+  @override
+  String get video_source_scrape_confirmation_title => 'Confirm metadata match';
+  @override
+  String get video_source_scrape_confirmation_hint =>
+      'Multiple exact matches were found. Choose the correct work to save its provider binding.';
+  @override
+  String get video_source_scrape_confirmation_skip => 'Skip this work';
+  @override
+  String get video_source_scrape_nfo_policy => 'NFO write policy';
+  @override
+  String get video_source_scrape_image_policy => 'Image write policy';
+  @override
+  String get video_source_scrape_policy_skip => 'Do not write';
+  @override
+  String get video_source_scrape_policy_missing_only => 'Only when missing';
+  @override
+  String get video_source_scrape_policy_overwrite => 'Update Hibiki files';
+  @override
+  String get video_source_scrape_external_overwrite =>
+      'Allow protected sidecar overwrite';
+  @override
+  String get video_source_scrape_external_overwrite_hint =>
+      'Third-party or user-modified files remain protected until you confirm each manual scrape batch again.';
+  @override
+  String get video_source_scrape_external_overwrite_confirm_title =>
+      'Overwrite protected sidecars?';
+  @override
+  String get video_source_scrape_external_overwrite_confirm_body =>
+      'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
 }
 
 // Path: <root>
@@ -61455,6 +62246,110 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_library_empty_source_hint =>
       'Add a video folder from Sources to build your library';
+  @override
+  String get video_source_scrape_action => 'Scrape this source';
+  @override
+  String get video_source_scrape_settings => 'Source scrape settings';
+  @override
+  String get video_source_scrape_provider => 'Primary metadata source';
+  @override
+  String get video_source_scrape_provider_inherit => 'Use global default';
+  @override
+  String get video_source_scrape_auto_after_scan => 'Scrape after scanning';
+  @override
+  String get video_source_scrape_auto_after_scan_hint =>
+      'Run metadata scraping automatically after this source is scanned';
+  @override
+  String get video_source_scrape_write_nfo => 'Write NFO files';
+  @override
+  String get video_source_scrape_write_images => 'Write image files';
+  @override
+  String get video_source_scrape_use_fanart => 'Use Fanart images';
+  @override
+  String video_source_scrape_progress(
+          {required Object phase,
+          required Object current,
+          required Object total}) =>
+      '${phase} · ${current}/${total}';
+  @override
+  String video_source_scrape_last_summary(
+          {required Object status,
+          required Object succeeded,
+          required Object pending,
+          required Object failed}) =>
+      'Last scrape (${status}): ${succeeded} succeeded, ${pending} pending, ${failed} failed';
+  @override
+  String get video_source_scrape_phase_planning => 'Planning';
+  @override
+  String get video_source_scrape_phase_recognizing => 'Matching';
+  @override
+  String get video_source_scrape_phase_fetching => 'Fetching metadata';
+  @override
+  String get video_source_scrape_phase_applying => 'Saving metadata';
+  @override
+  String get video_source_scrape_phase_writing_sidecars => 'Writing sidecars';
+  @override
+  String get video_source_scrape_status_interrupted => 'Interrupted';
+  @override
+  String get video_source_scrape_global_provider => 'Default metadata source';
+  @override
+  String get video_source_scrape_global_provider_hint =>
+      'Used by video sources that inherit the global setting';
+  @override
+  String get video_source_scrape_fanart_key => 'Fanart API key';
+  @override
+  String get video_source_scrape_fanart_key_hint =>
+      'Optional key used to fill missing artwork from Fanart';
+  @override
+  String get video_source_scrape_bangumi_token => 'Bangumi access token';
+  @override
+  String get video_source_scrape_bangumi_token_hint =>
+      'Optional access token for the official Bangumi API v0';
+  @override
+  String get video_source_scrape_douban_endpoint =>
+      'Authorized Douban API endpoint';
+  @override
+  String get video_source_scrape_douban_endpoint_hint =>
+      'Douban is unavailable unless both an authorized endpoint and token are configured';
+  @override
+  String get video_source_scrape_douban_token => 'Authorized Douban API token';
+  @override
+  String get video_source_scrape_douban_token_hint =>
+      'Douban is unavailable unless both an authorized endpoint and token are configured';
+  @override
+  String get video_source_scrape_locale => 'Metadata language';
+  @override
+  String get video_source_scrape_locale_hint =>
+      'Preferred language for titles, summaries and images';
+  @override
+  String get video_source_scrape_confirmation_title => 'Confirm metadata match';
+  @override
+  String get video_source_scrape_confirmation_hint =>
+      'Multiple exact matches were found. Choose the correct work to save its provider binding.';
+  @override
+  String get video_source_scrape_confirmation_skip => 'Skip this work';
+  @override
+  String get video_source_scrape_nfo_policy => 'NFO write policy';
+  @override
+  String get video_source_scrape_image_policy => 'Image write policy';
+  @override
+  String get video_source_scrape_policy_skip => 'Do not write';
+  @override
+  String get video_source_scrape_policy_missing_only => 'Only when missing';
+  @override
+  String get video_source_scrape_policy_overwrite => 'Update Hibiki files';
+  @override
+  String get video_source_scrape_external_overwrite =>
+      'Allow protected sidecar overwrite';
+  @override
+  String get video_source_scrape_external_overwrite_hint =>
+      'Third-party or user-modified files remain protected until you confirm each manual scrape batch again.';
+  @override
+  String get video_source_scrape_external_overwrite_confirm_title =>
+      'Overwrite protected sidecars?';
+  @override
+  String get video_source_scrape_external_overwrite_confirm_body =>
+      'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
 }
 
 // Path: <root>
@@ -68649,6 +69544,110 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_library_empty_source_hint =>
       'Add a video folder from Sources to build your library';
+  @override
+  String get video_source_scrape_action => 'Scrape this source';
+  @override
+  String get video_source_scrape_settings => 'Source scrape settings';
+  @override
+  String get video_source_scrape_provider => 'Primary metadata source';
+  @override
+  String get video_source_scrape_provider_inherit => 'Use global default';
+  @override
+  String get video_source_scrape_auto_after_scan => 'Scrape after scanning';
+  @override
+  String get video_source_scrape_auto_after_scan_hint =>
+      'Run metadata scraping automatically after this source is scanned';
+  @override
+  String get video_source_scrape_write_nfo => 'Write NFO files';
+  @override
+  String get video_source_scrape_write_images => 'Write image files';
+  @override
+  String get video_source_scrape_use_fanart => 'Use Fanart images';
+  @override
+  String video_source_scrape_progress(
+          {required Object phase,
+          required Object current,
+          required Object total}) =>
+      '${phase} · ${current}/${total}';
+  @override
+  String video_source_scrape_last_summary(
+          {required Object status,
+          required Object succeeded,
+          required Object pending,
+          required Object failed}) =>
+      'Last scrape (${status}): ${succeeded} succeeded, ${pending} pending, ${failed} failed';
+  @override
+  String get video_source_scrape_phase_planning => 'Planning';
+  @override
+  String get video_source_scrape_phase_recognizing => 'Matching';
+  @override
+  String get video_source_scrape_phase_fetching => 'Fetching metadata';
+  @override
+  String get video_source_scrape_phase_applying => 'Saving metadata';
+  @override
+  String get video_source_scrape_phase_writing_sidecars => 'Writing sidecars';
+  @override
+  String get video_source_scrape_status_interrupted => 'Interrupted';
+  @override
+  String get video_source_scrape_global_provider => 'Default metadata source';
+  @override
+  String get video_source_scrape_global_provider_hint =>
+      'Used by video sources that inherit the global setting';
+  @override
+  String get video_source_scrape_fanart_key => 'Fanart API key';
+  @override
+  String get video_source_scrape_fanart_key_hint =>
+      'Optional key used to fill missing artwork from Fanart';
+  @override
+  String get video_source_scrape_bangumi_token => 'Bangumi access token';
+  @override
+  String get video_source_scrape_bangumi_token_hint =>
+      'Optional access token for the official Bangumi API v0';
+  @override
+  String get video_source_scrape_douban_endpoint =>
+      'Authorized Douban API endpoint';
+  @override
+  String get video_source_scrape_douban_endpoint_hint =>
+      'Douban is unavailable unless both an authorized endpoint and token are configured';
+  @override
+  String get video_source_scrape_douban_token => 'Authorized Douban API token';
+  @override
+  String get video_source_scrape_douban_token_hint =>
+      'Douban is unavailable unless both an authorized endpoint and token are configured';
+  @override
+  String get video_source_scrape_locale => 'Metadata language';
+  @override
+  String get video_source_scrape_locale_hint =>
+      'Preferred language for titles, summaries and images';
+  @override
+  String get video_source_scrape_confirmation_title => 'Confirm metadata match';
+  @override
+  String get video_source_scrape_confirmation_hint =>
+      'Multiple exact matches were found. Choose the correct work to save its provider binding.';
+  @override
+  String get video_source_scrape_confirmation_skip => 'Skip this work';
+  @override
+  String get video_source_scrape_nfo_policy => 'NFO write policy';
+  @override
+  String get video_source_scrape_image_policy => 'Image write policy';
+  @override
+  String get video_source_scrape_policy_skip => 'Do not write';
+  @override
+  String get video_source_scrape_policy_missing_only => 'Only when missing';
+  @override
+  String get video_source_scrape_policy_overwrite => 'Update Hibiki files';
+  @override
+  String get video_source_scrape_external_overwrite =>
+      'Allow protected sidecar overwrite';
+  @override
+  String get video_source_scrape_external_overwrite_hint =>
+      'Third-party or user-modified files remain protected until you confirm each manual scrape batch again.';
+  @override
+  String get video_source_scrape_external_overwrite_confirm_title =>
+      'Overwrite protected sidecars?';
+  @override
+  String get video_source_scrape_external_overwrite_confirm_body =>
+      'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
 }
 
 // Path: <root>
@@ -75856,6 +76855,110 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_library_empty_source_hint =>
       'Add a video folder from Sources to build your library';
+  @override
+  String get video_source_scrape_action => 'Scrape this source';
+  @override
+  String get video_source_scrape_settings => 'Source scrape settings';
+  @override
+  String get video_source_scrape_provider => 'Primary metadata source';
+  @override
+  String get video_source_scrape_provider_inherit => 'Use global default';
+  @override
+  String get video_source_scrape_auto_after_scan => 'Scrape after scanning';
+  @override
+  String get video_source_scrape_auto_after_scan_hint =>
+      'Run metadata scraping automatically after this source is scanned';
+  @override
+  String get video_source_scrape_write_nfo => 'Write NFO files';
+  @override
+  String get video_source_scrape_write_images => 'Write image files';
+  @override
+  String get video_source_scrape_use_fanart => 'Use Fanart images';
+  @override
+  String video_source_scrape_progress(
+          {required Object phase,
+          required Object current,
+          required Object total}) =>
+      '${phase} · ${current}/${total}';
+  @override
+  String video_source_scrape_last_summary(
+          {required Object status,
+          required Object succeeded,
+          required Object pending,
+          required Object failed}) =>
+      'Last scrape (${status}): ${succeeded} succeeded, ${pending} pending, ${failed} failed';
+  @override
+  String get video_source_scrape_phase_planning => 'Planning';
+  @override
+  String get video_source_scrape_phase_recognizing => 'Matching';
+  @override
+  String get video_source_scrape_phase_fetching => 'Fetching metadata';
+  @override
+  String get video_source_scrape_phase_applying => 'Saving metadata';
+  @override
+  String get video_source_scrape_phase_writing_sidecars => 'Writing sidecars';
+  @override
+  String get video_source_scrape_status_interrupted => 'Interrupted';
+  @override
+  String get video_source_scrape_global_provider => 'Default metadata source';
+  @override
+  String get video_source_scrape_global_provider_hint =>
+      'Used by video sources that inherit the global setting';
+  @override
+  String get video_source_scrape_fanart_key => 'Fanart API key';
+  @override
+  String get video_source_scrape_fanart_key_hint =>
+      'Optional key used to fill missing artwork from Fanart';
+  @override
+  String get video_source_scrape_bangumi_token => 'Bangumi access token';
+  @override
+  String get video_source_scrape_bangumi_token_hint =>
+      'Optional access token for the official Bangumi API v0';
+  @override
+  String get video_source_scrape_douban_endpoint =>
+      'Authorized Douban API endpoint';
+  @override
+  String get video_source_scrape_douban_endpoint_hint =>
+      'Douban is unavailable unless both an authorized endpoint and token are configured';
+  @override
+  String get video_source_scrape_douban_token => 'Authorized Douban API token';
+  @override
+  String get video_source_scrape_douban_token_hint =>
+      'Douban is unavailable unless both an authorized endpoint and token are configured';
+  @override
+  String get video_source_scrape_locale => 'Metadata language';
+  @override
+  String get video_source_scrape_locale_hint =>
+      'Preferred language for titles, summaries and images';
+  @override
+  String get video_source_scrape_confirmation_title => 'Confirm metadata match';
+  @override
+  String get video_source_scrape_confirmation_hint =>
+      'Multiple exact matches were found. Choose the correct work to save its provider binding.';
+  @override
+  String get video_source_scrape_confirmation_skip => 'Skip this work';
+  @override
+  String get video_source_scrape_nfo_policy => 'NFO write policy';
+  @override
+  String get video_source_scrape_image_policy => 'Image write policy';
+  @override
+  String get video_source_scrape_policy_skip => 'Do not write';
+  @override
+  String get video_source_scrape_policy_missing_only => 'Only when missing';
+  @override
+  String get video_source_scrape_policy_overwrite => 'Update Hibiki files';
+  @override
+  String get video_source_scrape_external_overwrite =>
+      'Allow protected sidecar overwrite';
+  @override
+  String get video_source_scrape_external_overwrite_hint =>
+      'Third-party or user-modified files remain protected until you confirm each manual scrape batch again.';
+  @override
+  String get video_source_scrape_external_overwrite_confirm_title =>
+      'Overwrite protected sidecars?';
+  @override
+  String get video_source_scrape_external_overwrite_confirm_body =>
+      'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
 }
 
 // Path: <root>
@@ -83047,6 +84150,110 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_library_empty_source_hint =>
       'Add a video folder from Sources to build your library';
+  @override
+  String get video_source_scrape_action => 'Scrape this source';
+  @override
+  String get video_source_scrape_settings => 'Source scrape settings';
+  @override
+  String get video_source_scrape_provider => 'Primary metadata source';
+  @override
+  String get video_source_scrape_provider_inherit => 'Use global default';
+  @override
+  String get video_source_scrape_auto_after_scan => 'Scrape after scanning';
+  @override
+  String get video_source_scrape_auto_after_scan_hint =>
+      'Run metadata scraping automatically after this source is scanned';
+  @override
+  String get video_source_scrape_write_nfo => 'Write NFO files';
+  @override
+  String get video_source_scrape_write_images => 'Write image files';
+  @override
+  String get video_source_scrape_use_fanart => 'Use Fanart images';
+  @override
+  String video_source_scrape_progress(
+          {required Object phase,
+          required Object current,
+          required Object total}) =>
+      '${phase} · ${current}/${total}';
+  @override
+  String video_source_scrape_last_summary(
+          {required Object status,
+          required Object succeeded,
+          required Object pending,
+          required Object failed}) =>
+      'Last scrape (${status}): ${succeeded} succeeded, ${pending} pending, ${failed} failed';
+  @override
+  String get video_source_scrape_phase_planning => 'Planning';
+  @override
+  String get video_source_scrape_phase_recognizing => 'Matching';
+  @override
+  String get video_source_scrape_phase_fetching => 'Fetching metadata';
+  @override
+  String get video_source_scrape_phase_applying => 'Saving metadata';
+  @override
+  String get video_source_scrape_phase_writing_sidecars => 'Writing sidecars';
+  @override
+  String get video_source_scrape_status_interrupted => 'Interrupted';
+  @override
+  String get video_source_scrape_global_provider => 'Default metadata source';
+  @override
+  String get video_source_scrape_global_provider_hint =>
+      'Used by video sources that inherit the global setting';
+  @override
+  String get video_source_scrape_fanart_key => 'Fanart API key';
+  @override
+  String get video_source_scrape_fanart_key_hint =>
+      'Optional key used to fill missing artwork from Fanart';
+  @override
+  String get video_source_scrape_bangumi_token => 'Bangumi access token';
+  @override
+  String get video_source_scrape_bangumi_token_hint =>
+      'Optional access token for the official Bangumi API v0';
+  @override
+  String get video_source_scrape_douban_endpoint =>
+      'Authorized Douban API endpoint';
+  @override
+  String get video_source_scrape_douban_endpoint_hint =>
+      'Douban is unavailable unless both an authorized endpoint and token are configured';
+  @override
+  String get video_source_scrape_douban_token => 'Authorized Douban API token';
+  @override
+  String get video_source_scrape_douban_token_hint =>
+      'Douban is unavailable unless both an authorized endpoint and token are configured';
+  @override
+  String get video_source_scrape_locale => 'Metadata language';
+  @override
+  String get video_source_scrape_locale_hint =>
+      'Preferred language for titles, summaries and images';
+  @override
+  String get video_source_scrape_confirmation_title => 'Confirm metadata match';
+  @override
+  String get video_source_scrape_confirmation_hint =>
+      'Multiple exact matches were found. Choose the correct work to save its provider binding.';
+  @override
+  String get video_source_scrape_confirmation_skip => 'Skip this work';
+  @override
+  String get video_source_scrape_nfo_policy => 'NFO write policy';
+  @override
+  String get video_source_scrape_image_policy => 'Image write policy';
+  @override
+  String get video_source_scrape_policy_skip => 'Do not write';
+  @override
+  String get video_source_scrape_policy_missing_only => 'Only when missing';
+  @override
+  String get video_source_scrape_policy_overwrite => 'Update Hibiki files';
+  @override
+  String get video_source_scrape_external_overwrite =>
+      'Allow protected sidecar overwrite';
+  @override
+  String get video_source_scrape_external_overwrite_hint =>
+      'Third-party or user-modified files remain protected until you confirm each manual scrape batch again.';
+  @override
+  String get video_source_scrape_external_overwrite_confirm_title =>
+      'Overwrite protected sidecars?';
+  @override
+  String get video_source_scrape_external_overwrite_confirm_body =>
+      'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
 }
 
 // Path: <root>
@@ -90186,6 +91393,110 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_library_empty_source_hint =>
       'Add a video folder from Sources to build your library';
+  @override
+  String get video_source_scrape_action => 'Scrape this source';
+  @override
+  String get video_source_scrape_settings => 'Source scrape settings';
+  @override
+  String get video_source_scrape_provider => 'Primary metadata source';
+  @override
+  String get video_source_scrape_provider_inherit => 'Use global default';
+  @override
+  String get video_source_scrape_auto_after_scan => 'Scrape after scanning';
+  @override
+  String get video_source_scrape_auto_after_scan_hint =>
+      'Run metadata scraping automatically after this source is scanned';
+  @override
+  String get video_source_scrape_write_nfo => 'Write NFO files';
+  @override
+  String get video_source_scrape_write_images => 'Write image files';
+  @override
+  String get video_source_scrape_use_fanart => 'Use Fanart images';
+  @override
+  String video_source_scrape_progress(
+          {required Object phase,
+          required Object current,
+          required Object total}) =>
+      '${phase} · ${current}/${total}';
+  @override
+  String video_source_scrape_last_summary(
+          {required Object status,
+          required Object succeeded,
+          required Object pending,
+          required Object failed}) =>
+      'Last scrape (${status}): ${succeeded} succeeded, ${pending} pending, ${failed} failed';
+  @override
+  String get video_source_scrape_phase_planning => 'Planning';
+  @override
+  String get video_source_scrape_phase_recognizing => 'Matching';
+  @override
+  String get video_source_scrape_phase_fetching => 'Fetching metadata';
+  @override
+  String get video_source_scrape_phase_applying => 'Saving metadata';
+  @override
+  String get video_source_scrape_phase_writing_sidecars => 'Writing sidecars';
+  @override
+  String get video_source_scrape_status_interrupted => 'Interrupted';
+  @override
+  String get video_source_scrape_global_provider => 'Default metadata source';
+  @override
+  String get video_source_scrape_global_provider_hint =>
+      'Used by video sources that inherit the global setting';
+  @override
+  String get video_source_scrape_fanart_key => 'Fanart API key';
+  @override
+  String get video_source_scrape_fanart_key_hint =>
+      'Optional key used to fill missing artwork from Fanart';
+  @override
+  String get video_source_scrape_bangumi_token => 'Bangumi access token';
+  @override
+  String get video_source_scrape_bangumi_token_hint =>
+      'Optional access token for the official Bangumi API v0';
+  @override
+  String get video_source_scrape_douban_endpoint =>
+      'Authorized Douban API endpoint';
+  @override
+  String get video_source_scrape_douban_endpoint_hint =>
+      'Douban is unavailable unless both an authorized endpoint and token are configured';
+  @override
+  String get video_source_scrape_douban_token => 'Authorized Douban API token';
+  @override
+  String get video_source_scrape_douban_token_hint =>
+      'Douban is unavailable unless both an authorized endpoint and token are configured';
+  @override
+  String get video_source_scrape_locale => 'Metadata language';
+  @override
+  String get video_source_scrape_locale_hint =>
+      'Preferred language for titles, summaries and images';
+  @override
+  String get video_source_scrape_confirmation_title => 'Confirm metadata match';
+  @override
+  String get video_source_scrape_confirmation_hint =>
+      'Multiple exact matches were found. Choose the correct work to save its provider binding.';
+  @override
+  String get video_source_scrape_confirmation_skip => 'Skip this work';
+  @override
+  String get video_source_scrape_nfo_policy => 'NFO write policy';
+  @override
+  String get video_source_scrape_image_policy => 'Image write policy';
+  @override
+  String get video_source_scrape_policy_skip => 'Do not write';
+  @override
+  String get video_source_scrape_policy_missing_only => 'Only when missing';
+  @override
+  String get video_source_scrape_policy_overwrite => 'Update Hibiki files';
+  @override
+  String get video_source_scrape_external_overwrite =>
+      'Allow protected sidecar overwrite';
+  @override
+  String get video_source_scrape_external_overwrite_hint =>
+      'Third-party or user-modified files remain protected until you confirm each manual scrape batch again.';
+  @override
+  String get video_source_scrape_external_overwrite_confirm_title =>
+      'Overwrite protected sidecars?';
+  @override
+  String get video_source_scrape_external_overwrite_confirm_body =>
+      'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
 }
 
 // Path: <root>
@@ -97357,6 +98668,110 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_library_empty_source_hint =>
       'Add a video folder from Sources to build your library';
+  @override
+  String get video_source_scrape_action => 'Scrape this source';
+  @override
+  String get video_source_scrape_settings => 'Source scrape settings';
+  @override
+  String get video_source_scrape_provider => 'Primary metadata source';
+  @override
+  String get video_source_scrape_provider_inherit => 'Use global default';
+  @override
+  String get video_source_scrape_auto_after_scan => 'Scrape after scanning';
+  @override
+  String get video_source_scrape_auto_after_scan_hint =>
+      'Run metadata scraping automatically after this source is scanned';
+  @override
+  String get video_source_scrape_write_nfo => 'Write NFO files';
+  @override
+  String get video_source_scrape_write_images => 'Write image files';
+  @override
+  String get video_source_scrape_use_fanart => 'Use Fanart images';
+  @override
+  String video_source_scrape_progress(
+          {required Object phase,
+          required Object current,
+          required Object total}) =>
+      '${phase} · ${current}/${total}';
+  @override
+  String video_source_scrape_last_summary(
+          {required Object status,
+          required Object succeeded,
+          required Object pending,
+          required Object failed}) =>
+      'Last scrape (${status}): ${succeeded} succeeded, ${pending} pending, ${failed} failed';
+  @override
+  String get video_source_scrape_phase_planning => 'Planning';
+  @override
+  String get video_source_scrape_phase_recognizing => 'Matching';
+  @override
+  String get video_source_scrape_phase_fetching => 'Fetching metadata';
+  @override
+  String get video_source_scrape_phase_applying => 'Saving metadata';
+  @override
+  String get video_source_scrape_phase_writing_sidecars => 'Writing sidecars';
+  @override
+  String get video_source_scrape_status_interrupted => 'Interrupted';
+  @override
+  String get video_source_scrape_global_provider => 'Default metadata source';
+  @override
+  String get video_source_scrape_global_provider_hint =>
+      'Used by video sources that inherit the global setting';
+  @override
+  String get video_source_scrape_fanart_key => 'Fanart API key';
+  @override
+  String get video_source_scrape_fanart_key_hint =>
+      'Optional key used to fill missing artwork from Fanart';
+  @override
+  String get video_source_scrape_bangumi_token => 'Bangumi access token';
+  @override
+  String get video_source_scrape_bangumi_token_hint =>
+      'Optional access token for the official Bangumi API v0';
+  @override
+  String get video_source_scrape_douban_endpoint =>
+      'Authorized Douban API endpoint';
+  @override
+  String get video_source_scrape_douban_endpoint_hint =>
+      'Douban is unavailable unless both an authorized endpoint and token are configured';
+  @override
+  String get video_source_scrape_douban_token => 'Authorized Douban API token';
+  @override
+  String get video_source_scrape_douban_token_hint =>
+      'Douban is unavailable unless both an authorized endpoint and token are configured';
+  @override
+  String get video_source_scrape_locale => 'Metadata language';
+  @override
+  String get video_source_scrape_locale_hint =>
+      'Preferred language for titles, summaries and images';
+  @override
+  String get video_source_scrape_confirmation_title => 'Confirm metadata match';
+  @override
+  String get video_source_scrape_confirmation_hint =>
+      'Multiple exact matches were found. Choose the correct work to save its provider binding.';
+  @override
+  String get video_source_scrape_confirmation_skip => 'Skip this work';
+  @override
+  String get video_source_scrape_nfo_policy => 'NFO write policy';
+  @override
+  String get video_source_scrape_image_policy => 'Image write policy';
+  @override
+  String get video_source_scrape_policy_skip => 'Do not write';
+  @override
+  String get video_source_scrape_policy_missing_only => 'Only when missing';
+  @override
+  String get video_source_scrape_policy_overwrite => 'Update Hibiki files';
+  @override
+  String get video_source_scrape_external_overwrite =>
+      'Allow protected sidecar overwrite';
+  @override
+  String get video_source_scrape_external_overwrite_hint =>
+      'Third-party or user-modified files remain protected until you confirm each manual scrape batch again.';
+  @override
+  String get video_source_scrape_external_overwrite_confirm_title =>
+      'Overwrite protected sidecars?';
+  @override
+  String get video_source_scrape_external_overwrite_confirm_body =>
+      'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
 }
 
 // Path: <root>
@@ -104513,6 +105928,110 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_library_empty_source_hint =>
       'Add a video folder from Sources to build your library';
+  @override
+  String get video_source_scrape_action => 'Scrape this source';
+  @override
+  String get video_source_scrape_settings => 'Source scrape settings';
+  @override
+  String get video_source_scrape_provider => 'Primary metadata source';
+  @override
+  String get video_source_scrape_provider_inherit => 'Use global default';
+  @override
+  String get video_source_scrape_auto_after_scan => 'Scrape after scanning';
+  @override
+  String get video_source_scrape_auto_after_scan_hint =>
+      'Run metadata scraping automatically after this source is scanned';
+  @override
+  String get video_source_scrape_write_nfo => 'Write NFO files';
+  @override
+  String get video_source_scrape_write_images => 'Write image files';
+  @override
+  String get video_source_scrape_use_fanart => 'Use Fanart images';
+  @override
+  String video_source_scrape_progress(
+          {required Object phase,
+          required Object current,
+          required Object total}) =>
+      '${phase} · ${current}/${total}';
+  @override
+  String video_source_scrape_last_summary(
+          {required Object status,
+          required Object succeeded,
+          required Object pending,
+          required Object failed}) =>
+      'Last scrape (${status}): ${succeeded} succeeded, ${pending} pending, ${failed} failed';
+  @override
+  String get video_source_scrape_phase_planning => 'Planning';
+  @override
+  String get video_source_scrape_phase_recognizing => 'Matching';
+  @override
+  String get video_source_scrape_phase_fetching => 'Fetching metadata';
+  @override
+  String get video_source_scrape_phase_applying => 'Saving metadata';
+  @override
+  String get video_source_scrape_phase_writing_sidecars => 'Writing sidecars';
+  @override
+  String get video_source_scrape_status_interrupted => 'Interrupted';
+  @override
+  String get video_source_scrape_global_provider => 'Default metadata source';
+  @override
+  String get video_source_scrape_global_provider_hint =>
+      'Used by video sources that inherit the global setting';
+  @override
+  String get video_source_scrape_fanart_key => 'Fanart API key';
+  @override
+  String get video_source_scrape_fanart_key_hint =>
+      'Optional key used to fill missing artwork from Fanart';
+  @override
+  String get video_source_scrape_bangumi_token => 'Bangumi access token';
+  @override
+  String get video_source_scrape_bangumi_token_hint =>
+      'Optional access token for the official Bangumi API v0';
+  @override
+  String get video_source_scrape_douban_endpoint =>
+      'Authorized Douban API endpoint';
+  @override
+  String get video_source_scrape_douban_endpoint_hint =>
+      'Douban is unavailable unless both an authorized endpoint and token are configured';
+  @override
+  String get video_source_scrape_douban_token => 'Authorized Douban API token';
+  @override
+  String get video_source_scrape_douban_token_hint =>
+      'Douban is unavailable unless both an authorized endpoint and token are configured';
+  @override
+  String get video_source_scrape_locale => 'Metadata language';
+  @override
+  String get video_source_scrape_locale_hint =>
+      'Preferred language for titles, summaries and images';
+  @override
+  String get video_source_scrape_confirmation_title => 'Confirm metadata match';
+  @override
+  String get video_source_scrape_confirmation_hint =>
+      'Multiple exact matches were found. Choose the correct work to save its provider binding.';
+  @override
+  String get video_source_scrape_confirmation_skip => 'Skip this work';
+  @override
+  String get video_source_scrape_nfo_policy => 'NFO write policy';
+  @override
+  String get video_source_scrape_image_policy => 'Image write policy';
+  @override
+  String get video_source_scrape_policy_skip => 'Do not write';
+  @override
+  String get video_source_scrape_policy_missing_only => 'Only when missing';
+  @override
+  String get video_source_scrape_policy_overwrite => 'Update Hibiki files';
+  @override
+  String get video_source_scrape_external_overwrite =>
+      'Allow protected sidecar overwrite';
+  @override
+  String get video_source_scrape_external_overwrite_hint =>
+      'Third-party or user-modified files remain protected until you confirm each manual scrape batch again.';
+  @override
+  String get video_source_scrape_external_overwrite_confirm_title =>
+      'Overwrite protected sidecars?';
+  @override
+  String get video_source_scrape_external_overwrite_confirm_body =>
+      'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
 }
 
 // Path: <root>
@@ -111168,6 +112687,103 @@ class _StringsZhCn extends _StringsEn {
   String get selection_copy_empty => '未选中文本。';
   @override
   String get video_library_empty_source_hint => '请从“来源”添加视频文件夹以建立媒体库';
+  @override
+  String get video_source_scrape_action => '刮削此来源';
+  @override
+  String get video_source_scrape_settings => '来源刮削设置';
+  @override
+  String get video_source_scrape_provider => '主刮削来源';
+  @override
+  String get video_source_scrape_provider_inherit => '继承全局默认';
+  @override
+  String get video_source_scrape_auto_after_scan => '扫描后自动刮削';
+  @override
+  String get video_source_scrape_auto_after_scan_hint => '扫描此来源完成后自动刮削作品资料';
+  @override
+  String get video_source_scrape_write_nfo => '写入 NFO 文件';
+  @override
+  String get video_source_scrape_write_images => '写入图片文件';
+  @override
+  String get video_source_scrape_use_fanart => '使用 Fanart 图片';
+  @override
+  String video_source_scrape_progress(
+          {required Object phase,
+          required Object current,
+          required Object total}) =>
+      '${phase} · ${current}/${total}';
+  @override
+  String video_source_scrape_last_summary(
+          {required Object status,
+          required Object succeeded,
+          required Object pending,
+          required Object failed}) =>
+      '上次刮削（${status}）：成功 ${succeeded}，待确认 ${pending}，失败 ${failed}';
+  @override
+  String get video_source_scrape_phase_planning => '准备中';
+  @override
+  String get video_source_scrape_phase_recognizing => '识别匹配中';
+  @override
+  String get video_source_scrape_phase_fetching => '获取资料中';
+  @override
+  String get video_source_scrape_phase_applying => '保存资料中';
+  @override
+  String get video_source_scrape_phase_writing_sidecars => '写入 NFO 与图片';
+  @override
+  String get video_source_scrape_status_interrupted => '已中断';
+  @override
+  String get video_source_scrape_global_provider => '视频默认刮削来源';
+  @override
+  String get video_source_scrape_global_provider_hint => '供选择“继承全局默认”的视频来源使用';
+  @override
+  String get video_source_scrape_fanart_key => 'Fanart API Key';
+  @override
+  String get video_source_scrape_fanart_key_hint => '可选，用于从 Fanart 补充缺少的图片';
+  @override
+  String get video_source_scrape_bangumi_token => 'Bangumi 访问令牌';
+  @override
+  String get video_source_scrape_bangumi_token_hint =>
+      '可选，用于访问 Bangumi 官方 v0 API';
+  @override
+  String get video_source_scrape_douban_endpoint => '已授权的豆瓣 API 端点';
+  @override
+  String get video_source_scrape_douban_endpoint_hint =>
+      '仅当已授权端点和令牌都已配置时豆瓣来源才可用';
+  @override
+  String get video_source_scrape_douban_token => '已授权的豆瓣 API 令牌';
+  @override
+  String get video_source_scrape_douban_token_hint => '仅当已授权端点和令牌都已配置时豆瓣来源才可用';
+  @override
+  String get video_source_scrape_locale => '资料语言';
+  @override
+  String get video_source_scrape_locale_hint => '标题、简介与图片的首选语言';
+  @override
+  String get video_source_scrape_confirmation_title => '确认资料匹配';
+  @override
+  String get video_source_scrape_confirmation_hint =>
+      '找到多个严格匹配结果。请选择正确作品，Hibiki 会保存其来源绑定。';
+  @override
+  String get video_source_scrape_confirmation_skip => '跳过此作品';
+  @override
+  String get video_source_scrape_nfo_policy => 'NFO 写入策略';
+  @override
+  String get video_source_scrape_image_policy => '图片写入策略';
+  @override
+  String get video_source_scrape_policy_skip => '不写入';
+  @override
+  String get video_source_scrape_policy_missing_only => '仅缺失时写入';
+  @override
+  String get video_source_scrape_policy_overwrite => '更新 Hibiki 生成物';
+  @override
+  String get video_source_scrape_external_overwrite => '允许覆盖受保护的 sidecar';
+  @override
+  String get video_source_scrape_external_overwrite_hint =>
+      '第三方或用户修改过的文件仍受保护；每次手动刮削批次都必须再次确认。';
+  @override
+  String get video_source_scrape_external_overwrite_confirm_title =>
+      '覆盖受保护的 sidecar？';
+  @override
+  String get video_source_scrape_external_overwrite_confirm_body =>
+      '本批次可能替换第三方 NFO/图片，或你修改过的 Hibiki 生成物；视频文件本身不会改动。是否继续？';
 }
 
 // Path: <root>
@@ -118119,6 +119735,110 @@ class _StringsZhHk extends _StringsEn {
   String get selection_copy_empty => 'No text selected.';
   @override
   String get video_library_empty_source_hint => '請從「來源」加入影片資料夾以建立媒體庫';
+  @override
+  String get video_source_scrape_action => 'Scrape this source';
+  @override
+  String get video_source_scrape_settings => 'Source scrape settings';
+  @override
+  String get video_source_scrape_provider => 'Primary metadata source';
+  @override
+  String get video_source_scrape_provider_inherit => 'Use global default';
+  @override
+  String get video_source_scrape_auto_after_scan => 'Scrape after scanning';
+  @override
+  String get video_source_scrape_auto_after_scan_hint =>
+      'Run metadata scraping automatically after this source is scanned';
+  @override
+  String get video_source_scrape_write_nfo => 'Write NFO files';
+  @override
+  String get video_source_scrape_write_images => 'Write image files';
+  @override
+  String get video_source_scrape_use_fanart => 'Use Fanart images';
+  @override
+  String video_source_scrape_progress(
+          {required Object phase,
+          required Object current,
+          required Object total}) =>
+      '${phase} · ${current}/${total}';
+  @override
+  String video_source_scrape_last_summary(
+          {required Object status,
+          required Object succeeded,
+          required Object pending,
+          required Object failed}) =>
+      'Last scrape (${status}): ${succeeded} succeeded, ${pending} pending, ${failed} failed';
+  @override
+  String get video_source_scrape_phase_planning => 'Planning';
+  @override
+  String get video_source_scrape_phase_recognizing => 'Matching';
+  @override
+  String get video_source_scrape_phase_fetching => 'Fetching metadata';
+  @override
+  String get video_source_scrape_phase_applying => 'Saving metadata';
+  @override
+  String get video_source_scrape_phase_writing_sidecars => 'Writing sidecars';
+  @override
+  String get video_source_scrape_status_interrupted => 'Interrupted';
+  @override
+  String get video_source_scrape_global_provider => 'Default metadata source';
+  @override
+  String get video_source_scrape_global_provider_hint =>
+      'Used by video sources that inherit the global setting';
+  @override
+  String get video_source_scrape_fanart_key => 'Fanart API key';
+  @override
+  String get video_source_scrape_fanart_key_hint =>
+      'Optional key used to fill missing artwork from Fanart';
+  @override
+  String get video_source_scrape_bangumi_token => 'Bangumi access token';
+  @override
+  String get video_source_scrape_bangumi_token_hint =>
+      'Optional access token for the official Bangumi API v0';
+  @override
+  String get video_source_scrape_douban_endpoint =>
+      'Authorized Douban API endpoint';
+  @override
+  String get video_source_scrape_douban_endpoint_hint =>
+      'Douban is unavailable unless both an authorized endpoint and token are configured';
+  @override
+  String get video_source_scrape_douban_token => 'Authorized Douban API token';
+  @override
+  String get video_source_scrape_douban_token_hint =>
+      'Douban is unavailable unless both an authorized endpoint and token are configured';
+  @override
+  String get video_source_scrape_locale => 'Metadata language';
+  @override
+  String get video_source_scrape_locale_hint =>
+      'Preferred language for titles, summaries and images';
+  @override
+  String get video_source_scrape_confirmation_title => 'Confirm metadata match';
+  @override
+  String get video_source_scrape_confirmation_hint =>
+      'Multiple exact matches were found. Choose the correct work to save its provider binding.';
+  @override
+  String get video_source_scrape_confirmation_skip => 'Skip this work';
+  @override
+  String get video_source_scrape_nfo_policy => 'NFO write policy';
+  @override
+  String get video_source_scrape_image_policy => 'Image write policy';
+  @override
+  String get video_source_scrape_policy_skip => 'Do not write';
+  @override
+  String get video_source_scrape_policy_missing_only => 'Only when missing';
+  @override
+  String get video_source_scrape_policy_overwrite => 'Update Hibiki files';
+  @override
+  String get video_source_scrape_external_overwrite =>
+      'Allow protected sidecar overwrite';
+  @override
+  String get video_source_scrape_external_overwrite_hint =>
+      'Third-party or user-modified files remain protected until you confirm each manual scrape batch again.';
+  @override
+  String get video_source_scrape_external_overwrite_confirm_title =>
+      'Overwrite protected sidecars?';
+  @override
+  String get video_source_scrape_external_overwrite_confirm_body =>
+      'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
 }
 
 /// Flat map(s) containing all translations.
@@ -124499,6 +126219,97 @@ extension on _StringsEn {
         return 'No text selected.';
       case 'video_library_empty_source_hint':
         return 'Add a video folder from Sources to build your library';
+      case 'video_source_scrape_action':
+        return 'Scrape this source';
+      case 'video_source_scrape_settings':
+        return 'Source scrape settings';
+      case 'video_source_scrape_provider':
+        return 'Primary metadata source';
+      case 'video_source_scrape_provider_inherit':
+        return 'Use global default';
+      case 'video_source_scrape_auto_after_scan':
+        return 'Scrape after scanning';
+      case 'video_source_scrape_auto_after_scan_hint':
+        return 'Run metadata scraping automatically after this source is scanned';
+      case 'video_source_scrape_write_nfo':
+        return 'Write NFO files';
+      case 'video_source_scrape_write_images':
+        return 'Write image files';
+      case 'video_source_scrape_use_fanart':
+        return 'Use Fanart images';
+      case 'video_source_scrape_progress':
+        return (
+                {required Object phase,
+                required Object current,
+                required Object total}) =>
+            '${phase} · ${current}/${total}';
+      case 'video_source_scrape_last_summary':
+        return (
+                {required Object status,
+                required Object succeeded,
+                required Object pending,
+                required Object failed}) =>
+            'Last scrape (${status}): ${succeeded} succeeded, ${pending} pending, ${failed} failed';
+      case 'video_source_scrape_phase_planning':
+        return 'Planning';
+      case 'video_source_scrape_phase_recognizing':
+        return 'Matching';
+      case 'video_source_scrape_phase_fetching':
+        return 'Fetching metadata';
+      case 'video_source_scrape_phase_applying':
+        return 'Saving metadata';
+      case 'video_source_scrape_phase_writing_sidecars':
+        return 'Writing sidecars';
+      case 'video_source_scrape_status_interrupted':
+        return 'Interrupted';
+      case 'video_source_scrape_global_provider':
+        return 'Default metadata source';
+      case 'video_source_scrape_global_provider_hint':
+        return 'Used by video sources that inherit the global setting';
+      case 'video_source_scrape_fanart_key':
+        return 'Fanart API key';
+      case 'video_source_scrape_fanart_key_hint':
+        return 'Optional key used to fill missing artwork from Fanart';
+      case 'video_source_scrape_bangumi_token':
+        return 'Bangumi access token';
+      case 'video_source_scrape_bangumi_token_hint':
+        return 'Optional access token for the official Bangumi API v0';
+      case 'video_source_scrape_douban_endpoint':
+        return 'Authorized Douban API endpoint';
+      case 'video_source_scrape_douban_endpoint_hint':
+        return 'Douban is unavailable unless both an authorized endpoint and token are configured';
+      case 'video_source_scrape_douban_token':
+        return 'Authorized Douban API token';
+      case 'video_source_scrape_douban_token_hint':
+        return 'Douban is unavailable unless both an authorized endpoint and token are configured';
+      case 'video_source_scrape_locale':
+        return 'Metadata language';
+      case 'video_source_scrape_locale_hint':
+        return 'Preferred language for titles, summaries and images';
+      case 'video_source_scrape_confirmation_title':
+        return 'Confirm metadata match';
+      case 'video_source_scrape_confirmation_hint':
+        return 'Multiple exact matches were found. Choose the correct work to save its provider binding.';
+      case 'video_source_scrape_confirmation_skip':
+        return 'Skip this work';
+      case 'video_source_scrape_nfo_policy':
+        return 'NFO write policy';
+      case 'video_source_scrape_image_policy':
+        return 'Image write policy';
+      case 'video_source_scrape_policy_skip':
+        return 'Do not write';
+      case 'video_source_scrape_policy_missing_only':
+        return 'Only when missing';
+      case 'video_source_scrape_policy_overwrite':
+        return 'Update Hibiki files';
+      case 'video_source_scrape_external_overwrite':
+        return 'Allow protected sidecar overwrite';
+      case 'video_source_scrape_external_overwrite_hint':
+        return 'Third-party or user-modified files remain protected until you confirm each manual scrape batch again.';
+      case 'video_source_scrape_external_overwrite_confirm_title':
+        return 'Overwrite protected sidecars?';
+      case 'video_source_scrape_external_overwrite_confirm_body':
+        return 'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
       default:
         return null;
     }
@@ -130877,6 +132688,97 @@ extension on _StringsAr {
         return 'No text selected.';
       case 'video_library_empty_source_hint':
         return 'Add a video folder from Sources to build your library';
+      case 'video_source_scrape_action':
+        return 'Scrape this source';
+      case 'video_source_scrape_settings':
+        return 'Source scrape settings';
+      case 'video_source_scrape_provider':
+        return 'Primary metadata source';
+      case 'video_source_scrape_provider_inherit':
+        return 'Use global default';
+      case 'video_source_scrape_auto_after_scan':
+        return 'Scrape after scanning';
+      case 'video_source_scrape_auto_after_scan_hint':
+        return 'Run metadata scraping automatically after this source is scanned';
+      case 'video_source_scrape_write_nfo':
+        return 'Write NFO files';
+      case 'video_source_scrape_write_images':
+        return 'Write image files';
+      case 'video_source_scrape_use_fanart':
+        return 'Use Fanart images';
+      case 'video_source_scrape_progress':
+        return (
+                {required Object phase,
+                required Object current,
+                required Object total}) =>
+            '${phase} · ${current}/${total}';
+      case 'video_source_scrape_last_summary':
+        return (
+                {required Object status,
+                required Object succeeded,
+                required Object pending,
+                required Object failed}) =>
+            'Last scrape (${status}): ${succeeded} succeeded, ${pending} pending, ${failed} failed';
+      case 'video_source_scrape_phase_planning':
+        return 'Planning';
+      case 'video_source_scrape_phase_recognizing':
+        return 'Matching';
+      case 'video_source_scrape_phase_fetching':
+        return 'Fetching metadata';
+      case 'video_source_scrape_phase_applying':
+        return 'Saving metadata';
+      case 'video_source_scrape_phase_writing_sidecars':
+        return 'Writing sidecars';
+      case 'video_source_scrape_status_interrupted':
+        return 'Interrupted';
+      case 'video_source_scrape_global_provider':
+        return 'Default metadata source';
+      case 'video_source_scrape_global_provider_hint':
+        return 'Used by video sources that inherit the global setting';
+      case 'video_source_scrape_fanart_key':
+        return 'Fanart API key';
+      case 'video_source_scrape_fanart_key_hint':
+        return 'Optional key used to fill missing artwork from Fanart';
+      case 'video_source_scrape_bangumi_token':
+        return 'Bangumi access token';
+      case 'video_source_scrape_bangumi_token_hint':
+        return 'Optional access token for the official Bangumi API v0';
+      case 'video_source_scrape_douban_endpoint':
+        return 'Authorized Douban API endpoint';
+      case 'video_source_scrape_douban_endpoint_hint':
+        return 'Douban is unavailable unless both an authorized endpoint and token are configured';
+      case 'video_source_scrape_douban_token':
+        return 'Authorized Douban API token';
+      case 'video_source_scrape_douban_token_hint':
+        return 'Douban is unavailable unless both an authorized endpoint and token are configured';
+      case 'video_source_scrape_locale':
+        return 'Metadata language';
+      case 'video_source_scrape_locale_hint':
+        return 'Preferred language for titles, summaries and images';
+      case 'video_source_scrape_confirmation_title':
+        return 'Confirm metadata match';
+      case 'video_source_scrape_confirmation_hint':
+        return 'Multiple exact matches were found. Choose the correct work to save its provider binding.';
+      case 'video_source_scrape_confirmation_skip':
+        return 'Skip this work';
+      case 'video_source_scrape_nfo_policy':
+        return 'NFO write policy';
+      case 'video_source_scrape_image_policy':
+        return 'Image write policy';
+      case 'video_source_scrape_policy_skip':
+        return 'Do not write';
+      case 'video_source_scrape_policy_missing_only':
+        return 'Only when missing';
+      case 'video_source_scrape_policy_overwrite':
+        return 'Update Hibiki files';
+      case 'video_source_scrape_external_overwrite':
+        return 'Allow protected sidecar overwrite';
+      case 'video_source_scrape_external_overwrite_hint':
+        return 'Third-party or user-modified files remain protected until you confirm each manual scrape batch again.';
+      case 'video_source_scrape_external_overwrite_confirm_title':
+        return 'Overwrite protected sidecars?';
+      case 'video_source_scrape_external_overwrite_confirm_body':
+        return 'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
       default:
         return null;
     }
@@ -137277,6 +139179,97 @@ extension on _StringsDe {
         return 'No text selected.';
       case 'video_library_empty_source_hint':
         return 'Add a video folder from Sources to build your library';
+      case 'video_source_scrape_action':
+        return 'Scrape this source';
+      case 'video_source_scrape_settings':
+        return 'Source scrape settings';
+      case 'video_source_scrape_provider':
+        return 'Primary metadata source';
+      case 'video_source_scrape_provider_inherit':
+        return 'Use global default';
+      case 'video_source_scrape_auto_after_scan':
+        return 'Scrape after scanning';
+      case 'video_source_scrape_auto_after_scan_hint':
+        return 'Run metadata scraping automatically after this source is scanned';
+      case 'video_source_scrape_write_nfo':
+        return 'Write NFO files';
+      case 'video_source_scrape_write_images':
+        return 'Write image files';
+      case 'video_source_scrape_use_fanart':
+        return 'Use Fanart images';
+      case 'video_source_scrape_progress':
+        return (
+                {required Object phase,
+                required Object current,
+                required Object total}) =>
+            '${phase} · ${current}/${total}';
+      case 'video_source_scrape_last_summary':
+        return (
+                {required Object status,
+                required Object succeeded,
+                required Object pending,
+                required Object failed}) =>
+            'Last scrape (${status}): ${succeeded} succeeded, ${pending} pending, ${failed} failed';
+      case 'video_source_scrape_phase_planning':
+        return 'Planning';
+      case 'video_source_scrape_phase_recognizing':
+        return 'Matching';
+      case 'video_source_scrape_phase_fetching':
+        return 'Fetching metadata';
+      case 'video_source_scrape_phase_applying':
+        return 'Saving metadata';
+      case 'video_source_scrape_phase_writing_sidecars':
+        return 'Writing sidecars';
+      case 'video_source_scrape_status_interrupted':
+        return 'Interrupted';
+      case 'video_source_scrape_global_provider':
+        return 'Default metadata source';
+      case 'video_source_scrape_global_provider_hint':
+        return 'Used by video sources that inherit the global setting';
+      case 'video_source_scrape_fanart_key':
+        return 'Fanart API key';
+      case 'video_source_scrape_fanart_key_hint':
+        return 'Optional key used to fill missing artwork from Fanart';
+      case 'video_source_scrape_bangumi_token':
+        return 'Bangumi access token';
+      case 'video_source_scrape_bangumi_token_hint':
+        return 'Optional access token for the official Bangumi API v0';
+      case 'video_source_scrape_douban_endpoint':
+        return 'Authorized Douban API endpoint';
+      case 'video_source_scrape_douban_endpoint_hint':
+        return 'Douban is unavailable unless both an authorized endpoint and token are configured';
+      case 'video_source_scrape_douban_token':
+        return 'Authorized Douban API token';
+      case 'video_source_scrape_douban_token_hint':
+        return 'Douban is unavailable unless both an authorized endpoint and token are configured';
+      case 'video_source_scrape_locale':
+        return 'Metadata language';
+      case 'video_source_scrape_locale_hint':
+        return 'Preferred language for titles, summaries and images';
+      case 'video_source_scrape_confirmation_title':
+        return 'Confirm metadata match';
+      case 'video_source_scrape_confirmation_hint':
+        return 'Multiple exact matches were found. Choose the correct work to save its provider binding.';
+      case 'video_source_scrape_confirmation_skip':
+        return 'Skip this work';
+      case 'video_source_scrape_nfo_policy':
+        return 'NFO write policy';
+      case 'video_source_scrape_image_policy':
+        return 'Image write policy';
+      case 'video_source_scrape_policy_skip':
+        return 'Do not write';
+      case 'video_source_scrape_policy_missing_only':
+        return 'Only when missing';
+      case 'video_source_scrape_policy_overwrite':
+        return 'Update Hibiki files';
+      case 'video_source_scrape_external_overwrite':
+        return 'Allow protected sidecar overwrite';
+      case 'video_source_scrape_external_overwrite_hint':
+        return 'Third-party or user-modified files remain protected until you confirm each manual scrape batch again.';
+      case 'video_source_scrape_external_overwrite_confirm_title':
+        return 'Overwrite protected sidecars?';
+      case 'video_source_scrape_external_overwrite_confirm_body':
+        return 'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
       default:
         return null;
     }
@@ -143676,6 +145669,97 @@ extension on _StringsEs {
         return 'No text selected.';
       case 'video_library_empty_source_hint':
         return 'Add a video folder from Sources to build your library';
+      case 'video_source_scrape_action':
+        return 'Scrape this source';
+      case 'video_source_scrape_settings':
+        return 'Source scrape settings';
+      case 'video_source_scrape_provider':
+        return 'Primary metadata source';
+      case 'video_source_scrape_provider_inherit':
+        return 'Use global default';
+      case 'video_source_scrape_auto_after_scan':
+        return 'Scrape after scanning';
+      case 'video_source_scrape_auto_after_scan_hint':
+        return 'Run metadata scraping automatically after this source is scanned';
+      case 'video_source_scrape_write_nfo':
+        return 'Write NFO files';
+      case 'video_source_scrape_write_images':
+        return 'Write image files';
+      case 'video_source_scrape_use_fanart':
+        return 'Use Fanart images';
+      case 'video_source_scrape_progress':
+        return (
+                {required Object phase,
+                required Object current,
+                required Object total}) =>
+            '${phase} · ${current}/${total}';
+      case 'video_source_scrape_last_summary':
+        return (
+                {required Object status,
+                required Object succeeded,
+                required Object pending,
+                required Object failed}) =>
+            'Last scrape (${status}): ${succeeded} succeeded, ${pending} pending, ${failed} failed';
+      case 'video_source_scrape_phase_planning':
+        return 'Planning';
+      case 'video_source_scrape_phase_recognizing':
+        return 'Matching';
+      case 'video_source_scrape_phase_fetching':
+        return 'Fetching metadata';
+      case 'video_source_scrape_phase_applying':
+        return 'Saving metadata';
+      case 'video_source_scrape_phase_writing_sidecars':
+        return 'Writing sidecars';
+      case 'video_source_scrape_status_interrupted':
+        return 'Interrupted';
+      case 'video_source_scrape_global_provider':
+        return 'Default metadata source';
+      case 'video_source_scrape_global_provider_hint':
+        return 'Used by video sources that inherit the global setting';
+      case 'video_source_scrape_fanart_key':
+        return 'Fanart API key';
+      case 'video_source_scrape_fanart_key_hint':
+        return 'Optional key used to fill missing artwork from Fanart';
+      case 'video_source_scrape_bangumi_token':
+        return 'Bangumi access token';
+      case 'video_source_scrape_bangumi_token_hint':
+        return 'Optional access token for the official Bangumi API v0';
+      case 'video_source_scrape_douban_endpoint':
+        return 'Authorized Douban API endpoint';
+      case 'video_source_scrape_douban_endpoint_hint':
+        return 'Douban is unavailable unless both an authorized endpoint and token are configured';
+      case 'video_source_scrape_douban_token':
+        return 'Authorized Douban API token';
+      case 'video_source_scrape_douban_token_hint':
+        return 'Douban is unavailable unless both an authorized endpoint and token are configured';
+      case 'video_source_scrape_locale':
+        return 'Metadata language';
+      case 'video_source_scrape_locale_hint':
+        return 'Preferred language for titles, summaries and images';
+      case 'video_source_scrape_confirmation_title':
+        return 'Confirm metadata match';
+      case 'video_source_scrape_confirmation_hint':
+        return 'Multiple exact matches were found. Choose the correct work to save its provider binding.';
+      case 'video_source_scrape_confirmation_skip':
+        return 'Skip this work';
+      case 'video_source_scrape_nfo_policy':
+        return 'NFO write policy';
+      case 'video_source_scrape_image_policy':
+        return 'Image write policy';
+      case 'video_source_scrape_policy_skip':
+        return 'Do not write';
+      case 'video_source_scrape_policy_missing_only':
+        return 'Only when missing';
+      case 'video_source_scrape_policy_overwrite':
+        return 'Update Hibiki files';
+      case 'video_source_scrape_external_overwrite':
+        return 'Allow protected sidecar overwrite';
+      case 'video_source_scrape_external_overwrite_hint':
+        return 'Third-party or user-modified files remain protected until you confirm each manual scrape batch again.';
+      case 'video_source_scrape_external_overwrite_confirm_title':
+        return 'Overwrite protected sidecars?';
+      case 'video_source_scrape_external_overwrite_confirm_body':
+        return 'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
       default:
         return null;
     }
@@ -150081,6 +152165,97 @@ extension on _StringsFr {
         return 'No text selected.';
       case 'video_library_empty_source_hint':
         return 'Add a video folder from Sources to build your library';
+      case 'video_source_scrape_action':
+        return 'Scrape this source';
+      case 'video_source_scrape_settings':
+        return 'Source scrape settings';
+      case 'video_source_scrape_provider':
+        return 'Primary metadata source';
+      case 'video_source_scrape_provider_inherit':
+        return 'Use global default';
+      case 'video_source_scrape_auto_after_scan':
+        return 'Scrape after scanning';
+      case 'video_source_scrape_auto_after_scan_hint':
+        return 'Run metadata scraping automatically after this source is scanned';
+      case 'video_source_scrape_write_nfo':
+        return 'Write NFO files';
+      case 'video_source_scrape_write_images':
+        return 'Write image files';
+      case 'video_source_scrape_use_fanart':
+        return 'Use Fanart images';
+      case 'video_source_scrape_progress':
+        return (
+                {required Object phase,
+                required Object current,
+                required Object total}) =>
+            '${phase} · ${current}/${total}';
+      case 'video_source_scrape_last_summary':
+        return (
+                {required Object status,
+                required Object succeeded,
+                required Object pending,
+                required Object failed}) =>
+            'Last scrape (${status}): ${succeeded} succeeded, ${pending} pending, ${failed} failed';
+      case 'video_source_scrape_phase_planning':
+        return 'Planning';
+      case 'video_source_scrape_phase_recognizing':
+        return 'Matching';
+      case 'video_source_scrape_phase_fetching':
+        return 'Fetching metadata';
+      case 'video_source_scrape_phase_applying':
+        return 'Saving metadata';
+      case 'video_source_scrape_phase_writing_sidecars':
+        return 'Writing sidecars';
+      case 'video_source_scrape_status_interrupted':
+        return 'Interrupted';
+      case 'video_source_scrape_global_provider':
+        return 'Default metadata source';
+      case 'video_source_scrape_global_provider_hint':
+        return 'Used by video sources that inherit the global setting';
+      case 'video_source_scrape_fanart_key':
+        return 'Fanart API key';
+      case 'video_source_scrape_fanart_key_hint':
+        return 'Optional key used to fill missing artwork from Fanart';
+      case 'video_source_scrape_bangumi_token':
+        return 'Bangumi access token';
+      case 'video_source_scrape_bangumi_token_hint':
+        return 'Optional access token for the official Bangumi API v0';
+      case 'video_source_scrape_douban_endpoint':
+        return 'Authorized Douban API endpoint';
+      case 'video_source_scrape_douban_endpoint_hint':
+        return 'Douban is unavailable unless both an authorized endpoint and token are configured';
+      case 'video_source_scrape_douban_token':
+        return 'Authorized Douban API token';
+      case 'video_source_scrape_douban_token_hint':
+        return 'Douban is unavailable unless both an authorized endpoint and token are configured';
+      case 'video_source_scrape_locale':
+        return 'Metadata language';
+      case 'video_source_scrape_locale_hint':
+        return 'Preferred language for titles, summaries and images';
+      case 'video_source_scrape_confirmation_title':
+        return 'Confirm metadata match';
+      case 'video_source_scrape_confirmation_hint':
+        return 'Multiple exact matches were found. Choose the correct work to save its provider binding.';
+      case 'video_source_scrape_confirmation_skip':
+        return 'Skip this work';
+      case 'video_source_scrape_nfo_policy':
+        return 'NFO write policy';
+      case 'video_source_scrape_image_policy':
+        return 'Image write policy';
+      case 'video_source_scrape_policy_skip':
+        return 'Do not write';
+      case 'video_source_scrape_policy_missing_only':
+        return 'Only when missing';
+      case 'video_source_scrape_policy_overwrite':
+        return 'Update Hibiki files';
+      case 'video_source_scrape_external_overwrite':
+        return 'Allow protected sidecar overwrite';
+      case 'video_source_scrape_external_overwrite_hint':
+        return 'Third-party or user-modified files remain protected until you confirm each manual scrape batch again.';
+      case 'video_source_scrape_external_overwrite_confirm_title':
+        return 'Overwrite protected sidecars?';
+      case 'video_source_scrape_external_overwrite_confirm_body':
+        return 'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
       default:
         return null;
     }
@@ -156468,6 +158643,97 @@ extension on _StringsId {
         return 'No text selected.';
       case 'video_library_empty_source_hint':
         return 'Add a video folder from Sources to build your library';
+      case 'video_source_scrape_action':
+        return 'Scrape this source';
+      case 'video_source_scrape_settings':
+        return 'Source scrape settings';
+      case 'video_source_scrape_provider':
+        return 'Primary metadata source';
+      case 'video_source_scrape_provider_inherit':
+        return 'Use global default';
+      case 'video_source_scrape_auto_after_scan':
+        return 'Scrape after scanning';
+      case 'video_source_scrape_auto_after_scan_hint':
+        return 'Run metadata scraping automatically after this source is scanned';
+      case 'video_source_scrape_write_nfo':
+        return 'Write NFO files';
+      case 'video_source_scrape_write_images':
+        return 'Write image files';
+      case 'video_source_scrape_use_fanart':
+        return 'Use Fanart images';
+      case 'video_source_scrape_progress':
+        return (
+                {required Object phase,
+                required Object current,
+                required Object total}) =>
+            '${phase} · ${current}/${total}';
+      case 'video_source_scrape_last_summary':
+        return (
+                {required Object status,
+                required Object succeeded,
+                required Object pending,
+                required Object failed}) =>
+            'Last scrape (${status}): ${succeeded} succeeded, ${pending} pending, ${failed} failed';
+      case 'video_source_scrape_phase_planning':
+        return 'Planning';
+      case 'video_source_scrape_phase_recognizing':
+        return 'Matching';
+      case 'video_source_scrape_phase_fetching':
+        return 'Fetching metadata';
+      case 'video_source_scrape_phase_applying':
+        return 'Saving metadata';
+      case 'video_source_scrape_phase_writing_sidecars':
+        return 'Writing sidecars';
+      case 'video_source_scrape_status_interrupted':
+        return 'Interrupted';
+      case 'video_source_scrape_global_provider':
+        return 'Default metadata source';
+      case 'video_source_scrape_global_provider_hint':
+        return 'Used by video sources that inherit the global setting';
+      case 'video_source_scrape_fanart_key':
+        return 'Fanart API key';
+      case 'video_source_scrape_fanart_key_hint':
+        return 'Optional key used to fill missing artwork from Fanart';
+      case 'video_source_scrape_bangumi_token':
+        return 'Bangumi access token';
+      case 'video_source_scrape_bangumi_token_hint':
+        return 'Optional access token for the official Bangumi API v0';
+      case 'video_source_scrape_douban_endpoint':
+        return 'Authorized Douban API endpoint';
+      case 'video_source_scrape_douban_endpoint_hint':
+        return 'Douban is unavailable unless both an authorized endpoint and token are configured';
+      case 'video_source_scrape_douban_token':
+        return 'Authorized Douban API token';
+      case 'video_source_scrape_douban_token_hint':
+        return 'Douban is unavailable unless both an authorized endpoint and token are configured';
+      case 'video_source_scrape_locale':
+        return 'Metadata language';
+      case 'video_source_scrape_locale_hint':
+        return 'Preferred language for titles, summaries and images';
+      case 'video_source_scrape_confirmation_title':
+        return 'Confirm metadata match';
+      case 'video_source_scrape_confirmation_hint':
+        return 'Multiple exact matches were found. Choose the correct work to save its provider binding.';
+      case 'video_source_scrape_confirmation_skip':
+        return 'Skip this work';
+      case 'video_source_scrape_nfo_policy':
+        return 'NFO write policy';
+      case 'video_source_scrape_image_policy':
+        return 'Image write policy';
+      case 'video_source_scrape_policy_skip':
+        return 'Do not write';
+      case 'video_source_scrape_policy_missing_only':
+        return 'Only when missing';
+      case 'video_source_scrape_policy_overwrite':
+        return 'Update Hibiki files';
+      case 'video_source_scrape_external_overwrite':
+        return 'Allow protected sidecar overwrite';
+      case 'video_source_scrape_external_overwrite_hint':
+        return 'Third-party or user-modified files remain protected until you confirm each manual scrape batch again.';
+      case 'video_source_scrape_external_overwrite_confirm_title':
+        return 'Overwrite protected sidecars?';
+      case 'video_source_scrape_external_overwrite_confirm_body':
+        return 'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
       default:
         return null;
     }
@@ -162869,6 +165135,97 @@ extension on _StringsIt {
         return 'No text selected.';
       case 'video_library_empty_source_hint':
         return 'Add a video folder from Sources to build your library';
+      case 'video_source_scrape_action':
+        return 'Scrape this source';
+      case 'video_source_scrape_settings':
+        return 'Source scrape settings';
+      case 'video_source_scrape_provider':
+        return 'Primary metadata source';
+      case 'video_source_scrape_provider_inherit':
+        return 'Use global default';
+      case 'video_source_scrape_auto_after_scan':
+        return 'Scrape after scanning';
+      case 'video_source_scrape_auto_after_scan_hint':
+        return 'Run metadata scraping automatically after this source is scanned';
+      case 'video_source_scrape_write_nfo':
+        return 'Write NFO files';
+      case 'video_source_scrape_write_images':
+        return 'Write image files';
+      case 'video_source_scrape_use_fanart':
+        return 'Use Fanart images';
+      case 'video_source_scrape_progress':
+        return (
+                {required Object phase,
+                required Object current,
+                required Object total}) =>
+            '${phase} · ${current}/${total}';
+      case 'video_source_scrape_last_summary':
+        return (
+                {required Object status,
+                required Object succeeded,
+                required Object pending,
+                required Object failed}) =>
+            'Last scrape (${status}): ${succeeded} succeeded, ${pending} pending, ${failed} failed';
+      case 'video_source_scrape_phase_planning':
+        return 'Planning';
+      case 'video_source_scrape_phase_recognizing':
+        return 'Matching';
+      case 'video_source_scrape_phase_fetching':
+        return 'Fetching metadata';
+      case 'video_source_scrape_phase_applying':
+        return 'Saving metadata';
+      case 'video_source_scrape_phase_writing_sidecars':
+        return 'Writing sidecars';
+      case 'video_source_scrape_status_interrupted':
+        return 'Interrupted';
+      case 'video_source_scrape_global_provider':
+        return 'Default metadata source';
+      case 'video_source_scrape_global_provider_hint':
+        return 'Used by video sources that inherit the global setting';
+      case 'video_source_scrape_fanart_key':
+        return 'Fanart API key';
+      case 'video_source_scrape_fanart_key_hint':
+        return 'Optional key used to fill missing artwork from Fanart';
+      case 'video_source_scrape_bangumi_token':
+        return 'Bangumi access token';
+      case 'video_source_scrape_bangumi_token_hint':
+        return 'Optional access token for the official Bangumi API v0';
+      case 'video_source_scrape_douban_endpoint':
+        return 'Authorized Douban API endpoint';
+      case 'video_source_scrape_douban_endpoint_hint':
+        return 'Douban is unavailable unless both an authorized endpoint and token are configured';
+      case 'video_source_scrape_douban_token':
+        return 'Authorized Douban API token';
+      case 'video_source_scrape_douban_token_hint':
+        return 'Douban is unavailable unless both an authorized endpoint and token are configured';
+      case 'video_source_scrape_locale':
+        return 'Metadata language';
+      case 'video_source_scrape_locale_hint':
+        return 'Preferred language for titles, summaries and images';
+      case 'video_source_scrape_confirmation_title':
+        return 'Confirm metadata match';
+      case 'video_source_scrape_confirmation_hint':
+        return 'Multiple exact matches were found. Choose the correct work to save its provider binding.';
+      case 'video_source_scrape_confirmation_skip':
+        return 'Skip this work';
+      case 'video_source_scrape_nfo_policy':
+        return 'NFO write policy';
+      case 'video_source_scrape_image_policy':
+        return 'Image write policy';
+      case 'video_source_scrape_policy_skip':
+        return 'Do not write';
+      case 'video_source_scrape_policy_missing_only':
+        return 'Only when missing';
+      case 'video_source_scrape_policy_overwrite':
+        return 'Update Hibiki files';
+      case 'video_source_scrape_external_overwrite':
+        return 'Allow protected sidecar overwrite';
+      case 'video_source_scrape_external_overwrite_hint':
+        return 'Third-party or user-modified files remain protected until you confirm each manual scrape batch again.';
+      case 'video_source_scrape_external_overwrite_confirm_title':
+        return 'Overwrite protected sidecars?';
+      case 'video_source_scrape_external_overwrite_confirm_body':
+        return 'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
       default:
         return null;
     }
@@ -169232,6 +171589,97 @@ extension on _StringsJa {
         return 'No text selected.';
       case 'video_library_empty_source_hint':
         return 'Add a video folder from Sources to build your library';
+      case 'video_source_scrape_action':
+        return 'Scrape this source';
+      case 'video_source_scrape_settings':
+        return 'Source scrape settings';
+      case 'video_source_scrape_provider':
+        return 'Primary metadata source';
+      case 'video_source_scrape_provider_inherit':
+        return 'Use global default';
+      case 'video_source_scrape_auto_after_scan':
+        return 'Scrape after scanning';
+      case 'video_source_scrape_auto_after_scan_hint':
+        return 'Run metadata scraping automatically after this source is scanned';
+      case 'video_source_scrape_write_nfo':
+        return 'Write NFO files';
+      case 'video_source_scrape_write_images':
+        return 'Write image files';
+      case 'video_source_scrape_use_fanart':
+        return 'Use Fanart images';
+      case 'video_source_scrape_progress':
+        return (
+                {required Object phase,
+                required Object current,
+                required Object total}) =>
+            '${phase} · ${current}/${total}';
+      case 'video_source_scrape_last_summary':
+        return (
+                {required Object status,
+                required Object succeeded,
+                required Object pending,
+                required Object failed}) =>
+            'Last scrape (${status}): ${succeeded} succeeded, ${pending} pending, ${failed} failed';
+      case 'video_source_scrape_phase_planning':
+        return 'Planning';
+      case 'video_source_scrape_phase_recognizing':
+        return 'Matching';
+      case 'video_source_scrape_phase_fetching':
+        return 'Fetching metadata';
+      case 'video_source_scrape_phase_applying':
+        return 'Saving metadata';
+      case 'video_source_scrape_phase_writing_sidecars':
+        return 'Writing sidecars';
+      case 'video_source_scrape_status_interrupted':
+        return 'Interrupted';
+      case 'video_source_scrape_global_provider':
+        return 'Default metadata source';
+      case 'video_source_scrape_global_provider_hint':
+        return 'Used by video sources that inherit the global setting';
+      case 'video_source_scrape_fanart_key':
+        return 'Fanart API key';
+      case 'video_source_scrape_fanart_key_hint':
+        return 'Optional key used to fill missing artwork from Fanart';
+      case 'video_source_scrape_bangumi_token':
+        return 'Bangumi access token';
+      case 'video_source_scrape_bangumi_token_hint':
+        return 'Optional access token for the official Bangumi API v0';
+      case 'video_source_scrape_douban_endpoint':
+        return 'Authorized Douban API endpoint';
+      case 'video_source_scrape_douban_endpoint_hint':
+        return 'Douban is unavailable unless both an authorized endpoint and token are configured';
+      case 'video_source_scrape_douban_token':
+        return 'Authorized Douban API token';
+      case 'video_source_scrape_douban_token_hint':
+        return 'Douban is unavailable unless both an authorized endpoint and token are configured';
+      case 'video_source_scrape_locale':
+        return 'Metadata language';
+      case 'video_source_scrape_locale_hint':
+        return 'Preferred language for titles, summaries and images';
+      case 'video_source_scrape_confirmation_title':
+        return 'Confirm metadata match';
+      case 'video_source_scrape_confirmation_hint':
+        return 'Multiple exact matches were found. Choose the correct work to save its provider binding.';
+      case 'video_source_scrape_confirmation_skip':
+        return 'Skip this work';
+      case 'video_source_scrape_nfo_policy':
+        return 'NFO write policy';
+      case 'video_source_scrape_image_policy':
+        return 'Image write policy';
+      case 'video_source_scrape_policy_skip':
+        return 'Do not write';
+      case 'video_source_scrape_policy_missing_only':
+        return 'Only when missing';
+      case 'video_source_scrape_policy_overwrite':
+        return 'Update Hibiki files';
+      case 'video_source_scrape_external_overwrite':
+        return 'Allow protected sidecar overwrite';
+      case 'video_source_scrape_external_overwrite_hint':
+        return 'Third-party or user-modified files remain protected until you confirm each manual scrape batch again.';
+      case 'video_source_scrape_external_overwrite_confirm_title':
+        return 'Overwrite protected sidecars?';
+      case 'video_source_scrape_external_overwrite_confirm_body':
+        return 'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
       default:
         return null;
     }
@@ -175599,6 +178047,97 @@ extension on _StringsKo {
         return 'No text selected.';
       case 'video_library_empty_source_hint':
         return 'Add a video folder from Sources to build your library';
+      case 'video_source_scrape_action':
+        return 'Scrape this source';
+      case 'video_source_scrape_settings':
+        return 'Source scrape settings';
+      case 'video_source_scrape_provider':
+        return 'Primary metadata source';
+      case 'video_source_scrape_provider_inherit':
+        return 'Use global default';
+      case 'video_source_scrape_auto_after_scan':
+        return 'Scrape after scanning';
+      case 'video_source_scrape_auto_after_scan_hint':
+        return 'Run metadata scraping automatically after this source is scanned';
+      case 'video_source_scrape_write_nfo':
+        return 'Write NFO files';
+      case 'video_source_scrape_write_images':
+        return 'Write image files';
+      case 'video_source_scrape_use_fanart':
+        return 'Use Fanart images';
+      case 'video_source_scrape_progress':
+        return (
+                {required Object phase,
+                required Object current,
+                required Object total}) =>
+            '${phase} · ${current}/${total}';
+      case 'video_source_scrape_last_summary':
+        return (
+                {required Object status,
+                required Object succeeded,
+                required Object pending,
+                required Object failed}) =>
+            'Last scrape (${status}): ${succeeded} succeeded, ${pending} pending, ${failed} failed';
+      case 'video_source_scrape_phase_planning':
+        return 'Planning';
+      case 'video_source_scrape_phase_recognizing':
+        return 'Matching';
+      case 'video_source_scrape_phase_fetching':
+        return 'Fetching metadata';
+      case 'video_source_scrape_phase_applying':
+        return 'Saving metadata';
+      case 'video_source_scrape_phase_writing_sidecars':
+        return 'Writing sidecars';
+      case 'video_source_scrape_status_interrupted':
+        return 'Interrupted';
+      case 'video_source_scrape_global_provider':
+        return 'Default metadata source';
+      case 'video_source_scrape_global_provider_hint':
+        return 'Used by video sources that inherit the global setting';
+      case 'video_source_scrape_fanart_key':
+        return 'Fanart API key';
+      case 'video_source_scrape_fanart_key_hint':
+        return 'Optional key used to fill missing artwork from Fanart';
+      case 'video_source_scrape_bangumi_token':
+        return 'Bangumi access token';
+      case 'video_source_scrape_bangumi_token_hint':
+        return 'Optional access token for the official Bangumi API v0';
+      case 'video_source_scrape_douban_endpoint':
+        return 'Authorized Douban API endpoint';
+      case 'video_source_scrape_douban_endpoint_hint':
+        return 'Douban is unavailable unless both an authorized endpoint and token are configured';
+      case 'video_source_scrape_douban_token':
+        return 'Authorized Douban API token';
+      case 'video_source_scrape_douban_token_hint':
+        return 'Douban is unavailable unless both an authorized endpoint and token are configured';
+      case 'video_source_scrape_locale':
+        return 'Metadata language';
+      case 'video_source_scrape_locale_hint':
+        return 'Preferred language for titles, summaries and images';
+      case 'video_source_scrape_confirmation_title':
+        return 'Confirm metadata match';
+      case 'video_source_scrape_confirmation_hint':
+        return 'Multiple exact matches were found. Choose the correct work to save its provider binding.';
+      case 'video_source_scrape_confirmation_skip':
+        return 'Skip this work';
+      case 'video_source_scrape_nfo_policy':
+        return 'NFO write policy';
+      case 'video_source_scrape_image_policy':
+        return 'Image write policy';
+      case 'video_source_scrape_policy_skip':
+        return 'Do not write';
+      case 'video_source_scrape_policy_missing_only':
+        return 'Only when missing';
+      case 'video_source_scrape_policy_overwrite':
+        return 'Update Hibiki files';
+      case 'video_source_scrape_external_overwrite':
+        return 'Allow protected sidecar overwrite';
+      case 'video_source_scrape_external_overwrite_hint':
+        return 'Third-party or user-modified files remain protected until you confirm each manual scrape batch again.';
+      case 'video_source_scrape_external_overwrite_confirm_title':
+        return 'Overwrite protected sidecars?';
+      case 'video_source_scrape_external_overwrite_confirm_body':
+        return 'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
       default:
         return null;
     }
@@ -181994,6 +184533,97 @@ extension on _StringsNl {
         return 'No text selected.';
       case 'video_library_empty_source_hint':
         return 'Add a video folder from Sources to build your library';
+      case 'video_source_scrape_action':
+        return 'Scrape this source';
+      case 'video_source_scrape_settings':
+        return 'Source scrape settings';
+      case 'video_source_scrape_provider':
+        return 'Primary metadata source';
+      case 'video_source_scrape_provider_inherit':
+        return 'Use global default';
+      case 'video_source_scrape_auto_after_scan':
+        return 'Scrape after scanning';
+      case 'video_source_scrape_auto_after_scan_hint':
+        return 'Run metadata scraping automatically after this source is scanned';
+      case 'video_source_scrape_write_nfo':
+        return 'Write NFO files';
+      case 'video_source_scrape_write_images':
+        return 'Write image files';
+      case 'video_source_scrape_use_fanart':
+        return 'Use Fanart images';
+      case 'video_source_scrape_progress':
+        return (
+                {required Object phase,
+                required Object current,
+                required Object total}) =>
+            '${phase} · ${current}/${total}';
+      case 'video_source_scrape_last_summary':
+        return (
+                {required Object status,
+                required Object succeeded,
+                required Object pending,
+                required Object failed}) =>
+            'Last scrape (${status}): ${succeeded} succeeded, ${pending} pending, ${failed} failed';
+      case 'video_source_scrape_phase_planning':
+        return 'Planning';
+      case 'video_source_scrape_phase_recognizing':
+        return 'Matching';
+      case 'video_source_scrape_phase_fetching':
+        return 'Fetching metadata';
+      case 'video_source_scrape_phase_applying':
+        return 'Saving metadata';
+      case 'video_source_scrape_phase_writing_sidecars':
+        return 'Writing sidecars';
+      case 'video_source_scrape_status_interrupted':
+        return 'Interrupted';
+      case 'video_source_scrape_global_provider':
+        return 'Default metadata source';
+      case 'video_source_scrape_global_provider_hint':
+        return 'Used by video sources that inherit the global setting';
+      case 'video_source_scrape_fanart_key':
+        return 'Fanart API key';
+      case 'video_source_scrape_fanart_key_hint':
+        return 'Optional key used to fill missing artwork from Fanart';
+      case 'video_source_scrape_bangumi_token':
+        return 'Bangumi access token';
+      case 'video_source_scrape_bangumi_token_hint':
+        return 'Optional access token for the official Bangumi API v0';
+      case 'video_source_scrape_douban_endpoint':
+        return 'Authorized Douban API endpoint';
+      case 'video_source_scrape_douban_endpoint_hint':
+        return 'Douban is unavailable unless both an authorized endpoint and token are configured';
+      case 'video_source_scrape_douban_token':
+        return 'Authorized Douban API token';
+      case 'video_source_scrape_douban_token_hint':
+        return 'Douban is unavailable unless both an authorized endpoint and token are configured';
+      case 'video_source_scrape_locale':
+        return 'Metadata language';
+      case 'video_source_scrape_locale_hint':
+        return 'Preferred language for titles, summaries and images';
+      case 'video_source_scrape_confirmation_title':
+        return 'Confirm metadata match';
+      case 'video_source_scrape_confirmation_hint':
+        return 'Multiple exact matches were found. Choose the correct work to save its provider binding.';
+      case 'video_source_scrape_confirmation_skip':
+        return 'Skip this work';
+      case 'video_source_scrape_nfo_policy':
+        return 'NFO write policy';
+      case 'video_source_scrape_image_policy':
+        return 'Image write policy';
+      case 'video_source_scrape_policy_skip':
+        return 'Do not write';
+      case 'video_source_scrape_policy_missing_only':
+        return 'Only when missing';
+      case 'video_source_scrape_policy_overwrite':
+        return 'Update Hibiki files';
+      case 'video_source_scrape_external_overwrite':
+        return 'Allow protected sidecar overwrite';
+      case 'video_source_scrape_external_overwrite_hint':
+        return 'Third-party or user-modified files remain protected until you confirm each manual scrape batch again.';
+      case 'video_source_scrape_external_overwrite_confirm_title':
+        return 'Overwrite protected sidecars?';
+      case 'video_source_scrape_external_overwrite_confirm_body':
+        return 'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
       default:
         return null;
     }
@@ -188386,6 +191016,97 @@ extension on _StringsPtBr {
         return 'No text selected.';
       case 'video_library_empty_source_hint':
         return 'Add a video folder from Sources to build your library';
+      case 'video_source_scrape_action':
+        return 'Scrape this source';
+      case 'video_source_scrape_settings':
+        return 'Source scrape settings';
+      case 'video_source_scrape_provider':
+        return 'Primary metadata source';
+      case 'video_source_scrape_provider_inherit':
+        return 'Use global default';
+      case 'video_source_scrape_auto_after_scan':
+        return 'Scrape after scanning';
+      case 'video_source_scrape_auto_after_scan_hint':
+        return 'Run metadata scraping automatically after this source is scanned';
+      case 'video_source_scrape_write_nfo':
+        return 'Write NFO files';
+      case 'video_source_scrape_write_images':
+        return 'Write image files';
+      case 'video_source_scrape_use_fanart':
+        return 'Use Fanart images';
+      case 'video_source_scrape_progress':
+        return (
+                {required Object phase,
+                required Object current,
+                required Object total}) =>
+            '${phase} · ${current}/${total}';
+      case 'video_source_scrape_last_summary':
+        return (
+                {required Object status,
+                required Object succeeded,
+                required Object pending,
+                required Object failed}) =>
+            'Last scrape (${status}): ${succeeded} succeeded, ${pending} pending, ${failed} failed';
+      case 'video_source_scrape_phase_planning':
+        return 'Planning';
+      case 'video_source_scrape_phase_recognizing':
+        return 'Matching';
+      case 'video_source_scrape_phase_fetching':
+        return 'Fetching metadata';
+      case 'video_source_scrape_phase_applying':
+        return 'Saving metadata';
+      case 'video_source_scrape_phase_writing_sidecars':
+        return 'Writing sidecars';
+      case 'video_source_scrape_status_interrupted':
+        return 'Interrupted';
+      case 'video_source_scrape_global_provider':
+        return 'Default metadata source';
+      case 'video_source_scrape_global_provider_hint':
+        return 'Used by video sources that inherit the global setting';
+      case 'video_source_scrape_fanart_key':
+        return 'Fanart API key';
+      case 'video_source_scrape_fanart_key_hint':
+        return 'Optional key used to fill missing artwork from Fanart';
+      case 'video_source_scrape_bangumi_token':
+        return 'Bangumi access token';
+      case 'video_source_scrape_bangumi_token_hint':
+        return 'Optional access token for the official Bangumi API v0';
+      case 'video_source_scrape_douban_endpoint':
+        return 'Authorized Douban API endpoint';
+      case 'video_source_scrape_douban_endpoint_hint':
+        return 'Douban is unavailable unless both an authorized endpoint and token are configured';
+      case 'video_source_scrape_douban_token':
+        return 'Authorized Douban API token';
+      case 'video_source_scrape_douban_token_hint':
+        return 'Douban is unavailable unless both an authorized endpoint and token are configured';
+      case 'video_source_scrape_locale':
+        return 'Metadata language';
+      case 'video_source_scrape_locale_hint':
+        return 'Preferred language for titles, summaries and images';
+      case 'video_source_scrape_confirmation_title':
+        return 'Confirm metadata match';
+      case 'video_source_scrape_confirmation_hint':
+        return 'Multiple exact matches were found. Choose the correct work to save its provider binding.';
+      case 'video_source_scrape_confirmation_skip':
+        return 'Skip this work';
+      case 'video_source_scrape_nfo_policy':
+        return 'NFO write policy';
+      case 'video_source_scrape_image_policy':
+        return 'Image write policy';
+      case 'video_source_scrape_policy_skip':
+        return 'Do not write';
+      case 'video_source_scrape_policy_missing_only':
+        return 'Only when missing';
+      case 'video_source_scrape_policy_overwrite':
+        return 'Update Hibiki files';
+      case 'video_source_scrape_external_overwrite':
+        return 'Allow protected sidecar overwrite';
+      case 'video_source_scrape_external_overwrite_hint':
+        return 'Third-party or user-modified files remain protected until you confirm each manual scrape batch again.';
+      case 'video_source_scrape_external_overwrite_confirm_title':
+        return 'Overwrite protected sidecars?';
+      case 'video_source_scrape_external_overwrite_confirm_body':
+        return 'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
       default:
         return null;
     }
@@ -194783,6 +197504,97 @@ extension on _StringsRu {
         return 'No text selected.';
       case 'video_library_empty_source_hint':
         return 'Add a video folder from Sources to build your library';
+      case 'video_source_scrape_action':
+        return 'Scrape this source';
+      case 'video_source_scrape_settings':
+        return 'Source scrape settings';
+      case 'video_source_scrape_provider':
+        return 'Primary metadata source';
+      case 'video_source_scrape_provider_inherit':
+        return 'Use global default';
+      case 'video_source_scrape_auto_after_scan':
+        return 'Scrape after scanning';
+      case 'video_source_scrape_auto_after_scan_hint':
+        return 'Run metadata scraping automatically after this source is scanned';
+      case 'video_source_scrape_write_nfo':
+        return 'Write NFO files';
+      case 'video_source_scrape_write_images':
+        return 'Write image files';
+      case 'video_source_scrape_use_fanart':
+        return 'Use Fanart images';
+      case 'video_source_scrape_progress':
+        return (
+                {required Object phase,
+                required Object current,
+                required Object total}) =>
+            '${phase} · ${current}/${total}';
+      case 'video_source_scrape_last_summary':
+        return (
+                {required Object status,
+                required Object succeeded,
+                required Object pending,
+                required Object failed}) =>
+            'Last scrape (${status}): ${succeeded} succeeded, ${pending} pending, ${failed} failed';
+      case 'video_source_scrape_phase_planning':
+        return 'Planning';
+      case 'video_source_scrape_phase_recognizing':
+        return 'Matching';
+      case 'video_source_scrape_phase_fetching':
+        return 'Fetching metadata';
+      case 'video_source_scrape_phase_applying':
+        return 'Saving metadata';
+      case 'video_source_scrape_phase_writing_sidecars':
+        return 'Writing sidecars';
+      case 'video_source_scrape_status_interrupted':
+        return 'Interrupted';
+      case 'video_source_scrape_global_provider':
+        return 'Default metadata source';
+      case 'video_source_scrape_global_provider_hint':
+        return 'Used by video sources that inherit the global setting';
+      case 'video_source_scrape_fanart_key':
+        return 'Fanart API key';
+      case 'video_source_scrape_fanart_key_hint':
+        return 'Optional key used to fill missing artwork from Fanart';
+      case 'video_source_scrape_bangumi_token':
+        return 'Bangumi access token';
+      case 'video_source_scrape_bangumi_token_hint':
+        return 'Optional access token for the official Bangumi API v0';
+      case 'video_source_scrape_douban_endpoint':
+        return 'Authorized Douban API endpoint';
+      case 'video_source_scrape_douban_endpoint_hint':
+        return 'Douban is unavailable unless both an authorized endpoint and token are configured';
+      case 'video_source_scrape_douban_token':
+        return 'Authorized Douban API token';
+      case 'video_source_scrape_douban_token_hint':
+        return 'Douban is unavailable unless both an authorized endpoint and token are configured';
+      case 'video_source_scrape_locale':
+        return 'Metadata language';
+      case 'video_source_scrape_locale_hint':
+        return 'Preferred language for titles, summaries and images';
+      case 'video_source_scrape_confirmation_title':
+        return 'Confirm metadata match';
+      case 'video_source_scrape_confirmation_hint':
+        return 'Multiple exact matches were found. Choose the correct work to save its provider binding.';
+      case 'video_source_scrape_confirmation_skip':
+        return 'Skip this work';
+      case 'video_source_scrape_nfo_policy':
+        return 'NFO write policy';
+      case 'video_source_scrape_image_policy':
+        return 'Image write policy';
+      case 'video_source_scrape_policy_skip':
+        return 'Do not write';
+      case 'video_source_scrape_policy_missing_only':
+        return 'Only when missing';
+      case 'video_source_scrape_policy_overwrite':
+        return 'Update Hibiki files';
+      case 'video_source_scrape_external_overwrite':
+        return 'Allow protected sidecar overwrite';
+      case 'video_source_scrape_external_overwrite_hint':
+        return 'Third-party or user-modified files remain protected until you confirm each manual scrape batch again.';
+      case 'video_source_scrape_external_overwrite_confirm_title':
+        return 'Overwrite protected sidecars?';
+      case 'video_source_scrape_external_overwrite_confirm_body':
+        return 'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
       default:
         return null;
     }
@@ -201163,6 +203975,97 @@ extension on _StringsTh {
         return 'No text selected.';
       case 'video_library_empty_source_hint':
         return 'Add a video folder from Sources to build your library';
+      case 'video_source_scrape_action':
+        return 'Scrape this source';
+      case 'video_source_scrape_settings':
+        return 'Source scrape settings';
+      case 'video_source_scrape_provider':
+        return 'Primary metadata source';
+      case 'video_source_scrape_provider_inherit':
+        return 'Use global default';
+      case 'video_source_scrape_auto_after_scan':
+        return 'Scrape after scanning';
+      case 'video_source_scrape_auto_after_scan_hint':
+        return 'Run metadata scraping automatically after this source is scanned';
+      case 'video_source_scrape_write_nfo':
+        return 'Write NFO files';
+      case 'video_source_scrape_write_images':
+        return 'Write image files';
+      case 'video_source_scrape_use_fanart':
+        return 'Use Fanart images';
+      case 'video_source_scrape_progress':
+        return (
+                {required Object phase,
+                required Object current,
+                required Object total}) =>
+            '${phase} · ${current}/${total}';
+      case 'video_source_scrape_last_summary':
+        return (
+                {required Object status,
+                required Object succeeded,
+                required Object pending,
+                required Object failed}) =>
+            'Last scrape (${status}): ${succeeded} succeeded, ${pending} pending, ${failed} failed';
+      case 'video_source_scrape_phase_planning':
+        return 'Planning';
+      case 'video_source_scrape_phase_recognizing':
+        return 'Matching';
+      case 'video_source_scrape_phase_fetching':
+        return 'Fetching metadata';
+      case 'video_source_scrape_phase_applying':
+        return 'Saving metadata';
+      case 'video_source_scrape_phase_writing_sidecars':
+        return 'Writing sidecars';
+      case 'video_source_scrape_status_interrupted':
+        return 'Interrupted';
+      case 'video_source_scrape_global_provider':
+        return 'Default metadata source';
+      case 'video_source_scrape_global_provider_hint':
+        return 'Used by video sources that inherit the global setting';
+      case 'video_source_scrape_fanart_key':
+        return 'Fanart API key';
+      case 'video_source_scrape_fanart_key_hint':
+        return 'Optional key used to fill missing artwork from Fanart';
+      case 'video_source_scrape_bangumi_token':
+        return 'Bangumi access token';
+      case 'video_source_scrape_bangumi_token_hint':
+        return 'Optional access token for the official Bangumi API v0';
+      case 'video_source_scrape_douban_endpoint':
+        return 'Authorized Douban API endpoint';
+      case 'video_source_scrape_douban_endpoint_hint':
+        return 'Douban is unavailable unless both an authorized endpoint and token are configured';
+      case 'video_source_scrape_douban_token':
+        return 'Authorized Douban API token';
+      case 'video_source_scrape_douban_token_hint':
+        return 'Douban is unavailable unless both an authorized endpoint and token are configured';
+      case 'video_source_scrape_locale':
+        return 'Metadata language';
+      case 'video_source_scrape_locale_hint':
+        return 'Preferred language for titles, summaries and images';
+      case 'video_source_scrape_confirmation_title':
+        return 'Confirm metadata match';
+      case 'video_source_scrape_confirmation_hint':
+        return 'Multiple exact matches were found. Choose the correct work to save its provider binding.';
+      case 'video_source_scrape_confirmation_skip':
+        return 'Skip this work';
+      case 'video_source_scrape_nfo_policy':
+        return 'NFO write policy';
+      case 'video_source_scrape_image_policy':
+        return 'Image write policy';
+      case 'video_source_scrape_policy_skip':
+        return 'Do not write';
+      case 'video_source_scrape_policy_missing_only':
+        return 'Only when missing';
+      case 'video_source_scrape_policy_overwrite':
+        return 'Update Hibiki files';
+      case 'video_source_scrape_external_overwrite':
+        return 'Allow protected sidecar overwrite';
+      case 'video_source_scrape_external_overwrite_hint':
+        return 'Third-party or user-modified files remain protected until you confirm each manual scrape batch again.';
+      case 'video_source_scrape_external_overwrite_confirm_title':
+        return 'Overwrite protected sidecars?';
+      case 'video_source_scrape_external_overwrite_confirm_body':
+        return 'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
       default:
         return null;
     }
@@ -207552,6 +210455,97 @@ extension on _StringsTr {
         return 'No text selected.';
       case 'video_library_empty_source_hint':
         return 'Add a video folder from Sources to build your library';
+      case 'video_source_scrape_action':
+        return 'Scrape this source';
+      case 'video_source_scrape_settings':
+        return 'Source scrape settings';
+      case 'video_source_scrape_provider':
+        return 'Primary metadata source';
+      case 'video_source_scrape_provider_inherit':
+        return 'Use global default';
+      case 'video_source_scrape_auto_after_scan':
+        return 'Scrape after scanning';
+      case 'video_source_scrape_auto_after_scan_hint':
+        return 'Run metadata scraping automatically after this source is scanned';
+      case 'video_source_scrape_write_nfo':
+        return 'Write NFO files';
+      case 'video_source_scrape_write_images':
+        return 'Write image files';
+      case 'video_source_scrape_use_fanart':
+        return 'Use Fanart images';
+      case 'video_source_scrape_progress':
+        return (
+                {required Object phase,
+                required Object current,
+                required Object total}) =>
+            '${phase} · ${current}/${total}';
+      case 'video_source_scrape_last_summary':
+        return (
+                {required Object status,
+                required Object succeeded,
+                required Object pending,
+                required Object failed}) =>
+            'Last scrape (${status}): ${succeeded} succeeded, ${pending} pending, ${failed} failed';
+      case 'video_source_scrape_phase_planning':
+        return 'Planning';
+      case 'video_source_scrape_phase_recognizing':
+        return 'Matching';
+      case 'video_source_scrape_phase_fetching':
+        return 'Fetching metadata';
+      case 'video_source_scrape_phase_applying':
+        return 'Saving metadata';
+      case 'video_source_scrape_phase_writing_sidecars':
+        return 'Writing sidecars';
+      case 'video_source_scrape_status_interrupted':
+        return 'Interrupted';
+      case 'video_source_scrape_global_provider':
+        return 'Default metadata source';
+      case 'video_source_scrape_global_provider_hint':
+        return 'Used by video sources that inherit the global setting';
+      case 'video_source_scrape_fanart_key':
+        return 'Fanart API key';
+      case 'video_source_scrape_fanart_key_hint':
+        return 'Optional key used to fill missing artwork from Fanart';
+      case 'video_source_scrape_bangumi_token':
+        return 'Bangumi access token';
+      case 'video_source_scrape_bangumi_token_hint':
+        return 'Optional access token for the official Bangumi API v0';
+      case 'video_source_scrape_douban_endpoint':
+        return 'Authorized Douban API endpoint';
+      case 'video_source_scrape_douban_endpoint_hint':
+        return 'Douban is unavailable unless both an authorized endpoint and token are configured';
+      case 'video_source_scrape_douban_token':
+        return 'Authorized Douban API token';
+      case 'video_source_scrape_douban_token_hint':
+        return 'Douban is unavailable unless both an authorized endpoint and token are configured';
+      case 'video_source_scrape_locale':
+        return 'Metadata language';
+      case 'video_source_scrape_locale_hint':
+        return 'Preferred language for titles, summaries and images';
+      case 'video_source_scrape_confirmation_title':
+        return 'Confirm metadata match';
+      case 'video_source_scrape_confirmation_hint':
+        return 'Multiple exact matches were found. Choose the correct work to save its provider binding.';
+      case 'video_source_scrape_confirmation_skip':
+        return 'Skip this work';
+      case 'video_source_scrape_nfo_policy':
+        return 'NFO write policy';
+      case 'video_source_scrape_image_policy':
+        return 'Image write policy';
+      case 'video_source_scrape_policy_skip':
+        return 'Do not write';
+      case 'video_source_scrape_policy_missing_only':
+        return 'Only when missing';
+      case 'video_source_scrape_policy_overwrite':
+        return 'Update Hibiki files';
+      case 'video_source_scrape_external_overwrite':
+        return 'Allow protected sidecar overwrite';
+      case 'video_source_scrape_external_overwrite_hint':
+        return 'Third-party or user-modified files remain protected until you confirm each manual scrape batch again.';
+      case 'video_source_scrape_external_overwrite_confirm_title':
+        return 'Overwrite protected sidecars?';
+      case 'video_source_scrape_external_overwrite_confirm_body':
+        return 'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
       default:
         return null;
     }
@@ -213937,6 +216931,97 @@ extension on _StringsVi {
         return 'No text selected.';
       case 'video_library_empty_source_hint':
         return 'Add a video folder from Sources to build your library';
+      case 'video_source_scrape_action':
+        return 'Scrape this source';
+      case 'video_source_scrape_settings':
+        return 'Source scrape settings';
+      case 'video_source_scrape_provider':
+        return 'Primary metadata source';
+      case 'video_source_scrape_provider_inherit':
+        return 'Use global default';
+      case 'video_source_scrape_auto_after_scan':
+        return 'Scrape after scanning';
+      case 'video_source_scrape_auto_after_scan_hint':
+        return 'Run metadata scraping automatically after this source is scanned';
+      case 'video_source_scrape_write_nfo':
+        return 'Write NFO files';
+      case 'video_source_scrape_write_images':
+        return 'Write image files';
+      case 'video_source_scrape_use_fanart':
+        return 'Use Fanart images';
+      case 'video_source_scrape_progress':
+        return (
+                {required Object phase,
+                required Object current,
+                required Object total}) =>
+            '${phase} · ${current}/${total}';
+      case 'video_source_scrape_last_summary':
+        return (
+                {required Object status,
+                required Object succeeded,
+                required Object pending,
+                required Object failed}) =>
+            'Last scrape (${status}): ${succeeded} succeeded, ${pending} pending, ${failed} failed';
+      case 'video_source_scrape_phase_planning':
+        return 'Planning';
+      case 'video_source_scrape_phase_recognizing':
+        return 'Matching';
+      case 'video_source_scrape_phase_fetching':
+        return 'Fetching metadata';
+      case 'video_source_scrape_phase_applying':
+        return 'Saving metadata';
+      case 'video_source_scrape_phase_writing_sidecars':
+        return 'Writing sidecars';
+      case 'video_source_scrape_status_interrupted':
+        return 'Interrupted';
+      case 'video_source_scrape_global_provider':
+        return 'Default metadata source';
+      case 'video_source_scrape_global_provider_hint':
+        return 'Used by video sources that inherit the global setting';
+      case 'video_source_scrape_fanart_key':
+        return 'Fanart API key';
+      case 'video_source_scrape_fanart_key_hint':
+        return 'Optional key used to fill missing artwork from Fanart';
+      case 'video_source_scrape_bangumi_token':
+        return 'Bangumi access token';
+      case 'video_source_scrape_bangumi_token_hint':
+        return 'Optional access token for the official Bangumi API v0';
+      case 'video_source_scrape_douban_endpoint':
+        return 'Authorized Douban API endpoint';
+      case 'video_source_scrape_douban_endpoint_hint':
+        return 'Douban is unavailable unless both an authorized endpoint and token are configured';
+      case 'video_source_scrape_douban_token':
+        return 'Authorized Douban API token';
+      case 'video_source_scrape_douban_token_hint':
+        return 'Douban is unavailable unless both an authorized endpoint and token are configured';
+      case 'video_source_scrape_locale':
+        return 'Metadata language';
+      case 'video_source_scrape_locale_hint':
+        return 'Preferred language for titles, summaries and images';
+      case 'video_source_scrape_confirmation_title':
+        return 'Confirm metadata match';
+      case 'video_source_scrape_confirmation_hint':
+        return 'Multiple exact matches were found. Choose the correct work to save its provider binding.';
+      case 'video_source_scrape_confirmation_skip':
+        return 'Skip this work';
+      case 'video_source_scrape_nfo_policy':
+        return 'NFO write policy';
+      case 'video_source_scrape_image_policy':
+        return 'Image write policy';
+      case 'video_source_scrape_policy_skip':
+        return 'Do not write';
+      case 'video_source_scrape_policy_missing_only':
+        return 'Only when missing';
+      case 'video_source_scrape_policy_overwrite':
+        return 'Update Hibiki files';
+      case 'video_source_scrape_external_overwrite':
+        return 'Allow protected sidecar overwrite';
+      case 'video_source_scrape_external_overwrite_hint':
+        return 'Third-party or user-modified files remain protected until you confirm each manual scrape batch again.';
+      case 'video_source_scrape_external_overwrite_confirm_title':
+        return 'Overwrite protected sidecars?';
+      case 'video_source_scrape_external_overwrite_confirm_body':
+        return 'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
       default:
         return null;
     }
@@ -220268,6 +223353,97 @@ extension on _StringsZhCn {
         return '未选中文本。';
       case 'video_library_empty_source_hint':
         return '请从“来源”添加视频文件夹以建立媒体库';
+      case 'video_source_scrape_action':
+        return '刮削此来源';
+      case 'video_source_scrape_settings':
+        return '来源刮削设置';
+      case 'video_source_scrape_provider':
+        return '主刮削来源';
+      case 'video_source_scrape_provider_inherit':
+        return '继承全局默认';
+      case 'video_source_scrape_auto_after_scan':
+        return '扫描后自动刮削';
+      case 'video_source_scrape_auto_after_scan_hint':
+        return '扫描此来源完成后自动刮削作品资料';
+      case 'video_source_scrape_write_nfo':
+        return '写入 NFO 文件';
+      case 'video_source_scrape_write_images':
+        return '写入图片文件';
+      case 'video_source_scrape_use_fanart':
+        return '使用 Fanart 图片';
+      case 'video_source_scrape_progress':
+        return (
+                {required Object phase,
+                required Object current,
+                required Object total}) =>
+            '${phase} · ${current}/${total}';
+      case 'video_source_scrape_last_summary':
+        return (
+                {required Object status,
+                required Object succeeded,
+                required Object pending,
+                required Object failed}) =>
+            '上次刮削（${status}）：成功 ${succeeded}，待确认 ${pending}，失败 ${failed}';
+      case 'video_source_scrape_phase_planning':
+        return '准备中';
+      case 'video_source_scrape_phase_recognizing':
+        return '识别匹配中';
+      case 'video_source_scrape_phase_fetching':
+        return '获取资料中';
+      case 'video_source_scrape_phase_applying':
+        return '保存资料中';
+      case 'video_source_scrape_phase_writing_sidecars':
+        return '写入 NFO 与图片';
+      case 'video_source_scrape_status_interrupted':
+        return '已中断';
+      case 'video_source_scrape_global_provider':
+        return '视频默认刮削来源';
+      case 'video_source_scrape_global_provider_hint':
+        return '供选择“继承全局默认”的视频来源使用';
+      case 'video_source_scrape_fanart_key':
+        return 'Fanart API Key';
+      case 'video_source_scrape_fanart_key_hint':
+        return '可选，用于从 Fanart 补充缺少的图片';
+      case 'video_source_scrape_bangumi_token':
+        return 'Bangumi 访问令牌';
+      case 'video_source_scrape_bangumi_token_hint':
+        return '可选，用于访问 Bangumi 官方 v0 API';
+      case 'video_source_scrape_douban_endpoint':
+        return '已授权的豆瓣 API 端点';
+      case 'video_source_scrape_douban_endpoint_hint':
+        return '仅当已授权端点和令牌都已配置时豆瓣来源才可用';
+      case 'video_source_scrape_douban_token':
+        return '已授权的豆瓣 API 令牌';
+      case 'video_source_scrape_douban_token_hint':
+        return '仅当已授权端点和令牌都已配置时豆瓣来源才可用';
+      case 'video_source_scrape_locale':
+        return '资料语言';
+      case 'video_source_scrape_locale_hint':
+        return '标题、简介与图片的首选语言';
+      case 'video_source_scrape_confirmation_title':
+        return '确认资料匹配';
+      case 'video_source_scrape_confirmation_hint':
+        return '找到多个严格匹配结果。请选择正确作品，Hibiki 会保存其来源绑定。';
+      case 'video_source_scrape_confirmation_skip':
+        return '跳过此作品';
+      case 'video_source_scrape_nfo_policy':
+        return 'NFO 写入策略';
+      case 'video_source_scrape_image_policy':
+        return '图片写入策略';
+      case 'video_source_scrape_policy_skip':
+        return '不写入';
+      case 'video_source_scrape_policy_missing_only':
+        return '仅缺失时写入';
+      case 'video_source_scrape_policy_overwrite':
+        return '更新 Hibiki 生成物';
+      case 'video_source_scrape_external_overwrite':
+        return '允许覆盖受保护的 sidecar';
+      case 'video_source_scrape_external_overwrite_hint':
+        return '第三方或用户修改过的文件仍受保护；每次手动刮削批次都必须再次确认。';
+      case 'video_source_scrape_external_overwrite_confirm_title':
+        return '覆盖受保护的 sidecar？';
+      case 'video_source_scrape_external_overwrite_confirm_body':
+        return '本批次可能替换第三方 NFO/图片，或你修改过的 Hibiki 生成物；视频文件本身不会改动。是否继续？';
       default:
         return null;
     }
@@ -226626,6 +229802,97 @@ extension on _StringsZhHk {
         return 'No text selected.';
       case 'video_library_empty_source_hint':
         return '請從「來源」加入影片資料夾以建立媒體庫';
+      case 'video_source_scrape_action':
+        return 'Scrape this source';
+      case 'video_source_scrape_settings':
+        return 'Source scrape settings';
+      case 'video_source_scrape_provider':
+        return 'Primary metadata source';
+      case 'video_source_scrape_provider_inherit':
+        return 'Use global default';
+      case 'video_source_scrape_auto_after_scan':
+        return 'Scrape after scanning';
+      case 'video_source_scrape_auto_after_scan_hint':
+        return 'Run metadata scraping automatically after this source is scanned';
+      case 'video_source_scrape_write_nfo':
+        return 'Write NFO files';
+      case 'video_source_scrape_write_images':
+        return 'Write image files';
+      case 'video_source_scrape_use_fanart':
+        return 'Use Fanart images';
+      case 'video_source_scrape_progress':
+        return (
+                {required Object phase,
+                required Object current,
+                required Object total}) =>
+            '${phase} · ${current}/${total}';
+      case 'video_source_scrape_last_summary':
+        return (
+                {required Object status,
+                required Object succeeded,
+                required Object pending,
+                required Object failed}) =>
+            'Last scrape (${status}): ${succeeded} succeeded, ${pending} pending, ${failed} failed';
+      case 'video_source_scrape_phase_planning':
+        return 'Planning';
+      case 'video_source_scrape_phase_recognizing':
+        return 'Matching';
+      case 'video_source_scrape_phase_fetching':
+        return 'Fetching metadata';
+      case 'video_source_scrape_phase_applying':
+        return 'Saving metadata';
+      case 'video_source_scrape_phase_writing_sidecars':
+        return 'Writing sidecars';
+      case 'video_source_scrape_status_interrupted':
+        return 'Interrupted';
+      case 'video_source_scrape_global_provider':
+        return 'Default metadata source';
+      case 'video_source_scrape_global_provider_hint':
+        return 'Used by video sources that inherit the global setting';
+      case 'video_source_scrape_fanart_key':
+        return 'Fanart API key';
+      case 'video_source_scrape_fanart_key_hint':
+        return 'Optional key used to fill missing artwork from Fanart';
+      case 'video_source_scrape_bangumi_token':
+        return 'Bangumi access token';
+      case 'video_source_scrape_bangumi_token_hint':
+        return 'Optional access token for the official Bangumi API v0';
+      case 'video_source_scrape_douban_endpoint':
+        return 'Authorized Douban API endpoint';
+      case 'video_source_scrape_douban_endpoint_hint':
+        return 'Douban is unavailable unless both an authorized endpoint and token are configured';
+      case 'video_source_scrape_douban_token':
+        return 'Authorized Douban API token';
+      case 'video_source_scrape_douban_token_hint':
+        return 'Douban is unavailable unless both an authorized endpoint and token are configured';
+      case 'video_source_scrape_locale':
+        return 'Metadata language';
+      case 'video_source_scrape_locale_hint':
+        return 'Preferred language for titles, summaries and images';
+      case 'video_source_scrape_confirmation_title':
+        return 'Confirm metadata match';
+      case 'video_source_scrape_confirmation_hint':
+        return 'Multiple exact matches were found. Choose the correct work to save its provider binding.';
+      case 'video_source_scrape_confirmation_skip':
+        return 'Skip this work';
+      case 'video_source_scrape_nfo_policy':
+        return 'NFO write policy';
+      case 'video_source_scrape_image_policy':
+        return 'Image write policy';
+      case 'video_source_scrape_policy_skip':
+        return 'Do not write';
+      case 'video_source_scrape_policy_missing_only':
+        return 'Only when missing';
+      case 'video_source_scrape_policy_overwrite':
+        return 'Update Hibiki files';
+      case 'video_source_scrape_external_overwrite':
+        return 'Allow protected sidecar overwrite';
+      case 'video_source_scrape_external_overwrite_hint':
+        return 'Third-party or user-modified files remain protected until you confirm each manual scrape batch again.';
+      case 'video_source_scrape_external_overwrite_confirm_title':
+        return 'Overwrite protected sidecars?';
+      case 'video_source_scrape_external_overwrite_confirm_body':
+        return 'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
       default:
         return null;
     }
