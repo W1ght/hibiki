@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 53686 (3158 per locale)
+/// Strings: 53805 (3165 per locale)
 ///
-/// Built on 2026-08-08 at 12:09 UTC
+/// Built on 2026-08-08 at 14:32 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -4258,6 +4258,13 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_source_scrape_waiting_confirmation =>
       'Waiting for your confirmation';
   String get video_source_scrape_phase_scanning => 'Scanning source';
+  String get video_library_all_videos => 'All videos';
+  String get video_work_voice_roles => 'Voice cast and characters';
+  String get video_work_cast_crew => 'Cast and crew';
+  String get video_work_trailers => 'Trailers';
+  String get video_work_extras => 'Extras';
+  String get video_work_details => 'Details';
+  String get video_work_external_ids => 'External IDs';
 }
 
 // Path: <root>
@@ -11523,6 +11530,20 @@ class _StringsAr extends _StringsEn {
       'Waiting for your confirmation';
   @override
   String get video_source_scrape_phase_scanning => 'Scanning source';
+  @override
+  String get video_library_all_videos => 'All videos';
+  @override
+  String get video_work_voice_roles => 'Voice cast and characters';
+  @override
+  String get video_work_cast_crew => 'Cast and crew';
+  @override
+  String get video_work_trailers => 'Trailers';
+  @override
+  String get video_work_extras => 'Extras';
+  @override
+  String get video_work_details => 'Details';
+  @override
+  String get video_work_external_ids => 'External IDs';
 }
 
 // Path: <root>
@@ -18855,6 +18876,20 @@ class _StringsDe extends _StringsEn {
       'Waiting for your confirmation';
   @override
   String get video_source_scrape_phase_scanning => 'Scanning source';
+  @override
+  String get video_library_all_videos => 'All videos';
+  @override
+  String get video_work_voice_roles => 'Voice cast and characters';
+  @override
+  String get video_work_cast_crew => 'Cast and crew';
+  @override
+  String get video_work_trailers => 'Trailers';
+  @override
+  String get video_work_extras => 'Extras';
+  @override
+  String get video_work_details => 'Details';
+  @override
+  String get video_work_external_ids => 'External IDs';
 }
 
 // Path: <root>
@@ -26202,6 +26237,20 @@ class _StringsEs extends _StringsEn {
       'Waiting for your confirmation';
   @override
   String get video_source_scrape_phase_scanning => 'Scanning source';
+  @override
+  String get video_library_all_videos => 'All videos';
+  @override
+  String get video_work_voice_roles => 'Voice cast and characters';
+  @override
+  String get video_work_cast_crew => 'Cast and crew';
+  @override
+  String get video_work_trailers => 'Trailers';
+  @override
+  String get video_work_extras => 'Extras';
+  @override
+  String get video_work_details => 'Details';
+  @override
+  String get video_work_external_ids => 'External IDs';
 }
 
 // Path: <root>
@@ -33561,6 +33610,20 @@ class _StringsFr extends _StringsEn {
       'Waiting for your confirmation';
   @override
   String get video_source_scrape_phase_scanning => 'Scanning source';
+  @override
+  String get video_library_all_videos => 'All videos';
+  @override
+  String get video_work_voice_roles => 'Voice cast and characters';
+  @override
+  String get video_work_cast_crew => 'Cast and crew';
+  @override
+  String get video_work_trailers => 'Trailers';
+  @override
+  String get video_work_extras => 'Extras';
+  @override
+  String get video_work_details => 'Details';
+  @override
+  String get video_work_external_ids => 'External IDs';
 }
 
 // Path: <root>
@@ -40849,6 +40912,20 @@ class _StringsId extends _StringsEn {
       'Waiting for your confirmation';
   @override
   String get video_source_scrape_phase_scanning => 'Scanning source';
+  @override
+  String get video_library_all_videos => 'All videos';
+  @override
+  String get video_work_voice_roles => 'Voice cast and characters';
+  @override
+  String get video_work_cast_crew => 'Cast and crew';
+  @override
+  String get video_work_trailers => 'Trailers';
+  @override
+  String get video_work_extras => 'Extras';
+  @override
+  String get video_work_details => 'Details';
+  @override
+  String get video_work_external_ids => 'External IDs';
 }
 
 // Path: <root>
@@ -48183,6 +48260,20 @@ class _StringsIt extends _StringsEn {
       'Waiting for your confirmation';
   @override
   String get video_source_scrape_phase_scanning => 'Scanning source';
+  @override
+  String get video_library_all_videos => 'All videos';
+  @override
+  String get video_work_voice_roles => 'Voice cast and characters';
+  @override
+  String get video_work_cast_crew => 'Cast and crew';
+  @override
+  String get video_work_trailers => 'Trailers';
+  @override
+  String get video_work_extras => 'Extras';
+  @override
+  String get video_work_details => 'Details';
+  @override
+  String get video_work_external_ids => 'External IDs';
 }
 
 // Path: <root>
@@ -55334,6 +55425,20 @@ class _StringsJa extends _StringsEn {
       'Waiting for your confirmation';
   @override
   String get video_source_scrape_phase_scanning => 'Scanning source';
+  @override
+  String get video_library_all_videos => 'All videos';
+  @override
+  String get video_work_voice_roles => 'Voice cast and characters';
+  @override
+  String get video_work_cast_crew => 'Cast and crew';
+  @override
+  String get video_work_trailers => 'Trailers';
+  @override
+  String get video_work_extras => 'Extras';
+  @override
+  String get video_work_details => 'Details';
+  @override
+  String get video_work_external_ids => 'External IDs';
 }
 
 // Path: <root>
@@ -62487,6 +62592,20 @@ class _StringsKo extends _StringsEn {
       'Waiting for your confirmation';
   @override
   String get video_source_scrape_phase_scanning => 'Scanning source';
+  @override
+  String get video_library_all_videos => 'All videos';
+  @override
+  String get video_work_voice_roles => 'Voice cast and characters';
+  @override
+  String get video_work_cast_crew => 'Cast and crew';
+  @override
+  String get video_work_trailers => 'Trailers';
+  @override
+  String get video_work_extras => 'Extras';
+  @override
+  String get video_work_details => 'Details';
+  @override
+  String get video_work_external_ids => 'External IDs';
 }
 
 // Path: <root>
@@ -69801,6 +69920,20 @@ class _StringsNl extends _StringsEn {
       'Waiting for your confirmation';
   @override
   String get video_source_scrape_phase_scanning => 'Scanning source';
+  @override
+  String get video_library_all_videos => 'All videos';
+  @override
+  String get video_work_voice_roles => 'Voice cast and characters';
+  @override
+  String get video_work_cast_crew => 'Cast and crew';
+  @override
+  String get video_work_trailers => 'Trailers';
+  @override
+  String get video_work_extras => 'Extras';
+  @override
+  String get video_work_details => 'Details';
+  @override
+  String get video_work_external_ids => 'External IDs';
 }
 
 // Path: <root>
@@ -77128,6 +77261,20 @@ class _StringsPtBr extends _StringsEn {
       'Waiting for your confirmation';
   @override
   String get video_source_scrape_phase_scanning => 'Scanning source';
+  @override
+  String get video_library_all_videos => 'All videos';
+  @override
+  String get video_work_voice_roles => 'Voice cast and characters';
+  @override
+  String get video_work_cast_crew => 'Cast and crew';
+  @override
+  String get video_work_trailers => 'Trailers';
+  @override
+  String get video_work_extras => 'Extras';
+  @override
+  String get video_work_details => 'Details';
+  @override
+  String get video_work_external_ids => 'External IDs';
 }
 
 // Path: <root>
@@ -84439,6 +84586,20 @@ class _StringsRu extends _StringsEn {
       'Waiting for your confirmation';
   @override
   String get video_source_scrape_phase_scanning => 'Scanning source';
+  @override
+  String get video_library_all_videos => 'All videos';
+  @override
+  String get video_work_voice_roles => 'Voice cast and characters';
+  @override
+  String get video_work_cast_crew => 'Cast and crew';
+  @override
+  String get video_work_trailers => 'Trailers';
+  @override
+  String get video_work_extras => 'Extras';
+  @override
+  String get video_work_details => 'Details';
+  @override
+  String get video_work_external_ids => 'External IDs';
 }
 
 // Path: <root>
@@ -91698,6 +91859,20 @@ class _StringsTh extends _StringsEn {
       'Waiting for your confirmation';
   @override
   String get video_source_scrape_phase_scanning => 'Scanning source';
+  @override
+  String get video_library_all_videos => 'All videos';
+  @override
+  String get video_work_voice_roles => 'Voice cast and characters';
+  @override
+  String get video_work_cast_crew => 'Cast and crew';
+  @override
+  String get video_work_trailers => 'Trailers';
+  @override
+  String get video_work_extras => 'Extras';
+  @override
+  String get video_work_details => 'Details';
+  @override
+  String get video_work_external_ids => 'External IDs';
 }
 
 // Path: <root>
@@ -98989,6 +99164,20 @@ class _StringsTr extends _StringsEn {
       'Waiting for your confirmation';
   @override
   String get video_source_scrape_phase_scanning => 'Scanning source';
+  @override
+  String get video_library_all_videos => 'All videos';
+  @override
+  String get video_work_voice_roles => 'Voice cast and characters';
+  @override
+  String get video_work_cast_crew => 'Cast and crew';
+  @override
+  String get video_work_trailers => 'Trailers';
+  @override
+  String get video_work_extras => 'Extras';
+  @override
+  String get video_work_details => 'Details';
+  @override
+  String get video_work_external_ids => 'External IDs';
 }
 
 // Path: <root>
@@ -106265,6 +106454,20 @@ class _StringsVi extends _StringsEn {
       'Waiting for your confirmation';
   @override
   String get video_source_scrape_phase_scanning => 'Scanning source';
+  @override
+  String get video_library_all_videos => 'All videos';
+  @override
+  String get video_work_voice_roles => 'Voice cast and characters';
+  @override
+  String get video_work_cast_crew => 'Cast and crew';
+  @override
+  String get video_work_trailers => 'Trailers';
+  @override
+  String get video_work_extras => 'Extras';
+  @override
+  String get video_work_details => 'Details';
+  @override
+  String get video_work_external_ids => 'External IDs';
 }
 
 // Path: <root>
@@ -113031,6 +113234,20 @@ class _StringsZhCn extends _StringsEn {
   String get video_source_scrape_waiting_confirmation => '等待你的确认';
   @override
   String get video_source_scrape_phase_scanning => '扫描来源';
+  @override
+  String get video_library_all_videos => '全部视频';
+  @override
+  String get video_work_voice_roles => '声优与角色';
+  @override
+  String get video_work_cast_crew => '演职员';
+  @override
+  String get video_work_trailers => '预告片';
+  @override
+  String get video_work_extras => '花絮';
+  @override
+  String get video_work_details => '作品资料';
+  @override
+  String get video_work_external_ids => '外部 ID';
 }
 
 // Path: <root>
@@ -120102,6 +120319,20 @@ class _StringsZhHk extends _StringsEn {
       'Waiting for your confirmation';
   @override
   String get video_source_scrape_phase_scanning => 'Scanning source';
+  @override
+  String get video_library_all_videos => 'All videos';
+  @override
+  String get video_work_voice_roles => 'Voice cast and characters';
+  @override
+  String get video_work_cast_crew => 'Cast and crew';
+  @override
+  String get video_work_trailers => 'Trailers';
+  @override
+  String get video_work_extras => 'Extras';
+  @override
+  String get video_work_details => 'Details';
+  @override
+  String get video_work_external_ids => 'External IDs';
 }
 
 /// Flat map(s) containing all translations.
@@ -126587,6 +126818,20 @@ extension on _StringsEn {
         return 'Waiting for your confirmation';
       case 'video_source_scrape_phase_scanning':
         return 'Scanning source';
+      case 'video_library_all_videos':
+        return 'All videos';
+      case 'video_work_voice_roles':
+        return 'Voice cast and characters';
+      case 'video_work_cast_crew':
+        return 'Cast and crew';
+      case 'video_work_trailers':
+        return 'Trailers';
+      case 'video_work_extras':
+        return 'Extras';
+      case 'video_work_details':
+        return 'Details';
+      case 'video_work_external_ids':
+        return 'External IDs';
       default:
         return null;
     }
@@ -133070,6 +133315,20 @@ extension on _StringsAr {
         return 'Waiting for your confirmation';
       case 'video_source_scrape_phase_scanning':
         return 'Scanning source';
+      case 'video_library_all_videos':
+        return 'All videos';
+      case 'video_work_voice_roles':
+        return 'Voice cast and characters';
+      case 'video_work_cast_crew':
+        return 'Cast and crew';
+      case 'video_work_trailers':
+        return 'Trailers';
+      case 'video_work_extras':
+        return 'Extras';
+      case 'video_work_details':
+        return 'Details';
+      case 'video_work_external_ids':
+        return 'External IDs';
       default:
         return null;
     }
@@ -139575,6 +139834,20 @@ extension on _StringsDe {
         return 'Waiting for your confirmation';
       case 'video_source_scrape_phase_scanning':
         return 'Scanning source';
+      case 'video_library_all_videos':
+        return 'All videos';
+      case 'video_work_voice_roles':
+        return 'Voice cast and characters';
+      case 'video_work_cast_crew':
+        return 'Cast and crew';
+      case 'video_work_trailers':
+        return 'Trailers';
+      case 'video_work_extras':
+        return 'Extras';
+      case 'video_work_details':
+        return 'Details';
+      case 'video_work_external_ids':
+        return 'External IDs';
       default:
         return null;
     }
@@ -146079,6 +146352,20 @@ extension on _StringsEs {
         return 'Waiting for your confirmation';
       case 'video_source_scrape_phase_scanning':
         return 'Scanning source';
+      case 'video_library_all_videos':
+        return 'All videos';
+      case 'video_work_voice_roles':
+        return 'Voice cast and characters';
+      case 'video_work_cast_crew':
+        return 'Cast and crew';
+      case 'video_work_trailers':
+        return 'Trailers';
+      case 'video_work_extras':
+        return 'Extras';
+      case 'video_work_details':
+        return 'Details';
+      case 'video_work_external_ids':
+        return 'External IDs';
       default:
         return null;
     }
@@ -152589,6 +152876,20 @@ extension on _StringsFr {
         return 'Waiting for your confirmation';
       case 'video_source_scrape_phase_scanning':
         return 'Scanning source';
+      case 'video_library_all_videos':
+        return 'All videos';
+      case 'video_work_voice_roles':
+        return 'Voice cast and characters';
+      case 'video_work_cast_crew':
+        return 'Cast and crew';
+      case 'video_work_trailers':
+        return 'Trailers';
+      case 'video_work_extras':
+        return 'Extras';
+      case 'video_work_details':
+        return 'Details';
+      case 'video_work_external_ids':
+        return 'External IDs';
       default:
         return null;
     }
@@ -159081,6 +159382,20 @@ extension on _StringsId {
         return 'Waiting for your confirmation';
       case 'video_source_scrape_phase_scanning':
         return 'Scanning source';
+      case 'video_library_all_videos':
+        return 'All videos';
+      case 'video_work_voice_roles':
+        return 'Voice cast and characters';
+      case 'video_work_cast_crew':
+        return 'Cast and crew';
+      case 'video_work_trailers':
+        return 'Trailers';
+      case 'video_work_extras':
+        return 'Extras';
+      case 'video_work_details':
+        return 'Details';
+      case 'video_work_external_ids':
+        return 'External IDs';
       default:
         return null;
     }
@@ -165587,6 +165902,20 @@ extension on _StringsIt {
         return 'Waiting for your confirmation';
       case 'video_source_scrape_phase_scanning':
         return 'Scanning source';
+      case 'video_library_all_videos':
+        return 'All videos';
+      case 'video_work_voice_roles':
+        return 'Voice cast and characters';
+      case 'video_work_cast_crew':
+        return 'Cast and crew';
+      case 'video_work_trailers':
+        return 'Trailers';
+      case 'video_work_extras':
+        return 'Extras';
+      case 'video_work_details':
+        return 'Details';
+      case 'video_work_external_ids':
+        return 'External IDs';
       default:
         return null;
     }
@@ -172055,6 +172384,20 @@ extension on _StringsJa {
         return 'Waiting for your confirmation';
       case 'video_source_scrape_phase_scanning':
         return 'Scanning source';
+      case 'video_library_all_videos':
+        return 'All videos';
+      case 'video_work_voice_roles':
+        return 'Voice cast and characters';
+      case 'video_work_cast_crew':
+        return 'Cast and crew';
+      case 'video_work_trailers':
+        return 'Trailers';
+      case 'video_work_extras':
+        return 'Extras';
+      case 'video_work_details':
+        return 'Details';
+      case 'video_work_external_ids':
+        return 'External IDs';
       default:
         return null;
     }
@@ -178527,6 +178870,20 @@ extension on _StringsKo {
         return 'Waiting for your confirmation';
       case 'video_source_scrape_phase_scanning':
         return 'Scanning source';
+      case 'video_library_all_videos':
+        return 'All videos';
+      case 'video_work_voice_roles':
+        return 'Voice cast and characters';
+      case 'video_work_cast_crew':
+        return 'Cast and crew';
+      case 'video_work_trailers':
+        return 'Trailers';
+      case 'video_work_extras':
+        return 'Extras';
+      case 'video_work_details':
+        return 'Details';
+      case 'video_work_external_ids':
+        return 'External IDs';
       default:
         return null;
     }
@@ -185027,6 +185384,20 @@ extension on _StringsNl {
         return 'Waiting for your confirmation';
       case 'video_source_scrape_phase_scanning':
         return 'Scanning source';
+      case 'video_library_all_videos':
+        return 'All videos';
+      case 'video_work_voice_roles':
+        return 'Voice cast and characters';
+      case 'video_work_cast_crew':
+        return 'Cast and crew';
+      case 'video_work_trailers':
+        return 'Trailers';
+      case 'video_work_extras':
+        return 'Extras';
+      case 'video_work_details':
+        return 'Details';
+      case 'video_work_external_ids':
+        return 'External IDs';
       default:
         return null;
     }
@@ -191524,6 +191895,20 @@ extension on _StringsPtBr {
         return 'Waiting for your confirmation';
       case 'video_source_scrape_phase_scanning':
         return 'Scanning source';
+      case 'video_library_all_videos':
+        return 'All videos';
+      case 'video_work_voice_roles':
+        return 'Voice cast and characters';
+      case 'video_work_cast_crew':
+        return 'Cast and crew';
+      case 'video_work_trailers':
+        return 'Trailers';
+      case 'video_work_extras':
+        return 'Extras';
+      case 'video_work_details':
+        return 'Details';
+      case 'video_work_external_ids':
+        return 'External IDs';
       default:
         return null;
     }
@@ -198026,6 +198411,20 @@ extension on _StringsRu {
         return 'Waiting for your confirmation';
       case 'video_source_scrape_phase_scanning':
         return 'Scanning source';
+      case 'video_library_all_videos':
+        return 'All videos';
+      case 'video_work_voice_roles':
+        return 'Voice cast and characters';
+      case 'video_work_cast_crew':
+        return 'Cast and crew';
+      case 'video_work_trailers':
+        return 'Trailers';
+      case 'video_work_extras':
+        return 'Extras';
+      case 'video_work_details':
+        return 'Details';
+      case 'video_work_external_ids':
+        return 'External IDs';
       default:
         return null;
     }
@@ -204511,6 +204910,20 @@ extension on _StringsTh {
         return 'Waiting for your confirmation';
       case 'video_source_scrape_phase_scanning':
         return 'Scanning source';
+      case 'video_library_all_videos':
+        return 'All videos';
+      case 'video_work_voice_roles':
+        return 'Voice cast and characters';
+      case 'video_work_cast_crew':
+        return 'Cast and crew';
+      case 'video_work_trailers':
+        return 'Trailers';
+      case 'video_work_extras':
+        return 'Extras';
+      case 'video_work_details':
+        return 'Details';
+      case 'video_work_external_ids':
+        return 'External IDs';
       default:
         return null;
     }
@@ -211005,6 +211418,20 @@ extension on _StringsTr {
         return 'Waiting for your confirmation';
       case 'video_source_scrape_phase_scanning':
         return 'Scanning source';
+      case 'video_library_all_videos':
+        return 'All videos';
+      case 'video_work_voice_roles':
+        return 'Voice cast and characters';
+      case 'video_work_cast_crew':
+        return 'Cast and crew';
+      case 'video_work_trailers':
+        return 'Trailers';
+      case 'video_work_extras':
+        return 'Extras';
+      case 'video_work_details':
+        return 'Details';
+      case 'video_work_external_ids':
+        return 'External IDs';
       default:
         return null;
     }
@@ -217495,6 +217922,20 @@ extension on _StringsVi {
         return 'Waiting for your confirmation';
       case 'video_source_scrape_phase_scanning':
         return 'Scanning source';
+      case 'video_library_all_videos':
+        return 'All videos';
+      case 'video_work_voice_roles':
+        return 'Voice cast and characters';
+      case 'video_work_cast_crew':
+        return 'Cast and crew';
+      case 'video_work_trailers':
+        return 'Trailers';
+      case 'video_work_extras':
+        return 'Extras';
+      case 'video_work_details':
+        return 'Details';
+      case 'video_work_external_ids':
+        return 'External IDs';
       default:
         return null;
     }
@@ -223931,6 +224372,20 @@ extension on _StringsZhCn {
         return '等待你的确认';
       case 'video_source_scrape_phase_scanning':
         return '扫描来源';
+      case 'video_library_all_videos':
+        return '全部视频';
+      case 'video_work_voice_roles':
+        return '声优与角色';
+      case 'video_work_cast_crew':
+        return '演职员';
+      case 'video_work_trailers':
+        return '预告片';
+      case 'video_work_extras':
+        return '花絮';
+      case 'video_work_details':
+        return '作品资料';
+      case 'video_work_external_ids':
+        return '外部 ID';
       default:
         return null;
     }
@@ -230394,6 +230849,20 @@ extension on _StringsZhHk {
         return 'Waiting for your confirmation';
       case 'video_source_scrape_phase_scanning':
         return 'Scanning source';
+      case 'video_library_all_videos':
+        return 'All videos';
+      case 'video_work_voice_roles':
+        return 'Voice cast and characters';
+      case 'video_work_cast_crew':
+        return 'Cast and crew';
+      case 'video_work_trailers':
+        return 'Trailers';
+      case 'video_work_extras':
+        return 'Extras';
+      case 'video_work_details':
+        return 'Details';
+      case 'video_work_external_ids':
+        return 'External IDs';
       default:
         return null;
     }
