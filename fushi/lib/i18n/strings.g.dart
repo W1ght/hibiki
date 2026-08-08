@@ -3,7 +3,7 @@
 /// Locales: 17
 /// Strings: 53635 (3155 per locale)
 ///
-/// Built on 2026-08-07 at 17:50 UTC
+/// Built on 2026-08-08 at 05:44 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -371,7 +371,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get audio_source_edit_url => 'Edit audio source link';
   String audio_source_error({required Object detail}) =>
       'Audio source error: ${detail}';
-  String get audio_source_hibiki_interconnect => 'Fushi Interconnect';
+  String get audio_source_fushi_interconnect => 'Fushi Interconnect';
   String get audio_source_loopback_warning =>
       'Points at this device — re-point after switching machines';
   String audio_source_request_error({required Object detail}) =>
@@ -2467,7 +2467,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get sync_backend_dropbox => 'Dropbox';
   String get sync_backend_ftp => 'FTP';
   String get sync_backend_google_drive => 'Google Drive';
-  String get sync_backend_hibiki_server => 'Fushi Interconnect';
+  String get sync_backend_fushi_server => 'Fushi Interconnect';
   String get sync_backend_onedrive => 'OneDrive';
   String get sync_backend_sftp => 'SFTP';
   String get sync_backend_webdav => 'WebDAV';
@@ -2569,7 +2569,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get sync_pair_fingerprint_changed =>
       'Certificate changed — pairing aborted for safety (possible interception).';
   String get sync_pair_fingerprint_label => 'Certificate fingerprint';
-  String get sync_pair_not_hibiki =>
+  String get sync_pair_not_fushi =>
       'No Fushi device found at this address. The address was saved.';
   String get sync_pair_pairing => 'Pairing…';
   String get sync_pair_pin_label => 'Enter this PIN on the other device';
@@ -4605,7 +4605,7 @@ class _StringsAr extends _StringsEn {
   String audio_source_error({required Object detail}) =>
       'خطأ في مصدر الصوت: ${detail}';
   @override
-  String get audio_source_hibiki_interconnect => 'Fushi Interconnect';
+  String get audio_source_fushi_interconnect => 'Fushi Interconnect';
   @override
   String get audio_source_loopback_warning =>
       'Points at this device — re-point after switching machines';
@@ -8383,7 +8383,7 @@ class _StringsAr extends _StringsEn {
   @override
   String get sync_backend_google_drive => 'Google Drive';
   @override
-  String get sync_backend_hibiki_server => 'Fushi Interconnect';
+  String get sync_backend_fushi_server => 'Fushi Interconnect';
   @override
   String get sync_backend_onedrive => 'OneDrive';
   @override
@@ -8570,7 +8570,7 @@ class _StringsAr extends _StringsEn {
   @override
   String get sync_pair_fingerprint_label => 'Certificate fingerprint';
   @override
-  String get sync_pair_not_hibiki =>
+  String get sync_pair_not_fushi =>
       'No Fushi device found at this address. The address was saved.';
   @override
   String get sync_pair_pairing => 'Pairing…';
@@ -11869,7 +11869,7 @@ class _StringsDe extends _StringsEn {
   String audio_source_error({required Object detail}) =>
       'Audioquellen-Fehler: ${detail}';
   @override
-  String get audio_source_hibiki_interconnect => 'Fushi Interconnect';
+  String get audio_source_fushi_interconnect => 'Fushi Interconnect';
   @override
   String get audio_source_loopback_warning =>
       'Points at this device — re-point after switching machines';
@@ -15688,7 +15688,7 @@ class _StringsDe extends _StringsEn {
   @override
   String get sync_backend_google_drive => 'Google Drive';
   @override
-  String get sync_backend_hibiki_server => 'Fushi Interconnect';
+  String get sync_backend_fushi_server => 'Fushi Interconnect';
   @override
   String get sync_backend_onedrive => 'OneDrive';
   @override
@@ -15879,7 +15879,7 @@ class _StringsDe extends _StringsEn {
   @override
   String get sync_pair_fingerprint_label => 'Certificate fingerprint';
   @override
-  String get sync_pair_not_hibiki =>
+  String get sync_pair_not_fushi =>
       'No Fushi device found at this address. The address was saved.';
   @override
   String get sync_pair_pairing => 'Pairing…';
@@ -19199,7 +19199,7 @@ class _StringsEs extends _StringsEn {
   String audio_source_error({required Object detail}) =>
       'Error de fuente de audio: ${detail}';
   @override
-  String get audio_source_hibiki_interconnect => 'Fushi Interconnect';
+  String get audio_source_fushi_interconnect => 'Fushi Interconnect';
   @override
   String get audio_source_loopback_warning =>
       'Points at this device — re-point after switching machines';
@@ -23026,7 +23026,7 @@ class _StringsEs extends _StringsEn {
   @override
   String get sync_backend_google_drive => 'Google Drive';
   @override
-  String get sync_backend_hibiki_server => 'Fushi Interconnect';
+  String get sync_backend_fushi_server => 'Fushi Interconnect';
   @override
   String get sync_backend_onedrive => 'OneDrive';
   @override
@@ -23219,7 +23219,7 @@ class _StringsEs extends _StringsEn {
   @override
   String get sync_pair_fingerprint_label => 'Certificate fingerprint';
   @override
-  String get sync_pair_not_hibiki =>
+  String get sync_pair_not_fushi =>
       'No Fushi device found at this address. The address was saved.';
   @override
   String get sync_pair_pairing => 'Pairing…';
@@ -26544,7 +26544,7 @@ class _StringsFr extends _StringsEn {
   String audio_source_error({required Object detail}) =>
       'Erreur de source audio : ${detail}';
   @override
-  String get audio_source_hibiki_interconnect => 'Fushi Interconnect';
+  String get audio_source_fushi_interconnect => 'Fushi Interconnect';
   @override
   String get audio_source_loopback_warning =>
       'Points at this device — re-point after switching machines';
@@ -30383,7 +30383,7 @@ class _StringsFr extends _StringsEn {
   @override
   String get sync_backend_google_drive => 'Google Drive';
   @override
-  String get sync_backend_hibiki_server => 'Fushi Interconnect';
+  String get sync_backend_fushi_server => 'Fushi Interconnect';
   @override
   String get sync_backend_onedrive => 'OneDrive';
   @override
@@ -30577,7 +30577,7 @@ class _StringsFr extends _StringsEn {
   @override
   String get sync_pair_fingerprint_label => 'Certificate fingerprint';
   @override
-  String get sync_pair_not_hibiki =>
+  String get sync_pair_not_fushi =>
       'No Fushi device found at this address. The address was saved.';
   @override
   String get sync_pair_pairing => 'Pairing…';
@@ -33900,7 +33900,7 @@ class _StringsId extends _StringsEn {
   String audio_source_error({required Object detail}) =>
       'Kesalahan sumber audio: ${detail}';
   @override
-  String get audio_source_hibiki_interconnect => 'Fushi Interconnect';
+  String get audio_source_fushi_interconnect => 'Fushi Interconnect';
   @override
   String get audio_source_loopback_warning =>
       'Points at this device — re-point after switching machines';
@@ -37688,7 +37688,7 @@ class _StringsId extends _StringsEn {
   @override
   String get sync_backend_google_drive => 'Google Drive';
   @override
-  String get sync_backend_hibiki_server => 'Fushi Interconnect';
+  String get sync_backend_fushi_server => 'Fushi Interconnect';
   @override
   String get sync_backend_onedrive => 'OneDrive';
   @override
@@ -37876,7 +37876,7 @@ class _StringsId extends _StringsEn {
   @override
   String get sync_pair_fingerprint_label => 'Certificate fingerprint';
   @override
-  String get sync_pair_not_hibiki =>
+  String get sync_pair_not_fushi =>
       'No Fushi device found at this address. The address was saved.';
   @override
   String get sync_pair_pairing => 'Pairing…';
@@ -41184,7 +41184,7 @@ class _StringsIt extends _StringsEn {
   String audio_source_error({required Object detail}) =>
       'Errore sorgente audio: ${detail}';
   @override
-  String get audio_source_hibiki_interconnect => 'Fushi Interconnect';
+  String get audio_source_fushi_interconnect => 'Fushi Interconnect';
   @override
   String get audio_source_loopback_warning =>
       'Points at this device — re-point after switching machines';
@@ -45005,7 +45005,7 @@ class _StringsIt extends _StringsEn {
   @override
   String get sync_backend_google_drive => 'Google Drive';
   @override
-  String get sync_backend_hibiki_server => 'Fushi Interconnect';
+  String get sync_backend_fushi_server => 'Fushi Interconnect';
   @override
   String get sync_backend_onedrive => 'OneDrive';
   @override
@@ -45195,7 +45195,7 @@ class _StringsIt extends _StringsEn {
   @override
   String get sync_pair_fingerprint_label => 'Certificate fingerprint';
   @override
-  String get sync_pair_not_hibiki =>
+  String get sync_pair_not_fushi =>
       'No Fushi device found at this address. The address was saved.';
   @override
   String get sync_pair_pairing => 'Pairing…';
@@ -48506,7 +48506,7 @@ class _StringsJa extends _StringsEn {
   @override
   String audio_source_error({required Object detail}) => '音声ソースエラー：${detail}';
   @override
-  String get audio_source_hibiki_interconnect => 'Fushi Interconnect';
+  String get audio_source_fushi_interconnect => 'Fushi Interconnect';
   @override
   String get audio_source_loopback_warning =>
       'Points at this device — re-point after switching machines';
@@ -52222,7 +52222,7 @@ class _StringsJa extends _StringsEn {
   @override
   String get sync_backend_google_drive => 'Google Drive';
   @override
-  String get sync_backend_hibiki_server => 'Fushi Interconnect';
+  String get sync_backend_fushi_server => 'Fushi Interconnect';
   @override
   String get sync_backend_onedrive => 'OneDrive';
   @override
@@ -52398,7 +52398,7 @@ class _StringsJa extends _StringsEn {
   @override
   String get sync_pair_fingerprint_label => 'Certificate fingerprint';
   @override
-  String get sync_pair_not_hibiki =>
+  String get sync_pair_not_fushi =>
       'No Fushi device found at this address. The address was saved.';
   @override
   String get sync_pair_pairing => 'Pairing…';
@@ -55651,7 +55651,7 @@ class _StringsKo extends _StringsEn {
   @override
   String audio_source_error({required Object detail}) => '오디오 소스 오류: ${detail}';
   @override
-  String get audio_source_hibiki_interconnect => 'Fushi Interconnect';
+  String get audio_source_fushi_interconnect => 'Fushi Interconnect';
   @override
   String get audio_source_loopback_warning =>
       'Points at this device — re-point after switching machines';
@@ -59368,7 +59368,7 @@ class _StringsKo extends _StringsEn {
   @override
   String get sync_backend_google_drive => 'Google Drive';
   @override
-  String get sync_backend_hibiki_server => 'Fushi Interconnect';
+  String get sync_backend_fushi_server => 'Fushi Interconnect';
   @override
   String get sync_backend_onedrive => 'OneDrive';
   @override
@@ -59543,7 +59543,7 @@ class _StringsKo extends _StringsEn {
   @override
   String get sync_pair_fingerprint_label => 'Certificate fingerprint';
   @override
-  String get sync_pair_not_hibiki =>
+  String get sync_pair_not_fushi =>
       'No Fushi device found at this address. The address was saved.';
   @override
   String get sync_pair_pairing => 'Pairing…';
@@ -62813,7 +62813,7 @@ class _StringsNl extends _StringsEn {
   String audio_source_error({required Object detail}) =>
       'Audiobron fout: ${detail}';
   @override
-  String get audio_source_hibiki_interconnect => 'Fushi Interconnect';
+  String get audio_source_fushi_interconnect => 'Fushi Interconnect';
   @override
   String get audio_source_loopback_warning =>
       'Points at this device — re-point after switching machines';
@@ -66618,7 +66618,7 @@ class _StringsNl extends _StringsEn {
   @override
   String get sync_backend_google_drive => 'Google Drive';
   @override
-  String get sync_backend_hibiki_server => 'Fushi Interconnect';
+  String get sync_backend_fushi_server => 'Fushi Interconnect';
   @override
   String get sync_backend_onedrive => 'OneDrive';
   @override
@@ -66811,7 +66811,7 @@ class _StringsNl extends _StringsEn {
   @override
   String get sync_pair_fingerprint_label => 'Certificate fingerprint';
   @override
-  String get sync_pair_not_hibiki =>
+  String get sync_pair_not_fushi =>
       'No Fushi device found at this address. The address was saved.';
   @override
   String get sync_pair_pairing => 'Pairing…';
@@ -70126,7 +70126,7 @@ class _StringsPtBr extends _StringsEn {
   String audio_source_error({required Object detail}) =>
       'Erro na fonte de áudio: ${detail}';
   @override
-  String get audio_source_hibiki_interconnect => 'Fushi Interconnect';
+  String get audio_source_fushi_interconnect => 'Fushi Interconnect';
   @override
   String get audio_source_loopback_warning =>
       'Points at this device — re-point after switching machines';
@@ -73939,7 +73939,7 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get sync_backend_google_drive => 'Google Drive';
   @override
-  String get sync_backend_hibiki_server => 'Fushi Interconnect';
+  String get sync_backend_fushi_server => 'Fushi Interconnect';
   @override
   String get sync_backend_onedrive => 'OneDrive';
   @override
@@ -74128,7 +74128,7 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get sync_pair_fingerprint_label => 'Certificate fingerprint';
   @override
-  String get sync_pair_not_hibiki =>
+  String get sync_pair_not_fushi =>
       'No Fushi device found at this address. The address was saved.';
   @override
   String get sync_pair_pairing => 'Pairing…';
@@ -77446,7 +77446,7 @@ class _StringsRu extends _StringsEn {
   String audio_source_error({required Object detail}) =>
       'Ошибка источника аудио: ${detail}';
   @override
-  String get audio_source_hibiki_interconnect => 'Fushi Interconnect';
+  String get audio_source_fushi_interconnect => 'Fushi Interconnect';
   @override
   String get audio_source_loopback_warning =>
       'Points at this device — re-point after switching machines';
@@ -81255,7 +81255,7 @@ class _StringsRu extends _StringsEn {
   @override
   String get sync_backend_google_drive => 'Google Drive';
   @override
-  String get sync_backend_hibiki_server => 'Fushi Interconnect';
+  String get sync_backend_fushi_server => 'Fushi Interconnect';
   @override
   String get sync_backend_onedrive => 'OneDrive';
   @override
@@ -81445,7 +81445,7 @@ class _StringsRu extends _StringsEn {
   @override
   String get sync_pair_fingerprint_label => 'Certificate fingerprint';
   @override
-  String get sync_pair_not_hibiki =>
+  String get sync_pair_not_fushi =>
       'No Fushi device found at this address. The address was saved.';
   @override
   String get sync_pair_pairing => 'Pairing…';
@@ -84753,7 +84753,7 @@ class _StringsTh extends _StringsEn {
   String audio_source_error({required Object detail}) =>
       'ข้อผิดพลาดแหล่งเสียง: ${detail}';
   @override
-  String get audio_source_hibiki_interconnect => 'Fushi Interconnect';
+  String get audio_source_fushi_interconnect => 'Fushi Interconnect';
   @override
   String get audio_source_loopback_warning =>
       'Points at this device — re-point after switching machines';
@@ -88523,7 +88523,7 @@ class _StringsTh extends _StringsEn {
   @override
   String get sync_backend_google_drive => 'Google Drive';
   @override
-  String get sync_backend_hibiki_server => 'Fushi Interconnect';
+  String get sync_backend_fushi_server => 'Fushi Interconnect';
   @override
   String get sync_backend_onedrive => 'OneDrive';
   @override
@@ -88715,7 +88715,7 @@ class _StringsTh extends _StringsEn {
   @override
   String get sync_pair_fingerprint_label => 'Certificate fingerprint';
   @override
-  String get sync_pair_not_hibiki =>
+  String get sync_pair_not_fushi =>
       'No Fushi device found at this address. The address was saved.';
   @override
   String get sync_pair_pairing => 'Pairing…';
@@ -92012,7 +92012,7 @@ class _StringsTr extends _StringsEn {
   String audio_source_error({required Object detail}) =>
       'Ses kaynağı hatası: ${detail}';
   @override
-  String get audio_source_hibiki_interconnect => 'Fushi Interconnect';
+  String get audio_source_fushi_interconnect => 'Fushi Interconnect';
   @override
   String get audio_source_loopback_warning =>
       'Points at this device — re-point after switching machines';
@@ -95807,7 +95807,7 @@ class _StringsTr extends _StringsEn {
   @override
   String get sync_backend_google_drive => 'Google Drive';
   @override
-  String get sync_backend_hibiki_server => 'Fushi Interconnect';
+  String get sync_backend_fushi_server => 'Fushi Interconnect';
   @override
   String get sync_backend_onedrive => 'OneDrive';
   @override
@@ -95995,7 +95995,7 @@ class _StringsTr extends _StringsEn {
   @override
   String get sync_pair_fingerprint_label => 'Certificate fingerprint';
   @override
-  String get sync_pair_not_hibiki =>
+  String get sync_pair_not_fushi =>
       'No Fushi device found at this address. The address was saved.';
   @override
   String get sync_pair_pairing => 'Pairing…';
@@ -99301,7 +99301,7 @@ class _StringsVi extends _StringsEn {
   String audio_source_error({required Object detail}) =>
       'Lỗi nguồn âm thanh: ${detail}';
   @override
-  String get audio_source_hibiki_interconnect => 'Fushi Interconnect';
+  String get audio_source_fushi_interconnect => 'Fushi Interconnect';
   @override
   String get audio_source_loopback_warning =>
       'Points at this device — re-point after switching machines';
@@ -103086,7 +103086,7 @@ class _StringsVi extends _StringsEn {
   @override
   String get sync_backend_google_drive => 'Google Drive';
   @override
-  String get sync_backend_hibiki_server => 'Fushi Interconnect';
+  String get sync_backend_fushi_server => 'Fushi Interconnect';
   @override
   String get sync_backend_onedrive => 'OneDrive';
   @override
@@ -103274,7 +103274,7 @@ class _StringsVi extends _StringsEn {
   @override
   String get sync_pair_fingerprint_label => 'Certificate fingerprint';
   @override
-  String get sync_pair_not_hibiki =>
+  String get sync_pair_not_fushi =>
       'No Fushi device found at this address. The address was saved.';
   @override
   String get sync_pair_pairing => 'Pairing…';
@@ -106545,7 +106545,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String audio_source_error({required Object detail}) => '音频源错误：${detail}';
   @override
-  String get audio_source_hibiki_interconnect => 'Fushi 互联';
+  String get audio_source_fushi_interconnect => 'Fushi 互联';
   @override
   String get audio_source_loopback_warning => '指向本机地址，换机后需重新指向';
   @override
@@ -110084,7 +110084,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get sync_backend_google_drive => 'Google Drive';
   @override
-  String get sync_backend_hibiki_server => 'Fushi 互联';
+  String get sync_backend_fushi_server => 'Fushi 互联';
   @override
   String get sync_backend_onedrive => 'OneDrive';
   @override
@@ -110252,7 +110252,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get sync_pair_fingerprint_label => '证书指纹';
   @override
-  String get sync_pair_not_hibiki => '此地址未找到 Fushi 设备，已保存该地址。';
+  String get sync_pair_not_fushi => '此地址未找到 Fushi 设备，已保存该地址。';
   @override
   String get sync_pair_pairing => '正在配对…';
   @override
@@ -113311,7 +113311,7 @@ class _StringsZhHk extends _StringsEn {
   @override
   String audio_source_error({required Object detail}) => '音頻來源錯誤：${detail}';
   @override
-  String get audio_source_hibiki_interconnect => 'Fushi 互聯';
+  String get audio_source_fushi_interconnect => 'Fushi 互聯';
   @override
   String get audio_source_loopback_warning =>
       'Points at this device — re-point after switching machines';
@@ -116991,7 +116991,7 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get sync_backend_google_drive => 'Google Drive';
   @override
-  String get sync_backend_hibiki_server => 'Fushi 互聯';
+  String get sync_backend_fushi_server => 'Fushi 互聯';
   @override
   String get sync_backend_onedrive => 'OneDrive';
   @override
@@ -117162,7 +117162,7 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get sync_pair_fingerprint_label => 'Certificate fingerprint';
   @override
-  String get sync_pair_not_hibiki =>
+  String get sync_pair_not_fushi =>
       'No Fushi device found at this address. The address was saved.';
   @override
   String get sync_pair_pairing => 'Pairing…';
@@ -120328,7 +120328,7 @@ extension on _StringsEn {
         return 'Edit audio source link';
       case 'audio_source_error':
         return ({required Object detail}) => 'Audio source error: ${detail}';
-      case 'audio_source_hibiki_interconnect':
+      case 'audio_source_fushi_interconnect':
         return 'Fushi Interconnect';
       case 'audio_source_loopback_warning':
         return 'Points at this device — re-point after switching machines';
@@ -123761,7 +123761,7 @@ extension on _StringsEn {
         return 'FTP';
       case 'sync_backend_google_drive':
         return 'Google Drive';
-      case 'sync_backend_hibiki_server':
+      case 'sync_backend_fushi_server':
         return 'Fushi Interconnect';
       case 'sync_backend_onedrive':
         return 'OneDrive';
@@ -123929,7 +123929,7 @@ extension on _StringsEn {
         return 'Certificate changed — pairing aborted for safety (possible interception).';
       case 'sync_pair_fingerprint_label':
         return 'Certificate fingerprint';
-      case 'sync_pair_not_hibiki':
+      case 'sync_pair_not_fushi':
         return 'No Fushi device found at this address. The address was saved.';
       case 'sync_pair_pairing':
         return 'Pairing…';
@@ -126802,7 +126802,7 @@ extension on _StringsAr {
         return 'Edit audio source link';
       case 'audio_source_error':
         return ({required Object detail}) => 'خطأ في مصدر الصوت: ${detail}';
-      case 'audio_source_hibiki_interconnect':
+      case 'audio_source_fushi_interconnect':
         return 'Fushi Interconnect';
       case 'audio_source_loopback_warning':
         return 'Points at this device — re-point after switching machines';
@@ -130231,7 +130231,7 @@ extension on _StringsAr {
         return 'FTP';
       case 'sync_backend_google_drive':
         return 'Google Drive';
-      case 'sync_backend_hibiki_server':
+      case 'sync_backend_fushi_server':
         return 'Fushi Interconnect';
       case 'sync_backend_onedrive':
         return 'OneDrive';
@@ -130399,7 +130399,7 @@ extension on _StringsAr {
         return 'Certificate changed — pairing aborted for safety (possible interception).';
       case 'sync_pair_fingerprint_label':
         return 'Certificate fingerprint';
-      case 'sync_pair_not_hibiki':
+      case 'sync_pair_not_fushi':
         return 'No Fushi device found at this address. The address was saved.';
       case 'sync_pair_pairing':
         return 'Pairing…';
@@ -133273,7 +133273,7 @@ extension on _StringsDe {
         return 'Edit audio source link';
       case 'audio_source_error':
         return ({required Object detail}) => 'Audioquellen-Fehler: ${detail}';
-      case 'audio_source_hibiki_interconnect':
+      case 'audio_source_fushi_interconnect':
         return 'Fushi Interconnect';
       case 'audio_source_loopback_warning':
         return 'Points at this device — re-point after switching machines';
@@ -136718,7 +136718,7 @@ extension on _StringsDe {
         return 'FTP';
       case 'sync_backend_google_drive':
         return 'Google Drive';
-      case 'sync_backend_hibiki_server':
+      case 'sync_backend_fushi_server':
         return 'Fushi Interconnect';
       case 'sync_backend_onedrive':
         return 'OneDrive';
@@ -136887,7 +136887,7 @@ extension on _StringsDe {
         return 'Certificate changed — pairing aborted for safety (possible interception).';
       case 'sync_pair_fingerprint_label':
         return 'Certificate fingerprint';
-      case 'sync_pair_not_hibiki':
+      case 'sync_pair_not_fushi':
         return 'No Fushi device found at this address. The address was saved.';
       case 'sync_pair_pairing':
         return 'Pairing…';
@@ -139767,7 +139767,7 @@ extension on _StringsEs {
       case 'audio_source_error':
         return ({required Object detail}) =>
             'Error de fuente de audio: ${detail}';
-      case 'audio_source_hibiki_interconnect':
+      case 'audio_source_fushi_interconnect':
         return 'Fushi Interconnect';
       case 'audio_source_loopback_warning':
         return 'Points at this device — re-point after switching machines';
@@ -143211,7 +143211,7 @@ extension on _StringsEs {
         return 'FTP';
       case 'sync_backend_google_drive':
         return 'Google Drive';
-      case 'sync_backend_hibiki_server':
+      case 'sync_backend_fushi_server':
         return 'Fushi Interconnect';
       case 'sync_backend_onedrive':
         return 'OneDrive';
@@ -143380,7 +143380,7 @@ extension on _StringsEs {
         return 'Certificate changed — pairing aborted for safety (possible interception).';
       case 'sync_pair_fingerprint_label':
         return 'Certificate fingerprint';
-      case 'sync_pair_not_hibiki':
+      case 'sync_pair_not_fushi':
         return 'No Fushi device found at this address. The address was saved.';
       case 'sync_pair_pairing':
         return 'Pairing…';
@@ -146260,7 +146260,7 @@ extension on _StringsFr {
       case 'audio_source_error':
         return ({required Object detail}) =>
             'Erreur de source audio : ${detail}';
-      case 'audio_source_hibiki_interconnect':
+      case 'audio_source_fushi_interconnect':
         return 'Fushi Interconnect';
       case 'audio_source_loopback_warning':
         return 'Points at this device — re-point after switching machines';
@@ -149705,7 +149705,7 @@ extension on _StringsFr {
         return 'FTP';
       case 'sync_backend_google_drive':
         return 'Google Drive';
-      case 'sync_backend_hibiki_server':
+      case 'sync_backend_fushi_server':
         return 'Fushi Interconnect';
       case 'sync_backend_onedrive':
         return 'OneDrive';
@@ -149875,7 +149875,7 @@ extension on _StringsFr {
         return 'Certificate changed — pairing aborted for safety (possible interception).';
       case 'sync_pair_fingerprint_label':
         return 'Certificate fingerprint';
-      case 'sync_pair_not_hibiki':
+      case 'sync_pair_not_fushi':
         return 'No Fushi device found at this address. The address was saved.';
       case 'sync_pair_pairing':
         return 'Pairing…';
@@ -152757,7 +152757,7 @@ extension on _StringsId {
       case 'audio_source_error':
         return ({required Object detail}) =>
             'Kesalahan sumber audio: ${detail}';
-      case 'audio_source_hibiki_interconnect':
+      case 'audio_source_fushi_interconnect':
         return 'Fushi Interconnect';
       case 'audio_source_loopback_warning':
         return 'Points at this device — re-point after switching machines';
@@ -156193,7 +156193,7 @@ extension on _StringsId {
         return 'FTP';
       case 'sync_backend_google_drive':
         return 'Google Drive';
-      case 'sync_backend_hibiki_server':
+      case 'sync_backend_fushi_server':
         return 'Fushi Interconnect';
       case 'sync_backend_onedrive':
         return 'OneDrive';
@@ -156362,7 +156362,7 @@ extension on _StringsId {
         return 'Certificate changed — pairing aborted for safety (possible interception).';
       case 'sync_pair_fingerprint_label':
         return 'Certificate fingerprint';
-      case 'sync_pair_not_hibiki':
+      case 'sync_pair_not_fushi':
         return 'No Fushi device found at this address. The address was saved.';
       case 'sync_pair_pairing':
         return 'Pairing…';
@@ -159236,7 +159236,7 @@ extension on _StringsIt {
         return 'Edit audio source link';
       case 'audio_source_error':
         return ({required Object detail}) => 'Errore sorgente audio: ${detail}';
-      case 'audio_source_hibiki_interconnect':
+      case 'audio_source_fushi_interconnect':
         return 'Fushi Interconnect';
       case 'audio_source_loopback_warning':
         return 'Points at this device — re-point after switching machines';
@@ -162678,7 +162678,7 @@ extension on _StringsIt {
         return 'FTP';
       case 'sync_backend_google_drive':
         return 'Google Drive';
-      case 'sync_backend_hibiki_server':
+      case 'sync_backend_fushi_server':
         return 'Fushi Interconnect';
       case 'sync_backend_onedrive':
         return 'OneDrive';
@@ -162847,7 +162847,7 @@ extension on _StringsIt {
         return 'Certificate changed — pairing aborted for safety (possible interception).';
       case 'sync_pair_fingerprint_label':
         return 'Certificate fingerprint';
-      case 'sync_pair_not_hibiki':
+      case 'sync_pair_not_fushi':
         return 'No Fushi device found at this address. The address was saved.';
       case 'sync_pair_pairing':
         return 'Pairing…';
@@ -165729,7 +165729,7 @@ extension on _StringsJa {
         return 'Edit audio source link';
       case 'audio_source_error':
         return ({required Object detail}) => '音声ソースエラー：${detail}';
-      case 'audio_source_hibiki_interconnect':
+      case 'audio_source_fushi_interconnect':
         return 'Fushi Interconnect';
       case 'audio_source_loopback_warning':
         return 'Points at this device — re-point after switching machines';
@@ -169150,7 +169150,7 @@ extension on _StringsJa {
         return 'FTP';
       case 'sync_backend_google_drive':
         return 'Google Drive';
-      case 'sync_backend_hibiki_server':
+      case 'sync_backend_fushi_server':
         return 'Fushi Interconnect';
       case 'sync_backend_onedrive':
         return 'OneDrive';
@@ -169318,7 +169318,7 @@ extension on _StringsJa {
         return 'Certificate changed — pairing aborted for safety (possible interception).';
       case 'sync_pair_fingerprint_label':
         return 'Certificate fingerprint';
-      case 'sync_pair_not_hibiki':
+      case 'sync_pair_not_fushi':
         return 'No Fushi device found at this address. The address was saved.';
       case 'sync_pair_pairing':
         return 'Pairing…';
@@ -172185,7 +172185,7 @@ extension on _StringsKo {
         return 'Edit audio source link';
       case 'audio_source_error':
         return ({required Object detail}) => '오디오 소스 오류: ${detail}';
-      case 'audio_source_hibiki_interconnect':
+      case 'audio_source_fushi_interconnect':
         return 'Fushi Interconnect';
       case 'audio_source_loopback_warning':
         return 'Points at this device — re-point after switching machines';
@@ -175609,7 +175609,7 @@ extension on _StringsKo {
         return 'FTP';
       case 'sync_backend_google_drive':
         return 'Google Drive';
-      case 'sync_backend_hibiki_server':
+      case 'sync_backend_fushi_server':
         return 'Fushi Interconnect';
       case 'sync_backend_onedrive':
         return 'OneDrive';
@@ -175777,7 +175777,7 @@ extension on _StringsKo {
         return 'Certificate changed — pairing aborted for safety (possible interception).';
       case 'sync_pair_fingerprint_label':
         return 'Certificate fingerprint';
-      case 'sync_pair_not_hibiki':
+      case 'sync_pair_not_fushi':
         return 'No Fushi device found at this address. The address was saved.';
       case 'sync_pair_pairing':
         return 'Pairing…';
@@ -178646,7 +178646,7 @@ extension on _StringsNl {
         return 'Edit audio source link';
       case 'audio_source_error':
         return ({required Object detail}) => 'Audiobron fout: ${detail}';
-      case 'audio_source_hibiki_interconnect':
+      case 'audio_source_fushi_interconnect':
         return 'Fushi Interconnect';
       case 'audio_source_loopback_warning':
         return 'Points at this device — re-point after switching machines';
@@ -182088,7 +182088,7 @@ extension on _StringsNl {
         return 'FTP';
       case 'sync_backend_google_drive':
         return 'Google Drive';
-      case 'sync_backend_hibiki_server':
+      case 'sync_backend_fushi_server':
         return 'Fushi Interconnect';
       case 'sync_backend_onedrive':
         return 'OneDrive';
@@ -182256,7 +182256,7 @@ extension on _StringsNl {
         return 'Certificate changed — pairing aborted for safety (possible interception).';
       case 'sync_pair_fingerprint_label':
         return 'Certificate fingerprint';
-      case 'sync_pair_not_hibiki':
+      case 'sync_pair_not_fushi':
         return 'No Fushi device found at this address. The address was saved.';
       case 'sync_pair_pairing':
         return 'Pairing…';
@@ -185135,7 +185135,7 @@ extension on _StringsPtBr {
       case 'audio_source_error':
         return ({required Object detail}) =>
             'Erro na fonte de áudio: ${detail}';
-      case 'audio_source_hibiki_interconnect':
+      case 'audio_source_fushi_interconnect':
         return 'Fushi Interconnect';
       case 'audio_source_loopback_warning':
         return 'Points at this device — re-point after switching machines';
@@ -188574,7 +188574,7 @@ extension on _StringsPtBr {
         return 'FTP';
       case 'sync_backend_google_drive':
         return 'Google Drive';
-      case 'sync_backend_hibiki_server':
+      case 'sync_backend_fushi_server':
         return 'Fushi Interconnect';
       case 'sync_backend_onedrive':
         return 'OneDrive';
@@ -188743,7 +188743,7 @@ extension on _StringsPtBr {
         return 'Certificate changed — pairing aborted for safety (possible interception).';
       case 'sync_pair_fingerprint_label':
         return 'Certificate fingerprint';
-      case 'sync_pair_not_hibiki':
+      case 'sync_pair_not_fushi':
         return 'No Fushi device found at this address. The address was saved.';
       case 'sync_pair_pairing':
         return 'Pairing…';
@@ -191620,7 +191620,7 @@ extension on _StringsRu {
       case 'audio_source_error':
         return ({required Object detail}) =>
             'Ошибка источника аудио: ${detail}';
-      case 'audio_source_hibiki_interconnect':
+      case 'audio_source_fushi_interconnect':
         return 'Fushi Interconnect';
       case 'audio_source_loopback_warning':
         return 'Points at this device — re-point after switching machines';
@@ -195062,7 +195062,7 @@ extension on _StringsRu {
         return 'FTP';
       case 'sync_backend_google_drive':
         return 'Google Drive';
-      case 'sync_backend_hibiki_server':
+      case 'sync_backend_fushi_server':
         return 'Fushi Interconnect';
       case 'sync_backend_onedrive':
         return 'OneDrive';
@@ -195232,7 +195232,7 @@ extension on _StringsRu {
         return 'Certificate changed — pairing aborted for safety (possible interception).';
       case 'sync_pair_fingerprint_label':
         return 'Certificate fingerprint';
-      case 'sync_pair_not_hibiki':
+      case 'sync_pair_not_fushi':
         return 'No Fushi device found at this address. The address was saved.';
       case 'sync_pair_pairing':
         return 'Pairing…';
@@ -198108,7 +198108,7 @@ extension on _StringsTh {
         return 'Edit audio source link';
       case 'audio_source_error':
         return ({required Object detail}) => 'ข้อผิดพลาดแหล่งเสียง: ${detail}';
-      case 'audio_source_hibiki_interconnect':
+      case 'audio_source_fushi_interconnect':
         return 'Fushi Interconnect';
       case 'audio_source_loopback_warning':
         return 'Points at this device — re-point after switching machines';
@@ -201540,7 +201540,7 @@ extension on _StringsTh {
         return 'FTP';
       case 'sync_backend_google_drive':
         return 'Google Drive';
-      case 'sync_backend_hibiki_server':
+      case 'sync_backend_fushi_server':
         return 'Fushi Interconnect';
       case 'sync_backend_onedrive':
         return 'OneDrive';
@@ -201708,7 +201708,7 @@ extension on _StringsTh {
         return 'Certificate changed — pairing aborted for safety (possible interception).';
       case 'sync_pair_fingerprint_label':
         return 'Certificate fingerprint';
-      case 'sync_pair_not_hibiki':
+      case 'sync_pair_not_fushi':
         return 'No Fushi device found at this address. The address was saved.';
       case 'sync_pair_pairing':
         return 'Pairing…';
@@ -204582,7 +204582,7 @@ extension on _StringsTr {
         return 'Edit audio source link';
       case 'audio_source_error':
         return ({required Object detail}) => 'Ses kaynağı hatası: ${detail}';
-      case 'audio_source_hibiki_interconnect':
+      case 'audio_source_fushi_interconnect':
         return 'Fushi Interconnect';
       case 'audio_source_loopback_warning':
         return 'Points at this device — re-point after switching machines';
@@ -208018,7 +208018,7 @@ extension on _StringsTr {
         return 'FTP';
       case 'sync_backend_google_drive':
         return 'Google Drive';
-      case 'sync_backend_hibiki_server':
+      case 'sync_backend_fushi_server':
         return 'Fushi Interconnect';
       case 'sync_backend_onedrive':
         return 'OneDrive';
@@ -208187,7 +208187,7 @@ extension on _StringsTr {
         return 'Certificate changed — pairing aborted for safety (possible interception).';
       case 'sync_pair_fingerprint_label':
         return 'Certificate fingerprint';
-      case 'sync_pair_not_hibiki':
+      case 'sync_pair_not_fushi':
         return 'No Fushi device found at this address. The address was saved.';
       case 'sync_pair_pairing':
         return 'Pairing…';
@@ -211064,7 +211064,7 @@ extension on _StringsVi {
         return 'Edit audio source link';
       case 'audio_source_error':
         return ({required Object detail}) => 'Lỗi nguồn âm thanh: ${detail}';
-      case 'audio_source_hibiki_interconnect':
+      case 'audio_source_fushi_interconnect':
         return 'Fushi Interconnect';
       case 'audio_source_loopback_warning':
         return 'Points at this device — re-point after switching machines';
@@ -214499,7 +214499,7 @@ extension on _StringsVi {
         return 'FTP';
       case 'sync_backend_google_drive':
         return 'Google Drive';
-      case 'sync_backend_hibiki_server':
+      case 'sync_backend_fushi_server':
         return 'Fushi Interconnect';
       case 'sync_backend_onedrive':
         return 'OneDrive';
@@ -214667,7 +214667,7 @@ extension on _StringsVi {
         return 'Certificate changed — pairing aborted for safety (possible interception).';
       case 'sync_pair_fingerprint_label':
         return 'Certificate fingerprint';
-      case 'sync_pair_not_hibiki':
+      case 'sync_pair_not_fushi':
         return 'No Fushi device found at this address. The address was saved.';
       case 'sync_pair_pairing':
         return 'Pairing…';
@@ -217538,7 +217538,7 @@ extension on _StringsZhCn {
         return '编辑音频来源链接';
       case 'audio_source_error':
         return ({required Object detail}) => '音频源错误：${detail}';
-      case 'audio_source_hibiki_interconnect':
+      case 'audio_source_fushi_interconnect':
         return 'Fushi 互联';
       case 'audio_source_loopback_warning':
         return '指向本机地址，换机后需重新指向';
@@ -220949,7 +220949,7 @@ extension on _StringsZhCn {
         return 'FTP';
       case 'sync_backend_google_drive':
         return 'Google Drive';
-      case 'sync_backend_hibiki_server':
+      case 'sync_backend_fushi_server':
         return 'Fushi 互联';
       case 'sync_backend_onedrive':
         return 'OneDrive';
@@ -221116,7 +221116,7 @@ extension on _StringsZhCn {
         return '证书已变更，为安全起见已中止配对（可能存在中间人攻击）。';
       case 'sync_pair_fingerprint_label':
         return '证书指纹';
-      case 'sync_pair_not_hibiki':
+      case 'sync_pair_not_fushi':
         return '此地址未找到 Fushi 设备，已保存该地址。';
       case 'sync_pair_pairing':
         return '正在配对…';
@@ -223964,7 +223964,7 @@ extension on _StringsZhHk {
         return 'Edit audio source link';
       case 'audio_source_error':
         return ({required Object detail}) => '音頻來源錯誤：${detail}';
-      case 'audio_source_hibiki_interconnect':
+      case 'audio_source_fushi_interconnect':
         return 'Fushi 互聯';
       case 'audio_source_loopback_warning':
         return 'Points at this device — re-point after switching machines';
@@ -227383,7 +227383,7 @@ extension on _StringsZhHk {
         return 'FTP';
       case 'sync_backend_google_drive':
         return 'Google Drive';
-      case 'sync_backend_hibiki_server':
+      case 'sync_backend_fushi_server':
         return 'Fushi 互聯';
       case 'sync_backend_onedrive':
         return 'OneDrive';
@@ -227551,7 +227551,7 @@ extension on _StringsZhHk {
         return 'Certificate changed — pairing aborted for safety (possible interception).';
       case 'sync_pair_fingerprint_label':
         return 'Certificate fingerprint';
-      case 'sync_pair_not_hibiki':
+      case 'sync_pair_not_fushi':
         return 'No Fushi device found at this address. The address was saved.';
       case 'sync_pair_pairing':
         return 'Pairing…';
