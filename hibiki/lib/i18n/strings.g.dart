@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 53567 (3151 per locale)
+/// Strings: 53686 (3158 per locale)
 ///
-/// Built on 2026-08-08 at 11:06 UTC
+/// Built on 2026-08-08 at 12:09 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -4249,6 +4249,15 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Overwrite protected sidecars?';
   String get video_source_scrape_external_overwrite_confirm_body =>
       'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
+  String get video_source_scrape_tasks_open => 'Background tasks';
+  String get video_source_scrape_background_started =>
+      'Scraping is running in the background';
+  String get video_source_scrape_tasks_current => 'Current task';
+  String get video_source_scrape_tasks_history => 'Recent tasks';
+  String get video_source_scrape_tasks_empty => 'No scrape tasks yet';
+  String get video_source_scrape_waiting_confirmation =>
+      'Waiting for your confirmation';
+  String get video_source_scrape_phase_scanning => 'Scanning source';
 }
 
 // Path: <root>
@@ -11498,6 +11507,22 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_source_scrape_external_overwrite_confirm_body =>
       'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
+  @override
+  String get video_source_scrape_tasks_open => 'Background tasks';
+  @override
+  String get video_source_scrape_background_started =>
+      'Scraping is running in the background';
+  @override
+  String get video_source_scrape_tasks_current => 'Current task';
+  @override
+  String get video_source_scrape_tasks_history => 'Recent tasks';
+  @override
+  String get video_source_scrape_tasks_empty => 'No scrape tasks yet';
+  @override
+  String get video_source_scrape_waiting_confirmation =>
+      'Waiting for your confirmation';
+  @override
+  String get video_source_scrape_phase_scanning => 'Scanning source';
 }
 
 // Path: <root>
@@ -18814,6 +18839,22 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_source_scrape_external_overwrite_confirm_body =>
       'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
+  @override
+  String get video_source_scrape_tasks_open => 'Background tasks';
+  @override
+  String get video_source_scrape_background_started =>
+      'Scraping is running in the background';
+  @override
+  String get video_source_scrape_tasks_current => 'Current task';
+  @override
+  String get video_source_scrape_tasks_history => 'Recent tasks';
+  @override
+  String get video_source_scrape_tasks_empty => 'No scrape tasks yet';
+  @override
+  String get video_source_scrape_waiting_confirmation =>
+      'Waiting for your confirmation';
+  @override
+  String get video_source_scrape_phase_scanning => 'Scanning source';
 }
 
 // Path: <root>
@@ -26145,6 +26186,22 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_source_scrape_external_overwrite_confirm_body =>
       'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
+  @override
+  String get video_source_scrape_tasks_open => 'Background tasks';
+  @override
+  String get video_source_scrape_background_started =>
+      'Scraping is running in the background';
+  @override
+  String get video_source_scrape_tasks_current => 'Current task';
+  @override
+  String get video_source_scrape_tasks_history => 'Recent tasks';
+  @override
+  String get video_source_scrape_tasks_empty => 'No scrape tasks yet';
+  @override
+  String get video_source_scrape_waiting_confirmation =>
+      'Waiting for your confirmation';
+  @override
+  String get video_source_scrape_phase_scanning => 'Scanning source';
 }
 
 // Path: <root>
@@ -33488,6 +33545,22 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_source_scrape_external_overwrite_confirm_body =>
       'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
+  @override
+  String get video_source_scrape_tasks_open => 'Background tasks';
+  @override
+  String get video_source_scrape_background_started =>
+      'Scraping is running in the background';
+  @override
+  String get video_source_scrape_tasks_current => 'Current task';
+  @override
+  String get video_source_scrape_tasks_history => 'Recent tasks';
+  @override
+  String get video_source_scrape_tasks_empty => 'No scrape tasks yet';
+  @override
+  String get video_source_scrape_waiting_confirmation =>
+      'Waiting for your confirmation';
+  @override
+  String get video_source_scrape_phase_scanning => 'Scanning source';
 }
 
 // Path: <root>
@@ -40760,6 +40833,22 @@ class _StringsId extends _StringsEn {
   @override
   String get video_source_scrape_external_overwrite_confirm_body =>
       'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
+  @override
+  String get video_source_scrape_tasks_open => 'Background tasks';
+  @override
+  String get video_source_scrape_background_started =>
+      'Scraping is running in the background';
+  @override
+  String get video_source_scrape_tasks_current => 'Current task';
+  @override
+  String get video_source_scrape_tasks_history => 'Recent tasks';
+  @override
+  String get video_source_scrape_tasks_empty => 'No scrape tasks yet';
+  @override
+  String get video_source_scrape_waiting_confirmation =>
+      'Waiting for your confirmation';
+  @override
+  String get video_source_scrape_phase_scanning => 'Scanning source';
 }
 
 // Path: <root>
@@ -48078,6 +48167,22 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_source_scrape_external_overwrite_confirm_body =>
       'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
+  @override
+  String get video_source_scrape_tasks_open => 'Background tasks';
+  @override
+  String get video_source_scrape_background_started =>
+      'Scraping is running in the background';
+  @override
+  String get video_source_scrape_tasks_current => 'Current task';
+  @override
+  String get video_source_scrape_tasks_history => 'Recent tasks';
+  @override
+  String get video_source_scrape_tasks_empty => 'No scrape tasks yet';
+  @override
+  String get video_source_scrape_waiting_confirmation =>
+      'Waiting for your confirmation';
+  @override
+  String get video_source_scrape_phase_scanning => 'Scanning source';
 }
 
 // Path: <root>
@@ -55213,6 +55318,22 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_source_scrape_external_overwrite_confirm_body =>
       'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
+  @override
+  String get video_source_scrape_tasks_open => 'Background tasks';
+  @override
+  String get video_source_scrape_background_started =>
+      'Scraping is running in the background';
+  @override
+  String get video_source_scrape_tasks_current => 'Current task';
+  @override
+  String get video_source_scrape_tasks_history => 'Recent tasks';
+  @override
+  String get video_source_scrape_tasks_empty => 'No scrape tasks yet';
+  @override
+  String get video_source_scrape_waiting_confirmation =>
+      'Waiting for your confirmation';
+  @override
+  String get video_source_scrape_phase_scanning => 'Scanning source';
 }
 
 // Path: <root>
@@ -62350,6 +62471,22 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_source_scrape_external_overwrite_confirm_body =>
       'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
+  @override
+  String get video_source_scrape_tasks_open => 'Background tasks';
+  @override
+  String get video_source_scrape_background_started =>
+      'Scraping is running in the background';
+  @override
+  String get video_source_scrape_tasks_current => 'Current task';
+  @override
+  String get video_source_scrape_tasks_history => 'Recent tasks';
+  @override
+  String get video_source_scrape_tasks_empty => 'No scrape tasks yet';
+  @override
+  String get video_source_scrape_waiting_confirmation =>
+      'Waiting for your confirmation';
+  @override
+  String get video_source_scrape_phase_scanning => 'Scanning source';
 }
 
 // Path: <root>
@@ -69648,6 +69785,22 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_source_scrape_external_overwrite_confirm_body =>
       'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
+  @override
+  String get video_source_scrape_tasks_open => 'Background tasks';
+  @override
+  String get video_source_scrape_background_started =>
+      'Scraping is running in the background';
+  @override
+  String get video_source_scrape_tasks_current => 'Current task';
+  @override
+  String get video_source_scrape_tasks_history => 'Recent tasks';
+  @override
+  String get video_source_scrape_tasks_empty => 'No scrape tasks yet';
+  @override
+  String get video_source_scrape_waiting_confirmation =>
+      'Waiting for your confirmation';
+  @override
+  String get video_source_scrape_phase_scanning => 'Scanning source';
 }
 
 // Path: <root>
@@ -76959,6 +77112,22 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_source_scrape_external_overwrite_confirm_body =>
       'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
+  @override
+  String get video_source_scrape_tasks_open => 'Background tasks';
+  @override
+  String get video_source_scrape_background_started =>
+      'Scraping is running in the background';
+  @override
+  String get video_source_scrape_tasks_current => 'Current task';
+  @override
+  String get video_source_scrape_tasks_history => 'Recent tasks';
+  @override
+  String get video_source_scrape_tasks_empty => 'No scrape tasks yet';
+  @override
+  String get video_source_scrape_waiting_confirmation =>
+      'Waiting for your confirmation';
+  @override
+  String get video_source_scrape_phase_scanning => 'Scanning source';
 }
 
 // Path: <root>
@@ -84254,6 +84423,22 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_source_scrape_external_overwrite_confirm_body =>
       'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
+  @override
+  String get video_source_scrape_tasks_open => 'Background tasks';
+  @override
+  String get video_source_scrape_background_started =>
+      'Scraping is running in the background';
+  @override
+  String get video_source_scrape_tasks_current => 'Current task';
+  @override
+  String get video_source_scrape_tasks_history => 'Recent tasks';
+  @override
+  String get video_source_scrape_tasks_empty => 'No scrape tasks yet';
+  @override
+  String get video_source_scrape_waiting_confirmation =>
+      'Waiting for your confirmation';
+  @override
+  String get video_source_scrape_phase_scanning => 'Scanning source';
 }
 
 // Path: <root>
@@ -91497,6 +91682,22 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_source_scrape_external_overwrite_confirm_body =>
       'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
+  @override
+  String get video_source_scrape_tasks_open => 'Background tasks';
+  @override
+  String get video_source_scrape_background_started =>
+      'Scraping is running in the background';
+  @override
+  String get video_source_scrape_tasks_current => 'Current task';
+  @override
+  String get video_source_scrape_tasks_history => 'Recent tasks';
+  @override
+  String get video_source_scrape_tasks_empty => 'No scrape tasks yet';
+  @override
+  String get video_source_scrape_waiting_confirmation =>
+      'Waiting for your confirmation';
+  @override
+  String get video_source_scrape_phase_scanning => 'Scanning source';
 }
 
 // Path: <root>
@@ -98772,6 +98973,22 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_source_scrape_external_overwrite_confirm_body =>
       'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
+  @override
+  String get video_source_scrape_tasks_open => 'Background tasks';
+  @override
+  String get video_source_scrape_background_started =>
+      'Scraping is running in the background';
+  @override
+  String get video_source_scrape_tasks_current => 'Current task';
+  @override
+  String get video_source_scrape_tasks_history => 'Recent tasks';
+  @override
+  String get video_source_scrape_tasks_empty => 'No scrape tasks yet';
+  @override
+  String get video_source_scrape_waiting_confirmation =>
+      'Waiting for your confirmation';
+  @override
+  String get video_source_scrape_phase_scanning => 'Scanning source';
 }
 
 // Path: <root>
@@ -106032,6 +106249,22 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_source_scrape_external_overwrite_confirm_body =>
       'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
+  @override
+  String get video_source_scrape_tasks_open => 'Background tasks';
+  @override
+  String get video_source_scrape_background_started =>
+      'Scraping is running in the background';
+  @override
+  String get video_source_scrape_tasks_current => 'Current task';
+  @override
+  String get video_source_scrape_tasks_history => 'Recent tasks';
+  @override
+  String get video_source_scrape_tasks_empty => 'No scrape tasks yet';
+  @override
+  String get video_source_scrape_waiting_confirmation =>
+      'Waiting for your confirmation';
+  @override
+  String get video_source_scrape_phase_scanning => 'Scanning source';
 }
 
 // Path: <root>
@@ -112784,6 +113017,20 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_source_scrape_external_overwrite_confirm_body =>
       '本批次可能替换第三方 NFO/图片，或你修改过的 Hibiki 生成物；视频文件本身不会改动。是否继续？';
+  @override
+  String get video_source_scrape_tasks_open => '后台任务';
+  @override
+  String get video_source_scrape_background_started => '刮削已在后台开始';
+  @override
+  String get video_source_scrape_tasks_current => '当前任务';
+  @override
+  String get video_source_scrape_tasks_history => '最近任务';
+  @override
+  String get video_source_scrape_tasks_empty => '暂无刮削任务';
+  @override
+  String get video_source_scrape_waiting_confirmation => '等待你的确认';
+  @override
+  String get video_source_scrape_phase_scanning => '扫描来源';
 }
 
 // Path: <root>
@@ -119839,6 +120086,22 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_source_scrape_external_overwrite_confirm_body =>
       'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
+  @override
+  String get video_source_scrape_tasks_open => 'Background tasks';
+  @override
+  String get video_source_scrape_background_started =>
+      'Scraping is running in the background';
+  @override
+  String get video_source_scrape_tasks_current => 'Current task';
+  @override
+  String get video_source_scrape_tasks_history => 'Recent tasks';
+  @override
+  String get video_source_scrape_tasks_empty => 'No scrape tasks yet';
+  @override
+  String get video_source_scrape_waiting_confirmation =>
+      'Waiting for your confirmation';
+  @override
+  String get video_source_scrape_phase_scanning => 'Scanning source';
 }
 
 /// Flat map(s) containing all translations.
@@ -126310,6 +126573,20 @@ extension on _StringsEn {
         return 'Overwrite protected sidecars?';
       case 'video_source_scrape_external_overwrite_confirm_body':
         return 'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
+      case 'video_source_scrape_tasks_open':
+        return 'Background tasks';
+      case 'video_source_scrape_background_started':
+        return 'Scraping is running in the background';
+      case 'video_source_scrape_tasks_current':
+        return 'Current task';
+      case 'video_source_scrape_tasks_history':
+        return 'Recent tasks';
+      case 'video_source_scrape_tasks_empty':
+        return 'No scrape tasks yet';
+      case 'video_source_scrape_waiting_confirmation':
+        return 'Waiting for your confirmation';
+      case 'video_source_scrape_phase_scanning':
+        return 'Scanning source';
       default:
         return null;
     }
@@ -132779,6 +133056,20 @@ extension on _StringsAr {
         return 'Overwrite protected sidecars?';
       case 'video_source_scrape_external_overwrite_confirm_body':
         return 'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
+      case 'video_source_scrape_tasks_open':
+        return 'Background tasks';
+      case 'video_source_scrape_background_started':
+        return 'Scraping is running in the background';
+      case 'video_source_scrape_tasks_current':
+        return 'Current task';
+      case 'video_source_scrape_tasks_history':
+        return 'Recent tasks';
+      case 'video_source_scrape_tasks_empty':
+        return 'No scrape tasks yet';
+      case 'video_source_scrape_waiting_confirmation':
+        return 'Waiting for your confirmation';
+      case 'video_source_scrape_phase_scanning':
+        return 'Scanning source';
       default:
         return null;
     }
@@ -139270,6 +139561,20 @@ extension on _StringsDe {
         return 'Overwrite protected sidecars?';
       case 'video_source_scrape_external_overwrite_confirm_body':
         return 'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
+      case 'video_source_scrape_tasks_open':
+        return 'Background tasks';
+      case 'video_source_scrape_background_started':
+        return 'Scraping is running in the background';
+      case 'video_source_scrape_tasks_current':
+        return 'Current task';
+      case 'video_source_scrape_tasks_history':
+        return 'Recent tasks';
+      case 'video_source_scrape_tasks_empty':
+        return 'No scrape tasks yet';
+      case 'video_source_scrape_waiting_confirmation':
+        return 'Waiting for your confirmation';
+      case 'video_source_scrape_phase_scanning':
+        return 'Scanning source';
       default:
         return null;
     }
@@ -145760,6 +146065,20 @@ extension on _StringsEs {
         return 'Overwrite protected sidecars?';
       case 'video_source_scrape_external_overwrite_confirm_body':
         return 'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
+      case 'video_source_scrape_tasks_open':
+        return 'Background tasks';
+      case 'video_source_scrape_background_started':
+        return 'Scraping is running in the background';
+      case 'video_source_scrape_tasks_current':
+        return 'Current task';
+      case 'video_source_scrape_tasks_history':
+        return 'Recent tasks';
+      case 'video_source_scrape_tasks_empty':
+        return 'No scrape tasks yet';
+      case 'video_source_scrape_waiting_confirmation':
+        return 'Waiting for your confirmation';
+      case 'video_source_scrape_phase_scanning':
+        return 'Scanning source';
       default:
         return null;
     }
@@ -152256,6 +152575,20 @@ extension on _StringsFr {
         return 'Overwrite protected sidecars?';
       case 'video_source_scrape_external_overwrite_confirm_body':
         return 'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
+      case 'video_source_scrape_tasks_open':
+        return 'Background tasks';
+      case 'video_source_scrape_background_started':
+        return 'Scraping is running in the background';
+      case 'video_source_scrape_tasks_current':
+        return 'Current task';
+      case 'video_source_scrape_tasks_history':
+        return 'Recent tasks';
+      case 'video_source_scrape_tasks_empty':
+        return 'No scrape tasks yet';
+      case 'video_source_scrape_waiting_confirmation':
+        return 'Waiting for your confirmation';
+      case 'video_source_scrape_phase_scanning':
+        return 'Scanning source';
       default:
         return null;
     }
@@ -158734,6 +159067,20 @@ extension on _StringsId {
         return 'Overwrite protected sidecars?';
       case 'video_source_scrape_external_overwrite_confirm_body':
         return 'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
+      case 'video_source_scrape_tasks_open':
+        return 'Background tasks';
+      case 'video_source_scrape_background_started':
+        return 'Scraping is running in the background';
+      case 'video_source_scrape_tasks_current':
+        return 'Current task';
+      case 'video_source_scrape_tasks_history':
+        return 'Recent tasks';
+      case 'video_source_scrape_tasks_empty':
+        return 'No scrape tasks yet';
+      case 'video_source_scrape_waiting_confirmation':
+        return 'Waiting for your confirmation';
+      case 'video_source_scrape_phase_scanning':
+        return 'Scanning source';
       default:
         return null;
     }
@@ -165226,6 +165573,20 @@ extension on _StringsIt {
         return 'Overwrite protected sidecars?';
       case 'video_source_scrape_external_overwrite_confirm_body':
         return 'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
+      case 'video_source_scrape_tasks_open':
+        return 'Background tasks';
+      case 'video_source_scrape_background_started':
+        return 'Scraping is running in the background';
+      case 'video_source_scrape_tasks_current':
+        return 'Current task';
+      case 'video_source_scrape_tasks_history':
+        return 'Recent tasks';
+      case 'video_source_scrape_tasks_empty':
+        return 'No scrape tasks yet';
+      case 'video_source_scrape_waiting_confirmation':
+        return 'Waiting for your confirmation';
+      case 'video_source_scrape_phase_scanning':
+        return 'Scanning source';
       default:
         return null;
     }
@@ -171680,6 +172041,20 @@ extension on _StringsJa {
         return 'Overwrite protected sidecars?';
       case 'video_source_scrape_external_overwrite_confirm_body':
         return 'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
+      case 'video_source_scrape_tasks_open':
+        return 'Background tasks';
+      case 'video_source_scrape_background_started':
+        return 'Scraping is running in the background';
+      case 'video_source_scrape_tasks_current':
+        return 'Current task';
+      case 'video_source_scrape_tasks_history':
+        return 'Recent tasks';
+      case 'video_source_scrape_tasks_empty':
+        return 'No scrape tasks yet';
+      case 'video_source_scrape_waiting_confirmation':
+        return 'Waiting for your confirmation';
+      case 'video_source_scrape_phase_scanning':
+        return 'Scanning source';
       default:
         return null;
     }
@@ -178138,6 +178513,20 @@ extension on _StringsKo {
         return 'Overwrite protected sidecars?';
       case 'video_source_scrape_external_overwrite_confirm_body':
         return 'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
+      case 'video_source_scrape_tasks_open':
+        return 'Background tasks';
+      case 'video_source_scrape_background_started':
+        return 'Scraping is running in the background';
+      case 'video_source_scrape_tasks_current':
+        return 'Current task';
+      case 'video_source_scrape_tasks_history':
+        return 'Recent tasks';
+      case 'video_source_scrape_tasks_empty':
+        return 'No scrape tasks yet';
+      case 'video_source_scrape_waiting_confirmation':
+        return 'Waiting for your confirmation';
+      case 'video_source_scrape_phase_scanning':
+        return 'Scanning source';
       default:
         return null;
     }
@@ -184624,6 +185013,20 @@ extension on _StringsNl {
         return 'Overwrite protected sidecars?';
       case 'video_source_scrape_external_overwrite_confirm_body':
         return 'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
+      case 'video_source_scrape_tasks_open':
+        return 'Background tasks';
+      case 'video_source_scrape_background_started':
+        return 'Scraping is running in the background';
+      case 'video_source_scrape_tasks_current':
+        return 'Current task';
+      case 'video_source_scrape_tasks_history':
+        return 'Recent tasks';
+      case 'video_source_scrape_tasks_empty':
+        return 'No scrape tasks yet';
+      case 'video_source_scrape_waiting_confirmation':
+        return 'Waiting for your confirmation';
+      case 'video_source_scrape_phase_scanning':
+        return 'Scanning source';
       default:
         return null;
     }
@@ -191107,6 +191510,20 @@ extension on _StringsPtBr {
         return 'Overwrite protected sidecars?';
       case 'video_source_scrape_external_overwrite_confirm_body':
         return 'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
+      case 'video_source_scrape_tasks_open':
+        return 'Background tasks';
+      case 'video_source_scrape_background_started':
+        return 'Scraping is running in the background';
+      case 'video_source_scrape_tasks_current':
+        return 'Current task';
+      case 'video_source_scrape_tasks_history':
+        return 'Recent tasks';
+      case 'video_source_scrape_tasks_empty':
+        return 'No scrape tasks yet';
+      case 'video_source_scrape_waiting_confirmation':
+        return 'Waiting for your confirmation';
+      case 'video_source_scrape_phase_scanning':
+        return 'Scanning source';
       default:
         return null;
     }
@@ -197595,6 +198012,20 @@ extension on _StringsRu {
         return 'Overwrite protected sidecars?';
       case 'video_source_scrape_external_overwrite_confirm_body':
         return 'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
+      case 'video_source_scrape_tasks_open':
+        return 'Background tasks';
+      case 'video_source_scrape_background_started':
+        return 'Scraping is running in the background';
+      case 'video_source_scrape_tasks_current':
+        return 'Current task';
+      case 'video_source_scrape_tasks_history':
+        return 'Recent tasks';
+      case 'video_source_scrape_tasks_empty':
+        return 'No scrape tasks yet';
+      case 'video_source_scrape_waiting_confirmation':
+        return 'Waiting for your confirmation';
+      case 'video_source_scrape_phase_scanning':
+        return 'Scanning source';
       default:
         return null;
     }
@@ -204066,6 +204497,20 @@ extension on _StringsTh {
         return 'Overwrite protected sidecars?';
       case 'video_source_scrape_external_overwrite_confirm_body':
         return 'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
+      case 'video_source_scrape_tasks_open':
+        return 'Background tasks';
+      case 'video_source_scrape_background_started':
+        return 'Scraping is running in the background';
+      case 'video_source_scrape_tasks_current':
+        return 'Current task';
+      case 'video_source_scrape_tasks_history':
+        return 'Recent tasks';
+      case 'video_source_scrape_tasks_empty':
+        return 'No scrape tasks yet';
+      case 'video_source_scrape_waiting_confirmation':
+        return 'Waiting for your confirmation';
+      case 'video_source_scrape_phase_scanning':
+        return 'Scanning source';
       default:
         return null;
     }
@@ -210546,6 +210991,20 @@ extension on _StringsTr {
         return 'Overwrite protected sidecars?';
       case 'video_source_scrape_external_overwrite_confirm_body':
         return 'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
+      case 'video_source_scrape_tasks_open':
+        return 'Background tasks';
+      case 'video_source_scrape_background_started':
+        return 'Scraping is running in the background';
+      case 'video_source_scrape_tasks_current':
+        return 'Current task';
+      case 'video_source_scrape_tasks_history':
+        return 'Recent tasks';
+      case 'video_source_scrape_tasks_empty':
+        return 'No scrape tasks yet';
+      case 'video_source_scrape_waiting_confirmation':
+        return 'Waiting for your confirmation';
+      case 'video_source_scrape_phase_scanning':
+        return 'Scanning source';
       default:
         return null;
     }
@@ -217022,6 +217481,20 @@ extension on _StringsVi {
         return 'Overwrite protected sidecars?';
       case 'video_source_scrape_external_overwrite_confirm_body':
         return 'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
+      case 'video_source_scrape_tasks_open':
+        return 'Background tasks';
+      case 'video_source_scrape_background_started':
+        return 'Scraping is running in the background';
+      case 'video_source_scrape_tasks_current':
+        return 'Current task';
+      case 'video_source_scrape_tasks_history':
+        return 'Recent tasks';
+      case 'video_source_scrape_tasks_empty':
+        return 'No scrape tasks yet';
+      case 'video_source_scrape_waiting_confirmation':
+        return 'Waiting for your confirmation';
+      case 'video_source_scrape_phase_scanning':
+        return 'Scanning source';
       default:
         return null;
     }
@@ -223444,6 +223917,20 @@ extension on _StringsZhCn {
         return '覆盖受保护的 sidecar？';
       case 'video_source_scrape_external_overwrite_confirm_body':
         return '本批次可能替换第三方 NFO/图片，或你修改过的 Hibiki 生成物；视频文件本身不会改动。是否继续？';
+      case 'video_source_scrape_tasks_open':
+        return '后台任务';
+      case 'video_source_scrape_background_started':
+        return '刮削已在后台开始';
+      case 'video_source_scrape_tasks_current':
+        return '当前任务';
+      case 'video_source_scrape_tasks_history':
+        return '最近任务';
+      case 'video_source_scrape_tasks_empty':
+        return '暂无刮削任务';
+      case 'video_source_scrape_waiting_confirmation':
+        return '等待你的确认';
+      case 'video_source_scrape_phase_scanning':
+        return '扫描来源';
       default:
         return null;
     }
@@ -229893,6 +230380,20 @@ extension on _StringsZhHk {
         return 'Overwrite protected sidecars?';
       case 'video_source_scrape_external_overwrite_confirm_body':
         return 'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
+      case 'video_source_scrape_tasks_open':
+        return 'Background tasks';
+      case 'video_source_scrape_background_started':
+        return 'Scraping is running in the background';
+      case 'video_source_scrape_tasks_current':
+        return 'Current task';
+      case 'video_source_scrape_tasks_history':
+        return 'Recent tasks';
+      case 'video_source_scrape_tasks_empty':
+        return 'No scrape tasks yet';
+      case 'video_source_scrape_waiting_confirmation':
+        return 'Waiting for your confirmation';
+      case 'video_source_scrape_phase_scanning':
+        return 'Scanning source';
       default:
         return null;
     }
