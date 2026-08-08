@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 53941 (3173 per locale)
+/// Strings: 54009 (3177 per locale)
 ///
-/// Built on 2026-08-08 at 16:44 UTC
+/// Built on 2026-08-08 at 18:00 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -4274,6 +4274,14 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_work_content_rating => 'Content rating';
   String get video_all_videos_list_view => 'List view';
   String get video_all_videos_grid_view => 'Grid view';
+  String video_home_continue_episode_number({required Object n}) =>
+      'Playing episode ${n}';
+  String video_home_next_episode_number({required Object n}) =>
+      'Next · Episode ${n}';
+  String video_home_recent_episode_number({required Object n}) =>
+      'Recently added · Episode ${n}';
+  String video_home_remaining_minutes({required Object minutes}) =>
+      '${minutes} min remaining';
 }
 
 // Path: <root>
@@ -11570,6 +11578,18 @@ class _StringsAr extends _StringsEn {
   String get video_all_videos_list_view => 'List view';
   @override
   String get video_all_videos_grid_view => 'Grid view';
+  @override
+  String video_home_continue_episode_number({required Object n}) =>
+      'Playing episode ${n}';
+  @override
+  String video_home_next_episode_number({required Object n}) =>
+      'Next · Episode ${n}';
+  @override
+  String video_home_recent_episode_number({required Object n}) =>
+      'Recently added · Episode ${n}';
+  @override
+  String video_home_remaining_minutes({required Object minutes}) =>
+      '${minutes} min remaining';
 }
 
 // Path: <root>
@@ -18933,6 +18953,18 @@ class _StringsDe extends _StringsEn {
   String get video_all_videos_list_view => 'List view';
   @override
   String get video_all_videos_grid_view => 'Grid view';
+  @override
+  String video_home_continue_episode_number({required Object n}) =>
+      'Playing episode ${n}';
+  @override
+  String video_home_next_episode_number({required Object n}) =>
+      'Next · Episode ${n}';
+  @override
+  String video_home_recent_episode_number({required Object n}) =>
+      'Recently added · Episode ${n}';
+  @override
+  String video_home_remaining_minutes({required Object minutes}) =>
+      '${minutes} min remaining';
 }
 
 // Path: <root>
@@ -26311,6 +26343,18 @@ class _StringsEs extends _StringsEn {
   String get video_all_videos_list_view => 'List view';
   @override
   String get video_all_videos_grid_view => 'Grid view';
+  @override
+  String video_home_continue_episode_number({required Object n}) =>
+      'Playing episode ${n}';
+  @override
+  String video_home_next_episode_number({required Object n}) =>
+      'Next · Episode ${n}';
+  @override
+  String video_home_recent_episode_number({required Object n}) =>
+      'Recently added · Episode ${n}';
+  @override
+  String video_home_remaining_minutes({required Object minutes}) =>
+      '${minutes} min remaining';
 }
 
 // Path: <root>
@@ -33701,6 +33745,18 @@ class _StringsFr extends _StringsEn {
   String get video_all_videos_list_view => 'List view';
   @override
   String get video_all_videos_grid_view => 'Grid view';
+  @override
+  String video_home_continue_episode_number({required Object n}) =>
+      'Playing episode ${n}';
+  @override
+  String video_home_next_episode_number({required Object n}) =>
+      'Next · Episode ${n}';
+  @override
+  String video_home_recent_episode_number({required Object n}) =>
+      'Recently added · Episode ${n}';
+  @override
+  String video_home_remaining_minutes({required Object minutes}) =>
+      '${minutes} min remaining';
 }
 
 // Path: <root>
@@ -41020,6 +41076,18 @@ class _StringsId extends _StringsEn {
   String get video_all_videos_list_view => 'List view';
   @override
   String get video_all_videos_grid_view => 'Grid view';
+  @override
+  String video_home_continue_episode_number({required Object n}) =>
+      'Playing episode ${n}';
+  @override
+  String video_home_next_episode_number({required Object n}) =>
+      'Next · Episode ${n}';
+  @override
+  String video_home_recent_episode_number({required Object n}) =>
+      'Recently added · Episode ${n}';
+  @override
+  String video_home_remaining_minutes({required Object minutes}) =>
+      '${minutes} min remaining';
 }
 
 // Path: <root>
@@ -48385,6 +48453,18 @@ class _StringsIt extends _StringsEn {
   String get video_all_videos_list_view => 'List view';
   @override
   String get video_all_videos_grid_view => 'Grid view';
+  @override
+  String video_home_continue_episode_number({required Object n}) =>
+      'Playing episode ${n}';
+  @override
+  String video_home_next_episode_number({required Object n}) =>
+      'Next · Episode ${n}';
+  @override
+  String video_home_recent_episode_number({required Object n}) =>
+      'Recently added · Episode ${n}';
+  @override
+  String video_home_remaining_minutes({required Object minutes}) =>
+      '${minutes} min remaining';
 }
 
 // Path: <root>
@@ -55567,6 +55647,18 @@ class _StringsJa extends _StringsEn {
   String get video_all_videos_list_view => 'List view';
   @override
   String get video_all_videos_grid_view => 'Grid view';
+  @override
+  String video_home_continue_episode_number({required Object n}) =>
+      'Playing episode ${n}';
+  @override
+  String video_home_next_episode_number({required Object n}) =>
+      'Next · Episode ${n}';
+  @override
+  String video_home_recent_episode_number({required Object n}) =>
+      'Recently added · Episode ${n}';
+  @override
+  String video_home_remaining_minutes({required Object minutes}) =>
+      '${minutes} min remaining';
 }
 
 // Path: <root>
@@ -62751,6 +62843,18 @@ class _StringsKo extends _StringsEn {
   String get video_all_videos_list_view => 'List view';
   @override
   String get video_all_videos_grid_view => 'Grid view';
+  @override
+  String video_home_continue_episode_number({required Object n}) =>
+      'Playing episode ${n}';
+  @override
+  String video_home_next_episode_number({required Object n}) =>
+      'Next · Episode ${n}';
+  @override
+  String video_home_recent_episode_number({required Object n}) =>
+      'Recently added · Episode ${n}';
+  @override
+  String video_home_remaining_minutes({required Object minutes}) =>
+      '${minutes} min remaining';
 }
 
 // Path: <root>
@@ -70096,6 +70200,18 @@ class _StringsNl extends _StringsEn {
   String get video_all_videos_list_view => 'List view';
   @override
   String get video_all_videos_grid_view => 'Grid view';
+  @override
+  String video_home_continue_episode_number({required Object n}) =>
+      'Playing episode ${n}';
+  @override
+  String video_home_next_episode_number({required Object n}) =>
+      'Next · Episode ${n}';
+  @override
+  String video_home_recent_episode_number({required Object n}) =>
+      'Recently added · Episode ${n}';
+  @override
+  String video_home_remaining_minutes({required Object minutes}) =>
+      '${minutes} min remaining';
 }
 
 // Path: <root>
@@ -77454,6 +77570,18 @@ class _StringsPtBr extends _StringsEn {
   String get video_all_videos_list_view => 'List view';
   @override
   String get video_all_videos_grid_view => 'Grid view';
+  @override
+  String video_home_continue_episode_number({required Object n}) =>
+      'Playing episode ${n}';
+  @override
+  String video_home_next_episode_number({required Object n}) =>
+      'Next · Episode ${n}';
+  @override
+  String video_home_recent_episode_number({required Object n}) =>
+      'Recently added · Episode ${n}';
+  @override
+  String video_home_remaining_minutes({required Object minutes}) =>
+      '${minutes} min remaining';
 }
 
 // Path: <root>
@@ -84796,6 +84924,18 @@ class _StringsRu extends _StringsEn {
   String get video_all_videos_list_view => 'List view';
   @override
   String get video_all_videos_grid_view => 'Grid view';
+  @override
+  String video_home_continue_episode_number({required Object n}) =>
+      'Playing episode ${n}';
+  @override
+  String video_home_next_episode_number({required Object n}) =>
+      'Next · Episode ${n}';
+  @override
+  String video_home_recent_episode_number({required Object n}) =>
+      'Recently added · Episode ${n}';
+  @override
+  String video_home_remaining_minutes({required Object minutes}) =>
+      '${minutes} min remaining';
 }
 
 // Path: <root>
@@ -92086,6 +92226,18 @@ class _StringsTh extends _StringsEn {
   String get video_all_videos_list_view => 'List view';
   @override
   String get video_all_videos_grid_view => 'Grid view';
+  @override
+  String video_home_continue_episode_number({required Object n}) =>
+      'Playing episode ${n}';
+  @override
+  String video_home_next_episode_number({required Object n}) =>
+      'Next · Episode ${n}';
+  @override
+  String video_home_recent_episode_number({required Object n}) =>
+      'Recently added · Episode ${n}';
+  @override
+  String video_home_remaining_minutes({required Object minutes}) =>
+      '${minutes} min remaining';
 }
 
 // Path: <root>
@@ -99408,6 +99560,18 @@ class _StringsTr extends _StringsEn {
   String get video_all_videos_list_view => 'List view';
   @override
   String get video_all_videos_grid_view => 'Grid view';
+  @override
+  String video_home_continue_episode_number({required Object n}) =>
+      'Playing episode ${n}';
+  @override
+  String video_home_next_episode_number({required Object n}) =>
+      'Next · Episode ${n}';
+  @override
+  String video_home_recent_episode_number({required Object n}) =>
+      'Recently added · Episode ${n}';
+  @override
+  String video_home_remaining_minutes({required Object minutes}) =>
+      '${minutes} min remaining';
 }
 
 // Path: <root>
@@ -106715,6 +106879,18 @@ class _StringsVi extends _StringsEn {
   String get video_all_videos_list_view => 'List view';
   @override
   String get video_all_videos_grid_view => 'Grid view';
+  @override
+  String video_home_continue_episode_number({required Object n}) =>
+      'Playing episode ${n}';
+  @override
+  String video_home_next_episode_number({required Object n}) =>
+      'Next · Episode ${n}';
+  @override
+  String video_home_recent_episode_number({required Object n}) =>
+      'Recently added · Episode ${n}';
+  @override
+  String video_home_remaining_minutes({required Object minutes}) =>
+      '${minutes} min remaining';
 }
 
 // Path: <root>
@@ -113511,6 +113687,18 @@ class _StringsZhCn extends _StringsEn {
   String get video_all_videos_list_view => '列表视图';
   @override
   String get video_all_videos_grid_view => '网格视图';
+  @override
+  String video_home_continue_episode_number({required Object n}) =>
+      '看到第 ${n} 集';
+  @override
+  String video_home_next_episode_number({required Object n}) =>
+      '下一集 · 第 ${n} 集';
+  @override
+  String video_home_recent_episode_number({required Object n}) =>
+      '最近添加 · 第 ${n} 集';
+  @override
+  String video_home_remaining_minutes({required Object minutes}) =>
+      '剩余 ${minutes} 分钟';
 }
 
 // Path: <root>
@@ -120613,6 +120801,18 @@ class _StringsZhHk extends _StringsEn {
   String get video_all_videos_list_view => 'List view';
   @override
   String get video_all_videos_grid_view => 'Grid view';
+  @override
+  String video_home_continue_episode_number({required Object n}) =>
+      'Playing episode ${n}';
+  @override
+  String video_home_next_episode_number({required Object n}) =>
+      'Next · Episode ${n}';
+  @override
+  String video_home_recent_episode_number({required Object n}) =>
+      'Recently added · Episode ${n}';
+  @override
+  String video_home_remaining_minutes({required Object minutes}) =>
+      '${minutes} min remaining';
 }
 
 /// Flat map(s) containing all translations.
@@ -127128,6 +127328,14 @@ extension on _StringsEn {
         return 'List view';
       case 'video_all_videos_grid_view':
         return 'Grid view';
+      case 'video_home_continue_episode_number':
+        return ({required Object n}) => 'Playing episode ${n}';
+      case 'video_home_next_episode_number':
+        return ({required Object n}) => 'Next · Episode ${n}';
+      case 'video_home_recent_episode_number':
+        return ({required Object n}) => 'Recently added · Episode ${n}';
+      case 'video_home_remaining_minutes':
+        return ({required Object minutes}) => '${minutes} min remaining';
       default:
         return null;
     }
@@ -133641,6 +133849,14 @@ extension on _StringsAr {
         return 'List view';
       case 'video_all_videos_grid_view':
         return 'Grid view';
+      case 'video_home_continue_episode_number':
+        return ({required Object n}) => 'Playing episode ${n}';
+      case 'video_home_next_episode_number':
+        return ({required Object n}) => 'Next · Episode ${n}';
+      case 'video_home_recent_episode_number':
+        return ({required Object n}) => 'Recently added · Episode ${n}';
+      case 'video_home_remaining_minutes':
+        return ({required Object minutes}) => '${minutes} min remaining';
       default:
         return null;
     }
@@ -140176,6 +140392,14 @@ extension on _StringsDe {
         return 'List view';
       case 'video_all_videos_grid_view':
         return 'Grid view';
+      case 'video_home_continue_episode_number':
+        return ({required Object n}) => 'Playing episode ${n}';
+      case 'video_home_next_episode_number':
+        return ({required Object n}) => 'Next · Episode ${n}';
+      case 'video_home_recent_episode_number':
+        return ({required Object n}) => 'Recently added · Episode ${n}';
+      case 'video_home_remaining_minutes':
+        return ({required Object minutes}) => '${minutes} min remaining';
       default:
         return null;
     }
@@ -146710,6 +146934,14 @@ extension on _StringsEs {
         return 'List view';
       case 'video_all_videos_grid_view':
         return 'Grid view';
+      case 'video_home_continue_episode_number':
+        return ({required Object n}) => 'Playing episode ${n}';
+      case 'video_home_next_episode_number':
+        return ({required Object n}) => 'Next · Episode ${n}';
+      case 'video_home_recent_episode_number':
+        return ({required Object n}) => 'Recently added · Episode ${n}';
+      case 'video_home_remaining_minutes':
+        return ({required Object minutes}) => '${minutes} min remaining';
       default:
         return null;
     }
@@ -153250,6 +153482,14 @@ extension on _StringsFr {
         return 'List view';
       case 'video_all_videos_grid_view':
         return 'Grid view';
+      case 'video_home_continue_episode_number':
+        return ({required Object n}) => 'Playing episode ${n}';
+      case 'video_home_next_episode_number':
+        return ({required Object n}) => 'Next · Episode ${n}';
+      case 'video_home_recent_episode_number':
+        return ({required Object n}) => 'Recently added · Episode ${n}';
+      case 'video_home_remaining_minutes':
+        return ({required Object minutes}) => '${minutes} min remaining';
       default:
         return null;
     }
@@ -159772,6 +160012,14 @@ extension on _StringsId {
         return 'List view';
       case 'video_all_videos_grid_view':
         return 'Grid view';
+      case 'video_home_continue_episode_number':
+        return ({required Object n}) => 'Playing episode ${n}';
+      case 'video_home_next_episode_number':
+        return ({required Object n}) => 'Next · Episode ${n}';
+      case 'video_home_recent_episode_number':
+        return ({required Object n}) => 'Recently added · Episode ${n}';
+      case 'video_home_remaining_minutes':
+        return ({required Object minutes}) => '${minutes} min remaining';
       default:
         return null;
     }
@@ -166308,6 +166556,14 @@ extension on _StringsIt {
         return 'List view';
       case 'video_all_videos_grid_view':
         return 'Grid view';
+      case 'video_home_continue_episode_number':
+        return ({required Object n}) => 'Playing episode ${n}';
+      case 'video_home_next_episode_number':
+        return ({required Object n}) => 'Next · Episode ${n}';
+      case 'video_home_recent_episode_number':
+        return ({required Object n}) => 'Recently added · Episode ${n}';
+      case 'video_home_remaining_minutes':
+        return ({required Object minutes}) => '${minutes} min remaining';
       default:
         return null;
     }
@@ -172806,6 +173062,14 @@ extension on _StringsJa {
         return 'List view';
       case 'video_all_videos_grid_view':
         return 'Grid view';
+      case 'video_home_continue_episode_number':
+        return ({required Object n}) => 'Playing episode ${n}';
+      case 'video_home_next_episode_number':
+        return ({required Object n}) => 'Next · Episode ${n}';
+      case 'video_home_recent_episode_number':
+        return ({required Object n}) => 'Recently added · Episode ${n}';
+      case 'video_home_remaining_minutes':
+        return ({required Object minutes}) => '${minutes} min remaining';
       default:
         return null;
     }
@@ -179308,6 +179572,14 @@ extension on _StringsKo {
         return 'List view';
       case 'video_all_videos_grid_view':
         return 'Grid view';
+      case 'video_home_continue_episode_number':
+        return ({required Object n}) => 'Playing episode ${n}';
+      case 'video_home_next_episode_number':
+        return ({required Object n}) => 'Next · Episode ${n}';
+      case 'video_home_recent_episode_number':
+        return ({required Object n}) => 'Recently added · Episode ${n}';
+      case 'video_home_remaining_minutes':
+        return ({required Object minutes}) => '${minutes} min remaining';
       default:
         return null;
     }
@@ -185838,6 +186110,14 @@ extension on _StringsNl {
         return 'List view';
       case 'video_all_videos_grid_view':
         return 'Grid view';
+      case 'video_home_continue_episode_number':
+        return ({required Object n}) => 'Playing episode ${n}';
+      case 'video_home_next_episode_number':
+        return ({required Object n}) => 'Next · Episode ${n}';
+      case 'video_home_recent_episode_number':
+        return ({required Object n}) => 'Recently added · Episode ${n}';
+      case 'video_home_remaining_minutes':
+        return ({required Object minutes}) => '${minutes} min remaining';
       default:
         return null;
     }
@@ -192365,6 +192645,14 @@ extension on _StringsPtBr {
         return 'List view';
       case 'video_all_videos_grid_view':
         return 'Grid view';
+      case 'video_home_continue_episode_number':
+        return ({required Object n}) => 'Playing episode ${n}';
+      case 'video_home_next_episode_number':
+        return ({required Object n}) => 'Next · Episode ${n}';
+      case 'video_home_recent_episode_number':
+        return ({required Object n}) => 'Recently added · Episode ${n}';
+      case 'video_home_remaining_minutes':
+        return ({required Object minutes}) => '${minutes} min remaining';
       default:
         return null;
     }
@@ -198897,6 +199185,14 @@ extension on _StringsRu {
         return 'List view';
       case 'video_all_videos_grid_view':
         return 'Grid view';
+      case 'video_home_continue_episode_number':
+        return ({required Object n}) => 'Playing episode ${n}';
+      case 'video_home_next_episode_number':
+        return ({required Object n}) => 'Next · Episode ${n}';
+      case 'video_home_recent_episode_number':
+        return ({required Object n}) => 'Recently added · Episode ${n}';
+      case 'video_home_remaining_minutes':
+        return ({required Object minutes}) => '${minutes} min remaining';
       default:
         return null;
     }
@@ -205412,6 +205708,14 @@ extension on _StringsTh {
         return 'List view';
       case 'video_all_videos_grid_view':
         return 'Grid view';
+      case 'video_home_continue_episode_number':
+        return ({required Object n}) => 'Playing episode ${n}';
+      case 'video_home_next_episode_number':
+        return ({required Object n}) => 'Next · Episode ${n}';
+      case 'video_home_recent_episode_number':
+        return ({required Object n}) => 'Recently added · Episode ${n}';
+      case 'video_home_remaining_minutes':
+        return ({required Object minutes}) => '${minutes} min remaining';
       default:
         return null;
     }
@@ -211936,6 +212240,14 @@ extension on _StringsTr {
         return 'List view';
       case 'video_all_videos_grid_view':
         return 'Grid view';
+      case 'video_home_continue_episode_number':
+        return ({required Object n}) => 'Playing episode ${n}';
+      case 'video_home_next_episode_number':
+        return ({required Object n}) => 'Next · Episode ${n}';
+      case 'video_home_recent_episode_number':
+        return ({required Object n}) => 'Recently added · Episode ${n}';
+      case 'video_home_remaining_minutes':
+        return ({required Object minutes}) => '${minutes} min remaining';
       default:
         return null;
     }
@@ -218456,6 +218768,14 @@ extension on _StringsVi {
         return 'List view';
       case 'video_all_videos_grid_view':
         return 'Grid view';
+      case 'video_home_continue_episode_number':
+        return ({required Object n}) => 'Playing episode ${n}';
+      case 'video_home_next_episode_number':
+        return ({required Object n}) => 'Next · Episode ${n}';
+      case 'video_home_recent_episode_number':
+        return ({required Object n}) => 'Recently added · Episode ${n}';
+      case 'video_home_remaining_minutes':
+        return ({required Object minutes}) => '${minutes} min remaining';
       default:
         return null;
     }
@@ -224922,6 +225242,14 @@ extension on _StringsZhCn {
         return '列表视图';
       case 'video_all_videos_grid_view':
         return '网格视图';
+      case 'video_home_continue_episode_number':
+        return ({required Object n}) => '看到第 ${n} 集';
+      case 'video_home_next_episode_number':
+        return ({required Object n}) => '下一集 · 第 ${n} 集';
+      case 'video_home_recent_episode_number':
+        return ({required Object n}) => '最近添加 · 第 ${n} 集';
+      case 'video_home_remaining_minutes':
+        return ({required Object minutes}) => '剩余 ${minutes} 分钟';
       default:
         return null;
     }
@@ -231415,6 +231743,14 @@ extension on _StringsZhHk {
         return 'List view';
       case 'video_all_videos_grid_view':
         return 'Grid view';
+      case 'video_home_continue_episode_number':
+        return ({required Object n}) => 'Playing episode ${n}';
+      case 'video_home_next_episode_number':
+        return ({required Object n}) => 'Next · Episode ${n}';
+      case 'video_home_recent_episode_number':
+        return ({required Object n}) => 'Recently added · Episode ${n}';
+      case 'video_home_remaining_minutes':
+        return ({required Object minutes}) => '${minutes} min remaining';
       default:
         return null;
     }
