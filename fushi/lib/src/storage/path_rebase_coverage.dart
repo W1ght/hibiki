@@ -362,7 +362,7 @@ const List<PathRebaseColumn> kPathRebaseColumns = <PathRebaseColumn>[
           '合集封面同型）。当前尚无写入方（下载归 UI 接力线程），但列语义即'
           '文档根内路径 —— 不改写 = 换数据根后相关作品卡封面变死链。'),
 
-  // ── video_metadata_* / video_sidecar_artifacts（schema v69）────────
+  // ── video_metadata_* / video_sidecar_artifacts（schema v77）────────
   PathRebaseColumn('VideoMetadataPeople', 'profileUrl', PathRebaseKind.notAPath,
       '人物头像的远端 provider URL，不是本机路径。'),
   PathRebaseColumn(
@@ -387,7 +387,7 @@ const List<PathRebaseColumn> kPathRebaseColumns = <PathRebaseColumn>[
       'VideoMetadataImages',
       'localPath',
       PathRebaseKind.externalUserPath,
-      'v69 来源刮削写在用户媒体目录旁的图片 sidecar 绝对路径；来源根是外部用户路径。'),
+      'v77 来源刮削写在用户媒体目录旁的图片 sidecar 绝对路径；来源根是外部用户路径。'),
   PathRebaseColumn('VideoSourceScrapeRuns', 'summaryJson',
       PathRebaseKind.notAPath, '来源刮削运行摘要与错误计数 JSON，无本机路径。'),
   PathRebaseColumn(

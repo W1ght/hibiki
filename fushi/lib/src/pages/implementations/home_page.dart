@@ -348,7 +348,7 @@ class _HomePageState extends BasePageState<HomePage>
         );
         return 0;
       }));
-      // v70 之前已经存在于库中的来源不会自动重触发扫描。启动时做一次纯本地、
+      // v77 之前已经存在于库中的来源不会自动重触发扫描。启动时做一次纯本地、
       // 幂等的作品索引，把旧合集/独立电影补成规范 VideoMetadataWork；否则系列页
       // 能看到临时卡片，点进详情却永远只能落到无资料的旧合集视图。
       unawaited(_backfillVideoMetadataWorks());

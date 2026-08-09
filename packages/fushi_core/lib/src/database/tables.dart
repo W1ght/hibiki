@@ -1404,7 +1404,7 @@ class MediaImages extends Table {
       ];
 }
 
-// ── video_metadata_works（v69：视频规范作品资料）─────────────────────
+// ── video_metadata_works（v77：视频规范作品资料）─────────────────────
 // MoviePilot 风格来源刮削的规范宿主。一行是一部作品，归属本地合集（电视剧）或
 // 独立视频（电影）二选一；旧 CollectionScrapeMeta / VideoScrapeMeta 继续作为兼容
 // 投影，避免详情页一次性迁移。整组表均是可重建、本机路径相关缓存，不进入 live-sync。
@@ -1731,7 +1731,7 @@ class VideoMetadataImages extends Table {
       ];
 }
 
-// ── video_metadata_extras（v70：作品预告片 / 花絮）────────────────────
+// ── video_metadata_extras（v77：作品预告片 / 花絮）────────────────────
 // 在线附件不创建 VideoBook；本地附件复用已经入库的 VideoBook 并以 bookUid 关联。
 // extraKey 由上层生成稳定身份：`local:<bookUid>` 或 `<provider>:<video-id>`。
 @DataClassName('VideoMetadataExtraRow')

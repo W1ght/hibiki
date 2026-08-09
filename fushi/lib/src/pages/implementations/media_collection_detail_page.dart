@@ -149,7 +149,7 @@ class _MediaCollectionDetailPageState extends State<MediaCollectionDetailPage>
   Map<String, VideoScrapeMetaRow> _episodeMetaByUid =
       const <String, VideoScrapeMetaRow>{};
 
-  /// v69 作品级人物关系；无规范资料时为 null，hero 保持既有 v68 投影形态。
+  /// v77 作品级人物关系；无规范资料时为 null，hero 保持既有 v68 投影形态。
   VideoMetadataWorkCredits? _workCredits;
   VideoMetadataWorkRow? _canonicalWork;
   Map<String, VideoMetadataEpisodeRow> _canonicalEpisodeByUid =

@@ -187,11 +187,11 @@ void main() {
     );
     // 本用例 seed 的是 v62 库，因此这一次打开会连跑 v63、v64（collection_scrape_meta，
     // BUG-1310）、v65（Mihon 五表）、v66（collection_relations）、v68
-    // （media_images）**和** v69（视频来源规范刮削 14 表）。断言据此拆成两半，
+    // （media_images）**和** v77（视频来源规范刮削 15 表）。断言据此拆成两半，
     // 原意图一分不弱化：
     //  ① 既有表逐张全文比对 —— v63 只能删行，不得 ALTER/DROP/rebuild 或留影子表；
     //  ② 新增表必须**恰好**是 v64 一张 + v65 五张 + v66 一张 + v68 一张 +
-    //     v69 十四张 —— v63 自己仍然一张表都不许建。
+    //     v77 十五张 —— v63 自己仍然一张表都不许建。
     final Map<String, String> schemaAfter = await _tableSqlFromDrift(db);
     for (final MapEntry<String, String> entry in schemaBefore.entries) {
       if (entry.key == 'galgames') {
@@ -238,10 +238,11 @@ void main() {
         'video_metadata_images',
         'video_source_scrape_settings',
         'video_source_scrape_runs',
+        'video_metadata_extras',
         'video_sidecar_artifacts',
       },
       reason: '除 v64 的 collection_scrape_meta、v65 的 Mihon 五表、v66 的 '
-          'collection_relations、v68 的 media_images 与 v69 视频来源刮削表外，'
+          'collection_relations、v68 的 media_images 与 v77 视频来源刮削表外，'
           '升级不得新增任何表',
     );
   });
