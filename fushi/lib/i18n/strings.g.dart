@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 53720 (3160 per locale)
+/// Strings: 53822 (3166 per locale)
 ///
-/// Built on 2026-08-08 at 18:48 UTC
+/// Built on 2026-08-09 at 08:23 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -4268,6 +4268,13 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Verifying ${batch} (${done}/${total})';
   String get migration_import_verifying_hint =>
       'Checksumming the archives. Large libraries can take several minutes.';
+  String get game_line_copy_tooltip => 'Copy sentence';
+  String get game_japanese_locale_auto => 'Auto';
+  String get game_japanese_locale_on => 'Always on';
+  String get game_japanese_locale_off => 'Off';
+  String get game_japanese_locale => 'Japanese locale';
+  String get game_japanese_locale_hint =>
+      'Chinese/English patched builds must turn this off, or the game crashes on launch';
 }
 
 // Path: <root>
@@ -11546,6 +11553,19 @@ class _StringsAr extends _StringsEn {
   @override
   String get migration_import_verifying_hint =>
       'Checksumming the archives. Large libraries can take several minutes.';
+  @override
+  String get game_line_copy_tooltip => 'Copy sentence';
+  @override
+  String get game_japanese_locale_auto => 'Auto';
+  @override
+  String get game_japanese_locale_on => 'Always on';
+  @override
+  String get game_japanese_locale_off => 'Off';
+  @override
+  String get game_japanese_locale => 'Japanese locale';
+  @override
+  String get game_japanese_locale_hint =>
+      'Chinese/English patched builds must turn this off, or the game crashes on launch';
 }
 
 // Path: <root>
@@ -18891,6 +18911,19 @@ class _StringsDe extends _StringsEn {
   @override
   String get migration_import_verifying_hint =>
       'Checksumming the archives. Large libraries can take several minutes.';
+  @override
+  String get game_line_copy_tooltip => 'Copy sentence';
+  @override
+  String get game_japanese_locale_auto => 'Auto';
+  @override
+  String get game_japanese_locale_on => 'Always on';
+  @override
+  String get game_japanese_locale_off => 'Off';
+  @override
+  String get game_japanese_locale => 'Japanese locale';
+  @override
+  String get game_japanese_locale_hint =>
+      'Chinese/English patched builds must turn this off, or the game crashes on launch';
 }
 
 // Path: <root>
@@ -26252,6 +26285,19 @@ class _StringsEs extends _StringsEn {
   @override
   String get migration_import_verifying_hint =>
       'Checksumming the archives. Large libraries can take several minutes.';
+  @override
+  String get game_line_copy_tooltip => 'Copy sentence';
+  @override
+  String get game_japanese_locale_auto => 'Auto';
+  @override
+  String get game_japanese_locale_on => 'Always on';
+  @override
+  String get game_japanese_locale_off => 'Off';
+  @override
+  String get game_japanese_locale => 'Japanese locale';
+  @override
+  String get game_japanese_locale_hint =>
+      'Chinese/English patched builds must turn this off, or the game crashes on launch';
 }
 
 // Path: <root>
@@ -33625,6 +33671,19 @@ class _StringsFr extends _StringsEn {
   @override
   String get migration_import_verifying_hint =>
       'Checksumming the archives. Large libraries can take several minutes.';
+  @override
+  String get game_line_copy_tooltip => 'Copy sentence';
+  @override
+  String get game_japanese_locale_auto => 'Auto';
+  @override
+  String get game_japanese_locale_on => 'Always on';
+  @override
+  String get game_japanese_locale_off => 'Off';
+  @override
+  String get game_japanese_locale => 'Japanese locale';
+  @override
+  String get game_japanese_locale_hint =>
+      'Chinese/English patched builds must turn this off, or the game crashes on launch';
 }
 
 // Path: <root>
@@ -40926,6 +40985,19 @@ class _StringsId extends _StringsEn {
   @override
   String get migration_import_verifying_hint =>
       'Checksumming the archives. Large libraries can take several minutes.';
+  @override
+  String get game_line_copy_tooltip => 'Copy sentence';
+  @override
+  String get game_japanese_locale_auto => 'Auto';
+  @override
+  String get game_japanese_locale_on => 'Always on';
+  @override
+  String get game_japanese_locale_off => 'Off';
+  @override
+  String get game_japanese_locale => 'Japanese locale';
+  @override
+  String get game_japanese_locale_hint =>
+      'Chinese/English patched builds must turn this off, or the game crashes on launch';
 }
 
 // Path: <root>
@@ -48273,6 +48345,19 @@ class _StringsIt extends _StringsEn {
   @override
   String get migration_import_verifying_hint =>
       'Checksumming the archives. Large libraries can take several minutes.';
+  @override
+  String get game_line_copy_tooltip => 'Copy sentence';
+  @override
+  String get game_japanese_locale_auto => 'Auto';
+  @override
+  String get game_japanese_locale_on => 'Always on';
+  @override
+  String get game_japanese_locale_off => 'Off';
+  @override
+  String get game_japanese_locale => 'Japanese locale';
+  @override
+  String get game_japanese_locale_hint =>
+      'Chinese/English patched builds must turn this off, or the game crashes on launch';
 }
 
 // Path: <root>
@@ -55434,6 +55519,19 @@ class _StringsJa extends _StringsEn {
   @override
   String get migration_import_verifying_hint =>
       'Checksumming the archives. Large libraries can take several minutes.';
+  @override
+  String get game_line_copy_tooltip => 'Copy sentence';
+  @override
+  String get game_japanese_locale_auto => 'Auto';
+  @override
+  String get game_japanese_locale_on => 'Always on';
+  @override
+  String get game_japanese_locale_off => 'Off';
+  @override
+  String get game_japanese_locale => 'Japanese locale';
+  @override
+  String get game_japanese_locale_hint =>
+      'Chinese/English patched builds must turn this off, or the game crashes on launch';
 }
 
 // Path: <root>
@@ -62602,6 +62700,19 @@ class _StringsKo extends _StringsEn {
   @override
   String get migration_import_verifying_hint =>
       'Checksumming the archives. Large libraries can take several minutes.';
+  @override
+  String get game_line_copy_tooltip => 'Copy sentence';
+  @override
+  String get game_japanese_locale_auto => 'Auto';
+  @override
+  String get game_japanese_locale_on => 'Always on';
+  @override
+  String get game_japanese_locale_off => 'Off';
+  @override
+  String get game_japanese_locale => 'Japanese locale';
+  @override
+  String get game_japanese_locale_hint =>
+      'Chinese/English patched builds must turn this off, or the game crashes on launch';
 }
 
 // Path: <root>
@@ -69929,6 +70040,19 @@ class _StringsNl extends _StringsEn {
   @override
   String get migration_import_verifying_hint =>
       'Checksumming the archives. Large libraries can take several minutes.';
+  @override
+  String get game_line_copy_tooltip => 'Copy sentence';
+  @override
+  String get game_japanese_locale_auto => 'Auto';
+  @override
+  String get game_japanese_locale_on => 'Always on';
+  @override
+  String get game_japanese_locale_off => 'Off';
+  @override
+  String get game_japanese_locale => 'Japanese locale';
+  @override
+  String get game_japanese_locale_hint =>
+      'Chinese/English patched builds must turn this off, or the game crashes on launch';
 }
 
 // Path: <root>
@@ -77268,6 +77392,19 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get migration_import_verifying_hint =>
       'Checksumming the archives. Large libraries can take several minutes.';
+  @override
+  String get game_line_copy_tooltip => 'Copy sentence';
+  @override
+  String get game_japanese_locale_auto => 'Auto';
+  @override
+  String get game_japanese_locale_on => 'Always on';
+  @override
+  String get game_japanese_locale_off => 'Off';
+  @override
+  String get game_japanese_locale => 'Japanese locale';
+  @override
+  String get game_japanese_locale_hint =>
+      'Chinese/English patched builds must turn this off, or the game crashes on launch';
 }
 
 // Path: <root>
@@ -84593,6 +84730,19 @@ class _StringsRu extends _StringsEn {
   @override
   String get migration_import_verifying_hint =>
       'Checksumming the archives. Large libraries can take several minutes.';
+  @override
+  String get game_line_copy_tooltip => 'Copy sentence';
+  @override
+  String get game_japanese_locale_auto => 'Auto';
+  @override
+  String get game_japanese_locale_on => 'Always on';
+  @override
+  String get game_japanese_locale_off => 'Off';
+  @override
+  String get game_japanese_locale => 'Japanese locale';
+  @override
+  String get game_japanese_locale_hint =>
+      'Chinese/English patched builds must turn this off, or the game crashes on launch';
 }
 
 // Path: <root>
@@ -91866,6 +92016,19 @@ class _StringsTh extends _StringsEn {
   @override
   String get migration_import_verifying_hint =>
       'Checksumming the archives. Large libraries can take several minutes.';
+  @override
+  String get game_line_copy_tooltip => 'Copy sentence';
+  @override
+  String get game_japanese_locale_auto => 'Auto';
+  @override
+  String get game_japanese_locale_on => 'Always on';
+  @override
+  String get game_japanese_locale_off => 'Off';
+  @override
+  String get game_japanese_locale => 'Japanese locale';
+  @override
+  String get game_japanese_locale_hint =>
+      'Chinese/English patched builds must turn this off, or the game crashes on launch';
 }
 
 // Path: <root>
@@ -99170,6 +99333,19 @@ class _StringsTr extends _StringsEn {
   @override
   String get migration_import_verifying_hint =>
       'Checksumming the archives. Large libraries can take several minutes.';
+  @override
+  String get game_line_copy_tooltip => 'Copy sentence';
+  @override
+  String get game_japanese_locale_auto => 'Auto';
+  @override
+  String get game_japanese_locale_on => 'Always on';
+  @override
+  String get game_japanese_locale_off => 'Off';
+  @override
+  String get game_japanese_locale => 'Japanese locale';
+  @override
+  String get game_japanese_locale_hint =>
+      'Chinese/English patched builds must turn this off, or the game crashes on launch';
 }
 
 // Path: <root>
@@ -106459,6 +106635,19 @@ class _StringsVi extends _StringsEn {
   @override
   String get migration_import_verifying_hint =>
       'Checksumming the archives. Large libraries can take several minutes.';
+  @override
+  String get game_line_copy_tooltip => 'Copy sentence';
+  @override
+  String get game_japanese_locale_auto => 'Auto';
+  @override
+  String get game_japanese_locale_on => 'Always on';
+  @override
+  String get game_japanese_locale_off => 'Off';
+  @override
+  String get game_japanese_locale => 'Japanese locale';
+  @override
+  String get game_japanese_locale_hint =>
+      'Chinese/English patched builds must turn this off, or the game crashes on launch';
 }
 
 // Path: <root>
@@ -113228,6 +113417,18 @@ class _StringsZhCn extends _StringsEn {
       '正在校验 ${batch}（${done}/${total}）';
   @override
   String get migration_import_verifying_hint => '正在核对归档校验和。库很大时需要几分钟。';
+  @override
+  String get game_line_copy_tooltip => '复制句子';
+  @override
+  String get game_japanese_locale_auto => '自动';
+  @override
+  String get game_japanese_locale_on => '始终开启';
+  @override
+  String get game_japanese_locale_off => '关闭';
+  @override
+  String get game_japanese_locale => '日语区域（转区）';
+  @override
+  String get game_japanese_locale_hint => '汉化版/英化版请选「关闭」，否则启动即闪退';
 }
 
 // Path: <root>
@@ -120313,6 +120514,19 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get migration_import_verifying_hint =>
       'Checksumming the archives. Large libraries can take several minutes.';
+  @override
+  String get game_line_copy_tooltip => 'Copy sentence';
+  @override
+  String get game_japanese_locale_auto => 'Auto';
+  @override
+  String get game_japanese_locale_on => 'Always on';
+  @override
+  String get game_japanese_locale_off => 'Off';
+  @override
+  String get game_japanese_locale => 'Japanese locale';
+  @override
+  String get game_japanese_locale_hint =>
+      'Chinese/English patched builds must turn this off, or the game crashes on launch';
 }
 
 /// Flat map(s) containing all translations.
@@ -126800,6 +127014,18 @@ extension on _StringsEn {
             'Verifying ${batch} (${done}/${total})';
       case 'migration_import_verifying_hint':
         return 'Checksumming the archives. Large libraries can take several minutes.';
+      case 'game_line_copy_tooltip':
+        return 'Copy sentence';
+      case 'game_japanese_locale_auto':
+        return 'Auto';
+      case 'game_japanese_locale_on':
+        return 'Always on';
+      case 'game_japanese_locale_off':
+        return 'Off';
+      case 'game_japanese_locale':
+        return 'Japanese locale';
+      case 'game_japanese_locale_hint':
+        return 'Chinese/English patched builds must turn this off, or the game crashes on launch';
       default:
         return null;
     }
@@ -133285,6 +133511,18 @@ extension on _StringsAr {
             'Verifying ${batch} (${done}/${total})';
       case 'migration_import_verifying_hint':
         return 'Checksumming the archives. Large libraries can take several minutes.';
+      case 'game_line_copy_tooltip':
+        return 'Copy sentence';
+      case 'game_japanese_locale_auto':
+        return 'Auto';
+      case 'game_japanese_locale_on':
+        return 'Always on';
+      case 'game_japanese_locale_off':
+        return 'Off';
+      case 'game_japanese_locale':
+        return 'Japanese locale';
+      case 'game_japanese_locale_hint':
+        return 'Chinese/English patched builds must turn this off, or the game crashes on launch';
       default:
         return null;
     }
@@ -139792,6 +140030,18 @@ extension on _StringsDe {
             'Verifying ${batch} (${done}/${total})';
       case 'migration_import_verifying_hint':
         return 'Checksumming the archives. Large libraries can take several minutes.';
+      case 'game_line_copy_tooltip':
+        return 'Copy sentence';
+      case 'game_japanese_locale_auto':
+        return 'Auto';
+      case 'game_japanese_locale_on':
+        return 'Always on';
+      case 'game_japanese_locale_off':
+        return 'Off';
+      case 'game_japanese_locale':
+        return 'Japanese locale';
+      case 'game_japanese_locale_hint':
+        return 'Chinese/English patched builds must turn this off, or the game crashes on launch';
       default:
         return null;
     }
@@ -146298,6 +146548,18 @@ extension on _StringsEs {
             'Verifying ${batch} (${done}/${total})';
       case 'migration_import_verifying_hint':
         return 'Checksumming the archives. Large libraries can take several minutes.';
+      case 'game_line_copy_tooltip':
+        return 'Copy sentence';
+      case 'game_japanese_locale_auto':
+        return 'Auto';
+      case 'game_japanese_locale_on':
+        return 'Always on';
+      case 'game_japanese_locale_off':
+        return 'Off';
+      case 'game_japanese_locale':
+        return 'Japanese locale';
+      case 'game_japanese_locale_hint':
+        return 'Chinese/English patched builds must turn this off, or the game crashes on launch';
       default:
         return null;
     }
@@ -152810,6 +153072,18 @@ extension on _StringsFr {
             'Verifying ${batch} (${done}/${total})';
       case 'migration_import_verifying_hint':
         return 'Checksumming the archives. Large libraries can take several minutes.';
+      case 'game_line_copy_tooltip':
+        return 'Copy sentence';
+      case 'game_japanese_locale_auto':
+        return 'Auto';
+      case 'game_japanese_locale_on':
+        return 'Always on';
+      case 'game_japanese_locale_off':
+        return 'Off';
+      case 'game_japanese_locale':
+        return 'Japanese locale';
+      case 'game_japanese_locale_hint':
+        return 'Chinese/English patched builds must turn this off, or the game crashes on launch';
       default:
         return null;
     }
@@ -159304,6 +159578,18 @@ extension on _StringsId {
             'Verifying ${batch} (${done}/${total})';
       case 'migration_import_verifying_hint':
         return 'Checksumming the archives. Large libraries can take several minutes.';
+      case 'game_line_copy_tooltip':
+        return 'Copy sentence';
+      case 'game_japanese_locale_auto':
+        return 'Auto';
+      case 'game_japanese_locale_on':
+        return 'Always on';
+      case 'game_japanese_locale_off':
+        return 'Off';
+      case 'game_japanese_locale':
+        return 'Japanese locale';
+      case 'game_japanese_locale_hint':
+        return 'Chinese/English patched builds must turn this off, or the game crashes on launch';
       default:
         return null;
     }
@@ -165812,6 +166098,18 @@ extension on _StringsIt {
             'Verifying ${batch} (${done}/${total})';
       case 'migration_import_verifying_hint':
         return 'Checksumming the archives. Large libraries can take several minutes.';
+      case 'game_line_copy_tooltip':
+        return 'Copy sentence';
+      case 'game_japanese_locale_auto':
+        return 'Auto';
+      case 'game_japanese_locale_on':
+        return 'Always on';
+      case 'game_japanese_locale_off':
+        return 'Off';
+      case 'game_japanese_locale':
+        return 'Japanese locale';
+      case 'game_japanese_locale_hint':
+        return 'Chinese/English patched builds must turn this off, or the game crashes on launch';
       default:
         return null;
     }
@@ -172282,6 +172580,18 @@ extension on _StringsJa {
             'Verifying ${batch} (${done}/${total})';
       case 'migration_import_verifying_hint':
         return 'Checksumming the archives. Large libraries can take several minutes.';
+      case 'game_line_copy_tooltip':
+        return 'Copy sentence';
+      case 'game_japanese_locale_auto':
+        return 'Auto';
+      case 'game_japanese_locale_on':
+        return 'Always on';
+      case 'game_japanese_locale_off':
+        return 'Off';
+      case 'game_japanese_locale':
+        return 'Japanese locale';
+      case 'game_japanese_locale_hint':
+        return 'Chinese/English patched builds must turn this off, or the game crashes on launch';
       default:
         return null;
     }
@@ -178756,6 +179066,18 @@ extension on _StringsKo {
             'Verifying ${batch} (${done}/${total})';
       case 'migration_import_verifying_hint':
         return 'Checksumming the archives. Large libraries can take several minutes.';
+      case 'game_line_copy_tooltip':
+        return 'Copy sentence';
+      case 'game_japanese_locale_auto':
+        return 'Auto';
+      case 'game_japanese_locale_on':
+        return 'Always on';
+      case 'game_japanese_locale_off':
+        return 'Off';
+      case 'game_japanese_locale':
+        return 'Japanese locale';
+      case 'game_japanese_locale_hint':
+        return 'Chinese/English patched builds must turn this off, or the game crashes on launch';
       default:
         return null;
     }
@@ -185258,6 +185580,18 @@ extension on _StringsNl {
             'Verifying ${batch} (${done}/${total})';
       case 'migration_import_verifying_hint':
         return 'Checksumming the archives. Large libraries can take several minutes.';
+      case 'game_line_copy_tooltip':
+        return 'Copy sentence';
+      case 'game_japanese_locale_auto':
+        return 'Auto';
+      case 'game_japanese_locale_on':
+        return 'Always on';
+      case 'game_japanese_locale_off':
+        return 'Off';
+      case 'game_japanese_locale':
+        return 'Japanese locale';
+      case 'game_japanese_locale_hint':
+        return 'Chinese/English patched builds must turn this off, or the game crashes on launch';
       default:
         return null;
     }
@@ -191757,6 +192091,18 @@ extension on _StringsPtBr {
             'Verifying ${batch} (${done}/${total})';
       case 'migration_import_verifying_hint':
         return 'Checksumming the archives. Large libraries can take several minutes.';
+      case 'game_line_copy_tooltip':
+        return 'Copy sentence';
+      case 'game_japanese_locale_auto':
+        return 'Auto';
+      case 'game_japanese_locale_on':
+        return 'Always on';
+      case 'game_japanese_locale_off':
+        return 'Off';
+      case 'game_japanese_locale':
+        return 'Japanese locale';
+      case 'game_japanese_locale_hint':
+        return 'Chinese/English patched builds must turn this off, or the game crashes on launch';
       default:
         return null;
     }
@@ -198261,6 +198607,18 @@ extension on _StringsRu {
             'Verifying ${batch} (${done}/${total})';
       case 'migration_import_verifying_hint':
         return 'Checksumming the archives. Large libraries can take several minutes.';
+      case 'game_line_copy_tooltip':
+        return 'Copy sentence';
+      case 'game_japanese_locale_auto':
+        return 'Auto';
+      case 'game_japanese_locale_on':
+        return 'Always on';
+      case 'game_japanese_locale_off':
+        return 'Off';
+      case 'game_japanese_locale':
+        return 'Japanese locale';
+      case 'game_japanese_locale_hint':
+        return 'Chinese/English patched builds must turn this off, or the game crashes on launch';
       default:
         return null;
     }
@@ -204748,6 +205106,18 @@ extension on _StringsTh {
             'Verifying ${batch} (${done}/${total})';
       case 'migration_import_verifying_hint':
         return 'Checksumming the archives. Large libraries can take several minutes.';
+      case 'game_line_copy_tooltip':
+        return 'Copy sentence';
+      case 'game_japanese_locale_auto':
+        return 'Auto';
+      case 'game_japanese_locale_on':
+        return 'Always on';
+      case 'game_japanese_locale_off':
+        return 'Off';
+      case 'game_japanese_locale':
+        return 'Japanese locale';
+      case 'game_japanese_locale_hint':
+        return 'Chinese/English patched builds must turn this off, or the game crashes on launch';
       default:
         return null;
     }
@@ -211244,6 +211614,18 @@ extension on _StringsTr {
             'Verifying ${batch} (${done}/${total})';
       case 'migration_import_verifying_hint':
         return 'Checksumming the archives. Large libraries can take several minutes.';
+      case 'game_line_copy_tooltip':
+        return 'Copy sentence';
+      case 'game_japanese_locale_auto':
+        return 'Auto';
+      case 'game_japanese_locale_on':
+        return 'Always on';
+      case 'game_japanese_locale_off':
+        return 'Off';
+      case 'game_japanese_locale':
+        return 'Japanese locale';
+      case 'game_japanese_locale_hint':
+        return 'Chinese/English patched builds must turn this off, or the game crashes on launch';
       default:
         return null;
     }
@@ -217736,6 +218118,18 @@ extension on _StringsVi {
             'Verifying ${batch} (${done}/${total})';
       case 'migration_import_verifying_hint':
         return 'Checksumming the archives. Large libraries can take several minutes.';
+      case 'game_line_copy_tooltip':
+        return 'Copy sentence';
+      case 'game_japanese_locale_auto':
+        return 'Auto';
+      case 'game_japanese_locale_on':
+        return 'Always on';
+      case 'game_japanese_locale_off':
+        return 'Off';
+      case 'game_japanese_locale':
+        return 'Japanese locale';
+      case 'game_japanese_locale_hint':
+        return 'Chinese/English patched builds must turn this off, or the game crashes on launch';
       default:
         return null;
     }
@@ -224173,6 +224567,18 @@ extension on _StringsZhCn {
             '正在校验 ${batch}（${done}/${total}）';
       case 'migration_import_verifying_hint':
         return '正在核对归档校验和。库很大时需要几分钟。';
+      case 'game_line_copy_tooltip':
+        return '复制句子';
+      case 'game_japanese_locale_auto':
+        return '自动';
+      case 'game_japanese_locale_on':
+        return '始终开启';
+      case 'game_japanese_locale_off':
+        return '关闭';
+      case 'game_japanese_locale':
+        return '日语区域（转区）';
+      case 'game_japanese_locale_hint':
+        return '汉化版/英化版请选「关闭」，否则启动即闪退';
       default:
         return null;
     }
@@ -230638,6 +231044,18 @@ extension on _StringsZhHk {
             'Verifying ${batch} (${done}/${total})';
       case 'migration_import_verifying_hint':
         return 'Checksumming the archives. Large libraries can take several minutes.';
+      case 'game_line_copy_tooltip':
+        return 'Copy sentence';
+      case 'game_japanese_locale_auto':
+        return 'Auto';
+      case 'game_japanese_locale_on':
+        return 'Always on';
+      case 'game_japanese_locale_off':
+        return 'Off';
+      case 'game_japanese_locale':
+        return 'Japanese locale';
+      case 'game_japanese_locale_hint':
+        return 'Chinese/English patched builds must turn this off, or the game crashes on launch';
       default:
         return null;
     }
