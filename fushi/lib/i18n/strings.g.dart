@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 53635 (3155 per locale)
+/// Strings: 53652 (3156 per locale)
 ///
-/// Built on 2026-08-08 at 05:44 UTC
+/// Built on 2026-08-09 at 05:41 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -4257,6 +4257,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get migration_uninstall_button => 'Uninstall Hibiki';
   String get migration_uninstall_still_installed =>
       'Hibiki is still installed. You can uninstall it any time.';
+  String get game_line_copy_tooltip => 'Copy sentence';
 }
 
 // Path: <root>
@@ -11519,6 +11520,8 @@ class _StringsAr extends _StringsEn {
   @override
   String get migration_uninstall_still_installed =>
       'Hibiki is still installed. You can uninstall it any time.';
+  @override
+  String get game_line_copy_tooltip => 'Copy sentence';
 }
 
 // Path: <root>
@@ -18848,6 +18851,8 @@ class _StringsDe extends _StringsEn {
   @override
   String get migration_uninstall_still_installed =>
       'Hibiki is still installed. You can uninstall it any time.';
+  @override
+  String get game_line_copy_tooltip => 'Copy sentence';
 }
 
 // Path: <root>
@@ -26193,6 +26198,8 @@ class _StringsEs extends _StringsEn {
   @override
   String get migration_uninstall_still_installed =>
       'Hibiki is still installed. You can uninstall it any time.';
+  @override
+  String get game_line_copy_tooltip => 'Copy sentence';
 }
 
 // Path: <root>
@@ -33550,6 +33557,8 @@ class _StringsFr extends _StringsEn {
   @override
   String get migration_uninstall_still_installed =>
       'Hibiki is still installed. You can uninstall it any time.';
+  @override
+  String get game_line_copy_tooltip => 'Copy sentence';
 }
 
 // Path: <root>
@@ -40835,6 +40844,8 @@ class _StringsId extends _StringsEn {
   @override
   String get migration_uninstall_still_installed =>
       'Hibiki is still installed. You can uninstall it any time.';
+  @override
+  String get game_line_copy_tooltip => 'Copy sentence';
 }
 
 // Path: <root>
@@ -48166,6 +48177,8 @@ class _StringsIt extends _StringsEn {
   @override
   String get migration_uninstall_still_installed =>
       'Hibiki is still installed. You can uninstall it any time.';
+  @override
+  String get game_line_copy_tooltip => 'Copy sentence';
 }
 
 // Path: <root>
@@ -55311,6 +55324,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get migration_uninstall_still_installed =>
       'Hibiki is still installed. You can uninstall it any time.';
+  @override
+  String get game_line_copy_tooltip => 'Copy sentence';
 }
 
 // Path: <root>
@@ -62463,6 +62478,8 @@ class _StringsKo extends _StringsEn {
   @override
   String get migration_uninstall_still_installed =>
       'Hibiki is still installed. You can uninstall it any time.';
+  @override
+  String get game_line_copy_tooltip => 'Copy sentence';
 }
 
 // Path: <root>
@@ -69774,6 +69791,8 @@ class _StringsNl extends _StringsEn {
   @override
   String get migration_uninstall_still_installed =>
       'Hibiki is still installed. You can uninstall it any time.';
+  @override
+  String get game_line_copy_tooltip => 'Copy sentence';
 }
 
 // Path: <root>
@@ -77097,6 +77116,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get migration_uninstall_still_installed =>
       'Hibiki is still installed. You can uninstall it any time.';
+  @override
+  String get game_line_copy_tooltip => 'Copy sentence';
 }
 
 // Path: <root>
@@ -84406,6 +84427,8 @@ class _StringsRu extends _StringsEn {
   @override
   String get migration_uninstall_still_installed =>
       'Hibiki is still installed. You can uninstall it any time.';
+  @override
+  String get game_line_copy_tooltip => 'Copy sentence';
 }
 
 // Path: <root>
@@ -91663,6 +91686,8 @@ class _StringsTh extends _StringsEn {
   @override
   String get migration_uninstall_still_installed =>
       'Hibiki is still installed. You can uninstall it any time.';
+  @override
+  String get game_line_copy_tooltip => 'Copy sentence';
 }
 
 // Path: <root>
@@ -98951,6 +98976,8 @@ class _StringsTr extends _StringsEn {
   @override
   String get migration_uninstall_still_installed =>
       'Hibiki is still installed. You can uninstall it any time.';
+  @override
+  String get game_line_copy_tooltip => 'Copy sentence';
 }
 
 // Path: <root>
@@ -106224,6 +106251,8 @@ class _StringsVi extends _StringsEn {
   @override
   String get migration_uninstall_still_installed =>
       'Hibiki is still installed. You can uninstall it any time.';
+  @override
+  String get game_line_copy_tooltip => 'Copy sentence';
 }
 
 // Path: <root>
@@ -112978,6 +113007,8 @@ class _StringsZhCn extends _StringsEn {
   String get migration_uninstall_button => '卸载 Hibiki';
   @override
   String get migration_uninstall_still_installed => '旧版 Hibiki 仍安装在设备上，可随时卸载。';
+  @override
+  String get game_line_copy_tooltip => '复制句子';
 }
 
 // Path: <root>
@@ -120047,6 +120078,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get migration_uninstall_still_installed =>
       'Hibiki is still installed. You can uninstall it any time.';
+  @override
+  String get game_line_copy_tooltip => 'Copy sentence';
 }
 
 /// Flat map(s) containing all translations.
@@ -126520,6 +126553,8 @@ extension on _StringsEn {
         return 'Uninstall Hibiki';
       case 'migration_uninstall_still_installed':
         return 'Hibiki is still installed. You can uninstall it any time.';
+      case 'game_line_copy_tooltip':
+        return 'Copy sentence';
       default:
         return null;
     }
@@ -132991,6 +133026,8 @@ extension on _StringsAr {
         return 'Uninstall Hibiki';
       case 'migration_uninstall_still_installed':
         return 'Hibiki is still installed. You can uninstall it any time.';
+      case 'game_line_copy_tooltip':
+        return 'Copy sentence';
       default:
         return null;
     }
@@ -139484,6 +139521,8 @@ extension on _StringsDe {
         return 'Uninstall Hibiki';
       case 'migration_uninstall_still_installed':
         return 'Hibiki is still installed. You can uninstall it any time.';
+      case 'game_line_copy_tooltip':
+        return 'Copy sentence';
       default:
         return null;
     }
@@ -145976,6 +146015,8 @@ extension on _StringsEs {
         return 'Uninstall Hibiki';
       case 'migration_uninstall_still_installed':
         return 'Hibiki is still installed. You can uninstall it any time.';
+      case 'game_line_copy_tooltip':
+        return 'Copy sentence';
       default:
         return null;
     }
@@ -152474,6 +152515,8 @@ extension on _StringsFr {
         return 'Uninstall Hibiki';
       case 'migration_uninstall_still_installed':
         return 'Hibiki is still installed. You can uninstall it any time.';
+      case 'game_line_copy_tooltip':
+        return 'Copy sentence';
       default:
         return null;
     }
@@ -158954,6 +158997,8 @@ extension on _StringsId {
         return 'Uninstall Hibiki';
       case 'migration_uninstall_still_installed':
         return 'Hibiki is still installed. You can uninstall it any time.';
+      case 'game_line_copy_tooltip':
+        return 'Copy sentence';
       default:
         return null;
     }
@@ -165448,6 +165493,8 @@ extension on _StringsIt {
         return 'Uninstall Hibiki';
       case 'migration_uninstall_still_installed':
         return 'Hibiki is still installed. You can uninstall it any time.';
+      case 'game_line_copy_tooltip':
+        return 'Copy sentence';
       default:
         return null;
     }
@@ -171904,6 +171951,8 @@ extension on _StringsJa {
         return 'Uninstall Hibiki';
       case 'migration_uninstall_still_installed':
         return 'Hibiki is still installed. You can uninstall it any time.';
+      case 'game_line_copy_tooltip':
+        return 'Copy sentence';
       default:
         return null;
     }
@@ -178364,6 +178413,8 @@ extension on _StringsKo {
         return 'Uninstall Hibiki';
       case 'migration_uninstall_still_installed':
         return 'Hibiki is still installed. You can uninstall it any time.';
+      case 'game_line_copy_tooltip':
+        return 'Copy sentence';
       default:
         return null;
     }
@@ -184852,6 +184903,8 @@ extension on _StringsNl {
         return 'Uninstall Hibiki';
       case 'migration_uninstall_still_installed':
         return 'Hibiki is still installed. You can uninstall it any time.';
+      case 'game_line_copy_tooltip':
+        return 'Copy sentence';
       default:
         return null;
     }
@@ -191337,6 +191390,8 @@ extension on _StringsPtBr {
         return 'Uninstall Hibiki';
       case 'migration_uninstall_still_installed':
         return 'Hibiki is still installed. You can uninstall it any time.';
+      case 'game_line_copy_tooltip':
+        return 'Copy sentence';
       default:
         return null;
     }
@@ -197827,6 +197882,8 @@ extension on _StringsRu {
         return 'Uninstall Hibiki';
       case 'migration_uninstall_still_installed':
         return 'Hibiki is still installed. You can uninstall it any time.';
+      case 'game_line_copy_tooltip':
+        return 'Copy sentence';
       default:
         return null;
     }
@@ -204300,6 +204357,8 @@ extension on _StringsTh {
         return 'Uninstall Hibiki';
       case 'migration_uninstall_still_installed':
         return 'Hibiki is still installed. You can uninstall it any time.';
+      case 'game_line_copy_tooltip':
+        return 'Copy sentence';
       default:
         return null;
     }
@@ -210782,6 +210841,8 @@ extension on _StringsTr {
         return 'Uninstall Hibiki';
       case 'migration_uninstall_still_installed':
         return 'Hibiki is still installed. You can uninstall it any time.';
+      case 'game_line_copy_tooltip':
+        return 'Copy sentence';
       default:
         return null;
     }
@@ -217260,6 +217321,8 @@ extension on _StringsVi {
         return 'Uninstall Hibiki';
       case 'migration_uninstall_still_installed':
         return 'Hibiki is still installed. You can uninstall it any time.';
+      case 'game_line_copy_tooltip':
+        return 'Copy sentence';
       default:
         return null;
     }
@@ -223683,6 +223746,8 @@ extension on _StringsZhCn {
         return '卸载 Hibiki';
       case 'migration_uninstall_still_installed':
         return '旧版 Hibiki 仍安装在设备上，可随时卸载。';
+      case 'game_line_copy_tooltip':
+        return '复制句子';
       default:
         return null;
     }
@@ -230134,6 +230199,8 @@ extension on _StringsZhHk {
         return 'Uninstall Hibiki';
       case 'migration_uninstall_still_installed':
         return 'Hibiki is still installed. You can uninstall it any time.';
+      case 'game_line_copy_tooltip':
+        return 'Copy sentence';
       default:
         return null;
     }
