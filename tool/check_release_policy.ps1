@@ -57,7 +57,7 @@ foreach ($relativePath in $workflowPaths) {
   $content = Read-RepoFile $relativePath
 
   Require-Text $relativePath $content 'concurrency:' 'release publishers must share a cross-workflow lock'
-  Require-Text $relativePath $content 'group: hibiki-release-${{ github.event.release.tag_name || github.event.inputs.tag_name || github.sha }}' 'same tag/commit publishes serialize instead of racing separate releases'
+  Require-Text $relativePath $content 'group: fushi-release-${{ github.event.release.tag_name || github.event.inputs.tag_name || github.sha }}' 'same tag/commit publishes serialize instead of racing separate releases'
   Require-Text $relativePath $content 'cancel-in-progress: false' 'Android and desktop publishers both need to complete'
   Require-Text $relativePath $content 'fetch-depth: 0' 'release sequence uses full git history'
   Require-Text $relativePath $content 'RELEASE_SEQUENCE=$(git rev-list --count HEAD)' 'release sequence must be shared by Android and desktop workflows'
@@ -118,32 +118,90 @@ Require-Text 'tool/publish_update_manifest.sh' $manifestScript 'DOWNLOAD_TAG' 'm
 foreach ($relativePath in $workflowPaths) {
   $content = Read-RepoFile $relativePath
   Require-Text $relativePath $content 'tag_name: ${{ steps.channel.outputs.publish_tag }}' 'the managed release must publish under publish_tag (rolling `debug-rolling` for debug), not the versioned tag (TODO-1049)'
-  Require-Text $relativePath $content 'ROLLING_DEBUG_TAG=debug-rolling' 'the debug channel must publish to the fixed rolling release tag `debug-rolling` (TODO-1049)'
   Require-Text $relativePath $content 'PUBLISH_TAG="$ROLLING_DEBUG_TAG"' 'debug channel PUBLISH_TAG must be the rolling tag so debug prereleases stop accumulating (TODO-1049)'
   Require-Text $relativePath $content 'DOWNLOAD_TAG: ${{ steps.channel.outputs.publish_tag }}' 'manifest publisher must form asset URLs under the actual release tag (publish_tag), not the versioned tag (TODO-1049)'
   Require-Text $relativePath $content 'echo "tag=$TAG"' 'the versioned tag must still be emitted so the manifest `tag` field drives client version comparison (TODO-1049)'
 }
 
-$buildGradle = Read-RepoFile 'hibiki/android/app/build.gradle'
-Require-Text 'hibiki/android/app/build.gradle' $buildGradle 'def versionCodeBase = 1000000000' 'one-time versionCode migration floor must stay above every historically-shipped versionCode (TODO-414)'
-Require-Text 'hibiki/android/app/build.gradle' $buildGradle 'def maxVersionCode = 2100000000' 'versionCode ceiling guard must match Android''s 2.1e9 limit (TODO-414)'
-Require-Text 'hibiki/android/app/build.gradle' $buildGradle 'output.versionCodeOverride = computed' 'versionCode must be the bounds-checked computed value (TODO-414)'
+# TODO-1049 + BUG-1481: the rolling debug tag used to be asserted as the literal
+# `ROLLING_DEBUG_TAG=debug-rolling`. That literal encoded THREE invariants at
+# once and BUG-1481 had to change one of them, so assert the invariants directly
+# instead of the spelling:
+#   1. It is a fixed literal (no seq/sha/expression) -- that is what stops debug
+#      builds from piling up one prerelease per push (TODO-1049).
+#   2. Android and desktop use the SAME value, so both platforms' assets for one
+#      commit land on ONE release. The old literal enforced this by accident;
+#      losing it would silently split each debug build across two releases.
+#   3. It is product-scoped, i.e. NOT the bare historical `debug-rolling`
+#      (BUG-1481). That name is frozen for the `app.hibiki.reader` family; if
+#      Fushi took it back, both families' assets would share one release again
+#      and the prune step -- which groups candidates by PLATFORM only -- would
+#      delete the lower-sequence family's assets on every build.
+$rollingTags = @{}
+foreach ($relativePath in $workflowPaths) {
+  $content = Read-RepoFile $relativePath
+  $found = [regex]::Matches($content, 'ROLLING_DEBUG_TAG=(\S+)')
+  if ($found.Count -eq 0) {
+    $failures.Add("${relativePath}: missing a ROLLING_DEBUG_TAG assignment (the debug channel must publish to one fixed rolling release tag, TODO-1049)")
+    continue
+  }
+  $values = @($found | ForEach-Object { $_.Groups[1].Value } | Sort-Object -Unique)
+  if ($values.Count -ne 1) {
+    $failures.Add("${relativePath}: ROLLING_DEBUG_TAG is assigned conflicting values ($($values -join ', ')); all debug jobs in one workflow must publish to the same rolling release (TODO-1049)")
+    continue
+  }
+  $tag = $values[0]
+  if ($tag -notmatch '^[A-Za-z0-9._-]+$') {
+    $failures.Add("${relativePath}: ROLLING_DEBUG_TAG='$tag' is not a fixed literal; a computed tag reintroduces one prerelease per push (TODO-1049)")
+  }
+  if (-not $tag.EndsWith('debug-rolling')) {
+    $failures.Add("${relativePath}: ROLLING_DEBUG_TAG='$tag' must end with 'debug-rolling' so the rolling debug release stays recognizable (TODO-1049)")
+  }
+  if ($tag -eq 'debug-rolling') {
+    $failures.Add("${relativePath}: ROLLING_DEBUG_TAG='debug-rolling' is frozen for the app.hibiki.reader family; Fushi must use a product-scoped rolling tag or the two families share one release and prune deletes the lower-sequence family (BUG-1481)")
+  }
+  $rollingTags[$relativePath] = $tag
+}
+$distinctRollingTags = @($rollingTags.Values | Sort-Object -Unique)
+if ($rollingTags.Count -eq $workflowPaths.Count -and $distinctRollingTags.Count -gt 1) {
+  $failures.Add(".github/workflows: release.yml and release-desktop.yml disagree on ROLLING_DEBUG_TAG ($($distinctRollingTags -join ' vs ')); Android and desktop must land on the SAME rolling release for one commit (TODO-1049)")
+}
+
+$buildGradle = Read-RepoFile 'fushi/android/app/build.gradle'
+Require-Text 'fushi/android/app/build.gradle' $buildGradle 'def versionCodeBase = 1000000000' 'one-time versionCode migration floor must stay above every historically-shipped versionCode (TODO-414)'
+Require-Text 'fushi/android/app/build.gradle' $buildGradle 'def maxVersionCode = 2100000000' 'versionCode ceiling guard must match Android''s 2.1e9 limit (TODO-414)'
+Require-Text 'fushi/android/app/build.gradle' $buildGradle 'output.versionCodeOverride = computed' 'versionCode must be the bounds-checked computed value (TODO-414)'
 
 $desktopWorkflow = Read-RepoFile '.github/workflows/release-desktop.yml'
 Require-Text '.github/workflows/release-desktop.yml' $desktopWorkflow '--build-number "${{ steps.channel.outputs.release_sequence }}"' 'desktop build number must use the shared release sequence'
 Require-Text '.github/workflows/release-desktop.yml' $desktopWorkflow 'flutter build windows --release' 'desktop workflow must still publish Windows'
 Require-Text '.github/workflows/release-desktop.yml' $desktopWorkflow 'flutter build macos --release' 'desktop workflow must publish macOS app zips'
 Require-Text '.github/workflows/release-desktop.yml' $desktopWorkflow 'flutter build ios --release --no-codesign' 'desktop workflow must publish unsigned iOS IPA artifacts without requiring Apple signing'
-Require-Text '.github/workflows/release-desktop.yml' $desktopWorkflow 'hibiki-*-windows-setup.exe' 'desktop workflow must upload Windows installer assets'
-Require-Text '.github/workflows/release-desktop.yml' $desktopWorkflow 'hibiki-*-macos.zip' 'desktop workflow must upload macOS zip assets'
-Require-Text '.github/workflows/release-desktop.yml' $desktopWorkflow 'hibiki-*-ios.ipa' 'desktop workflow must upload iOS IPA assets'
+Require-Text '.github/workflows/release-desktop.yml' $desktopWorkflow 'fushi-*-windows-setup.exe' 'desktop workflow must upload Windows installer assets'
+Require-Text '.github/workflows/release-desktop.yml' $desktopWorkflow 'fushi-*-macos.zip' 'desktop workflow must upload macOS zip assets'
+Require-Text '.github/workflows/release-desktop.yml' $desktopWorkflow 'fushi-*-ios.ipa' 'desktop workflow must upload iOS IPA assets'
 Require-Text '.github/workflows/release-desktop.yml' $desktopWorkflow 'Publish mirror update manifest (Apple assets)' 'Apple release assets must merge into the update manifest'
+# Apple 签名链路：细粒度不变式由 fushi/test/tools/apple_signing_workflow_guard_test.dart
+# 守（每个 PR 都跑）。这里只锁发布策略层面的那一条 —— TestFlight 上传绝不能挂到 push
+# 事件上：push 的 debug 通道每次提交都会跑，每次上传都消耗一个不可回收的构建号
+# （同一语义版本下 CFBundleVersion 必须单调递增）。
+Require-Text '.github/workflows/release-desktop.yml' $desktopWorkflow '[ "$GITHUB_EVENT_NAME" = workflow_dispatch ]' 'TestFlight upload must be gated on manual workflow_dispatch; a push-triggered upload burns an unrecoverable build number every commit'
 Require-Text '.github/workflows/release-desktop.yml' $desktopWorkflow 'native/galgame_hook/tools/build_distribution.ps1 -RunTests' 'Windows releases must build the bundled offline galgame helper from the in-tree source'
-Require-Text '.github/workflows/release-desktop.yml' $desktopWorkflow 'Release\galgame_helper' 'Windows installer payload must contain both helper archives and sidecars'
+# BUG-1449: the helper is no longer shipped as zip + sidecar for the runtime to
+# unpack -- that layout left a second copy on disk that had to stay in sync with
+# the app, and "staying in sync" is exactly what broke in BUG-1448. Both Windows
+# workflows now unpack BOTH architectures into the build output at build time via
+# the shared install_into_bundle.ps1, so helper and app come out of one build.
+# Pin the bundle directory too: the archive-era `<config>\galgame_helper` payload
+# check could not tell Release from Debug, and unpacking into the wrong directory
+# ships an installer with no helper at all while the build stays green.
+# (The anti-regression side -- never copying zips back into galgame_helper/ --
+# lives in fushi/test/mining/gal_helper_bundled_as_plain_files_test.dart.)
+Require-Text '.github/workflows/release-desktop.yml' $desktopWorkflow 'install_into_bundle.ps1 -BundleDirectory "$PWD\fushi\build\windows\x64\runner\Release"' 'Windows release payload must unpack both helper architectures into the packaged Release bundle (BUG-1449)'
 
 $multiplatformWorkflow = Read-RepoFile '.github/workflows/build-multiplatform.yml'
 Require-Text '.github/workflows/build-multiplatform.yml' $multiplatformWorkflow 'native/galgame_hook/tools/build_distribution.ps1 -RunTests' 'Windows CI must exercise the same bundled helper build as release'
-Require-Text '.github/workflows/build-multiplatform.yml' $multiplatformWorkflow 'Debug\galgame_helper' 'Windows debug bundle must exercise the offline helper payload layout'
+Require-Text '.github/workflows/build-multiplatform.yml' $multiplatformWorkflow 'install_into_bundle.ps1 -BundleDirectory "$PWD\fushi\build\windows\x64\runner\Debug"' 'Windows debug bundle must exercise the same build-time helper unpack as release (BUG-1449)'
 
 # BUG-1292: Magpie has no download path left, so the bundled slim archive is the
 # ONLY way window upscaling can ever install. If a Windows workflow stops

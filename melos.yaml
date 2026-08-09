@@ -1,9 +1,9 @@
-name: hibiki_workspace
-repository: https://github.com/hajisensai/hibiki
+name: fushi_workspace
+repository: https://github.com/hajisensai/Fushi
 
 packages:
   - packages/*
-  - hibiki
+  - fushi
 
 command:
   bootstrap:
@@ -27,10 +27,10 @@ scripts:
 
   dev:
     run: |
-      cd hibiki && flutter run
-    description: Run Hibiki in debug mode
+      cd fushi && flutter run
+    description: Run Fushi in debug mode
 
   build:android:
     run: |
-      cd hibiki && flutter build apk --release --target-platform android-arm64 --split-per-abi
+      cd fushi && flutter build apk --release --target-platform android-arm64 --split-per-abi
     description: Build Android release APK

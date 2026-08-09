@@ -1,5 +1,5 @@
-#ifndef HIBIKI_VOICE_HOOK_IPC_H_
-#define HIBIKI_VOICE_HOOK_IPC_H_
+#ifndef FUSHI_VOICE_HOOK_IPC_H_
+#define FUSHI_VOICE_HOOK_IPC_H_
 
 #include <windows.h>
 
@@ -21,7 +21,7 @@
 //     → 只在音频回调里 memcpy + 更新 write_pos（零阻塞：写盘/编码/IPC 全部移出回调，爆音红线）
 //   共享内存：header + 紧随其后的 PCM 环形缓冲
 //   Hibiki host（经 injector）：读环形缓冲最近 N 毫秒 → 波形选区 → 制卡出口（复用 A 阶段流水线）
-namespace hibiki_voice_hook {
+namespace fushi_voice_hook {
 
 // 共享内存魔数 'HVH1'（小端）与当前契约版本。跨进程读到不匹配即拒绝，防旧/坏映射。
 constexpr uint32_t kSharedMagic = 0x31485648;  // 'H''V''H''1'
@@ -150,6 +150,13 @@ constexpr uint32_t kDiagUnityAudioPcmMethodsFound = 0x00080000u;
 constexpr uint32_t kDiagUnityAudioPlaybackMethodFound = 0x00100000u;
 constexpr uint32_t kDiagUnityAudioPlaybackHookReady = 0x00200000u;
 constexpr uint32_t kDiagUnityHooksDeferredUntilWindow = 0x00400000u;
+constexpr uint32_t kDiagElfAi6ArcHooksReady = 0x00800000u;
+constexpr uint32_t kDiagElfAi6ArcVoiceCaptured = 0x01000000u;
+constexpr uint32_t kDiagElfAi6ArcHandleTracked = 0x02000000u;
+constexpr uint32_t kDiagElfAi6ArcReadObserved = 0x04000000u;
+constexpr uint32_t kDiagElfAi6ArcOggObserved = 0x08000000u;
+constexpr uint32_t kDiagElfAi6ArcVoiceQueued = 0x10000000u;
+constexpr uint32_t kDiagElfAi6ArcTaskRejected = 0x20000000u;
 
 // reserved_luna 的资源音频诊断位。KiriKiriZ 的 TVPCreateStream hook 直接导出当前播放的
 // 已解密 Ogg；Siglus 从 OVK 索引导出逐句 Ogg。它们只代表“资源捕获链已安装”，不要求 PCM
@@ -159,7 +166,8 @@ constexpr uint32_t kDiagKirikiriVoiceStreamDumped = 0x00080000u;
 constexpr uint32_t kDiagSiglusOvkHooksReady = 0x10000000u;
 
 inline constexpr bool HasReadyGameResourceAudio(uint32_t reserved_luna,
-                                                uint32_t hook_diagnostics) {
+                                                uint32_t hook_diagnostics,
+                                                uint32_t reserved_hook_diagnostics = 0) {
   const uint32_t unity_required = kDiagUnityIl2CppHooksReady |
                                   kDiagUnityResourceExtractorReady;
   const bool unity_ready =
@@ -172,7 +180,9 @@ inline constexpr bool HasReadyGameResourceAudio(uint32_t reserved_luna,
          (hook_diagnostics & kDiagArtemisPfsHooksReady) != 0 ||
          (hook_diagnostics & kDiagCatSystem2PcmHooksReady) != 0 ||
          (hook_diagnostics & kDiagMalieLibpHooksReady) != 0 ||
-         (hook_diagnostics & kDiagVisualArtsOvkHooksReady) != 0 || unity_ready;
+         (hook_diagnostics & kDiagVisualArtsOvkHooksReady) != 0 ||
+         (reserved_hook_diagnostics & kDiagElfAi6ArcHooksReady) != 0 ||
+         unity_ready;
 }
 
 // Unity Streaming AudioClip 不能用 AudioClip.GetData 读取。DLL 在 Play/set_clip 时只写一个
@@ -633,13 +643,32 @@ static_assert(sizeof(LoopbackMarker) % 8 == 0, "LoopbackMarker must stay 8-align
 // 命名对象（同会话跨进程）。以目标 PID 区分，支持同时对多个游戏进程各挂一份。
 // injector 创建、hook DLL 打开：共享内存 + 「就绪」事件（DLL 装好后 SetEvent，injector 据此
 // 确认注入成功并读回格式）。
-inline std::wstring SharedMemoryName(DWORD target_pid) {
-  return L"Local\\HibikiVoiceHook_" + std::to_wstring(target_pid);
-}
-inline std::wstring ReadyEventName(DWORD target_pid) {
-  return L"Local\\HibikiVoiceHookReady_" + std::to_wstring(target_pid);
+//
+// Fushi 改名后的 host 使用 FushiVoiceHook；旧 Hibiki host 仍只会打开 HibikiVoiceHook。
+// helper/DLL 可能被部署到旧安装中做兼容修复，因此两侧都按实际组件文件名选同一命名空间，
+// 而不是让新版默认名静默破坏旧 host。严格只认完整 basename，避免任意路径子串误判。
+inline bool ComponentUsesLegacyHibikiIpc(const std::wstring& component_path) {
+  const size_t slash = component_path.find_last_of(L"\\/");
+  const wchar_t* basename = slash == std::wstring::npos
+                                ? component_path.c_str()
+                                : component_path.c_str() + slash + 1;
+  return _wcsicmp(basename, L"hibiki_voice_injector.exe") == 0 ||
+         _wcsicmp(basename, L"hibiki_voice_hook.dll") == 0;
 }
 
-}  // namespace hibiki_voice_hook
+inline std::wstring SharedMemoryName(DWORD target_pid,
+                                     bool legacy_hibiki = false) {
+  return std::wstring(legacy_hibiki ? L"Local\\HibikiVoiceHook_"
+                                    : L"Local\\FushiVoiceHook_") +
+         std::to_wstring(target_pid);
+}
+inline std::wstring ReadyEventName(DWORD target_pid,
+                                   bool legacy_hibiki = false) {
+  return std::wstring(legacy_hibiki ? L"Local\\HibikiVoiceHookReady_"
+                                    : L"Local\\FushiVoiceHookReady_") +
+         std::to_wstring(target_pid);
+}
 
-#endif  // HIBIKI_VOICE_HOOK_IPC_H_
+}  // namespace fushi_voice_hook
+
+#endif  // FUSHI_VOICE_HOOK_IPC_H_

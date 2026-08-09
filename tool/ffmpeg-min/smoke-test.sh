@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Behavioral contract for Hibiki's minimal desktop FFmpeg.
+# Behavioral contract for Fushi's minimal desktop FFmpeg.
 #
 # A full host FFmpeg generates tiny representative inputs. The minimal binary
 # must then execute the same argument shapes used by desktop_audio_clipper.dart
@@ -47,7 +47,7 @@ assert_log_contains() {
 cat >"$WORK/sub.srt" <<'EOF'
 1
 00:00:00,100 --> 00:00:01,400
-Hibiki minimal FFmpeg smoke test.
+Fushi minimal FFmpeg smoke test.
 EOF
 
 cat >"$WORK/sub.ass" <<'EOF'
@@ -62,7 +62,7 @@ Style: Default,Arial,20,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.10,0:00:01.40,Default,,0,0,0,,Hibiki ASS smoke test.
+Dialogue: 0,0:00:00.10,0:00:01.40,Default,,0,0,0,,Fushi ASS smoke test.
 EOF
 
 echo "[ffmpeg-min-smoke] generating representative inputs in $WORK"
@@ -206,7 +206,7 @@ done
 
 echo "[ffmpeg-min-smoke] synthesizing audiobook clip video (loop PNG + audio -> mov)"
 # TODO-1096: mirror buildFfmpegImageAudioToVideoArgs
-# (hibiki/lib/src/media/audiobook/audiobook_clip_export.dart). The clip export
+# (fushi/lib/src/media/audiobook/audiobook_clip_export.dart). The clip export
 # feeds a single text PNG as a looping video stream (`-loop 1 -i clip.png`) and
 # muxes mjpeg video + aac audio into a .mov. Reading the named PNG needs the
 # image2 demuxer; a missing image2 makes ffmpeg exit -1094995529
@@ -219,7 +219,7 @@ run "$FIXTURE_FFMPEG" -hide_banner -loglevel error -i "$WORK/clip.mov" -f null -
 
 echo "[ffmpeg-min-smoke] probing audio RMS energy envelope (aresample/asetnsamples/astats/ametadata)"
 # TODO-1096: mirror buildFfmpegPcmEnvelopeArgs
-# (hibiki/lib/src/media/video/audio_energy_probe.dart). Subtitle auto-align
+# (fushi/lib/src/media/video/audio_energy_probe.dart). Subtitle auto-align
 # (TODO-701) probes per-frame RMS energy through the SAME bundled ffmpeg via
 # `-af aresample=R,asetnsamples=n=N:p=0,astats=metadata=1:reset=1,ametadata=print:key=...`
 # `-f null -`. A minimal build missing asetnsamples/astats/ametadata parses
@@ -259,7 +259,7 @@ assert_log_contains "$WORK/rms.log" "lavfi.astats.Overall.RMS_level"
 echo "[ffmpeg-min-smoke] verifying network protocols (http/https/tls for YouTube mining)"
 # TODO-1214: YouTube/remote mining feeds ffmpeg an http(s) googlevideo stream and
 # adds -reconnect* input options (buildFfmpegRemoteInputArgs,
-# hibiki/lib/src/utils/misc/desktop_audio_clipper.dart). A build without
+# fushi/lib/src/utils/misc/desktop_audio_clipper.dart). A build without
 # --enable-network has NO http/https protocol, so opening the URL and the
 # -reconnect option both fail (AVERROR_OPTION_NOT_FOUND). Assert the protocols
 # exist up front so a dropped --enable-network fails loudly here, not at runtime.
@@ -298,7 +298,7 @@ run "$FIXTURE_FFMPEG" -hide_banner -loglevel error -i "$WORK/clip.mp4" -f null -
 
 echo "[ffmpeg-min-smoke] verifying movtext encoder + soft-subtitle clip mux"
 # Clip export muxes the subtitle the user is actually watching into the exported
-# .mp4 as a soft subtitle stream. The cues live in Dart memory (Hibiki renders
+# .mp4 as a soft subtitle stream. The cues live in Dart memory (Fushi renders
 # subtitles in a Flutter overlay, not via libmpv), so they are written out as a
 # temporary SRT and fed to ffmpeg as a second input -- which needs the srt
 # demuxer + subrip decoder on the way in, and the movtext ENCODER on the way out
@@ -344,15 +344,15 @@ if [ ! -x "$FFPROBE_MIN" ]; then
 fi
 
 # Shape 1: container tag extraction -- buildFfprobeFormatTagsArgs()
-# (hibiki/lib/src/utils/misc/desktop_audio_clipper.dart). Feeds an audiobook file
+# (fushi/lib/src/utils/misc/desktop_audio_clipper.dart). Feeds an audiobook file
 # and reads format.tags.{title,artist,album}; a null result makes the importer
 # fall back to the bare filename.
 run "$FIXTURE_FFMPEG" -hide_banner -loglevel error -y \
   -f lavfi -i "sine=frequency=440:duration=1" \
   -c:a aac \
-  -metadata title="Hibiki Probe Title" \
-  -metadata artist="Hibiki Probe Artist" \
-  -metadata album="Hibiki Probe Album" \
+  -metadata title="Fushi Probe Title" \
+  -metadata artist="Fushi Probe Artist" \
+  -metadata album="Fushi Probe Album" \
   "$WORK/tagged.m4a"
 "$FFPROBE_MIN" -v quiet -print_format json -show_format \
   "$WORK/tagged.m4a" >"$WORK/tags.json" 2>"$WORK/tags.err" || {
@@ -361,11 +361,11 @@ run "$FIXTURE_FFMPEG" -hide_banner -loglevel error -y \
   exit 1
 }
 assert_nonempty "$WORK/tags.json"
-assert_log_contains "$WORK/tags.json" "Hibiki Probe Title"
-assert_log_contains "$WORK/tags.json" "Hibiki Probe Artist"
+assert_log_contains "$WORK/tags.json" "Fushi Probe Title"
+assert_log_contains "$WORK/tags.json" "Fushi Probe Artist"
 
 # Shape 2: font attachment enumeration -- _enumerateFontAttachments()
-# (hibiki/lib/src/media/video/subtitle_embedded_fonts.dart). `-select_streams t`
+# (fushi/lib/src/media/video/subtitle_embedded_fonts.dart). `-select_streams t`
 # lists only attachment streams; the result drives ASS rendering with the video's
 # own embedded fonts instead of the system fallback.
 printf 'not-a-real-font-but-ffprobe-only-lists-the-stream' >"$WORK/fake.ttf"

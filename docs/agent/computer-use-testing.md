@@ -29,8 +29,8 @@ Computer Use 流程验证的是「用户真的看见并操作到的 app 状态�
   media_kit（音频 / 视频）初始化需要 DWM 合成的实窗，纯离屏 parked 窗口下
   `initialiseAudioHandler()` 会**永久挂起**（曾实测挂 1 小时）。
 
-**测试与用户的 Hibiki 并存**：测试 exe 在 `HIBIKI_TEST_HIDDEN` 下跳过全局单实例互斥量
-（用隔离 WebView2 profile，无锁冲突），故你开着 Hibiki 也能跑、互不干扰
+**测试与用户的 Fushi 并存**：测试 exe 在 `FUSHI_TEST_HIDDEN` 下跳过全局单实例互斥量
+（用隔离 WebView2 profile，无锁冲突），故你开着 Fushi 也能跑、互不干扰
 （见 `windows/runner/main.cpp`）。
 
 **抓图 / 开页助手** `integration_test/helpers/observe_capture.dart`：
@@ -41,8 +41,8 @@ Computer Use 流程验证的是「用户真的看见并操作到的 app 状态�
 
 **确定性开页钩子**（离屏 / 非焦点下焦点驱动激活偶发不触发，故用这些直达；均 debug/profile
 only，`@visibleForTesting`）：`HomePage.debugSelectTab(tab)` 切顶层 tab、
-`ReaderHibikiHistoryPage.debugOpenBook(mediaIdentifier)` 走书卡同路径 openMedia 开书、
-`HomeVideoPage.debugRefreshVideos()` 重查视频列表、`ReaderHibikiPage.debugCaptureWebView`
+`ReaderFushiHistoryPage.debugOpenBook(mediaIdentifier)` 走书卡同路径 openMedia 开书、
+`HomeVideoPage.debugRefreshVideos()` 重查视频列表、`ReaderFushiPage.debugCaptureWebView`
 抓 WebView。
 
 **素材生成器** `integration_test/helpers/media_fixtures.dart` + `library_fixture.dart`：
@@ -65,7 +65,7 @@ bash ci/integration-test.sh --only=reader_computer_use_flow,reader_pagination,re
 Windows 离屏补充：
 
 ```powershell
-.\hibiki\tool\run_windows_itest.ps1 integration_test/reader_computer_use_flow_test.dart
+.\fushi\tool\run_windows_itest.ps1 integration_test/reader_computer_use_flow_test.dart
 ```
 
 Android 编排日志固定落在 `.codex-test/itest-logs/reader_computer_use_flow.log`。Windows runner 会为每次运行创建 `.codex-test/windows-itest/<run-id>/`，其中固定包含：
@@ -93,6 +93,6 @@ Android 编排日志固定落在 `.codex-test/itest-logs/reader_computer_use_flo
 ## 禁止事项
 
 - 不在自动测试里使用 `tester.tap`、坐标点击或 adb `input tap`。
-- 不用 JS 调 `window.hoshiReader.paginate(...)` 代替用户翻页。
+- 不用 JS 调 `window.fushiReader.paginate(...)` 代替用户翻页。
 - 不直接调用 `onTextSelected` 代替 reader caret 查词。
 - 不打开用户已有书作为验收对象。
