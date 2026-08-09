@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
-# AnkiDroid integration test flow for Hibiki.
+# AnkiDroid integration test flow for Fushi.
 #
 # Verifies the real AddContentApi ContentProvider path end-to-end against a live
 # AnkiDroid install on an emulator/device:
 #   - AnkiRepository.fetchConfiguration() -> real decks + note types
 #   - isDuplicate() against the live collection
 #   - mineEntry() add-or-duplicate
-# (see hibiki/integration_test/anki_integration_test.dart)
+# (see fushi/integration_test/anki_integration_test.dart)
 #
 # The AnkiDroid provisioning recipe (install + collection + permission grant)
 # and its rationale live in ci/lib/provision-ankidroid.sh, shared with the
@@ -22,7 +22,7 @@ set -euo pipefail
 ADB="${ADB:-$(command -v adb 2>/dev/null || echo /d/android_sdk/platform-tools/adb)}"
 FLUTTER="${FLUTTER:-$(command -v flutter 2>/dev/null || echo /d/flutter_sdk/flutter_extracted/flutter/bin/flutter)}"
 DEVICE="${DEVICE:-emulator-5554}"
-PKG="${PKG:-app.hibiki.reader}"
+PKG="${PKG:-app.fushi.reader}"
 TARGET="integration_test/anki_integration_test.dart"
 REPO_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 
@@ -37,7 +37,7 @@ ADBD="$ADB -s $DEVICE"
 # shellcheck source=ci/lib/provision-ankidroid.sh
 source "$REPO_ROOT/ci/lib/provision-ankidroid.sh"
 
-cd "$REPO_ROOT/hibiki"
+cd "$REPO_ROOT/fushi"
 
 # --- 1. Device online ---
 if ! $ADB devices 2>/dev/null | grep -q "$DEVICE[[:space:]].*device"; then
@@ -61,7 +61,7 @@ fi
 # --- 5. Pre-install with all runtime perms granted, then verify the grant ---
 echo ">>> Installing app with runtime permissions granted..."
 MSYS_NO_PATHCONV=1 $ADBD install -r -g build/app/outputs/flutter-apk/app-debug.apk
-if ! grant_hibiki_ankidroid_permission; then
+if ! grant_fushi_ankidroid_permission; then
   echo ">>> FAIL: could not grant the AnkiDroid API permission to $PKG." >&2
   exit 1
 fi

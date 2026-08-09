@@ -12,7 +12,7 @@
 # --file 的 DB **锚定脚本所在仓库根**（$0/../.vibe-coxswain/board.db 的绝对路径，
 # VIBE_COXSWAIN_DB 显式设置时才让位），并要求 DB 已存在——绝不静默新建空库落板
 # （错 cwd 落错库还报成功是对抗审查抓过的 major）。
-# 环境变量：PR_SWEEP_REPO（默认 hajisensai/hibiki）/ PR_SWEEP_BASE（默认 develop）
+# 环境变量：PR_SWEEP_REPO（默认 hajisensai/Fushi）/ PR_SWEEP_BASE（默认 develop）
 #           PR_SWEEP_SELF（默认 hajisensai）/ PR_SWEEP_LIMIT（默认 40）
 # 输出供值班 PM 与看板对照：「自动处理」区每行都应有对应 todo（按 PR 号/分支名
 # grep 看板），没有就建（--file 已自动建）；「外部 PR」区只读不动。
@@ -55,7 +55,7 @@ for arg in "$@"; do
   esac
 done
 
-REPO="${PR_SWEEP_REPO:-hajisensai/hibiki}"
+REPO="${PR_SWEEP_REPO:-hajisensai/Fushi}"
 BASE="${PR_SWEEP_BASE:-develop}"
 SELF="${PR_SWEEP_SELF:-hajisensai}"
 LIMIT="${PR_SWEEP_LIMIT:-40}"
@@ -65,7 +65,7 @@ LIMIT="${PR_SWEEP_LIMIT:-40}"
 # 导出（非仅 shell 变量）让内嵌 python 直接读到同一真值，默认只此一处。
 export PR_SWEEP_STALE_BEHIND="${PR_SWEEP_STALE_BEHIND:-20}"
 # fake-ip DNS 下 gh 直连必超时——需要代理。解析顺序见 tool/proxy_env.sh：
-# 调用方环境变量 > HIBIKI_BOOTSTRAP_PROXY > tool/bootstrap.local.env > 不设（照常跑）。
+# 调用方环境变量 > FUSHI_BOOTSTRAP_PROXY > tool/bootstrap.local.env > 不设（照常跑）。
 # 不在本文件写死地址：那会把本机端口带进公开仓库，且换机器指向不存在的端口。
 source "$(dirname "${BASH_SOURCE[0]}")/proxy_env.sh"
 export PYTHONUTF8=1   # Windows GBK 控制台下内嵌 python 打中文不乱码
