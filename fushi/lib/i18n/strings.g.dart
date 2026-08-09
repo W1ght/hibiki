@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 53652 (3156 per locale)
+/// Strings: 53737 (3161 per locale)
 ///
-/// Built on 2026-08-09 at 05:41 UTC
+/// Built on 2026-08-09 at 06:31 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -4258,6 +4258,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get migration_uninstall_still_installed =>
       'Hibiki is still installed. You can uninstall it any time.';
   String get game_line_copy_tooltip => 'Copy sentence';
+  String get game_japanese_locale_auto => 'Auto';
+  String get game_japanese_locale_on => 'Always on';
+  String get game_japanese_locale_off => 'Off';
+  String get game_japanese_locale => 'Japanese locale';
+  String get game_japanese_locale_hint =>
+      'Chinese/English patched builds must turn this off, or the game crashes on launch';
 }
 
 // Path: <root>
@@ -11522,6 +11528,17 @@ class _StringsAr extends _StringsEn {
       'Hibiki is still installed. You can uninstall it any time.';
   @override
   String get game_line_copy_tooltip => 'Copy sentence';
+  @override
+  String get game_japanese_locale_auto => 'Auto';
+  @override
+  String get game_japanese_locale_on => 'Always on';
+  @override
+  String get game_japanese_locale_off => 'Off';
+  @override
+  String get game_japanese_locale => 'Japanese locale';
+  @override
+  String get game_japanese_locale_hint =>
+      'Chinese/English patched builds must turn this off, or the game crashes on launch';
 }
 
 // Path: <root>
@@ -18853,6 +18870,17 @@ class _StringsDe extends _StringsEn {
       'Hibiki is still installed. You can uninstall it any time.';
   @override
   String get game_line_copy_tooltip => 'Copy sentence';
+  @override
+  String get game_japanese_locale_auto => 'Auto';
+  @override
+  String get game_japanese_locale_on => 'Always on';
+  @override
+  String get game_japanese_locale_off => 'Off';
+  @override
+  String get game_japanese_locale => 'Japanese locale';
+  @override
+  String get game_japanese_locale_hint =>
+      'Chinese/English patched builds must turn this off, or the game crashes on launch';
 }
 
 // Path: <root>
@@ -26200,6 +26228,17 @@ class _StringsEs extends _StringsEn {
       'Hibiki is still installed. You can uninstall it any time.';
   @override
   String get game_line_copy_tooltip => 'Copy sentence';
+  @override
+  String get game_japanese_locale_auto => 'Auto';
+  @override
+  String get game_japanese_locale_on => 'Always on';
+  @override
+  String get game_japanese_locale_off => 'Off';
+  @override
+  String get game_japanese_locale => 'Japanese locale';
+  @override
+  String get game_japanese_locale_hint =>
+      'Chinese/English patched builds must turn this off, or the game crashes on launch';
 }
 
 // Path: <root>
@@ -33559,6 +33598,17 @@ class _StringsFr extends _StringsEn {
       'Hibiki is still installed. You can uninstall it any time.';
   @override
   String get game_line_copy_tooltip => 'Copy sentence';
+  @override
+  String get game_japanese_locale_auto => 'Auto';
+  @override
+  String get game_japanese_locale_on => 'Always on';
+  @override
+  String get game_japanese_locale_off => 'Off';
+  @override
+  String get game_japanese_locale => 'Japanese locale';
+  @override
+  String get game_japanese_locale_hint =>
+      'Chinese/English patched builds must turn this off, or the game crashes on launch';
 }
 
 // Path: <root>
@@ -40846,6 +40896,17 @@ class _StringsId extends _StringsEn {
       'Hibiki is still installed. You can uninstall it any time.';
   @override
   String get game_line_copy_tooltip => 'Copy sentence';
+  @override
+  String get game_japanese_locale_auto => 'Auto';
+  @override
+  String get game_japanese_locale_on => 'Always on';
+  @override
+  String get game_japanese_locale_off => 'Off';
+  @override
+  String get game_japanese_locale => 'Japanese locale';
+  @override
+  String get game_japanese_locale_hint =>
+      'Chinese/English patched builds must turn this off, or the game crashes on launch';
 }
 
 // Path: <root>
@@ -48179,6 +48240,17 @@ class _StringsIt extends _StringsEn {
       'Hibiki is still installed. You can uninstall it any time.';
   @override
   String get game_line_copy_tooltip => 'Copy sentence';
+  @override
+  String get game_japanese_locale_auto => 'Auto';
+  @override
+  String get game_japanese_locale_on => 'Always on';
+  @override
+  String get game_japanese_locale_off => 'Off';
+  @override
+  String get game_japanese_locale => 'Japanese locale';
+  @override
+  String get game_japanese_locale_hint =>
+      'Chinese/English patched builds must turn this off, or the game crashes on launch';
 }
 
 // Path: <root>
@@ -55326,6 +55398,17 @@ class _StringsJa extends _StringsEn {
       'Hibiki is still installed. You can uninstall it any time.';
   @override
   String get game_line_copy_tooltip => 'Copy sentence';
+  @override
+  String get game_japanese_locale_auto => 'Auto';
+  @override
+  String get game_japanese_locale_on => 'Always on';
+  @override
+  String get game_japanese_locale_off => 'Off';
+  @override
+  String get game_japanese_locale => 'Japanese locale';
+  @override
+  String get game_japanese_locale_hint =>
+      'Chinese/English patched builds must turn this off, or the game crashes on launch';
 }
 
 // Path: <root>
@@ -62480,6 +62563,17 @@ class _StringsKo extends _StringsEn {
       'Hibiki is still installed. You can uninstall it any time.';
   @override
   String get game_line_copy_tooltip => 'Copy sentence';
+  @override
+  String get game_japanese_locale_auto => 'Auto';
+  @override
+  String get game_japanese_locale_on => 'Always on';
+  @override
+  String get game_japanese_locale_off => 'Off';
+  @override
+  String get game_japanese_locale => 'Japanese locale';
+  @override
+  String get game_japanese_locale_hint =>
+      'Chinese/English patched builds must turn this off, or the game crashes on launch';
 }
 
 // Path: <root>
@@ -69793,6 +69887,17 @@ class _StringsNl extends _StringsEn {
       'Hibiki is still installed. You can uninstall it any time.';
   @override
   String get game_line_copy_tooltip => 'Copy sentence';
+  @override
+  String get game_japanese_locale_auto => 'Auto';
+  @override
+  String get game_japanese_locale_on => 'Always on';
+  @override
+  String get game_japanese_locale_off => 'Off';
+  @override
+  String get game_japanese_locale => 'Japanese locale';
+  @override
+  String get game_japanese_locale_hint =>
+      'Chinese/English patched builds must turn this off, or the game crashes on launch';
 }
 
 // Path: <root>
@@ -77118,6 +77223,17 @@ class _StringsPtBr extends _StringsEn {
       'Hibiki is still installed. You can uninstall it any time.';
   @override
   String get game_line_copy_tooltip => 'Copy sentence';
+  @override
+  String get game_japanese_locale_auto => 'Auto';
+  @override
+  String get game_japanese_locale_on => 'Always on';
+  @override
+  String get game_japanese_locale_off => 'Off';
+  @override
+  String get game_japanese_locale => 'Japanese locale';
+  @override
+  String get game_japanese_locale_hint =>
+      'Chinese/English patched builds must turn this off, or the game crashes on launch';
 }
 
 // Path: <root>
@@ -84429,6 +84545,17 @@ class _StringsRu extends _StringsEn {
       'Hibiki is still installed. You can uninstall it any time.';
   @override
   String get game_line_copy_tooltip => 'Copy sentence';
+  @override
+  String get game_japanese_locale_auto => 'Auto';
+  @override
+  String get game_japanese_locale_on => 'Always on';
+  @override
+  String get game_japanese_locale_off => 'Off';
+  @override
+  String get game_japanese_locale => 'Japanese locale';
+  @override
+  String get game_japanese_locale_hint =>
+      'Chinese/English patched builds must turn this off, or the game crashes on launch';
 }
 
 // Path: <root>
@@ -91688,6 +91815,17 @@ class _StringsTh extends _StringsEn {
       'Hibiki is still installed. You can uninstall it any time.';
   @override
   String get game_line_copy_tooltip => 'Copy sentence';
+  @override
+  String get game_japanese_locale_auto => 'Auto';
+  @override
+  String get game_japanese_locale_on => 'Always on';
+  @override
+  String get game_japanese_locale_off => 'Off';
+  @override
+  String get game_japanese_locale => 'Japanese locale';
+  @override
+  String get game_japanese_locale_hint =>
+      'Chinese/English patched builds must turn this off, or the game crashes on launch';
 }
 
 // Path: <root>
@@ -98978,6 +99116,17 @@ class _StringsTr extends _StringsEn {
       'Hibiki is still installed. You can uninstall it any time.';
   @override
   String get game_line_copy_tooltip => 'Copy sentence';
+  @override
+  String get game_japanese_locale_auto => 'Auto';
+  @override
+  String get game_japanese_locale_on => 'Always on';
+  @override
+  String get game_japanese_locale_off => 'Off';
+  @override
+  String get game_japanese_locale => 'Japanese locale';
+  @override
+  String get game_japanese_locale_hint =>
+      'Chinese/English patched builds must turn this off, or the game crashes on launch';
 }
 
 // Path: <root>
@@ -106253,6 +106402,17 @@ class _StringsVi extends _StringsEn {
       'Hibiki is still installed. You can uninstall it any time.';
   @override
   String get game_line_copy_tooltip => 'Copy sentence';
+  @override
+  String get game_japanese_locale_auto => 'Auto';
+  @override
+  String get game_japanese_locale_on => 'Always on';
+  @override
+  String get game_japanese_locale_off => 'Off';
+  @override
+  String get game_japanese_locale => 'Japanese locale';
+  @override
+  String get game_japanese_locale_hint =>
+      'Chinese/English patched builds must turn this off, or the game crashes on launch';
 }
 
 // Path: <root>
@@ -113009,6 +113169,16 @@ class _StringsZhCn extends _StringsEn {
   String get migration_uninstall_still_installed => '旧版 Hibiki 仍安装在设备上，可随时卸载。';
   @override
   String get game_line_copy_tooltip => '复制句子';
+  @override
+  String get game_japanese_locale_auto => '自动';
+  @override
+  String get game_japanese_locale_on => '始终开启';
+  @override
+  String get game_japanese_locale_off => '关闭';
+  @override
+  String get game_japanese_locale => '日语区域（转区）';
+  @override
+  String get game_japanese_locale_hint => '汉化版/英化版请选「关闭」，否则启动即闪退';
 }
 
 // Path: <root>
@@ -120080,6 +120250,17 @@ class _StringsZhHk extends _StringsEn {
       'Hibiki is still installed. You can uninstall it any time.';
   @override
   String get game_line_copy_tooltip => 'Copy sentence';
+  @override
+  String get game_japanese_locale_auto => 'Auto';
+  @override
+  String get game_japanese_locale_on => 'Always on';
+  @override
+  String get game_japanese_locale_off => 'Off';
+  @override
+  String get game_japanese_locale => 'Japanese locale';
+  @override
+  String get game_japanese_locale_hint =>
+      'Chinese/English patched builds must turn this off, or the game crashes on launch';
 }
 
 /// Flat map(s) containing all translations.
@@ -126555,6 +126736,16 @@ extension on _StringsEn {
         return 'Hibiki is still installed. You can uninstall it any time.';
       case 'game_line_copy_tooltip':
         return 'Copy sentence';
+      case 'game_japanese_locale_auto':
+        return 'Auto';
+      case 'game_japanese_locale_on':
+        return 'Always on';
+      case 'game_japanese_locale_off':
+        return 'Off';
+      case 'game_japanese_locale':
+        return 'Japanese locale';
+      case 'game_japanese_locale_hint':
+        return 'Chinese/English patched builds must turn this off, or the game crashes on launch';
       default:
         return null;
     }
@@ -133028,6 +133219,16 @@ extension on _StringsAr {
         return 'Hibiki is still installed. You can uninstall it any time.';
       case 'game_line_copy_tooltip':
         return 'Copy sentence';
+      case 'game_japanese_locale_auto':
+        return 'Auto';
+      case 'game_japanese_locale_on':
+        return 'Always on';
+      case 'game_japanese_locale_off':
+        return 'Off';
+      case 'game_japanese_locale':
+        return 'Japanese locale';
+      case 'game_japanese_locale_hint':
+        return 'Chinese/English patched builds must turn this off, or the game crashes on launch';
       default:
         return null;
     }
@@ -139523,6 +139724,16 @@ extension on _StringsDe {
         return 'Hibiki is still installed. You can uninstall it any time.';
       case 'game_line_copy_tooltip':
         return 'Copy sentence';
+      case 'game_japanese_locale_auto':
+        return 'Auto';
+      case 'game_japanese_locale_on':
+        return 'Always on';
+      case 'game_japanese_locale_off':
+        return 'Off';
+      case 'game_japanese_locale':
+        return 'Japanese locale';
+      case 'game_japanese_locale_hint':
+        return 'Chinese/English patched builds must turn this off, or the game crashes on launch';
       default:
         return null;
     }
@@ -146017,6 +146228,16 @@ extension on _StringsEs {
         return 'Hibiki is still installed. You can uninstall it any time.';
       case 'game_line_copy_tooltip':
         return 'Copy sentence';
+      case 'game_japanese_locale_auto':
+        return 'Auto';
+      case 'game_japanese_locale_on':
+        return 'Always on';
+      case 'game_japanese_locale_off':
+        return 'Off';
+      case 'game_japanese_locale':
+        return 'Japanese locale';
+      case 'game_japanese_locale_hint':
+        return 'Chinese/English patched builds must turn this off, or the game crashes on launch';
       default:
         return null;
     }
@@ -152517,6 +152738,16 @@ extension on _StringsFr {
         return 'Hibiki is still installed. You can uninstall it any time.';
       case 'game_line_copy_tooltip':
         return 'Copy sentence';
+      case 'game_japanese_locale_auto':
+        return 'Auto';
+      case 'game_japanese_locale_on':
+        return 'Always on';
+      case 'game_japanese_locale_off':
+        return 'Off';
+      case 'game_japanese_locale':
+        return 'Japanese locale';
+      case 'game_japanese_locale_hint':
+        return 'Chinese/English patched builds must turn this off, or the game crashes on launch';
       default:
         return null;
     }
@@ -158999,6 +159230,16 @@ extension on _StringsId {
         return 'Hibiki is still installed. You can uninstall it any time.';
       case 'game_line_copy_tooltip':
         return 'Copy sentence';
+      case 'game_japanese_locale_auto':
+        return 'Auto';
+      case 'game_japanese_locale_on':
+        return 'Always on';
+      case 'game_japanese_locale_off':
+        return 'Off';
+      case 'game_japanese_locale':
+        return 'Japanese locale';
+      case 'game_japanese_locale_hint':
+        return 'Chinese/English patched builds must turn this off, or the game crashes on launch';
       default:
         return null;
     }
@@ -165495,6 +165736,16 @@ extension on _StringsIt {
         return 'Hibiki is still installed. You can uninstall it any time.';
       case 'game_line_copy_tooltip':
         return 'Copy sentence';
+      case 'game_japanese_locale_auto':
+        return 'Auto';
+      case 'game_japanese_locale_on':
+        return 'Always on';
+      case 'game_japanese_locale_off':
+        return 'Off';
+      case 'game_japanese_locale':
+        return 'Japanese locale';
+      case 'game_japanese_locale_hint':
+        return 'Chinese/English patched builds must turn this off, or the game crashes on launch';
       default:
         return null;
     }
@@ -171953,6 +172204,16 @@ extension on _StringsJa {
         return 'Hibiki is still installed. You can uninstall it any time.';
       case 'game_line_copy_tooltip':
         return 'Copy sentence';
+      case 'game_japanese_locale_auto':
+        return 'Auto';
+      case 'game_japanese_locale_on':
+        return 'Always on';
+      case 'game_japanese_locale_off':
+        return 'Off';
+      case 'game_japanese_locale':
+        return 'Japanese locale';
+      case 'game_japanese_locale_hint':
+        return 'Chinese/English patched builds must turn this off, or the game crashes on launch';
       default:
         return null;
     }
@@ -178415,6 +178676,16 @@ extension on _StringsKo {
         return 'Hibiki is still installed. You can uninstall it any time.';
       case 'game_line_copy_tooltip':
         return 'Copy sentence';
+      case 'game_japanese_locale_auto':
+        return 'Auto';
+      case 'game_japanese_locale_on':
+        return 'Always on';
+      case 'game_japanese_locale_off':
+        return 'Off';
+      case 'game_japanese_locale':
+        return 'Japanese locale';
+      case 'game_japanese_locale_hint':
+        return 'Chinese/English patched builds must turn this off, or the game crashes on launch';
       default:
         return null;
     }
@@ -184905,6 +185176,16 @@ extension on _StringsNl {
         return 'Hibiki is still installed. You can uninstall it any time.';
       case 'game_line_copy_tooltip':
         return 'Copy sentence';
+      case 'game_japanese_locale_auto':
+        return 'Auto';
+      case 'game_japanese_locale_on':
+        return 'Always on';
+      case 'game_japanese_locale_off':
+        return 'Off';
+      case 'game_japanese_locale':
+        return 'Japanese locale';
+      case 'game_japanese_locale_hint':
+        return 'Chinese/English patched builds must turn this off, or the game crashes on launch';
       default:
         return null;
     }
@@ -191392,6 +191673,16 @@ extension on _StringsPtBr {
         return 'Hibiki is still installed. You can uninstall it any time.';
       case 'game_line_copy_tooltip':
         return 'Copy sentence';
+      case 'game_japanese_locale_auto':
+        return 'Auto';
+      case 'game_japanese_locale_on':
+        return 'Always on';
+      case 'game_japanese_locale_off':
+        return 'Off';
+      case 'game_japanese_locale':
+        return 'Japanese locale';
+      case 'game_japanese_locale_hint':
+        return 'Chinese/English patched builds must turn this off, or the game crashes on launch';
       default:
         return null;
     }
@@ -197884,6 +198175,16 @@ extension on _StringsRu {
         return 'Hibiki is still installed. You can uninstall it any time.';
       case 'game_line_copy_tooltip':
         return 'Copy sentence';
+      case 'game_japanese_locale_auto':
+        return 'Auto';
+      case 'game_japanese_locale_on':
+        return 'Always on';
+      case 'game_japanese_locale_off':
+        return 'Off';
+      case 'game_japanese_locale':
+        return 'Japanese locale';
+      case 'game_japanese_locale_hint':
+        return 'Chinese/English patched builds must turn this off, or the game crashes on launch';
       default:
         return null;
     }
@@ -204359,6 +204660,16 @@ extension on _StringsTh {
         return 'Hibiki is still installed. You can uninstall it any time.';
       case 'game_line_copy_tooltip':
         return 'Copy sentence';
+      case 'game_japanese_locale_auto':
+        return 'Auto';
+      case 'game_japanese_locale_on':
+        return 'Always on';
+      case 'game_japanese_locale_off':
+        return 'Off';
+      case 'game_japanese_locale':
+        return 'Japanese locale';
+      case 'game_japanese_locale_hint':
+        return 'Chinese/English patched builds must turn this off, or the game crashes on launch';
       default:
         return null;
     }
@@ -210843,6 +211154,16 @@ extension on _StringsTr {
         return 'Hibiki is still installed. You can uninstall it any time.';
       case 'game_line_copy_tooltip':
         return 'Copy sentence';
+      case 'game_japanese_locale_auto':
+        return 'Auto';
+      case 'game_japanese_locale_on':
+        return 'Always on';
+      case 'game_japanese_locale_off':
+        return 'Off';
+      case 'game_japanese_locale':
+        return 'Japanese locale';
+      case 'game_japanese_locale_hint':
+        return 'Chinese/English patched builds must turn this off, or the game crashes on launch';
       default:
         return null;
     }
@@ -217323,6 +217644,16 @@ extension on _StringsVi {
         return 'Hibiki is still installed. You can uninstall it any time.';
       case 'game_line_copy_tooltip':
         return 'Copy sentence';
+      case 'game_japanese_locale_auto':
+        return 'Auto';
+      case 'game_japanese_locale_on':
+        return 'Always on';
+      case 'game_japanese_locale_off':
+        return 'Off';
+      case 'game_japanese_locale':
+        return 'Japanese locale';
+      case 'game_japanese_locale_hint':
+        return 'Chinese/English patched builds must turn this off, or the game crashes on launch';
       default:
         return null;
     }
@@ -223748,6 +224079,16 @@ extension on _StringsZhCn {
         return '旧版 Hibiki 仍安装在设备上，可随时卸载。';
       case 'game_line_copy_tooltip':
         return '复制句子';
+      case 'game_japanese_locale_auto':
+        return '自动';
+      case 'game_japanese_locale_on':
+        return '始终开启';
+      case 'game_japanese_locale_off':
+        return '关闭';
+      case 'game_japanese_locale':
+        return '日语区域（转区）';
+      case 'game_japanese_locale_hint':
+        return '汉化版/英化版请选「关闭」，否则启动即闪退';
       default:
         return null;
     }
@@ -230201,6 +230542,16 @@ extension on _StringsZhHk {
         return 'Hibiki is still installed. You can uninstall it any time.';
       case 'game_line_copy_tooltip':
         return 'Copy sentence';
+      case 'game_japanese_locale_auto':
+        return 'Auto';
+      case 'game_japanese_locale_on':
+        return 'Always on';
+      case 'game_japanese_locale_off':
+        return 'Off';
+      case 'game_japanese_locale':
+        return 'Japanese locale';
+      case 'game_japanese_locale_hint':
+        return 'Chinese/English patched builds must turn this off, or the game crashes on launch';
       default:
         return null;
     }
