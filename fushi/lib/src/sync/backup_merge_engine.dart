@@ -45,12 +45,25 @@ class BackupMergeEngine {
     String srcAlias = 'mergesrc',
     Set<String> carriedVideoSourcePaths = const <String>{},
     Set<String>? enabledCategoryNames,
+    bool adoptSourcePreferences = false,
   })  : _srcAlias = srcAlias,
         _carriedVideoSourcePaths = carriedVideoSourcePaths,
-        _enabledCategoryNames = enabledCategoryNames;
+        _enabledCategoryNames = enabledCategoryNames,
+        _adoptSourcePreferences = adoptSourcePreferences;
 
   final FushiDatabase _db;
   final String _srcAlias;
+
+  /// 是否把源库的 `preferences` 整体接管过来（**只有同机换包名的迁移**该开）。
+  ///
+  /// 平时关着是对的：备份 merge 的语义是「把**另一台**设备的内容并进来，不动
+  /// 本机设置」。但迁移不是那个场景——它是同一台机器、同一个用户、只换了包名，
+  /// 用户期望「一切原样搬过来」。关着的后果是实测过的：11.4GB 库迁移成功后
+  /// `preferences` 只剩 21 行，且没有一条是用户设置（阅读器、视频、Anki、
+  /// 快捷键、界面、互联、同步后端全丢），因为下面那三处点名的 pref 合并
+  /// （收藏句 / 有声书位置 / 音频来源）就是 merge 对 `preferences` 的全部处理，
+  /// 而迁移声明的 `BackupCategory.settings` 在这条路径上从来没有消费方。
+  final bool _adoptSourcePreferences;
 
   /// Per-category merge gate (the `BackupCategory.name`s the user kept ticked in
   /// the import dialog); null = merge every category (legacy full merge). Only
@@ -165,7 +178,26 @@ class BackupMergeEngine {
         await _mergeAudiobookPositionPrefs();
       }
       if (_wants('localAudio')) await _mergeAudioSourcePrefs();
+      // 迁移专用，放在全部点名 pref 合并之后：那几处是「按内容语义合并」（可能
+      // 覆盖/取较新），这里只补它们没管的 key，不能反过来盖掉它们的结果。
+      if (_adoptSourcePreferences) await _adoptMissingPreferences();
     });
+  }
+
+  /// 把源库里**本机还没有**的 `preferences` 行补进来（insert-if-absent）。
+  ///
+  /// 只补不覆盖是刻意的，而且是这个操作能安全存在的前提：目标库是刚建的新包，
+  /// 已经写入了属于**它自己**的标记（`prefs_version`、`first_time_setup`、
+  /// `active_profile_id`、各种 `*_migrated`）。这些描述的是「本库处于什么状态」，
+  /// 拿老包的值去盖会让新库自称成另一个 schema 状态，是真正会毁库的一步。
+  /// `NOT EXISTS` 守卫天然把它们挡在外面，同时放行老包独有的用户设置。
+  Future<void> _adoptMissingPreferences() async {
+    await _db.customStatement(
+      'INSERT INTO preferences ("key", "value") '
+      'SELECT s."key", s."value" FROM $_srcAlias.preferences AS s '
+      'WHERE NOT EXISTS '
+      '(SELECT 1 FROM preferences AS t WHERE t."key" = s."key")',
+    );
   }
 
   /// Read-only estimate of what [merge] would change, for the import confirm
@@ -653,30 +685,39 @@ class BackupMergeEngine {
     );
   }
 
-  /// LookupMiningCounters MAX-union per {title, sourceType, dateKey} (TODO-1204).
-  /// Both counter columns (lookup_count / mine_count) are MAX-ed independently,
-  /// so a re-import of the same backup stays idempotent and never double-counts
-  /// (mirrors setLookupCount / setMineCountPerBook). Keyed by {title,
-  /// source_type, date_key} exactly like the table's unique key.
+  /// LookupMiningCounters MAX-union（TODO-1204；v76 起身份感知）。
+  ///
+  /// v76 把 book_key 收进唯一键 {book_key, title, source_type, date_key} 后，
+  /// 同 title 可以有多行（per-uid 行 + '' 无身份行），旧的三列键合并会双向出错：
+  /// src 身份行被 NOT EXISTS 静默丢弃；UPDATE 把同 title 每一行抬到标量子查询值
+  /// → 计数膨胀且不确定。修法与 [_mergeVideoWatchStatistics] 的 v39 身份感知
+  /// **完全同律**：桶身份 = 表唯一键（'' 无身份桶就是普通桶，只与对侧的 '' 桶
+  /// MAX 合并，绝不跨桶比较/塌缩）——INSERT 缺失桶、逐列 MAX 既有桶，重导幂等。
+  /// src 侧在 ATTACH 前已迁到当前 schema（book_key 已 NOT NULL），COALESCE 仅
+  /// 防御性归一。
+  ///
+  /// 迁移边界的已知精度限制（与 v39 watch 合并同款、同理由）：同一段活动在两侧
+  /// 落在不同桶里（一侧迁移回填出身份、另一侧仍是 '' 桶）时按两个桶各自并入，
+  /// 汇总可能偏高——桶间归属不可判，宁可保留全部数据也不瞎塌；展示层的身份分组
+  /// 会把歧义 '' 桶按 unique-title 判据归并或单列。
   ///
   /// This has NO book_tombstones guard (per-title activity, not per-book_key
   /// content), but DOES honour statistics_tombstones (TODO-1204 后续): once the
   /// user explicitly deleted a book/video's stats in the stats page, an old
   /// backup must not resurrect its lookup/mine counters. The INSERT below skips
-  /// src rows whose (title, source_type) is tombstoned; the UPDATE only touches
-  /// buckets the target already has (deleted buckets are gone), so it needs no
-  /// guard. On the INSERT of a bucket the target lacks, the src book_key travels;
-  /// on an UPDATE the target keeps its own book_key unless it was null, in which
-  /// case it adopts the src's non-null value (COALESCE) so book identity converges.
+  /// tombstoned (title, source_type); the UPDATE only touches buckets the
+  /// target already has (deleted buckets are gone), so it needs no guard.
   Future<void> _mergeLookupMiningCounters() async {
+    const String srcKey = "COALESCE(s.book_key, '')";
     await _db.customStatement(
       'INSERT INTO lookup_mining_counters '
       '(book_key, title, source_type, date_key, lookup_count, mine_count) '
-      'SELECT book_key, title, source_type, date_key, lookup_count, mine_count '
+      'SELECT $srcKey, title, source_type, date_key, '
+      'lookup_count, mine_count '
       'FROM $_srcAlias.lookup_mining_counters AS s '
       'WHERE NOT EXISTS (SELECT 1 FROM lookup_mining_counters AS t '
-      'WHERE t.title = s.title AND t.source_type = s.source_type '
-      'AND t.date_key = s.date_key) '
+      'WHERE t.book_key = $srcKey AND t.title = s.title '
+      'AND t.source_type = s.source_type AND t.date_key = s.date_key) '
       // TODO-1204 后续：用户删过该 (title, sourceType) 统计 → 旧备份不得复活其计数。
       'AND NOT EXISTS (SELECT 1 FROM statistics_tombstones st '
       'WHERE st.title = s.title AND st.source_type = s.source_type)',
@@ -685,21 +726,19 @@ class BackupMergeEngine {
       'UPDATE lookup_mining_counters SET '
       'lookup_count = MAX(lookup_count, ('
       'SELECT s.lookup_count FROM $_srcAlias.lookup_mining_counters AS s '
-      'WHERE s.title = lookup_mining_counters.title '
+      'WHERE $srcKey = lookup_mining_counters.book_key '
+      'AND s.title = lookup_mining_counters.title '
       'AND s.source_type = lookup_mining_counters.source_type '
       'AND s.date_key = lookup_mining_counters.date_key)), '
       'mine_count = MAX(mine_count, ('
       'SELECT s.mine_count FROM $_srcAlias.lookup_mining_counters AS s '
-      'WHERE s.title = lookup_mining_counters.title '
-      'AND s.source_type = lookup_mining_counters.source_type '
-      'AND s.date_key = lookup_mining_counters.date_key)), '
-      'book_key = COALESCE(book_key, ('
-      'SELECT s.book_key FROM $_srcAlias.lookup_mining_counters AS s '
-      'WHERE s.title = lookup_mining_counters.title '
+      'WHERE $srcKey = lookup_mining_counters.book_key '
+      'AND s.title = lookup_mining_counters.title '
       'AND s.source_type = lookup_mining_counters.source_type '
       'AND s.date_key = lookup_mining_counters.date_key)) '
       'WHERE EXISTS (SELECT 1 FROM $_srcAlias.lookup_mining_counters AS s '
-      'WHERE s.title = lookup_mining_counters.title '
+      'WHERE $srcKey = lookup_mining_counters.book_key '
+      'AND s.title = lookup_mining_counters.title '
       'AND s.source_type = lookup_mining_counters.source_type '
       'AND s.date_key = lookup_mining_counters.date_key)',
     );
