@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 54009 (3177 per locale)
+/// Strings: 54995 (3235 per locale)
 ///
-/// Built on 2026-08-08 at 18:00 UTC
+/// Built on 2026-08-09 at 03:27 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -1017,7 +1017,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get download_backend_not_configured =>
       'Download backend is not configured yet.';
   String get download_clear_finished => 'Clear finished';
-  String get download_discover_tab => 'Discover';
   String get download_network_proxy_auto => 'Auto';
   String get download_network_proxy_auto_hint =>
       'Applies to AniList, Nyaa, and Jimaku only. Auto uses environment variables, then the enabled system proxy; torrent traffic is unchanged.';
@@ -4282,6 +4281,83 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Recently added · Episode ${n}';
   String video_home_remaining_minutes({required Object minutes}) =>
       '${minutes} min remaining';
+  String get video_discovery_tab => 'Discover';
+  String get video_discovery_search_hint => 'Search movies, series, anime';
+  String get video_discovery_hot => 'Popular now';
+  String get video_discovery_seasonal_anime => 'Seasonal anime';
+  String get video_discovery_all_works => 'All titles';
+  String get video_discovery_search_results => 'Search results';
+  String get video_discovery_provider_warning =>
+      'Some providers are unavailable. Showing available results.';
+  String get video_discovery_load_failed => 'Could not load discovery results.';
+  String get video_discovery_empty => 'No matching titles.';
+  String get video_discovery_resource_search => 'Search resources';
+  String get video_discovery_subtitle_search => 'Search subtitles';
+  String get video_discovery_subscribe => 'Subscribe';
+  String get video_discovery_subscription_manage => 'Manage subscription';
+  String get video_discovery_pipeline_idle =>
+      'Not downloaded → Download → Organize → Subtitles → Scrape → Library';
+  String get video_discovery_details_load_failed =>
+      'Could not load title details.';
+  String get video_discovery_sort_popularity => 'Popularity';
+  String get video_discovery_sort_rating => 'Rating';
+  String get video_discovery_sort_release => 'Release date';
+  String get video_discovery_in_library => 'In library';
+  String get video_discovery_play => 'Play';
+  String get download_resources_tab => 'Resources';
+  String get video_external_settings_section =>
+      'External resource and subtitle providers';
+  String get video_torznab_settings_title => 'Torznab indexers';
+  String get video_torznab_settings_hint =>
+      'Configure one or more Jackett, Prowlarr, or compatible Torznab endpoints. Secrets stay on this device.';
+  String get video_torznab_add => 'Add indexer';
+  String get video_torznab_name => 'Name';
+  String get video_torznab_endpoint => 'Endpoint';
+  String get video_torznab_endpoint_hint =>
+      'HTTPS is required except for loopback addresses.';
+  String get video_torznab_api_key => 'API key';
+  String get video_torznab_priority => 'Priority';
+  String get video_torznab_categories => 'Categories';
+  String get video_torznab_categories_hint =>
+      'Comma-separated numeric category IDs';
+  String get video_external_enabled => 'Enabled';
+  String get video_external_insecure_http => 'Allow insecure HTTP';
+  String get video_external_insecure_http_hint =>
+      'Use only for a trusted local network endpoint.';
+  String get video_external_endpoint_invalid =>
+      'Enter a valid endpoint without credentials, query parameters, or fragments.';
+  String get video_opensubtitles_settings_title => 'OpenSubtitles';
+  String get video_opensubtitles_settings_hint =>
+      'API credentials and preferred subtitle languages stay on this device.';
+  String get video_opensubtitles_user_agent => 'User-Agent';
+  String get video_opensubtitles_languages => 'Preferred languages';
+  String get video_opensubtitles_languages_hint =>
+      'Comma-separated language codes, for example zh-CN,en,ja';
+  String get video_download_path_mappings_title => 'qBittorrent path mappings';
+  String get video_download_path_mappings_hint =>
+      'Map each qBittorrent remote root to a locally accessible folder.';
+  String get video_download_path_mapping_add => 'Add path mapping';
+  String get video_download_backend_profile_id => 'Backend profile ID';
+  String get video_download_remote_root => 'Remote root';
+  String get video_download_local_root => 'Local root';
+  String get video_download_target_source_title =>
+      'Default managed video source';
+  String get video_download_target_source_hint =>
+      'New downloads are organized into this local video source.';
+  String get video_download_target_source_none => 'Choose a local video source';
+  String get video_external_remove => 'Remove';
+  String get video_external_username_optional => 'Username (optional)';
+  String get video_external_password_optional => 'Password (optional)';
+  String get video_external_api_key => 'API key';
+  String get video_external_save_error =>
+      'The configuration could not be saved. Check the highlighted fields.';
+  String get video_external_categories_invalid =>
+      'Categories must be comma-separated numeric IDs.';
+  String get video_download_path_mapping_invalid =>
+      'Enter a profile ID, remote root, and absolute local root.';
+  String get video_opensubtitles_endpoint => 'API endpoint';
+  String get video_download_target_source_empty =>
+      'No locally accessible video source is available. Add one on the Sources tab first.';
 }
 
 // Path: <root>
@@ -5785,8 +5861,6 @@ class _StringsAr extends _StringsEn {
       'Download backend is not configured yet.';
   @override
   String get download_clear_finished => 'Clear finished';
-  @override
-  String get download_discover_tab => 'Discover';
   @override
   String get download_network_proxy_auto => 'Auto';
   @override
@@ -11590,6 +11664,142 @@ class _StringsAr extends _StringsEn {
   @override
   String video_home_remaining_minutes({required Object minutes}) =>
       '${minutes} min remaining';
+  @override
+  String get video_discovery_tab => 'Discover';
+  @override
+  String get video_discovery_search_hint => 'Search movies, series, anime';
+  @override
+  String get video_discovery_hot => 'Popular now';
+  @override
+  String get video_discovery_seasonal_anime => 'Seasonal anime';
+  @override
+  String get video_discovery_all_works => 'All titles';
+  @override
+  String get video_discovery_search_results => 'Search results';
+  @override
+  String get video_discovery_provider_warning =>
+      'Some providers are unavailable. Showing available results.';
+  @override
+  String get video_discovery_load_failed => 'Could not load discovery results.';
+  @override
+  String get video_discovery_empty => 'No matching titles.';
+  @override
+  String get video_discovery_resource_search => 'Search resources';
+  @override
+  String get video_discovery_subtitle_search => 'Search subtitles';
+  @override
+  String get video_discovery_subscribe => 'Subscribe';
+  @override
+  String get video_discovery_subscription_manage => 'Manage subscription';
+  @override
+  String get video_discovery_pipeline_idle =>
+      'Not downloaded → Download → Organize → Subtitles → Scrape → Library';
+  @override
+  String get video_discovery_details_load_failed =>
+      'Could not load title details.';
+  @override
+  String get video_discovery_sort_popularity => 'Popularity';
+  @override
+  String get video_discovery_sort_rating => 'Rating';
+  @override
+  String get video_discovery_sort_release => 'Release date';
+  @override
+  String get video_discovery_in_library => 'In library';
+  @override
+  String get video_discovery_play => 'Play';
+  @override
+  String get download_resources_tab => 'Resources';
+  @override
+  String get video_external_settings_section =>
+      'External resource and subtitle providers';
+  @override
+  String get video_torznab_settings_title => 'Torznab indexers';
+  @override
+  String get video_torznab_settings_hint =>
+      'Configure one or more Jackett, Prowlarr, or compatible Torznab endpoints. Secrets stay on this device.';
+  @override
+  String get video_torznab_add => 'Add indexer';
+  @override
+  String get video_torznab_name => 'Name';
+  @override
+  String get video_torznab_endpoint => 'Endpoint';
+  @override
+  String get video_torznab_endpoint_hint =>
+      'HTTPS is required except for loopback addresses.';
+  @override
+  String get video_torznab_api_key => 'API key';
+  @override
+  String get video_torznab_priority => 'Priority';
+  @override
+  String get video_torznab_categories => 'Categories';
+  @override
+  String get video_torznab_categories_hint =>
+      'Comma-separated numeric category IDs';
+  @override
+  String get video_external_enabled => 'Enabled';
+  @override
+  String get video_external_insecure_http => 'Allow insecure HTTP';
+  @override
+  String get video_external_insecure_http_hint =>
+      'Use only for a trusted local network endpoint.';
+  @override
+  String get video_external_endpoint_invalid =>
+      'Enter a valid endpoint without credentials, query parameters, or fragments.';
+  @override
+  String get video_opensubtitles_settings_title => 'OpenSubtitles';
+  @override
+  String get video_opensubtitles_settings_hint =>
+      'API credentials and preferred subtitle languages stay on this device.';
+  @override
+  String get video_opensubtitles_user_agent => 'User-Agent';
+  @override
+  String get video_opensubtitles_languages => 'Preferred languages';
+  @override
+  String get video_opensubtitles_languages_hint =>
+      'Comma-separated language codes, for example zh-CN,en,ja';
+  @override
+  String get video_download_path_mappings_title => 'qBittorrent path mappings';
+  @override
+  String get video_download_path_mappings_hint =>
+      'Map each qBittorrent remote root to a locally accessible folder.';
+  @override
+  String get video_download_path_mapping_add => 'Add path mapping';
+  @override
+  String get video_download_backend_profile_id => 'Backend profile ID';
+  @override
+  String get video_download_remote_root => 'Remote root';
+  @override
+  String get video_download_local_root => 'Local root';
+  @override
+  String get video_download_target_source_title =>
+      'Default managed video source';
+  @override
+  String get video_download_target_source_hint =>
+      'New downloads are organized into this local video source.';
+  @override
+  String get video_download_target_source_none => 'Choose a local video source';
+  @override
+  String get video_external_remove => 'Remove';
+  @override
+  String get video_external_username_optional => 'Username (optional)';
+  @override
+  String get video_external_password_optional => 'Password (optional)';
+  @override
+  String get video_external_api_key => 'API key';
+  @override
+  String get video_external_save_error =>
+      'The configuration could not be saved. Check the highlighted fields.';
+  @override
+  String get video_external_categories_invalid =>
+      'Categories must be comma-separated numeric IDs.';
+  @override
+  String get video_download_path_mapping_invalid =>
+      'Enter a profile ID, remote root, and absolute local root.';
+  @override
+  String get video_opensubtitles_endpoint => 'API endpoint';
+  @override
+  String get video_download_target_source_empty =>
+      'No locally accessible video source is available. Add one on the Sources tab first.';
 }
 
 // Path: <root>
@@ -13111,8 +13321,6 @@ class _StringsDe extends _StringsEn {
       'Download backend is not configured yet.';
   @override
   String get download_clear_finished => 'Clear finished';
-  @override
-  String get download_discover_tab => 'Discover';
   @override
   String get download_network_proxy_auto => 'Auto';
   @override
@@ -18965,6 +19173,142 @@ class _StringsDe extends _StringsEn {
   @override
   String video_home_remaining_minutes({required Object minutes}) =>
       '${minutes} min remaining';
+  @override
+  String get video_discovery_tab => 'Discover';
+  @override
+  String get video_discovery_search_hint => 'Search movies, series, anime';
+  @override
+  String get video_discovery_hot => 'Popular now';
+  @override
+  String get video_discovery_seasonal_anime => 'Seasonal anime';
+  @override
+  String get video_discovery_all_works => 'All titles';
+  @override
+  String get video_discovery_search_results => 'Search results';
+  @override
+  String get video_discovery_provider_warning =>
+      'Some providers are unavailable. Showing available results.';
+  @override
+  String get video_discovery_load_failed => 'Could not load discovery results.';
+  @override
+  String get video_discovery_empty => 'No matching titles.';
+  @override
+  String get video_discovery_resource_search => 'Search resources';
+  @override
+  String get video_discovery_subtitle_search => 'Search subtitles';
+  @override
+  String get video_discovery_subscribe => 'Subscribe';
+  @override
+  String get video_discovery_subscription_manage => 'Manage subscription';
+  @override
+  String get video_discovery_pipeline_idle =>
+      'Not downloaded → Download → Organize → Subtitles → Scrape → Library';
+  @override
+  String get video_discovery_details_load_failed =>
+      'Could not load title details.';
+  @override
+  String get video_discovery_sort_popularity => 'Popularity';
+  @override
+  String get video_discovery_sort_rating => 'Rating';
+  @override
+  String get video_discovery_sort_release => 'Release date';
+  @override
+  String get video_discovery_in_library => 'In library';
+  @override
+  String get video_discovery_play => 'Play';
+  @override
+  String get download_resources_tab => 'Resources';
+  @override
+  String get video_external_settings_section =>
+      'External resource and subtitle providers';
+  @override
+  String get video_torznab_settings_title => 'Torznab indexers';
+  @override
+  String get video_torznab_settings_hint =>
+      'Configure one or more Jackett, Prowlarr, or compatible Torznab endpoints. Secrets stay on this device.';
+  @override
+  String get video_torznab_add => 'Add indexer';
+  @override
+  String get video_torznab_name => 'Name';
+  @override
+  String get video_torznab_endpoint => 'Endpoint';
+  @override
+  String get video_torznab_endpoint_hint =>
+      'HTTPS is required except for loopback addresses.';
+  @override
+  String get video_torznab_api_key => 'API key';
+  @override
+  String get video_torznab_priority => 'Priority';
+  @override
+  String get video_torznab_categories => 'Categories';
+  @override
+  String get video_torznab_categories_hint =>
+      'Comma-separated numeric category IDs';
+  @override
+  String get video_external_enabled => 'Enabled';
+  @override
+  String get video_external_insecure_http => 'Allow insecure HTTP';
+  @override
+  String get video_external_insecure_http_hint =>
+      'Use only for a trusted local network endpoint.';
+  @override
+  String get video_external_endpoint_invalid =>
+      'Enter a valid endpoint without credentials, query parameters, or fragments.';
+  @override
+  String get video_opensubtitles_settings_title => 'OpenSubtitles';
+  @override
+  String get video_opensubtitles_settings_hint =>
+      'API credentials and preferred subtitle languages stay on this device.';
+  @override
+  String get video_opensubtitles_user_agent => 'User-Agent';
+  @override
+  String get video_opensubtitles_languages => 'Preferred languages';
+  @override
+  String get video_opensubtitles_languages_hint =>
+      'Comma-separated language codes, for example zh-CN,en,ja';
+  @override
+  String get video_download_path_mappings_title => 'qBittorrent path mappings';
+  @override
+  String get video_download_path_mappings_hint =>
+      'Map each qBittorrent remote root to a locally accessible folder.';
+  @override
+  String get video_download_path_mapping_add => 'Add path mapping';
+  @override
+  String get video_download_backend_profile_id => 'Backend profile ID';
+  @override
+  String get video_download_remote_root => 'Remote root';
+  @override
+  String get video_download_local_root => 'Local root';
+  @override
+  String get video_download_target_source_title =>
+      'Default managed video source';
+  @override
+  String get video_download_target_source_hint =>
+      'New downloads are organized into this local video source.';
+  @override
+  String get video_download_target_source_none => 'Choose a local video source';
+  @override
+  String get video_external_remove => 'Remove';
+  @override
+  String get video_external_username_optional => 'Username (optional)';
+  @override
+  String get video_external_password_optional => 'Password (optional)';
+  @override
+  String get video_external_api_key => 'API key';
+  @override
+  String get video_external_save_error =>
+      'The configuration could not be saved. Check the highlighted fields.';
+  @override
+  String get video_external_categories_invalid =>
+      'Categories must be comma-separated numeric IDs.';
+  @override
+  String get video_download_path_mapping_invalid =>
+      'Enter a profile ID, remote root, and absolute local root.';
+  @override
+  String get video_opensubtitles_endpoint => 'API endpoint';
+  @override
+  String get video_download_target_source_empty =>
+      'No locally accessible video source is available. Add one on the Sources tab first.';
 }
 
 // Path: <root>
@@ -20487,8 +20831,6 @@ class _StringsEs extends _StringsEn {
       'Download backend is not configured yet.';
   @override
   String get download_clear_finished => 'Clear finished';
-  @override
-  String get download_discover_tab => 'Discover';
   @override
   String get download_network_proxy_auto => 'Auto';
   @override
@@ -26355,6 +26697,142 @@ class _StringsEs extends _StringsEn {
   @override
   String video_home_remaining_minutes({required Object minutes}) =>
       '${minutes} min remaining';
+  @override
+  String get video_discovery_tab => 'Discover';
+  @override
+  String get video_discovery_search_hint => 'Search movies, series, anime';
+  @override
+  String get video_discovery_hot => 'Popular now';
+  @override
+  String get video_discovery_seasonal_anime => 'Seasonal anime';
+  @override
+  String get video_discovery_all_works => 'All titles';
+  @override
+  String get video_discovery_search_results => 'Search results';
+  @override
+  String get video_discovery_provider_warning =>
+      'Some providers are unavailable. Showing available results.';
+  @override
+  String get video_discovery_load_failed => 'Could not load discovery results.';
+  @override
+  String get video_discovery_empty => 'No matching titles.';
+  @override
+  String get video_discovery_resource_search => 'Search resources';
+  @override
+  String get video_discovery_subtitle_search => 'Search subtitles';
+  @override
+  String get video_discovery_subscribe => 'Subscribe';
+  @override
+  String get video_discovery_subscription_manage => 'Manage subscription';
+  @override
+  String get video_discovery_pipeline_idle =>
+      'Not downloaded → Download → Organize → Subtitles → Scrape → Library';
+  @override
+  String get video_discovery_details_load_failed =>
+      'Could not load title details.';
+  @override
+  String get video_discovery_sort_popularity => 'Popularity';
+  @override
+  String get video_discovery_sort_rating => 'Rating';
+  @override
+  String get video_discovery_sort_release => 'Release date';
+  @override
+  String get video_discovery_in_library => 'In library';
+  @override
+  String get video_discovery_play => 'Play';
+  @override
+  String get download_resources_tab => 'Resources';
+  @override
+  String get video_external_settings_section =>
+      'External resource and subtitle providers';
+  @override
+  String get video_torznab_settings_title => 'Torznab indexers';
+  @override
+  String get video_torznab_settings_hint =>
+      'Configure one or more Jackett, Prowlarr, or compatible Torznab endpoints. Secrets stay on this device.';
+  @override
+  String get video_torznab_add => 'Add indexer';
+  @override
+  String get video_torznab_name => 'Name';
+  @override
+  String get video_torznab_endpoint => 'Endpoint';
+  @override
+  String get video_torznab_endpoint_hint =>
+      'HTTPS is required except for loopback addresses.';
+  @override
+  String get video_torznab_api_key => 'API key';
+  @override
+  String get video_torznab_priority => 'Priority';
+  @override
+  String get video_torznab_categories => 'Categories';
+  @override
+  String get video_torznab_categories_hint =>
+      'Comma-separated numeric category IDs';
+  @override
+  String get video_external_enabled => 'Enabled';
+  @override
+  String get video_external_insecure_http => 'Allow insecure HTTP';
+  @override
+  String get video_external_insecure_http_hint =>
+      'Use only for a trusted local network endpoint.';
+  @override
+  String get video_external_endpoint_invalid =>
+      'Enter a valid endpoint without credentials, query parameters, or fragments.';
+  @override
+  String get video_opensubtitles_settings_title => 'OpenSubtitles';
+  @override
+  String get video_opensubtitles_settings_hint =>
+      'API credentials and preferred subtitle languages stay on this device.';
+  @override
+  String get video_opensubtitles_user_agent => 'User-Agent';
+  @override
+  String get video_opensubtitles_languages => 'Preferred languages';
+  @override
+  String get video_opensubtitles_languages_hint =>
+      'Comma-separated language codes, for example zh-CN,en,ja';
+  @override
+  String get video_download_path_mappings_title => 'qBittorrent path mappings';
+  @override
+  String get video_download_path_mappings_hint =>
+      'Map each qBittorrent remote root to a locally accessible folder.';
+  @override
+  String get video_download_path_mapping_add => 'Add path mapping';
+  @override
+  String get video_download_backend_profile_id => 'Backend profile ID';
+  @override
+  String get video_download_remote_root => 'Remote root';
+  @override
+  String get video_download_local_root => 'Local root';
+  @override
+  String get video_download_target_source_title =>
+      'Default managed video source';
+  @override
+  String get video_download_target_source_hint =>
+      'New downloads are organized into this local video source.';
+  @override
+  String get video_download_target_source_none => 'Choose a local video source';
+  @override
+  String get video_external_remove => 'Remove';
+  @override
+  String get video_external_username_optional => 'Username (optional)';
+  @override
+  String get video_external_password_optional => 'Password (optional)';
+  @override
+  String get video_external_api_key => 'API key';
+  @override
+  String get video_external_save_error =>
+      'The configuration could not be saved. Check the highlighted fields.';
+  @override
+  String get video_external_categories_invalid =>
+      'Categories must be comma-separated numeric IDs.';
+  @override
+  String get video_download_path_mapping_invalid =>
+      'Enter a profile ID, remote root, and absolute local root.';
+  @override
+  String get video_opensubtitles_endpoint => 'API endpoint';
+  @override
+  String get video_download_target_source_empty =>
+      'No locally accessible video source is available. Add one on the Sources tab first.';
 }
 
 // Path: <root>
@@ -27887,8 +28365,6 @@ class _StringsFr extends _StringsEn {
       'Download backend is not configured yet.';
   @override
   String get download_clear_finished => 'Clear finished';
-  @override
-  String get download_discover_tab => 'Discover';
   @override
   String get download_network_proxy_auto => 'Auto';
   @override
@@ -33757,6 +34233,142 @@ class _StringsFr extends _StringsEn {
   @override
   String video_home_remaining_minutes({required Object minutes}) =>
       '${minutes} min remaining';
+  @override
+  String get video_discovery_tab => 'Discover';
+  @override
+  String get video_discovery_search_hint => 'Search movies, series, anime';
+  @override
+  String get video_discovery_hot => 'Popular now';
+  @override
+  String get video_discovery_seasonal_anime => 'Seasonal anime';
+  @override
+  String get video_discovery_all_works => 'All titles';
+  @override
+  String get video_discovery_search_results => 'Search results';
+  @override
+  String get video_discovery_provider_warning =>
+      'Some providers are unavailable. Showing available results.';
+  @override
+  String get video_discovery_load_failed => 'Could not load discovery results.';
+  @override
+  String get video_discovery_empty => 'No matching titles.';
+  @override
+  String get video_discovery_resource_search => 'Search resources';
+  @override
+  String get video_discovery_subtitle_search => 'Search subtitles';
+  @override
+  String get video_discovery_subscribe => 'Subscribe';
+  @override
+  String get video_discovery_subscription_manage => 'Manage subscription';
+  @override
+  String get video_discovery_pipeline_idle =>
+      'Not downloaded → Download → Organize → Subtitles → Scrape → Library';
+  @override
+  String get video_discovery_details_load_failed =>
+      'Could not load title details.';
+  @override
+  String get video_discovery_sort_popularity => 'Popularity';
+  @override
+  String get video_discovery_sort_rating => 'Rating';
+  @override
+  String get video_discovery_sort_release => 'Release date';
+  @override
+  String get video_discovery_in_library => 'In library';
+  @override
+  String get video_discovery_play => 'Play';
+  @override
+  String get download_resources_tab => 'Resources';
+  @override
+  String get video_external_settings_section =>
+      'External resource and subtitle providers';
+  @override
+  String get video_torznab_settings_title => 'Torznab indexers';
+  @override
+  String get video_torznab_settings_hint =>
+      'Configure one or more Jackett, Prowlarr, or compatible Torznab endpoints. Secrets stay on this device.';
+  @override
+  String get video_torznab_add => 'Add indexer';
+  @override
+  String get video_torznab_name => 'Name';
+  @override
+  String get video_torznab_endpoint => 'Endpoint';
+  @override
+  String get video_torznab_endpoint_hint =>
+      'HTTPS is required except for loopback addresses.';
+  @override
+  String get video_torznab_api_key => 'API key';
+  @override
+  String get video_torznab_priority => 'Priority';
+  @override
+  String get video_torznab_categories => 'Categories';
+  @override
+  String get video_torznab_categories_hint =>
+      'Comma-separated numeric category IDs';
+  @override
+  String get video_external_enabled => 'Enabled';
+  @override
+  String get video_external_insecure_http => 'Allow insecure HTTP';
+  @override
+  String get video_external_insecure_http_hint =>
+      'Use only for a trusted local network endpoint.';
+  @override
+  String get video_external_endpoint_invalid =>
+      'Enter a valid endpoint without credentials, query parameters, or fragments.';
+  @override
+  String get video_opensubtitles_settings_title => 'OpenSubtitles';
+  @override
+  String get video_opensubtitles_settings_hint =>
+      'API credentials and preferred subtitle languages stay on this device.';
+  @override
+  String get video_opensubtitles_user_agent => 'User-Agent';
+  @override
+  String get video_opensubtitles_languages => 'Preferred languages';
+  @override
+  String get video_opensubtitles_languages_hint =>
+      'Comma-separated language codes, for example zh-CN,en,ja';
+  @override
+  String get video_download_path_mappings_title => 'qBittorrent path mappings';
+  @override
+  String get video_download_path_mappings_hint =>
+      'Map each qBittorrent remote root to a locally accessible folder.';
+  @override
+  String get video_download_path_mapping_add => 'Add path mapping';
+  @override
+  String get video_download_backend_profile_id => 'Backend profile ID';
+  @override
+  String get video_download_remote_root => 'Remote root';
+  @override
+  String get video_download_local_root => 'Local root';
+  @override
+  String get video_download_target_source_title =>
+      'Default managed video source';
+  @override
+  String get video_download_target_source_hint =>
+      'New downloads are organized into this local video source.';
+  @override
+  String get video_download_target_source_none => 'Choose a local video source';
+  @override
+  String get video_external_remove => 'Remove';
+  @override
+  String get video_external_username_optional => 'Username (optional)';
+  @override
+  String get video_external_password_optional => 'Password (optional)';
+  @override
+  String get video_external_api_key => 'API key';
+  @override
+  String get video_external_save_error =>
+      'The configuration could not be saved. Check the highlighted fields.';
+  @override
+  String get video_external_categories_invalid =>
+      'Categories must be comma-separated numeric IDs.';
+  @override
+  String get video_download_path_mapping_invalid =>
+      'Enter a profile ID, remote root, and absolute local root.';
+  @override
+  String get video_opensubtitles_endpoint => 'API endpoint';
+  @override
+  String get video_download_target_source_empty =>
+      'No locally accessible video source is available. Add one on the Sources tab first.';
 }
 
 // Path: <root>
@@ -35260,8 +35872,6 @@ class _StringsId extends _StringsEn {
       'Download backend is not configured yet.';
   @override
   String get download_clear_finished => 'Clear finished';
-  @override
-  String get download_discover_tab => 'Discover';
   @override
   String get download_network_proxy_auto => 'Auto';
   @override
@@ -41088,6 +41698,142 @@ class _StringsId extends _StringsEn {
   @override
   String video_home_remaining_minutes({required Object minutes}) =>
       '${minutes} min remaining';
+  @override
+  String get video_discovery_tab => 'Discover';
+  @override
+  String get video_discovery_search_hint => 'Search movies, series, anime';
+  @override
+  String get video_discovery_hot => 'Popular now';
+  @override
+  String get video_discovery_seasonal_anime => 'Seasonal anime';
+  @override
+  String get video_discovery_all_works => 'All titles';
+  @override
+  String get video_discovery_search_results => 'Search results';
+  @override
+  String get video_discovery_provider_warning =>
+      'Some providers are unavailable. Showing available results.';
+  @override
+  String get video_discovery_load_failed => 'Could not load discovery results.';
+  @override
+  String get video_discovery_empty => 'No matching titles.';
+  @override
+  String get video_discovery_resource_search => 'Search resources';
+  @override
+  String get video_discovery_subtitle_search => 'Search subtitles';
+  @override
+  String get video_discovery_subscribe => 'Subscribe';
+  @override
+  String get video_discovery_subscription_manage => 'Manage subscription';
+  @override
+  String get video_discovery_pipeline_idle =>
+      'Not downloaded → Download → Organize → Subtitles → Scrape → Library';
+  @override
+  String get video_discovery_details_load_failed =>
+      'Could not load title details.';
+  @override
+  String get video_discovery_sort_popularity => 'Popularity';
+  @override
+  String get video_discovery_sort_rating => 'Rating';
+  @override
+  String get video_discovery_sort_release => 'Release date';
+  @override
+  String get video_discovery_in_library => 'In library';
+  @override
+  String get video_discovery_play => 'Play';
+  @override
+  String get download_resources_tab => 'Resources';
+  @override
+  String get video_external_settings_section =>
+      'External resource and subtitle providers';
+  @override
+  String get video_torznab_settings_title => 'Torznab indexers';
+  @override
+  String get video_torznab_settings_hint =>
+      'Configure one or more Jackett, Prowlarr, or compatible Torznab endpoints. Secrets stay on this device.';
+  @override
+  String get video_torznab_add => 'Add indexer';
+  @override
+  String get video_torznab_name => 'Name';
+  @override
+  String get video_torznab_endpoint => 'Endpoint';
+  @override
+  String get video_torznab_endpoint_hint =>
+      'HTTPS is required except for loopback addresses.';
+  @override
+  String get video_torznab_api_key => 'API key';
+  @override
+  String get video_torznab_priority => 'Priority';
+  @override
+  String get video_torznab_categories => 'Categories';
+  @override
+  String get video_torznab_categories_hint =>
+      'Comma-separated numeric category IDs';
+  @override
+  String get video_external_enabled => 'Enabled';
+  @override
+  String get video_external_insecure_http => 'Allow insecure HTTP';
+  @override
+  String get video_external_insecure_http_hint =>
+      'Use only for a trusted local network endpoint.';
+  @override
+  String get video_external_endpoint_invalid =>
+      'Enter a valid endpoint without credentials, query parameters, or fragments.';
+  @override
+  String get video_opensubtitles_settings_title => 'OpenSubtitles';
+  @override
+  String get video_opensubtitles_settings_hint =>
+      'API credentials and preferred subtitle languages stay on this device.';
+  @override
+  String get video_opensubtitles_user_agent => 'User-Agent';
+  @override
+  String get video_opensubtitles_languages => 'Preferred languages';
+  @override
+  String get video_opensubtitles_languages_hint =>
+      'Comma-separated language codes, for example zh-CN,en,ja';
+  @override
+  String get video_download_path_mappings_title => 'qBittorrent path mappings';
+  @override
+  String get video_download_path_mappings_hint =>
+      'Map each qBittorrent remote root to a locally accessible folder.';
+  @override
+  String get video_download_path_mapping_add => 'Add path mapping';
+  @override
+  String get video_download_backend_profile_id => 'Backend profile ID';
+  @override
+  String get video_download_remote_root => 'Remote root';
+  @override
+  String get video_download_local_root => 'Local root';
+  @override
+  String get video_download_target_source_title =>
+      'Default managed video source';
+  @override
+  String get video_download_target_source_hint =>
+      'New downloads are organized into this local video source.';
+  @override
+  String get video_download_target_source_none => 'Choose a local video source';
+  @override
+  String get video_external_remove => 'Remove';
+  @override
+  String get video_external_username_optional => 'Username (optional)';
+  @override
+  String get video_external_password_optional => 'Password (optional)';
+  @override
+  String get video_external_api_key => 'API key';
+  @override
+  String get video_external_save_error =>
+      'The configuration could not be saved. Check the highlighted fields.';
+  @override
+  String get video_external_categories_invalid =>
+      'Categories must be comma-separated numeric IDs.';
+  @override
+  String get video_download_path_mapping_invalid =>
+      'Enter a profile ID, remote root, and absolute local root.';
+  @override
+  String get video_opensubtitles_endpoint => 'API endpoint';
+  @override
+  String get video_download_target_source_empty =>
+      'No locally accessible video source is available. Add one on the Sources tab first.';
 }
 
 // Path: <root>
@@ -42605,8 +43351,6 @@ class _StringsIt extends _StringsEn {
       'Download backend is not configured yet.';
   @override
   String get download_clear_finished => 'Clear finished';
-  @override
-  String get download_discover_tab => 'Discover';
   @override
   String get download_network_proxy_auto => 'Auto';
   @override
@@ -48465,6 +49209,142 @@ class _StringsIt extends _StringsEn {
   @override
   String video_home_remaining_minutes({required Object minutes}) =>
       '${minutes} min remaining';
+  @override
+  String get video_discovery_tab => 'Discover';
+  @override
+  String get video_discovery_search_hint => 'Search movies, series, anime';
+  @override
+  String get video_discovery_hot => 'Popular now';
+  @override
+  String get video_discovery_seasonal_anime => 'Seasonal anime';
+  @override
+  String get video_discovery_all_works => 'All titles';
+  @override
+  String get video_discovery_search_results => 'Search results';
+  @override
+  String get video_discovery_provider_warning =>
+      'Some providers are unavailable. Showing available results.';
+  @override
+  String get video_discovery_load_failed => 'Could not load discovery results.';
+  @override
+  String get video_discovery_empty => 'No matching titles.';
+  @override
+  String get video_discovery_resource_search => 'Search resources';
+  @override
+  String get video_discovery_subtitle_search => 'Search subtitles';
+  @override
+  String get video_discovery_subscribe => 'Subscribe';
+  @override
+  String get video_discovery_subscription_manage => 'Manage subscription';
+  @override
+  String get video_discovery_pipeline_idle =>
+      'Not downloaded → Download → Organize → Subtitles → Scrape → Library';
+  @override
+  String get video_discovery_details_load_failed =>
+      'Could not load title details.';
+  @override
+  String get video_discovery_sort_popularity => 'Popularity';
+  @override
+  String get video_discovery_sort_rating => 'Rating';
+  @override
+  String get video_discovery_sort_release => 'Release date';
+  @override
+  String get video_discovery_in_library => 'In library';
+  @override
+  String get video_discovery_play => 'Play';
+  @override
+  String get download_resources_tab => 'Resources';
+  @override
+  String get video_external_settings_section =>
+      'External resource and subtitle providers';
+  @override
+  String get video_torznab_settings_title => 'Torznab indexers';
+  @override
+  String get video_torznab_settings_hint =>
+      'Configure one or more Jackett, Prowlarr, or compatible Torznab endpoints. Secrets stay on this device.';
+  @override
+  String get video_torznab_add => 'Add indexer';
+  @override
+  String get video_torznab_name => 'Name';
+  @override
+  String get video_torznab_endpoint => 'Endpoint';
+  @override
+  String get video_torznab_endpoint_hint =>
+      'HTTPS is required except for loopback addresses.';
+  @override
+  String get video_torznab_api_key => 'API key';
+  @override
+  String get video_torznab_priority => 'Priority';
+  @override
+  String get video_torznab_categories => 'Categories';
+  @override
+  String get video_torznab_categories_hint =>
+      'Comma-separated numeric category IDs';
+  @override
+  String get video_external_enabled => 'Enabled';
+  @override
+  String get video_external_insecure_http => 'Allow insecure HTTP';
+  @override
+  String get video_external_insecure_http_hint =>
+      'Use only for a trusted local network endpoint.';
+  @override
+  String get video_external_endpoint_invalid =>
+      'Enter a valid endpoint without credentials, query parameters, or fragments.';
+  @override
+  String get video_opensubtitles_settings_title => 'OpenSubtitles';
+  @override
+  String get video_opensubtitles_settings_hint =>
+      'API credentials and preferred subtitle languages stay on this device.';
+  @override
+  String get video_opensubtitles_user_agent => 'User-Agent';
+  @override
+  String get video_opensubtitles_languages => 'Preferred languages';
+  @override
+  String get video_opensubtitles_languages_hint =>
+      'Comma-separated language codes, for example zh-CN,en,ja';
+  @override
+  String get video_download_path_mappings_title => 'qBittorrent path mappings';
+  @override
+  String get video_download_path_mappings_hint =>
+      'Map each qBittorrent remote root to a locally accessible folder.';
+  @override
+  String get video_download_path_mapping_add => 'Add path mapping';
+  @override
+  String get video_download_backend_profile_id => 'Backend profile ID';
+  @override
+  String get video_download_remote_root => 'Remote root';
+  @override
+  String get video_download_local_root => 'Local root';
+  @override
+  String get video_download_target_source_title =>
+      'Default managed video source';
+  @override
+  String get video_download_target_source_hint =>
+      'New downloads are organized into this local video source.';
+  @override
+  String get video_download_target_source_none => 'Choose a local video source';
+  @override
+  String get video_external_remove => 'Remove';
+  @override
+  String get video_external_username_optional => 'Username (optional)';
+  @override
+  String get video_external_password_optional => 'Password (optional)';
+  @override
+  String get video_external_api_key => 'API key';
+  @override
+  String get video_external_save_error =>
+      'The configuration could not be saved. Check the highlighted fields.';
+  @override
+  String get video_external_categories_invalid =>
+      'Categories must be comma-separated numeric IDs.';
+  @override
+  String get video_download_path_mapping_invalid =>
+      'Enter a profile ID, remote root, and absolute local root.';
+  @override
+  String get video_opensubtitles_endpoint => 'API endpoint';
+  @override
+  String get video_download_target_source_empty =>
+      'No locally accessible video source is available. Add one on the Sources tab first.';
 }
 
 // Path: <root>
@@ -49946,8 +50826,6 @@ class _StringsJa extends _StringsEn {
       'Download backend is not configured yet.';
   @override
   String get download_clear_finished => 'Clear finished';
-  @override
-  String get download_discover_tab => 'Discover';
   @override
   String get download_network_proxy_auto => 'Auto';
   @override
@@ -55659,6 +56537,142 @@ class _StringsJa extends _StringsEn {
   @override
   String video_home_remaining_minutes({required Object minutes}) =>
       '${minutes} min remaining';
+  @override
+  String get video_discovery_tab => 'Discover';
+  @override
+  String get video_discovery_search_hint => 'Search movies, series, anime';
+  @override
+  String get video_discovery_hot => 'Popular now';
+  @override
+  String get video_discovery_seasonal_anime => 'Seasonal anime';
+  @override
+  String get video_discovery_all_works => 'All titles';
+  @override
+  String get video_discovery_search_results => 'Search results';
+  @override
+  String get video_discovery_provider_warning =>
+      'Some providers are unavailable. Showing available results.';
+  @override
+  String get video_discovery_load_failed => 'Could not load discovery results.';
+  @override
+  String get video_discovery_empty => 'No matching titles.';
+  @override
+  String get video_discovery_resource_search => 'Search resources';
+  @override
+  String get video_discovery_subtitle_search => 'Search subtitles';
+  @override
+  String get video_discovery_subscribe => 'Subscribe';
+  @override
+  String get video_discovery_subscription_manage => 'Manage subscription';
+  @override
+  String get video_discovery_pipeline_idle =>
+      'Not downloaded → Download → Organize → Subtitles → Scrape → Library';
+  @override
+  String get video_discovery_details_load_failed =>
+      'Could not load title details.';
+  @override
+  String get video_discovery_sort_popularity => 'Popularity';
+  @override
+  String get video_discovery_sort_rating => 'Rating';
+  @override
+  String get video_discovery_sort_release => 'Release date';
+  @override
+  String get video_discovery_in_library => 'In library';
+  @override
+  String get video_discovery_play => 'Play';
+  @override
+  String get download_resources_tab => 'Resources';
+  @override
+  String get video_external_settings_section =>
+      'External resource and subtitle providers';
+  @override
+  String get video_torznab_settings_title => 'Torznab indexers';
+  @override
+  String get video_torznab_settings_hint =>
+      'Configure one or more Jackett, Prowlarr, or compatible Torznab endpoints. Secrets stay on this device.';
+  @override
+  String get video_torznab_add => 'Add indexer';
+  @override
+  String get video_torznab_name => 'Name';
+  @override
+  String get video_torznab_endpoint => 'Endpoint';
+  @override
+  String get video_torznab_endpoint_hint =>
+      'HTTPS is required except for loopback addresses.';
+  @override
+  String get video_torznab_api_key => 'API key';
+  @override
+  String get video_torznab_priority => 'Priority';
+  @override
+  String get video_torznab_categories => 'Categories';
+  @override
+  String get video_torznab_categories_hint =>
+      'Comma-separated numeric category IDs';
+  @override
+  String get video_external_enabled => 'Enabled';
+  @override
+  String get video_external_insecure_http => 'Allow insecure HTTP';
+  @override
+  String get video_external_insecure_http_hint =>
+      'Use only for a trusted local network endpoint.';
+  @override
+  String get video_external_endpoint_invalid =>
+      'Enter a valid endpoint without credentials, query parameters, or fragments.';
+  @override
+  String get video_opensubtitles_settings_title => 'OpenSubtitles';
+  @override
+  String get video_opensubtitles_settings_hint =>
+      'API credentials and preferred subtitle languages stay on this device.';
+  @override
+  String get video_opensubtitles_user_agent => 'User-Agent';
+  @override
+  String get video_opensubtitles_languages => 'Preferred languages';
+  @override
+  String get video_opensubtitles_languages_hint =>
+      'Comma-separated language codes, for example zh-CN,en,ja';
+  @override
+  String get video_download_path_mappings_title => 'qBittorrent path mappings';
+  @override
+  String get video_download_path_mappings_hint =>
+      'Map each qBittorrent remote root to a locally accessible folder.';
+  @override
+  String get video_download_path_mapping_add => 'Add path mapping';
+  @override
+  String get video_download_backend_profile_id => 'Backend profile ID';
+  @override
+  String get video_download_remote_root => 'Remote root';
+  @override
+  String get video_download_local_root => 'Local root';
+  @override
+  String get video_download_target_source_title =>
+      'Default managed video source';
+  @override
+  String get video_download_target_source_hint =>
+      'New downloads are organized into this local video source.';
+  @override
+  String get video_download_target_source_none => 'Choose a local video source';
+  @override
+  String get video_external_remove => 'Remove';
+  @override
+  String get video_external_username_optional => 'Username (optional)';
+  @override
+  String get video_external_password_optional => 'Password (optional)';
+  @override
+  String get video_external_api_key => 'API key';
+  @override
+  String get video_external_save_error =>
+      'The configuration could not be saved. Check the highlighted fields.';
+  @override
+  String get video_external_categories_invalid =>
+      'Categories must be comma-separated numeric IDs.';
+  @override
+  String get video_download_path_mapping_invalid =>
+      'Enter a profile ID, remote root, and absolute local root.';
+  @override
+  String get video_opensubtitles_endpoint => 'API endpoint';
+  @override
+  String get video_download_target_source_empty =>
+      'No locally accessible video source is available. Add one on the Sources tab first.';
 }
 
 // Path: <root>
@@ -57139,8 +58153,6 @@ class _StringsKo extends _StringsEn {
       'Download backend is not configured yet.';
   @override
   String get download_clear_finished => 'Clear finished';
-  @override
-  String get download_discover_tab => 'Discover';
   @override
   String get download_network_proxy_auto => 'Auto';
   @override
@@ -62855,6 +63867,142 @@ class _StringsKo extends _StringsEn {
   @override
   String video_home_remaining_minutes({required Object minutes}) =>
       '${minutes} min remaining';
+  @override
+  String get video_discovery_tab => 'Discover';
+  @override
+  String get video_discovery_search_hint => 'Search movies, series, anime';
+  @override
+  String get video_discovery_hot => 'Popular now';
+  @override
+  String get video_discovery_seasonal_anime => 'Seasonal anime';
+  @override
+  String get video_discovery_all_works => 'All titles';
+  @override
+  String get video_discovery_search_results => 'Search results';
+  @override
+  String get video_discovery_provider_warning =>
+      'Some providers are unavailable. Showing available results.';
+  @override
+  String get video_discovery_load_failed => 'Could not load discovery results.';
+  @override
+  String get video_discovery_empty => 'No matching titles.';
+  @override
+  String get video_discovery_resource_search => 'Search resources';
+  @override
+  String get video_discovery_subtitle_search => 'Search subtitles';
+  @override
+  String get video_discovery_subscribe => 'Subscribe';
+  @override
+  String get video_discovery_subscription_manage => 'Manage subscription';
+  @override
+  String get video_discovery_pipeline_idle =>
+      'Not downloaded → Download → Organize → Subtitles → Scrape → Library';
+  @override
+  String get video_discovery_details_load_failed =>
+      'Could not load title details.';
+  @override
+  String get video_discovery_sort_popularity => 'Popularity';
+  @override
+  String get video_discovery_sort_rating => 'Rating';
+  @override
+  String get video_discovery_sort_release => 'Release date';
+  @override
+  String get video_discovery_in_library => 'In library';
+  @override
+  String get video_discovery_play => 'Play';
+  @override
+  String get download_resources_tab => 'Resources';
+  @override
+  String get video_external_settings_section =>
+      'External resource and subtitle providers';
+  @override
+  String get video_torznab_settings_title => 'Torznab indexers';
+  @override
+  String get video_torznab_settings_hint =>
+      'Configure one or more Jackett, Prowlarr, or compatible Torznab endpoints. Secrets stay on this device.';
+  @override
+  String get video_torznab_add => 'Add indexer';
+  @override
+  String get video_torznab_name => 'Name';
+  @override
+  String get video_torznab_endpoint => 'Endpoint';
+  @override
+  String get video_torznab_endpoint_hint =>
+      'HTTPS is required except for loopback addresses.';
+  @override
+  String get video_torznab_api_key => 'API key';
+  @override
+  String get video_torznab_priority => 'Priority';
+  @override
+  String get video_torznab_categories => 'Categories';
+  @override
+  String get video_torznab_categories_hint =>
+      'Comma-separated numeric category IDs';
+  @override
+  String get video_external_enabled => 'Enabled';
+  @override
+  String get video_external_insecure_http => 'Allow insecure HTTP';
+  @override
+  String get video_external_insecure_http_hint =>
+      'Use only for a trusted local network endpoint.';
+  @override
+  String get video_external_endpoint_invalid =>
+      'Enter a valid endpoint without credentials, query parameters, or fragments.';
+  @override
+  String get video_opensubtitles_settings_title => 'OpenSubtitles';
+  @override
+  String get video_opensubtitles_settings_hint =>
+      'API credentials and preferred subtitle languages stay on this device.';
+  @override
+  String get video_opensubtitles_user_agent => 'User-Agent';
+  @override
+  String get video_opensubtitles_languages => 'Preferred languages';
+  @override
+  String get video_opensubtitles_languages_hint =>
+      'Comma-separated language codes, for example zh-CN,en,ja';
+  @override
+  String get video_download_path_mappings_title => 'qBittorrent path mappings';
+  @override
+  String get video_download_path_mappings_hint =>
+      'Map each qBittorrent remote root to a locally accessible folder.';
+  @override
+  String get video_download_path_mapping_add => 'Add path mapping';
+  @override
+  String get video_download_backend_profile_id => 'Backend profile ID';
+  @override
+  String get video_download_remote_root => 'Remote root';
+  @override
+  String get video_download_local_root => 'Local root';
+  @override
+  String get video_download_target_source_title =>
+      'Default managed video source';
+  @override
+  String get video_download_target_source_hint =>
+      'New downloads are organized into this local video source.';
+  @override
+  String get video_download_target_source_none => 'Choose a local video source';
+  @override
+  String get video_external_remove => 'Remove';
+  @override
+  String get video_external_username_optional => 'Username (optional)';
+  @override
+  String get video_external_password_optional => 'Password (optional)';
+  @override
+  String get video_external_api_key => 'API key';
+  @override
+  String get video_external_save_error =>
+      'The configuration could not be saved. Check the highlighted fields.';
+  @override
+  String get video_external_categories_invalid =>
+      'Categories must be comma-separated numeric IDs.';
+  @override
+  String get video_download_path_mapping_invalid =>
+      'Enter a profile ID, remote root, and absolute local root.';
+  @override
+  String get video_opensubtitles_endpoint => 'API endpoint';
+  @override
+  String get video_download_target_source_empty =>
+      'No locally accessible video source is available. Add one on the Sources tab first.';
 }
 
 // Path: <root>
@@ -64370,8 +65518,6 @@ class _StringsNl extends _StringsEn {
       'Download backend is not configured yet.';
   @override
   String get download_clear_finished => 'Clear finished';
-  @override
-  String get download_discover_tab => 'Discover';
   @override
   String get download_network_proxy_auto => 'Auto';
   @override
@@ -70212,6 +71358,142 @@ class _StringsNl extends _StringsEn {
   @override
   String video_home_remaining_minutes({required Object minutes}) =>
       '${minutes} min remaining';
+  @override
+  String get video_discovery_tab => 'Discover';
+  @override
+  String get video_discovery_search_hint => 'Search movies, series, anime';
+  @override
+  String get video_discovery_hot => 'Popular now';
+  @override
+  String get video_discovery_seasonal_anime => 'Seasonal anime';
+  @override
+  String get video_discovery_all_works => 'All titles';
+  @override
+  String get video_discovery_search_results => 'Search results';
+  @override
+  String get video_discovery_provider_warning =>
+      'Some providers are unavailable. Showing available results.';
+  @override
+  String get video_discovery_load_failed => 'Could not load discovery results.';
+  @override
+  String get video_discovery_empty => 'No matching titles.';
+  @override
+  String get video_discovery_resource_search => 'Search resources';
+  @override
+  String get video_discovery_subtitle_search => 'Search subtitles';
+  @override
+  String get video_discovery_subscribe => 'Subscribe';
+  @override
+  String get video_discovery_subscription_manage => 'Manage subscription';
+  @override
+  String get video_discovery_pipeline_idle =>
+      'Not downloaded → Download → Organize → Subtitles → Scrape → Library';
+  @override
+  String get video_discovery_details_load_failed =>
+      'Could not load title details.';
+  @override
+  String get video_discovery_sort_popularity => 'Popularity';
+  @override
+  String get video_discovery_sort_rating => 'Rating';
+  @override
+  String get video_discovery_sort_release => 'Release date';
+  @override
+  String get video_discovery_in_library => 'In library';
+  @override
+  String get video_discovery_play => 'Play';
+  @override
+  String get download_resources_tab => 'Resources';
+  @override
+  String get video_external_settings_section =>
+      'External resource and subtitle providers';
+  @override
+  String get video_torznab_settings_title => 'Torznab indexers';
+  @override
+  String get video_torznab_settings_hint =>
+      'Configure one or more Jackett, Prowlarr, or compatible Torznab endpoints. Secrets stay on this device.';
+  @override
+  String get video_torznab_add => 'Add indexer';
+  @override
+  String get video_torznab_name => 'Name';
+  @override
+  String get video_torznab_endpoint => 'Endpoint';
+  @override
+  String get video_torznab_endpoint_hint =>
+      'HTTPS is required except for loopback addresses.';
+  @override
+  String get video_torznab_api_key => 'API key';
+  @override
+  String get video_torznab_priority => 'Priority';
+  @override
+  String get video_torznab_categories => 'Categories';
+  @override
+  String get video_torznab_categories_hint =>
+      'Comma-separated numeric category IDs';
+  @override
+  String get video_external_enabled => 'Enabled';
+  @override
+  String get video_external_insecure_http => 'Allow insecure HTTP';
+  @override
+  String get video_external_insecure_http_hint =>
+      'Use only for a trusted local network endpoint.';
+  @override
+  String get video_external_endpoint_invalid =>
+      'Enter a valid endpoint without credentials, query parameters, or fragments.';
+  @override
+  String get video_opensubtitles_settings_title => 'OpenSubtitles';
+  @override
+  String get video_opensubtitles_settings_hint =>
+      'API credentials and preferred subtitle languages stay on this device.';
+  @override
+  String get video_opensubtitles_user_agent => 'User-Agent';
+  @override
+  String get video_opensubtitles_languages => 'Preferred languages';
+  @override
+  String get video_opensubtitles_languages_hint =>
+      'Comma-separated language codes, for example zh-CN,en,ja';
+  @override
+  String get video_download_path_mappings_title => 'qBittorrent path mappings';
+  @override
+  String get video_download_path_mappings_hint =>
+      'Map each qBittorrent remote root to a locally accessible folder.';
+  @override
+  String get video_download_path_mapping_add => 'Add path mapping';
+  @override
+  String get video_download_backend_profile_id => 'Backend profile ID';
+  @override
+  String get video_download_remote_root => 'Remote root';
+  @override
+  String get video_download_local_root => 'Local root';
+  @override
+  String get video_download_target_source_title =>
+      'Default managed video source';
+  @override
+  String get video_download_target_source_hint =>
+      'New downloads are organized into this local video source.';
+  @override
+  String get video_download_target_source_none => 'Choose a local video source';
+  @override
+  String get video_external_remove => 'Remove';
+  @override
+  String get video_external_username_optional => 'Username (optional)';
+  @override
+  String get video_external_password_optional => 'Password (optional)';
+  @override
+  String get video_external_api_key => 'API key';
+  @override
+  String get video_external_save_error =>
+      'The configuration could not be saved. Check the highlighted fields.';
+  @override
+  String get video_external_categories_invalid =>
+      'Categories must be comma-separated numeric IDs.';
+  @override
+  String get video_download_path_mapping_invalid =>
+      'Enter a profile ID, remote root, and absolute local root.';
+  @override
+  String get video_opensubtitles_endpoint => 'API endpoint';
+  @override
+  String get video_download_target_source_empty =>
+      'No locally accessible video source is available. Add one on the Sources tab first.';
 }
 
 // Path: <root>
@@ -71732,8 +73014,6 @@ class _StringsPtBr extends _StringsEn {
       'Download backend is not configured yet.';
   @override
   String get download_clear_finished => 'Clear finished';
-  @override
-  String get download_discover_tab => 'Discover';
   @override
   String get download_network_proxy_auto => 'Auto';
   @override
@@ -77582,6 +78862,142 @@ class _StringsPtBr extends _StringsEn {
   @override
   String video_home_remaining_minutes({required Object minutes}) =>
       '${minutes} min remaining';
+  @override
+  String get video_discovery_tab => 'Discover';
+  @override
+  String get video_discovery_search_hint => 'Search movies, series, anime';
+  @override
+  String get video_discovery_hot => 'Popular now';
+  @override
+  String get video_discovery_seasonal_anime => 'Seasonal anime';
+  @override
+  String get video_discovery_all_works => 'All titles';
+  @override
+  String get video_discovery_search_results => 'Search results';
+  @override
+  String get video_discovery_provider_warning =>
+      'Some providers are unavailable. Showing available results.';
+  @override
+  String get video_discovery_load_failed => 'Could not load discovery results.';
+  @override
+  String get video_discovery_empty => 'No matching titles.';
+  @override
+  String get video_discovery_resource_search => 'Search resources';
+  @override
+  String get video_discovery_subtitle_search => 'Search subtitles';
+  @override
+  String get video_discovery_subscribe => 'Subscribe';
+  @override
+  String get video_discovery_subscription_manage => 'Manage subscription';
+  @override
+  String get video_discovery_pipeline_idle =>
+      'Not downloaded → Download → Organize → Subtitles → Scrape → Library';
+  @override
+  String get video_discovery_details_load_failed =>
+      'Could not load title details.';
+  @override
+  String get video_discovery_sort_popularity => 'Popularity';
+  @override
+  String get video_discovery_sort_rating => 'Rating';
+  @override
+  String get video_discovery_sort_release => 'Release date';
+  @override
+  String get video_discovery_in_library => 'In library';
+  @override
+  String get video_discovery_play => 'Play';
+  @override
+  String get download_resources_tab => 'Resources';
+  @override
+  String get video_external_settings_section =>
+      'External resource and subtitle providers';
+  @override
+  String get video_torznab_settings_title => 'Torznab indexers';
+  @override
+  String get video_torznab_settings_hint =>
+      'Configure one or more Jackett, Prowlarr, or compatible Torznab endpoints. Secrets stay on this device.';
+  @override
+  String get video_torznab_add => 'Add indexer';
+  @override
+  String get video_torznab_name => 'Name';
+  @override
+  String get video_torznab_endpoint => 'Endpoint';
+  @override
+  String get video_torznab_endpoint_hint =>
+      'HTTPS is required except for loopback addresses.';
+  @override
+  String get video_torznab_api_key => 'API key';
+  @override
+  String get video_torznab_priority => 'Priority';
+  @override
+  String get video_torznab_categories => 'Categories';
+  @override
+  String get video_torznab_categories_hint =>
+      'Comma-separated numeric category IDs';
+  @override
+  String get video_external_enabled => 'Enabled';
+  @override
+  String get video_external_insecure_http => 'Allow insecure HTTP';
+  @override
+  String get video_external_insecure_http_hint =>
+      'Use only for a trusted local network endpoint.';
+  @override
+  String get video_external_endpoint_invalid =>
+      'Enter a valid endpoint without credentials, query parameters, or fragments.';
+  @override
+  String get video_opensubtitles_settings_title => 'OpenSubtitles';
+  @override
+  String get video_opensubtitles_settings_hint =>
+      'API credentials and preferred subtitle languages stay on this device.';
+  @override
+  String get video_opensubtitles_user_agent => 'User-Agent';
+  @override
+  String get video_opensubtitles_languages => 'Preferred languages';
+  @override
+  String get video_opensubtitles_languages_hint =>
+      'Comma-separated language codes, for example zh-CN,en,ja';
+  @override
+  String get video_download_path_mappings_title => 'qBittorrent path mappings';
+  @override
+  String get video_download_path_mappings_hint =>
+      'Map each qBittorrent remote root to a locally accessible folder.';
+  @override
+  String get video_download_path_mapping_add => 'Add path mapping';
+  @override
+  String get video_download_backend_profile_id => 'Backend profile ID';
+  @override
+  String get video_download_remote_root => 'Remote root';
+  @override
+  String get video_download_local_root => 'Local root';
+  @override
+  String get video_download_target_source_title =>
+      'Default managed video source';
+  @override
+  String get video_download_target_source_hint =>
+      'New downloads are organized into this local video source.';
+  @override
+  String get video_download_target_source_none => 'Choose a local video source';
+  @override
+  String get video_external_remove => 'Remove';
+  @override
+  String get video_external_username_optional => 'Username (optional)';
+  @override
+  String get video_external_password_optional => 'Password (optional)';
+  @override
+  String get video_external_api_key => 'API key';
+  @override
+  String get video_external_save_error =>
+      'The configuration could not be saved. Check the highlighted fields.';
+  @override
+  String get video_external_categories_invalid =>
+      'Categories must be comma-separated numeric IDs.';
+  @override
+  String get video_download_path_mapping_invalid =>
+      'Enter a profile ID, remote root, and absolute local root.';
+  @override
+  String get video_opensubtitles_endpoint => 'API endpoint';
+  @override
+  String get video_download_target_source_empty =>
+      'No locally accessible video source is available. Add one on the Sources tab first.';
 }
 
 // Path: <root>
@@ -79094,8 +80510,6 @@ class _StringsRu extends _StringsEn {
       'Download backend is not configured yet.';
   @override
   String get download_clear_finished => 'Clear finished';
-  @override
-  String get download_discover_tab => 'Discover';
   @override
   String get download_network_proxy_auto => 'Auto';
   @override
@@ -84936,6 +86350,142 @@ class _StringsRu extends _StringsEn {
   @override
   String video_home_remaining_minutes({required Object minutes}) =>
       '${minutes} min remaining';
+  @override
+  String get video_discovery_tab => 'Discover';
+  @override
+  String get video_discovery_search_hint => 'Search movies, series, anime';
+  @override
+  String get video_discovery_hot => 'Popular now';
+  @override
+  String get video_discovery_seasonal_anime => 'Seasonal anime';
+  @override
+  String get video_discovery_all_works => 'All titles';
+  @override
+  String get video_discovery_search_results => 'Search results';
+  @override
+  String get video_discovery_provider_warning =>
+      'Some providers are unavailable. Showing available results.';
+  @override
+  String get video_discovery_load_failed => 'Could not load discovery results.';
+  @override
+  String get video_discovery_empty => 'No matching titles.';
+  @override
+  String get video_discovery_resource_search => 'Search resources';
+  @override
+  String get video_discovery_subtitle_search => 'Search subtitles';
+  @override
+  String get video_discovery_subscribe => 'Subscribe';
+  @override
+  String get video_discovery_subscription_manage => 'Manage subscription';
+  @override
+  String get video_discovery_pipeline_idle =>
+      'Not downloaded → Download → Organize → Subtitles → Scrape → Library';
+  @override
+  String get video_discovery_details_load_failed =>
+      'Could not load title details.';
+  @override
+  String get video_discovery_sort_popularity => 'Popularity';
+  @override
+  String get video_discovery_sort_rating => 'Rating';
+  @override
+  String get video_discovery_sort_release => 'Release date';
+  @override
+  String get video_discovery_in_library => 'In library';
+  @override
+  String get video_discovery_play => 'Play';
+  @override
+  String get download_resources_tab => 'Resources';
+  @override
+  String get video_external_settings_section =>
+      'External resource and subtitle providers';
+  @override
+  String get video_torznab_settings_title => 'Torznab indexers';
+  @override
+  String get video_torznab_settings_hint =>
+      'Configure one or more Jackett, Prowlarr, or compatible Torznab endpoints. Secrets stay on this device.';
+  @override
+  String get video_torznab_add => 'Add indexer';
+  @override
+  String get video_torznab_name => 'Name';
+  @override
+  String get video_torznab_endpoint => 'Endpoint';
+  @override
+  String get video_torznab_endpoint_hint =>
+      'HTTPS is required except for loopback addresses.';
+  @override
+  String get video_torznab_api_key => 'API key';
+  @override
+  String get video_torznab_priority => 'Priority';
+  @override
+  String get video_torznab_categories => 'Categories';
+  @override
+  String get video_torznab_categories_hint =>
+      'Comma-separated numeric category IDs';
+  @override
+  String get video_external_enabled => 'Enabled';
+  @override
+  String get video_external_insecure_http => 'Allow insecure HTTP';
+  @override
+  String get video_external_insecure_http_hint =>
+      'Use only for a trusted local network endpoint.';
+  @override
+  String get video_external_endpoint_invalid =>
+      'Enter a valid endpoint without credentials, query parameters, or fragments.';
+  @override
+  String get video_opensubtitles_settings_title => 'OpenSubtitles';
+  @override
+  String get video_opensubtitles_settings_hint =>
+      'API credentials and preferred subtitle languages stay on this device.';
+  @override
+  String get video_opensubtitles_user_agent => 'User-Agent';
+  @override
+  String get video_opensubtitles_languages => 'Preferred languages';
+  @override
+  String get video_opensubtitles_languages_hint =>
+      'Comma-separated language codes, for example zh-CN,en,ja';
+  @override
+  String get video_download_path_mappings_title => 'qBittorrent path mappings';
+  @override
+  String get video_download_path_mappings_hint =>
+      'Map each qBittorrent remote root to a locally accessible folder.';
+  @override
+  String get video_download_path_mapping_add => 'Add path mapping';
+  @override
+  String get video_download_backend_profile_id => 'Backend profile ID';
+  @override
+  String get video_download_remote_root => 'Remote root';
+  @override
+  String get video_download_local_root => 'Local root';
+  @override
+  String get video_download_target_source_title =>
+      'Default managed video source';
+  @override
+  String get video_download_target_source_hint =>
+      'New downloads are organized into this local video source.';
+  @override
+  String get video_download_target_source_none => 'Choose a local video source';
+  @override
+  String get video_external_remove => 'Remove';
+  @override
+  String get video_external_username_optional => 'Username (optional)';
+  @override
+  String get video_external_password_optional => 'Password (optional)';
+  @override
+  String get video_external_api_key => 'API key';
+  @override
+  String get video_external_save_error =>
+      'The configuration could not be saved. Check the highlighted fields.';
+  @override
+  String get video_external_categories_invalid =>
+      'Categories must be comma-separated numeric IDs.';
+  @override
+  String get video_download_path_mapping_invalid =>
+      'Enter a profile ID, remote root, and absolute local root.';
+  @override
+  String get video_opensubtitles_endpoint => 'API endpoint';
+  @override
+  String get video_download_target_source_empty =>
+      'No locally accessible video source is available. Add one on the Sources tab first.';
 }
 
 // Path: <root>
@@ -86434,8 +87984,6 @@ class _StringsTh extends _StringsEn {
       'Download backend is not configured yet.';
   @override
   String get download_clear_finished => 'Clear finished';
-  @override
-  String get download_discover_tab => 'Discover';
   @override
   String get download_network_proxy_auto => 'Auto';
   @override
@@ -92238,6 +93786,142 @@ class _StringsTh extends _StringsEn {
   @override
   String video_home_remaining_minutes({required Object minutes}) =>
       '${minutes} min remaining';
+  @override
+  String get video_discovery_tab => 'Discover';
+  @override
+  String get video_discovery_search_hint => 'Search movies, series, anime';
+  @override
+  String get video_discovery_hot => 'Popular now';
+  @override
+  String get video_discovery_seasonal_anime => 'Seasonal anime';
+  @override
+  String get video_discovery_all_works => 'All titles';
+  @override
+  String get video_discovery_search_results => 'Search results';
+  @override
+  String get video_discovery_provider_warning =>
+      'Some providers are unavailable. Showing available results.';
+  @override
+  String get video_discovery_load_failed => 'Could not load discovery results.';
+  @override
+  String get video_discovery_empty => 'No matching titles.';
+  @override
+  String get video_discovery_resource_search => 'Search resources';
+  @override
+  String get video_discovery_subtitle_search => 'Search subtitles';
+  @override
+  String get video_discovery_subscribe => 'Subscribe';
+  @override
+  String get video_discovery_subscription_manage => 'Manage subscription';
+  @override
+  String get video_discovery_pipeline_idle =>
+      'Not downloaded → Download → Organize → Subtitles → Scrape → Library';
+  @override
+  String get video_discovery_details_load_failed =>
+      'Could not load title details.';
+  @override
+  String get video_discovery_sort_popularity => 'Popularity';
+  @override
+  String get video_discovery_sort_rating => 'Rating';
+  @override
+  String get video_discovery_sort_release => 'Release date';
+  @override
+  String get video_discovery_in_library => 'In library';
+  @override
+  String get video_discovery_play => 'Play';
+  @override
+  String get download_resources_tab => 'Resources';
+  @override
+  String get video_external_settings_section =>
+      'External resource and subtitle providers';
+  @override
+  String get video_torznab_settings_title => 'Torznab indexers';
+  @override
+  String get video_torznab_settings_hint =>
+      'Configure one or more Jackett, Prowlarr, or compatible Torznab endpoints. Secrets stay on this device.';
+  @override
+  String get video_torznab_add => 'Add indexer';
+  @override
+  String get video_torznab_name => 'Name';
+  @override
+  String get video_torznab_endpoint => 'Endpoint';
+  @override
+  String get video_torznab_endpoint_hint =>
+      'HTTPS is required except for loopback addresses.';
+  @override
+  String get video_torznab_api_key => 'API key';
+  @override
+  String get video_torznab_priority => 'Priority';
+  @override
+  String get video_torznab_categories => 'Categories';
+  @override
+  String get video_torznab_categories_hint =>
+      'Comma-separated numeric category IDs';
+  @override
+  String get video_external_enabled => 'Enabled';
+  @override
+  String get video_external_insecure_http => 'Allow insecure HTTP';
+  @override
+  String get video_external_insecure_http_hint =>
+      'Use only for a trusted local network endpoint.';
+  @override
+  String get video_external_endpoint_invalid =>
+      'Enter a valid endpoint without credentials, query parameters, or fragments.';
+  @override
+  String get video_opensubtitles_settings_title => 'OpenSubtitles';
+  @override
+  String get video_opensubtitles_settings_hint =>
+      'API credentials and preferred subtitle languages stay on this device.';
+  @override
+  String get video_opensubtitles_user_agent => 'User-Agent';
+  @override
+  String get video_opensubtitles_languages => 'Preferred languages';
+  @override
+  String get video_opensubtitles_languages_hint =>
+      'Comma-separated language codes, for example zh-CN,en,ja';
+  @override
+  String get video_download_path_mappings_title => 'qBittorrent path mappings';
+  @override
+  String get video_download_path_mappings_hint =>
+      'Map each qBittorrent remote root to a locally accessible folder.';
+  @override
+  String get video_download_path_mapping_add => 'Add path mapping';
+  @override
+  String get video_download_backend_profile_id => 'Backend profile ID';
+  @override
+  String get video_download_remote_root => 'Remote root';
+  @override
+  String get video_download_local_root => 'Local root';
+  @override
+  String get video_download_target_source_title =>
+      'Default managed video source';
+  @override
+  String get video_download_target_source_hint =>
+      'New downloads are organized into this local video source.';
+  @override
+  String get video_download_target_source_none => 'Choose a local video source';
+  @override
+  String get video_external_remove => 'Remove';
+  @override
+  String get video_external_username_optional => 'Username (optional)';
+  @override
+  String get video_external_password_optional => 'Password (optional)';
+  @override
+  String get video_external_api_key => 'API key';
+  @override
+  String get video_external_save_error =>
+      'The configuration could not be saved. Check the highlighted fields.';
+  @override
+  String get video_external_categories_invalid =>
+      'Categories must be comma-separated numeric IDs.';
+  @override
+  String get video_download_path_mapping_invalid =>
+      'Enter a profile ID, remote root, and absolute local root.';
+  @override
+  String get video_opensubtitles_endpoint => 'API endpoint';
+  @override
+  String get video_download_target_source_empty =>
+      'No locally accessible video source is available. Add one on the Sources tab first.';
 }
 
 // Path: <root>
@@ -93749,8 +95433,6 @@ class _StringsTr extends _StringsEn {
       'Download backend is not configured yet.';
   @override
   String get download_clear_finished => 'Clear finished';
-  @override
-  String get download_discover_tab => 'Discover';
   @override
   String get download_network_proxy_auto => 'Auto';
   @override
@@ -99572,6 +101254,142 @@ class _StringsTr extends _StringsEn {
   @override
   String video_home_remaining_minutes({required Object minutes}) =>
       '${minutes} min remaining';
+  @override
+  String get video_discovery_tab => 'Discover';
+  @override
+  String get video_discovery_search_hint => 'Search movies, series, anime';
+  @override
+  String get video_discovery_hot => 'Popular now';
+  @override
+  String get video_discovery_seasonal_anime => 'Seasonal anime';
+  @override
+  String get video_discovery_all_works => 'All titles';
+  @override
+  String get video_discovery_search_results => 'Search results';
+  @override
+  String get video_discovery_provider_warning =>
+      'Some providers are unavailable. Showing available results.';
+  @override
+  String get video_discovery_load_failed => 'Could not load discovery results.';
+  @override
+  String get video_discovery_empty => 'No matching titles.';
+  @override
+  String get video_discovery_resource_search => 'Search resources';
+  @override
+  String get video_discovery_subtitle_search => 'Search subtitles';
+  @override
+  String get video_discovery_subscribe => 'Subscribe';
+  @override
+  String get video_discovery_subscription_manage => 'Manage subscription';
+  @override
+  String get video_discovery_pipeline_idle =>
+      'Not downloaded → Download → Organize → Subtitles → Scrape → Library';
+  @override
+  String get video_discovery_details_load_failed =>
+      'Could not load title details.';
+  @override
+  String get video_discovery_sort_popularity => 'Popularity';
+  @override
+  String get video_discovery_sort_rating => 'Rating';
+  @override
+  String get video_discovery_sort_release => 'Release date';
+  @override
+  String get video_discovery_in_library => 'In library';
+  @override
+  String get video_discovery_play => 'Play';
+  @override
+  String get download_resources_tab => 'Resources';
+  @override
+  String get video_external_settings_section =>
+      'External resource and subtitle providers';
+  @override
+  String get video_torznab_settings_title => 'Torznab indexers';
+  @override
+  String get video_torznab_settings_hint =>
+      'Configure one or more Jackett, Prowlarr, or compatible Torznab endpoints. Secrets stay on this device.';
+  @override
+  String get video_torznab_add => 'Add indexer';
+  @override
+  String get video_torznab_name => 'Name';
+  @override
+  String get video_torznab_endpoint => 'Endpoint';
+  @override
+  String get video_torznab_endpoint_hint =>
+      'HTTPS is required except for loopback addresses.';
+  @override
+  String get video_torznab_api_key => 'API key';
+  @override
+  String get video_torznab_priority => 'Priority';
+  @override
+  String get video_torznab_categories => 'Categories';
+  @override
+  String get video_torznab_categories_hint =>
+      'Comma-separated numeric category IDs';
+  @override
+  String get video_external_enabled => 'Enabled';
+  @override
+  String get video_external_insecure_http => 'Allow insecure HTTP';
+  @override
+  String get video_external_insecure_http_hint =>
+      'Use only for a trusted local network endpoint.';
+  @override
+  String get video_external_endpoint_invalid =>
+      'Enter a valid endpoint without credentials, query parameters, or fragments.';
+  @override
+  String get video_opensubtitles_settings_title => 'OpenSubtitles';
+  @override
+  String get video_opensubtitles_settings_hint =>
+      'API credentials and preferred subtitle languages stay on this device.';
+  @override
+  String get video_opensubtitles_user_agent => 'User-Agent';
+  @override
+  String get video_opensubtitles_languages => 'Preferred languages';
+  @override
+  String get video_opensubtitles_languages_hint =>
+      'Comma-separated language codes, for example zh-CN,en,ja';
+  @override
+  String get video_download_path_mappings_title => 'qBittorrent path mappings';
+  @override
+  String get video_download_path_mappings_hint =>
+      'Map each qBittorrent remote root to a locally accessible folder.';
+  @override
+  String get video_download_path_mapping_add => 'Add path mapping';
+  @override
+  String get video_download_backend_profile_id => 'Backend profile ID';
+  @override
+  String get video_download_remote_root => 'Remote root';
+  @override
+  String get video_download_local_root => 'Local root';
+  @override
+  String get video_download_target_source_title =>
+      'Default managed video source';
+  @override
+  String get video_download_target_source_hint =>
+      'New downloads are organized into this local video source.';
+  @override
+  String get video_download_target_source_none => 'Choose a local video source';
+  @override
+  String get video_external_remove => 'Remove';
+  @override
+  String get video_external_username_optional => 'Username (optional)';
+  @override
+  String get video_external_password_optional => 'Password (optional)';
+  @override
+  String get video_external_api_key => 'API key';
+  @override
+  String get video_external_save_error =>
+      'The configuration could not be saved. Check the highlighted fields.';
+  @override
+  String get video_external_categories_invalid =>
+      'Categories must be comma-separated numeric IDs.';
+  @override
+  String get video_download_path_mapping_invalid =>
+      'Enter a profile ID, remote root, and absolute local root.';
+  @override
+  String get video_opensubtitles_endpoint => 'API endpoint';
+  @override
+  String get video_download_target_source_empty =>
+      'No locally accessible video source is available. Add one on the Sources tab first.';
 }
 
 // Path: <root>
@@ -101079,8 +102897,6 @@ class _StringsVi extends _StringsEn {
       'Download backend is not configured yet.';
   @override
   String get download_clear_finished => 'Clear finished';
-  @override
-  String get download_discover_tab => 'Discover';
   @override
   String get download_network_proxy_auto => 'Auto';
   @override
@@ -106891,6 +108707,142 @@ class _StringsVi extends _StringsEn {
   @override
   String video_home_remaining_minutes({required Object minutes}) =>
       '${minutes} min remaining';
+  @override
+  String get video_discovery_tab => 'Discover';
+  @override
+  String get video_discovery_search_hint => 'Search movies, series, anime';
+  @override
+  String get video_discovery_hot => 'Popular now';
+  @override
+  String get video_discovery_seasonal_anime => 'Seasonal anime';
+  @override
+  String get video_discovery_all_works => 'All titles';
+  @override
+  String get video_discovery_search_results => 'Search results';
+  @override
+  String get video_discovery_provider_warning =>
+      'Some providers are unavailable. Showing available results.';
+  @override
+  String get video_discovery_load_failed => 'Could not load discovery results.';
+  @override
+  String get video_discovery_empty => 'No matching titles.';
+  @override
+  String get video_discovery_resource_search => 'Search resources';
+  @override
+  String get video_discovery_subtitle_search => 'Search subtitles';
+  @override
+  String get video_discovery_subscribe => 'Subscribe';
+  @override
+  String get video_discovery_subscription_manage => 'Manage subscription';
+  @override
+  String get video_discovery_pipeline_idle =>
+      'Not downloaded → Download → Organize → Subtitles → Scrape → Library';
+  @override
+  String get video_discovery_details_load_failed =>
+      'Could not load title details.';
+  @override
+  String get video_discovery_sort_popularity => 'Popularity';
+  @override
+  String get video_discovery_sort_rating => 'Rating';
+  @override
+  String get video_discovery_sort_release => 'Release date';
+  @override
+  String get video_discovery_in_library => 'In library';
+  @override
+  String get video_discovery_play => 'Play';
+  @override
+  String get download_resources_tab => 'Resources';
+  @override
+  String get video_external_settings_section =>
+      'External resource and subtitle providers';
+  @override
+  String get video_torznab_settings_title => 'Torznab indexers';
+  @override
+  String get video_torznab_settings_hint =>
+      'Configure one or more Jackett, Prowlarr, or compatible Torznab endpoints. Secrets stay on this device.';
+  @override
+  String get video_torznab_add => 'Add indexer';
+  @override
+  String get video_torznab_name => 'Name';
+  @override
+  String get video_torznab_endpoint => 'Endpoint';
+  @override
+  String get video_torznab_endpoint_hint =>
+      'HTTPS is required except for loopback addresses.';
+  @override
+  String get video_torznab_api_key => 'API key';
+  @override
+  String get video_torznab_priority => 'Priority';
+  @override
+  String get video_torznab_categories => 'Categories';
+  @override
+  String get video_torznab_categories_hint =>
+      'Comma-separated numeric category IDs';
+  @override
+  String get video_external_enabled => 'Enabled';
+  @override
+  String get video_external_insecure_http => 'Allow insecure HTTP';
+  @override
+  String get video_external_insecure_http_hint =>
+      'Use only for a trusted local network endpoint.';
+  @override
+  String get video_external_endpoint_invalid =>
+      'Enter a valid endpoint without credentials, query parameters, or fragments.';
+  @override
+  String get video_opensubtitles_settings_title => 'OpenSubtitles';
+  @override
+  String get video_opensubtitles_settings_hint =>
+      'API credentials and preferred subtitle languages stay on this device.';
+  @override
+  String get video_opensubtitles_user_agent => 'User-Agent';
+  @override
+  String get video_opensubtitles_languages => 'Preferred languages';
+  @override
+  String get video_opensubtitles_languages_hint =>
+      'Comma-separated language codes, for example zh-CN,en,ja';
+  @override
+  String get video_download_path_mappings_title => 'qBittorrent path mappings';
+  @override
+  String get video_download_path_mappings_hint =>
+      'Map each qBittorrent remote root to a locally accessible folder.';
+  @override
+  String get video_download_path_mapping_add => 'Add path mapping';
+  @override
+  String get video_download_backend_profile_id => 'Backend profile ID';
+  @override
+  String get video_download_remote_root => 'Remote root';
+  @override
+  String get video_download_local_root => 'Local root';
+  @override
+  String get video_download_target_source_title =>
+      'Default managed video source';
+  @override
+  String get video_download_target_source_hint =>
+      'New downloads are organized into this local video source.';
+  @override
+  String get video_download_target_source_none => 'Choose a local video source';
+  @override
+  String get video_external_remove => 'Remove';
+  @override
+  String get video_external_username_optional => 'Username (optional)';
+  @override
+  String get video_external_password_optional => 'Password (optional)';
+  @override
+  String get video_external_api_key => 'API key';
+  @override
+  String get video_external_save_error =>
+      'The configuration could not be saved. Check the highlighted fields.';
+  @override
+  String get video_external_categories_invalid =>
+      'Categories must be comma-separated numeric IDs.';
+  @override
+  String get video_download_path_mapping_invalid =>
+      'Enter a profile ID, remote root, and absolute local root.';
+  @override
+  String get video_opensubtitles_endpoint => 'API endpoint';
+  @override
+  String get video_download_target_source_empty =>
+      'No locally accessible video source is available. Add one on the Sources tab first.';
 }
 
 // Path: <root>
@@ -108300,8 +110252,6 @@ class _StringsZhCn extends _StringsEn {
   String get download_backend_not_configured => '请先配置下载后端。';
   @override
   String get download_clear_finished => '清除已完成';
-  @override
-  String get download_discover_tab => '发现';
   @override
   String get download_network_proxy_auto => '自动';
   @override
@@ -113699,6 +115649,126 @@ class _StringsZhCn extends _StringsEn {
   @override
   String video_home_remaining_minutes({required Object minutes}) =>
       '剩余 ${minutes} 分钟';
+  @override
+  String get video_discovery_tab => '发现';
+  @override
+  String get video_discovery_search_hint => '搜索电影、剧集、动漫';
+  @override
+  String get video_discovery_hot => '热门推荐';
+  @override
+  String get video_discovery_seasonal_anime => '本季动漫';
+  @override
+  String get video_discovery_all_works => '全部作品';
+  @override
+  String get video_discovery_search_results => '搜索结果';
+  @override
+  String get video_discovery_provider_warning => '部分来源暂不可用，已显示其余结果';
+  @override
+  String get video_discovery_load_failed => '发现内容加载失败';
+  @override
+  String get video_discovery_empty => '没有匹配的作品';
+  @override
+  String get video_discovery_resource_search => '搜索资源';
+  @override
+  String get video_discovery_subtitle_search => '搜索字幕';
+  @override
+  String get video_discovery_subscribe => '订阅';
+  @override
+  String get video_discovery_subscription_manage => '管理订阅';
+  @override
+  String get video_discovery_pipeline_idle => '未下载 → 下载 → 整理 → 字幕 → 刮削 → 入库';
+  @override
+  String get video_discovery_details_load_failed => '作品详情加载失败';
+  @override
+  String get video_discovery_sort_popularity => '热度';
+  @override
+  String get video_discovery_sort_rating => '评分';
+  @override
+  String get video_discovery_sort_release => '上映时间';
+  @override
+  String get video_discovery_in_library => '已入库';
+  @override
+  String get video_discovery_play => '播放';
+  @override
+  String get download_resources_tab => '资源';
+  @override
+  String get video_external_settings_section => '外部资源与字幕来源';
+  @override
+  String get video_torznab_settings_title => 'Torznab 索引器';
+  @override
+  String get video_torznab_settings_hint =>
+      '配置一个或多个 Jackett、Prowlarr 或兼容的 Torznab 端点。密钥仅保存在本机。';
+  @override
+  String get video_torznab_add => '添加索引器';
+  @override
+  String get video_torznab_name => '名称';
+  @override
+  String get video_torznab_endpoint => '端点';
+  @override
+  String get video_torznab_endpoint_hint => '除回环地址外必须使用 HTTPS。';
+  @override
+  String get video_torznab_api_key => 'API 密钥';
+  @override
+  String get video_torznab_priority => '优先级';
+  @override
+  String get video_torznab_categories => '分类';
+  @override
+  String get video_torznab_categories_hint => '用逗号分隔的数字分类 ID';
+  @override
+  String get video_external_enabled => '已启用';
+  @override
+  String get video_external_insecure_http => '允许不安全的 HTTP';
+  @override
+  String get video_external_insecure_http_hint => '仅用于可信的局域网端点。';
+  @override
+  String get video_external_endpoint_invalid => '请输入不含凭据、查询参数或片段的有效端点。';
+  @override
+  String get video_opensubtitles_settings_title => 'OpenSubtitles';
+  @override
+  String get video_opensubtitles_settings_hint => 'API 凭据和首选字幕语言仅保存在本机。';
+  @override
+  String get video_opensubtitles_user_agent => 'User-Agent';
+  @override
+  String get video_opensubtitles_languages => '首选语言';
+  @override
+  String get video_opensubtitles_languages_hint => '用逗号分隔语言代码，例如 zh-CN,en,ja';
+  @override
+  String get video_download_path_mappings_title => 'qBittorrent 路径映射';
+  @override
+  String get video_download_path_mappings_hint =>
+      '将每个 qBittorrent 远程根目录映射到本机可访问的文件夹。';
+  @override
+  String get video_download_path_mapping_add => '添加路径映射';
+  @override
+  String get video_download_backend_profile_id => '后端配置 ID';
+  @override
+  String get video_download_remote_root => '远程根目录';
+  @override
+  String get video_download_local_root => '本机根目录';
+  @override
+  String get video_download_target_source_title => '默认受管视频来源';
+  @override
+  String get video_download_target_source_hint => '新下载会整理到此本地视频来源中。';
+  @override
+  String get video_download_target_source_none => '选择本地视频来源';
+  @override
+  String get video_external_remove => '移除';
+  @override
+  String get video_external_username_optional => '用户名（可选）';
+  @override
+  String get video_external_password_optional => '密码（可选）';
+  @override
+  String get video_external_api_key => 'API 密钥';
+  @override
+  String get video_external_save_error => '无法保存配置，请检查标出的字段。';
+  @override
+  String get video_external_categories_invalid => '分类必须是用逗号分隔的数字 ID。';
+  @override
+  String get video_download_path_mapping_invalid => '请输入配置 ID、远程根目录和本机绝对根目录。';
+  @override
+  String get video_opensubtitles_endpoint => 'API 端点';
+  @override
+  String get video_download_target_source_empty => '没有可访问的本地视频来源。请先在来源页添加。';
 }
 
 // Path: <root>
@@ -115155,8 +117225,6 @@ class _StringsZhHk extends _StringsEn {
       'Download backend is not configured yet.';
   @override
   String get download_clear_finished => 'Clear finished';
-  @override
-  String get download_discover_tab => 'Discover';
   @override
   String get download_network_proxy_auto => 'Auto';
   @override
@@ -120813,6 +122881,142 @@ class _StringsZhHk extends _StringsEn {
   @override
   String video_home_remaining_minutes({required Object minutes}) =>
       '${minutes} min remaining';
+  @override
+  String get video_discovery_tab => 'Discover';
+  @override
+  String get video_discovery_search_hint => 'Search movies, series, anime';
+  @override
+  String get video_discovery_hot => 'Popular now';
+  @override
+  String get video_discovery_seasonal_anime => 'Seasonal anime';
+  @override
+  String get video_discovery_all_works => 'All titles';
+  @override
+  String get video_discovery_search_results => 'Search results';
+  @override
+  String get video_discovery_provider_warning =>
+      'Some providers are unavailable. Showing available results.';
+  @override
+  String get video_discovery_load_failed => 'Could not load discovery results.';
+  @override
+  String get video_discovery_empty => 'No matching titles.';
+  @override
+  String get video_discovery_resource_search => 'Search resources';
+  @override
+  String get video_discovery_subtitle_search => 'Search subtitles';
+  @override
+  String get video_discovery_subscribe => 'Subscribe';
+  @override
+  String get video_discovery_subscription_manage => 'Manage subscription';
+  @override
+  String get video_discovery_pipeline_idle =>
+      'Not downloaded → Download → Organize → Subtitles → Scrape → Library';
+  @override
+  String get video_discovery_details_load_failed =>
+      'Could not load title details.';
+  @override
+  String get video_discovery_sort_popularity => 'Popularity';
+  @override
+  String get video_discovery_sort_rating => 'Rating';
+  @override
+  String get video_discovery_sort_release => 'Release date';
+  @override
+  String get video_discovery_in_library => 'In library';
+  @override
+  String get video_discovery_play => 'Play';
+  @override
+  String get download_resources_tab => 'Resources';
+  @override
+  String get video_external_settings_section =>
+      'External resource and subtitle providers';
+  @override
+  String get video_torznab_settings_title => 'Torznab indexers';
+  @override
+  String get video_torznab_settings_hint =>
+      'Configure one or more Jackett, Prowlarr, or compatible Torznab endpoints. Secrets stay on this device.';
+  @override
+  String get video_torznab_add => 'Add indexer';
+  @override
+  String get video_torznab_name => 'Name';
+  @override
+  String get video_torznab_endpoint => 'Endpoint';
+  @override
+  String get video_torznab_endpoint_hint =>
+      'HTTPS is required except for loopback addresses.';
+  @override
+  String get video_torznab_api_key => 'API key';
+  @override
+  String get video_torznab_priority => 'Priority';
+  @override
+  String get video_torznab_categories => 'Categories';
+  @override
+  String get video_torznab_categories_hint =>
+      'Comma-separated numeric category IDs';
+  @override
+  String get video_external_enabled => 'Enabled';
+  @override
+  String get video_external_insecure_http => 'Allow insecure HTTP';
+  @override
+  String get video_external_insecure_http_hint =>
+      'Use only for a trusted local network endpoint.';
+  @override
+  String get video_external_endpoint_invalid =>
+      'Enter a valid endpoint without credentials, query parameters, or fragments.';
+  @override
+  String get video_opensubtitles_settings_title => 'OpenSubtitles';
+  @override
+  String get video_opensubtitles_settings_hint =>
+      'API credentials and preferred subtitle languages stay on this device.';
+  @override
+  String get video_opensubtitles_user_agent => 'User-Agent';
+  @override
+  String get video_opensubtitles_languages => 'Preferred languages';
+  @override
+  String get video_opensubtitles_languages_hint =>
+      'Comma-separated language codes, for example zh-CN,en,ja';
+  @override
+  String get video_download_path_mappings_title => 'qBittorrent path mappings';
+  @override
+  String get video_download_path_mappings_hint =>
+      'Map each qBittorrent remote root to a locally accessible folder.';
+  @override
+  String get video_download_path_mapping_add => 'Add path mapping';
+  @override
+  String get video_download_backend_profile_id => 'Backend profile ID';
+  @override
+  String get video_download_remote_root => 'Remote root';
+  @override
+  String get video_download_local_root => 'Local root';
+  @override
+  String get video_download_target_source_title =>
+      'Default managed video source';
+  @override
+  String get video_download_target_source_hint =>
+      'New downloads are organized into this local video source.';
+  @override
+  String get video_download_target_source_none => 'Choose a local video source';
+  @override
+  String get video_external_remove => 'Remove';
+  @override
+  String get video_external_username_optional => 'Username (optional)';
+  @override
+  String get video_external_password_optional => 'Password (optional)';
+  @override
+  String get video_external_api_key => 'API key';
+  @override
+  String get video_external_save_error =>
+      'The configuration could not be saved. Check the highlighted fields.';
+  @override
+  String get video_external_categories_invalid =>
+      'Categories must be comma-separated numeric IDs.';
+  @override
+  String get video_download_path_mapping_invalid =>
+      'Enter a profile ID, remote root, and absolute local root.';
+  @override
+  String get video_opensubtitles_endpoint => 'API endpoint';
+  @override
+  String get video_download_target_source_empty =>
+      'No locally accessible video source is available. Add one on the Sources tab first.';
 }
 
 /// Flat map(s) containing all translations.
@@ -122150,8 +124354,6 @@ extension on _StringsEn {
         return 'Download backend is not configured yet.';
       case 'download_clear_finished':
         return 'Clear finished';
-      case 'download_discover_tab':
-        return 'Discover';
       case 'download_network_proxy_auto':
         return 'Auto';
       case 'download_network_proxy_auto_hint':
@@ -127336,6 +129538,124 @@ extension on _StringsEn {
         return ({required Object n}) => 'Recently added · Episode ${n}';
       case 'video_home_remaining_minutes':
         return ({required Object minutes}) => '${minutes} min remaining';
+      case 'video_discovery_tab':
+        return 'Discover';
+      case 'video_discovery_search_hint':
+        return 'Search movies, series, anime';
+      case 'video_discovery_hot':
+        return 'Popular now';
+      case 'video_discovery_seasonal_anime':
+        return 'Seasonal anime';
+      case 'video_discovery_all_works':
+        return 'All titles';
+      case 'video_discovery_search_results':
+        return 'Search results';
+      case 'video_discovery_provider_warning':
+        return 'Some providers are unavailable. Showing available results.';
+      case 'video_discovery_load_failed':
+        return 'Could not load discovery results.';
+      case 'video_discovery_empty':
+        return 'No matching titles.';
+      case 'video_discovery_resource_search':
+        return 'Search resources';
+      case 'video_discovery_subtitle_search':
+        return 'Search subtitles';
+      case 'video_discovery_subscribe':
+        return 'Subscribe';
+      case 'video_discovery_subscription_manage':
+        return 'Manage subscription';
+      case 'video_discovery_pipeline_idle':
+        return 'Not downloaded → Download → Organize → Subtitles → Scrape → Library';
+      case 'video_discovery_details_load_failed':
+        return 'Could not load title details.';
+      case 'video_discovery_sort_popularity':
+        return 'Popularity';
+      case 'video_discovery_sort_rating':
+        return 'Rating';
+      case 'video_discovery_sort_release':
+        return 'Release date';
+      case 'video_discovery_in_library':
+        return 'In library';
+      case 'video_discovery_play':
+        return 'Play';
+      case 'download_resources_tab':
+        return 'Resources';
+      case 'video_external_settings_section':
+        return 'External resource and subtitle providers';
+      case 'video_torznab_settings_title':
+        return 'Torznab indexers';
+      case 'video_torznab_settings_hint':
+        return 'Configure one or more Jackett, Prowlarr, or compatible Torznab endpoints. Secrets stay on this device.';
+      case 'video_torznab_add':
+        return 'Add indexer';
+      case 'video_torznab_name':
+        return 'Name';
+      case 'video_torznab_endpoint':
+        return 'Endpoint';
+      case 'video_torznab_endpoint_hint':
+        return 'HTTPS is required except for loopback addresses.';
+      case 'video_torznab_api_key':
+        return 'API key';
+      case 'video_torznab_priority':
+        return 'Priority';
+      case 'video_torznab_categories':
+        return 'Categories';
+      case 'video_torznab_categories_hint':
+        return 'Comma-separated numeric category IDs';
+      case 'video_external_enabled':
+        return 'Enabled';
+      case 'video_external_insecure_http':
+        return 'Allow insecure HTTP';
+      case 'video_external_insecure_http_hint':
+        return 'Use only for a trusted local network endpoint.';
+      case 'video_external_endpoint_invalid':
+        return 'Enter a valid endpoint without credentials, query parameters, or fragments.';
+      case 'video_opensubtitles_settings_title':
+        return 'OpenSubtitles';
+      case 'video_opensubtitles_settings_hint':
+        return 'API credentials and preferred subtitle languages stay on this device.';
+      case 'video_opensubtitles_user_agent':
+        return 'User-Agent';
+      case 'video_opensubtitles_languages':
+        return 'Preferred languages';
+      case 'video_opensubtitles_languages_hint':
+        return 'Comma-separated language codes, for example zh-CN,en,ja';
+      case 'video_download_path_mappings_title':
+        return 'qBittorrent path mappings';
+      case 'video_download_path_mappings_hint':
+        return 'Map each qBittorrent remote root to a locally accessible folder.';
+      case 'video_download_path_mapping_add':
+        return 'Add path mapping';
+      case 'video_download_backend_profile_id':
+        return 'Backend profile ID';
+      case 'video_download_remote_root':
+        return 'Remote root';
+      case 'video_download_local_root':
+        return 'Local root';
+      case 'video_download_target_source_title':
+        return 'Default managed video source';
+      case 'video_download_target_source_hint':
+        return 'New downloads are organized into this local video source.';
+      case 'video_download_target_source_none':
+        return 'Choose a local video source';
+      case 'video_external_remove':
+        return 'Remove';
+      case 'video_external_username_optional':
+        return 'Username (optional)';
+      case 'video_external_password_optional':
+        return 'Password (optional)';
+      case 'video_external_api_key':
+        return 'API key';
+      case 'video_external_save_error':
+        return 'The configuration could not be saved. Check the highlighted fields.';
+      case 'video_external_categories_invalid':
+        return 'Categories must be comma-separated numeric IDs.';
+      case 'video_download_path_mapping_invalid':
+        return 'Enter a profile ID, remote root, and absolute local root.';
+      case 'video_opensubtitles_endpoint':
+        return 'API endpoint';
+      case 'video_download_target_source_empty':
+        return 'No locally accessible video source is available. Add one on the Sources tab first.';
       default:
         return null;
     }
@@ -128674,8 +130994,6 @@ extension on _StringsAr {
         return 'Download backend is not configured yet.';
       case 'download_clear_finished':
         return 'Clear finished';
-      case 'download_discover_tab':
-        return 'Discover';
       case 'download_network_proxy_auto':
         return 'Auto';
       case 'download_network_proxy_auto_hint':
@@ -133857,6 +136175,124 @@ extension on _StringsAr {
         return ({required Object n}) => 'Recently added · Episode ${n}';
       case 'video_home_remaining_minutes':
         return ({required Object minutes}) => '${minutes} min remaining';
+      case 'video_discovery_tab':
+        return 'Discover';
+      case 'video_discovery_search_hint':
+        return 'Search movies, series, anime';
+      case 'video_discovery_hot':
+        return 'Popular now';
+      case 'video_discovery_seasonal_anime':
+        return 'Seasonal anime';
+      case 'video_discovery_all_works':
+        return 'All titles';
+      case 'video_discovery_search_results':
+        return 'Search results';
+      case 'video_discovery_provider_warning':
+        return 'Some providers are unavailable. Showing available results.';
+      case 'video_discovery_load_failed':
+        return 'Could not load discovery results.';
+      case 'video_discovery_empty':
+        return 'No matching titles.';
+      case 'video_discovery_resource_search':
+        return 'Search resources';
+      case 'video_discovery_subtitle_search':
+        return 'Search subtitles';
+      case 'video_discovery_subscribe':
+        return 'Subscribe';
+      case 'video_discovery_subscription_manage':
+        return 'Manage subscription';
+      case 'video_discovery_pipeline_idle':
+        return 'Not downloaded → Download → Organize → Subtitles → Scrape → Library';
+      case 'video_discovery_details_load_failed':
+        return 'Could not load title details.';
+      case 'video_discovery_sort_popularity':
+        return 'Popularity';
+      case 'video_discovery_sort_rating':
+        return 'Rating';
+      case 'video_discovery_sort_release':
+        return 'Release date';
+      case 'video_discovery_in_library':
+        return 'In library';
+      case 'video_discovery_play':
+        return 'Play';
+      case 'download_resources_tab':
+        return 'Resources';
+      case 'video_external_settings_section':
+        return 'External resource and subtitle providers';
+      case 'video_torznab_settings_title':
+        return 'Torznab indexers';
+      case 'video_torznab_settings_hint':
+        return 'Configure one or more Jackett, Prowlarr, or compatible Torznab endpoints. Secrets stay on this device.';
+      case 'video_torznab_add':
+        return 'Add indexer';
+      case 'video_torznab_name':
+        return 'Name';
+      case 'video_torznab_endpoint':
+        return 'Endpoint';
+      case 'video_torznab_endpoint_hint':
+        return 'HTTPS is required except for loopback addresses.';
+      case 'video_torznab_api_key':
+        return 'API key';
+      case 'video_torznab_priority':
+        return 'Priority';
+      case 'video_torznab_categories':
+        return 'Categories';
+      case 'video_torznab_categories_hint':
+        return 'Comma-separated numeric category IDs';
+      case 'video_external_enabled':
+        return 'Enabled';
+      case 'video_external_insecure_http':
+        return 'Allow insecure HTTP';
+      case 'video_external_insecure_http_hint':
+        return 'Use only for a trusted local network endpoint.';
+      case 'video_external_endpoint_invalid':
+        return 'Enter a valid endpoint without credentials, query parameters, or fragments.';
+      case 'video_opensubtitles_settings_title':
+        return 'OpenSubtitles';
+      case 'video_opensubtitles_settings_hint':
+        return 'API credentials and preferred subtitle languages stay on this device.';
+      case 'video_opensubtitles_user_agent':
+        return 'User-Agent';
+      case 'video_opensubtitles_languages':
+        return 'Preferred languages';
+      case 'video_opensubtitles_languages_hint':
+        return 'Comma-separated language codes, for example zh-CN,en,ja';
+      case 'video_download_path_mappings_title':
+        return 'qBittorrent path mappings';
+      case 'video_download_path_mappings_hint':
+        return 'Map each qBittorrent remote root to a locally accessible folder.';
+      case 'video_download_path_mapping_add':
+        return 'Add path mapping';
+      case 'video_download_backend_profile_id':
+        return 'Backend profile ID';
+      case 'video_download_remote_root':
+        return 'Remote root';
+      case 'video_download_local_root':
+        return 'Local root';
+      case 'video_download_target_source_title':
+        return 'Default managed video source';
+      case 'video_download_target_source_hint':
+        return 'New downloads are organized into this local video source.';
+      case 'video_download_target_source_none':
+        return 'Choose a local video source';
+      case 'video_external_remove':
+        return 'Remove';
+      case 'video_external_username_optional':
+        return 'Username (optional)';
+      case 'video_external_password_optional':
+        return 'Password (optional)';
+      case 'video_external_api_key':
+        return 'API key';
+      case 'video_external_save_error':
+        return 'The configuration could not be saved. Check the highlighted fields.';
+      case 'video_external_categories_invalid':
+        return 'Categories must be comma-separated numeric IDs.';
+      case 'video_download_path_mapping_invalid':
+        return 'Enter a profile ID, remote root, and absolute local root.';
+      case 'video_opensubtitles_endpoint':
+        return 'API endpoint';
+      case 'video_download_target_source_empty':
+        return 'No locally accessible video source is available. Add one on the Sources tab first.';
       default:
         return null;
     }
@@ -135199,8 +137635,6 @@ extension on _StringsDe {
         return 'Download backend is not configured yet.';
       case 'download_clear_finished':
         return 'Clear finished';
-      case 'download_discover_tab':
-        return 'Discover';
       case 'download_network_proxy_auto':
         return 'Auto';
       case 'download_network_proxy_auto_hint':
@@ -140400,6 +142834,124 @@ extension on _StringsDe {
         return ({required Object n}) => 'Recently added · Episode ${n}';
       case 'video_home_remaining_minutes':
         return ({required Object minutes}) => '${minutes} min remaining';
+      case 'video_discovery_tab':
+        return 'Discover';
+      case 'video_discovery_search_hint':
+        return 'Search movies, series, anime';
+      case 'video_discovery_hot':
+        return 'Popular now';
+      case 'video_discovery_seasonal_anime':
+        return 'Seasonal anime';
+      case 'video_discovery_all_works':
+        return 'All titles';
+      case 'video_discovery_search_results':
+        return 'Search results';
+      case 'video_discovery_provider_warning':
+        return 'Some providers are unavailable. Showing available results.';
+      case 'video_discovery_load_failed':
+        return 'Could not load discovery results.';
+      case 'video_discovery_empty':
+        return 'No matching titles.';
+      case 'video_discovery_resource_search':
+        return 'Search resources';
+      case 'video_discovery_subtitle_search':
+        return 'Search subtitles';
+      case 'video_discovery_subscribe':
+        return 'Subscribe';
+      case 'video_discovery_subscription_manage':
+        return 'Manage subscription';
+      case 'video_discovery_pipeline_idle':
+        return 'Not downloaded → Download → Organize → Subtitles → Scrape → Library';
+      case 'video_discovery_details_load_failed':
+        return 'Could not load title details.';
+      case 'video_discovery_sort_popularity':
+        return 'Popularity';
+      case 'video_discovery_sort_rating':
+        return 'Rating';
+      case 'video_discovery_sort_release':
+        return 'Release date';
+      case 'video_discovery_in_library':
+        return 'In library';
+      case 'video_discovery_play':
+        return 'Play';
+      case 'download_resources_tab':
+        return 'Resources';
+      case 'video_external_settings_section':
+        return 'External resource and subtitle providers';
+      case 'video_torznab_settings_title':
+        return 'Torznab indexers';
+      case 'video_torznab_settings_hint':
+        return 'Configure one or more Jackett, Prowlarr, or compatible Torznab endpoints. Secrets stay on this device.';
+      case 'video_torznab_add':
+        return 'Add indexer';
+      case 'video_torznab_name':
+        return 'Name';
+      case 'video_torznab_endpoint':
+        return 'Endpoint';
+      case 'video_torznab_endpoint_hint':
+        return 'HTTPS is required except for loopback addresses.';
+      case 'video_torznab_api_key':
+        return 'API key';
+      case 'video_torznab_priority':
+        return 'Priority';
+      case 'video_torznab_categories':
+        return 'Categories';
+      case 'video_torznab_categories_hint':
+        return 'Comma-separated numeric category IDs';
+      case 'video_external_enabled':
+        return 'Enabled';
+      case 'video_external_insecure_http':
+        return 'Allow insecure HTTP';
+      case 'video_external_insecure_http_hint':
+        return 'Use only for a trusted local network endpoint.';
+      case 'video_external_endpoint_invalid':
+        return 'Enter a valid endpoint without credentials, query parameters, or fragments.';
+      case 'video_opensubtitles_settings_title':
+        return 'OpenSubtitles';
+      case 'video_opensubtitles_settings_hint':
+        return 'API credentials and preferred subtitle languages stay on this device.';
+      case 'video_opensubtitles_user_agent':
+        return 'User-Agent';
+      case 'video_opensubtitles_languages':
+        return 'Preferred languages';
+      case 'video_opensubtitles_languages_hint':
+        return 'Comma-separated language codes, for example zh-CN,en,ja';
+      case 'video_download_path_mappings_title':
+        return 'qBittorrent path mappings';
+      case 'video_download_path_mappings_hint':
+        return 'Map each qBittorrent remote root to a locally accessible folder.';
+      case 'video_download_path_mapping_add':
+        return 'Add path mapping';
+      case 'video_download_backend_profile_id':
+        return 'Backend profile ID';
+      case 'video_download_remote_root':
+        return 'Remote root';
+      case 'video_download_local_root':
+        return 'Local root';
+      case 'video_download_target_source_title':
+        return 'Default managed video source';
+      case 'video_download_target_source_hint':
+        return 'New downloads are organized into this local video source.';
+      case 'video_download_target_source_none':
+        return 'Choose a local video source';
+      case 'video_external_remove':
+        return 'Remove';
+      case 'video_external_username_optional':
+        return 'Username (optional)';
+      case 'video_external_password_optional':
+        return 'Password (optional)';
+      case 'video_external_api_key':
+        return 'API key';
+      case 'video_external_save_error':
+        return 'The configuration could not be saved. Check the highlighted fields.';
+      case 'video_external_categories_invalid':
+        return 'Categories must be comma-separated numeric IDs.';
+      case 'video_download_path_mapping_invalid':
+        return 'Enter a profile ID, remote root, and absolute local root.';
+      case 'video_opensubtitles_endpoint':
+        return 'API endpoint';
+      case 'video_download_target_source_empty':
+        return 'No locally accessible video source is available. Add one on the Sources tab first.';
       default:
         return null;
     }
@@ -141743,8 +144295,6 @@ extension on _StringsEs {
         return 'Download backend is not configured yet.';
       case 'download_clear_finished':
         return 'Clear finished';
-      case 'download_discover_tab':
-        return 'Discover';
       case 'download_network_proxy_auto':
         return 'Auto';
       case 'download_network_proxy_auto_hint':
@@ -146942,6 +149492,124 @@ extension on _StringsEs {
         return ({required Object n}) => 'Recently added · Episode ${n}';
       case 'video_home_remaining_minutes':
         return ({required Object minutes}) => '${minutes} min remaining';
+      case 'video_discovery_tab':
+        return 'Discover';
+      case 'video_discovery_search_hint':
+        return 'Search movies, series, anime';
+      case 'video_discovery_hot':
+        return 'Popular now';
+      case 'video_discovery_seasonal_anime':
+        return 'Seasonal anime';
+      case 'video_discovery_all_works':
+        return 'All titles';
+      case 'video_discovery_search_results':
+        return 'Search results';
+      case 'video_discovery_provider_warning':
+        return 'Some providers are unavailable. Showing available results.';
+      case 'video_discovery_load_failed':
+        return 'Could not load discovery results.';
+      case 'video_discovery_empty':
+        return 'No matching titles.';
+      case 'video_discovery_resource_search':
+        return 'Search resources';
+      case 'video_discovery_subtitle_search':
+        return 'Search subtitles';
+      case 'video_discovery_subscribe':
+        return 'Subscribe';
+      case 'video_discovery_subscription_manage':
+        return 'Manage subscription';
+      case 'video_discovery_pipeline_idle':
+        return 'Not downloaded → Download → Organize → Subtitles → Scrape → Library';
+      case 'video_discovery_details_load_failed':
+        return 'Could not load title details.';
+      case 'video_discovery_sort_popularity':
+        return 'Popularity';
+      case 'video_discovery_sort_rating':
+        return 'Rating';
+      case 'video_discovery_sort_release':
+        return 'Release date';
+      case 'video_discovery_in_library':
+        return 'In library';
+      case 'video_discovery_play':
+        return 'Play';
+      case 'download_resources_tab':
+        return 'Resources';
+      case 'video_external_settings_section':
+        return 'External resource and subtitle providers';
+      case 'video_torznab_settings_title':
+        return 'Torznab indexers';
+      case 'video_torznab_settings_hint':
+        return 'Configure one or more Jackett, Prowlarr, or compatible Torznab endpoints. Secrets stay on this device.';
+      case 'video_torznab_add':
+        return 'Add indexer';
+      case 'video_torznab_name':
+        return 'Name';
+      case 'video_torznab_endpoint':
+        return 'Endpoint';
+      case 'video_torznab_endpoint_hint':
+        return 'HTTPS is required except for loopback addresses.';
+      case 'video_torznab_api_key':
+        return 'API key';
+      case 'video_torznab_priority':
+        return 'Priority';
+      case 'video_torznab_categories':
+        return 'Categories';
+      case 'video_torznab_categories_hint':
+        return 'Comma-separated numeric category IDs';
+      case 'video_external_enabled':
+        return 'Enabled';
+      case 'video_external_insecure_http':
+        return 'Allow insecure HTTP';
+      case 'video_external_insecure_http_hint':
+        return 'Use only for a trusted local network endpoint.';
+      case 'video_external_endpoint_invalid':
+        return 'Enter a valid endpoint without credentials, query parameters, or fragments.';
+      case 'video_opensubtitles_settings_title':
+        return 'OpenSubtitles';
+      case 'video_opensubtitles_settings_hint':
+        return 'API credentials and preferred subtitle languages stay on this device.';
+      case 'video_opensubtitles_user_agent':
+        return 'User-Agent';
+      case 'video_opensubtitles_languages':
+        return 'Preferred languages';
+      case 'video_opensubtitles_languages_hint':
+        return 'Comma-separated language codes, for example zh-CN,en,ja';
+      case 'video_download_path_mappings_title':
+        return 'qBittorrent path mappings';
+      case 'video_download_path_mappings_hint':
+        return 'Map each qBittorrent remote root to a locally accessible folder.';
+      case 'video_download_path_mapping_add':
+        return 'Add path mapping';
+      case 'video_download_backend_profile_id':
+        return 'Backend profile ID';
+      case 'video_download_remote_root':
+        return 'Remote root';
+      case 'video_download_local_root':
+        return 'Local root';
+      case 'video_download_target_source_title':
+        return 'Default managed video source';
+      case 'video_download_target_source_hint':
+        return 'New downloads are organized into this local video source.';
+      case 'video_download_target_source_none':
+        return 'Choose a local video source';
+      case 'video_external_remove':
+        return 'Remove';
+      case 'video_external_username_optional':
+        return 'Username (optional)';
+      case 'video_external_password_optional':
+        return 'Password (optional)';
+      case 'video_external_api_key':
+        return 'API key';
+      case 'video_external_save_error':
+        return 'The configuration could not be saved. Check the highlighted fields.';
+      case 'video_external_categories_invalid':
+        return 'Categories must be comma-separated numeric IDs.';
+      case 'video_download_path_mapping_invalid':
+        return 'Enter a profile ID, remote root, and absolute local root.';
+      case 'video_opensubtitles_endpoint':
+        return 'API endpoint';
+      case 'video_download_target_source_empty':
+        return 'No locally accessible video source is available. Add one on the Sources tab first.';
       default:
         return null;
     }
@@ -148288,8 +150956,6 @@ extension on _StringsFr {
         return 'Download backend is not configured yet.';
       case 'download_clear_finished':
         return 'Clear finished';
-      case 'download_discover_tab':
-        return 'Discover';
       case 'download_network_proxy_auto':
         return 'Auto';
       case 'download_network_proxy_auto_hint':
@@ -153490,6 +156156,124 @@ extension on _StringsFr {
         return ({required Object n}) => 'Recently added · Episode ${n}';
       case 'video_home_remaining_minutes':
         return ({required Object minutes}) => '${minutes} min remaining';
+      case 'video_discovery_tab':
+        return 'Discover';
+      case 'video_discovery_search_hint':
+        return 'Search movies, series, anime';
+      case 'video_discovery_hot':
+        return 'Popular now';
+      case 'video_discovery_seasonal_anime':
+        return 'Seasonal anime';
+      case 'video_discovery_all_works':
+        return 'All titles';
+      case 'video_discovery_search_results':
+        return 'Search results';
+      case 'video_discovery_provider_warning':
+        return 'Some providers are unavailable. Showing available results.';
+      case 'video_discovery_load_failed':
+        return 'Could not load discovery results.';
+      case 'video_discovery_empty':
+        return 'No matching titles.';
+      case 'video_discovery_resource_search':
+        return 'Search resources';
+      case 'video_discovery_subtitle_search':
+        return 'Search subtitles';
+      case 'video_discovery_subscribe':
+        return 'Subscribe';
+      case 'video_discovery_subscription_manage':
+        return 'Manage subscription';
+      case 'video_discovery_pipeline_idle':
+        return 'Not downloaded → Download → Organize → Subtitles → Scrape → Library';
+      case 'video_discovery_details_load_failed':
+        return 'Could not load title details.';
+      case 'video_discovery_sort_popularity':
+        return 'Popularity';
+      case 'video_discovery_sort_rating':
+        return 'Rating';
+      case 'video_discovery_sort_release':
+        return 'Release date';
+      case 'video_discovery_in_library':
+        return 'In library';
+      case 'video_discovery_play':
+        return 'Play';
+      case 'download_resources_tab':
+        return 'Resources';
+      case 'video_external_settings_section':
+        return 'External resource and subtitle providers';
+      case 'video_torznab_settings_title':
+        return 'Torznab indexers';
+      case 'video_torznab_settings_hint':
+        return 'Configure one or more Jackett, Prowlarr, or compatible Torznab endpoints. Secrets stay on this device.';
+      case 'video_torznab_add':
+        return 'Add indexer';
+      case 'video_torznab_name':
+        return 'Name';
+      case 'video_torznab_endpoint':
+        return 'Endpoint';
+      case 'video_torznab_endpoint_hint':
+        return 'HTTPS is required except for loopback addresses.';
+      case 'video_torznab_api_key':
+        return 'API key';
+      case 'video_torznab_priority':
+        return 'Priority';
+      case 'video_torznab_categories':
+        return 'Categories';
+      case 'video_torznab_categories_hint':
+        return 'Comma-separated numeric category IDs';
+      case 'video_external_enabled':
+        return 'Enabled';
+      case 'video_external_insecure_http':
+        return 'Allow insecure HTTP';
+      case 'video_external_insecure_http_hint':
+        return 'Use only for a trusted local network endpoint.';
+      case 'video_external_endpoint_invalid':
+        return 'Enter a valid endpoint without credentials, query parameters, or fragments.';
+      case 'video_opensubtitles_settings_title':
+        return 'OpenSubtitles';
+      case 'video_opensubtitles_settings_hint':
+        return 'API credentials and preferred subtitle languages stay on this device.';
+      case 'video_opensubtitles_user_agent':
+        return 'User-Agent';
+      case 'video_opensubtitles_languages':
+        return 'Preferred languages';
+      case 'video_opensubtitles_languages_hint':
+        return 'Comma-separated language codes, for example zh-CN,en,ja';
+      case 'video_download_path_mappings_title':
+        return 'qBittorrent path mappings';
+      case 'video_download_path_mappings_hint':
+        return 'Map each qBittorrent remote root to a locally accessible folder.';
+      case 'video_download_path_mapping_add':
+        return 'Add path mapping';
+      case 'video_download_backend_profile_id':
+        return 'Backend profile ID';
+      case 'video_download_remote_root':
+        return 'Remote root';
+      case 'video_download_local_root':
+        return 'Local root';
+      case 'video_download_target_source_title':
+        return 'Default managed video source';
+      case 'video_download_target_source_hint':
+        return 'New downloads are organized into this local video source.';
+      case 'video_download_target_source_none':
+        return 'Choose a local video source';
+      case 'video_external_remove':
+        return 'Remove';
+      case 'video_external_username_optional':
+        return 'Username (optional)';
+      case 'video_external_password_optional':
+        return 'Password (optional)';
+      case 'video_external_api_key':
+        return 'API key';
+      case 'video_external_save_error':
+        return 'The configuration could not be saved. Check the highlighted fields.';
+      case 'video_external_categories_invalid':
+        return 'Categories must be comma-separated numeric IDs.';
+      case 'video_download_path_mapping_invalid':
+        return 'Enter a profile ID, remote root, and absolute local root.';
+      case 'video_opensubtitles_endpoint':
+        return 'API endpoint';
+      case 'video_download_target_source_empty':
+        return 'No locally accessible video source is available. Add one on the Sources tab first.';
       default:
         return null;
     }
@@ -154831,8 +157615,6 @@ extension on _StringsId {
         return 'Download backend is not configured yet.';
       case 'download_clear_finished':
         return 'Clear finished';
-      case 'download_discover_tab':
-        return 'Discover';
       case 'download_network_proxy_auto':
         return 'Auto';
       case 'download_network_proxy_auto_hint':
@@ -160020,6 +162802,124 @@ extension on _StringsId {
         return ({required Object n}) => 'Recently added · Episode ${n}';
       case 'video_home_remaining_minutes':
         return ({required Object minutes}) => '${minutes} min remaining';
+      case 'video_discovery_tab':
+        return 'Discover';
+      case 'video_discovery_search_hint':
+        return 'Search movies, series, anime';
+      case 'video_discovery_hot':
+        return 'Popular now';
+      case 'video_discovery_seasonal_anime':
+        return 'Seasonal anime';
+      case 'video_discovery_all_works':
+        return 'All titles';
+      case 'video_discovery_search_results':
+        return 'Search results';
+      case 'video_discovery_provider_warning':
+        return 'Some providers are unavailable. Showing available results.';
+      case 'video_discovery_load_failed':
+        return 'Could not load discovery results.';
+      case 'video_discovery_empty':
+        return 'No matching titles.';
+      case 'video_discovery_resource_search':
+        return 'Search resources';
+      case 'video_discovery_subtitle_search':
+        return 'Search subtitles';
+      case 'video_discovery_subscribe':
+        return 'Subscribe';
+      case 'video_discovery_subscription_manage':
+        return 'Manage subscription';
+      case 'video_discovery_pipeline_idle':
+        return 'Not downloaded → Download → Organize → Subtitles → Scrape → Library';
+      case 'video_discovery_details_load_failed':
+        return 'Could not load title details.';
+      case 'video_discovery_sort_popularity':
+        return 'Popularity';
+      case 'video_discovery_sort_rating':
+        return 'Rating';
+      case 'video_discovery_sort_release':
+        return 'Release date';
+      case 'video_discovery_in_library':
+        return 'In library';
+      case 'video_discovery_play':
+        return 'Play';
+      case 'download_resources_tab':
+        return 'Resources';
+      case 'video_external_settings_section':
+        return 'External resource and subtitle providers';
+      case 'video_torznab_settings_title':
+        return 'Torznab indexers';
+      case 'video_torznab_settings_hint':
+        return 'Configure one or more Jackett, Prowlarr, or compatible Torznab endpoints. Secrets stay on this device.';
+      case 'video_torznab_add':
+        return 'Add indexer';
+      case 'video_torznab_name':
+        return 'Name';
+      case 'video_torznab_endpoint':
+        return 'Endpoint';
+      case 'video_torznab_endpoint_hint':
+        return 'HTTPS is required except for loopback addresses.';
+      case 'video_torznab_api_key':
+        return 'API key';
+      case 'video_torznab_priority':
+        return 'Priority';
+      case 'video_torznab_categories':
+        return 'Categories';
+      case 'video_torznab_categories_hint':
+        return 'Comma-separated numeric category IDs';
+      case 'video_external_enabled':
+        return 'Enabled';
+      case 'video_external_insecure_http':
+        return 'Allow insecure HTTP';
+      case 'video_external_insecure_http_hint':
+        return 'Use only for a trusted local network endpoint.';
+      case 'video_external_endpoint_invalid':
+        return 'Enter a valid endpoint without credentials, query parameters, or fragments.';
+      case 'video_opensubtitles_settings_title':
+        return 'OpenSubtitles';
+      case 'video_opensubtitles_settings_hint':
+        return 'API credentials and preferred subtitle languages stay on this device.';
+      case 'video_opensubtitles_user_agent':
+        return 'User-Agent';
+      case 'video_opensubtitles_languages':
+        return 'Preferred languages';
+      case 'video_opensubtitles_languages_hint':
+        return 'Comma-separated language codes, for example zh-CN,en,ja';
+      case 'video_download_path_mappings_title':
+        return 'qBittorrent path mappings';
+      case 'video_download_path_mappings_hint':
+        return 'Map each qBittorrent remote root to a locally accessible folder.';
+      case 'video_download_path_mapping_add':
+        return 'Add path mapping';
+      case 'video_download_backend_profile_id':
+        return 'Backend profile ID';
+      case 'video_download_remote_root':
+        return 'Remote root';
+      case 'video_download_local_root':
+        return 'Local root';
+      case 'video_download_target_source_title':
+        return 'Default managed video source';
+      case 'video_download_target_source_hint':
+        return 'New downloads are organized into this local video source.';
+      case 'video_download_target_source_none':
+        return 'Choose a local video source';
+      case 'video_external_remove':
+        return 'Remove';
+      case 'video_external_username_optional':
+        return 'Username (optional)';
+      case 'video_external_password_optional':
+        return 'Password (optional)';
+      case 'video_external_api_key':
+        return 'API key';
+      case 'video_external_save_error':
+        return 'The configuration could not be saved. Check the highlighted fields.';
+      case 'video_external_categories_invalid':
+        return 'Categories must be comma-separated numeric IDs.';
+      case 'video_download_path_mapping_invalid':
+        return 'Enter a profile ID, remote root, and absolute local root.';
+      case 'video_opensubtitles_endpoint':
+        return 'API endpoint';
+      case 'video_download_target_source_empty':
+        return 'No locally accessible video source is available. Add one on the Sources tab first.';
       default:
         return null;
     }
@@ -161362,8 +164262,6 @@ extension on _StringsIt {
         return 'Download backend is not configured yet.';
       case 'download_clear_finished':
         return 'Clear finished';
-      case 'download_discover_tab':
-        return 'Discover';
       case 'download_network_proxy_auto':
         return 'Auto';
       case 'download_network_proxy_auto_hint':
@@ -166564,6 +169462,124 @@ extension on _StringsIt {
         return ({required Object n}) => 'Recently added · Episode ${n}';
       case 'video_home_remaining_minutes':
         return ({required Object minutes}) => '${minutes} min remaining';
+      case 'video_discovery_tab':
+        return 'Discover';
+      case 'video_discovery_search_hint':
+        return 'Search movies, series, anime';
+      case 'video_discovery_hot':
+        return 'Popular now';
+      case 'video_discovery_seasonal_anime':
+        return 'Seasonal anime';
+      case 'video_discovery_all_works':
+        return 'All titles';
+      case 'video_discovery_search_results':
+        return 'Search results';
+      case 'video_discovery_provider_warning':
+        return 'Some providers are unavailable. Showing available results.';
+      case 'video_discovery_load_failed':
+        return 'Could not load discovery results.';
+      case 'video_discovery_empty':
+        return 'No matching titles.';
+      case 'video_discovery_resource_search':
+        return 'Search resources';
+      case 'video_discovery_subtitle_search':
+        return 'Search subtitles';
+      case 'video_discovery_subscribe':
+        return 'Subscribe';
+      case 'video_discovery_subscription_manage':
+        return 'Manage subscription';
+      case 'video_discovery_pipeline_idle':
+        return 'Not downloaded → Download → Organize → Subtitles → Scrape → Library';
+      case 'video_discovery_details_load_failed':
+        return 'Could not load title details.';
+      case 'video_discovery_sort_popularity':
+        return 'Popularity';
+      case 'video_discovery_sort_rating':
+        return 'Rating';
+      case 'video_discovery_sort_release':
+        return 'Release date';
+      case 'video_discovery_in_library':
+        return 'In library';
+      case 'video_discovery_play':
+        return 'Play';
+      case 'download_resources_tab':
+        return 'Resources';
+      case 'video_external_settings_section':
+        return 'External resource and subtitle providers';
+      case 'video_torznab_settings_title':
+        return 'Torznab indexers';
+      case 'video_torznab_settings_hint':
+        return 'Configure one or more Jackett, Prowlarr, or compatible Torznab endpoints. Secrets stay on this device.';
+      case 'video_torznab_add':
+        return 'Add indexer';
+      case 'video_torznab_name':
+        return 'Name';
+      case 'video_torznab_endpoint':
+        return 'Endpoint';
+      case 'video_torznab_endpoint_hint':
+        return 'HTTPS is required except for loopback addresses.';
+      case 'video_torznab_api_key':
+        return 'API key';
+      case 'video_torznab_priority':
+        return 'Priority';
+      case 'video_torznab_categories':
+        return 'Categories';
+      case 'video_torznab_categories_hint':
+        return 'Comma-separated numeric category IDs';
+      case 'video_external_enabled':
+        return 'Enabled';
+      case 'video_external_insecure_http':
+        return 'Allow insecure HTTP';
+      case 'video_external_insecure_http_hint':
+        return 'Use only for a trusted local network endpoint.';
+      case 'video_external_endpoint_invalid':
+        return 'Enter a valid endpoint without credentials, query parameters, or fragments.';
+      case 'video_opensubtitles_settings_title':
+        return 'OpenSubtitles';
+      case 'video_opensubtitles_settings_hint':
+        return 'API credentials and preferred subtitle languages stay on this device.';
+      case 'video_opensubtitles_user_agent':
+        return 'User-Agent';
+      case 'video_opensubtitles_languages':
+        return 'Preferred languages';
+      case 'video_opensubtitles_languages_hint':
+        return 'Comma-separated language codes, for example zh-CN,en,ja';
+      case 'video_download_path_mappings_title':
+        return 'qBittorrent path mappings';
+      case 'video_download_path_mappings_hint':
+        return 'Map each qBittorrent remote root to a locally accessible folder.';
+      case 'video_download_path_mapping_add':
+        return 'Add path mapping';
+      case 'video_download_backend_profile_id':
+        return 'Backend profile ID';
+      case 'video_download_remote_root':
+        return 'Remote root';
+      case 'video_download_local_root':
+        return 'Local root';
+      case 'video_download_target_source_title':
+        return 'Default managed video source';
+      case 'video_download_target_source_hint':
+        return 'New downloads are organized into this local video source.';
+      case 'video_download_target_source_none':
+        return 'Choose a local video source';
+      case 'video_external_remove':
+        return 'Remove';
+      case 'video_external_username_optional':
+        return 'Username (optional)';
+      case 'video_external_password_optional':
+        return 'Password (optional)';
+      case 'video_external_api_key':
+        return 'API key';
+      case 'video_external_save_error':
+        return 'The configuration could not be saved. Check the highlighted fields.';
+      case 'video_external_categories_invalid':
+        return 'Categories must be comma-separated numeric IDs.';
+      case 'video_download_path_mapping_invalid':
+        return 'Enter a profile ID, remote root, and absolute local root.';
+      case 'video_opensubtitles_endpoint':
+        return 'API endpoint';
+      case 'video_download_target_source_empty':
+        return 'No locally accessible video source is available. Add one on the Sources tab first.';
       default:
         return null;
     }
@@ -167895,8 +170911,6 @@ extension on _StringsJa {
         return 'Download backend is not configured yet.';
       case 'download_clear_finished':
         return 'Clear finished';
-      case 'download_discover_tab':
-        return 'Discover';
       case 'download_network_proxy_auto':
         return 'Auto';
       case 'download_network_proxy_auto_hint':
@@ -173070,6 +176084,124 @@ extension on _StringsJa {
         return ({required Object n}) => 'Recently added · Episode ${n}';
       case 'video_home_remaining_minutes':
         return ({required Object minutes}) => '${minutes} min remaining';
+      case 'video_discovery_tab':
+        return 'Discover';
+      case 'video_discovery_search_hint':
+        return 'Search movies, series, anime';
+      case 'video_discovery_hot':
+        return 'Popular now';
+      case 'video_discovery_seasonal_anime':
+        return 'Seasonal anime';
+      case 'video_discovery_all_works':
+        return 'All titles';
+      case 'video_discovery_search_results':
+        return 'Search results';
+      case 'video_discovery_provider_warning':
+        return 'Some providers are unavailable. Showing available results.';
+      case 'video_discovery_load_failed':
+        return 'Could not load discovery results.';
+      case 'video_discovery_empty':
+        return 'No matching titles.';
+      case 'video_discovery_resource_search':
+        return 'Search resources';
+      case 'video_discovery_subtitle_search':
+        return 'Search subtitles';
+      case 'video_discovery_subscribe':
+        return 'Subscribe';
+      case 'video_discovery_subscription_manage':
+        return 'Manage subscription';
+      case 'video_discovery_pipeline_idle':
+        return 'Not downloaded → Download → Organize → Subtitles → Scrape → Library';
+      case 'video_discovery_details_load_failed':
+        return 'Could not load title details.';
+      case 'video_discovery_sort_popularity':
+        return 'Popularity';
+      case 'video_discovery_sort_rating':
+        return 'Rating';
+      case 'video_discovery_sort_release':
+        return 'Release date';
+      case 'video_discovery_in_library':
+        return 'In library';
+      case 'video_discovery_play':
+        return 'Play';
+      case 'download_resources_tab':
+        return 'Resources';
+      case 'video_external_settings_section':
+        return 'External resource and subtitle providers';
+      case 'video_torznab_settings_title':
+        return 'Torznab indexers';
+      case 'video_torznab_settings_hint':
+        return 'Configure one or more Jackett, Prowlarr, or compatible Torznab endpoints. Secrets stay on this device.';
+      case 'video_torznab_add':
+        return 'Add indexer';
+      case 'video_torznab_name':
+        return 'Name';
+      case 'video_torznab_endpoint':
+        return 'Endpoint';
+      case 'video_torznab_endpoint_hint':
+        return 'HTTPS is required except for loopback addresses.';
+      case 'video_torznab_api_key':
+        return 'API key';
+      case 'video_torznab_priority':
+        return 'Priority';
+      case 'video_torznab_categories':
+        return 'Categories';
+      case 'video_torznab_categories_hint':
+        return 'Comma-separated numeric category IDs';
+      case 'video_external_enabled':
+        return 'Enabled';
+      case 'video_external_insecure_http':
+        return 'Allow insecure HTTP';
+      case 'video_external_insecure_http_hint':
+        return 'Use only for a trusted local network endpoint.';
+      case 'video_external_endpoint_invalid':
+        return 'Enter a valid endpoint without credentials, query parameters, or fragments.';
+      case 'video_opensubtitles_settings_title':
+        return 'OpenSubtitles';
+      case 'video_opensubtitles_settings_hint':
+        return 'API credentials and preferred subtitle languages stay on this device.';
+      case 'video_opensubtitles_user_agent':
+        return 'User-Agent';
+      case 'video_opensubtitles_languages':
+        return 'Preferred languages';
+      case 'video_opensubtitles_languages_hint':
+        return 'Comma-separated language codes, for example zh-CN,en,ja';
+      case 'video_download_path_mappings_title':
+        return 'qBittorrent path mappings';
+      case 'video_download_path_mappings_hint':
+        return 'Map each qBittorrent remote root to a locally accessible folder.';
+      case 'video_download_path_mapping_add':
+        return 'Add path mapping';
+      case 'video_download_backend_profile_id':
+        return 'Backend profile ID';
+      case 'video_download_remote_root':
+        return 'Remote root';
+      case 'video_download_local_root':
+        return 'Local root';
+      case 'video_download_target_source_title':
+        return 'Default managed video source';
+      case 'video_download_target_source_hint':
+        return 'New downloads are organized into this local video source.';
+      case 'video_download_target_source_none':
+        return 'Choose a local video source';
+      case 'video_external_remove':
+        return 'Remove';
+      case 'video_external_username_optional':
+        return 'Username (optional)';
+      case 'video_external_password_optional':
+        return 'Password (optional)';
+      case 'video_external_api_key':
+        return 'API key';
+      case 'video_external_save_error':
+        return 'The configuration could not be saved. Check the highlighted fields.';
+      case 'video_external_categories_invalid':
+        return 'Categories must be comma-separated numeric IDs.';
+      case 'video_download_path_mapping_invalid':
+        return 'Enter a profile ID, remote root, and absolute local root.';
+      case 'video_opensubtitles_endpoint':
+        return 'API endpoint';
+      case 'video_download_target_source_empty':
+        return 'No locally accessible video source is available. Add one on the Sources tab first.';
       default:
         return null;
     }
@@ -174402,8 +177534,6 @@ extension on _StringsKo {
         return 'Download backend is not configured yet.';
       case 'download_clear_finished':
         return 'Clear finished';
-      case 'download_discover_tab':
-        return 'Discover';
       case 'download_network_proxy_auto':
         return 'Auto';
       case 'download_network_proxy_auto_hint':
@@ -179580,6 +182710,124 @@ extension on _StringsKo {
         return ({required Object n}) => 'Recently added · Episode ${n}';
       case 'video_home_remaining_minutes':
         return ({required Object minutes}) => '${minutes} min remaining';
+      case 'video_discovery_tab':
+        return 'Discover';
+      case 'video_discovery_search_hint':
+        return 'Search movies, series, anime';
+      case 'video_discovery_hot':
+        return 'Popular now';
+      case 'video_discovery_seasonal_anime':
+        return 'Seasonal anime';
+      case 'video_discovery_all_works':
+        return 'All titles';
+      case 'video_discovery_search_results':
+        return 'Search results';
+      case 'video_discovery_provider_warning':
+        return 'Some providers are unavailable. Showing available results.';
+      case 'video_discovery_load_failed':
+        return 'Could not load discovery results.';
+      case 'video_discovery_empty':
+        return 'No matching titles.';
+      case 'video_discovery_resource_search':
+        return 'Search resources';
+      case 'video_discovery_subtitle_search':
+        return 'Search subtitles';
+      case 'video_discovery_subscribe':
+        return 'Subscribe';
+      case 'video_discovery_subscription_manage':
+        return 'Manage subscription';
+      case 'video_discovery_pipeline_idle':
+        return 'Not downloaded → Download → Organize → Subtitles → Scrape → Library';
+      case 'video_discovery_details_load_failed':
+        return 'Could not load title details.';
+      case 'video_discovery_sort_popularity':
+        return 'Popularity';
+      case 'video_discovery_sort_rating':
+        return 'Rating';
+      case 'video_discovery_sort_release':
+        return 'Release date';
+      case 'video_discovery_in_library':
+        return 'In library';
+      case 'video_discovery_play':
+        return 'Play';
+      case 'download_resources_tab':
+        return 'Resources';
+      case 'video_external_settings_section':
+        return 'External resource and subtitle providers';
+      case 'video_torznab_settings_title':
+        return 'Torznab indexers';
+      case 'video_torznab_settings_hint':
+        return 'Configure one or more Jackett, Prowlarr, or compatible Torznab endpoints. Secrets stay on this device.';
+      case 'video_torznab_add':
+        return 'Add indexer';
+      case 'video_torznab_name':
+        return 'Name';
+      case 'video_torznab_endpoint':
+        return 'Endpoint';
+      case 'video_torznab_endpoint_hint':
+        return 'HTTPS is required except for loopback addresses.';
+      case 'video_torznab_api_key':
+        return 'API key';
+      case 'video_torznab_priority':
+        return 'Priority';
+      case 'video_torznab_categories':
+        return 'Categories';
+      case 'video_torznab_categories_hint':
+        return 'Comma-separated numeric category IDs';
+      case 'video_external_enabled':
+        return 'Enabled';
+      case 'video_external_insecure_http':
+        return 'Allow insecure HTTP';
+      case 'video_external_insecure_http_hint':
+        return 'Use only for a trusted local network endpoint.';
+      case 'video_external_endpoint_invalid':
+        return 'Enter a valid endpoint without credentials, query parameters, or fragments.';
+      case 'video_opensubtitles_settings_title':
+        return 'OpenSubtitles';
+      case 'video_opensubtitles_settings_hint':
+        return 'API credentials and preferred subtitle languages stay on this device.';
+      case 'video_opensubtitles_user_agent':
+        return 'User-Agent';
+      case 'video_opensubtitles_languages':
+        return 'Preferred languages';
+      case 'video_opensubtitles_languages_hint':
+        return 'Comma-separated language codes, for example zh-CN,en,ja';
+      case 'video_download_path_mappings_title':
+        return 'qBittorrent path mappings';
+      case 'video_download_path_mappings_hint':
+        return 'Map each qBittorrent remote root to a locally accessible folder.';
+      case 'video_download_path_mapping_add':
+        return 'Add path mapping';
+      case 'video_download_backend_profile_id':
+        return 'Backend profile ID';
+      case 'video_download_remote_root':
+        return 'Remote root';
+      case 'video_download_local_root':
+        return 'Local root';
+      case 'video_download_target_source_title':
+        return 'Default managed video source';
+      case 'video_download_target_source_hint':
+        return 'New downloads are organized into this local video source.';
+      case 'video_download_target_source_none':
+        return 'Choose a local video source';
+      case 'video_external_remove':
+        return 'Remove';
+      case 'video_external_username_optional':
+        return 'Username (optional)';
+      case 'video_external_password_optional':
+        return 'Password (optional)';
+      case 'video_external_api_key':
+        return 'API key';
+      case 'video_external_save_error':
+        return 'The configuration could not be saved. Check the highlighted fields.';
+      case 'video_external_categories_invalid':
+        return 'Categories must be comma-separated numeric IDs.';
+      case 'video_download_path_mapping_invalid':
+        return 'Enter a profile ID, remote root, and absolute local root.';
+      case 'video_opensubtitles_endpoint':
+        return 'API endpoint';
+      case 'video_download_target_source_empty':
+        return 'No locally accessible video source is available. Add one on the Sources tab first.';
       default:
         return null;
     }
@@ -180922,8 +184170,6 @@ extension on _StringsNl {
         return 'Download backend is not configured yet.';
       case 'download_clear_finished':
         return 'Clear finished';
-      case 'download_discover_tab':
-        return 'Discover';
       case 'download_network_proxy_auto':
         return 'Auto';
       case 'download_network_proxy_auto_hint':
@@ -186118,6 +189364,124 @@ extension on _StringsNl {
         return ({required Object n}) => 'Recently added · Episode ${n}';
       case 'video_home_remaining_minutes':
         return ({required Object minutes}) => '${minutes} min remaining';
+      case 'video_discovery_tab':
+        return 'Discover';
+      case 'video_discovery_search_hint':
+        return 'Search movies, series, anime';
+      case 'video_discovery_hot':
+        return 'Popular now';
+      case 'video_discovery_seasonal_anime':
+        return 'Seasonal anime';
+      case 'video_discovery_all_works':
+        return 'All titles';
+      case 'video_discovery_search_results':
+        return 'Search results';
+      case 'video_discovery_provider_warning':
+        return 'Some providers are unavailable. Showing available results.';
+      case 'video_discovery_load_failed':
+        return 'Could not load discovery results.';
+      case 'video_discovery_empty':
+        return 'No matching titles.';
+      case 'video_discovery_resource_search':
+        return 'Search resources';
+      case 'video_discovery_subtitle_search':
+        return 'Search subtitles';
+      case 'video_discovery_subscribe':
+        return 'Subscribe';
+      case 'video_discovery_subscription_manage':
+        return 'Manage subscription';
+      case 'video_discovery_pipeline_idle':
+        return 'Not downloaded → Download → Organize → Subtitles → Scrape → Library';
+      case 'video_discovery_details_load_failed':
+        return 'Could not load title details.';
+      case 'video_discovery_sort_popularity':
+        return 'Popularity';
+      case 'video_discovery_sort_rating':
+        return 'Rating';
+      case 'video_discovery_sort_release':
+        return 'Release date';
+      case 'video_discovery_in_library':
+        return 'In library';
+      case 'video_discovery_play':
+        return 'Play';
+      case 'download_resources_tab':
+        return 'Resources';
+      case 'video_external_settings_section':
+        return 'External resource and subtitle providers';
+      case 'video_torznab_settings_title':
+        return 'Torznab indexers';
+      case 'video_torznab_settings_hint':
+        return 'Configure one or more Jackett, Prowlarr, or compatible Torznab endpoints. Secrets stay on this device.';
+      case 'video_torznab_add':
+        return 'Add indexer';
+      case 'video_torznab_name':
+        return 'Name';
+      case 'video_torznab_endpoint':
+        return 'Endpoint';
+      case 'video_torznab_endpoint_hint':
+        return 'HTTPS is required except for loopback addresses.';
+      case 'video_torznab_api_key':
+        return 'API key';
+      case 'video_torznab_priority':
+        return 'Priority';
+      case 'video_torznab_categories':
+        return 'Categories';
+      case 'video_torznab_categories_hint':
+        return 'Comma-separated numeric category IDs';
+      case 'video_external_enabled':
+        return 'Enabled';
+      case 'video_external_insecure_http':
+        return 'Allow insecure HTTP';
+      case 'video_external_insecure_http_hint':
+        return 'Use only for a trusted local network endpoint.';
+      case 'video_external_endpoint_invalid':
+        return 'Enter a valid endpoint without credentials, query parameters, or fragments.';
+      case 'video_opensubtitles_settings_title':
+        return 'OpenSubtitles';
+      case 'video_opensubtitles_settings_hint':
+        return 'API credentials and preferred subtitle languages stay on this device.';
+      case 'video_opensubtitles_user_agent':
+        return 'User-Agent';
+      case 'video_opensubtitles_languages':
+        return 'Preferred languages';
+      case 'video_opensubtitles_languages_hint':
+        return 'Comma-separated language codes, for example zh-CN,en,ja';
+      case 'video_download_path_mappings_title':
+        return 'qBittorrent path mappings';
+      case 'video_download_path_mappings_hint':
+        return 'Map each qBittorrent remote root to a locally accessible folder.';
+      case 'video_download_path_mapping_add':
+        return 'Add path mapping';
+      case 'video_download_backend_profile_id':
+        return 'Backend profile ID';
+      case 'video_download_remote_root':
+        return 'Remote root';
+      case 'video_download_local_root':
+        return 'Local root';
+      case 'video_download_target_source_title':
+        return 'Default managed video source';
+      case 'video_download_target_source_hint':
+        return 'New downloads are organized into this local video source.';
+      case 'video_download_target_source_none':
+        return 'Choose a local video source';
+      case 'video_external_remove':
+        return 'Remove';
+      case 'video_external_username_optional':
+        return 'Username (optional)';
+      case 'video_external_password_optional':
+        return 'Password (optional)';
+      case 'video_external_api_key':
+        return 'API key';
+      case 'video_external_save_error':
+        return 'The configuration could not be saved. Check the highlighted fields.';
+      case 'video_external_categories_invalid':
+        return 'Categories must be comma-separated numeric IDs.';
+      case 'video_download_path_mapping_invalid':
+        return 'Enter a profile ID, remote root, and absolute local root.';
+      case 'video_opensubtitles_endpoint':
+        return 'API endpoint';
+      case 'video_download_target_source_empty':
+        return 'No locally accessible video source is available. Add one on the Sources tab first.';
       default:
         return null;
     }
@@ -187459,8 +190823,6 @@ extension on _StringsPtBr {
         return 'Download backend is not configured yet.';
       case 'download_clear_finished':
         return 'Clear finished';
-      case 'download_discover_tab':
-        return 'Discover';
       case 'download_network_proxy_auto':
         return 'Auto';
       case 'download_network_proxy_auto_hint':
@@ -192653,6 +196015,124 @@ extension on _StringsPtBr {
         return ({required Object n}) => 'Recently added · Episode ${n}';
       case 'video_home_remaining_minutes':
         return ({required Object minutes}) => '${minutes} min remaining';
+      case 'video_discovery_tab':
+        return 'Discover';
+      case 'video_discovery_search_hint':
+        return 'Search movies, series, anime';
+      case 'video_discovery_hot':
+        return 'Popular now';
+      case 'video_discovery_seasonal_anime':
+        return 'Seasonal anime';
+      case 'video_discovery_all_works':
+        return 'All titles';
+      case 'video_discovery_search_results':
+        return 'Search results';
+      case 'video_discovery_provider_warning':
+        return 'Some providers are unavailable. Showing available results.';
+      case 'video_discovery_load_failed':
+        return 'Could not load discovery results.';
+      case 'video_discovery_empty':
+        return 'No matching titles.';
+      case 'video_discovery_resource_search':
+        return 'Search resources';
+      case 'video_discovery_subtitle_search':
+        return 'Search subtitles';
+      case 'video_discovery_subscribe':
+        return 'Subscribe';
+      case 'video_discovery_subscription_manage':
+        return 'Manage subscription';
+      case 'video_discovery_pipeline_idle':
+        return 'Not downloaded → Download → Organize → Subtitles → Scrape → Library';
+      case 'video_discovery_details_load_failed':
+        return 'Could not load title details.';
+      case 'video_discovery_sort_popularity':
+        return 'Popularity';
+      case 'video_discovery_sort_rating':
+        return 'Rating';
+      case 'video_discovery_sort_release':
+        return 'Release date';
+      case 'video_discovery_in_library':
+        return 'In library';
+      case 'video_discovery_play':
+        return 'Play';
+      case 'download_resources_tab':
+        return 'Resources';
+      case 'video_external_settings_section':
+        return 'External resource and subtitle providers';
+      case 'video_torznab_settings_title':
+        return 'Torznab indexers';
+      case 'video_torznab_settings_hint':
+        return 'Configure one or more Jackett, Prowlarr, or compatible Torznab endpoints. Secrets stay on this device.';
+      case 'video_torznab_add':
+        return 'Add indexer';
+      case 'video_torznab_name':
+        return 'Name';
+      case 'video_torznab_endpoint':
+        return 'Endpoint';
+      case 'video_torznab_endpoint_hint':
+        return 'HTTPS is required except for loopback addresses.';
+      case 'video_torznab_api_key':
+        return 'API key';
+      case 'video_torznab_priority':
+        return 'Priority';
+      case 'video_torznab_categories':
+        return 'Categories';
+      case 'video_torznab_categories_hint':
+        return 'Comma-separated numeric category IDs';
+      case 'video_external_enabled':
+        return 'Enabled';
+      case 'video_external_insecure_http':
+        return 'Allow insecure HTTP';
+      case 'video_external_insecure_http_hint':
+        return 'Use only for a trusted local network endpoint.';
+      case 'video_external_endpoint_invalid':
+        return 'Enter a valid endpoint without credentials, query parameters, or fragments.';
+      case 'video_opensubtitles_settings_title':
+        return 'OpenSubtitles';
+      case 'video_opensubtitles_settings_hint':
+        return 'API credentials and preferred subtitle languages stay on this device.';
+      case 'video_opensubtitles_user_agent':
+        return 'User-Agent';
+      case 'video_opensubtitles_languages':
+        return 'Preferred languages';
+      case 'video_opensubtitles_languages_hint':
+        return 'Comma-separated language codes, for example zh-CN,en,ja';
+      case 'video_download_path_mappings_title':
+        return 'qBittorrent path mappings';
+      case 'video_download_path_mappings_hint':
+        return 'Map each qBittorrent remote root to a locally accessible folder.';
+      case 'video_download_path_mapping_add':
+        return 'Add path mapping';
+      case 'video_download_backend_profile_id':
+        return 'Backend profile ID';
+      case 'video_download_remote_root':
+        return 'Remote root';
+      case 'video_download_local_root':
+        return 'Local root';
+      case 'video_download_target_source_title':
+        return 'Default managed video source';
+      case 'video_download_target_source_hint':
+        return 'New downloads are organized into this local video source.';
+      case 'video_download_target_source_none':
+        return 'Choose a local video source';
+      case 'video_external_remove':
+        return 'Remove';
+      case 'video_external_username_optional':
+        return 'Username (optional)';
+      case 'video_external_password_optional':
+        return 'Password (optional)';
+      case 'video_external_api_key':
+        return 'API key';
+      case 'video_external_save_error':
+        return 'The configuration could not be saved. Check the highlighted fields.';
+      case 'video_external_categories_invalid':
+        return 'Categories must be comma-separated numeric IDs.';
+      case 'video_download_path_mapping_invalid':
+        return 'Enter a profile ID, remote root, and absolute local root.';
+      case 'video_opensubtitles_endpoint':
+        return 'API endpoint';
+      case 'video_download_target_source_empty':
+        return 'No locally accessible video source is available. Add one on the Sources tab first.';
       default:
         return null;
     }
@@ -193997,8 +197477,6 @@ extension on _StringsRu {
         return 'Download backend is not configured yet.';
       case 'download_clear_finished':
         return 'Clear finished';
-      case 'download_discover_tab':
-        return 'Discover';
       case 'download_network_proxy_auto':
         return 'Auto';
       case 'download_network_proxy_auto_hint':
@@ -199193,6 +202671,124 @@ extension on _StringsRu {
         return ({required Object n}) => 'Recently added · Episode ${n}';
       case 'video_home_remaining_minutes':
         return ({required Object minutes}) => '${minutes} min remaining';
+      case 'video_discovery_tab':
+        return 'Discover';
+      case 'video_discovery_search_hint':
+        return 'Search movies, series, anime';
+      case 'video_discovery_hot':
+        return 'Popular now';
+      case 'video_discovery_seasonal_anime':
+        return 'Seasonal anime';
+      case 'video_discovery_all_works':
+        return 'All titles';
+      case 'video_discovery_search_results':
+        return 'Search results';
+      case 'video_discovery_provider_warning':
+        return 'Some providers are unavailable. Showing available results.';
+      case 'video_discovery_load_failed':
+        return 'Could not load discovery results.';
+      case 'video_discovery_empty':
+        return 'No matching titles.';
+      case 'video_discovery_resource_search':
+        return 'Search resources';
+      case 'video_discovery_subtitle_search':
+        return 'Search subtitles';
+      case 'video_discovery_subscribe':
+        return 'Subscribe';
+      case 'video_discovery_subscription_manage':
+        return 'Manage subscription';
+      case 'video_discovery_pipeline_idle':
+        return 'Not downloaded → Download → Organize → Subtitles → Scrape → Library';
+      case 'video_discovery_details_load_failed':
+        return 'Could not load title details.';
+      case 'video_discovery_sort_popularity':
+        return 'Popularity';
+      case 'video_discovery_sort_rating':
+        return 'Rating';
+      case 'video_discovery_sort_release':
+        return 'Release date';
+      case 'video_discovery_in_library':
+        return 'In library';
+      case 'video_discovery_play':
+        return 'Play';
+      case 'download_resources_tab':
+        return 'Resources';
+      case 'video_external_settings_section':
+        return 'External resource and subtitle providers';
+      case 'video_torznab_settings_title':
+        return 'Torznab indexers';
+      case 'video_torznab_settings_hint':
+        return 'Configure one or more Jackett, Prowlarr, or compatible Torznab endpoints. Secrets stay on this device.';
+      case 'video_torznab_add':
+        return 'Add indexer';
+      case 'video_torznab_name':
+        return 'Name';
+      case 'video_torznab_endpoint':
+        return 'Endpoint';
+      case 'video_torznab_endpoint_hint':
+        return 'HTTPS is required except for loopback addresses.';
+      case 'video_torznab_api_key':
+        return 'API key';
+      case 'video_torznab_priority':
+        return 'Priority';
+      case 'video_torznab_categories':
+        return 'Categories';
+      case 'video_torznab_categories_hint':
+        return 'Comma-separated numeric category IDs';
+      case 'video_external_enabled':
+        return 'Enabled';
+      case 'video_external_insecure_http':
+        return 'Allow insecure HTTP';
+      case 'video_external_insecure_http_hint':
+        return 'Use only for a trusted local network endpoint.';
+      case 'video_external_endpoint_invalid':
+        return 'Enter a valid endpoint without credentials, query parameters, or fragments.';
+      case 'video_opensubtitles_settings_title':
+        return 'OpenSubtitles';
+      case 'video_opensubtitles_settings_hint':
+        return 'API credentials and preferred subtitle languages stay on this device.';
+      case 'video_opensubtitles_user_agent':
+        return 'User-Agent';
+      case 'video_opensubtitles_languages':
+        return 'Preferred languages';
+      case 'video_opensubtitles_languages_hint':
+        return 'Comma-separated language codes, for example zh-CN,en,ja';
+      case 'video_download_path_mappings_title':
+        return 'qBittorrent path mappings';
+      case 'video_download_path_mappings_hint':
+        return 'Map each qBittorrent remote root to a locally accessible folder.';
+      case 'video_download_path_mapping_add':
+        return 'Add path mapping';
+      case 'video_download_backend_profile_id':
+        return 'Backend profile ID';
+      case 'video_download_remote_root':
+        return 'Remote root';
+      case 'video_download_local_root':
+        return 'Local root';
+      case 'video_download_target_source_title':
+        return 'Default managed video source';
+      case 'video_download_target_source_hint':
+        return 'New downloads are organized into this local video source.';
+      case 'video_download_target_source_none':
+        return 'Choose a local video source';
+      case 'video_external_remove':
+        return 'Remove';
+      case 'video_external_username_optional':
+        return 'Username (optional)';
+      case 'video_external_password_optional':
+        return 'Password (optional)';
+      case 'video_external_api_key':
+        return 'API key';
+      case 'video_external_save_error':
+        return 'The configuration could not be saved. Check the highlighted fields.';
+      case 'video_external_categories_invalid':
+        return 'Categories must be comma-separated numeric IDs.';
+      case 'video_download_path_mapping_invalid':
+        return 'Enter a profile ID, remote root, and absolute local root.';
+      case 'video_opensubtitles_endpoint':
+        return 'API endpoint';
+      case 'video_download_target_source_empty':
+        return 'No locally accessible video source is available. Add one on the Sources tab first.';
       default:
         return null;
     }
@@ -200529,8 +204125,6 @@ extension on _StringsTh {
         return 'Download backend is not configured yet.';
       case 'download_clear_finished':
         return 'Clear finished';
-      case 'download_discover_tab':
-        return 'Discover';
       case 'download_network_proxy_auto':
         return 'Auto';
       case 'download_network_proxy_auto_hint':
@@ -205716,6 +209310,124 @@ extension on _StringsTh {
         return ({required Object n}) => 'Recently added · Episode ${n}';
       case 'video_home_remaining_minutes':
         return ({required Object minutes}) => '${minutes} min remaining';
+      case 'video_discovery_tab':
+        return 'Discover';
+      case 'video_discovery_search_hint':
+        return 'Search movies, series, anime';
+      case 'video_discovery_hot':
+        return 'Popular now';
+      case 'video_discovery_seasonal_anime':
+        return 'Seasonal anime';
+      case 'video_discovery_all_works':
+        return 'All titles';
+      case 'video_discovery_search_results':
+        return 'Search results';
+      case 'video_discovery_provider_warning':
+        return 'Some providers are unavailable. Showing available results.';
+      case 'video_discovery_load_failed':
+        return 'Could not load discovery results.';
+      case 'video_discovery_empty':
+        return 'No matching titles.';
+      case 'video_discovery_resource_search':
+        return 'Search resources';
+      case 'video_discovery_subtitle_search':
+        return 'Search subtitles';
+      case 'video_discovery_subscribe':
+        return 'Subscribe';
+      case 'video_discovery_subscription_manage':
+        return 'Manage subscription';
+      case 'video_discovery_pipeline_idle':
+        return 'Not downloaded → Download → Organize → Subtitles → Scrape → Library';
+      case 'video_discovery_details_load_failed':
+        return 'Could not load title details.';
+      case 'video_discovery_sort_popularity':
+        return 'Popularity';
+      case 'video_discovery_sort_rating':
+        return 'Rating';
+      case 'video_discovery_sort_release':
+        return 'Release date';
+      case 'video_discovery_in_library':
+        return 'In library';
+      case 'video_discovery_play':
+        return 'Play';
+      case 'download_resources_tab':
+        return 'Resources';
+      case 'video_external_settings_section':
+        return 'External resource and subtitle providers';
+      case 'video_torznab_settings_title':
+        return 'Torznab indexers';
+      case 'video_torznab_settings_hint':
+        return 'Configure one or more Jackett, Prowlarr, or compatible Torznab endpoints. Secrets stay on this device.';
+      case 'video_torznab_add':
+        return 'Add indexer';
+      case 'video_torznab_name':
+        return 'Name';
+      case 'video_torznab_endpoint':
+        return 'Endpoint';
+      case 'video_torznab_endpoint_hint':
+        return 'HTTPS is required except for loopback addresses.';
+      case 'video_torznab_api_key':
+        return 'API key';
+      case 'video_torznab_priority':
+        return 'Priority';
+      case 'video_torznab_categories':
+        return 'Categories';
+      case 'video_torznab_categories_hint':
+        return 'Comma-separated numeric category IDs';
+      case 'video_external_enabled':
+        return 'Enabled';
+      case 'video_external_insecure_http':
+        return 'Allow insecure HTTP';
+      case 'video_external_insecure_http_hint':
+        return 'Use only for a trusted local network endpoint.';
+      case 'video_external_endpoint_invalid':
+        return 'Enter a valid endpoint without credentials, query parameters, or fragments.';
+      case 'video_opensubtitles_settings_title':
+        return 'OpenSubtitles';
+      case 'video_opensubtitles_settings_hint':
+        return 'API credentials and preferred subtitle languages stay on this device.';
+      case 'video_opensubtitles_user_agent':
+        return 'User-Agent';
+      case 'video_opensubtitles_languages':
+        return 'Preferred languages';
+      case 'video_opensubtitles_languages_hint':
+        return 'Comma-separated language codes, for example zh-CN,en,ja';
+      case 'video_download_path_mappings_title':
+        return 'qBittorrent path mappings';
+      case 'video_download_path_mappings_hint':
+        return 'Map each qBittorrent remote root to a locally accessible folder.';
+      case 'video_download_path_mapping_add':
+        return 'Add path mapping';
+      case 'video_download_backend_profile_id':
+        return 'Backend profile ID';
+      case 'video_download_remote_root':
+        return 'Remote root';
+      case 'video_download_local_root':
+        return 'Local root';
+      case 'video_download_target_source_title':
+        return 'Default managed video source';
+      case 'video_download_target_source_hint':
+        return 'New downloads are organized into this local video source.';
+      case 'video_download_target_source_none':
+        return 'Choose a local video source';
+      case 'video_external_remove':
+        return 'Remove';
+      case 'video_external_username_optional':
+        return 'Username (optional)';
+      case 'video_external_password_optional':
+        return 'Password (optional)';
+      case 'video_external_api_key':
+        return 'API key';
+      case 'video_external_save_error':
+        return 'The configuration could not be saved. Check the highlighted fields.';
+      case 'video_external_categories_invalid':
+        return 'Categories must be comma-separated numeric IDs.';
+      case 'video_download_path_mapping_invalid':
+        return 'Enter a profile ID, remote root, and absolute local root.';
+      case 'video_opensubtitles_endpoint':
+        return 'API endpoint';
+      case 'video_download_target_source_empty':
+        return 'No locally accessible video source is available. Add one on the Sources tab first.';
       default:
         return null;
     }
@@ -207057,8 +210769,6 @@ extension on _StringsTr {
         return 'Download backend is not configured yet.';
       case 'download_clear_finished':
         return 'Clear finished';
-      case 'download_discover_tab':
-        return 'Discover';
       case 'download_network_proxy_auto':
         return 'Auto';
       case 'download_network_proxy_auto_hint':
@@ -212248,6 +215958,124 @@ extension on _StringsTr {
         return ({required Object n}) => 'Recently added · Episode ${n}';
       case 'video_home_remaining_minutes':
         return ({required Object minutes}) => '${minutes} min remaining';
+      case 'video_discovery_tab':
+        return 'Discover';
+      case 'video_discovery_search_hint':
+        return 'Search movies, series, anime';
+      case 'video_discovery_hot':
+        return 'Popular now';
+      case 'video_discovery_seasonal_anime':
+        return 'Seasonal anime';
+      case 'video_discovery_all_works':
+        return 'All titles';
+      case 'video_discovery_search_results':
+        return 'Search results';
+      case 'video_discovery_provider_warning':
+        return 'Some providers are unavailable. Showing available results.';
+      case 'video_discovery_load_failed':
+        return 'Could not load discovery results.';
+      case 'video_discovery_empty':
+        return 'No matching titles.';
+      case 'video_discovery_resource_search':
+        return 'Search resources';
+      case 'video_discovery_subtitle_search':
+        return 'Search subtitles';
+      case 'video_discovery_subscribe':
+        return 'Subscribe';
+      case 'video_discovery_subscription_manage':
+        return 'Manage subscription';
+      case 'video_discovery_pipeline_idle':
+        return 'Not downloaded → Download → Organize → Subtitles → Scrape → Library';
+      case 'video_discovery_details_load_failed':
+        return 'Could not load title details.';
+      case 'video_discovery_sort_popularity':
+        return 'Popularity';
+      case 'video_discovery_sort_rating':
+        return 'Rating';
+      case 'video_discovery_sort_release':
+        return 'Release date';
+      case 'video_discovery_in_library':
+        return 'In library';
+      case 'video_discovery_play':
+        return 'Play';
+      case 'download_resources_tab':
+        return 'Resources';
+      case 'video_external_settings_section':
+        return 'External resource and subtitle providers';
+      case 'video_torznab_settings_title':
+        return 'Torznab indexers';
+      case 'video_torznab_settings_hint':
+        return 'Configure one or more Jackett, Prowlarr, or compatible Torznab endpoints. Secrets stay on this device.';
+      case 'video_torznab_add':
+        return 'Add indexer';
+      case 'video_torznab_name':
+        return 'Name';
+      case 'video_torznab_endpoint':
+        return 'Endpoint';
+      case 'video_torznab_endpoint_hint':
+        return 'HTTPS is required except for loopback addresses.';
+      case 'video_torznab_api_key':
+        return 'API key';
+      case 'video_torznab_priority':
+        return 'Priority';
+      case 'video_torznab_categories':
+        return 'Categories';
+      case 'video_torznab_categories_hint':
+        return 'Comma-separated numeric category IDs';
+      case 'video_external_enabled':
+        return 'Enabled';
+      case 'video_external_insecure_http':
+        return 'Allow insecure HTTP';
+      case 'video_external_insecure_http_hint':
+        return 'Use only for a trusted local network endpoint.';
+      case 'video_external_endpoint_invalid':
+        return 'Enter a valid endpoint without credentials, query parameters, or fragments.';
+      case 'video_opensubtitles_settings_title':
+        return 'OpenSubtitles';
+      case 'video_opensubtitles_settings_hint':
+        return 'API credentials and preferred subtitle languages stay on this device.';
+      case 'video_opensubtitles_user_agent':
+        return 'User-Agent';
+      case 'video_opensubtitles_languages':
+        return 'Preferred languages';
+      case 'video_opensubtitles_languages_hint':
+        return 'Comma-separated language codes, for example zh-CN,en,ja';
+      case 'video_download_path_mappings_title':
+        return 'qBittorrent path mappings';
+      case 'video_download_path_mappings_hint':
+        return 'Map each qBittorrent remote root to a locally accessible folder.';
+      case 'video_download_path_mapping_add':
+        return 'Add path mapping';
+      case 'video_download_backend_profile_id':
+        return 'Backend profile ID';
+      case 'video_download_remote_root':
+        return 'Remote root';
+      case 'video_download_local_root':
+        return 'Local root';
+      case 'video_download_target_source_title':
+        return 'Default managed video source';
+      case 'video_download_target_source_hint':
+        return 'New downloads are organized into this local video source.';
+      case 'video_download_target_source_none':
+        return 'Choose a local video source';
+      case 'video_external_remove':
+        return 'Remove';
+      case 'video_external_username_optional':
+        return 'Username (optional)';
+      case 'video_external_password_optional':
+        return 'Password (optional)';
+      case 'video_external_api_key':
+        return 'API key';
+      case 'video_external_save_error':
+        return 'The configuration could not be saved. Check the highlighted fields.';
+      case 'video_external_categories_invalid':
+        return 'Categories must be comma-separated numeric IDs.';
+      case 'video_download_path_mapping_invalid':
+        return 'Enter a profile ID, remote root, and absolute local root.';
+      case 'video_opensubtitles_endpoint':
+        return 'API endpoint';
+      case 'video_download_target_source_empty':
+        return 'No locally accessible video source is available. Add one on the Sources tab first.';
       default:
         return null;
     }
@@ -213587,8 +217415,6 @@ extension on _StringsVi {
         return 'Download backend is not configured yet.';
       case 'download_clear_finished':
         return 'Clear finished';
-      case 'download_discover_tab':
-        return 'Discover';
       case 'download_network_proxy_auto':
         return 'Auto';
       case 'download_network_proxy_auto_hint':
@@ -218776,6 +222602,124 @@ extension on _StringsVi {
         return ({required Object n}) => 'Recently added · Episode ${n}';
       case 'video_home_remaining_minutes':
         return ({required Object minutes}) => '${minutes} min remaining';
+      case 'video_discovery_tab':
+        return 'Discover';
+      case 'video_discovery_search_hint':
+        return 'Search movies, series, anime';
+      case 'video_discovery_hot':
+        return 'Popular now';
+      case 'video_discovery_seasonal_anime':
+        return 'Seasonal anime';
+      case 'video_discovery_all_works':
+        return 'All titles';
+      case 'video_discovery_search_results':
+        return 'Search results';
+      case 'video_discovery_provider_warning':
+        return 'Some providers are unavailable. Showing available results.';
+      case 'video_discovery_load_failed':
+        return 'Could not load discovery results.';
+      case 'video_discovery_empty':
+        return 'No matching titles.';
+      case 'video_discovery_resource_search':
+        return 'Search resources';
+      case 'video_discovery_subtitle_search':
+        return 'Search subtitles';
+      case 'video_discovery_subscribe':
+        return 'Subscribe';
+      case 'video_discovery_subscription_manage':
+        return 'Manage subscription';
+      case 'video_discovery_pipeline_idle':
+        return 'Not downloaded → Download → Organize → Subtitles → Scrape → Library';
+      case 'video_discovery_details_load_failed':
+        return 'Could not load title details.';
+      case 'video_discovery_sort_popularity':
+        return 'Popularity';
+      case 'video_discovery_sort_rating':
+        return 'Rating';
+      case 'video_discovery_sort_release':
+        return 'Release date';
+      case 'video_discovery_in_library':
+        return 'In library';
+      case 'video_discovery_play':
+        return 'Play';
+      case 'download_resources_tab':
+        return 'Resources';
+      case 'video_external_settings_section':
+        return 'External resource and subtitle providers';
+      case 'video_torznab_settings_title':
+        return 'Torznab indexers';
+      case 'video_torznab_settings_hint':
+        return 'Configure one or more Jackett, Prowlarr, or compatible Torznab endpoints. Secrets stay on this device.';
+      case 'video_torznab_add':
+        return 'Add indexer';
+      case 'video_torznab_name':
+        return 'Name';
+      case 'video_torznab_endpoint':
+        return 'Endpoint';
+      case 'video_torznab_endpoint_hint':
+        return 'HTTPS is required except for loopback addresses.';
+      case 'video_torznab_api_key':
+        return 'API key';
+      case 'video_torznab_priority':
+        return 'Priority';
+      case 'video_torznab_categories':
+        return 'Categories';
+      case 'video_torznab_categories_hint':
+        return 'Comma-separated numeric category IDs';
+      case 'video_external_enabled':
+        return 'Enabled';
+      case 'video_external_insecure_http':
+        return 'Allow insecure HTTP';
+      case 'video_external_insecure_http_hint':
+        return 'Use only for a trusted local network endpoint.';
+      case 'video_external_endpoint_invalid':
+        return 'Enter a valid endpoint without credentials, query parameters, or fragments.';
+      case 'video_opensubtitles_settings_title':
+        return 'OpenSubtitles';
+      case 'video_opensubtitles_settings_hint':
+        return 'API credentials and preferred subtitle languages stay on this device.';
+      case 'video_opensubtitles_user_agent':
+        return 'User-Agent';
+      case 'video_opensubtitles_languages':
+        return 'Preferred languages';
+      case 'video_opensubtitles_languages_hint':
+        return 'Comma-separated language codes, for example zh-CN,en,ja';
+      case 'video_download_path_mappings_title':
+        return 'qBittorrent path mappings';
+      case 'video_download_path_mappings_hint':
+        return 'Map each qBittorrent remote root to a locally accessible folder.';
+      case 'video_download_path_mapping_add':
+        return 'Add path mapping';
+      case 'video_download_backend_profile_id':
+        return 'Backend profile ID';
+      case 'video_download_remote_root':
+        return 'Remote root';
+      case 'video_download_local_root':
+        return 'Local root';
+      case 'video_download_target_source_title':
+        return 'Default managed video source';
+      case 'video_download_target_source_hint':
+        return 'New downloads are organized into this local video source.';
+      case 'video_download_target_source_none':
+        return 'Choose a local video source';
+      case 'video_external_remove':
+        return 'Remove';
+      case 'video_external_username_optional':
+        return 'Username (optional)';
+      case 'video_external_password_optional':
+        return 'Password (optional)';
+      case 'video_external_api_key':
+        return 'API key';
+      case 'video_external_save_error':
+        return 'The configuration could not be saved. Check the highlighted fields.';
+      case 'video_external_categories_invalid':
+        return 'Categories must be comma-separated numeric IDs.';
+      case 'video_download_path_mapping_invalid':
+        return 'Enter a profile ID, remote root, and absolute local root.';
+      case 'video_opensubtitles_endpoint':
+        return 'API endpoint';
+      case 'video_download_target_source_empty':
+        return 'No locally accessible video source is available. Add one on the Sources tab first.';
       default:
         return null;
     }
@@ -220101,8 +224045,6 @@ extension on _StringsZhCn {
         return '请先配置下载后端。';
       case 'download_clear_finished':
         return '清除已完成';
-      case 'download_discover_tab':
-        return '发现';
       case 'download_network_proxy_auto':
         return '自动';
       case 'download_network_proxy_auto_hint':
@@ -225250,6 +229192,124 @@ extension on _StringsZhCn {
         return ({required Object n}) => '最近添加 · 第 ${n} 集';
       case 'video_home_remaining_minutes':
         return ({required Object minutes}) => '剩余 ${minutes} 分钟';
+      case 'video_discovery_tab':
+        return '发现';
+      case 'video_discovery_search_hint':
+        return '搜索电影、剧集、动漫';
+      case 'video_discovery_hot':
+        return '热门推荐';
+      case 'video_discovery_seasonal_anime':
+        return '本季动漫';
+      case 'video_discovery_all_works':
+        return '全部作品';
+      case 'video_discovery_search_results':
+        return '搜索结果';
+      case 'video_discovery_provider_warning':
+        return '部分来源暂不可用，已显示其余结果';
+      case 'video_discovery_load_failed':
+        return '发现内容加载失败';
+      case 'video_discovery_empty':
+        return '没有匹配的作品';
+      case 'video_discovery_resource_search':
+        return '搜索资源';
+      case 'video_discovery_subtitle_search':
+        return '搜索字幕';
+      case 'video_discovery_subscribe':
+        return '订阅';
+      case 'video_discovery_subscription_manage':
+        return '管理订阅';
+      case 'video_discovery_pipeline_idle':
+        return '未下载 → 下载 → 整理 → 字幕 → 刮削 → 入库';
+      case 'video_discovery_details_load_failed':
+        return '作品详情加载失败';
+      case 'video_discovery_sort_popularity':
+        return '热度';
+      case 'video_discovery_sort_rating':
+        return '评分';
+      case 'video_discovery_sort_release':
+        return '上映时间';
+      case 'video_discovery_in_library':
+        return '已入库';
+      case 'video_discovery_play':
+        return '播放';
+      case 'download_resources_tab':
+        return '资源';
+      case 'video_external_settings_section':
+        return '外部资源与字幕来源';
+      case 'video_torznab_settings_title':
+        return 'Torznab 索引器';
+      case 'video_torznab_settings_hint':
+        return '配置一个或多个 Jackett、Prowlarr 或兼容的 Torznab 端点。密钥仅保存在本机。';
+      case 'video_torznab_add':
+        return '添加索引器';
+      case 'video_torznab_name':
+        return '名称';
+      case 'video_torznab_endpoint':
+        return '端点';
+      case 'video_torznab_endpoint_hint':
+        return '除回环地址外必须使用 HTTPS。';
+      case 'video_torznab_api_key':
+        return 'API 密钥';
+      case 'video_torznab_priority':
+        return '优先级';
+      case 'video_torznab_categories':
+        return '分类';
+      case 'video_torznab_categories_hint':
+        return '用逗号分隔的数字分类 ID';
+      case 'video_external_enabled':
+        return '已启用';
+      case 'video_external_insecure_http':
+        return '允许不安全的 HTTP';
+      case 'video_external_insecure_http_hint':
+        return '仅用于可信的局域网端点。';
+      case 'video_external_endpoint_invalid':
+        return '请输入不含凭据、查询参数或片段的有效端点。';
+      case 'video_opensubtitles_settings_title':
+        return 'OpenSubtitles';
+      case 'video_opensubtitles_settings_hint':
+        return 'API 凭据和首选字幕语言仅保存在本机。';
+      case 'video_opensubtitles_user_agent':
+        return 'User-Agent';
+      case 'video_opensubtitles_languages':
+        return '首选语言';
+      case 'video_opensubtitles_languages_hint':
+        return '用逗号分隔语言代码，例如 zh-CN,en,ja';
+      case 'video_download_path_mappings_title':
+        return 'qBittorrent 路径映射';
+      case 'video_download_path_mappings_hint':
+        return '将每个 qBittorrent 远程根目录映射到本机可访问的文件夹。';
+      case 'video_download_path_mapping_add':
+        return '添加路径映射';
+      case 'video_download_backend_profile_id':
+        return '后端配置 ID';
+      case 'video_download_remote_root':
+        return '远程根目录';
+      case 'video_download_local_root':
+        return '本机根目录';
+      case 'video_download_target_source_title':
+        return '默认受管视频来源';
+      case 'video_download_target_source_hint':
+        return '新下载会整理到此本地视频来源中。';
+      case 'video_download_target_source_none':
+        return '选择本地视频来源';
+      case 'video_external_remove':
+        return '移除';
+      case 'video_external_username_optional':
+        return '用户名（可选）';
+      case 'video_external_password_optional':
+        return '密码（可选）';
+      case 'video_external_api_key':
+        return 'API 密钥';
+      case 'video_external_save_error':
+        return '无法保存配置，请检查标出的字段。';
+      case 'video_external_categories_invalid':
+        return '分类必须是用逗号分隔的数字 ID。';
+      case 'video_download_path_mapping_invalid':
+        return '请输入配置 ID、远程根目录和本机绝对根目录。';
+      case 'video_opensubtitles_endpoint':
+        return 'API 端点';
+      case 'video_download_target_source_empty':
+        return '没有可访问的本地视频来源。请先在来源页添加。';
       default:
         return null;
     }
@@ -226580,8 +230640,6 @@ extension on _StringsZhHk {
         return 'Download backend is not configured yet.';
       case 'download_clear_finished':
         return 'Clear finished';
-      case 'download_discover_tab':
-        return 'Discover';
       case 'download_network_proxy_auto':
         return 'Auto';
       case 'download_network_proxy_auto_hint':
@@ -231751,6 +235809,124 @@ extension on _StringsZhHk {
         return ({required Object n}) => 'Recently added · Episode ${n}';
       case 'video_home_remaining_minutes':
         return ({required Object minutes}) => '${minutes} min remaining';
+      case 'video_discovery_tab':
+        return 'Discover';
+      case 'video_discovery_search_hint':
+        return 'Search movies, series, anime';
+      case 'video_discovery_hot':
+        return 'Popular now';
+      case 'video_discovery_seasonal_anime':
+        return 'Seasonal anime';
+      case 'video_discovery_all_works':
+        return 'All titles';
+      case 'video_discovery_search_results':
+        return 'Search results';
+      case 'video_discovery_provider_warning':
+        return 'Some providers are unavailable. Showing available results.';
+      case 'video_discovery_load_failed':
+        return 'Could not load discovery results.';
+      case 'video_discovery_empty':
+        return 'No matching titles.';
+      case 'video_discovery_resource_search':
+        return 'Search resources';
+      case 'video_discovery_subtitle_search':
+        return 'Search subtitles';
+      case 'video_discovery_subscribe':
+        return 'Subscribe';
+      case 'video_discovery_subscription_manage':
+        return 'Manage subscription';
+      case 'video_discovery_pipeline_idle':
+        return 'Not downloaded → Download → Organize → Subtitles → Scrape → Library';
+      case 'video_discovery_details_load_failed':
+        return 'Could not load title details.';
+      case 'video_discovery_sort_popularity':
+        return 'Popularity';
+      case 'video_discovery_sort_rating':
+        return 'Rating';
+      case 'video_discovery_sort_release':
+        return 'Release date';
+      case 'video_discovery_in_library':
+        return 'In library';
+      case 'video_discovery_play':
+        return 'Play';
+      case 'download_resources_tab':
+        return 'Resources';
+      case 'video_external_settings_section':
+        return 'External resource and subtitle providers';
+      case 'video_torznab_settings_title':
+        return 'Torznab indexers';
+      case 'video_torznab_settings_hint':
+        return 'Configure one or more Jackett, Prowlarr, or compatible Torznab endpoints. Secrets stay on this device.';
+      case 'video_torznab_add':
+        return 'Add indexer';
+      case 'video_torznab_name':
+        return 'Name';
+      case 'video_torznab_endpoint':
+        return 'Endpoint';
+      case 'video_torznab_endpoint_hint':
+        return 'HTTPS is required except for loopback addresses.';
+      case 'video_torznab_api_key':
+        return 'API key';
+      case 'video_torznab_priority':
+        return 'Priority';
+      case 'video_torznab_categories':
+        return 'Categories';
+      case 'video_torznab_categories_hint':
+        return 'Comma-separated numeric category IDs';
+      case 'video_external_enabled':
+        return 'Enabled';
+      case 'video_external_insecure_http':
+        return 'Allow insecure HTTP';
+      case 'video_external_insecure_http_hint':
+        return 'Use only for a trusted local network endpoint.';
+      case 'video_external_endpoint_invalid':
+        return 'Enter a valid endpoint without credentials, query parameters, or fragments.';
+      case 'video_opensubtitles_settings_title':
+        return 'OpenSubtitles';
+      case 'video_opensubtitles_settings_hint':
+        return 'API credentials and preferred subtitle languages stay on this device.';
+      case 'video_opensubtitles_user_agent':
+        return 'User-Agent';
+      case 'video_opensubtitles_languages':
+        return 'Preferred languages';
+      case 'video_opensubtitles_languages_hint':
+        return 'Comma-separated language codes, for example zh-CN,en,ja';
+      case 'video_download_path_mappings_title':
+        return 'qBittorrent path mappings';
+      case 'video_download_path_mappings_hint':
+        return 'Map each qBittorrent remote root to a locally accessible folder.';
+      case 'video_download_path_mapping_add':
+        return 'Add path mapping';
+      case 'video_download_backend_profile_id':
+        return 'Backend profile ID';
+      case 'video_download_remote_root':
+        return 'Remote root';
+      case 'video_download_local_root':
+        return 'Local root';
+      case 'video_download_target_source_title':
+        return 'Default managed video source';
+      case 'video_download_target_source_hint':
+        return 'New downloads are organized into this local video source.';
+      case 'video_download_target_source_none':
+        return 'Choose a local video source';
+      case 'video_external_remove':
+        return 'Remove';
+      case 'video_external_username_optional':
+        return 'Username (optional)';
+      case 'video_external_password_optional':
+        return 'Password (optional)';
+      case 'video_external_api_key':
+        return 'API key';
+      case 'video_external_save_error':
+        return 'The configuration could not be saved. Check the highlighted fields.';
+      case 'video_external_categories_invalid':
+        return 'Categories must be comma-separated numeric IDs.';
+      case 'video_download_path_mapping_invalid':
+        return 'Enter a profile ID, remote root, and absolute local root.';
+      case 'video_opensubtitles_endpoint':
+        return 'API endpoint';
+      case 'video_download_target_source_empty':
+        return 'No locally accessible video source is available. Add one on the Sources tab first.';
       default:
         return null;
     }
