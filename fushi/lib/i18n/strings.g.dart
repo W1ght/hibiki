@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 54978 (3234 per locale)
+/// Strings: 55080 (3240 per locale)
 ///
-/// Built on 2026-08-09 at 14:02 UTC
+/// Built on 2026-08-09 at 14:22 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -4373,6 +4373,16 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get game_japanese_locale => 'Japanese locale';
   String get game_japanese_locale_hint =>
       'Chinese/English patched builds must turn this off, or the game crashes on launch';
+  String get video_scrape_diagnostic_export => 'Export scrape diagnostics';
+  String get video_scrape_diagnostic_confirm_title =>
+      'Export scrape diagnostics?';
+  String get video_scrape_diagnostic_saved => 'Diagnostic package saved';
+  String video_scrape_diagnostic_failed({required Object reason}) =>
+      'Could not export diagnostic package: ${reason}';
+  String get video_scrape_diagnostic_share_subject =>
+      'Fushi video scrape diagnostics';
+  String get video_scrape_diagnostic_confirm_body =>
+      'The package includes relative file and folder names, scrape summaries, and original NFO contents. It does not add videos, subtitles, images, absolute paths, app configuration, or app credentials. Original NFO files are preserved unchanged and may contain personal information or secrets; review the package before sharing publicly.';
 }
 
 // Path: <root>
@@ -11830,6 +11840,22 @@ class _StringsAr extends _StringsEn {
   @override
   String get game_japanese_locale_hint =>
       'Chinese/English patched builds must turn this off, or the game crashes on launch';
+  @override
+  String get video_scrape_diagnostic_export => 'Export scrape diagnostics';
+  @override
+  String get video_scrape_diagnostic_confirm_title =>
+      'Export scrape diagnostics?';
+  @override
+  String get video_scrape_diagnostic_saved => 'Diagnostic package saved';
+  @override
+  String video_scrape_diagnostic_failed({required Object reason}) =>
+      'Could not export diagnostic package: ${reason}';
+  @override
+  String get video_scrape_diagnostic_share_subject =>
+      'Fushi video scrape diagnostics';
+  @override
+  String get video_scrape_diagnostic_confirm_body =>
+      'The package includes relative file and folder names, scrape summaries, and original NFO contents. It does not add videos, subtitles, images, absolute paths, app configuration, or app credentials. Original NFO files are preserved unchanged and may contain personal information or secrets; review the package before sharing publicly.';
 }
 
 // Path: <root>
@@ -19354,6 +19380,22 @@ class _StringsDe extends _StringsEn {
   @override
   String get game_japanese_locale_hint =>
       'Chinese/English patched builds must turn this off, or the game crashes on launch';
+  @override
+  String get video_scrape_diagnostic_export => 'Export scrape diagnostics';
+  @override
+  String get video_scrape_diagnostic_confirm_title =>
+      'Export scrape diagnostics?';
+  @override
+  String get video_scrape_diagnostic_saved => 'Diagnostic package saved';
+  @override
+  String video_scrape_diagnostic_failed({required Object reason}) =>
+      'Could not export diagnostic package: ${reason}';
+  @override
+  String get video_scrape_diagnostic_share_subject =>
+      'Fushi video scrape diagnostics';
+  @override
+  String get video_scrape_diagnostic_confirm_body =>
+      'The package includes relative file and folder names, scrape summaries, and original NFO contents. It does not add videos, subtitles, images, absolute paths, app configuration, or app credentials. Original NFO files are preserved unchanged and may contain personal information or secrets; review the package before sharing publicly.';
 }
 
 // Path: <root>
@@ -26894,6 +26936,22 @@ class _StringsEs extends _StringsEn {
   @override
   String get game_japanese_locale_hint =>
       'Chinese/English patched builds must turn this off, or the game crashes on launch';
+  @override
+  String get video_scrape_diagnostic_export => 'Export scrape diagnostics';
+  @override
+  String get video_scrape_diagnostic_confirm_title =>
+      'Export scrape diagnostics?';
+  @override
+  String get video_scrape_diagnostic_saved => 'Diagnostic package saved';
+  @override
+  String video_scrape_diagnostic_failed({required Object reason}) =>
+      'Could not export diagnostic package: ${reason}';
+  @override
+  String get video_scrape_diagnostic_share_subject =>
+      'Fushi video scrape diagnostics';
+  @override
+  String get video_scrape_diagnostic_confirm_body =>
+      'The package includes relative file and folder names, scrape summaries, and original NFO contents. It does not add videos, subtitles, images, absolute paths, app configuration, or app credentials. Original NFO files are preserved unchanged and may contain personal information or secrets; review the package before sharing publicly.';
 }
 
 // Path: <root>
@@ -34446,6 +34504,22 @@ class _StringsFr extends _StringsEn {
   @override
   String get game_japanese_locale_hint =>
       'Chinese/English patched builds must turn this off, or the game crashes on launch';
+  @override
+  String get video_scrape_diagnostic_export => 'Export scrape diagnostics';
+  @override
+  String get video_scrape_diagnostic_confirm_title =>
+      'Export scrape diagnostics?';
+  @override
+  String get video_scrape_diagnostic_saved => 'Diagnostic package saved';
+  @override
+  String video_scrape_diagnostic_failed({required Object reason}) =>
+      'Could not export diagnostic package: ${reason}';
+  @override
+  String get video_scrape_diagnostic_share_subject =>
+      'Fushi video scrape diagnostics';
+  @override
+  String get video_scrape_diagnostic_confirm_body =>
+      'The package includes relative file and folder names, scrape summaries, and original NFO contents. It does not add videos, subtitles, images, absolute paths, app configuration, or app credentials. Original NFO files are preserved unchanged and may contain personal information or secrets; review the package before sharing publicly.';
 }
 
 // Path: <root>
@@ -41926,6 +42000,22 @@ class _StringsId extends _StringsEn {
   @override
   String get game_japanese_locale_hint =>
       'Chinese/English patched builds must turn this off, or the game crashes on launch';
+  @override
+  String get video_scrape_diagnostic_export => 'Export scrape diagnostics';
+  @override
+  String get video_scrape_diagnostic_confirm_title =>
+      'Export scrape diagnostics?';
+  @override
+  String get video_scrape_diagnostic_saved => 'Diagnostic package saved';
+  @override
+  String video_scrape_diagnostic_failed({required Object reason}) =>
+      'Could not export diagnostic package: ${reason}';
+  @override
+  String get video_scrape_diagnostic_share_subject =>
+      'Fushi video scrape diagnostics';
+  @override
+  String get video_scrape_diagnostic_confirm_body =>
+      'The package includes relative file and folder names, scrape summaries, and original NFO contents. It does not add videos, subtitles, images, absolute paths, app configuration, or app credentials. Original NFO files are preserved unchanged and may contain personal information or secrets; review the package before sharing publicly.';
 }
 
 // Path: <root>
@@ -49452,6 +49542,22 @@ class _StringsIt extends _StringsEn {
   @override
   String get game_japanese_locale_hint =>
       'Chinese/English patched builds must turn this off, or the game crashes on launch';
+  @override
+  String get video_scrape_diagnostic_export => 'Export scrape diagnostics';
+  @override
+  String get video_scrape_diagnostic_confirm_title =>
+      'Export scrape diagnostics?';
+  @override
+  String get video_scrape_diagnostic_saved => 'Diagnostic package saved';
+  @override
+  String video_scrape_diagnostic_failed({required Object reason}) =>
+      'Could not export diagnostic package: ${reason}';
+  @override
+  String get video_scrape_diagnostic_share_subject =>
+      'Fushi video scrape diagnostics';
+  @override
+  String get video_scrape_diagnostic_confirm_body =>
+      'The package includes relative file and folder names, scrape summaries, and original NFO contents. It does not add videos, subtitles, images, absolute paths, app configuration, or app credentials. Original NFO files are preserved unchanged and may contain personal information or secrets; review the package before sharing publicly.';
 }
 
 // Path: <root>
@@ -56792,6 +56898,22 @@ class _StringsJa extends _StringsEn {
   @override
   String get game_japanese_locale_hint =>
       'Chinese/English patched builds must turn this off, or the game crashes on launch';
+  @override
+  String get video_scrape_diagnostic_export => 'Export scrape diagnostics';
+  @override
+  String get video_scrape_diagnostic_confirm_title =>
+      'Export scrape diagnostics?';
+  @override
+  String get video_scrape_diagnostic_saved => 'Diagnostic package saved';
+  @override
+  String video_scrape_diagnostic_failed({required Object reason}) =>
+      'Could not export diagnostic package: ${reason}';
+  @override
+  String get video_scrape_diagnostic_share_subject =>
+      'Fushi video scrape diagnostics';
+  @override
+  String get video_scrape_diagnostic_confirm_body =>
+      'The package includes relative file and folder names, scrape summaries, and original NFO contents. It does not add videos, subtitles, images, absolute paths, app configuration, or app credentials. Original NFO files are preserved unchanged and may contain personal information or secrets; review the package before sharing publicly.';
 }
 
 // Path: <root>
@@ -64139,6 +64261,22 @@ class _StringsKo extends _StringsEn {
   @override
   String get game_japanese_locale_hint =>
       'Chinese/English patched builds must turn this off, or the game crashes on launch';
+  @override
+  String get video_scrape_diagnostic_export => 'Export scrape diagnostics';
+  @override
+  String get video_scrape_diagnostic_confirm_title =>
+      'Export scrape diagnostics?';
+  @override
+  String get video_scrape_diagnostic_saved => 'Diagnostic package saved';
+  @override
+  String video_scrape_diagnostic_failed({required Object reason}) =>
+      'Could not export diagnostic package: ${reason}';
+  @override
+  String get video_scrape_diagnostic_share_subject =>
+      'Fushi video scrape diagnostics';
+  @override
+  String get video_scrape_diagnostic_confirm_body =>
+      'The package includes relative file and folder names, scrape summaries, and original NFO contents. It does not add videos, subtitles, images, absolute paths, app configuration, or app credentials. Original NFO files are preserved unchanged and may contain personal information or secrets; review the package before sharing publicly.';
 }
 
 // Path: <root>
@@ -71645,6 +71783,22 @@ class _StringsNl extends _StringsEn {
   @override
   String get game_japanese_locale_hint =>
       'Chinese/English patched builds must turn this off, or the game crashes on launch';
+  @override
+  String get video_scrape_diagnostic_export => 'Export scrape diagnostics';
+  @override
+  String get video_scrape_diagnostic_confirm_title =>
+      'Export scrape diagnostics?';
+  @override
+  String get video_scrape_diagnostic_saved => 'Diagnostic package saved';
+  @override
+  String video_scrape_diagnostic_failed({required Object reason}) =>
+      'Could not export diagnostic package: ${reason}';
+  @override
+  String get video_scrape_diagnostic_share_subject =>
+      'Fushi video scrape diagnostics';
+  @override
+  String get video_scrape_diagnostic_confirm_body =>
+      'The package includes relative file and folder names, scrape summaries, and original NFO contents. It does not add videos, subtitles, images, absolute paths, app configuration, or app credentials. Original NFO files are preserved unchanged and may contain personal information or secrets; review the package before sharing publicly.';
 }
 
 // Path: <root>
@@ -79163,6 +79317,22 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get game_japanese_locale_hint =>
       'Chinese/English patched builds must turn this off, or the game crashes on launch';
+  @override
+  String get video_scrape_diagnostic_export => 'Export scrape diagnostics';
+  @override
+  String get video_scrape_diagnostic_confirm_title =>
+      'Export scrape diagnostics?';
+  @override
+  String get video_scrape_diagnostic_saved => 'Diagnostic package saved';
+  @override
+  String video_scrape_diagnostic_failed({required Object reason}) =>
+      'Could not export diagnostic package: ${reason}';
+  @override
+  String get video_scrape_diagnostic_share_subject =>
+      'Fushi video scrape diagnostics';
+  @override
+  String get video_scrape_diagnostic_confirm_body =>
+      'The package includes relative file and folder names, scrape summaries, and original NFO contents. It does not add videos, subtitles, images, absolute paths, app configuration, or app credentials. Original NFO files are preserved unchanged and may contain personal information or secrets; review the package before sharing publicly.';
 }
 
 // Path: <root>
@@ -86667,6 +86837,22 @@ class _StringsRu extends _StringsEn {
   @override
   String get game_japanese_locale_hint =>
       'Chinese/English patched builds must turn this off, or the game crashes on launch';
+  @override
+  String get video_scrape_diagnostic_export => 'Export scrape diagnostics';
+  @override
+  String get video_scrape_diagnostic_confirm_title =>
+      'Export scrape diagnostics?';
+  @override
+  String get video_scrape_diagnostic_saved => 'Diagnostic package saved';
+  @override
+  String video_scrape_diagnostic_failed({required Object reason}) =>
+      'Could not export diagnostic package: ${reason}';
+  @override
+  String get video_scrape_diagnostic_share_subject =>
+      'Fushi video scrape diagnostics';
+  @override
+  String get video_scrape_diagnostic_confirm_body =>
+      'The package includes relative file and folder names, scrape summaries, and original NFO contents. It does not add videos, subtitles, images, absolute paths, app configuration, or app credentials. Original NFO files are preserved unchanged and may contain personal information or secrets; review the package before sharing publicly.';
 }
 
 // Path: <root>
@@ -94119,6 +94305,22 @@ class _StringsTh extends _StringsEn {
   @override
   String get game_japanese_locale_hint =>
       'Chinese/English patched builds must turn this off, or the game crashes on launch';
+  @override
+  String get video_scrape_diagnostic_export => 'Export scrape diagnostics';
+  @override
+  String get video_scrape_diagnostic_confirm_title =>
+      'Export scrape diagnostics?';
+  @override
+  String get video_scrape_diagnostic_saved => 'Diagnostic package saved';
+  @override
+  String video_scrape_diagnostic_failed({required Object reason}) =>
+      'Could not export diagnostic package: ${reason}';
+  @override
+  String get video_scrape_diagnostic_share_subject =>
+      'Fushi video scrape diagnostics';
+  @override
+  String get video_scrape_diagnostic_confirm_body =>
+      'The package includes relative file and folder names, scrape summaries, and original NFO contents. It does not add videos, subtitles, images, absolute paths, app configuration, or app credentials. Original NFO files are preserved unchanged and may contain personal information or secrets; review the package before sharing publicly.';
 }
 
 // Path: <root>
@@ -101602,6 +101804,22 @@ class _StringsTr extends _StringsEn {
   @override
   String get game_japanese_locale_hint =>
       'Chinese/English patched builds must turn this off, or the game crashes on launch';
+  @override
+  String get video_scrape_diagnostic_export => 'Export scrape diagnostics';
+  @override
+  String get video_scrape_diagnostic_confirm_title =>
+      'Export scrape diagnostics?';
+  @override
+  String get video_scrape_diagnostic_saved => 'Diagnostic package saved';
+  @override
+  String video_scrape_diagnostic_failed({required Object reason}) =>
+      'Could not export diagnostic package: ${reason}';
+  @override
+  String get video_scrape_diagnostic_share_subject =>
+      'Fushi video scrape diagnostics';
+  @override
+  String get video_scrape_diagnostic_confirm_body =>
+      'The package includes relative file and folder names, scrape summaries, and original NFO contents. It does not add videos, subtitles, images, absolute paths, app configuration, or app credentials. Original NFO files are preserved unchanged and may contain personal information or secrets; review the package before sharing publicly.';
 }
 
 // Path: <root>
@@ -109070,6 +109288,22 @@ class _StringsVi extends _StringsEn {
   @override
   String get game_japanese_locale_hint =>
       'Chinese/English patched builds must turn this off, or the game crashes on launch';
+  @override
+  String get video_scrape_diagnostic_export => 'Export scrape diagnostics';
+  @override
+  String get video_scrape_diagnostic_confirm_title =>
+      'Export scrape diagnostics?';
+  @override
+  String get video_scrape_diagnostic_saved => 'Diagnostic package saved';
+  @override
+  String video_scrape_diagnostic_failed({required Object reason}) =>
+      'Could not export diagnostic package: ${reason}';
+  @override
+  String get video_scrape_diagnostic_share_subject =>
+      'Fushi video scrape diagnostics';
+  @override
+  String get video_scrape_diagnostic_confirm_body =>
+      'The package includes relative file and folder names, scrape summaries, and original NFO contents. It does not add videos, subtitles, images, absolute paths, app configuration, or app credentials. Original NFO files are preserved unchanged and may contain personal information or secrets; review the package before sharing publicly.';
 }
 
 // Path: <root>
@@ -116006,6 +116240,20 @@ class _StringsZhCn extends _StringsEn {
   String get game_japanese_locale => '日语区域（转区）';
   @override
   String get game_japanese_locale_hint => '汉化版/英化版请选「关闭」，否则启动即闪退';
+  @override
+  String get video_scrape_diagnostic_export => '导出刮削诊断包';
+  @override
+  String get video_scrape_diagnostic_confirm_title => '导出刮削诊断包？';
+  @override
+  String get video_scrape_diagnostic_saved => '诊断包已保存';
+  @override
+  String video_scrape_diagnostic_failed({required Object reason}) =>
+      '无法导出诊断包：${reason}';
+  @override
+  String get video_scrape_diagnostic_share_subject => 'Fushi 视频刮削诊断';
+  @override
+  String get video_scrape_diagnostic_confirm_body =>
+      '诊断包包含相对文件/目录名、刮削摘要和原始 NFO 内容；不会加入视频、字幕、图片、绝对路径、应用配置或应用凭据。原始 NFO 会原样保留，仍可能含有个人信息或密钥，请在公开分享前检查。';
 }
 
 // Path: <root>
@@ -123269,6 +123517,22 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get game_japanese_locale_hint =>
       'Chinese/English patched builds must turn this off, or the game crashes on launch';
+  @override
+  String get video_scrape_diagnostic_export => 'Export scrape diagnostics';
+  @override
+  String get video_scrape_diagnostic_confirm_title =>
+      'Export scrape diagnostics?';
+  @override
+  String get video_scrape_diagnostic_saved => 'Diagnostic package saved';
+  @override
+  String video_scrape_diagnostic_failed({required Object reason}) =>
+      'Could not export diagnostic package: ${reason}';
+  @override
+  String get video_scrape_diagnostic_share_subject =>
+      'Fushi video scrape diagnostics';
+  @override
+  String get video_scrape_diagnostic_confirm_body =>
+      'The package includes relative file and folder names, scrape summaries, and original NFO contents. It does not add videos, subtitles, images, absolute paths, app configuration, or app credentials. Original NFO files are preserved unchanged and may contain personal information or secrets; review the package before sharing publicly.';
 }
 
 /// Flat map(s) containing all translations.
@@ -129913,6 +130177,19 @@ extension on _StringsEn {
         return 'Japanese locale';
       case 'game_japanese_locale_hint':
         return 'Chinese/English patched builds must turn this off, or the game crashes on launch';
+      case 'video_scrape_diagnostic_export':
+        return 'Export scrape diagnostics';
+      case 'video_scrape_diagnostic_confirm_title':
+        return 'Export scrape diagnostics?';
+      case 'video_scrape_diagnostic_saved':
+        return 'Diagnostic package saved';
+      case 'video_scrape_diagnostic_failed':
+        return ({required Object reason}) =>
+            'Could not export diagnostic package: ${reason}';
+      case 'video_scrape_diagnostic_share_subject':
+        return 'Fushi video scrape diagnostics';
+      case 'video_scrape_diagnostic_confirm_body':
+        return 'The package includes relative file and folder names, scrape summaries, and original NFO contents. It does not add videos, subtitles, images, absolute paths, app configuration, or app credentials. Original NFO files are preserved unchanged and may contain personal information or secrets; review the package before sharing publicly.';
       default:
         return null;
     }
@@ -136555,6 +136832,19 @@ extension on _StringsAr {
         return 'Japanese locale';
       case 'game_japanese_locale_hint':
         return 'Chinese/English patched builds must turn this off, or the game crashes on launch';
+      case 'video_scrape_diagnostic_export':
+        return 'Export scrape diagnostics';
+      case 'video_scrape_diagnostic_confirm_title':
+        return 'Export scrape diagnostics?';
+      case 'video_scrape_diagnostic_saved':
+        return 'Diagnostic package saved';
+      case 'video_scrape_diagnostic_failed':
+        return ({required Object reason}) =>
+            'Could not export diagnostic package: ${reason}';
+      case 'video_scrape_diagnostic_share_subject':
+        return 'Fushi video scrape diagnostics';
+      case 'video_scrape_diagnostic_confirm_body':
+        return 'The package includes relative file and folder names, scrape summaries, and original NFO contents. It does not add videos, subtitles, images, absolute paths, app configuration, or app credentials. Original NFO files are preserved unchanged and may contain personal information or secrets; review the package before sharing publicly.';
       default:
         return null;
     }
@@ -143219,6 +143509,19 @@ extension on _StringsDe {
         return 'Japanese locale';
       case 'game_japanese_locale_hint':
         return 'Chinese/English patched builds must turn this off, or the game crashes on launch';
+      case 'video_scrape_diagnostic_export':
+        return 'Export scrape diagnostics';
+      case 'video_scrape_diagnostic_confirm_title':
+        return 'Export scrape diagnostics?';
+      case 'video_scrape_diagnostic_saved':
+        return 'Diagnostic package saved';
+      case 'video_scrape_diagnostic_failed':
+        return ({required Object reason}) =>
+            'Could not export diagnostic package: ${reason}';
+      case 'video_scrape_diagnostic_share_subject':
+        return 'Fushi video scrape diagnostics';
+      case 'video_scrape_diagnostic_confirm_body':
+        return 'The package includes relative file and folder names, scrape summaries, and original NFO contents. It does not add videos, subtitles, images, absolute paths, app configuration, or app credentials. Original NFO files are preserved unchanged and may contain personal information or secrets; review the package before sharing publicly.';
       default:
         return null;
     }
@@ -149882,6 +150185,19 @@ extension on _StringsEs {
         return 'Japanese locale';
       case 'game_japanese_locale_hint':
         return 'Chinese/English patched builds must turn this off, or the game crashes on launch';
+      case 'video_scrape_diagnostic_export':
+        return 'Export scrape diagnostics';
+      case 'video_scrape_diagnostic_confirm_title':
+        return 'Export scrape diagnostics?';
+      case 'video_scrape_diagnostic_saved':
+        return 'Diagnostic package saved';
+      case 'video_scrape_diagnostic_failed':
+        return ({required Object reason}) =>
+            'Could not export diagnostic package: ${reason}';
+      case 'video_scrape_diagnostic_share_subject':
+        return 'Fushi video scrape diagnostics';
+      case 'video_scrape_diagnostic_confirm_body':
+        return 'The package includes relative file and folder names, scrape summaries, and original NFO contents. It does not add videos, subtitles, images, absolute paths, app configuration, or app credentials. Original NFO files are preserved unchanged and may contain personal information or secrets; review the package before sharing publicly.';
       default:
         return null;
     }
@@ -156551,6 +156867,19 @@ extension on _StringsFr {
         return 'Japanese locale';
       case 'game_japanese_locale_hint':
         return 'Chinese/English patched builds must turn this off, or the game crashes on launch';
+      case 'video_scrape_diagnostic_export':
+        return 'Export scrape diagnostics';
+      case 'video_scrape_diagnostic_confirm_title':
+        return 'Export scrape diagnostics?';
+      case 'video_scrape_diagnostic_saved':
+        return 'Diagnostic package saved';
+      case 'video_scrape_diagnostic_failed':
+        return ({required Object reason}) =>
+            'Could not export diagnostic package: ${reason}';
+      case 'video_scrape_diagnostic_share_subject':
+        return 'Fushi video scrape diagnostics';
+      case 'video_scrape_diagnostic_confirm_body':
+        return 'The package includes relative file and folder names, scrape summaries, and original NFO contents. It does not add videos, subtitles, images, absolute paths, app configuration, or app credentials. Original NFO files are preserved unchanged and may contain personal information or secrets; review the package before sharing publicly.';
       default:
         return null;
     }
@@ -163202,6 +163531,19 @@ extension on _StringsId {
         return 'Japanese locale';
       case 'game_japanese_locale_hint':
         return 'Chinese/English patched builds must turn this off, or the game crashes on launch';
+      case 'video_scrape_diagnostic_export':
+        return 'Export scrape diagnostics';
+      case 'video_scrape_diagnostic_confirm_title':
+        return 'Export scrape diagnostics?';
+      case 'video_scrape_diagnostic_saved':
+        return 'Diagnostic package saved';
+      case 'video_scrape_diagnostic_failed':
+        return ({required Object reason}) =>
+            'Could not export diagnostic package: ${reason}';
+      case 'video_scrape_diagnostic_share_subject':
+        return 'Fushi video scrape diagnostics';
+      case 'video_scrape_diagnostic_confirm_body':
+        return 'The package includes relative file and folder names, scrape summaries, and original NFO contents. It does not add videos, subtitles, images, absolute paths, app configuration, or app credentials. Original NFO files are preserved unchanged and may contain personal information or secrets; review the package before sharing publicly.';
       default:
         return null;
     }
@@ -169867,6 +170209,19 @@ extension on _StringsIt {
         return 'Japanese locale';
       case 'game_japanese_locale_hint':
         return 'Chinese/English patched builds must turn this off, or the game crashes on launch';
+      case 'video_scrape_diagnostic_export':
+        return 'Export scrape diagnostics';
+      case 'video_scrape_diagnostic_confirm_title':
+        return 'Export scrape diagnostics?';
+      case 'video_scrape_diagnostic_saved':
+        return 'Diagnostic package saved';
+      case 'video_scrape_diagnostic_failed':
+        return ({required Object reason}) =>
+            'Could not export diagnostic package: ${reason}';
+      case 'video_scrape_diagnostic_share_subject':
+        return 'Fushi video scrape diagnostics';
+      case 'video_scrape_diagnostic_confirm_body':
+        return 'The package includes relative file and folder names, scrape summaries, and original NFO contents. It does not add videos, subtitles, images, absolute paths, app configuration, or app credentials. Original NFO files are preserved unchanged and may contain personal information or secrets; review the package before sharing publicly.';
       default:
         return null;
     }
@@ -176494,6 +176849,19 @@ extension on _StringsJa {
         return 'Japanese locale';
       case 'game_japanese_locale_hint':
         return 'Chinese/English patched builds must turn this off, or the game crashes on launch';
+      case 'video_scrape_diagnostic_export':
+        return 'Export scrape diagnostics';
+      case 'video_scrape_diagnostic_confirm_title':
+        return 'Export scrape diagnostics?';
+      case 'video_scrape_diagnostic_saved':
+        return 'Diagnostic package saved';
+      case 'video_scrape_diagnostic_failed':
+        return ({required Object reason}) =>
+            'Could not export diagnostic package: ${reason}';
+      case 'video_scrape_diagnostic_share_subject':
+        return 'Fushi video scrape diagnostics';
+      case 'video_scrape_diagnostic_confirm_body':
+        return 'The package includes relative file and folder names, scrape summaries, and original NFO contents. It does not add videos, subtitles, images, absolute paths, app configuration, or app credentials. Original NFO files are preserved unchanged and may contain personal information or secrets; review the package before sharing publicly.';
       default:
         return null;
     }
@@ -183125,6 +183493,19 @@ extension on _StringsKo {
         return 'Japanese locale';
       case 'game_japanese_locale_hint':
         return 'Chinese/English patched builds must turn this off, or the game crashes on launch';
+      case 'video_scrape_diagnostic_export':
+        return 'Export scrape diagnostics';
+      case 'video_scrape_diagnostic_confirm_title':
+        return 'Export scrape diagnostics?';
+      case 'video_scrape_diagnostic_saved':
+        return 'Diagnostic package saved';
+      case 'video_scrape_diagnostic_failed':
+        return ({required Object reason}) =>
+            'Could not export diagnostic package: ${reason}';
+      case 'video_scrape_diagnostic_share_subject':
+        return 'Fushi video scrape diagnostics';
+      case 'video_scrape_diagnostic_confirm_body':
+        return 'The package includes relative file and folder names, scrape summaries, and original NFO contents. It does not add videos, subtitles, images, absolute paths, app configuration, or app credentials. Original NFO files are preserved unchanged and may contain personal information or secrets; review the package before sharing publicly.';
       default:
         return null;
     }
@@ -189784,6 +190165,19 @@ extension on _StringsNl {
         return 'Japanese locale';
       case 'game_japanese_locale_hint':
         return 'Chinese/English patched builds must turn this off, or the game crashes on launch';
+      case 'video_scrape_diagnostic_export':
+        return 'Export scrape diagnostics';
+      case 'video_scrape_diagnostic_confirm_title':
+        return 'Export scrape diagnostics?';
+      case 'video_scrape_diagnostic_saved':
+        return 'Diagnostic package saved';
+      case 'video_scrape_diagnostic_failed':
+        return ({required Object reason}) =>
+            'Could not export diagnostic package: ${reason}';
+      case 'video_scrape_diagnostic_share_subject':
+        return 'Fushi video scrape diagnostics';
+      case 'video_scrape_diagnostic_confirm_body':
+        return 'The package includes relative file and folder names, scrape summaries, and original NFO contents. It does not add videos, subtitles, images, absolute paths, app configuration, or app credentials. Original NFO files are preserved unchanged and may contain personal information or secrets; review the package before sharing publicly.';
       default:
         return null;
     }
@@ -196440,6 +196834,19 @@ extension on _StringsPtBr {
         return 'Japanese locale';
       case 'game_japanese_locale_hint':
         return 'Chinese/English patched builds must turn this off, or the game crashes on launch';
+      case 'video_scrape_diagnostic_export':
+        return 'Export scrape diagnostics';
+      case 'video_scrape_diagnostic_confirm_title':
+        return 'Export scrape diagnostics?';
+      case 'video_scrape_diagnostic_saved':
+        return 'Diagnostic package saved';
+      case 'video_scrape_diagnostic_failed':
+        return ({required Object reason}) =>
+            'Could not export diagnostic package: ${reason}';
+      case 'video_scrape_diagnostic_share_subject':
+        return 'Fushi video scrape diagnostics';
+      case 'video_scrape_diagnostic_confirm_body':
+        return 'The package includes relative file and folder names, scrape summaries, and original NFO contents. It does not add videos, subtitles, images, absolute paths, app configuration, or app credentials. Original NFO files are preserved unchanged and may contain personal information or secrets; review the package before sharing publicly.';
       default:
         return null;
     }
@@ -203101,6 +203508,19 @@ extension on _StringsRu {
         return 'Japanese locale';
       case 'game_japanese_locale_hint':
         return 'Chinese/English patched builds must turn this off, or the game crashes on launch';
+      case 'video_scrape_diagnostic_export':
+        return 'Export scrape diagnostics';
+      case 'video_scrape_diagnostic_confirm_title':
+        return 'Export scrape diagnostics?';
+      case 'video_scrape_diagnostic_saved':
+        return 'Diagnostic package saved';
+      case 'video_scrape_diagnostic_failed':
+        return ({required Object reason}) =>
+            'Could not export diagnostic package: ${reason}';
+      case 'video_scrape_diagnostic_share_subject':
+        return 'Fushi video scrape diagnostics';
+      case 'video_scrape_diagnostic_confirm_body':
+        return 'The package includes relative file and folder names, scrape summaries, and original NFO contents. It does not add videos, subtitles, images, absolute paths, app configuration, or app credentials. Original NFO files are preserved unchanged and may contain personal information or secrets; review the package before sharing publicly.';
       default:
         return null;
     }
@@ -209745,6 +210165,19 @@ extension on _StringsTh {
         return 'Japanese locale';
       case 'game_japanese_locale_hint':
         return 'Chinese/English patched builds must turn this off, or the game crashes on launch';
+      case 'video_scrape_diagnostic_export':
+        return 'Export scrape diagnostics';
+      case 'video_scrape_diagnostic_confirm_title':
+        return 'Export scrape diagnostics?';
+      case 'video_scrape_diagnostic_saved':
+        return 'Diagnostic package saved';
+      case 'video_scrape_diagnostic_failed':
+        return ({required Object reason}) =>
+            'Could not export diagnostic package: ${reason}';
+      case 'video_scrape_diagnostic_share_subject':
+        return 'Fushi video scrape diagnostics';
+      case 'video_scrape_diagnostic_confirm_body':
+        return 'The package includes relative file and folder names, scrape summaries, and original NFO contents. It does not add videos, subtitles, images, absolute paths, app configuration, or app credentials. Original NFO files are preserved unchanged and may contain personal information or secrets; review the package before sharing publicly.';
       default:
         return null;
     }
@@ -216398,6 +216831,19 @@ extension on _StringsTr {
         return 'Japanese locale';
       case 'game_japanese_locale_hint':
         return 'Chinese/English patched builds must turn this off, or the game crashes on launch';
+      case 'video_scrape_diagnostic_export':
+        return 'Export scrape diagnostics';
+      case 'video_scrape_diagnostic_confirm_title':
+        return 'Export scrape diagnostics?';
+      case 'video_scrape_diagnostic_saved':
+        return 'Diagnostic package saved';
+      case 'video_scrape_diagnostic_failed':
+        return ({required Object reason}) =>
+            'Could not export diagnostic package: ${reason}';
+      case 'video_scrape_diagnostic_share_subject':
+        return 'Fushi video scrape diagnostics';
+      case 'video_scrape_diagnostic_confirm_body':
+        return 'The package includes relative file and folder names, scrape summaries, and original NFO contents. It does not add videos, subtitles, images, absolute paths, app configuration, or app credentials. Original NFO files are preserved unchanged and may contain personal information or secrets; review the package before sharing publicly.';
       default:
         return null;
     }
@@ -223047,6 +223493,19 @@ extension on _StringsVi {
         return 'Japanese locale';
       case 'game_japanese_locale_hint':
         return 'Chinese/English patched builds must turn this off, or the game crashes on launch';
+      case 'video_scrape_diagnostic_export':
+        return 'Export scrape diagnostics';
+      case 'video_scrape_diagnostic_confirm_title':
+        return 'Export scrape diagnostics?';
+      case 'video_scrape_diagnostic_saved':
+        return 'Diagnostic package saved';
+      case 'video_scrape_diagnostic_failed':
+        return ({required Object reason}) =>
+            'Could not export diagnostic package: ${reason}';
+      case 'video_scrape_diagnostic_share_subject':
+        return 'Fushi video scrape diagnostics';
+      case 'video_scrape_diagnostic_confirm_body':
+        return 'The package includes relative file and folder names, scrape summaries, and original NFO contents. It does not add videos, subtitles, images, absolute paths, app configuration, or app credentials. Original NFO files are preserved unchanged and may contain personal information or secrets; review the package before sharing publicly.';
       default:
         return null;
     }
@@ -229641,6 +230100,18 @@ extension on _StringsZhCn {
         return '日语区域（转区）';
       case 'game_japanese_locale_hint':
         return '汉化版/英化版请选「关闭」，否则启动即闪退';
+      case 'video_scrape_diagnostic_export':
+        return '导出刮削诊断包';
+      case 'video_scrape_diagnostic_confirm_title':
+        return '导出刮削诊断包？';
+      case 'video_scrape_diagnostic_saved':
+        return '诊断包已保存';
+      case 'video_scrape_diagnostic_failed':
+        return ({required Object reason}) => '无法导出诊断包：${reason}';
+      case 'video_scrape_diagnostic_share_subject':
+        return 'Fushi 视频刮削诊断';
+      case 'video_scrape_diagnostic_confirm_body':
+        return '诊断包包含相对文件/目录名、刮削摘要和原始 NFO 内容；不会加入视频、字幕、图片、绝对路径、应用配置或应用凭据。原始 NFO 会原样保留，仍可能含有个人信息或密钥，请在公开分享前检查。';
       default:
         return null;
     }
@@ -236263,6 +236734,19 @@ extension on _StringsZhHk {
         return 'Japanese locale';
       case 'game_japanese_locale_hint':
         return 'Chinese/English patched builds must turn this off, or the game crashes on launch';
+      case 'video_scrape_diagnostic_export':
+        return 'Export scrape diagnostics';
+      case 'video_scrape_diagnostic_confirm_title':
+        return 'Export scrape diagnostics?';
+      case 'video_scrape_diagnostic_saved':
+        return 'Diagnostic package saved';
+      case 'video_scrape_diagnostic_failed':
+        return ({required Object reason}) =>
+            'Could not export diagnostic package: ${reason}';
+      case 'video_scrape_diagnostic_share_subject':
+        return 'Fushi video scrape diagnostics';
+      case 'video_scrape_diagnostic_confirm_body':
+        return 'The package includes relative file and folder names, scrape summaries, and original NFO contents. It does not add videos, subtitles, images, absolute paths, app configuration, or app credentials. Original NFO files are preserved unchanged and may contain personal information or secrets; review the package before sharing publicly.';
       default:
         return null;
     }
