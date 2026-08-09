@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 52870 (3110 per locale)
+/// Strings: 54995 (3235 per locale)
 ///
-/// Built on 2026-08-08 at 08:33 UTC
+/// Built on 2026-08-09 at 03:27 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -1017,7 +1017,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get download_backend_not_configured =>
       'Download backend is not configured yet.';
   String get download_clear_finished => 'Clear finished';
-  String get download_discover_tab => 'Discover';
   String get download_network_proxy_auto => 'Auto';
   String get download_network_proxy_auto_hint =>
       'Applies to AniList, Nyaa, and Jimaku only. Auto uses environment variables, then the enabled system proxy; torrent traffic is unchanged.';
@@ -4186,6 +4185,179 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get selection_copy_empty => 'No text selected.';
   String get video_library_empty_source_hint =>
       'Add a video folder from Sources to build your library';
+  String get video_source_scrape_action => 'Scrape this source';
+  String get video_source_scrape_settings => 'Source scrape settings';
+  String get video_source_scrape_provider => 'Primary metadata source';
+  String get video_source_scrape_provider_inherit => 'Use global default';
+  String get video_source_scrape_auto_after_scan => 'Scrape after scanning';
+  String get video_source_scrape_auto_after_scan_hint =>
+      'Run metadata scraping automatically after this source is scanned';
+  String get video_source_scrape_write_nfo => 'Write NFO files';
+  String get video_source_scrape_write_images => 'Write image files';
+  String get video_source_scrape_use_fanart => 'Use Fanart images';
+  String video_source_scrape_progress(
+          {required Object phase,
+          required Object current,
+          required Object total}) =>
+      '${phase} · ${current}/${total}';
+  String video_source_scrape_last_summary(
+          {required Object status,
+          required Object succeeded,
+          required Object pending,
+          required Object failed}) =>
+      'Last scrape (${status}): ${succeeded} succeeded, ${pending} pending, ${failed} failed';
+  String get video_source_scrape_phase_planning => 'Planning';
+  String get video_source_scrape_phase_recognizing => 'Matching';
+  String get video_source_scrape_phase_fetching => 'Fetching metadata';
+  String get video_source_scrape_phase_applying => 'Saving metadata';
+  String get video_source_scrape_phase_writing_sidecars => 'Writing sidecars';
+  String get video_source_scrape_status_interrupted => 'Interrupted';
+  String get video_source_scrape_global_provider => 'Default metadata source';
+  String get video_source_scrape_global_provider_hint =>
+      'Used by video sources that inherit the global setting';
+  String get video_source_scrape_fanart_key => 'Fanart API key';
+  String get video_source_scrape_fanart_key_hint =>
+      'Optional key used to fill missing artwork from Fanart';
+  String get video_source_scrape_bangumi_token => 'Bangumi access token';
+  String get video_source_scrape_bangumi_token_hint =>
+      'Optional access token for the official Bangumi API v0';
+  String get video_source_scrape_douban_endpoint =>
+      'Authorized Douban API endpoint';
+  String get video_source_scrape_douban_endpoint_hint =>
+      'Douban is unavailable unless both an authorized endpoint and token are configured';
+  String get video_source_scrape_douban_token => 'Authorized Douban API token';
+  String get video_source_scrape_douban_token_hint =>
+      'Douban is unavailable unless both an authorized endpoint and token are configured';
+  String get video_source_scrape_locale => 'Metadata language';
+  String get video_source_scrape_locale_hint =>
+      'Preferred language for titles, summaries and images';
+  String get video_source_scrape_confirmation_title => 'Confirm metadata match';
+  String get video_source_scrape_confirmation_hint =>
+      'Multiple exact matches were found. Choose the correct work to save its provider binding.';
+  String get video_source_scrape_confirmation_skip => 'Skip this work';
+  String get video_source_scrape_nfo_policy => 'NFO write policy';
+  String get video_source_scrape_image_policy => 'Image write policy';
+  String get video_source_scrape_policy_skip => 'Do not write';
+  String get video_source_scrape_policy_missing_only => 'Only when missing';
+  String get video_source_scrape_policy_overwrite => 'Update Hibiki files';
+  String get video_source_scrape_external_overwrite =>
+      'Allow protected sidecar overwrite';
+  String get video_source_scrape_external_overwrite_hint =>
+      'Third-party or user-modified files remain protected until you confirm each manual scrape batch again.';
+  String get video_source_scrape_external_overwrite_confirm_title =>
+      'Overwrite protected sidecars?';
+  String get video_source_scrape_external_overwrite_confirm_body =>
+      'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
+  String get video_source_scrape_tasks_open => 'Background tasks';
+  String get video_source_scrape_background_started =>
+      'Scraping is running in the background';
+  String get video_source_scrape_tasks_current => 'Current task';
+  String get video_source_scrape_tasks_history => 'Recent tasks';
+  String get video_source_scrape_tasks_empty => 'No scrape tasks yet';
+  String get video_source_scrape_waiting_confirmation =>
+      'Waiting for your confirmation';
+  String get video_source_scrape_phase_scanning => 'Scanning source';
+  String get video_library_all_videos => 'All videos';
+  String get video_work_voice_roles => 'Voice cast and characters';
+  String get video_work_cast_crew => 'Cast and crew';
+  String get video_work_trailers => 'Trailers';
+  String get video_work_extras => 'Extras';
+  String get video_work_details => 'Details';
+  String get video_work_external_ids => 'External IDs';
+  String get video_work_metadata_pending =>
+      'Detailed metadata has not been scraped yet. Retry this source from Sources, then reopen the work.';
+  String get video_work_genres => 'Genres';
+  String get video_work_keywords => 'Keywords';
+  String get video_work_studios => 'Studios';
+  String get video_work_countries => 'Countries';
+  String get video_work_content_rating => 'Content rating';
+  String get video_all_videos_list_view => 'List view';
+  String get video_all_videos_grid_view => 'Grid view';
+  String video_home_continue_episode_number({required Object n}) =>
+      'Playing episode ${n}';
+  String video_home_next_episode_number({required Object n}) =>
+      'Next · Episode ${n}';
+  String video_home_recent_episode_number({required Object n}) =>
+      'Recently added · Episode ${n}';
+  String video_home_remaining_minutes({required Object minutes}) =>
+      '${minutes} min remaining';
+  String get video_discovery_tab => 'Discover';
+  String get video_discovery_search_hint => 'Search movies, series, anime';
+  String get video_discovery_hot => 'Popular now';
+  String get video_discovery_seasonal_anime => 'Seasonal anime';
+  String get video_discovery_all_works => 'All titles';
+  String get video_discovery_search_results => 'Search results';
+  String get video_discovery_provider_warning =>
+      'Some providers are unavailable. Showing available results.';
+  String get video_discovery_load_failed => 'Could not load discovery results.';
+  String get video_discovery_empty => 'No matching titles.';
+  String get video_discovery_resource_search => 'Search resources';
+  String get video_discovery_subtitle_search => 'Search subtitles';
+  String get video_discovery_subscribe => 'Subscribe';
+  String get video_discovery_subscription_manage => 'Manage subscription';
+  String get video_discovery_pipeline_idle =>
+      'Not downloaded → Download → Organize → Subtitles → Scrape → Library';
+  String get video_discovery_details_load_failed =>
+      'Could not load title details.';
+  String get video_discovery_sort_popularity => 'Popularity';
+  String get video_discovery_sort_rating => 'Rating';
+  String get video_discovery_sort_release => 'Release date';
+  String get video_discovery_in_library => 'In library';
+  String get video_discovery_play => 'Play';
+  String get download_resources_tab => 'Resources';
+  String get video_external_settings_section =>
+      'External resource and subtitle providers';
+  String get video_torznab_settings_title => 'Torznab indexers';
+  String get video_torznab_settings_hint =>
+      'Configure one or more Jackett, Prowlarr, or compatible Torznab endpoints. Secrets stay on this device.';
+  String get video_torznab_add => 'Add indexer';
+  String get video_torznab_name => 'Name';
+  String get video_torznab_endpoint => 'Endpoint';
+  String get video_torznab_endpoint_hint =>
+      'HTTPS is required except for loopback addresses.';
+  String get video_torznab_api_key => 'API key';
+  String get video_torznab_priority => 'Priority';
+  String get video_torznab_categories => 'Categories';
+  String get video_torznab_categories_hint =>
+      'Comma-separated numeric category IDs';
+  String get video_external_enabled => 'Enabled';
+  String get video_external_insecure_http => 'Allow insecure HTTP';
+  String get video_external_insecure_http_hint =>
+      'Use only for a trusted local network endpoint.';
+  String get video_external_endpoint_invalid =>
+      'Enter a valid endpoint without credentials, query parameters, or fragments.';
+  String get video_opensubtitles_settings_title => 'OpenSubtitles';
+  String get video_opensubtitles_settings_hint =>
+      'API credentials and preferred subtitle languages stay on this device.';
+  String get video_opensubtitles_user_agent => 'User-Agent';
+  String get video_opensubtitles_languages => 'Preferred languages';
+  String get video_opensubtitles_languages_hint =>
+      'Comma-separated language codes, for example zh-CN,en,ja';
+  String get video_download_path_mappings_title => 'qBittorrent path mappings';
+  String get video_download_path_mappings_hint =>
+      'Map each qBittorrent remote root to a locally accessible folder.';
+  String get video_download_path_mapping_add => 'Add path mapping';
+  String get video_download_backend_profile_id => 'Backend profile ID';
+  String get video_download_remote_root => 'Remote root';
+  String get video_download_local_root => 'Local root';
+  String get video_download_target_source_title =>
+      'Default managed video source';
+  String get video_download_target_source_hint =>
+      'New downloads are organized into this local video source.';
+  String get video_download_target_source_none => 'Choose a local video source';
+  String get video_external_remove => 'Remove';
+  String get video_external_username_optional => 'Username (optional)';
+  String get video_external_password_optional => 'Password (optional)';
+  String get video_external_api_key => 'API key';
+  String get video_external_save_error =>
+      'The configuration could not be saved. Check the highlighted fields.';
+  String get video_external_categories_invalid =>
+      'Categories must be comma-separated numeric IDs.';
+  String get video_download_path_mapping_invalid =>
+      'Enter a profile ID, remote root, and absolute local root.';
+  String get video_opensubtitles_endpoint => 'API endpoint';
+  String get video_download_target_source_empty =>
+      'No locally accessible video source is available. Add one on the Sources tab first.';
 }
 
 // Path: <root>
@@ -5689,8 +5861,6 @@ class _StringsAr extends _StringsEn {
       'Download backend is not configured yet.';
   @override
   String get download_clear_finished => 'Clear finished';
-  @override
-  String get download_discover_tab => 'Discover';
   @override
   String get download_network_proxy_auto => 'Auto';
   @override
@@ -11331,6 +11501,305 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_library_empty_source_hint =>
       'Add a video folder from Sources to build your library';
+  @override
+  String get video_source_scrape_action => 'Scrape this source';
+  @override
+  String get video_source_scrape_settings => 'Source scrape settings';
+  @override
+  String get video_source_scrape_provider => 'Primary metadata source';
+  @override
+  String get video_source_scrape_provider_inherit => 'Use global default';
+  @override
+  String get video_source_scrape_auto_after_scan => 'Scrape after scanning';
+  @override
+  String get video_source_scrape_auto_after_scan_hint =>
+      'Run metadata scraping automatically after this source is scanned';
+  @override
+  String get video_source_scrape_write_nfo => 'Write NFO files';
+  @override
+  String get video_source_scrape_write_images => 'Write image files';
+  @override
+  String get video_source_scrape_use_fanart => 'Use Fanart images';
+  @override
+  String video_source_scrape_progress(
+          {required Object phase,
+          required Object current,
+          required Object total}) =>
+      '${phase} · ${current}/${total}';
+  @override
+  String video_source_scrape_last_summary(
+          {required Object status,
+          required Object succeeded,
+          required Object pending,
+          required Object failed}) =>
+      'Last scrape (${status}): ${succeeded} succeeded, ${pending} pending, ${failed} failed';
+  @override
+  String get video_source_scrape_phase_planning => 'Planning';
+  @override
+  String get video_source_scrape_phase_recognizing => 'Matching';
+  @override
+  String get video_source_scrape_phase_fetching => 'Fetching metadata';
+  @override
+  String get video_source_scrape_phase_applying => 'Saving metadata';
+  @override
+  String get video_source_scrape_phase_writing_sidecars => 'Writing sidecars';
+  @override
+  String get video_source_scrape_status_interrupted => 'Interrupted';
+  @override
+  String get video_source_scrape_global_provider => 'Default metadata source';
+  @override
+  String get video_source_scrape_global_provider_hint =>
+      'Used by video sources that inherit the global setting';
+  @override
+  String get video_source_scrape_fanart_key => 'Fanart API key';
+  @override
+  String get video_source_scrape_fanart_key_hint =>
+      'Optional key used to fill missing artwork from Fanart';
+  @override
+  String get video_source_scrape_bangumi_token => 'Bangumi access token';
+  @override
+  String get video_source_scrape_bangumi_token_hint =>
+      'Optional access token for the official Bangumi API v0';
+  @override
+  String get video_source_scrape_douban_endpoint =>
+      'Authorized Douban API endpoint';
+  @override
+  String get video_source_scrape_douban_endpoint_hint =>
+      'Douban is unavailable unless both an authorized endpoint and token are configured';
+  @override
+  String get video_source_scrape_douban_token => 'Authorized Douban API token';
+  @override
+  String get video_source_scrape_douban_token_hint =>
+      'Douban is unavailable unless both an authorized endpoint and token are configured';
+  @override
+  String get video_source_scrape_locale => 'Metadata language';
+  @override
+  String get video_source_scrape_locale_hint =>
+      'Preferred language for titles, summaries and images';
+  @override
+  String get video_source_scrape_confirmation_title => 'Confirm metadata match';
+  @override
+  String get video_source_scrape_confirmation_hint =>
+      'Multiple exact matches were found. Choose the correct work to save its provider binding.';
+  @override
+  String get video_source_scrape_confirmation_skip => 'Skip this work';
+  @override
+  String get video_source_scrape_nfo_policy => 'NFO write policy';
+  @override
+  String get video_source_scrape_image_policy => 'Image write policy';
+  @override
+  String get video_source_scrape_policy_skip => 'Do not write';
+  @override
+  String get video_source_scrape_policy_missing_only => 'Only when missing';
+  @override
+  String get video_source_scrape_policy_overwrite => 'Update Hibiki files';
+  @override
+  String get video_source_scrape_external_overwrite =>
+      'Allow protected sidecar overwrite';
+  @override
+  String get video_source_scrape_external_overwrite_hint =>
+      'Third-party or user-modified files remain protected until you confirm each manual scrape batch again.';
+  @override
+  String get video_source_scrape_external_overwrite_confirm_title =>
+      'Overwrite protected sidecars?';
+  @override
+  String get video_source_scrape_external_overwrite_confirm_body =>
+      'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
+  @override
+  String get video_source_scrape_tasks_open => 'Background tasks';
+  @override
+  String get video_source_scrape_background_started =>
+      'Scraping is running in the background';
+  @override
+  String get video_source_scrape_tasks_current => 'Current task';
+  @override
+  String get video_source_scrape_tasks_history => 'Recent tasks';
+  @override
+  String get video_source_scrape_tasks_empty => 'No scrape tasks yet';
+  @override
+  String get video_source_scrape_waiting_confirmation =>
+      'Waiting for your confirmation';
+  @override
+  String get video_source_scrape_phase_scanning => 'Scanning source';
+  @override
+  String get video_library_all_videos => 'All videos';
+  @override
+  String get video_work_voice_roles => 'Voice cast and characters';
+  @override
+  String get video_work_cast_crew => 'Cast and crew';
+  @override
+  String get video_work_trailers => 'Trailers';
+  @override
+  String get video_work_extras => 'Extras';
+  @override
+  String get video_work_details => 'Details';
+  @override
+  String get video_work_external_ids => 'External IDs';
+  @override
+  String get video_work_metadata_pending =>
+      'Detailed metadata has not been scraped yet. Retry this source from Sources, then reopen the work.';
+  @override
+  String get video_work_genres => 'Genres';
+  @override
+  String get video_work_keywords => 'Keywords';
+  @override
+  String get video_work_studios => 'Studios';
+  @override
+  String get video_work_countries => 'Countries';
+  @override
+  String get video_work_content_rating => 'Content rating';
+  @override
+  String get video_all_videos_list_view => 'List view';
+  @override
+  String get video_all_videos_grid_view => 'Grid view';
+  @override
+  String video_home_continue_episode_number({required Object n}) =>
+      'Playing episode ${n}';
+  @override
+  String video_home_next_episode_number({required Object n}) =>
+      'Next · Episode ${n}';
+  @override
+  String video_home_recent_episode_number({required Object n}) =>
+      'Recently added · Episode ${n}';
+  @override
+  String video_home_remaining_minutes({required Object minutes}) =>
+      '${minutes} min remaining';
+  @override
+  String get video_discovery_tab => 'Discover';
+  @override
+  String get video_discovery_search_hint => 'Search movies, series, anime';
+  @override
+  String get video_discovery_hot => 'Popular now';
+  @override
+  String get video_discovery_seasonal_anime => 'Seasonal anime';
+  @override
+  String get video_discovery_all_works => 'All titles';
+  @override
+  String get video_discovery_search_results => 'Search results';
+  @override
+  String get video_discovery_provider_warning =>
+      'Some providers are unavailable. Showing available results.';
+  @override
+  String get video_discovery_load_failed => 'Could not load discovery results.';
+  @override
+  String get video_discovery_empty => 'No matching titles.';
+  @override
+  String get video_discovery_resource_search => 'Search resources';
+  @override
+  String get video_discovery_subtitle_search => 'Search subtitles';
+  @override
+  String get video_discovery_subscribe => 'Subscribe';
+  @override
+  String get video_discovery_subscription_manage => 'Manage subscription';
+  @override
+  String get video_discovery_pipeline_idle =>
+      'Not downloaded → Download → Organize → Subtitles → Scrape → Library';
+  @override
+  String get video_discovery_details_load_failed =>
+      'Could not load title details.';
+  @override
+  String get video_discovery_sort_popularity => 'Popularity';
+  @override
+  String get video_discovery_sort_rating => 'Rating';
+  @override
+  String get video_discovery_sort_release => 'Release date';
+  @override
+  String get video_discovery_in_library => 'In library';
+  @override
+  String get video_discovery_play => 'Play';
+  @override
+  String get download_resources_tab => 'Resources';
+  @override
+  String get video_external_settings_section =>
+      'External resource and subtitle providers';
+  @override
+  String get video_torznab_settings_title => 'Torznab indexers';
+  @override
+  String get video_torznab_settings_hint =>
+      'Configure one or more Jackett, Prowlarr, or compatible Torznab endpoints. Secrets stay on this device.';
+  @override
+  String get video_torznab_add => 'Add indexer';
+  @override
+  String get video_torznab_name => 'Name';
+  @override
+  String get video_torznab_endpoint => 'Endpoint';
+  @override
+  String get video_torznab_endpoint_hint =>
+      'HTTPS is required except for loopback addresses.';
+  @override
+  String get video_torznab_api_key => 'API key';
+  @override
+  String get video_torznab_priority => 'Priority';
+  @override
+  String get video_torznab_categories => 'Categories';
+  @override
+  String get video_torznab_categories_hint =>
+      'Comma-separated numeric category IDs';
+  @override
+  String get video_external_enabled => 'Enabled';
+  @override
+  String get video_external_insecure_http => 'Allow insecure HTTP';
+  @override
+  String get video_external_insecure_http_hint =>
+      'Use only for a trusted local network endpoint.';
+  @override
+  String get video_external_endpoint_invalid =>
+      'Enter a valid endpoint without credentials, query parameters, or fragments.';
+  @override
+  String get video_opensubtitles_settings_title => 'OpenSubtitles';
+  @override
+  String get video_opensubtitles_settings_hint =>
+      'API credentials and preferred subtitle languages stay on this device.';
+  @override
+  String get video_opensubtitles_user_agent => 'User-Agent';
+  @override
+  String get video_opensubtitles_languages => 'Preferred languages';
+  @override
+  String get video_opensubtitles_languages_hint =>
+      'Comma-separated language codes, for example zh-CN,en,ja';
+  @override
+  String get video_download_path_mappings_title => 'qBittorrent path mappings';
+  @override
+  String get video_download_path_mappings_hint =>
+      'Map each qBittorrent remote root to a locally accessible folder.';
+  @override
+  String get video_download_path_mapping_add => 'Add path mapping';
+  @override
+  String get video_download_backend_profile_id => 'Backend profile ID';
+  @override
+  String get video_download_remote_root => 'Remote root';
+  @override
+  String get video_download_local_root => 'Local root';
+  @override
+  String get video_download_target_source_title =>
+      'Default managed video source';
+  @override
+  String get video_download_target_source_hint =>
+      'New downloads are organized into this local video source.';
+  @override
+  String get video_download_target_source_none => 'Choose a local video source';
+  @override
+  String get video_external_remove => 'Remove';
+  @override
+  String get video_external_username_optional => 'Username (optional)';
+  @override
+  String get video_external_password_optional => 'Password (optional)';
+  @override
+  String get video_external_api_key => 'API key';
+  @override
+  String get video_external_save_error =>
+      'The configuration could not be saved. Check the highlighted fields.';
+  @override
+  String get video_external_categories_invalid =>
+      'Categories must be comma-separated numeric IDs.';
+  @override
+  String get video_download_path_mapping_invalid =>
+      'Enter a profile ID, remote root, and absolute local root.';
+  @override
+  String get video_opensubtitles_endpoint => 'API endpoint';
+  @override
+  String get video_download_target_source_empty =>
+      'No locally accessible video source is available. Add one on the Sources tab first.';
 }
 
 // Path: <root>
@@ -12852,8 +13321,6 @@ class _StringsDe extends _StringsEn {
       'Download backend is not configured yet.';
   @override
   String get download_clear_finished => 'Clear finished';
-  @override
-  String get download_discover_tab => 'Discover';
   @override
   String get download_network_proxy_auto => 'Auto';
   @override
@@ -18543,6 +19010,305 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_library_empty_source_hint =>
       'Add a video folder from Sources to build your library';
+  @override
+  String get video_source_scrape_action => 'Scrape this source';
+  @override
+  String get video_source_scrape_settings => 'Source scrape settings';
+  @override
+  String get video_source_scrape_provider => 'Primary metadata source';
+  @override
+  String get video_source_scrape_provider_inherit => 'Use global default';
+  @override
+  String get video_source_scrape_auto_after_scan => 'Scrape after scanning';
+  @override
+  String get video_source_scrape_auto_after_scan_hint =>
+      'Run metadata scraping automatically after this source is scanned';
+  @override
+  String get video_source_scrape_write_nfo => 'Write NFO files';
+  @override
+  String get video_source_scrape_write_images => 'Write image files';
+  @override
+  String get video_source_scrape_use_fanart => 'Use Fanart images';
+  @override
+  String video_source_scrape_progress(
+          {required Object phase,
+          required Object current,
+          required Object total}) =>
+      '${phase} · ${current}/${total}';
+  @override
+  String video_source_scrape_last_summary(
+          {required Object status,
+          required Object succeeded,
+          required Object pending,
+          required Object failed}) =>
+      'Last scrape (${status}): ${succeeded} succeeded, ${pending} pending, ${failed} failed';
+  @override
+  String get video_source_scrape_phase_planning => 'Planning';
+  @override
+  String get video_source_scrape_phase_recognizing => 'Matching';
+  @override
+  String get video_source_scrape_phase_fetching => 'Fetching metadata';
+  @override
+  String get video_source_scrape_phase_applying => 'Saving metadata';
+  @override
+  String get video_source_scrape_phase_writing_sidecars => 'Writing sidecars';
+  @override
+  String get video_source_scrape_status_interrupted => 'Interrupted';
+  @override
+  String get video_source_scrape_global_provider => 'Default metadata source';
+  @override
+  String get video_source_scrape_global_provider_hint =>
+      'Used by video sources that inherit the global setting';
+  @override
+  String get video_source_scrape_fanart_key => 'Fanart API key';
+  @override
+  String get video_source_scrape_fanart_key_hint =>
+      'Optional key used to fill missing artwork from Fanart';
+  @override
+  String get video_source_scrape_bangumi_token => 'Bangumi access token';
+  @override
+  String get video_source_scrape_bangumi_token_hint =>
+      'Optional access token for the official Bangumi API v0';
+  @override
+  String get video_source_scrape_douban_endpoint =>
+      'Authorized Douban API endpoint';
+  @override
+  String get video_source_scrape_douban_endpoint_hint =>
+      'Douban is unavailable unless both an authorized endpoint and token are configured';
+  @override
+  String get video_source_scrape_douban_token => 'Authorized Douban API token';
+  @override
+  String get video_source_scrape_douban_token_hint =>
+      'Douban is unavailable unless both an authorized endpoint and token are configured';
+  @override
+  String get video_source_scrape_locale => 'Metadata language';
+  @override
+  String get video_source_scrape_locale_hint =>
+      'Preferred language for titles, summaries and images';
+  @override
+  String get video_source_scrape_confirmation_title => 'Confirm metadata match';
+  @override
+  String get video_source_scrape_confirmation_hint =>
+      'Multiple exact matches were found. Choose the correct work to save its provider binding.';
+  @override
+  String get video_source_scrape_confirmation_skip => 'Skip this work';
+  @override
+  String get video_source_scrape_nfo_policy => 'NFO write policy';
+  @override
+  String get video_source_scrape_image_policy => 'Image write policy';
+  @override
+  String get video_source_scrape_policy_skip => 'Do not write';
+  @override
+  String get video_source_scrape_policy_missing_only => 'Only when missing';
+  @override
+  String get video_source_scrape_policy_overwrite => 'Update Hibiki files';
+  @override
+  String get video_source_scrape_external_overwrite =>
+      'Allow protected sidecar overwrite';
+  @override
+  String get video_source_scrape_external_overwrite_hint =>
+      'Third-party or user-modified files remain protected until you confirm each manual scrape batch again.';
+  @override
+  String get video_source_scrape_external_overwrite_confirm_title =>
+      'Overwrite protected sidecars?';
+  @override
+  String get video_source_scrape_external_overwrite_confirm_body =>
+      'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
+  @override
+  String get video_source_scrape_tasks_open => 'Background tasks';
+  @override
+  String get video_source_scrape_background_started =>
+      'Scraping is running in the background';
+  @override
+  String get video_source_scrape_tasks_current => 'Current task';
+  @override
+  String get video_source_scrape_tasks_history => 'Recent tasks';
+  @override
+  String get video_source_scrape_tasks_empty => 'No scrape tasks yet';
+  @override
+  String get video_source_scrape_waiting_confirmation =>
+      'Waiting for your confirmation';
+  @override
+  String get video_source_scrape_phase_scanning => 'Scanning source';
+  @override
+  String get video_library_all_videos => 'All videos';
+  @override
+  String get video_work_voice_roles => 'Voice cast and characters';
+  @override
+  String get video_work_cast_crew => 'Cast and crew';
+  @override
+  String get video_work_trailers => 'Trailers';
+  @override
+  String get video_work_extras => 'Extras';
+  @override
+  String get video_work_details => 'Details';
+  @override
+  String get video_work_external_ids => 'External IDs';
+  @override
+  String get video_work_metadata_pending =>
+      'Detailed metadata has not been scraped yet. Retry this source from Sources, then reopen the work.';
+  @override
+  String get video_work_genres => 'Genres';
+  @override
+  String get video_work_keywords => 'Keywords';
+  @override
+  String get video_work_studios => 'Studios';
+  @override
+  String get video_work_countries => 'Countries';
+  @override
+  String get video_work_content_rating => 'Content rating';
+  @override
+  String get video_all_videos_list_view => 'List view';
+  @override
+  String get video_all_videos_grid_view => 'Grid view';
+  @override
+  String video_home_continue_episode_number({required Object n}) =>
+      'Playing episode ${n}';
+  @override
+  String video_home_next_episode_number({required Object n}) =>
+      'Next · Episode ${n}';
+  @override
+  String video_home_recent_episode_number({required Object n}) =>
+      'Recently added · Episode ${n}';
+  @override
+  String video_home_remaining_minutes({required Object minutes}) =>
+      '${minutes} min remaining';
+  @override
+  String get video_discovery_tab => 'Discover';
+  @override
+  String get video_discovery_search_hint => 'Search movies, series, anime';
+  @override
+  String get video_discovery_hot => 'Popular now';
+  @override
+  String get video_discovery_seasonal_anime => 'Seasonal anime';
+  @override
+  String get video_discovery_all_works => 'All titles';
+  @override
+  String get video_discovery_search_results => 'Search results';
+  @override
+  String get video_discovery_provider_warning =>
+      'Some providers are unavailable. Showing available results.';
+  @override
+  String get video_discovery_load_failed => 'Could not load discovery results.';
+  @override
+  String get video_discovery_empty => 'No matching titles.';
+  @override
+  String get video_discovery_resource_search => 'Search resources';
+  @override
+  String get video_discovery_subtitle_search => 'Search subtitles';
+  @override
+  String get video_discovery_subscribe => 'Subscribe';
+  @override
+  String get video_discovery_subscription_manage => 'Manage subscription';
+  @override
+  String get video_discovery_pipeline_idle =>
+      'Not downloaded → Download → Organize → Subtitles → Scrape → Library';
+  @override
+  String get video_discovery_details_load_failed =>
+      'Could not load title details.';
+  @override
+  String get video_discovery_sort_popularity => 'Popularity';
+  @override
+  String get video_discovery_sort_rating => 'Rating';
+  @override
+  String get video_discovery_sort_release => 'Release date';
+  @override
+  String get video_discovery_in_library => 'In library';
+  @override
+  String get video_discovery_play => 'Play';
+  @override
+  String get download_resources_tab => 'Resources';
+  @override
+  String get video_external_settings_section =>
+      'External resource and subtitle providers';
+  @override
+  String get video_torznab_settings_title => 'Torznab indexers';
+  @override
+  String get video_torznab_settings_hint =>
+      'Configure one or more Jackett, Prowlarr, or compatible Torznab endpoints. Secrets stay on this device.';
+  @override
+  String get video_torznab_add => 'Add indexer';
+  @override
+  String get video_torznab_name => 'Name';
+  @override
+  String get video_torznab_endpoint => 'Endpoint';
+  @override
+  String get video_torznab_endpoint_hint =>
+      'HTTPS is required except for loopback addresses.';
+  @override
+  String get video_torznab_api_key => 'API key';
+  @override
+  String get video_torznab_priority => 'Priority';
+  @override
+  String get video_torznab_categories => 'Categories';
+  @override
+  String get video_torznab_categories_hint =>
+      'Comma-separated numeric category IDs';
+  @override
+  String get video_external_enabled => 'Enabled';
+  @override
+  String get video_external_insecure_http => 'Allow insecure HTTP';
+  @override
+  String get video_external_insecure_http_hint =>
+      'Use only for a trusted local network endpoint.';
+  @override
+  String get video_external_endpoint_invalid =>
+      'Enter a valid endpoint without credentials, query parameters, or fragments.';
+  @override
+  String get video_opensubtitles_settings_title => 'OpenSubtitles';
+  @override
+  String get video_opensubtitles_settings_hint =>
+      'API credentials and preferred subtitle languages stay on this device.';
+  @override
+  String get video_opensubtitles_user_agent => 'User-Agent';
+  @override
+  String get video_opensubtitles_languages => 'Preferred languages';
+  @override
+  String get video_opensubtitles_languages_hint =>
+      'Comma-separated language codes, for example zh-CN,en,ja';
+  @override
+  String get video_download_path_mappings_title => 'qBittorrent path mappings';
+  @override
+  String get video_download_path_mappings_hint =>
+      'Map each qBittorrent remote root to a locally accessible folder.';
+  @override
+  String get video_download_path_mapping_add => 'Add path mapping';
+  @override
+  String get video_download_backend_profile_id => 'Backend profile ID';
+  @override
+  String get video_download_remote_root => 'Remote root';
+  @override
+  String get video_download_local_root => 'Local root';
+  @override
+  String get video_download_target_source_title =>
+      'Default managed video source';
+  @override
+  String get video_download_target_source_hint =>
+      'New downloads are organized into this local video source.';
+  @override
+  String get video_download_target_source_none => 'Choose a local video source';
+  @override
+  String get video_external_remove => 'Remove';
+  @override
+  String get video_external_username_optional => 'Username (optional)';
+  @override
+  String get video_external_password_optional => 'Password (optional)';
+  @override
+  String get video_external_api_key => 'API key';
+  @override
+  String get video_external_save_error =>
+      'The configuration could not be saved. Check the highlighted fields.';
+  @override
+  String get video_external_categories_invalid =>
+      'Categories must be comma-separated numeric IDs.';
+  @override
+  String get video_download_path_mapping_invalid =>
+      'Enter a profile ID, remote root, and absolute local root.';
+  @override
+  String get video_opensubtitles_endpoint => 'API endpoint';
+  @override
+  String get video_download_target_source_empty =>
+      'No locally accessible video source is available. Add one on the Sources tab first.';
 }
 
 // Path: <root>
@@ -20065,8 +20831,6 @@ class _StringsEs extends _StringsEn {
       'Download backend is not configured yet.';
   @override
   String get download_clear_finished => 'Clear finished';
-  @override
-  String get download_discover_tab => 'Discover';
   @override
   String get download_network_proxy_auto => 'Auto';
   @override
@@ -25770,6 +26534,305 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_library_empty_source_hint =>
       'Add a video folder from Sources to build your library';
+  @override
+  String get video_source_scrape_action => 'Scrape this source';
+  @override
+  String get video_source_scrape_settings => 'Source scrape settings';
+  @override
+  String get video_source_scrape_provider => 'Primary metadata source';
+  @override
+  String get video_source_scrape_provider_inherit => 'Use global default';
+  @override
+  String get video_source_scrape_auto_after_scan => 'Scrape after scanning';
+  @override
+  String get video_source_scrape_auto_after_scan_hint =>
+      'Run metadata scraping automatically after this source is scanned';
+  @override
+  String get video_source_scrape_write_nfo => 'Write NFO files';
+  @override
+  String get video_source_scrape_write_images => 'Write image files';
+  @override
+  String get video_source_scrape_use_fanart => 'Use Fanart images';
+  @override
+  String video_source_scrape_progress(
+          {required Object phase,
+          required Object current,
+          required Object total}) =>
+      '${phase} · ${current}/${total}';
+  @override
+  String video_source_scrape_last_summary(
+          {required Object status,
+          required Object succeeded,
+          required Object pending,
+          required Object failed}) =>
+      'Last scrape (${status}): ${succeeded} succeeded, ${pending} pending, ${failed} failed';
+  @override
+  String get video_source_scrape_phase_planning => 'Planning';
+  @override
+  String get video_source_scrape_phase_recognizing => 'Matching';
+  @override
+  String get video_source_scrape_phase_fetching => 'Fetching metadata';
+  @override
+  String get video_source_scrape_phase_applying => 'Saving metadata';
+  @override
+  String get video_source_scrape_phase_writing_sidecars => 'Writing sidecars';
+  @override
+  String get video_source_scrape_status_interrupted => 'Interrupted';
+  @override
+  String get video_source_scrape_global_provider => 'Default metadata source';
+  @override
+  String get video_source_scrape_global_provider_hint =>
+      'Used by video sources that inherit the global setting';
+  @override
+  String get video_source_scrape_fanart_key => 'Fanart API key';
+  @override
+  String get video_source_scrape_fanart_key_hint =>
+      'Optional key used to fill missing artwork from Fanart';
+  @override
+  String get video_source_scrape_bangumi_token => 'Bangumi access token';
+  @override
+  String get video_source_scrape_bangumi_token_hint =>
+      'Optional access token for the official Bangumi API v0';
+  @override
+  String get video_source_scrape_douban_endpoint =>
+      'Authorized Douban API endpoint';
+  @override
+  String get video_source_scrape_douban_endpoint_hint =>
+      'Douban is unavailable unless both an authorized endpoint and token are configured';
+  @override
+  String get video_source_scrape_douban_token => 'Authorized Douban API token';
+  @override
+  String get video_source_scrape_douban_token_hint =>
+      'Douban is unavailable unless both an authorized endpoint and token are configured';
+  @override
+  String get video_source_scrape_locale => 'Metadata language';
+  @override
+  String get video_source_scrape_locale_hint =>
+      'Preferred language for titles, summaries and images';
+  @override
+  String get video_source_scrape_confirmation_title => 'Confirm metadata match';
+  @override
+  String get video_source_scrape_confirmation_hint =>
+      'Multiple exact matches were found. Choose the correct work to save its provider binding.';
+  @override
+  String get video_source_scrape_confirmation_skip => 'Skip this work';
+  @override
+  String get video_source_scrape_nfo_policy => 'NFO write policy';
+  @override
+  String get video_source_scrape_image_policy => 'Image write policy';
+  @override
+  String get video_source_scrape_policy_skip => 'Do not write';
+  @override
+  String get video_source_scrape_policy_missing_only => 'Only when missing';
+  @override
+  String get video_source_scrape_policy_overwrite => 'Update Hibiki files';
+  @override
+  String get video_source_scrape_external_overwrite =>
+      'Allow protected sidecar overwrite';
+  @override
+  String get video_source_scrape_external_overwrite_hint =>
+      'Third-party or user-modified files remain protected until you confirm each manual scrape batch again.';
+  @override
+  String get video_source_scrape_external_overwrite_confirm_title =>
+      'Overwrite protected sidecars?';
+  @override
+  String get video_source_scrape_external_overwrite_confirm_body =>
+      'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
+  @override
+  String get video_source_scrape_tasks_open => 'Background tasks';
+  @override
+  String get video_source_scrape_background_started =>
+      'Scraping is running in the background';
+  @override
+  String get video_source_scrape_tasks_current => 'Current task';
+  @override
+  String get video_source_scrape_tasks_history => 'Recent tasks';
+  @override
+  String get video_source_scrape_tasks_empty => 'No scrape tasks yet';
+  @override
+  String get video_source_scrape_waiting_confirmation =>
+      'Waiting for your confirmation';
+  @override
+  String get video_source_scrape_phase_scanning => 'Scanning source';
+  @override
+  String get video_library_all_videos => 'All videos';
+  @override
+  String get video_work_voice_roles => 'Voice cast and characters';
+  @override
+  String get video_work_cast_crew => 'Cast and crew';
+  @override
+  String get video_work_trailers => 'Trailers';
+  @override
+  String get video_work_extras => 'Extras';
+  @override
+  String get video_work_details => 'Details';
+  @override
+  String get video_work_external_ids => 'External IDs';
+  @override
+  String get video_work_metadata_pending =>
+      'Detailed metadata has not been scraped yet. Retry this source from Sources, then reopen the work.';
+  @override
+  String get video_work_genres => 'Genres';
+  @override
+  String get video_work_keywords => 'Keywords';
+  @override
+  String get video_work_studios => 'Studios';
+  @override
+  String get video_work_countries => 'Countries';
+  @override
+  String get video_work_content_rating => 'Content rating';
+  @override
+  String get video_all_videos_list_view => 'List view';
+  @override
+  String get video_all_videos_grid_view => 'Grid view';
+  @override
+  String video_home_continue_episode_number({required Object n}) =>
+      'Playing episode ${n}';
+  @override
+  String video_home_next_episode_number({required Object n}) =>
+      'Next · Episode ${n}';
+  @override
+  String video_home_recent_episode_number({required Object n}) =>
+      'Recently added · Episode ${n}';
+  @override
+  String video_home_remaining_minutes({required Object minutes}) =>
+      '${minutes} min remaining';
+  @override
+  String get video_discovery_tab => 'Discover';
+  @override
+  String get video_discovery_search_hint => 'Search movies, series, anime';
+  @override
+  String get video_discovery_hot => 'Popular now';
+  @override
+  String get video_discovery_seasonal_anime => 'Seasonal anime';
+  @override
+  String get video_discovery_all_works => 'All titles';
+  @override
+  String get video_discovery_search_results => 'Search results';
+  @override
+  String get video_discovery_provider_warning =>
+      'Some providers are unavailable. Showing available results.';
+  @override
+  String get video_discovery_load_failed => 'Could not load discovery results.';
+  @override
+  String get video_discovery_empty => 'No matching titles.';
+  @override
+  String get video_discovery_resource_search => 'Search resources';
+  @override
+  String get video_discovery_subtitle_search => 'Search subtitles';
+  @override
+  String get video_discovery_subscribe => 'Subscribe';
+  @override
+  String get video_discovery_subscription_manage => 'Manage subscription';
+  @override
+  String get video_discovery_pipeline_idle =>
+      'Not downloaded → Download → Organize → Subtitles → Scrape → Library';
+  @override
+  String get video_discovery_details_load_failed =>
+      'Could not load title details.';
+  @override
+  String get video_discovery_sort_popularity => 'Popularity';
+  @override
+  String get video_discovery_sort_rating => 'Rating';
+  @override
+  String get video_discovery_sort_release => 'Release date';
+  @override
+  String get video_discovery_in_library => 'In library';
+  @override
+  String get video_discovery_play => 'Play';
+  @override
+  String get download_resources_tab => 'Resources';
+  @override
+  String get video_external_settings_section =>
+      'External resource and subtitle providers';
+  @override
+  String get video_torznab_settings_title => 'Torznab indexers';
+  @override
+  String get video_torznab_settings_hint =>
+      'Configure one or more Jackett, Prowlarr, or compatible Torznab endpoints. Secrets stay on this device.';
+  @override
+  String get video_torznab_add => 'Add indexer';
+  @override
+  String get video_torznab_name => 'Name';
+  @override
+  String get video_torznab_endpoint => 'Endpoint';
+  @override
+  String get video_torznab_endpoint_hint =>
+      'HTTPS is required except for loopback addresses.';
+  @override
+  String get video_torznab_api_key => 'API key';
+  @override
+  String get video_torznab_priority => 'Priority';
+  @override
+  String get video_torznab_categories => 'Categories';
+  @override
+  String get video_torznab_categories_hint =>
+      'Comma-separated numeric category IDs';
+  @override
+  String get video_external_enabled => 'Enabled';
+  @override
+  String get video_external_insecure_http => 'Allow insecure HTTP';
+  @override
+  String get video_external_insecure_http_hint =>
+      'Use only for a trusted local network endpoint.';
+  @override
+  String get video_external_endpoint_invalid =>
+      'Enter a valid endpoint without credentials, query parameters, or fragments.';
+  @override
+  String get video_opensubtitles_settings_title => 'OpenSubtitles';
+  @override
+  String get video_opensubtitles_settings_hint =>
+      'API credentials and preferred subtitle languages stay on this device.';
+  @override
+  String get video_opensubtitles_user_agent => 'User-Agent';
+  @override
+  String get video_opensubtitles_languages => 'Preferred languages';
+  @override
+  String get video_opensubtitles_languages_hint =>
+      'Comma-separated language codes, for example zh-CN,en,ja';
+  @override
+  String get video_download_path_mappings_title => 'qBittorrent path mappings';
+  @override
+  String get video_download_path_mappings_hint =>
+      'Map each qBittorrent remote root to a locally accessible folder.';
+  @override
+  String get video_download_path_mapping_add => 'Add path mapping';
+  @override
+  String get video_download_backend_profile_id => 'Backend profile ID';
+  @override
+  String get video_download_remote_root => 'Remote root';
+  @override
+  String get video_download_local_root => 'Local root';
+  @override
+  String get video_download_target_source_title =>
+      'Default managed video source';
+  @override
+  String get video_download_target_source_hint =>
+      'New downloads are organized into this local video source.';
+  @override
+  String get video_download_target_source_none => 'Choose a local video source';
+  @override
+  String get video_external_remove => 'Remove';
+  @override
+  String get video_external_username_optional => 'Username (optional)';
+  @override
+  String get video_external_password_optional => 'Password (optional)';
+  @override
+  String get video_external_api_key => 'API key';
+  @override
+  String get video_external_save_error =>
+      'The configuration could not be saved. Check the highlighted fields.';
+  @override
+  String get video_external_categories_invalid =>
+      'Categories must be comma-separated numeric IDs.';
+  @override
+  String get video_download_path_mapping_invalid =>
+      'Enter a profile ID, remote root, and absolute local root.';
+  @override
+  String get video_opensubtitles_endpoint => 'API endpoint';
+  @override
+  String get video_download_target_source_empty =>
+      'No locally accessible video source is available. Add one on the Sources tab first.';
 }
 
 // Path: <root>
@@ -27302,8 +28365,6 @@ class _StringsFr extends _StringsEn {
       'Download backend is not configured yet.';
   @override
   String get download_clear_finished => 'Clear finished';
-  @override
-  String get download_discover_tab => 'Discover';
   @override
   String get download_network_proxy_auto => 'Auto';
   @override
@@ -33009,6 +34070,305 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_library_empty_source_hint =>
       'Add a video folder from Sources to build your library';
+  @override
+  String get video_source_scrape_action => 'Scrape this source';
+  @override
+  String get video_source_scrape_settings => 'Source scrape settings';
+  @override
+  String get video_source_scrape_provider => 'Primary metadata source';
+  @override
+  String get video_source_scrape_provider_inherit => 'Use global default';
+  @override
+  String get video_source_scrape_auto_after_scan => 'Scrape after scanning';
+  @override
+  String get video_source_scrape_auto_after_scan_hint =>
+      'Run metadata scraping automatically after this source is scanned';
+  @override
+  String get video_source_scrape_write_nfo => 'Write NFO files';
+  @override
+  String get video_source_scrape_write_images => 'Write image files';
+  @override
+  String get video_source_scrape_use_fanart => 'Use Fanart images';
+  @override
+  String video_source_scrape_progress(
+          {required Object phase,
+          required Object current,
+          required Object total}) =>
+      '${phase} · ${current}/${total}';
+  @override
+  String video_source_scrape_last_summary(
+          {required Object status,
+          required Object succeeded,
+          required Object pending,
+          required Object failed}) =>
+      'Last scrape (${status}): ${succeeded} succeeded, ${pending} pending, ${failed} failed';
+  @override
+  String get video_source_scrape_phase_planning => 'Planning';
+  @override
+  String get video_source_scrape_phase_recognizing => 'Matching';
+  @override
+  String get video_source_scrape_phase_fetching => 'Fetching metadata';
+  @override
+  String get video_source_scrape_phase_applying => 'Saving metadata';
+  @override
+  String get video_source_scrape_phase_writing_sidecars => 'Writing sidecars';
+  @override
+  String get video_source_scrape_status_interrupted => 'Interrupted';
+  @override
+  String get video_source_scrape_global_provider => 'Default metadata source';
+  @override
+  String get video_source_scrape_global_provider_hint =>
+      'Used by video sources that inherit the global setting';
+  @override
+  String get video_source_scrape_fanart_key => 'Fanart API key';
+  @override
+  String get video_source_scrape_fanart_key_hint =>
+      'Optional key used to fill missing artwork from Fanart';
+  @override
+  String get video_source_scrape_bangumi_token => 'Bangumi access token';
+  @override
+  String get video_source_scrape_bangumi_token_hint =>
+      'Optional access token for the official Bangumi API v0';
+  @override
+  String get video_source_scrape_douban_endpoint =>
+      'Authorized Douban API endpoint';
+  @override
+  String get video_source_scrape_douban_endpoint_hint =>
+      'Douban is unavailable unless both an authorized endpoint and token are configured';
+  @override
+  String get video_source_scrape_douban_token => 'Authorized Douban API token';
+  @override
+  String get video_source_scrape_douban_token_hint =>
+      'Douban is unavailable unless both an authorized endpoint and token are configured';
+  @override
+  String get video_source_scrape_locale => 'Metadata language';
+  @override
+  String get video_source_scrape_locale_hint =>
+      'Preferred language for titles, summaries and images';
+  @override
+  String get video_source_scrape_confirmation_title => 'Confirm metadata match';
+  @override
+  String get video_source_scrape_confirmation_hint =>
+      'Multiple exact matches were found. Choose the correct work to save its provider binding.';
+  @override
+  String get video_source_scrape_confirmation_skip => 'Skip this work';
+  @override
+  String get video_source_scrape_nfo_policy => 'NFO write policy';
+  @override
+  String get video_source_scrape_image_policy => 'Image write policy';
+  @override
+  String get video_source_scrape_policy_skip => 'Do not write';
+  @override
+  String get video_source_scrape_policy_missing_only => 'Only when missing';
+  @override
+  String get video_source_scrape_policy_overwrite => 'Update Hibiki files';
+  @override
+  String get video_source_scrape_external_overwrite =>
+      'Allow protected sidecar overwrite';
+  @override
+  String get video_source_scrape_external_overwrite_hint =>
+      'Third-party or user-modified files remain protected until you confirm each manual scrape batch again.';
+  @override
+  String get video_source_scrape_external_overwrite_confirm_title =>
+      'Overwrite protected sidecars?';
+  @override
+  String get video_source_scrape_external_overwrite_confirm_body =>
+      'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
+  @override
+  String get video_source_scrape_tasks_open => 'Background tasks';
+  @override
+  String get video_source_scrape_background_started =>
+      'Scraping is running in the background';
+  @override
+  String get video_source_scrape_tasks_current => 'Current task';
+  @override
+  String get video_source_scrape_tasks_history => 'Recent tasks';
+  @override
+  String get video_source_scrape_tasks_empty => 'No scrape tasks yet';
+  @override
+  String get video_source_scrape_waiting_confirmation =>
+      'Waiting for your confirmation';
+  @override
+  String get video_source_scrape_phase_scanning => 'Scanning source';
+  @override
+  String get video_library_all_videos => 'All videos';
+  @override
+  String get video_work_voice_roles => 'Voice cast and characters';
+  @override
+  String get video_work_cast_crew => 'Cast and crew';
+  @override
+  String get video_work_trailers => 'Trailers';
+  @override
+  String get video_work_extras => 'Extras';
+  @override
+  String get video_work_details => 'Details';
+  @override
+  String get video_work_external_ids => 'External IDs';
+  @override
+  String get video_work_metadata_pending =>
+      'Detailed metadata has not been scraped yet. Retry this source from Sources, then reopen the work.';
+  @override
+  String get video_work_genres => 'Genres';
+  @override
+  String get video_work_keywords => 'Keywords';
+  @override
+  String get video_work_studios => 'Studios';
+  @override
+  String get video_work_countries => 'Countries';
+  @override
+  String get video_work_content_rating => 'Content rating';
+  @override
+  String get video_all_videos_list_view => 'List view';
+  @override
+  String get video_all_videos_grid_view => 'Grid view';
+  @override
+  String video_home_continue_episode_number({required Object n}) =>
+      'Playing episode ${n}';
+  @override
+  String video_home_next_episode_number({required Object n}) =>
+      'Next · Episode ${n}';
+  @override
+  String video_home_recent_episode_number({required Object n}) =>
+      'Recently added · Episode ${n}';
+  @override
+  String video_home_remaining_minutes({required Object minutes}) =>
+      '${minutes} min remaining';
+  @override
+  String get video_discovery_tab => 'Discover';
+  @override
+  String get video_discovery_search_hint => 'Search movies, series, anime';
+  @override
+  String get video_discovery_hot => 'Popular now';
+  @override
+  String get video_discovery_seasonal_anime => 'Seasonal anime';
+  @override
+  String get video_discovery_all_works => 'All titles';
+  @override
+  String get video_discovery_search_results => 'Search results';
+  @override
+  String get video_discovery_provider_warning =>
+      'Some providers are unavailable. Showing available results.';
+  @override
+  String get video_discovery_load_failed => 'Could not load discovery results.';
+  @override
+  String get video_discovery_empty => 'No matching titles.';
+  @override
+  String get video_discovery_resource_search => 'Search resources';
+  @override
+  String get video_discovery_subtitle_search => 'Search subtitles';
+  @override
+  String get video_discovery_subscribe => 'Subscribe';
+  @override
+  String get video_discovery_subscription_manage => 'Manage subscription';
+  @override
+  String get video_discovery_pipeline_idle =>
+      'Not downloaded → Download → Organize → Subtitles → Scrape → Library';
+  @override
+  String get video_discovery_details_load_failed =>
+      'Could not load title details.';
+  @override
+  String get video_discovery_sort_popularity => 'Popularity';
+  @override
+  String get video_discovery_sort_rating => 'Rating';
+  @override
+  String get video_discovery_sort_release => 'Release date';
+  @override
+  String get video_discovery_in_library => 'In library';
+  @override
+  String get video_discovery_play => 'Play';
+  @override
+  String get download_resources_tab => 'Resources';
+  @override
+  String get video_external_settings_section =>
+      'External resource and subtitle providers';
+  @override
+  String get video_torznab_settings_title => 'Torznab indexers';
+  @override
+  String get video_torznab_settings_hint =>
+      'Configure one or more Jackett, Prowlarr, or compatible Torznab endpoints. Secrets stay on this device.';
+  @override
+  String get video_torznab_add => 'Add indexer';
+  @override
+  String get video_torznab_name => 'Name';
+  @override
+  String get video_torznab_endpoint => 'Endpoint';
+  @override
+  String get video_torznab_endpoint_hint =>
+      'HTTPS is required except for loopback addresses.';
+  @override
+  String get video_torznab_api_key => 'API key';
+  @override
+  String get video_torznab_priority => 'Priority';
+  @override
+  String get video_torznab_categories => 'Categories';
+  @override
+  String get video_torznab_categories_hint =>
+      'Comma-separated numeric category IDs';
+  @override
+  String get video_external_enabled => 'Enabled';
+  @override
+  String get video_external_insecure_http => 'Allow insecure HTTP';
+  @override
+  String get video_external_insecure_http_hint =>
+      'Use only for a trusted local network endpoint.';
+  @override
+  String get video_external_endpoint_invalid =>
+      'Enter a valid endpoint without credentials, query parameters, or fragments.';
+  @override
+  String get video_opensubtitles_settings_title => 'OpenSubtitles';
+  @override
+  String get video_opensubtitles_settings_hint =>
+      'API credentials and preferred subtitle languages stay on this device.';
+  @override
+  String get video_opensubtitles_user_agent => 'User-Agent';
+  @override
+  String get video_opensubtitles_languages => 'Preferred languages';
+  @override
+  String get video_opensubtitles_languages_hint =>
+      'Comma-separated language codes, for example zh-CN,en,ja';
+  @override
+  String get video_download_path_mappings_title => 'qBittorrent path mappings';
+  @override
+  String get video_download_path_mappings_hint =>
+      'Map each qBittorrent remote root to a locally accessible folder.';
+  @override
+  String get video_download_path_mapping_add => 'Add path mapping';
+  @override
+  String get video_download_backend_profile_id => 'Backend profile ID';
+  @override
+  String get video_download_remote_root => 'Remote root';
+  @override
+  String get video_download_local_root => 'Local root';
+  @override
+  String get video_download_target_source_title =>
+      'Default managed video source';
+  @override
+  String get video_download_target_source_hint =>
+      'New downloads are organized into this local video source.';
+  @override
+  String get video_download_target_source_none => 'Choose a local video source';
+  @override
+  String get video_external_remove => 'Remove';
+  @override
+  String get video_external_username_optional => 'Username (optional)';
+  @override
+  String get video_external_password_optional => 'Password (optional)';
+  @override
+  String get video_external_api_key => 'API key';
+  @override
+  String get video_external_save_error =>
+      'The configuration could not be saved. Check the highlighted fields.';
+  @override
+  String get video_external_categories_invalid =>
+      'Categories must be comma-separated numeric IDs.';
+  @override
+  String get video_download_path_mapping_invalid =>
+      'Enter a profile ID, remote root, and absolute local root.';
+  @override
+  String get video_opensubtitles_endpoint => 'API endpoint';
+  @override
+  String get video_download_target_source_empty =>
+      'No locally accessible video source is available. Add one on the Sources tab first.';
 }
 
 // Path: <root>
@@ -34512,8 +35872,6 @@ class _StringsId extends _StringsEn {
       'Download backend is not configured yet.';
   @override
   String get download_clear_finished => 'Clear finished';
-  @override
-  String get download_discover_tab => 'Discover';
   @override
   String get download_network_proxy_auto => 'Auto';
   @override
@@ -40177,6 +41535,305 @@ class _StringsId extends _StringsEn {
   @override
   String get video_library_empty_source_hint =>
       'Add a video folder from Sources to build your library';
+  @override
+  String get video_source_scrape_action => 'Scrape this source';
+  @override
+  String get video_source_scrape_settings => 'Source scrape settings';
+  @override
+  String get video_source_scrape_provider => 'Primary metadata source';
+  @override
+  String get video_source_scrape_provider_inherit => 'Use global default';
+  @override
+  String get video_source_scrape_auto_after_scan => 'Scrape after scanning';
+  @override
+  String get video_source_scrape_auto_after_scan_hint =>
+      'Run metadata scraping automatically after this source is scanned';
+  @override
+  String get video_source_scrape_write_nfo => 'Write NFO files';
+  @override
+  String get video_source_scrape_write_images => 'Write image files';
+  @override
+  String get video_source_scrape_use_fanart => 'Use Fanart images';
+  @override
+  String video_source_scrape_progress(
+          {required Object phase,
+          required Object current,
+          required Object total}) =>
+      '${phase} · ${current}/${total}';
+  @override
+  String video_source_scrape_last_summary(
+          {required Object status,
+          required Object succeeded,
+          required Object pending,
+          required Object failed}) =>
+      'Last scrape (${status}): ${succeeded} succeeded, ${pending} pending, ${failed} failed';
+  @override
+  String get video_source_scrape_phase_planning => 'Planning';
+  @override
+  String get video_source_scrape_phase_recognizing => 'Matching';
+  @override
+  String get video_source_scrape_phase_fetching => 'Fetching metadata';
+  @override
+  String get video_source_scrape_phase_applying => 'Saving metadata';
+  @override
+  String get video_source_scrape_phase_writing_sidecars => 'Writing sidecars';
+  @override
+  String get video_source_scrape_status_interrupted => 'Interrupted';
+  @override
+  String get video_source_scrape_global_provider => 'Default metadata source';
+  @override
+  String get video_source_scrape_global_provider_hint =>
+      'Used by video sources that inherit the global setting';
+  @override
+  String get video_source_scrape_fanart_key => 'Fanart API key';
+  @override
+  String get video_source_scrape_fanart_key_hint =>
+      'Optional key used to fill missing artwork from Fanart';
+  @override
+  String get video_source_scrape_bangumi_token => 'Bangumi access token';
+  @override
+  String get video_source_scrape_bangumi_token_hint =>
+      'Optional access token for the official Bangumi API v0';
+  @override
+  String get video_source_scrape_douban_endpoint =>
+      'Authorized Douban API endpoint';
+  @override
+  String get video_source_scrape_douban_endpoint_hint =>
+      'Douban is unavailable unless both an authorized endpoint and token are configured';
+  @override
+  String get video_source_scrape_douban_token => 'Authorized Douban API token';
+  @override
+  String get video_source_scrape_douban_token_hint =>
+      'Douban is unavailable unless both an authorized endpoint and token are configured';
+  @override
+  String get video_source_scrape_locale => 'Metadata language';
+  @override
+  String get video_source_scrape_locale_hint =>
+      'Preferred language for titles, summaries and images';
+  @override
+  String get video_source_scrape_confirmation_title => 'Confirm metadata match';
+  @override
+  String get video_source_scrape_confirmation_hint =>
+      'Multiple exact matches were found. Choose the correct work to save its provider binding.';
+  @override
+  String get video_source_scrape_confirmation_skip => 'Skip this work';
+  @override
+  String get video_source_scrape_nfo_policy => 'NFO write policy';
+  @override
+  String get video_source_scrape_image_policy => 'Image write policy';
+  @override
+  String get video_source_scrape_policy_skip => 'Do not write';
+  @override
+  String get video_source_scrape_policy_missing_only => 'Only when missing';
+  @override
+  String get video_source_scrape_policy_overwrite => 'Update Hibiki files';
+  @override
+  String get video_source_scrape_external_overwrite =>
+      'Allow protected sidecar overwrite';
+  @override
+  String get video_source_scrape_external_overwrite_hint =>
+      'Third-party or user-modified files remain protected until you confirm each manual scrape batch again.';
+  @override
+  String get video_source_scrape_external_overwrite_confirm_title =>
+      'Overwrite protected sidecars?';
+  @override
+  String get video_source_scrape_external_overwrite_confirm_body =>
+      'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
+  @override
+  String get video_source_scrape_tasks_open => 'Background tasks';
+  @override
+  String get video_source_scrape_background_started =>
+      'Scraping is running in the background';
+  @override
+  String get video_source_scrape_tasks_current => 'Current task';
+  @override
+  String get video_source_scrape_tasks_history => 'Recent tasks';
+  @override
+  String get video_source_scrape_tasks_empty => 'No scrape tasks yet';
+  @override
+  String get video_source_scrape_waiting_confirmation =>
+      'Waiting for your confirmation';
+  @override
+  String get video_source_scrape_phase_scanning => 'Scanning source';
+  @override
+  String get video_library_all_videos => 'All videos';
+  @override
+  String get video_work_voice_roles => 'Voice cast and characters';
+  @override
+  String get video_work_cast_crew => 'Cast and crew';
+  @override
+  String get video_work_trailers => 'Trailers';
+  @override
+  String get video_work_extras => 'Extras';
+  @override
+  String get video_work_details => 'Details';
+  @override
+  String get video_work_external_ids => 'External IDs';
+  @override
+  String get video_work_metadata_pending =>
+      'Detailed metadata has not been scraped yet. Retry this source from Sources, then reopen the work.';
+  @override
+  String get video_work_genres => 'Genres';
+  @override
+  String get video_work_keywords => 'Keywords';
+  @override
+  String get video_work_studios => 'Studios';
+  @override
+  String get video_work_countries => 'Countries';
+  @override
+  String get video_work_content_rating => 'Content rating';
+  @override
+  String get video_all_videos_list_view => 'List view';
+  @override
+  String get video_all_videos_grid_view => 'Grid view';
+  @override
+  String video_home_continue_episode_number({required Object n}) =>
+      'Playing episode ${n}';
+  @override
+  String video_home_next_episode_number({required Object n}) =>
+      'Next · Episode ${n}';
+  @override
+  String video_home_recent_episode_number({required Object n}) =>
+      'Recently added · Episode ${n}';
+  @override
+  String video_home_remaining_minutes({required Object minutes}) =>
+      '${minutes} min remaining';
+  @override
+  String get video_discovery_tab => 'Discover';
+  @override
+  String get video_discovery_search_hint => 'Search movies, series, anime';
+  @override
+  String get video_discovery_hot => 'Popular now';
+  @override
+  String get video_discovery_seasonal_anime => 'Seasonal anime';
+  @override
+  String get video_discovery_all_works => 'All titles';
+  @override
+  String get video_discovery_search_results => 'Search results';
+  @override
+  String get video_discovery_provider_warning =>
+      'Some providers are unavailable. Showing available results.';
+  @override
+  String get video_discovery_load_failed => 'Could not load discovery results.';
+  @override
+  String get video_discovery_empty => 'No matching titles.';
+  @override
+  String get video_discovery_resource_search => 'Search resources';
+  @override
+  String get video_discovery_subtitle_search => 'Search subtitles';
+  @override
+  String get video_discovery_subscribe => 'Subscribe';
+  @override
+  String get video_discovery_subscription_manage => 'Manage subscription';
+  @override
+  String get video_discovery_pipeline_idle =>
+      'Not downloaded → Download → Organize → Subtitles → Scrape → Library';
+  @override
+  String get video_discovery_details_load_failed =>
+      'Could not load title details.';
+  @override
+  String get video_discovery_sort_popularity => 'Popularity';
+  @override
+  String get video_discovery_sort_rating => 'Rating';
+  @override
+  String get video_discovery_sort_release => 'Release date';
+  @override
+  String get video_discovery_in_library => 'In library';
+  @override
+  String get video_discovery_play => 'Play';
+  @override
+  String get download_resources_tab => 'Resources';
+  @override
+  String get video_external_settings_section =>
+      'External resource and subtitle providers';
+  @override
+  String get video_torznab_settings_title => 'Torznab indexers';
+  @override
+  String get video_torznab_settings_hint =>
+      'Configure one or more Jackett, Prowlarr, or compatible Torznab endpoints. Secrets stay on this device.';
+  @override
+  String get video_torznab_add => 'Add indexer';
+  @override
+  String get video_torznab_name => 'Name';
+  @override
+  String get video_torznab_endpoint => 'Endpoint';
+  @override
+  String get video_torznab_endpoint_hint =>
+      'HTTPS is required except for loopback addresses.';
+  @override
+  String get video_torznab_api_key => 'API key';
+  @override
+  String get video_torznab_priority => 'Priority';
+  @override
+  String get video_torznab_categories => 'Categories';
+  @override
+  String get video_torznab_categories_hint =>
+      'Comma-separated numeric category IDs';
+  @override
+  String get video_external_enabled => 'Enabled';
+  @override
+  String get video_external_insecure_http => 'Allow insecure HTTP';
+  @override
+  String get video_external_insecure_http_hint =>
+      'Use only for a trusted local network endpoint.';
+  @override
+  String get video_external_endpoint_invalid =>
+      'Enter a valid endpoint without credentials, query parameters, or fragments.';
+  @override
+  String get video_opensubtitles_settings_title => 'OpenSubtitles';
+  @override
+  String get video_opensubtitles_settings_hint =>
+      'API credentials and preferred subtitle languages stay on this device.';
+  @override
+  String get video_opensubtitles_user_agent => 'User-Agent';
+  @override
+  String get video_opensubtitles_languages => 'Preferred languages';
+  @override
+  String get video_opensubtitles_languages_hint =>
+      'Comma-separated language codes, for example zh-CN,en,ja';
+  @override
+  String get video_download_path_mappings_title => 'qBittorrent path mappings';
+  @override
+  String get video_download_path_mappings_hint =>
+      'Map each qBittorrent remote root to a locally accessible folder.';
+  @override
+  String get video_download_path_mapping_add => 'Add path mapping';
+  @override
+  String get video_download_backend_profile_id => 'Backend profile ID';
+  @override
+  String get video_download_remote_root => 'Remote root';
+  @override
+  String get video_download_local_root => 'Local root';
+  @override
+  String get video_download_target_source_title =>
+      'Default managed video source';
+  @override
+  String get video_download_target_source_hint =>
+      'New downloads are organized into this local video source.';
+  @override
+  String get video_download_target_source_none => 'Choose a local video source';
+  @override
+  String get video_external_remove => 'Remove';
+  @override
+  String get video_external_username_optional => 'Username (optional)';
+  @override
+  String get video_external_password_optional => 'Password (optional)';
+  @override
+  String get video_external_api_key => 'API key';
+  @override
+  String get video_external_save_error =>
+      'The configuration could not be saved. Check the highlighted fields.';
+  @override
+  String get video_external_categories_invalid =>
+      'Categories must be comma-separated numeric IDs.';
+  @override
+  String get video_download_path_mapping_invalid =>
+      'Enter a profile ID, remote root, and absolute local root.';
+  @override
+  String get video_opensubtitles_endpoint => 'API endpoint';
+  @override
+  String get video_download_target_source_empty =>
+      'No locally accessible video source is available. Add one on the Sources tab first.';
 }
 
 // Path: <root>
@@ -41694,8 +43351,6 @@ class _StringsIt extends _StringsEn {
       'Download backend is not configured yet.';
   @override
   String get download_clear_finished => 'Clear finished';
-  @override
-  String get download_discover_tab => 'Discover';
   @override
   String get download_network_proxy_auto => 'Auto';
   @override
@@ -47391,6 +49046,305 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_library_empty_source_hint =>
       'Add a video folder from Sources to build your library';
+  @override
+  String get video_source_scrape_action => 'Scrape this source';
+  @override
+  String get video_source_scrape_settings => 'Source scrape settings';
+  @override
+  String get video_source_scrape_provider => 'Primary metadata source';
+  @override
+  String get video_source_scrape_provider_inherit => 'Use global default';
+  @override
+  String get video_source_scrape_auto_after_scan => 'Scrape after scanning';
+  @override
+  String get video_source_scrape_auto_after_scan_hint =>
+      'Run metadata scraping automatically after this source is scanned';
+  @override
+  String get video_source_scrape_write_nfo => 'Write NFO files';
+  @override
+  String get video_source_scrape_write_images => 'Write image files';
+  @override
+  String get video_source_scrape_use_fanart => 'Use Fanart images';
+  @override
+  String video_source_scrape_progress(
+          {required Object phase,
+          required Object current,
+          required Object total}) =>
+      '${phase} · ${current}/${total}';
+  @override
+  String video_source_scrape_last_summary(
+          {required Object status,
+          required Object succeeded,
+          required Object pending,
+          required Object failed}) =>
+      'Last scrape (${status}): ${succeeded} succeeded, ${pending} pending, ${failed} failed';
+  @override
+  String get video_source_scrape_phase_planning => 'Planning';
+  @override
+  String get video_source_scrape_phase_recognizing => 'Matching';
+  @override
+  String get video_source_scrape_phase_fetching => 'Fetching metadata';
+  @override
+  String get video_source_scrape_phase_applying => 'Saving metadata';
+  @override
+  String get video_source_scrape_phase_writing_sidecars => 'Writing sidecars';
+  @override
+  String get video_source_scrape_status_interrupted => 'Interrupted';
+  @override
+  String get video_source_scrape_global_provider => 'Default metadata source';
+  @override
+  String get video_source_scrape_global_provider_hint =>
+      'Used by video sources that inherit the global setting';
+  @override
+  String get video_source_scrape_fanart_key => 'Fanart API key';
+  @override
+  String get video_source_scrape_fanart_key_hint =>
+      'Optional key used to fill missing artwork from Fanart';
+  @override
+  String get video_source_scrape_bangumi_token => 'Bangumi access token';
+  @override
+  String get video_source_scrape_bangumi_token_hint =>
+      'Optional access token for the official Bangumi API v0';
+  @override
+  String get video_source_scrape_douban_endpoint =>
+      'Authorized Douban API endpoint';
+  @override
+  String get video_source_scrape_douban_endpoint_hint =>
+      'Douban is unavailable unless both an authorized endpoint and token are configured';
+  @override
+  String get video_source_scrape_douban_token => 'Authorized Douban API token';
+  @override
+  String get video_source_scrape_douban_token_hint =>
+      'Douban is unavailable unless both an authorized endpoint and token are configured';
+  @override
+  String get video_source_scrape_locale => 'Metadata language';
+  @override
+  String get video_source_scrape_locale_hint =>
+      'Preferred language for titles, summaries and images';
+  @override
+  String get video_source_scrape_confirmation_title => 'Confirm metadata match';
+  @override
+  String get video_source_scrape_confirmation_hint =>
+      'Multiple exact matches were found. Choose the correct work to save its provider binding.';
+  @override
+  String get video_source_scrape_confirmation_skip => 'Skip this work';
+  @override
+  String get video_source_scrape_nfo_policy => 'NFO write policy';
+  @override
+  String get video_source_scrape_image_policy => 'Image write policy';
+  @override
+  String get video_source_scrape_policy_skip => 'Do not write';
+  @override
+  String get video_source_scrape_policy_missing_only => 'Only when missing';
+  @override
+  String get video_source_scrape_policy_overwrite => 'Update Hibiki files';
+  @override
+  String get video_source_scrape_external_overwrite =>
+      'Allow protected sidecar overwrite';
+  @override
+  String get video_source_scrape_external_overwrite_hint =>
+      'Third-party or user-modified files remain protected until you confirm each manual scrape batch again.';
+  @override
+  String get video_source_scrape_external_overwrite_confirm_title =>
+      'Overwrite protected sidecars?';
+  @override
+  String get video_source_scrape_external_overwrite_confirm_body =>
+      'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
+  @override
+  String get video_source_scrape_tasks_open => 'Background tasks';
+  @override
+  String get video_source_scrape_background_started =>
+      'Scraping is running in the background';
+  @override
+  String get video_source_scrape_tasks_current => 'Current task';
+  @override
+  String get video_source_scrape_tasks_history => 'Recent tasks';
+  @override
+  String get video_source_scrape_tasks_empty => 'No scrape tasks yet';
+  @override
+  String get video_source_scrape_waiting_confirmation =>
+      'Waiting for your confirmation';
+  @override
+  String get video_source_scrape_phase_scanning => 'Scanning source';
+  @override
+  String get video_library_all_videos => 'All videos';
+  @override
+  String get video_work_voice_roles => 'Voice cast and characters';
+  @override
+  String get video_work_cast_crew => 'Cast and crew';
+  @override
+  String get video_work_trailers => 'Trailers';
+  @override
+  String get video_work_extras => 'Extras';
+  @override
+  String get video_work_details => 'Details';
+  @override
+  String get video_work_external_ids => 'External IDs';
+  @override
+  String get video_work_metadata_pending =>
+      'Detailed metadata has not been scraped yet. Retry this source from Sources, then reopen the work.';
+  @override
+  String get video_work_genres => 'Genres';
+  @override
+  String get video_work_keywords => 'Keywords';
+  @override
+  String get video_work_studios => 'Studios';
+  @override
+  String get video_work_countries => 'Countries';
+  @override
+  String get video_work_content_rating => 'Content rating';
+  @override
+  String get video_all_videos_list_view => 'List view';
+  @override
+  String get video_all_videos_grid_view => 'Grid view';
+  @override
+  String video_home_continue_episode_number({required Object n}) =>
+      'Playing episode ${n}';
+  @override
+  String video_home_next_episode_number({required Object n}) =>
+      'Next · Episode ${n}';
+  @override
+  String video_home_recent_episode_number({required Object n}) =>
+      'Recently added · Episode ${n}';
+  @override
+  String video_home_remaining_minutes({required Object minutes}) =>
+      '${minutes} min remaining';
+  @override
+  String get video_discovery_tab => 'Discover';
+  @override
+  String get video_discovery_search_hint => 'Search movies, series, anime';
+  @override
+  String get video_discovery_hot => 'Popular now';
+  @override
+  String get video_discovery_seasonal_anime => 'Seasonal anime';
+  @override
+  String get video_discovery_all_works => 'All titles';
+  @override
+  String get video_discovery_search_results => 'Search results';
+  @override
+  String get video_discovery_provider_warning =>
+      'Some providers are unavailable. Showing available results.';
+  @override
+  String get video_discovery_load_failed => 'Could not load discovery results.';
+  @override
+  String get video_discovery_empty => 'No matching titles.';
+  @override
+  String get video_discovery_resource_search => 'Search resources';
+  @override
+  String get video_discovery_subtitle_search => 'Search subtitles';
+  @override
+  String get video_discovery_subscribe => 'Subscribe';
+  @override
+  String get video_discovery_subscription_manage => 'Manage subscription';
+  @override
+  String get video_discovery_pipeline_idle =>
+      'Not downloaded → Download → Organize → Subtitles → Scrape → Library';
+  @override
+  String get video_discovery_details_load_failed =>
+      'Could not load title details.';
+  @override
+  String get video_discovery_sort_popularity => 'Popularity';
+  @override
+  String get video_discovery_sort_rating => 'Rating';
+  @override
+  String get video_discovery_sort_release => 'Release date';
+  @override
+  String get video_discovery_in_library => 'In library';
+  @override
+  String get video_discovery_play => 'Play';
+  @override
+  String get download_resources_tab => 'Resources';
+  @override
+  String get video_external_settings_section =>
+      'External resource and subtitle providers';
+  @override
+  String get video_torznab_settings_title => 'Torznab indexers';
+  @override
+  String get video_torznab_settings_hint =>
+      'Configure one or more Jackett, Prowlarr, or compatible Torznab endpoints. Secrets stay on this device.';
+  @override
+  String get video_torznab_add => 'Add indexer';
+  @override
+  String get video_torznab_name => 'Name';
+  @override
+  String get video_torznab_endpoint => 'Endpoint';
+  @override
+  String get video_torznab_endpoint_hint =>
+      'HTTPS is required except for loopback addresses.';
+  @override
+  String get video_torznab_api_key => 'API key';
+  @override
+  String get video_torznab_priority => 'Priority';
+  @override
+  String get video_torznab_categories => 'Categories';
+  @override
+  String get video_torznab_categories_hint =>
+      'Comma-separated numeric category IDs';
+  @override
+  String get video_external_enabled => 'Enabled';
+  @override
+  String get video_external_insecure_http => 'Allow insecure HTTP';
+  @override
+  String get video_external_insecure_http_hint =>
+      'Use only for a trusted local network endpoint.';
+  @override
+  String get video_external_endpoint_invalid =>
+      'Enter a valid endpoint without credentials, query parameters, or fragments.';
+  @override
+  String get video_opensubtitles_settings_title => 'OpenSubtitles';
+  @override
+  String get video_opensubtitles_settings_hint =>
+      'API credentials and preferred subtitle languages stay on this device.';
+  @override
+  String get video_opensubtitles_user_agent => 'User-Agent';
+  @override
+  String get video_opensubtitles_languages => 'Preferred languages';
+  @override
+  String get video_opensubtitles_languages_hint =>
+      'Comma-separated language codes, for example zh-CN,en,ja';
+  @override
+  String get video_download_path_mappings_title => 'qBittorrent path mappings';
+  @override
+  String get video_download_path_mappings_hint =>
+      'Map each qBittorrent remote root to a locally accessible folder.';
+  @override
+  String get video_download_path_mapping_add => 'Add path mapping';
+  @override
+  String get video_download_backend_profile_id => 'Backend profile ID';
+  @override
+  String get video_download_remote_root => 'Remote root';
+  @override
+  String get video_download_local_root => 'Local root';
+  @override
+  String get video_download_target_source_title =>
+      'Default managed video source';
+  @override
+  String get video_download_target_source_hint =>
+      'New downloads are organized into this local video source.';
+  @override
+  String get video_download_target_source_none => 'Choose a local video source';
+  @override
+  String get video_external_remove => 'Remove';
+  @override
+  String get video_external_username_optional => 'Username (optional)';
+  @override
+  String get video_external_password_optional => 'Password (optional)';
+  @override
+  String get video_external_api_key => 'API key';
+  @override
+  String get video_external_save_error =>
+      'The configuration could not be saved. Check the highlighted fields.';
+  @override
+  String get video_external_categories_invalid =>
+      'Categories must be comma-separated numeric IDs.';
+  @override
+  String get video_download_path_mapping_invalid =>
+      'Enter a profile ID, remote root, and absolute local root.';
+  @override
+  String get video_opensubtitles_endpoint => 'API endpoint';
+  @override
+  String get video_download_target_source_empty =>
+      'No locally accessible video source is available. Add one on the Sources tab first.';
 }
 
 // Path: <root>
@@ -48872,8 +50826,6 @@ class _StringsJa extends _StringsEn {
       'Download backend is not configured yet.';
   @override
   String get download_clear_finished => 'Clear finished';
-  @override
-  String get download_discover_tab => 'Discover';
   @override
   String get download_network_proxy_auto => 'Auto';
   @override
@@ -54422,6 +56374,305 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_library_empty_source_hint =>
       'Add a video folder from Sources to build your library';
+  @override
+  String get video_source_scrape_action => 'Scrape this source';
+  @override
+  String get video_source_scrape_settings => 'Source scrape settings';
+  @override
+  String get video_source_scrape_provider => 'Primary metadata source';
+  @override
+  String get video_source_scrape_provider_inherit => 'Use global default';
+  @override
+  String get video_source_scrape_auto_after_scan => 'Scrape after scanning';
+  @override
+  String get video_source_scrape_auto_after_scan_hint =>
+      'Run metadata scraping automatically after this source is scanned';
+  @override
+  String get video_source_scrape_write_nfo => 'Write NFO files';
+  @override
+  String get video_source_scrape_write_images => 'Write image files';
+  @override
+  String get video_source_scrape_use_fanart => 'Use Fanart images';
+  @override
+  String video_source_scrape_progress(
+          {required Object phase,
+          required Object current,
+          required Object total}) =>
+      '${phase} · ${current}/${total}';
+  @override
+  String video_source_scrape_last_summary(
+          {required Object status,
+          required Object succeeded,
+          required Object pending,
+          required Object failed}) =>
+      'Last scrape (${status}): ${succeeded} succeeded, ${pending} pending, ${failed} failed';
+  @override
+  String get video_source_scrape_phase_planning => 'Planning';
+  @override
+  String get video_source_scrape_phase_recognizing => 'Matching';
+  @override
+  String get video_source_scrape_phase_fetching => 'Fetching metadata';
+  @override
+  String get video_source_scrape_phase_applying => 'Saving metadata';
+  @override
+  String get video_source_scrape_phase_writing_sidecars => 'Writing sidecars';
+  @override
+  String get video_source_scrape_status_interrupted => 'Interrupted';
+  @override
+  String get video_source_scrape_global_provider => 'Default metadata source';
+  @override
+  String get video_source_scrape_global_provider_hint =>
+      'Used by video sources that inherit the global setting';
+  @override
+  String get video_source_scrape_fanart_key => 'Fanart API key';
+  @override
+  String get video_source_scrape_fanart_key_hint =>
+      'Optional key used to fill missing artwork from Fanart';
+  @override
+  String get video_source_scrape_bangumi_token => 'Bangumi access token';
+  @override
+  String get video_source_scrape_bangumi_token_hint =>
+      'Optional access token for the official Bangumi API v0';
+  @override
+  String get video_source_scrape_douban_endpoint =>
+      'Authorized Douban API endpoint';
+  @override
+  String get video_source_scrape_douban_endpoint_hint =>
+      'Douban is unavailable unless both an authorized endpoint and token are configured';
+  @override
+  String get video_source_scrape_douban_token => 'Authorized Douban API token';
+  @override
+  String get video_source_scrape_douban_token_hint =>
+      'Douban is unavailable unless both an authorized endpoint and token are configured';
+  @override
+  String get video_source_scrape_locale => 'Metadata language';
+  @override
+  String get video_source_scrape_locale_hint =>
+      'Preferred language for titles, summaries and images';
+  @override
+  String get video_source_scrape_confirmation_title => 'Confirm metadata match';
+  @override
+  String get video_source_scrape_confirmation_hint =>
+      'Multiple exact matches were found. Choose the correct work to save its provider binding.';
+  @override
+  String get video_source_scrape_confirmation_skip => 'Skip this work';
+  @override
+  String get video_source_scrape_nfo_policy => 'NFO write policy';
+  @override
+  String get video_source_scrape_image_policy => 'Image write policy';
+  @override
+  String get video_source_scrape_policy_skip => 'Do not write';
+  @override
+  String get video_source_scrape_policy_missing_only => 'Only when missing';
+  @override
+  String get video_source_scrape_policy_overwrite => 'Update Hibiki files';
+  @override
+  String get video_source_scrape_external_overwrite =>
+      'Allow protected sidecar overwrite';
+  @override
+  String get video_source_scrape_external_overwrite_hint =>
+      'Third-party or user-modified files remain protected until you confirm each manual scrape batch again.';
+  @override
+  String get video_source_scrape_external_overwrite_confirm_title =>
+      'Overwrite protected sidecars?';
+  @override
+  String get video_source_scrape_external_overwrite_confirm_body =>
+      'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
+  @override
+  String get video_source_scrape_tasks_open => 'Background tasks';
+  @override
+  String get video_source_scrape_background_started =>
+      'Scraping is running in the background';
+  @override
+  String get video_source_scrape_tasks_current => 'Current task';
+  @override
+  String get video_source_scrape_tasks_history => 'Recent tasks';
+  @override
+  String get video_source_scrape_tasks_empty => 'No scrape tasks yet';
+  @override
+  String get video_source_scrape_waiting_confirmation =>
+      'Waiting for your confirmation';
+  @override
+  String get video_source_scrape_phase_scanning => 'Scanning source';
+  @override
+  String get video_library_all_videos => 'All videos';
+  @override
+  String get video_work_voice_roles => 'Voice cast and characters';
+  @override
+  String get video_work_cast_crew => 'Cast and crew';
+  @override
+  String get video_work_trailers => 'Trailers';
+  @override
+  String get video_work_extras => 'Extras';
+  @override
+  String get video_work_details => 'Details';
+  @override
+  String get video_work_external_ids => 'External IDs';
+  @override
+  String get video_work_metadata_pending =>
+      'Detailed metadata has not been scraped yet. Retry this source from Sources, then reopen the work.';
+  @override
+  String get video_work_genres => 'Genres';
+  @override
+  String get video_work_keywords => 'Keywords';
+  @override
+  String get video_work_studios => 'Studios';
+  @override
+  String get video_work_countries => 'Countries';
+  @override
+  String get video_work_content_rating => 'Content rating';
+  @override
+  String get video_all_videos_list_view => 'List view';
+  @override
+  String get video_all_videos_grid_view => 'Grid view';
+  @override
+  String video_home_continue_episode_number({required Object n}) =>
+      'Playing episode ${n}';
+  @override
+  String video_home_next_episode_number({required Object n}) =>
+      'Next · Episode ${n}';
+  @override
+  String video_home_recent_episode_number({required Object n}) =>
+      'Recently added · Episode ${n}';
+  @override
+  String video_home_remaining_minutes({required Object minutes}) =>
+      '${minutes} min remaining';
+  @override
+  String get video_discovery_tab => 'Discover';
+  @override
+  String get video_discovery_search_hint => 'Search movies, series, anime';
+  @override
+  String get video_discovery_hot => 'Popular now';
+  @override
+  String get video_discovery_seasonal_anime => 'Seasonal anime';
+  @override
+  String get video_discovery_all_works => 'All titles';
+  @override
+  String get video_discovery_search_results => 'Search results';
+  @override
+  String get video_discovery_provider_warning =>
+      'Some providers are unavailable. Showing available results.';
+  @override
+  String get video_discovery_load_failed => 'Could not load discovery results.';
+  @override
+  String get video_discovery_empty => 'No matching titles.';
+  @override
+  String get video_discovery_resource_search => 'Search resources';
+  @override
+  String get video_discovery_subtitle_search => 'Search subtitles';
+  @override
+  String get video_discovery_subscribe => 'Subscribe';
+  @override
+  String get video_discovery_subscription_manage => 'Manage subscription';
+  @override
+  String get video_discovery_pipeline_idle =>
+      'Not downloaded → Download → Organize → Subtitles → Scrape → Library';
+  @override
+  String get video_discovery_details_load_failed =>
+      'Could not load title details.';
+  @override
+  String get video_discovery_sort_popularity => 'Popularity';
+  @override
+  String get video_discovery_sort_rating => 'Rating';
+  @override
+  String get video_discovery_sort_release => 'Release date';
+  @override
+  String get video_discovery_in_library => 'In library';
+  @override
+  String get video_discovery_play => 'Play';
+  @override
+  String get download_resources_tab => 'Resources';
+  @override
+  String get video_external_settings_section =>
+      'External resource and subtitle providers';
+  @override
+  String get video_torznab_settings_title => 'Torznab indexers';
+  @override
+  String get video_torznab_settings_hint =>
+      'Configure one or more Jackett, Prowlarr, or compatible Torznab endpoints. Secrets stay on this device.';
+  @override
+  String get video_torznab_add => 'Add indexer';
+  @override
+  String get video_torznab_name => 'Name';
+  @override
+  String get video_torznab_endpoint => 'Endpoint';
+  @override
+  String get video_torznab_endpoint_hint =>
+      'HTTPS is required except for loopback addresses.';
+  @override
+  String get video_torznab_api_key => 'API key';
+  @override
+  String get video_torznab_priority => 'Priority';
+  @override
+  String get video_torznab_categories => 'Categories';
+  @override
+  String get video_torznab_categories_hint =>
+      'Comma-separated numeric category IDs';
+  @override
+  String get video_external_enabled => 'Enabled';
+  @override
+  String get video_external_insecure_http => 'Allow insecure HTTP';
+  @override
+  String get video_external_insecure_http_hint =>
+      'Use only for a trusted local network endpoint.';
+  @override
+  String get video_external_endpoint_invalid =>
+      'Enter a valid endpoint without credentials, query parameters, or fragments.';
+  @override
+  String get video_opensubtitles_settings_title => 'OpenSubtitles';
+  @override
+  String get video_opensubtitles_settings_hint =>
+      'API credentials and preferred subtitle languages stay on this device.';
+  @override
+  String get video_opensubtitles_user_agent => 'User-Agent';
+  @override
+  String get video_opensubtitles_languages => 'Preferred languages';
+  @override
+  String get video_opensubtitles_languages_hint =>
+      'Comma-separated language codes, for example zh-CN,en,ja';
+  @override
+  String get video_download_path_mappings_title => 'qBittorrent path mappings';
+  @override
+  String get video_download_path_mappings_hint =>
+      'Map each qBittorrent remote root to a locally accessible folder.';
+  @override
+  String get video_download_path_mapping_add => 'Add path mapping';
+  @override
+  String get video_download_backend_profile_id => 'Backend profile ID';
+  @override
+  String get video_download_remote_root => 'Remote root';
+  @override
+  String get video_download_local_root => 'Local root';
+  @override
+  String get video_download_target_source_title =>
+      'Default managed video source';
+  @override
+  String get video_download_target_source_hint =>
+      'New downloads are organized into this local video source.';
+  @override
+  String get video_download_target_source_none => 'Choose a local video source';
+  @override
+  String get video_external_remove => 'Remove';
+  @override
+  String get video_external_username_optional => 'Username (optional)';
+  @override
+  String get video_external_password_optional => 'Password (optional)';
+  @override
+  String get video_external_api_key => 'API key';
+  @override
+  String get video_external_save_error =>
+      'The configuration could not be saved. Check the highlighted fields.';
+  @override
+  String get video_external_categories_invalid =>
+      'Categories must be comma-separated numeric IDs.';
+  @override
+  String get video_download_path_mapping_invalid =>
+      'Enter a profile ID, remote root, and absolute local root.';
+  @override
+  String get video_opensubtitles_endpoint => 'API endpoint';
+  @override
+  String get video_download_target_source_empty =>
+      'No locally accessible video source is available. Add one on the Sources tab first.';
 }
 
 // Path: <root>
@@ -55902,8 +58153,6 @@ class _StringsKo extends _StringsEn {
       'Download backend is not configured yet.';
   @override
   String get download_clear_finished => 'Clear finished';
-  @override
-  String get download_discover_tab => 'Discover';
   @override
   String get download_network_proxy_auto => 'Auto';
   @override
@@ -61455,6 +63704,305 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_library_empty_source_hint =>
       'Add a video folder from Sources to build your library';
+  @override
+  String get video_source_scrape_action => 'Scrape this source';
+  @override
+  String get video_source_scrape_settings => 'Source scrape settings';
+  @override
+  String get video_source_scrape_provider => 'Primary metadata source';
+  @override
+  String get video_source_scrape_provider_inherit => 'Use global default';
+  @override
+  String get video_source_scrape_auto_after_scan => 'Scrape after scanning';
+  @override
+  String get video_source_scrape_auto_after_scan_hint =>
+      'Run metadata scraping automatically after this source is scanned';
+  @override
+  String get video_source_scrape_write_nfo => 'Write NFO files';
+  @override
+  String get video_source_scrape_write_images => 'Write image files';
+  @override
+  String get video_source_scrape_use_fanart => 'Use Fanart images';
+  @override
+  String video_source_scrape_progress(
+          {required Object phase,
+          required Object current,
+          required Object total}) =>
+      '${phase} · ${current}/${total}';
+  @override
+  String video_source_scrape_last_summary(
+          {required Object status,
+          required Object succeeded,
+          required Object pending,
+          required Object failed}) =>
+      'Last scrape (${status}): ${succeeded} succeeded, ${pending} pending, ${failed} failed';
+  @override
+  String get video_source_scrape_phase_planning => 'Planning';
+  @override
+  String get video_source_scrape_phase_recognizing => 'Matching';
+  @override
+  String get video_source_scrape_phase_fetching => 'Fetching metadata';
+  @override
+  String get video_source_scrape_phase_applying => 'Saving metadata';
+  @override
+  String get video_source_scrape_phase_writing_sidecars => 'Writing sidecars';
+  @override
+  String get video_source_scrape_status_interrupted => 'Interrupted';
+  @override
+  String get video_source_scrape_global_provider => 'Default metadata source';
+  @override
+  String get video_source_scrape_global_provider_hint =>
+      'Used by video sources that inherit the global setting';
+  @override
+  String get video_source_scrape_fanart_key => 'Fanart API key';
+  @override
+  String get video_source_scrape_fanart_key_hint =>
+      'Optional key used to fill missing artwork from Fanart';
+  @override
+  String get video_source_scrape_bangumi_token => 'Bangumi access token';
+  @override
+  String get video_source_scrape_bangumi_token_hint =>
+      'Optional access token for the official Bangumi API v0';
+  @override
+  String get video_source_scrape_douban_endpoint =>
+      'Authorized Douban API endpoint';
+  @override
+  String get video_source_scrape_douban_endpoint_hint =>
+      'Douban is unavailable unless both an authorized endpoint and token are configured';
+  @override
+  String get video_source_scrape_douban_token => 'Authorized Douban API token';
+  @override
+  String get video_source_scrape_douban_token_hint =>
+      'Douban is unavailable unless both an authorized endpoint and token are configured';
+  @override
+  String get video_source_scrape_locale => 'Metadata language';
+  @override
+  String get video_source_scrape_locale_hint =>
+      'Preferred language for titles, summaries and images';
+  @override
+  String get video_source_scrape_confirmation_title => 'Confirm metadata match';
+  @override
+  String get video_source_scrape_confirmation_hint =>
+      'Multiple exact matches were found. Choose the correct work to save its provider binding.';
+  @override
+  String get video_source_scrape_confirmation_skip => 'Skip this work';
+  @override
+  String get video_source_scrape_nfo_policy => 'NFO write policy';
+  @override
+  String get video_source_scrape_image_policy => 'Image write policy';
+  @override
+  String get video_source_scrape_policy_skip => 'Do not write';
+  @override
+  String get video_source_scrape_policy_missing_only => 'Only when missing';
+  @override
+  String get video_source_scrape_policy_overwrite => 'Update Hibiki files';
+  @override
+  String get video_source_scrape_external_overwrite =>
+      'Allow protected sidecar overwrite';
+  @override
+  String get video_source_scrape_external_overwrite_hint =>
+      'Third-party or user-modified files remain protected until you confirm each manual scrape batch again.';
+  @override
+  String get video_source_scrape_external_overwrite_confirm_title =>
+      'Overwrite protected sidecars?';
+  @override
+  String get video_source_scrape_external_overwrite_confirm_body =>
+      'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
+  @override
+  String get video_source_scrape_tasks_open => 'Background tasks';
+  @override
+  String get video_source_scrape_background_started =>
+      'Scraping is running in the background';
+  @override
+  String get video_source_scrape_tasks_current => 'Current task';
+  @override
+  String get video_source_scrape_tasks_history => 'Recent tasks';
+  @override
+  String get video_source_scrape_tasks_empty => 'No scrape tasks yet';
+  @override
+  String get video_source_scrape_waiting_confirmation =>
+      'Waiting for your confirmation';
+  @override
+  String get video_source_scrape_phase_scanning => 'Scanning source';
+  @override
+  String get video_library_all_videos => 'All videos';
+  @override
+  String get video_work_voice_roles => 'Voice cast and characters';
+  @override
+  String get video_work_cast_crew => 'Cast and crew';
+  @override
+  String get video_work_trailers => 'Trailers';
+  @override
+  String get video_work_extras => 'Extras';
+  @override
+  String get video_work_details => 'Details';
+  @override
+  String get video_work_external_ids => 'External IDs';
+  @override
+  String get video_work_metadata_pending =>
+      'Detailed metadata has not been scraped yet. Retry this source from Sources, then reopen the work.';
+  @override
+  String get video_work_genres => 'Genres';
+  @override
+  String get video_work_keywords => 'Keywords';
+  @override
+  String get video_work_studios => 'Studios';
+  @override
+  String get video_work_countries => 'Countries';
+  @override
+  String get video_work_content_rating => 'Content rating';
+  @override
+  String get video_all_videos_list_view => 'List view';
+  @override
+  String get video_all_videos_grid_view => 'Grid view';
+  @override
+  String video_home_continue_episode_number({required Object n}) =>
+      'Playing episode ${n}';
+  @override
+  String video_home_next_episode_number({required Object n}) =>
+      'Next · Episode ${n}';
+  @override
+  String video_home_recent_episode_number({required Object n}) =>
+      'Recently added · Episode ${n}';
+  @override
+  String video_home_remaining_minutes({required Object minutes}) =>
+      '${minutes} min remaining';
+  @override
+  String get video_discovery_tab => 'Discover';
+  @override
+  String get video_discovery_search_hint => 'Search movies, series, anime';
+  @override
+  String get video_discovery_hot => 'Popular now';
+  @override
+  String get video_discovery_seasonal_anime => 'Seasonal anime';
+  @override
+  String get video_discovery_all_works => 'All titles';
+  @override
+  String get video_discovery_search_results => 'Search results';
+  @override
+  String get video_discovery_provider_warning =>
+      'Some providers are unavailable. Showing available results.';
+  @override
+  String get video_discovery_load_failed => 'Could not load discovery results.';
+  @override
+  String get video_discovery_empty => 'No matching titles.';
+  @override
+  String get video_discovery_resource_search => 'Search resources';
+  @override
+  String get video_discovery_subtitle_search => 'Search subtitles';
+  @override
+  String get video_discovery_subscribe => 'Subscribe';
+  @override
+  String get video_discovery_subscription_manage => 'Manage subscription';
+  @override
+  String get video_discovery_pipeline_idle =>
+      'Not downloaded → Download → Organize → Subtitles → Scrape → Library';
+  @override
+  String get video_discovery_details_load_failed =>
+      'Could not load title details.';
+  @override
+  String get video_discovery_sort_popularity => 'Popularity';
+  @override
+  String get video_discovery_sort_rating => 'Rating';
+  @override
+  String get video_discovery_sort_release => 'Release date';
+  @override
+  String get video_discovery_in_library => 'In library';
+  @override
+  String get video_discovery_play => 'Play';
+  @override
+  String get download_resources_tab => 'Resources';
+  @override
+  String get video_external_settings_section =>
+      'External resource and subtitle providers';
+  @override
+  String get video_torznab_settings_title => 'Torznab indexers';
+  @override
+  String get video_torznab_settings_hint =>
+      'Configure one or more Jackett, Prowlarr, or compatible Torznab endpoints. Secrets stay on this device.';
+  @override
+  String get video_torznab_add => 'Add indexer';
+  @override
+  String get video_torznab_name => 'Name';
+  @override
+  String get video_torznab_endpoint => 'Endpoint';
+  @override
+  String get video_torznab_endpoint_hint =>
+      'HTTPS is required except for loopback addresses.';
+  @override
+  String get video_torznab_api_key => 'API key';
+  @override
+  String get video_torznab_priority => 'Priority';
+  @override
+  String get video_torznab_categories => 'Categories';
+  @override
+  String get video_torznab_categories_hint =>
+      'Comma-separated numeric category IDs';
+  @override
+  String get video_external_enabled => 'Enabled';
+  @override
+  String get video_external_insecure_http => 'Allow insecure HTTP';
+  @override
+  String get video_external_insecure_http_hint =>
+      'Use only for a trusted local network endpoint.';
+  @override
+  String get video_external_endpoint_invalid =>
+      'Enter a valid endpoint without credentials, query parameters, or fragments.';
+  @override
+  String get video_opensubtitles_settings_title => 'OpenSubtitles';
+  @override
+  String get video_opensubtitles_settings_hint =>
+      'API credentials and preferred subtitle languages stay on this device.';
+  @override
+  String get video_opensubtitles_user_agent => 'User-Agent';
+  @override
+  String get video_opensubtitles_languages => 'Preferred languages';
+  @override
+  String get video_opensubtitles_languages_hint =>
+      'Comma-separated language codes, for example zh-CN,en,ja';
+  @override
+  String get video_download_path_mappings_title => 'qBittorrent path mappings';
+  @override
+  String get video_download_path_mappings_hint =>
+      'Map each qBittorrent remote root to a locally accessible folder.';
+  @override
+  String get video_download_path_mapping_add => 'Add path mapping';
+  @override
+  String get video_download_backend_profile_id => 'Backend profile ID';
+  @override
+  String get video_download_remote_root => 'Remote root';
+  @override
+  String get video_download_local_root => 'Local root';
+  @override
+  String get video_download_target_source_title =>
+      'Default managed video source';
+  @override
+  String get video_download_target_source_hint =>
+      'New downloads are organized into this local video source.';
+  @override
+  String get video_download_target_source_none => 'Choose a local video source';
+  @override
+  String get video_external_remove => 'Remove';
+  @override
+  String get video_external_username_optional => 'Username (optional)';
+  @override
+  String get video_external_password_optional => 'Password (optional)';
+  @override
+  String get video_external_api_key => 'API key';
+  @override
+  String get video_external_save_error =>
+      'The configuration could not be saved. Check the highlighted fields.';
+  @override
+  String get video_external_categories_invalid =>
+      'Categories must be comma-separated numeric IDs.';
+  @override
+  String get video_download_path_mapping_invalid =>
+      'Enter a profile ID, remote root, and absolute local root.';
+  @override
+  String get video_opensubtitles_endpoint => 'API endpoint';
+  @override
+  String get video_download_target_source_empty =>
+      'No locally accessible video source is available. Add one on the Sources tab first.';
 }
 
 // Path: <root>
@@ -62970,8 +65518,6 @@ class _StringsNl extends _StringsEn {
       'Download backend is not configured yet.';
   @override
   String get download_clear_finished => 'Clear finished';
-  @override
-  String get download_discover_tab => 'Discover';
   @override
   String get download_network_proxy_auto => 'Auto';
   @override
@@ -68649,6 +71195,305 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_library_empty_source_hint =>
       'Add a video folder from Sources to build your library';
+  @override
+  String get video_source_scrape_action => 'Scrape this source';
+  @override
+  String get video_source_scrape_settings => 'Source scrape settings';
+  @override
+  String get video_source_scrape_provider => 'Primary metadata source';
+  @override
+  String get video_source_scrape_provider_inherit => 'Use global default';
+  @override
+  String get video_source_scrape_auto_after_scan => 'Scrape after scanning';
+  @override
+  String get video_source_scrape_auto_after_scan_hint =>
+      'Run metadata scraping automatically after this source is scanned';
+  @override
+  String get video_source_scrape_write_nfo => 'Write NFO files';
+  @override
+  String get video_source_scrape_write_images => 'Write image files';
+  @override
+  String get video_source_scrape_use_fanart => 'Use Fanart images';
+  @override
+  String video_source_scrape_progress(
+          {required Object phase,
+          required Object current,
+          required Object total}) =>
+      '${phase} · ${current}/${total}';
+  @override
+  String video_source_scrape_last_summary(
+          {required Object status,
+          required Object succeeded,
+          required Object pending,
+          required Object failed}) =>
+      'Last scrape (${status}): ${succeeded} succeeded, ${pending} pending, ${failed} failed';
+  @override
+  String get video_source_scrape_phase_planning => 'Planning';
+  @override
+  String get video_source_scrape_phase_recognizing => 'Matching';
+  @override
+  String get video_source_scrape_phase_fetching => 'Fetching metadata';
+  @override
+  String get video_source_scrape_phase_applying => 'Saving metadata';
+  @override
+  String get video_source_scrape_phase_writing_sidecars => 'Writing sidecars';
+  @override
+  String get video_source_scrape_status_interrupted => 'Interrupted';
+  @override
+  String get video_source_scrape_global_provider => 'Default metadata source';
+  @override
+  String get video_source_scrape_global_provider_hint =>
+      'Used by video sources that inherit the global setting';
+  @override
+  String get video_source_scrape_fanart_key => 'Fanart API key';
+  @override
+  String get video_source_scrape_fanart_key_hint =>
+      'Optional key used to fill missing artwork from Fanart';
+  @override
+  String get video_source_scrape_bangumi_token => 'Bangumi access token';
+  @override
+  String get video_source_scrape_bangumi_token_hint =>
+      'Optional access token for the official Bangumi API v0';
+  @override
+  String get video_source_scrape_douban_endpoint =>
+      'Authorized Douban API endpoint';
+  @override
+  String get video_source_scrape_douban_endpoint_hint =>
+      'Douban is unavailable unless both an authorized endpoint and token are configured';
+  @override
+  String get video_source_scrape_douban_token => 'Authorized Douban API token';
+  @override
+  String get video_source_scrape_douban_token_hint =>
+      'Douban is unavailable unless both an authorized endpoint and token are configured';
+  @override
+  String get video_source_scrape_locale => 'Metadata language';
+  @override
+  String get video_source_scrape_locale_hint =>
+      'Preferred language for titles, summaries and images';
+  @override
+  String get video_source_scrape_confirmation_title => 'Confirm metadata match';
+  @override
+  String get video_source_scrape_confirmation_hint =>
+      'Multiple exact matches were found. Choose the correct work to save its provider binding.';
+  @override
+  String get video_source_scrape_confirmation_skip => 'Skip this work';
+  @override
+  String get video_source_scrape_nfo_policy => 'NFO write policy';
+  @override
+  String get video_source_scrape_image_policy => 'Image write policy';
+  @override
+  String get video_source_scrape_policy_skip => 'Do not write';
+  @override
+  String get video_source_scrape_policy_missing_only => 'Only when missing';
+  @override
+  String get video_source_scrape_policy_overwrite => 'Update Hibiki files';
+  @override
+  String get video_source_scrape_external_overwrite =>
+      'Allow protected sidecar overwrite';
+  @override
+  String get video_source_scrape_external_overwrite_hint =>
+      'Third-party or user-modified files remain protected until you confirm each manual scrape batch again.';
+  @override
+  String get video_source_scrape_external_overwrite_confirm_title =>
+      'Overwrite protected sidecars?';
+  @override
+  String get video_source_scrape_external_overwrite_confirm_body =>
+      'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
+  @override
+  String get video_source_scrape_tasks_open => 'Background tasks';
+  @override
+  String get video_source_scrape_background_started =>
+      'Scraping is running in the background';
+  @override
+  String get video_source_scrape_tasks_current => 'Current task';
+  @override
+  String get video_source_scrape_tasks_history => 'Recent tasks';
+  @override
+  String get video_source_scrape_tasks_empty => 'No scrape tasks yet';
+  @override
+  String get video_source_scrape_waiting_confirmation =>
+      'Waiting for your confirmation';
+  @override
+  String get video_source_scrape_phase_scanning => 'Scanning source';
+  @override
+  String get video_library_all_videos => 'All videos';
+  @override
+  String get video_work_voice_roles => 'Voice cast and characters';
+  @override
+  String get video_work_cast_crew => 'Cast and crew';
+  @override
+  String get video_work_trailers => 'Trailers';
+  @override
+  String get video_work_extras => 'Extras';
+  @override
+  String get video_work_details => 'Details';
+  @override
+  String get video_work_external_ids => 'External IDs';
+  @override
+  String get video_work_metadata_pending =>
+      'Detailed metadata has not been scraped yet. Retry this source from Sources, then reopen the work.';
+  @override
+  String get video_work_genres => 'Genres';
+  @override
+  String get video_work_keywords => 'Keywords';
+  @override
+  String get video_work_studios => 'Studios';
+  @override
+  String get video_work_countries => 'Countries';
+  @override
+  String get video_work_content_rating => 'Content rating';
+  @override
+  String get video_all_videos_list_view => 'List view';
+  @override
+  String get video_all_videos_grid_view => 'Grid view';
+  @override
+  String video_home_continue_episode_number({required Object n}) =>
+      'Playing episode ${n}';
+  @override
+  String video_home_next_episode_number({required Object n}) =>
+      'Next · Episode ${n}';
+  @override
+  String video_home_recent_episode_number({required Object n}) =>
+      'Recently added · Episode ${n}';
+  @override
+  String video_home_remaining_minutes({required Object minutes}) =>
+      '${minutes} min remaining';
+  @override
+  String get video_discovery_tab => 'Discover';
+  @override
+  String get video_discovery_search_hint => 'Search movies, series, anime';
+  @override
+  String get video_discovery_hot => 'Popular now';
+  @override
+  String get video_discovery_seasonal_anime => 'Seasonal anime';
+  @override
+  String get video_discovery_all_works => 'All titles';
+  @override
+  String get video_discovery_search_results => 'Search results';
+  @override
+  String get video_discovery_provider_warning =>
+      'Some providers are unavailable. Showing available results.';
+  @override
+  String get video_discovery_load_failed => 'Could not load discovery results.';
+  @override
+  String get video_discovery_empty => 'No matching titles.';
+  @override
+  String get video_discovery_resource_search => 'Search resources';
+  @override
+  String get video_discovery_subtitle_search => 'Search subtitles';
+  @override
+  String get video_discovery_subscribe => 'Subscribe';
+  @override
+  String get video_discovery_subscription_manage => 'Manage subscription';
+  @override
+  String get video_discovery_pipeline_idle =>
+      'Not downloaded → Download → Organize → Subtitles → Scrape → Library';
+  @override
+  String get video_discovery_details_load_failed =>
+      'Could not load title details.';
+  @override
+  String get video_discovery_sort_popularity => 'Popularity';
+  @override
+  String get video_discovery_sort_rating => 'Rating';
+  @override
+  String get video_discovery_sort_release => 'Release date';
+  @override
+  String get video_discovery_in_library => 'In library';
+  @override
+  String get video_discovery_play => 'Play';
+  @override
+  String get download_resources_tab => 'Resources';
+  @override
+  String get video_external_settings_section =>
+      'External resource and subtitle providers';
+  @override
+  String get video_torznab_settings_title => 'Torznab indexers';
+  @override
+  String get video_torznab_settings_hint =>
+      'Configure one or more Jackett, Prowlarr, or compatible Torznab endpoints. Secrets stay on this device.';
+  @override
+  String get video_torznab_add => 'Add indexer';
+  @override
+  String get video_torznab_name => 'Name';
+  @override
+  String get video_torznab_endpoint => 'Endpoint';
+  @override
+  String get video_torznab_endpoint_hint =>
+      'HTTPS is required except for loopback addresses.';
+  @override
+  String get video_torznab_api_key => 'API key';
+  @override
+  String get video_torznab_priority => 'Priority';
+  @override
+  String get video_torznab_categories => 'Categories';
+  @override
+  String get video_torznab_categories_hint =>
+      'Comma-separated numeric category IDs';
+  @override
+  String get video_external_enabled => 'Enabled';
+  @override
+  String get video_external_insecure_http => 'Allow insecure HTTP';
+  @override
+  String get video_external_insecure_http_hint =>
+      'Use only for a trusted local network endpoint.';
+  @override
+  String get video_external_endpoint_invalid =>
+      'Enter a valid endpoint without credentials, query parameters, or fragments.';
+  @override
+  String get video_opensubtitles_settings_title => 'OpenSubtitles';
+  @override
+  String get video_opensubtitles_settings_hint =>
+      'API credentials and preferred subtitle languages stay on this device.';
+  @override
+  String get video_opensubtitles_user_agent => 'User-Agent';
+  @override
+  String get video_opensubtitles_languages => 'Preferred languages';
+  @override
+  String get video_opensubtitles_languages_hint =>
+      'Comma-separated language codes, for example zh-CN,en,ja';
+  @override
+  String get video_download_path_mappings_title => 'qBittorrent path mappings';
+  @override
+  String get video_download_path_mappings_hint =>
+      'Map each qBittorrent remote root to a locally accessible folder.';
+  @override
+  String get video_download_path_mapping_add => 'Add path mapping';
+  @override
+  String get video_download_backend_profile_id => 'Backend profile ID';
+  @override
+  String get video_download_remote_root => 'Remote root';
+  @override
+  String get video_download_local_root => 'Local root';
+  @override
+  String get video_download_target_source_title =>
+      'Default managed video source';
+  @override
+  String get video_download_target_source_hint =>
+      'New downloads are organized into this local video source.';
+  @override
+  String get video_download_target_source_none => 'Choose a local video source';
+  @override
+  String get video_external_remove => 'Remove';
+  @override
+  String get video_external_username_optional => 'Username (optional)';
+  @override
+  String get video_external_password_optional => 'Password (optional)';
+  @override
+  String get video_external_api_key => 'API key';
+  @override
+  String get video_external_save_error =>
+      'The configuration could not be saved. Check the highlighted fields.';
+  @override
+  String get video_external_categories_invalid =>
+      'Categories must be comma-separated numeric IDs.';
+  @override
+  String get video_download_path_mapping_invalid =>
+      'Enter a profile ID, remote root, and absolute local root.';
+  @override
+  String get video_opensubtitles_endpoint => 'API endpoint';
+  @override
+  String get video_download_target_source_empty =>
+      'No locally accessible video source is available. Add one on the Sources tab first.';
 }
 
 // Path: <root>
@@ -70169,8 +73014,6 @@ class _StringsPtBr extends _StringsEn {
       'Download backend is not configured yet.';
   @override
   String get download_clear_finished => 'Clear finished';
-  @override
-  String get download_discover_tab => 'Discover';
   @override
   String get download_network_proxy_auto => 'Auto';
   @override
@@ -75856,6 +78699,305 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_library_empty_source_hint =>
       'Add a video folder from Sources to build your library';
+  @override
+  String get video_source_scrape_action => 'Scrape this source';
+  @override
+  String get video_source_scrape_settings => 'Source scrape settings';
+  @override
+  String get video_source_scrape_provider => 'Primary metadata source';
+  @override
+  String get video_source_scrape_provider_inherit => 'Use global default';
+  @override
+  String get video_source_scrape_auto_after_scan => 'Scrape after scanning';
+  @override
+  String get video_source_scrape_auto_after_scan_hint =>
+      'Run metadata scraping automatically after this source is scanned';
+  @override
+  String get video_source_scrape_write_nfo => 'Write NFO files';
+  @override
+  String get video_source_scrape_write_images => 'Write image files';
+  @override
+  String get video_source_scrape_use_fanart => 'Use Fanart images';
+  @override
+  String video_source_scrape_progress(
+          {required Object phase,
+          required Object current,
+          required Object total}) =>
+      '${phase} · ${current}/${total}';
+  @override
+  String video_source_scrape_last_summary(
+          {required Object status,
+          required Object succeeded,
+          required Object pending,
+          required Object failed}) =>
+      'Last scrape (${status}): ${succeeded} succeeded, ${pending} pending, ${failed} failed';
+  @override
+  String get video_source_scrape_phase_planning => 'Planning';
+  @override
+  String get video_source_scrape_phase_recognizing => 'Matching';
+  @override
+  String get video_source_scrape_phase_fetching => 'Fetching metadata';
+  @override
+  String get video_source_scrape_phase_applying => 'Saving metadata';
+  @override
+  String get video_source_scrape_phase_writing_sidecars => 'Writing sidecars';
+  @override
+  String get video_source_scrape_status_interrupted => 'Interrupted';
+  @override
+  String get video_source_scrape_global_provider => 'Default metadata source';
+  @override
+  String get video_source_scrape_global_provider_hint =>
+      'Used by video sources that inherit the global setting';
+  @override
+  String get video_source_scrape_fanart_key => 'Fanart API key';
+  @override
+  String get video_source_scrape_fanart_key_hint =>
+      'Optional key used to fill missing artwork from Fanart';
+  @override
+  String get video_source_scrape_bangumi_token => 'Bangumi access token';
+  @override
+  String get video_source_scrape_bangumi_token_hint =>
+      'Optional access token for the official Bangumi API v0';
+  @override
+  String get video_source_scrape_douban_endpoint =>
+      'Authorized Douban API endpoint';
+  @override
+  String get video_source_scrape_douban_endpoint_hint =>
+      'Douban is unavailable unless both an authorized endpoint and token are configured';
+  @override
+  String get video_source_scrape_douban_token => 'Authorized Douban API token';
+  @override
+  String get video_source_scrape_douban_token_hint =>
+      'Douban is unavailable unless both an authorized endpoint and token are configured';
+  @override
+  String get video_source_scrape_locale => 'Metadata language';
+  @override
+  String get video_source_scrape_locale_hint =>
+      'Preferred language for titles, summaries and images';
+  @override
+  String get video_source_scrape_confirmation_title => 'Confirm metadata match';
+  @override
+  String get video_source_scrape_confirmation_hint =>
+      'Multiple exact matches were found. Choose the correct work to save its provider binding.';
+  @override
+  String get video_source_scrape_confirmation_skip => 'Skip this work';
+  @override
+  String get video_source_scrape_nfo_policy => 'NFO write policy';
+  @override
+  String get video_source_scrape_image_policy => 'Image write policy';
+  @override
+  String get video_source_scrape_policy_skip => 'Do not write';
+  @override
+  String get video_source_scrape_policy_missing_only => 'Only when missing';
+  @override
+  String get video_source_scrape_policy_overwrite => 'Update Hibiki files';
+  @override
+  String get video_source_scrape_external_overwrite =>
+      'Allow protected sidecar overwrite';
+  @override
+  String get video_source_scrape_external_overwrite_hint =>
+      'Third-party or user-modified files remain protected until you confirm each manual scrape batch again.';
+  @override
+  String get video_source_scrape_external_overwrite_confirm_title =>
+      'Overwrite protected sidecars?';
+  @override
+  String get video_source_scrape_external_overwrite_confirm_body =>
+      'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
+  @override
+  String get video_source_scrape_tasks_open => 'Background tasks';
+  @override
+  String get video_source_scrape_background_started =>
+      'Scraping is running in the background';
+  @override
+  String get video_source_scrape_tasks_current => 'Current task';
+  @override
+  String get video_source_scrape_tasks_history => 'Recent tasks';
+  @override
+  String get video_source_scrape_tasks_empty => 'No scrape tasks yet';
+  @override
+  String get video_source_scrape_waiting_confirmation =>
+      'Waiting for your confirmation';
+  @override
+  String get video_source_scrape_phase_scanning => 'Scanning source';
+  @override
+  String get video_library_all_videos => 'All videos';
+  @override
+  String get video_work_voice_roles => 'Voice cast and characters';
+  @override
+  String get video_work_cast_crew => 'Cast and crew';
+  @override
+  String get video_work_trailers => 'Trailers';
+  @override
+  String get video_work_extras => 'Extras';
+  @override
+  String get video_work_details => 'Details';
+  @override
+  String get video_work_external_ids => 'External IDs';
+  @override
+  String get video_work_metadata_pending =>
+      'Detailed metadata has not been scraped yet. Retry this source from Sources, then reopen the work.';
+  @override
+  String get video_work_genres => 'Genres';
+  @override
+  String get video_work_keywords => 'Keywords';
+  @override
+  String get video_work_studios => 'Studios';
+  @override
+  String get video_work_countries => 'Countries';
+  @override
+  String get video_work_content_rating => 'Content rating';
+  @override
+  String get video_all_videos_list_view => 'List view';
+  @override
+  String get video_all_videos_grid_view => 'Grid view';
+  @override
+  String video_home_continue_episode_number({required Object n}) =>
+      'Playing episode ${n}';
+  @override
+  String video_home_next_episode_number({required Object n}) =>
+      'Next · Episode ${n}';
+  @override
+  String video_home_recent_episode_number({required Object n}) =>
+      'Recently added · Episode ${n}';
+  @override
+  String video_home_remaining_minutes({required Object minutes}) =>
+      '${minutes} min remaining';
+  @override
+  String get video_discovery_tab => 'Discover';
+  @override
+  String get video_discovery_search_hint => 'Search movies, series, anime';
+  @override
+  String get video_discovery_hot => 'Popular now';
+  @override
+  String get video_discovery_seasonal_anime => 'Seasonal anime';
+  @override
+  String get video_discovery_all_works => 'All titles';
+  @override
+  String get video_discovery_search_results => 'Search results';
+  @override
+  String get video_discovery_provider_warning =>
+      'Some providers are unavailable. Showing available results.';
+  @override
+  String get video_discovery_load_failed => 'Could not load discovery results.';
+  @override
+  String get video_discovery_empty => 'No matching titles.';
+  @override
+  String get video_discovery_resource_search => 'Search resources';
+  @override
+  String get video_discovery_subtitle_search => 'Search subtitles';
+  @override
+  String get video_discovery_subscribe => 'Subscribe';
+  @override
+  String get video_discovery_subscription_manage => 'Manage subscription';
+  @override
+  String get video_discovery_pipeline_idle =>
+      'Not downloaded → Download → Organize → Subtitles → Scrape → Library';
+  @override
+  String get video_discovery_details_load_failed =>
+      'Could not load title details.';
+  @override
+  String get video_discovery_sort_popularity => 'Popularity';
+  @override
+  String get video_discovery_sort_rating => 'Rating';
+  @override
+  String get video_discovery_sort_release => 'Release date';
+  @override
+  String get video_discovery_in_library => 'In library';
+  @override
+  String get video_discovery_play => 'Play';
+  @override
+  String get download_resources_tab => 'Resources';
+  @override
+  String get video_external_settings_section =>
+      'External resource and subtitle providers';
+  @override
+  String get video_torznab_settings_title => 'Torznab indexers';
+  @override
+  String get video_torznab_settings_hint =>
+      'Configure one or more Jackett, Prowlarr, or compatible Torznab endpoints. Secrets stay on this device.';
+  @override
+  String get video_torznab_add => 'Add indexer';
+  @override
+  String get video_torznab_name => 'Name';
+  @override
+  String get video_torznab_endpoint => 'Endpoint';
+  @override
+  String get video_torznab_endpoint_hint =>
+      'HTTPS is required except for loopback addresses.';
+  @override
+  String get video_torznab_api_key => 'API key';
+  @override
+  String get video_torznab_priority => 'Priority';
+  @override
+  String get video_torznab_categories => 'Categories';
+  @override
+  String get video_torznab_categories_hint =>
+      'Comma-separated numeric category IDs';
+  @override
+  String get video_external_enabled => 'Enabled';
+  @override
+  String get video_external_insecure_http => 'Allow insecure HTTP';
+  @override
+  String get video_external_insecure_http_hint =>
+      'Use only for a trusted local network endpoint.';
+  @override
+  String get video_external_endpoint_invalid =>
+      'Enter a valid endpoint without credentials, query parameters, or fragments.';
+  @override
+  String get video_opensubtitles_settings_title => 'OpenSubtitles';
+  @override
+  String get video_opensubtitles_settings_hint =>
+      'API credentials and preferred subtitle languages stay on this device.';
+  @override
+  String get video_opensubtitles_user_agent => 'User-Agent';
+  @override
+  String get video_opensubtitles_languages => 'Preferred languages';
+  @override
+  String get video_opensubtitles_languages_hint =>
+      'Comma-separated language codes, for example zh-CN,en,ja';
+  @override
+  String get video_download_path_mappings_title => 'qBittorrent path mappings';
+  @override
+  String get video_download_path_mappings_hint =>
+      'Map each qBittorrent remote root to a locally accessible folder.';
+  @override
+  String get video_download_path_mapping_add => 'Add path mapping';
+  @override
+  String get video_download_backend_profile_id => 'Backend profile ID';
+  @override
+  String get video_download_remote_root => 'Remote root';
+  @override
+  String get video_download_local_root => 'Local root';
+  @override
+  String get video_download_target_source_title =>
+      'Default managed video source';
+  @override
+  String get video_download_target_source_hint =>
+      'New downloads are organized into this local video source.';
+  @override
+  String get video_download_target_source_none => 'Choose a local video source';
+  @override
+  String get video_external_remove => 'Remove';
+  @override
+  String get video_external_username_optional => 'Username (optional)';
+  @override
+  String get video_external_password_optional => 'Password (optional)';
+  @override
+  String get video_external_api_key => 'API key';
+  @override
+  String get video_external_save_error =>
+      'The configuration could not be saved. Check the highlighted fields.';
+  @override
+  String get video_external_categories_invalid =>
+      'Categories must be comma-separated numeric IDs.';
+  @override
+  String get video_download_path_mapping_invalid =>
+      'Enter a profile ID, remote root, and absolute local root.';
+  @override
+  String get video_opensubtitles_endpoint => 'API endpoint';
+  @override
+  String get video_download_target_source_empty =>
+      'No locally accessible video source is available. Add one on the Sources tab first.';
 }
 
 // Path: <root>
@@ -77368,8 +80510,6 @@ class _StringsRu extends _StringsEn {
       'Download backend is not configured yet.';
   @override
   String get download_clear_finished => 'Clear finished';
-  @override
-  String get download_discover_tab => 'Discover';
   @override
   String get download_network_proxy_auto => 'Auto';
   @override
@@ -83047,6 +86187,305 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_library_empty_source_hint =>
       'Add a video folder from Sources to build your library';
+  @override
+  String get video_source_scrape_action => 'Scrape this source';
+  @override
+  String get video_source_scrape_settings => 'Source scrape settings';
+  @override
+  String get video_source_scrape_provider => 'Primary metadata source';
+  @override
+  String get video_source_scrape_provider_inherit => 'Use global default';
+  @override
+  String get video_source_scrape_auto_after_scan => 'Scrape after scanning';
+  @override
+  String get video_source_scrape_auto_after_scan_hint =>
+      'Run metadata scraping automatically after this source is scanned';
+  @override
+  String get video_source_scrape_write_nfo => 'Write NFO files';
+  @override
+  String get video_source_scrape_write_images => 'Write image files';
+  @override
+  String get video_source_scrape_use_fanart => 'Use Fanart images';
+  @override
+  String video_source_scrape_progress(
+          {required Object phase,
+          required Object current,
+          required Object total}) =>
+      '${phase} · ${current}/${total}';
+  @override
+  String video_source_scrape_last_summary(
+          {required Object status,
+          required Object succeeded,
+          required Object pending,
+          required Object failed}) =>
+      'Last scrape (${status}): ${succeeded} succeeded, ${pending} pending, ${failed} failed';
+  @override
+  String get video_source_scrape_phase_planning => 'Planning';
+  @override
+  String get video_source_scrape_phase_recognizing => 'Matching';
+  @override
+  String get video_source_scrape_phase_fetching => 'Fetching metadata';
+  @override
+  String get video_source_scrape_phase_applying => 'Saving metadata';
+  @override
+  String get video_source_scrape_phase_writing_sidecars => 'Writing sidecars';
+  @override
+  String get video_source_scrape_status_interrupted => 'Interrupted';
+  @override
+  String get video_source_scrape_global_provider => 'Default metadata source';
+  @override
+  String get video_source_scrape_global_provider_hint =>
+      'Used by video sources that inherit the global setting';
+  @override
+  String get video_source_scrape_fanart_key => 'Fanart API key';
+  @override
+  String get video_source_scrape_fanart_key_hint =>
+      'Optional key used to fill missing artwork from Fanart';
+  @override
+  String get video_source_scrape_bangumi_token => 'Bangumi access token';
+  @override
+  String get video_source_scrape_bangumi_token_hint =>
+      'Optional access token for the official Bangumi API v0';
+  @override
+  String get video_source_scrape_douban_endpoint =>
+      'Authorized Douban API endpoint';
+  @override
+  String get video_source_scrape_douban_endpoint_hint =>
+      'Douban is unavailable unless both an authorized endpoint and token are configured';
+  @override
+  String get video_source_scrape_douban_token => 'Authorized Douban API token';
+  @override
+  String get video_source_scrape_douban_token_hint =>
+      'Douban is unavailable unless both an authorized endpoint and token are configured';
+  @override
+  String get video_source_scrape_locale => 'Metadata language';
+  @override
+  String get video_source_scrape_locale_hint =>
+      'Preferred language for titles, summaries and images';
+  @override
+  String get video_source_scrape_confirmation_title => 'Confirm metadata match';
+  @override
+  String get video_source_scrape_confirmation_hint =>
+      'Multiple exact matches were found. Choose the correct work to save its provider binding.';
+  @override
+  String get video_source_scrape_confirmation_skip => 'Skip this work';
+  @override
+  String get video_source_scrape_nfo_policy => 'NFO write policy';
+  @override
+  String get video_source_scrape_image_policy => 'Image write policy';
+  @override
+  String get video_source_scrape_policy_skip => 'Do not write';
+  @override
+  String get video_source_scrape_policy_missing_only => 'Only when missing';
+  @override
+  String get video_source_scrape_policy_overwrite => 'Update Hibiki files';
+  @override
+  String get video_source_scrape_external_overwrite =>
+      'Allow protected sidecar overwrite';
+  @override
+  String get video_source_scrape_external_overwrite_hint =>
+      'Third-party or user-modified files remain protected until you confirm each manual scrape batch again.';
+  @override
+  String get video_source_scrape_external_overwrite_confirm_title =>
+      'Overwrite protected sidecars?';
+  @override
+  String get video_source_scrape_external_overwrite_confirm_body =>
+      'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
+  @override
+  String get video_source_scrape_tasks_open => 'Background tasks';
+  @override
+  String get video_source_scrape_background_started =>
+      'Scraping is running in the background';
+  @override
+  String get video_source_scrape_tasks_current => 'Current task';
+  @override
+  String get video_source_scrape_tasks_history => 'Recent tasks';
+  @override
+  String get video_source_scrape_tasks_empty => 'No scrape tasks yet';
+  @override
+  String get video_source_scrape_waiting_confirmation =>
+      'Waiting for your confirmation';
+  @override
+  String get video_source_scrape_phase_scanning => 'Scanning source';
+  @override
+  String get video_library_all_videos => 'All videos';
+  @override
+  String get video_work_voice_roles => 'Voice cast and characters';
+  @override
+  String get video_work_cast_crew => 'Cast and crew';
+  @override
+  String get video_work_trailers => 'Trailers';
+  @override
+  String get video_work_extras => 'Extras';
+  @override
+  String get video_work_details => 'Details';
+  @override
+  String get video_work_external_ids => 'External IDs';
+  @override
+  String get video_work_metadata_pending =>
+      'Detailed metadata has not been scraped yet. Retry this source from Sources, then reopen the work.';
+  @override
+  String get video_work_genres => 'Genres';
+  @override
+  String get video_work_keywords => 'Keywords';
+  @override
+  String get video_work_studios => 'Studios';
+  @override
+  String get video_work_countries => 'Countries';
+  @override
+  String get video_work_content_rating => 'Content rating';
+  @override
+  String get video_all_videos_list_view => 'List view';
+  @override
+  String get video_all_videos_grid_view => 'Grid view';
+  @override
+  String video_home_continue_episode_number({required Object n}) =>
+      'Playing episode ${n}';
+  @override
+  String video_home_next_episode_number({required Object n}) =>
+      'Next · Episode ${n}';
+  @override
+  String video_home_recent_episode_number({required Object n}) =>
+      'Recently added · Episode ${n}';
+  @override
+  String video_home_remaining_minutes({required Object minutes}) =>
+      '${minutes} min remaining';
+  @override
+  String get video_discovery_tab => 'Discover';
+  @override
+  String get video_discovery_search_hint => 'Search movies, series, anime';
+  @override
+  String get video_discovery_hot => 'Popular now';
+  @override
+  String get video_discovery_seasonal_anime => 'Seasonal anime';
+  @override
+  String get video_discovery_all_works => 'All titles';
+  @override
+  String get video_discovery_search_results => 'Search results';
+  @override
+  String get video_discovery_provider_warning =>
+      'Some providers are unavailable. Showing available results.';
+  @override
+  String get video_discovery_load_failed => 'Could not load discovery results.';
+  @override
+  String get video_discovery_empty => 'No matching titles.';
+  @override
+  String get video_discovery_resource_search => 'Search resources';
+  @override
+  String get video_discovery_subtitle_search => 'Search subtitles';
+  @override
+  String get video_discovery_subscribe => 'Subscribe';
+  @override
+  String get video_discovery_subscription_manage => 'Manage subscription';
+  @override
+  String get video_discovery_pipeline_idle =>
+      'Not downloaded → Download → Organize → Subtitles → Scrape → Library';
+  @override
+  String get video_discovery_details_load_failed =>
+      'Could not load title details.';
+  @override
+  String get video_discovery_sort_popularity => 'Popularity';
+  @override
+  String get video_discovery_sort_rating => 'Rating';
+  @override
+  String get video_discovery_sort_release => 'Release date';
+  @override
+  String get video_discovery_in_library => 'In library';
+  @override
+  String get video_discovery_play => 'Play';
+  @override
+  String get download_resources_tab => 'Resources';
+  @override
+  String get video_external_settings_section =>
+      'External resource and subtitle providers';
+  @override
+  String get video_torznab_settings_title => 'Torznab indexers';
+  @override
+  String get video_torznab_settings_hint =>
+      'Configure one or more Jackett, Prowlarr, or compatible Torznab endpoints. Secrets stay on this device.';
+  @override
+  String get video_torznab_add => 'Add indexer';
+  @override
+  String get video_torznab_name => 'Name';
+  @override
+  String get video_torznab_endpoint => 'Endpoint';
+  @override
+  String get video_torznab_endpoint_hint =>
+      'HTTPS is required except for loopback addresses.';
+  @override
+  String get video_torznab_api_key => 'API key';
+  @override
+  String get video_torznab_priority => 'Priority';
+  @override
+  String get video_torznab_categories => 'Categories';
+  @override
+  String get video_torznab_categories_hint =>
+      'Comma-separated numeric category IDs';
+  @override
+  String get video_external_enabled => 'Enabled';
+  @override
+  String get video_external_insecure_http => 'Allow insecure HTTP';
+  @override
+  String get video_external_insecure_http_hint =>
+      'Use only for a trusted local network endpoint.';
+  @override
+  String get video_external_endpoint_invalid =>
+      'Enter a valid endpoint without credentials, query parameters, or fragments.';
+  @override
+  String get video_opensubtitles_settings_title => 'OpenSubtitles';
+  @override
+  String get video_opensubtitles_settings_hint =>
+      'API credentials and preferred subtitle languages stay on this device.';
+  @override
+  String get video_opensubtitles_user_agent => 'User-Agent';
+  @override
+  String get video_opensubtitles_languages => 'Preferred languages';
+  @override
+  String get video_opensubtitles_languages_hint =>
+      'Comma-separated language codes, for example zh-CN,en,ja';
+  @override
+  String get video_download_path_mappings_title => 'qBittorrent path mappings';
+  @override
+  String get video_download_path_mappings_hint =>
+      'Map each qBittorrent remote root to a locally accessible folder.';
+  @override
+  String get video_download_path_mapping_add => 'Add path mapping';
+  @override
+  String get video_download_backend_profile_id => 'Backend profile ID';
+  @override
+  String get video_download_remote_root => 'Remote root';
+  @override
+  String get video_download_local_root => 'Local root';
+  @override
+  String get video_download_target_source_title =>
+      'Default managed video source';
+  @override
+  String get video_download_target_source_hint =>
+      'New downloads are organized into this local video source.';
+  @override
+  String get video_download_target_source_none => 'Choose a local video source';
+  @override
+  String get video_external_remove => 'Remove';
+  @override
+  String get video_external_username_optional => 'Username (optional)';
+  @override
+  String get video_external_password_optional => 'Password (optional)';
+  @override
+  String get video_external_api_key => 'API key';
+  @override
+  String get video_external_save_error =>
+      'The configuration could not be saved. Check the highlighted fields.';
+  @override
+  String get video_external_categories_invalid =>
+      'Categories must be comma-separated numeric IDs.';
+  @override
+  String get video_download_path_mapping_invalid =>
+      'Enter a profile ID, remote root, and absolute local root.';
+  @override
+  String get video_opensubtitles_endpoint => 'API endpoint';
+  @override
+  String get video_download_target_source_empty =>
+      'No locally accessible video source is available. Add one on the Sources tab first.';
 }
 
 // Path: <root>
@@ -84545,8 +87984,6 @@ class _StringsTh extends _StringsEn {
       'Download backend is not configured yet.';
   @override
   String get download_clear_finished => 'Clear finished';
-  @override
-  String get download_discover_tab => 'Discover';
   @override
   String get download_network_proxy_auto => 'Auto';
   @override
@@ -90186,6 +93623,305 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_library_empty_source_hint =>
       'Add a video folder from Sources to build your library';
+  @override
+  String get video_source_scrape_action => 'Scrape this source';
+  @override
+  String get video_source_scrape_settings => 'Source scrape settings';
+  @override
+  String get video_source_scrape_provider => 'Primary metadata source';
+  @override
+  String get video_source_scrape_provider_inherit => 'Use global default';
+  @override
+  String get video_source_scrape_auto_after_scan => 'Scrape after scanning';
+  @override
+  String get video_source_scrape_auto_after_scan_hint =>
+      'Run metadata scraping automatically after this source is scanned';
+  @override
+  String get video_source_scrape_write_nfo => 'Write NFO files';
+  @override
+  String get video_source_scrape_write_images => 'Write image files';
+  @override
+  String get video_source_scrape_use_fanart => 'Use Fanart images';
+  @override
+  String video_source_scrape_progress(
+          {required Object phase,
+          required Object current,
+          required Object total}) =>
+      '${phase} · ${current}/${total}';
+  @override
+  String video_source_scrape_last_summary(
+          {required Object status,
+          required Object succeeded,
+          required Object pending,
+          required Object failed}) =>
+      'Last scrape (${status}): ${succeeded} succeeded, ${pending} pending, ${failed} failed';
+  @override
+  String get video_source_scrape_phase_planning => 'Planning';
+  @override
+  String get video_source_scrape_phase_recognizing => 'Matching';
+  @override
+  String get video_source_scrape_phase_fetching => 'Fetching metadata';
+  @override
+  String get video_source_scrape_phase_applying => 'Saving metadata';
+  @override
+  String get video_source_scrape_phase_writing_sidecars => 'Writing sidecars';
+  @override
+  String get video_source_scrape_status_interrupted => 'Interrupted';
+  @override
+  String get video_source_scrape_global_provider => 'Default metadata source';
+  @override
+  String get video_source_scrape_global_provider_hint =>
+      'Used by video sources that inherit the global setting';
+  @override
+  String get video_source_scrape_fanart_key => 'Fanart API key';
+  @override
+  String get video_source_scrape_fanart_key_hint =>
+      'Optional key used to fill missing artwork from Fanart';
+  @override
+  String get video_source_scrape_bangumi_token => 'Bangumi access token';
+  @override
+  String get video_source_scrape_bangumi_token_hint =>
+      'Optional access token for the official Bangumi API v0';
+  @override
+  String get video_source_scrape_douban_endpoint =>
+      'Authorized Douban API endpoint';
+  @override
+  String get video_source_scrape_douban_endpoint_hint =>
+      'Douban is unavailable unless both an authorized endpoint and token are configured';
+  @override
+  String get video_source_scrape_douban_token => 'Authorized Douban API token';
+  @override
+  String get video_source_scrape_douban_token_hint =>
+      'Douban is unavailable unless both an authorized endpoint and token are configured';
+  @override
+  String get video_source_scrape_locale => 'Metadata language';
+  @override
+  String get video_source_scrape_locale_hint =>
+      'Preferred language for titles, summaries and images';
+  @override
+  String get video_source_scrape_confirmation_title => 'Confirm metadata match';
+  @override
+  String get video_source_scrape_confirmation_hint =>
+      'Multiple exact matches were found. Choose the correct work to save its provider binding.';
+  @override
+  String get video_source_scrape_confirmation_skip => 'Skip this work';
+  @override
+  String get video_source_scrape_nfo_policy => 'NFO write policy';
+  @override
+  String get video_source_scrape_image_policy => 'Image write policy';
+  @override
+  String get video_source_scrape_policy_skip => 'Do not write';
+  @override
+  String get video_source_scrape_policy_missing_only => 'Only when missing';
+  @override
+  String get video_source_scrape_policy_overwrite => 'Update Hibiki files';
+  @override
+  String get video_source_scrape_external_overwrite =>
+      'Allow protected sidecar overwrite';
+  @override
+  String get video_source_scrape_external_overwrite_hint =>
+      'Third-party or user-modified files remain protected until you confirm each manual scrape batch again.';
+  @override
+  String get video_source_scrape_external_overwrite_confirm_title =>
+      'Overwrite protected sidecars?';
+  @override
+  String get video_source_scrape_external_overwrite_confirm_body =>
+      'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
+  @override
+  String get video_source_scrape_tasks_open => 'Background tasks';
+  @override
+  String get video_source_scrape_background_started =>
+      'Scraping is running in the background';
+  @override
+  String get video_source_scrape_tasks_current => 'Current task';
+  @override
+  String get video_source_scrape_tasks_history => 'Recent tasks';
+  @override
+  String get video_source_scrape_tasks_empty => 'No scrape tasks yet';
+  @override
+  String get video_source_scrape_waiting_confirmation =>
+      'Waiting for your confirmation';
+  @override
+  String get video_source_scrape_phase_scanning => 'Scanning source';
+  @override
+  String get video_library_all_videos => 'All videos';
+  @override
+  String get video_work_voice_roles => 'Voice cast and characters';
+  @override
+  String get video_work_cast_crew => 'Cast and crew';
+  @override
+  String get video_work_trailers => 'Trailers';
+  @override
+  String get video_work_extras => 'Extras';
+  @override
+  String get video_work_details => 'Details';
+  @override
+  String get video_work_external_ids => 'External IDs';
+  @override
+  String get video_work_metadata_pending =>
+      'Detailed metadata has not been scraped yet. Retry this source from Sources, then reopen the work.';
+  @override
+  String get video_work_genres => 'Genres';
+  @override
+  String get video_work_keywords => 'Keywords';
+  @override
+  String get video_work_studios => 'Studios';
+  @override
+  String get video_work_countries => 'Countries';
+  @override
+  String get video_work_content_rating => 'Content rating';
+  @override
+  String get video_all_videos_list_view => 'List view';
+  @override
+  String get video_all_videos_grid_view => 'Grid view';
+  @override
+  String video_home_continue_episode_number({required Object n}) =>
+      'Playing episode ${n}';
+  @override
+  String video_home_next_episode_number({required Object n}) =>
+      'Next · Episode ${n}';
+  @override
+  String video_home_recent_episode_number({required Object n}) =>
+      'Recently added · Episode ${n}';
+  @override
+  String video_home_remaining_minutes({required Object minutes}) =>
+      '${minutes} min remaining';
+  @override
+  String get video_discovery_tab => 'Discover';
+  @override
+  String get video_discovery_search_hint => 'Search movies, series, anime';
+  @override
+  String get video_discovery_hot => 'Popular now';
+  @override
+  String get video_discovery_seasonal_anime => 'Seasonal anime';
+  @override
+  String get video_discovery_all_works => 'All titles';
+  @override
+  String get video_discovery_search_results => 'Search results';
+  @override
+  String get video_discovery_provider_warning =>
+      'Some providers are unavailable. Showing available results.';
+  @override
+  String get video_discovery_load_failed => 'Could not load discovery results.';
+  @override
+  String get video_discovery_empty => 'No matching titles.';
+  @override
+  String get video_discovery_resource_search => 'Search resources';
+  @override
+  String get video_discovery_subtitle_search => 'Search subtitles';
+  @override
+  String get video_discovery_subscribe => 'Subscribe';
+  @override
+  String get video_discovery_subscription_manage => 'Manage subscription';
+  @override
+  String get video_discovery_pipeline_idle =>
+      'Not downloaded → Download → Organize → Subtitles → Scrape → Library';
+  @override
+  String get video_discovery_details_load_failed =>
+      'Could not load title details.';
+  @override
+  String get video_discovery_sort_popularity => 'Popularity';
+  @override
+  String get video_discovery_sort_rating => 'Rating';
+  @override
+  String get video_discovery_sort_release => 'Release date';
+  @override
+  String get video_discovery_in_library => 'In library';
+  @override
+  String get video_discovery_play => 'Play';
+  @override
+  String get download_resources_tab => 'Resources';
+  @override
+  String get video_external_settings_section =>
+      'External resource and subtitle providers';
+  @override
+  String get video_torznab_settings_title => 'Torznab indexers';
+  @override
+  String get video_torznab_settings_hint =>
+      'Configure one or more Jackett, Prowlarr, or compatible Torznab endpoints. Secrets stay on this device.';
+  @override
+  String get video_torznab_add => 'Add indexer';
+  @override
+  String get video_torznab_name => 'Name';
+  @override
+  String get video_torznab_endpoint => 'Endpoint';
+  @override
+  String get video_torznab_endpoint_hint =>
+      'HTTPS is required except for loopback addresses.';
+  @override
+  String get video_torznab_api_key => 'API key';
+  @override
+  String get video_torznab_priority => 'Priority';
+  @override
+  String get video_torznab_categories => 'Categories';
+  @override
+  String get video_torznab_categories_hint =>
+      'Comma-separated numeric category IDs';
+  @override
+  String get video_external_enabled => 'Enabled';
+  @override
+  String get video_external_insecure_http => 'Allow insecure HTTP';
+  @override
+  String get video_external_insecure_http_hint =>
+      'Use only for a trusted local network endpoint.';
+  @override
+  String get video_external_endpoint_invalid =>
+      'Enter a valid endpoint without credentials, query parameters, or fragments.';
+  @override
+  String get video_opensubtitles_settings_title => 'OpenSubtitles';
+  @override
+  String get video_opensubtitles_settings_hint =>
+      'API credentials and preferred subtitle languages stay on this device.';
+  @override
+  String get video_opensubtitles_user_agent => 'User-Agent';
+  @override
+  String get video_opensubtitles_languages => 'Preferred languages';
+  @override
+  String get video_opensubtitles_languages_hint =>
+      'Comma-separated language codes, for example zh-CN,en,ja';
+  @override
+  String get video_download_path_mappings_title => 'qBittorrent path mappings';
+  @override
+  String get video_download_path_mappings_hint =>
+      'Map each qBittorrent remote root to a locally accessible folder.';
+  @override
+  String get video_download_path_mapping_add => 'Add path mapping';
+  @override
+  String get video_download_backend_profile_id => 'Backend profile ID';
+  @override
+  String get video_download_remote_root => 'Remote root';
+  @override
+  String get video_download_local_root => 'Local root';
+  @override
+  String get video_download_target_source_title =>
+      'Default managed video source';
+  @override
+  String get video_download_target_source_hint =>
+      'New downloads are organized into this local video source.';
+  @override
+  String get video_download_target_source_none => 'Choose a local video source';
+  @override
+  String get video_external_remove => 'Remove';
+  @override
+  String get video_external_username_optional => 'Username (optional)';
+  @override
+  String get video_external_password_optional => 'Password (optional)';
+  @override
+  String get video_external_api_key => 'API key';
+  @override
+  String get video_external_save_error =>
+      'The configuration could not be saved. Check the highlighted fields.';
+  @override
+  String get video_external_categories_invalid =>
+      'Categories must be comma-separated numeric IDs.';
+  @override
+  String get video_download_path_mapping_invalid =>
+      'Enter a profile ID, remote root, and absolute local root.';
+  @override
+  String get video_opensubtitles_endpoint => 'API endpoint';
+  @override
+  String get video_download_target_source_empty =>
+      'No locally accessible video source is available. Add one on the Sources tab first.';
 }
 
 // Path: <root>
@@ -91697,8 +95433,6 @@ class _StringsTr extends _StringsEn {
       'Download backend is not configured yet.';
   @override
   String get download_clear_finished => 'Clear finished';
-  @override
-  String get download_discover_tab => 'Discover';
   @override
   String get download_network_proxy_auto => 'Auto';
   @override
@@ -97357,6 +101091,305 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_library_empty_source_hint =>
       'Add a video folder from Sources to build your library';
+  @override
+  String get video_source_scrape_action => 'Scrape this source';
+  @override
+  String get video_source_scrape_settings => 'Source scrape settings';
+  @override
+  String get video_source_scrape_provider => 'Primary metadata source';
+  @override
+  String get video_source_scrape_provider_inherit => 'Use global default';
+  @override
+  String get video_source_scrape_auto_after_scan => 'Scrape after scanning';
+  @override
+  String get video_source_scrape_auto_after_scan_hint =>
+      'Run metadata scraping automatically after this source is scanned';
+  @override
+  String get video_source_scrape_write_nfo => 'Write NFO files';
+  @override
+  String get video_source_scrape_write_images => 'Write image files';
+  @override
+  String get video_source_scrape_use_fanart => 'Use Fanart images';
+  @override
+  String video_source_scrape_progress(
+          {required Object phase,
+          required Object current,
+          required Object total}) =>
+      '${phase} · ${current}/${total}';
+  @override
+  String video_source_scrape_last_summary(
+          {required Object status,
+          required Object succeeded,
+          required Object pending,
+          required Object failed}) =>
+      'Last scrape (${status}): ${succeeded} succeeded, ${pending} pending, ${failed} failed';
+  @override
+  String get video_source_scrape_phase_planning => 'Planning';
+  @override
+  String get video_source_scrape_phase_recognizing => 'Matching';
+  @override
+  String get video_source_scrape_phase_fetching => 'Fetching metadata';
+  @override
+  String get video_source_scrape_phase_applying => 'Saving metadata';
+  @override
+  String get video_source_scrape_phase_writing_sidecars => 'Writing sidecars';
+  @override
+  String get video_source_scrape_status_interrupted => 'Interrupted';
+  @override
+  String get video_source_scrape_global_provider => 'Default metadata source';
+  @override
+  String get video_source_scrape_global_provider_hint =>
+      'Used by video sources that inherit the global setting';
+  @override
+  String get video_source_scrape_fanart_key => 'Fanart API key';
+  @override
+  String get video_source_scrape_fanart_key_hint =>
+      'Optional key used to fill missing artwork from Fanart';
+  @override
+  String get video_source_scrape_bangumi_token => 'Bangumi access token';
+  @override
+  String get video_source_scrape_bangumi_token_hint =>
+      'Optional access token for the official Bangumi API v0';
+  @override
+  String get video_source_scrape_douban_endpoint =>
+      'Authorized Douban API endpoint';
+  @override
+  String get video_source_scrape_douban_endpoint_hint =>
+      'Douban is unavailable unless both an authorized endpoint and token are configured';
+  @override
+  String get video_source_scrape_douban_token => 'Authorized Douban API token';
+  @override
+  String get video_source_scrape_douban_token_hint =>
+      'Douban is unavailable unless both an authorized endpoint and token are configured';
+  @override
+  String get video_source_scrape_locale => 'Metadata language';
+  @override
+  String get video_source_scrape_locale_hint =>
+      'Preferred language for titles, summaries and images';
+  @override
+  String get video_source_scrape_confirmation_title => 'Confirm metadata match';
+  @override
+  String get video_source_scrape_confirmation_hint =>
+      'Multiple exact matches were found. Choose the correct work to save its provider binding.';
+  @override
+  String get video_source_scrape_confirmation_skip => 'Skip this work';
+  @override
+  String get video_source_scrape_nfo_policy => 'NFO write policy';
+  @override
+  String get video_source_scrape_image_policy => 'Image write policy';
+  @override
+  String get video_source_scrape_policy_skip => 'Do not write';
+  @override
+  String get video_source_scrape_policy_missing_only => 'Only when missing';
+  @override
+  String get video_source_scrape_policy_overwrite => 'Update Hibiki files';
+  @override
+  String get video_source_scrape_external_overwrite =>
+      'Allow protected sidecar overwrite';
+  @override
+  String get video_source_scrape_external_overwrite_hint =>
+      'Third-party or user-modified files remain protected until you confirm each manual scrape batch again.';
+  @override
+  String get video_source_scrape_external_overwrite_confirm_title =>
+      'Overwrite protected sidecars?';
+  @override
+  String get video_source_scrape_external_overwrite_confirm_body =>
+      'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
+  @override
+  String get video_source_scrape_tasks_open => 'Background tasks';
+  @override
+  String get video_source_scrape_background_started =>
+      'Scraping is running in the background';
+  @override
+  String get video_source_scrape_tasks_current => 'Current task';
+  @override
+  String get video_source_scrape_tasks_history => 'Recent tasks';
+  @override
+  String get video_source_scrape_tasks_empty => 'No scrape tasks yet';
+  @override
+  String get video_source_scrape_waiting_confirmation =>
+      'Waiting for your confirmation';
+  @override
+  String get video_source_scrape_phase_scanning => 'Scanning source';
+  @override
+  String get video_library_all_videos => 'All videos';
+  @override
+  String get video_work_voice_roles => 'Voice cast and characters';
+  @override
+  String get video_work_cast_crew => 'Cast and crew';
+  @override
+  String get video_work_trailers => 'Trailers';
+  @override
+  String get video_work_extras => 'Extras';
+  @override
+  String get video_work_details => 'Details';
+  @override
+  String get video_work_external_ids => 'External IDs';
+  @override
+  String get video_work_metadata_pending =>
+      'Detailed metadata has not been scraped yet. Retry this source from Sources, then reopen the work.';
+  @override
+  String get video_work_genres => 'Genres';
+  @override
+  String get video_work_keywords => 'Keywords';
+  @override
+  String get video_work_studios => 'Studios';
+  @override
+  String get video_work_countries => 'Countries';
+  @override
+  String get video_work_content_rating => 'Content rating';
+  @override
+  String get video_all_videos_list_view => 'List view';
+  @override
+  String get video_all_videos_grid_view => 'Grid view';
+  @override
+  String video_home_continue_episode_number({required Object n}) =>
+      'Playing episode ${n}';
+  @override
+  String video_home_next_episode_number({required Object n}) =>
+      'Next · Episode ${n}';
+  @override
+  String video_home_recent_episode_number({required Object n}) =>
+      'Recently added · Episode ${n}';
+  @override
+  String video_home_remaining_minutes({required Object minutes}) =>
+      '${minutes} min remaining';
+  @override
+  String get video_discovery_tab => 'Discover';
+  @override
+  String get video_discovery_search_hint => 'Search movies, series, anime';
+  @override
+  String get video_discovery_hot => 'Popular now';
+  @override
+  String get video_discovery_seasonal_anime => 'Seasonal anime';
+  @override
+  String get video_discovery_all_works => 'All titles';
+  @override
+  String get video_discovery_search_results => 'Search results';
+  @override
+  String get video_discovery_provider_warning =>
+      'Some providers are unavailable. Showing available results.';
+  @override
+  String get video_discovery_load_failed => 'Could not load discovery results.';
+  @override
+  String get video_discovery_empty => 'No matching titles.';
+  @override
+  String get video_discovery_resource_search => 'Search resources';
+  @override
+  String get video_discovery_subtitle_search => 'Search subtitles';
+  @override
+  String get video_discovery_subscribe => 'Subscribe';
+  @override
+  String get video_discovery_subscription_manage => 'Manage subscription';
+  @override
+  String get video_discovery_pipeline_idle =>
+      'Not downloaded → Download → Organize → Subtitles → Scrape → Library';
+  @override
+  String get video_discovery_details_load_failed =>
+      'Could not load title details.';
+  @override
+  String get video_discovery_sort_popularity => 'Popularity';
+  @override
+  String get video_discovery_sort_rating => 'Rating';
+  @override
+  String get video_discovery_sort_release => 'Release date';
+  @override
+  String get video_discovery_in_library => 'In library';
+  @override
+  String get video_discovery_play => 'Play';
+  @override
+  String get download_resources_tab => 'Resources';
+  @override
+  String get video_external_settings_section =>
+      'External resource and subtitle providers';
+  @override
+  String get video_torznab_settings_title => 'Torznab indexers';
+  @override
+  String get video_torznab_settings_hint =>
+      'Configure one or more Jackett, Prowlarr, or compatible Torznab endpoints. Secrets stay on this device.';
+  @override
+  String get video_torznab_add => 'Add indexer';
+  @override
+  String get video_torznab_name => 'Name';
+  @override
+  String get video_torznab_endpoint => 'Endpoint';
+  @override
+  String get video_torznab_endpoint_hint =>
+      'HTTPS is required except for loopback addresses.';
+  @override
+  String get video_torznab_api_key => 'API key';
+  @override
+  String get video_torznab_priority => 'Priority';
+  @override
+  String get video_torznab_categories => 'Categories';
+  @override
+  String get video_torznab_categories_hint =>
+      'Comma-separated numeric category IDs';
+  @override
+  String get video_external_enabled => 'Enabled';
+  @override
+  String get video_external_insecure_http => 'Allow insecure HTTP';
+  @override
+  String get video_external_insecure_http_hint =>
+      'Use only for a trusted local network endpoint.';
+  @override
+  String get video_external_endpoint_invalid =>
+      'Enter a valid endpoint without credentials, query parameters, or fragments.';
+  @override
+  String get video_opensubtitles_settings_title => 'OpenSubtitles';
+  @override
+  String get video_opensubtitles_settings_hint =>
+      'API credentials and preferred subtitle languages stay on this device.';
+  @override
+  String get video_opensubtitles_user_agent => 'User-Agent';
+  @override
+  String get video_opensubtitles_languages => 'Preferred languages';
+  @override
+  String get video_opensubtitles_languages_hint =>
+      'Comma-separated language codes, for example zh-CN,en,ja';
+  @override
+  String get video_download_path_mappings_title => 'qBittorrent path mappings';
+  @override
+  String get video_download_path_mappings_hint =>
+      'Map each qBittorrent remote root to a locally accessible folder.';
+  @override
+  String get video_download_path_mapping_add => 'Add path mapping';
+  @override
+  String get video_download_backend_profile_id => 'Backend profile ID';
+  @override
+  String get video_download_remote_root => 'Remote root';
+  @override
+  String get video_download_local_root => 'Local root';
+  @override
+  String get video_download_target_source_title =>
+      'Default managed video source';
+  @override
+  String get video_download_target_source_hint =>
+      'New downloads are organized into this local video source.';
+  @override
+  String get video_download_target_source_none => 'Choose a local video source';
+  @override
+  String get video_external_remove => 'Remove';
+  @override
+  String get video_external_username_optional => 'Username (optional)';
+  @override
+  String get video_external_password_optional => 'Password (optional)';
+  @override
+  String get video_external_api_key => 'API key';
+  @override
+  String get video_external_save_error =>
+      'The configuration could not be saved. Check the highlighted fields.';
+  @override
+  String get video_external_categories_invalid =>
+      'Categories must be comma-separated numeric IDs.';
+  @override
+  String get video_download_path_mapping_invalid =>
+      'Enter a profile ID, remote root, and absolute local root.';
+  @override
+  String get video_opensubtitles_endpoint => 'API endpoint';
+  @override
+  String get video_download_target_source_empty =>
+      'No locally accessible video source is available. Add one on the Sources tab first.';
 }
 
 // Path: <root>
@@ -98864,8 +102897,6 @@ class _StringsVi extends _StringsEn {
       'Download backend is not configured yet.';
   @override
   String get download_clear_finished => 'Clear finished';
-  @override
-  String get download_discover_tab => 'Discover';
   @override
   String get download_network_proxy_auto => 'Auto';
   @override
@@ -104513,6 +108544,305 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_library_empty_source_hint =>
       'Add a video folder from Sources to build your library';
+  @override
+  String get video_source_scrape_action => 'Scrape this source';
+  @override
+  String get video_source_scrape_settings => 'Source scrape settings';
+  @override
+  String get video_source_scrape_provider => 'Primary metadata source';
+  @override
+  String get video_source_scrape_provider_inherit => 'Use global default';
+  @override
+  String get video_source_scrape_auto_after_scan => 'Scrape after scanning';
+  @override
+  String get video_source_scrape_auto_after_scan_hint =>
+      'Run metadata scraping automatically after this source is scanned';
+  @override
+  String get video_source_scrape_write_nfo => 'Write NFO files';
+  @override
+  String get video_source_scrape_write_images => 'Write image files';
+  @override
+  String get video_source_scrape_use_fanart => 'Use Fanart images';
+  @override
+  String video_source_scrape_progress(
+          {required Object phase,
+          required Object current,
+          required Object total}) =>
+      '${phase} · ${current}/${total}';
+  @override
+  String video_source_scrape_last_summary(
+          {required Object status,
+          required Object succeeded,
+          required Object pending,
+          required Object failed}) =>
+      'Last scrape (${status}): ${succeeded} succeeded, ${pending} pending, ${failed} failed';
+  @override
+  String get video_source_scrape_phase_planning => 'Planning';
+  @override
+  String get video_source_scrape_phase_recognizing => 'Matching';
+  @override
+  String get video_source_scrape_phase_fetching => 'Fetching metadata';
+  @override
+  String get video_source_scrape_phase_applying => 'Saving metadata';
+  @override
+  String get video_source_scrape_phase_writing_sidecars => 'Writing sidecars';
+  @override
+  String get video_source_scrape_status_interrupted => 'Interrupted';
+  @override
+  String get video_source_scrape_global_provider => 'Default metadata source';
+  @override
+  String get video_source_scrape_global_provider_hint =>
+      'Used by video sources that inherit the global setting';
+  @override
+  String get video_source_scrape_fanart_key => 'Fanart API key';
+  @override
+  String get video_source_scrape_fanart_key_hint =>
+      'Optional key used to fill missing artwork from Fanart';
+  @override
+  String get video_source_scrape_bangumi_token => 'Bangumi access token';
+  @override
+  String get video_source_scrape_bangumi_token_hint =>
+      'Optional access token for the official Bangumi API v0';
+  @override
+  String get video_source_scrape_douban_endpoint =>
+      'Authorized Douban API endpoint';
+  @override
+  String get video_source_scrape_douban_endpoint_hint =>
+      'Douban is unavailable unless both an authorized endpoint and token are configured';
+  @override
+  String get video_source_scrape_douban_token => 'Authorized Douban API token';
+  @override
+  String get video_source_scrape_douban_token_hint =>
+      'Douban is unavailable unless both an authorized endpoint and token are configured';
+  @override
+  String get video_source_scrape_locale => 'Metadata language';
+  @override
+  String get video_source_scrape_locale_hint =>
+      'Preferred language for titles, summaries and images';
+  @override
+  String get video_source_scrape_confirmation_title => 'Confirm metadata match';
+  @override
+  String get video_source_scrape_confirmation_hint =>
+      'Multiple exact matches were found. Choose the correct work to save its provider binding.';
+  @override
+  String get video_source_scrape_confirmation_skip => 'Skip this work';
+  @override
+  String get video_source_scrape_nfo_policy => 'NFO write policy';
+  @override
+  String get video_source_scrape_image_policy => 'Image write policy';
+  @override
+  String get video_source_scrape_policy_skip => 'Do not write';
+  @override
+  String get video_source_scrape_policy_missing_only => 'Only when missing';
+  @override
+  String get video_source_scrape_policy_overwrite => 'Update Hibiki files';
+  @override
+  String get video_source_scrape_external_overwrite =>
+      'Allow protected sidecar overwrite';
+  @override
+  String get video_source_scrape_external_overwrite_hint =>
+      'Third-party or user-modified files remain protected until you confirm each manual scrape batch again.';
+  @override
+  String get video_source_scrape_external_overwrite_confirm_title =>
+      'Overwrite protected sidecars?';
+  @override
+  String get video_source_scrape_external_overwrite_confirm_body =>
+      'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
+  @override
+  String get video_source_scrape_tasks_open => 'Background tasks';
+  @override
+  String get video_source_scrape_background_started =>
+      'Scraping is running in the background';
+  @override
+  String get video_source_scrape_tasks_current => 'Current task';
+  @override
+  String get video_source_scrape_tasks_history => 'Recent tasks';
+  @override
+  String get video_source_scrape_tasks_empty => 'No scrape tasks yet';
+  @override
+  String get video_source_scrape_waiting_confirmation =>
+      'Waiting for your confirmation';
+  @override
+  String get video_source_scrape_phase_scanning => 'Scanning source';
+  @override
+  String get video_library_all_videos => 'All videos';
+  @override
+  String get video_work_voice_roles => 'Voice cast and characters';
+  @override
+  String get video_work_cast_crew => 'Cast and crew';
+  @override
+  String get video_work_trailers => 'Trailers';
+  @override
+  String get video_work_extras => 'Extras';
+  @override
+  String get video_work_details => 'Details';
+  @override
+  String get video_work_external_ids => 'External IDs';
+  @override
+  String get video_work_metadata_pending =>
+      'Detailed metadata has not been scraped yet. Retry this source from Sources, then reopen the work.';
+  @override
+  String get video_work_genres => 'Genres';
+  @override
+  String get video_work_keywords => 'Keywords';
+  @override
+  String get video_work_studios => 'Studios';
+  @override
+  String get video_work_countries => 'Countries';
+  @override
+  String get video_work_content_rating => 'Content rating';
+  @override
+  String get video_all_videos_list_view => 'List view';
+  @override
+  String get video_all_videos_grid_view => 'Grid view';
+  @override
+  String video_home_continue_episode_number({required Object n}) =>
+      'Playing episode ${n}';
+  @override
+  String video_home_next_episode_number({required Object n}) =>
+      'Next · Episode ${n}';
+  @override
+  String video_home_recent_episode_number({required Object n}) =>
+      'Recently added · Episode ${n}';
+  @override
+  String video_home_remaining_minutes({required Object minutes}) =>
+      '${minutes} min remaining';
+  @override
+  String get video_discovery_tab => 'Discover';
+  @override
+  String get video_discovery_search_hint => 'Search movies, series, anime';
+  @override
+  String get video_discovery_hot => 'Popular now';
+  @override
+  String get video_discovery_seasonal_anime => 'Seasonal anime';
+  @override
+  String get video_discovery_all_works => 'All titles';
+  @override
+  String get video_discovery_search_results => 'Search results';
+  @override
+  String get video_discovery_provider_warning =>
+      'Some providers are unavailable. Showing available results.';
+  @override
+  String get video_discovery_load_failed => 'Could not load discovery results.';
+  @override
+  String get video_discovery_empty => 'No matching titles.';
+  @override
+  String get video_discovery_resource_search => 'Search resources';
+  @override
+  String get video_discovery_subtitle_search => 'Search subtitles';
+  @override
+  String get video_discovery_subscribe => 'Subscribe';
+  @override
+  String get video_discovery_subscription_manage => 'Manage subscription';
+  @override
+  String get video_discovery_pipeline_idle =>
+      'Not downloaded → Download → Organize → Subtitles → Scrape → Library';
+  @override
+  String get video_discovery_details_load_failed =>
+      'Could not load title details.';
+  @override
+  String get video_discovery_sort_popularity => 'Popularity';
+  @override
+  String get video_discovery_sort_rating => 'Rating';
+  @override
+  String get video_discovery_sort_release => 'Release date';
+  @override
+  String get video_discovery_in_library => 'In library';
+  @override
+  String get video_discovery_play => 'Play';
+  @override
+  String get download_resources_tab => 'Resources';
+  @override
+  String get video_external_settings_section =>
+      'External resource and subtitle providers';
+  @override
+  String get video_torznab_settings_title => 'Torznab indexers';
+  @override
+  String get video_torznab_settings_hint =>
+      'Configure one or more Jackett, Prowlarr, or compatible Torznab endpoints. Secrets stay on this device.';
+  @override
+  String get video_torznab_add => 'Add indexer';
+  @override
+  String get video_torznab_name => 'Name';
+  @override
+  String get video_torznab_endpoint => 'Endpoint';
+  @override
+  String get video_torznab_endpoint_hint =>
+      'HTTPS is required except for loopback addresses.';
+  @override
+  String get video_torznab_api_key => 'API key';
+  @override
+  String get video_torznab_priority => 'Priority';
+  @override
+  String get video_torznab_categories => 'Categories';
+  @override
+  String get video_torznab_categories_hint =>
+      'Comma-separated numeric category IDs';
+  @override
+  String get video_external_enabled => 'Enabled';
+  @override
+  String get video_external_insecure_http => 'Allow insecure HTTP';
+  @override
+  String get video_external_insecure_http_hint =>
+      'Use only for a trusted local network endpoint.';
+  @override
+  String get video_external_endpoint_invalid =>
+      'Enter a valid endpoint without credentials, query parameters, or fragments.';
+  @override
+  String get video_opensubtitles_settings_title => 'OpenSubtitles';
+  @override
+  String get video_opensubtitles_settings_hint =>
+      'API credentials and preferred subtitle languages stay on this device.';
+  @override
+  String get video_opensubtitles_user_agent => 'User-Agent';
+  @override
+  String get video_opensubtitles_languages => 'Preferred languages';
+  @override
+  String get video_opensubtitles_languages_hint =>
+      'Comma-separated language codes, for example zh-CN,en,ja';
+  @override
+  String get video_download_path_mappings_title => 'qBittorrent path mappings';
+  @override
+  String get video_download_path_mappings_hint =>
+      'Map each qBittorrent remote root to a locally accessible folder.';
+  @override
+  String get video_download_path_mapping_add => 'Add path mapping';
+  @override
+  String get video_download_backend_profile_id => 'Backend profile ID';
+  @override
+  String get video_download_remote_root => 'Remote root';
+  @override
+  String get video_download_local_root => 'Local root';
+  @override
+  String get video_download_target_source_title =>
+      'Default managed video source';
+  @override
+  String get video_download_target_source_hint =>
+      'New downloads are organized into this local video source.';
+  @override
+  String get video_download_target_source_none => 'Choose a local video source';
+  @override
+  String get video_external_remove => 'Remove';
+  @override
+  String get video_external_username_optional => 'Username (optional)';
+  @override
+  String get video_external_password_optional => 'Password (optional)';
+  @override
+  String get video_external_api_key => 'API key';
+  @override
+  String get video_external_save_error =>
+      'The configuration could not be saved. Check the highlighted fields.';
+  @override
+  String get video_external_categories_invalid =>
+      'Categories must be comma-separated numeric IDs.';
+  @override
+  String get video_download_path_mapping_invalid =>
+      'Enter a profile ID, remote root, and absolute local root.';
+  @override
+  String get video_opensubtitles_endpoint => 'API endpoint';
+  @override
+  String get video_download_target_source_empty =>
+      'No locally accessible video source is available. Add one on the Sources tab first.';
 }
 
 // Path: <root>
@@ -105922,8 +110252,6 @@ class _StringsZhCn extends _StringsEn {
   String get download_backend_not_configured => '请先配置下载后端。';
   @override
   String get download_clear_finished => '清除已完成';
-  @override
-  String get download_discover_tab => '发现';
   @override
   String get download_network_proxy_auto => '自动';
   @override
@@ -111168,6 +115496,279 @@ class _StringsZhCn extends _StringsEn {
   String get selection_copy_empty => '未选中文本。';
   @override
   String get video_library_empty_source_hint => '请从“来源”添加视频文件夹以建立媒体库';
+  @override
+  String get video_source_scrape_action => '刮削此来源';
+  @override
+  String get video_source_scrape_settings => '来源刮削设置';
+  @override
+  String get video_source_scrape_provider => '主刮削来源';
+  @override
+  String get video_source_scrape_provider_inherit => '继承全局默认';
+  @override
+  String get video_source_scrape_auto_after_scan => '扫描后自动刮削';
+  @override
+  String get video_source_scrape_auto_after_scan_hint => '扫描此来源完成后自动刮削作品资料';
+  @override
+  String get video_source_scrape_write_nfo => '写入 NFO 文件';
+  @override
+  String get video_source_scrape_write_images => '写入图片文件';
+  @override
+  String get video_source_scrape_use_fanart => '使用 Fanart 图片';
+  @override
+  String video_source_scrape_progress(
+          {required Object phase,
+          required Object current,
+          required Object total}) =>
+      '${phase} · ${current}/${total}';
+  @override
+  String video_source_scrape_last_summary(
+          {required Object status,
+          required Object succeeded,
+          required Object pending,
+          required Object failed}) =>
+      '上次刮削（${status}）：成功 ${succeeded}，待确认 ${pending}，失败 ${failed}';
+  @override
+  String get video_source_scrape_phase_planning => '准备中';
+  @override
+  String get video_source_scrape_phase_recognizing => '识别匹配中';
+  @override
+  String get video_source_scrape_phase_fetching => '获取资料中';
+  @override
+  String get video_source_scrape_phase_applying => '保存资料中';
+  @override
+  String get video_source_scrape_phase_writing_sidecars => '写入 NFO 与图片';
+  @override
+  String get video_source_scrape_status_interrupted => '已中断';
+  @override
+  String get video_source_scrape_global_provider => '视频默认刮削来源';
+  @override
+  String get video_source_scrape_global_provider_hint => '供选择“继承全局默认”的视频来源使用';
+  @override
+  String get video_source_scrape_fanart_key => 'Fanart API Key';
+  @override
+  String get video_source_scrape_fanart_key_hint => '可选，用于从 Fanart 补充缺少的图片';
+  @override
+  String get video_source_scrape_bangumi_token => 'Bangumi 访问令牌';
+  @override
+  String get video_source_scrape_bangumi_token_hint =>
+      '可选，用于访问 Bangumi 官方 v0 API';
+  @override
+  String get video_source_scrape_douban_endpoint => '已授权的豆瓣 API 端点';
+  @override
+  String get video_source_scrape_douban_endpoint_hint =>
+      '仅当已授权端点和令牌都已配置时豆瓣来源才可用';
+  @override
+  String get video_source_scrape_douban_token => '已授权的豆瓣 API 令牌';
+  @override
+  String get video_source_scrape_douban_token_hint => '仅当已授权端点和令牌都已配置时豆瓣来源才可用';
+  @override
+  String get video_source_scrape_locale => '资料语言';
+  @override
+  String get video_source_scrape_locale_hint => '标题、简介与图片的首选语言';
+  @override
+  String get video_source_scrape_confirmation_title => '确认资料匹配';
+  @override
+  String get video_source_scrape_confirmation_hint =>
+      '找到多个严格匹配结果。请选择正确作品，Hibiki 会保存其来源绑定。';
+  @override
+  String get video_source_scrape_confirmation_skip => '跳过此作品';
+  @override
+  String get video_source_scrape_nfo_policy => 'NFO 写入策略';
+  @override
+  String get video_source_scrape_image_policy => '图片写入策略';
+  @override
+  String get video_source_scrape_policy_skip => '不写入';
+  @override
+  String get video_source_scrape_policy_missing_only => '仅缺失时写入';
+  @override
+  String get video_source_scrape_policy_overwrite => '更新 Hibiki 生成物';
+  @override
+  String get video_source_scrape_external_overwrite => '允许覆盖受保护的 sidecar';
+  @override
+  String get video_source_scrape_external_overwrite_hint =>
+      '第三方或用户修改过的文件仍受保护；每次手动刮削批次都必须再次确认。';
+  @override
+  String get video_source_scrape_external_overwrite_confirm_title =>
+      '覆盖受保护的 sidecar？';
+  @override
+  String get video_source_scrape_external_overwrite_confirm_body =>
+      '本批次可能替换第三方 NFO/图片，或你修改过的 Hibiki 生成物；视频文件本身不会改动。是否继续？';
+  @override
+  String get video_source_scrape_tasks_open => '后台任务';
+  @override
+  String get video_source_scrape_background_started => '刮削已在后台开始';
+  @override
+  String get video_source_scrape_tasks_current => '当前任务';
+  @override
+  String get video_source_scrape_tasks_history => '最近任务';
+  @override
+  String get video_source_scrape_tasks_empty => '暂无刮削任务';
+  @override
+  String get video_source_scrape_waiting_confirmation => '等待你的确认';
+  @override
+  String get video_source_scrape_phase_scanning => '扫描来源';
+  @override
+  String get video_library_all_videos => '全部视频';
+  @override
+  String get video_work_voice_roles => '声优与角色';
+  @override
+  String get video_work_cast_crew => '演职员';
+  @override
+  String get video_work_trailers => '预告片';
+  @override
+  String get video_work_extras => '花絮';
+  @override
+  String get video_work_details => '作品资料';
+  @override
+  String get video_work_external_ids => '外部 ID';
+  @override
+  String get video_work_metadata_pending => '暂无详细资料。请在';
+  @override
+  String get video_work_genres => '类型';
+  @override
+  String get video_work_keywords => '标签';
+  @override
+  String get video_work_studios => '工作室';
+  @override
+  String get video_work_countries => '国家';
+  @override
+  String get video_work_content_rating => '分级';
+  @override
+  String get video_all_videos_list_view => '列表视图';
+  @override
+  String get video_all_videos_grid_view => '网格视图';
+  @override
+  String video_home_continue_episode_number({required Object n}) =>
+      '看到第 ${n} 集';
+  @override
+  String video_home_next_episode_number({required Object n}) =>
+      '下一集 · 第 ${n} 集';
+  @override
+  String video_home_recent_episode_number({required Object n}) =>
+      '最近添加 · 第 ${n} 集';
+  @override
+  String video_home_remaining_minutes({required Object minutes}) =>
+      '剩余 ${minutes} 分钟';
+  @override
+  String get video_discovery_tab => '发现';
+  @override
+  String get video_discovery_search_hint => '搜索电影、剧集、动漫';
+  @override
+  String get video_discovery_hot => '热门推荐';
+  @override
+  String get video_discovery_seasonal_anime => '本季动漫';
+  @override
+  String get video_discovery_all_works => '全部作品';
+  @override
+  String get video_discovery_search_results => '搜索结果';
+  @override
+  String get video_discovery_provider_warning => '部分来源暂不可用，已显示其余结果';
+  @override
+  String get video_discovery_load_failed => '发现内容加载失败';
+  @override
+  String get video_discovery_empty => '没有匹配的作品';
+  @override
+  String get video_discovery_resource_search => '搜索资源';
+  @override
+  String get video_discovery_subtitle_search => '搜索字幕';
+  @override
+  String get video_discovery_subscribe => '订阅';
+  @override
+  String get video_discovery_subscription_manage => '管理订阅';
+  @override
+  String get video_discovery_pipeline_idle => '未下载 → 下载 → 整理 → 字幕 → 刮削 → 入库';
+  @override
+  String get video_discovery_details_load_failed => '作品详情加载失败';
+  @override
+  String get video_discovery_sort_popularity => '热度';
+  @override
+  String get video_discovery_sort_rating => '评分';
+  @override
+  String get video_discovery_sort_release => '上映时间';
+  @override
+  String get video_discovery_in_library => '已入库';
+  @override
+  String get video_discovery_play => '播放';
+  @override
+  String get download_resources_tab => '资源';
+  @override
+  String get video_external_settings_section => '外部资源与字幕来源';
+  @override
+  String get video_torznab_settings_title => 'Torznab 索引器';
+  @override
+  String get video_torznab_settings_hint =>
+      '配置一个或多个 Jackett、Prowlarr 或兼容的 Torznab 端点。密钥仅保存在本机。';
+  @override
+  String get video_torznab_add => '添加索引器';
+  @override
+  String get video_torznab_name => '名称';
+  @override
+  String get video_torznab_endpoint => '端点';
+  @override
+  String get video_torznab_endpoint_hint => '除回环地址外必须使用 HTTPS。';
+  @override
+  String get video_torznab_api_key => 'API 密钥';
+  @override
+  String get video_torznab_priority => '优先级';
+  @override
+  String get video_torznab_categories => '分类';
+  @override
+  String get video_torznab_categories_hint => '用逗号分隔的数字分类 ID';
+  @override
+  String get video_external_enabled => '已启用';
+  @override
+  String get video_external_insecure_http => '允许不安全的 HTTP';
+  @override
+  String get video_external_insecure_http_hint => '仅用于可信的局域网端点。';
+  @override
+  String get video_external_endpoint_invalid => '请输入不含凭据、查询参数或片段的有效端点。';
+  @override
+  String get video_opensubtitles_settings_title => 'OpenSubtitles';
+  @override
+  String get video_opensubtitles_settings_hint => 'API 凭据和首选字幕语言仅保存在本机。';
+  @override
+  String get video_opensubtitles_user_agent => 'User-Agent';
+  @override
+  String get video_opensubtitles_languages => '首选语言';
+  @override
+  String get video_opensubtitles_languages_hint => '用逗号分隔语言代码，例如 zh-CN,en,ja';
+  @override
+  String get video_download_path_mappings_title => 'qBittorrent 路径映射';
+  @override
+  String get video_download_path_mappings_hint =>
+      '将每个 qBittorrent 远程根目录映射到本机可访问的文件夹。';
+  @override
+  String get video_download_path_mapping_add => '添加路径映射';
+  @override
+  String get video_download_backend_profile_id => '后端配置 ID';
+  @override
+  String get video_download_remote_root => '远程根目录';
+  @override
+  String get video_download_local_root => '本机根目录';
+  @override
+  String get video_download_target_source_title => '默认受管视频来源';
+  @override
+  String get video_download_target_source_hint => '新下载会整理到此本地视频来源中。';
+  @override
+  String get video_download_target_source_none => '选择本地视频来源';
+  @override
+  String get video_external_remove => '移除';
+  @override
+  String get video_external_username_optional => '用户名（可选）';
+  @override
+  String get video_external_password_optional => '密码（可选）';
+  @override
+  String get video_external_api_key => 'API 密钥';
+  @override
+  String get video_external_save_error => '无法保存配置，请检查标出的字段。';
+  @override
+  String get video_external_categories_invalid => '分类必须是用逗号分隔的数字 ID。';
+  @override
+  String get video_download_path_mapping_invalid => '请输入配置 ID、远程根目录和本机绝对根目录。';
+  @override
+  String get video_opensubtitles_endpoint => 'API 端点';
+  @override
+  String get video_download_target_source_empty => '没有可访问的本地视频来源。请先在来源页添加。';
 }
 
 // Path: <root>
@@ -112624,8 +117225,6 @@ class _StringsZhHk extends _StringsEn {
       'Download backend is not configured yet.';
   @override
   String get download_clear_finished => 'Clear finished';
-  @override
-  String get download_discover_tab => 'Discover';
   @override
   String get download_network_proxy_auto => 'Auto';
   @override
@@ -118119,6 +122718,305 @@ class _StringsZhHk extends _StringsEn {
   String get selection_copy_empty => 'No text selected.';
   @override
   String get video_library_empty_source_hint => '請從「來源」加入影片資料夾以建立媒體庫';
+  @override
+  String get video_source_scrape_action => 'Scrape this source';
+  @override
+  String get video_source_scrape_settings => 'Source scrape settings';
+  @override
+  String get video_source_scrape_provider => 'Primary metadata source';
+  @override
+  String get video_source_scrape_provider_inherit => 'Use global default';
+  @override
+  String get video_source_scrape_auto_after_scan => 'Scrape after scanning';
+  @override
+  String get video_source_scrape_auto_after_scan_hint =>
+      'Run metadata scraping automatically after this source is scanned';
+  @override
+  String get video_source_scrape_write_nfo => 'Write NFO files';
+  @override
+  String get video_source_scrape_write_images => 'Write image files';
+  @override
+  String get video_source_scrape_use_fanart => 'Use Fanart images';
+  @override
+  String video_source_scrape_progress(
+          {required Object phase,
+          required Object current,
+          required Object total}) =>
+      '${phase} · ${current}/${total}';
+  @override
+  String video_source_scrape_last_summary(
+          {required Object status,
+          required Object succeeded,
+          required Object pending,
+          required Object failed}) =>
+      'Last scrape (${status}): ${succeeded} succeeded, ${pending} pending, ${failed} failed';
+  @override
+  String get video_source_scrape_phase_planning => 'Planning';
+  @override
+  String get video_source_scrape_phase_recognizing => 'Matching';
+  @override
+  String get video_source_scrape_phase_fetching => 'Fetching metadata';
+  @override
+  String get video_source_scrape_phase_applying => 'Saving metadata';
+  @override
+  String get video_source_scrape_phase_writing_sidecars => 'Writing sidecars';
+  @override
+  String get video_source_scrape_status_interrupted => 'Interrupted';
+  @override
+  String get video_source_scrape_global_provider => 'Default metadata source';
+  @override
+  String get video_source_scrape_global_provider_hint =>
+      'Used by video sources that inherit the global setting';
+  @override
+  String get video_source_scrape_fanart_key => 'Fanart API key';
+  @override
+  String get video_source_scrape_fanart_key_hint =>
+      'Optional key used to fill missing artwork from Fanart';
+  @override
+  String get video_source_scrape_bangumi_token => 'Bangumi access token';
+  @override
+  String get video_source_scrape_bangumi_token_hint =>
+      'Optional access token for the official Bangumi API v0';
+  @override
+  String get video_source_scrape_douban_endpoint =>
+      'Authorized Douban API endpoint';
+  @override
+  String get video_source_scrape_douban_endpoint_hint =>
+      'Douban is unavailable unless both an authorized endpoint and token are configured';
+  @override
+  String get video_source_scrape_douban_token => 'Authorized Douban API token';
+  @override
+  String get video_source_scrape_douban_token_hint =>
+      'Douban is unavailable unless both an authorized endpoint and token are configured';
+  @override
+  String get video_source_scrape_locale => 'Metadata language';
+  @override
+  String get video_source_scrape_locale_hint =>
+      'Preferred language for titles, summaries and images';
+  @override
+  String get video_source_scrape_confirmation_title => 'Confirm metadata match';
+  @override
+  String get video_source_scrape_confirmation_hint =>
+      'Multiple exact matches were found. Choose the correct work to save its provider binding.';
+  @override
+  String get video_source_scrape_confirmation_skip => 'Skip this work';
+  @override
+  String get video_source_scrape_nfo_policy => 'NFO write policy';
+  @override
+  String get video_source_scrape_image_policy => 'Image write policy';
+  @override
+  String get video_source_scrape_policy_skip => 'Do not write';
+  @override
+  String get video_source_scrape_policy_missing_only => 'Only when missing';
+  @override
+  String get video_source_scrape_policy_overwrite => 'Update Hibiki files';
+  @override
+  String get video_source_scrape_external_overwrite =>
+      'Allow protected sidecar overwrite';
+  @override
+  String get video_source_scrape_external_overwrite_hint =>
+      'Third-party or user-modified files remain protected until you confirm each manual scrape batch again.';
+  @override
+  String get video_source_scrape_external_overwrite_confirm_title =>
+      'Overwrite protected sidecars?';
+  @override
+  String get video_source_scrape_external_overwrite_confirm_body =>
+      'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
+  @override
+  String get video_source_scrape_tasks_open => 'Background tasks';
+  @override
+  String get video_source_scrape_background_started =>
+      'Scraping is running in the background';
+  @override
+  String get video_source_scrape_tasks_current => 'Current task';
+  @override
+  String get video_source_scrape_tasks_history => 'Recent tasks';
+  @override
+  String get video_source_scrape_tasks_empty => 'No scrape tasks yet';
+  @override
+  String get video_source_scrape_waiting_confirmation =>
+      'Waiting for your confirmation';
+  @override
+  String get video_source_scrape_phase_scanning => 'Scanning source';
+  @override
+  String get video_library_all_videos => 'All videos';
+  @override
+  String get video_work_voice_roles => 'Voice cast and characters';
+  @override
+  String get video_work_cast_crew => 'Cast and crew';
+  @override
+  String get video_work_trailers => 'Trailers';
+  @override
+  String get video_work_extras => 'Extras';
+  @override
+  String get video_work_details => 'Details';
+  @override
+  String get video_work_external_ids => 'External IDs';
+  @override
+  String get video_work_metadata_pending =>
+      'Detailed metadata has not been scraped yet. Retry this source from Sources, then reopen the work.';
+  @override
+  String get video_work_genres => 'Genres';
+  @override
+  String get video_work_keywords => 'Keywords';
+  @override
+  String get video_work_studios => 'Studios';
+  @override
+  String get video_work_countries => 'Countries';
+  @override
+  String get video_work_content_rating => 'Content rating';
+  @override
+  String get video_all_videos_list_view => 'List view';
+  @override
+  String get video_all_videos_grid_view => 'Grid view';
+  @override
+  String video_home_continue_episode_number({required Object n}) =>
+      'Playing episode ${n}';
+  @override
+  String video_home_next_episode_number({required Object n}) =>
+      'Next · Episode ${n}';
+  @override
+  String video_home_recent_episode_number({required Object n}) =>
+      'Recently added · Episode ${n}';
+  @override
+  String video_home_remaining_minutes({required Object minutes}) =>
+      '${minutes} min remaining';
+  @override
+  String get video_discovery_tab => 'Discover';
+  @override
+  String get video_discovery_search_hint => 'Search movies, series, anime';
+  @override
+  String get video_discovery_hot => 'Popular now';
+  @override
+  String get video_discovery_seasonal_anime => 'Seasonal anime';
+  @override
+  String get video_discovery_all_works => 'All titles';
+  @override
+  String get video_discovery_search_results => 'Search results';
+  @override
+  String get video_discovery_provider_warning =>
+      'Some providers are unavailable. Showing available results.';
+  @override
+  String get video_discovery_load_failed => 'Could not load discovery results.';
+  @override
+  String get video_discovery_empty => 'No matching titles.';
+  @override
+  String get video_discovery_resource_search => 'Search resources';
+  @override
+  String get video_discovery_subtitle_search => 'Search subtitles';
+  @override
+  String get video_discovery_subscribe => 'Subscribe';
+  @override
+  String get video_discovery_subscription_manage => 'Manage subscription';
+  @override
+  String get video_discovery_pipeline_idle =>
+      'Not downloaded → Download → Organize → Subtitles → Scrape → Library';
+  @override
+  String get video_discovery_details_load_failed =>
+      'Could not load title details.';
+  @override
+  String get video_discovery_sort_popularity => 'Popularity';
+  @override
+  String get video_discovery_sort_rating => 'Rating';
+  @override
+  String get video_discovery_sort_release => 'Release date';
+  @override
+  String get video_discovery_in_library => 'In library';
+  @override
+  String get video_discovery_play => 'Play';
+  @override
+  String get download_resources_tab => 'Resources';
+  @override
+  String get video_external_settings_section =>
+      'External resource and subtitle providers';
+  @override
+  String get video_torznab_settings_title => 'Torznab indexers';
+  @override
+  String get video_torznab_settings_hint =>
+      'Configure one or more Jackett, Prowlarr, or compatible Torznab endpoints. Secrets stay on this device.';
+  @override
+  String get video_torznab_add => 'Add indexer';
+  @override
+  String get video_torznab_name => 'Name';
+  @override
+  String get video_torznab_endpoint => 'Endpoint';
+  @override
+  String get video_torznab_endpoint_hint =>
+      'HTTPS is required except for loopback addresses.';
+  @override
+  String get video_torznab_api_key => 'API key';
+  @override
+  String get video_torznab_priority => 'Priority';
+  @override
+  String get video_torznab_categories => 'Categories';
+  @override
+  String get video_torznab_categories_hint =>
+      'Comma-separated numeric category IDs';
+  @override
+  String get video_external_enabled => 'Enabled';
+  @override
+  String get video_external_insecure_http => 'Allow insecure HTTP';
+  @override
+  String get video_external_insecure_http_hint =>
+      'Use only for a trusted local network endpoint.';
+  @override
+  String get video_external_endpoint_invalid =>
+      'Enter a valid endpoint without credentials, query parameters, or fragments.';
+  @override
+  String get video_opensubtitles_settings_title => 'OpenSubtitles';
+  @override
+  String get video_opensubtitles_settings_hint =>
+      'API credentials and preferred subtitle languages stay on this device.';
+  @override
+  String get video_opensubtitles_user_agent => 'User-Agent';
+  @override
+  String get video_opensubtitles_languages => 'Preferred languages';
+  @override
+  String get video_opensubtitles_languages_hint =>
+      'Comma-separated language codes, for example zh-CN,en,ja';
+  @override
+  String get video_download_path_mappings_title => 'qBittorrent path mappings';
+  @override
+  String get video_download_path_mappings_hint =>
+      'Map each qBittorrent remote root to a locally accessible folder.';
+  @override
+  String get video_download_path_mapping_add => 'Add path mapping';
+  @override
+  String get video_download_backend_profile_id => 'Backend profile ID';
+  @override
+  String get video_download_remote_root => 'Remote root';
+  @override
+  String get video_download_local_root => 'Local root';
+  @override
+  String get video_download_target_source_title =>
+      'Default managed video source';
+  @override
+  String get video_download_target_source_hint =>
+      'New downloads are organized into this local video source.';
+  @override
+  String get video_download_target_source_none => 'Choose a local video source';
+  @override
+  String get video_external_remove => 'Remove';
+  @override
+  String get video_external_username_optional => 'Username (optional)';
+  @override
+  String get video_external_password_optional => 'Password (optional)';
+  @override
+  String get video_external_api_key => 'API key';
+  @override
+  String get video_external_save_error =>
+      'The configuration could not be saved. Check the highlighted fields.';
+  @override
+  String get video_external_categories_invalid =>
+      'Categories must be comma-separated numeric IDs.';
+  @override
+  String get video_download_path_mapping_invalid =>
+      'Enter a profile ID, remote root, and absolute local root.';
+  @override
+  String get video_opensubtitles_endpoint => 'API endpoint';
+  @override
+  String get video_download_target_source_empty =>
+      'No locally accessible video source is available. Add one on the Sources tab first.';
 }
 
 /// Flat map(s) containing all translations.
@@ -119456,8 +124354,6 @@ extension on _StringsEn {
         return 'Download backend is not configured yet.';
       case 'download_clear_finished':
         return 'Clear finished';
-      case 'download_discover_tab':
-        return 'Discover';
       case 'download_network_proxy_auto':
         return 'Auto';
       case 'download_network_proxy_auto_hint':
@@ -124499,6 +129395,267 @@ extension on _StringsEn {
         return 'No text selected.';
       case 'video_library_empty_source_hint':
         return 'Add a video folder from Sources to build your library';
+      case 'video_source_scrape_action':
+        return 'Scrape this source';
+      case 'video_source_scrape_settings':
+        return 'Source scrape settings';
+      case 'video_source_scrape_provider':
+        return 'Primary metadata source';
+      case 'video_source_scrape_provider_inherit':
+        return 'Use global default';
+      case 'video_source_scrape_auto_after_scan':
+        return 'Scrape after scanning';
+      case 'video_source_scrape_auto_after_scan_hint':
+        return 'Run metadata scraping automatically after this source is scanned';
+      case 'video_source_scrape_write_nfo':
+        return 'Write NFO files';
+      case 'video_source_scrape_write_images':
+        return 'Write image files';
+      case 'video_source_scrape_use_fanart':
+        return 'Use Fanart images';
+      case 'video_source_scrape_progress':
+        return (
+                {required Object phase,
+                required Object current,
+                required Object total}) =>
+            '${phase} · ${current}/${total}';
+      case 'video_source_scrape_last_summary':
+        return (
+                {required Object status,
+                required Object succeeded,
+                required Object pending,
+                required Object failed}) =>
+            'Last scrape (${status}): ${succeeded} succeeded, ${pending} pending, ${failed} failed';
+      case 'video_source_scrape_phase_planning':
+        return 'Planning';
+      case 'video_source_scrape_phase_recognizing':
+        return 'Matching';
+      case 'video_source_scrape_phase_fetching':
+        return 'Fetching metadata';
+      case 'video_source_scrape_phase_applying':
+        return 'Saving metadata';
+      case 'video_source_scrape_phase_writing_sidecars':
+        return 'Writing sidecars';
+      case 'video_source_scrape_status_interrupted':
+        return 'Interrupted';
+      case 'video_source_scrape_global_provider':
+        return 'Default metadata source';
+      case 'video_source_scrape_global_provider_hint':
+        return 'Used by video sources that inherit the global setting';
+      case 'video_source_scrape_fanart_key':
+        return 'Fanart API key';
+      case 'video_source_scrape_fanart_key_hint':
+        return 'Optional key used to fill missing artwork from Fanart';
+      case 'video_source_scrape_bangumi_token':
+        return 'Bangumi access token';
+      case 'video_source_scrape_bangumi_token_hint':
+        return 'Optional access token for the official Bangumi API v0';
+      case 'video_source_scrape_douban_endpoint':
+        return 'Authorized Douban API endpoint';
+      case 'video_source_scrape_douban_endpoint_hint':
+        return 'Douban is unavailable unless both an authorized endpoint and token are configured';
+      case 'video_source_scrape_douban_token':
+        return 'Authorized Douban API token';
+      case 'video_source_scrape_douban_token_hint':
+        return 'Douban is unavailable unless both an authorized endpoint and token are configured';
+      case 'video_source_scrape_locale':
+        return 'Metadata language';
+      case 'video_source_scrape_locale_hint':
+        return 'Preferred language for titles, summaries and images';
+      case 'video_source_scrape_confirmation_title':
+        return 'Confirm metadata match';
+      case 'video_source_scrape_confirmation_hint':
+        return 'Multiple exact matches were found. Choose the correct work to save its provider binding.';
+      case 'video_source_scrape_confirmation_skip':
+        return 'Skip this work';
+      case 'video_source_scrape_nfo_policy':
+        return 'NFO write policy';
+      case 'video_source_scrape_image_policy':
+        return 'Image write policy';
+      case 'video_source_scrape_policy_skip':
+        return 'Do not write';
+      case 'video_source_scrape_policy_missing_only':
+        return 'Only when missing';
+      case 'video_source_scrape_policy_overwrite':
+        return 'Update Hibiki files';
+      case 'video_source_scrape_external_overwrite':
+        return 'Allow protected sidecar overwrite';
+      case 'video_source_scrape_external_overwrite_hint':
+        return 'Third-party or user-modified files remain protected until you confirm each manual scrape batch again.';
+      case 'video_source_scrape_external_overwrite_confirm_title':
+        return 'Overwrite protected sidecars?';
+      case 'video_source_scrape_external_overwrite_confirm_body':
+        return 'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
+      case 'video_source_scrape_tasks_open':
+        return 'Background tasks';
+      case 'video_source_scrape_background_started':
+        return 'Scraping is running in the background';
+      case 'video_source_scrape_tasks_current':
+        return 'Current task';
+      case 'video_source_scrape_tasks_history':
+        return 'Recent tasks';
+      case 'video_source_scrape_tasks_empty':
+        return 'No scrape tasks yet';
+      case 'video_source_scrape_waiting_confirmation':
+        return 'Waiting for your confirmation';
+      case 'video_source_scrape_phase_scanning':
+        return 'Scanning source';
+      case 'video_library_all_videos':
+        return 'All videos';
+      case 'video_work_voice_roles':
+        return 'Voice cast and characters';
+      case 'video_work_cast_crew':
+        return 'Cast and crew';
+      case 'video_work_trailers':
+        return 'Trailers';
+      case 'video_work_extras':
+        return 'Extras';
+      case 'video_work_details':
+        return 'Details';
+      case 'video_work_external_ids':
+        return 'External IDs';
+      case 'video_work_metadata_pending':
+        return 'Detailed metadata has not been scraped yet. Retry this source from Sources, then reopen the work.';
+      case 'video_work_genres':
+        return 'Genres';
+      case 'video_work_keywords':
+        return 'Keywords';
+      case 'video_work_studios':
+        return 'Studios';
+      case 'video_work_countries':
+        return 'Countries';
+      case 'video_work_content_rating':
+        return 'Content rating';
+      case 'video_all_videos_list_view':
+        return 'List view';
+      case 'video_all_videos_grid_view':
+        return 'Grid view';
+      case 'video_home_continue_episode_number':
+        return ({required Object n}) => 'Playing episode ${n}';
+      case 'video_home_next_episode_number':
+        return ({required Object n}) => 'Next · Episode ${n}';
+      case 'video_home_recent_episode_number':
+        return ({required Object n}) => 'Recently added · Episode ${n}';
+      case 'video_home_remaining_minutes':
+        return ({required Object minutes}) => '${minutes} min remaining';
+      case 'video_discovery_tab':
+        return 'Discover';
+      case 'video_discovery_search_hint':
+        return 'Search movies, series, anime';
+      case 'video_discovery_hot':
+        return 'Popular now';
+      case 'video_discovery_seasonal_anime':
+        return 'Seasonal anime';
+      case 'video_discovery_all_works':
+        return 'All titles';
+      case 'video_discovery_search_results':
+        return 'Search results';
+      case 'video_discovery_provider_warning':
+        return 'Some providers are unavailable. Showing available results.';
+      case 'video_discovery_load_failed':
+        return 'Could not load discovery results.';
+      case 'video_discovery_empty':
+        return 'No matching titles.';
+      case 'video_discovery_resource_search':
+        return 'Search resources';
+      case 'video_discovery_subtitle_search':
+        return 'Search subtitles';
+      case 'video_discovery_subscribe':
+        return 'Subscribe';
+      case 'video_discovery_subscription_manage':
+        return 'Manage subscription';
+      case 'video_discovery_pipeline_idle':
+        return 'Not downloaded → Download → Organize → Subtitles → Scrape → Library';
+      case 'video_discovery_details_load_failed':
+        return 'Could not load title details.';
+      case 'video_discovery_sort_popularity':
+        return 'Popularity';
+      case 'video_discovery_sort_rating':
+        return 'Rating';
+      case 'video_discovery_sort_release':
+        return 'Release date';
+      case 'video_discovery_in_library':
+        return 'In library';
+      case 'video_discovery_play':
+        return 'Play';
+      case 'download_resources_tab':
+        return 'Resources';
+      case 'video_external_settings_section':
+        return 'External resource and subtitle providers';
+      case 'video_torznab_settings_title':
+        return 'Torznab indexers';
+      case 'video_torznab_settings_hint':
+        return 'Configure one or more Jackett, Prowlarr, or compatible Torznab endpoints. Secrets stay on this device.';
+      case 'video_torznab_add':
+        return 'Add indexer';
+      case 'video_torznab_name':
+        return 'Name';
+      case 'video_torznab_endpoint':
+        return 'Endpoint';
+      case 'video_torznab_endpoint_hint':
+        return 'HTTPS is required except for loopback addresses.';
+      case 'video_torznab_api_key':
+        return 'API key';
+      case 'video_torznab_priority':
+        return 'Priority';
+      case 'video_torznab_categories':
+        return 'Categories';
+      case 'video_torznab_categories_hint':
+        return 'Comma-separated numeric category IDs';
+      case 'video_external_enabled':
+        return 'Enabled';
+      case 'video_external_insecure_http':
+        return 'Allow insecure HTTP';
+      case 'video_external_insecure_http_hint':
+        return 'Use only for a trusted local network endpoint.';
+      case 'video_external_endpoint_invalid':
+        return 'Enter a valid endpoint without credentials, query parameters, or fragments.';
+      case 'video_opensubtitles_settings_title':
+        return 'OpenSubtitles';
+      case 'video_opensubtitles_settings_hint':
+        return 'API credentials and preferred subtitle languages stay on this device.';
+      case 'video_opensubtitles_user_agent':
+        return 'User-Agent';
+      case 'video_opensubtitles_languages':
+        return 'Preferred languages';
+      case 'video_opensubtitles_languages_hint':
+        return 'Comma-separated language codes, for example zh-CN,en,ja';
+      case 'video_download_path_mappings_title':
+        return 'qBittorrent path mappings';
+      case 'video_download_path_mappings_hint':
+        return 'Map each qBittorrent remote root to a locally accessible folder.';
+      case 'video_download_path_mapping_add':
+        return 'Add path mapping';
+      case 'video_download_backend_profile_id':
+        return 'Backend profile ID';
+      case 'video_download_remote_root':
+        return 'Remote root';
+      case 'video_download_local_root':
+        return 'Local root';
+      case 'video_download_target_source_title':
+        return 'Default managed video source';
+      case 'video_download_target_source_hint':
+        return 'New downloads are organized into this local video source.';
+      case 'video_download_target_source_none':
+        return 'Choose a local video source';
+      case 'video_external_remove':
+        return 'Remove';
+      case 'video_external_username_optional':
+        return 'Username (optional)';
+      case 'video_external_password_optional':
+        return 'Password (optional)';
+      case 'video_external_api_key':
+        return 'API key';
+      case 'video_external_save_error':
+        return 'The configuration could not be saved. Check the highlighted fields.';
+      case 'video_external_categories_invalid':
+        return 'Categories must be comma-separated numeric IDs.';
+      case 'video_download_path_mapping_invalid':
+        return 'Enter a profile ID, remote root, and absolute local root.';
+      case 'video_opensubtitles_endpoint':
+        return 'API endpoint';
+      case 'video_download_target_source_empty':
+        return 'No locally accessible video source is available. Add one on the Sources tab first.';
       default:
         return null;
     }
@@ -125837,8 +130994,6 @@ extension on _StringsAr {
         return 'Download backend is not configured yet.';
       case 'download_clear_finished':
         return 'Clear finished';
-      case 'download_discover_tab':
-        return 'Discover';
       case 'download_network_proxy_auto':
         return 'Auto';
       case 'download_network_proxy_auto_hint':
@@ -130877,6 +136032,267 @@ extension on _StringsAr {
         return 'No text selected.';
       case 'video_library_empty_source_hint':
         return 'Add a video folder from Sources to build your library';
+      case 'video_source_scrape_action':
+        return 'Scrape this source';
+      case 'video_source_scrape_settings':
+        return 'Source scrape settings';
+      case 'video_source_scrape_provider':
+        return 'Primary metadata source';
+      case 'video_source_scrape_provider_inherit':
+        return 'Use global default';
+      case 'video_source_scrape_auto_after_scan':
+        return 'Scrape after scanning';
+      case 'video_source_scrape_auto_after_scan_hint':
+        return 'Run metadata scraping automatically after this source is scanned';
+      case 'video_source_scrape_write_nfo':
+        return 'Write NFO files';
+      case 'video_source_scrape_write_images':
+        return 'Write image files';
+      case 'video_source_scrape_use_fanart':
+        return 'Use Fanart images';
+      case 'video_source_scrape_progress':
+        return (
+                {required Object phase,
+                required Object current,
+                required Object total}) =>
+            '${phase} · ${current}/${total}';
+      case 'video_source_scrape_last_summary':
+        return (
+                {required Object status,
+                required Object succeeded,
+                required Object pending,
+                required Object failed}) =>
+            'Last scrape (${status}): ${succeeded} succeeded, ${pending} pending, ${failed} failed';
+      case 'video_source_scrape_phase_planning':
+        return 'Planning';
+      case 'video_source_scrape_phase_recognizing':
+        return 'Matching';
+      case 'video_source_scrape_phase_fetching':
+        return 'Fetching metadata';
+      case 'video_source_scrape_phase_applying':
+        return 'Saving metadata';
+      case 'video_source_scrape_phase_writing_sidecars':
+        return 'Writing sidecars';
+      case 'video_source_scrape_status_interrupted':
+        return 'Interrupted';
+      case 'video_source_scrape_global_provider':
+        return 'Default metadata source';
+      case 'video_source_scrape_global_provider_hint':
+        return 'Used by video sources that inherit the global setting';
+      case 'video_source_scrape_fanart_key':
+        return 'Fanart API key';
+      case 'video_source_scrape_fanart_key_hint':
+        return 'Optional key used to fill missing artwork from Fanart';
+      case 'video_source_scrape_bangumi_token':
+        return 'Bangumi access token';
+      case 'video_source_scrape_bangumi_token_hint':
+        return 'Optional access token for the official Bangumi API v0';
+      case 'video_source_scrape_douban_endpoint':
+        return 'Authorized Douban API endpoint';
+      case 'video_source_scrape_douban_endpoint_hint':
+        return 'Douban is unavailable unless both an authorized endpoint and token are configured';
+      case 'video_source_scrape_douban_token':
+        return 'Authorized Douban API token';
+      case 'video_source_scrape_douban_token_hint':
+        return 'Douban is unavailable unless both an authorized endpoint and token are configured';
+      case 'video_source_scrape_locale':
+        return 'Metadata language';
+      case 'video_source_scrape_locale_hint':
+        return 'Preferred language for titles, summaries and images';
+      case 'video_source_scrape_confirmation_title':
+        return 'Confirm metadata match';
+      case 'video_source_scrape_confirmation_hint':
+        return 'Multiple exact matches were found. Choose the correct work to save its provider binding.';
+      case 'video_source_scrape_confirmation_skip':
+        return 'Skip this work';
+      case 'video_source_scrape_nfo_policy':
+        return 'NFO write policy';
+      case 'video_source_scrape_image_policy':
+        return 'Image write policy';
+      case 'video_source_scrape_policy_skip':
+        return 'Do not write';
+      case 'video_source_scrape_policy_missing_only':
+        return 'Only when missing';
+      case 'video_source_scrape_policy_overwrite':
+        return 'Update Hibiki files';
+      case 'video_source_scrape_external_overwrite':
+        return 'Allow protected sidecar overwrite';
+      case 'video_source_scrape_external_overwrite_hint':
+        return 'Third-party or user-modified files remain protected until you confirm each manual scrape batch again.';
+      case 'video_source_scrape_external_overwrite_confirm_title':
+        return 'Overwrite protected sidecars?';
+      case 'video_source_scrape_external_overwrite_confirm_body':
+        return 'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
+      case 'video_source_scrape_tasks_open':
+        return 'Background tasks';
+      case 'video_source_scrape_background_started':
+        return 'Scraping is running in the background';
+      case 'video_source_scrape_tasks_current':
+        return 'Current task';
+      case 'video_source_scrape_tasks_history':
+        return 'Recent tasks';
+      case 'video_source_scrape_tasks_empty':
+        return 'No scrape tasks yet';
+      case 'video_source_scrape_waiting_confirmation':
+        return 'Waiting for your confirmation';
+      case 'video_source_scrape_phase_scanning':
+        return 'Scanning source';
+      case 'video_library_all_videos':
+        return 'All videos';
+      case 'video_work_voice_roles':
+        return 'Voice cast and characters';
+      case 'video_work_cast_crew':
+        return 'Cast and crew';
+      case 'video_work_trailers':
+        return 'Trailers';
+      case 'video_work_extras':
+        return 'Extras';
+      case 'video_work_details':
+        return 'Details';
+      case 'video_work_external_ids':
+        return 'External IDs';
+      case 'video_work_metadata_pending':
+        return 'Detailed metadata has not been scraped yet. Retry this source from Sources, then reopen the work.';
+      case 'video_work_genres':
+        return 'Genres';
+      case 'video_work_keywords':
+        return 'Keywords';
+      case 'video_work_studios':
+        return 'Studios';
+      case 'video_work_countries':
+        return 'Countries';
+      case 'video_work_content_rating':
+        return 'Content rating';
+      case 'video_all_videos_list_view':
+        return 'List view';
+      case 'video_all_videos_grid_view':
+        return 'Grid view';
+      case 'video_home_continue_episode_number':
+        return ({required Object n}) => 'Playing episode ${n}';
+      case 'video_home_next_episode_number':
+        return ({required Object n}) => 'Next · Episode ${n}';
+      case 'video_home_recent_episode_number':
+        return ({required Object n}) => 'Recently added · Episode ${n}';
+      case 'video_home_remaining_minutes':
+        return ({required Object minutes}) => '${minutes} min remaining';
+      case 'video_discovery_tab':
+        return 'Discover';
+      case 'video_discovery_search_hint':
+        return 'Search movies, series, anime';
+      case 'video_discovery_hot':
+        return 'Popular now';
+      case 'video_discovery_seasonal_anime':
+        return 'Seasonal anime';
+      case 'video_discovery_all_works':
+        return 'All titles';
+      case 'video_discovery_search_results':
+        return 'Search results';
+      case 'video_discovery_provider_warning':
+        return 'Some providers are unavailable. Showing available results.';
+      case 'video_discovery_load_failed':
+        return 'Could not load discovery results.';
+      case 'video_discovery_empty':
+        return 'No matching titles.';
+      case 'video_discovery_resource_search':
+        return 'Search resources';
+      case 'video_discovery_subtitle_search':
+        return 'Search subtitles';
+      case 'video_discovery_subscribe':
+        return 'Subscribe';
+      case 'video_discovery_subscription_manage':
+        return 'Manage subscription';
+      case 'video_discovery_pipeline_idle':
+        return 'Not downloaded → Download → Organize → Subtitles → Scrape → Library';
+      case 'video_discovery_details_load_failed':
+        return 'Could not load title details.';
+      case 'video_discovery_sort_popularity':
+        return 'Popularity';
+      case 'video_discovery_sort_rating':
+        return 'Rating';
+      case 'video_discovery_sort_release':
+        return 'Release date';
+      case 'video_discovery_in_library':
+        return 'In library';
+      case 'video_discovery_play':
+        return 'Play';
+      case 'download_resources_tab':
+        return 'Resources';
+      case 'video_external_settings_section':
+        return 'External resource and subtitle providers';
+      case 'video_torznab_settings_title':
+        return 'Torznab indexers';
+      case 'video_torznab_settings_hint':
+        return 'Configure one or more Jackett, Prowlarr, or compatible Torznab endpoints. Secrets stay on this device.';
+      case 'video_torznab_add':
+        return 'Add indexer';
+      case 'video_torznab_name':
+        return 'Name';
+      case 'video_torznab_endpoint':
+        return 'Endpoint';
+      case 'video_torznab_endpoint_hint':
+        return 'HTTPS is required except for loopback addresses.';
+      case 'video_torznab_api_key':
+        return 'API key';
+      case 'video_torznab_priority':
+        return 'Priority';
+      case 'video_torznab_categories':
+        return 'Categories';
+      case 'video_torznab_categories_hint':
+        return 'Comma-separated numeric category IDs';
+      case 'video_external_enabled':
+        return 'Enabled';
+      case 'video_external_insecure_http':
+        return 'Allow insecure HTTP';
+      case 'video_external_insecure_http_hint':
+        return 'Use only for a trusted local network endpoint.';
+      case 'video_external_endpoint_invalid':
+        return 'Enter a valid endpoint without credentials, query parameters, or fragments.';
+      case 'video_opensubtitles_settings_title':
+        return 'OpenSubtitles';
+      case 'video_opensubtitles_settings_hint':
+        return 'API credentials and preferred subtitle languages stay on this device.';
+      case 'video_opensubtitles_user_agent':
+        return 'User-Agent';
+      case 'video_opensubtitles_languages':
+        return 'Preferred languages';
+      case 'video_opensubtitles_languages_hint':
+        return 'Comma-separated language codes, for example zh-CN,en,ja';
+      case 'video_download_path_mappings_title':
+        return 'qBittorrent path mappings';
+      case 'video_download_path_mappings_hint':
+        return 'Map each qBittorrent remote root to a locally accessible folder.';
+      case 'video_download_path_mapping_add':
+        return 'Add path mapping';
+      case 'video_download_backend_profile_id':
+        return 'Backend profile ID';
+      case 'video_download_remote_root':
+        return 'Remote root';
+      case 'video_download_local_root':
+        return 'Local root';
+      case 'video_download_target_source_title':
+        return 'Default managed video source';
+      case 'video_download_target_source_hint':
+        return 'New downloads are organized into this local video source.';
+      case 'video_download_target_source_none':
+        return 'Choose a local video source';
+      case 'video_external_remove':
+        return 'Remove';
+      case 'video_external_username_optional':
+        return 'Username (optional)';
+      case 'video_external_password_optional':
+        return 'Password (optional)';
+      case 'video_external_api_key':
+        return 'API key';
+      case 'video_external_save_error':
+        return 'The configuration could not be saved. Check the highlighted fields.';
+      case 'video_external_categories_invalid':
+        return 'Categories must be comma-separated numeric IDs.';
+      case 'video_download_path_mapping_invalid':
+        return 'Enter a profile ID, remote root, and absolute local root.';
+      case 'video_opensubtitles_endpoint':
+        return 'API endpoint';
+      case 'video_download_target_source_empty':
+        return 'No locally accessible video source is available. Add one on the Sources tab first.';
       default:
         return null;
     }
@@ -132219,8 +137635,6 @@ extension on _StringsDe {
         return 'Download backend is not configured yet.';
       case 'download_clear_finished':
         return 'Clear finished';
-      case 'download_discover_tab':
-        return 'Discover';
       case 'download_network_proxy_auto':
         return 'Auto';
       case 'download_network_proxy_auto_hint':
@@ -137277,6 +142691,267 @@ extension on _StringsDe {
         return 'No text selected.';
       case 'video_library_empty_source_hint':
         return 'Add a video folder from Sources to build your library';
+      case 'video_source_scrape_action':
+        return 'Scrape this source';
+      case 'video_source_scrape_settings':
+        return 'Source scrape settings';
+      case 'video_source_scrape_provider':
+        return 'Primary metadata source';
+      case 'video_source_scrape_provider_inherit':
+        return 'Use global default';
+      case 'video_source_scrape_auto_after_scan':
+        return 'Scrape after scanning';
+      case 'video_source_scrape_auto_after_scan_hint':
+        return 'Run metadata scraping automatically after this source is scanned';
+      case 'video_source_scrape_write_nfo':
+        return 'Write NFO files';
+      case 'video_source_scrape_write_images':
+        return 'Write image files';
+      case 'video_source_scrape_use_fanart':
+        return 'Use Fanart images';
+      case 'video_source_scrape_progress':
+        return (
+                {required Object phase,
+                required Object current,
+                required Object total}) =>
+            '${phase} · ${current}/${total}';
+      case 'video_source_scrape_last_summary':
+        return (
+                {required Object status,
+                required Object succeeded,
+                required Object pending,
+                required Object failed}) =>
+            'Last scrape (${status}): ${succeeded} succeeded, ${pending} pending, ${failed} failed';
+      case 'video_source_scrape_phase_planning':
+        return 'Planning';
+      case 'video_source_scrape_phase_recognizing':
+        return 'Matching';
+      case 'video_source_scrape_phase_fetching':
+        return 'Fetching metadata';
+      case 'video_source_scrape_phase_applying':
+        return 'Saving metadata';
+      case 'video_source_scrape_phase_writing_sidecars':
+        return 'Writing sidecars';
+      case 'video_source_scrape_status_interrupted':
+        return 'Interrupted';
+      case 'video_source_scrape_global_provider':
+        return 'Default metadata source';
+      case 'video_source_scrape_global_provider_hint':
+        return 'Used by video sources that inherit the global setting';
+      case 'video_source_scrape_fanart_key':
+        return 'Fanart API key';
+      case 'video_source_scrape_fanart_key_hint':
+        return 'Optional key used to fill missing artwork from Fanart';
+      case 'video_source_scrape_bangumi_token':
+        return 'Bangumi access token';
+      case 'video_source_scrape_bangumi_token_hint':
+        return 'Optional access token for the official Bangumi API v0';
+      case 'video_source_scrape_douban_endpoint':
+        return 'Authorized Douban API endpoint';
+      case 'video_source_scrape_douban_endpoint_hint':
+        return 'Douban is unavailable unless both an authorized endpoint and token are configured';
+      case 'video_source_scrape_douban_token':
+        return 'Authorized Douban API token';
+      case 'video_source_scrape_douban_token_hint':
+        return 'Douban is unavailable unless both an authorized endpoint and token are configured';
+      case 'video_source_scrape_locale':
+        return 'Metadata language';
+      case 'video_source_scrape_locale_hint':
+        return 'Preferred language for titles, summaries and images';
+      case 'video_source_scrape_confirmation_title':
+        return 'Confirm metadata match';
+      case 'video_source_scrape_confirmation_hint':
+        return 'Multiple exact matches were found. Choose the correct work to save its provider binding.';
+      case 'video_source_scrape_confirmation_skip':
+        return 'Skip this work';
+      case 'video_source_scrape_nfo_policy':
+        return 'NFO write policy';
+      case 'video_source_scrape_image_policy':
+        return 'Image write policy';
+      case 'video_source_scrape_policy_skip':
+        return 'Do not write';
+      case 'video_source_scrape_policy_missing_only':
+        return 'Only when missing';
+      case 'video_source_scrape_policy_overwrite':
+        return 'Update Hibiki files';
+      case 'video_source_scrape_external_overwrite':
+        return 'Allow protected sidecar overwrite';
+      case 'video_source_scrape_external_overwrite_hint':
+        return 'Third-party or user-modified files remain protected until you confirm each manual scrape batch again.';
+      case 'video_source_scrape_external_overwrite_confirm_title':
+        return 'Overwrite protected sidecars?';
+      case 'video_source_scrape_external_overwrite_confirm_body':
+        return 'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
+      case 'video_source_scrape_tasks_open':
+        return 'Background tasks';
+      case 'video_source_scrape_background_started':
+        return 'Scraping is running in the background';
+      case 'video_source_scrape_tasks_current':
+        return 'Current task';
+      case 'video_source_scrape_tasks_history':
+        return 'Recent tasks';
+      case 'video_source_scrape_tasks_empty':
+        return 'No scrape tasks yet';
+      case 'video_source_scrape_waiting_confirmation':
+        return 'Waiting for your confirmation';
+      case 'video_source_scrape_phase_scanning':
+        return 'Scanning source';
+      case 'video_library_all_videos':
+        return 'All videos';
+      case 'video_work_voice_roles':
+        return 'Voice cast and characters';
+      case 'video_work_cast_crew':
+        return 'Cast and crew';
+      case 'video_work_trailers':
+        return 'Trailers';
+      case 'video_work_extras':
+        return 'Extras';
+      case 'video_work_details':
+        return 'Details';
+      case 'video_work_external_ids':
+        return 'External IDs';
+      case 'video_work_metadata_pending':
+        return 'Detailed metadata has not been scraped yet. Retry this source from Sources, then reopen the work.';
+      case 'video_work_genres':
+        return 'Genres';
+      case 'video_work_keywords':
+        return 'Keywords';
+      case 'video_work_studios':
+        return 'Studios';
+      case 'video_work_countries':
+        return 'Countries';
+      case 'video_work_content_rating':
+        return 'Content rating';
+      case 'video_all_videos_list_view':
+        return 'List view';
+      case 'video_all_videos_grid_view':
+        return 'Grid view';
+      case 'video_home_continue_episode_number':
+        return ({required Object n}) => 'Playing episode ${n}';
+      case 'video_home_next_episode_number':
+        return ({required Object n}) => 'Next · Episode ${n}';
+      case 'video_home_recent_episode_number':
+        return ({required Object n}) => 'Recently added · Episode ${n}';
+      case 'video_home_remaining_minutes':
+        return ({required Object minutes}) => '${minutes} min remaining';
+      case 'video_discovery_tab':
+        return 'Discover';
+      case 'video_discovery_search_hint':
+        return 'Search movies, series, anime';
+      case 'video_discovery_hot':
+        return 'Popular now';
+      case 'video_discovery_seasonal_anime':
+        return 'Seasonal anime';
+      case 'video_discovery_all_works':
+        return 'All titles';
+      case 'video_discovery_search_results':
+        return 'Search results';
+      case 'video_discovery_provider_warning':
+        return 'Some providers are unavailable. Showing available results.';
+      case 'video_discovery_load_failed':
+        return 'Could not load discovery results.';
+      case 'video_discovery_empty':
+        return 'No matching titles.';
+      case 'video_discovery_resource_search':
+        return 'Search resources';
+      case 'video_discovery_subtitle_search':
+        return 'Search subtitles';
+      case 'video_discovery_subscribe':
+        return 'Subscribe';
+      case 'video_discovery_subscription_manage':
+        return 'Manage subscription';
+      case 'video_discovery_pipeline_idle':
+        return 'Not downloaded → Download → Organize → Subtitles → Scrape → Library';
+      case 'video_discovery_details_load_failed':
+        return 'Could not load title details.';
+      case 'video_discovery_sort_popularity':
+        return 'Popularity';
+      case 'video_discovery_sort_rating':
+        return 'Rating';
+      case 'video_discovery_sort_release':
+        return 'Release date';
+      case 'video_discovery_in_library':
+        return 'In library';
+      case 'video_discovery_play':
+        return 'Play';
+      case 'download_resources_tab':
+        return 'Resources';
+      case 'video_external_settings_section':
+        return 'External resource and subtitle providers';
+      case 'video_torznab_settings_title':
+        return 'Torznab indexers';
+      case 'video_torznab_settings_hint':
+        return 'Configure one or more Jackett, Prowlarr, or compatible Torznab endpoints. Secrets stay on this device.';
+      case 'video_torznab_add':
+        return 'Add indexer';
+      case 'video_torznab_name':
+        return 'Name';
+      case 'video_torznab_endpoint':
+        return 'Endpoint';
+      case 'video_torznab_endpoint_hint':
+        return 'HTTPS is required except for loopback addresses.';
+      case 'video_torznab_api_key':
+        return 'API key';
+      case 'video_torznab_priority':
+        return 'Priority';
+      case 'video_torznab_categories':
+        return 'Categories';
+      case 'video_torznab_categories_hint':
+        return 'Comma-separated numeric category IDs';
+      case 'video_external_enabled':
+        return 'Enabled';
+      case 'video_external_insecure_http':
+        return 'Allow insecure HTTP';
+      case 'video_external_insecure_http_hint':
+        return 'Use only for a trusted local network endpoint.';
+      case 'video_external_endpoint_invalid':
+        return 'Enter a valid endpoint without credentials, query parameters, or fragments.';
+      case 'video_opensubtitles_settings_title':
+        return 'OpenSubtitles';
+      case 'video_opensubtitles_settings_hint':
+        return 'API credentials and preferred subtitle languages stay on this device.';
+      case 'video_opensubtitles_user_agent':
+        return 'User-Agent';
+      case 'video_opensubtitles_languages':
+        return 'Preferred languages';
+      case 'video_opensubtitles_languages_hint':
+        return 'Comma-separated language codes, for example zh-CN,en,ja';
+      case 'video_download_path_mappings_title':
+        return 'qBittorrent path mappings';
+      case 'video_download_path_mappings_hint':
+        return 'Map each qBittorrent remote root to a locally accessible folder.';
+      case 'video_download_path_mapping_add':
+        return 'Add path mapping';
+      case 'video_download_backend_profile_id':
+        return 'Backend profile ID';
+      case 'video_download_remote_root':
+        return 'Remote root';
+      case 'video_download_local_root':
+        return 'Local root';
+      case 'video_download_target_source_title':
+        return 'Default managed video source';
+      case 'video_download_target_source_hint':
+        return 'New downloads are organized into this local video source.';
+      case 'video_download_target_source_none':
+        return 'Choose a local video source';
+      case 'video_external_remove':
+        return 'Remove';
+      case 'video_external_username_optional':
+        return 'Username (optional)';
+      case 'video_external_password_optional':
+        return 'Password (optional)';
+      case 'video_external_api_key':
+        return 'API key';
+      case 'video_external_save_error':
+        return 'The configuration could not be saved. Check the highlighted fields.';
+      case 'video_external_categories_invalid':
+        return 'Categories must be comma-separated numeric IDs.';
+      case 'video_download_path_mapping_invalid':
+        return 'Enter a profile ID, remote root, and absolute local root.';
+      case 'video_opensubtitles_endpoint':
+        return 'API endpoint';
+      case 'video_download_target_source_empty':
+        return 'No locally accessible video source is available. Add one on the Sources tab first.';
       default:
         return null;
     }
@@ -138620,8 +144295,6 @@ extension on _StringsEs {
         return 'Download backend is not configured yet.';
       case 'download_clear_finished':
         return 'Clear finished';
-      case 'download_discover_tab':
-        return 'Discover';
       case 'download_network_proxy_auto':
         return 'Auto';
       case 'download_network_proxy_auto_hint':
@@ -143676,6 +149349,267 @@ extension on _StringsEs {
         return 'No text selected.';
       case 'video_library_empty_source_hint':
         return 'Add a video folder from Sources to build your library';
+      case 'video_source_scrape_action':
+        return 'Scrape this source';
+      case 'video_source_scrape_settings':
+        return 'Source scrape settings';
+      case 'video_source_scrape_provider':
+        return 'Primary metadata source';
+      case 'video_source_scrape_provider_inherit':
+        return 'Use global default';
+      case 'video_source_scrape_auto_after_scan':
+        return 'Scrape after scanning';
+      case 'video_source_scrape_auto_after_scan_hint':
+        return 'Run metadata scraping automatically after this source is scanned';
+      case 'video_source_scrape_write_nfo':
+        return 'Write NFO files';
+      case 'video_source_scrape_write_images':
+        return 'Write image files';
+      case 'video_source_scrape_use_fanart':
+        return 'Use Fanart images';
+      case 'video_source_scrape_progress':
+        return (
+                {required Object phase,
+                required Object current,
+                required Object total}) =>
+            '${phase} · ${current}/${total}';
+      case 'video_source_scrape_last_summary':
+        return (
+                {required Object status,
+                required Object succeeded,
+                required Object pending,
+                required Object failed}) =>
+            'Last scrape (${status}): ${succeeded} succeeded, ${pending} pending, ${failed} failed';
+      case 'video_source_scrape_phase_planning':
+        return 'Planning';
+      case 'video_source_scrape_phase_recognizing':
+        return 'Matching';
+      case 'video_source_scrape_phase_fetching':
+        return 'Fetching metadata';
+      case 'video_source_scrape_phase_applying':
+        return 'Saving metadata';
+      case 'video_source_scrape_phase_writing_sidecars':
+        return 'Writing sidecars';
+      case 'video_source_scrape_status_interrupted':
+        return 'Interrupted';
+      case 'video_source_scrape_global_provider':
+        return 'Default metadata source';
+      case 'video_source_scrape_global_provider_hint':
+        return 'Used by video sources that inherit the global setting';
+      case 'video_source_scrape_fanart_key':
+        return 'Fanart API key';
+      case 'video_source_scrape_fanart_key_hint':
+        return 'Optional key used to fill missing artwork from Fanart';
+      case 'video_source_scrape_bangumi_token':
+        return 'Bangumi access token';
+      case 'video_source_scrape_bangumi_token_hint':
+        return 'Optional access token for the official Bangumi API v0';
+      case 'video_source_scrape_douban_endpoint':
+        return 'Authorized Douban API endpoint';
+      case 'video_source_scrape_douban_endpoint_hint':
+        return 'Douban is unavailable unless both an authorized endpoint and token are configured';
+      case 'video_source_scrape_douban_token':
+        return 'Authorized Douban API token';
+      case 'video_source_scrape_douban_token_hint':
+        return 'Douban is unavailable unless both an authorized endpoint and token are configured';
+      case 'video_source_scrape_locale':
+        return 'Metadata language';
+      case 'video_source_scrape_locale_hint':
+        return 'Preferred language for titles, summaries and images';
+      case 'video_source_scrape_confirmation_title':
+        return 'Confirm metadata match';
+      case 'video_source_scrape_confirmation_hint':
+        return 'Multiple exact matches were found. Choose the correct work to save its provider binding.';
+      case 'video_source_scrape_confirmation_skip':
+        return 'Skip this work';
+      case 'video_source_scrape_nfo_policy':
+        return 'NFO write policy';
+      case 'video_source_scrape_image_policy':
+        return 'Image write policy';
+      case 'video_source_scrape_policy_skip':
+        return 'Do not write';
+      case 'video_source_scrape_policy_missing_only':
+        return 'Only when missing';
+      case 'video_source_scrape_policy_overwrite':
+        return 'Update Hibiki files';
+      case 'video_source_scrape_external_overwrite':
+        return 'Allow protected sidecar overwrite';
+      case 'video_source_scrape_external_overwrite_hint':
+        return 'Third-party or user-modified files remain protected until you confirm each manual scrape batch again.';
+      case 'video_source_scrape_external_overwrite_confirm_title':
+        return 'Overwrite protected sidecars?';
+      case 'video_source_scrape_external_overwrite_confirm_body':
+        return 'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
+      case 'video_source_scrape_tasks_open':
+        return 'Background tasks';
+      case 'video_source_scrape_background_started':
+        return 'Scraping is running in the background';
+      case 'video_source_scrape_tasks_current':
+        return 'Current task';
+      case 'video_source_scrape_tasks_history':
+        return 'Recent tasks';
+      case 'video_source_scrape_tasks_empty':
+        return 'No scrape tasks yet';
+      case 'video_source_scrape_waiting_confirmation':
+        return 'Waiting for your confirmation';
+      case 'video_source_scrape_phase_scanning':
+        return 'Scanning source';
+      case 'video_library_all_videos':
+        return 'All videos';
+      case 'video_work_voice_roles':
+        return 'Voice cast and characters';
+      case 'video_work_cast_crew':
+        return 'Cast and crew';
+      case 'video_work_trailers':
+        return 'Trailers';
+      case 'video_work_extras':
+        return 'Extras';
+      case 'video_work_details':
+        return 'Details';
+      case 'video_work_external_ids':
+        return 'External IDs';
+      case 'video_work_metadata_pending':
+        return 'Detailed metadata has not been scraped yet. Retry this source from Sources, then reopen the work.';
+      case 'video_work_genres':
+        return 'Genres';
+      case 'video_work_keywords':
+        return 'Keywords';
+      case 'video_work_studios':
+        return 'Studios';
+      case 'video_work_countries':
+        return 'Countries';
+      case 'video_work_content_rating':
+        return 'Content rating';
+      case 'video_all_videos_list_view':
+        return 'List view';
+      case 'video_all_videos_grid_view':
+        return 'Grid view';
+      case 'video_home_continue_episode_number':
+        return ({required Object n}) => 'Playing episode ${n}';
+      case 'video_home_next_episode_number':
+        return ({required Object n}) => 'Next · Episode ${n}';
+      case 'video_home_recent_episode_number':
+        return ({required Object n}) => 'Recently added · Episode ${n}';
+      case 'video_home_remaining_minutes':
+        return ({required Object minutes}) => '${minutes} min remaining';
+      case 'video_discovery_tab':
+        return 'Discover';
+      case 'video_discovery_search_hint':
+        return 'Search movies, series, anime';
+      case 'video_discovery_hot':
+        return 'Popular now';
+      case 'video_discovery_seasonal_anime':
+        return 'Seasonal anime';
+      case 'video_discovery_all_works':
+        return 'All titles';
+      case 'video_discovery_search_results':
+        return 'Search results';
+      case 'video_discovery_provider_warning':
+        return 'Some providers are unavailable. Showing available results.';
+      case 'video_discovery_load_failed':
+        return 'Could not load discovery results.';
+      case 'video_discovery_empty':
+        return 'No matching titles.';
+      case 'video_discovery_resource_search':
+        return 'Search resources';
+      case 'video_discovery_subtitle_search':
+        return 'Search subtitles';
+      case 'video_discovery_subscribe':
+        return 'Subscribe';
+      case 'video_discovery_subscription_manage':
+        return 'Manage subscription';
+      case 'video_discovery_pipeline_idle':
+        return 'Not downloaded → Download → Organize → Subtitles → Scrape → Library';
+      case 'video_discovery_details_load_failed':
+        return 'Could not load title details.';
+      case 'video_discovery_sort_popularity':
+        return 'Popularity';
+      case 'video_discovery_sort_rating':
+        return 'Rating';
+      case 'video_discovery_sort_release':
+        return 'Release date';
+      case 'video_discovery_in_library':
+        return 'In library';
+      case 'video_discovery_play':
+        return 'Play';
+      case 'download_resources_tab':
+        return 'Resources';
+      case 'video_external_settings_section':
+        return 'External resource and subtitle providers';
+      case 'video_torznab_settings_title':
+        return 'Torznab indexers';
+      case 'video_torznab_settings_hint':
+        return 'Configure one or more Jackett, Prowlarr, or compatible Torznab endpoints. Secrets stay on this device.';
+      case 'video_torznab_add':
+        return 'Add indexer';
+      case 'video_torznab_name':
+        return 'Name';
+      case 'video_torznab_endpoint':
+        return 'Endpoint';
+      case 'video_torznab_endpoint_hint':
+        return 'HTTPS is required except for loopback addresses.';
+      case 'video_torznab_api_key':
+        return 'API key';
+      case 'video_torznab_priority':
+        return 'Priority';
+      case 'video_torznab_categories':
+        return 'Categories';
+      case 'video_torznab_categories_hint':
+        return 'Comma-separated numeric category IDs';
+      case 'video_external_enabled':
+        return 'Enabled';
+      case 'video_external_insecure_http':
+        return 'Allow insecure HTTP';
+      case 'video_external_insecure_http_hint':
+        return 'Use only for a trusted local network endpoint.';
+      case 'video_external_endpoint_invalid':
+        return 'Enter a valid endpoint without credentials, query parameters, or fragments.';
+      case 'video_opensubtitles_settings_title':
+        return 'OpenSubtitles';
+      case 'video_opensubtitles_settings_hint':
+        return 'API credentials and preferred subtitle languages stay on this device.';
+      case 'video_opensubtitles_user_agent':
+        return 'User-Agent';
+      case 'video_opensubtitles_languages':
+        return 'Preferred languages';
+      case 'video_opensubtitles_languages_hint':
+        return 'Comma-separated language codes, for example zh-CN,en,ja';
+      case 'video_download_path_mappings_title':
+        return 'qBittorrent path mappings';
+      case 'video_download_path_mappings_hint':
+        return 'Map each qBittorrent remote root to a locally accessible folder.';
+      case 'video_download_path_mapping_add':
+        return 'Add path mapping';
+      case 'video_download_backend_profile_id':
+        return 'Backend profile ID';
+      case 'video_download_remote_root':
+        return 'Remote root';
+      case 'video_download_local_root':
+        return 'Local root';
+      case 'video_download_target_source_title':
+        return 'Default managed video source';
+      case 'video_download_target_source_hint':
+        return 'New downloads are organized into this local video source.';
+      case 'video_download_target_source_none':
+        return 'Choose a local video source';
+      case 'video_external_remove':
+        return 'Remove';
+      case 'video_external_username_optional':
+        return 'Username (optional)';
+      case 'video_external_password_optional':
+        return 'Password (optional)';
+      case 'video_external_api_key':
+        return 'API key';
+      case 'video_external_save_error':
+        return 'The configuration could not be saved. Check the highlighted fields.';
+      case 'video_external_categories_invalid':
+        return 'Categories must be comma-separated numeric IDs.';
+      case 'video_download_path_mapping_invalid':
+        return 'Enter a profile ID, remote root, and absolute local root.';
+      case 'video_opensubtitles_endpoint':
+        return 'API endpoint';
+      case 'video_download_target_source_empty':
+        return 'No locally accessible video source is available. Add one on the Sources tab first.';
       default:
         return null;
     }
@@ -145022,8 +150956,6 @@ extension on _StringsFr {
         return 'Download backend is not configured yet.';
       case 'download_clear_finished':
         return 'Clear finished';
-      case 'download_discover_tab':
-        return 'Discover';
       case 'download_network_proxy_auto':
         return 'Auto';
       case 'download_network_proxy_auto_hint':
@@ -150081,6 +156013,267 @@ extension on _StringsFr {
         return 'No text selected.';
       case 'video_library_empty_source_hint':
         return 'Add a video folder from Sources to build your library';
+      case 'video_source_scrape_action':
+        return 'Scrape this source';
+      case 'video_source_scrape_settings':
+        return 'Source scrape settings';
+      case 'video_source_scrape_provider':
+        return 'Primary metadata source';
+      case 'video_source_scrape_provider_inherit':
+        return 'Use global default';
+      case 'video_source_scrape_auto_after_scan':
+        return 'Scrape after scanning';
+      case 'video_source_scrape_auto_after_scan_hint':
+        return 'Run metadata scraping automatically after this source is scanned';
+      case 'video_source_scrape_write_nfo':
+        return 'Write NFO files';
+      case 'video_source_scrape_write_images':
+        return 'Write image files';
+      case 'video_source_scrape_use_fanart':
+        return 'Use Fanart images';
+      case 'video_source_scrape_progress':
+        return (
+                {required Object phase,
+                required Object current,
+                required Object total}) =>
+            '${phase} · ${current}/${total}';
+      case 'video_source_scrape_last_summary':
+        return (
+                {required Object status,
+                required Object succeeded,
+                required Object pending,
+                required Object failed}) =>
+            'Last scrape (${status}): ${succeeded} succeeded, ${pending} pending, ${failed} failed';
+      case 'video_source_scrape_phase_planning':
+        return 'Planning';
+      case 'video_source_scrape_phase_recognizing':
+        return 'Matching';
+      case 'video_source_scrape_phase_fetching':
+        return 'Fetching metadata';
+      case 'video_source_scrape_phase_applying':
+        return 'Saving metadata';
+      case 'video_source_scrape_phase_writing_sidecars':
+        return 'Writing sidecars';
+      case 'video_source_scrape_status_interrupted':
+        return 'Interrupted';
+      case 'video_source_scrape_global_provider':
+        return 'Default metadata source';
+      case 'video_source_scrape_global_provider_hint':
+        return 'Used by video sources that inherit the global setting';
+      case 'video_source_scrape_fanart_key':
+        return 'Fanart API key';
+      case 'video_source_scrape_fanart_key_hint':
+        return 'Optional key used to fill missing artwork from Fanart';
+      case 'video_source_scrape_bangumi_token':
+        return 'Bangumi access token';
+      case 'video_source_scrape_bangumi_token_hint':
+        return 'Optional access token for the official Bangumi API v0';
+      case 'video_source_scrape_douban_endpoint':
+        return 'Authorized Douban API endpoint';
+      case 'video_source_scrape_douban_endpoint_hint':
+        return 'Douban is unavailable unless both an authorized endpoint and token are configured';
+      case 'video_source_scrape_douban_token':
+        return 'Authorized Douban API token';
+      case 'video_source_scrape_douban_token_hint':
+        return 'Douban is unavailable unless both an authorized endpoint and token are configured';
+      case 'video_source_scrape_locale':
+        return 'Metadata language';
+      case 'video_source_scrape_locale_hint':
+        return 'Preferred language for titles, summaries and images';
+      case 'video_source_scrape_confirmation_title':
+        return 'Confirm metadata match';
+      case 'video_source_scrape_confirmation_hint':
+        return 'Multiple exact matches were found. Choose the correct work to save its provider binding.';
+      case 'video_source_scrape_confirmation_skip':
+        return 'Skip this work';
+      case 'video_source_scrape_nfo_policy':
+        return 'NFO write policy';
+      case 'video_source_scrape_image_policy':
+        return 'Image write policy';
+      case 'video_source_scrape_policy_skip':
+        return 'Do not write';
+      case 'video_source_scrape_policy_missing_only':
+        return 'Only when missing';
+      case 'video_source_scrape_policy_overwrite':
+        return 'Update Hibiki files';
+      case 'video_source_scrape_external_overwrite':
+        return 'Allow protected sidecar overwrite';
+      case 'video_source_scrape_external_overwrite_hint':
+        return 'Third-party or user-modified files remain protected until you confirm each manual scrape batch again.';
+      case 'video_source_scrape_external_overwrite_confirm_title':
+        return 'Overwrite protected sidecars?';
+      case 'video_source_scrape_external_overwrite_confirm_body':
+        return 'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
+      case 'video_source_scrape_tasks_open':
+        return 'Background tasks';
+      case 'video_source_scrape_background_started':
+        return 'Scraping is running in the background';
+      case 'video_source_scrape_tasks_current':
+        return 'Current task';
+      case 'video_source_scrape_tasks_history':
+        return 'Recent tasks';
+      case 'video_source_scrape_tasks_empty':
+        return 'No scrape tasks yet';
+      case 'video_source_scrape_waiting_confirmation':
+        return 'Waiting for your confirmation';
+      case 'video_source_scrape_phase_scanning':
+        return 'Scanning source';
+      case 'video_library_all_videos':
+        return 'All videos';
+      case 'video_work_voice_roles':
+        return 'Voice cast and characters';
+      case 'video_work_cast_crew':
+        return 'Cast and crew';
+      case 'video_work_trailers':
+        return 'Trailers';
+      case 'video_work_extras':
+        return 'Extras';
+      case 'video_work_details':
+        return 'Details';
+      case 'video_work_external_ids':
+        return 'External IDs';
+      case 'video_work_metadata_pending':
+        return 'Detailed metadata has not been scraped yet. Retry this source from Sources, then reopen the work.';
+      case 'video_work_genres':
+        return 'Genres';
+      case 'video_work_keywords':
+        return 'Keywords';
+      case 'video_work_studios':
+        return 'Studios';
+      case 'video_work_countries':
+        return 'Countries';
+      case 'video_work_content_rating':
+        return 'Content rating';
+      case 'video_all_videos_list_view':
+        return 'List view';
+      case 'video_all_videos_grid_view':
+        return 'Grid view';
+      case 'video_home_continue_episode_number':
+        return ({required Object n}) => 'Playing episode ${n}';
+      case 'video_home_next_episode_number':
+        return ({required Object n}) => 'Next · Episode ${n}';
+      case 'video_home_recent_episode_number':
+        return ({required Object n}) => 'Recently added · Episode ${n}';
+      case 'video_home_remaining_minutes':
+        return ({required Object minutes}) => '${minutes} min remaining';
+      case 'video_discovery_tab':
+        return 'Discover';
+      case 'video_discovery_search_hint':
+        return 'Search movies, series, anime';
+      case 'video_discovery_hot':
+        return 'Popular now';
+      case 'video_discovery_seasonal_anime':
+        return 'Seasonal anime';
+      case 'video_discovery_all_works':
+        return 'All titles';
+      case 'video_discovery_search_results':
+        return 'Search results';
+      case 'video_discovery_provider_warning':
+        return 'Some providers are unavailable. Showing available results.';
+      case 'video_discovery_load_failed':
+        return 'Could not load discovery results.';
+      case 'video_discovery_empty':
+        return 'No matching titles.';
+      case 'video_discovery_resource_search':
+        return 'Search resources';
+      case 'video_discovery_subtitle_search':
+        return 'Search subtitles';
+      case 'video_discovery_subscribe':
+        return 'Subscribe';
+      case 'video_discovery_subscription_manage':
+        return 'Manage subscription';
+      case 'video_discovery_pipeline_idle':
+        return 'Not downloaded → Download → Organize → Subtitles → Scrape → Library';
+      case 'video_discovery_details_load_failed':
+        return 'Could not load title details.';
+      case 'video_discovery_sort_popularity':
+        return 'Popularity';
+      case 'video_discovery_sort_rating':
+        return 'Rating';
+      case 'video_discovery_sort_release':
+        return 'Release date';
+      case 'video_discovery_in_library':
+        return 'In library';
+      case 'video_discovery_play':
+        return 'Play';
+      case 'download_resources_tab':
+        return 'Resources';
+      case 'video_external_settings_section':
+        return 'External resource and subtitle providers';
+      case 'video_torznab_settings_title':
+        return 'Torznab indexers';
+      case 'video_torznab_settings_hint':
+        return 'Configure one or more Jackett, Prowlarr, or compatible Torznab endpoints. Secrets stay on this device.';
+      case 'video_torznab_add':
+        return 'Add indexer';
+      case 'video_torznab_name':
+        return 'Name';
+      case 'video_torznab_endpoint':
+        return 'Endpoint';
+      case 'video_torznab_endpoint_hint':
+        return 'HTTPS is required except for loopback addresses.';
+      case 'video_torznab_api_key':
+        return 'API key';
+      case 'video_torznab_priority':
+        return 'Priority';
+      case 'video_torznab_categories':
+        return 'Categories';
+      case 'video_torznab_categories_hint':
+        return 'Comma-separated numeric category IDs';
+      case 'video_external_enabled':
+        return 'Enabled';
+      case 'video_external_insecure_http':
+        return 'Allow insecure HTTP';
+      case 'video_external_insecure_http_hint':
+        return 'Use only for a trusted local network endpoint.';
+      case 'video_external_endpoint_invalid':
+        return 'Enter a valid endpoint without credentials, query parameters, or fragments.';
+      case 'video_opensubtitles_settings_title':
+        return 'OpenSubtitles';
+      case 'video_opensubtitles_settings_hint':
+        return 'API credentials and preferred subtitle languages stay on this device.';
+      case 'video_opensubtitles_user_agent':
+        return 'User-Agent';
+      case 'video_opensubtitles_languages':
+        return 'Preferred languages';
+      case 'video_opensubtitles_languages_hint':
+        return 'Comma-separated language codes, for example zh-CN,en,ja';
+      case 'video_download_path_mappings_title':
+        return 'qBittorrent path mappings';
+      case 'video_download_path_mappings_hint':
+        return 'Map each qBittorrent remote root to a locally accessible folder.';
+      case 'video_download_path_mapping_add':
+        return 'Add path mapping';
+      case 'video_download_backend_profile_id':
+        return 'Backend profile ID';
+      case 'video_download_remote_root':
+        return 'Remote root';
+      case 'video_download_local_root':
+        return 'Local root';
+      case 'video_download_target_source_title':
+        return 'Default managed video source';
+      case 'video_download_target_source_hint':
+        return 'New downloads are organized into this local video source.';
+      case 'video_download_target_source_none':
+        return 'Choose a local video source';
+      case 'video_external_remove':
+        return 'Remove';
+      case 'video_external_username_optional':
+        return 'Username (optional)';
+      case 'video_external_password_optional':
+        return 'Password (optional)';
+      case 'video_external_api_key':
+        return 'API key';
+      case 'video_external_save_error':
+        return 'The configuration could not be saved. Check the highlighted fields.';
+      case 'video_external_categories_invalid':
+        return 'Categories must be comma-separated numeric IDs.';
+      case 'video_download_path_mapping_invalid':
+        return 'Enter a profile ID, remote root, and absolute local root.';
+      case 'video_opensubtitles_endpoint':
+        return 'API endpoint';
+      case 'video_download_target_source_empty':
+        return 'No locally accessible video source is available. Add one on the Sources tab first.';
       default:
         return null;
     }
@@ -151422,8 +157615,6 @@ extension on _StringsId {
         return 'Download backend is not configured yet.';
       case 'download_clear_finished':
         return 'Clear finished';
-      case 'download_discover_tab':
-        return 'Discover';
       case 'download_network_proxy_auto':
         return 'Auto';
       case 'download_network_proxy_auto_hint':
@@ -156468,6 +162659,267 @@ extension on _StringsId {
         return 'No text selected.';
       case 'video_library_empty_source_hint':
         return 'Add a video folder from Sources to build your library';
+      case 'video_source_scrape_action':
+        return 'Scrape this source';
+      case 'video_source_scrape_settings':
+        return 'Source scrape settings';
+      case 'video_source_scrape_provider':
+        return 'Primary metadata source';
+      case 'video_source_scrape_provider_inherit':
+        return 'Use global default';
+      case 'video_source_scrape_auto_after_scan':
+        return 'Scrape after scanning';
+      case 'video_source_scrape_auto_after_scan_hint':
+        return 'Run metadata scraping automatically after this source is scanned';
+      case 'video_source_scrape_write_nfo':
+        return 'Write NFO files';
+      case 'video_source_scrape_write_images':
+        return 'Write image files';
+      case 'video_source_scrape_use_fanart':
+        return 'Use Fanart images';
+      case 'video_source_scrape_progress':
+        return (
+                {required Object phase,
+                required Object current,
+                required Object total}) =>
+            '${phase} · ${current}/${total}';
+      case 'video_source_scrape_last_summary':
+        return (
+                {required Object status,
+                required Object succeeded,
+                required Object pending,
+                required Object failed}) =>
+            'Last scrape (${status}): ${succeeded} succeeded, ${pending} pending, ${failed} failed';
+      case 'video_source_scrape_phase_planning':
+        return 'Planning';
+      case 'video_source_scrape_phase_recognizing':
+        return 'Matching';
+      case 'video_source_scrape_phase_fetching':
+        return 'Fetching metadata';
+      case 'video_source_scrape_phase_applying':
+        return 'Saving metadata';
+      case 'video_source_scrape_phase_writing_sidecars':
+        return 'Writing sidecars';
+      case 'video_source_scrape_status_interrupted':
+        return 'Interrupted';
+      case 'video_source_scrape_global_provider':
+        return 'Default metadata source';
+      case 'video_source_scrape_global_provider_hint':
+        return 'Used by video sources that inherit the global setting';
+      case 'video_source_scrape_fanart_key':
+        return 'Fanart API key';
+      case 'video_source_scrape_fanart_key_hint':
+        return 'Optional key used to fill missing artwork from Fanart';
+      case 'video_source_scrape_bangumi_token':
+        return 'Bangumi access token';
+      case 'video_source_scrape_bangumi_token_hint':
+        return 'Optional access token for the official Bangumi API v0';
+      case 'video_source_scrape_douban_endpoint':
+        return 'Authorized Douban API endpoint';
+      case 'video_source_scrape_douban_endpoint_hint':
+        return 'Douban is unavailable unless both an authorized endpoint and token are configured';
+      case 'video_source_scrape_douban_token':
+        return 'Authorized Douban API token';
+      case 'video_source_scrape_douban_token_hint':
+        return 'Douban is unavailable unless both an authorized endpoint and token are configured';
+      case 'video_source_scrape_locale':
+        return 'Metadata language';
+      case 'video_source_scrape_locale_hint':
+        return 'Preferred language for titles, summaries and images';
+      case 'video_source_scrape_confirmation_title':
+        return 'Confirm metadata match';
+      case 'video_source_scrape_confirmation_hint':
+        return 'Multiple exact matches were found. Choose the correct work to save its provider binding.';
+      case 'video_source_scrape_confirmation_skip':
+        return 'Skip this work';
+      case 'video_source_scrape_nfo_policy':
+        return 'NFO write policy';
+      case 'video_source_scrape_image_policy':
+        return 'Image write policy';
+      case 'video_source_scrape_policy_skip':
+        return 'Do not write';
+      case 'video_source_scrape_policy_missing_only':
+        return 'Only when missing';
+      case 'video_source_scrape_policy_overwrite':
+        return 'Update Hibiki files';
+      case 'video_source_scrape_external_overwrite':
+        return 'Allow protected sidecar overwrite';
+      case 'video_source_scrape_external_overwrite_hint':
+        return 'Third-party or user-modified files remain protected until you confirm each manual scrape batch again.';
+      case 'video_source_scrape_external_overwrite_confirm_title':
+        return 'Overwrite protected sidecars?';
+      case 'video_source_scrape_external_overwrite_confirm_body':
+        return 'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
+      case 'video_source_scrape_tasks_open':
+        return 'Background tasks';
+      case 'video_source_scrape_background_started':
+        return 'Scraping is running in the background';
+      case 'video_source_scrape_tasks_current':
+        return 'Current task';
+      case 'video_source_scrape_tasks_history':
+        return 'Recent tasks';
+      case 'video_source_scrape_tasks_empty':
+        return 'No scrape tasks yet';
+      case 'video_source_scrape_waiting_confirmation':
+        return 'Waiting for your confirmation';
+      case 'video_source_scrape_phase_scanning':
+        return 'Scanning source';
+      case 'video_library_all_videos':
+        return 'All videos';
+      case 'video_work_voice_roles':
+        return 'Voice cast and characters';
+      case 'video_work_cast_crew':
+        return 'Cast and crew';
+      case 'video_work_trailers':
+        return 'Trailers';
+      case 'video_work_extras':
+        return 'Extras';
+      case 'video_work_details':
+        return 'Details';
+      case 'video_work_external_ids':
+        return 'External IDs';
+      case 'video_work_metadata_pending':
+        return 'Detailed metadata has not been scraped yet. Retry this source from Sources, then reopen the work.';
+      case 'video_work_genres':
+        return 'Genres';
+      case 'video_work_keywords':
+        return 'Keywords';
+      case 'video_work_studios':
+        return 'Studios';
+      case 'video_work_countries':
+        return 'Countries';
+      case 'video_work_content_rating':
+        return 'Content rating';
+      case 'video_all_videos_list_view':
+        return 'List view';
+      case 'video_all_videos_grid_view':
+        return 'Grid view';
+      case 'video_home_continue_episode_number':
+        return ({required Object n}) => 'Playing episode ${n}';
+      case 'video_home_next_episode_number':
+        return ({required Object n}) => 'Next · Episode ${n}';
+      case 'video_home_recent_episode_number':
+        return ({required Object n}) => 'Recently added · Episode ${n}';
+      case 'video_home_remaining_minutes':
+        return ({required Object minutes}) => '${minutes} min remaining';
+      case 'video_discovery_tab':
+        return 'Discover';
+      case 'video_discovery_search_hint':
+        return 'Search movies, series, anime';
+      case 'video_discovery_hot':
+        return 'Popular now';
+      case 'video_discovery_seasonal_anime':
+        return 'Seasonal anime';
+      case 'video_discovery_all_works':
+        return 'All titles';
+      case 'video_discovery_search_results':
+        return 'Search results';
+      case 'video_discovery_provider_warning':
+        return 'Some providers are unavailable. Showing available results.';
+      case 'video_discovery_load_failed':
+        return 'Could not load discovery results.';
+      case 'video_discovery_empty':
+        return 'No matching titles.';
+      case 'video_discovery_resource_search':
+        return 'Search resources';
+      case 'video_discovery_subtitle_search':
+        return 'Search subtitles';
+      case 'video_discovery_subscribe':
+        return 'Subscribe';
+      case 'video_discovery_subscription_manage':
+        return 'Manage subscription';
+      case 'video_discovery_pipeline_idle':
+        return 'Not downloaded → Download → Organize → Subtitles → Scrape → Library';
+      case 'video_discovery_details_load_failed':
+        return 'Could not load title details.';
+      case 'video_discovery_sort_popularity':
+        return 'Popularity';
+      case 'video_discovery_sort_rating':
+        return 'Rating';
+      case 'video_discovery_sort_release':
+        return 'Release date';
+      case 'video_discovery_in_library':
+        return 'In library';
+      case 'video_discovery_play':
+        return 'Play';
+      case 'download_resources_tab':
+        return 'Resources';
+      case 'video_external_settings_section':
+        return 'External resource and subtitle providers';
+      case 'video_torznab_settings_title':
+        return 'Torznab indexers';
+      case 'video_torznab_settings_hint':
+        return 'Configure one or more Jackett, Prowlarr, or compatible Torznab endpoints. Secrets stay on this device.';
+      case 'video_torznab_add':
+        return 'Add indexer';
+      case 'video_torznab_name':
+        return 'Name';
+      case 'video_torznab_endpoint':
+        return 'Endpoint';
+      case 'video_torznab_endpoint_hint':
+        return 'HTTPS is required except for loopback addresses.';
+      case 'video_torznab_api_key':
+        return 'API key';
+      case 'video_torznab_priority':
+        return 'Priority';
+      case 'video_torznab_categories':
+        return 'Categories';
+      case 'video_torznab_categories_hint':
+        return 'Comma-separated numeric category IDs';
+      case 'video_external_enabled':
+        return 'Enabled';
+      case 'video_external_insecure_http':
+        return 'Allow insecure HTTP';
+      case 'video_external_insecure_http_hint':
+        return 'Use only for a trusted local network endpoint.';
+      case 'video_external_endpoint_invalid':
+        return 'Enter a valid endpoint without credentials, query parameters, or fragments.';
+      case 'video_opensubtitles_settings_title':
+        return 'OpenSubtitles';
+      case 'video_opensubtitles_settings_hint':
+        return 'API credentials and preferred subtitle languages stay on this device.';
+      case 'video_opensubtitles_user_agent':
+        return 'User-Agent';
+      case 'video_opensubtitles_languages':
+        return 'Preferred languages';
+      case 'video_opensubtitles_languages_hint':
+        return 'Comma-separated language codes, for example zh-CN,en,ja';
+      case 'video_download_path_mappings_title':
+        return 'qBittorrent path mappings';
+      case 'video_download_path_mappings_hint':
+        return 'Map each qBittorrent remote root to a locally accessible folder.';
+      case 'video_download_path_mapping_add':
+        return 'Add path mapping';
+      case 'video_download_backend_profile_id':
+        return 'Backend profile ID';
+      case 'video_download_remote_root':
+        return 'Remote root';
+      case 'video_download_local_root':
+        return 'Local root';
+      case 'video_download_target_source_title':
+        return 'Default managed video source';
+      case 'video_download_target_source_hint':
+        return 'New downloads are organized into this local video source.';
+      case 'video_download_target_source_none':
+        return 'Choose a local video source';
+      case 'video_external_remove':
+        return 'Remove';
+      case 'video_external_username_optional':
+        return 'Username (optional)';
+      case 'video_external_password_optional':
+        return 'Password (optional)';
+      case 'video_external_api_key':
+        return 'API key';
+      case 'video_external_save_error':
+        return 'The configuration could not be saved. Check the highlighted fields.';
+      case 'video_external_categories_invalid':
+        return 'Categories must be comma-separated numeric IDs.';
+      case 'video_download_path_mapping_invalid':
+        return 'Enter a profile ID, remote root, and absolute local root.';
+      case 'video_opensubtitles_endpoint':
+        return 'API endpoint';
+      case 'video_download_target_source_empty':
+        return 'No locally accessible video source is available. Add one on the Sources tab first.';
       default:
         return null;
     }
@@ -157810,8 +164262,6 @@ extension on _StringsIt {
         return 'Download backend is not configured yet.';
       case 'download_clear_finished':
         return 'Clear finished';
-      case 'download_discover_tab':
-        return 'Discover';
       case 'download_network_proxy_auto':
         return 'Auto';
       case 'download_network_proxy_auto_hint':
@@ -162869,6 +169319,267 @@ extension on _StringsIt {
         return 'No text selected.';
       case 'video_library_empty_source_hint':
         return 'Add a video folder from Sources to build your library';
+      case 'video_source_scrape_action':
+        return 'Scrape this source';
+      case 'video_source_scrape_settings':
+        return 'Source scrape settings';
+      case 'video_source_scrape_provider':
+        return 'Primary metadata source';
+      case 'video_source_scrape_provider_inherit':
+        return 'Use global default';
+      case 'video_source_scrape_auto_after_scan':
+        return 'Scrape after scanning';
+      case 'video_source_scrape_auto_after_scan_hint':
+        return 'Run metadata scraping automatically after this source is scanned';
+      case 'video_source_scrape_write_nfo':
+        return 'Write NFO files';
+      case 'video_source_scrape_write_images':
+        return 'Write image files';
+      case 'video_source_scrape_use_fanart':
+        return 'Use Fanart images';
+      case 'video_source_scrape_progress':
+        return (
+                {required Object phase,
+                required Object current,
+                required Object total}) =>
+            '${phase} · ${current}/${total}';
+      case 'video_source_scrape_last_summary':
+        return (
+                {required Object status,
+                required Object succeeded,
+                required Object pending,
+                required Object failed}) =>
+            'Last scrape (${status}): ${succeeded} succeeded, ${pending} pending, ${failed} failed';
+      case 'video_source_scrape_phase_planning':
+        return 'Planning';
+      case 'video_source_scrape_phase_recognizing':
+        return 'Matching';
+      case 'video_source_scrape_phase_fetching':
+        return 'Fetching metadata';
+      case 'video_source_scrape_phase_applying':
+        return 'Saving metadata';
+      case 'video_source_scrape_phase_writing_sidecars':
+        return 'Writing sidecars';
+      case 'video_source_scrape_status_interrupted':
+        return 'Interrupted';
+      case 'video_source_scrape_global_provider':
+        return 'Default metadata source';
+      case 'video_source_scrape_global_provider_hint':
+        return 'Used by video sources that inherit the global setting';
+      case 'video_source_scrape_fanart_key':
+        return 'Fanart API key';
+      case 'video_source_scrape_fanart_key_hint':
+        return 'Optional key used to fill missing artwork from Fanart';
+      case 'video_source_scrape_bangumi_token':
+        return 'Bangumi access token';
+      case 'video_source_scrape_bangumi_token_hint':
+        return 'Optional access token for the official Bangumi API v0';
+      case 'video_source_scrape_douban_endpoint':
+        return 'Authorized Douban API endpoint';
+      case 'video_source_scrape_douban_endpoint_hint':
+        return 'Douban is unavailable unless both an authorized endpoint and token are configured';
+      case 'video_source_scrape_douban_token':
+        return 'Authorized Douban API token';
+      case 'video_source_scrape_douban_token_hint':
+        return 'Douban is unavailable unless both an authorized endpoint and token are configured';
+      case 'video_source_scrape_locale':
+        return 'Metadata language';
+      case 'video_source_scrape_locale_hint':
+        return 'Preferred language for titles, summaries and images';
+      case 'video_source_scrape_confirmation_title':
+        return 'Confirm metadata match';
+      case 'video_source_scrape_confirmation_hint':
+        return 'Multiple exact matches were found. Choose the correct work to save its provider binding.';
+      case 'video_source_scrape_confirmation_skip':
+        return 'Skip this work';
+      case 'video_source_scrape_nfo_policy':
+        return 'NFO write policy';
+      case 'video_source_scrape_image_policy':
+        return 'Image write policy';
+      case 'video_source_scrape_policy_skip':
+        return 'Do not write';
+      case 'video_source_scrape_policy_missing_only':
+        return 'Only when missing';
+      case 'video_source_scrape_policy_overwrite':
+        return 'Update Hibiki files';
+      case 'video_source_scrape_external_overwrite':
+        return 'Allow protected sidecar overwrite';
+      case 'video_source_scrape_external_overwrite_hint':
+        return 'Third-party or user-modified files remain protected until you confirm each manual scrape batch again.';
+      case 'video_source_scrape_external_overwrite_confirm_title':
+        return 'Overwrite protected sidecars?';
+      case 'video_source_scrape_external_overwrite_confirm_body':
+        return 'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
+      case 'video_source_scrape_tasks_open':
+        return 'Background tasks';
+      case 'video_source_scrape_background_started':
+        return 'Scraping is running in the background';
+      case 'video_source_scrape_tasks_current':
+        return 'Current task';
+      case 'video_source_scrape_tasks_history':
+        return 'Recent tasks';
+      case 'video_source_scrape_tasks_empty':
+        return 'No scrape tasks yet';
+      case 'video_source_scrape_waiting_confirmation':
+        return 'Waiting for your confirmation';
+      case 'video_source_scrape_phase_scanning':
+        return 'Scanning source';
+      case 'video_library_all_videos':
+        return 'All videos';
+      case 'video_work_voice_roles':
+        return 'Voice cast and characters';
+      case 'video_work_cast_crew':
+        return 'Cast and crew';
+      case 'video_work_trailers':
+        return 'Trailers';
+      case 'video_work_extras':
+        return 'Extras';
+      case 'video_work_details':
+        return 'Details';
+      case 'video_work_external_ids':
+        return 'External IDs';
+      case 'video_work_metadata_pending':
+        return 'Detailed metadata has not been scraped yet. Retry this source from Sources, then reopen the work.';
+      case 'video_work_genres':
+        return 'Genres';
+      case 'video_work_keywords':
+        return 'Keywords';
+      case 'video_work_studios':
+        return 'Studios';
+      case 'video_work_countries':
+        return 'Countries';
+      case 'video_work_content_rating':
+        return 'Content rating';
+      case 'video_all_videos_list_view':
+        return 'List view';
+      case 'video_all_videos_grid_view':
+        return 'Grid view';
+      case 'video_home_continue_episode_number':
+        return ({required Object n}) => 'Playing episode ${n}';
+      case 'video_home_next_episode_number':
+        return ({required Object n}) => 'Next · Episode ${n}';
+      case 'video_home_recent_episode_number':
+        return ({required Object n}) => 'Recently added · Episode ${n}';
+      case 'video_home_remaining_minutes':
+        return ({required Object minutes}) => '${minutes} min remaining';
+      case 'video_discovery_tab':
+        return 'Discover';
+      case 'video_discovery_search_hint':
+        return 'Search movies, series, anime';
+      case 'video_discovery_hot':
+        return 'Popular now';
+      case 'video_discovery_seasonal_anime':
+        return 'Seasonal anime';
+      case 'video_discovery_all_works':
+        return 'All titles';
+      case 'video_discovery_search_results':
+        return 'Search results';
+      case 'video_discovery_provider_warning':
+        return 'Some providers are unavailable. Showing available results.';
+      case 'video_discovery_load_failed':
+        return 'Could not load discovery results.';
+      case 'video_discovery_empty':
+        return 'No matching titles.';
+      case 'video_discovery_resource_search':
+        return 'Search resources';
+      case 'video_discovery_subtitle_search':
+        return 'Search subtitles';
+      case 'video_discovery_subscribe':
+        return 'Subscribe';
+      case 'video_discovery_subscription_manage':
+        return 'Manage subscription';
+      case 'video_discovery_pipeline_idle':
+        return 'Not downloaded → Download → Organize → Subtitles → Scrape → Library';
+      case 'video_discovery_details_load_failed':
+        return 'Could not load title details.';
+      case 'video_discovery_sort_popularity':
+        return 'Popularity';
+      case 'video_discovery_sort_rating':
+        return 'Rating';
+      case 'video_discovery_sort_release':
+        return 'Release date';
+      case 'video_discovery_in_library':
+        return 'In library';
+      case 'video_discovery_play':
+        return 'Play';
+      case 'download_resources_tab':
+        return 'Resources';
+      case 'video_external_settings_section':
+        return 'External resource and subtitle providers';
+      case 'video_torznab_settings_title':
+        return 'Torznab indexers';
+      case 'video_torznab_settings_hint':
+        return 'Configure one or more Jackett, Prowlarr, or compatible Torznab endpoints. Secrets stay on this device.';
+      case 'video_torznab_add':
+        return 'Add indexer';
+      case 'video_torznab_name':
+        return 'Name';
+      case 'video_torznab_endpoint':
+        return 'Endpoint';
+      case 'video_torznab_endpoint_hint':
+        return 'HTTPS is required except for loopback addresses.';
+      case 'video_torznab_api_key':
+        return 'API key';
+      case 'video_torznab_priority':
+        return 'Priority';
+      case 'video_torznab_categories':
+        return 'Categories';
+      case 'video_torznab_categories_hint':
+        return 'Comma-separated numeric category IDs';
+      case 'video_external_enabled':
+        return 'Enabled';
+      case 'video_external_insecure_http':
+        return 'Allow insecure HTTP';
+      case 'video_external_insecure_http_hint':
+        return 'Use only for a trusted local network endpoint.';
+      case 'video_external_endpoint_invalid':
+        return 'Enter a valid endpoint without credentials, query parameters, or fragments.';
+      case 'video_opensubtitles_settings_title':
+        return 'OpenSubtitles';
+      case 'video_opensubtitles_settings_hint':
+        return 'API credentials and preferred subtitle languages stay on this device.';
+      case 'video_opensubtitles_user_agent':
+        return 'User-Agent';
+      case 'video_opensubtitles_languages':
+        return 'Preferred languages';
+      case 'video_opensubtitles_languages_hint':
+        return 'Comma-separated language codes, for example zh-CN,en,ja';
+      case 'video_download_path_mappings_title':
+        return 'qBittorrent path mappings';
+      case 'video_download_path_mappings_hint':
+        return 'Map each qBittorrent remote root to a locally accessible folder.';
+      case 'video_download_path_mapping_add':
+        return 'Add path mapping';
+      case 'video_download_backend_profile_id':
+        return 'Backend profile ID';
+      case 'video_download_remote_root':
+        return 'Remote root';
+      case 'video_download_local_root':
+        return 'Local root';
+      case 'video_download_target_source_title':
+        return 'Default managed video source';
+      case 'video_download_target_source_hint':
+        return 'New downloads are organized into this local video source.';
+      case 'video_download_target_source_none':
+        return 'Choose a local video source';
+      case 'video_external_remove':
+        return 'Remove';
+      case 'video_external_username_optional':
+        return 'Username (optional)';
+      case 'video_external_password_optional':
+        return 'Password (optional)';
+      case 'video_external_api_key':
+        return 'API key';
+      case 'video_external_save_error':
+        return 'The configuration could not be saved. Check the highlighted fields.';
+      case 'video_external_categories_invalid':
+        return 'Categories must be comma-separated numeric IDs.';
+      case 'video_download_path_mapping_invalid':
+        return 'Enter a profile ID, remote root, and absolute local root.';
+      case 'video_opensubtitles_endpoint':
+        return 'API endpoint';
+      case 'video_download_target_source_empty':
+        return 'No locally accessible video source is available. Add one on the Sources tab first.';
       default:
         return null;
     }
@@ -164200,8 +170911,6 @@ extension on _StringsJa {
         return 'Download backend is not configured yet.';
       case 'download_clear_finished':
         return 'Clear finished';
-      case 'download_discover_tab':
-        return 'Discover';
       case 'download_network_proxy_auto':
         return 'Auto';
       case 'download_network_proxy_auto_hint':
@@ -169232,6 +175941,267 @@ extension on _StringsJa {
         return 'No text selected.';
       case 'video_library_empty_source_hint':
         return 'Add a video folder from Sources to build your library';
+      case 'video_source_scrape_action':
+        return 'Scrape this source';
+      case 'video_source_scrape_settings':
+        return 'Source scrape settings';
+      case 'video_source_scrape_provider':
+        return 'Primary metadata source';
+      case 'video_source_scrape_provider_inherit':
+        return 'Use global default';
+      case 'video_source_scrape_auto_after_scan':
+        return 'Scrape after scanning';
+      case 'video_source_scrape_auto_after_scan_hint':
+        return 'Run metadata scraping automatically after this source is scanned';
+      case 'video_source_scrape_write_nfo':
+        return 'Write NFO files';
+      case 'video_source_scrape_write_images':
+        return 'Write image files';
+      case 'video_source_scrape_use_fanart':
+        return 'Use Fanart images';
+      case 'video_source_scrape_progress':
+        return (
+                {required Object phase,
+                required Object current,
+                required Object total}) =>
+            '${phase} · ${current}/${total}';
+      case 'video_source_scrape_last_summary':
+        return (
+                {required Object status,
+                required Object succeeded,
+                required Object pending,
+                required Object failed}) =>
+            'Last scrape (${status}): ${succeeded} succeeded, ${pending} pending, ${failed} failed';
+      case 'video_source_scrape_phase_planning':
+        return 'Planning';
+      case 'video_source_scrape_phase_recognizing':
+        return 'Matching';
+      case 'video_source_scrape_phase_fetching':
+        return 'Fetching metadata';
+      case 'video_source_scrape_phase_applying':
+        return 'Saving metadata';
+      case 'video_source_scrape_phase_writing_sidecars':
+        return 'Writing sidecars';
+      case 'video_source_scrape_status_interrupted':
+        return 'Interrupted';
+      case 'video_source_scrape_global_provider':
+        return 'Default metadata source';
+      case 'video_source_scrape_global_provider_hint':
+        return 'Used by video sources that inherit the global setting';
+      case 'video_source_scrape_fanart_key':
+        return 'Fanart API key';
+      case 'video_source_scrape_fanart_key_hint':
+        return 'Optional key used to fill missing artwork from Fanart';
+      case 'video_source_scrape_bangumi_token':
+        return 'Bangumi access token';
+      case 'video_source_scrape_bangumi_token_hint':
+        return 'Optional access token for the official Bangumi API v0';
+      case 'video_source_scrape_douban_endpoint':
+        return 'Authorized Douban API endpoint';
+      case 'video_source_scrape_douban_endpoint_hint':
+        return 'Douban is unavailable unless both an authorized endpoint and token are configured';
+      case 'video_source_scrape_douban_token':
+        return 'Authorized Douban API token';
+      case 'video_source_scrape_douban_token_hint':
+        return 'Douban is unavailable unless both an authorized endpoint and token are configured';
+      case 'video_source_scrape_locale':
+        return 'Metadata language';
+      case 'video_source_scrape_locale_hint':
+        return 'Preferred language for titles, summaries and images';
+      case 'video_source_scrape_confirmation_title':
+        return 'Confirm metadata match';
+      case 'video_source_scrape_confirmation_hint':
+        return 'Multiple exact matches were found. Choose the correct work to save its provider binding.';
+      case 'video_source_scrape_confirmation_skip':
+        return 'Skip this work';
+      case 'video_source_scrape_nfo_policy':
+        return 'NFO write policy';
+      case 'video_source_scrape_image_policy':
+        return 'Image write policy';
+      case 'video_source_scrape_policy_skip':
+        return 'Do not write';
+      case 'video_source_scrape_policy_missing_only':
+        return 'Only when missing';
+      case 'video_source_scrape_policy_overwrite':
+        return 'Update Hibiki files';
+      case 'video_source_scrape_external_overwrite':
+        return 'Allow protected sidecar overwrite';
+      case 'video_source_scrape_external_overwrite_hint':
+        return 'Third-party or user-modified files remain protected until you confirm each manual scrape batch again.';
+      case 'video_source_scrape_external_overwrite_confirm_title':
+        return 'Overwrite protected sidecars?';
+      case 'video_source_scrape_external_overwrite_confirm_body':
+        return 'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
+      case 'video_source_scrape_tasks_open':
+        return 'Background tasks';
+      case 'video_source_scrape_background_started':
+        return 'Scraping is running in the background';
+      case 'video_source_scrape_tasks_current':
+        return 'Current task';
+      case 'video_source_scrape_tasks_history':
+        return 'Recent tasks';
+      case 'video_source_scrape_tasks_empty':
+        return 'No scrape tasks yet';
+      case 'video_source_scrape_waiting_confirmation':
+        return 'Waiting for your confirmation';
+      case 'video_source_scrape_phase_scanning':
+        return 'Scanning source';
+      case 'video_library_all_videos':
+        return 'All videos';
+      case 'video_work_voice_roles':
+        return 'Voice cast and characters';
+      case 'video_work_cast_crew':
+        return 'Cast and crew';
+      case 'video_work_trailers':
+        return 'Trailers';
+      case 'video_work_extras':
+        return 'Extras';
+      case 'video_work_details':
+        return 'Details';
+      case 'video_work_external_ids':
+        return 'External IDs';
+      case 'video_work_metadata_pending':
+        return 'Detailed metadata has not been scraped yet. Retry this source from Sources, then reopen the work.';
+      case 'video_work_genres':
+        return 'Genres';
+      case 'video_work_keywords':
+        return 'Keywords';
+      case 'video_work_studios':
+        return 'Studios';
+      case 'video_work_countries':
+        return 'Countries';
+      case 'video_work_content_rating':
+        return 'Content rating';
+      case 'video_all_videos_list_view':
+        return 'List view';
+      case 'video_all_videos_grid_view':
+        return 'Grid view';
+      case 'video_home_continue_episode_number':
+        return ({required Object n}) => 'Playing episode ${n}';
+      case 'video_home_next_episode_number':
+        return ({required Object n}) => 'Next · Episode ${n}';
+      case 'video_home_recent_episode_number':
+        return ({required Object n}) => 'Recently added · Episode ${n}';
+      case 'video_home_remaining_minutes':
+        return ({required Object minutes}) => '${minutes} min remaining';
+      case 'video_discovery_tab':
+        return 'Discover';
+      case 'video_discovery_search_hint':
+        return 'Search movies, series, anime';
+      case 'video_discovery_hot':
+        return 'Popular now';
+      case 'video_discovery_seasonal_anime':
+        return 'Seasonal anime';
+      case 'video_discovery_all_works':
+        return 'All titles';
+      case 'video_discovery_search_results':
+        return 'Search results';
+      case 'video_discovery_provider_warning':
+        return 'Some providers are unavailable. Showing available results.';
+      case 'video_discovery_load_failed':
+        return 'Could not load discovery results.';
+      case 'video_discovery_empty':
+        return 'No matching titles.';
+      case 'video_discovery_resource_search':
+        return 'Search resources';
+      case 'video_discovery_subtitle_search':
+        return 'Search subtitles';
+      case 'video_discovery_subscribe':
+        return 'Subscribe';
+      case 'video_discovery_subscription_manage':
+        return 'Manage subscription';
+      case 'video_discovery_pipeline_idle':
+        return 'Not downloaded → Download → Organize → Subtitles → Scrape → Library';
+      case 'video_discovery_details_load_failed':
+        return 'Could not load title details.';
+      case 'video_discovery_sort_popularity':
+        return 'Popularity';
+      case 'video_discovery_sort_rating':
+        return 'Rating';
+      case 'video_discovery_sort_release':
+        return 'Release date';
+      case 'video_discovery_in_library':
+        return 'In library';
+      case 'video_discovery_play':
+        return 'Play';
+      case 'download_resources_tab':
+        return 'Resources';
+      case 'video_external_settings_section':
+        return 'External resource and subtitle providers';
+      case 'video_torznab_settings_title':
+        return 'Torznab indexers';
+      case 'video_torznab_settings_hint':
+        return 'Configure one or more Jackett, Prowlarr, or compatible Torznab endpoints. Secrets stay on this device.';
+      case 'video_torznab_add':
+        return 'Add indexer';
+      case 'video_torznab_name':
+        return 'Name';
+      case 'video_torznab_endpoint':
+        return 'Endpoint';
+      case 'video_torznab_endpoint_hint':
+        return 'HTTPS is required except for loopback addresses.';
+      case 'video_torznab_api_key':
+        return 'API key';
+      case 'video_torznab_priority':
+        return 'Priority';
+      case 'video_torznab_categories':
+        return 'Categories';
+      case 'video_torznab_categories_hint':
+        return 'Comma-separated numeric category IDs';
+      case 'video_external_enabled':
+        return 'Enabled';
+      case 'video_external_insecure_http':
+        return 'Allow insecure HTTP';
+      case 'video_external_insecure_http_hint':
+        return 'Use only for a trusted local network endpoint.';
+      case 'video_external_endpoint_invalid':
+        return 'Enter a valid endpoint without credentials, query parameters, or fragments.';
+      case 'video_opensubtitles_settings_title':
+        return 'OpenSubtitles';
+      case 'video_opensubtitles_settings_hint':
+        return 'API credentials and preferred subtitle languages stay on this device.';
+      case 'video_opensubtitles_user_agent':
+        return 'User-Agent';
+      case 'video_opensubtitles_languages':
+        return 'Preferred languages';
+      case 'video_opensubtitles_languages_hint':
+        return 'Comma-separated language codes, for example zh-CN,en,ja';
+      case 'video_download_path_mappings_title':
+        return 'qBittorrent path mappings';
+      case 'video_download_path_mappings_hint':
+        return 'Map each qBittorrent remote root to a locally accessible folder.';
+      case 'video_download_path_mapping_add':
+        return 'Add path mapping';
+      case 'video_download_backend_profile_id':
+        return 'Backend profile ID';
+      case 'video_download_remote_root':
+        return 'Remote root';
+      case 'video_download_local_root':
+        return 'Local root';
+      case 'video_download_target_source_title':
+        return 'Default managed video source';
+      case 'video_download_target_source_hint':
+        return 'New downloads are organized into this local video source.';
+      case 'video_download_target_source_none':
+        return 'Choose a local video source';
+      case 'video_external_remove':
+        return 'Remove';
+      case 'video_external_username_optional':
+        return 'Username (optional)';
+      case 'video_external_password_optional':
+        return 'Password (optional)';
+      case 'video_external_api_key':
+        return 'API key';
+      case 'video_external_save_error':
+        return 'The configuration could not be saved. Check the highlighted fields.';
+      case 'video_external_categories_invalid':
+        return 'Categories must be comma-separated numeric IDs.';
+      case 'video_download_path_mapping_invalid':
+        return 'Enter a profile ID, remote root, and absolute local root.';
+      case 'video_opensubtitles_endpoint':
+        return 'API endpoint';
+      case 'video_download_target_source_empty':
+        return 'No locally accessible video source is available. Add one on the Sources tab first.';
       default:
         return null;
     }
@@ -170564,8 +177534,6 @@ extension on _StringsKo {
         return 'Download backend is not configured yet.';
       case 'download_clear_finished':
         return 'Clear finished';
-      case 'download_discover_tab':
-        return 'Discover';
       case 'download_network_proxy_auto':
         return 'Auto';
       case 'download_network_proxy_auto_hint':
@@ -175599,6 +182567,267 @@ extension on _StringsKo {
         return 'No text selected.';
       case 'video_library_empty_source_hint':
         return 'Add a video folder from Sources to build your library';
+      case 'video_source_scrape_action':
+        return 'Scrape this source';
+      case 'video_source_scrape_settings':
+        return 'Source scrape settings';
+      case 'video_source_scrape_provider':
+        return 'Primary metadata source';
+      case 'video_source_scrape_provider_inherit':
+        return 'Use global default';
+      case 'video_source_scrape_auto_after_scan':
+        return 'Scrape after scanning';
+      case 'video_source_scrape_auto_after_scan_hint':
+        return 'Run metadata scraping automatically after this source is scanned';
+      case 'video_source_scrape_write_nfo':
+        return 'Write NFO files';
+      case 'video_source_scrape_write_images':
+        return 'Write image files';
+      case 'video_source_scrape_use_fanart':
+        return 'Use Fanart images';
+      case 'video_source_scrape_progress':
+        return (
+                {required Object phase,
+                required Object current,
+                required Object total}) =>
+            '${phase} · ${current}/${total}';
+      case 'video_source_scrape_last_summary':
+        return (
+                {required Object status,
+                required Object succeeded,
+                required Object pending,
+                required Object failed}) =>
+            'Last scrape (${status}): ${succeeded} succeeded, ${pending} pending, ${failed} failed';
+      case 'video_source_scrape_phase_planning':
+        return 'Planning';
+      case 'video_source_scrape_phase_recognizing':
+        return 'Matching';
+      case 'video_source_scrape_phase_fetching':
+        return 'Fetching metadata';
+      case 'video_source_scrape_phase_applying':
+        return 'Saving metadata';
+      case 'video_source_scrape_phase_writing_sidecars':
+        return 'Writing sidecars';
+      case 'video_source_scrape_status_interrupted':
+        return 'Interrupted';
+      case 'video_source_scrape_global_provider':
+        return 'Default metadata source';
+      case 'video_source_scrape_global_provider_hint':
+        return 'Used by video sources that inherit the global setting';
+      case 'video_source_scrape_fanart_key':
+        return 'Fanart API key';
+      case 'video_source_scrape_fanart_key_hint':
+        return 'Optional key used to fill missing artwork from Fanart';
+      case 'video_source_scrape_bangumi_token':
+        return 'Bangumi access token';
+      case 'video_source_scrape_bangumi_token_hint':
+        return 'Optional access token for the official Bangumi API v0';
+      case 'video_source_scrape_douban_endpoint':
+        return 'Authorized Douban API endpoint';
+      case 'video_source_scrape_douban_endpoint_hint':
+        return 'Douban is unavailable unless both an authorized endpoint and token are configured';
+      case 'video_source_scrape_douban_token':
+        return 'Authorized Douban API token';
+      case 'video_source_scrape_douban_token_hint':
+        return 'Douban is unavailable unless both an authorized endpoint and token are configured';
+      case 'video_source_scrape_locale':
+        return 'Metadata language';
+      case 'video_source_scrape_locale_hint':
+        return 'Preferred language for titles, summaries and images';
+      case 'video_source_scrape_confirmation_title':
+        return 'Confirm metadata match';
+      case 'video_source_scrape_confirmation_hint':
+        return 'Multiple exact matches were found. Choose the correct work to save its provider binding.';
+      case 'video_source_scrape_confirmation_skip':
+        return 'Skip this work';
+      case 'video_source_scrape_nfo_policy':
+        return 'NFO write policy';
+      case 'video_source_scrape_image_policy':
+        return 'Image write policy';
+      case 'video_source_scrape_policy_skip':
+        return 'Do not write';
+      case 'video_source_scrape_policy_missing_only':
+        return 'Only when missing';
+      case 'video_source_scrape_policy_overwrite':
+        return 'Update Hibiki files';
+      case 'video_source_scrape_external_overwrite':
+        return 'Allow protected sidecar overwrite';
+      case 'video_source_scrape_external_overwrite_hint':
+        return 'Third-party or user-modified files remain protected until you confirm each manual scrape batch again.';
+      case 'video_source_scrape_external_overwrite_confirm_title':
+        return 'Overwrite protected sidecars?';
+      case 'video_source_scrape_external_overwrite_confirm_body':
+        return 'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
+      case 'video_source_scrape_tasks_open':
+        return 'Background tasks';
+      case 'video_source_scrape_background_started':
+        return 'Scraping is running in the background';
+      case 'video_source_scrape_tasks_current':
+        return 'Current task';
+      case 'video_source_scrape_tasks_history':
+        return 'Recent tasks';
+      case 'video_source_scrape_tasks_empty':
+        return 'No scrape tasks yet';
+      case 'video_source_scrape_waiting_confirmation':
+        return 'Waiting for your confirmation';
+      case 'video_source_scrape_phase_scanning':
+        return 'Scanning source';
+      case 'video_library_all_videos':
+        return 'All videos';
+      case 'video_work_voice_roles':
+        return 'Voice cast and characters';
+      case 'video_work_cast_crew':
+        return 'Cast and crew';
+      case 'video_work_trailers':
+        return 'Trailers';
+      case 'video_work_extras':
+        return 'Extras';
+      case 'video_work_details':
+        return 'Details';
+      case 'video_work_external_ids':
+        return 'External IDs';
+      case 'video_work_metadata_pending':
+        return 'Detailed metadata has not been scraped yet. Retry this source from Sources, then reopen the work.';
+      case 'video_work_genres':
+        return 'Genres';
+      case 'video_work_keywords':
+        return 'Keywords';
+      case 'video_work_studios':
+        return 'Studios';
+      case 'video_work_countries':
+        return 'Countries';
+      case 'video_work_content_rating':
+        return 'Content rating';
+      case 'video_all_videos_list_view':
+        return 'List view';
+      case 'video_all_videos_grid_view':
+        return 'Grid view';
+      case 'video_home_continue_episode_number':
+        return ({required Object n}) => 'Playing episode ${n}';
+      case 'video_home_next_episode_number':
+        return ({required Object n}) => 'Next · Episode ${n}';
+      case 'video_home_recent_episode_number':
+        return ({required Object n}) => 'Recently added · Episode ${n}';
+      case 'video_home_remaining_minutes':
+        return ({required Object minutes}) => '${minutes} min remaining';
+      case 'video_discovery_tab':
+        return 'Discover';
+      case 'video_discovery_search_hint':
+        return 'Search movies, series, anime';
+      case 'video_discovery_hot':
+        return 'Popular now';
+      case 'video_discovery_seasonal_anime':
+        return 'Seasonal anime';
+      case 'video_discovery_all_works':
+        return 'All titles';
+      case 'video_discovery_search_results':
+        return 'Search results';
+      case 'video_discovery_provider_warning':
+        return 'Some providers are unavailable. Showing available results.';
+      case 'video_discovery_load_failed':
+        return 'Could not load discovery results.';
+      case 'video_discovery_empty':
+        return 'No matching titles.';
+      case 'video_discovery_resource_search':
+        return 'Search resources';
+      case 'video_discovery_subtitle_search':
+        return 'Search subtitles';
+      case 'video_discovery_subscribe':
+        return 'Subscribe';
+      case 'video_discovery_subscription_manage':
+        return 'Manage subscription';
+      case 'video_discovery_pipeline_idle':
+        return 'Not downloaded → Download → Organize → Subtitles → Scrape → Library';
+      case 'video_discovery_details_load_failed':
+        return 'Could not load title details.';
+      case 'video_discovery_sort_popularity':
+        return 'Popularity';
+      case 'video_discovery_sort_rating':
+        return 'Rating';
+      case 'video_discovery_sort_release':
+        return 'Release date';
+      case 'video_discovery_in_library':
+        return 'In library';
+      case 'video_discovery_play':
+        return 'Play';
+      case 'download_resources_tab':
+        return 'Resources';
+      case 'video_external_settings_section':
+        return 'External resource and subtitle providers';
+      case 'video_torznab_settings_title':
+        return 'Torznab indexers';
+      case 'video_torznab_settings_hint':
+        return 'Configure one or more Jackett, Prowlarr, or compatible Torznab endpoints. Secrets stay on this device.';
+      case 'video_torznab_add':
+        return 'Add indexer';
+      case 'video_torznab_name':
+        return 'Name';
+      case 'video_torznab_endpoint':
+        return 'Endpoint';
+      case 'video_torznab_endpoint_hint':
+        return 'HTTPS is required except for loopback addresses.';
+      case 'video_torznab_api_key':
+        return 'API key';
+      case 'video_torznab_priority':
+        return 'Priority';
+      case 'video_torznab_categories':
+        return 'Categories';
+      case 'video_torznab_categories_hint':
+        return 'Comma-separated numeric category IDs';
+      case 'video_external_enabled':
+        return 'Enabled';
+      case 'video_external_insecure_http':
+        return 'Allow insecure HTTP';
+      case 'video_external_insecure_http_hint':
+        return 'Use only for a trusted local network endpoint.';
+      case 'video_external_endpoint_invalid':
+        return 'Enter a valid endpoint without credentials, query parameters, or fragments.';
+      case 'video_opensubtitles_settings_title':
+        return 'OpenSubtitles';
+      case 'video_opensubtitles_settings_hint':
+        return 'API credentials and preferred subtitle languages stay on this device.';
+      case 'video_opensubtitles_user_agent':
+        return 'User-Agent';
+      case 'video_opensubtitles_languages':
+        return 'Preferred languages';
+      case 'video_opensubtitles_languages_hint':
+        return 'Comma-separated language codes, for example zh-CN,en,ja';
+      case 'video_download_path_mappings_title':
+        return 'qBittorrent path mappings';
+      case 'video_download_path_mappings_hint':
+        return 'Map each qBittorrent remote root to a locally accessible folder.';
+      case 'video_download_path_mapping_add':
+        return 'Add path mapping';
+      case 'video_download_backend_profile_id':
+        return 'Backend profile ID';
+      case 'video_download_remote_root':
+        return 'Remote root';
+      case 'video_download_local_root':
+        return 'Local root';
+      case 'video_download_target_source_title':
+        return 'Default managed video source';
+      case 'video_download_target_source_hint':
+        return 'New downloads are organized into this local video source.';
+      case 'video_download_target_source_none':
+        return 'Choose a local video source';
+      case 'video_external_remove':
+        return 'Remove';
+      case 'video_external_username_optional':
+        return 'Username (optional)';
+      case 'video_external_password_optional':
+        return 'Password (optional)';
+      case 'video_external_api_key':
+        return 'API key';
+      case 'video_external_save_error':
+        return 'The configuration could not be saved. Check the highlighted fields.';
+      case 'video_external_categories_invalid':
+        return 'Categories must be comma-separated numeric IDs.';
+      case 'video_download_path_mapping_invalid':
+        return 'Enter a profile ID, remote root, and absolute local root.';
+      case 'video_opensubtitles_endpoint':
+        return 'API endpoint';
+      case 'video_download_target_source_empty':
+        return 'No locally accessible video source is available. Add one on the Sources tab first.';
       default:
         return null;
     }
@@ -176941,8 +184170,6 @@ extension on _StringsNl {
         return 'Download backend is not configured yet.';
       case 'download_clear_finished':
         return 'Clear finished';
-      case 'download_discover_tab':
-        return 'Discover';
       case 'download_network_proxy_auto':
         return 'Auto';
       case 'download_network_proxy_auto_hint':
@@ -181994,6 +189221,267 @@ extension on _StringsNl {
         return 'No text selected.';
       case 'video_library_empty_source_hint':
         return 'Add a video folder from Sources to build your library';
+      case 'video_source_scrape_action':
+        return 'Scrape this source';
+      case 'video_source_scrape_settings':
+        return 'Source scrape settings';
+      case 'video_source_scrape_provider':
+        return 'Primary metadata source';
+      case 'video_source_scrape_provider_inherit':
+        return 'Use global default';
+      case 'video_source_scrape_auto_after_scan':
+        return 'Scrape after scanning';
+      case 'video_source_scrape_auto_after_scan_hint':
+        return 'Run metadata scraping automatically after this source is scanned';
+      case 'video_source_scrape_write_nfo':
+        return 'Write NFO files';
+      case 'video_source_scrape_write_images':
+        return 'Write image files';
+      case 'video_source_scrape_use_fanart':
+        return 'Use Fanart images';
+      case 'video_source_scrape_progress':
+        return (
+                {required Object phase,
+                required Object current,
+                required Object total}) =>
+            '${phase} · ${current}/${total}';
+      case 'video_source_scrape_last_summary':
+        return (
+                {required Object status,
+                required Object succeeded,
+                required Object pending,
+                required Object failed}) =>
+            'Last scrape (${status}): ${succeeded} succeeded, ${pending} pending, ${failed} failed';
+      case 'video_source_scrape_phase_planning':
+        return 'Planning';
+      case 'video_source_scrape_phase_recognizing':
+        return 'Matching';
+      case 'video_source_scrape_phase_fetching':
+        return 'Fetching metadata';
+      case 'video_source_scrape_phase_applying':
+        return 'Saving metadata';
+      case 'video_source_scrape_phase_writing_sidecars':
+        return 'Writing sidecars';
+      case 'video_source_scrape_status_interrupted':
+        return 'Interrupted';
+      case 'video_source_scrape_global_provider':
+        return 'Default metadata source';
+      case 'video_source_scrape_global_provider_hint':
+        return 'Used by video sources that inherit the global setting';
+      case 'video_source_scrape_fanart_key':
+        return 'Fanart API key';
+      case 'video_source_scrape_fanart_key_hint':
+        return 'Optional key used to fill missing artwork from Fanart';
+      case 'video_source_scrape_bangumi_token':
+        return 'Bangumi access token';
+      case 'video_source_scrape_bangumi_token_hint':
+        return 'Optional access token for the official Bangumi API v0';
+      case 'video_source_scrape_douban_endpoint':
+        return 'Authorized Douban API endpoint';
+      case 'video_source_scrape_douban_endpoint_hint':
+        return 'Douban is unavailable unless both an authorized endpoint and token are configured';
+      case 'video_source_scrape_douban_token':
+        return 'Authorized Douban API token';
+      case 'video_source_scrape_douban_token_hint':
+        return 'Douban is unavailable unless both an authorized endpoint and token are configured';
+      case 'video_source_scrape_locale':
+        return 'Metadata language';
+      case 'video_source_scrape_locale_hint':
+        return 'Preferred language for titles, summaries and images';
+      case 'video_source_scrape_confirmation_title':
+        return 'Confirm metadata match';
+      case 'video_source_scrape_confirmation_hint':
+        return 'Multiple exact matches were found. Choose the correct work to save its provider binding.';
+      case 'video_source_scrape_confirmation_skip':
+        return 'Skip this work';
+      case 'video_source_scrape_nfo_policy':
+        return 'NFO write policy';
+      case 'video_source_scrape_image_policy':
+        return 'Image write policy';
+      case 'video_source_scrape_policy_skip':
+        return 'Do not write';
+      case 'video_source_scrape_policy_missing_only':
+        return 'Only when missing';
+      case 'video_source_scrape_policy_overwrite':
+        return 'Update Hibiki files';
+      case 'video_source_scrape_external_overwrite':
+        return 'Allow protected sidecar overwrite';
+      case 'video_source_scrape_external_overwrite_hint':
+        return 'Third-party or user-modified files remain protected until you confirm each manual scrape batch again.';
+      case 'video_source_scrape_external_overwrite_confirm_title':
+        return 'Overwrite protected sidecars?';
+      case 'video_source_scrape_external_overwrite_confirm_body':
+        return 'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
+      case 'video_source_scrape_tasks_open':
+        return 'Background tasks';
+      case 'video_source_scrape_background_started':
+        return 'Scraping is running in the background';
+      case 'video_source_scrape_tasks_current':
+        return 'Current task';
+      case 'video_source_scrape_tasks_history':
+        return 'Recent tasks';
+      case 'video_source_scrape_tasks_empty':
+        return 'No scrape tasks yet';
+      case 'video_source_scrape_waiting_confirmation':
+        return 'Waiting for your confirmation';
+      case 'video_source_scrape_phase_scanning':
+        return 'Scanning source';
+      case 'video_library_all_videos':
+        return 'All videos';
+      case 'video_work_voice_roles':
+        return 'Voice cast and characters';
+      case 'video_work_cast_crew':
+        return 'Cast and crew';
+      case 'video_work_trailers':
+        return 'Trailers';
+      case 'video_work_extras':
+        return 'Extras';
+      case 'video_work_details':
+        return 'Details';
+      case 'video_work_external_ids':
+        return 'External IDs';
+      case 'video_work_metadata_pending':
+        return 'Detailed metadata has not been scraped yet. Retry this source from Sources, then reopen the work.';
+      case 'video_work_genres':
+        return 'Genres';
+      case 'video_work_keywords':
+        return 'Keywords';
+      case 'video_work_studios':
+        return 'Studios';
+      case 'video_work_countries':
+        return 'Countries';
+      case 'video_work_content_rating':
+        return 'Content rating';
+      case 'video_all_videos_list_view':
+        return 'List view';
+      case 'video_all_videos_grid_view':
+        return 'Grid view';
+      case 'video_home_continue_episode_number':
+        return ({required Object n}) => 'Playing episode ${n}';
+      case 'video_home_next_episode_number':
+        return ({required Object n}) => 'Next · Episode ${n}';
+      case 'video_home_recent_episode_number':
+        return ({required Object n}) => 'Recently added · Episode ${n}';
+      case 'video_home_remaining_minutes':
+        return ({required Object minutes}) => '${minutes} min remaining';
+      case 'video_discovery_tab':
+        return 'Discover';
+      case 'video_discovery_search_hint':
+        return 'Search movies, series, anime';
+      case 'video_discovery_hot':
+        return 'Popular now';
+      case 'video_discovery_seasonal_anime':
+        return 'Seasonal anime';
+      case 'video_discovery_all_works':
+        return 'All titles';
+      case 'video_discovery_search_results':
+        return 'Search results';
+      case 'video_discovery_provider_warning':
+        return 'Some providers are unavailable. Showing available results.';
+      case 'video_discovery_load_failed':
+        return 'Could not load discovery results.';
+      case 'video_discovery_empty':
+        return 'No matching titles.';
+      case 'video_discovery_resource_search':
+        return 'Search resources';
+      case 'video_discovery_subtitle_search':
+        return 'Search subtitles';
+      case 'video_discovery_subscribe':
+        return 'Subscribe';
+      case 'video_discovery_subscription_manage':
+        return 'Manage subscription';
+      case 'video_discovery_pipeline_idle':
+        return 'Not downloaded → Download → Organize → Subtitles → Scrape → Library';
+      case 'video_discovery_details_load_failed':
+        return 'Could not load title details.';
+      case 'video_discovery_sort_popularity':
+        return 'Popularity';
+      case 'video_discovery_sort_rating':
+        return 'Rating';
+      case 'video_discovery_sort_release':
+        return 'Release date';
+      case 'video_discovery_in_library':
+        return 'In library';
+      case 'video_discovery_play':
+        return 'Play';
+      case 'download_resources_tab':
+        return 'Resources';
+      case 'video_external_settings_section':
+        return 'External resource and subtitle providers';
+      case 'video_torznab_settings_title':
+        return 'Torznab indexers';
+      case 'video_torznab_settings_hint':
+        return 'Configure one or more Jackett, Prowlarr, or compatible Torznab endpoints. Secrets stay on this device.';
+      case 'video_torznab_add':
+        return 'Add indexer';
+      case 'video_torznab_name':
+        return 'Name';
+      case 'video_torznab_endpoint':
+        return 'Endpoint';
+      case 'video_torznab_endpoint_hint':
+        return 'HTTPS is required except for loopback addresses.';
+      case 'video_torznab_api_key':
+        return 'API key';
+      case 'video_torznab_priority':
+        return 'Priority';
+      case 'video_torznab_categories':
+        return 'Categories';
+      case 'video_torznab_categories_hint':
+        return 'Comma-separated numeric category IDs';
+      case 'video_external_enabled':
+        return 'Enabled';
+      case 'video_external_insecure_http':
+        return 'Allow insecure HTTP';
+      case 'video_external_insecure_http_hint':
+        return 'Use only for a trusted local network endpoint.';
+      case 'video_external_endpoint_invalid':
+        return 'Enter a valid endpoint without credentials, query parameters, or fragments.';
+      case 'video_opensubtitles_settings_title':
+        return 'OpenSubtitles';
+      case 'video_opensubtitles_settings_hint':
+        return 'API credentials and preferred subtitle languages stay on this device.';
+      case 'video_opensubtitles_user_agent':
+        return 'User-Agent';
+      case 'video_opensubtitles_languages':
+        return 'Preferred languages';
+      case 'video_opensubtitles_languages_hint':
+        return 'Comma-separated language codes, for example zh-CN,en,ja';
+      case 'video_download_path_mappings_title':
+        return 'qBittorrent path mappings';
+      case 'video_download_path_mappings_hint':
+        return 'Map each qBittorrent remote root to a locally accessible folder.';
+      case 'video_download_path_mapping_add':
+        return 'Add path mapping';
+      case 'video_download_backend_profile_id':
+        return 'Backend profile ID';
+      case 'video_download_remote_root':
+        return 'Remote root';
+      case 'video_download_local_root':
+        return 'Local root';
+      case 'video_download_target_source_title':
+        return 'Default managed video source';
+      case 'video_download_target_source_hint':
+        return 'New downloads are organized into this local video source.';
+      case 'video_download_target_source_none':
+        return 'Choose a local video source';
+      case 'video_external_remove':
+        return 'Remove';
+      case 'video_external_username_optional':
+        return 'Username (optional)';
+      case 'video_external_password_optional':
+        return 'Password (optional)';
+      case 'video_external_api_key':
+        return 'API key';
+      case 'video_external_save_error':
+        return 'The configuration could not be saved. Check the highlighted fields.';
+      case 'video_external_categories_invalid':
+        return 'Categories must be comma-separated numeric IDs.';
+      case 'video_download_path_mapping_invalid':
+        return 'Enter a profile ID, remote root, and absolute local root.';
+      case 'video_opensubtitles_endpoint':
+        return 'API endpoint';
+      case 'video_download_target_source_empty':
+        return 'No locally accessible video source is available. Add one on the Sources tab first.';
       default:
         return null;
     }
@@ -183335,8 +190823,6 @@ extension on _StringsPtBr {
         return 'Download backend is not configured yet.';
       case 'download_clear_finished':
         return 'Clear finished';
-      case 'download_discover_tab':
-        return 'Discover';
       case 'download_network_proxy_auto':
         return 'Auto';
       case 'download_network_proxy_auto_hint':
@@ -188386,6 +195872,267 @@ extension on _StringsPtBr {
         return 'No text selected.';
       case 'video_library_empty_source_hint':
         return 'Add a video folder from Sources to build your library';
+      case 'video_source_scrape_action':
+        return 'Scrape this source';
+      case 'video_source_scrape_settings':
+        return 'Source scrape settings';
+      case 'video_source_scrape_provider':
+        return 'Primary metadata source';
+      case 'video_source_scrape_provider_inherit':
+        return 'Use global default';
+      case 'video_source_scrape_auto_after_scan':
+        return 'Scrape after scanning';
+      case 'video_source_scrape_auto_after_scan_hint':
+        return 'Run metadata scraping automatically after this source is scanned';
+      case 'video_source_scrape_write_nfo':
+        return 'Write NFO files';
+      case 'video_source_scrape_write_images':
+        return 'Write image files';
+      case 'video_source_scrape_use_fanart':
+        return 'Use Fanart images';
+      case 'video_source_scrape_progress':
+        return (
+                {required Object phase,
+                required Object current,
+                required Object total}) =>
+            '${phase} · ${current}/${total}';
+      case 'video_source_scrape_last_summary':
+        return (
+                {required Object status,
+                required Object succeeded,
+                required Object pending,
+                required Object failed}) =>
+            'Last scrape (${status}): ${succeeded} succeeded, ${pending} pending, ${failed} failed';
+      case 'video_source_scrape_phase_planning':
+        return 'Planning';
+      case 'video_source_scrape_phase_recognizing':
+        return 'Matching';
+      case 'video_source_scrape_phase_fetching':
+        return 'Fetching metadata';
+      case 'video_source_scrape_phase_applying':
+        return 'Saving metadata';
+      case 'video_source_scrape_phase_writing_sidecars':
+        return 'Writing sidecars';
+      case 'video_source_scrape_status_interrupted':
+        return 'Interrupted';
+      case 'video_source_scrape_global_provider':
+        return 'Default metadata source';
+      case 'video_source_scrape_global_provider_hint':
+        return 'Used by video sources that inherit the global setting';
+      case 'video_source_scrape_fanart_key':
+        return 'Fanart API key';
+      case 'video_source_scrape_fanart_key_hint':
+        return 'Optional key used to fill missing artwork from Fanart';
+      case 'video_source_scrape_bangumi_token':
+        return 'Bangumi access token';
+      case 'video_source_scrape_bangumi_token_hint':
+        return 'Optional access token for the official Bangumi API v0';
+      case 'video_source_scrape_douban_endpoint':
+        return 'Authorized Douban API endpoint';
+      case 'video_source_scrape_douban_endpoint_hint':
+        return 'Douban is unavailable unless both an authorized endpoint and token are configured';
+      case 'video_source_scrape_douban_token':
+        return 'Authorized Douban API token';
+      case 'video_source_scrape_douban_token_hint':
+        return 'Douban is unavailable unless both an authorized endpoint and token are configured';
+      case 'video_source_scrape_locale':
+        return 'Metadata language';
+      case 'video_source_scrape_locale_hint':
+        return 'Preferred language for titles, summaries and images';
+      case 'video_source_scrape_confirmation_title':
+        return 'Confirm metadata match';
+      case 'video_source_scrape_confirmation_hint':
+        return 'Multiple exact matches were found. Choose the correct work to save its provider binding.';
+      case 'video_source_scrape_confirmation_skip':
+        return 'Skip this work';
+      case 'video_source_scrape_nfo_policy':
+        return 'NFO write policy';
+      case 'video_source_scrape_image_policy':
+        return 'Image write policy';
+      case 'video_source_scrape_policy_skip':
+        return 'Do not write';
+      case 'video_source_scrape_policy_missing_only':
+        return 'Only when missing';
+      case 'video_source_scrape_policy_overwrite':
+        return 'Update Hibiki files';
+      case 'video_source_scrape_external_overwrite':
+        return 'Allow protected sidecar overwrite';
+      case 'video_source_scrape_external_overwrite_hint':
+        return 'Third-party or user-modified files remain protected until you confirm each manual scrape batch again.';
+      case 'video_source_scrape_external_overwrite_confirm_title':
+        return 'Overwrite protected sidecars?';
+      case 'video_source_scrape_external_overwrite_confirm_body':
+        return 'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
+      case 'video_source_scrape_tasks_open':
+        return 'Background tasks';
+      case 'video_source_scrape_background_started':
+        return 'Scraping is running in the background';
+      case 'video_source_scrape_tasks_current':
+        return 'Current task';
+      case 'video_source_scrape_tasks_history':
+        return 'Recent tasks';
+      case 'video_source_scrape_tasks_empty':
+        return 'No scrape tasks yet';
+      case 'video_source_scrape_waiting_confirmation':
+        return 'Waiting for your confirmation';
+      case 'video_source_scrape_phase_scanning':
+        return 'Scanning source';
+      case 'video_library_all_videos':
+        return 'All videos';
+      case 'video_work_voice_roles':
+        return 'Voice cast and characters';
+      case 'video_work_cast_crew':
+        return 'Cast and crew';
+      case 'video_work_trailers':
+        return 'Trailers';
+      case 'video_work_extras':
+        return 'Extras';
+      case 'video_work_details':
+        return 'Details';
+      case 'video_work_external_ids':
+        return 'External IDs';
+      case 'video_work_metadata_pending':
+        return 'Detailed metadata has not been scraped yet. Retry this source from Sources, then reopen the work.';
+      case 'video_work_genres':
+        return 'Genres';
+      case 'video_work_keywords':
+        return 'Keywords';
+      case 'video_work_studios':
+        return 'Studios';
+      case 'video_work_countries':
+        return 'Countries';
+      case 'video_work_content_rating':
+        return 'Content rating';
+      case 'video_all_videos_list_view':
+        return 'List view';
+      case 'video_all_videos_grid_view':
+        return 'Grid view';
+      case 'video_home_continue_episode_number':
+        return ({required Object n}) => 'Playing episode ${n}';
+      case 'video_home_next_episode_number':
+        return ({required Object n}) => 'Next · Episode ${n}';
+      case 'video_home_recent_episode_number':
+        return ({required Object n}) => 'Recently added · Episode ${n}';
+      case 'video_home_remaining_minutes':
+        return ({required Object minutes}) => '${minutes} min remaining';
+      case 'video_discovery_tab':
+        return 'Discover';
+      case 'video_discovery_search_hint':
+        return 'Search movies, series, anime';
+      case 'video_discovery_hot':
+        return 'Popular now';
+      case 'video_discovery_seasonal_anime':
+        return 'Seasonal anime';
+      case 'video_discovery_all_works':
+        return 'All titles';
+      case 'video_discovery_search_results':
+        return 'Search results';
+      case 'video_discovery_provider_warning':
+        return 'Some providers are unavailable. Showing available results.';
+      case 'video_discovery_load_failed':
+        return 'Could not load discovery results.';
+      case 'video_discovery_empty':
+        return 'No matching titles.';
+      case 'video_discovery_resource_search':
+        return 'Search resources';
+      case 'video_discovery_subtitle_search':
+        return 'Search subtitles';
+      case 'video_discovery_subscribe':
+        return 'Subscribe';
+      case 'video_discovery_subscription_manage':
+        return 'Manage subscription';
+      case 'video_discovery_pipeline_idle':
+        return 'Not downloaded → Download → Organize → Subtitles → Scrape → Library';
+      case 'video_discovery_details_load_failed':
+        return 'Could not load title details.';
+      case 'video_discovery_sort_popularity':
+        return 'Popularity';
+      case 'video_discovery_sort_rating':
+        return 'Rating';
+      case 'video_discovery_sort_release':
+        return 'Release date';
+      case 'video_discovery_in_library':
+        return 'In library';
+      case 'video_discovery_play':
+        return 'Play';
+      case 'download_resources_tab':
+        return 'Resources';
+      case 'video_external_settings_section':
+        return 'External resource and subtitle providers';
+      case 'video_torznab_settings_title':
+        return 'Torznab indexers';
+      case 'video_torznab_settings_hint':
+        return 'Configure one or more Jackett, Prowlarr, or compatible Torznab endpoints. Secrets stay on this device.';
+      case 'video_torznab_add':
+        return 'Add indexer';
+      case 'video_torznab_name':
+        return 'Name';
+      case 'video_torznab_endpoint':
+        return 'Endpoint';
+      case 'video_torznab_endpoint_hint':
+        return 'HTTPS is required except for loopback addresses.';
+      case 'video_torznab_api_key':
+        return 'API key';
+      case 'video_torznab_priority':
+        return 'Priority';
+      case 'video_torznab_categories':
+        return 'Categories';
+      case 'video_torznab_categories_hint':
+        return 'Comma-separated numeric category IDs';
+      case 'video_external_enabled':
+        return 'Enabled';
+      case 'video_external_insecure_http':
+        return 'Allow insecure HTTP';
+      case 'video_external_insecure_http_hint':
+        return 'Use only for a trusted local network endpoint.';
+      case 'video_external_endpoint_invalid':
+        return 'Enter a valid endpoint without credentials, query parameters, or fragments.';
+      case 'video_opensubtitles_settings_title':
+        return 'OpenSubtitles';
+      case 'video_opensubtitles_settings_hint':
+        return 'API credentials and preferred subtitle languages stay on this device.';
+      case 'video_opensubtitles_user_agent':
+        return 'User-Agent';
+      case 'video_opensubtitles_languages':
+        return 'Preferred languages';
+      case 'video_opensubtitles_languages_hint':
+        return 'Comma-separated language codes, for example zh-CN,en,ja';
+      case 'video_download_path_mappings_title':
+        return 'qBittorrent path mappings';
+      case 'video_download_path_mappings_hint':
+        return 'Map each qBittorrent remote root to a locally accessible folder.';
+      case 'video_download_path_mapping_add':
+        return 'Add path mapping';
+      case 'video_download_backend_profile_id':
+        return 'Backend profile ID';
+      case 'video_download_remote_root':
+        return 'Remote root';
+      case 'video_download_local_root':
+        return 'Local root';
+      case 'video_download_target_source_title':
+        return 'Default managed video source';
+      case 'video_download_target_source_hint':
+        return 'New downloads are organized into this local video source.';
+      case 'video_download_target_source_none':
+        return 'Choose a local video source';
+      case 'video_external_remove':
+        return 'Remove';
+      case 'video_external_username_optional':
+        return 'Username (optional)';
+      case 'video_external_password_optional':
+        return 'Password (optional)';
+      case 'video_external_api_key':
+        return 'API key';
+      case 'video_external_save_error':
+        return 'The configuration could not be saved. Check the highlighted fields.';
+      case 'video_external_categories_invalid':
+        return 'Categories must be comma-separated numeric IDs.';
+      case 'video_download_path_mapping_invalid':
+        return 'Enter a profile ID, remote root, and absolute local root.';
+      case 'video_opensubtitles_endpoint':
+        return 'API endpoint';
+      case 'video_download_target_source_empty':
+        return 'No locally accessible video source is available. Add one on the Sources tab first.';
       default:
         return null;
     }
@@ -189730,8 +197477,6 @@ extension on _StringsRu {
         return 'Download backend is not configured yet.';
       case 'download_clear_finished':
         return 'Clear finished';
-      case 'download_discover_tab':
-        return 'Discover';
       case 'download_network_proxy_auto':
         return 'Auto';
       case 'download_network_proxy_auto_hint':
@@ -194783,6 +202528,267 @@ extension on _StringsRu {
         return 'No text selected.';
       case 'video_library_empty_source_hint':
         return 'Add a video folder from Sources to build your library';
+      case 'video_source_scrape_action':
+        return 'Scrape this source';
+      case 'video_source_scrape_settings':
+        return 'Source scrape settings';
+      case 'video_source_scrape_provider':
+        return 'Primary metadata source';
+      case 'video_source_scrape_provider_inherit':
+        return 'Use global default';
+      case 'video_source_scrape_auto_after_scan':
+        return 'Scrape after scanning';
+      case 'video_source_scrape_auto_after_scan_hint':
+        return 'Run metadata scraping automatically after this source is scanned';
+      case 'video_source_scrape_write_nfo':
+        return 'Write NFO files';
+      case 'video_source_scrape_write_images':
+        return 'Write image files';
+      case 'video_source_scrape_use_fanart':
+        return 'Use Fanart images';
+      case 'video_source_scrape_progress':
+        return (
+                {required Object phase,
+                required Object current,
+                required Object total}) =>
+            '${phase} · ${current}/${total}';
+      case 'video_source_scrape_last_summary':
+        return (
+                {required Object status,
+                required Object succeeded,
+                required Object pending,
+                required Object failed}) =>
+            'Last scrape (${status}): ${succeeded} succeeded, ${pending} pending, ${failed} failed';
+      case 'video_source_scrape_phase_planning':
+        return 'Planning';
+      case 'video_source_scrape_phase_recognizing':
+        return 'Matching';
+      case 'video_source_scrape_phase_fetching':
+        return 'Fetching metadata';
+      case 'video_source_scrape_phase_applying':
+        return 'Saving metadata';
+      case 'video_source_scrape_phase_writing_sidecars':
+        return 'Writing sidecars';
+      case 'video_source_scrape_status_interrupted':
+        return 'Interrupted';
+      case 'video_source_scrape_global_provider':
+        return 'Default metadata source';
+      case 'video_source_scrape_global_provider_hint':
+        return 'Used by video sources that inherit the global setting';
+      case 'video_source_scrape_fanart_key':
+        return 'Fanart API key';
+      case 'video_source_scrape_fanart_key_hint':
+        return 'Optional key used to fill missing artwork from Fanart';
+      case 'video_source_scrape_bangumi_token':
+        return 'Bangumi access token';
+      case 'video_source_scrape_bangumi_token_hint':
+        return 'Optional access token for the official Bangumi API v0';
+      case 'video_source_scrape_douban_endpoint':
+        return 'Authorized Douban API endpoint';
+      case 'video_source_scrape_douban_endpoint_hint':
+        return 'Douban is unavailable unless both an authorized endpoint and token are configured';
+      case 'video_source_scrape_douban_token':
+        return 'Authorized Douban API token';
+      case 'video_source_scrape_douban_token_hint':
+        return 'Douban is unavailable unless both an authorized endpoint and token are configured';
+      case 'video_source_scrape_locale':
+        return 'Metadata language';
+      case 'video_source_scrape_locale_hint':
+        return 'Preferred language for titles, summaries and images';
+      case 'video_source_scrape_confirmation_title':
+        return 'Confirm metadata match';
+      case 'video_source_scrape_confirmation_hint':
+        return 'Multiple exact matches were found. Choose the correct work to save its provider binding.';
+      case 'video_source_scrape_confirmation_skip':
+        return 'Skip this work';
+      case 'video_source_scrape_nfo_policy':
+        return 'NFO write policy';
+      case 'video_source_scrape_image_policy':
+        return 'Image write policy';
+      case 'video_source_scrape_policy_skip':
+        return 'Do not write';
+      case 'video_source_scrape_policy_missing_only':
+        return 'Only when missing';
+      case 'video_source_scrape_policy_overwrite':
+        return 'Update Hibiki files';
+      case 'video_source_scrape_external_overwrite':
+        return 'Allow protected sidecar overwrite';
+      case 'video_source_scrape_external_overwrite_hint':
+        return 'Third-party or user-modified files remain protected until you confirm each manual scrape batch again.';
+      case 'video_source_scrape_external_overwrite_confirm_title':
+        return 'Overwrite protected sidecars?';
+      case 'video_source_scrape_external_overwrite_confirm_body':
+        return 'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
+      case 'video_source_scrape_tasks_open':
+        return 'Background tasks';
+      case 'video_source_scrape_background_started':
+        return 'Scraping is running in the background';
+      case 'video_source_scrape_tasks_current':
+        return 'Current task';
+      case 'video_source_scrape_tasks_history':
+        return 'Recent tasks';
+      case 'video_source_scrape_tasks_empty':
+        return 'No scrape tasks yet';
+      case 'video_source_scrape_waiting_confirmation':
+        return 'Waiting for your confirmation';
+      case 'video_source_scrape_phase_scanning':
+        return 'Scanning source';
+      case 'video_library_all_videos':
+        return 'All videos';
+      case 'video_work_voice_roles':
+        return 'Voice cast and characters';
+      case 'video_work_cast_crew':
+        return 'Cast and crew';
+      case 'video_work_trailers':
+        return 'Trailers';
+      case 'video_work_extras':
+        return 'Extras';
+      case 'video_work_details':
+        return 'Details';
+      case 'video_work_external_ids':
+        return 'External IDs';
+      case 'video_work_metadata_pending':
+        return 'Detailed metadata has not been scraped yet. Retry this source from Sources, then reopen the work.';
+      case 'video_work_genres':
+        return 'Genres';
+      case 'video_work_keywords':
+        return 'Keywords';
+      case 'video_work_studios':
+        return 'Studios';
+      case 'video_work_countries':
+        return 'Countries';
+      case 'video_work_content_rating':
+        return 'Content rating';
+      case 'video_all_videos_list_view':
+        return 'List view';
+      case 'video_all_videos_grid_view':
+        return 'Grid view';
+      case 'video_home_continue_episode_number':
+        return ({required Object n}) => 'Playing episode ${n}';
+      case 'video_home_next_episode_number':
+        return ({required Object n}) => 'Next · Episode ${n}';
+      case 'video_home_recent_episode_number':
+        return ({required Object n}) => 'Recently added · Episode ${n}';
+      case 'video_home_remaining_minutes':
+        return ({required Object minutes}) => '${minutes} min remaining';
+      case 'video_discovery_tab':
+        return 'Discover';
+      case 'video_discovery_search_hint':
+        return 'Search movies, series, anime';
+      case 'video_discovery_hot':
+        return 'Popular now';
+      case 'video_discovery_seasonal_anime':
+        return 'Seasonal anime';
+      case 'video_discovery_all_works':
+        return 'All titles';
+      case 'video_discovery_search_results':
+        return 'Search results';
+      case 'video_discovery_provider_warning':
+        return 'Some providers are unavailable. Showing available results.';
+      case 'video_discovery_load_failed':
+        return 'Could not load discovery results.';
+      case 'video_discovery_empty':
+        return 'No matching titles.';
+      case 'video_discovery_resource_search':
+        return 'Search resources';
+      case 'video_discovery_subtitle_search':
+        return 'Search subtitles';
+      case 'video_discovery_subscribe':
+        return 'Subscribe';
+      case 'video_discovery_subscription_manage':
+        return 'Manage subscription';
+      case 'video_discovery_pipeline_idle':
+        return 'Not downloaded → Download → Organize → Subtitles → Scrape → Library';
+      case 'video_discovery_details_load_failed':
+        return 'Could not load title details.';
+      case 'video_discovery_sort_popularity':
+        return 'Popularity';
+      case 'video_discovery_sort_rating':
+        return 'Rating';
+      case 'video_discovery_sort_release':
+        return 'Release date';
+      case 'video_discovery_in_library':
+        return 'In library';
+      case 'video_discovery_play':
+        return 'Play';
+      case 'download_resources_tab':
+        return 'Resources';
+      case 'video_external_settings_section':
+        return 'External resource and subtitle providers';
+      case 'video_torznab_settings_title':
+        return 'Torznab indexers';
+      case 'video_torznab_settings_hint':
+        return 'Configure one or more Jackett, Prowlarr, or compatible Torznab endpoints. Secrets stay on this device.';
+      case 'video_torznab_add':
+        return 'Add indexer';
+      case 'video_torznab_name':
+        return 'Name';
+      case 'video_torznab_endpoint':
+        return 'Endpoint';
+      case 'video_torznab_endpoint_hint':
+        return 'HTTPS is required except for loopback addresses.';
+      case 'video_torznab_api_key':
+        return 'API key';
+      case 'video_torznab_priority':
+        return 'Priority';
+      case 'video_torznab_categories':
+        return 'Categories';
+      case 'video_torznab_categories_hint':
+        return 'Comma-separated numeric category IDs';
+      case 'video_external_enabled':
+        return 'Enabled';
+      case 'video_external_insecure_http':
+        return 'Allow insecure HTTP';
+      case 'video_external_insecure_http_hint':
+        return 'Use only for a trusted local network endpoint.';
+      case 'video_external_endpoint_invalid':
+        return 'Enter a valid endpoint without credentials, query parameters, or fragments.';
+      case 'video_opensubtitles_settings_title':
+        return 'OpenSubtitles';
+      case 'video_opensubtitles_settings_hint':
+        return 'API credentials and preferred subtitle languages stay on this device.';
+      case 'video_opensubtitles_user_agent':
+        return 'User-Agent';
+      case 'video_opensubtitles_languages':
+        return 'Preferred languages';
+      case 'video_opensubtitles_languages_hint':
+        return 'Comma-separated language codes, for example zh-CN,en,ja';
+      case 'video_download_path_mappings_title':
+        return 'qBittorrent path mappings';
+      case 'video_download_path_mappings_hint':
+        return 'Map each qBittorrent remote root to a locally accessible folder.';
+      case 'video_download_path_mapping_add':
+        return 'Add path mapping';
+      case 'video_download_backend_profile_id':
+        return 'Backend profile ID';
+      case 'video_download_remote_root':
+        return 'Remote root';
+      case 'video_download_local_root':
+        return 'Local root';
+      case 'video_download_target_source_title':
+        return 'Default managed video source';
+      case 'video_download_target_source_hint':
+        return 'New downloads are organized into this local video source.';
+      case 'video_download_target_source_none':
+        return 'Choose a local video source';
+      case 'video_external_remove':
+        return 'Remove';
+      case 'video_external_username_optional':
+        return 'Username (optional)';
+      case 'video_external_password_optional':
+        return 'Password (optional)';
+      case 'video_external_api_key':
+        return 'API key';
+      case 'video_external_save_error':
+        return 'The configuration could not be saved. Check the highlighted fields.';
+      case 'video_external_categories_invalid':
+        return 'Categories must be comma-separated numeric IDs.';
+      case 'video_download_path_mapping_invalid':
+        return 'Enter a profile ID, remote root, and absolute local root.';
+      case 'video_opensubtitles_endpoint':
+        return 'API endpoint';
+      case 'video_download_target_source_empty':
+        return 'No locally accessible video source is available. Add one on the Sources tab first.';
       default:
         return null;
     }
@@ -196119,8 +204125,6 @@ extension on _StringsTh {
         return 'Download backend is not configured yet.';
       case 'download_clear_finished':
         return 'Clear finished';
-      case 'download_discover_tab':
-        return 'Discover';
       case 'download_network_proxy_auto':
         return 'Auto';
       case 'download_network_proxy_auto_hint':
@@ -201163,6 +209167,267 @@ extension on _StringsTh {
         return 'No text selected.';
       case 'video_library_empty_source_hint':
         return 'Add a video folder from Sources to build your library';
+      case 'video_source_scrape_action':
+        return 'Scrape this source';
+      case 'video_source_scrape_settings':
+        return 'Source scrape settings';
+      case 'video_source_scrape_provider':
+        return 'Primary metadata source';
+      case 'video_source_scrape_provider_inherit':
+        return 'Use global default';
+      case 'video_source_scrape_auto_after_scan':
+        return 'Scrape after scanning';
+      case 'video_source_scrape_auto_after_scan_hint':
+        return 'Run metadata scraping automatically after this source is scanned';
+      case 'video_source_scrape_write_nfo':
+        return 'Write NFO files';
+      case 'video_source_scrape_write_images':
+        return 'Write image files';
+      case 'video_source_scrape_use_fanart':
+        return 'Use Fanart images';
+      case 'video_source_scrape_progress':
+        return (
+                {required Object phase,
+                required Object current,
+                required Object total}) =>
+            '${phase} · ${current}/${total}';
+      case 'video_source_scrape_last_summary':
+        return (
+                {required Object status,
+                required Object succeeded,
+                required Object pending,
+                required Object failed}) =>
+            'Last scrape (${status}): ${succeeded} succeeded, ${pending} pending, ${failed} failed';
+      case 'video_source_scrape_phase_planning':
+        return 'Planning';
+      case 'video_source_scrape_phase_recognizing':
+        return 'Matching';
+      case 'video_source_scrape_phase_fetching':
+        return 'Fetching metadata';
+      case 'video_source_scrape_phase_applying':
+        return 'Saving metadata';
+      case 'video_source_scrape_phase_writing_sidecars':
+        return 'Writing sidecars';
+      case 'video_source_scrape_status_interrupted':
+        return 'Interrupted';
+      case 'video_source_scrape_global_provider':
+        return 'Default metadata source';
+      case 'video_source_scrape_global_provider_hint':
+        return 'Used by video sources that inherit the global setting';
+      case 'video_source_scrape_fanart_key':
+        return 'Fanart API key';
+      case 'video_source_scrape_fanart_key_hint':
+        return 'Optional key used to fill missing artwork from Fanart';
+      case 'video_source_scrape_bangumi_token':
+        return 'Bangumi access token';
+      case 'video_source_scrape_bangumi_token_hint':
+        return 'Optional access token for the official Bangumi API v0';
+      case 'video_source_scrape_douban_endpoint':
+        return 'Authorized Douban API endpoint';
+      case 'video_source_scrape_douban_endpoint_hint':
+        return 'Douban is unavailable unless both an authorized endpoint and token are configured';
+      case 'video_source_scrape_douban_token':
+        return 'Authorized Douban API token';
+      case 'video_source_scrape_douban_token_hint':
+        return 'Douban is unavailable unless both an authorized endpoint and token are configured';
+      case 'video_source_scrape_locale':
+        return 'Metadata language';
+      case 'video_source_scrape_locale_hint':
+        return 'Preferred language for titles, summaries and images';
+      case 'video_source_scrape_confirmation_title':
+        return 'Confirm metadata match';
+      case 'video_source_scrape_confirmation_hint':
+        return 'Multiple exact matches were found. Choose the correct work to save its provider binding.';
+      case 'video_source_scrape_confirmation_skip':
+        return 'Skip this work';
+      case 'video_source_scrape_nfo_policy':
+        return 'NFO write policy';
+      case 'video_source_scrape_image_policy':
+        return 'Image write policy';
+      case 'video_source_scrape_policy_skip':
+        return 'Do not write';
+      case 'video_source_scrape_policy_missing_only':
+        return 'Only when missing';
+      case 'video_source_scrape_policy_overwrite':
+        return 'Update Hibiki files';
+      case 'video_source_scrape_external_overwrite':
+        return 'Allow protected sidecar overwrite';
+      case 'video_source_scrape_external_overwrite_hint':
+        return 'Third-party or user-modified files remain protected until you confirm each manual scrape batch again.';
+      case 'video_source_scrape_external_overwrite_confirm_title':
+        return 'Overwrite protected sidecars?';
+      case 'video_source_scrape_external_overwrite_confirm_body':
+        return 'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
+      case 'video_source_scrape_tasks_open':
+        return 'Background tasks';
+      case 'video_source_scrape_background_started':
+        return 'Scraping is running in the background';
+      case 'video_source_scrape_tasks_current':
+        return 'Current task';
+      case 'video_source_scrape_tasks_history':
+        return 'Recent tasks';
+      case 'video_source_scrape_tasks_empty':
+        return 'No scrape tasks yet';
+      case 'video_source_scrape_waiting_confirmation':
+        return 'Waiting for your confirmation';
+      case 'video_source_scrape_phase_scanning':
+        return 'Scanning source';
+      case 'video_library_all_videos':
+        return 'All videos';
+      case 'video_work_voice_roles':
+        return 'Voice cast and characters';
+      case 'video_work_cast_crew':
+        return 'Cast and crew';
+      case 'video_work_trailers':
+        return 'Trailers';
+      case 'video_work_extras':
+        return 'Extras';
+      case 'video_work_details':
+        return 'Details';
+      case 'video_work_external_ids':
+        return 'External IDs';
+      case 'video_work_metadata_pending':
+        return 'Detailed metadata has not been scraped yet. Retry this source from Sources, then reopen the work.';
+      case 'video_work_genres':
+        return 'Genres';
+      case 'video_work_keywords':
+        return 'Keywords';
+      case 'video_work_studios':
+        return 'Studios';
+      case 'video_work_countries':
+        return 'Countries';
+      case 'video_work_content_rating':
+        return 'Content rating';
+      case 'video_all_videos_list_view':
+        return 'List view';
+      case 'video_all_videos_grid_view':
+        return 'Grid view';
+      case 'video_home_continue_episode_number':
+        return ({required Object n}) => 'Playing episode ${n}';
+      case 'video_home_next_episode_number':
+        return ({required Object n}) => 'Next · Episode ${n}';
+      case 'video_home_recent_episode_number':
+        return ({required Object n}) => 'Recently added · Episode ${n}';
+      case 'video_home_remaining_minutes':
+        return ({required Object minutes}) => '${minutes} min remaining';
+      case 'video_discovery_tab':
+        return 'Discover';
+      case 'video_discovery_search_hint':
+        return 'Search movies, series, anime';
+      case 'video_discovery_hot':
+        return 'Popular now';
+      case 'video_discovery_seasonal_anime':
+        return 'Seasonal anime';
+      case 'video_discovery_all_works':
+        return 'All titles';
+      case 'video_discovery_search_results':
+        return 'Search results';
+      case 'video_discovery_provider_warning':
+        return 'Some providers are unavailable. Showing available results.';
+      case 'video_discovery_load_failed':
+        return 'Could not load discovery results.';
+      case 'video_discovery_empty':
+        return 'No matching titles.';
+      case 'video_discovery_resource_search':
+        return 'Search resources';
+      case 'video_discovery_subtitle_search':
+        return 'Search subtitles';
+      case 'video_discovery_subscribe':
+        return 'Subscribe';
+      case 'video_discovery_subscription_manage':
+        return 'Manage subscription';
+      case 'video_discovery_pipeline_idle':
+        return 'Not downloaded → Download → Organize → Subtitles → Scrape → Library';
+      case 'video_discovery_details_load_failed':
+        return 'Could not load title details.';
+      case 'video_discovery_sort_popularity':
+        return 'Popularity';
+      case 'video_discovery_sort_rating':
+        return 'Rating';
+      case 'video_discovery_sort_release':
+        return 'Release date';
+      case 'video_discovery_in_library':
+        return 'In library';
+      case 'video_discovery_play':
+        return 'Play';
+      case 'download_resources_tab':
+        return 'Resources';
+      case 'video_external_settings_section':
+        return 'External resource and subtitle providers';
+      case 'video_torznab_settings_title':
+        return 'Torznab indexers';
+      case 'video_torznab_settings_hint':
+        return 'Configure one or more Jackett, Prowlarr, or compatible Torznab endpoints. Secrets stay on this device.';
+      case 'video_torznab_add':
+        return 'Add indexer';
+      case 'video_torznab_name':
+        return 'Name';
+      case 'video_torznab_endpoint':
+        return 'Endpoint';
+      case 'video_torznab_endpoint_hint':
+        return 'HTTPS is required except for loopback addresses.';
+      case 'video_torznab_api_key':
+        return 'API key';
+      case 'video_torznab_priority':
+        return 'Priority';
+      case 'video_torznab_categories':
+        return 'Categories';
+      case 'video_torznab_categories_hint':
+        return 'Comma-separated numeric category IDs';
+      case 'video_external_enabled':
+        return 'Enabled';
+      case 'video_external_insecure_http':
+        return 'Allow insecure HTTP';
+      case 'video_external_insecure_http_hint':
+        return 'Use only for a trusted local network endpoint.';
+      case 'video_external_endpoint_invalid':
+        return 'Enter a valid endpoint without credentials, query parameters, or fragments.';
+      case 'video_opensubtitles_settings_title':
+        return 'OpenSubtitles';
+      case 'video_opensubtitles_settings_hint':
+        return 'API credentials and preferred subtitle languages stay on this device.';
+      case 'video_opensubtitles_user_agent':
+        return 'User-Agent';
+      case 'video_opensubtitles_languages':
+        return 'Preferred languages';
+      case 'video_opensubtitles_languages_hint':
+        return 'Comma-separated language codes, for example zh-CN,en,ja';
+      case 'video_download_path_mappings_title':
+        return 'qBittorrent path mappings';
+      case 'video_download_path_mappings_hint':
+        return 'Map each qBittorrent remote root to a locally accessible folder.';
+      case 'video_download_path_mapping_add':
+        return 'Add path mapping';
+      case 'video_download_backend_profile_id':
+        return 'Backend profile ID';
+      case 'video_download_remote_root':
+        return 'Remote root';
+      case 'video_download_local_root':
+        return 'Local root';
+      case 'video_download_target_source_title':
+        return 'Default managed video source';
+      case 'video_download_target_source_hint':
+        return 'New downloads are organized into this local video source.';
+      case 'video_download_target_source_none':
+        return 'Choose a local video source';
+      case 'video_external_remove':
+        return 'Remove';
+      case 'video_external_username_optional':
+        return 'Username (optional)';
+      case 'video_external_password_optional':
+        return 'Password (optional)';
+      case 'video_external_api_key':
+        return 'API key';
+      case 'video_external_save_error':
+        return 'The configuration could not be saved. Check the highlighted fields.';
+      case 'video_external_categories_invalid':
+        return 'Categories must be comma-separated numeric IDs.';
+      case 'video_download_path_mapping_invalid':
+        return 'Enter a profile ID, remote root, and absolute local root.';
+      case 'video_opensubtitles_endpoint':
+        return 'API endpoint';
+      case 'video_download_target_source_empty':
+        return 'No locally accessible video source is available. Add one on the Sources tab first.';
       default:
         return null;
     }
@@ -202504,8 +210769,6 @@ extension on _StringsTr {
         return 'Download backend is not configured yet.';
       case 'download_clear_finished':
         return 'Clear finished';
-      case 'download_discover_tab':
-        return 'Discover';
       case 'download_network_proxy_auto':
         return 'Auto';
       case 'download_network_proxy_auto_hint':
@@ -207552,6 +215815,267 @@ extension on _StringsTr {
         return 'No text selected.';
       case 'video_library_empty_source_hint':
         return 'Add a video folder from Sources to build your library';
+      case 'video_source_scrape_action':
+        return 'Scrape this source';
+      case 'video_source_scrape_settings':
+        return 'Source scrape settings';
+      case 'video_source_scrape_provider':
+        return 'Primary metadata source';
+      case 'video_source_scrape_provider_inherit':
+        return 'Use global default';
+      case 'video_source_scrape_auto_after_scan':
+        return 'Scrape after scanning';
+      case 'video_source_scrape_auto_after_scan_hint':
+        return 'Run metadata scraping automatically after this source is scanned';
+      case 'video_source_scrape_write_nfo':
+        return 'Write NFO files';
+      case 'video_source_scrape_write_images':
+        return 'Write image files';
+      case 'video_source_scrape_use_fanart':
+        return 'Use Fanart images';
+      case 'video_source_scrape_progress':
+        return (
+                {required Object phase,
+                required Object current,
+                required Object total}) =>
+            '${phase} · ${current}/${total}';
+      case 'video_source_scrape_last_summary':
+        return (
+                {required Object status,
+                required Object succeeded,
+                required Object pending,
+                required Object failed}) =>
+            'Last scrape (${status}): ${succeeded} succeeded, ${pending} pending, ${failed} failed';
+      case 'video_source_scrape_phase_planning':
+        return 'Planning';
+      case 'video_source_scrape_phase_recognizing':
+        return 'Matching';
+      case 'video_source_scrape_phase_fetching':
+        return 'Fetching metadata';
+      case 'video_source_scrape_phase_applying':
+        return 'Saving metadata';
+      case 'video_source_scrape_phase_writing_sidecars':
+        return 'Writing sidecars';
+      case 'video_source_scrape_status_interrupted':
+        return 'Interrupted';
+      case 'video_source_scrape_global_provider':
+        return 'Default metadata source';
+      case 'video_source_scrape_global_provider_hint':
+        return 'Used by video sources that inherit the global setting';
+      case 'video_source_scrape_fanart_key':
+        return 'Fanart API key';
+      case 'video_source_scrape_fanart_key_hint':
+        return 'Optional key used to fill missing artwork from Fanart';
+      case 'video_source_scrape_bangumi_token':
+        return 'Bangumi access token';
+      case 'video_source_scrape_bangumi_token_hint':
+        return 'Optional access token for the official Bangumi API v0';
+      case 'video_source_scrape_douban_endpoint':
+        return 'Authorized Douban API endpoint';
+      case 'video_source_scrape_douban_endpoint_hint':
+        return 'Douban is unavailable unless both an authorized endpoint and token are configured';
+      case 'video_source_scrape_douban_token':
+        return 'Authorized Douban API token';
+      case 'video_source_scrape_douban_token_hint':
+        return 'Douban is unavailable unless both an authorized endpoint and token are configured';
+      case 'video_source_scrape_locale':
+        return 'Metadata language';
+      case 'video_source_scrape_locale_hint':
+        return 'Preferred language for titles, summaries and images';
+      case 'video_source_scrape_confirmation_title':
+        return 'Confirm metadata match';
+      case 'video_source_scrape_confirmation_hint':
+        return 'Multiple exact matches were found. Choose the correct work to save its provider binding.';
+      case 'video_source_scrape_confirmation_skip':
+        return 'Skip this work';
+      case 'video_source_scrape_nfo_policy':
+        return 'NFO write policy';
+      case 'video_source_scrape_image_policy':
+        return 'Image write policy';
+      case 'video_source_scrape_policy_skip':
+        return 'Do not write';
+      case 'video_source_scrape_policy_missing_only':
+        return 'Only when missing';
+      case 'video_source_scrape_policy_overwrite':
+        return 'Update Hibiki files';
+      case 'video_source_scrape_external_overwrite':
+        return 'Allow protected sidecar overwrite';
+      case 'video_source_scrape_external_overwrite_hint':
+        return 'Third-party or user-modified files remain protected until you confirm each manual scrape batch again.';
+      case 'video_source_scrape_external_overwrite_confirm_title':
+        return 'Overwrite protected sidecars?';
+      case 'video_source_scrape_external_overwrite_confirm_body':
+        return 'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
+      case 'video_source_scrape_tasks_open':
+        return 'Background tasks';
+      case 'video_source_scrape_background_started':
+        return 'Scraping is running in the background';
+      case 'video_source_scrape_tasks_current':
+        return 'Current task';
+      case 'video_source_scrape_tasks_history':
+        return 'Recent tasks';
+      case 'video_source_scrape_tasks_empty':
+        return 'No scrape tasks yet';
+      case 'video_source_scrape_waiting_confirmation':
+        return 'Waiting for your confirmation';
+      case 'video_source_scrape_phase_scanning':
+        return 'Scanning source';
+      case 'video_library_all_videos':
+        return 'All videos';
+      case 'video_work_voice_roles':
+        return 'Voice cast and characters';
+      case 'video_work_cast_crew':
+        return 'Cast and crew';
+      case 'video_work_trailers':
+        return 'Trailers';
+      case 'video_work_extras':
+        return 'Extras';
+      case 'video_work_details':
+        return 'Details';
+      case 'video_work_external_ids':
+        return 'External IDs';
+      case 'video_work_metadata_pending':
+        return 'Detailed metadata has not been scraped yet. Retry this source from Sources, then reopen the work.';
+      case 'video_work_genres':
+        return 'Genres';
+      case 'video_work_keywords':
+        return 'Keywords';
+      case 'video_work_studios':
+        return 'Studios';
+      case 'video_work_countries':
+        return 'Countries';
+      case 'video_work_content_rating':
+        return 'Content rating';
+      case 'video_all_videos_list_view':
+        return 'List view';
+      case 'video_all_videos_grid_view':
+        return 'Grid view';
+      case 'video_home_continue_episode_number':
+        return ({required Object n}) => 'Playing episode ${n}';
+      case 'video_home_next_episode_number':
+        return ({required Object n}) => 'Next · Episode ${n}';
+      case 'video_home_recent_episode_number':
+        return ({required Object n}) => 'Recently added · Episode ${n}';
+      case 'video_home_remaining_minutes':
+        return ({required Object minutes}) => '${minutes} min remaining';
+      case 'video_discovery_tab':
+        return 'Discover';
+      case 'video_discovery_search_hint':
+        return 'Search movies, series, anime';
+      case 'video_discovery_hot':
+        return 'Popular now';
+      case 'video_discovery_seasonal_anime':
+        return 'Seasonal anime';
+      case 'video_discovery_all_works':
+        return 'All titles';
+      case 'video_discovery_search_results':
+        return 'Search results';
+      case 'video_discovery_provider_warning':
+        return 'Some providers are unavailable. Showing available results.';
+      case 'video_discovery_load_failed':
+        return 'Could not load discovery results.';
+      case 'video_discovery_empty':
+        return 'No matching titles.';
+      case 'video_discovery_resource_search':
+        return 'Search resources';
+      case 'video_discovery_subtitle_search':
+        return 'Search subtitles';
+      case 'video_discovery_subscribe':
+        return 'Subscribe';
+      case 'video_discovery_subscription_manage':
+        return 'Manage subscription';
+      case 'video_discovery_pipeline_idle':
+        return 'Not downloaded → Download → Organize → Subtitles → Scrape → Library';
+      case 'video_discovery_details_load_failed':
+        return 'Could not load title details.';
+      case 'video_discovery_sort_popularity':
+        return 'Popularity';
+      case 'video_discovery_sort_rating':
+        return 'Rating';
+      case 'video_discovery_sort_release':
+        return 'Release date';
+      case 'video_discovery_in_library':
+        return 'In library';
+      case 'video_discovery_play':
+        return 'Play';
+      case 'download_resources_tab':
+        return 'Resources';
+      case 'video_external_settings_section':
+        return 'External resource and subtitle providers';
+      case 'video_torznab_settings_title':
+        return 'Torznab indexers';
+      case 'video_torznab_settings_hint':
+        return 'Configure one or more Jackett, Prowlarr, or compatible Torznab endpoints. Secrets stay on this device.';
+      case 'video_torznab_add':
+        return 'Add indexer';
+      case 'video_torznab_name':
+        return 'Name';
+      case 'video_torznab_endpoint':
+        return 'Endpoint';
+      case 'video_torznab_endpoint_hint':
+        return 'HTTPS is required except for loopback addresses.';
+      case 'video_torznab_api_key':
+        return 'API key';
+      case 'video_torznab_priority':
+        return 'Priority';
+      case 'video_torznab_categories':
+        return 'Categories';
+      case 'video_torznab_categories_hint':
+        return 'Comma-separated numeric category IDs';
+      case 'video_external_enabled':
+        return 'Enabled';
+      case 'video_external_insecure_http':
+        return 'Allow insecure HTTP';
+      case 'video_external_insecure_http_hint':
+        return 'Use only for a trusted local network endpoint.';
+      case 'video_external_endpoint_invalid':
+        return 'Enter a valid endpoint without credentials, query parameters, or fragments.';
+      case 'video_opensubtitles_settings_title':
+        return 'OpenSubtitles';
+      case 'video_opensubtitles_settings_hint':
+        return 'API credentials and preferred subtitle languages stay on this device.';
+      case 'video_opensubtitles_user_agent':
+        return 'User-Agent';
+      case 'video_opensubtitles_languages':
+        return 'Preferred languages';
+      case 'video_opensubtitles_languages_hint':
+        return 'Comma-separated language codes, for example zh-CN,en,ja';
+      case 'video_download_path_mappings_title':
+        return 'qBittorrent path mappings';
+      case 'video_download_path_mappings_hint':
+        return 'Map each qBittorrent remote root to a locally accessible folder.';
+      case 'video_download_path_mapping_add':
+        return 'Add path mapping';
+      case 'video_download_backend_profile_id':
+        return 'Backend profile ID';
+      case 'video_download_remote_root':
+        return 'Remote root';
+      case 'video_download_local_root':
+        return 'Local root';
+      case 'video_download_target_source_title':
+        return 'Default managed video source';
+      case 'video_download_target_source_hint':
+        return 'New downloads are organized into this local video source.';
+      case 'video_download_target_source_none':
+        return 'Choose a local video source';
+      case 'video_external_remove':
+        return 'Remove';
+      case 'video_external_username_optional':
+        return 'Username (optional)';
+      case 'video_external_password_optional':
+        return 'Password (optional)';
+      case 'video_external_api_key':
+        return 'API key';
+      case 'video_external_save_error':
+        return 'The configuration could not be saved. Check the highlighted fields.';
+      case 'video_external_categories_invalid':
+        return 'Categories must be comma-separated numeric IDs.';
+      case 'video_download_path_mapping_invalid':
+        return 'Enter a profile ID, remote root, and absolute local root.';
+      case 'video_opensubtitles_endpoint':
+        return 'API endpoint';
+      case 'video_download_target_source_empty':
+        return 'No locally accessible video source is available. Add one on the Sources tab first.';
       default:
         return null;
     }
@@ -208891,8 +217415,6 @@ extension on _StringsVi {
         return 'Download backend is not configured yet.';
       case 'download_clear_finished':
         return 'Clear finished';
-      case 'download_discover_tab':
-        return 'Discover';
       case 'download_network_proxy_auto':
         return 'Auto';
       case 'download_network_proxy_auto_hint':
@@ -213937,6 +222459,267 @@ extension on _StringsVi {
         return 'No text selected.';
       case 'video_library_empty_source_hint':
         return 'Add a video folder from Sources to build your library';
+      case 'video_source_scrape_action':
+        return 'Scrape this source';
+      case 'video_source_scrape_settings':
+        return 'Source scrape settings';
+      case 'video_source_scrape_provider':
+        return 'Primary metadata source';
+      case 'video_source_scrape_provider_inherit':
+        return 'Use global default';
+      case 'video_source_scrape_auto_after_scan':
+        return 'Scrape after scanning';
+      case 'video_source_scrape_auto_after_scan_hint':
+        return 'Run metadata scraping automatically after this source is scanned';
+      case 'video_source_scrape_write_nfo':
+        return 'Write NFO files';
+      case 'video_source_scrape_write_images':
+        return 'Write image files';
+      case 'video_source_scrape_use_fanart':
+        return 'Use Fanart images';
+      case 'video_source_scrape_progress':
+        return (
+                {required Object phase,
+                required Object current,
+                required Object total}) =>
+            '${phase} · ${current}/${total}';
+      case 'video_source_scrape_last_summary':
+        return (
+                {required Object status,
+                required Object succeeded,
+                required Object pending,
+                required Object failed}) =>
+            'Last scrape (${status}): ${succeeded} succeeded, ${pending} pending, ${failed} failed';
+      case 'video_source_scrape_phase_planning':
+        return 'Planning';
+      case 'video_source_scrape_phase_recognizing':
+        return 'Matching';
+      case 'video_source_scrape_phase_fetching':
+        return 'Fetching metadata';
+      case 'video_source_scrape_phase_applying':
+        return 'Saving metadata';
+      case 'video_source_scrape_phase_writing_sidecars':
+        return 'Writing sidecars';
+      case 'video_source_scrape_status_interrupted':
+        return 'Interrupted';
+      case 'video_source_scrape_global_provider':
+        return 'Default metadata source';
+      case 'video_source_scrape_global_provider_hint':
+        return 'Used by video sources that inherit the global setting';
+      case 'video_source_scrape_fanart_key':
+        return 'Fanart API key';
+      case 'video_source_scrape_fanart_key_hint':
+        return 'Optional key used to fill missing artwork from Fanart';
+      case 'video_source_scrape_bangumi_token':
+        return 'Bangumi access token';
+      case 'video_source_scrape_bangumi_token_hint':
+        return 'Optional access token for the official Bangumi API v0';
+      case 'video_source_scrape_douban_endpoint':
+        return 'Authorized Douban API endpoint';
+      case 'video_source_scrape_douban_endpoint_hint':
+        return 'Douban is unavailable unless both an authorized endpoint and token are configured';
+      case 'video_source_scrape_douban_token':
+        return 'Authorized Douban API token';
+      case 'video_source_scrape_douban_token_hint':
+        return 'Douban is unavailable unless both an authorized endpoint and token are configured';
+      case 'video_source_scrape_locale':
+        return 'Metadata language';
+      case 'video_source_scrape_locale_hint':
+        return 'Preferred language for titles, summaries and images';
+      case 'video_source_scrape_confirmation_title':
+        return 'Confirm metadata match';
+      case 'video_source_scrape_confirmation_hint':
+        return 'Multiple exact matches were found. Choose the correct work to save its provider binding.';
+      case 'video_source_scrape_confirmation_skip':
+        return 'Skip this work';
+      case 'video_source_scrape_nfo_policy':
+        return 'NFO write policy';
+      case 'video_source_scrape_image_policy':
+        return 'Image write policy';
+      case 'video_source_scrape_policy_skip':
+        return 'Do not write';
+      case 'video_source_scrape_policy_missing_only':
+        return 'Only when missing';
+      case 'video_source_scrape_policy_overwrite':
+        return 'Update Hibiki files';
+      case 'video_source_scrape_external_overwrite':
+        return 'Allow protected sidecar overwrite';
+      case 'video_source_scrape_external_overwrite_hint':
+        return 'Third-party or user-modified files remain protected until you confirm each manual scrape batch again.';
+      case 'video_source_scrape_external_overwrite_confirm_title':
+        return 'Overwrite protected sidecars?';
+      case 'video_source_scrape_external_overwrite_confirm_body':
+        return 'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
+      case 'video_source_scrape_tasks_open':
+        return 'Background tasks';
+      case 'video_source_scrape_background_started':
+        return 'Scraping is running in the background';
+      case 'video_source_scrape_tasks_current':
+        return 'Current task';
+      case 'video_source_scrape_tasks_history':
+        return 'Recent tasks';
+      case 'video_source_scrape_tasks_empty':
+        return 'No scrape tasks yet';
+      case 'video_source_scrape_waiting_confirmation':
+        return 'Waiting for your confirmation';
+      case 'video_source_scrape_phase_scanning':
+        return 'Scanning source';
+      case 'video_library_all_videos':
+        return 'All videos';
+      case 'video_work_voice_roles':
+        return 'Voice cast and characters';
+      case 'video_work_cast_crew':
+        return 'Cast and crew';
+      case 'video_work_trailers':
+        return 'Trailers';
+      case 'video_work_extras':
+        return 'Extras';
+      case 'video_work_details':
+        return 'Details';
+      case 'video_work_external_ids':
+        return 'External IDs';
+      case 'video_work_metadata_pending':
+        return 'Detailed metadata has not been scraped yet. Retry this source from Sources, then reopen the work.';
+      case 'video_work_genres':
+        return 'Genres';
+      case 'video_work_keywords':
+        return 'Keywords';
+      case 'video_work_studios':
+        return 'Studios';
+      case 'video_work_countries':
+        return 'Countries';
+      case 'video_work_content_rating':
+        return 'Content rating';
+      case 'video_all_videos_list_view':
+        return 'List view';
+      case 'video_all_videos_grid_view':
+        return 'Grid view';
+      case 'video_home_continue_episode_number':
+        return ({required Object n}) => 'Playing episode ${n}';
+      case 'video_home_next_episode_number':
+        return ({required Object n}) => 'Next · Episode ${n}';
+      case 'video_home_recent_episode_number':
+        return ({required Object n}) => 'Recently added · Episode ${n}';
+      case 'video_home_remaining_minutes':
+        return ({required Object minutes}) => '${minutes} min remaining';
+      case 'video_discovery_tab':
+        return 'Discover';
+      case 'video_discovery_search_hint':
+        return 'Search movies, series, anime';
+      case 'video_discovery_hot':
+        return 'Popular now';
+      case 'video_discovery_seasonal_anime':
+        return 'Seasonal anime';
+      case 'video_discovery_all_works':
+        return 'All titles';
+      case 'video_discovery_search_results':
+        return 'Search results';
+      case 'video_discovery_provider_warning':
+        return 'Some providers are unavailable. Showing available results.';
+      case 'video_discovery_load_failed':
+        return 'Could not load discovery results.';
+      case 'video_discovery_empty':
+        return 'No matching titles.';
+      case 'video_discovery_resource_search':
+        return 'Search resources';
+      case 'video_discovery_subtitle_search':
+        return 'Search subtitles';
+      case 'video_discovery_subscribe':
+        return 'Subscribe';
+      case 'video_discovery_subscription_manage':
+        return 'Manage subscription';
+      case 'video_discovery_pipeline_idle':
+        return 'Not downloaded → Download → Organize → Subtitles → Scrape → Library';
+      case 'video_discovery_details_load_failed':
+        return 'Could not load title details.';
+      case 'video_discovery_sort_popularity':
+        return 'Popularity';
+      case 'video_discovery_sort_rating':
+        return 'Rating';
+      case 'video_discovery_sort_release':
+        return 'Release date';
+      case 'video_discovery_in_library':
+        return 'In library';
+      case 'video_discovery_play':
+        return 'Play';
+      case 'download_resources_tab':
+        return 'Resources';
+      case 'video_external_settings_section':
+        return 'External resource and subtitle providers';
+      case 'video_torznab_settings_title':
+        return 'Torznab indexers';
+      case 'video_torznab_settings_hint':
+        return 'Configure one or more Jackett, Prowlarr, or compatible Torznab endpoints. Secrets stay on this device.';
+      case 'video_torznab_add':
+        return 'Add indexer';
+      case 'video_torznab_name':
+        return 'Name';
+      case 'video_torznab_endpoint':
+        return 'Endpoint';
+      case 'video_torznab_endpoint_hint':
+        return 'HTTPS is required except for loopback addresses.';
+      case 'video_torznab_api_key':
+        return 'API key';
+      case 'video_torznab_priority':
+        return 'Priority';
+      case 'video_torznab_categories':
+        return 'Categories';
+      case 'video_torznab_categories_hint':
+        return 'Comma-separated numeric category IDs';
+      case 'video_external_enabled':
+        return 'Enabled';
+      case 'video_external_insecure_http':
+        return 'Allow insecure HTTP';
+      case 'video_external_insecure_http_hint':
+        return 'Use only for a trusted local network endpoint.';
+      case 'video_external_endpoint_invalid':
+        return 'Enter a valid endpoint without credentials, query parameters, or fragments.';
+      case 'video_opensubtitles_settings_title':
+        return 'OpenSubtitles';
+      case 'video_opensubtitles_settings_hint':
+        return 'API credentials and preferred subtitle languages stay on this device.';
+      case 'video_opensubtitles_user_agent':
+        return 'User-Agent';
+      case 'video_opensubtitles_languages':
+        return 'Preferred languages';
+      case 'video_opensubtitles_languages_hint':
+        return 'Comma-separated language codes, for example zh-CN,en,ja';
+      case 'video_download_path_mappings_title':
+        return 'qBittorrent path mappings';
+      case 'video_download_path_mappings_hint':
+        return 'Map each qBittorrent remote root to a locally accessible folder.';
+      case 'video_download_path_mapping_add':
+        return 'Add path mapping';
+      case 'video_download_backend_profile_id':
+        return 'Backend profile ID';
+      case 'video_download_remote_root':
+        return 'Remote root';
+      case 'video_download_local_root':
+        return 'Local root';
+      case 'video_download_target_source_title':
+        return 'Default managed video source';
+      case 'video_download_target_source_hint':
+        return 'New downloads are organized into this local video source.';
+      case 'video_download_target_source_none':
+        return 'Choose a local video source';
+      case 'video_external_remove':
+        return 'Remove';
+      case 'video_external_username_optional':
+        return 'Username (optional)';
+      case 'video_external_password_optional':
+        return 'Password (optional)';
+      case 'video_external_api_key':
+        return 'API key';
+      case 'video_external_save_error':
+        return 'The configuration could not be saved. Check the highlighted fields.';
+      case 'video_external_categories_invalid':
+        return 'Categories must be comma-separated numeric IDs.';
+      case 'video_download_path_mapping_invalid':
+        return 'Enter a profile ID, remote root, and absolute local root.';
+      case 'video_opensubtitles_endpoint':
+        return 'API endpoint';
+      case 'video_download_target_source_empty':
+        return 'No locally accessible video source is available. Add one on the Sources tab first.';
       default:
         return null;
     }
@@ -215262,8 +224045,6 @@ extension on _StringsZhCn {
         return '请先配置下载后端。';
       case 'download_clear_finished':
         return '清除已完成';
-      case 'download_discover_tab':
-        return '发现';
       case 'download_network_proxy_auto':
         return '自动';
       case 'download_network_proxy_auto_hint':
@@ -220268,6 +229049,267 @@ extension on _StringsZhCn {
         return '未选中文本。';
       case 'video_library_empty_source_hint':
         return '请从“来源”添加视频文件夹以建立媒体库';
+      case 'video_source_scrape_action':
+        return '刮削此来源';
+      case 'video_source_scrape_settings':
+        return '来源刮削设置';
+      case 'video_source_scrape_provider':
+        return '主刮削来源';
+      case 'video_source_scrape_provider_inherit':
+        return '继承全局默认';
+      case 'video_source_scrape_auto_after_scan':
+        return '扫描后自动刮削';
+      case 'video_source_scrape_auto_after_scan_hint':
+        return '扫描此来源完成后自动刮削作品资料';
+      case 'video_source_scrape_write_nfo':
+        return '写入 NFO 文件';
+      case 'video_source_scrape_write_images':
+        return '写入图片文件';
+      case 'video_source_scrape_use_fanart':
+        return '使用 Fanart 图片';
+      case 'video_source_scrape_progress':
+        return (
+                {required Object phase,
+                required Object current,
+                required Object total}) =>
+            '${phase} · ${current}/${total}';
+      case 'video_source_scrape_last_summary':
+        return (
+                {required Object status,
+                required Object succeeded,
+                required Object pending,
+                required Object failed}) =>
+            '上次刮削（${status}）：成功 ${succeeded}，待确认 ${pending}，失败 ${failed}';
+      case 'video_source_scrape_phase_planning':
+        return '准备中';
+      case 'video_source_scrape_phase_recognizing':
+        return '识别匹配中';
+      case 'video_source_scrape_phase_fetching':
+        return '获取资料中';
+      case 'video_source_scrape_phase_applying':
+        return '保存资料中';
+      case 'video_source_scrape_phase_writing_sidecars':
+        return '写入 NFO 与图片';
+      case 'video_source_scrape_status_interrupted':
+        return '已中断';
+      case 'video_source_scrape_global_provider':
+        return '视频默认刮削来源';
+      case 'video_source_scrape_global_provider_hint':
+        return '供选择“继承全局默认”的视频来源使用';
+      case 'video_source_scrape_fanart_key':
+        return 'Fanart API Key';
+      case 'video_source_scrape_fanart_key_hint':
+        return '可选，用于从 Fanart 补充缺少的图片';
+      case 'video_source_scrape_bangumi_token':
+        return 'Bangumi 访问令牌';
+      case 'video_source_scrape_bangumi_token_hint':
+        return '可选，用于访问 Bangumi 官方 v0 API';
+      case 'video_source_scrape_douban_endpoint':
+        return '已授权的豆瓣 API 端点';
+      case 'video_source_scrape_douban_endpoint_hint':
+        return '仅当已授权端点和令牌都已配置时豆瓣来源才可用';
+      case 'video_source_scrape_douban_token':
+        return '已授权的豆瓣 API 令牌';
+      case 'video_source_scrape_douban_token_hint':
+        return '仅当已授权端点和令牌都已配置时豆瓣来源才可用';
+      case 'video_source_scrape_locale':
+        return '资料语言';
+      case 'video_source_scrape_locale_hint':
+        return '标题、简介与图片的首选语言';
+      case 'video_source_scrape_confirmation_title':
+        return '确认资料匹配';
+      case 'video_source_scrape_confirmation_hint':
+        return '找到多个严格匹配结果。请选择正确作品，Hibiki 会保存其来源绑定。';
+      case 'video_source_scrape_confirmation_skip':
+        return '跳过此作品';
+      case 'video_source_scrape_nfo_policy':
+        return 'NFO 写入策略';
+      case 'video_source_scrape_image_policy':
+        return '图片写入策略';
+      case 'video_source_scrape_policy_skip':
+        return '不写入';
+      case 'video_source_scrape_policy_missing_only':
+        return '仅缺失时写入';
+      case 'video_source_scrape_policy_overwrite':
+        return '更新 Hibiki 生成物';
+      case 'video_source_scrape_external_overwrite':
+        return '允许覆盖受保护的 sidecar';
+      case 'video_source_scrape_external_overwrite_hint':
+        return '第三方或用户修改过的文件仍受保护；每次手动刮削批次都必须再次确认。';
+      case 'video_source_scrape_external_overwrite_confirm_title':
+        return '覆盖受保护的 sidecar？';
+      case 'video_source_scrape_external_overwrite_confirm_body':
+        return '本批次可能替换第三方 NFO/图片，或你修改过的 Hibiki 生成物；视频文件本身不会改动。是否继续？';
+      case 'video_source_scrape_tasks_open':
+        return '后台任务';
+      case 'video_source_scrape_background_started':
+        return '刮削已在后台开始';
+      case 'video_source_scrape_tasks_current':
+        return '当前任务';
+      case 'video_source_scrape_tasks_history':
+        return '最近任务';
+      case 'video_source_scrape_tasks_empty':
+        return '暂无刮削任务';
+      case 'video_source_scrape_waiting_confirmation':
+        return '等待你的确认';
+      case 'video_source_scrape_phase_scanning':
+        return '扫描来源';
+      case 'video_library_all_videos':
+        return '全部视频';
+      case 'video_work_voice_roles':
+        return '声优与角色';
+      case 'video_work_cast_crew':
+        return '演职员';
+      case 'video_work_trailers':
+        return '预告片';
+      case 'video_work_extras':
+        return '花絮';
+      case 'video_work_details':
+        return '作品资料';
+      case 'video_work_external_ids':
+        return '外部 ID';
+      case 'video_work_metadata_pending':
+        return '暂无详细资料。请在';
+      case 'video_work_genres':
+        return '类型';
+      case 'video_work_keywords':
+        return '标签';
+      case 'video_work_studios':
+        return '工作室';
+      case 'video_work_countries':
+        return '国家';
+      case 'video_work_content_rating':
+        return '分级';
+      case 'video_all_videos_list_view':
+        return '列表视图';
+      case 'video_all_videos_grid_view':
+        return '网格视图';
+      case 'video_home_continue_episode_number':
+        return ({required Object n}) => '看到第 ${n} 集';
+      case 'video_home_next_episode_number':
+        return ({required Object n}) => '下一集 · 第 ${n} 集';
+      case 'video_home_recent_episode_number':
+        return ({required Object n}) => '最近添加 · 第 ${n} 集';
+      case 'video_home_remaining_minutes':
+        return ({required Object minutes}) => '剩余 ${minutes} 分钟';
+      case 'video_discovery_tab':
+        return '发现';
+      case 'video_discovery_search_hint':
+        return '搜索电影、剧集、动漫';
+      case 'video_discovery_hot':
+        return '热门推荐';
+      case 'video_discovery_seasonal_anime':
+        return '本季动漫';
+      case 'video_discovery_all_works':
+        return '全部作品';
+      case 'video_discovery_search_results':
+        return '搜索结果';
+      case 'video_discovery_provider_warning':
+        return '部分来源暂不可用，已显示其余结果';
+      case 'video_discovery_load_failed':
+        return '发现内容加载失败';
+      case 'video_discovery_empty':
+        return '没有匹配的作品';
+      case 'video_discovery_resource_search':
+        return '搜索资源';
+      case 'video_discovery_subtitle_search':
+        return '搜索字幕';
+      case 'video_discovery_subscribe':
+        return '订阅';
+      case 'video_discovery_subscription_manage':
+        return '管理订阅';
+      case 'video_discovery_pipeline_idle':
+        return '未下载 → 下载 → 整理 → 字幕 → 刮削 → 入库';
+      case 'video_discovery_details_load_failed':
+        return '作品详情加载失败';
+      case 'video_discovery_sort_popularity':
+        return '热度';
+      case 'video_discovery_sort_rating':
+        return '评分';
+      case 'video_discovery_sort_release':
+        return '上映时间';
+      case 'video_discovery_in_library':
+        return '已入库';
+      case 'video_discovery_play':
+        return '播放';
+      case 'download_resources_tab':
+        return '资源';
+      case 'video_external_settings_section':
+        return '外部资源与字幕来源';
+      case 'video_torznab_settings_title':
+        return 'Torznab 索引器';
+      case 'video_torznab_settings_hint':
+        return '配置一个或多个 Jackett、Prowlarr 或兼容的 Torznab 端点。密钥仅保存在本机。';
+      case 'video_torznab_add':
+        return '添加索引器';
+      case 'video_torznab_name':
+        return '名称';
+      case 'video_torznab_endpoint':
+        return '端点';
+      case 'video_torznab_endpoint_hint':
+        return '除回环地址外必须使用 HTTPS。';
+      case 'video_torznab_api_key':
+        return 'API 密钥';
+      case 'video_torznab_priority':
+        return '优先级';
+      case 'video_torznab_categories':
+        return '分类';
+      case 'video_torznab_categories_hint':
+        return '用逗号分隔的数字分类 ID';
+      case 'video_external_enabled':
+        return '已启用';
+      case 'video_external_insecure_http':
+        return '允许不安全的 HTTP';
+      case 'video_external_insecure_http_hint':
+        return '仅用于可信的局域网端点。';
+      case 'video_external_endpoint_invalid':
+        return '请输入不含凭据、查询参数或片段的有效端点。';
+      case 'video_opensubtitles_settings_title':
+        return 'OpenSubtitles';
+      case 'video_opensubtitles_settings_hint':
+        return 'API 凭据和首选字幕语言仅保存在本机。';
+      case 'video_opensubtitles_user_agent':
+        return 'User-Agent';
+      case 'video_opensubtitles_languages':
+        return '首选语言';
+      case 'video_opensubtitles_languages_hint':
+        return '用逗号分隔语言代码，例如 zh-CN,en,ja';
+      case 'video_download_path_mappings_title':
+        return 'qBittorrent 路径映射';
+      case 'video_download_path_mappings_hint':
+        return '将每个 qBittorrent 远程根目录映射到本机可访问的文件夹。';
+      case 'video_download_path_mapping_add':
+        return '添加路径映射';
+      case 'video_download_backend_profile_id':
+        return '后端配置 ID';
+      case 'video_download_remote_root':
+        return '远程根目录';
+      case 'video_download_local_root':
+        return '本机根目录';
+      case 'video_download_target_source_title':
+        return '默认受管视频来源';
+      case 'video_download_target_source_hint':
+        return '新下载会整理到此本地视频来源中。';
+      case 'video_download_target_source_none':
+        return '选择本地视频来源';
+      case 'video_external_remove':
+        return '移除';
+      case 'video_external_username_optional':
+        return '用户名（可选）';
+      case 'video_external_password_optional':
+        return '密码（可选）';
+      case 'video_external_api_key':
+        return 'API 密钥';
+      case 'video_external_save_error':
+        return '无法保存配置，请检查标出的字段。';
+      case 'video_external_categories_invalid':
+        return '分类必须是用逗号分隔的数字 ID。';
+      case 'video_download_path_mapping_invalid':
+        return '请输入配置 ID、远程根目录和本机绝对根目录。';
+      case 'video_opensubtitles_endpoint':
+        return 'API 端点';
+      case 'video_download_target_source_empty':
+        return '没有可访问的本地视频来源。请先在来源页添加。';
       default:
         return null;
     }
@@ -221598,8 +230640,6 @@ extension on _StringsZhHk {
         return 'Download backend is not configured yet.';
       case 'download_clear_finished':
         return 'Clear finished';
-      case 'download_discover_tab':
-        return 'Discover';
       case 'download_network_proxy_auto':
         return 'Auto';
       case 'download_network_proxy_auto_hint':
@@ -226626,6 +235666,267 @@ extension on _StringsZhHk {
         return 'No text selected.';
       case 'video_library_empty_source_hint':
         return '請從「來源」加入影片資料夾以建立媒體庫';
+      case 'video_source_scrape_action':
+        return 'Scrape this source';
+      case 'video_source_scrape_settings':
+        return 'Source scrape settings';
+      case 'video_source_scrape_provider':
+        return 'Primary metadata source';
+      case 'video_source_scrape_provider_inherit':
+        return 'Use global default';
+      case 'video_source_scrape_auto_after_scan':
+        return 'Scrape after scanning';
+      case 'video_source_scrape_auto_after_scan_hint':
+        return 'Run metadata scraping automatically after this source is scanned';
+      case 'video_source_scrape_write_nfo':
+        return 'Write NFO files';
+      case 'video_source_scrape_write_images':
+        return 'Write image files';
+      case 'video_source_scrape_use_fanart':
+        return 'Use Fanart images';
+      case 'video_source_scrape_progress':
+        return (
+                {required Object phase,
+                required Object current,
+                required Object total}) =>
+            '${phase} · ${current}/${total}';
+      case 'video_source_scrape_last_summary':
+        return (
+                {required Object status,
+                required Object succeeded,
+                required Object pending,
+                required Object failed}) =>
+            'Last scrape (${status}): ${succeeded} succeeded, ${pending} pending, ${failed} failed';
+      case 'video_source_scrape_phase_planning':
+        return 'Planning';
+      case 'video_source_scrape_phase_recognizing':
+        return 'Matching';
+      case 'video_source_scrape_phase_fetching':
+        return 'Fetching metadata';
+      case 'video_source_scrape_phase_applying':
+        return 'Saving metadata';
+      case 'video_source_scrape_phase_writing_sidecars':
+        return 'Writing sidecars';
+      case 'video_source_scrape_status_interrupted':
+        return 'Interrupted';
+      case 'video_source_scrape_global_provider':
+        return 'Default metadata source';
+      case 'video_source_scrape_global_provider_hint':
+        return 'Used by video sources that inherit the global setting';
+      case 'video_source_scrape_fanart_key':
+        return 'Fanart API key';
+      case 'video_source_scrape_fanart_key_hint':
+        return 'Optional key used to fill missing artwork from Fanart';
+      case 'video_source_scrape_bangumi_token':
+        return 'Bangumi access token';
+      case 'video_source_scrape_bangumi_token_hint':
+        return 'Optional access token for the official Bangumi API v0';
+      case 'video_source_scrape_douban_endpoint':
+        return 'Authorized Douban API endpoint';
+      case 'video_source_scrape_douban_endpoint_hint':
+        return 'Douban is unavailable unless both an authorized endpoint and token are configured';
+      case 'video_source_scrape_douban_token':
+        return 'Authorized Douban API token';
+      case 'video_source_scrape_douban_token_hint':
+        return 'Douban is unavailable unless both an authorized endpoint and token are configured';
+      case 'video_source_scrape_locale':
+        return 'Metadata language';
+      case 'video_source_scrape_locale_hint':
+        return 'Preferred language for titles, summaries and images';
+      case 'video_source_scrape_confirmation_title':
+        return 'Confirm metadata match';
+      case 'video_source_scrape_confirmation_hint':
+        return 'Multiple exact matches were found. Choose the correct work to save its provider binding.';
+      case 'video_source_scrape_confirmation_skip':
+        return 'Skip this work';
+      case 'video_source_scrape_nfo_policy':
+        return 'NFO write policy';
+      case 'video_source_scrape_image_policy':
+        return 'Image write policy';
+      case 'video_source_scrape_policy_skip':
+        return 'Do not write';
+      case 'video_source_scrape_policy_missing_only':
+        return 'Only when missing';
+      case 'video_source_scrape_policy_overwrite':
+        return 'Update Hibiki files';
+      case 'video_source_scrape_external_overwrite':
+        return 'Allow protected sidecar overwrite';
+      case 'video_source_scrape_external_overwrite_hint':
+        return 'Third-party or user-modified files remain protected until you confirm each manual scrape batch again.';
+      case 'video_source_scrape_external_overwrite_confirm_title':
+        return 'Overwrite protected sidecars?';
+      case 'video_source_scrape_external_overwrite_confirm_body':
+        return 'This batch may replace third-party NFO/images or Hibiki files you edited. Media files are not changed. Continue?';
+      case 'video_source_scrape_tasks_open':
+        return 'Background tasks';
+      case 'video_source_scrape_background_started':
+        return 'Scraping is running in the background';
+      case 'video_source_scrape_tasks_current':
+        return 'Current task';
+      case 'video_source_scrape_tasks_history':
+        return 'Recent tasks';
+      case 'video_source_scrape_tasks_empty':
+        return 'No scrape tasks yet';
+      case 'video_source_scrape_waiting_confirmation':
+        return 'Waiting for your confirmation';
+      case 'video_source_scrape_phase_scanning':
+        return 'Scanning source';
+      case 'video_library_all_videos':
+        return 'All videos';
+      case 'video_work_voice_roles':
+        return 'Voice cast and characters';
+      case 'video_work_cast_crew':
+        return 'Cast and crew';
+      case 'video_work_trailers':
+        return 'Trailers';
+      case 'video_work_extras':
+        return 'Extras';
+      case 'video_work_details':
+        return 'Details';
+      case 'video_work_external_ids':
+        return 'External IDs';
+      case 'video_work_metadata_pending':
+        return 'Detailed metadata has not been scraped yet. Retry this source from Sources, then reopen the work.';
+      case 'video_work_genres':
+        return 'Genres';
+      case 'video_work_keywords':
+        return 'Keywords';
+      case 'video_work_studios':
+        return 'Studios';
+      case 'video_work_countries':
+        return 'Countries';
+      case 'video_work_content_rating':
+        return 'Content rating';
+      case 'video_all_videos_list_view':
+        return 'List view';
+      case 'video_all_videos_grid_view':
+        return 'Grid view';
+      case 'video_home_continue_episode_number':
+        return ({required Object n}) => 'Playing episode ${n}';
+      case 'video_home_next_episode_number':
+        return ({required Object n}) => 'Next · Episode ${n}';
+      case 'video_home_recent_episode_number':
+        return ({required Object n}) => 'Recently added · Episode ${n}';
+      case 'video_home_remaining_minutes':
+        return ({required Object minutes}) => '${minutes} min remaining';
+      case 'video_discovery_tab':
+        return 'Discover';
+      case 'video_discovery_search_hint':
+        return 'Search movies, series, anime';
+      case 'video_discovery_hot':
+        return 'Popular now';
+      case 'video_discovery_seasonal_anime':
+        return 'Seasonal anime';
+      case 'video_discovery_all_works':
+        return 'All titles';
+      case 'video_discovery_search_results':
+        return 'Search results';
+      case 'video_discovery_provider_warning':
+        return 'Some providers are unavailable. Showing available results.';
+      case 'video_discovery_load_failed':
+        return 'Could not load discovery results.';
+      case 'video_discovery_empty':
+        return 'No matching titles.';
+      case 'video_discovery_resource_search':
+        return 'Search resources';
+      case 'video_discovery_subtitle_search':
+        return 'Search subtitles';
+      case 'video_discovery_subscribe':
+        return 'Subscribe';
+      case 'video_discovery_subscription_manage':
+        return 'Manage subscription';
+      case 'video_discovery_pipeline_idle':
+        return 'Not downloaded → Download → Organize → Subtitles → Scrape → Library';
+      case 'video_discovery_details_load_failed':
+        return 'Could not load title details.';
+      case 'video_discovery_sort_popularity':
+        return 'Popularity';
+      case 'video_discovery_sort_rating':
+        return 'Rating';
+      case 'video_discovery_sort_release':
+        return 'Release date';
+      case 'video_discovery_in_library':
+        return 'In library';
+      case 'video_discovery_play':
+        return 'Play';
+      case 'download_resources_tab':
+        return 'Resources';
+      case 'video_external_settings_section':
+        return 'External resource and subtitle providers';
+      case 'video_torznab_settings_title':
+        return 'Torznab indexers';
+      case 'video_torznab_settings_hint':
+        return 'Configure one or more Jackett, Prowlarr, or compatible Torznab endpoints. Secrets stay on this device.';
+      case 'video_torznab_add':
+        return 'Add indexer';
+      case 'video_torznab_name':
+        return 'Name';
+      case 'video_torznab_endpoint':
+        return 'Endpoint';
+      case 'video_torznab_endpoint_hint':
+        return 'HTTPS is required except for loopback addresses.';
+      case 'video_torznab_api_key':
+        return 'API key';
+      case 'video_torznab_priority':
+        return 'Priority';
+      case 'video_torznab_categories':
+        return 'Categories';
+      case 'video_torznab_categories_hint':
+        return 'Comma-separated numeric category IDs';
+      case 'video_external_enabled':
+        return 'Enabled';
+      case 'video_external_insecure_http':
+        return 'Allow insecure HTTP';
+      case 'video_external_insecure_http_hint':
+        return 'Use only for a trusted local network endpoint.';
+      case 'video_external_endpoint_invalid':
+        return 'Enter a valid endpoint without credentials, query parameters, or fragments.';
+      case 'video_opensubtitles_settings_title':
+        return 'OpenSubtitles';
+      case 'video_opensubtitles_settings_hint':
+        return 'API credentials and preferred subtitle languages stay on this device.';
+      case 'video_opensubtitles_user_agent':
+        return 'User-Agent';
+      case 'video_opensubtitles_languages':
+        return 'Preferred languages';
+      case 'video_opensubtitles_languages_hint':
+        return 'Comma-separated language codes, for example zh-CN,en,ja';
+      case 'video_download_path_mappings_title':
+        return 'qBittorrent path mappings';
+      case 'video_download_path_mappings_hint':
+        return 'Map each qBittorrent remote root to a locally accessible folder.';
+      case 'video_download_path_mapping_add':
+        return 'Add path mapping';
+      case 'video_download_backend_profile_id':
+        return 'Backend profile ID';
+      case 'video_download_remote_root':
+        return 'Remote root';
+      case 'video_download_local_root':
+        return 'Local root';
+      case 'video_download_target_source_title':
+        return 'Default managed video source';
+      case 'video_download_target_source_hint':
+        return 'New downloads are organized into this local video source.';
+      case 'video_download_target_source_none':
+        return 'Choose a local video source';
+      case 'video_external_remove':
+        return 'Remove';
+      case 'video_external_username_optional':
+        return 'Username (optional)';
+      case 'video_external_password_optional':
+        return 'Password (optional)';
+      case 'video_external_api_key':
+        return 'API key';
+      case 'video_external_save_error':
+        return 'The configuration could not be saved. Check the highlighted fields.';
+      case 'video_external_categories_invalid':
+        return 'Categories must be comma-separated numeric IDs.';
+      case 'video_download_path_mapping_invalid':
+        return 'Enter a profile ID, remote root, and absolute local root.';
+      case 'video_opensubtitles_endpoint':
+        return 'API endpoint';
+      case 'video_download_target_source_empty':
+        return 'No locally accessible video source is available. Add one on the Sources tab first.';
       default:
         return null;
     }
