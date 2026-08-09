@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 53737 (3161 per locale)
+/// Strings: 53822 (3166 per locale)
 ///
-/// Built on 2026-08-09 at 06:31 UTC
+/// Built on 2026-08-09 at 08:23 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -4257,6 +4257,17 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get migration_uninstall_button => 'Uninstall Hibiki';
   String get migration_uninstall_still_installed =>
       'Hibiki is still installed. You can uninstall it any time.';
+  String get migration_import_permission_title => 'Storage permission required';
+  String get migration_import_permission_body =>
+      'The transfer folder was created by the old app. Without "All files access", Fushi cannot read it — the data is intact, it just cannot be opened.';
+  String get migration_import_permission_grant => 'Grant permission';
+  String migration_import_verifying(
+          {required Object batch,
+          required Object done,
+          required Object total}) =>
+      'Verifying ${batch} (${done}/${total})';
+  String get migration_import_verifying_hint =>
+      'Checksumming the archives. Large libraries can take several minutes.';
   String get game_line_copy_tooltip => 'Copy sentence';
   String get game_japanese_locale_auto => 'Auto';
   String get game_japanese_locale_on => 'Always on';
@@ -11526,6 +11537,22 @@ class _StringsAr extends _StringsEn {
   @override
   String get migration_uninstall_still_installed =>
       'Hibiki is still installed. You can uninstall it any time.';
+  @override
+  String get migration_import_permission_title => 'Storage permission required';
+  @override
+  String get migration_import_permission_body =>
+      'The transfer folder was created by the old app. Without "All files access", Fushi cannot read it — the data is intact, it just cannot be opened.';
+  @override
+  String get migration_import_permission_grant => 'Grant permission';
+  @override
+  String migration_import_verifying(
+          {required Object batch,
+          required Object done,
+          required Object total}) =>
+      'Verifying ${batch} (${done}/${total})';
+  @override
+  String get migration_import_verifying_hint =>
+      'Checksumming the archives. Large libraries can take several minutes.';
   @override
   String get game_line_copy_tooltip => 'Copy sentence';
   @override
@@ -18868,6 +18895,22 @@ class _StringsDe extends _StringsEn {
   @override
   String get migration_uninstall_still_installed =>
       'Hibiki is still installed. You can uninstall it any time.';
+  @override
+  String get migration_import_permission_title => 'Storage permission required';
+  @override
+  String get migration_import_permission_body =>
+      'The transfer folder was created by the old app. Without "All files access", Fushi cannot read it — the data is intact, it just cannot be opened.';
+  @override
+  String get migration_import_permission_grant => 'Grant permission';
+  @override
+  String migration_import_verifying(
+          {required Object batch,
+          required Object done,
+          required Object total}) =>
+      'Verifying ${batch} (${done}/${total})';
+  @override
+  String get migration_import_verifying_hint =>
+      'Checksumming the archives. Large libraries can take several minutes.';
   @override
   String get game_line_copy_tooltip => 'Copy sentence';
   @override
@@ -26226,6 +26269,22 @@ class _StringsEs extends _StringsEn {
   @override
   String get migration_uninstall_still_installed =>
       'Hibiki is still installed. You can uninstall it any time.';
+  @override
+  String get migration_import_permission_title => 'Storage permission required';
+  @override
+  String get migration_import_permission_body =>
+      'The transfer folder was created by the old app. Without "All files access", Fushi cannot read it — the data is intact, it just cannot be opened.';
+  @override
+  String get migration_import_permission_grant => 'Grant permission';
+  @override
+  String migration_import_verifying(
+          {required Object batch,
+          required Object done,
+          required Object total}) =>
+      'Verifying ${batch} (${done}/${total})';
+  @override
+  String get migration_import_verifying_hint =>
+      'Checksumming the archives. Large libraries can take several minutes.';
   @override
   String get game_line_copy_tooltip => 'Copy sentence';
   @override
@@ -33597,6 +33656,22 @@ class _StringsFr extends _StringsEn {
   String get migration_uninstall_still_installed =>
       'Hibiki is still installed. You can uninstall it any time.';
   @override
+  String get migration_import_permission_title => 'Storage permission required';
+  @override
+  String get migration_import_permission_body =>
+      'The transfer folder was created by the old app. Without "All files access", Fushi cannot read it — the data is intact, it just cannot be opened.';
+  @override
+  String get migration_import_permission_grant => 'Grant permission';
+  @override
+  String migration_import_verifying(
+          {required Object batch,
+          required Object done,
+          required Object total}) =>
+      'Verifying ${batch} (${done}/${total})';
+  @override
+  String get migration_import_verifying_hint =>
+      'Checksumming the archives. Large libraries can take several minutes.';
+  @override
   String get game_line_copy_tooltip => 'Copy sentence';
   @override
   String get game_japanese_locale_auto => 'Auto';
@@ -40894,6 +40969,22 @@ class _StringsId extends _StringsEn {
   @override
   String get migration_uninstall_still_installed =>
       'Hibiki is still installed. You can uninstall it any time.';
+  @override
+  String get migration_import_permission_title => 'Storage permission required';
+  @override
+  String get migration_import_permission_body =>
+      'The transfer folder was created by the old app. Without "All files access", Fushi cannot read it — the data is intact, it just cannot be opened.';
+  @override
+  String get migration_import_permission_grant => 'Grant permission';
+  @override
+  String migration_import_verifying(
+          {required Object batch,
+          required Object done,
+          required Object total}) =>
+      'Verifying ${batch} (${done}/${total})';
+  @override
+  String get migration_import_verifying_hint =>
+      'Checksumming the archives. Large libraries can take several minutes.';
   @override
   String get game_line_copy_tooltip => 'Copy sentence';
   @override
@@ -48239,6 +48330,22 @@ class _StringsIt extends _StringsEn {
   String get migration_uninstall_still_installed =>
       'Hibiki is still installed. You can uninstall it any time.';
   @override
+  String get migration_import_permission_title => 'Storage permission required';
+  @override
+  String get migration_import_permission_body =>
+      'The transfer folder was created by the old app. Without "All files access", Fushi cannot read it — the data is intact, it just cannot be opened.';
+  @override
+  String get migration_import_permission_grant => 'Grant permission';
+  @override
+  String migration_import_verifying(
+          {required Object batch,
+          required Object done,
+          required Object total}) =>
+      'Verifying ${batch} (${done}/${total})';
+  @override
+  String get migration_import_verifying_hint =>
+      'Checksumming the archives. Large libraries can take several minutes.';
+  @override
   String get game_line_copy_tooltip => 'Copy sentence';
   @override
   String get game_japanese_locale_auto => 'Auto';
@@ -55396,6 +55503,22 @@ class _StringsJa extends _StringsEn {
   @override
   String get migration_uninstall_still_installed =>
       'Hibiki is still installed. You can uninstall it any time.';
+  @override
+  String get migration_import_permission_title => 'Storage permission required';
+  @override
+  String get migration_import_permission_body =>
+      'The transfer folder was created by the old app. Without "All files access", Fushi cannot read it — the data is intact, it just cannot be opened.';
+  @override
+  String get migration_import_permission_grant => 'Grant permission';
+  @override
+  String migration_import_verifying(
+          {required Object batch,
+          required Object done,
+          required Object total}) =>
+      'Verifying ${batch} (${done}/${total})';
+  @override
+  String get migration_import_verifying_hint =>
+      'Checksumming the archives. Large libraries can take several minutes.';
   @override
   String get game_line_copy_tooltip => 'Copy sentence';
   @override
@@ -62561,6 +62684,22 @@ class _StringsKo extends _StringsEn {
   @override
   String get migration_uninstall_still_installed =>
       'Hibiki is still installed. You can uninstall it any time.';
+  @override
+  String get migration_import_permission_title => 'Storage permission required';
+  @override
+  String get migration_import_permission_body =>
+      'The transfer folder was created by the old app. Without "All files access", Fushi cannot read it — the data is intact, it just cannot be opened.';
+  @override
+  String get migration_import_permission_grant => 'Grant permission';
+  @override
+  String migration_import_verifying(
+          {required Object batch,
+          required Object done,
+          required Object total}) =>
+      'Verifying ${batch} (${done}/${total})';
+  @override
+  String get migration_import_verifying_hint =>
+      'Checksumming the archives. Large libraries can take several minutes.';
   @override
   String get game_line_copy_tooltip => 'Copy sentence';
   @override
@@ -69885,6 +70024,22 @@ class _StringsNl extends _StringsEn {
   @override
   String get migration_uninstall_still_installed =>
       'Hibiki is still installed. You can uninstall it any time.';
+  @override
+  String get migration_import_permission_title => 'Storage permission required';
+  @override
+  String get migration_import_permission_body =>
+      'The transfer folder was created by the old app. Without "All files access", Fushi cannot read it — the data is intact, it just cannot be opened.';
+  @override
+  String get migration_import_permission_grant => 'Grant permission';
+  @override
+  String migration_import_verifying(
+          {required Object batch,
+          required Object done,
+          required Object total}) =>
+      'Verifying ${batch} (${done}/${total})';
+  @override
+  String get migration_import_verifying_hint =>
+      'Checksumming the archives. Large libraries can take several minutes.';
   @override
   String get game_line_copy_tooltip => 'Copy sentence';
   @override
@@ -77222,6 +77377,22 @@ class _StringsPtBr extends _StringsEn {
   String get migration_uninstall_still_installed =>
       'Hibiki is still installed. You can uninstall it any time.';
   @override
+  String get migration_import_permission_title => 'Storage permission required';
+  @override
+  String get migration_import_permission_body =>
+      'The transfer folder was created by the old app. Without "All files access", Fushi cannot read it — the data is intact, it just cannot be opened.';
+  @override
+  String get migration_import_permission_grant => 'Grant permission';
+  @override
+  String migration_import_verifying(
+          {required Object batch,
+          required Object done,
+          required Object total}) =>
+      'Verifying ${batch} (${done}/${total})';
+  @override
+  String get migration_import_verifying_hint =>
+      'Checksumming the archives. Large libraries can take several minutes.';
+  @override
   String get game_line_copy_tooltip => 'Copy sentence';
   @override
   String get game_japanese_locale_auto => 'Auto';
@@ -84544,6 +84715,22 @@ class _StringsRu extends _StringsEn {
   String get migration_uninstall_still_installed =>
       'Hibiki is still installed. You can uninstall it any time.';
   @override
+  String get migration_import_permission_title => 'Storage permission required';
+  @override
+  String get migration_import_permission_body =>
+      'The transfer folder was created by the old app. Without "All files access", Fushi cannot read it — the data is intact, it just cannot be opened.';
+  @override
+  String get migration_import_permission_grant => 'Grant permission';
+  @override
+  String migration_import_verifying(
+          {required Object batch,
+          required Object done,
+          required Object total}) =>
+      'Verifying ${batch} (${done}/${total})';
+  @override
+  String get migration_import_verifying_hint =>
+      'Checksumming the archives. Large libraries can take several minutes.';
+  @override
   String get game_line_copy_tooltip => 'Copy sentence';
   @override
   String get game_japanese_locale_auto => 'Auto';
@@ -91813,6 +92000,22 @@ class _StringsTh extends _StringsEn {
   @override
   String get migration_uninstall_still_installed =>
       'Hibiki is still installed. You can uninstall it any time.';
+  @override
+  String get migration_import_permission_title => 'Storage permission required';
+  @override
+  String get migration_import_permission_body =>
+      'The transfer folder was created by the old app. Without "All files access", Fushi cannot read it — the data is intact, it just cannot be opened.';
+  @override
+  String get migration_import_permission_grant => 'Grant permission';
+  @override
+  String migration_import_verifying(
+          {required Object batch,
+          required Object done,
+          required Object total}) =>
+      'Verifying ${batch} (${done}/${total})';
+  @override
+  String get migration_import_verifying_hint =>
+      'Checksumming the archives. Large libraries can take several minutes.';
   @override
   String get game_line_copy_tooltip => 'Copy sentence';
   @override
@@ -99115,6 +99318,22 @@ class _StringsTr extends _StringsEn {
   String get migration_uninstall_still_installed =>
       'Hibiki is still installed. You can uninstall it any time.';
   @override
+  String get migration_import_permission_title => 'Storage permission required';
+  @override
+  String get migration_import_permission_body =>
+      'The transfer folder was created by the old app. Without "All files access", Fushi cannot read it — the data is intact, it just cannot be opened.';
+  @override
+  String get migration_import_permission_grant => 'Grant permission';
+  @override
+  String migration_import_verifying(
+          {required Object batch,
+          required Object done,
+          required Object total}) =>
+      'Verifying ${batch} (${done}/${total})';
+  @override
+  String get migration_import_verifying_hint =>
+      'Checksumming the archives. Large libraries can take several minutes.';
+  @override
   String get game_line_copy_tooltip => 'Copy sentence';
   @override
   String get game_japanese_locale_auto => 'Auto';
@@ -106401,6 +106620,22 @@ class _StringsVi extends _StringsEn {
   String get migration_uninstall_still_installed =>
       'Hibiki is still installed. You can uninstall it any time.';
   @override
+  String get migration_import_permission_title => 'Storage permission required';
+  @override
+  String get migration_import_permission_body =>
+      'The transfer folder was created by the old app. Without "All files access", Fushi cannot read it — the data is intact, it just cannot be opened.';
+  @override
+  String get migration_import_permission_grant => 'Grant permission';
+  @override
+  String migration_import_verifying(
+          {required Object batch,
+          required Object done,
+          required Object total}) =>
+      'Verifying ${batch} (${done}/${total})';
+  @override
+  String get migration_import_verifying_hint =>
+      'Checksumming the archives. Large libraries can take several minutes.';
+  @override
   String get game_line_copy_tooltip => 'Copy sentence';
   @override
   String get game_japanese_locale_auto => 'Auto';
@@ -113167,6 +113402,21 @@ class _StringsZhCn extends _StringsEn {
   String get migration_uninstall_button => '卸载 Hibiki';
   @override
   String get migration_uninstall_still_installed => '旧版 Hibiki 仍安装在设备上，可随时卸载。';
+  @override
+  String get migration_import_permission_title => '需要文件访问权限';
+  @override
+  String get migration_import_permission_body =>
+      '中转目录是旧版应用创建的。没有「所有文件访问权限」，Fushi 读不了它——数据是完好的，只是打不开。';
+  @override
+  String get migration_import_permission_grant => '去授权';
+  @override
+  String migration_import_verifying(
+          {required Object batch,
+          required Object done,
+          required Object total}) =>
+      '正在校验 ${batch}（${done}/${total}）';
+  @override
+  String get migration_import_verifying_hint => '正在核对归档校验和。库很大时需要几分钟。';
   @override
   String get game_line_copy_tooltip => '复制句子';
   @override
@@ -120249,6 +120499,22 @@ class _StringsZhHk extends _StringsEn {
   String get migration_uninstall_still_installed =>
       'Hibiki is still installed. You can uninstall it any time.';
   @override
+  String get migration_import_permission_title => 'Storage permission required';
+  @override
+  String get migration_import_permission_body =>
+      'The transfer folder was created by the old app. Without "All files access", Fushi cannot read it — the data is intact, it just cannot be opened.';
+  @override
+  String get migration_import_permission_grant => 'Grant permission';
+  @override
+  String migration_import_verifying(
+          {required Object batch,
+          required Object done,
+          required Object total}) =>
+      'Verifying ${batch} (${done}/${total})';
+  @override
+  String get migration_import_verifying_hint =>
+      'Checksumming the archives. Large libraries can take several minutes.';
+  @override
   String get game_line_copy_tooltip => 'Copy sentence';
   @override
   String get game_japanese_locale_auto => 'Auto';
@@ -126734,6 +127000,20 @@ extension on _StringsEn {
         return 'Uninstall Hibiki';
       case 'migration_uninstall_still_installed':
         return 'Hibiki is still installed. You can uninstall it any time.';
+      case 'migration_import_permission_title':
+        return 'Storage permission required';
+      case 'migration_import_permission_body':
+        return 'The transfer folder was created by the old app. Without "All files access", Fushi cannot read it — the data is intact, it just cannot be opened.';
+      case 'migration_import_permission_grant':
+        return 'Grant permission';
+      case 'migration_import_verifying':
+        return (
+                {required Object batch,
+                required Object done,
+                required Object total}) =>
+            'Verifying ${batch} (${done}/${total})';
+      case 'migration_import_verifying_hint':
+        return 'Checksumming the archives. Large libraries can take several minutes.';
       case 'game_line_copy_tooltip':
         return 'Copy sentence';
       case 'game_japanese_locale_auto':
@@ -133217,6 +133497,20 @@ extension on _StringsAr {
         return 'Uninstall Hibiki';
       case 'migration_uninstall_still_installed':
         return 'Hibiki is still installed. You can uninstall it any time.';
+      case 'migration_import_permission_title':
+        return 'Storage permission required';
+      case 'migration_import_permission_body':
+        return 'The transfer folder was created by the old app. Without "All files access", Fushi cannot read it — the data is intact, it just cannot be opened.';
+      case 'migration_import_permission_grant':
+        return 'Grant permission';
+      case 'migration_import_verifying':
+        return (
+                {required Object batch,
+                required Object done,
+                required Object total}) =>
+            'Verifying ${batch} (${done}/${total})';
+      case 'migration_import_verifying_hint':
+        return 'Checksumming the archives. Large libraries can take several minutes.';
       case 'game_line_copy_tooltip':
         return 'Copy sentence';
       case 'game_japanese_locale_auto':
@@ -139722,6 +140016,20 @@ extension on _StringsDe {
         return 'Uninstall Hibiki';
       case 'migration_uninstall_still_installed':
         return 'Hibiki is still installed. You can uninstall it any time.';
+      case 'migration_import_permission_title':
+        return 'Storage permission required';
+      case 'migration_import_permission_body':
+        return 'The transfer folder was created by the old app. Without "All files access", Fushi cannot read it — the data is intact, it just cannot be opened.';
+      case 'migration_import_permission_grant':
+        return 'Grant permission';
+      case 'migration_import_verifying':
+        return (
+                {required Object batch,
+                required Object done,
+                required Object total}) =>
+            'Verifying ${batch} (${done}/${total})';
+      case 'migration_import_verifying_hint':
+        return 'Checksumming the archives. Large libraries can take several minutes.';
       case 'game_line_copy_tooltip':
         return 'Copy sentence';
       case 'game_japanese_locale_auto':
@@ -146226,6 +146534,20 @@ extension on _StringsEs {
         return 'Uninstall Hibiki';
       case 'migration_uninstall_still_installed':
         return 'Hibiki is still installed. You can uninstall it any time.';
+      case 'migration_import_permission_title':
+        return 'Storage permission required';
+      case 'migration_import_permission_body':
+        return 'The transfer folder was created by the old app. Without "All files access", Fushi cannot read it — the data is intact, it just cannot be opened.';
+      case 'migration_import_permission_grant':
+        return 'Grant permission';
+      case 'migration_import_verifying':
+        return (
+                {required Object batch,
+                required Object done,
+                required Object total}) =>
+            'Verifying ${batch} (${done}/${total})';
+      case 'migration_import_verifying_hint':
+        return 'Checksumming the archives. Large libraries can take several minutes.';
       case 'game_line_copy_tooltip':
         return 'Copy sentence';
       case 'game_japanese_locale_auto':
@@ -152736,6 +153058,20 @@ extension on _StringsFr {
         return 'Uninstall Hibiki';
       case 'migration_uninstall_still_installed':
         return 'Hibiki is still installed. You can uninstall it any time.';
+      case 'migration_import_permission_title':
+        return 'Storage permission required';
+      case 'migration_import_permission_body':
+        return 'The transfer folder was created by the old app. Without "All files access", Fushi cannot read it — the data is intact, it just cannot be opened.';
+      case 'migration_import_permission_grant':
+        return 'Grant permission';
+      case 'migration_import_verifying':
+        return (
+                {required Object batch,
+                required Object done,
+                required Object total}) =>
+            'Verifying ${batch} (${done}/${total})';
+      case 'migration_import_verifying_hint':
+        return 'Checksumming the archives. Large libraries can take several minutes.';
       case 'game_line_copy_tooltip':
         return 'Copy sentence';
       case 'game_japanese_locale_auto':
@@ -159228,6 +159564,20 @@ extension on _StringsId {
         return 'Uninstall Hibiki';
       case 'migration_uninstall_still_installed':
         return 'Hibiki is still installed. You can uninstall it any time.';
+      case 'migration_import_permission_title':
+        return 'Storage permission required';
+      case 'migration_import_permission_body':
+        return 'The transfer folder was created by the old app. Without "All files access", Fushi cannot read it — the data is intact, it just cannot be opened.';
+      case 'migration_import_permission_grant':
+        return 'Grant permission';
+      case 'migration_import_verifying':
+        return (
+                {required Object batch,
+                required Object done,
+                required Object total}) =>
+            'Verifying ${batch} (${done}/${total})';
+      case 'migration_import_verifying_hint':
+        return 'Checksumming the archives. Large libraries can take several minutes.';
       case 'game_line_copy_tooltip':
         return 'Copy sentence';
       case 'game_japanese_locale_auto':
@@ -165734,6 +166084,20 @@ extension on _StringsIt {
         return 'Uninstall Hibiki';
       case 'migration_uninstall_still_installed':
         return 'Hibiki is still installed. You can uninstall it any time.';
+      case 'migration_import_permission_title':
+        return 'Storage permission required';
+      case 'migration_import_permission_body':
+        return 'The transfer folder was created by the old app. Without "All files access", Fushi cannot read it — the data is intact, it just cannot be opened.';
+      case 'migration_import_permission_grant':
+        return 'Grant permission';
+      case 'migration_import_verifying':
+        return (
+                {required Object batch,
+                required Object done,
+                required Object total}) =>
+            'Verifying ${batch} (${done}/${total})';
+      case 'migration_import_verifying_hint':
+        return 'Checksumming the archives. Large libraries can take several minutes.';
       case 'game_line_copy_tooltip':
         return 'Copy sentence';
       case 'game_japanese_locale_auto':
@@ -172202,6 +172566,20 @@ extension on _StringsJa {
         return 'Uninstall Hibiki';
       case 'migration_uninstall_still_installed':
         return 'Hibiki is still installed. You can uninstall it any time.';
+      case 'migration_import_permission_title':
+        return 'Storage permission required';
+      case 'migration_import_permission_body':
+        return 'The transfer folder was created by the old app. Without "All files access", Fushi cannot read it — the data is intact, it just cannot be opened.';
+      case 'migration_import_permission_grant':
+        return 'Grant permission';
+      case 'migration_import_verifying':
+        return (
+                {required Object batch,
+                required Object done,
+                required Object total}) =>
+            'Verifying ${batch} (${done}/${total})';
+      case 'migration_import_verifying_hint':
+        return 'Checksumming the archives. Large libraries can take several minutes.';
       case 'game_line_copy_tooltip':
         return 'Copy sentence';
       case 'game_japanese_locale_auto':
@@ -178674,6 +179052,20 @@ extension on _StringsKo {
         return 'Uninstall Hibiki';
       case 'migration_uninstall_still_installed':
         return 'Hibiki is still installed. You can uninstall it any time.';
+      case 'migration_import_permission_title':
+        return 'Storage permission required';
+      case 'migration_import_permission_body':
+        return 'The transfer folder was created by the old app. Without "All files access", Fushi cannot read it — the data is intact, it just cannot be opened.';
+      case 'migration_import_permission_grant':
+        return 'Grant permission';
+      case 'migration_import_verifying':
+        return (
+                {required Object batch,
+                required Object done,
+                required Object total}) =>
+            'Verifying ${batch} (${done}/${total})';
+      case 'migration_import_verifying_hint':
+        return 'Checksumming the archives. Large libraries can take several minutes.';
       case 'game_line_copy_tooltip':
         return 'Copy sentence';
       case 'game_japanese_locale_auto':
@@ -185174,6 +185566,20 @@ extension on _StringsNl {
         return 'Uninstall Hibiki';
       case 'migration_uninstall_still_installed':
         return 'Hibiki is still installed. You can uninstall it any time.';
+      case 'migration_import_permission_title':
+        return 'Storage permission required';
+      case 'migration_import_permission_body':
+        return 'The transfer folder was created by the old app. Without "All files access", Fushi cannot read it — the data is intact, it just cannot be opened.';
+      case 'migration_import_permission_grant':
+        return 'Grant permission';
+      case 'migration_import_verifying':
+        return (
+                {required Object batch,
+                required Object done,
+                required Object total}) =>
+            'Verifying ${batch} (${done}/${total})';
+      case 'migration_import_verifying_hint':
+        return 'Checksumming the archives. Large libraries can take several minutes.';
       case 'game_line_copy_tooltip':
         return 'Copy sentence';
       case 'game_japanese_locale_auto':
@@ -191671,6 +192077,20 @@ extension on _StringsPtBr {
         return 'Uninstall Hibiki';
       case 'migration_uninstall_still_installed':
         return 'Hibiki is still installed. You can uninstall it any time.';
+      case 'migration_import_permission_title':
+        return 'Storage permission required';
+      case 'migration_import_permission_body':
+        return 'The transfer folder was created by the old app. Without "All files access", Fushi cannot read it — the data is intact, it just cannot be opened.';
+      case 'migration_import_permission_grant':
+        return 'Grant permission';
+      case 'migration_import_verifying':
+        return (
+                {required Object batch,
+                required Object done,
+                required Object total}) =>
+            'Verifying ${batch} (${done}/${total})';
+      case 'migration_import_verifying_hint':
+        return 'Checksumming the archives. Large libraries can take several minutes.';
       case 'game_line_copy_tooltip':
         return 'Copy sentence';
       case 'game_japanese_locale_auto':
@@ -198173,6 +198593,20 @@ extension on _StringsRu {
         return 'Uninstall Hibiki';
       case 'migration_uninstall_still_installed':
         return 'Hibiki is still installed. You can uninstall it any time.';
+      case 'migration_import_permission_title':
+        return 'Storage permission required';
+      case 'migration_import_permission_body':
+        return 'The transfer folder was created by the old app. Without "All files access", Fushi cannot read it — the data is intact, it just cannot be opened.';
+      case 'migration_import_permission_grant':
+        return 'Grant permission';
+      case 'migration_import_verifying':
+        return (
+                {required Object batch,
+                required Object done,
+                required Object total}) =>
+            'Verifying ${batch} (${done}/${total})';
+      case 'migration_import_verifying_hint':
+        return 'Checksumming the archives. Large libraries can take several minutes.';
       case 'game_line_copy_tooltip':
         return 'Copy sentence';
       case 'game_japanese_locale_auto':
@@ -204658,6 +205092,20 @@ extension on _StringsTh {
         return 'Uninstall Hibiki';
       case 'migration_uninstall_still_installed':
         return 'Hibiki is still installed. You can uninstall it any time.';
+      case 'migration_import_permission_title':
+        return 'Storage permission required';
+      case 'migration_import_permission_body':
+        return 'The transfer folder was created by the old app. Without "All files access", Fushi cannot read it — the data is intact, it just cannot be opened.';
+      case 'migration_import_permission_grant':
+        return 'Grant permission';
+      case 'migration_import_verifying':
+        return (
+                {required Object batch,
+                required Object done,
+                required Object total}) =>
+            'Verifying ${batch} (${done}/${total})';
+      case 'migration_import_verifying_hint':
+        return 'Checksumming the archives. Large libraries can take several minutes.';
       case 'game_line_copy_tooltip':
         return 'Copy sentence';
       case 'game_japanese_locale_auto':
@@ -211152,6 +211600,20 @@ extension on _StringsTr {
         return 'Uninstall Hibiki';
       case 'migration_uninstall_still_installed':
         return 'Hibiki is still installed. You can uninstall it any time.';
+      case 'migration_import_permission_title':
+        return 'Storage permission required';
+      case 'migration_import_permission_body':
+        return 'The transfer folder was created by the old app. Without "All files access", Fushi cannot read it — the data is intact, it just cannot be opened.';
+      case 'migration_import_permission_grant':
+        return 'Grant permission';
+      case 'migration_import_verifying':
+        return (
+                {required Object batch,
+                required Object done,
+                required Object total}) =>
+            'Verifying ${batch} (${done}/${total})';
+      case 'migration_import_verifying_hint':
+        return 'Checksumming the archives. Large libraries can take several minutes.';
       case 'game_line_copy_tooltip':
         return 'Copy sentence';
       case 'game_japanese_locale_auto':
@@ -217642,6 +218104,20 @@ extension on _StringsVi {
         return 'Uninstall Hibiki';
       case 'migration_uninstall_still_installed':
         return 'Hibiki is still installed. You can uninstall it any time.';
+      case 'migration_import_permission_title':
+        return 'Storage permission required';
+      case 'migration_import_permission_body':
+        return 'The transfer folder was created by the old app. Without "All files access", Fushi cannot read it — the data is intact, it just cannot be opened.';
+      case 'migration_import_permission_grant':
+        return 'Grant permission';
+      case 'migration_import_verifying':
+        return (
+                {required Object batch,
+                required Object done,
+                required Object total}) =>
+            'Verifying ${batch} (${done}/${total})';
+      case 'migration_import_verifying_hint':
+        return 'Checksumming the archives. Large libraries can take several minutes.';
       case 'game_line_copy_tooltip':
         return 'Copy sentence';
       case 'game_japanese_locale_auto':
@@ -224077,6 +224553,20 @@ extension on _StringsZhCn {
         return '卸载 Hibiki';
       case 'migration_uninstall_still_installed':
         return '旧版 Hibiki 仍安装在设备上，可随时卸载。';
+      case 'migration_import_permission_title':
+        return '需要文件访问权限';
+      case 'migration_import_permission_body':
+        return '中转目录是旧版应用创建的。没有「所有文件访问权限」，Fushi 读不了它——数据是完好的，只是打不开。';
+      case 'migration_import_permission_grant':
+        return '去授权';
+      case 'migration_import_verifying':
+        return (
+                {required Object batch,
+                required Object done,
+                required Object total}) =>
+            '正在校验 ${batch}（${done}/${total}）';
+      case 'migration_import_verifying_hint':
+        return '正在核对归档校验和。库很大时需要几分钟。';
       case 'game_line_copy_tooltip':
         return '复制句子';
       case 'game_japanese_locale_auto':
@@ -230540,6 +231030,20 @@ extension on _StringsZhHk {
         return 'Uninstall Hibiki';
       case 'migration_uninstall_still_installed':
         return 'Hibiki is still installed. You can uninstall it any time.';
+      case 'migration_import_permission_title':
+        return 'Storage permission required';
+      case 'migration_import_permission_body':
+        return 'The transfer folder was created by the old app. Without "All files access", Fushi cannot read it — the data is intact, it just cannot be opened.';
+      case 'migration_import_permission_grant':
+        return 'Grant permission';
+      case 'migration_import_verifying':
+        return (
+                {required Object batch,
+                required Object done,
+                required Object total}) =>
+            'Verifying ${batch} (${done}/${total})';
+      case 'migration_import_verifying_hint':
+        return 'Checksumming the archives. Large libraries can take several minutes.';
       case 'game_line_copy_tooltip':
         return 'Copy sentence';
       case 'game_japanese_locale_auto':
