@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 56066 (3298 per locale)
+/// Strings: 56068 (3298 per locale)
 ///
-/// Built on 2026-08-09 at 10:14 UTC
+/// Built on 2026-08-09 at 20:19 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3905,6 +3905,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_scrape_collection_rename_keep => 'Keep current name';
   String get video_scrape_collection_rename_confirm => 'Rename';
   String get download_task_toggle_failed => 'Pause/resume failed';
+  String download_subscription_start_episode({required Object episode}) =>
+      'Start from episode ${episode}';
   String get download_task_eta => 'ETA';
   String get download_task_ratio => 'Ratio';
   String get download_task_status_downloading => 'Downloading';
@@ -117433,6 +117435,9 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get download_task_toggle_failed => '暂停/恢复操作失败';
   @override
+  String download_subscription_start_episode({required Object episode}) =>
+      '从第 ${episode} 集开始';
+  @override
   String get download_task_eta => '剩余';
   @override
   String get download_task_ratio => '分享率';
@@ -131658,6 +131663,8 @@ extension on _StringsEn {
         return 'Rename';
       case 'download_task_toggle_failed':
         return 'Pause/resume failed';
+      case 'download_subscription_start_episode':
+        return ({required Object episode}) => 'Start from episode ${episode}';
       case 'download_task_eta':
         return 'ETA';
       case 'download_task_ratio':
@@ -233323,6 +233330,8 @@ extension on _StringsZhCn {
         return '重命名';
       case 'download_task_toggle_failed':
         return '暂停/恢复操作失败';
+      case 'download_subscription_start_episode':
+        return ({required Object episode}) => '从第 ${episode} 集开始';
       case 'download_task_eta':
         return '剩余';
       case 'download_task_ratio':
