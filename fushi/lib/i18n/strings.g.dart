@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 56185 (3305 per locale)
+/// Strings: 56202 (3306 per locale)
 ///
-/// Built on 2026-08-10 at 15:49 UTC
+/// Built on 2026-08-10 at 16:09 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -4468,6 +4468,11 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_setting_drag_seek_sensitivity_high => 'High';
   String video_subtitle_read_failed({required Object label}) =>
       'Couldn\'t read this subtitle file (damaged or empty): ${label}';
+  String dict_downloading_size(
+          {required Object name,
+          required Object done,
+          required Object total}) =>
+      'Downloading ${name} (${done} / ${total})';
 }
 
 // Path: <root>
@@ -12091,6 +12096,12 @@ class _StringsAr extends _StringsEn {
   @override
   String video_subtitle_read_failed({required Object label}) =>
       'Couldn\'t read this subtitle file (damaged or empty): ${label}';
+  @override
+  String dict_downloading_size(
+          {required Object name,
+          required Object done,
+          required Object total}) =>
+      'Downloading ${name} (${done} / ${total})';
 }
 
 // Path: <root>
@@ -19781,6 +19792,12 @@ class _StringsDe extends _StringsEn {
   @override
   String video_subtitle_read_failed({required Object label}) =>
       'Couldn\'t read this subtitle file (damaged or empty): ${label}';
+  @override
+  String dict_downloading_size(
+          {required Object name,
+          required Object done,
+          required Object total}) =>
+      'Downloading ${name} (${done} / ${total})';
 }
 
 // Path: <root>
@@ -27487,6 +27504,12 @@ class _StringsEs extends _StringsEn {
   @override
   String video_subtitle_read_failed({required Object label}) =>
       'Couldn\'t read this subtitle file (damaged or empty): ${label}';
+  @override
+  String dict_downloading_size(
+          {required Object name,
+          required Object done,
+          required Object total}) =>
+      'Downloading ${name} (${done} / ${total})';
 }
 
 // Path: <root>
@@ -35205,6 +35228,12 @@ class _StringsFr extends _StringsEn {
   @override
   String video_subtitle_read_failed({required Object label}) =>
       'Couldn\'t read this subtitle file (damaged or empty): ${label}';
+  @override
+  String dict_downloading_size(
+          {required Object name,
+          required Object done,
+          required Object total}) =>
+      'Downloading ${name} (${done} / ${total})';
 }
 
 // Path: <root>
@@ -42851,6 +42880,12 @@ class _StringsId extends _StringsEn {
   @override
   String video_subtitle_read_failed({required Object label}) =>
       'Couldn\'t read this subtitle file (damaged or empty): ${label}';
+  @override
+  String dict_downloading_size(
+          {required Object name,
+          required Object done,
+          required Object total}) =>
+      'Downloading ${name} (${done} / ${total})';
 }
 
 // Path: <root>
@@ -50543,6 +50578,12 @@ class _StringsIt extends _StringsEn {
   @override
   String video_subtitle_read_failed({required Object label}) =>
       'Couldn\'t read this subtitle file (damaged or empty): ${label}';
+  @override
+  String dict_downloading_size(
+          {required Object name,
+          required Object done,
+          required Object total}) =>
+      'Downloading ${name} (${done} / ${total})';
 }
 
 // Path: <root>
@@ -58049,6 +58090,12 @@ class _StringsJa extends _StringsEn {
   @override
   String video_subtitle_read_failed({required Object label}) =>
       'Couldn\'t read this subtitle file (damaged or empty): ${label}';
+  @override
+  String dict_downloading_size(
+          {required Object name,
+          required Object done,
+          required Object total}) =>
+      'Downloading ${name} (${done} / ${total})';
 }
 
 // Path: <root>
@@ -65562,6 +65609,12 @@ class _StringsKo extends _StringsEn {
   @override
   String video_subtitle_read_failed({required Object label}) =>
       'Couldn\'t read this subtitle file (damaged or empty): ${label}';
+  @override
+  String dict_downloading_size(
+          {required Object name,
+          required Object done,
+          required Object total}) =>
+      'Downloading ${name} (${done} / ${total})';
 }
 
 // Path: <root>
@@ -73234,6 +73287,12 @@ class _StringsNl extends _StringsEn {
   @override
   String video_subtitle_read_failed({required Object label}) =>
       'Couldn\'t read this subtitle file (damaged or empty): ${label}';
+  @override
+  String dict_downloading_size(
+          {required Object name,
+          required Object done,
+          required Object total}) =>
+      'Downloading ${name} (${done} / ${total})';
 }
 
 // Path: <root>
@@ -80918,6 +80977,12 @@ class _StringsPtBr extends _StringsEn {
   @override
   String video_subtitle_read_failed({required Object label}) =>
       'Couldn\'t read this subtitle file (damaged or empty): ${label}';
+  @override
+  String dict_downloading_size(
+          {required Object name,
+          required Object done,
+          required Object total}) =>
+      'Downloading ${name} (${done} / ${total})';
 }
 
 // Path: <root>
@@ -88588,6 +88653,12 @@ class _StringsRu extends _StringsEn {
   @override
   String video_subtitle_read_failed({required Object label}) =>
       'Couldn\'t read this subtitle file (damaged or empty): ${label}';
+  @override
+  String dict_downloading_size(
+          {required Object name,
+          required Object done,
+          required Object total}) =>
+      'Downloading ${name} (${done} / ${total})';
 }
 
 // Path: <root>
@@ -96206,6 +96277,12 @@ class _StringsTh extends _StringsEn {
   @override
   String video_subtitle_read_failed({required Object label}) =>
       'Couldn\'t read this subtitle file (damaged or empty): ${label}';
+  @override
+  String dict_downloading_size(
+          {required Object name,
+          required Object done,
+          required Object total}) =>
+      'Downloading ${name} (${done} / ${total})';
 }
 
 // Path: <root>
@@ -103855,6 +103932,12 @@ class _StringsTr extends _StringsEn {
   @override
   String video_subtitle_read_failed({required Object label}) =>
       'Couldn\'t read this subtitle file (damaged or empty): ${label}';
+  @override
+  String dict_downloading_size(
+          {required Object name,
+          required Object done,
+          required Object total}) =>
+      'Downloading ${name} (${done} / ${total})';
 }
 
 // Path: <root>
@@ -111489,6 +111572,12 @@ class _StringsVi extends _StringsEn {
   @override
   String video_subtitle_read_failed({required Object label}) =>
       'Couldn\'t read this subtitle file (damaged or empty): ${label}';
+  @override
+  String dict_downloading_size(
+          {required Object name,
+          required Object done,
+          required Object total}) =>
+      'Downloading ${name} (${done} / ${total})';
 }
 
 // Path: <root>
@@ -118573,6 +118662,12 @@ class _StringsZhCn extends _StringsEn {
   @override
   String video_subtitle_read_failed({required Object label}) =>
       '无法读取该字幕文件（内容损坏或为空）：${label}';
+  @override
+  String dict_downloading_size(
+          {required Object name,
+          required Object done,
+          required Object total}) =>
+      '正在下载 ${name}（${done} / ${total}）';
 }
 
 // Path: <root>
@@ -126002,6 +126097,12 @@ class _StringsZhHk extends _StringsEn {
   @override
   String video_subtitle_read_failed({required Object label}) =>
       'Couldn\'t read this subtitle file (damaged or empty): ${label}';
+  @override
+  String dict_downloading_size(
+          {required Object name,
+          required Object done,
+          required Object total}) =>
+      'Downloading ${name} (${done} / ${total})';
 }
 
 /// Flat map(s) containing all translations.
@@ -132790,6 +132891,12 @@ extension on _StringsEn {
       case 'video_subtitle_read_failed':
         return ({required Object label}) =>
             'Couldn\'t read this subtitle file (damaged or empty): ${label}';
+      case 'dict_downloading_size':
+        return (
+                {required Object name,
+                required Object done,
+                required Object total}) =>
+            'Downloading ${name} (${done} / ${total})';
       default:
         return null;
     }
@@ -139576,6 +139683,12 @@ extension on _StringsAr {
       case 'video_subtitle_read_failed':
         return ({required Object label}) =>
             'Couldn\'t read this subtitle file (damaged or empty): ${label}';
+      case 'dict_downloading_size':
+        return (
+                {required Object name,
+                required Object done,
+                required Object total}) =>
+            'Downloading ${name} (${done} / ${total})';
       default:
         return null;
     }
@@ -146384,6 +146497,12 @@ extension on _StringsDe {
       case 'video_subtitle_read_failed':
         return ({required Object label}) =>
             'Couldn\'t read this subtitle file (damaged or empty): ${label}';
+      case 'dict_downloading_size':
+        return (
+                {required Object name,
+                required Object done,
+                required Object total}) =>
+            'Downloading ${name} (${done} / ${total})';
       default:
         return null;
     }
@@ -153191,6 +153310,12 @@ extension on _StringsEs {
       case 'video_subtitle_read_failed':
         return ({required Object label}) =>
             'Couldn\'t read this subtitle file (damaged or empty): ${label}';
+      case 'dict_downloading_size':
+        return (
+                {required Object name,
+                required Object done,
+                required Object total}) =>
+            'Downloading ${name} (${done} / ${total})';
       default:
         return null;
     }
@@ -160004,6 +160129,12 @@ extension on _StringsFr {
       case 'video_subtitle_read_failed':
         return ({required Object label}) =>
             'Couldn\'t read this subtitle file (damaged or empty): ${label}';
+      case 'dict_downloading_size':
+        return (
+                {required Object name,
+                required Object done,
+                required Object total}) =>
+            'Downloading ${name} (${done} / ${total})';
       default:
         return null;
     }
@@ -166799,6 +166930,12 @@ extension on _StringsId {
       case 'video_subtitle_read_failed':
         return ({required Object label}) =>
             'Couldn\'t read this subtitle file (damaged or empty): ${label}';
+      case 'dict_downloading_size':
+        return (
+                {required Object name,
+                required Object done,
+                required Object total}) =>
+            'Downloading ${name} (${done} / ${total})';
       default:
         return null;
     }
@@ -173608,6 +173745,12 @@ extension on _StringsIt {
       case 'video_subtitle_read_failed':
         return ({required Object label}) =>
             'Couldn\'t read this subtitle file (damaged or empty): ${label}';
+      case 'dict_downloading_size':
+        return (
+                {required Object name,
+                required Object done,
+                required Object total}) =>
+            'Downloading ${name} (${done} / ${total})';
       default:
         return null;
     }
@@ -180379,6 +180522,12 @@ extension on _StringsJa {
       case 'video_subtitle_read_failed':
         return ({required Object label}) =>
             'Couldn\'t read this subtitle file (damaged or empty): ${label}';
+      case 'dict_downloading_size':
+        return (
+                {required Object name,
+                required Object done,
+                required Object total}) =>
+            'Downloading ${name} (${done} / ${total})';
       default:
         return null;
     }
@@ -187154,6 +187303,12 @@ extension on _StringsKo {
       case 'video_subtitle_read_failed':
         return ({required Object label}) =>
             'Couldn\'t read this subtitle file (damaged or empty): ${label}';
+      case 'dict_downloading_size':
+        return (
+                {required Object name,
+                required Object done,
+                required Object total}) =>
+            'Downloading ${name} (${done} / ${total})';
       default:
         return null;
     }
@@ -193957,6 +194112,12 @@ extension on _StringsNl {
       case 'video_subtitle_read_failed':
         return ({required Object label}) =>
             'Couldn\'t read this subtitle file (damaged or empty): ${label}';
+      case 'dict_downloading_size':
+        return (
+                {required Object name,
+                required Object done,
+                required Object total}) =>
+            'Downloading ${name} (${done} / ${total})';
       default:
         return null;
     }
@@ -200757,6 +200918,12 @@ extension on _StringsPtBr {
       case 'video_subtitle_read_failed':
         return ({required Object label}) =>
             'Couldn\'t read this subtitle file (damaged or empty): ${label}';
+      case 'dict_downloading_size':
+        return (
+                {required Object name,
+                required Object done,
+                required Object total}) =>
+            'Downloading ${name} (${done} / ${total})';
       default:
         return null;
     }
@@ -207562,6 +207729,12 @@ extension on _StringsRu {
       case 'video_subtitle_read_failed':
         return ({required Object label}) =>
             'Couldn\'t read this subtitle file (damaged or empty): ${label}';
+      case 'dict_downloading_size':
+        return (
+                {required Object name,
+                required Object done,
+                required Object total}) =>
+            'Downloading ${name} (${done} / ${total})';
       default:
         return null;
     }
@@ -214350,6 +214523,12 @@ extension on _StringsTh {
       case 'video_subtitle_read_failed':
         return ({required Object label}) =>
             'Couldn\'t read this subtitle file (damaged or empty): ${label}';
+      case 'dict_downloading_size':
+        return (
+                {required Object name,
+                required Object done,
+                required Object total}) =>
+            'Downloading ${name} (${done} / ${total})';
       default:
         return null;
     }
@@ -221147,6 +221326,12 @@ extension on _StringsTr {
       case 'video_subtitle_read_failed':
         return ({required Object label}) =>
             'Couldn\'t read this subtitle file (damaged or empty): ${label}';
+      case 'dict_downloading_size':
+        return (
+                {required Object name,
+                required Object done,
+                required Object total}) =>
+            'Downloading ${name} (${done} / ${total})';
       default:
         return null;
     }
@@ -227940,6 +228125,12 @@ extension on _StringsVi {
       case 'video_subtitle_read_failed':
         return ({required Object label}) =>
             'Couldn\'t read this subtitle file (damaged or empty): ${label}';
+      case 'dict_downloading_size':
+        return (
+                {required Object name,
+                required Object done,
+                required Object total}) =>
+            'Downloading ${name} (${done} / ${total})';
       default:
         return null;
     }
@@ -234676,6 +234867,12 @@ extension on _StringsZhCn {
         return '高';
       case 'video_subtitle_read_failed':
         return ({required Object label}) => '无法读取该字幕文件（内容损坏或为空）：${label}';
+      case 'dict_downloading_size':
+        return (
+                {required Object name,
+                required Object done,
+                required Object total}) =>
+            '正在下载 ${name}（${done} / ${total}）';
       default:
         return null;
     }
@@ -241442,6 +241639,12 @@ extension on _StringsZhHk {
       case 'video_subtitle_read_failed':
         return ({required Object label}) =>
             'Couldn\'t read this subtitle file (damaged or empty): ${label}';
+      case 'dict_downloading_size':
+        return (
+                {required Object name,
+                required Object done,
+                required Object total}) =>
+            'Downloading ${name} (${done} / ${total})';
       default:
         return null;
     }
