@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 56083 (3299 per locale)
+/// Strings: 56100 (3300 per locale)
 ///
-/// Built on 2026-08-09 at 15:14 UTC
+/// Built on 2026-08-10 at 14:14 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -4460,6 +4460,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_opensubtitles_endpoint => 'API endpoint';
   String get video_download_target_source_empty =>
       'No locally accessible video source is available. Add one on the Sources tab first.';
+  String video_subtitle_read_failed({required Object label}) =>
+      'Couldn\'t read this subtitle file (damaged or empty): ${label}';
 }
 
 // Path: <root>
@@ -12069,6 +12071,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_download_target_source_empty =>
       'No locally accessible video source is available. Add one on the Sources tab first.';
+  @override
+  String video_subtitle_read_failed({required Object label}) =>
+      'Couldn\'t read this subtitle file (damaged or empty): ${label}';
 }
 
 // Path: <root>
@@ -19745,6 +19750,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_download_target_source_empty =>
       'No locally accessible video source is available. Add one on the Sources tab first.';
+  @override
+  String video_subtitle_read_failed({required Object label}) =>
+      'Couldn\'t read this subtitle file (damaged or empty): ${label}';
 }
 
 // Path: <root>
@@ -27437,6 +27445,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_download_target_source_empty =>
       'No locally accessible video source is available. Add one on the Sources tab first.';
+  @override
+  String video_subtitle_read_failed({required Object label}) =>
+      'Couldn\'t read this subtitle file (damaged or empty): ${label}';
 }
 
 // Path: <root>
@@ -35141,6 +35152,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_download_target_source_empty =>
       'No locally accessible video source is available. Add one on the Sources tab first.';
+  @override
+  String video_subtitle_read_failed({required Object label}) =>
+      'Couldn\'t read this subtitle file (damaged or empty): ${label}';
 }
 
 // Path: <root>
@@ -42773,6 +42787,9 @@ class _StringsId extends _StringsEn {
   @override
   String get video_download_target_source_empty =>
       'No locally accessible video source is available. Add one on the Sources tab first.';
+  @override
+  String video_subtitle_read_failed({required Object label}) =>
+      'Couldn\'t read this subtitle file (damaged or empty): ${label}';
 }
 
 // Path: <root>
@@ -50451,6 +50468,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_download_target_source_empty =>
       'No locally accessible video source is available. Add one on the Sources tab first.';
+  @override
+  String video_subtitle_read_failed({required Object label}) =>
+      'Couldn\'t read this subtitle file (damaged or empty): ${label}';
 }
 
 // Path: <root>
@@ -57943,6 +57963,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_download_target_source_empty =>
       'No locally accessible video source is available. Add one on the Sources tab first.';
+  @override
+  String video_subtitle_read_failed({required Object label}) =>
+      'Couldn\'t read this subtitle file (damaged or empty): ${label}';
 }
 
 // Path: <root>
@@ -65442,6 +65465,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_download_target_source_empty =>
       'No locally accessible video source is available. Add one on the Sources tab first.';
+  @override
+  String video_subtitle_read_failed({required Object label}) =>
+      'Couldn\'t read this subtitle file (damaged or empty): ${label}';
 }
 
 // Path: <root>
@@ -73100,6 +73126,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_download_target_source_empty =>
       'No locally accessible video source is available. Add one on the Sources tab first.';
+  @override
+  String video_subtitle_read_failed({required Object label}) =>
+      'Couldn\'t read this subtitle file (damaged or empty): ${label}';
 }
 
 // Path: <root>
@@ -80770,6 +80799,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_download_target_source_empty =>
       'No locally accessible video source is available. Add one on the Sources tab first.';
+  @override
+  String video_subtitle_read_failed({required Object label}) =>
+      'Couldn\'t read this subtitle file (damaged or empty): ${label}';
 }
 
 // Path: <root>
@@ -88426,6 +88458,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_download_target_source_empty =>
       'No locally accessible video source is available. Add one on the Sources tab first.';
+  @override
+  String video_subtitle_read_failed({required Object label}) =>
+      'Couldn\'t read this subtitle file (damaged or empty): ${label}';
 }
 
 // Path: <root>
@@ -96030,6 +96065,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_download_target_source_empty =>
       'No locally accessible video source is available. Add one on the Sources tab first.';
+  @override
+  String video_subtitle_read_failed({required Object label}) =>
+      'Couldn\'t read this subtitle file (damaged or empty): ${label}';
 }
 
 // Path: <root>
@@ -103665,6 +103703,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_download_target_source_empty =>
       'No locally accessible video source is available. Add one on the Sources tab first.';
+  @override
+  String video_subtitle_read_failed({required Object label}) =>
+      'Couldn\'t read this subtitle file (damaged or empty): ${label}';
 }
 
 // Path: <root>
@@ -111285,6 +111326,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_download_target_source_empty =>
       'No locally accessible video source is available. Add one on the Sources tab first.';
+  @override
+  String video_subtitle_read_failed({required Object label}) =>
+      'Couldn\'t read this subtitle file (damaged or empty): ${label}';
 }
 
 // Path: <root>
@@ -118355,6 +118399,9 @@ class _StringsZhCn extends _StringsEn {
   String get video_opensubtitles_endpoint => 'API 端点';
   @override
   String get video_download_target_source_empty => '没有可访问的本地视频来源。请先在来源页添加。';
+  @override
+  String video_subtitle_read_failed({required Object label}) =>
+      '无法读取该字幕文件（内容损坏或为空）：${label}';
 }
 
 // Path: <root>
@@ -125770,6 +125817,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_download_target_source_empty =>
       'No locally accessible video source is available. Add one on the Sources tab first.';
+  @override
+  String video_subtitle_read_failed({required Object label}) =>
+      'Couldn\'t read this subtitle file (damaged or empty): ${label}';
 }
 
 /// Flat map(s) containing all translations.
@@ -132545,6 +132595,9 @@ extension on _StringsEn {
         return 'API endpoint';
       case 'video_download_target_source_empty':
         return 'No locally accessible video source is available. Add one on the Sources tab first.';
+      case 'video_subtitle_read_failed':
+        return ({required Object label}) =>
+            'Couldn\'t read this subtitle file (damaged or empty): ${label}';
       default:
         return null;
     }
@@ -139318,6 +139371,9 @@ extension on _StringsAr {
         return 'API endpoint';
       case 'video_download_target_source_empty':
         return 'No locally accessible video source is available. Add one on the Sources tab first.';
+      case 'video_subtitle_read_failed':
+        return ({required Object label}) =>
+            'Couldn\'t read this subtitle file (damaged or empty): ${label}';
       default:
         return null;
     }
@@ -146113,6 +146169,9 @@ extension on _StringsDe {
         return 'API endpoint';
       case 'video_download_target_source_empty':
         return 'No locally accessible video source is available. Add one on the Sources tab first.';
+      case 'video_subtitle_read_failed':
+        return ({required Object label}) =>
+            'Couldn\'t read this subtitle file (damaged or empty): ${label}';
       default:
         return null;
     }
@@ -152907,6 +152966,9 @@ extension on _StringsEs {
         return 'API endpoint';
       case 'video_download_target_source_empty':
         return 'No locally accessible video source is available. Add one on the Sources tab first.';
+      case 'video_subtitle_read_failed':
+        return ({required Object label}) =>
+            'Couldn\'t read this subtitle file (damaged or empty): ${label}';
       default:
         return null;
     }
@@ -159707,6 +159769,9 @@ extension on _StringsFr {
         return 'API endpoint';
       case 'video_download_target_source_empty':
         return 'No locally accessible video source is available. Add one on the Sources tab first.';
+      case 'video_subtitle_read_failed':
+        return ({required Object label}) =>
+            'Couldn\'t read this subtitle file (damaged or empty): ${label}';
       default:
         return null;
     }
@@ -166489,6 +166554,9 @@ extension on _StringsId {
         return 'API endpoint';
       case 'video_download_target_source_empty':
         return 'No locally accessible video source is available. Add one on the Sources tab first.';
+      case 'video_subtitle_read_failed':
+        return ({required Object label}) =>
+            'Couldn\'t read this subtitle file (damaged or empty): ${label}';
       default:
         return null;
     }
@@ -173285,6 +173353,9 @@ extension on _StringsIt {
         return 'API endpoint';
       case 'video_download_target_source_empty':
         return 'No locally accessible video source is available. Add one on the Sources tab first.';
+      case 'video_subtitle_read_failed':
+        return ({required Object label}) =>
+            'Couldn\'t read this subtitle file (damaged or empty): ${label}';
       default:
         return null;
     }
@@ -180043,6 +180114,9 @@ extension on _StringsJa {
         return 'API endpoint';
       case 'video_download_target_source_empty':
         return 'No locally accessible video source is available. Add one on the Sources tab first.';
+      case 'video_subtitle_read_failed':
+        return ({required Object label}) =>
+            'Couldn\'t read this subtitle file (damaged or empty): ${label}';
       default:
         return null;
     }
@@ -186805,6 +186879,9 @@ extension on _StringsKo {
         return 'API endpoint';
       case 'video_download_target_source_empty':
         return 'No locally accessible video source is available. Add one on the Sources tab first.';
+      case 'video_subtitle_read_failed':
+        return ({required Object label}) =>
+            'Couldn\'t read this subtitle file (damaged or empty): ${label}';
       default:
         return null;
     }
@@ -193595,6 +193672,9 @@ extension on _StringsNl {
         return 'API endpoint';
       case 'video_download_target_source_empty':
         return 'No locally accessible video source is available. Add one on the Sources tab first.';
+      case 'video_subtitle_read_failed':
+        return ({required Object label}) =>
+            'Couldn\'t read this subtitle file (damaged or empty): ${label}';
       default:
         return null;
     }
@@ -200382,6 +200462,9 @@ extension on _StringsPtBr {
         return 'API endpoint';
       case 'video_download_target_source_empty':
         return 'No locally accessible video source is available. Add one on the Sources tab first.';
+      case 'video_subtitle_read_failed':
+        return ({required Object label}) =>
+            'Couldn\'t read this subtitle file (damaged or empty): ${label}';
       default:
         return null;
     }
@@ -207174,6 +207257,9 @@ extension on _StringsRu {
         return 'API endpoint';
       case 'video_download_target_source_empty':
         return 'No locally accessible video source is available. Add one on the Sources tab first.';
+      case 'video_subtitle_read_failed':
+        return ({required Object label}) =>
+            'Couldn\'t read this subtitle file (damaged or empty): ${label}';
       default:
         return null;
     }
@@ -213949,6 +214035,9 @@ extension on _StringsTh {
         return 'API endpoint';
       case 'video_download_target_source_empty':
         return 'No locally accessible video source is available. Add one on the Sources tab first.';
+      case 'video_subtitle_read_failed':
+        return ({required Object label}) =>
+            'Couldn\'t read this subtitle file (damaged or empty): ${label}';
       default:
         return null;
     }
@@ -220733,6 +220822,9 @@ extension on _StringsTr {
         return 'API endpoint';
       case 'video_download_target_source_empty':
         return 'No locally accessible video source is available. Add one on the Sources tab first.';
+      case 'video_subtitle_read_failed':
+        return ({required Object label}) =>
+            'Couldn\'t read this subtitle file (damaged or empty): ${label}';
       default:
         return null;
     }
@@ -227513,6 +227605,9 @@ extension on _StringsVi {
         return 'API endpoint';
       case 'video_download_target_source_empty':
         return 'No locally accessible video source is available. Add one on the Sources tab first.';
+      case 'video_subtitle_read_failed':
+        return ({required Object label}) =>
+            'Couldn\'t read this subtitle file (damaged or empty): ${label}';
       default:
         return null;
     }
@@ -234237,6 +234332,8 @@ extension on _StringsZhCn {
         return 'API 端点';
       case 'video_download_target_source_empty':
         return '没有可访问的本地视频来源。请先在来源页添加。';
+      case 'video_subtitle_read_failed':
+        return ({required Object label}) => '无法读取该字幕文件（内容损坏或为空）：${label}';
       default:
         return null;
     }
@@ -240990,6 +241087,9 @@ extension on _StringsZhHk {
         return 'API endpoint';
       case 'video_download_target_source_empty':
         return 'No locally accessible video source is available. Add one on the Sources tab first.';
+      case 'video_subtitle_read_failed':
+        return ({required Object label}) =>
+            'Couldn\'t read this subtitle file (damaged or empty): ${label}';
       default:
         return null;
     }
