@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 56202 (3306 per locale)
+/// Strings: 56219 (3307 per locale)
 ///
-/// Built on 2026-08-10 at 16:09 UTC
+/// Built on 2026-08-10 at 18:38 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -4473,6 +4473,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
           required Object done,
           required Object total}) =>
       'Downloading ${name} (${done} / ${total})';
+  String get video_subtitle_attach_book_missing =>
+      'This video isn\'t in your library, so the subtitle wasn\'t attached';
 }
 
 // Path: <root>
@@ -12102,6 +12104,9 @@ class _StringsAr extends _StringsEn {
           required Object done,
           required Object total}) =>
       'Downloading ${name} (${done} / ${total})';
+  @override
+  String get video_subtitle_attach_book_missing =>
+      'This video isn\'t in your library, so the subtitle wasn\'t attached';
 }
 
 // Path: <root>
@@ -19798,6 +19803,9 @@ class _StringsDe extends _StringsEn {
           required Object done,
           required Object total}) =>
       'Downloading ${name} (${done} / ${total})';
+  @override
+  String get video_subtitle_attach_book_missing =>
+      'This video isn\'t in your library, so the subtitle wasn\'t attached';
 }
 
 // Path: <root>
@@ -27510,6 +27518,9 @@ class _StringsEs extends _StringsEn {
           required Object done,
           required Object total}) =>
       'Downloading ${name} (${done} / ${total})';
+  @override
+  String get video_subtitle_attach_book_missing =>
+      'This video isn\'t in your library, so the subtitle wasn\'t attached';
 }
 
 // Path: <root>
@@ -35234,6 +35245,9 @@ class _StringsFr extends _StringsEn {
           required Object done,
           required Object total}) =>
       'Downloading ${name} (${done} / ${total})';
+  @override
+  String get video_subtitle_attach_book_missing =>
+      'This video isn\'t in your library, so the subtitle wasn\'t attached';
 }
 
 // Path: <root>
@@ -42886,6 +42900,9 @@ class _StringsId extends _StringsEn {
           required Object done,
           required Object total}) =>
       'Downloading ${name} (${done} / ${total})';
+  @override
+  String get video_subtitle_attach_book_missing =>
+      'This video isn\'t in your library, so the subtitle wasn\'t attached';
 }
 
 // Path: <root>
@@ -50584,6 +50601,9 @@ class _StringsIt extends _StringsEn {
           required Object done,
           required Object total}) =>
       'Downloading ${name} (${done} / ${total})';
+  @override
+  String get video_subtitle_attach_book_missing =>
+      'This video isn\'t in your library, so the subtitle wasn\'t attached';
 }
 
 // Path: <root>
@@ -58096,6 +58116,9 @@ class _StringsJa extends _StringsEn {
           required Object done,
           required Object total}) =>
       'Downloading ${name} (${done} / ${total})';
+  @override
+  String get video_subtitle_attach_book_missing =>
+      'This video isn\'t in your library, so the subtitle wasn\'t attached';
 }
 
 // Path: <root>
@@ -65615,6 +65638,9 @@ class _StringsKo extends _StringsEn {
           required Object done,
           required Object total}) =>
       'Downloading ${name} (${done} / ${total})';
+  @override
+  String get video_subtitle_attach_book_missing =>
+      'This video isn\'t in your library, so the subtitle wasn\'t attached';
 }
 
 // Path: <root>
@@ -73293,6 +73319,9 @@ class _StringsNl extends _StringsEn {
           required Object done,
           required Object total}) =>
       'Downloading ${name} (${done} / ${total})';
+  @override
+  String get video_subtitle_attach_book_missing =>
+      'This video isn\'t in your library, so the subtitle wasn\'t attached';
 }
 
 // Path: <root>
@@ -80983,6 +81012,9 @@ class _StringsPtBr extends _StringsEn {
           required Object done,
           required Object total}) =>
       'Downloading ${name} (${done} / ${total})';
+  @override
+  String get video_subtitle_attach_book_missing =>
+      'This video isn\'t in your library, so the subtitle wasn\'t attached';
 }
 
 // Path: <root>
@@ -88659,6 +88691,9 @@ class _StringsRu extends _StringsEn {
           required Object done,
           required Object total}) =>
       'Downloading ${name} (${done} / ${total})';
+  @override
+  String get video_subtitle_attach_book_missing =>
+      'This video isn\'t in your library, so the subtitle wasn\'t attached';
 }
 
 // Path: <root>
@@ -96283,6 +96318,9 @@ class _StringsTh extends _StringsEn {
           required Object done,
           required Object total}) =>
       'Downloading ${name} (${done} / ${total})';
+  @override
+  String get video_subtitle_attach_book_missing =>
+      'This video isn\'t in your library, so the subtitle wasn\'t attached';
 }
 
 // Path: <root>
@@ -103938,6 +103976,9 @@ class _StringsTr extends _StringsEn {
           required Object done,
           required Object total}) =>
       'Downloading ${name} (${done} / ${total})';
+  @override
+  String get video_subtitle_attach_book_missing =>
+      'This video isn\'t in your library, so the subtitle wasn\'t attached';
 }
 
 // Path: <root>
@@ -111578,6 +111619,9 @@ class _StringsVi extends _StringsEn {
           required Object done,
           required Object total}) =>
       'Downloading ${name} (${done} / ${total})';
+  @override
+  String get video_subtitle_attach_book_missing =>
+      'This video isn\'t in your library, so the subtitle wasn\'t attached';
 }
 
 // Path: <root>
@@ -118668,6 +118712,8 @@ class _StringsZhCn extends _StringsEn {
           required Object done,
           required Object total}) =>
       '正在下载 ${name}（${done} / ${total}）';
+  @override
+  String get video_subtitle_attach_book_missing => '该视频不在视频库中，字幕没有挂上';
 }
 
 // Path: <root>
@@ -126103,6 +126149,9 @@ class _StringsZhHk extends _StringsEn {
           required Object done,
           required Object total}) =>
       'Downloading ${name} (${done} / ${total})';
+  @override
+  String get video_subtitle_attach_book_missing =>
+      'This video isn\'t in your library, so the subtitle wasn\'t attached';
 }
 
 /// Flat map(s) containing all translations.
@@ -132897,6 +132946,8 @@ extension on _StringsEn {
                 required Object done,
                 required Object total}) =>
             'Downloading ${name} (${done} / ${total})';
+      case 'video_subtitle_attach_book_missing':
+        return 'This video isn\'t in your library, so the subtitle wasn\'t attached';
       default:
         return null;
     }
@@ -139689,6 +139740,8 @@ extension on _StringsAr {
                 required Object done,
                 required Object total}) =>
             'Downloading ${name} (${done} / ${total})';
+      case 'video_subtitle_attach_book_missing':
+        return 'This video isn\'t in your library, so the subtitle wasn\'t attached';
       default:
         return null;
     }
@@ -146503,6 +146556,8 @@ extension on _StringsDe {
                 required Object done,
                 required Object total}) =>
             'Downloading ${name} (${done} / ${total})';
+      case 'video_subtitle_attach_book_missing':
+        return 'This video isn\'t in your library, so the subtitle wasn\'t attached';
       default:
         return null;
     }
@@ -153316,6 +153371,8 @@ extension on _StringsEs {
                 required Object done,
                 required Object total}) =>
             'Downloading ${name} (${done} / ${total})';
+      case 'video_subtitle_attach_book_missing':
+        return 'This video isn\'t in your library, so the subtitle wasn\'t attached';
       default:
         return null;
     }
@@ -160135,6 +160192,8 @@ extension on _StringsFr {
                 required Object done,
                 required Object total}) =>
             'Downloading ${name} (${done} / ${total})';
+      case 'video_subtitle_attach_book_missing':
+        return 'This video isn\'t in your library, so the subtitle wasn\'t attached';
       default:
         return null;
     }
@@ -166936,6 +166995,8 @@ extension on _StringsId {
                 required Object done,
                 required Object total}) =>
             'Downloading ${name} (${done} / ${total})';
+      case 'video_subtitle_attach_book_missing':
+        return 'This video isn\'t in your library, so the subtitle wasn\'t attached';
       default:
         return null;
     }
@@ -173751,6 +173812,8 @@ extension on _StringsIt {
                 required Object done,
                 required Object total}) =>
             'Downloading ${name} (${done} / ${total})';
+      case 'video_subtitle_attach_book_missing':
+        return 'This video isn\'t in your library, so the subtitle wasn\'t attached';
       default:
         return null;
     }
@@ -180528,6 +180591,8 @@ extension on _StringsJa {
                 required Object done,
                 required Object total}) =>
             'Downloading ${name} (${done} / ${total})';
+      case 'video_subtitle_attach_book_missing':
+        return 'This video isn\'t in your library, so the subtitle wasn\'t attached';
       default:
         return null;
     }
@@ -187309,6 +187374,8 @@ extension on _StringsKo {
                 required Object done,
                 required Object total}) =>
             'Downloading ${name} (${done} / ${total})';
+      case 'video_subtitle_attach_book_missing':
+        return 'This video isn\'t in your library, so the subtitle wasn\'t attached';
       default:
         return null;
     }
@@ -194118,6 +194185,8 @@ extension on _StringsNl {
                 required Object done,
                 required Object total}) =>
             'Downloading ${name} (${done} / ${total})';
+      case 'video_subtitle_attach_book_missing':
+        return 'This video isn\'t in your library, so the subtitle wasn\'t attached';
       default:
         return null;
     }
@@ -200924,6 +200993,8 @@ extension on _StringsPtBr {
                 required Object done,
                 required Object total}) =>
             'Downloading ${name} (${done} / ${total})';
+      case 'video_subtitle_attach_book_missing':
+        return 'This video isn\'t in your library, so the subtitle wasn\'t attached';
       default:
         return null;
     }
@@ -207735,6 +207806,8 @@ extension on _StringsRu {
                 required Object done,
                 required Object total}) =>
             'Downloading ${name} (${done} / ${total})';
+      case 'video_subtitle_attach_book_missing':
+        return 'This video isn\'t in your library, so the subtitle wasn\'t attached';
       default:
         return null;
     }
@@ -214529,6 +214602,8 @@ extension on _StringsTh {
                 required Object done,
                 required Object total}) =>
             'Downloading ${name} (${done} / ${total})';
+      case 'video_subtitle_attach_book_missing':
+        return 'This video isn\'t in your library, so the subtitle wasn\'t attached';
       default:
         return null;
     }
@@ -221332,6 +221407,8 @@ extension on _StringsTr {
                 required Object done,
                 required Object total}) =>
             'Downloading ${name} (${done} / ${total})';
+      case 'video_subtitle_attach_book_missing':
+        return 'This video isn\'t in your library, so the subtitle wasn\'t attached';
       default:
         return null;
     }
@@ -228131,6 +228208,8 @@ extension on _StringsVi {
                 required Object done,
                 required Object total}) =>
             'Downloading ${name} (${done} / ${total})';
+      case 'video_subtitle_attach_book_missing':
+        return 'This video isn\'t in your library, so the subtitle wasn\'t attached';
       default:
         return null;
     }
@@ -234873,6 +234952,8 @@ extension on _StringsZhCn {
                 required Object done,
                 required Object total}) =>
             '正在下载 ${name}（${done} / ${total}）';
+      case 'video_subtitle_attach_book_missing':
+        return '该视频不在视频库中，字幕没有挂上';
       default:
         return null;
     }
@@ -241645,6 +241726,8 @@ extension on _StringsZhHk {
                 required Object done,
                 required Object total}) =>
             'Downloading ${name} (${done} / ${total})';
+      case 'video_subtitle_attach_book_missing':
+        return 'This video isn\'t in your library, so the subtitle wasn\'t attached';
       default:
         return null;
     }
