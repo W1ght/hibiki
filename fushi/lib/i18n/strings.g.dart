@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 56083 (3299 per locale)
+/// Strings: 56168 (3304 per locale)
 ///
-/// Built on 2026-08-09 at 15:14 UTC
+/// Built on 2026-08-10 at 14:12 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -4460,6 +4460,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_opensubtitles_endpoint => 'API endpoint';
   String get video_download_target_source_empty =>
       'No locally accessible video source is available. Add one on the Sources tab first.';
+  String get video_setting_drag_seek_sensitivity => 'Drag-to-seek sensitivity';
+  String get video_setting_drag_seek_sensitivity_hint =>
+      'How far one full-width swipe seeks on a touch screen: Low about 45s, Medium about 90s, High about 180s. Independent of the video\'s total length. Touch drag only; mouse and keyboard seeking are unaffected.';
+  String get video_setting_drag_seek_sensitivity_low => 'Low';
+  String get video_setting_drag_seek_sensitivity_medium => 'Medium';
+  String get video_setting_drag_seek_sensitivity_high => 'High';
 }
 
 // Path: <root>
@@ -12069,6 +12075,17 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_download_target_source_empty =>
       'No locally accessible video source is available. Add one on the Sources tab first.';
+  @override
+  String get video_setting_drag_seek_sensitivity => 'Drag-to-seek sensitivity';
+  @override
+  String get video_setting_drag_seek_sensitivity_hint =>
+      'How far one full-width swipe seeks on a touch screen: Low about 45s, Medium about 90s, High about 180s. Independent of the video\'s total length. Touch drag only; mouse and keyboard seeking are unaffected.';
+  @override
+  String get video_setting_drag_seek_sensitivity_low => 'Low';
+  @override
+  String get video_setting_drag_seek_sensitivity_medium => 'Medium';
+  @override
+  String get video_setting_drag_seek_sensitivity_high => 'High';
 }
 
 // Path: <root>
@@ -19745,6 +19762,17 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_download_target_source_empty =>
       'No locally accessible video source is available. Add one on the Sources tab first.';
+  @override
+  String get video_setting_drag_seek_sensitivity => 'Drag-to-seek sensitivity';
+  @override
+  String get video_setting_drag_seek_sensitivity_hint =>
+      'How far one full-width swipe seeks on a touch screen: Low about 45s, Medium about 90s, High about 180s. Independent of the video\'s total length. Touch drag only; mouse and keyboard seeking are unaffected.';
+  @override
+  String get video_setting_drag_seek_sensitivity_low => 'Low';
+  @override
+  String get video_setting_drag_seek_sensitivity_medium => 'Medium';
+  @override
+  String get video_setting_drag_seek_sensitivity_high => 'High';
 }
 
 // Path: <root>
@@ -27437,6 +27465,17 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_download_target_source_empty =>
       'No locally accessible video source is available. Add one on the Sources tab first.';
+  @override
+  String get video_setting_drag_seek_sensitivity => 'Drag-to-seek sensitivity';
+  @override
+  String get video_setting_drag_seek_sensitivity_hint =>
+      'How far one full-width swipe seeks on a touch screen: Low about 45s, Medium about 90s, High about 180s. Independent of the video\'s total length. Touch drag only; mouse and keyboard seeking are unaffected.';
+  @override
+  String get video_setting_drag_seek_sensitivity_low => 'Low';
+  @override
+  String get video_setting_drag_seek_sensitivity_medium => 'Medium';
+  @override
+  String get video_setting_drag_seek_sensitivity_high => 'High';
 }
 
 // Path: <root>
@@ -35141,6 +35180,17 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_download_target_source_empty =>
       'No locally accessible video source is available. Add one on the Sources tab first.';
+  @override
+  String get video_setting_drag_seek_sensitivity => 'Drag-to-seek sensitivity';
+  @override
+  String get video_setting_drag_seek_sensitivity_hint =>
+      'How far one full-width swipe seeks on a touch screen: Low about 45s, Medium about 90s, High about 180s. Independent of the video\'s total length. Touch drag only; mouse and keyboard seeking are unaffected.';
+  @override
+  String get video_setting_drag_seek_sensitivity_low => 'Low';
+  @override
+  String get video_setting_drag_seek_sensitivity_medium => 'Medium';
+  @override
+  String get video_setting_drag_seek_sensitivity_high => 'High';
 }
 
 // Path: <root>
@@ -42773,6 +42823,17 @@ class _StringsId extends _StringsEn {
   @override
   String get video_download_target_source_empty =>
       'No locally accessible video source is available. Add one on the Sources tab first.';
+  @override
+  String get video_setting_drag_seek_sensitivity => 'Drag-to-seek sensitivity';
+  @override
+  String get video_setting_drag_seek_sensitivity_hint =>
+      'How far one full-width swipe seeks on a touch screen: Low about 45s, Medium about 90s, High about 180s. Independent of the video\'s total length. Touch drag only; mouse and keyboard seeking are unaffected.';
+  @override
+  String get video_setting_drag_seek_sensitivity_low => 'Low';
+  @override
+  String get video_setting_drag_seek_sensitivity_medium => 'Medium';
+  @override
+  String get video_setting_drag_seek_sensitivity_high => 'High';
 }
 
 // Path: <root>
@@ -50451,6 +50512,17 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_download_target_source_empty =>
       'No locally accessible video source is available. Add one on the Sources tab first.';
+  @override
+  String get video_setting_drag_seek_sensitivity => 'Drag-to-seek sensitivity';
+  @override
+  String get video_setting_drag_seek_sensitivity_hint =>
+      'How far one full-width swipe seeks on a touch screen: Low about 45s, Medium about 90s, High about 180s. Independent of the video\'s total length. Touch drag only; mouse and keyboard seeking are unaffected.';
+  @override
+  String get video_setting_drag_seek_sensitivity_low => 'Low';
+  @override
+  String get video_setting_drag_seek_sensitivity_medium => 'Medium';
+  @override
+  String get video_setting_drag_seek_sensitivity_high => 'High';
 }
 
 // Path: <root>
@@ -57943,6 +58015,17 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_download_target_source_empty =>
       'No locally accessible video source is available. Add one on the Sources tab first.';
+  @override
+  String get video_setting_drag_seek_sensitivity => 'Drag-to-seek sensitivity';
+  @override
+  String get video_setting_drag_seek_sensitivity_hint =>
+      'How far one full-width swipe seeks on a touch screen: Low about 45s, Medium about 90s, High about 180s. Independent of the video\'s total length. Touch drag only; mouse and keyboard seeking are unaffected.';
+  @override
+  String get video_setting_drag_seek_sensitivity_low => 'Low';
+  @override
+  String get video_setting_drag_seek_sensitivity_medium => 'Medium';
+  @override
+  String get video_setting_drag_seek_sensitivity_high => 'High';
 }
 
 // Path: <root>
@@ -65442,6 +65525,17 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_download_target_source_empty =>
       'No locally accessible video source is available. Add one on the Sources tab first.';
+  @override
+  String get video_setting_drag_seek_sensitivity => 'Drag-to-seek sensitivity';
+  @override
+  String get video_setting_drag_seek_sensitivity_hint =>
+      'How far one full-width swipe seeks on a touch screen: Low about 45s, Medium about 90s, High about 180s. Independent of the video\'s total length. Touch drag only; mouse and keyboard seeking are unaffected.';
+  @override
+  String get video_setting_drag_seek_sensitivity_low => 'Low';
+  @override
+  String get video_setting_drag_seek_sensitivity_medium => 'Medium';
+  @override
+  String get video_setting_drag_seek_sensitivity_high => 'High';
 }
 
 // Path: <root>
@@ -73100,6 +73194,17 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_download_target_source_empty =>
       'No locally accessible video source is available. Add one on the Sources tab first.';
+  @override
+  String get video_setting_drag_seek_sensitivity => 'Drag-to-seek sensitivity';
+  @override
+  String get video_setting_drag_seek_sensitivity_hint =>
+      'How far one full-width swipe seeks on a touch screen: Low about 45s, Medium about 90s, High about 180s. Independent of the video\'s total length. Touch drag only; mouse and keyboard seeking are unaffected.';
+  @override
+  String get video_setting_drag_seek_sensitivity_low => 'Low';
+  @override
+  String get video_setting_drag_seek_sensitivity_medium => 'Medium';
+  @override
+  String get video_setting_drag_seek_sensitivity_high => 'High';
 }
 
 // Path: <root>
@@ -80770,6 +80875,17 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_download_target_source_empty =>
       'No locally accessible video source is available. Add one on the Sources tab first.';
+  @override
+  String get video_setting_drag_seek_sensitivity => 'Drag-to-seek sensitivity';
+  @override
+  String get video_setting_drag_seek_sensitivity_hint =>
+      'How far one full-width swipe seeks on a touch screen: Low about 45s, Medium about 90s, High about 180s. Independent of the video\'s total length. Touch drag only; mouse and keyboard seeking are unaffected.';
+  @override
+  String get video_setting_drag_seek_sensitivity_low => 'Low';
+  @override
+  String get video_setting_drag_seek_sensitivity_medium => 'Medium';
+  @override
+  String get video_setting_drag_seek_sensitivity_high => 'High';
 }
 
 // Path: <root>
@@ -88426,6 +88542,17 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_download_target_source_empty =>
       'No locally accessible video source is available. Add one on the Sources tab first.';
+  @override
+  String get video_setting_drag_seek_sensitivity => 'Drag-to-seek sensitivity';
+  @override
+  String get video_setting_drag_seek_sensitivity_hint =>
+      'How far one full-width swipe seeks on a touch screen: Low about 45s, Medium about 90s, High about 180s. Independent of the video\'s total length. Touch drag only; mouse and keyboard seeking are unaffected.';
+  @override
+  String get video_setting_drag_seek_sensitivity_low => 'Low';
+  @override
+  String get video_setting_drag_seek_sensitivity_medium => 'Medium';
+  @override
+  String get video_setting_drag_seek_sensitivity_high => 'High';
 }
 
 // Path: <root>
@@ -96030,6 +96157,17 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_download_target_source_empty =>
       'No locally accessible video source is available. Add one on the Sources tab first.';
+  @override
+  String get video_setting_drag_seek_sensitivity => 'Drag-to-seek sensitivity';
+  @override
+  String get video_setting_drag_seek_sensitivity_hint =>
+      'How far one full-width swipe seeks on a touch screen: Low about 45s, Medium about 90s, High about 180s. Independent of the video\'s total length. Touch drag only; mouse and keyboard seeking are unaffected.';
+  @override
+  String get video_setting_drag_seek_sensitivity_low => 'Low';
+  @override
+  String get video_setting_drag_seek_sensitivity_medium => 'Medium';
+  @override
+  String get video_setting_drag_seek_sensitivity_high => 'High';
 }
 
 // Path: <root>
@@ -103665,6 +103803,17 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_download_target_source_empty =>
       'No locally accessible video source is available. Add one on the Sources tab first.';
+  @override
+  String get video_setting_drag_seek_sensitivity => 'Drag-to-seek sensitivity';
+  @override
+  String get video_setting_drag_seek_sensitivity_hint =>
+      'How far one full-width swipe seeks on a touch screen: Low about 45s, Medium about 90s, High about 180s. Independent of the video\'s total length. Touch drag only; mouse and keyboard seeking are unaffected.';
+  @override
+  String get video_setting_drag_seek_sensitivity_low => 'Low';
+  @override
+  String get video_setting_drag_seek_sensitivity_medium => 'Medium';
+  @override
+  String get video_setting_drag_seek_sensitivity_high => 'High';
 }
 
 // Path: <root>
@@ -111285,6 +111434,17 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_download_target_source_empty =>
       'No locally accessible video source is available. Add one on the Sources tab first.';
+  @override
+  String get video_setting_drag_seek_sensitivity => 'Drag-to-seek sensitivity';
+  @override
+  String get video_setting_drag_seek_sensitivity_hint =>
+      'How far one full-width swipe seeks on a touch screen: Low about 45s, Medium about 90s, High about 180s. Independent of the video\'s total length. Touch drag only; mouse and keyboard seeking are unaffected.';
+  @override
+  String get video_setting_drag_seek_sensitivity_low => 'Low';
+  @override
+  String get video_setting_drag_seek_sensitivity_medium => 'Medium';
+  @override
+  String get video_setting_drag_seek_sensitivity_high => 'High';
 }
 
 // Path: <root>
@@ -118355,6 +118515,17 @@ class _StringsZhCn extends _StringsEn {
   String get video_opensubtitles_endpoint => 'API 端点';
   @override
   String get video_download_target_source_empty => '没有可访问的本地视频来源。请先在来源页添加。';
+  @override
+  String get video_setting_drag_seek_sensitivity => '拖动调进度灵敏度';
+  @override
+  String get video_setting_drag_seek_sensitivity_hint =>
+      '触屏横向滑动调进度时，划过整屏宽度对应的时长：低约 45 秒、中约 90 秒、高约 180 秒。与视频总长无关。只影响触屏拖动，鼠标和键盘调进度不受影响。';
+  @override
+  String get video_setting_drag_seek_sensitivity_low => '低';
+  @override
+  String get video_setting_drag_seek_sensitivity_medium => '中';
+  @override
+  String get video_setting_drag_seek_sensitivity_high => '高';
 }
 
 // Path: <root>
@@ -125770,6 +125941,17 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_download_target_source_empty =>
       'No locally accessible video source is available. Add one on the Sources tab first.';
+  @override
+  String get video_setting_drag_seek_sensitivity => 'Drag-to-seek sensitivity';
+  @override
+  String get video_setting_drag_seek_sensitivity_hint =>
+      'How far one full-width swipe seeks on a touch screen: Low about 45s, Medium about 90s, High about 180s. Independent of the video\'s total length. Touch drag only; mouse and keyboard seeking are unaffected.';
+  @override
+  String get video_setting_drag_seek_sensitivity_low => 'Low';
+  @override
+  String get video_setting_drag_seek_sensitivity_medium => 'Medium';
+  @override
+  String get video_setting_drag_seek_sensitivity_high => 'High';
 }
 
 /// Flat map(s) containing all translations.
@@ -132545,6 +132727,16 @@ extension on _StringsEn {
         return 'API endpoint';
       case 'video_download_target_source_empty':
         return 'No locally accessible video source is available. Add one on the Sources tab first.';
+      case 'video_setting_drag_seek_sensitivity':
+        return 'Drag-to-seek sensitivity';
+      case 'video_setting_drag_seek_sensitivity_hint':
+        return 'How far one full-width swipe seeks on a touch screen: Low about 45s, Medium about 90s, High about 180s. Independent of the video\'s total length. Touch drag only; mouse and keyboard seeking are unaffected.';
+      case 'video_setting_drag_seek_sensitivity_low':
+        return 'Low';
+      case 'video_setting_drag_seek_sensitivity_medium':
+        return 'Medium';
+      case 'video_setting_drag_seek_sensitivity_high':
+        return 'High';
       default:
         return null;
     }
@@ -139318,6 +139510,16 @@ extension on _StringsAr {
         return 'API endpoint';
       case 'video_download_target_source_empty':
         return 'No locally accessible video source is available. Add one on the Sources tab first.';
+      case 'video_setting_drag_seek_sensitivity':
+        return 'Drag-to-seek sensitivity';
+      case 'video_setting_drag_seek_sensitivity_hint':
+        return 'How far one full-width swipe seeks on a touch screen: Low about 45s, Medium about 90s, High about 180s. Independent of the video\'s total length. Touch drag only; mouse and keyboard seeking are unaffected.';
+      case 'video_setting_drag_seek_sensitivity_low':
+        return 'Low';
+      case 'video_setting_drag_seek_sensitivity_medium':
+        return 'Medium';
+      case 'video_setting_drag_seek_sensitivity_high':
+        return 'High';
       default:
         return null;
     }
@@ -146113,6 +146315,16 @@ extension on _StringsDe {
         return 'API endpoint';
       case 'video_download_target_source_empty':
         return 'No locally accessible video source is available. Add one on the Sources tab first.';
+      case 'video_setting_drag_seek_sensitivity':
+        return 'Drag-to-seek sensitivity';
+      case 'video_setting_drag_seek_sensitivity_hint':
+        return 'How far one full-width swipe seeks on a touch screen: Low about 45s, Medium about 90s, High about 180s. Independent of the video\'s total length. Touch drag only; mouse and keyboard seeking are unaffected.';
+      case 'video_setting_drag_seek_sensitivity_low':
+        return 'Low';
+      case 'video_setting_drag_seek_sensitivity_medium':
+        return 'Medium';
+      case 'video_setting_drag_seek_sensitivity_high':
+        return 'High';
       default:
         return null;
     }
@@ -152907,6 +153119,16 @@ extension on _StringsEs {
         return 'API endpoint';
       case 'video_download_target_source_empty':
         return 'No locally accessible video source is available. Add one on the Sources tab first.';
+      case 'video_setting_drag_seek_sensitivity':
+        return 'Drag-to-seek sensitivity';
+      case 'video_setting_drag_seek_sensitivity_hint':
+        return 'How far one full-width swipe seeks on a touch screen: Low about 45s, Medium about 90s, High about 180s. Independent of the video\'s total length. Touch drag only; mouse and keyboard seeking are unaffected.';
+      case 'video_setting_drag_seek_sensitivity_low':
+        return 'Low';
+      case 'video_setting_drag_seek_sensitivity_medium':
+        return 'Medium';
+      case 'video_setting_drag_seek_sensitivity_high':
+        return 'High';
       default:
         return null;
     }
@@ -159707,6 +159929,16 @@ extension on _StringsFr {
         return 'API endpoint';
       case 'video_download_target_source_empty':
         return 'No locally accessible video source is available. Add one on the Sources tab first.';
+      case 'video_setting_drag_seek_sensitivity':
+        return 'Drag-to-seek sensitivity';
+      case 'video_setting_drag_seek_sensitivity_hint':
+        return 'How far one full-width swipe seeks on a touch screen: Low about 45s, Medium about 90s, High about 180s. Independent of the video\'s total length. Touch drag only; mouse and keyboard seeking are unaffected.';
+      case 'video_setting_drag_seek_sensitivity_low':
+        return 'Low';
+      case 'video_setting_drag_seek_sensitivity_medium':
+        return 'Medium';
+      case 'video_setting_drag_seek_sensitivity_high':
+        return 'High';
       default:
         return null;
     }
@@ -166489,6 +166721,16 @@ extension on _StringsId {
         return 'API endpoint';
       case 'video_download_target_source_empty':
         return 'No locally accessible video source is available. Add one on the Sources tab first.';
+      case 'video_setting_drag_seek_sensitivity':
+        return 'Drag-to-seek sensitivity';
+      case 'video_setting_drag_seek_sensitivity_hint':
+        return 'How far one full-width swipe seeks on a touch screen: Low about 45s, Medium about 90s, High about 180s. Independent of the video\'s total length. Touch drag only; mouse and keyboard seeking are unaffected.';
+      case 'video_setting_drag_seek_sensitivity_low':
+        return 'Low';
+      case 'video_setting_drag_seek_sensitivity_medium':
+        return 'Medium';
+      case 'video_setting_drag_seek_sensitivity_high':
+        return 'High';
       default:
         return null;
     }
@@ -173285,6 +173527,16 @@ extension on _StringsIt {
         return 'API endpoint';
       case 'video_download_target_source_empty':
         return 'No locally accessible video source is available. Add one on the Sources tab first.';
+      case 'video_setting_drag_seek_sensitivity':
+        return 'Drag-to-seek sensitivity';
+      case 'video_setting_drag_seek_sensitivity_hint':
+        return 'How far one full-width swipe seeks on a touch screen: Low about 45s, Medium about 90s, High about 180s. Independent of the video\'s total length. Touch drag only; mouse and keyboard seeking are unaffected.';
+      case 'video_setting_drag_seek_sensitivity_low':
+        return 'Low';
+      case 'video_setting_drag_seek_sensitivity_medium':
+        return 'Medium';
+      case 'video_setting_drag_seek_sensitivity_high':
+        return 'High';
       default:
         return null;
     }
@@ -180043,6 +180295,16 @@ extension on _StringsJa {
         return 'API endpoint';
       case 'video_download_target_source_empty':
         return 'No locally accessible video source is available. Add one on the Sources tab first.';
+      case 'video_setting_drag_seek_sensitivity':
+        return 'Drag-to-seek sensitivity';
+      case 'video_setting_drag_seek_sensitivity_hint':
+        return 'How far one full-width swipe seeks on a touch screen: Low about 45s, Medium about 90s, High about 180s. Independent of the video\'s total length. Touch drag only; mouse and keyboard seeking are unaffected.';
+      case 'video_setting_drag_seek_sensitivity_low':
+        return 'Low';
+      case 'video_setting_drag_seek_sensitivity_medium':
+        return 'Medium';
+      case 'video_setting_drag_seek_sensitivity_high':
+        return 'High';
       default:
         return null;
     }
@@ -186805,6 +187067,16 @@ extension on _StringsKo {
         return 'API endpoint';
       case 'video_download_target_source_empty':
         return 'No locally accessible video source is available. Add one on the Sources tab first.';
+      case 'video_setting_drag_seek_sensitivity':
+        return 'Drag-to-seek sensitivity';
+      case 'video_setting_drag_seek_sensitivity_hint':
+        return 'How far one full-width swipe seeks on a touch screen: Low about 45s, Medium about 90s, High about 180s. Independent of the video\'s total length. Touch drag only; mouse and keyboard seeking are unaffected.';
+      case 'video_setting_drag_seek_sensitivity_low':
+        return 'Low';
+      case 'video_setting_drag_seek_sensitivity_medium':
+        return 'Medium';
+      case 'video_setting_drag_seek_sensitivity_high':
+        return 'High';
       default:
         return null;
     }
@@ -193595,6 +193867,16 @@ extension on _StringsNl {
         return 'API endpoint';
       case 'video_download_target_source_empty':
         return 'No locally accessible video source is available. Add one on the Sources tab first.';
+      case 'video_setting_drag_seek_sensitivity':
+        return 'Drag-to-seek sensitivity';
+      case 'video_setting_drag_seek_sensitivity_hint':
+        return 'How far one full-width swipe seeks on a touch screen: Low about 45s, Medium about 90s, High about 180s. Independent of the video\'s total length. Touch drag only; mouse and keyboard seeking are unaffected.';
+      case 'video_setting_drag_seek_sensitivity_low':
+        return 'Low';
+      case 'video_setting_drag_seek_sensitivity_medium':
+        return 'Medium';
+      case 'video_setting_drag_seek_sensitivity_high':
+        return 'High';
       default:
         return null;
     }
@@ -200382,6 +200664,16 @@ extension on _StringsPtBr {
         return 'API endpoint';
       case 'video_download_target_source_empty':
         return 'No locally accessible video source is available. Add one on the Sources tab first.';
+      case 'video_setting_drag_seek_sensitivity':
+        return 'Drag-to-seek sensitivity';
+      case 'video_setting_drag_seek_sensitivity_hint':
+        return 'How far one full-width swipe seeks on a touch screen: Low about 45s, Medium about 90s, High about 180s. Independent of the video\'s total length. Touch drag only; mouse and keyboard seeking are unaffected.';
+      case 'video_setting_drag_seek_sensitivity_low':
+        return 'Low';
+      case 'video_setting_drag_seek_sensitivity_medium':
+        return 'Medium';
+      case 'video_setting_drag_seek_sensitivity_high':
+        return 'High';
       default:
         return null;
     }
@@ -207174,6 +207466,16 @@ extension on _StringsRu {
         return 'API endpoint';
       case 'video_download_target_source_empty':
         return 'No locally accessible video source is available. Add one on the Sources tab first.';
+      case 'video_setting_drag_seek_sensitivity':
+        return 'Drag-to-seek sensitivity';
+      case 'video_setting_drag_seek_sensitivity_hint':
+        return 'How far one full-width swipe seeks on a touch screen: Low about 45s, Medium about 90s, High about 180s. Independent of the video\'s total length. Touch drag only; mouse and keyboard seeking are unaffected.';
+      case 'video_setting_drag_seek_sensitivity_low':
+        return 'Low';
+      case 'video_setting_drag_seek_sensitivity_medium':
+        return 'Medium';
+      case 'video_setting_drag_seek_sensitivity_high':
+        return 'High';
       default:
         return null;
     }
@@ -213949,6 +214251,16 @@ extension on _StringsTh {
         return 'API endpoint';
       case 'video_download_target_source_empty':
         return 'No locally accessible video source is available. Add one on the Sources tab first.';
+      case 'video_setting_drag_seek_sensitivity':
+        return 'Drag-to-seek sensitivity';
+      case 'video_setting_drag_seek_sensitivity_hint':
+        return 'How far one full-width swipe seeks on a touch screen: Low about 45s, Medium about 90s, High about 180s. Independent of the video\'s total length. Touch drag only; mouse and keyboard seeking are unaffected.';
+      case 'video_setting_drag_seek_sensitivity_low':
+        return 'Low';
+      case 'video_setting_drag_seek_sensitivity_medium':
+        return 'Medium';
+      case 'video_setting_drag_seek_sensitivity_high':
+        return 'High';
       default:
         return null;
     }
@@ -220733,6 +221045,16 @@ extension on _StringsTr {
         return 'API endpoint';
       case 'video_download_target_source_empty':
         return 'No locally accessible video source is available. Add one on the Sources tab first.';
+      case 'video_setting_drag_seek_sensitivity':
+        return 'Drag-to-seek sensitivity';
+      case 'video_setting_drag_seek_sensitivity_hint':
+        return 'How far one full-width swipe seeks on a touch screen: Low about 45s, Medium about 90s, High about 180s. Independent of the video\'s total length. Touch drag only; mouse and keyboard seeking are unaffected.';
+      case 'video_setting_drag_seek_sensitivity_low':
+        return 'Low';
+      case 'video_setting_drag_seek_sensitivity_medium':
+        return 'Medium';
+      case 'video_setting_drag_seek_sensitivity_high':
+        return 'High';
       default:
         return null;
     }
@@ -227513,6 +227835,16 @@ extension on _StringsVi {
         return 'API endpoint';
       case 'video_download_target_source_empty':
         return 'No locally accessible video source is available. Add one on the Sources tab first.';
+      case 'video_setting_drag_seek_sensitivity':
+        return 'Drag-to-seek sensitivity';
+      case 'video_setting_drag_seek_sensitivity_hint':
+        return 'How far one full-width swipe seeks on a touch screen: Low about 45s, Medium about 90s, High about 180s. Independent of the video\'s total length. Touch drag only; mouse and keyboard seeking are unaffected.';
+      case 'video_setting_drag_seek_sensitivity_low':
+        return 'Low';
+      case 'video_setting_drag_seek_sensitivity_medium':
+        return 'Medium';
+      case 'video_setting_drag_seek_sensitivity_high':
+        return 'High';
       default:
         return null;
     }
@@ -234237,6 +234569,16 @@ extension on _StringsZhCn {
         return 'API 端点';
       case 'video_download_target_source_empty':
         return '没有可访问的本地视频来源。请先在来源页添加。';
+      case 'video_setting_drag_seek_sensitivity':
+        return '拖动调进度灵敏度';
+      case 'video_setting_drag_seek_sensitivity_hint':
+        return '触屏横向滑动调进度时，划过整屏宽度对应的时长：低约 45 秒、中约 90 秒、高约 180 秒。与视频总长无关。只影响触屏拖动，鼠标和键盘调进度不受影响。';
+      case 'video_setting_drag_seek_sensitivity_low':
+        return '低';
+      case 'video_setting_drag_seek_sensitivity_medium':
+        return '中';
+      case 'video_setting_drag_seek_sensitivity_high':
+        return '高';
       default:
         return null;
     }
@@ -240990,6 +241332,16 @@ extension on _StringsZhHk {
         return 'API endpoint';
       case 'video_download_target_source_empty':
         return 'No locally accessible video source is available. Add one on the Sources tab first.';
+      case 'video_setting_drag_seek_sensitivity':
+        return 'Drag-to-seek sensitivity';
+      case 'video_setting_drag_seek_sensitivity_hint':
+        return 'How far one full-width swipe seeks on a touch screen: Low about 45s, Medium about 90s, High about 180s. Independent of the video\'s total length. Touch drag only; mouse and keyboard seeking are unaffected.';
+      case 'video_setting_drag_seek_sensitivity_low':
+        return 'Low';
+      case 'video_setting_drag_seek_sensitivity_medium':
+        return 'Medium';
+      case 'video_setting_drag_seek_sensitivity_high':
+        return 'High';
       default:
         return null;
     }
