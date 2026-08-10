@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 56338 (3314 per locale)
+/// Strings: 56474 (3322 per locale)
 ///
-/// Built on 2026-08-10 at 18:41 UTC
+/// Built on 2026-08-10 at 18:53 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -4486,6 +4486,14 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Delete the download task for ${title}?';
   String download_task_action_failed({required Object error}) =>
       'The task action failed: ${error}';
+  String get download_task_details => 'View details';
+  String get download_detail_section_task => 'Task';
+  String get download_detail_hash_label => 'Info hash';
+  String get download_detail_total_size_label => 'Total size';
+  String get download_detail_remaining_label => 'Remaining';
+  String get download_detail_save_path_label => 'Save path';
+  String get download_detail_content_path_label => 'Content path';
+  String get download_detail_raw_state_label => 'Backend state';
 }
 
 // Path: <root>
@@ -12136,6 +12144,22 @@ class _StringsAr extends _StringsEn {
   @override
   String download_task_action_failed({required Object error}) =>
       'The task action failed: ${error}';
+  @override
+  String get download_task_details => 'View details';
+  @override
+  String get download_detail_section_task => 'Task';
+  @override
+  String get download_detail_hash_label => 'Info hash';
+  @override
+  String get download_detail_total_size_label => 'Total size';
+  @override
+  String get download_detail_remaining_label => 'Remaining';
+  @override
+  String get download_detail_save_path_label => 'Save path';
+  @override
+  String get download_detail_content_path_label => 'Content path';
+  @override
+  String get download_detail_raw_state_label => 'Backend state';
 }
 
 // Path: <root>
@@ -19853,6 +19877,22 @@ class _StringsDe extends _StringsEn {
   @override
   String download_task_action_failed({required Object error}) =>
       'The task action failed: ${error}';
+  @override
+  String get download_task_details => 'View details';
+  @override
+  String get download_detail_section_task => 'Task';
+  @override
+  String get download_detail_hash_label => 'Info hash';
+  @override
+  String get download_detail_total_size_label => 'Total size';
+  @override
+  String get download_detail_remaining_label => 'Remaining';
+  @override
+  String get download_detail_save_path_label => 'Save path';
+  @override
+  String get download_detail_content_path_label => 'Content path';
+  @override
+  String get download_detail_raw_state_label => 'Backend state';
 }
 
 // Path: <root>
@@ -27586,6 +27626,22 @@ class _StringsEs extends _StringsEn {
   @override
   String download_task_action_failed({required Object error}) =>
       'The task action failed: ${error}';
+  @override
+  String get download_task_details => 'View details';
+  @override
+  String get download_detail_section_task => 'Task';
+  @override
+  String get download_detail_hash_label => 'Info hash';
+  @override
+  String get download_detail_total_size_label => 'Total size';
+  @override
+  String get download_detail_remaining_label => 'Remaining';
+  @override
+  String get download_detail_save_path_label => 'Save path';
+  @override
+  String get download_detail_content_path_label => 'Content path';
+  @override
+  String get download_detail_raw_state_label => 'Backend state';
 }
 
 // Path: <root>
@@ -35331,6 +35387,22 @@ class _StringsFr extends _StringsEn {
   @override
   String download_task_action_failed({required Object error}) =>
       'The task action failed: ${error}';
+  @override
+  String get download_task_details => 'View details';
+  @override
+  String get download_detail_section_task => 'Task';
+  @override
+  String get download_detail_hash_label => 'Info hash';
+  @override
+  String get download_detail_total_size_label => 'Total size';
+  @override
+  String get download_detail_remaining_label => 'Remaining';
+  @override
+  String get download_detail_save_path_label => 'Save path';
+  @override
+  String get download_detail_content_path_label => 'Content path';
+  @override
+  String get download_detail_raw_state_label => 'Backend state';
 }
 
 // Path: <root>
@@ -43004,6 +43076,22 @@ class _StringsId extends _StringsEn {
   @override
   String download_task_action_failed({required Object error}) =>
       'The task action failed: ${error}';
+  @override
+  String get download_task_details => 'View details';
+  @override
+  String get download_detail_section_task => 'Task';
+  @override
+  String get download_detail_hash_label => 'Info hash';
+  @override
+  String get download_detail_total_size_label => 'Total size';
+  @override
+  String get download_detail_remaining_label => 'Remaining';
+  @override
+  String get download_detail_save_path_label => 'Save path';
+  @override
+  String get download_detail_content_path_label => 'Content path';
+  @override
+  String get download_detail_raw_state_label => 'Backend state';
 }
 
 // Path: <root>
@@ -50723,6 +50811,22 @@ class _StringsIt extends _StringsEn {
   @override
   String download_task_action_failed({required Object error}) =>
       'The task action failed: ${error}';
+  @override
+  String get download_task_details => 'View details';
+  @override
+  String get download_detail_section_task => 'Task';
+  @override
+  String get download_detail_hash_label => 'Info hash';
+  @override
+  String get download_detail_total_size_label => 'Total size';
+  @override
+  String get download_detail_remaining_label => 'Remaining';
+  @override
+  String get download_detail_save_path_label => 'Save path';
+  @override
+  String get download_detail_content_path_label => 'Content path';
+  @override
+  String get download_detail_raw_state_label => 'Backend state';
 }
 
 // Path: <root>
@@ -58256,6 +58360,22 @@ class _StringsJa extends _StringsEn {
   @override
   String download_task_action_failed({required Object error}) =>
       'The task action failed: ${error}';
+  @override
+  String get download_task_details => 'View details';
+  @override
+  String get download_detail_section_task => 'Task';
+  @override
+  String get download_detail_hash_label => 'Info hash';
+  @override
+  String get download_detail_total_size_label => 'Total size';
+  @override
+  String get download_detail_remaining_label => 'Remaining';
+  @override
+  String get download_detail_save_path_label => 'Save path';
+  @override
+  String get download_detail_content_path_label => 'Content path';
+  @override
+  String get download_detail_raw_state_label => 'Backend state';
 }
 
 // Path: <root>
@@ -65796,6 +65916,22 @@ class _StringsKo extends _StringsEn {
   @override
   String download_task_action_failed({required Object error}) =>
       'The task action failed: ${error}';
+  @override
+  String get download_task_details => 'View details';
+  @override
+  String get download_detail_section_task => 'Task';
+  @override
+  String get download_detail_hash_label => 'Info hash';
+  @override
+  String get download_detail_total_size_label => 'Total size';
+  @override
+  String get download_detail_remaining_label => 'Remaining';
+  @override
+  String get download_detail_save_path_label => 'Save path';
+  @override
+  String get download_detail_content_path_label => 'Content path';
+  @override
+  String get download_detail_raw_state_label => 'Backend state';
 }
 
 // Path: <root>
@@ -73495,6 +73631,22 @@ class _StringsNl extends _StringsEn {
   @override
   String download_task_action_failed({required Object error}) =>
       'The task action failed: ${error}';
+  @override
+  String get download_task_details => 'View details';
+  @override
+  String get download_detail_section_task => 'Task';
+  @override
+  String get download_detail_hash_label => 'Info hash';
+  @override
+  String get download_detail_total_size_label => 'Total size';
+  @override
+  String get download_detail_remaining_label => 'Remaining';
+  @override
+  String get download_detail_save_path_label => 'Save path';
+  @override
+  String get download_detail_content_path_label => 'Content path';
+  @override
+  String get download_detail_raw_state_label => 'Backend state';
 }
 
 // Path: <root>
@@ -81206,6 +81358,22 @@ class _StringsPtBr extends _StringsEn {
   @override
   String download_task_action_failed({required Object error}) =>
       'The task action failed: ${error}';
+  @override
+  String get download_task_details => 'View details';
+  @override
+  String get download_detail_section_task => 'Task';
+  @override
+  String get download_detail_hash_label => 'Info hash';
+  @override
+  String get download_detail_total_size_label => 'Total size';
+  @override
+  String get download_detail_remaining_label => 'Remaining';
+  @override
+  String get download_detail_save_path_label => 'Save path';
+  @override
+  String get download_detail_content_path_label => 'Content path';
+  @override
+  String get download_detail_raw_state_label => 'Backend state';
 }
 
 // Path: <root>
@@ -88903,6 +89071,22 @@ class _StringsRu extends _StringsEn {
   @override
   String download_task_action_failed({required Object error}) =>
       'The task action failed: ${error}';
+  @override
+  String get download_task_details => 'View details';
+  @override
+  String get download_detail_section_task => 'Task';
+  @override
+  String get download_detail_hash_label => 'Info hash';
+  @override
+  String get download_detail_total_size_label => 'Total size';
+  @override
+  String get download_detail_remaining_label => 'Remaining';
+  @override
+  String get download_detail_save_path_label => 'Save path';
+  @override
+  String get download_detail_content_path_label => 'Content path';
+  @override
+  String get download_detail_raw_state_label => 'Backend state';
 }
 
 // Path: <root>
@@ -96548,6 +96732,22 @@ class _StringsTh extends _StringsEn {
   @override
   String download_task_action_failed({required Object error}) =>
       'The task action failed: ${error}';
+  @override
+  String get download_task_details => 'View details';
+  @override
+  String get download_detail_section_task => 'Task';
+  @override
+  String get download_detail_hash_label => 'Info hash';
+  @override
+  String get download_detail_total_size_label => 'Total size';
+  @override
+  String get download_detail_remaining_label => 'Remaining';
+  @override
+  String get download_detail_save_path_label => 'Save path';
+  @override
+  String get download_detail_content_path_label => 'Content path';
+  @override
+  String get download_detail_raw_state_label => 'Backend state';
 }
 
 // Path: <root>
@@ -104224,6 +104424,22 @@ class _StringsTr extends _StringsEn {
   @override
   String download_task_action_failed({required Object error}) =>
       'The task action failed: ${error}';
+  @override
+  String get download_task_details => 'View details';
+  @override
+  String get download_detail_section_task => 'Task';
+  @override
+  String get download_detail_hash_label => 'Info hash';
+  @override
+  String get download_detail_total_size_label => 'Total size';
+  @override
+  String get download_detail_remaining_label => 'Remaining';
+  @override
+  String get download_detail_save_path_label => 'Save path';
+  @override
+  String get download_detail_content_path_label => 'Content path';
+  @override
+  String get download_detail_raw_state_label => 'Backend state';
 }
 
 // Path: <root>
@@ -111885,6 +112101,22 @@ class _StringsVi extends _StringsEn {
   @override
   String download_task_action_failed({required Object error}) =>
       'The task action failed: ${error}';
+  @override
+  String get download_task_details => 'View details';
+  @override
+  String get download_detail_section_task => 'Task';
+  @override
+  String get download_detail_hash_label => 'Info hash';
+  @override
+  String get download_detail_total_size_label => 'Total size';
+  @override
+  String get download_detail_remaining_label => 'Remaining';
+  @override
+  String get download_detail_save_path_label => 'Save path';
+  @override
+  String get download_detail_content_path_label => 'Content path';
+  @override
+  String get download_detail_raw_state_label => 'Backend state';
 }
 
 // Path: <root>
@@ -118994,6 +119226,22 @@ class _StringsZhCn extends _StringsEn {
   @override
   String download_task_action_failed({required Object error}) =>
       '任务操作失败：${error}';
+  @override
+  String get download_task_details => '查看详情';
+  @override
+  String get download_detail_section_task => '任务';
+  @override
+  String get download_detail_hash_label => '信息哈希';
+  @override
+  String get download_detail_total_size_label => '总大小';
+  @override
+  String get download_detail_remaining_label => '剩余大小';
+  @override
+  String get download_detail_save_path_label => '保存路径';
+  @override
+  String get download_detail_content_path_label => '内容路径';
+  @override
+  String get download_detail_raw_state_label => '后端状态';
 }
 
 // Path: <root>
@@ -126450,6 +126698,22 @@ class _StringsZhHk extends _StringsEn {
   @override
   String download_task_action_failed({required Object error}) =>
       'The task action failed: ${error}';
+  @override
+  String get download_task_details => 'View details';
+  @override
+  String get download_detail_section_task => 'Task';
+  @override
+  String get download_detail_hash_label => 'Info hash';
+  @override
+  String get download_detail_total_size_label => 'Total size';
+  @override
+  String get download_detail_remaining_label => 'Remaining';
+  @override
+  String get download_detail_save_path_label => 'Save path';
+  @override
+  String get download_detail_content_path_label => 'Content path';
+  @override
+  String get download_detail_raw_state_label => 'Backend state';
 }
 
 /// Flat map(s) containing all translations.
@@ -133261,6 +133525,22 @@ extension on _StringsEn {
             'Delete the download task for ${title}?';
       case 'download_task_action_failed':
         return ({required Object error}) => 'The task action failed: ${error}';
+      case 'download_task_details':
+        return 'View details';
+      case 'download_detail_section_task':
+        return 'Task';
+      case 'download_detail_hash_label':
+        return 'Info hash';
+      case 'download_detail_total_size_label':
+        return 'Total size';
+      case 'download_detail_remaining_label':
+        return 'Remaining';
+      case 'download_detail_save_path_label':
+        return 'Save path';
+      case 'download_detail_content_path_label':
+        return 'Content path';
+      case 'download_detail_raw_state_label':
+        return 'Backend state';
       default:
         return null;
     }
@@ -140070,6 +140350,22 @@ extension on _StringsAr {
             'Delete the download task for ${title}?';
       case 'download_task_action_failed':
         return ({required Object error}) => 'The task action failed: ${error}';
+      case 'download_task_details':
+        return 'View details';
+      case 'download_detail_section_task':
+        return 'Task';
+      case 'download_detail_hash_label':
+        return 'Info hash';
+      case 'download_detail_total_size_label':
+        return 'Total size';
+      case 'download_detail_remaining_label':
+        return 'Remaining';
+      case 'download_detail_save_path_label':
+        return 'Save path';
+      case 'download_detail_content_path_label':
+        return 'Content path';
+      case 'download_detail_raw_state_label':
+        return 'Backend state';
       default:
         return null;
     }
@@ -146901,6 +147197,22 @@ extension on _StringsDe {
             'Delete the download task for ${title}?';
       case 'download_task_action_failed':
         return ({required Object error}) => 'The task action failed: ${error}';
+      case 'download_task_details':
+        return 'View details';
+      case 'download_detail_section_task':
+        return 'Task';
+      case 'download_detail_hash_label':
+        return 'Info hash';
+      case 'download_detail_total_size_label':
+        return 'Total size';
+      case 'download_detail_remaining_label':
+        return 'Remaining';
+      case 'download_detail_save_path_label':
+        return 'Save path';
+      case 'download_detail_content_path_label':
+        return 'Content path';
+      case 'download_detail_raw_state_label':
+        return 'Backend state';
       default:
         return null;
     }
@@ -153731,6 +154043,22 @@ extension on _StringsEs {
             'Delete the download task for ${title}?';
       case 'download_task_action_failed':
         return ({required Object error}) => 'The task action failed: ${error}';
+      case 'download_task_details':
+        return 'View details';
+      case 'download_detail_section_task':
+        return 'Task';
+      case 'download_detail_hash_label':
+        return 'Info hash';
+      case 'download_detail_total_size_label':
+        return 'Total size';
+      case 'download_detail_remaining_label':
+        return 'Remaining';
+      case 'download_detail_save_path_label':
+        return 'Save path';
+      case 'download_detail_content_path_label':
+        return 'Content path';
+      case 'download_detail_raw_state_label':
+        return 'Backend state';
       default:
         return null;
     }
@@ -160567,6 +160895,22 @@ extension on _StringsFr {
             'Delete the download task for ${title}?';
       case 'download_task_action_failed':
         return ({required Object error}) => 'The task action failed: ${error}';
+      case 'download_task_details':
+        return 'View details';
+      case 'download_detail_section_task':
+        return 'Task';
+      case 'download_detail_hash_label':
+        return 'Info hash';
+      case 'download_detail_total_size_label':
+        return 'Total size';
+      case 'download_detail_remaining_label':
+        return 'Remaining';
+      case 'download_detail_save_path_label':
+        return 'Save path';
+      case 'download_detail_content_path_label':
+        return 'Content path';
+      case 'download_detail_raw_state_label':
+        return 'Backend state';
       default:
         return null;
     }
@@ -167385,6 +167729,22 @@ extension on _StringsId {
             'Delete the download task for ${title}?';
       case 'download_task_action_failed':
         return ({required Object error}) => 'The task action failed: ${error}';
+      case 'download_task_details':
+        return 'View details';
+      case 'download_detail_section_task':
+        return 'Task';
+      case 'download_detail_hash_label':
+        return 'Info hash';
+      case 'download_detail_total_size_label':
+        return 'Total size';
+      case 'download_detail_remaining_label':
+        return 'Remaining';
+      case 'download_detail_save_path_label':
+        return 'Save path';
+      case 'download_detail_content_path_label':
+        return 'Content path';
+      case 'download_detail_raw_state_label':
+        return 'Backend state';
       default:
         return null;
     }
@@ -174217,6 +174577,22 @@ extension on _StringsIt {
             'Delete the download task for ${title}?';
       case 'download_task_action_failed':
         return ({required Object error}) => 'The task action failed: ${error}';
+      case 'download_task_details':
+        return 'View details';
+      case 'download_detail_section_task':
+        return 'Task';
+      case 'download_detail_hash_label':
+        return 'Info hash';
+      case 'download_detail_total_size_label':
+        return 'Total size';
+      case 'download_detail_remaining_label':
+        return 'Remaining';
+      case 'download_detail_save_path_label':
+        return 'Save path';
+      case 'download_detail_content_path_label':
+        return 'Content path';
+      case 'download_detail_raw_state_label':
+        return 'Backend state';
       default:
         return null;
     }
@@ -181011,6 +181387,22 @@ extension on _StringsJa {
             'Delete the download task for ${title}?';
       case 'download_task_action_failed':
         return ({required Object error}) => 'The task action failed: ${error}';
+      case 'download_task_details':
+        return 'View details';
+      case 'download_detail_section_task':
+        return 'Task';
+      case 'download_detail_hash_label':
+        return 'Info hash';
+      case 'download_detail_total_size_label':
+        return 'Total size';
+      case 'download_detail_remaining_label':
+        return 'Remaining';
+      case 'download_detail_save_path_label':
+        return 'Save path';
+      case 'download_detail_content_path_label':
+        return 'Content path';
+      case 'download_detail_raw_state_label':
+        return 'Backend state';
       default:
         return null;
     }
@@ -187809,6 +188201,22 @@ extension on _StringsKo {
             'Delete the download task for ${title}?';
       case 'download_task_action_failed':
         return ({required Object error}) => 'The task action failed: ${error}';
+      case 'download_task_details':
+        return 'View details';
+      case 'download_detail_section_task':
+        return 'Task';
+      case 'download_detail_hash_label':
+        return 'Info hash';
+      case 'download_detail_total_size_label':
+        return 'Total size';
+      case 'download_detail_remaining_label':
+        return 'Remaining';
+      case 'download_detail_save_path_label':
+        return 'Save path';
+      case 'download_detail_content_path_label':
+        return 'Content path';
+      case 'download_detail_raw_state_label':
+        return 'Backend state';
       default:
         return null;
     }
@@ -194635,6 +195043,22 @@ extension on _StringsNl {
             'Delete the download task for ${title}?';
       case 'download_task_action_failed':
         return ({required Object error}) => 'The task action failed: ${error}';
+      case 'download_task_details':
+        return 'View details';
+      case 'download_detail_section_task':
+        return 'Task';
+      case 'download_detail_hash_label':
+        return 'Info hash';
+      case 'download_detail_total_size_label':
+        return 'Total size';
+      case 'download_detail_remaining_label':
+        return 'Remaining';
+      case 'download_detail_save_path_label':
+        return 'Save path';
+      case 'download_detail_content_path_label':
+        return 'Content path';
+      case 'download_detail_raw_state_label':
+        return 'Backend state';
       default:
         return null;
     }
@@ -201458,6 +201882,22 @@ extension on _StringsPtBr {
             'Delete the download task for ${title}?';
       case 'download_task_action_failed':
         return ({required Object error}) => 'The task action failed: ${error}';
+      case 'download_task_details':
+        return 'View details';
+      case 'download_detail_section_task':
+        return 'Task';
+      case 'download_detail_hash_label':
+        return 'Info hash';
+      case 'download_detail_total_size_label':
+        return 'Total size';
+      case 'download_detail_remaining_label':
+        return 'Remaining';
+      case 'download_detail_save_path_label':
+        return 'Save path';
+      case 'download_detail_content_path_label':
+        return 'Content path';
+      case 'download_detail_raw_state_label':
+        return 'Backend state';
       default:
         return null;
     }
@@ -208286,6 +208726,22 @@ extension on _StringsRu {
             'Delete the download task for ${title}?';
       case 'download_task_action_failed':
         return ({required Object error}) => 'The task action failed: ${error}';
+      case 'download_task_details':
+        return 'View details';
+      case 'download_detail_section_task':
+        return 'Task';
+      case 'download_detail_hash_label':
+        return 'Info hash';
+      case 'download_detail_total_size_label':
+        return 'Total size';
+      case 'download_detail_remaining_label':
+        return 'Remaining';
+      case 'download_detail_save_path_label':
+        return 'Save path';
+      case 'download_detail_content_path_label':
+        return 'Content path';
+      case 'download_detail_raw_state_label':
+        return 'Backend state';
       default:
         return null;
     }
@@ -215097,6 +215553,22 @@ extension on _StringsTh {
             'Delete the download task for ${title}?';
       case 'download_task_action_failed':
         return ({required Object error}) => 'The task action failed: ${error}';
+      case 'download_task_details':
+        return 'View details';
+      case 'download_detail_section_task':
+        return 'Task';
+      case 'download_detail_hash_label':
+        return 'Info hash';
+      case 'download_detail_total_size_label':
+        return 'Total size';
+      case 'download_detail_remaining_label':
+        return 'Remaining';
+      case 'download_detail_save_path_label':
+        return 'Save path';
+      case 'download_detail_content_path_label':
+        return 'Content path';
+      case 'download_detail_raw_state_label':
+        return 'Backend state';
       default:
         return null;
     }
@@ -221917,6 +222389,22 @@ extension on _StringsTr {
             'Delete the download task for ${title}?';
       case 'download_task_action_failed':
         return ({required Object error}) => 'The task action failed: ${error}';
+      case 'download_task_details':
+        return 'View details';
+      case 'download_detail_section_task':
+        return 'Task';
+      case 'download_detail_hash_label':
+        return 'Info hash';
+      case 'download_detail_total_size_label':
+        return 'Total size';
+      case 'download_detail_remaining_label':
+        return 'Remaining';
+      case 'download_detail_save_path_label':
+        return 'Save path';
+      case 'download_detail_content_path_label':
+        return 'Content path';
+      case 'download_detail_raw_state_label':
+        return 'Backend state';
       default:
         return null;
     }
@@ -228733,6 +229221,22 @@ extension on _StringsVi {
             'Delete the download task for ${title}?';
       case 'download_task_action_failed':
         return ({required Object error}) => 'The task action failed: ${error}';
+      case 'download_task_details':
+        return 'View details';
+      case 'download_detail_section_task':
+        return 'Task';
+      case 'download_detail_hash_label':
+        return 'Info hash';
+      case 'download_detail_total_size_label':
+        return 'Total size';
+      case 'download_detail_remaining_label':
+        return 'Remaining';
+      case 'download_detail_save_path_label':
+        return 'Save path';
+      case 'download_detail_content_path_label':
+        return 'Content path';
+      case 'download_detail_raw_state_label':
+        return 'Backend state';
       default:
         return null;
     }
@@ -235491,6 +235995,22 @@ extension on _StringsZhCn {
         return ({required Object title}) => '删除“${title}”的下载任务吗？';
       case 'download_task_action_failed':
         return ({required Object error}) => '任务操作失败：${error}';
+      case 'download_task_details':
+        return '查看详情';
+      case 'download_detail_section_task':
+        return '任务';
+      case 'download_detail_hash_label':
+        return '信息哈希';
+      case 'download_detail_total_size_label':
+        return '总大小';
+      case 'download_detail_remaining_label':
+        return '剩余大小';
+      case 'download_detail_save_path_label':
+        return '保存路径';
+      case 'download_detail_content_path_label':
+        return '内容路径';
+      case 'download_detail_raw_state_label':
+        return '后端状态';
       default:
         return null;
     }
@@ -242280,6 +242800,22 @@ extension on _StringsZhHk {
             'Delete the download task for ${title}?';
       case 'download_task_action_failed':
         return ({required Object error}) => 'The task action failed: ${error}';
+      case 'download_task_details':
+        return 'View details';
+      case 'download_detail_section_task':
+        return 'Task';
+      case 'download_detail_hash_label':
+        return 'Info hash';
+      case 'download_detail_total_size_label':
+        return 'Total size';
+      case 'download_detail_remaining_label':
+        return 'Remaining';
+      case 'download_detail_save_path_label':
+        return 'Save path';
+      case 'download_detail_content_path_label':
+        return 'Content path';
+      case 'download_detail_raw_state_label':
+        return 'Backend state';
       default:
         return null;
     }
