@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 56491 (3323 per locale)
+/// Strings: 56508 (3324 per locale)
 ///
-/// Built on 2026-08-10 at 19:06 UTC
+/// Built on 2026-08-10 at 19:31 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -4496,6 +4496,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get download_detail_raw_state_label => 'Backend state';
   String get download_detail_backend_offline =>
       'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
+  String get download_detail_task_missing =>
+      'The original download backend is online, but this torrent is no longer present. Live peers and trackers cannot be recovered; persisted task information is shown.';
 }
 
 // Path: <root>
@@ -12165,6 +12167,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get download_detail_backend_offline =>
       'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
+  @override
+  String get download_detail_task_missing =>
+      'The original download backend is online, but this torrent is no longer present. Live peers and trackers cannot be recovered; persisted task information is shown.';
 }
 
 // Path: <root>
@@ -19901,6 +19906,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get download_detail_backend_offline =>
       'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
+  @override
+  String get download_detail_task_missing =>
+      'The original download backend is online, but this torrent is no longer present. Live peers and trackers cannot be recovered; persisted task information is shown.';
 }
 
 // Path: <root>
@@ -27653,6 +27661,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get download_detail_backend_offline =>
       'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
+  @override
+  String get download_detail_task_missing =>
+      'The original download backend is online, but this torrent is no longer present. Live peers and trackers cannot be recovered; persisted task information is shown.';
 }
 
 // Path: <root>
@@ -35417,6 +35428,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get download_detail_backend_offline =>
       'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
+  @override
+  String get download_detail_task_missing =>
+      'The original download backend is online, but this torrent is no longer present. Live peers and trackers cannot be recovered; persisted task information is shown.';
 }
 
 // Path: <root>
@@ -43109,6 +43123,9 @@ class _StringsId extends _StringsEn {
   @override
   String get download_detail_backend_offline =>
       'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
+  @override
+  String get download_detail_task_missing =>
+      'The original download backend is online, but this torrent is no longer present. Live peers and trackers cannot be recovered; persisted task information is shown.';
 }
 
 // Path: <root>
@@ -50847,6 +50864,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get download_detail_backend_offline =>
       'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
+  @override
+  String get download_detail_task_missing =>
+      'The original download backend is online, but this torrent is no longer present. Live peers and trackers cannot be recovered; persisted task information is shown.';
 }
 
 // Path: <root>
@@ -58399,6 +58419,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get download_detail_backend_offline =>
       'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
+  @override
+  String get download_detail_task_missing =>
+      'The original download backend is online, but this torrent is no longer present. Live peers and trackers cannot be recovered; persisted task information is shown.';
 }
 
 // Path: <root>
@@ -65958,6 +65981,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get download_detail_backend_offline =>
       'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
+  @override
+  String get download_detail_task_missing =>
+      'The original download backend is online, but this torrent is no longer present. Live peers and trackers cannot be recovered; persisted task information is shown.';
 }
 
 // Path: <root>
@@ -73676,6 +73702,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get download_detail_backend_offline =>
       'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
+  @override
+  String get download_detail_task_missing =>
+      'The original download backend is online, but this torrent is no longer present. Live peers and trackers cannot be recovered; persisted task information is shown.';
 }
 
 // Path: <root>
@@ -81406,6 +81435,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get download_detail_backend_offline =>
       'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
+  @override
+  String get download_detail_task_missing =>
+      'The original download backend is online, but this torrent is no longer present. Live peers and trackers cannot be recovered; persisted task information is shown.';
 }
 
 // Path: <root>
@@ -89122,6 +89154,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get download_detail_backend_offline =>
       'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
+  @override
+  String get download_detail_task_missing =>
+      'The original download backend is online, but this torrent is no longer present. Live peers and trackers cannot be recovered; persisted task information is shown.';
 }
 
 // Path: <root>
@@ -96786,6 +96821,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get download_detail_backend_offline =>
       'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
+  @override
+  String get download_detail_task_missing =>
+      'The original download backend is online, but this torrent is no longer present. Live peers and trackers cannot be recovered; persisted task information is shown.';
 }
 
 // Path: <root>
@@ -104481,6 +104519,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get download_detail_backend_offline =>
       'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
+  @override
+  String get download_detail_task_missing =>
+      'The original download backend is online, but this torrent is no longer present. Live peers and trackers cannot be recovered; persisted task information is shown.';
 }
 
 // Path: <root>
@@ -112161,6 +112202,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get download_detail_backend_offline =>
       'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
+  @override
+  String get download_detail_task_missing =>
+      'The original download backend is online, but this torrent is no longer present. Live peers and trackers cannot be recovered; persisted task information is shown.';
 }
 
 // Path: <root>
@@ -119289,6 +119333,9 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get download_detail_backend_offline =>
       '原下载后端当前离线。这里仍显示已保存的任务信息，但实时参数暂不可用。';
+  @override
+  String get download_detail_task_missing =>
+      '原下载后端在线，但该 torrent 已不在引擎中。实时节点和 Tracker 无法恢复，这里显示已保存的任务信息。';
 }
 
 // Path: <root>
@@ -126764,6 +126811,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get download_detail_backend_offline =>
       'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
+  @override
+  String get download_detail_task_missing =>
+      'The original download backend is online, but this torrent is no longer present. Live peers and trackers cannot be recovered; persisted task information is shown.';
 }
 
 /// Flat map(s) containing all translations.
@@ -133593,6 +133643,8 @@ extension on _StringsEn {
         return 'Backend state';
       case 'download_detail_backend_offline':
         return 'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
+      case 'download_detail_task_missing':
+        return 'The original download backend is online, but this torrent is no longer present. Live peers and trackers cannot be recovered; persisted task information is shown.';
       default:
         return null;
     }
@@ -140420,6 +140472,8 @@ extension on _StringsAr {
         return 'Backend state';
       case 'download_detail_backend_offline':
         return 'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
+      case 'download_detail_task_missing':
+        return 'The original download backend is online, but this torrent is no longer present. Live peers and trackers cannot be recovered; persisted task information is shown.';
       default:
         return null;
     }
@@ -147269,6 +147323,8 @@ extension on _StringsDe {
         return 'Backend state';
       case 'download_detail_backend_offline':
         return 'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
+      case 'download_detail_task_missing':
+        return 'The original download backend is online, but this torrent is no longer present. Live peers and trackers cannot be recovered; persisted task information is shown.';
       default:
         return null;
     }
@@ -154117,6 +154173,8 @@ extension on _StringsEs {
         return 'Backend state';
       case 'download_detail_backend_offline':
         return 'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
+      case 'download_detail_task_missing':
+        return 'The original download backend is online, but this torrent is no longer present. Live peers and trackers cannot be recovered; persisted task information is shown.';
       default:
         return null;
     }
@@ -160971,6 +161029,8 @@ extension on _StringsFr {
         return 'Backend state';
       case 'download_detail_backend_offline':
         return 'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
+      case 'download_detail_task_missing':
+        return 'The original download backend is online, but this torrent is no longer present. Live peers and trackers cannot be recovered; persisted task information is shown.';
       default:
         return null;
     }
@@ -167807,6 +167867,8 @@ extension on _StringsId {
         return 'Backend state';
       case 'download_detail_backend_offline':
         return 'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
+      case 'download_detail_task_missing':
+        return 'The original download backend is online, but this torrent is no longer present. Live peers and trackers cannot be recovered; persisted task information is shown.';
       default:
         return null;
     }
@@ -174657,6 +174719,8 @@ extension on _StringsIt {
         return 'Backend state';
       case 'download_detail_backend_offline':
         return 'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
+      case 'download_detail_task_missing':
+        return 'The original download backend is online, but this torrent is no longer present. Live peers and trackers cannot be recovered; persisted task information is shown.';
       default:
         return null;
     }
@@ -181469,6 +181533,8 @@ extension on _StringsJa {
         return 'Backend state';
       case 'download_detail_backend_offline':
         return 'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
+      case 'download_detail_task_missing':
+        return 'The original download backend is online, but this torrent is no longer present. Live peers and trackers cannot be recovered; persisted task information is shown.';
       default:
         return null;
     }
@@ -188285,6 +188351,8 @@ extension on _StringsKo {
         return 'Backend state';
       case 'download_detail_backend_offline':
         return 'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
+      case 'download_detail_task_missing':
+        return 'The original download backend is online, but this torrent is no longer present. Live peers and trackers cannot be recovered; persisted task information is shown.';
       default:
         return null;
     }
@@ -195129,6 +195197,8 @@ extension on _StringsNl {
         return 'Backend state';
       case 'download_detail_backend_offline':
         return 'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
+      case 'download_detail_task_missing':
+        return 'The original download backend is online, but this torrent is no longer present. Live peers and trackers cannot be recovered; persisted task information is shown.';
       default:
         return null;
     }
@@ -201970,6 +202040,8 @@ extension on _StringsPtBr {
         return 'Backend state';
       case 'download_detail_backend_offline':
         return 'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
+      case 'download_detail_task_missing':
+        return 'The original download backend is online, but this torrent is no longer present. Live peers and trackers cannot be recovered; persisted task information is shown.';
       default:
         return null;
     }
@@ -208816,6 +208888,8 @@ extension on _StringsRu {
         return 'Backend state';
       case 'download_detail_backend_offline':
         return 'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
+      case 'download_detail_task_missing':
+        return 'The original download backend is online, but this torrent is no longer present. Live peers and trackers cannot be recovered; persisted task information is shown.';
       default:
         return null;
     }
@@ -215645,6 +215719,8 @@ extension on _StringsTh {
         return 'Backend state';
       case 'download_detail_backend_offline':
         return 'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
+      case 'download_detail_task_missing':
+        return 'The original download backend is online, but this torrent is no longer present. Live peers and trackers cannot be recovered; persisted task information is shown.';
       default:
         return null;
     }
@@ -222483,6 +222559,8 @@ extension on _StringsTr {
         return 'Backend state';
       case 'download_detail_backend_offline':
         return 'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
+      case 'download_detail_task_missing':
+        return 'The original download backend is online, but this torrent is no longer present. Live peers and trackers cannot be recovered; persisted task information is shown.';
       default:
         return null;
     }
@@ -229317,6 +229395,8 @@ extension on _StringsVi {
         return 'Backend state';
       case 'download_detail_backend_offline':
         return 'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
+      case 'download_detail_task_missing':
+        return 'The original download backend is online, but this torrent is no longer present. Live peers and trackers cannot be recovered; persisted task information is shown.';
       default:
         return null;
     }
@@ -236093,6 +236173,8 @@ extension on _StringsZhCn {
         return '后端状态';
       case 'download_detail_backend_offline':
         return '原下载后端当前离线。这里仍显示已保存的任务信息，但实时参数暂不可用。';
+      case 'download_detail_task_missing':
+        return '原下载后端在线，但该 torrent 已不在引擎中。实时节点和 Tracker 无法恢复，这里显示已保存的任务信息。';
       default:
         return null;
     }
@@ -242900,6 +242982,8 @@ extension on _StringsZhHk {
         return 'Backend state';
       case 'download_detail_backend_offline':
         return 'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
+      case 'download_detail_task_missing':
+        return 'The original download backend is online, but this torrent is no longer present. Live peers and trackers cannot be recovered; persisted task information is shown.';
       default:
         return null;
     }
