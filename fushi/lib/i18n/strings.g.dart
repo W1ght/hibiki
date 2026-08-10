@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 56474 (3322 per locale)
+/// Strings: 56491 (3323 per locale)
 ///
-/// Built on 2026-08-10 at 18:53 UTC
+/// Built on 2026-08-10 at 19:06 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -4494,6 +4494,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get download_detail_save_path_label => 'Save path';
   String get download_detail_content_path_label => 'Content path';
   String get download_detail_raw_state_label => 'Backend state';
+  String get download_detail_backend_offline =>
+      'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
 }
 
 // Path: <root>
@@ -12160,6 +12162,9 @@ class _StringsAr extends _StringsEn {
   String get download_detail_content_path_label => 'Content path';
   @override
   String get download_detail_raw_state_label => 'Backend state';
+  @override
+  String get download_detail_backend_offline =>
+      'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
 }
 
 // Path: <root>
@@ -19893,6 +19898,9 @@ class _StringsDe extends _StringsEn {
   String get download_detail_content_path_label => 'Content path';
   @override
   String get download_detail_raw_state_label => 'Backend state';
+  @override
+  String get download_detail_backend_offline =>
+      'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
 }
 
 // Path: <root>
@@ -27642,6 +27650,9 @@ class _StringsEs extends _StringsEn {
   String get download_detail_content_path_label => 'Content path';
   @override
   String get download_detail_raw_state_label => 'Backend state';
+  @override
+  String get download_detail_backend_offline =>
+      'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
 }
 
 // Path: <root>
@@ -35403,6 +35414,9 @@ class _StringsFr extends _StringsEn {
   String get download_detail_content_path_label => 'Content path';
   @override
   String get download_detail_raw_state_label => 'Backend state';
+  @override
+  String get download_detail_backend_offline =>
+      'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
 }
 
 // Path: <root>
@@ -43092,6 +43106,9 @@ class _StringsId extends _StringsEn {
   String get download_detail_content_path_label => 'Content path';
   @override
   String get download_detail_raw_state_label => 'Backend state';
+  @override
+  String get download_detail_backend_offline =>
+      'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
 }
 
 // Path: <root>
@@ -50827,6 +50844,9 @@ class _StringsIt extends _StringsEn {
   String get download_detail_content_path_label => 'Content path';
   @override
   String get download_detail_raw_state_label => 'Backend state';
+  @override
+  String get download_detail_backend_offline =>
+      'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
 }
 
 // Path: <root>
@@ -58376,6 +58396,9 @@ class _StringsJa extends _StringsEn {
   String get download_detail_content_path_label => 'Content path';
   @override
   String get download_detail_raw_state_label => 'Backend state';
+  @override
+  String get download_detail_backend_offline =>
+      'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
 }
 
 // Path: <root>
@@ -65932,6 +65955,9 @@ class _StringsKo extends _StringsEn {
   String get download_detail_content_path_label => 'Content path';
   @override
   String get download_detail_raw_state_label => 'Backend state';
+  @override
+  String get download_detail_backend_offline =>
+      'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
 }
 
 // Path: <root>
@@ -73647,6 +73673,9 @@ class _StringsNl extends _StringsEn {
   String get download_detail_content_path_label => 'Content path';
   @override
   String get download_detail_raw_state_label => 'Backend state';
+  @override
+  String get download_detail_backend_offline =>
+      'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
 }
 
 // Path: <root>
@@ -81374,6 +81403,9 @@ class _StringsPtBr extends _StringsEn {
   String get download_detail_content_path_label => 'Content path';
   @override
   String get download_detail_raw_state_label => 'Backend state';
+  @override
+  String get download_detail_backend_offline =>
+      'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
 }
 
 // Path: <root>
@@ -89087,6 +89119,9 @@ class _StringsRu extends _StringsEn {
   String get download_detail_content_path_label => 'Content path';
   @override
   String get download_detail_raw_state_label => 'Backend state';
+  @override
+  String get download_detail_backend_offline =>
+      'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
 }
 
 // Path: <root>
@@ -96748,6 +96783,9 @@ class _StringsTh extends _StringsEn {
   String get download_detail_content_path_label => 'Content path';
   @override
   String get download_detail_raw_state_label => 'Backend state';
+  @override
+  String get download_detail_backend_offline =>
+      'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
 }
 
 // Path: <root>
@@ -104440,6 +104478,9 @@ class _StringsTr extends _StringsEn {
   String get download_detail_content_path_label => 'Content path';
   @override
   String get download_detail_raw_state_label => 'Backend state';
+  @override
+  String get download_detail_backend_offline =>
+      'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
 }
 
 // Path: <root>
@@ -112117,6 +112158,9 @@ class _StringsVi extends _StringsEn {
   String get download_detail_content_path_label => 'Content path';
   @override
   String get download_detail_raw_state_label => 'Backend state';
+  @override
+  String get download_detail_backend_offline =>
+      'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
 }
 
 // Path: <root>
@@ -119242,6 +119286,9 @@ class _StringsZhCn extends _StringsEn {
   String get download_detail_content_path_label => '内容路径';
   @override
   String get download_detail_raw_state_label => '后端状态';
+  @override
+  String get download_detail_backend_offline =>
+      '原下载后端当前离线。这里仍显示已保存的任务信息，但实时参数暂不可用。';
 }
 
 // Path: <root>
@@ -126714,6 +126761,9 @@ class _StringsZhHk extends _StringsEn {
   String get download_detail_content_path_label => 'Content path';
   @override
   String get download_detail_raw_state_label => 'Backend state';
+  @override
+  String get download_detail_backend_offline =>
+      'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
 }
 
 /// Flat map(s) containing all translations.
@@ -133541,6 +133591,8 @@ extension on _StringsEn {
         return 'Content path';
       case 'download_detail_raw_state_label':
         return 'Backend state';
+      case 'download_detail_backend_offline':
+        return 'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
       default:
         return null;
     }
@@ -140366,6 +140418,8 @@ extension on _StringsAr {
         return 'Content path';
       case 'download_detail_raw_state_label':
         return 'Backend state';
+      case 'download_detail_backend_offline':
+        return 'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
       default:
         return null;
     }
@@ -147213,6 +147267,8 @@ extension on _StringsDe {
         return 'Content path';
       case 'download_detail_raw_state_label':
         return 'Backend state';
+      case 'download_detail_backend_offline':
+        return 'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
       default:
         return null;
     }
@@ -154059,6 +154115,8 @@ extension on _StringsEs {
         return 'Content path';
       case 'download_detail_raw_state_label':
         return 'Backend state';
+      case 'download_detail_backend_offline':
+        return 'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
       default:
         return null;
     }
@@ -160911,6 +160969,8 @@ extension on _StringsFr {
         return 'Content path';
       case 'download_detail_raw_state_label':
         return 'Backend state';
+      case 'download_detail_backend_offline':
+        return 'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
       default:
         return null;
     }
@@ -167745,6 +167805,8 @@ extension on _StringsId {
         return 'Content path';
       case 'download_detail_raw_state_label':
         return 'Backend state';
+      case 'download_detail_backend_offline':
+        return 'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
       default:
         return null;
     }
@@ -174593,6 +174655,8 @@ extension on _StringsIt {
         return 'Content path';
       case 'download_detail_raw_state_label':
         return 'Backend state';
+      case 'download_detail_backend_offline':
+        return 'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
       default:
         return null;
     }
@@ -181403,6 +181467,8 @@ extension on _StringsJa {
         return 'Content path';
       case 'download_detail_raw_state_label':
         return 'Backend state';
+      case 'download_detail_backend_offline':
+        return 'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
       default:
         return null;
     }
@@ -188217,6 +188283,8 @@ extension on _StringsKo {
         return 'Content path';
       case 'download_detail_raw_state_label':
         return 'Backend state';
+      case 'download_detail_backend_offline':
+        return 'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
       default:
         return null;
     }
@@ -195059,6 +195127,8 @@ extension on _StringsNl {
         return 'Content path';
       case 'download_detail_raw_state_label':
         return 'Backend state';
+      case 'download_detail_backend_offline':
+        return 'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
       default:
         return null;
     }
@@ -201898,6 +201968,8 @@ extension on _StringsPtBr {
         return 'Content path';
       case 'download_detail_raw_state_label':
         return 'Backend state';
+      case 'download_detail_backend_offline':
+        return 'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
       default:
         return null;
     }
@@ -208742,6 +208814,8 @@ extension on _StringsRu {
         return 'Content path';
       case 'download_detail_raw_state_label':
         return 'Backend state';
+      case 'download_detail_backend_offline':
+        return 'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
       default:
         return null;
     }
@@ -215569,6 +215643,8 @@ extension on _StringsTh {
         return 'Content path';
       case 'download_detail_raw_state_label':
         return 'Backend state';
+      case 'download_detail_backend_offline':
+        return 'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
       default:
         return null;
     }
@@ -222405,6 +222481,8 @@ extension on _StringsTr {
         return 'Content path';
       case 'download_detail_raw_state_label':
         return 'Backend state';
+      case 'download_detail_backend_offline':
+        return 'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
       default:
         return null;
     }
@@ -229237,6 +229315,8 @@ extension on _StringsVi {
         return 'Content path';
       case 'download_detail_raw_state_label':
         return 'Backend state';
+      case 'download_detail_backend_offline':
+        return 'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
       default:
         return null;
     }
@@ -236011,6 +236091,8 @@ extension on _StringsZhCn {
         return '内容路径';
       case 'download_detail_raw_state_label':
         return '后端状态';
+      case 'download_detail_backend_offline':
+        return '原下载后端当前离线。这里仍显示已保存的任务信息，但实时参数暂不可用。';
       default:
         return null;
     }
@@ -242816,6 +242898,8 @@ extension on _StringsZhHk {
         return 'Content path';
       case 'download_detail_raw_state_label':
         return 'Backend state';
+      case 'download_detail_backend_offline':
+        return 'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
       default:
         return null;
     }
