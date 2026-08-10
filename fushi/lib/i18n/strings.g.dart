@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 56204 (3306 per locale)
+/// Strings: 56338 (3314 per locale)
 ///
-/// Built on 2026-08-10 at 18:06 UTC
+/// Built on 2026-08-10 at 18:41 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -4475,6 +4475,17 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
           required Object done,
           required Object total}) =>
       'Downloading ${name} (${done} / ${total})';
+  String get download_task_open_location => 'Show in folder';
+  String get download_task_delete => 'Delete task';
+  String get download_task_delete_files => 'Also delete downloaded files';
+  String get download_task_location_missing =>
+      'The task file location is unavailable.';
+  String get download_task_location_open_failed =>
+      'Could not open the file location.';
+  String download_task_delete_confirm({required Object title}) =>
+      'Delete the download task for ${title}?';
+  String download_task_action_failed({required Object error}) =>
+      'The task action failed: ${error}';
 }
 
 // Path: <root>
@@ -12104,6 +12115,27 @@ class _StringsAr extends _StringsEn {
           required Object done,
           required Object total}) =>
       'Downloading ${name} (${done} / ${total})';
+  @override
+  String get download_task_open_location => 'Show in folder';
+  @override
+  String get download_task_delete => 'Delete task';
+  @override
+  String get download_task_delete_files => 'Also delete downloaded files';
+  @override
+  String get download_task_location_missing =>
+      'The task file location is unavailable.';
+  @override
+  String get download_task_location_open_failed =>
+      'Could not open the file location.';
+  @override
+  String download_subscription_start_episode({required Object episode}) =>
+      '从第 ${episode} 集开始';
+  @override
+  String download_task_delete_confirm({required Object title}) =>
+      'Delete the download task for ${title}?';
+  @override
+  String download_task_action_failed({required Object error}) =>
+      'The task action failed: ${error}';
 }
 
 // Path: <root>
@@ -19800,6 +19832,27 @@ class _StringsDe extends _StringsEn {
           required Object done,
           required Object total}) =>
       'Downloading ${name} (${done} / ${total})';
+  @override
+  String get download_task_open_location => 'Show in folder';
+  @override
+  String get download_task_delete => 'Delete task';
+  @override
+  String get download_task_delete_files => 'Also delete downloaded files';
+  @override
+  String get download_task_location_missing =>
+      'The task file location is unavailable.';
+  @override
+  String get download_task_location_open_failed =>
+      'Could not open the file location.';
+  @override
+  String download_subscription_start_episode({required Object episode}) =>
+      '从第 ${episode} 集开始';
+  @override
+  String download_task_delete_confirm({required Object title}) =>
+      'Delete the download task for ${title}?';
+  @override
+  String download_task_action_failed({required Object error}) =>
+      'The task action failed: ${error}';
 }
 
 // Path: <root>
@@ -27512,6 +27565,27 @@ class _StringsEs extends _StringsEn {
           required Object done,
           required Object total}) =>
       'Downloading ${name} (${done} / ${total})';
+  @override
+  String get download_task_open_location => 'Show in folder';
+  @override
+  String get download_task_delete => 'Delete task';
+  @override
+  String get download_task_delete_files => 'Also delete downloaded files';
+  @override
+  String get download_task_location_missing =>
+      'The task file location is unavailable.';
+  @override
+  String get download_task_location_open_failed =>
+      'Could not open the file location.';
+  @override
+  String download_subscription_start_episode({required Object episode}) =>
+      '从第 ${episode} 集开始';
+  @override
+  String download_task_delete_confirm({required Object title}) =>
+      'Delete the download task for ${title}?';
+  @override
+  String download_task_action_failed({required Object error}) =>
+      'The task action failed: ${error}';
 }
 
 // Path: <root>
@@ -35236,6 +35310,27 @@ class _StringsFr extends _StringsEn {
           required Object done,
           required Object total}) =>
       'Downloading ${name} (${done} / ${total})';
+  @override
+  String get download_task_open_location => 'Show in folder';
+  @override
+  String get download_task_delete => 'Delete task';
+  @override
+  String get download_task_delete_files => 'Also delete downloaded files';
+  @override
+  String get download_task_location_missing =>
+      'The task file location is unavailable.';
+  @override
+  String get download_task_location_open_failed =>
+      'Could not open the file location.';
+  @override
+  String download_subscription_start_episode({required Object episode}) =>
+      '从第 ${episode} 集开始';
+  @override
+  String download_task_delete_confirm({required Object title}) =>
+      'Delete the download task for ${title}?';
+  @override
+  String download_task_action_failed({required Object error}) =>
+      'The task action failed: ${error}';
 }
 
 // Path: <root>
@@ -42888,6 +42983,27 @@ class _StringsId extends _StringsEn {
           required Object done,
           required Object total}) =>
       'Downloading ${name} (${done} / ${total})';
+  @override
+  String get download_task_open_location => 'Show in folder';
+  @override
+  String get download_task_delete => 'Delete task';
+  @override
+  String get download_task_delete_files => 'Also delete downloaded files';
+  @override
+  String get download_task_location_missing =>
+      'The task file location is unavailable.';
+  @override
+  String get download_task_location_open_failed =>
+      'Could not open the file location.';
+  @override
+  String download_subscription_start_episode({required Object episode}) =>
+      '从第 ${episode} 集开始';
+  @override
+  String download_task_delete_confirm({required Object title}) =>
+      'Delete the download task for ${title}?';
+  @override
+  String download_task_action_failed({required Object error}) =>
+      'The task action failed: ${error}';
 }
 
 // Path: <root>
@@ -50586,6 +50702,27 @@ class _StringsIt extends _StringsEn {
           required Object done,
           required Object total}) =>
       'Downloading ${name} (${done} / ${total})';
+  @override
+  String get download_task_open_location => 'Show in folder';
+  @override
+  String get download_task_delete => 'Delete task';
+  @override
+  String get download_task_delete_files => 'Also delete downloaded files';
+  @override
+  String get download_task_location_missing =>
+      'The task file location is unavailable.';
+  @override
+  String get download_task_location_open_failed =>
+      'Could not open the file location.';
+  @override
+  String download_subscription_start_episode({required Object episode}) =>
+      '从第 ${episode} 集开始';
+  @override
+  String download_task_delete_confirm({required Object title}) =>
+      'Delete the download task for ${title}?';
+  @override
+  String download_task_action_failed({required Object error}) =>
+      'The task action failed: ${error}';
 }
 
 // Path: <root>
@@ -58098,6 +58235,27 @@ class _StringsJa extends _StringsEn {
           required Object done,
           required Object total}) =>
       'Downloading ${name} (${done} / ${total})';
+  @override
+  String get download_task_open_location => 'Show in folder';
+  @override
+  String get download_task_delete => 'Delete task';
+  @override
+  String get download_task_delete_files => 'Also delete downloaded files';
+  @override
+  String get download_task_location_missing =>
+      'The task file location is unavailable.';
+  @override
+  String get download_task_location_open_failed =>
+      'Could not open the file location.';
+  @override
+  String download_subscription_start_episode({required Object episode}) =>
+      '从第 ${episode} 集开始';
+  @override
+  String download_task_delete_confirm({required Object title}) =>
+      'Delete the download task for ${title}?';
+  @override
+  String download_task_action_failed({required Object error}) =>
+      'The task action failed: ${error}';
 }
 
 // Path: <root>
@@ -65617,6 +65775,27 @@ class _StringsKo extends _StringsEn {
           required Object done,
           required Object total}) =>
       'Downloading ${name} (${done} / ${total})';
+  @override
+  String get download_task_open_location => 'Show in folder';
+  @override
+  String get download_task_delete => 'Delete task';
+  @override
+  String get download_task_delete_files => 'Also delete downloaded files';
+  @override
+  String get download_task_location_missing =>
+      'The task file location is unavailable.';
+  @override
+  String get download_task_location_open_failed =>
+      'Could not open the file location.';
+  @override
+  String download_subscription_start_episode({required Object episode}) =>
+      '从第 ${episode} 集开始';
+  @override
+  String download_task_delete_confirm({required Object title}) =>
+      'Delete the download task for ${title}?';
+  @override
+  String download_task_action_failed({required Object error}) =>
+      'The task action failed: ${error}';
 }
 
 // Path: <root>
@@ -73295,6 +73474,27 @@ class _StringsNl extends _StringsEn {
           required Object done,
           required Object total}) =>
       'Downloading ${name} (${done} / ${total})';
+  @override
+  String get download_task_open_location => 'Show in folder';
+  @override
+  String get download_task_delete => 'Delete task';
+  @override
+  String get download_task_delete_files => 'Also delete downloaded files';
+  @override
+  String get download_task_location_missing =>
+      'The task file location is unavailable.';
+  @override
+  String get download_task_location_open_failed =>
+      'Could not open the file location.';
+  @override
+  String download_subscription_start_episode({required Object episode}) =>
+      '从第 ${episode} 集开始';
+  @override
+  String download_task_delete_confirm({required Object title}) =>
+      'Delete the download task for ${title}?';
+  @override
+  String download_task_action_failed({required Object error}) =>
+      'The task action failed: ${error}';
 }
 
 // Path: <root>
@@ -80985,6 +81185,27 @@ class _StringsPtBr extends _StringsEn {
           required Object done,
           required Object total}) =>
       'Downloading ${name} (${done} / ${total})';
+  @override
+  String get download_task_open_location => 'Show in folder';
+  @override
+  String get download_task_delete => 'Delete task';
+  @override
+  String get download_task_delete_files => 'Also delete downloaded files';
+  @override
+  String get download_task_location_missing =>
+      'The task file location is unavailable.';
+  @override
+  String get download_task_location_open_failed =>
+      'Could not open the file location.';
+  @override
+  String download_subscription_start_episode({required Object episode}) =>
+      '从第 ${episode} 集开始';
+  @override
+  String download_task_delete_confirm({required Object title}) =>
+      'Delete the download task for ${title}?';
+  @override
+  String download_task_action_failed({required Object error}) =>
+      'The task action failed: ${error}';
 }
 
 // Path: <root>
@@ -88661,6 +88882,27 @@ class _StringsRu extends _StringsEn {
           required Object done,
           required Object total}) =>
       'Downloading ${name} (${done} / ${total})';
+  @override
+  String get download_task_open_location => 'Show in folder';
+  @override
+  String get download_task_delete => 'Delete task';
+  @override
+  String get download_task_delete_files => 'Also delete downloaded files';
+  @override
+  String get download_task_location_missing =>
+      'The task file location is unavailable.';
+  @override
+  String get download_task_location_open_failed =>
+      'Could not open the file location.';
+  @override
+  String download_subscription_start_episode({required Object episode}) =>
+      '从第 ${episode} 集开始';
+  @override
+  String download_task_delete_confirm({required Object title}) =>
+      'Delete the download task for ${title}?';
+  @override
+  String download_task_action_failed({required Object error}) =>
+      'The task action failed: ${error}';
 }
 
 // Path: <root>
@@ -96285,6 +96527,27 @@ class _StringsTh extends _StringsEn {
           required Object done,
           required Object total}) =>
       'Downloading ${name} (${done} / ${total})';
+  @override
+  String get download_task_open_location => 'Show in folder';
+  @override
+  String get download_task_delete => 'Delete task';
+  @override
+  String get download_task_delete_files => 'Also delete downloaded files';
+  @override
+  String get download_task_location_missing =>
+      'The task file location is unavailable.';
+  @override
+  String get download_task_location_open_failed =>
+      'Could not open the file location.';
+  @override
+  String download_subscription_start_episode({required Object episode}) =>
+      '从第 ${episode} 集开始';
+  @override
+  String download_task_delete_confirm({required Object title}) =>
+      'Delete the download task for ${title}?';
+  @override
+  String download_task_action_failed({required Object error}) =>
+      'The task action failed: ${error}';
 }
 
 // Path: <root>
@@ -103940,6 +104203,27 @@ class _StringsTr extends _StringsEn {
           required Object done,
           required Object total}) =>
       'Downloading ${name} (${done} / ${total})';
+  @override
+  String get download_task_open_location => 'Show in folder';
+  @override
+  String get download_task_delete => 'Delete task';
+  @override
+  String get download_task_delete_files => 'Also delete downloaded files';
+  @override
+  String get download_task_location_missing =>
+      'The task file location is unavailable.';
+  @override
+  String get download_task_location_open_failed =>
+      'Could not open the file location.';
+  @override
+  String download_subscription_start_episode({required Object episode}) =>
+      '从第 ${episode} 集开始';
+  @override
+  String download_task_delete_confirm({required Object title}) =>
+      'Delete the download task for ${title}?';
+  @override
+  String download_task_action_failed({required Object error}) =>
+      'The task action failed: ${error}';
 }
 
 // Path: <root>
@@ -111580,6 +111864,27 @@ class _StringsVi extends _StringsEn {
           required Object done,
           required Object total}) =>
       'Downloading ${name} (${done} / ${total})';
+  @override
+  String get download_task_open_location => 'Show in folder';
+  @override
+  String get download_task_delete => 'Delete task';
+  @override
+  String get download_task_delete_files => 'Also delete downloaded files';
+  @override
+  String get download_task_location_missing =>
+      'The task file location is unavailable.';
+  @override
+  String get download_task_location_open_failed =>
+      'Could not open the file location.';
+  @override
+  String download_subscription_start_episode({required Object episode}) =>
+      '从第 ${episode} 集开始';
+  @override
+  String download_task_delete_confirm({required Object title}) =>
+      'Delete the download task for ${title}?';
+  @override
+  String download_task_action_failed({required Object error}) =>
+      'The task action failed: ${error}';
 }
 
 // Path: <root>
@@ -118673,6 +118978,22 @@ class _StringsZhCn extends _StringsEn {
           required Object done,
           required Object total}) =>
       '正在下载 ${name}（${done} / ${total}）';
+  @override
+  String get download_task_open_location => '打开文件位置';
+  @override
+  String get download_task_delete => '删除任务';
+  @override
+  String get download_task_delete_files => '同时删除已下载文件';
+  @override
+  String get download_task_location_missing => '找不到该任务对应的文件位置。';
+  @override
+  String get download_task_location_open_failed => '无法打开文件位置。';
+  @override
+  String download_task_delete_confirm({required Object title}) =>
+      '删除“${title}”的下载任务吗？';
+  @override
+  String download_task_action_failed({required Object error}) =>
+      '任务操作失败：${error}';
 }
 
 // Path: <root>
@@ -126108,6 +126429,27 @@ class _StringsZhHk extends _StringsEn {
           required Object done,
           required Object total}) =>
       'Downloading ${name} (${done} / ${total})';
+  @override
+  String get download_task_open_location => 'Show in folder';
+  @override
+  String get download_task_delete => 'Delete task';
+  @override
+  String get download_task_delete_files => 'Also delete downloaded files';
+  @override
+  String get download_task_location_missing =>
+      'The task file location is unavailable.';
+  @override
+  String get download_task_location_open_failed =>
+      'Could not open the file location.';
+  @override
+  String download_subscription_start_episode({required Object episode}) =>
+      '从第 ${episode} 集开始';
+  @override
+  String download_task_delete_confirm({required Object title}) =>
+      'Delete the download task for ${title}?';
+  @override
+  String download_task_action_failed({required Object error}) =>
+      'The task action failed: ${error}';
 }
 
 /// Flat map(s) containing all translations.
@@ -132904,6 +133246,21 @@ extension on _StringsEn {
                 required Object done,
                 required Object total}) =>
             'Downloading ${name} (${done} / ${total})';
+      case 'download_task_open_location':
+        return 'Show in folder';
+      case 'download_task_delete':
+        return 'Delete task';
+      case 'download_task_delete_files':
+        return 'Also delete downloaded files';
+      case 'download_task_location_missing':
+        return 'The task file location is unavailable.';
+      case 'download_task_location_open_failed':
+        return 'Could not open the file location.';
+      case 'download_task_delete_confirm':
+        return ({required Object title}) =>
+            'Delete the download task for ${title}?';
+      case 'download_task_action_failed':
+        return ({required Object error}) => 'The task action failed: ${error}';
       default:
         return null;
     }
@@ -139696,6 +140053,23 @@ extension on _StringsAr {
                 required Object done,
                 required Object total}) =>
             'Downloading ${name} (${done} / ${total})';
+      case 'download_task_open_location':
+        return 'Show in folder';
+      case 'download_task_delete':
+        return 'Delete task';
+      case 'download_task_delete_files':
+        return 'Also delete downloaded files';
+      case 'download_task_location_missing':
+        return 'The task file location is unavailable.';
+      case 'download_task_location_open_failed':
+        return 'Could not open the file location.';
+      case 'download_subscription_start_episode':
+        return ({required Object episode}) => '从第 ${episode} 集开始';
+      case 'download_task_delete_confirm':
+        return ({required Object title}) =>
+            'Delete the download task for ${title}?';
+      case 'download_task_action_failed':
+        return ({required Object error}) => 'The task action failed: ${error}';
       default:
         return null;
     }
@@ -146510,6 +146884,23 @@ extension on _StringsDe {
                 required Object done,
                 required Object total}) =>
             'Downloading ${name} (${done} / ${total})';
+      case 'download_task_open_location':
+        return 'Show in folder';
+      case 'download_task_delete':
+        return 'Delete task';
+      case 'download_task_delete_files':
+        return 'Also delete downloaded files';
+      case 'download_task_location_missing':
+        return 'The task file location is unavailable.';
+      case 'download_task_location_open_failed':
+        return 'Could not open the file location.';
+      case 'download_subscription_start_episode':
+        return ({required Object episode}) => '从第 ${episode} 集开始';
+      case 'download_task_delete_confirm':
+        return ({required Object title}) =>
+            'Delete the download task for ${title}?';
+      case 'download_task_action_failed':
+        return ({required Object error}) => 'The task action failed: ${error}';
       default:
         return null;
     }
@@ -153323,6 +153714,23 @@ extension on _StringsEs {
                 required Object done,
                 required Object total}) =>
             'Downloading ${name} (${done} / ${total})';
+      case 'download_task_open_location':
+        return 'Show in folder';
+      case 'download_task_delete':
+        return 'Delete task';
+      case 'download_task_delete_files':
+        return 'Also delete downloaded files';
+      case 'download_task_location_missing':
+        return 'The task file location is unavailable.';
+      case 'download_task_location_open_failed':
+        return 'Could not open the file location.';
+      case 'download_subscription_start_episode':
+        return ({required Object episode}) => '从第 ${episode} 集开始';
+      case 'download_task_delete_confirm':
+        return ({required Object title}) =>
+            'Delete the download task for ${title}?';
+      case 'download_task_action_failed':
+        return ({required Object error}) => 'The task action failed: ${error}';
       default:
         return null;
     }
@@ -160142,6 +160550,23 @@ extension on _StringsFr {
                 required Object done,
                 required Object total}) =>
             'Downloading ${name} (${done} / ${total})';
+      case 'download_task_open_location':
+        return 'Show in folder';
+      case 'download_task_delete':
+        return 'Delete task';
+      case 'download_task_delete_files':
+        return 'Also delete downloaded files';
+      case 'download_task_location_missing':
+        return 'The task file location is unavailable.';
+      case 'download_task_location_open_failed':
+        return 'Could not open the file location.';
+      case 'download_subscription_start_episode':
+        return ({required Object episode}) => '从第 ${episode} 集开始';
+      case 'download_task_delete_confirm':
+        return ({required Object title}) =>
+            'Delete the download task for ${title}?';
+      case 'download_task_action_failed':
+        return ({required Object error}) => 'The task action failed: ${error}';
       default:
         return null;
     }
@@ -166943,6 +167368,23 @@ extension on _StringsId {
                 required Object done,
                 required Object total}) =>
             'Downloading ${name} (${done} / ${total})';
+      case 'download_task_open_location':
+        return 'Show in folder';
+      case 'download_task_delete':
+        return 'Delete task';
+      case 'download_task_delete_files':
+        return 'Also delete downloaded files';
+      case 'download_task_location_missing':
+        return 'The task file location is unavailable.';
+      case 'download_task_location_open_failed':
+        return 'Could not open the file location.';
+      case 'download_subscription_start_episode':
+        return ({required Object episode}) => '从第 ${episode} 集开始';
+      case 'download_task_delete_confirm':
+        return ({required Object title}) =>
+            'Delete the download task for ${title}?';
+      case 'download_task_action_failed':
+        return ({required Object error}) => 'The task action failed: ${error}';
       default:
         return null;
     }
@@ -173758,6 +174200,23 @@ extension on _StringsIt {
                 required Object done,
                 required Object total}) =>
             'Downloading ${name} (${done} / ${total})';
+      case 'download_task_open_location':
+        return 'Show in folder';
+      case 'download_task_delete':
+        return 'Delete task';
+      case 'download_task_delete_files':
+        return 'Also delete downloaded files';
+      case 'download_task_location_missing':
+        return 'The task file location is unavailable.';
+      case 'download_task_location_open_failed':
+        return 'Could not open the file location.';
+      case 'download_subscription_start_episode':
+        return ({required Object episode}) => '从第 ${episode} 集开始';
+      case 'download_task_delete_confirm':
+        return ({required Object title}) =>
+            'Delete the download task for ${title}?';
+      case 'download_task_action_failed':
+        return ({required Object error}) => 'The task action failed: ${error}';
       default:
         return null;
     }
@@ -180535,6 +180994,23 @@ extension on _StringsJa {
                 required Object done,
                 required Object total}) =>
             'Downloading ${name} (${done} / ${total})';
+      case 'download_task_open_location':
+        return 'Show in folder';
+      case 'download_task_delete':
+        return 'Delete task';
+      case 'download_task_delete_files':
+        return 'Also delete downloaded files';
+      case 'download_task_location_missing':
+        return 'The task file location is unavailable.';
+      case 'download_task_location_open_failed':
+        return 'Could not open the file location.';
+      case 'download_subscription_start_episode':
+        return ({required Object episode}) => '从第 ${episode} 集开始';
+      case 'download_task_delete_confirm':
+        return ({required Object title}) =>
+            'Delete the download task for ${title}?';
+      case 'download_task_action_failed':
+        return ({required Object error}) => 'The task action failed: ${error}';
       default:
         return null;
     }
@@ -187316,6 +187792,23 @@ extension on _StringsKo {
                 required Object done,
                 required Object total}) =>
             'Downloading ${name} (${done} / ${total})';
+      case 'download_task_open_location':
+        return 'Show in folder';
+      case 'download_task_delete':
+        return 'Delete task';
+      case 'download_task_delete_files':
+        return 'Also delete downloaded files';
+      case 'download_task_location_missing':
+        return 'The task file location is unavailable.';
+      case 'download_task_location_open_failed':
+        return 'Could not open the file location.';
+      case 'download_subscription_start_episode':
+        return ({required Object episode}) => '从第 ${episode} 集开始';
+      case 'download_task_delete_confirm':
+        return ({required Object title}) =>
+            'Delete the download task for ${title}?';
+      case 'download_task_action_failed':
+        return ({required Object error}) => 'The task action failed: ${error}';
       default:
         return null;
     }
@@ -194125,6 +194618,23 @@ extension on _StringsNl {
                 required Object done,
                 required Object total}) =>
             'Downloading ${name} (${done} / ${total})';
+      case 'download_task_open_location':
+        return 'Show in folder';
+      case 'download_task_delete':
+        return 'Delete task';
+      case 'download_task_delete_files':
+        return 'Also delete downloaded files';
+      case 'download_task_location_missing':
+        return 'The task file location is unavailable.';
+      case 'download_task_location_open_failed':
+        return 'Could not open the file location.';
+      case 'download_subscription_start_episode':
+        return ({required Object episode}) => '从第 ${episode} 集开始';
+      case 'download_task_delete_confirm':
+        return ({required Object title}) =>
+            'Delete the download task for ${title}?';
+      case 'download_task_action_failed':
+        return ({required Object error}) => 'The task action failed: ${error}';
       default:
         return null;
     }
@@ -200931,6 +201441,23 @@ extension on _StringsPtBr {
                 required Object done,
                 required Object total}) =>
             'Downloading ${name} (${done} / ${total})';
+      case 'download_task_open_location':
+        return 'Show in folder';
+      case 'download_task_delete':
+        return 'Delete task';
+      case 'download_task_delete_files':
+        return 'Also delete downloaded files';
+      case 'download_task_location_missing':
+        return 'The task file location is unavailable.';
+      case 'download_task_location_open_failed':
+        return 'Could not open the file location.';
+      case 'download_subscription_start_episode':
+        return ({required Object episode}) => '从第 ${episode} 集开始';
+      case 'download_task_delete_confirm':
+        return ({required Object title}) =>
+            'Delete the download task for ${title}?';
+      case 'download_task_action_failed':
+        return ({required Object error}) => 'The task action failed: ${error}';
       default:
         return null;
     }
@@ -207742,6 +208269,23 @@ extension on _StringsRu {
                 required Object done,
                 required Object total}) =>
             'Downloading ${name} (${done} / ${total})';
+      case 'download_task_open_location':
+        return 'Show in folder';
+      case 'download_task_delete':
+        return 'Delete task';
+      case 'download_task_delete_files':
+        return 'Also delete downloaded files';
+      case 'download_task_location_missing':
+        return 'The task file location is unavailable.';
+      case 'download_task_location_open_failed':
+        return 'Could not open the file location.';
+      case 'download_subscription_start_episode':
+        return ({required Object episode}) => '从第 ${episode} 集开始';
+      case 'download_task_delete_confirm':
+        return ({required Object title}) =>
+            'Delete the download task for ${title}?';
+      case 'download_task_action_failed':
+        return ({required Object error}) => 'The task action failed: ${error}';
       default:
         return null;
     }
@@ -214536,6 +215080,23 @@ extension on _StringsTh {
                 required Object done,
                 required Object total}) =>
             'Downloading ${name} (${done} / ${total})';
+      case 'download_task_open_location':
+        return 'Show in folder';
+      case 'download_task_delete':
+        return 'Delete task';
+      case 'download_task_delete_files':
+        return 'Also delete downloaded files';
+      case 'download_task_location_missing':
+        return 'The task file location is unavailable.';
+      case 'download_task_location_open_failed':
+        return 'Could not open the file location.';
+      case 'download_subscription_start_episode':
+        return ({required Object episode}) => '从第 ${episode} 集开始';
+      case 'download_task_delete_confirm':
+        return ({required Object title}) =>
+            'Delete the download task for ${title}?';
+      case 'download_task_action_failed':
+        return ({required Object error}) => 'The task action failed: ${error}';
       default:
         return null;
     }
@@ -221339,6 +221900,23 @@ extension on _StringsTr {
                 required Object done,
                 required Object total}) =>
             'Downloading ${name} (${done} / ${total})';
+      case 'download_task_open_location':
+        return 'Show in folder';
+      case 'download_task_delete':
+        return 'Delete task';
+      case 'download_task_delete_files':
+        return 'Also delete downloaded files';
+      case 'download_task_location_missing':
+        return 'The task file location is unavailable.';
+      case 'download_task_location_open_failed':
+        return 'Could not open the file location.';
+      case 'download_subscription_start_episode':
+        return ({required Object episode}) => '从第 ${episode} 集开始';
+      case 'download_task_delete_confirm':
+        return ({required Object title}) =>
+            'Delete the download task for ${title}?';
+      case 'download_task_action_failed':
+        return ({required Object error}) => 'The task action failed: ${error}';
       default:
         return null;
     }
@@ -228138,6 +228716,23 @@ extension on _StringsVi {
                 required Object done,
                 required Object total}) =>
             'Downloading ${name} (${done} / ${total})';
+      case 'download_task_open_location':
+        return 'Show in folder';
+      case 'download_task_delete':
+        return 'Delete task';
+      case 'download_task_delete_files':
+        return 'Also delete downloaded files';
+      case 'download_task_location_missing':
+        return 'The task file location is unavailable.';
+      case 'download_task_location_open_failed':
+        return 'Could not open the file location.';
+      case 'download_subscription_start_episode':
+        return ({required Object episode}) => '从第 ${episode} 集开始';
+      case 'download_task_delete_confirm':
+        return ({required Object title}) =>
+            'Delete the download task for ${title}?';
+      case 'download_task_action_failed':
+        return ({required Object error}) => 'The task action failed: ${error}';
       default:
         return null;
     }
@@ -234882,6 +235477,20 @@ extension on _StringsZhCn {
                 required Object done,
                 required Object total}) =>
             '正在下载 ${name}（${done} / ${total}）';
+      case 'download_task_open_location':
+        return '打开文件位置';
+      case 'download_task_delete':
+        return '删除任务';
+      case 'download_task_delete_files':
+        return '同时删除已下载文件';
+      case 'download_task_location_missing':
+        return '找不到该任务对应的文件位置。';
+      case 'download_task_location_open_failed':
+        return '无法打开文件位置。';
+      case 'download_task_delete_confirm':
+        return ({required Object title}) => '删除“${title}”的下载任务吗？';
+      case 'download_task_action_failed':
+        return ({required Object error}) => '任务操作失败：${error}';
       default:
         return null;
     }
@@ -241654,6 +242263,23 @@ extension on _StringsZhHk {
                 required Object done,
                 required Object total}) =>
             'Downloading ${name} (${done} / ${total})';
+      case 'download_task_open_location':
+        return 'Show in folder';
+      case 'download_task_delete':
+        return 'Delete task';
+      case 'download_task_delete_files':
+        return 'Also delete downloaded files';
+      case 'download_task_location_missing':
+        return 'The task file location is unavailable.';
+      case 'download_task_location_open_failed':
+        return 'Could not open the file location.';
+      case 'download_subscription_start_episode':
+        return ({required Object episode}) => '从第 ${episode} 集开始';
+      case 'download_task_delete_confirm':
+        return ({required Object title}) =>
+            'Delete the download task for ${title}?';
+      case 'download_task_action_failed':
+        return ({required Object error}) => 'The task action failed: ${error}';
       default:
         return null;
     }
