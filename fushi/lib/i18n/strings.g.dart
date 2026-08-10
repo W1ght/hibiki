@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 56168 (3304 per locale)
+/// Strings: 56185 (3305 per locale)
 ///
-/// Built on 2026-08-10 at 14:12 UTC
+/// Built on 2026-08-10 at 15:49 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -4466,6 +4466,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_setting_drag_seek_sensitivity_low => 'Low';
   String get video_setting_drag_seek_sensitivity_medium => 'Medium';
   String get video_setting_drag_seek_sensitivity_high => 'High';
+  String video_subtitle_read_failed({required Object label}) =>
+      'Couldn\'t read this subtitle file (damaged or empty): ${label}';
 }
 
 // Path: <root>
@@ -12086,6 +12088,9 @@ class _StringsAr extends _StringsEn {
   String get video_setting_drag_seek_sensitivity_medium => 'Medium';
   @override
   String get video_setting_drag_seek_sensitivity_high => 'High';
+  @override
+  String video_subtitle_read_failed({required Object label}) =>
+      'Couldn\'t read this subtitle file (damaged or empty): ${label}';
 }
 
 // Path: <root>
@@ -19773,6 +19778,9 @@ class _StringsDe extends _StringsEn {
   String get video_setting_drag_seek_sensitivity_medium => 'Medium';
   @override
   String get video_setting_drag_seek_sensitivity_high => 'High';
+  @override
+  String video_subtitle_read_failed({required Object label}) =>
+      'Couldn\'t read this subtitle file (damaged or empty): ${label}';
 }
 
 // Path: <root>
@@ -27476,6 +27484,9 @@ class _StringsEs extends _StringsEn {
   String get video_setting_drag_seek_sensitivity_medium => 'Medium';
   @override
   String get video_setting_drag_seek_sensitivity_high => 'High';
+  @override
+  String video_subtitle_read_failed({required Object label}) =>
+      'Couldn\'t read this subtitle file (damaged or empty): ${label}';
 }
 
 // Path: <root>
@@ -35191,6 +35202,9 @@ class _StringsFr extends _StringsEn {
   String get video_setting_drag_seek_sensitivity_medium => 'Medium';
   @override
   String get video_setting_drag_seek_sensitivity_high => 'High';
+  @override
+  String video_subtitle_read_failed({required Object label}) =>
+      'Couldn\'t read this subtitle file (damaged or empty): ${label}';
 }
 
 // Path: <root>
@@ -42834,6 +42848,9 @@ class _StringsId extends _StringsEn {
   String get video_setting_drag_seek_sensitivity_medium => 'Medium';
   @override
   String get video_setting_drag_seek_sensitivity_high => 'High';
+  @override
+  String video_subtitle_read_failed({required Object label}) =>
+      'Couldn\'t read this subtitle file (damaged or empty): ${label}';
 }
 
 // Path: <root>
@@ -50523,6 +50540,9 @@ class _StringsIt extends _StringsEn {
   String get video_setting_drag_seek_sensitivity_medium => 'Medium';
   @override
   String get video_setting_drag_seek_sensitivity_high => 'High';
+  @override
+  String video_subtitle_read_failed({required Object label}) =>
+      'Couldn\'t read this subtitle file (damaged or empty): ${label}';
 }
 
 // Path: <root>
@@ -58026,6 +58046,9 @@ class _StringsJa extends _StringsEn {
   String get video_setting_drag_seek_sensitivity_medium => 'Medium';
   @override
   String get video_setting_drag_seek_sensitivity_high => 'High';
+  @override
+  String video_subtitle_read_failed({required Object label}) =>
+      'Couldn\'t read this subtitle file (damaged or empty): ${label}';
 }
 
 // Path: <root>
@@ -65536,6 +65559,9 @@ class _StringsKo extends _StringsEn {
   String get video_setting_drag_seek_sensitivity_medium => 'Medium';
   @override
   String get video_setting_drag_seek_sensitivity_high => 'High';
+  @override
+  String video_subtitle_read_failed({required Object label}) =>
+      'Couldn\'t read this subtitle file (damaged or empty): ${label}';
 }
 
 // Path: <root>
@@ -73205,6 +73231,9 @@ class _StringsNl extends _StringsEn {
   String get video_setting_drag_seek_sensitivity_medium => 'Medium';
   @override
   String get video_setting_drag_seek_sensitivity_high => 'High';
+  @override
+  String video_subtitle_read_failed({required Object label}) =>
+      'Couldn\'t read this subtitle file (damaged or empty): ${label}';
 }
 
 // Path: <root>
@@ -80886,6 +80915,9 @@ class _StringsPtBr extends _StringsEn {
   String get video_setting_drag_seek_sensitivity_medium => 'Medium';
   @override
   String get video_setting_drag_seek_sensitivity_high => 'High';
+  @override
+  String video_subtitle_read_failed({required Object label}) =>
+      'Couldn\'t read this subtitle file (damaged or empty): ${label}';
 }
 
 // Path: <root>
@@ -88553,6 +88585,9 @@ class _StringsRu extends _StringsEn {
   String get video_setting_drag_seek_sensitivity_medium => 'Medium';
   @override
   String get video_setting_drag_seek_sensitivity_high => 'High';
+  @override
+  String video_subtitle_read_failed({required Object label}) =>
+      'Couldn\'t read this subtitle file (damaged or empty): ${label}';
 }
 
 // Path: <root>
@@ -96168,6 +96203,9 @@ class _StringsTh extends _StringsEn {
   String get video_setting_drag_seek_sensitivity_medium => 'Medium';
   @override
   String get video_setting_drag_seek_sensitivity_high => 'High';
+  @override
+  String video_subtitle_read_failed({required Object label}) =>
+      'Couldn\'t read this subtitle file (damaged or empty): ${label}';
 }
 
 // Path: <root>
@@ -103814,6 +103852,9 @@ class _StringsTr extends _StringsEn {
   String get video_setting_drag_seek_sensitivity_medium => 'Medium';
   @override
   String get video_setting_drag_seek_sensitivity_high => 'High';
+  @override
+  String video_subtitle_read_failed({required Object label}) =>
+      'Couldn\'t read this subtitle file (damaged or empty): ${label}';
 }
 
 // Path: <root>
@@ -111445,6 +111486,9 @@ class _StringsVi extends _StringsEn {
   String get video_setting_drag_seek_sensitivity_medium => 'Medium';
   @override
   String get video_setting_drag_seek_sensitivity_high => 'High';
+  @override
+  String video_subtitle_read_failed({required Object label}) =>
+      'Couldn\'t read this subtitle file (damaged or empty): ${label}';
 }
 
 // Path: <root>
@@ -118526,6 +118570,9 @@ class _StringsZhCn extends _StringsEn {
   String get video_setting_drag_seek_sensitivity_medium => '中';
   @override
   String get video_setting_drag_seek_sensitivity_high => '高';
+  @override
+  String video_subtitle_read_failed({required Object label}) =>
+      '无法读取该字幕文件（内容损坏或为空）：${label}';
 }
 
 // Path: <root>
@@ -125952,6 +125999,9 @@ class _StringsZhHk extends _StringsEn {
   String get video_setting_drag_seek_sensitivity_medium => 'Medium';
   @override
   String get video_setting_drag_seek_sensitivity_high => 'High';
+  @override
+  String video_subtitle_read_failed({required Object label}) =>
+      'Couldn\'t read this subtitle file (damaged or empty): ${label}';
 }
 
 /// Flat map(s) containing all translations.
@@ -132737,6 +132787,9 @@ extension on _StringsEn {
         return 'Medium';
       case 'video_setting_drag_seek_sensitivity_high':
         return 'High';
+      case 'video_subtitle_read_failed':
+        return ({required Object label}) =>
+            'Couldn\'t read this subtitle file (damaged or empty): ${label}';
       default:
         return null;
     }
@@ -139520,6 +139573,9 @@ extension on _StringsAr {
         return 'Medium';
       case 'video_setting_drag_seek_sensitivity_high':
         return 'High';
+      case 'video_subtitle_read_failed':
+        return ({required Object label}) =>
+            'Couldn\'t read this subtitle file (damaged or empty): ${label}';
       default:
         return null;
     }
@@ -146325,6 +146381,9 @@ extension on _StringsDe {
         return 'Medium';
       case 'video_setting_drag_seek_sensitivity_high':
         return 'High';
+      case 'video_subtitle_read_failed':
+        return ({required Object label}) =>
+            'Couldn\'t read this subtitle file (damaged or empty): ${label}';
       default:
         return null;
     }
@@ -153129,6 +153188,9 @@ extension on _StringsEs {
         return 'Medium';
       case 'video_setting_drag_seek_sensitivity_high':
         return 'High';
+      case 'video_subtitle_read_failed':
+        return ({required Object label}) =>
+            'Couldn\'t read this subtitle file (damaged or empty): ${label}';
       default:
         return null;
     }
@@ -159939,6 +160001,9 @@ extension on _StringsFr {
         return 'Medium';
       case 'video_setting_drag_seek_sensitivity_high':
         return 'High';
+      case 'video_subtitle_read_failed':
+        return ({required Object label}) =>
+            'Couldn\'t read this subtitle file (damaged or empty): ${label}';
       default:
         return null;
     }
@@ -166731,6 +166796,9 @@ extension on _StringsId {
         return 'Medium';
       case 'video_setting_drag_seek_sensitivity_high':
         return 'High';
+      case 'video_subtitle_read_failed':
+        return ({required Object label}) =>
+            'Couldn\'t read this subtitle file (damaged or empty): ${label}';
       default:
         return null;
     }
@@ -173537,6 +173605,9 @@ extension on _StringsIt {
         return 'Medium';
       case 'video_setting_drag_seek_sensitivity_high':
         return 'High';
+      case 'video_subtitle_read_failed':
+        return ({required Object label}) =>
+            'Couldn\'t read this subtitle file (damaged or empty): ${label}';
       default:
         return null;
     }
@@ -180305,6 +180376,9 @@ extension on _StringsJa {
         return 'Medium';
       case 'video_setting_drag_seek_sensitivity_high':
         return 'High';
+      case 'video_subtitle_read_failed':
+        return ({required Object label}) =>
+            'Couldn\'t read this subtitle file (damaged or empty): ${label}';
       default:
         return null;
     }
@@ -187077,6 +187151,9 @@ extension on _StringsKo {
         return 'Medium';
       case 'video_setting_drag_seek_sensitivity_high':
         return 'High';
+      case 'video_subtitle_read_failed':
+        return ({required Object label}) =>
+            'Couldn\'t read this subtitle file (damaged or empty): ${label}';
       default:
         return null;
     }
@@ -193877,6 +193954,9 @@ extension on _StringsNl {
         return 'Medium';
       case 'video_setting_drag_seek_sensitivity_high':
         return 'High';
+      case 'video_subtitle_read_failed':
+        return ({required Object label}) =>
+            'Couldn\'t read this subtitle file (damaged or empty): ${label}';
       default:
         return null;
     }
@@ -200674,6 +200754,9 @@ extension on _StringsPtBr {
         return 'Medium';
       case 'video_setting_drag_seek_sensitivity_high':
         return 'High';
+      case 'video_subtitle_read_failed':
+        return ({required Object label}) =>
+            'Couldn\'t read this subtitle file (damaged or empty): ${label}';
       default:
         return null;
     }
@@ -207476,6 +207559,9 @@ extension on _StringsRu {
         return 'Medium';
       case 'video_setting_drag_seek_sensitivity_high':
         return 'High';
+      case 'video_subtitle_read_failed':
+        return ({required Object label}) =>
+            'Couldn\'t read this subtitle file (damaged or empty): ${label}';
       default:
         return null;
     }
@@ -214261,6 +214347,9 @@ extension on _StringsTh {
         return 'Medium';
       case 'video_setting_drag_seek_sensitivity_high':
         return 'High';
+      case 'video_subtitle_read_failed':
+        return ({required Object label}) =>
+            'Couldn\'t read this subtitle file (damaged or empty): ${label}';
       default:
         return null;
     }
@@ -221055,6 +221144,9 @@ extension on _StringsTr {
         return 'Medium';
       case 'video_setting_drag_seek_sensitivity_high':
         return 'High';
+      case 'video_subtitle_read_failed':
+        return ({required Object label}) =>
+            'Couldn\'t read this subtitle file (damaged or empty): ${label}';
       default:
         return null;
     }
@@ -227845,6 +227937,9 @@ extension on _StringsVi {
         return 'Medium';
       case 'video_setting_drag_seek_sensitivity_high':
         return 'High';
+      case 'video_subtitle_read_failed':
+        return ({required Object label}) =>
+            'Couldn\'t read this subtitle file (damaged or empty): ${label}';
       default:
         return null;
     }
@@ -234579,6 +234674,8 @@ extension on _StringsZhCn {
         return '中';
       case 'video_setting_drag_seek_sensitivity_high':
         return '高';
+      case 'video_subtitle_read_failed':
+        return ({required Object label}) => '无法读取该字幕文件（内容损坏或为空）：${label}';
       default:
         return null;
     }
@@ -241342,6 +241439,9 @@ extension on _StringsZhHk {
         return 'Medium';
       case 'video_setting_drag_seek_sensitivity_high':
         return 'High';
+      case 'video_subtitle_read_failed':
+        return ({required Object label}) =>
+            'Couldn\'t read this subtitle file (damaged or empty): ${label}';
       default:
         return null;
     }
