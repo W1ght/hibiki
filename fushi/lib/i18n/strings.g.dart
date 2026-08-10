@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 56202 (3306 per locale)
+/// Strings: 56287 (3311 per locale)
 ///
-/// Built on 2026-08-10 at 16:09 UTC
+/// Built on 2026-08-10 at 18:34 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -4473,6 +4473,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
           required Object done,
           required Object total}) =>
       'Downloading ${name} (${done} / ${total})';
+  String get dict_download_hide => 'Run in background';
+  String get dict_download_progress_show => 'View progress';
+  String get dict_download_cancelled => 'Download cancelled.';
+  String get dict_download_import_uncancellable =>
+      'Importing cannot be interrupted';
+  String get dict_download_busy => 'A dictionary download is already running.';
 }
 
 // Path: <root>
@@ -12102,6 +12108,17 @@ class _StringsAr extends _StringsEn {
           required Object done,
           required Object total}) =>
       'Downloading ${name} (${done} / ${total})';
+  @override
+  String get dict_download_hide => 'Run in background';
+  @override
+  String get dict_download_progress_show => 'View progress';
+  @override
+  String get dict_download_cancelled => 'Download cancelled.';
+  @override
+  String get dict_download_import_uncancellable =>
+      'Importing cannot be interrupted';
+  @override
+  String get dict_download_busy => 'A dictionary download is already running.';
 }
 
 // Path: <root>
@@ -19798,6 +19815,17 @@ class _StringsDe extends _StringsEn {
           required Object done,
           required Object total}) =>
       'Downloading ${name} (${done} / ${total})';
+  @override
+  String get dict_download_hide => 'Run in background';
+  @override
+  String get dict_download_progress_show => 'View progress';
+  @override
+  String get dict_download_cancelled => 'Download cancelled.';
+  @override
+  String get dict_download_import_uncancellable =>
+      'Importing cannot be interrupted';
+  @override
+  String get dict_download_busy => 'A dictionary download is already running.';
 }
 
 // Path: <root>
@@ -27510,6 +27538,17 @@ class _StringsEs extends _StringsEn {
           required Object done,
           required Object total}) =>
       'Downloading ${name} (${done} / ${total})';
+  @override
+  String get dict_download_hide => 'Run in background';
+  @override
+  String get dict_download_progress_show => 'View progress';
+  @override
+  String get dict_download_cancelled => 'Download cancelled.';
+  @override
+  String get dict_download_import_uncancellable =>
+      'Importing cannot be interrupted';
+  @override
+  String get dict_download_busy => 'A dictionary download is already running.';
 }
 
 // Path: <root>
@@ -35234,6 +35273,17 @@ class _StringsFr extends _StringsEn {
           required Object done,
           required Object total}) =>
       'Downloading ${name} (${done} / ${total})';
+  @override
+  String get dict_download_hide => 'Run in background';
+  @override
+  String get dict_download_progress_show => 'View progress';
+  @override
+  String get dict_download_cancelled => 'Download cancelled.';
+  @override
+  String get dict_download_import_uncancellable =>
+      'Importing cannot be interrupted';
+  @override
+  String get dict_download_busy => 'A dictionary download is already running.';
 }
 
 // Path: <root>
@@ -42886,6 +42936,17 @@ class _StringsId extends _StringsEn {
           required Object done,
           required Object total}) =>
       'Downloading ${name} (${done} / ${total})';
+  @override
+  String get dict_download_hide => 'Run in background';
+  @override
+  String get dict_download_progress_show => 'View progress';
+  @override
+  String get dict_download_cancelled => 'Download cancelled.';
+  @override
+  String get dict_download_import_uncancellable =>
+      'Importing cannot be interrupted';
+  @override
+  String get dict_download_busy => 'A dictionary download is already running.';
 }
 
 // Path: <root>
@@ -50584,6 +50645,17 @@ class _StringsIt extends _StringsEn {
           required Object done,
           required Object total}) =>
       'Downloading ${name} (${done} / ${total})';
+  @override
+  String get dict_download_hide => 'Run in background';
+  @override
+  String get dict_download_progress_show => 'View progress';
+  @override
+  String get dict_download_cancelled => 'Download cancelled.';
+  @override
+  String get dict_download_import_uncancellable =>
+      'Importing cannot be interrupted';
+  @override
+  String get dict_download_busy => 'A dictionary download is already running.';
 }
 
 // Path: <root>
@@ -58096,6 +58168,17 @@ class _StringsJa extends _StringsEn {
           required Object done,
           required Object total}) =>
       'Downloading ${name} (${done} / ${total})';
+  @override
+  String get dict_download_hide => 'Run in background';
+  @override
+  String get dict_download_progress_show => 'View progress';
+  @override
+  String get dict_download_cancelled => 'Download cancelled.';
+  @override
+  String get dict_download_import_uncancellable =>
+      'Importing cannot be interrupted';
+  @override
+  String get dict_download_busy => 'A dictionary download is already running.';
 }
 
 // Path: <root>
@@ -65615,6 +65698,17 @@ class _StringsKo extends _StringsEn {
           required Object done,
           required Object total}) =>
       'Downloading ${name} (${done} / ${total})';
+  @override
+  String get dict_download_hide => 'Run in background';
+  @override
+  String get dict_download_progress_show => 'View progress';
+  @override
+  String get dict_download_cancelled => 'Download cancelled.';
+  @override
+  String get dict_download_import_uncancellable =>
+      'Importing cannot be interrupted';
+  @override
+  String get dict_download_busy => 'A dictionary download is already running.';
 }
 
 // Path: <root>
@@ -73293,6 +73387,17 @@ class _StringsNl extends _StringsEn {
           required Object done,
           required Object total}) =>
       'Downloading ${name} (${done} / ${total})';
+  @override
+  String get dict_download_hide => 'Run in background';
+  @override
+  String get dict_download_progress_show => 'View progress';
+  @override
+  String get dict_download_cancelled => 'Download cancelled.';
+  @override
+  String get dict_download_import_uncancellable =>
+      'Importing cannot be interrupted';
+  @override
+  String get dict_download_busy => 'A dictionary download is already running.';
 }
 
 // Path: <root>
@@ -80983,6 +81088,17 @@ class _StringsPtBr extends _StringsEn {
           required Object done,
           required Object total}) =>
       'Downloading ${name} (${done} / ${total})';
+  @override
+  String get dict_download_hide => 'Run in background';
+  @override
+  String get dict_download_progress_show => 'View progress';
+  @override
+  String get dict_download_cancelled => 'Download cancelled.';
+  @override
+  String get dict_download_import_uncancellable =>
+      'Importing cannot be interrupted';
+  @override
+  String get dict_download_busy => 'A dictionary download is already running.';
 }
 
 // Path: <root>
@@ -88659,6 +88775,17 @@ class _StringsRu extends _StringsEn {
           required Object done,
           required Object total}) =>
       'Downloading ${name} (${done} / ${total})';
+  @override
+  String get dict_download_hide => 'Run in background';
+  @override
+  String get dict_download_progress_show => 'View progress';
+  @override
+  String get dict_download_cancelled => 'Download cancelled.';
+  @override
+  String get dict_download_import_uncancellable =>
+      'Importing cannot be interrupted';
+  @override
+  String get dict_download_busy => 'A dictionary download is already running.';
 }
 
 // Path: <root>
@@ -96283,6 +96410,17 @@ class _StringsTh extends _StringsEn {
           required Object done,
           required Object total}) =>
       'Downloading ${name} (${done} / ${total})';
+  @override
+  String get dict_download_hide => 'Run in background';
+  @override
+  String get dict_download_progress_show => 'View progress';
+  @override
+  String get dict_download_cancelled => 'Download cancelled.';
+  @override
+  String get dict_download_import_uncancellable =>
+      'Importing cannot be interrupted';
+  @override
+  String get dict_download_busy => 'A dictionary download is already running.';
 }
 
 // Path: <root>
@@ -103938,6 +104076,17 @@ class _StringsTr extends _StringsEn {
           required Object done,
           required Object total}) =>
       'Downloading ${name} (${done} / ${total})';
+  @override
+  String get dict_download_hide => 'Run in background';
+  @override
+  String get dict_download_progress_show => 'View progress';
+  @override
+  String get dict_download_cancelled => 'Download cancelled.';
+  @override
+  String get dict_download_import_uncancellable =>
+      'Importing cannot be interrupted';
+  @override
+  String get dict_download_busy => 'A dictionary download is already running.';
 }
 
 // Path: <root>
@@ -111578,6 +111727,17 @@ class _StringsVi extends _StringsEn {
           required Object done,
           required Object total}) =>
       'Downloading ${name} (${done} / ${total})';
+  @override
+  String get dict_download_hide => 'Run in background';
+  @override
+  String get dict_download_progress_show => 'View progress';
+  @override
+  String get dict_download_cancelled => 'Download cancelled.';
+  @override
+  String get dict_download_import_uncancellable =>
+      'Importing cannot be interrupted';
+  @override
+  String get dict_download_busy => 'A dictionary download is already running.';
 }
 
 // Path: <root>
@@ -118668,6 +118828,16 @@ class _StringsZhCn extends _StringsEn {
           required Object done,
           required Object total}) =>
       '正在下载 ${name}（${done} / ${total}）';
+  @override
+  String get dict_download_hide => '后台继续';
+  @override
+  String get dict_download_progress_show => '查看进度';
+  @override
+  String get dict_download_cancelled => '已取消下载。';
+  @override
+  String get dict_download_import_uncancellable => '导入阶段无法中断';
+  @override
+  String get dict_download_busy => '已有词典下载正在进行。';
 }
 
 // Path: <root>
@@ -126103,6 +126273,17 @@ class _StringsZhHk extends _StringsEn {
           required Object done,
           required Object total}) =>
       'Downloading ${name} (${done} / ${total})';
+  @override
+  String get dict_download_hide => 'Run in background';
+  @override
+  String get dict_download_progress_show => 'View progress';
+  @override
+  String get dict_download_cancelled => 'Download cancelled.';
+  @override
+  String get dict_download_import_uncancellable =>
+      'Importing cannot be interrupted';
+  @override
+  String get dict_download_busy => 'A dictionary download is already running.';
 }
 
 /// Flat map(s) containing all translations.
@@ -132897,6 +133078,16 @@ extension on _StringsEn {
                 required Object done,
                 required Object total}) =>
             'Downloading ${name} (${done} / ${total})';
+      case 'dict_download_hide':
+        return 'Run in background';
+      case 'dict_download_progress_show':
+        return 'View progress';
+      case 'dict_download_cancelled':
+        return 'Download cancelled.';
+      case 'dict_download_import_uncancellable':
+        return 'Importing cannot be interrupted';
+      case 'dict_download_busy':
+        return 'A dictionary download is already running.';
       default:
         return null;
     }
@@ -139689,6 +139880,16 @@ extension on _StringsAr {
                 required Object done,
                 required Object total}) =>
             'Downloading ${name} (${done} / ${total})';
+      case 'dict_download_hide':
+        return 'Run in background';
+      case 'dict_download_progress_show':
+        return 'View progress';
+      case 'dict_download_cancelled':
+        return 'Download cancelled.';
+      case 'dict_download_import_uncancellable':
+        return 'Importing cannot be interrupted';
+      case 'dict_download_busy':
+        return 'A dictionary download is already running.';
       default:
         return null;
     }
@@ -146503,6 +146704,16 @@ extension on _StringsDe {
                 required Object done,
                 required Object total}) =>
             'Downloading ${name} (${done} / ${total})';
+      case 'dict_download_hide':
+        return 'Run in background';
+      case 'dict_download_progress_show':
+        return 'View progress';
+      case 'dict_download_cancelled':
+        return 'Download cancelled.';
+      case 'dict_download_import_uncancellable':
+        return 'Importing cannot be interrupted';
+      case 'dict_download_busy':
+        return 'A dictionary download is already running.';
       default:
         return null;
     }
@@ -153316,6 +153527,16 @@ extension on _StringsEs {
                 required Object done,
                 required Object total}) =>
             'Downloading ${name} (${done} / ${total})';
+      case 'dict_download_hide':
+        return 'Run in background';
+      case 'dict_download_progress_show':
+        return 'View progress';
+      case 'dict_download_cancelled':
+        return 'Download cancelled.';
+      case 'dict_download_import_uncancellable':
+        return 'Importing cannot be interrupted';
+      case 'dict_download_busy':
+        return 'A dictionary download is already running.';
       default:
         return null;
     }
@@ -160135,6 +160356,16 @@ extension on _StringsFr {
                 required Object done,
                 required Object total}) =>
             'Downloading ${name} (${done} / ${total})';
+      case 'dict_download_hide':
+        return 'Run in background';
+      case 'dict_download_progress_show':
+        return 'View progress';
+      case 'dict_download_cancelled':
+        return 'Download cancelled.';
+      case 'dict_download_import_uncancellable':
+        return 'Importing cannot be interrupted';
+      case 'dict_download_busy':
+        return 'A dictionary download is already running.';
       default:
         return null;
     }
@@ -166936,6 +167167,16 @@ extension on _StringsId {
                 required Object done,
                 required Object total}) =>
             'Downloading ${name} (${done} / ${total})';
+      case 'dict_download_hide':
+        return 'Run in background';
+      case 'dict_download_progress_show':
+        return 'View progress';
+      case 'dict_download_cancelled':
+        return 'Download cancelled.';
+      case 'dict_download_import_uncancellable':
+        return 'Importing cannot be interrupted';
+      case 'dict_download_busy':
+        return 'A dictionary download is already running.';
       default:
         return null;
     }
@@ -173751,6 +173992,16 @@ extension on _StringsIt {
                 required Object done,
                 required Object total}) =>
             'Downloading ${name} (${done} / ${total})';
+      case 'dict_download_hide':
+        return 'Run in background';
+      case 'dict_download_progress_show':
+        return 'View progress';
+      case 'dict_download_cancelled':
+        return 'Download cancelled.';
+      case 'dict_download_import_uncancellable':
+        return 'Importing cannot be interrupted';
+      case 'dict_download_busy':
+        return 'A dictionary download is already running.';
       default:
         return null;
     }
@@ -180528,6 +180779,16 @@ extension on _StringsJa {
                 required Object done,
                 required Object total}) =>
             'Downloading ${name} (${done} / ${total})';
+      case 'dict_download_hide':
+        return 'Run in background';
+      case 'dict_download_progress_show':
+        return 'View progress';
+      case 'dict_download_cancelled':
+        return 'Download cancelled.';
+      case 'dict_download_import_uncancellable':
+        return 'Importing cannot be interrupted';
+      case 'dict_download_busy':
+        return 'A dictionary download is already running.';
       default:
         return null;
     }
@@ -187309,6 +187570,16 @@ extension on _StringsKo {
                 required Object done,
                 required Object total}) =>
             'Downloading ${name} (${done} / ${total})';
+      case 'dict_download_hide':
+        return 'Run in background';
+      case 'dict_download_progress_show':
+        return 'View progress';
+      case 'dict_download_cancelled':
+        return 'Download cancelled.';
+      case 'dict_download_import_uncancellable':
+        return 'Importing cannot be interrupted';
+      case 'dict_download_busy':
+        return 'A dictionary download is already running.';
       default:
         return null;
     }
@@ -194118,6 +194389,16 @@ extension on _StringsNl {
                 required Object done,
                 required Object total}) =>
             'Downloading ${name} (${done} / ${total})';
+      case 'dict_download_hide':
+        return 'Run in background';
+      case 'dict_download_progress_show':
+        return 'View progress';
+      case 'dict_download_cancelled':
+        return 'Download cancelled.';
+      case 'dict_download_import_uncancellable':
+        return 'Importing cannot be interrupted';
+      case 'dict_download_busy':
+        return 'A dictionary download is already running.';
       default:
         return null;
     }
@@ -200924,6 +201205,16 @@ extension on _StringsPtBr {
                 required Object done,
                 required Object total}) =>
             'Downloading ${name} (${done} / ${total})';
+      case 'dict_download_hide':
+        return 'Run in background';
+      case 'dict_download_progress_show':
+        return 'View progress';
+      case 'dict_download_cancelled':
+        return 'Download cancelled.';
+      case 'dict_download_import_uncancellable':
+        return 'Importing cannot be interrupted';
+      case 'dict_download_busy':
+        return 'A dictionary download is already running.';
       default:
         return null;
     }
@@ -207735,6 +208026,16 @@ extension on _StringsRu {
                 required Object done,
                 required Object total}) =>
             'Downloading ${name} (${done} / ${total})';
+      case 'dict_download_hide':
+        return 'Run in background';
+      case 'dict_download_progress_show':
+        return 'View progress';
+      case 'dict_download_cancelled':
+        return 'Download cancelled.';
+      case 'dict_download_import_uncancellable':
+        return 'Importing cannot be interrupted';
+      case 'dict_download_busy':
+        return 'A dictionary download is already running.';
       default:
         return null;
     }
@@ -214529,6 +214830,16 @@ extension on _StringsTh {
                 required Object done,
                 required Object total}) =>
             'Downloading ${name} (${done} / ${total})';
+      case 'dict_download_hide':
+        return 'Run in background';
+      case 'dict_download_progress_show':
+        return 'View progress';
+      case 'dict_download_cancelled':
+        return 'Download cancelled.';
+      case 'dict_download_import_uncancellable':
+        return 'Importing cannot be interrupted';
+      case 'dict_download_busy':
+        return 'A dictionary download is already running.';
       default:
         return null;
     }
@@ -221332,6 +221643,16 @@ extension on _StringsTr {
                 required Object done,
                 required Object total}) =>
             'Downloading ${name} (${done} / ${total})';
+      case 'dict_download_hide':
+        return 'Run in background';
+      case 'dict_download_progress_show':
+        return 'View progress';
+      case 'dict_download_cancelled':
+        return 'Download cancelled.';
+      case 'dict_download_import_uncancellable':
+        return 'Importing cannot be interrupted';
+      case 'dict_download_busy':
+        return 'A dictionary download is already running.';
       default:
         return null;
     }
@@ -228131,6 +228452,16 @@ extension on _StringsVi {
                 required Object done,
                 required Object total}) =>
             'Downloading ${name} (${done} / ${total})';
+      case 'dict_download_hide':
+        return 'Run in background';
+      case 'dict_download_progress_show':
+        return 'View progress';
+      case 'dict_download_cancelled':
+        return 'Download cancelled.';
+      case 'dict_download_import_uncancellable':
+        return 'Importing cannot be interrupted';
+      case 'dict_download_busy':
+        return 'A dictionary download is already running.';
       default:
         return null;
     }
@@ -234873,6 +235204,16 @@ extension on _StringsZhCn {
                 required Object done,
                 required Object total}) =>
             '正在下载 ${name}（${done} / ${total}）';
+      case 'dict_download_hide':
+        return '后台继续';
+      case 'dict_download_progress_show':
+        return '查看进度';
+      case 'dict_download_cancelled':
+        return '已取消下载。';
+      case 'dict_download_import_uncancellable':
+        return '导入阶段无法中断';
+      case 'dict_download_busy':
+        return '已有词典下载正在进行。';
       default:
         return null;
     }
@@ -241645,6 +241986,16 @@ extension on _StringsZhHk {
                 required Object done,
                 required Object total}) =>
             'Downloading ${name} (${done} / ${total})';
+      case 'dict_download_hide':
+        return 'Run in background';
+      case 'dict_download_progress_show':
+        return 'View progress';
+      case 'dict_download_cancelled':
+        return 'Download cancelled.';
+      case 'dict_download_import_uncancellable':
+        return 'Importing cannot be interrupted';
+      case 'dict_download_busy':
+        return 'A dictionary download is already running.';
       default:
         return null;
     }
