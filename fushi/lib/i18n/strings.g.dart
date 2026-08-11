@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 56508 (3324 per locale)
+/// Strings: 56678 (3334 per locale)
 ///
-/// Built on 2026-08-10 at 19:31 UTC
+/// Built on 2026-08-11 at 10:34 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -1015,7 +1015,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get download_backend_not_configured =>
       'Download backend is not configured yet.';
   String get download_clear_finished => 'Clear finished';
-  String get download_discover_tab => 'Discover';
   String get download_network_proxy_auto => 'Auto';
   String get download_network_proxy_auto_hint =>
       'Applies to AniList, Nyaa, and Jimaku only. Auto uses environment variables, then the enabled system proxy; torrent traffic is unchanged.';
@@ -4475,29 +4474,45 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
           required Object done,
           required Object total}) =>
       'Downloading ${name} (${done} / ${total})';
-  String get download_task_open_location => 'Show in folder';
+  String get video_subtitle_attach_book_missing =>
+      'This video isn\'t in your library, so the subtitle wasn\'t attached';
+  String get dict_download_hide => 'Run in background';
+  String get dict_download_progress_show => 'View progress';
+  String get dict_download_cancelled => 'Download cancelled.';
+  String get dict_download_import_uncancellable =>
+      'Importing cannot be interrupted';
+  String get dict_download_busy => 'A dictionary download is already running.';
+  String get gal_hook_ingame_lookup => 'In-game dictionary lookup';
+  String get gal_hook_ingame_lookup_hint =>
+      'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
+  String get drag_drop_failed =>
+      'Couldn\'t handle the dropped files. Please try again.';
+  String get tag_add_failed => 'Couldn\'t add the tag. Please try again.';
+  String get tag_reorder_failed =>
+      'Couldn\'t save the new tag order. Please try again.';
+  String get download_detail_backend_offline =>
+      'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
+  String get download_detail_content_path_label => 'Content path';
+  String get download_detail_hash_label => 'Info hash';
+  String get download_detail_raw_state_label => 'Backend state';
+  String get download_detail_remaining_label => 'Remaining';
+  String get download_detail_save_path_label => 'Save path';
+  String get download_detail_section_task => 'Task';
+  String get download_detail_task_missing =>
+      'The original download backend is online, but this torrent is no longer present. Live peers and trackers cannot be recovered; persisted task information is shown.';
+  String get download_detail_total_size_label => 'Total size';
+  String download_task_action_failed({required Object error}) =>
+      'The task action failed: ${error}';
   String get download_task_delete => 'Delete task';
+  String download_task_delete_confirm({required Object title}) =>
+      'Delete the download task for ${title}?';
   String get download_task_delete_files => 'Also delete downloaded files';
+  String get download_task_details => 'View details';
   String get download_task_location_missing =>
       'The task file location is unavailable.';
   String get download_task_location_open_failed =>
       'Could not open the file location.';
-  String download_task_delete_confirm({required Object title}) =>
-      'Delete the download task for ${title}?';
-  String download_task_action_failed({required Object error}) =>
-      'The task action failed: ${error}';
-  String get download_task_details => 'View details';
-  String get download_detail_section_task => 'Task';
-  String get download_detail_hash_label => 'Info hash';
-  String get download_detail_total_size_label => 'Total size';
-  String get download_detail_remaining_label => 'Remaining';
-  String get download_detail_save_path_label => 'Save path';
-  String get download_detail_content_path_label => 'Content path';
-  String get download_detail_raw_state_label => 'Backend state';
-  String get download_detail_backend_offline =>
-      'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
-  String get download_detail_task_missing =>
-      'The original download backend is online, but this torrent is no longer present. Live peers and trackers cannot be recovered; persisted task information is shown.';
+  String get download_task_open_location => 'Show in folder';
 }
 
 // Path: <root>
@@ -5999,8 +6014,6 @@ class _StringsAr extends _StringsEn {
       'Download backend is not configured yet.';
   @override
   String get download_clear_finished => 'Clear finished';
-  @override
-  String get download_discover_tab => 'Discover';
   @override
   String get download_network_proxy_auto => 'Auto';
   @override
@@ -12128,11 +12141,67 @@ class _StringsAr extends _StringsEn {
           required Object total}) =>
       'Downloading ${name} (${done} / ${total})';
   @override
-  String get download_task_open_location => 'Show in folder';
+  String get video_subtitle_attach_book_missing =>
+      'This video isn\'t in your library, so the subtitle wasn\'t attached';
+  @override
+  String get dict_download_hide => 'Run in background';
+  @override
+  String get dict_download_progress_show => 'View progress';
+  @override
+  String get dict_download_cancelled => 'Download cancelled.';
+  @override
+  String get dict_download_import_uncancellable =>
+      'Importing cannot be interrupted';
+  @override
+  String get dict_download_busy => 'A dictionary download is already running.';
+  @override
+  String get gal_hook_ingame_lookup => 'In-game dictionary lookup';
+  @override
+  String get gal_hook_ingame_lookup_hint =>
+      'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
+  @override
+  String download_subscription_start_episode({required Object episode}) =>
+      '从第 ${episode} 集开始';
+  @override
+  String get drag_drop_failed =>
+      'Couldn\'t handle the dropped files. Please try again.';
+  @override
+  String get tag_add_failed => 'Couldn\'t add the tag. Please try again.';
+  @override
+  String get tag_reorder_failed =>
+      'Couldn\'t save the new tag order. Please try again.';
+  @override
+  String get download_detail_backend_offline =>
+      'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
+  @override
+  String get download_detail_content_path_label => 'Content path';
+  @override
+  String get download_detail_hash_label => 'Info hash';
+  @override
+  String get download_detail_raw_state_label => 'Backend state';
+  @override
+  String get download_detail_remaining_label => 'Remaining';
+  @override
+  String get download_detail_save_path_label => 'Save path';
+  @override
+  String get download_detail_section_task => 'Task';
+  @override
+  String get download_detail_task_missing =>
+      'The original download backend is online, but this torrent is no longer present. Live peers and trackers cannot be recovered; persisted task information is shown.';
+  @override
+  String get download_detail_total_size_label => 'Total size';
+  @override
+  String download_task_action_failed({required Object error}) =>
+      'The task action failed: ${error}';
   @override
   String get download_task_delete => 'Delete task';
   @override
+  String download_task_delete_confirm({required Object title}) =>
+      'Delete the download task for ${title}?';
+  @override
   String get download_task_delete_files => 'Also delete downloaded files';
+  @override
+  String get download_task_details => 'View details';
   @override
   String get download_task_location_missing =>
       'The task file location is unavailable.';
@@ -12140,36 +12209,7 @@ class _StringsAr extends _StringsEn {
   String get download_task_location_open_failed =>
       'Could not open the file location.';
   @override
-  String download_subscription_start_episode({required Object episode}) =>
-      '从第 ${episode} 集开始';
-  @override
-  String download_task_delete_confirm({required Object title}) =>
-      'Delete the download task for ${title}?';
-  @override
-  String download_task_action_failed({required Object error}) =>
-      'The task action failed: ${error}';
-  @override
-  String get download_task_details => 'View details';
-  @override
-  String get download_detail_section_task => 'Task';
-  @override
-  String get download_detail_hash_label => 'Info hash';
-  @override
-  String get download_detail_total_size_label => 'Total size';
-  @override
-  String get download_detail_remaining_label => 'Remaining';
-  @override
-  String get download_detail_save_path_label => 'Save path';
-  @override
-  String get download_detail_content_path_label => 'Content path';
-  @override
-  String get download_detail_raw_state_label => 'Backend state';
-  @override
-  String get download_detail_backend_offline =>
-      'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
-  @override
-  String get download_detail_task_missing =>
-      'The original download backend is online, but this torrent is no longer present. Live peers and trackers cannot be recovered; persisted task information is shown.';
+  String get download_task_open_location => 'Show in folder';
 }
 
 // Path: <root>
@@ -13689,8 +13729,6 @@ class _StringsDe extends _StringsEn {
       'Download backend is not configured yet.';
   @override
   String get download_clear_finished => 'Clear finished';
-  @override
-  String get download_discover_tab => 'Discover';
   @override
   String get download_network_proxy_auto => 'Auto';
   @override
@@ -19867,11 +19905,67 @@ class _StringsDe extends _StringsEn {
           required Object total}) =>
       'Downloading ${name} (${done} / ${total})';
   @override
-  String get download_task_open_location => 'Show in folder';
+  String get video_subtitle_attach_book_missing =>
+      'This video isn\'t in your library, so the subtitle wasn\'t attached';
+  @override
+  String get dict_download_hide => 'Run in background';
+  @override
+  String get dict_download_progress_show => 'View progress';
+  @override
+  String get dict_download_cancelled => 'Download cancelled.';
+  @override
+  String get dict_download_import_uncancellable =>
+      'Importing cannot be interrupted';
+  @override
+  String get dict_download_busy => 'A dictionary download is already running.';
+  @override
+  String get gal_hook_ingame_lookup => 'In-game dictionary lookup';
+  @override
+  String get gal_hook_ingame_lookup_hint =>
+      'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
+  @override
+  String download_subscription_start_episode({required Object episode}) =>
+      '从第 ${episode} 集开始';
+  @override
+  String get drag_drop_failed =>
+      'Couldn\'t handle the dropped files. Please try again.';
+  @override
+  String get tag_add_failed => 'Couldn\'t add the tag. Please try again.';
+  @override
+  String get tag_reorder_failed =>
+      'Couldn\'t save the new tag order. Please try again.';
+  @override
+  String get download_detail_backend_offline =>
+      'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
+  @override
+  String get download_detail_content_path_label => 'Content path';
+  @override
+  String get download_detail_hash_label => 'Info hash';
+  @override
+  String get download_detail_raw_state_label => 'Backend state';
+  @override
+  String get download_detail_remaining_label => 'Remaining';
+  @override
+  String get download_detail_save_path_label => 'Save path';
+  @override
+  String get download_detail_section_task => 'Task';
+  @override
+  String get download_detail_task_missing =>
+      'The original download backend is online, but this torrent is no longer present. Live peers and trackers cannot be recovered; persisted task information is shown.';
+  @override
+  String get download_detail_total_size_label => 'Total size';
+  @override
+  String download_task_action_failed({required Object error}) =>
+      'The task action failed: ${error}';
   @override
   String get download_task_delete => 'Delete task';
   @override
+  String download_task_delete_confirm({required Object title}) =>
+      'Delete the download task for ${title}?';
+  @override
   String get download_task_delete_files => 'Also delete downloaded files';
+  @override
+  String get download_task_details => 'View details';
   @override
   String get download_task_location_missing =>
       'The task file location is unavailable.';
@@ -19879,36 +19973,7 @@ class _StringsDe extends _StringsEn {
   String get download_task_location_open_failed =>
       'Could not open the file location.';
   @override
-  String download_subscription_start_episode({required Object episode}) =>
-      '从第 ${episode} 集开始';
-  @override
-  String download_task_delete_confirm({required Object title}) =>
-      'Delete the download task for ${title}?';
-  @override
-  String download_task_action_failed({required Object error}) =>
-      'The task action failed: ${error}';
-  @override
-  String get download_task_details => 'View details';
-  @override
-  String get download_detail_section_task => 'Task';
-  @override
-  String get download_detail_hash_label => 'Info hash';
-  @override
-  String get download_detail_total_size_label => 'Total size';
-  @override
-  String get download_detail_remaining_label => 'Remaining';
-  @override
-  String get download_detail_save_path_label => 'Save path';
-  @override
-  String get download_detail_content_path_label => 'Content path';
-  @override
-  String get download_detail_raw_state_label => 'Backend state';
-  @override
-  String get download_detail_backend_offline =>
-      'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
-  @override
-  String get download_detail_task_missing =>
-      'The original download backend is online, but this torrent is no longer present. Live peers and trackers cannot be recovered; persisted task information is shown.';
+  String get download_task_open_location => 'Show in folder';
 }
 
 // Path: <root>
@@ -21428,8 +21493,6 @@ class _StringsEs extends _StringsEn {
       'Download backend is not configured yet.';
   @override
   String get download_clear_finished => 'Clear finished';
-  @override
-  String get download_discover_tab => 'Discover';
   @override
   String get download_network_proxy_auto => 'Auto';
   @override
@@ -27622,11 +27685,67 @@ class _StringsEs extends _StringsEn {
           required Object total}) =>
       'Downloading ${name} (${done} / ${total})';
   @override
-  String get download_task_open_location => 'Show in folder';
+  String get video_subtitle_attach_book_missing =>
+      'This video isn\'t in your library, so the subtitle wasn\'t attached';
+  @override
+  String get dict_download_hide => 'Run in background';
+  @override
+  String get dict_download_progress_show => 'View progress';
+  @override
+  String get dict_download_cancelled => 'Download cancelled.';
+  @override
+  String get dict_download_import_uncancellable =>
+      'Importing cannot be interrupted';
+  @override
+  String get dict_download_busy => 'A dictionary download is already running.';
+  @override
+  String get gal_hook_ingame_lookup => 'In-game dictionary lookup';
+  @override
+  String get gal_hook_ingame_lookup_hint =>
+      'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
+  @override
+  String download_subscription_start_episode({required Object episode}) =>
+      '从第 ${episode} 集开始';
+  @override
+  String get drag_drop_failed =>
+      'Couldn\'t handle the dropped files. Please try again.';
+  @override
+  String get tag_add_failed => 'Couldn\'t add the tag. Please try again.';
+  @override
+  String get tag_reorder_failed =>
+      'Couldn\'t save the new tag order. Please try again.';
+  @override
+  String get download_detail_backend_offline =>
+      'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
+  @override
+  String get download_detail_content_path_label => 'Content path';
+  @override
+  String get download_detail_hash_label => 'Info hash';
+  @override
+  String get download_detail_raw_state_label => 'Backend state';
+  @override
+  String get download_detail_remaining_label => 'Remaining';
+  @override
+  String get download_detail_save_path_label => 'Save path';
+  @override
+  String get download_detail_section_task => 'Task';
+  @override
+  String get download_detail_task_missing =>
+      'The original download backend is online, but this torrent is no longer present. Live peers and trackers cannot be recovered; persisted task information is shown.';
+  @override
+  String get download_detail_total_size_label => 'Total size';
+  @override
+  String download_task_action_failed({required Object error}) =>
+      'The task action failed: ${error}';
   @override
   String get download_task_delete => 'Delete task';
   @override
+  String download_task_delete_confirm({required Object title}) =>
+      'Delete the download task for ${title}?';
+  @override
   String get download_task_delete_files => 'Also delete downloaded files';
+  @override
+  String get download_task_details => 'View details';
   @override
   String get download_task_location_missing =>
       'The task file location is unavailable.';
@@ -27634,36 +27753,7 @@ class _StringsEs extends _StringsEn {
   String get download_task_location_open_failed =>
       'Could not open the file location.';
   @override
-  String download_subscription_start_episode({required Object episode}) =>
-      '从第 ${episode} 集开始';
-  @override
-  String download_task_delete_confirm({required Object title}) =>
-      'Delete the download task for ${title}?';
-  @override
-  String download_task_action_failed({required Object error}) =>
-      'The task action failed: ${error}';
-  @override
-  String get download_task_details => 'View details';
-  @override
-  String get download_detail_section_task => 'Task';
-  @override
-  String get download_detail_hash_label => 'Info hash';
-  @override
-  String get download_detail_total_size_label => 'Total size';
-  @override
-  String get download_detail_remaining_label => 'Remaining';
-  @override
-  String get download_detail_save_path_label => 'Save path';
-  @override
-  String get download_detail_content_path_label => 'Content path';
-  @override
-  String get download_detail_raw_state_label => 'Backend state';
-  @override
-  String get download_detail_backend_offline =>
-      'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
-  @override
-  String get download_detail_task_missing =>
-      'The original download backend is online, but this torrent is no longer present. Live peers and trackers cannot be recovered; persisted task information is shown.';
+  String get download_task_open_location => 'Show in folder';
 }
 
 // Path: <root>
@@ -29193,8 +29283,6 @@ class _StringsFr extends _StringsEn {
       'Download backend is not configured yet.';
   @override
   String get download_clear_finished => 'Clear finished';
-  @override
-  String get download_discover_tab => 'Discover';
   @override
   String get download_network_proxy_auto => 'Auto';
   @override
@@ -35389,11 +35477,67 @@ class _StringsFr extends _StringsEn {
           required Object total}) =>
       'Downloading ${name} (${done} / ${total})';
   @override
-  String get download_task_open_location => 'Show in folder';
+  String get video_subtitle_attach_book_missing =>
+      'This video isn\'t in your library, so the subtitle wasn\'t attached';
+  @override
+  String get dict_download_hide => 'Run in background';
+  @override
+  String get dict_download_progress_show => 'View progress';
+  @override
+  String get dict_download_cancelled => 'Download cancelled.';
+  @override
+  String get dict_download_import_uncancellable =>
+      'Importing cannot be interrupted';
+  @override
+  String get dict_download_busy => 'A dictionary download is already running.';
+  @override
+  String get gal_hook_ingame_lookup => 'In-game dictionary lookup';
+  @override
+  String get gal_hook_ingame_lookup_hint =>
+      'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
+  @override
+  String download_subscription_start_episode({required Object episode}) =>
+      '从第 ${episode} 集开始';
+  @override
+  String get drag_drop_failed =>
+      'Couldn\'t handle the dropped files. Please try again.';
+  @override
+  String get tag_add_failed => 'Couldn\'t add the tag. Please try again.';
+  @override
+  String get tag_reorder_failed =>
+      'Couldn\'t save the new tag order. Please try again.';
+  @override
+  String get download_detail_backend_offline =>
+      'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
+  @override
+  String get download_detail_content_path_label => 'Content path';
+  @override
+  String get download_detail_hash_label => 'Info hash';
+  @override
+  String get download_detail_raw_state_label => 'Backend state';
+  @override
+  String get download_detail_remaining_label => 'Remaining';
+  @override
+  String get download_detail_save_path_label => 'Save path';
+  @override
+  String get download_detail_section_task => 'Task';
+  @override
+  String get download_detail_task_missing =>
+      'The original download backend is online, but this torrent is no longer present. Live peers and trackers cannot be recovered; persisted task information is shown.';
+  @override
+  String get download_detail_total_size_label => 'Total size';
+  @override
+  String download_task_action_failed({required Object error}) =>
+      'The task action failed: ${error}';
   @override
   String get download_task_delete => 'Delete task';
   @override
+  String download_task_delete_confirm({required Object title}) =>
+      'Delete the download task for ${title}?';
+  @override
   String get download_task_delete_files => 'Also delete downloaded files';
+  @override
+  String get download_task_details => 'View details';
   @override
   String get download_task_location_missing =>
       'The task file location is unavailable.';
@@ -35401,36 +35545,7 @@ class _StringsFr extends _StringsEn {
   String get download_task_location_open_failed =>
       'Could not open the file location.';
   @override
-  String download_subscription_start_episode({required Object episode}) =>
-      '从第 ${episode} 集开始';
-  @override
-  String download_task_delete_confirm({required Object title}) =>
-      'Delete the download task for ${title}?';
-  @override
-  String download_task_action_failed({required Object error}) =>
-      'The task action failed: ${error}';
-  @override
-  String get download_task_details => 'View details';
-  @override
-  String get download_detail_section_task => 'Task';
-  @override
-  String get download_detail_hash_label => 'Info hash';
-  @override
-  String get download_detail_total_size_label => 'Total size';
-  @override
-  String get download_detail_remaining_label => 'Remaining';
-  @override
-  String get download_detail_save_path_label => 'Save path';
-  @override
-  String get download_detail_content_path_label => 'Content path';
-  @override
-  String get download_detail_raw_state_label => 'Backend state';
-  @override
-  String get download_detail_backend_offline =>
-      'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
-  @override
-  String get download_detail_task_missing =>
-      'The original download backend is online, but this torrent is no longer present. Live peers and trackers cannot be recovered; persisted task information is shown.';
+  String get download_task_open_location => 'Show in folder';
 }
 
 // Path: <root>
@@ -36932,8 +37047,6 @@ class _StringsId extends _StringsEn {
       'Download backend is not configured yet.';
   @override
   String get download_clear_finished => 'Clear finished';
-  @override
-  String get download_discover_tab => 'Discover';
   @override
   String get download_network_proxy_auto => 'Auto';
   @override
@@ -43084,11 +43197,67 @@ class _StringsId extends _StringsEn {
           required Object total}) =>
       'Downloading ${name} (${done} / ${total})';
   @override
-  String get download_task_open_location => 'Show in folder';
+  String get video_subtitle_attach_book_missing =>
+      'This video isn\'t in your library, so the subtitle wasn\'t attached';
+  @override
+  String get dict_download_hide => 'Run in background';
+  @override
+  String get dict_download_progress_show => 'View progress';
+  @override
+  String get dict_download_cancelled => 'Download cancelled.';
+  @override
+  String get dict_download_import_uncancellable =>
+      'Importing cannot be interrupted';
+  @override
+  String get dict_download_busy => 'A dictionary download is already running.';
+  @override
+  String get gal_hook_ingame_lookup => 'In-game dictionary lookup';
+  @override
+  String get gal_hook_ingame_lookup_hint =>
+      'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
+  @override
+  String download_subscription_start_episode({required Object episode}) =>
+      '从第 ${episode} 集开始';
+  @override
+  String get drag_drop_failed =>
+      'Couldn\'t handle the dropped files. Please try again.';
+  @override
+  String get tag_add_failed => 'Couldn\'t add the tag. Please try again.';
+  @override
+  String get tag_reorder_failed =>
+      'Couldn\'t save the new tag order. Please try again.';
+  @override
+  String get download_detail_backend_offline =>
+      'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
+  @override
+  String get download_detail_content_path_label => 'Content path';
+  @override
+  String get download_detail_hash_label => 'Info hash';
+  @override
+  String get download_detail_raw_state_label => 'Backend state';
+  @override
+  String get download_detail_remaining_label => 'Remaining';
+  @override
+  String get download_detail_save_path_label => 'Save path';
+  @override
+  String get download_detail_section_task => 'Task';
+  @override
+  String get download_detail_task_missing =>
+      'The original download backend is online, but this torrent is no longer present. Live peers and trackers cannot be recovered; persisted task information is shown.';
+  @override
+  String get download_detail_total_size_label => 'Total size';
+  @override
+  String download_task_action_failed({required Object error}) =>
+      'The task action failed: ${error}';
   @override
   String get download_task_delete => 'Delete task';
   @override
+  String download_task_delete_confirm({required Object title}) =>
+      'Delete the download task for ${title}?';
+  @override
   String get download_task_delete_files => 'Also delete downloaded files';
+  @override
+  String get download_task_details => 'View details';
   @override
   String get download_task_location_missing =>
       'The task file location is unavailable.';
@@ -43096,36 +43265,7 @@ class _StringsId extends _StringsEn {
   String get download_task_location_open_failed =>
       'Could not open the file location.';
   @override
-  String download_subscription_start_episode({required Object episode}) =>
-      '从第 ${episode} 集开始';
-  @override
-  String download_task_delete_confirm({required Object title}) =>
-      'Delete the download task for ${title}?';
-  @override
-  String download_task_action_failed({required Object error}) =>
-      'The task action failed: ${error}';
-  @override
-  String get download_task_details => 'View details';
-  @override
-  String get download_detail_section_task => 'Task';
-  @override
-  String get download_detail_hash_label => 'Info hash';
-  @override
-  String get download_detail_total_size_label => 'Total size';
-  @override
-  String get download_detail_remaining_label => 'Remaining';
-  @override
-  String get download_detail_save_path_label => 'Save path';
-  @override
-  String get download_detail_content_path_label => 'Content path';
-  @override
-  String get download_detail_raw_state_label => 'Backend state';
-  @override
-  String get download_detail_backend_offline =>
-      'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
-  @override
-  String get download_detail_task_missing =>
-      'The original download backend is online, but this torrent is no longer present. Live peers and trackers cannot be recovered; persisted task information is shown.';
+  String get download_task_open_location => 'Show in folder';
 }
 
 // Path: <root>
@@ -44640,8 +44780,6 @@ class _StringsIt extends _StringsEn {
       'Download backend is not configured yet.';
   @override
   String get download_clear_finished => 'Clear finished';
-  @override
-  String get download_discover_tab => 'Discover';
   @override
   String get download_network_proxy_auto => 'Auto';
   @override
@@ -50825,11 +50963,67 @@ class _StringsIt extends _StringsEn {
           required Object total}) =>
       'Downloading ${name} (${done} / ${total})';
   @override
-  String get download_task_open_location => 'Show in folder';
+  String get video_subtitle_attach_book_missing =>
+      'This video isn\'t in your library, so the subtitle wasn\'t attached';
+  @override
+  String get dict_download_hide => 'Run in background';
+  @override
+  String get dict_download_progress_show => 'View progress';
+  @override
+  String get dict_download_cancelled => 'Download cancelled.';
+  @override
+  String get dict_download_import_uncancellable =>
+      'Importing cannot be interrupted';
+  @override
+  String get dict_download_busy => 'A dictionary download is already running.';
+  @override
+  String get gal_hook_ingame_lookup => 'In-game dictionary lookup';
+  @override
+  String get gal_hook_ingame_lookup_hint =>
+      'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
+  @override
+  String download_subscription_start_episode({required Object episode}) =>
+      '从第 ${episode} 集开始';
+  @override
+  String get drag_drop_failed =>
+      'Couldn\'t handle the dropped files. Please try again.';
+  @override
+  String get tag_add_failed => 'Couldn\'t add the tag. Please try again.';
+  @override
+  String get tag_reorder_failed =>
+      'Couldn\'t save the new tag order. Please try again.';
+  @override
+  String get download_detail_backend_offline =>
+      'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
+  @override
+  String get download_detail_content_path_label => 'Content path';
+  @override
+  String get download_detail_hash_label => 'Info hash';
+  @override
+  String get download_detail_raw_state_label => 'Backend state';
+  @override
+  String get download_detail_remaining_label => 'Remaining';
+  @override
+  String get download_detail_save_path_label => 'Save path';
+  @override
+  String get download_detail_section_task => 'Task';
+  @override
+  String get download_detail_task_missing =>
+      'The original download backend is online, but this torrent is no longer present. Live peers and trackers cannot be recovered; persisted task information is shown.';
+  @override
+  String get download_detail_total_size_label => 'Total size';
+  @override
+  String download_task_action_failed({required Object error}) =>
+      'The task action failed: ${error}';
   @override
   String get download_task_delete => 'Delete task';
   @override
+  String download_task_delete_confirm({required Object title}) =>
+      'Delete the download task for ${title}?';
+  @override
   String get download_task_delete_files => 'Also delete downloaded files';
+  @override
+  String get download_task_details => 'View details';
   @override
   String get download_task_location_missing =>
       'The task file location is unavailable.';
@@ -50837,36 +51031,7 @@ class _StringsIt extends _StringsEn {
   String get download_task_location_open_failed =>
       'Could not open the file location.';
   @override
-  String download_subscription_start_episode({required Object episode}) =>
-      '从第 ${episode} 集开始';
-  @override
-  String download_task_delete_confirm({required Object title}) =>
-      'Delete the download task for ${title}?';
-  @override
-  String download_task_action_failed({required Object error}) =>
-      'The task action failed: ${error}';
-  @override
-  String get download_task_details => 'View details';
-  @override
-  String get download_detail_section_task => 'Task';
-  @override
-  String get download_detail_hash_label => 'Info hash';
-  @override
-  String get download_detail_total_size_label => 'Total size';
-  @override
-  String get download_detail_remaining_label => 'Remaining';
-  @override
-  String get download_detail_save_path_label => 'Save path';
-  @override
-  String get download_detail_content_path_label => 'Content path';
-  @override
-  String get download_detail_raw_state_label => 'Backend state';
-  @override
-  String get download_detail_backend_offline =>
-      'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
-  @override
-  String get download_detail_task_missing =>
-      'The original download backend is online, but this torrent is no longer present. Live peers and trackers cannot be recovered; persisted task information is shown.';
+  String get download_task_open_location => 'Show in folder';
 }
 
 // Path: <root>
@@ -52345,8 +52510,6 @@ class _StringsJa extends _StringsEn {
       'Download backend is not configured yet.';
   @override
   String get download_clear_finished => 'Clear finished';
-  @override
-  String get download_discover_tab => 'Discover';
   @override
   String get download_network_proxy_auto => 'Auto';
   @override
@@ -58380,11 +58543,67 @@ class _StringsJa extends _StringsEn {
           required Object total}) =>
       'Downloading ${name} (${done} / ${total})';
   @override
-  String get download_task_open_location => 'Show in folder';
+  String get video_subtitle_attach_book_missing =>
+      'This video isn\'t in your library, so the subtitle wasn\'t attached';
+  @override
+  String get dict_download_hide => 'Run in background';
+  @override
+  String get dict_download_progress_show => 'View progress';
+  @override
+  String get dict_download_cancelled => 'Download cancelled.';
+  @override
+  String get dict_download_import_uncancellable =>
+      'Importing cannot be interrupted';
+  @override
+  String get dict_download_busy => 'A dictionary download is already running.';
+  @override
+  String get gal_hook_ingame_lookup => 'In-game dictionary lookup';
+  @override
+  String get gal_hook_ingame_lookup_hint =>
+      'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
+  @override
+  String download_subscription_start_episode({required Object episode}) =>
+      '从第 ${episode} 集开始';
+  @override
+  String get drag_drop_failed =>
+      'Couldn\'t handle the dropped files. Please try again.';
+  @override
+  String get tag_add_failed => 'Couldn\'t add the tag. Please try again.';
+  @override
+  String get tag_reorder_failed =>
+      'Couldn\'t save the new tag order. Please try again.';
+  @override
+  String get download_detail_backend_offline =>
+      'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
+  @override
+  String get download_detail_content_path_label => 'Content path';
+  @override
+  String get download_detail_hash_label => 'Info hash';
+  @override
+  String get download_detail_raw_state_label => 'Backend state';
+  @override
+  String get download_detail_remaining_label => 'Remaining';
+  @override
+  String get download_detail_save_path_label => 'Save path';
+  @override
+  String get download_detail_section_task => 'Task';
+  @override
+  String get download_detail_task_missing =>
+      'The original download backend is online, but this torrent is no longer present. Live peers and trackers cannot be recovered; persisted task information is shown.';
+  @override
+  String get download_detail_total_size_label => 'Total size';
+  @override
+  String download_task_action_failed({required Object error}) =>
+      'The task action failed: ${error}';
   @override
   String get download_task_delete => 'Delete task';
   @override
+  String download_task_delete_confirm({required Object title}) =>
+      'Delete the download task for ${title}?';
+  @override
   String get download_task_delete_files => 'Also delete downloaded files';
+  @override
+  String get download_task_details => 'View details';
   @override
   String get download_task_location_missing =>
       'The task file location is unavailable.';
@@ -58392,36 +58611,7 @@ class _StringsJa extends _StringsEn {
   String get download_task_location_open_failed =>
       'Could not open the file location.';
   @override
-  String download_subscription_start_episode({required Object episode}) =>
-      '从第 ${episode} 集开始';
-  @override
-  String download_task_delete_confirm({required Object title}) =>
-      'Delete the download task for ${title}?';
-  @override
-  String download_task_action_failed({required Object error}) =>
-      'The task action failed: ${error}';
-  @override
-  String get download_task_details => 'View details';
-  @override
-  String get download_detail_section_task => 'Task';
-  @override
-  String get download_detail_hash_label => 'Info hash';
-  @override
-  String get download_detail_total_size_label => 'Total size';
-  @override
-  String get download_detail_remaining_label => 'Remaining';
-  @override
-  String get download_detail_save_path_label => 'Save path';
-  @override
-  String get download_detail_content_path_label => 'Content path';
-  @override
-  String get download_detail_raw_state_label => 'Backend state';
-  @override
-  String get download_detail_backend_offline =>
-      'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
-  @override
-  String get download_detail_task_missing =>
-      'The original download backend is online, but this torrent is no longer present. Live peers and trackers cannot be recovered; persisted task information is shown.';
+  String get download_task_open_location => 'Show in folder';
 }
 
 // Path: <root>
@@ -59900,8 +60090,6 @@ class _StringsKo extends _StringsEn {
       'Download backend is not configured yet.';
   @override
   String get download_clear_finished => 'Clear finished';
-  @override
-  String get download_discover_tab => 'Discover';
   @override
   String get download_network_proxy_auto => 'Auto';
   @override
@@ -65942,11 +66130,67 @@ class _StringsKo extends _StringsEn {
           required Object total}) =>
       'Downloading ${name} (${done} / ${total})';
   @override
-  String get download_task_open_location => 'Show in folder';
+  String get video_subtitle_attach_book_missing =>
+      'This video isn\'t in your library, so the subtitle wasn\'t attached';
+  @override
+  String get dict_download_hide => 'Run in background';
+  @override
+  String get dict_download_progress_show => 'View progress';
+  @override
+  String get dict_download_cancelled => 'Download cancelled.';
+  @override
+  String get dict_download_import_uncancellable =>
+      'Importing cannot be interrupted';
+  @override
+  String get dict_download_busy => 'A dictionary download is already running.';
+  @override
+  String get gal_hook_ingame_lookup => 'In-game dictionary lookup';
+  @override
+  String get gal_hook_ingame_lookup_hint =>
+      'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
+  @override
+  String download_subscription_start_episode({required Object episode}) =>
+      '从第 ${episode} 集开始';
+  @override
+  String get drag_drop_failed =>
+      'Couldn\'t handle the dropped files. Please try again.';
+  @override
+  String get tag_add_failed => 'Couldn\'t add the tag. Please try again.';
+  @override
+  String get tag_reorder_failed =>
+      'Couldn\'t save the new tag order. Please try again.';
+  @override
+  String get download_detail_backend_offline =>
+      'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
+  @override
+  String get download_detail_content_path_label => 'Content path';
+  @override
+  String get download_detail_hash_label => 'Info hash';
+  @override
+  String get download_detail_raw_state_label => 'Backend state';
+  @override
+  String get download_detail_remaining_label => 'Remaining';
+  @override
+  String get download_detail_save_path_label => 'Save path';
+  @override
+  String get download_detail_section_task => 'Task';
+  @override
+  String get download_detail_task_missing =>
+      'The original download backend is online, but this torrent is no longer present. Live peers and trackers cannot be recovered; persisted task information is shown.';
+  @override
+  String get download_detail_total_size_label => 'Total size';
+  @override
+  String download_task_action_failed({required Object error}) =>
+      'The task action failed: ${error}';
   @override
   String get download_task_delete => 'Delete task';
   @override
+  String download_task_delete_confirm({required Object title}) =>
+      'Delete the download task for ${title}?';
+  @override
   String get download_task_delete_files => 'Also delete downloaded files';
+  @override
+  String get download_task_details => 'View details';
   @override
   String get download_task_location_missing =>
       'The task file location is unavailable.';
@@ -65954,36 +66198,7 @@ class _StringsKo extends _StringsEn {
   String get download_task_location_open_failed =>
       'Could not open the file location.';
   @override
-  String download_subscription_start_episode({required Object episode}) =>
-      '从第 ${episode} 集开始';
-  @override
-  String download_task_delete_confirm({required Object title}) =>
-      'Delete the download task for ${title}?';
-  @override
-  String download_task_action_failed({required Object error}) =>
-      'The task action failed: ${error}';
-  @override
-  String get download_task_details => 'View details';
-  @override
-  String get download_detail_section_task => 'Task';
-  @override
-  String get download_detail_hash_label => 'Info hash';
-  @override
-  String get download_detail_total_size_label => 'Total size';
-  @override
-  String get download_detail_remaining_label => 'Remaining';
-  @override
-  String get download_detail_save_path_label => 'Save path';
-  @override
-  String get download_detail_content_path_label => 'Content path';
-  @override
-  String get download_detail_raw_state_label => 'Backend state';
-  @override
-  String get download_detail_backend_offline =>
-      'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
-  @override
-  String get download_detail_task_missing =>
-      'The original download backend is online, but this torrent is no longer present. Live peers and trackers cannot be recovered; persisted task information is shown.';
+  String get download_task_open_location => 'Show in folder';
 }
 
 // Path: <root>
@@ -67496,8 +67711,6 @@ class _StringsNl extends _StringsEn {
       'Download backend is not configured yet.';
   @override
   String get download_clear_finished => 'Clear finished';
-  @override
-  String get download_discover_tab => 'Discover';
   @override
   String get download_network_proxy_auto => 'Auto';
   @override
@@ -73663,11 +73876,67 @@ class _StringsNl extends _StringsEn {
           required Object total}) =>
       'Downloading ${name} (${done} / ${total})';
   @override
-  String get download_task_open_location => 'Show in folder';
+  String get video_subtitle_attach_book_missing =>
+      'This video isn\'t in your library, so the subtitle wasn\'t attached';
+  @override
+  String get dict_download_hide => 'Run in background';
+  @override
+  String get dict_download_progress_show => 'View progress';
+  @override
+  String get dict_download_cancelled => 'Download cancelled.';
+  @override
+  String get dict_download_import_uncancellable =>
+      'Importing cannot be interrupted';
+  @override
+  String get dict_download_busy => 'A dictionary download is already running.';
+  @override
+  String get gal_hook_ingame_lookup => 'In-game dictionary lookup';
+  @override
+  String get gal_hook_ingame_lookup_hint =>
+      'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
+  @override
+  String download_subscription_start_episode({required Object episode}) =>
+      '从第 ${episode} 集开始';
+  @override
+  String get drag_drop_failed =>
+      'Couldn\'t handle the dropped files. Please try again.';
+  @override
+  String get tag_add_failed => 'Couldn\'t add the tag. Please try again.';
+  @override
+  String get tag_reorder_failed =>
+      'Couldn\'t save the new tag order. Please try again.';
+  @override
+  String get download_detail_backend_offline =>
+      'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
+  @override
+  String get download_detail_content_path_label => 'Content path';
+  @override
+  String get download_detail_hash_label => 'Info hash';
+  @override
+  String get download_detail_raw_state_label => 'Backend state';
+  @override
+  String get download_detail_remaining_label => 'Remaining';
+  @override
+  String get download_detail_save_path_label => 'Save path';
+  @override
+  String get download_detail_section_task => 'Task';
+  @override
+  String get download_detail_task_missing =>
+      'The original download backend is online, but this torrent is no longer present. Live peers and trackers cannot be recovered; persisted task information is shown.';
+  @override
+  String get download_detail_total_size_label => 'Total size';
+  @override
+  String download_task_action_failed({required Object error}) =>
+      'The task action failed: ${error}';
   @override
   String get download_task_delete => 'Delete task';
   @override
+  String download_task_delete_confirm({required Object title}) =>
+      'Delete the download task for ${title}?';
+  @override
   String get download_task_delete_files => 'Also delete downloaded files';
+  @override
+  String get download_task_details => 'View details';
   @override
   String get download_task_location_missing =>
       'The task file location is unavailable.';
@@ -73675,36 +73944,7 @@ class _StringsNl extends _StringsEn {
   String get download_task_location_open_failed =>
       'Could not open the file location.';
   @override
-  String download_subscription_start_episode({required Object episode}) =>
-      '从第 ${episode} 集开始';
-  @override
-  String download_task_delete_confirm({required Object title}) =>
-      'Delete the download task for ${title}?';
-  @override
-  String download_task_action_failed({required Object error}) =>
-      'The task action failed: ${error}';
-  @override
-  String get download_task_details => 'View details';
-  @override
-  String get download_detail_section_task => 'Task';
-  @override
-  String get download_detail_hash_label => 'Info hash';
-  @override
-  String get download_detail_total_size_label => 'Total size';
-  @override
-  String get download_detail_remaining_label => 'Remaining';
-  @override
-  String get download_detail_save_path_label => 'Save path';
-  @override
-  String get download_detail_content_path_label => 'Content path';
-  @override
-  String get download_detail_raw_state_label => 'Backend state';
-  @override
-  String get download_detail_backend_offline =>
-      'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
-  @override
-  String get download_detail_task_missing =>
-      'The original download backend is online, but this torrent is no longer present. Live peers and trackers cannot be recovered; persisted task information is shown.';
+  String get download_task_open_location => 'Show in folder';
 }
 
 // Path: <root>
@@ -75222,8 +75462,6 @@ class _StringsPtBr extends _StringsEn {
       'Download backend is not configured yet.';
   @override
   String get download_clear_finished => 'Clear finished';
-  @override
-  String get download_discover_tab => 'Discover';
   @override
   String get download_network_proxy_auto => 'Auto';
   @override
@@ -81396,11 +81634,67 @@ class _StringsPtBr extends _StringsEn {
           required Object total}) =>
       'Downloading ${name} (${done} / ${total})';
   @override
-  String get download_task_open_location => 'Show in folder';
+  String get video_subtitle_attach_book_missing =>
+      'This video isn\'t in your library, so the subtitle wasn\'t attached';
+  @override
+  String get dict_download_hide => 'Run in background';
+  @override
+  String get dict_download_progress_show => 'View progress';
+  @override
+  String get dict_download_cancelled => 'Download cancelled.';
+  @override
+  String get dict_download_import_uncancellable =>
+      'Importing cannot be interrupted';
+  @override
+  String get dict_download_busy => 'A dictionary download is already running.';
+  @override
+  String get gal_hook_ingame_lookup => 'In-game dictionary lookup';
+  @override
+  String get gal_hook_ingame_lookup_hint =>
+      'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
+  @override
+  String download_subscription_start_episode({required Object episode}) =>
+      '从第 ${episode} 集开始';
+  @override
+  String get drag_drop_failed =>
+      'Couldn\'t handle the dropped files. Please try again.';
+  @override
+  String get tag_add_failed => 'Couldn\'t add the tag. Please try again.';
+  @override
+  String get tag_reorder_failed =>
+      'Couldn\'t save the new tag order. Please try again.';
+  @override
+  String get download_detail_backend_offline =>
+      'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
+  @override
+  String get download_detail_content_path_label => 'Content path';
+  @override
+  String get download_detail_hash_label => 'Info hash';
+  @override
+  String get download_detail_raw_state_label => 'Backend state';
+  @override
+  String get download_detail_remaining_label => 'Remaining';
+  @override
+  String get download_detail_save_path_label => 'Save path';
+  @override
+  String get download_detail_section_task => 'Task';
+  @override
+  String get download_detail_task_missing =>
+      'The original download backend is online, but this torrent is no longer present. Live peers and trackers cannot be recovered; persisted task information is shown.';
+  @override
+  String get download_detail_total_size_label => 'Total size';
+  @override
+  String download_task_action_failed({required Object error}) =>
+      'The task action failed: ${error}';
   @override
   String get download_task_delete => 'Delete task';
   @override
+  String download_task_delete_confirm({required Object title}) =>
+      'Delete the download task for ${title}?';
+  @override
   String get download_task_delete_files => 'Also delete downloaded files';
+  @override
+  String get download_task_details => 'View details';
   @override
   String get download_task_location_missing =>
       'The task file location is unavailable.';
@@ -81408,36 +81702,7 @@ class _StringsPtBr extends _StringsEn {
   String get download_task_location_open_failed =>
       'Could not open the file location.';
   @override
-  String download_subscription_start_episode({required Object episode}) =>
-      '从第 ${episode} 集开始';
-  @override
-  String download_task_delete_confirm({required Object title}) =>
-      'Delete the download task for ${title}?';
-  @override
-  String download_task_action_failed({required Object error}) =>
-      'The task action failed: ${error}';
-  @override
-  String get download_task_details => 'View details';
-  @override
-  String get download_detail_section_task => 'Task';
-  @override
-  String get download_detail_hash_label => 'Info hash';
-  @override
-  String get download_detail_total_size_label => 'Total size';
-  @override
-  String get download_detail_remaining_label => 'Remaining';
-  @override
-  String get download_detail_save_path_label => 'Save path';
-  @override
-  String get download_detail_content_path_label => 'Content path';
-  @override
-  String get download_detail_raw_state_label => 'Backend state';
-  @override
-  String get download_detail_backend_offline =>
-      'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
-  @override
-  String get download_detail_task_missing =>
-      'The original download backend is online, but this torrent is no longer present. Live peers and trackers cannot be recovered; persisted task information is shown.';
+  String get download_task_open_location => 'Show in folder';
 }
 
 // Path: <root>
@@ -82947,8 +83212,6 @@ class _StringsRu extends _StringsEn {
       'Download backend is not configured yet.';
   @override
   String get download_clear_finished => 'Clear finished';
-  @override
-  String get download_discover_tab => 'Discover';
   @override
   String get download_network_proxy_auto => 'Auto';
   @override
@@ -89115,11 +89378,67 @@ class _StringsRu extends _StringsEn {
           required Object total}) =>
       'Downloading ${name} (${done} / ${total})';
   @override
-  String get download_task_open_location => 'Show in folder';
+  String get video_subtitle_attach_book_missing =>
+      'This video isn\'t in your library, so the subtitle wasn\'t attached';
+  @override
+  String get dict_download_hide => 'Run in background';
+  @override
+  String get dict_download_progress_show => 'View progress';
+  @override
+  String get dict_download_cancelled => 'Download cancelled.';
+  @override
+  String get dict_download_import_uncancellable =>
+      'Importing cannot be interrupted';
+  @override
+  String get dict_download_busy => 'A dictionary download is already running.';
+  @override
+  String get gal_hook_ingame_lookup => 'In-game dictionary lookup';
+  @override
+  String get gal_hook_ingame_lookup_hint =>
+      'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
+  @override
+  String download_subscription_start_episode({required Object episode}) =>
+      '从第 ${episode} 集开始';
+  @override
+  String get drag_drop_failed =>
+      'Couldn\'t handle the dropped files. Please try again.';
+  @override
+  String get tag_add_failed => 'Couldn\'t add the tag. Please try again.';
+  @override
+  String get tag_reorder_failed =>
+      'Couldn\'t save the new tag order. Please try again.';
+  @override
+  String get download_detail_backend_offline =>
+      'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
+  @override
+  String get download_detail_content_path_label => 'Content path';
+  @override
+  String get download_detail_hash_label => 'Info hash';
+  @override
+  String get download_detail_raw_state_label => 'Backend state';
+  @override
+  String get download_detail_remaining_label => 'Remaining';
+  @override
+  String get download_detail_save_path_label => 'Save path';
+  @override
+  String get download_detail_section_task => 'Task';
+  @override
+  String get download_detail_task_missing =>
+      'The original download backend is online, but this torrent is no longer present. Live peers and trackers cannot be recovered; persisted task information is shown.';
+  @override
+  String get download_detail_total_size_label => 'Total size';
+  @override
+  String download_task_action_failed({required Object error}) =>
+      'The task action failed: ${error}';
   @override
   String get download_task_delete => 'Delete task';
   @override
+  String download_task_delete_confirm({required Object title}) =>
+      'Delete the download task for ${title}?';
+  @override
   String get download_task_delete_files => 'Also delete downloaded files';
+  @override
+  String get download_task_details => 'View details';
   @override
   String get download_task_location_missing =>
       'The task file location is unavailable.';
@@ -89127,36 +89446,7 @@ class _StringsRu extends _StringsEn {
   String get download_task_location_open_failed =>
       'Could not open the file location.';
   @override
-  String download_subscription_start_episode({required Object episode}) =>
-      '从第 ${episode} 集开始';
-  @override
-  String download_task_delete_confirm({required Object title}) =>
-      'Delete the download task for ${title}?';
-  @override
-  String download_task_action_failed({required Object error}) =>
-      'The task action failed: ${error}';
-  @override
-  String get download_task_details => 'View details';
-  @override
-  String get download_detail_section_task => 'Task';
-  @override
-  String get download_detail_hash_label => 'Info hash';
-  @override
-  String get download_detail_total_size_label => 'Total size';
-  @override
-  String get download_detail_remaining_label => 'Remaining';
-  @override
-  String get download_detail_save_path_label => 'Save path';
-  @override
-  String get download_detail_content_path_label => 'Content path';
-  @override
-  String get download_detail_raw_state_label => 'Backend state';
-  @override
-  String get download_detail_backend_offline =>
-      'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
-  @override
-  String get download_detail_task_missing =>
-      'The original download backend is online, but this torrent is no longer present. Live peers and trackers cannot be recovered; persisted task information is shown.';
+  String get download_task_open_location => 'Show in folder';
 }
 
 // Path: <root>
@@ -90653,8 +90943,6 @@ class _StringsTh extends _StringsEn {
       'Download backend is not configured yet.';
   @override
   String get download_clear_finished => 'Clear finished';
-  @override
-  String get download_discover_tab => 'Discover';
   @override
   String get download_network_proxy_auto => 'Auto';
   @override
@@ -96782,11 +97070,67 @@ class _StringsTh extends _StringsEn {
           required Object total}) =>
       'Downloading ${name} (${done} / ${total})';
   @override
-  String get download_task_open_location => 'Show in folder';
+  String get video_subtitle_attach_book_missing =>
+      'This video isn\'t in your library, so the subtitle wasn\'t attached';
+  @override
+  String get dict_download_hide => 'Run in background';
+  @override
+  String get dict_download_progress_show => 'View progress';
+  @override
+  String get dict_download_cancelled => 'Download cancelled.';
+  @override
+  String get dict_download_import_uncancellable =>
+      'Importing cannot be interrupted';
+  @override
+  String get dict_download_busy => 'A dictionary download is already running.';
+  @override
+  String get gal_hook_ingame_lookup => 'In-game dictionary lookup';
+  @override
+  String get gal_hook_ingame_lookup_hint =>
+      'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
+  @override
+  String download_subscription_start_episode({required Object episode}) =>
+      '从第 ${episode} 集开始';
+  @override
+  String get drag_drop_failed =>
+      'Couldn\'t handle the dropped files. Please try again.';
+  @override
+  String get tag_add_failed => 'Couldn\'t add the tag. Please try again.';
+  @override
+  String get tag_reorder_failed =>
+      'Couldn\'t save the new tag order. Please try again.';
+  @override
+  String get download_detail_backend_offline =>
+      'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
+  @override
+  String get download_detail_content_path_label => 'Content path';
+  @override
+  String get download_detail_hash_label => 'Info hash';
+  @override
+  String get download_detail_raw_state_label => 'Backend state';
+  @override
+  String get download_detail_remaining_label => 'Remaining';
+  @override
+  String get download_detail_save_path_label => 'Save path';
+  @override
+  String get download_detail_section_task => 'Task';
+  @override
+  String get download_detail_task_missing =>
+      'The original download backend is online, but this torrent is no longer present. Live peers and trackers cannot be recovered; persisted task information is shown.';
+  @override
+  String get download_detail_total_size_label => 'Total size';
+  @override
+  String download_task_action_failed({required Object error}) =>
+      'The task action failed: ${error}';
   @override
   String get download_task_delete => 'Delete task';
   @override
+  String download_task_delete_confirm({required Object title}) =>
+      'Delete the download task for ${title}?';
+  @override
   String get download_task_delete_files => 'Also delete downloaded files';
+  @override
+  String get download_task_details => 'View details';
   @override
   String get download_task_location_missing =>
       'The task file location is unavailable.';
@@ -96794,36 +97138,7 @@ class _StringsTh extends _StringsEn {
   String get download_task_location_open_failed =>
       'Could not open the file location.';
   @override
-  String download_subscription_start_episode({required Object episode}) =>
-      '从第 ${episode} 集开始';
-  @override
-  String download_task_delete_confirm({required Object title}) =>
-      'Delete the download task for ${title}?';
-  @override
-  String download_task_action_failed({required Object error}) =>
-      'The task action failed: ${error}';
-  @override
-  String get download_task_details => 'View details';
-  @override
-  String get download_detail_section_task => 'Task';
-  @override
-  String get download_detail_hash_label => 'Info hash';
-  @override
-  String get download_detail_total_size_label => 'Total size';
-  @override
-  String get download_detail_remaining_label => 'Remaining';
-  @override
-  String get download_detail_save_path_label => 'Save path';
-  @override
-  String get download_detail_content_path_label => 'Content path';
-  @override
-  String get download_detail_raw_state_label => 'Backend state';
-  @override
-  String get download_detail_backend_offline =>
-      'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
-  @override
-  String get download_detail_task_missing =>
-      'The original download backend is online, but this torrent is no longer present. Live peers and trackers cannot be recovered; persisted task information is shown.';
+  String get download_task_open_location => 'Show in folder';
 }
 
 // Path: <root>
@@ -98332,8 +98647,6 @@ class _StringsTr extends _StringsEn {
       'Download backend is not configured yet.';
   @override
   String get download_clear_finished => 'Clear finished';
-  @override
-  String get download_discover_tab => 'Discover';
   @override
   String get download_network_proxy_auto => 'Auto';
   @override
@@ -104480,11 +104793,67 @@ class _StringsTr extends _StringsEn {
           required Object total}) =>
       'Downloading ${name} (${done} / ${total})';
   @override
-  String get download_task_open_location => 'Show in folder';
+  String get video_subtitle_attach_book_missing =>
+      'This video isn\'t in your library, so the subtitle wasn\'t attached';
+  @override
+  String get dict_download_hide => 'Run in background';
+  @override
+  String get dict_download_progress_show => 'View progress';
+  @override
+  String get dict_download_cancelled => 'Download cancelled.';
+  @override
+  String get dict_download_import_uncancellable =>
+      'Importing cannot be interrupted';
+  @override
+  String get dict_download_busy => 'A dictionary download is already running.';
+  @override
+  String get gal_hook_ingame_lookup => 'In-game dictionary lookup';
+  @override
+  String get gal_hook_ingame_lookup_hint =>
+      'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
+  @override
+  String download_subscription_start_episode({required Object episode}) =>
+      '从第 ${episode} 集开始';
+  @override
+  String get drag_drop_failed =>
+      'Couldn\'t handle the dropped files. Please try again.';
+  @override
+  String get tag_add_failed => 'Couldn\'t add the tag. Please try again.';
+  @override
+  String get tag_reorder_failed =>
+      'Couldn\'t save the new tag order. Please try again.';
+  @override
+  String get download_detail_backend_offline =>
+      'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
+  @override
+  String get download_detail_content_path_label => 'Content path';
+  @override
+  String get download_detail_hash_label => 'Info hash';
+  @override
+  String get download_detail_raw_state_label => 'Backend state';
+  @override
+  String get download_detail_remaining_label => 'Remaining';
+  @override
+  String get download_detail_save_path_label => 'Save path';
+  @override
+  String get download_detail_section_task => 'Task';
+  @override
+  String get download_detail_task_missing =>
+      'The original download backend is online, but this torrent is no longer present. Live peers and trackers cannot be recovered; persisted task information is shown.';
+  @override
+  String get download_detail_total_size_label => 'Total size';
+  @override
+  String download_task_action_failed({required Object error}) =>
+      'The task action failed: ${error}';
   @override
   String get download_task_delete => 'Delete task';
   @override
+  String download_task_delete_confirm({required Object title}) =>
+      'Delete the download task for ${title}?';
+  @override
   String get download_task_delete_files => 'Also delete downloaded files';
+  @override
+  String get download_task_details => 'View details';
   @override
   String get download_task_location_missing =>
       'The task file location is unavailable.';
@@ -104492,36 +104861,7 @@ class _StringsTr extends _StringsEn {
   String get download_task_location_open_failed =>
       'Could not open the file location.';
   @override
-  String download_subscription_start_episode({required Object episode}) =>
-      '从第 ${episode} 集开始';
-  @override
-  String download_task_delete_confirm({required Object title}) =>
-      'Delete the download task for ${title}?';
-  @override
-  String download_task_action_failed({required Object error}) =>
-      'The task action failed: ${error}';
-  @override
-  String get download_task_details => 'View details';
-  @override
-  String get download_detail_section_task => 'Task';
-  @override
-  String get download_detail_hash_label => 'Info hash';
-  @override
-  String get download_detail_total_size_label => 'Total size';
-  @override
-  String get download_detail_remaining_label => 'Remaining';
-  @override
-  String get download_detail_save_path_label => 'Save path';
-  @override
-  String get download_detail_content_path_label => 'Content path';
-  @override
-  String get download_detail_raw_state_label => 'Backend state';
-  @override
-  String get download_detail_backend_offline =>
-      'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
-  @override
-  String get download_detail_task_missing =>
-      'The original download backend is online, but this torrent is no longer present. Live peers and trackers cannot be recovered; persisted task information is shown.';
+  String get download_task_open_location => 'Show in folder';
 }
 
 // Path: <root>
@@ -106027,8 +106367,6 @@ class _StringsVi extends _StringsEn {
       'Download backend is not configured yet.';
   @override
   String get download_clear_finished => 'Clear finished';
-  @override
-  String get download_discover_tab => 'Discover';
   @override
   String get download_network_proxy_auto => 'Auto';
   @override
@@ -112163,11 +112501,67 @@ class _StringsVi extends _StringsEn {
           required Object total}) =>
       'Downloading ${name} (${done} / ${total})';
   @override
-  String get download_task_open_location => 'Show in folder';
+  String get video_subtitle_attach_book_missing =>
+      'This video isn\'t in your library, so the subtitle wasn\'t attached';
+  @override
+  String get dict_download_hide => 'Run in background';
+  @override
+  String get dict_download_progress_show => 'View progress';
+  @override
+  String get dict_download_cancelled => 'Download cancelled.';
+  @override
+  String get dict_download_import_uncancellable =>
+      'Importing cannot be interrupted';
+  @override
+  String get dict_download_busy => 'A dictionary download is already running.';
+  @override
+  String get gal_hook_ingame_lookup => 'In-game dictionary lookup';
+  @override
+  String get gal_hook_ingame_lookup_hint =>
+      'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
+  @override
+  String download_subscription_start_episode({required Object episode}) =>
+      '从第 ${episode} 集开始';
+  @override
+  String get drag_drop_failed =>
+      'Couldn\'t handle the dropped files. Please try again.';
+  @override
+  String get tag_add_failed => 'Couldn\'t add the tag. Please try again.';
+  @override
+  String get tag_reorder_failed =>
+      'Couldn\'t save the new tag order. Please try again.';
+  @override
+  String get download_detail_backend_offline =>
+      'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
+  @override
+  String get download_detail_content_path_label => 'Content path';
+  @override
+  String get download_detail_hash_label => 'Info hash';
+  @override
+  String get download_detail_raw_state_label => 'Backend state';
+  @override
+  String get download_detail_remaining_label => 'Remaining';
+  @override
+  String get download_detail_save_path_label => 'Save path';
+  @override
+  String get download_detail_section_task => 'Task';
+  @override
+  String get download_detail_task_missing =>
+      'The original download backend is online, but this torrent is no longer present. Live peers and trackers cannot be recovered; persisted task information is shown.';
+  @override
+  String get download_detail_total_size_label => 'Total size';
+  @override
+  String download_task_action_failed({required Object error}) =>
+      'The task action failed: ${error}';
   @override
   String get download_task_delete => 'Delete task';
   @override
+  String download_task_delete_confirm({required Object title}) =>
+      'Delete the download task for ${title}?';
+  @override
   String get download_task_delete_files => 'Also delete downloaded files';
+  @override
+  String get download_task_details => 'View details';
   @override
   String get download_task_location_missing =>
       'The task file location is unavailable.';
@@ -112175,36 +112569,7 @@ class _StringsVi extends _StringsEn {
   String get download_task_location_open_failed =>
       'Could not open the file location.';
   @override
-  String download_subscription_start_episode({required Object episode}) =>
-      '从第 ${episode} 集开始';
-  @override
-  String download_task_delete_confirm({required Object title}) =>
-      'Delete the download task for ${title}?';
-  @override
-  String download_task_action_failed({required Object error}) =>
-      'The task action failed: ${error}';
-  @override
-  String get download_task_details => 'View details';
-  @override
-  String get download_detail_section_task => 'Task';
-  @override
-  String get download_detail_hash_label => 'Info hash';
-  @override
-  String get download_detail_total_size_label => 'Total size';
-  @override
-  String get download_detail_remaining_label => 'Remaining';
-  @override
-  String get download_detail_save_path_label => 'Save path';
-  @override
-  String get download_detail_content_path_label => 'Content path';
-  @override
-  String get download_detail_raw_state_label => 'Backend state';
-  @override
-  String get download_detail_backend_offline =>
-      'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
-  @override
-  String get download_detail_task_missing =>
-      'The original download backend is online, but this torrent is no longer present. Live peers and trackers cannot be recovered; persisted task information is shown.';
+  String get download_task_open_location => 'Show in folder';
 }
 
 // Path: <root>
@@ -113612,8 +113977,6 @@ class _StringsZhCn extends _StringsEn {
   String get download_backend_not_configured => '请先配置下载后端。';
   @override
   String get download_clear_finished => '清除已完成';
-  @override
-  String get download_discover_tab => '发现';
   @override
   String get download_network_proxy_auto => '自动';
   @override
@@ -119299,43 +119662,66 @@ class _StringsZhCn extends _StringsEn {
           required Object total}) =>
       '正在下载 ${name}（${done} / ${total}）';
   @override
-  String get download_task_open_location => '打开文件位置';
+  String get video_subtitle_attach_book_missing => '该视频不在视频库中，字幕没有挂上';
   @override
-  String get download_task_delete => '删除任务';
+  String get dict_download_hide => '后台继续';
   @override
-  String get download_task_delete_files => '同时删除已下载文件';
+  String get dict_download_progress_show => '查看进度';
   @override
-  String get download_task_location_missing => '找不到该任务对应的文件位置。';
+  String get dict_download_cancelled => '已取消下载。';
   @override
-  String get download_task_location_open_failed => '无法打开文件位置。';
+  String get dict_download_import_uncancellable => '导入阶段无法中断';
   @override
-  String download_task_delete_confirm({required Object title}) =>
-      '删除“${title}”的下载任务吗？';
+  String get dict_download_busy => '已有词典下载正在进行。';
   @override
-  String download_task_action_failed({required Object error}) =>
-      '任务操作失败：${error}';
+  String get gal_hook_ingame_lookup => '游戏内查词';
   @override
-  String get download_task_details => '查看详情';
+  String get gal_hook_ingame_lookup_hint =>
+      '在游戏画面内直接显示词典卡片（KiriKiri 引擎，仅 Windows）';
   @override
-  String get download_detail_section_task => '任务';
+  String get drag_drop_failed => '拖入的文件处理失败，请重试。';
+  @override
+  String get tag_add_failed => '标签添加失败，请重试。';
+  @override
+  String get tag_reorder_failed => '标签排序保存失败，请重试。';
+  @override
+  String get download_detail_backend_offline =>
+      '原下载后端当前离线。这里仍显示已保存的任务信息，但实时参数暂不可用。';
+  @override
+  String get download_detail_content_path_label => '内容路径';
   @override
   String get download_detail_hash_label => '信息哈希';
   @override
-  String get download_detail_total_size_label => '总大小';
+  String get download_detail_raw_state_label => '后端状态';
   @override
   String get download_detail_remaining_label => '剩余大小';
   @override
   String get download_detail_save_path_label => '保存路径';
   @override
-  String get download_detail_content_path_label => '内容路径';
-  @override
-  String get download_detail_raw_state_label => '后端状态';
-  @override
-  String get download_detail_backend_offline =>
-      '原下载后端当前离线。这里仍显示已保存的任务信息，但实时参数暂不可用。';
+  String get download_detail_section_task => '任务';
   @override
   String get download_detail_task_missing =>
       '原下载后端在线，但该 torrent 已不在引擎中。实时节点和 Tracker 无法恢复，这里显示已保存的任务信息。';
+  @override
+  String get download_detail_total_size_label => '总大小';
+  @override
+  String download_task_action_failed({required Object error}) =>
+      '任务操作失败：${error}';
+  @override
+  String get download_task_delete => '删除任务';
+  @override
+  String download_task_delete_confirm({required Object title}) =>
+      '删除“${title}”的下载任务吗？';
+  @override
+  String get download_task_delete_files => '同时删除已下载文件';
+  @override
+  String get download_task_details => '查看详情';
+  @override
+  String get download_task_location_missing => '找不到该任务对应的文件位置。';
+  @override
+  String get download_task_location_open_failed => '无法打开文件位置。';
+  @override
+  String get download_task_open_location => '打开文件位置';
 }
 
 // Path: <root>
@@ -120790,8 +121176,6 @@ class _StringsZhHk extends _StringsEn {
       'Download backend is not configured yet.';
   @override
   String get download_clear_finished => 'Clear finished';
-  @override
-  String get download_discover_tab => 'Discover';
   @override
   String get download_network_proxy_auto => 'Auto';
   @override
@@ -126772,11 +127156,67 @@ class _StringsZhHk extends _StringsEn {
           required Object total}) =>
       'Downloading ${name} (${done} / ${total})';
   @override
-  String get download_task_open_location => 'Show in folder';
+  String get video_subtitle_attach_book_missing =>
+      'This video isn\'t in your library, so the subtitle wasn\'t attached';
+  @override
+  String get dict_download_hide => 'Run in background';
+  @override
+  String get dict_download_progress_show => 'View progress';
+  @override
+  String get dict_download_cancelled => 'Download cancelled.';
+  @override
+  String get dict_download_import_uncancellable =>
+      'Importing cannot be interrupted';
+  @override
+  String get dict_download_busy => 'A dictionary download is already running.';
+  @override
+  String get gal_hook_ingame_lookup => 'In-game dictionary lookup';
+  @override
+  String get gal_hook_ingame_lookup_hint =>
+      'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
+  @override
+  String download_subscription_start_episode({required Object episode}) =>
+      '从第 ${episode} 集开始';
+  @override
+  String get drag_drop_failed =>
+      'Couldn\'t handle the dropped files. Please try again.';
+  @override
+  String get tag_add_failed => 'Couldn\'t add the tag. Please try again.';
+  @override
+  String get tag_reorder_failed =>
+      'Couldn\'t save the new tag order. Please try again.';
+  @override
+  String get download_detail_backend_offline =>
+      'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
+  @override
+  String get download_detail_content_path_label => 'Content path';
+  @override
+  String get download_detail_hash_label => 'Info hash';
+  @override
+  String get download_detail_raw_state_label => 'Backend state';
+  @override
+  String get download_detail_remaining_label => 'Remaining';
+  @override
+  String get download_detail_save_path_label => 'Save path';
+  @override
+  String get download_detail_section_task => 'Task';
+  @override
+  String get download_detail_task_missing =>
+      'The original download backend is online, but this torrent is no longer present. Live peers and trackers cannot be recovered; persisted task information is shown.';
+  @override
+  String get download_detail_total_size_label => 'Total size';
+  @override
+  String download_task_action_failed({required Object error}) =>
+      'The task action failed: ${error}';
   @override
   String get download_task_delete => 'Delete task';
   @override
+  String download_task_delete_confirm({required Object title}) =>
+      'Delete the download task for ${title}?';
+  @override
   String get download_task_delete_files => 'Also delete downloaded files';
+  @override
+  String get download_task_details => 'View details';
   @override
   String get download_task_location_missing =>
       'The task file location is unavailable.';
@@ -126784,36 +127224,7 @@ class _StringsZhHk extends _StringsEn {
   String get download_task_location_open_failed =>
       'Could not open the file location.';
   @override
-  String download_subscription_start_episode({required Object episode}) =>
-      '从第 ${episode} 集开始';
-  @override
-  String download_task_delete_confirm({required Object title}) =>
-      'Delete the download task for ${title}?';
-  @override
-  String download_task_action_failed({required Object error}) =>
-      'The task action failed: ${error}';
-  @override
-  String get download_task_details => 'View details';
-  @override
-  String get download_detail_section_task => 'Task';
-  @override
-  String get download_detail_hash_label => 'Info hash';
-  @override
-  String get download_detail_total_size_label => 'Total size';
-  @override
-  String get download_detail_remaining_label => 'Remaining';
-  @override
-  String get download_detail_save_path_label => 'Save path';
-  @override
-  String get download_detail_content_path_label => 'Content path';
-  @override
-  String get download_detail_raw_state_label => 'Backend state';
-  @override
-  String get download_detail_backend_offline =>
-      'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
-  @override
-  String get download_detail_task_missing =>
-      'The original download backend is online, but this torrent is no longer present. Live peers and trackers cannot be recovered; persisted task information is shown.';
+  String get download_task_open_location => 'Show in folder';
 }
 
 /// Flat map(s) containing all translations.
@@ -128149,8 +128560,6 @@ extension on _StringsEn {
         return 'Download backend is not configured yet.';
       case 'download_clear_finished':
         return 'Clear finished';
-      case 'download_discover_tab':
-        return 'Discover';
       case 'download_network_proxy_auto':
         return 'Auto';
       case 'download_network_proxy_auto_hint':
@@ -133610,41 +134019,63 @@ extension on _StringsEn {
                 required Object done,
                 required Object total}) =>
             'Downloading ${name} (${done} / ${total})';
-      case 'download_task_open_location':
-        return 'Show in folder';
-      case 'download_task_delete':
-        return 'Delete task';
-      case 'download_task_delete_files':
-        return 'Also delete downloaded files';
-      case 'download_task_location_missing':
-        return 'The task file location is unavailable.';
-      case 'download_task_location_open_failed':
-        return 'Could not open the file location.';
-      case 'download_task_delete_confirm':
-        return ({required Object title}) =>
-            'Delete the download task for ${title}?';
-      case 'download_task_action_failed':
-        return ({required Object error}) => 'The task action failed: ${error}';
-      case 'download_task_details':
-        return 'View details';
-      case 'download_detail_section_task':
-        return 'Task';
+      case 'video_subtitle_attach_book_missing':
+        return 'This video isn\'t in your library, so the subtitle wasn\'t attached';
+      case 'dict_download_hide':
+        return 'Run in background';
+      case 'dict_download_progress_show':
+        return 'View progress';
+      case 'dict_download_cancelled':
+        return 'Download cancelled.';
+      case 'dict_download_import_uncancellable':
+        return 'Importing cannot be interrupted';
+      case 'dict_download_busy':
+        return 'A dictionary download is already running.';
+      case 'gal_hook_ingame_lookup':
+        return 'In-game dictionary lookup';
+      case 'gal_hook_ingame_lookup_hint':
+        return 'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
+      case 'drag_drop_failed':
+        return 'Couldn\'t handle the dropped files. Please try again.';
+      case 'tag_add_failed':
+        return 'Couldn\'t add the tag. Please try again.';
+      case 'tag_reorder_failed':
+        return 'Couldn\'t save the new tag order. Please try again.';
+      case 'download_detail_backend_offline':
+        return 'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
+      case 'download_detail_content_path_label':
+        return 'Content path';
       case 'download_detail_hash_label':
         return 'Info hash';
-      case 'download_detail_total_size_label':
-        return 'Total size';
+      case 'download_detail_raw_state_label':
+        return 'Backend state';
       case 'download_detail_remaining_label':
         return 'Remaining';
       case 'download_detail_save_path_label':
         return 'Save path';
-      case 'download_detail_content_path_label':
-        return 'Content path';
-      case 'download_detail_raw_state_label':
-        return 'Backend state';
-      case 'download_detail_backend_offline':
-        return 'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
+      case 'download_detail_section_task':
+        return 'Task';
       case 'download_detail_task_missing':
         return 'The original download backend is online, but this torrent is no longer present. Live peers and trackers cannot be recovered; persisted task information is shown.';
+      case 'download_detail_total_size_label':
+        return 'Total size';
+      case 'download_task_action_failed':
+        return ({required Object error}) => 'The task action failed: ${error}';
+      case 'download_task_delete':
+        return 'Delete task';
+      case 'download_task_delete_confirm':
+        return ({required Object title}) =>
+            'Delete the download task for ${title}?';
+      case 'download_task_delete_files':
+        return 'Also delete downloaded files';
+      case 'download_task_details':
+        return 'View details';
+      case 'download_task_location_missing':
+        return 'The task file location is unavailable.';
+      case 'download_task_location_open_failed':
+        return 'Could not open the file location.';
+      case 'download_task_open_location':
+        return 'Show in folder';
       default:
         return null;
     }
@@ -134981,8 +135412,6 @@ extension on _StringsAr {
         return 'Download backend is not configured yet.';
       case 'download_clear_finished':
         return 'Clear finished';
-      case 'download_discover_tab':
-        return 'Discover';
       case 'download_network_proxy_auto':
         return 'Auto';
       case 'download_network_proxy_auto_hint':
@@ -140437,43 +140866,65 @@ extension on _StringsAr {
                 required Object done,
                 required Object total}) =>
             'Downloading ${name} (${done} / ${total})';
-      case 'download_task_open_location':
-        return 'Show in folder';
-      case 'download_task_delete':
-        return 'Delete task';
-      case 'download_task_delete_files':
-        return 'Also delete downloaded files';
-      case 'download_task_location_missing':
-        return 'The task file location is unavailable.';
-      case 'download_task_location_open_failed':
-        return 'Could not open the file location.';
+      case 'video_subtitle_attach_book_missing':
+        return 'This video isn\'t in your library, so the subtitle wasn\'t attached';
+      case 'dict_download_hide':
+        return 'Run in background';
+      case 'dict_download_progress_show':
+        return 'View progress';
+      case 'dict_download_cancelled':
+        return 'Download cancelled.';
+      case 'dict_download_import_uncancellable':
+        return 'Importing cannot be interrupted';
+      case 'dict_download_busy':
+        return 'A dictionary download is already running.';
+      case 'gal_hook_ingame_lookup':
+        return 'In-game dictionary lookup';
+      case 'gal_hook_ingame_lookup_hint':
+        return 'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
       case 'download_subscription_start_episode':
         return ({required Object episode}) => '从第 ${episode} 集开始';
-      case 'download_task_delete_confirm':
-        return ({required Object title}) =>
-            'Delete the download task for ${title}?';
-      case 'download_task_action_failed':
-        return ({required Object error}) => 'The task action failed: ${error}';
-      case 'download_task_details':
-        return 'View details';
-      case 'download_detail_section_task':
-        return 'Task';
+      case 'drag_drop_failed':
+        return 'Couldn\'t handle the dropped files. Please try again.';
+      case 'tag_add_failed':
+        return 'Couldn\'t add the tag. Please try again.';
+      case 'tag_reorder_failed':
+        return 'Couldn\'t save the new tag order. Please try again.';
+      case 'download_detail_backend_offline':
+        return 'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
+      case 'download_detail_content_path_label':
+        return 'Content path';
       case 'download_detail_hash_label':
         return 'Info hash';
-      case 'download_detail_total_size_label':
-        return 'Total size';
+      case 'download_detail_raw_state_label':
+        return 'Backend state';
       case 'download_detail_remaining_label':
         return 'Remaining';
       case 'download_detail_save_path_label':
         return 'Save path';
-      case 'download_detail_content_path_label':
-        return 'Content path';
-      case 'download_detail_raw_state_label':
-        return 'Backend state';
-      case 'download_detail_backend_offline':
-        return 'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
+      case 'download_detail_section_task':
+        return 'Task';
       case 'download_detail_task_missing':
         return 'The original download backend is online, but this torrent is no longer present. Live peers and trackers cannot be recovered; persisted task information is shown.';
+      case 'download_detail_total_size_label':
+        return 'Total size';
+      case 'download_task_action_failed':
+        return ({required Object error}) => 'The task action failed: ${error}';
+      case 'download_task_delete':
+        return 'Delete task';
+      case 'download_task_delete_confirm':
+        return ({required Object title}) =>
+            'Delete the download task for ${title}?';
+      case 'download_task_delete_files':
+        return 'Also delete downloaded files';
+      case 'download_task_details':
+        return 'View details';
+      case 'download_task_location_missing':
+        return 'The task file location is unavailable.';
+      case 'download_task_location_open_failed':
+        return 'Could not open the file location.';
+      case 'download_task_open_location':
+        return 'Show in folder';
       default:
         return null;
     }
@@ -141814,8 +142265,6 @@ extension on _StringsDe {
         return 'Download backend is not configured yet.';
       case 'download_clear_finished':
         return 'Clear finished';
-      case 'download_discover_tab':
-        return 'Discover';
       case 'download_network_proxy_auto':
         return 'Auto';
       case 'download_network_proxy_auto_hint':
@@ -147288,43 +147737,65 @@ extension on _StringsDe {
                 required Object done,
                 required Object total}) =>
             'Downloading ${name} (${done} / ${total})';
-      case 'download_task_open_location':
-        return 'Show in folder';
-      case 'download_task_delete':
-        return 'Delete task';
-      case 'download_task_delete_files':
-        return 'Also delete downloaded files';
-      case 'download_task_location_missing':
-        return 'The task file location is unavailable.';
-      case 'download_task_location_open_failed':
-        return 'Could not open the file location.';
+      case 'video_subtitle_attach_book_missing':
+        return 'This video isn\'t in your library, so the subtitle wasn\'t attached';
+      case 'dict_download_hide':
+        return 'Run in background';
+      case 'dict_download_progress_show':
+        return 'View progress';
+      case 'dict_download_cancelled':
+        return 'Download cancelled.';
+      case 'dict_download_import_uncancellable':
+        return 'Importing cannot be interrupted';
+      case 'dict_download_busy':
+        return 'A dictionary download is already running.';
+      case 'gal_hook_ingame_lookup':
+        return 'In-game dictionary lookup';
+      case 'gal_hook_ingame_lookup_hint':
+        return 'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
       case 'download_subscription_start_episode':
         return ({required Object episode}) => '从第 ${episode} 集开始';
-      case 'download_task_delete_confirm':
-        return ({required Object title}) =>
-            'Delete the download task for ${title}?';
-      case 'download_task_action_failed':
-        return ({required Object error}) => 'The task action failed: ${error}';
-      case 'download_task_details':
-        return 'View details';
-      case 'download_detail_section_task':
-        return 'Task';
+      case 'drag_drop_failed':
+        return 'Couldn\'t handle the dropped files. Please try again.';
+      case 'tag_add_failed':
+        return 'Couldn\'t add the tag. Please try again.';
+      case 'tag_reorder_failed':
+        return 'Couldn\'t save the new tag order. Please try again.';
+      case 'download_detail_backend_offline':
+        return 'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
+      case 'download_detail_content_path_label':
+        return 'Content path';
       case 'download_detail_hash_label':
         return 'Info hash';
-      case 'download_detail_total_size_label':
-        return 'Total size';
+      case 'download_detail_raw_state_label':
+        return 'Backend state';
       case 'download_detail_remaining_label':
         return 'Remaining';
       case 'download_detail_save_path_label':
         return 'Save path';
-      case 'download_detail_content_path_label':
-        return 'Content path';
-      case 'download_detail_raw_state_label':
-        return 'Backend state';
-      case 'download_detail_backend_offline':
-        return 'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
+      case 'download_detail_section_task':
+        return 'Task';
       case 'download_detail_task_missing':
         return 'The original download backend is online, but this torrent is no longer present. Live peers and trackers cannot be recovered; persisted task information is shown.';
+      case 'download_detail_total_size_label':
+        return 'Total size';
+      case 'download_task_action_failed':
+        return ({required Object error}) => 'The task action failed: ${error}';
+      case 'download_task_delete':
+        return 'Delete task';
+      case 'download_task_delete_confirm':
+        return ({required Object title}) =>
+            'Delete the download task for ${title}?';
+      case 'download_task_delete_files':
+        return 'Also delete downloaded files';
+      case 'download_task_details':
+        return 'View details';
+      case 'download_task_location_missing':
+        return 'The task file location is unavailable.';
+      case 'download_task_location_open_failed':
+        return 'Could not open the file location.';
+      case 'download_task_open_location':
+        return 'Show in folder';
       default:
         return null;
     }
@@ -148666,8 +149137,6 @@ extension on _StringsEs {
         return 'Download backend is not configured yet.';
       case 'download_clear_finished':
         return 'Clear finished';
-      case 'download_discover_tab':
-        return 'Discover';
       case 'download_network_proxy_auto':
         return 'Auto';
       case 'download_network_proxy_auto_hint':
@@ -154138,43 +154607,65 @@ extension on _StringsEs {
                 required Object done,
                 required Object total}) =>
             'Downloading ${name} (${done} / ${total})';
-      case 'download_task_open_location':
-        return 'Show in folder';
-      case 'download_task_delete':
-        return 'Delete task';
-      case 'download_task_delete_files':
-        return 'Also delete downloaded files';
-      case 'download_task_location_missing':
-        return 'The task file location is unavailable.';
-      case 'download_task_location_open_failed':
-        return 'Could not open the file location.';
+      case 'video_subtitle_attach_book_missing':
+        return 'This video isn\'t in your library, so the subtitle wasn\'t attached';
+      case 'dict_download_hide':
+        return 'Run in background';
+      case 'dict_download_progress_show':
+        return 'View progress';
+      case 'dict_download_cancelled':
+        return 'Download cancelled.';
+      case 'dict_download_import_uncancellable':
+        return 'Importing cannot be interrupted';
+      case 'dict_download_busy':
+        return 'A dictionary download is already running.';
+      case 'gal_hook_ingame_lookup':
+        return 'In-game dictionary lookup';
+      case 'gal_hook_ingame_lookup_hint':
+        return 'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
       case 'download_subscription_start_episode':
         return ({required Object episode}) => '从第 ${episode} 集开始';
-      case 'download_task_delete_confirm':
-        return ({required Object title}) =>
-            'Delete the download task for ${title}?';
-      case 'download_task_action_failed':
-        return ({required Object error}) => 'The task action failed: ${error}';
-      case 'download_task_details':
-        return 'View details';
-      case 'download_detail_section_task':
-        return 'Task';
+      case 'drag_drop_failed':
+        return 'Couldn\'t handle the dropped files. Please try again.';
+      case 'tag_add_failed':
+        return 'Couldn\'t add the tag. Please try again.';
+      case 'tag_reorder_failed':
+        return 'Couldn\'t save the new tag order. Please try again.';
+      case 'download_detail_backend_offline':
+        return 'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
+      case 'download_detail_content_path_label':
+        return 'Content path';
       case 'download_detail_hash_label':
         return 'Info hash';
-      case 'download_detail_total_size_label':
-        return 'Total size';
+      case 'download_detail_raw_state_label':
+        return 'Backend state';
       case 'download_detail_remaining_label':
         return 'Remaining';
       case 'download_detail_save_path_label':
         return 'Save path';
-      case 'download_detail_content_path_label':
-        return 'Content path';
-      case 'download_detail_raw_state_label':
-        return 'Backend state';
-      case 'download_detail_backend_offline':
-        return 'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
+      case 'download_detail_section_task':
+        return 'Task';
       case 'download_detail_task_missing':
         return 'The original download backend is online, but this torrent is no longer present. Live peers and trackers cannot be recovered; persisted task information is shown.';
+      case 'download_detail_total_size_label':
+        return 'Total size';
+      case 'download_task_action_failed':
+        return ({required Object error}) => 'The task action failed: ${error}';
+      case 'download_task_delete':
+        return 'Delete task';
+      case 'download_task_delete_confirm':
+        return ({required Object title}) =>
+            'Delete the download task for ${title}?';
+      case 'download_task_delete_files':
+        return 'Also delete downloaded files';
+      case 'download_task_details':
+        return 'View details';
+      case 'download_task_location_missing':
+        return 'The task file location is unavailable.';
+      case 'download_task_location_open_failed':
+        return 'Could not open the file location.';
+      case 'download_task_open_location':
+        return 'Show in folder';
       default:
         return null;
     }
@@ -155519,8 +156010,6 @@ extension on _StringsFr {
         return 'Download backend is not configured yet.';
       case 'download_clear_finished':
         return 'Clear finished';
-      case 'download_discover_tab':
-        return 'Discover';
       case 'download_network_proxy_auto':
         return 'Auto';
       case 'download_network_proxy_auto_hint':
@@ -160994,43 +161483,65 @@ extension on _StringsFr {
                 required Object done,
                 required Object total}) =>
             'Downloading ${name} (${done} / ${total})';
-      case 'download_task_open_location':
-        return 'Show in folder';
-      case 'download_task_delete':
-        return 'Delete task';
-      case 'download_task_delete_files':
-        return 'Also delete downloaded files';
-      case 'download_task_location_missing':
-        return 'The task file location is unavailable.';
-      case 'download_task_location_open_failed':
-        return 'Could not open the file location.';
+      case 'video_subtitle_attach_book_missing':
+        return 'This video isn\'t in your library, so the subtitle wasn\'t attached';
+      case 'dict_download_hide':
+        return 'Run in background';
+      case 'dict_download_progress_show':
+        return 'View progress';
+      case 'dict_download_cancelled':
+        return 'Download cancelled.';
+      case 'dict_download_import_uncancellable':
+        return 'Importing cannot be interrupted';
+      case 'dict_download_busy':
+        return 'A dictionary download is already running.';
+      case 'gal_hook_ingame_lookup':
+        return 'In-game dictionary lookup';
+      case 'gal_hook_ingame_lookup_hint':
+        return 'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
       case 'download_subscription_start_episode':
         return ({required Object episode}) => '从第 ${episode} 集开始';
-      case 'download_task_delete_confirm':
-        return ({required Object title}) =>
-            'Delete the download task for ${title}?';
-      case 'download_task_action_failed':
-        return ({required Object error}) => 'The task action failed: ${error}';
-      case 'download_task_details':
-        return 'View details';
-      case 'download_detail_section_task':
-        return 'Task';
+      case 'drag_drop_failed':
+        return 'Couldn\'t handle the dropped files. Please try again.';
+      case 'tag_add_failed':
+        return 'Couldn\'t add the tag. Please try again.';
+      case 'tag_reorder_failed':
+        return 'Couldn\'t save the new tag order. Please try again.';
+      case 'download_detail_backend_offline':
+        return 'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
+      case 'download_detail_content_path_label':
+        return 'Content path';
       case 'download_detail_hash_label':
         return 'Info hash';
-      case 'download_detail_total_size_label':
-        return 'Total size';
+      case 'download_detail_raw_state_label':
+        return 'Backend state';
       case 'download_detail_remaining_label':
         return 'Remaining';
       case 'download_detail_save_path_label':
         return 'Save path';
-      case 'download_detail_content_path_label':
-        return 'Content path';
-      case 'download_detail_raw_state_label':
-        return 'Backend state';
-      case 'download_detail_backend_offline':
-        return 'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
+      case 'download_detail_section_task':
+        return 'Task';
       case 'download_detail_task_missing':
         return 'The original download backend is online, but this torrent is no longer present. Live peers and trackers cannot be recovered; persisted task information is shown.';
+      case 'download_detail_total_size_label':
+        return 'Total size';
+      case 'download_task_action_failed':
+        return ({required Object error}) => 'The task action failed: ${error}';
+      case 'download_task_delete':
+        return 'Delete task';
+      case 'download_task_delete_confirm':
+        return ({required Object title}) =>
+            'Delete the download task for ${title}?';
+      case 'download_task_delete_files':
+        return 'Also delete downloaded files';
+      case 'download_task_details':
+        return 'View details';
+      case 'download_task_location_missing':
+        return 'The task file location is unavailable.';
+      case 'download_task_location_open_failed':
+        return 'Could not open the file location.';
+      case 'download_task_open_location':
+        return 'Show in folder';
       default:
         return null;
     }
@@ -162370,8 +162881,6 @@ extension on _StringsId {
         return 'Download backend is not configured yet.';
       case 'download_clear_finished':
         return 'Clear finished';
-      case 'download_discover_tab':
-        return 'Discover';
       case 'download_network_proxy_auto':
         return 'Auto';
       case 'download_network_proxy_auto_hint':
@@ -167832,43 +168341,65 @@ extension on _StringsId {
                 required Object done,
                 required Object total}) =>
             'Downloading ${name} (${done} / ${total})';
-      case 'download_task_open_location':
-        return 'Show in folder';
-      case 'download_task_delete':
-        return 'Delete task';
-      case 'download_task_delete_files':
-        return 'Also delete downloaded files';
-      case 'download_task_location_missing':
-        return 'The task file location is unavailable.';
-      case 'download_task_location_open_failed':
-        return 'Could not open the file location.';
+      case 'video_subtitle_attach_book_missing':
+        return 'This video isn\'t in your library, so the subtitle wasn\'t attached';
+      case 'dict_download_hide':
+        return 'Run in background';
+      case 'dict_download_progress_show':
+        return 'View progress';
+      case 'dict_download_cancelled':
+        return 'Download cancelled.';
+      case 'dict_download_import_uncancellable':
+        return 'Importing cannot be interrupted';
+      case 'dict_download_busy':
+        return 'A dictionary download is already running.';
+      case 'gal_hook_ingame_lookup':
+        return 'In-game dictionary lookup';
+      case 'gal_hook_ingame_lookup_hint':
+        return 'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
       case 'download_subscription_start_episode':
         return ({required Object episode}) => '从第 ${episode} 集开始';
-      case 'download_task_delete_confirm':
-        return ({required Object title}) =>
-            'Delete the download task for ${title}?';
-      case 'download_task_action_failed':
-        return ({required Object error}) => 'The task action failed: ${error}';
-      case 'download_task_details':
-        return 'View details';
-      case 'download_detail_section_task':
-        return 'Task';
+      case 'drag_drop_failed':
+        return 'Couldn\'t handle the dropped files. Please try again.';
+      case 'tag_add_failed':
+        return 'Couldn\'t add the tag. Please try again.';
+      case 'tag_reorder_failed':
+        return 'Couldn\'t save the new tag order. Please try again.';
+      case 'download_detail_backend_offline':
+        return 'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
+      case 'download_detail_content_path_label':
+        return 'Content path';
       case 'download_detail_hash_label':
         return 'Info hash';
-      case 'download_detail_total_size_label':
-        return 'Total size';
+      case 'download_detail_raw_state_label':
+        return 'Backend state';
       case 'download_detail_remaining_label':
         return 'Remaining';
       case 'download_detail_save_path_label':
         return 'Save path';
-      case 'download_detail_content_path_label':
-        return 'Content path';
-      case 'download_detail_raw_state_label':
-        return 'Backend state';
-      case 'download_detail_backend_offline':
-        return 'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
+      case 'download_detail_section_task':
+        return 'Task';
       case 'download_detail_task_missing':
         return 'The original download backend is online, but this torrent is no longer present. Live peers and trackers cannot be recovered; persisted task information is shown.';
+      case 'download_detail_total_size_label':
+        return 'Total size';
+      case 'download_task_action_failed':
+        return ({required Object error}) => 'The task action failed: ${error}';
+      case 'download_task_delete':
+        return 'Delete task';
+      case 'download_task_delete_confirm':
+        return ({required Object title}) =>
+            'Delete the download task for ${title}?';
+      case 'download_task_delete_files':
+        return 'Also delete downloaded files';
+      case 'download_task_details':
+        return 'View details';
+      case 'download_task_location_missing':
+        return 'The task file location is unavailable.';
+      case 'download_task_location_open_failed':
+        return 'Could not open the file location.';
+      case 'download_task_open_location':
+        return 'Show in folder';
       default:
         return null;
     }
@@ -169209,8 +169740,6 @@ extension on _StringsIt {
         return 'Download backend is not configured yet.';
       case 'download_clear_finished':
         return 'Clear finished';
-      case 'download_discover_tab':
-        return 'Discover';
       case 'download_network_proxy_auto':
         return 'Auto';
       case 'download_network_proxy_auto_hint':
@@ -174684,43 +175213,65 @@ extension on _StringsIt {
                 required Object done,
                 required Object total}) =>
             'Downloading ${name} (${done} / ${total})';
-      case 'download_task_open_location':
-        return 'Show in folder';
-      case 'download_task_delete':
-        return 'Delete task';
-      case 'download_task_delete_files':
-        return 'Also delete downloaded files';
-      case 'download_task_location_missing':
-        return 'The task file location is unavailable.';
-      case 'download_task_location_open_failed':
-        return 'Could not open the file location.';
+      case 'video_subtitle_attach_book_missing':
+        return 'This video isn\'t in your library, so the subtitle wasn\'t attached';
+      case 'dict_download_hide':
+        return 'Run in background';
+      case 'dict_download_progress_show':
+        return 'View progress';
+      case 'dict_download_cancelled':
+        return 'Download cancelled.';
+      case 'dict_download_import_uncancellable':
+        return 'Importing cannot be interrupted';
+      case 'dict_download_busy':
+        return 'A dictionary download is already running.';
+      case 'gal_hook_ingame_lookup':
+        return 'In-game dictionary lookup';
+      case 'gal_hook_ingame_lookup_hint':
+        return 'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
       case 'download_subscription_start_episode':
         return ({required Object episode}) => '从第 ${episode} 集开始';
-      case 'download_task_delete_confirm':
-        return ({required Object title}) =>
-            'Delete the download task for ${title}?';
-      case 'download_task_action_failed':
-        return ({required Object error}) => 'The task action failed: ${error}';
-      case 'download_task_details':
-        return 'View details';
-      case 'download_detail_section_task':
-        return 'Task';
+      case 'drag_drop_failed':
+        return 'Couldn\'t handle the dropped files. Please try again.';
+      case 'tag_add_failed':
+        return 'Couldn\'t add the tag. Please try again.';
+      case 'tag_reorder_failed':
+        return 'Couldn\'t save the new tag order. Please try again.';
+      case 'download_detail_backend_offline':
+        return 'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
+      case 'download_detail_content_path_label':
+        return 'Content path';
       case 'download_detail_hash_label':
         return 'Info hash';
-      case 'download_detail_total_size_label':
-        return 'Total size';
+      case 'download_detail_raw_state_label':
+        return 'Backend state';
       case 'download_detail_remaining_label':
         return 'Remaining';
       case 'download_detail_save_path_label':
         return 'Save path';
-      case 'download_detail_content_path_label':
-        return 'Content path';
-      case 'download_detail_raw_state_label':
-        return 'Backend state';
-      case 'download_detail_backend_offline':
-        return 'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
+      case 'download_detail_section_task':
+        return 'Task';
       case 'download_detail_task_missing':
         return 'The original download backend is online, but this torrent is no longer present. Live peers and trackers cannot be recovered; persisted task information is shown.';
+      case 'download_detail_total_size_label':
+        return 'Total size';
+      case 'download_task_action_failed':
+        return ({required Object error}) => 'The task action failed: ${error}';
+      case 'download_task_delete':
+        return 'Delete task';
+      case 'download_task_delete_confirm':
+        return ({required Object title}) =>
+            'Delete the download task for ${title}?';
+      case 'download_task_delete_files':
+        return 'Also delete downloaded files';
+      case 'download_task_details':
+        return 'View details';
+      case 'download_task_location_missing':
+        return 'The task file location is unavailable.';
+      case 'download_task_location_open_failed':
+        return 'Could not open the file location.';
+      case 'download_task_open_location':
+        return 'Show in folder';
       default:
         return null;
     }
@@ -176050,8 +176601,6 @@ extension on _StringsJa {
         return 'Download backend is not configured yet.';
       case 'download_clear_finished':
         return 'Clear finished';
-      case 'download_discover_tab':
-        return 'Discover';
       case 'download_network_proxy_auto':
         return 'Auto';
       case 'download_network_proxy_auto_hint':
@@ -181498,43 +182047,65 @@ extension on _StringsJa {
                 required Object done,
                 required Object total}) =>
             'Downloading ${name} (${done} / ${total})';
-      case 'download_task_open_location':
-        return 'Show in folder';
-      case 'download_task_delete':
-        return 'Delete task';
-      case 'download_task_delete_files':
-        return 'Also delete downloaded files';
-      case 'download_task_location_missing':
-        return 'The task file location is unavailable.';
-      case 'download_task_location_open_failed':
-        return 'Could not open the file location.';
+      case 'video_subtitle_attach_book_missing':
+        return 'This video isn\'t in your library, so the subtitle wasn\'t attached';
+      case 'dict_download_hide':
+        return 'Run in background';
+      case 'dict_download_progress_show':
+        return 'View progress';
+      case 'dict_download_cancelled':
+        return 'Download cancelled.';
+      case 'dict_download_import_uncancellable':
+        return 'Importing cannot be interrupted';
+      case 'dict_download_busy':
+        return 'A dictionary download is already running.';
+      case 'gal_hook_ingame_lookup':
+        return 'In-game dictionary lookup';
+      case 'gal_hook_ingame_lookup_hint':
+        return 'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
       case 'download_subscription_start_episode':
         return ({required Object episode}) => '从第 ${episode} 集开始';
-      case 'download_task_delete_confirm':
-        return ({required Object title}) =>
-            'Delete the download task for ${title}?';
-      case 'download_task_action_failed':
-        return ({required Object error}) => 'The task action failed: ${error}';
-      case 'download_task_details':
-        return 'View details';
-      case 'download_detail_section_task':
-        return 'Task';
+      case 'drag_drop_failed':
+        return 'Couldn\'t handle the dropped files. Please try again.';
+      case 'tag_add_failed':
+        return 'Couldn\'t add the tag. Please try again.';
+      case 'tag_reorder_failed':
+        return 'Couldn\'t save the new tag order. Please try again.';
+      case 'download_detail_backend_offline':
+        return 'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
+      case 'download_detail_content_path_label':
+        return 'Content path';
       case 'download_detail_hash_label':
         return 'Info hash';
-      case 'download_detail_total_size_label':
-        return 'Total size';
+      case 'download_detail_raw_state_label':
+        return 'Backend state';
       case 'download_detail_remaining_label':
         return 'Remaining';
       case 'download_detail_save_path_label':
         return 'Save path';
-      case 'download_detail_content_path_label':
-        return 'Content path';
-      case 'download_detail_raw_state_label':
-        return 'Backend state';
-      case 'download_detail_backend_offline':
-        return 'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
+      case 'download_detail_section_task':
+        return 'Task';
       case 'download_detail_task_missing':
         return 'The original download backend is online, but this torrent is no longer present. Live peers and trackers cannot be recovered; persisted task information is shown.';
+      case 'download_detail_total_size_label':
+        return 'Total size';
+      case 'download_task_action_failed':
+        return ({required Object error}) => 'The task action failed: ${error}';
+      case 'download_task_delete':
+        return 'Delete task';
+      case 'download_task_delete_confirm':
+        return ({required Object title}) =>
+            'Delete the download task for ${title}?';
+      case 'download_task_delete_files':
+        return 'Also delete downloaded files';
+      case 'download_task_details':
+        return 'View details';
+      case 'download_task_location_missing':
+        return 'The task file location is unavailable.';
+      case 'download_task_location_open_failed':
+        return 'Could not open the file location.';
+      case 'download_task_open_location':
+        return 'Show in folder';
       default:
         return null;
     }
@@ -182865,8 +183436,6 @@ extension on _StringsKo {
         return 'Download backend is not configured yet.';
       case 'download_clear_finished':
         return 'Clear finished';
-      case 'download_discover_tab':
-        return 'Discover';
       case 'download_network_proxy_auto':
         return 'Auto';
       case 'download_network_proxy_auto_hint':
@@ -188316,43 +188885,65 @@ extension on _StringsKo {
                 required Object done,
                 required Object total}) =>
             'Downloading ${name} (${done} / ${total})';
-      case 'download_task_open_location':
-        return 'Show in folder';
-      case 'download_task_delete':
-        return 'Delete task';
-      case 'download_task_delete_files':
-        return 'Also delete downloaded files';
-      case 'download_task_location_missing':
-        return 'The task file location is unavailable.';
-      case 'download_task_location_open_failed':
-        return 'Could not open the file location.';
+      case 'video_subtitle_attach_book_missing':
+        return 'This video isn\'t in your library, so the subtitle wasn\'t attached';
+      case 'dict_download_hide':
+        return 'Run in background';
+      case 'dict_download_progress_show':
+        return 'View progress';
+      case 'dict_download_cancelled':
+        return 'Download cancelled.';
+      case 'dict_download_import_uncancellable':
+        return 'Importing cannot be interrupted';
+      case 'dict_download_busy':
+        return 'A dictionary download is already running.';
+      case 'gal_hook_ingame_lookup':
+        return 'In-game dictionary lookup';
+      case 'gal_hook_ingame_lookup_hint':
+        return 'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
       case 'download_subscription_start_episode':
         return ({required Object episode}) => '从第 ${episode} 集开始';
-      case 'download_task_delete_confirm':
-        return ({required Object title}) =>
-            'Delete the download task for ${title}?';
-      case 'download_task_action_failed':
-        return ({required Object error}) => 'The task action failed: ${error}';
-      case 'download_task_details':
-        return 'View details';
-      case 'download_detail_section_task':
-        return 'Task';
+      case 'drag_drop_failed':
+        return 'Couldn\'t handle the dropped files. Please try again.';
+      case 'tag_add_failed':
+        return 'Couldn\'t add the tag. Please try again.';
+      case 'tag_reorder_failed':
+        return 'Couldn\'t save the new tag order. Please try again.';
+      case 'download_detail_backend_offline':
+        return 'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
+      case 'download_detail_content_path_label':
+        return 'Content path';
       case 'download_detail_hash_label':
         return 'Info hash';
-      case 'download_detail_total_size_label':
-        return 'Total size';
+      case 'download_detail_raw_state_label':
+        return 'Backend state';
       case 'download_detail_remaining_label':
         return 'Remaining';
       case 'download_detail_save_path_label':
         return 'Save path';
-      case 'download_detail_content_path_label':
-        return 'Content path';
-      case 'download_detail_raw_state_label':
-        return 'Backend state';
-      case 'download_detail_backend_offline':
-        return 'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
+      case 'download_detail_section_task':
+        return 'Task';
       case 'download_detail_task_missing':
         return 'The original download backend is online, but this torrent is no longer present. Live peers and trackers cannot be recovered; persisted task information is shown.';
+      case 'download_detail_total_size_label':
+        return 'Total size';
+      case 'download_task_action_failed':
+        return ({required Object error}) => 'The task action failed: ${error}';
+      case 'download_task_delete':
+        return 'Delete task';
+      case 'download_task_delete_confirm':
+        return ({required Object title}) =>
+            'Delete the download task for ${title}?';
+      case 'download_task_delete_files':
+        return 'Also delete downloaded files';
+      case 'download_task_details':
+        return 'View details';
+      case 'download_task_location_missing':
+        return 'The task file location is unavailable.';
+      case 'download_task_location_open_failed':
+        return 'Could not open the file location.';
+      case 'download_task_open_location':
+        return 'Show in folder';
       default:
         return null;
     }
@@ -189693,8 +190284,6 @@ extension on _StringsNl {
         return 'Download backend is not configured yet.';
       case 'download_clear_finished':
         return 'Clear finished';
-      case 'download_discover_tab':
-        return 'Discover';
       case 'download_network_proxy_auto':
         return 'Auto';
       case 'download_network_proxy_auto_hint':
@@ -195162,43 +195751,65 @@ extension on _StringsNl {
                 required Object done,
                 required Object total}) =>
             'Downloading ${name} (${done} / ${total})';
-      case 'download_task_open_location':
-        return 'Show in folder';
-      case 'download_task_delete':
-        return 'Delete task';
-      case 'download_task_delete_files':
-        return 'Also delete downloaded files';
-      case 'download_task_location_missing':
-        return 'The task file location is unavailable.';
-      case 'download_task_location_open_failed':
-        return 'Could not open the file location.';
+      case 'video_subtitle_attach_book_missing':
+        return 'This video isn\'t in your library, so the subtitle wasn\'t attached';
+      case 'dict_download_hide':
+        return 'Run in background';
+      case 'dict_download_progress_show':
+        return 'View progress';
+      case 'dict_download_cancelled':
+        return 'Download cancelled.';
+      case 'dict_download_import_uncancellable':
+        return 'Importing cannot be interrupted';
+      case 'dict_download_busy':
+        return 'A dictionary download is already running.';
+      case 'gal_hook_ingame_lookup':
+        return 'In-game dictionary lookup';
+      case 'gal_hook_ingame_lookup_hint':
+        return 'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
       case 'download_subscription_start_episode':
         return ({required Object episode}) => '从第 ${episode} 集开始';
-      case 'download_task_delete_confirm':
-        return ({required Object title}) =>
-            'Delete the download task for ${title}?';
-      case 'download_task_action_failed':
-        return ({required Object error}) => 'The task action failed: ${error}';
-      case 'download_task_details':
-        return 'View details';
-      case 'download_detail_section_task':
-        return 'Task';
+      case 'drag_drop_failed':
+        return 'Couldn\'t handle the dropped files. Please try again.';
+      case 'tag_add_failed':
+        return 'Couldn\'t add the tag. Please try again.';
+      case 'tag_reorder_failed':
+        return 'Couldn\'t save the new tag order. Please try again.';
+      case 'download_detail_backend_offline':
+        return 'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
+      case 'download_detail_content_path_label':
+        return 'Content path';
       case 'download_detail_hash_label':
         return 'Info hash';
-      case 'download_detail_total_size_label':
-        return 'Total size';
+      case 'download_detail_raw_state_label':
+        return 'Backend state';
       case 'download_detail_remaining_label':
         return 'Remaining';
       case 'download_detail_save_path_label':
         return 'Save path';
-      case 'download_detail_content_path_label':
-        return 'Content path';
-      case 'download_detail_raw_state_label':
-        return 'Backend state';
-      case 'download_detail_backend_offline':
-        return 'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
+      case 'download_detail_section_task':
+        return 'Task';
       case 'download_detail_task_missing':
         return 'The original download backend is online, but this torrent is no longer present. Live peers and trackers cannot be recovered; persisted task information is shown.';
+      case 'download_detail_total_size_label':
+        return 'Total size';
+      case 'download_task_action_failed':
+        return ({required Object error}) => 'The task action failed: ${error}';
+      case 'download_task_delete':
+        return 'Delete task';
+      case 'download_task_delete_confirm':
+        return ({required Object title}) =>
+            'Delete the download task for ${title}?';
+      case 'download_task_delete_files':
+        return 'Also delete downloaded files';
+      case 'download_task_details':
+        return 'View details';
+      case 'download_task_location_missing':
+        return 'The task file location is unavailable.';
+      case 'download_task_location_open_failed':
+        return 'Could not open the file location.';
+      case 'download_task_open_location':
+        return 'Show in folder';
       default:
         return null;
     }
@@ -196538,8 +197149,6 @@ extension on _StringsPtBr {
         return 'Download backend is not configured yet.';
       case 'download_clear_finished':
         return 'Clear finished';
-      case 'download_discover_tab':
-        return 'Discover';
       case 'download_network_proxy_auto':
         return 'Auto';
       case 'download_network_proxy_auto_hint':
@@ -202005,43 +202614,65 @@ extension on _StringsPtBr {
                 required Object done,
                 required Object total}) =>
             'Downloading ${name} (${done} / ${total})';
-      case 'download_task_open_location':
-        return 'Show in folder';
-      case 'download_task_delete':
-        return 'Delete task';
-      case 'download_task_delete_files':
-        return 'Also delete downloaded files';
-      case 'download_task_location_missing':
-        return 'The task file location is unavailable.';
-      case 'download_task_location_open_failed':
-        return 'Could not open the file location.';
+      case 'video_subtitle_attach_book_missing':
+        return 'This video isn\'t in your library, so the subtitle wasn\'t attached';
+      case 'dict_download_hide':
+        return 'Run in background';
+      case 'dict_download_progress_show':
+        return 'View progress';
+      case 'dict_download_cancelled':
+        return 'Download cancelled.';
+      case 'dict_download_import_uncancellable':
+        return 'Importing cannot be interrupted';
+      case 'dict_download_busy':
+        return 'A dictionary download is already running.';
+      case 'gal_hook_ingame_lookup':
+        return 'In-game dictionary lookup';
+      case 'gal_hook_ingame_lookup_hint':
+        return 'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
       case 'download_subscription_start_episode':
         return ({required Object episode}) => '从第 ${episode} 集开始';
-      case 'download_task_delete_confirm':
-        return ({required Object title}) =>
-            'Delete the download task for ${title}?';
-      case 'download_task_action_failed':
-        return ({required Object error}) => 'The task action failed: ${error}';
-      case 'download_task_details':
-        return 'View details';
-      case 'download_detail_section_task':
-        return 'Task';
+      case 'drag_drop_failed':
+        return 'Couldn\'t handle the dropped files. Please try again.';
+      case 'tag_add_failed':
+        return 'Couldn\'t add the tag. Please try again.';
+      case 'tag_reorder_failed':
+        return 'Couldn\'t save the new tag order. Please try again.';
+      case 'download_detail_backend_offline':
+        return 'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
+      case 'download_detail_content_path_label':
+        return 'Content path';
       case 'download_detail_hash_label':
         return 'Info hash';
-      case 'download_detail_total_size_label':
-        return 'Total size';
+      case 'download_detail_raw_state_label':
+        return 'Backend state';
       case 'download_detail_remaining_label':
         return 'Remaining';
       case 'download_detail_save_path_label':
         return 'Save path';
-      case 'download_detail_content_path_label':
-        return 'Content path';
-      case 'download_detail_raw_state_label':
-        return 'Backend state';
-      case 'download_detail_backend_offline':
-        return 'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
+      case 'download_detail_section_task':
+        return 'Task';
       case 'download_detail_task_missing':
         return 'The original download backend is online, but this torrent is no longer present. Live peers and trackers cannot be recovered; persisted task information is shown.';
+      case 'download_detail_total_size_label':
+        return 'Total size';
+      case 'download_task_action_failed':
+        return ({required Object error}) => 'The task action failed: ${error}';
+      case 'download_task_delete':
+        return 'Delete task';
+      case 'download_task_delete_confirm':
+        return ({required Object title}) =>
+            'Delete the download task for ${title}?';
+      case 'download_task_delete_files':
+        return 'Also delete downloaded files';
+      case 'download_task_details':
+        return 'View details';
+      case 'download_task_location_missing':
+        return 'The task file location is unavailable.';
+      case 'download_task_location_open_failed':
+        return 'Could not open the file location.';
+      case 'download_task_open_location':
+        return 'Show in folder';
       default:
         return null;
     }
@@ -203384,8 +204015,6 @@ extension on _StringsRu {
         return 'Download backend is not configured yet.';
       case 'download_clear_finished':
         return 'Clear finished';
-      case 'download_discover_tab':
-        return 'Discover';
       case 'download_network_proxy_auto':
         return 'Auto';
       case 'download_network_proxy_auto_hint':
@@ -208853,43 +209482,65 @@ extension on _StringsRu {
                 required Object done,
                 required Object total}) =>
             'Downloading ${name} (${done} / ${total})';
-      case 'download_task_open_location':
-        return 'Show in folder';
-      case 'download_task_delete':
-        return 'Delete task';
-      case 'download_task_delete_files':
-        return 'Also delete downloaded files';
-      case 'download_task_location_missing':
-        return 'The task file location is unavailable.';
-      case 'download_task_location_open_failed':
-        return 'Could not open the file location.';
+      case 'video_subtitle_attach_book_missing':
+        return 'This video isn\'t in your library, so the subtitle wasn\'t attached';
+      case 'dict_download_hide':
+        return 'Run in background';
+      case 'dict_download_progress_show':
+        return 'View progress';
+      case 'dict_download_cancelled':
+        return 'Download cancelled.';
+      case 'dict_download_import_uncancellable':
+        return 'Importing cannot be interrupted';
+      case 'dict_download_busy':
+        return 'A dictionary download is already running.';
+      case 'gal_hook_ingame_lookup':
+        return 'In-game dictionary lookup';
+      case 'gal_hook_ingame_lookup_hint':
+        return 'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
       case 'download_subscription_start_episode':
         return ({required Object episode}) => '从第 ${episode} 集开始';
-      case 'download_task_delete_confirm':
-        return ({required Object title}) =>
-            'Delete the download task for ${title}?';
-      case 'download_task_action_failed':
-        return ({required Object error}) => 'The task action failed: ${error}';
-      case 'download_task_details':
-        return 'View details';
-      case 'download_detail_section_task':
-        return 'Task';
+      case 'drag_drop_failed':
+        return 'Couldn\'t handle the dropped files. Please try again.';
+      case 'tag_add_failed':
+        return 'Couldn\'t add the tag. Please try again.';
+      case 'tag_reorder_failed':
+        return 'Couldn\'t save the new tag order. Please try again.';
+      case 'download_detail_backend_offline':
+        return 'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
+      case 'download_detail_content_path_label':
+        return 'Content path';
       case 'download_detail_hash_label':
         return 'Info hash';
-      case 'download_detail_total_size_label':
-        return 'Total size';
+      case 'download_detail_raw_state_label':
+        return 'Backend state';
       case 'download_detail_remaining_label':
         return 'Remaining';
       case 'download_detail_save_path_label':
         return 'Save path';
-      case 'download_detail_content_path_label':
-        return 'Content path';
-      case 'download_detail_raw_state_label':
-        return 'Backend state';
-      case 'download_detail_backend_offline':
-        return 'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
+      case 'download_detail_section_task':
+        return 'Task';
       case 'download_detail_task_missing':
         return 'The original download backend is online, but this torrent is no longer present. Live peers and trackers cannot be recovered; persisted task information is shown.';
+      case 'download_detail_total_size_label':
+        return 'Total size';
+      case 'download_task_action_failed':
+        return ({required Object error}) => 'The task action failed: ${error}';
+      case 'download_task_delete':
+        return 'Delete task';
+      case 'download_task_delete_confirm':
+        return ({required Object title}) =>
+            'Delete the download task for ${title}?';
+      case 'download_task_delete_files':
+        return 'Also delete downloaded files';
+      case 'download_task_details':
+        return 'View details';
+      case 'download_task_location_missing':
+        return 'The task file location is unavailable.';
+      case 'download_task_location_open_failed':
+        return 'Could not open the file location.';
+      case 'download_task_open_location':
+        return 'Show in folder';
       default:
         return null;
     }
@@ -210224,8 +210875,6 @@ extension on _StringsTh {
         return 'Download backend is not configured yet.';
       case 'download_clear_finished':
         return 'Clear finished';
-      case 'download_discover_tab':
-        return 'Discover';
       case 'download_network_proxy_auto':
         return 'Auto';
       case 'download_network_proxy_auto_hint':
@@ -215684,43 +216333,65 @@ extension on _StringsTh {
                 required Object done,
                 required Object total}) =>
             'Downloading ${name} (${done} / ${total})';
-      case 'download_task_open_location':
-        return 'Show in folder';
-      case 'download_task_delete':
-        return 'Delete task';
-      case 'download_task_delete_files':
-        return 'Also delete downloaded files';
-      case 'download_task_location_missing':
-        return 'The task file location is unavailable.';
-      case 'download_task_location_open_failed':
-        return 'Could not open the file location.';
+      case 'video_subtitle_attach_book_missing':
+        return 'This video isn\'t in your library, so the subtitle wasn\'t attached';
+      case 'dict_download_hide':
+        return 'Run in background';
+      case 'dict_download_progress_show':
+        return 'View progress';
+      case 'dict_download_cancelled':
+        return 'Download cancelled.';
+      case 'dict_download_import_uncancellable':
+        return 'Importing cannot be interrupted';
+      case 'dict_download_busy':
+        return 'A dictionary download is already running.';
+      case 'gal_hook_ingame_lookup':
+        return 'In-game dictionary lookup';
+      case 'gal_hook_ingame_lookup_hint':
+        return 'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
       case 'download_subscription_start_episode':
         return ({required Object episode}) => '从第 ${episode} 集开始';
-      case 'download_task_delete_confirm':
-        return ({required Object title}) =>
-            'Delete the download task for ${title}?';
-      case 'download_task_action_failed':
-        return ({required Object error}) => 'The task action failed: ${error}';
-      case 'download_task_details':
-        return 'View details';
-      case 'download_detail_section_task':
-        return 'Task';
+      case 'drag_drop_failed':
+        return 'Couldn\'t handle the dropped files. Please try again.';
+      case 'tag_add_failed':
+        return 'Couldn\'t add the tag. Please try again.';
+      case 'tag_reorder_failed':
+        return 'Couldn\'t save the new tag order. Please try again.';
+      case 'download_detail_backend_offline':
+        return 'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
+      case 'download_detail_content_path_label':
+        return 'Content path';
       case 'download_detail_hash_label':
         return 'Info hash';
-      case 'download_detail_total_size_label':
-        return 'Total size';
+      case 'download_detail_raw_state_label':
+        return 'Backend state';
       case 'download_detail_remaining_label':
         return 'Remaining';
       case 'download_detail_save_path_label':
         return 'Save path';
-      case 'download_detail_content_path_label':
-        return 'Content path';
-      case 'download_detail_raw_state_label':
-        return 'Backend state';
-      case 'download_detail_backend_offline':
-        return 'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
+      case 'download_detail_section_task':
+        return 'Task';
       case 'download_detail_task_missing':
         return 'The original download backend is online, but this torrent is no longer present. Live peers and trackers cannot be recovered; persisted task information is shown.';
+      case 'download_detail_total_size_label':
+        return 'Total size';
+      case 'download_task_action_failed':
+        return ({required Object error}) => 'The task action failed: ${error}';
+      case 'download_task_delete':
+        return 'Delete task';
+      case 'download_task_delete_confirm':
+        return ({required Object title}) =>
+            'Delete the download task for ${title}?';
+      case 'download_task_delete_files':
+        return 'Also delete downloaded files';
+      case 'download_task_details':
+        return 'View details';
+      case 'download_task_location_missing':
+        return 'The task file location is unavailable.';
+      case 'download_task_location_open_failed':
+        return 'Could not open the file location.';
+      case 'download_task_open_location':
+        return 'Show in folder';
       default:
         return null;
     }
@@ -217060,8 +217731,6 @@ extension on _StringsTr {
         return 'Download backend is not configured yet.';
       case 'download_clear_finished':
         return 'Clear finished';
-      case 'download_discover_tab':
-        return 'Discover';
       case 'download_network_proxy_auto':
         return 'Auto';
       case 'download_network_proxy_auto_hint':
@@ -222524,43 +223193,65 @@ extension on _StringsTr {
                 required Object done,
                 required Object total}) =>
             'Downloading ${name} (${done} / ${total})';
-      case 'download_task_open_location':
-        return 'Show in folder';
-      case 'download_task_delete':
-        return 'Delete task';
-      case 'download_task_delete_files':
-        return 'Also delete downloaded files';
-      case 'download_task_location_missing':
-        return 'The task file location is unavailable.';
-      case 'download_task_location_open_failed':
-        return 'Could not open the file location.';
+      case 'video_subtitle_attach_book_missing':
+        return 'This video isn\'t in your library, so the subtitle wasn\'t attached';
+      case 'dict_download_hide':
+        return 'Run in background';
+      case 'dict_download_progress_show':
+        return 'View progress';
+      case 'dict_download_cancelled':
+        return 'Download cancelled.';
+      case 'dict_download_import_uncancellable':
+        return 'Importing cannot be interrupted';
+      case 'dict_download_busy':
+        return 'A dictionary download is already running.';
+      case 'gal_hook_ingame_lookup':
+        return 'In-game dictionary lookup';
+      case 'gal_hook_ingame_lookup_hint':
+        return 'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
       case 'download_subscription_start_episode':
         return ({required Object episode}) => '从第 ${episode} 集开始';
-      case 'download_task_delete_confirm':
-        return ({required Object title}) =>
-            'Delete the download task for ${title}?';
-      case 'download_task_action_failed':
-        return ({required Object error}) => 'The task action failed: ${error}';
-      case 'download_task_details':
-        return 'View details';
-      case 'download_detail_section_task':
-        return 'Task';
+      case 'drag_drop_failed':
+        return 'Couldn\'t handle the dropped files. Please try again.';
+      case 'tag_add_failed':
+        return 'Couldn\'t add the tag. Please try again.';
+      case 'tag_reorder_failed':
+        return 'Couldn\'t save the new tag order. Please try again.';
+      case 'download_detail_backend_offline':
+        return 'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
+      case 'download_detail_content_path_label':
+        return 'Content path';
       case 'download_detail_hash_label':
         return 'Info hash';
-      case 'download_detail_total_size_label':
-        return 'Total size';
+      case 'download_detail_raw_state_label':
+        return 'Backend state';
       case 'download_detail_remaining_label':
         return 'Remaining';
       case 'download_detail_save_path_label':
         return 'Save path';
-      case 'download_detail_content_path_label':
-        return 'Content path';
-      case 'download_detail_raw_state_label':
-        return 'Backend state';
-      case 'download_detail_backend_offline':
-        return 'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
+      case 'download_detail_section_task':
+        return 'Task';
       case 'download_detail_task_missing':
         return 'The original download backend is online, but this torrent is no longer present. Live peers and trackers cannot be recovered; persisted task information is shown.';
+      case 'download_detail_total_size_label':
+        return 'Total size';
+      case 'download_task_action_failed':
+        return ({required Object error}) => 'The task action failed: ${error}';
+      case 'download_task_delete':
+        return 'Delete task';
+      case 'download_task_delete_confirm':
+        return ({required Object title}) =>
+            'Delete the download task for ${title}?';
+      case 'download_task_delete_files':
+        return 'Also delete downloaded files';
+      case 'download_task_details':
+        return 'View details';
+      case 'download_task_location_missing':
+        return 'The task file location is unavailable.';
+      case 'download_task_location_open_failed':
+        return 'Could not open the file location.';
+      case 'download_task_open_location':
+        return 'Show in folder';
       default:
         return null;
     }
@@ -223898,8 +224589,6 @@ extension on _StringsVi {
         return 'Download backend is not configured yet.';
       case 'download_clear_finished':
         return 'Clear finished';
-      case 'download_discover_tab':
-        return 'Discover';
       case 'download_network_proxy_auto':
         return 'Auto';
       case 'download_network_proxy_auto_hint':
@@ -229360,43 +230049,65 @@ extension on _StringsVi {
                 required Object done,
                 required Object total}) =>
             'Downloading ${name} (${done} / ${total})';
-      case 'download_task_open_location':
-        return 'Show in folder';
-      case 'download_task_delete':
-        return 'Delete task';
-      case 'download_task_delete_files':
-        return 'Also delete downloaded files';
-      case 'download_task_location_missing':
-        return 'The task file location is unavailable.';
-      case 'download_task_location_open_failed':
-        return 'Could not open the file location.';
+      case 'video_subtitle_attach_book_missing':
+        return 'This video isn\'t in your library, so the subtitle wasn\'t attached';
+      case 'dict_download_hide':
+        return 'Run in background';
+      case 'dict_download_progress_show':
+        return 'View progress';
+      case 'dict_download_cancelled':
+        return 'Download cancelled.';
+      case 'dict_download_import_uncancellable':
+        return 'Importing cannot be interrupted';
+      case 'dict_download_busy':
+        return 'A dictionary download is already running.';
+      case 'gal_hook_ingame_lookup':
+        return 'In-game dictionary lookup';
+      case 'gal_hook_ingame_lookup_hint':
+        return 'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
       case 'download_subscription_start_episode':
         return ({required Object episode}) => '从第 ${episode} 集开始';
-      case 'download_task_delete_confirm':
-        return ({required Object title}) =>
-            'Delete the download task for ${title}?';
-      case 'download_task_action_failed':
-        return ({required Object error}) => 'The task action failed: ${error}';
-      case 'download_task_details':
-        return 'View details';
-      case 'download_detail_section_task':
-        return 'Task';
+      case 'drag_drop_failed':
+        return 'Couldn\'t handle the dropped files. Please try again.';
+      case 'tag_add_failed':
+        return 'Couldn\'t add the tag. Please try again.';
+      case 'tag_reorder_failed':
+        return 'Couldn\'t save the new tag order. Please try again.';
+      case 'download_detail_backend_offline':
+        return 'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
+      case 'download_detail_content_path_label':
+        return 'Content path';
       case 'download_detail_hash_label':
         return 'Info hash';
-      case 'download_detail_total_size_label':
-        return 'Total size';
+      case 'download_detail_raw_state_label':
+        return 'Backend state';
       case 'download_detail_remaining_label':
         return 'Remaining';
       case 'download_detail_save_path_label':
         return 'Save path';
-      case 'download_detail_content_path_label':
-        return 'Content path';
-      case 'download_detail_raw_state_label':
-        return 'Backend state';
-      case 'download_detail_backend_offline':
-        return 'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
+      case 'download_detail_section_task':
+        return 'Task';
       case 'download_detail_task_missing':
         return 'The original download backend is online, but this torrent is no longer present. Live peers and trackers cannot be recovered; persisted task information is shown.';
+      case 'download_detail_total_size_label':
+        return 'Total size';
+      case 'download_task_action_failed':
+        return ({required Object error}) => 'The task action failed: ${error}';
+      case 'download_task_delete':
+        return 'Delete task';
+      case 'download_task_delete_confirm':
+        return ({required Object title}) =>
+            'Delete the download task for ${title}?';
+      case 'download_task_delete_files':
+        return 'Also delete downloaded files';
+      case 'download_task_details':
+        return 'View details';
+      case 'download_task_location_missing':
+        return 'The task file location is unavailable.';
+      case 'download_task_location_open_failed':
+        return 'Could not open the file location.';
+      case 'download_task_open_location':
+        return 'Show in folder';
       default:
         return null;
     }
@@ -230720,8 +231431,6 @@ extension on _StringsZhCn {
         return '请先配置下载后端。';
       case 'download_clear_finished':
         return '清除已完成';
-      case 'download_discover_tab':
-        return '发现';
       case 'download_network_proxy_auto':
         return '自动';
       case 'download_network_proxy_auto_hint':
@@ -236141,40 +236850,62 @@ extension on _StringsZhCn {
                 required Object done,
                 required Object total}) =>
             '正在下载 ${name}（${done} / ${total}）';
-      case 'download_task_open_location':
-        return '打开文件位置';
-      case 'download_task_delete':
-        return '删除任务';
-      case 'download_task_delete_files':
-        return '同时删除已下载文件';
-      case 'download_task_location_missing':
-        return '找不到该任务对应的文件位置。';
-      case 'download_task_location_open_failed':
-        return '无法打开文件位置。';
-      case 'download_task_delete_confirm':
-        return ({required Object title}) => '删除“${title}”的下载任务吗？';
-      case 'download_task_action_failed':
-        return ({required Object error}) => '任务操作失败：${error}';
-      case 'download_task_details':
-        return '查看详情';
-      case 'download_detail_section_task':
-        return '任务';
+      case 'video_subtitle_attach_book_missing':
+        return '该视频不在视频库中，字幕没有挂上';
+      case 'dict_download_hide':
+        return '后台继续';
+      case 'dict_download_progress_show':
+        return '查看进度';
+      case 'dict_download_cancelled':
+        return '已取消下载。';
+      case 'dict_download_import_uncancellable':
+        return '导入阶段无法中断';
+      case 'dict_download_busy':
+        return '已有词典下载正在进行。';
+      case 'gal_hook_ingame_lookup':
+        return '游戏内查词';
+      case 'gal_hook_ingame_lookup_hint':
+        return '在游戏画面内直接显示词典卡片（KiriKiri 引擎，仅 Windows）';
+      case 'drag_drop_failed':
+        return '拖入的文件处理失败，请重试。';
+      case 'tag_add_failed':
+        return '标签添加失败，请重试。';
+      case 'tag_reorder_failed':
+        return '标签排序保存失败，请重试。';
+      case 'download_detail_backend_offline':
+        return '原下载后端当前离线。这里仍显示已保存的任务信息，但实时参数暂不可用。';
+      case 'download_detail_content_path_label':
+        return '内容路径';
       case 'download_detail_hash_label':
         return '信息哈希';
-      case 'download_detail_total_size_label':
-        return '总大小';
+      case 'download_detail_raw_state_label':
+        return '后端状态';
       case 'download_detail_remaining_label':
         return '剩余大小';
       case 'download_detail_save_path_label':
         return '保存路径';
-      case 'download_detail_content_path_label':
-        return '内容路径';
-      case 'download_detail_raw_state_label':
-        return '后端状态';
-      case 'download_detail_backend_offline':
-        return '原下载后端当前离线。这里仍显示已保存的任务信息，但实时参数暂不可用。';
+      case 'download_detail_section_task':
+        return '任务';
       case 'download_detail_task_missing':
         return '原下载后端在线，但该 torrent 已不在引擎中。实时节点和 Tracker 无法恢复，这里显示已保存的任务信息。';
+      case 'download_detail_total_size_label':
+        return '总大小';
+      case 'download_task_action_failed':
+        return ({required Object error}) => '任务操作失败：${error}';
+      case 'download_task_delete':
+        return '删除任务';
+      case 'download_task_delete_confirm':
+        return ({required Object title}) => '删除“${title}”的下载任务吗？';
+      case 'download_task_delete_files':
+        return '同时删除已下载文件';
+      case 'download_task_details':
+        return '查看详情';
+      case 'download_task_location_missing':
+        return '找不到该任务对应的文件位置。';
+      case 'download_task_location_open_failed':
+        return '无法打开文件位置。';
+      case 'download_task_open_location':
+        return '打开文件位置';
       default:
         return null;
     }
@@ -237503,8 +238234,6 @@ extension on _StringsZhHk {
         return 'Download backend is not configured yet.';
       case 'download_clear_finished':
         return 'Clear finished';
-      case 'download_discover_tab':
-        return 'Discover';
       case 'download_network_proxy_auto':
         return 'Auto';
       case 'download_network_proxy_auto_hint':
@@ -242947,43 +243676,65 @@ extension on _StringsZhHk {
                 required Object done,
                 required Object total}) =>
             'Downloading ${name} (${done} / ${total})';
-      case 'download_task_open_location':
-        return 'Show in folder';
-      case 'download_task_delete':
-        return 'Delete task';
-      case 'download_task_delete_files':
-        return 'Also delete downloaded files';
-      case 'download_task_location_missing':
-        return 'The task file location is unavailable.';
-      case 'download_task_location_open_failed':
-        return 'Could not open the file location.';
+      case 'video_subtitle_attach_book_missing':
+        return 'This video isn\'t in your library, so the subtitle wasn\'t attached';
+      case 'dict_download_hide':
+        return 'Run in background';
+      case 'dict_download_progress_show':
+        return 'View progress';
+      case 'dict_download_cancelled':
+        return 'Download cancelled.';
+      case 'dict_download_import_uncancellable':
+        return 'Importing cannot be interrupted';
+      case 'dict_download_busy':
+        return 'A dictionary download is already running.';
+      case 'gal_hook_ingame_lookup':
+        return 'In-game dictionary lookup';
+      case 'gal_hook_ingame_lookup_hint':
+        return 'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
       case 'download_subscription_start_episode':
         return ({required Object episode}) => '从第 ${episode} 集开始';
-      case 'download_task_delete_confirm':
-        return ({required Object title}) =>
-            'Delete the download task for ${title}?';
-      case 'download_task_action_failed':
-        return ({required Object error}) => 'The task action failed: ${error}';
-      case 'download_task_details':
-        return 'View details';
-      case 'download_detail_section_task':
-        return 'Task';
+      case 'drag_drop_failed':
+        return 'Couldn\'t handle the dropped files. Please try again.';
+      case 'tag_add_failed':
+        return 'Couldn\'t add the tag. Please try again.';
+      case 'tag_reorder_failed':
+        return 'Couldn\'t save the new tag order. Please try again.';
+      case 'download_detail_backend_offline':
+        return 'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
+      case 'download_detail_content_path_label':
+        return 'Content path';
       case 'download_detail_hash_label':
         return 'Info hash';
-      case 'download_detail_total_size_label':
-        return 'Total size';
+      case 'download_detail_raw_state_label':
+        return 'Backend state';
       case 'download_detail_remaining_label':
         return 'Remaining';
       case 'download_detail_save_path_label':
         return 'Save path';
-      case 'download_detail_content_path_label':
-        return 'Content path';
-      case 'download_detail_raw_state_label':
-        return 'Backend state';
-      case 'download_detail_backend_offline':
-        return 'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
+      case 'download_detail_section_task':
+        return 'Task';
       case 'download_detail_task_missing':
         return 'The original download backend is online, but this torrent is no longer present. Live peers and trackers cannot be recovered; persisted task information is shown.';
+      case 'download_detail_total_size_label':
+        return 'Total size';
+      case 'download_task_action_failed':
+        return ({required Object error}) => 'The task action failed: ${error}';
+      case 'download_task_delete':
+        return 'Delete task';
+      case 'download_task_delete_confirm':
+        return ({required Object title}) =>
+            'Delete the download task for ${title}?';
+      case 'download_task_delete_files':
+        return 'Also delete downloaded files';
+      case 'download_task_details':
+        return 'View details';
+      case 'download_task_location_missing':
+        return 'The task file location is unavailable.';
+      case 'download_task_location_open_failed':
+        return 'Could not open the file location.';
+      case 'download_task_open_location':
+        return 'Show in folder';
       default:
         return null;
     }
