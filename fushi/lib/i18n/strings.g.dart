@@ -3,7 +3,7 @@
 /// Locales: 17
 /// Strings: 56338 (3314 per locale)
 ///
-/// Built on 2026-08-11 at 06:35 UTC
+/// Built on 2026-08-11 at 06:56 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -1015,7 +1015,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get download_backend_not_configured =>
       'Download backend is not configured yet.';
   String get download_clear_finished => 'Clear finished';
-  String get download_discover_tab => 'Discover';
   String get download_network_proxy_auto => 'Auto';
   String get download_network_proxy_auto_hint =>
       'Applies to AniList, Nyaa, and Jimaku only. Auto uses environment variables, then the enabled system proxy; torrent traffic is unchanged.';
@@ -3906,6 +3905,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_scrape_collection_rename_keep => 'Keep current name';
   String get video_scrape_collection_rename_confirm => 'Rename';
   String get download_task_toggle_failed => 'Pause/resume failed';
+  String download_subscription_start_episode({required Object episode}) =>
+      'Start from episode ${episode}';
   String get download_task_eta => 'ETA';
   String get download_task_ratio => 'Ratio';
   String get download_task_status_downloading => 'Downloading';
@@ -5985,8 +5986,6 @@ class _StringsAr extends _StringsEn {
       'Download backend is not configured yet.';
   @override
   String get download_clear_finished => 'Clear finished';
-  @override
-  String get download_discover_tab => 'Discover';
   @override
   String get download_network_proxy_auto => 'Auto';
   @override
@@ -12132,6 +12131,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get gal_hook_ingame_lookup_hint =>
       'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
+  @override
+  String download_subscription_start_episode({required Object episode}) =>
+      '从第 ${episode} 集开始';
 }
 
 // Path: <root>
@@ -13651,8 +13653,6 @@ class _StringsDe extends _StringsEn {
       'Download backend is not configured yet.';
   @override
   String get download_clear_finished => 'Clear finished';
-  @override
-  String get download_discover_tab => 'Discover';
   @override
   String get download_network_proxy_auto => 'Auto';
   @override
@@ -19847,6 +19847,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get gal_hook_ingame_lookup_hint =>
       'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
+  @override
+  String download_subscription_start_episode({required Object episode}) =>
+      '从第 ${episode} 集开始';
 }
 
 // Path: <root>
@@ -21366,8 +21369,6 @@ class _StringsEs extends _StringsEn {
       'Download backend is not configured yet.';
   @override
   String get download_clear_finished => 'Clear finished';
-  @override
-  String get download_discover_tab => 'Discover';
   @override
   String get download_network_proxy_auto => 'Auto';
   @override
@@ -27578,6 +27579,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get gal_hook_ingame_lookup_hint =>
       'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
+  @override
+  String download_subscription_start_episode({required Object episode}) =>
+      '从第 ${episode} 集开始';
 }
 
 // Path: <root>
@@ -29107,8 +29111,6 @@ class _StringsFr extends _StringsEn {
       'Download backend is not configured yet.';
   @override
   String get download_clear_finished => 'Clear finished';
-  @override
-  String get download_discover_tab => 'Discover';
   @override
   String get download_network_proxy_auto => 'Auto';
   @override
@@ -35321,6 +35323,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get gal_hook_ingame_lookup_hint =>
       'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
+  @override
+  String download_subscription_start_episode({required Object episode}) =>
+      '从第 ${episode} 集开始';
 }
 
 // Path: <root>
@@ -36822,8 +36827,6 @@ class _StringsId extends _StringsEn {
       'Download backend is not configured yet.';
   @override
   String get download_clear_finished => 'Clear finished';
-  @override
-  String get download_discover_tab => 'Discover';
   @override
   String get download_network_proxy_auto => 'Auto';
   @override
@@ -42992,6 +42995,9 @@ class _StringsId extends _StringsEn {
   @override
   String get gal_hook_ingame_lookup_hint =>
       'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
+  @override
+  String download_subscription_start_episode({required Object episode}) =>
+      '从第 ${episode} 集开始';
 }
 
 // Path: <root>
@@ -44506,8 +44512,6 @@ class _StringsIt extends _StringsEn {
       'Download backend is not configured yet.';
   @override
   String get download_clear_finished => 'Clear finished';
-  @override
-  String get download_discover_tab => 'Discover';
   @override
   String get download_network_proxy_auto => 'Auto';
   @override
@@ -50709,6 +50713,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get gal_hook_ingame_lookup_hint =>
       'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
+  @override
+  String download_subscription_start_episode({required Object episode}) =>
+      '从第 ${episode} 集开始';
 }
 
 // Path: <root>
@@ -52187,8 +52194,6 @@ class _StringsJa extends _StringsEn {
       'Download backend is not configured yet.';
   @override
   String get download_clear_finished => 'Clear finished';
-  @override
-  String get download_discover_tab => 'Discover';
   @override
   String get download_network_proxy_auto => 'Auto';
   @override
@@ -58240,6 +58245,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get gal_hook_ingame_lookup_hint =>
       'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
+  @override
+  String download_subscription_start_episode({required Object episode}) =>
+      '从第 ${episode} 集开始';
 }
 
 // Path: <root>
@@ -59718,8 +59726,6 @@ class _StringsKo extends _StringsEn {
       'Download backend is not configured yet.';
   @override
   String get download_clear_finished => 'Clear finished';
-  @override
-  String get download_discover_tab => 'Discover';
   @override
   String get download_network_proxy_auto => 'Auto';
   @override
@@ -65778,6 +65784,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get gal_hook_ingame_lookup_hint =>
       'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
+  @override
+  String download_subscription_start_episode({required Object episode}) =>
+      '从第 ${episode} 集开始';
 }
 
 // Path: <root>
@@ -67290,8 +67299,6 @@ class _StringsNl extends _StringsEn {
       'Download backend is not configured yet.';
   @override
   String get download_clear_finished => 'Clear finished';
-  @override
-  String get download_discover_tab => 'Discover';
   @override
   String get download_network_proxy_auto => 'Auto';
   @override
@@ -73475,6 +73482,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get gal_hook_ingame_lookup_hint =>
       'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
+  @override
+  String download_subscription_start_episode({required Object episode}) =>
+      '从第 ${episode} 集开始';
 }
 
 // Path: <root>
@@ -74992,8 +75002,6 @@ class _StringsPtBr extends _StringsEn {
       'Download backend is not configured yet.';
   @override
   String get download_clear_finished => 'Clear finished';
-  @override
-  String get download_discover_tab => 'Discover';
   @override
   String get download_network_proxy_auto => 'Auto';
   @override
@@ -81184,6 +81192,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get gal_hook_ingame_lookup_hint =>
       'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
+  @override
+  String download_subscription_start_episode({required Object episode}) =>
+      '从第 ${episode} 集开始';
 }
 
 // Path: <root>
@@ -82693,8 +82704,6 @@ class _StringsRu extends _StringsEn {
       'Download backend is not configured yet.';
   @override
   String get download_clear_finished => 'Clear finished';
-  @override
-  String get download_discover_tab => 'Discover';
   @override
   String get download_network_proxy_auto => 'Auto';
   @override
@@ -88879,6 +88888,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get gal_hook_ingame_lookup_hint =>
       'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
+  @override
+  String download_subscription_start_episode({required Object episode}) =>
+      '从第 ${episode} 集开始';
 }
 
 // Path: <root>
@@ -90375,8 +90387,6 @@ class _StringsTh extends _StringsEn {
       'Download backend is not configured yet.';
   @override
   String get download_clear_finished => 'Clear finished';
-  @override
-  String get download_discover_tab => 'Discover';
   @override
   String get download_network_proxy_auto => 'Auto';
   @override
@@ -96522,6 +96532,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get gal_hook_ingame_lookup_hint =>
       'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
+  @override
+  String download_subscription_start_episode({required Object episode}) =>
+      '从第 ${episode} 集开始';
 }
 
 // Path: <root>
@@ -98030,8 +98043,6 @@ class _StringsTr extends _StringsEn {
       'Download backend is not configured yet.';
   @override
   String get download_clear_finished => 'Clear finished';
-  @override
-  String get download_discover_tab => 'Discover';
   @override
   String get download_network_proxy_auto => 'Auto';
   @override
@@ -104196,6 +104207,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get gal_hook_ingame_lookup_hint =>
       'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
+  @override
+  String download_subscription_start_episode({required Object episode}) =>
+      '从第 ${episode} 集开始';
 }
 
 // Path: <root>
@@ -105701,8 +105715,6 @@ class _StringsVi extends _StringsEn {
       'Download backend is not configured yet.';
   @override
   String get download_clear_finished => 'Clear finished';
-  @override
-  String get download_discover_tab => 'Discover';
   @override
   String get download_network_proxy_auto => 'Auto';
   @override
@@ -111855,6 +111867,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get gal_hook_ingame_lookup_hint =>
       'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
+  @override
+  String download_subscription_start_episode({required Object episode}) =>
+      '从第 ${episode} 集开始';
 }
 
 // Path: <root>
@@ -113262,8 +113277,6 @@ class _StringsZhCn extends _StringsEn {
   String get download_backend_not_configured => '请先配置下载后端。';
   @override
   String get download_clear_finished => '清除已完成';
-  @override
-  String get download_discover_tab => '发现';
   @override
   String get download_network_proxy_auto => '自动';
   @override
@@ -118034,6 +118047,9 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get download_task_toggle_failed => '暂停/恢复操作失败';
   @override
+  String download_subscription_start_episode({required Object episode}) =>
+      '从第 ${episode} 集开始';
+  @override
   String get download_task_eta => '剩余';
   @override
   String get download_task_ratio => '分享率';
@@ -120416,8 +120432,6 @@ class _StringsZhHk extends _StringsEn {
       'Download backend is not configured yet.';
   @override
   String get download_clear_finished => 'Clear finished';
-  @override
-  String get download_discover_tab => 'Discover';
   @override
   String get download_network_proxy_auto => 'Auto';
   @override
@@ -126416,6 +126430,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get gal_hook_ingame_lookup_hint =>
       'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
+  @override
+  String download_subscription_start_episode({required Object episode}) =>
+      '从第 ${episode} 集开始';
 }
 
 /// Flat map(s) containing all translations.
@@ -127751,8 +127768,6 @@ extension on _StringsEn {
         return 'Download backend is not configured yet.';
       case 'download_clear_finished':
         return 'Clear finished';
-      case 'download_discover_tab':
-        return 'Discover';
       case 'download_network_proxy_auto':
         return 'Auto';
       case 'download_network_proxy_auto_hint':
@@ -132339,6 +132354,8 @@ extension on _StringsEn {
         return 'Rename';
       case 'download_task_toggle_failed':
         return 'Pause/resume failed';
+      case 'download_subscription_start_episode':
+        return ({required Object episode}) => 'Start from episode ${episode}';
       case 'download_task_eta':
         return 'ETA';
       case 'download_task_ratio':
@@ -134562,8 +134579,6 @@ extension on _StringsAr {
         return 'Download backend is not configured yet.';
       case 'download_clear_finished':
         return 'Clear finished';
-      case 'download_discover_tab':
-        return 'Discover';
       case 'download_network_proxy_auto':
         return 'Auto';
       case 'download_network_proxy_auto_hint':
@@ -140034,6 +140049,8 @@ extension on _StringsAr {
         return 'In-game dictionary lookup';
       case 'gal_hook_ingame_lookup_hint':
         return 'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
+      case 'download_subscription_start_episode':
+        return ({required Object episode}) => '从第 ${episode} 集开始';
       default:
         return null;
     }
@@ -141374,8 +141391,6 @@ extension on _StringsDe {
         return 'Download backend is not configured yet.';
       case 'download_clear_finished':
         return 'Clear finished';
-      case 'download_discover_tab':
-        return 'Discover';
       case 'download_network_proxy_auto':
         return 'Auto';
       case 'download_network_proxy_auto_hint':
@@ -146864,6 +146879,8 @@ extension on _StringsDe {
         return 'In-game dictionary lookup';
       case 'gal_hook_ingame_lookup_hint':
         return 'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
+      case 'download_subscription_start_episode':
+        return ({required Object episode}) => '从第 ${episode} 集开始';
       default:
         return null;
     }
@@ -148205,8 +148222,6 @@ extension on _StringsEs {
         return 'Download backend is not configured yet.';
       case 'download_clear_finished':
         return 'Clear finished';
-      case 'download_discover_tab':
-        return 'Discover';
       case 'download_network_proxy_auto':
         return 'Auto';
       case 'download_network_proxy_auto_hint':
@@ -153693,6 +153708,8 @@ extension on _StringsEs {
         return 'In-game dictionary lookup';
       case 'gal_hook_ingame_lookup_hint':
         return 'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
+      case 'download_subscription_start_episode':
+        return ({required Object episode}) => '从第 ${episode} 集开始';
       default:
         return null;
     }
@@ -155037,8 +155054,6 @@ extension on _StringsFr {
         return 'Download backend is not configured yet.';
       case 'download_clear_finished':
         return 'Clear finished';
-      case 'download_discover_tab':
-        return 'Discover';
       case 'download_network_proxy_auto':
         return 'Auto';
       case 'download_network_proxy_auto_hint':
@@ -160528,6 +160543,8 @@ extension on _StringsFr {
         return 'In-game dictionary lookup';
       case 'gal_hook_ingame_lookup_hint':
         return 'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
+      case 'download_subscription_start_episode':
+        return ({required Object episode}) => '从第 ${episode} 集开始';
       default:
         return null;
     }
@@ -161867,8 +161884,6 @@ extension on _StringsId {
         return 'Download backend is not configured yet.';
       case 'download_clear_finished':
         return 'Clear finished';
-      case 'download_discover_tab':
-        return 'Discover';
       case 'download_network_proxy_auto':
         return 'Auto';
       case 'download_network_proxy_auto_hint':
@@ -167345,6 +167360,8 @@ extension on _StringsId {
         return 'In-game dictionary lookup';
       case 'gal_hook_ingame_lookup_hint':
         return 'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
+      case 'download_subscription_start_episode':
+        return ({required Object episode}) => '从第 ${episode} 集开始';
       default:
         return null;
     }
@@ -168685,8 +168702,6 @@ extension on _StringsIt {
         return 'Download backend is not configured yet.';
       case 'download_clear_finished':
         return 'Clear finished';
-      case 'download_discover_tab':
-        return 'Discover';
       case 'download_network_proxy_auto':
         return 'Auto';
       case 'download_network_proxy_auto_hint':
@@ -174176,6 +174191,8 @@ extension on _StringsIt {
         return 'In-game dictionary lookup';
       case 'gal_hook_ingame_lookup_hint':
         return 'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
+      case 'download_subscription_start_episode':
+        return ({required Object episode}) => '从第 ${episode} 集开始';
       default:
         return null;
     }
@@ -175505,8 +175522,6 @@ extension on _StringsJa {
         return 'Download backend is not configured yet.';
       case 'download_clear_finished':
         return 'Clear finished';
-      case 'download_discover_tab':
-        return 'Discover';
       case 'download_network_proxy_auto':
         return 'Auto';
       case 'download_network_proxy_auto_hint':
@@ -180969,6 +180984,8 @@ extension on _StringsJa {
         return 'In-game dictionary lookup';
       case 'gal_hook_ingame_lookup_hint':
         return 'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
+      case 'download_subscription_start_episode':
+        return ({required Object episode}) => '从第 ${episode} 集开始';
       default:
         return null;
     }
@@ -182299,8 +182316,6 @@ extension on _StringsKo {
         return 'Download backend is not configured yet.';
       case 'download_clear_finished':
         return 'Clear finished';
-      case 'download_discover_tab':
-        return 'Discover';
       case 'download_network_proxy_auto':
         return 'Auto';
       case 'download_network_proxy_auto_hint':
@@ -187766,6 +187781,8 @@ extension on _StringsKo {
         return 'In-game dictionary lookup';
       case 'gal_hook_ingame_lookup_hint':
         return 'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
+      case 'download_subscription_start_episode':
+        return ({required Object episode}) => '从第 ${episode} 集开始';
       default:
         return null;
     }
@@ -189106,8 +189123,6 @@ extension on _StringsNl {
         return 'Download backend is not configured yet.';
       case 'download_clear_finished':
         return 'Clear finished';
-      case 'download_discover_tab':
-        return 'Discover';
       case 'download_network_proxy_auto':
         return 'Auto';
       case 'download_network_proxy_auto_hint':
@@ -194591,6 +194606,8 @@ extension on _StringsNl {
         return 'In-game dictionary lookup';
       case 'gal_hook_ingame_lookup_hint':
         return 'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
+      case 'download_subscription_start_episode':
+        return ({required Object episode}) => '从第 ${episode} 集开始';
       default:
         return null;
     }
@@ -195930,8 +195947,6 @@ extension on _StringsPtBr {
         return 'Download backend is not configured yet.';
       case 'download_clear_finished':
         return 'Clear finished';
-      case 'download_discover_tab':
-        return 'Discover';
       case 'download_network_proxy_auto':
         return 'Auto';
       case 'download_network_proxy_auto_hint':
@@ -201413,6 +201428,8 @@ extension on _StringsPtBr {
         return 'In-game dictionary lookup';
       case 'gal_hook_ingame_lookup_hint':
         return 'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
+      case 'download_subscription_start_episode':
+        return ({required Object episode}) => '从第 ${episode} 集开始';
       default:
         return null;
     }
@@ -202755,8 +202772,6 @@ extension on _StringsRu {
         return 'Download backend is not configured yet.';
       case 'download_clear_finished':
         return 'Clear finished';
-      case 'download_discover_tab':
-        return 'Discover';
       case 'download_network_proxy_auto':
         return 'Auto';
       case 'download_network_proxy_auto_hint':
@@ -208240,6 +208255,8 @@ extension on _StringsRu {
         return 'In-game dictionary lookup';
       case 'gal_hook_ingame_lookup_hint':
         return 'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
+      case 'download_subscription_start_episode':
+        return ({required Object episode}) => '从第 ${episode} 集开始';
       default:
         return null;
     }
@@ -209574,8 +209591,6 @@ extension on _StringsTh {
         return 'Download backend is not configured yet.';
       case 'download_clear_finished':
         return 'Clear finished';
-      case 'download_discover_tab':
-        return 'Discover';
       case 'download_network_proxy_auto':
         return 'Auto';
       case 'download_network_proxy_auto_hint':
@@ -215050,6 +215065,8 @@ extension on _StringsTh {
         return 'In-game dictionary lookup';
       case 'gal_hook_ingame_lookup_hint':
         return 'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
+      case 'download_subscription_start_episode':
+        return ({required Object episode}) => '从第 ${episode} 集开始';
       default:
         return null;
     }
@@ -216389,8 +216406,6 @@ extension on _StringsTr {
         return 'Download backend is not configured yet.';
       case 'download_clear_finished':
         return 'Clear finished';
-      case 'download_discover_tab':
-        return 'Discover';
       case 'download_network_proxy_auto':
         return 'Auto';
       case 'download_network_proxy_auto_hint':
@@ -221869,6 +221884,8 @@ extension on _StringsTr {
         return 'In-game dictionary lookup';
       case 'gal_hook_ingame_lookup_hint':
         return 'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
+      case 'download_subscription_start_episode':
+        return ({required Object episode}) => '从第 ${episode} 集开始';
       default:
         return null;
     }
@@ -223206,8 +223223,6 @@ extension on _StringsVi {
         return 'Download backend is not configured yet.';
       case 'download_clear_finished':
         return 'Clear finished';
-      case 'download_discover_tab':
-        return 'Discover';
       case 'download_network_proxy_auto':
         return 'Auto';
       case 'download_network_proxy_auto_hint':
@@ -228684,6 +228699,8 @@ extension on _StringsVi {
         return 'In-game dictionary lookup';
       case 'gal_hook_ingame_lookup_hint':
         return 'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
+      case 'download_subscription_start_episode':
+        return ({required Object episode}) => '从第 ${episode} 集开始';
       default:
         return null;
     }
@@ -230007,8 +230024,6 @@ extension on _StringsZhCn {
         return '请先配置下载后端。';
       case 'download_clear_finished':
         return '清除已完成';
-      case 'download_discover_tab':
-        return '发现';
       case 'download_network_proxy_auto':
         return '自动';
       case 'download_network_proxy_auto_hint':
@@ -234559,6 +234574,8 @@ extension on _StringsZhCn {
         return '重命名';
       case 'download_task_toggle_failed':
         return '暂停/恢复操作失败';
+      case 'download_subscription_start_episode':
+        return ({required Object episode}) => '从第 ${episode} 集开始';
       case 'download_task_eta':
         return '剩余';
       case 'download_task_ratio':
@@ -236770,8 +236787,6 @@ extension on _StringsZhHk {
         return 'Download backend is not configured yet.';
       case 'download_clear_finished':
         return 'Clear finished';
-      case 'download_discover_tab':
-        return 'Discover';
       case 'download_network_proxy_auto':
         return 'Auto';
       case 'download_network_proxy_auto_hint':
@@ -242230,6 +242245,8 @@ extension on _StringsZhHk {
         return 'In-game dictionary lookup';
       case 'gal_hook_ingame_lookup_hint':
         return 'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
+      case 'download_subscription_start_episode':
+        return ({required Object episode}) => '从第 ${episode} 集开始';
       default:
         return null;
     }
