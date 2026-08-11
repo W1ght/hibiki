@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 56338 (3314 per locale)
+/// Strings: 56389 (3317 per locale)
 ///
-/// Built on 2026-08-11 at 06:56 UTC
+/// Built on 2026-08-11 at 07:47 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -4485,6 +4485,11 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get gal_hook_ingame_lookup => 'In-game dictionary lookup';
   String get gal_hook_ingame_lookup_hint =>
       'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
+  String get drag_drop_failed =>
+      'Couldn\'t handle the dropped files. Please try again.';
+  String get tag_add_failed => 'Couldn\'t add the tag. Please try again.';
+  String get tag_reorder_failed =>
+      'Couldn\'t save the new tag order. Please try again.';
 }
 
 // Path: <root>
@@ -12134,6 +12139,14 @@ class _StringsAr extends _StringsEn {
   @override
   String download_subscription_start_episode({required Object episode}) =>
       '从第 ${episode} 集开始';
+  @override
+  String get drag_drop_failed =>
+      'Couldn\'t handle the dropped files. Please try again.';
+  @override
+  String get tag_add_failed => 'Couldn\'t add the tag. Please try again.';
+  @override
+  String get tag_reorder_failed =>
+      'Couldn\'t save the new tag order. Please try again.';
 }
 
 // Path: <root>
@@ -19850,6 +19863,14 @@ class _StringsDe extends _StringsEn {
   @override
   String download_subscription_start_episode({required Object episode}) =>
       '从第 ${episode} 集开始';
+  @override
+  String get drag_drop_failed =>
+      'Couldn\'t handle the dropped files. Please try again.';
+  @override
+  String get tag_add_failed => 'Couldn\'t add the tag. Please try again.';
+  @override
+  String get tag_reorder_failed =>
+      'Couldn\'t save the new tag order. Please try again.';
 }
 
 // Path: <root>
@@ -27582,6 +27603,14 @@ class _StringsEs extends _StringsEn {
   @override
   String download_subscription_start_episode({required Object episode}) =>
       '从第 ${episode} 集开始';
+  @override
+  String get drag_drop_failed =>
+      'Couldn\'t handle the dropped files. Please try again.';
+  @override
+  String get tag_add_failed => 'Couldn\'t add the tag. Please try again.';
+  @override
+  String get tag_reorder_failed =>
+      'Couldn\'t save the new tag order. Please try again.';
 }
 
 // Path: <root>
@@ -35326,6 +35355,14 @@ class _StringsFr extends _StringsEn {
   @override
   String download_subscription_start_episode({required Object episode}) =>
       '从第 ${episode} 集开始';
+  @override
+  String get drag_drop_failed =>
+      'Couldn\'t handle the dropped files. Please try again.';
+  @override
+  String get tag_add_failed => 'Couldn\'t add the tag. Please try again.';
+  @override
+  String get tag_reorder_failed =>
+      'Couldn\'t save the new tag order. Please try again.';
 }
 
 // Path: <root>
@@ -42998,6 +43035,14 @@ class _StringsId extends _StringsEn {
   @override
   String download_subscription_start_episode({required Object episode}) =>
       '从第 ${episode} 集开始';
+  @override
+  String get drag_drop_failed =>
+      'Couldn\'t handle the dropped files. Please try again.';
+  @override
+  String get tag_add_failed => 'Couldn\'t add the tag. Please try again.';
+  @override
+  String get tag_reorder_failed =>
+      'Couldn\'t save the new tag order. Please try again.';
 }
 
 // Path: <root>
@@ -50716,6 +50761,14 @@ class _StringsIt extends _StringsEn {
   @override
   String download_subscription_start_episode({required Object episode}) =>
       '从第 ${episode} 集开始';
+  @override
+  String get drag_drop_failed =>
+      'Couldn\'t handle the dropped files. Please try again.';
+  @override
+  String get tag_add_failed => 'Couldn\'t add the tag. Please try again.';
+  @override
+  String get tag_reorder_failed =>
+      'Couldn\'t save the new tag order. Please try again.';
 }
 
 // Path: <root>
@@ -58248,6 +58301,14 @@ class _StringsJa extends _StringsEn {
   @override
   String download_subscription_start_episode({required Object episode}) =>
       '从第 ${episode} 集开始';
+  @override
+  String get drag_drop_failed =>
+      'Couldn\'t handle the dropped files. Please try again.';
+  @override
+  String get tag_add_failed => 'Couldn\'t add the tag. Please try again.';
+  @override
+  String get tag_reorder_failed =>
+      'Couldn\'t save the new tag order. Please try again.';
 }
 
 // Path: <root>
@@ -65787,6 +65848,14 @@ class _StringsKo extends _StringsEn {
   @override
   String download_subscription_start_episode({required Object episode}) =>
       '从第 ${episode} 集开始';
+  @override
+  String get drag_drop_failed =>
+      'Couldn\'t handle the dropped files. Please try again.';
+  @override
+  String get tag_add_failed => 'Couldn\'t add the tag. Please try again.';
+  @override
+  String get tag_reorder_failed =>
+      'Couldn\'t save the new tag order. Please try again.';
 }
 
 // Path: <root>
@@ -73485,6 +73554,14 @@ class _StringsNl extends _StringsEn {
   @override
   String download_subscription_start_episode({required Object episode}) =>
       '从第 ${episode} 集开始';
+  @override
+  String get drag_drop_failed =>
+      'Couldn\'t handle the dropped files. Please try again.';
+  @override
+  String get tag_add_failed => 'Couldn\'t add the tag. Please try again.';
+  @override
+  String get tag_reorder_failed =>
+      'Couldn\'t save the new tag order. Please try again.';
 }
 
 // Path: <root>
@@ -81195,6 +81272,14 @@ class _StringsPtBr extends _StringsEn {
   @override
   String download_subscription_start_episode({required Object episode}) =>
       '从第 ${episode} 集开始';
+  @override
+  String get drag_drop_failed =>
+      'Couldn\'t handle the dropped files. Please try again.';
+  @override
+  String get tag_add_failed => 'Couldn\'t add the tag. Please try again.';
+  @override
+  String get tag_reorder_failed =>
+      'Couldn\'t save the new tag order. Please try again.';
 }
 
 // Path: <root>
@@ -88891,6 +88976,14 @@ class _StringsRu extends _StringsEn {
   @override
   String download_subscription_start_episode({required Object episode}) =>
       '从第 ${episode} 集开始';
+  @override
+  String get drag_drop_failed =>
+      'Couldn\'t handle the dropped files. Please try again.';
+  @override
+  String get tag_add_failed => 'Couldn\'t add the tag. Please try again.';
+  @override
+  String get tag_reorder_failed =>
+      'Couldn\'t save the new tag order. Please try again.';
 }
 
 // Path: <root>
@@ -96535,6 +96628,14 @@ class _StringsTh extends _StringsEn {
   @override
   String download_subscription_start_episode({required Object episode}) =>
       '从第 ${episode} 集开始';
+  @override
+  String get drag_drop_failed =>
+      'Couldn\'t handle the dropped files. Please try again.';
+  @override
+  String get tag_add_failed => 'Couldn\'t add the tag. Please try again.';
+  @override
+  String get tag_reorder_failed =>
+      'Couldn\'t save the new tag order. Please try again.';
 }
 
 // Path: <root>
@@ -104210,6 +104311,14 @@ class _StringsTr extends _StringsEn {
   @override
   String download_subscription_start_episode({required Object episode}) =>
       '从第 ${episode} 集开始';
+  @override
+  String get drag_drop_failed =>
+      'Couldn\'t handle the dropped files. Please try again.';
+  @override
+  String get tag_add_failed => 'Couldn\'t add the tag. Please try again.';
+  @override
+  String get tag_reorder_failed =>
+      'Couldn\'t save the new tag order. Please try again.';
 }
 
 // Path: <root>
@@ -111870,6 +111979,14 @@ class _StringsVi extends _StringsEn {
   @override
   String download_subscription_start_episode({required Object episode}) =>
       '从第 ${episode} 集开始';
+  @override
+  String get drag_drop_failed =>
+      'Couldn\'t handle the dropped files. Please try again.';
+  @override
+  String get tag_add_failed => 'Couldn\'t add the tag. Please try again.';
+  @override
+  String get tag_reorder_failed =>
+      'Couldn\'t save the new tag order. Please try again.';
 }
 
 // Path: <root>
@@ -118978,6 +119095,12 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get gal_hook_ingame_lookup_hint =>
       '在游戏画面内直接显示词典卡片（KiriKiri 引擎，仅 Windows）';
+  @override
+  String get drag_drop_failed => '拖入的文件处理失败，请重试。';
+  @override
+  String get tag_add_failed => '标签添加失败，请重试。';
+  @override
+  String get tag_reorder_failed => '标签排序保存失败，请重试。';
 }
 
 // Path: <root>
@@ -126433,6 +126556,14 @@ class _StringsZhHk extends _StringsEn {
   @override
   String download_subscription_start_episode({required Object episode}) =>
       '从第 ${episode} 集开始';
+  @override
+  String get drag_drop_failed =>
+      'Couldn\'t handle the dropped files. Please try again.';
+  @override
+  String get tag_add_failed => 'Couldn\'t add the tag. Please try again.';
+  @override
+  String get tag_reorder_failed =>
+      'Couldn\'t save the new tag order. Please try again.';
 }
 
 /// Flat map(s) containing all translations.
@@ -133243,6 +133374,12 @@ extension on _StringsEn {
         return 'In-game dictionary lookup';
       case 'gal_hook_ingame_lookup_hint':
         return 'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
+      case 'drag_drop_failed':
+        return 'Couldn\'t handle the dropped files. Please try again.';
+      case 'tag_add_failed':
+        return 'Couldn\'t add the tag. Please try again.';
+      case 'tag_reorder_failed':
+        return 'Couldn\'t save the new tag order. Please try again.';
       default:
         return null;
     }
@@ -140051,6 +140188,12 @@ extension on _StringsAr {
         return 'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
       case 'download_subscription_start_episode':
         return ({required Object episode}) => '从第 ${episode} 集开始';
+      case 'drag_drop_failed':
+        return 'Couldn\'t handle the dropped files. Please try again.';
+      case 'tag_add_failed':
+        return 'Couldn\'t add the tag. Please try again.';
+      case 'tag_reorder_failed':
+        return 'Couldn\'t save the new tag order. Please try again.';
       default:
         return null;
     }
@@ -146881,6 +147024,12 @@ extension on _StringsDe {
         return 'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
       case 'download_subscription_start_episode':
         return ({required Object episode}) => '从第 ${episode} 集开始';
+      case 'drag_drop_failed':
+        return 'Couldn\'t handle the dropped files. Please try again.';
+      case 'tag_add_failed':
+        return 'Couldn\'t add the tag. Please try again.';
+      case 'tag_reorder_failed':
+        return 'Couldn\'t save the new tag order. Please try again.';
       default:
         return null;
     }
@@ -153710,6 +153859,12 @@ extension on _StringsEs {
         return 'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
       case 'download_subscription_start_episode':
         return ({required Object episode}) => '从第 ${episode} 集开始';
+      case 'drag_drop_failed':
+        return 'Couldn\'t handle the dropped files. Please try again.';
+      case 'tag_add_failed':
+        return 'Couldn\'t add the tag. Please try again.';
+      case 'tag_reorder_failed':
+        return 'Couldn\'t save the new tag order. Please try again.';
       default:
         return null;
     }
@@ -160545,6 +160700,12 @@ extension on _StringsFr {
         return 'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
       case 'download_subscription_start_episode':
         return ({required Object episode}) => '从第 ${episode} 集开始';
+      case 'drag_drop_failed':
+        return 'Couldn\'t handle the dropped files. Please try again.';
+      case 'tag_add_failed':
+        return 'Couldn\'t add the tag. Please try again.';
+      case 'tag_reorder_failed':
+        return 'Couldn\'t save the new tag order. Please try again.';
       default:
         return null;
     }
@@ -167362,6 +167523,12 @@ extension on _StringsId {
         return 'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
       case 'download_subscription_start_episode':
         return ({required Object episode}) => '从第 ${episode} 集开始';
+      case 'drag_drop_failed':
+        return 'Couldn\'t handle the dropped files. Please try again.';
+      case 'tag_add_failed':
+        return 'Couldn\'t add the tag. Please try again.';
+      case 'tag_reorder_failed':
+        return 'Couldn\'t save the new tag order. Please try again.';
       default:
         return null;
     }
@@ -174193,6 +174360,12 @@ extension on _StringsIt {
         return 'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
       case 'download_subscription_start_episode':
         return ({required Object episode}) => '从第 ${episode} 集开始';
+      case 'drag_drop_failed':
+        return 'Couldn\'t handle the dropped files. Please try again.';
+      case 'tag_add_failed':
+        return 'Couldn\'t add the tag. Please try again.';
+      case 'tag_reorder_failed':
+        return 'Couldn\'t save the new tag order. Please try again.';
       default:
         return null;
     }
@@ -180986,6 +181159,12 @@ extension on _StringsJa {
         return 'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
       case 'download_subscription_start_episode':
         return ({required Object episode}) => '从第 ${episode} 集开始';
+      case 'drag_drop_failed':
+        return 'Couldn\'t handle the dropped files. Please try again.';
+      case 'tag_add_failed':
+        return 'Couldn\'t add the tag. Please try again.';
+      case 'tag_reorder_failed':
+        return 'Couldn\'t save the new tag order. Please try again.';
       default:
         return null;
     }
@@ -187783,6 +187962,12 @@ extension on _StringsKo {
         return 'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
       case 'download_subscription_start_episode':
         return ({required Object episode}) => '从第 ${episode} 集开始';
+      case 'drag_drop_failed':
+        return 'Couldn\'t handle the dropped files. Please try again.';
+      case 'tag_add_failed':
+        return 'Couldn\'t add the tag. Please try again.';
+      case 'tag_reorder_failed':
+        return 'Couldn\'t save the new tag order. Please try again.';
       default:
         return null;
     }
@@ -194608,6 +194793,12 @@ extension on _StringsNl {
         return 'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
       case 'download_subscription_start_episode':
         return ({required Object episode}) => '从第 ${episode} 集开始';
+      case 'drag_drop_failed':
+        return 'Couldn\'t handle the dropped files. Please try again.';
+      case 'tag_add_failed':
+        return 'Couldn\'t add the tag. Please try again.';
+      case 'tag_reorder_failed':
+        return 'Couldn\'t save the new tag order. Please try again.';
       default:
         return null;
     }
@@ -201430,6 +201621,12 @@ extension on _StringsPtBr {
         return 'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
       case 'download_subscription_start_episode':
         return ({required Object episode}) => '从第 ${episode} 集开始';
+      case 'drag_drop_failed':
+        return 'Couldn\'t handle the dropped files. Please try again.';
+      case 'tag_add_failed':
+        return 'Couldn\'t add the tag. Please try again.';
+      case 'tag_reorder_failed':
+        return 'Couldn\'t save the new tag order. Please try again.';
       default:
         return null;
     }
@@ -208257,6 +208454,12 @@ extension on _StringsRu {
         return 'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
       case 'download_subscription_start_episode':
         return ({required Object episode}) => '从第 ${episode} 集开始';
+      case 'drag_drop_failed':
+        return 'Couldn\'t handle the dropped files. Please try again.';
+      case 'tag_add_failed':
+        return 'Couldn\'t add the tag. Please try again.';
+      case 'tag_reorder_failed':
+        return 'Couldn\'t save the new tag order. Please try again.';
       default:
         return null;
     }
@@ -215067,6 +215270,12 @@ extension on _StringsTh {
         return 'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
       case 'download_subscription_start_episode':
         return ({required Object episode}) => '从第 ${episode} 集开始';
+      case 'drag_drop_failed':
+        return 'Couldn\'t handle the dropped files. Please try again.';
+      case 'tag_add_failed':
+        return 'Couldn\'t add the tag. Please try again.';
+      case 'tag_reorder_failed':
+        return 'Couldn\'t save the new tag order. Please try again.';
       default:
         return null;
     }
@@ -221886,6 +222095,12 @@ extension on _StringsTr {
         return 'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
       case 'download_subscription_start_episode':
         return ({required Object episode}) => '从第 ${episode} 集开始';
+      case 'drag_drop_failed':
+        return 'Couldn\'t handle the dropped files. Please try again.';
+      case 'tag_add_failed':
+        return 'Couldn\'t add the tag. Please try again.';
+      case 'tag_reorder_failed':
+        return 'Couldn\'t save the new tag order. Please try again.';
       default:
         return null;
     }
@@ -228701,6 +228916,12 @@ extension on _StringsVi {
         return 'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
       case 'download_subscription_start_episode':
         return ({required Object episode}) => '从第 ${episode} 集开始';
+      case 'drag_drop_failed':
+        return 'Couldn\'t handle the dropped files. Please try again.';
+      case 'tag_add_failed':
+        return 'Couldn\'t add the tag. Please try again.';
+      case 'tag_reorder_failed':
+        return 'Couldn\'t save the new tag order. Please try again.';
       default:
         return null;
     }
@@ -235459,6 +235680,12 @@ extension on _StringsZhCn {
         return '游戏内查词';
       case 'gal_hook_ingame_lookup_hint':
         return '在游戏画面内直接显示词典卡片（KiriKiri 引擎，仅 Windows）';
+      case 'drag_drop_failed':
+        return '拖入的文件处理失败，请重试。';
+      case 'tag_add_failed':
+        return '标签添加失败，请重试。';
+      case 'tag_reorder_failed':
+        return '标签排序保存失败，请重试。';
       default:
         return null;
     }
@@ -242247,6 +242474,12 @@ extension on _StringsZhHk {
         return 'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
       case 'download_subscription_start_episode':
         return ({required Object episode}) => '从第 ${episode} 集开始';
+      case 'drag_drop_failed':
+        return 'Couldn\'t handle the dropped files. Please try again.';
+      case 'tag_add_failed':
+        return 'Couldn\'t add the tag. Please try again.';
+      case 'tag_reorder_failed':
+        return 'Couldn\'t save the new tag order. Please try again.';
       default:
         return null;
     }
