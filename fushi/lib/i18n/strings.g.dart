@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 56304 (3312 per locale)
+/// Strings: 56338 (3314 per locale)
 ///
-/// Built on 2026-08-10 at 19:10 UTC
+/// Built on 2026-08-11 at 06:35 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -4481,6 +4481,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get dict_download_import_uncancellable =>
       'Importing cannot be interrupted';
   String get dict_download_busy => 'A dictionary download is already running.';
+  String get gal_hook_ingame_lookup => 'In-game dictionary lookup';
+  String get gal_hook_ingame_lookup_hint =>
+      'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
 }
 
 // Path: <root>
@@ -12124,6 +12127,11 @@ class _StringsAr extends _StringsEn {
       'Importing cannot be interrupted';
   @override
   String get dict_download_busy => 'A dictionary download is already running.';
+  @override
+  String get gal_hook_ingame_lookup => 'In-game dictionary lookup';
+  @override
+  String get gal_hook_ingame_lookup_hint =>
+      'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
 }
 
 // Path: <root>
@@ -19834,6 +19842,11 @@ class _StringsDe extends _StringsEn {
       'Importing cannot be interrupted';
   @override
   String get dict_download_busy => 'A dictionary download is already running.';
+  @override
+  String get gal_hook_ingame_lookup => 'In-game dictionary lookup';
+  @override
+  String get gal_hook_ingame_lookup_hint =>
+      'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
 }
 
 // Path: <root>
@@ -27560,6 +27573,11 @@ class _StringsEs extends _StringsEn {
       'Importing cannot be interrupted';
   @override
   String get dict_download_busy => 'A dictionary download is already running.';
+  @override
+  String get gal_hook_ingame_lookup => 'In-game dictionary lookup';
+  @override
+  String get gal_hook_ingame_lookup_hint =>
+      'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
 }
 
 // Path: <root>
@@ -35298,6 +35316,11 @@ class _StringsFr extends _StringsEn {
       'Importing cannot be interrupted';
   @override
   String get dict_download_busy => 'A dictionary download is already running.';
+  @override
+  String get gal_hook_ingame_lookup => 'In-game dictionary lookup';
+  @override
+  String get gal_hook_ingame_lookup_hint =>
+      'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
 }
 
 // Path: <root>
@@ -42964,6 +42987,11 @@ class _StringsId extends _StringsEn {
       'Importing cannot be interrupted';
   @override
   String get dict_download_busy => 'A dictionary download is already running.';
+  @override
+  String get gal_hook_ingame_lookup => 'In-game dictionary lookup';
+  @override
+  String get gal_hook_ingame_lookup_hint =>
+      'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
 }
 
 // Path: <root>
@@ -50676,6 +50704,11 @@ class _StringsIt extends _StringsEn {
       'Importing cannot be interrupted';
   @override
   String get dict_download_busy => 'A dictionary download is already running.';
+  @override
+  String get gal_hook_ingame_lookup => 'In-game dictionary lookup';
+  @override
+  String get gal_hook_ingame_lookup_hint =>
+      'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
 }
 
 // Path: <root>
@@ -58202,6 +58235,11 @@ class _StringsJa extends _StringsEn {
       'Importing cannot be interrupted';
   @override
   String get dict_download_busy => 'A dictionary download is already running.';
+  @override
+  String get gal_hook_ingame_lookup => 'In-game dictionary lookup';
+  @override
+  String get gal_hook_ingame_lookup_hint =>
+      'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
 }
 
 // Path: <root>
@@ -65735,6 +65773,11 @@ class _StringsKo extends _StringsEn {
       'Importing cannot be interrupted';
   @override
   String get dict_download_busy => 'A dictionary download is already running.';
+  @override
+  String get gal_hook_ingame_lookup => 'In-game dictionary lookup';
+  @override
+  String get gal_hook_ingame_lookup_hint =>
+      'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
 }
 
 // Path: <root>
@@ -73427,6 +73470,11 @@ class _StringsNl extends _StringsEn {
       'Importing cannot be interrupted';
   @override
   String get dict_download_busy => 'A dictionary download is already running.';
+  @override
+  String get gal_hook_ingame_lookup => 'In-game dictionary lookup';
+  @override
+  String get gal_hook_ingame_lookup_hint =>
+      'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
 }
 
 // Path: <root>
@@ -81131,6 +81179,11 @@ class _StringsPtBr extends _StringsEn {
       'Importing cannot be interrupted';
   @override
   String get dict_download_busy => 'A dictionary download is already running.';
+  @override
+  String get gal_hook_ingame_lookup => 'In-game dictionary lookup';
+  @override
+  String get gal_hook_ingame_lookup_hint =>
+      'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
 }
 
 // Path: <root>
@@ -88821,6 +88874,11 @@ class _StringsRu extends _StringsEn {
       'Importing cannot be interrupted';
   @override
   String get dict_download_busy => 'A dictionary download is already running.';
+  @override
+  String get gal_hook_ingame_lookup => 'In-game dictionary lookup';
+  @override
+  String get gal_hook_ingame_lookup_hint =>
+      'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
 }
 
 // Path: <root>
@@ -96459,6 +96517,11 @@ class _StringsTh extends _StringsEn {
       'Importing cannot be interrupted';
   @override
   String get dict_download_busy => 'A dictionary download is already running.';
+  @override
+  String get gal_hook_ingame_lookup => 'In-game dictionary lookup';
+  @override
+  String get gal_hook_ingame_lookup_hint =>
+      'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
 }
 
 // Path: <root>
@@ -104128,6 +104191,11 @@ class _StringsTr extends _StringsEn {
       'Importing cannot be interrupted';
   @override
   String get dict_download_busy => 'A dictionary download is already running.';
+  @override
+  String get gal_hook_ingame_lookup => 'In-game dictionary lookup';
+  @override
+  String get gal_hook_ingame_lookup_hint =>
+      'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
 }
 
 // Path: <root>
@@ -111782,6 +111850,11 @@ class _StringsVi extends _StringsEn {
       'Importing cannot be interrupted';
   @override
   String get dict_download_busy => 'A dictionary download is already running.';
+  @override
+  String get gal_hook_ingame_lookup => 'In-game dictionary lookup';
+  @override
+  String get gal_hook_ingame_lookup_hint =>
+      'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
 }
 
 // Path: <root>
@@ -118884,6 +118957,11 @@ class _StringsZhCn extends _StringsEn {
   String get dict_download_import_uncancellable => '导入阶段无法中断';
   @override
   String get dict_download_busy => '已有词典下载正在进行。';
+  @override
+  String get gal_hook_ingame_lookup => '游戏内查词';
+  @override
+  String get gal_hook_ingame_lookup_hint =>
+      '在游戏画面内直接显示词典卡片（KiriKiri 引擎，仅 Windows）';
 }
 
 // Path: <root>
@@ -126333,6 +126411,11 @@ class _StringsZhHk extends _StringsEn {
       'Importing cannot be interrupted';
   @override
   String get dict_download_busy => 'A dictionary download is already running.';
+  @override
+  String get gal_hook_ingame_lookup => 'In-game dictionary lookup';
+  @override
+  String get gal_hook_ingame_lookup_hint =>
+      'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
 }
 
 /// Flat map(s) containing all translations.
@@ -133139,6 +133222,10 @@ extension on _StringsEn {
         return 'Importing cannot be interrupted';
       case 'dict_download_busy':
         return 'A dictionary download is already running.';
+      case 'gal_hook_ingame_lookup':
+        return 'In-game dictionary lookup';
+      case 'gal_hook_ingame_lookup_hint':
+        return 'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
       default:
         return null;
     }
@@ -139943,6 +140030,10 @@ extension on _StringsAr {
         return 'Importing cannot be interrupted';
       case 'dict_download_busy':
         return 'A dictionary download is already running.';
+      case 'gal_hook_ingame_lookup':
+        return 'In-game dictionary lookup';
+      case 'gal_hook_ingame_lookup_hint':
+        return 'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
       default:
         return null;
     }
@@ -146769,6 +146860,10 @@ extension on _StringsDe {
         return 'Importing cannot be interrupted';
       case 'dict_download_busy':
         return 'A dictionary download is already running.';
+      case 'gal_hook_ingame_lookup':
+        return 'In-game dictionary lookup';
+      case 'gal_hook_ingame_lookup_hint':
+        return 'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
       default:
         return null;
     }
@@ -153594,6 +153689,10 @@ extension on _StringsEs {
         return 'Importing cannot be interrupted';
       case 'dict_download_busy':
         return 'A dictionary download is already running.';
+      case 'gal_hook_ingame_lookup':
+        return 'In-game dictionary lookup';
+      case 'gal_hook_ingame_lookup_hint':
+        return 'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
       default:
         return null;
     }
@@ -160425,6 +160524,10 @@ extension on _StringsFr {
         return 'Importing cannot be interrupted';
       case 'dict_download_busy':
         return 'A dictionary download is already running.';
+      case 'gal_hook_ingame_lookup':
+        return 'In-game dictionary lookup';
+      case 'gal_hook_ingame_lookup_hint':
+        return 'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
       default:
         return null;
     }
@@ -167238,6 +167341,10 @@ extension on _StringsId {
         return 'Importing cannot be interrupted';
       case 'dict_download_busy':
         return 'A dictionary download is already running.';
+      case 'gal_hook_ingame_lookup':
+        return 'In-game dictionary lookup';
+      case 'gal_hook_ingame_lookup_hint':
+        return 'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
       default:
         return null;
     }
@@ -174065,6 +174172,10 @@ extension on _StringsIt {
         return 'Importing cannot be interrupted';
       case 'dict_download_busy':
         return 'A dictionary download is already running.';
+      case 'gal_hook_ingame_lookup':
+        return 'In-game dictionary lookup';
+      case 'gal_hook_ingame_lookup_hint':
+        return 'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
       default:
         return null;
     }
@@ -180854,6 +180965,10 @@ extension on _StringsJa {
         return 'Importing cannot be interrupted';
       case 'dict_download_busy':
         return 'A dictionary download is already running.';
+      case 'gal_hook_ingame_lookup':
+        return 'In-game dictionary lookup';
+      case 'gal_hook_ingame_lookup_hint':
+        return 'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
       default:
         return null;
     }
@@ -187647,6 +187762,10 @@ extension on _StringsKo {
         return 'Importing cannot be interrupted';
       case 'dict_download_busy':
         return 'A dictionary download is already running.';
+      case 'gal_hook_ingame_lookup':
+        return 'In-game dictionary lookup';
+      case 'gal_hook_ingame_lookup_hint':
+        return 'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
       default:
         return null;
     }
@@ -194468,6 +194587,10 @@ extension on _StringsNl {
         return 'Importing cannot be interrupted';
       case 'dict_download_busy':
         return 'A dictionary download is already running.';
+      case 'gal_hook_ingame_lookup':
+        return 'In-game dictionary lookup';
+      case 'gal_hook_ingame_lookup_hint':
+        return 'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
       default:
         return null;
     }
@@ -201286,6 +201409,10 @@ extension on _StringsPtBr {
         return 'Importing cannot be interrupted';
       case 'dict_download_busy':
         return 'A dictionary download is already running.';
+      case 'gal_hook_ingame_lookup':
+        return 'In-game dictionary lookup';
+      case 'gal_hook_ingame_lookup_hint':
+        return 'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
       default:
         return null;
     }
@@ -208109,6 +208236,10 @@ extension on _StringsRu {
         return 'Importing cannot be interrupted';
       case 'dict_download_busy':
         return 'A dictionary download is already running.';
+      case 'gal_hook_ingame_lookup':
+        return 'In-game dictionary lookup';
+      case 'gal_hook_ingame_lookup_hint':
+        return 'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
       default:
         return null;
     }
@@ -214915,6 +215046,10 @@ extension on _StringsTh {
         return 'Importing cannot be interrupted';
       case 'dict_download_busy':
         return 'A dictionary download is already running.';
+      case 'gal_hook_ingame_lookup':
+        return 'In-game dictionary lookup';
+      case 'gal_hook_ingame_lookup_hint':
+        return 'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
       default:
         return null;
     }
@@ -221730,6 +221865,10 @@ extension on _StringsTr {
         return 'Importing cannot be interrupted';
       case 'dict_download_busy':
         return 'A dictionary download is already running.';
+      case 'gal_hook_ingame_lookup':
+        return 'In-game dictionary lookup';
+      case 'gal_hook_ingame_lookup_hint':
+        return 'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
       default:
         return null;
     }
@@ -228541,6 +228680,10 @@ extension on _StringsVi {
         return 'Importing cannot be interrupted';
       case 'dict_download_busy':
         return 'A dictionary download is already running.';
+      case 'gal_hook_ingame_lookup':
+        return 'In-game dictionary lookup';
+      case 'gal_hook_ingame_lookup_hint':
+        return 'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
       default:
         return null;
     }
@@ -235295,6 +235438,10 @@ extension on _StringsZhCn {
         return '导入阶段无法中断';
       case 'dict_download_busy':
         return '已有词典下载正在进行。';
+      case 'gal_hook_ingame_lookup':
+        return '游戏内查词';
+      case 'gal_hook_ingame_lookup_hint':
+        return '在游戏画面内直接显示词典卡片（KiriKiri 引擎，仅 Windows）';
       default:
         return null;
     }
@@ -242079,6 +242226,10 @@ extension on _StringsZhHk {
         return 'Importing cannot be interrupted';
       case 'dict_download_busy':
         return 'A dictionary download is already running.';
+      case 'gal_hook_ingame_lookup':
+        return 'In-game dictionary lookup';
+      case 'gal_hook_ingame_lookup_hint':
+        return 'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
       default:
         return null;
     }
