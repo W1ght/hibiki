@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 56219 (3307 per locale)
+/// Strings: 56304 (3312 per locale)
 ///
-/// Built on 2026-08-10 at 18:38 UTC
+/// Built on 2026-08-10 at 19:10 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -4475,6 +4475,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Downloading ${name} (${done} / ${total})';
   String get video_subtitle_attach_book_missing =>
       'This video isn\'t in your library, so the subtitle wasn\'t attached';
+  String get dict_download_hide => 'Run in background';
+  String get dict_download_progress_show => 'View progress';
+  String get dict_download_cancelled => 'Download cancelled.';
+  String get dict_download_import_uncancellable =>
+      'Importing cannot be interrupted';
+  String get dict_download_busy => 'A dictionary download is already running.';
 }
 
 // Path: <root>
@@ -12107,6 +12113,17 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_subtitle_attach_book_missing =>
       'This video isn\'t in your library, so the subtitle wasn\'t attached';
+  @override
+  String get dict_download_hide => 'Run in background';
+  @override
+  String get dict_download_progress_show => 'View progress';
+  @override
+  String get dict_download_cancelled => 'Download cancelled.';
+  @override
+  String get dict_download_import_uncancellable =>
+      'Importing cannot be interrupted';
+  @override
+  String get dict_download_busy => 'A dictionary download is already running.';
 }
 
 // Path: <root>
@@ -19806,6 +19823,17 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_subtitle_attach_book_missing =>
       'This video isn\'t in your library, so the subtitle wasn\'t attached';
+  @override
+  String get dict_download_hide => 'Run in background';
+  @override
+  String get dict_download_progress_show => 'View progress';
+  @override
+  String get dict_download_cancelled => 'Download cancelled.';
+  @override
+  String get dict_download_import_uncancellable =>
+      'Importing cannot be interrupted';
+  @override
+  String get dict_download_busy => 'A dictionary download is already running.';
 }
 
 // Path: <root>
@@ -27521,6 +27549,17 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_subtitle_attach_book_missing =>
       'This video isn\'t in your library, so the subtitle wasn\'t attached';
+  @override
+  String get dict_download_hide => 'Run in background';
+  @override
+  String get dict_download_progress_show => 'View progress';
+  @override
+  String get dict_download_cancelled => 'Download cancelled.';
+  @override
+  String get dict_download_import_uncancellable =>
+      'Importing cannot be interrupted';
+  @override
+  String get dict_download_busy => 'A dictionary download is already running.';
 }
 
 // Path: <root>
@@ -35248,6 +35287,17 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_subtitle_attach_book_missing =>
       'This video isn\'t in your library, so the subtitle wasn\'t attached';
+  @override
+  String get dict_download_hide => 'Run in background';
+  @override
+  String get dict_download_progress_show => 'View progress';
+  @override
+  String get dict_download_cancelled => 'Download cancelled.';
+  @override
+  String get dict_download_import_uncancellable =>
+      'Importing cannot be interrupted';
+  @override
+  String get dict_download_busy => 'A dictionary download is already running.';
 }
 
 // Path: <root>
@@ -42903,6 +42953,17 @@ class _StringsId extends _StringsEn {
   @override
   String get video_subtitle_attach_book_missing =>
       'This video isn\'t in your library, so the subtitle wasn\'t attached';
+  @override
+  String get dict_download_hide => 'Run in background';
+  @override
+  String get dict_download_progress_show => 'View progress';
+  @override
+  String get dict_download_cancelled => 'Download cancelled.';
+  @override
+  String get dict_download_import_uncancellable =>
+      'Importing cannot be interrupted';
+  @override
+  String get dict_download_busy => 'A dictionary download is already running.';
 }
 
 // Path: <root>
@@ -50604,6 +50665,17 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_subtitle_attach_book_missing =>
       'This video isn\'t in your library, so the subtitle wasn\'t attached';
+  @override
+  String get dict_download_hide => 'Run in background';
+  @override
+  String get dict_download_progress_show => 'View progress';
+  @override
+  String get dict_download_cancelled => 'Download cancelled.';
+  @override
+  String get dict_download_import_uncancellable =>
+      'Importing cannot be interrupted';
+  @override
+  String get dict_download_busy => 'A dictionary download is already running.';
 }
 
 // Path: <root>
@@ -58119,6 +58191,17 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_subtitle_attach_book_missing =>
       'This video isn\'t in your library, so the subtitle wasn\'t attached';
+  @override
+  String get dict_download_hide => 'Run in background';
+  @override
+  String get dict_download_progress_show => 'View progress';
+  @override
+  String get dict_download_cancelled => 'Download cancelled.';
+  @override
+  String get dict_download_import_uncancellable =>
+      'Importing cannot be interrupted';
+  @override
+  String get dict_download_busy => 'A dictionary download is already running.';
 }
 
 // Path: <root>
@@ -65641,6 +65724,17 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_subtitle_attach_book_missing =>
       'This video isn\'t in your library, so the subtitle wasn\'t attached';
+  @override
+  String get dict_download_hide => 'Run in background';
+  @override
+  String get dict_download_progress_show => 'View progress';
+  @override
+  String get dict_download_cancelled => 'Download cancelled.';
+  @override
+  String get dict_download_import_uncancellable =>
+      'Importing cannot be interrupted';
+  @override
+  String get dict_download_busy => 'A dictionary download is already running.';
 }
 
 // Path: <root>
@@ -73322,6 +73416,17 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_subtitle_attach_book_missing =>
       'This video isn\'t in your library, so the subtitle wasn\'t attached';
+  @override
+  String get dict_download_hide => 'Run in background';
+  @override
+  String get dict_download_progress_show => 'View progress';
+  @override
+  String get dict_download_cancelled => 'Download cancelled.';
+  @override
+  String get dict_download_import_uncancellable =>
+      'Importing cannot be interrupted';
+  @override
+  String get dict_download_busy => 'A dictionary download is already running.';
 }
 
 // Path: <root>
@@ -81015,6 +81120,17 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_subtitle_attach_book_missing =>
       'This video isn\'t in your library, so the subtitle wasn\'t attached';
+  @override
+  String get dict_download_hide => 'Run in background';
+  @override
+  String get dict_download_progress_show => 'View progress';
+  @override
+  String get dict_download_cancelled => 'Download cancelled.';
+  @override
+  String get dict_download_import_uncancellable =>
+      'Importing cannot be interrupted';
+  @override
+  String get dict_download_busy => 'A dictionary download is already running.';
 }
 
 // Path: <root>
@@ -88694,6 +88810,17 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_subtitle_attach_book_missing =>
       'This video isn\'t in your library, so the subtitle wasn\'t attached';
+  @override
+  String get dict_download_hide => 'Run in background';
+  @override
+  String get dict_download_progress_show => 'View progress';
+  @override
+  String get dict_download_cancelled => 'Download cancelled.';
+  @override
+  String get dict_download_import_uncancellable =>
+      'Importing cannot be interrupted';
+  @override
+  String get dict_download_busy => 'A dictionary download is already running.';
 }
 
 // Path: <root>
@@ -96321,6 +96448,17 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_subtitle_attach_book_missing =>
       'This video isn\'t in your library, so the subtitle wasn\'t attached';
+  @override
+  String get dict_download_hide => 'Run in background';
+  @override
+  String get dict_download_progress_show => 'View progress';
+  @override
+  String get dict_download_cancelled => 'Download cancelled.';
+  @override
+  String get dict_download_import_uncancellable =>
+      'Importing cannot be interrupted';
+  @override
+  String get dict_download_busy => 'A dictionary download is already running.';
 }
 
 // Path: <root>
@@ -103979,6 +104117,17 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_subtitle_attach_book_missing =>
       'This video isn\'t in your library, so the subtitle wasn\'t attached';
+  @override
+  String get dict_download_hide => 'Run in background';
+  @override
+  String get dict_download_progress_show => 'View progress';
+  @override
+  String get dict_download_cancelled => 'Download cancelled.';
+  @override
+  String get dict_download_import_uncancellable =>
+      'Importing cannot be interrupted';
+  @override
+  String get dict_download_busy => 'A dictionary download is already running.';
 }
 
 // Path: <root>
@@ -111622,6 +111771,17 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_subtitle_attach_book_missing =>
       'This video isn\'t in your library, so the subtitle wasn\'t attached';
+  @override
+  String get dict_download_hide => 'Run in background';
+  @override
+  String get dict_download_progress_show => 'View progress';
+  @override
+  String get dict_download_cancelled => 'Download cancelled.';
+  @override
+  String get dict_download_import_uncancellable =>
+      'Importing cannot be interrupted';
+  @override
+  String get dict_download_busy => 'A dictionary download is already running.';
 }
 
 // Path: <root>
@@ -118714,6 +118874,16 @@ class _StringsZhCn extends _StringsEn {
       '正在下载 ${name}（${done} / ${total}）';
   @override
   String get video_subtitle_attach_book_missing => '该视频不在视频库中，字幕没有挂上';
+  @override
+  String get dict_download_hide => '后台继续';
+  @override
+  String get dict_download_progress_show => '查看进度';
+  @override
+  String get dict_download_cancelled => '已取消下载。';
+  @override
+  String get dict_download_import_uncancellable => '导入阶段无法中断';
+  @override
+  String get dict_download_busy => '已有词典下载正在进行。';
 }
 
 // Path: <root>
@@ -126152,6 +126322,17 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_subtitle_attach_book_missing =>
       'This video isn\'t in your library, so the subtitle wasn\'t attached';
+  @override
+  String get dict_download_hide => 'Run in background';
+  @override
+  String get dict_download_progress_show => 'View progress';
+  @override
+  String get dict_download_cancelled => 'Download cancelled.';
+  @override
+  String get dict_download_import_uncancellable =>
+      'Importing cannot be interrupted';
+  @override
+  String get dict_download_busy => 'A dictionary download is already running.';
 }
 
 /// Flat map(s) containing all translations.
@@ -132948,6 +133129,16 @@ extension on _StringsEn {
             'Downloading ${name} (${done} / ${total})';
       case 'video_subtitle_attach_book_missing':
         return 'This video isn\'t in your library, so the subtitle wasn\'t attached';
+      case 'dict_download_hide':
+        return 'Run in background';
+      case 'dict_download_progress_show':
+        return 'View progress';
+      case 'dict_download_cancelled':
+        return 'Download cancelled.';
+      case 'dict_download_import_uncancellable':
+        return 'Importing cannot be interrupted';
+      case 'dict_download_busy':
+        return 'A dictionary download is already running.';
       default:
         return null;
     }
@@ -139742,6 +139933,16 @@ extension on _StringsAr {
             'Downloading ${name} (${done} / ${total})';
       case 'video_subtitle_attach_book_missing':
         return 'This video isn\'t in your library, so the subtitle wasn\'t attached';
+      case 'dict_download_hide':
+        return 'Run in background';
+      case 'dict_download_progress_show':
+        return 'View progress';
+      case 'dict_download_cancelled':
+        return 'Download cancelled.';
+      case 'dict_download_import_uncancellable':
+        return 'Importing cannot be interrupted';
+      case 'dict_download_busy':
+        return 'A dictionary download is already running.';
       default:
         return null;
     }
@@ -146558,6 +146759,16 @@ extension on _StringsDe {
             'Downloading ${name} (${done} / ${total})';
       case 'video_subtitle_attach_book_missing':
         return 'This video isn\'t in your library, so the subtitle wasn\'t attached';
+      case 'dict_download_hide':
+        return 'Run in background';
+      case 'dict_download_progress_show':
+        return 'View progress';
+      case 'dict_download_cancelled':
+        return 'Download cancelled.';
+      case 'dict_download_import_uncancellable':
+        return 'Importing cannot be interrupted';
+      case 'dict_download_busy':
+        return 'A dictionary download is already running.';
       default:
         return null;
     }
@@ -153373,6 +153584,16 @@ extension on _StringsEs {
             'Downloading ${name} (${done} / ${total})';
       case 'video_subtitle_attach_book_missing':
         return 'This video isn\'t in your library, so the subtitle wasn\'t attached';
+      case 'dict_download_hide':
+        return 'Run in background';
+      case 'dict_download_progress_show':
+        return 'View progress';
+      case 'dict_download_cancelled':
+        return 'Download cancelled.';
+      case 'dict_download_import_uncancellable':
+        return 'Importing cannot be interrupted';
+      case 'dict_download_busy':
+        return 'A dictionary download is already running.';
       default:
         return null;
     }
@@ -160194,6 +160415,16 @@ extension on _StringsFr {
             'Downloading ${name} (${done} / ${total})';
       case 'video_subtitle_attach_book_missing':
         return 'This video isn\'t in your library, so the subtitle wasn\'t attached';
+      case 'dict_download_hide':
+        return 'Run in background';
+      case 'dict_download_progress_show':
+        return 'View progress';
+      case 'dict_download_cancelled':
+        return 'Download cancelled.';
+      case 'dict_download_import_uncancellable':
+        return 'Importing cannot be interrupted';
+      case 'dict_download_busy':
+        return 'A dictionary download is already running.';
       default:
         return null;
     }
@@ -166997,6 +167228,16 @@ extension on _StringsId {
             'Downloading ${name} (${done} / ${total})';
       case 'video_subtitle_attach_book_missing':
         return 'This video isn\'t in your library, so the subtitle wasn\'t attached';
+      case 'dict_download_hide':
+        return 'Run in background';
+      case 'dict_download_progress_show':
+        return 'View progress';
+      case 'dict_download_cancelled':
+        return 'Download cancelled.';
+      case 'dict_download_import_uncancellable':
+        return 'Importing cannot be interrupted';
+      case 'dict_download_busy':
+        return 'A dictionary download is already running.';
       default:
         return null;
     }
@@ -173814,6 +174055,16 @@ extension on _StringsIt {
             'Downloading ${name} (${done} / ${total})';
       case 'video_subtitle_attach_book_missing':
         return 'This video isn\'t in your library, so the subtitle wasn\'t attached';
+      case 'dict_download_hide':
+        return 'Run in background';
+      case 'dict_download_progress_show':
+        return 'View progress';
+      case 'dict_download_cancelled':
+        return 'Download cancelled.';
+      case 'dict_download_import_uncancellable':
+        return 'Importing cannot be interrupted';
+      case 'dict_download_busy':
+        return 'A dictionary download is already running.';
       default:
         return null;
     }
@@ -180593,6 +180844,16 @@ extension on _StringsJa {
             'Downloading ${name} (${done} / ${total})';
       case 'video_subtitle_attach_book_missing':
         return 'This video isn\'t in your library, so the subtitle wasn\'t attached';
+      case 'dict_download_hide':
+        return 'Run in background';
+      case 'dict_download_progress_show':
+        return 'View progress';
+      case 'dict_download_cancelled':
+        return 'Download cancelled.';
+      case 'dict_download_import_uncancellable':
+        return 'Importing cannot be interrupted';
+      case 'dict_download_busy':
+        return 'A dictionary download is already running.';
       default:
         return null;
     }
@@ -187376,6 +187637,16 @@ extension on _StringsKo {
             'Downloading ${name} (${done} / ${total})';
       case 'video_subtitle_attach_book_missing':
         return 'This video isn\'t in your library, so the subtitle wasn\'t attached';
+      case 'dict_download_hide':
+        return 'Run in background';
+      case 'dict_download_progress_show':
+        return 'View progress';
+      case 'dict_download_cancelled':
+        return 'Download cancelled.';
+      case 'dict_download_import_uncancellable':
+        return 'Importing cannot be interrupted';
+      case 'dict_download_busy':
+        return 'A dictionary download is already running.';
       default:
         return null;
     }
@@ -194187,6 +194458,16 @@ extension on _StringsNl {
             'Downloading ${name} (${done} / ${total})';
       case 'video_subtitle_attach_book_missing':
         return 'This video isn\'t in your library, so the subtitle wasn\'t attached';
+      case 'dict_download_hide':
+        return 'Run in background';
+      case 'dict_download_progress_show':
+        return 'View progress';
+      case 'dict_download_cancelled':
+        return 'Download cancelled.';
+      case 'dict_download_import_uncancellable':
+        return 'Importing cannot be interrupted';
+      case 'dict_download_busy':
+        return 'A dictionary download is already running.';
       default:
         return null;
     }
@@ -200995,6 +201276,16 @@ extension on _StringsPtBr {
             'Downloading ${name} (${done} / ${total})';
       case 'video_subtitle_attach_book_missing':
         return 'This video isn\'t in your library, so the subtitle wasn\'t attached';
+      case 'dict_download_hide':
+        return 'Run in background';
+      case 'dict_download_progress_show':
+        return 'View progress';
+      case 'dict_download_cancelled':
+        return 'Download cancelled.';
+      case 'dict_download_import_uncancellable':
+        return 'Importing cannot be interrupted';
+      case 'dict_download_busy':
+        return 'A dictionary download is already running.';
       default:
         return null;
     }
@@ -207808,6 +208099,16 @@ extension on _StringsRu {
             'Downloading ${name} (${done} / ${total})';
       case 'video_subtitle_attach_book_missing':
         return 'This video isn\'t in your library, so the subtitle wasn\'t attached';
+      case 'dict_download_hide':
+        return 'Run in background';
+      case 'dict_download_progress_show':
+        return 'View progress';
+      case 'dict_download_cancelled':
+        return 'Download cancelled.';
+      case 'dict_download_import_uncancellable':
+        return 'Importing cannot be interrupted';
+      case 'dict_download_busy':
+        return 'A dictionary download is already running.';
       default:
         return null;
     }
@@ -214604,6 +214905,16 @@ extension on _StringsTh {
             'Downloading ${name} (${done} / ${total})';
       case 'video_subtitle_attach_book_missing':
         return 'This video isn\'t in your library, so the subtitle wasn\'t attached';
+      case 'dict_download_hide':
+        return 'Run in background';
+      case 'dict_download_progress_show':
+        return 'View progress';
+      case 'dict_download_cancelled':
+        return 'Download cancelled.';
+      case 'dict_download_import_uncancellable':
+        return 'Importing cannot be interrupted';
+      case 'dict_download_busy':
+        return 'A dictionary download is already running.';
       default:
         return null;
     }
@@ -221409,6 +221720,16 @@ extension on _StringsTr {
             'Downloading ${name} (${done} / ${total})';
       case 'video_subtitle_attach_book_missing':
         return 'This video isn\'t in your library, so the subtitle wasn\'t attached';
+      case 'dict_download_hide':
+        return 'Run in background';
+      case 'dict_download_progress_show':
+        return 'View progress';
+      case 'dict_download_cancelled':
+        return 'Download cancelled.';
+      case 'dict_download_import_uncancellable':
+        return 'Importing cannot be interrupted';
+      case 'dict_download_busy':
+        return 'A dictionary download is already running.';
       default:
         return null;
     }
@@ -228210,6 +228531,16 @@ extension on _StringsVi {
             'Downloading ${name} (${done} / ${total})';
       case 'video_subtitle_attach_book_missing':
         return 'This video isn\'t in your library, so the subtitle wasn\'t attached';
+      case 'dict_download_hide':
+        return 'Run in background';
+      case 'dict_download_progress_show':
+        return 'View progress';
+      case 'dict_download_cancelled':
+        return 'Download cancelled.';
+      case 'dict_download_import_uncancellable':
+        return 'Importing cannot be interrupted';
+      case 'dict_download_busy':
+        return 'A dictionary download is already running.';
       default:
         return null;
     }
@@ -234954,6 +235285,16 @@ extension on _StringsZhCn {
             '正在下载 ${name}（${done} / ${total}）';
       case 'video_subtitle_attach_book_missing':
         return '该视频不在视频库中，字幕没有挂上';
+      case 'dict_download_hide':
+        return '后台继续';
+      case 'dict_download_progress_show':
+        return '查看进度';
+      case 'dict_download_cancelled':
+        return '已取消下载。';
+      case 'dict_download_import_uncancellable':
+        return '导入阶段无法中断';
+      case 'dict_download_busy':
+        return '已有词典下载正在进行。';
       default:
         return null;
     }
@@ -241728,6 +242069,16 @@ extension on _StringsZhHk {
             'Downloading ${name} (${done} / ${total})';
       case 'video_subtitle_attach_book_missing':
         return 'This video isn\'t in your library, so the subtitle wasn\'t attached';
+      case 'dict_download_hide':
+        return 'Run in background';
+      case 'dict_download_progress_show':
+        return 'View progress';
+      case 'dict_download_cancelled':
+        return 'Download cancelled.';
+      case 'dict_download_import_uncancellable':
+        return 'Importing cannot be interrupted';
+      case 'dict_download_busy':
+        return 'A dictionary download is already running.';
       default:
         return null;
     }
