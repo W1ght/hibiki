@@ -3,7 +3,7 @@
 /// Locales: 17
 /// Strings: 65603 (3859 per locale)
 ///
-/// Built on 2026-08-28 at 16:55 UTC
+/// Built on 2026-08-28 at 17:40 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -14145,59 +14145,59 @@ class _StringsAr extends _StringsEn {
   String batch_hidden_by_filter_note({required Object n}) =>
       'هناك ${n} عنصر محدد مخفي بواسطة عامل التصفية الحالي ولن تتم معالجته.';
   @override
-  String get manga_series_refresh => 'Refresh chapters';
+  String get manga_series_refresh => 'تحديث الفصول';
   @override
-  String get manga_series_refresh_failed => 'Could not refresh from the source';
+  String get manga_series_refresh_failed => 'تعذّر التحديث من المصدر';
   @override
-  String get manga_series_source_disabled =>
-      'This source is not installed or is disabled';
+  String get manga_series_source_disabled => 'هذا المصدر غير مثبَّت أو معطَّل';
   @override
   String get manga_series_platform_unsupported =>
-      'This source runtime is unavailable on this platform';
+      'هذا المصدر غير متاح على هذه المنصة';
   @override
   String get manga_series_offline_hint =>
-      'Showing the chapters saved on this device';
+      'يتم عرض الفصول المحفوظة على هذا الجهاز';
   @override
-  String get manga_series_no_chapters => 'No chapters yet';
+  String get manga_series_no_chapters => 'لا توجد فصول بعد';
   @override
-  String get manga_series_all_read => 'Every chapter has been read';
+  String get manga_series_all_read => 'تمت قراءة جميع الفصول';
   @override
-  String get manga_series_sort_newest => 'Newest first';
+  String get manga_series_sort_newest => 'الأحدث أولاً';
   @override
-  String get manga_series_sort_oldest => 'Oldest first';
+  String get manga_series_sort_oldest => 'الأقدم أولاً';
   @override
-  String get manga_series_unread_only => 'Unread only';
+  String get manga_series_unread_only => 'غير المقروءة فقط';
   @override
-  String get manga_series_mark_read => 'Mark as read';
+  String get manga_series_mark_read => 'تعليم كمقروء';
   @override
-  String get manga_series_mark_unread => 'Mark as unread';
+  String get manga_series_mark_unread => 'تعليم كغير مقروء';
   @override
-  String get manga_series_mark_previous_read => 'Mark this and earlier as read';
+  String get manga_series_mark_previous_read =>
+      'تعليم هذا الفصل وما قبله كمقروء';
   @override
-  String get manga_series_local_volume => 'Local volume';
+  String get manga_series_local_volume => 'مجلد محلي';
   @override
-  String get manga_series_volume_info => 'Volume';
+  String get manga_series_volume_info => 'المجلد';
   @override
-  String get manga_series_page_count => 'Pages';
+  String get manga_series_page_count => 'الصفحات';
   @override
-  String get manga_series_chapters_action => 'Chapters';
+  String get manga_series_chapters_action => 'الفصول';
   @override
-  String get manga_series_next_chapter => 'Next chapter';
+  String get manga_series_next_chapter => 'الفصل التالي';
   @override
-  String get manga_series_previous_chapter => 'Previous chapter';
+  String get manga_series_previous_chapter => 'الفصل السابق';
   @override
-  String get manga_series_last_chapter_reached => 'This is the newest chapter';
+  String get manga_series_last_chapter_reached => 'هذا هو أحدث فصل';
   @override
-  String get manga_series_first_chapter_reached => 'This is the first chapter';
+  String get manga_series_first_chapter_reached => 'هذا هو الفصل الأول';
   @override
-  String get manga_series_open_series => 'Series page';
+  String get manga_series_open_series => 'صفحة العمل';
   @override
   String manga_series_read_progress(
           {required Object page, required Object total}) =>
-      'Read to page ${page} of ${total}';
+      'تمت القراءة حتى الصفحة ${page} من ${total}';
   @override
   String manga_series_read_progress_partial({required Object page}) =>
-      'Read to page ${page}';
+      'تمت القراءة حتى الصفحة ${page}';
 }
 
 // Path: <root>
@@ -23295,59 +23295,61 @@ class _StringsDe extends _StringsEn {
   String batch_hidden_by_filter_note({required Object n}) =>
       'Weitere ${n} ausgewählte Elemente sind durch den aktuellen Filter ausgeblendet und werden nicht bearbeitet.';
   @override
-  String get manga_series_refresh => 'Refresh chapters';
+  String get manga_series_refresh => 'Kapitel aktualisieren';
   @override
-  String get manga_series_refresh_failed => 'Could not refresh from the source';
+  String get manga_series_refresh_failed =>
+      'Aktualisierung von der Quelle fehlgeschlagen';
   @override
   String get manga_series_source_disabled =>
-      'This source is not installed or is disabled';
+      'Diese Quelle ist nicht installiert oder deaktiviert';
   @override
   String get manga_series_platform_unsupported =>
-      'This source runtime is unavailable on this platform';
+      'Diese Quelle ist auf dieser Plattform nicht verfügbar';
   @override
   String get manga_series_offline_hint =>
-      'Showing the chapters saved on this device';
+      'Es werden die auf diesem Gerät gespeicherten Kapitel angezeigt';
   @override
-  String get manga_series_no_chapters => 'No chapters yet';
+  String get manga_series_no_chapters => 'Noch keine Kapitel';
   @override
-  String get manga_series_all_read => 'Every chapter has been read';
+  String get manga_series_all_read => 'Alle Kapitel wurden gelesen';
   @override
-  String get manga_series_sort_newest => 'Newest first';
+  String get manga_series_sort_newest => 'Neueste zuerst';
   @override
-  String get manga_series_sort_oldest => 'Oldest first';
+  String get manga_series_sort_oldest => 'Älteste zuerst';
   @override
-  String get manga_series_unread_only => 'Unread only';
+  String get manga_series_unread_only => 'Nur ungelesene';
   @override
-  String get manga_series_mark_read => 'Mark as read';
+  String get manga_series_mark_read => 'Als gelesen markieren';
   @override
-  String get manga_series_mark_unread => 'Mark as unread';
+  String get manga_series_mark_unread => 'Als ungelesen markieren';
   @override
-  String get manga_series_mark_previous_read => 'Mark this and earlier as read';
+  String get manga_series_mark_previous_read =>
+      'Dieses und ältere als gelesen markieren';
   @override
-  String get manga_series_local_volume => 'Local volume';
+  String get manga_series_local_volume => 'Lokaler Band';
   @override
-  String get manga_series_volume_info => 'Volume';
+  String get manga_series_volume_info => 'Band';
   @override
-  String get manga_series_page_count => 'Pages';
+  String get manga_series_page_count => 'Seiten';
   @override
-  String get manga_series_chapters_action => 'Chapters';
+  String get manga_series_chapters_action => 'Kapitel';
   @override
-  String get manga_series_next_chapter => 'Next chapter';
+  String get manga_series_next_chapter => 'Nächstes Kapitel';
   @override
-  String get manga_series_previous_chapter => 'Previous chapter';
+  String get manga_series_previous_chapter => 'Vorheriges Kapitel';
   @override
-  String get manga_series_last_chapter_reached => 'This is the newest chapter';
+  String get manga_series_last_chapter_reached => 'Das ist das neueste Kapitel';
   @override
-  String get manga_series_first_chapter_reached => 'This is the first chapter';
+  String get manga_series_first_chapter_reached => 'Das ist das erste Kapitel';
   @override
-  String get manga_series_open_series => 'Series page';
+  String get manga_series_open_series => 'Werkseite';
   @override
   String manga_series_read_progress(
           {required Object page, required Object total}) =>
-      'Read to page ${page} of ${total}';
+      'Bis Seite ${page} von ${total} gelesen';
   @override
   String manga_series_read_progress_partial({required Object page}) =>
-      'Read to page ${page}';
+      'Bis Seite ${page} gelesen';
 }
 
 // Path: <root>
@@ -32488,59 +32490,62 @@ class _StringsEs extends _StringsEn {
   String batch_hidden_by_filter_note({required Object n}) =>
       'Otros ${n} elementos seleccionados están ocultos por el filtro actual y no se procesarán.';
   @override
-  String get manga_series_refresh => 'Refresh chapters';
+  String get manga_series_refresh => 'Actualizar capítulos';
   @override
-  String get manga_series_refresh_failed => 'Could not refresh from the source';
+  String get manga_series_refresh_failed =>
+      'No se pudo actualizar desde la fuente';
   @override
   String get manga_series_source_disabled =>
-      'This source is not installed or is disabled';
+      'Esta fuente no está instalada o está desactivada';
   @override
   String get manga_series_platform_unsupported =>
-      'This source runtime is unavailable on this platform';
+      'Esta fuente no está disponible en esta plataforma';
   @override
   String get manga_series_offline_hint =>
-      'Showing the chapters saved on this device';
+      'Se muestran los capítulos guardados en este dispositivo';
   @override
-  String get manga_series_no_chapters => 'No chapters yet';
+  String get manga_series_no_chapters => 'Todavía no hay capítulos';
   @override
-  String get manga_series_all_read => 'Every chapter has been read';
+  String get manga_series_all_read => 'Se han leído todos los capítulos';
   @override
-  String get manga_series_sort_newest => 'Newest first';
+  String get manga_series_sort_newest => 'Más recientes primero';
   @override
-  String get manga_series_sort_oldest => 'Oldest first';
+  String get manga_series_sort_oldest => 'Más antiguos primero';
   @override
-  String get manga_series_unread_only => 'Unread only';
+  String get manga_series_unread_only => 'Solo no leídos';
   @override
-  String get manga_series_mark_read => 'Mark as read';
+  String get manga_series_mark_read => 'Marcar como leído';
   @override
-  String get manga_series_mark_unread => 'Mark as unread';
+  String get manga_series_mark_unread => 'Marcar como no leído';
   @override
-  String get manga_series_mark_previous_read => 'Mark this and earlier as read';
+  String get manga_series_mark_previous_read =>
+      'Marcar este y los anteriores como leídos';
   @override
-  String get manga_series_local_volume => 'Local volume';
+  String get manga_series_local_volume => 'Volumen local';
   @override
-  String get manga_series_volume_info => 'Volume';
+  String get manga_series_volume_info => 'Volumen';
   @override
-  String get manga_series_page_count => 'Pages';
+  String get manga_series_page_count => 'Páginas';
   @override
-  String get manga_series_chapters_action => 'Chapters';
+  String get manga_series_chapters_action => 'Capítulos';
   @override
-  String get manga_series_next_chapter => 'Next chapter';
+  String get manga_series_next_chapter => 'Capítulo siguiente';
   @override
-  String get manga_series_previous_chapter => 'Previous chapter';
+  String get manga_series_previous_chapter => 'Capítulo anterior';
   @override
-  String get manga_series_last_chapter_reached => 'This is the newest chapter';
+  String get manga_series_last_chapter_reached =>
+      'Este es el capítulo más reciente';
   @override
-  String get manga_series_first_chapter_reached => 'This is the first chapter';
+  String get manga_series_first_chapter_reached => 'Este es el primer capítulo';
   @override
-  String get manga_series_open_series => 'Series page';
+  String get manga_series_open_series => 'Página de la obra';
   @override
   String manga_series_read_progress(
           {required Object page, required Object total}) =>
-      'Read to page ${page} of ${total}';
+      'Leído hasta la página ${page} de ${total}';
   @override
   String manga_series_read_progress_partial({required Object page}) =>
-      'Read to page ${page}';
+      'Leído hasta la página ${page}';
 }
 
 // Path: <root>
@@ -41715,59 +41720,62 @@ class _StringsFr extends _StringsEn {
   String batch_hidden_by_filter_note({required Object n}) =>
       '${n} autres éléments sélectionnés sont masqués par le filtre actuel et ne seront pas traités.';
   @override
-  String get manga_series_refresh => 'Refresh chapters';
+  String get manga_series_refresh => 'Actualiser les chapitres';
   @override
-  String get manga_series_refresh_failed => 'Could not refresh from the source';
+  String get manga_series_refresh_failed =>
+      'Impossible d\'actualiser depuis la source';
   @override
   String get manga_series_source_disabled =>
-      'This source is not installed or is disabled';
+      'Cette source n\'est pas installée ou est désactivée';
   @override
   String get manga_series_platform_unsupported =>
-      'This source runtime is unavailable on this platform';
+      'Cette source n\'est pas disponible sur cette plateforme';
   @override
   String get manga_series_offline_hint =>
-      'Showing the chapters saved on this device';
+      'Affichage des chapitres enregistrés sur cet appareil';
   @override
-  String get manga_series_no_chapters => 'No chapters yet';
+  String get manga_series_no_chapters => 'Aucun chapitre pour le moment';
   @override
-  String get manga_series_all_read => 'Every chapter has been read';
+  String get manga_series_all_read => 'Tous les chapitres ont été lus';
   @override
-  String get manga_series_sort_newest => 'Newest first';
+  String get manga_series_sort_newest => 'Plus récents d\'abord';
   @override
-  String get manga_series_sort_oldest => 'Oldest first';
+  String get manga_series_sort_oldest => 'Plus anciens d\'abord';
   @override
-  String get manga_series_unread_only => 'Unread only';
+  String get manga_series_unread_only => 'Non lus uniquement';
   @override
-  String get manga_series_mark_read => 'Mark as read';
+  String get manga_series_mark_read => 'Marquer comme lu';
   @override
-  String get manga_series_mark_unread => 'Mark as unread';
+  String get manga_series_mark_unread => 'Marquer comme non lu';
   @override
-  String get manga_series_mark_previous_read => 'Mark this and earlier as read';
+  String get manga_series_mark_previous_read =>
+      'Marquer celui-ci et les précédents comme lus';
   @override
-  String get manga_series_local_volume => 'Local volume';
+  String get manga_series_local_volume => 'Volume local';
   @override
   String get manga_series_volume_info => 'Volume';
   @override
   String get manga_series_page_count => 'Pages';
   @override
-  String get manga_series_chapters_action => 'Chapters';
+  String get manga_series_chapters_action => 'Chapitres';
   @override
-  String get manga_series_next_chapter => 'Next chapter';
+  String get manga_series_next_chapter => 'Chapitre suivant';
   @override
-  String get manga_series_previous_chapter => 'Previous chapter';
+  String get manga_series_previous_chapter => 'Chapitre précédent';
   @override
-  String get manga_series_last_chapter_reached => 'This is the newest chapter';
+  String get manga_series_last_chapter_reached =>
+      'C\'est le chapitre le plus récent';
   @override
-  String get manga_series_first_chapter_reached => 'This is the first chapter';
+  String get manga_series_first_chapter_reached => 'C\'est le premier chapitre';
   @override
-  String get manga_series_open_series => 'Series page';
+  String get manga_series_open_series => 'Page de l\'œuvre';
   @override
   String manga_series_read_progress(
           {required Object page, required Object total}) =>
-      'Read to page ${page} of ${total}';
+      'Lu jusqu\'à la page ${page} sur ${total}';
   @override
   String manga_series_read_progress_partial({required Object page}) =>
-      'Read to page ${page}';
+      'Lu jusqu\'à la page ${page}';
 }
 
 // Path: <root>
@@ -50769,59 +50777,61 @@ class _StringsId extends _StringsEn {
   String batch_hidden_by_filter_note({required Object n}) =>
       '${n} item terpilih lainnya disembunyikan oleh filter saat ini dan tidak akan diproses.';
   @override
-  String get manga_series_refresh => 'Refresh chapters';
+  String get manga_series_refresh => 'Segarkan bab';
   @override
-  String get manga_series_refresh_failed => 'Could not refresh from the source';
+  String get manga_series_refresh_failed =>
+      'Tidak dapat menyegarkan dari sumber';
   @override
   String get manga_series_source_disabled =>
-      'This source is not installed or is disabled';
+      'Sumber ini belum dipasang atau dinonaktifkan';
   @override
   String get manga_series_platform_unsupported =>
-      'This source runtime is unavailable on this platform';
+      'Sumber ini tidak tersedia di platform ini';
   @override
   String get manga_series_offline_hint =>
-      'Showing the chapters saved on this device';
+      'Menampilkan bab yang tersimpan di perangkat ini';
   @override
-  String get manga_series_no_chapters => 'No chapters yet';
+  String get manga_series_no_chapters => 'Belum ada bab';
   @override
-  String get manga_series_all_read => 'Every chapter has been read';
+  String get manga_series_all_read => 'Semua bab telah dibaca';
   @override
-  String get manga_series_sort_newest => 'Newest first';
+  String get manga_series_sort_newest => 'Terbaru dulu';
   @override
-  String get manga_series_sort_oldest => 'Oldest first';
+  String get manga_series_sort_oldest => 'Terlama dulu';
   @override
-  String get manga_series_unread_only => 'Unread only';
+  String get manga_series_unread_only => 'Hanya yang belum dibaca';
   @override
-  String get manga_series_mark_read => 'Mark as read';
+  String get manga_series_mark_read => 'Tandai sudah dibaca';
   @override
-  String get manga_series_mark_unread => 'Mark as unread';
+  String get manga_series_mark_unread => 'Tandai belum dibaca';
   @override
-  String get manga_series_mark_previous_read => 'Mark this and earlier as read';
+  String get manga_series_mark_previous_read =>
+      'Tandai bab ini dan sebelumnya sudah dibaca';
   @override
-  String get manga_series_local_volume => 'Local volume';
+  String get manga_series_local_volume => 'Volume lokal';
   @override
   String get manga_series_volume_info => 'Volume';
   @override
-  String get manga_series_page_count => 'Pages';
+  String get manga_series_page_count => 'Halaman';
   @override
-  String get manga_series_chapters_action => 'Chapters';
+  String get manga_series_chapters_action => 'Bab';
   @override
-  String get manga_series_next_chapter => 'Next chapter';
+  String get manga_series_next_chapter => 'Bab berikutnya';
   @override
-  String get manga_series_previous_chapter => 'Previous chapter';
+  String get manga_series_previous_chapter => 'Bab sebelumnya';
   @override
-  String get manga_series_last_chapter_reached => 'This is the newest chapter';
+  String get manga_series_last_chapter_reached => 'Ini bab terbaru';
   @override
-  String get manga_series_first_chapter_reached => 'This is the first chapter';
+  String get manga_series_first_chapter_reached => 'Ini bab pertama';
   @override
-  String get manga_series_open_series => 'Series page';
+  String get manga_series_open_series => 'Halaman karya';
   @override
   String manga_series_read_progress(
           {required Object page, required Object total}) =>
-      'Read to page ${page} of ${total}';
+      'Dibaca sampai halaman ${page} dari ${total}';
   @override
   String manga_series_read_progress_partial({required Object page}) =>
-      'Read to page ${page}';
+      'Dibaca sampai halaman ${page}';
 }
 
 // Path: <root>
@@ -59899,59 +59909,62 @@ class _StringsIt extends _StringsEn {
   String batch_hidden_by_filter_note({required Object n}) =>
       'Altri ${n} elementi selezionati sono nascosti dal filtro corrente e non verranno elaborati.';
   @override
-  String get manga_series_refresh => 'Refresh chapters';
+  String get manga_series_refresh => 'Aggiorna capitoli';
   @override
-  String get manga_series_refresh_failed => 'Could not refresh from the source';
+  String get manga_series_refresh_failed =>
+      'Impossibile aggiornare dalla fonte';
   @override
   String get manga_series_source_disabled =>
-      'This source is not installed or is disabled';
+      'Questa fonte non è installata o è disattivata';
   @override
   String get manga_series_platform_unsupported =>
-      'This source runtime is unavailable on this platform';
+      'Questa fonte non è disponibile su questa piattaforma';
   @override
   String get manga_series_offline_hint =>
-      'Showing the chapters saved on this device';
+      'Vengono mostrati i capitoli salvati su questo dispositivo';
   @override
-  String get manga_series_no_chapters => 'No chapters yet';
+  String get manga_series_no_chapters => 'Ancora nessun capitolo';
   @override
-  String get manga_series_all_read => 'Every chapter has been read';
+  String get manga_series_all_read => 'Tutti i capitoli sono stati letti';
   @override
-  String get manga_series_sort_newest => 'Newest first';
+  String get manga_series_sort_newest => 'Prima i più recenti';
   @override
-  String get manga_series_sort_oldest => 'Oldest first';
+  String get manga_series_sort_oldest => 'Prima i più vecchi';
   @override
-  String get manga_series_unread_only => 'Unread only';
+  String get manga_series_unread_only => 'Solo non letti';
   @override
-  String get manga_series_mark_read => 'Mark as read';
+  String get manga_series_mark_read => 'Segna come letto';
   @override
-  String get manga_series_mark_unread => 'Mark as unread';
+  String get manga_series_mark_unread => 'Segna come non letto';
   @override
-  String get manga_series_mark_previous_read => 'Mark this and earlier as read';
+  String get manga_series_mark_previous_read =>
+      'Segna questo e i precedenti come letti';
   @override
-  String get manga_series_local_volume => 'Local volume';
+  String get manga_series_local_volume => 'Volume locale';
   @override
   String get manga_series_volume_info => 'Volume';
   @override
-  String get manga_series_page_count => 'Pages';
+  String get manga_series_page_count => 'Pagine';
   @override
-  String get manga_series_chapters_action => 'Chapters';
+  String get manga_series_chapters_action => 'Capitoli';
   @override
-  String get manga_series_next_chapter => 'Next chapter';
+  String get manga_series_next_chapter => 'Capitolo successivo';
   @override
-  String get manga_series_previous_chapter => 'Previous chapter';
+  String get manga_series_previous_chapter => 'Capitolo precedente';
   @override
-  String get manga_series_last_chapter_reached => 'This is the newest chapter';
+  String get manga_series_last_chapter_reached =>
+      'Questo è il capitolo più recente';
   @override
-  String get manga_series_first_chapter_reached => 'This is the first chapter';
+  String get manga_series_first_chapter_reached => 'Questo è il primo capitolo';
   @override
-  String get manga_series_open_series => 'Series page';
+  String get manga_series_open_series => 'Pagina dell\'opera';
   @override
   String manga_series_read_progress(
           {required Object page, required Object total}) =>
-      'Read to page ${page} of ${total}';
+      'Letto fino a pagina ${page} di ${total}';
   @override
   String manga_series_read_progress_partial({required Object page}) =>
-      'Read to page ${page}';
+      'Letto fino a pagina ${page}';
 }
 
 // Path: <root>
@@ -68475,59 +68488,56 @@ class _StringsJa extends _StringsEn {
   String batch_hidden_by_filter_note({required Object n}) =>
       '選択済みの ${n} 件は現在のフィルターで非表示のため、今回は処理されません。';
   @override
-  String get manga_series_refresh => 'Refresh chapters';
+  String get manga_series_refresh => '章を更新';
   @override
-  String get manga_series_refresh_failed => 'Could not refresh from the source';
+  String get manga_series_refresh_failed => 'ソースから更新できませんでした';
   @override
-  String get manga_series_source_disabled =>
-      'This source is not installed or is disabled';
+  String get manga_series_source_disabled => 'このソースは未インストールまたは無効です';
   @override
-  String get manga_series_platform_unsupported =>
-      'This source runtime is unavailable on this platform';
+  String get manga_series_platform_unsupported => 'このソースはこのプラットフォームでは利用できません';
   @override
-  String get manga_series_offline_hint =>
-      'Showing the chapters saved on this device';
+  String get manga_series_offline_hint => 'この端末に保存済みの章を表示しています';
   @override
-  String get manga_series_no_chapters => 'No chapters yet';
+  String get manga_series_no_chapters => '章がまだありません';
   @override
-  String get manga_series_all_read => 'Every chapter has been read';
+  String get manga_series_all_read => 'すべての章を読み終えました';
   @override
-  String get manga_series_sort_newest => 'Newest first';
+  String get manga_series_sort_newest => '新しい順';
   @override
-  String get manga_series_sort_oldest => 'Oldest first';
+  String get manga_series_sort_oldest => '古い順';
   @override
-  String get manga_series_unread_only => 'Unread only';
+  String get manga_series_unread_only => '未読のみ';
   @override
-  String get manga_series_mark_read => 'Mark as read';
+  String get manga_series_mark_read => '既読にする';
   @override
-  String get manga_series_mark_unread => 'Mark as unread';
+  String get manga_series_mark_unread => '未読にする';
   @override
-  String get manga_series_mark_previous_read => 'Mark this and earlier as read';
+  String get manga_series_mark_previous_read => 'この章までを既読にする';
   @override
-  String get manga_series_local_volume => 'Local volume';
+  String get manga_series_local_volume => 'ローカルの巻';
   @override
-  String get manga_series_volume_info => 'Volume';
+  String get manga_series_volume_info => '巻の情報';
   @override
-  String get manga_series_page_count => 'Pages';
+  String get manga_series_page_count => 'ページ数';
   @override
-  String get manga_series_chapters_action => 'Chapters';
+  String get manga_series_chapters_action => '章';
   @override
-  String get manga_series_next_chapter => 'Next chapter';
+  String get manga_series_next_chapter => '次の章';
   @override
-  String get manga_series_previous_chapter => 'Previous chapter';
+  String get manga_series_previous_chapter => '前の章';
   @override
-  String get manga_series_last_chapter_reached => 'This is the newest chapter';
+  String get manga_series_last_chapter_reached => '最新の章です';
   @override
-  String get manga_series_first_chapter_reached => 'This is the first chapter';
+  String get manga_series_first_chapter_reached => '最初の章です';
   @override
-  String get manga_series_open_series => 'Series page';
+  String get manga_series_open_series => '作品ページ';
   @override
   String manga_series_read_progress(
-          {required Object page, required Object total}) =>
-      'Read to page ${page} of ${total}';
+          {required Object total, required Object page}) =>
+      '${total} ページ中 ${page} ページまで';
   @override
   String manga_series_read_progress_partial({required Object page}) =>
-      'Read to page ${page}';
+      '${page} ページまで';
 }
 
 // Path: <root>
@@ -77065,59 +77075,57 @@ class _StringsKo extends _StringsEn {
   String batch_hidden_by_filter_note({required Object n}) =>
       '선택한 항목 중 ${n}개는 현재 필터로 숨겨져 있어 처리되지 않습니다.';
   @override
-  String get manga_series_refresh => 'Refresh chapters';
+  String get manga_series_refresh => '챕터 새로고침';
   @override
-  String get manga_series_refresh_failed => 'Could not refresh from the source';
+  String get manga_series_refresh_failed => '소스에서 새로고침하지 못했습니다';
   @override
-  String get manga_series_source_disabled =>
-      'This source is not installed or is disabled';
+  String get manga_series_source_disabled => '이 소스가 설치되지 않았거나 비활성화되었습니다';
   @override
   String get manga_series_platform_unsupported =>
-      'This source runtime is unavailable on this platform';
+      '이 소스 런타임은 이 플랫폼에서 사용할 수 없습니다';
   @override
-  String get manga_series_offline_hint =>
-      'Showing the chapters saved on this device';
+  String get manga_series_offline_hint => '이 기기에 저장된 챕터를 표시하고 있습니다';
   @override
-  String get manga_series_no_chapters => 'No chapters yet';
+  String get manga_series_no_chapters => '아직 챕터가 없습니다';
   @override
-  String get manga_series_all_read => 'Every chapter has been read';
+  String get manga_series_all_read => '모든 챕터를 읽었습니다';
   @override
-  String get manga_series_sort_newest => 'Newest first';
+  String get manga_series_sort_newest => '최신순';
   @override
-  String get manga_series_sort_oldest => 'Oldest first';
+  String get manga_series_sort_oldest => '오래된순';
   @override
-  String get manga_series_unread_only => 'Unread only';
+  String get manga_series_unread_only => '읽지 않은 것만';
   @override
-  String get manga_series_mark_read => 'Mark as read';
+  String get manga_series_mark_read => '읽음으로 표시';
   @override
-  String get manga_series_mark_unread => 'Mark as unread';
+  String get manga_series_mark_unread => '읽지 않음으로 표시';
   @override
-  String get manga_series_mark_previous_read => 'Mark this and earlier as read';
+  String get manga_series_mark_previous_read => '이 챕터까지 읽음으로 표시';
   @override
-  String get manga_series_local_volume => 'Local volume';
+  String get manga_series_local_volume => '로컬 권';
   @override
-  String get manga_series_volume_info => 'Volume';
+  String get manga_series_volume_info => '권 정보';
   @override
-  String get manga_series_page_count => 'Pages';
+  String get manga_series_page_count => '페이지 수';
   @override
-  String get manga_series_chapters_action => 'Chapters';
+  String get manga_series_chapters_action => '챕터';
   @override
-  String get manga_series_next_chapter => 'Next chapter';
+  String get manga_series_next_chapter => '다음 챕터';
   @override
-  String get manga_series_previous_chapter => 'Previous chapter';
+  String get manga_series_previous_chapter => '이전 챕터';
   @override
-  String get manga_series_last_chapter_reached => 'This is the newest chapter';
+  String get manga_series_last_chapter_reached => '최신 챕터입니다';
   @override
-  String get manga_series_first_chapter_reached => 'This is the first chapter';
+  String get manga_series_first_chapter_reached => '첫 번째 챕터입니다';
   @override
-  String get manga_series_open_series => 'Series page';
+  String get manga_series_open_series => '작품 페이지';
   @override
   String manga_series_read_progress(
-          {required Object page, required Object total}) =>
-      'Read to page ${page} of ${total}';
+          {required Object total, required Object page}) =>
+      '${total}페이지 중 ${page}페이지까지 읽음';
   @override
   String manga_series_read_progress_partial({required Object page}) =>
-      'Read to page ${page}';
+      '${page}페이지까지 읽음';
 }
 
 // Path: <root>
@@ -86152,59 +86160,62 @@ class _StringsNl extends _StringsEn {
   String batch_hidden_by_filter_note({required Object n}) =>
       'Nog ${n} geselecteerde items zijn verborgen door het huidige filter en worden niet verwerkt.';
   @override
-  String get manga_series_refresh => 'Refresh chapters';
+  String get manga_series_refresh => 'Hoofdstukken vernieuwen';
   @override
-  String get manga_series_refresh_failed => 'Could not refresh from the source';
+  String get manga_series_refresh_failed => 'Kon niet vernieuwen vanaf de bron';
   @override
   String get manga_series_source_disabled =>
-      'This source is not installed or is disabled';
+      'Deze bron is niet geïnstalleerd of is uitgeschakeld';
   @override
   String get manga_series_platform_unsupported =>
-      'This source runtime is unavailable on this platform';
+      'Deze bron is niet beschikbaar op dit platform';
   @override
   String get manga_series_offline_hint =>
-      'Showing the chapters saved on this device';
+      'De op dit apparaat opgeslagen hoofdstukken worden getoond';
   @override
-  String get manga_series_no_chapters => 'No chapters yet';
+  String get manga_series_no_chapters => 'Nog geen hoofdstukken';
   @override
-  String get manga_series_all_read => 'Every chapter has been read';
+  String get manga_series_all_read => 'Alle hoofdstukken zijn gelezen';
   @override
-  String get manga_series_sort_newest => 'Newest first';
+  String get manga_series_sort_newest => 'Nieuwste eerst';
   @override
-  String get manga_series_sort_oldest => 'Oldest first';
+  String get manga_series_sort_oldest => 'Oudste eerst';
   @override
-  String get manga_series_unread_only => 'Unread only';
+  String get manga_series_unread_only => 'Alleen ongelezen';
   @override
-  String get manga_series_mark_read => 'Mark as read';
+  String get manga_series_mark_read => 'Markeren als gelezen';
   @override
-  String get manga_series_mark_unread => 'Mark as unread';
+  String get manga_series_mark_unread => 'Markeren als ongelezen';
   @override
-  String get manga_series_mark_previous_read => 'Mark this and earlier as read';
+  String get manga_series_mark_previous_read =>
+      'Deze en eerdere als gelezen markeren';
   @override
-  String get manga_series_local_volume => 'Local volume';
+  String get manga_series_local_volume => 'Lokaal deel';
   @override
-  String get manga_series_volume_info => 'Volume';
+  String get manga_series_volume_info => 'Deel';
   @override
-  String get manga_series_page_count => 'Pages';
+  String get manga_series_page_count => 'Pagina\'s';
   @override
-  String get manga_series_chapters_action => 'Chapters';
+  String get manga_series_chapters_action => 'Hoofdstukken';
   @override
-  String get manga_series_next_chapter => 'Next chapter';
+  String get manga_series_next_chapter => 'Volgend hoofdstuk';
   @override
-  String get manga_series_previous_chapter => 'Previous chapter';
+  String get manga_series_previous_chapter => 'Vorig hoofdstuk';
   @override
-  String get manga_series_last_chapter_reached => 'This is the newest chapter';
+  String get manga_series_last_chapter_reached =>
+      'Dit is het nieuwste hoofdstuk';
   @override
-  String get manga_series_first_chapter_reached => 'This is the first chapter';
+  String get manga_series_first_chapter_reached =>
+      'Dit is het eerste hoofdstuk';
   @override
-  String get manga_series_open_series => 'Series page';
+  String get manga_series_open_series => 'Werkpagina';
   @override
   String manga_series_read_progress(
           {required Object page, required Object total}) =>
-      'Read to page ${page} of ${total}';
+      'Gelezen tot pagina ${page} van ${total}';
   @override
   String manga_series_read_progress_partial({required Object page}) =>
-      'Read to page ${page}';
+      'Gelezen tot pagina ${page}';
 }
 
 // Path: <root>
@@ -95295,59 +95306,62 @@ class _StringsPtBr extends _StringsEn {
   String batch_hidden_by_filter_note({required Object n}) =>
       'Outros ${n} itens selecionados estão ocultos pelo filtro atual e não serão processados.';
   @override
-  String get manga_series_refresh => 'Refresh chapters';
+  String get manga_series_refresh => 'Atualizar capítulos';
   @override
-  String get manga_series_refresh_failed => 'Could not refresh from the source';
+  String get manga_series_refresh_failed =>
+      'Não foi possível atualizar pela fonte';
   @override
   String get manga_series_source_disabled =>
-      'This source is not installed or is disabled';
+      'Esta fonte não está instalada ou está desativada';
   @override
   String get manga_series_platform_unsupported =>
-      'This source runtime is unavailable on this platform';
+      'Esta fonte não está disponível nesta plataforma';
   @override
   String get manga_series_offline_hint =>
-      'Showing the chapters saved on this device';
+      'Exibindo os capítulos salvos neste dispositivo';
   @override
-  String get manga_series_no_chapters => 'No chapters yet';
+  String get manga_series_no_chapters => 'Ainda não há capítulos';
   @override
-  String get manga_series_all_read => 'Every chapter has been read';
+  String get manga_series_all_read => 'Todos os capítulos foram lidos';
   @override
-  String get manga_series_sort_newest => 'Newest first';
+  String get manga_series_sort_newest => 'Mais recentes primeiro';
   @override
-  String get manga_series_sort_oldest => 'Oldest first';
+  String get manga_series_sort_oldest => 'Mais antigos primeiro';
   @override
-  String get manga_series_unread_only => 'Unread only';
+  String get manga_series_unread_only => 'Somente não lidos';
   @override
-  String get manga_series_mark_read => 'Mark as read';
+  String get manga_series_mark_read => 'Marcar como lido';
   @override
-  String get manga_series_mark_unread => 'Mark as unread';
+  String get manga_series_mark_unread => 'Marcar como não lido';
   @override
-  String get manga_series_mark_previous_read => 'Mark this and earlier as read';
+  String get manga_series_mark_previous_read =>
+      'Marcar este e os anteriores como lidos';
   @override
-  String get manga_series_local_volume => 'Local volume';
+  String get manga_series_local_volume => 'Volume local';
   @override
   String get manga_series_volume_info => 'Volume';
   @override
-  String get manga_series_page_count => 'Pages';
+  String get manga_series_page_count => 'Páginas';
   @override
-  String get manga_series_chapters_action => 'Chapters';
+  String get manga_series_chapters_action => 'Capítulos';
   @override
-  String get manga_series_next_chapter => 'Next chapter';
+  String get manga_series_next_chapter => 'Próximo capítulo';
   @override
-  String get manga_series_previous_chapter => 'Previous chapter';
+  String get manga_series_previous_chapter => 'Capítulo anterior';
   @override
-  String get manga_series_last_chapter_reached => 'This is the newest chapter';
+  String get manga_series_last_chapter_reached =>
+      'Este é o capítulo mais recente';
   @override
-  String get manga_series_first_chapter_reached => 'This is the first chapter';
+  String get manga_series_first_chapter_reached => 'Este é o primeiro capítulo';
   @override
-  String get manga_series_open_series => 'Series page';
+  String get manga_series_open_series => 'Página da obra';
   @override
   String manga_series_read_progress(
           {required Object page, required Object total}) =>
-      'Read to page ${page} of ${total}';
+      'Lido até a página ${page} de ${total}';
   @override
   String manga_series_read_progress_partial({required Object page}) =>
-      'Read to page ${page}';
+      'Lido até a página ${page}';
 }
 
 // Path: <root>
@@ -104414,59 +104428,60 @@ class _StringsRu extends _StringsEn {
   String batch_hidden_by_filter_note({required Object n}) =>
       'Ещё ${n} выбранных элементов скрыты текущим фильтром и не будут обработаны.';
   @override
-  String get manga_series_refresh => 'Refresh chapters';
+  String get manga_series_refresh => 'Обновить главы';
   @override
-  String get manga_series_refresh_failed => 'Could not refresh from the source';
+  String get manga_series_refresh_failed => 'Не удалось обновить из источника';
   @override
   String get manga_series_source_disabled =>
-      'This source is not installed or is disabled';
+      'Этот источник не установлен или отключён';
   @override
   String get manga_series_platform_unsupported =>
-      'This source runtime is unavailable on this platform';
+      'Этот источник недоступен на этой платформе';
   @override
   String get manga_series_offline_hint =>
-      'Showing the chapters saved on this device';
+      'Показаны главы, сохранённые на этом устройстве';
   @override
-  String get manga_series_no_chapters => 'No chapters yet';
+  String get manga_series_no_chapters => 'Глав пока нет';
   @override
-  String get manga_series_all_read => 'Every chapter has been read';
+  String get manga_series_all_read => 'Все главы прочитаны';
   @override
-  String get manga_series_sort_newest => 'Newest first';
+  String get manga_series_sort_newest => 'Сначала новые';
   @override
-  String get manga_series_sort_oldest => 'Oldest first';
+  String get manga_series_sort_oldest => 'Сначала старые';
   @override
-  String get manga_series_unread_only => 'Unread only';
+  String get manga_series_unread_only => 'Только непрочитанные';
   @override
-  String get manga_series_mark_read => 'Mark as read';
+  String get manga_series_mark_read => 'Отметить как прочитанное';
   @override
-  String get manga_series_mark_unread => 'Mark as unread';
+  String get manga_series_mark_unread => 'Отметить как непрочитанное';
   @override
-  String get manga_series_mark_previous_read => 'Mark this and earlier as read';
+  String get manga_series_mark_previous_read =>
+      'Отметить эту и более ранние как прочитанные';
   @override
-  String get manga_series_local_volume => 'Local volume';
+  String get manga_series_local_volume => 'Локальный том';
   @override
-  String get manga_series_volume_info => 'Volume';
+  String get manga_series_volume_info => 'Том';
   @override
-  String get manga_series_page_count => 'Pages';
+  String get manga_series_page_count => 'Страниц';
   @override
-  String get manga_series_chapters_action => 'Chapters';
+  String get manga_series_chapters_action => 'Главы';
   @override
-  String get manga_series_next_chapter => 'Next chapter';
+  String get manga_series_next_chapter => 'Следующая глава';
   @override
-  String get manga_series_previous_chapter => 'Previous chapter';
+  String get manga_series_previous_chapter => 'Предыдущая глава';
   @override
-  String get manga_series_last_chapter_reached => 'This is the newest chapter';
+  String get manga_series_last_chapter_reached => 'Это самая новая глава';
   @override
-  String get manga_series_first_chapter_reached => 'This is the first chapter';
+  String get manga_series_first_chapter_reached => 'Это первая глава';
   @override
-  String get manga_series_open_series => 'Series page';
+  String get manga_series_open_series => 'Страница произведения';
   @override
   String manga_series_read_progress(
           {required Object page, required Object total}) =>
-      'Read to page ${page} of ${total}';
+      'Прочитано до страницы ${page} из ${total}';
   @override
   String manga_series_read_progress_partial({required Object page}) =>
-      'Read to page ${page}';
+      'Прочитано до страницы ${page}';
 }
 
 // Path: <root>
@@ -113351,59 +113366,60 @@ class _StringsTh extends _StringsEn {
   String batch_hidden_by_filter_note({required Object n}) =>
       'รายการที่เลือกอีก ${n} รายการถูกซ่อนด้วยตัวกรองปัจจุบันและจะไม่ถูกดำเนินการ';
   @override
-  String get manga_series_refresh => 'Refresh chapters';
+  String get manga_series_refresh => 'รีเฟรชตอน';
   @override
-  String get manga_series_refresh_failed => 'Could not refresh from the source';
+  String get manga_series_refresh_failed => 'รีเฟรชจากแหล่งที่มาไม่สำเร็จ';
   @override
   String get manga_series_source_disabled =>
-      'This source is not installed or is disabled';
+      'ยังไม่ได้ติดตั้งแหล่งที่มานี้หรือถูกปิดใช้งาน';
   @override
   String get manga_series_platform_unsupported =>
-      'This source runtime is unavailable on this platform';
+      'แหล่งที่มานี้ใช้ไม่ได้บนแพลตฟอร์มนี้';
   @override
   String get manga_series_offline_hint =>
-      'Showing the chapters saved on this device';
+      'กำลังแสดงตอนที่บันทึกไว้ในเครื่องนี้';
   @override
-  String get manga_series_no_chapters => 'No chapters yet';
+  String get manga_series_no_chapters => 'ยังไม่มีตอน';
   @override
-  String get manga_series_all_read => 'Every chapter has been read';
+  String get manga_series_all_read => 'อ่านครบทุกตอนแล้ว';
   @override
-  String get manga_series_sort_newest => 'Newest first';
+  String get manga_series_sort_newest => 'ใหม่สุดก่อน';
   @override
-  String get manga_series_sort_oldest => 'Oldest first';
+  String get manga_series_sort_oldest => 'เก่าสุดก่อน';
   @override
-  String get manga_series_unread_only => 'Unread only';
+  String get manga_series_unread_only => 'เฉพาะที่ยังไม่อ่าน';
   @override
-  String get manga_series_mark_read => 'Mark as read';
+  String get manga_series_mark_read => 'ทำเครื่องหมายว่าอ่านแล้ว';
   @override
-  String get manga_series_mark_unread => 'Mark as unread';
+  String get manga_series_mark_unread => 'ทำเครื่องหมายว่ายังไม่อ่าน';
   @override
-  String get manga_series_mark_previous_read => 'Mark this and earlier as read';
+  String get manga_series_mark_previous_read =>
+      'ทำเครื่องหมายตอนนี้และก่อนหน้าว่าอ่านแล้ว';
   @override
-  String get manga_series_local_volume => 'Local volume';
+  String get manga_series_local_volume => 'เล่มในเครื่อง';
   @override
-  String get manga_series_volume_info => 'Volume';
+  String get manga_series_volume_info => 'ข้อมูลเล่ม';
   @override
-  String get manga_series_page_count => 'Pages';
+  String get manga_series_page_count => 'จำนวนหน้า';
   @override
-  String get manga_series_chapters_action => 'Chapters';
+  String get manga_series_chapters_action => 'ตอน';
   @override
-  String get manga_series_next_chapter => 'Next chapter';
+  String get manga_series_next_chapter => 'ตอนถัดไป';
   @override
-  String get manga_series_previous_chapter => 'Previous chapter';
+  String get manga_series_previous_chapter => 'ตอนก่อนหน้า';
   @override
-  String get manga_series_last_chapter_reached => 'This is the newest chapter';
+  String get manga_series_last_chapter_reached => 'นี่เป็นตอนล่าสุดแล้ว';
   @override
-  String get manga_series_first_chapter_reached => 'This is the first chapter';
+  String get manga_series_first_chapter_reached => 'นี่เป็นตอนแรกแล้ว';
   @override
-  String get manga_series_open_series => 'Series page';
+  String get manga_series_open_series => 'หน้าผลงาน';
   @override
   String manga_series_read_progress(
           {required Object page, required Object total}) =>
-      'Read to page ${page} of ${total}';
+      'อ่านถึงหน้า ${page} จาก ${total}';
   @override
   String manga_series_read_progress_partial({required Object page}) =>
-      'Read to page ${page}';
+      'อ่านถึงหน้า ${page}';
 }
 
 // Path: <root>
@@ -122391,59 +122407,60 @@ class _StringsTr extends _StringsEn {
   String batch_hidden_by_filter_note({required Object n}) =>
       'Seçili ${n} öğe daha geçerli filtre tarafından gizlendi ve işlenmeyecek.';
   @override
-  String get manga_series_refresh => 'Refresh chapters';
+  String get manga_series_refresh => 'Bölümleri yenile';
   @override
-  String get manga_series_refresh_failed => 'Could not refresh from the source';
+  String get manga_series_refresh_failed => 'Kaynaktan yenilenemedi';
   @override
   String get manga_series_source_disabled =>
-      'This source is not installed or is disabled';
+      'Bu kaynak yüklü değil veya devre dışı';
   @override
   String get manga_series_platform_unsupported =>
-      'This source runtime is unavailable on this platform';
+      'Bu kaynak bu platformda kullanılamıyor';
   @override
   String get manga_series_offline_hint =>
-      'Showing the chapters saved on this device';
+      'Bu cihazda kayıtlı bölümler gösteriliyor';
   @override
-  String get manga_series_no_chapters => 'No chapters yet';
+  String get manga_series_no_chapters => 'Henüz bölüm yok';
   @override
-  String get manga_series_all_read => 'Every chapter has been read';
+  String get manga_series_all_read => 'Tüm bölümler okundu';
   @override
-  String get manga_series_sort_newest => 'Newest first';
+  String get manga_series_sort_newest => 'Önce en yeni';
   @override
-  String get manga_series_sort_oldest => 'Oldest first';
+  String get manga_series_sort_oldest => 'Önce en eski';
   @override
-  String get manga_series_unread_only => 'Unread only';
+  String get manga_series_unread_only => 'Yalnızca okunmamışlar';
   @override
-  String get manga_series_mark_read => 'Mark as read';
+  String get manga_series_mark_read => 'Okundu olarak işaretle';
   @override
-  String get manga_series_mark_unread => 'Mark as unread';
+  String get manga_series_mark_unread => 'Okunmadı olarak işaretle';
   @override
-  String get manga_series_mark_previous_read => 'Mark this and earlier as read';
+  String get manga_series_mark_previous_read =>
+      'Bunu ve öncekileri okundu olarak işaretle';
   @override
-  String get manga_series_local_volume => 'Local volume';
+  String get manga_series_local_volume => 'Yerel cilt';
   @override
-  String get manga_series_volume_info => 'Volume';
+  String get manga_series_volume_info => 'Cilt';
   @override
-  String get manga_series_page_count => 'Pages';
+  String get manga_series_page_count => 'Sayfa';
   @override
-  String get manga_series_chapters_action => 'Chapters';
+  String get manga_series_chapters_action => 'Bölümler';
   @override
-  String get manga_series_next_chapter => 'Next chapter';
+  String get manga_series_next_chapter => 'Sonraki bölüm';
   @override
-  String get manga_series_previous_chapter => 'Previous chapter';
+  String get manga_series_previous_chapter => 'Önceki bölüm';
   @override
-  String get manga_series_last_chapter_reached => 'This is the newest chapter';
+  String get manga_series_last_chapter_reached => 'Bu en yeni bölüm';
   @override
-  String get manga_series_first_chapter_reached => 'This is the first chapter';
+  String get manga_series_first_chapter_reached => 'Bu ilk bölüm';
   @override
-  String get manga_series_open_series => 'Series page';
+  String get manga_series_open_series => 'Eser sayfası';
   @override
   String manga_series_read_progress(
-          {required Object page, required Object total}) =>
-      'Read to page ${page} of ${total}';
+          {required Object total, required Object page}) =>
+      '${total} sayfadan ${page}. sayfaya kadar okundu';
   @override
   String manga_series_read_progress_partial({required Object page}) =>
-      'Read to page ${page}';
+      '${page}. sayfaya kadar okundu';
 }
 
 // Path: <root>
@@ -131413,59 +131430,60 @@ class _StringsVi extends _StringsEn {
   String batch_hidden_by_filter_note({required Object n}) =>
       'Còn ${n} mục đã chọn bị ẩn bởi bộ lọc hiện tại và sẽ không được xử lý.';
   @override
-  String get manga_series_refresh => 'Refresh chapters';
+  String get manga_series_refresh => 'Làm mới chương';
   @override
-  String get manga_series_refresh_failed => 'Could not refresh from the source';
+  String get manga_series_refresh_failed => 'Không thể làm mới từ nguồn';
   @override
   String get manga_series_source_disabled =>
-      'This source is not installed or is disabled';
+      'Nguồn này chưa được cài đặt hoặc đã bị tắt';
   @override
   String get manga_series_platform_unsupported =>
-      'This source runtime is unavailable on this platform';
+      'Nguồn này không khả dụng trên nền tảng này';
   @override
   String get manga_series_offline_hint =>
-      'Showing the chapters saved on this device';
+      'Đang hiển thị các chương đã lưu trên thiết bị này';
   @override
-  String get manga_series_no_chapters => 'No chapters yet';
+  String get manga_series_no_chapters => 'Chưa có chương nào';
   @override
-  String get manga_series_all_read => 'Every chapter has been read';
+  String get manga_series_all_read => 'Đã đọc hết tất cả các chương';
   @override
-  String get manga_series_sort_newest => 'Newest first';
+  String get manga_series_sort_newest => 'Mới nhất trước';
   @override
-  String get manga_series_sort_oldest => 'Oldest first';
+  String get manga_series_sort_oldest => 'Cũ nhất trước';
   @override
-  String get manga_series_unread_only => 'Unread only';
+  String get manga_series_unread_only => 'Chỉ chưa đọc';
   @override
-  String get manga_series_mark_read => 'Mark as read';
+  String get manga_series_mark_read => 'Đánh dấu đã đọc';
   @override
-  String get manga_series_mark_unread => 'Mark as unread';
+  String get manga_series_mark_unread => 'Đánh dấu chưa đọc';
   @override
-  String get manga_series_mark_previous_read => 'Mark this and earlier as read';
+  String get manga_series_mark_previous_read =>
+      'Đánh dấu chương này và trước đó là đã đọc';
   @override
-  String get manga_series_local_volume => 'Local volume';
+  String get manga_series_local_volume => 'Tập cục bộ';
   @override
-  String get manga_series_volume_info => 'Volume';
+  String get manga_series_volume_info => 'Tập';
   @override
-  String get manga_series_page_count => 'Pages';
+  String get manga_series_page_count => 'Số trang';
   @override
-  String get manga_series_chapters_action => 'Chapters';
+  String get manga_series_chapters_action => 'Chương';
   @override
-  String get manga_series_next_chapter => 'Next chapter';
+  String get manga_series_next_chapter => 'Chương sau';
   @override
-  String get manga_series_previous_chapter => 'Previous chapter';
+  String get manga_series_previous_chapter => 'Chương trước';
   @override
-  String get manga_series_last_chapter_reached => 'This is the newest chapter';
+  String get manga_series_last_chapter_reached => 'Đây là chương mới nhất';
   @override
-  String get manga_series_first_chapter_reached => 'This is the first chapter';
+  String get manga_series_first_chapter_reached => 'Đây là chương đầu tiên';
   @override
-  String get manga_series_open_series => 'Series page';
+  String get manga_series_open_series => 'Trang tác phẩm';
   @override
   String manga_series_read_progress(
           {required Object page, required Object total}) =>
-      'Read to page ${page} of ${total}';
+      'Đã đọc đến trang ${page} trên ${total}';
   @override
   String manga_series_read_progress_partial({required Object page}) =>
-      'Read to page ${page}';
+      'Đã đọc đến trang ${page}';
 }
 
 // Path: <root>
@@ -148022,59 +148040,56 @@ class _StringsZhHk extends _StringsEn {
   String batch_hidden_by_filter_note({required Object n}) =>
       '另有 ${n} 項被目前篩選隱藏，今次不會處理。';
   @override
-  String get manga_series_refresh => 'Refresh chapters';
+  String get manga_series_refresh => '重新整理章節';
   @override
-  String get manga_series_refresh_failed => 'Could not refresh from the source';
+  String get manga_series_refresh_failed => '無法從來源重新整理';
   @override
-  String get manga_series_source_disabled =>
-      'This source is not installed or is disabled';
+  String get manga_series_source_disabled => '此來源未安裝或已停用';
   @override
-  String get manga_series_platform_unsupported =>
-      'This source runtime is unavailable on this platform';
+  String get manga_series_platform_unsupported => '此來源執行階段在本平台無法使用';
   @override
-  String get manga_series_offline_hint =>
-      'Showing the chapters saved on this device';
+  String get manga_series_offline_hint => '顯示的是本機已儲存的章節';
   @override
-  String get manga_series_no_chapters => 'No chapters yet';
+  String get manga_series_no_chapters => '還沒有章節';
   @override
-  String get manga_series_all_read => 'Every chapter has been read';
+  String get manga_series_all_read => '所有章節都已讀完';
   @override
-  String get manga_series_sort_newest => 'Newest first';
+  String get manga_series_sort_newest => '最新在前';
   @override
-  String get manga_series_sort_oldest => 'Oldest first';
+  String get manga_series_sort_oldest => '最早在前';
   @override
-  String get manga_series_unread_only => 'Unread only';
+  String get manga_series_unread_only => '只看未讀';
   @override
-  String get manga_series_mark_read => 'Mark as read';
+  String get manga_series_mark_read => '標記為已讀';
   @override
-  String get manga_series_mark_unread => 'Mark as unread';
+  String get manga_series_mark_unread => '標記為未讀';
   @override
-  String get manga_series_mark_previous_read => 'Mark this and earlier as read';
+  String get manga_series_mark_previous_read => '標記此章及更早為已讀';
   @override
-  String get manga_series_local_volume => 'Local volume';
+  String get manga_series_local_volume => '本機卷';
   @override
-  String get manga_series_volume_info => 'Volume';
+  String get manga_series_volume_info => '卷資訊';
   @override
-  String get manga_series_page_count => 'Pages';
+  String get manga_series_page_count => '頁數';
   @override
-  String get manga_series_chapters_action => 'Chapters';
+  String get manga_series_chapters_action => '章節';
   @override
-  String get manga_series_next_chapter => 'Next chapter';
+  String get manga_series_next_chapter => '下一章';
   @override
-  String get manga_series_previous_chapter => 'Previous chapter';
+  String get manga_series_previous_chapter => '上一章';
   @override
-  String get manga_series_last_chapter_reached => 'This is the newest chapter';
+  String get manga_series_last_chapter_reached => '已經是最新一章了';
   @override
-  String get manga_series_first_chapter_reached => 'This is the first chapter';
+  String get manga_series_first_chapter_reached => '已經是第一章了';
   @override
-  String get manga_series_open_series => 'Series page';
+  String get manga_series_open_series => '作品頁';
   @override
   String manga_series_read_progress(
           {required Object page, required Object total}) =>
-      'Read to page ${page} of ${total}';
+      '讀到第 ${page}/${total} 頁';
   @override
   String manga_series_read_progress_partial({required Object page}) =>
-      'Read to page ${page}';
+      '讀到第 ${page} 頁';
 }
 
 /// Flat map(s) containing all translations.
@@ -163861,54 +163876,54 @@ extension on _StringsAr {
         return ({required Object n}) =>
             'هناك ${n} عنصر محدد مخفي بواسطة عامل التصفية الحالي ولن تتم معالجته.';
       case 'manga_series_refresh':
-        return 'Refresh chapters';
+        return 'تحديث الفصول';
       case 'manga_series_refresh_failed':
-        return 'Could not refresh from the source';
+        return 'تعذّر التحديث من المصدر';
       case 'manga_series_source_disabled':
-        return 'This source is not installed or is disabled';
+        return 'هذا المصدر غير مثبَّت أو معطَّل';
       case 'manga_series_platform_unsupported':
-        return 'This source runtime is unavailable on this platform';
+        return 'هذا المصدر غير متاح على هذه المنصة';
       case 'manga_series_offline_hint':
-        return 'Showing the chapters saved on this device';
+        return 'يتم عرض الفصول المحفوظة على هذا الجهاز';
       case 'manga_series_no_chapters':
-        return 'No chapters yet';
+        return 'لا توجد فصول بعد';
       case 'manga_series_all_read':
-        return 'Every chapter has been read';
+        return 'تمت قراءة جميع الفصول';
       case 'manga_series_sort_newest':
-        return 'Newest first';
+        return 'الأحدث أولاً';
       case 'manga_series_sort_oldest':
-        return 'Oldest first';
+        return 'الأقدم أولاً';
       case 'manga_series_unread_only':
-        return 'Unread only';
+        return 'غير المقروءة فقط';
       case 'manga_series_mark_read':
-        return 'Mark as read';
+        return 'تعليم كمقروء';
       case 'manga_series_mark_unread':
-        return 'Mark as unread';
+        return 'تعليم كغير مقروء';
       case 'manga_series_mark_previous_read':
-        return 'Mark this and earlier as read';
+        return 'تعليم هذا الفصل وما قبله كمقروء';
       case 'manga_series_local_volume':
-        return 'Local volume';
+        return 'مجلد محلي';
       case 'manga_series_volume_info':
-        return 'Volume';
+        return 'المجلد';
       case 'manga_series_page_count':
-        return 'Pages';
+        return 'الصفحات';
       case 'manga_series_chapters_action':
-        return 'Chapters';
+        return 'الفصول';
       case 'manga_series_next_chapter':
-        return 'Next chapter';
+        return 'الفصل التالي';
       case 'manga_series_previous_chapter':
-        return 'Previous chapter';
+        return 'الفصل السابق';
       case 'manga_series_last_chapter_reached':
-        return 'This is the newest chapter';
+        return 'هذا هو أحدث فصل';
       case 'manga_series_first_chapter_reached':
-        return 'This is the first chapter';
+        return 'هذا هو الفصل الأول';
       case 'manga_series_open_series':
-        return 'Series page';
+        return 'صفحة العمل';
       case 'manga_series_read_progress':
         return ({required Object page, required Object total}) =>
-            'Read to page ${page} of ${total}';
+            'تمت القراءة حتى الصفحة ${page} من ${total}';
       case 'manga_series_read_progress_partial':
-        return ({required Object page}) => 'Read to page ${page}';
+        return ({required Object page}) => 'تمت القراءة حتى الصفحة ${page}';
       default:
         return null;
     }
@@ -171819,54 +171834,54 @@ extension on _StringsDe {
         return ({required Object n}) =>
             'Weitere ${n} ausgewählte Elemente sind durch den aktuellen Filter ausgeblendet und werden nicht bearbeitet.';
       case 'manga_series_refresh':
-        return 'Refresh chapters';
+        return 'Kapitel aktualisieren';
       case 'manga_series_refresh_failed':
-        return 'Could not refresh from the source';
+        return 'Aktualisierung von der Quelle fehlgeschlagen';
       case 'manga_series_source_disabled':
-        return 'This source is not installed or is disabled';
+        return 'Diese Quelle ist nicht installiert oder deaktiviert';
       case 'manga_series_platform_unsupported':
-        return 'This source runtime is unavailable on this platform';
+        return 'Diese Quelle ist auf dieser Plattform nicht verfügbar';
       case 'manga_series_offline_hint':
-        return 'Showing the chapters saved on this device';
+        return 'Es werden die auf diesem Gerät gespeicherten Kapitel angezeigt';
       case 'manga_series_no_chapters':
-        return 'No chapters yet';
+        return 'Noch keine Kapitel';
       case 'manga_series_all_read':
-        return 'Every chapter has been read';
+        return 'Alle Kapitel wurden gelesen';
       case 'manga_series_sort_newest':
-        return 'Newest first';
+        return 'Neueste zuerst';
       case 'manga_series_sort_oldest':
-        return 'Oldest first';
+        return 'Älteste zuerst';
       case 'manga_series_unread_only':
-        return 'Unread only';
+        return 'Nur ungelesene';
       case 'manga_series_mark_read':
-        return 'Mark as read';
+        return 'Als gelesen markieren';
       case 'manga_series_mark_unread':
-        return 'Mark as unread';
+        return 'Als ungelesen markieren';
       case 'manga_series_mark_previous_read':
-        return 'Mark this and earlier as read';
+        return 'Dieses und ältere als gelesen markieren';
       case 'manga_series_local_volume':
-        return 'Local volume';
+        return 'Lokaler Band';
       case 'manga_series_volume_info':
-        return 'Volume';
+        return 'Band';
       case 'manga_series_page_count':
-        return 'Pages';
+        return 'Seiten';
       case 'manga_series_chapters_action':
-        return 'Chapters';
+        return 'Kapitel';
       case 'manga_series_next_chapter':
-        return 'Next chapter';
+        return 'Nächstes Kapitel';
       case 'manga_series_previous_chapter':
-        return 'Previous chapter';
+        return 'Vorheriges Kapitel';
       case 'manga_series_last_chapter_reached':
-        return 'This is the newest chapter';
+        return 'Das ist das neueste Kapitel';
       case 'manga_series_first_chapter_reached':
-        return 'This is the first chapter';
+        return 'Das ist das erste Kapitel';
       case 'manga_series_open_series':
-        return 'Series page';
+        return 'Werkseite';
       case 'manga_series_read_progress':
         return ({required Object page, required Object total}) =>
-            'Read to page ${page} of ${total}';
+            'Bis Seite ${page} von ${total} gelesen';
       case 'manga_series_read_progress_partial':
-        return ({required Object page}) => 'Read to page ${page}';
+        return ({required Object page}) => 'Bis Seite ${page} gelesen';
       default:
         return null;
     }
@@ -179769,54 +179784,54 @@ extension on _StringsEs {
         return ({required Object n}) =>
             'Otros ${n} elementos seleccionados están ocultos por el filtro actual y no se procesarán.';
       case 'manga_series_refresh':
-        return 'Refresh chapters';
+        return 'Actualizar capítulos';
       case 'manga_series_refresh_failed':
-        return 'Could not refresh from the source';
+        return 'No se pudo actualizar desde la fuente';
       case 'manga_series_source_disabled':
-        return 'This source is not installed or is disabled';
+        return 'Esta fuente no está instalada o está desactivada';
       case 'manga_series_platform_unsupported':
-        return 'This source runtime is unavailable on this platform';
+        return 'Esta fuente no está disponible en esta plataforma';
       case 'manga_series_offline_hint':
-        return 'Showing the chapters saved on this device';
+        return 'Se muestran los capítulos guardados en este dispositivo';
       case 'manga_series_no_chapters':
-        return 'No chapters yet';
+        return 'Todavía no hay capítulos';
       case 'manga_series_all_read':
-        return 'Every chapter has been read';
+        return 'Se han leído todos los capítulos';
       case 'manga_series_sort_newest':
-        return 'Newest first';
+        return 'Más recientes primero';
       case 'manga_series_sort_oldest':
-        return 'Oldest first';
+        return 'Más antiguos primero';
       case 'manga_series_unread_only':
-        return 'Unread only';
+        return 'Solo no leídos';
       case 'manga_series_mark_read':
-        return 'Mark as read';
+        return 'Marcar como leído';
       case 'manga_series_mark_unread':
-        return 'Mark as unread';
+        return 'Marcar como no leído';
       case 'manga_series_mark_previous_read':
-        return 'Mark this and earlier as read';
+        return 'Marcar este y los anteriores como leídos';
       case 'manga_series_local_volume':
-        return 'Local volume';
+        return 'Volumen local';
       case 'manga_series_volume_info':
-        return 'Volume';
+        return 'Volumen';
       case 'manga_series_page_count':
-        return 'Pages';
+        return 'Páginas';
       case 'manga_series_chapters_action':
-        return 'Chapters';
+        return 'Capítulos';
       case 'manga_series_next_chapter':
-        return 'Next chapter';
+        return 'Capítulo siguiente';
       case 'manga_series_previous_chapter':
-        return 'Previous chapter';
+        return 'Capítulo anterior';
       case 'manga_series_last_chapter_reached':
-        return 'This is the newest chapter';
+        return 'Este es el capítulo más reciente';
       case 'manga_series_first_chapter_reached':
-        return 'This is the first chapter';
+        return 'Este es el primer capítulo';
       case 'manga_series_open_series':
-        return 'Series page';
+        return 'Página de la obra';
       case 'manga_series_read_progress':
         return ({required Object page, required Object total}) =>
-            'Read to page ${page} of ${total}';
+            'Leído hasta la página ${page} de ${total}';
       case 'manga_series_read_progress_partial':
-        return ({required Object page}) => 'Read to page ${page}';
+        return ({required Object page}) => 'Leído hasta la página ${page}';
       default:
         return null;
     }
@@ -187727,54 +187742,54 @@ extension on _StringsFr {
         return ({required Object n}) =>
             '${n} autres éléments sélectionnés sont masqués par le filtre actuel et ne seront pas traités.';
       case 'manga_series_refresh':
-        return 'Refresh chapters';
+        return 'Actualiser les chapitres';
       case 'manga_series_refresh_failed':
-        return 'Could not refresh from the source';
+        return 'Impossible d\'actualiser depuis la source';
       case 'manga_series_source_disabled':
-        return 'This source is not installed or is disabled';
+        return 'Cette source n\'est pas installée ou est désactivée';
       case 'manga_series_platform_unsupported':
-        return 'This source runtime is unavailable on this platform';
+        return 'Cette source n\'est pas disponible sur cette plateforme';
       case 'manga_series_offline_hint':
-        return 'Showing the chapters saved on this device';
+        return 'Affichage des chapitres enregistrés sur cet appareil';
       case 'manga_series_no_chapters':
-        return 'No chapters yet';
+        return 'Aucun chapitre pour le moment';
       case 'manga_series_all_read':
-        return 'Every chapter has been read';
+        return 'Tous les chapitres ont été lus';
       case 'manga_series_sort_newest':
-        return 'Newest first';
+        return 'Plus récents d\'abord';
       case 'manga_series_sort_oldest':
-        return 'Oldest first';
+        return 'Plus anciens d\'abord';
       case 'manga_series_unread_only':
-        return 'Unread only';
+        return 'Non lus uniquement';
       case 'manga_series_mark_read':
-        return 'Mark as read';
+        return 'Marquer comme lu';
       case 'manga_series_mark_unread':
-        return 'Mark as unread';
+        return 'Marquer comme non lu';
       case 'manga_series_mark_previous_read':
-        return 'Mark this and earlier as read';
+        return 'Marquer celui-ci et les précédents comme lus';
       case 'manga_series_local_volume':
-        return 'Local volume';
+        return 'Volume local';
       case 'manga_series_volume_info':
         return 'Volume';
       case 'manga_series_page_count':
         return 'Pages';
       case 'manga_series_chapters_action':
-        return 'Chapters';
+        return 'Chapitres';
       case 'manga_series_next_chapter':
-        return 'Next chapter';
+        return 'Chapitre suivant';
       case 'manga_series_previous_chapter':
-        return 'Previous chapter';
+        return 'Chapitre précédent';
       case 'manga_series_last_chapter_reached':
-        return 'This is the newest chapter';
+        return 'C\'est le chapitre le plus récent';
       case 'manga_series_first_chapter_reached':
-        return 'This is the first chapter';
+        return 'C\'est le premier chapitre';
       case 'manga_series_open_series':
-        return 'Series page';
+        return 'Page de l\'œuvre';
       case 'manga_series_read_progress':
         return ({required Object page, required Object total}) =>
-            'Read to page ${page} of ${total}';
+            'Lu jusqu\'à la page ${page} sur ${total}';
       case 'manga_series_read_progress_partial':
-        return ({required Object page}) => 'Read to page ${page}';
+        return ({required Object page}) => 'Lu jusqu\'à la page ${page}';
       default:
         return null;
     }
@@ -195657,54 +195672,54 @@ extension on _StringsId {
         return ({required Object n}) =>
             '${n} item terpilih lainnya disembunyikan oleh filter saat ini dan tidak akan diproses.';
       case 'manga_series_refresh':
-        return 'Refresh chapters';
+        return 'Segarkan bab';
       case 'manga_series_refresh_failed':
-        return 'Could not refresh from the source';
+        return 'Tidak dapat menyegarkan dari sumber';
       case 'manga_series_source_disabled':
-        return 'This source is not installed or is disabled';
+        return 'Sumber ini belum dipasang atau dinonaktifkan';
       case 'manga_series_platform_unsupported':
-        return 'This source runtime is unavailable on this platform';
+        return 'Sumber ini tidak tersedia di platform ini';
       case 'manga_series_offline_hint':
-        return 'Showing the chapters saved on this device';
+        return 'Menampilkan bab yang tersimpan di perangkat ini';
       case 'manga_series_no_chapters':
-        return 'No chapters yet';
+        return 'Belum ada bab';
       case 'manga_series_all_read':
-        return 'Every chapter has been read';
+        return 'Semua bab telah dibaca';
       case 'manga_series_sort_newest':
-        return 'Newest first';
+        return 'Terbaru dulu';
       case 'manga_series_sort_oldest':
-        return 'Oldest first';
+        return 'Terlama dulu';
       case 'manga_series_unread_only':
-        return 'Unread only';
+        return 'Hanya yang belum dibaca';
       case 'manga_series_mark_read':
-        return 'Mark as read';
+        return 'Tandai sudah dibaca';
       case 'manga_series_mark_unread':
-        return 'Mark as unread';
+        return 'Tandai belum dibaca';
       case 'manga_series_mark_previous_read':
-        return 'Mark this and earlier as read';
+        return 'Tandai bab ini dan sebelumnya sudah dibaca';
       case 'manga_series_local_volume':
-        return 'Local volume';
+        return 'Volume lokal';
       case 'manga_series_volume_info':
         return 'Volume';
       case 'manga_series_page_count':
-        return 'Pages';
+        return 'Halaman';
       case 'manga_series_chapters_action':
-        return 'Chapters';
+        return 'Bab';
       case 'manga_series_next_chapter':
-        return 'Next chapter';
+        return 'Bab berikutnya';
       case 'manga_series_previous_chapter':
-        return 'Previous chapter';
+        return 'Bab sebelumnya';
       case 'manga_series_last_chapter_reached':
-        return 'This is the newest chapter';
+        return 'Ini bab terbaru';
       case 'manga_series_first_chapter_reached':
-        return 'This is the first chapter';
+        return 'Ini bab pertama';
       case 'manga_series_open_series':
-        return 'Series page';
+        return 'Halaman karya';
       case 'manga_series_read_progress':
         return ({required Object page, required Object total}) =>
-            'Read to page ${page} of ${total}';
+            'Dibaca sampai halaman ${page} dari ${total}';
       case 'manga_series_read_progress_partial':
-        return ({required Object page}) => 'Read to page ${page}';
+        return ({required Object page}) => 'Dibaca sampai halaman ${page}';
       default:
         return null;
     }
@@ -203608,54 +203623,54 @@ extension on _StringsIt {
         return ({required Object n}) =>
             'Altri ${n} elementi selezionati sono nascosti dal filtro corrente e non verranno elaborati.';
       case 'manga_series_refresh':
-        return 'Refresh chapters';
+        return 'Aggiorna capitoli';
       case 'manga_series_refresh_failed':
-        return 'Could not refresh from the source';
+        return 'Impossibile aggiornare dalla fonte';
       case 'manga_series_source_disabled':
-        return 'This source is not installed or is disabled';
+        return 'Questa fonte non è installata o è disattivata';
       case 'manga_series_platform_unsupported':
-        return 'This source runtime is unavailable on this platform';
+        return 'Questa fonte non è disponibile su questa piattaforma';
       case 'manga_series_offline_hint':
-        return 'Showing the chapters saved on this device';
+        return 'Vengono mostrati i capitoli salvati su questo dispositivo';
       case 'manga_series_no_chapters':
-        return 'No chapters yet';
+        return 'Ancora nessun capitolo';
       case 'manga_series_all_read':
-        return 'Every chapter has been read';
+        return 'Tutti i capitoli sono stati letti';
       case 'manga_series_sort_newest':
-        return 'Newest first';
+        return 'Prima i più recenti';
       case 'manga_series_sort_oldest':
-        return 'Oldest first';
+        return 'Prima i più vecchi';
       case 'manga_series_unread_only':
-        return 'Unread only';
+        return 'Solo non letti';
       case 'manga_series_mark_read':
-        return 'Mark as read';
+        return 'Segna come letto';
       case 'manga_series_mark_unread':
-        return 'Mark as unread';
+        return 'Segna come non letto';
       case 'manga_series_mark_previous_read':
-        return 'Mark this and earlier as read';
+        return 'Segna questo e i precedenti come letti';
       case 'manga_series_local_volume':
-        return 'Local volume';
+        return 'Volume locale';
       case 'manga_series_volume_info':
         return 'Volume';
       case 'manga_series_page_count':
-        return 'Pages';
+        return 'Pagine';
       case 'manga_series_chapters_action':
-        return 'Chapters';
+        return 'Capitoli';
       case 'manga_series_next_chapter':
-        return 'Next chapter';
+        return 'Capitolo successivo';
       case 'manga_series_previous_chapter':
-        return 'Previous chapter';
+        return 'Capitolo precedente';
       case 'manga_series_last_chapter_reached':
-        return 'This is the newest chapter';
+        return 'Questo è il capitolo più recente';
       case 'manga_series_first_chapter_reached':
-        return 'This is the first chapter';
+        return 'Questo è il primo capitolo';
       case 'manga_series_open_series':
-        return 'Series page';
+        return 'Pagina dell\'opera';
       case 'manga_series_read_progress':
         return ({required Object page, required Object total}) =>
-            'Read to page ${page} of ${total}';
+            'Letto fino a pagina ${page} di ${total}';
       case 'manga_series_read_progress_partial':
-        return ({required Object page}) => 'Read to page ${page}';
+        return ({required Object page}) => 'Letto fino a pagina ${page}';
       default:
         return null;
     }
@@ -211492,54 +211507,54 @@ extension on _StringsJa {
         return ({required Object n}) =>
             '選択済みの ${n} 件は現在のフィルターで非表示のため、今回は処理されません。';
       case 'manga_series_refresh':
-        return 'Refresh chapters';
+        return '章を更新';
       case 'manga_series_refresh_failed':
-        return 'Could not refresh from the source';
+        return 'ソースから更新できませんでした';
       case 'manga_series_source_disabled':
-        return 'This source is not installed or is disabled';
+        return 'このソースは未インストールまたは無効です';
       case 'manga_series_platform_unsupported':
-        return 'This source runtime is unavailable on this platform';
+        return 'このソースはこのプラットフォームでは利用できません';
       case 'manga_series_offline_hint':
-        return 'Showing the chapters saved on this device';
+        return 'この端末に保存済みの章を表示しています';
       case 'manga_series_no_chapters':
-        return 'No chapters yet';
+        return '章がまだありません';
       case 'manga_series_all_read':
-        return 'Every chapter has been read';
+        return 'すべての章を読み終えました';
       case 'manga_series_sort_newest':
-        return 'Newest first';
+        return '新しい順';
       case 'manga_series_sort_oldest':
-        return 'Oldest first';
+        return '古い順';
       case 'manga_series_unread_only':
-        return 'Unread only';
+        return '未読のみ';
       case 'manga_series_mark_read':
-        return 'Mark as read';
+        return '既読にする';
       case 'manga_series_mark_unread':
-        return 'Mark as unread';
+        return '未読にする';
       case 'manga_series_mark_previous_read':
-        return 'Mark this and earlier as read';
+        return 'この章までを既読にする';
       case 'manga_series_local_volume':
-        return 'Local volume';
+        return 'ローカルの巻';
       case 'manga_series_volume_info':
-        return 'Volume';
+        return '巻の情報';
       case 'manga_series_page_count':
-        return 'Pages';
+        return 'ページ数';
       case 'manga_series_chapters_action':
-        return 'Chapters';
+        return '章';
       case 'manga_series_next_chapter':
-        return 'Next chapter';
+        return '次の章';
       case 'manga_series_previous_chapter':
-        return 'Previous chapter';
+        return '前の章';
       case 'manga_series_last_chapter_reached':
-        return 'This is the newest chapter';
+        return '最新の章です';
       case 'manga_series_first_chapter_reached':
-        return 'This is the first chapter';
+        return '最初の章です';
       case 'manga_series_open_series':
-        return 'Series page';
+        return '作品ページ';
       case 'manga_series_read_progress':
-        return ({required Object page, required Object total}) =>
-            'Read to page ${page} of ${total}';
+        return ({required Object total, required Object page}) =>
+            '${total} ページ中 ${page} ページまで';
       case 'manga_series_read_progress_partial':
-        return ({required Object page}) => 'Read to page ${page}';
+        return ({required Object page}) => '${page} ページまで';
       default:
         return null;
     }
@@ -219378,54 +219393,54 @@ extension on _StringsKo {
         return ({required Object n}) =>
             '선택한 항목 중 ${n}개는 현재 필터로 숨겨져 있어 처리되지 않습니다.';
       case 'manga_series_refresh':
-        return 'Refresh chapters';
+        return '챕터 새로고침';
       case 'manga_series_refresh_failed':
-        return 'Could not refresh from the source';
+        return '소스에서 새로고침하지 못했습니다';
       case 'manga_series_source_disabled':
-        return 'This source is not installed or is disabled';
+        return '이 소스가 설치되지 않았거나 비활성화되었습니다';
       case 'manga_series_platform_unsupported':
-        return 'This source runtime is unavailable on this platform';
+        return '이 소스 런타임은 이 플랫폼에서 사용할 수 없습니다';
       case 'manga_series_offline_hint':
-        return 'Showing the chapters saved on this device';
+        return '이 기기에 저장된 챕터를 표시하고 있습니다';
       case 'manga_series_no_chapters':
-        return 'No chapters yet';
+        return '아직 챕터가 없습니다';
       case 'manga_series_all_read':
-        return 'Every chapter has been read';
+        return '모든 챕터를 읽었습니다';
       case 'manga_series_sort_newest':
-        return 'Newest first';
+        return '최신순';
       case 'manga_series_sort_oldest':
-        return 'Oldest first';
+        return '오래된순';
       case 'manga_series_unread_only':
-        return 'Unread only';
+        return '읽지 않은 것만';
       case 'manga_series_mark_read':
-        return 'Mark as read';
+        return '읽음으로 표시';
       case 'manga_series_mark_unread':
-        return 'Mark as unread';
+        return '읽지 않음으로 표시';
       case 'manga_series_mark_previous_read':
-        return 'Mark this and earlier as read';
+        return '이 챕터까지 읽음으로 표시';
       case 'manga_series_local_volume':
-        return 'Local volume';
+        return '로컬 권';
       case 'manga_series_volume_info':
-        return 'Volume';
+        return '권 정보';
       case 'manga_series_page_count':
-        return 'Pages';
+        return '페이지 수';
       case 'manga_series_chapters_action':
-        return 'Chapters';
+        return '챕터';
       case 'manga_series_next_chapter':
-        return 'Next chapter';
+        return '다음 챕터';
       case 'manga_series_previous_chapter':
-        return 'Previous chapter';
+        return '이전 챕터';
       case 'manga_series_last_chapter_reached':
-        return 'This is the newest chapter';
+        return '최신 챕터입니다';
       case 'manga_series_first_chapter_reached':
-        return 'This is the first chapter';
+        return '첫 번째 챕터입니다';
       case 'manga_series_open_series':
-        return 'Series page';
+        return '작품 페이지';
       case 'manga_series_read_progress':
-        return ({required Object page, required Object total}) =>
-            'Read to page ${page} of ${total}';
+        return ({required Object total, required Object page}) =>
+            '${total}페이지 중 ${page}페이지까지 읽음';
       case 'manga_series_read_progress_partial':
-        return ({required Object page}) => 'Read to page ${page}';
+        return ({required Object page}) => '${page}페이지까지 읽음';
       default:
         return null;
     }
@@ -227323,54 +227338,54 @@ extension on _StringsNl {
         return ({required Object n}) =>
             'Nog ${n} geselecteerde items zijn verborgen door het huidige filter en worden niet verwerkt.';
       case 'manga_series_refresh':
-        return 'Refresh chapters';
+        return 'Hoofdstukken vernieuwen';
       case 'manga_series_refresh_failed':
-        return 'Could not refresh from the source';
+        return 'Kon niet vernieuwen vanaf de bron';
       case 'manga_series_source_disabled':
-        return 'This source is not installed or is disabled';
+        return 'Deze bron is niet geïnstalleerd of is uitgeschakeld';
       case 'manga_series_platform_unsupported':
-        return 'This source runtime is unavailable on this platform';
+        return 'Deze bron is niet beschikbaar op dit platform';
       case 'manga_series_offline_hint':
-        return 'Showing the chapters saved on this device';
+        return 'De op dit apparaat opgeslagen hoofdstukken worden getoond';
       case 'manga_series_no_chapters':
-        return 'No chapters yet';
+        return 'Nog geen hoofdstukken';
       case 'manga_series_all_read':
-        return 'Every chapter has been read';
+        return 'Alle hoofdstukken zijn gelezen';
       case 'manga_series_sort_newest':
-        return 'Newest first';
+        return 'Nieuwste eerst';
       case 'manga_series_sort_oldest':
-        return 'Oldest first';
+        return 'Oudste eerst';
       case 'manga_series_unread_only':
-        return 'Unread only';
+        return 'Alleen ongelezen';
       case 'manga_series_mark_read':
-        return 'Mark as read';
+        return 'Markeren als gelezen';
       case 'manga_series_mark_unread':
-        return 'Mark as unread';
+        return 'Markeren als ongelezen';
       case 'manga_series_mark_previous_read':
-        return 'Mark this and earlier as read';
+        return 'Deze en eerdere als gelezen markeren';
       case 'manga_series_local_volume':
-        return 'Local volume';
+        return 'Lokaal deel';
       case 'manga_series_volume_info':
-        return 'Volume';
+        return 'Deel';
       case 'manga_series_page_count':
-        return 'Pages';
+        return 'Pagina\'s';
       case 'manga_series_chapters_action':
-        return 'Chapters';
+        return 'Hoofdstukken';
       case 'manga_series_next_chapter':
-        return 'Next chapter';
+        return 'Volgend hoofdstuk';
       case 'manga_series_previous_chapter':
-        return 'Previous chapter';
+        return 'Vorig hoofdstuk';
       case 'manga_series_last_chapter_reached':
-        return 'This is the newest chapter';
+        return 'Dit is het nieuwste hoofdstuk';
       case 'manga_series_first_chapter_reached':
-        return 'This is the first chapter';
+        return 'Dit is het eerste hoofdstuk';
       case 'manga_series_open_series':
-        return 'Series page';
+        return 'Werkpagina';
       case 'manga_series_read_progress':
         return ({required Object page, required Object total}) =>
-            'Read to page ${page} of ${total}';
+            'Gelezen tot pagina ${page} van ${total}';
       case 'manga_series_read_progress_partial':
-        return ({required Object page}) => 'Read to page ${page}';
+        return ({required Object page}) => 'Gelezen tot pagina ${page}';
       default:
         return null;
     }
@@ -235263,54 +235278,54 @@ extension on _StringsPtBr {
         return ({required Object n}) =>
             'Outros ${n} itens selecionados estão ocultos pelo filtro atual e não serão processados.';
       case 'manga_series_refresh':
-        return 'Refresh chapters';
+        return 'Atualizar capítulos';
       case 'manga_series_refresh_failed':
-        return 'Could not refresh from the source';
+        return 'Não foi possível atualizar pela fonte';
       case 'manga_series_source_disabled':
-        return 'This source is not installed or is disabled';
+        return 'Esta fonte não está instalada ou está desativada';
       case 'manga_series_platform_unsupported':
-        return 'This source runtime is unavailable on this platform';
+        return 'Esta fonte não está disponível nesta plataforma';
       case 'manga_series_offline_hint':
-        return 'Showing the chapters saved on this device';
+        return 'Exibindo os capítulos salvos neste dispositivo';
       case 'manga_series_no_chapters':
-        return 'No chapters yet';
+        return 'Ainda não há capítulos';
       case 'manga_series_all_read':
-        return 'Every chapter has been read';
+        return 'Todos os capítulos foram lidos';
       case 'manga_series_sort_newest':
-        return 'Newest first';
+        return 'Mais recentes primeiro';
       case 'manga_series_sort_oldest':
-        return 'Oldest first';
+        return 'Mais antigos primeiro';
       case 'manga_series_unread_only':
-        return 'Unread only';
+        return 'Somente não lidos';
       case 'manga_series_mark_read':
-        return 'Mark as read';
+        return 'Marcar como lido';
       case 'manga_series_mark_unread':
-        return 'Mark as unread';
+        return 'Marcar como não lido';
       case 'manga_series_mark_previous_read':
-        return 'Mark this and earlier as read';
+        return 'Marcar este e os anteriores como lidos';
       case 'manga_series_local_volume':
-        return 'Local volume';
+        return 'Volume local';
       case 'manga_series_volume_info':
         return 'Volume';
       case 'manga_series_page_count':
-        return 'Pages';
+        return 'Páginas';
       case 'manga_series_chapters_action':
-        return 'Chapters';
+        return 'Capítulos';
       case 'manga_series_next_chapter':
-        return 'Next chapter';
+        return 'Próximo capítulo';
       case 'manga_series_previous_chapter':
-        return 'Previous chapter';
+        return 'Capítulo anterior';
       case 'manga_series_last_chapter_reached':
-        return 'This is the newest chapter';
+        return 'Este é o capítulo mais recente';
       case 'manga_series_first_chapter_reached':
-        return 'This is the first chapter';
+        return 'Este é o primeiro capítulo';
       case 'manga_series_open_series':
-        return 'Series page';
+        return 'Página da obra';
       case 'manga_series_read_progress':
         return ({required Object page, required Object total}) =>
-            'Read to page ${page} of ${total}';
+            'Lido até a página ${page} de ${total}';
       case 'manga_series_read_progress_partial':
-        return ({required Object page}) => 'Read to page ${page}';
+        return ({required Object page}) => 'Lido até a página ${page}';
       default:
         return null;
     }
@@ -243209,54 +243224,54 @@ extension on _StringsRu {
         return ({required Object n}) =>
             'Ещё ${n} выбранных элементов скрыты текущим фильтром и не будут обработаны.';
       case 'manga_series_refresh':
-        return 'Refresh chapters';
+        return 'Обновить главы';
       case 'manga_series_refresh_failed':
-        return 'Could not refresh from the source';
+        return 'Не удалось обновить из источника';
       case 'manga_series_source_disabled':
-        return 'This source is not installed or is disabled';
+        return 'Этот источник не установлен или отключён';
       case 'manga_series_platform_unsupported':
-        return 'This source runtime is unavailable on this platform';
+        return 'Этот источник недоступен на этой платформе';
       case 'manga_series_offline_hint':
-        return 'Showing the chapters saved on this device';
+        return 'Показаны главы, сохранённые на этом устройстве';
       case 'manga_series_no_chapters':
-        return 'No chapters yet';
+        return 'Глав пока нет';
       case 'manga_series_all_read':
-        return 'Every chapter has been read';
+        return 'Все главы прочитаны';
       case 'manga_series_sort_newest':
-        return 'Newest first';
+        return 'Сначала новые';
       case 'manga_series_sort_oldest':
-        return 'Oldest first';
+        return 'Сначала старые';
       case 'manga_series_unread_only':
-        return 'Unread only';
+        return 'Только непрочитанные';
       case 'manga_series_mark_read':
-        return 'Mark as read';
+        return 'Отметить как прочитанное';
       case 'manga_series_mark_unread':
-        return 'Mark as unread';
+        return 'Отметить как непрочитанное';
       case 'manga_series_mark_previous_read':
-        return 'Mark this and earlier as read';
+        return 'Отметить эту и более ранние как прочитанные';
       case 'manga_series_local_volume':
-        return 'Local volume';
+        return 'Локальный том';
       case 'manga_series_volume_info':
-        return 'Volume';
+        return 'Том';
       case 'manga_series_page_count':
-        return 'Pages';
+        return 'Страниц';
       case 'manga_series_chapters_action':
-        return 'Chapters';
+        return 'Главы';
       case 'manga_series_next_chapter':
-        return 'Next chapter';
+        return 'Следующая глава';
       case 'manga_series_previous_chapter':
-        return 'Previous chapter';
+        return 'Предыдущая глава';
       case 'manga_series_last_chapter_reached':
-        return 'This is the newest chapter';
+        return 'Это самая новая глава';
       case 'manga_series_first_chapter_reached':
-        return 'This is the first chapter';
+        return 'Это первая глава';
       case 'manga_series_open_series':
-        return 'Series page';
+        return 'Страница произведения';
       case 'manga_series_read_progress':
         return ({required Object page, required Object total}) =>
-            'Read to page ${page} of ${total}';
+            'Прочитано до страницы ${page} из ${total}';
       case 'manga_series_read_progress_partial':
-        return ({required Object page}) => 'Read to page ${page}';
+        return ({required Object page}) => 'Прочитано до страницы ${page}';
       default:
         return null;
     }
@@ -251127,54 +251142,54 @@ extension on _StringsTh {
         return ({required Object n}) =>
             'รายการที่เลือกอีก ${n} รายการถูกซ่อนด้วยตัวกรองปัจจุบันและจะไม่ถูกดำเนินการ';
       case 'manga_series_refresh':
-        return 'Refresh chapters';
+        return 'รีเฟรชตอน';
       case 'manga_series_refresh_failed':
-        return 'Could not refresh from the source';
+        return 'รีเฟรชจากแหล่งที่มาไม่สำเร็จ';
       case 'manga_series_source_disabled':
-        return 'This source is not installed or is disabled';
+        return 'ยังไม่ได้ติดตั้งแหล่งที่มานี้หรือถูกปิดใช้งาน';
       case 'manga_series_platform_unsupported':
-        return 'This source runtime is unavailable on this platform';
+        return 'แหล่งที่มานี้ใช้ไม่ได้บนแพลตฟอร์มนี้';
       case 'manga_series_offline_hint':
-        return 'Showing the chapters saved on this device';
+        return 'กำลังแสดงตอนที่บันทึกไว้ในเครื่องนี้';
       case 'manga_series_no_chapters':
-        return 'No chapters yet';
+        return 'ยังไม่มีตอน';
       case 'manga_series_all_read':
-        return 'Every chapter has been read';
+        return 'อ่านครบทุกตอนแล้ว';
       case 'manga_series_sort_newest':
-        return 'Newest first';
+        return 'ใหม่สุดก่อน';
       case 'manga_series_sort_oldest':
-        return 'Oldest first';
+        return 'เก่าสุดก่อน';
       case 'manga_series_unread_only':
-        return 'Unread only';
+        return 'เฉพาะที่ยังไม่อ่าน';
       case 'manga_series_mark_read':
-        return 'Mark as read';
+        return 'ทำเครื่องหมายว่าอ่านแล้ว';
       case 'manga_series_mark_unread':
-        return 'Mark as unread';
+        return 'ทำเครื่องหมายว่ายังไม่อ่าน';
       case 'manga_series_mark_previous_read':
-        return 'Mark this and earlier as read';
+        return 'ทำเครื่องหมายตอนนี้และก่อนหน้าว่าอ่านแล้ว';
       case 'manga_series_local_volume':
-        return 'Local volume';
+        return 'เล่มในเครื่อง';
       case 'manga_series_volume_info':
-        return 'Volume';
+        return 'ข้อมูลเล่ม';
       case 'manga_series_page_count':
-        return 'Pages';
+        return 'จำนวนหน้า';
       case 'manga_series_chapters_action':
-        return 'Chapters';
+        return 'ตอน';
       case 'manga_series_next_chapter':
-        return 'Next chapter';
+        return 'ตอนถัดไป';
       case 'manga_series_previous_chapter':
-        return 'Previous chapter';
+        return 'ตอนก่อนหน้า';
       case 'manga_series_last_chapter_reached':
-        return 'This is the newest chapter';
+        return 'นี่เป็นตอนล่าสุดแล้ว';
       case 'manga_series_first_chapter_reached':
-        return 'This is the first chapter';
+        return 'นี่เป็นตอนแรกแล้ว';
       case 'manga_series_open_series':
-        return 'Series page';
+        return 'หน้าผลงาน';
       case 'manga_series_read_progress':
         return ({required Object page, required Object total}) =>
-            'Read to page ${page} of ${total}';
+            'อ่านถึงหน้า ${page} จาก ${total}';
       case 'manga_series_read_progress_partial':
-        return ({required Object page}) => 'Read to page ${page}';
+        return ({required Object page}) => 'อ่านถึงหน้า ${page}';
       default:
         return null;
     }
@@ -259062,54 +259077,54 @@ extension on _StringsTr {
         return ({required Object n}) =>
             'Seçili ${n} öğe daha geçerli filtre tarafından gizlendi ve işlenmeyecek.';
       case 'manga_series_refresh':
-        return 'Refresh chapters';
+        return 'Bölümleri yenile';
       case 'manga_series_refresh_failed':
-        return 'Could not refresh from the source';
+        return 'Kaynaktan yenilenemedi';
       case 'manga_series_source_disabled':
-        return 'This source is not installed or is disabled';
+        return 'Bu kaynak yüklü değil veya devre dışı';
       case 'manga_series_platform_unsupported':
-        return 'This source runtime is unavailable on this platform';
+        return 'Bu kaynak bu platformda kullanılamıyor';
       case 'manga_series_offline_hint':
-        return 'Showing the chapters saved on this device';
+        return 'Bu cihazda kayıtlı bölümler gösteriliyor';
       case 'manga_series_no_chapters':
-        return 'No chapters yet';
+        return 'Henüz bölüm yok';
       case 'manga_series_all_read':
-        return 'Every chapter has been read';
+        return 'Tüm bölümler okundu';
       case 'manga_series_sort_newest':
-        return 'Newest first';
+        return 'Önce en yeni';
       case 'manga_series_sort_oldest':
-        return 'Oldest first';
+        return 'Önce en eski';
       case 'manga_series_unread_only':
-        return 'Unread only';
+        return 'Yalnızca okunmamışlar';
       case 'manga_series_mark_read':
-        return 'Mark as read';
+        return 'Okundu olarak işaretle';
       case 'manga_series_mark_unread':
-        return 'Mark as unread';
+        return 'Okunmadı olarak işaretle';
       case 'manga_series_mark_previous_read':
-        return 'Mark this and earlier as read';
+        return 'Bunu ve öncekileri okundu olarak işaretle';
       case 'manga_series_local_volume':
-        return 'Local volume';
+        return 'Yerel cilt';
       case 'manga_series_volume_info':
-        return 'Volume';
+        return 'Cilt';
       case 'manga_series_page_count':
-        return 'Pages';
+        return 'Sayfa';
       case 'manga_series_chapters_action':
-        return 'Chapters';
+        return 'Bölümler';
       case 'manga_series_next_chapter':
-        return 'Next chapter';
+        return 'Sonraki bölüm';
       case 'manga_series_previous_chapter':
-        return 'Previous chapter';
+        return 'Önceki bölüm';
       case 'manga_series_last_chapter_reached':
-        return 'This is the newest chapter';
+        return 'Bu en yeni bölüm';
       case 'manga_series_first_chapter_reached':
-        return 'This is the first chapter';
+        return 'Bu ilk bölüm';
       case 'manga_series_open_series':
-        return 'Series page';
+        return 'Eser sayfası';
       case 'manga_series_read_progress':
-        return ({required Object page, required Object total}) =>
-            'Read to page ${page} of ${total}';
+        return ({required Object total, required Object page}) =>
+            '${total} sayfadan ${page}. sayfaya kadar okundu';
       case 'manga_series_read_progress_partial':
-        return ({required Object page}) => 'Read to page ${page}';
+        return ({required Object page}) => '${page}. sayfaya kadar okundu';
       default:
         return null;
     }
@@ -266990,54 +267005,54 @@ extension on _StringsVi {
         return ({required Object n}) =>
             'Còn ${n} mục đã chọn bị ẩn bởi bộ lọc hiện tại và sẽ không được xử lý.';
       case 'manga_series_refresh':
-        return 'Refresh chapters';
+        return 'Làm mới chương';
       case 'manga_series_refresh_failed':
-        return 'Could not refresh from the source';
+        return 'Không thể làm mới từ nguồn';
       case 'manga_series_source_disabled':
-        return 'This source is not installed or is disabled';
+        return 'Nguồn này chưa được cài đặt hoặc đã bị tắt';
       case 'manga_series_platform_unsupported':
-        return 'This source runtime is unavailable on this platform';
+        return 'Nguồn này không khả dụng trên nền tảng này';
       case 'manga_series_offline_hint':
-        return 'Showing the chapters saved on this device';
+        return 'Đang hiển thị các chương đã lưu trên thiết bị này';
       case 'manga_series_no_chapters':
-        return 'No chapters yet';
+        return 'Chưa có chương nào';
       case 'manga_series_all_read':
-        return 'Every chapter has been read';
+        return 'Đã đọc hết tất cả các chương';
       case 'manga_series_sort_newest':
-        return 'Newest first';
+        return 'Mới nhất trước';
       case 'manga_series_sort_oldest':
-        return 'Oldest first';
+        return 'Cũ nhất trước';
       case 'manga_series_unread_only':
-        return 'Unread only';
+        return 'Chỉ chưa đọc';
       case 'manga_series_mark_read':
-        return 'Mark as read';
+        return 'Đánh dấu đã đọc';
       case 'manga_series_mark_unread':
-        return 'Mark as unread';
+        return 'Đánh dấu chưa đọc';
       case 'manga_series_mark_previous_read':
-        return 'Mark this and earlier as read';
+        return 'Đánh dấu chương này và trước đó là đã đọc';
       case 'manga_series_local_volume':
-        return 'Local volume';
+        return 'Tập cục bộ';
       case 'manga_series_volume_info':
-        return 'Volume';
+        return 'Tập';
       case 'manga_series_page_count':
-        return 'Pages';
+        return 'Số trang';
       case 'manga_series_chapters_action':
-        return 'Chapters';
+        return 'Chương';
       case 'manga_series_next_chapter':
-        return 'Next chapter';
+        return 'Chương sau';
       case 'manga_series_previous_chapter':
-        return 'Previous chapter';
+        return 'Chương trước';
       case 'manga_series_last_chapter_reached':
-        return 'This is the newest chapter';
+        return 'Đây là chương mới nhất';
       case 'manga_series_first_chapter_reached':
-        return 'This is the first chapter';
+        return 'Đây là chương đầu tiên';
       case 'manga_series_open_series':
-        return 'Series page';
+        return 'Trang tác phẩm';
       case 'manga_series_read_progress':
         return ({required Object page, required Object total}) =>
-            'Read to page ${page} of ${total}';
+            'Đã đọc đến trang ${page} trên ${total}';
       case 'manga_series_read_progress_partial':
-        return ({required Object page}) => 'Read to page ${page}';
+        return ({required Object page}) => 'Đã đọc đến trang ${page}';
       default:
         return null;
     }
@@ -282715,54 +282730,54 @@ extension on _StringsZhHk {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) => '另有 ${n} 項被目前篩選隱藏，今次不會處理。';
       case 'manga_series_refresh':
-        return 'Refresh chapters';
+        return '重新整理章節';
       case 'manga_series_refresh_failed':
-        return 'Could not refresh from the source';
+        return '無法從來源重新整理';
       case 'manga_series_source_disabled':
-        return 'This source is not installed or is disabled';
+        return '此來源未安裝或已停用';
       case 'manga_series_platform_unsupported':
-        return 'This source runtime is unavailable on this platform';
+        return '此來源執行階段在本平台無法使用';
       case 'manga_series_offline_hint':
-        return 'Showing the chapters saved on this device';
+        return '顯示的是本機已儲存的章節';
       case 'manga_series_no_chapters':
-        return 'No chapters yet';
+        return '還沒有章節';
       case 'manga_series_all_read':
-        return 'Every chapter has been read';
+        return '所有章節都已讀完';
       case 'manga_series_sort_newest':
-        return 'Newest first';
+        return '最新在前';
       case 'manga_series_sort_oldest':
-        return 'Oldest first';
+        return '最早在前';
       case 'manga_series_unread_only':
-        return 'Unread only';
+        return '只看未讀';
       case 'manga_series_mark_read':
-        return 'Mark as read';
+        return '標記為已讀';
       case 'manga_series_mark_unread':
-        return 'Mark as unread';
+        return '標記為未讀';
       case 'manga_series_mark_previous_read':
-        return 'Mark this and earlier as read';
+        return '標記此章及更早為已讀';
       case 'manga_series_local_volume':
-        return 'Local volume';
+        return '本機卷';
       case 'manga_series_volume_info':
-        return 'Volume';
+        return '卷資訊';
       case 'manga_series_page_count':
-        return 'Pages';
+        return '頁數';
       case 'manga_series_chapters_action':
-        return 'Chapters';
+        return '章節';
       case 'manga_series_next_chapter':
-        return 'Next chapter';
+        return '下一章';
       case 'manga_series_previous_chapter':
-        return 'Previous chapter';
+        return '上一章';
       case 'manga_series_last_chapter_reached':
-        return 'This is the newest chapter';
+        return '已經是最新一章了';
       case 'manga_series_first_chapter_reached':
-        return 'This is the first chapter';
+        return '已經是第一章了';
       case 'manga_series_open_series':
-        return 'Series page';
+        return '作品頁';
       case 'manga_series_read_progress':
         return ({required Object page, required Object total}) =>
-            'Read to page ${page} of ${total}';
+            '讀到第 ${page}/${total} 頁';
       case 'manga_series_read_progress_partial':
-        return ({required Object page}) => 'Read to page ${page}';
+        return ({required Object page}) => '讀到第 ${page} 頁';
       default:
         return null;
     }
