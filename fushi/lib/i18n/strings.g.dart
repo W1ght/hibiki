@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 65025 (3825 per locale)
+/// Strings: 65076 (3828 per locale)
 ///
-/// Built on 2026-08-28 at 06:32 UTC
+/// Built on 2026-08-28 at 11:07 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5207,6 +5207,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Select nothing to list every video library. Narrowing to the libraries you actually watch keeps huge servers from being enumerated in full.';
   String get jellyfin_libraries_load_failed =>
       'Could not load the library list';
+  String get floating_lyric_passthrough =>
+      'Click through to what is underneath';
+  String get floating_lyric_transparency => 'Toggle the background';
+  String get floating_lyric_topmost => 'Keep on top';
 }
 
 // Path: <root>
@@ -14070,6 +14074,12 @@ class _StringsAr extends _StringsEn {
       'عدم اختيار أي شيء يسرد كل مكتبات الفيديو. حصر الأمر في المكتبات التي تشاهدها فعلًا يمنع سرد الخوادم الضخمة بالكامل.';
   @override
   String get jellyfin_libraries_load_failed => 'تعذّر تحميل قائمة المكتبات';
+  @override
+  String get floating_lyric_passthrough => 'النقر للوصول إلى ما تحته';
+  @override
+  String get floating_lyric_transparency => 'تبديل الخلفية';
+  @override
+  String get floating_lyric_topmost => 'الإبقاء في المقدمة';
 }
 
 // Path: <root>
@@ -23142,6 +23152,12 @@ class _StringsDe extends _StringsEn {
   @override
   String get jellyfin_libraries_load_failed =>
       'Bibliotheksliste konnte nicht geladen werden';
+  @override
+  String get floating_lyric_passthrough => 'Klicks nach unten durchreichen';
+  @override
+  String get floating_lyric_transparency => 'Hintergrund umschalten';
+  @override
+  String get floating_lyric_topmost => 'Immer im Vordergrund';
 }
 
 // Path: <root>
@@ -32258,6 +32274,13 @@ class _StringsEs extends _StringsEn {
   @override
   String get jellyfin_libraries_load_failed =>
       'No se pudo cargar la lista de bibliotecas';
+  @override
+  String get floating_lyric_passthrough =>
+      'Dejar pasar los clics a lo que hay debajo';
+  @override
+  String get floating_lyric_transparency => 'Alternar el fondo';
+  @override
+  String get floating_lyric_topmost => 'Mantener al frente';
 }
 
 // Path: <root>
@@ -41405,6 +41428,13 @@ class _StringsFr extends _StringsEn {
   @override
   String get jellyfin_libraries_load_failed =>
       'Impossible de charger la liste des bibliothèques';
+  @override
+  String get floating_lyric_passthrough =>
+      'Laisser passer les clics vers le dessous';
+  @override
+  String get floating_lyric_transparency => 'Basculer l’arrière-plan';
+  @override
+  String get floating_lyric_topmost => 'Garder au premier plan';
 }
 
 // Path: <root>
@@ -50381,6 +50411,13 @@ class _StringsId extends _StringsEn {
   @override
   String get jellyfin_libraries_load_failed =>
       'Tidak dapat memuat daftar pustaka';
+  @override
+  String get floating_lyric_passthrough =>
+      'Teruskan klik ke jendela di bawahnya';
+  @override
+  String get floating_lyric_transparency => 'Alihkan latar belakang';
+  @override
+  String get floating_lyric_topmost => 'Tetap di atas';
 }
 
 // Path: <root>
@@ -59431,6 +59468,13 @@ class _StringsIt extends _StringsEn {
   @override
   String get jellyfin_libraries_load_failed =>
       'Impossibile caricare l\'elenco delle librerie';
+  @override
+  String get floating_lyric_passthrough =>
+      'Lascia passare i clic a ciò che sta sotto';
+  @override
+  String get floating_lyric_transparency => 'Attiva/disattiva lo sfondo';
+  @override
+  String get floating_lyric_topmost => 'Mantieni in primo piano';
 }
 
 // Path: <root>
@@ -67927,6 +67971,12 @@ class _StringsJa extends _StringsEn {
       '何も選ばないとすべての動画ライブラリを一覧表示します。実際に見るライブラリだけに絞ると、巨大なサーバーが丸ごと列挙されるのを防げます。';
   @override
   String get jellyfin_libraries_load_failed => 'ライブラリ一覧を読み込めませんでした';
+  @override
+  String get floating_lyric_passthrough => 'クリックを下のウィンドウに通す';
+  @override
+  String get floating_lyric_transparency => '背景を切り替える';
+  @override
+  String get floating_lyric_topmost => '常に手前に表示';
 }
 
 // Path: <root>
@@ -76438,6 +76488,12 @@ class _StringsKo extends _StringsEn {
       '아무것도 선택하지 않으면 모든 비디오 라이브러리를 나열해요. 실제로 보는 라이브러리로 좁히면 거대한 서버가 통째로 열거되는 것을 막을 수 있어요.';
   @override
   String get jellyfin_libraries_load_failed => '라이브러리 목록을 불러오지 못했어요';
+  @override
+  String get floating_lyric_passthrough => '클릭을 아래 창으로 통과';
+  @override
+  String get floating_lyric_transparency => '배경 전환';
+  @override
+  String get floating_lyric_topmost => '항상 위에 표시';
 }
 
 // Path: <root>
@@ -85446,6 +85502,13 @@ class _StringsNl extends _StringsEn {
   @override
   String get jellyfin_libraries_load_failed =>
       'Kon de bibliotheeklijst niet laden';
+  @override
+  String get floating_lyric_passthrough =>
+      'Klikken doorlaten naar wat eronder ligt';
+  @override
+  String get floating_lyric_transparency => 'Achtergrond omschakelen';
+  @override
+  String get floating_lyric_topmost => 'Altijd op de voorgrond';
 }
 
 // Path: <root>
@@ -94513,6 +94576,13 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get jellyfin_libraries_load_failed =>
       'Não foi possível carregar a lista de bibliotecas';
+  @override
+  String get floating_lyric_passthrough =>
+      'Deixar os cliques passarem para baixo';
+  @override
+  String get floating_lyric_transparency => 'Alternar o fundo';
+  @override
+  String get floating_lyric_topmost => 'Manter sempre visível';
 }
 
 // Path: <root>
@@ -103552,6 +103622,12 @@ class _StringsRu extends _StringsEn {
   @override
   String get jellyfin_libraries_load_failed =>
       'Не удалось загрузить список библиотек';
+  @override
+  String get floating_lyric_passthrough => 'Пропускать клики вниз';
+  @override
+  String get floating_lyric_transparency => 'Переключить фон';
+  @override
+  String get floating_lyric_topmost => 'Поверх других окон';
 }
 
 // Path: <root>
@@ -112408,6 +112484,12 @@ class _StringsTh extends _StringsEn {
       'ไม่เลือกอะไรเลยจะแสดงคลังวิดีโอทั้งหมด การจำกัดเฉพาะคลังที่ดูจริงช่วยไม่ให้เซิร์ฟเวอร์ขนาดใหญ่ถูกไล่รายการทั้งหมด';
   @override
   String get jellyfin_libraries_load_failed => 'โหลดรายการคลังไม่สำเร็จ';
+  @override
+  String get floating_lyric_passthrough => 'ส่งการคลิกไปยังหน้าต่างด้านล่าง';
+  @override
+  String get floating_lyric_transparency => 'สลับพื้นหลัง';
+  @override
+  String get floating_lyric_topmost => 'อยู่ด้านบนเสมอ';
 }
 
 // Path: <root>
@@ -121368,6 +121450,13 @@ class _StringsTr extends _StringsEn {
       'Hiçbir şey seçmezseniz tüm video kitaplıkları listelenir. Gerçekten izlediğiniz kitaplıklarla sınırlamak, devasa sunucuların baştan sona sayılmasını önler.';
   @override
   String get jellyfin_libraries_load_failed => 'Kitaplık listesi yüklenemedi';
+  @override
+  String get floating_lyric_passthrough =>
+      'Tıklamaları alttaki pencereye geçir';
+  @override
+  String get floating_lyric_transparency => 'Arka planı değiştir';
+  @override
+  String get floating_lyric_topmost => 'Her zaman üstte tut';
 }
 
 // Path: <root>
@@ -130312,6 +130401,12 @@ class _StringsVi extends _StringsEn {
   @override
   String get jellyfin_libraries_load_failed =>
       'Không tải được danh sách thư viện';
+  @override
+  String get floating_lyric_passthrough => 'Cho phép nhấp xuyên xuống dưới';
+  @override
+  String get floating_lyric_transparency => 'Bật/tắt nền';
+  @override
+  String get floating_lyric_topmost => 'Luôn hiển thị trên cùng';
 }
 
 // Path: <root>
@@ -138536,6 +138631,12 @@ class _StringsZhCn extends _StringsEn {
       '不选 = 列出全部视频媒体库。只勾你真正会看的库，超大服务器就不会被整台枚举。';
   @override
   String get jellyfin_libraries_load_failed => '读取媒体库清单失败';
+  @override
+  String get floating_lyric_passthrough => '鼠标穿透到下层窗口';
+  @override
+  String get floating_lyric_transparency => '切换底板';
+  @override
+  String get floating_lyric_topmost => '保持置顶';
 }
 
 // Path: <root>
@@ -146767,6 +146868,12 @@ class _StringsZhHk extends _StringsEn {
       '不選 = 列出全部影片媒體庫。只勾你真正會看的庫，超大伺服器就不會被整台列舉。';
   @override
   String get jellyfin_libraries_load_failed => '讀取媒體庫清單失敗';
+  @override
+  String get floating_lyric_passthrough => '鼠標穿透到下層視窗';
+  @override
+  String get floating_lyric_transparency => '切換底板';
+  @override
+  String get floating_lyric_topmost => '保持置頂';
 }
 
 /// Flat map(s) containing all translations.
@@ -154615,6 +154722,12 @@ extension on _StringsEn {
         return 'Select nothing to list every video library. Narrowing to the libraries you actually watch keeps huge servers from being enumerated in full.';
       case 'jellyfin_libraries_load_failed':
         return 'Could not load the library list';
+      case 'floating_lyric_passthrough':
+        return 'Click through to what is underneath';
+      case 'floating_lyric_transparency':
+        return 'Toggle the background';
+      case 'floating_lyric_topmost':
+        return 'Keep on top';
       default:
         return null;
     }
@@ -162459,6 +162572,12 @@ extension on _StringsAr {
         return 'عدم اختيار أي شيء يسرد كل مكتبات الفيديو. حصر الأمر في المكتبات التي تشاهدها فعلًا يمنع سرد الخوادم الضخمة بالكامل.';
       case 'jellyfin_libraries_load_failed':
         return 'تعذّر تحميل قائمة المكتبات';
+      case 'floating_lyric_passthrough':
+        return 'النقر للوصول إلى ما تحته';
+      case 'floating_lyric_transparency':
+        return 'تبديل الخلفية';
+      case 'floating_lyric_topmost':
+        return 'الإبقاء في المقدمة';
       default:
         return null;
     }
@@ -170346,6 +170465,12 @@ extension on _StringsDe {
         return 'Nichts auswählen listet jede Videobibliothek auf. Auf die Bibliotheken zu beschränken, die du wirklich schaust, verhindert, dass riesige Server komplett durchlaufen werden.';
       case 'jellyfin_libraries_load_failed':
         return 'Bibliotheksliste konnte nicht geladen werden';
+      case 'floating_lyric_passthrough':
+        return 'Klicks nach unten durchreichen';
+      case 'floating_lyric_transparency':
+        return 'Hintergrund umschalten';
+      case 'floating_lyric_topmost':
+        return 'Immer im Vordergrund';
       default:
         return null;
     }
@@ -178225,6 +178350,12 @@ extension on _StringsEs {
         return 'No seleccionar nada lista todas las bibliotecas de vídeo. Limitarlo a las bibliotecas que realmente ves evita que los servidores enormes se enumeren por completo.';
       case 'jellyfin_libraries_load_failed':
         return 'No se pudo cargar la lista de bibliotecas';
+      case 'floating_lyric_passthrough':
+        return 'Dejar pasar los clics a lo que hay debajo';
+      case 'floating_lyric_transparency':
+        return 'Alternar el fondo';
+      case 'floating_lyric_topmost':
+        return 'Mantener al frente';
       default:
         return null;
     }
@@ -186112,6 +186243,12 @@ extension on _StringsFr {
         return 'Ne rien sélectionner liste toutes les bibliothèques vidéo. Se limiter aux bibliothèques que vous regardez vraiment évite que d\'énormes serveurs soient énumérés en entier.';
       case 'jellyfin_libraries_load_failed':
         return 'Impossible de charger la liste des bibliothèques';
+      case 'floating_lyric_passthrough':
+        return 'Laisser passer les clics vers le dessous';
+      case 'floating_lyric_transparency':
+        return 'Basculer l’arrière-plan';
+      case 'floating_lyric_topmost':
+        return 'Garder au premier plan';
       default:
         return null;
     }
@@ -193971,6 +194108,12 @@ extension on _StringsId {
         return 'Tidak memilih apa pun akan mendaftarkan semua pustaka video. Membatasi ke pustaka yang benar-benar Anda tonton mencegah server raksasa didaftar seluruhnya.';
       case 'jellyfin_libraries_load_failed':
         return 'Tidak dapat memuat daftar pustaka';
+      case 'floating_lyric_passthrough':
+        return 'Teruskan klik ke jendela di bawahnya';
+      case 'floating_lyric_transparency':
+        return 'Alihkan latar belakang';
+      case 'floating_lyric_topmost':
+        return 'Tetap di atas';
       default:
         return null;
     }
@@ -201851,6 +201994,12 @@ extension on _StringsIt {
         return 'Non selezionare nulla elenca tutte le librerie video. Limitarsi alle librerie che guardi davvero evita che server enormi vengano enumerati per intero.';
       case 'jellyfin_libraries_load_failed':
         return 'Impossibile caricare l\'elenco delle librerie';
+      case 'floating_lyric_passthrough':
+        return 'Lascia passare i clic a ciò che sta sotto';
+      case 'floating_lyric_transparency':
+        return 'Attiva/disattiva lo sfondo';
+      case 'floating_lyric_topmost':
+        return 'Mantieni in primo piano';
       default:
         return null;
     }
@@ -209664,6 +209813,12 @@ extension on _StringsJa {
         return '何も選ばないとすべての動画ライブラリを一覧表示します。実際に見るライブラリだけに絞ると、巨大なサーバーが丸ごと列挙されるのを防げます。';
       case 'jellyfin_libraries_load_failed':
         return 'ライブラリ一覧を読み込めませんでした';
+      case 'floating_lyric_passthrough':
+        return 'クリックを下のウィンドウに通す';
+      case 'floating_lyric_transparency':
+        return '背景を切り替える';
+      case 'floating_lyric_topmost':
+        return '常に手前に表示';
       default:
         return null;
     }
@@ -217479,6 +217634,12 @@ extension on _StringsKo {
         return '아무것도 선택하지 않으면 모든 비디오 라이브러리를 나열해요. 실제로 보는 라이브러리로 좁히면 거대한 서버가 통째로 열거되는 것을 막을 수 있어요.';
       case 'jellyfin_libraries_load_failed':
         return '라이브러리 목록을 불러오지 못했어요';
+      case 'floating_lyric_passthrough':
+        return '클릭을 아래 창으로 통과';
+      case 'floating_lyric_transparency':
+        return '배경 전환';
+      case 'floating_lyric_topmost':
+        return '항상 위에 표시';
       default:
         return null;
     }
@@ -225353,6 +225514,12 @@ extension on _StringsNl {
         return 'Niets selecteren toont elke videobibliotheek. Beperken tot de bibliotheken die je echt kijkt voorkomt dat enorme servers volledig worden opgesomd.';
       case 'jellyfin_libraries_load_failed':
         return 'Kon de bibliotheeklijst niet laden';
+      case 'floating_lyric_passthrough':
+        return 'Klikken doorlaten naar wat eronder ligt';
+      case 'floating_lyric_transparency':
+        return 'Achtergrond omschakelen';
+      case 'floating_lyric_topmost':
+        return 'Altijd op de voorgrond';
       default:
         return null;
     }
@@ -233222,6 +233389,12 @@ extension on _StringsPtBr {
         return 'Não selecionar nada lista todas as bibliotecas de vídeo. Restringir às bibliotecas que você realmente assiste evita que servidores enormes sejam enumerados por completo.';
       case 'jellyfin_libraries_load_failed':
         return 'Não foi possível carregar a lista de bibliotecas';
+      case 'floating_lyric_passthrough':
+        return 'Deixar os cliques passarem para baixo';
+      case 'floating_lyric_transparency':
+        return 'Alternar o fundo';
+      case 'floating_lyric_topmost':
+        return 'Manter sempre visível';
       default:
         return null;
     }
@@ -241097,6 +241270,12 @@ extension on _StringsRu {
         return 'Если ничего не выбрано, выводятся все видеотеки. Ограничение теми библиотеками, которые вы действительно смотрите, избавит огромные серверы от полного перебора.';
       case 'jellyfin_libraries_load_failed':
         return 'Не удалось загрузить список библиотек';
+      case 'floating_lyric_passthrough':
+        return 'Пропускать клики вниз';
+      case 'floating_lyric_transparency':
+        return 'Переключить фон';
+      case 'floating_lyric_topmost':
+        return 'Поверх других окон';
       default:
         return null;
     }
@@ -248944,6 +249123,12 @@ extension on _StringsTh {
         return 'ไม่เลือกอะไรเลยจะแสดงคลังวิดีโอทั้งหมด การจำกัดเฉพาะคลังที่ดูจริงช่วยไม่ให้เซิร์ฟเวอร์ขนาดใหญ่ถูกไล่รายการทั้งหมด';
       case 'jellyfin_libraries_load_failed':
         return 'โหลดรายการคลังไม่สำเร็จ';
+      case 'floating_lyric_passthrough':
+        return 'ส่งการคลิกไปยังหน้าต่างด้านล่าง';
+      case 'floating_lyric_transparency':
+        return 'สลับพื้นหลัง';
+      case 'floating_lyric_topmost':
+        return 'อยู่ด้านบนเสมอ';
       default:
         return null;
     }
@@ -256808,6 +256993,12 @@ extension on _StringsTr {
         return 'Hiçbir şey seçmezseniz tüm video kitaplıkları listelenir. Gerçekten izlediğiniz kitaplıklarla sınırlamak, devasa sunucuların baştan sona sayılmasını önler.';
       case 'jellyfin_libraries_load_failed':
         return 'Kitaplık listesi yüklenemedi';
+      case 'floating_lyric_passthrough':
+        return 'Tıklamaları alttaki pencereye geçir';
+      case 'floating_lyric_transparency':
+        return 'Arka planı değiştir';
+      case 'floating_lyric_topmost':
+        return 'Her zaman üstte tut';
       default:
         return null;
     }
@@ -264665,6 +264856,12 @@ extension on _StringsVi {
         return 'Không chọn gì sẽ liệt kê mọi thư viện video. Thu hẹp về những thư viện bạn thực sự xem giúp máy chủ khổng lồ không bị liệt kê toàn bộ.';
       case 'jellyfin_libraries_load_failed':
         return 'Không tải được danh sách thư viện';
+      case 'floating_lyric_passthrough':
+        return 'Cho phép nhấp xuyên xuống dưới';
+      case 'floating_lyric_transparency':
+        return 'Bật/tắt nền';
+      case 'floating_lyric_topmost':
+        return 'Luôn hiển thị trên cùng';
       default:
         return null;
     }
@@ -272458,6 +272655,12 @@ extension on _StringsZhCn {
         return '不选 = 列出全部视频媒体库。只勾你真正会看的库，超大服务器就不会被整台枚举。';
       case 'jellyfin_libraries_load_failed':
         return '读取媒体库清单失败';
+      case 'floating_lyric_passthrough':
+        return '鼠标穿透到下层窗口';
+      case 'floating_lyric_transparency':
+        return '切换底板';
+      case 'floating_lyric_topmost':
+        return '保持置顶';
       default:
         return null;
     }
@@ -280252,6 +280455,12 @@ extension on _StringsZhHk {
         return '不選 = 列出全部影片媒體庫。只勾你真正會看的庫，超大伺服器就不會被整台列舉。';
       case 'jellyfin_libraries_load_failed':
         return '讀取媒體庫清單失敗';
+      case 'floating_lyric_passthrough':
+        return '鼠標穿透到下層視窗';
+      case 'floating_lyric_transparency':
+        return '切換底板';
+      case 'floating_lyric_topmost':
+        return '保持置頂';
       default:
         return null;
     }
