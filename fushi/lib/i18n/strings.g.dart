@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 65722 (3866 per locale)
+/// Strings: 65909 (3877 per locale)
 ///
-/// Built on 2026-08-29 at 13:32 UTC
+/// Built on 2026-08-29 at 15:17 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5265,6 +5265,22 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Read to page ${page} of ${total}';
   String manga_series_read_progress_partial({required Object page}) =>
       'Read to page ${page}';
+  String get gal_hook_click_lookup => 'Tap a word to look it up';
+  String get gal_hook_click_lookup_hint =>
+      'Off means clicks on the caption never trigger a lookup — useful with click-through on, when you would rather not hit a word by accident.';
+  String get gal_hook_lookup_trigger => 'Lookup trigger';
+  String get gal_hook_lookup_trigger_hint =>
+      'Which mouse button looks up the word under the pointer. Independent of the switch above: you can turn tap-lookup off and still look up with a side button.';
+  String get gal_hook_lookup_trigger_left => 'Left click';
+  String get gal_hook_lookup_trigger_middle => 'Middle click';
+  String get gal_hook_lookup_trigger_side => 'Side button';
+  String get gal_hook_toolbar_auto_hide => 'Auto-hide the toolbar';
+  String get gal_hook_toolbar_auto_hide_hint =>
+      'Hide the toolbar until the pointer reaches the caption box, LunaHook style. Hidden means really hidden — those pixels go back to the game.';
+  String get gal_hook_passthrough_blocks_mouse =>
+      'Caption still catches clicks while clicking through';
+  String get gal_hook_passthrough_blocks_mouse_hint =>
+      'On: text lines still take clicks so you can tap a word. Off: the whole overlay is transparent to the mouse — you can click whatever is underneath, but tapping words no longer works.';
 }
 
 // Path: <root>
@@ -14225,6 +14241,33 @@ class _StringsAr extends _StringsEn {
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       'تمت القراءة حتى الصفحة ${page}';
+  @override
+  String get gal_hook_click_lookup => 'Tap a word to look it up';
+  @override
+  String get gal_hook_click_lookup_hint =>
+      'Off means clicks on the caption never trigger a lookup — useful with click-through on, when you would rather not hit a word by accident.';
+  @override
+  String get gal_hook_lookup_trigger => 'Lookup trigger';
+  @override
+  String get gal_hook_lookup_trigger_hint =>
+      'Which mouse button looks up the word under the pointer. Independent of the switch above: you can turn tap-lookup off and still look up with a side button.';
+  @override
+  String get gal_hook_lookup_trigger_left => 'Left click';
+  @override
+  String get gal_hook_lookup_trigger_middle => 'Middle click';
+  @override
+  String get gal_hook_lookup_trigger_side => 'Side button';
+  @override
+  String get gal_hook_toolbar_auto_hide => 'Auto-hide the toolbar';
+  @override
+  String get gal_hook_toolbar_auto_hide_hint =>
+      'Hide the toolbar until the pointer reaches the caption box, LunaHook style. Hidden means really hidden — those pixels go back to the game.';
+  @override
+  String get gal_hook_passthrough_blocks_mouse =>
+      'Caption still catches clicks while clicking through';
+  @override
+  String get gal_hook_passthrough_blocks_mouse_hint =>
+      'On: text lines still take clicks so you can tap a word. Off: the whole overlay is transparent to the mouse — you can click whatever is underneath, but tapping words no longer works.';
 }
 
 // Path: <root>
@@ -23394,6 +23437,33 @@ class _StringsDe extends _StringsEn {
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       'Bis Seite ${page} gelesen';
+  @override
+  String get gal_hook_click_lookup => 'Tap a word to look it up';
+  @override
+  String get gal_hook_click_lookup_hint =>
+      'Off means clicks on the caption never trigger a lookup — useful with click-through on, when you would rather not hit a word by accident.';
+  @override
+  String get gal_hook_lookup_trigger => 'Lookup trigger';
+  @override
+  String get gal_hook_lookup_trigger_hint =>
+      'Which mouse button looks up the word under the pointer. Independent of the switch above: you can turn tap-lookup off and still look up with a side button.';
+  @override
+  String get gal_hook_lookup_trigger_left => 'Left click';
+  @override
+  String get gal_hook_lookup_trigger_middle => 'Middle click';
+  @override
+  String get gal_hook_lookup_trigger_side => 'Side button';
+  @override
+  String get gal_hook_toolbar_auto_hide => 'Auto-hide the toolbar';
+  @override
+  String get gal_hook_toolbar_auto_hide_hint =>
+      'Hide the toolbar until the pointer reaches the caption box, LunaHook style. Hidden means really hidden — those pixels go back to the game.';
+  @override
+  String get gal_hook_passthrough_blocks_mouse =>
+      'Caption still catches clicks while clicking through';
+  @override
+  String get gal_hook_passthrough_blocks_mouse_hint =>
+      'On: text lines still take clicks so you can tap a word. Off: the whole overlay is transparent to the mouse — you can click whatever is underneath, but tapping words no longer works.';
 }
 
 // Path: <root>
@@ -32607,6 +32677,33 @@ class _StringsEs extends _StringsEn {
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       'Leído hasta la página ${page}';
+  @override
+  String get gal_hook_click_lookup => 'Tap a word to look it up';
+  @override
+  String get gal_hook_click_lookup_hint =>
+      'Off means clicks on the caption never trigger a lookup — useful with click-through on, when you would rather not hit a word by accident.';
+  @override
+  String get gal_hook_lookup_trigger => 'Lookup trigger';
+  @override
+  String get gal_hook_lookup_trigger_hint =>
+      'Which mouse button looks up the word under the pointer. Independent of the switch above: you can turn tap-lookup off and still look up with a side button.';
+  @override
+  String get gal_hook_lookup_trigger_left => 'Left click';
+  @override
+  String get gal_hook_lookup_trigger_middle => 'Middle click';
+  @override
+  String get gal_hook_lookup_trigger_side => 'Side button';
+  @override
+  String get gal_hook_toolbar_auto_hide => 'Auto-hide the toolbar';
+  @override
+  String get gal_hook_toolbar_auto_hide_hint =>
+      'Hide the toolbar until the pointer reaches the caption box, LunaHook style. Hidden means really hidden — those pixels go back to the game.';
+  @override
+  String get gal_hook_passthrough_blocks_mouse =>
+      'Caption still catches clicks while clicking through';
+  @override
+  String get gal_hook_passthrough_blocks_mouse_hint =>
+      'On: text lines still take clicks so you can tap a word. Off: the whole overlay is transparent to the mouse — you can click whatever is underneath, but tapping words no longer works.';
 }
 
 // Path: <root>
@@ -41854,6 +41951,33 @@ class _StringsFr extends _StringsEn {
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       'Lu jusqu\'à la page ${page}';
+  @override
+  String get gal_hook_click_lookup => 'Tap a word to look it up';
+  @override
+  String get gal_hook_click_lookup_hint =>
+      'Off means clicks on the caption never trigger a lookup — useful with click-through on, when you would rather not hit a word by accident.';
+  @override
+  String get gal_hook_lookup_trigger => 'Lookup trigger';
+  @override
+  String get gal_hook_lookup_trigger_hint =>
+      'Which mouse button looks up the word under the pointer. Independent of the switch above: you can turn tap-lookup off and still look up with a side button.';
+  @override
+  String get gal_hook_lookup_trigger_left => 'Left click';
+  @override
+  String get gal_hook_lookup_trigger_middle => 'Middle click';
+  @override
+  String get gal_hook_lookup_trigger_side => 'Side button';
+  @override
+  String get gal_hook_toolbar_auto_hide => 'Auto-hide the toolbar';
+  @override
+  String get gal_hook_toolbar_auto_hide_hint =>
+      'Hide the toolbar until the pointer reaches the caption box, LunaHook style. Hidden means really hidden — those pixels go back to the game.';
+  @override
+  String get gal_hook_passthrough_blocks_mouse =>
+      'Caption still catches clicks while clicking through';
+  @override
+  String get gal_hook_passthrough_blocks_mouse_hint =>
+      'On: text lines still take clicks so you can tap a word. Off: the whole overlay is transparent to the mouse — you can click whatever is underneath, but tapping words no longer works.';
 }
 
 // Path: <root>
@@ -50927,6 +51051,33 @@ class _StringsId extends _StringsEn {
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       'Dibaca sampai halaman ${page}';
+  @override
+  String get gal_hook_click_lookup => 'Tap a word to look it up';
+  @override
+  String get gal_hook_click_lookup_hint =>
+      'Off means clicks on the caption never trigger a lookup — useful with click-through on, when you would rather not hit a word by accident.';
+  @override
+  String get gal_hook_lookup_trigger => 'Lookup trigger';
+  @override
+  String get gal_hook_lookup_trigger_hint =>
+      'Which mouse button looks up the word under the pointer. Independent of the switch above: you can turn tap-lookup off and still look up with a side button.';
+  @override
+  String get gal_hook_lookup_trigger_left => 'Left click';
+  @override
+  String get gal_hook_lookup_trigger_middle => 'Middle click';
+  @override
+  String get gal_hook_lookup_trigger_side => 'Side button';
+  @override
+  String get gal_hook_toolbar_auto_hide => 'Auto-hide the toolbar';
+  @override
+  String get gal_hook_toolbar_auto_hide_hint =>
+      'Hide the toolbar until the pointer reaches the caption box, LunaHook style. Hidden means really hidden — those pixels go back to the game.';
+  @override
+  String get gal_hook_passthrough_blocks_mouse =>
+      'Caption still catches clicks while clicking through';
+  @override
+  String get gal_hook_passthrough_blocks_mouse_hint =>
+      'On: text lines still take clicks so you can tap a word. Off: the whole overlay is transparent to the mouse — you can click whatever is underneath, but tapping words no longer works.';
 }
 
 // Path: <root>
@@ -60077,6 +60228,33 @@ class _StringsIt extends _StringsEn {
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       'Letto fino a pagina ${page}';
+  @override
+  String get gal_hook_click_lookup => 'Tap a word to look it up';
+  @override
+  String get gal_hook_click_lookup_hint =>
+      'Off means clicks on the caption never trigger a lookup — useful with click-through on, when you would rather not hit a word by accident.';
+  @override
+  String get gal_hook_lookup_trigger => 'Lookup trigger';
+  @override
+  String get gal_hook_lookup_trigger_hint =>
+      'Which mouse button looks up the word under the pointer. Independent of the switch above: you can turn tap-lookup off and still look up with a side button.';
+  @override
+  String get gal_hook_lookup_trigger_left => 'Left click';
+  @override
+  String get gal_hook_lookup_trigger_middle => 'Middle click';
+  @override
+  String get gal_hook_lookup_trigger_side => 'Side button';
+  @override
+  String get gal_hook_toolbar_auto_hide => 'Auto-hide the toolbar';
+  @override
+  String get gal_hook_toolbar_auto_hide_hint =>
+      'Hide the toolbar until the pointer reaches the caption box, LunaHook style. Hidden means really hidden — those pixels go back to the game.';
+  @override
+  String get gal_hook_passthrough_blocks_mouse =>
+      'Caption still catches clicks while clicking through';
+  @override
+  String get gal_hook_passthrough_blocks_mouse_hint =>
+      'On: text lines still take clicks so you can tap a word. Off: the whole overlay is transparent to the mouse — you can click whatever is underneath, but tapping words no longer works.';
 }
 
 // Path: <root>
@@ -68667,6 +68845,33 @@ class _StringsJa extends _StringsEn {
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       '${page} ページまで';
+  @override
+  String get gal_hook_click_lookup => 'Tap a word to look it up';
+  @override
+  String get gal_hook_click_lookup_hint =>
+      'Off means clicks on the caption never trigger a lookup — useful with click-through on, when you would rather not hit a word by accident.';
+  @override
+  String get gal_hook_lookup_trigger => 'Lookup trigger';
+  @override
+  String get gal_hook_lookup_trigger_hint =>
+      'Which mouse button looks up the word under the pointer. Independent of the switch above: you can turn tap-lookup off and still look up with a side button.';
+  @override
+  String get gal_hook_lookup_trigger_left => 'Left click';
+  @override
+  String get gal_hook_lookup_trigger_middle => 'Middle click';
+  @override
+  String get gal_hook_lookup_trigger_side => 'Side button';
+  @override
+  String get gal_hook_toolbar_auto_hide => 'Auto-hide the toolbar';
+  @override
+  String get gal_hook_toolbar_auto_hide_hint =>
+      'Hide the toolbar until the pointer reaches the caption box, LunaHook style. Hidden means really hidden — those pixels go back to the game.';
+  @override
+  String get gal_hook_passthrough_blocks_mouse =>
+      'Caption still catches clicks while clicking through';
+  @override
+  String get gal_hook_passthrough_blocks_mouse_hint =>
+      'On: text lines still take clicks so you can tap a word. Off: the whole overlay is transparent to the mouse — you can click whatever is underneath, but tapping words no longer works.';
 }
 
 // Path: <root>
@@ -77272,6 +77477,33 @@ class _StringsKo extends _StringsEn {
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       '${page}페이지까지 읽음';
+  @override
+  String get gal_hook_click_lookup => 'Tap a word to look it up';
+  @override
+  String get gal_hook_click_lookup_hint =>
+      'Off means clicks on the caption never trigger a lookup — useful with click-through on, when you would rather not hit a word by accident.';
+  @override
+  String get gal_hook_lookup_trigger => 'Lookup trigger';
+  @override
+  String get gal_hook_lookup_trigger_hint =>
+      'Which mouse button looks up the word under the pointer. Independent of the switch above: you can turn tap-lookup off and still look up with a side button.';
+  @override
+  String get gal_hook_lookup_trigger_left => 'Left click';
+  @override
+  String get gal_hook_lookup_trigger_middle => 'Middle click';
+  @override
+  String get gal_hook_lookup_trigger_side => 'Side button';
+  @override
+  String get gal_hook_toolbar_auto_hide => 'Auto-hide the toolbar';
+  @override
+  String get gal_hook_toolbar_auto_hide_hint =>
+      'Hide the toolbar until the pointer reaches the caption box, LunaHook style. Hidden means really hidden — those pixels go back to the game.';
+  @override
+  String get gal_hook_passthrough_blocks_mouse =>
+      'Caption still catches clicks while clicking through';
+  @override
+  String get gal_hook_passthrough_blocks_mouse_hint =>
+      'On: text lines still take clicks so you can tap a word. Off: the whole overlay is transparent to the mouse — you can click whatever is underneath, but tapping words no longer works.';
 }
 
 // Path: <root>
@@ -86379,6 +86611,33 @@ class _StringsNl extends _StringsEn {
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       'Gelezen tot pagina ${page}';
+  @override
+  String get gal_hook_click_lookup => 'Tap a word to look it up';
+  @override
+  String get gal_hook_click_lookup_hint =>
+      'Off means clicks on the caption never trigger a lookup — useful with click-through on, when you would rather not hit a word by accident.';
+  @override
+  String get gal_hook_lookup_trigger => 'Lookup trigger';
+  @override
+  String get gal_hook_lookup_trigger_hint =>
+      'Which mouse button looks up the word under the pointer. Independent of the switch above: you can turn tap-lookup off and still look up with a side button.';
+  @override
+  String get gal_hook_lookup_trigger_left => 'Left click';
+  @override
+  String get gal_hook_lookup_trigger_middle => 'Middle click';
+  @override
+  String get gal_hook_lookup_trigger_side => 'Side button';
+  @override
+  String get gal_hook_toolbar_auto_hide => 'Auto-hide the toolbar';
+  @override
+  String get gal_hook_toolbar_auto_hide_hint =>
+      'Hide the toolbar until the pointer reaches the caption box, LunaHook style. Hidden means really hidden — those pixels go back to the game.';
+  @override
+  String get gal_hook_passthrough_blocks_mouse =>
+      'Caption still catches clicks while clicking through';
+  @override
+  String get gal_hook_passthrough_blocks_mouse_hint =>
+      'On: text lines still take clicks so you can tap a word. Off: the whole overlay is transparent to the mouse — you can click whatever is underneath, but tapping words no longer works.';
 }
 
 // Path: <root>
@@ -95542,6 +95801,33 @@ class _StringsPtBr extends _StringsEn {
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       'Lido até a página ${page}';
+  @override
+  String get gal_hook_click_lookup => 'Tap a word to look it up';
+  @override
+  String get gal_hook_click_lookup_hint =>
+      'Off means clicks on the caption never trigger a lookup — useful with click-through on, when you would rather not hit a word by accident.';
+  @override
+  String get gal_hook_lookup_trigger => 'Lookup trigger';
+  @override
+  String get gal_hook_lookup_trigger_hint =>
+      'Which mouse button looks up the word under the pointer. Independent of the switch above: you can turn tap-lookup off and still look up with a side button.';
+  @override
+  String get gal_hook_lookup_trigger_left => 'Left click';
+  @override
+  String get gal_hook_lookup_trigger_middle => 'Middle click';
+  @override
+  String get gal_hook_lookup_trigger_side => 'Side button';
+  @override
+  String get gal_hook_toolbar_auto_hide => 'Auto-hide the toolbar';
+  @override
+  String get gal_hook_toolbar_auto_hide_hint =>
+      'Hide the toolbar until the pointer reaches the caption box, LunaHook style. Hidden means really hidden — those pixels go back to the game.';
+  @override
+  String get gal_hook_passthrough_blocks_mouse =>
+      'Caption still catches clicks while clicking through';
+  @override
+  String get gal_hook_passthrough_blocks_mouse_hint =>
+      'On: text lines still take clicks so you can tap a word. Off: the whole overlay is transparent to the mouse — you can click whatever is underneath, but tapping words no longer works.';
 }
 
 // Path: <root>
@@ -104679,6 +104965,33 @@ class _StringsRu extends _StringsEn {
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       'Прочитано до страницы ${page}';
+  @override
+  String get gal_hook_click_lookup => 'Tap a word to look it up';
+  @override
+  String get gal_hook_click_lookup_hint =>
+      'Off means clicks on the caption never trigger a lookup — useful with click-through on, when you would rather not hit a word by accident.';
+  @override
+  String get gal_hook_lookup_trigger => 'Lookup trigger';
+  @override
+  String get gal_hook_lookup_trigger_hint =>
+      'Which mouse button looks up the word under the pointer. Independent of the switch above: you can turn tap-lookup off and still look up with a side button.';
+  @override
+  String get gal_hook_lookup_trigger_left => 'Left click';
+  @override
+  String get gal_hook_lookup_trigger_middle => 'Middle click';
+  @override
+  String get gal_hook_lookup_trigger_side => 'Side button';
+  @override
+  String get gal_hook_toolbar_auto_hide => 'Auto-hide the toolbar';
+  @override
+  String get gal_hook_toolbar_auto_hide_hint =>
+      'Hide the toolbar until the pointer reaches the caption box, LunaHook style. Hidden means really hidden — those pixels go back to the game.';
+  @override
+  String get gal_hook_passthrough_blocks_mouse =>
+      'Caption still catches clicks while clicking through';
+  @override
+  String get gal_hook_passthrough_blocks_mouse_hint =>
+      'On: text lines still take clicks so you can tap a word. Off: the whole overlay is transparent to the mouse — you can click whatever is underneath, but tapping words no longer works.';
 }
 
 // Path: <root>
@@ -113634,6 +113947,33 @@ class _StringsTh extends _StringsEn {
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       'อ่านถึงหน้า ${page}';
+  @override
+  String get gal_hook_click_lookup => 'Tap a word to look it up';
+  @override
+  String get gal_hook_click_lookup_hint =>
+      'Off means clicks on the caption never trigger a lookup — useful with click-through on, when you would rather not hit a word by accident.';
+  @override
+  String get gal_hook_lookup_trigger => 'Lookup trigger';
+  @override
+  String get gal_hook_lookup_trigger_hint =>
+      'Which mouse button looks up the word under the pointer. Independent of the switch above: you can turn tap-lookup off and still look up with a side button.';
+  @override
+  String get gal_hook_lookup_trigger_left => 'Left click';
+  @override
+  String get gal_hook_lookup_trigger_middle => 'Middle click';
+  @override
+  String get gal_hook_lookup_trigger_side => 'Side button';
+  @override
+  String get gal_hook_toolbar_auto_hide => 'Auto-hide the toolbar';
+  @override
+  String get gal_hook_toolbar_auto_hide_hint =>
+      'Hide the toolbar until the pointer reaches the caption box, LunaHook style. Hidden means really hidden — those pixels go back to the game.';
+  @override
+  String get gal_hook_passthrough_blocks_mouse =>
+      'Caption still catches clicks while clicking through';
+  @override
+  String get gal_hook_passthrough_blocks_mouse_hint =>
+      'On: text lines still take clicks so you can tap a word. Off: the whole overlay is transparent to the mouse — you can click whatever is underneath, but tapping words no longer works.';
 }
 
 // Path: <root>
@@ -122692,6 +123032,33 @@ class _StringsTr extends _StringsEn {
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       '${page}. sayfaya kadar okundu';
+  @override
+  String get gal_hook_click_lookup => 'Tap a word to look it up';
+  @override
+  String get gal_hook_click_lookup_hint =>
+      'Off means clicks on the caption never trigger a lookup — useful with click-through on, when you would rather not hit a word by accident.';
+  @override
+  String get gal_hook_lookup_trigger => 'Lookup trigger';
+  @override
+  String get gal_hook_lookup_trigger_hint =>
+      'Which mouse button looks up the word under the pointer. Independent of the switch above: you can turn tap-lookup off and still look up with a side button.';
+  @override
+  String get gal_hook_lookup_trigger_left => 'Left click';
+  @override
+  String get gal_hook_lookup_trigger_middle => 'Middle click';
+  @override
+  String get gal_hook_lookup_trigger_side => 'Side button';
+  @override
+  String get gal_hook_toolbar_auto_hide => 'Auto-hide the toolbar';
+  @override
+  String get gal_hook_toolbar_auto_hide_hint =>
+      'Hide the toolbar until the pointer reaches the caption box, LunaHook style. Hidden means really hidden — those pixels go back to the game.';
+  @override
+  String get gal_hook_passthrough_blocks_mouse =>
+      'Caption still catches clicks while clicking through';
+  @override
+  String get gal_hook_passthrough_blocks_mouse_hint =>
+      'On: text lines still take clicks so you can tap a word. Off: the whole overlay is transparent to the mouse — you can click whatever is underneath, but tapping words no longer works.';
 }
 
 // Path: <root>
@@ -131732,6 +132099,33 @@ class _StringsVi extends _StringsEn {
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       'Đã đọc đến trang ${page}';
+  @override
+  String get gal_hook_click_lookup => 'Tap a word to look it up';
+  @override
+  String get gal_hook_click_lookup_hint =>
+      'Off means clicks on the caption never trigger a lookup — useful with click-through on, when you would rather not hit a word by accident.';
+  @override
+  String get gal_hook_lookup_trigger => 'Lookup trigger';
+  @override
+  String get gal_hook_lookup_trigger_hint =>
+      'Which mouse button looks up the word under the pointer. Independent of the switch above: you can turn tap-lookup off and still look up with a side button.';
+  @override
+  String get gal_hook_lookup_trigger_left => 'Left click';
+  @override
+  String get gal_hook_lookup_trigger_middle => 'Middle click';
+  @override
+  String get gal_hook_lookup_trigger_side => 'Side button';
+  @override
+  String get gal_hook_toolbar_auto_hide => 'Auto-hide the toolbar';
+  @override
+  String get gal_hook_toolbar_auto_hide_hint =>
+      'Hide the toolbar until the pointer reaches the caption box, LunaHook style. Hidden means really hidden — those pixels go back to the game.';
+  @override
+  String get gal_hook_passthrough_blocks_mouse =>
+      'Caption still catches clicks while clicking through';
+  @override
+  String get gal_hook_passthrough_blocks_mouse_hint =>
+      'On: text lines still take clicks so you can tap a word. Off: the whole overlay is transparent to the mouse — you can click whatever is underneath, but tapping words no longer works.';
 }
 
 // Path: <root>
@@ -140049,6 +140443,32 @@ class _StringsZhCn extends _StringsEn {
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       '读到第 ${page} 页';
+  @override
+  String get gal_hook_click_lookup => '单击文字查词';
+  @override
+  String get gal_hook_click_lookup_hint =>
+      '关掉后点台词不再触发查词。开着鼠标穿透时尤其有用——不想一不小心点到单词。';
+  @override
+  String get gal_hook_lookup_trigger => '查词触发方式';
+  @override
+  String get gal_hook_lookup_trigger_hint =>
+      '用哪个鼠标键查指针底下的词。与上面的开关正交：可以关掉单击查词，仍用侧键查。';
+  @override
+  String get gal_hook_lookup_trigger_left => '左键单击';
+  @override
+  String get gal_hook_lookup_trigger_middle => '鼠标中键';
+  @override
+  String get gal_hook_lookup_trigger_side => '鼠标侧键';
+  @override
+  String get gal_hook_toolbar_auto_hide => '自动隐藏功能栏';
+  @override
+  String get gal_hook_toolbar_auto_hide_hint =>
+      '平时把功能栏整条隐藏，鼠标移到台词框附近才现身（LunaHook 那样）。隐藏就是真隐藏，那块像素还给游戏。';
+  @override
+  String get gal_hook_passthrough_blocks_mouse => '穿透时台词仍拦截点击';
+  @override
+  String get gal_hook_passthrough_blocks_mouse_hint =>
+      '开：文字行仍接鼠标，能点字查词。关：整个浮窗对鼠标彻底透明，能点到底下的东西，但点字查词也就没了。';
 }
 
 // Path: <root>
@@ -148372,6 +148792,33 @@ class _StringsZhHk extends _StringsEn {
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       '讀到第 ${page} 頁';
+  @override
+  String get gal_hook_click_lookup => 'Tap a word to look it up';
+  @override
+  String get gal_hook_click_lookup_hint =>
+      'Off means clicks on the caption never trigger a lookup — useful with click-through on, when you would rather not hit a word by accident.';
+  @override
+  String get gal_hook_lookup_trigger => 'Lookup trigger';
+  @override
+  String get gal_hook_lookup_trigger_hint =>
+      'Which mouse button looks up the word under the pointer. Independent of the switch above: you can turn tap-lookup off and still look up with a side button.';
+  @override
+  String get gal_hook_lookup_trigger_left => 'Left click';
+  @override
+  String get gal_hook_lookup_trigger_middle => 'Middle click';
+  @override
+  String get gal_hook_lookup_trigger_side => 'Side button';
+  @override
+  String get gal_hook_toolbar_auto_hide => 'Auto-hide the toolbar';
+  @override
+  String get gal_hook_toolbar_auto_hide_hint =>
+      'Hide the toolbar until the pointer reaches the caption box, LunaHook style. Hidden means really hidden — those pixels go back to the game.';
+  @override
+  String get gal_hook_passthrough_blocks_mouse =>
+      'Caption still catches clicks while clicking through';
+  @override
+  String get gal_hook_passthrough_blocks_mouse_hint =>
+      'On: text lines still take clicks so you can tap a word. Off: the whole overlay is transparent to the mouse — you can click whatever is underneath, but tapping words no longer works.';
 }
 
 /// Flat map(s) containing all translations.
@@ -156307,6 +156754,28 @@ extension on _StringsEn {
             'Read to page ${page} of ${total}';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'Read to page ${page}';
+      case 'gal_hook_click_lookup':
+        return 'Tap a word to look it up';
+      case 'gal_hook_click_lookup_hint':
+        return 'Off means clicks on the caption never trigger a lookup — useful with click-through on, when you would rather not hit a word by accident.';
+      case 'gal_hook_lookup_trigger':
+        return 'Lookup trigger';
+      case 'gal_hook_lookup_trigger_hint':
+        return 'Which mouse button looks up the word under the pointer. Independent of the switch above: you can turn tap-lookup off and still look up with a side button.';
+      case 'gal_hook_lookup_trigger_left':
+        return 'Left click';
+      case 'gal_hook_lookup_trigger_middle':
+        return 'Middle click';
+      case 'gal_hook_lookup_trigger_side':
+        return 'Side button';
+      case 'gal_hook_toolbar_auto_hide':
+        return 'Auto-hide the toolbar';
+      case 'gal_hook_toolbar_auto_hide_hint':
+        return 'Hide the toolbar until the pointer reaches the caption box, LunaHook style. Hidden means really hidden — those pixels go back to the game.';
+      case 'gal_hook_passthrough_blocks_mouse':
+        return 'Caption still catches clicks while clicking through';
+      case 'gal_hook_passthrough_blocks_mouse_hint':
+        return 'On: text lines still take clicks so you can tap a word. Off: the whole overlay is transparent to the mouse — you can click whatever is underneath, but tapping words no longer works.';
       default:
         return null;
     }
@@ -164238,6 +164707,28 @@ extension on _StringsAr {
             'تمت القراءة حتى الصفحة ${page} من ${total}';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'تمت القراءة حتى الصفحة ${page}';
+      case 'gal_hook_click_lookup':
+        return 'Tap a word to look it up';
+      case 'gal_hook_click_lookup_hint':
+        return 'Off means clicks on the caption never trigger a lookup — useful with click-through on, when you would rather not hit a word by accident.';
+      case 'gal_hook_lookup_trigger':
+        return 'Lookup trigger';
+      case 'gal_hook_lookup_trigger_hint':
+        return 'Which mouse button looks up the word under the pointer. Independent of the switch above: you can turn tap-lookup off and still look up with a side button.';
+      case 'gal_hook_lookup_trigger_left':
+        return 'Left click';
+      case 'gal_hook_lookup_trigger_middle':
+        return 'Middle click';
+      case 'gal_hook_lookup_trigger_side':
+        return 'Side button';
+      case 'gal_hook_toolbar_auto_hide':
+        return 'Auto-hide the toolbar';
+      case 'gal_hook_toolbar_auto_hide_hint':
+        return 'Hide the toolbar until the pointer reaches the caption box, LunaHook style. Hidden means really hidden — those pixels go back to the game.';
+      case 'gal_hook_passthrough_blocks_mouse':
+        return 'Caption still catches clicks while clicking through';
+      case 'gal_hook_passthrough_blocks_mouse_hint':
+        return 'On: text lines still take clicks so you can tap a word. Off: the whole overlay is transparent to the mouse — you can click whatever is underneath, but tapping words no longer works.';
       default:
         return null;
     }
@@ -172212,6 +172703,28 @@ extension on _StringsDe {
             'Bis Seite ${page} von ${total} gelesen';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'Bis Seite ${page} gelesen';
+      case 'gal_hook_click_lookup':
+        return 'Tap a word to look it up';
+      case 'gal_hook_click_lookup_hint':
+        return 'Off means clicks on the caption never trigger a lookup — useful with click-through on, when you would rather not hit a word by accident.';
+      case 'gal_hook_lookup_trigger':
+        return 'Lookup trigger';
+      case 'gal_hook_lookup_trigger_hint':
+        return 'Which mouse button looks up the word under the pointer. Independent of the switch above: you can turn tap-lookup off and still look up with a side button.';
+      case 'gal_hook_lookup_trigger_left':
+        return 'Left click';
+      case 'gal_hook_lookup_trigger_middle':
+        return 'Middle click';
+      case 'gal_hook_lookup_trigger_side':
+        return 'Side button';
+      case 'gal_hook_toolbar_auto_hide':
+        return 'Auto-hide the toolbar';
+      case 'gal_hook_toolbar_auto_hide_hint':
+        return 'Hide the toolbar until the pointer reaches the caption box, LunaHook style. Hidden means really hidden — those pixels go back to the game.';
+      case 'gal_hook_passthrough_blocks_mouse':
+        return 'Caption still catches clicks while clicking through';
+      case 'gal_hook_passthrough_blocks_mouse_hint':
+        return 'On: text lines still take clicks so you can tap a word. Off: the whole overlay is transparent to the mouse — you can click whatever is underneath, but tapping words no longer works.';
       default:
         return null;
     }
@@ -180178,6 +180691,28 @@ extension on _StringsEs {
             'Leído hasta la página ${page} de ${total}';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'Leído hasta la página ${page}';
+      case 'gal_hook_click_lookup':
+        return 'Tap a word to look it up';
+      case 'gal_hook_click_lookup_hint':
+        return 'Off means clicks on the caption never trigger a lookup — useful with click-through on, when you would rather not hit a word by accident.';
+      case 'gal_hook_lookup_trigger':
+        return 'Lookup trigger';
+      case 'gal_hook_lookup_trigger_hint':
+        return 'Which mouse button looks up the word under the pointer. Independent of the switch above: you can turn tap-lookup off and still look up with a side button.';
+      case 'gal_hook_lookup_trigger_left':
+        return 'Left click';
+      case 'gal_hook_lookup_trigger_middle':
+        return 'Middle click';
+      case 'gal_hook_lookup_trigger_side':
+        return 'Side button';
+      case 'gal_hook_toolbar_auto_hide':
+        return 'Auto-hide the toolbar';
+      case 'gal_hook_toolbar_auto_hide_hint':
+        return 'Hide the toolbar until the pointer reaches the caption box, LunaHook style. Hidden means really hidden — those pixels go back to the game.';
+      case 'gal_hook_passthrough_blocks_mouse':
+        return 'Caption still catches clicks while clicking through';
+      case 'gal_hook_passthrough_blocks_mouse_hint':
+        return 'On: text lines still take clicks so you can tap a word. Off: the whole overlay is transparent to the mouse — you can click whatever is underneath, but tapping words no longer works.';
       default:
         return null;
     }
@@ -188152,6 +188687,28 @@ extension on _StringsFr {
             'Lu jusqu\'à la page ${page} sur ${total}';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'Lu jusqu\'à la page ${page}';
+      case 'gal_hook_click_lookup':
+        return 'Tap a word to look it up';
+      case 'gal_hook_click_lookup_hint':
+        return 'Off means clicks on the caption never trigger a lookup — useful with click-through on, when you would rather not hit a word by accident.';
+      case 'gal_hook_lookup_trigger':
+        return 'Lookup trigger';
+      case 'gal_hook_lookup_trigger_hint':
+        return 'Which mouse button looks up the word under the pointer. Independent of the switch above: you can turn tap-lookup off and still look up with a side button.';
+      case 'gal_hook_lookup_trigger_left':
+        return 'Left click';
+      case 'gal_hook_lookup_trigger_middle':
+        return 'Middle click';
+      case 'gal_hook_lookup_trigger_side':
+        return 'Side button';
+      case 'gal_hook_toolbar_auto_hide':
+        return 'Auto-hide the toolbar';
+      case 'gal_hook_toolbar_auto_hide_hint':
+        return 'Hide the toolbar until the pointer reaches the caption box, LunaHook style. Hidden means really hidden — those pixels go back to the game.';
+      case 'gal_hook_passthrough_blocks_mouse':
+        return 'Caption still catches clicks while clicking through';
+      case 'gal_hook_passthrough_blocks_mouse_hint':
+        return 'On: text lines still take clicks so you can tap a word. Off: the whole overlay is transparent to the mouse — you can click whatever is underneath, but tapping words no longer works.';
       default:
         return null;
     }
@@ -196098,6 +196655,28 @@ extension on _StringsId {
             'Dibaca sampai halaman ${page} dari ${total}';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'Dibaca sampai halaman ${page}';
+      case 'gal_hook_click_lookup':
+        return 'Tap a word to look it up';
+      case 'gal_hook_click_lookup_hint':
+        return 'Off means clicks on the caption never trigger a lookup — useful with click-through on, when you would rather not hit a word by accident.';
+      case 'gal_hook_lookup_trigger':
+        return 'Lookup trigger';
+      case 'gal_hook_lookup_trigger_hint':
+        return 'Which mouse button looks up the word under the pointer. Independent of the switch above: you can turn tap-lookup off and still look up with a side button.';
+      case 'gal_hook_lookup_trigger_left':
+        return 'Left click';
+      case 'gal_hook_lookup_trigger_middle':
+        return 'Middle click';
+      case 'gal_hook_lookup_trigger_side':
+        return 'Side button';
+      case 'gal_hook_toolbar_auto_hide':
+        return 'Auto-hide the toolbar';
+      case 'gal_hook_toolbar_auto_hide_hint':
+        return 'Hide the toolbar until the pointer reaches the caption box, LunaHook style. Hidden means really hidden — those pixels go back to the game.';
+      case 'gal_hook_passthrough_blocks_mouse':
+        return 'Caption still catches clicks while clicking through';
+      case 'gal_hook_passthrough_blocks_mouse_hint':
+        return 'On: text lines still take clicks so you can tap a word. Off: the whole overlay is transparent to the mouse — you can click whatever is underneath, but tapping words no longer works.';
       default:
         return null;
     }
@@ -204065,6 +204644,28 @@ extension on _StringsIt {
             'Letto fino a pagina ${page} di ${total}';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'Letto fino a pagina ${page}';
+      case 'gal_hook_click_lookup':
+        return 'Tap a word to look it up';
+      case 'gal_hook_click_lookup_hint':
+        return 'Off means clicks on the caption never trigger a lookup — useful with click-through on, when you would rather not hit a word by accident.';
+      case 'gal_hook_lookup_trigger':
+        return 'Lookup trigger';
+      case 'gal_hook_lookup_trigger_hint':
+        return 'Which mouse button looks up the word under the pointer. Independent of the switch above: you can turn tap-lookup off and still look up with a side button.';
+      case 'gal_hook_lookup_trigger_left':
+        return 'Left click';
+      case 'gal_hook_lookup_trigger_middle':
+        return 'Middle click';
+      case 'gal_hook_lookup_trigger_side':
+        return 'Side button';
+      case 'gal_hook_toolbar_auto_hide':
+        return 'Auto-hide the toolbar';
+      case 'gal_hook_toolbar_auto_hide_hint':
+        return 'Hide the toolbar until the pointer reaches the caption box, LunaHook style. Hidden means really hidden — those pixels go back to the game.';
+      case 'gal_hook_passthrough_blocks_mouse':
+        return 'Caption still catches clicks while clicking through';
+      case 'gal_hook_passthrough_blocks_mouse_hint':
+        return 'On: text lines still take clicks so you can tap a word. Off: the whole overlay is transparent to the mouse — you can click whatever is underneath, but tapping words no longer works.';
       default:
         return null;
     }
@@ -211965,6 +212566,28 @@ extension on _StringsJa {
             '${total} ページ中 ${page} ページまで';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => '${page} ページまで';
+      case 'gal_hook_click_lookup':
+        return 'Tap a word to look it up';
+      case 'gal_hook_click_lookup_hint':
+        return 'Off means clicks on the caption never trigger a lookup — useful with click-through on, when you would rather not hit a word by accident.';
+      case 'gal_hook_lookup_trigger':
+        return 'Lookup trigger';
+      case 'gal_hook_lookup_trigger_hint':
+        return 'Which mouse button looks up the word under the pointer. Independent of the switch above: you can turn tap-lookup off and still look up with a side button.';
+      case 'gal_hook_lookup_trigger_left':
+        return 'Left click';
+      case 'gal_hook_lookup_trigger_middle':
+        return 'Middle click';
+      case 'gal_hook_lookup_trigger_side':
+        return 'Side button';
+      case 'gal_hook_toolbar_auto_hide':
+        return 'Auto-hide the toolbar';
+      case 'gal_hook_toolbar_auto_hide_hint':
+        return 'Hide the toolbar until the pointer reaches the caption box, LunaHook style. Hidden means really hidden — those pixels go back to the game.';
+      case 'gal_hook_passthrough_blocks_mouse':
+        return 'Caption still catches clicks while clicking through';
+      case 'gal_hook_passthrough_blocks_mouse_hint':
+        return 'On: text lines still take clicks so you can tap a word. Off: the whole overlay is transparent to the mouse — you can click whatever is underneath, but tapping words no longer works.';
       default:
         return null;
     }
@@ -219867,6 +220490,28 @@ extension on _StringsKo {
             '${total}페이지 중 ${page}페이지까지 읽음';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => '${page}페이지까지 읽음';
+      case 'gal_hook_click_lookup':
+        return 'Tap a word to look it up';
+      case 'gal_hook_click_lookup_hint':
+        return 'Off means clicks on the caption never trigger a lookup — useful with click-through on, when you would rather not hit a word by accident.';
+      case 'gal_hook_lookup_trigger':
+        return 'Lookup trigger';
+      case 'gal_hook_lookup_trigger_hint':
+        return 'Which mouse button looks up the word under the pointer. Independent of the switch above: you can turn tap-lookup off and still look up with a side button.';
+      case 'gal_hook_lookup_trigger_left':
+        return 'Left click';
+      case 'gal_hook_lookup_trigger_middle':
+        return 'Middle click';
+      case 'gal_hook_lookup_trigger_side':
+        return 'Side button';
+      case 'gal_hook_toolbar_auto_hide':
+        return 'Auto-hide the toolbar';
+      case 'gal_hook_toolbar_auto_hide_hint':
+        return 'Hide the toolbar until the pointer reaches the caption box, LunaHook style. Hidden means really hidden — those pixels go back to the game.';
+      case 'gal_hook_passthrough_blocks_mouse':
+        return 'Caption still catches clicks while clicking through';
+      case 'gal_hook_passthrough_blocks_mouse_hint':
+        return 'On: text lines still take clicks so you can tap a word. Off: the whole overlay is transparent to the mouse — you can click whatever is underneath, but tapping words no longer works.';
       default:
         return null;
     }
@@ -227828,6 +228473,28 @@ extension on _StringsNl {
             'Gelezen tot pagina ${page} van ${total}';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'Gelezen tot pagina ${page}';
+      case 'gal_hook_click_lookup':
+        return 'Tap a word to look it up';
+      case 'gal_hook_click_lookup_hint':
+        return 'Off means clicks on the caption never trigger a lookup — useful with click-through on, when you would rather not hit a word by accident.';
+      case 'gal_hook_lookup_trigger':
+        return 'Lookup trigger';
+      case 'gal_hook_lookup_trigger_hint':
+        return 'Which mouse button looks up the word under the pointer. Independent of the switch above: you can turn tap-lookup off and still look up with a side button.';
+      case 'gal_hook_lookup_trigger_left':
+        return 'Left click';
+      case 'gal_hook_lookup_trigger_middle':
+        return 'Middle click';
+      case 'gal_hook_lookup_trigger_side':
+        return 'Side button';
+      case 'gal_hook_toolbar_auto_hide':
+        return 'Auto-hide the toolbar';
+      case 'gal_hook_toolbar_auto_hide_hint':
+        return 'Hide the toolbar until the pointer reaches the caption box, LunaHook style. Hidden means really hidden — those pixels go back to the game.';
+      case 'gal_hook_passthrough_blocks_mouse':
+        return 'Caption still catches clicks while clicking through';
+      case 'gal_hook_passthrough_blocks_mouse_hint':
+        return 'On: text lines still take clicks so you can tap a word. Off: the whole overlay is transparent to the mouse — you can click whatever is underneath, but tapping words no longer works.';
       default:
         return null;
     }
@@ -235784,6 +236451,28 @@ extension on _StringsPtBr {
             'Lido até a página ${page} de ${total}';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'Lido até a página ${page}';
+      case 'gal_hook_click_lookup':
+        return 'Tap a word to look it up';
+      case 'gal_hook_click_lookup_hint':
+        return 'Off means clicks on the caption never trigger a lookup — useful with click-through on, when you would rather not hit a word by accident.';
+      case 'gal_hook_lookup_trigger':
+        return 'Lookup trigger';
+      case 'gal_hook_lookup_trigger_hint':
+        return 'Which mouse button looks up the word under the pointer. Independent of the switch above: you can turn tap-lookup off and still look up with a side button.';
+      case 'gal_hook_lookup_trigger_left':
+        return 'Left click';
+      case 'gal_hook_lookup_trigger_middle':
+        return 'Middle click';
+      case 'gal_hook_lookup_trigger_side':
+        return 'Side button';
+      case 'gal_hook_toolbar_auto_hide':
+        return 'Auto-hide the toolbar';
+      case 'gal_hook_toolbar_auto_hide_hint':
+        return 'Hide the toolbar until the pointer reaches the caption box, LunaHook style. Hidden means really hidden — those pixels go back to the game.';
+      case 'gal_hook_passthrough_blocks_mouse':
+        return 'Caption still catches clicks while clicking through';
+      case 'gal_hook_passthrough_blocks_mouse_hint':
+        return 'On: text lines still take clicks so you can tap a word. Off: the whole overlay is transparent to the mouse — you can click whatever is underneath, but tapping words no longer works.';
       default:
         return null;
     }
@@ -243746,6 +244435,28 @@ extension on _StringsRu {
             'Прочитано до страницы ${page} из ${total}';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'Прочитано до страницы ${page}';
+      case 'gal_hook_click_lookup':
+        return 'Tap a word to look it up';
+      case 'gal_hook_click_lookup_hint':
+        return 'Off means clicks on the caption never trigger a lookup — useful with click-through on, when you would rather not hit a word by accident.';
+      case 'gal_hook_lookup_trigger':
+        return 'Lookup trigger';
+      case 'gal_hook_lookup_trigger_hint':
+        return 'Which mouse button looks up the word under the pointer. Independent of the switch above: you can turn tap-lookup off and still look up with a side button.';
+      case 'gal_hook_lookup_trigger_left':
+        return 'Left click';
+      case 'gal_hook_lookup_trigger_middle':
+        return 'Middle click';
+      case 'gal_hook_lookup_trigger_side':
+        return 'Side button';
+      case 'gal_hook_toolbar_auto_hide':
+        return 'Auto-hide the toolbar';
+      case 'gal_hook_toolbar_auto_hide_hint':
+        return 'Hide the toolbar until the pointer reaches the caption box, LunaHook style. Hidden means really hidden — those pixels go back to the game.';
+      case 'gal_hook_passthrough_blocks_mouse':
+        return 'Caption still catches clicks while clicking through';
+      case 'gal_hook_passthrough_blocks_mouse_hint':
+        return 'On: text lines still take clicks so you can tap a word. Off: the whole overlay is transparent to the mouse — you can click whatever is underneath, but tapping words no longer works.';
       default:
         return null;
     }
@@ -251680,6 +252391,28 @@ extension on _StringsTh {
             'อ่านถึงหน้า ${page} จาก ${total}';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'อ่านถึงหน้า ${page}';
+      case 'gal_hook_click_lookup':
+        return 'Tap a word to look it up';
+      case 'gal_hook_click_lookup_hint':
+        return 'Off means clicks on the caption never trigger a lookup — useful with click-through on, when you would rather not hit a word by accident.';
+      case 'gal_hook_lookup_trigger':
+        return 'Lookup trigger';
+      case 'gal_hook_lookup_trigger_hint':
+        return 'Which mouse button looks up the word under the pointer. Independent of the switch above: you can turn tap-lookup off and still look up with a side button.';
+      case 'gal_hook_lookup_trigger_left':
+        return 'Left click';
+      case 'gal_hook_lookup_trigger_middle':
+        return 'Middle click';
+      case 'gal_hook_lookup_trigger_side':
+        return 'Side button';
+      case 'gal_hook_toolbar_auto_hide':
+        return 'Auto-hide the toolbar';
+      case 'gal_hook_toolbar_auto_hide_hint':
+        return 'Hide the toolbar until the pointer reaches the caption box, LunaHook style. Hidden means really hidden — those pixels go back to the game.';
+      case 'gal_hook_passthrough_blocks_mouse':
+        return 'Caption still catches clicks while clicking through';
+      case 'gal_hook_passthrough_blocks_mouse_hint':
+        return 'On: text lines still take clicks so you can tap a word. Off: the whole overlay is transparent to the mouse — you can click whatever is underneath, but tapping words no longer works.';
       default:
         return null;
     }
@@ -259631,6 +260364,28 @@ extension on _StringsTr {
             '${total} sayfadan ${page}. sayfaya kadar okundu';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => '${page}. sayfaya kadar okundu';
+      case 'gal_hook_click_lookup':
+        return 'Tap a word to look it up';
+      case 'gal_hook_click_lookup_hint':
+        return 'Off means clicks on the caption never trigger a lookup — useful with click-through on, when you would rather not hit a word by accident.';
+      case 'gal_hook_lookup_trigger':
+        return 'Lookup trigger';
+      case 'gal_hook_lookup_trigger_hint':
+        return 'Which mouse button looks up the word under the pointer. Independent of the switch above: you can turn tap-lookup off and still look up with a side button.';
+      case 'gal_hook_lookup_trigger_left':
+        return 'Left click';
+      case 'gal_hook_lookup_trigger_middle':
+        return 'Middle click';
+      case 'gal_hook_lookup_trigger_side':
+        return 'Side button';
+      case 'gal_hook_toolbar_auto_hide':
+        return 'Auto-hide the toolbar';
+      case 'gal_hook_toolbar_auto_hide_hint':
+        return 'Hide the toolbar until the pointer reaches the caption box, LunaHook style. Hidden means really hidden — those pixels go back to the game.';
+      case 'gal_hook_passthrough_blocks_mouse':
+        return 'Caption still catches clicks while clicking through';
+      case 'gal_hook_passthrough_blocks_mouse_hint':
+        return 'On: text lines still take clicks so you can tap a word. Off: the whole overlay is transparent to the mouse — you can click whatever is underneath, but tapping words no longer works.';
       default:
         return null;
     }
@@ -267575,6 +268330,28 @@ extension on _StringsVi {
             'Đã đọc đến trang ${page} trên ${total}';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'Đã đọc đến trang ${page}';
+      case 'gal_hook_click_lookup':
+        return 'Tap a word to look it up';
+      case 'gal_hook_click_lookup_hint':
+        return 'Off means clicks on the caption never trigger a lookup — useful with click-through on, when you would rather not hit a word by accident.';
+      case 'gal_hook_lookup_trigger':
+        return 'Lookup trigger';
+      case 'gal_hook_lookup_trigger_hint':
+        return 'Which mouse button looks up the word under the pointer. Independent of the switch above: you can turn tap-lookup off and still look up with a side button.';
+      case 'gal_hook_lookup_trigger_left':
+        return 'Left click';
+      case 'gal_hook_lookup_trigger_middle':
+        return 'Middle click';
+      case 'gal_hook_lookup_trigger_side':
+        return 'Side button';
+      case 'gal_hook_toolbar_auto_hide':
+        return 'Auto-hide the toolbar';
+      case 'gal_hook_toolbar_auto_hide_hint':
+        return 'Hide the toolbar until the pointer reaches the caption box, LunaHook style. Hidden means really hidden — those pixels go back to the game.';
+      case 'gal_hook_passthrough_blocks_mouse':
+        return 'Caption still catches clicks while clicking through';
+      case 'gal_hook_passthrough_blocks_mouse_hint':
+        return 'On: text lines still take clicks so you can tap a word. Off: the whole overlay is transparent to the mouse — you can click whatever is underneath, but tapping words no longer works.';
       default:
         return null;
     }
@@ -275453,6 +276230,28 @@ extension on _StringsZhCn {
             '读到第 ${page}/${total} 页';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => '读到第 ${page} 页';
+      case 'gal_hook_click_lookup':
+        return '单击文字查词';
+      case 'gal_hook_click_lookup_hint':
+        return '关掉后点台词不再触发查词。开着鼠标穿透时尤其有用——不想一不小心点到单词。';
+      case 'gal_hook_lookup_trigger':
+        return '查词触发方式';
+      case 'gal_hook_lookup_trigger_hint':
+        return '用哪个鼠标键查指针底下的词。与上面的开关正交：可以关掉单击查词，仍用侧键查。';
+      case 'gal_hook_lookup_trigger_left':
+        return '左键单击';
+      case 'gal_hook_lookup_trigger_middle':
+        return '鼠标中键';
+      case 'gal_hook_lookup_trigger_side':
+        return '鼠标侧键';
+      case 'gal_hook_toolbar_auto_hide':
+        return '自动隐藏功能栏';
+      case 'gal_hook_toolbar_auto_hide_hint':
+        return '平时把功能栏整条隐藏，鼠标移到台词框附近才现身（LunaHook 那样）。隐藏就是真隐藏，那块像素还给游戏。';
+      case 'gal_hook_passthrough_blocks_mouse':
+        return '穿透时台词仍拦截点击';
+      case 'gal_hook_passthrough_blocks_mouse_hint':
+        return '开：文字行仍接鼠标，能点字查词。关：整个浮窗对鼠标彻底透明，能点到底下的东西，但点字查词也就没了。';
       default:
         return null;
     }
@@ -283332,6 +284131,28 @@ extension on _StringsZhHk {
             '讀到第 ${page}/${total} 頁';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => '讀到第 ${page} 頁';
+      case 'gal_hook_click_lookup':
+        return 'Tap a word to look it up';
+      case 'gal_hook_click_lookup_hint':
+        return 'Off means clicks on the caption never trigger a lookup — useful with click-through on, when you would rather not hit a word by accident.';
+      case 'gal_hook_lookup_trigger':
+        return 'Lookup trigger';
+      case 'gal_hook_lookup_trigger_hint':
+        return 'Which mouse button looks up the word under the pointer. Independent of the switch above: you can turn tap-lookup off and still look up with a side button.';
+      case 'gal_hook_lookup_trigger_left':
+        return 'Left click';
+      case 'gal_hook_lookup_trigger_middle':
+        return 'Middle click';
+      case 'gal_hook_lookup_trigger_side':
+        return 'Side button';
+      case 'gal_hook_toolbar_auto_hide':
+        return 'Auto-hide the toolbar';
+      case 'gal_hook_toolbar_auto_hide_hint':
+        return 'Hide the toolbar until the pointer reaches the caption box, LunaHook style. Hidden means really hidden — those pixels go back to the game.';
+      case 'gal_hook_passthrough_blocks_mouse':
+        return 'Caption still catches clicks while clicking through';
+      case 'gal_hook_passthrough_blocks_mouse_hint':
+        return 'On: text lines still take clicks so you can tap a word. Off: the whole overlay is transparent to the mouse — you can click whatever is underneath, but tapping words no longer works.';
       default:
         return null;
     }
