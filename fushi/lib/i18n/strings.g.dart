@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 65195 (3835 per locale)
+/// Strings: 65229 (3837 per locale)
 ///
-/// Built on 2026-08-28 at 14:52 UTC
+/// Built on 2026-08-29 at 08:30 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5225,6 +5225,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Could not delete ${n} local file(s); they may still be in use';
   String batch_hidden_by_filter_note({required Object n}) =>
       'Another ${n} selected item(s) are hidden by the current filter and will not be affected.';
+  String get video_ajatt_settings_hint =>
+      'Free Japanese subtitle archive (kitsunekko mirror). No account needed; subtitle files download from GitHub.';
+  String get video_ajatt_enabled_hint =>
+      'Off means the AJATT archive is skipped when searching subtitles.';
 }
 
 // Path: <root>
@@ -14114,6 +14118,12 @@ class _StringsAr extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       'هناك ${n} عنصر محدد مخفي بواسطة عامل التصفية الحالي ولن تتم معالجته.';
+  @override
+  String get video_ajatt_settings_hint =>
+      'أرشيف مجاني للترجمات اليابانية (مرآة kitsunekko). لا يتطلب حسابًا؛ تُنزَّل ملفات الترجمة من GitHub.';
+  @override
+  String get video_ajatt_enabled_hint =>
+      'عند الإيقاف يتم تخطي أرشيف AJATT عند البحث عن الترجمات.';
 }
 
 // Path: <root>
@@ -23210,6 +23220,12 @@ class _StringsDe extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       'Weitere ${n} ausgewählte Elemente sind durch den aktuellen Filter ausgeblendet und werden nicht bearbeitet.';
+  @override
+  String get video_ajatt_settings_hint =>
+      'Kostenloses Archiv japanischer Untertitel (kitsunekko-Spiegel). Kein Konto nötig; Untertiteldateien werden von GitHub geladen.';
+  @override
+  String get video_ajatt_enabled_hint =>
+      'Aus bedeutet, dass das AJATT-Archiv bei der Untertitelsuche übersprungen wird.';
 }
 
 // Path: <root>
@@ -32349,6 +32365,12 @@ class _StringsEs extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       'Otros ${n} elementos seleccionados están ocultos por el filtro actual y no se procesarán.';
+  @override
+  String get video_ajatt_settings_hint =>
+      'Archivo gratuito de subtítulos en japonés (réplica de kitsunekko). No requiere cuenta; los archivos se descargan desde GitHub.';
+  @override
+  String get video_ajatt_enabled_hint =>
+      'Desactivado significa que el archivo AJATT se omite al buscar subtítulos.';
 }
 
 // Path: <root>
@@ -41522,6 +41544,12 @@ class _StringsFr extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       '${n} autres éléments sélectionnés sont masqués par le filtre actuel et ne seront pas traités.';
+  @override
+  String get video_ajatt_settings_hint =>
+      'Archive gratuite de sous-titres japonais (miroir kitsunekko). Aucun compte requis ; les fichiers sont téléchargés depuis GitHub.';
+  @override
+  String get video_ajatt_enabled_hint =>
+      'Désactivé : l\'archive AJATT est ignorée lors de la recherche de sous-titres.';
 }
 
 // Path: <root>
@@ -50522,6 +50550,12 @@ class _StringsId extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       '${n} item terpilih lainnya disembunyikan oleh filter saat ini dan tidak akan diproses.';
+  @override
+  String get video_ajatt_settings_hint =>
+      'Arsip subtitle bahasa Jepang gratis (cermin kitsunekko). Tidak perlu akun; berkas subtitle diunduh dari GitHub.';
+  @override
+  String get video_ajatt_enabled_hint =>
+      'Nonaktif berarti arsip AJATT dilewati saat mencari subtitle.';
 }
 
 // Path: <root>
@@ -59598,6 +59632,12 @@ class _StringsIt extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       'Altri ${n} elementi selezionati sono nascosti dal filtro corrente e non verranno elaborati.';
+  @override
+  String get video_ajatt_settings_hint =>
+      'Archivio gratuito di sottotitoli giapponesi (mirror kitsunekko). Nessun account richiesto; i file vengono scaricati da GitHub.';
+  @override
+  String get video_ajatt_enabled_hint =>
+      'Disattivato: l\'archivio AJATT viene ignorato nella ricerca dei sottotitoli.';
 }
 
 // Path: <root>
@@ -68120,6 +68160,11 @@ class _StringsJa extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       '選択済みの ${n} 件は現在のフィルターで非表示のため、今回は処理されません。';
+  @override
+  String get video_ajatt_settings_hint =>
+      '無料の日本語字幕アーカイブ（kitsunekko ミラー）。アカウント不要。字幕ファイルは GitHub からダウンロードされます。';
+  @override
+  String get video_ajatt_enabled_hint => 'オフにすると字幕検索時に AJATT アーカイブをスキップします。';
 }
 
 // Path: <root>
@@ -76656,6 +76701,11 @@ class _StringsKo extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       '선택한 항목 중 ${n}개는 현재 필터로 숨겨져 있어 처리되지 않습니다.';
+  @override
+  String get video_ajatt_settings_hint =>
+      '무료 일본어 자막 아카이브(kitsunekko 미러). 계정 불필요. 자막 파일은 GitHub에서 다운로드됩니다.';
+  @override
+  String get video_ajatt_enabled_hint => '끄면 자막 검색 시 AJATT 아카이브를 건너뜁니다.';
 }
 
 // Path: <root>
@@ -85689,6 +85739,12 @@ class _StringsNl extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       'Nog ${n} geselecteerde items zijn verborgen door het huidige filter en worden niet verwerkt.';
+  @override
+  String get video_ajatt_settings_hint =>
+      'Gratis archief met Japanse ondertitels (kitsunekko-mirror). Geen account nodig; bestanden worden van GitHub gedownload.';
+  @override
+  String get video_ajatt_enabled_hint =>
+      'Uit betekent dat het AJATT-archief wordt overgeslagen bij het zoeken naar ondertitels.';
 }
 
 // Path: <root>
@@ -94778,6 +94834,12 @@ class _StringsPtBr extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       'Outros ${n} itens selecionados estão ocultos pelo filtro atual e não serão processados.';
+  @override
+  String get video_ajatt_settings_hint =>
+      'Arquivo gratuito de legendas em japonês (espelho do kitsunekko). Não precisa de conta; os arquivos são baixados do GitHub.';
+  @override
+  String get video_ajatt_enabled_hint =>
+      'Desligado significa que o arquivo AJATT é ignorado ao buscar legendas.';
 }
 
 // Path: <root>
@@ -103843,6 +103905,12 @@ class _StringsRu extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       'Ещё ${n} выбранных элементов скрыты текущим фильтром и не будут обработаны.';
+  @override
+  String get video_ajatt_settings_hint =>
+      'Бесплатный архив японских субтитров (зеркало kitsunekko). Аккаунт не нужен; файлы скачиваются с GitHub.';
+  @override
+  String get video_ajatt_enabled_hint =>
+      'Выключено — архив AJATT пропускается при поиске субтитров.';
 }
 
 // Path: <root>
@@ -112726,6 +112794,12 @@ class _StringsTh extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       'รายการที่เลือกอีก ${n} รายการถูกซ่อนด้วยตัวกรองปัจจุบันและจะไม่ถูกดำเนินการ';
+  @override
+  String get video_ajatt_settings_hint =>
+      'คลังซับไตเติลภาษาญี่ปุ่นฟรี (มิเรอร์ kitsunekko) ไม่ต้องใช้บัญชี ไฟล์ซับไตเติลดาวน์โหลดจาก GitHub';
+  @override
+  String get video_ajatt_enabled_hint =>
+      'ปิดหมายถึงข้ามคลัง AJATT เมื่อค้นหาซับไตเติล';
 }
 
 // Path: <root>
@@ -121712,6 +121786,12 @@ class _StringsTr extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       'Seçili ${n} öğe daha geçerli filtre tarafından gizlendi ve işlenmeyecek.';
+  @override
+  String get video_ajatt_settings_hint =>
+      'Ücretsiz Japonca altyazı arşivi (kitsunekko yansıması). Hesap gerekmez; altyazı dosyaları GitHub\'dan indirilir.';
+  @override
+  String get video_ajatt_enabled_hint =>
+      'Kapalıysa altyazı aranırken AJATT arşivi atlanır.';
 }
 
 // Path: <root>
@@ -130680,6 +130760,12 @@ class _StringsVi extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       'Còn ${n} mục đã chọn bị ẩn bởi bộ lọc hiện tại và sẽ không được xử lý.';
+  @override
+  String get video_ajatt_settings_hint =>
+      'Kho phụ đề tiếng Nhật miễn phí (bản sao kitsunekko). Không cần tài khoản; tệp phụ đề tải từ GitHub.';
+  @override
+  String get video_ajatt_enabled_hint =>
+      'Tắt nghĩa là bỏ qua kho AJATT khi tìm phụ đề.';
 }
 
 // Path: <root>
@@ -138929,6 +139015,11 @@ class _StringsZhCn extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       '另有 ${n} 项被当前筛选隐藏，本次不会处理。';
+  @override
+  String get video_ajatt_settings_hint =>
+      '免费日语字幕库（kitsunekko 镜像）。无需账号；字幕文件从 GitHub 下载。';
+  @override
+  String get video_ajatt_enabled_hint => '关闭后搜索字幕时跳过 AJATT 字幕库。';
 }
 
 // Path: <root>
@@ -147184,6 +147275,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       '另有 ${n} 項被目前篩選隱藏，今次不會處理。';
+  @override
+  String get video_ajatt_settings_hint =>
+      '免費日語字幕庫（kitsunekko 鏡像）。無需帳號；字幕檔案從 GitHub 下載。';
+  @override
+  String get video_ajatt_enabled_hint => '關閉後搜尋字幕時跳過 AJATT 字幕庫。';
 }
 
 /// Flat map(s) containing all translations.
@@ -155054,6 +155150,10 @@ extension on _StringsEn {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             'Another ${n} selected item(s) are hidden by the current filter and will not be affected.';
+      case 'video_ajatt_settings_hint':
+        return 'Free Japanese subtitle archive (kitsunekko mirror). No account needed; subtitle files download from GitHub.';
+      case 'video_ajatt_enabled_hint':
+        return 'Off means the AJATT archive is skipped when searching subtitles.';
       default:
         return null;
     }
@@ -162920,6 +163020,10 @@ extension on _StringsAr {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             'هناك ${n} عنصر محدد مخفي بواسطة عامل التصفية الحالي ولن تتم معالجته.';
+      case 'video_ajatt_settings_hint':
+        return 'أرشيف مجاني للترجمات اليابانية (مرآة kitsunekko). لا يتطلب حسابًا؛ تُنزَّل ملفات الترجمة من GitHub.';
+      case 'video_ajatt_enabled_hint':
+        return 'عند الإيقاف يتم تخطي أرشيف AJATT عند البحث عن الترجمات.';
       default:
         return null;
     }
@@ -170829,6 +170933,10 @@ extension on _StringsDe {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             'Weitere ${n} ausgewählte Elemente sind durch den aktuellen Filter ausgeblendet und werden nicht bearbeitet.';
+      case 'video_ajatt_settings_hint':
+        return 'Kostenloses Archiv japanischer Untertitel (kitsunekko-Spiegel). Kein Konto nötig; Untertiteldateien werden von GitHub geladen.';
+      case 'video_ajatt_enabled_hint':
+        return 'Aus bedeutet, dass das AJATT-Archiv bei der Untertitelsuche übersprungen wird.';
       default:
         return null;
     }
@@ -178730,6 +178838,10 @@ extension on _StringsEs {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             'Otros ${n} elementos seleccionados están ocultos por el filtro actual y no se procesarán.';
+      case 'video_ajatt_settings_hint':
+        return 'Archivo gratuito de subtítulos en japonés (réplica de kitsunekko). No requiere cuenta; los archivos se descargan desde GitHub.';
+      case 'video_ajatt_enabled_hint':
+        return 'Desactivado significa que el archivo AJATT se omite al buscar subtítulos.';
       default:
         return null;
     }
@@ -186639,6 +186751,10 @@ extension on _StringsFr {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             '${n} autres éléments sélectionnés sont masqués par le filtre actuel et ne seront pas traités.';
+      case 'video_ajatt_settings_hint':
+        return 'Archive gratuite de sous-titres japonais (miroir kitsunekko). Aucun compte requis ; les fichiers sont téléchargés depuis GitHub.';
+      case 'video_ajatt_enabled_hint':
+        return 'Désactivé : l\'archive AJATT est ignorée lors de la recherche de sous-titres.';
       default:
         return null;
     }
@@ -194520,6 +194636,10 @@ extension on _StringsId {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             '${n} item terpilih lainnya disembunyikan oleh filter saat ini dan tidak akan diproses.';
+      case 'video_ajatt_settings_hint':
+        return 'Arsip subtitle bahasa Jepang gratis (cermin kitsunekko). Tidak perlu akun; berkas subtitle diunduh dari GitHub.';
+      case 'video_ajatt_enabled_hint':
+        return 'Nonaktif berarti arsip AJATT dilewati saat mencari subtitle.';
       default:
         return null;
     }
@@ -202422,6 +202542,10 @@ extension on _StringsIt {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             'Altri ${n} elementi selezionati sono nascosti dal filtro corrente e non verranno elaborati.';
+      case 'video_ajatt_settings_hint':
+        return 'Archivio gratuito di sottotitoli giapponesi (mirror kitsunekko). Nessun account richiesto; i file vengono scaricati da GitHub.';
+      case 'video_ajatt_enabled_hint':
+        return 'Disattivato: l\'archivio AJATT viene ignorato nella ricerca dei sottotitoli.';
       default:
         return null;
     }
@@ -210257,6 +210381,10 @@ extension on _StringsJa {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             '選択済みの ${n} 件は現在のフィルターで非表示のため、今回は処理されません。';
+      case 'video_ajatt_settings_hint':
+        return '無料の日本語字幕アーカイブ（kitsunekko ミラー）。アカウント不要。字幕ファイルは GitHub からダウンロードされます。';
+      case 'video_ajatt_enabled_hint':
+        return 'オフにすると字幕検索時に AJATT アーカイブをスキップします。';
       default:
         return null;
     }
@@ -218094,6 +218222,10 @@ extension on _StringsKo {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             '선택한 항목 중 ${n}개는 현재 필터로 숨겨져 있어 처리되지 않습니다.';
+      case 'video_ajatt_settings_hint':
+        return '무료 일본어 자막 아카이브(kitsunekko 미러). 계정 불필요. 자막 파일은 GitHub에서 다운로드됩니다.';
+      case 'video_ajatt_enabled_hint':
+        return '끄면 자막 검색 시 AJATT 아카이브를 건너뜁니다.';
       default:
         return null;
     }
@@ -225990,6 +226122,10 @@ extension on _StringsNl {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             'Nog ${n} geselecteerde items zijn verborgen door het huidige filter en worden niet verwerkt.';
+      case 'video_ajatt_settings_hint':
+        return 'Gratis archief met Japanse ondertitels (kitsunekko-mirror). Geen account nodig; bestanden worden van GitHub gedownload.';
+      case 'video_ajatt_enabled_hint':
+        return 'Uit betekent dat het AJATT-archief wordt overgeslagen bij het zoeken naar ondertitels.';
       default:
         return null;
     }
@@ -233881,6 +234017,10 @@ extension on _StringsPtBr {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             'Outros ${n} itens selecionados estão ocultos pelo filtro atual e não serão processados.';
+      case 'video_ajatt_settings_hint':
+        return 'Arquivo gratuito de legendas em japonês (espelho do kitsunekko). Não precisa de conta; os arquivos são baixados do GitHub.';
+      case 'video_ajatt_enabled_hint':
+        return 'Desligado significa que o arquivo AJATT é ignorado ao buscar legendas.';
       default:
         return null;
     }
@@ -241778,6 +241918,10 @@ extension on _StringsRu {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             'Ещё ${n} выбранных элементов скрыты текущим фильтром и не будут обработаны.';
+      case 'video_ajatt_settings_hint':
+        return 'Бесплатный архив японских субтитров (зеркало kitsunekko). Аккаунт не нужен; файлы скачиваются с GitHub.';
+      case 'video_ajatt_enabled_hint':
+        return 'Выключено — архив AJATT пропускается при поиске субтитров.';
       default:
         return null;
     }
@@ -249647,6 +249791,10 @@ extension on _StringsTh {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             'รายการที่เลือกอีก ${n} รายการถูกซ่อนด้วยตัวกรองปัจจุบันและจะไม่ถูกดำเนินการ';
+      case 'video_ajatt_settings_hint':
+        return 'คลังซับไตเติลภาษาญี่ปุ่นฟรี (มิเรอร์ kitsunekko) ไม่ต้องใช้บัญชี ไฟล์ซับไตเติลดาวน์โหลดจาก GitHub';
+      case 'video_ajatt_enabled_hint':
+        return 'ปิดหมายถึงข้ามคลัง AJATT เมื่อค้นหาซับไตเติล';
       default:
         return null;
     }
@@ -257533,6 +257681,10 @@ extension on _StringsTr {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             'Seçili ${n} öğe daha geçerli filtre tarafından gizlendi ve işlenmeyecek.';
+      case 'video_ajatt_settings_hint':
+        return 'Ücretsiz Japonca altyazı arşivi (kitsunekko yansıması). Hesap gerekmez; altyazı dosyaları GitHub\'dan indirilir.';
+      case 'video_ajatt_enabled_hint':
+        return 'Kapalıysa altyazı aranırken AJATT arşivi atlanır.';
       default:
         return null;
     }
@@ -265412,6 +265564,10 @@ extension on _StringsVi {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             'Còn ${n} mục đã chọn bị ẩn bởi bộ lọc hiện tại và sẽ không được xử lý.';
+      case 'video_ajatt_settings_hint':
+        return 'Kho phụ đề tiếng Nhật miễn phí (bản sao kitsunekko). Không cần tài khoản; tệp phụ đề tải từ GitHub.';
+      case 'video_ajatt_enabled_hint':
+        return 'Tắt nghĩa là bỏ qua kho AJATT khi tìm phụ đề.';
       default:
         return null;
     }
@@ -273225,6 +273381,10 @@ extension on _StringsZhCn {
         return ({required Object n}) => '有 ${n} 个本地文件删除失败，可能正在被使用';
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) => '另有 ${n} 项被当前筛选隐藏，本次不会处理。';
+      case 'video_ajatt_settings_hint':
+        return '免费日语字幕库（kitsunekko 镜像）。无需账号；字幕文件从 GitHub 下载。';
+      case 'video_ajatt_enabled_hint':
+        return '关闭后搜索字幕时跳过 AJATT 字幕库。';
       default:
         return null;
     }
@@ -281039,6 +281199,10 @@ extension on _StringsZhHk {
         return ({required Object n}) => '有 ${n} 個本機檔案刪除失敗，可能正在被使用';
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) => '另有 ${n} 項被目前篩選隱藏，今次不會處理。';
+      case 'video_ajatt_settings_hint':
+        return '免費日語字幕庫（kitsunekko 鏡像）。無需帳號；字幕檔案從 GitHub 下載。';
+      case 'video_ajatt_enabled_hint':
+        return '關閉後搜尋字幕時跳過 AJATT 字幕庫。';
       default:
         return null;
     }
