@@ -3,7 +3,7 @@
 /// Locales: 17
 /// Strings: 65858 (3874 per locale)
 ///
-/// Built on 2026-08-29 at 14:51 UTC
+/// Built on 2026-08-29 at 16:43 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -14238,21 +14238,21 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_setting_mpv_group_hdr => 'HDR';
   @override
-  String get video_setting_hdr_tone_mapping => 'HDR tone mapping';
+  String get video_setting_hdr_tone_mapping => 'تعيين ألوان HDR';
   @override
   String get video_setting_hdr_tone_mapping_hint =>
-      'Curve used when an HDR source has to be squeezed onto an SDR display. Auto lets mpv pick per source.';
+      'المنحنى المستخدم عند ضغط مصدر HDR على شاشة SDR. «تلقائي» يترك الاختيار لـ mpv حسب كل مصدر.';
   @override
-  String get video_setting_hdr_compute_peak => 'Dynamic peak detection';
+  String get video_setting_hdr_compute_peak => 'كشف الذروة الديناميكي';
   @override
   String get video_setting_hdr_compute_peak_hint =>
-      'Measure each frame\'s real peak brightness instead of trusting the stream metadata. Better highlights, costs some GPU.';
+      'قياس ذروة السطوع الحقيقية لكل إطار بدلاً من الوثوق ببيانات المصدر. إبرازات أدق مقابل بعض استهلاك المعالج الرسومي.';
   @override
-  String get video_setting_hdr_auto => 'Auto';
+  String get video_setting_hdr_auto => 'تلقائي';
   @override
-  String get video_setting_hdr_on => 'On';
+  String get video_setting_hdr_on => 'تشغيل';
   @override
-  String get video_setting_hdr_off => 'Off';
+  String get video_setting_hdr_off => 'إيقاف';
 }
 
 // Path: <root>
@@ -23425,21 +23425,22 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_setting_mpv_group_hdr => 'HDR';
   @override
-  String get video_setting_hdr_tone_mapping => 'HDR tone mapping';
+  String get video_setting_hdr_tone_mapping => 'HDR-Tonemapping';
   @override
   String get video_setting_hdr_tone_mapping_hint =>
-      'Curve used when an HDR source has to be squeezed onto an SDR display. Auto lets mpv pick per source.';
+      'Kurve, mit der eine HDR-Quelle auf ein SDR-Display gebracht wird. „Automatisch“ überlässt mpv die Wahl je Quelle.';
   @override
-  String get video_setting_hdr_compute_peak => 'Dynamic peak detection';
+  String get video_setting_hdr_compute_peak =>
+      'Dynamische Spitzenwerterkennung';
   @override
   String get video_setting_hdr_compute_peak_hint =>
-      'Measure each frame\'s real peak brightness instead of trusting the stream metadata. Better highlights, costs some GPU.';
+      'Misst die echte Spitzenhelligkeit jedes Bildes, statt den Metadaten der Quelle zu vertrauen. Bessere Lichter, kostet etwas GPU-Leistung.';
   @override
-  String get video_setting_hdr_auto => 'Auto';
+  String get video_setting_hdr_auto => 'Automatisch';
   @override
-  String get video_setting_hdr_on => 'On';
+  String get video_setting_hdr_on => 'An';
   @override
-  String get video_setting_hdr_off => 'Off';
+  String get video_setting_hdr_off => 'Aus';
 }
 
 // Path: <root>
@@ -32656,21 +32657,21 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_setting_mpv_group_hdr => 'HDR';
   @override
-  String get video_setting_hdr_tone_mapping => 'HDR tone mapping';
+  String get video_setting_hdr_tone_mapping => 'Mapeo de tonos HDR';
   @override
   String get video_setting_hdr_tone_mapping_hint =>
-      'Curve used when an HDR source has to be squeezed onto an SDR display. Auto lets mpv pick per source.';
+      'Curva que se usa al comprimir una fuente HDR en una pantalla SDR. «Automático» deja que mpv elija según la fuente.';
   @override
-  String get video_setting_hdr_compute_peak => 'Dynamic peak detection';
+  String get video_setting_hdr_compute_peak => 'Detección dinámica de picos';
   @override
   String get video_setting_hdr_compute_peak_hint =>
-      'Measure each frame\'s real peak brightness instead of trusting the stream metadata. Better highlights, costs some GPU.';
+      'Mide el brillo máximo real de cada fotograma en vez de fiarse de los metadatos de la fuente. Mejores luces altas, a costa de algo de GPU.';
   @override
-  String get video_setting_hdr_auto => 'Auto';
+  String get video_setting_hdr_auto => 'Automático';
   @override
-  String get video_setting_hdr_on => 'On';
+  String get video_setting_hdr_on => 'Activado';
   @override
-  String get video_setting_hdr_off => 'Off';
+  String get video_setting_hdr_off => 'Desactivado';
 }
 
 // Path: <root>
@@ -41921,21 +41922,21 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_setting_mpv_group_hdr => 'HDR';
   @override
-  String get video_setting_hdr_tone_mapping => 'HDR tone mapping';
+  String get video_setting_hdr_tone_mapping => 'Mappage tonal HDR';
   @override
   String get video_setting_hdr_tone_mapping_hint =>
-      'Curve used when an HDR source has to be squeezed onto an SDR display. Auto lets mpv pick per source.';
+      'Courbe utilisée pour ramener une source HDR sur un écran SDR. « Auto » laisse mpv choisir selon la source.';
   @override
-  String get video_setting_hdr_compute_peak => 'Dynamic peak detection';
+  String get video_setting_hdr_compute_peak => 'Détection dynamique des pics';
   @override
   String get video_setting_hdr_compute_peak_hint =>
-      'Measure each frame\'s real peak brightness instead of trusting the stream metadata. Better highlights, costs some GPU.';
+      'Mesure le pic de luminosité réel de chaque image au lieu de se fier aux métadonnées de la source. Meilleures hautes lumières, au prix d\'un peu de GPU.';
   @override
   String get video_setting_hdr_auto => 'Auto';
   @override
-  String get video_setting_hdr_on => 'On';
+  String get video_setting_hdr_on => 'Activé';
   @override
-  String get video_setting_hdr_off => 'Off';
+  String get video_setting_hdr_off => 'Désactivé';
 }
 
 // Path: <root>
@@ -51012,21 +51013,21 @@ class _StringsId extends _StringsEn {
   @override
   String get video_setting_mpv_group_hdr => 'HDR';
   @override
-  String get video_setting_hdr_tone_mapping => 'HDR tone mapping';
+  String get video_setting_hdr_tone_mapping => 'Pemetaan nada HDR';
   @override
   String get video_setting_hdr_tone_mapping_hint =>
-      'Curve used when an HDR source has to be squeezed onto an SDR display. Auto lets mpv pick per source.';
+      'Kurva yang dipakai saat sumber HDR harus dipadatkan ke layar SDR. "Otomatis" membiarkan mpv memilih per sumber.';
   @override
-  String get video_setting_hdr_compute_peak => 'Dynamic peak detection';
+  String get video_setting_hdr_compute_peak => 'Deteksi puncak dinamis';
   @override
   String get video_setting_hdr_compute_peak_hint =>
-      'Measure each frame\'s real peak brightness instead of trusting the stream metadata. Better highlights, costs some GPU.';
+      'Mengukur puncak kecerahan asli tiap bingkai alih-alih mempercayai metadata sumber. Sorotan lebih baik, memakan sedikit GPU.';
   @override
-  String get video_setting_hdr_auto => 'Auto';
+  String get video_setting_hdr_auto => 'Otomatis';
   @override
-  String get video_setting_hdr_on => 'On';
+  String get video_setting_hdr_on => 'Aktif';
   @override
-  String get video_setting_hdr_off => 'Off';
+  String get video_setting_hdr_off => 'Nonaktif';
 }
 
 // Path: <root>
@@ -60180,21 +60181,22 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_setting_mpv_group_hdr => 'HDR';
   @override
-  String get video_setting_hdr_tone_mapping => 'HDR tone mapping';
+  String get video_setting_hdr_tone_mapping => 'Mappatura tonale HDR';
   @override
   String get video_setting_hdr_tone_mapping_hint =>
-      'Curve used when an HDR source has to be squeezed onto an SDR display. Auto lets mpv pick per source.';
+      'Curva usata quando una sorgente HDR va compressa su uno schermo SDR. «Automatico» lascia scegliere a mpv per ogni sorgente.';
   @override
-  String get video_setting_hdr_compute_peak => 'Dynamic peak detection';
+  String get video_setting_hdr_compute_peak =>
+      'Rilevamento dinamico dei picchi';
   @override
   String get video_setting_hdr_compute_peak_hint =>
-      'Measure each frame\'s real peak brightness instead of trusting the stream metadata. Better highlights, costs some GPU.';
+      'Misura il picco di luminosità reale di ogni fotogramma invece di fidarsi dei metadati della sorgente. Alte luci migliori, con un po’ di costo GPU.';
   @override
-  String get video_setting_hdr_auto => 'Auto';
+  String get video_setting_hdr_auto => 'Automatico';
   @override
-  String get video_setting_hdr_on => 'On';
+  String get video_setting_hdr_on => 'Attivo';
   @override
-  String get video_setting_hdr_off => 'Off';
+  String get video_setting_hdr_off => 'Disattivo';
 }
 
 // Path: <root>
@@ -68788,21 +68790,21 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_setting_mpv_group_hdr => 'HDR';
   @override
-  String get video_setting_hdr_tone_mapping => 'HDR tone mapping';
+  String get video_setting_hdr_tone_mapping => 'HDR トーンマッピング';
   @override
   String get video_setting_hdr_tone_mapping_hint =>
-      'Curve used when an HDR source has to be squeezed onto an SDR display. Auto lets mpv pick per source.';
+      'HDR ソースを SDR ディスプレイに収めるときに使うカーブ。「自動」は mpv がソースごとに選びます。';
   @override
-  String get video_setting_hdr_compute_peak => 'Dynamic peak detection';
+  String get video_setting_hdr_compute_peak => '動的ピーク検出';
   @override
   String get video_setting_hdr_compute_peak_hint =>
-      'Measure each frame\'s real peak brightness instead of trusting the stream metadata. Better highlights, costs some GPU.';
+      'ソースのメタデータを信じる代わりに、フレームごとの実際のピーク輝度を測ります。ハイライトが良くなる一方、GPU を少し使います。';
   @override
-  String get video_setting_hdr_auto => 'Auto';
+  String get video_setting_hdr_auto => '自動';
   @override
-  String get video_setting_hdr_on => 'On';
+  String get video_setting_hdr_on => 'オン';
   @override
-  String get video_setting_hdr_off => 'Off';
+  String get video_setting_hdr_off => 'オフ';
 }
 
 // Path: <root>
@@ -77411,21 +77413,21 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_setting_mpv_group_hdr => 'HDR';
   @override
-  String get video_setting_hdr_tone_mapping => 'HDR tone mapping';
+  String get video_setting_hdr_tone_mapping => 'HDR 톤 매핑';
   @override
   String get video_setting_hdr_tone_mapping_hint =>
-      'Curve used when an HDR source has to be squeezed onto an SDR display. Auto lets mpv pick per source.';
+      'HDR 소스를 SDR 디스플레이에 맞출 때 쓰는 곡선입니다. ‘자동’은 mpv가 소스마다 고르게 합니다.';
   @override
-  String get video_setting_hdr_compute_peak => 'Dynamic peak detection';
+  String get video_setting_hdr_compute_peak => '동적 피크 검출';
   @override
   String get video_setting_hdr_compute_peak_hint =>
-      'Measure each frame\'s real peak brightness instead of trusting the stream metadata. Better highlights, costs some GPU.';
+      '소스 메타데이터를 믿는 대신 프레임마다 실제 최대 밝기를 측정합니다. 하이라이트가 좋아지지만 GPU를 조금 씁니다.';
   @override
-  String get video_setting_hdr_auto => 'Auto';
+  String get video_setting_hdr_auto => '자동';
   @override
-  String get video_setting_hdr_on => 'On';
+  String get video_setting_hdr_on => '켜기';
   @override
-  String get video_setting_hdr_off => 'Off';
+  String get video_setting_hdr_off => '끄기';
 }
 
 // Path: <root>
@@ -86536,21 +86538,21 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_setting_mpv_group_hdr => 'HDR';
   @override
-  String get video_setting_hdr_tone_mapping => 'HDR tone mapping';
+  String get video_setting_hdr_tone_mapping => 'HDR-tonemapping';
   @override
   String get video_setting_hdr_tone_mapping_hint =>
-      'Curve used when an HDR source has to be squeezed onto an SDR display. Auto lets mpv pick per source.';
+      'Curve die wordt gebruikt als een HDR-bron op een SDR-scherm moet worden geperst. ‘Automatisch’ laat mpv per bron kiezen.';
   @override
-  String get video_setting_hdr_compute_peak => 'Dynamic peak detection';
+  String get video_setting_hdr_compute_peak => 'Dynamische piekdetectie';
   @override
   String get video_setting_hdr_compute_peak_hint =>
-      'Measure each frame\'s real peak brightness instead of trusting the stream metadata. Better highlights, costs some GPU.';
+      'Meet de echte piekhelderheid van elk beeld in plaats van te vertrouwen op de metadata van de bron. Betere highlights, kost wat GPU.';
   @override
-  String get video_setting_hdr_auto => 'Auto';
+  String get video_setting_hdr_auto => 'Automatisch';
   @override
-  String get video_setting_hdr_on => 'On';
+  String get video_setting_hdr_on => 'Aan';
   @override
-  String get video_setting_hdr_off => 'Off';
+  String get video_setting_hdr_off => 'Uit';
 }
 
 // Path: <root>
@@ -95717,21 +95719,21 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_setting_mpv_group_hdr => 'HDR';
   @override
-  String get video_setting_hdr_tone_mapping => 'HDR tone mapping';
+  String get video_setting_hdr_tone_mapping => 'Mapeamento de tons HDR';
   @override
   String get video_setting_hdr_tone_mapping_hint =>
-      'Curve used when an HDR source has to be squeezed onto an SDR display. Auto lets mpv pick per source.';
+      'Curva usada quando uma fonte HDR precisa ser comprimida para uma tela SDR. “Automático” deixa o mpv escolher por fonte.';
   @override
-  String get video_setting_hdr_compute_peak => 'Dynamic peak detection';
+  String get video_setting_hdr_compute_peak => 'Detecção dinâmica de pico';
   @override
   String get video_setting_hdr_compute_peak_hint =>
-      'Measure each frame\'s real peak brightness instead of trusting the stream metadata. Better highlights, costs some GPU.';
+      'Mede o pico real de brilho de cada quadro em vez de confiar nos metadados da fonte. Melhores altas-luzes, com algum custo de GPU.';
   @override
-  String get video_setting_hdr_auto => 'Auto';
+  String get video_setting_hdr_auto => 'Automático';
   @override
-  String get video_setting_hdr_on => 'On';
+  String get video_setting_hdr_on => 'Ligado';
   @override
-  String get video_setting_hdr_off => 'Off';
+  String get video_setting_hdr_off => 'Desligado';
 }
 
 // Path: <root>
@@ -104872,21 +104874,21 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_setting_mpv_group_hdr => 'HDR';
   @override
-  String get video_setting_hdr_tone_mapping => 'HDR tone mapping';
+  String get video_setting_hdr_tone_mapping => 'Тональное отображение HDR';
   @override
   String get video_setting_hdr_tone_mapping_hint =>
-      'Curve used when an HDR source has to be squeezed onto an SDR display. Auto lets mpv pick per source.';
+      'Кривая, по которой HDR-источник укладывается в SDR-экран. «Авто» оставляет выбор за mpv для каждого источника.';
   @override
-  String get video_setting_hdr_compute_peak => 'Dynamic peak detection';
+  String get video_setting_hdr_compute_peak => 'Динамическое определение пика';
   @override
   String get video_setting_hdr_compute_peak_hint =>
-      'Measure each frame\'s real peak brightness instead of trusting the stream metadata. Better highlights, costs some GPU.';
+      'Измеряет реальную пиковую яркость каждого кадра вместо доверия метаданным источника. Света лучше, но нагружает GPU.';
   @override
-  String get video_setting_hdr_auto => 'Auto';
+  String get video_setting_hdr_auto => 'Авто';
   @override
-  String get video_setting_hdr_on => 'On';
+  String get video_setting_hdr_on => 'Вкл.';
   @override
-  String get video_setting_hdr_off => 'Off';
+  String get video_setting_hdr_off => 'Выкл.';
 }
 
 // Path: <root>
@@ -113845,21 +113847,21 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_setting_mpv_group_hdr => 'HDR';
   @override
-  String get video_setting_hdr_tone_mapping => 'HDR tone mapping';
+  String get video_setting_hdr_tone_mapping => 'การแมปโทน HDR';
   @override
   String get video_setting_hdr_tone_mapping_hint =>
-      'Curve used when an HDR source has to be squeezed onto an SDR display. Auto lets mpv pick per source.';
+      'เส้นโค้งที่ใช้เมื่อต้องบีบแหล่ง HDR ลงบนจอ SDR "อัตโนมัติ" ให้ mpv เลือกตามแต่ละแหล่ง';
   @override
-  String get video_setting_hdr_compute_peak => 'Dynamic peak detection';
+  String get video_setting_hdr_compute_peak => 'ตรวจจับจุดสว่างสุดแบบไดนามิก';
   @override
   String get video_setting_hdr_compute_peak_hint =>
-      'Measure each frame\'s real peak brightness instead of trusting the stream metadata. Better highlights, costs some GPU.';
+      'วัดความสว่างสูงสุดจริงของแต่ละเฟรมแทนการเชื่อเมตาดาตาของแหล่ง ไฮไลต์ดีขึ้นแต่กิน GPU เล็กน้อย';
   @override
-  String get video_setting_hdr_auto => 'Auto';
+  String get video_setting_hdr_auto => 'อัตโนมัติ';
   @override
-  String get video_setting_hdr_on => 'On';
+  String get video_setting_hdr_on => 'เปิด';
   @override
-  String get video_setting_hdr_off => 'Off';
+  String get video_setting_hdr_off => 'ปิด';
 }
 
 // Path: <root>
@@ -122921,21 +122923,21 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_setting_mpv_group_hdr => 'HDR';
   @override
-  String get video_setting_hdr_tone_mapping => 'HDR tone mapping';
+  String get video_setting_hdr_tone_mapping => 'HDR ton eşleme';
   @override
   String get video_setting_hdr_tone_mapping_hint =>
-      'Curve used when an HDR source has to be squeezed onto an SDR display. Auto lets mpv pick per source.';
+      'Bir HDR kaynağı SDR ekrana sıkıştırılırken kullanılan eğri. “Otomatik” seçimi kaynak başına mpv’ye bırakır.';
   @override
-  String get video_setting_hdr_compute_peak => 'Dynamic peak detection';
+  String get video_setting_hdr_compute_peak => 'Dinamik tepe algılama';
   @override
   String get video_setting_hdr_compute_peak_hint =>
-      'Measure each frame\'s real peak brightness instead of trusting the stream metadata. Better highlights, costs some GPU.';
+      'Kaynağın üstverisine güvenmek yerine her karenin gerçek tepe parlaklığını ölçer. Parlak alanlar daha iyi olur, biraz GPU harcar.';
   @override
-  String get video_setting_hdr_auto => 'Auto';
+  String get video_setting_hdr_auto => 'Otomatik';
   @override
-  String get video_setting_hdr_on => 'On';
+  String get video_setting_hdr_on => 'Açık';
   @override
-  String get video_setting_hdr_off => 'Off';
+  String get video_setting_hdr_off => 'Kapalı';
 }
 
 // Path: <root>
@@ -131979,21 +131981,21 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_setting_mpv_group_hdr => 'HDR';
   @override
-  String get video_setting_hdr_tone_mapping => 'HDR tone mapping';
+  String get video_setting_hdr_tone_mapping => 'Ánh xạ tông màu HDR';
   @override
   String get video_setting_hdr_tone_mapping_hint =>
-      'Curve used when an HDR source has to be squeezed onto an SDR display. Auto lets mpv pick per source.';
+      'Đường cong dùng khi phải nén nguồn HDR xuống màn hình SDR. “Tự động” để mpv chọn theo từng nguồn.';
   @override
-  String get video_setting_hdr_compute_peak => 'Dynamic peak detection';
+  String get video_setting_hdr_compute_peak => 'Phát hiện đỉnh động';
   @override
   String get video_setting_hdr_compute_peak_hint =>
-      'Measure each frame\'s real peak brightness instead of trusting the stream metadata. Better highlights, costs some GPU.';
+      'Đo độ sáng đỉnh thực của từng khung hình thay vì tin vào siêu dữ liệu của nguồn. Vùng sáng đẹp hơn, tốn thêm chút GPU.';
   @override
-  String get video_setting_hdr_auto => 'Auto';
+  String get video_setting_hdr_auto => 'Tự động';
   @override
-  String get video_setting_hdr_on => 'On';
+  String get video_setting_hdr_on => 'Bật';
   @override
-  String get video_setting_hdr_off => 'Off';
+  String get video_setting_hdr_off => 'Tắt';
 }
 
 // Path: <root>
@@ -148655,21 +148657,21 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_setting_mpv_group_hdr => 'HDR';
   @override
-  String get video_setting_hdr_tone_mapping => 'HDR tone mapping';
+  String get video_setting_hdr_tone_mapping => 'HDR 色調映射';
   @override
   String get video_setting_hdr_tone_mapping_hint =>
-      'Curve used when an HDR source has to be squeezed onto an SDR display. Auto lets mpv pick per source.';
+      '把 HDR 片源壓進 SDR 螢幕時用的曲線。自動 = 交給 mpv 按片源決定。';
   @override
-  String get video_setting_hdr_compute_peak => 'Dynamic peak detection';
+  String get video_setting_hdr_compute_peak => '動態峰值偵測';
   @override
   String get video_setting_hdr_compute_peak_hint =>
-      'Measure each frame\'s real peak brightness instead of trusting the stream metadata. Better highlights, costs some GPU.';
+      '逐格量實際峰值亮度，而不是信片源中繼資料。高光更準，但會佔一點 GPU。';
   @override
-  String get video_setting_hdr_auto => 'Auto';
+  String get video_setting_hdr_auto => '自動';
   @override
-  String get video_setting_hdr_on => 'On';
+  String get video_setting_hdr_on => '開';
   @override
-  String get video_setting_hdr_off => 'Off';
+  String get video_setting_hdr_off => '關';
 }
 
 /// Flat map(s) containing all translations.
@@ -164555,19 +164557,19 @@ extension on _StringsAr {
       case 'video_setting_mpv_group_hdr':
         return 'HDR';
       case 'video_setting_hdr_tone_mapping':
-        return 'HDR tone mapping';
+        return 'تعيين ألوان HDR';
       case 'video_setting_hdr_tone_mapping_hint':
-        return 'Curve used when an HDR source has to be squeezed onto an SDR display. Auto lets mpv pick per source.';
+        return 'المنحنى المستخدم عند ضغط مصدر HDR على شاشة SDR. «تلقائي» يترك الاختيار لـ mpv حسب كل مصدر.';
       case 'video_setting_hdr_compute_peak':
-        return 'Dynamic peak detection';
+        return 'كشف الذروة الديناميكي';
       case 'video_setting_hdr_compute_peak_hint':
-        return 'Measure each frame\'s real peak brightness instead of trusting the stream metadata. Better highlights, costs some GPU.';
+        return 'قياس ذروة السطوع الحقيقية لكل إطار بدلاً من الوثوق ببيانات المصدر. إبرازات أدق مقابل بعض استهلاك المعالج الرسومي.';
       case 'video_setting_hdr_auto':
-        return 'Auto';
+        return 'تلقائي';
       case 'video_setting_hdr_on':
-        return 'On';
+        return 'تشغيل';
       case 'video_setting_hdr_off':
-        return 'Off';
+        return 'إيقاف';
       default:
         return null;
     }
@@ -172545,19 +172547,19 @@ extension on _StringsDe {
       case 'video_setting_mpv_group_hdr':
         return 'HDR';
       case 'video_setting_hdr_tone_mapping':
-        return 'HDR tone mapping';
+        return 'HDR-Tonemapping';
       case 'video_setting_hdr_tone_mapping_hint':
-        return 'Curve used when an HDR source has to be squeezed onto an SDR display. Auto lets mpv pick per source.';
+        return 'Kurve, mit der eine HDR-Quelle auf ein SDR-Display gebracht wird. „Automatisch“ überlässt mpv die Wahl je Quelle.';
       case 'video_setting_hdr_compute_peak':
-        return 'Dynamic peak detection';
+        return 'Dynamische Spitzenwerterkennung';
       case 'video_setting_hdr_compute_peak_hint':
-        return 'Measure each frame\'s real peak brightness instead of trusting the stream metadata. Better highlights, costs some GPU.';
+        return 'Misst die echte Spitzenhelligkeit jedes Bildes, statt den Metadaten der Quelle zu vertrauen. Bessere Lichter, kostet etwas GPU-Leistung.';
       case 'video_setting_hdr_auto':
-        return 'Auto';
+        return 'Automatisch';
       case 'video_setting_hdr_on':
-        return 'On';
+        return 'An';
       case 'video_setting_hdr_off':
-        return 'Off';
+        return 'Aus';
       default:
         return null;
     }
@@ -180527,19 +180529,19 @@ extension on _StringsEs {
       case 'video_setting_mpv_group_hdr':
         return 'HDR';
       case 'video_setting_hdr_tone_mapping':
-        return 'HDR tone mapping';
+        return 'Mapeo de tonos HDR';
       case 'video_setting_hdr_tone_mapping_hint':
-        return 'Curve used when an HDR source has to be squeezed onto an SDR display. Auto lets mpv pick per source.';
+        return 'Curva que se usa al comprimir una fuente HDR en una pantalla SDR. «Automático» deja que mpv elija según la fuente.';
       case 'video_setting_hdr_compute_peak':
-        return 'Dynamic peak detection';
+        return 'Detección dinámica de picos';
       case 'video_setting_hdr_compute_peak_hint':
-        return 'Measure each frame\'s real peak brightness instead of trusting the stream metadata. Better highlights, costs some GPU.';
+        return 'Mide el brillo máximo real de cada fotograma en vez de fiarse de los metadatos de la fuente. Mejores luces altas, a costa de algo de GPU.';
       case 'video_setting_hdr_auto':
-        return 'Auto';
+        return 'Automático';
       case 'video_setting_hdr_on':
-        return 'On';
+        return 'Activado';
       case 'video_setting_hdr_off':
-        return 'Off';
+        return 'Desactivado';
       default:
         return null;
     }
@@ -188517,19 +188519,19 @@ extension on _StringsFr {
       case 'video_setting_mpv_group_hdr':
         return 'HDR';
       case 'video_setting_hdr_tone_mapping':
-        return 'HDR tone mapping';
+        return 'Mappage tonal HDR';
       case 'video_setting_hdr_tone_mapping_hint':
-        return 'Curve used when an HDR source has to be squeezed onto an SDR display. Auto lets mpv pick per source.';
+        return 'Courbe utilisée pour ramener une source HDR sur un écran SDR. « Auto » laisse mpv choisir selon la source.';
       case 'video_setting_hdr_compute_peak':
-        return 'Dynamic peak detection';
+        return 'Détection dynamique des pics';
       case 'video_setting_hdr_compute_peak_hint':
-        return 'Measure each frame\'s real peak brightness instead of trusting the stream metadata. Better highlights, costs some GPU.';
+        return 'Mesure le pic de luminosité réel de chaque image au lieu de se fier aux métadonnées de la source. Meilleures hautes lumières, au prix d\'un peu de GPU.';
       case 'video_setting_hdr_auto':
         return 'Auto';
       case 'video_setting_hdr_on':
-        return 'On';
+        return 'Activé';
       case 'video_setting_hdr_off':
-        return 'Off';
+        return 'Désactivé';
       default:
         return null;
     }
@@ -196479,19 +196481,19 @@ extension on _StringsId {
       case 'video_setting_mpv_group_hdr':
         return 'HDR';
       case 'video_setting_hdr_tone_mapping':
-        return 'HDR tone mapping';
+        return 'Pemetaan nada HDR';
       case 'video_setting_hdr_tone_mapping_hint':
-        return 'Curve used when an HDR source has to be squeezed onto an SDR display. Auto lets mpv pick per source.';
+        return 'Kurva yang dipakai saat sumber HDR harus dipadatkan ke layar SDR. "Otomatis" membiarkan mpv memilih per sumber.';
       case 'video_setting_hdr_compute_peak':
-        return 'Dynamic peak detection';
+        return 'Deteksi puncak dinamis';
       case 'video_setting_hdr_compute_peak_hint':
-        return 'Measure each frame\'s real peak brightness instead of trusting the stream metadata. Better highlights, costs some GPU.';
+        return 'Mengukur puncak kecerahan asli tiap bingkai alih-alih mempercayai metadata sumber. Sorotan lebih baik, memakan sedikit GPU.';
       case 'video_setting_hdr_auto':
-        return 'Auto';
+        return 'Otomatis';
       case 'video_setting_hdr_on':
-        return 'On';
+        return 'Aktif';
       case 'video_setting_hdr_off':
-        return 'Off';
+        return 'Nonaktif';
       default:
         return null;
     }
@@ -204462,19 +204464,19 @@ extension on _StringsIt {
       case 'video_setting_mpv_group_hdr':
         return 'HDR';
       case 'video_setting_hdr_tone_mapping':
-        return 'HDR tone mapping';
+        return 'Mappatura tonale HDR';
       case 'video_setting_hdr_tone_mapping_hint':
-        return 'Curve used when an HDR source has to be squeezed onto an SDR display. Auto lets mpv pick per source.';
+        return 'Curva usata quando una sorgente HDR va compressa su uno schermo SDR. «Automatico» lascia scegliere a mpv per ogni sorgente.';
       case 'video_setting_hdr_compute_peak':
-        return 'Dynamic peak detection';
+        return 'Rilevamento dinamico dei picchi';
       case 'video_setting_hdr_compute_peak_hint':
-        return 'Measure each frame\'s real peak brightness instead of trusting the stream metadata. Better highlights, costs some GPU.';
+        return 'Misura il picco di luminosità reale di ogni fotogramma invece di fidarsi dei metadati della sorgente. Alte luci migliori, con un po’ di costo GPU.';
       case 'video_setting_hdr_auto':
-        return 'Auto';
+        return 'Automatico';
       case 'video_setting_hdr_on':
-        return 'On';
+        return 'Attivo';
       case 'video_setting_hdr_off':
-        return 'Off';
+        return 'Disattivo';
       default:
         return null;
     }
@@ -212378,19 +212380,19 @@ extension on _StringsJa {
       case 'video_setting_mpv_group_hdr':
         return 'HDR';
       case 'video_setting_hdr_tone_mapping':
-        return 'HDR tone mapping';
+        return 'HDR トーンマッピング';
       case 'video_setting_hdr_tone_mapping_hint':
-        return 'Curve used when an HDR source has to be squeezed onto an SDR display. Auto lets mpv pick per source.';
+        return 'HDR ソースを SDR ディスプレイに収めるときに使うカーブ。「自動」は mpv がソースごとに選びます。';
       case 'video_setting_hdr_compute_peak':
-        return 'Dynamic peak detection';
+        return '動的ピーク検出';
       case 'video_setting_hdr_compute_peak_hint':
-        return 'Measure each frame\'s real peak brightness instead of trusting the stream metadata. Better highlights, costs some GPU.';
+        return 'ソースのメタデータを信じる代わりに、フレームごとの実際のピーク輝度を測ります。ハイライトが良くなる一方、GPU を少し使います。';
       case 'video_setting_hdr_auto':
-        return 'Auto';
+        return '自動';
       case 'video_setting_hdr_on':
-        return 'On';
+        return 'オン';
       case 'video_setting_hdr_off':
-        return 'Off';
+        return 'オフ';
       default:
         return null;
     }
@@ -220296,19 +220298,19 @@ extension on _StringsKo {
       case 'video_setting_mpv_group_hdr':
         return 'HDR';
       case 'video_setting_hdr_tone_mapping':
-        return 'HDR tone mapping';
+        return 'HDR 톤 매핑';
       case 'video_setting_hdr_tone_mapping_hint':
-        return 'Curve used when an HDR source has to be squeezed onto an SDR display. Auto lets mpv pick per source.';
+        return 'HDR 소스를 SDR 디스플레이에 맞출 때 쓰는 곡선입니다. ‘자동’은 mpv가 소스마다 고르게 합니다.';
       case 'video_setting_hdr_compute_peak':
-        return 'Dynamic peak detection';
+        return '동적 피크 검출';
       case 'video_setting_hdr_compute_peak_hint':
-        return 'Measure each frame\'s real peak brightness instead of trusting the stream metadata. Better highlights, costs some GPU.';
+        return '소스 메타데이터를 믿는 대신 프레임마다 실제 최대 밝기를 측정합니다. 하이라이트가 좋아지지만 GPU를 조금 씁니다.';
       case 'video_setting_hdr_auto':
-        return 'Auto';
+        return '자동';
       case 'video_setting_hdr_on':
-        return 'On';
+        return '켜기';
       case 'video_setting_hdr_off':
-        return 'Off';
+        return '끄기';
       default:
         return null;
     }
@@ -228273,19 +228275,19 @@ extension on _StringsNl {
       case 'video_setting_mpv_group_hdr':
         return 'HDR';
       case 'video_setting_hdr_tone_mapping':
-        return 'HDR tone mapping';
+        return 'HDR-tonemapping';
       case 'video_setting_hdr_tone_mapping_hint':
-        return 'Curve used when an HDR source has to be squeezed onto an SDR display. Auto lets mpv pick per source.';
+        return 'Curve die wordt gebruikt als een HDR-bron op een SDR-scherm moet worden geperst. ‘Automatisch’ laat mpv per bron kiezen.';
       case 'video_setting_hdr_compute_peak':
-        return 'Dynamic peak detection';
+        return 'Dynamische piekdetectie';
       case 'video_setting_hdr_compute_peak_hint':
-        return 'Measure each frame\'s real peak brightness instead of trusting the stream metadata. Better highlights, costs some GPU.';
+        return 'Meet de echte piekhelderheid van elk beeld in plaats van te vertrouwen op de metadata van de bron. Betere highlights, kost wat GPU.';
       case 'video_setting_hdr_auto':
-        return 'Auto';
+        return 'Automatisch';
       case 'video_setting_hdr_on':
-        return 'On';
+        return 'Aan';
       case 'video_setting_hdr_off':
-        return 'Off';
+        return 'Uit';
       default:
         return null;
     }
@@ -236245,19 +236247,19 @@ extension on _StringsPtBr {
       case 'video_setting_mpv_group_hdr':
         return 'HDR';
       case 'video_setting_hdr_tone_mapping':
-        return 'HDR tone mapping';
+        return 'Mapeamento de tons HDR';
       case 'video_setting_hdr_tone_mapping_hint':
-        return 'Curve used when an HDR source has to be squeezed onto an SDR display. Auto lets mpv pick per source.';
+        return 'Curva usada quando uma fonte HDR precisa ser comprimida para uma tela SDR. “Automático” deixa o mpv escolher por fonte.';
       case 'video_setting_hdr_compute_peak':
-        return 'Dynamic peak detection';
+        return 'Detecção dinâmica de pico';
       case 'video_setting_hdr_compute_peak_hint':
-        return 'Measure each frame\'s real peak brightness instead of trusting the stream metadata. Better highlights, costs some GPU.';
+        return 'Mede o pico real de brilho de cada quadro em vez de confiar nos metadados da fonte. Melhores altas-luzes, com algum custo de GPU.';
       case 'video_setting_hdr_auto':
-        return 'Auto';
+        return 'Automático';
       case 'video_setting_hdr_on':
-        return 'On';
+        return 'Ligado';
       case 'video_setting_hdr_off':
-        return 'Off';
+        return 'Desligado';
       default:
         return null;
     }
@@ -244223,19 +244225,19 @@ extension on _StringsRu {
       case 'video_setting_mpv_group_hdr':
         return 'HDR';
       case 'video_setting_hdr_tone_mapping':
-        return 'HDR tone mapping';
+        return 'Тональное отображение HDR';
       case 'video_setting_hdr_tone_mapping_hint':
-        return 'Curve used when an HDR source has to be squeezed onto an SDR display. Auto lets mpv pick per source.';
+        return 'Кривая, по которой HDR-источник укладывается в SDR-экран. «Авто» оставляет выбор за mpv для каждого источника.';
       case 'video_setting_hdr_compute_peak':
-        return 'Dynamic peak detection';
+        return 'Динамическое определение пика';
       case 'video_setting_hdr_compute_peak_hint':
-        return 'Measure each frame\'s real peak brightness instead of trusting the stream metadata. Better highlights, costs some GPU.';
+        return 'Измеряет реальную пиковую яркость каждого кадра вместо доверия метаданным источника. Света лучше, но нагружает GPU.';
       case 'video_setting_hdr_auto':
-        return 'Auto';
+        return 'Авто';
       case 'video_setting_hdr_on':
-        return 'On';
+        return 'Вкл.';
       case 'video_setting_hdr_off':
-        return 'Off';
+        return 'Выкл.';
       default:
         return null;
     }
@@ -252173,19 +252175,19 @@ extension on _StringsTh {
       case 'video_setting_mpv_group_hdr':
         return 'HDR';
       case 'video_setting_hdr_tone_mapping':
-        return 'HDR tone mapping';
+        return 'การแมปโทน HDR';
       case 'video_setting_hdr_tone_mapping_hint':
-        return 'Curve used when an HDR source has to be squeezed onto an SDR display. Auto lets mpv pick per source.';
+        return 'เส้นโค้งที่ใช้เมื่อต้องบีบแหล่ง HDR ลงบนจอ SDR "อัตโนมัติ" ให้ mpv เลือกตามแต่ละแหล่ง';
       case 'video_setting_hdr_compute_peak':
-        return 'Dynamic peak detection';
+        return 'ตรวจจับจุดสว่างสุดแบบไดนามิก';
       case 'video_setting_hdr_compute_peak_hint':
-        return 'Measure each frame\'s real peak brightness instead of trusting the stream metadata. Better highlights, costs some GPU.';
+        return 'วัดความสว่างสูงสุดจริงของแต่ละเฟรมแทนการเชื่อเมตาดาตาของแหล่ง ไฮไลต์ดีขึ้นแต่กิน GPU เล็กน้อย';
       case 'video_setting_hdr_auto':
-        return 'Auto';
+        return 'อัตโนมัติ';
       case 'video_setting_hdr_on':
-        return 'On';
+        return 'เปิด';
       case 'video_setting_hdr_off':
-        return 'Off';
+        return 'ปิด';
       default:
         return null;
     }
@@ -260140,19 +260142,19 @@ extension on _StringsTr {
       case 'video_setting_mpv_group_hdr':
         return 'HDR';
       case 'video_setting_hdr_tone_mapping':
-        return 'HDR tone mapping';
+        return 'HDR ton eşleme';
       case 'video_setting_hdr_tone_mapping_hint':
-        return 'Curve used when an HDR source has to be squeezed onto an SDR display. Auto lets mpv pick per source.';
+        return 'Bir HDR kaynağı SDR ekrana sıkıştırılırken kullanılan eğri. “Otomatik” seçimi kaynak başına mpv’ye bırakır.';
       case 'video_setting_hdr_compute_peak':
-        return 'Dynamic peak detection';
+        return 'Dinamik tepe algılama';
       case 'video_setting_hdr_compute_peak_hint':
-        return 'Measure each frame\'s real peak brightness instead of trusting the stream metadata. Better highlights, costs some GPU.';
+        return 'Kaynağın üstverisine güvenmek yerine her karenin gerçek tepe parlaklığını ölçer. Parlak alanlar daha iyi olur, biraz GPU harcar.';
       case 'video_setting_hdr_auto':
-        return 'Auto';
+        return 'Otomatik';
       case 'video_setting_hdr_on':
-        return 'On';
+        return 'Açık';
       case 'video_setting_hdr_off':
-        return 'Off';
+        return 'Kapalı';
       default:
         return null;
     }
@@ -268100,19 +268102,19 @@ extension on _StringsVi {
       case 'video_setting_mpv_group_hdr':
         return 'HDR';
       case 'video_setting_hdr_tone_mapping':
-        return 'HDR tone mapping';
+        return 'Ánh xạ tông màu HDR';
       case 'video_setting_hdr_tone_mapping_hint':
-        return 'Curve used when an HDR source has to be squeezed onto an SDR display. Auto lets mpv pick per source.';
+        return 'Đường cong dùng khi phải nén nguồn HDR xuống màn hình SDR. “Tự động” để mpv chọn theo từng nguồn.';
       case 'video_setting_hdr_compute_peak':
-        return 'Dynamic peak detection';
+        return 'Phát hiện đỉnh động';
       case 'video_setting_hdr_compute_peak_hint':
-        return 'Measure each frame\'s real peak brightness instead of trusting the stream metadata. Better highlights, costs some GPU.';
+        return 'Đo độ sáng đỉnh thực của từng khung hình thay vì tin vào siêu dữ liệu của nguồn. Vùng sáng đẹp hơn, tốn thêm chút GPU.';
       case 'video_setting_hdr_auto':
-        return 'Auto';
+        return 'Tự động';
       case 'video_setting_hdr_on':
-        return 'On';
+        return 'Bật';
       case 'video_setting_hdr_off':
-        return 'Off';
+        return 'Tắt';
       default:
         return null;
     }
@@ -283889,19 +283891,19 @@ extension on _StringsZhHk {
       case 'video_setting_mpv_group_hdr':
         return 'HDR';
       case 'video_setting_hdr_tone_mapping':
-        return 'HDR tone mapping';
+        return 'HDR 色調映射';
       case 'video_setting_hdr_tone_mapping_hint':
-        return 'Curve used when an HDR source has to be squeezed onto an SDR display. Auto lets mpv pick per source.';
+        return '把 HDR 片源壓進 SDR 螢幕時用的曲線。自動 = 交給 mpv 按片源決定。';
       case 'video_setting_hdr_compute_peak':
-        return 'Dynamic peak detection';
+        return '動態峰值偵測';
       case 'video_setting_hdr_compute_peak_hint':
-        return 'Measure each frame\'s real peak brightness instead of trusting the stream metadata. Better highlights, costs some GPU.';
+        return '逐格量實際峰值亮度，而不是信片源中繼資料。高光更準，但會佔一點 GPU。';
       case 'video_setting_hdr_auto':
-        return 'Auto';
+        return '自動';
       case 'video_setting_hdr_on':
-        return 'On';
+        return '開';
       case 'video_setting_hdr_off':
-        return 'Off';
+        return '關';
       default:
         return null;
     }
