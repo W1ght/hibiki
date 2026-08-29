@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 65195 (3835 per locale)
+/// Strings: 65280 (3840 per locale)
 ///
-/// Built on 2026-08-28 at 14:52 UTC
+/// Built on 2026-08-29 at 09:25 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -4352,7 +4352,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get dict_download_busy => 'A dictionary download is already running.';
   String get gal_hook_ingame_lookup => 'In-game dictionary lookup';
   String get gal_hook_ingame_lookup_hint =>
-      'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
+      'Show the dictionary card inside the game window itself (Windows only; requires a supported game engine)';
   String get drag_drop_failed =>
       'Couldn\'t handle the dropped files. Please try again.';
   String get tag_add_failed => 'Couldn\'t add the tag. Please try again.';
@@ -5225,6 +5225,16 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Could not delete ${n} local file(s); they may still be in use';
   String batch_hidden_by_filter_note({required Object n}) =>
       'Another ${n} selected item(s) are hidden by the current filter and will not be affected.';
+  String get gal_hook_ingame_lookup_engine_unsupported =>
+      'This game engine has no in-game lookup sensor yet';
+  String get gal_hook_ingame_lookup_version_unsupported =>
+      'This game version is not on the supported list yet';
+  String get gal_hook_ingame_lookup_exe_hash_copy =>
+      'Copy game executable SHA-256';
+  String get gal_hook_ingame_lookup_exe_hash_unavailable =>
+      'Could not read the game executable';
+  String get gal_hook_ingame_lookup_exe_hash_copied =>
+      'Executable SHA-256 copied';
 }
 
 // Path: <root>
@@ -12632,7 +12642,7 @@ class _StringsAr extends _StringsEn {
   String get gal_hook_ingame_lookup => 'البحث في القاموس داخل اللعبة';
   @override
   String get gal_hook_ingame_lookup_hint =>
-      'عرض بطاقة القاموس داخل نافذة اللعبة نفسها (محرك KiriKiri، Windows فقط)';
+      'عرض بطاقة القاموس داخل نافذة اللعبة نفسها (Windows فقط؛ يتطلب محرك لعبة مدعومًا)';
   @override
   String download_subscription_start_episode({required Object episode}) =>
       '从第 ${episode} 集开始';
@@ -14114,6 +14124,21 @@ class _StringsAr extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       'هناك ${n} عنصر محدد مخفي بواسطة عامل التصفية الحالي ولن تتم معالجته.';
+  @override
+  String get gal_hook_ingame_lookup_engine_unsupported =>
+      'محرك اللعبة هذا لا يدعم البحث داخل اللعبة بعد';
+  @override
+  String get gal_hook_ingame_lookup_version_unsupported =>
+      'إصدار اللعبة هذا ليس ضمن القائمة المدعومة بعد';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copy =>
+      'نسخ SHA-256 لملف اللعبة التنفيذي';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_unavailable =>
+      'تعذّرت قراءة ملف اللعبة التنفيذي';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copied =>
+      'تم نسخ SHA-256 لملف اللعبة التنفيذي';
 }
 
 // Path: <root>
@@ -21688,7 +21713,7 @@ class _StringsDe extends _StringsEn {
   String get gal_hook_ingame_lookup => 'Wörterbuchsuche im Spiel';
   @override
   String get gal_hook_ingame_lookup_hint =>
-      'Wörterbuchkarte direkt im Spielfenster anzeigen (KiriKiri-Engine, nur Windows)';
+      'Wörterbuchkarte direkt im Spielfenster anzeigen (nur Windows; erfordert eine unterstützte Spiel-Engine)';
   @override
   String download_subscription_start_episode({required Object episode}) =>
       '从第 ${episode} 集开始';
@@ -23210,6 +23235,21 @@ class _StringsDe extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       'Weitere ${n} ausgewählte Elemente sind durch den aktuellen Filter ausgeblendet und werden nicht bearbeitet.';
+  @override
+  String get gal_hook_ingame_lookup_engine_unsupported =>
+      'Diese Spiel-Engine unterstützt die Suche im Spiel noch nicht';
+  @override
+  String get gal_hook_ingame_lookup_version_unsupported =>
+      'Diese Spielversion steht noch nicht auf der Liste der unterstützten Versionen';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copy =>
+      'SHA-256 der Spieldatei kopieren';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_unavailable =>
+      'Die Spieldatei konnte nicht gelesen werden';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copied =>
+      'SHA-256 der Spieldatei kopiert';
 }
 
 // Path: <root>
@@ -30819,7 +30859,7 @@ class _StringsEs extends _StringsEn {
       'Búsqueda de diccionario dentro del juego';
   @override
   String get gal_hook_ingame_lookup_hint =>
-      'Mostrar la tarjeta de diccionario dentro de la ventana del juego (motor KiriKiri, solo Windows)';
+      'Mostrar la tarjeta de diccionario dentro de la ventana del juego (solo Windows; requiere un motor de juego compatible)';
   @override
   String download_subscription_start_episode({required Object episode}) =>
       '从第 ${episode} 集开始';
@@ -32349,6 +32389,21 @@ class _StringsEs extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       'Otros ${n} elementos seleccionados están ocultos por el filtro actual y no se procesarán.';
+  @override
+  String get gal_hook_ingame_lookup_engine_unsupported =>
+      'Este motor de juego aún no admite la búsqueda dentro del juego';
+  @override
+  String get gal_hook_ingame_lookup_version_unsupported =>
+      'Esta versión del juego aún no está en la lista de compatibles';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copy =>
+      'Copiar el SHA-256 del ejecutable del juego';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_unavailable =>
+      'No se pudo leer el ejecutable del juego';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copied =>
+      'SHA-256 del ejecutable copiado';
 }
 
 // Path: <root>
@@ -39982,7 +40037,7 @@ class _StringsFr extends _StringsEn {
   String get gal_hook_ingame_lookup => 'Recherche dans le dictionnaire en jeu';
   @override
   String get gal_hook_ingame_lookup_hint =>
-      'Afficher la carte du dictionnaire dans la fenêtre du jeu elle-même (moteur KiriKiri, Windows uniquement)';
+      'Afficher la carte du dictionnaire dans la fenêtre du jeu (Windows uniquement ; nécessite un moteur de jeu pris en charge)';
   @override
   String download_subscription_start_episode({required Object episode}) =>
       '从第 ${episode} 集开始';
@@ -41522,6 +41577,21 @@ class _StringsFr extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       '${n} autres éléments sélectionnés sont masqués par le filtre actuel et ne seront pas traités.';
+  @override
+  String get gal_hook_ingame_lookup_engine_unsupported =>
+      'Ce moteur de jeu ne prend pas encore en charge la recherche en jeu';
+  @override
+  String get gal_hook_ingame_lookup_version_unsupported =>
+      'Cette version du jeu ne figure pas encore dans la liste prise en charge';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copy =>
+      'Copier le SHA-256 de l\'exécutable du jeu';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_unavailable =>
+      'Impossible de lire l\'exécutable du jeu';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copied =>
+      'SHA-256 de l\'exécutable copié';
 }
 
 // Path: <root>
@@ -49021,7 +49091,7 @@ class _StringsId extends _StringsEn {
   String get gal_hook_ingame_lookup => 'Pencarian kamus dalam game';
   @override
   String get gal_hook_ingame_lookup_hint =>
-      'Tampilkan kartu kamus di dalam jendela game itu sendiri (mesin KiriKiri, hanya Windows)';
+      'Tampilkan kartu kamus di dalam jendela gim itu sendiri (khusus Windows; perlu mesin gim yang didukung)';
   @override
   String download_subscription_start_episode({required Object episode}) =>
       '从第 ${episode} 集开始';
@@ -50522,6 +50592,21 @@ class _StringsId extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       '${n} item terpilih lainnya disembunyikan oleh filter saat ini dan tidak akan diproses.';
+  @override
+  String get gal_hook_ingame_lookup_engine_unsupported =>
+      'Mesin gim ini belum mendukung pencarian kamus dalam gim';
+  @override
+  String get gal_hook_ingame_lookup_version_unsupported =>
+      'Versi gim ini belum ada dalam daftar yang didukung';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copy =>
+      'Salin SHA-256 file eksekusi gim';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_unavailable =>
+      'Tidak dapat membaca file eksekusi gim';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copied =>
+      'SHA-256 file eksekusi disalin';
 }
 
 // Path: <root>
@@ -58084,7 +58169,7 @@ class _StringsIt extends _StringsEn {
   String get gal_hook_ingame_lookup => 'Ricerca dizionario in-game';
   @override
   String get gal_hook_ingame_lookup_hint =>
-      'Mostra la carta del dizionario direttamente nella finestra del gioco (motore KiriKiri, solo Windows)';
+      'Mostra la scheda del dizionario dentro la finestra di gioco (solo Windows; richiede un motore di gioco supportato)';
   @override
   String download_subscription_start_episode({required Object episode}) =>
       '从第 ${episode} 集开始';
@@ -59598,6 +59683,21 @@ class _StringsIt extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       'Altri ${n} elementi selezionati sono nascosti dal filtro corrente e non verranno elaborati.';
+  @override
+  String get gal_hook_ingame_lookup_engine_unsupported =>
+      'Questo motore di gioco non supporta ancora la ricerca nel gioco';
+  @override
+  String get gal_hook_ingame_lookup_version_unsupported =>
+      'Questa versione del gioco non è ancora nell\'elenco supportato';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copy =>
+      'Copia lo SHA-256 dell\'eseguibile del gioco';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_unavailable =>
+      'Impossibile leggere l\'eseguibile del gioco';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copied =>
+      'SHA-256 dell\'eseguibile copiato';
 }
 
 // Path: <root>
@@ -66709,7 +66809,7 @@ class _StringsJa extends _StringsEn {
   String get gal_hook_ingame_lookup => 'ゲーム内辞書検索';
   @override
   String get gal_hook_ingame_lookup_hint =>
-      'ゲームウィンドウ内に辞書カードを表示します（KiriKiriエンジン、Windowsのみ）';
+      'ゲームウィンドウ内に辞書カードを直接表示します（Windows のみ、対応エンジンが必要）';
   @override
   String download_subscription_start_episode({required Object episode}) =>
       '从第 ${episode} 集开始';
@@ -68120,6 +68220,20 @@ class _StringsJa extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       '選択済みの ${n} 件は現在のフィルターで非表示のため、今回は処理されません。';
+  @override
+  String get gal_hook_ingame_lookup_engine_unsupported =>
+      'このゲームエンジンはゲーム内辞書引きに未対応です';
+  @override
+  String get gal_hook_ingame_lookup_version_unsupported =>
+      'このゲームのバージョンはまだ対応リストにありません';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copy => 'ゲーム実行ファイルの SHA-256 をコピー';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_unavailable =>
+      'ゲーム実行ファイルを読み取れません（権限不足の可能性）';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copied =>
+      '実行ファイルの SHA-256 をコピーしました';
 }
 
 // Path: <root>
@@ -75244,7 +75358,7 @@ class _StringsKo extends _StringsEn {
   String get gal_hook_ingame_lookup => '인게임 사전 조회';
   @override
   String get gal_hook_ingame_lookup_hint =>
-      '게임 창 안에 사전 카드를 표시합니다 (KiriKiri 엔진, Windows 전용)';
+      '게임 창 안에 사전 카드를 직접 표시합니다 (Windows 전용, 지원되는 엔진 필요)';
   @override
   String download_subscription_start_episode({required Object episode}) =>
       '从第 ${episode} 集开始';
@@ -76656,6 +76770,19 @@ class _StringsKo extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       '선택한 항목 중 ${n}개는 현재 필터로 숨겨져 있어 처리되지 않습니다.';
+  @override
+  String get gal_hook_ingame_lookup_engine_unsupported =>
+      '이 게임 엔진은 아직 인게임 사전 검색을 지원하지 않습니다';
+  @override
+  String get gal_hook_ingame_lookup_version_unsupported =>
+      '이 게임 버전은 아직 지원 목록에 없습니다';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copy => '게임 실행 파일의 SHA-256 복사';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_unavailable =>
+      '게임 실행 파일을 읽을 수 없습니다 (권한 부족일 수 있음)';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copied => '실행 파일의 SHA-256을 복사했습니다';
 }
 
 // Path: <root>
@@ -84183,7 +84310,7 @@ class _StringsNl extends _StringsEn {
   String get gal_hook_ingame_lookup => 'In-game woordenboek opzoeken';
   @override
   String get gal_hook_ingame_lookup_hint =>
-      'Toon de woordenboekkaart in het spelvenster zelf (KiriKiri-engine, alleen Windows)';
+      'Toon de woordenboekkaart in het spelvenster zelf (alleen Windows; vereist een ondersteunde game-engine)';
   @override
   String download_subscription_start_episode({required Object episode}) =>
       '从第 ${episode} 集开始';
@@ -85689,6 +85816,21 @@ class _StringsNl extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       'Nog ${n} geselecteerde items zijn verborgen door het huidige filter en worden niet verwerkt.';
+  @override
+  String get gal_hook_ingame_lookup_engine_unsupported =>
+      'Deze game-engine ondersteunt opzoeken in het spel nog niet';
+  @override
+  String get gal_hook_ingame_lookup_version_unsupported =>
+      'Deze spelversie staat nog niet op de lijst met ondersteunde versies';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copy =>
+      'SHA-256 van het spelbestand kopiëren';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_unavailable =>
+      'Kan het spelbestand niet lezen';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copied =>
+      'SHA-256 van het spelbestand gekopieerd';
 }
 
 // Path: <root>
@@ -93253,7 +93395,7 @@ class _StringsPtBr extends _StringsEn {
   String get gal_hook_ingame_lookup => 'Consulta de dicionário no jogo';
   @override
   String get gal_hook_ingame_lookup_hint =>
-      'Mostrar o cartão de dicionário dentro da própria janela do jogo (motor KiriKiri, apenas Windows)';
+      'Mostrar o cartão de dicionário dentro da janela do jogo (somente Windows; requer um motor de jogo compatível)';
   @override
   String download_subscription_start_episode({required Object episode}) =>
       '从第 ${episode} 集开始';
@@ -94778,6 +94920,21 @@ class _StringsPtBr extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       'Outros ${n} itens selecionados estão ocultos pelo filtro atual e não serão processados.';
+  @override
+  String get gal_hook_ingame_lookup_engine_unsupported =>
+      'Este motor de jogo ainda não oferece suporte à busca dentro do jogo';
+  @override
+  String get gal_hook_ingame_lookup_version_unsupported =>
+      'Esta versão do jogo ainda não está na lista de compatíveis';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copy =>
+      'Copiar o SHA-256 do executável do jogo';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_unavailable =>
+      'Não foi possível ler o executável do jogo';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copied =>
+      'SHA-256 do executável copiado';
 }
 
 // Path: <root>
@@ -102324,7 +102481,7 @@ class _StringsRu extends _StringsEn {
   String get gal_hook_ingame_lookup => 'Поиск по словарю в игре';
   @override
   String get gal_hook_ingame_lookup_hint =>
-      'Показывать карточку словаря прямо в окне игры (движок KiriKiri, только Windows)';
+      'Показывать карточку словаря прямо в окне игры (только Windows; нужен поддерживаемый движок игры)';
   @override
   String download_subscription_start_episode({required Object episode}) =>
       '从第 ${episode} 集开始';
@@ -103843,6 +104000,21 @@ class _StringsRu extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       'Ещё ${n} выбранных элементов скрыты текущим фильтром и не будут обработаны.';
+  @override
+  String get gal_hook_ingame_lookup_engine_unsupported =>
+      'Этот движок игры пока не поддерживает поиск внутри игры';
+  @override
+  String get gal_hook_ingame_lookup_version_unsupported =>
+      'Эта версия игры пока не в списке поддерживаемых';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copy =>
+      'Скопировать SHA-256 исполняемого файла игры';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_unavailable =>
+      'Не удалось прочитать исполняемый файл игры';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copied =>
+      'SHA-256 исполняемого файла скопирован';
 }
 
 // Path: <root>
@@ -111241,7 +111413,7 @@ class _StringsTh extends _StringsEn {
   String get gal_hook_ingame_lookup => 'ค้นหาพจนานุกรมในเกม';
   @override
   String get gal_hook_ingame_lookup_hint =>
-      'แสดงการ์ดพจนานุกรมในหน้าต่างเกม (เอนจิน KiriKiri, Windows เท่านั้น)';
+      'แสดงการ์ดพจนานุกรมภายในหน้าต่างเกมโดยตรง (เฉพาะ Windows ต้องใช้เอนจินเกมที่รองรับ)';
   @override
   String download_subscription_start_episode({required Object episode}) =>
       '从第 ${episode} 集开始';
@@ -112726,6 +112898,20 @@ class _StringsTh extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       'รายการที่เลือกอีก ${n} รายการถูกซ่อนด้วยตัวกรองปัจจุบันและจะไม่ถูกดำเนินการ';
+  @override
+  String get gal_hook_ingame_lookup_engine_unsupported =>
+      'เอนจินเกมนี้ยังไม่รองรับการเปิดพจนานุกรมในเกม';
+  @override
+  String get gal_hook_ingame_lookup_version_unsupported =>
+      'เกมเวอร์ชันนี้ยังไม่อยู่ในรายการที่รองรับ';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copy =>
+      'คัดลอก SHA-256 ของไฟล์เกม';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_unavailable => 'อ่านไฟล์เกมไม่ได้';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copied =>
+      'คัดลอก SHA-256 ของไฟล์เกมแล้ว';
 }
 
 // Path: <root>
@@ -120213,7 +120399,7 @@ class _StringsTr extends _StringsEn {
   String get gal_hook_ingame_lookup => 'Oyun içi sözlük araması';
   @override
   String get gal_hook_ingame_lookup_hint =>
-      'Sözlük kartını oyun penceresinin içinde gösterin (KiriKiri motoru, yalnızca Windows)';
+      'Sözlük kartını doğrudan oyun penceresinde göster (yalnızca Windows; desteklenen bir oyun motoru gerekir)';
   @override
   String download_subscription_start_episode({required Object episode}) =>
       '从第 ${episode} 集开始';
@@ -121712,6 +121898,21 @@ class _StringsTr extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       'Seçili ${n} öğe daha geçerli filtre tarafından gizlendi ve işlenmeyecek.';
+  @override
+  String get gal_hook_ingame_lookup_engine_unsupported =>
+      'Bu oyun motoru henüz oyun içi sözlük aramasını desteklemiyor';
+  @override
+  String get gal_hook_ingame_lookup_version_unsupported =>
+      'Bu oyun sürümü henüz desteklenenler listesinde değil';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copy =>
+      'Oyun çalıştırılabilir dosyasının SHA-256 değerini kopyala';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_unavailable =>
+      'Oyun çalıştırılabilir dosyası okunamadı';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copied =>
+      'Çalıştırılabilir dosyanın SHA-256 değeri kopyalandı';
 }
 
 // Path: <root>
@@ -129177,7 +129378,7 @@ class _StringsVi extends _StringsEn {
   String get gal_hook_ingame_lookup => 'Tra từ điển trong trò chơi';
   @override
   String get gal_hook_ingame_lookup_hint =>
-      'Hiển thị thẻ từ điển bên trong cửa sổ trò chơi (engine KiriKiri, chỉ Windows)';
+      'Hiển thị thẻ từ điển ngay trong cửa sổ trò chơi (chỉ Windows; cần engine trò chơi được hỗ trợ)';
   @override
   String download_subscription_start_episode({required Object episode}) =>
       '从第 ${episode} 集开始';
@@ -130680,6 +130881,21 @@ class _StringsVi extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       'Còn ${n} mục đã chọn bị ẩn bởi bộ lọc hiện tại và sẽ không được xử lý.';
+  @override
+  String get gal_hook_ingame_lookup_engine_unsupported =>
+      'Engine trò chơi này chưa hỗ trợ tra từ trong trò chơi';
+  @override
+  String get gal_hook_ingame_lookup_version_unsupported =>
+      'Phiên bản trò chơi này chưa có trong danh sách được hỗ trợ';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copy =>
+      'Sao chép SHA-256 của tệp thực thi trò chơi';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_unavailable =>
+      'Không đọc được tệp thực thi trò chơi';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copied =>
+      'Đã sao chép SHA-256 của tệp thực thi';
 }
 
 // Path: <root>
@@ -137586,7 +137802,7 @@ class _StringsZhCn extends _StringsEn {
   String get gal_hook_ingame_lookup => '游戏内查词';
   @override
   String get gal_hook_ingame_lookup_hint =>
-      '在游戏画面内直接显示词典卡片（KiriKiri 引擎，仅 Windows）';
+      '在游戏窗口内直接弹出词典卡片（仅 Windows，需游戏引擎已支持）';
   @override
   String get drag_drop_failed => '拖入的文件处理失败，请重试。';
   @override
@@ -138929,6 +139145,17 @@ class _StringsZhCn extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       '另有 ${n} 项被当前筛选隐藏，本次不会处理。';
+  @override
+  String get gal_hook_ingame_lookup_engine_unsupported => '当前游戏引擎不支持游戏内查词';
+  @override
+  String get gal_hook_ingame_lookup_version_unsupported => '当前游戏版本未在支持列表中';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copy => '复制游戏 exe 的 SHA-256';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_unavailable =>
+      '无法读取游戏 exe（可能权限不足）';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copied => '已复制 exe 的 SHA-256';
 }
 
 // Path: <root>
@@ -145838,7 +146065,7 @@ class _StringsZhHk extends _StringsEn {
   String get gal_hook_ingame_lookup => '遊戲內查詞';
   @override
   String get gal_hook_ingame_lookup_hint =>
-      '在遊戲畫面內直接顯示詞典卡片（KiriKiri 引擎，僅 Windows）';
+      '在遊戲視窗內直接彈出詞典卡片（僅限 Windows，需遊戲引擎已支援）';
   @override
   String download_subscription_start_episode({required Object episode}) =>
       '從第 ${episode} 集開始';
@@ -147184,6 +147411,17 @@ class _StringsZhHk extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       '另有 ${n} 項被目前篩選隱藏，今次不會處理。';
+  @override
+  String get gal_hook_ingame_lookup_engine_unsupported => '目前遊戲引擎不支援遊戲內查詞';
+  @override
+  String get gal_hook_ingame_lookup_version_unsupported => '目前遊戲版本未在支援清單中';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copy => '複製遊戲 exe 的 SHA-256';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_unavailable =>
+      '無法讀取遊戲 exe（可能權限不足）';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copied => '已複製 exe 的 SHA-256';
 }
 
 /// Flat map(s) containing all translations.
@@ -153801,7 +154039,7 @@ extension on _StringsEn {
       case 'gal_hook_ingame_lookup':
         return 'In-game dictionary lookup';
       case 'gal_hook_ingame_lookup_hint':
-        return 'Show the dictionary card inside the game window itself (KiriKiri engine, Windows only)';
+        return 'Show the dictionary card inside the game window itself (Windows only; requires a supported game engine)';
       case 'drag_drop_failed':
         return 'Couldn\'t handle the dropped files. Please try again.';
       case 'tag_add_failed':
@@ -155054,6 +155292,16 @@ extension on _StringsEn {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             'Another ${n} selected item(s) are hidden by the current filter and will not be affected.';
+      case 'gal_hook_ingame_lookup_engine_unsupported':
+        return 'This game engine has no in-game lookup sensor yet';
+      case 'gal_hook_ingame_lookup_version_unsupported':
+        return 'This game version is not on the supported list yet';
+      case 'gal_hook_ingame_lookup_exe_hash_copy':
+        return 'Copy game executable SHA-256';
+      case 'gal_hook_ingame_lookup_exe_hash_unavailable':
+        return 'Could not read the game executable';
+      case 'gal_hook_ingame_lookup_exe_hash_copied':
+        return 'Executable SHA-256 copied';
       default:
         return null;
     }
@@ -161664,7 +161912,7 @@ extension on _StringsAr {
       case 'gal_hook_ingame_lookup':
         return 'البحث في القاموس داخل اللعبة';
       case 'gal_hook_ingame_lookup_hint':
-        return 'عرض بطاقة القاموس داخل نافذة اللعبة نفسها (محرك KiriKiri، Windows فقط)';
+        return 'عرض بطاقة القاموس داخل نافذة اللعبة نفسها (Windows فقط؛ يتطلب محرك لعبة مدعومًا)';
       case 'download_subscription_start_episode':
         return ({required Object episode}) => '从第 ${episode} 集开始';
       case 'drag_drop_failed':
@@ -162920,6 +163168,16 @@ extension on _StringsAr {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             'هناك ${n} عنصر محدد مخفي بواسطة عامل التصفية الحالي ولن تتم معالجته.';
+      case 'gal_hook_ingame_lookup_engine_unsupported':
+        return 'محرك اللعبة هذا لا يدعم البحث داخل اللعبة بعد';
+      case 'gal_hook_ingame_lookup_version_unsupported':
+        return 'إصدار اللعبة هذا ليس ضمن القائمة المدعومة بعد';
+      case 'gal_hook_ingame_lookup_exe_hash_copy':
+        return 'نسخ SHA-256 لملف اللعبة التنفيذي';
+      case 'gal_hook_ingame_lookup_exe_hash_unavailable':
+        return 'تعذّرت قراءة ملف اللعبة التنفيذي';
+      case 'gal_hook_ingame_lookup_exe_hash_copied':
+        return 'تم نسخ SHA-256 لملف اللعبة التنفيذي';
       default:
         return null;
     }
@@ -169566,7 +169824,7 @@ extension on _StringsDe {
       case 'gal_hook_ingame_lookup':
         return 'Wörterbuchsuche im Spiel';
       case 'gal_hook_ingame_lookup_hint':
-        return 'Wörterbuchkarte direkt im Spielfenster anzeigen (KiriKiri-Engine, nur Windows)';
+        return 'Wörterbuchkarte direkt im Spielfenster anzeigen (nur Windows; erfordert eine unterstützte Spiel-Engine)';
       case 'download_subscription_start_episode':
         return ({required Object episode}) => '从第 ${episode} 集开始';
       case 'drag_drop_failed':
@@ -170829,6 +171087,16 @@ extension on _StringsDe {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             'Weitere ${n} ausgewählte Elemente sind durch den aktuellen Filter ausgeblendet und werden nicht bearbeitet.';
+      case 'gal_hook_ingame_lookup_engine_unsupported':
+        return 'Diese Spiel-Engine unterstützt die Suche im Spiel noch nicht';
+      case 'gal_hook_ingame_lookup_version_unsupported':
+        return 'Diese Spielversion steht noch nicht auf der Liste der unterstützten Versionen';
+      case 'gal_hook_ingame_lookup_exe_hash_copy':
+        return 'SHA-256 der Spieldatei kopieren';
+      case 'gal_hook_ingame_lookup_exe_hash_unavailable':
+        return 'Die Spieldatei konnte nicht gelesen werden';
+      case 'gal_hook_ingame_lookup_exe_hash_copied':
+        return 'SHA-256 der Spieldatei kopiert';
       default:
         return null;
     }
@@ -177469,7 +177737,7 @@ extension on _StringsEs {
       case 'gal_hook_ingame_lookup':
         return 'Búsqueda de diccionario dentro del juego';
       case 'gal_hook_ingame_lookup_hint':
-        return 'Mostrar la tarjeta de diccionario dentro de la ventana del juego (motor KiriKiri, solo Windows)';
+        return 'Mostrar la tarjeta de diccionario dentro de la ventana del juego (solo Windows; requiere un motor de juego compatible)';
       case 'download_subscription_start_episode':
         return ({required Object episode}) => '从第 ${episode} 集开始';
       case 'drag_drop_failed':
@@ -178730,6 +178998,16 @@ extension on _StringsEs {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             'Otros ${n} elementos seleccionados están ocultos por el filtro actual y no se procesarán.';
+      case 'gal_hook_ingame_lookup_engine_unsupported':
+        return 'Este motor de juego aún no admite la búsqueda dentro del juego';
+      case 'gal_hook_ingame_lookup_version_unsupported':
+        return 'Esta versión del juego aún no está en la lista de compatibles';
+      case 'gal_hook_ingame_lookup_exe_hash_copy':
+        return 'Copiar el SHA-256 del ejecutable del juego';
+      case 'gal_hook_ingame_lookup_exe_hash_unavailable':
+        return 'No se pudo leer el ejecutable del juego';
+      case 'gal_hook_ingame_lookup_exe_hash_copied':
+        return 'SHA-256 del ejecutable copiado';
       default:
         return null;
     }
@@ -185378,7 +185656,7 @@ extension on _StringsFr {
       case 'gal_hook_ingame_lookup':
         return 'Recherche dans le dictionnaire en jeu';
       case 'gal_hook_ingame_lookup_hint':
-        return 'Afficher la carte du dictionnaire dans la fenêtre du jeu elle-même (moteur KiriKiri, Windows uniquement)';
+        return 'Afficher la carte du dictionnaire dans la fenêtre du jeu (Windows uniquement ; nécessite un moteur de jeu pris en charge)';
       case 'download_subscription_start_episode':
         return ({required Object episode}) => '从第 ${episode} 集开始';
       case 'drag_drop_failed':
@@ -186639,6 +186917,16 @@ extension on _StringsFr {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             '${n} autres éléments sélectionnés sont masqués par le filtre actuel et ne seront pas traités.';
+      case 'gal_hook_ingame_lookup_engine_unsupported':
+        return 'Ce moteur de jeu ne prend pas encore en charge la recherche en jeu';
+      case 'gal_hook_ingame_lookup_version_unsupported':
+        return 'Cette version du jeu ne figure pas encore dans la liste prise en charge';
+      case 'gal_hook_ingame_lookup_exe_hash_copy':
+        return 'Copier le SHA-256 de l\'exécutable du jeu';
+      case 'gal_hook_ingame_lookup_exe_hash_unavailable':
+        return 'Impossible de lire l\'exécutable du jeu';
+      case 'gal_hook_ingame_lookup_exe_hash_copied':
+        return 'SHA-256 de l\'exécutable copié';
       default:
         return null;
     }
@@ -193264,7 +193552,7 @@ extension on _StringsId {
       case 'gal_hook_ingame_lookup':
         return 'Pencarian kamus dalam game';
       case 'gal_hook_ingame_lookup_hint':
-        return 'Tampilkan kartu kamus di dalam jendela game itu sendiri (mesin KiriKiri, hanya Windows)';
+        return 'Tampilkan kartu kamus di dalam jendela gim itu sendiri (khusus Windows; perlu mesin gim yang didukung)';
       case 'download_subscription_start_episode':
         return ({required Object episode}) => '从第 ${episode} 集开始';
       case 'drag_drop_failed':
@@ -194520,6 +194808,16 @@ extension on _StringsId {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             '${n} item terpilih lainnya disembunyikan oleh filter saat ini dan tidak akan diproses.';
+      case 'gal_hook_ingame_lookup_engine_unsupported':
+        return 'Mesin gim ini belum mendukung pencarian kamus dalam gim';
+      case 'gal_hook_ingame_lookup_version_unsupported':
+        return 'Versi gim ini belum ada dalam daftar yang didukung';
+      case 'gal_hook_ingame_lookup_exe_hash_copy':
+        return 'Salin SHA-256 file eksekusi gim';
+      case 'gal_hook_ingame_lookup_exe_hash_unavailable':
+        return 'Tidak dapat membaca file eksekusi gim';
+      case 'gal_hook_ingame_lookup_exe_hash_copied':
+        return 'SHA-256 file eksekusi disalin';
       default:
         return null;
     }
@@ -201163,7 +201461,7 @@ extension on _StringsIt {
       case 'gal_hook_ingame_lookup':
         return 'Ricerca dizionario in-game';
       case 'gal_hook_ingame_lookup_hint':
-        return 'Mostra la carta del dizionario direttamente nella finestra del gioco (motore KiriKiri, solo Windows)';
+        return 'Mostra la scheda del dizionario dentro la finestra di gioco (solo Windows; richiede un motore di gioco supportato)';
       case 'download_subscription_start_episode':
         return ({required Object episode}) => '从第 ${episode} 集开始';
       case 'drag_drop_failed':
@@ -202422,6 +202720,16 @@ extension on _StringsIt {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             'Altri ${n} elementi selezionati sono nascosti dal filtro corrente e non verranno elaborati.';
+      case 'gal_hook_ingame_lookup_engine_unsupported':
+        return 'Questo motore di gioco non supporta ancora la ricerca nel gioco';
+      case 'gal_hook_ingame_lookup_version_unsupported':
+        return 'Questa versione del gioco non è ancora nell\'elenco supportato';
+      case 'gal_hook_ingame_lookup_exe_hash_copy':
+        return 'Copia lo SHA-256 dell\'eseguibile del gioco';
+      case 'gal_hook_ingame_lookup_exe_hash_unavailable':
+        return 'Impossibile leggere l\'eseguibile del gioco';
+      case 'gal_hook_ingame_lookup_exe_hash_copied':
+        return 'SHA-256 dell\'eseguibile copiato';
       default:
         return null;
     }
@@ -209005,7 +209313,7 @@ extension on _StringsJa {
       case 'gal_hook_ingame_lookup':
         return 'ゲーム内辞書検索';
       case 'gal_hook_ingame_lookup_hint':
-        return 'ゲームウィンドウ内に辞書カードを表示します（KiriKiriエンジン、Windowsのみ）';
+        return 'ゲームウィンドウ内に辞書カードを直接表示します（Windows のみ、対応エンジンが必要）';
       case 'download_subscription_start_episode':
         return ({required Object episode}) => '从第 ${episode} 集开始';
       case 'drag_drop_failed':
@@ -210257,6 +210565,16 @@ extension on _StringsJa {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             '選択済みの ${n} 件は現在のフィルターで非表示のため、今回は処理されません。';
+      case 'gal_hook_ingame_lookup_engine_unsupported':
+        return 'このゲームエンジンはゲーム内辞書引きに未対応です';
+      case 'gal_hook_ingame_lookup_version_unsupported':
+        return 'このゲームのバージョンはまだ対応リストにありません';
+      case 'gal_hook_ingame_lookup_exe_hash_copy':
+        return 'ゲーム実行ファイルの SHA-256 をコピー';
+      case 'gal_hook_ingame_lookup_exe_hash_unavailable':
+        return 'ゲーム実行ファイルを読み取れません（権限不足の可能性）';
+      case 'gal_hook_ingame_lookup_exe_hash_copied':
+        return '実行ファイルの SHA-256 をコピーしました';
       default:
         return null;
     }
@@ -216842,7 +217160,7 @@ extension on _StringsKo {
       case 'gal_hook_ingame_lookup':
         return '인게임 사전 조회';
       case 'gal_hook_ingame_lookup_hint':
-        return '게임 창 안에 사전 카드를 표시합니다 (KiriKiri 엔진, Windows 전용)';
+        return '게임 창 안에 사전 카드를 직접 표시합니다 (Windows 전용, 지원되는 엔진 필요)';
       case 'download_subscription_start_episode':
         return ({required Object episode}) => '从第 ${episode} 集开始';
       case 'drag_drop_failed':
@@ -218094,6 +218412,16 @@ extension on _StringsKo {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             '선택한 항목 중 ${n}개는 현재 필터로 숨겨져 있어 처리되지 않습니다.';
+      case 'gal_hook_ingame_lookup_engine_unsupported':
+        return '이 게임 엔진은 아직 인게임 사전 검색을 지원하지 않습니다';
+      case 'gal_hook_ingame_lookup_version_unsupported':
+        return '이 게임 버전은 아직 지원 목록에 없습니다';
+      case 'gal_hook_ingame_lookup_exe_hash_copy':
+        return '게임 실행 파일의 SHA-256 복사';
+      case 'gal_hook_ingame_lookup_exe_hash_unavailable':
+        return '게임 실행 파일을 읽을 수 없습니다 (권한 부족일 수 있음)';
+      case 'gal_hook_ingame_lookup_exe_hash_copied':
+        return '실행 파일의 SHA-256을 복사했습니다';
       default:
         return null;
     }
@@ -224730,7 +225058,7 @@ extension on _StringsNl {
       case 'gal_hook_ingame_lookup':
         return 'In-game woordenboek opzoeken';
       case 'gal_hook_ingame_lookup_hint':
-        return 'Toon de woordenboekkaart in het spelvenster zelf (KiriKiri-engine, alleen Windows)';
+        return 'Toon de woordenboekkaart in het spelvenster zelf (alleen Windows; vereist een ondersteunde game-engine)';
       case 'download_subscription_start_episode':
         return ({required Object episode}) => '从第 ${episode} 集开始';
       case 'drag_drop_failed':
@@ -225990,6 +226318,16 @@ extension on _StringsNl {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             'Nog ${n} geselecteerde items zijn verborgen door het huidige filter en worden niet verwerkt.';
+      case 'gal_hook_ingame_lookup_engine_unsupported':
+        return 'Deze game-engine ondersteunt opzoeken in het spel nog niet';
+      case 'gal_hook_ingame_lookup_version_unsupported':
+        return 'Deze spelversie staat nog niet op de lijst met ondersteunde versies';
+      case 'gal_hook_ingame_lookup_exe_hash_copy':
+        return 'SHA-256 van het spelbestand kopiëren';
+      case 'gal_hook_ingame_lookup_exe_hash_unavailable':
+        return 'Kan het spelbestand niet lezen';
+      case 'gal_hook_ingame_lookup_exe_hash_copied':
+        return 'SHA-256 van het spelbestand gekopieerd';
       default:
         return null;
     }
@@ -232622,7 +232960,7 @@ extension on _StringsPtBr {
       case 'gal_hook_ingame_lookup':
         return 'Consulta de dicionário no jogo';
       case 'gal_hook_ingame_lookup_hint':
-        return 'Mostrar o cartão de dicionário dentro da própria janela do jogo (motor KiriKiri, apenas Windows)';
+        return 'Mostrar o cartão de dicionário dentro da janela do jogo (somente Windows; requer um motor de jogo compatível)';
       case 'download_subscription_start_episode':
         return ({required Object episode}) => '从第 ${episode} 集开始';
       case 'drag_drop_failed':
@@ -233881,6 +234219,16 @@ extension on _StringsPtBr {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             'Outros ${n} itens selecionados estão ocultos pelo filtro atual e não serão processados.';
+      case 'gal_hook_ingame_lookup_engine_unsupported':
+        return 'Este motor de jogo ainda não oferece suporte à busca dentro do jogo';
+      case 'gal_hook_ingame_lookup_version_unsupported':
+        return 'Esta versão do jogo ainda não está na lista de compatíveis';
+      case 'gal_hook_ingame_lookup_exe_hash_copy':
+        return 'Copiar o SHA-256 do executável do jogo';
+      case 'gal_hook_ingame_lookup_exe_hash_unavailable':
+        return 'Não foi possível ler o executável do jogo';
+      case 'gal_hook_ingame_lookup_exe_hash_copied':
+        return 'SHA-256 do executável copiado';
       default:
         return null;
     }
@@ -240520,7 +240868,7 @@ extension on _StringsRu {
       case 'gal_hook_ingame_lookup':
         return 'Поиск по словарю в игре';
       case 'gal_hook_ingame_lookup_hint':
-        return 'Показывать карточку словаря прямо в окне игры (движок KiriKiri, только Windows)';
+        return 'Показывать карточку словаря прямо в окне игры (только Windows; нужен поддерживаемый движок игры)';
       case 'download_subscription_start_episode':
         return ({required Object episode}) => '从第 ${episode} 集开始';
       case 'drag_drop_failed':
@@ -241778,6 +242126,16 @@ extension on _StringsRu {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             'Ещё ${n} выбранных элементов скрыты текущим фильтром и не будут обработаны.';
+      case 'gal_hook_ingame_lookup_engine_unsupported':
+        return 'Этот движок игры пока не поддерживает поиск внутри игры';
+      case 'gal_hook_ingame_lookup_version_unsupported':
+        return 'Эта версия игры пока не в списке поддерживаемых';
+      case 'gal_hook_ingame_lookup_exe_hash_copy':
+        return 'Скопировать SHA-256 исполняемого файла игры';
+      case 'gal_hook_ingame_lookup_exe_hash_unavailable':
+        return 'Не удалось прочитать исполняемый файл игры';
+      case 'gal_hook_ingame_lookup_exe_hash_copied':
+        return 'SHA-256 исполняемого файла скопирован';
       default:
         return null;
     }
@@ -248394,7 +248752,7 @@ extension on _StringsTh {
       case 'gal_hook_ingame_lookup':
         return 'ค้นหาพจนานุกรมในเกม';
       case 'gal_hook_ingame_lookup_hint':
-        return 'แสดงการ์ดพจนานุกรมในหน้าต่างเกม (เอนจิน KiriKiri, Windows เท่านั้น)';
+        return 'แสดงการ์ดพจนานุกรมภายในหน้าต่างเกมโดยตรง (เฉพาะ Windows ต้องใช้เอนจินเกมที่รองรับ)';
       case 'download_subscription_start_episode':
         return ({required Object episode}) => '从第 ${episode} 集开始';
       case 'drag_drop_failed':
@@ -249647,6 +250005,16 @@ extension on _StringsTh {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             'รายการที่เลือกอีก ${n} รายการถูกซ่อนด้วยตัวกรองปัจจุบันและจะไม่ถูกดำเนินการ';
+      case 'gal_hook_ingame_lookup_engine_unsupported':
+        return 'เอนจินเกมนี้ยังไม่รองรับการเปิดพจนานุกรมในเกม';
+      case 'gal_hook_ingame_lookup_version_unsupported':
+        return 'เกมเวอร์ชันนี้ยังไม่อยู่ในรายการที่รองรับ';
+      case 'gal_hook_ingame_lookup_exe_hash_copy':
+        return 'คัดลอก SHA-256 ของไฟล์เกม';
+      case 'gal_hook_ingame_lookup_exe_hash_unavailable':
+        return 'อ่านไฟล์เกมไม่ได้';
+      case 'gal_hook_ingame_lookup_exe_hash_copied':
+        return 'คัดลอก SHA-256 ของไฟล์เกมแล้ว';
       default:
         return null;
     }
@@ -256276,7 +256644,7 @@ extension on _StringsTr {
       case 'gal_hook_ingame_lookup':
         return 'Oyun içi sözlük araması';
       case 'gal_hook_ingame_lookup_hint':
-        return 'Sözlük kartını oyun penceresinin içinde gösterin (KiriKiri motoru, yalnızca Windows)';
+        return 'Sözlük kartını doğrudan oyun penceresinde göster (yalnızca Windows; desteklenen bir oyun motoru gerekir)';
       case 'download_subscription_start_episode':
         return ({required Object episode}) => '从第 ${episode} 集开始';
       case 'drag_drop_failed':
@@ -257533,6 +257901,16 @@ extension on _StringsTr {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             'Seçili ${n} öğe daha geçerli filtre tarafından gizlendi ve işlenmeyecek.';
+      case 'gal_hook_ingame_lookup_engine_unsupported':
+        return 'Bu oyun motoru henüz oyun içi sözlük aramasını desteklemiyor';
+      case 'gal_hook_ingame_lookup_version_unsupported':
+        return 'Bu oyun sürümü henüz desteklenenler listesinde değil';
+      case 'gal_hook_ingame_lookup_exe_hash_copy':
+        return 'Oyun çalıştırılabilir dosyasının SHA-256 değerini kopyala';
+      case 'gal_hook_ingame_lookup_exe_hash_unavailable':
+        return 'Oyun çalıştırılabilir dosyası okunamadı';
+      case 'gal_hook_ingame_lookup_exe_hash_copied':
+        return 'Çalıştırılabilir dosyanın SHA-256 değeri kopyalandı';
       default:
         return null;
     }
@@ -264157,7 +264535,7 @@ extension on _StringsVi {
       case 'gal_hook_ingame_lookup':
         return 'Tra từ điển trong trò chơi';
       case 'gal_hook_ingame_lookup_hint':
-        return 'Hiển thị thẻ từ điển bên trong cửa sổ trò chơi (engine KiriKiri, chỉ Windows)';
+        return 'Hiển thị thẻ từ điển ngay trong cửa sổ trò chơi (chỉ Windows; cần engine trò chơi được hỗ trợ)';
       case 'download_subscription_start_episode':
         return ({required Object episode}) => '从第 ${episode} 集开始';
       case 'drag_drop_failed':
@@ -265412,6 +265790,16 @@ extension on _StringsVi {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             'Còn ${n} mục đã chọn bị ẩn bởi bộ lọc hiện tại và sẽ không được xử lý.';
+      case 'gal_hook_ingame_lookup_engine_unsupported':
+        return 'Engine trò chơi này chưa hỗ trợ tra từ trong trò chơi';
+      case 'gal_hook_ingame_lookup_version_unsupported':
+        return 'Phiên bản trò chơi này chưa có trong danh sách được hỗ trợ';
+      case 'gal_hook_ingame_lookup_exe_hash_copy':
+        return 'Sao chép SHA-256 của tệp thực thi trò chơi';
+      case 'gal_hook_ingame_lookup_exe_hash_unavailable':
+        return 'Không đọc được tệp thực thi trò chơi';
+      case 'gal_hook_ingame_lookup_exe_hash_copied':
+        return 'Đã sao chép SHA-256 của tệp thực thi';
       default:
         return null;
     }
@@ -271978,7 +272366,7 @@ extension on _StringsZhCn {
       case 'gal_hook_ingame_lookup':
         return '游戏内查词';
       case 'gal_hook_ingame_lookup_hint':
-        return '在游戏画面内直接显示词典卡片（KiriKiri 引擎，仅 Windows）';
+        return '在游戏窗口内直接弹出词典卡片（仅 Windows，需游戏引擎已支持）';
       case 'drag_drop_failed':
         return '拖入的文件处理失败，请重试。';
       case 'tag_add_failed':
@@ -273225,6 +273613,16 @@ extension on _StringsZhCn {
         return ({required Object n}) => '有 ${n} 个本地文件删除失败，可能正在被使用';
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) => '另有 ${n} 项被当前筛选隐藏，本次不会处理。';
+      case 'gal_hook_ingame_lookup_engine_unsupported':
+        return '当前游戏引擎不支持游戏内查词';
+      case 'gal_hook_ingame_lookup_version_unsupported':
+        return '当前游戏版本未在支持列表中';
+      case 'gal_hook_ingame_lookup_exe_hash_copy':
+        return '复制游戏 exe 的 SHA-256';
+      case 'gal_hook_ingame_lookup_exe_hash_unavailable':
+        return '无法读取游戏 exe（可能权限不足）';
+      case 'gal_hook_ingame_lookup_exe_hash_copied':
+        return '已复制 exe 的 SHA-256';
       default:
         return null;
     }
@@ -279790,7 +280188,7 @@ extension on _StringsZhHk {
       case 'gal_hook_ingame_lookup':
         return '遊戲內查詞';
       case 'gal_hook_ingame_lookup_hint':
-        return '在遊戲畫面內直接顯示詞典卡片（KiriKiri 引擎，僅 Windows）';
+        return '在遊戲視窗內直接彈出詞典卡片（僅限 Windows，需遊戲引擎已支援）';
       case 'download_subscription_start_episode':
         return ({required Object episode}) => '從第 ${episode} 集開始';
       case 'drag_drop_failed':
@@ -281039,6 +281437,16 @@ extension on _StringsZhHk {
         return ({required Object n}) => '有 ${n} 個本機檔案刪除失敗，可能正在被使用';
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) => '另有 ${n} 項被目前篩選隱藏，今次不會處理。';
+      case 'gal_hook_ingame_lookup_engine_unsupported':
+        return '目前遊戲引擎不支援遊戲內查詞';
+      case 'gal_hook_ingame_lookup_version_unsupported':
+        return '目前遊戲版本未在支援清單中';
+      case 'gal_hook_ingame_lookup_exe_hash_copy':
+        return '複製遊戲 exe 的 SHA-256';
+      case 'gal_hook_ingame_lookup_exe_hash_unavailable':
+        return '無法讀取遊戲 exe（可能權限不足）';
+      case 'gal_hook_ingame_lookup_exe_hash_copied':
+        return '已複製 exe 的 SHA-256';
       default:
         return null;
     }
