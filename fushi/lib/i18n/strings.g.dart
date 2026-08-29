@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 65110 (3830 per locale)
+/// Strings: 65144 (3832 per locale)
 ///
-/// Built on 2026-08-29 at 08:17 UTC
+/// Built on 2026-08-29 at 13:16 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2708,7 +2708,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get update_checking_now => 'Checking for updates…';
   String get update_connecting => 'Connecting…';
   String get network_proxy_auto_hint =>
-      'Applies to every internet request the app makes: updates, cloud sync, dictionaries, downloads, subtitles and metadata. Leave blank for automatic: environment variables, then the enabled system proxy. P2P (torrent) transfers always connect directly.';
+      'Applies to every internet request the app makes: updates, cloud sync, dictionaries, downloads, subtitles and metadata. Leave blank for automatic: environment variables, then the enabled system proxy. P2P (torrent) transfers connect directly unless enabled below.';
   String get network_proxy_hint =>
       'host:port, e.g. 127.0.0.1:7890 (IPv4/host only)';
   String get network_proxy_invalid => 'Invalid proxy. Use host:port';
@@ -5219,6 +5219,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String batch_hidden_by_filter_note({required Object n}) =>
       'Another ${n} selected item(s) are hidden by the current filter and will not be affected.';
   String get section_network => 'Network';
+  String get network_proxy_p2p_label =>
+      'Route P2P (torrent) traffic through the proxy';
+  String get network_proxy_p2p_warning =>
+      'Off by default: P2P connects directly. Routing it through the proxy can reduce speed, and many proxy providers forbid BitTorrent traffic, so your proxy account may be throttled, warned or terminated. Applies to the built-in engine; an external qBittorrent uses its own proxy settings.';
 }
 
 // Path: <root>
@@ -9785,7 +9789,7 @@ class _StringsAr extends _StringsEn {
   String get update_connecting => 'جارٍ الاتصال…';
   @override
   String get network_proxy_auto_hint =>
-      'يُطبَّق على جميع طلبات الإنترنت في التطبيق: التحديثات، والمزامنة السحابية، والقواميس، والتنزيلات، والترجمات، والبيانات الوصفية. اتركه فارغًا للوضع التلقائي: متغيرات البيئة، ثم وكيل النظام المفعّل. تتصل عمليات نقل P2P (torrent) مباشرة دائمًا.';
+      'يُطبَّق على جميع طلبات الإنترنت في التطبيق: التحديثات، والمزامنة السحابية، والقواميس، والتنزيلات، والترجمات، والبيانات الوصفية. اتركه فارغًا للوضع التلقائي: متغيرات البيئة، ثم وكيل النظام المفعّل. تتصل عمليات نقل P2P (torrent) مباشرة افتراضيًا؛ يمكنك تفعيلها بشكل منفصل أدناه.';
   @override
   String get network_proxy_hint =>
       'المضيف:المنفذ، مثال 127.0.0.1:7890 (IPv4/اسم مضيف فقط)';
@@ -14096,6 +14100,11 @@ class _StringsAr extends _StringsEn {
       'هناك ${n} عنصر محدد مخفي بواسطة عامل التصفية الحالي ولن تتم معالجته.';
   @override
   String get section_network => 'الشبكة';
+  @override
+  String get network_proxy_p2p_label => 'تمرير حركة P2P (torrent) عبر الوكيل';
+  @override
+  String get network_proxy_p2p_warning =>
+      'معطّل افتراضيًا؛ يتصل P2P مباشرة. قد يؤدي التمرير عبر الوكيل إلى خفض السرعة، وكثير من مزودي الوكلاء يحظرون حركة BitTorrent: قد يتم تقييد حساب الوكيل أو تحذيره أو إنهاؤه. ينطبق على المحرك المدمج فقط؛ يستخدم qBittorrent الخارجي إعدادات الوكيل الخاصة به.';
 }
 
 // Path: <root>
@@ -18761,7 +18770,7 @@ class _StringsDe extends _StringsEn {
   String get update_connecting => 'Verbinde…';
   @override
   String get network_proxy_auto_hint =>
-      'Gilt für alle Internetanfragen der App: Updates, Cloud-Sync, Wörterbücher, Downloads, Untertitel und Metadaten. Leer lassen für automatisch: Umgebungsvariablen, dann der aktivierte System-Proxy. P2P-(Torrent-)Übertragungen verbinden sich immer direkt.';
+      'Gilt für alle Internetanfragen der App: Updates, Cloud-Sync, Wörterbücher, Downloads, Untertitel und Metadaten. Leer lassen für automatisch: Umgebungsvariablen, dann der aktivierte System-Proxy. P2P-(Torrent-)Übertragungen verbinden sich standardmäßig direkt und lassen sich unten separat aktivieren.';
   @override
   String get network_proxy_hint =>
       'Host:Port, z. B. 127.0.0.1:7890 (nur IPv4/Host)';
@@ -23180,6 +23189,12 @@ class _StringsDe extends _StringsEn {
       'Weitere ${n} ausgewählte Elemente sind durch den aktuellen Filter ausgeblendet und werden nicht bearbeitet.';
   @override
   String get section_network => 'Netzwerk';
+  @override
+  String get network_proxy_p2p_label =>
+      'P2P-(Torrent-)Verkehr über den Proxy leiten';
+  @override
+  String get network_proxy_p2p_warning =>
+      'Standardmäßig aus – P2P verbindet sich direkt. Über den Proxy kann die Geschwindigkeit sinken, und viele Proxy-Anbieter verbieten BitTorrent-Verkehr: Dein Proxy-Konto kann gedrosselt, verwarnt oder gekündigt werden. Gilt nur für die integrierte Engine; ein externes qBittorrent nutzt seine eigenen Proxy-Einstellungen.';
 }
 
 // Path: <root>
@@ -27868,7 +27883,7 @@ class _StringsEs extends _StringsEn {
   String get update_connecting => 'Conectando…';
   @override
   String get network_proxy_auto_hint =>
-      'Se aplica a todas las solicitudes de Internet de la aplicación: actualizaciones, sincronización en la nube, diccionarios, descargas, subtítulos y metadatos. Déjelo en blanco para automático: variables de entorno y, después, el proxy del sistema habilitado. Las transferencias P2P (torrent) siempre se conectan directamente.';
+      'Se aplica a todas las solicitudes de Internet de la aplicación: actualizaciones, sincronización en la nube, diccionarios, descargas, subtítulos y metadatos. Déjelo en blanco para automático: variables de entorno y, después, el proxy del sistema habilitado. Las transferencias P2P (torrent) se conectan directamente de forma predeterminada; puede activarlas por separado abajo.';
   @override
   String get network_proxy_hint =>
       'host:puerto, ej. 127.0.0.1:7890 (solo IPv4/host)';
@@ -32308,6 +32323,12 @@ class _StringsEs extends _StringsEn {
       'Otros ${n} elementos seleccionados están ocultos por el filtro actual y no se procesarán.';
   @override
   String get section_network => 'Red';
+  @override
+  String get network_proxy_p2p_label =>
+      'Enrutar el tráfico P2P (torrent) por el proxy';
+  @override
+  String get network_proxy_p2p_warning =>
+      'Desactivado de forma predeterminada: P2P se conecta directamente. Pasar por el proxy puede reducir la velocidad y muchos proveedores de proxy prohíben el tráfico BitTorrent: su cuenta de proxy podría ser limitada, advertida o cancelada. Solo se aplica al motor integrado; un qBittorrent externo usa su propia configuración de proxy.';
 }
 
 // Path: <root>
@@ -37009,7 +37030,7 @@ class _StringsFr extends _StringsEn {
   String get update_connecting => 'Connexion…';
   @override
   String get network_proxy_auto_hint =>
-      'S\'applique à toutes les requêtes Internet de l\'application : mises à jour, synchronisation cloud, dictionnaires, téléchargements, sous-titres et métadonnées. Laissez vide pour le mode automatique : variables d\'environnement, puis le proxy système activé. Les transferts P2P (torrent) se connectent toujours directement.';
+      'S\'applique à toutes les requêtes Internet de l\'application : mises à jour, synchronisation cloud, dictionnaires, téléchargements, sous-titres et métadonnées. Laissez vide pour le mode automatique : variables d\'environnement, puis le proxy système activé. Les transferts P2P (torrent) se connectent directement par défaut ; vous pouvez les activer séparément ci-dessous.';
   @override
   String get network_proxy_hint =>
       'hôte:port, par ex. 127.0.0.1:7890 (IPv4/nom d\'hôte uniquement)';
@@ -41469,6 +41490,12 @@ class _StringsFr extends _StringsEn {
       '${n} autres éléments sélectionnés sont masqués par le filtre actuel et ne seront pas traités.';
   @override
   String get section_network => 'Réseau';
+  @override
+  String get network_proxy_p2p_label =>
+      'Faire passer le trafic P2P (torrent) par le proxy';
+  @override
+  String get network_proxy_p2p_warning =>
+      'Désactivé par défaut : le P2P se connecte directement. Passer par le proxy peut réduire la vitesse, et de nombreux fournisseurs de proxy interdisent le trafic BitTorrent : votre compte proxy peut être bridé, averti ou résilié. Ne s\'applique qu\'au moteur intégré ; un qBittorrent externe utilise ses propres paramètres de proxy.';
 }
 
 // Path: <root>
@@ -46084,7 +46111,7 @@ class _StringsId extends _StringsEn {
   String get update_connecting => 'Menghubungkan…';
   @override
   String get network_proxy_auto_hint =>
-      'Berlaku untuk semua permintaan Internet aplikasi: pembaruan, sinkronisasi cloud, kamus, unduhan, subtitel, dan metadata. Kosongkan untuk otomatis: variabel lingkungan, lalu proksi sistem yang diaktifkan. Transfer P2P (torrent) selalu terhubung langsung.';
+      'Berlaku untuk semua permintaan Internet aplikasi: pembaruan, sinkronisasi cloud, kamus, unduhan, subtitel, dan metadata. Kosongkan untuk otomatis: variabel lingkungan, lalu proksi sistem yang diaktifkan. Transfer P2P (torrent) terhubung langsung secara default; Anda dapat mengaktifkannya secara terpisah di bawah.';
   @override
   String get network_proxy_hint =>
       'host:port, mis. 127.0.0.1:7890 (khusus IPv4/host)';
@@ -50457,6 +50484,12 @@ class _StringsId extends _StringsEn {
       '${n} item terpilih lainnya disembunyikan oleh filter saat ini dan tidak akan diproses.';
   @override
   String get section_network => 'Jaringan';
+  @override
+  String get network_proxy_p2p_label =>
+      'Rutekan lalu lintas P2P (torrent) melalui proksi';
+  @override
+  String get network_proxy_p2p_warning =>
+      'Nonaktif secara default — P2P terhubung langsung. Melewati proksi dapat menurunkan kecepatan, dan banyak penyedia proksi melarang lalu lintas BitTorrent: akun proksi Anda bisa dibatasi, diperingatkan, atau dihentikan. Hanya berlaku untuk mesin bawaan; qBittorrent eksternal memakai pengaturan proksinya sendiri.';
 }
 
 // Path: <root>
@@ -55119,7 +55152,7 @@ class _StringsIt extends _StringsEn {
   String get update_connecting => 'Connessione…';
   @override
   String get network_proxy_auto_hint =>
-      'Si applica a tutte le richieste Internet dell\'app: aggiornamenti, sincronizzazione cloud, dizionari, download, sottotitoli e metadati. Lascia vuoto per la modalità automatica: variabili d\'ambiente, poi il proxy di sistema attivo. I trasferimenti P2P (torrent) si connettono sempre direttamente.';
+      'Si applica a tutte le richieste Internet dell\'app: aggiornamenti, sincronizzazione cloud, dizionari, download, sottotitoli e metadati. Lascia vuoto per la modalità automatica: variabili d\'ambiente, poi il proxy di sistema attivo. I trasferimenti P2P (torrent) si connettono direttamente per impostazione predefinita; puoi attivarli separatamente qui sotto.';
   @override
   String get network_proxy_hint =>
       'host:porta, es. 127.0.0.1:7890 (solo IPv4/host)';
@@ -59522,6 +59555,12 @@ class _StringsIt extends _StringsEn {
       'Altri ${n} elementi selezionati sono nascosti dal filtro corrente e non verranno elaborati.';
   @override
   String get section_network => 'Rete';
+  @override
+  String get network_proxy_p2p_label =>
+      'Instrada il traffico P2P (torrent) tramite il proxy';
+  @override
+  String get network_proxy_p2p_warning =>
+      'Disattivato per impostazione predefinita: il P2P si connette direttamente. Passare dal proxy può ridurre la velocità e molti provider proxy vietano il traffico BitTorrent: l\'account proxy potrebbe essere limitato, avvisato o chiuso. Vale solo per il motore integrato; un qBittorrent esterno usa le proprie impostazioni proxy.';
 }
 
 // Path: <root>
@@ -63922,7 +63961,7 @@ class _StringsJa extends _StringsEn {
   String get update_connecting => '更新元に接続中…';
   @override
   String get network_proxy_auto_hint =>
-      'アプリのすべての通信（更新、クラウド同期、辞書、ダウンロード、字幕、メタデータ）に適用されます。空欄で自動：環境変数、次に有効なシステムプロキシを使用します。P2P（torrent）通信は常に直接接続します。';
+      'アプリのすべての通信（更新、クラウド同期、辞書、ダウンロード、字幕、メタデータ）に適用されます。空欄で自動：環境変数、次に有効なシステムプロキシを使用します。P2P（torrent）通信は既定で直接接続します。下で個別に有効化できます。';
   @override
   String get network_proxy_hint => 'ホスト:ポート 例: 127.0.0.1:7890（IPv4/ホスト名のみ）';
   @override
@@ -68032,6 +68071,11 @@ class _StringsJa extends _StringsEn {
       '選択済みの ${n} 件は現在のフィルターで非表示のため、今回は処理されません。';
   @override
   String get section_network => 'ネットワーク';
+  @override
+  String get network_proxy_p2p_label => 'P2P（torrent）通信をプロキシ経由にする';
+  @override
+  String get network_proxy_p2p_warning =>
+      '既定ではオフで、P2P は直接接続します。プロキシ経由にすると速度が低下する場合があり、多くのプロキシ事業者は BitTorrent 通信を禁止しているため、プロキシアカウントが帯域制限・警告・停止される恐れがあります。内蔵エンジンにのみ適用され、外部 qBittorrent は自身のプロキシ設定を使用します。';
 }
 
 // Path: <root>
@@ -72435,7 +72479,7 @@ class _StringsKo extends _StringsEn {
   String get update_connecting => '연결 중…';
   @override
   String get network_proxy_auto_hint =>
-      '앱의 모든 인터넷 요청(업데이트, 클라우드 동기화, 사전, 다운로드, 자막, 메타데이터)에 적용됩니다. 비워 두면 자동: 환경 변수, 그다음 활성화된 시스템 프록시를 사용합니다. P2P(토렌트) 전송은 항상 직접 연결합니다.';
+      '앱의 모든 인터넷 요청(업데이트, 클라우드 동기화, 사전, 다운로드, 자막, 메타데이터)에 적용됩니다. 비워 두면 자동: 환경 변수, 그다음 활성화된 시스템 프록시를 사용합니다. P2P(토렌트) 전송은 기본적으로 직접 연결하며, 아래에서 따로 켤 수 있습니다.';
   @override
   String get network_proxy_hint => '호스트:포트, 예: 127.0.0.1:7890 (IPv4/호스트만 지원)';
   @override
@@ -76556,6 +76600,11 @@ class _StringsKo extends _StringsEn {
       '선택한 항목 중 ${n}개는 현재 필터로 숨겨져 있어 처리되지 않습니다.';
   @override
   String get section_network => '네트워크';
+  @override
+  String get network_proxy_p2p_label => 'P2P(토렌트) 전송을 프록시로 라우팅';
+  @override
+  String get network_proxy_p2p_warning =>
+      '기본적으로 꺼져 있으며 P2P는 직접 연결합니다. 프록시를 거치면 속도가 떨어질 수 있고, 많은 프록시 제공업체가 BitTorrent 트래픽을 금지하므로 프록시 계정이 속도 제한·경고·해지될 수 있습니다. 내장 엔진에만 적용되며 외부 qBittorrent는 자체 프록시 설정을 사용합니다.';
 }
 
 // Path: <root>
@@ -81196,7 +81245,7 @@ class _StringsNl extends _StringsEn {
   String get update_connecting => 'Verbinden…';
   @override
   String get network_proxy_auto_hint =>
-      'Geldt voor alle internetverzoeken van de app: updates, cloudsynchronisatie, woordenboeken, downloads, ondertitels en metadata. Laat leeg voor automatisch: omgevingsvariabelen, daarna de ingeschakelde systeemproxy. P2P-overdrachten (torrent) maken altijd rechtstreeks verbinding.';
+      'Geldt voor alle internetverzoeken van de app: updates, cloudsynchronisatie, woordenboeken, downloads, ondertitels en metadata. Laat leeg voor automatisch: omgevingsvariabelen, daarna de ingeschakelde systeemproxy. P2P-overdrachten (torrent) maken standaard rechtstreeks verbinding; je kunt ze hieronder apart inschakelen.';
   @override
   String get network_proxy_hint =>
       'host:poort, bijv. 127.0.0.1:7890 (alleen IPv4/host)';
@@ -85577,6 +85626,12 @@ class _StringsNl extends _StringsEn {
       'Nog ${n} geselecteerde items zijn verborgen door het huidige filter en worden niet verwerkt.';
   @override
   String get section_network => 'Netwerk';
+  @override
+  String get network_proxy_p2p_label =>
+      'P2P-verkeer (torrent) via de proxy leiden';
+  @override
+  String get network_proxy_p2p_warning =>
+      'Standaard uit: P2P maakt rechtstreeks verbinding. Via de proxy kan de snelheid dalen en veel proxyaanbieders verbieden BitTorrent-verkeer: je proxyaccount kan worden afgeknepen, gewaarschuwd of opgezegd. Geldt alleen voor de ingebouwde engine; een externe qBittorrent gebruikt zijn eigen proxy-instellingen.';
 }
 
 // Path: <root>
@@ -90232,7 +90287,7 @@ class _StringsPtBr extends _StringsEn {
   String get update_connecting => 'Conectando…';
   @override
   String get network_proxy_auto_hint =>
-      'Aplica-se a todas as solicitações de Internet do aplicativo: atualizações, sincronização na nuvem, dicionários, downloads, legendas e metadados. Deixe em branco para automático: variáveis de ambiente e, depois, o proxy do sistema ativado. As transferências P2P (torrent) sempre se conectam diretamente.';
+      'Aplica-se a todas as solicitações de Internet do aplicativo: atualizações, sincronização na nuvem, dicionários, downloads, legendas e metadados. Deixe em branco para automático: variáveis de ambiente e, depois, o proxy do sistema ativado. As transferências P2P (torrent) se conectam diretamente por padrão; você pode ativá-las separadamente abaixo.';
   @override
   String get network_proxy_hint =>
       'host:porta, ex: 127.0.0.1:7890 (apenas IPv4/host)';
@@ -94655,6 +94710,12 @@ class _StringsPtBr extends _StringsEn {
       'Outros ${n} itens selecionados estão ocultos pelo filtro atual e não serão processados.';
   @override
   String get section_network => 'Rede';
+  @override
+  String get network_proxy_p2p_label =>
+      'Rotear o tráfego P2P (torrent) pelo proxy';
+  @override
+  String get network_proxy_p2p_warning =>
+      'Desativado por padrão: o P2P se conecta diretamente. Passar pelo proxy pode reduzir a velocidade, e muitos provedores de proxy proíbem tráfego BitTorrent: sua conta de proxy pode ser limitada, advertida ou encerrada. Aplica-se apenas ao mecanismo integrado; um qBittorrent externo usa suas próprias configurações de proxy.';
 }
 
 // Path: <root>
@@ -99303,7 +99364,7 @@ class _StringsRu extends _StringsEn {
   String get update_connecting => 'Подключение…';
   @override
   String get network_proxy_auto_hint =>
-      'Применяется ко всем интернет-запросам приложения: обновления, облачная синхронизация, словари, загрузки, субтитры и метаданные. Оставьте пустым для автоматического режима: переменные окружения, затем включённый системный прокси. P2P-передачи (torrent) всегда подключаются напрямую.';
+      'Применяется ко всем интернет-запросам приложения: обновления, облачная синхронизация, словари, загрузки, субтитры и метаданные. Оставьте пустым для автоматического режима: переменные окружения, затем включённый системный прокси. P2P-передачи (torrent) по умолчанию подключаются напрямую; их можно включить отдельно ниже.';
   @override
   String get network_proxy_hint =>
       'хост:порт, например 127.0.0.1:7890 (только IPv4/хост)';
@@ -103709,6 +103770,12 @@ class _StringsRu extends _StringsEn {
       'Ещё ${n} выбранных элементов скрыты текущим фильтром и не будут обработаны.';
   @override
   String get section_network => 'Сеть';
+  @override
+  String get network_proxy_p2p_label =>
+      'Пропускать P2P-трафик (torrent) через прокси';
+  @override
+  String get network_proxy_p2p_warning =>
+      'По умолчанию выключено — P2P подключается напрямую. Через прокси скорость может снизиться, а многие прокси-провайдеры запрещают BitTorrent-трафик: аккаунт прокси могут ограничить, предупредить или заблокировать. Действует только для встроенного движка; внешний qBittorrent использует собственные настройки прокси.';
 }
 
 // Path: <root>
@@ -108275,7 +108342,7 @@ class _StringsTh extends _StringsEn {
   String get update_connecting => 'กำลังเชื่อมต่อแหล่งอัปเดต…';
   @override
   String get network_proxy_auto_hint =>
-      'ใช้กับคำขออินเทอร์เน็ตทั้งหมดของแอป: การอัปเดต การซิงค์คลาวด์ พจนานุกรม การดาวน์โหลด คำบรรยาย และข้อมูลเมตา เว้นว่างไว้เพื่อใช้อัตโนมัติ: ตัวแปรสภาพแวดล้อม จากนั้นพร็อกซีระบบที่เปิดใช้งาน การถ่ายโอน P2P (torrent) จะเชื่อมต่อโดยตรงเสมอ';
+      'ใช้กับคำขออินเทอร์เน็ตทั้งหมดของแอป: การอัปเดต การซิงค์คลาวด์ พจนานุกรม การดาวน์โหลด คำบรรยาย และข้อมูลเมตา เว้นว่างไว้เพื่อใช้อัตโนมัติ: ตัวแปรสภาพแวดล้อม จากนั้นพร็อกซีระบบที่เปิดใช้งาน การถ่ายโอน P2P (torrent) จะเชื่อมต่อโดยตรงตามค่าเริ่มต้น สามารถเปิดแยกได้ด้านล่าง';
   @override
   String get network_proxy_hint =>
       'host:port เช่น 127.0.0.1:7890 (IPv4/host เท่านั้น)';
@@ -112580,6 +112647,12 @@ class _StringsTh extends _StringsEn {
       'รายการที่เลือกอีก ${n} รายการถูกซ่อนด้วยตัวกรองปัจจุบันและจะไม่ถูกดำเนินการ';
   @override
   String get section_network => 'เครือข่าย';
+  @override
+  String get network_proxy_p2p_label =>
+      'ส่งการรับส่งข้อมูล P2P (torrent) ผ่านพร็อกซี';
+  @override
+  String get network_proxy_p2p_warning =>
+      'ปิดตามค่าเริ่มต้น P2P จะเชื่อมต่อโดยตรง การส่งผ่านพร็อกซีอาจทำให้ความเร็วลดลง และผู้ให้บริการพร็อกซีจำนวนมากห้ามการรับส่งข้อมูล BitTorrent บัญชีพร็อกซีของคุณอาจถูกจำกัดความเร็ว เตือน หรือยกเลิก มีผลเฉพาะเอนจินในตัวเท่านั้น qBittorrent ภายนอกใช้การตั้งค่าพร็อกซีของตัวเอง';
 }
 
 // Path: <root>
@@ -117194,7 +117267,7 @@ class _StringsTr extends _StringsEn {
   String get update_connecting => 'Bağlanılıyor…';
   @override
   String get network_proxy_auto_hint =>
-      'Uygulamanın tüm internet isteklerine uygulanır: güncellemeler, bulut eşitleme, sözlükler, indirmeler, altyazılar ve meta veriler. Otomatik için boş bırakın: önce ortam değişkenleri, sonra etkin sistem proxy\'si. P2P (torrent) aktarımları her zaman doğrudan bağlanır.';
+      'Uygulamanın tüm internet isteklerine uygulanır: güncellemeler, bulut eşitleme, sözlükler, indirmeler, altyazılar ve meta veriler. Otomatik için boş bırakın: önce ortam değişkenleri, sonra etkin sistem proxy\'si. P2P (torrent) aktarımları varsayılan olarak doğrudan bağlanır; aşağıdan ayrıca etkinleştirebilirsiniz.';
   @override
   String get network_proxy_hint =>
       'sunucu:port, ör. 127.0.0.1:7890 (yalnızca IPv4/sunucu adı)';
@@ -121554,6 +121627,12 @@ class _StringsTr extends _StringsEn {
       'Seçili ${n} öğe daha geçerli filtre tarafından gizlendi ve işlenmeyecek.';
   @override
   String get section_network => 'Ağ';
+  @override
+  String get network_proxy_p2p_label =>
+      'P2P (torrent) trafiğini proxy üzerinden yönlendir';
+  @override
+  String get network_proxy_p2p_warning =>
+      'Varsayılan olarak kapalı; P2P doğrudan bağlanır. Proxy üzerinden geçmek hızı düşürebilir ve birçok proxy sağlayıcısı BitTorrent trafiğini yasaklar: proxy hesabınız kısıtlanabilir, uyarılabilir veya kapatılabilir. Yalnızca yerleşik motor için geçerlidir; harici qBittorrent kendi proxy ayarlarını kullanır.';
 }
 
 // Path: <root>
@@ -126160,7 +126239,7 @@ class _StringsVi extends _StringsEn {
   String get update_connecting => 'Đang kết nối…';
   @override
   String get network_proxy_auto_hint =>
-      'Áp dụng cho mọi yêu cầu Internet của ứng dụng: cập nhật, đồng bộ đám mây, từ điển, tải xuống, phụ đề và siêu dữ liệu. Để trống để tự động: biến môi trường, sau đó là proxy hệ thống đã bật. Truyền P2P (torrent) luôn kết nối trực tiếp.';
+      'Áp dụng cho mọi yêu cầu Internet của ứng dụng: cập nhật, đồng bộ đám mây, từ điển, tải xuống, phụ đề và siêu dữ liệu. Để trống để tự động: biến môi trường, sau đó là proxy hệ thống đã bật. Truyền P2P (torrent) mặc định kết nối trực tiếp; bạn có thể bật riêng bên dưới.';
   @override
   String get network_proxy_hint =>
       'host:port, ví dụ 127.0.0.1:7890 (chỉ IPv4/host)';
@@ -130510,6 +130589,12 @@ class _StringsVi extends _StringsEn {
       'Còn ${n} mục đã chọn bị ẩn bởi bộ lọc hiện tại và sẽ không được xử lý.';
   @override
   String get section_network => 'Mạng';
+  @override
+  String get network_proxy_p2p_label =>
+      'Định tuyến lưu lượng P2P (torrent) qua proxy';
+  @override
+  String get network_proxy_p2p_warning =>
+      'Mặc định tắt — P2P kết nối trực tiếp. Đi qua proxy có thể làm giảm tốc độ, và nhiều nhà cung cấp proxy cấm lưu lượng BitTorrent: tài khoản proxy của bạn có thể bị giới hạn, cảnh báo hoặc chấm dứt. Chỉ áp dụng cho engine tích hợp; qBittorrent bên ngoài dùng cài đặt proxy riêng.';
 }
 
 // Path: <root>
@@ -134795,7 +134880,7 @@ class _StringsZhCn extends _StringsEn {
   String get update_connecting => '正在连接更新源…';
   @override
   String get network_proxy_auto_hint =>
-      '应用的全部联网请求都走这里：更新、云同步、词典、下载、字幕与元数据。留空为自动：先读环境变量，再读已启用的系统代理。P2P（torrent）传输始终直连。';
+      '应用的全部联网请求都走这里：更新、云同步、词典、下载、字幕与元数据。留空为自动：先读环境变量，再读已启用的系统代理。P2P（torrent）传输默认直连，可在下方单独开启。';
   @override
   String get network_proxy_hint => 'host:port，例如 127.0.0.1:7890（仅 IPv4/域名）';
   @override
@@ -138747,6 +138832,11 @@ class _StringsZhCn extends _StringsEn {
       '另有 ${n} 项被当前筛选隐藏，本次不会处理。';
   @override
   String get section_network => '网络';
+  @override
+  String get network_proxy_p2p_label => 'P2P（torrent）传输走代理';
+  @override
+  String get network_proxy_p2p_warning =>
+      '默认关闭，P2P 直连。走代理可能降低速度；且不少代理服务商禁止 BT 流量，可能导致代理账号被限速、警告甚至封禁。仅对内置引擎生效，外接 qBittorrent 请在其自身设置中配置。';
 }
 
 // Path: <root>
@@ -143036,7 +143126,7 @@ class _StringsZhHk extends _StringsEn {
   String get update_connecting => '正在連接更新來源…';
   @override
   String get network_proxy_auto_hint =>
-      '應用程式的全部連線請求都經此處：更新、雲端同步、詞典、下載、字幕與中繼資料。留空為自動：先讀取環境變數，再讀取已啟用的系統代理。P2P（torrent）傳輸始終直連。';
+      '應用程式的全部連線請求都經此處：更新、雲端同步、詞典、下載、字幕與中繼資料。留空為自動：先讀取環境變數，再讀取已啟用的系統代理。P2P（torrent）傳輸預設直連，可在下方單獨開啟。';
   @override
   String get network_proxy_hint => 'host:port，例如 127.0.0.1:7890（僅 IPv4/域名）';
   @override
@@ -146990,6 +147080,11 @@ class _StringsZhHk extends _StringsEn {
       '另有 ${n} 項被目前篩選隱藏，今次不會處理。';
   @override
   String get section_network => '網路';
+  @override
+  String get network_proxy_p2p_label => 'P2P（torrent）傳輸走代理';
+  @override
+  String get network_proxy_p2p_warning =>
+      '預設關閉，P2P 直連。走代理可能降低速度；且不少代理服務商禁止 BT 流量，可能導致代理帳號被限速、警告甚至封禁。僅對內建引擎生效，外接 qBittorrent 請在其自身設定中配置。';
 }
 
 /// Flat map(s) containing all translations.
@@ -151123,7 +151218,7 @@ extension on _StringsEn {
       case 'update_connecting':
         return 'Connecting…';
       case 'network_proxy_auto_hint':
-        return 'Applies to every internet request the app makes: updates, cloud sync, dictionaries, downloads, subtitles and metadata. Leave blank for automatic: environment variables, then the enabled system proxy. P2P (torrent) transfers always connect directly.';
+        return 'Applies to every internet request the app makes: updates, cloud sync, dictionaries, downloads, subtitles and metadata. Leave blank for automatic: environment variables, then the enabled system proxy. P2P (torrent) transfers connect directly unless enabled below.';
       case 'network_proxy_hint':
         return 'host:port, e.g. 127.0.0.1:7890 (IPv4/host only)';
       case 'network_proxy_invalid':
@@ -154850,6 +154945,10 @@ extension on _StringsEn {
             'Another ${n} selected item(s) are hidden by the current filter and will not be affected.';
       case 'section_network':
         return 'Network';
+      case 'network_proxy_p2p_label':
+        return 'Route P2P (torrent) traffic through the proxy';
+      case 'network_proxy_p2p_warning':
+        return 'Off by default: P2P connects directly. Routing it through the proxy can reduce speed, and many proxy providers forbid BitTorrent traffic, so your proxy account may be throttled, warned or terminated. Applies to the built-in engine; an external qBittorrent uses its own proxy settings.';
       default:
         return null;
     }
@@ -158978,7 +159077,7 @@ extension on _StringsAr {
       case 'update_connecting':
         return 'جارٍ الاتصال…';
       case 'network_proxy_auto_hint':
-        return 'يُطبَّق على جميع طلبات الإنترنت في التطبيق: التحديثات، والمزامنة السحابية، والقواميس، والتنزيلات، والترجمات، والبيانات الوصفية. اتركه فارغًا للوضع التلقائي: متغيرات البيئة، ثم وكيل النظام المفعّل. تتصل عمليات نقل P2P (torrent) مباشرة دائمًا.';
+        return 'يُطبَّق على جميع طلبات الإنترنت في التطبيق: التحديثات، والمزامنة السحابية، والقواميس، والتنزيلات، والترجمات، والبيانات الوصفية. اتركه فارغًا للوضع التلقائي: متغيرات البيئة، ثم وكيل النظام المفعّل. تتصل عمليات نقل P2P (torrent) مباشرة افتراضيًا؛ يمكنك تفعيلها بشكل منفصل أدناه.';
       case 'network_proxy_hint':
         return 'المضيف:المنفذ، مثال 127.0.0.1:7890 (IPv4/اسم مضيف فقط)';
       case 'network_proxy_invalid':
@@ -162706,6 +162805,10 @@ extension on _StringsAr {
             'هناك ${n} عنصر محدد مخفي بواسطة عامل التصفية الحالي ولن تتم معالجته.';
       case 'section_network':
         return 'الشبكة';
+      case 'network_proxy_p2p_label':
+        return 'تمرير حركة P2P (torrent) عبر الوكيل';
+      case 'network_proxy_p2p_warning':
+        return 'معطّل افتراضيًا؛ يتصل P2P مباشرة. قد يؤدي التمرير عبر الوكيل إلى خفض السرعة، وكثير من مزودي الوكلاء يحظرون حركة BitTorrent: قد يتم تقييد حساب الوكيل أو تحذيره أو إنهاؤه. ينطبق على المحرك المدمج فقط؛ يستخدم qBittorrent الخارجي إعدادات الوكيل الخاصة به.';
       default:
         return null;
     }
@@ -166859,7 +166962,7 @@ extension on _StringsDe {
       case 'update_connecting':
         return 'Verbinde…';
       case 'network_proxy_auto_hint':
-        return 'Gilt für alle Internetanfragen der App: Updates, Cloud-Sync, Wörterbücher, Downloads, Untertitel und Metadaten. Leer lassen für automatisch: Umgebungsvariablen, dann der aktivierte System-Proxy. P2P-(Torrent-)Übertragungen verbinden sich immer direkt.';
+        return 'Gilt für alle Internetanfragen der App: Updates, Cloud-Sync, Wörterbücher, Downloads, Untertitel und Metadaten. Leer lassen für automatisch: Umgebungsvariablen, dann der aktivierte System-Proxy. P2P-(Torrent-)Übertragungen verbinden sich standardmäßig direkt und lassen sich unten separat aktivieren.';
       case 'network_proxy_hint':
         return 'Host:Port, z. B. 127.0.0.1:7890 (nur IPv4/Host)';
       case 'network_proxy_invalid':
@@ -170605,6 +170708,10 @@ extension on _StringsDe {
             'Weitere ${n} ausgewählte Elemente sind durch den aktuellen Filter ausgeblendet und werden nicht bearbeitet.';
       case 'section_network':
         return 'Netzwerk';
+      case 'network_proxy_p2p_label':
+        return 'P2P-(Torrent-)Verkehr über den Proxy leiten';
+      case 'network_proxy_p2p_warning':
+        return 'Standardmäßig aus – P2P verbindet sich direkt. Über den Proxy kann die Geschwindigkeit sinken, und viele Proxy-Anbieter verbieten BitTorrent-Verkehr: Dein Proxy-Konto kann gedrosselt, verwarnt oder gekündigt werden. Gilt nur für die integrierte Engine; ein externes qBittorrent nutzt seine eigenen Proxy-Einstellungen.';
       default:
         return null;
     }
@@ -174756,7 +174863,7 @@ extension on _StringsEs {
       case 'update_connecting':
         return 'Conectando…';
       case 'network_proxy_auto_hint':
-        return 'Se aplica a todas las solicitudes de Internet de la aplicación: actualizaciones, sincronización en la nube, diccionarios, descargas, subtítulos y metadatos. Déjelo en blanco para automático: variables de entorno y, después, el proxy del sistema habilitado. Las transferencias P2P (torrent) siempre se conectan directamente.';
+        return 'Se aplica a todas las solicitudes de Internet de la aplicación: actualizaciones, sincronización en la nube, diccionarios, descargas, subtítulos y metadatos. Déjelo en blanco para automático: variables de entorno y, después, el proxy del sistema habilitado. Las transferencias P2P (torrent) se conectan directamente de forma predeterminada; puede activarlas por separado abajo.';
       case 'network_proxy_hint':
         return 'host:puerto, ej. 127.0.0.1:7890 (solo IPv4/host)';
       case 'network_proxy_invalid':
@@ -178496,6 +178603,10 @@ extension on _StringsEs {
             'Otros ${n} elementos seleccionados están ocultos por el filtro actual y no se procesarán.';
       case 'section_network':
         return 'Red';
+      case 'network_proxy_p2p_label':
+        return 'Enrutar el tráfico P2P (torrent) por el proxy';
+      case 'network_proxy_p2p_warning':
+        return 'Desactivado de forma predeterminada: P2P se conecta directamente. Pasar por el proxy puede reducir la velocidad y muchos proveedores de proxy prohíben el tráfico BitTorrent: su cuenta de proxy podría ser limitada, advertida o cancelada. Solo se aplica al motor integrado; un qBittorrent externo usa su propia configuración de proxy.';
       default:
         return null;
     }
@@ -182652,7 +182763,7 @@ extension on _StringsFr {
       case 'update_connecting':
         return 'Connexion…';
       case 'network_proxy_auto_hint':
-        return 'S\'applique à toutes les requêtes Internet de l\'application : mises à jour, synchronisation cloud, dictionnaires, téléchargements, sous-titres et métadonnées. Laissez vide pour le mode automatique : variables d\'environnement, puis le proxy système activé. Les transferts P2P (torrent) se connectent toujours directement.';
+        return 'S\'applique à toutes les requêtes Internet de l\'application : mises à jour, synchronisation cloud, dictionnaires, téléchargements, sous-titres et métadonnées. Laissez vide pour le mode automatique : variables d\'environnement, puis le proxy système activé. Les transferts P2P (torrent) se connectent directement par défaut ; vous pouvez les activer séparément ci-dessous.';
       case 'network_proxy_hint':
         return 'hôte:port, par ex. 127.0.0.1:7890 (IPv4/nom d\'hôte uniquement)';
       case 'network_proxy_invalid':
@@ -186395,6 +186506,10 @@ extension on _StringsFr {
             '${n} autres éléments sélectionnés sont masqués par le filtre actuel et ne seront pas traités.';
       case 'section_network':
         return 'Réseau';
+      case 'network_proxy_p2p_label':
+        return 'Faire passer le trafic P2P (torrent) par le proxy';
+      case 'network_proxy_p2p_warning':
+        return 'Désactivé par défaut : le P2P se connecte directement. Passer par le proxy peut réduire la vitesse, et de nombreux fournisseurs de proxy interdisent le trafic BitTorrent : votre compte proxy peut être bridé, averti ou résilié. Ne s\'applique qu\'au moteur intégré ; un qBittorrent externe utilise ses propres paramètres de proxy.';
       default:
         return null;
     }
@@ -190536,7 +190651,7 @@ extension on _StringsId {
       case 'update_connecting':
         return 'Menghubungkan…';
       case 'network_proxy_auto_hint':
-        return 'Berlaku untuk semua permintaan Internet aplikasi: pembaruan, sinkronisasi cloud, kamus, unduhan, subtitel, dan metadata. Kosongkan untuk otomatis: variabel lingkungan, lalu proksi sistem yang diaktifkan. Transfer P2P (torrent) selalu terhubung langsung.';
+        return 'Berlaku untuk semua permintaan Internet aplikasi: pembaruan, sinkronisasi cloud, kamus, unduhan, subtitel, dan metadata. Kosongkan untuk otomatis: variabel lingkungan, lalu proksi sistem yang diaktifkan. Transfer P2P (torrent) terhubung langsung secara default; Anda dapat mengaktifkannya secara terpisah di bawah.';
       case 'network_proxy_hint':
         return 'host:port, mis. 127.0.0.1:7890 (khusus IPv4/host)';
       case 'network_proxy_invalid':
@@ -194266,6 +194381,10 @@ extension on _StringsId {
             '${n} item terpilih lainnya disembunyikan oleh filter saat ini dan tidak akan diproses.';
       case 'section_network':
         return 'Jaringan';
+      case 'network_proxy_p2p_label':
+        return 'Rutekan lalu lintas P2P (torrent) melalui proksi';
+      case 'network_proxy_p2p_warning':
+        return 'Nonaktif secara default — P2P terhubung langsung. Melewati proksi dapat menurunkan kecepatan, dan banyak penyedia proksi melarang lalu lintas BitTorrent: akun proksi Anda bisa dibatasi, diperingatkan, atau dihentikan. Hanya berlaku untuk mesin bawaan; qBittorrent eksternal memakai pengaturan proksinya sendiri.';
       default:
         return null;
     }
@@ -198417,7 +198536,7 @@ extension on _StringsIt {
       case 'update_connecting':
         return 'Connessione…';
       case 'network_proxy_auto_hint':
-        return 'Si applica a tutte le richieste Internet dell\'app: aggiornamenti, sincronizzazione cloud, dizionari, download, sottotitoli e metadati. Lascia vuoto per la modalità automatica: variabili d\'ambiente, poi il proxy di sistema attivo. I trasferimenti P2P (torrent) si connettono sempre direttamente.';
+        return 'Si applica a tutte le richieste Internet dell\'app: aggiornamenti, sincronizzazione cloud, dizionari, download, sottotitoli e metadati. Lascia vuoto per la modalità automatica: variabili d\'ambiente, poi il proxy di sistema attivo. I trasferimenti P2P (torrent) si connettono direttamente per impostazione predefinita; puoi attivarli separatamente qui sotto.';
       case 'network_proxy_hint':
         return 'host:porta, es. 127.0.0.1:7890 (solo IPv4/host)';
       case 'network_proxy_invalid':
@@ -202158,6 +202277,10 @@ extension on _StringsIt {
             'Altri ${n} elementi selezionati sono nascosti dal filtro corrente e non verranno elaborati.';
       case 'section_network':
         return 'Rete';
+      case 'network_proxy_p2p_label':
+        return 'Instrada il traffico P2P (torrent) tramite il proxy';
+      case 'network_proxy_p2p_warning':
+        return 'Disattivato per impostazione predefinita: il P2P si connette direttamente. Passare dal proxy può ridurre la velocità e molti provider proxy vietano il traffico BitTorrent: l\'account proxy potrebbe essere limitato, avvisato o chiuso. Vale solo per il motore integrato; un qBittorrent esterno usa le proprie impostazioni proxy.';
       default:
         return null;
     }
@@ -206269,7 +206392,7 @@ extension on _StringsJa {
       case 'update_connecting':
         return '更新元に接続中…';
       case 'network_proxy_auto_hint':
-        return 'アプリのすべての通信（更新、クラウド同期、辞書、ダウンロード、字幕、メタデータ）に適用されます。空欄で自動：環境変数、次に有効なシステムプロキシを使用します。P2P（torrent）通信は常に直接接続します。';
+        return 'アプリのすべての通信（更新、クラウド同期、辞書、ダウンロード、字幕、メタデータ）に適用されます。空欄で自動：環境変数、次に有効なシステムプロキシを使用します。P2P（torrent）通信は既定で直接接続します。下で個別に有効化できます。';
       case 'network_proxy_hint':
         return 'ホスト:ポート 例: 127.0.0.1:7890（IPv4/ホスト名のみ）';
       case 'network_proxy_invalid':
@@ -209983,6 +210106,10 @@ extension on _StringsJa {
             '選択済みの ${n} 件は現在のフィルターで非表示のため、今回は処理されません。';
       case 'section_network':
         return 'ネットワーク';
+      case 'network_proxy_p2p_label':
+        return 'P2P（torrent）通信をプロキシ経由にする';
+      case 'network_proxy_p2p_warning':
+        return '既定ではオフで、P2P は直接接続します。プロキシ経由にすると速度が低下する場合があり、多くのプロキシ事業者は BitTorrent 通信を禁止しているため、プロキシアカウントが帯域制限・警告・停止される恐れがあります。内蔵エンジンにのみ適用され、外部 qBittorrent は自身のプロキシ設定を使用します。';
       default:
         return null;
     }
@@ -214097,7 +214224,7 @@ extension on _StringsKo {
       case 'update_connecting':
         return '연결 중…';
       case 'network_proxy_auto_hint':
-        return '앱의 모든 인터넷 요청(업데이트, 클라우드 동기화, 사전, 다운로드, 자막, 메타데이터)에 적용됩니다. 비워 두면 자동: 환경 변수, 그다음 활성화된 시스템 프록시를 사용합니다. P2P(토렌트) 전송은 항상 직접 연결합니다.';
+        return '앱의 모든 인터넷 요청(업데이트, 클라우드 동기화, 사전, 다운로드, 자막, 메타데이터)에 적용됩니다. 비워 두면 자동: 환경 변수, 그다음 활성화된 시스템 프록시를 사용합니다. P2P(토렌트) 전송은 기본적으로 직접 연결하며, 아래에서 따로 켤 수 있습니다.';
       case 'network_proxy_hint':
         return '호스트:포트, 예: 127.0.0.1:7890 (IPv4/호스트만 지원)';
       case 'network_proxy_invalid':
@@ -217810,6 +217937,10 @@ extension on _StringsKo {
             '선택한 항목 중 ${n}개는 현재 필터로 숨겨져 있어 처리되지 않습니다.';
       case 'section_network':
         return '네트워크';
+      case 'network_proxy_p2p_label':
+        return 'P2P(토렌트) 전송을 프록시로 라우팅';
+      case 'network_proxy_p2p_warning':
+        return '기본적으로 꺼져 있으며 P2P는 직접 연결합니다. 프록시를 거치면 속도가 떨어질 수 있고, 많은 프록시 제공업체가 BitTorrent 트래픽을 금지하므로 프록시 계정이 속도 제한·경고·해지될 수 있습니다. 내장 엔진에만 적용되며 외부 qBittorrent는 자체 프록시 설정을 사용합니다.';
       default:
         return null;
     }
@@ -221956,7 +222087,7 @@ extension on _StringsNl {
       case 'update_connecting':
         return 'Verbinden…';
       case 'network_proxy_auto_hint':
-        return 'Geldt voor alle internetverzoeken van de app: updates, cloudsynchronisatie, woordenboeken, downloads, ondertitels en metadata. Laat leeg voor automatisch: omgevingsvariabelen, daarna de ingeschakelde systeemproxy. P2P-overdrachten (torrent) maken altijd rechtstreeks verbinding.';
+        return 'Geldt voor alle internetverzoeken van de app: updates, cloudsynchronisatie, woordenboeken, downloads, ondertitels en metadata. Laat leeg voor automatisch: omgevingsvariabelen, daarna de ingeschakelde systeemproxy. P2P-overdrachten (torrent) maken standaard rechtstreeks verbinding; je kunt ze hieronder apart inschakelen.';
       case 'network_proxy_hint':
         return 'host:poort, bijv. 127.0.0.1:7890 (alleen IPv4/host)';
       case 'network_proxy_invalid':
@@ -225696,6 +225827,10 @@ extension on _StringsNl {
             'Nog ${n} geselecteerde items zijn verborgen door het huidige filter en worden niet verwerkt.';
       case 'section_network':
         return 'Netwerk';
+      case 'network_proxy_p2p_label':
+        return 'P2P-verkeer (torrent) via de proxy leiden';
+      case 'network_proxy_p2p_warning':
+        return 'Standaard uit: P2P maakt rechtstreeks verbinding. Via de proxy kan de snelheid dalen en veel proxyaanbieders verbieden BitTorrent-verkeer: je proxyaccount kan worden afgeknepen, gewaarschuwd of opgezegd. Geldt alleen voor de ingebouwde engine; een externe qBittorrent gebruikt zijn eigen proxy-instellingen.';
       default:
         return null;
     }
@@ -229839,7 +229974,7 @@ extension on _StringsPtBr {
       case 'update_connecting':
         return 'Conectando…';
       case 'network_proxy_auto_hint':
-        return 'Aplica-se a todas as solicitações de Internet do aplicativo: atualizações, sincronização na nuvem, dicionários, downloads, legendas e metadados. Deixe em branco para automático: variáveis de ambiente e, depois, o proxy do sistema ativado. As transferências P2P (torrent) sempre se conectam diretamente.';
+        return 'Aplica-se a todas as solicitações de Internet do aplicativo: atualizações, sincronização na nuvem, dicionários, downloads, legendas e metadados. Deixe em branco para automático: variáveis de ambiente e, depois, o proxy do sistema ativado. As transferências P2P (torrent) se conectam diretamente por padrão; você pode ativá-las separadamente abaixo.';
       case 'network_proxy_hint':
         return 'host:porta, ex: 127.0.0.1:7890 (apenas IPv4/host)';
       case 'network_proxy_invalid':
@@ -233577,6 +233712,10 @@ extension on _StringsPtBr {
             'Outros ${n} itens selecionados estão ocultos pelo filtro atual e não serão processados.';
       case 'section_network':
         return 'Rede';
+      case 'network_proxy_p2p_label':
+        return 'Rotear o tráfego P2P (torrent) pelo proxy';
+      case 'network_proxy_p2p_warning':
+        return 'Desativado por padrão: o P2P se conecta diretamente. Passar pelo proxy pode reduzir a velocidade, e muitos provedores de proxy proíbem tráfego BitTorrent: sua conta de proxy pode ser limitada, advertida ou encerrada. Aplica-se apenas ao mecanismo integrado; um qBittorrent externo usa suas próprias configurações de proxy.';
       default:
         return null;
     }
@@ -237725,7 +237864,7 @@ extension on _StringsRu {
       case 'update_connecting':
         return 'Подключение…';
       case 'network_proxy_auto_hint':
-        return 'Применяется ко всем интернет-запросам приложения: обновления, облачная синхронизация, словари, загрузки, субтитры и метаданные. Оставьте пустым для автоматического режима: переменные окружения, затем включённый системный прокси. P2P-передачи (torrent) всегда подключаются напрямую.';
+        return 'Применяется ко всем интернет-запросам приложения: обновления, облачная синхронизация, словари, загрузки, субтитры и метаданные. Оставьте пустым для автоматического режима: переменные окружения, затем включённый системный прокси. P2P-передачи (torrent) по умолчанию подключаются напрямую; их можно включить отдельно ниже.';
       case 'network_proxy_hint':
         return 'хост:порт, например 127.0.0.1:7890 (только IPv4/хост)';
       case 'network_proxy_invalid':
@@ -241464,6 +241603,10 @@ extension on _StringsRu {
             'Ещё ${n} выбранных элементов скрыты текущим фильтром и не будут обработаны.';
       case 'section_network':
         return 'Сеть';
+      case 'network_proxy_p2p_label':
+        return 'Пропускать P2P-трафик (torrent) через прокси';
+      case 'network_proxy_p2p_warning':
+        return 'По умолчанию выключено — P2P подключается напрямую. Через прокси скорость может снизиться, а многие прокси-провайдеры запрещают BitTorrent-трафик: аккаунт прокси могут ограничить, предупредить или заблокировать. Действует только для встроенного движка; внешний qBittorrent использует собственные настройки прокси.';
       default:
         return null;
     }
@@ -245597,7 +245740,7 @@ extension on _StringsTh {
       case 'update_connecting':
         return 'กำลังเชื่อมต่อแหล่งอัปเดต…';
       case 'network_proxy_auto_hint':
-        return 'ใช้กับคำขออินเทอร์เน็ตทั้งหมดของแอป: การอัปเดต การซิงค์คลาวด์ พจนานุกรม การดาวน์โหลด คำบรรยาย และข้อมูลเมตา เว้นว่างไว้เพื่อใช้อัตโนมัติ: ตัวแปรสภาพแวดล้อม จากนั้นพร็อกซีระบบที่เปิดใช้งาน การถ่ายโอน P2P (torrent) จะเชื่อมต่อโดยตรงเสมอ';
+        return 'ใช้กับคำขออินเทอร์เน็ตทั้งหมดของแอป: การอัปเดต การซิงค์คลาวด์ พจนานุกรม การดาวน์โหลด คำบรรยาย และข้อมูลเมตา เว้นว่างไว้เพื่อใช้อัตโนมัติ: ตัวแปรสภาพแวดล้อม จากนั้นพร็อกซีระบบที่เปิดใช้งาน การถ่ายโอน P2P (torrent) จะเชื่อมต่อโดยตรงตามค่าเริ่มต้น สามารถเปิดแยกได้ด้านล่าง';
       case 'network_proxy_hint':
         return 'host:port เช่น 127.0.0.1:7890 (IPv4/host เท่านั้น)';
       case 'network_proxy_invalid':
@@ -249323,6 +249466,10 @@ extension on _StringsTh {
             'รายการที่เลือกอีก ${n} รายการถูกซ่อนด้วยตัวกรองปัจจุบันและจะไม่ถูกดำเนินการ';
       case 'section_network':
         return 'เครือข่าย';
+      case 'network_proxy_p2p_label':
+        return 'ส่งการรับส่งข้อมูล P2P (torrent) ผ่านพร็อกซี';
+      case 'network_proxy_p2p_warning':
+        return 'ปิดตามค่าเริ่มต้น P2P จะเชื่อมต่อโดยตรง การส่งผ่านพร็อกซีอาจทำให้ความเร็วลดลง และผู้ให้บริการพร็อกซีจำนวนมากห้ามการรับส่งข้อมูล BitTorrent บัญชีพร็อกซีของคุณอาจถูกจำกัดความเร็ว เตือน หรือยกเลิก มีผลเฉพาะเอนจินในตัวเท่านั้น qBittorrent ภายนอกใช้การตั้งค่าพร็อกซีของตัวเอง';
       default:
         return null;
     }
@@ -253462,7 +253609,7 @@ extension on _StringsTr {
       case 'update_connecting':
         return 'Bağlanılıyor…';
       case 'network_proxy_auto_hint':
-        return 'Uygulamanın tüm internet isteklerine uygulanır: güncellemeler, bulut eşitleme, sözlükler, indirmeler, altyazılar ve meta veriler. Otomatik için boş bırakın: önce ortam değişkenleri, sonra etkin sistem proxy\'si. P2P (torrent) aktarımları her zaman doğrudan bağlanır.';
+        return 'Uygulamanın tüm internet isteklerine uygulanır: güncellemeler, bulut eşitleme, sözlükler, indirmeler, altyazılar ve meta veriler. Otomatik için boş bırakın: önce ortam değişkenleri, sonra etkin sistem proxy\'si. P2P (torrent) aktarımları varsayılan olarak doğrudan bağlanır; aşağıdan ayrıca etkinleştirebilirsiniz.';
       case 'network_proxy_hint':
         return 'sunucu:port, ör. 127.0.0.1:7890 (yalnızca IPv4/sunucu adı)';
       case 'network_proxy_invalid':
@@ -257199,6 +257346,10 @@ extension on _StringsTr {
             'Seçili ${n} öğe daha geçerli filtre tarafından gizlendi ve işlenmeyecek.';
       case 'section_network':
         return 'Ağ';
+      case 'network_proxy_p2p_label':
+        return 'P2P (torrent) trafiğini proxy üzerinden yönlendir';
+      case 'network_proxy_p2p_warning':
+        return 'Varsayılan olarak kapalı; P2P doğrudan bağlanır. Proxy üzerinden geçmek hızı düşürebilir ve birçok proxy sağlayıcısı BitTorrent trafiğini yasaklar: proxy hesabınız kısıtlanabilir, uyarılabilir veya kapatılabilir. Yalnızca yerleşik motor için geçerlidir; harici qBittorrent kendi proxy ayarlarını kullanır.';
       default:
         return null;
     }
@@ -261339,7 +261490,7 @@ extension on _StringsVi {
       case 'update_connecting':
         return 'Đang kết nối…';
       case 'network_proxy_auto_hint':
-        return 'Áp dụng cho mọi yêu cầu Internet của ứng dụng: cập nhật, đồng bộ đám mây, từ điển, tải xuống, phụ đề và siêu dữ liệu. Để trống để tự động: biến môi trường, sau đó là proxy hệ thống đã bật. Truyền P2P (torrent) luôn kết nối trực tiếp.';
+        return 'Áp dụng cho mọi yêu cầu Internet của ứng dụng: cập nhật, đồng bộ đám mây, từ điển, tải xuống, phụ đề và siêu dữ liệu. Để trống để tự động: biến môi trường, sau đó là proxy hệ thống đã bật. Truyền P2P (torrent) mặc định kết nối trực tiếp; bạn có thể bật riêng bên dưới.';
       case 'network_proxy_hint':
         return 'host:port, ví dụ 127.0.0.1:7890 (chỉ IPv4/host)';
       case 'network_proxy_invalid':
@@ -265068,6 +265219,10 @@ extension on _StringsVi {
             'Còn ${n} mục đã chọn bị ẩn bởi bộ lọc hiện tại và sẽ không được xử lý.';
       case 'section_network':
         return 'Mạng';
+      case 'network_proxy_p2p_label':
+        return 'Định tuyến lưu lượng P2P (torrent) qua proxy';
+      case 'network_proxy_p2p_warning':
+        return 'Mặc định tắt — P2P kết nối trực tiếp. Đi qua proxy có thể làm giảm tốc độ, và nhiều nhà cung cấp proxy cấm lưu lượng BitTorrent: tài khoản proxy của bạn có thể bị giới hạn, cảnh báo hoặc chấm dứt. Chỉ áp dụng cho engine tích hợp; qBittorrent bên ngoài dùng cài đặt proxy riêng.';
       default:
         return null;
     }
@@ -269169,7 +269324,7 @@ extension on _StringsZhCn {
       case 'update_connecting':
         return '正在连接更新源…';
       case 'network_proxy_auto_hint':
-        return '应用的全部联网请求都走这里：更新、云同步、词典、下载、字幕与元数据。留空为自动：先读环境变量，再读已启用的系统代理。P2P（torrent）传输始终直连。';
+        return '应用的全部联网请求都走这里：更新、云同步、词典、下载、字幕与元数据。留空为自动：先读环境变量，再读已启用的系统代理。P2P（torrent）传输默认直连，可在下方单独开启。';
       case 'network_proxy_hint':
         return 'host:port，例如 127.0.0.1:7890（仅 IPv4/域名）';
       case 'network_proxy_invalid':
@@ -272871,6 +273026,10 @@ extension on _StringsZhCn {
         return ({required Object n}) => '另有 ${n} 项被当前筛选隐藏，本次不会处理。';
       case 'section_network':
         return '网络';
+      case 'network_proxy_p2p_label':
+        return 'P2P（torrent）传输走代理';
+      case 'network_proxy_p2p_warning':
+        return '默认关闭，P2P 直连。走代理可能降低速度；且不少代理服务商禁止 BT 流量，可能导致代理账号被限速、警告甚至封禁。仅对内置引擎生效，外接 qBittorrent 请在其自身设置中配置。';
       default:
         return null;
     }
@@ -276973,7 +277132,7 @@ extension on _StringsZhHk {
       case 'update_connecting':
         return '正在連接更新來源…';
       case 'network_proxy_auto_hint':
-        return '應用程式的全部連線請求都經此處：更新、雲端同步、詞典、下載、字幕與中繼資料。留空為自動：先讀取環境變數，再讀取已啟用的系統代理。P2P（torrent）傳輸始終直連。';
+        return '應用程式的全部連線請求都經此處：更新、雲端同步、詞典、下載、字幕與中繼資料。留空為自動：先讀取環境變數，再讀取已啟用的系統代理。P2P（torrent）傳輸預設直連，可在下方單獨開啟。';
       case 'network_proxy_hint':
         return 'host:port，例如 127.0.0.1:7890（僅 IPv4/域名）';
       case 'network_proxy_invalid':
@@ -280675,6 +280834,10 @@ extension on _StringsZhHk {
         return ({required Object n}) => '另有 ${n} 項被目前篩選隱藏，今次不會處理。';
       case 'section_network':
         return '網路';
+      case 'network_proxy_p2p_label':
+        return 'P2P（torrent）傳輸走代理';
+      case 'network_proxy_p2p_warning':
+        return '預設關閉，P2P 直連。走代理可能降低速度；且不少代理服務商禁止 BT 流量，可能導致代理帳號被限速、警告甚至封禁。僅對內建引擎生效，外接 qBittorrent 請在其自身設定中配置。';
       default:
         return null;
     }
