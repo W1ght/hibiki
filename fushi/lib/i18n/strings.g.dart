@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 65195 (3835 per locale)
+/// Strings: 65297 (3841 per locale)
 ///
-/// Built on 2026-08-28 at 14:52 UTC
+/// Built on 2026-08-29 at 13:43 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5225,6 +5225,14 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Could not delete ${n} local file(s); they may still be in use';
   String batch_hidden_by_filter_note({required Object n}) =>
       'Another ${n} selected item(s) are hidden by the current filter and will not be affected.';
+  String get web_video_track_menu => 'Subtitle track';
+  String get web_video_track_live => 'Live captions (sampled from page)';
+  String get web_video_no_tracks => 'No subtitles captured yet';
+  String get web_video_hide_native_subtitles => 'Hide site subtitles';
+  String get web_video_import_hint =>
+      'This is a web page (not a direct stream). It will open in the built-in web player.';
+  String get web_video_platform_unsupported =>
+      'The built-in web player is only available on Windows for now.';
 }
 
 // Path: <root>
@@ -14114,6 +14122,20 @@ class _StringsAr extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       'هناك ${n} عنصر محدد مخفي بواسطة عامل التصفية الحالي ولن تتم معالجته.';
+  @override
+  String get web_video_track_menu => 'Subtitle track';
+  @override
+  String get web_video_track_live => 'Live captions (sampled from page)';
+  @override
+  String get web_video_no_tracks => 'No subtitles captured yet';
+  @override
+  String get web_video_hide_native_subtitles => 'Hide site subtitles';
+  @override
+  String get web_video_import_hint =>
+      'This is a web page (not a direct stream). It will open in the built-in web player.';
+  @override
+  String get web_video_platform_unsupported =>
+      'The built-in web player is only available on Windows for now.';
 }
 
 // Path: <root>
@@ -23210,6 +23232,20 @@ class _StringsDe extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       'Weitere ${n} ausgewählte Elemente sind durch den aktuellen Filter ausgeblendet und werden nicht bearbeitet.';
+  @override
+  String get web_video_track_menu => 'Subtitle track';
+  @override
+  String get web_video_track_live => 'Live captions (sampled from page)';
+  @override
+  String get web_video_no_tracks => 'No subtitles captured yet';
+  @override
+  String get web_video_hide_native_subtitles => 'Hide site subtitles';
+  @override
+  String get web_video_import_hint =>
+      'This is a web page (not a direct stream). It will open in the built-in web player.';
+  @override
+  String get web_video_platform_unsupported =>
+      'The built-in web player is only available on Windows for now.';
 }
 
 // Path: <root>
@@ -32349,6 +32385,20 @@ class _StringsEs extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       'Otros ${n} elementos seleccionados están ocultos por el filtro actual y no se procesarán.';
+  @override
+  String get web_video_track_menu => 'Subtitle track';
+  @override
+  String get web_video_track_live => 'Live captions (sampled from page)';
+  @override
+  String get web_video_no_tracks => 'No subtitles captured yet';
+  @override
+  String get web_video_hide_native_subtitles => 'Hide site subtitles';
+  @override
+  String get web_video_import_hint =>
+      'This is a web page (not a direct stream). It will open in the built-in web player.';
+  @override
+  String get web_video_platform_unsupported =>
+      'The built-in web player is only available on Windows for now.';
 }
 
 // Path: <root>
@@ -41522,6 +41572,20 @@ class _StringsFr extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       '${n} autres éléments sélectionnés sont masqués par le filtre actuel et ne seront pas traités.';
+  @override
+  String get web_video_track_menu => 'Subtitle track';
+  @override
+  String get web_video_track_live => 'Live captions (sampled from page)';
+  @override
+  String get web_video_no_tracks => 'No subtitles captured yet';
+  @override
+  String get web_video_hide_native_subtitles => 'Hide site subtitles';
+  @override
+  String get web_video_import_hint =>
+      'This is a web page (not a direct stream). It will open in the built-in web player.';
+  @override
+  String get web_video_platform_unsupported =>
+      'The built-in web player is only available on Windows for now.';
 }
 
 // Path: <root>
@@ -50522,6 +50586,20 @@ class _StringsId extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       '${n} item terpilih lainnya disembunyikan oleh filter saat ini dan tidak akan diproses.';
+  @override
+  String get web_video_track_menu => 'Subtitle track';
+  @override
+  String get web_video_track_live => 'Live captions (sampled from page)';
+  @override
+  String get web_video_no_tracks => 'No subtitles captured yet';
+  @override
+  String get web_video_hide_native_subtitles => 'Hide site subtitles';
+  @override
+  String get web_video_import_hint =>
+      'This is a web page (not a direct stream). It will open in the built-in web player.';
+  @override
+  String get web_video_platform_unsupported =>
+      'The built-in web player is only available on Windows for now.';
 }
 
 // Path: <root>
@@ -59598,6 +59676,20 @@ class _StringsIt extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       'Altri ${n} elementi selezionati sono nascosti dal filtro corrente e non verranno elaborati.';
+  @override
+  String get web_video_track_menu => 'Subtitle track';
+  @override
+  String get web_video_track_live => 'Live captions (sampled from page)';
+  @override
+  String get web_video_no_tracks => 'No subtitles captured yet';
+  @override
+  String get web_video_hide_native_subtitles => 'Hide site subtitles';
+  @override
+  String get web_video_import_hint =>
+      'This is a web page (not a direct stream). It will open in the built-in web player.';
+  @override
+  String get web_video_platform_unsupported =>
+      'The built-in web player is only available on Windows for now.';
 }
 
 // Path: <root>
@@ -68120,6 +68212,20 @@ class _StringsJa extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       '選択済みの ${n} 件は現在のフィルターで非表示のため、今回は処理されません。';
+  @override
+  String get web_video_track_menu => 'Subtitle track';
+  @override
+  String get web_video_track_live => 'Live captions (sampled from page)';
+  @override
+  String get web_video_no_tracks => 'No subtitles captured yet';
+  @override
+  String get web_video_hide_native_subtitles => 'Hide site subtitles';
+  @override
+  String get web_video_import_hint =>
+      'This is a web page (not a direct stream). It will open in the built-in web player.';
+  @override
+  String get web_video_platform_unsupported =>
+      'The built-in web player is only available on Windows for now.';
 }
 
 // Path: <root>
@@ -76656,6 +76762,20 @@ class _StringsKo extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       '선택한 항목 중 ${n}개는 현재 필터로 숨겨져 있어 처리되지 않습니다.';
+  @override
+  String get web_video_track_menu => 'Subtitle track';
+  @override
+  String get web_video_track_live => 'Live captions (sampled from page)';
+  @override
+  String get web_video_no_tracks => 'No subtitles captured yet';
+  @override
+  String get web_video_hide_native_subtitles => 'Hide site subtitles';
+  @override
+  String get web_video_import_hint =>
+      'This is a web page (not a direct stream). It will open in the built-in web player.';
+  @override
+  String get web_video_platform_unsupported =>
+      'The built-in web player is only available on Windows for now.';
 }
 
 // Path: <root>
@@ -85689,6 +85809,20 @@ class _StringsNl extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       'Nog ${n} geselecteerde items zijn verborgen door het huidige filter en worden niet verwerkt.';
+  @override
+  String get web_video_track_menu => 'Subtitle track';
+  @override
+  String get web_video_track_live => 'Live captions (sampled from page)';
+  @override
+  String get web_video_no_tracks => 'No subtitles captured yet';
+  @override
+  String get web_video_hide_native_subtitles => 'Hide site subtitles';
+  @override
+  String get web_video_import_hint =>
+      'This is a web page (not a direct stream). It will open in the built-in web player.';
+  @override
+  String get web_video_platform_unsupported =>
+      'The built-in web player is only available on Windows for now.';
 }
 
 // Path: <root>
@@ -94778,6 +94912,20 @@ class _StringsPtBr extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       'Outros ${n} itens selecionados estão ocultos pelo filtro atual e não serão processados.';
+  @override
+  String get web_video_track_menu => 'Subtitle track';
+  @override
+  String get web_video_track_live => 'Live captions (sampled from page)';
+  @override
+  String get web_video_no_tracks => 'No subtitles captured yet';
+  @override
+  String get web_video_hide_native_subtitles => 'Hide site subtitles';
+  @override
+  String get web_video_import_hint =>
+      'This is a web page (not a direct stream). It will open in the built-in web player.';
+  @override
+  String get web_video_platform_unsupported =>
+      'The built-in web player is only available on Windows for now.';
 }
 
 // Path: <root>
@@ -103843,6 +103991,20 @@ class _StringsRu extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       'Ещё ${n} выбранных элементов скрыты текущим фильтром и не будут обработаны.';
+  @override
+  String get web_video_track_menu => 'Subtitle track';
+  @override
+  String get web_video_track_live => 'Live captions (sampled from page)';
+  @override
+  String get web_video_no_tracks => 'No subtitles captured yet';
+  @override
+  String get web_video_hide_native_subtitles => 'Hide site subtitles';
+  @override
+  String get web_video_import_hint =>
+      'This is a web page (not a direct stream). It will open in the built-in web player.';
+  @override
+  String get web_video_platform_unsupported =>
+      'The built-in web player is only available on Windows for now.';
 }
 
 // Path: <root>
@@ -112726,6 +112888,20 @@ class _StringsTh extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       'รายการที่เลือกอีก ${n} รายการถูกซ่อนด้วยตัวกรองปัจจุบันและจะไม่ถูกดำเนินการ';
+  @override
+  String get web_video_track_menu => 'Subtitle track';
+  @override
+  String get web_video_track_live => 'Live captions (sampled from page)';
+  @override
+  String get web_video_no_tracks => 'No subtitles captured yet';
+  @override
+  String get web_video_hide_native_subtitles => 'Hide site subtitles';
+  @override
+  String get web_video_import_hint =>
+      'This is a web page (not a direct stream). It will open in the built-in web player.';
+  @override
+  String get web_video_platform_unsupported =>
+      'The built-in web player is only available on Windows for now.';
 }
 
 // Path: <root>
@@ -121712,6 +121888,20 @@ class _StringsTr extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       'Seçili ${n} öğe daha geçerli filtre tarafından gizlendi ve işlenmeyecek.';
+  @override
+  String get web_video_track_menu => 'Subtitle track';
+  @override
+  String get web_video_track_live => 'Live captions (sampled from page)';
+  @override
+  String get web_video_no_tracks => 'No subtitles captured yet';
+  @override
+  String get web_video_hide_native_subtitles => 'Hide site subtitles';
+  @override
+  String get web_video_import_hint =>
+      'This is a web page (not a direct stream). It will open in the built-in web player.';
+  @override
+  String get web_video_platform_unsupported =>
+      'The built-in web player is only available on Windows for now.';
 }
 
 // Path: <root>
@@ -130680,6 +130870,20 @@ class _StringsVi extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       'Còn ${n} mục đã chọn bị ẩn bởi bộ lọc hiện tại và sẽ không được xử lý.';
+  @override
+  String get web_video_track_menu => 'Subtitle track';
+  @override
+  String get web_video_track_live => 'Live captions (sampled from page)';
+  @override
+  String get web_video_no_tracks => 'No subtitles captured yet';
+  @override
+  String get web_video_hide_native_subtitles => 'Hide site subtitles';
+  @override
+  String get web_video_import_hint =>
+      'This is a web page (not a direct stream). It will open in the built-in web player.';
+  @override
+  String get web_video_platform_unsupported =>
+      'The built-in web player is only available on Windows for now.';
 }
 
 // Path: <root>
@@ -138929,6 +139133,18 @@ class _StringsZhCn extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       '另有 ${n} 项被当前筛选隐藏，本次不会处理。';
+  @override
+  String get web_video_track_menu => '字幕轨';
+  @override
+  String get web_video_track_live => '实时采集（页面字幕）';
+  @override
+  String get web_video_no_tracks => '尚未采集到字幕';
+  @override
+  String get web_video_hide_native_subtitles => '隐藏站点字幕';
+  @override
+  String get web_video_import_hint => '这是网页地址（非直链），将用内置网页播放器打开。';
+  @override
+  String get web_video_platform_unsupported => '内置网页播放器目前仅支持 Windows。';
 }
 
 // Path: <root>
@@ -147184,6 +147400,20 @@ class _StringsZhHk extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       '另有 ${n} 項被目前篩選隱藏，今次不會處理。';
+  @override
+  String get web_video_track_menu => 'Subtitle track';
+  @override
+  String get web_video_track_live => 'Live captions (sampled from page)';
+  @override
+  String get web_video_no_tracks => 'No subtitles captured yet';
+  @override
+  String get web_video_hide_native_subtitles => 'Hide site subtitles';
+  @override
+  String get web_video_import_hint =>
+      'This is a web page (not a direct stream). It will open in the built-in web player.';
+  @override
+  String get web_video_platform_unsupported =>
+      'The built-in web player is only available on Windows for now.';
 }
 
 /// Flat map(s) containing all translations.
@@ -155054,6 +155284,18 @@ extension on _StringsEn {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             'Another ${n} selected item(s) are hidden by the current filter and will not be affected.';
+      case 'web_video_track_menu':
+        return 'Subtitle track';
+      case 'web_video_track_live':
+        return 'Live captions (sampled from page)';
+      case 'web_video_no_tracks':
+        return 'No subtitles captured yet';
+      case 'web_video_hide_native_subtitles':
+        return 'Hide site subtitles';
+      case 'web_video_import_hint':
+        return 'This is a web page (not a direct stream). It will open in the built-in web player.';
+      case 'web_video_platform_unsupported':
+        return 'The built-in web player is only available on Windows for now.';
       default:
         return null;
     }
@@ -162920,6 +163162,18 @@ extension on _StringsAr {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             'هناك ${n} عنصر محدد مخفي بواسطة عامل التصفية الحالي ولن تتم معالجته.';
+      case 'web_video_track_menu':
+        return 'Subtitle track';
+      case 'web_video_track_live':
+        return 'Live captions (sampled from page)';
+      case 'web_video_no_tracks':
+        return 'No subtitles captured yet';
+      case 'web_video_hide_native_subtitles':
+        return 'Hide site subtitles';
+      case 'web_video_import_hint':
+        return 'This is a web page (not a direct stream). It will open in the built-in web player.';
+      case 'web_video_platform_unsupported':
+        return 'The built-in web player is only available on Windows for now.';
       default:
         return null;
     }
@@ -170829,6 +171083,18 @@ extension on _StringsDe {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             'Weitere ${n} ausgewählte Elemente sind durch den aktuellen Filter ausgeblendet und werden nicht bearbeitet.';
+      case 'web_video_track_menu':
+        return 'Subtitle track';
+      case 'web_video_track_live':
+        return 'Live captions (sampled from page)';
+      case 'web_video_no_tracks':
+        return 'No subtitles captured yet';
+      case 'web_video_hide_native_subtitles':
+        return 'Hide site subtitles';
+      case 'web_video_import_hint':
+        return 'This is a web page (not a direct stream). It will open in the built-in web player.';
+      case 'web_video_platform_unsupported':
+        return 'The built-in web player is only available on Windows for now.';
       default:
         return null;
     }
@@ -178730,6 +178996,18 @@ extension on _StringsEs {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             'Otros ${n} elementos seleccionados están ocultos por el filtro actual y no se procesarán.';
+      case 'web_video_track_menu':
+        return 'Subtitle track';
+      case 'web_video_track_live':
+        return 'Live captions (sampled from page)';
+      case 'web_video_no_tracks':
+        return 'No subtitles captured yet';
+      case 'web_video_hide_native_subtitles':
+        return 'Hide site subtitles';
+      case 'web_video_import_hint':
+        return 'This is a web page (not a direct stream). It will open in the built-in web player.';
+      case 'web_video_platform_unsupported':
+        return 'The built-in web player is only available on Windows for now.';
       default:
         return null;
     }
@@ -186639,6 +186917,18 @@ extension on _StringsFr {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             '${n} autres éléments sélectionnés sont masqués par le filtre actuel et ne seront pas traités.';
+      case 'web_video_track_menu':
+        return 'Subtitle track';
+      case 'web_video_track_live':
+        return 'Live captions (sampled from page)';
+      case 'web_video_no_tracks':
+        return 'No subtitles captured yet';
+      case 'web_video_hide_native_subtitles':
+        return 'Hide site subtitles';
+      case 'web_video_import_hint':
+        return 'This is a web page (not a direct stream). It will open in the built-in web player.';
+      case 'web_video_platform_unsupported':
+        return 'The built-in web player is only available on Windows for now.';
       default:
         return null;
     }
@@ -194520,6 +194810,18 @@ extension on _StringsId {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             '${n} item terpilih lainnya disembunyikan oleh filter saat ini dan tidak akan diproses.';
+      case 'web_video_track_menu':
+        return 'Subtitle track';
+      case 'web_video_track_live':
+        return 'Live captions (sampled from page)';
+      case 'web_video_no_tracks':
+        return 'No subtitles captured yet';
+      case 'web_video_hide_native_subtitles':
+        return 'Hide site subtitles';
+      case 'web_video_import_hint':
+        return 'This is a web page (not a direct stream). It will open in the built-in web player.';
+      case 'web_video_platform_unsupported':
+        return 'The built-in web player is only available on Windows for now.';
       default:
         return null;
     }
@@ -202422,6 +202724,18 @@ extension on _StringsIt {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             'Altri ${n} elementi selezionati sono nascosti dal filtro corrente e non verranno elaborati.';
+      case 'web_video_track_menu':
+        return 'Subtitle track';
+      case 'web_video_track_live':
+        return 'Live captions (sampled from page)';
+      case 'web_video_no_tracks':
+        return 'No subtitles captured yet';
+      case 'web_video_hide_native_subtitles':
+        return 'Hide site subtitles';
+      case 'web_video_import_hint':
+        return 'This is a web page (not a direct stream). It will open in the built-in web player.';
+      case 'web_video_platform_unsupported':
+        return 'The built-in web player is only available on Windows for now.';
       default:
         return null;
     }
@@ -210257,6 +210571,18 @@ extension on _StringsJa {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             '選択済みの ${n} 件は現在のフィルターで非表示のため、今回は処理されません。';
+      case 'web_video_track_menu':
+        return 'Subtitle track';
+      case 'web_video_track_live':
+        return 'Live captions (sampled from page)';
+      case 'web_video_no_tracks':
+        return 'No subtitles captured yet';
+      case 'web_video_hide_native_subtitles':
+        return 'Hide site subtitles';
+      case 'web_video_import_hint':
+        return 'This is a web page (not a direct stream). It will open in the built-in web player.';
+      case 'web_video_platform_unsupported':
+        return 'The built-in web player is only available on Windows for now.';
       default:
         return null;
     }
@@ -218094,6 +218420,18 @@ extension on _StringsKo {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             '선택한 항목 중 ${n}개는 현재 필터로 숨겨져 있어 처리되지 않습니다.';
+      case 'web_video_track_menu':
+        return 'Subtitle track';
+      case 'web_video_track_live':
+        return 'Live captions (sampled from page)';
+      case 'web_video_no_tracks':
+        return 'No subtitles captured yet';
+      case 'web_video_hide_native_subtitles':
+        return 'Hide site subtitles';
+      case 'web_video_import_hint':
+        return 'This is a web page (not a direct stream). It will open in the built-in web player.';
+      case 'web_video_platform_unsupported':
+        return 'The built-in web player is only available on Windows for now.';
       default:
         return null;
     }
@@ -225990,6 +226328,18 @@ extension on _StringsNl {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             'Nog ${n} geselecteerde items zijn verborgen door het huidige filter en worden niet verwerkt.';
+      case 'web_video_track_menu':
+        return 'Subtitle track';
+      case 'web_video_track_live':
+        return 'Live captions (sampled from page)';
+      case 'web_video_no_tracks':
+        return 'No subtitles captured yet';
+      case 'web_video_hide_native_subtitles':
+        return 'Hide site subtitles';
+      case 'web_video_import_hint':
+        return 'This is a web page (not a direct stream). It will open in the built-in web player.';
+      case 'web_video_platform_unsupported':
+        return 'The built-in web player is only available on Windows for now.';
       default:
         return null;
     }
@@ -233881,6 +234231,18 @@ extension on _StringsPtBr {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             'Outros ${n} itens selecionados estão ocultos pelo filtro atual e não serão processados.';
+      case 'web_video_track_menu':
+        return 'Subtitle track';
+      case 'web_video_track_live':
+        return 'Live captions (sampled from page)';
+      case 'web_video_no_tracks':
+        return 'No subtitles captured yet';
+      case 'web_video_hide_native_subtitles':
+        return 'Hide site subtitles';
+      case 'web_video_import_hint':
+        return 'This is a web page (not a direct stream). It will open in the built-in web player.';
+      case 'web_video_platform_unsupported':
+        return 'The built-in web player is only available on Windows for now.';
       default:
         return null;
     }
@@ -241778,6 +242140,18 @@ extension on _StringsRu {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             'Ещё ${n} выбранных элементов скрыты текущим фильтром и не будут обработаны.';
+      case 'web_video_track_menu':
+        return 'Subtitle track';
+      case 'web_video_track_live':
+        return 'Live captions (sampled from page)';
+      case 'web_video_no_tracks':
+        return 'No subtitles captured yet';
+      case 'web_video_hide_native_subtitles':
+        return 'Hide site subtitles';
+      case 'web_video_import_hint':
+        return 'This is a web page (not a direct stream). It will open in the built-in web player.';
+      case 'web_video_platform_unsupported':
+        return 'The built-in web player is only available on Windows for now.';
       default:
         return null;
     }
@@ -249647,6 +250021,18 @@ extension on _StringsTh {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             'รายการที่เลือกอีก ${n} รายการถูกซ่อนด้วยตัวกรองปัจจุบันและจะไม่ถูกดำเนินการ';
+      case 'web_video_track_menu':
+        return 'Subtitle track';
+      case 'web_video_track_live':
+        return 'Live captions (sampled from page)';
+      case 'web_video_no_tracks':
+        return 'No subtitles captured yet';
+      case 'web_video_hide_native_subtitles':
+        return 'Hide site subtitles';
+      case 'web_video_import_hint':
+        return 'This is a web page (not a direct stream). It will open in the built-in web player.';
+      case 'web_video_platform_unsupported':
+        return 'The built-in web player is only available on Windows for now.';
       default:
         return null;
     }
@@ -257533,6 +257919,18 @@ extension on _StringsTr {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             'Seçili ${n} öğe daha geçerli filtre tarafından gizlendi ve işlenmeyecek.';
+      case 'web_video_track_menu':
+        return 'Subtitle track';
+      case 'web_video_track_live':
+        return 'Live captions (sampled from page)';
+      case 'web_video_no_tracks':
+        return 'No subtitles captured yet';
+      case 'web_video_hide_native_subtitles':
+        return 'Hide site subtitles';
+      case 'web_video_import_hint':
+        return 'This is a web page (not a direct stream). It will open in the built-in web player.';
+      case 'web_video_platform_unsupported':
+        return 'The built-in web player is only available on Windows for now.';
       default:
         return null;
     }
@@ -265412,6 +265810,18 @@ extension on _StringsVi {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             'Còn ${n} mục đã chọn bị ẩn bởi bộ lọc hiện tại và sẽ không được xử lý.';
+      case 'web_video_track_menu':
+        return 'Subtitle track';
+      case 'web_video_track_live':
+        return 'Live captions (sampled from page)';
+      case 'web_video_no_tracks':
+        return 'No subtitles captured yet';
+      case 'web_video_hide_native_subtitles':
+        return 'Hide site subtitles';
+      case 'web_video_import_hint':
+        return 'This is a web page (not a direct stream). It will open in the built-in web player.';
+      case 'web_video_platform_unsupported':
+        return 'The built-in web player is only available on Windows for now.';
       default:
         return null;
     }
@@ -273225,6 +273635,18 @@ extension on _StringsZhCn {
         return ({required Object n}) => '有 ${n} 个本地文件删除失败，可能正在被使用';
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) => '另有 ${n} 项被当前筛选隐藏，本次不会处理。';
+      case 'web_video_track_menu':
+        return '字幕轨';
+      case 'web_video_track_live':
+        return '实时采集（页面字幕）';
+      case 'web_video_no_tracks':
+        return '尚未采集到字幕';
+      case 'web_video_hide_native_subtitles':
+        return '隐藏站点字幕';
+      case 'web_video_import_hint':
+        return '这是网页地址（非直链），将用内置网页播放器打开。';
+      case 'web_video_platform_unsupported':
+        return '内置网页播放器目前仅支持 Windows。';
       default:
         return null;
     }
@@ -281039,6 +281461,18 @@ extension on _StringsZhHk {
         return ({required Object n}) => '有 ${n} 個本機檔案刪除失敗，可能正在被使用';
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) => '另有 ${n} 項被目前篩選隱藏，今次不會處理。';
+      case 'web_video_track_menu':
+        return 'Subtitle track';
+      case 'web_video_track_live':
+        return 'Live captions (sampled from page)';
+      case 'web_video_no_tracks':
+        return 'No subtitles captured yet';
+      case 'web_video_hide_native_subtitles':
+        return 'Hide site subtitles';
+      case 'web_video_import_hint':
+        return 'This is a web page (not a direct stream). It will open in the built-in web player.';
+      case 'web_video_platform_unsupported':
+        return 'The built-in web player is only available on Windows for now.';
       default:
         return null;
     }
