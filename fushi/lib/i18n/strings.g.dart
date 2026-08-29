@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 65263 (3839 per locale)
+/// Strings: 65314 (3842 per locale)
 ///
-/// Built on 2026-08-29 at 06:51 UTC
+/// Built on 2026-08-29 at 13:03 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5225,6 +5225,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Could not delete ${n} local file(s); they may still be in use';
   String batch_hidden_by_filter_note({required Object n}) =>
       'Another ${n} selected item(s) are hidden by the current filter and will not be affected.';
+  String get download_direct_queue_section => 'Direct downloads';
+  String get download_task_kind_all => 'All types';
+  String get download_task_kind_filter => 'Filter by type';
   String get manga_online_series_empty => 'No volumes in this series.';
   String sync_peer_book_delete_confirm({required Object name}) =>
       'Delete "${name}" from the peer device? Its files and reading progress there are removed for good, and this device has no copy. This cannot be undone.';
@@ -14121,6 +14124,12 @@ class _StringsAr extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       'هناك ${n} عنصر محدد مخفي بواسطة عامل التصفية الحالي ولن تتم معالجته.';
+  @override
+  String get download_direct_queue_section => 'Direct downloads';
+  @override
+  String get download_task_kind_all => 'All types';
+  @override
+  String get download_task_kind_filter => 'Filter by type';
   @override
   String get manga_online_series_empty => 'لا توجد مجلدات في هذه السلسلة.';
   @override
@@ -23228,6 +23237,12 @@ class _StringsDe extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       'Weitere ${n} ausgewählte Elemente sind durch den aktuellen Filter ausgeblendet und werden nicht bearbeitet.';
+  @override
+  String get download_direct_queue_section => 'Direct downloads';
+  @override
+  String get download_task_kind_all => 'All types';
+  @override
+  String get download_task_kind_filter => 'Filter by type';
   @override
   String get manga_online_series_empty => 'Diese Serie enthält keine Bände.';
   @override
@@ -32378,6 +32393,12 @@ class _StringsEs extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       'Otros ${n} elementos seleccionados están ocultos por el filtro actual y no se procesarán.';
+  @override
+  String get download_direct_queue_section => 'Direct downloads';
+  @override
+  String get download_task_kind_all => 'All types';
+  @override
+  String get download_task_kind_filter => 'Filter by type';
   @override
   String get manga_online_series_empty => 'Esta serie no tiene volúmenes.';
   @override
@@ -41563,6 +41584,12 @@ class _StringsFr extends _StringsEn {
   String batch_hidden_by_filter_note({required Object n}) =>
       '${n} autres éléments sélectionnés sont masqués par le filtre actuel et ne seront pas traités.';
   @override
+  String get download_direct_queue_section => 'Direct downloads';
+  @override
+  String get download_task_kind_all => 'All types';
+  @override
+  String get download_task_kind_filter => 'Filter by type';
+  @override
   String get manga_online_series_empty => 'Aucun volume dans cette série.';
   @override
   String sync_peer_book_delete_confirm({required Object name}) =>
@@ -50573,6 +50600,12 @@ class _StringsId extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       '${n} item terpilih lainnya disembunyikan oleh filter saat ini dan tidak akan diproses.';
+  @override
+  String get download_direct_queue_section => 'Direct downloads';
+  @override
+  String get download_task_kind_all => 'All types';
+  @override
+  String get download_task_kind_filter => 'Filter by type';
   @override
   String get manga_online_series_empty => 'Seri ini tidak memiliki volume.';
   @override
@@ -59661,6 +59694,12 @@ class _StringsIt extends _StringsEn {
   String batch_hidden_by_filter_note({required Object n}) =>
       'Altri ${n} elementi selezionati sono nascosti dal filtro corrente e non verranno elaborati.';
   @override
+  String get download_direct_queue_section => 'Direct downloads';
+  @override
+  String get download_task_kind_all => 'All types';
+  @override
+  String get download_task_kind_filter => 'Filter by type';
+  @override
   String get manga_online_series_empty => 'Nessun volume in questa serie.';
   @override
   String sync_peer_book_delete_confirm({required Object name}) =>
@@ -68193,6 +68232,12 @@ class _StringsJa extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       '選択済みの ${n} 件は現在のフィルターで非表示のため、今回は処理されません。';
+  @override
+  String get download_direct_queue_section => '直リンクダウンロード';
+  @override
+  String get download_task_kind_all => 'すべての種類';
+  @override
+  String get download_task_kind_filter => '種類で絞り込む';
   @override
   String get manga_online_series_empty => 'このシリーズには巻がありません。';
   @override
@@ -76740,6 +76785,12 @@ class _StringsKo extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       '선택한 항목 중 ${n}개는 현재 필터로 숨겨져 있어 처리되지 않습니다.';
+  @override
+  String get download_direct_queue_section => '직접 링크 다운로드';
+  @override
+  String get download_task_kind_all => '모든 유형';
+  @override
+  String get download_task_kind_filter => '유형별 필터';
   @override
   String get manga_online_series_empty => '이 시리즈에는 권이 없습니다.';
   @override
@@ -85784,6 +85835,12 @@ class _StringsNl extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       'Nog ${n} geselecteerde items zijn verborgen door het huidige filter en worden niet verwerkt.';
+  @override
+  String get download_direct_queue_section => 'Direct downloads';
+  @override
+  String get download_task_kind_all => 'All types';
+  @override
+  String get download_task_kind_filter => 'Filter by type';
   @override
   String get manga_online_series_empty => 'Deze serie bevat geen delen.';
   @override
@@ -94885,6 +94942,12 @@ class _StringsPtBr extends _StringsEn {
   String batch_hidden_by_filter_note({required Object n}) =>
       'Outros ${n} itens selecionados estão ocultos pelo filtro atual e não serão processados.';
   @override
+  String get download_direct_queue_section => 'Direct downloads';
+  @override
+  String get download_task_kind_all => 'All types';
+  @override
+  String get download_task_kind_filter => 'Filter by type';
+  @override
   String get manga_online_series_empty => 'Esta série não tem volumes.';
   @override
   String sync_peer_book_delete_confirm({required Object name}) =>
@@ -103961,6 +104024,12 @@ class _StringsRu extends _StringsEn {
   String batch_hidden_by_filter_note({required Object n}) =>
       'Ещё ${n} выбранных элементов скрыты текущим фильтром и не будут обработаны.';
   @override
+  String get download_direct_queue_section => 'Direct downloads';
+  @override
+  String get download_task_kind_all => 'All types';
+  @override
+  String get download_task_kind_filter => 'Filter by type';
+  @override
   String get manga_online_series_empty => 'В этой серии нет томов.';
   @override
   String sync_peer_book_delete_confirm({required Object name}) =>
@@ -112854,6 +112923,12 @@ class _StringsTh extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       'รายการที่เลือกอีก ${n} รายการถูกซ่อนด้วยตัวกรองปัจจุบันและจะไม่ถูกดำเนินการ';
+  @override
+  String get download_direct_queue_section => 'Direct downloads';
+  @override
+  String get download_task_kind_all => 'All types';
+  @override
+  String get download_task_kind_filter => 'Filter by type';
   @override
   String get manga_online_series_empty => 'ซีรีส์นี้ไม่มีเล่ม';
   @override
@@ -121852,6 +121927,12 @@ class _StringsTr extends _StringsEn {
   String batch_hidden_by_filter_note({required Object n}) =>
       'Seçili ${n} öğe daha geçerli filtre tarafından gizlendi ve işlenmeyecek.';
   @override
+  String get download_direct_queue_section => 'Direct downloads';
+  @override
+  String get download_task_kind_all => 'All types';
+  @override
+  String get download_task_kind_filter => 'Filter by type';
+  @override
   String get manga_online_series_empty => 'Bu seride hiç cilt yok.';
   @override
   String sync_peer_book_delete_confirm({required Object name}) =>
@@ -130831,6 +130912,12 @@ class _StringsVi extends _StringsEn {
   String batch_hidden_by_filter_note({required Object n}) =>
       'Còn ${n} mục đã chọn bị ẩn bởi bộ lọc hiện tại và sẽ không được xử lý.';
   @override
+  String get download_direct_queue_section => 'Direct downloads';
+  @override
+  String get download_task_kind_all => 'All types';
+  @override
+  String get download_task_kind_filter => 'Filter by type';
+  @override
   String get manga_online_series_empty => 'Bộ truyện này không có tập nào.';
   @override
   String sync_peer_book_delete_confirm({required Object name}) =>
@@ -139090,6 +139177,12 @@ class _StringsZhCn extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       '另有 ${n} 项被当前筛选隐藏，本次不会处理。';
+  @override
+  String get download_direct_queue_section => '直链下载';
+  @override
+  String get download_task_kind_all => '全部类型';
+  @override
+  String get download_task_kind_filter => '按类型筛选';
   @override
   String get manga_online_series_empty => '这个系列没有可下载的卷。';
   @override
@@ -147357,6 +147450,12 @@ class _StringsZhHk extends _StringsEn {
   String batch_hidden_by_filter_note({required Object n}) =>
       '另有 ${n} 項被目前篩選隱藏，今次不會處理。';
   @override
+  String get download_direct_queue_section => '直鏈下載';
+  @override
+  String get download_task_kind_all => '全部類型';
+  @override
+  String get download_task_kind_filter => '按類型篩選';
+  @override
   String get manga_online_series_empty => '這個系列沒有可下載的卷。';
   @override
   String sync_peer_book_delete_confirm({required Object name}) =>
@@ -155237,6 +155336,12 @@ extension on _StringsEn {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             'Another ${n} selected item(s) are hidden by the current filter and will not be affected.';
+      case 'download_direct_queue_section':
+        return 'Direct downloads';
+      case 'download_task_kind_all':
+        return 'All types';
+      case 'download_task_kind_filter':
+        return 'Filter by type';
       case 'manga_online_series_empty':
         return 'No volumes in this series.';
       case 'sync_peer_book_delete_confirm':
@@ -163113,6 +163218,12 @@ extension on _StringsAr {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             'هناك ${n} عنصر محدد مخفي بواسطة عامل التصفية الحالي ولن تتم معالجته.';
+      case 'download_direct_queue_section':
+        return 'Direct downloads';
+      case 'download_task_kind_all':
+        return 'All types';
+      case 'download_task_kind_filter':
+        return 'Filter by type';
       case 'manga_online_series_empty':
         return 'لا توجد مجلدات في هذه السلسلة.';
       case 'sync_peer_book_delete_confirm':
@@ -171032,6 +171143,12 @@ extension on _StringsDe {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             'Weitere ${n} ausgewählte Elemente sind durch den aktuellen Filter ausgeblendet und werden nicht bearbeitet.';
+      case 'download_direct_queue_section':
+        return 'Direct downloads';
+      case 'download_task_kind_all':
+        return 'All types';
+      case 'download_task_kind_filter':
+        return 'Filter by type';
       case 'manga_online_series_empty':
         return 'Diese Serie enthält keine Bände.';
       case 'sync_peer_book_delete_confirm':
@@ -178943,6 +179060,12 @@ extension on _StringsEs {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             'Otros ${n} elementos seleccionados están ocultos por el filtro actual y no se procesarán.';
+      case 'download_direct_queue_section':
+        return 'Direct downloads';
+      case 'download_task_kind_all':
+        return 'All types';
+      case 'download_task_kind_filter':
+        return 'Filter by type';
       case 'manga_online_series_empty':
         return 'Esta serie no tiene volúmenes.';
       case 'sync_peer_book_delete_confirm':
@@ -186862,6 +186985,12 @@ extension on _StringsFr {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             '${n} autres éléments sélectionnés sont masqués par le filtre actuel et ne seront pas traités.';
+      case 'download_direct_queue_section':
+        return 'Direct downloads';
+      case 'download_task_kind_all':
+        return 'All types';
+      case 'download_task_kind_filter':
+        return 'Filter by type';
       case 'manga_online_series_empty':
         return 'Aucun volume dans cette série.';
       case 'sync_peer_book_delete_confirm':
@@ -194753,6 +194882,12 @@ extension on _StringsId {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             '${n} item terpilih lainnya disembunyikan oleh filter saat ini dan tidak akan diproses.';
+      case 'download_direct_queue_section':
+        return 'Direct downloads';
+      case 'download_task_kind_all':
+        return 'All types';
+      case 'download_task_kind_filter':
+        return 'Filter by type';
       case 'manga_online_series_empty':
         return 'Seri ini tidak memiliki volume.';
       case 'sync_peer_book_delete_confirm':
@@ -202665,6 +202800,12 @@ extension on _StringsIt {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             'Altri ${n} elementi selezionati sono nascosti dal filtro corrente e non verranno elaborati.';
+      case 'download_direct_queue_section':
+        return 'Direct downloads';
+      case 'download_task_kind_all':
+        return 'All types';
+      case 'download_task_kind_filter':
+        return 'Filter by type';
       case 'manga_online_series_empty':
         return 'Nessun volume in questa serie.';
       case 'sync_peer_book_delete_confirm':
@@ -210510,6 +210651,12 @@ extension on _StringsJa {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             '選択済みの ${n} 件は現在のフィルターで非表示のため、今回は処理されません。';
+      case 'download_direct_queue_section':
+        return '直リンクダウンロード';
+      case 'download_task_kind_all':
+        return 'すべての種類';
+      case 'download_task_kind_filter':
+        return '種類で絞り込む';
       case 'manga_online_series_empty':
         return 'このシリーズには巻がありません。';
       case 'sync_peer_book_delete_confirm':
@@ -218357,6 +218504,12 @@ extension on _StringsKo {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             '선택한 항목 중 ${n}개는 현재 필터로 숨겨져 있어 처리되지 않습니다.';
+      case 'download_direct_queue_section':
+        return '직접 링크 다운로드';
+      case 'download_task_kind_all':
+        return '모든 유형';
+      case 'download_task_kind_filter':
+        return '유형별 필터';
       case 'manga_online_series_empty':
         return '이 시리즈에는 권이 없습니다.';
       case 'sync_peer_book_delete_confirm':
@@ -226263,6 +226416,12 @@ extension on _StringsNl {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             'Nog ${n} geselecteerde items zijn verborgen door het huidige filter en worden niet verwerkt.';
+      case 'download_direct_queue_section':
+        return 'Direct downloads';
+      case 'download_task_kind_all':
+        return 'All types';
+      case 'download_task_kind_filter':
+        return 'Filter by type';
       case 'manga_online_series_empty':
         return 'Deze serie bevat geen delen.';
       case 'sync_peer_book_delete_confirm':
@@ -234164,6 +234323,12 @@ extension on _StringsPtBr {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             'Outros ${n} itens selecionados estão ocultos pelo filtro atual e não serão processados.';
+      case 'download_direct_queue_section':
+        return 'Direct downloads';
+      case 'download_task_kind_all':
+        return 'All types';
+      case 'download_task_kind_filter':
+        return 'Filter by type';
       case 'manga_online_series_empty':
         return 'Esta série não tem volumes.';
       case 'sync_peer_book_delete_confirm':
@@ -242071,6 +242236,12 @@ extension on _StringsRu {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             'Ещё ${n} выбранных элементов скрыты текущим фильтром и не будут обработаны.';
+      case 'download_direct_queue_section':
+        return 'Direct downloads';
+      case 'download_task_kind_all':
+        return 'All types';
+      case 'download_task_kind_filter':
+        return 'Filter by type';
       case 'manga_online_series_empty':
         return 'В этой серии нет томов.';
       case 'sync_peer_book_delete_confirm':
@@ -249950,6 +250121,12 @@ extension on _StringsTh {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             'รายการที่เลือกอีก ${n} รายการถูกซ่อนด้วยตัวกรองปัจจุบันและจะไม่ถูกดำเนินการ';
+      case 'download_direct_queue_section':
+        return 'Direct downloads';
+      case 'download_task_kind_all':
+        return 'All types';
+      case 'download_task_kind_filter':
+        return 'Filter by type';
       case 'manga_online_series_empty':
         return 'ซีรีส์นี้ไม่มีเล่ม';
       case 'sync_peer_book_delete_confirm':
@@ -257846,6 +258023,12 @@ extension on _StringsTr {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             'Seçili ${n} öğe daha geçerli filtre tarafından gizlendi ve işlenmeyecek.';
+      case 'download_direct_queue_section':
+        return 'Direct downloads';
+      case 'download_task_kind_all':
+        return 'All types';
+      case 'download_task_kind_filter':
+        return 'Filter by type';
       case 'manga_online_series_empty':
         return 'Bu seride hiç cilt yok.';
       case 'sync_peer_book_delete_confirm':
@@ -265735,6 +265918,12 @@ extension on _StringsVi {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             'Còn ${n} mục đã chọn bị ẩn bởi bộ lọc hiện tại và sẽ không được xử lý.';
+      case 'download_direct_queue_section':
+        return 'Direct downloads';
+      case 'download_task_kind_all':
+        return 'All types';
+      case 'download_task_kind_filter':
+        return 'Filter by type';
       case 'manga_online_series_empty':
         return 'Bộ truyện này không có tập nào.';
       case 'sync_peer_book_delete_confirm':
@@ -273558,6 +273747,12 @@ extension on _StringsZhCn {
         return ({required Object n}) => '有 ${n} 个本地文件删除失败，可能正在被使用';
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) => '另有 ${n} 项被当前筛选隐藏，本次不会处理。';
+      case 'download_direct_queue_section':
+        return '直链下载';
+      case 'download_task_kind_all':
+        return '全部类型';
+      case 'download_task_kind_filter':
+        return '按类型筛选';
       case 'manga_online_series_empty':
         return '这个系列没有可下载的卷。';
       case 'sync_peer_book_delete_confirm':
@@ -281382,6 +281577,12 @@ extension on _StringsZhHk {
         return ({required Object n}) => '有 ${n} 個本機檔案刪除失敗，可能正在被使用';
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) => '另有 ${n} 項被目前篩選隱藏，今次不會處理。';
+      case 'download_direct_queue_section':
+        return '直鏈下載';
+      case 'download_task_kind_all':
+        return '全部類型';
+      case 'download_task_kind_filter':
+        return '按類型篩選';
       case 'manga_online_series_empty':
         return '這個系列沒有可下載的卷。';
       case 'sync_peer_book_delete_confirm':
