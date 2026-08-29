@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 65314 (3842 per locale)
+/// Strings: 65348 (3844 per locale)
 ///
-/// Built on 2026-08-29 at 13:03 UTC
+/// Built on 2026-08-29 at 13:21 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5235,6 +5235,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Remove "${name}" from the peer device\'s library? The peer\'s own imported video file is kept. This cannot be undone.';
   String get storage_entry_delete_files_confirm_body =>
       'This deletes it from disk right away. Nothing in your library references it - it is cached, exported or re-downloadable data.';
+  String get gal_hook_fold_progressive_lines => 'Merge split dialogue lines';
+  String get gal_hook_fold_progressive_lines_hint =>
+      'Some engines redraw the whole line on every click, so one line is captured several times. Fold those snapshots into a single line.';
 }
 
 // Path: <root>
@@ -14141,6 +14144,11 @@ class _StringsAr extends _StringsEn {
   @override
   String get storage_entry_delete_files_confirm_body =>
       'سيُحذف من القرص فورًا. لا يشير إليه أي عنصر في مكتبتك — فهذه بيانات مؤقتة أو مُصدَّرة أو يمكن تنزيلها من جديد.';
+  @override
+  String get gal_hook_fold_progressive_lines => 'Merge split dialogue lines';
+  @override
+  String get gal_hook_fold_progressive_lines_hint =>
+      'Some engines redraw the whole line on every click, so one line is captured several times. Fold those snapshots into a single line.';
 }
 
 // Path: <root>
@@ -23254,6 +23262,11 @@ class _StringsDe extends _StringsEn {
   @override
   String get storage_entry_delete_files_confirm_body =>
       'Wird sofort von der Festplatte gelöscht. Nichts in deiner Bibliothek verweist darauf – es sind zwischengespeicherte, exportierte oder erneut herunterladbare Daten.';
+  @override
+  String get gal_hook_fold_progressive_lines => 'Merge split dialogue lines';
+  @override
+  String get gal_hook_fold_progressive_lines_hint =>
+      'Some engines redraw the whole line on every click, so one line is captured several times. Fold those snapshots into a single line.';
 }
 
 // Path: <root>
@@ -32410,6 +32423,11 @@ class _StringsEs extends _StringsEn {
   @override
   String get storage_entry_delete_files_confirm_body =>
       'Se eliminará del disco de inmediato. Nada de tu biblioteca hace referencia a esto: son datos en caché, exportados o que se pueden volver a descargar.';
+  @override
+  String get gal_hook_fold_progressive_lines => 'Merge split dialogue lines';
+  @override
+  String get gal_hook_fold_progressive_lines_hint =>
+      'Some engines redraw the whole line on every click, so one line is captured several times. Fold those snapshots into a single line.';
 }
 
 // Path: <root>
@@ -41600,6 +41618,11 @@ class _StringsFr extends _StringsEn {
   @override
   String get storage_entry_delete_files_confirm_body =>
       'Suppression immédiate du disque. Rien dans votre bibliothèque n\'y fait référence : ce sont des données en cache, exportées ou re-téléchargeables.';
+  @override
+  String get gal_hook_fold_progressive_lines => 'Merge split dialogue lines';
+  @override
+  String get gal_hook_fold_progressive_lines_hint =>
+      'Some engines redraw the whole line on every click, so one line is captured several times. Fold those snapshots into a single line.';
 }
 
 // Path: <root>
@@ -50617,6 +50640,11 @@ class _StringsId extends _StringsEn {
   @override
   String get storage_entry_delete_files_confirm_body =>
       'Akan langsung dihapus dari disk. Tidak ada di pustaka Anda yang merujuk ke sini — isinya data cache, hasil ekspor, atau yang bisa diunduh ulang.';
+  @override
+  String get gal_hook_fold_progressive_lines => 'Merge split dialogue lines';
+  @override
+  String get gal_hook_fold_progressive_lines_hint =>
+      'Some engines redraw the whole line on every click, so one line is captured several times. Fold those snapshots into a single line.';
 }
 
 // Path: <root>
@@ -59710,6 +59738,11 @@ class _StringsIt extends _StringsEn {
   @override
   String get storage_entry_delete_files_confirm_body =>
       'Verrà eliminato subito dal disco. Nulla nella tua libreria vi fa riferimento: sono dati in cache, esportati o riscaricabili.';
+  @override
+  String get gal_hook_fold_progressive_lines => 'Merge split dialogue lines';
+  @override
+  String get gal_hook_fold_progressive_lines_hint =>
+      'Some engines redraw the whole line on every click, so one line is captured several times. Fold those snapshots into a single line.';
 }
 
 // Path: <root>
@@ -68249,6 +68282,11 @@ class _StringsJa extends _StringsEn {
   @override
   String get storage_entry_delete_files_confirm_body =>
       'ディスクからすぐに削除します。ライブラリのどの項目もこれを参照していません（キャッシュ・書き出し済みデータ・再取得できるデータです）。';
+  @override
+  String get gal_hook_fold_progressive_lines => 'Merge split dialogue lines';
+  @override
+  String get gal_hook_fold_progressive_lines_hint =>
+      'Some engines redraw the whole line on every click, so one line is captured several times. Fold those snapshots into a single line.';
 }
 
 // Path: <root>
@@ -76802,6 +76840,11 @@ class _StringsKo extends _StringsEn {
   @override
   String get storage_entry_delete_files_confirm_body =>
       '디스크에서 즉시 삭제합니다. 라이브러리의 어떤 항목도 이를 참조하지 않습니다 — 캐시, 내보낸 파일, 또는 다시 받을 수 있는 데이터입니다.';
+  @override
+  String get gal_hook_fold_progressive_lines => 'Merge split dialogue lines';
+  @override
+  String get gal_hook_fold_progressive_lines_hint =>
+      'Some engines redraw the whole line on every click, so one line is captured several times. Fold those snapshots into a single line.';
 }
 
 // Path: <root>
@@ -85852,6 +85895,11 @@ class _StringsNl extends _StringsEn {
   @override
   String get storage_entry_delete_files_confirm_body =>
       'Wordt meteen van de schijf verwijderd. Niets in je bibliotheek verwijst ernaar: het zijn cache-, geëxporteerde of opnieuw te downloaden gegevens.';
+  @override
+  String get gal_hook_fold_progressive_lines => 'Merge split dialogue lines';
+  @override
+  String get gal_hook_fold_progressive_lines_hint =>
+      'Some engines redraw the whole line on every click, so one line is captured several times. Fold those snapshots into a single line.';
 }
 
 // Path: <root>
@@ -94958,6 +95006,11 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get storage_entry_delete_files_confirm_body =>
       'Será excluído do disco imediatamente. Nada na sua biblioteca faz referência a isso — são dados em cache, exportados ou que podem ser baixados de novo.';
+  @override
+  String get gal_hook_fold_progressive_lines => 'Merge split dialogue lines';
+  @override
+  String get gal_hook_fold_progressive_lines_hint =>
+      'Some engines redraw the whole line on every click, so one line is captured several times. Fold those snapshots into a single line.';
 }
 
 // Path: <root>
@@ -104040,6 +104093,11 @@ class _StringsRu extends _StringsEn {
   @override
   String get storage_entry_delete_files_confirm_body =>
       'Будет сразу удалено с диска. Ничто в вашей библиотеке на это не ссылается — это кеш, экспортированные или заново загружаемые данные.';
+  @override
+  String get gal_hook_fold_progressive_lines => 'Merge split dialogue lines';
+  @override
+  String get gal_hook_fold_progressive_lines_hint =>
+      'Some engines redraw the whole line on every click, so one line is captured several times. Fold those snapshots into a single line.';
 }
 
 // Path: <root>
@@ -112940,6 +112998,11 @@ class _StringsTh extends _StringsEn {
   @override
   String get storage_entry_delete_files_confirm_body =>
       'จะถูกลบออกจากดิสก์ทันที ไม่มีรายการใดในคลังอ้างอิงถึงไฟล์นี้ — เป็นข้อมูลแคช ข้อมูลที่ส่งออก หรือข้อมูลที่ดาวน์โหลดใหม่ได้';
+  @override
+  String get gal_hook_fold_progressive_lines => 'Merge split dialogue lines';
+  @override
+  String get gal_hook_fold_progressive_lines_hint =>
+      'Some engines redraw the whole line on every click, so one line is captured several times. Fold those snapshots into a single line.';
 }
 
 // Path: <root>
@@ -121943,6 +122006,11 @@ class _StringsTr extends _StringsEn {
   @override
   String get storage_entry_delete_files_confirm_body =>
       'Diskten hemen silinir. Kitaplığınızdaki hiçbir şey buna başvurmuyor — bunlar önbellek, dışa aktarılmış veya yeniden indirilebilir verilerdir.';
+  @override
+  String get gal_hook_fold_progressive_lines => 'Merge split dialogue lines';
+  @override
+  String get gal_hook_fold_progressive_lines_hint =>
+      'Some engines redraw the whole line on every click, so one line is captured several times. Fold those snapshots into a single line.';
 }
 
 // Path: <root>
@@ -130928,6 +130996,11 @@ class _StringsVi extends _StringsEn {
   @override
   String get storage_entry_delete_files_confirm_body =>
       'Sẽ bị xóa khỏi ổ đĩa ngay lập tức. Không có mục nào trong thư viện tham chiếu tới nó — đây là dữ liệu bộ nhớ đệm, đã xuất hoặc có thể tải lại.';
+  @override
+  String get gal_hook_fold_progressive_lines => 'Merge split dialogue lines';
+  @override
+  String get gal_hook_fold_progressive_lines_hint =>
+      'Some engines redraw the whole line on every click, so one line is captured several times. Fold those snapshots into a single line.';
 }
 
 // Path: <root>
@@ -139194,6 +139267,11 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get storage_entry_delete_files_confirm_body =>
       '将立即从磁盘删除。媒体库里没有条目引用它——这里放的是缓存、导出或可重新获取的数据。';
+  @override
+  String get gal_hook_fold_progressive_lines => '合并分段吐出的台词';
+  @override
+  String get gal_hook_fold_progressive_lines_hint =>
+      '有些引擎每次点击都重绘整行，一句台词会被抓成好几条。开启后把同一句的多次快照折成一条。';
 }
 
 // Path: <root>
@@ -147466,6 +147544,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get storage_entry_delete_files_confirm_body =>
       '將立即從磁碟刪除。媒體庫裡沒有項目引用它——這裡放的是快取、匯出或可重新取得的資料。';
+  @override
+  String get gal_hook_fold_progressive_lines => 'Merge split dialogue lines';
+  @override
+  String get gal_hook_fold_progressive_lines_hint =>
+      'Some engines redraw the whole line on every click, so one line is captured several times. Fold those snapshots into a single line.';
 }
 
 /// Flat map(s) containing all translations.
@@ -155352,6 +155435,10 @@ extension on _StringsEn {
             'Remove "${name}" from the peer device\'s library? The peer\'s own imported video file is kept. This cannot be undone.';
       case 'storage_entry_delete_files_confirm_body':
         return 'This deletes it from disk right away. Nothing in your library references it - it is cached, exported or re-downloadable data.';
+      case 'gal_hook_fold_progressive_lines':
+        return 'Merge split dialogue lines';
+      case 'gal_hook_fold_progressive_lines_hint':
+        return 'Some engines redraw the whole line on every click, so one line is captured several times. Fold those snapshots into a single line.';
       default:
         return null;
     }
@@ -163234,6 +163321,10 @@ extension on _StringsAr {
             'هل تريد إزالة "${name}" من مكتبة الجهاز النظير؟ سيبقى ملف الفيديو الذي استورده النظير بنفسه. لا يمكن التراجع عن هذا الإجراء.';
       case 'storage_entry_delete_files_confirm_body':
         return 'سيُحذف من القرص فورًا. لا يشير إليه أي عنصر في مكتبتك — فهذه بيانات مؤقتة أو مُصدَّرة أو يمكن تنزيلها من جديد.';
+      case 'gal_hook_fold_progressive_lines':
+        return 'Merge split dialogue lines';
+      case 'gal_hook_fold_progressive_lines_hint':
+        return 'Some engines redraw the whole line on every click, so one line is captured several times. Fold those snapshots into a single line.';
       default:
         return null;
     }
@@ -171159,6 +171250,10 @@ extension on _StringsDe {
             '„${name}“ aus der Bibliothek des Partnergeräts entfernen? Die vom Partner selbst importierte Videodatei bleibt erhalten. Dies kann nicht rückgängig gemacht werden.';
       case 'storage_entry_delete_files_confirm_body':
         return 'Wird sofort von der Festplatte gelöscht. Nichts in deiner Bibliothek verweist darauf – es sind zwischengespeicherte, exportierte oder erneut herunterladbare Daten.';
+      case 'gal_hook_fold_progressive_lines':
+        return 'Merge split dialogue lines';
+      case 'gal_hook_fold_progressive_lines_hint':
+        return 'Some engines redraw the whole line on every click, so one line is captured several times. Fold those snapshots into a single line.';
       default:
         return null;
     }
@@ -179076,6 +179171,10 @@ extension on _StringsEs {
             '¿Quitar «${name}» de la biblioteca del dispositivo emparejado? El archivo de vídeo que el propio dispositivo importó se conserva. Esta acción no se puede deshacer.';
       case 'storage_entry_delete_files_confirm_body':
         return 'Se eliminará del disco de inmediato. Nada de tu biblioteca hace referencia a esto: son datos en caché, exportados o que se pueden volver a descargar.';
+      case 'gal_hook_fold_progressive_lines':
+        return 'Merge split dialogue lines';
+      case 'gal_hook_fold_progressive_lines_hint':
+        return 'Some engines redraw the whole line on every click, so one line is captured several times. Fold those snapshots into a single line.';
       default:
         return null;
     }
@@ -187001,6 +187100,10 @@ extension on _StringsFr {
             'Retirer « ${name} » de la bibliothèque de l\'appareil pair ? Le fichier vidéo importé par l\'appareil pair lui-même est conservé. Cette action est irréversible.';
       case 'storage_entry_delete_files_confirm_body':
         return 'Suppression immédiate du disque. Rien dans votre bibliothèque n\'y fait référence : ce sont des données en cache, exportées ou re-téléchargeables.';
+      case 'gal_hook_fold_progressive_lines':
+        return 'Merge split dialogue lines';
+      case 'gal_hook_fold_progressive_lines_hint':
+        return 'Some engines redraw the whole line on every click, so one line is captured several times. Fold those snapshots into a single line.';
       default:
         return null;
     }
@@ -194898,6 +195001,10 @@ extension on _StringsId {
             'Hapus "${name}" dari pustaka perangkat pasangan? Berkas video yang diimpor sendiri oleh perangkat itu tetap disimpan. Tindakan ini tidak dapat dibatalkan.';
       case 'storage_entry_delete_files_confirm_body':
         return 'Akan langsung dihapus dari disk. Tidak ada di pustaka Anda yang merujuk ke sini — isinya data cache, hasil ekspor, atau yang bisa diunduh ulang.';
+      case 'gal_hook_fold_progressive_lines':
+        return 'Merge split dialogue lines';
+      case 'gal_hook_fold_progressive_lines_hint':
+        return 'Some engines redraw the whole line on every click, so one line is captured several times. Fold those snapshots into a single line.';
       default:
         return null;
     }
@@ -202816,6 +202923,10 @@ extension on _StringsIt {
             'Rimuovere "${name}" dalla libreria del dispositivo peer? Il file video importato dal peer stesso viene conservato. L\'operazione non può essere annullata.';
       case 'storage_entry_delete_files_confirm_body':
         return 'Verrà eliminato subito dal disco. Nulla nella tua libreria vi fa riferimento: sono dati in cache, esportati o riscaricabili.';
+      case 'gal_hook_fold_progressive_lines':
+        return 'Merge split dialogue lines';
+      case 'gal_hook_fold_progressive_lines_hint':
+        return 'Some engines redraw the whole line on every click, so one line is captured several times. Fold those snapshots into a single line.';
       default:
         return null;
     }
@@ -210667,6 +210778,10 @@ extension on _StringsJa {
             '対向デバイスのライブラリから「${name}」を削除しますか？対向デバイスが自分で取り込んだ動画ファイルは残ります。この操作は取り消せません。';
       case 'storage_entry_delete_files_confirm_body':
         return 'ディスクからすぐに削除します。ライブラリのどの項目もこれを参照していません（キャッシュ・書き出し済みデータ・再取得できるデータです）。';
+      case 'gal_hook_fold_progressive_lines':
+        return 'Merge split dialogue lines';
+      case 'gal_hook_fold_progressive_lines_hint':
+        return 'Some engines redraw the whole line on every click, so one line is captured several times. Fold those snapshots into a single line.';
       default:
         return null;
     }
@@ -218520,6 +218635,10 @@ extension on _StringsKo {
             '상대 기기의 라이브러리에서 "${name}"을(를) 제거할까요? 상대 기기가 직접 가져온 동영상 파일은 유지됩니다. 이 작업은 되돌릴 수 없습니다.';
       case 'storage_entry_delete_files_confirm_body':
         return '디스크에서 즉시 삭제합니다. 라이브러리의 어떤 항목도 이를 참조하지 않습니다 — 캐시, 내보낸 파일, 또는 다시 받을 수 있는 데이터입니다.';
+      case 'gal_hook_fold_progressive_lines':
+        return 'Merge split dialogue lines';
+      case 'gal_hook_fold_progressive_lines_hint':
+        return 'Some engines redraw the whole line on every click, so one line is captured several times. Fold those snapshots into a single line.';
       default:
         return null;
     }
@@ -226432,6 +226551,10 @@ extension on _StringsNl {
             '"${name}" uit de bibliotheek van het gekoppelde apparaat verwijderen? Het videobestand dat dat apparaat zelf heeft geïmporteerd blijft bewaard. Dit kan niet ongedaan worden gemaakt.';
       case 'storage_entry_delete_files_confirm_body':
         return 'Wordt meteen van de schijf verwijderd. Niets in je bibliotheek verwijst ernaar: het zijn cache-, geëxporteerde of opnieuw te downloaden gegevens.';
+      case 'gal_hook_fold_progressive_lines':
+        return 'Merge split dialogue lines';
+      case 'gal_hook_fold_progressive_lines_hint':
+        return 'Some engines redraw the whole line on every click, so one line is captured several times. Fold those snapshots into a single line.';
       default:
         return null;
     }
@@ -234339,6 +234462,10 @@ extension on _StringsPtBr {
             'Remover "${name}" da biblioteca do dispositivo pareado? O arquivo de vídeo importado pelo próprio dispositivo é mantido. Não é possível desfazer.';
       case 'storage_entry_delete_files_confirm_body':
         return 'Será excluído do disco imediatamente. Nada na sua biblioteca faz referência a isso — são dados em cache, exportados ou que podem ser baixados de novo.';
+      case 'gal_hook_fold_progressive_lines':
+        return 'Merge split dialogue lines';
+      case 'gal_hook_fold_progressive_lines_hint':
+        return 'Some engines redraw the whole line on every click, so one line is captured several times. Fold those snapshots into a single line.';
       default:
         return null;
     }
@@ -242252,6 +242379,10 @@ extension on _StringsRu {
             'Убрать «${name}» из библиотеки сопряжённого устройства? Видеофайл, импортированный самим устройством, останется. Отменить это действие нельзя.';
       case 'storage_entry_delete_files_confirm_body':
         return 'Будет сразу удалено с диска. Ничто в вашей библиотеке на это не ссылается — это кеш, экспортированные или заново загружаемые данные.';
+      case 'gal_hook_fold_progressive_lines':
+        return 'Merge split dialogue lines';
+      case 'gal_hook_fold_progressive_lines_hint':
+        return 'Some engines redraw the whole line on every click, so one line is captured several times. Fold those snapshots into a single line.';
       default:
         return null;
     }
@@ -250137,6 +250268,10 @@ extension on _StringsTh {
             'นำ "${name}" ออกจากคลังของอุปกรณ์คู่หรือไม่? ไฟล์วิดีโอที่อุปกรณ์นั้นนำเข้าเองจะยังคงอยู่ การกระทำนี้ย้อนกลับไม่ได้';
       case 'storage_entry_delete_files_confirm_body':
         return 'จะถูกลบออกจากดิสก์ทันที ไม่มีรายการใดในคลังอ้างอิงถึงไฟล์นี้ — เป็นข้อมูลแคช ข้อมูลที่ส่งออก หรือข้อมูลที่ดาวน์โหลดใหม่ได้';
+      case 'gal_hook_fold_progressive_lines':
+        return 'Merge split dialogue lines';
+      case 'gal_hook_fold_progressive_lines_hint':
+        return 'Some engines redraw the whole line on every click, so one line is captured several times. Fold those snapshots into a single line.';
       default:
         return null;
     }
@@ -258039,6 +258174,10 @@ extension on _StringsTr {
             '"${name}" eş cihazın kitaplığından kaldırılsın mı? Eş cihazın kendi içe aktardığı video dosyası korunur. Bu işlem geri alınamaz.';
       case 'storage_entry_delete_files_confirm_body':
         return 'Diskten hemen silinir. Kitaplığınızdaki hiçbir şey buna başvurmuyor — bunlar önbellek, dışa aktarılmış veya yeniden indirilebilir verilerdir.';
+      case 'gal_hook_fold_progressive_lines':
+        return 'Merge split dialogue lines';
+      case 'gal_hook_fold_progressive_lines_hint':
+        return 'Some engines redraw the whole line on every click, so one line is captured several times. Fold those snapshots into a single line.';
       default:
         return null;
     }
@@ -265934,6 +266073,10 @@ extension on _StringsVi {
             'Gỡ "${name}" khỏi thư viện của thiết bị đối tác? Tệp video do thiết bị đó tự nhập vẫn được giữ lại. Không thể hoàn tác.';
       case 'storage_entry_delete_files_confirm_body':
         return 'Sẽ bị xóa khỏi ổ đĩa ngay lập tức. Không có mục nào trong thư viện tham chiếu tới nó — đây là dữ liệu bộ nhớ đệm, đã xuất hoặc có thể tải lại.';
+      case 'gal_hook_fold_progressive_lines':
+        return 'Merge split dialogue lines';
+      case 'gal_hook_fold_progressive_lines_hint':
+        return 'Some engines redraw the whole line on every click, so one line is captured several times. Fold those snapshots into a single line.';
       default:
         return null;
     }
@@ -273763,6 +273906,10 @@ extension on _StringsZhCn {
             '确定从对端设备的媒体库移除「${name}」吗？对端自己导入的视频文件会保留，此操作不可撤销。';
       case 'storage_entry_delete_files_confirm_body':
         return '将立即从磁盘删除。媒体库里没有条目引用它——这里放的是缓存、导出或可重新获取的数据。';
+      case 'gal_hook_fold_progressive_lines':
+        return '合并分段吐出的台词';
+      case 'gal_hook_fold_progressive_lines_hint':
+        return '有些引擎每次点击都重绘整行，一句台词会被抓成好几条。开启后把同一句的多次快照折成一条。';
       default:
         return null;
     }
@@ -281593,6 +281740,10 @@ extension on _StringsZhHk {
             '確定從對端裝置的媒體庫移除「${name}」嗎？對端自己匯入的影片檔案會保留，此操作不可撤銷。';
       case 'storage_entry_delete_files_confirm_body':
         return '將立即從磁碟刪除。媒體庫裡沒有項目引用它——這裡放的是快取、匯出或可重新取得的資料。';
+      case 'gal_hook_fold_progressive_lines':
+        return 'Merge split dialogue lines';
+      case 'gal_hook_fold_progressive_lines_hint':
+        return 'Some engines redraw the whole line on every click, so one line is captured several times. Fold those snapshots into a single line.';
       default:
         return null;
     }
