@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 65433 (3849 per locale)
+/// Strings: 65484 (3852 per locale)
 ///
-/// Built on 2026-08-29 at 08:55 UTC
+/// Built on 2026-08-29 at 09:08 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5245,6 +5245,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_subtitle_source_label => 'Source';
   String get video_subtitle_collection_members_hint =>
       'Episodes are matched by number from file names; season packs are split automatically.';
+  String get video_subtitle_adjust_title => 'Subtitle adjustments';
+  String get video_subtitle_adjust_collapse => 'Collapse';
+  String get video_subtitle_adjust_expand => 'Expand';
 }
 
 // Path: <root>
@@ -14167,6 +14170,12 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_subtitle_collection_members_hint =>
       'تُطابَق الحلقات بالرقم في اسم الملف؛ وتُقسَّم حزم المواسم تلقائيًا.';
+  @override
+  String get video_subtitle_adjust_title => 'ضبط الترجمة';
+  @override
+  String get video_subtitle_adjust_collapse => 'طيّ';
+  @override
+  String get video_subtitle_adjust_expand => 'توسيع';
 }
 
 // Path: <root>
@@ -23297,6 +23306,12 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_subtitle_collection_members_hint =>
       'Folgen werden anhand der Nummer im Dateinamen zugeordnet; Staffelpakete werden automatisch aufgeteilt.';
+  @override
+  String get video_subtitle_adjust_title => 'Untertitel anpassen';
+  @override
+  String get video_subtitle_adjust_collapse => 'Einklappen';
+  @override
+  String get video_subtitle_adjust_expand => 'Ausklappen';
 }
 
 // Path: <root>
@@ -32471,6 +32486,12 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_subtitle_collection_members_hint =>
       'Los episodios se emparejan por el número del nombre de archivo; los packs de temporada se dividen automáticamente.';
+  @override
+  String get video_subtitle_adjust_title => 'Ajustes de subtítulos';
+  @override
+  String get video_subtitle_adjust_collapse => 'Contraer';
+  @override
+  String get video_subtitle_adjust_expand => 'Expandir';
 }
 
 // Path: <root>
@@ -41680,6 +41701,12 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_subtitle_collection_members_hint =>
       'Les épisodes sont associés par leur numéro dans le nom de fichier ; les packs de saison sont découpés automatiquement.';
+  @override
+  String get video_subtitle_adjust_title => 'Réglages des sous-titres';
+  @override
+  String get video_subtitle_adjust_collapse => 'Réduire';
+  @override
+  String get video_subtitle_adjust_expand => 'Développer';
 }
 
 // Path: <root>
@@ -50714,6 +50741,12 @@ class _StringsId extends _StringsEn {
   @override
   String get video_subtitle_collection_members_hint =>
       'Episode dicocokkan berdasarkan nomor di nama berkas; paket musim dipisah otomatis.';
+  @override
+  String get video_subtitle_adjust_title => 'Penyesuaian subtitle';
+  @override
+  String get video_subtitle_adjust_collapse => 'Ciutkan';
+  @override
+  String get video_subtitle_adjust_expand => 'Perluas';
 }
 
 // Path: <root>
@@ -59826,6 +59859,12 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_subtitle_collection_members_hint =>
       'Gli episodi vengono abbinati dal numero nel nome file; i pacchetti di stagione vengono divisi automaticamente.';
+  @override
+  String get video_subtitle_adjust_title => 'Regolazioni sottotitoli';
+  @override
+  String get video_subtitle_adjust_collapse => 'Comprimi';
+  @override
+  String get video_subtitle_adjust_expand => 'Espandi';
 }
 
 // Path: <root>
@@ -68380,6 +68419,12 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_subtitle_collection_members_hint =>
       '各話はファイル名の話数で照合され、シーズンパックは自動で分割されます。';
+  @override
+  String get video_subtitle_adjust_title => '字幕の調整';
+  @override
+  String get video_subtitle_adjust_collapse => '折りたたむ';
+  @override
+  String get video_subtitle_adjust_expand => '展開';
 }
 
 // Path: <root>
@@ -76948,6 +76993,12 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_subtitle_collection_members_hint =>
       '에피소드는 파일 이름의 화수로 매칭되며, 시즌 팩은 자동으로 분리됩니다.';
+  @override
+  String get video_subtitle_adjust_title => '자막 조정';
+  @override
+  String get video_subtitle_adjust_collapse => '접기';
+  @override
+  String get video_subtitle_adjust_expand => '펼치기';
 }
 
 // Path: <root>
@@ -86015,6 +86066,12 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_subtitle_collection_members_hint =>
       'Afleveringen worden gekoppeld op het nummer in de bestandsnaam; seizoenspakketten worden automatisch gesplitst.';
+  @override
+  String get video_subtitle_adjust_title => 'Ondertitels aanpassen';
+  @override
+  String get video_subtitle_adjust_collapse => 'Inklappen';
+  @override
+  String get video_subtitle_adjust_expand => 'Uitklappen';
 }
 
 // Path: <root>
@@ -95138,6 +95195,12 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_subtitle_collection_members_hint =>
       'Os episódios são combinados pelo número no nome do arquivo; pacotes de temporada são divididos automaticamente.';
+  @override
+  String get video_subtitle_adjust_title => 'Ajustes de legenda';
+  @override
+  String get video_subtitle_adjust_collapse => 'Recolher';
+  @override
+  String get video_subtitle_adjust_expand => 'Expandir';
 }
 
 // Path: <root>
@@ -104239,6 +104302,12 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_subtitle_collection_members_hint =>
       'Серии сопоставляются по номеру в имени файла; сезонные паки разбиваются автоматически.';
+  @override
+  String get video_subtitle_adjust_title => 'Настройка субтитров';
+  @override
+  String get video_subtitle_adjust_collapse => 'Свернуть';
+  @override
+  String get video_subtitle_adjust_expand => 'Развернуть';
 }
 
 // Path: <root>
@@ -113156,6 +113225,12 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_subtitle_collection_members_hint =>
       'จับคู่แต่ละตอนตามหมายเลขในชื่อไฟล์ แพ็กทั้งซีซันจะถูกแยกอัตโนมัติ';
+  @override
+  String get video_subtitle_adjust_title => 'ปรับซับไตเติล';
+  @override
+  String get video_subtitle_adjust_collapse => 'ย่อ';
+  @override
+  String get video_subtitle_adjust_expand => 'ขยาย';
 }
 
 // Path: <root>
@@ -122177,6 +122252,12 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_subtitle_collection_members_hint =>
       'Bölümler dosya adındaki numaraya göre eşleştirilir; sezon paketleri otomatik olarak bölünür.';
+  @override
+  String get video_subtitle_adjust_title => 'Altyazı ayarları';
+  @override
+  String get video_subtitle_adjust_collapse => 'Daralt';
+  @override
+  String get video_subtitle_adjust_expand => 'Genişlet';
 }
 
 // Path: <root>
@@ -131179,6 +131260,12 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_subtitle_collection_members_hint =>
       'Các tập được khớp theo số trong tên tệp; gói cả mùa được tách tự động.';
+  @override
+  String get video_subtitle_adjust_title => 'Điều chỉnh phụ đề';
+  @override
+  String get video_subtitle_adjust_collapse => 'Thu gọn';
+  @override
+  String get video_subtitle_adjust_expand => 'Mở rộng';
 }
 
 // Path: <root>
@@ -139460,6 +139547,12 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_subtitle_collection_members_hint =>
       '各集按文件名里的集号匹配；整季打包字幕自动拆分。';
+  @override
+  String get video_subtitle_adjust_title => '字幕调整';
+  @override
+  String get video_subtitle_adjust_collapse => '收起';
+  @override
+  String get video_subtitle_adjust_expand => '展开';
 }
 
 // Path: <root>
@@ -147747,6 +147840,12 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_subtitle_collection_members_hint =>
       '各集按檔名中的集數匹配；整季打包字幕自動拆分。';
+  @override
+  String get video_subtitle_adjust_title => '字幕調整';
+  @override
+  String get video_subtitle_adjust_collapse => '收起';
+  @override
+  String get video_subtitle_adjust_expand => '展開';
 }
 
 /// Flat map(s) containing all translations.
@@ -155645,6 +155744,12 @@ extension on _StringsEn {
         return 'Source';
       case 'video_subtitle_collection_members_hint':
         return 'Episodes are matched by number from file names; season packs are split automatically.';
+      case 'video_subtitle_adjust_title':
+        return 'Subtitle adjustments';
+      case 'video_subtitle_adjust_collapse':
+        return 'Collapse';
+      case 'video_subtitle_adjust_expand':
+        return 'Expand';
       default:
         return null;
     }
@@ -163539,6 +163644,12 @@ extension on _StringsAr {
         return 'المصدر';
       case 'video_subtitle_collection_members_hint':
         return 'تُطابَق الحلقات بالرقم في اسم الملف؛ وتُقسَّم حزم المواسم تلقائيًا.';
+      case 'video_subtitle_adjust_title':
+        return 'ضبط الترجمة';
+      case 'video_subtitle_adjust_collapse':
+        return 'طيّ';
+      case 'video_subtitle_adjust_expand':
+        return 'توسيع';
       default:
         return null;
     }
@@ -171476,6 +171587,12 @@ extension on _StringsDe {
         return 'Quelle';
       case 'video_subtitle_collection_members_hint':
         return 'Folgen werden anhand der Nummer im Dateinamen zugeordnet; Staffelpakete werden automatisch aufgeteilt.';
+      case 'video_subtitle_adjust_title':
+        return 'Untertitel anpassen';
+      case 'video_subtitle_adjust_collapse':
+        return 'Einklappen';
+      case 'video_subtitle_adjust_expand':
+        return 'Ausklappen';
       default:
         return null;
     }
@@ -179405,6 +179522,12 @@ extension on _StringsEs {
         return 'Fuente';
       case 'video_subtitle_collection_members_hint':
         return 'Los episodios se emparejan por el número del nombre de archivo; los packs de temporada se dividen automáticamente.';
+      case 'video_subtitle_adjust_title':
+        return 'Ajustes de subtítulos';
+      case 'video_subtitle_adjust_collapse':
+        return 'Contraer';
+      case 'video_subtitle_adjust_expand':
+        return 'Expandir';
       default:
         return null;
     }
@@ -187342,6 +187465,12 @@ extension on _StringsFr {
         return 'Source';
       case 'video_subtitle_collection_members_hint':
         return 'Les épisodes sont associés par leur numéro dans le nom de fichier ; les packs de saison sont découpés automatiquement.';
+      case 'video_subtitle_adjust_title':
+        return 'Réglages des sous-titres';
+      case 'video_subtitle_adjust_collapse':
+        return 'Réduire';
+      case 'video_subtitle_adjust_expand':
+        return 'Développer';
       default:
         return null;
     }
@@ -195251,6 +195380,12 @@ extension on _StringsId {
         return 'Sumber';
       case 'video_subtitle_collection_members_hint':
         return 'Episode dicocokkan berdasarkan nomor di nama berkas; paket musim dipisah otomatis.';
+      case 'video_subtitle_adjust_title':
+        return 'Penyesuaian subtitle';
+      case 'video_subtitle_adjust_collapse':
+        return 'Ciutkan';
+      case 'video_subtitle_adjust_expand':
+        return 'Perluas';
       default:
         return null;
     }
@@ -203181,6 +203316,12 @@ extension on _StringsIt {
         return 'Fonte';
       case 'video_subtitle_collection_members_hint':
         return 'Gli episodi vengono abbinati dal numero nel nome file; i pacchetti di stagione vengono divisi automaticamente.';
+      case 'video_subtitle_adjust_title':
+        return 'Regolazioni sottotitoli';
+      case 'video_subtitle_adjust_collapse':
+        return 'Comprimi';
+      case 'video_subtitle_adjust_expand':
+        return 'Espandi';
       default:
         return null;
     }
@@ -211044,6 +211185,12 @@ extension on _StringsJa {
         return 'ソース';
       case 'video_subtitle_collection_members_hint':
         return '各話はファイル名の話数で照合され、シーズンパックは自動で分割されます。';
+      case 'video_subtitle_adjust_title':
+        return '字幕の調整';
+      case 'video_subtitle_adjust_collapse':
+        return '折りたたむ';
+      case 'video_subtitle_adjust_expand':
+        return '展開';
       default:
         return null;
     }
@@ -218909,6 +219056,12 @@ extension on _StringsKo {
         return '출처';
       case 'video_subtitle_collection_members_hint':
         return '에피소드는 파일 이름의 화수로 매칭되며, 시즌 팩은 자동으로 분리됩니다.';
+      case 'video_subtitle_adjust_title':
+        return '자막 조정';
+      case 'video_subtitle_adjust_collapse':
+        return '접기';
+      case 'video_subtitle_adjust_expand':
+        return '펼치기';
       default:
         return null;
     }
@@ -226833,6 +226986,12 @@ extension on _StringsNl {
         return 'Bron';
       case 'video_subtitle_collection_members_hint':
         return 'Afleveringen worden gekoppeld op het nummer in de bestandsnaam; seizoenspakketten worden automatisch gesplitst.';
+      case 'video_subtitle_adjust_title':
+        return 'Ondertitels aanpassen';
+      case 'video_subtitle_adjust_collapse':
+        return 'Inklappen';
+      case 'video_subtitle_adjust_expand':
+        return 'Uitklappen';
       default:
         return null;
     }
@@ -234752,6 +234911,12 @@ extension on _StringsPtBr {
         return 'Fonte';
       case 'video_subtitle_collection_members_hint':
         return 'Os episódios são combinados pelo número no nome do arquivo; pacotes de temporada são divididos automaticamente.';
+      case 'video_subtitle_adjust_title':
+        return 'Ajustes de legenda';
+      case 'video_subtitle_adjust_collapse':
+        return 'Recolher';
+      case 'video_subtitle_adjust_expand':
+        return 'Expandir';
       default:
         return null;
     }
@@ -242677,6 +242842,12 @@ extension on _StringsRu {
         return 'Источник';
       case 'video_subtitle_collection_members_hint':
         return 'Серии сопоставляются по номеру в имени файла; сезонные паки разбиваются автоматически.';
+      case 'video_subtitle_adjust_title':
+        return 'Настройка субтитров';
+      case 'video_subtitle_adjust_collapse':
+        return 'Свернуть';
+      case 'video_subtitle_adjust_expand':
+        return 'Развернуть';
       default:
         return null;
     }
@@ -250574,6 +250745,12 @@ extension on _StringsTh {
         return 'แหล่งที่มา';
       case 'video_subtitle_collection_members_hint':
         return 'จับคู่แต่ละตอนตามหมายเลขในชื่อไฟล์ แพ็กทั้งซีซันจะถูกแยกอัตโนมัติ';
+      case 'video_subtitle_adjust_title':
+        return 'ปรับซับไตเติล';
+      case 'video_subtitle_adjust_collapse':
+        return 'ย่อ';
+      case 'video_subtitle_adjust_expand':
+        return 'ขยาย';
       default:
         return null;
     }
@@ -258488,6 +258665,12 @@ extension on _StringsTr {
         return 'Kaynak';
       case 'video_subtitle_collection_members_hint':
         return 'Bölümler dosya adındaki numaraya göre eşleştirilir; sezon paketleri otomatik olarak bölünür.';
+      case 'video_subtitle_adjust_title':
+        return 'Altyazı ayarları';
+      case 'video_subtitle_adjust_collapse':
+        return 'Daralt';
+      case 'video_subtitle_adjust_expand':
+        return 'Genişlet';
       default:
         return null;
     }
@@ -266395,6 +266578,12 @@ extension on _StringsVi {
         return 'Nguồn';
       case 'video_subtitle_collection_members_hint':
         return 'Các tập được khớp theo số trong tên tệp; gói cả mùa được tách tự động.';
+      case 'video_subtitle_adjust_title':
+        return 'Điều chỉnh phụ đề';
+      case 'video_subtitle_adjust_collapse':
+        return 'Thu gọn';
+      case 'video_subtitle_adjust_expand':
+        return 'Mở rộng';
       default:
         return null;
     }
@@ -274236,6 +274425,12 @@ extension on _StringsZhCn {
         return '来源';
       case 'video_subtitle_collection_members_hint':
         return '各集按文件名里的集号匹配；整季打包字幕自动拆分。';
+      case 'video_subtitle_adjust_title':
+        return '字幕调整';
+      case 'video_subtitle_adjust_collapse':
+        return '收起';
+      case 'video_subtitle_adjust_expand':
+        return '展开';
       default:
         return null;
     }
@@ -282078,6 +282273,12 @@ extension on _StringsZhHk {
         return '來源';
       case 'video_subtitle_collection_members_hint':
         return '各集按檔名中的集數匹配；整季打包字幕自動拆分。';
+      case 'video_subtitle_adjust_title':
+        return '字幕調整';
+      case 'video_subtitle_adjust_collapse':
+        return '收起';
+      case 'video_subtitle_adjust_expand':
+        return '展開';
       default:
         return null;
     }
