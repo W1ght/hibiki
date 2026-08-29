@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 65773 (3869 per locale)
+/// Strings: 65790 (3870 per locale)
 ///
-/// Built on 2026-08-29 at 14:20 UTC
+/// Built on 2026-08-29 at 16:35 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5270,6 +5270,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String mihon_extension_sources_more({required Object count}) =>
       'Show all ${count} sources';
   String get mihon_extension_sources_less => 'Show fewer sources';
+  String get options_website => 'Visit the official website';
 }
 
 // Path: <root>
@@ -14238,6 +14239,8 @@ class _StringsAr extends _StringsEn {
       'Show all ${count} sources';
   @override
   String get mihon_extension_sources_less => 'Show fewer sources';
+  @override
+  String get options_website => 'زيارة الموقع الرسمي';
 }
 
 // Path: <root>
@@ -23415,6 +23418,8 @@ class _StringsDe extends _StringsEn {
       'Show all ${count} sources';
   @override
   String get mihon_extension_sources_less => 'Show fewer sources';
+  @override
+  String get options_website => 'Offizielle Website besuchen';
 }
 
 // Path: <root>
@@ -32636,6 +32641,8 @@ class _StringsEs extends _StringsEn {
       'Show all ${count} sources';
   @override
   String get mihon_extension_sources_less => 'Show fewer sources';
+  @override
+  String get options_website => 'Visitar el sitio web oficial';
 }
 
 // Path: <root>
@@ -41891,6 +41898,8 @@ class _StringsFr extends _StringsEn {
       'Show all ${count} sources';
   @override
   String get mihon_extension_sources_less => 'Show fewer sources';
+  @override
+  String get options_website => 'Visiter le site officiel';
 }
 
 // Path: <root>
@@ -50972,6 +50981,8 @@ class _StringsId extends _StringsEn {
       'Show all ${count} sources';
   @override
   String get mihon_extension_sources_less => 'Show fewer sources';
+  @override
+  String get options_website => 'Kunjungi situs web resmi';
 }
 
 // Path: <root>
@@ -60130,6 +60141,8 @@ class _StringsIt extends _StringsEn {
       'Show all ${count} sources';
   @override
   String get mihon_extension_sources_less => 'Show fewer sources';
+  @override
+  String get options_website => 'Visita il sito ufficiale';
 }
 
 // Path: <root>
@@ -68728,6 +68741,8 @@ class _StringsJa extends _StringsEn {
       'Show all ${count} sources';
   @override
   String get mihon_extension_sources_less => 'Show fewer sources';
+  @override
+  String get options_website => '公式サイトを開く';
 }
 
 // Path: <root>
@@ -77341,6 +77356,8 @@ class _StringsKo extends _StringsEn {
       'Show all ${count} sources';
   @override
   String get mihon_extension_sources_less => 'Show fewer sources';
+  @override
+  String get options_website => '공식 웹사이트 방문';
 }
 
 // Path: <root>
@@ -86456,6 +86473,8 @@ class _StringsNl extends _StringsEn {
       'Show all ${count} sources';
   @override
   String get mihon_extension_sources_less => 'Show fewer sources';
+  @override
+  String get options_website => 'Officiële website bezoeken';
 }
 
 // Path: <root>
@@ -95627,6 +95646,8 @@ class _StringsPtBr extends _StringsEn {
       'Show all ${count} sources';
   @override
   String get mihon_extension_sources_less => 'Show fewer sources';
+  @override
+  String get options_website => 'Visitar o site oficial';
 }
 
 // Path: <root>
@@ -104772,6 +104793,8 @@ class _StringsRu extends _StringsEn {
       'Show all ${count} sources';
   @override
   String get mihon_extension_sources_less => 'Show fewer sources';
+  @override
+  String get options_website => 'Открыть официальный сайт';
 }
 
 // Path: <root>
@@ -113735,6 +113758,8 @@ class _StringsTh extends _StringsEn {
       'Show all ${count} sources';
   @override
   String get mihon_extension_sources_less => 'Show fewer sources';
+  @override
+  String get options_website => 'เยี่ยมชมเว็บไซต์ทางการ';
 }
 
 // Path: <root>
@@ -122801,6 +122826,8 @@ class _StringsTr extends _StringsEn {
       'Show all ${count} sources';
   @override
   String get mihon_extension_sources_less => 'Show fewer sources';
+  @override
+  String get options_website => 'Resmî web sitesini ziyaret et';
 }
 
 // Path: <root>
@@ -131849,6 +131876,8 @@ class _StringsVi extends _StringsEn {
       'Show all ${count} sources';
   @override
   String get mihon_extension_sources_less => 'Show fewer sources';
+  @override
+  String get options_website => 'Truy cập trang web chính thức';
 }
 
 // Path: <root>
@@ -140173,6 +140202,8 @@ class _StringsZhCn extends _StringsEn {
       '展开全部 ${count} 个源';
   @override
   String get mihon_extension_sources_less => '收起源列表';
+  @override
+  String get options_website => '访问官网';
 }
 
 // Path: <root>
@@ -148504,6 +148535,8 @@ class _StringsZhHk extends _StringsEn {
       'Show all ${count} sources';
   @override
   String get mihon_extension_sources_less => 'Show fewer sources';
+  @override
+  String get options_website => '瀏覽官方網站';
 }
 
 /// Flat map(s) containing all translations.
@@ -156445,6 +156478,8 @@ extension on _StringsEn {
         return ({required Object count}) => 'Show all ${count} sources';
       case 'mihon_extension_sources_less':
         return 'Show fewer sources';
+      case 'options_website':
+        return 'Visit the official website';
       default:
         return null;
     }
@@ -164382,6 +164417,8 @@ extension on _StringsAr {
         return ({required Object count}) => 'Show all ${count} sources';
       case 'mihon_extension_sources_less':
         return 'Show fewer sources';
+      case 'options_website':
+        return 'زيارة الموقع الرسمي';
       default:
         return null;
     }
@@ -172362,6 +172399,8 @@ extension on _StringsDe {
         return ({required Object count}) => 'Show all ${count} sources';
       case 'mihon_extension_sources_less':
         return 'Show fewer sources';
+      case 'options_website':
+        return 'Offizielle Website besuchen';
       default:
         return null;
     }
@@ -180334,6 +180373,8 @@ extension on _StringsEs {
         return ({required Object count}) => 'Show all ${count} sources';
       case 'mihon_extension_sources_less':
         return 'Show fewer sources';
+      case 'options_website':
+        return 'Visitar el sitio web oficial';
       default:
         return null;
     }
@@ -188314,6 +188355,8 @@ extension on _StringsFr {
         return ({required Object count}) => 'Show all ${count} sources';
       case 'mihon_extension_sources_less':
         return 'Show fewer sources';
+      case 'options_website':
+        return 'Visiter le site officiel';
       default:
         return null;
     }
@@ -196266,6 +196309,8 @@ extension on _StringsId {
         return ({required Object count}) => 'Show all ${count} sources';
       case 'mihon_extension_sources_less':
         return 'Show fewer sources';
+      case 'options_website':
+        return 'Kunjungi situs web resmi';
       default:
         return null;
     }
@@ -204239,6 +204284,8 @@ extension on _StringsIt {
         return ({required Object count}) => 'Show all ${count} sources';
       case 'mihon_extension_sources_less':
         return 'Show fewer sources';
+      case 'options_website':
+        return 'Visita il sito ufficiale';
       default:
         return null;
     }
@@ -212145,6 +212192,8 @@ extension on _StringsJa {
         return ({required Object count}) => 'Show all ${count} sources';
       case 'mihon_extension_sources_less':
         return 'Show fewer sources';
+      case 'options_website':
+        return '公式サイトを開く';
       default:
         return null;
     }
@@ -220053,6 +220102,8 @@ extension on _StringsKo {
         return ({required Object count}) => 'Show all ${count} sources';
       case 'mihon_extension_sources_less':
         return 'Show fewer sources';
+      case 'options_website':
+        return '공식 웹사이트 방문';
       default:
         return null;
     }
@@ -228020,6 +228071,8 @@ extension on _StringsNl {
         return ({required Object count}) => 'Show all ${count} sources';
       case 'mihon_extension_sources_less':
         return 'Show fewer sources';
+      case 'options_website':
+        return 'Officiële website bezoeken';
       default:
         return null;
     }
@@ -235982,6 +236035,8 @@ extension on _StringsPtBr {
         return ({required Object count}) => 'Show all ${count} sources';
       case 'mihon_extension_sources_less':
         return 'Show fewer sources';
+      case 'options_website':
+        return 'Visitar o site oficial';
       default:
         return null;
     }
@@ -243950,6 +244005,8 @@ extension on _StringsRu {
         return ({required Object count}) => 'Show all ${count} sources';
       case 'mihon_extension_sources_less':
         return 'Show fewer sources';
+      case 'options_website':
+        return 'Открыть официальный сайт';
       default:
         return null;
     }
@@ -251890,6 +251947,8 @@ extension on _StringsTh {
         return ({required Object count}) => 'Show all ${count} sources';
       case 'mihon_extension_sources_less':
         return 'Show fewer sources';
+      case 'options_website':
+        return 'เยี่ยมชมเว็บไซต์ทางการ';
       default:
         return null;
     }
@@ -259847,6 +259906,8 @@ extension on _StringsTr {
         return ({required Object count}) => 'Show all ${count} sources';
       case 'mihon_extension_sources_less':
         return 'Show fewer sources';
+      case 'options_website':
+        return 'Resmî web sitesini ziyaret et';
       default:
         return null;
     }
@@ -267797,6 +267858,8 @@ extension on _StringsVi {
         return ({required Object count}) => 'Show all ${count} sources';
       case 'mihon_extension_sources_less':
         return 'Show fewer sources';
+      case 'options_website':
+        return 'Truy cập trang web chính thức';
       default:
         return null;
     }
@@ -275681,6 +275744,8 @@ extension on _StringsZhCn {
         return ({required Object count}) => '展开全部 ${count} 个源';
       case 'mihon_extension_sources_less':
         return '收起源列表';
+      case 'options_website':
+        return '访问官网';
       default:
         return null;
     }
@@ -283566,6 +283631,8 @@ extension on _StringsZhHk {
         return ({required Object count}) => 'Show all ${count} sources';
       case 'mihon_extension_sources_less':
         return 'Show fewer sources';
+      case 'options_website':
+        return '瀏覽官方網站';
       default:
         return null;
     }
