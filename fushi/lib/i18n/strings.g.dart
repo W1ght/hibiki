@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 65195 (3835 per locale)
+/// Strings: 65110 (3830 per locale)
 ///
-/// Built on 2026-08-28 at 14:52 UTC
+/// Built on 2026-08-29 at 08:17 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -253,7 +253,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get anime_download_retry => 'Retry';
   String get anime_download_search => 'Search';
   String get anime_download_search_error_proxy_hint =>
-      'If the site cannot be reached directly, configure a network proxy in download settings.';
+      'If the site cannot be reached directly, configure a network proxy in system settings.';
   String get anime_download_search_failed =>
       'Search failed or timed out. Tap retry.';
   String get anime_download_search_hint => 'Anime title';
@@ -988,13 +988,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get download_clear_finished => 'Clear finished';
   String get download_detail_backend_offline =>
       'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
-  String get download_network_proxy_auto => 'Auto';
-  String get download_network_proxy_auto_hint =>
-      'Applies to AniList, Nyaa, and Jimaku only. Auto uses environment variables, then the enabled system proxy; torrent traffic is unchanged.';
-  String get download_network_proxy_custom => 'Custom';
-  String get download_network_proxy_custom_label => 'Custom proxy';
-  String get download_network_proxy_direct => 'Direct';
-  String get download_network_proxy_section => 'Discovery network';
   String get download_open_settings => 'Open settings';
   String get download_save_root_change => 'Change folder';
   String get download_save_root_create_failed =>
@@ -2714,12 +2707,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get update_check_failed => 'Update check failed';
   String get update_checking_now => 'Checking for updates…';
   String get update_connecting => 'Connecting…';
-  String get update_custom_proxy_auto_hint =>
-      'Used for update checks, cloud sync and downloads. Leave blank to use environment variables, then the enabled system proxy.';
-  String get update_custom_proxy_hint =>
+  String get network_proxy_auto_hint =>
+      'Applies to every internet request the app makes: updates, cloud sync, dictionaries, downloads, subtitles and metadata. Leave blank for automatic: environment variables, then the enabled system proxy. P2P (torrent) transfers always connect directly.';
+  String get network_proxy_hint =>
       'host:port, e.g. 127.0.0.1:7890 (IPv4/host only)';
-  String get update_custom_proxy_invalid => 'Invalid proxy. Use host:port';
-  String get update_custom_proxy_label => 'Custom network proxy';
+  String get network_proxy_invalid => 'Invalid proxy. Use host:port';
+  String get network_proxy_label => 'Network proxy';
   String get update_debug_channel => 'Debug update channel';
   String get update_debug_channel_warning =>
       'Debug channel builds may be unstable. Use at your own risk.';
@@ -5225,6 +5218,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Could not delete ${n} local file(s); they may still be in use';
   String batch_hidden_by_filter_note({required Object n}) =>
       'Another ${n} selected item(s) are hidden by the current filter and will not be affected.';
+  String get section_network => 'Network';
 }
 
 // Path: <root>
@@ -5365,7 +5359,7 @@ class _StringsAr extends _StringsEn {
   String get anime_download_search => 'بحث';
   @override
   String get anime_download_search_error_proxy_hint =>
-      'إذا تعذر الوصول إلى الموقع مباشرة، قم بتكوين وكيل شبكة في إعدادات التحميل.';
+      'إذا تعذر الوصول إلى الموقع مباشرة، قم بتكوين وكيل شبكة في إعدادات النظام.';
   @override
   String get anime_download_search_failed =>
       'فشل البحث أو انتهت مهلته. اضغط إعادة المحاولة.';
@@ -6677,19 +6671,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get download_detail_backend_offline =>
       'خلفية التحميل الأصلية غير متصلة. يتم عرض معلومات المهمة المحفوظة؛ المعلمات المباشرة غير متاحة.';
-  @override
-  String get download_network_proxy_auto => 'تلقائي';
-  @override
-  String get download_network_proxy_auto_hint =>
-      'ينطبق على AniList وNyaa وJimaku فقط. التلقائي يستخدم متغيرات البيئة، ثم وكيل النظام المُفعّل؛ حركة التورنت لا تتغير.';
-  @override
-  String get download_network_proxy_custom => 'مخصص';
-  @override
-  String get download_network_proxy_custom_label => 'وكيل مخصص';
-  @override
-  String get download_network_proxy_direct => 'مباشر';
-  @override
-  String get download_network_proxy_section => 'شبكة الاكتشاف';
   @override
   String get download_open_settings => 'فتح الإعدادات';
   @override
@@ -9803,16 +9784,15 @@ class _StringsAr extends _StringsEn {
   @override
   String get update_connecting => 'جارٍ الاتصال…';
   @override
-  String get update_custom_proxy_auto_hint =>
-      'Leave blank to use environment variables, then the enabled system proxy.';
+  String get network_proxy_auto_hint =>
+      'يُطبَّق على جميع طلبات الإنترنت في التطبيق: التحديثات، والمزامنة السحابية، والقواميس، والتنزيلات، والترجمات، والبيانات الوصفية. اتركه فارغًا للوضع التلقائي: متغيرات البيئة، ثم وكيل النظام المفعّل. تتصل عمليات نقل P2P (torrent) مباشرة دائمًا.';
   @override
-  String get update_custom_proxy_hint =>
+  String get network_proxy_hint =>
       'المضيف:المنفذ، مثال 127.0.0.1:7890 (IPv4/اسم مضيف فقط)';
   @override
-  String get update_custom_proxy_invalid =>
-      'وكيل غير صالح. استخدم المضيف:المنفذ';
+  String get network_proxy_invalid => 'وكيل غير صالح. استخدم المضيف:المنفذ';
   @override
-  String get update_custom_proxy_label => 'Custom update proxy';
+  String get network_proxy_label => 'وكيل الشبكة';
   @override
   String get update_debug_channel => 'قناة تحديث التصحيح';
   @override
@@ -14114,6 +14094,8 @@ class _StringsAr extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       'هناك ${n} عنصر محدد مخفي بواسطة عامل التصفية الحالي ولن تتم معالجته.';
+  @override
+  String get section_network => 'الشبكة';
 }
 
 // Path: <root>
@@ -14255,7 +14237,7 @@ class _StringsDe extends _StringsEn {
   String get anime_download_search => 'Suchen';
   @override
   String get anime_download_search_error_proxy_hint =>
-      'Wenn die Seite nicht direkt erreichbar ist, konfiguriere einen Netzwerk-Proxy in den Download-Einstellungen.';
+      'Wenn die Seite nicht direkt erreichbar ist, konfiguriere einen Netzwerk-Proxy in den Systemeinstellungen.';
   @override
   String get anime_download_search_failed =>
       'Suche fehlgeschlagen oder Zeitüberschreitung. Tippe auf „Erneut versuchen".';
@@ -15599,19 +15581,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get download_detail_backend_offline =>
       'Das ursprüngliche Download-Backend ist offline. Gespeicherte Aufgabeninformationen werden angezeigt; Live-Parameter sind nicht verfügbar.';
-  @override
-  String get download_network_proxy_auto => 'Automatisch';
-  @override
-  String get download_network_proxy_auto_hint =>
-      'Gilt nur für AniList, Nyaa und Jimaku. Automatisch verwendet Umgebungsvariablen, dann den aktivierten System-Proxy; Torrent-Datenverkehr bleibt unverändert.';
-  @override
-  String get download_network_proxy_custom => 'Benutzerdefiniert';
-  @override
-  String get download_network_proxy_custom_label => 'Benutzerdefinierter Proxy';
-  @override
-  String get download_network_proxy_direct => 'Direkt';
-  @override
-  String get download_network_proxy_section => 'Entdeckungsnetzwerk';
   @override
   String get download_open_settings => 'Einstellungen öffnen';
   @override
@@ -18791,16 +18760,15 @@ class _StringsDe extends _StringsEn {
   @override
   String get update_connecting => 'Verbinde…';
   @override
-  String get update_custom_proxy_auto_hint =>
-      'Leave blank to use environment variables, then the enabled system proxy.';
+  String get network_proxy_auto_hint =>
+      'Gilt für alle Internetanfragen der App: Updates, Cloud-Sync, Wörterbücher, Downloads, Untertitel und Metadaten. Leer lassen für automatisch: Umgebungsvariablen, dann der aktivierte System-Proxy. P2P-(Torrent-)Übertragungen verbinden sich immer direkt.';
   @override
-  String get update_custom_proxy_hint =>
+  String get network_proxy_hint =>
       'Host:Port, z. B. 127.0.0.1:7890 (nur IPv4/Host)';
   @override
-  String get update_custom_proxy_invalid =>
-      'Ungültiger Proxy. Verwende Host:Port';
+  String get network_proxy_invalid => 'Ungültiger Proxy. Verwende Host:Port';
   @override
-  String get update_custom_proxy_label => 'Custom update proxy';
+  String get network_proxy_label => 'Netzwerk-Proxy';
   @override
   String get update_debug_channel => 'Debug-Update-Kanal';
   @override
@@ -23210,6 +23178,8 @@ class _StringsDe extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       'Weitere ${n} ausgewählte Elemente sind durch den aktuellen Filter ausgeblendet und werden nicht bearbeitet.';
+  @override
+  String get section_network => 'Netzwerk';
 }
 
 // Path: <root>
@@ -23350,7 +23320,7 @@ class _StringsEs extends _StringsEn {
   String get anime_download_search => 'Buscar';
   @override
   String get anime_download_search_error_proxy_hint =>
-      'Si no puede acceder al sitio directamente, configure un proxy de red en los ajustes de descarga.';
+      'Si no puede acceder al sitio directamente, configure un proxy de red en los ajustes del sistema.';
   @override
   String get anime_download_search_failed =>
       'La búsqueda falló o se agotó el tiempo. Toque reintentar.';
@@ -24695,19 +24665,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get download_detail_backend_offline =>
       'El motor de descarga original está desconectado. Se muestra la información persistida de la tarea; los parámetros en tiempo real no están disponibles.';
-  @override
-  String get download_network_proxy_auto => 'Auto';
-  @override
-  String get download_network_proxy_auto_hint =>
-      'Se aplica solo a AniList, Nyaa y Jimaku. Auto usa variables de entorno, luego el proxy del sistema habilitado; el tráfico de torrents no se modifica.';
-  @override
-  String get download_network_proxy_custom => 'Personalizado';
-  @override
-  String get download_network_proxy_custom_label => 'Proxy personalizado';
-  @override
-  String get download_network_proxy_direct => 'Directo';
-  @override
-  String get download_network_proxy_section => 'Red de descubrimiento';
   @override
   String get download_open_settings => 'Abrir ajustes';
   @override
@@ -27910,15 +27867,15 @@ class _StringsEs extends _StringsEn {
   @override
   String get update_connecting => 'Conectando…';
   @override
-  String get update_custom_proxy_auto_hint =>
-      'Leave blank to use environment variables, then the enabled system proxy.';
+  String get network_proxy_auto_hint =>
+      'Se aplica a todas las solicitudes de Internet de la aplicación: actualizaciones, sincronización en la nube, diccionarios, descargas, subtítulos y metadatos. Déjelo en blanco para automático: variables de entorno y, después, el proxy del sistema habilitado. Las transferencias P2P (torrent) siempre se conectan directamente.';
   @override
-  String get update_custom_proxy_hint =>
+  String get network_proxy_hint =>
       'host:puerto, ej. 127.0.0.1:7890 (solo IPv4/host)';
   @override
-  String get update_custom_proxy_invalid => 'Proxy no válido. Use host:puerto';
+  String get network_proxy_invalid => 'Proxy no válido. Use host:puerto';
   @override
-  String get update_custom_proxy_label => 'Custom update proxy';
+  String get network_proxy_label => 'Proxy de red';
   @override
   String get update_debug_channel => 'Canal de actualización de depuración';
   @override
@@ -32349,6 +32306,8 @@ class _StringsEs extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       'Otros ${n} elementos seleccionados están ocultos por el filtro actual y no se procesarán.';
+  @override
+  String get section_network => 'Red';
 }
 
 // Path: <root>
@@ -32490,7 +32449,7 @@ class _StringsFr extends _StringsEn {
   String get anime_download_search => 'Rechercher';
   @override
   String get anime_download_search_error_proxy_hint =>
-      'Si le site n\'est pas accessible directement, configurez un proxy réseau dans les paramètres de téléchargement.';
+      'Si le site n\'est pas accessible directement, configurez un proxy réseau dans les paramètres système.';
   @override
   String get anime_download_search_failed =>
       'Recherche échouée ou expirée. Appuyez sur Réessayer.';
@@ -33851,19 +33810,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get download_detail_backend_offline =>
       'Le moteur de téléchargement d\'origine est hors ligne. Les informations sauvegardées sont affichées ; les paramètres en direct sont indisponibles.';
-  @override
-  String get download_network_proxy_auto => 'Auto';
-  @override
-  String get download_network_proxy_auto_hint =>
-      'S\'applique à AniList, Nyaa et Jimaku uniquement. Auto utilise les variables d\'environnement, puis le proxy système activé ; le trafic torrent est inchangé.';
-  @override
-  String get download_network_proxy_custom => 'Personnalisé';
-  @override
-  String get download_network_proxy_custom_label => 'Proxy personnalisé';
-  @override
-  String get download_network_proxy_direct => 'Direct';
-  @override
-  String get download_network_proxy_section => 'Réseau de découverte';
   @override
   String get download_open_settings => 'Ouvrir les paramètres';
   @override
@@ -37062,16 +37008,15 @@ class _StringsFr extends _StringsEn {
   @override
   String get update_connecting => 'Connexion…';
   @override
-  String get update_custom_proxy_auto_hint =>
-      'Leave blank to use environment variables, then the enabled system proxy.';
+  String get network_proxy_auto_hint =>
+      'S\'applique à toutes les requêtes Internet de l\'application : mises à jour, synchronisation cloud, dictionnaires, téléchargements, sous-titres et métadonnées. Laissez vide pour le mode automatique : variables d\'environnement, puis le proxy système activé. Les transferts P2P (torrent) se connectent toujours directement.';
   @override
-  String get update_custom_proxy_hint =>
+  String get network_proxy_hint =>
       'hôte:port, par ex. 127.0.0.1:7890 (IPv4/nom d\'hôte uniquement)';
   @override
-  String get update_custom_proxy_invalid =>
-      'Proxy invalide. Utilisez hôte:port';
+  String get network_proxy_invalid => 'Proxy invalide. Utilisez hôte:port';
   @override
-  String get update_custom_proxy_label => 'Custom update proxy';
+  String get network_proxy_label => 'Proxy réseau';
   @override
   String get update_debug_channel => 'Canal de mise à jour de débogage';
   @override
@@ -41522,6 +41467,8 @@ class _StringsFr extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       '${n} autres éléments sélectionnés sont masqués par le filtre actuel et ne seront pas traités.';
+  @override
+  String get section_network => 'Réseau';
 }
 
 // Path: <root>
@@ -41662,7 +41609,7 @@ class _StringsId extends _StringsEn {
   String get anime_download_search => 'Cari';
   @override
   String get anime_download_search_error_proxy_hint =>
-      'Jika situs tidak bisa dijangkau langsung, atur proksi jaringan di pengaturan unduhan.';
+      'Jika situs tidak bisa dijangkau langsung, atur proksi jaringan di pengaturan sistem.';
   @override
   String get anime_download_search_failed =>
       'Pencarian gagal atau waktu habis. Ketuk coba lagi.';
@@ -42983,19 +42930,6 @@ class _StringsId extends _StringsEn {
   @override
   String get download_detail_backend_offline =>
       'Backend unduhan asli sedang offline. Informasi tugas yang tersimpan ditampilkan; parameter langsung tidak tersedia.';
-  @override
-  String get download_network_proxy_auto => 'Otomatis';
-  @override
-  String get download_network_proxy_auto_hint =>
-      'Berlaku untuk AniList, Nyaa, dan Jimaku saja. Otomatis menggunakan variabel lingkungan, lalu proksi sistem yang aktif; lalu lintas torrent tidak berubah.';
-  @override
-  String get download_network_proxy_custom => 'Kustom';
-  @override
-  String get download_network_proxy_custom_label => 'Proksi kustom';
-  @override
-  String get download_network_proxy_direct => 'Langsung';
-  @override
-  String get download_network_proxy_section => 'Jaringan pencarian';
   @override
   String get download_open_settings => 'Buka pengaturan';
   @override
@@ -46149,16 +46083,15 @@ class _StringsId extends _StringsEn {
   @override
   String get update_connecting => 'Menghubungkan…';
   @override
-  String get update_custom_proxy_auto_hint =>
-      'Leave blank to use environment variables, then the enabled system proxy.';
+  String get network_proxy_auto_hint =>
+      'Berlaku untuk semua permintaan Internet aplikasi: pembaruan, sinkronisasi cloud, kamus, unduhan, subtitel, dan metadata. Kosongkan untuk otomatis: variabel lingkungan, lalu proksi sistem yang diaktifkan. Transfer P2P (torrent) selalu terhubung langsung.';
   @override
-  String get update_custom_proxy_hint =>
+  String get network_proxy_hint =>
       'host:port, mis. 127.0.0.1:7890 (khusus IPv4/host)';
   @override
-  String get update_custom_proxy_invalid =>
-      'Proksi tidak valid. Gunakan host:port';
+  String get network_proxy_invalid => 'Proksi tidak valid. Gunakan host:port';
   @override
-  String get update_custom_proxy_label => 'Custom update proxy';
+  String get network_proxy_label => 'Proksi jaringan';
   @override
   String get update_debug_channel => 'Kanal Pembaruan Debug';
   @override
@@ -50522,6 +50455,8 @@ class _StringsId extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       '${n} item terpilih lainnya disembunyikan oleh filter saat ini dan tidak akan diproses.';
+  @override
+  String get section_network => 'Jaringan';
 }
 
 // Path: <root>
@@ -50663,7 +50598,7 @@ class _StringsIt extends _StringsEn {
   String get anime_download_search => 'Cerca';
   @override
   String get anime_download_search_error_proxy_hint =>
-      'Se il sito non è raggiungibile direttamente, configura un proxy di rete nelle impostazioni di download.';
+      'Se il sito non è raggiungibile direttamente, configura un proxy di rete nelle impostazioni di sistema.';
   @override
   String get anime_download_search_failed =>
       'Ricerca fallita o scaduta. Tocca Riprova.';
@@ -52000,19 +51935,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get download_detail_backend_offline =>
       'Il backend di download originale è offline. Vengono mostrate le informazioni salvate; i parametri live non sono disponibili.';
-  @override
-  String get download_network_proxy_auto => 'Auto';
-  @override
-  String get download_network_proxy_auto_hint =>
-      'Si applica solo ad AniList, Nyaa e Jimaku. Auto usa le variabili d\'ambiente, poi il proxy di sistema abilitato; il traffico torrent non cambia.';
-  @override
-  String get download_network_proxy_custom => 'Personalizzato';
-  @override
-  String get download_network_proxy_custom_label => 'Proxy personalizzato';
-  @override
-  String get download_network_proxy_direct => 'Diretto';
-  @override
-  String get download_network_proxy_section => 'Rete di scoperta';
   @override
   String get download_open_settings => 'Apri impostazioni';
   @override
@@ -55196,15 +55118,15 @@ class _StringsIt extends _StringsEn {
   @override
   String get update_connecting => 'Connessione…';
   @override
-  String get update_custom_proxy_auto_hint =>
-      'Leave blank to use environment variables, then the enabled system proxy.';
+  String get network_proxy_auto_hint =>
+      'Si applica a tutte le richieste Internet dell\'app: aggiornamenti, sincronizzazione cloud, dizionari, download, sottotitoli e metadati. Lascia vuoto per la modalità automatica: variabili d\'ambiente, poi il proxy di sistema attivo. I trasferimenti P2P (torrent) si connettono sempre direttamente.';
   @override
-  String get update_custom_proxy_hint =>
+  String get network_proxy_hint =>
       'host:porta, es. 127.0.0.1:7890 (solo IPv4/host)';
   @override
-  String get update_custom_proxy_invalid => 'Proxy non valido. Usa host:porta';
+  String get network_proxy_invalid => 'Proxy non valido. Usa host:porta';
   @override
-  String get update_custom_proxy_label => 'Custom update proxy';
+  String get network_proxy_label => 'Proxy di rete';
   @override
   String get update_debug_channel => 'Canale aggiornamenti di debug';
   @override
@@ -59598,6 +59520,8 @@ class _StringsIt extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       'Altri ${n} elementi selezionati sono nascosti dal filtro corrente e non verranno elaborati.';
+  @override
+  String get section_network => 'Rete';
 }
 
 // Path: <root>
@@ -59736,7 +59660,7 @@ class _StringsJa extends _StringsEn {
   String get anime_download_search => '検索';
   @override
   String get anime_download_search_error_proxy_hint =>
-      'サイトに直接アクセスできない場合、ダウンロード設定でネットワークプロキシを設定してください。';
+      'サイトに直接アクセスできない場合、システム設定でネットワークプロキシを設定してください。';
   @override
   String get anime_download_search_failed =>
       '検索が失敗またはタイムアウトしました。再試行をタップしてください。';
@@ -61002,19 +60926,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get download_detail_backend_offline =>
       '元のダウンロードバックエンドがオフラインです。保存されたタスク情報が表示されています。ライブパラメータは利用できません。';
-  @override
-  String get download_network_proxy_auto => '自動';
-  @override
-  String get download_network_proxy_auto_hint =>
-      'AniList、Nyaa、Jimaku にのみ適用されます。自動は環境変数を使用し、次にシステムプロキシを使用します。torrent トラフィックは変更されません。';
-  @override
-  String get download_network_proxy_custom => 'カスタム';
-  @override
-  String get download_network_proxy_custom_label => 'カスタムプロキシ';
-  @override
-  String get download_network_proxy_direct => '直接接続';
-  @override
-  String get download_network_proxy_section => 'ディスカバリーネットワーク';
   @override
   String get download_open_settings => '設定を開く';
   @override
@@ -64010,15 +63921,14 @@ class _StringsJa extends _StringsEn {
   @override
   String get update_connecting => '更新元に接続中…';
   @override
-  String get update_custom_proxy_auto_hint =>
-      'Leave blank to use environment variables, then the enabled system proxy.';
+  String get network_proxy_auto_hint =>
+      'アプリのすべての通信（更新、クラウド同期、辞書、ダウンロード、字幕、メタデータ）に適用されます。空欄で自動：環境変数、次に有効なシステムプロキシを使用します。P2P（torrent）通信は常に直接接続します。';
   @override
-  String get update_custom_proxy_hint =>
-      'ホスト:ポート 例: 127.0.0.1:7890（IPv4/ホスト名のみ）';
+  String get network_proxy_hint => 'ホスト:ポート 例: 127.0.0.1:7890（IPv4/ホスト名のみ）';
   @override
-  String get update_custom_proxy_invalid => '無効なプロキシです。ホスト:ポートの形式で入力してください';
+  String get network_proxy_invalid => '無効なプロキシです。ホスト:ポートの形式で入力してください';
   @override
-  String get update_custom_proxy_label => 'Custom update proxy';
+  String get network_proxy_label => 'ネットワークプロキシ';
   @override
   String get update_debug_channel => 'デバッグ更新チャンネル';
   @override
@@ -68120,6 +68030,8 @@ class _StringsJa extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       '選択済みの ${n} 件は現在のフィルターで非表示のため、今回は処理されません。';
+  @override
+  String get section_network => 'ネットワーク';
 }
 
 // Path: <root>
@@ -68258,7 +68170,7 @@ class _StringsKo extends _StringsEn {
   String get anime_download_search => '검색';
   @override
   String get anime_download_search_error_proxy_hint =>
-      '사이트에 직접 접속할 수 없는 경우 다운로드 설정에서 네트워크 프록시를 구성하세요.';
+      '사이트에 직접 접속할 수 없는 경우 시스템 설정에서 네트워크 프록시를 구성하세요.';
   @override
   String get anime_download_search_failed => '검색 실패 또는 시간 초과. 재시도를 탭하세요.';
   @override
@@ -69521,19 +69433,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get download_detail_backend_offline =>
       '원래 다운로드 백엔드가 오프라인입니다. 저장된 작업 정보가 표시됩니다; 실시간 매개변수를 사용할 수 없습니다.';
-  @override
-  String get download_network_proxy_auto => '자동';
-  @override
-  String get download_network_proxy_auto_hint =>
-      'AniList, Nyaa, Jimaku에만 적용됩니다. 자동은 환경 변수를 먼저 사용한 후 활성화된 시스템 프록시를 사용합니다; 토렌트 트래픽은 변경되지 않습니다.';
-  @override
-  String get download_network_proxy_custom => '사용자 정의';
-  @override
-  String get download_network_proxy_custom_label => '사용자 정의 프록시';
-  @override
-  String get download_network_proxy_direct => '직접 연결';
-  @override
-  String get download_network_proxy_section => '탐색 네트워크';
   @override
   String get download_open_settings => '설정 열기';
   @override
@@ -72535,15 +72434,14 @@ class _StringsKo extends _StringsEn {
   @override
   String get update_connecting => '연결 중…';
   @override
-  String get update_custom_proxy_auto_hint =>
-      'Leave blank to use environment variables, then the enabled system proxy.';
+  String get network_proxy_auto_hint =>
+      '앱의 모든 인터넷 요청(업데이트, 클라우드 동기화, 사전, 다운로드, 자막, 메타데이터)에 적용됩니다. 비워 두면 자동: 환경 변수, 그다음 활성화된 시스템 프록시를 사용합니다. P2P(토렌트) 전송은 항상 직접 연결합니다.';
   @override
-  String get update_custom_proxy_hint =>
-      '호스트:포트, 예: 127.0.0.1:7890 (IPv4/호스트만 지원)';
+  String get network_proxy_hint => '호스트:포트, 예: 127.0.0.1:7890 (IPv4/호스트만 지원)';
   @override
-  String get update_custom_proxy_invalid => '잘못된 프록시입니다. 호스트:포트 형식을 사용하세요';
+  String get network_proxy_invalid => '잘못된 프록시입니다. 호스트:포트 형식을 사용하세요';
   @override
-  String get update_custom_proxy_label => 'Custom update proxy';
+  String get network_proxy_label => '네트워크 프록시';
   @override
   String get update_debug_channel => '디버그 업데이트 채널';
   @override
@@ -76656,6 +76554,8 @@ class _StringsKo extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       '선택한 항목 중 ${n}개는 현재 필터로 숨겨져 있어 처리되지 않습니다.';
+  @override
+  String get section_network => '네트워크';
 }
 
 // Path: <root>
@@ -76798,7 +76698,7 @@ class _StringsNl extends _StringsEn {
   String get anime_download_search => 'Zoeken';
   @override
   String get anime_download_search_error_proxy_hint =>
-      'Als de site niet direct bereikbaar is, stel dan een netwerkproxy in bij de downloadinstellingen.';
+      'Als de site niet direct bereikbaar is, stel dan een netwerkproxy in bij de systeeminstellingen.';
   @override
   String get anime_download_search_failed =>
       'Zoeken mislukt of verlopen. Tik op opnieuw.';
@@ -78130,19 +78030,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get download_detail_backend_offline =>
       'De oorspronkelijke download-backend is offline. Opgeslagen taakinformatie wordt getoond; live parameters zijn niet beschikbaar.';
-  @override
-  String get download_network_proxy_auto => 'Automatisch';
-  @override
-  String get download_network_proxy_auto_hint =>
-      'Geldt alleen voor AniList, Nyaa en Jimaku. Automatisch gebruikt omgevingsvariabelen, dan de ingeschakelde systeemproxy; torrentverkeer wordt niet gewijzigd.';
-  @override
-  String get download_network_proxy_custom => 'Aangepast';
-  @override
-  String get download_network_proxy_custom_label => 'Aangepaste proxy';
-  @override
-  String get download_network_proxy_direct => 'Direct';
-  @override
-  String get download_network_proxy_section => 'Discovery-netwerk';
   @override
   String get download_open_settings => 'Instellingen openen';
   @override
@@ -81308,16 +81195,15 @@ class _StringsNl extends _StringsEn {
   @override
   String get update_connecting => 'Verbinden…';
   @override
-  String get update_custom_proxy_auto_hint =>
-      'Leave blank to use environment variables, then the enabled system proxy.';
+  String get network_proxy_auto_hint =>
+      'Geldt voor alle internetverzoeken van de app: updates, cloudsynchronisatie, woordenboeken, downloads, ondertitels en metadata. Laat leeg voor automatisch: omgevingsvariabelen, daarna de ingeschakelde systeemproxy. P2P-overdrachten (torrent) maken altijd rechtstreeks verbinding.';
   @override
-  String get update_custom_proxy_hint =>
+  String get network_proxy_hint =>
       'host:poort, bijv. 127.0.0.1:7890 (alleen IPv4/host)';
   @override
-  String get update_custom_proxy_invalid =>
-      'Ongeldige proxy. Gebruik host:poort';
+  String get network_proxy_invalid => 'Ongeldige proxy. Gebruik host:poort';
   @override
-  String get update_custom_proxy_label => 'Custom update proxy';
+  String get network_proxy_label => 'Netwerkproxy';
   @override
   String get update_debug_channel => 'Debug-updatekanaal';
   @override
@@ -85689,6 +85575,8 @@ class _StringsNl extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       'Nog ${n} geselecteerde items zijn verborgen door het huidige filter en worden niet verwerkt.';
+  @override
+  String get section_network => 'Netwerk';
 }
 
 // Path: <root>
@@ -85829,7 +85717,7 @@ class _StringsPtBr extends _StringsEn {
   String get anime_download_search => 'Buscar';
   @override
   String get anime_download_search_error_proxy_hint =>
-      'Se o site não pode ser acessado diretamente, configure um proxy de rede nas configurações de download.';
+      'Se o site não pode ser acessado diretamente, configure um proxy de rede nas configurações do sistema.';
   @override
   String get anime_download_search_failed =>
       'Busca falhou ou expirou. Toque em tentar novamente.';
@@ -87170,19 +87058,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get download_detail_backend_offline =>
       'O backend de download original está offline. Informações da tarefa persistidas são mostradas; parâmetros ao vivo estão indisponíveis.';
-  @override
-  String get download_network_proxy_auto => 'Auto';
-  @override
-  String get download_network_proxy_auto_hint =>
-      'Aplica-se apenas ao AniList, Nyaa e Jimaku. Auto usa variáveis de ambiente e depois o proxy do sistema ativado; o tráfego de torrent não é alterado.';
-  @override
-  String get download_network_proxy_custom => 'Personalizado';
-  @override
-  String get download_network_proxy_custom_label => 'Proxy personalizado';
-  @override
-  String get download_network_proxy_direct => 'Direto';
-  @override
-  String get download_network_proxy_section => 'Rede de descoberta';
   @override
   String get download_open_settings => 'Abrir configurações';
   @override
@@ -90356,15 +90231,15 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get update_connecting => 'Conectando…';
   @override
-  String get update_custom_proxy_auto_hint =>
-      'Leave blank to use environment variables, then the enabled system proxy.';
+  String get network_proxy_auto_hint =>
+      'Aplica-se a todas as solicitações de Internet do aplicativo: atualizações, sincronização na nuvem, dicionários, downloads, legendas e metadados. Deixe em branco para automático: variáveis de ambiente e, depois, o proxy do sistema ativado. As transferências P2P (torrent) sempre se conectam diretamente.';
   @override
-  String get update_custom_proxy_hint =>
+  String get network_proxy_hint =>
       'host:porta, ex: 127.0.0.1:7890 (apenas IPv4/host)';
   @override
-  String get update_custom_proxy_invalid => 'Proxy inválido. Use host:porta';
+  String get network_proxy_invalid => 'Proxy inválido. Use host:porta';
   @override
-  String get update_custom_proxy_label => 'Custom update proxy';
+  String get network_proxy_label => 'Proxy de rede';
   @override
   String get update_debug_channel => 'Canal de Atualização de Depuração';
   @override
@@ -94778,6 +94653,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       'Outros ${n} itens selecionados estão ocultos pelo filtro atual e não serão processados.';
+  @override
+  String get section_network => 'Rede';
 }
 
 // Path: <root>
@@ -94919,7 +94796,7 @@ class _StringsRu extends _StringsEn {
   String get anime_download_search => 'Поиск';
   @override
   String get anime_download_search_error_proxy_hint =>
-      'Если сайт недоступен напрямую, настройте сетевой прокси в параметрах загрузки.';
+      'Если сайт недоступен напрямую, настройте сетевой прокси в системных параметрах.';
   @override
   String get anime_download_search_failed =>
       'Поиск не удался или превышено время ожидания. Нажмите «Повторить».';
@@ -96251,19 +96128,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get download_detail_backend_offline =>
       'Исходный бэкенд загрузки не в сети. Показана сохранённая информация о задаче; актуальные параметры недоступны.';
-  @override
-  String get download_network_proxy_auto => 'Авто';
-  @override
-  String get download_network_proxy_auto_hint =>
-      'Применяется только к AniList, Nyaa и Jimaku. «Авто» использует переменные окружения, затем включённый системный прокси; торрент-трафик не затрагивается.';
-  @override
-  String get download_network_proxy_custom => 'Настраиваемый';
-  @override
-  String get download_network_proxy_custom_label => 'Настраиваемый прокси';
-  @override
-  String get download_network_proxy_direct => 'Прямое подключение';
-  @override
-  String get download_network_proxy_section => 'Сеть обнаружения';
   @override
   String get download_open_settings => 'Открыть настройки';
   @override
@@ -99438,16 +99302,16 @@ class _StringsRu extends _StringsEn {
   @override
   String get update_connecting => 'Подключение…';
   @override
-  String get update_custom_proxy_auto_hint =>
-      'Leave blank to use environment variables, then the enabled system proxy.';
+  String get network_proxy_auto_hint =>
+      'Применяется ко всем интернет-запросам приложения: обновления, облачная синхронизация, словари, загрузки, субтитры и метаданные. Оставьте пустым для автоматического режима: переменные окружения, затем включённый системный прокси. P2P-передачи (torrent) всегда подключаются напрямую.';
   @override
-  String get update_custom_proxy_hint =>
+  String get network_proxy_hint =>
       'хост:порт, например 127.0.0.1:7890 (только IPv4/хост)';
   @override
-  String get update_custom_proxy_invalid =>
+  String get network_proxy_invalid =>
       'Недопустимый прокси. Используйте хост:порт';
   @override
-  String get update_custom_proxy_label => 'Custom update proxy';
+  String get network_proxy_label => 'Сетевой прокси';
   @override
   String get update_debug_channel => 'Канал отладочных обновлений';
   @override
@@ -103843,6 +103707,8 @@ class _StringsRu extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       'Ещё ${n} выбранных элементов скрыты текущим фильтром и не будут обработаны.';
+  @override
+  String get section_network => 'Сеть';
 }
 
 // Path: <root>
@@ -103984,7 +103850,7 @@ class _StringsTh extends _StringsEn {
   String get anime_download_search => 'ค้นหา';
   @override
   String get anime_download_search_error_proxy_hint =>
-      'หากเข้าถึงเว็บไซต์โดยตรงไม่ได้ ให้ตั้งค่าพร็อกซีเครือข่ายในการตั้งค่าดาวน์โหลด';
+      'หากเข้าถึงเว็บไซต์โดยตรงไม่ได้ ให้ตั้งค่าพร็อกซีเครือข่ายในการตั้งค่าระบบ';
   @override
   String get anime_download_search_failed =>
       'ค้นหาล้มเหลวหรือหมดเวลา แตะเพื่อลองอีกครั้ง';
@@ -105294,19 +105160,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get download_detail_backend_offline =>
       'แบ็กเอนด์ดาวน์โหลดเดิมออฟไลน์อยู่ แสดงข้อมูลงานที่บันทึกไว้; พารามิเตอร์แบบเรียลไทม์ไม่พร้อมใช้งาน';
-  @override
-  String get download_network_proxy_auto => 'อัตโนมัติ';
-  @override
-  String get download_network_proxy_auto_hint =>
-      'ใช้กับ AniList, Nyaa และ Jimaku เท่านั้น อัตโนมัติใช้ตัวแปรสภาพแวดล้อมก่อน จากนั้นพร็อกซีระบบที่เปิดใช้งาน; ทราฟฟิกทอร์เรนต์ไม่เปลี่ยนแปลง';
-  @override
-  String get download_network_proxy_custom => 'กำหนดเอง';
-  @override
-  String get download_network_proxy_custom_label => 'พร็อกซีที่กำหนดเอง';
-  @override
-  String get download_network_proxy_direct => 'ตรง';
-  @override
-  String get download_network_proxy_section => 'เครือข่ายค้นหา';
   @override
   String get download_open_settings => 'เปิดการตั้งค่า';
   @override
@@ -108421,16 +108274,15 @@ class _StringsTh extends _StringsEn {
   @override
   String get update_connecting => 'กำลังเชื่อมต่อแหล่งอัปเดต…';
   @override
-  String get update_custom_proxy_auto_hint =>
-      'Leave blank to use environment variables, then the enabled system proxy.';
+  String get network_proxy_auto_hint =>
+      'ใช้กับคำขออินเทอร์เน็ตทั้งหมดของแอป: การอัปเดต การซิงค์คลาวด์ พจนานุกรม การดาวน์โหลด คำบรรยาย และข้อมูลเมตา เว้นว่างไว้เพื่อใช้อัตโนมัติ: ตัวแปรสภาพแวดล้อม จากนั้นพร็อกซีระบบที่เปิดใช้งาน การถ่ายโอน P2P (torrent) จะเชื่อมต่อโดยตรงเสมอ';
   @override
-  String get update_custom_proxy_hint =>
+  String get network_proxy_hint =>
       'host:port เช่น 127.0.0.1:7890 (IPv4/host เท่านั้น)';
   @override
-  String get update_custom_proxy_invalid =>
-      'พร็อกซีไม่ถูกต้อง ใช้รูปแบบ host:port';
+  String get network_proxy_invalid => 'พร็อกซีไม่ถูกต้อง ใช้รูปแบบ host:port';
   @override
-  String get update_custom_proxy_label => 'Custom update proxy';
+  String get network_proxy_label => 'พร็อกซีเครือข่าย';
   @override
   String get update_debug_channel => 'ช่องอัปเดตดีบัก';
   @override
@@ -112726,6 +112578,8 @@ class _StringsTh extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       'รายการที่เลือกอีก ${n} รายการถูกซ่อนด้วยตัวกรองปัจจุบันและจะไม่ถูกดำเนินการ';
+  @override
+  String get section_network => 'เครือข่าย';
 }
 
 // Path: <root>
@@ -112866,7 +112720,7 @@ class _StringsTr extends _StringsEn {
   String get anime_download_search => 'Ara';
   @override
   String get anime_download_search_error_proxy_hint =>
-      'Siteye doğrudan erişilemiyorsa indirme ayarlarında bir ağ proxy\'si yapılandırın.';
+      'Siteye doğrudan erişilemiyorsa sistem ayarlarında bir ağ proxy\'si yapılandırın.';
   @override
   String get anime_download_search_failed =>
       'Arama başarısız veya zaman aşımına uğradı. Tekrar denemek için dokunun.';
@@ -114193,19 +114047,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get download_detail_backend_offline =>
       'Orijinal indirme arka ucu çevrimdışı. Kaydedilmiş görev bilgileri gösteriliyor; canlı parametreler kullanılamıyor.';
-  @override
-  String get download_network_proxy_auto => 'Otomatik';
-  @override
-  String get download_network_proxy_auto_hint =>
-      'Yalnızca AniList, Nyaa ve Jimaku için geçerlidir. Otomatik, ortam değişkenlerini, ardından etkin sistem proxy\'sini kullanır; torrent trafiği değişmez.';
-  @override
-  String get download_network_proxy_custom => 'Özel';
-  @override
-  String get download_network_proxy_custom_label => 'Özel proxy';
-  @override
-  String get download_network_proxy_direct => 'Doğrudan';
-  @override
-  String get download_network_proxy_section => 'Keşif ağı';
   @override
   String get download_open_settings => 'Ayarları aç';
   @override
@@ -117352,16 +117193,15 @@ class _StringsTr extends _StringsEn {
   @override
   String get update_connecting => 'Bağlanılıyor…';
   @override
-  String get update_custom_proxy_auto_hint =>
-      'Leave blank to use environment variables, then the enabled system proxy.';
+  String get network_proxy_auto_hint =>
+      'Uygulamanın tüm internet isteklerine uygulanır: güncellemeler, bulut eşitleme, sözlükler, indirmeler, altyazılar ve meta veriler. Otomatik için boş bırakın: önce ortam değişkenleri, sonra etkin sistem proxy\'si. P2P (torrent) aktarımları her zaman doğrudan bağlanır.';
   @override
-  String get update_custom_proxy_hint =>
+  String get network_proxy_hint =>
       'sunucu:port, ör. 127.0.0.1:7890 (yalnızca IPv4/sunucu adı)';
   @override
-  String get update_custom_proxy_invalid =>
-      'Geçersiz proxy. sunucu:port kullanın';
+  String get network_proxy_invalid => 'Geçersiz proxy. sunucu:port kullanın';
   @override
-  String get update_custom_proxy_label => 'Custom update proxy';
+  String get network_proxy_label => 'Ağ proxy\'si';
   @override
   String get update_debug_channel => 'Hata Ayıklama Güncelleme Kanalı';
   @override
@@ -121712,6 +121552,8 @@ class _StringsTr extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       'Seçili ${n} öğe daha geçerli filtre tarafından gizlendi ve işlenmeyecek.';
+  @override
+  String get section_network => 'Ağ';
 }
 
 // Path: <root>
@@ -121852,7 +121694,7 @@ class _StringsVi extends _StringsEn {
   String get anime_download_search => 'Tìm kiếm';
   @override
   String get anime_download_search_error_proxy_hint =>
-      'Nếu không thể truy cập trang web trực tiếp, hãy cấu hình proxy mạng trong cài đặt tải xuống.';
+      'Nếu không thể truy cập trang web trực tiếp, hãy cấu hình proxy mạng trong cài đặt hệ thống.';
   @override
   String get anime_download_search_failed =>
       'Tìm kiếm thất bại hoặc hết thời gian. Nhấn thử lại.';
@@ -123177,19 +123019,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get download_detail_backend_offline =>
       'Trình tải xuống gốc đang ngoại tuyến. Thông tin tác vụ đã lưu được hiển thị; các tham số trực tiếp không khả dụng.';
-  @override
-  String get download_network_proxy_auto => 'Tự động';
-  @override
-  String get download_network_proxy_auto_hint =>
-      'Chỉ áp dụng cho AniList, Nyaa và Jimaku. Tự động sử dụng biến môi trường, sau đó proxy hệ thống đã bật; lưu lượng torrent không thay đổi.';
-  @override
-  String get download_network_proxy_custom => 'Tùy chỉnh';
-  @override
-  String get download_network_proxy_custom_label => 'Proxy tùy chỉnh';
-  @override
-  String get download_network_proxy_direct => 'Trực tiếp';
-  @override
-  String get download_network_proxy_section => 'Mạng khám phá';
   @override
   String get download_open_settings => 'Mở cài đặt';
   @override
@@ -126330,16 +126159,15 @@ class _StringsVi extends _StringsEn {
   @override
   String get update_connecting => 'Đang kết nối…';
   @override
-  String get update_custom_proxy_auto_hint =>
-      'Leave blank to use environment variables, then the enabled system proxy.';
+  String get network_proxy_auto_hint =>
+      'Áp dụng cho mọi yêu cầu Internet của ứng dụng: cập nhật, đồng bộ đám mây, từ điển, tải xuống, phụ đề và siêu dữ liệu. Để trống để tự động: biến môi trường, sau đó là proxy hệ thống đã bật. Truyền P2P (torrent) luôn kết nối trực tiếp.';
   @override
-  String get update_custom_proxy_hint =>
+  String get network_proxy_hint =>
       'host:port, ví dụ 127.0.0.1:7890 (chỉ IPv4/host)';
   @override
-  String get update_custom_proxy_invalid =>
-      'Proxy không hợp lệ. Dùng host:port';
+  String get network_proxy_invalid => 'Proxy không hợp lệ. Dùng host:port';
   @override
-  String get update_custom_proxy_label => 'Custom update proxy';
+  String get network_proxy_label => 'Proxy mạng';
   @override
   String get update_debug_channel => 'Kênh cập nhật gỡ lỗi';
   @override
@@ -130680,6 +130508,8 @@ class _StringsVi extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       'Còn ${n} mục đã chọn bị ẩn bởi bộ lọc hiện tại và sẽ không được xử lý.';
+  @override
+  String get section_network => 'Mạng';
 }
 
 // Path: <root>
@@ -130814,7 +130644,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get anime_download_search => '搜索';
   @override
-  String get anime_download_search_error_proxy_hint => '站点无法直连时，可在下载设置中配置网络代理。';
+  String get anime_download_search_error_proxy_hint => '站点无法直连时，可在系统设置中配置网络代理。';
   @override
   String get anime_download_search_failed => '搜索失败或超时，请点重试';
   @override
@@ -132044,19 +131874,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get download_detail_backend_offline =>
       '原下载后端当前离线。这里仍显示已保存的任务信息，但实时参数暂不可用。';
-  @override
-  String get download_network_proxy_auto => '自动';
-  @override
-  String get download_network_proxy_auto_hint =>
-      '仅影响 AniList、Nyaa 和 Jimaku。自动模式先读环境变量，再读已启用的系统代理；种子流量不受影响。';
-  @override
-  String get download_network_proxy_custom => '自定义';
-  @override
-  String get download_network_proxy_custom_label => '自定义代理';
-  @override
-  String get download_network_proxy_direct => '直连';
-  @override
-  String get download_network_proxy_section => '发现网络';
   @override
   String get download_open_settings => '去设置';
   @override
@@ -134977,15 +134794,14 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get update_connecting => '正在连接更新源…';
   @override
-  String get update_custom_proxy_auto_hint =>
-      '用于更新检查、云同步和下载。留空时自动读取环境变量，再读取已启用的系统代理。';
+  String get network_proxy_auto_hint =>
+      '应用的全部联网请求都走这里：更新、云同步、词典、下载、字幕与元数据。留空为自动：先读环境变量，再读已启用的系统代理。P2P（torrent）传输始终直连。';
   @override
-  String get update_custom_proxy_hint =>
-      'host:port，例如 127.0.0.1:7890（仅 IPv4/域名）';
+  String get network_proxy_hint => 'host:port，例如 127.0.0.1:7890（仅 IPv4/域名）';
   @override
-  String get update_custom_proxy_invalid => '代理格式无效，请用 host:port';
+  String get network_proxy_invalid => '代理格式无效，请用 host:port';
   @override
-  String get update_custom_proxy_label => '自定义网络代理';
+  String get network_proxy_label => '网络代理';
   @override
   String get update_debug_channel => '调试更新通道';
   @override
@@ -138929,6 +138745,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       '另有 ${n} 项被当前筛选隐藏，本次不会处理。';
+  @override
+  String get section_network => '网络';
 }
 
 // Path: <root>
@@ -139063,7 +138881,7 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get anime_download_search => '搜索';
   @override
-  String get anime_download_search_error_proxy_hint => '站點無法直連時，可在下載設定中配置網路代理。';
+  String get anime_download_search_error_proxy_hint => '站點無法直連時，可在系統設定中配置網路代理。';
   @override
   String get anime_download_search_failed => '搜索失敗或超時，請點重試';
   @override
@@ -140293,19 +140111,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get download_detail_backend_offline =>
       '原下載後端當前離線。這裡仍顯示已保存的任務資訊，但實時參數暫不可用。';
-  @override
-  String get download_network_proxy_auto => '自動';
-  @override
-  String get download_network_proxy_auto_hint =>
-      '僅影響 AniList、Nyaa 和 Jimaku。自動模式先讀環境變量，再讀已啟用的系統代理；種子流量不受影響。';
-  @override
-  String get download_network_proxy_custom => '自定義';
-  @override
-  String get download_network_proxy_custom_label => '自定義代理';
-  @override
-  String get download_network_proxy_direct => '直連';
-  @override
-  String get download_network_proxy_section => '發現網路';
   @override
   String get download_open_settings => '去設定';
   @override
@@ -143230,15 +143035,14 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get update_connecting => '正在連接更新來源…';
   @override
-  String get update_custom_proxy_auto_hint =>
-      'Leave blank to use environment variables, then the enabled system proxy.';
+  String get network_proxy_auto_hint =>
+      '應用程式的全部連線請求都經此處：更新、雲端同步、詞典、下載、字幕與中繼資料。留空為自動：先讀取環境變數，再讀取已啟用的系統代理。P2P（torrent）傳輸始終直連。';
   @override
-  String get update_custom_proxy_hint =>
-      'host:port，例如 127.0.0.1:7890（僅 IPv4/域名）';
+  String get network_proxy_hint => 'host:port，例如 127.0.0.1:7890（僅 IPv4/域名）';
   @override
-  String get update_custom_proxy_invalid => '代理格式無效，請用 host:port';
+  String get network_proxy_invalid => '代理格式無效，請用 host:port';
   @override
-  String get update_custom_proxy_label => 'Custom update proxy';
+  String get network_proxy_label => '網路代理';
   @override
   String get update_debug_channel => '偵錯更新頻道';
   @override
@@ -147184,6 +146988,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       '另有 ${n} 項被目前篩選隱藏，今次不會處理。';
+  @override
+  String get section_network => '網路';
 }
 
 /// Flat map(s) containing all translations.
@@ -147286,7 +147092,7 @@ extension on _StringsEn {
       case 'anime_download_search':
         return 'Search';
       case 'anime_download_search_error_proxy_hint':
-        return 'If the site cannot be reached directly, configure a network proxy in download settings.';
+        return 'If the site cannot be reached directly, configure a network proxy in system settings.';
       case 'anime_download_search_failed':
         return 'Search failed or timed out. Tap retry.';
       case 'anime_download_search_hint':
@@ -148475,18 +148281,6 @@ extension on _StringsEn {
         return 'Clear finished';
       case 'download_detail_backend_offline':
         return 'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
-      case 'download_network_proxy_auto':
-        return 'Auto';
-      case 'download_network_proxy_auto_hint':
-        return 'Applies to AniList, Nyaa, and Jimaku only. Auto uses environment variables, then the enabled system proxy; torrent traffic is unchanged.';
-      case 'download_network_proxy_custom':
-        return 'Custom';
-      case 'download_network_proxy_custom_label':
-        return 'Custom proxy';
-      case 'download_network_proxy_direct':
-        return 'Direct';
-      case 'download_network_proxy_section':
-        return 'Discovery network';
       case 'download_open_settings':
         return 'Open settings';
       case 'download_save_root_change':
@@ -151328,14 +151122,14 @@ extension on _StringsEn {
         return 'Checking for updates…';
       case 'update_connecting':
         return 'Connecting…';
-      case 'update_custom_proxy_auto_hint':
-        return 'Used for update checks, cloud sync and downloads. Leave blank to use environment variables, then the enabled system proxy.';
-      case 'update_custom_proxy_hint':
+      case 'network_proxy_auto_hint':
+        return 'Applies to every internet request the app makes: updates, cloud sync, dictionaries, downloads, subtitles and metadata. Leave blank for automatic: environment variables, then the enabled system proxy. P2P (torrent) transfers always connect directly.';
+      case 'network_proxy_hint':
         return 'host:port, e.g. 127.0.0.1:7890 (IPv4/host only)';
-      case 'update_custom_proxy_invalid':
+      case 'network_proxy_invalid':
         return 'Invalid proxy. Use host:port';
-      case 'update_custom_proxy_label':
-        return 'Custom network proxy';
+      case 'network_proxy_label':
+        return 'Network proxy';
       case 'update_debug_channel':
         return 'Debug update channel';
       case 'update_debug_channel_warning':
@@ -155054,6 +154848,8 @@ extension on _StringsEn {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             'Another ${n} selected item(s) are hidden by the current filter and will not be affected.';
+      case 'section_network':
+        return 'Network';
       default:
         return null;
     }
@@ -155156,7 +154952,7 @@ extension on _StringsAr {
       case 'anime_download_search':
         return 'بحث';
       case 'anime_download_search_error_proxy_hint':
-        return 'إذا تعذر الوصول إلى الموقع مباشرة، قم بتكوين وكيل شبكة في إعدادات التحميل.';
+        return 'إذا تعذر الوصول إلى الموقع مباشرة، قم بتكوين وكيل شبكة في إعدادات النظام.';
       case 'anime_download_search_failed':
         return 'فشل البحث أو انتهت مهلته. اضغط إعادة المحاولة.';
       case 'anime_download_search_hint':
@@ -156345,18 +156141,6 @@ extension on _StringsAr {
         return 'مسح المنتهية';
       case 'download_detail_backend_offline':
         return 'خلفية التحميل الأصلية غير متصلة. يتم عرض معلومات المهمة المحفوظة؛ المعلمات المباشرة غير متاحة.';
-      case 'download_network_proxy_auto':
-        return 'تلقائي';
-      case 'download_network_proxy_auto_hint':
-        return 'ينطبق على AniList وNyaa وJimaku فقط. التلقائي يستخدم متغيرات البيئة، ثم وكيل النظام المُفعّل؛ حركة التورنت لا تتغير.';
-      case 'download_network_proxy_custom':
-        return 'مخصص';
-      case 'download_network_proxy_custom_label':
-        return 'وكيل مخصص';
-      case 'download_network_proxy_direct':
-        return 'مباشر';
-      case 'download_network_proxy_section':
-        return 'شبكة الاكتشاف';
       case 'download_open_settings':
         return 'فتح الإعدادات';
       case 'download_save_root_change':
@@ -159193,14 +158977,14 @@ extension on _StringsAr {
         return 'جارٍ التحقق من التحديثات…';
       case 'update_connecting':
         return 'جارٍ الاتصال…';
-      case 'update_custom_proxy_auto_hint':
-        return 'Leave blank to use environment variables, then the enabled system proxy.';
-      case 'update_custom_proxy_hint':
+      case 'network_proxy_auto_hint':
+        return 'يُطبَّق على جميع طلبات الإنترنت في التطبيق: التحديثات، والمزامنة السحابية، والقواميس، والتنزيلات، والترجمات، والبيانات الوصفية. اتركه فارغًا للوضع التلقائي: متغيرات البيئة، ثم وكيل النظام المفعّل. تتصل عمليات نقل P2P (torrent) مباشرة دائمًا.';
+      case 'network_proxy_hint':
         return 'المضيف:المنفذ، مثال 127.0.0.1:7890 (IPv4/اسم مضيف فقط)';
-      case 'update_custom_proxy_invalid':
+      case 'network_proxy_invalid':
         return 'وكيل غير صالح. استخدم المضيف:المنفذ';
-      case 'update_custom_proxy_label':
-        return 'Custom update proxy';
+      case 'network_proxy_label':
+        return 'وكيل الشبكة';
       case 'update_debug_channel':
         return 'قناة تحديث التصحيح';
       case 'update_debug_channel_warning':
@@ -162920,6 +162704,8 @@ extension on _StringsAr {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             'هناك ${n} عنصر محدد مخفي بواسطة عامل التصفية الحالي ولن تتم معالجته.';
+      case 'section_network':
+        return 'الشبكة';
       default:
         return null;
     }
@@ -163023,7 +162809,7 @@ extension on _StringsDe {
       case 'anime_download_search':
         return 'Suchen';
       case 'anime_download_search_error_proxy_hint':
-        return 'Wenn die Seite nicht direkt erreichbar ist, konfiguriere einen Netzwerk-Proxy in den Download-Einstellungen.';
+        return 'Wenn die Seite nicht direkt erreichbar ist, konfiguriere einen Netzwerk-Proxy in den Systemeinstellungen.';
       case 'anime_download_search_failed':
         return 'Suche fehlgeschlagen oder Zeitüberschreitung. Tippe auf „Erneut versuchen".';
       case 'anime_download_search_hint':
@@ -164218,18 +164004,6 @@ extension on _StringsDe {
         return 'Abgeschlossene löschen';
       case 'download_detail_backend_offline':
         return 'Das ursprüngliche Download-Backend ist offline. Gespeicherte Aufgabeninformationen werden angezeigt; Live-Parameter sind nicht verfügbar.';
-      case 'download_network_proxy_auto':
-        return 'Automatisch';
-      case 'download_network_proxy_auto_hint':
-        return 'Gilt nur für AniList, Nyaa und Jimaku. Automatisch verwendet Umgebungsvariablen, dann den aktivierten System-Proxy; Torrent-Datenverkehr bleibt unverändert.';
-      case 'download_network_proxy_custom':
-        return 'Benutzerdefiniert';
-      case 'download_network_proxy_custom_label':
-        return 'Benutzerdefinierter Proxy';
-      case 'download_network_proxy_direct':
-        return 'Direkt';
-      case 'download_network_proxy_section':
-        return 'Entdeckungsnetzwerk';
       case 'download_open_settings':
         return 'Einstellungen öffnen';
       case 'download_save_root_change':
@@ -167084,14 +166858,14 @@ extension on _StringsDe {
         return 'Suche nach Updates…';
       case 'update_connecting':
         return 'Verbinde…';
-      case 'update_custom_proxy_auto_hint':
-        return 'Leave blank to use environment variables, then the enabled system proxy.';
-      case 'update_custom_proxy_hint':
+      case 'network_proxy_auto_hint':
+        return 'Gilt für alle Internetanfragen der App: Updates, Cloud-Sync, Wörterbücher, Downloads, Untertitel und Metadaten. Leer lassen für automatisch: Umgebungsvariablen, dann der aktivierte System-Proxy. P2P-(Torrent-)Übertragungen verbinden sich immer direkt.';
+      case 'network_proxy_hint':
         return 'Host:Port, z. B. 127.0.0.1:7890 (nur IPv4/Host)';
-      case 'update_custom_proxy_invalid':
+      case 'network_proxy_invalid':
         return 'Ungültiger Proxy. Verwende Host:Port';
-      case 'update_custom_proxy_label':
-        return 'Custom update proxy';
+      case 'network_proxy_label':
+        return 'Netzwerk-Proxy';
       case 'update_debug_channel':
         return 'Debug-Update-Kanal';
       case 'update_debug_channel_warning':
@@ -170829,6 +170603,8 @@ extension on _StringsDe {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             'Weitere ${n} ausgewählte Elemente sind durch den aktuellen Filter ausgeblendet und werden nicht bearbeitet.';
+      case 'section_network':
+        return 'Netzwerk';
       default:
         return null;
     }
@@ -170931,7 +170707,7 @@ extension on _StringsEs {
       case 'anime_download_search':
         return 'Buscar';
       case 'anime_download_search_error_proxy_hint':
-        return 'Si no puede acceder al sitio directamente, configure un proxy de red en los ajustes de descarga.';
+        return 'Si no puede acceder al sitio directamente, configure un proxy de red en los ajustes del sistema.';
       case 'anime_download_search_failed':
         return 'La búsqueda falló o se agotó el tiempo. Toque reintentar.';
       case 'anime_download_search_hint':
@@ -172127,18 +171903,6 @@ extension on _StringsEs {
         return 'Limpiar finalizados';
       case 'download_detail_backend_offline':
         return 'El motor de descarga original está desconectado. Se muestra la información persistida de la tarea; los parámetros en tiempo real no están disponibles.';
-      case 'download_network_proxy_auto':
-        return 'Auto';
-      case 'download_network_proxy_auto_hint':
-        return 'Se aplica solo a AniList, Nyaa y Jimaku. Auto usa variables de entorno, luego el proxy del sistema habilitado; el tráfico de torrents no se modifica.';
-      case 'download_network_proxy_custom':
-        return 'Personalizado';
-      case 'download_network_proxy_custom_label':
-        return 'Proxy personalizado';
-      case 'download_network_proxy_direct':
-        return 'Directo';
-      case 'download_network_proxy_section':
-        return 'Red de descubrimiento';
       case 'download_open_settings':
         return 'Abrir ajustes';
       case 'download_save_root_change':
@@ -174991,14 +174755,14 @@ extension on _StringsEs {
         return 'Buscando actualizaciones…';
       case 'update_connecting':
         return 'Conectando…';
-      case 'update_custom_proxy_auto_hint':
-        return 'Leave blank to use environment variables, then the enabled system proxy.';
-      case 'update_custom_proxy_hint':
+      case 'network_proxy_auto_hint':
+        return 'Se aplica a todas las solicitudes de Internet de la aplicación: actualizaciones, sincronización en la nube, diccionarios, descargas, subtítulos y metadatos. Déjelo en blanco para automático: variables de entorno y, después, el proxy del sistema habilitado. Las transferencias P2P (torrent) siempre se conectan directamente.';
+      case 'network_proxy_hint':
         return 'host:puerto, ej. 127.0.0.1:7890 (solo IPv4/host)';
-      case 'update_custom_proxy_invalid':
+      case 'network_proxy_invalid':
         return 'Proxy no válido. Use host:puerto';
-      case 'update_custom_proxy_label':
-        return 'Custom update proxy';
+      case 'network_proxy_label':
+        return 'Proxy de red';
       case 'update_debug_channel':
         return 'Canal de actualización de depuración';
       case 'update_debug_channel_warning':
@@ -178730,6 +178494,8 @@ extension on _StringsEs {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             'Otros ${n} elementos seleccionados están ocultos por el filtro actual y no se procesarán.';
+      case 'section_network':
+        return 'Red';
       default:
         return null;
     }
@@ -178833,7 +178599,7 @@ extension on _StringsFr {
       case 'anime_download_search':
         return 'Rechercher';
       case 'anime_download_search_error_proxy_hint':
-        return 'Si le site n\'est pas accessible directement, configurez un proxy réseau dans les paramètres de téléchargement.';
+        return 'Si le site n\'est pas accessible directement, configurez un proxy réseau dans les paramètres système.';
       case 'anime_download_search_failed':
         return 'Recherche échouée ou expirée. Appuyez sur Réessayer.';
       case 'anime_download_search_hint':
@@ -180032,18 +179798,6 @@ extension on _StringsFr {
         return 'Effacer les terminés';
       case 'download_detail_backend_offline':
         return 'Le moteur de téléchargement d\'origine est hors ligne. Les informations sauvegardées sont affichées ; les paramètres en direct sont indisponibles.';
-      case 'download_network_proxy_auto':
-        return 'Auto';
-      case 'download_network_proxy_auto_hint':
-        return 'S\'applique à AniList, Nyaa et Jimaku uniquement. Auto utilise les variables d\'environnement, puis le proxy système activé ; le trafic torrent est inchangé.';
-      case 'download_network_proxy_custom':
-        return 'Personnalisé';
-      case 'download_network_proxy_custom_label':
-        return 'Proxy personnalisé';
-      case 'download_network_proxy_direct':
-        return 'Direct';
-      case 'download_network_proxy_section':
-        return 'Réseau de découverte';
       case 'download_open_settings':
         return 'Ouvrir les paramètres';
       case 'download_save_root_change':
@@ -182897,14 +182651,14 @@ extension on _StringsFr {
         return 'Vérification des mises à jour…';
       case 'update_connecting':
         return 'Connexion…';
-      case 'update_custom_proxy_auto_hint':
-        return 'Leave blank to use environment variables, then the enabled system proxy.';
-      case 'update_custom_proxy_hint':
+      case 'network_proxy_auto_hint':
+        return 'S\'applique à toutes les requêtes Internet de l\'application : mises à jour, synchronisation cloud, dictionnaires, téléchargements, sous-titres et métadonnées. Laissez vide pour le mode automatique : variables d\'environnement, puis le proxy système activé. Les transferts P2P (torrent) se connectent toujours directement.';
+      case 'network_proxy_hint':
         return 'hôte:port, par ex. 127.0.0.1:7890 (IPv4/nom d\'hôte uniquement)';
-      case 'update_custom_proxy_invalid':
+      case 'network_proxy_invalid':
         return 'Proxy invalide. Utilisez hôte:port';
-      case 'update_custom_proxy_label':
-        return 'Custom update proxy';
+      case 'network_proxy_label':
+        return 'Proxy réseau';
       case 'update_debug_channel':
         return 'Canal de mise à jour de débogage';
       case 'update_debug_channel_warning':
@@ -186639,6 +186393,8 @@ extension on _StringsFr {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             '${n} autres éléments sélectionnés sont masqués par le filtre actuel et ne seront pas traités.';
+      case 'section_network':
+        return 'Réseau';
       default:
         return null;
     }
@@ -186742,7 +186498,7 @@ extension on _StringsId {
       case 'anime_download_search':
         return 'Cari';
       case 'anime_download_search_error_proxy_hint':
-        return 'Jika situs tidak bisa dijangkau langsung, atur proksi jaringan di pengaturan unduhan.';
+        return 'Jika situs tidak bisa dijangkau langsung, atur proksi jaringan di pengaturan sistem.';
       case 'anime_download_search_failed':
         return 'Pencarian gagal atau waktu habis. Ketuk coba lagi.';
       case 'anime_download_search_hint':
@@ -187935,18 +187691,6 @@ extension on _StringsId {
         return 'Bersihkan yang selesai';
       case 'download_detail_backend_offline':
         return 'Backend unduhan asli sedang offline. Informasi tugas yang tersimpan ditampilkan; parameter langsung tidak tersedia.';
-      case 'download_network_proxy_auto':
-        return 'Otomatis';
-      case 'download_network_proxy_auto_hint':
-        return 'Berlaku untuk AniList, Nyaa, dan Jimaku saja. Otomatis menggunakan variabel lingkungan, lalu proksi sistem yang aktif; lalu lintas torrent tidak berubah.';
-      case 'download_network_proxy_custom':
-        return 'Kustom';
-      case 'download_network_proxy_custom_label':
-        return 'Proksi kustom';
-      case 'download_network_proxy_direct':
-        return 'Langsung';
-      case 'download_network_proxy_section':
-        return 'Jaringan pencarian';
       case 'download_open_settings':
         return 'Buka pengaturan';
       case 'download_save_root_change':
@@ -190791,14 +190535,14 @@ extension on _StringsId {
         return 'Memeriksa pembaruan…';
       case 'update_connecting':
         return 'Menghubungkan…';
-      case 'update_custom_proxy_auto_hint':
-        return 'Leave blank to use environment variables, then the enabled system proxy.';
-      case 'update_custom_proxy_hint':
+      case 'network_proxy_auto_hint':
+        return 'Berlaku untuk semua permintaan Internet aplikasi: pembaruan, sinkronisasi cloud, kamus, unduhan, subtitel, dan metadata. Kosongkan untuk otomatis: variabel lingkungan, lalu proksi sistem yang diaktifkan. Transfer P2P (torrent) selalu terhubung langsung.';
+      case 'network_proxy_hint':
         return 'host:port, mis. 127.0.0.1:7890 (khusus IPv4/host)';
-      case 'update_custom_proxy_invalid':
+      case 'network_proxy_invalid':
         return 'Proksi tidak valid. Gunakan host:port';
-      case 'update_custom_proxy_label':
-        return 'Custom update proxy';
+      case 'network_proxy_label':
+        return 'Proksi jaringan';
       case 'update_debug_channel':
         return 'Kanal Pembaruan Debug';
       case 'update_debug_channel_warning':
@@ -194520,6 +194264,8 @@ extension on _StringsId {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             '${n} item terpilih lainnya disembunyikan oleh filter saat ini dan tidak akan diproses.';
+      case 'section_network':
+        return 'Jaringan';
       default:
         return null;
     }
@@ -194623,7 +194369,7 @@ extension on _StringsIt {
       case 'anime_download_search':
         return 'Cerca';
       case 'anime_download_search_error_proxy_hint':
-        return 'Se il sito non è raggiungibile direttamente, configura un proxy di rete nelle impostazioni di download.';
+        return 'Se il sito non è raggiungibile direttamente, configura un proxy di rete nelle impostazioni di sistema.';
       case 'anime_download_search_failed':
         return 'Ricerca fallita o scaduta. Tocca Riprova.';
       case 'anime_download_search_hint':
@@ -195818,18 +195564,6 @@ extension on _StringsIt {
         return 'Cancella completati';
       case 'download_detail_backend_offline':
         return 'Il backend di download originale è offline. Vengono mostrate le informazioni salvate; i parametri live non sono disponibili.';
-      case 'download_network_proxy_auto':
-        return 'Auto';
-      case 'download_network_proxy_auto_hint':
-        return 'Si applica solo ad AniList, Nyaa e Jimaku. Auto usa le variabili d\'ambiente, poi il proxy di sistema abilitato; il traffico torrent non cambia.';
-      case 'download_network_proxy_custom':
-        return 'Personalizzato';
-      case 'download_network_proxy_custom_label':
-        return 'Proxy personalizzato';
-      case 'download_network_proxy_direct':
-        return 'Diretto';
-      case 'download_network_proxy_section':
-        return 'Rete di scoperta';
       case 'download_open_settings':
         return 'Apri impostazioni';
       case 'download_save_root_change':
@@ -198682,14 +198416,14 @@ extension on _StringsIt {
         return 'Controllo aggiornamenti…';
       case 'update_connecting':
         return 'Connessione…';
-      case 'update_custom_proxy_auto_hint':
-        return 'Leave blank to use environment variables, then the enabled system proxy.';
-      case 'update_custom_proxy_hint':
+      case 'network_proxy_auto_hint':
+        return 'Si applica a tutte le richieste Internet dell\'app: aggiornamenti, sincronizzazione cloud, dizionari, download, sottotitoli e metadati. Lascia vuoto per la modalità automatica: variabili d\'ambiente, poi il proxy di sistema attivo. I trasferimenti P2P (torrent) si connettono sempre direttamente.';
+      case 'network_proxy_hint':
         return 'host:porta, es. 127.0.0.1:7890 (solo IPv4/host)';
-      case 'update_custom_proxy_invalid':
+      case 'network_proxy_invalid':
         return 'Proxy non valido. Usa host:porta';
-      case 'update_custom_proxy_label':
-        return 'Custom update proxy';
+      case 'network_proxy_label':
+        return 'Proxy di rete';
       case 'update_debug_channel':
         return 'Canale aggiornamenti di debug';
       case 'update_debug_channel_warning':
@@ -202422,6 +202156,8 @@ extension on _StringsIt {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             'Altri ${n} elementi selezionati sono nascosti dal filtro corrente e non verranno elaborati.';
+      case 'section_network':
+        return 'Rete';
       default:
         return null;
     }
@@ -202524,7 +202260,7 @@ extension on _StringsJa {
       case 'anime_download_search':
         return '検索';
       case 'anime_download_search_error_proxy_hint':
-        return 'サイトに直接アクセスできない場合、ダウンロード設定でネットワークプロキシを設定してください。';
+        return 'サイトに直接アクセスできない場合、システム設定でネットワークプロキシを設定してください。';
       case 'anime_download_search_failed':
         return '検索が失敗またはタイムアウトしました。再試行をタップしてください。';
       case 'anime_download_search_hint':
@@ -203706,18 +203442,6 @@ extension on _StringsJa {
         return '完了済みをクリア';
       case 'download_detail_backend_offline':
         return '元のダウンロードバックエンドがオフラインです。保存されたタスク情報が表示されています。ライブパラメータは利用できません。';
-      case 'download_network_proxy_auto':
-        return '自動';
-      case 'download_network_proxy_auto_hint':
-        return 'AniList、Nyaa、Jimaku にのみ適用されます。自動は環境変数を使用し、次にシステムプロキシを使用します。torrent トラフィックは変更されません。';
-      case 'download_network_proxy_custom':
-        return 'カスタム';
-      case 'download_network_proxy_custom_label':
-        return 'カスタムプロキシ';
-      case 'download_network_proxy_direct':
-        return '直接接続';
-      case 'download_network_proxy_section':
-        return 'ディスカバリーネットワーク';
       case 'download_open_settings':
         return '設定を開く';
       case 'download_save_root_change':
@@ -206544,14 +206268,14 @@ extension on _StringsJa {
         return 'アップデートを確認中…';
       case 'update_connecting':
         return '更新元に接続中…';
-      case 'update_custom_proxy_auto_hint':
-        return 'Leave blank to use environment variables, then the enabled system proxy.';
-      case 'update_custom_proxy_hint':
+      case 'network_proxy_auto_hint':
+        return 'アプリのすべての通信（更新、クラウド同期、辞書、ダウンロード、字幕、メタデータ）に適用されます。空欄で自動：環境変数、次に有効なシステムプロキシを使用します。P2P（torrent）通信は常に直接接続します。';
+      case 'network_proxy_hint':
         return 'ホスト:ポート 例: 127.0.0.1:7890（IPv4/ホスト名のみ）';
-      case 'update_custom_proxy_invalid':
+      case 'network_proxy_invalid':
         return '無効なプロキシです。ホスト:ポートの形式で入力してください';
-      case 'update_custom_proxy_label':
-        return 'Custom update proxy';
+      case 'network_proxy_label':
+        return 'ネットワークプロキシ';
       case 'update_debug_channel':
         return 'デバッグ更新チャンネル';
       case 'update_debug_channel_warning':
@@ -210257,6 +209981,8 @@ extension on _StringsJa {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             '選択済みの ${n} 件は現在のフィルターで非表示のため、今回は処理されません。';
+      case 'section_network':
+        return 'ネットワーク';
       default:
         return null;
     }
@@ -210359,7 +210085,7 @@ extension on _StringsKo {
       case 'anime_download_search':
         return '검색';
       case 'anime_download_search_error_proxy_hint':
-        return '사이트에 직접 접속할 수 없는 경우 다운로드 설정에서 네트워크 프록시를 구성하세요.';
+        return '사이트에 직접 접속할 수 없는 경우 시스템 설정에서 네트워크 프록시를 구성하세요.';
       case 'anime_download_search_failed':
         return '검색 실패 또는 시간 초과. 재시도를 탭하세요.';
       case 'anime_download_search_hint':
@@ -211542,18 +211268,6 @@ extension on _StringsKo {
         return '완료된 항목 지우기';
       case 'download_detail_backend_offline':
         return '원래 다운로드 백엔드가 오프라인입니다. 저장된 작업 정보가 표시됩니다; 실시간 매개변수를 사용할 수 없습니다.';
-      case 'download_network_proxy_auto':
-        return '자동';
-      case 'download_network_proxy_auto_hint':
-        return 'AniList, Nyaa, Jimaku에만 적용됩니다. 자동은 환경 변수를 먼저 사용한 후 활성화된 시스템 프록시를 사용합니다; 토렌트 트래픽은 변경되지 않습니다.';
-      case 'download_network_proxy_custom':
-        return '사용자 정의';
-      case 'download_network_proxy_custom_label':
-        return '사용자 정의 프록시';
-      case 'download_network_proxy_direct':
-        return '직접 연결';
-      case 'download_network_proxy_section':
-        return '탐색 네트워크';
       case 'download_open_settings':
         return '설정 열기';
       case 'download_save_root_change':
@@ -214382,14 +214096,14 @@ extension on _StringsKo {
         return '업데이트 확인 중…';
       case 'update_connecting':
         return '연결 중…';
-      case 'update_custom_proxy_auto_hint':
-        return 'Leave blank to use environment variables, then the enabled system proxy.';
-      case 'update_custom_proxy_hint':
+      case 'network_proxy_auto_hint':
+        return '앱의 모든 인터넷 요청(업데이트, 클라우드 동기화, 사전, 다운로드, 자막, 메타데이터)에 적용됩니다. 비워 두면 자동: 환경 변수, 그다음 활성화된 시스템 프록시를 사용합니다. P2P(토렌트) 전송은 항상 직접 연결합니다.';
+      case 'network_proxy_hint':
         return '호스트:포트, 예: 127.0.0.1:7890 (IPv4/호스트만 지원)';
-      case 'update_custom_proxy_invalid':
+      case 'network_proxy_invalid':
         return '잘못된 프록시입니다. 호스트:포트 형식을 사용하세요';
-      case 'update_custom_proxy_label':
-        return 'Custom update proxy';
+      case 'network_proxy_label':
+        return '네트워크 프록시';
       case 'update_debug_channel':
         return '디버그 업데이트 채널';
       case 'update_debug_channel_warning':
@@ -218094,6 +217808,8 @@ extension on _StringsKo {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             '선택한 항목 중 ${n}개는 현재 필터로 숨겨져 있어 처리되지 않습니다.';
+      case 'section_network':
+        return '네트워크';
       default:
         return null;
     }
@@ -218197,7 +217913,7 @@ extension on _StringsNl {
       case 'anime_download_search':
         return 'Zoeken';
       case 'anime_download_search_error_proxy_hint':
-        return 'Als de site niet direct bereikbaar is, stel dan een netwerkproxy in bij de downloadinstellingen.';
+        return 'Als de site niet direct bereikbaar is, stel dan een netwerkproxy in bij de systeeminstellingen.';
       case 'anime_download_search_failed':
         return 'Zoeken mislukt of verlopen. Tik op opnieuw.';
       case 'anime_download_search_hint':
@@ -219392,18 +219108,6 @@ extension on _StringsNl {
         return 'Voltooide wissen';
       case 'download_detail_backend_offline':
         return 'De oorspronkelijke download-backend is offline. Opgeslagen taakinformatie wordt getoond; live parameters zijn niet beschikbaar.';
-      case 'download_network_proxy_auto':
-        return 'Automatisch';
-      case 'download_network_proxy_auto_hint':
-        return 'Geldt alleen voor AniList, Nyaa en Jimaku. Automatisch gebruikt omgevingsvariabelen, dan de ingeschakelde systeemproxy; torrentverkeer wordt niet gewijzigd.';
-      case 'download_network_proxy_custom':
-        return 'Aangepast';
-      case 'download_network_proxy_custom_label':
-        return 'Aangepaste proxy';
-      case 'download_network_proxy_direct':
-        return 'Direct';
-      case 'download_network_proxy_section':
-        return 'Discovery-netwerk';
       case 'download_open_settings':
         return 'Instellingen openen';
       case 'download_save_root_change':
@@ -222251,14 +221955,14 @@ extension on _StringsNl {
         return 'Controleren op updates…';
       case 'update_connecting':
         return 'Verbinden…';
-      case 'update_custom_proxy_auto_hint':
-        return 'Leave blank to use environment variables, then the enabled system proxy.';
-      case 'update_custom_proxy_hint':
+      case 'network_proxy_auto_hint':
+        return 'Geldt voor alle internetverzoeken van de app: updates, cloudsynchronisatie, woordenboeken, downloads, ondertitels en metadata. Laat leeg voor automatisch: omgevingsvariabelen, daarna de ingeschakelde systeemproxy. P2P-overdrachten (torrent) maken altijd rechtstreeks verbinding.';
+      case 'network_proxy_hint':
         return 'host:poort, bijv. 127.0.0.1:7890 (alleen IPv4/host)';
-      case 'update_custom_proxy_invalid':
+      case 'network_proxy_invalid':
         return 'Ongeldige proxy. Gebruik host:poort';
-      case 'update_custom_proxy_label':
-        return 'Custom update proxy';
+      case 'network_proxy_label':
+        return 'Netwerkproxy';
       case 'update_debug_channel':
         return 'Debug-updatekanaal';
       case 'update_debug_channel_warning':
@@ -225990,6 +225694,8 @@ extension on _StringsNl {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             'Nog ${n} geselecteerde items zijn verborgen door het huidige filter en worden niet verwerkt.';
+      case 'section_network':
+        return 'Netwerk';
       default:
         return null;
     }
@@ -226093,7 +225799,7 @@ extension on _StringsPtBr {
       case 'anime_download_search':
         return 'Buscar';
       case 'anime_download_search_error_proxy_hint':
-        return 'Se o site não pode ser acessado diretamente, configure um proxy de rede nas configurações de download.';
+        return 'Se o site não pode ser acessado diretamente, configure um proxy de rede nas configurações do sistema.';
       case 'anime_download_search_failed':
         return 'Busca falhou ou expirou. Toque em tentar novamente.';
       case 'anime_download_search_hint':
@@ -227287,18 +226993,6 @@ extension on _StringsPtBr {
         return 'Limpar concluídos';
       case 'download_detail_backend_offline':
         return 'O backend de download original está offline. Informações da tarefa persistidas são mostradas; parâmetros ao vivo estão indisponíveis.';
-      case 'download_network_proxy_auto':
-        return 'Auto';
-      case 'download_network_proxy_auto_hint':
-        return 'Aplica-se apenas ao AniList, Nyaa e Jimaku. Auto usa variáveis de ambiente e depois o proxy do sistema ativado; o tráfego de torrent não é alterado.';
-      case 'download_network_proxy_custom':
-        return 'Personalizado';
-      case 'download_network_proxy_custom_label':
-        return 'Proxy personalizado';
-      case 'download_network_proxy_direct':
-        return 'Direto';
-      case 'download_network_proxy_section':
-        return 'Rede de descoberta';
       case 'download_open_settings':
         return 'Abrir configurações';
       case 'download_save_root_change':
@@ -230144,14 +229838,14 @@ extension on _StringsPtBr {
         return 'Verificando atualizações…';
       case 'update_connecting':
         return 'Conectando…';
-      case 'update_custom_proxy_auto_hint':
-        return 'Leave blank to use environment variables, then the enabled system proxy.';
-      case 'update_custom_proxy_hint':
+      case 'network_proxy_auto_hint':
+        return 'Aplica-se a todas as solicitações de Internet do aplicativo: atualizações, sincronização na nuvem, dicionários, downloads, legendas e metadados. Deixe em branco para automático: variáveis de ambiente e, depois, o proxy do sistema ativado. As transferências P2P (torrent) sempre se conectam diretamente.';
+      case 'network_proxy_hint':
         return 'host:porta, ex: 127.0.0.1:7890 (apenas IPv4/host)';
-      case 'update_custom_proxy_invalid':
+      case 'network_proxy_invalid':
         return 'Proxy inválido. Use host:porta';
-      case 'update_custom_proxy_label':
-        return 'Custom update proxy';
+      case 'network_proxy_label':
+        return 'Proxy de rede';
       case 'update_debug_channel':
         return 'Canal de Atualização de Depuração';
       case 'update_debug_channel_warning':
@@ -233881,6 +233575,8 @@ extension on _StringsPtBr {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             'Outros ${n} itens selecionados estão ocultos pelo filtro atual e não serão processados.';
+      case 'section_network':
+        return 'Rede';
       default:
         return null;
     }
@@ -233984,7 +233680,7 @@ extension on _StringsRu {
       case 'anime_download_search':
         return 'Поиск';
       case 'anime_download_search_error_proxy_hint':
-        return 'Если сайт недоступен напрямую, настройте сетевой прокси в параметрах загрузки.';
+        return 'Если сайт недоступен напрямую, настройте сетевой прокси в системных параметрах.';
       case 'anime_download_search_failed':
         return 'Поиск не удался или превышено время ожидания. Нажмите «Повторить».';
       case 'anime_download_search_hint':
@@ -235181,18 +234877,6 @@ extension on _StringsRu {
         return 'Очистить завершённые';
       case 'download_detail_backend_offline':
         return 'Исходный бэкенд загрузки не в сети. Показана сохранённая информация о задаче; актуальные параметры недоступны.';
-      case 'download_network_proxy_auto':
-        return 'Авто';
-      case 'download_network_proxy_auto_hint':
-        return 'Применяется только к AniList, Nyaa и Jimaku. «Авто» использует переменные окружения, затем включённый системный прокси; торрент-трафик не затрагивается.';
-      case 'download_network_proxy_custom':
-        return 'Настраиваемый';
-      case 'download_network_proxy_custom_label':
-        return 'Настраиваемый прокси';
-      case 'download_network_proxy_direct':
-        return 'Прямое подключение';
-      case 'download_network_proxy_section':
-        return 'Сеть обнаружения';
       case 'download_open_settings':
         return 'Открыть настройки';
       case 'download_save_root_change':
@@ -238040,14 +237724,14 @@ extension on _StringsRu {
         return 'Проверка обновлений…';
       case 'update_connecting':
         return 'Подключение…';
-      case 'update_custom_proxy_auto_hint':
-        return 'Leave blank to use environment variables, then the enabled system proxy.';
-      case 'update_custom_proxy_hint':
+      case 'network_proxy_auto_hint':
+        return 'Применяется ко всем интернет-запросам приложения: обновления, облачная синхронизация, словари, загрузки, субтитры и метаданные. Оставьте пустым для автоматического режима: переменные окружения, затем включённый системный прокси. P2P-передачи (torrent) всегда подключаются напрямую.';
+      case 'network_proxy_hint':
         return 'хост:порт, например 127.0.0.1:7890 (только IPv4/хост)';
-      case 'update_custom_proxy_invalid':
+      case 'network_proxy_invalid':
         return 'Недопустимый прокси. Используйте хост:порт';
-      case 'update_custom_proxy_label':
-        return 'Custom update proxy';
+      case 'network_proxy_label':
+        return 'Сетевой прокси';
       case 'update_debug_channel':
         return 'Канал отладочных обновлений';
       case 'update_debug_channel_warning':
@@ -241778,6 +241462,8 @@ extension on _StringsRu {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             'Ещё ${n} выбранных элементов скрыты текущим фильтром и не будут обработаны.';
+      case 'section_network':
+        return 'Сеть';
       default:
         return null;
     }
@@ -241881,7 +241567,7 @@ extension on _StringsTh {
       case 'anime_download_search':
         return 'ค้นหา';
       case 'anime_download_search_error_proxy_hint':
-        return 'หากเข้าถึงเว็บไซต์โดยตรงไม่ได้ ให้ตั้งค่าพร็อกซีเครือข่ายในการตั้งค่าดาวน์โหลด';
+        return 'หากเข้าถึงเว็บไซต์โดยตรงไม่ได้ ให้ตั้งค่าพร็อกซีเครือข่ายในการตั้งค่าระบบ';
       case 'anime_download_search_failed':
         return 'ค้นหาล้มเหลวหรือหมดเวลา แตะเพื่อลองอีกครั้ง';
       case 'anime_download_search_hint':
@@ -243068,18 +242754,6 @@ extension on _StringsTh {
         return 'ล้างที่เสร็จแล้ว';
       case 'download_detail_backend_offline':
         return 'แบ็กเอนด์ดาวน์โหลดเดิมออฟไลน์อยู่ แสดงข้อมูลงานที่บันทึกไว้; พารามิเตอร์แบบเรียลไทม์ไม่พร้อมใช้งาน';
-      case 'download_network_proxy_auto':
-        return 'อัตโนมัติ';
-      case 'download_network_proxy_auto_hint':
-        return 'ใช้กับ AniList, Nyaa และ Jimaku เท่านั้น อัตโนมัติใช้ตัวแปรสภาพแวดล้อมก่อน จากนั้นพร็อกซีระบบที่เปิดใช้งาน; ทราฟฟิกทอร์เรนต์ไม่เปลี่ยนแปลง';
-      case 'download_network_proxy_custom':
-        return 'กำหนดเอง';
-      case 'download_network_proxy_custom_label':
-        return 'พร็อกซีที่กำหนดเอง';
-      case 'download_network_proxy_direct':
-        return 'ตรง';
-      case 'download_network_proxy_section':
-        return 'เครือข่ายค้นหา';
       case 'download_open_settings':
         return 'เปิดการตั้งค่า';
       case 'download_save_root_change':
@@ -245922,14 +245596,14 @@ extension on _StringsTh {
         return 'กำลังตรวจสอบอัปเดต…';
       case 'update_connecting':
         return 'กำลังเชื่อมต่อแหล่งอัปเดต…';
-      case 'update_custom_proxy_auto_hint':
-        return 'Leave blank to use environment variables, then the enabled system proxy.';
-      case 'update_custom_proxy_hint':
+      case 'network_proxy_auto_hint':
+        return 'ใช้กับคำขออินเทอร์เน็ตทั้งหมดของแอป: การอัปเดต การซิงค์คลาวด์ พจนานุกรม การดาวน์โหลด คำบรรยาย และข้อมูลเมตา เว้นว่างไว้เพื่อใช้อัตโนมัติ: ตัวแปรสภาพแวดล้อม จากนั้นพร็อกซีระบบที่เปิดใช้งาน การถ่ายโอน P2P (torrent) จะเชื่อมต่อโดยตรงเสมอ';
+      case 'network_proxy_hint':
         return 'host:port เช่น 127.0.0.1:7890 (IPv4/host เท่านั้น)';
-      case 'update_custom_proxy_invalid':
+      case 'network_proxy_invalid':
         return 'พร็อกซีไม่ถูกต้อง ใช้รูปแบบ host:port';
-      case 'update_custom_proxy_label':
-        return 'Custom update proxy';
+      case 'network_proxy_label':
+        return 'พร็อกซีเครือข่าย';
       case 'update_debug_channel':
         return 'ช่องอัปเดตดีบัก';
       case 'update_debug_channel_warning':
@@ -249647,6 +249321,8 @@ extension on _StringsTh {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             'รายการที่เลือกอีก ${n} รายการถูกซ่อนด้วยตัวกรองปัจจุบันและจะไม่ถูกดำเนินการ';
+      case 'section_network':
+        return 'เครือข่าย';
       default:
         return null;
     }
@@ -249750,7 +249426,7 @@ extension on _StringsTr {
       case 'anime_download_search':
         return 'Ara';
       case 'anime_download_search_error_proxy_hint':
-        return 'Siteye doğrudan erişilemiyorsa indirme ayarlarında bir ağ proxy\'si yapılandırın.';
+        return 'Siteye doğrudan erişilemiyorsa sistem ayarlarında bir ağ proxy\'si yapılandırın.';
       case 'anime_download_search_failed':
         return 'Arama başarısız veya zaman aşımına uğradı. Tekrar denemek için dokunun.';
       case 'anime_download_search_hint':
@@ -250942,18 +250618,6 @@ extension on _StringsTr {
         return 'Tamamlananları temizle';
       case 'download_detail_backend_offline':
         return 'Orijinal indirme arka ucu çevrimdışı. Kaydedilmiş görev bilgileri gösteriliyor; canlı parametreler kullanılamıyor.';
-      case 'download_network_proxy_auto':
-        return 'Otomatik';
-      case 'download_network_proxy_auto_hint':
-        return 'Yalnızca AniList, Nyaa ve Jimaku için geçerlidir. Otomatik, ortam değişkenlerini, ardından etkin sistem proxy\'sini kullanır; torrent trafiği değişmez.';
-      case 'download_network_proxy_custom':
-        return 'Özel';
-      case 'download_network_proxy_custom_label':
-        return 'Özel proxy';
-      case 'download_network_proxy_direct':
-        return 'Doğrudan';
-      case 'download_network_proxy_section':
-        return 'Keşif ağı';
       case 'download_open_settings':
         return 'Ayarları aç';
       case 'download_save_root_change':
@@ -253797,14 +253461,14 @@ extension on _StringsTr {
         return 'Güncellemeler kontrol ediliyor…';
       case 'update_connecting':
         return 'Bağlanılıyor…';
-      case 'update_custom_proxy_auto_hint':
-        return 'Leave blank to use environment variables, then the enabled system proxy.';
-      case 'update_custom_proxy_hint':
+      case 'network_proxy_auto_hint':
+        return 'Uygulamanın tüm internet isteklerine uygulanır: güncellemeler, bulut eşitleme, sözlükler, indirmeler, altyazılar ve meta veriler. Otomatik için boş bırakın: önce ortam değişkenleri, sonra etkin sistem proxy\'si. P2P (torrent) aktarımları her zaman doğrudan bağlanır.';
+      case 'network_proxy_hint':
         return 'sunucu:port, ör. 127.0.0.1:7890 (yalnızca IPv4/sunucu adı)';
-      case 'update_custom_proxy_invalid':
+      case 'network_proxy_invalid':
         return 'Geçersiz proxy. sunucu:port kullanın';
-      case 'update_custom_proxy_label':
-        return 'Custom update proxy';
+      case 'network_proxy_label':
+        return 'Ağ proxy\'si';
       case 'update_debug_channel':
         return 'Hata Ayıklama Güncelleme Kanalı';
       case 'update_debug_channel_warning':
@@ -257533,6 +257197,8 @@ extension on _StringsTr {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             'Seçili ${n} öğe daha geçerli filtre tarafından gizlendi ve işlenmeyecek.';
+      case 'section_network':
+        return 'Ağ';
       default:
         return null;
     }
@@ -257636,7 +257302,7 @@ extension on _StringsVi {
       case 'anime_download_search':
         return 'Tìm kiếm';
       case 'anime_download_search_error_proxy_hint':
-        return 'Nếu không thể truy cập trang web trực tiếp, hãy cấu hình proxy mạng trong cài đặt tải xuống.';
+        return 'Nếu không thể truy cập trang web trực tiếp, hãy cấu hình proxy mạng trong cài đặt hệ thống.';
       case 'anime_download_search_failed':
         return 'Tìm kiếm thất bại hoặc hết thời gian. Nhấn thử lại.';
       case 'anime_download_search_hint':
@@ -258827,18 +258493,6 @@ extension on _StringsVi {
         return 'Xóa đã hoàn tất';
       case 'download_detail_backend_offline':
         return 'Trình tải xuống gốc đang ngoại tuyến. Thông tin tác vụ đã lưu được hiển thị; các tham số trực tiếp không khả dụng.';
-      case 'download_network_proxy_auto':
-        return 'Tự động';
-      case 'download_network_proxy_auto_hint':
-        return 'Chỉ áp dụng cho AniList, Nyaa và Jimaku. Tự động sử dụng biến môi trường, sau đó proxy hệ thống đã bật; lưu lượng torrent không thay đổi.';
-      case 'download_network_proxy_custom':
-        return 'Tùy chỉnh';
-      case 'download_network_proxy_custom_label':
-        return 'Proxy tùy chỉnh';
-      case 'download_network_proxy_direct':
-        return 'Trực tiếp';
-      case 'download_network_proxy_section':
-        return 'Mạng khám phá';
       case 'download_open_settings':
         return 'Mở cài đặt';
       case 'download_save_root_change':
@@ -261684,14 +261338,14 @@ extension on _StringsVi {
         return 'Đang kiểm tra cập nhật…';
       case 'update_connecting':
         return 'Đang kết nối…';
-      case 'update_custom_proxy_auto_hint':
-        return 'Leave blank to use environment variables, then the enabled system proxy.';
-      case 'update_custom_proxy_hint':
+      case 'network_proxy_auto_hint':
+        return 'Áp dụng cho mọi yêu cầu Internet của ứng dụng: cập nhật, đồng bộ đám mây, từ điển, tải xuống, phụ đề và siêu dữ liệu. Để trống để tự động: biến môi trường, sau đó là proxy hệ thống đã bật. Truyền P2P (torrent) luôn kết nối trực tiếp.';
+      case 'network_proxy_hint':
         return 'host:port, ví dụ 127.0.0.1:7890 (chỉ IPv4/host)';
-      case 'update_custom_proxy_invalid':
+      case 'network_proxy_invalid':
         return 'Proxy không hợp lệ. Dùng host:port';
-      case 'update_custom_proxy_label':
-        return 'Custom update proxy';
+      case 'network_proxy_label':
+        return 'Proxy mạng';
       case 'update_debug_channel':
         return 'Kênh cập nhật gỡ lỗi';
       case 'update_debug_channel_warning':
@@ -265412,6 +265066,8 @@ extension on _StringsVi {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             'Còn ${n} mục đã chọn bị ẩn bởi bộ lọc hiện tại và sẽ không được xử lý.';
+      case 'section_network':
+        return 'Mạng';
       default:
         return null;
     }
@@ -265512,7 +265168,7 @@ extension on _StringsZhCn {
       case 'anime_download_search':
         return '搜索';
       case 'anime_download_search_error_proxy_hint':
-        return '站点无法直连时，可在下载设置中配置网络代理。';
+        return '站点无法直连时，可在系统设置中配置网络代理。';
       case 'anime_download_search_failed':
         return '搜索失败或超时，请点重试';
       case 'anime_download_search_hint':
@@ -266691,18 +266347,6 @@ extension on _StringsZhCn {
         return '清除已完成';
       case 'download_detail_backend_offline':
         return '原下载后端当前离线。这里仍显示已保存的任务信息，但实时参数暂不可用。';
-      case 'download_network_proxy_auto':
-        return '自动';
-      case 'download_network_proxy_auto_hint':
-        return '仅影响 AniList、Nyaa 和 Jimaku。自动模式先读环境变量，再读已启用的系统代理；种子流量不受影响。';
-      case 'download_network_proxy_custom':
-        return '自定义';
-      case 'download_network_proxy_custom_label':
-        return '自定义代理';
-      case 'download_network_proxy_direct':
-        return '直连';
-      case 'download_network_proxy_section':
-        return '发现网络';
       case 'download_open_settings':
         return '去设置';
       case 'download_save_root_change':
@@ -269524,14 +269168,14 @@ extension on _StringsZhCn {
         return '正在检查更新…';
       case 'update_connecting':
         return '正在连接更新源…';
-      case 'update_custom_proxy_auto_hint':
-        return '用于更新检查、云同步和下载。留空时自动读取环境变量，再读取已启用的系统代理。';
-      case 'update_custom_proxy_hint':
+      case 'network_proxy_auto_hint':
+        return '应用的全部联网请求都走这里：更新、云同步、词典、下载、字幕与元数据。留空为自动：先读环境变量，再读已启用的系统代理。P2P（torrent）传输始终直连。';
+      case 'network_proxy_hint':
         return 'host:port，例如 127.0.0.1:7890（仅 IPv4/域名）';
-      case 'update_custom_proxy_invalid':
+      case 'network_proxy_invalid':
         return '代理格式无效，请用 host:port';
-      case 'update_custom_proxy_label':
-        return '自定义网络代理';
+      case 'network_proxy_label':
+        return '网络代理';
       case 'update_debug_channel':
         return '调试更新通道';
       case 'update_debug_channel_warning':
@@ -273225,6 +272869,8 @@ extension on _StringsZhCn {
         return ({required Object n}) => '有 ${n} 个本地文件删除失败，可能正在被使用';
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) => '另有 ${n} 项被当前筛选隐藏，本次不会处理。';
+      case 'section_network':
+        return '网络';
       default:
         return null;
     }
@@ -273325,7 +272971,7 @@ extension on _StringsZhHk {
       case 'anime_download_search':
         return '搜索';
       case 'anime_download_search_error_proxy_hint':
-        return '站點無法直連時，可在下載設定中配置網路代理。';
+        return '站點無法直連時，可在系統設定中配置網路代理。';
       case 'anime_download_search_failed':
         return '搜索失敗或超時，請點重試';
       case 'anime_download_search_hint':
@@ -274504,18 +274150,6 @@ extension on _StringsZhHk {
         return '清除已完成';
       case 'download_detail_backend_offline':
         return '原下載後端當前離線。這裡仍顯示已保存的任務資訊，但實時參數暫不可用。';
-      case 'download_network_proxy_auto':
-        return '自動';
-      case 'download_network_proxy_auto_hint':
-        return '僅影響 AniList、Nyaa 和 Jimaku。自動模式先讀環境變量，再讀已啟用的系統代理；種子流量不受影響。';
-      case 'download_network_proxy_custom':
-        return '自定義';
-      case 'download_network_proxy_custom_label':
-        return '自定義代理';
-      case 'download_network_proxy_direct':
-        return '直連';
-      case 'download_network_proxy_section':
-        return '發現網路';
       case 'download_open_settings':
         return '去設定';
       case 'download_save_root_change':
@@ -277338,14 +276972,14 @@ extension on _StringsZhHk {
         return '正在檢查更新…';
       case 'update_connecting':
         return '正在連接更新來源…';
-      case 'update_custom_proxy_auto_hint':
-        return 'Leave blank to use environment variables, then the enabled system proxy.';
-      case 'update_custom_proxy_hint':
+      case 'network_proxy_auto_hint':
+        return '應用程式的全部連線請求都經此處：更新、雲端同步、詞典、下載、字幕與中繼資料。留空為自動：先讀取環境變數，再讀取已啟用的系統代理。P2P（torrent）傳輸始終直連。';
+      case 'network_proxy_hint':
         return 'host:port，例如 127.0.0.1:7890（僅 IPv4/域名）';
-      case 'update_custom_proxy_invalid':
+      case 'network_proxy_invalid':
         return '代理格式無效，請用 host:port';
-      case 'update_custom_proxy_label':
-        return 'Custom update proxy';
+      case 'network_proxy_label':
+        return '網路代理';
       case 'update_debug_channel':
         return '偵錯更新頻道';
       case 'update_debug_channel_warning':
@@ -281039,6 +280673,8 @@ extension on _StringsZhHk {
         return ({required Object n}) => '有 ${n} 個本機檔案刪除失敗，可能正在被使用';
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) => '另有 ${n} 項被目前篩選隱藏，今次不會處理。';
+      case 'section_network':
+        return '網路';
       default:
         return null;
     }
