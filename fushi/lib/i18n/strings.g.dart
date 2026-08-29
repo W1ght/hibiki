@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 65739 (3867 per locale)
+/// Strings: 65790 (3870 per locale)
 ///
-/// Built on 2026-08-29 at 14:27 UTC
+/// Built on 2026-08-29 at 16:35 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5265,6 +5265,11 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Read to page ${page} of ${total}';
   String manga_series_read_progress_partial({required Object page}) =>
       'Read to page ${page}';
+  String mihon_store_extension_count({required Object count}) =>
+      '${count} extensions';
+  String mihon_extension_sources_more({required Object count}) =>
+      'Show all ${count} sources';
+  String get mihon_extension_sources_less => 'Show fewer sources';
   String get options_website => 'Visit the official website';
 }
 
@@ -14226,6 +14231,14 @@ class _StringsAr extends _StringsEn {
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       'تمت القراءة حتى الصفحة ${page}';
+  @override
+  String mihon_store_extension_count({required Object count}) =>
+      '${count} extensions';
+  @override
+  String mihon_extension_sources_more({required Object count}) =>
+      'Show all ${count} sources';
+  @override
+  String get mihon_extension_sources_less => 'Show fewer sources';
   @override
   String get options_website => 'زيارة الموقع الرسمي';
 }
@@ -23397,6 +23410,14 @@ class _StringsDe extends _StringsEn {
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       'Bis Seite ${page} gelesen';
+  @override
+  String mihon_store_extension_count({required Object count}) =>
+      '${count} extensions';
+  @override
+  String mihon_extension_sources_more({required Object count}) =>
+      'Show all ${count} sources';
+  @override
+  String get mihon_extension_sources_less => 'Show fewer sources';
   @override
   String get options_website => 'Offizielle Website besuchen';
 }
@@ -32612,6 +32633,14 @@ class _StringsEs extends _StringsEn {
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       'Leído hasta la página ${page}';
+  @override
+  String mihon_store_extension_count({required Object count}) =>
+      '${count} extensions';
+  @override
+  String mihon_extension_sources_more({required Object count}) =>
+      'Show all ${count} sources';
+  @override
+  String get mihon_extension_sources_less => 'Show fewer sources';
   @override
   String get options_website => 'Visitar el sitio web oficial';
 }
@@ -41862,6 +41891,14 @@ class _StringsFr extends _StringsEn {
   String manga_series_read_progress_partial({required Object page}) =>
       'Lu jusqu\'à la page ${page}';
   @override
+  String mihon_store_extension_count({required Object count}) =>
+      '${count} extensions';
+  @override
+  String mihon_extension_sources_more({required Object count}) =>
+      'Show all ${count} sources';
+  @override
+  String get mihon_extension_sources_less => 'Show fewer sources';
+  @override
   String get options_website => 'Visiter le site officiel';
 }
 
@@ -50936,6 +50973,14 @@ class _StringsId extends _StringsEn {
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       'Dibaca sampai halaman ${page}';
+  @override
+  String mihon_store_extension_count({required Object count}) =>
+      '${count} extensions';
+  @override
+  String mihon_extension_sources_more({required Object count}) =>
+      'Show all ${count} sources';
+  @override
+  String get mihon_extension_sources_less => 'Show fewer sources';
   @override
   String get options_website => 'Kunjungi situs web resmi';
 }
@@ -60089,6 +60134,14 @@ class _StringsIt extends _StringsEn {
   String manga_series_read_progress_partial({required Object page}) =>
       'Letto fino a pagina ${page}';
   @override
+  String mihon_store_extension_count({required Object count}) =>
+      '${count} extensions';
+  @override
+  String mihon_extension_sources_more({required Object count}) =>
+      'Show all ${count} sources';
+  @override
+  String get mihon_extension_sources_less => 'Show fewer sources';
+  @override
   String get options_website => 'Visita il sito ufficiale';
 }
 
@@ -68680,6 +68733,14 @@ class _StringsJa extends _StringsEn {
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       '${page} ページまで';
+  @override
+  String mihon_store_extension_count({required Object count}) =>
+      '${count} extensions';
+  @override
+  String mihon_extension_sources_more({required Object count}) =>
+      'Show all ${count} sources';
+  @override
+  String get mihon_extension_sources_less => 'Show fewer sources';
   @override
   String get options_website => '公式サイトを開く';
 }
@@ -77287,6 +77348,14 @@ class _StringsKo extends _StringsEn {
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       '${page}페이지까지 읽음';
+  @override
+  String mihon_store_extension_count({required Object count}) =>
+      '${count} extensions';
+  @override
+  String mihon_extension_sources_more({required Object count}) =>
+      'Show all ${count} sources';
+  @override
+  String get mihon_extension_sources_less => 'Show fewer sources';
   @override
   String get options_website => '공식 웹사이트 방문';
 }
@@ -86396,6 +86465,14 @@ class _StringsNl extends _StringsEn {
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       'Gelezen tot pagina ${page}';
+  @override
+  String mihon_store_extension_count({required Object count}) =>
+      '${count} extensions';
+  @override
+  String mihon_extension_sources_more({required Object count}) =>
+      'Show all ${count} sources';
+  @override
+  String get mihon_extension_sources_less => 'Show fewer sources';
   @override
   String get options_website => 'Officiële website bezoeken';
 }
@@ -95562,6 +95639,14 @@ class _StringsPtBr extends _StringsEn {
   String manga_series_read_progress_partial({required Object page}) =>
       'Lido até a página ${page}';
   @override
+  String mihon_store_extension_count({required Object count}) =>
+      '${count} extensions';
+  @override
+  String mihon_extension_sources_more({required Object count}) =>
+      'Show all ${count} sources';
+  @override
+  String get mihon_extension_sources_less => 'Show fewer sources';
+  @override
   String get options_website => 'Visitar o site oficial';
 }
 
@@ -104701,6 +104786,14 @@ class _StringsRu extends _StringsEn {
   String manga_series_read_progress_partial({required Object page}) =>
       'Прочитано до страницы ${page}';
   @override
+  String mihon_store_extension_count({required Object count}) =>
+      '${count} extensions';
+  @override
+  String mihon_extension_sources_more({required Object count}) =>
+      'Show all ${count} sources';
+  @override
+  String get mihon_extension_sources_less => 'Show fewer sources';
+  @override
   String get options_website => 'Открыть официальный сайт';
 }
 
@@ -113657,6 +113750,14 @@ class _StringsTh extends _StringsEn {
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       'อ่านถึงหน้า ${page}';
+  @override
+  String mihon_store_extension_count({required Object count}) =>
+      '${count} extensions';
+  @override
+  String mihon_extension_sources_more({required Object count}) =>
+      'Show all ${count} sources';
+  @override
+  String get mihon_extension_sources_less => 'Show fewer sources';
   @override
   String get options_website => 'เยี่ยมชมเว็บไซต์ทางการ';
 }
@@ -122718,6 +122819,14 @@ class _StringsTr extends _StringsEn {
   String manga_series_read_progress_partial({required Object page}) =>
       '${page}. sayfaya kadar okundu';
   @override
+  String mihon_store_extension_count({required Object count}) =>
+      '${count} extensions';
+  @override
+  String mihon_extension_sources_more({required Object count}) =>
+      'Show all ${count} sources';
+  @override
+  String get mihon_extension_sources_less => 'Show fewer sources';
+  @override
   String get options_website => 'Resmî web sitesini ziyaret et';
 }
 
@@ -131760,6 +131869,14 @@ class _StringsVi extends _StringsEn {
   String manga_series_read_progress_partial({required Object page}) =>
       'Đã đọc đến trang ${page}';
   @override
+  String mihon_store_extension_count({required Object count}) =>
+      '${count} extensions';
+  @override
+  String mihon_extension_sources_more({required Object count}) =>
+      'Show all ${count} sources';
+  @override
+  String get mihon_extension_sources_less => 'Show fewer sources';
+  @override
   String get options_website => 'Truy cập trang web chính thức';
 }
 
@@ -140078,6 +140195,13 @@ class _StringsZhCn extends _StringsEn {
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       '读到第 ${page} 页';
+  @override
+  String mihon_store_extension_count({required Object count}) => '${count} 个扩展';
+  @override
+  String mihon_extension_sources_more({required Object count}) =>
+      '展开全部 ${count} 个源';
+  @override
+  String get mihon_extension_sources_less => '收起源列表';
   @override
   String get options_website => '访问官网';
 }
@@ -148404,6 +148528,14 @@ class _StringsZhHk extends _StringsEn {
   String manga_series_read_progress_partial({required Object page}) =>
       '讀到第 ${page} 頁';
   @override
+  String mihon_store_extension_count({required Object count}) =>
+      '${count} extensions';
+  @override
+  String mihon_extension_sources_more({required Object count}) =>
+      'Show all ${count} sources';
+  @override
+  String get mihon_extension_sources_less => 'Show fewer sources';
+  @override
   String get options_website => '瀏覽官方網站';
 }
 
@@ -156340,6 +156472,12 @@ extension on _StringsEn {
             'Read to page ${page} of ${total}';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'Read to page ${page}';
+      case 'mihon_store_extension_count':
+        return ({required Object count}) => '${count} extensions';
+      case 'mihon_extension_sources_more':
+        return ({required Object count}) => 'Show all ${count} sources';
+      case 'mihon_extension_sources_less':
+        return 'Show fewer sources';
       case 'options_website':
         return 'Visit the official website';
       default:
@@ -164273,6 +164411,12 @@ extension on _StringsAr {
             'تمت القراءة حتى الصفحة ${page} من ${total}';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'تمت القراءة حتى الصفحة ${page}';
+      case 'mihon_store_extension_count':
+        return ({required Object count}) => '${count} extensions';
+      case 'mihon_extension_sources_more':
+        return ({required Object count}) => 'Show all ${count} sources';
+      case 'mihon_extension_sources_less':
+        return 'Show fewer sources';
       case 'options_website':
         return 'زيارة الموقع الرسمي';
       default:
@@ -172249,6 +172393,12 @@ extension on _StringsDe {
             'Bis Seite ${page} von ${total} gelesen';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'Bis Seite ${page} gelesen';
+      case 'mihon_store_extension_count':
+        return ({required Object count}) => '${count} extensions';
+      case 'mihon_extension_sources_more':
+        return ({required Object count}) => 'Show all ${count} sources';
+      case 'mihon_extension_sources_less':
+        return 'Show fewer sources';
       case 'options_website':
         return 'Offizielle Website besuchen';
       default:
@@ -180217,6 +180367,12 @@ extension on _StringsEs {
             'Leído hasta la página ${page} de ${total}';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'Leído hasta la página ${page}';
+      case 'mihon_store_extension_count':
+        return ({required Object count}) => '${count} extensions';
+      case 'mihon_extension_sources_more':
+        return ({required Object count}) => 'Show all ${count} sources';
+      case 'mihon_extension_sources_less':
+        return 'Show fewer sources';
       case 'options_website':
         return 'Visitar el sitio web oficial';
       default:
@@ -188193,6 +188349,12 @@ extension on _StringsFr {
             'Lu jusqu\'à la page ${page} sur ${total}';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'Lu jusqu\'à la page ${page}';
+      case 'mihon_store_extension_count':
+        return ({required Object count}) => '${count} extensions';
+      case 'mihon_extension_sources_more':
+        return ({required Object count}) => 'Show all ${count} sources';
+      case 'mihon_extension_sources_less':
+        return 'Show fewer sources';
       case 'options_website':
         return 'Visiter le site officiel';
       default:
@@ -196141,6 +196303,12 @@ extension on _StringsId {
             'Dibaca sampai halaman ${page} dari ${total}';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'Dibaca sampai halaman ${page}';
+      case 'mihon_store_extension_count':
+        return ({required Object count}) => '${count} extensions';
+      case 'mihon_extension_sources_more':
+        return ({required Object count}) => 'Show all ${count} sources';
+      case 'mihon_extension_sources_less':
+        return 'Show fewer sources';
       case 'options_website':
         return 'Kunjungi situs web resmi';
       default:
@@ -204110,6 +204278,12 @@ extension on _StringsIt {
             'Letto fino a pagina ${page} di ${total}';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'Letto fino a pagina ${page}';
+      case 'mihon_store_extension_count':
+        return ({required Object count}) => '${count} extensions';
+      case 'mihon_extension_sources_more':
+        return ({required Object count}) => 'Show all ${count} sources';
+      case 'mihon_extension_sources_less':
+        return 'Show fewer sources';
       case 'options_website':
         return 'Visita il sito ufficiale';
       default:
@@ -212012,6 +212186,12 @@ extension on _StringsJa {
             '${total} ページ中 ${page} ページまで';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => '${page} ページまで';
+      case 'mihon_store_extension_count':
+        return ({required Object count}) => '${count} extensions';
+      case 'mihon_extension_sources_more':
+        return ({required Object count}) => 'Show all ${count} sources';
+      case 'mihon_extension_sources_less':
+        return 'Show fewer sources';
       case 'options_website':
         return '公式サイトを開く';
       default:
@@ -219916,6 +220096,12 @@ extension on _StringsKo {
             '${total}페이지 중 ${page}페이지까지 읽음';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => '${page}페이지까지 읽음';
+      case 'mihon_store_extension_count':
+        return ({required Object count}) => '${count} extensions';
+      case 'mihon_extension_sources_more':
+        return ({required Object count}) => 'Show all ${count} sources';
+      case 'mihon_extension_sources_less':
+        return 'Show fewer sources';
       case 'options_website':
         return '공식 웹사이트 방문';
       default:
@@ -227879,6 +228065,12 @@ extension on _StringsNl {
             'Gelezen tot pagina ${page} van ${total}';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'Gelezen tot pagina ${page}';
+      case 'mihon_store_extension_count':
+        return ({required Object count}) => '${count} extensions';
+      case 'mihon_extension_sources_more':
+        return ({required Object count}) => 'Show all ${count} sources';
+      case 'mihon_extension_sources_less':
+        return 'Show fewer sources';
       case 'options_website':
         return 'Officiële website bezoeken';
       default:
@@ -235837,6 +236029,12 @@ extension on _StringsPtBr {
             'Lido até a página ${page} de ${total}';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'Lido até a página ${page}';
+      case 'mihon_store_extension_count':
+        return ({required Object count}) => '${count} extensions';
+      case 'mihon_extension_sources_more':
+        return ({required Object count}) => 'Show all ${count} sources';
+      case 'mihon_extension_sources_less':
+        return 'Show fewer sources';
       case 'options_website':
         return 'Visitar o site oficial';
       default:
@@ -243801,6 +243999,12 @@ extension on _StringsRu {
             'Прочитано до страницы ${page} из ${total}';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'Прочитано до страницы ${page}';
+      case 'mihon_store_extension_count':
+        return ({required Object count}) => '${count} extensions';
+      case 'mihon_extension_sources_more':
+        return ({required Object count}) => 'Show all ${count} sources';
+      case 'mihon_extension_sources_less':
+        return 'Show fewer sources';
       case 'options_website':
         return 'Открыть официальный сайт';
       default:
@@ -251737,6 +251941,12 @@ extension on _StringsTh {
             'อ่านถึงหน้า ${page} จาก ${total}';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'อ่านถึงหน้า ${page}';
+      case 'mihon_store_extension_count':
+        return ({required Object count}) => '${count} extensions';
+      case 'mihon_extension_sources_more':
+        return ({required Object count}) => 'Show all ${count} sources';
+      case 'mihon_extension_sources_less':
+        return 'Show fewer sources';
       case 'options_website':
         return 'เยี่ยมชมเว็บไซต์ทางการ';
       default:
@@ -259690,6 +259900,12 @@ extension on _StringsTr {
             '${total} sayfadan ${page}. sayfaya kadar okundu';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => '${page}. sayfaya kadar okundu';
+      case 'mihon_store_extension_count':
+        return ({required Object count}) => '${count} extensions';
+      case 'mihon_extension_sources_more':
+        return ({required Object count}) => 'Show all ${count} sources';
+      case 'mihon_extension_sources_less':
+        return 'Show fewer sources';
       case 'options_website':
         return 'Resmî web sitesini ziyaret et';
       default:
@@ -267636,6 +267852,12 @@ extension on _StringsVi {
             'Đã đọc đến trang ${page} trên ${total}';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'Đã đọc đến trang ${page}';
+      case 'mihon_store_extension_count':
+        return ({required Object count}) => '${count} extensions';
+      case 'mihon_extension_sources_more':
+        return ({required Object count}) => 'Show all ${count} sources';
+      case 'mihon_extension_sources_less':
+        return 'Show fewer sources';
       case 'options_website':
         return 'Truy cập trang web chính thức';
       default:
@@ -275516,6 +275738,12 @@ extension on _StringsZhCn {
             '读到第 ${page}/${total} 页';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => '读到第 ${page} 页';
+      case 'mihon_store_extension_count':
+        return ({required Object count}) => '${count} 个扩展';
+      case 'mihon_extension_sources_more':
+        return ({required Object count}) => '展开全部 ${count} 个源';
+      case 'mihon_extension_sources_less':
+        return '收起源列表';
       case 'options_website':
         return '访问官网';
       default:
@@ -283397,6 +283625,12 @@ extension on _StringsZhHk {
             '讀到第 ${page}/${total} 頁';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => '讀到第 ${page} 頁';
+      case 'mihon_store_extension_count':
+        return ({required Object count}) => '${count} extensions';
+      case 'mihon_extension_sources_more':
+        return ({required Object count}) => 'Show all ${count} sources';
+      case 'mihon_extension_sources_less':
+        return 'Show fewer sources';
       case 'options_website':
         return '瀏覽官方網站';
       default:
