@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 65722 (3866 per locale)
+/// Strings: 65858 (3874 per locale)
 ///
-/// Built on 2026-08-29 at 13:32 UTC
+/// Built on 2026-08-29 at 14:51 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5265,6 +5265,16 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Read to page ${page} of ${total}';
   String manga_series_read_progress_partial({required Object page}) =>
       'Read to page ${page}';
+  String get video_setting_mpv_group_hdr => 'HDR';
+  String get video_setting_hdr_tone_mapping => 'HDR tone mapping';
+  String get video_setting_hdr_tone_mapping_hint =>
+      'Curve used when an HDR source has to be squeezed onto an SDR display. Auto lets mpv pick per source.';
+  String get video_setting_hdr_compute_peak => 'Dynamic peak detection';
+  String get video_setting_hdr_compute_peak_hint =>
+      'Measure each frame\'s real peak brightness instead of trusting the stream metadata. Better highlights, costs some GPU.';
+  String get video_setting_hdr_auto => 'Auto';
+  String get video_setting_hdr_on => 'On';
+  String get video_setting_hdr_off => 'Off';
 }
 
 // Path: <root>
@@ -14225,6 +14235,24 @@ class _StringsAr extends _StringsEn {
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       'تمت القراءة حتى الصفحة ${page}';
+  @override
+  String get video_setting_mpv_group_hdr => 'HDR';
+  @override
+  String get video_setting_hdr_tone_mapping => 'HDR tone mapping';
+  @override
+  String get video_setting_hdr_tone_mapping_hint =>
+      'Curve used when an HDR source has to be squeezed onto an SDR display. Auto lets mpv pick per source.';
+  @override
+  String get video_setting_hdr_compute_peak => 'Dynamic peak detection';
+  @override
+  String get video_setting_hdr_compute_peak_hint =>
+      'Measure each frame\'s real peak brightness instead of trusting the stream metadata. Better highlights, costs some GPU.';
+  @override
+  String get video_setting_hdr_auto => 'Auto';
+  @override
+  String get video_setting_hdr_on => 'On';
+  @override
+  String get video_setting_hdr_off => 'Off';
 }
 
 // Path: <root>
@@ -23394,6 +23422,24 @@ class _StringsDe extends _StringsEn {
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       'Bis Seite ${page} gelesen';
+  @override
+  String get video_setting_mpv_group_hdr => 'HDR';
+  @override
+  String get video_setting_hdr_tone_mapping => 'HDR tone mapping';
+  @override
+  String get video_setting_hdr_tone_mapping_hint =>
+      'Curve used when an HDR source has to be squeezed onto an SDR display. Auto lets mpv pick per source.';
+  @override
+  String get video_setting_hdr_compute_peak => 'Dynamic peak detection';
+  @override
+  String get video_setting_hdr_compute_peak_hint =>
+      'Measure each frame\'s real peak brightness instead of trusting the stream metadata. Better highlights, costs some GPU.';
+  @override
+  String get video_setting_hdr_auto => 'Auto';
+  @override
+  String get video_setting_hdr_on => 'On';
+  @override
+  String get video_setting_hdr_off => 'Off';
 }
 
 // Path: <root>
@@ -32607,6 +32653,24 @@ class _StringsEs extends _StringsEn {
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       'Leído hasta la página ${page}';
+  @override
+  String get video_setting_mpv_group_hdr => 'HDR';
+  @override
+  String get video_setting_hdr_tone_mapping => 'HDR tone mapping';
+  @override
+  String get video_setting_hdr_tone_mapping_hint =>
+      'Curve used when an HDR source has to be squeezed onto an SDR display. Auto lets mpv pick per source.';
+  @override
+  String get video_setting_hdr_compute_peak => 'Dynamic peak detection';
+  @override
+  String get video_setting_hdr_compute_peak_hint =>
+      'Measure each frame\'s real peak brightness instead of trusting the stream metadata. Better highlights, costs some GPU.';
+  @override
+  String get video_setting_hdr_auto => 'Auto';
+  @override
+  String get video_setting_hdr_on => 'On';
+  @override
+  String get video_setting_hdr_off => 'Off';
 }
 
 // Path: <root>
@@ -41854,6 +41918,24 @@ class _StringsFr extends _StringsEn {
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       'Lu jusqu\'à la page ${page}';
+  @override
+  String get video_setting_mpv_group_hdr => 'HDR';
+  @override
+  String get video_setting_hdr_tone_mapping => 'HDR tone mapping';
+  @override
+  String get video_setting_hdr_tone_mapping_hint =>
+      'Curve used when an HDR source has to be squeezed onto an SDR display. Auto lets mpv pick per source.';
+  @override
+  String get video_setting_hdr_compute_peak => 'Dynamic peak detection';
+  @override
+  String get video_setting_hdr_compute_peak_hint =>
+      'Measure each frame\'s real peak brightness instead of trusting the stream metadata. Better highlights, costs some GPU.';
+  @override
+  String get video_setting_hdr_auto => 'Auto';
+  @override
+  String get video_setting_hdr_on => 'On';
+  @override
+  String get video_setting_hdr_off => 'Off';
 }
 
 // Path: <root>
@@ -50927,6 +51009,24 @@ class _StringsId extends _StringsEn {
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       'Dibaca sampai halaman ${page}';
+  @override
+  String get video_setting_mpv_group_hdr => 'HDR';
+  @override
+  String get video_setting_hdr_tone_mapping => 'HDR tone mapping';
+  @override
+  String get video_setting_hdr_tone_mapping_hint =>
+      'Curve used when an HDR source has to be squeezed onto an SDR display. Auto lets mpv pick per source.';
+  @override
+  String get video_setting_hdr_compute_peak => 'Dynamic peak detection';
+  @override
+  String get video_setting_hdr_compute_peak_hint =>
+      'Measure each frame\'s real peak brightness instead of trusting the stream metadata. Better highlights, costs some GPU.';
+  @override
+  String get video_setting_hdr_auto => 'Auto';
+  @override
+  String get video_setting_hdr_on => 'On';
+  @override
+  String get video_setting_hdr_off => 'Off';
 }
 
 // Path: <root>
@@ -60077,6 +60177,24 @@ class _StringsIt extends _StringsEn {
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       'Letto fino a pagina ${page}';
+  @override
+  String get video_setting_mpv_group_hdr => 'HDR';
+  @override
+  String get video_setting_hdr_tone_mapping => 'HDR tone mapping';
+  @override
+  String get video_setting_hdr_tone_mapping_hint =>
+      'Curve used when an HDR source has to be squeezed onto an SDR display. Auto lets mpv pick per source.';
+  @override
+  String get video_setting_hdr_compute_peak => 'Dynamic peak detection';
+  @override
+  String get video_setting_hdr_compute_peak_hint =>
+      'Measure each frame\'s real peak brightness instead of trusting the stream metadata. Better highlights, costs some GPU.';
+  @override
+  String get video_setting_hdr_auto => 'Auto';
+  @override
+  String get video_setting_hdr_on => 'On';
+  @override
+  String get video_setting_hdr_off => 'Off';
 }
 
 // Path: <root>
@@ -68667,6 +68785,24 @@ class _StringsJa extends _StringsEn {
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       '${page} ページまで';
+  @override
+  String get video_setting_mpv_group_hdr => 'HDR';
+  @override
+  String get video_setting_hdr_tone_mapping => 'HDR tone mapping';
+  @override
+  String get video_setting_hdr_tone_mapping_hint =>
+      'Curve used when an HDR source has to be squeezed onto an SDR display. Auto lets mpv pick per source.';
+  @override
+  String get video_setting_hdr_compute_peak => 'Dynamic peak detection';
+  @override
+  String get video_setting_hdr_compute_peak_hint =>
+      'Measure each frame\'s real peak brightness instead of trusting the stream metadata. Better highlights, costs some GPU.';
+  @override
+  String get video_setting_hdr_auto => 'Auto';
+  @override
+  String get video_setting_hdr_on => 'On';
+  @override
+  String get video_setting_hdr_off => 'Off';
 }
 
 // Path: <root>
@@ -77272,6 +77408,24 @@ class _StringsKo extends _StringsEn {
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       '${page}페이지까지 읽음';
+  @override
+  String get video_setting_mpv_group_hdr => 'HDR';
+  @override
+  String get video_setting_hdr_tone_mapping => 'HDR tone mapping';
+  @override
+  String get video_setting_hdr_tone_mapping_hint =>
+      'Curve used when an HDR source has to be squeezed onto an SDR display. Auto lets mpv pick per source.';
+  @override
+  String get video_setting_hdr_compute_peak => 'Dynamic peak detection';
+  @override
+  String get video_setting_hdr_compute_peak_hint =>
+      'Measure each frame\'s real peak brightness instead of trusting the stream metadata. Better highlights, costs some GPU.';
+  @override
+  String get video_setting_hdr_auto => 'Auto';
+  @override
+  String get video_setting_hdr_on => 'On';
+  @override
+  String get video_setting_hdr_off => 'Off';
 }
 
 // Path: <root>
@@ -86379,6 +86533,24 @@ class _StringsNl extends _StringsEn {
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       'Gelezen tot pagina ${page}';
+  @override
+  String get video_setting_mpv_group_hdr => 'HDR';
+  @override
+  String get video_setting_hdr_tone_mapping => 'HDR tone mapping';
+  @override
+  String get video_setting_hdr_tone_mapping_hint =>
+      'Curve used when an HDR source has to be squeezed onto an SDR display. Auto lets mpv pick per source.';
+  @override
+  String get video_setting_hdr_compute_peak => 'Dynamic peak detection';
+  @override
+  String get video_setting_hdr_compute_peak_hint =>
+      'Measure each frame\'s real peak brightness instead of trusting the stream metadata. Better highlights, costs some GPU.';
+  @override
+  String get video_setting_hdr_auto => 'Auto';
+  @override
+  String get video_setting_hdr_on => 'On';
+  @override
+  String get video_setting_hdr_off => 'Off';
 }
 
 // Path: <root>
@@ -95542,6 +95714,24 @@ class _StringsPtBr extends _StringsEn {
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       'Lido até a página ${page}';
+  @override
+  String get video_setting_mpv_group_hdr => 'HDR';
+  @override
+  String get video_setting_hdr_tone_mapping => 'HDR tone mapping';
+  @override
+  String get video_setting_hdr_tone_mapping_hint =>
+      'Curve used when an HDR source has to be squeezed onto an SDR display. Auto lets mpv pick per source.';
+  @override
+  String get video_setting_hdr_compute_peak => 'Dynamic peak detection';
+  @override
+  String get video_setting_hdr_compute_peak_hint =>
+      'Measure each frame\'s real peak brightness instead of trusting the stream metadata. Better highlights, costs some GPU.';
+  @override
+  String get video_setting_hdr_auto => 'Auto';
+  @override
+  String get video_setting_hdr_on => 'On';
+  @override
+  String get video_setting_hdr_off => 'Off';
 }
 
 // Path: <root>
@@ -104679,6 +104869,24 @@ class _StringsRu extends _StringsEn {
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       'Прочитано до страницы ${page}';
+  @override
+  String get video_setting_mpv_group_hdr => 'HDR';
+  @override
+  String get video_setting_hdr_tone_mapping => 'HDR tone mapping';
+  @override
+  String get video_setting_hdr_tone_mapping_hint =>
+      'Curve used when an HDR source has to be squeezed onto an SDR display. Auto lets mpv pick per source.';
+  @override
+  String get video_setting_hdr_compute_peak => 'Dynamic peak detection';
+  @override
+  String get video_setting_hdr_compute_peak_hint =>
+      'Measure each frame\'s real peak brightness instead of trusting the stream metadata. Better highlights, costs some GPU.';
+  @override
+  String get video_setting_hdr_auto => 'Auto';
+  @override
+  String get video_setting_hdr_on => 'On';
+  @override
+  String get video_setting_hdr_off => 'Off';
 }
 
 // Path: <root>
@@ -113634,6 +113842,24 @@ class _StringsTh extends _StringsEn {
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       'อ่านถึงหน้า ${page}';
+  @override
+  String get video_setting_mpv_group_hdr => 'HDR';
+  @override
+  String get video_setting_hdr_tone_mapping => 'HDR tone mapping';
+  @override
+  String get video_setting_hdr_tone_mapping_hint =>
+      'Curve used when an HDR source has to be squeezed onto an SDR display. Auto lets mpv pick per source.';
+  @override
+  String get video_setting_hdr_compute_peak => 'Dynamic peak detection';
+  @override
+  String get video_setting_hdr_compute_peak_hint =>
+      'Measure each frame\'s real peak brightness instead of trusting the stream metadata. Better highlights, costs some GPU.';
+  @override
+  String get video_setting_hdr_auto => 'Auto';
+  @override
+  String get video_setting_hdr_on => 'On';
+  @override
+  String get video_setting_hdr_off => 'Off';
 }
 
 // Path: <root>
@@ -122692,6 +122918,24 @@ class _StringsTr extends _StringsEn {
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       '${page}. sayfaya kadar okundu';
+  @override
+  String get video_setting_mpv_group_hdr => 'HDR';
+  @override
+  String get video_setting_hdr_tone_mapping => 'HDR tone mapping';
+  @override
+  String get video_setting_hdr_tone_mapping_hint =>
+      'Curve used when an HDR source has to be squeezed onto an SDR display. Auto lets mpv pick per source.';
+  @override
+  String get video_setting_hdr_compute_peak => 'Dynamic peak detection';
+  @override
+  String get video_setting_hdr_compute_peak_hint =>
+      'Measure each frame\'s real peak brightness instead of trusting the stream metadata. Better highlights, costs some GPU.';
+  @override
+  String get video_setting_hdr_auto => 'Auto';
+  @override
+  String get video_setting_hdr_on => 'On';
+  @override
+  String get video_setting_hdr_off => 'Off';
 }
 
 // Path: <root>
@@ -131732,6 +131976,24 @@ class _StringsVi extends _StringsEn {
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       'Đã đọc đến trang ${page}';
+  @override
+  String get video_setting_mpv_group_hdr => 'HDR';
+  @override
+  String get video_setting_hdr_tone_mapping => 'HDR tone mapping';
+  @override
+  String get video_setting_hdr_tone_mapping_hint =>
+      'Curve used when an HDR source has to be squeezed onto an SDR display. Auto lets mpv pick per source.';
+  @override
+  String get video_setting_hdr_compute_peak => 'Dynamic peak detection';
+  @override
+  String get video_setting_hdr_compute_peak_hint =>
+      'Measure each frame\'s real peak brightness instead of trusting the stream metadata. Better highlights, costs some GPU.';
+  @override
+  String get video_setting_hdr_auto => 'Auto';
+  @override
+  String get video_setting_hdr_on => 'On';
+  @override
+  String get video_setting_hdr_off => 'Off';
 }
 
 // Path: <root>
@@ -140049,6 +140311,24 @@ class _StringsZhCn extends _StringsEn {
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       '读到第 ${page} 页';
+  @override
+  String get video_setting_mpv_group_hdr => 'HDR';
+  @override
+  String get video_setting_hdr_tone_mapping => 'HDR 色调映射';
+  @override
+  String get video_setting_hdr_tone_mapping_hint =>
+      '把 HDR 片源压到 SDR 屏幕上时用的曲线。自动 = 交给 mpv 按片源挑。';
+  @override
+  String get video_setting_hdr_compute_peak => '动态峰值检测';
+  @override
+  String get video_setting_hdr_compute_peak_hint =>
+      '逐帧测量真实峰值亮度，而不是相信片源元数据。高光更准，但会占一点 GPU。';
+  @override
+  String get video_setting_hdr_auto => '自动';
+  @override
+  String get video_setting_hdr_on => '开';
+  @override
+  String get video_setting_hdr_off => '关';
 }
 
 // Path: <root>
@@ -148372,6 +148652,24 @@ class _StringsZhHk extends _StringsEn {
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       '讀到第 ${page} 頁';
+  @override
+  String get video_setting_mpv_group_hdr => 'HDR';
+  @override
+  String get video_setting_hdr_tone_mapping => 'HDR tone mapping';
+  @override
+  String get video_setting_hdr_tone_mapping_hint =>
+      'Curve used when an HDR source has to be squeezed onto an SDR display. Auto lets mpv pick per source.';
+  @override
+  String get video_setting_hdr_compute_peak => 'Dynamic peak detection';
+  @override
+  String get video_setting_hdr_compute_peak_hint =>
+      'Measure each frame\'s real peak brightness instead of trusting the stream metadata. Better highlights, costs some GPU.';
+  @override
+  String get video_setting_hdr_auto => 'Auto';
+  @override
+  String get video_setting_hdr_on => 'On';
+  @override
+  String get video_setting_hdr_off => 'Off';
 }
 
 /// Flat map(s) containing all translations.
@@ -156307,6 +156605,22 @@ extension on _StringsEn {
             'Read to page ${page} of ${total}';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'Read to page ${page}';
+      case 'video_setting_mpv_group_hdr':
+        return 'HDR';
+      case 'video_setting_hdr_tone_mapping':
+        return 'HDR tone mapping';
+      case 'video_setting_hdr_tone_mapping_hint':
+        return 'Curve used when an HDR source has to be squeezed onto an SDR display. Auto lets mpv pick per source.';
+      case 'video_setting_hdr_compute_peak':
+        return 'Dynamic peak detection';
+      case 'video_setting_hdr_compute_peak_hint':
+        return 'Measure each frame\'s real peak brightness instead of trusting the stream metadata. Better highlights, costs some GPU.';
+      case 'video_setting_hdr_auto':
+        return 'Auto';
+      case 'video_setting_hdr_on':
+        return 'On';
+      case 'video_setting_hdr_off':
+        return 'Off';
       default:
         return null;
     }
@@ -164238,6 +164552,22 @@ extension on _StringsAr {
             'تمت القراءة حتى الصفحة ${page} من ${total}';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'تمت القراءة حتى الصفحة ${page}';
+      case 'video_setting_mpv_group_hdr':
+        return 'HDR';
+      case 'video_setting_hdr_tone_mapping':
+        return 'HDR tone mapping';
+      case 'video_setting_hdr_tone_mapping_hint':
+        return 'Curve used when an HDR source has to be squeezed onto an SDR display. Auto lets mpv pick per source.';
+      case 'video_setting_hdr_compute_peak':
+        return 'Dynamic peak detection';
+      case 'video_setting_hdr_compute_peak_hint':
+        return 'Measure each frame\'s real peak brightness instead of trusting the stream metadata. Better highlights, costs some GPU.';
+      case 'video_setting_hdr_auto':
+        return 'Auto';
+      case 'video_setting_hdr_on':
+        return 'On';
+      case 'video_setting_hdr_off':
+        return 'Off';
       default:
         return null;
     }
@@ -172212,6 +172542,22 @@ extension on _StringsDe {
             'Bis Seite ${page} von ${total} gelesen';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'Bis Seite ${page} gelesen';
+      case 'video_setting_mpv_group_hdr':
+        return 'HDR';
+      case 'video_setting_hdr_tone_mapping':
+        return 'HDR tone mapping';
+      case 'video_setting_hdr_tone_mapping_hint':
+        return 'Curve used when an HDR source has to be squeezed onto an SDR display. Auto lets mpv pick per source.';
+      case 'video_setting_hdr_compute_peak':
+        return 'Dynamic peak detection';
+      case 'video_setting_hdr_compute_peak_hint':
+        return 'Measure each frame\'s real peak brightness instead of trusting the stream metadata. Better highlights, costs some GPU.';
+      case 'video_setting_hdr_auto':
+        return 'Auto';
+      case 'video_setting_hdr_on':
+        return 'On';
+      case 'video_setting_hdr_off':
+        return 'Off';
       default:
         return null;
     }
@@ -180178,6 +180524,22 @@ extension on _StringsEs {
             'Leído hasta la página ${page} de ${total}';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'Leído hasta la página ${page}';
+      case 'video_setting_mpv_group_hdr':
+        return 'HDR';
+      case 'video_setting_hdr_tone_mapping':
+        return 'HDR tone mapping';
+      case 'video_setting_hdr_tone_mapping_hint':
+        return 'Curve used when an HDR source has to be squeezed onto an SDR display. Auto lets mpv pick per source.';
+      case 'video_setting_hdr_compute_peak':
+        return 'Dynamic peak detection';
+      case 'video_setting_hdr_compute_peak_hint':
+        return 'Measure each frame\'s real peak brightness instead of trusting the stream metadata. Better highlights, costs some GPU.';
+      case 'video_setting_hdr_auto':
+        return 'Auto';
+      case 'video_setting_hdr_on':
+        return 'On';
+      case 'video_setting_hdr_off':
+        return 'Off';
       default:
         return null;
     }
@@ -188152,6 +188514,22 @@ extension on _StringsFr {
             'Lu jusqu\'à la page ${page} sur ${total}';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'Lu jusqu\'à la page ${page}';
+      case 'video_setting_mpv_group_hdr':
+        return 'HDR';
+      case 'video_setting_hdr_tone_mapping':
+        return 'HDR tone mapping';
+      case 'video_setting_hdr_tone_mapping_hint':
+        return 'Curve used when an HDR source has to be squeezed onto an SDR display. Auto lets mpv pick per source.';
+      case 'video_setting_hdr_compute_peak':
+        return 'Dynamic peak detection';
+      case 'video_setting_hdr_compute_peak_hint':
+        return 'Measure each frame\'s real peak brightness instead of trusting the stream metadata. Better highlights, costs some GPU.';
+      case 'video_setting_hdr_auto':
+        return 'Auto';
+      case 'video_setting_hdr_on':
+        return 'On';
+      case 'video_setting_hdr_off':
+        return 'Off';
       default:
         return null;
     }
@@ -196098,6 +196476,22 @@ extension on _StringsId {
             'Dibaca sampai halaman ${page} dari ${total}';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'Dibaca sampai halaman ${page}';
+      case 'video_setting_mpv_group_hdr':
+        return 'HDR';
+      case 'video_setting_hdr_tone_mapping':
+        return 'HDR tone mapping';
+      case 'video_setting_hdr_tone_mapping_hint':
+        return 'Curve used when an HDR source has to be squeezed onto an SDR display. Auto lets mpv pick per source.';
+      case 'video_setting_hdr_compute_peak':
+        return 'Dynamic peak detection';
+      case 'video_setting_hdr_compute_peak_hint':
+        return 'Measure each frame\'s real peak brightness instead of trusting the stream metadata. Better highlights, costs some GPU.';
+      case 'video_setting_hdr_auto':
+        return 'Auto';
+      case 'video_setting_hdr_on':
+        return 'On';
+      case 'video_setting_hdr_off':
+        return 'Off';
       default:
         return null;
     }
@@ -204065,6 +204459,22 @@ extension on _StringsIt {
             'Letto fino a pagina ${page} di ${total}';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'Letto fino a pagina ${page}';
+      case 'video_setting_mpv_group_hdr':
+        return 'HDR';
+      case 'video_setting_hdr_tone_mapping':
+        return 'HDR tone mapping';
+      case 'video_setting_hdr_tone_mapping_hint':
+        return 'Curve used when an HDR source has to be squeezed onto an SDR display. Auto lets mpv pick per source.';
+      case 'video_setting_hdr_compute_peak':
+        return 'Dynamic peak detection';
+      case 'video_setting_hdr_compute_peak_hint':
+        return 'Measure each frame\'s real peak brightness instead of trusting the stream metadata. Better highlights, costs some GPU.';
+      case 'video_setting_hdr_auto':
+        return 'Auto';
+      case 'video_setting_hdr_on':
+        return 'On';
+      case 'video_setting_hdr_off':
+        return 'Off';
       default:
         return null;
     }
@@ -211965,6 +212375,22 @@ extension on _StringsJa {
             '${total} ページ中 ${page} ページまで';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => '${page} ページまで';
+      case 'video_setting_mpv_group_hdr':
+        return 'HDR';
+      case 'video_setting_hdr_tone_mapping':
+        return 'HDR tone mapping';
+      case 'video_setting_hdr_tone_mapping_hint':
+        return 'Curve used when an HDR source has to be squeezed onto an SDR display. Auto lets mpv pick per source.';
+      case 'video_setting_hdr_compute_peak':
+        return 'Dynamic peak detection';
+      case 'video_setting_hdr_compute_peak_hint':
+        return 'Measure each frame\'s real peak brightness instead of trusting the stream metadata. Better highlights, costs some GPU.';
+      case 'video_setting_hdr_auto':
+        return 'Auto';
+      case 'video_setting_hdr_on':
+        return 'On';
+      case 'video_setting_hdr_off':
+        return 'Off';
       default:
         return null;
     }
@@ -219867,6 +220293,22 @@ extension on _StringsKo {
             '${total}페이지 중 ${page}페이지까지 읽음';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => '${page}페이지까지 읽음';
+      case 'video_setting_mpv_group_hdr':
+        return 'HDR';
+      case 'video_setting_hdr_tone_mapping':
+        return 'HDR tone mapping';
+      case 'video_setting_hdr_tone_mapping_hint':
+        return 'Curve used when an HDR source has to be squeezed onto an SDR display. Auto lets mpv pick per source.';
+      case 'video_setting_hdr_compute_peak':
+        return 'Dynamic peak detection';
+      case 'video_setting_hdr_compute_peak_hint':
+        return 'Measure each frame\'s real peak brightness instead of trusting the stream metadata. Better highlights, costs some GPU.';
+      case 'video_setting_hdr_auto':
+        return 'Auto';
+      case 'video_setting_hdr_on':
+        return 'On';
+      case 'video_setting_hdr_off':
+        return 'Off';
       default:
         return null;
     }
@@ -227828,6 +228270,22 @@ extension on _StringsNl {
             'Gelezen tot pagina ${page} van ${total}';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'Gelezen tot pagina ${page}';
+      case 'video_setting_mpv_group_hdr':
+        return 'HDR';
+      case 'video_setting_hdr_tone_mapping':
+        return 'HDR tone mapping';
+      case 'video_setting_hdr_tone_mapping_hint':
+        return 'Curve used when an HDR source has to be squeezed onto an SDR display. Auto lets mpv pick per source.';
+      case 'video_setting_hdr_compute_peak':
+        return 'Dynamic peak detection';
+      case 'video_setting_hdr_compute_peak_hint':
+        return 'Measure each frame\'s real peak brightness instead of trusting the stream metadata. Better highlights, costs some GPU.';
+      case 'video_setting_hdr_auto':
+        return 'Auto';
+      case 'video_setting_hdr_on':
+        return 'On';
+      case 'video_setting_hdr_off':
+        return 'Off';
       default:
         return null;
     }
@@ -235784,6 +236242,22 @@ extension on _StringsPtBr {
             'Lido até a página ${page} de ${total}';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'Lido até a página ${page}';
+      case 'video_setting_mpv_group_hdr':
+        return 'HDR';
+      case 'video_setting_hdr_tone_mapping':
+        return 'HDR tone mapping';
+      case 'video_setting_hdr_tone_mapping_hint':
+        return 'Curve used when an HDR source has to be squeezed onto an SDR display. Auto lets mpv pick per source.';
+      case 'video_setting_hdr_compute_peak':
+        return 'Dynamic peak detection';
+      case 'video_setting_hdr_compute_peak_hint':
+        return 'Measure each frame\'s real peak brightness instead of trusting the stream metadata. Better highlights, costs some GPU.';
+      case 'video_setting_hdr_auto':
+        return 'Auto';
+      case 'video_setting_hdr_on':
+        return 'On';
+      case 'video_setting_hdr_off':
+        return 'Off';
       default:
         return null;
     }
@@ -243746,6 +244220,22 @@ extension on _StringsRu {
             'Прочитано до страницы ${page} из ${total}';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'Прочитано до страницы ${page}';
+      case 'video_setting_mpv_group_hdr':
+        return 'HDR';
+      case 'video_setting_hdr_tone_mapping':
+        return 'HDR tone mapping';
+      case 'video_setting_hdr_tone_mapping_hint':
+        return 'Curve used when an HDR source has to be squeezed onto an SDR display. Auto lets mpv pick per source.';
+      case 'video_setting_hdr_compute_peak':
+        return 'Dynamic peak detection';
+      case 'video_setting_hdr_compute_peak_hint':
+        return 'Measure each frame\'s real peak brightness instead of trusting the stream metadata. Better highlights, costs some GPU.';
+      case 'video_setting_hdr_auto':
+        return 'Auto';
+      case 'video_setting_hdr_on':
+        return 'On';
+      case 'video_setting_hdr_off':
+        return 'Off';
       default:
         return null;
     }
@@ -251680,6 +252170,22 @@ extension on _StringsTh {
             'อ่านถึงหน้า ${page} จาก ${total}';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'อ่านถึงหน้า ${page}';
+      case 'video_setting_mpv_group_hdr':
+        return 'HDR';
+      case 'video_setting_hdr_tone_mapping':
+        return 'HDR tone mapping';
+      case 'video_setting_hdr_tone_mapping_hint':
+        return 'Curve used when an HDR source has to be squeezed onto an SDR display. Auto lets mpv pick per source.';
+      case 'video_setting_hdr_compute_peak':
+        return 'Dynamic peak detection';
+      case 'video_setting_hdr_compute_peak_hint':
+        return 'Measure each frame\'s real peak brightness instead of trusting the stream metadata. Better highlights, costs some GPU.';
+      case 'video_setting_hdr_auto':
+        return 'Auto';
+      case 'video_setting_hdr_on':
+        return 'On';
+      case 'video_setting_hdr_off':
+        return 'Off';
       default:
         return null;
     }
@@ -259631,6 +260137,22 @@ extension on _StringsTr {
             '${total} sayfadan ${page}. sayfaya kadar okundu';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => '${page}. sayfaya kadar okundu';
+      case 'video_setting_mpv_group_hdr':
+        return 'HDR';
+      case 'video_setting_hdr_tone_mapping':
+        return 'HDR tone mapping';
+      case 'video_setting_hdr_tone_mapping_hint':
+        return 'Curve used when an HDR source has to be squeezed onto an SDR display. Auto lets mpv pick per source.';
+      case 'video_setting_hdr_compute_peak':
+        return 'Dynamic peak detection';
+      case 'video_setting_hdr_compute_peak_hint':
+        return 'Measure each frame\'s real peak brightness instead of trusting the stream metadata. Better highlights, costs some GPU.';
+      case 'video_setting_hdr_auto':
+        return 'Auto';
+      case 'video_setting_hdr_on':
+        return 'On';
+      case 'video_setting_hdr_off':
+        return 'Off';
       default:
         return null;
     }
@@ -267575,6 +268097,22 @@ extension on _StringsVi {
             'Đã đọc đến trang ${page} trên ${total}';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'Đã đọc đến trang ${page}';
+      case 'video_setting_mpv_group_hdr':
+        return 'HDR';
+      case 'video_setting_hdr_tone_mapping':
+        return 'HDR tone mapping';
+      case 'video_setting_hdr_tone_mapping_hint':
+        return 'Curve used when an HDR source has to be squeezed onto an SDR display. Auto lets mpv pick per source.';
+      case 'video_setting_hdr_compute_peak':
+        return 'Dynamic peak detection';
+      case 'video_setting_hdr_compute_peak_hint':
+        return 'Measure each frame\'s real peak brightness instead of trusting the stream metadata. Better highlights, costs some GPU.';
+      case 'video_setting_hdr_auto':
+        return 'Auto';
+      case 'video_setting_hdr_on':
+        return 'On';
+      case 'video_setting_hdr_off':
+        return 'Off';
       default:
         return null;
     }
@@ -275453,6 +275991,22 @@ extension on _StringsZhCn {
             '读到第 ${page}/${total} 页';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => '读到第 ${page} 页';
+      case 'video_setting_mpv_group_hdr':
+        return 'HDR';
+      case 'video_setting_hdr_tone_mapping':
+        return 'HDR 色调映射';
+      case 'video_setting_hdr_tone_mapping_hint':
+        return '把 HDR 片源压到 SDR 屏幕上时用的曲线。自动 = 交给 mpv 按片源挑。';
+      case 'video_setting_hdr_compute_peak':
+        return '动态峰值检测';
+      case 'video_setting_hdr_compute_peak_hint':
+        return '逐帧测量真实峰值亮度，而不是相信片源元数据。高光更准，但会占一点 GPU。';
+      case 'video_setting_hdr_auto':
+        return '自动';
+      case 'video_setting_hdr_on':
+        return '开';
+      case 'video_setting_hdr_off':
+        return '关';
       default:
         return null;
     }
@@ -283332,6 +283886,22 @@ extension on _StringsZhHk {
             '讀到第 ${page}/${total} 頁';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => '讀到第 ${page} 頁';
+      case 'video_setting_mpv_group_hdr':
+        return 'HDR';
+      case 'video_setting_hdr_tone_mapping':
+        return 'HDR tone mapping';
+      case 'video_setting_hdr_tone_mapping_hint':
+        return 'Curve used when an HDR source has to be squeezed onto an SDR display. Auto lets mpv pick per source.';
+      case 'video_setting_hdr_compute_peak':
+        return 'Dynamic peak detection';
+      case 'video_setting_hdr_compute_peak_hint':
+        return 'Measure each frame\'s real peak brightness instead of trusting the stream metadata. Better highlights, costs some GPU.';
+      case 'video_setting_hdr_auto':
+        return 'Auto';
+      case 'video_setting_hdr_on':
+        return 'On';
+      case 'video_setting_hdr_off':
+        return 'Off';
       default:
         return null;
     }
