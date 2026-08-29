@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 65399 (3847 per locale)
+/// Strings: 65467 (3851 per locale)
 ///
-/// Built on 2026-08-29 at 18:21 UTC
+/// Built on 2026-08-29 at 19:33 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5244,6 +5244,13 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String web_video_mine_queue_finished(
           {required Object ok, required Object failed}) =>
       'Cards created: ${ok}, failed: ${failed}';
+  String get web_video_hosting_menu => 'Playback mode';
+  String get web_video_hosting_builtin =>
+      'Built-in (1080p; super-resolution, screenshots and cards available)';
+  String get web_video_hosting_windowed =>
+      'Native window (4K, hardware DRM; cards are queued for later)';
+  String web_video_mine_switch_builtin({required Object count}) =>
+      'Switch to built-in mode to create ${count} queued cards';
 }
 
 // Path: <root>
@@ -14134,36 +14141,47 @@ class _StringsAr extends _StringsEn {
   String batch_hidden_by_filter_note({required Object n}) =>
       'هناك ${n} عنصر محدد مخفي بواسطة عامل التصفية الحالي ولن تتم معالجته.';
   @override
-  String get web_video_track_menu => 'Subtitle track';
+  String get web_video_track_menu => 'مسار الترجمة';
   @override
-  String get web_video_track_live => 'Live captions (sampled from page)';
+  String get web_video_track_live => 'ترجمة مباشرة (مأخوذة من الصفحة)';
   @override
-  String get web_video_no_tracks => 'No subtitles captured yet';
+  String get web_video_no_tracks => 'لم يتم التقاط أي ترجمة بعد';
   @override
-  String get web_video_hide_native_subtitles => 'Hide site subtitles';
+  String get web_video_hide_native_subtitles => 'إخفاء ترجمة الموقع';
   @override
   String get web_video_import_hint =>
-      'This is a web page (not a direct stream). It will open in the built-in web player.';
+      'هذه صفحة ويب (وليست بثًا مباشرًا). ستُفتح في مشغّل الويب المدمج.';
   @override
   String get web_video_platform_unsupported =>
-      'The built-in web player is only available on Windows for now.';
+      'مشغّل الويب المدمج متاح حاليًا على Windows فقط.';
   @override
-  String get web_video_mine_queue_run => 'Create queued cards';
+  String get web_video_mine_queue_run => 'إنشاء البطاقات المنتظرة';
   @override
-  String get web_video_mine_queue_stop => 'Stop card creation';
+  String get web_video_mine_queue_stop => 'إيقاف إنشاء البطاقات';
   @override
-  String get web_video_mine_queue_empty => 'No queued cards';
+  String get web_video_mine_queue_empty => 'لا توجد بطاقات في قائمة الانتظار';
   @override
   String web_video_mine_queued({required Object count}) =>
-      'Queued for card creation (${count} pending)';
+      'أُضيف إلى قائمة انتظار إنشاء البطاقات (${count} معلّقة)';
   @override
   String web_video_mine_queue_running(
           {required Object done, required Object total}) =>
-      'Creating cards ${done}/${total}...';
+      'جارٍ إنشاء البطاقات ${done}/${total}…';
   @override
   String web_video_mine_queue_finished(
           {required Object ok, required Object failed}) =>
-      'Cards created: ${ok}, failed: ${failed}';
+      'البطاقات المُنشأة: ${ok}، الفاشلة: ${failed}';
+  @override
+  String get web_video_hosting_menu => 'وضع التشغيل';
+  @override
+  String get web_video_hosting_builtin =>
+      'مدمج (1080p؛ يتوفر تحسين الدقة ولقطات الشاشة والبطاقات)';
+  @override
+  String get web_video_hosting_windowed =>
+      'نافذة أصلية (4K، DRM عتادي؛ تُوضع البطاقات في قائمة الانتظار)';
+  @override
+  String web_video_mine_switch_builtin({required Object count}) =>
+      'التبديل إلى الوضع المدمج لإنشاء ${count} بطاقة منتظرة';
 }
 
 // Path: <root>
@@ -23261,36 +23279,47 @@ class _StringsDe extends _StringsEn {
   String batch_hidden_by_filter_note({required Object n}) =>
       'Weitere ${n} ausgewählte Elemente sind durch den aktuellen Filter ausgeblendet und werden nicht bearbeitet.';
   @override
-  String get web_video_track_menu => 'Subtitle track';
+  String get web_video_track_menu => 'Untertitelspur';
   @override
-  String get web_video_track_live => 'Live captions (sampled from page)';
+  String get web_video_track_live => 'Live-Untertitel (von der Seite erfasst)';
   @override
-  String get web_video_no_tracks => 'No subtitles captured yet';
+  String get web_video_no_tracks => 'Noch keine Untertitel erfasst';
   @override
-  String get web_video_hide_native_subtitles => 'Hide site subtitles';
+  String get web_video_hide_native_subtitles => 'Website-Untertitel ausblenden';
   @override
   String get web_video_import_hint =>
-      'This is a web page (not a direct stream). It will open in the built-in web player.';
+      'Dies ist eine Webseite (kein direkter Stream). Sie wird im integrierten Web-Player geöffnet.';
   @override
   String get web_video_platform_unsupported =>
-      'The built-in web player is only available on Windows for now.';
+      'Der integrierte Web-Player ist derzeit nur unter Windows verfügbar.';
   @override
-  String get web_video_mine_queue_run => 'Create queued cards';
+  String get web_video_mine_queue_run => 'Wartende Karten erstellen';
   @override
-  String get web_video_mine_queue_stop => 'Stop card creation';
+  String get web_video_mine_queue_stop => 'Kartenerstellung stoppen';
   @override
-  String get web_video_mine_queue_empty => 'No queued cards';
+  String get web_video_mine_queue_empty => 'Keine wartenden Karten';
   @override
   String web_video_mine_queued({required Object count}) =>
-      'Queued for card creation (${count} pending)';
+      'Für die Kartenerstellung vorgemerkt (${count} ausstehend)';
   @override
   String web_video_mine_queue_running(
           {required Object done, required Object total}) =>
-      'Creating cards ${done}/${total}...';
+      'Karten werden erstellt ${done}/${total}…';
   @override
   String web_video_mine_queue_finished(
           {required Object ok, required Object failed}) =>
-      'Cards created: ${ok}, failed: ${failed}';
+      'Karten erstellt: ${ok}, fehlgeschlagen: ${failed}';
+  @override
+  String get web_video_hosting_menu => 'Wiedergabemodus';
+  @override
+  String get web_video_hosting_builtin =>
+      'Integriert (1080p; Hochskalierung, Screenshots und Karten verfügbar)';
+  @override
+  String get web_video_hosting_windowed =>
+      'Natives Fenster (4K, Hardware-DRM; Karten werden später erstellt)';
+  @override
+  String web_video_mine_switch_builtin({required Object count}) =>
+      'In den integrierten Modus wechseln, um ${count} wartende Karten zu erstellen';
 }
 
 // Path: <root>
@@ -32431,36 +32460,48 @@ class _StringsEs extends _StringsEn {
   String batch_hidden_by_filter_note({required Object n}) =>
       'Otros ${n} elementos seleccionados están ocultos por el filtro actual y no se procesarán.';
   @override
-  String get web_video_track_menu => 'Subtitle track';
+  String get web_video_track_menu => 'Pista de subtítulos';
   @override
-  String get web_video_track_live => 'Live captions (sampled from page)';
+  String get web_video_track_live =>
+      'Subtítulos en vivo (capturados de la página)';
   @override
-  String get web_video_no_tracks => 'No subtitles captured yet';
+  String get web_video_no_tracks => 'Aún no se han capturado subtítulos';
   @override
-  String get web_video_hide_native_subtitles => 'Hide site subtitles';
+  String get web_video_hide_native_subtitles => 'Ocultar subtítulos del sitio';
   @override
   String get web_video_import_hint =>
-      'This is a web page (not a direct stream). It will open in the built-in web player.';
+      'Esto es una página web (no una transmisión directa). Se abrirá en el reproductor web integrado.';
   @override
   String get web_video_platform_unsupported =>
-      'The built-in web player is only available on Windows for now.';
+      'El reproductor web integrado solo está disponible en Windows por ahora.';
   @override
-  String get web_video_mine_queue_run => 'Create queued cards';
+  String get web_video_mine_queue_run => 'Crear las tarjetas en cola';
   @override
-  String get web_video_mine_queue_stop => 'Stop card creation';
+  String get web_video_mine_queue_stop => 'Detener la creación de tarjetas';
   @override
-  String get web_video_mine_queue_empty => 'No queued cards';
+  String get web_video_mine_queue_empty => 'No hay tarjetas en cola';
   @override
   String web_video_mine_queued({required Object count}) =>
-      'Queued for card creation (${count} pending)';
+      'En cola para crear tarjetas (${count} pendientes)';
   @override
   String web_video_mine_queue_running(
           {required Object done, required Object total}) =>
-      'Creating cards ${done}/${total}...';
+      'Creando tarjetas ${done}/${total}…';
   @override
   String web_video_mine_queue_finished(
           {required Object ok, required Object failed}) =>
-      'Cards created: ${ok}, failed: ${failed}';
+      'Tarjetas creadas: ${ok}, fallidas: ${failed}';
+  @override
+  String get web_video_hosting_menu => 'Modo de reproducción';
+  @override
+  String get web_video_hosting_builtin =>
+      'Integrado (1080p; superresolución, capturas y tarjetas disponibles)';
+  @override
+  String get web_video_hosting_windowed =>
+      'Ventana nativa (4K, DRM por hardware; las tarjetas se ponen en cola)';
+  @override
+  String web_video_mine_switch_builtin({required Object count}) =>
+      'Cambiar al modo integrado para crear ${count} tarjetas en cola';
 }
 
 // Path: <root>
@@ -41635,36 +41676,49 @@ class _StringsFr extends _StringsEn {
   String batch_hidden_by_filter_note({required Object n}) =>
       '${n} autres éléments sélectionnés sont masqués par le filtre actuel et ne seront pas traités.';
   @override
-  String get web_video_track_menu => 'Subtitle track';
+  String get web_video_track_menu => 'Piste de sous-titres';
   @override
-  String get web_video_track_live => 'Live captions (sampled from page)';
+  String get web_video_track_live =>
+      'Sous-titres en direct (capturés sur la page)';
   @override
-  String get web_video_no_tracks => 'No subtitles captured yet';
+  String get web_video_no_tracks => 'Aucun sous-titre capturé pour l’instant';
   @override
-  String get web_video_hide_native_subtitles => 'Hide site subtitles';
+  String get web_video_hide_native_subtitles =>
+      'Masquer les sous-titres du site';
   @override
   String get web_video_import_hint =>
-      'This is a web page (not a direct stream). It will open in the built-in web player.';
+      'Il s’agit d’une page web (pas d’un flux direct). Elle s’ouvrira dans le lecteur web intégré.';
   @override
   String get web_video_platform_unsupported =>
-      'The built-in web player is only available on Windows for now.';
+      'Le lecteur web intégré n’est disponible que sous Windows pour le moment.';
   @override
-  String get web_video_mine_queue_run => 'Create queued cards';
+  String get web_video_mine_queue_run => 'Créer les cartes en attente';
   @override
-  String get web_video_mine_queue_stop => 'Stop card creation';
+  String get web_video_mine_queue_stop => 'Arrêter la création de cartes';
   @override
-  String get web_video_mine_queue_empty => 'No queued cards';
+  String get web_video_mine_queue_empty => 'Aucune carte en attente';
   @override
   String web_video_mine_queued({required Object count}) =>
-      'Queued for card creation (${count} pending)';
+      'Mis en attente pour la création de cartes (${count} en attente)';
   @override
   String web_video_mine_queue_running(
           {required Object done, required Object total}) =>
-      'Creating cards ${done}/${total}...';
+      'Création des cartes ${done}/${total}…';
   @override
   String web_video_mine_queue_finished(
           {required Object ok, required Object failed}) =>
-      'Cards created: ${ok}, failed: ${failed}';
+      'Cartes créées : ${ok}, échecs : ${failed}';
+  @override
+  String get web_video_hosting_menu => 'Mode de lecture';
+  @override
+  String get web_video_hosting_builtin =>
+      'Intégré (1080p ; super-résolution, captures et cartes disponibles)';
+  @override
+  String get web_video_hosting_windowed =>
+      'Fenêtre native (4K, DRM matériel ; les cartes sont mises en attente)';
+  @override
+  String web_video_mine_switch_builtin({required Object count}) =>
+      'Passer en mode intégré pour créer ${count} cartes en attente';
 }
 
 // Path: <root>
@@ -50666,36 +50720,47 @@ class _StringsId extends _StringsEn {
   String batch_hidden_by_filter_note({required Object n}) =>
       '${n} item terpilih lainnya disembunyikan oleh filter saat ini dan tidak akan diproses.';
   @override
-  String get web_video_track_menu => 'Subtitle track';
+  String get web_video_track_menu => 'Trek subtitel';
   @override
-  String get web_video_track_live => 'Live captions (sampled from page)';
+  String get web_video_track_live => 'Teks langsung (diambil dari halaman)';
   @override
-  String get web_video_no_tracks => 'No subtitles captured yet';
+  String get web_video_no_tracks => 'Belum ada subtitel yang ditangkap';
   @override
-  String get web_video_hide_native_subtitles => 'Hide site subtitles';
+  String get web_video_hide_native_subtitles => 'Sembunyikan subtitel situs';
   @override
   String get web_video_import_hint =>
-      'This is a web page (not a direct stream). It will open in the built-in web player.';
+      'Ini halaman web (bukan stream langsung). Akan dibuka di pemutar web bawaan.';
   @override
   String get web_video_platform_unsupported =>
-      'The built-in web player is only available on Windows for now.';
+      'Pemutar web bawaan saat ini hanya tersedia di Windows.';
   @override
-  String get web_video_mine_queue_run => 'Create queued cards';
+  String get web_video_mine_queue_run => 'Buat kartu yang antre';
   @override
-  String get web_video_mine_queue_stop => 'Stop card creation';
+  String get web_video_mine_queue_stop => 'Hentikan pembuatan kartu';
   @override
-  String get web_video_mine_queue_empty => 'No queued cards';
+  String get web_video_mine_queue_empty => 'Tidak ada kartu yang antre';
   @override
   String web_video_mine_queued({required Object count}) =>
-      'Queued for card creation (${count} pending)';
+      'Masuk antrean pembuatan kartu (${count} menunggu)';
   @override
   String web_video_mine_queue_running(
           {required Object done, required Object total}) =>
-      'Creating cards ${done}/${total}...';
+      'Membuat kartu ${done}/${total}…';
   @override
   String web_video_mine_queue_finished(
           {required Object ok, required Object failed}) =>
-      'Cards created: ${ok}, failed: ${failed}';
+      'Kartu dibuat: ${ok}, gagal: ${failed}';
+  @override
+  String get web_video_hosting_menu => 'Mode pemutaran';
+  @override
+  String get web_video_hosting_builtin =>
+      'Bawaan (1080p; resolusi super, tangkapan layar, dan kartu tersedia)';
+  @override
+  String get web_video_hosting_windowed =>
+      'Jendela native (4K, DRM perangkat keras; kartu diantrekan dulu)';
+  @override
+  String web_video_mine_switch_builtin({required Object count}) =>
+      'Beralih ke mode bawaan untuk membuat ${count} kartu yang antre';
 }
 
 // Path: <root>
@@ -59773,36 +59838,49 @@ class _StringsIt extends _StringsEn {
   String batch_hidden_by_filter_note({required Object n}) =>
       'Altri ${n} elementi selezionati sono nascosti dal filtro corrente e non verranno elaborati.';
   @override
-  String get web_video_track_menu => 'Subtitle track';
+  String get web_video_track_menu => 'Traccia sottotitoli';
   @override
-  String get web_video_track_live => 'Live captions (sampled from page)';
+  String get web_video_track_live =>
+      'Sottotitoli live (campionati dalla pagina)';
   @override
-  String get web_video_no_tracks => 'No subtitles captured yet';
+  String get web_video_no_tracks => 'Nessun sottotitolo acquisito ancora';
   @override
-  String get web_video_hide_native_subtitles => 'Hide site subtitles';
+  String get web_video_hide_native_subtitles =>
+      'Nascondi i sottotitoli del sito';
   @override
   String get web_video_import_hint =>
-      'This is a web page (not a direct stream). It will open in the built-in web player.';
+      'Questa è una pagina web (non uno stream diretto). Si aprirà nel lettore web integrato.';
   @override
   String get web_video_platform_unsupported =>
-      'The built-in web player is only available on Windows for now.';
+      'Il lettore web integrato è disponibile per ora solo su Windows.';
   @override
-  String get web_video_mine_queue_run => 'Create queued cards';
+  String get web_video_mine_queue_run => 'Crea le carte in coda';
   @override
-  String get web_video_mine_queue_stop => 'Stop card creation';
+  String get web_video_mine_queue_stop => 'Interrompi la creazione delle carte';
   @override
-  String get web_video_mine_queue_empty => 'No queued cards';
+  String get web_video_mine_queue_empty => 'Nessuna carta in coda';
   @override
   String web_video_mine_queued({required Object count}) =>
-      'Queued for card creation (${count} pending)';
+      'In coda per la creazione di carte (${count} in attesa)';
   @override
   String web_video_mine_queue_running(
           {required Object done, required Object total}) =>
-      'Creating cards ${done}/${total}...';
+      'Creazione carte ${done}/${total}…';
   @override
   String web_video_mine_queue_finished(
           {required Object ok, required Object failed}) =>
-      'Cards created: ${ok}, failed: ${failed}';
+      'Carte create: ${ok}, non riuscite: ${failed}';
+  @override
+  String get web_video_hosting_menu => 'Modalità di riproduzione';
+  @override
+  String get web_video_hosting_builtin =>
+      'Integrato (1080p; super-risoluzione, screenshot e carte disponibili)';
+  @override
+  String get web_video_hosting_windowed =>
+      'Finestra nativa (4K, DRM hardware; le carte vengono messe in coda)';
+  @override
+  String web_video_mine_switch_builtin({required Object count}) =>
+      'Passa alla modalità integrata per creare ${count} carte in coda';
 }
 
 // Path: <root>
@@ -68326,36 +68404,46 @@ class _StringsJa extends _StringsEn {
   String batch_hidden_by_filter_note({required Object n}) =>
       '選択済みの ${n} 件は現在のフィルターで非表示のため、今回は処理されません。';
   @override
-  String get web_video_track_menu => 'Subtitle track';
+  String get web_video_track_menu => '字幕トラック';
   @override
-  String get web_video_track_live => 'Live captions (sampled from page)';
+  String get web_video_track_live => 'ライブ字幕（ページから取得）';
   @override
-  String get web_video_no_tracks => 'No subtitles captured yet';
+  String get web_video_no_tracks => '字幕はまだ取得されていません';
   @override
-  String get web_video_hide_native_subtitles => 'Hide site subtitles';
+  String get web_video_hide_native_subtitles => 'サイトの字幕を隠す';
   @override
   String get web_video_import_hint =>
-      'This is a web page (not a direct stream). It will open in the built-in web player.';
+      'これは（直接ストリームではなく）Web ページです。内蔵 Web プレーヤーで開きます。';
   @override
   String get web_video_platform_unsupported =>
-      'The built-in web player is only available on Windows for now.';
+      '内蔵 Web プレーヤーは現在 Windows でのみ利用できます。';
   @override
-  String get web_video_mine_queue_run => 'Create queued cards';
+  String get web_video_mine_queue_run => 'キューのカードを作成';
   @override
-  String get web_video_mine_queue_stop => 'Stop card creation';
+  String get web_video_mine_queue_stop => 'カード作成を停止';
   @override
-  String get web_video_mine_queue_empty => 'No queued cards';
+  String get web_video_mine_queue_empty => 'キューにカードはありません';
   @override
   String web_video_mine_queued({required Object count}) =>
-      'Queued for card creation (${count} pending)';
+      'カード作成のキューに追加しました（残り ${count} 件）';
   @override
   String web_video_mine_queue_running(
           {required Object done, required Object total}) =>
-      'Creating cards ${done}/${total}...';
+      'カード作成中 ${done}/${total}…';
   @override
   String web_video_mine_queue_finished(
           {required Object ok, required Object failed}) =>
-      'Cards created: ${ok}, failed: ${failed}';
+      'カード作成完了：成功 ${ok}、失敗 ${failed}';
+  @override
+  String get web_video_hosting_menu => '再生モード';
+  @override
+  String get web_video_hosting_builtin => '内蔵（1080p；超解像・スクリーンショット・カード作成が可能）';
+  @override
+  String get web_video_hosting_windowed =>
+      'ネイティブウィンドウ（4K、ハードウェア DRM；カードは後でキュー処理）';
+  @override
+  String web_video_mine_switch_builtin({required Object count}) =>
+      '内蔵モードに切り替えて ${count} 件のカードを作成';
 }
 
 // Path: <root>
@@ -76893,36 +76981,45 @@ class _StringsKo extends _StringsEn {
   String batch_hidden_by_filter_note({required Object n}) =>
       '선택한 항목 중 ${n}개는 현재 필터로 숨겨져 있어 처리되지 않습니다.';
   @override
-  String get web_video_track_menu => 'Subtitle track';
+  String get web_video_track_menu => '자막 트랙';
   @override
-  String get web_video_track_live => 'Live captions (sampled from page)';
+  String get web_video_track_live => '실시간 자막(페이지에서 수집)';
   @override
-  String get web_video_no_tracks => 'No subtitles captured yet';
+  String get web_video_no_tracks => '아직 수집된 자막이 없습니다';
   @override
-  String get web_video_hide_native_subtitles => 'Hide site subtitles';
+  String get web_video_hide_native_subtitles => '사이트 자막 숨기기';
   @override
-  String get web_video_import_hint =>
-      'This is a web page (not a direct stream). It will open in the built-in web player.';
+  String get web_video_import_hint => '직접 스트림이 아닌 웹 페이지입니다. 내장 웹 플레이어에서 열립니다.';
   @override
   String get web_video_platform_unsupported =>
-      'The built-in web player is only available on Windows for now.';
+      '내장 웹 플레이어는 현재 Windows에서만 사용할 수 있습니다.';
   @override
-  String get web_video_mine_queue_run => 'Create queued cards';
+  String get web_video_mine_queue_run => '대기 중인 카드 만들기';
   @override
-  String get web_video_mine_queue_stop => 'Stop card creation';
+  String get web_video_mine_queue_stop => '카드 만들기 중지';
   @override
-  String get web_video_mine_queue_empty => 'No queued cards';
+  String get web_video_mine_queue_empty => '대기 중인 카드가 없습니다';
   @override
   String web_video_mine_queued({required Object count}) =>
-      'Queued for card creation (${count} pending)';
+      '카드 만들기 대기열에 추가됨(${count}개 대기)';
   @override
   String web_video_mine_queue_running(
           {required Object done, required Object total}) =>
-      'Creating cards ${done}/${total}...';
+      '카드 만드는 중 ${done}/${total}…';
   @override
   String web_video_mine_queue_finished(
           {required Object ok, required Object failed}) =>
-      'Cards created: ${ok}, failed: ${failed}';
+      '카드 만들기 완료: 성공 ${ok}, 실패 ${failed}';
+  @override
+  String get web_video_hosting_menu => '재생 모드';
+  @override
+  String get web_video_hosting_builtin => '내장(1080p; 초해상도, 스크린샷, 카드 만들기 가능)';
+  @override
+  String get web_video_hosting_windowed =>
+      '네이티브 창(4K, 하드웨어 DRM; 카드는 나중에 대기열 처리)';
+  @override
+  String web_video_mine_switch_builtin({required Object count}) =>
+      '내장 모드로 전환하여 대기 중인 카드 ${count}개 만들기';
 }
 
 // Path: <root>
@@ -85957,36 +86054,48 @@ class _StringsNl extends _StringsEn {
   String batch_hidden_by_filter_note({required Object n}) =>
       'Nog ${n} geselecteerde items zijn verborgen door het huidige filter en worden niet verwerkt.';
   @override
-  String get web_video_track_menu => 'Subtitle track';
+  String get web_video_track_menu => 'Ondertitelspoor';
   @override
-  String get web_video_track_live => 'Live captions (sampled from page)';
+  String get web_video_track_live => 'Live-ondertitels (van de pagina)';
   @override
-  String get web_video_no_tracks => 'No subtitles captured yet';
+  String get web_video_no_tracks => 'Nog geen ondertitels vastgelegd';
   @override
-  String get web_video_hide_native_subtitles => 'Hide site subtitles';
+  String get web_video_hide_native_subtitles =>
+      'Ondertitels van de site verbergen';
   @override
   String get web_video_import_hint =>
-      'This is a web page (not a direct stream). It will open in the built-in web player.';
+      'Dit is een webpagina (geen directe stream). Deze wordt in de ingebouwde webspeler geopend.';
   @override
   String get web_video_platform_unsupported =>
-      'The built-in web player is only available on Windows for now.';
+      'De ingebouwde webspeler is voorlopig alleen beschikbaar op Windows.';
   @override
-  String get web_video_mine_queue_run => 'Create queued cards';
+  String get web_video_mine_queue_run => 'Wachtende kaarten aanmaken';
   @override
-  String get web_video_mine_queue_stop => 'Stop card creation';
+  String get web_video_mine_queue_stop => 'Kaarten aanmaken stoppen';
   @override
-  String get web_video_mine_queue_empty => 'No queued cards';
+  String get web_video_mine_queue_empty => 'Geen wachtende kaarten';
   @override
   String web_video_mine_queued({required Object count}) =>
-      'Queued for card creation (${count} pending)';
+      'In wachtrij voor kaart aanmaken (${count} wachtend)';
   @override
   String web_video_mine_queue_running(
           {required Object done, required Object total}) =>
-      'Creating cards ${done}/${total}...';
+      'Kaarten aanmaken ${done}/${total}…';
   @override
   String web_video_mine_queue_finished(
           {required Object ok, required Object failed}) =>
-      'Cards created: ${ok}, failed: ${failed}';
+      'Kaarten aangemaakt: ${ok}, mislukt: ${failed}';
+  @override
+  String get web_video_hosting_menu => 'Afspeelmodus';
+  @override
+  String get web_video_hosting_builtin =>
+      'Ingebouwd (1080p; superresolutie, schermafbeeldingen en kaarten beschikbaar)';
+  @override
+  String get web_video_hosting_windowed =>
+      'Native venster (4K, hardware-DRM; kaarten komen in de wachtrij)';
+  @override
+  String web_video_mine_switch_builtin({required Object count}) =>
+      'Schakel naar ingebouwde modus om ${count} wachtende kaarten aan te maken';
 }
 
 // Path: <root>
@@ -95077,36 +95186,47 @@ class _StringsPtBr extends _StringsEn {
   String batch_hidden_by_filter_note({required Object n}) =>
       'Outros ${n} itens selecionados estão ocultos pelo filtro atual e não serão processados.';
   @override
-  String get web_video_track_menu => 'Subtitle track';
+  String get web_video_track_menu => 'Faixa de legendas';
   @override
-  String get web_video_track_live => 'Live captions (sampled from page)';
+  String get web_video_track_live => 'Legendas ao vivo (capturadas da página)';
   @override
-  String get web_video_no_tracks => 'No subtitles captured yet';
+  String get web_video_no_tracks => 'Nenhuma legenda capturada ainda';
   @override
-  String get web_video_hide_native_subtitles => 'Hide site subtitles';
+  String get web_video_hide_native_subtitles => 'Ocultar legendas do site';
   @override
   String get web_video_import_hint =>
-      'This is a web page (not a direct stream). It will open in the built-in web player.';
+      'Isto é uma página web (não um stream direto). Será aberta no player web integrado.';
   @override
   String get web_video_platform_unsupported =>
-      'The built-in web player is only available on Windows for now.';
+      'O player web integrado só está disponível no Windows por enquanto.';
   @override
-  String get web_video_mine_queue_run => 'Create queued cards';
+  String get web_video_mine_queue_run => 'Criar cartões na fila';
   @override
-  String get web_video_mine_queue_stop => 'Stop card creation';
+  String get web_video_mine_queue_stop => 'Parar de criar cartões';
   @override
-  String get web_video_mine_queue_empty => 'No queued cards';
+  String get web_video_mine_queue_empty => 'Nenhum cartão na fila';
   @override
   String web_video_mine_queued({required Object count}) =>
-      'Queued for card creation (${count} pending)';
+      'Na fila para criar cartões (${count} pendentes)';
   @override
   String web_video_mine_queue_running(
           {required Object done, required Object total}) =>
-      'Creating cards ${done}/${total}...';
+      'Criando cartões ${done}/${total}…';
   @override
   String web_video_mine_queue_finished(
           {required Object ok, required Object failed}) =>
-      'Cards created: ${ok}, failed: ${failed}';
+      'Cartões criados: ${ok}, falhas: ${failed}';
+  @override
+  String get web_video_hosting_menu => 'Modo de reprodução';
+  @override
+  String get web_video_hosting_builtin =>
+      'Integrado (1080p; super-resolução, capturas e cartões disponíveis)';
+  @override
+  String get web_video_hosting_windowed =>
+      'Janela nativa (4K, DRM por hardware; cartões ficam na fila)';
+  @override
+  String web_video_mine_switch_builtin({required Object count}) =>
+      'Mudar para o modo integrado para criar ${count} cartões na fila';
 }
 
 // Path: <root>
@@ -104173,36 +104293,47 @@ class _StringsRu extends _StringsEn {
   String batch_hidden_by_filter_note({required Object n}) =>
       'Ещё ${n} выбранных элементов скрыты текущим фильтром и не будут обработаны.';
   @override
-  String get web_video_track_menu => 'Subtitle track';
+  String get web_video_track_menu => 'Дорожка субтитров';
   @override
-  String get web_video_track_live => 'Live captions (sampled from page)';
+  String get web_video_track_live => 'Живые субтитры (с страницы)';
   @override
-  String get web_video_no_tracks => 'No subtitles captured yet';
+  String get web_video_no_tracks => 'Субтитры пока не получены';
   @override
-  String get web_video_hide_native_subtitles => 'Hide site subtitles';
+  String get web_video_hide_native_subtitles => 'Скрыть субтитры сайта';
   @override
   String get web_video_import_hint =>
-      'This is a web page (not a direct stream). It will open in the built-in web player.';
+      'Это веб-страница (не прямой поток). Она откроется во встроенном веб-плеере.';
   @override
   String get web_video_platform_unsupported =>
-      'The built-in web player is only available on Windows for now.';
+      'Встроенный веб-плеер пока доступен только в Windows.';
   @override
-  String get web_video_mine_queue_run => 'Create queued cards';
+  String get web_video_mine_queue_run => 'Создать карточки из очереди';
   @override
-  String get web_video_mine_queue_stop => 'Stop card creation';
+  String get web_video_mine_queue_stop => 'Остановить создание карточек';
   @override
-  String get web_video_mine_queue_empty => 'No queued cards';
+  String get web_video_mine_queue_empty => 'Очередь карточек пуста';
   @override
   String web_video_mine_queued({required Object count}) =>
-      'Queued for card creation (${count} pending)';
+      'Добавлено в очередь на создание карточек (ожидает: ${count})';
   @override
   String web_video_mine_queue_running(
           {required Object done, required Object total}) =>
-      'Creating cards ${done}/${total}...';
+      'Создание карточек ${done}/${total}…';
   @override
   String web_video_mine_queue_finished(
           {required Object ok, required Object failed}) =>
-      'Cards created: ${ok}, failed: ${failed}';
+      'Карточек создано: ${ok}, ошибок: ${failed}';
+  @override
+  String get web_video_hosting_menu => 'Режим воспроизведения';
+  @override
+  String get web_video_hosting_builtin =>
+      'Встроенный (1080p; доступны суперразрешение, скриншоты и карточки)';
+  @override
+  String get web_video_hosting_windowed =>
+      'Нативное окно (4K, аппаратный DRM; карточки ставятся в очередь)';
+  @override
+  String web_video_mine_switch_builtin({required Object count}) =>
+      'Переключиться на встроенный режим и создать карточек из очереди: ${count}';
 }
 
 // Path: <root>
@@ -113087,36 +113218,47 @@ class _StringsTh extends _StringsEn {
   String batch_hidden_by_filter_note({required Object n}) =>
       'รายการที่เลือกอีก ${n} รายการถูกซ่อนด้วยตัวกรองปัจจุบันและจะไม่ถูกดำเนินการ';
   @override
-  String get web_video_track_menu => 'Subtitle track';
+  String get web_video_track_menu => 'แทร็กคำบรรยาย';
   @override
-  String get web_video_track_live => 'Live captions (sampled from page)';
+  String get web_video_track_live => 'คำบรรยายสด (เก็บจากหน้าเว็บ)';
   @override
-  String get web_video_no_tracks => 'No subtitles captured yet';
+  String get web_video_no_tracks => 'ยังไม่ได้เก็บคำบรรยาย';
   @override
-  String get web_video_hide_native_subtitles => 'Hide site subtitles';
+  String get web_video_hide_native_subtitles => 'ซ่อนคำบรรยายของเว็บไซต์';
   @override
   String get web_video_import_hint =>
-      'This is a web page (not a direct stream). It will open in the built-in web player.';
+      'นี่คือหน้าเว็บ (ไม่ใช่สตรีมโดยตรง) จะเปิดในเว็บเพลเยอร์ในตัว';
   @override
   String get web_video_platform_unsupported =>
-      'The built-in web player is only available on Windows for now.';
+      'ตอนนี้เว็บเพลเยอร์ในตัวใช้ได้เฉพาะบน Windows';
   @override
-  String get web_video_mine_queue_run => 'Create queued cards';
+  String get web_video_mine_queue_run => 'สร้างการ์ดที่อยู่ในคิว';
   @override
-  String get web_video_mine_queue_stop => 'Stop card creation';
+  String get web_video_mine_queue_stop => 'หยุดสร้างการ์ด';
   @override
-  String get web_video_mine_queue_empty => 'No queued cards';
+  String get web_video_mine_queue_empty => 'ไม่มีการ์ดในคิว';
   @override
   String web_video_mine_queued({required Object count}) =>
-      'Queued for card creation (${count} pending)';
+      'เพิ่มในคิวสร้างการ์ดแล้ว (รอ ${count} รายการ)';
   @override
   String web_video_mine_queue_running(
           {required Object done, required Object total}) =>
-      'Creating cards ${done}/${total}...';
+      'กำลังสร้างการ์ด ${done}/${total}…';
   @override
   String web_video_mine_queue_finished(
           {required Object ok, required Object failed}) =>
-      'Cards created: ${ok}, failed: ${failed}';
+      'สร้างการ์ดแล้ว: ${ok} รายการ ล้มเหลว: ${failed} รายการ';
+  @override
+  String get web_video_hosting_menu => 'โหมดเล่น';
+  @override
+  String get web_video_hosting_builtin =>
+      'ในตัว (1080p; ใช้ซูเปอร์เรโซลูชัน ภาพหน้าจอ และการ์ดได้)';
+  @override
+  String get web_video_hosting_windowed =>
+      'หน้าต่างเนทีฟ (4K, DRM ฮาร์ดแวร์; การ์ดจะเข้าคิวไว้ก่อน)';
+  @override
+  String web_video_mine_switch_builtin({required Object count}) =>
+      'สลับไปโหมดในตัวเพื่อสร้างการ์ดในคิว ${count} รายการ';
 }
 
 // Path: <root>
@@ -122104,36 +122246,47 @@ class _StringsTr extends _StringsEn {
   String batch_hidden_by_filter_note({required Object n}) =>
       'Seçili ${n} öğe daha geçerli filtre tarafından gizlendi ve işlenmeyecek.';
   @override
-  String get web_video_track_menu => 'Subtitle track';
+  String get web_video_track_menu => 'Altyazı parçası';
   @override
-  String get web_video_track_live => 'Live captions (sampled from page)';
+  String get web_video_track_live => 'Canlı altyazılar (sayfadan alınan)';
   @override
-  String get web_video_no_tracks => 'No subtitles captured yet';
+  String get web_video_no_tracks => 'Henüz altyazı yakalanmadı';
   @override
-  String get web_video_hide_native_subtitles => 'Hide site subtitles';
+  String get web_video_hide_native_subtitles => 'Site altyazılarını gizle';
   @override
   String get web_video_import_hint =>
-      'This is a web page (not a direct stream). It will open in the built-in web player.';
+      'Bu bir web sayfası (doğrudan akış değil). Yerleşik web oynatıcıda açılacak.';
   @override
   String get web_video_platform_unsupported =>
-      'The built-in web player is only available on Windows for now.';
+      'Yerleşik web oynatıcı şimdilik yalnızca Windows’ta kullanılabilir.';
   @override
-  String get web_video_mine_queue_run => 'Create queued cards';
+  String get web_video_mine_queue_run => 'Sıradaki kartları oluştur';
   @override
-  String get web_video_mine_queue_stop => 'Stop card creation';
+  String get web_video_mine_queue_stop => 'Kart oluşturmayı durdur';
   @override
-  String get web_video_mine_queue_empty => 'No queued cards';
+  String get web_video_mine_queue_empty => 'Sırada kart yok';
   @override
   String web_video_mine_queued({required Object count}) =>
-      'Queued for card creation (${count} pending)';
+      'Kart oluşturma sırasına alındı (${count} bekliyor)';
   @override
   String web_video_mine_queue_running(
           {required Object done, required Object total}) =>
-      'Creating cards ${done}/${total}...';
+      'Kartlar oluşturuluyor ${done}/${total}…';
   @override
   String web_video_mine_queue_finished(
           {required Object ok, required Object failed}) =>
-      'Cards created: ${ok}, failed: ${failed}';
+      'Oluşturulan kart: ${ok}, başarısız: ${failed}';
+  @override
+  String get web_video_hosting_menu => 'Oynatma modu';
+  @override
+  String get web_video_hosting_builtin =>
+      'Yerleşik (1080p; süper çözünürlük, ekran görüntüsü ve kartlar kullanılabilir)';
+  @override
+  String get web_video_hosting_windowed =>
+      'Yerel pencere (4K, donanımsal DRM; kartlar sonra sıraya alınır)';
+  @override
+  String web_video_mine_switch_builtin({required Object count}) =>
+      '${count} bekleyen kartı oluşturmak için yerleşik moda geç';
 }
 
 // Path: <root>
@@ -131103,36 +131256,47 @@ class _StringsVi extends _StringsEn {
   String batch_hidden_by_filter_note({required Object n}) =>
       'Còn ${n} mục đã chọn bị ẩn bởi bộ lọc hiện tại và sẽ không được xử lý.';
   @override
-  String get web_video_track_menu => 'Subtitle track';
+  String get web_video_track_menu => 'Rãnh phụ đề';
   @override
-  String get web_video_track_live => 'Live captions (sampled from page)';
+  String get web_video_track_live => 'Phụ đề trực tiếp (lấy từ trang)';
   @override
-  String get web_video_no_tracks => 'No subtitles captured yet';
+  String get web_video_no_tracks => 'Chưa bắt được phụ đề nào';
   @override
-  String get web_video_hide_native_subtitles => 'Hide site subtitles';
+  String get web_video_hide_native_subtitles => 'Ẩn phụ đề của trang';
   @override
   String get web_video_import_hint =>
-      'This is a web page (not a direct stream). It will open in the built-in web player.';
+      'Đây là trang web (không phải luồng trực tiếp). Sẽ mở trong trình phát web tích hợp.';
   @override
   String get web_video_platform_unsupported =>
-      'The built-in web player is only available on Windows for now.';
+      'Trình phát web tích hợp hiện chỉ có trên Windows.';
   @override
-  String get web_video_mine_queue_run => 'Create queued cards';
+  String get web_video_mine_queue_run => 'Tạo các thẻ đang chờ';
   @override
-  String get web_video_mine_queue_stop => 'Stop card creation';
+  String get web_video_mine_queue_stop => 'Dừng tạo thẻ';
   @override
-  String get web_video_mine_queue_empty => 'No queued cards';
+  String get web_video_mine_queue_empty => 'Không có thẻ nào đang chờ';
   @override
   String web_video_mine_queued({required Object count}) =>
-      'Queued for card creation (${count} pending)';
+      'Đã xếp hàng để tạo thẻ (${count} đang chờ)';
   @override
   String web_video_mine_queue_running(
           {required Object done, required Object total}) =>
-      'Creating cards ${done}/${total}...';
+      'Đang tạo thẻ ${done}/${total}…';
   @override
   String web_video_mine_queue_finished(
           {required Object ok, required Object failed}) =>
-      'Cards created: ${ok}, failed: ${failed}';
+      'Đã tạo thẻ: ${ok}, thất bại: ${failed}';
+  @override
+  String get web_video_hosting_menu => 'Chế độ phát';
+  @override
+  String get web_video_hosting_builtin =>
+      'Tích hợp (1080p; có siêu phân giải, ảnh chụp màn hình và thẻ)';
+  @override
+  String get web_video_hosting_windowed =>
+      'Cửa sổ gốc (4K, DRM phần cứng; thẻ được xếp hàng để làm sau)';
+  @override
+  String web_video_mine_switch_builtin({required Object count}) =>
+      'Chuyển sang chế độ tích hợp để tạo ${count} thẻ đang chờ';
 }
 
 // Path: <root>
@@ -139411,6 +139575,15 @@ class _StringsZhCn extends _StringsEn {
   String web_video_mine_queue_finished(
           {required Object ok, required Object failed}) =>
       '制卡完成：成功 ${ok}，失败 ${failed}';
+  @override
+  String get web_video_hosting_menu => '播放模式';
+  @override
+  String get web_video_hosting_builtin => '内置（1080p；可超分、可截图制卡）';
+  @override
+  String get web_video_hosting_windowed => '原生窗口（4K 硬件 DRM；制卡先排队）';
+  @override
+  String web_video_mine_switch_builtin({required Object count}) =>
+      '切到内置模式制作 ${count} 张排队卡片';
 }
 
 // Path: <root>
@@ -147667,36 +147840,43 @@ class _StringsZhHk extends _StringsEn {
   String batch_hidden_by_filter_note({required Object n}) =>
       '另有 ${n} 項被目前篩選隱藏，今次不會處理。';
   @override
-  String get web_video_track_menu => 'Subtitle track';
+  String get web_video_track_menu => '字幕軌';
   @override
-  String get web_video_track_live => 'Live captions (sampled from page)';
+  String get web_video_track_live => '即時字幕（從頁面取樣）';
   @override
-  String get web_video_no_tracks => 'No subtitles captured yet';
+  String get web_video_no_tracks => '尚未擷取到字幕';
   @override
-  String get web_video_hide_native_subtitles => 'Hide site subtitles';
+  String get web_video_hide_native_subtitles => '隱藏網站字幕';
   @override
-  String get web_video_import_hint =>
-      'This is a web page (not a direct stream). It will open in the built-in web player.';
+  String get web_video_import_hint => '這是網頁（不是直接串流），將在內建網頁播放器中開啟。';
   @override
-  String get web_video_platform_unsupported =>
-      'The built-in web player is only available on Windows for now.';
+  String get web_video_platform_unsupported => '內建網頁播放器目前僅支援 Windows。';
   @override
-  String get web_video_mine_queue_run => 'Create queued cards';
+  String get web_video_mine_queue_run => '製作佇列中的卡片';
   @override
-  String get web_video_mine_queue_stop => 'Stop card creation';
+  String get web_video_mine_queue_stop => '停止製作卡片';
   @override
-  String get web_video_mine_queue_empty => 'No queued cards';
+  String get web_video_mine_queue_empty => '佇列中沒有卡片';
   @override
   String web_video_mine_queued({required Object count}) =>
-      'Queued for card creation (${count} pending)';
+      '已加入製卡佇列（待製 ${count} 張）';
   @override
   String web_video_mine_queue_running(
           {required Object done, required Object total}) =>
-      'Creating cards ${done}/${total}...';
+      '製卡中 ${done}/${total}…';
   @override
   String web_video_mine_queue_finished(
           {required Object ok, required Object failed}) =>
-      'Cards created: ${ok}, failed: ${failed}';
+      '製卡完成：成功 ${ok}，失敗 ${failed}';
+  @override
+  String get web_video_hosting_menu => '播放模式';
+  @override
+  String get web_video_hosting_builtin => '內建（1080p；可超解析、截圖、製卡）';
+  @override
+  String get web_video_hosting_windowed => '原生視窗（4K 硬體 DRM；製卡先排隊）';
+  @override
+  String web_video_mine_switch_builtin({required Object count}) =>
+      '切換到內建模式製作 ${count} 張排隊卡片';
 }
 
 /// Flat map(s) containing all translations.
@@ -155594,6 +155774,15 @@ extension on _StringsEn {
       case 'web_video_mine_queue_finished':
         return ({required Object ok, required Object failed}) =>
             'Cards created: ${ok}, failed: ${failed}';
+      case 'web_video_hosting_menu':
+        return 'Playback mode';
+      case 'web_video_hosting_builtin':
+        return 'Built-in (1080p; super-resolution, screenshots and cards available)';
+      case 'web_video_hosting_windowed':
+        return 'Native window (4K, hardware DRM; cards are queued for later)';
+      case 'web_video_mine_switch_builtin':
+        return ({required Object count}) =>
+            'Switch to built-in mode to create ${count} queued cards';
       default:
         return null;
     }
@@ -163461,32 +163650,41 @@ extension on _StringsAr {
         return ({required Object n}) =>
             'هناك ${n} عنصر محدد مخفي بواسطة عامل التصفية الحالي ولن تتم معالجته.';
       case 'web_video_track_menu':
-        return 'Subtitle track';
+        return 'مسار الترجمة';
       case 'web_video_track_live':
-        return 'Live captions (sampled from page)';
+        return 'ترجمة مباشرة (مأخوذة من الصفحة)';
       case 'web_video_no_tracks':
-        return 'No subtitles captured yet';
+        return 'لم يتم التقاط أي ترجمة بعد';
       case 'web_video_hide_native_subtitles':
-        return 'Hide site subtitles';
+        return 'إخفاء ترجمة الموقع';
       case 'web_video_import_hint':
-        return 'This is a web page (not a direct stream). It will open in the built-in web player.';
+        return 'هذه صفحة ويب (وليست بثًا مباشرًا). ستُفتح في مشغّل الويب المدمج.';
       case 'web_video_platform_unsupported':
-        return 'The built-in web player is only available on Windows for now.';
+        return 'مشغّل الويب المدمج متاح حاليًا على Windows فقط.';
       case 'web_video_mine_queue_run':
-        return 'Create queued cards';
+        return 'إنشاء البطاقات المنتظرة';
       case 'web_video_mine_queue_stop':
-        return 'Stop card creation';
+        return 'إيقاف إنشاء البطاقات';
       case 'web_video_mine_queue_empty':
-        return 'No queued cards';
+        return 'لا توجد بطاقات في قائمة الانتظار';
       case 'web_video_mine_queued':
         return ({required Object count}) =>
-            'Queued for card creation (${count} pending)';
+            'أُضيف إلى قائمة انتظار إنشاء البطاقات (${count} معلّقة)';
       case 'web_video_mine_queue_running':
         return ({required Object done, required Object total}) =>
-            'Creating cards ${done}/${total}...';
+            'جارٍ إنشاء البطاقات ${done}/${total}…';
       case 'web_video_mine_queue_finished':
         return ({required Object ok, required Object failed}) =>
-            'Cards created: ${ok}, failed: ${failed}';
+            'البطاقات المُنشأة: ${ok}، الفاشلة: ${failed}';
+      case 'web_video_hosting_menu':
+        return 'وضع التشغيل';
+      case 'web_video_hosting_builtin':
+        return 'مدمج (1080p؛ يتوفر تحسين الدقة ولقطات الشاشة والبطاقات)';
+      case 'web_video_hosting_windowed':
+        return 'نافذة أصلية (4K، DRM عتادي؛ تُوضع البطاقات في قائمة الانتظار)';
+      case 'web_video_mine_switch_builtin':
+        return ({required Object count}) =>
+            'التبديل إلى الوضع المدمج لإنشاء ${count} بطاقة منتظرة';
       default:
         return null;
     }
@@ -171397,32 +171595,41 @@ extension on _StringsDe {
         return ({required Object n}) =>
             'Weitere ${n} ausgewählte Elemente sind durch den aktuellen Filter ausgeblendet und werden nicht bearbeitet.';
       case 'web_video_track_menu':
-        return 'Subtitle track';
+        return 'Untertitelspur';
       case 'web_video_track_live':
-        return 'Live captions (sampled from page)';
+        return 'Live-Untertitel (von der Seite erfasst)';
       case 'web_video_no_tracks':
-        return 'No subtitles captured yet';
+        return 'Noch keine Untertitel erfasst';
       case 'web_video_hide_native_subtitles':
-        return 'Hide site subtitles';
+        return 'Website-Untertitel ausblenden';
       case 'web_video_import_hint':
-        return 'This is a web page (not a direct stream). It will open in the built-in web player.';
+        return 'Dies ist eine Webseite (kein direkter Stream). Sie wird im integrierten Web-Player geöffnet.';
       case 'web_video_platform_unsupported':
-        return 'The built-in web player is only available on Windows for now.';
+        return 'Der integrierte Web-Player ist derzeit nur unter Windows verfügbar.';
       case 'web_video_mine_queue_run':
-        return 'Create queued cards';
+        return 'Wartende Karten erstellen';
       case 'web_video_mine_queue_stop':
-        return 'Stop card creation';
+        return 'Kartenerstellung stoppen';
       case 'web_video_mine_queue_empty':
-        return 'No queued cards';
+        return 'Keine wartenden Karten';
       case 'web_video_mine_queued':
         return ({required Object count}) =>
-            'Queued for card creation (${count} pending)';
+            'Für die Kartenerstellung vorgemerkt (${count} ausstehend)';
       case 'web_video_mine_queue_running':
         return ({required Object done, required Object total}) =>
-            'Creating cards ${done}/${total}...';
+            'Karten werden erstellt ${done}/${total}…';
       case 'web_video_mine_queue_finished':
         return ({required Object ok, required Object failed}) =>
-            'Cards created: ${ok}, failed: ${failed}';
+            'Karten erstellt: ${ok}, fehlgeschlagen: ${failed}';
+      case 'web_video_hosting_menu':
+        return 'Wiedergabemodus';
+      case 'web_video_hosting_builtin':
+        return 'Integriert (1080p; Hochskalierung, Screenshots und Karten verfügbar)';
+      case 'web_video_hosting_windowed':
+        return 'Natives Fenster (4K, Hardware-DRM; Karten werden später erstellt)';
+      case 'web_video_mine_switch_builtin':
+        return ({required Object count}) =>
+            'In den integrierten Modus wechseln, um ${count} wartende Karten zu erstellen';
       default:
         return null;
     }
@@ -179325,32 +179532,41 @@ extension on _StringsEs {
         return ({required Object n}) =>
             'Otros ${n} elementos seleccionados están ocultos por el filtro actual y no se procesarán.';
       case 'web_video_track_menu':
-        return 'Subtitle track';
+        return 'Pista de subtítulos';
       case 'web_video_track_live':
-        return 'Live captions (sampled from page)';
+        return 'Subtítulos en vivo (capturados de la página)';
       case 'web_video_no_tracks':
-        return 'No subtitles captured yet';
+        return 'Aún no se han capturado subtítulos';
       case 'web_video_hide_native_subtitles':
-        return 'Hide site subtitles';
+        return 'Ocultar subtítulos del sitio';
       case 'web_video_import_hint':
-        return 'This is a web page (not a direct stream). It will open in the built-in web player.';
+        return 'Esto es una página web (no una transmisión directa). Se abrirá en el reproductor web integrado.';
       case 'web_video_platform_unsupported':
-        return 'The built-in web player is only available on Windows for now.';
+        return 'El reproductor web integrado solo está disponible en Windows por ahora.';
       case 'web_video_mine_queue_run':
-        return 'Create queued cards';
+        return 'Crear las tarjetas en cola';
       case 'web_video_mine_queue_stop':
-        return 'Stop card creation';
+        return 'Detener la creación de tarjetas';
       case 'web_video_mine_queue_empty':
-        return 'No queued cards';
+        return 'No hay tarjetas en cola';
       case 'web_video_mine_queued':
         return ({required Object count}) =>
-            'Queued for card creation (${count} pending)';
+            'En cola para crear tarjetas (${count} pendientes)';
       case 'web_video_mine_queue_running':
         return ({required Object done, required Object total}) =>
-            'Creating cards ${done}/${total}...';
+            'Creando tarjetas ${done}/${total}…';
       case 'web_video_mine_queue_finished':
         return ({required Object ok, required Object failed}) =>
-            'Cards created: ${ok}, failed: ${failed}';
+            'Tarjetas creadas: ${ok}, fallidas: ${failed}';
+      case 'web_video_hosting_menu':
+        return 'Modo de reproducción';
+      case 'web_video_hosting_builtin':
+        return 'Integrado (1080p; superresolución, capturas y tarjetas disponibles)';
+      case 'web_video_hosting_windowed':
+        return 'Ventana nativa (4K, DRM por hardware; las tarjetas se ponen en cola)';
+      case 'web_video_mine_switch_builtin':
+        return ({required Object count}) =>
+            'Cambiar al modo integrado para crear ${count} tarjetas en cola';
       default:
         return null;
     }
@@ -187261,32 +187477,41 @@ extension on _StringsFr {
         return ({required Object n}) =>
             '${n} autres éléments sélectionnés sont masqués par le filtre actuel et ne seront pas traités.';
       case 'web_video_track_menu':
-        return 'Subtitle track';
+        return 'Piste de sous-titres';
       case 'web_video_track_live':
-        return 'Live captions (sampled from page)';
+        return 'Sous-titres en direct (capturés sur la page)';
       case 'web_video_no_tracks':
-        return 'No subtitles captured yet';
+        return 'Aucun sous-titre capturé pour l’instant';
       case 'web_video_hide_native_subtitles':
-        return 'Hide site subtitles';
+        return 'Masquer les sous-titres du site';
       case 'web_video_import_hint':
-        return 'This is a web page (not a direct stream). It will open in the built-in web player.';
+        return 'Il s’agit d’une page web (pas d’un flux direct). Elle s’ouvrira dans le lecteur web intégré.';
       case 'web_video_platform_unsupported':
-        return 'The built-in web player is only available on Windows for now.';
+        return 'Le lecteur web intégré n’est disponible que sous Windows pour le moment.';
       case 'web_video_mine_queue_run':
-        return 'Create queued cards';
+        return 'Créer les cartes en attente';
       case 'web_video_mine_queue_stop':
-        return 'Stop card creation';
+        return 'Arrêter la création de cartes';
       case 'web_video_mine_queue_empty':
-        return 'No queued cards';
+        return 'Aucune carte en attente';
       case 'web_video_mine_queued':
         return ({required Object count}) =>
-            'Queued for card creation (${count} pending)';
+            'Mis en attente pour la création de cartes (${count} en attente)';
       case 'web_video_mine_queue_running':
         return ({required Object done, required Object total}) =>
-            'Creating cards ${done}/${total}...';
+            'Création des cartes ${done}/${total}…';
       case 'web_video_mine_queue_finished':
         return ({required Object ok, required Object failed}) =>
-            'Cards created: ${ok}, failed: ${failed}';
+            'Cartes créées : ${ok}, échecs : ${failed}';
+      case 'web_video_hosting_menu':
+        return 'Mode de lecture';
+      case 'web_video_hosting_builtin':
+        return 'Intégré (1080p ; super-résolution, captures et cartes disponibles)';
+      case 'web_video_hosting_windowed':
+        return 'Fenêtre native (4K, DRM matériel ; les cartes sont mises en attente)';
+      case 'web_video_mine_switch_builtin':
+        return ({required Object count}) =>
+            'Passer en mode intégré pour créer ${count} cartes en attente';
       default:
         return null;
     }
@@ -195169,32 +195394,41 @@ extension on _StringsId {
         return ({required Object n}) =>
             '${n} item terpilih lainnya disembunyikan oleh filter saat ini dan tidak akan diproses.';
       case 'web_video_track_menu':
-        return 'Subtitle track';
+        return 'Trek subtitel';
       case 'web_video_track_live':
-        return 'Live captions (sampled from page)';
+        return 'Teks langsung (diambil dari halaman)';
       case 'web_video_no_tracks':
-        return 'No subtitles captured yet';
+        return 'Belum ada subtitel yang ditangkap';
       case 'web_video_hide_native_subtitles':
-        return 'Hide site subtitles';
+        return 'Sembunyikan subtitel situs';
       case 'web_video_import_hint':
-        return 'This is a web page (not a direct stream). It will open in the built-in web player.';
+        return 'Ini halaman web (bukan stream langsung). Akan dibuka di pemutar web bawaan.';
       case 'web_video_platform_unsupported':
-        return 'The built-in web player is only available on Windows for now.';
+        return 'Pemutar web bawaan saat ini hanya tersedia di Windows.';
       case 'web_video_mine_queue_run':
-        return 'Create queued cards';
+        return 'Buat kartu yang antre';
       case 'web_video_mine_queue_stop':
-        return 'Stop card creation';
+        return 'Hentikan pembuatan kartu';
       case 'web_video_mine_queue_empty':
-        return 'No queued cards';
+        return 'Tidak ada kartu yang antre';
       case 'web_video_mine_queued':
         return ({required Object count}) =>
-            'Queued for card creation (${count} pending)';
+            'Masuk antrean pembuatan kartu (${count} menunggu)';
       case 'web_video_mine_queue_running':
         return ({required Object done, required Object total}) =>
-            'Creating cards ${done}/${total}...';
+            'Membuat kartu ${done}/${total}…';
       case 'web_video_mine_queue_finished':
         return ({required Object ok, required Object failed}) =>
-            'Cards created: ${ok}, failed: ${failed}';
+            'Kartu dibuat: ${ok}, gagal: ${failed}';
+      case 'web_video_hosting_menu':
+        return 'Mode pemutaran';
+      case 'web_video_hosting_builtin':
+        return 'Bawaan (1080p; resolusi super, tangkapan layar, dan kartu tersedia)';
+      case 'web_video_hosting_windowed':
+        return 'Jendela native (4K, DRM perangkat keras; kartu diantrekan dulu)';
+      case 'web_video_mine_switch_builtin':
+        return ({required Object count}) =>
+            'Beralih ke mode bawaan untuk membuat ${count} kartu yang antre';
       default:
         return null;
     }
@@ -203098,32 +203332,41 @@ extension on _StringsIt {
         return ({required Object n}) =>
             'Altri ${n} elementi selezionati sono nascosti dal filtro corrente e non verranno elaborati.';
       case 'web_video_track_menu':
-        return 'Subtitle track';
+        return 'Traccia sottotitoli';
       case 'web_video_track_live':
-        return 'Live captions (sampled from page)';
+        return 'Sottotitoli live (campionati dalla pagina)';
       case 'web_video_no_tracks':
-        return 'No subtitles captured yet';
+        return 'Nessun sottotitolo acquisito ancora';
       case 'web_video_hide_native_subtitles':
-        return 'Hide site subtitles';
+        return 'Nascondi i sottotitoli del sito';
       case 'web_video_import_hint':
-        return 'This is a web page (not a direct stream). It will open in the built-in web player.';
+        return 'Questa è una pagina web (non uno stream diretto). Si aprirà nel lettore web integrato.';
       case 'web_video_platform_unsupported':
-        return 'The built-in web player is only available on Windows for now.';
+        return 'Il lettore web integrato è disponibile per ora solo su Windows.';
       case 'web_video_mine_queue_run':
-        return 'Create queued cards';
+        return 'Crea le carte in coda';
       case 'web_video_mine_queue_stop':
-        return 'Stop card creation';
+        return 'Interrompi la creazione delle carte';
       case 'web_video_mine_queue_empty':
-        return 'No queued cards';
+        return 'Nessuna carta in coda';
       case 'web_video_mine_queued':
         return ({required Object count}) =>
-            'Queued for card creation (${count} pending)';
+            'In coda per la creazione di carte (${count} in attesa)';
       case 'web_video_mine_queue_running':
         return ({required Object done, required Object total}) =>
-            'Creating cards ${done}/${total}...';
+            'Creazione carte ${done}/${total}…';
       case 'web_video_mine_queue_finished':
         return ({required Object ok, required Object failed}) =>
-            'Cards created: ${ok}, failed: ${failed}';
+            'Carte create: ${ok}, non riuscite: ${failed}';
+      case 'web_video_hosting_menu':
+        return 'Modalità di riproduzione';
+      case 'web_video_hosting_builtin':
+        return 'Integrato (1080p; super-risoluzione, screenshot e carte disponibili)';
+      case 'web_video_hosting_windowed':
+        return 'Finestra nativa (4K, DRM hardware; le carte vengono messe in coda)';
+      case 'web_video_mine_switch_builtin':
+        return ({required Object count}) =>
+            'Passa alla modalità integrata per creare ${count} carte in coda';
       default:
         return null;
     }
@@ -210960,32 +211203,39 @@ extension on _StringsJa {
         return ({required Object n}) =>
             '選択済みの ${n} 件は現在のフィルターで非表示のため、今回は処理されません。';
       case 'web_video_track_menu':
-        return 'Subtitle track';
+        return '字幕トラック';
       case 'web_video_track_live':
-        return 'Live captions (sampled from page)';
+        return 'ライブ字幕（ページから取得）';
       case 'web_video_no_tracks':
-        return 'No subtitles captured yet';
+        return '字幕はまだ取得されていません';
       case 'web_video_hide_native_subtitles':
-        return 'Hide site subtitles';
+        return 'サイトの字幕を隠す';
       case 'web_video_import_hint':
-        return 'This is a web page (not a direct stream). It will open in the built-in web player.';
+        return 'これは（直接ストリームではなく）Web ページです。内蔵 Web プレーヤーで開きます。';
       case 'web_video_platform_unsupported':
-        return 'The built-in web player is only available on Windows for now.';
+        return '内蔵 Web プレーヤーは現在 Windows でのみ利用できます。';
       case 'web_video_mine_queue_run':
-        return 'Create queued cards';
+        return 'キューのカードを作成';
       case 'web_video_mine_queue_stop':
-        return 'Stop card creation';
+        return 'カード作成を停止';
       case 'web_video_mine_queue_empty':
-        return 'No queued cards';
+        return 'キューにカードはありません';
       case 'web_video_mine_queued':
-        return ({required Object count}) =>
-            'Queued for card creation (${count} pending)';
+        return ({required Object count}) => 'カード作成のキューに追加しました（残り ${count} 件）';
       case 'web_video_mine_queue_running':
         return ({required Object done, required Object total}) =>
-            'Creating cards ${done}/${total}...';
+            'カード作成中 ${done}/${total}…';
       case 'web_video_mine_queue_finished':
         return ({required Object ok, required Object failed}) =>
-            'Cards created: ${ok}, failed: ${failed}';
+            'カード作成完了：成功 ${ok}、失敗 ${failed}';
+      case 'web_video_hosting_menu':
+        return '再生モード';
+      case 'web_video_hosting_builtin':
+        return '内蔵（1080p；超解像・スクリーンショット・カード作成が可能）';
+      case 'web_video_hosting_windowed':
+        return 'ネイティブウィンドウ（4K、ハードウェア DRM；カードは後でキュー処理）';
+      case 'web_video_mine_switch_builtin':
+        return ({required Object count}) => '内蔵モードに切り替えて ${count} 件のカードを作成';
       default:
         return null;
     }
@@ -218824,32 +219074,40 @@ extension on _StringsKo {
         return ({required Object n}) =>
             '선택한 항목 중 ${n}개는 현재 필터로 숨겨져 있어 처리되지 않습니다.';
       case 'web_video_track_menu':
-        return 'Subtitle track';
+        return '자막 트랙';
       case 'web_video_track_live':
-        return 'Live captions (sampled from page)';
+        return '실시간 자막(페이지에서 수집)';
       case 'web_video_no_tracks':
-        return 'No subtitles captured yet';
+        return '아직 수집된 자막이 없습니다';
       case 'web_video_hide_native_subtitles':
-        return 'Hide site subtitles';
+        return '사이트 자막 숨기기';
       case 'web_video_import_hint':
-        return 'This is a web page (not a direct stream). It will open in the built-in web player.';
+        return '직접 스트림이 아닌 웹 페이지입니다. 내장 웹 플레이어에서 열립니다.';
       case 'web_video_platform_unsupported':
-        return 'The built-in web player is only available on Windows for now.';
+        return '내장 웹 플레이어는 현재 Windows에서만 사용할 수 있습니다.';
       case 'web_video_mine_queue_run':
-        return 'Create queued cards';
+        return '대기 중인 카드 만들기';
       case 'web_video_mine_queue_stop':
-        return 'Stop card creation';
+        return '카드 만들기 중지';
       case 'web_video_mine_queue_empty':
-        return 'No queued cards';
+        return '대기 중인 카드가 없습니다';
       case 'web_video_mine_queued':
-        return ({required Object count}) =>
-            'Queued for card creation (${count} pending)';
+        return ({required Object count}) => '카드 만들기 대기열에 추가됨(${count}개 대기)';
       case 'web_video_mine_queue_running':
         return ({required Object done, required Object total}) =>
-            'Creating cards ${done}/${total}...';
+            '카드 만드는 중 ${done}/${total}…';
       case 'web_video_mine_queue_finished':
         return ({required Object ok, required Object failed}) =>
-            'Cards created: ${ok}, failed: ${failed}';
+            '카드 만들기 완료: 성공 ${ok}, 실패 ${failed}';
+      case 'web_video_hosting_menu':
+        return '재생 모드';
+      case 'web_video_hosting_builtin':
+        return '내장(1080p; 초해상도, 스크린샷, 카드 만들기 가능)';
+      case 'web_video_hosting_windowed':
+        return '네이티브 창(4K, 하드웨어 DRM; 카드는 나중에 대기열 처리)';
+      case 'web_video_mine_switch_builtin':
+        return ({required Object count}) =>
+            '내장 모드로 전환하여 대기 중인 카드 ${count}개 만들기';
       default:
         return null;
     }
@@ -226747,32 +227005,41 @@ extension on _StringsNl {
         return ({required Object n}) =>
             'Nog ${n} geselecteerde items zijn verborgen door het huidige filter en worden niet verwerkt.';
       case 'web_video_track_menu':
-        return 'Subtitle track';
+        return 'Ondertitelspoor';
       case 'web_video_track_live':
-        return 'Live captions (sampled from page)';
+        return 'Live-ondertitels (van de pagina)';
       case 'web_video_no_tracks':
-        return 'No subtitles captured yet';
+        return 'Nog geen ondertitels vastgelegd';
       case 'web_video_hide_native_subtitles':
-        return 'Hide site subtitles';
+        return 'Ondertitels van de site verbergen';
       case 'web_video_import_hint':
-        return 'This is a web page (not a direct stream). It will open in the built-in web player.';
+        return 'Dit is een webpagina (geen directe stream). Deze wordt in de ingebouwde webspeler geopend.';
       case 'web_video_platform_unsupported':
-        return 'The built-in web player is only available on Windows for now.';
+        return 'De ingebouwde webspeler is voorlopig alleen beschikbaar op Windows.';
       case 'web_video_mine_queue_run':
-        return 'Create queued cards';
+        return 'Wachtende kaarten aanmaken';
       case 'web_video_mine_queue_stop':
-        return 'Stop card creation';
+        return 'Kaarten aanmaken stoppen';
       case 'web_video_mine_queue_empty':
-        return 'No queued cards';
+        return 'Geen wachtende kaarten';
       case 'web_video_mine_queued':
         return ({required Object count}) =>
-            'Queued for card creation (${count} pending)';
+            'In wachtrij voor kaart aanmaken (${count} wachtend)';
       case 'web_video_mine_queue_running':
         return ({required Object done, required Object total}) =>
-            'Creating cards ${done}/${total}...';
+            'Kaarten aanmaken ${done}/${total}…';
       case 'web_video_mine_queue_finished':
         return ({required Object ok, required Object failed}) =>
-            'Cards created: ${ok}, failed: ${failed}';
+            'Kaarten aangemaakt: ${ok}, mislukt: ${failed}';
+      case 'web_video_hosting_menu':
+        return 'Afspeelmodus';
+      case 'web_video_hosting_builtin':
+        return 'Ingebouwd (1080p; superresolutie, schermafbeeldingen en kaarten beschikbaar)';
+      case 'web_video_hosting_windowed':
+        return 'Native venster (4K, hardware-DRM; kaarten komen in de wachtrij)';
+      case 'web_video_mine_switch_builtin':
+        return ({required Object count}) =>
+            'Schakel naar ingebouwde modus om ${count} wachtende kaarten aan te maken';
       default:
         return null;
     }
@@ -234665,32 +234932,41 @@ extension on _StringsPtBr {
         return ({required Object n}) =>
             'Outros ${n} itens selecionados estão ocultos pelo filtro atual e não serão processados.';
       case 'web_video_track_menu':
-        return 'Subtitle track';
+        return 'Faixa de legendas';
       case 'web_video_track_live':
-        return 'Live captions (sampled from page)';
+        return 'Legendas ao vivo (capturadas da página)';
       case 'web_video_no_tracks':
-        return 'No subtitles captured yet';
+        return 'Nenhuma legenda capturada ainda';
       case 'web_video_hide_native_subtitles':
-        return 'Hide site subtitles';
+        return 'Ocultar legendas do site';
       case 'web_video_import_hint':
-        return 'This is a web page (not a direct stream). It will open in the built-in web player.';
+        return 'Isto é uma página web (não um stream direto). Será aberta no player web integrado.';
       case 'web_video_platform_unsupported':
-        return 'The built-in web player is only available on Windows for now.';
+        return 'O player web integrado só está disponível no Windows por enquanto.';
       case 'web_video_mine_queue_run':
-        return 'Create queued cards';
+        return 'Criar cartões na fila';
       case 'web_video_mine_queue_stop':
-        return 'Stop card creation';
+        return 'Parar de criar cartões';
       case 'web_video_mine_queue_empty':
-        return 'No queued cards';
+        return 'Nenhum cartão na fila';
       case 'web_video_mine_queued':
         return ({required Object count}) =>
-            'Queued for card creation (${count} pending)';
+            'Na fila para criar cartões (${count} pendentes)';
       case 'web_video_mine_queue_running':
         return ({required Object done, required Object total}) =>
-            'Creating cards ${done}/${total}...';
+            'Criando cartões ${done}/${total}…';
       case 'web_video_mine_queue_finished':
         return ({required Object ok, required Object failed}) =>
-            'Cards created: ${ok}, failed: ${failed}';
+            'Cartões criados: ${ok}, falhas: ${failed}';
+      case 'web_video_hosting_menu':
+        return 'Modo de reprodução';
+      case 'web_video_hosting_builtin':
+        return 'Integrado (1080p; super-resolução, capturas e cartões disponíveis)';
+      case 'web_video_hosting_windowed':
+        return 'Janela nativa (4K, DRM por hardware; cartões ficam na fila)';
+      case 'web_video_mine_switch_builtin':
+        return ({required Object count}) =>
+            'Mudar para o modo integrado para criar ${count} cartões na fila';
       default:
         return null;
     }
@@ -242589,32 +242865,41 @@ extension on _StringsRu {
         return ({required Object n}) =>
             'Ещё ${n} выбранных элементов скрыты текущим фильтром и не будут обработаны.';
       case 'web_video_track_menu':
-        return 'Subtitle track';
+        return 'Дорожка субтитров';
       case 'web_video_track_live':
-        return 'Live captions (sampled from page)';
+        return 'Живые субтитры (с страницы)';
       case 'web_video_no_tracks':
-        return 'No subtitles captured yet';
+        return 'Субтитры пока не получены';
       case 'web_video_hide_native_subtitles':
-        return 'Hide site subtitles';
+        return 'Скрыть субтитры сайта';
       case 'web_video_import_hint':
-        return 'This is a web page (not a direct stream). It will open in the built-in web player.';
+        return 'Это веб-страница (не прямой поток). Она откроется во встроенном веб-плеере.';
       case 'web_video_platform_unsupported':
-        return 'The built-in web player is only available on Windows for now.';
+        return 'Встроенный веб-плеер пока доступен только в Windows.';
       case 'web_video_mine_queue_run':
-        return 'Create queued cards';
+        return 'Создать карточки из очереди';
       case 'web_video_mine_queue_stop':
-        return 'Stop card creation';
+        return 'Остановить создание карточек';
       case 'web_video_mine_queue_empty':
-        return 'No queued cards';
+        return 'Очередь карточек пуста';
       case 'web_video_mine_queued':
         return ({required Object count}) =>
-            'Queued for card creation (${count} pending)';
+            'Добавлено в очередь на создание карточек (ожидает: ${count})';
       case 'web_video_mine_queue_running':
         return ({required Object done, required Object total}) =>
-            'Creating cards ${done}/${total}...';
+            'Создание карточек ${done}/${total}…';
       case 'web_video_mine_queue_finished':
         return ({required Object ok, required Object failed}) =>
-            'Cards created: ${ok}, failed: ${failed}';
+            'Карточек создано: ${ok}, ошибок: ${failed}';
+      case 'web_video_hosting_menu':
+        return 'Режим воспроизведения';
+      case 'web_video_hosting_builtin':
+        return 'Встроенный (1080p; доступны суперразрешение, скриншоты и карточки)';
+      case 'web_video_hosting_windowed':
+        return 'Нативное окно (4K, аппаратный DRM; карточки ставятся в очередь)';
+      case 'web_video_mine_switch_builtin':
+        return ({required Object count}) =>
+            'Переключиться на встроенный режим и создать карточек из очереди: ${count}';
       default:
         return null;
     }
@@ -250485,32 +250770,41 @@ extension on _StringsTh {
         return ({required Object n}) =>
             'รายการที่เลือกอีก ${n} รายการถูกซ่อนด้วยตัวกรองปัจจุบันและจะไม่ถูกดำเนินการ';
       case 'web_video_track_menu':
-        return 'Subtitle track';
+        return 'แทร็กคำบรรยาย';
       case 'web_video_track_live':
-        return 'Live captions (sampled from page)';
+        return 'คำบรรยายสด (เก็บจากหน้าเว็บ)';
       case 'web_video_no_tracks':
-        return 'No subtitles captured yet';
+        return 'ยังไม่ได้เก็บคำบรรยาย';
       case 'web_video_hide_native_subtitles':
-        return 'Hide site subtitles';
+        return 'ซ่อนคำบรรยายของเว็บไซต์';
       case 'web_video_import_hint':
-        return 'This is a web page (not a direct stream). It will open in the built-in web player.';
+        return 'นี่คือหน้าเว็บ (ไม่ใช่สตรีมโดยตรง) จะเปิดในเว็บเพลเยอร์ในตัว';
       case 'web_video_platform_unsupported':
-        return 'The built-in web player is only available on Windows for now.';
+        return 'ตอนนี้เว็บเพลเยอร์ในตัวใช้ได้เฉพาะบน Windows';
       case 'web_video_mine_queue_run':
-        return 'Create queued cards';
+        return 'สร้างการ์ดที่อยู่ในคิว';
       case 'web_video_mine_queue_stop':
-        return 'Stop card creation';
+        return 'หยุดสร้างการ์ด';
       case 'web_video_mine_queue_empty':
-        return 'No queued cards';
+        return 'ไม่มีการ์ดในคิว';
       case 'web_video_mine_queued':
         return ({required Object count}) =>
-            'Queued for card creation (${count} pending)';
+            'เพิ่มในคิวสร้างการ์ดแล้ว (รอ ${count} รายการ)';
       case 'web_video_mine_queue_running':
         return ({required Object done, required Object total}) =>
-            'Creating cards ${done}/${total}...';
+            'กำลังสร้างการ์ด ${done}/${total}…';
       case 'web_video_mine_queue_finished':
         return ({required Object ok, required Object failed}) =>
-            'Cards created: ${ok}, failed: ${failed}';
+            'สร้างการ์ดแล้ว: ${ok} รายการ ล้มเหลว: ${failed} รายการ';
+      case 'web_video_hosting_menu':
+        return 'โหมดเล่น';
+      case 'web_video_hosting_builtin':
+        return 'ในตัว (1080p; ใช้ซูเปอร์เรโซลูชัน ภาพหน้าจอ และการ์ดได้)';
+      case 'web_video_hosting_windowed':
+        return 'หน้าต่างเนทีฟ (4K, DRM ฮาร์ดแวร์; การ์ดจะเข้าคิวไว้ก่อน)';
+      case 'web_video_mine_switch_builtin':
+        return ({required Object count}) =>
+            'สลับไปโหมดในตัวเพื่อสร้างการ์ดในคิว ${count} รายการ';
       default:
         return null;
     }
@@ -258398,32 +258692,41 @@ extension on _StringsTr {
         return ({required Object n}) =>
             'Seçili ${n} öğe daha geçerli filtre tarafından gizlendi ve işlenmeyecek.';
       case 'web_video_track_menu':
-        return 'Subtitle track';
+        return 'Altyazı parçası';
       case 'web_video_track_live':
-        return 'Live captions (sampled from page)';
+        return 'Canlı altyazılar (sayfadan alınan)';
       case 'web_video_no_tracks':
-        return 'No subtitles captured yet';
+        return 'Henüz altyazı yakalanmadı';
       case 'web_video_hide_native_subtitles':
-        return 'Hide site subtitles';
+        return 'Site altyazılarını gizle';
       case 'web_video_import_hint':
-        return 'This is a web page (not a direct stream). It will open in the built-in web player.';
+        return 'Bu bir web sayfası (doğrudan akış değil). Yerleşik web oynatıcıda açılacak.';
       case 'web_video_platform_unsupported':
-        return 'The built-in web player is only available on Windows for now.';
+        return 'Yerleşik web oynatıcı şimdilik yalnızca Windows’ta kullanılabilir.';
       case 'web_video_mine_queue_run':
-        return 'Create queued cards';
+        return 'Sıradaki kartları oluştur';
       case 'web_video_mine_queue_stop':
-        return 'Stop card creation';
+        return 'Kart oluşturmayı durdur';
       case 'web_video_mine_queue_empty':
-        return 'No queued cards';
+        return 'Sırada kart yok';
       case 'web_video_mine_queued':
         return ({required Object count}) =>
-            'Queued for card creation (${count} pending)';
+            'Kart oluşturma sırasına alındı (${count} bekliyor)';
       case 'web_video_mine_queue_running':
         return ({required Object done, required Object total}) =>
-            'Creating cards ${done}/${total}...';
+            'Kartlar oluşturuluyor ${done}/${total}…';
       case 'web_video_mine_queue_finished':
         return ({required Object ok, required Object failed}) =>
-            'Cards created: ${ok}, failed: ${failed}';
+            'Oluşturulan kart: ${ok}, başarısız: ${failed}';
+      case 'web_video_hosting_menu':
+        return 'Oynatma modu';
+      case 'web_video_hosting_builtin':
+        return 'Yerleşik (1080p; süper çözünürlük, ekran görüntüsü ve kartlar kullanılabilir)';
+      case 'web_video_hosting_windowed':
+        return 'Yerel pencere (4K, donanımsal DRM; kartlar sonra sıraya alınır)';
+      case 'web_video_mine_switch_builtin':
+        return ({required Object count}) =>
+            '${count} bekleyen kartı oluşturmak için yerleşik moda geç';
       default:
         return null;
     }
@@ -266304,32 +266607,41 @@ extension on _StringsVi {
         return ({required Object n}) =>
             'Còn ${n} mục đã chọn bị ẩn bởi bộ lọc hiện tại và sẽ không được xử lý.';
       case 'web_video_track_menu':
-        return 'Subtitle track';
+        return 'Rãnh phụ đề';
       case 'web_video_track_live':
-        return 'Live captions (sampled from page)';
+        return 'Phụ đề trực tiếp (lấy từ trang)';
       case 'web_video_no_tracks':
-        return 'No subtitles captured yet';
+        return 'Chưa bắt được phụ đề nào';
       case 'web_video_hide_native_subtitles':
-        return 'Hide site subtitles';
+        return 'Ẩn phụ đề của trang';
       case 'web_video_import_hint':
-        return 'This is a web page (not a direct stream). It will open in the built-in web player.';
+        return 'Đây là trang web (không phải luồng trực tiếp). Sẽ mở trong trình phát web tích hợp.';
       case 'web_video_platform_unsupported':
-        return 'The built-in web player is only available on Windows for now.';
+        return 'Trình phát web tích hợp hiện chỉ có trên Windows.';
       case 'web_video_mine_queue_run':
-        return 'Create queued cards';
+        return 'Tạo các thẻ đang chờ';
       case 'web_video_mine_queue_stop':
-        return 'Stop card creation';
+        return 'Dừng tạo thẻ';
       case 'web_video_mine_queue_empty':
-        return 'No queued cards';
+        return 'Không có thẻ nào đang chờ';
       case 'web_video_mine_queued':
         return ({required Object count}) =>
-            'Queued for card creation (${count} pending)';
+            'Đã xếp hàng để tạo thẻ (${count} đang chờ)';
       case 'web_video_mine_queue_running':
         return ({required Object done, required Object total}) =>
-            'Creating cards ${done}/${total}...';
+            'Đang tạo thẻ ${done}/${total}…';
       case 'web_video_mine_queue_finished':
         return ({required Object ok, required Object failed}) =>
-            'Cards created: ${ok}, failed: ${failed}';
+            'Đã tạo thẻ: ${ok}, thất bại: ${failed}';
+      case 'web_video_hosting_menu':
+        return 'Chế độ phát';
+      case 'web_video_hosting_builtin':
+        return 'Tích hợp (1080p; có siêu phân giải, ảnh chụp màn hình và thẻ)';
+      case 'web_video_hosting_windowed':
+        return 'Cửa sổ gốc (4K, DRM phần cứng; thẻ được xếp hàng để làm sau)';
+      case 'web_video_mine_switch_builtin':
+        return ({required Object count}) =>
+            'Chuyển sang chế độ tích hợp để tạo ${count} thẻ đang chờ';
       default:
         return null;
     }
@@ -274169,6 +274481,14 @@ extension on _StringsZhCn {
       case 'web_video_mine_queue_finished':
         return ({required Object ok, required Object failed}) =>
             '制卡完成：成功 ${ok}，失败 ${failed}';
+      case 'web_video_hosting_menu':
+        return '播放模式';
+      case 'web_video_hosting_builtin':
+        return '内置（1080p；可超分、可截图制卡）';
+      case 'web_video_hosting_windowed':
+        return '原生窗口（4K 硬件 DRM；制卡先排队）';
+      case 'web_video_mine_switch_builtin':
+        return ({required Object count}) => '切到内置模式制作 ${count} 张排队卡片';
       default:
         return null;
     }
@@ -281984,32 +282304,39 @@ extension on _StringsZhHk {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) => '另有 ${n} 項被目前篩選隱藏，今次不會處理。';
       case 'web_video_track_menu':
-        return 'Subtitle track';
+        return '字幕軌';
       case 'web_video_track_live':
-        return 'Live captions (sampled from page)';
+        return '即時字幕（從頁面取樣）';
       case 'web_video_no_tracks':
-        return 'No subtitles captured yet';
+        return '尚未擷取到字幕';
       case 'web_video_hide_native_subtitles':
-        return 'Hide site subtitles';
+        return '隱藏網站字幕';
       case 'web_video_import_hint':
-        return 'This is a web page (not a direct stream). It will open in the built-in web player.';
+        return '這是網頁（不是直接串流），將在內建網頁播放器中開啟。';
       case 'web_video_platform_unsupported':
-        return 'The built-in web player is only available on Windows for now.';
+        return '內建網頁播放器目前僅支援 Windows。';
       case 'web_video_mine_queue_run':
-        return 'Create queued cards';
+        return '製作佇列中的卡片';
       case 'web_video_mine_queue_stop':
-        return 'Stop card creation';
+        return '停止製作卡片';
       case 'web_video_mine_queue_empty':
-        return 'No queued cards';
+        return '佇列中沒有卡片';
       case 'web_video_mine_queued':
-        return ({required Object count}) =>
-            'Queued for card creation (${count} pending)';
+        return ({required Object count}) => '已加入製卡佇列（待製 ${count} 張）';
       case 'web_video_mine_queue_running':
         return ({required Object done, required Object total}) =>
-            'Creating cards ${done}/${total}...';
+            '製卡中 ${done}/${total}…';
       case 'web_video_mine_queue_finished':
         return ({required Object ok, required Object failed}) =>
-            'Cards created: ${ok}, failed: ${failed}';
+            '製卡完成：成功 ${ok}，失敗 ${failed}';
+      case 'web_video_hosting_menu':
+        return '播放模式';
+      case 'web_video_hosting_builtin':
+        return '內建（1080p；可超解析、截圖、製卡）';
+      case 'web_video_hosting_windowed':
+        return '原生視窗（4K 硬體 DRM；製卡先排隊）';
+      case 'web_video_mine_switch_builtin':
+        return ({required Object count}) => '切換到內建模式製作 ${count} 張排隊卡片';
       default:
         return null;
     }
