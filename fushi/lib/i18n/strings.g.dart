@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 65722 (3866 per locale)
+/// Strings: 65773 (3869 per locale)
 ///
-/// Built on 2026-08-29 at 13:32 UTC
+/// Built on 2026-08-29 at 17:21 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5265,6 +5265,11 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Read to page ${page} of ${total}';
   String manga_series_read_progress_partial({required Object page}) =>
       'Read to page ${page}';
+  String get video_discovery_cancel_downloads_title => 'Cancel downloads?';
+  String video_discovery_cancel_downloads_body({required Object n}) =>
+      '${n} download task(s) for this title will be stopped. Downloaded pieces stay on disk; you can start the download again later.';
+  String get video_discovery_cancel_downloads_failed =>
+      'Could not cancel the download. The task may have already finished, or the download backend is unavailable.';
 }
 
 // Path: <root>
@@ -14225,6 +14230,14 @@ class _StringsAr extends _StringsEn {
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       'تمت القراءة حتى الصفحة ${page}';
+  @override
+  String get video_discovery_cancel_downloads_title => 'إلغاء التنزيلات؟';
+  @override
+  String video_discovery_cancel_downloads_body({required Object n}) =>
+      'سيتم إيقاف ${n} مهمة تنزيل لهذا العمل. تبقى الأجزاء المنزَّلة على القرص، ويمكنك بدء التنزيل مرة أخرى لاحقًا.';
+  @override
+  String get video_discovery_cancel_downloads_failed =>
+      'تعذّر إلغاء التنزيل. قد تكون المهمة قد انتهت بالفعل، أو أن خلفية التنزيل غير متاحة.';
 }
 
 // Path: <root>
@@ -23394,6 +23407,14 @@ class _StringsDe extends _StringsEn {
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       'Bis Seite ${page} gelesen';
+  @override
+  String get video_discovery_cancel_downloads_title => 'Downloads abbrechen?';
+  @override
+  String video_discovery_cancel_downloads_body({required Object n}) =>
+      '${n} Download-Aufgabe(n) für diesen Titel werden gestoppt. Bereits geladene Teile bleiben auf der Festplatte; du kannst den Download später erneut starten.';
+  @override
+  String get video_discovery_cancel_downloads_failed =>
+      'Download konnte nicht abgebrochen werden. Die Aufgabe ist möglicherweise schon fertig, oder das Download-Backend ist nicht verfügbar.';
 }
 
 // Path: <root>
@@ -32607,6 +32628,15 @@ class _StringsEs extends _StringsEn {
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       'Leído hasta la página ${page}';
+  @override
+  String get video_discovery_cancel_downloads_title =>
+      '¿Cancelar las descargas?';
+  @override
+  String video_discovery_cancel_downloads_body({required Object n}) =>
+      'Se detendrán ${n} tarea(s) de descarga de este título. Las partes ya descargadas se conservan en el disco; podrás reanudar la descarga más adelante.';
+  @override
+  String get video_discovery_cancel_downloads_failed =>
+      'No se pudo cancelar la descarga. Puede que la tarea ya haya terminado o que el backend de descargas no esté disponible.';
 }
 
 // Path: <root>
@@ -41854,6 +41884,15 @@ class _StringsFr extends _StringsEn {
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       'Lu jusqu\'à la page ${page}';
+  @override
+  String get video_discovery_cancel_downloads_title =>
+      'Annuler les téléchargements ?';
+  @override
+  String video_discovery_cancel_downloads_body({required Object n}) =>
+      '${n} tâche(s) de téléchargement pour ce titre vont être arrêtées. Les morceaux déjà téléchargés restent sur le disque ; vous pourrez relancer le téléchargement plus tard.';
+  @override
+  String get video_discovery_cancel_downloads_failed =>
+      'Impossible d\'annuler le téléchargement. La tâche est peut-être déjà terminée, ou le backend de téléchargement est indisponible.';
 }
 
 // Path: <root>
@@ -50927,6 +50966,14 @@ class _StringsId extends _StringsEn {
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       'Dibaca sampai halaman ${page}';
+  @override
+  String get video_discovery_cancel_downloads_title => 'Batalkan unduhan?';
+  @override
+  String video_discovery_cancel_downloads_body({required Object n}) =>
+      '${n} tugas unduhan untuk judul ini akan dihentikan. Bagian yang sudah terunduh tetap ada di disk; kamu bisa memulai unduhan lagi nanti.';
+  @override
+  String get video_discovery_cancel_downloads_failed =>
+      'Tidak bisa membatalkan unduhan. Tugasnya mungkin sudah selesai, atau backend unduhan sedang tidak tersedia.';
 }
 
 // Path: <root>
@@ -60077,6 +60124,14 @@ class _StringsIt extends _StringsEn {
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       'Letto fino a pagina ${page}';
+  @override
+  String get video_discovery_cancel_downloads_title => 'Annullare i download?';
+  @override
+  String video_discovery_cancel_downloads_body({required Object n}) =>
+      'Verranno interrotte ${n} attività di download per questo titolo. Le parti già scaricate restano sul disco; potrai riavviare il download più tardi.';
+  @override
+  String get video_discovery_cancel_downloads_failed =>
+      'Impossibile annullare il download. L’attività potrebbe essere già terminata, oppure il backend di download non è disponibile.';
 }
 
 // Path: <root>
@@ -68667,6 +68722,14 @@ class _StringsJa extends _StringsEn {
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       '${page} ページまで';
+  @override
+  String get video_discovery_cancel_downloads_title => 'ダウンロードを中止しますか？';
+  @override
+  String video_discovery_cancel_downloads_body({required Object n}) =>
+      'この作品のダウンロードタスク ${n} 件を停止します。ダウンロード済みの断片はディスクに残るので、後でやり直せます。';
+  @override
+  String get video_discovery_cancel_downloads_failed =>
+      'ダウンロードを中止できませんでした。タスクが既に終了しているか、ダウンロードバックエンドが利用できません。';
 }
 
 // Path: <root>
@@ -77272,6 +77335,14 @@ class _StringsKo extends _StringsEn {
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       '${page}페이지까지 읽음';
+  @override
+  String get video_discovery_cancel_downloads_title => '다운로드를 취소할까요?';
+  @override
+  String video_discovery_cancel_downloads_body({required Object n}) =>
+      '이 작품의 다운로드 작업 ${n}개를 중지합니다. 이미 받은 조각은 디스크에 남아 있어 나중에 다시 시작할 수 있습니다.';
+  @override
+  String get video_discovery_cancel_downloads_failed =>
+      '다운로드를 취소하지 못했습니다. 작업이 이미 끝났거나 다운로드 백엔드를 사용할 수 없습니다.';
 }
 
 // Path: <root>
@@ -86379,6 +86450,14 @@ class _StringsNl extends _StringsEn {
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       'Gelezen tot pagina ${page}';
+  @override
+  String get video_discovery_cancel_downloads_title => 'Downloads annuleren?';
+  @override
+  String video_discovery_cancel_downloads_body({required Object n}) =>
+      '${n} downloadtaak/-taken voor deze titel worden gestopt. Al gedownloade delen blijven op schijf staan; je kunt de download later opnieuw starten.';
+  @override
+  String get video_discovery_cancel_downloads_failed =>
+      'Kon de download niet annuleren. De taak is mogelijk al klaar, of de download-backend is niet beschikbaar.';
 }
 
 // Path: <root>
@@ -95542,6 +95621,14 @@ class _StringsPtBr extends _StringsEn {
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       'Lido até a página ${page}';
+  @override
+  String get video_discovery_cancel_downloads_title => 'Cancelar os downloads?';
+  @override
+  String video_discovery_cancel_downloads_body({required Object n}) =>
+      '${n} tarefa(s) de download deste título serão interrompidas. As partes já baixadas continuam no disco; você pode recomeçar o download depois.';
+  @override
+  String get video_discovery_cancel_downloads_failed =>
+      'Não foi possível cancelar o download. A tarefa pode já ter terminado, ou o backend de download está indisponível.';
 }
 
 // Path: <root>
@@ -104679,6 +104766,14 @@ class _StringsRu extends _StringsEn {
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       'Прочитано до страницы ${page}';
+  @override
+  String get video_discovery_cancel_downloads_title => 'Отменить загрузки?';
+  @override
+  String video_discovery_cancel_downloads_body({required Object n}) =>
+      'Будет остановлено загрузок для этого тайтла: ${n}. Уже скачанные части останутся на диске — загрузку можно начать снова позже.';
+  @override
+  String get video_discovery_cancel_downloads_failed =>
+      'Не удалось отменить загрузку. Возможно, задача уже завершилась или бэкенд загрузок недоступен.';
 }
 
 // Path: <root>
@@ -113634,6 +113729,14 @@ class _StringsTh extends _StringsEn {
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       'อ่านถึงหน้า ${page}';
+  @override
+  String get video_discovery_cancel_downloads_title => 'ยกเลิกการดาวน์โหลดไหม';
+  @override
+  String video_discovery_cancel_downloads_body({required Object n}) =>
+      'งานดาวน์โหลดของเรื่องนี้ ${n} งานจะถูกหยุด ส่วนที่ดาวน์โหลดไปแล้วยังอยู่ในดิสก์ และเริ่มดาวน์โหลดใหม่ได้ภายหลัง';
+  @override
+  String get video_discovery_cancel_downloads_failed =>
+      'ยกเลิกการดาวน์โหลดไม่สำเร็จ งานอาจเสร็จไปแล้ว หรือแบ็กเอนด์ดาวน์โหลดใช้งานไม่ได้';
 }
 
 // Path: <root>
@@ -122692,6 +122795,15 @@ class _StringsTr extends _StringsEn {
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       '${page}. sayfaya kadar okundu';
+  @override
+  String get video_discovery_cancel_downloads_title =>
+      'İndirmeler iptal edilsin mi?';
+  @override
+  String video_discovery_cancel_downloads_body({required Object n}) =>
+      'Bu yapım için ${n} indirme görevi durdurulacak. İndirilmiş parçalar diskte kalır; indirmeyi sonra yeniden başlatabilirsin.';
+  @override
+  String get video_discovery_cancel_downloads_failed =>
+      'İndirme iptal edilemedi. Görev çoktan bitmiş olabilir ya da indirme arka ucu kullanılamıyor.';
 }
 
 // Path: <root>
@@ -131732,6 +131844,14 @@ class _StringsVi extends _StringsEn {
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       'Đã đọc đến trang ${page}';
+  @override
+  String get video_discovery_cancel_downloads_title => 'Huỷ tải xuống?';
+  @override
+  String video_discovery_cancel_downloads_body({required Object n}) =>
+      '${n} tác vụ tải xuống của tác phẩm này sẽ bị dừng. Các phần đã tải vẫn nằm trên ổ đĩa; bạn có thể tải lại sau.';
+  @override
+  String get video_discovery_cancel_downloads_failed =>
+      'Không huỷ được tải xuống. Tác vụ có thể đã xong, hoặc backend tải xuống hiện không khả dụng.';
 }
 
 // Path: <root>
@@ -140049,6 +140169,14 @@ class _StringsZhCn extends _StringsEn {
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       '读到第 ${page} 页';
+  @override
+  String get video_discovery_cancel_downloads_title => '取消下载？';
+  @override
+  String video_discovery_cancel_downloads_body({required Object n}) =>
+      '本作品有 ${n} 个下载任务会被停止。已下载的分片仍保留在磁盘上，之后可以重新开始下载。';
+  @override
+  String get video_discovery_cancel_downloads_failed =>
+      '取消下载失败。任务可能已经结束，或下载后端当前不可用。';
 }
 
 // Path: <root>
@@ -148372,6 +148500,14 @@ class _StringsZhHk extends _StringsEn {
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       '讀到第 ${page} 頁';
+  @override
+  String get video_discovery_cancel_downloads_title => '取消下載？';
+  @override
+  String video_discovery_cancel_downloads_body({required Object n}) =>
+      '本作品有 ${n} 個下載任務會被停止。已下載的分片仍保留在磁碟上，之後可以重新開始下載。';
+  @override
+  String get video_discovery_cancel_downloads_failed =>
+      '取消下載失敗。任務可能已經結束，或下載後端目前無法使用。';
 }
 
 /// Flat map(s) containing all translations.
@@ -156307,6 +156443,13 @@ extension on _StringsEn {
             'Read to page ${page} of ${total}';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'Read to page ${page}';
+      case 'video_discovery_cancel_downloads_title':
+        return 'Cancel downloads?';
+      case 'video_discovery_cancel_downloads_body':
+        return ({required Object n}) =>
+            '${n} download task(s) for this title will be stopped. Downloaded pieces stay on disk; you can start the download again later.';
+      case 'video_discovery_cancel_downloads_failed':
+        return 'Could not cancel the download. The task may have already finished, or the download backend is unavailable.';
       default:
         return null;
     }
@@ -164238,6 +164381,13 @@ extension on _StringsAr {
             'تمت القراءة حتى الصفحة ${page} من ${total}';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'تمت القراءة حتى الصفحة ${page}';
+      case 'video_discovery_cancel_downloads_title':
+        return 'إلغاء التنزيلات؟';
+      case 'video_discovery_cancel_downloads_body':
+        return ({required Object n}) =>
+            'سيتم إيقاف ${n} مهمة تنزيل لهذا العمل. تبقى الأجزاء المنزَّلة على القرص، ويمكنك بدء التنزيل مرة أخرى لاحقًا.';
+      case 'video_discovery_cancel_downloads_failed':
+        return 'تعذّر إلغاء التنزيل. قد تكون المهمة قد انتهت بالفعل، أو أن خلفية التنزيل غير متاحة.';
       default:
         return null;
     }
@@ -172212,6 +172362,13 @@ extension on _StringsDe {
             'Bis Seite ${page} von ${total} gelesen';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'Bis Seite ${page} gelesen';
+      case 'video_discovery_cancel_downloads_title':
+        return 'Downloads abbrechen?';
+      case 'video_discovery_cancel_downloads_body':
+        return ({required Object n}) =>
+            '${n} Download-Aufgabe(n) für diesen Titel werden gestoppt. Bereits geladene Teile bleiben auf der Festplatte; du kannst den Download später erneut starten.';
+      case 'video_discovery_cancel_downloads_failed':
+        return 'Download konnte nicht abgebrochen werden. Die Aufgabe ist möglicherweise schon fertig, oder das Download-Backend ist nicht verfügbar.';
       default:
         return null;
     }
@@ -180178,6 +180335,13 @@ extension on _StringsEs {
             'Leído hasta la página ${page} de ${total}';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'Leído hasta la página ${page}';
+      case 'video_discovery_cancel_downloads_title':
+        return '¿Cancelar las descargas?';
+      case 'video_discovery_cancel_downloads_body':
+        return ({required Object n}) =>
+            'Se detendrán ${n} tarea(s) de descarga de este título. Las partes ya descargadas se conservan en el disco; podrás reanudar la descarga más adelante.';
+      case 'video_discovery_cancel_downloads_failed':
+        return 'No se pudo cancelar la descarga. Puede que la tarea ya haya terminado o que el backend de descargas no esté disponible.';
       default:
         return null;
     }
@@ -188152,6 +188316,13 @@ extension on _StringsFr {
             'Lu jusqu\'à la page ${page} sur ${total}';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'Lu jusqu\'à la page ${page}';
+      case 'video_discovery_cancel_downloads_title':
+        return 'Annuler les téléchargements ?';
+      case 'video_discovery_cancel_downloads_body':
+        return ({required Object n}) =>
+            '${n} tâche(s) de téléchargement pour ce titre vont être arrêtées. Les morceaux déjà téléchargés restent sur le disque ; vous pourrez relancer le téléchargement plus tard.';
+      case 'video_discovery_cancel_downloads_failed':
+        return 'Impossible d\'annuler le téléchargement. La tâche est peut-être déjà terminée, ou le backend de téléchargement est indisponible.';
       default:
         return null;
     }
@@ -196098,6 +196269,13 @@ extension on _StringsId {
             'Dibaca sampai halaman ${page} dari ${total}';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'Dibaca sampai halaman ${page}';
+      case 'video_discovery_cancel_downloads_title':
+        return 'Batalkan unduhan?';
+      case 'video_discovery_cancel_downloads_body':
+        return ({required Object n}) =>
+            '${n} tugas unduhan untuk judul ini akan dihentikan. Bagian yang sudah terunduh tetap ada di disk; kamu bisa memulai unduhan lagi nanti.';
+      case 'video_discovery_cancel_downloads_failed':
+        return 'Tidak bisa membatalkan unduhan. Tugasnya mungkin sudah selesai, atau backend unduhan sedang tidak tersedia.';
       default:
         return null;
     }
@@ -204065,6 +204243,13 @@ extension on _StringsIt {
             'Letto fino a pagina ${page} di ${total}';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'Letto fino a pagina ${page}';
+      case 'video_discovery_cancel_downloads_title':
+        return 'Annullare i download?';
+      case 'video_discovery_cancel_downloads_body':
+        return ({required Object n}) =>
+            'Verranno interrotte ${n} attività di download per questo titolo. Le parti già scaricate restano sul disco; potrai riavviare il download più tardi.';
+      case 'video_discovery_cancel_downloads_failed':
+        return 'Impossibile annullare il download. L’attività potrebbe essere già terminata, oppure il backend di download non è disponibile.';
       default:
         return null;
     }
@@ -211965,6 +212150,13 @@ extension on _StringsJa {
             '${total} ページ中 ${page} ページまで';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => '${page} ページまで';
+      case 'video_discovery_cancel_downloads_title':
+        return 'ダウンロードを中止しますか？';
+      case 'video_discovery_cancel_downloads_body':
+        return ({required Object n}) =>
+            'この作品のダウンロードタスク ${n} 件を停止します。ダウンロード済みの断片はディスクに残るので、後でやり直せます。';
+      case 'video_discovery_cancel_downloads_failed':
+        return 'ダウンロードを中止できませんでした。タスクが既に終了しているか、ダウンロードバックエンドが利用できません。';
       default:
         return null;
     }
@@ -219867,6 +220059,13 @@ extension on _StringsKo {
             '${total}페이지 중 ${page}페이지까지 읽음';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => '${page}페이지까지 읽음';
+      case 'video_discovery_cancel_downloads_title':
+        return '다운로드를 취소할까요?';
+      case 'video_discovery_cancel_downloads_body':
+        return ({required Object n}) =>
+            '이 작품의 다운로드 작업 ${n}개를 중지합니다. 이미 받은 조각은 디스크에 남아 있어 나중에 다시 시작할 수 있습니다.';
+      case 'video_discovery_cancel_downloads_failed':
+        return '다운로드를 취소하지 못했습니다. 작업이 이미 끝났거나 다운로드 백엔드를 사용할 수 없습니다.';
       default:
         return null;
     }
@@ -227828,6 +228027,13 @@ extension on _StringsNl {
             'Gelezen tot pagina ${page} van ${total}';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'Gelezen tot pagina ${page}';
+      case 'video_discovery_cancel_downloads_title':
+        return 'Downloads annuleren?';
+      case 'video_discovery_cancel_downloads_body':
+        return ({required Object n}) =>
+            '${n} downloadtaak/-taken voor deze titel worden gestopt. Al gedownloade delen blijven op schijf staan; je kunt de download later opnieuw starten.';
+      case 'video_discovery_cancel_downloads_failed':
+        return 'Kon de download niet annuleren. De taak is mogelijk al klaar, of de download-backend is niet beschikbaar.';
       default:
         return null;
     }
@@ -235784,6 +235990,13 @@ extension on _StringsPtBr {
             'Lido até a página ${page} de ${total}';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'Lido até a página ${page}';
+      case 'video_discovery_cancel_downloads_title':
+        return 'Cancelar os downloads?';
+      case 'video_discovery_cancel_downloads_body':
+        return ({required Object n}) =>
+            '${n} tarefa(s) de download deste título serão interrompidas. As partes já baixadas continuam no disco; você pode recomeçar o download depois.';
+      case 'video_discovery_cancel_downloads_failed':
+        return 'Não foi possível cancelar o download. A tarefa pode já ter terminado, ou o backend de download está indisponível.';
       default:
         return null;
     }
@@ -243746,6 +243959,13 @@ extension on _StringsRu {
             'Прочитано до страницы ${page} из ${total}';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'Прочитано до страницы ${page}';
+      case 'video_discovery_cancel_downloads_title':
+        return 'Отменить загрузки?';
+      case 'video_discovery_cancel_downloads_body':
+        return ({required Object n}) =>
+            'Будет остановлено загрузок для этого тайтла: ${n}. Уже скачанные части останутся на диске — загрузку можно начать снова позже.';
+      case 'video_discovery_cancel_downloads_failed':
+        return 'Не удалось отменить загрузку. Возможно, задача уже завершилась или бэкенд загрузок недоступен.';
       default:
         return null;
     }
@@ -251680,6 +251900,13 @@ extension on _StringsTh {
             'อ่านถึงหน้า ${page} จาก ${total}';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'อ่านถึงหน้า ${page}';
+      case 'video_discovery_cancel_downloads_title':
+        return 'ยกเลิกการดาวน์โหลดไหม';
+      case 'video_discovery_cancel_downloads_body':
+        return ({required Object n}) =>
+            'งานดาวน์โหลดของเรื่องนี้ ${n} งานจะถูกหยุด ส่วนที่ดาวน์โหลดไปแล้วยังอยู่ในดิสก์ และเริ่มดาวน์โหลดใหม่ได้ภายหลัง';
+      case 'video_discovery_cancel_downloads_failed':
+        return 'ยกเลิกการดาวน์โหลดไม่สำเร็จ งานอาจเสร็จไปแล้ว หรือแบ็กเอนด์ดาวน์โหลดใช้งานไม่ได้';
       default:
         return null;
     }
@@ -259631,6 +259858,13 @@ extension on _StringsTr {
             '${total} sayfadan ${page}. sayfaya kadar okundu';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => '${page}. sayfaya kadar okundu';
+      case 'video_discovery_cancel_downloads_title':
+        return 'İndirmeler iptal edilsin mi?';
+      case 'video_discovery_cancel_downloads_body':
+        return ({required Object n}) =>
+            'Bu yapım için ${n} indirme görevi durdurulacak. İndirilmiş parçalar diskte kalır; indirmeyi sonra yeniden başlatabilirsin.';
+      case 'video_discovery_cancel_downloads_failed':
+        return 'İndirme iptal edilemedi. Görev çoktan bitmiş olabilir ya da indirme arka ucu kullanılamıyor.';
       default:
         return null;
     }
@@ -267575,6 +267809,13 @@ extension on _StringsVi {
             'Đã đọc đến trang ${page} trên ${total}';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'Đã đọc đến trang ${page}';
+      case 'video_discovery_cancel_downloads_title':
+        return 'Huỷ tải xuống?';
+      case 'video_discovery_cancel_downloads_body':
+        return ({required Object n}) =>
+            '${n} tác vụ tải xuống của tác phẩm này sẽ bị dừng. Các phần đã tải vẫn nằm trên ổ đĩa; bạn có thể tải lại sau.';
+      case 'video_discovery_cancel_downloads_failed':
+        return 'Không huỷ được tải xuống. Tác vụ có thể đã xong, hoặc backend tải xuống hiện không khả dụng.';
       default:
         return null;
     }
@@ -275453,6 +275694,13 @@ extension on _StringsZhCn {
             '读到第 ${page}/${total} 页';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => '读到第 ${page} 页';
+      case 'video_discovery_cancel_downloads_title':
+        return '取消下载？';
+      case 'video_discovery_cancel_downloads_body':
+        return ({required Object n}) =>
+            '本作品有 ${n} 个下载任务会被停止。已下载的分片仍保留在磁盘上，之后可以重新开始下载。';
+      case 'video_discovery_cancel_downloads_failed':
+        return '取消下载失败。任务可能已经结束，或下载后端当前不可用。';
       default:
         return null;
     }
@@ -283332,6 +283580,13 @@ extension on _StringsZhHk {
             '讀到第 ${page}/${total} 頁';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => '讀到第 ${page} 頁';
+      case 'video_discovery_cancel_downloads_title':
+        return '取消下載？';
+      case 'video_discovery_cancel_downloads_body':
+        return ({required Object n}) =>
+            '本作品有 ${n} 個下載任務會被停止。已下載的分片仍保留在磁碟上，之後可以重新開始下載。';
+      case 'video_discovery_cancel_downloads_failed':
+        return '取消下載失敗。任務可能已經結束，或下載後端目前無法使用。';
       default:
         return null;
     }
