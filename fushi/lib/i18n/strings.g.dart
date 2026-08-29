@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 65773 (3869 per locale)
+/// Strings: 65858 (3874 per locale)
 ///
-/// Built on 2026-08-29 at 14:20 UTC
+/// Built on 2026-08-29 at 17:08 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5270,6 +5270,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String mihon_extension_sources_more({required Object count}) =>
       'Show all ${count} sources';
   String get mihon_extension_sources_less => 'Show fewer sources';
+  String get video_setting_hdr_output => 'HDR / 10-bit output';
+  String get video_setting_hdr_output_hint =>
+      'Windows only. Auto hands HDR sources straight to an HDR display through a native video window; Always uses that window for every video (10-bit output); Off keeps the standard renderer.';
+  String get video_setting_hdr_output_auto => 'Auto';
+  String get video_setting_hdr_output_always => 'Always';
+  String get video_setting_hdr_output_off => 'Off';
 }
 
 // Path: <root>
@@ -14238,6 +14244,17 @@ class _StringsAr extends _StringsEn {
       'Show all ${count} sources';
   @override
   String get mihon_extension_sources_less => 'Show fewer sources';
+  @override
+  String get video_setting_hdr_output => 'HDR / 10-bit output';
+  @override
+  String get video_setting_hdr_output_hint =>
+      'Windows only. Auto hands HDR sources straight to an HDR display through a native video window; Always uses that window for every video (10-bit output); Off keeps the standard renderer.';
+  @override
+  String get video_setting_hdr_output_auto => 'Auto';
+  @override
+  String get video_setting_hdr_output_always => 'Always';
+  @override
+  String get video_setting_hdr_output_off => 'Off';
 }
 
 // Path: <root>
@@ -23415,6 +23432,17 @@ class _StringsDe extends _StringsEn {
       'Show all ${count} sources';
   @override
   String get mihon_extension_sources_less => 'Show fewer sources';
+  @override
+  String get video_setting_hdr_output => 'HDR / 10-bit output';
+  @override
+  String get video_setting_hdr_output_hint =>
+      'Windows only. Auto hands HDR sources straight to an HDR display through a native video window; Always uses that window for every video (10-bit output); Off keeps the standard renderer.';
+  @override
+  String get video_setting_hdr_output_auto => 'Auto';
+  @override
+  String get video_setting_hdr_output_always => 'Always';
+  @override
+  String get video_setting_hdr_output_off => 'Off';
 }
 
 // Path: <root>
@@ -32636,6 +32664,17 @@ class _StringsEs extends _StringsEn {
       'Show all ${count} sources';
   @override
   String get mihon_extension_sources_less => 'Show fewer sources';
+  @override
+  String get video_setting_hdr_output => 'HDR / 10-bit output';
+  @override
+  String get video_setting_hdr_output_hint =>
+      'Windows only. Auto hands HDR sources straight to an HDR display through a native video window; Always uses that window for every video (10-bit output); Off keeps the standard renderer.';
+  @override
+  String get video_setting_hdr_output_auto => 'Auto';
+  @override
+  String get video_setting_hdr_output_always => 'Always';
+  @override
+  String get video_setting_hdr_output_off => 'Off';
 }
 
 // Path: <root>
@@ -41891,6 +41930,17 @@ class _StringsFr extends _StringsEn {
       'Show all ${count} sources';
   @override
   String get mihon_extension_sources_less => 'Show fewer sources';
+  @override
+  String get video_setting_hdr_output => 'HDR / 10-bit output';
+  @override
+  String get video_setting_hdr_output_hint =>
+      'Windows only. Auto hands HDR sources straight to an HDR display through a native video window; Always uses that window for every video (10-bit output); Off keeps the standard renderer.';
+  @override
+  String get video_setting_hdr_output_auto => 'Auto';
+  @override
+  String get video_setting_hdr_output_always => 'Always';
+  @override
+  String get video_setting_hdr_output_off => 'Off';
 }
 
 // Path: <root>
@@ -50972,6 +51022,17 @@ class _StringsId extends _StringsEn {
       'Show all ${count} sources';
   @override
   String get mihon_extension_sources_less => 'Show fewer sources';
+  @override
+  String get video_setting_hdr_output => 'HDR / 10-bit output';
+  @override
+  String get video_setting_hdr_output_hint =>
+      'Windows only. Auto hands HDR sources straight to an HDR display through a native video window; Always uses that window for every video (10-bit output); Off keeps the standard renderer.';
+  @override
+  String get video_setting_hdr_output_auto => 'Auto';
+  @override
+  String get video_setting_hdr_output_always => 'Always';
+  @override
+  String get video_setting_hdr_output_off => 'Off';
 }
 
 // Path: <root>
@@ -60130,6 +60191,17 @@ class _StringsIt extends _StringsEn {
       'Show all ${count} sources';
   @override
   String get mihon_extension_sources_less => 'Show fewer sources';
+  @override
+  String get video_setting_hdr_output => 'HDR / 10-bit output';
+  @override
+  String get video_setting_hdr_output_hint =>
+      'Windows only. Auto hands HDR sources straight to an HDR display through a native video window; Always uses that window for every video (10-bit output); Off keeps the standard renderer.';
+  @override
+  String get video_setting_hdr_output_auto => 'Auto';
+  @override
+  String get video_setting_hdr_output_always => 'Always';
+  @override
+  String get video_setting_hdr_output_off => 'Off';
 }
 
 // Path: <root>
@@ -68728,6 +68800,17 @@ class _StringsJa extends _StringsEn {
       'Show all ${count} sources';
   @override
   String get mihon_extension_sources_less => 'Show fewer sources';
+  @override
+  String get video_setting_hdr_output => 'HDR / 10-bit output';
+  @override
+  String get video_setting_hdr_output_hint =>
+      'Windows only. Auto hands HDR sources straight to an HDR display through a native video window; Always uses that window for every video (10-bit output); Off keeps the standard renderer.';
+  @override
+  String get video_setting_hdr_output_auto => 'Auto';
+  @override
+  String get video_setting_hdr_output_always => 'Always';
+  @override
+  String get video_setting_hdr_output_off => 'Off';
 }
 
 // Path: <root>
@@ -77341,6 +77424,17 @@ class _StringsKo extends _StringsEn {
       'Show all ${count} sources';
   @override
   String get mihon_extension_sources_less => 'Show fewer sources';
+  @override
+  String get video_setting_hdr_output => 'HDR / 10-bit output';
+  @override
+  String get video_setting_hdr_output_hint =>
+      'Windows only. Auto hands HDR sources straight to an HDR display through a native video window; Always uses that window for every video (10-bit output); Off keeps the standard renderer.';
+  @override
+  String get video_setting_hdr_output_auto => 'Auto';
+  @override
+  String get video_setting_hdr_output_always => 'Always';
+  @override
+  String get video_setting_hdr_output_off => 'Off';
 }
 
 // Path: <root>
@@ -86456,6 +86550,17 @@ class _StringsNl extends _StringsEn {
       'Show all ${count} sources';
   @override
   String get mihon_extension_sources_less => 'Show fewer sources';
+  @override
+  String get video_setting_hdr_output => 'HDR / 10-bit output';
+  @override
+  String get video_setting_hdr_output_hint =>
+      'Windows only. Auto hands HDR sources straight to an HDR display through a native video window; Always uses that window for every video (10-bit output); Off keeps the standard renderer.';
+  @override
+  String get video_setting_hdr_output_auto => 'Auto';
+  @override
+  String get video_setting_hdr_output_always => 'Always';
+  @override
+  String get video_setting_hdr_output_off => 'Off';
 }
 
 // Path: <root>
@@ -95627,6 +95732,17 @@ class _StringsPtBr extends _StringsEn {
       'Show all ${count} sources';
   @override
   String get mihon_extension_sources_less => 'Show fewer sources';
+  @override
+  String get video_setting_hdr_output => 'HDR / 10-bit output';
+  @override
+  String get video_setting_hdr_output_hint =>
+      'Windows only. Auto hands HDR sources straight to an HDR display through a native video window; Always uses that window for every video (10-bit output); Off keeps the standard renderer.';
+  @override
+  String get video_setting_hdr_output_auto => 'Auto';
+  @override
+  String get video_setting_hdr_output_always => 'Always';
+  @override
+  String get video_setting_hdr_output_off => 'Off';
 }
 
 // Path: <root>
@@ -104772,6 +104888,17 @@ class _StringsRu extends _StringsEn {
       'Show all ${count} sources';
   @override
   String get mihon_extension_sources_less => 'Show fewer sources';
+  @override
+  String get video_setting_hdr_output => 'HDR / 10-bit output';
+  @override
+  String get video_setting_hdr_output_hint =>
+      'Windows only. Auto hands HDR sources straight to an HDR display through a native video window; Always uses that window for every video (10-bit output); Off keeps the standard renderer.';
+  @override
+  String get video_setting_hdr_output_auto => 'Auto';
+  @override
+  String get video_setting_hdr_output_always => 'Always';
+  @override
+  String get video_setting_hdr_output_off => 'Off';
 }
 
 // Path: <root>
@@ -113735,6 +113862,17 @@ class _StringsTh extends _StringsEn {
       'Show all ${count} sources';
   @override
   String get mihon_extension_sources_less => 'Show fewer sources';
+  @override
+  String get video_setting_hdr_output => 'HDR / 10-bit output';
+  @override
+  String get video_setting_hdr_output_hint =>
+      'Windows only. Auto hands HDR sources straight to an HDR display through a native video window; Always uses that window for every video (10-bit output); Off keeps the standard renderer.';
+  @override
+  String get video_setting_hdr_output_auto => 'Auto';
+  @override
+  String get video_setting_hdr_output_always => 'Always';
+  @override
+  String get video_setting_hdr_output_off => 'Off';
 }
 
 // Path: <root>
@@ -122801,6 +122939,17 @@ class _StringsTr extends _StringsEn {
       'Show all ${count} sources';
   @override
   String get mihon_extension_sources_less => 'Show fewer sources';
+  @override
+  String get video_setting_hdr_output => 'HDR / 10-bit output';
+  @override
+  String get video_setting_hdr_output_hint =>
+      'Windows only. Auto hands HDR sources straight to an HDR display through a native video window; Always uses that window for every video (10-bit output); Off keeps the standard renderer.';
+  @override
+  String get video_setting_hdr_output_auto => 'Auto';
+  @override
+  String get video_setting_hdr_output_always => 'Always';
+  @override
+  String get video_setting_hdr_output_off => 'Off';
 }
 
 // Path: <root>
@@ -131849,6 +131998,17 @@ class _StringsVi extends _StringsEn {
       'Show all ${count} sources';
   @override
   String get mihon_extension_sources_less => 'Show fewer sources';
+  @override
+  String get video_setting_hdr_output => 'HDR / 10-bit output';
+  @override
+  String get video_setting_hdr_output_hint =>
+      'Windows only. Auto hands HDR sources straight to an HDR display through a native video window; Always uses that window for every video (10-bit output); Off keeps the standard renderer.';
+  @override
+  String get video_setting_hdr_output_auto => 'Auto';
+  @override
+  String get video_setting_hdr_output_always => 'Always';
+  @override
+  String get video_setting_hdr_output_off => 'Off';
 }
 
 // Path: <root>
@@ -140173,6 +140333,17 @@ class _StringsZhCn extends _StringsEn {
       '展开全部 ${count} 个源';
   @override
   String get mihon_extension_sources_less => '收起源列表';
+  @override
+  String get video_setting_hdr_output => 'HDR / 10-bit 输出';
+  @override
+  String get video_setting_hdr_output_hint =>
+      '仅 Windows。自动：显示器开着 HDR 且片源是 HDR 时经原生视频窗口直通；始终：所有视频都走原生窗口（10-bit 输出）；关闭：沿用常规渲染。';
+  @override
+  String get video_setting_hdr_output_auto => '自动';
+  @override
+  String get video_setting_hdr_output_always => '始终';
+  @override
+  String get video_setting_hdr_output_off => '关闭';
 }
 
 // Path: <root>
@@ -148504,6 +148675,17 @@ class _StringsZhHk extends _StringsEn {
       'Show all ${count} sources';
   @override
   String get mihon_extension_sources_less => 'Show fewer sources';
+  @override
+  String get video_setting_hdr_output => 'HDR / 10-bit output';
+  @override
+  String get video_setting_hdr_output_hint =>
+      'Windows only. Auto hands HDR sources straight to an HDR display through a native video window; Always uses that window for every video (10-bit output); Off keeps the standard renderer.';
+  @override
+  String get video_setting_hdr_output_auto => 'Auto';
+  @override
+  String get video_setting_hdr_output_always => 'Always';
+  @override
+  String get video_setting_hdr_output_off => 'Off';
 }
 
 /// Flat map(s) containing all translations.
@@ -156445,6 +156627,16 @@ extension on _StringsEn {
         return ({required Object count}) => 'Show all ${count} sources';
       case 'mihon_extension_sources_less':
         return 'Show fewer sources';
+      case 'video_setting_hdr_output':
+        return 'HDR / 10-bit output';
+      case 'video_setting_hdr_output_hint':
+        return 'Windows only. Auto hands HDR sources straight to an HDR display through a native video window; Always uses that window for every video (10-bit output); Off keeps the standard renderer.';
+      case 'video_setting_hdr_output_auto':
+        return 'Auto';
+      case 'video_setting_hdr_output_always':
+        return 'Always';
+      case 'video_setting_hdr_output_off':
+        return 'Off';
       default:
         return null;
     }
@@ -164382,6 +164574,16 @@ extension on _StringsAr {
         return ({required Object count}) => 'Show all ${count} sources';
       case 'mihon_extension_sources_less':
         return 'Show fewer sources';
+      case 'video_setting_hdr_output':
+        return 'HDR / 10-bit output';
+      case 'video_setting_hdr_output_hint':
+        return 'Windows only. Auto hands HDR sources straight to an HDR display through a native video window; Always uses that window for every video (10-bit output); Off keeps the standard renderer.';
+      case 'video_setting_hdr_output_auto':
+        return 'Auto';
+      case 'video_setting_hdr_output_always':
+        return 'Always';
+      case 'video_setting_hdr_output_off':
+        return 'Off';
       default:
         return null;
     }
@@ -172362,6 +172564,16 @@ extension on _StringsDe {
         return ({required Object count}) => 'Show all ${count} sources';
       case 'mihon_extension_sources_less':
         return 'Show fewer sources';
+      case 'video_setting_hdr_output':
+        return 'HDR / 10-bit output';
+      case 'video_setting_hdr_output_hint':
+        return 'Windows only. Auto hands HDR sources straight to an HDR display through a native video window; Always uses that window for every video (10-bit output); Off keeps the standard renderer.';
+      case 'video_setting_hdr_output_auto':
+        return 'Auto';
+      case 'video_setting_hdr_output_always':
+        return 'Always';
+      case 'video_setting_hdr_output_off':
+        return 'Off';
       default:
         return null;
     }
@@ -180334,6 +180546,16 @@ extension on _StringsEs {
         return ({required Object count}) => 'Show all ${count} sources';
       case 'mihon_extension_sources_less':
         return 'Show fewer sources';
+      case 'video_setting_hdr_output':
+        return 'HDR / 10-bit output';
+      case 'video_setting_hdr_output_hint':
+        return 'Windows only. Auto hands HDR sources straight to an HDR display through a native video window; Always uses that window for every video (10-bit output); Off keeps the standard renderer.';
+      case 'video_setting_hdr_output_auto':
+        return 'Auto';
+      case 'video_setting_hdr_output_always':
+        return 'Always';
+      case 'video_setting_hdr_output_off':
+        return 'Off';
       default:
         return null;
     }
@@ -188314,6 +188536,16 @@ extension on _StringsFr {
         return ({required Object count}) => 'Show all ${count} sources';
       case 'mihon_extension_sources_less':
         return 'Show fewer sources';
+      case 'video_setting_hdr_output':
+        return 'HDR / 10-bit output';
+      case 'video_setting_hdr_output_hint':
+        return 'Windows only. Auto hands HDR sources straight to an HDR display through a native video window; Always uses that window for every video (10-bit output); Off keeps the standard renderer.';
+      case 'video_setting_hdr_output_auto':
+        return 'Auto';
+      case 'video_setting_hdr_output_always':
+        return 'Always';
+      case 'video_setting_hdr_output_off':
+        return 'Off';
       default:
         return null;
     }
@@ -196266,6 +196498,16 @@ extension on _StringsId {
         return ({required Object count}) => 'Show all ${count} sources';
       case 'mihon_extension_sources_less':
         return 'Show fewer sources';
+      case 'video_setting_hdr_output':
+        return 'HDR / 10-bit output';
+      case 'video_setting_hdr_output_hint':
+        return 'Windows only. Auto hands HDR sources straight to an HDR display through a native video window; Always uses that window for every video (10-bit output); Off keeps the standard renderer.';
+      case 'video_setting_hdr_output_auto':
+        return 'Auto';
+      case 'video_setting_hdr_output_always':
+        return 'Always';
+      case 'video_setting_hdr_output_off':
+        return 'Off';
       default:
         return null;
     }
@@ -204239,6 +204481,16 @@ extension on _StringsIt {
         return ({required Object count}) => 'Show all ${count} sources';
       case 'mihon_extension_sources_less':
         return 'Show fewer sources';
+      case 'video_setting_hdr_output':
+        return 'HDR / 10-bit output';
+      case 'video_setting_hdr_output_hint':
+        return 'Windows only. Auto hands HDR sources straight to an HDR display through a native video window; Always uses that window for every video (10-bit output); Off keeps the standard renderer.';
+      case 'video_setting_hdr_output_auto':
+        return 'Auto';
+      case 'video_setting_hdr_output_always':
+        return 'Always';
+      case 'video_setting_hdr_output_off':
+        return 'Off';
       default:
         return null;
     }
@@ -212145,6 +212397,16 @@ extension on _StringsJa {
         return ({required Object count}) => 'Show all ${count} sources';
       case 'mihon_extension_sources_less':
         return 'Show fewer sources';
+      case 'video_setting_hdr_output':
+        return 'HDR / 10-bit output';
+      case 'video_setting_hdr_output_hint':
+        return 'Windows only. Auto hands HDR sources straight to an HDR display through a native video window; Always uses that window for every video (10-bit output); Off keeps the standard renderer.';
+      case 'video_setting_hdr_output_auto':
+        return 'Auto';
+      case 'video_setting_hdr_output_always':
+        return 'Always';
+      case 'video_setting_hdr_output_off':
+        return 'Off';
       default:
         return null;
     }
@@ -220053,6 +220315,16 @@ extension on _StringsKo {
         return ({required Object count}) => 'Show all ${count} sources';
       case 'mihon_extension_sources_less':
         return 'Show fewer sources';
+      case 'video_setting_hdr_output':
+        return 'HDR / 10-bit output';
+      case 'video_setting_hdr_output_hint':
+        return 'Windows only. Auto hands HDR sources straight to an HDR display through a native video window; Always uses that window for every video (10-bit output); Off keeps the standard renderer.';
+      case 'video_setting_hdr_output_auto':
+        return 'Auto';
+      case 'video_setting_hdr_output_always':
+        return 'Always';
+      case 'video_setting_hdr_output_off':
+        return 'Off';
       default:
         return null;
     }
@@ -228020,6 +228292,16 @@ extension on _StringsNl {
         return ({required Object count}) => 'Show all ${count} sources';
       case 'mihon_extension_sources_less':
         return 'Show fewer sources';
+      case 'video_setting_hdr_output':
+        return 'HDR / 10-bit output';
+      case 'video_setting_hdr_output_hint':
+        return 'Windows only. Auto hands HDR sources straight to an HDR display through a native video window; Always uses that window for every video (10-bit output); Off keeps the standard renderer.';
+      case 'video_setting_hdr_output_auto':
+        return 'Auto';
+      case 'video_setting_hdr_output_always':
+        return 'Always';
+      case 'video_setting_hdr_output_off':
+        return 'Off';
       default:
         return null;
     }
@@ -235982,6 +236264,16 @@ extension on _StringsPtBr {
         return ({required Object count}) => 'Show all ${count} sources';
       case 'mihon_extension_sources_less':
         return 'Show fewer sources';
+      case 'video_setting_hdr_output':
+        return 'HDR / 10-bit output';
+      case 'video_setting_hdr_output_hint':
+        return 'Windows only. Auto hands HDR sources straight to an HDR display through a native video window; Always uses that window for every video (10-bit output); Off keeps the standard renderer.';
+      case 'video_setting_hdr_output_auto':
+        return 'Auto';
+      case 'video_setting_hdr_output_always':
+        return 'Always';
+      case 'video_setting_hdr_output_off':
+        return 'Off';
       default:
         return null;
     }
@@ -243950,6 +244242,16 @@ extension on _StringsRu {
         return ({required Object count}) => 'Show all ${count} sources';
       case 'mihon_extension_sources_less':
         return 'Show fewer sources';
+      case 'video_setting_hdr_output':
+        return 'HDR / 10-bit output';
+      case 'video_setting_hdr_output_hint':
+        return 'Windows only. Auto hands HDR sources straight to an HDR display through a native video window; Always uses that window for every video (10-bit output); Off keeps the standard renderer.';
+      case 'video_setting_hdr_output_auto':
+        return 'Auto';
+      case 'video_setting_hdr_output_always':
+        return 'Always';
+      case 'video_setting_hdr_output_off':
+        return 'Off';
       default:
         return null;
     }
@@ -251890,6 +252192,16 @@ extension on _StringsTh {
         return ({required Object count}) => 'Show all ${count} sources';
       case 'mihon_extension_sources_less':
         return 'Show fewer sources';
+      case 'video_setting_hdr_output':
+        return 'HDR / 10-bit output';
+      case 'video_setting_hdr_output_hint':
+        return 'Windows only. Auto hands HDR sources straight to an HDR display through a native video window; Always uses that window for every video (10-bit output); Off keeps the standard renderer.';
+      case 'video_setting_hdr_output_auto':
+        return 'Auto';
+      case 'video_setting_hdr_output_always':
+        return 'Always';
+      case 'video_setting_hdr_output_off':
+        return 'Off';
       default:
         return null;
     }
@@ -259847,6 +260159,16 @@ extension on _StringsTr {
         return ({required Object count}) => 'Show all ${count} sources';
       case 'mihon_extension_sources_less':
         return 'Show fewer sources';
+      case 'video_setting_hdr_output':
+        return 'HDR / 10-bit output';
+      case 'video_setting_hdr_output_hint':
+        return 'Windows only. Auto hands HDR sources straight to an HDR display through a native video window; Always uses that window for every video (10-bit output); Off keeps the standard renderer.';
+      case 'video_setting_hdr_output_auto':
+        return 'Auto';
+      case 'video_setting_hdr_output_always':
+        return 'Always';
+      case 'video_setting_hdr_output_off':
+        return 'Off';
       default:
         return null;
     }
@@ -267797,6 +268119,16 @@ extension on _StringsVi {
         return ({required Object count}) => 'Show all ${count} sources';
       case 'mihon_extension_sources_less':
         return 'Show fewer sources';
+      case 'video_setting_hdr_output':
+        return 'HDR / 10-bit output';
+      case 'video_setting_hdr_output_hint':
+        return 'Windows only. Auto hands HDR sources straight to an HDR display through a native video window; Always uses that window for every video (10-bit output); Off keeps the standard renderer.';
+      case 'video_setting_hdr_output_auto':
+        return 'Auto';
+      case 'video_setting_hdr_output_always':
+        return 'Always';
+      case 'video_setting_hdr_output_off':
+        return 'Off';
       default:
         return null;
     }
@@ -275681,6 +276013,16 @@ extension on _StringsZhCn {
         return ({required Object count}) => '展开全部 ${count} 个源';
       case 'mihon_extension_sources_less':
         return '收起源列表';
+      case 'video_setting_hdr_output':
+        return 'HDR / 10-bit 输出';
+      case 'video_setting_hdr_output_hint':
+        return '仅 Windows。自动：显示器开着 HDR 且片源是 HDR 时经原生视频窗口直通；始终：所有视频都走原生窗口（10-bit 输出）；关闭：沿用常规渲染。';
+      case 'video_setting_hdr_output_auto':
+        return '自动';
+      case 'video_setting_hdr_output_always':
+        return '始终';
+      case 'video_setting_hdr_output_off':
+        return '关闭';
       default:
         return null;
     }
@@ -283566,6 +283908,16 @@ extension on _StringsZhHk {
         return ({required Object count}) => 'Show all ${count} sources';
       case 'mihon_extension_sources_less':
         return 'Show fewer sources';
+      case 'video_setting_hdr_output':
+        return 'HDR / 10-bit output';
+      case 'video_setting_hdr_output_hint':
+        return 'Windows only. Auto hands HDR sources straight to an HDR display through a native video window; Always uses that window for every video (10-bit output); Off keeps the standard renderer.';
+      case 'video_setting_hdr_output_auto':
+        return 'Auto';
+      case 'video_setting_hdr_output_always':
+        return 'Always';
+      case 'video_setting_hdr_output_off':
+        return 'Off';
       default:
         return null;
     }
