@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 65603 (3859 per locale)
+/// Strings: 65722 (3866 per locale)
 ///
-/// Built on 2026-08-28 at 17:40 UTC
+/// Built on 2026-08-29 at 13:32 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5225,6 +5225,16 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Could not delete ${n} local file(s); they may still be in use';
   String batch_hidden_by_filter_note({required Object n}) =>
       'Another ${n} selected item(s) are hidden by the current filter and will not be affected.';
+  String get download_direct_queue_section => 'Direct downloads';
+  String get download_task_kind_all => 'All types';
+  String get download_task_kind_filter => 'Filter by type';
+  String get manga_online_series_empty => 'No volumes in this series.';
+  String sync_peer_book_delete_confirm({required Object name}) =>
+      'Delete "${name}" from the peer device? Its files and reading progress there are removed for good, and this device has no copy. This cannot be undone.';
+  String sync_peer_video_delete_confirm({required Object name}) =>
+      'Remove "${name}" from the peer device\'s library? The peer\'s own imported video file is kept. This cannot be undone.';
+  String get storage_entry_delete_files_confirm_body =>
+      'This deletes it from disk right away. Nothing in your library references it - it is cached, exported or re-downloadable data.';
   String get manga_series_refresh => 'Refresh chapters';
   String get manga_series_refresh_failed => 'Could not refresh from the source';
   String get manga_series_source_disabled =>
@@ -14144,6 +14154,23 @@ class _StringsAr extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       'هناك ${n} عنصر محدد مخفي بواسطة عامل التصفية الحالي ولن تتم معالجته.';
+  @override
+  String get download_direct_queue_section => 'Direct downloads';
+  @override
+  String get download_task_kind_all => 'All types';
+  @override
+  String get download_task_kind_filter => 'Filter by type';
+  @override
+  String get manga_online_series_empty => 'لا توجد مجلدات في هذه السلسلة.';
+  @override
+  String sync_peer_book_delete_confirm({required Object name}) =>
+      'هل تريد حذف "${name}" من الجهاز النظير؟ ستُحذف ملفاته وتقدّم القراءة هناك نهائيًا، ولا توجد نسخة على هذا الجهاز. لا يمكن التراجع عن هذا الإجراء.';
+  @override
+  String sync_peer_video_delete_confirm({required Object name}) =>
+      'هل تريد إزالة "${name}" من مكتبة الجهاز النظير؟ سيبقى ملف الفيديو الذي استورده النظير بنفسه. لا يمكن التراجع عن هذا الإجراء.';
+  @override
+  String get storage_entry_delete_files_confirm_body =>
+      'سيُحذف من القرص فورًا. لا يشير إليه أي عنصر في مكتبتك — فهذه بيانات مؤقتة أو مُصدَّرة أو يمكن تنزيلها من جديد.';
   @override
   String get manga_series_refresh => 'تحديث الفصول';
   @override
@@ -23294,6 +23321,23 @@ class _StringsDe extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       'Weitere ${n} ausgewählte Elemente sind durch den aktuellen Filter ausgeblendet und werden nicht bearbeitet.';
+  @override
+  String get download_direct_queue_section => 'Direct downloads';
+  @override
+  String get download_task_kind_all => 'All types';
+  @override
+  String get download_task_kind_filter => 'Filter by type';
+  @override
+  String get manga_online_series_empty => 'Diese Serie enthält keine Bände.';
+  @override
+  String sync_peer_book_delete_confirm({required Object name}) =>
+      '„${name}“ vom Partnergerät löschen? Die dortigen Dateien und der Lesefortschritt werden endgültig entfernt, und auf diesem Gerät liegt keine Kopie. Dies kann nicht rückgängig gemacht werden.';
+  @override
+  String sync_peer_video_delete_confirm({required Object name}) =>
+      '„${name}“ aus der Bibliothek des Partnergeräts entfernen? Die vom Partner selbst importierte Videodatei bleibt erhalten. Dies kann nicht rückgängig gemacht werden.';
+  @override
+  String get storage_entry_delete_files_confirm_body =>
+      'Wird sofort von der Festplatte gelöscht. Nichts in deiner Bibliothek verweist darauf – es sind zwischengespeicherte, exportierte oder erneut herunterladbare Daten.';
   @override
   String get manga_series_refresh => 'Kapitel aktualisieren';
   @override
@@ -32489,6 +32533,23 @@ class _StringsEs extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       'Otros ${n} elementos seleccionados están ocultos por el filtro actual y no se procesarán.';
+  @override
+  String get download_direct_queue_section => 'Direct downloads';
+  @override
+  String get download_task_kind_all => 'All types';
+  @override
+  String get download_task_kind_filter => 'Filter by type';
+  @override
+  String get manga_online_series_empty => 'Esta serie no tiene volúmenes.';
+  @override
+  String sync_peer_book_delete_confirm({required Object name}) =>
+      '¿Eliminar «${name}» del dispositivo emparejado? Sus archivos y el progreso de lectura allí se borrarán definitivamente, y este dispositivo no tiene ninguna copia. Esta acción no se puede deshacer.';
+  @override
+  String sync_peer_video_delete_confirm({required Object name}) =>
+      '¿Quitar «${name}» de la biblioteca del dispositivo emparejado? El archivo de vídeo que el propio dispositivo importó se conserva. Esta acción no se puede deshacer.';
+  @override
+  String get storage_entry_delete_files_confirm_body =>
+      'Se eliminará del disco de inmediato. Nada de tu biblioteca hace referencia a esto: son datos en caché, exportados o que se pueden volver a descargar.';
   @override
   String get manga_series_refresh => 'Actualizar capítulos';
   @override
@@ -41720,6 +41781,23 @@ class _StringsFr extends _StringsEn {
   String batch_hidden_by_filter_note({required Object n}) =>
       '${n} autres éléments sélectionnés sont masqués par le filtre actuel et ne seront pas traités.';
   @override
+  String get download_direct_queue_section => 'Direct downloads';
+  @override
+  String get download_task_kind_all => 'All types';
+  @override
+  String get download_task_kind_filter => 'Filter by type';
+  @override
+  String get manga_online_series_empty => 'Aucun volume dans cette série.';
+  @override
+  String sync_peer_book_delete_confirm({required Object name}) =>
+      'Supprimer « ${name} » de l\'appareil pair ? Ses fichiers et la progression de lecture qui s\'y trouvent seront définitivement supprimés, et cet appareil n\'en a aucune copie. Cette action est irréversible.';
+  @override
+  String sync_peer_video_delete_confirm({required Object name}) =>
+      'Retirer « ${name} » de la bibliothèque de l\'appareil pair ? Le fichier vidéo importé par l\'appareil pair lui-même est conservé. Cette action est irréversible.';
+  @override
+  String get storage_entry_delete_files_confirm_body =>
+      'Suppression immédiate du disque. Rien dans votre bibliothèque n\'y fait référence : ce sont des données en cache, exportées ou re-téléchargeables.';
+  @override
   String get manga_series_refresh => 'Actualiser les chapitres';
   @override
   String get manga_series_refresh_failed =>
@@ -50776,6 +50854,23 @@ class _StringsId extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       '${n} item terpilih lainnya disembunyikan oleh filter saat ini dan tidak akan diproses.';
+  @override
+  String get download_direct_queue_section => 'Direct downloads';
+  @override
+  String get download_task_kind_all => 'All types';
+  @override
+  String get download_task_kind_filter => 'Filter by type';
+  @override
+  String get manga_online_series_empty => 'Seri ini tidak memiliki volume.';
+  @override
+  String sync_peer_book_delete_confirm({required Object name}) =>
+      'Hapus "${name}" dari perangkat pasangan? Berkas dan progres bacanya di sana akan dihapus permanen, dan perangkat ini tidak punya salinan. Tindakan ini tidak dapat dibatalkan.';
+  @override
+  String sync_peer_video_delete_confirm({required Object name}) =>
+      'Hapus "${name}" dari pustaka perangkat pasangan? Berkas video yang diimpor sendiri oleh perangkat itu tetap disimpan. Tindakan ini tidak dapat dibatalkan.';
+  @override
+  String get storage_entry_delete_files_confirm_body =>
+      'Akan langsung dihapus dari disk. Tidak ada di pustaka Anda yang merujuk ke sini — isinya data cache, hasil ekspor, atau yang bisa diunduh ulang.';
   @override
   String get manga_series_refresh => 'Segarkan bab';
   @override
@@ -59909,6 +60004,23 @@ class _StringsIt extends _StringsEn {
   String batch_hidden_by_filter_note({required Object n}) =>
       'Altri ${n} elementi selezionati sono nascosti dal filtro corrente e non verranno elaborati.';
   @override
+  String get download_direct_queue_section => 'Direct downloads';
+  @override
+  String get download_task_kind_all => 'All types';
+  @override
+  String get download_task_kind_filter => 'Filter by type';
+  @override
+  String get manga_online_series_empty => 'Nessun volume in questa serie.';
+  @override
+  String sync_peer_book_delete_confirm({required Object name}) =>
+      'Eliminare "${name}" dal dispositivo peer? I suoi file e i progressi di lettura lì verranno rimossi definitivamente e questo dispositivo non ne ha alcuna copia. L\'operazione non può essere annullata.';
+  @override
+  String sync_peer_video_delete_confirm({required Object name}) =>
+      'Rimuovere "${name}" dalla libreria del dispositivo peer? Il file video importato dal peer stesso viene conservato. L\'operazione non può essere annullata.';
+  @override
+  String get storage_entry_delete_files_confirm_body =>
+      'Verrà eliminato subito dal disco. Nulla nella tua libreria vi fa riferimento: sono dati in cache, esportati o riscaricabili.';
+  @override
   String get manga_series_refresh => 'Aggiorna capitoli';
   @override
   String get manga_series_refresh_failed =>
@@ -68487,6 +68599,23 @@ class _StringsJa extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       '選択済みの ${n} 件は現在のフィルターで非表示のため、今回は処理されません。';
+  @override
+  String get download_direct_queue_section => '直リンクダウンロード';
+  @override
+  String get download_task_kind_all => 'すべての種類';
+  @override
+  String get download_task_kind_filter => '種類で絞り込む';
+  @override
+  String get manga_online_series_empty => 'このシリーズには巻がありません。';
+  @override
+  String sync_peer_book_delete_confirm({required Object name}) =>
+      '対向デバイスから「${name}」を削除しますか？そちらのファイルと読書進捗は完全に削除され、この端末には控えがありません。この操作は取り消せません。';
+  @override
+  String sync_peer_video_delete_confirm({required Object name}) =>
+      '対向デバイスのライブラリから「${name}」を削除しますか？対向デバイスが自分で取り込んだ動画ファイルは残ります。この操作は取り消せません。';
+  @override
+  String get storage_entry_delete_files_confirm_body =>
+      'ディスクからすぐに削除します。ライブラリのどの項目もこれを参照していません（キャッシュ・書き出し済みデータ・再取得できるデータです）。';
   @override
   String get manga_series_refresh => '章を更新';
   @override
@@ -77074,6 +77203,23 @@ class _StringsKo extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       '선택한 항목 중 ${n}개는 현재 필터로 숨겨져 있어 처리되지 않습니다.';
+  @override
+  String get download_direct_queue_section => '직접 링크 다운로드';
+  @override
+  String get download_task_kind_all => '모든 유형';
+  @override
+  String get download_task_kind_filter => '유형별 필터';
+  @override
+  String get manga_online_series_empty => '이 시리즈에는 권이 없습니다.';
+  @override
+  String sync_peer_book_delete_confirm({required Object name}) =>
+      '상대 기기에서 "${name}"을(를) 삭제할까요? 해당 기기의 파일과 읽기 진행률이 영구히 삭제되며, 이 기기에는 사본이 없습니다. 이 작업은 되돌릴 수 없습니다.';
+  @override
+  String sync_peer_video_delete_confirm({required Object name}) =>
+      '상대 기기의 라이브러리에서 "${name}"을(를) 제거할까요? 상대 기기가 직접 가져온 동영상 파일은 유지됩니다. 이 작업은 되돌릴 수 없습니다.';
+  @override
+  String get storage_entry_delete_files_confirm_body =>
+      '디스크에서 즉시 삭제합니다. 라이브러리의 어떤 항목도 이를 참조하지 않습니다 — 캐시, 내보낸 파일, 또는 다시 받을 수 있는 데이터입니다.';
   @override
   String get manga_series_refresh => '챕터 새로고침';
   @override
@@ -86159,6 +86305,23 @@ class _StringsNl extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       'Nog ${n} geselecteerde items zijn verborgen door het huidige filter en worden niet verwerkt.';
+  @override
+  String get download_direct_queue_section => 'Direct downloads';
+  @override
+  String get download_task_kind_all => 'All types';
+  @override
+  String get download_task_kind_filter => 'Filter by type';
+  @override
+  String get manga_online_series_empty => 'Deze serie bevat geen delen.';
+  @override
+  String sync_peer_book_delete_confirm({required Object name}) =>
+      '"${name}" van het gekoppelde apparaat verwijderen? De bestanden en leesvoortgang daar worden definitief verwijderd en dit apparaat heeft geen kopie. Dit kan niet ongedaan worden gemaakt.';
+  @override
+  String sync_peer_video_delete_confirm({required Object name}) =>
+      '"${name}" uit de bibliotheek van het gekoppelde apparaat verwijderen? Het videobestand dat dat apparaat zelf heeft geïmporteerd blijft bewaard. Dit kan niet ongedaan worden gemaakt.';
+  @override
+  String get storage_entry_delete_files_confirm_body =>
+      'Wordt meteen van de schijf verwijderd. Niets in je bibliotheek verwijst ernaar: het zijn cache-, geëxporteerde of opnieuw te downloaden gegevens.';
   @override
   String get manga_series_refresh => 'Hoofdstukken vernieuwen';
   @override
@@ -95306,6 +95469,23 @@ class _StringsPtBr extends _StringsEn {
   String batch_hidden_by_filter_note({required Object n}) =>
       'Outros ${n} itens selecionados estão ocultos pelo filtro atual e não serão processados.';
   @override
+  String get download_direct_queue_section => 'Direct downloads';
+  @override
+  String get download_task_kind_all => 'All types';
+  @override
+  String get download_task_kind_filter => 'Filter by type';
+  @override
+  String get manga_online_series_empty => 'Esta série não tem volumes.';
+  @override
+  String sync_peer_book_delete_confirm({required Object name}) =>
+      'Excluir "${name}" do dispositivo pareado? Os arquivos e o progresso de leitura de lá serão removidos definitivamente, e este dispositivo não tem cópia. Não é possível desfazer.';
+  @override
+  String sync_peer_video_delete_confirm({required Object name}) =>
+      'Remover "${name}" da biblioteca do dispositivo pareado? O arquivo de vídeo importado pelo próprio dispositivo é mantido. Não é possível desfazer.';
+  @override
+  String get storage_entry_delete_files_confirm_body =>
+      'Será excluído do disco imediatamente. Nada na sua biblioteca faz referência a isso — são dados em cache, exportados ou que podem ser baixados de novo.';
+  @override
   String get manga_series_refresh => 'Atualizar capítulos';
   @override
   String get manga_series_refresh_failed =>
@@ -104428,6 +104608,23 @@ class _StringsRu extends _StringsEn {
   String batch_hidden_by_filter_note({required Object n}) =>
       'Ещё ${n} выбранных элементов скрыты текущим фильтром и не будут обработаны.';
   @override
+  String get download_direct_queue_section => 'Direct downloads';
+  @override
+  String get download_task_kind_all => 'All types';
+  @override
+  String get download_task_kind_filter => 'Filter by type';
+  @override
+  String get manga_online_series_empty => 'В этой серии нет томов.';
+  @override
+  String sync_peer_book_delete_confirm({required Object name}) =>
+      'Удалить «${name}» с сопряжённого устройства? Его файлы и прогресс чтения там будут удалены безвозвратно, а на этом устройстве копии нет. Отменить это действие нельзя.';
+  @override
+  String sync_peer_video_delete_confirm({required Object name}) =>
+      'Убрать «${name}» из библиотеки сопряжённого устройства? Видеофайл, импортированный самим устройством, останется. Отменить это действие нельзя.';
+  @override
+  String get storage_entry_delete_files_confirm_body =>
+      'Будет сразу удалено с диска. Ничто в вашей библиотеке на это не ссылается — это кеш, экспортированные или заново загружаемые данные.';
+  @override
   String get manga_series_refresh => 'Обновить главы';
   @override
   String get manga_series_refresh_failed => 'Не удалось обновить из источника';
@@ -113365,6 +113562,23 @@ class _StringsTh extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       'รายการที่เลือกอีก ${n} รายการถูกซ่อนด้วยตัวกรองปัจจุบันและจะไม่ถูกดำเนินการ';
+  @override
+  String get download_direct_queue_section => 'Direct downloads';
+  @override
+  String get download_task_kind_all => 'All types';
+  @override
+  String get download_task_kind_filter => 'Filter by type';
+  @override
+  String get manga_online_series_empty => 'ซีรีส์นี้ไม่มีเล่ม';
+  @override
+  String sync_peer_book_delete_confirm({required Object name}) =>
+      'ลบ "${name}" ออกจากอุปกรณ์คู่หรือไม่? ไฟล์และความคืบหน้าการอ่านบนอุปกรณ์นั้นจะถูกลบถาวร และเครื่องนี้ไม่มีสำเนา การกระทำนี้ย้อนกลับไม่ได้';
+  @override
+  String sync_peer_video_delete_confirm({required Object name}) =>
+      'นำ "${name}" ออกจากคลังของอุปกรณ์คู่หรือไม่? ไฟล์วิดีโอที่อุปกรณ์นั้นนำเข้าเองจะยังคงอยู่ การกระทำนี้ย้อนกลับไม่ได้';
+  @override
+  String get storage_entry_delete_files_confirm_body =>
+      'จะถูกลบออกจากดิสก์ทันที ไม่มีรายการใดในคลังอ้างอิงถึงไฟล์นี้ — เป็นข้อมูลแคช ข้อมูลที่ส่งออก หรือข้อมูลที่ดาวน์โหลดใหม่ได้';
   @override
   String get manga_series_refresh => 'รีเฟรชตอน';
   @override
@@ -122407,6 +122621,23 @@ class _StringsTr extends _StringsEn {
   String batch_hidden_by_filter_note({required Object n}) =>
       'Seçili ${n} öğe daha geçerli filtre tarafından gizlendi ve işlenmeyecek.';
   @override
+  String get download_direct_queue_section => 'Direct downloads';
+  @override
+  String get download_task_kind_all => 'All types';
+  @override
+  String get download_task_kind_filter => 'Filter by type';
+  @override
+  String get manga_online_series_empty => 'Bu seride hiç cilt yok.';
+  @override
+  String sync_peer_book_delete_confirm({required Object name}) =>
+      '"${name}" eş cihazdan silinsin mi? Oradaki dosyaları ve okuma ilerlemesi kalıcı olarak kaldırılır ve bu cihazda kopyası yok. Bu işlem geri alınamaz.';
+  @override
+  String sync_peer_video_delete_confirm({required Object name}) =>
+      '"${name}" eş cihazın kitaplığından kaldırılsın mı? Eş cihazın kendi içe aktardığı video dosyası korunur. Bu işlem geri alınamaz.';
+  @override
+  String get storage_entry_delete_files_confirm_body =>
+      'Diskten hemen silinir. Kitaplığınızdaki hiçbir şey buna başvurmuyor — bunlar önbellek, dışa aktarılmış veya yeniden indirilebilir verilerdir.';
+  @override
   String get manga_series_refresh => 'Bölümleri yenile';
   @override
   String get manga_series_refresh_failed => 'Kaynaktan yenilenemedi';
@@ -131430,6 +131661,23 @@ class _StringsVi extends _StringsEn {
   String batch_hidden_by_filter_note({required Object n}) =>
       'Còn ${n} mục đã chọn bị ẩn bởi bộ lọc hiện tại và sẽ không được xử lý.';
   @override
+  String get download_direct_queue_section => 'Direct downloads';
+  @override
+  String get download_task_kind_all => 'All types';
+  @override
+  String get download_task_kind_filter => 'Filter by type';
+  @override
+  String get manga_online_series_empty => 'Bộ truyện này không có tập nào.';
+  @override
+  String sync_peer_book_delete_confirm({required Object name}) =>
+      'Xóa "${name}" khỏi thiết bị đối tác? Tệp và tiến độ đọc trên thiết bị đó sẽ bị xóa vĩnh viễn, và máy này không có bản sao. Không thể hoàn tác.';
+  @override
+  String sync_peer_video_delete_confirm({required Object name}) =>
+      'Gỡ "${name}" khỏi thư viện của thiết bị đối tác? Tệp video do thiết bị đó tự nhập vẫn được giữ lại. Không thể hoàn tác.';
+  @override
+  String get storage_entry_delete_files_confirm_body =>
+      'Sẽ bị xóa khỏi ổ đĩa ngay lập tức. Không có mục nào trong thư viện tham chiếu tới nó — đây là dữ liệu bộ nhớ đệm, đã xuất hoặc có thể tải lại.';
+  @override
   String get manga_series_refresh => 'Làm mới chương';
   @override
   String get manga_series_refresh_failed => 'Không thể làm mới từ nguồn';
@@ -139733,6 +139981,23 @@ class _StringsZhCn extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       '另有 ${n} 项被当前筛选隐藏，本次不会处理。';
+  @override
+  String get download_direct_queue_section => '直链下载';
+  @override
+  String get download_task_kind_all => '全部类型';
+  @override
+  String get download_task_kind_filter => '按类型筛选';
+  @override
+  String get manga_online_series_empty => '这个系列没有可下载的卷。';
+  @override
+  String sync_peer_book_delete_confirm({required Object name}) =>
+      '确定从对端设备删除「${name}」吗？对端上的文件与阅读进度会被永久删除，本机没有副本，此操作不可撤销。';
+  @override
+  String sync_peer_video_delete_confirm({required Object name}) =>
+      '确定从对端设备的媒体库移除「${name}」吗？对端自己导入的视频文件会保留，此操作不可撤销。';
+  @override
+  String get storage_entry_delete_files_confirm_body =>
+      '将立即从磁盘删除。媒体库里没有条目引用它——这里放的是缓存、导出或可重新获取的数据。';
   @override
   String get manga_series_refresh => '刷新章节';
   @override
@@ -148040,6 +148305,23 @@ class _StringsZhHk extends _StringsEn {
   String batch_hidden_by_filter_note({required Object n}) =>
       '另有 ${n} 項被目前篩選隱藏，今次不會處理。';
   @override
+  String get download_direct_queue_section => '直鏈下載';
+  @override
+  String get download_task_kind_all => '全部類型';
+  @override
+  String get download_task_kind_filter => '按類型篩選';
+  @override
+  String get manga_online_series_empty => '這個系列沒有可下載的卷。';
+  @override
+  String sync_peer_book_delete_confirm({required Object name}) =>
+      '確定從對端裝置刪除「${name}」嗎？對端上的檔案與閱讀進度會被永久刪除，本機沒有副本，此操作不可撤銷。';
+  @override
+  String sync_peer_video_delete_confirm({required Object name}) =>
+      '確定從對端裝置的媒體庫移除「${name}」嗎？對端自己匯入的影片檔案會保留，此操作不可撤銷。';
+  @override
+  String get storage_entry_delete_files_confirm_body =>
+      '將立即從磁碟刪除。媒體庫裡沒有項目引用它——這裡放的是快取、匯出或可重新取得的資料。';
+  @override
   String get manga_series_refresh => '重新整理章節';
   @override
   String get manga_series_refresh_failed => '無法從來源重新整理';
@@ -155960,6 +156242,22 @@ extension on _StringsEn {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             'Another ${n} selected item(s) are hidden by the current filter and will not be affected.';
+      case 'download_direct_queue_section':
+        return 'Direct downloads';
+      case 'download_task_kind_all':
+        return 'All types';
+      case 'download_task_kind_filter':
+        return 'Filter by type';
+      case 'manga_online_series_empty':
+        return 'No volumes in this series.';
+      case 'sync_peer_book_delete_confirm':
+        return ({required Object name}) =>
+            'Delete "${name}" from the peer device? Its files and reading progress there are removed for good, and this device has no copy. This cannot be undone.';
+      case 'sync_peer_video_delete_confirm':
+        return ({required Object name}) =>
+            'Remove "${name}" from the peer device\'s library? The peer\'s own imported video file is kept. This cannot be undone.';
+      case 'storage_entry_delete_files_confirm_body':
+        return 'This deletes it from disk right away. Nothing in your library references it - it is cached, exported or re-downloadable data.';
       case 'manga_series_refresh':
         return 'Refresh chapters';
       case 'manga_series_refresh_failed':
@@ -163875,6 +164173,22 @@ extension on _StringsAr {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             'هناك ${n} عنصر محدد مخفي بواسطة عامل التصفية الحالي ولن تتم معالجته.';
+      case 'download_direct_queue_section':
+        return 'Direct downloads';
+      case 'download_task_kind_all':
+        return 'All types';
+      case 'download_task_kind_filter':
+        return 'Filter by type';
+      case 'manga_online_series_empty':
+        return 'لا توجد مجلدات في هذه السلسلة.';
+      case 'sync_peer_book_delete_confirm':
+        return ({required Object name}) =>
+            'هل تريد حذف "${name}" من الجهاز النظير؟ ستُحذف ملفاته وتقدّم القراءة هناك نهائيًا، ولا توجد نسخة على هذا الجهاز. لا يمكن التراجع عن هذا الإجراء.';
+      case 'sync_peer_video_delete_confirm':
+        return ({required Object name}) =>
+            'هل تريد إزالة "${name}" من مكتبة الجهاز النظير؟ سيبقى ملف الفيديو الذي استورده النظير بنفسه. لا يمكن التراجع عن هذا الإجراء.';
+      case 'storage_entry_delete_files_confirm_body':
+        return 'سيُحذف من القرص فورًا. لا يشير إليه أي عنصر في مكتبتك — فهذه بيانات مؤقتة أو مُصدَّرة أو يمكن تنزيلها من جديد.';
       case 'manga_series_refresh':
         return 'تحديث الفصول';
       case 'manga_series_refresh_failed':
@@ -171833,6 +172147,22 @@ extension on _StringsDe {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             'Weitere ${n} ausgewählte Elemente sind durch den aktuellen Filter ausgeblendet und werden nicht bearbeitet.';
+      case 'download_direct_queue_section':
+        return 'Direct downloads';
+      case 'download_task_kind_all':
+        return 'All types';
+      case 'download_task_kind_filter':
+        return 'Filter by type';
+      case 'manga_online_series_empty':
+        return 'Diese Serie enthält keine Bände.';
+      case 'sync_peer_book_delete_confirm':
+        return ({required Object name}) =>
+            '„${name}“ vom Partnergerät löschen? Die dortigen Dateien und der Lesefortschritt werden endgültig entfernt, und auf diesem Gerät liegt keine Kopie. Dies kann nicht rückgängig gemacht werden.';
+      case 'sync_peer_video_delete_confirm':
+        return ({required Object name}) =>
+            '„${name}“ aus der Bibliothek des Partnergeräts entfernen? Die vom Partner selbst importierte Videodatei bleibt erhalten. Dies kann nicht rückgängig gemacht werden.';
+      case 'storage_entry_delete_files_confirm_body':
+        return 'Wird sofort von der Festplatte gelöscht. Nichts in deiner Bibliothek verweist darauf – es sind zwischengespeicherte, exportierte oder erneut herunterladbare Daten.';
       case 'manga_series_refresh':
         return 'Kapitel aktualisieren';
       case 'manga_series_refresh_failed':
@@ -179783,6 +180113,22 @@ extension on _StringsEs {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             'Otros ${n} elementos seleccionados están ocultos por el filtro actual y no se procesarán.';
+      case 'download_direct_queue_section':
+        return 'Direct downloads';
+      case 'download_task_kind_all':
+        return 'All types';
+      case 'download_task_kind_filter':
+        return 'Filter by type';
+      case 'manga_online_series_empty':
+        return 'Esta serie no tiene volúmenes.';
+      case 'sync_peer_book_delete_confirm':
+        return ({required Object name}) =>
+            '¿Eliminar «${name}» del dispositivo emparejado? Sus archivos y el progreso de lectura allí se borrarán definitivamente, y este dispositivo no tiene ninguna copia. Esta acción no se puede deshacer.';
+      case 'sync_peer_video_delete_confirm':
+        return ({required Object name}) =>
+            '¿Quitar «${name}» de la biblioteca del dispositivo emparejado? El archivo de vídeo que el propio dispositivo importó se conserva. Esta acción no se puede deshacer.';
+      case 'storage_entry_delete_files_confirm_body':
+        return 'Se eliminará del disco de inmediato. Nada de tu biblioteca hace referencia a esto: son datos en caché, exportados o que se pueden volver a descargar.';
       case 'manga_series_refresh':
         return 'Actualizar capítulos';
       case 'manga_series_refresh_failed':
@@ -187741,6 +188087,22 @@ extension on _StringsFr {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             '${n} autres éléments sélectionnés sont masqués par le filtre actuel et ne seront pas traités.';
+      case 'download_direct_queue_section':
+        return 'Direct downloads';
+      case 'download_task_kind_all':
+        return 'All types';
+      case 'download_task_kind_filter':
+        return 'Filter by type';
+      case 'manga_online_series_empty':
+        return 'Aucun volume dans cette série.';
+      case 'sync_peer_book_delete_confirm':
+        return ({required Object name}) =>
+            'Supprimer « ${name} » de l\'appareil pair ? Ses fichiers et la progression de lecture qui s\'y trouvent seront définitivement supprimés, et cet appareil n\'en a aucune copie. Cette action est irréversible.';
+      case 'sync_peer_video_delete_confirm':
+        return ({required Object name}) =>
+            'Retirer « ${name} » de la bibliothèque de l\'appareil pair ? Le fichier vidéo importé par l\'appareil pair lui-même est conservé. Cette action est irréversible.';
+      case 'storage_entry_delete_files_confirm_body':
+        return 'Suppression immédiate du disque. Rien dans votre bibliothèque n\'y fait référence : ce sont des données en cache, exportées ou re-téléchargeables.';
       case 'manga_series_refresh':
         return 'Actualiser les chapitres';
       case 'manga_series_refresh_failed':
@@ -195671,6 +196033,22 @@ extension on _StringsId {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             '${n} item terpilih lainnya disembunyikan oleh filter saat ini dan tidak akan diproses.';
+      case 'download_direct_queue_section':
+        return 'Direct downloads';
+      case 'download_task_kind_all':
+        return 'All types';
+      case 'download_task_kind_filter':
+        return 'Filter by type';
+      case 'manga_online_series_empty':
+        return 'Seri ini tidak memiliki volume.';
+      case 'sync_peer_book_delete_confirm':
+        return ({required Object name}) =>
+            'Hapus "${name}" dari perangkat pasangan? Berkas dan progres bacanya di sana akan dihapus permanen, dan perangkat ini tidak punya salinan. Tindakan ini tidak dapat dibatalkan.';
+      case 'sync_peer_video_delete_confirm':
+        return ({required Object name}) =>
+            'Hapus "${name}" dari pustaka perangkat pasangan? Berkas video yang diimpor sendiri oleh perangkat itu tetap disimpan. Tindakan ini tidak dapat dibatalkan.';
+      case 'storage_entry_delete_files_confirm_body':
+        return 'Akan langsung dihapus dari disk. Tidak ada di pustaka Anda yang merujuk ke sini — isinya data cache, hasil ekspor, atau yang bisa diunduh ulang.';
       case 'manga_series_refresh':
         return 'Segarkan bab';
       case 'manga_series_refresh_failed':
@@ -203622,6 +204000,22 @@ extension on _StringsIt {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             'Altri ${n} elementi selezionati sono nascosti dal filtro corrente e non verranno elaborati.';
+      case 'download_direct_queue_section':
+        return 'Direct downloads';
+      case 'download_task_kind_all':
+        return 'All types';
+      case 'download_task_kind_filter':
+        return 'Filter by type';
+      case 'manga_online_series_empty':
+        return 'Nessun volume in questa serie.';
+      case 'sync_peer_book_delete_confirm':
+        return ({required Object name}) =>
+            'Eliminare "${name}" dal dispositivo peer? I suoi file e i progressi di lettura lì verranno rimossi definitivamente e questo dispositivo non ne ha alcuna copia. L\'operazione non può essere annullata.';
+      case 'sync_peer_video_delete_confirm':
+        return ({required Object name}) =>
+            'Rimuovere "${name}" dalla libreria del dispositivo peer? Il file video importato dal peer stesso viene conservato. L\'operazione non può essere annullata.';
+      case 'storage_entry_delete_files_confirm_body':
+        return 'Verrà eliminato subito dal disco. Nulla nella tua libreria vi fa riferimento: sono dati in cache, esportati o riscaricabili.';
       case 'manga_series_refresh':
         return 'Aggiorna capitoli';
       case 'manga_series_refresh_failed':
@@ -211506,6 +211900,22 @@ extension on _StringsJa {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             '選択済みの ${n} 件は現在のフィルターで非表示のため、今回は処理されません。';
+      case 'download_direct_queue_section':
+        return '直リンクダウンロード';
+      case 'download_task_kind_all':
+        return 'すべての種類';
+      case 'download_task_kind_filter':
+        return '種類で絞り込む';
+      case 'manga_online_series_empty':
+        return 'このシリーズには巻がありません。';
+      case 'sync_peer_book_delete_confirm':
+        return ({required Object name}) =>
+            '対向デバイスから「${name}」を削除しますか？そちらのファイルと読書進捗は完全に削除され、この端末には控えがありません。この操作は取り消せません。';
+      case 'sync_peer_video_delete_confirm':
+        return ({required Object name}) =>
+            '対向デバイスのライブラリから「${name}」を削除しますか？対向デバイスが自分で取り込んだ動画ファイルは残ります。この操作は取り消せません。';
+      case 'storage_entry_delete_files_confirm_body':
+        return 'ディスクからすぐに削除します。ライブラリのどの項目もこれを参照していません（キャッシュ・書き出し済みデータ・再取得できるデータです）。';
       case 'manga_series_refresh':
         return '章を更新';
       case 'manga_series_refresh_failed':
@@ -219392,6 +219802,22 @@ extension on _StringsKo {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             '선택한 항목 중 ${n}개는 현재 필터로 숨겨져 있어 처리되지 않습니다.';
+      case 'download_direct_queue_section':
+        return '직접 링크 다운로드';
+      case 'download_task_kind_all':
+        return '모든 유형';
+      case 'download_task_kind_filter':
+        return '유형별 필터';
+      case 'manga_online_series_empty':
+        return '이 시리즈에는 권이 없습니다.';
+      case 'sync_peer_book_delete_confirm':
+        return ({required Object name}) =>
+            '상대 기기에서 "${name}"을(를) 삭제할까요? 해당 기기의 파일과 읽기 진행률이 영구히 삭제되며, 이 기기에는 사본이 없습니다. 이 작업은 되돌릴 수 없습니다.';
+      case 'sync_peer_video_delete_confirm':
+        return ({required Object name}) =>
+            '상대 기기의 라이브러리에서 "${name}"을(를) 제거할까요? 상대 기기가 직접 가져온 동영상 파일은 유지됩니다. 이 작업은 되돌릴 수 없습니다.';
+      case 'storage_entry_delete_files_confirm_body':
+        return '디스크에서 즉시 삭제합니다. 라이브러리의 어떤 항목도 이를 참조하지 않습니다 — 캐시, 내보낸 파일, 또는 다시 받을 수 있는 데이터입니다.';
       case 'manga_series_refresh':
         return '챕터 새로고침';
       case 'manga_series_refresh_failed':
@@ -227337,6 +227763,22 @@ extension on _StringsNl {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             'Nog ${n} geselecteerde items zijn verborgen door het huidige filter en worden niet verwerkt.';
+      case 'download_direct_queue_section':
+        return 'Direct downloads';
+      case 'download_task_kind_all':
+        return 'All types';
+      case 'download_task_kind_filter':
+        return 'Filter by type';
+      case 'manga_online_series_empty':
+        return 'Deze serie bevat geen delen.';
+      case 'sync_peer_book_delete_confirm':
+        return ({required Object name}) =>
+            '"${name}" van het gekoppelde apparaat verwijderen? De bestanden en leesvoortgang daar worden definitief verwijderd en dit apparaat heeft geen kopie. Dit kan niet ongedaan worden gemaakt.';
+      case 'sync_peer_video_delete_confirm':
+        return ({required Object name}) =>
+            '"${name}" uit de bibliotheek van het gekoppelde apparaat verwijderen? Het videobestand dat dat apparaat zelf heeft geïmporteerd blijft bewaard. Dit kan niet ongedaan worden gemaakt.';
+      case 'storage_entry_delete_files_confirm_body':
+        return 'Wordt meteen van de schijf verwijderd. Niets in je bibliotheek verwijst ernaar: het zijn cache-, geëxporteerde of opnieuw te downloaden gegevens.';
       case 'manga_series_refresh':
         return 'Hoofdstukken vernieuwen';
       case 'manga_series_refresh_failed':
@@ -235277,6 +235719,22 @@ extension on _StringsPtBr {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             'Outros ${n} itens selecionados estão ocultos pelo filtro atual e não serão processados.';
+      case 'download_direct_queue_section':
+        return 'Direct downloads';
+      case 'download_task_kind_all':
+        return 'All types';
+      case 'download_task_kind_filter':
+        return 'Filter by type';
+      case 'manga_online_series_empty':
+        return 'Esta série não tem volumes.';
+      case 'sync_peer_book_delete_confirm':
+        return ({required Object name}) =>
+            'Excluir "${name}" do dispositivo pareado? Os arquivos e o progresso de leitura de lá serão removidos definitivamente, e este dispositivo não tem cópia. Não é possível desfazer.';
+      case 'sync_peer_video_delete_confirm':
+        return ({required Object name}) =>
+            'Remover "${name}" da biblioteca do dispositivo pareado? O arquivo de vídeo importado pelo próprio dispositivo é mantido. Não é possível desfazer.';
+      case 'storage_entry_delete_files_confirm_body':
+        return 'Será excluído do disco imediatamente. Nada na sua biblioteca faz referência a isso — são dados em cache, exportados ou que podem ser baixados de novo.';
       case 'manga_series_refresh':
         return 'Atualizar capítulos';
       case 'manga_series_refresh_failed':
@@ -243223,6 +243681,22 @@ extension on _StringsRu {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             'Ещё ${n} выбранных элементов скрыты текущим фильтром и не будут обработаны.';
+      case 'download_direct_queue_section':
+        return 'Direct downloads';
+      case 'download_task_kind_all':
+        return 'All types';
+      case 'download_task_kind_filter':
+        return 'Filter by type';
+      case 'manga_online_series_empty':
+        return 'В этой серии нет томов.';
+      case 'sync_peer_book_delete_confirm':
+        return ({required Object name}) =>
+            'Удалить «${name}» с сопряжённого устройства? Его файлы и прогресс чтения там будут удалены безвозвратно, а на этом устройстве копии нет. Отменить это действие нельзя.';
+      case 'sync_peer_video_delete_confirm':
+        return ({required Object name}) =>
+            'Убрать «${name}» из библиотеки сопряжённого устройства? Видеофайл, импортированный самим устройством, останется. Отменить это действие нельзя.';
+      case 'storage_entry_delete_files_confirm_body':
+        return 'Будет сразу удалено с диска. Ничто в вашей библиотеке на это не ссылается — это кеш, экспортированные или заново загружаемые данные.';
       case 'manga_series_refresh':
         return 'Обновить главы';
       case 'manga_series_refresh_failed':
@@ -251141,6 +251615,22 @@ extension on _StringsTh {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             'รายการที่เลือกอีก ${n} รายการถูกซ่อนด้วยตัวกรองปัจจุบันและจะไม่ถูกดำเนินการ';
+      case 'download_direct_queue_section':
+        return 'Direct downloads';
+      case 'download_task_kind_all':
+        return 'All types';
+      case 'download_task_kind_filter':
+        return 'Filter by type';
+      case 'manga_online_series_empty':
+        return 'ซีรีส์นี้ไม่มีเล่ม';
+      case 'sync_peer_book_delete_confirm':
+        return ({required Object name}) =>
+            'ลบ "${name}" ออกจากอุปกรณ์คู่หรือไม่? ไฟล์และความคืบหน้าการอ่านบนอุปกรณ์นั้นจะถูกลบถาวร และเครื่องนี้ไม่มีสำเนา การกระทำนี้ย้อนกลับไม่ได้';
+      case 'sync_peer_video_delete_confirm':
+        return ({required Object name}) =>
+            'นำ "${name}" ออกจากคลังของอุปกรณ์คู่หรือไม่? ไฟล์วิดีโอที่อุปกรณ์นั้นนำเข้าเองจะยังคงอยู่ การกระทำนี้ย้อนกลับไม่ได้';
+      case 'storage_entry_delete_files_confirm_body':
+        return 'จะถูกลบออกจากดิสก์ทันที ไม่มีรายการใดในคลังอ้างอิงถึงไฟล์นี้ — เป็นข้อมูลแคช ข้อมูลที่ส่งออก หรือข้อมูลที่ดาวน์โหลดใหม่ได้';
       case 'manga_series_refresh':
         return 'รีเฟรชตอน';
       case 'manga_series_refresh_failed':
@@ -259076,6 +259566,22 @@ extension on _StringsTr {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             'Seçili ${n} öğe daha geçerli filtre tarafından gizlendi ve işlenmeyecek.';
+      case 'download_direct_queue_section':
+        return 'Direct downloads';
+      case 'download_task_kind_all':
+        return 'All types';
+      case 'download_task_kind_filter':
+        return 'Filter by type';
+      case 'manga_online_series_empty':
+        return 'Bu seride hiç cilt yok.';
+      case 'sync_peer_book_delete_confirm':
+        return ({required Object name}) =>
+            '"${name}" eş cihazdan silinsin mi? Oradaki dosyaları ve okuma ilerlemesi kalıcı olarak kaldırılır ve bu cihazda kopyası yok. Bu işlem geri alınamaz.';
+      case 'sync_peer_video_delete_confirm':
+        return ({required Object name}) =>
+            '"${name}" eş cihazın kitaplığından kaldırılsın mı? Eş cihazın kendi içe aktardığı video dosyası korunur. Bu işlem geri alınamaz.';
+      case 'storage_entry_delete_files_confirm_body':
+        return 'Diskten hemen silinir. Kitaplığınızdaki hiçbir şey buna başvurmuyor — bunlar önbellek, dışa aktarılmış veya yeniden indirilebilir verilerdir.';
       case 'manga_series_refresh':
         return 'Bölümleri yenile';
       case 'manga_series_refresh_failed':
@@ -267004,6 +267510,22 @@ extension on _StringsVi {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             'Còn ${n} mục đã chọn bị ẩn bởi bộ lọc hiện tại và sẽ không được xử lý.';
+      case 'download_direct_queue_section':
+        return 'Direct downloads';
+      case 'download_task_kind_all':
+        return 'All types';
+      case 'download_task_kind_filter':
+        return 'Filter by type';
+      case 'manga_online_series_empty':
+        return 'Bộ truyện này không có tập nào.';
+      case 'sync_peer_book_delete_confirm':
+        return ({required Object name}) =>
+            'Xóa "${name}" khỏi thiết bị đối tác? Tệp và tiến độ đọc trên thiết bị đó sẽ bị xóa vĩnh viễn, và máy này không có bản sao. Không thể hoàn tác.';
+      case 'sync_peer_video_delete_confirm':
+        return ({required Object name}) =>
+            'Gỡ "${name}" khỏi thư viện của thiết bị đối tác? Tệp video do thiết bị đó tự nhập vẫn được giữ lại. Không thể hoàn tác.';
+      case 'storage_entry_delete_files_confirm_body':
+        return 'Sẽ bị xóa khỏi ổ đĩa ngay lập tức. Không có mục nào trong thư viện tham chiếu tới nó — đây là dữ liệu bộ nhớ đệm, đã xuất hoặc có thể tải lại.';
       case 'manga_series_refresh':
         return 'Làm mới chương';
       case 'manga_series_refresh_failed':
@@ -274866,6 +275388,22 @@ extension on _StringsZhCn {
         return ({required Object n}) => '有 ${n} 个本地文件删除失败，可能正在被使用';
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) => '另有 ${n} 项被当前筛选隐藏，本次不会处理。';
+      case 'download_direct_queue_section':
+        return '直链下载';
+      case 'download_task_kind_all':
+        return '全部类型';
+      case 'download_task_kind_filter':
+        return '按类型筛选';
+      case 'manga_online_series_empty':
+        return '这个系列没有可下载的卷。';
+      case 'sync_peer_book_delete_confirm':
+        return ({required Object name}) =>
+            '确定从对端设备删除「${name}」吗？对端上的文件与阅读进度会被永久删除，本机没有副本，此操作不可撤销。';
+      case 'sync_peer_video_delete_confirm':
+        return ({required Object name}) =>
+            '确定从对端设备的媒体库移除「${name}」吗？对端自己导入的视频文件会保留，此操作不可撤销。';
+      case 'storage_entry_delete_files_confirm_body':
+        return '将立即从磁盘删除。媒体库里没有条目引用它——这里放的是缓存、导出或可重新获取的数据。';
       case 'manga_series_refresh':
         return '刷新章节';
       case 'manga_series_refresh_failed':
@@ -282729,6 +283267,22 @@ extension on _StringsZhHk {
         return ({required Object n}) => '有 ${n} 個本機檔案刪除失敗，可能正在被使用';
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) => '另有 ${n} 項被目前篩選隱藏，今次不會處理。';
+      case 'download_direct_queue_section':
+        return '直鏈下載';
+      case 'download_task_kind_all':
+        return '全部類型';
+      case 'download_task_kind_filter':
+        return '按類型篩選';
+      case 'manga_online_series_empty':
+        return '這個系列沒有可下載的卷。';
+      case 'sync_peer_book_delete_confirm':
+        return ({required Object name}) =>
+            '確定從對端裝置刪除「${name}」嗎？對端上的檔案與閱讀進度會被永久刪除，本機沒有副本，此操作不可撤銷。';
+      case 'sync_peer_video_delete_confirm':
+        return ({required Object name}) =>
+            '確定從對端裝置的媒體庫移除「${name}」嗎？對端自己匯入的影片檔案會保留，此操作不可撤銷。';
+      case 'storage_entry_delete_files_confirm_body':
+        return '將立即從磁碟刪除。媒體庫裡沒有項目引用它——這裡放的是快取、匯出或可重新取得的資料。';
       case 'manga_series_refresh':
         return '重新整理章節';
       case 'manga_series_refresh_failed':
