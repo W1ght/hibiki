@@ -5265,6 +5265,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Read to page ${page} of ${total}';
   String manga_series_read_progress_partial({required Object page}) =>
       'Read to page ${page}';
+  String get settings_section_reading_stats => 'Reading statistics';
+  String get reading_stats_idle_timeout => 'Idle timeout';
+  String get reading_stats_idle_timeout_hint =>
+      'Stop counting reading time after this many minutes without turning a page, scrolling, or looking up a word. Applies to novels, PDFs and manga only; video counts while playing.';
 }
 
 // Path: <root>
@@ -14225,6 +14229,13 @@ class _StringsAr extends _StringsEn {
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       'تمت القراءة حتى الصفحة ${page}';
+  @override
+  String get settings_section_reading_stats => 'إحصائيات القراءة';
+  @override
+  String get reading_stats_idle_timeout => 'مهلة الخمول';
+  @override
+  String get reading_stats_idle_timeout_hint =>
+      'إيقاف احتساب وقت القراءة بعد هذا العدد من الدقائق دون تقليب صفحة أو تمرير أو بحث عن كلمة. ينطبق على الروايات وملفات PDF والمانغا فقط؛ يُحتسب الفيديو أثناء التشغيل.';
 }
 
 // Path: <root>
@@ -23394,6 +23405,13 @@ class _StringsDe extends _StringsEn {
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       'Bis Seite ${page} gelesen';
+  @override
+  String get settings_section_reading_stats => 'Lesestatistik';
+  @override
+  String get reading_stats_idle_timeout => 'Inaktivitäts-Timeout';
+  @override
+  String get reading_stats_idle_timeout_hint =>
+      'Lesezeit nach so vielen Minuten ohne Umblättern, Scrollen oder Wortsuche nicht mehr zählen. Gilt nur für Romane, PDFs und Manga; Video zählt, solange es läuft.';
 }
 
 // Path: <root>
@@ -32607,6 +32625,13 @@ class _StringsEs extends _StringsEn {
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       'Leído hasta la página ${page}';
+  @override
+  String get settings_section_reading_stats => 'Estadísticas de lectura';
+  @override
+  String get reading_stats_idle_timeout => 'Tiempo de inactividad';
+  @override
+  String get reading_stats_idle_timeout_hint =>
+      'Dejar de contar el tiempo de lectura tras estos minutos sin pasar página, desplazarse o buscar una palabra. Solo para novelas, PDF y manga; el vídeo cuenta mientras se reproduce.';
 }
 
 // Path: <root>
@@ -41854,6 +41879,13 @@ class _StringsFr extends _StringsEn {
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       'Lu jusqu\'à la page ${page}';
+  @override
+  String get settings_section_reading_stats => 'Statistiques de lecture';
+  @override
+  String get reading_stats_idle_timeout => 'Délai d\'inactivité';
+  @override
+  String get reading_stats_idle_timeout_hint =>
+      'Cesser de compter le temps de lecture après ce nombre de minutes sans tourner de page, faire défiler ou chercher un mot. Romans, PDF et mangas uniquement ; la vidéo compte tant qu\'elle est en lecture.';
 }
 
 // Path: <root>
@@ -50927,6 +50959,13 @@ class _StringsId extends _StringsEn {
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       'Dibaca sampai halaman ${page}';
+  @override
+  String get settings_section_reading_stats => 'Statistik membaca';
+  @override
+  String get reading_stats_idle_timeout => 'Batas waktu idle';
+  @override
+  String get reading_stats_idle_timeout_hint =>
+      'Berhenti menghitung waktu membaca setelah sekian menit tanpa membalik halaman, menggulir, atau mencari kata. Hanya untuk novel, PDF, dan manga; video dihitung selama diputar.';
 }
 
 // Path: <root>
@@ -60077,6 +60116,13 @@ class _StringsIt extends _StringsEn {
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       'Letto fino a pagina ${page}';
+  @override
+  String get settings_section_reading_stats => 'Statistiche di lettura';
+  @override
+  String get reading_stats_idle_timeout => 'Timeout di inattività';
+  @override
+  String get reading_stats_idle_timeout_hint =>
+      'Smetti di contare il tempo di lettura dopo questi minuti senza voltare pagina, scorrere o cercare una parola. Solo per romanzi, PDF e manga; il video conta mentre è in riproduzione.';
 }
 
 // Path: <root>
@@ -68667,6 +68713,13 @@ class _StringsJa extends _StringsEn {
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       '${page} ページまで';
+  @override
+  String get settings_section_reading_stats => '読書統計';
+  @override
+  String get reading_stats_idle_timeout => 'アイドル判定時間';
+  @override
+  String get reading_stats_idle_timeout_hint =>
+      'ページめくり・スクロール・辞書引きがこの分数ないと読書時間の計測を止めます。小説・PDF・漫画のみ対象。動画は再生中なら計測します。';
 }
 
 // Path: <root>
@@ -77272,6 +77325,13 @@ class _StringsKo extends _StringsEn {
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       '${page}페이지까지 읽음';
+  @override
+  String get settings_section_reading_stats => '독서 통계';
+  @override
+  String get reading_stats_idle_timeout => '유휴 판정 시간';
+  @override
+  String get reading_stats_idle_timeout_hint =>
+      '페이지 넘김·스크롤·단어 검색이 이 시간(분) 동안 없으면 독서 시간 집계를 멈춥니다. 소설·PDF·만화에만 적용되며, 동영상은 재생 중이면 집계합니다.';
 }
 
 // Path: <root>
@@ -86379,6 +86439,13 @@ class _StringsNl extends _StringsEn {
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       'Gelezen tot pagina ${page}';
+  @override
+  String get settings_section_reading_stats => 'Leesstatistieken';
+  @override
+  String get reading_stats_idle_timeout => 'Inactiviteitstime-out';
+  @override
+  String get reading_stats_idle_timeout_hint =>
+      'Stop met het tellen van leestijd na dit aantal minuten zonder bladeren, scrollen of een woord opzoeken. Alleen voor romans, pdf\'s en manga; video telt zolang het afspeelt.';
 }
 
 // Path: <root>
@@ -95542,6 +95609,13 @@ class _StringsPtBr extends _StringsEn {
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       'Lido até a página ${page}';
+  @override
+  String get settings_section_reading_stats => 'Estatísticas de leitura';
+  @override
+  String get reading_stats_idle_timeout => 'Tempo de inatividade';
+  @override
+  String get reading_stats_idle_timeout_hint =>
+      'Parar de contar o tempo de leitura após esses minutos sem virar página, rolar ou pesquisar uma palavra. Apenas para romances, PDFs e mangás; o vídeo conta enquanto estiver reproduzindo.';
 }
 
 // Path: <root>
@@ -104679,6 +104753,13 @@ class _StringsRu extends _StringsEn {
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       'Прочитано до страницы ${page}';
+  @override
+  String get settings_section_reading_stats => 'Статистика чтения';
+  @override
+  String get reading_stats_idle_timeout => 'Тайм-аут бездействия';
+  @override
+  String get reading_stats_idle_timeout_hint =>
+      'Не засчитывать время чтения после стольких минут без перелистывания, прокрутки или поиска слова. Только для романов, PDF и манги; видео засчитывается, пока воспроизводится.';
 }
 
 // Path: <root>
@@ -113634,6 +113715,13 @@ class _StringsTh extends _StringsEn {
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       'อ่านถึงหน้า ${page}';
+  @override
+  String get settings_section_reading_stats => 'สถิติการอ่าน';
+  @override
+  String get reading_stats_idle_timeout => 'เวลาพักการอ่าน';
+  @override
+  String get reading_stats_idle_timeout_hint =>
+      'หยุดนับเวลาอ่านเมื่อไม่มีการพลิกหน้า เลื่อน หรือค้นหาคำนานเท่านี้นาที ใช้กับนิยาย PDF และมังงะเท่านั้น วิดีโอจะนับขณะเล่น';
 }
 
 // Path: <root>
@@ -122692,6 +122780,13 @@ class _StringsTr extends _StringsEn {
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       '${page}. sayfaya kadar okundu';
+  @override
+  String get settings_section_reading_stats => 'Okuma istatistikleri';
+  @override
+  String get reading_stats_idle_timeout => 'Boşta kalma süresi';
+  @override
+  String get reading_stats_idle_timeout_hint =>
+      'Sayfa çevirme, kaydırma veya sözcük arama olmadan bu kadar dakika geçince okuma süresini saymayı durdur. Yalnızca roman, PDF ve manga için; video oynatılırken sayılır.';
 }
 
 // Path: <root>
@@ -131732,6 +131827,13 @@ class _StringsVi extends _StringsEn {
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       'Đã đọc đến trang ${page}';
+  @override
+  String get settings_section_reading_stats => 'Thống kê đọc';
+  @override
+  String get reading_stats_idle_timeout => 'Thời gian không hoạt động';
+  @override
+  String get reading_stats_idle_timeout_hint =>
+      'Ngừng tính thời gian đọc sau số phút này nếu không lật trang, cuộn hoặc tra từ. Chỉ áp dụng cho tiểu thuyết, PDF và manga; video được tính khi đang phát.';
 }
 
 // Path: <root>
@@ -140049,6 +140151,13 @@ class _StringsZhCn extends _StringsEn {
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       '读到第 ${page} 页';
+  @override
+  String get settings_section_reading_stats => '阅读统计';
+  @override
+  String get reading_stats_idle_timeout => '空闲判定时长';
+  @override
+  String get reading_stats_idle_timeout_hint =>
+      '这么久没有翻页、滚动或查词就停止计入阅读时长。只对小说、PDF、漫画生效；视频以播放状态为准。';
 }
 
 // Path: <root>
@@ -148372,6 +148481,13 @@ class _StringsZhHk extends _StringsEn {
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       '讀到第 ${page} 頁';
+  @override
+  String get settings_section_reading_stats => '閱讀統計';
+  @override
+  String get reading_stats_idle_timeout => '閒置判定時長';
+  @override
+  String get reading_stats_idle_timeout_hint =>
+      '這麼久沒有翻頁、捲動或查詞就停止計入閱讀時長。只對小說、PDF、漫畫生效；影片以播放狀態為準。';
 }
 
 /// Flat map(s) containing all translations.
@@ -156307,6 +156423,12 @@ extension on _StringsEn {
             'Read to page ${page} of ${total}';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'Read to page ${page}';
+      case 'settings_section_reading_stats':
+        return 'Reading statistics';
+      case 'reading_stats_idle_timeout':
+        return 'Idle timeout';
+      case 'reading_stats_idle_timeout_hint':
+        return 'Stop counting reading time after this many minutes without turning a page, scrolling, or looking up a word. Applies to novels, PDFs and manga only; video counts while playing.';
       default:
         return null;
     }
@@ -164238,6 +164360,12 @@ extension on _StringsAr {
             'تمت القراءة حتى الصفحة ${page} من ${total}';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'تمت القراءة حتى الصفحة ${page}';
+      case 'settings_section_reading_stats':
+        return 'إحصائيات القراءة';
+      case 'reading_stats_idle_timeout':
+        return 'مهلة الخمول';
+      case 'reading_stats_idle_timeout_hint':
+        return 'إيقاف احتساب وقت القراءة بعد هذا العدد من الدقائق دون تقليب صفحة أو تمرير أو بحث عن كلمة. ينطبق على الروايات وملفات PDF والمانغا فقط؛ يُحتسب الفيديو أثناء التشغيل.';
       default:
         return null;
     }
@@ -172212,6 +172340,12 @@ extension on _StringsDe {
             'Bis Seite ${page} von ${total} gelesen';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'Bis Seite ${page} gelesen';
+      case 'settings_section_reading_stats':
+        return 'Lesestatistik';
+      case 'reading_stats_idle_timeout':
+        return 'Inaktivitäts-Timeout';
+      case 'reading_stats_idle_timeout_hint':
+        return 'Lesezeit nach so vielen Minuten ohne Umblättern, Scrollen oder Wortsuche nicht mehr zählen. Gilt nur für Romane, PDFs und Manga; Video zählt, solange es läuft.';
       default:
         return null;
     }
@@ -180178,6 +180312,12 @@ extension on _StringsEs {
             'Leído hasta la página ${page} de ${total}';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'Leído hasta la página ${page}';
+      case 'settings_section_reading_stats':
+        return 'Estadísticas de lectura';
+      case 'reading_stats_idle_timeout':
+        return 'Tiempo de inactividad';
+      case 'reading_stats_idle_timeout_hint':
+        return 'Dejar de contar el tiempo de lectura tras estos minutos sin pasar página, desplazarse o buscar una palabra. Solo para novelas, PDF y manga; el vídeo cuenta mientras se reproduce.';
       default:
         return null;
     }
@@ -188152,6 +188292,12 @@ extension on _StringsFr {
             'Lu jusqu\'à la page ${page} sur ${total}';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'Lu jusqu\'à la page ${page}';
+      case 'settings_section_reading_stats':
+        return 'Statistiques de lecture';
+      case 'reading_stats_idle_timeout':
+        return 'Délai d\'inactivité';
+      case 'reading_stats_idle_timeout_hint':
+        return 'Cesser de compter le temps de lecture après ce nombre de minutes sans tourner de page, faire défiler ou chercher un mot. Romans, PDF et mangas uniquement ; la vidéo compte tant qu\'elle est en lecture.';
       default:
         return null;
     }
@@ -196098,6 +196244,12 @@ extension on _StringsId {
             'Dibaca sampai halaman ${page} dari ${total}';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'Dibaca sampai halaman ${page}';
+      case 'settings_section_reading_stats':
+        return 'Statistik membaca';
+      case 'reading_stats_idle_timeout':
+        return 'Batas waktu idle';
+      case 'reading_stats_idle_timeout_hint':
+        return 'Berhenti menghitung waktu membaca setelah sekian menit tanpa membalik halaman, menggulir, atau mencari kata. Hanya untuk novel, PDF, dan manga; video dihitung selama diputar.';
       default:
         return null;
     }
@@ -204065,6 +204217,12 @@ extension on _StringsIt {
             'Letto fino a pagina ${page} di ${total}';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'Letto fino a pagina ${page}';
+      case 'settings_section_reading_stats':
+        return 'Statistiche di lettura';
+      case 'reading_stats_idle_timeout':
+        return 'Timeout di inattività';
+      case 'reading_stats_idle_timeout_hint':
+        return 'Smetti di contare il tempo di lettura dopo questi minuti senza voltare pagina, scorrere o cercare una parola. Solo per romanzi, PDF e manga; il video conta mentre è in riproduzione.';
       default:
         return null;
     }
@@ -211965,6 +212123,12 @@ extension on _StringsJa {
             '${total} ページ中 ${page} ページまで';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => '${page} ページまで';
+      case 'settings_section_reading_stats':
+        return '読書統計';
+      case 'reading_stats_idle_timeout':
+        return 'アイドル判定時間';
+      case 'reading_stats_idle_timeout_hint':
+        return 'ページめくり・スクロール・辞書引きがこの分数ないと読書時間の計測を止めます。小説・PDF・漫画のみ対象。動画は再生中なら計測します。';
       default:
         return null;
     }
@@ -219867,6 +220031,12 @@ extension on _StringsKo {
             '${total}페이지 중 ${page}페이지까지 읽음';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => '${page}페이지까지 읽음';
+      case 'settings_section_reading_stats':
+        return '독서 통계';
+      case 'reading_stats_idle_timeout':
+        return '유휴 판정 시간';
+      case 'reading_stats_idle_timeout_hint':
+        return '페이지 넘김·스크롤·단어 검색이 이 시간(분) 동안 없으면 독서 시간 집계를 멈춥니다. 소설·PDF·만화에만 적용되며, 동영상은 재생 중이면 집계합니다.';
       default:
         return null;
     }
@@ -227828,6 +227998,12 @@ extension on _StringsNl {
             'Gelezen tot pagina ${page} van ${total}';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'Gelezen tot pagina ${page}';
+      case 'settings_section_reading_stats':
+        return 'Leesstatistieken';
+      case 'reading_stats_idle_timeout':
+        return 'Inactiviteitstime-out';
+      case 'reading_stats_idle_timeout_hint':
+        return 'Stop met het tellen van leestijd na dit aantal minuten zonder bladeren, scrollen of een woord opzoeken. Alleen voor romans, pdf\'s en manga; video telt zolang het afspeelt.';
       default:
         return null;
     }
@@ -235784,6 +235960,12 @@ extension on _StringsPtBr {
             'Lido até a página ${page} de ${total}';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'Lido até a página ${page}';
+      case 'settings_section_reading_stats':
+        return 'Estatísticas de leitura';
+      case 'reading_stats_idle_timeout':
+        return 'Tempo de inatividade';
+      case 'reading_stats_idle_timeout_hint':
+        return 'Parar de contar o tempo de leitura após esses minutos sem virar página, rolar ou pesquisar uma palavra. Apenas para romances, PDFs e mangás; o vídeo conta enquanto estiver reproduzindo.';
       default:
         return null;
     }
@@ -243746,6 +243928,12 @@ extension on _StringsRu {
             'Прочитано до страницы ${page} из ${total}';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'Прочитано до страницы ${page}';
+      case 'settings_section_reading_stats':
+        return 'Статистика чтения';
+      case 'reading_stats_idle_timeout':
+        return 'Тайм-аут бездействия';
+      case 'reading_stats_idle_timeout_hint':
+        return 'Не засчитывать время чтения после стольких минут без перелистывания, прокрутки или поиска слова. Только для романов, PDF и манги; видео засчитывается, пока воспроизводится.';
       default:
         return null;
     }
@@ -251680,6 +251868,12 @@ extension on _StringsTh {
             'อ่านถึงหน้า ${page} จาก ${total}';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'อ่านถึงหน้า ${page}';
+      case 'settings_section_reading_stats':
+        return 'สถิติการอ่าน';
+      case 'reading_stats_idle_timeout':
+        return 'เวลาพักการอ่าน';
+      case 'reading_stats_idle_timeout_hint':
+        return 'หยุดนับเวลาอ่านเมื่อไม่มีการพลิกหน้า เลื่อน หรือค้นหาคำนานเท่านี้นาที ใช้กับนิยาย PDF และมังงะเท่านั้น วิดีโอจะนับขณะเล่น';
       default:
         return null;
     }
@@ -259631,6 +259825,12 @@ extension on _StringsTr {
             '${total} sayfadan ${page}. sayfaya kadar okundu';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => '${page}. sayfaya kadar okundu';
+      case 'settings_section_reading_stats':
+        return 'Okuma istatistikleri';
+      case 'reading_stats_idle_timeout':
+        return 'Boşta kalma süresi';
+      case 'reading_stats_idle_timeout_hint':
+        return 'Sayfa çevirme, kaydırma veya sözcük arama olmadan bu kadar dakika geçince okuma süresini saymayı durdur. Yalnızca roman, PDF ve manga için; video oynatılırken sayılır.';
       default:
         return null;
     }
@@ -267575,6 +267775,12 @@ extension on _StringsVi {
             'Đã đọc đến trang ${page} trên ${total}';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'Đã đọc đến trang ${page}';
+      case 'settings_section_reading_stats':
+        return 'Thống kê đọc';
+      case 'reading_stats_idle_timeout':
+        return 'Thời gian không hoạt động';
+      case 'reading_stats_idle_timeout_hint':
+        return 'Ngừng tính thời gian đọc sau số phút này nếu không lật trang, cuộn hoặc tra từ. Chỉ áp dụng cho tiểu thuyết, PDF và manga; video được tính khi đang phát.';
       default:
         return null;
     }
@@ -275453,6 +275659,12 @@ extension on _StringsZhCn {
             '读到第 ${page}/${total} 页';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => '读到第 ${page} 页';
+      case 'settings_section_reading_stats':
+        return '阅读统计';
+      case 'reading_stats_idle_timeout':
+        return '空闲判定时长';
+      case 'reading_stats_idle_timeout_hint':
+        return '这么久没有翻页、滚动或查词就停止计入阅读时长。只对小说、PDF、漫画生效；视频以播放状态为准。';
       default:
         return null;
     }
@@ -283332,6 +283544,12 @@ extension on _StringsZhHk {
             '讀到第 ${page}/${total} 頁';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => '讀到第 ${page} 頁';
+      case 'settings_section_reading_stats':
+        return '閱讀統計';
+      case 'reading_stats_idle_timeout':
+        return '閒置判定時長';
+      case 'reading_stats_idle_timeout_hint':
+        return '這麼久沒有翻頁、捲動或查詞就停止計入閱讀時長。只對小說、PDF、漫畫生效；影片以播放狀態為準。';
       default:
         return null;
     }
