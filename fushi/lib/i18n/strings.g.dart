@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 65297 (3841 per locale)
+/// Strings: 65399 (3847 per locale)
 ///
-/// Built on 2026-08-29 at 13:43 UTC
+/// Built on 2026-08-29 at 18:21 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5233,6 +5233,17 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'This is a web page (not a direct stream). It will open in the built-in web player.';
   String get web_video_platform_unsupported =>
       'The built-in web player is only available on Windows for now.';
+  String get web_video_mine_queue_run => 'Create queued cards';
+  String get web_video_mine_queue_stop => 'Stop card creation';
+  String get web_video_mine_queue_empty => 'No queued cards';
+  String web_video_mine_queued({required Object count}) =>
+      'Queued for card creation (${count} pending)';
+  String web_video_mine_queue_running(
+          {required Object done, required Object total}) =>
+      'Creating cards ${done}/${total}...';
+  String web_video_mine_queue_finished(
+          {required Object ok, required Object failed}) =>
+      'Cards created: ${ok}, failed: ${failed}';
 }
 
 // Path: <root>
@@ -14136,6 +14147,23 @@ class _StringsAr extends _StringsEn {
   @override
   String get web_video_platform_unsupported =>
       'The built-in web player is only available on Windows for now.';
+  @override
+  String get web_video_mine_queue_run => 'Create queued cards';
+  @override
+  String get web_video_mine_queue_stop => 'Stop card creation';
+  @override
+  String get web_video_mine_queue_empty => 'No queued cards';
+  @override
+  String web_video_mine_queued({required Object count}) =>
+      'Queued for card creation (${count} pending)';
+  @override
+  String web_video_mine_queue_running(
+          {required Object done, required Object total}) =>
+      'Creating cards ${done}/${total}...';
+  @override
+  String web_video_mine_queue_finished(
+          {required Object ok, required Object failed}) =>
+      'Cards created: ${ok}, failed: ${failed}';
 }
 
 // Path: <root>
@@ -23246,6 +23274,23 @@ class _StringsDe extends _StringsEn {
   @override
   String get web_video_platform_unsupported =>
       'The built-in web player is only available on Windows for now.';
+  @override
+  String get web_video_mine_queue_run => 'Create queued cards';
+  @override
+  String get web_video_mine_queue_stop => 'Stop card creation';
+  @override
+  String get web_video_mine_queue_empty => 'No queued cards';
+  @override
+  String web_video_mine_queued({required Object count}) =>
+      'Queued for card creation (${count} pending)';
+  @override
+  String web_video_mine_queue_running(
+          {required Object done, required Object total}) =>
+      'Creating cards ${done}/${total}...';
+  @override
+  String web_video_mine_queue_finished(
+          {required Object ok, required Object failed}) =>
+      'Cards created: ${ok}, failed: ${failed}';
 }
 
 // Path: <root>
@@ -32399,6 +32444,23 @@ class _StringsEs extends _StringsEn {
   @override
   String get web_video_platform_unsupported =>
       'The built-in web player is only available on Windows for now.';
+  @override
+  String get web_video_mine_queue_run => 'Create queued cards';
+  @override
+  String get web_video_mine_queue_stop => 'Stop card creation';
+  @override
+  String get web_video_mine_queue_empty => 'No queued cards';
+  @override
+  String web_video_mine_queued({required Object count}) =>
+      'Queued for card creation (${count} pending)';
+  @override
+  String web_video_mine_queue_running(
+          {required Object done, required Object total}) =>
+      'Creating cards ${done}/${total}...';
+  @override
+  String web_video_mine_queue_finished(
+          {required Object ok, required Object failed}) =>
+      'Cards created: ${ok}, failed: ${failed}';
 }
 
 // Path: <root>
@@ -41586,6 +41648,23 @@ class _StringsFr extends _StringsEn {
   @override
   String get web_video_platform_unsupported =>
       'The built-in web player is only available on Windows for now.';
+  @override
+  String get web_video_mine_queue_run => 'Create queued cards';
+  @override
+  String get web_video_mine_queue_stop => 'Stop card creation';
+  @override
+  String get web_video_mine_queue_empty => 'No queued cards';
+  @override
+  String web_video_mine_queued({required Object count}) =>
+      'Queued for card creation (${count} pending)';
+  @override
+  String web_video_mine_queue_running(
+          {required Object done, required Object total}) =>
+      'Creating cards ${done}/${total}...';
+  @override
+  String web_video_mine_queue_finished(
+          {required Object ok, required Object failed}) =>
+      'Cards created: ${ok}, failed: ${failed}';
 }
 
 // Path: <root>
@@ -50600,6 +50679,23 @@ class _StringsId extends _StringsEn {
   @override
   String get web_video_platform_unsupported =>
       'The built-in web player is only available on Windows for now.';
+  @override
+  String get web_video_mine_queue_run => 'Create queued cards';
+  @override
+  String get web_video_mine_queue_stop => 'Stop card creation';
+  @override
+  String get web_video_mine_queue_empty => 'No queued cards';
+  @override
+  String web_video_mine_queued({required Object count}) =>
+      'Queued for card creation (${count} pending)';
+  @override
+  String web_video_mine_queue_running(
+          {required Object done, required Object total}) =>
+      'Creating cards ${done}/${total}...';
+  @override
+  String web_video_mine_queue_finished(
+          {required Object ok, required Object failed}) =>
+      'Cards created: ${ok}, failed: ${failed}';
 }
 
 // Path: <root>
@@ -59690,6 +59786,23 @@ class _StringsIt extends _StringsEn {
   @override
   String get web_video_platform_unsupported =>
       'The built-in web player is only available on Windows for now.';
+  @override
+  String get web_video_mine_queue_run => 'Create queued cards';
+  @override
+  String get web_video_mine_queue_stop => 'Stop card creation';
+  @override
+  String get web_video_mine_queue_empty => 'No queued cards';
+  @override
+  String web_video_mine_queued({required Object count}) =>
+      'Queued for card creation (${count} pending)';
+  @override
+  String web_video_mine_queue_running(
+          {required Object done, required Object total}) =>
+      'Creating cards ${done}/${total}...';
+  @override
+  String web_video_mine_queue_finished(
+          {required Object ok, required Object failed}) =>
+      'Cards created: ${ok}, failed: ${failed}';
 }
 
 // Path: <root>
@@ -68226,6 +68339,23 @@ class _StringsJa extends _StringsEn {
   @override
   String get web_video_platform_unsupported =>
       'The built-in web player is only available on Windows for now.';
+  @override
+  String get web_video_mine_queue_run => 'Create queued cards';
+  @override
+  String get web_video_mine_queue_stop => 'Stop card creation';
+  @override
+  String get web_video_mine_queue_empty => 'No queued cards';
+  @override
+  String web_video_mine_queued({required Object count}) =>
+      'Queued for card creation (${count} pending)';
+  @override
+  String web_video_mine_queue_running(
+          {required Object done, required Object total}) =>
+      'Creating cards ${done}/${total}...';
+  @override
+  String web_video_mine_queue_finished(
+          {required Object ok, required Object failed}) =>
+      'Cards created: ${ok}, failed: ${failed}';
 }
 
 // Path: <root>
@@ -76776,6 +76906,23 @@ class _StringsKo extends _StringsEn {
   @override
   String get web_video_platform_unsupported =>
       'The built-in web player is only available on Windows for now.';
+  @override
+  String get web_video_mine_queue_run => 'Create queued cards';
+  @override
+  String get web_video_mine_queue_stop => 'Stop card creation';
+  @override
+  String get web_video_mine_queue_empty => 'No queued cards';
+  @override
+  String web_video_mine_queued({required Object count}) =>
+      'Queued for card creation (${count} pending)';
+  @override
+  String web_video_mine_queue_running(
+          {required Object done, required Object total}) =>
+      'Creating cards ${done}/${total}...';
+  @override
+  String web_video_mine_queue_finished(
+          {required Object ok, required Object failed}) =>
+      'Cards created: ${ok}, failed: ${failed}';
 }
 
 // Path: <root>
@@ -85823,6 +85970,23 @@ class _StringsNl extends _StringsEn {
   @override
   String get web_video_platform_unsupported =>
       'The built-in web player is only available on Windows for now.';
+  @override
+  String get web_video_mine_queue_run => 'Create queued cards';
+  @override
+  String get web_video_mine_queue_stop => 'Stop card creation';
+  @override
+  String get web_video_mine_queue_empty => 'No queued cards';
+  @override
+  String web_video_mine_queued({required Object count}) =>
+      'Queued for card creation (${count} pending)';
+  @override
+  String web_video_mine_queue_running(
+          {required Object done, required Object total}) =>
+      'Creating cards ${done}/${total}...';
+  @override
+  String web_video_mine_queue_finished(
+          {required Object ok, required Object failed}) =>
+      'Cards created: ${ok}, failed: ${failed}';
 }
 
 // Path: <root>
@@ -94926,6 +95090,23 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get web_video_platform_unsupported =>
       'The built-in web player is only available on Windows for now.';
+  @override
+  String get web_video_mine_queue_run => 'Create queued cards';
+  @override
+  String get web_video_mine_queue_stop => 'Stop card creation';
+  @override
+  String get web_video_mine_queue_empty => 'No queued cards';
+  @override
+  String web_video_mine_queued({required Object count}) =>
+      'Queued for card creation (${count} pending)';
+  @override
+  String web_video_mine_queue_running(
+          {required Object done, required Object total}) =>
+      'Creating cards ${done}/${total}...';
+  @override
+  String web_video_mine_queue_finished(
+          {required Object ok, required Object failed}) =>
+      'Cards created: ${ok}, failed: ${failed}';
 }
 
 // Path: <root>
@@ -104005,6 +104186,23 @@ class _StringsRu extends _StringsEn {
   @override
   String get web_video_platform_unsupported =>
       'The built-in web player is only available on Windows for now.';
+  @override
+  String get web_video_mine_queue_run => 'Create queued cards';
+  @override
+  String get web_video_mine_queue_stop => 'Stop card creation';
+  @override
+  String get web_video_mine_queue_empty => 'No queued cards';
+  @override
+  String web_video_mine_queued({required Object count}) =>
+      'Queued for card creation (${count} pending)';
+  @override
+  String web_video_mine_queue_running(
+          {required Object done, required Object total}) =>
+      'Creating cards ${done}/${total}...';
+  @override
+  String web_video_mine_queue_finished(
+          {required Object ok, required Object failed}) =>
+      'Cards created: ${ok}, failed: ${failed}';
 }
 
 // Path: <root>
@@ -112902,6 +113100,23 @@ class _StringsTh extends _StringsEn {
   @override
   String get web_video_platform_unsupported =>
       'The built-in web player is only available on Windows for now.';
+  @override
+  String get web_video_mine_queue_run => 'Create queued cards';
+  @override
+  String get web_video_mine_queue_stop => 'Stop card creation';
+  @override
+  String get web_video_mine_queue_empty => 'No queued cards';
+  @override
+  String web_video_mine_queued({required Object count}) =>
+      'Queued for card creation (${count} pending)';
+  @override
+  String web_video_mine_queue_running(
+          {required Object done, required Object total}) =>
+      'Creating cards ${done}/${total}...';
+  @override
+  String web_video_mine_queue_finished(
+          {required Object ok, required Object failed}) =>
+      'Cards created: ${ok}, failed: ${failed}';
 }
 
 // Path: <root>
@@ -121902,6 +122117,23 @@ class _StringsTr extends _StringsEn {
   @override
   String get web_video_platform_unsupported =>
       'The built-in web player is only available on Windows for now.';
+  @override
+  String get web_video_mine_queue_run => 'Create queued cards';
+  @override
+  String get web_video_mine_queue_stop => 'Stop card creation';
+  @override
+  String get web_video_mine_queue_empty => 'No queued cards';
+  @override
+  String web_video_mine_queued({required Object count}) =>
+      'Queued for card creation (${count} pending)';
+  @override
+  String web_video_mine_queue_running(
+          {required Object done, required Object total}) =>
+      'Creating cards ${done}/${total}...';
+  @override
+  String web_video_mine_queue_finished(
+          {required Object ok, required Object failed}) =>
+      'Cards created: ${ok}, failed: ${failed}';
 }
 
 // Path: <root>
@@ -130884,6 +131116,23 @@ class _StringsVi extends _StringsEn {
   @override
   String get web_video_platform_unsupported =>
       'The built-in web player is only available on Windows for now.';
+  @override
+  String get web_video_mine_queue_run => 'Create queued cards';
+  @override
+  String get web_video_mine_queue_stop => 'Stop card creation';
+  @override
+  String get web_video_mine_queue_empty => 'No queued cards';
+  @override
+  String web_video_mine_queued({required Object count}) =>
+      'Queued for card creation (${count} pending)';
+  @override
+  String web_video_mine_queue_running(
+          {required Object done, required Object total}) =>
+      'Creating cards ${done}/${total}...';
+  @override
+  String web_video_mine_queue_finished(
+          {required Object ok, required Object failed}) =>
+      'Cards created: ${ok}, failed: ${failed}';
 }
 
 // Path: <root>
@@ -139145,6 +139394,23 @@ class _StringsZhCn extends _StringsEn {
   String get web_video_import_hint => '这是网页地址（非直链），将用内置网页播放器打开。';
   @override
   String get web_video_platform_unsupported => '内置网页播放器目前仅支持 Windows。';
+  @override
+  String get web_video_mine_queue_run => '制作队列中的卡片';
+  @override
+  String get web_video_mine_queue_stop => '停止制卡';
+  @override
+  String get web_video_mine_queue_empty => '制卡队列为空';
+  @override
+  String web_video_mine_queued({required Object count}) =>
+      '已加入制卡队列（待制 ${count} 张）';
+  @override
+  String web_video_mine_queue_running(
+          {required Object done, required Object total}) =>
+      '制卡中 ${done}/${total}…';
+  @override
+  String web_video_mine_queue_finished(
+          {required Object ok, required Object failed}) =>
+      '制卡完成：成功 ${ok}，失败 ${failed}';
 }
 
 // Path: <root>
@@ -147414,6 +147680,23 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get web_video_platform_unsupported =>
       'The built-in web player is only available on Windows for now.';
+  @override
+  String get web_video_mine_queue_run => 'Create queued cards';
+  @override
+  String get web_video_mine_queue_stop => 'Stop card creation';
+  @override
+  String get web_video_mine_queue_empty => 'No queued cards';
+  @override
+  String web_video_mine_queued({required Object count}) =>
+      'Queued for card creation (${count} pending)';
+  @override
+  String web_video_mine_queue_running(
+          {required Object done, required Object total}) =>
+      'Creating cards ${done}/${total}...';
+  @override
+  String web_video_mine_queue_finished(
+          {required Object ok, required Object failed}) =>
+      'Cards created: ${ok}, failed: ${failed}';
 }
 
 /// Flat map(s) containing all translations.
@@ -155296,6 +155579,21 @@ extension on _StringsEn {
         return 'This is a web page (not a direct stream). It will open in the built-in web player.';
       case 'web_video_platform_unsupported':
         return 'The built-in web player is only available on Windows for now.';
+      case 'web_video_mine_queue_run':
+        return 'Create queued cards';
+      case 'web_video_mine_queue_stop':
+        return 'Stop card creation';
+      case 'web_video_mine_queue_empty':
+        return 'No queued cards';
+      case 'web_video_mine_queued':
+        return ({required Object count}) =>
+            'Queued for card creation (${count} pending)';
+      case 'web_video_mine_queue_running':
+        return ({required Object done, required Object total}) =>
+            'Creating cards ${done}/${total}...';
+      case 'web_video_mine_queue_finished':
+        return ({required Object ok, required Object failed}) =>
+            'Cards created: ${ok}, failed: ${failed}';
       default:
         return null;
     }
@@ -163174,6 +163472,21 @@ extension on _StringsAr {
         return 'This is a web page (not a direct stream). It will open in the built-in web player.';
       case 'web_video_platform_unsupported':
         return 'The built-in web player is only available on Windows for now.';
+      case 'web_video_mine_queue_run':
+        return 'Create queued cards';
+      case 'web_video_mine_queue_stop':
+        return 'Stop card creation';
+      case 'web_video_mine_queue_empty':
+        return 'No queued cards';
+      case 'web_video_mine_queued':
+        return ({required Object count}) =>
+            'Queued for card creation (${count} pending)';
+      case 'web_video_mine_queue_running':
+        return ({required Object done, required Object total}) =>
+            'Creating cards ${done}/${total}...';
+      case 'web_video_mine_queue_finished':
+        return ({required Object ok, required Object failed}) =>
+            'Cards created: ${ok}, failed: ${failed}';
       default:
         return null;
     }
@@ -171095,6 +171408,21 @@ extension on _StringsDe {
         return 'This is a web page (not a direct stream). It will open in the built-in web player.';
       case 'web_video_platform_unsupported':
         return 'The built-in web player is only available on Windows for now.';
+      case 'web_video_mine_queue_run':
+        return 'Create queued cards';
+      case 'web_video_mine_queue_stop':
+        return 'Stop card creation';
+      case 'web_video_mine_queue_empty':
+        return 'No queued cards';
+      case 'web_video_mine_queued':
+        return ({required Object count}) =>
+            'Queued for card creation (${count} pending)';
+      case 'web_video_mine_queue_running':
+        return ({required Object done, required Object total}) =>
+            'Creating cards ${done}/${total}...';
+      case 'web_video_mine_queue_finished':
+        return ({required Object ok, required Object failed}) =>
+            'Cards created: ${ok}, failed: ${failed}';
       default:
         return null;
     }
@@ -179008,6 +179336,21 @@ extension on _StringsEs {
         return 'This is a web page (not a direct stream). It will open in the built-in web player.';
       case 'web_video_platform_unsupported':
         return 'The built-in web player is only available on Windows for now.';
+      case 'web_video_mine_queue_run':
+        return 'Create queued cards';
+      case 'web_video_mine_queue_stop':
+        return 'Stop card creation';
+      case 'web_video_mine_queue_empty':
+        return 'No queued cards';
+      case 'web_video_mine_queued':
+        return ({required Object count}) =>
+            'Queued for card creation (${count} pending)';
+      case 'web_video_mine_queue_running':
+        return ({required Object done, required Object total}) =>
+            'Creating cards ${done}/${total}...';
+      case 'web_video_mine_queue_finished':
+        return ({required Object ok, required Object failed}) =>
+            'Cards created: ${ok}, failed: ${failed}';
       default:
         return null;
     }
@@ -186929,6 +187272,21 @@ extension on _StringsFr {
         return 'This is a web page (not a direct stream). It will open in the built-in web player.';
       case 'web_video_platform_unsupported':
         return 'The built-in web player is only available on Windows for now.';
+      case 'web_video_mine_queue_run':
+        return 'Create queued cards';
+      case 'web_video_mine_queue_stop':
+        return 'Stop card creation';
+      case 'web_video_mine_queue_empty':
+        return 'No queued cards';
+      case 'web_video_mine_queued':
+        return ({required Object count}) =>
+            'Queued for card creation (${count} pending)';
+      case 'web_video_mine_queue_running':
+        return ({required Object done, required Object total}) =>
+            'Creating cards ${done}/${total}...';
+      case 'web_video_mine_queue_finished':
+        return ({required Object ok, required Object failed}) =>
+            'Cards created: ${ok}, failed: ${failed}';
       default:
         return null;
     }
@@ -194822,6 +195180,21 @@ extension on _StringsId {
         return 'This is a web page (not a direct stream). It will open in the built-in web player.';
       case 'web_video_platform_unsupported':
         return 'The built-in web player is only available on Windows for now.';
+      case 'web_video_mine_queue_run':
+        return 'Create queued cards';
+      case 'web_video_mine_queue_stop':
+        return 'Stop card creation';
+      case 'web_video_mine_queue_empty':
+        return 'No queued cards';
+      case 'web_video_mine_queued':
+        return ({required Object count}) =>
+            'Queued for card creation (${count} pending)';
+      case 'web_video_mine_queue_running':
+        return ({required Object done, required Object total}) =>
+            'Creating cards ${done}/${total}...';
+      case 'web_video_mine_queue_finished':
+        return ({required Object ok, required Object failed}) =>
+            'Cards created: ${ok}, failed: ${failed}';
       default:
         return null;
     }
@@ -202736,6 +203109,21 @@ extension on _StringsIt {
         return 'This is a web page (not a direct stream). It will open in the built-in web player.';
       case 'web_video_platform_unsupported':
         return 'The built-in web player is only available on Windows for now.';
+      case 'web_video_mine_queue_run':
+        return 'Create queued cards';
+      case 'web_video_mine_queue_stop':
+        return 'Stop card creation';
+      case 'web_video_mine_queue_empty':
+        return 'No queued cards';
+      case 'web_video_mine_queued':
+        return ({required Object count}) =>
+            'Queued for card creation (${count} pending)';
+      case 'web_video_mine_queue_running':
+        return ({required Object done, required Object total}) =>
+            'Creating cards ${done}/${total}...';
+      case 'web_video_mine_queue_finished':
+        return ({required Object ok, required Object failed}) =>
+            'Cards created: ${ok}, failed: ${failed}';
       default:
         return null;
     }
@@ -210583,6 +210971,21 @@ extension on _StringsJa {
         return 'This is a web page (not a direct stream). It will open in the built-in web player.';
       case 'web_video_platform_unsupported':
         return 'The built-in web player is only available on Windows for now.';
+      case 'web_video_mine_queue_run':
+        return 'Create queued cards';
+      case 'web_video_mine_queue_stop':
+        return 'Stop card creation';
+      case 'web_video_mine_queue_empty':
+        return 'No queued cards';
+      case 'web_video_mine_queued':
+        return ({required Object count}) =>
+            'Queued for card creation (${count} pending)';
+      case 'web_video_mine_queue_running':
+        return ({required Object done, required Object total}) =>
+            'Creating cards ${done}/${total}...';
+      case 'web_video_mine_queue_finished':
+        return ({required Object ok, required Object failed}) =>
+            'Cards created: ${ok}, failed: ${failed}';
       default:
         return null;
     }
@@ -218432,6 +218835,21 @@ extension on _StringsKo {
         return 'This is a web page (not a direct stream). It will open in the built-in web player.';
       case 'web_video_platform_unsupported':
         return 'The built-in web player is only available on Windows for now.';
+      case 'web_video_mine_queue_run':
+        return 'Create queued cards';
+      case 'web_video_mine_queue_stop':
+        return 'Stop card creation';
+      case 'web_video_mine_queue_empty':
+        return 'No queued cards';
+      case 'web_video_mine_queued':
+        return ({required Object count}) =>
+            'Queued for card creation (${count} pending)';
+      case 'web_video_mine_queue_running':
+        return ({required Object done, required Object total}) =>
+            'Creating cards ${done}/${total}...';
+      case 'web_video_mine_queue_finished':
+        return ({required Object ok, required Object failed}) =>
+            'Cards created: ${ok}, failed: ${failed}';
       default:
         return null;
     }
@@ -226340,6 +226758,21 @@ extension on _StringsNl {
         return 'This is a web page (not a direct stream). It will open in the built-in web player.';
       case 'web_video_platform_unsupported':
         return 'The built-in web player is only available on Windows for now.';
+      case 'web_video_mine_queue_run':
+        return 'Create queued cards';
+      case 'web_video_mine_queue_stop':
+        return 'Stop card creation';
+      case 'web_video_mine_queue_empty':
+        return 'No queued cards';
+      case 'web_video_mine_queued':
+        return ({required Object count}) =>
+            'Queued for card creation (${count} pending)';
+      case 'web_video_mine_queue_running':
+        return ({required Object done, required Object total}) =>
+            'Creating cards ${done}/${total}...';
+      case 'web_video_mine_queue_finished':
+        return ({required Object ok, required Object failed}) =>
+            'Cards created: ${ok}, failed: ${failed}';
       default:
         return null;
     }
@@ -234243,6 +234676,21 @@ extension on _StringsPtBr {
         return 'This is a web page (not a direct stream). It will open in the built-in web player.';
       case 'web_video_platform_unsupported':
         return 'The built-in web player is only available on Windows for now.';
+      case 'web_video_mine_queue_run':
+        return 'Create queued cards';
+      case 'web_video_mine_queue_stop':
+        return 'Stop card creation';
+      case 'web_video_mine_queue_empty':
+        return 'No queued cards';
+      case 'web_video_mine_queued':
+        return ({required Object count}) =>
+            'Queued for card creation (${count} pending)';
+      case 'web_video_mine_queue_running':
+        return ({required Object done, required Object total}) =>
+            'Creating cards ${done}/${total}...';
+      case 'web_video_mine_queue_finished':
+        return ({required Object ok, required Object failed}) =>
+            'Cards created: ${ok}, failed: ${failed}';
       default:
         return null;
     }
@@ -242152,6 +242600,21 @@ extension on _StringsRu {
         return 'This is a web page (not a direct stream). It will open in the built-in web player.';
       case 'web_video_platform_unsupported':
         return 'The built-in web player is only available on Windows for now.';
+      case 'web_video_mine_queue_run':
+        return 'Create queued cards';
+      case 'web_video_mine_queue_stop':
+        return 'Stop card creation';
+      case 'web_video_mine_queue_empty':
+        return 'No queued cards';
+      case 'web_video_mine_queued':
+        return ({required Object count}) =>
+            'Queued for card creation (${count} pending)';
+      case 'web_video_mine_queue_running':
+        return ({required Object done, required Object total}) =>
+            'Creating cards ${done}/${total}...';
+      case 'web_video_mine_queue_finished':
+        return ({required Object ok, required Object failed}) =>
+            'Cards created: ${ok}, failed: ${failed}';
       default:
         return null;
     }
@@ -250033,6 +250496,21 @@ extension on _StringsTh {
         return 'This is a web page (not a direct stream). It will open in the built-in web player.';
       case 'web_video_platform_unsupported':
         return 'The built-in web player is only available on Windows for now.';
+      case 'web_video_mine_queue_run':
+        return 'Create queued cards';
+      case 'web_video_mine_queue_stop':
+        return 'Stop card creation';
+      case 'web_video_mine_queue_empty':
+        return 'No queued cards';
+      case 'web_video_mine_queued':
+        return ({required Object count}) =>
+            'Queued for card creation (${count} pending)';
+      case 'web_video_mine_queue_running':
+        return ({required Object done, required Object total}) =>
+            'Creating cards ${done}/${total}...';
+      case 'web_video_mine_queue_finished':
+        return ({required Object ok, required Object failed}) =>
+            'Cards created: ${ok}, failed: ${failed}';
       default:
         return null;
     }
@@ -257931,6 +258409,21 @@ extension on _StringsTr {
         return 'This is a web page (not a direct stream). It will open in the built-in web player.';
       case 'web_video_platform_unsupported':
         return 'The built-in web player is only available on Windows for now.';
+      case 'web_video_mine_queue_run':
+        return 'Create queued cards';
+      case 'web_video_mine_queue_stop':
+        return 'Stop card creation';
+      case 'web_video_mine_queue_empty':
+        return 'No queued cards';
+      case 'web_video_mine_queued':
+        return ({required Object count}) =>
+            'Queued for card creation (${count} pending)';
+      case 'web_video_mine_queue_running':
+        return ({required Object done, required Object total}) =>
+            'Creating cards ${done}/${total}...';
+      case 'web_video_mine_queue_finished':
+        return ({required Object ok, required Object failed}) =>
+            'Cards created: ${ok}, failed: ${failed}';
       default:
         return null;
     }
@@ -265822,6 +266315,21 @@ extension on _StringsVi {
         return 'This is a web page (not a direct stream). It will open in the built-in web player.';
       case 'web_video_platform_unsupported':
         return 'The built-in web player is only available on Windows for now.';
+      case 'web_video_mine_queue_run':
+        return 'Create queued cards';
+      case 'web_video_mine_queue_stop':
+        return 'Stop card creation';
+      case 'web_video_mine_queue_empty':
+        return 'No queued cards';
+      case 'web_video_mine_queued':
+        return ({required Object count}) =>
+            'Queued for card creation (${count} pending)';
+      case 'web_video_mine_queue_running':
+        return ({required Object done, required Object total}) =>
+            'Creating cards ${done}/${total}...';
+      case 'web_video_mine_queue_finished':
+        return ({required Object ok, required Object failed}) =>
+            'Cards created: ${ok}, failed: ${failed}';
       default:
         return null;
     }
@@ -273647,6 +274155,20 @@ extension on _StringsZhCn {
         return '这是网页地址（非直链），将用内置网页播放器打开。';
       case 'web_video_platform_unsupported':
         return '内置网页播放器目前仅支持 Windows。';
+      case 'web_video_mine_queue_run':
+        return '制作队列中的卡片';
+      case 'web_video_mine_queue_stop':
+        return '停止制卡';
+      case 'web_video_mine_queue_empty':
+        return '制卡队列为空';
+      case 'web_video_mine_queued':
+        return ({required Object count}) => '已加入制卡队列（待制 ${count} 张）';
+      case 'web_video_mine_queue_running':
+        return ({required Object done, required Object total}) =>
+            '制卡中 ${done}/${total}…';
+      case 'web_video_mine_queue_finished':
+        return ({required Object ok, required Object failed}) =>
+            '制卡完成：成功 ${ok}，失败 ${failed}';
       default:
         return null;
     }
@@ -281473,6 +281995,21 @@ extension on _StringsZhHk {
         return 'This is a web page (not a direct stream). It will open in the built-in web player.';
       case 'web_video_platform_unsupported':
         return 'The built-in web player is only available on Windows for now.';
+      case 'web_video_mine_queue_run':
+        return 'Create queued cards';
+      case 'web_video_mine_queue_stop':
+        return 'Stop card creation';
+      case 'web_video_mine_queue_empty':
+        return 'No queued cards';
+      case 'web_video_mine_queued':
+        return ({required Object count}) =>
+            'Queued for card creation (${count} pending)';
+      case 'web_video_mine_queue_running':
+        return ({required Object done, required Object total}) =>
+            'Creating cards ${done}/${total}...';
+      case 'web_video_mine_queue_finished':
+        return ({required Object ok, required Object failed}) =>
+            'Cards created: ${ok}, failed: ${failed}';
       default:
         return null;
     }
