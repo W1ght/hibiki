@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 65722 (3866 per locale)
+/// Strings: 65739 (3867 per locale)
 ///
-/// Built on 2026-08-29 at 13:32 UTC
+/// Built on 2026-08-29 at 14:27 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5265,6 +5265,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Read to page ${page} of ${total}';
   String manga_series_read_progress_partial({required Object page}) =>
       'Read to page ${page}';
+  String get options_website => 'Visit the official website';
 }
 
 // Path: <root>
@@ -14225,6 +14226,8 @@ class _StringsAr extends _StringsEn {
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       'تمت القراءة حتى الصفحة ${page}';
+  @override
+  String get options_website => 'زيارة الموقع الرسمي';
 }
 
 // Path: <root>
@@ -23394,6 +23397,8 @@ class _StringsDe extends _StringsEn {
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       'Bis Seite ${page} gelesen';
+  @override
+  String get options_website => 'Offizielle Website besuchen';
 }
 
 // Path: <root>
@@ -32607,6 +32612,8 @@ class _StringsEs extends _StringsEn {
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       'Leído hasta la página ${page}';
+  @override
+  String get options_website => 'Visitar el sitio web oficial';
 }
 
 // Path: <root>
@@ -41854,6 +41861,8 @@ class _StringsFr extends _StringsEn {
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       'Lu jusqu\'à la page ${page}';
+  @override
+  String get options_website => 'Visiter le site officiel';
 }
 
 // Path: <root>
@@ -50927,6 +50936,8 @@ class _StringsId extends _StringsEn {
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       'Dibaca sampai halaman ${page}';
+  @override
+  String get options_website => 'Kunjungi situs web resmi';
 }
 
 // Path: <root>
@@ -60077,6 +60088,8 @@ class _StringsIt extends _StringsEn {
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       'Letto fino a pagina ${page}';
+  @override
+  String get options_website => 'Visita il sito ufficiale';
 }
 
 // Path: <root>
@@ -68667,6 +68680,8 @@ class _StringsJa extends _StringsEn {
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       '${page} ページまで';
+  @override
+  String get options_website => '公式サイトを開く';
 }
 
 // Path: <root>
@@ -77272,6 +77287,8 @@ class _StringsKo extends _StringsEn {
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       '${page}페이지까지 읽음';
+  @override
+  String get options_website => '공식 웹사이트 방문';
 }
 
 // Path: <root>
@@ -86379,6 +86396,8 @@ class _StringsNl extends _StringsEn {
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       'Gelezen tot pagina ${page}';
+  @override
+  String get options_website => 'Officiële website bezoeken';
 }
 
 // Path: <root>
@@ -95542,6 +95561,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       'Lido até a página ${page}';
+  @override
+  String get options_website => 'Visitar o site oficial';
 }
 
 // Path: <root>
@@ -104679,6 +104700,8 @@ class _StringsRu extends _StringsEn {
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       'Прочитано до страницы ${page}';
+  @override
+  String get options_website => 'Открыть официальный сайт';
 }
 
 // Path: <root>
@@ -113634,6 +113657,8 @@ class _StringsTh extends _StringsEn {
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       'อ่านถึงหน้า ${page}';
+  @override
+  String get options_website => 'เยี่ยมชมเว็บไซต์ทางการ';
 }
 
 // Path: <root>
@@ -122692,6 +122717,8 @@ class _StringsTr extends _StringsEn {
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       '${page}. sayfaya kadar okundu';
+  @override
+  String get options_website => 'Resmî web sitesini ziyaret et';
 }
 
 // Path: <root>
@@ -131732,6 +131759,8 @@ class _StringsVi extends _StringsEn {
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       'Đã đọc đến trang ${page}';
+  @override
+  String get options_website => 'Truy cập trang web chính thức';
 }
 
 // Path: <root>
@@ -140049,6 +140078,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       '读到第 ${page} 页';
+  @override
+  String get options_website => '访问官网';
 }
 
 // Path: <root>
@@ -148372,6 +148403,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       '讀到第 ${page} 頁';
+  @override
+  String get options_website => '瀏覽官方網站';
 }
 
 /// Flat map(s) containing all translations.
@@ -156307,6 +156340,8 @@ extension on _StringsEn {
             'Read to page ${page} of ${total}';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'Read to page ${page}';
+      case 'options_website':
+        return 'Visit the official website';
       default:
         return null;
     }
@@ -164238,6 +164273,8 @@ extension on _StringsAr {
             'تمت القراءة حتى الصفحة ${page} من ${total}';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'تمت القراءة حتى الصفحة ${page}';
+      case 'options_website':
+        return 'زيارة الموقع الرسمي';
       default:
         return null;
     }
@@ -172212,6 +172249,8 @@ extension on _StringsDe {
             'Bis Seite ${page} von ${total} gelesen';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'Bis Seite ${page} gelesen';
+      case 'options_website':
+        return 'Offizielle Website besuchen';
       default:
         return null;
     }
@@ -180178,6 +180217,8 @@ extension on _StringsEs {
             'Leído hasta la página ${page} de ${total}';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'Leído hasta la página ${page}';
+      case 'options_website':
+        return 'Visitar el sitio web oficial';
       default:
         return null;
     }
@@ -188152,6 +188193,8 @@ extension on _StringsFr {
             'Lu jusqu\'à la page ${page} sur ${total}';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'Lu jusqu\'à la page ${page}';
+      case 'options_website':
+        return 'Visiter le site officiel';
       default:
         return null;
     }
@@ -196098,6 +196141,8 @@ extension on _StringsId {
             'Dibaca sampai halaman ${page} dari ${total}';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'Dibaca sampai halaman ${page}';
+      case 'options_website':
+        return 'Kunjungi situs web resmi';
       default:
         return null;
     }
@@ -204065,6 +204110,8 @@ extension on _StringsIt {
             'Letto fino a pagina ${page} di ${total}';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'Letto fino a pagina ${page}';
+      case 'options_website':
+        return 'Visita il sito ufficiale';
       default:
         return null;
     }
@@ -211965,6 +212012,8 @@ extension on _StringsJa {
             '${total} ページ中 ${page} ページまで';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => '${page} ページまで';
+      case 'options_website':
+        return '公式サイトを開く';
       default:
         return null;
     }
@@ -219867,6 +219916,8 @@ extension on _StringsKo {
             '${total}페이지 중 ${page}페이지까지 읽음';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => '${page}페이지까지 읽음';
+      case 'options_website':
+        return '공식 웹사이트 방문';
       default:
         return null;
     }
@@ -227828,6 +227879,8 @@ extension on _StringsNl {
             'Gelezen tot pagina ${page} van ${total}';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'Gelezen tot pagina ${page}';
+      case 'options_website':
+        return 'Officiële website bezoeken';
       default:
         return null;
     }
@@ -235784,6 +235837,8 @@ extension on _StringsPtBr {
             'Lido até a página ${page} de ${total}';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'Lido até a página ${page}';
+      case 'options_website':
+        return 'Visitar o site oficial';
       default:
         return null;
     }
@@ -243746,6 +243801,8 @@ extension on _StringsRu {
             'Прочитано до страницы ${page} из ${total}';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'Прочитано до страницы ${page}';
+      case 'options_website':
+        return 'Открыть официальный сайт';
       default:
         return null;
     }
@@ -251680,6 +251737,8 @@ extension on _StringsTh {
             'อ่านถึงหน้า ${page} จาก ${total}';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'อ่านถึงหน้า ${page}';
+      case 'options_website':
+        return 'เยี่ยมชมเว็บไซต์ทางการ';
       default:
         return null;
     }
@@ -259631,6 +259690,8 @@ extension on _StringsTr {
             '${total} sayfadan ${page}. sayfaya kadar okundu';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => '${page}. sayfaya kadar okundu';
+      case 'options_website':
+        return 'Resmî web sitesini ziyaret et';
       default:
         return null;
     }
@@ -267575,6 +267636,8 @@ extension on _StringsVi {
             'Đã đọc đến trang ${page} trên ${total}';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'Đã đọc đến trang ${page}';
+      case 'options_website':
+        return 'Truy cập trang web chính thức';
       default:
         return null;
     }
@@ -275453,6 +275516,8 @@ extension on _StringsZhCn {
             '读到第 ${page}/${total} 页';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => '读到第 ${page} 页';
+      case 'options_website':
+        return '访问官网';
       default:
         return null;
     }
@@ -283332,6 +283397,8 @@ extension on _StringsZhHk {
             '讀到第 ${page}/${total} 頁';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => '讀到第 ${page} 頁';
+      case 'options_website':
+        return '瀏覽官方網站';
       default:
         return null;
     }
