@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 68272 (4016 per locale)
+/// Strings: 69258 (4074 per locale)
 ///
-/// Built on 2026-08-30 at 13:08 UTC
+/// Built on 2026-08-30 at 14:06 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5518,6 +5518,75 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Supplement the recommended pack, or import your own dictionaries, audiobooks, and pronunciation sources';
   String get onboarding_step_manual_resources_body =>
       'Use this alongside the recommended pack or on its own. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional supplements.';
+  String get game_lookup_attached_title => 'In-game lookup';
+  String get game_lookup_attached_no_ocr =>
+      'No OCR · horizontal body text only';
+  String get game_lookup_attached_mode => 'Mode';
+  String get game_lookup_attached_mode_auto => 'Auto';
+  String get game_lookup_attached_mode_native_only => 'Native only';
+  String get game_lookup_attached_mode_attached_only => 'Calibrated layer only';
+  String get game_lookup_attached_mode_off => 'Off';
+  String get game_lookup_attached_status => 'State';
+  String get game_lookup_attached_native_status => 'Native';
+  String get game_lookup_attached_provider => 'Provider';
+  String get game_lookup_attached_provider_unknown => 'Not reported';
+  String get game_lookup_attached_profile => 'Profile';
+  String get game_lookup_attached_profile_ready => 'Calibrated';
+  String get game_lookup_attached_profile_missing => 'Not calibrated';
+  String get game_lookup_attached_shield => 'Input shield';
+  String get game_lookup_attached_shield_verified => 'Verified';
+  String get game_lookup_attached_shield_unknown => 'Unknown';
+  String get game_lookup_attached_shield_partial => 'Partial';
+  String get game_lookup_attached_shield_known_uncovered => 'Known uncovered';
+  String get game_lookup_attached_shield_faulted => 'Faulted';
+  String get game_lookup_attached_risk => 'Click risk';
+  String get game_lookup_attached_risk_safe => 'Not authorized';
+  String get game_lookup_attached_risk_pending => 'Confirmation required';
+  String get game_lookup_attached_risk_active =>
+      'Risk accepted · may double-trigger';
+  String get game_lookup_attached_calibrate => 'Calibrate';
+  String get game_lookup_attached_risk_accept => 'Accept click risk';
+  String get game_lookup_attached_profile_clear => 'Clear profile';
+  String get game_lookup_attached_thread_required =>
+      'Select one body-text thread before calibration.';
+  String get game_lookup_attached_risk_title => 'Confirm raw-click risk';
+  String get game_lookup_attached_risk_body =>
+      'The input shield is not verified for this executable. Clicking a glyph may also advance dialogue or trigger a choice. This authorization is stored only for the current executable hash and is revoked after an update.';
+  String get game_lookup_attached_calibration_title => 'Calibrate body text';
+  String get game_lookup_attached_preview => 'Current body text preview';
+  String get game_lookup_attached_body_rect => 'Body rectangle';
+  String get game_lookup_attached_left => 'Left';
+  String get game_lookup_attached_top => 'Top';
+  String get game_lookup_attached_width => 'Width';
+  String get game_lookup_attached_height => 'Height';
+  String get game_lookup_attached_font_family => 'Font family';
+  String get game_lookup_attached_font_size => 'Font size / client height';
+  String get game_lookup_attached_letter_spacing =>
+      'Letter spacing / client height';
+  String get game_lookup_attached_line_height => 'Line height';
+  String get game_lookup_attached_text_align => 'Horizontal alignment';
+  String get game_lookup_attached_vertical_align => 'Vertical alignment';
+  String get game_lookup_attached_align_left => 'Left';
+  String get game_lookup_attached_align_center => 'Center';
+  String get game_lookup_attached_align_right => 'Right';
+  String get game_lookup_attached_align_top => 'Top';
+  String get game_lookup_attached_align_bottom => 'Bottom';
+  String get game_lookup_attached_probes_hint =>
+      'Click the first, middle, and last highlighted glyphs in the game, then confirm each character below.';
+  String get game_lookup_attached_probe_start => 'First glyph';
+  String get game_lookup_attached_probe_middle => 'Middle glyph';
+  String get game_lookup_attached_probe_end => 'Last glyph';
+  String get game_lookup_attached_calibration_commit => 'Save calibration';
+  String get game_lookup_attached_calibration_failed =>
+      'Calibration was not applied. Check the body text, target window, and all three probes.';
+  String get game_lookup_attached_calibration_short_text =>
+      'At least three characters are required for calibration probes.';
+  String get game_lookup_attached_profile_clear_title =>
+      'Clear lookup profile?';
+  String get game_lookup_attached_profile_clear_body =>
+      'The saved rectangle, text layout, and executable-specific click authorization will be removed.';
+  String get game_lookup_attached_probe_waiting =>
+      'Waiting for matching in-game click';
 }
 
 // Path: <root>
@@ -14870,6 +14939,133 @@ class _StringsAr extends _StringsEn {
   @override
   String get onboarding_global_lookup_android_select_body =>
       'اضغط مطولًا على الكلمة نفسها التي تحققت منها، ثم اسحب مقابض التحديد لتغطيها بالكامل.';
+  @override
+  String get game_lookup_attached_title => 'In-game lookup';
+  @override
+  String get game_lookup_attached_no_ocr =>
+      'No OCR · horizontal body text only';
+  @override
+  String get game_lookup_attached_mode => 'Mode';
+  @override
+  String get game_lookup_attached_mode_auto => 'Auto';
+  @override
+  String get game_lookup_attached_mode_native_only => 'Native only';
+  @override
+  String get game_lookup_attached_mode_attached_only => 'Calibrated layer only';
+  @override
+  String get game_lookup_attached_mode_off => 'Off';
+  @override
+  String get game_lookup_attached_status => 'State';
+  @override
+  String get game_lookup_attached_native_status => 'Native';
+  @override
+  String get game_lookup_attached_provider => 'Provider';
+  @override
+  String get game_lookup_attached_provider_unknown => 'Not reported';
+  @override
+  String get game_lookup_attached_profile => 'Profile';
+  @override
+  String get game_lookup_attached_profile_ready => 'Calibrated';
+  @override
+  String get game_lookup_attached_profile_missing => 'Not calibrated';
+  @override
+  String get game_lookup_attached_shield => 'Input shield';
+  @override
+  String get game_lookup_attached_shield_verified => 'Verified';
+  @override
+  String get game_lookup_attached_shield_unknown => 'Unknown';
+  @override
+  String get game_lookup_attached_shield_partial => 'Partial';
+  @override
+  String get game_lookup_attached_shield_known_uncovered => 'Known uncovered';
+  @override
+  String get game_lookup_attached_shield_faulted => 'Faulted';
+  @override
+  String get game_lookup_attached_risk => 'Click risk';
+  @override
+  String get game_lookup_attached_risk_safe => 'Not authorized';
+  @override
+  String get game_lookup_attached_risk_pending => 'Confirmation required';
+  @override
+  String get game_lookup_attached_risk_active =>
+      'Risk accepted · may double-trigger';
+  @override
+  String get game_lookup_attached_calibrate => 'Calibrate';
+  @override
+  String get game_lookup_attached_risk_accept => 'Accept click risk';
+  @override
+  String get game_lookup_attached_profile_clear => 'Clear profile';
+  @override
+  String get game_lookup_attached_thread_required =>
+      'Select one body-text thread before calibration.';
+  @override
+  String get game_lookup_attached_risk_title => 'Confirm raw-click risk';
+  @override
+  String get game_lookup_attached_risk_body =>
+      'The input shield is not verified for this executable. Clicking a glyph may also advance dialogue or trigger a choice. This authorization is stored only for the current executable hash and is revoked after an update.';
+  @override
+  String get game_lookup_attached_calibration_title => 'Calibrate body text';
+  @override
+  String get game_lookup_attached_preview => 'Current body text preview';
+  @override
+  String get game_lookup_attached_body_rect => 'Body rectangle';
+  @override
+  String get game_lookup_attached_left => 'Left';
+  @override
+  String get game_lookup_attached_top => 'Top';
+  @override
+  String get game_lookup_attached_width => 'Width';
+  @override
+  String get game_lookup_attached_height => 'Height';
+  @override
+  String get game_lookup_attached_font_family => 'Font family';
+  @override
+  String get game_lookup_attached_font_size => 'Font size / client height';
+  @override
+  String get game_lookup_attached_letter_spacing =>
+      'Letter spacing / client height';
+  @override
+  String get game_lookup_attached_line_height => 'Line height';
+  @override
+  String get game_lookup_attached_text_align => 'Horizontal alignment';
+  @override
+  String get game_lookup_attached_vertical_align => 'Vertical alignment';
+  @override
+  String get game_lookup_attached_align_left => 'Left';
+  @override
+  String get game_lookup_attached_align_center => 'Center';
+  @override
+  String get game_lookup_attached_align_right => 'Right';
+  @override
+  String get game_lookup_attached_align_top => 'Top';
+  @override
+  String get game_lookup_attached_align_bottom => 'Bottom';
+  @override
+  String get game_lookup_attached_probes_hint =>
+      'Click the first, middle, and last highlighted glyphs in the game, then confirm each character below.';
+  @override
+  String get game_lookup_attached_probe_start => 'First glyph';
+  @override
+  String get game_lookup_attached_probe_middle => 'Middle glyph';
+  @override
+  String get game_lookup_attached_probe_end => 'Last glyph';
+  @override
+  String get game_lookup_attached_calibration_commit => 'Save calibration';
+  @override
+  String get game_lookup_attached_calibration_failed =>
+      'Calibration was not applied. Check the body text, target window, and all three probes.';
+  @override
+  String get game_lookup_attached_calibration_short_text =>
+      'At least three characters are required for calibration probes.';
+  @override
+  String get game_lookup_attached_profile_clear_title =>
+      'Clear lookup profile?';
+  @override
+  String get game_lookup_attached_profile_clear_body =>
+      'The saved rectangle, text layout, and executable-specific click authorization will be removed.';
+  @override
+  String get game_lookup_attached_probe_waiting =>
+      'Waiting for matching in-game click';
 }
 
 // Path: <root>
@@ -24444,6 +24640,133 @@ class _StringsDe extends _StringsEn {
   @override
   String get onboarding_global_lookup_android_select_body =>
       'Halten Sie dasselbe geprüfte Wort gedrückt und ziehen Sie dann die Auswahlpunkte so, dass es vollständig markiert ist.';
+  @override
+  String get game_lookup_attached_title => 'In-game lookup';
+  @override
+  String get game_lookup_attached_no_ocr =>
+      'No OCR · horizontal body text only';
+  @override
+  String get game_lookup_attached_mode => 'Mode';
+  @override
+  String get game_lookup_attached_mode_auto => 'Auto';
+  @override
+  String get game_lookup_attached_mode_native_only => 'Native only';
+  @override
+  String get game_lookup_attached_mode_attached_only => 'Calibrated layer only';
+  @override
+  String get game_lookup_attached_mode_off => 'Off';
+  @override
+  String get game_lookup_attached_status => 'State';
+  @override
+  String get game_lookup_attached_native_status => 'Native';
+  @override
+  String get game_lookup_attached_provider => 'Provider';
+  @override
+  String get game_lookup_attached_provider_unknown => 'Not reported';
+  @override
+  String get game_lookup_attached_profile => 'Profile';
+  @override
+  String get game_lookup_attached_profile_ready => 'Calibrated';
+  @override
+  String get game_lookup_attached_profile_missing => 'Not calibrated';
+  @override
+  String get game_lookup_attached_shield => 'Input shield';
+  @override
+  String get game_lookup_attached_shield_verified => 'Verified';
+  @override
+  String get game_lookup_attached_shield_unknown => 'Unknown';
+  @override
+  String get game_lookup_attached_shield_partial => 'Partial';
+  @override
+  String get game_lookup_attached_shield_known_uncovered => 'Known uncovered';
+  @override
+  String get game_lookup_attached_shield_faulted => 'Faulted';
+  @override
+  String get game_lookup_attached_risk => 'Click risk';
+  @override
+  String get game_lookup_attached_risk_safe => 'Not authorized';
+  @override
+  String get game_lookup_attached_risk_pending => 'Confirmation required';
+  @override
+  String get game_lookup_attached_risk_active =>
+      'Risk accepted · may double-trigger';
+  @override
+  String get game_lookup_attached_calibrate => 'Calibrate';
+  @override
+  String get game_lookup_attached_risk_accept => 'Accept click risk';
+  @override
+  String get game_lookup_attached_profile_clear => 'Clear profile';
+  @override
+  String get game_lookup_attached_thread_required =>
+      'Select one body-text thread before calibration.';
+  @override
+  String get game_lookup_attached_risk_title => 'Confirm raw-click risk';
+  @override
+  String get game_lookup_attached_risk_body =>
+      'The input shield is not verified for this executable. Clicking a glyph may also advance dialogue or trigger a choice. This authorization is stored only for the current executable hash and is revoked after an update.';
+  @override
+  String get game_lookup_attached_calibration_title => 'Calibrate body text';
+  @override
+  String get game_lookup_attached_preview => 'Current body text preview';
+  @override
+  String get game_lookup_attached_body_rect => 'Body rectangle';
+  @override
+  String get game_lookup_attached_left => 'Left';
+  @override
+  String get game_lookup_attached_top => 'Top';
+  @override
+  String get game_lookup_attached_width => 'Width';
+  @override
+  String get game_lookup_attached_height => 'Height';
+  @override
+  String get game_lookup_attached_font_family => 'Font family';
+  @override
+  String get game_lookup_attached_font_size => 'Font size / client height';
+  @override
+  String get game_lookup_attached_letter_spacing =>
+      'Letter spacing / client height';
+  @override
+  String get game_lookup_attached_line_height => 'Line height';
+  @override
+  String get game_lookup_attached_text_align => 'Horizontal alignment';
+  @override
+  String get game_lookup_attached_vertical_align => 'Vertical alignment';
+  @override
+  String get game_lookup_attached_align_left => 'Left';
+  @override
+  String get game_lookup_attached_align_center => 'Center';
+  @override
+  String get game_lookup_attached_align_right => 'Right';
+  @override
+  String get game_lookup_attached_align_top => 'Top';
+  @override
+  String get game_lookup_attached_align_bottom => 'Bottom';
+  @override
+  String get game_lookup_attached_probes_hint =>
+      'Click the first, middle, and last highlighted glyphs in the game, then confirm each character below.';
+  @override
+  String get game_lookup_attached_probe_start => 'First glyph';
+  @override
+  String get game_lookup_attached_probe_middle => 'Middle glyph';
+  @override
+  String get game_lookup_attached_probe_end => 'Last glyph';
+  @override
+  String get game_lookup_attached_calibration_commit => 'Save calibration';
+  @override
+  String get game_lookup_attached_calibration_failed =>
+      'Calibration was not applied. Check the body text, target window, and all three probes.';
+  @override
+  String get game_lookup_attached_calibration_short_text =>
+      'At least three characters are required for calibration probes.';
+  @override
+  String get game_lookup_attached_profile_clear_title =>
+      'Clear lookup profile?';
+  @override
+  String get game_lookup_attached_profile_clear_body =>
+      'The saved rectangle, text layout, and executable-specific click authorization will be removed.';
+  @override
+  String get game_lookup_attached_probe_waiting =>
+      'Waiting for matching in-game click';
 }
 
 // Path: <root>
@@ -34065,6 +34388,133 @@ class _StringsEs extends _StringsEn {
   @override
   String get onboarding_global_lookup_android_select_body =>
       'Mantenga pulsada esa misma palabra comprobada y ajuste los controles de selección para cubrirla entera.';
+  @override
+  String get game_lookup_attached_title => 'In-game lookup';
+  @override
+  String get game_lookup_attached_no_ocr =>
+      'No OCR · horizontal body text only';
+  @override
+  String get game_lookup_attached_mode => 'Mode';
+  @override
+  String get game_lookup_attached_mode_auto => 'Auto';
+  @override
+  String get game_lookup_attached_mode_native_only => 'Native only';
+  @override
+  String get game_lookup_attached_mode_attached_only => 'Calibrated layer only';
+  @override
+  String get game_lookup_attached_mode_off => 'Off';
+  @override
+  String get game_lookup_attached_status => 'State';
+  @override
+  String get game_lookup_attached_native_status => 'Native';
+  @override
+  String get game_lookup_attached_provider => 'Provider';
+  @override
+  String get game_lookup_attached_provider_unknown => 'Not reported';
+  @override
+  String get game_lookup_attached_profile => 'Profile';
+  @override
+  String get game_lookup_attached_profile_ready => 'Calibrated';
+  @override
+  String get game_lookup_attached_profile_missing => 'Not calibrated';
+  @override
+  String get game_lookup_attached_shield => 'Input shield';
+  @override
+  String get game_lookup_attached_shield_verified => 'Verified';
+  @override
+  String get game_lookup_attached_shield_unknown => 'Unknown';
+  @override
+  String get game_lookup_attached_shield_partial => 'Partial';
+  @override
+  String get game_lookup_attached_shield_known_uncovered => 'Known uncovered';
+  @override
+  String get game_lookup_attached_shield_faulted => 'Faulted';
+  @override
+  String get game_lookup_attached_risk => 'Click risk';
+  @override
+  String get game_lookup_attached_risk_safe => 'Not authorized';
+  @override
+  String get game_lookup_attached_risk_pending => 'Confirmation required';
+  @override
+  String get game_lookup_attached_risk_active =>
+      'Risk accepted · may double-trigger';
+  @override
+  String get game_lookup_attached_calibrate => 'Calibrate';
+  @override
+  String get game_lookup_attached_risk_accept => 'Accept click risk';
+  @override
+  String get game_lookup_attached_profile_clear => 'Clear profile';
+  @override
+  String get game_lookup_attached_thread_required =>
+      'Select one body-text thread before calibration.';
+  @override
+  String get game_lookup_attached_risk_title => 'Confirm raw-click risk';
+  @override
+  String get game_lookup_attached_risk_body =>
+      'The input shield is not verified for this executable. Clicking a glyph may also advance dialogue or trigger a choice. This authorization is stored only for the current executable hash and is revoked after an update.';
+  @override
+  String get game_lookup_attached_calibration_title => 'Calibrate body text';
+  @override
+  String get game_lookup_attached_preview => 'Current body text preview';
+  @override
+  String get game_lookup_attached_body_rect => 'Body rectangle';
+  @override
+  String get game_lookup_attached_left => 'Left';
+  @override
+  String get game_lookup_attached_top => 'Top';
+  @override
+  String get game_lookup_attached_width => 'Width';
+  @override
+  String get game_lookup_attached_height => 'Height';
+  @override
+  String get game_lookup_attached_font_family => 'Font family';
+  @override
+  String get game_lookup_attached_font_size => 'Font size / client height';
+  @override
+  String get game_lookup_attached_letter_spacing =>
+      'Letter spacing / client height';
+  @override
+  String get game_lookup_attached_line_height => 'Line height';
+  @override
+  String get game_lookup_attached_text_align => 'Horizontal alignment';
+  @override
+  String get game_lookup_attached_vertical_align => 'Vertical alignment';
+  @override
+  String get game_lookup_attached_align_left => 'Left';
+  @override
+  String get game_lookup_attached_align_center => 'Center';
+  @override
+  String get game_lookup_attached_align_right => 'Right';
+  @override
+  String get game_lookup_attached_align_top => 'Top';
+  @override
+  String get game_lookup_attached_align_bottom => 'Bottom';
+  @override
+  String get game_lookup_attached_probes_hint =>
+      'Click the first, middle, and last highlighted glyphs in the game, then confirm each character below.';
+  @override
+  String get game_lookup_attached_probe_start => 'First glyph';
+  @override
+  String get game_lookup_attached_probe_middle => 'Middle glyph';
+  @override
+  String get game_lookup_attached_probe_end => 'Last glyph';
+  @override
+  String get game_lookup_attached_calibration_commit => 'Save calibration';
+  @override
+  String get game_lookup_attached_calibration_failed =>
+      'Calibration was not applied. Check the body text, target window, and all three probes.';
+  @override
+  String get game_lookup_attached_calibration_short_text =>
+      'At least three characters are required for calibration probes.';
+  @override
+  String get game_lookup_attached_profile_clear_title =>
+      'Clear lookup profile?';
+  @override
+  String get game_lookup_attached_profile_clear_body =>
+      'The saved rectangle, text layout, and executable-specific click authorization will be removed.';
+  @override
+  String get game_lookup_attached_probe_waiting =>
+      'Waiting for matching in-game click';
 }
 
 // Path: <root>
@@ -43721,6 +44171,133 @@ class _StringsFr extends _StringsEn {
   @override
   String get onboarding_global_lookup_android_select_body =>
       'Appuyez longuement sur ce même mot vérifié, puis ajustez les poignées de sélection pour le couvrir entièrement.';
+  @override
+  String get game_lookup_attached_title => 'In-game lookup';
+  @override
+  String get game_lookup_attached_no_ocr =>
+      'No OCR · horizontal body text only';
+  @override
+  String get game_lookup_attached_mode => 'Mode';
+  @override
+  String get game_lookup_attached_mode_auto => 'Auto';
+  @override
+  String get game_lookup_attached_mode_native_only => 'Native only';
+  @override
+  String get game_lookup_attached_mode_attached_only => 'Calibrated layer only';
+  @override
+  String get game_lookup_attached_mode_off => 'Off';
+  @override
+  String get game_lookup_attached_status => 'State';
+  @override
+  String get game_lookup_attached_native_status => 'Native';
+  @override
+  String get game_lookup_attached_provider => 'Provider';
+  @override
+  String get game_lookup_attached_provider_unknown => 'Not reported';
+  @override
+  String get game_lookup_attached_profile => 'Profile';
+  @override
+  String get game_lookup_attached_profile_ready => 'Calibrated';
+  @override
+  String get game_lookup_attached_profile_missing => 'Not calibrated';
+  @override
+  String get game_lookup_attached_shield => 'Input shield';
+  @override
+  String get game_lookup_attached_shield_verified => 'Verified';
+  @override
+  String get game_lookup_attached_shield_unknown => 'Unknown';
+  @override
+  String get game_lookup_attached_shield_partial => 'Partial';
+  @override
+  String get game_lookup_attached_shield_known_uncovered => 'Known uncovered';
+  @override
+  String get game_lookup_attached_shield_faulted => 'Faulted';
+  @override
+  String get game_lookup_attached_risk => 'Click risk';
+  @override
+  String get game_lookup_attached_risk_safe => 'Not authorized';
+  @override
+  String get game_lookup_attached_risk_pending => 'Confirmation required';
+  @override
+  String get game_lookup_attached_risk_active =>
+      'Risk accepted · may double-trigger';
+  @override
+  String get game_lookup_attached_calibrate => 'Calibrate';
+  @override
+  String get game_lookup_attached_risk_accept => 'Accept click risk';
+  @override
+  String get game_lookup_attached_profile_clear => 'Clear profile';
+  @override
+  String get game_lookup_attached_thread_required =>
+      'Select one body-text thread before calibration.';
+  @override
+  String get game_lookup_attached_risk_title => 'Confirm raw-click risk';
+  @override
+  String get game_lookup_attached_risk_body =>
+      'The input shield is not verified for this executable. Clicking a glyph may also advance dialogue or trigger a choice. This authorization is stored only for the current executable hash and is revoked after an update.';
+  @override
+  String get game_lookup_attached_calibration_title => 'Calibrate body text';
+  @override
+  String get game_lookup_attached_preview => 'Current body text preview';
+  @override
+  String get game_lookup_attached_body_rect => 'Body rectangle';
+  @override
+  String get game_lookup_attached_left => 'Left';
+  @override
+  String get game_lookup_attached_top => 'Top';
+  @override
+  String get game_lookup_attached_width => 'Width';
+  @override
+  String get game_lookup_attached_height => 'Height';
+  @override
+  String get game_lookup_attached_font_family => 'Font family';
+  @override
+  String get game_lookup_attached_font_size => 'Font size / client height';
+  @override
+  String get game_lookup_attached_letter_spacing =>
+      'Letter spacing / client height';
+  @override
+  String get game_lookup_attached_line_height => 'Line height';
+  @override
+  String get game_lookup_attached_text_align => 'Horizontal alignment';
+  @override
+  String get game_lookup_attached_vertical_align => 'Vertical alignment';
+  @override
+  String get game_lookup_attached_align_left => 'Left';
+  @override
+  String get game_lookup_attached_align_center => 'Center';
+  @override
+  String get game_lookup_attached_align_right => 'Right';
+  @override
+  String get game_lookup_attached_align_top => 'Top';
+  @override
+  String get game_lookup_attached_align_bottom => 'Bottom';
+  @override
+  String get game_lookup_attached_probes_hint =>
+      'Click the first, middle, and last highlighted glyphs in the game, then confirm each character below.';
+  @override
+  String get game_lookup_attached_probe_start => 'First glyph';
+  @override
+  String get game_lookup_attached_probe_middle => 'Middle glyph';
+  @override
+  String get game_lookup_attached_probe_end => 'Last glyph';
+  @override
+  String get game_lookup_attached_calibration_commit => 'Save calibration';
+  @override
+  String get game_lookup_attached_calibration_failed =>
+      'Calibration was not applied. Check the body text, target window, and all three probes.';
+  @override
+  String get game_lookup_attached_calibration_short_text =>
+      'At least three characters are required for calibration probes.';
+  @override
+  String get game_lookup_attached_profile_clear_title =>
+      'Clear lookup profile?';
+  @override
+  String get game_lookup_attached_profile_clear_body =>
+      'The saved rectangle, text layout, and executable-specific click authorization will be removed.';
+  @override
+  String get game_lookup_attached_probe_waiting =>
+      'Waiting for matching in-game click';
 }
 
 // Path: <root>
@@ -53196,6 +53773,133 @@ class _StringsId extends _StringsEn {
   @override
   String get onboarding_global_lookup_android_select_body =>
       'Tekan lama kata yang sudah dipastikan itu, lalu geser pegangan seleksi agar menutupi seluruh kata.';
+  @override
+  String get game_lookup_attached_title => 'In-game lookup';
+  @override
+  String get game_lookup_attached_no_ocr =>
+      'No OCR · horizontal body text only';
+  @override
+  String get game_lookup_attached_mode => 'Mode';
+  @override
+  String get game_lookup_attached_mode_auto => 'Auto';
+  @override
+  String get game_lookup_attached_mode_native_only => 'Native only';
+  @override
+  String get game_lookup_attached_mode_attached_only => 'Calibrated layer only';
+  @override
+  String get game_lookup_attached_mode_off => 'Off';
+  @override
+  String get game_lookup_attached_status => 'State';
+  @override
+  String get game_lookup_attached_native_status => 'Native';
+  @override
+  String get game_lookup_attached_provider => 'Provider';
+  @override
+  String get game_lookup_attached_provider_unknown => 'Not reported';
+  @override
+  String get game_lookup_attached_profile => 'Profile';
+  @override
+  String get game_lookup_attached_profile_ready => 'Calibrated';
+  @override
+  String get game_lookup_attached_profile_missing => 'Not calibrated';
+  @override
+  String get game_lookup_attached_shield => 'Input shield';
+  @override
+  String get game_lookup_attached_shield_verified => 'Verified';
+  @override
+  String get game_lookup_attached_shield_unknown => 'Unknown';
+  @override
+  String get game_lookup_attached_shield_partial => 'Partial';
+  @override
+  String get game_lookup_attached_shield_known_uncovered => 'Known uncovered';
+  @override
+  String get game_lookup_attached_shield_faulted => 'Faulted';
+  @override
+  String get game_lookup_attached_risk => 'Click risk';
+  @override
+  String get game_lookup_attached_risk_safe => 'Not authorized';
+  @override
+  String get game_lookup_attached_risk_pending => 'Confirmation required';
+  @override
+  String get game_lookup_attached_risk_active =>
+      'Risk accepted · may double-trigger';
+  @override
+  String get game_lookup_attached_calibrate => 'Calibrate';
+  @override
+  String get game_lookup_attached_risk_accept => 'Accept click risk';
+  @override
+  String get game_lookup_attached_profile_clear => 'Clear profile';
+  @override
+  String get game_lookup_attached_thread_required =>
+      'Select one body-text thread before calibration.';
+  @override
+  String get game_lookup_attached_risk_title => 'Confirm raw-click risk';
+  @override
+  String get game_lookup_attached_risk_body =>
+      'The input shield is not verified for this executable. Clicking a glyph may also advance dialogue or trigger a choice. This authorization is stored only for the current executable hash and is revoked after an update.';
+  @override
+  String get game_lookup_attached_calibration_title => 'Calibrate body text';
+  @override
+  String get game_lookup_attached_preview => 'Current body text preview';
+  @override
+  String get game_lookup_attached_body_rect => 'Body rectangle';
+  @override
+  String get game_lookup_attached_left => 'Left';
+  @override
+  String get game_lookup_attached_top => 'Top';
+  @override
+  String get game_lookup_attached_width => 'Width';
+  @override
+  String get game_lookup_attached_height => 'Height';
+  @override
+  String get game_lookup_attached_font_family => 'Font family';
+  @override
+  String get game_lookup_attached_font_size => 'Font size / client height';
+  @override
+  String get game_lookup_attached_letter_spacing =>
+      'Letter spacing / client height';
+  @override
+  String get game_lookup_attached_line_height => 'Line height';
+  @override
+  String get game_lookup_attached_text_align => 'Horizontal alignment';
+  @override
+  String get game_lookup_attached_vertical_align => 'Vertical alignment';
+  @override
+  String get game_lookup_attached_align_left => 'Left';
+  @override
+  String get game_lookup_attached_align_center => 'Center';
+  @override
+  String get game_lookup_attached_align_right => 'Right';
+  @override
+  String get game_lookup_attached_align_top => 'Top';
+  @override
+  String get game_lookup_attached_align_bottom => 'Bottom';
+  @override
+  String get game_lookup_attached_probes_hint =>
+      'Click the first, middle, and last highlighted glyphs in the game, then confirm each character below.';
+  @override
+  String get game_lookup_attached_probe_start => 'First glyph';
+  @override
+  String get game_lookup_attached_probe_middle => 'Middle glyph';
+  @override
+  String get game_lookup_attached_probe_end => 'Last glyph';
+  @override
+  String get game_lookup_attached_calibration_commit => 'Save calibration';
+  @override
+  String get game_lookup_attached_calibration_failed =>
+      'Calibration was not applied. Check the body text, target window, and all three probes.';
+  @override
+  String get game_lookup_attached_calibration_short_text =>
+      'At least three characters are required for calibration probes.';
+  @override
+  String get game_lookup_attached_profile_clear_title =>
+      'Clear lookup profile?';
+  @override
+  String get game_lookup_attached_profile_clear_body =>
+      'The saved rectangle, text layout, and executable-specific click authorization will be removed.';
+  @override
+  String get game_lookup_attached_probe_waiting =>
+      'Waiting for matching in-game click';
 }
 
 // Path: <root>
@@ -62755,6 +63459,133 @@ class _StringsIt extends _StringsEn {
   @override
   String get onboarding_global_lookup_android_select_body =>
       'Tieni premuta la stessa parola verificata, poi sposta le maniglie di selezione per coprirla tutta.';
+  @override
+  String get game_lookup_attached_title => 'In-game lookup';
+  @override
+  String get game_lookup_attached_no_ocr =>
+      'No OCR · horizontal body text only';
+  @override
+  String get game_lookup_attached_mode => 'Mode';
+  @override
+  String get game_lookup_attached_mode_auto => 'Auto';
+  @override
+  String get game_lookup_attached_mode_native_only => 'Native only';
+  @override
+  String get game_lookup_attached_mode_attached_only => 'Calibrated layer only';
+  @override
+  String get game_lookup_attached_mode_off => 'Off';
+  @override
+  String get game_lookup_attached_status => 'State';
+  @override
+  String get game_lookup_attached_native_status => 'Native';
+  @override
+  String get game_lookup_attached_provider => 'Provider';
+  @override
+  String get game_lookup_attached_provider_unknown => 'Not reported';
+  @override
+  String get game_lookup_attached_profile => 'Profile';
+  @override
+  String get game_lookup_attached_profile_ready => 'Calibrated';
+  @override
+  String get game_lookup_attached_profile_missing => 'Not calibrated';
+  @override
+  String get game_lookup_attached_shield => 'Input shield';
+  @override
+  String get game_lookup_attached_shield_verified => 'Verified';
+  @override
+  String get game_lookup_attached_shield_unknown => 'Unknown';
+  @override
+  String get game_lookup_attached_shield_partial => 'Partial';
+  @override
+  String get game_lookup_attached_shield_known_uncovered => 'Known uncovered';
+  @override
+  String get game_lookup_attached_shield_faulted => 'Faulted';
+  @override
+  String get game_lookup_attached_risk => 'Click risk';
+  @override
+  String get game_lookup_attached_risk_safe => 'Not authorized';
+  @override
+  String get game_lookup_attached_risk_pending => 'Confirmation required';
+  @override
+  String get game_lookup_attached_risk_active =>
+      'Risk accepted · may double-trigger';
+  @override
+  String get game_lookup_attached_calibrate => 'Calibrate';
+  @override
+  String get game_lookup_attached_risk_accept => 'Accept click risk';
+  @override
+  String get game_lookup_attached_profile_clear => 'Clear profile';
+  @override
+  String get game_lookup_attached_thread_required =>
+      'Select one body-text thread before calibration.';
+  @override
+  String get game_lookup_attached_risk_title => 'Confirm raw-click risk';
+  @override
+  String get game_lookup_attached_risk_body =>
+      'The input shield is not verified for this executable. Clicking a glyph may also advance dialogue or trigger a choice. This authorization is stored only for the current executable hash and is revoked after an update.';
+  @override
+  String get game_lookup_attached_calibration_title => 'Calibrate body text';
+  @override
+  String get game_lookup_attached_preview => 'Current body text preview';
+  @override
+  String get game_lookup_attached_body_rect => 'Body rectangle';
+  @override
+  String get game_lookup_attached_left => 'Left';
+  @override
+  String get game_lookup_attached_top => 'Top';
+  @override
+  String get game_lookup_attached_width => 'Width';
+  @override
+  String get game_lookup_attached_height => 'Height';
+  @override
+  String get game_lookup_attached_font_family => 'Font family';
+  @override
+  String get game_lookup_attached_font_size => 'Font size / client height';
+  @override
+  String get game_lookup_attached_letter_spacing =>
+      'Letter spacing / client height';
+  @override
+  String get game_lookup_attached_line_height => 'Line height';
+  @override
+  String get game_lookup_attached_text_align => 'Horizontal alignment';
+  @override
+  String get game_lookup_attached_vertical_align => 'Vertical alignment';
+  @override
+  String get game_lookup_attached_align_left => 'Left';
+  @override
+  String get game_lookup_attached_align_center => 'Center';
+  @override
+  String get game_lookup_attached_align_right => 'Right';
+  @override
+  String get game_lookup_attached_align_top => 'Top';
+  @override
+  String get game_lookup_attached_align_bottom => 'Bottom';
+  @override
+  String get game_lookup_attached_probes_hint =>
+      'Click the first, middle, and last highlighted glyphs in the game, then confirm each character below.';
+  @override
+  String get game_lookup_attached_probe_start => 'First glyph';
+  @override
+  String get game_lookup_attached_probe_middle => 'Middle glyph';
+  @override
+  String get game_lookup_attached_probe_end => 'Last glyph';
+  @override
+  String get game_lookup_attached_calibration_commit => 'Save calibration';
+  @override
+  String get game_lookup_attached_calibration_failed =>
+      'Calibration was not applied. Check the body text, target window, and all three probes.';
+  @override
+  String get game_lookup_attached_calibration_short_text =>
+      'At least three characters are required for calibration probes.';
+  @override
+  String get game_lookup_attached_profile_clear_title =>
+      'Clear lookup profile?';
+  @override
+  String get game_lookup_attached_profile_clear_body =>
+      'The saved rectangle, text layout, and executable-specific click authorization will be removed.';
+  @override
+  String get game_lookup_attached_probe_waiting =>
+      'Waiting for matching in-game click';
 }
 
 // Path: <root>
@@ -71723,6 +72554,133 @@ class _StringsJa extends _StringsEn {
   @override
   String get onboarding_global_lookup_android_select_body =>
       '辞書に語義があると確認済みの同じ単語を長押しし、選択ハンドルを動かして単語全体を覆います。';
+  @override
+  String get game_lookup_attached_title => 'In-game lookup';
+  @override
+  String get game_lookup_attached_no_ocr =>
+      'No OCR · horizontal body text only';
+  @override
+  String get game_lookup_attached_mode => 'Mode';
+  @override
+  String get game_lookup_attached_mode_auto => 'Auto';
+  @override
+  String get game_lookup_attached_mode_native_only => 'Native only';
+  @override
+  String get game_lookup_attached_mode_attached_only => 'Calibrated layer only';
+  @override
+  String get game_lookup_attached_mode_off => 'Off';
+  @override
+  String get game_lookup_attached_status => 'State';
+  @override
+  String get game_lookup_attached_native_status => 'Native';
+  @override
+  String get game_lookup_attached_provider => 'Provider';
+  @override
+  String get game_lookup_attached_provider_unknown => 'Not reported';
+  @override
+  String get game_lookup_attached_profile => 'Profile';
+  @override
+  String get game_lookup_attached_profile_ready => 'Calibrated';
+  @override
+  String get game_lookup_attached_profile_missing => 'Not calibrated';
+  @override
+  String get game_lookup_attached_shield => 'Input shield';
+  @override
+  String get game_lookup_attached_shield_verified => 'Verified';
+  @override
+  String get game_lookup_attached_shield_unknown => 'Unknown';
+  @override
+  String get game_lookup_attached_shield_partial => 'Partial';
+  @override
+  String get game_lookup_attached_shield_known_uncovered => 'Known uncovered';
+  @override
+  String get game_lookup_attached_shield_faulted => 'Faulted';
+  @override
+  String get game_lookup_attached_risk => 'Click risk';
+  @override
+  String get game_lookup_attached_risk_safe => 'Not authorized';
+  @override
+  String get game_lookup_attached_risk_pending => 'Confirmation required';
+  @override
+  String get game_lookup_attached_risk_active =>
+      'Risk accepted · may double-trigger';
+  @override
+  String get game_lookup_attached_calibrate => 'Calibrate';
+  @override
+  String get game_lookup_attached_risk_accept => 'Accept click risk';
+  @override
+  String get game_lookup_attached_profile_clear => 'Clear profile';
+  @override
+  String get game_lookup_attached_thread_required =>
+      'Select one body-text thread before calibration.';
+  @override
+  String get game_lookup_attached_risk_title => 'Confirm raw-click risk';
+  @override
+  String get game_lookup_attached_risk_body =>
+      'The input shield is not verified for this executable. Clicking a glyph may also advance dialogue or trigger a choice. This authorization is stored only for the current executable hash and is revoked after an update.';
+  @override
+  String get game_lookup_attached_calibration_title => 'Calibrate body text';
+  @override
+  String get game_lookup_attached_preview => 'Current body text preview';
+  @override
+  String get game_lookup_attached_body_rect => 'Body rectangle';
+  @override
+  String get game_lookup_attached_left => 'Left';
+  @override
+  String get game_lookup_attached_top => 'Top';
+  @override
+  String get game_lookup_attached_width => 'Width';
+  @override
+  String get game_lookup_attached_height => 'Height';
+  @override
+  String get game_lookup_attached_font_family => 'Font family';
+  @override
+  String get game_lookup_attached_font_size => 'Font size / client height';
+  @override
+  String get game_lookup_attached_letter_spacing =>
+      'Letter spacing / client height';
+  @override
+  String get game_lookup_attached_line_height => 'Line height';
+  @override
+  String get game_lookup_attached_text_align => 'Horizontal alignment';
+  @override
+  String get game_lookup_attached_vertical_align => 'Vertical alignment';
+  @override
+  String get game_lookup_attached_align_left => 'Left';
+  @override
+  String get game_lookup_attached_align_center => 'Center';
+  @override
+  String get game_lookup_attached_align_right => 'Right';
+  @override
+  String get game_lookup_attached_align_top => 'Top';
+  @override
+  String get game_lookup_attached_align_bottom => 'Bottom';
+  @override
+  String get game_lookup_attached_probes_hint =>
+      'Click the first, middle, and last highlighted glyphs in the game, then confirm each character below.';
+  @override
+  String get game_lookup_attached_probe_start => 'First glyph';
+  @override
+  String get game_lookup_attached_probe_middle => 'Middle glyph';
+  @override
+  String get game_lookup_attached_probe_end => 'Last glyph';
+  @override
+  String get game_lookup_attached_calibration_commit => 'Save calibration';
+  @override
+  String get game_lookup_attached_calibration_failed =>
+      'Calibration was not applied. Check the body text, target window, and all three probes.';
+  @override
+  String get game_lookup_attached_calibration_short_text =>
+      'At least three characters are required for calibration probes.';
+  @override
+  String get game_lookup_attached_profile_clear_title =>
+      'Clear lookup profile?';
+  @override
+  String get game_lookup_attached_profile_clear_body =>
+      'The saved rectangle, text layout, and executable-specific click authorization will be removed.';
+  @override
+  String get game_lookup_attached_probe_waiting =>
+      'Waiting for matching in-game click';
 }
 
 // Path: <root>
@@ -80702,6 +81660,133 @@ class _StringsKo extends _StringsEn {
   @override
   String get onboarding_global_lookup_android_select_body =>
       '확인한 그 단어를 길게 누른 뒤 선택 핸들을 움직여 단어 전체를 덮으세요.';
+  @override
+  String get game_lookup_attached_title => 'In-game lookup';
+  @override
+  String get game_lookup_attached_no_ocr =>
+      'No OCR · horizontal body text only';
+  @override
+  String get game_lookup_attached_mode => 'Mode';
+  @override
+  String get game_lookup_attached_mode_auto => 'Auto';
+  @override
+  String get game_lookup_attached_mode_native_only => 'Native only';
+  @override
+  String get game_lookup_attached_mode_attached_only => 'Calibrated layer only';
+  @override
+  String get game_lookup_attached_mode_off => 'Off';
+  @override
+  String get game_lookup_attached_status => 'State';
+  @override
+  String get game_lookup_attached_native_status => 'Native';
+  @override
+  String get game_lookup_attached_provider => 'Provider';
+  @override
+  String get game_lookup_attached_provider_unknown => 'Not reported';
+  @override
+  String get game_lookup_attached_profile => 'Profile';
+  @override
+  String get game_lookup_attached_profile_ready => 'Calibrated';
+  @override
+  String get game_lookup_attached_profile_missing => 'Not calibrated';
+  @override
+  String get game_lookup_attached_shield => 'Input shield';
+  @override
+  String get game_lookup_attached_shield_verified => 'Verified';
+  @override
+  String get game_lookup_attached_shield_unknown => 'Unknown';
+  @override
+  String get game_lookup_attached_shield_partial => 'Partial';
+  @override
+  String get game_lookup_attached_shield_known_uncovered => 'Known uncovered';
+  @override
+  String get game_lookup_attached_shield_faulted => 'Faulted';
+  @override
+  String get game_lookup_attached_risk => 'Click risk';
+  @override
+  String get game_lookup_attached_risk_safe => 'Not authorized';
+  @override
+  String get game_lookup_attached_risk_pending => 'Confirmation required';
+  @override
+  String get game_lookup_attached_risk_active =>
+      'Risk accepted · may double-trigger';
+  @override
+  String get game_lookup_attached_calibrate => 'Calibrate';
+  @override
+  String get game_lookup_attached_risk_accept => 'Accept click risk';
+  @override
+  String get game_lookup_attached_profile_clear => 'Clear profile';
+  @override
+  String get game_lookup_attached_thread_required =>
+      'Select one body-text thread before calibration.';
+  @override
+  String get game_lookup_attached_risk_title => 'Confirm raw-click risk';
+  @override
+  String get game_lookup_attached_risk_body =>
+      'The input shield is not verified for this executable. Clicking a glyph may also advance dialogue or trigger a choice. This authorization is stored only for the current executable hash and is revoked after an update.';
+  @override
+  String get game_lookup_attached_calibration_title => 'Calibrate body text';
+  @override
+  String get game_lookup_attached_preview => 'Current body text preview';
+  @override
+  String get game_lookup_attached_body_rect => 'Body rectangle';
+  @override
+  String get game_lookup_attached_left => 'Left';
+  @override
+  String get game_lookup_attached_top => 'Top';
+  @override
+  String get game_lookup_attached_width => 'Width';
+  @override
+  String get game_lookup_attached_height => 'Height';
+  @override
+  String get game_lookup_attached_font_family => 'Font family';
+  @override
+  String get game_lookup_attached_font_size => 'Font size / client height';
+  @override
+  String get game_lookup_attached_letter_spacing =>
+      'Letter spacing / client height';
+  @override
+  String get game_lookup_attached_line_height => 'Line height';
+  @override
+  String get game_lookup_attached_text_align => 'Horizontal alignment';
+  @override
+  String get game_lookup_attached_vertical_align => 'Vertical alignment';
+  @override
+  String get game_lookup_attached_align_left => 'Left';
+  @override
+  String get game_lookup_attached_align_center => 'Center';
+  @override
+  String get game_lookup_attached_align_right => 'Right';
+  @override
+  String get game_lookup_attached_align_top => 'Top';
+  @override
+  String get game_lookup_attached_align_bottom => 'Bottom';
+  @override
+  String get game_lookup_attached_probes_hint =>
+      'Click the first, middle, and last highlighted glyphs in the game, then confirm each character below.';
+  @override
+  String get game_lookup_attached_probe_start => 'First glyph';
+  @override
+  String get game_lookup_attached_probe_middle => 'Middle glyph';
+  @override
+  String get game_lookup_attached_probe_end => 'Last glyph';
+  @override
+  String get game_lookup_attached_calibration_commit => 'Save calibration';
+  @override
+  String get game_lookup_attached_calibration_failed =>
+      'Calibration was not applied. Check the body text, target window, and all three probes.';
+  @override
+  String get game_lookup_attached_calibration_short_text =>
+      'At least three characters are required for calibration probes.';
+  @override
+  String get game_lookup_attached_profile_clear_title =>
+      'Clear lookup profile?';
+  @override
+  String get game_lookup_attached_profile_clear_body =>
+      'The saved rectangle, text layout, and executable-specific click authorization will be removed.';
+  @override
+  String get game_lookup_attached_probe_waiting =>
+      'Waiting for matching in-game click';
 }
 
 // Path: <root>
@@ -90214,6 +91299,133 @@ class _StringsNl extends _StringsEn {
   @override
   String get onboarding_global_lookup_android_select_body =>
       'Houd datzelfde gecontroleerde woord ingedrukt en versleep daarna de selectiegrepen zodat het hele woord geselecteerd is.';
+  @override
+  String get game_lookup_attached_title => 'In-game lookup';
+  @override
+  String get game_lookup_attached_no_ocr =>
+      'No OCR · horizontal body text only';
+  @override
+  String get game_lookup_attached_mode => 'Mode';
+  @override
+  String get game_lookup_attached_mode_auto => 'Auto';
+  @override
+  String get game_lookup_attached_mode_native_only => 'Native only';
+  @override
+  String get game_lookup_attached_mode_attached_only => 'Calibrated layer only';
+  @override
+  String get game_lookup_attached_mode_off => 'Off';
+  @override
+  String get game_lookup_attached_status => 'State';
+  @override
+  String get game_lookup_attached_native_status => 'Native';
+  @override
+  String get game_lookup_attached_provider => 'Provider';
+  @override
+  String get game_lookup_attached_provider_unknown => 'Not reported';
+  @override
+  String get game_lookup_attached_profile => 'Profile';
+  @override
+  String get game_lookup_attached_profile_ready => 'Calibrated';
+  @override
+  String get game_lookup_attached_profile_missing => 'Not calibrated';
+  @override
+  String get game_lookup_attached_shield => 'Input shield';
+  @override
+  String get game_lookup_attached_shield_verified => 'Verified';
+  @override
+  String get game_lookup_attached_shield_unknown => 'Unknown';
+  @override
+  String get game_lookup_attached_shield_partial => 'Partial';
+  @override
+  String get game_lookup_attached_shield_known_uncovered => 'Known uncovered';
+  @override
+  String get game_lookup_attached_shield_faulted => 'Faulted';
+  @override
+  String get game_lookup_attached_risk => 'Click risk';
+  @override
+  String get game_lookup_attached_risk_safe => 'Not authorized';
+  @override
+  String get game_lookup_attached_risk_pending => 'Confirmation required';
+  @override
+  String get game_lookup_attached_risk_active =>
+      'Risk accepted · may double-trigger';
+  @override
+  String get game_lookup_attached_calibrate => 'Calibrate';
+  @override
+  String get game_lookup_attached_risk_accept => 'Accept click risk';
+  @override
+  String get game_lookup_attached_profile_clear => 'Clear profile';
+  @override
+  String get game_lookup_attached_thread_required =>
+      'Select one body-text thread before calibration.';
+  @override
+  String get game_lookup_attached_risk_title => 'Confirm raw-click risk';
+  @override
+  String get game_lookup_attached_risk_body =>
+      'The input shield is not verified for this executable. Clicking a glyph may also advance dialogue or trigger a choice. This authorization is stored only for the current executable hash and is revoked after an update.';
+  @override
+  String get game_lookup_attached_calibration_title => 'Calibrate body text';
+  @override
+  String get game_lookup_attached_preview => 'Current body text preview';
+  @override
+  String get game_lookup_attached_body_rect => 'Body rectangle';
+  @override
+  String get game_lookup_attached_left => 'Left';
+  @override
+  String get game_lookup_attached_top => 'Top';
+  @override
+  String get game_lookup_attached_width => 'Width';
+  @override
+  String get game_lookup_attached_height => 'Height';
+  @override
+  String get game_lookup_attached_font_family => 'Font family';
+  @override
+  String get game_lookup_attached_font_size => 'Font size / client height';
+  @override
+  String get game_lookup_attached_letter_spacing =>
+      'Letter spacing / client height';
+  @override
+  String get game_lookup_attached_line_height => 'Line height';
+  @override
+  String get game_lookup_attached_text_align => 'Horizontal alignment';
+  @override
+  String get game_lookup_attached_vertical_align => 'Vertical alignment';
+  @override
+  String get game_lookup_attached_align_left => 'Left';
+  @override
+  String get game_lookup_attached_align_center => 'Center';
+  @override
+  String get game_lookup_attached_align_right => 'Right';
+  @override
+  String get game_lookup_attached_align_top => 'Top';
+  @override
+  String get game_lookup_attached_align_bottom => 'Bottom';
+  @override
+  String get game_lookup_attached_probes_hint =>
+      'Click the first, middle, and last highlighted glyphs in the game, then confirm each character below.';
+  @override
+  String get game_lookup_attached_probe_start => 'First glyph';
+  @override
+  String get game_lookup_attached_probe_middle => 'Middle glyph';
+  @override
+  String get game_lookup_attached_probe_end => 'Last glyph';
+  @override
+  String get game_lookup_attached_calibration_commit => 'Save calibration';
+  @override
+  String get game_lookup_attached_calibration_failed =>
+      'Calibration was not applied. Check the body text, target window, and all three probes.';
+  @override
+  String get game_lookup_attached_calibration_short_text =>
+      'At least three characters are required for calibration probes.';
+  @override
+  String get game_lookup_attached_profile_clear_title =>
+      'Clear lookup profile?';
+  @override
+  String get game_lookup_attached_profile_clear_body =>
+      'The saved rectangle, text layout, and executable-specific click authorization will be removed.';
+  @override
+  String get game_lookup_attached_probe_waiting =>
+      'Waiting for matching in-game click';
 }
 
 // Path: <root>
@@ -99783,6 +100995,133 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get onboarding_global_lookup_android_select_body =>
       'Mantenha pressionada essa mesma palavra confirmada e ajuste as alças de seleção para cobri-la inteira.';
+  @override
+  String get game_lookup_attached_title => 'In-game lookup';
+  @override
+  String get game_lookup_attached_no_ocr =>
+      'No OCR · horizontal body text only';
+  @override
+  String get game_lookup_attached_mode => 'Mode';
+  @override
+  String get game_lookup_attached_mode_auto => 'Auto';
+  @override
+  String get game_lookup_attached_mode_native_only => 'Native only';
+  @override
+  String get game_lookup_attached_mode_attached_only => 'Calibrated layer only';
+  @override
+  String get game_lookup_attached_mode_off => 'Off';
+  @override
+  String get game_lookup_attached_status => 'State';
+  @override
+  String get game_lookup_attached_native_status => 'Native';
+  @override
+  String get game_lookup_attached_provider => 'Provider';
+  @override
+  String get game_lookup_attached_provider_unknown => 'Not reported';
+  @override
+  String get game_lookup_attached_profile => 'Profile';
+  @override
+  String get game_lookup_attached_profile_ready => 'Calibrated';
+  @override
+  String get game_lookup_attached_profile_missing => 'Not calibrated';
+  @override
+  String get game_lookup_attached_shield => 'Input shield';
+  @override
+  String get game_lookup_attached_shield_verified => 'Verified';
+  @override
+  String get game_lookup_attached_shield_unknown => 'Unknown';
+  @override
+  String get game_lookup_attached_shield_partial => 'Partial';
+  @override
+  String get game_lookup_attached_shield_known_uncovered => 'Known uncovered';
+  @override
+  String get game_lookup_attached_shield_faulted => 'Faulted';
+  @override
+  String get game_lookup_attached_risk => 'Click risk';
+  @override
+  String get game_lookup_attached_risk_safe => 'Not authorized';
+  @override
+  String get game_lookup_attached_risk_pending => 'Confirmation required';
+  @override
+  String get game_lookup_attached_risk_active =>
+      'Risk accepted · may double-trigger';
+  @override
+  String get game_lookup_attached_calibrate => 'Calibrate';
+  @override
+  String get game_lookup_attached_risk_accept => 'Accept click risk';
+  @override
+  String get game_lookup_attached_profile_clear => 'Clear profile';
+  @override
+  String get game_lookup_attached_thread_required =>
+      'Select one body-text thread before calibration.';
+  @override
+  String get game_lookup_attached_risk_title => 'Confirm raw-click risk';
+  @override
+  String get game_lookup_attached_risk_body =>
+      'The input shield is not verified for this executable. Clicking a glyph may also advance dialogue or trigger a choice. This authorization is stored only for the current executable hash and is revoked after an update.';
+  @override
+  String get game_lookup_attached_calibration_title => 'Calibrate body text';
+  @override
+  String get game_lookup_attached_preview => 'Current body text preview';
+  @override
+  String get game_lookup_attached_body_rect => 'Body rectangle';
+  @override
+  String get game_lookup_attached_left => 'Left';
+  @override
+  String get game_lookup_attached_top => 'Top';
+  @override
+  String get game_lookup_attached_width => 'Width';
+  @override
+  String get game_lookup_attached_height => 'Height';
+  @override
+  String get game_lookup_attached_font_family => 'Font family';
+  @override
+  String get game_lookup_attached_font_size => 'Font size / client height';
+  @override
+  String get game_lookup_attached_letter_spacing =>
+      'Letter spacing / client height';
+  @override
+  String get game_lookup_attached_line_height => 'Line height';
+  @override
+  String get game_lookup_attached_text_align => 'Horizontal alignment';
+  @override
+  String get game_lookup_attached_vertical_align => 'Vertical alignment';
+  @override
+  String get game_lookup_attached_align_left => 'Left';
+  @override
+  String get game_lookup_attached_align_center => 'Center';
+  @override
+  String get game_lookup_attached_align_right => 'Right';
+  @override
+  String get game_lookup_attached_align_top => 'Top';
+  @override
+  String get game_lookup_attached_align_bottom => 'Bottom';
+  @override
+  String get game_lookup_attached_probes_hint =>
+      'Click the first, middle, and last highlighted glyphs in the game, then confirm each character below.';
+  @override
+  String get game_lookup_attached_probe_start => 'First glyph';
+  @override
+  String get game_lookup_attached_probe_middle => 'Middle glyph';
+  @override
+  String get game_lookup_attached_probe_end => 'Last glyph';
+  @override
+  String get game_lookup_attached_calibration_commit => 'Save calibration';
+  @override
+  String get game_lookup_attached_calibration_failed =>
+      'Calibration was not applied. Check the body text, target window, and all three probes.';
+  @override
+  String get game_lookup_attached_calibration_short_text =>
+      'At least three characters are required for calibration probes.';
+  @override
+  String get game_lookup_attached_profile_clear_title =>
+      'Clear lookup profile?';
+  @override
+  String get game_lookup_attached_profile_clear_body =>
+      'The saved rectangle, text layout, and executable-specific click authorization will be removed.';
+  @override
+  String get game_lookup_attached_probe_waiting =>
+      'Waiting for matching in-game click';
 }
 
 // Path: <root>
@@ -109326,6 +110665,133 @@ class _StringsRu extends _StringsEn {
   @override
   String get onboarding_global_lookup_android_select_body =>
       'Нажмите и удерживайте то же проверенное слово, затем растяните маркеры выделения так, чтобы оно попало целиком.';
+  @override
+  String get game_lookup_attached_title => 'In-game lookup';
+  @override
+  String get game_lookup_attached_no_ocr =>
+      'No OCR · horizontal body text only';
+  @override
+  String get game_lookup_attached_mode => 'Mode';
+  @override
+  String get game_lookup_attached_mode_auto => 'Auto';
+  @override
+  String get game_lookup_attached_mode_native_only => 'Native only';
+  @override
+  String get game_lookup_attached_mode_attached_only => 'Calibrated layer only';
+  @override
+  String get game_lookup_attached_mode_off => 'Off';
+  @override
+  String get game_lookup_attached_status => 'State';
+  @override
+  String get game_lookup_attached_native_status => 'Native';
+  @override
+  String get game_lookup_attached_provider => 'Provider';
+  @override
+  String get game_lookup_attached_provider_unknown => 'Not reported';
+  @override
+  String get game_lookup_attached_profile => 'Profile';
+  @override
+  String get game_lookup_attached_profile_ready => 'Calibrated';
+  @override
+  String get game_lookup_attached_profile_missing => 'Not calibrated';
+  @override
+  String get game_lookup_attached_shield => 'Input shield';
+  @override
+  String get game_lookup_attached_shield_verified => 'Verified';
+  @override
+  String get game_lookup_attached_shield_unknown => 'Unknown';
+  @override
+  String get game_lookup_attached_shield_partial => 'Partial';
+  @override
+  String get game_lookup_attached_shield_known_uncovered => 'Known uncovered';
+  @override
+  String get game_lookup_attached_shield_faulted => 'Faulted';
+  @override
+  String get game_lookup_attached_risk => 'Click risk';
+  @override
+  String get game_lookup_attached_risk_safe => 'Not authorized';
+  @override
+  String get game_lookup_attached_risk_pending => 'Confirmation required';
+  @override
+  String get game_lookup_attached_risk_active =>
+      'Risk accepted · may double-trigger';
+  @override
+  String get game_lookup_attached_calibrate => 'Calibrate';
+  @override
+  String get game_lookup_attached_risk_accept => 'Accept click risk';
+  @override
+  String get game_lookup_attached_profile_clear => 'Clear profile';
+  @override
+  String get game_lookup_attached_thread_required =>
+      'Select one body-text thread before calibration.';
+  @override
+  String get game_lookup_attached_risk_title => 'Confirm raw-click risk';
+  @override
+  String get game_lookup_attached_risk_body =>
+      'The input shield is not verified for this executable. Clicking a glyph may also advance dialogue or trigger a choice. This authorization is stored only for the current executable hash and is revoked after an update.';
+  @override
+  String get game_lookup_attached_calibration_title => 'Calibrate body text';
+  @override
+  String get game_lookup_attached_preview => 'Current body text preview';
+  @override
+  String get game_lookup_attached_body_rect => 'Body rectangle';
+  @override
+  String get game_lookup_attached_left => 'Left';
+  @override
+  String get game_lookup_attached_top => 'Top';
+  @override
+  String get game_lookup_attached_width => 'Width';
+  @override
+  String get game_lookup_attached_height => 'Height';
+  @override
+  String get game_lookup_attached_font_family => 'Font family';
+  @override
+  String get game_lookup_attached_font_size => 'Font size / client height';
+  @override
+  String get game_lookup_attached_letter_spacing =>
+      'Letter spacing / client height';
+  @override
+  String get game_lookup_attached_line_height => 'Line height';
+  @override
+  String get game_lookup_attached_text_align => 'Horizontal alignment';
+  @override
+  String get game_lookup_attached_vertical_align => 'Vertical alignment';
+  @override
+  String get game_lookup_attached_align_left => 'Left';
+  @override
+  String get game_lookup_attached_align_center => 'Center';
+  @override
+  String get game_lookup_attached_align_right => 'Right';
+  @override
+  String get game_lookup_attached_align_top => 'Top';
+  @override
+  String get game_lookup_attached_align_bottom => 'Bottom';
+  @override
+  String get game_lookup_attached_probes_hint =>
+      'Click the first, middle, and last highlighted glyphs in the game, then confirm each character below.';
+  @override
+  String get game_lookup_attached_probe_start => 'First glyph';
+  @override
+  String get game_lookup_attached_probe_middle => 'Middle glyph';
+  @override
+  String get game_lookup_attached_probe_end => 'Last glyph';
+  @override
+  String get game_lookup_attached_calibration_commit => 'Save calibration';
+  @override
+  String get game_lookup_attached_calibration_failed =>
+      'Calibration was not applied. Check the body text, target window, and all three probes.';
+  @override
+  String get game_lookup_attached_calibration_short_text =>
+      'At least three characters are required for calibration probes.';
+  @override
+  String get game_lookup_attached_profile_clear_title =>
+      'Clear lookup profile?';
+  @override
+  String get game_lookup_attached_profile_clear_body =>
+      'The saved rectangle, text layout, and executable-specific click authorization will be removed.';
+  @override
+  String get game_lookup_attached_probe_waiting =>
+      'Waiting for matching in-game click';
 }
 
 // Path: <root>
@@ -118673,6 +120139,133 @@ class _StringsTh extends _StringsEn {
   @override
   String get onboarding_global_lookup_android_select_body =>
       'แตะค้างที่คำเดิมที่ตรวจแล้ว จากนั้นลากจุดจับเลือกให้ครอบคลุมทั้งคำ';
+  @override
+  String get game_lookup_attached_title => 'In-game lookup';
+  @override
+  String get game_lookup_attached_no_ocr =>
+      'No OCR · horizontal body text only';
+  @override
+  String get game_lookup_attached_mode => 'Mode';
+  @override
+  String get game_lookup_attached_mode_auto => 'Auto';
+  @override
+  String get game_lookup_attached_mode_native_only => 'Native only';
+  @override
+  String get game_lookup_attached_mode_attached_only => 'Calibrated layer only';
+  @override
+  String get game_lookup_attached_mode_off => 'Off';
+  @override
+  String get game_lookup_attached_status => 'State';
+  @override
+  String get game_lookup_attached_native_status => 'Native';
+  @override
+  String get game_lookup_attached_provider => 'Provider';
+  @override
+  String get game_lookup_attached_provider_unknown => 'Not reported';
+  @override
+  String get game_lookup_attached_profile => 'Profile';
+  @override
+  String get game_lookup_attached_profile_ready => 'Calibrated';
+  @override
+  String get game_lookup_attached_profile_missing => 'Not calibrated';
+  @override
+  String get game_lookup_attached_shield => 'Input shield';
+  @override
+  String get game_lookup_attached_shield_verified => 'Verified';
+  @override
+  String get game_lookup_attached_shield_unknown => 'Unknown';
+  @override
+  String get game_lookup_attached_shield_partial => 'Partial';
+  @override
+  String get game_lookup_attached_shield_known_uncovered => 'Known uncovered';
+  @override
+  String get game_lookup_attached_shield_faulted => 'Faulted';
+  @override
+  String get game_lookup_attached_risk => 'Click risk';
+  @override
+  String get game_lookup_attached_risk_safe => 'Not authorized';
+  @override
+  String get game_lookup_attached_risk_pending => 'Confirmation required';
+  @override
+  String get game_lookup_attached_risk_active =>
+      'Risk accepted · may double-trigger';
+  @override
+  String get game_lookup_attached_calibrate => 'Calibrate';
+  @override
+  String get game_lookup_attached_risk_accept => 'Accept click risk';
+  @override
+  String get game_lookup_attached_profile_clear => 'Clear profile';
+  @override
+  String get game_lookup_attached_thread_required =>
+      'Select one body-text thread before calibration.';
+  @override
+  String get game_lookup_attached_risk_title => 'Confirm raw-click risk';
+  @override
+  String get game_lookup_attached_risk_body =>
+      'The input shield is not verified for this executable. Clicking a glyph may also advance dialogue or trigger a choice. This authorization is stored only for the current executable hash and is revoked after an update.';
+  @override
+  String get game_lookup_attached_calibration_title => 'Calibrate body text';
+  @override
+  String get game_lookup_attached_preview => 'Current body text preview';
+  @override
+  String get game_lookup_attached_body_rect => 'Body rectangle';
+  @override
+  String get game_lookup_attached_left => 'Left';
+  @override
+  String get game_lookup_attached_top => 'Top';
+  @override
+  String get game_lookup_attached_width => 'Width';
+  @override
+  String get game_lookup_attached_height => 'Height';
+  @override
+  String get game_lookup_attached_font_family => 'Font family';
+  @override
+  String get game_lookup_attached_font_size => 'Font size / client height';
+  @override
+  String get game_lookup_attached_letter_spacing =>
+      'Letter spacing / client height';
+  @override
+  String get game_lookup_attached_line_height => 'Line height';
+  @override
+  String get game_lookup_attached_text_align => 'Horizontal alignment';
+  @override
+  String get game_lookup_attached_vertical_align => 'Vertical alignment';
+  @override
+  String get game_lookup_attached_align_left => 'Left';
+  @override
+  String get game_lookup_attached_align_center => 'Center';
+  @override
+  String get game_lookup_attached_align_right => 'Right';
+  @override
+  String get game_lookup_attached_align_top => 'Top';
+  @override
+  String get game_lookup_attached_align_bottom => 'Bottom';
+  @override
+  String get game_lookup_attached_probes_hint =>
+      'Click the first, middle, and last highlighted glyphs in the game, then confirm each character below.';
+  @override
+  String get game_lookup_attached_probe_start => 'First glyph';
+  @override
+  String get game_lookup_attached_probe_middle => 'Middle glyph';
+  @override
+  String get game_lookup_attached_probe_end => 'Last glyph';
+  @override
+  String get game_lookup_attached_calibration_commit => 'Save calibration';
+  @override
+  String get game_lookup_attached_calibration_failed =>
+      'Calibration was not applied. Check the body text, target window, and all three probes.';
+  @override
+  String get game_lookup_attached_calibration_short_text =>
+      'At least three characters are required for calibration probes.';
+  @override
+  String get game_lookup_attached_profile_clear_title =>
+      'Clear lookup profile?';
+  @override
+  String get game_lookup_attached_profile_clear_body =>
+      'The saved rectangle, text layout, and executable-specific click authorization will be removed.';
+  @override
+  String get game_lookup_attached_probe_waiting =>
+      'Waiting for matching in-game click';
 }
 
 // Path: <root>
@@ -128133,6 +129726,133 @@ class _StringsTr extends _StringsEn {
   @override
   String get onboarding_global_lookup_android_select_body =>
       'Doğruladığınız aynı kelimeye uzun basın, sonra seçim tutamaçlarını kelimeyi tamamen kaplayacak şekilde ayarlayın.';
+  @override
+  String get game_lookup_attached_title => 'In-game lookup';
+  @override
+  String get game_lookup_attached_no_ocr =>
+      'No OCR · horizontal body text only';
+  @override
+  String get game_lookup_attached_mode => 'Mode';
+  @override
+  String get game_lookup_attached_mode_auto => 'Auto';
+  @override
+  String get game_lookup_attached_mode_native_only => 'Native only';
+  @override
+  String get game_lookup_attached_mode_attached_only => 'Calibrated layer only';
+  @override
+  String get game_lookup_attached_mode_off => 'Off';
+  @override
+  String get game_lookup_attached_status => 'State';
+  @override
+  String get game_lookup_attached_native_status => 'Native';
+  @override
+  String get game_lookup_attached_provider => 'Provider';
+  @override
+  String get game_lookup_attached_provider_unknown => 'Not reported';
+  @override
+  String get game_lookup_attached_profile => 'Profile';
+  @override
+  String get game_lookup_attached_profile_ready => 'Calibrated';
+  @override
+  String get game_lookup_attached_profile_missing => 'Not calibrated';
+  @override
+  String get game_lookup_attached_shield => 'Input shield';
+  @override
+  String get game_lookup_attached_shield_verified => 'Verified';
+  @override
+  String get game_lookup_attached_shield_unknown => 'Unknown';
+  @override
+  String get game_lookup_attached_shield_partial => 'Partial';
+  @override
+  String get game_lookup_attached_shield_known_uncovered => 'Known uncovered';
+  @override
+  String get game_lookup_attached_shield_faulted => 'Faulted';
+  @override
+  String get game_lookup_attached_risk => 'Click risk';
+  @override
+  String get game_lookup_attached_risk_safe => 'Not authorized';
+  @override
+  String get game_lookup_attached_risk_pending => 'Confirmation required';
+  @override
+  String get game_lookup_attached_risk_active =>
+      'Risk accepted · may double-trigger';
+  @override
+  String get game_lookup_attached_calibrate => 'Calibrate';
+  @override
+  String get game_lookup_attached_risk_accept => 'Accept click risk';
+  @override
+  String get game_lookup_attached_profile_clear => 'Clear profile';
+  @override
+  String get game_lookup_attached_thread_required =>
+      'Select one body-text thread before calibration.';
+  @override
+  String get game_lookup_attached_risk_title => 'Confirm raw-click risk';
+  @override
+  String get game_lookup_attached_risk_body =>
+      'The input shield is not verified for this executable. Clicking a glyph may also advance dialogue or trigger a choice. This authorization is stored only for the current executable hash and is revoked after an update.';
+  @override
+  String get game_lookup_attached_calibration_title => 'Calibrate body text';
+  @override
+  String get game_lookup_attached_preview => 'Current body text preview';
+  @override
+  String get game_lookup_attached_body_rect => 'Body rectangle';
+  @override
+  String get game_lookup_attached_left => 'Left';
+  @override
+  String get game_lookup_attached_top => 'Top';
+  @override
+  String get game_lookup_attached_width => 'Width';
+  @override
+  String get game_lookup_attached_height => 'Height';
+  @override
+  String get game_lookup_attached_font_family => 'Font family';
+  @override
+  String get game_lookup_attached_font_size => 'Font size / client height';
+  @override
+  String get game_lookup_attached_letter_spacing =>
+      'Letter spacing / client height';
+  @override
+  String get game_lookup_attached_line_height => 'Line height';
+  @override
+  String get game_lookup_attached_text_align => 'Horizontal alignment';
+  @override
+  String get game_lookup_attached_vertical_align => 'Vertical alignment';
+  @override
+  String get game_lookup_attached_align_left => 'Left';
+  @override
+  String get game_lookup_attached_align_center => 'Center';
+  @override
+  String get game_lookup_attached_align_right => 'Right';
+  @override
+  String get game_lookup_attached_align_top => 'Top';
+  @override
+  String get game_lookup_attached_align_bottom => 'Bottom';
+  @override
+  String get game_lookup_attached_probes_hint =>
+      'Click the first, middle, and last highlighted glyphs in the game, then confirm each character below.';
+  @override
+  String get game_lookup_attached_probe_start => 'First glyph';
+  @override
+  String get game_lookup_attached_probe_middle => 'Middle glyph';
+  @override
+  String get game_lookup_attached_probe_end => 'Last glyph';
+  @override
+  String get game_lookup_attached_calibration_commit => 'Save calibration';
+  @override
+  String get game_lookup_attached_calibration_failed =>
+      'Calibration was not applied. Check the body text, target window, and all three probes.';
+  @override
+  String get game_lookup_attached_calibration_short_text =>
+      'At least three characters are required for calibration probes.';
+  @override
+  String get game_lookup_attached_profile_clear_title =>
+      'Clear lookup profile?';
+  @override
+  String get game_lookup_attached_profile_clear_body =>
+      'The saved rectangle, text layout, and executable-specific click authorization will be removed.';
+  @override
+  String get game_lookup_attached_probe_waiting =>
+      'Waiting for matching in-game click';
 }
 
 // Path: <root>
@@ -137570,6 +139290,133 @@ class _StringsVi extends _StringsEn {
   @override
   String get onboarding_global_lookup_android_select_body =>
       'Nhấn giữ đúng từ đã kiểm tra đó, rồi kéo các tay nắm vùng chọn để phủ hết từ.';
+  @override
+  String get game_lookup_attached_title => 'In-game lookup';
+  @override
+  String get game_lookup_attached_no_ocr =>
+      'No OCR · horizontal body text only';
+  @override
+  String get game_lookup_attached_mode => 'Mode';
+  @override
+  String get game_lookup_attached_mode_auto => 'Auto';
+  @override
+  String get game_lookup_attached_mode_native_only => 'Native only';
+  @override
+  String get game_lookup_attached_mode_attached_only => 'Calibrated layer only';
+  @override
+  String get game_lookup_attached_mode_off => 'Off';
+  @override
+  String get game_lookup_attached_status => 'State';
+  @override
+  String get game_lookup_attached_native_status => 'Native';
+  @override
+  String get game_lookup_attached_provider => 'Provider';
+  @override
+  String get game_lookup_attached_provider_unknown => 'Not reported';
+  @override
+  String get game_lookup_attached_profile => 'Profile';
+  @override
+  String get game_lookup_attached_profile_ready => 'Calibrated';
+  @override
+  String get game_lookup_attached_profile_missing => 'Not calibrated';
+  @override
+  String get game_lookup_attached_shield => 'Input shield';
+  @override
+  String get game_lookup_attached_shield_verified => 'Verified';
+  @override
+  String get game_lookup_attached_shield_unknown => 'Unknown';
+  @override
+  String get game_lookup_attached_shield_partial => 'Partial';
+  @override
+  String get game_lookup_attached_shield_known_uncovered => 'Known uncovered';
+  @override
+  String get game_lookup_attached_shield_faulted => 'Faulted';
+  @override
+  String get game_lookup_attached_risk => 'Click risk';
+  @override
+  String get game_lookup_attached_risk_safe => 'Not authorized';
+  @override
+  String get game_lookup_attached_risk_pending => 'Confirmation required';
+  @override
+  String get game_lookup_attached_risk_active =>
+      'Risk accepted · may double-trigger';
+  @override
+  String get game_lookup_attached_calibrate => 'Calibrate';
+  @override
+  String get game_lookup_attached_risk_accept => 'Accept click risk';
+  @override
+  String get game_lookup_attached_profile_clear => 'Clear profile';
+  @override
+  String get game_lookup_attached_thread_required =>
+      'Select one body-text thread before calibration.';
+  @override
+  String get game_lookup_attached_risk_title => 'Confirm raw-click risk';
+  @override
+  String get game_lookup_attached_risk_body =>
+      'The input shield is not verified for this executable. Clicking a glyph may also advance dialogue or trigger a choice. This authorization is stored only for the current executable hash and is revoked after an update.';
+  @override
+  String get game_lookup_attached_calibration_title => 'Calibrate body text';
+  @override
+  String get game_lookup_attached_preview => 'Current body text preview';
+  @override
+  String get game_lookup_attached_body_rect => 'Body rectangle';
+  @override
+  String get game_lookup_attached_left => 'Left';
+  @override
+  String get game_lookup_attached_top => 'Top';
+  @override
+  String get game_lookup_attached_width => 'Width';
+  @override
+  String get game_lookup_attached_height => 'Height';
+  @override
+  String get game_lookup_attached_font_family => 'Font family';
+  @override
+  String get game_lookup_attached_font_size => 'Font size / client height';
+  @override
+  String get game_lookup_attached_letter_spacing =>
+      'Letter spacing / client height';
+  @override
+  String get game_lookup_attached_line_height => 'Line height';
+  @override
+  String get game_lookup_attached_text_align => 'Horizontal alignment';
+  @override
+  String get game_lookup_attached_vertical_align => 'Vertical alignment';
+  @override
+  String get game_lookup_attached_align_left => 'Left';
+  @override
+  String get game_lookup_attached_align_center => 'Center';
+  @override
+  String get game_lookup_attached_align_right => 'Right';
+  @override
+  String get game_lookup_attached_align_top => 'Top';
+  @override
+  String get game_lookup_attached_align_bottom => 'Bottom';
+  @override
+  String get game_lookup_attached_probes_hint =>
+      'Click the first, middle, and last highlighted glyphs in the game, then confirm each character below.';
+  @override
+  String get game_lookup_attached_probe_start => 'First glyph';
+  @override
+  String get game_lookup_attached_probe_middle => 'Middle glyph';
+  @override
+  String get game_lookup_attached_probe_end => 'Last glyph';
+  @override
+  String get game_lookup_attached_calibration_commit => 'Save calibration';
+  @override
+  String get game_lookup_attached_calibration_failed =>
+      'Calibration was not applied. Check the body text, target window, and all three probes.';
+  @override
+  String get game_lookup_attached_calibration_short_text =>
+      'At least three characters are required for calibration probes.';
+  @override
+  String get game_lookup_attached_profile_clear_title =>
+      'Clear lookup profile?';
+  @override
+  String get game_lookup_attached_profile_clear_body =>
+      'The saved rectangle, text layout, and executable-specific click authorization will be removed.';
+  @override
+  String get game_lookup_attached_probe_waiting =>
+      'Waiting for matching in-game click';
 }
 
 // Path: <root>
@@ -146253,6 +148100,126 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get onboarding_step_manual_resources_body =>
       '这一项可以与推荐包同时使用，也可以单独使用。进入查词教程前至少导入一本词典；有声书音频和单词发音音频属于按需补充。';
+  @override
+  String get game_lookup_attached_title => '游戏内查词';
+  @override
+  String get game_lookup_attached_no_ocr => '不使用 OCR · 仅横排正文';
+  @override
+  String get game_lookup_attached_mode => '模式';
+  @override
+  String get game_lookup_attached_mode_auto => '自动';
+  @override
+  String get game_lookup_attached_mode_native_only => '仅原生几何';
+  @override
+  String get game_lookup_attached_mode_attached_only => '仅校准层';
+  @override
+  String get game_lookup_attached_mode_off => '关闭';
+  @override
+  String get game_lookup_attached_status => '状态';
+  @override
+  String get game_lookup_attached_native_status => '原生状态';
+  @override
+  String get game_lookup_attached_provider => '几何来源';
+  @override
+  String get game_lookup_attached_provider_unknown => '未上报';
+  @override
+  String get game_lookup_attached_profile => '校准档案';
+  @override
+  String get game_lookup_attached_profile_ready => '已校准';
+  @override
+  String get game_lookup_attached_profile_missing => '未校准';
+  @override
+  String get game_lookup_attached_shield => '输入盾';
+  @override
+  String get game_lookup_attached_shield_verified => '已验证';
+  @override
+  String get game_lookup_attached_shield_unknown => '未知';
+  @override
+  String get game_lookup_attached_shield_partial => '部分覆盖';
+  @override
+  String get game_lookup_attached_shield_known_uncovered => '已知未覆盖';
+  @override
+  String get game_lookup_attached_shield_faulted => '故障';
+  @override
+  String get game_lookup_attached_risk => '点击风险';
+  @override
+  String get game_lookup_attached_risk_safe => '未授权';
+  @override
+  String get game_lookup_attached_risk_pending => '等待确认';
+  @override
+  String get game_lookup_attached_risk_active => '已接受风险 · 可能双触发';
+  @override
+  String get game_lookup_attached_calibrate => '校准';
+  @override
+  String get game_lookup_attached_risk_accept => '确认点击风险';
+  @override
+  String get game_lookup_attached_profile_clear => '清除档案';
+  @override
+  String get game_lookup_attached_thread_required => '请先选择一个正文线程，再开始校准。';
+  @override
+  String get game_lookup_attached_risk_title => '确认裸左击风险';
+  @override
+  String get game_lookup_attached_risk_body =>
+      '当前可执行文件的输入盾尚未验证。点击字形可能同时推进台词或触发选项。授权仅绑定当前 exe 哈希，游戏更新后会自动失效。';
+  @override
+  String get game_lookup_attached_calibration_title => '校准正文区域';
+  @override
+  String get game_lookup_attached_preview => '当前正文预览';
+  @override
+  String get game_lookup_attached_body_rect => '正文框';
+  @override
+  String get game_lookup_attached_left => '左';
+  @override
+  String get game_lookup_attached_top => '上';
+  @override
+  String get game_lookup_attached_width => '宽';
+  @override
+  String get game_lookup_attached_height => '高';
+  @override
+  String get game_lookup_attached_font_family => '字体';
+  @override
+  String get game_lookup_attached_font_size => '字号 / 客户区高度';
+  @override
+  String get game_lookup_attached_letter_spacing => '字距 / 客户区高度';
+  @override
+  String get game_lookup_attached_line_height => '行高';
+  @override
+  String get game_lookup_attached_text_align => '水平对齐';
+  @override
+  String get game_lookup_attached_vertical_align => '垂直对齐';
+  @override
+  String get game_lookup_attached_align_left => '左对齐';
+  @override
+  String get game_lookup_attached_align_center => '居中';
+  @override
+  String get game_lookup_attached_align_right => '右对齐';
+  @override
+  String get game_lookup_attached_align_top => '顶部';
+  @override
+  String get game_lookup_attached_align_bottom => '底部';
+  @override
+  String get game_lookup_attached_probes_hint => '请在游戏中依次点击高亮的首、中、尾字形，再确认下列字符。';
+  @override
+  String get game_lookup_attached_probe_start => '首字形';
+  @override
+  String get game_lookup_attached_probe_middle => '中字形';
+  @override
+  String get game_lookup_attached_probe_end => '尾字形';
+  @override
+  String get game_lookup_attached_calibration_commit => '保存校准';
+  @override
+  String get game_lookup_attached_calibration_failed =>
+      '校准未能应用。请检查正文、目标窗口和三个点击探针。';
+  @override
+  String get game_lookup_attached_calibration_short_text =>
+      '正文至少需要三个字符才能完成校准探针。';
+  @override
+  String get game_lookup_attached_profile_clear_title => '清除查词档案？';
+  @override
+  String get game_lookup_attached_profile_clear_body =>
+      '将删除已保存的正文框、文字布局及该 exe 的点击风险授权。';
+  @override
+  String get game_lookup_attached_probe_waiting => '等待游戏内对应字形点击';
 }
 
 // Path: <root>
@@ -154941,6 +156908,133 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get onboarding_global_lookup_android_select_body =>
       '長按剛才已確認能返回詞典釋義的同一個詞，再拖動選取控點讓它完整覆蓋。';
+  @override
+  String get game_lookup_attached_title => 'In-game lookup';
+  @override
+  String get game_lookup_attached_no_ocr =>
+      'No OCR · horizontal body text only';
+  @override
+  String get game_lookup_attached_mode => 'Mode';
+  @override
+  String get game_lookup_attached_mode_auto => 'Auto';
+  @override
+  String get game_lookup_attached_mode_native_only => 'Native only';
+  @override
+  String get game_lookup_attached_mode_attached_only => 'Calibrated layer only';
+  @override
+  String get game_lookup_attached_mode_off => 'Off';
+  @override
+  String get game_lookup_attached_status => 'State';
+  @override
+  String get game_lookup_attached_native_status => 'Native';
+  @override
+  String get game_lookup_attached_provider => 'Provider';
+  @override
+  String get game_lookup_attached_provider_unknown => 'Not reported';
+  @override
+  String get game_lookup_attached_profile => 'Profile';
+  @override
+  String get game_lookup_attached_profile_ready => 'Calibrated';
+  @override
+  String get game_lookup_attached_profile_missing => 'Not calibrated';
+  @override
+  String get game_lookup_attached_shield => 'Input shield';
+  @override
+  String get game_lookup_attached_shield_verified => 'Verified';
+  @override
+  String get game_lookup_attached_shield_unknown => 'Unknown';
+  @override
+  String get game_lookup_attached_shield_partial => 'Partial';
+  @override
+  String get game_lookup_attached_shield_known_uncovered => 'Known uncovered';
+  @override
+  String get game_lookup_attached_shield_faulted => 'Faulted';
+  @override
+  String get game_lookup_attached_risk => 'Click risk';
+  @override
+  String get game_lookup_attached_risk_safe => 'Not authorized';
+  @override
+  String get game_lookup_attached_risk_pending => 'Confirmation required';
+  @override
+  String get game_lookup_attached_risk_active =>
+      'Risk accepted · may double-trigger';
+  @override
+  String get game_lookup_attached_calibrate => 'Calibrate';
+  @override
+  String get game_lookup_attached_risk_accept => 'Accept click risk';
+  @override
+  String get game_lookup_attached_profile_clear => 'Clear profile';
+  @override
+  String get game_lookup_attached_thread_required =>
+      'Select one body-text thread before calibration.';
+  @override
+  String get game_lookup_attached_risk_title => 'Confirm raw-click risk';
+  @override
+  String get game_lookup_attached_risk_body =>
+      'The input shield is not verified for this executable. Clicking a glyph may also advance dialogue or trigger a choice. This authorization is stored only for the current executable hash and is revoked after an update.';
+  @override
+  String get game_lookup_attached_calibration_title => 'Calibrate body text';
+  @override
+  String get game_lookup_attached_preview => 'Current body text preview';
+  @override
+  String get game_lookup_attached_body_rect => 'Body rectangle';
+  @override
+  String get game_lookup_attached_left => 'Left';
+  @override
+  String get game_lookup_attached_top => 'Top';
+  @override
+  String get game_lookup_attached_width => 'Width';
+  @override
+  String get game_lookup_attached_height => 'Height';
+  @override
+  String get game_lookup_attached_font_family => 'Font family';
+  @override
+  String get game_lookup_attached_font_size => 'Font size / client height';
+  @override
+  String get game_lookup_attached_letter_spacing =>
+      'Letter spacing / client height';
+  @override
+  String get game_lookup_attached_line_height => 'Line height';
+  @override
+  String get game_lookup_attached_text_align => 'Horizontal alignment';
+  @override
+  String get game_lookup_attached_vertical_align => 'Vertical alignment';
+  @override
+  String get game_lookup_attached_align_left => 'Left';
+  @override
+  String get game_lookup_attached_align_center => 'Center';
+  @override
+  String get game_lookup_attached_align_right => 'Right';
+  @override
+  String get game_lookup_attached_align_top => 'Top';
+  @override
+  String get game_lookup_attached_align_bottom => 'Bottom';
+  @override
+  String get game_lookup_attached_probes_hint =>
+      'Click the first, middle, and last highlighted glyphs in the game, then confirm each character below.';
+  @override
+  String get game_lookup_attached_probe_start => 'First glyph';
+  @override
+  String get game_lookup_attached_probe_middle => 'Middle glyph';
+  @override
+  String get game_lookup_attached_probe_end => 'Last glyph';
+  @override
+  String get game_lookup_attached_calibration_commit => 'Save calibration';
+  @override
+  String get game_lookup_attached_calibration_failed =>
+      'Calibration was not applied. Check the body text, target window, and all three probes.';
+  @override
+  String get game_lookup_attached_calibration_short_text =>
+      'At least three characters are required for calibration probes.';
+  @override
+  String get game_lookup_attached_profile_clear_title =>
+      'Clear lookup profile?';
+  @override
+  String get game_lookup_attached_profile_clear_body =>
+      'The saved rectangle, text layout, and executable-specific click authorization will be removed.';
+  @override
+  String get game_lookup_attached_probe_waiting =>
+      'Waiting for matching in-game click';
 }
 
 /// Flat map(s) containing all translations.
@@ -163184,6 +165278,122 @@ extension on _StringsEn {
         return 'Supplement the recommended pack, or import your own dictionaries, audiobooks, and pronunciation sources';
       case 'onboarding_step_manual_resources_body':
         return 'Use this alongside the recommended pack or on its own. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional supplements.';
+      case 'game_lookup_attached_title':
+        return 'In-game lookup';
+      case 'game_lookup_attached_no_ocr':
+        return 'No OCR · horizontal body text only';
+      case 'game_lookup_attached_mode':
+        return 'Mode';
+      case 'game_lookup_attached_mode_auto':
+        return 'Auto';
+      case 'game_lookup_attached_mode_native_only':
+        return 'Native only';
+      case 'game_lookup_attached_mode_attached_only':
+        return 'Calibrated layer only';
+      case 'game_lookup_attached_mode_off':
+        return 'Off';
+      case 'game_lookup_attached_status':
+        return 'State';
+      case 'game_lookup_attached_native_status':
+        return 'Native';
+      case 'game_lookup_attached_provider':
+        return 'Provider';
+      case 'game_lookup_attached_provider_unknown':
+        return 'Not reported';
+      case 'game_lookup_attached_profile':
+        return 'Profile';
+      case 'game_lookup_attached_profile_ready':
+        return 'Calibrated';
+      case 'game_lookup_attached_profile_missing':
+        return 'Not calibrated';
+      case 'game_lookup_attached_shield':
+        return 'Input shield';
+      case 'game_lookup_attached_shield_verified':
+        return 'Verified';
+      case 'game_lookup_attached_shield_unknown':
+        return 'Unknown';
+      case 'game_lookup_attached_shield_partial':
+        return 'Partial';
+      case 'game_lookup_attached_shield_known_uncovered':
+        return 'Known uncovered';
+      case 'game_lookup_attached_shield_faulted':
+        return 'Faulted';
+      case 'game_lookup_attached_risk':
+        return 'Click risk';
+      case 'game_lookup_attached_risk_safe':
+        return 'Not authorized';
+      case 'game_lookup_attached_risk_pending':
+        return 'Confirmation required';
+      case 'game_lookup_attached_risk_active':
+        return 'Risk accepted · may double-trigger';
+      case 'game_lookup_attached_calibrate':
+        return 'Calibrate';
+      case 'game_lookup_attached_risk_accept':
+        return 'Accept click risk';
+      case 'game_lookup_attached_profile_clear':
+        return 'Clear profile';
+      case 'game_lookup_attached_thread_required':
+        return 'Select one body-text thread before calibration.';
+      case 'game_lookup_attached_risk_title':
+        return 'Confirm raw-click risk';
+      case 'game_lookup_attached_risk_body':
+        return 'The input shield is not verified for this executable. Clicking a glyph may also advance dialogue or trigger a choice. This authorization is stored only for the current executable hash and is revoked after an update.';
+      case 'game_lookup_attached_calibration_title':
+        return 'Calibrate body text';
+      case 'game_lookup_attached_preview':
+        return 'Current body text preview';
+      case 'game_lookup_attached_body_rect':
+        return 'Body rectangle';
+      case 'game_lookup_attached_left':
+        return 'Left';
+      case 'game_lookup_attached_top':
+        return 'Top';
+      case 'game_lookup_attached_width':
+        return 'Width';
+      case 'game_lookup_attached_height':
+        return 'Height';
+      case 'game_lookup_attached_font_family':
+        return 'Font family';
+      case 'game_lookup_attached_font_size':
+        return 'Font size / client height';
+      case 'game_lookup_attached_letter_spacing':
+        return 'Letter spacing / client height';
+      case 'game_lookup_attached_line_height':
+        return 'Line height';
+      case 'game_lookup_attached_text_align':
+        return 'Horizontal alignment';
+      case 'game_lookup_attached_vertical_align':
+        return 'Vertical alignment';
+      case 'game_lookup_attached_align_left':
+        return 'Left';
+      case 'game_lookup_attached_align_center':
+        return 'Center';
+      case 'game_lookup_attached_align_right':
+        return 'Right';
+      case 'game_lookup_attached_align_top':
+        return 'Top';
+      case 'game_lookup_attached_align_bottom':
+        return 'Bottom';
+      case 'game_lookup_attached_probes_hint':
+        return 'Click the first, middle, and last highlighted glyphs in the game, then confirm each character below.';
+      case 'game_lookup_attached_probe_start':
+        return 'First glyph';
+      case 'game_lookup_attached_probe_middle':
+        return 'Middle glyph';
+      case 'game_lookup_attached_probe_end':
+        return 'Last glyph';
+      case 'game_lookup_attached_calibration_commit':
+        return 'Save calibration';
+      case 'game_lookup_attached_calibration_failed':
+        return 'Calibration was not applied. Check the body text, target window, and all three probes.';
+      case 'game_lookup_attached_calibration_short_text':
+        return 'At least three characters are required for calibration probes.';
+      case 'game_lookup_attached_profile_clear_title':
+        return 'Clear lookup profile?';
+      case 'game_lookup_attached_profile_clear_body':
+        return 'The saved rectangle, text layout, and executable-specific click authorization will be removed.';
+      case 'game_lookup_attached_probe_waiting':
+        return 'Waiting for matching in-game click';
       default:
         return null;
     }
@@ -171423,6 +173633,122 @@ extension on _StringsAr {
         return 'ظلّل الكلمة نفسها التي تأكدت من وجود تعريف لها في القاموس، واترك التحديد قائمًا.';
       case 'onboarding_global_lookup_android_select_body':
         return 'اضغط مطولًا على الكلمة نفسها التي تحققت منها، ثم اسحب مقابض التحديد لتغطيها بالكامل.';
+      case 'game_lookup_attached_title':
+        return 'In-game lookup';
+      case 'game_lookup_attached_no_ocr':
+        return 'No OCR · horizontal body text only';
+      case 'game_lookup_attached_mode':
+        return 'Mode';
+      case 'game_lookup_attached_mode_auto':
+        return 'Auto';
+      case 'game_lookup_attached_mode_native_only':
+        return 'Native only';
+      case 'game_lookup_attached_mode_attached_only':
+        return 'Calibrated layer only';
+      case 'game_lookup_attached_mode_off':
+        return 'Off';
+      case 'game_lookup_attached_status':
+        return 'State';
+      case 'game_lookup_attached_native_status':
+        return 'Native';
+      case 'game_lookup_attached_provider':
+        return 'Provider';
+      case 'game_lookup_attached_provider_unknown':
+        return 'Not reported';
+      case 'game_lookup_attached_profile':
+        return 'Profile';
+      case 'game_lookup_attached_profile_ready':
+        return 'Calibrated';
+      case 'game_lookup_attached_profile_missing':
+        return 'Not calibrated';
+      case 'game_lookup_attached_shield':
+        return 'Input shield';
+      case 'game_lookup_attached_shield_verified':
+        return 'Verified';
+      case 'game_lookup_attached_shield_unknown':
+        return 'Unknown';
+      case 'game_lookup_attached_shield_partial':
+        return 'Partial';
+      case 'game_lookup_attached_shield_known_uncovered':
+        return 'Known uncovered';
+      case 'game_lookup_attached_shield_faulted':
+        return 'Faulted';
+      case 'game_lookup_attached_risk':
+        return 'Click risk';
+      case 'game_lookup_attached_risk_safe':
+        return 'Not authorized';
+      case 'game_lookup_attached_risk_pending':
+        return 'Confirmation required';
+      case 'game_lookup_attached_risk_active':
+        return 'Risk accepted · may double-trigger';
+      case 'game_lookup_attached_calibrate':
+        return 'Calibrate';
+      case 'game_lookup_attached_risk_accept':
+        return 'Accept click risk';
+      case 'game_lookup_attached_profile_clear':
+        return 'Clear profile';
+      case 'game_lookup_attached_thread_required':
+        return 'Select one body-text thread before calibration.';
+      case 'game_lookup_attached_risk_title':
+        return 'Confirm raw-click risk';
+      case 'game_lookup_attached_risk_body':
+        return 'The input shield is not verified for this executable. Clicking a glyph may also advance dialogue or trigger a choice. This authorization is stored only for the current executable hash and is revoked after an update.';
+      case 'game_lookup_attached_calibration_title':
+        return 'Calibrate body text';
+      case 'game_lookup_attached_preview':
+        return 'Current body text preview';
+      case 'game_lookup_attached_body_rect':
+        return 'Body rectangle';
+      case 'game_lookup_attached_left':
+        return 'Left';
+      case 'game_lookup_attached_top':
+        return 'Top';
+      case 'game_lookup_attached_width':
+        return 'Width';
+      case 'game_lookup_attached_height':
+        return 'Height';
+      case 'game_lookup_attached_font_family':
+        return 'Font family';
+      case 'game_lookup_attached_font_size':
+        return 'Font size / client height';
+      case 'game_lookup_attached_letter_spacing':
+        return 'Letter spacing / client height';
+      case 'game_lookup_attached_line_height':
+        return 'Line height';
+      case 'game_lookup_attached_text_align':
+        return 'Horizontal alignment';
+      case 'game_lookup_attached_vertical_align':
+        return 'Vertical alignment';
+      case 'game_lookup_attached_align_left':
+        return 'Left';
+      case 'game_lookup_attached_align_center':
+        return 'Center';
+      case 'game_lookup_attached_align_right':
+        return 'Right';
+      case 'game_lookup_attached_align_top':
+        return 'Top';
+      case 'game_lookup_attached_align_bottom':
+        return 'Bottom';
+      case 'game_lookup_attached_probes_hint':
+        return 'Click the first, middle, and last highlighted glyphs in the game, then confirm each character below.';
+      case 'game_lookup_attached_probe_start':
+        return 'First glyph';
+      case 'game_lookup_attached_probe_middle':
+        return 'Middle glyph';
+      case 'game_lookup_attached_probe_end':
+        return 'Last glyph';
+      case 'game_lookup_attached_calibration_commit':
+        return 'Save calibration';
+      case 'game_lookup_attached_calibration_failed':
+        return 'Calibration was not applied. Check the body text, target window, and all three probes.';
+      case 'game_lookup_attached_calibration_short_text':
+        return 'At least three characters are required for calibration probes.';
+      case 'game_lookup_attached_profile_clear_title':
+        return 'Clear lookup profile?';
+      case 'game_lookup_attached_profile_clear_body':
+        return 'The saved rectangle, text layout, and executable-specific click authorization will be removed.';
+      case 'game_lookup_attached_probe_waiting':
+        return 'Waiting for matching in-game click';
       default:
         return null;
     }
@@ -179705,6 +182031,122 @@ extension on _StringsDe {
         return 'Markieren Sie dasselbe Wort, für das Sie bereits eine Wörterbuchbedeutung geprüft haben, und lassen Sie die Auswahl bestehen.';
       case 'onboarding_global_lookup_android_select_body':
         return 'Halten Sie dasselbe geprüfte Wort gedrückt und ziehen Sie dann die Auswahlpunkte so, dass es vollständig markiert ist.';
+      case 'game_lookup_attached_title':
+        return 'In-game lookup';
+      case 'game_lookup_attached_no_ocr':
+        return 'No OCR · horizontal body text only';
+      case 'game_lookup_attached_mode':
+        return 'Mode';
+      case 'game_lookup_attached_mode_auto':
+        return 'Auto';
+      case 'game_lookup_attached_mode_native_only':
+        return 'Native only';
+      case 'game_lookup_attached_mode_attached_only':
+        return 'Calibrated layer only';
+      case 'game_lookup_attached_mode_off':
+        return 'Off';
+      case 'game_lookup_attached_status':
+        return 'State';
+      case 'game_lookup_attached_native_status':
+        return 'Native';
+      case 'game_lookup_attached_provider':
+        return 'Provider';
+      case 'game_lookup_attached_provider_unknown':
+        return 'Not reported';
+      case 'game_lookup_attached_profile':
+        return 'Profile';
+      case 'game_lookup_attached_profile_ready':
+        return 'Calibrated';
+      case 'game_lookup_attached_profile_missing':
+        return 'Not calibrated';
+      case 'game_lookup_attached_shield':
+        return 'Input shield';
+      case 'game_lookup_attached_shield_verified':
+        return 'Verified';
+      case 'game_lookup_attached_shield_unknown':
+        return 'Unknown';
+      case 'game_lookup_attached_shield_partial':
+        return 'Partial';
+      case 'game_lookup_attached_shield_known_uncovered':
+        return 'Known uncovered';
+      case 'game_lookup_attached_shield_faulted':
+        return 'Faulted';
+      case 'game_lookup_attached_risk':
+        return 'Click risk';
+      case 'game_lookup_attached_risk_safe':
+        return 'Not authorized';
+      case 'game_lookup_attached_risk_pending':
+        return 'Confirmation required';
+      case 'game_lookup_attached_risk_active':
+        return 'Risk accepted · may double-trigger';
+      case 'game_lookup_attached_calibrate':
+        return 'Calibrate';
+      case 'game_lookup_attached_risk_accept':
+        return 'Accept click risk';
+      case 'game_lookup_attached_profile_clear':
+        return 'Clear profile';
+      case 'game_lookup_attached_thread_required':
+        return 'Select one body-text thread before calibration.';
+      case 'game_lookup_attached_risk_title':
+        return 'Confirm raw-click risk';
+      case 'game_lookup_attached_risk_body':
+        return 'The input shield is not verified for this executable. Clicking a glyph may also advance dialogue or trigger a choice. This authorization is stored only for the current executable hash and is revoked after an update.';
+      case 'game_lookup_attached_calibration_title':
+        return 'Calibrate body text';
+      case 'game_lookup_attached_preview':
+        return 'Current body text preview';
+      case 'game_lookup_attached_body_rect':
+        return 'Body rectangle';
+      case 'game_lookup_attached_left':
+        return 'Left';
+      case 'game_lookup_attached_top':
+        return 'Top';
+      case 'game_lookup_attached_width':
+        return 'Width';
+      case 'game_lookup_attached_height':
+        return 'Height';
+      case 'game_lookup_attached_font_family':
+        return 'Font family';
+      case 'game_lookup_attached_font_size':
+        return 'Font size / client height';
+      case 'game_lookup_attached_letter_spacing':
+        return 'Letter spacing / client height';
+      case 'game_lookup_attached_line_height':
+        return 'Line height';
+      case 'game_lookup_attached_text_align':
+        return 'Horizontal alignment';
+      case 'game_lookup_attached_vertical_align':
+        return 'Vertical alignment';
+      case 'game_lookup_attached_align_left':
+        return 'Left';
+      case 'game_lookup_attached_align_center':
+        return 'Center';
+      case 'game_lookup_attached_align_right':
+        return 'Right';
+      case 'game_lookup_attached_align_top':
+        return 'Top';
+      case 'game_lookup_attached_align_bottom':
+        return 'Bottom';
+      case 'game_lookup_attached_probes_hint':
+        return 'Click the first, middle, and last highlighted glyphs in the game, then confirm each character below.';
+      case 'game_lookup_attached_probe_start':
+        return 'First glyph';
+      case 'game_lookup_attached_probe_middle':
+        return 'Middle glyph';
+      case 'game_lookup_attached_probe_end':
+        return 'Last glyph';
+      case 'game_lookup_attached_calibration_commit':
+        return 'Save calibration';
+      case 'game_lookup_attached_calibration_failed':
+        return 'Calibration was not applied. Check the body text, target window, and all three probes.';
+      case 'game_lookup_attached_calibration_short_text':
+        return 'At least three characters are required for calibration probes.';
+      case 'game_lookup_attached_profile_clear_title':
+        return 'Clear lookup profile?';
+      case 'game_lookup_attached_profile_clear_body':
+        return 'The saved rectangle, text layout, and executable-specific click authorization will be removed.';
+      case 'game_lookup_attached_probe_waiting':
+        return 'Waiting for matching in-game click';
       default:
         return null;
     }
@@ -187979,6 +190421,122 @@ extension on _StringsEs {
         return 'Seleccione la misma palabra de la que ya comprobó que hay definición en el diccionario y mantenga la selección activa.';
       case 'onboarding_global_lookup_android_select_body':
         return 'Mantenga pulsada esa misma palabra comprobada y ajuste los controles de selección para cubrirla entera.';
+      case 'game_lookup_attached_title':
+        return 'In-game lookup';
+      case 'game_lookup_attached_no_ocr':
+        return 'No OCR · horizontal body text only';
+      case 'game_lookup_attached_mode':
+        return 'Mode';
+      case 'game_lookup_attached_mode_auto':
+        return 'Auto';
+      case 'game_lookup_attached_mode_native_only':
+        return 'Native only';
+      case 'game_lookup_attached_mode_attached_only':
+        return 'Calibrated layer only';
+      case 'game_lookup_attached_mode_off':
+        return 'Off';
+      case 'game_lookup_attached_status':
+        return 'State';
+      case 'game_lookup_attached_native_status':
+        return 'Native';
+      case 'game_lookup_attached_provider':
+        return 'Provider';
+      case 'game_lookup_attached_provider_unknown':
+        return 'Not reported';
+      case 'game_lookup_attached_profile':
+        return 'Profile';
+      case 'game_lookup_attached_profile_ready':
+        return 'Calibrated';
+      case 'game_lookup_attached_profile_missing':
+        return 'Not calibrated';
+      case 'game_lookup_attached_shield':
+        return 'Input shield';
+      case 'game_lookup_attached_shield_verified':
+        return 'Verified';
+      case 'game_lookup_attached_shield_unknown':
+        return 'Unknown';
+      case 'game_lookup_attached_shield_partial':
+        return 'Partial';
+      case 'game_lookup_attached_shield_known_uncovered':
+        return 'Known uncovered';
+      case 'game_lookup_attached_shield_faulted':
+        return 'Faulted';
+      case 'game_lookup_attached_risk':
+        return 'Click risk';
+      case 'game_lookup_attached_risk_safe':
+        return 'Not authorized';
+      case 'game_lookup_attached_risk_pending':
+        return 'Confirmation required';
+      case 'game_lookup_attached_risk_active':
+        return 'Risk accepted · may double-trigger';
+      case 'game_lookup_attached_calibrate':
+        return 'Calibrate';
+      case 'game_lookup_attached_risk_accept':
+        return 'Accept click risk';
+      case 'game_lookup_attached_profile_clear':
+        return 'Clear profile';
+      case 'game_lookup_attached_thread_required':
+        return 'Select one body-text thread before calibration.';
+      case 'game_lookup_attached_risk_title':
+        return 'Confirm raw-click risk';
+      case 'game_lookup_attached_risk_body':
+        return 'The input shield is not verified for this executable. Clicking a glyph may also advance dialogue or trigger a choice. This authorization is stored only for the current executable hash and is revoked after an update.';
+      case 'game_lookup_attached_calibration_title':
+        return 'Calibrate body text';
+      case 'game_lookup_attached_preview':
+        return 'Current body text preview';
+      case 'game_lookup_attached_body_rect':
+        return 'Body rectangle';
+      case 'game_lookup_attached_left':
+        return 'Left';
+      case 'game_lookup_attached_top':
+        return 'Top';
+      case 'game_lookup_attached_width':
+        return 'Width';
+      case 'game_lookup_attached_height':
+        return 'Height';
+      case 'game_lookup_attached_font_family':
+        return 'Font family';
+      case 'game_lookup_attached_font_size':
+        return 'Font size / client height';
+      case 'game_lookup_attached_letter_spacing':
+        return 'Letter spacing / client height';
+      case 'game_lookup_attached_line_height':
+        return 'Line height';
+      case 'game_lookup_attached_text_align':
+        return 'Horizontal alignment';
+      case 'game_lookup_attached_vertical_align':
+        return 'Vertical alignment';
+      case 'game_lookup_attached_align_left':
+        return 'Left';
+      case 'game_lookup_attached_align_center':
+        return 'Center';
+      case 'game_lookup_attached_align_right':
+        return 'Right';
+      case 'game_lookup_attached_align_top':
+        return 'Top';
+      case 'game_lookup_attached_align_bottom':
+        return 'Bottom';
+      case 'game_lookup_attached_probes_hint':
+        return 'Click the first, middle, and last highlighted glyphs in the game, then confirm each character below.';
+      case 'game_lookup_attached_probe_start':
+        return 'First glyph';
+      case 'game_lookup_attached_probe_middle':
+        return 'Middle glyph';
+      case 'game_lookup_attached_probe_end':
+        return 'Last glyph';
+      case 'game_lookup_attached_calibration_commit':
+        return 'Save calibration';
+      case 'game_lookup_attached_calibration_failed':
+        return 'Calibration was not applied. Check the body text, target window, and all three probes.';
+      case 'game_lookup_attached_calibration_short_text':
+        return 'At least three characters are required for calibration probes.';
+      case 'game_lookup_attached_profile_clear_title':
+        return 'Clear lookup profile?';
+      case 'game_lookup_attached_profile_clear_body':
+        return 'The saved rectangle, text layout, and executable-specific click authorization will be removed.';
+      case 'game_lookup_attached_probe_waiting':
+        return 'Waiting for matching in-game click';
       default:
         return null;
     }
@@ -196261,6 +198819,122 @@ extension on _StringsFr {
         return 'Sélectionnez le même mot dont vous avez déjà vérifié la définition, et laissez la sélection active.';
       case 'onboarding_global_lookup_android_select_body':
         return 'Appuyez longuement sur ce même mot vérifié, puis ajustez les poignées de sélection pour le couvrir entièrement.';
+      case 'game_lookup_attached_title':
+        return 'In-game lookup';
+      case 'game_lookup_attached_no_ocr':
+        return 'No OCR · horizontal body text only';
+      case 'game_lookup_attached_mode':
+        return 'Mode';
+      case 'game_lookup_attached_mode_auto':
+        return 'Auto';
+      case 'game_lookup_attached_mode_native_only':
+        return 'Native only';
+      case 'game_lookup_attached_mode_attached_only':
+        return 'Calibrated layer only';
+      case 'game_lookup_attached_mode_off':
+        return 'Off';
+      case 'game_lookup_attached_status':
+        return 'State';
+      case 'game_lookup_attached_native_status':
+        return 'Native';
+      case 'game_lookup_attached_provider':
+        return 'Provider';
+      case 'game_lookup_attached_provider_unknown':
+        return 'Not reported';
+      case 'game_lookup_attached_profile':
+        return 'Profile';
+      case 'game_lookup_attached_profile_ready':
+        return 'Calibrated';
+      case 'game_lookup_attached_profile_missing':
+        return 'Not calibrated';
+      case 'game_lookup_attached_shield':
+        return 'Input shield';
+      case 'game_lookup_attached_shield_verified':
+        return 'Verified';
+      case 'game_lookup_attached_shield_unknown':
+        return 'Unknown';
+      case 'game_lookup_attached_shield_partial':
+        return 'Partial';
+      case 'game_lookup_attached_shield_known_uncovered':
+        return 'Known uncovered';
+      case 'game_lookup_attached_shield_faulted':
+        return 'Faulted';
+      case 'game_lookup_attached_risk':
+        return 'Click risk';
+      case 'game_lookup_attached_risk_safe':
+        return 'Not authorized';
+      case 'game_lookup_attached_risk_pending':
+        return 'Confirmation required';
+      case 'game_lookup_attached_risk_active':
+        return 'Risk accepted · may double-trigger';
+      case 'game_lookup_attached_calibrate':
+        return 'Calibrate';
+      case 'game_lookup_attached_risk_accept':
+        return 'Accept click risk';
+      case 'game_lookup_attached_profile_clear':
+        return 'Clear profile';
+      case 'game_lookup_attached_thread_required':
+        return 'Select one body-text thread before calibration.';
+      case 'game_lookup_attached_risk_title':
+        return 'Confirm raw-click risk';
+      case 'game_lookup_attached_risk_body':
+        return 'The input shield is not verified for this executable. Clicking a glyph may also advance dialogue or trigger a choice. This authorization is stored only for the current executable hash and is revoked after an update.';
+      case 'game_lookup_attached_calibration_title':
+        return 'Calibrate body text';
+      case 'game_lookup_attached_preview':
+        return 'Current body text preview';
+      case 'game_lookup_attached_body_rect':
+        return 'Body rectangle';
+      case 'game_lookup_attached_left':
+        return 'Left';
+      case 'game_lookup_attached_top':
+        return 'Top';
+      case 'game_lookup_attached_width':
+        return 'Width';
+      case 'game_lookup_attached_height':
+        return 'Height';
+      case 'game_lookup_attached_font_family':
+        return 'Font family';
+      case 'game_lookup_attached_font_size':
+        return 'Font size / client height';
+      case 'game_lookup_attached_letter_spacing':
+        return 'Letter spacing / client height';
+      case 'game_lookup_attached_line_height':
+        return 'Line height';
+      case 'game_lookup_attached_text_align':
+        return 'Horizontal alignment';
+      case 'game_lookup_attached_vertical_align':
+        return 'Vertical alignment';
+      case 'game_lookup_attached_align_left':
+        return 'Left';
+      case 'game_lookup_attached_align_center':
+        return 'Center';
+      case 'game_lookup_attached_align_right':
+        return 'Right';
+      case 'game_lookup_attached_align_top':
+        return 'Top';
+      case 'game_lookup_attached_align_bottom':
+        return 'Bottom';
+      case 'game_lookup_attached_probes_hint':
+        return 'Click the first, middle, and last highlighted glyphs in the game, then confirm each character below.';
+      case 'game_lookup_attached_probe_start':
+        return 'First glyph';
+      case 'game_lookup_attached_probe_middle':
+        return 'Middle glyph';
+      case 'game_lookup_attached_probe_end':
+        return 'Last glyph';
+      case 'game_lookup_attached_calibration_commit':
+        return 'Save calibration';
+      case 'game_lookup_attached_calibration_failed':
+        return 'Calibration was not applied. Check the body text, target window, and all three probes.';
+      case 'game_lookup_attached_calibration_short_text':
+        return 'At least three characters are required for calibration probes.';
+      case 'game_lookup_attached_profile_clear_title':
+        return 'Clear lookup profile?';
+      case 'game_lookup_attached_profile_clear_body':
+        return 'The saved rectangle, text layout, and executable-specific click authorization will be removed.';
+      case 'game_lookup_attached_probe_waiting':
+        return 'Waiting for matching in-game click';
       default:
         return null;
     }
@@ -204515,6 +207189,122 @@ extension on _StringsId {
         return 'Sorot kata yang sama, yang sudah Anda pastikan ada definisinya di kamus, dan biarkan tetap terpilih.';
       case 'onboarding_global_lookup_android_select_body':
         return 'Tekan lama kata yang sudah dipastikan itu, lalu geser pegangan seleksi agar menutupi seluruh kata.';
+      case 'game_lookup_attached_title':
+        return 'In-game lookup';
+      case 'game_lookup_attached_no_ocr':
+        return 'No OCR · horizontal body text only';
+      case 'game_lookup_attached_mode':
+        return 'Mode';
+      case 'game_lookup_attached_mode_auto':
+        return 'Auto';
+      case 'game_lookup_attached_mode_native_only':
+        return 'Native only';
+      case 'game_lookup_attached_mode_attached_only':
+        return 'Calibrated layer only';
+      case 'game_lookup_attached_mode_off':
+        return 'Off';
+      case 'game_lookup_attached_status':
+        return 'State';
+      case 'game_lookup_attached_native_status':
+        return 'Native';
+      case 'game_lookup_attached_provider':
+        return 'Provider';
+      case 'game_lookup_attached_provider_unknown':
+        return 'Not reported';
+      case 'game_lookup_attached_profile':
+        return 'Profile';
+      case 'game_lookup_attached_profile_ready':
+        return 'Calibrated';
+      case 'game_lookup_attached_profile_missing':
+        return 'Not calibrated';
+      case 'game_lookup_attached_shield':
+        return 'Input shield';
+      case 'game_lookup_attached_shield_verified':
+        return 'Verified';
+      case 'game_lookup_attached_shield_unknown':
+        return 'Unknown';
+      case 'game_lookup_attached_shield_partial':
+        return 'Partial';
+      case 'game_lookup_attached_shield_known_uncovered':
+        return 'Known uncovered';
+      case 'game_lookup_attached_shield_faulted':
+        return 'Faulted';
+      case 'game_lookup_attached_risk':
+        return 'Click risk';
+      case 'game_lookup_attached_risk_safe':
+        return 'Not authorized';
+      case 'game_lookup_attached_risk_pending':
+        return 'Confirmation required';
+      case 'game_lookup_attached_risk_active':
+        return 'Risk accepted · may double-trigger';
+      case 'game_lookup_attached_calibrate':
+        return 'Calibrate';
+      case 'game_lookup_attached_risk_accept':
+        return 'Accept click risk';
+      case 'game_lookup_attached_profile_clear':
+        return 'Clear profile';
+      case 'game_lookup_attached_thread_required':
+        return 'Select one body-text thread before calibration.';
+      case 'game_lookup_attached_risk_title':
+        return 'Confirm raw-click risk';
+      case 'game_lookup_attached_risk_body':
+        return 'The input shield is not verified for this executable. Clicking a glyph may also advance dialogue or trigger a choice. This authorization is stored only for the current executable hash and is revoked after an update.';
+      case 'game_lookup_attached_calibration_title':
+        return 'Calibrate body text';
+      case 'game_lookup_attached_preview':
+        return 'Current body text preview';
+      case 'game_lookup_attached_body_rect':
+        return 'Body rectangle';
+      case 'game_lookup_attached_left':
+        return 'Left';
+      case 'game_lookup_attached_top':
+        return 'Top';
+      case 'game_lookup_attached_width':
+        return 'Width';
+      case 'game_lookup_attached_height':
+        return 'Height';
+      case 'game_lookup_attached_font_family':
+        return 'Font family';
+      case 'game_lookup_attached_font_size':
+        return 'Font size / client height';
+      case 'game_lookup_attached_letter_spacing':
+        return 'Letter spacing / client height';
+      case 'game_lookup_attached_line_height':
+        return 'Line height';
+      case 'game_lookup_attached_text_align':
+        return 'Horizontal alignment';
+      case 'game_lookup_attached_vertical_align':
+        return 'Vertical alignment';
+      case 'game_lookup_attached_align_left':
+        return 'Left';
+      case 'game_lookup_attached_align_center':
+        return 'Center';
+      case 'game_lookup_attached_align_right':
+        return 'Right';
+      case 'game_lookup_attached_align_top':
+        return 'Top';
+      case 'game_lookup_attached_align_bottom':
+        return 'Bottom';
+      case 'game_lookup_attached_probes_hint':
+        return 'Click the first, middle, and last highlighted glyphs in the game, then confirm each character below.';
+      case 'game_lookup_attached_probe_start':
+        return 'First glyph';
+      case 'game_lookup_attached_probe_middle':
+        return 'Middle glyph';
+      case 'game_lookup_attached_probe_end':
+        return 'Last glyph';
+      case 'game_lookup_attached_calibration_commit':
+        return 'Save calibration';
+      case 'game_lookup_attached_calibration_failed':
+        return 'Calibration was not applied. Check the body text, target window, and all three probes.';
+      case 'game_lookup_attached_calibration_short_text':
+        return 'At least three characters are required for calibration probes.';
+      case 'game_lookup_attached_profile_clear_title':
+        return 'Clear lookup profile?';
+      case 'game_lookup_attached_profile_clear_body':
+        return 'The saved rectangle, text layout, and executable-specific click authorization will be removed.';
+      case 'game_lookup_attached_probe_waiting':
+        return 'Waiting for matching in-game click';
       default:
         return null;
     }
@@ -212790,6 +215580,122 @@ extension on _StringsIt {
         return 'Seleziona la stessa parola di cui hai già verificato la definizione e lascia la selezione attiva.';
       case 'onboarding_global_lookup_android_select_body':
         return 'Tieni premuta la stessa parola verificata, poi sposta le maniglie di selezione per coprirla tutta.';
+      case 'game_lookup_attached_title':
+        return 'In-game lookup';
+      case 'game_lookup_attached_no_ocr':
+        return 'No OCR · horizontal body text only';
+      case 'game_lookup_attached_mode':
+        return 'Mode';
+      case 'game_lookup_attached_mode_auto':
+        return 'Auto';
+      case 'game_lookup_attached_mode_native_only':
+        return 'Native only';
+      case 'game_lookup_attached_mode_attached_only':
+        return 'Calibrated layer only';
+      case 'game_lookup_attached_mode_off':
+        return 'Off';
+      case 'game_lookup_attached_status':
+        return 'State';
+      case 'game_lookup_attached_native_status':
+        return 'Native';
+      case 'game_lookup_attached_provider':
+        return 'Provider';
+      case 'game_lookup_attached_provider_unknown':
+        return 'Not reported';
+      case 'game_lookup_attached_profile':
+        return 'Profile';
+      case 'game_lookup_attached_profile_ready':
+        return 'Calibrated';
+      case 'game_lookup_attached_profile_missing':
+        return 'Not calibrated';
+      case 'game_lookup_attached_shield':
+        return 'Input shield';
+      case 'game_lookup_attached_shield_verified':
+        return 'Verified';
+      case 'game_lookup_attached_shield_unknown':
+        return 'Unknown';
+      case 'game_lookup_attached_shield_partial':
+        return 'Partial';
+      case 'game_lookup_attached_shield_known_uncovered':
+        return 'Known uncovered';
+      case 'game_lookup_attached_shield_faulted':
+        return 'Faulted';
+      case 'game_lookup_attached_risk':
+        return 'Click risk';
+      case 'game_lookup_attached_risk_safe':
+        return 'Not authorized';
+      case 'game_lookup_attached_risk_pending':
+        return 'Confirmation required';
+      case 'game_lookup_attached_risk_active':
+        return 'Risk accepted · may double-trigger';
+      case 'game_lookup_attached_calibrate':
+        return 'Calibrate';
+      case 'game_lookup_attached_risk_accept':
+        return 'Accept click risk';
+      case 'game_lookup_attached_profile_clear':
+        return 'Clear profile';
+      case 'game_lookup_attached_thread_required':
+        return 'Select one body-text thread before calibration.';
+      case 'game_lookup_attached_risk_title':
+        return 'Confirm raw-click risk';
+      case 'game_lookup_attached_risk_body':
+        return 'The input shield is not verified for this executable. Clicking a glyph may also advance dialogue or trigger a choice. This authorization is stored only for the current executable hash and is revoked after an update.';
+      case 'game_lookup_attached_calibration_title':
+        return 'Calibrate body text';
+      case 'game_lookup_attached_preview':
+        return 'Current body text preview';
+      case 'game_lookup_attached_body_rect':
+        return 'Body rectangle';
+      case 'game_lookup_attached_left':
+        return 'Left';
+      case 'game_lookup_attached_top':
+        return 'Top';
+      case 'game_lookup_attached_width':
+        return 'Width';
+      case 'game_lookup_attached_height':
+        return 'Height';
+      case 'game_lookup_attached_font_family':
+        return 'Font family';
+      case 'game_lookup_attached_font_size':
+        return 'Font size / client height';
+      case 'game_lookup_attached_letter_spacing':
+        return 'Letter spacing / client height';
+      case 'game_lookup_attached_line_height':
+        return 'Line height';
+      case 'game_lookup_attached_text_align':
+        return 'Horizontal alignment';
+      case 'game_lookup_attached_vertical_align':
+        return 'Vertical alignment';
+      case 'game_lookup_attached_align_left':
+        return 'Left';
+      case 'game_lookup_attached_align_center':
+        return 'Center';
+      case 'game_lookup_attached_align_right':
+        return 'Right';
+      case 'game_lookup_attached_align_top':
+        return 'Top';
+      case 'game_lookup_attached_align_bottom':
+        return 'Bottom';
+      case 'game_lookup_attached_probes_hint':
+        return 'Click the first, middle, and last highlighted glyphs in the game, then confirm each character below.';
+      case 'game_lookup_attached_probe_start':
+        return 'First glyph';
+      case 'game_lookup_attached_probe_middle':
+        return 'Middle glyph';
+      case 'game_lookup_attached_probe_end':
+        return 'Last glyph';
+      case 'game_lookup_attached_calibration_commit':
+        return 'Save calibration';
+      case 'game_lookup_attached_calibration_failed':
+        return 'Calibration was not applied. Check the body text, target window, and all three probes.';
+      case 'game_lookup_attached_calibration_short_text':
+        return 'At least three characters are required for calibration probes.';
+      case 'game_lookup_attached_profile_clear_title':
+        return 'Clear lookup profile?';
+      case 'game_lookup_attached_profile_clear_body':
+        return 'The saved rectangle, text layout, and executable-specific click authorization will be removed.';
+      case 'game_lookup_attached_probe_waiting':
+        return 'Waiting for matching in-game click';
       default:
         return null;
     }
@@ -220995,6 +223901,122 @@ extension on _StringsJa {
         return '辞書に語義があると確認済みの同じ単語をドラッグで選択し、選択状態のままにします。';
       case 'onboarding_global_lookup_android_select_body':
         return '辞書に語義があると確認済みの同じ単語を長押しし、選択ハンドルを動かして単語全体を覆います。';
+      case 'game_lookup_attached_title':
+        return 'In-game lookup';
+      case 'game_lookup_attached_no_ocr':
+        return 'No OCR · horizontal body text only';
+      case 'game_lookup_attached_mode':
+        return 'Mode';
+      case 'game_lookup_attached_mode_auto':
+        return 'Auto';
+      case 'game_lookup_attached_mode_native_only':
+        return 'Native only';
+      case 'game_lookup_attached_mode_attached_only':
+        return 'Calibrated layer only';
+      case 'game_lookup_attached_mode_off':
+        return 'Off';
+      case 'game_lookup_attached_status':
+        return 'State';
+      case 'game_lookup_attached_native_status':
+        return 'Native';
+      case 'game_lookup_attached_provider':
+        return 'Provider';
+      case 'game_lookup_attached_provider_unknown':
+        return 'Not reported';
+      case 'game_lookup_attached_profile':
+        return 'Profile';
+      case 'game_lookup_attached_profile_ready':
+        return 'Calibrated';
+      case 'game_lookup_attached_profile_missing':
+        return 'Not calibrated';
+      case 'game_lookup_attached_shield':
+        return 'Input shield';
+      case 'game_lookup_attached_shield_verified':
+        return 'Verified';
+      case 'game_lookup_attached_shield_unknown':
+        return 'Unknown';
+      case 'game_lookup_attached_shield_partial':
+        return 'Partial';
+      case 'game_lookup_attached_shield_known_uncovered':
+        return 'Known uncovered';
+      case 'game_lookup_attached_shield_faulted':
+        return 'Faulted';
+      case 'game_lookup_attached_risk':
+        return 'Click risk';
+      case 'game_lookup_attached_risk_safe':
+        return 'Not authorized';
+      case 'game_lookup_attached_risk_pending':
+        return 'Confirmation required';
+      case 'game_lookup_attached_risk_active':
+        return 'Risk accepted · may double-trigger';
+      case 'game_lookup_attached_calibrate':
+        return 'Calibrate';
+      case 'game_lookup_attached_risk_accept':
+        return 'Accept click risk';
+      case 'game_lookup_attached_profile_clear':
+        return 'Clear profile';
+      case 'game_lookup_attached_thread_required':
+        return 'Select one body-text thread before calibration.';
+      case 'game_lookup_attached_risk_title':
+        return 'Confirm raw-click risk';
+      case 'game_lookup_attached_risk_body':
+        return 'The input shield is not verified for this executable. Clicking a glyph may also advance dialogue or trigger a choice. This authorization is stored only for the current executable hash and is revoked after an update.';
+      case 'game_lookup_attached_calibration_title':
+        return 'Calibrate body text';
+      case 'game_lookup_attached_preview':
+        return 'Current body text preview';
+      case 'game_lookup_attached_body_rect':
+        return 'Body rectangle';
+      case 'game_lookup_attached_left':
+        return 'Left';
+      case 'game_lookup_attached_top':
+        return 'Top';
+      case 'game_lookup_attached_width':
+        return 'Width';
+      case 'game_lookup_attached_height':
+        return 'Height';
+      case 'game_lookup_attached_font_family':
+        return 'Font family';
+      case 'game_lookup_attached_font_size':
+        return 'Font size / client height';
+      case 'game_lookup_attached_letter_spacing':
+        return 'Letter spacing / client height';
+      case 'game_lookup_attached_line_height':
+        return 'Line height';
+      case 'game_lookup_attached_text_align':
+        return 'Horizontal alignment';
+      case 'game_lookup_attached_vertical_align':
+        return 'Vertical alignment';
+      case 'game_lookup_attached_align_left':
+        return 'Left';
+      case 'game_lookup_attached_align_center':
+        return 'Center';
+      case 'game_lookup_attached_align_right':
+        return 'Right';
+      case 'game_lookup_attached_align_top':
+        return 'Top';
+      case 'game_lookup_attached_align_bottom':
+        return 'Bottom';
+      case 'game_lookup_attached_probes_hint':
+        return 'Click the first, middle, and last highlighted glyphs in the game, then confirm each character below.';
+      case 'game_lookup_attached_probe_start':
+        return 'First glyph';
+      case 'game_lookup_attached_probe_middle':
+        return 'Middle glyph';
+      case 'game_lookup_attached_probe_end':
+        return 'Last glyph';
+      case 'game_lookup_attached_calibration_commit':
+        return 'Save calibration';
+      case 'game_lookup_attached_calibration_failed':
+        return 'Calibration was not applied. Check the body text, target window, and all three probes.';
+      case 'game_lookup_attached_calibration_short_text':
+        return 'At least three characters are required for calibration probes.';
+      case 'game_lookup_attached_profile_clear_title':
+        return 'Clear lookup profile?';
+      case 'game_lookup_attached_profile_clear_body':
+        return 'The saved rectangle, text layout, and executable-specific click authorization will be removed.';
+      case 'game_lookup_attached_probe_waiting':
+        return 'Waiting for matching in-game click';
       default:
         return null;
     }
@@ -229203,6 +232225,122 @@ extension on _StringsKo {
         return '사전에 뜻이 있다고 확인한 그 단어를 드래그해 선택하고, 선택 상태를 유지하세요.';
       case 'onboarding_global_lookup_android_select_body':
         return '확인한 그 단어를 길게 누른 뒤 선택 핸들을 움직여 단어 전체를 덮으세요.';
+      case 'game_lookup_attached_title':
+        return 'In-game lookup';
+      case 'game_lookup_attached_no_ocr':
+        return 'No OCR · horizontal body text only';
+      case 'game_lookup_attached_mode':
+        return 'Mode';
+      case 'game_lookup_attached_mode_auto':
+        return 'Auto';
+      case 'game_lookup_attached_mode_native_only':
+        return 'Native only';
+      case 'game_lookup_attached_mode_attached_only':
+        return 'Calibrated layer only';
+      case 'game_lookup_attached_mode_off':
+        return 'Off';
+      case 'game_lookup_attached_status':
+        return 'State';
+      case 'game_lookup_attached_native_status':
+        return 'Native';
+      case 'game_lookup_attached_provider':
+        return 'Provider';
+      case 'game_lookup_attached_provider_unknown':
+        return 'Not reported';
+      case 'game_lookup_attached_profile':
+        return 'Profile';
+      case 'game_lookup_attached_profile_ready':
+        return 'Calibrated';
+      case 'game_lookup_attached_profile_missing':
+        return 'Not calibrated';
+      case 'game_lookup_attached_shield':
+        return 'Input shield';
+      case 'game_lookup_attached_shield_verified':
+        return 'Verified';
+      case 'game_lookup_attached_shield_unknown':
+        return 'Unknown';
+      case 'game_lookup_attached_shield_partial':
+        return 'Partial';
+      case 'game_lookup_attached_shield_known_uncovered':
+        return 'Known uncovered';
+      case 'game_lookup_attached_shield_faulted':
+        return 'Faulted';
+      case 'game_lookup_attached_risk':
+        return 'Click risk';
+      case 'game_lookup_attached_risk_safe':
+        return 'Not authorized';
+      case 'game_lookup_attached_risk_pending':
+        return 'Confirmation required';
+      case 'game_lookup_attached_risk_active':
+        return 'Risk accepted · may double-trigger';
+      case 'game_lookup_attached_calibrate':
+        return 'Calibrate';
+      case 'game_lookup_attached_risk_accept':
+        return 'Accept click risk';
+      case 'game_lookup_attached_profile_clear':
+        return 'Clear profile';
+      case 'game_lookup_attached_thread_required':
+        return 'Select one body-text thread before calibration.';
+      case 'game_lookup_attached_risk_title':
+        return 'Confirm raw-click risk';
+      case 'game_lookup_attached_risk_body':
+        return 'The input shield is not verified for this executable. Clicking a glyph may also advance dialogue or trigger a choice. This authorization is stored only for the current executable hash and is revoked after an update.';
+      case 'game_lookup_attached_calibration_title':
+        return 'Calibrate body text';
+      case 'game_lookup_attached_preview':
+        return 'Current body text preview';
+      case 'game_lookup_attached_body_rect':
+        return 'Body rectangle';
+      case 'game_lookup_attached_left':
+        return 'Left';
+      case 'game_lookup_attached_top':
+        return 'Top';
+      case 'game_lookup_attached_width':
+        return 'Width';
+      case 'game_lookup_attached_height':
+        return 'Height';
+      case 'game_lookup_attached_font_family':
+        return 'Font family';
+      case 'game_lookup_attached_font_size':
+        return 'Font size / client height';
+      case 'game_lookup_attached_letter_spacing':
+        return 'Letter spacing / client height';
+      case 'game_lookup_attached_line_height':
+        return 'Line height';
+      case 'game_lookup_attached_text_align':
+        return 'Horizontal alignment';
+      case 'game_lookup_attached_vertical_align':
+        return 'Vertical alignment';
+      case 'game_lookup_attached_align_left':
+        return 'Left';
+      case 'game_lookup_attached_align_center':
+        return 'Center';
+      case 'game_lookup_attached_align_right':
+        return 'Right';
+      case 'game_lookup_attached_align_top':
+        return 'Top';
+      case 'game_lookup_attached_align_bottom':
+        return 'Bottom';
+      case 'game_lookup_attached_probes_hint':
+        return 'Click the first, middle, and last highlighted glyphs in the game, then confirm each character below.';
+      case 'game_lookup_attached_probe_start':
+        return 'First glyph';
+      case 'game_lookup_attached_probe_middle':
+        return 'Middle glyph';
+      case 'game_lookup_attached_probe_end':
+        return 'Last glyph';
+      case 'game_lookup_attached_calibration_commit':
+        return 'Save calibration';
+      case 'game_lookup_attached_calibration_failed':
+        return 'Calibration was not applied. Check the body text, target window, and all three probes.';
+      case 'game_lookup_attached_calibration_short_text':
+        return 'At least three characters are required for calibration probes.';
+      case 'game_lookup_attached_profile_clear_title':
+        return 'Clear lookup profile?';
+      case 'game_lookup_attached_profile_clear_body':
+        return 'The saved rectangle, text layout, and executable-specific click authorization will be removed.';
+      case 'game_lookup_attached_probe_waiting':
+        return 'Waiting for matching in-game click';
       default:
         return null;
     }
@@ -237472,6 +240610,122 @@ extension on _StringsNl {
         return 'Selecteer hetzelfde woord waarvan je al hebt gecontroleerd dat er een betekenis in het woordenboek staat, en laat de selectie staan.';
       case 'onboarding_global_lookup_android_select_body':
         return 'Houd datzelfde gecontroleerde woord ingedrukt en versleep daarna de selectiegrepen zodat het hele woord geselecteerd is.';
+      case 'game_lookup_attached_title':
+        return 'In-game lookup';
+      case 'game_lookup_attached_no_ocr':
+        return 'No OCR · horizontal body text only';
+      case 'game_lookup_attached_mode':
+        return 'Mode';
+      case 'game_lookup_attached_mode_auto':
+        return 'Auto';
+      case 'game_lookup_attached_mode_native_only':
+        return 'Native only';
+      case 'game_lookup_attached_mode_attached_only':
+        return 'Calibrated layer only';
+      case 'game_lookup_attached_mode_off':
+        return 'Off';
+      case 'game_lookup_attached_status':
+        return 'State';
+      case 'game_lookup_attached_native_status':
+        return 'Native';
+      case 'game_lookup_attached_provider':
+        return 'Provider';
+      case 'game_lookup_attached_provider_unknown':
+        return 'Not reported';
+      case 'game_lookup_attached_profile':
+        return 'Profile';
+      case 'game_lookup_attached_profile_ready':
+        return 'Calibrated';
+      case 'game_lookup_attached_profile_missing':
+        return 'Not calibrated';
+      case 'game_lookup_attached_shield':
+        return 'Input shield';
+      case 'game_lookup_attached_shield_verified':
+        return 'Verified';
+      case 'game_lookup_attached_shield_unknown':
+        return 'Unknown';
+      case 'game_lookup_attached_shield_partial':
+        return 'Partial';
+      case 'game_lookup_attached_shield_known_uncovered':
+        return 'Known uncovered';
+      case 'game_lookup_attached_shield_faulted':
+        return 'Faulted';
+      case 'game_lookup_attached_risk':
+        return 'Click risk';
+      case 'game_lookup_attached_risk_safe':
+        return 'Not authorized';
+      case 'game_lookup_attached_risk_pending':
+        return 'Confirmation required';
+      case 'game_lookup_attached_risk_active':
+        return 'Risk accepted · may double-trigger';
+      case 'game_lookup_attached_calibrate':
+        return 'Calibrate';
+      case 'game_lookup_attached_risk_accept':
+        return 'Accept click risk';
+      case 'game_lookup_attached_profile_clear':
+        return 'Clear profile';
+      case 'game_lookup_attached_thread_required':
+        return 'Select one body-text thread before calibration.';
+      case 'game_lookup_attached_risk_title':
+        return 'Confirm raw-click risk';
+      case 'game_lookup_attached_risk_body':
+        return 'The input shield is not verified for this executable. Clicking a glyph may also advance dialogue or trigger a choice. This authorization is stored only for the current executable hash and is revoked after an update.';
+      case 'game_lookup_attached_calibration_title':
+        return 'Calibrate body text';
+      case 'game_lookup_attached_preview':
+        return 'Current body text preview';
+      case 'game_lookup_attached_body_rect':
+        return 'Body rectangle';
+      case 'game_lookup_attached_left':
+        return 'Left';
+      case 'game_lookup_attached_top':
+        return 'Top';
+      case 'game_lookup_attached_width':
+        return 'Width';
+      case 'game_lookup_attached_height':
+        return 'Height';
+      case 'game_lookup_attached_font_family':
+        return 'Font family';
+      case 'game_lookup_attached_font_size':
+        return 'Font size / client height';
+      case 'game_lookup_attached_letter_spacing':
+        return 'Letter spacing / client height';
+      case 'game_lookup_attached_line_height':
+        return 'Line height';
+      case 'game_lookup_attached_text_align':
+        return 'Horizontal alignment';
+      case 'game_lookup_attached_vertical_align':
+        return 'Vertical alignment';
+      case 'game_lookup_attached_align_left':
+        return 'Left';
+      case 'game_lookup_attached_align_center':
+        return 'Center';
+      case 'game_lookup_attached_align_right':
+        return 'Right';
+      case 'game_lookup_attached_align_top':
+        return 'Top';
+      case 'game_lookup_attached_align_bottom':
+        return 'Bottom';
+      case 'game_lookup_attached_probes_hint':
+        return 'Click the first, middle, and last highlighted glyphs in the game, then confirm each character below.';
+      case 'game_lookup_attached_probe_start':
+        return 'First glyph';
+      case 'game_lookup_attached_probe_middle':
+        return 'Middle glyph';
+      case 'game_lookup_attached_probe_end':
+        return 'Last glyph';
+      case 'game_lookup_attached_calibration_commit':
+        return 'Save calibration';
+      case 'game_lookup_attached_calibration_failed':
+        return 'Calibration was not applied. Check the body text, target window, and all three probes.';
+      case 'game_lookup_attached_calibration_short_text':
+        return 'At least three characters are required for calibration probes.';
+      case 'game_lookup_attached_profile_clear_title':
+        return 'Clear lookup profile?';
+      case 'game_lookup_attached_profile_clear_body':
+        return 'The saved rectangle, text layout, and executable-specific click authorization will be removed.';
+      case 'game_lookup_attached_probe_waiting':
+        return 'Waiting for matching in-game click';
       default:
         return null;
     }
@@ -245736,6 +248990,122 @@ extension on _StringsPtBr {
         return 'Selecione a mesma palavra que você já confirmou ter definição no dicionário e deixe a seleção ativa.';
       case 'onboarding_global_lookup_android_select_body':
         return 'Mantenha pressionada essa mesma palavra confirmada e ajuste as alças de seleção para cobri-la inteira.';
+      case 'game_lookup_attached_title':
+        return 'In-game lookup';
+      case 'game_lookup_attached_no_ocr':
+        return 'No OCR · horizontal body text only';
+      case 'game_lookup_attached_mode':
+        return 'Mode';
+      case 'game_lookup_attached_mode_auto':
+        return 'Auto';
+      case 'game_lookup_attached_mode_native_only':
+        return 'Native only';
+      case 'game_lookup_attached_mode_attached_only':
+        return 'Calibrated layer only';
+      case 'game_lookup_attached_mode_off':
+        return 'Off';
+      case 'game_lookup_attached_status':
+        return 'State';
+      case 'game_lookup_attached_native_status':
+        return 'Native';
+      case 'game_lookup_attached_provider':
+        return 'Provider';
+      case 'game_lookup_attached_provider_unknown':
+        return 'Not reported';
+      case 'game_lookup_attached_profile':
+        return 'Profile';
+      case 'game_lookup_attached_profile_ready':
+        return 'Calibrated';
+      case 'game_lookup_attached_profile_missing':
+        return 'Not calibrated';
+      case 'game_lookup_attached_shield':
+        return 'Input shield';
+      case 'game_lookup_attached_shield_verified':
+        return 'Verified';
+      case 'game_lookup_attached_shield_unknown':
+        return 'Unknown';
+      case 'game_lookup_attached_shield_partial':
+        return 'Partial';
+      case 'game_lookup_attached_shield_known_uncovered':
+        return 'Known uncovered';
+      case 'game_lookup_attached_shield_faulted':
+        return 'Faulted';
+      case 'game_lookup_attached_risk':
+        return 'Click risk';
+      case 'game_lookup_attached_risk_safe':
+        return 'Not authorized';
+      case 'game_lookup_attached_risk_pending':
+        return 'Confirmation required';
+      case 'game_lookup_attached_risk_active':
+        return 'Risk accepted · may double-trigger';
+      case 'game_lookup_attached_calibrate':
+        return 'Calibrate';
+      case 'game_lookup_attached_risk_accept':
+        return 'Accept click risk';
+      case 'game_lookup_attached_profile_clear':
+        return 'Clear profile';
+      case 'game_lookup_attached_thread_required':
+        return 'Select one body-text thread before calibration.';
+      case 'game_lookup_attached_risk_title':
+        return 'Confirm raw-click risk';
+      case 'game_lookup_attached_risk_body':
+        return 'The input shield is not verified for this executable. Clicking a glyph may also advance dialogue or trigger a choice. This authorization is stored only for the current executable hash and is revoked after an update.';
+      case 'game_lookup_attached_calibration_title':
+        return 'Calibrate body text';
+      case 'game_lookup_attached_preview':
+        return 'Current body text preview';
+      case 'game_lookup_attached_body_rect':
+        return 'Body rectangle';
+      case 'game_lookup_attached_left':
+        return 'Left';
+      case 'game_lookup_attached_top':
+        return 'Top';
+      case 'game_lookup_attached_width':
+        return 'Width';
+      case 'game_lookup_attached_height':
+        return 'Height';
+      case 'game_lookup_attached_font_family':
+        return 'Font family';
+      case 'game_lookup_attached_font_size':
+        return 'Font size / client height';
+      case 'game_lookup_attached_letter_spacing':
+        return 'Letter spacing / client height';
+      case 'game_lookup_attached_line_height':
+        return 'Line height';
+      case 'game_lookup_attached_text_align':
+        return 'Horizontal alignment';
+      case 'game_lookup_attached_vertical_align':
+        return 'Vertical alignment';
+      case 'game_lookup_attached_align_left':
+        return 'Left';
+      case 'game_lookup_attached_align_center':
+        return 'Center';
+      case 'game_lookup_attached_align_right':
+        return 'Right';
+      case 'game_lookup_attached_align_top':
+        return 'Top';
+      case 'game_lookup_attached_align_bottom':
+        return 'Bottom';
+      case 'game_lookup_attached_probes_hint':
+        return 'Click the first, middle, and last highlighted glyphs in the game, then confirm each character below.';
+      case 'game_lookup_attached_probe_start':
+        return 'First glyph';
+      case 'game_lookup_attached_probe_middle':
+        return 'Middle glyph';
+      case 'game_lookup_attached_probe_end':
+        return 'Last glyph';
+      case 'game_lookup_attached_calibration_commit':
+        return 'Save calibration';
+      case 'game_lookup_attached_calibration_failed':
+        return 'Calibration was not applied. Check the body text, target window, and all three probes.';
+      case 'game_lookup_attached_calibration_short_text':
+        return 'At least three characters are required for calibration probes.';
+      case 'game_lookup_attached_profile_clear_title':
+        return 'Clear lookup profile?';
+      case 'game_lookup_attached_profile_clear_body':
+        return 'The saved rectangle, text layout, and executable-specific click authorization will be removed.';
+      case 'game_lookup_attached_probe_waiting':
+        return 'Waiting for matching in-game click';
       default:
         return null;
     }
@@ -254006,6 +257376,122 @@ extension on _StringsRu {
         return 'Выделите то же слово, для которого вы уже убедились, что в словаре есть толкование, и оставьте выделение активным.';
       case 'onboarding_global_lookup_android_select_body':
         return 'Нажмите и удерживайте то же проверенное слово, затем растяните маркеры выделения так, чтобы оно попало целиком.';
+      case 'game_lookup_attached_title':
+        return 'In-game lookup';
+      case 'game_lookup_attached_no_ocr':
+        return 'No OCR · horizontal body text only';
+      case 'game_lookup_attached_mode':
+        return 'Mode';
+      case 'game_lookup_attached_mode_auto':
+        return 'Auto';
+      case 'game_lookup_attached_mode_native_only':
+        return 'Native only';
+      case 'game_lookup_attached_mode_attached_only':
+        return 'Calibrated layer only';
+      case 'game_lookup_attached_mode_off':
+        return 'Off';
+      case 'game_lookup_attached_status':
+        return 'State';
+      case 'game_lookup_attached_native_status':
+        return 'Native';
+      case 'game_lookup_attached_provider':
+        return 'Provider';
+      case 'game_lookup_attached_provider_unknown':
+        return 'Not reported';
+      case 'game_lookup_attached_profile':
+        return 'Profile';
+      case 'game_lookup_attached_profile_ready':
+        return 'Calibrated';
+      case 'game_lookup_attached_profile_missing':
+        return 'Not calibrated';
+      case 'game_lookup_attached_shield':
+        return 'Input shield';
+      case 'game_lookup_attached_shield_verified':
+        return 'Verified';
+      case 'game_lookup_attached_shield_unknown':
+        return 'Unknown';
+      case 'game_lookup_attached_shield_partial':
+        return 'Partial';
+      case 'game_lookup_attached_shield_known_uncovered':
+        return 'Known uncovered';
+      case 'game_lookup_attached_shield_faulted':
+        return 'Faulted';
+      case 'game_lookup_attached_risk':
+        return 'Click risk';
+      case 'game_lookup_attached_risk_safe':
+        return 'Not authorized';
+      case 'game_lookup_attached_risk_pending':
+        return 'Confirmation required';
+      case 'game_lookup_attached_risk_active':
+        return 'Risk accepted · may double-trigger';
+      case 'game_lookup_attached_calibrate':
+        return 'Calibrate';
+      case 'game_lookup_attached_risk_accept':
+        return 'Accept click risk';
+      case 'game_lookup_attached_profile_clear':
+        return 'Clear profile';
+      case 'game_lookup_attached_thread_required':
+        return 'Select one body-text thread before calibration.';
+      case 'game_lookup_attached_risk_title':
+        return 'Confirm raw-click risk';
+      case 'game_lookup_attached_risk_body':
+        return 'The input shield is not verified for this executable. Clicking a glyph may also advance dialogue or trigger a choice. This authorization is stored only for the current executable hash and is revoked after an update.';
+      case 'game_lookup_attached_calibration_title':
+        return 'Calibrate body text';
+      case 'game_lookup_attached_preview':
+        return 'Current body text preview';
+      case 'game_lookup_attached_body_rect':
+        return 'Body rectangle';
+      case 'game_lookup_attached_left':
+        return 'Left';
+      case 'game_lookup_attached_top':
+        return 'Top';
+      case 'game_lookup_attached_width':
+        return 'Width';
+      case 'game_lookup_attached_height':
+        return 'Height';
+      case 'game_lookup_attached_font_family':
+        return 'Font family';
+      case 'game_lookup_attached_font_size':
+        return 'Font size / client height';
+      case 'game_lookup_attached_letter_spacing':
+        return 'Letter spacing / client height';
+      case 'game_lookup_attached_line_height':
+        return 'Line height';
+      case 'game_lookup_attached_text_align':
+        return 'Horizontal alignment';
+      case 'game_lookup_attached_vertical_align':
+        return 'Vertical alignment';
+      case 'game_lookup_attached_align_left':
+        return 'Left';
+      case 'game_lookup_attached_align_center':
+        return 'Center';
+      case 'game_lookup_attached_align_right':
+        return 'Right';
+      case 'game_lookup_attached_align_top':
+        return 'Top';
+      case 'game_lookup_attached_align_bottom':
+        return 'Bottom';
+      case 'game_lookup_attached_probes_hint':
+        return 'Click the first, middle, and last highlighted glyphs in the game, then confirm each character below.';
+      case 'game_lookup_attached_probe_start':
+        return 'First glyph';
+      case 'game_lookup_attached_probe_middle':
+        return 'Middle glyph';
+      case 'game_lookup_attached_probe_end':
+        return 'Last glyph';
+      case 'game_lookup_attached_calibration_commit':
+        return 'Save calibration';
+      case 'game_lookup_attached_calibration_failed':
+        return 'Calibration was not applied. Check the body text, target window, and all three probes.';
+      case 'game_lookup_attached_calibration_short_text':
+        return 'At least three characters are required for calibration probes.';
+      case 'game_lookup_attached_profile_clear_title':
+        return 'Clear lookup profile?';
+      case 'game_lookup_attached_profile_clear_body':
+        return 'The saved rectangle, text layout, and executable-specific click authorization will be removed.';
+      case 'game_lookup_attached_probe_waiting':
+        return 'Waiting for matching in-game click';
       default:
         return null;
     }
@@ -262249,6 +265735,122 @@ extension on _StringsTh {
         return 'ลากเลือกคำเดิมที่คุณตรวจแล้วว่ามีความหมายในพจนานุกรม และปล่อยให้ยังเลือกค้างไว้';
       case 'onboarding_global_lookup_android_select_body':
         return 'แตะค้างที่คำเดิมที่ตรวจแล้ว จากนั้นลากจุดจับเลือกให้ครอบคลุมทั้งคำ';
+      case 'game_lookup_attached_title':
+        return 'In-game lookup';
+      case 'game_lookup_attached_no_ocr':
+        return 'No OCR · horizontal body text only';
+      case 'game_lookup_attached_mode':
+        return 'Mode';
+      case 'game_lookup_attached_mode_auto':
+        return 'Auto';
+      case 'game_lookup_attached_mode_native_only':
+        return 'Native only';
+      case 'game_lookup_attached_mode_attached_only':
+        return 'Calibrated layer only';
+      case 'game_lookup_attached_mode_off':
+        return 'Off';
+      case 'game_lookup_attached_status':
+        return 'State';
+      case 'game_lookup_attached_native_status':
+        return 'Native';
+      case 'game_lookup_attached_provider':
+        return 'Provider';
+      case 'game_lookup_attached_provider_unknown':
+        return 'Not reported';
+      case 'game_lookup_attached_profile':
+        return 'Profile';
+      case 'game_lookup_attached_profile_ready':
+        return 'Calibrated';
+      case 'game_lookup_attached_profile_missing':
+        return 'Not calibrated';
+      case 'game_lookup_attached_shield':
+        return 'Input shield';
+      case 'game_lookup_attached_shield_verified':
+        return 'Verified';
+      case 'game_lookup_attached_shield_unknown':
+        return 'Unknown';
+      case 'game_lookup_attached_shield_partial':
+        return 'Partial';
+      case 'game_lookup_attached_shield_known_uncovered':
+        return 'Known uncovered';
+      case 'game_lookup_attached_shield_faulted':
+        return 'Faulted';
+      case 'game_lookup_attached_risk':
+        return 'Click risk';
+      case 'game_lookup_attached_risk_safe':
+        return 'Not authorized';
+      case 'game_lookup_attached_risk_pending':
+        return 'Confirmation required';
+      case 'game_lookup_attached_risk_active':
+        return 'Risk accepted · may double-trigger';
+      case 'game_lookup_attached_calibrate':
+        return 'Calibrate';
+      case 'game_lookup_attached_risk_accept':
+        return 'Accept click risk';
+      case 'game_lookup_attached_profile_clear':
+        return 'Clear profile';
+      case 'game_lookup_attached_thread_required':
+        return 'Select one body-text thread before calibration.';
+      case 'game_lookup_attached_risk_title':
+        return 'Confirm raw-click risk';
+      case 'game_lookup_attached_risk_body':
+        return 'The input shield is not verified for this executable. Clicking a glyph may also advance dialogue or trigger a choice. This authorization is stored only for the current executable hash and is revoked after an update.';
+      case 'game_lookup_attached_calibration_title':
+        return 'Calibrate body text';
+      case 'game_lookup_attached_preview':
+        return 'Current body text preview';
+      case 'game_lookup_attached_body_rect':
+        return 'Body rectangle';
+      case 'game_lookup_attached_left':
+        return 'Left';
+      case 'game_lookup_attached_top':
+        return 'Top';
+      case 'game_lookup_attached_width':
+        return 'Width';
+      case 'game_lookup_attached_height':
+        return 'Height';
+      case 'game_lookup_attached_font_family':
+        return 'Font family';
+      case 'game_lookup_attached_font_size':
+        return 'Font size / client height';
+      case 'game_lookup_attached_letter_spacing':
+        return 'Letter spacing / client height';
+      case 'game_lookup_attached_line_height':
+        return 'Line height';
+      case 'game_lookup_attached_text_align':
+        return 'Horizontal alignment';
+      case 'game_lookup_attached_vertical_align':
+        return 'Vertical alignment';
+      case 'game_lookup_attached_align_left':
+        return 'Left';
+      case 'game_lookup_attached_align_center':
+        return 'Center';
+      case 'game_lookup_attached_align_right':
+        return 'Right';
+      case 'game_lookup_attached_align_top':
+        return 'Top';
+      case 'game_lookup_attached_align_bottom':
+        return 'Bottom';
+      case 'game_lookup_attached_probes_hint':
+        return 'Click the first, middle, and last highlighted glyphs in the game, then confirm each character below.';
+      case 'game_lookup_attached_probe_start':
+        return 'First glyph';
+      case 'game_lookup_attached_probe_middle':
+        return 'Middle glyph';
+      case 'game_lookup_attached_probe_end':
+        return 'Last glyph';
+      case 'game_lookup_attached_calibration_commit':
+        return 'Save calibration';
+      case 'game_lookup_attached_calibration_failed':
+        return 'Calibration was not applied. Check the body text, target window, and all three probes.';
+      case 'game_lookup_attached_calibration_short_text':
+        return 'At least three characters are required for calibration probes.';
+      case 'game_lookup_attached_profile_clear_title':
+        return 'Clear lookup profile?';
+      case 'game_lookup_attached_profile_clear_body':
+        return 'The saved rectangle, text layout, and executable-specific click authorization will be removed.';
+      case 'game_lookup_attached_probe_waiting':
+        return 'Waiting for matching in-game click';
       default:
         return null;
     }
@@ -270508,6 +274110,122 @@ extension on _StringsTr {
         return 'Sözlükte anlamı olduğunu doğruladığınız aynı kelimeyi seçin ve seçimi bırakmayın.';
       case 'onboarding_global_lookup_android_select_body':
         return 'Doğruladığınız aynı kelimeye uzun basın, sonra seçim tutamaçlarını kelimeyi tamamen kaplayacak şekilde ayarlayın.';
+      case 'game_lookup_attached_title':
+        return 'In-game lookup';
+      case 'game_lookup_attached_no_ocr':
+        return 'No OCR · horizontal body text only';
+      case 'game_lookup_attached_mode':
+        return 'Mode';
+      case 'game_lookup_attached_mode_auto':
+        return 'Auto';
+      case 'game_lookup_attached_mode_native_only':
+        return 'Native only';
+      case 'game_lookup_attached_mode_attached_only':
+        return 'Calibrated layer only';
+      case 'game_lookup_attached_mode_off':
+        return 'Off';
+      case 'game_lookup_attached_status':
+        return 'State';
+      case 'game_lookup_attached_native_status':
+        return 'Native';
+      case 'game_lookup_attached_provider':
+        return 'Provider';
+      case 'game_lookup_attached_provider_unknown':
+        return 'Not reported';
+      case 'game_lookup_attached_profile':
+        return 'Profile';
+      case 'game_lookup_attached_profile_ready':
+        return 'Calibrated';
+      case 'game_lookup_attached_profile_missing':
+        return 'Not calibrated';
+      case 'game_lookup_attached_shield':
+        return 'Input shield';
+      case 'game_lookup_attached_shield_verified':
+        return 'Verified';
+      case 'game_lookup_attached_shield_unknown':
+        return 'Unknown';
+      case 'game_lookup_attached_shield_partial':
+        return 'Partial';
+      case 'game_lookup_attached_shield_known_uncovered':
+        return 'Known uncovered';
+      case 'game_lookup_attached_shield_faulted':
+        return 'Faulted';
+      case 'game_lookup_attached_risk':
+        return 'Click risk';
+      case 'game_lookup_attached_risk_safe':
+        return 'Not authorized';
+      case 'game_lookup_attached_risk_pending':
+        return 'Confirmation required';
+      case 'game_lookup_attached_risk_active':
+        return 'Risk accepted · may double-trigger';
+      case 'game_lookup_attached_calibrate':
+        return 'Calibrate';
+      case 'game_lookup_attached_risk_accept':
+        return 'Accept click risk';
+      case 'game_lookup_attached_profile_clear':
+        return 'Clear profile';
+      case 'game_lookup_attached_thread_required':
+        return 'Select one body-text thread before calibration.';
+      case 'game_lookup_attached_risk_title':
+        return 'Confirm raw-click risk';
+      case 'game_lookup_attached_risk_body':
+        return 'The input shield is not verified for this executable. Clicking a glyph may also advance dialogue or trigger a choice. This authorization is stored only for the current executable hash and is revoked after an update.';
+      case 'game_lookup_attached_calibration_title':
+        return 'Calibrate body text';
+      case 'game_lookup_attached_preview':
+        return 'Current body text preview';
+      case 'game_lookup_attached_body_rect':
+        return 'Body rectangle';
+      case 'game_lookup_attached_left':
+        return 'Left';
+      case 'game_lookup_attached_top':
+        return 'Top';
+      case 'game_lookup_attached_width':
+        return 'Width';
+      case 'game_lookup_attached_height':
+        return 'Height';
+      case 'game_lookup_attached_font_family':
+        return 'Font family';
+      case 'game_lookup_attached_font_size':
+        return 'Font size / client height';
+      case 'game_lookup_attached_letter_spacing':
+        return 'Letter spacing / client height';
+      case 'game_lookup_attached_line_height':
+        return 'Line height';
+      case 'game_lookup_attached_text_align':
+        return 'Horizontal alignment';
+      case 'game_lookup_attached_vertical_align':
+        return 'Vertical alignment';
+      case 'game_lookup_attached_align_left':
+        return 'Left';
+      case 'game_lookup_attached_align_center':
+        return 'Center';
+      case 'game_lookup_attached_align_right':
+        return 'Right';
+      case 'game_lookup_attached_align_top':
+        return 'Top';
+      case 'game_lookup_attached_align_bottom':
+        return 'Bottom';
+      case 'game_lookup_attached_probes_hint':
+        return 'Click the first, middle, and last highlighted glyphs in the game, then confirm each character below.';
+      case 'game_lookup_attached_probe_start':
+        return 'First glyph';
+      case 'game_lookup_attached_probe_middle':
+        return 'Middle glyph';
+      case 'game_lookup_attached_probe_end':
+        return 'Last glyph';
+      case 'game_lookup_attached_calibration_commit':
+        return 'Save calibration';
+      case 'game_lookup_attached_calibration_failed':
+        return 'Calibration was not applied. Check the body text, target window, and all three probes.';
+      case 'game_lookup_attached_calibration_short_text':
+        return 'At least three characters are required for calibration probes.';
+      case 'game_lookup_attached_profile_clear_title':
+        return 'Clear lookup profile?';
+      case 'game_lookup_attached_profile_clear_body':
+        return 'The saved rectangle, text layout, and executable-specific click authorization will be removed.';
+      case 'game_lookup_attached_probe_waiting':
+        return 'Waiting for matching in-game click';
       default:
         return null;
     }
@@ -278760,6 +282478,122 @@ extension on _StringsVi {
         return 'Bôi đen đúng từ mà bạn đã kiểm tra là có nghĩa trong từ điển, và giữ nguyên vùng chọn.';
       case 'onboarding_global_lookup_android_select_body':
         return 'Nhấn giữ đúng từ đã kiểm tra đó, rồi kéo các tay nắm vùng chọn để phủ hết từ.';
+      case 'game_lookup_attached_title':
+        return 'In-game lookup';
+      case 'game_lookup_attached_no_ocr':
+        return 'No OCR · horizontal body text only';
+      case 'game_lookup_attached_mode':
+        return 'Mode';
+      case 'game_lookup_attached_mode_auto':
+        return 'Auto';
+      case 'game_lookup_attached_mode_native_only':
+        return 'Native only';
+      case 'game_lookup_attached_mode_attached_only':
+        return 'Calibrated layer only';
+      case 'game_lookup_attached_mode_off':
+        return 'Off';
+      case 'game_lookup_attached_status':
+        return 'State';
+      case 'game_lookup_attached_native_status':
+        return 'Native';
+      case 'game_lookup_attached_provider':
+        return 'Provider';
+      case 'game_lookup_attached_provider_unknown':
+        return 'Not reported';
+      case 'game_lookup_attached_profile':
+        return 'Profile';
+      case 'game_lookup_attached_profile_ready':
+        return 'Calibrated';
+      case 'game_lookup_attached_profile_missing':
+        return 'Not calibrated';
+      case 'game_lookup_attached_shield':
+        return 'Input shield';
+      case 'game_lookup_attached_shield_verified':
+        return 'Verified';
+      case 'game_lookup_attached_shield_unknown':
+        return 'Unknown';
+      case 'game_lookup_attached_shield_partial':
+        return 'Partial';
+      case 'game_lookup_attached_shield_known_uncovered':
+        return 'Known uncovered';
+      case 'game_lookup_attached_shield_faulted':
+        return 'Faulted';
+      case 'game_lookup_attached_risk':
+        return 'Click risk';
+      case 'game_lookup_attached_risk_safe':
+        return 'Not authorized';
+      case 'game_lookup_attached_risk_pending':
+        return 'Confirmation required';
+      case 'game_lookup_attached_risk_active':
+        return 'Risk accepted · may double-trigger';
+      case 'game_lookup_attached_calibrate':
+        return 'Calibrate';
+      case 'game_lookup_attached_risk_accept':
+        return 'Accept click risk';
+      case 'game_lookup_attached_profile_clear':
+        return 'Clear profile';
+      case 'game_lookup_attached_thread_required':
+        return 'Select one body-text thread before calibration.';
+      case 'game_lookup_attached_risk_title':
+        return 'Confirm raw-click risk';
+      case 'game_lookup_attached_risk_body':
+        return 'The input shield is not verified for this executable. Clicking a glyph may also advance dialogue or trigger a choice. This authorization is stored only for the current executable hash and is revoked after an update.';
+      case 'game_lookup_attached_calibration_title':
+        return 'Calibrate body text';
+      case 'game_lookup_attached_preview':
+        return 'Current body text preview';
+      case 'game_lookup_attached_body_rect':
+        return 'Body rectangle';
+      case 'game_lookup_attached_left':
+        return 'Left';
+      case 'game_lookup_attached_top':
+        return 'Top';
+      case 'game_lookup_attached_width':
+        return 'Width';
+      case 'game_lookup_attached_height':
+        return 'Height';
+      case 'game_lookup_attached_font_family':
+        return 'Font family';
+      case 'game_lookup_attached_font_size':
+        return 'Font size / client height';
+      case 'game_lookup_attached_letter_spacing':
+        return 'Letter spacing / client height';
+      case 'game_lookup_attached_line_height':
+        return 'Line height';
+      case 'game_lookup_attached_text_align':
+        return 'Horizontal alignment';
+      case 'game_lookup_attached_vertical_align':
+        return 'Vertical alignment';
+      case 'game_lookup_attached_align_left':
+        return 'Left';
+      case 'game_lookup_attached_align_center':
+        return 'Center';
+      case 'game_lookup_attached_align_right':
+        return 'Right';
+      case 'game_lookup_attached_align_top':
+        return 'Top';
+      case 'game_lookup_attached_align_bottom':
+        return 'Bottom';
+      case 'game_lookup_attached_probes_hint':
+        return 'Click the first, middle, and last highlighted glyphs in the game, then confirm each character below.';
+      case 'game_lookup_attached_probe_start':
+        return 'First glyph';
+      case 'game_lookup_attached_probe_middle':
+        return 'Middle glyph';
+      case 'game_lookup_attached_probe_end':
+        return 'Last glyph';
+      case 'game_lookup_attached_calibration_commit':
+        return 'Save calibration';
+      case 'game_lookup_attached_calibration_failed':
+        return 'Calibration was not applied. Check the body text, target window, and all three probes.';
+      case 'game_lookup_attached_calibration_short_text':
+        return 'At least three characters are required for calibration probes.';
+      case 'game_lookup_attached_profile_clear_title':
+        return 'Clear lookup profile?';
+      case 'game_lookup_attached_profile_clear_body':
+        return 'The saved rectangle, text layout, and executable-specific click authorization will be removed.';
+      case 'game_lookup_attached_probe_waiting':
+        return 'Waiting for matching in-game click';
       default:
         return null;
     }
@@ -286943,6 +290777,122 @@ extension on _StringsZhCn {
         return '可补充推荐包，也可单独导入自己的词典、有声书和单词发音来源';
       case 'onboarding_step_manual_resources_body':
         return '这一项可以与推荐包同时使用，也可以单独使用。进入查词教程前至少导入一本词典；有声书音频和单词发音音频属于按需补充。';
+      case 'game_lookup_attached_title':
+        return '游戏内查词';
+      case 'game_lookup_attached_no_ocr':
+        return '不使用 OCR · 仅横排正文';
+      case 'game_lookup_attached_mode':
+        return '模式';
+      case 'game_lookup_attached_mode_auto':
+        return '自动';
+      case 'game_lookup_attached_mode_native_only':
+        return '仅原生几何';
+      case 'game_lookup_attached_mode_attached_only':
+        return '仅校准层';
+      case 'game_lookup_attached_mode_off':
+        return '关闭';
+      case 'game_lookup_attached_status':
+        return '状态';
+      case 'game_lookup_attached_native_status':
+        return '原生状态';
+      case 'game_lookup_attached_provider':
+        return '几何来源';
+      case 'game_lookup_attached_provider_unknown':
+        return '未上报';
+      case 'game_lookup_attached_profile':
+        return '校准档案';
+      case 'game_lookup_attached_profile_ready':
+        return '已校准';
+      case 'game_lookup_attached_profile_missing':
+        return '未校准';
+      case 'game_lookup_attached_shield':
+        return '输入盾';
+      case 'game_lookup_attached_shield_verified':
+        return '已验证';
+      case 'game_lookup_attached_shield_unknown':
+        return '未知';
+      case 'game_lookup_attached_shield_partial':
+        return '部分覆盖';
+      case 'game_lookup_attached_shield_known_uncovered':
+        return '已知未覆盖';
+      case 'game_lookup_attached_shield_faulted':
+        return '故障';
+      case 'game_lookup_attached_risk':
+        return '点击风险';
+      case 'game_lookup_attached_risk_safe':
+        return '未授权';
+      case 'game_lookup_attached_risk_pending':
+        return '等待确认';
+      case 'game_lookup_attached_risk_active':
+        return '已接受风险 · 可能双触发';
+      case 'game_lookup_attached_calibrate':
+        return '校准';
+      case 'game_lookup_attached_risk_accept':
+        return '确认点击风险';
+      case 'game_lookup_attached_profile_clear':
+        return '清除档案';
+      case 'game_lookup_attached_thread_required':
+        return '请先选择一个正文线程，再开始校准。';
+      case 'game_lookup_attached_risk_title':
+        return '确认裸左击风险';
+      case 'game_lookup_attached_risk_body':
+        return '当前可执行文件的输入盾尚未验证。点击字形可能同时推进台词或触发选项。授权仅绑定当前 exe 哈希，游戏更新后会自动失效。';
+      case 'game_lookup_attached_calibration_title':
+        return '校准正文区域';
+      case 'game_lookup_attached_preview':
+        return '当前正文预览';
+      case 'game_lookup_attached_body_rect':
+        return '正文框';
+      case 'game_lookup_attached_left':
+        return '左';
+      case 'game_lookup_attached_top':
+        return '上';
+      case 'game_lookup_attached_width':
+        return '宽';
+      case 'game_lookup_attached_height':
+        return '高';
+      case 'game_lookup_attached_font_family':
+        return '字体';
+      case 'game_lookup_attached_font_size':
+        return '字号 / 客户区高度';
+      case 'game_lookup_attached_letter_spacing':
+        return '字距 / 客户区高度';
+      case 'game_lookup_attached_line_height':
+        return '行高';
+      case 'game_lookup_attached_text_align':
+        return '水平对齐';
+      case 'game_lookup_attached_vertical_align':
+        return '垂直对齐';
+      case 'game_lookup_attached_align_left':
+        return '左对齐';
+      case 'game_lookup_attached_align_center':
+        return '居中';
+      case 'game_lookup_attached_align_right':
+        return '右对齐';
+      case 'game_lookup_attached_align_top':
+        return '顶部';
+      case 'game_lookup_attached_align_bottom':
+        return '底部';
+      case 'game_lookup_attached_probes_hint':
+        return '请在游戏中依次点击高亮的首、中、尾字形，再确认下列字符。';
+      case 'game_lookup_attached_probe_start':
+        return '首字形';
+      case 'game_lookup_attached_probe_middle':
+        return '中字形';
+      case 'game_lookup_attached_probe_end':
+        return '尾字形';
+      case 'game_lookup_attached_calibration_commit':
+        return '保存校准';
+      case 'game_lookup_attached_calibration_failed':
+        return '校准未能应用。请检查正文、目标窗口和三个点击探针。';
+      case 'game_lookup_attached_calibration_short_text':
+        return '正文至少需要三个字符才能完成校准探针。';
+      case 'game_lookup_attached_profile_clear_title':
+        return '清除查词档案？';
+      case 'game_lookup_attached_profile_clear_body':
+        return '将删除已保存的正文框、文字布局及该 exe 的点击风险授权。';
+      case 'game_lookup_attached_probe_waiting':
+        return '等待游戏内对应字形点击';
       default:
         return null;
     }
@@ -295127,6 +299077,122 @@ extension on _StringsZhHk {
         return '拖選剛才已確認能返回詞典釋義的同一個詞，並保持文字處於選取狀態。';
       case 'onboarding_global_lookup_android_select_body':
         return '長按剛才已確認能返回詞典釋義的同一個詞，再拖動選取控點讓它完整覆蓋。';
+      case 'game_lookup_attached_title':
+        return 'In-game lookup';
+      case 'game_lookup_attached_no_ocr':
+        return 'No OCR · horizontal body text only';
+      case 'game_lookup_attached_mode':
+        return 'Mode';
+      case 'game_lookup_attached_mode_auto':
+        return 'Auto';
+      case 'game_lookup_attached_mode_native_only':
+        return 'Native only';
+      case 'game_lookup_attached_mode_attached_only':
+        return 'Calibrated layer only';
+      case 'game_lookup_attached_mode_off':
+        return 'Off';
+      case 'game_lookup_attached_status':
+        return 'State';
+      case 'game_lookup_attached_native_status':
+        return 'Native';
+      case 'game_lookup_attached_provider':
+        return 'Provider';
+      case 'game_lookup_attached_provider_unknown':
+        return 'Not reported';
+      case 'game_lookup_attached_profile':
+        return 'Profile';
+      case 'game_lookup_attached_profile_ready':
+        return 'Calibrated';
+      case 'game_lookup_attached_profile_missing':
+        return 'Not calibrated';
+      case 'game_lookup_attached_shield':
+        return 'Input shield';
+      case 'game_lookup_attached_shield_verified':
+        return 'Verified';
+      case 'game_lookup_attached_shield_unknown':
+        return 'Unknown';
+      case 'game_lookup_attached_shield_partial':
+        return 'Partial';
+      case 'game_lookup_attached_shield_known_uncovered':
+        return 'Known uncovered';
+      case 'game_lookup_attached_shield_faulted':
+        return 'Faulted';
+      case 'game_lookup_attached_risk':
+        return 'Click risk';
+      case 'game_lookup_attached_risk_safe':
+        return 'Not authorized';
+      case 'game_lookup_attached_risk_pending':
+        return 'Confirmation required';
+      case 'game_lookup_attached_risk_active':
+        return 'Risk accepted · may double-trigger';
+      case 'game_lookup_attached_calibrate':
+        return 'Calibrate';
+      case 'game_lookup_attached_risk_accept':
+        return 'Accept click risk';
+      case 'game_lookup_attached_profile_clear':
+        return 'Clear profile';
+      case 'game_lookup_attached_thread_required':
+        return 'Select one body-text thread before calibration.';
+      case 'game_lookup_attached_risk_title':
+        return 'Confirm raw-click risk';
+      case 'game_lookup_attached_risk_body':
+        return 'The input shield is not verified for this executable. Clicking a glyph may also advance dialogue or trigger a choice. This authorization is stored only for the current executable hash and is revoked after an update.';
+      case 'game_lookup_attached_calibration_title':
+        return 'Calibrate body text';
+      case 'game_lookup_attached_preview':
+        return 'Current body text preview';
+      case 'game_lookup_attached_body_rect':
+        return 'Body rectangle';
+      case 'game_lookup_attached_left':
+        return 'Left';
+      case 'game_lookup_attached_top':
+        return 'Top';
+      case 'game_lookup_attached_width':
+        return 'Width';
+      case 'game_lookup_attached_height':
+        return 'Height';
+      case 'game_lookup_attached_font_family':
+        return 'Font family';
+      case 'game_lookup_attached_font_size':
+        return 'Font size / client height';
+      case 'game_lookup_attached_letter_spacing':
+        return 'Letter spacing / client height';
+      case 'game_lookup_attached_line_height':
+        return 'Line height';
+      case 'game_lookup_attached_text_align':
+        return 'Horizontal alignment';
+      case 'game_lookup_attached_vertical_align':
+        return 'Vertical alignment';
+      case 'game_lookup_attached_align_left':
+        return 'Left';
+      case 'game_lookup_attached_align_center':
+        return 'Center';
+      case 'game_lookup_attached_align_right':
+        return 'Right';
+      case 'game_lookup_attached_align_top':
+        return 'Top';
+      case 'game_lookup_attached_align_bottom':
+        return 'Bottom';
+      case 'game_lookup_attached_probes_hint':
+        return 'Click the first, middle, and last highlighted glyphs in the game, then confirm each character below.';
+      case 'game_lookup_attached_probe_start':
+        return 'First glyph';
+      case 'game_lookup_attached_probe_middle':
+        return 'Middle glyph';
+      case 'game_lookup_attached_probe_end':
+        return 'Last glyph';
+      case 'game_lookup_attached_calibration_commit':
+        return 'Save calibration';
+      case 'game_lookup_attached_calibration_failed':
+        return 'Calibration was not applied. Check the body text, target window, and all three probes.';
+      case 'game_lookup_attached_calibration_short_text':
+        return 'At least three characters are required for calibration probes.';
+      case 'game_lookup_attached_profile_clear_title':
+        return 'Clear lookup profile?';
+      case 'game_lookup_attached_profile_clear_body':
+        return 'The saved rectangle, text layout, and executable-specific click authorization will be removed.';
+      case 'game_lookup_attached_probe_waiting':
+        return 'Waiting for matching in-game click';
       default:
         return null;
     }
