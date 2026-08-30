@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 65858 (3874 per locale)
+/// Strings: 66606 (3918 per locale)
 ///
-/// Built on 2026-08-29 at 17:08 UTC
+/// Built on 2026-08-30 at 09:22 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5270,6 +5270,74 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String mihon_extension_sources_more({required Object count}) =>
       'Show all ${count} sources';
   String get mihon_extension_sources_less => 'Show fewer sources';
+  String get options_website => 'Visit the official website';
+  String get video_setting_mpv_group_hdr => 'HDR';
+  String get video_setting_hdr_tone_mapping => 'HDR tone mapping';
+  String get video_setting_hdr_tone_mapping_hint =>
+      'Curve used when an HDR source has to be squeezed onto an SDR display. Auto lets mpv pick per source.';
+  String get video_setting_hdr_compute_peak => 'Dynamic peak detection';
+  String get video_setting_hdr_compute_peak_hint =>
+      'Measure each frame\'s real peak brightness instead of trusting the stream metadata. Better highlights, costs some GPU.';
+  String get video_setting_hdr_auto => 'Auto';
+  String get video_setting_hdr_on => 'On';
+  String get video_setting_hdr_off => 'Off';
+  String get video_discovery_cancel_downloads_title => 'Cancel downloads?';
+  String video_discovery_cancel_downloads_body({required Object n}) =>
+      '${n} download task(s) for this title will be stopped. Downloaded pieces stay on disk; you can start the download again later.';
+  String get video_discovery_cancel_downloads_failed =>
+      'Could not cancel the download. The task may have already finished, or the download backend is unavailable.';
+  String get gal_hook_click_lookup => 'Tap a word to look it up';
+  String get gal_hook_click_lookup_hint =>
+      'Off means clicks on the caption never trigger a lookup — useful with click-through on, when you would rather not hit a word by accident.';
+  String get gal_hook_lookup_trigger => 'Lookup trigger';
+  String get gal_hook_lookup_trigger_hint =>
+      'Which mouse button looks up the word under the pointer. Independent of the switch above: you can turn tap-lookup off and still look up with a side button.';
+  String get gal_hook_lookup_trigger_left => 'Left click';
+  String get gal_hook_lookup_trigger_middle => 'Middle click';
+  String get gal_hook_lookup_trigger_side => 'Side button';
+  String get gal_hook_toolbar_auto_hide => 'Auto-hide the toolbar';
+  String get gal_hook_toolbar_auto_hide_hint =>
+      'Hide the toolbar until the pointer reaches the caption box, LunaHook style. Hidden means really hidden — those pixels go back to the game.';
+  String get gal_hook_passthrough_blocks_mouse =>
+      'Caption still catches clicks while clicking through';
+  String get gal_hook_passthrough_blocks_mouse_hint =>
+      'On: text lines still take clicks so you can tap a word. Off: the whole overlay is transparent to the mouse — you can click whatever is underneath, but tapping words no longer works.';
+  String get floating_lyric_topmost => 'Keep on top';
+  String get gal_hook_fold_progressive_lines => 'Merge split dialogue lines';
+  String get gal_hook_fold_progressive_lines_hint =>
+      'Some engines redraw the whole line on every click, so one line is captured several times. Fold those snapshots into a single line.';
+  String get gal_hook_ingame_lookup_engine_unsupported =>
+      'This game engine has no in-game lookup sensor yet';
+  String get gal_hook_ingame_lookup_version_unsupported =>
+      'This game version is not on the supported list yet';
+  String get gal_hook_ingame_lookup_exe_hash_copy =>
+      'Copy game executable SHA-256';
+  String get gal_hook_ingame_lookup_exe_hash_unavailable =>
+      'Could not read the game executable';
+  String get gal_hook_ingame_lookup_exe_hash_copied =>
+      'Executable SHA-256 copied';
+  String get download_tracker_section => 'Tracker subscription';
+  String get download_tracker_auto_add =>
+      'Automatically add subscription trackers to new downloads';
+  String get download_tracker_auto_add_hint =>
+      'The list is cached for 6 hours. A subscription failure will not block the download.';
+  String get download_tracker_url => 'Subscription URL';
+  String get download_tracker_refresh => 'Fetch trackers';
+  String get download_tracker_preview_empty =>
+      'Fetch the subscription to preview supported HTTP, HTTPS, and UDP trackers.';
+  String download_tracker_preview_count({required Object count}) =>
+      'Fetched ${count} trackers';
+  String download_tracker_fetch_failed({required Object message}) =>
+      'Could not fetch trackers: ${message}';
+  String get anki_connect_port_auto_fix => 'Switch to a free port';
+  String get anki_connect_port_auto_fix_hint =>
+      'Picks a free port and writes it to both Hibiki and the AnkiConnect add-on config. Restart Anki to apply.';
+  String anki_connect_port_auto_fix_done({required Object port}) =>
+      'Switched AnkiConnect to port ${port}. Restart Anki to apply.';
+  String anki_connect_port_auto_fix_manual({required Object port}) =>
+      'Hibiki now uses port ${port}, but the AnkiConnect add-on config was not found. Set webBindPort to ${port} in Anki (Tools -> Add-ons -> AnkiConnect -> Config), then restart Anki.';
+  String get anki_connect_port_auto_fix_none =>
+      'No free port found on this machine.';
   String get video_setting_hdr_output => 'HDR / 10-bit output';
   String get video_setting_hdr_output_hint =>
       'Windows only. Auto hands HDR sources straight to an HDR display through a native video window; Always uses that window for every video (10-bit output); Off keeps the standard renderer.';
@@ -14238,23 +14306,135 @@ class _StringsAr extends _StringsEn {
       'تمت القراءة حتى الصفحة ${page}';
   @override
   String mihon_store_extension_count({required Object count}) =>
-      '${count} extensions';
+      '${count} إضافة';
   @override
   String mihon_extension_sources_more({required Object count}) =>
-      'Show all ${count} sources';
+      'إظهار كل المصادر (${count})';
   @override
-  String get mihon_extension_sources_less => 'Show fewer sources';
+  String get mihon_extension_sources_less => 'إظهار مصادر أقل';
   @override
-  String get video_setting_hdr_output => 'HDR / 10-bit output';
+  String get options_website => 'زيارة الموقع الرسمي';
+  @override
+  String get video_setting_mpv_group_hdr => 'HDR';
+  @override
+  String get video_setting_hdr_tone_mapping => 'تعيين ألوان HDR';
+  @override
+  String get video_setting_hdr_tone_mapping_hint =>
+      'المنحنى المستخدم عند ضغط مصدر HDR على شاشة SDR. «تلقائي» يترك الاختيار لـ mpv حسب كل مصدر.';
+  @override
+  String get video_setting_hdr_compute_peak => 'كشف الذروة الديناميكي';
+  @override
+  String get video_setting_hdr_compute_peak_hint =>
+      'قياس ذروة السطوع الحقيقية لكل إطار بدلاً من الوثوق ببيانات المصدر. إبرازات أدق مقابل بعض استهلاك المعالج الرسومي.';
+  @override
+  String get video_setting_hdr_auto => 'تلقائي';
+  @override
+  String get video_setting_hdr_on => 'تشغيل';
+  @override
+  String get video_setting_hdr_off => 'إيقاف';
+  @override
+  String get video_discovery_cancel_downloads_title => 'إلغاء التنزيلات؟';
+  @override
+  String video_discovery_cancel_downloads_body({required Object n}) =>
+      'سيتم إيقاف ${n} مهمة تنزيل لهذا العمل. تبقى الأجزاء المنزَّلة على القرص، ويمكنك بدء التنزيل مرة أخرى لاحقًا.';
+  @override
+  String get video_discovery_cancel_downloads_failed =>
+      'تعذّر إلغاء التنزيل. قد تكون المهمة قد انتهت بالفعل، أو أن خلفية التنزيل غير متاحة.';
+  @override
+  String get gal_hook_click_lookup => 'اضغط على كلمة للبحث عنها';
+  @override
+  String get gal_hook_click_lookup_hint =>
+      'الإيقاف يعني ألا يؤدي النقر على النص إلى بحث — مفيد مع تفعيل النقر النافذ عندما لا تريد إصابة كلمة بالخطأ.';
+  @override
+  String get gal_hook_lookup_trigger => 'زر البحث';
+  @override
+  String get gal_hook_lookup_trigger_hint =>
+      'أي زر فأرة يبحث عن الكلمة تحت المؤشر. مستقل عن المفتاح أعلاه: يمكنك إيقاف البحث بالنقر والبحث بزر جانبي.';
+  @override
+  String get gal_hook_lookup_trigger_left => 'Left click';
+  @override
+  String get gal_hook_lookup_trigger_middle => 'Middle click';
+  @override
+  String get gal_hook_lookup_trigger_side => 'Side button';
+  @override
+  String get gal_hook_toolbar_auto_hide => 'إخفاء شريط الأدوات تلقائيًا';
+  @override
+  String get gal_hook_toolbar_auto_hide_hint =>
+      'يخفي شريط الأدوات حتى يصل المؤشر إلى صندوق النص، بأسلوب LunaHook. مخفي يعني مخفي فعلًا — تعود تلك البكسلات إلى اللعبة.';
+  @override
+  String get gal_hook_passthrough_blocks_mouse =>
+      'النص يستقبل النقرات أثناء النقر النافذ';
+  @override
+  String get gal_hook_passthrough_blocks_mouse_hint =>
+      'تشغيل: تبقى أسطر النص تستقبل النقرات فتستطيع الضغط على كلمة. إيقاف: تصبح الطبقة كلها شفافة للفأرة — تنقر ما تحتها، لكن الضغط على الكلمات لا يعمل.';
+  @override
+  String get floating_lyric_topmost => 'الإبقاء في المقدمة';
+  @override
+  String get gal_hook_fold_progressive_lines => 'دمج أسطر الحوار المقسّمة';
+  @override
+  String get gal_hook_fold_progressive_lines_hint =>
+      'بعض المحرّكات تعيد رسم السطر كاملًا مع كل نقرة، فيُلتقط السطر الواحد عدة مرات. اطوِ تلك اللقطات في سطر واحد.';
+  @override
+  String get gal_hook_ingame_lookup_engine_unsupported =>
+      'محرك اللعبة هذا لا يدعم البحث داخل اللعبة بعد';
+  @override
+  String get gal_hook_ingame_lookup_version_unsupported =>
+      'إصدار اللعبة هذا ليس ضمن القائمة المدعومة بعد';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copy =>
+      'نسخ SHA-256 لملف اللعبة التنفيذي';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_unavailable =>
+      'تعذّرت قراءة ملف اللعبة التنفيذي';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copied =>
+      'تم نسخ SHA-256 لملف اللعبة التنفيذي';
+  @override
+  String get download_tracker_section => 'اشتراك المتعقّبات';
+  @override
+  String get download_tracker_auto_add =>
+      'إضافة متعقّبات الاشتراك تلقائيًا إلى التنزيلات الجديدة';
+  @override
+  String get download_tracker_auto_add_hint =>
+      'تُخزَّن القائمة مؤقتًا لست ساعات. فشل الاشتراك لا يمنع التنزيل.';
+  @override
+  String get download_tracker_url => 'رابط الاشتراك';
+  @override
+  String get download_tracker_refresh => 'جلب المتعقّبات';
+  @override
+  String get download_tracker_preview_empty =>
+      'اجلب الاشتراك لمعاينة متعقّبات HTTP وHTTPS وUDP المدعومة.';
+  @override
+  String download_tracker_preview_count({required Object count}) =>
+      'تم جلب ${count} متعقّبًا';
+  @override
+  String download_tracker_fetch_failed({required Object message}) =>
+      'تعذّر جلب المتعقّبات: ${message}';
+  @override
+  String get anki_connect_port_auto_fix => 'التبديل إلى منفذ حر';
+  @override
+  String get anki_connect_port_auto_fix_hint =>
+      'يختار منفذًا حرًا ويكتبه في Hibiki وفي إعدادات إضافة AnkiConnect معًا. أعد تشغيل Anki لتطبيق التغيير.';
+  @override
+  String anki_connect_port_auto_fix_done({required Object port}) =>
+      'تم تغيير منفذ AnkiConnect إلى ${port}. أعد تشغيل Anki ثم حاول مجددًا.';
+  @override
+  String anki_connect_port_auto_fix_manual({required Object port}) =>
+      'يستخدم Hibiki الآن المنفذ ${port}، لكن لم يُعثر على إعدادات إضافة AnkiConnect. اضبط webBindPort على ${port} في Anki (أدوات ← الإضافات ← AnkiConnect ← إعداد) ثم أعد تشغيل Anki.';
+  @override
+  String get anki_connect_port_auto_fix_none =>
+      'لم يُعثر على أي منفذ حر على هذا الجهاز.';
+  @override
+  String get video_setting_hdr_output => 'إخراج HDR / ‏10 بت';
   @override
   String get video_setting_hdr_output_hint =>
-      'Windows only. Auto hands HDR sources straight to an HDR display through a native video window; Always uses that window for every video (10-bit output); Off keeps the standard renderer.';
+      'على Windows فقط. يمرّر «تلقائي» مصادر HDR مباشرةً إلى شاشة HDR عبر نافذة فيديو أصلية، ويستخدم «دائمًا» تلك النافذة لكل مقطع (إخراج 10 بت)، بينما يُبقي «إيقاف» على العارض القياسي.';
   @override
-  String get video_setting_hdr_output_auto => 'Auto';
+  String get video_setting_hdr_output_auto => 'تلقائي';
   @override
-  String get video_setting_hdr_output_always => 'Always';
+  String get video_setting_hdr_output_always => 'دائمًا';
   @override
-  String get video_setting_hdr_output_off => 'Off';
+  String get video_setting_hdr_output_off => 'إيقاف';
 }
 
 // Path: <root>
@@ -23426,23 +23606,138 @@ class _StringsDe extends _StringsEn {
       'Bis Seite ${page} gelesen';
   @override
   String mihon_store_extension_count({required Object count}) =>
-      '${count} extensions';
+      '${count} Erweiterungen';
   @override
   String mihon_extension_sources_more({required Object count}) =>
-      'Show all ${count} sources';
+      'Alle ${count} Quellen anzeigen';
   @override
-  String get mihon_extension_sources_less => 'Show fewer sources';
+  String get mihon_extension_sources_less => 'Weniger Quellen anzeigen';
   @override
-  String get video_setting_hdr_output => 'HDR / 10-bit output';
+  String get options_website => 'Offizielle Website besuchen';
+  @override
+  String get video_setting_mpv_group_hdr => 'HDR';
+  @override
+  String get video_setting_hdr_tone_mapping => 'HDR-Tonemapping';
+  @override
+  String get video_setting_hdr_tone_mapping_hint =>
+      'Kurve, mit der eine HDR-Quelle auf ein SDR-Display gebracht wird. „Automatisch“ überlässt mpv die Wahl je Quelle.';
+  @override
+  String get video_setting_hdr_compute_peak =>
+      'Dynamische Spitzenwerterkennung';
+  @override
+  String get video_setting_hdr_compute_peak_hint =>
+      'Misst die echte Spitzenhelligkeit jedes Bildes, statt den Metadaten der Quelle zu vertrauen. Bessere Lichter, kostet etwas GPU-Leistung.';
+  @override
+  String get video_setting_hdr_auto => 'Automatisch';
+  @override
+  String get video_setting_hdr_on => 'An';
+  @override
+  String get video_setting_hdr_off => 'Aus';
+  @override
+  String get video_discovery_cancel_downloads_title => 'Downloads abbrechen?';
+  @override
+  String video_discovery_cancel_downloads_body({required Object n}) =>
+      '${n} Download-Aufgabe(n) für diesen Titel werden gestoppt. Bereits geladene Teile bleiben auf der Festplatte; du kannst den Download später erneut starten.';
+  @override
+  String get video_discovery_cancel_downloads_failed =>
+      'Download konnte nicht abgebrochen werden. Die Aufgabe ist möglicherweise schon fertig, oder das Download-Backend ist nicht verfügbar.';
+  @override
+  String get gal_hook_click_lookup => 'Wort antippen zum Nachschlagen';
+  @override
+  String get gal_hook_click_lookup_hint =>
+      'Aus bedeutet, dass Klicks auf den Text nie ein Nachschlagen auslösen – praktisch bei aktiviertem Durchklicken, wenn du nicht versehentlich ein Wort treffen willst.';
+  @override
+  String get gal_hook_lookup_trigger => 'Auslöser fürs Nachschlagen';
+  @override
+  String get gal_hook_lookup_trigger_hint =>
+      'Welche Maustaste das Wort unter dem Zeiger nachschlägt. Unabhängig vom Schalter oben: Du kannst Tippen-zum-Nachschlagen ausschalten und trotzdem mit einer Seitentaste nachschlagen.';
+  @override
+  String get gal_hook_lookup_trigger_left => 'Left click';
+  @override
+  String get gal_hook_lookup_trigger_middle => 'Middle click';
+  @override
+  String get gal_hook_lookup_trigger_side => 'Side button';
+  @override
+  String get gal_hook_toolbar_auto_hide =>
+      'Werkzeugleiste automatisch ausblenden';
+  @override
+  String get gal_hook_toolbar_auto_hide_hint =>
+      'Blendet die Leiste aus, bis der Zeiger den Textkasten erreicht – wie bei LunaHook. Ausgeblendet heißt wirklich weg: Diese Pixel gehören wieder dem Spiel.';
+  @override
+  String get gal_hook_passthrough_blocks_mouse =>
+      'Text nimmt Klicks trotz Durchklicken an';
+  @override
+  String get gal_hook_passthrough_blocks_mouse_hint =>
+      'An: Textzeilen nehmen weiter Klicks an, du kannst also ein Wort antippen. Aus: Das gesamte Overlay ist für die Maus durchlässig – du klickst, was darunter liegt, aber Wörter antippen geht nicht mehr.';
+  @override
+  String get floating_lyric_topmost => 'Immer im Vordergrund';
+  @override
+  String get gal_hook_fold_progressive_lines =>
+      'Aufgeteilte Dialogzeilen zusammenfassen';
+  @override
+  String get gal_hook_fold_progressive_lines_hint =>
+      'Manche Engines zeichnen bei jedem Klick die ganze Zeile neu, sodass eine Zeile mehrfach erfasst wird. Diese Schnappschüsse zu einer Zeile zusammenfalten.';
+  @override
+  String get gal_hook_ingame_lookup_engine_unsupported =>
+      'Diese Spiel-Engine unterstützt die Suche im Spiel noch nicht';
+  @override
+  String get gal_hook_ingame_lookup_version_unsupported =>
+      'Diese Spielversion steht noch nicht auf der Liste der unterstützten Versionen';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copy =>
+      'SHA-256 der Spieldatei kopieren';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_unavailable =>
+      'Die Spieldatei konnte nicht gelesen werden';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copied =>
+      'SHA-256 der Spieldatei kopiert';
+  @override
+  String get download_tracker_section => 'Tracker-Abonnement';
+  @override
+  String get download_tracker_auto_add =>
+      'Abonnierte Tracker automatisch zu neuen Downloads hinzufügen';
+  @override
+  String get download_tracker_auto_add_hint =>
+      'Die Liste wird 6 Stunden zwischengespeichert. Ein fehlgeschlagenes Abonnement blockiert den Download nicht.';
+  @override
+  String get download_tracker_url => 'Abonnement-URL';
+  @override
+  String get download_tracker_refresh => 'Tracker abrufen';
+  @override
+  String get download_tracker_preview_empty =>
+      'Rufe das Abonnement ab, um die unterstützten HTTP-, HTTPS- und UDP-Tracker anzuzeigen.';
+  @override
+  String download_tracker_preview_count({required Object count}) =>
+      '${count} Tracker abgerufen';
+  @override
+  String download_tracker_fetch_failed({required Object message}) =>
+      'Tracker konnten nicht abgerufen werden: ${message}';
+  @override
+  String get anki_connect_port_auto_fix => 'Auf freien Port wechseln';
+  @override
+  String get anki_connect_port_auto_fix_hint =>
+      'Wählt einen freien Port und trägt ihn sowohl in Hibiki als auch in die AnkiConnect-Add-on-Konfiguration ein. Starte Anki neu, damit es wirkt.';
+  @override
+  String anki_connect_port_auto_fix_done({required Object port}) =>
+      'AnkiConnect nutzt jetzt Port ${port}. Starte Anki neu und versuche es erneut.';
+  @override
+  String anki_connect_port_auto_fix_manual({required Object port}) =>
+      'Hibiki nutzt jetzt Port ${port}, aber die AnkiConnect-Add-on-Konfiguration wurde nicht gefunden. Setze webBindPort in Anki (Werkzeuge → Add-ons → AnkiConnect → Konfiguration) ebenfalls auf ${port} und starte Anki neu.';
+  @override
+  String get anki_connect_port_auto_fix_none =>
+      'Auf diesem Rechner wurde kein freier Port gefunden.';
+  @override
+  String get video_setting_hdr_output => 'HDR-/10-Bit-Ausgabe';
   @override
   String get video_setting_hdr_output_hint =>
-      'Windows only. Auto hands HDR sources straight to an HDR display through a native video window; Always uses that window for every video (10-bit output); Off keeps the standard renderer.';
+      'Nur Windows. „Automatisch“ reicht HDR-Quellen über ein natives Videofenster direkt an ein HDR-Display weiter; „Immer“ nutzt dieses Fenster für jedes Video (10-Bit-Ausgabe); „Aus“ behält den Standard-Renderer.';
   @override
-  String get video_setting_hdr_output_auto => 'Auto';
+  String get video_setting_hdr_output_auto => 'Automatisch';
   @override
-  String get video_setting_hdr_output_always => 'Always';
+  String get video_setting_hdr_output_always => 'Immer';
   @override
-  String get video_setting_hdr_output_off => 'Off';
+  String get video_setting_hdr_output_off => 'Aus';
 }
 
 // Path: <root>
@@ -32658,23 +32953,137 @@ class _StringsEs extends _StringsEn {
       'Leído hasta la página ${page}';
   @override
   String mihon_store_extension_count({required Object count}) =>
-      '${count} extensions';
+      '${count} extensiones';
   @override
   String mihon_extension_sources_more({required Object count}) =>
-      'Show all ${count} sources';
+      'Mostrar las ${count} fuentes';
   @override
-  String get mihon_extension_sources_less => 'Show fewer sources';
+  String get mihon_extension_sources_less => 'Mostrar menos fuentes';
   @override
-  String get video_setting_hdr_output => 'HDR / 10-bit output';
+  String get options_website => 'Visitar el sitio web oficial';
+  @override
+  String get video_setting_mpv_group_hdr => 'HDR';
+  @override
+  String get video_setting_hdr_tone_mapping => 'Mapeo de tonos HDR';
+  @override
+  String get video_setting_hdr_tone_mapping_hint =>
+      'Curva que se usa al comprimir una fuente HDR en una pantalla SDR. «Automático» deja que mpv elija según la fuente.';
+  @override
+  String get video_setting_hdr_compute_peak => 'Detección dinámica de picos';
+  @override
+  String get video_setting_hdr_compute_peak_hint =>
+      'Mide el brillo máximo real de cada fotograma en vez de fiarse de los metadatos de la fuente. Mejores luces altas, a costa de algo de GPU.';
+  @override
+  String get video_setting_hdr_auto => 'Automático';
+  @override
+  String get video_setting_hdr_on => 'Activado';
+  @override
+  String get video_setting_hdr_off => 'Desactivado';
+  @override
+  String get video_discovery_cancel_downloads_title =>
+      '¿Cancelar las descargas?';
+  @override
+  String video_discovery_cancel_downloads_body({required Object n}) =>
+      'Se detendrán ${n} tarea(s) de descarga de este título. Las partes ya descargadas se conservan en el disco; podrás reanudar la descarga más adelante.';
+  @override
+  String get video_discovery_cancel_downloads_failed =>
+      'No se pudo cancelar la descarga. Puede que la tarea ya haya terminado o que el backend de descargas no esté disponible.';
+  @override
+  String get gal_hook_click_lookup => 'Toca una palabra para buscarla';
+  @override
+  String get gal_hook_click_lookup_hint =>
+      'Desactivado significa que los clics sobre el texto nunca activan una búsqueda: útil con el clic pasante activado, cuando prefieres no darle a una palabra sin querer.';
+  @override
+  String get gal_hook_lookup_trigger => 'Disparador de búsqueda';
+  @override
+  String get gal_hook_lookup_trigger_hint =>
+      'Qué botón del ratón busca la palabra bajo el puntero. Es independiente del interruptor de arriba: puedes desactivar la búsqueda por toque y seguir buscando con un botón lateral.';
+  @override
+  String get gal_hook_lookup_trigger_left => 'Left click';
+  @override
+  String get gal_hook_lookup_trigger_middle => 'Middle click';
+  @override
+  String get gal_hook_lookup_trigger_side => 'Side button';
+  @override
+  String get gal_hook_toolbar_auto_hide => 'Ocultar la barra automáticamente';
+  @override
+  String get gal_hook_toolbar_auto_hide_hint =>
+      'Oculta la barra hasta que el puntero llega al cuadro de texto, al estilo de LunaHook. Oculta significa oculta de verdad: esos píxeles vuelven al juego.';
+  @override
+  String get gal_hook_passthrough_blocks_mouse =>
+      'El texto sigue recibiendo clics con el clic pasante';
+  @override
+  String get gal_hook_passthrough_blocks_mouse_hint =>
+      'Activado: las líneas de texto siguen recibiendo clics, así puedes tocar una palabra. Desactivado: toda la superposición es transparente al ratón; puedes hacer clic en lo que haya debajo, pero tocar palabras deja de funcionar.';
+  @override
+  String get floating_lyric_topmost => 'Mantener al frente';
+  @override
+  String get gal_hook_fold_progressive_lines =>
+      'Unir líneas de diálogo divididas';
+  @override
+  String get gal_hook_fold_progressive_lines_hint =>
+      'Algunos motores redibujan la línea entera en cada clic, así que una misma línea se captura varias veces. Pliega esas instantáneas en una sola línea.';
+  @override
+  String get gal_hook_ingame_lookup_engine_unsupported =>
+      'Este motor de juego aún no admite la búsqueda dentro del juego';
+  @override
+  String get gal_hook_ingame_lookup_version_unsupported =>
+      'Esta versión del juego aún no está en la lista de compatibles';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copy =>
+      'Copiar el SHA-256 del ejecutable del juego';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_unavailable =>
+      'No se pudo leer el ejecutable del juego';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copied =>
+      'SHA-256 del ejecutable copiado';
+  @override
+  String get download_tracker_section => 'Suscripción de trackers';
+  @override
+  String get download_tracker_auto_add =>
+      'Añadir automáticamente los trackers suscritos a las descargas nuevas';
+  @override
+  String get download_tracker_auto_add_hint =>
+      'La lista se almacena en caché 6 horas. Si la suscripción falla, la descarga no se bloquea.';
+  @override
+  String get download_tracker_url => 'URL de suscripción';
+  @override
+  String get download_tracker_refresh => 'Obtener trackers';
+  @override
+  String get download_tracker_preview_empty =>
+      'Obtén la suscripción para ver los trackers HTTP, HTTPS y UDP compatibles.';
+  @override
+  String download_tracker_preview_count({required Object count}) =>
+      '${count} trackers obtenidos';
+  @override
+  String download_tracker_fetch_failed({required Object message}) =>
+      'No se pudieron obtener los trackers: ${message}';
+  @override
+  String get anki_connect_port_auto_fix => 'Cambiar a un puerto libre';
+  @override
+  String get anki_connect_port_auto_fix_hint =>
+      'Elige un puerto libre y lo escribe tanto en Hibiki como en la configuración del complemento AnkiConnect. Reinicia Anki para aplicarlo.';
+  @override
+  String anki_connect_port_auto_fix_done({required Object port}) =>
+      'AnkiConnect ahora usa el puerto ${port}. Reinicia Anki y vuelve a intentarlo.';
+  @override
+  String anki_connect_port_auto_fix_manual({required Object port}) =>
+      'Hibiki ahora usa el puerto ${port}, pero no se encontró la configuración del complemento AnkiConnect. Pon webBindPort en ${port} dentro de Anki (Herramientas → Complementos → AnkiConnect → Configuración) y reinicia Anki.';
+  @override
+  String get anki_connect_port_auto_fix_none =>
+      'No se encontró ningún puerto libre en este equipo.';
+  @override
+  String get video_setting_hdr_output => 'Salida HDR / 10 bits';
   @override
   String get video_setting_hdr_output_hint =>
-      'Windows only. Auto hands HDR sources straight to an HDR display through a native video window; Always uses that window for every video (10-bit output); Off keeps the standard renderer.';
+      'Solo en Windows. «Automático» entrega las fuentes HDR directamente a una pantalla HDR mediante una ventana de vídeo nativa; «Siempre» usa esa ventana para todos los vídeos (salida de 10 bits); «Desactivado» mantiene el renderizador estándar.';
   @override
-  String get video_setting_hdr_output_auto => 'Auto';
+  String get video_setting_hdr_output_auto => 'Automático';
   @override
-  String get video_setting_hdr_output_always => 'Always';
+  String get video_setting_hdr_output_always => 'Siempre';
   @override
-  String get video_setting_hdr_output_off => 'Off';
+  String get video_setting_hdr_output_off => 'Desactivado';
 }
 
 // Path: <root>
@@ -41927,20 +42336,134 @@ class _StringsFr extends _StringsEn {
       '${count} extensions';
   @override
   String mihon_extension_sources_more({required Object count}) =>
-      'Show all ${count} sources';
+      'Afficher les ${count} sources';
   @override
-  String get mihon_extension_sources_less => 'Show fewer sources';
+  String get mihon_extension_sources_less => 'Afficher moins de sources';
   @override
-  String get video_setting_hdr_output => 'HDR / 10-bit output';
+  String get options_website => 'Visiter le site officiel';
+  @override
+  String get video_setting_mpv_group_hdr => 'HDR';
+  @override
+  String get video_setting_hdr_tone_mapping => 'Mappage tonal HDR';
+  @override
+  String get video_setting_hdr_tone_mapping_hint =>
+      'Courbe utilisée pour ramener une source HDR sur un écran SDR. « Auto » laisse mpv choisir selon la source.';
+  @override
+  String get video_setting_hdr_compute_peak => 'Détection dynamique des pics';
+  @override
+  String get video_setting_hdr_compute_peak_hint =>
+      'Mesure le pic de luminosité réel de chaque image au lieu de se fier aux métadonnées de la source. Meilleures hautes lumières, au prix d\'un peu de GPU.';
+  @override
+  String get video_setting_hdr_auto => 'Auto';
+  @override
+  String get video_setting_hdr_on => 'Activé';
+  @override
+  String get video_setting_hdr_off => 'Désactivé';
+  @override
+  String get video_discovery_cancel_downloads_title =>
+      'Annuler les téléchargements ?';
+  @override
+  String video_discovery_cancel_downloads_body({required Object n}) =>
+      '${n} tâche(s) de téléchargement pour ce titre vont être arrêtées. Les morceaux déjà téléchargés restent sur le disque ; vous pourrez relancer le téléchargement plus tard.';
+  @override
+  String get video_discovery_cancel_downloads_failed =>
+      'Impossible d\'annuler le téléchargement. La tâche est peut-être déjà terminée, ou le backend de téléchargement est indisponible.';
+  @override
+  String get gal_hook_click_lookup => 'Toucher un mot pour le chercher';
+  @override
+  String get gal_hook_click_lookup_hint =>
+      'Désactivé : les clics sur le texte ne déclenchent jamais de recherche — pratique avec le clic traversant, quand vous préférez ne pas toucher un mot par erreur.';
+  @override
+  String get gal_hook_lookup_trigger => 'Déclencheur de recherche';
+  @override
+  String get gal_hook_lookup_trigger_hint =>
+      'Quel bouton de la souris cherche le mot sous le pointeur. Indépendant du réglage ci-dessus : vous pouvez désactiver la recherche au toucher et chercher quand même avec un bouton latéral.';
+  @override
+  String get gal_hook_lookup_trigger_left => 'Left click';
+  @override
+  String get gal_hook_lookup_trigger_middle => 'Middle click';
+  @override
+  String get gal_hook_lookup_trigger_side => 'Side button';
+  @override
+  String get gal_hook_toolbar_auto_hide => 'Masquer la barre automatiquement';
+  @override
+  String get gal_hook_toolbar_auto_hide_hint =>
+      'Masque la barre jusqu\'à ce que le pointeur atteigne la zone de texte, à la manière de LunaHook. Masqué veut dire vraiment masqué : ces pixels reviennent au jeu.';
+  @override
+  String get gal_hook_passthrough_blocks_mouse =>
+      'Le texte reçoit encore les clics en mode traversant';
+  @override
+  String get gal_hook_passthrough_blocks_mouse_hint =>
+      'Activé : les lignes de texte reçoivent encore les clics, vous pouvez donc toucher un mot. Désactivé : toute la surcouche est transparente à la souris — vous cliquez ce qui est dessous, mais toucher un mot ne marche plus.';
+  @override
+  String get floating_lyric_topmost => 'Garder au premier plan';
+  @override
+  String get gal_hook_fold_progressive_lines =>
+      'Fusionner les répliques découpées';
+  @override
+  String get gal_hook_fold_progressive_lines_hint =>
+      'Certains moteurs redessinent toute la ligne à chaque clic, si bien qu\'une même ligne est capturée plusieurs fois. Replie ces instantanés en une seule ligne.';
+  @override
+  String get gal_hook_ingame_lookup_engine_unsupported =>
+      'Ce moteur de jeu ne prend pas encore en charge la recherche en jeu';
+  @override
+  String get gal_hook_ingame_lookup_version_unsupported =>
+      'Cette version du jeu ne figure pas encore dans la liste prise en charge';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copy =>
+      'Copier le SHA-256 de l\'exécutable du jeu';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_unavailable =>
+      'Impossible de lire l\'exécutable du jeu';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copied =>
+      'SHA-256 de l\'exécutable copié';
+  @override
+  String get download_tracker_section => 'Abonnement aux trackers';
+  @override
+  String get download_tracker_auto_add =>
+      'Ajouter automatiquement les trackers de l’abonnement aux nouveaux téléchargements';
+  @override
+  String get download_tracker_auto_add_hint =>
+      'La liste est mise en cache pendant 6 heures. L’échec de l’abonnement ne bloque pas le téléchargement.';
+  @override
+  String get download_tracker_url => 'URL de l’abonnement';
+  @override
+  String get download_tracker_refresh => 'Récupérer les trackers';
+  @override
+  String get download_tracker_preview_empty =>
+      'Récupère l’abonnement pour prévisualiser les trackers HTTP, HTTPS et UDP pris en charge.';
+  @override
+  String download_tracker_preview_count({required Object count}) =>
+      '${count} trackers récupérés';
+  @override
+  String download_tracker_fetch_failed({required Object message}) =>
+      'Impossible de récupérer les trackers : ${message}';
+  @override
+  String get anki_connect_port_auto_fix => 'Passer à un port libre';
+  @override
+  String get anki_connect_port_auto_fix_hint =>
+      'Choisit un port libre et l\'écrit à la fois dans Hibiki et dans la configuration du module AnkiConnect. Redémarrez Anki pour l\'appliquer.';
+  @override
+  String anki_connect_port_auto_fix_done({required Object port}) =>
+      'AnkiConnect utilise désormais le port ${port}. Redémarrez Anki puis réessayez.';
+  @override
+  String anki_connect_port_auto_fix_manual({required Object port}) =>
+      'Hibiki utilise désormais le port ${port}, mais la configuration du module AnkiConnect est introuvable. Définissez webBindPort sur ${port} dans Anki (Outils → Modules complémentaires → AnkiConnect → Configuration), puis redémarrez Anki.';
+  @override
+  String get anki_connect_port_auto_fix_none =>
+      'Aucun port libre trouvé sur cette machine.';
+  @override
+  String get video_setting_hdr_output => 'Sortie HDR / 10 bits';
   @override
   String get video_setting_hdr_output_hint =>
-      'Windows only. Auto hands HDR sources straight to an HDR display through a native video window; Always uses that window for every video (10-bit output); Off keeps the standard renderer.';
+      'Windows uniquement. « Auto » transmet les sources HDR directement à un écran HDR via une fenêtre vidéo native ; « Toujours » utilise cette fenêtre pour toutes les vidéos (sortie 10 bits) ; « Désactivé » conserve le rendu standard.';
   @override
   String get video_setting_hdr_output_auto => 'Auto';
   @override
-  String get video_setting_hdr_output_always => 'Always';
+  String get video_setting_hdr_output_always => 'Toujours';
   @override
-  String get video_setting_hdr_output_off => 'Off';
+  String get video_setting_hdr_output_off => 'Désactivé';
 }
 
 // Path: <root>
@@ -51016,23 +51539,136 @@ class _StringsId extends _StringsEn {
       'Dibaca sampai halaman ${page}';
   @override
   String mihon_store_extension_count({required Object count}) =>
-      '${count} extensions';
+      '${count} ekstensi';
   @override
   String mihon_extension_sources_more({required Object count}) =>
-      'Show all ${count} sources';
+      'Tampilkan semua ${count} sumber';
   @override
-  String get mihon_extension_sources_less => 'Show fewer sources';
+  String get mihon_extension_sources_less => 'Tampilkan lebih sedikit sumber';
   @override
-  String get video_setting_hdr_output => 'HDR / 10-bit output';
+  String get options_website => 'Kunjungi situs web resmi';
+  @override
+  String get video_setting_mpv_group_hdr => 'HDR';
+  @override
+  String get video_setting_hdr_tone_mapping => 'Pemetaan nada HDR';
+  @override
+  String get video_setting_hdr_tone_mapping_hint =>
+      'Kurva yang dipakai saat sumber HDR harus dipadatkan ke layar SDR. "Otomatis" membiarkan mpv memilih per sumber.';
+  @override
+  String get video_setting_hdr_compute_peak => 'Deteksi puncak dinamis';
+  @override
+  String get video_setting_hdr_compute_peak_hint =>
+      'Mengukur puncak kecerahan asli tiap bingkai alih-alih mempercayai metadata sumber. Sorotan lebih baik, memakan sedikit GPU.';
+  @override
+  String get video_setting_hdr_auto => 'Otomatis';
+  @override
+  String get video_setting_hdr_on => 'Aktif';
+  @override
+  String get video_setting_hdr_off => 'Nonaktif';
+  @override
+  String get video_discovery_cancel_downloads_title => 'Batalkan unduhan?';
+  @override
+  String video_discovery_cancel_downloads_body({required Object n}) =>
+      '${n} tugas unduhan untuk judul ini akan dihentikan. Bagian yang sudah terunduh tetap ada di disk; kamu bisa memulai unduhan lagi nanti.';
+  @override
+  String get video_discovery_cancel_downloads_failed =>
+      'Tidak bisa membatalkan unduhan. Tugasnya mungkin sudah selesai, atau backend unduhan sedang tidak tersedia.';
+  @override
+  String get gal_hook_click_lookup => 'Ketuk kata untuk mencarinya';
+  @override
+  String get gal_hook_click_lookup_hint =>
+      'Mati berarti klik pada teks tidak pernah memicu pencarian — berguna saat klik-tembus aktif dan kamu tidak ingin tak sengaja mengenai kata.';
+  @override
+  String get gal_hook_lookup_trigger => 'Pemicu pencarian';
+  @override
+  String get gal_hook_lookup_trigger_hint =>
+      'Tombol tetikus mana yang mencari kata di bawah penunjuk. Terpisah dari sakelar di atas: kamu bisa mematikan ketuk-untuk-cari dan tetap mencari dengan tombol samping.';
+  @override
+  String get gal_hook_lookup_trigger_left => 'Left click';
+  @override
+  String get gal_hook_lookup_trigger_middle => 'Middle click';
+  @override
+  String get gal_hook_lookup_trigger_side => 'Side button';
+  @override
+  String get gal_hook_toolbar_auto_hide => 'Sembunyikan bilah otomatis';
+  @override
+  String get gal_hook_toolbar_auto_hide_hint =>
+      'Sembunyikan bilah sampai penunjuk mencapai kotak teks, ala LunaHook. Tersembunyi artinya benar-benar hilang — piksel itu kembali ke game.';
+  @override
+  String get gal_hook_passthrough_blocks_mouse =>
+      'Teks tetap menerima klik saat klik-tembus';
+  @override
+  String get gal_hook_passthrough_blocks_mouse_hint =>
+      'Aktif: baris teks tetap menerima klik sehingga kamu bisa mengetuk kata. Nonaktif: seluruh lapisan tembus bagi tetikus — kamu bisa mengeklik apa pun di bawahnya, tapi mengetuk kata tidak lagi berfungsi.';
+  @override
+  String get floating_lyric_topmost => 'Tetap di atas';
+  @override
+  String get gal_hook_fold_progressive_lines =>
+      'Gabungkan baris dialog yang terpotong';
+  @override
+  String get gal_hook_fold_progressive_lines_hint =>
+      'Sebagian engine menggambar ulang seluruh baris setiap kali diklik, sehingga satu baris tertangkap beberapa kali. Lipat cuplikan itu menjadi satu baris.';
+  @override
+  String get gal_hook_ingame_lookup_engine_unsupported =>
+      'Mesin gim ini belum mendukung pencarian kamus dalam gim';
+  @override
+  String get gal_hook_ingame_lookup_version_unsupported =>
+      'Versi gim ini belum ada dalam daftar yang didukung';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copy =>
+      'Salin SHA-256 file eksekusi gim';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_unavailable =>
+      'Tidak dapat membaca file eksekusi gim';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copied =>
+      'SHA-256 file eksekusi disalin';
+  @override
+  String get download_tracker_section => 'Langganan tracker';
+  @override
+  String get download_tracker_auto_add =>
+      'Otomatis tambahkan tracker langganan ke unduhan baru';
+  @override
+  String get download_tracker_auto_add_hint =>
+      'Daftar disimpan di cache selama 6 jam. Kegagalan langganan tidak menghentikan unduhan.';
+  @override
+  String get download_tracker_url => 'URL langganan';
+  @override
+  String get download_tracker_refresh => 'Ambil tracker';
+  @override
+  String get download_tracker_preview_empty =>
+      'Ambil langganan untuk melihat tracker HTTP, HTTPS, dan UDP yang didukung.';
+  @override
+  String download_tracker_preview_count({required Object count}) =>
+      '${count} tracker diambil';
+  @override
+  String download_tracker_fetch_failed({required Object message}) =>
+      'Tidak dapat mengambil tracker: ${message}';
+  @override
+  String get anki_connect_port_auto_fix => 'Ganti ke port yang kosong';
+  @override
+  String get anki_connect_port_auto_fix_hint =>
+      'Memilih port kosong lalu menuliskannya ke Hibiki dan ke konfigurasi add-on AnkiConnect. Mulai ulang Anki agar berlaku.';
+  @override
+  String anki_connect_port_auto_fix_done({required Object port}) =>
+      'AnkiConnect kini memakai port ${port}. Mulai ulang Anki lalu coba lagi.';
+  @override
+  String anki_connect_port_auto_fix_manual({required Object port}) =>
+      'Hibiki kini memakai port ${port}, tetapi konfigurasi add-on AnkiConnect tidak ditemukan. Setel webBindPort ke ${port} di Anki (Alat → Add-on → AnkiConnect → Konfigurasi), lalu mulai ulang Anki.';
+  @override
+  String get anki_connect_port_auto_fix_none =>
+      'Tidak ditemukan port kosong di komputer ini.';
+  @override
+  String get video_setting_hdr_output => 'Keluaran HDR / 10 bit';
   @override
   String get video_setting_hdr_output_hint =>
-      'Windows only. Auto hands HDR sources straight to an HDR display through a native video window; Always uses that window for every video (10-bit output); Off keeps the standard renderer.';
+      'Hanya Windows. «Otomatis» meneruskan sumber HDR langsung ke layar HDR lewat jendela video native; «Selalu» memakai jendela itu untuk semua video (keluaran 10 bit); «Mati» tetap memakai perender standar.';
   @override
-  String get video_setting_hdr_output_auto => 'Auto';
+  String get video_setting_hdr_output_auto => 'Otomatis';
   @override
-  String get video_setting_hdr_output_always => 'Always';
+  String get video_setting_hdr_output_always => 'Selalu';
   @override
-  String get video_setting_hdr_output_off => 'Off';
+  String get video_setting_hdr_output_off => 'Mati';
 }
 
 // Path: <root>
@@ -60185,23 +60821,136 @@ class _StringsIt extends _StringsEn {
       'Letto fino a pagina ${page}';
   @override
   String mihon_store_extension_count({required Object count}) =>
-      '${count} extensions';
+      '${count} estensioni';
   @override
   String mihon_extension_sources_more({required Object count}) =>
-      'Show all ${count} sources';
+      'Mostra tutte le ${count} fonti';
   @override
-  String get mihon_extension_sources_less => 'Show fewer sources';
+  String get mihon_extension_sources_less => 'Mostra meno fonti';
   @override
-  String get video_setting_hdr_output => 'HDR / 10-bit output';
+  String get options_website => 'Visita il sito ufficiale';
+  @override
+  String get video_setting_mpv_group_hdr => 'HDR';
+  @override
+  String get video_setting_hdr_tone_mapping => 'Mappatura tonale HDR';
+  @override
+  String get video_setting_hdr_tone_mapping_hint =>
+      'Curva usata quando una sorgente HDR va compressa su uno schermo SDR. «Automatico» lascia scegliere a mpv per ogni sorgente.';
+  @override
+  String get video_setting_hdr_compute_peak =>
+      'Rilevamento dinamico dei picchi';
+  @override
+  String get video_setting_hdr_compute_peak_hint =>
+      'Misura il picco di luminosità reale di ogni fotogramma invece di fidarsi dei metadati della sorgente. Alte luci migliori, con un po’ di costo GPU.';
+  @override
+  String get video_setting_hdr_auto => 'Automatico';
+  @override
+  String get video_setting_hdr_on => 'Attivo';
+  @override
+  String get video_setting_hdr_off => 'Disattivo';
+  @override
+  String get video_discovery_cancel_downloads_title => 'Annullare i download?';
+  @override
+  String video_discovery_cancel_downloads_body({required Object n}) =>
+      'Verranno interrotte ${n} attività di download per questo titolo. Le parti già scaricate restano sul disco; potrai riavviare il download più tardi.';
+  @override
+  String get video_discovery_cancel_downloads_failed =>
+      'Impossibile annullare il download. L’attività potrebbe essere già terminata, oppure il backend di download non è disponibile.';
+  @override
+  String get gal_hook_click_lookup => 'Tocca una parola per cercarla';
+  @override
+  String get gal_hook_click_lookup_hint =>
+      'Disattivato: i clic sul testo non avviano mai una ricerca — utile con il clic passante attivo, quando preferisci non colpire una parola per sbaglio.';
+  @override
+  String get gal_hook_lookup_trigger => 'Attivatore della ricerca';
+  @override
+  String get gal_hook_lookup_trigger_hint =>
+      'Quale tasto del mouse cerca la parola sotto il puntatore. Indipendente dall’interruttore qui sopra: puoi disattivare il tocco-per-cercare e cercare comunque con un tasto laterale.';
+  @override
+  String get gal_hook_lookup_trigger_left => 'Left click';
+  @override
+  String get gal_hook_lookup_trigger_middle => 'Middle click';
+  @override
+  String get gal_hook_lookup_trigger_side => 'Side button';
+  @override
+  String get gal_hook_toolbar_auto_hide => 'Nascondi la barra automaticamente';
+  @override
+  String get gal_hook_toolbar_auto_hide_hint =>
+      'Nasconde la barra finché il puntatore non raggiunge il riquadro del testo, in stile LunaHook. Nascosto significa davvero nascosto: quei pixel tornano al gioco.';
+  @override
+  String get gal_hook_passthrough_blocks_mouse =>
+      'Il testo riceve ancora i clic durante il clic passante';
+  @override
+  String get gal_hook_passthrough_blocks_mouse_hint =>
+      'Attivo: le righe di testo ricevono ancora i clic, così puoi toccare una parola. Disattivo: l’intera sovrapposizione è trasparente al mouse — clicchi ciò che sta sotto, ma toccare le parole non funziona più.';
+  @override
+  String get floating_lyric_topmost => 'Mantieni in primo piano';
+  @override
+  String get gal_hook_fold_progressive_lines => 'Unisci le battute spezzate';
+  @override
+  String get gal_hook_fold_progressive_lines_hint =>
+      'Alcuni motori ridisegnano l’intera riga a ogni clic, così una stessa riga viene catturata più volte. Ripiega quelle istantanee in una sola riga.';
+  @override
+  String get gal_hook_ingame_lookup_engine_unsupported =>
+      'Questo motore di gioco non supporta ancora la ricerca nel gioco';
+  @override
+  String get gal_hook_ingame_lookup_version_unsupported =>
+      'Questa versione del gioco non è ancora nell\'elenco supportato';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copy =>
+      'Copia lo SHA-256 dell\'eseguibile del gioco';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_unavailable =>
+      'Impossibile leggere l\'eseguibile del gioco';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copied =>
+      'SHA-256 dell\'eseguibile copiato';
+  @override
+  String get download_tracker_section => 'Abbonamento ai tracker';
+  @override
+  String get download_tracker_auto_add =>
+      'Aggiungi automaticamente i tracker dell’abbonamento ai nuovi download';
+  @override
+  String get download_tracker_auto_add_hint =>
+      'L’elenco resta in cache per 6 ore. Se l’abbonamento fallisce, il download non viene bloccato.';
+  @override
+  String get download_tracker_url => 'URL dell’abbonamento';
+  @override
+  String get download_tracker_refresh => 'Scarica i tracker';
+  @override
+  String get download_tracker_preview_empty =>
+      'Scarica l’abbonamento per vedere in anteprima i tracker HTTP, HTTPS e UDP supportati.';
+  @override
+  String download_tracker_preview_count({required Object count}) =>
+      '${count} tracker scaricati';
+  @override
+  String download_tracker_fetch_failed({required Object message}) =>
+      'Impossibile scaricare i tracker: ${message}';
+  @override
+  String get anki_connect_port_auto_fix => 'Passa a una porta libera';
+  @override
+  String get anki_connect_port_auto_fix_hint =>
+      'Sceglie una porta libera e la scrive sia in Hibiki sia nella configurazione del componente aggiuntivo AnkiConnect. Riavvia Anki per applicarla.';
+  @override
+  String anki_connect_port_auto_fix_done({required Object port}) =>
+      'AnkiConnect ora usa la porta ${port}. Riavvia Anki e riprova.';
+  @override
+  String anki_connect_port_auto_fix_manual({required Object port}) =>
+      'Hibiki ora usa la porta ${port}, ma la configurazione del componente aggiuntivo AnkiConnect non è stata trovata. Imposta webBindPort su ${port} in Anki (Strumenti → Componenti aggiuntivi → AnkiConnect → Configurazione) e riavvia Anki.';
+  @override
+  String get anki_connect_port_auto_fix_none =>
+      'Nessuna porta libera trovata su questo computer.';
+  @override
+  String get video_setting_hdr_output => 'Uscita HDR / 10 bit';
   @override
   String get video_setting_hdr_output_hint =>
-      'Windows only. Auto hands HDR sources straight to an HDR display through a native video window; Always uses that window for every video (10-bit output); Off keeps the standard renderer.';
+      'Solo Windows. «Automatico» passa le sorgenti HDR direttamente a uno schermo HDR tramite una finestra video nativa; «Sempre» usa quella finestra per ogni video (uscita a 10 bit); «Disattivato» mantiene il renderer standard.';
   @override
-  String get video_setting_hdr_output_auto => 'Auto';
+  String get video_setting_hdr_output_auto => 'Automatico';
   @override
-  String get video_setting_hdr_output_always => 'Always';
+  String get video_setting_hdr_output_always => 'Sempre';
   @override
-  String get video_setting_hdr_output_off => 'Off';
+  String get video_setting_hdr_output_off => 'Disattivato';
 }
 
 // Path: <root>
@@ -68794,23 +69543,131 @@ class _StringsJa extends _StringsEn {
       '${page} ページまで';
   @override
   String mihon_store_extension_count({required Object count}) =>
-      '${count} extensions';
+      '拡張機能 ${count} 件';
   @override
   String mihon_extension_sources_more({required Object count}) =>
-      'Show all ${count} sources';
+      '${count} 件のソースをすべて表示';
   @override
-  String get mihon_extension_sources_less => 'Show fewer sources';
+  String get mihon_extension_sources_less => 'ソースの表示を減らす';
   @override
-  String get video_setting_hdr_output => 'HDR / 10-bit output';
+  String get options_website => '公式サイトを開く';
+  @override
+  String get video_setting_mpv_group_hdr => 'HDR';
+  @override
+  String get video_setting_hdr_tone_mapping => 'HDR トーンマッピング';
+  @override
+  String get video_setting_hdr_tone_mapping_hint =>
+      'HDR ソースを SDR ディスプレイに収めるときに使うカーブ。「自動」は mpv がソースごとに選びます。';
+  @override
+  String get video_setting_hdr_compute_peak => '動的ピーク検出';
+  @override
+  String get video_setting_hdr_compute_peak_hint =>
+      'ソースのメタデータを信じる代わりに、フレームごとの実際のピーク輝度を測ります。ハイライトが良くなる一方、GPU を少し使います。';
+  @override
+  String get video_setting_hdr_auto => '自動';
+  @override
+  String get video_setting_hdr_on => 'オン';
+  @override
+  String get video_setting_hdr_off => 'オフ';
+  @override
+  String get video_discovery_cancel_downloads_title => 'ダウンロードを中止しますか？';
+  @override
+  String video_discovery_cancel_downloads_body({required Object n}) =>
+      'この作品のダウンロードタスク ${n} 件を停止します。ダウンロード済みの断片はディスクに残るので、後でやり直せます。';
+  @override
+  String get video_discovery_cancel_downloads_failed =>
+      'ダウンロードを中止できませんでした。タスクが既に終了しているか、ダウンロードバックエンドが利用できません。';
+  @override
+  String get gal_hook_click_lookup => '単語をタップして辞書を引く';
+  @override
+  String get gal_hook_click_lookup_hint =>
+      'オフにすると、字幕をクリックしても辞書を引きません。クリック透過と併用して、うっかり単語に当たるのを避けたいときに便利です。';
+  @override
+  String get gal_hook_lookup_trigger => '辞書を引くボタン';
+  @override
+  String get gal_hook_lookup_trigger_hint =>
+      'ポインタの下の単語を引くマウスボタン。上のスイッチとは独立です：タップで引くのをオフにしたまま、サイドボタンで引けます。';
+  @override
+  String get gal_hook_lookup_trigger_left => 'Left click';
+  @override
+  String get gal_hook_lookup_trigger_middle => 'Middle click';
+  @override
+  String get gal_hook_lookup_trigger_side => 'Side button';
+  @override
+  String get gal_hook_toolbar_auto_hide => 'ツールバーを自動で隠す';
+  @override
+  String get gal_hook_toolbar_auto_hide_hint =>
+      'ポインタが字幕枠に来るまでツールバーを隠します（LunaHook 方式）。隠すときは本当に消します——その分のピクセルはゲームに返ります。';
+  @override
+  String get gal_hook_passthrough_blocks_mouse => 'クリック透過中も字幕はクリックを受ける';
+  @override
+  String get gal_hook_passthrough_blocks_mouse_hint =>
+      'オン：字幕の行はクリックを受け続けるので単語をタップできます。オフ：オーバーレイ全体がマウスに対して透明になり、下のものをクリックできますが、単語のタップはできなくなります。';
+  @override
+  String get floating_lyric_topmost => '常に手前に表示';
+  @override
+  String get gal_hook_fold_progressive_lines => '分割されたセリフ行をまとめる';
+  @override
+  String get gal_hook_fold_progressive_lines_hint =>
+      'クリックのたびに行全体を描き直すエンジンがあり、同じ行が何度も取り込まれます。そのスナップショットを 1 行にまとめます。';
+  @override
+  String get gal_hook_ingame_lookup_engine_unsupported =>
+      'このゲームエンジンはゲーム内辞書引きに未対応です';
+  @override
+  String get gal_hook_ingame_lookup_version_unsupported =>
+      'このゲームのバージョンはまだ対応リストにありません';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copy => 'ゲーム実行ファイルの SHA-256 をコピー';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_unavailable =>
+      'ゲーム実行ファイルを読み取れません（権限不足の可能性）';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copied =>
+      '実行ファイルの SHA-256 をコピーしました';
+  @override
+  String get download_tracker_section => 'トラッカー購読';
+  @override
+  String get download_tracker_auto_add => '新しいダウンロードに購読トラッカーを自動で追加する';
+  @override
+  String get download_tracker_auto_add_hint =>
+      'リストは 6 時間キャッシュされます。購読の取得に失敗してもダウンロードは止まりません。';
+  @override
+  String get download_tracker_url => '購読 URL';
+  @override
+  String get download_tracker_refresh => 'トラッカーを取得';
+  @override
+  String get download_tracker_preview_empty =>
+      '購読を取得すると、対応している HTTP・HTTPS・UDP のトラッカーをプレビューできます。';
+  @override
+  String download_tracker_preview_count({required Object count}) =>
+      '${count} 件のトラッカーを取得しました';
+  @override
+  String download_tracker_fetch_failed({required Object message}) =>
+      'トラッカーを取得できませんでした: ${message}';
+  @override
+  String get anki_connect_port_auto_fix => '空いているポートに変更';
+  @override
+  String get anki_connect_port_auto_fix_hint =>
+      '空いているポートを選び、Hibiki と Anki の AnkiConnect アドオン設定の両方に書き込みます。反映には Anki の再起動が必要です。';
+  @override
+  String anki_connect_port_auto_fix_done({required Object port}) =>
+      'AnkiConnect のポートを ${port} に変更しました。Anki を再起動してからもう一度お試しください。';
+  @override
+  String anki_connect_port_auto_fix_manual({required Object port}) =>
+      'Hibiki はポート ${port} を使うようになりましたが、AnkiConnect のアドオン設定が見つかりませんでした。Anki の「ツール → アドオン → AnkiConnect → 設定」で webBindPort も ${port} にしてから、Anki を再起動してください。';
+  @override
+  String get anki_connect_port_auto_fix_none => 'このマシンに空いているポートが見つかりませんでした。';
+  @override
+  String get video_setting_hdr_output => 'HDR / 10 ビット出力';
   @override
   String get video_setting_hdr_output_hint =>
-      'Windows only. Auto hands HDR sources straight to an HDR display through a native video window; Always uses that window for every video (10-bit output); Off keeps the standard renderer.';
+      'Windows のみ。「自動」はディスプレイとソースがどちらも HDR のとき、ネイティブ動画ウィンドウ経由でそのまま HDR ディスプレイへ渡します。「常に」はすべての動画でそのウィンドウを使います（10 ビット出力）。「オフ」は標準のレンダラーのままです。';
   @override
-  String get video_setting_hdr_output_auto => 'Auto';
+  String get video_setting_hdr_output_auto => '自動';
   @override
-  String get video_setting_hdr_output_always => 'Always';
+  String get video_setting_hdr_output_always => '常に';
   @override
-  String get video_setting_hdr_output_off => 'Off';
+  String get video_setting_hdr_output_off => 'オフ';
 }
 
 // Path: <root>
@@ -77417,24 +78274,130 @@ class _StringsKo extends _StringsEn {
   String manga_series_read_progress_partial({required Object page}) =>
       '${page}페이지까지 읽음';
   @override
-  String mihon_store_extension_count({required Object count}) =>
-      '${count} extensions';
+  String mihon_store_extension_count({required Object count}) => '확장 ${count}개';
   @override
   String mihon_extension_sources_more({required Object count}) =>
-      'Show all ${count} sources';
+      '소스 ${count}개 모두 보기';
   @override
-  String get mihon_extension_sources_less => 'Show fewer sources';
+  String get mihon_extension_sources_less => '소스 적게 보기';
   @override
-  String get video_setting_hdr_output => 'HDR / 10-bit output';
+  String get options_website => '공식 웹사이트 방문';
+  @override
+  String get video_setting_mpv_group_hdr => 'HDR';
+  @override
+  String get video_setting_hdr_tone_mapping => 'HDR 톤 매핑';
+  @override
+  String get video_setting_hdr_tone_mapping_hint =>
+      'HDR 소스를 SDR 디스플레이에 맞출 때 쓰는 곡선입니다. ‘자동’은 mpv가 소스마다 고르게 합니다.';
+  @override
+  String get video_setting_hdr_compute_peak => '동적 피크 검출';
+  @override
+  String get video_setting_hdr_compute_peak_hint =>
+      '소스 메타데이터를 믿는 대신 프레임마다 실제 최대 밝기를 측정합니다. 하이라이트가 좋아지지만 GPU를 조금 씁니다.';
+  @override
+  String get video_setting_hdr_auto => '자동';
+  @override
+  String get video_setting_hdr_on => '켜기';
+  @override
+  String get video_setting_hdr_off => '끄기';
+  @override
+  String get video_discovery_cancel_downloads_title => '다운로드를 취소할까요?';
+  @override
+  String video_discovery_cancel_downloads_body({required Object n}) =>
+      '이 작품의 다운로드 작업 ${n}개를 중지합니다. 이미 받은 조각은 디스크에 남아 있어 나중에 다시 시작할 수 있습니다.';
+  @override
+  String get video_discovery_cancel_downloads_failed =>
+      '다운로드를 취소하지 못했습니다. 작업이 이미 끝났거나 다운로드 백엔드를 사용할 수 없습니다.';
+  @override
+  String get gal_hook_click_lookup => '단어를 눌러 사전 찾기';
+  @override
+  String get gal_hook_click_lookup_hint =>
+      '끄면 자막을 클릭해도 사전을 찾지 않습니다. 클릭 통과를 켠 채로 실수로 단어를 누르고 싶지 않을 때 유용합니다.';
+  @override
+  String get gal_hook_lookup_trigger => '사전 찾기 버튼';
+  @override
+  String get gal_hook_lookup_trigger_hint =>
+      '포인터 아래 단어를 찾을 마우스 버튼입니다. 위 스위치와는 별개예요: 눌러서 찾기를 꺼도 옆 버튼으로는 찾을 수 있습니다.';
+  @override
+  String get gal_hook_lookup_trigger_left => 'Left click';
+  @override
+  String get gal_hook_lookup_trigger_middle => 'Middle click';
+  @override
+  String get gal_hook_lookup_trigger_side => 'Side button';
+  @override
+  String get gal_hook_toolbar_auto_hide => '도구 모음 자동 숨김';
+  @override
+  String get gal_hook_toolbar_auto_hide_hint =>
+      '포인터가 자막 상자에 닿을 때까지 도구 모음을 숨깁니다(LunaHook 방식). 숨긴다는 건 정말로 사라진다는 뜻이라, 그 픽셀은 게임으로 돌아갑니다.';
+  @override
+  String get gal_hook_passthrough_blocks_mouse => '클릭 통과 중에도 자막은 클릭을 받음';
+  @override
+  String get gal_hook_passthrough_blocks_mouse_hint =>
+      '켬: 자막 줄이 계속 클릭을 받아 단어를 누를 수 있습니다. 끔: 오버레이 전체가 마우스에 투명해져 아래 것을 클릭할 수 있지만, 단어 누르기는 더 이상 되지 않습니다.';
+  @override
+  String get floating_lyric_topmost => '항상 위에 표시';
+  @override
+  String get gal_hook_fold_progressive_lines => '나뉜 대사 줄 합치기';
+  @override
+  String get gal_hook_fold_progressive_lines_hint =>
+      '클릭할 때마다 줄 전체를 다시 그리는 엔진이 있어 같은 줄이 여러 번 캡처됩니다. 그 스냅숏들을 한 줄로 접습니다.';
+  @override
+  String get gal_hook_ingame_lookup_engine_unsupported =>
+      '이 게임 엔진은 아직 인게임 사전 검색을 지원하지 않습니다';
+  @override
+  String get gal_hook_ingame_lookup_version_unsupported =>
+      '이 게임 버전은 아직 지원 목록에 없습니다';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copy => '게임 실행 파일의 SHA-256 복사';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_unavailable =>
+      '게임 실행 파일을 읽을 수 없습니다 (권한 부족일 수 있음)';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copied => '실행 파일의 SHA-256을 복사했습니다';
+  @override
+  String get download_tracker_section => '트래커 구독';
+  @override
+  String get download_tracker_auto_add => '새 다운로드에 구독 트래커 자동 추가';
+  @override
+  String get download_tracker_auto_add_hint =>
+      '목록은 6시간 동안 캐시됩니다. 구독을 가져오지 못해도 다운로드는 중단되지 않습니다.';
+  @override
+  String get download_tracker_url => '구독 URL';
+  @override
+  String get download_tracker_refresh => '트래커 가져오기';
+  @override
+  String get download_tracker_preview_empty =>
+      '구독을 가져오면 지원되는 HTTP, HTTPS, UDP 트래커를 미리 볼 수 있습니다.';
+  @override
+  String download_tracker_preview_count({required Object count}) =>
+      '트래커 ${count}개를 가져왔습니다';
+  @override
+  String download_tracker_fetch_failed({required Object message}) =>
+      '트래커를 가져오지 못했습니다: ${message}';
+  @override
+  String get anki_connect_port_auto_fix => '비어 있는 포트로 변경';
+  @override
+  String get anki_connect_port_auto_fix_hint =>
+      '비어 있는 포트를 골라 Hibiki와 AnkiConnect 애드온 설정 양쪽에 기록합니다. 적용하려면 Anki를 다시 시작하세요.';
+  @override
+  String anki_connect_port_auto_fix_done({required Object port}) =>
+      'AnkiConnect 포트를 ${port}(으)로 변경했습니다. Anki를 다시 시작한 뒤 다시 시도하세요.';
+  @override
+  String anki_connect_port_auto_fix_manual({required Object port}) =>
+      'Hibiki는 이제 포트 ${port}를 사용하지만 AnkiConnect 애드온 설정을 찾지 못했습니다. Anki의 [도구 → 애드온 → AnkiConnect → 설정]에서 webBindPort도 ${port}로 바꾼 뒤 Anki를 다시 시작하세요.';
+  @override
+  String get anki_connect_port_auto_fix_none => '이 컴퓨터에서 비어 있는 포트를 찾지 못했습니다.';
+  @override
+  String get video_setting_hdr_output => 'HDR / 10비트 출력';
   @override
   String get video_setting_hdr_output_hint =>
-      'Windows only. Auto hands HDR sources straight to an HDR display through a native video window; Always uses that window for every video (10-bit output); Off keeps the standard renderer.';
+      'Windows 전용. «자동»은 디스플레이와 원본이 모두 HDR일 때 네이티브 동영상 창을 통해 HDR 디스플레이로 그대로 전달합니다. «항상»은 모든 동영상에 그 창을 사용합니다(10비트 출력). «끄기»는 표준 렌더러를 유지합니다.';
   @override
-  String get video_setting_hdr_output_auto => 'Auto';
+  String get video_setting_hdr_output_auto => '자동';
   @override
-  String get video_setting_hdr_output_always => 'Always';
+  String get video_setting_hdr_output_always => '항상';
   @override
-  String get video_setting_hdr_output_off => 'Off';
+  String get video_setting_hdr_output_off => '끄기';
 }
 
 // Path: <root>
@@ -86544,23 +87507,136 @@ class _StringsNl extends _StringsEn {
       'Gelezen tot pagina ${page}';
   @override
   String mihon_store_extension_count({required Object count}) =>
-      '${count} extensions';
+      '${count} extensies';
   @override
   String mihon_extension_sources_more({required Object count}) =>
-      'Show all ${count} sources';
+      'Alle ${count} bronnen tonen';
   @override
-  String get mihon_extension_sources_less => 'Show fewer sources';
+  String get mihon_extension_sources_less => 'Minder bronnen tonen';
   @override
-  String get video_setting_hdr_output => 'HDR / 10-bit output';
+  String get options_website => 'Officiële website bezoeken';
+  @override
+  String get video_setting_mpv_group_hdr => 'HDR';
+  @override
+  String get video_setting_hdr_tone_mapping => 'HDR-tonemapping';
+  @override
+  String get video_setting_hdr_tone_mapping_hint =>
+      'Curve die wordt gebruikt als een HDR-bron op een SDR-scherm moet worden geperst. ‘Automatisch’ laat mpv per bron kiezen.';
+  @override
+  String get video_setting_hdr_compute_peak => 'Dynamische piekdetectie';
+  @override
+  String get video_setting_hdr_compute_peak_hint =>
+      'Meet de echte piekhelderheid van elk beeld in plaats van te vertrouwen op de metadata van de bron. Betere highlights, kost wat GPU.';
+  @override
+  String get video_setting_hdr_auto => 'Automatisch';
+  @override
+  String get video_setting_hdr_on => 'Aan';
+  @override
+  String get video_setting_hdr_off => 'Uit';
+  @override
+  String get video_discovery_cancel_downloads_title => 'Downloads annuleren?';
+  @override
+  String video_discovery_cancel_downloads_body({required Object n}) =>
+      '${n} downloadtaak/-taken voor deze titel worden gestopt. Al gedownloade delen blijven op schijf staan; je kunt de download later opnieuw starten.';
+  @override
+  String get video_discovery_cancel_downloads_failed =>
+      'Kon de download niet annuleren. De taak is mogelijk al klaar, of de download-backend is niet beschikbaar.';
+  @override
+  String get gal_hook_click_lookup => 'Tik op een woord om het op te zoeken';
+  @override
+  String get gal_hook_click_lookup_hint =>
+      'Uit betekent dat klikken op de tekst nooit een opzoeking start — handig met doorklikken aan, als je niet per ongeluk een woord wilt raken.';
+  @override
+  String get gal_hook_lookup_trigger => 'Opzoekknop';
+  @override
+  String get gal_hook_lookup_trigger_hint =>
+      'Welke muisknop het woord onder de aanwijzer opzoekt. Los van de schakelaar hierboven: je kunt tikken-om-op-te-zoeken uitzetten en toch met een zijknop opzoeken.';
+  @override
+  String get gal_hook_lookup_trigger_left => 'Left click';
+  @override
+  String get gal_hook_lookup_trigger_middle => 'Middle click';
+  @override
+  String get gal_hook_lookup_trigger_side => 'Side button';
+  @override
+  String get gal_hook_toolbar_auto_hide => 'Werkbalk automatisch verbergen';
+  @override
+  String get gal_hook_toolbar_auto_hide_hint =>
+      'Verbergt de werkbalk tot de aanwijzer het tekstvak bereikt, zoals LunaHook. Verborgen is echt verborgen — die pixels gaan terug naar het spel.';
+  @override
+  String get gal_hook_passthrough_blocks_mouse =>
+      'Tekst vangt nog klikken tijdens doorklikken';
+  @override
+  String get gal_hook_passthrough_blocks_mouse_hint =>
+      'Aan: tekstregels blijven klikken aannemen, zodat je een woord kunt aantikken. Uit: de hele overlay is transparant voor de muis — je klikt wat eronder ligt, maar woorden aantikken werkt niet meer.';
+  @override
+  String get floating_lyric_topmost => 'Altijd op de voorgrond';
+  @override
+  String get gal_hook_fold_progressive_lines =>
+      'Opgesplitste dialoogregels samenvoegen';
+  @override
+  String get gal_hook_fold_progressive_lines_hint =>
+      'Sommige engines tekenen bij elke klik de hele regel opnieuw, waardoor één regel meerdere keren wordt vastgelegd. Vouw die momentopnamen samen tot één regel.';
+  @override
+  String get gal_hook_ingame_lookup_engine_unsupported =>
+      'Deze game-engine ondersteunt opzoeken in het spel nog niet';
+  @override
+  String get gal_hook_ingame_lookup_version_unsupported =>
+      'Deze spelversie staat nog niet op de lijst met ondersteunde versies';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copy =>
+      'SHA-256 van het spelbestand kopiëren';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_unavailable =>
+      'Kan het spelbestand niet lezen';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copied =>
+      'SHA-256 van het spelbestand gekopieerd';
+  @override
+  String get download_tracker_section => 'Tracker-abonnement';
+  @override
+  String get download_tracker_auto_add =>
+      'Geabonneerde trackers automatisch aan nieuwe downloads toevoegen';
+  @override
+  String get download_tracker_auto_add_hint =>
+      'De lijst wordt 6 uur gecachet. Een mislukt abonnement blokkeert de download niet.';
+  @override
+  String get download_tracker_url => 'Abonnements-URL';
+  @override
+  String get download_tracker_refresh => 'Trackers ophalen';
+  @override
+  String get download_tracker_preview_empty =>
+      'Haal het abonnement op om de ondersteunde HTTP-, HTTPS- en UDP-trackers te bekijken.';
+  @override
+  String download_tracker_preview_count({required Object count}) =>
+      '${count} trackers opgehaald';
+  @override
+  String download_tracker_fetch_failed({required Object message}) =>
+      'Kan de trackers niet ophalen: ${message}';
+  @override
+  String get anki_connect_port_auto_fix => 'Naar een vrije poort wisselen';
+  @override
+  String get anki_connect_port_auto_fix_hint =>
+      'Kiest een vrije poort en schrijft die zowel in Hibiki als in de AnkiConnect-add-onconfiguratie. Herstart Anki om het toe te passen.';
+  @override
+  String anki_connect_port_auto_fix_done({required Object port}) =>
+      'AnkiConnect gebruikt nu poort ${port}. Herstart Anki en probeer het opnieuw.';
+  @override
+  String anki_connect_port_auto_fix_manual({required Object port}) =>
+      'Hibiki gebruikt nu poort ${port}, maar de AnkiConnect-add-onconfiguratie is niet gevonden. Zet webBindPort in Anki (Extra → Add-ons → AnkiConnect → Configuratie) ook op ${port} en herstart Anki.';
+  @override
+  String get anki_connect_port_auto_fix_none =>
+      'Geen vrije poort gevonden op deze machine.';
+  @override
+  String get video_setting_hdr_output => 'HDR-/10-bits-uitvoer';
   @override
   String get video_setting_hdr_output_hint =>
-      'Windows only. Auto hands HDR sources straight to an HDR display through a native video window; Always uses that window for every video (10-bit output); Off keeps the standard renderer.';
+      'Alleen Windows. «Automatisch» stuurt HDR-bronnen via een native videovenster rechtstreeks naar een HDR-scherm; «Altijd» gebruikt dat venster voor elke video (10-bits uitvoer); «Uit» houdt de standaardrenderer aan.';
   @override
-  String get video_setting_hdr_output_auto => 'Auto';
+  String get video_setting_hdr_output_auto => 'Automatisch';
   @override
-  String get video_setting_hdr_output_always => 'Always';
+  String get video_setting_hdr_output_always => 'Altijd';
   @override
-  String get video_setting_hdr_output_off => 'Off';
+  String get video_setting_hdr_output_off => 'Uit';
 }
 
 // Path: <root>
@@ -95726,23 +96802,136 @@ class _StringsPtBr extends _StringsEn {
       'Lido até a página ${page}';
   @override
   String mihon_store_extension_count({required Object count}) =>
-      '${count} extensions';
+      '${count} extensões';
   @override
   String mihon_extension_sources_more({required Object count}) =>
-      'Show all ${count} sources';
+      'Mostrar todas as ${count} fontes';
   @override
-  String get mihon_extension_sources_less => 'Show fewer sources';
+  String get mihon_extension_sources_less => 'Mostrar menos fontes';
   @override
-  String get video_setting_hdr_output => 'HDR / 10-bit output';
+  String get options_website => 'Visitar o site oficial';
+  @override
+  String get video_setting_mpv_group_hdr => 'HDR';
+  @override
+  String get video_setting_hdr_tone_mapping => 'Mapeamento de tons HDR';
+  @override
+  String get video_setting_hdr_tone_mapping_hint =>
+      'Curva usada quando uma fonte HDR precisa ser comprimida para uma tela SDR. “Automático” deixa o mpv escolher por fonte.';
+  @override
+  String get video_setting_hdr_compute_peak => 'Detecção dinâmica de pico';
+  @override
+  String get video_setting_hdr_compute_peak_hint =>
+      'Mede o pico real de brilho de cada quadro em vez de confiar nos metadados da fonte. Melhores altas-luzes, com algum custo de GPU.';
+  @override
+  String get video_setting_hdr_auto => 'Automático';
+  @override
+  String get video_setting_hdr_on => 'Ligado';
+  @override
+  String get video_setting_hdr_off => 'Desligado';
+  @override
+  String get video_discovery_cancel_downloads_title => 'Cancelar os downloads?';
+  @override
+  String video_discovery_cancel_downloads_body({required Object n}) =>
+      '${n} tarefa(s) de download deste título serão interrompidas. As partes já baixadas continuam no disco; você pode recomeçar o download depois.';
+  @override
+  String get video_discovery_cancel_downloads_failed =>
+      'Não foi possível cancelar o download. A tarefa pode já ter terminado, ou o backend de download está indisponível.';
+  @override
+  String get gal_hook_click_lookup => 'Toque numa palavra para consultá-la';
+  @override
+  String get gal_hook_click_lookup_hint =>
+      'Desligado: cliques na legenda nunca iniciam uma consulta — útil com o clique passante ligado, quando você prefere não acertar uma palavra sem querer.';
+  @override
+  String get gal_hook_lookup_trigger => 'Gatilho da consulta';
+  @override
+  String get gal_hook_lookup_trigger_hint =>
+      'Qual botão do mouse consulta a palavra sob o ponteiro. Independente da chave acima: você pode desligar o toque-para-consultar e ainda consultar com um botão lateral.';
+  @override
+  String get gal_hook_lookup_trigger_left => 'Left click';
+  @override
+  String get gal_hook_lookup_trigger_middle => 'Middle click';
+  @override
+  String get gal_hook_lookup_trigger_side => 'Side button';
+  @override
+  String get gal_hook_toolbar_auto_hide => 'Ocultar a barra automaticamente';
+  @override
+  String get gal_hook_toolbar_auto_hide_hint =>
+      'Oculta a barra até o ponteiro chegar à caixa de legenda, no estilo do LunaHook. Oculto significa oculto de verdade — aqueles pixels voltam para o jogo.';
+  @override
+  String get gal_hook_passthrough_blocks_mouse =>
+      'A legenda ainda recebe cliques durante o clique passante';
+  @override
+  String get gal_hook_passthrough_blocks_mouse_hint =>
+      'Ligado: as linhas de texto continuam recebendo cliques, então você pode tocar numa palavra. Desligado: toda a sobreposição fica transparente ao mouse — você clica no que está embaixo, mas tocar palavras não funciona mais.';
+  @override
+  String get floating_lyric_topmost => 'Manter sempre visível';
+  @override
+  String get gal_hook_fold_progressive_lines =>
+      'Unir linhas de diálogo divididas';
+  @override
+  String get gal_hook_fold_progressive_lines_hint =>
+      'Alguns motores redesenham a linha inteira a cada clique, então a mesma linha é capturada várias vezes. Dobre esses instantâneos em uma única linha.';
+  @override
+  String get gal_hook_ingame_lookup_engine_unsupported =>
+      'Este motor de jogo ainda não oferece suporte à busca dentro do jogo';
+  @override
+  String get gal_hook_ingame_lookup_version_unsupported =>
+      'Esta versão do jogo ainda não está na lista de compatíveis';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copy =>
+      'Copiar o SHA-256 do executável do jogo';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_unavailable =>
+      'Não foi possível ler o executável do jogo';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copied =>
+      'SHA-256 do executável copiado';
+  @override
+  String get download_tracker_section => 'Assinatura de trackers';
+  @override
+  String get download_tracker_auto_add =>
+      'Adicionar automaticamente os trackers da assinatura aos novos downloads';
+  @override
+  String get download_tracker_auto_add_hint =>
+      'A lista fica em cache por 6 horas. Uma falha na assinatura não bloqueia o download.';
+  @override
+  String get download_tracker_url => 'URL da assinatura';
+  @override
+  String get download_tracker_refresh => 'Buscar trackers';
+  @override
+  String get download_tracker_preview_empty =>
+      'Busque a assinatura para pré-visualizar os trackers HTTP, HTTPS e UDP compatíveis.';
+  @override
+  String download_tracker_preview_count({required Object count}) =>
+      '${count} trackers obtidos';
+  @override
+  String download_tracker_fetch_failed({required Object message}) =>
+      'Não foi possível buscar os trackers: ${message}';
+  @override
+  String get anki_connect_port_auto_fix => 'Mudar para uma porta livre';
+  @override
+  String get anki_connect_port_auto_fix_hint =>
+      'Escolhe uma porta livre e a grava tanto no Hibiki quanto na configuração do complemento AnkiConnect. Reinicie o Anki para aplicar.';
+  @override
+  String anki_connect_port_auto_fix_done({required Object port}) =>
+      'O AnkiConnect agora usa a porta ${port}. Reinicie o Anki e tente novamente.';
+  @override
+  String anki_connect_port_auto_fix_manual({required Object port}) =>
+      'O Hibiki agora usa a porta ${port}, mas a configuração do complemento AnkiConnect não foi encontrada. Defina webBindPort como ${port} no Anki (Ferramentas → Complementos → AnkiConnect → Configuração) e reinicie o Anki.';
+  @override
+  String get anki_connect_port_auto_fix_none =>
+      'Nenhuma porta livre encontrada nesta máquina.';
+  @override
+  String get video_setting_hdr_output => 'Saída HDR / 10 bits';
   @override
   String get video_setting_hdr_output_hint =>
-      'Windows only. Auto hands HDR sources straight to an HDR display through a native video window; Always uses that window for every video (10-bit output); Off keeps the standard renderer.';
+      'Somente no Windows. «Automático» entrega fontes HDR direto a uma tela HDR por uma janela de vídeo nativa; «Sempre» usa essa janela para todos os vídeos (saída de 10 bits); «Desligado» mantém o renderizador padrão.';
   @override
-  String get video_setting_hdr_output_auto => 'Auto';
+  String get video_setting_hdr_output_auto => 'Automático';
   @override
-  String get video_setting_hdr_output_always => 'Always';
+  String get video_setting_hdr_output_always => 'Sempre';
   @override
-  String get video_setting_hdr_output_off => 'Off';
+  String get video_setting_hdr_output_off => 'Desligado';
 }
 
 // Path: <root>
@@ -104882,23 +106071,136 @@ class _StringsRu extends _StringsEn {
       'Прочитано до страницы ${page}';
   @override
   String mihon_store_extension_count({required Object count}) =>
-      '${count} extensions';
+      'Расширений: ${count}';
   @override
   String mihon_extension_sources_more({required Object count}) =>
-      'Show all ${count} sources';
+      'Показать все источники (${count})';
   @override
-  String get mihon_extension_sources_less => 'Show fewer sources';
+  String get mihon_extension_sources_less => 'Показать меньше источников';
   @override
-  String get video_setting_hdr_output => 'HDR / 10-bit output';
+  String get options_website => 'Открыть официальный сайт';
+  @override
+  String get video_setting_mpv_group_hdr => 'HDR';
+  @override
+  String get video_setting_hdr_tone_mapping => 'Тональное отображение HDR';
+  @override
+  String get video_setting_hdr_tone_mapping_hint =>
+      'Кривая, по которой HDR-источник укладывается в SDR-экран. «Авто» оставляет выбор за mpv для каждого источника.';
+  @override
+  String get video_setting_hdr_compute_peak => 'Динамическое определение пика';
+  @override
+  String get video_setting_hdr_compute_peak_hint =>
+      'Измеряет реальную пиковую яркость каждого кадра вместо доверия метаданным источника. Света лучше, но нагружает GPU.';
+  @override
+  String get video_setting_hdr_auto => 'Авто';
+  @override
+  String get video_setting_hdr_on => 'Вкл.';
+  @override
+  String get video_setting_hdr_off => 'Выкл.';
+  @override
+  String get video_discovery_cancel_downloads_title => 'Отменить загрузки?';
+  @override
+  String video_discovery_cancel_downloads_body({required Object n}) =>
+      'Будет остановлено загрузок для этого тайтла: ${n}. Уже скачанные части останутся на диске — загрузку можно начать снова позже.';
+  @override
+  String get video_discovery_cancel_downloads_failed =>
+      'Не удалось отменить загрузку. Возможно, задача уже завершилась или бэкенд загрузок недоступен.';
+  @override
+  String get gal_hook_click_lookup => 'Нажмите на слово, чтобы найти его';
+  @override
+  String get gal_hook_click_lookup_hint =>
+      'Выключено — клики по субтитрам никогда не запускают поиск. Удобно вместе с включённым сквозным кликом, когда не хочется случайно попасть по слову.';
+  @override
+  String get gal_hook_lookup_trigger => 'Кнопка поиска';
+  @override
+  String get gal_hook_lookup_trigger_hint =>
+      'Какая кнопка мыши ищет слово под указателем. Не зависит от переключателя выше: можно выключить поиск по нажатию и всё равно искать боковой кнопкой.';
+  @override
+  String get gal_hook_lookup_trigger_left => 'Left click';
+  @override
+  String get gal_hook_lookup_trigger_middle => 'Middle click';
+  @override
+  String get gal_hook_lookup_trigger_side => 'Side button';
+  @override
+  String get gal_hook_toolbar_auto_hide => 'Автоматически скрывать панель';
+  @override
+  String get gal_hook_toolbar_auto_hide_hint =>
+      'Скрывает панель, пока указатель не дойдёт до блока субтитров — как в LunaHook. Скрыто значит скрыто по-настоящему: эти пиксели возвращаются игре.';
+  @override
+  String get gal_hook_passthrough_blocks_mouse =>
+      'Субтитры продолжают ловить клики при сквозном клике';
+  @override
+  String get gal_hook_passthrough_blocks_mouse_hint =>
+      'Вкл.: строки текста по-прежнему принимают клики, поэтому по слову можно нажать. Выкл.: весь оверлей прозрачен для мыши — вы кликаете то, что под ним, но нажатие по словам больше не работает.';
+  @override
+  String get floating_lyric_topmost => 'Поверх других окон';
+  @override
+  String get gal_hook_fold_progressive_lines =>
+      'Объединять разбитые строки диалога';
+  @override
+  String get gal_hook_fold_progressive_lines_hint =>
+      'Некоторые движки перерисовывают строку целиком при каждом клике, поэтому одна строка захватывается несколько раз. Сворачивать такие снимки в одну строку.';
+  @override
+  String get gal_hook_ingame_lookup_engine_unsupported =>
+      'Этот движок игры пока не поддерживает поиск внутри игры';
+  @override
+  String get gal_hook_ingame_lookup_version_unsupported =>
+      'Эта версия игры пока не в списке поддерживаемых';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copy =>
+      'Скопировать SHA-256 исполняемого файла игры';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_unavailable =>
+      'Не удалось прочитать исполняемый файл игры';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copied =>
+      'SHA-256 исполняемого файла скопирован';
+  @override
+  String get download_tracker_section => 'Подписка на трекеры';
+  @override
+  String get download_tracker_auto_add =>
+      'Автоматически добавлять трекеры из подписки в новые загрузки';
+  @override
+  String get download_tracker_auto_add_hint =>
+      'Список кэшируется на 6 часов. Сбой подписки не блокирует загрузку.';
+  @override
+  String get download_tracker_url => 'URL подписки';
+  @override
+  String get download_tracker_refresh => 'Получить трекеры';
+  @override
+  String get download_tracker_preview_empty =>
+      'Получите подписку, чтобы посмотреть поддерживаемые трекеры HTTP, HTTPS и UDP.';
+  @override
+  String download_tracker_preview_count({required Object count}) =>
+      'Получено трекеров: ${count}';
+  @override
+  String download_tracker_fetch_failed({required Object message}) =>
+      'Не удалось получить трекеры: ${message}';
+  @override
+  String get anki_connect_port_auto_fix => 'Выбрать свободный порт';
+  @override
+  String get anki_connect_port_auto_fix_hint =>
+      'Подбирает свободный порт и записывает его и в Hibiki, и в настройки дополнения AnkiConnect. Перезапустите Anki, чтобы изменения вступили в силу.';
+  @override
+  String anki_connect_port_auto_fix_done({required Object port}) =>
+      'AnkiConnect переключён на порт ${port}. Перезапустите Anki и повторите попытку.';
+  @override
+  String anki_connect_port_auto_fix_manual({required Object port}) =>
+      'Hibiki теперь использует порт ${port}, но настройки дополнения AnkiConnect не найдены. Укажите webBindPort равным ${port} в Anki (Инструменты → Дополнения → AnkiConnect → Настройка) и перезапустите Anki.';
+  @override
+  String get anki_connect_port_auto_fix_none =>
+      'На этом компьютере не найдено свободных портов.';
+  @override
+  String get video_setting_hdr_output => 'Вывод HDR / 10 бит';
   @override
   String get video_setting_hdr_output_hint =>
-      'Windows only. Auto hands HDR sources straight to an HDR display through a native video window; Always uses that window for every video (10-bit output); Off keeps the standard renderer.';
+      'Только Windows. «Авто» передаёт HDR-источники прямо на HDR-дисплей через нативное окно видео; «Всегда» использует это окно для любого видео (10-битный вывод); «Выключено» оставляет обычный рендерер.';
   @override
-  String get video_setting_hdr_output_auto => 'Auto';
+  String get video_setting_hdr_output_auto => 'Авто';
   @override
-  String get video_setting_hdr_output_always => 'Always';
+  String get video_setting_hdr_output_always => 'Всегда';
   @override
-  String get video_setting_hdr_output_off => 'Off';
+  String get video_setting_hdr_output_off => 'Выключено';
 }
 
 // Path: <root>
@@ -113856,23 +115158,133 @@ class _StringsTh extends _StringsEn {
       'อ่านถึงหน้า ${page}';
   @override
   String mihon_store_extension_count({required Object count}) =>
-      '${count} extensions';
+      'ส่วนขยาย ${count} รายการ';
   @override
   String mihon_extension_sources_more({required Object count}) =>
-      'Show all ${count} sources';
+      'แสดงแหล่งทั้งหมด ${count} แหล่ง';
   @override
-  String get mihon_extension_sources_less => 'Show fewer sources';
+  String get mihon_extension_sources_less => 'แสดงแหล่งน้อยลง';
   @override
-  String get video_setting_hdr_output => 'HDR / 10-bit output';
+  String get options_website => 'เยี่ยมชมเว็บไซต์ทางการ';
+  @override
+  String get video_setting_mpv_group_hdr => 'HDR';
+  @override
+  String get video_setting_hdr_tone_mapping => 'การแมปโทน HDR';
+  @override
+  String get video_setting_hdr_tone_mapping_hint =>
+      'เส้นโค้งที่ใช้เมื่อต้องบีบแหล่ง HDR ลงบนจอ SDR "อัตโนมัติ" ให้ mpv เลือกตามแต่ละแหล่ง';
+  @override
+  String get video_setting_hdr_compute_peak => 'ตรวจจับจุดสว่างสุดแบบไดนามิก';
+  @override
+  String get video_setting_hdr_compute_peak_hint =>
+      'วัดความสว่างสูงสุดจริงของแต่ละเฟรมแทนการเชื่อเมตาดาตาของแหล่ง ไฮไลต์ดีขึ้นแต่กิน GPU เล็กน้อย';
+  @override
+  String get video_setting_hdr_auto => 'อัตโนมัติ';
+  @override
+  String get video_setting_hdr_on => 'เปิด';
+  @override
+  String get video_setting_hdr_off => 'ปิด';
+  @override
+  String get video_discovery_cancel_downloads_title => 'ยกเลิกการดาวน์โหลดไหม';
+  @override
+  String video_discovery_cancel_downloads_body({required Object n}) =>
+      'งานดาวน์โหลดของเรื่องนี้ ${n} งานจะถูกหยุด ส่วนที่ดาวน์โหลดไปแล้วยังอยู่ในดิสก์ และเริ่มดาวน์โหลดใหม่ได้ภายหลัง';
+  @override
+  String get video_discovery_cancel_downloads_failed =>
+      'ยกเลิกการดาวน์โหลดไม่สำเร็จ งานอาจเสร็จไปแล้ว หรือแบ็กเอนด์ดาวน์โหลดใช้งานไม่ได้';
+  @override
+  String get gal_hook_click_lookup => 'แตะคำเพื่อเปิดพจนานุกรม';
+  @override
+  String get gal_hook_click_lookup_hint =>
+      'ปิดไว้หมายความว่าการคลิกบนคำบรรยายจะไม่เปิดพจนานุกรม มีประโยชน์เมื่อเปิดคลิกทะลุ และคุณไม่อยากเผลอโดนคำ';
+  @override
+  String get gal_hook_lookup_trigger => 'ปุ่มเปิดพจนานุกรม';
+  @override
+  String get gal_hook_lookup_trigger_hint =>
+      'ปุ่มเมาส์ที่ใช้เปิดคำใต้ตัวชี้ แยกจากสวิตช์ด้านบน คุณปิดการแตะเพื่อเปิดได้ แล้วยังใช้ปุ่มข้างเปิดได้อยู่';
+  @override
+  String get gal_hook_lookup_trigger_left => 'Left click';
+  @override
+  String get gal_hook_lookup_trigger_middle => 'Middle click';
+  @override
+  String get gal_hook_lookup_trigger_side => 'Side button';
+  @override
+  String get gal_hook_toolbar_auto_hide => 'ซ่อนแถบเครื่องมืออัตโนมัติ';
+  @override
+  String get gal_hook_toolbar_auto_hide_hint =>
+      'ซ่อนแถบเครื่องมือจนกว่าตัวชี้จะถึงกล่องคำบรรยาย แบบ LunaHook ซ่อนคือซ่อนจริง ๆ พิกเซลเหล่านั้นคืนให้เกม';
+  @override
+  String get gal_hook_passthrough_blocks_mouse =>
+      'คำบรรยายยังรับคลิกขณะคลิกทะลุ';
+  @override
+  String get gal_hook_passthrough_blocks_mouse_hint =>
+      'เปิด: บรรทัดข้อความยังรับคลิก จึงแตะคำได้ ปิด: โอเวอร์เลย์ทั้งหมดโปร่งต่อเมาส์ คุณคลิกสิ่งที่อยู่ข้างล่างได้ แต่แตะคำจะไม่ทำงานอีก';
+  @override
+  String get floating_lyric_topmost => 'อยู่ด้านบนเสมอ';
+  @override
+  String get gal_hook_fold_progressive_lines => 'รวมบรรทัดบทสนทนาที่ถูกแบ่ง';
+  @override
+  String get gal_hook_fold_progressive_lines_hint =>
+      'บางเอนจินวาดทั้งบรรทัดใหม่ทุกครั้งที่คลิก ทำให้บรรทัดเดียวถูกเก็บหลายครั้ง ให้ยุบสแนปช็อตเหล่านั้นเป็นบรรทัดเดียว';
+  @override
+  String get gal_hook_ingame_lookup_engine_unsupported =>
+      'เอนจินเกมนี้ยังไม่รองรับการเปิดพจนานุกรมในเกม';
+  @override
+  String get gal_hook_ingame_lookup_version_unsupported =>
+      'เกมเวอร์ชันนี้ยังไม่อยู่ในรายการที่รองรับ';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copy =>
+      'คัดลอก SHA-256 ของไฟล์เกม';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_unavailable => 'อ่านไฟล์เกมไม่ได้';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copied =>
+      'คัดลอก SHA-256 ของไฟล์เกมแล้ว';
+  @override
+  String get download_tracker_section => 'การสมัครรับแทร็กเกอร์';
+  @override
+  String get download_tracker_auto_add =>
+      'เพิ่มแทร็กเกอร์จากการสมัครรับลงในดาวน์โหลดใหม่โดยอัตโนมัติ';
+  @override
+  String get download_tracker_auto_add_hint =>
+      'รายการจะถูกแคชไว้ 6 ชั่วโมง หากดึงรายการไม่สำเร็จก็จะไม่ขัดขวางการดาวน์โหลด';
+  @override
+  String get download_tracker_url => 'URL การสมัครรับ';
+  @override
+  String get download_tracker_refresh => 'ดึงแทร็กเกอร์';
+  @override
+  String get download_tracker_preview_empty =>
+      'ดึงรายการที่สมัครรับเพื่อดูตัวอย่างแทร็กเกอร์ HTTP, HTTPS และ UDP ที่รองรับ';
+  @override
+  String download_tracker_preview_count({required Object count}) =>
+      'ดึงแทร็กเกอร์มาแล้ว ${count} รายการ';
+  @override
+  String download_tracker_fetch_failed({required Object message}) =>
+      'ดึงแทร็กเกอร์ไม่สำเร็จ: ${message}';
+  @override
+  String get anki_connect_port_auto_fix => 'เปลี่ยนไปใช้พอร์ตที่ว่าง';
+  @override
+  String get anki_connect_port_auto_fix_hint =>
+      'เลือกพอร์ตที่ว่างแล้วเขียนลงทั้งใน Hibiki และการตั้งค่าส่วนเสริม AnkiConnect รีสตาร์ท Anki เพื่อให้มีผล';
+  @override
+  String anki_connect_port_auto_fix_done({required Object port}) =>
+      'เปลี่ยนพอร์ตของ AnkiConnect เป็น ${port} แล้ว รีสตาร์ท Anki แล้วลองอีกครั้ง';
+  @override
+  String anki_connect_port_auto_fix_manual({required Object port}) =>
+      'ตอนนี้ Hibiki ใช้พอร์ต ${port} แล้ว แต่ไม่พบการตั้งค่าส่วนเสริม AnkiConnect โปรดตั้ง webBindPort เป็น ${port} ใน Anki (เครื่องมือ → ส่วนเสริม → AnkiConnect → การตั้งค่า) แล้วรีสตาร์ท Anki';
+  @override
+  String get anki_connect_port_auto_fix_none => 'ไม่พบพอร์ตที่ว่างบนเครื่องนี้';
+  @override
+  String get video_setting_hdr_output => 'เอาต์พุต HDR / 10 บิต';
   @override
   String get video_setting_hdr_output_hint =>
-      'Windows only. Auto hands HDR sources straight to an HDR display through a native video window; Always uses that window for every video (10-bit output); Off keeps the standard renderer.';
+      'เฉพาะ Windows «อัตโนมัติ» ส่งแหล่งภาพ HDR ตรงไปยังจอ HDR ผ่านหน้าต่างวิดีโอดั้งเดิม «เสมอ» ใช้หน้าต่างนั้นกับทุกวิดีโอ (เอาต์พุต 10 บิต) «ปิด» คงตัวเรนเดอร์มาตรฐานไว้';
   @override
-  String get video_setting_hdr_output_auto => 'Auto';
+  String get video_setting_hdr_output_auto => 'อัตโนมัติ';
   @override
-  String get video_setting_hdr_output_always => 'Always';
+  String get video_setting_hdr_output_always => 'เสมอ';
   @override
-  String get video_setting_hdr_output_off => 'Off';
+  String get video_setting_hdr_output_off => 'ปิด';
 }
 
 // Path: <root>
@@ -122933,23 +124345,137 @@ class _StringsTr extends _StringsEn {
       '${page}. sayfaya kadar okundu';
   @override
   String mihon_store_extension_count({required Object count}) =>
-      '${count} extensions';
+      '${count} uzantı';
   @override
   String mihon_extension_sources_more({required Object count}) =>
-      'Show all ${count} sources';
+      '${count} kaynağın tümünü göster';
   @override
-  String get mihon_extension_sources_less => 'Show fewer sources';
+  String get mihon_extension_sources_less => 'Daha az kaynak göster';
   @override
-  String get video_setting_hdr_output => 'HDR / 10-bit output';
+  String get options_website => 'Resmî web sitesini ziyaret et';
+  @override
+  String get video_setting_mpv_group_hdr => 'HDR';
+  @override
+  String get video_setting_hdr_tone_mapping => 'HDR ton eşleme';
+  @override
+  String get video_setting_hdr_tone_mapping_hint =>
+      'Bir HDR kaynağı SDR ekrana sıkıştırılırken kullanılan eğri. “Otomatik” seçimi kaynak başına mpv’ye bırakır.';
+  @override
+  String get video_setting_hdr_compute_peak => 'Dinamik tepe algılama';
+  @override
+  String get video_setting_hdr_compute_peak_hint =>
+      'Kaynağın üstverisine güvenmek yerine her karenin gerçek tepe parlaklığını ölçer. Parlak alanlar daha iyi olur, biraz GPU harcar.';
+  @override
+  String get video_setting_hdr_auto => 'Otomatik';
+  @override
+  String get video_setting_hdr_on => 'Açık';
+  @override
+  String get video_setting_hdr_off => 'Kapalı';
+  @override
+  String get video_discovery_cancel_downloads_title =>
+      'İndirmeler iptal edilsin mi?';
+  @override
+  String video_discovery_cancel_downloads_body({required Object n}) =>
+      'Bu yapım için ${n} indirme görevi durdurulacak. İndirilmiş parçalar diskte kalır; indirmeyi sonra yeniden başlatabilirsin.';
+  @override
+  String get video_discovery_cancel_downloads_failed =>
+      'İndirme iptal edilemedi. Görev çoktan bitmiş olabilir ya da indirme arka ucu kullanılamıyor.';
+  @override
+  String get gal_hook_click_lookup => 'Aramak için bir kelimeye dokun';
+  @override
+  String get gal_hook_click_lookup_hint =>
+      'Kapalı olduğunda altyazıya tıklamak hiçbir zaman arama başlatmaz — tıklama geçişi açıkken yanlışlıkla bir kelimeye denk gelmek istemediğinde kullanışlı.';
+  @override
+  String get gal_hook_lookup_trigger => 'Arama tetikleyicisi';
+  @override
+  String get gal_hook_lookup_trigger_hint =>
+      'İmlecin altındaki kelimeyi hangi fare düğmesinin arayacağı. Yukarıdaki anahtardan bağımsızdır: dokunarak aramayı kapatıp yan düğmeyle arayabilirsin.';
+  @override
+  String get gal_hook_lookup_trigger_left => 'Left click';
+  @override
+  String get gal_hook_lookup_trigger_middle => 'Middle click';
+  @override
+  String get gal_hook_lookup_trigger_side => 'Side button';
+  @override
+  String get gal_hook_toolbar_auto_hide => 'Araç çubuğunu otomatik gizle';
+  @override
+  String get gal_hook_toolbar_auto_hide_hint =>
+      'İmleç altyazı kutusuna gelene kadar araç çubuğunu gizler, LunaHook tarzı. Gizli gerçekten gizli demek — o pikseller oyuna geri döner.';
+  @override
+  String get gal_hook_passthrough_blocks_mouse =>
+      'Tıklama geçişi açıkken altyazı yine tıklama alır';
+  @override
+  String get gal_hook_passthrough_blocks_mouse_hint =>
+      'Açık: metin satırları tıklama almaya devam eder, böylece bir kelimeye dokunabilirsin. Kapalı: tüm katman fareye saydamdır — altındakine tıklarsın ama kelimelere dokunmak artık çalışmaz.';
+  @override
+  String get floating_lyric_topmost => 'Her zaman üstte tut';
+  @override
+  String get gal_hook_fold_progressive_lines =>
+      'Bölünmüş diyalog satırlarını birleştir';
+  @override
+  String get gal_hook_fold_progressive_lines_hint =>
+      'Bazı motorlar her tıklamada satırın tamamını yeniden çizer, bu yüzden tek bir satır birkaç kez yakalanır. Bu anlık görüntüleri tek satırda topla.';
+  @override
+  String get gal_hook_ingame_lookup_engine_unsupported =>
+      'Bu oyun motoru henüz oyun içi sözlük aramasını desteklemiyor';
+  @override
+  String get gal_hook_ingame_lookup_version_unsupported =>
+      'Bu oyun sürümü henüz desteklenenler listesinde değil';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copy =>
+      'Oyun çalıştırılabilir dosyasının SHA-256 değerini kopyala';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_unavailable =>
+      'Oyun çalıştırılabilir dosyası okunamadı';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copied =>
+      'Çalıştırılabilir dosyanın SHA-256 değeri kopyalandı';
+  @override
+  String get download_tracker_section => 'Tracker aboneliği';
+  @override
+  String get download_tracker_auto_add =>
+      'Abonelikteki trackerları yeni indirmelere otomatik ekle';
+  @override
+  String get download_tracker_auto_add_hint =>
+      'Liste 6 saat önbellekte tutulur. Abonelik alınamazsa indirme engellenmez.';
+  @override
+  String get download_tracker_url => 'Abonelik adresi';
+  @override
+  String get download_tracker_refresh => 'Trackerları getir';
+  @override
+  String get download_tracker_preview_empty =>
+      'Desteklenen HTTP, HTTPS ve UDP trackerlarını önizlemek için aboneliği getir.';
+  @override
+  String download_tracker_preview_count({required Object count}) =>
+      '${count} tracker getirildi';
+  @override
+  String download_tracker_fetch_failed({required Object message}) =>
+      'Trackerlar getirilemedi: ${message}';
+  @override
+  String get anki_connect_port_auto_fix => 'Boş bir bağlantı noktasına geç';
+  @override
+  String get anki_connect_port_auto_fix_hint =>
+      'Boş bir bağlantı noktası seçip hem Hibiki\'ye hem de AnkiConnect eklenti yapılandırmasına yazar. Uygulamak için Anki\'yi yeniden başlatın.';
+  @override
+  String anki_connect_port_auto_fix_done({required Object port}) =>
+      'AnkiConnect artık ${port} bağlantı noktasını kullanıyor. Anki\'yi yeniden başlatıp tekrar deneyin.';
+  @override
+  String anki_connect_port_auto_fix_manual({required Object port}) =>
+      'Hibiki artık ${port} bağlantı noktasını kullanıyor ancak AnkiConnect eklenti yapılandırması bulunamadı. Anki\'de (Araçlar → Eklentiler → AnkiConnect → Yapılandırma) webBindPort değerini de ${port} yapıp Anki\'yi yeniden başlatın.';
+  @override
+  String get anki_connect_port_auto_fix_none =>
+      'Bu makinede boş bağlantı noktası bulunamadı.';
+  @override
+  String get video_setting_hdr_output => 'HDR / 10 bit çıkış';
   @override
   String get video_setting_hdr_output_hint =>
-      'Windows only. Auto hands HDR sources straight to an HDR display through a native video window; Always uses that window for every video (10-bit output); Off keeps the standard renderer.';
+      'Yalnızca Windows. «Otomatik», HDR kaynakları yerel bir video penceresi üzerinden doğrudan HDR ekrana verir; «Her zaman» bu pencereyi tüm videolar için kullanır (10 bit çıkış); «Kapalı» standart işleyiciyi korur.';
   @override
-  String get video_setting_hdr_output_auto => 'Auto';
+  String get video_setting_hdr_output_auto => 'Otomatik';
   @override
-  String get video_setting_hdr_output_always => 'Always';
+  String get video_setting_hdr_output_always => 'Her zaman';
   @override
-  String get video_setting_hdr_output_off => 'Off';
+  String get video_setting_hdr_output_off => 'Kapalı';
 }
 
 // Path: <root>
@@ -131992,23 +133518,136 @@ class _StringsVi extends _StringsEn {
       'Đã đọc đến trang ${page}';
   @override
   String mihon_store_extension_count({required Object count}) =>
-      '${count} extensions';
+      '${count} tiện ích';
   @override
   String mihon_extension_sources_more({required Object count}) =>
-      'Show all ${count} sources';
+      'Hiện tất cả ${count} nguồn';
   @override
-  String get mihon_extension_sources_less => 'Show fewer sources';
+  String get mihon_extension_sources_less => 'Hiện ít nguồn hơn';
   @override
-  String get video_setting_hdr_output => 'HDR / 10-bit output';
+  String get options_website => 'Truy cập trang web chính thức';
+  @override
+  String get video_setting_mpv_group_hdr => 'HDR';
+  @override
+  String get video_setting_hdr_tone_mapping => 'Ánh xạ tông màu HDR';
+  @override
+  String get video_setting_hdr_tone_mapping_hint =>
+      'Đường cong dùng khi phải nén nguồn HDR xuống màn hình SDR. “Tự động” để mpv chọn theo từng nguồn.';
+  @override
+  String get video_setting_hdr_compute_peak => 'Phát hiện đỉnh động';
+  @override
+  String get video_setting_hdr_compute_peak_hint =>
+      'Đo độ sáng đỉnh thực của từng khung hình thay vì tin vào siêu dữ liệu của nguồn. Vùng sáng đẹp hơn, tốn thêm chút GPU.';
+  @override
+  String get video_setting_hdr_auto => 'Tự động';
+  @override
+  String get video_setting_hdr_on => 'Bật';
+  @override
+  String get video_setting_hdr_off => 'Tắt';
+  @override
+  String get video_discovery_cancel_downloads_title => 'Huỷ tải xuống?';
+  @override
+  String video_discovery_cancel_downloads_body({required Object n}) =>
+      '${n} tác vụ tải xuống của tác phẩm này sẽ bị dừng. Các phần đã tải vẫn nằm trên ổ đĩa; bạn có thể tải lại sau.';
+  @override
+  String get video_discovery_cancel_downloads_failed =>
+      'Không huỷ được tải xuống. Tác vụ có thể đã xong, hoặc backend tải xuống hiện không khả dụng.';
+  @override
+  String get gal_hook_click_lookup => 'Chạm vào từ để tra nghĩa';
+  @override
+  String get gal_hook_click_lookup_hint =>
+      'Tắt nghĩa là bấm vào phụ đề sẽ không bao giờ tra từ — hữu ích khi bật xuyên chuột và bạn không muốn lỡ tay trúng một từ.';
+  @override
+  String get gal_hook_lookup_trigger => 'Nút tra từ';
+  @override
+  String get gal_hook_lookup_trigger_hint =>
+      'Nút chuột nào sẽ tra từ dưới con trỏ. Độc lập với công tắc phía trên: bạn có thể tắt chạm-để-tra mà vẫn tra bằng nút bên hông.';
+  @override
+  String get gal_hook_lookup_trigger_left => 'Left click';
+  @override
+  String get gal_hook_lookup_trigger_middle => 'Middle click';
+  @override
+  String get gal_hook_lookup_trigger_side => 'Side button';
+  @override
+  String get gal_hook_toolbar_auto_hide => 'Tự ẩn thanh công cụ';
+  @override
+  String get gal_hook_toolbar_auto_hide_hint =>
+      'Ẩn thanh công cụ cho tới khi con trỏ chạm vào khung phụ đề, kiểu LunaHook. Ẩn là ẩn thật — số điểm ảnh đó trả lại cho game.';
+  @override
+  String get gal_hook_passthrough_blocks_mouse =>
+      'Phụ đề vẫn nhận nhấp chuột khi xuyên chuột';
+  @override
+  String get gal_hook_passthrough_blocks_mouse_hint =>
+      'Bật: các dòng chữ vẫn nhận nhấp chuột nên bạn chạm được vào từ. Tắt: toàn bộ lớp phủ trong suốt với chuột — bạn bấm được thứ bên dưới, nhưng chạm vào từ không còn tác dụng.';
+  @override
+  String get floating_lyric_topmost => 'Luôn hiển thị trên cùng';
+  @override
+  String get gal_hook_fold_progressive_lines =>
+      'Gộp các dòng thoại bị chia nhỏ';
+  @override
+  String get gal_hook_fold_progressive_lines_hint =>
+      'Một số engine vẽ lại cả dòng mỗi lần nhấp, nên cùng một dòng bị bắt nhiều lần. Gộp các ảnh chụp đó thành một dòng.';
+  @override
+  String get gal_hook_ingame_lookup_engine_unsupported =>
+      'Engine trò chơi này chưa hỗ trợ tra từ trong trò chơi';
+  @override
+  String get gal_hook_ingame_lookup_version_unsupported =>
+      'Phiên bản trò chơi này chưa có trong danh sách được hỗ trợ';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copy =>
+      'Sao chép SHA-256 của tệp thực thi trò chơi';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_unavailable =>
+      'Không đọc được tệp thực thi trò chơi';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copied =>
+      'Đã sao chép SHA-256 của tệp thực thi';
+  @override
+  String get download_tracker_section => 'Đăng ký tracker';
+  @override
+  String get download_tracker_auto_add =>
+      'Tự động thêm tracker từ đăng ký vào các tải xuống mới';
+  @override
+  String get download_tracker_auto_add_hint =>
+      'Danh sách được lưu đệm trong 6 giờ. Việc lấy đăng ký thất bại sẽ không chặn tải xuống.';
+  @override
+  String get download_tracker_url => 'URL đăng ký';
+  @override
+  String get download_tracker_refresh => 'Lấy tracker';
+  @override
+  String get download_tracker_preview_empty =>
+      'Lấy đăng ký để xem trước các tracker HTTP, HTTPS và UDP được hỗ trợ.';
+  @override
+  String download_tracker_preview_count({required Object count}) =>
+      'Đã lấy ${count} tracker';
+  @override
+  String download_tracker_fetch_failed({required Object message}) =>
+      'Không lấy được tracker: ${message}';
+  @override
+  String get anki_connect_port_auto_fix => 'Đổi sang cổng còn trống';
+  @override
+  String get anki_connect_port_auto_fix_hint =>
+      'Chọn một cổng còn trống rồi ghi vào cả Hibiki lẫn cấu hình tiện ích AnkiConnect. Khởi động lại Anki để áp dụng.';
+  @override
+  String anki_connect_port_auto_fix_done({required Object port}) =>
+      'AnkiConnect đã chuyển sang cổng ${port}. Hãy khởi động lại Anki rồi thử lại.';
+  @override
+  String anki_connect_port_auto_fix_manual({required Object port}) =>
+      'Hibiki hiện dùng cổng ${port}, nhưng không tìm thấy cấu hình tiện ích AnkiConnect. Hãy đặt webBindPort thành ${port} trong Anki (Công cụ → Tiện ích → AnkiConnect → Cấu hình) rồi khởi động lại Anki.';
+  @override
+  String get anki_connect_port_auto_fix_none =>
+      'Không tìm thấy cổng nào còn trống trên máy này.';
+  @override
+  String get video_setting_hdr_output => 'Đầu ra HDR / 10 bit';
   @override
   String get video_setting_hdr_output_hint =>
-      'Windows only. Auto hands HDR sources straight to an HDR display through a native video window; Always uses that window for every video (10-bit output); Off keeps the standard renderer.';
+      'Chỉ trên Windows. «Tự động» đưa nguồn HDR thẳng tới màn hình HDR qua một cửa sổ video gốc; «Luôn luôn» dùng cửa sổ đó cho mọi video (đầu ra 10 bit); «Tắt» giữ nguyên bộ kết xuất tiêu chuẩn.';
   @override
-  String get video_setting_hdr_output_auto => 'Auto';
+  String get video_setting_hdr_output_auto => 'Tự động';
   @override
-  String get video_setting_hdr_output_always => 'Always';
+  String get video_setting_hdr_output_always => 'Luôn luôn';
   @override
-  String get video_setting_hdr_output_off => 'Off';
+  String get video_setting_hdr_output_off => 'Tắt';
 }
 
 // Path: <root>
@@ -140333,6 +141972,110 @@ class _StringsZhCn extends _StringsEn {
       '展开全部 ${count} 个源';
   @override
   String get mihon_extension_sources_less => '收起源列表';
+  @override
+  String get options_website => '访问官网';
+  @override
+  String get video_setting_mpv_group_hdr => 'HDR';
+  @override
+  String get video_setting_hdr_tone_mapping => 'HDR 色调映射';
+  @override
+  String get video_setting_hdr_tone_mapping_hint =>
+      '把 HDR 片源压到 SDR 屏幕上时用的曲线。自动 = 交给 mpv 按片源挑。';
+  @override
+  String get video_setting_hdr_compute_peak => '动态峰值检测';
+  @override
+  String get video_setting_hdr_compute_peak_hint =>
+      '逐帧测量真实峰值亮度，而不是相信片源元数据。高光更准，但会占一点 GPU。';
+  @override
+  String get video_setting_hdr_auto => '自动';
+  @override
+  String get video_setting_hdr_on => '开';
+  @override
+  String get video_setting_hdr_off => '关';
+  @override
+  String get video_discovery_cancel_downloads_title => '取消下载？';
+  @override
+  String video_discovery_cancel_downloads_body({required Object n}) =>
+      '本作品有 ${n} 个下载任务会被停止。已下载的分片仍保留在磁盘上，之后可以重新开始下载。';
+  @override
+  String get video_discovery_cancel_downloads_failed =>
+      '取消下载失败。任务可能已经结束，或下载后端当前不可用。';
+  @override
+  String get gal_hook_click_lookup => '单击文字查词';
+  @override
+  String get gal_hook_click_lookup_hint =>
+      '关掉后点台词不再触发查词。开着鼠标穿透时尤其有用——不想一不小心点到单词。';
+  @override
+  String get gal_hook_lookup_trigger => '查词触发方式';
+  @override
+  String get gal_hook_lookup_trigger_hint =>
+      '用哪个鼠标键查指针底下的词。与上面的开关正交：可以关掉单击查词，仍用侧键查。';
+  @override
+  String get gal_hook_lookup_trigger_left => '左键单击';
+  @override
+  String get gal_hook_lookup_trigger_middle => '鼠标中键';
+  @override
+  String get gal_hook_lookup_trigger_side => '鼠标侧键';
+  @override
+  String get gal_hook_toolbar_auto_hide => '自动隐藏功能栏';
+  @override
+  String get gal_hook_toolbar_auto_hide_hint =>
+      '平时把功能栏整条隐藏，鼠标移到台词框附近才现身（LunaHook 那样）。隐藏就是真隐藏，那块像素还给游戏。';
+  @override
+  String get gal_hook_passthrough_blocks_mouse => '穿透时台词仍拦截点击';
+  @override
+  String get gal_hook_passthrough_blocks_mouse_hint =>
+      '开：文字行仍接鼠标，能点字查词。关：整个浮窗对鼠标彻底透明，能点到底下的东西，但点字查词也就没了。';
+  @override
+  String get floating_lyric_topmost => '保持置顶';
+  @override
+  String get gal_hook_fold_progressive_lines => '合并分段吐出的台词';
+  @override
+  String get gal_hook_fold_progressive_lines_hint =>
+      '有些引擎每次点击都重绘整行，一句台词会被抓成好几条。开启后把同一句的多次快照折成一条。';
+  @override
+  String get gal_hook_ingame_lookup_engine_unsupported => '当前游戏引擎不支持游戏内查词';
+  @override
+  String get gal_hook_ingame_lookup_version_unsupported => '当前游戏版本未在支持列表中';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copy => '复制游戏 exe 的 SHA-256';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_unavailable =>
+      '无法读取游戏 exe（可能权限不足）';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copied => '已复制 exe 的 SHA-256';
+  @override
+  String get download_tracker_section => 'Tracker 订阅';
+  @override
+  String get download_tracker_auto_add => '自动把订阅 Tracker 加到新下载';
+  @override
+  String get download_tracker_auto_add_hint => '列表缓存 6 小时；订阅获取失败不会阻止下载任务创建。';
+  @override
+  String get download_tracker_url => '订阅地址';
+  @override
+  String get download_tracker_refresh => '获取 Tracker';
+  @override
+  String get download_tracker_preview_empty =>
+      '获取订阅后可预览受支持的 HTTP、HTTPS 和 UDP Tracker。';
+  @override
+  String download_tracker_preview_count({required Object count}) =>
+      '已获取 ${count} 个 Tracker';
+  @override
+  String download_tracker_fetch_failed({required Object message}) =>
+      '获取 Tracker 失败：${message}';
+  @override
+  String get anki_connect_port_auto_fix => '换一个空闲端口';
+  @override
+  String get anki_connect_port_auto_fix_hint =>
+      '自动挑一个空闲端口，同时写进 Hibiki 和 Anki 的 AnkiConnect 插件配置。改完重启 Anki 生效。';
+  @override
+  String anki_connect_port_auto_fix_done({required Object port}) =>
+      'AnkiConnect 端口已改为 ${port}。请重启 Anki 后重试。';
+  @override
+  String anki_connect_port_auto_fix_manual({required Object port}) =>
+      'Hibiki 已改用端口 ${port}，但没找到 AnkiConnect 的插件配置。请在 Anki 的「工具 → 插件 → AnkiConnect → 配置」里把 webBindPort 也改成 ${port}，然后重启 Anki。';
+  @override
+  String get anki_connect_port_auto_fix_none => '本机没有找到空闲端口。';
   @override
   String get video_setting_hdr_output => 'HDR / 10-bit 输出';
   @override
@@ -148668,24 +150411,126 @@ class _StringsZhHk extends _StringsEn {
   String manga_series_read_progress_partial({required Object page}) =>
       '讀到第 ${page} 頁';
   @override
-  String mihon_store_extension_count({required Object count}) =>
-      '${count} extensions';
+  String mihon_store_extension_count({required Object count}) => '${count} 個擴充';
   @override
   String mihon_extension_sources_more({required Object count}) =>
-      'Show all ${count} sources';
+      '顯示全部 ${count} 個來源';
   @override
-  String get mihon_extension_sources_less => 'Show fewer sources';
+  String get mihon_extension_sources_less => '顯示較少來源';
   @override
-  String get video_setting_hdr_output => 'HDR / 10-bit output';
+  String get options_website => '瀏覽官方網站';
+  @override
+  String get video_setting_mpv_group_hdr => 'HDR';
+  @override
+  String get video_setting_hdr_tone_mapping => 'HDR 色調映射';
+  @override
+  String get video_setting_hdr_tone_mapping_hint =>
+      '把 HDR 片源壓進 SDR 螢幕時用的曲線。自動 = 交給 mpv 按片源決定。';
+  @override
+  String get video_setting_hdr_compute_peak => '動態峰值偵測';
+  @override
+  String get video_setting_hdr_compute_peak_hint =>
+      '逐格量實際峰值亮度，而不是信片源中繼資料。高光更準，但會佔一點 GPU。';
+  @override
+  String get video_setting_hdr_auto => '自動';
+  @override
+  String get video_setting_hdr_on => '開';
+  @override
+  String get video_setting_hdr_off => '關';
+  @override
+  String get video_discovery_cancel_downloads_title => '取消下載？';
+  @override
+  String video_discovery_cancel_downloads_body({required Object n}) =>
+      '本作品有 ${n} 個下載任務會被停止。已下載的分片仍保留在磁碟上，之後可以重新開始下載。';
+  @override
+  String get video_discovery_cancel_downloads_failed =>
+      '取消下載失敗。任務可能已經結束，或下載後端目前無法使用。';
+  @override
+  String get gal_hook_click_lookup => '點字查詞';
+  @override
+  String get gal_hook_click_lookup_hint => '關掉之後，點字幕不會查詞——配合點擊穿透使用，免得不小心點到字。';
+  @override
+  String get gal_hook_lookup_trigger => '查詞觸發鍵';
+  @override
+  String get gal_hook_lookup_trigger_hint =>
+      '用哪個滑鼠鍵查指標下的字。與上面那個開關互相獨立：可以關掉點字查詞，仍用側鍵查。';
+  @override
+  String get gal_hook_lookup_trigger_left => 'Left click';
+  @override
+  String get gal_hook_lookup_trigger_middle => 'Middle click';
+  @override
+  String get gal_hook_lookup_trigger_side => 'Side button';
+  @override
+  String get gal_hook_toolbar_auto_hide => '自動隱藏功能欄';
+  @override
+  String get gal_hook_toolbar_auto_hide_hint =>
+      '指標移到字幕框才顯示功能欄（LunaHook 那種）。隱藏就是真的隱藏——那塊像素還給遊戲。';
+  @override
+  String get gal_hook_passthrough_blocks_mouse => '穿透時字幕仍接點擊';
+  @override
+  String get gal_hook_passthrough_blocks_mouse_hint =>
+      '開：文字行仍然接點擊，所以點得到字。關：整個浮層對滑鼠完全透明——點得到下面的東西，但點字就失效了。';
+  @override
+  String get floating_lyric_topmost => '保持置頂';
+  @override
+  String get gal_hook_fold_progressive_lines => '把分開顯示的台詞合成一條';
+  @override
+  String get gal_hook_fold_progressive_lines_hint =>
+      '有些引擎每點一次就重畫整行，於是同一行被抓到好幾次。把這些快照摺成一條。';
+  @override
+  String get gal_hook_ingame_lookup_engine_unsupported => '目前遊戲引擎不支援遊戲內查詞';
+  @override
+  String get gal_hook_ingame_lookup_version_unsupported => '目前遊戲版本未在支援清單中';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copy => '複製遊戲 exe 的 SHA-256';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_unavailable =>
+      '無法讀取遊戲 exe（可能權限不足）';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copied => '已複製 exe 的 SHA-256';
+  @override
+  String get download_tracker_section => 'Tracker 訂閱';
+  @override
+  String get download_tracker_auto_add => '自動把訂閱的 Tracker 加到新任務';
+  @override
+  String get download_tracker_auto_add_hint => '清單會快取 6 小時；訂閱抓取失敗不會阻止建立下載任務。';
+  @override
+  String get download_tracker_url => '訂閱網址';
+  @override
+  String get download_tracker_refresh => '抓取 Tracker';
+  @override
+  String get download_tracker_preview_empty =>
+      '抓取訂閱後可預覽支援的 HTTP、HTTPS 與 UDP Tracker。';
+  @override
+  String download_tracker_preview_count({required Object count}) =>
+      '已抓取 ${count} 個 Tracker';
+  @override
+  String download_tracker_fetch_failed({required Object message}) =>
+      '抓取 Tracker 失敗：${message}';
+  @override
+  String get anki_connect_port_auto_fix => '換一個空閒的連接埠';
+  @override
+  String get anki_connect_port_auto_fix_hint =>
+      '自動挑一個空閒的連接埠，同時寫進 Hibiki 和 Anki 的 AnkiConnect 外掛設定。改完重啟 Anki 生效。';
+  @override
+  String anki_connect_port_auto_fix_done({required Object port}) =>
+      'AnkiConnect 連接埠已改為 ${port}。請重啟 Anki 後再試。';
+  @override
+  String anki_connect_port_auto_fix_manual({required Object port}) =>
+      'Hibiki 已改用連接埠 ${port}，但找不到 AnkiConnect 的外掛設定。請在 Anki 的「工具 → 外掛 → AnkiConnect → 設定」裡把 webBindPort 也改成 ${port}，然後重啟 Anki。';
+  @override
+  String get anki_connect_port_auto_fix_none => '本機找不到空閒的連接埠。';
+  @override
+  String get video_setting_hdr_output => 'HDR / 10-bit 輸出';
   @override
   String get video_setting_hdr_output_hint =>
-      'Windows only. Auto hands HDR sources straight to an HDR display through a native video window; Always uses that window for every video (10-bit output); Off keeps the standard renderer.';
+      '僅 Windows。「自動」在顯示器與片源都是 HDR 時把畫面經原生影片視窗直通；「始終」對所有影片都用原生視窗（10-bit 輸出）；「關閉」沿用常規算繪。';
   @override
-  String get video_setting_hdr_output_auto => 'Auto';
+  String get video_setting_hdr_output_auto => '自動';
   @override
-  String get video_setting_hdr_output_always => 'Always';
+  String get video_setting_hdr_output_always => '始終';
   @override
-  String get video_setting_hdr_output_off => 'Off';
+  String get video_setting_hdr_output_off => '關閉';
 }
 
 /// Flat map(s) containing all translations.
@@ -156627,6 +158472,98 @@ extension on _StringsEn {
         return ({required Object count}) => 'Show all ${count} sources';
       case 'mihon_extension_sources_less':
         return 'Show fewer sources';
+      case 'options_website':
+        return 'Visit the official website';
+      case 'video_setting_mpv_group_hdr':
+        return 'HDR';
+      case 'video_setting_hdr_tone_mapping':
+        return 'HDR tone mapping';
+      case 'video_setting_hdr_tone_mapping_hint':
+        return 'Curve used when an HDR source has to be squeezed onto an SDR display. Auto lets mpv pick per source.';
+      case 'video_setting_hdr_compute_peak':
+        return 'Dynamic peak detection';
+      case 'video_setting_hdr_compute_peak_hint':
+        return 'Measure each frame\'s real peak brightness instead of trusting the stream metadata. Better highlights, costs some GPU.';
+      case 'video_setting_hdr_auto':
+        return 'Auto';
+      case 'video_setting_hdr_on':
+        return 'On';
+      case 'video_setting_hdr_off':
+        return 'Off';
+      case 'video_discovery_cancel_downloads_title':
+        return 'Cancel downloads?';
+      case 'video_discovery_cancel_downloads_body':
+        return ({required Object n}) =>
+            '${n} download task(s) for this title will be stopped. Downloaded pieces stay on disk; you can start the download again later.';
+      case 'video_discovery_cancel_downloads_failed':
+        return 'Could not cancel the download. The task may have already finished, or the download backend is unavailable.';
+      case 'gal_hook_click_lookup':
+        return 'Tap a word to look it up';
+      case 'gal_hook_click_lookup_hint':
+        return 'Off means clicks on the caption never trigger a lookup — useful with click-through on, when you would rather not hit a word by accident.';
+      case 'gal_hook_lookup_trigger':
+        return 'Lookup trigger';
+      case 'gal_hook_lookup_trigger_hint':
+        return 'Which mouse button looks up the word under the pointer. Independent of the switch above: you can turn tap-lookup off and still look up with a side button.';
+      case 'gal_hook_lookup_trigger_left':
+        return 'Left click';
+      case 'gal_hook_lookup_trigger_middle':
+        return 'Middle click';
+      case 'gal_hook_lookup_trigger_side':
+        return 'Side button';
+      case 'gal_hook_toolbar_auto_hide':
+        return 'Auto-hide the toolbar';
+      case 'gal_hook_toolbar_auto_hide_hint':
+        return 'Hide the toolbar until the pointer reaches the caption box, LunaHook style. Hidden means really hidden — those pixels go back to the game.';
+      case 'gal_hook_passthrough_blocks_mouse':
+        return 'Caption still catches clicks while clicking through';
+      case 'gal_hook_passthrough_blocks_mouse_hint':
+        return 'On: text lines still take clicks so you can tap a word. Off: the whole overlay is transparent to the mouse — you can click whatever is underneath, but tapping words no longer works.';
+      case 'floating_lyric_topmost':
+        return 'Keep on top';
+      case 'gal_hook_fold_progressive_lines':
+        return 'Merge split dialogue lines';
+      case 'gal_hook_fold_progressive_lines_hint':
+        return 'Some engines redraw the whole line on every click, so one line is captured several times. Fold those snapshots into a single line.';
+      case 'gal_hook_ingame_lookup_engine_unsupported':
+        return 'This game engine has no in-game lookup sensor yet';
+      case 'gal_hook_ingame_lookup_version_unsupported':
+        return 'This game version is not on the supported list yet';
+      case 'gal_hook_ingame_lookup_exe_hash_copy':
+        return 'Copy game executable SHA-256';
+      case 'gal_hook_ingame_lookup_exe_hash_unavailable':
+        return 'Could not read the game executable';
+      case 'gal_hook_ingame_lookup_exe_hash_copied':
+        return 'Executable SHA-256 copied';
+      case 'download_tracker_section':
+        return 'Tracker subscription';
+      case 'download_tracker_auto_add':
+        return 'Automatically add subscription trackers to new downloads';
+      case 'download_tracker_auto_add_hint':
+        return 'The list is cached for 6 hours. A subscription failure will not block the download.';
+      case 'download_tracker_url':
+        return 'Subscription URL';
+      case 'download_tracker_refresh':
+        return 'Fetch trackers';
+      case 'download_tracker_preview_empty':
+        return 'Fetch the subscription to preview supported HTTP, HTTPS, and UDP trackers.';
+      case 'download_tracker_preview_count':
+        return ({required Object count}) => 'Fetched ${count} trackers';
+      case 'download_tracker_fetch_failed':
+        return ({required Object message}) =>
+            'Could not fetch trackers: ${message}';
+      case 'anki_connect_port_auto_fix':
+        return 'Switch to a free port';
+      case 'anki_connect_port_auto_fix_hint':
+        return 'Picks a free port and writes it to both Hibiki and the AnkiConnect add-on config. Restart Anki to apply.';
+      case 'anki_connect_port_auto_fix_done':
+        return ({required Object port}) =>
+            'Switched AnkiConnect to port ${port}. Restart Anki to apply.';
+      case 'anki_connect_port_auto_fix_manual':
+        return ({required Object port}) =>
+            'Hibiki now uses port ${port}, but the AnkiConnect add-on config was not found. Set webBindPort to ${port} in Anki (Tools -> Add-ons -> AnkiConnect -> Config), then restart Anki.';
+      case 'anki_connect_port_auto_fix_none':
+        return 'No free port found on this machine.';
       case 'video_setting_hdr_output':
         return 'HDR / 10-bit output';
       case 'video_setting_hdr_output_hint':
@@ -164569,21 +166506,113 @@ extension on _StringsAr {
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'تمت القراءة حتى الصفحة ${page}';
       case 'mihon_store_extension_count':
-        return ({required Object count}) => '${count} extensions';
+        return ({required Object count}) => '${count} إضافة';
       case 'mihon_extension_sources_more':
-        return ({required Object count}) => 'Show all ${count} sources';
+        return ({required Object count}) => 'إظهار كل المصادر (${count})';
       case 'mihon_extension_sources_less':
-        return 'Show fewer sources';
+        return 'إظهار مصادر أقل';
+      case 'options_website':
+        return 'زيارة الموقع الرسمي';
+      case 'video_setting_mpv_group_hdr':
+        return 'HDR';
+      case 'video_setting_hdr_tone_mapping':
+        return 'تعيين ألوان HDR';
+      case 'video_setting_hdr_tone_mapping_hint':
+        return 'المنحنى المستخدم عند ضغط مصدر HDR على شاشة SDR. «تلقائي» يترك الاختيار لـ mpv حسب كل مصدر.';
+      case 'video_setting_hdr_compute_peak':
+        return 'كشف الذروة الديناميكي';
+      case 'video_setting_hdr_compute_peak_hint':
+        return 'قياس ذروة السطوع الحقيقية لكل إطار بدلاً من الوثوق ببيانات المصدر. إبرازات أدق مقابل بعض استهلاك المعالج الرسومي.';
+      case 'video_setting_hdr_auto':
+        return 'تلقائي';
+      case 'video_setting_hdr_on':
+        return 'تشغيل';
+      case 'video_setting_hdr_off':
+        return 'إيقاف';
+      case 'video_discovery_cancel_downloads_title':
+        return 'إلغاء التنزيلات؟';
+      case 'video_discovery_cancel_downloads_body':
+        return ({required Object n}) =>
+            'سيتم إيقاف ${n} مهمة تنزيل لهذا العمل. تبقى الأجزاء المنزَّلة على القرص، ويمكنك بدء التنزيل مرة أخرى لاحقًا.';
+      case 'video_discovery_cancel_downloads_failed':
+        return 'تعذّر إلغاء التنزيل. قد تكون المهمة قد انتهت بالفعل، أو أن خلفية التنزيل غير متاحة.';
+      case 'gal_hook_click_lookup':
+        return 'اضغط على كلمة للبحث عنها';
+      case 'gal_hook_click_lookup_hint':
+        return 'الإيقاف يعني ألا يؤدي النقر على النص إلى بحث — مفيد مع تفعيل النقر النافذ عندما لا تريد إصابة كلمة بالخطأ.';
+      case 'gal_hook_lookup_trigger':
+        return 'زر البحث';
+      case 'gal_hook_lookup_trigger_hint':
+        return 'أي زر فأرة يبحث عن الكلمة تحت المؤشر. مستقل عن المفتاح أعلاه: يمكنك إيقاف البحث بالنقر والبحث بزر جانبي.';
+      case 'gal_hook_lookup_trigger_left':
+        return 'Left click';
+      case 'gal_hook_lookup_trigger_middle':
+        return 'Middle click';
+      case 'gal_hook_lookup_trigger_side':
+        return 'Side button';
+      case 'gal_hook_toolbar_auto_hide':
+        return 'إخفاء شريط الأدوات تلقائيًا';
+      case 'gal_hook_toolbar_auto_hide_hint':
+        return 'يخفي شريط الأدوات حتى يصل المؤشر إلى صندوق النص، بأسلوب LunaHook. مخفي يعني مخفي فعلًا — تعود تلك البكسلات إلى اللعبة.';
+      case 'gal_hook_passthrough_blocks_mouse':
+        return 'النص يستقبل النقرات أثناء النقر النافذ';
+      case 'gal_hook_passthrough_blocks_mouse_hint':
+        return 'تشغيل: تبقى أسطر النص تستقبل النقرات فتستطيع الضغط على كلمة. إيقاف: تصبح الطبقة كلها شفافة للفأرة — تنقر ما تحتها، لكن الضغط على الكلمات لا يعمل.';
+      case 'floating_lyric_topmost':
+        return 'الإبقاء في المقدمة';
+      case 'gal_hook_fold_progressive_lines':
+        return 'دمج أسطر الحوار المقسّمة';
+      case 'gal_hook_fold_progressive_lines_hint':
+        return 'بعض المحرّكات تعيد رسم السطر كاملًا مع كل نقرة، فيُلتقط السطر الواحد عدة مرات. اطوِ تلك اللقطات في سطر واحد.';
+      case 'gal_hook_ingame_lookup_engine_unsupported':
+        return 'محرك اللعبة هذا لا يدعم البحث داخل اللعبة بعد';
+      case 'gal_hook_ingame_lookup_version_unsupported':
+        return 'إصدار اللعبة هذا ليس ضمن القائمة المدعومة بعد';
+      case 'gal_hook_ingame_lookup_exe_hash_copy':
+        return 'نسخ SHA-256 لملف اللعبة التنفيذي';
+      case 'gal_hook_ingame_lookup_exe_hash_unavailable':
+        return 'تعذّرت قراءة ملف اللعبة التنفيذي';
+      case 'gal_hook_ingame_lookup_exe_hash_copied':
+        return 'تم نسخ SHA-256 لملف اللعبة التنفيذي';
+      case 'download_tracker_section':
+        return 'اشتراك المتعقّبات';
+      case 'download_tracker_auto_add':
+        return 'إضافة متعقّبات الاشتراك تلقائيًا إلى التنزيلات الجديدة';
+      case 'download_tracker_auto_add_hint':
+        return 'تُخزَّن القائمة مؤقتًا لست ساعات. فشل الاشتراك لا يمنع التنزيل.';
+      case 'download_tracker_url':
+        return 'رابط الاشتراك';
+      case 'download_tracker_refresh':
+        return 'جلب المتعقّبات';
+      case 'download_tracker_preview_empty':
+        return 'اجلب الاشتراك لمعاينة متعقّبات HTTP وHTTPS وUDP المدعومة.';
+      case 'download_tracker_preview_count':
+        return ({required Object count}) => 'تم جلب ${count} متعقّبًا';
+      case 'download_tracker_fetch_failed':
+        return ({required Object message}) =>
+            'تعذّر جلب المتعقّبات: ${message}';
+      case 'anki_connect_port_auto_fix':
+        return 'التبديل إلى منفذ حر';
+      case 'anki_connect_port_auto_fix_hint':
+        return 'يختار منفذًا حرًا ويكتبه في Hibiki وفي إعدادات إضافة AnkiConnect معًا. أعد تشغيل Anki لتطبيق التغيير.';
+      case 'anki_connect_port_auto_fix_done':
+        return ({required Object port}) =>
+            'تم تغيير منفذ AnkiConnect إلى ${port}. أعد تشغيل Anki ثم حاول مجددًا.';
+      case 'anki_connect_port_auto_fix_manual':
+        return ({required Object port}) =>
+            'يستخدم Hibiki الآن المنفذ ${port}، لكن لم يُعثر على إعدادات إضافة AnkiConnect. اضبط webBindPort على ${port} في Anki (أدوات ← الإضافات ← AnkiConnect ← إعداد) ثم أعد تشغيل Anki.';
+      case 'anki_connect_port_auto_fix_none':
+        return 'لم يُعثر على أي منفذ حر على هذا الجهاز.';
       case 'video_setting_hdr_output':
-        return 'HDR / 10-bit output';
+        return 'إخراج HDR / ‏10 بت';
       case 'video_setting_hdr_output_hint':
-        return 'Windows only. Auto hands HDR sources straight to an HDR display through a native video window; Always uses that window for every video (10-bit output); Off keeps the standard renderer.';
+        return 'على Windows فقط. يمرّر «تلقائي» مصادر HDR مباشرةً إلى شاشة HDR عبر نافذة فيديو أصلية، ويستخدم «دائمًا» تلك النافذة لكل مقطع (إخراج 10 بت)، بينما يُبقي «إيقاف» على العارض القياسي.';
       case 'video_setting_hdr_output_auto':
-        return 'Auto';
+        return 'تلقائي';
       case 'video_setting_hdr_output_always':
-        return 'Always';
+        return 'دائمًا';
       case 'video_setting_hdr_output_off':
-        return 'Off';
+        return 'إيقاف';
       default:
         return null;
     }
@@ -172559,21 +174588,113 @@ extension on _StringsDe {
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'Bis Seite ${page} gelesen';
       case 'mihon_store_extension_count':
-        return ({required Object count}) => '${count} extensions';
+        return ({required Object count}) => '${count} Erweiterungen';
       case 'mihon_extension_sources_more':
-        return ({required Object count}) => 'Show all ${count} sources';
+        return ({required Object count}) => 'Alle ${count} Quellen anzeigen';
       case 'mihon_extension_sources_less':
-        return 'Show fewer sources';
+        return 'Weniger Quellen anzeigen';
+      case 'options_website':
+        return 'Offizielle Website besuchen';
+      case 'video_setting_mpv_group_hdr':
+        return 'HDR';
+      case 'video_setting_hdr_tone_mapping':
+        return 'HDR-Tonemapping';
+      case 'video_setting_hdr_tone_mapping_hint':
+        return 'Kurve, mit der eine HDR-Quelle auf ein SDR-Display gebracht wird. „Automatisch“ überlässt mpv die Wahl je Quelle.';
+      case 'video_setting_hdr_compute_peak':
+        return 'Dynamische Spitzenwerterkennung';
+      case 'video_setting_hdr_compute_peak_hint':
+        return 'Misst die echte Spitzenhelligkeit jedes Bildes, statt den Metadaten der Quelle zu vertrauen. Bessere Lichter, kostet etwas GPU-Leistung.';
+      case 'video_setting_hdr_auto':
+        return 'Automatisch';
+      case 'video_setting_hdr_on':
+        return 'An';
+      case 'video_setting_hdr_off':
+        return 'Aus';
+      case 'video_discovery_cancel_downloads_title':
+        return 'Downloads abbrechen?';
+      case 'video_discovery_cancel_downloads_body':
+        return ({required Object n}) =>
+            '${n} Download-Aufgabe(n) für diesen Titel werden gestoppt. Bereits geladene Teile bleiben auf der Festplatte; du kannst den Download später erneut starten.';
+      case 'video_discovery_cancel_downloads_failed':
+        return 'Download konnte nicht abgebrochen werden. Die Aufgabe ist möglicherweise schon fertig, oder das Download-Backend ist nicht verfügbar.';
+      case 'gal_hook_click_lookup':
+        return 'Wort antippen zum Nachschlagen';
+      case 'gal_hook_click_lookup_hint':
+        return 'Aus bedeutet, dass Klicks auf den Text nie ein Nachschlagen auslösen – praktisch bei aktiviertem Durchklicken, wenn du nicht versehentlich ein Wort treffen willst.';
+      case 'gal_hook_lookup_trigger':
+        return 'Auslöser fürs Nachschlagen';
+      case 'gal_hook_lookup_trigger_hint':
+        return 'Welche Maustaste das Wort unter dem Zeiger nachschlägt. Unabhängig vom Schalter oben: Du kannst Tippen-zum-Nachschlagen ausschalten und trotzdem mit einer Seitentaste nachschlagen.';
+      case 'gal_hook_lookup_trigger_left':
+        return 'Left click';
+      case 'gal_hook_lookup_trigger_middle':
+        return 'Middle click';
+      case 'gal_hook_lookup_trigger_side':
+        return 'Side button';
+      case 'gal_hook_toolbar_auto_hide':
+        return 'Werkzeugleiste automatisch ausblenden';
+      case 'gal_hook_toolbar_auto_hide_hint':
+        return 'Blendet die Leiste aus, bis der Zeiger den Textkasten erreicht – wie bei LunaHook. Ausgeblendet heißt wirklich weg: Diese Pixel gehören wieder dem Spiel.';
+      case 'gal_hook_passthrough_blocks_mouse':
+        return 'Text nimmt Klicks trotz Durchklicken an';
+      case 'gal_hook_passthrough_blocks_mouse_hint':
+        return 'An: Textzeilen nehmen weiter Klicks an, du kannst also ein Wort antippen. Aus: Das gesamte Overlay ist für die Maus durchlässig – du klickst, was darunter liegt, aber Wörter antippen geht nicht mehr.';
+      case 'floating_lyric_topmost':
+        return 'Immer im Vordergrund';
+      case 'gal_hook_fold_progressive_lines':
+        return 'Aufgeteilte Dialogzeilen zusammenfassen';
+      case 'gal_hook_fold_progressive_lines_hint':
+        return 'Manche Engines zeichnen bei jedem Klick die ganze Zeile neu, sodass eine Zeile mehrfach erfasst wird. Diese Schnappschüsse zu einer Zeile zusammenfalten.';
+      case 'gal_hook_ingame_lookup_engine_unsupported':
+        return 'Diese Spiel-Engine unterstützt die Suche im Spiel noch nicht';
+      case 'gal_hook_ingame_lookup_version_unsupported':
+        return 'Diese Spielversion steht noch nicht auf der Liste der unterstützten Versionen';
+      case 'gal_hook_ingame_lookup_exe_hash_copy':
+        return 'SHA-256 der Spieldatei kopieren';
+      case 'gal_hook_ingame_lookup_exe_hash_unavailable':
+        return 'Die Spieldatei konnte nicht gelesen werden';
+      case 'gal_hook_ingame_lookup_exe_hash_copied':
+        return 'SHA-256 der Spieldatei kopiert';
+      case 'download_tracker_section':
+        return 'Tracker-Abonnement';
+      case 'download_tracker_auto_add':
+        return 'Abonnierte Tracker automatisch zu neuen Downloads hinzufügen';
+      case 'download_tracker_auto_add_hint':
+        return 'Die Liste wird 6 Stunden zwischengespeichert. Ein fehlgeschlagenes Abonnement blockiert den Download nicht.';
+      case 'download_tracker_url':
+        return 'Abonnement-URL';
+      case 'download_tracker_refresh':
+        return 'Tracker abrufen';
+      case 'download_tracker_preview_empty':
+        return 'Rufe das Abonnement ab, um die unterstützten HTTP-, HTTPS- und UDP-Tracker anzuzeigen.';
+      case 'download_tracker_preview_count':
+        return ({required Object count}) => '${count} Tracker abgerufen';
+      case 'download_tracker_fetch_failed':
+        return ({required Object message}) =>
+            'Tracker konnten nicht abgerufen werden: ${message}';
+      case 'anki_connect_port_auto_fix':
+        return 'Auf freien Port wechseln';
+      case 'anki_connect_port_auto_fix_hint':
+        return 'Wählt einen freien Port und trägt ihn sowohl in Hibiki als auch in die AnkiConnect-Add-on-Konfiguration ein. Starte Anki neu, damit es wirkt.';
+      case 'anki_connect_port_auto_fix_done':
+        return ({required Object port}) =>
+            'AnkiConnect nutzt jetzt Port ${port}. Starte Anki neu und versuche es erneut.';
+      case 'anki_connect_port_auto_fix_manual':
+        return ({required Object port}) =>
+            'Hibiki nutzt jetzt Port ${port}, aber die AnkiConnect-Add-on-Konfiguration wurde nicht gefunden. Setze webBindPort in Anki (Werkzeuge → Add-ons → AnkiConnect → Konfiguration) ebenfalls auf ${port} und starte Anki neu.';
+      case 'anki_connect_port_auto_fix_none':
+        return 'Auf diesem Rechner wurde kein freier Port gefunden.';
       case 'video_setting_hdr_output':
-        return 'HDR / 10-bit output';
+        return 'HDR-/10-Bit-Ausgabe';
       case 'video_setting_hdr_output_hint':
-        return 'Windows only. Auto hands HDR sources straight to an HDR display through a native video window; Always uses that window for every video (10-bit output); Off keeps the standard renderer.';
+        return 'Nur Windows. „Automatisch“ reicht HDR-Quellen über ein natives Videofenster direkt an ein HDR-Display weiter; „Immer“ nutzt dieses Fenster für jedes Video (10-Bit-Ausgabe); „Aus“ behält den Standard-Renderer.';
       case 'video_setting_hdr_output_auto':
-        return 'Auto';
+        return 'Automatisch';
       case 'video_setting_hdr_output_always':
-        return 'Always';
+        return 'Immer';
       case 'video_setting_hdr_output_off':
-        return 'Off';
+        return 'Aus';
       default:
         return null;
     }
@@ -180541,21 +182662,113 @@ extension on _StringsEs {
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'Leído hasta la página ${page}';
       case 'mihon_store_extension_count':
-        return ({required Object count}) => '${count} extensions';
+        return ({required Object count}) => '${count} extensiones';
       case 'mihon_extension_sources_more':
-        return ({required Object count}) => 'Show all ${count} sources';
+        return ({required Object count}) => 'Mostrar las ${count} fuentes';
       case 'mihon_extension_sources_less':
-        return 'Show fewer sources';
+        return 'Mostrar menos fuentes';
+      case 'options_website':
+        return 'Visitar el sitio web oficial';
+      case 'video_setting_mpv_group_hdr':
+        return 'HDR';
+      case 'video_setting_hdr_tone_mapping':
+        return 'Mapeo de tonos HDR';
+      case 'video_setting_hdr_tone_mapping_hint':
+        return 'Curva que se usa al comprimir una fuente HDR en una pantalla SDR. «Automático» deja que mpv elija según la fuente.';
+      case 'video_setting_hdr_compute_peak':
+        return 'Detección dinámica de picos';
+      case 'video_setting_hdr_compute_peak_hint':
+        return 'Mide el brillo máximo real de cada fotograma en vez de fiarse de los metadatos de la fuente. Mejores luces altas, a costa de algo de GPU.';
+      case 'video_setting_hdr_auto':
+        return 'Automático';
+      case 'video_setting_hdr_on':
+        return 'Activado';
+      case 'video_setting_hdr_off':
+        return 'Desactivado';
+      case 'video_discovery_cancel_downloads_title':
+        return '¿Cancelar las descargas?';
+      case 'video_discovery_cancel_downloads_body':
+        return ({required Object n}) =>
+            'Se detendrán ${n} tarea(s) de descarga de este título. Las partes ya descargadas se conservan en el disco; podrás reanudar la descarga más adelante.';
+      case 'video_discovery_cancel_downloads_failed':
+        return 'No se pudo cancelar la descarga. Puede que la tarea ya haya terminado o que el backend de descargas no esté disponible.';
+      case 'gal_hook_click_lookup':
+        return 'Toca una palabra para buscarla';
+      case 'gal_hook_click_lookup_hint':
+        return 'Desactivado significa que los clics sobre el texto nunca activan una búsqueda: útil con el clic pasante activado, cuando prefieres no darle a una palabra sin querer.';
+      case 'gal_hook_lookup_trigger':
+        return 'Disparador de búsqueda';
+      case 'gal_hook_lookup_trigger_hint':
+        return 'Qué botón del ratón busca la palabra bajo el puntero. Es independiente del interruptor de arriba: puedes desactivar la búsqueda por toque y seguir buscando con un botón lateral.';
+      case 'gal_hook_lookup_trigger_left':
+        return 'Left click';
+      case 'gal_hook_lookup_trigger_middle':
+        return 'Middle click';
+      case 'gal_hook_lookup_trigger_side':
+        return 'Side button';
+      case 'gal_hook_toolbar_auto_hide':
+        return 'Ocultar la barra automáticamente';
+      case 'gal_hook_toolbar_auto_hide_hint':
+        return 'Oculta la barra hasta que el puntero llega al cuadro de texto, al estilo de LunaHook. Oculta significa oculta de verdad: esos píxeles vuelven al juego.';
+      case 'gal_hook_passthrough_blocks_mouse':
+        return 'El texto sigue recibiendo clics con el clic pasante';
+      case 'gal_hook_passthrough_blocks_mouse_hint':
+        return 'Activado: las líneas de texto siguen recibiendo clics, así puedes tocar una palabra. Desactivado: toda la superposición es transparente al ratón; puedes hacer clic en lo que haya debajo, pero tocar palabras deja de funcionar.';
+      case 'floating_lyric_topmost':
+        return 'Mantener al frente';
+      case 'gal_hook_fold_progressive_lines':
+        return 'Unir líneas de diálogo divididas';
+      case 'gal_hook_fold_progressive_lines_hint':
+        return 'Algunos motores redibujan la línea entera en cada clic, así que una misma línea se captura varias veces. Pliega esas instantáneas en una sola línea.';
+      case 'gal_hook_ingame_lookup_engine_unsupported':
+        return 'Este motor de juego aún no admite la búsqueda dentro del juego';
+      case 'gal_hook_ingame_lookup_version_unsupported':
+        return 'Esta versión del juego aún no está en la lista de compatibles';
+      case 'gal_hook_ingame_lookup_exe_hash_copy':
+        return 'Copiar el SHA-256 del ejecutable del juego';
+      case 'gal_hook_ingame_lookup_exe_hash_unavailable':
+        return 'No se pudo leer el ejecutable del juego';
+      case 'gal_hook_ingame_lookup_exe_hash_copied':
+        return 'SHA-256 del ejecutable copiado';
+      case 'download_tracker_section':
+        return 'Suscripción de trackers';
+      case 'download_tracker_auto_add':
+        return 'Añadir automáticamente los trackers suscritos a las descargas nuevas';
+      case 'download_tracker_auto_add_hint':
+        return 'La lista se almacena en caché 6 horas. Si la suscripción falla, la descarga no se bloquea.';
+      case 'download_tracker_url':
+        return 'URL de suscripción';
+      case 'download_tracker_refresh':
+        return 'Obtener trackers';
+      case 'download_tracker_preview_empty':
+        return 'Obtén la suscripción para ver los trackers HTTP, HTTPS y UDP compatibles.';
+      case 'download_tracker_preview_count':
+        return ({required Object count}) => '${count} trackers obtenidos';
+      case 'download_tracker_fetch_failed':
+        return ({required Object message}) =>
+            'No se pudieron obtener los trackers: ${message}';
+      case 'anki_connect_port_auto_fix':
+        return 'Cambiar a un puerto libre';
+      case 'anki_connect_port_auto_fix_hint':
+        return 'Elige un puerto libre y lo escribe tanto en Hibiki como en la configuración del complemento AnkiConnect. Reinicia Anki para aplicarlo.';
+      case 'anki_connect_port_auto_fix_done':
+        return ({required Object port}) =>
+            'AnkiConnect ahora usa el puerto ${port}. Reinicia Anki y vuelve a intentarlo.';
+      case 'anki_connect_port_auto_fix_manual':
+        return ({required Object port}) =>
+            'Hibiki ahora usa el puerto ${port}, pero no se encontró la configuración del complemento AnkiConnect. Pon webBindPort en ${port} dentro de Anki (Herramientas → Complementos → AnkiConnect → Configuración) y reinicia Anki.';
+      case 'anki_connect_port_auto_fix_none':
+        return 'No se encontró ningún puerto libre en este equipo.';
       case 'video_setting_hdr_output':
-        return 'HDR / 10-bit output';
+        return 'Salida HDR / 10 bits';
       case 'video_setting_hdr_output_hint':
-        return 'Windows only. Auto hands HDR sources straight to an HDR display through a native video window; Always uses that window for every video (10-bit output); Off keeps the standard renderer.';
+        return 'Solo en Windows. «Automático» entrega las fuentes HDR directamente a una pantalla HDR mediante una ventana de vídeo nativa; «Siempre» usa esa ventana para todos los vídeos (salida de 10 bits); «Desactivado» mantiene el renderizador estándar.';
       case 'video_setting_hdr_output_auto':
-        return 'Auto';
+        return 'Automático';
       case 'video_setting_hdr_output_always':
-        return 'Always';
+        return 'Siempre';
       case 'video_setting_hdr_output_off':
-        return 'Off';
+        return 'Desactivado';
       default:
         return null;
     }
@@ -188533,19 +190746,111 @@ extension on _StringsFr {
       case 'mihon_store_extension_count':
         return ({required Object count}) => '${count} extensions';
       case 'mihon_extension_sources_more':
-        return ({required Object count}) => 'Show all ${count} sources';
+        return ({required Object count}) => 'Afficher les ${count} sources';
       case 'mihon_extension_sources_less':
-        return 'Show fewer sources';
+        return 'Afficher moins de sources';
+      case 'options_website':
+        return 'Visiter le site officiel';
+      case 'video_setting_mpv_group_hdr':
+        return 'HDR';
+      case 'video_setting_hdr_tone_mapping':
+        return 'Mappage tonal HDR';
+      case 'video_setting_hdr_tone_mapping_hint':
+        return 'Courbe utilisée pour ramener une source HDR sur un écran SDR. « Auto » laisse mpv choisir selon la source.';
+      case 'video_setting_hdr_compute_peak':
+        return 'Détection dynamique des pics';
+      case 'video_setting_hdr_compute_peak_hint':
+        return 'Mesure le pic de luminosité réel de chaque image au lieu de se fier aux métadonnées de la source. Meilleures hautes lumières, au prix d\'un peu de GPU.';
+      case 'video_setting_hdr_auto':
+        return 'Auto';
+      case 'video_setting_hdr_on':
+        return 'Activé';
+      case 'video_setting_hdr_off':
+        return 'Désactivé';
+      case 'video_discovery_cancel_downloads_title':
+        return 'Annuler les téléchargements ?';
+      case 'video_discovery_cancel_downloads_body':
+        return ({required Object n}) =>
+            '${n} tâche(s) de téléchargement pour ce titre vont être arrêtées. Les morceaux déjà téléchargés restent sur le disque ; vous pourrez relancer le téléchargement plus tard.';
+      case 'video_discovery_cancel_downloads_failed':
+        return 'Impossible d\'annuler le téléchargement. La tâche est peut-être déjà terminée, ou le backend de téléchargement est indisponible.';
+      case 'gal_hook_click_lookup':
+        return 'Toucher un mot pour le chercher';
+      case 'gal_hook_click_lookup_hint':
+        return 'Désactivé : les clics sur le texte ne déclenchent jamais de recherche — pratique avec le clic traversant, quand vous préférez ne pas toucher un mot par erreur.';
+      case 'gal_hook_lookup_trigger':
+        return 'Déclencheur de recherche';
+      case 'gal_hook_lookup_trigger_hint':
+        return 'Quel bouton de la souris cherche le mot sous le pointeur. Indépendant du réglage ci-dessus : vous pouvez désactiver la recherche au toucher et chercher quand même avec un bouton latéral.';
+      case 'gal_hook_lookup_trigger_left':
+        return 'Left click';
+      case 'gal_hook_lookup_trigger_middle':
+        return 'Middle click';
+      case 'gal_hook_lookup_trigger_side':
+        return 'Side button';
+      case 'gal_hook_toolbar_auto_hide':
+        return 'Masquer la barre automatiquement';
+      case 'gal_hook_toolbar_auto_hide_hint':
+        return 'Masque la barre jusqu\'à ce que le pointeur atteigne la zone de texte, à la manière de LunaHook. Masqué veut dire vraiment masqué : ces pixels reviennent au jeu.';
+      case 'gal_hook_passthrough_blocks_mouse':
+        return 'Le texte reçoit encore les clics en mode traversant';
+      case 'gal_hook_passthrough_blocks_mouse_hint':
+        return 'Activé : les lignes de texte reçoivent encore les clics, vous pouvez donc toucher un mot. Désactivé : toute la surcouche est transparente à la souris — vous cliquez ce qui est dessous, mais toucher un mot ne marche plus.';
+      case 'floating_lyric_topmost':
+        return 'Garder au premier plan';
+      case 'gal_hook_fold_progressive_lines':
+        return 'Fusionner les répliques découpées';
+      case 'gal_hook_fold_progressive_lines_hint':
+        return 'Certains moteurs redessinent toute la ligne à chaque clic, si bien qu\'une même ligne est capturée plusieurs fois. Replie ces instantanés en une seule ligne.';
+      case 'gal_hook_ingame_lookup_engine_unsupported':
+        return 'Ce moteur de jeu ne prend pas encore en charge la recherche en jeu';
+      case 'gal_hook_ingame_lookup_version_unsupported':
+        return 'Cette version du jeu ne figure pas encore dans la liste prise en charge';
+      case 'gal_hook_ingame_lookup_exe_hash_copy':
+        return 'Copier le SHA-256 de l\'exécutable du jeu';
+      case 'gal_hook_ingame_lookup_exe_hash_unavailable':
+        return 'Impossible de lire l\'exécutable du jeu';
+      case 'gal_hook_ingame_lookup_exe_hash_copied':
+        return 'SHA-256 de l\'exécutable copié';
+      case 'download_tracker_section':
+        return 'Abonnement aux trackers';
+      case 'download_tracker_auto_add':
+        return 'Ajouter automatiquement les trackers de l’abonnement aux nouveaux téléchargements';
+      case 'download_tracker_auto_add_hint':
+        return 'La liste est mise en cache pendant 6 heures. L’échec de l’abonnement ne bloque pas le téléchargement.';
+      case 'download_tracker_url':
+        return 'URL de l’abonnement';
+      case 'download_tracker_refresh':
+        return 'Récupérer les trackers';
+      case 'download_tracker_preview_empty':
+        return 'Récupère l’abonnement pour prévisualiser les trackers HTTP, HTTPS et UDP pris en charge.';
+      case 'download_tracker_preview_count':
+        return ({required Object count}) => '${count} trackers récupérés';
+      case 'download_tracker_fetch_failed':
+        return ({required Object message}) =>
+            'Impossible de récupérer les trackers : ${message}';
+      case 'anki_connect_port_auto_fix':
+        return 'Passer à un port libre';
+      case 'anki_connect_port_auto_fix_hint':
+        return 'Choisit un port libre et l\'écrit à la fois dans Hibiki et dans la configuration du module AnkiConnect. Redémarrez Anki pour l\'appliquer.';
+      case 'anki_connect_port_auto_fix_done':
+        return ({required Object port}) =>
+            'AnkiConnect utilise désormais le port ${port}. Redémarrez Anki puis réessayez.';
+      case 'anki_connect_port_auto_fix_manual':
+        return ({required Object port}) =>
+            'Hibiki utilise désormais le port ${port}, mais la configuration du module AnkiConnect est introuvable. Définissez webBindPort sur ${port} dans Anki (Outils → Modules complémentaires → AnkiConnect → Configuration), puis redémarrez Anki.';
+      case 'anki_connect_port_auto_fix_none':
+        return 'Aucun port libre trouvé sur cette machine.';
       case 'video_setting_hdr_output':
-        return 'HDR / 10-bit output';
+        return 'Sortie HDR / 10 bits';
       case 'video_setting_hdr_output_hint':
-        return 'Windows only. Auto hands HDR sources straight to an HDR display through a native video window; Always uses that window for every video (10-bit output); Off keeps the standard renderer.';
+        return 'Windows uniquement. « Auto » transmet les sources HDR directement à un écran HDR via une fenêtre vidéo native ; « Toujours » utilise cette fenêtre pour toutes les vidéos (sortie 10 bits) ; « Désactivé » conserve le rendu standard.';
       case 'video_setting_hdr_output_auto':
         return 'Auto';
       case 'video_setting_hdr_output_always':
-        return 'Always';
+        return 'Toujours';
       case 'video_setting_hdr_output_off':
-        return 'Off';
+        return 'Désactivé';
       default:
         return null;
     }
@@ -196493,21 +198798,113 @@ extension on _StringsId {
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'Dibaca sampai halaman ${page}';
       case 'mihon_store_extension_count':
-        return ({required Object count}) => '${count} extensions';
+        return ({required Object count}) => '${count} ekstensi';
       case 'mihon_extension_sources_more':
-        return ({required Object count}) => 'Show all ${count} sources';
+        return ({required Object count}) => 'Tampilkan semua ${count} sumber';
       case 'mihon_extension_sources_less':
-        return 'Show fewer sources';
+        return 'Tampilkan lebih sedikit sumber';
+      case 'options_website':
+        return 'Kunjungi situs web resmi';
+      case 'video_setting_mpv_group_hdr':
+        return 'HDR';
+      case 'video_setting_hdr_tone_mapping':
+        return 'Pemetaan nada HDR';
+      case 'video_setting_hdr_tone_mapping_hint':
+        return 'Kurva yang dipakai saat sumber HDR harus dipadatkan ke layar SDR. "Otomatis" membiarkan mpv memilih per sumber.';
+      case 'video_setting_hdr_compute_peak':
+        return 'Deteksi puncak dinamis';
+      case 'video_setting_hdr_compute_peak_hint':
+        return 'Mengukur puncak kecerahan asli tiap bingkai alih-alih mempercayai metadata sumber. Sorotan lebih baik, memakan sedikit GPU.';
+      case 'video_setting_hdr_auto':
+        return 'Otomatis';
+      case 'video_setting_hdr_on':
+        return 'Aktif';
+      case 'video_setting_hdr_off':
+        return 'Nonaktif';
+      case 'video_discovery_cancel_downloads_title':
+        return 'Batalkan unduhan?';
+      case 'video_discovery_cancel_downloads_body':
+        return ({required Object n}) =>
+            '${n} tugas unduhan untuk judul ini akan dihentikan. Bagian yang sudah terunduh tetap ada di disk; kamu bisa memulai unduhan lagi nanti.';
+      case 'video_discovery_cancel_downloads_failed':
+        return 'Tidak bisa membatalkan unduhan. Tugasnya mungkin sudah selesai, atau backend unduhan sedang tidak tersedia.';
+      case 'gal_hook_click_lookup':
+        return 'Ketuk kata untuk mencarinya';
+      case 'gal_hook_click_lookup_hint':
+        return 'Mati berarti klik pada teks tidak pernah memicu pencarian — berguna saat klik-tembus aktif dan kamu tidak ingin tak sengaja mengenai kata.';
+      case 'gal_hook_lookup_trigger':
+        return 'Pemicu pencarian';
+      case 'gal_hook_lookup_trigger_hint':
+        return 'Tombol tetikus mana yang mencari kata di bawah penunjuk. Terpisah dari sakelar di atas: kamu bisa mematikan ketuk-untuk-cari dan tetap mencari dengan tombol samping.';
+      case 'gal_hook_lookup_trigger_left':
+        return 'Left click';
+      case 'gal_hook_lookup_trigger_middle':
+        return 'Middle click';
+      case 'gal_hook_lookup_trigger_side':
+        return 'Side button';
+      case 'gal_hook_toolbar_auto_hide':
+        return 'Sembunyikan bilah otomatis';
+      case 'gal_hook_toolbar_auto_hide_hint':
+        return 'Sembunyikan bilah sampai penunjuk mencapai kotak teks, ala LunaHook. Tersembunyi artinya benar-benar hilang — piksel itu kembali ke game.';
+      case 'gal_hook_passthrough_blocks_mouse':
+        return 'Teks tetap menerima klik saat klik-tembus';
+      case 'gal_hook_passthrough_blocks_mouse_hint':
+        return 'Aktif: baris teks tetap menerima klik sehingga kamu bisa mengetuk kata. Nonaktif: seluruh lapisan tembus bagi tetikus — kamu bisa mengeklik apa pun di bawahnya, tapi mengetuk kata tidak lagi berfungsi.';
+      case 'floating_lyric_topmost':
+        return 'Tetap di atas';
+      case 'gal_hook_fold_progressive_lines':
+        return 'Gabungkan baris dialog yang terpotong';
+      case 'gal_hook_fold_progressive_lines_hint':
+        return 'Sebagian engine menggambar ulang seluruh baris setiap kali diklik, sehingga satu baris tertangkap beberapa kali. Lipat cuplikan itu menjadi satu baris.';
+      case 'gal_hook_ingame_lookup_engine_unsupported':
+        return 'Mesin gim ini belum mendukung pencarian kamus dalam gim';
+      case 'gal_hook_ingame_lookup_version_unsupported':
+        return 'Versi gim ini belum ada dalam daftar yang didukung';
+      case 'gal_hook_ingame_lookup_exe_hash_copy':
+        return 'Salin SHA-256 file eksekusi gim';
+      case 'gal_hook_ingame_lookup_exe_hash_unavailable':
+        return 'Tidak dapat membaca file eksekusi gim';
+      case 'gal_hook_ingame_lookup_exe_hash_copied':
+        return 'SHA-256 file eksekusi disalin';
+      case 'download_tracker_section':
+        return 'Langganan tracker';
+      case 'download_tracker_auto_add':
+        return 'Otomatis tambahkan tracker langganan ke unduhan baru';
+      case 'download_tracker_auto_add_hint':
+        return 'Daftar disimpan di cache selama 6 jam. Kegagalan langganan tidak menghentikan unduhan.';
+      case 'download_tracker_url':
+        return 'URL langganan';
+      case 'download_tracker_refresh':
+        return 'Ambil tracker';
+      case 'download_tracker_preview_empty':
+        return 'Ambil langganan untuk melihat tracker HTTP, HTTPS, dan UDP yang didukung.';
+      case 'download_tracker_preview_count':
+        return ({required Object count}) => '${count} tracker diambil';
+      case 'download_tracker_fetch_failed':
+        return ({required Object message}) =>
+            'Tidak dapat mengambil tracker: ${message}';
+      case 'anki_connect_port_auto_fix':
+        return 'Ganti ke port yang kosong';
+      case 'anki_connect_port_auto_fix_hint':
+        return 'Memilih port kosong lalu menuliskannya ke Hibiki dan ke konfigurasi add-on AnkiConnect. Mulai ulang Anki agar berlaku.';
+      case 'anki_connect_port_auto_fix_done':
+        return ({required Object port}) =>
+            'AnkiConnect kini memakai port ${port}. Mulai ulang Anki lalu coba lagi.';
+      case 'anki_connect_port_auto_fix_manual':
+        return ({required Object port}) =>
+            'Hibiki kini memakai port ${port}, tetapi konfigurasi add-on AnkiConnect tidak ditemukan. Setel webBindPort ke ${port} di Anki (Alat → Add-on → AnkiConnect → Konfigurasi), lalu mulai ulang Anki.';
+      case 'anki_connect_port_auto_fix_none':
+        return 'Tidak ditemukan port kosong di komputer ini.';
       case 'video_setting_hdr_output':
-        return 'HDR / 10-bit output';
+        return 'Keluaran HDR / 10 bit';
       case 'video_setting_hdr_output_hint':
-        return 'Windows only. Auto hands HDR sources straight to an HDR display through a native video window; Always uses that window for every video (10-bit output); Off keeps the standard renderer.';
+        return 'Hanya Windows. «Otomatis» meneruskan sumber HDR langsung ke layar HDR lewat jendela video native; «Selalu» memakai jendela itu untuk semua video (keluaran 10 bit); «Mati» tetap memakai perender standar.';
       case 'video_setting_hdr_output_auto':
-        return 'Auto';
+        return 'Otomatis';
       case 'video_setting_hdr_output_always':
-        return 'Always';
+        return 'Selalu';
       case 'video_setting_hdr_output_off':
-        return 'Off';
+        return 'Mati';
       default:
         return null;
     }
@@ -204476,21 +206873,113 @@ extension on _StringsIt {
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'Letto fino a pagina ${page}';
       case 'mihon_store_extension_count':
-        return ({required Object count}) => '${count} extensions';
+        return ({required Object count}) => '${count} estensioni';
       case 'mihon_extension_sources_more':
-        return ({required Object count}) => 'Show all ${count} sources';
+        return ({required Object count}) => 'Mostra tutte le ${count} fonti';
       case 'mihon_extension_sources_less':
-        return 'Show fewer sources';
+        return 'Mostra meno fonti';
+      case 'options_website':
+        return 'Visita il sito ufficiale';
+      case 'video_setting_mpv_group_hdr':
+        return 'HDR';
+      case 'video_setting_hdr_tone_mapping':
+        return 'Mappatura tonale HDR';
+      case 'video_setting_hdr_tone_mapping_hint':
+        return 'Curva usata quando una sorgente HDR va compressa su uno schermo SDR. «Automatico» lascia scegliere a mpv per ogni sorgente.';
+      case 'video_setting_hdr_compute_peak':
+        return 'Rilevamento dinamico dei picchi';
+      case 'video_setting_hdr_compute_peak_hint':
+        return 'Misura il picco di luminosità reale di ogni fotogramma invece di fidarsi dei metadati della sorgente. Alte luci migliori, con un po’ di costo GPU.';
+      case 'video_setting_hdr_auto':
+        return 'Automatico';
+      case 'video_setting_hdr_on':
+        return 'Attivo';
+      case 'video_setting_hdr_off':
+        return 'Disattivo';
+      case 'video_discovery_cancel_downloads_title':
+        return 'Annullare i download?';
+      case 'video_discovery_cancel_downloads_body':
+        return ({required Object n}) =>
+            'Verranno interrotte ${n} attività di download per questo titolo. Le parti già scaricate restano sul disco; potrai riavviare il download più tardi.';
+      case 'video_discovery_cancel_downloads_failed':
+        return 'Impossibile annullare il download. L’attività potrebbe essere già terminata, oppure il backend di download non è disponibile.';
+      case 'gal_hook_click_lookup':
+        return 'Tocca una parola per cercarla';
+      case 'gal_hook_click_lookup_hint':
+        return 'Disattivato: i clic sul testo non avviano mai una ricerca — utile con il clic passante attivo, quando preferisci non colpire una parola per sbaglio.';
+      case 'gal_hook_lookup_trigger':
+        return 'Attivatore della ricerca';
+      case 'gal_hook_lookup_trigger_hint':
+        return 'Quale tasto del mouse cerca la parola sotto il puntatore. Indipendente dall’interruttore qui sopra: puoi disattivare il tocco-per-cercare e cercare comunque con un tasto laterale.';
+      case 'gal_hook_lookup_trigger_left':
+        return 'Left click';
+      case 'gal_hook_lookup_trigger_middle':
+        return 'Middle click';
+      case 'gal_hook_lookup_trigger_side':
+        return 'Side button';
+      case 'gal_hook_toolbar_auto_hide':
+        return 'Nascondi la barra automaticamente';
+      case 'gal_hook_toolbar_auto_hide_hint':
+        return 'Nasconde la barra finché il puntatore non raggiunge il riquadro del testo, in stile LunaHook. Nascosto significa davvero nascosto: quei pixel tornano al gioco.';
+      case 'gal_hook_passthrough_blocks_mouse':
+        return 'Il testo riceve ancora i clic durante il clic passante';
+      case 'gal_hook_passthrough_blocks_mouse_hint':
+        return 'Attivo: le righe di testo ricevono ancora i clic, così puoi toccare una parola. Disattivo: l’intera sovrapposizione è trasparente al mouse — clicchi ciò che sta sotto, ma toccare le parole non funziona più.';
+      case 'floating_lyric_topmost':
+        return 'Mantieni in primo piano';
+      case 'gal_hook_fold_progressive_lines':
+        return 'Unisci le battute spezzate';
+      case 'gal_hook_fold_progressive_lines_hint':
+        return 'Alcuni motori ridisegnano l’intera riga a ogni clic, così una stessa riga viene catturata più volte. Ripiega quelle istantanee in una sola riga.';
+      case 'gal_hook_ingame_lookup_engine_unsupported':
+        return 'Questo motore di gioco non supporta ancora la ricerca nel gioco';
+      case 'gal_hook_ingame_lookup_version_unsupported':
+        return 'Questa versione del gioco non è ancora nell\'elenco supportato';
+      case 'gal_hook_ingame_lookup_exe_hash_copy':
+        return 'Copia lo SHA-256 dell\'eseguibile del gioco';
+      case 'gal_hook_ingame_lookup_exe_hash_unavailable':
+        return 'Impossibile leggere l\'eseguibile del gioco';
+      case 'gal_hook_ingame_lookup_exe_hash_copied':
+        return 'SHA-256 dell\'eseguibile copiato';
+      case 'download_tracker_section':
+        return 'Abbonamento ai tracker';
+      case 'download_tracker_auto_add':
+        return 'Aggiungi automaticamente i tracker dell’abbonamento ai nuovi download';
+      case 'download_tracker_auto_add_hint':
+        return 'L’elenco resta in cache per 6 ore. Se l’abbonamento fallisce, il download non viene bloccato.';
+      case 'download_tracker_url':
+        return 'URL dell’abbonamento';
+      case 'download_tracker_refresh':
+        return 'Scarica i tracker';
+      case 'download_tracker_preview_empty':
+        return 'Scarica l’abbonamento per vedere in anteprima i tracker HTTP, HTTPS e UDP supportati.';
+      case 'download_tracker_preview_count':
+        return ({required Object count}) => '${count} tracker scaricati';
+      case 'download_tracker_fetch_failed':
+        return ({required Object message}) =>
+            'Impossibile scaricare i tracker: ${message}';
+      case 'anki_connect_port_auto_fix':
+        return 'Passa a una porta libera';
+      case 'anki_connect_port_auto_fix_hint':
+        return 'Sceglie una porta libera e la scrive sia in Hibiki sia nella configurazione del componente aggiuntivo AnkiConnect. Riavvia Anki per applicarla.';
+      case 'anki_connect_port_auto_fix_done':
+        return ({required Object port}) =>
+            'AnkiConnect ora usa la porta ${port}. Riavvia Anki e riprova.';
+      case 'anki_connect_port_auto_fix_manual':
+        return ({required Object port}) =>
+            'Hibiki ora usa la porta ${port}, ma la configurazione del componente aggiuntivo AnkiConnect non è stata trovata. Imposta webBindPort su ${port} in Anki (Strumenti → Componenti aggiuntivi → AnkiConnect → Configurazione) e riavvia Anki.';
+      case 'anki_connect_port_auto_fix_none':
+        return 'Nessuna porta libera trovata su questo computer.';
       case 'video_setting_hdr_output':
-        return 'HDR / 10-bit output';
+        return 'Uscita HDR / 10 bit';
       case 'video_setting_hdr_output_hint':
-        return 'Windows only. Auto hands HDR sources straight to an HDR display through a native video window; Always uses that window for every video (10-bit output); Off keeps the standard renderer.';
+        return 'Solo Windows. «Automatico» passa le sorgenti HDR direttamente a uno schermo HDR tramite una finestra video nativa; «Sempre» usa quella finestra per ogni video (uscita a 10 bit); «Disattivato» mantiene il renderer standard.';
       case 'video_setting_hdr_output_auto':
-        return 'Auto';
+        return 'Automatico';
       case 'video_setting_hdr_output_always':
-        return 'Always';
+        return 'Sempre';
       case 'video_setting_hdr_output_off':
-        return 'Off';
+        return 'Disattivato';
       default:
         return null;
     }
@@ -212392,21 +214881,112 @@ extension on _StringsJa {
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => '${page} ページまで';
       case 'mihon_store_extension_count':
-        return ({required Object count}) => '${count} extensions';
+        return ({required Object count}) => '拡張機能 ${count} 件';
       case 'mihon_extension_sources_more':
-        return ({required Object count}) => 'Show all ${count} sources';
+        return ({required Object count}) => '${count} 件のソースをすべて表示';
       case 'mihon_extension_sources_less':
-        return 'Show fewer sources';
+        return 'ソースの表示を減らす';
+      case 'options_website':
+        return '公式サイトを開く';
+      case 'video_setting_mpv_group_hdr':
+        return 'HDR';
+      case 'video_setting_hdr_tone_mapping':
+        return 'HDR トーンマッピング';
+      case 'video_setting_hdr_tone_mapping_hint':
+        return 'HDR ソースを SDR ディスプレイに収めるときに使うカーブ。「自動」は mpv がソースごとに選びます。';
+      case 'video_setting_hdr_compute_peak':
+        return '動的ピーク検出';
+      case 'video_setting_hdr_compute_peak_hint':
+        return 'ソースのメタデータを信じる代わりに、フレームごとの実際のピーク輝度を測ります。ハイライトが良くなる一方、GPU を少し使います。';
+      case 'video_setting_hdr_auto':
+        return '自動';
+      case 'video_setting_hdr_on':
+        return 'オン';
+      case 'video_setting_hdr_off':
+        return 'オフ';
+      case 'video_discovery_cancel_downloads_title':
+        return 'ダウンロードを中止しますか？';
+      case 'video_discovery_cancel_downloads_body':
+        return ({required Object n}) =>
+            'この作品のダウンロードタスク ${n} 件を停止します。ダウンロード済みの断片はディスクに残るので、後でやり直せます。';
+      case 'video_discovery_cancel_downloads_failed':
+        return 'ダウンロードを中止できませんでした。タスクが既に終了しているか、ダウンロードバックエンドが利用できません。';
+      case 'gal_hook_click_lookup':
+        return '単語をタップして辞書を引く';
+      case 'gal_hook_click_lookup_hint':
+        return 'オフにすると、字幕をクリックしても辞書を引きません。クリック透過と併用して、うっかり単語に当たるのを避けたいときに便利です。';
+      case 'gal_hook_lookup_trigger':
+        return '辞書を引くボタン';
+      case 'gal_hook_lookup_trigger_hint':
+        return 'ポインタの下の単語を引くマウスボタン。上のスイッチとは独立です：タップで引くのをオフにしたまま、サイドボタンで引けます。';
+      case 'gal_hook_lookup_trigger_left':
+        return 'Left click';
+      case 'gal_hook_lookup_trigger_middle':
+        return 'Middle click';
+      case 'gal_hook_lookup_trigger_side':
+        return 'Side button';
+      case 'gal_hook_toolbar_auto_hide':
+        return 'ツールバーを自動で隠す';
+      case 'gal_hook_toolbar_auto_hide_hint':
+        return 'ポインタが字幕枠に来るまでツールバーを隠します（LunaHook 方式）。隠すときは本当に消します——その分のピクセルはゲームに返ります。';
+      case 'gal_hook_passthrough_blocks_mouse':
+        return 'クリック透過中も字幕はクリックを受ける';
+      case 'gal_hook_passthrough_blocks_mouse_hint':
+        return 'オン：字幕の行はクリックを受け続けるので単語をタップできます。オフ：オーバーレイ全体がマウスに対して透明になり、下のものをクリックできますが、単語のタップはできなくなります。';
+      case 'floating_lyric_topmost':
+        return '常に手前に表示';
+      case 'gal_hook_fold_progressive_lines':
+        return '分割されたセリフ行をまとめる';
+      case 'gal_hook_fold_progressive_lines_hint':
+        return 'クリックのたびに行全体を描き直すエンジンがあり、同じ行が何度も取り込まれます。そのスナップショットを 1 行にまとめます。';
+      case 'gal_hook_ingame_lookup_engine_unsupported':
+        return 'このゲームエンジンはゲーム内辞書引きに未対応です';
+      case 'gal_hook_ingame_lookup_version_unsupported':
+        return 'このゲームのバージョンはまだ対応リストにありません';
+      case 'gal_hook_ingame_lookup_exe_hash_copy':
+        return 'ゲーム実行ファイルの SHA-256 をコピー';
+      case 'gal_hook_ingame_lookup_exe_hash_unavailable':
+        return 'ゲーム実行ファイルを読み取れません（権限不足の可能性）';
+      case 'gal_hook_ingame_lookup_exe_hash_copied':
+        return '実行ファイルの SHA-256 をコピーしました';
+      case 'download_tracker_section':
+        return 'トラッカー購読';
+      case 'download_tracker_auto_add':
+        return '新しいダウンロードに購読トラッカーを自動で追加する';
+      case 'download_tracker_auto_add_hint':
+        return 'リストは 6 時間キャッシュされます。購読の取得に失敗してもダウンロードは止まりません。';
+      case 'download_tracker_url':
+        return '購読 URL';
+      case 'download_tracker_refresh':
+        return 'トラッカーを取得';
+      case 'download_tracker_preview_empty':
+        return '購読を取得すると、対応している HTTP・HTTPS・UDP のトラッカーをプレビューできます。';
+      case 'download_tracker_preview_count':
+        return ({required Object count}) => '${count} 件のトラッカーを取得しました';
+      case 'download_tracker_fetch_failed':
+        return ({required Object message}) => 'トラッカーを取得できませんでした: ${message}';
+      case 'anki_connect_port_auto_fix':
+        return '空いているポートに変更';
+      case 'anki_connect_port_auto_fix_hint':
+        return '空いているポートを選び、Hibiki と Anki の AnkiConnect アドオン設定の両方に書き込みます。反映には Anki の再起動が必要です。';
+      case 'anki_connect_port_auto_fix_done':
+        return ({required Object port}) =>
+            'AnkiConnect のポートを ${port} に変更しました。Anki を再起動してからもう一度お試しください。';
+      case 'anki_connect_port_auto_fix_manual':
+        return ({required Object port}) =>
+            'Hibiki はポート ${port} を使うようになりましたが、AnkiConnect のアドオン設定が見つかりませんでした。Anki の「ツール → アドオン → AnkiConnect → 設定」で webBindPort も ${port} にしてから、Anki を再起動してください。';
+      case 'anki_connect_port_auto_fix_none':
+        return 'このマシンに空いているポートが見つかりませんでした。';
       case 'video_setting_hdr_output':
-        return 'HDR / 10-bit output';
+        return 'HDR / 10 ビット出力';
       case 'video_setting_hdr_output_hint':
-        return 'Windows only. Auto hands HDR sources straight to an HDR display through a native video window; Always uses that window for every video (10-bit output); Off keeps the standard renderer.';
+        return 'Windows のみ。「自動」はディスプレイとソースがどちらも HDR のとき、ネイティブ動画ウィンドウ経由でそのまま HDR ディスプレイへ渡します。「常に」はすべての動画でそのウィンドウを使います（10 ビット出力）。「オフ」は標準のレンダラーのままです。';
       case 'video_setting_hdr_output_auto':
-        return 'Auto';
+        return '自動';
       case 'video_setting_hdr_output_always':
-        return 'Always';
+        return '常に';
       case 'video_setting_hdr_output_off':
-        return 'Off';
+        return 'オフ';
       default:
         return null;
     }
@@ -220310,21 +222890,112 @@ extension on _StringsKo {
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => '${page}페이지까지 읽음';
       case 'mihon_store_extension_count':
-        return ({required Object count}) => '${count} extensions';
+        return ({required Object count}) => '확장 ${count}개';
       case 'mihon_extension_sources_more':
-        return ({required Object count}) => 'Show all ${count} sources';
+        return ({required Object count}) => '소스 ${count}개 모두 보기';
       case 'mihon_extension_sources_less':
-        return 'Show fewer sources';
+        return '소스 적게 보기';
+      case 'options_website':
+        return '공식 웹사이트 방문';
+      case 'video_setting_mpv_group_hdr':
+        return 'HDR';
+      case 'video_setting_hdr_tone_mapping':
+        return 'HDR 톤 매핑';
+      case 'video_setting_hdr_tone_mapping_hint':
+        return 'HDR 소스를 SDR 디스플레이에 맞출 때 쓰는 곡선입니다. ‘자동’은 mpv가 소스마다 고르게 합니다.';
+      case 'video_setting_hdr_compute_peak':
+        return '동적 피크 검출';
+      case 'video_setting_hdr_compute_peak_hint':
+        return '소스 메타데이터를 믿는 대신 프레임마다 실제 최대 밝기를 측정합니다. 하이라이트가 좋아지지만 GPU를 조금 씁니다.';
+      case 'video_setting_hdr_auto':
+        return '자동';
+      case 'video_setting_hdr_on':
+        return '켜기';
+      case 'video_setting_hdr_off':
+        return '끄기';
+      case 'video_discovery_cancel_downloads_title':
+        return '다운로드를 취소할까요?';
+      case 'video_discovery_cancel_downloads_body':
+        return ({required Object n}) =>
+            '이 작품의 다운로드 작업 ${n}개를 중지합니다. 이미 받은 조각은 디스크에 남아 있어 나중에 다시 시작할 수 있습니다.';
+      case 'video_discovery_cancel_downloads_failed':
+        return '다운로드를 취소하지 못했습니다. 작업이 이미 끝났거나 다운로드 백엔드를 사용할 수 없습니다.';
+      case 'gal_hook_click_lookup':
+        return '단어를 눌러 사전 찾기';
+      case 'gal_hook_click_lookup_hint':
+        return '끄면 자막을 클릭해도 사전을 찾지 않습니다. 클릭 통과를 켠 채로 실수로 단어를 누르고 싶지 않을 때 유용합니다.';
+      case 'gal_hook_lookup_trigger':
+        return '사전 찾기 버튼';
+      case 'gal_hook_lookup_trigger_hint':
+        return '포인터 아래 단어를 찾을 마우스 버튼입니다. 위 스위치와는 별개예요: 눌러서 찾기를 꺼도 옆 버튼으로는 찾을 수 있습니다.';
+      case 'gal_hook_lookup_trigger_left':
+        return 'Left click';
+      case 'gal_hook_lookup_trigger_middle':
+        return 'Middle click';
+      case 'gal_hook_lookup_trigger_side':
+        return 'Side button';
+      case 'gal_hook_toolbar_auto_hide':
+        return '도구 모음 자동 숨김';
+      case 'gal_hook_toolbar_auto_hide_hint':
+        return '포인터가 자막 상자에 닿을 때까지 도구 모음을 숨깁니다(LunaHook 방식). 숨긴다는 건 정말로 사라진다는 뜻이라, 그 픽셀은 게임으로 돌아갑니다.';
+      case 'gal_hook_passthrough_blocks_mouse':
+        return '클릭 통과 중에도 자막은 클릭을 받음';
+      case 'gal_hook_passthrough_blocks_mouse_hint':
+        return '켬: 자막 줄이 계속 클릭을 받아 단어를 누를 수 있습니다. 끔: 오버레이 전체가 마우스에 투명해져 아래 것을 클릭할 수 있지만, 단어 누르기는 더 이상 되지 않습니다.';
+      case 'floating_lyric_topmost':
+        return '항상 위에 표시';
+      case 'gal_hook_fold_progressive_lines':
+        return '나뉜 대사 줄 합치기';
+      case 'gal_hook_fold_progressive_lines_hint':
+        return '클릭할 때마다 줄 전체를 다시 그리는 엔진이 있어 같은 줄이 여러 번 캡처됩니다. 그 스냅숏들을 한 줄로 접습니다.';
+      case 'gal_hook_ingame_lookup_engine_unsupported':
+        return '이 게임 엔진은 아직 인게임 사전 검색을 지원하지 않습니다';
+      case 'gal_hook_ingame_lookup_version_unsupported':
+        return '이 게임 버전은 아직 지원 목록에 없습니다';
+      case 'gal_hook_ingame_lookup_exe_hash_copy':
+        return '게임 실행 파일의 SHA-256 복사';
+      case 'gal_hook_ingame_lookup_exe_hash_unavailable':
+        return '게임 실행 파일을 읽을 수 없습니다 (권한 부족일 수 있음)';
+      case 'gal_hook_ingame_lookup_exe_hash_copied':
+        return '실행 파일의 SHA-256을 복사했습니다';
+      case 'download_tracker_section':
+        return '트래커 구독';
+      case 'download_tracker_auto_add':
+        return '새 다운로드에 구독 트래커 자동 추가';
+      case 'download_tracker_auto_add_hint':
+        return '목록은 6시간 동안 캐시됩니다. 구독을 가져오지 못해도 다운로드는 중단되지 않습니다.';
+      case 'download_tracker_url':
+        return '구독 URL';
+      case 'download_tracker_refresh':
+        return '트래커 가져오기';
+      case 'download_tracker_preview_empty':
+        return '구독을 가져오면 지원되는 HTTP, HTTPS, UDP 트래커를 미리 볼 수 있습니다.';
+      case 'download_tracker_preview_count':
+        return ({required Object count}) => '트래커 ${count}개를 가져왔습니다';
+      case 'download_tracker_fetch_failed':
+        return ({required Object message}) => '트래커를 가져오지 못했습니다: ${message}';
+      case 'anki_connect_port_auto_fix':
+        return '비어 있는 포트로 변경';
+      case 'anki_connect_port_auto_fix_hint':
+        return '비어 있는 포트를 골라 Hibiki와 AnkiConnect 애드온 설정 양쪽에 기록합니다. 적용하려면 Anki를 다시 시작하세요.';
+      case 'anki_connect_port_auto_fix_done':
+        return ({required Object port}) =>
+            'AnkiConnect 포트를 ${port}(으)로 변경했습니다. Anki를 다시 시작한 뒤 다시 시도하세요.';
+      case 'anki_connect_port_auto_fix_manual':
+        return ({required Object port}) =>
+            'Hibiki는 이제 포트 ${port}를 사용하지만 AnkiConnect 애드온 설정을 찾지 못했습니다. Anki의 [도구 → 애드온 → AnkiConnect → 설정]에서 webBindPort도 ${port}로 바꾼 뒤 Anki를 다시 시작하세요.';
+      case 'anki_connect_port_auto_fix_none':
+        return '이 컴퓨터에서 비어 있는 포트를 찾지 못했습니다.';
       case 'video_setting_hdr_output':
-        return 'HDR / 10-bit output';
+        return 'HDR / 10비트 출력';
       case 'video_setting_hdr_output_hint':
-        return 'Windows only. Auto hands HDR sources straight to an HDR display through a native video window; Always uses that window for every video (10-bit output); Off keeps the standard renderer.';
+        return 'Windows 전용. «자동»은 디스플레이와 원본이 모두 HDR일 때 네이티브 동영상 창을 통해 HDR 디스플레이로 그대로 전달합니다. «항상»은 모든 동영상에 그 창을 사용합니다(10비트 출력). «끄기»는 표준 렌더러를 유지합니다.';
       case 'video_setting_hdr_output_auto':
-        return 'Auto';
+        return '자동';
       case 'video_setting_hdr_output_always':
-        return 'Always';
+        return '항상';
       case 'video_setting_hdr_output_off':
-        return 'Off';
+        return '끄기';
       default:
         return null;
     }
@@ -228287,21 +230958,113 @@ extension on _StringsNl {
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'Gelezen tot pagina ${page}';
       case 'mihon_store_extension_count':
-        return ({required Object count}) => '${count} extensions';
+        return ({required Object count}) => '${count} extensies';
       case 'mihon_extension_sources_more':
-        return ({required Object count}) => 'Show all ${count} sources';
+        return ({required Object count}) => 'Alle ${count} bronnen tonen';
       case 'mihon_extension_sources_less':
-        return 'Show fewer sources';
+        return 'Minder bronnen tonen';
+      case 'options_website':
+        return 'Officiële website bezoeken';
+      case 'video_setting_mpv_group_hdr':
+        return 'HDR';
+      case 'video_setting_hdr_tone_mapping':
+        return 'HDR-tonemapping';
+      case 'video_setting_hdr_tone_mapping_hint':
+        return 'Curve die wordt gebruikt als een HDR-bron op een SDR-scherm moet worden geperst. ‘Automatisch’ laat mpv per bron kiezen.';
+      case 'video_setting_hdr_compute_peak':
+        return 'Dynamische piekdetectie';
+      case 'video_setting_hdr_compute_peak_hint':
+        return 'Meet de echte piekhelderheid van elk beeld in plaats van te vertrouwen op de metadata van de bron. Betere highlights, kost wat GPU.';
+      case 'video_setting_hdr_auto':
+        return 'Automatisch';
+      case 'video_setting_hdr_on':
+        return 'Aan';
+      case 'video_setting_hdr_off':
+        return 'Uit';
+      case 'video_discovery_cancel_downloads_title':
+        return 'Downloads annuleren?';
+      case 'video_discovery_cancel_downloads_body':
+        return ({required Object n}) =>
+            '${n} downloadtaak/-taken voor deze titel worden gestopt. Al gedownloade delen blijven op schijf staan; je kunt de download later opnieuw starten.';
+      case 'video_discovery_cancel_downloads_failed':
+        return 'Kon de download niet annuleren. De taak is mogelijk al klaar, of de download-backend is niet beschikbaar.';
+      case 'gal_hook_click_lookup':
+        return 'Tik op een woord om het op te zoeken';
+      case 'gal_hook_click_lookup_hint':
+        return 'Uit betekent dat klikken op de tekst nooit een opzoeking start — handig met doorklikken aan, als je niet per ongeluk een woord wilt raken.';
+      case 'gal_hook_lookup_trigger':
+        return 'Opzoekknop';
+      case 'gal_hook_lookup_trigger_hint':
+        return 'Welke muisknop het woord onder de aanwijzer opzoekt. Los van de schakelaar hierboven: je kunt tikken-om-op-te-zoeken uitzetten en toch met een zijknop opzoeken.';
+      case 'gal_hook_lookup_trigger_left':
+        return 'Left click';
+      case 'gal_hook_lookup_trigger_middle':
+        return 'Middle click';
+      case 'gal_hook_lookup_trigger_side':
+        return 'Side button';
+      case 'gal_hook_toolbar_auto_hide':
+        return 'Werkbalk automatisch verbergen';
+      case 'gal_hook_toolbar_auto_hide_hint':
+        return 'Verbergt de werkbalk tot de aanwijzer het tekstvak bereikt, zoals LunaHook. Verborgen is echt verborgen — die pixels gaan terug naar het spel.';
+      case 'gal_hook_passthrough_blocks_mouse':
+        return 'Tekst vangt nog klikken tijdens doorklikken';
+      case 'gal_hook_passthrough_blocks_mouse_hint':
+        return 'Aan: tekstregels blijven klikken aannemen, zodat je een woord kunt aantikken. Uit: de hele overlay is transparant voor de muis — je klikt wat eronder ligt, maar woorden aantikken werkt niet meer.';
+      case 'floating_lyric_topmost':
+        return 'Altijd op de voorgrond';
+      case 'gal_hook_fold_progressive_lines':
+        return 'Opgesplitste dialoogregels samenvoegen';
+      case 'gal_hook_fold_progressive_lines_hint':
+        return 'Sommige engines tekenen bij elke klik de hele regel opnieuw, waardoor één regel meerdere keren wordt vastgelegd. Vouw die momentopnamen samen tot één regel.';
+      case 'gal_hook_ingame_lookup_engine_unsupported':
+        return 'Deze game-engine ondersteunt opzoeken in het spel nog niet';
+      case 'gal_hook_ingame_lookup_version_unsupported':
+        return 'Deze spelversie staat nog niet op de lijst met ondersteunde versies';
+      case 'gal_hook_ingame_lookup_exe_hash_copy':
+        return 'SHA-256 van het spelbestand kopiëren';
+      case 'gal_hook_ingame_lookup_exe_hash_unavailable':
+        return 'Kan het spelbestand niet lezen';
+      case 'gal_hook_ingame_lookup_exe_hash_copied':
+        return 'SHA-256 van het spelbestand gekopieerd';
+      case 'download_tracker_section':
+        return 'Tracker-abonnement';
+      case 'download_tracker_auto_add':
+        return 'Geabonneerde trackers automatisch aan nieuwe downloads toevoegen';
+      case 'download_tracker_auto_add_hint':
+        return 'De lijst wordt 6 uur gecachet. Een mislukt abonnement blokkeert de download niet.';
+      case 'download_tracker_url':
+        return 'Abonnements-URL';
+      case 'download_tracker_refresh':
+        return 'Trackers ophalen';
+      case 'download_tracker_preview_empty':
+        return 'Haal het abonnement op om de ondersteunde HTTP-, HTTPS- en UDP-trackers te bekijken.';
+      case 'download_tracker_preview_count':
+        return ({required Object count}) => '${count} trackers opgehaald';
+      case 'download_tracker_fetch_failed':
+        return ({required Object message}) =>
+            'Kan de trackers niet ophalen: ${message}';
+      case 'anki_connect_port_auto_fix':
+        return 'Naar een vrije poort wisselen';
+      case 'anki_connect_port_auto_fix_hint':
+        return 'Kiest een vrije poort en schrijft die zowel in Hibiki als in de AnkiConnect-add-onconfiguratie. Herstart Anki om het toe te passen.';
+      case 'anki_connect_port_auto_fix_done':
+        return ({required Object port}) =>
+            'AnkiConnect gebruikt nu poort ${port}. Herstart Anki en probeer het opnieuw.';
+      case 'anki_connect_port_auto_fix_manual':
+        return ({required Object port}) =>
+            'Hibiki gebruikt nu poort ${port}, maar de AnkiConnect-add-onconfiguratie is niet gevonden. Zet webBindPort in Anki (Extra → Add-ons → AnkiConnect → Configuratie) ook op ${port} en herstart Anki.';
+      case 'anki_connect_port_auto_fix_none':
+        return 'Geen vrije poort gevonden op deze machine.';
       case 'video_setting_hdr_output':
-        return 'HDR / 10-bit output';
+        return 'HDR-/10-bits-uitvoer';
       case 'video_setting_hdr_output_hint':
-        return 'Windows only. Auto hands HDR sources straight to an HDR display through a native video window; Always uses that window for every video (10-bit output); Off keeps the standard renderer.';
+        return 'Alleen Windows. «Automatisch» stuurt HDR-bronnen via een native videovenster rechtstreeks naar een HDR-scherm; «Altijd» gebruikt dat venster voor elke video (10-bits uitvoer); «Uit» houdt de standaardrenderer aan.';
       case 'video_setting_hdr_output_auto':
-        return 'Auto';
+        return 'Automatisch';
       case 'video_setting_hdr_output_always':
-        return 'Always';
+        return 'Altijd';
       case 'video_setting_hdr_output_off':
-        return 'Off';
+        return 'Uit';
       default:
         return null;
     }
@@ -236259,21 +239022,113 @@ extension on _StringsPtBr {
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'Lido até a página ${page}';
       case 'mihon_store_extension_count':
-        return ({required Object count}) => '${count} extensions';
+        return ({required Object count}) => '${count} extensões';
       case 'mihon_extension_sources_more':
-        return ({required Object count}) => 'Show all ${count} sources';
+        return ({required Object count}) => 'Mostrar todas as ${count} fontes';
       case 'mihon_extension_sources_less':
-        return 'Show fewer sources';
+        return 'Mostrar menos fontes';
+      case 'options_website':
+        return 'Visitar o site oficial';
+      case 'video_setting_mpv_group_hdr':
+        return 'HDR';
+      case 'video_setting_hdr_tone_mapping':
+        return 'Mapeamento de tons HDR';
+      case 'video_setting_hdr_tone_mapping_hint':
+        return 'Curva usada quando uma fonte HDR precisa ser comprimida para uma tela SDR. “Automático” deixa o mpv escolher por fonte.';
+      case 'video_setting_hdr_compute_peak':
+        return 'Detecção dinâmica de pico';
+      case 'video_setting_hdr_compute_peak_hint':
+        return 'Mede o pico real de brilho de cada quadro em vez de confiar nos metadados da fonte. Melhores altas-luzes, com algum custo de GPU.';
+      case 'video_setting_hdr_auto':
+        return 'Automático';
+      case 'video_setting_hdr_on':
+        return 'Ligado';
+      case 'video_setting_hdr_off':
+        return 'Desligado';
+      case 'video_discovery_cancel_downloads_title':
+        return 'Cancelar os downloads?';
+      case 'video_discovery_cancel_downloads_body':
+        return ({required Object n}) =>
+            '${n} tarefa(s) de download deste título serão interrompidas. As partes já baixadas continuam no disco; você pode recomeçar o download depois.';
+      case 'video_discovery_cancel_downloads_failed':
+        return 'Não foi possível cancelar o download. A tarefa pode já ter terminado, ou o backend de download está indisponível.';
+      case 'gal_hook_click_lookup':
+        return 'Toque numa palavra para consultá-la';
+      case 'gal_hook_click_lookup_hint':
+        return 'Desligado: cliques na legenda nunca iniciam uma consulta — útil com o clique passante ligado, quando você prefere não acertar uma palavra sem querer.';
+      case 'gal_hook_lookup_trigger':
+        return 'Gatilho da consulta';
+      case 'gal_hook_lookup_trigger_hint':
+        return 'Qual botão do mouse consulta a palavra sob o ponteiro. Independente da chave acima: você pode desligar o toque-para-consultar e ainda consultar com um botão lateral.';
+      case 'gal_hook_lookup_trigger_left':
+        return 'Left click';
+      case 'gal_hook_lookup_trigger_middle':
+        return 'Middle click';
+      case 'gal_hook_lookup_trigger_side':
+        return 'Side button';
+      case 'gal_hook_toolbar_auto_hide':
+        return 'Ocultar a barra automaticamente';
+      case 'gal_hook_toolbar_auto_hide_hint':
+        return 'Oculta a barra até o ponteiro chegar à caixa de legenda, no estilo do LunaHook. Oculto significa oculto de verdade — aqueles pixels voltam para o jogo.';
+      case 'gal_hook_passthrough_blocks_mouse':
+        return 'A legenda ainda recebe cliques durante o clique passante';
+      case 'gal_hook_passthrough_blocks_mouse_hint':
+        return 'Ligado: as linhas de texto continuam recebendo cliques, então você pode tocar numa palavra. Desligado: toda a sobreposição fica transparente ao mouse — você clica no que está embaixo, mas tocar palavras não funciona mais.';
+      case 'floating_lyric_topmost':
+        return 'Manter sempre visível';
+      case 'gal_hook_fold_progressive_lines':
+        return 'Unir linhas de diálogo divididas';
+      case 'gal_hook_fold_progressive_lines_hint':
+        return 'Alguns motores redesenham a linha inteira a cada clique, então a mesma linha é capturada várias vezes. Dobre esses instantâneos em uma única linha.';
+      case 'gal_hook_ingame_lookup_engine_unsupported':
+        return 'Este motor de jogo ainda não oferece suporte à busca dentro do jogo';
+      case 'gal_hook_ingame_lookup_version_unsupported':
+        return 'Esta versão do jogo ainda não está na lista de compatíveis';
+      case 'gal_hook_ingame_lookup_exe_hash_copy':
+        return 'Copiar o SHA-256 do executável do jogo';
+      case 'gal_hook_ingame_lookup_exe_hash_unavailable':
+        return 'Não foi possível ler o executável do jogo';
+      case 'gal_hook_ingame_lookup_exe_hash_copied':
+        return 'SHA-256 do executável copiado';
+      case 'download_tracker_section':
+        return 'Assinatura de trackers';
+      case 'download_tracker_auto_add':
+        return 'Adicionar automaticamente os trackers da assinatura aos novos downloads';
+      case 'download_tracker_auto_add_hint':
+        return 'A lista fica em cache por 6 horas. Uma falha na assinatura não bloqueia o download.';
+      case 'download_tracker_url':
+        return 'URL da assinatura';
+      case 'download_tracker_refresh':
+        return 'Buscar trackers';
+      case 'download_tracker_preview_empty':
+        return 'Busque a assinatura para pré-visualizar os trackers HTTP, HTTPS e UDP compatíveis.';
+      case 'download_tracker_preview_count':
+        return ({required Object count}) => '${count} trackers obtidos';
+      case 'download_tracker_fetch_failed':
+        return ({required Object message}) =>
+            'Não foi possível buscar os trackers: ${message}';
+      case 'anki_connect_port_auto_fix':
+        return 'Mudar para uma porta livre';
+      case 'anki_connect_port_auto_fix_hint':
+        return 'Escolhe uma porta livre e a grava tanto no Hibiki quanto na configuração do complemento AnkiConnect. Reinicie o Anki para aplicar.';
+      case 'anki_connect_port_auto_fix_done':
+        return ({required Object port}) =>
+            'O AnkiConnect agora usa a porta ${port}. Reinicie o Anki e tente novamente.';
+      case 'anki_connect_port_auto_fix_manual':
+        return ({required Object port}) =>
+            'O Hibiki agora usa a porta ${port}, mas a configuração do complemento AnkiConnect não foi encontrada. Defina webBindPort como ${port} no Anki (Ferramentas → Complementos → AnkiConnect → Configuração) e reinicie o Anki.';
+      case 'anki_connect_port_auto_fix_none':
+        return 'Nenhuma porta livre encontrada nesta máquina.';
       case 'video_setting_hdr_output':
-        return 'HDR / 10-bit output';
+        return 'Saída HDR / 10 bits';
       case 'video_setting_hdr_output_hint':
-        return 'Windows only. Auto hands HDR sources straight to an HDR display through a native video window; Always uses that window for every video (10-bit output); Off keeps the standard renderer.';
+        return 'Somente no Windows. «Automático» entrega fontes HDR direto a uma tela HDR por uma janela de vídeo nativa; «Sempre» usa essa janela para todos os vídeos (saída de 10 bits); «Desligado» mantém o renderizador padrão.';
       case 'video_setting_hdr_output_auto':
-        return 'Auto';
+        return 'Automático';
       case 'video_setting_hdr_output_always':
-        return 'Always';
+        return 'Sempre';
       case 'video_setting_hdr_output_off':
-        return 'Off';
+        return 'Desligado';
       default:
         return null;
     }
@@ -244237,21 +247092,113 @@ extension on _StringsRu {
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'Прочитано до страницы ${page}';
       case 'mihon_store_extension_count':
-        return ({required Object count}) => '${count} extensions';
+        return ({required Object count}) => 'Расширений: ${count}';
       case 'mihon_extension_sources_more':
-        return ({required Object count}) => 'Show all ${count} sources';
+        return ({required Object count}) => 'Показать все источники (${count})';
       case 'mihon_extension_sources_less':
-        return 'Show fewer sources';
+        return 'Показать меньше источников';
+      case 'options_website':
+        return 'Открыть официальный сайт';
+      case 'video_setting_mpv_group_hdr':
+        return 'HDR';
+      case 'video_setting_hdr_tone_mapping':
+        return 'Тональное отображение HDR';
+      case 'video_setting_hdr_tone_mapping_hint':
+        return 'Кривая, по которой HDR-источник укладывается в SDR-экран. «Авто» оставляет выбор за mpv для каждого источника.';
+      case 'video_setting_hdr_compute_peak':
+        return 'Динамическое определение пика';
+      case 'video_setting_hdr_compute_peak_hint':
+        return 'Измеряет реальную пиковую яркость каждого кадра вместо доверия метаданным источника. Света лучше, но нагружает GPU.';
+      case 'video_setting_hdr_auto':
+        return 'Авто';
+      case 'video_setting_hdr_on':
+        return 'Вкл.';
+      case 'video_setting_hdr_off':
+        return 'Выкл.';
+      case 'video_discovery_cancel_downloads_title':
+        return 'Отменить загрузки?';
+      case 'video_discovery_cancel_downloads_body':
+        return ({required Object n}) =>
+            'Будет остановлено загрузок для этого тайтла: ${n}. Уже скачанные части останутся на диске — загрузку можно начать снова позже.';
+      case 'video_discovery_cancel_downloads_failed':
+        return 'Не удалось отменить загрузку. Возможно, задача уже завершилась или бэкенд загрузок недоступен.';
+      case 'gal_hook_click_lookup':
+        return 'Нажмите на слово, чтобы найти его';
+      case 'gal_hook_click_lookup_hint':
+        return 'Выключено — клики по субтитрам никогда не запускают поиск. Удобно вместе с включённым сквозным кликом, когда не хочется случайно попасть по слову.';
+      case 'gal_hook_lookup_trigger':
+        return 'Кнопка поиска';
+      case 'gal_hook_lookup_trigger_hint':
+        return 'Какая кнопка мыши ищет слово под указателем. Не зависит от переключателя выше: можно выключить поиск по нажатию и всё равно искать боковой кнопкой.';
+      case 'gal_hook_lookup_trigger_left':
+        return 'Left click';
+      case 'gal_hook_lookup_trigger_middle':
+        return 'Middle click';
+      case 'gal_hook_lookup_trigger_side':
+        return 'Side button';
+      case 'gal_hook_toolbar_auto_hide':
+        return 'Автоматически скрывать панель';
+      case 'gal_hook_toolbar_auto_hide_hint':
+        return 'Скрывает панель, пока указатель не дойдёт до блока субтитров — как в LunaHook. Скрыто значит скрыто по-настоящему: эти пиксели возвращаются игре.';
+      case 'gal_hook_passthrough_blocks_mouse':
+        return 'Субтитры продолжают ловить клики при сквозном клике';
+      case 'gal_hook_passthrough_blocks_mouse_hint':
+        return 'Вкл.: строки текста по-прежнему принимают клики, поэтому по слову можно нажать. Выкл.: весь оверлей прозрачен для мыши — вы кликаете то, что под ним, но нажатие по словам больше не работает.';
+      case 'floating_lyric_topmost':
+        return 'Поверх других окон';
+      case 'gal_hook_fold_progressive_lines':
+        return 'Объединять разбитые строки диалога';
+      case 'gal_hook_fold_progressive_lines_hint':
+        return 'Некоторые движки перерисовывают строку целиком при каждом клике, поэтому одна строка захватывается несколько раз. Сворачивать такие снимки в одну строку.';
+      case 'gal_hook_ingame_lookup_engine_unsupported':
+        return 'Этот движок игры пока не поддерживает поиск внутри игры';
+      case 'gal_hook_ingame_lookup_version_unsupported':
+        return 'Эта версия игры пока не в списке поддерживаемых';
+      case 'gal_hook_ingame_lookup_exe_hash_copy':
+        return 'Скопировать SHA-256 исполняемого файла игры';
+      case 'gal_hook_ingame_lookup_exe_hash_unavailable':
+        return 'Не удалось прочитать исполняемый файл игры';
+      case 'gal_hook_ingame_lookup_exe_hash_copied':
+        return 'SHA-256 исполняемого файла скопирован';
+      case 'download_tracker_section':
+        return 'Подписка на трекеры';
+      case 'download_tracker_auto_add':
+        return 'Автоматически добавлять трекеры из подписки в новые загрузки';
+      case 'download_tracker_auto_add_hint':
+        return 'Список кэшируется на 6 часов. Сбой подписки не блокирует загрузку.';
+      case 'download_tracker_url':
+        return 'URL подписки';
+      case 'download_tracker_refresh':
+        return 'Получить трекеры';
+      case 'download_tracker_preview_empty':
+        return 'Получите подписку, чтобы посмотреть поддерживаемые трекеры HTTP, HTTPS и UDP.';
+      case 'download_tracker_preview_count':
+        return ({required Object count}) => 'Получено трекеров: ${count}';
+      case 'download_tracker_fetch_failed':
+        return ({required Object message}) =>
+            'Не удалось получить трекеры: ${message}';
+      case 'anki_connect_port_auto_fix':
+        return 'Выбрать свободный порт';
+      case 'anki_connect_port_auto_fix_hint':
+        return 'Подбирает свободный порт и записывает его и в Hibiki, и в настройки дополнения AnkiConnect. Перезапустите Anki, чтобы изменения вступили в силу.';
+      case 'anki_connect_port_auto_fix_done':
+        return ({required Object port}) =>
+            'AnkiConnect переключён на порт ${port}. Перезапустите Anki и повторите попытку.';
+      case 'anki_connect_port_auto_fix_manual':
+        return ({required Object port}) =>
+            'Hibiki теперь использует порт ${port}, но настройки дополнения AnkiConnect не найдены. Укажите webBindPort равным ${port} в Anki (Инструменты → Дополнения → AnkiConnect → Настройка) и перезапустите Anki.';
+      case 'anki_connect_port_auto_fix_none':
+        return 'На этом компьютере не найдено свободных портов.';
       case 'video_setting_hdr_output':
-        return 'HDR / 10-bit output';
+        return 'Вывод HDR / 10 бит';
       case 'video_setting_hdr_output_hint':
-        return 'Windows only. Auto hands HDR sources straight to an HDR display through a native video window; Always uses that window for every video (10-bit output); Off keeps the standard renderer.';
+        return 'Только Windows. «Авто» передаёт HDR-источники прямо на HDR-дисплей через нативное окно видео; «Всегда» использует это окно для любого видео (10-битный вывод); «Выключено» оставляет обычный рендерер.';
       case 'video_setting_hdr_output_auto':
-        return 'Auto';
+        return 'Авто';
       case 'video_setting_hdr_output_always':
-        return 'Always';
+        return 'Всегда';
       case 'video_setting_hdr_output_off':
-        return 'Off';
+        return 'Выключено';
       default:
         return null;
     }
@@ -252187,21 +255134,114 @@ extension on _StringsTh {
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'อ่านถึงหน้า ${page}';
       case 'mihon_store_extension_count':
-        return ({required Object count}) => '${count} extensions';
+        return ({required Object count}) => 'ส่วนขยาย ${count} รายการ';
       case 'mihon_extension_sources_more':
-        return ({required Object count}) => 'Show all ${count} sources';
+        return ({required Object count}) => 'แสดงแหล่งทั้งหมด ${count} แหล่ง';
       case 'mihon_extension_sources_less':
-        return 'Show fewer sources';
+        return 'แสดงแหล่งน้อยลง';
+      case 'options_website':
+        return 'เยี่ยมชมเว็บไซต์ทางการ';
+      case 'video_setting_mpv_group_hdr':
+        return 'HDR';
+      case 'video_setting_hdr_tone_mapping':
+        return 'การแมปโทน HDR';
+      case 'video_setting_hdr_tone_mapping_hint':
+        return 'เส้นโค้งที่ใช้เมื่อต้องบีบแหล่ง HDR ลงบนจอ SDR "อัตโนมัติ" ให้ mpv เลือกตามแต่ละแหล่ง';
+      case 'video_setting_hdr_compute_peak':
+        return 'ตรวจจับจุดสว่างสุดแบบไดนามิก';
+      case 'video_setting_hdr_compute_peak_hint':
+        return 'วัดความสว่างสูงสุดจริงของแต่ละเฟรมแทนการเชื่อเมตาดาตาของแหล่ง ไฮไลต์ดีขึ้นแต่กิน GPU เล็กน้อย';
+      case 'video_setting_hdr_auto':
+        return 'อัตโนมัติ';
+      case 'video_setting_hdr_on':
+        return 'เปิด';
+      case 'video_setting_hdr_off':
+        return 'ปิด';
+      case 'video_discovery_cancel_downloads_title':
+        return 'ยกเลิกการดาวน์โหลดไหม';
+      case 'video_discovery_cancel_downloads_body':
+        return ({required Object n}) =>
+            'งานดาวน์โหลดของเรื่องนี้ ${n} งานจะถูกหยุด ส่วนที่ดาวน์โหลดไปแล้วยังอยู่ในดิสก์ และเริ่มดาวน์โหลดใหม่ได้ภายหลัง';
+      case 'video_discovery_cancel_downloads_failed':
+        return 'ยกเลิกการดาวน์โหลดไม่สำเร็จ งานอาจเสร็จไปแล้ว หรือแบ็กเอนด์ดาวน์โหลดใช้งานไม่ได้';
+      case 'gal_hook_click_lookup':
+        return 'แตะคำเพื่อเปิดพจนานุกรม';
+      case 'gal_hook_click_lookup_hint':
+        return 'ปิดไว้หมายความว่าการคลิกบนคำบรรยายจะไม่เปิดพจนานุกรม มีประโยชน์เมื่อเปิดคลิกทะลุ และคุณไม่อยากเผลอโดนคำ';
+      case 'gal_hook_lookup_trigger':
+        return 'ปุ่มเปิดพจนานุกรม';
+      case 'gal_hook_lookup_trigger_hint':
+        return 'ปุ่มเมาส์ที่ใช้เปิดคำใต้ตัวชี้ แยกจากสวิตช์ด้านบน คุณปิดการแตะเพื่อเปิดได้ แล้วยังใช้ปุ่มข้างเปิดได้อยู่';
+      case 'gal_hook_lookup_trigger_left':
+        return 'Left click';
+      case 'gal_hook_lookup_trigger_middle':
+        return 'Middle click';
+      case 'gal_hook_lookup_trigger_side':
+        return 'Side button';
+      case 'gal_hook_toolbar_auto_hide':
+        return 'ซ่อนแถบเครื่องมืออัตโนมัติ';
+      case 'gal_hook_toolbar_auto_hide_hint':
+        return 'ซ่อนแถบเครื่องมือจนกว่าตัวชี้จะถึงกล่องคำบรรยาย แบบ LunaHook ซ่อนคือซ่อนจริง ๆ พิกเซลเหล่านั้นคืนให้เกม';
+      case 'gal_hook_passthrough_blocks_mouse':
+        return 'คำบรรยายยังรับคลิกขณะคลิกทะลุ';
+      case 'gal_hook_passthrough_blocks_mouse_hint':
+        return 'เปิด: บรรทัดข้อความยังรับคลิก จึงแตะคำได้ ปิด: โอเวอร์เลย์ทั้งหมดโปร่งต่อเมาส์ คุณคลิกสิ่งที่อยู่ข้างล่างได้ แต่แตะคำจะไม่ทำงานอีก';
+      case 'floating_lyric_topmost':
+        return 'อยู่ด้านบนเสมอ';
+      case 'gal_hook_fold_progressive_lines':
+        return 'รวมบรรทัดบทสนทนาที่ถูกแบ่ง';
+      case 'gal_hook_fold_progressive_lines_hint':
+        return 'บางเอนจินวาดทั้งบรรทัดใหม่ทุกครั้งที่คลิก ทำให้บรรทัดเดียวถูกเก็บหลายครั้ง ให้ยุบสแนปช็อตเหล่านั้นเป็นบรรทัดเดียว';
+      case 'gal_hook_ingame_lookup_engine_unsupported':
+        return 'เอนจินเกมนี้ยังไม่รองรับการเปิดพจนานุกรมในเกม';
+      case 'gal_hook_ingame_lookup_version_unsupported':
+        return 'เกมเวอร์ชันนี้ยังไม่อยู่ในรายการที่รองรับ';
+      case 'gal_hook_ingame_lookup_exe_hash_copy':
+        return 'คัดลอก SHA-256 ของไฟล์เกม';
+      case 'gal_hook_ingame_lookup_exe_hash_unavailable':
+        return 'อ่านไฟล์เกมไม่ได้';
+      case 'gal_hook_ingame_lookup_exe_hash_copied':
+        return 'คัดลอก SHA-256 ของไฟล์เกมแล้ว';
+      case 'download_tracker_section':
+        return 'การสมัครรับแทร็กเกอร์';
+      case 'download_tracker_auto_add':
+        return 'เพิ่มแทร็กเกอร์จากการสมัครรับลงในดาวน์โหลดใหม่โดยอัตโนมัติ';
+      case 'download_tracker_auto_add_hint':
+        return 'รายการจะถูกแคชไว้ 6 ชั่วโมง หากดึงรายการไม่สำเร็จก็จะไม่ขัดขวางการดาวน์โหลด';
+      case 'download_tracker_url':
+        return 'URL การสมัครรับ';
+      case 'download_tracker_refresh':
+        return 'ดึงแทร็กเกอร์';
+      case 'download_tracker_preview_empty':
+        return 'ดึงรายการที่สมัครรับเพื่อดูตัวอย่างแทร็กเกอร์ HTTP, HTTPS และ UDP ที่รองรับ';
+      case 'download_tracker_preview_count':
+        return ({required Object count}) =>
+            'ดึงแทร็กเกอร์มาแล้ว ${count} รายการ';
+      case 'download_tracker_fetch_failed':
+        return ({required Object message}) =>
+            'ดึงแทร็กเกอร์ไม่สำเร็จ: ${message}';
+      case 'anki_connect_port_auto_fix':
+        return 'เปลี่ยนไปใช้พอร์ตที่ว่าง';
+      case 'anki_connect_port_auto_fix_hint':
+        return 'เลือกพอร์ตที่ว่างแล้วเขียนลงทั้งใน Hibiki และการตั้งค่าส่วนเสริม AnkiConnect รีสตาร์ท Anki เพื่อให้มีผล';
+      case 'anki_connect_port_auto_fix_done':
+        return ({required Object port}) =>
+            'เปลี่ยนพอร์ตของ AnkiConnect เป็น ${port} แล้ว รีสตาร์ท Anki แล้วลองอีกครั้ง';
+      case 'anki_connect_port_auto_fix_manual':
+        return ({required Object port}) =>
+            'ตอนนี้ Hibiki ใช้พอร์ต ${port} แล้ว แต่ไม่พบการตั้งค่าส่วนเสริม AnkiConnect โปรดตั้ง webBindPort เป็น ${port} ใน Anki (เครื่องมือ → ส่วนเสริม → AnkiConnect → การตั้งค่า) แล้วรีสตาร์ท Anki';
+      case 'anki_connect_port_auto_fix_none':
+        return 'ไม่พบพอร์ตที่ว่างบนเครื่องนี้';
       case 'video_setting_hdr_output':
-        return 'HDR / 10-bit output';
+        return 'เอาต์พุต HDR / 10 บิต';
       case 'video_setting_hdr_output_hint':
-        return 'Windows only. Auto hands HDR sources straight to an HDR display through a native video window; Always uses that window for every video (10-bit output); Off keeps the standard renderer.';
+        return 'เฉพาะ Windows «อัตโนมัติ» ส่งแหล่งภาพ HDR ตรงไปยังจอ HDR ผ่านหน้าต่างวิดีโอดั้งเดิม «เสมอ» ใช้หน้าต่างนั้นกับทุกวิดีโอ (เอาต์พุต 10 บิต) «ปิด» คงตัวเรนเดอร์มาตรฐานไว้';
       case 'video_setting_hdr_output_auto':
-        return 'Auto';
+        return 'อัตโนมัติ';
       case 'video_setting_hdr_output_always':
-        return 'Always';
+        return 'เสมอ';
       case 'video_setting_hdr_output_off':
-        return 'Off';
+        return 'ปิด';
       default:
         return null;
     }
@@ -260154,21 +263194,113 @@ extension on _StringsTr {
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => '${page}. sayfaya kadar okundu';
       case 'mihon_store_extension_count':
-        return ({required Object count}) => '${count} extensions';
+        return ({required Object count}) => '${count} uzantı';
       case 'mihon_extension_sources_more':
-        return ({required Object count}) => 'Show all ${count} sources';
+        return ({required Object count}) => '${count} kaynağın tümünü göster';
       case 'mihon_extension_sources_less':
-        return 'Show fewer sources';
+        return 'Daha az kaynak göster';
+      case 'options_website':
+        return 'Resmî web sitesini ziyaret et';
+      case 'video_setting_mpv_group_hdr':
+        return 'HDR';
+      case 'video_setting_hdr_tone_mapping':
+        return 'HDR ton eşleme';
+      case 'video_setting_hdr_tone_mapping_hint':
+        return 'Bir HDR kaynağı SDR ekrana sıkıştırılırken kullanılan eğri. “Otomatik” seçimi kaynak başına mpv’ye bırakır.';
+      case 'video_setting_hdr_compute_peak':
+        return 'Dinamik tepe algılama';
+      case 'video_setting_hdr_compute_peak_hint':
+        return 'Kaynağın üstverisine güvenmek yerine her karenin gerçek tepe parlaklığını ölçer. Parlak alanlar daha iyi olur, biraz GPU harcar.';
+      case 'video_setting_hdr_auto':
+        return 'Otomatik';
+      case 'video_setting_hdr_on':
+        return 'Açık';
+      case 'video_setting_hdr_off':
+        return 'Kapalı';
+      case 'video_discovery_cancel_downloads_title':
+        return 'İndirmeler iptal edilsin mi?';
+      case 'video_discovery_cancel_downloads_body':
+        return ({required Object n}) =>
+            'Bu yapım için ${n} indirme görevi durdurulacak. İndirilmiş parçalar diskte kalır; indirmeyi sonra yeniden başlatabilirsin.';
+      case 'video_discovery_cancel_downloads_failed':
+        return 'İndirme iptal edilemedi. Görev çoktan bitmiş olabilir ya da indirme arka ucu kullanılamıyor.';
+      case 'gal_hook_click_lookup':
+        return 'Aramak için bir kelimeye dokun';
+      case 'gal_hook_click_lookup_hint':
+        return 'Kapalı olduğunda altyazıya tıklamak hiçbir zaman arama başlatmaz — tıklama geçişi açıkken yanlışlıkla bir kelimeye denk gelmek istemediğinde kullanışlı.';
+      case 'gal_hook_lookup_trigger':
+        return 'Arama tetikleyicisi';
+      case 'gal_hook_lookup_trigger_hint':
+        return 'İmlecin altındaki kelimeyi hangi fare düğmesinin arayacağı. Yukarıdaki anahtardan bağımsızdır: dokunarak aramayı kapatıp yan düğmeyle arayabilirsin.';
+      case 'gal_hook_lookup_trigger_left':
+        return 'Left click';
+      case 'gal_hook_lookup_trigger_middle':
+        return 'Middle click';
+      case 'gal_hook_lookup_trigger_side':
+        return 'Side button';
+      case 'gal_hook_toolbar_auto_hide':
+        return 'Araç çubuğunu otomatik gizle';
+      case 'gal_hook_toolbar_auto_hide_hint':
+        return 'İmleç altyazı kutusuna gelene kadar araç çubuğunu gizler, LunaHook tarzı. Gizli gerçekten gizli demek — o pikseller oyuna geri döner.';
+      case 'gal_hook_passthrough_blocks_mouse':
+        return 'Tıklama geçişi açıkken altyazı yine tıklama alır';
+      case 'gal_hook_passthrough_blocks_mouse_hint':
+        return 'Açık: metin satırları tıklama almaya devam eder, böylece bir kelimeye dokunabilirsin. Kapalı: tüm katman fareye saydamdır — altındakine tıklarsın ama kelimelere dokunmak artık çalışmaz.';
+      case 'floating_lyric_topmost':
+        return 'Her zaman üstte tut';
+      case 'gal_hook_fold_progressive_lines':
+        return 'Bölünmüş diyalog satırlarını birleştir';
+      case 'gal_hook_fold_progressive_lines_hint':
+        return 'Bazı motorlar her tıklamada satırın tamamını yeniden çizer, bu yüzden tek bir satır birkaç kez yakalanır. Bu anlık görüntüleri tek satırda topla.';
+      case 'gal_hook_ingame_lookup_engine_unsupported':
+        return 'Bu oyun motoru henüz oyun içi sözlük aramasını desteklemiyor';
+      case 'gal_hook_ingame_lookup_version_unsupported':
+        return 'Bu oyun sürümü henüz desteklenenler listesinde değil';
+      case 'gal_hook_ingame_lookup_exe_hash_copy':
+        return 'Oyun çalıştırılabilir dosyasının SHA-256 değerini kopyala';
+      case 'gal_hook_ingame_lookup_exe_hash_unavailable':
+        return 'Oyun çalıştırılabilir dosyası okunamadı';
+      case 'gal_hook_ingame_lookup_exe_hash_copied':
+        return 'Çalıştırılabilir dosyanın SHA-256 değeri kopyalandı';
+      case 'download_tracker_section':
+        return 'Tracker aboneliği';
+      case 'download_tracker_auto_add':
+        return 'Abonelikteki trackerları yeni indirmelere otomatik ekle';
+      case 'download_tracker_auto_add_hint':
+        return 'Liste 6 saat önbellekte tutulur. Abonelik alınamazsa indirme engellenmez.';
+      case 'download_tracker_url':
+        return 'Abonelik adresi';
+      case 'download_tracker_refresh':
+        return 'Trackerları getir';
+      case 'download_tracker_preview_empty':
+        return 'Desteklenen HTTP, HTTPS ve UDP trackerlarını önizlemek için aboneliği getir.';
+      case 'download_tracker_preview_count':
+        return ({required Object count}) => '${count} tracker getirildi';
+      case 'download_tracker_fetch_failed':
+        return ({required Object message}) =>
+            'Trackerlar getirilemedi: ${message}';
+      case 'anki_connect_port_auto_fix':
+        return 'Boş bir bağlantı noktasına geç';
+      case 'anki_connect_port_auto_fix_hint':
+        return 'Boş bir bağlantı noktası seçip hem Hibiki\'ye hem de AnkiConnect eklenti yapılandırmasına yazar. Uygulamak için Anki\'yi yeniden başlatın.';
+      case 'anki_connect_port_auto_fix_done':
+        return ({required Object port}) =>
+            'AnkiConnect artık ${port} bağlantı noktasını kullanıyor. Anki\'yi yeniden başlatıp tekrar deneyin.';
+      case 'anki_connect_port_auto_fix_manual':
+        return ({required Object port}) =>
+            'Hibiki artık ${port} bağlantı noktasını kullanıyor ancak AnkiConnect eklenti yapılandırması bulunamadı. Anki\'de (Araçlar → Eklentiler → AnkiConnect → Yapılandırma) webBindPort değerini de ${port} yapıp Anki\'yi yeniden başlatın.';
+      case 'anki_connect_port_auto_fix_none':
+        return 'Bu makinede boş bağlantı noktası bulunamadı.';
       case 'video_setting_hdr_output':
-        return 'HDR / 10-bit output';
+        return 'HDR / 10 bit çıkış';
       case 'video_setting_hdr_output_hint':
-        return 'Windows only. Auto hands HDR sources straight to an HDR display through a native video window; Always uses that window for every video (10-bit output); Off keeps the standard renderer.';
+        return 'Yalnızca Windows. «Otomatik», HDR kaynakları yerel bir video penceresi üzerinden doğrudan HDR ekrana verir; «Her zaman» bu pencereyi tüm videolar için kullanır (10 bit çıkış); «Kapalı» standart işleyiciyi korur.';
       case 'video_setting_hdr_output_auto':
-        return 'Auto';
+        return 'Otomatik';
       case 'video_setting_hdr_output_always':
-        return 'Always';
+        return 'Her zaman';
       case 'video_setting_hdr_output_off':
-        return 'Off';
+        return 'Kapalı';
       default:
         return null;
     }
@@ -268114,21 +271246,113 @@ extension on _StringsVi {
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'Đã đọc đến trang ${page}';
       case 'mihon_store_extension_count':
-        return ({required Object count}) => '${count} extensions';
+        return ({required Object count}) => '${count} tiện ích';
       case 'mihon_extension_sources_more':
-        return ({required Object count}) => 'Show all ${count} sources';
+        return ({required Object count}) => 'Hiện tất cả ${count} nguồn';
       case 'mihon_extension_sources_less':
-        return 'Show fewer sources';
+        return 'Hiện ít nguồn hơn';
+      case 'options_website':
+        return 'Truy cập trang web chính thức';
+      case 'video_setting_mpv_group_hdr':
+        return 'HDR';
+      case 'video_setting_hdr_tone_mapping':
+        return 'Ánh xạ tông màu HDR';
+      case 'video_setting_hdr_tone_mapping_hint':
+        return 'Đường cong dùng khi phải nén nguồn HDR xuống màn hình SDR. “Tự động” để mpv chọn theo từng nguồn.';
+      case 'video_setting_hdr_compute_peak':
+        return 'Phát hiện đỉnh động';
+      case 'video_setting_hdr_compute_peak_hint':
+        return 'Đo độ sáng đỉnh thực của từng khung hình thay vì tin vào siêu dữ liệu của nguồn. Vùng sáng đẹp hơn, tốn thêm chút GPU.';
+      case 'video_setting_hdr_auto':
+        return 'Tự động';
+      case 'video_setting_hdr_on':
+        return 'Bật';
+      case 'video_setting_hdr_off':
+        return 'Tắt';
+      case 'video_discovery_cancel_downloads_title':
+        return 'Huỷ tải xuống?';
+      case 'video_discovery_cancel_downloads_body':
+        return ({required Object n}) =>
+            '${n} tác vụ tải xuống của tác phẩm này sẽ bị dừng. Các phần đã tải vẫn nằm trên ổ đĩa; bạn có thể tải lại sau.';
+      case 'video_discovery_cancel_downloads_failed':
+        return 'Không huỷ được tải xuống. Tác vụ có thể đã xong, hoặc backend tải xuống hiện không khả dụng.';
+      case 'gal_hook_click_lookup':
+        return 'Chạm vào từ để tra nghĩa';
+      case 'gal_hook_click_lookup_hint':
+        return 'Tắt nghĩa là bấm vào phụ đề sẽ không bao giờ tra từ — hữu ích khi bật xuyên chuột và bạn không muốn lỡ tay trúng một từ.';
+      case 'gal_hook_lookup_trigger':
+        return 'Nút tra từ';
+      case 'gal_hook_lookup_trigger_hint':
+        return 'Nút chuột nào sẽ tra từ dưới con trỏ. Độc lập với công tắc phía trên: bạn có thể tắt chạm-để-tra mà vẫn tra bằng nút bên hông.';
+      case 'gal_hook_lookup_trigger_left':
+        return 'Left click';
+      case 'gal_hook_lookup_trigger_middle':
+        return 'Middle click';
+      case 'gal_hook_lookup_trigger_side':
+        return 'Side button';
+      case 'gal_hook_toolbar_auto_hide':
+        return 'Tự ẩn thanh công cụ';
+      case 'gal_hook_toolbar_auto_hide_hint':
+        return 'Ẩn thanh công cụ cho tới khi con trỏ chạm vào khung phụ đề, kiểu LunaHook. Ẩn là ẩn thật — số điểm ảnh đó trả lại cho game.';
+      case 'gal_hook_passthrough_blocks_mouse':
+        return 'Phụ đề vẫn nhận nhấp chuột khi xuyên chuột';
+      case 'gal_hook_passthrough_blocks_mouse_hint':
+        return 'Bật: các dòng chữ vẫn nhận nhấp chuột nên bạn chạm được vào từ. Tắt: toàn bộ lớp phủ trong suốt với chuột — bạn bấm được thứ bên dưới, nhưng chạm vào từ không còn tác dụng.';
+      case 'floating_lyric_topmost':
+        return 'Luôn hiển thị trên cùng';
+      case 'gal_hook_fold_progressive_lines':
+        return 'Gộp các dòng thoại bị chia nhỏ';
+      case 'gal_hook_fold_progressive_lines_hint':
+        return 'Một số engine vẽ lại cả dòng mỗi lần nhấp, nên cùng một dòng bị bắt nhiều lần. Gộp các ảnh chụp đó thành một dòng.';
+      case 'gal_hook_ingame_lookup_engine_unsupported':
+        return 'Engine trò chơi này chưa hỗ trợ tra từ trong trò chơi';
+      case 'gal_hook_ingame_lookup_version_unsupported':
+        return 'Phiên bản trò chơi này chưa có trong danh sách được hỗ trợ';
+      case 'gal_hook_ingame_lookup_exe_hash_copy':
+        return 'Sao chép SHA-256 của tệp thực thi trò chơi';
+      case 'gal_hook_ingame_lookup_exe_hash_unavailable':
+        return 'Không đọc được tệp thực thi trò chơi';
+      case 'gal_hook_ingame_lookup_exe_hash_copied':
+        return 'Đã sao chép SHA-256 của tệp thực thi';
+      case 'download_tracker_section':
+        return 'Đăng ký tracker';
+      case 'download_tracker_auto_add':
+        return 'Tự động thêm tracker từ đăng ký vào các tải xuống mới';
+      case 'download_tracker_auto_add_hint':
+        return 'Danh sách được lưu đệm trong 6 giờ. Việc lấy đăng ký thất bại sẽ không chặn tải xuống.';
+      case 'download_tracker_url':
+        return 'URL đăng ký';
+      case 'download_tracker_refresh':
+        return 'Lấy tracker';
+      case 'download_tracker_preview_empty':
+        return 'Lấy đăng ký để xem trước các tracker HTTP, HTTPS và UDP được hỗ trợ.';
+      case 'download_tracker_preview_count':
+        return ({required Object count}) => 'Đã lấy ${count} tracker';
+      case 'download_tracker_fetch_failed':
+        return ({required Object message}) =>
+            'Không lấy được tracker: ${message}';
+      case 'anki_connect_port_auto_fix':
+        return 'Đổi sang cổng còn trống';
+      case 'anki_connect_port_auto_fix_hint':
+        return 'Chọn một cổng còn trống rồi ghi vào cả Hibiki lẫn cấu hình tiện ích AnkiConnect. Khởi động lại Anki để áp dụng.';
+      case 'anki_connect_port_auto_fix_done':
+        return ({required Object port}) =>
+            'AnkiConnect đã chuyển sang cổng ${port}. Hãy khởi động lại Anki rồi thử lại.';
+      case 'anki_connect_port_auto_fix_manual':
+        return ({required Object port}) =>
+            'Hibiki hiện dùng cổng ${port}, nhưng không tìm thấy cấu hình tiện ích AnkiConnect. Hãy đặt webBindPort thành ${port} trong Anki (Công cụ → Tiện ích → AnkiConnect → Cấu hình) rồi khởi động lại Anki.';
+      case 'anki_connect_port_auto_fix_none':
+        return 'Không tìm thấy cổng nào còn trống trên máy này.';
       case 'video_setting_hdr_output':
-        return 'HDR / 10-bit output';
+        return 'Đầu ra HDR / 10 bit';
       case 'video_setting_hdr_output_hint':
-        return 'Windows only. Auto hands HDR sources straight to an HDR display through a native video window; Always uses that window for every video (10-bit output); Off keeps the standard renderer.';
+        return 'Chỉ trên Windows. «Tự động» đưa nguồn HDR thẳng tới màn hình HDR qua một cửa sổ video gốc; «Luôn luôn» dùng cửa sổ đó cho mọi video (đầu ra 10 bit); «Tắt» giữ nguyên bộ kết xuất tiêu chuẩn.';
       case 'video_setting_hdr_output_auto':
-        return 'Auto';
+        return 'Tự động';
       case 'video_setting_hdr_output_always':
-        return 'Always';
+        return 'Luôn luôn';
       case 'video_setting_hdr_output_off':
-        return 'Off';
+        return 'Tắt';
       default:
         return null;
     }
@@ -276013,6 +279237,97 @@ extension on _StringsZhCn {
         return ({required Object count}) => '展开全部 ${count} 个源';
       case 'mihon_extension_sources_less':
         return '收起源列表';
+      case 'options_website':
+        return '访问官网';
+      case 'video_setting_mpv_group_hdr':
+        return 'HDR';
+      case 'video_setting_hdr_tone_mapping':
+        return 'HDR 色调映射';
+      case 'video_setting_hdr_tone_mapping_hint':
+        return '把 HDR 片源压到 SDR 屏幕上时用的曲线。自动 = 交给 mpv 按片源挑。';
+      case 'video_setting_hdr_compute_peak':
+        return '动态峰值检测';
+      case 'video_setting_hdr_compute_peak_hint':
+        return '逐帧测量真实峰值亮度，而不是相信片源元数据。高光更准，但会占一点 GPU。';
+      case 'video_setting_hdr_auto':
+        return '自动';
+      case 'video_setting_hdr_on':
+        return '开';
+      case 'video_setting_hdr_off':
+        return '关';
+      case 'video_discovery_cancel_downloads_title':
+        return '取消下载？';
+      case 'video_discovery_cancel_downloads_body':
+        return ({required Object n}) =>
+            '本作品有 ${n} 个下载任务会被停止。已下载的分片仍保留在磁盘上，之后可以重新开始下载。';
+      case 'video_discovery_cancel_downloads_failed':
+        return '取消下载失败。任务可能已经结束，或下载后端当前不可用。';
+      case 'gal_hook_click_lookup':
+        return '单击文字查词';
+      case 'gal_hook_click_lookup_hint':
+        return '关掉后点台词不再触发查词。开着鼠标穿透时尤其有用——不想一不小心点到单词。';
+      case 'gal_hook_lookup_trigger':
+        return '查词触发方式';
+      case 'gal_hook_lookup_trigger_hint':
+        return '用哪个鼠标键查指针底下的词。与上面的开关正交：可以关掉单击查词，仍用侧键查。';
+      case 'gal_hook_lookup_trigger_left':
+        return '左键单击';
+      case 'gal_hook_lookup_trigger_middle':
+        return '鼠标中键';
+      case 'gal_hook_lookup_trigger_side':
+        return '鼠标侧键';
+      case 'gal_hook_toolbar_auto_hide':
+        return '自动隐藏功能栏';
+      case 'gal_hook_toolbar_auto_hide_hint':
+        return '平时把功能栏整条隐藏，鼠标移到台词框附近才现身（LunaHook 那样）。隐藏就是真隐藏，那块像素还给游戏。';
+      case 'gal_hook_passthrough_blocks_mouse':
+        return '穿透时台词仍拦截点击';
+      case 'gal_hook_passthrough_blocks_mouse_hint':
+        return '开：文字行仍接鼠标，能点字查词。关：整个浮窗对鼠标彻底透明，能点到底下的东西，但点字查词也就没了。';
+      case 'floating_lyric_topmost':
+        return '保持置顶';
+      case 'gal_hook_fold_progressive_lines':
+        return '合并分段吐出的台词';
+      case 'gal_hook_fold_progressive_lines_hint':
+        return '有些引擎每次点击都重绘整行，一句台词会被抓成好几条。开启后把同一句的多次快照折成一条。';
+      case 'gal_hook_ingame_lookup_engine_unsupported':
+        return '当前游戏引擎不支持游戏内查词';
+      case 'gal_hook_ingame_lookup_version_unsupported':
+        return '当前游戏版本未在支持列表中';
+      case 'gal_hook_ingame_lookup_exe_hash_copy':
+        return '复制游戏 exe 的 SHA-256';
+      case 'gal_hook_ingame_lookup_exe_hash_unavailable':
+        return '无法读取游戏 exe（可能权限不足）';
+      case 'gal_hook_ingame_lookup_exe_hash_copied':
+        return '已复制 exe 的 SHA-256';
+      case 'download_tracker_section':
+        return 'Tracker 订阅';
+      case 'download_tracker_auto_add':
+        return '自动把订阅 Tracker 加到新下载';
+      case 'download_tracker_auto_add_hint':
+        return '列表缓存 6 小时；订阅获取失败不会阻止下载任务创建。';
+      case 'download_tracker_url':
+        return '订阅地址';
+      case 'download_tracker_refresh':
+        return '获取 Tracker';
+      case 'download_tracker_preview_empty':
+        return '获取订阅后可预览受支持的 HTTP、HTTPS 和 UDP Tracker。';
+      case 'download_tracker_preview_count':
+        return ({required Object count}) => '已获取 ${count} 个 Tracker';
+      case 'download_tracker_fetch_failed':
+        return ({required Object message}) => '获取 Tracker 失败：${message}';
+      case 'anki_connect_port_auto_fix':
+        return '换一个空闲端口';
+      case 'anki_connect_port_auto_fix_hint':
+        return '自动挑一个空闲端口，同时写进 Hibiki 和 Anki 的 AnkiConnect 插件配置。改完重启 Anki 生效。';
+      case 'anki_connect_port_auto_fix_done':
+        return ({required Object port}) =>
+            'AnkiConnect 端口已改为 ${port}。请重启 Anki 后重试。';
+      case 'anki_connect_port_auto_fix_manual':
+        return ({required Object port}) =>
+            'Hibiki 已改用端口 ${port}，但没找到 AnkiConnect 的插件配置。请在 Anki 的「工具 → 插件 → AnkiConnect → 配置」里把 webBindPort 也改成 ${port}，然后重启 Anki。';
+      case 'anki_connect_port_auto_fix_none':
+        return '本机没有找到空闲端口。';
       case 'video_setting_hdr_output':
         return 'HDR / 10-bit 输出';
       case 'video_setting_hdr_output_hint':
@@ -283903,21 +287218,112 @@ extension on _StringsZhHk {
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => '讀到第 ${page} 頁';
       case 'mihon_store_extension_count':
-        return ({required Object count}) => '${count} extensions';
+        return ({required Object count}) => '${count} 個擴充';
       case 'mihon_extension_sources_more':
-        return ({required Object count}) => 'Show all ${count} sources';
+        return ({required Object count}) => '顯示全部 ${count} 個來源';
       case 'mihon_extension_sources_less':
-        return 'Show fewer sources';
+        return '顯示較少來源';
+      case 'options_website':
+        return '瀏覽官方網站';
+      case 'video_setting_mpv_group_hdr':
+        return 'HDR';
+      case 'video_setting_hdr_tone_mapping':
+        return 'HDR 色調映射';
+      case 'video_setting_hdr_tone_mapping_hint':
+        return '把 HDR 片源壓進 SDR 螢幕時用的曲線。自動 = 交給 mpv 按片源決定。';
+      case 'video_setting_hdr_compute_peak':
+        return '動態峰值偵測';
+      case 'video_setting_hdr_compute_peak_hint':
+        return '逐格量實際峰值亮度，而不是信片源中繼資料。高光更準，但會佔一點 GPU。';
+      case 'video_setting_hdr_auto':
+        return '自動';
+      case 'video_setting_hdr_on':
+        return '開';
+      case 'video_setting_hdr_off':
+        return '關';
+      case 'video_discovery_cancel_downloads_title':
+        return '取消下載？';
+      case 'video_discovery_cancel_downloads_body':
+        return ({required Object n}) =>
+            '本作品有 ${n} 個下載任務會被停止。已下載的分片仍保留在磁碟上，之後可以重新開始下載。';
+      case 'video_discovery_cancel_downloads_failed':
+        return '取消下載失敗。任務可能已經結束，或下載後端目前無法使用。';
+      case 'gal_hook_click_lookup':
+        return '點字查詞';
+      case 'gal_hook_click_lookup_hint':
+        return '關掉之後，點字幕不會查詞——配合點擊穿透使用，免得不小心點到字。';
+      case 'gal_hook_lookup_trigger':
+        return '查詞觸發鍵';
+      case 'gal_hook_lookup_trigger_hint':
+        return '用哪個滑鼠鍵查指標下的字。與上面那個開關互相獨立：可以關掉點字查詞，仍用側鍵查。';
+      case 'gal_hook_lookup_trigger_left':
+        return 'Left click';
+      case 'gal_hook_lookup_trigger_middle':
+        return 'Middle click';
+      case 'gal_hook_lookup_trigger_side':
+        return 'Side button';
+      case 'gal_hook_toolbar_auto_hide':
+        return '自動隱藏功能欄';
+      case 'gal_hook_toolbar_auto_hide_hint':
+        return '指標移到字幕框才顯示功能欄（LunaHook 那種）。隱藏就是真的隱藏——那塊像素還給遊戲。';
+      case 'gal_hook_passthrough_blocks_mouse':
+        return '穿透時字幕仍接點擊';
+      case 'gal_hook_passthrough_blocks_mouse_hint':
+        return '開：文字行仍然接點擊，所以點得到字。關：整個浮層對滑鼠完全透明——點得到下面的東西，但點字就失效了。';
+      case 'floating_lyric_topmost':
+        return '保持置頂';
+      case 'gal_hook_fold_progressive_lines':
+        return '把分開顯示的台詞合成一條';
+      case 'gal_hook_fold_progressive_lines_hint':
+        return '有些引擎每點一次就重畫整行，於是同一行被抓到好幾次。把這些快照摺成一條。';
+      case 'gal_hook_ingame_lookup_engine_unsupported':
+        return '目前遊戲引擎不支援遊戲內查詞';
+      case 'gal_hook_ingame_lookup_version_unsupported':
+        return '目前遊戲版本未在支援清單中';
+      case 'gal_hook_ingame_lookup_exe_hash_copy':
+        return '複製遊戲 exe 的 SHA-256';
+      case 'gal_hook_ingame_lookup_exe_hash_unavailable':
+        return '無法讀取遊戲 exe（可能權限不足）';
+      case 'gal_hook_ingame_lookup_exe_hash_copied':
+        return '已複製 exe 的 SHA-256';
+      case 'download_tracker_section':
+        return 'Tracker 訂閱';
+      case 'download_tracker_auto_add':
+        return '自動把訂閱的 Tracker 加到新任務';
+      case 'download_tracker_auto_add_hint':
+        return '清單會快取 6 小時；訂閱抓取失敗不會阻止建立下載任務。';
+      case 'download_tracker_url':
+        return '訂閱網址';
+      case 'download_tracker_refresh':
+        return '抓取 Tracker';
+      case 'download_tracker_preview_empty':
+        return '抓取訂閱後可預覽支援的 HTTP、HTTPS 與 UDP Tracker。';
+      case 'download_tracker_preview_count':
+        return ({required Object count}) => '已抓取 ${count} 個 Tracker';
+      case 'download_tracker_fetch_failed':
+        return ({required Object message}) => '抓取 Tracker 失敗：${message}';
+      case 'anki_connect_port_auto_fix':
+        return '換一個空閒的連接埠';
+      case 'anki_connect_port_auto_fix_hint':
+        return '自動挑一個空閒的連接埠，同時寫進 Hibiki 和 Anki 的 AnkiConnect 外掛設定。改完重啟 Anki 生效。';
+      case 'anki_connect_port_auto_fix_done':
+        return ({required Object port}) =>
+            'AnkiConnect 連接埠已改為 ${port}。請重啟 Anki 後再試。';
+      case 'anki_connect_port_auto_fix_manual':
+        return ({required Object port}) =>
+            'Hibiki 已改用連接埠 ${port}，但找不到 AnkiConnect 的外掛設定。請在 Anki 的「工具 → 外掛 → AnkiConnect → 設定」裡把 webBindPort 也改成 ${port}，然後重啟 Anki。';
+      case 'anki_connect_port_auto_fix_none':
+        return '本機找不到空閒的連接埠。';
       case 'video_setting_hdr_output':
-        return 'HDR / 10-bit output';
+        return 'HDR / 10-bit 輸出';
       case 'video_setting_hdr_output_hint':
-        return 'Windows only. Auto hands HDR sources straight to an HDR display through a native video window; Always uses that window for every video (10-bit output); Off keeps the standard renderer.';
+        return '僅 Windows。「自動」在顯示器與片源都是 HDR 時把畫面經原生影片視窗直通；「始終」對所有影片都用原生視窗（10-bit 輸出）；「關閉」沿用常規算繪。';
       case 'video_setting_hdr_output_auto':
-        return 'Auto';
+        return '自動';
       case 'video_setting_hdr_output_always':
-        return 'Always';
+        return '始終';
       case 'video_setting_hdr_output_off':
-        return 'Off';
+        return '關閉';
       default:
         return null;
     }
