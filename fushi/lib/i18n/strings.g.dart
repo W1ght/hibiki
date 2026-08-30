@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 67150 (3950 per locale)
+/// Strings: 67473 (3969 per locale)
 ///
-/// Built on 2026-08-30 at 09:40 UTC
+/// Built on 2026-08-30 at 10:21 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5400,6 +5400,36 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_subtitle_adjust_title => 'Subtitle adjustments';
   String get video_subtitle_adjust_collapse => 'Collapse';
   String get video_subtitle_adjust_expand => 'Expand';
+  String get settings_section_reading_stats => 'Reading statistics';
+  String get reading_stats_idle_timeout => 'Idle timeout';
+  String get reading_stats_idle_timeout_hint =>
+      'Stop counting reading time after this many minutes without turning a page, scrolling, or looking up a word. Applies to novels, PDFs and manga only; video counts while playing.';
+  String get web_video_track_menu => 'Subtitle track';
+  String get web_video_track_live => 'Live captions (sampled from page)';
+  String get web_video_no_tracks => 'No subtitles captured yet';
+  String get web_video_hide_native_subtitles => 'Hide site subtitles';
+  String get web_video_import_hint =>
+      'This is a web page (not a direct stream). It will open in the built-in web player.';
+  String get web_video_platform_unsupported =>
+      'The built-in web player is only available on Windows for now.';
+  String get web_video_mine_queue_run => 'Create queued cards';
+  String get web_video_mine_queue_stop => 'Stop card creation';
+  String get web_video_mine_queue_empty => 'No queued cards';
+  String web_video_mine_queued({required Object count}) =>
+      'Queued for card creation (${count} pending)';
+  String web_video_mine_queue_running(
+          {required Object done, required Object total}) =>
+      'Creating cards ${done}/${total}...';
+  String web_video_mine_queue_finished(
+          {required Object ok, required Object failed}) =>
+      'Cards created: ${ok}, failed: ${failed}';
+  String get web_video_hosting_menu => 'Playback mode';
+  String get web_video_hosting_builtin =>
+      'Built-in (1080p; super-resolution, screenshots and cards available)';
+  String get web_video_hosting_windowed =>
+      'Native window (4K, hardware DRM; cards are queued for later)';
+  String web_video_mine_switch_builtin({required Object count}) =>
+      'Switch to built-in mode to create ${count} queued cards';
 }
 
 // Path: <root>
@@ -14575,6 +14605,55 @@ class _StringsAr extends _StringsEn {
   String get video_subtitle_adjust_collapse => 'طيّ';
   @override
   String get video_subtitle_adjust_expand => 'توسيع';
+  @override
+  String get settings_section_reading_stats => 'إحصائيات القراءة';
+  @override
+  String get reading_stats_idle_timeout => 'مهلة الخمول';
+  @override
+  String get reading_stats_idle_timeout_hint =>
+      'إيقاف احتساب وقت القراءة بعد هذا العدد من الدقائق دون تقليب صفحة أو تمرير أو بحث عن كلمة. ينطبق على الروايات وملفات PDF والمانغا فقط؛ يُحتسب الفيديو أثناء التشغيل.';
+  @override
+  String get web_video_track_menu => 'مسار الترجمة';
+  @override
+  String get web_video_track_live => 'ترجمة مباشرة (مأخوذة من الصفحة)';
+  @override
+  String get web_video_no_tracks => 'لم يتم التقاط أي ترجمة بعد';
+  @override
+  String get web_video_hide_native_subtitles => 'إخفاء ترجمة الموقع';
+  @override
+  String get web_video_import_hint =>
+      'هذه صفحة ويب (وليست بثًا مباشرًا). ستُفتح في مشغّل الويب المدمج.';
+  @override
+  String get web_video_platform_unsupported =>
+      'مشغّل الويب المدمج متاح حاليًا على Windows فقط.';
+  @override
+  String get web_video_mine_queue_run => 'إنشاء البطاقات المنتظرة';
+  @override
+  String get web_video_mine_queue_stop => 'إيقاف إنشاء البطاقات';
+  @override
+  String get web_video_mine_queue_empty => 'لا توجد بطاقات في قائمة الانتظار';
+  @override
+  String web_video_mine_queued({required Object count}) =>
+      'أُضيف إلى قائمة انتظار إنشاء البطاقات (${count} معلّقة)';
+  @override
+  String web_video_mine_queue_running(
+          {required Object done, required Object total}) =>
+      'جارٍ إنشاء البطاقات ${done}/${total}…';
+  @override
+  String web_video_mine_queue_finished(
+          {required Object ok, required Object failed}) =>
+      'البطاقات المُنشأة: ${ok}، الفاشلة: ${failed}';
+  @override
+  String get web_video_hosting_menu => 'وضع التشغيل';
+  @override
+  String get web_video_hosting_builtin =>
+      'مدمج (1080p؛ يتوفر تحسين الدقة ولقطات الشاشة والبطاقات)';
+  @override
+  String get web_video_hosting_windowed =>
+      'نافذة أصلية (4K، DRM عتادي؛ تُوضع البطاقات في قائمة الانتظار)';
+  @override
+  String web_video_mine_switch_builtin({required Object count}) =>
+      'التبديل إلى الوضع المدمج لإنشاء ${count} بطاقة منتظرة';
 }
 
 // Path: <root>
@@ -23965,6 +24044,55 @@ class _StringsDe extends _StringsEn {
   String get video_subtitle_adjust_collapse => 'Einklappen';
   @override
   String get video_subtitle_adjust_expand => 'Ausklappen';
+  @override
+  String get settings_section_reading_stats => 'Lesestatistik';
+  @override
+  String get reading_stats_idle_timeout => 'Inaktivitäts-Timeout';
+  @override
+  String get reading_stats_idle_timeout_hint =>
+      'Lesezeit nach so vielen Minuten ohne Umblättern, Scrollen oder Wortsuche nicht mehr zählen. Gilt nur für Romane, PDFs und Manga; Video zählt, solange es läuft.';
+  @override
+  String get web_video_track_menu => 'Untertitelspur';
+  @override
+  String get web_video_track_live => 'Live-Untertitel (von der Seite erfasst)';
+  @override
+  String get web_video_no_tracks => 'Noch keine Untertitel erfasst';
+  @override
+  String get web_video_hide_native_subtitles => 'Website-Untertitel ausblenden';
+  @override
+  String get web_video_import_hint =>
+      'Dies ist eine Webseite (kein direkter Stream). Sie wird im integrierten Web-Player geöffnet.';
+  @override
+  String get web_video_platform_unsupported =>
+      'Der integrierte Web-Player ist derzeit nur unter Windows verfügbar.';
+  @override
+  String get web_video_mine_queue_run => 'Wartende Karten erstellen';
+  @override
+  String get web_video_mine_queue_stop => 'Kartenerstellung stoppen';
+  @override
+  String get web_video_mine_queue_empty => 'Keine wartenden Karten';
+  @override
+  String web_video_mine_queued({required Object count}) =>
+      'Für die Kartenerstellung vorgemerkt (${count} ausstehend)';
+  @override
+  String web_video_mine_queue_running(
+          {required Object done, required Object total}) =>
+      'Karten werden erstellt ${done}/${total}…';
+  @override
+  String web_video_mine_queue_finished(
+          {required Object ok, required Object failed}) =>
+      'Karten erstellt: ${ok}, fehlgeschlagen: ${failed}';
+  @override
+  String get web_video_hosting_menu => 'Wiedergabemodus';
+  @override
+  String get web_video_hosting_builtin =>
+      'Integriert (1080p; Hochskalierung, Screenshots und Karten verfügbar)';
+  @override
+  String get web_video_hosting_windowed =>
+      'Natives Fenster (4K, Hardware-DRM; Karten werden später erstellt)';
+  @override
+  String web_video_mine_switch_builtin({required Object count}) =>
+      'In den integrierten Modus wechseln, um ${count} wartende Karten zu erstellen';
 }
 
 // Path: <root>
@@ -33400,6 +33528,56 @@ class _StringsEs extends _StringsEn {
   String get video_subtitle_adjust_collapse => 'Contraer';
   @override
   String get video_subtitle_adjust_expand => 'Expandir';
+  @override
+  String get settings_section_reading_stats => 'Estadísticas de lectura';
+  @override
+  String get reading_stats_idle_timeout => 'Tiempo de inactividad';
+  @override
+  String get reading_stats_idle_timeout_hint =>
+      'Dejar de contar el tiempo de lectura tras estos minutos sin pasar página, desplazarse o buscar una palabra. Solo para novelas, PDF y manga; el vídeo cuenta mientras se reproduce.';
+  @override
+  String get web_video_track_menu => 'Pista de subtítulos';
+  @override
+  String get web_video_track_live =>
+      'Subtítulos en vivo (capturados de la página)';
+  @override
+  String get web_video_no_tracks => 'Aún no se han capturado subtítulos';
+  @override
+  String get web_video_hide_native_subtitles => 'Ocultar subtítulos del sitio';
+  @override
+  String get web_video_import_hint =>
+      'Esto es una página web (no una transmisión directa). Se abrirá en el reproductor web integrado.';
+  @override
+  String get web_video_platform_unsupported =>
+      'El reproductor web integrado solo está disponible en Windows por ahora.';
+  @override
+  String get web_video_mine_queue_run => 'Crear las tarjetas en cola';
+  @override
+  String get web_video_mine_queue_stop => 'Detener la creación de tarjetas';
+  @override
+  String get web_video_mine_queue_empty => 'No hay tarjetas en cola';
+  @override
+  String web_video_mine_queued({required Object count}) =>
+      'En cola para crear tarjetas (${count} pendientes)';
+  @override
+  String web_video_mine_queue_running(
+          {required Object done, required Object total}) =>
+      'Creando tarjetas ${done}/${total}…';
+  @override
+  String web_video_mine_queue_finished(
+          {required Object ok, required Object failed}) =>
+      'Tarjetas creadas: ${ok}, fallidas: ${failed}';
+  @override
+  String get web_video_hosting_menu => 'Modo de reproducción';
+  @override
+  String get web_video_hosting_builtin =>
+      'Integrado (1080p; superresolución, capturas y tarjetas disponibles)';
+  @override
+  String get web_video_hosting_windowed =>
+      'Ventana nativa (4K, DRM por hardware; las tarjetas se ponen en cola)';
+  @override
+  String web_video_mine_switch_builtin({required Object count}) =>
+      'Cambiar al modo integrado para crear ${count} tarjetas en cola';
 }
 
 // Path: <root>
@@ -42868,6 +43046,57 @@ class _StringsFr extends _StringsEn {
   String get video_subtitle_adjust_collapse => 'Réduire';
   @override
   String get video_subtitle_adjust_expand => 'Développer';
+  @override
+  String get settings_section_reading_stats => 'Statistiques de lecture';
+  @override
+  String get reading_stats_idle_timeout => 'Délai d\'inactivité';
+  @override
+  String get reading_stats_idle_timeout_hint =>
+      'Cesser de compter le temps de lecture après ce nombre de minutes sans tourner de page, faire défiler ou chercher un mot. Romans, PDF et mangas uniquement ; la vidéo compte tant qu\'elle est en lecture.';
+  @override
+  String get web_video_track_menu => 'Piste de sous-titres';
+  @override
+  String get web_video_track_live =>
+      'Sous-titres en direct (capturés sur la page)';
+  @override
+  String get web_video_no_tracks => 'Aucun sous-titre capturé pour l’instant';
+  @override
+  String get web_video_hide_native_subtitles =>
+      'Masquer les sous-titres du site';
+  @override
+  String get web_video_import_hint =>
+      'Il s’agit d’une page web (pas d’un flux direct). Elle s’ouvrira dans le lecteur web intégré.';
+  @override
+  String get web_video_platform_unsupported =>
+      'Le lecteur web intégré n’est disponible que sous Windows pour le moment.';
+  @override
+  String get web_video_mine_queue_run => 'Créer les cartes en attente';
+  @override
+  String get web_video_mine_queue_stop => 'Arrêter la création de cartes';
+  @override
+  String get web_video_mine_queue_empty => 'Aucune carte en attente';
+  @override
+  String web_video_mine_queued({required Object count}) =>
+      'Mis en attente pour la création de cartes (${count} en attente)';
+  @override
+  String web_video_mine_queue_running(
+          {required Object done, required Object total}) =>
+      'Création des cartes ${done}/${total}…';
+  @override
+  String web_video_mine_queue_finished(
+          {required Object ok, required Object failed}) =>
+      'Cartes créées : ${ok}, échecs : ${failed}';
+  @override
+  String get web_video_hosting_menu => 'Mode de lecture';
+  @override
+  String get web_video_hosting_builtin =>
+      'Intégré (1080p ; super-résolution, captures et cartes disponibles)';
+  @override
+  String get web_video_hosting_windowed =>
+      'Fenêtre native (4K, DRM matériel ; les cartes sont mises en attente)';
+  @override
+  String web_video_mine_switch_builtin({required Object count}) =>
+      'Passer en mode intégré pour créer ${count} cartes en attente';
 }
 
 // Path: <root>
@@ -52160,6 +52389,55 @@ class _StringsId extends _StringsEn {
   String get video_subtitle_adjust_collapse => 'Ciutkan';
   @override
   String get video_subtitle_adjust_expand => 'Perluas';
+  @override
+  String get settings_section_reading_stats => 'Statistik membaca';
+  @override
+  String get reading_stats_idle_timeout => 'Batas waktu idle';
+  @override
+  String get reading_stats_idle_timeout_hint =>
+      'Berhenti menghitung waktu membaca setelah sekian menit tanpa membalik halaman, menggulir, atau mencari kata. Hanya untuk novel, PDF, dan manga; video dihitung selama diputar.';
+  @override
+  String get web_video_track_menu => 'Trek subtitel';
+  @override
+  String get web_video_track_live => 'Teks langsung (diambil dari halaman)';
+  @override
+  String get web_video_no_tracks => 'Belum ada subtitel yang ditangkap';
+  @override
+  String get web_video_hide_native_subtitles => 'Sembunyikan subtitel situs';
+  @override
+  String get web_video_import_hint =>
+      'Ini halaman web (bukan stream langsung). Akan dibuka di pemutar web bawaan.';
+  @override
+  String get web_video_platform_unsupported =>
+      'Pemutar web bawaan saat ini hanya tersedia di Windows.';
+  @override
+  String get web_video_mine_queue_run => 'Buat kartu yang antre';
+  @override
+  String get web_video_mine_queue_stop => 'Hentikan pembuatan kartu';
+  @override
+  String get web_video_mine_queue_empty => 'Tidak ada kartu yang antre';
+  @override
+  String web_video_mine_queued({required Object count}) =>
+      'Masuk antrean pembuatan kartu (${count} menunggu)';
+  @override
+  String web_video_mine_queue_running(
+          {required Object done, required Object total}) =>
+      'Membuat kartu ${done}/${total}…';
+  @override
+  String web_video_mine_queue_finished(
+          {required Object ok, required Object failed}) =>
+      'Kartu dibuat: ${ok}, gagal: ${failed}';
+  @override
+  String get web_video_hosting_menu => 'Mode pemutaran';
+  @override
+  String get web_video_hosting_builtin =>
+      'Bawaan (1080p; resolusi super, tangkapan layar, dan kartu tersedia)';
+  @override
+  String get web_video_hosting_windowed =>
+      'Jendela native (4K, DRM perangkat keras; kartu diantrekan dulu)';
+  @override
+  String web_video_mine_switch_builtin({required Object count}) =>
+      'Beralih ke mode bawaan untuk membuat ${count} kartu yang antre';
 }
 
 // Path: <root>
@@ -61532,6 +61810,57 @@ class _StringsIt extends _StringsEn {
   String get video_subtitle_adjust_collapse => 'Comprimi';
   @override
   String get video_subtitle_adjust_expand => 'Espandi';
+  @override
+  String get settings_section_reading_stats => 'Statistiche di lettura';
+  @override
+  String get reading_stats_idle_timeout => 'Timeout di inattività';
+  @override
+  String get reading_stats_idle_timeout_hint =>
+      'Smetti di contare il tempo di lettura dopo questi minuti senza voltare pagina, scorrere o cercare una parola. Solo per romanzi, PDF e manga; il video conta mentre è in riproduzione.';
+  @override
+  String get web_video_track_menu => 'Traccia sottotitoli';
+  @override
+  String get web_video_track_live =>
+      'Sottotitoli live (campionati dalla pagina)';
+  @override
+  String get web_video_no_tracks => 'Nessun sottotitolo acquisito ancora';
+  @override
+  String get web_video_hide_native_subtitles =>
+      'Nascondi i sottotitoli del sito';
+  @override
+  String get web_video_import_hint =>
+      'Questa è una pagina web (non uno stream diretto). Si aprirà nel lettore web integrato.';
+  @override
+  String get web_video_platform_unsupported =>
+      'Il lettore web integrato è disponibile per ora solo su Windows.';
+  @override
+  String get web_video_mine_queue_run => 'Crea le carte in coda';
+  @override
+  String get web_video_mine_queue_stop => 'Interrompi la creazione delle carte';
+  @override
+  String get web_video_mine_queue_empty => 'Nessuna carta in coda';
+  @override
+  String web_video_mine_queued({required Object count}) =>
+      'In coda per la creazione di carte (${count} in attesa)';
+  @override
+  String web_video_mine_queue_running(
+          {required Object done, required Object total}) =>
+      'Creazione carte ${done}/${total}…';
+  @override
+  String web_video_mine_queue_finished(
+          {required Object ok, required Object failed}) =>
+      'Carte create: ${ok}, non riuscite: ${failed}';
+  @override
+  String get web_video_hosting_menu => 'Modalità di riproduzione';
+  @override
+  String get web_video_hosting_builtin =>
+      'Integrato (1080p; super-risoluzione, screenshot e carte disponibili)';
+  @override
+  String get web_video_hosting_windowed =>
+      'Finestra nativa (4K, DRM hardware; le carte vengono messe in coda)';
+  @override
+  String web_video_mine_switch_builtin({required Object count}) =>
+      'Passa alla modalità integrata per creare ${count} carte in coda';
 }
 
 // Path: <root>
@@ -70332,6 +70661,54 @@ class _StringsJa extends _StringsEn {
   String get video_subtitle_adjust_collapse => '折りたたむ';
   @override
   String get video_subtitle_adjust_expand => '展開';
+  @override
+  String get settings_section_reading_stats => '読書統計';
+  @override
+  String get reading_stats_idle_timeout => 'アイドル判定時間';
+  @override
+  String get reading_stats_idle_timeout_hint =>
+      'ページめくり・スクロール・辞書引きがこの分数ないと読書時間の計測を止めます。小説・PDF・漫画のみ対象。動画は再生中なら計測します。';
+  @override
+  String get web_video_track_menu => '字幕トラック';
+  @override
+  String get web_video_track_live => 'ライブ字幕（ページから取得）';
+  @override
+  String get web_video_no_tracks => '字幕はまだ取得されていません';
+  @override
+  String get web_video_hide_native_subtitles => 'サイトの字幕を隠す';
+  @override
+  String get web_video_import_hint =>
+      'これは（直接ストリームではなく）Web ページです。内蔵 Web プレーヤーで開きます。';
+  @override
+  String get web_video_platform_unsupported =>
+      '内蔵 Web プレーヤーは現在 Windows でのみ利用できます。';
+  @override
+  String get web_video_mine_queue_run => 'キューのカードを作成';
+  @override
+  String get web_video_mine_queue_stop => 'カード作成を停止';
+  @override
+  String get web_video_mine_queue_empty => 'キューにカードはありません';
+  @override
+  String web_video_mine_queued({required Object count}) =>
+      'カード作成のキューに追加しました（残り ${count} 件）';
+  @override
+  String web_video_mine_queue_running(
+          {required Object done, required Object total}) =>
+      'カード作成中 ${done}/${total}…';
+  @override
+  String web_video_mine_queue_finished(
+          {required Object ok, required Object failed}) =>
+      'カード作成完了：成功 ${ok}、失敗 ${failed}';
+  @override
+  String get web_video_hosting_menu => '再生モード';
+  @override
+  String get web_video_hosting_builtin => '内蔵（1080p；超解像・スクリーンショット・カード作成が可能）';
+  @override
+  String get web_video_hosting_windowed =>
+      'ネイティブウィンドウ（4K、ハードウェア DRM；カードは後でキュー処理）';
+  @override
+  String web_video_mine_switch_builtin({required Object count}) =>
+      '内蔵モードに切り替えて ${count} 件のカードを作成';
 }
 
 // Path: <root>
@@ -79145,6 +79522,53 @@ class _StringsKo extends _StringsEn {
   String get video_subtitle_adjust_collapse => '접기';
   @override
   String get video_subtitle_adjust_expand => '펼치기';
+  @override
+  String get settings_section_reading_stats => '독서 통계';
+  @override
+  String get reading_stats_idle_timeout => '유휴 판정 시간';
+  @override
+  String get reading_stats_idle_timeout_hint =>
+      '페이지 넘김·스크롤·단어 검색이 이 시간(분) 동안 없으면 독서 시간 집계를 멈춥니다. 소설·PDF·만화에만 적용되며, 동영상은 재생 중이면 집계합니다.';
+  @override
+  String get web_video_track_menu => '자막 트랙';
+  @override
+  String get web_video_track_live => '실시간 자막(페이지에서 수집)';
+  @override
+  String get web_video_no_tracks => '아직 수집된 자막이 없습니다';
+  @override
+  String get web_video_hide_native_subtitles => '사이트 자막 숨기기';
+  @override
+  String get web_video_import_hint => '직접 스트림이 아닌 웹 페이지입니다. 내장 웹 플레이어에서 열립니다.';
+  @override
+  String get web_video_platform_unsupported =>
+      '내장 웹 플레이어는 현재 Windows에서만 사용할 수 있습니다.';
+  @override
+  String get web_video_mine_queue_run => '대기 중인 카드 만들기';
+  @override
+  String get web_video_mine_queue_stop => '카드 만들기 중지';
+  @override
+  String get web_video_mine_queue_empty => '대기 중인 카드가 없습니다';
+  @override
+  String web_video_mine_queued({required Object count}) =>
+      '카드 만들기 대기열에 추가됨(${count}개 대기)';
+  @override
+  String web_video_mine_queue_running(
+          {required Object done, required Object total}) =>
+      '카드 만드는 중 ${done}/${total}…';
+  @override
+  String web_video_mine_queue_finished(
+          {required Object ok, required Object failed}) =>
+      '카드 만들기 완료: 성공 ${ok}, 실패 ${failed}';
+  @override
+  String get web_video_hosting_menu => '재생 모드';
+  @override
+  String get web_video_hosting_builtin => '내장(1080p; 초해상도, 스크린샷, 카드 만들기 가능)';
+  @override
+  String get web_video_hosting_windowed =>
+      '네이티브 창(4K, 하드웨어 DRM; 카드는 나중에 대기열 처리)';
+  @override
+  String web_video_mine_switch_builtin({required Object count}) =>
+      '내장 모드로 전환하여 대기 중인 카드 ${count}개 만들기';
 }
 
 // Path: <root>
@@ -88471,6 +88895,56 @@ class _StringsNl extends _StringsEn {
   String get video_subtitle_adjust_collapse => 'Inklappen';
   @override
   String get video_subtitle_adjust_expand => 'Uitklappen';
+  @override
+  String get settings_section_reading_stats => 'Leesstatistieken';
+  @override
+  String get reading_stats_idle_timeout => 'Inactiviteitstime-out';
+  @override
+  String get reading_stats_idle_timeout_hint =>
+      'Stop met het tellen van leestijd na dit aantal minuten zonder bladeren, scrollen of een woord opzoeken. Alleen voor romans, pdf\'s en manga; video telt zolang het afspeelt.';
+  @override
+  String get web_video_track_menu => 'Ondertitelspoor';
+  @override
+  String get web_video_track_live => 'Live-ondertitels (van de pagina)';
+  @override
+  String get web_video_no_tracks => 'Nog geen ondertitels vastgelegd';
+  @override
+  String get web_video_hide_native_subtitles =>
+      'Ondertitels van de site verbergen';
+  @override
+  String get web_video_import_hint =>
+      'Dit is een webpagina (geen directe stream). Deze wordt in de ingebouwde webspeler geopend.';
+  @override
+  String get web_video_platform_unsupported =>
+      'De ingebouwde webspeler is voorlopig alleen beschikbaar op Windows.';
+  @override
+  String get web_video_mine_queue_run => 'Wachtende kaarten aanmaken';
+  @override
+  String get web_video_mine_queue_stop => 'Kaarten aanmaken stoppen';
+  @override
+  String get web_video_mine_queue_empty => 'Geen wachtende kaarten';
+  @override
+  String web_video_mine_queued({required Object count}) =>
+      'In wachtrij voor kaart aanmaken (${count} wachtend)';
+  @override
+  String web_video_mine_queue_running(
+          {required Object done, required Object total}) =>
+      'Kaarten aanmaken ${done}/${total}…';
+  @override
+  String web_video_mine_queue_finished(
+          {required Object ok, required Object failed}) =>
+      'Kaarten aangemaakt: ${ok}, mislukt: ${failed}';
+  @override
+  String get web_video_hosting_menu => 'Afspeelmodus';
+  @override
+  String get web_video_hosting_builtin =>
+      'Ingebouwd (1080p; superresolutie, schermafbeeldingen en kaarten beschikbaar)';
+  @override
+  String get web_video_hosting_windowed =>
+      'Native venster (4K, hardware-DRM; kaarten komen in de wachtrij)';
+  @override
+  String web_video_mine_switch_builtin({required Object count}) =>
+      'Schakel naar ingebouwde modus om ${count} wachtende kaarten aan te maken';
 }
 
 // Path: <root>
@@ -97854,6 +98328,55 @@ class _StringsPtBr extends _StringsEn {
   String get video_subtitle_adjust_collapse => 'Recolher';
   @override
   String get video_subtitle_adjust_expand => 'Expandir';
+  @override
+  String get settings_section_reading_stats => 'Estatísticas de leitura';
+  @override
+  String get reading_stats_idle_timeout => 'Tempo de inatividade';
+  @override
+  String get reading_stats_idle_timeout_hint =>
+      'Parar de contar o tempo de leitura após esses minutos sem virar página, rolar ou pesquisar uma palavra. Apenas para romances, PDFs e mangás; o vídeo conta enquanto estiver reproduzindo.';
+  @override
+  String get web_video_track_menu => 'Faixa de legendas';
+  @override
+  String get web_video_track_live => 'Legendas ao vivo (capturadas da página)';
+  @override
+  String get web_video_no_tracks => 'Nenhuma legenda capturada ainda';
+  @override
+  String get web_video_hide_native_subtitles => 'Ocultar legendas do site';
+  @override
+  String get web_video_import_hint =>
+      'Isto é uma página web (não um stream direto). Será aberta no player web integrado.';
+  @override
+  String get web_video_platform_unsupported =>
+      'O player web integrado só está disponível no Windows por enquanto.';
+  @override
+  String get web_video_mine_queue_run => 'Criar cartões na fila';
+  @override
+  String get web_video_mine_queue_stop => 'Parar de criar cartões';
+  @override
+  String get web_video_mine_queue_empty => 'Nenhum cartão na fila';
+  @override
+  String web_video_mine_queued({required Object count}) =>
+      'Na fila para criar cartões (${count} pendentes)';
+  @override
+  String web_video_mine_queue_running(
+          {required Object done, required Object total}) =>
+      'Criando cartões ${done}/${total}…';
+  @override
+  String web_video_mine_queue_finished(
+          {required Object ok, required Object failed}) =>
+      'Cartões criados: ${ok}, falhas: ${failed}';
+  @override
+  String get web_video_hosting_menu => 'Modo de reprodução';
+  @override
+  String get web_video_hosting_builtin =>
+      'Integrado (1080p; super-resolução, capturas e cartões disponíveis)';
+  @override
+  String get web_video_hosting_windowed =>
+      'Janela nativa (4K, DRM por hardware; cartões ficam na fila)';
+  @override
+  String web_video_mine_switch_builtin({required Object count}) =>
+      'Mudar para o modo integrado para criar ${count} cartões na fila';
 }
 
 // Path: <root>
@@ -107213,6 +107736,55 @@ class _StringsRu extends _StringsEn {
   String get video_subtitle_adjust_collapse => 'Свернуть';
   @override
   String get video_subtitle_adjust_expand => 'Развернуть';
+  @override
+  String get settings_section_reading_stats => 'Статистика чтения';
+  @override
+  String get reading_stats_idle_timeout => 'Тайм-аут бездействия';
+  @override
+  String get reading_stats_idle_timeout_hint =>
+      'Не засчитывать время чтения после стольких минут без перелистывания, прокрутки или поиска слова. Только для романов, PDF и манги; видео засчитывается, пока воспроизводится.';
+  @override
+  String get web_video_track_menu => 'Дорожка субтитров';
+  @override
+  String get web_video_track_live => 'Живые субтитры (с страницы)';
+  @override
+  String get web_video_no_tracks => 'Субтитры пока не получены';
+  @override
+  String get web_video_hide_native_subtitles => 'Скрыть субтитры сайта';
+  @override
+  String get web_video_import_hint =>
+      'Это веб-страница (не прямой поток). Она откроется во встроенном веб-плеере.';
+  @override
+  String get web_video_platform_unsupported =>
+      'Встроенный веб-плеер пока доступен только в Windows.';
+  @override
+  String get web_video_mine_queue_run => 'Создать карточки из очереди';
+  @override
+  String get web_video_mine_queue_stop => 'Остановить создание карточек';
+  @override
+  String get web_video_mine_queue_empty => 'Очередь карточек пуста';
+  @override
+  String web_video_mine_queued({required Object count}) =>
+      'Добавлено в очередь на создание карточек (ожидает: ${count})';
+  @override
+  String web_video_mine_queue_running(
+          {required Object done, required Object total}) =>
+      'Создание карточек ${done}/${total}…';
+  @override
+  String web_video_mine_queue_finished(
+          {required Object ok, required Object failed}) =>
+      'Карточек создано: ${ok}, ошибок: ${failed}';
+  @override
+  String get web_video_hosting_menu => 'Режим воспроизведения';
+  @override
+  String get web_video_hosting_builtin =>
+      'Встроенный (1080p; доступны суперразрешение, скриншоты и карточки)';
+  @override
+  String get web_video_hosting_windowed =>
+      'Нативное окно (4K, аппаратный DRM; карточки ставятся в очередь)';
+  @override
+  String web_video_mine_switch_builtin({required Object count}) =>
+      'Переключиться на встроенный режим и создать карточек из очереди: ${count}';
 }
 
 // Path: <root>
@@ -116383,6 +116955,55 @@ class _StringsTh extends _StringsEn {
   String get video_subtitle_adjust_collapse => 'ย่อ';
   @override
   String get video_subtitle_adjust_expand => 'ขยาย';
+  @override
+  String get settings_section_reading_stats => 'สถิติการอ่าน';
+  @override
+  String get reading_stats_idle_timeout => 'เวลาพักการอ่าน';
+  @override
+  String get reading_stats_idle_timeout_hint =>
+      'หยุดนับเวลาอ่านเมื่อไม่มีการพลิกหน้า เลื่อน หรือค้นหาคำนานเท่านี้นาที ใช้กับนิยาย PDF และมังงะเท่านั้น วิดีโอจะนับขณะเล่น';
+  @override
+  String get web_video_track_menu => 'แทร็กคำบรรยาย';
+  @override
+  String get web_video_track_live => 'คำบรรยายสด (เก็บจากหน้าเว็บ)';
+  @override
+  String get web_video_no_tracks => 'ยังไม่ได้เก็บคำบรรยาย';
+  @override
+  String get web_video_hide_native_subtitles => 'ซ่อนคำบรรยายของเว็บไซต์';
+  @override
+  String get web_video_import_hint =>
+      'นี่คือหน้าเว็บ (ไม่ใช่สตรีมโดยตรง) จะเปิดในเว็บเพลเยอร์ในตัว';
+  @override
+  String get web_video_platform_unsupported =>
+      'ตอนนี้เว็บเพลเยอร์ในตัวใช้ได้เฉพาะบน Windows';
+  @override
+  String get web_video_mine_queue_run => 'สร้างการ์ดที่อยู่ในคิว';
+  @override
+  String get web_video_mine_queue_stop => 'หยุดสร้างการ์ด';
+  @override
+  String get web_video_mine_queue_empty => 'ไม่มีการ์ดในคิว';
+  @override
+  String web_video_mine_queued({required Object count}) =>
+      'เพิ่มในคิวสร้างการ์ดแล้ว (รอ ${count} รายการ)';
+  @override
+  String web_video_mine_queue_running(
+          {required Object done, required Object total}) =>
+      'กำลังสร้างการ์ด ${done}/${total}…';
+  @override
+  String web_video_mine_queue_finished(
+          {required Object ok, required Object failed}) =>
+      'สร้างการ์ดแล้ว: ${ok} รายการ ล้มเหลว: ${failed} รายการ';
+  @override
+  String get web_video_hosting_menu => 'โหมดเล่น';
+  @override
+  String get web_video_hosting_builtin =>
+      'ในตัว (1080p; ใช้ซูเปอร์เรโซลูชัน ภาพหน้าจอ และการ์ดได้)';
+  @override
+  String get web_video_hosting_windowed =>
+      'หน้าต่างเนทีฟ (4K, DRM ฮาร์ดแวร์; การ์ดจะเข้าคิวไว้ก่อน)';
+  @override
+  String web_video_mine_switch_builtin({required Object count}) =>
+      'สลับไปโหมดในตัวเพื่อสร้างการ์ดในคิว ${count} รายการ';
 }
 
 // Path: <root>
@@ -125661,6 +126282,55 @@ class _StringsTr extends _StringsEn {
   String get video_subtitle_adjust_collapse => 'Daralt';
   @override
   String get video_subtitle_adjust_expand => 'Genişlet';
+  @override
+  String get settings_section_reading_stats => 'Okuma istatistikleri';
+  @override
+  String get reading_stats_idle_timeout => 'Boşta kalma süresi';
+  @override
+  String get reading_stats_idle_timeout_hint =>
+      'Sayfa çevirme, kaydırma veya sözcük arama olmadan bu kadar dakika geçince okuma süresini saymayı durdur. Yalnızca roman, PDF ve manga için; video oynatılırken sayılır.';
+  @override
+  String get web_video_track_menu => 'Altyazı parçası';
+  @override
+  String get web_video_track_live => 'Canlı altyazılar (sayfadan alınan)';
+  @override
+  String get web_video_no_tracks => 'Henüz altyazı yakalanmadı';
+  @override
+  String get web_video_hide_native_subtitles => 'Site altyazılarını gizle';
+  @override
+  String get web_video_import_hint =>
+      'Bu bir web sayfası (doğrudan akış değil). Yerleşik web oynatıcıda açılacak.';
+  @override
+  String get web_video_platform_unsupported =>
+      'Yerleşik web oynatıcı şimdilik yalnızca Windows’ta kullanılabilir.';
+  @override
+  String get web_video_mine_queue_run => 'Sıradaki kartları oluştur';
+  @override
+  String get web_video_mine_queue_stop => 'Kart oluşturmayı durdur';
+  @override
+  String get web_video_mine_queue_empty => 'Sırada kart yok';
+  @override
+  String web_video_mine_queued({required Object count}) =>
+      'Kart oluşturma sırasına alındı (${count} bekliyor)';
+  @override
+  String web_video_mine_queue_running(
+          {required Object done, required Object total}) =>
+      'Kartlar oluşturuluyor ${done}/${total}…';
+  @override
+  String web_video_mine_queue_finished(
+          {required Object ok, required Object failed}) =>
+      'Oluşturulan kart: ${ok}, başarısız: ${failed}';
+  @override
+  String get web_video_hosting_menu => 'Oynatma modu';
+  @override
+  String get web_video_hosting_builtin =>
+      'Yerleşik (1080p; süper çözünürlük, ekran görüntüsü ve kartlar kullanılabilir)';
+  @override
+  String get web_video_hosting_windowed =>
+      'Yerel pencere (4K, donanımsal DRM; kartlar sonra sıraya alınır)';
+  @override
+  String web_video_mine_switch_builtin({required Object count}) =>
+      '${count} bekleyen kartı oluşturmak için yerleşik moda geç';
 }
 
 // Path: <root>
@@ -134918,6 +135588,55 @@ class _StringsVi extends _StringsEn {
   String get video_subtitle_adjust_collapse => 'Thu gọn';
   @override
   String get video_subtitle_adjust_expand => 'Mở rộng';
+  @override
+  String get settings_section_reading_stats => 'Thống kê đọc';
+  @override
+  String get reading_stats_idle_timeout => 'Thời gian không hoạt động';
+  @override
+  String get reading_stats_idle_timeout_hint =>
+      'Ngừng tính thời gian đọc sau số phút này nếu không lật trang, cuộn hoặc tra từ. Chỉ áp dụng cho tiểu thuyết, PDF và manga; video được tính khi đang phát.';
+  @override
+  String get web_video_track_menu => 'Rãnh phụ đề';
+  @override
+  String get web_video_track_live => 'Phụ đề trực tiếp (lấy từ trang)';
+  @override
+  String get web_video_no_tracks => 'Chưa bắt được phụ đề nào';
+  @override
+  String get web_video_hide_native_subtitles => 'Ẩn phụ đề của trang';
+  @override
+  String get web_video_import_hint =>
+      'Đây là trang web (không phải luồng trực tiếp). Sẽ mở trong trình phát web tích hợp.';
+  @override
+  String get web_video_platform_unsupported =>
+      'Trình phát web tích hợp hiện chỉ có trên Windows.';
+  @override
+  String get web_video_mine_queue_run => 'Tạo các thẻ đang chờ';
+  @override
+  String get web_video_mine_queue_stop => 'Dừng tạo thẻ';
+  @override
+  String get web_video_mine_queue_empty => 'Không có thẻ nào đang chờ';
+  @override
+  String web_video_mine_queued({required Object count}) =>
+      'Đã xếp hàng để tạo thẻ (${count} đang chờ)';
+  @override
+  String web_video_mine_queue_running(
+          {required Object done, required Object total}) =>
+      'Đang tạo thẻ ${done}/${total}…';
+  @override
+  String web_video_mine_queue_finished(
+          {required Object ok, required Object failed}) =>
+      'Đã tạo thẻ: ${ok}, thất bại: ${failed}';
+  @override
+  String get web_video_hosting_menu => 'Chế độ phát';
+  @override
+  String get web_video_hosting_builtin =>
+      'Tích hợp (1080p; có siêu phân giải, ảnh chụp màn hình và thẻ)';
+  @override
+  String get web_video_hosting_windowed =>
+      'Cửa sổ gốc (4K, DRM phần cứng; thẻ được xếp hàng để làm sau)';
+  @override
+  String web_video_mine_switch_builtin({required Object count}) =>
+      'Chuyển sang chế độ tích hợp để tạo ${count} thẻ đang chờ';
 }
 
 // Path: <root>
@@ -143438,6 +144157,51 @@ class _StringsZhCn extends _StringsEn {
   String get video_subtitle_adjust_collapse => '收起';
   @override
   String get video_subtitle_adjust_expand => '展开';
+  @override
+  String get settings_section_reading_stats => '阅读统计';
+  @override
+  String get reading_stats_idle_timeout => '空闲判定时长';
+  @override
+  String get reading_stats_idle_timeout_hint =>
+      '这么久没有翻页、滚动或查词就停止计入阅读时长。只对小说、PDF、漫画生效；视频以播放状态为准。';
+  @override
+  String get web_video_track_menu => '字幕轨';
+  @override
+  String get web_video_track_live => '实时采集（页面字幕）';
+  @override
+  String get web_video_no_tracks => '尚未采集到字幕';
+  @override
+  String get web_video_hide_native_subtitles => '隐藏站点字幕';
+  @override
+  String get web_video_import_hint => '这是网页地址（非直链），将用内置网页播放器打开。';
+  @override
+  String get web_video_platform_unsupported => '内置网页播放器目前仅支持 Windows。';
+  @override
+  String get web_video_mine_queue_run => '制作队列中的卡片';
+  @override
+  String get web_video_mine_queue_stop => '停止制卡';
+  @override
+  String get web_video_mine_queue_empty => '制卡队列为空';
+  @override
+  String web_video_mine_queued({required Object count}) =>
+      '已加入制卡队列（待制 ${count} 张）';
+  @override
+  String web_video_mine_queue_running(
+          {required Object done, required Object total}) =>
+      '制卡中 ${done}/${total}…';
+  @override
+  String web_video_mine_queue_finished(
+          {required Object ok, required Object failed}) =>
+      '制卡完成：成功 ${ok}，失败 ${failed}';
+  @override
+  String get web_video_hosting_menu => '播放模式';
+  @override
+  String get web_video_hosting_builtin => '内置（1080p；可超分、可截图制卡）';
+  @override
+  String get web_video_hosting_windowed => '原生窗口（4K 硬件 DRM；制卡先排队）';
+  @override
+  String web_video_mine_switch_builtin({required Object count}) =>
+      '切到内置模式制作 ${count} 张排队卡片';
 }
 
 // Path: <root>
@@ -151963,6 +152727,51 @@ class _StringsZhHk extends _StringsEn {
   String get video_subtitle_adjust_collapse => '收起';
   @override
   String get video_subtitle_adjust_expand => '展開';
+  @override
+  String get settings_section_reading_stats => '閱讀統計';
+  @override
+  String get reading_stats_idle_timeout => '閒置判定時長';
+  @override
+  String get reading_stats_idle_timeout_hint =>
+      '這麼久沒有翻頁、捲動或查詞就停止計入閱讀時長。只對小說、PDF、漫畫生效；影片以播放狀態為準。';
+  @override
+  String get web_video_track_menu => '字幕軌';
+  @override
+  String get web_video_track_live => '即時字幕（從頁面取樣）';
+  @override
+  String get web_video_no_tracks => '尚未擷取到字幕';
+  @override
+  String get web_video_hide_native_subtitles => '隱藏網站字幕';
+  @override
+  String get web_video_import_hint => '這是網頁（不是直接串流），將在內建網頁播放器中開啟。';
+  @override
+  String get web_video_platform_unsupported => '內建網頁播放器目前僅支援 Windows。';
+  @override
+  String get web_video_mine_queue_run => '製作佇列中的卡片';
+  @override
+  String get web_video_mine_queue_stop => '停止製作卡片';
+  @override
+  String get web_video_mine_queue_empty => '佇列中沒有卡片';
+  @override
+  String web_video_mine_queued({required Object count}) =>
+      '已加入製卡佇列（待製 ${count} 張）';
+  @override
+  String web_video_mine_queue_running(
+          {required Object done, required Object total}) =>
+      '製卡中 ${done}/${total}…';
+  @override
+  String web_video_mine_queue_finished(
+          {required Object ok, required Object failed}) =>
+      '製卡完成：成功 ${ok}，失敗 ${failed}';
+  @override
+  String get web_video_hosting_menu => '播放模式';
+  @override
+  String get web_video_hosting_builtin => '內建（1080p；可超解析、截圖、製卡）';
+  @override
+  String get web_video_hosting_windowed => '原生視窗（4K 硬體 DRM；製卡先排隊）';
+  @override
+  String web_video_mine_switch_builtin({required Object count}) =>
+      '切換到內建模式製作 ${count} 張排隊卡片';
 }
 
 /// Flat map(s) containing all translations.
@@ -160070,6 +160879,48 @@ extension on _StringsEn {
         return 'Collapse';
       case 'video_subtitle_adjust_expand':
         return 'Expand';
+      case 'settings_section_reading_stats':
+        return 'Reading statistics';
+      case 'reading_stats_idle_timeout':
+        return 'Idle timeout';
+      case 'reading_stats_idle_timeout_hint':
+        return 'Stop counting reading time after this many minutes without turning a page, scrolling, or looking up a word. Applies to novels, PDFs and manga only; video counts while playing.';
+      case 'web_video_track_menu':
+        return 'Subtitle track';
+      case 'web_video_track_live':
+        return 'Live captions (sampled from page)';
+      case 'web_video_no_tracks':
+        return 'No subtitles captured yet';
+      case 'web_video_hide_native_subtitles':
+        return 'Hide site subtitles';
+      case 'web_video_import_hint':
+        return 'This is a web page (not a direct stream). It will open in the built-in web player.';
+      case 'web_video_platform_unsupported':
+        return 'The built-in web player is only available on Windows for now.';
+      case 'web_video_mine_queue_run':
+        return 'Create queued cards';
+      case 'web_video_mine_queue_stop':
+        return 'Stop card creation';
+      case 'web_video_mine_queue_empty':
+        return 'No queued cards';
+      case 'web_video_mine_queued':
+        return ({required Object count}) =>
+            'Queued for card creation (${count} pending)';
+      case 'web_video_mine_queue_running':
+        return ({required Object done, required Object total}) =>
+            'Creating cards ${done}/${total}...';
+      case 'web_video_mine_queue_finished':
+        return ({required Object ok, required Object failed}) =>
+            'Cards created: ${ok}, failed: ${failed}';
+      case 'web_video_hosting_menu':
+        return 'Playback mode';
+      case 'web_video_hosting_builtin':
+        return 'Built-in (1080p; super-resolution, screenshots and cards available)';
+      case 'web_video_hosting_windowed':
+        return 'Native window (4K, hardware DRM; cards are queued for later)';
+      case 'web_video_mine_switch_builtin':
+        return ({required Object count}) =>
+            'Switch to built-in mode to create ${count} queued cards';
       default:
         return null;
     }
@@ -168173,6 +169024,48 @@ extension on _StringsAr {
         return 'طيّ';
       case 'video_subtitle_adjust_expand':
         return 'توسيع';
+      case 'settings_section_reading_stats':
+        return 'إحصائيات القراءة';
+      case 'reading_stats_idle_timeout':
+        return 'مهلة الخمول';
+      case 'reading_stats_idle_timeout_hint':
+        return 'إيقاف احتساب وقت القراءة بعد هذا العدد من الدقائق دون تقليب صفحة أو تمرير أو بحث عن كلمة. ينطبق على الروايات وملفات PDF والمانغا فقط؛ يُحتسب الفيديو أثناء التشغيل.';
+      case 'web_video_track_menu':
+        return 'مسار الترجمة';
+      case 'web_video_track_live':
+        return 'ترجمة مباشرة (مأخوذة من الصفحة)';
+      case 'web_video_no_tracks':
+        return 'لم يتم التقاط أي ترجمة بعد';
+      case 'web_video_hide_native_subtitles':
+        return 'إخفاء ترجمة الموقع';
+      case 'web_video_import_hint':
+        return 'هذه صفحة ويب (وليست بثًا مباشرًا). ستُفتح في مشغّل الويب المدمج.';
+      case 'web_video_platform_unsupported':
+        return 'مشغّل الويب المدمج متاح حاليًا على Windows فقط.';
+      case 'web_video_mine_queue_run':
+        return 'إنشاء البطاقات المنتظرة';
+      case 'web_video_mine_queue_stop':
+        return 'إيقاف إنشاء البطاقات';
+      case 'web_video_mine_queue_empty':
+        return 'لا توجد بطاقات في قائمة الانتظار';
+      case 'web_video_mine_queued':
+        return ({required Object count}) =>
+            'أُضيف إلى قائمة انتظار إنشاء البطاقات (${count} معلّقة)';
+      case 'web_video_mine_queue_running':
+        return ({required Object done, required Object total}) =>
+            'جارٍ إنشاء البطاقات ${done}/${total}…';
+      case 'web_video_mine_queue_finished':
+        return ({required Object ok, required Object failed}) =>
+            'البطاقات المُنشأة: ${ok}، الفاشلة: ${failed}';
+      case 'web_video_hosting_menu':
+        return 'وضع التشغيل';
+      case 'web_video_hosting_builtin':
+        return 'مدمج (1080p؛ يتوفر تحسين الدقة ولقطات الشاشة والبطاقات)';
+      case 'web_video_hosting_windowed':
+        return 'نافذة أصلية (4K، DRM عتادي؛ تُوضع البطاقات في قائمة الانتظار)';
+      case 'web_video_mine_switch_builtin':
+        return ({required Object count}) =>
+            'التبديل إلى الوضع المدمج لإنشاء ${count} بطاقة منتظرة';
       default:
         return null;
     }
@@ -176319,6 +177212,48 @@ extension on _StringsDe {
         return 'Einklappen';
       case 'video_subtitle_adjust_expand':
         return 'Ausklappen';
+      case 'settings_section_reading_stats':
+        return 'Lesestatistik';
+      case 'reading_stats_idle_timeout':
+        return 'Inaktivitäts-Timeout';
+      case 'reading_stats_idle_timeout_hint':
+        return 'Lesezeit nach so vielen Minuten ohne Umblättern, Scrollen oder Wortsuche nicht mehr zählen. Gilt nur für Romane, PDFs und Manga; Video zählt, solange es läuft.';
+      case 'web_video_track_menu':
+        return 'Untertitelspur';
+      case 'web_video_track_live':
+        return 'Live-Untertitel (von der Seite erfasst)';
+      case 'web_video_no_tracks':
+        return 'Noch keine Untertitel erfasst';
+      case 'web_video_hide_native_subtitles':
+        return 'Website-Untertitel ausblenden';
+      case 'web_video_import_hint':
+        return 'Dies ist eine Webseite (kein direkter Stream). Sie wird im integrierten Web-Player geöffnet.';
+      case 'web_video_platform_unsupported':
+        return 'Der integrierte Web-Player ist derzeit nur unter Windows verfügbar.';
+      case 'web_video_mine_queue_run':
+        return 'Wartende Karten erstellen';
+      case 'web_video_mine_queue_stop':
+        return 'Kartenerstellung stoppen';
+      case 'web_video_mine_queue_empty':
+        return 'Keine wartenden Karten';
+      case 'web_video_mine_queued':
+        return ({required Object count}) =>
+            'Für die Kartenerstellung vorgemerkt (${count} ausstehend)';
+      case 'web_video_mine_queue_running':
+        return ({required Object done, required Object total}) =>
+            'Karten werden erstellt ${done}/${total}…';
+      case 'web_video_mine_queue_finished':
+        return ({required Object ok, required Object failed}) =>
+            'Karten erstellt: ${ok}, fehlgeschlagen: ${failed}';
+      case 'web_video_hosting_menu':
+        return 'Wiedergabemodus';
+      case 'web_video_hosting_builtin':
+        return 'Integriert (1080p; Hochskalierung, Screenshots und Karten verfügbar)';
+      case 'web_video_hosting_windowed':
+        return 'Natives Fenster (4K, Hardware-DRM; Karten werden später erstellt)';
+      case 'web_video_mine_switch_builtin':
+        return ({required Object count}) =>
+            'In den integrierten Modus wechseln, um ${count} wartende Karten zu erstellen';
       default:
         return null;
     }
@@ -184457,6 +185392,48 @@ extension on _StringsEs {
         return 'Contraer';
       case 'video_subtitle_adjust_expand':
         return 'Expandir';
+      case 'settings_section_reading_stats':
+        return 'Estadísticas de lectura';
+      case 'reading_stats_idle_timeout':
+        return 'Tiempo de inactividad';
+      case 'reading_stats_idle_timeout_hint':
+        return 'Dejar de contar el tiempo de lectura tras estos minutos sin pasar página, desplazarse o buscar una palabra. Solo para novelas, PDF y manga; el vídeo cuenta mientras se reproduce.';
+      case 'web_video_track_menu':
+        return 'Pista de subtítulos';
+      case 'web_video_track_live':
+        return 'Subtítulos en vivo (capturados de la página)';
+      case 'web_video_no_tracks':
+        return 'Aún no se han capturado subtítulos';
+      case 'web_video_hide_native_subtitles':
+        return 'Ocultar subtítulos del sitio';
+      case 'web_video_import_hint':
+        return 'Esto es una página web (no una transmisión directa). Se abrirá en el reproductor web integrado.';
+      case 'web_video_platform_unsupported':
+        return 'El reproductor web integrado solo está disponible en Windows por ahora.';
+      case 'web_video_mine_queue_run':
+        return 'Crear las tarjetas en cola';
+      case 'web_video_mine_queue_stop':
+        return 'Detener la creación de tarjetas';
+      case 'web_video_mine_queue_empty':
+        return 'No hay tarjetas en cola';
+      case 'web_video_mine_queued':
+        return ({required Object count}) =>
+            'En cola para crear tarjetas (${count} pendientes)';
+      case 'web_video_mine_queue_running':
+        return ({required Object done, required Object total}) =>
+            'Creando tarjetas ${done}/${total}…';
+      case 'web_video_mine_queue_finished':
+        return ({required Object ok, required Object failed}) =>
+            'Tarjetas creadas: ${ok}, fallidas: ${failed}';
+      case 'web_video_hosting_menu':
+        return 'Modo de reproducción';
+      case 'web_video_hosting_builtin':
+        return 'Integrado (1080p; superresolución, capturas y tarjetas disponibles)';
+      case 'web_video_hosting_windowed':
+        return 'Ventana nativa (4K, DRM por hardware; las tarjetas se ponen en cola)';
+      case 'web_video_mine_switch_builtin':
+        return ({required Object count}) =>
+            'Cambiar al modo integrado para crear ${count} tarjetas en cola';
       default:
         return null;
     }
@@ -192603,6 +193580,48 @@ extension on _StringsFr {
         return 'Réduire';
       case 'video_subtitle_adjust_expand':
         return 'Développer';
+      case 'settings_section_reading_stats':
+        return 'Statistiques de lecture';
+      case 'reading_stats_idle_timeout':
+        return 'Délai d\'inactivité';
+      case 'reading_stats_idle_timeout_hint':
+        return 'Cesser de compter le temps de lecture après ce nombre de minutes sans tourner de page, faire défiler ou chercher un mot. Romans, PDF et mangas uniquement ; la vidéo compte tant qu\'elle est en lecture.';
+      case 'web_video_track_menu':
+        return 'Piste de sous-titres';
+      case 'web_video_track_live':
+        return 'Sous-titres en direct (capturés sur la page)';
+      case 'web_video_no_tracks':
+        return 'Aucun sous-titre capturé pour l’instant';
+      case 'web_video_hide_native_subtitles':
+        return 'Masquer les sous-titres du site';
+      case 'web_video_import_hint':
+        return 'Il s’agit d’une page web (pas d’un flux direct). Elle s’ouvrira dans le lecteur web intégré.';
+      case 'web_video_platform_unsupported':
+        return 'Le lecteur web intégré n’est disponible que sous Windows pour le moment.';
+      case 'web_video_mine_queue_run':
+        return 'Créer les cartes en attente';
+      case 'web_video_mine_queue_stop':
+        return 'Arrêter la création de cartes';
+      case 'web_video_mine_queue_empty':
+        return 'Aucune carte en attente';
+      case 'web_video_mine_queued':
+        return ({required Object count}) =>
+            'Mis en attente pour la création de cartes (${count} en attente)';
+      case 'web_video_mine_queue_running':
+        return ({required Object done, required Object total}) =>
+            'Création des cartes ${done}/${total}…';
+      case 'web_video_mine_queue_finished':
+        return ({required Object ok, required Object failed}) =>
+            'Cartes créées : ${ok}, échecs : ${failed}';
+      case 'web_video_hosting_menu':
+        return 'Mode de lecture';
+      case 'web_video_hosting_builtin':
+        return 'Intégré (1080p ; super-résolution, captures et cartes disponibles)';
+      case 'web_video_hosting_windowed':
+        return 'Fenêtre native (4K, DRM matériel ; les cartes sont mises en attente)';
+      case 'web_video_mine_switch_builtin':
+        return ({required Object count}) =>
+            'Passer en mode intégré pour créer ${count} cartes en attente';
       default:
         return null;
     }
@@ -200721,6 +201740,48 @@ extension on _StringsId {
         return 'Ciutkan';
       case 'video_subtitle_adjust_expand':
         return 'Perluas';
+      case 'settings_section_reading_stats':
+        return 'Statistik membaca';
+      case 'reading_stats_idle_timeout':
+        return 'Batas waktu idle';
+      case 'reading_stats_idle_timeout_hint':
+        return 'Berhenti menghitung waktu membaca setelah sekian menit tanpa membalik halaman, menggulir, atau mencari kata. Hanya untuk novel, PDF, dan manga; video dihitung selama diputar.';
+      case 'web_video_track_menu':
+        return 'Trek subtitel';
+      case 'web_video_track_live':
+        return 'Teks langsung (diambil dari halaman)';
+      case 'web_video_no_tracks':
+        return 'Belum ada subtitel yang ditangkap';
+      case 'web_video_hide_native_subtitles':
+        return 'Sembunyikan subtitel situs';
+      case 'web_video_import_hint':
+        return 'Ini halaman web (bukan stream langsung). Akan dibuka di pemutar web bawaan.';
+      case 'web_video_platform_unsupported':
+        return 'Pemutar web bawaan saat ini hanya tersedia di Windows.';
+      case 'web_video_mine_queue_run':
+        return 'Buat kartu yang antre';
+      case 'web_video_mine_queue_stop':
+        return 'Hentikan pembuatan kartu';
+      case 'web_video_mine_queue_empty':
+        return 'Tidak ada kartu yang antre';
+      case 'web_video_mine_queued':
+        return ({required Object count}) =>
+            'Masuk antrean pembuatan kartu (${count} menunggu)';
+      case 'web_video_mine_queue_running':
+        return ({required Object done, required Object total}) =>
+            'Membuat kartu ${done}/${total}…';
+      case 'web_video_mine_queue_finished':
+        return ({required Object ok, required Object failed}) =>
+            'Kartu dibuat: ${ok}, gagal: ${failed}';
+      case 'web_video_hosting_menu':
+        return 'Mode pemutaran';
+      case 'web_video_hosting_builtin':
+        return 'Bawaan (1080p; resolusi super, tangkapan layar, dan kartu tersedia)';
+      case 'web_video_hosting_windowed':
+        return 'Jendela native (4K, DRM perangkat keras; kartu diantrekan dulu)';
+      case 'web_video_mine_switch_builtin':
+        return ({required Object count}) =>
+            'Beralih ke mode bawaan untuk membuat ${count} kartu yang antre';
       default:
         return null;
     }
@@ -208860,6 +209921,48 @@ extension on _StringsIt {
         return 'Comprimi';
       case 'video_subtitle_adjust_expand':
         return 'Espandi';
+      case 'settings_section_reading_stats':
+        return 'Statistiche di lettura';
+      case 'reading_stats_idle_timeout':
+        return 'Timeout di inattività';
+      case 'reading_stats_idle_timeout_hint':
+        return 'Smetti di contare il tempo di lettura dopo questi minuti senza voltare pagina, scorrere o cercare una parola. Solo per romanzi, PDF e manga; il video conta mentre è in riproduzione.';
+      case 'web_video_track_menu':
+        return 'Traccia sottotitoli';
+      case 'web_video_track_live':
+        return 'Sottotitoli live (campionati dalla pagina)';
+      case 'web_video_no_tracks':
+        return 'Nessun sottotitolo acquisito ancora';
+      case 'web_video_hide_native_subtitles':
+        return 'Nascondi i sottotitoli del sito';
+      case 'web_video_import_hint':
+        return 'Questa è una pagina web (non uno stream diretto). Si aprirà nel lettore web integrato.';
+      case 'web_video_platform_unsupported':
+        return 'Il lettore web integrato è disponibile per ora solo su Windows.';
+      case 'web_video_mine_queue_run':
+        return 'Crea le carte in coda';
+      case 'web_video_mine_queue_stop':
+        return 'Interrompi la creazione delle carte';
+      case 'web_video_mine_queue_empty':
+        return 'Nessuna carta in coda';
+      case 'web_video_mine_queued':
+        return ({required Object count}) =>
+            'In coda per la creazione di carte (${count} in attesa)';
+      case 'web_video_mine_queue_running':
+        return ({required Object done, required Object total}) =>
+            'Creazione carte ${done}/${total}…';
+      case 'web_video_mine_queue_finished':
+        return ({required Object ok, required Object failed}) =>
+            'Carte create: ${ok}, non riuscite: ${failed}';
+      case 'web_video_hosting_menu':
+        return 'Modalità di riproduzione';
+      case 'web_video_hosting_builtin':
+        return 'Integrato (1080p; super-risoluzione, screenshot e carte disponibili)';
+      case 'web_video_hosting_windowed':
+        return 'Finestra nativa (4K, DRM hardware; le carte vengono messe in coda)';
+      case 'web_video_mine_switch_builtin':
+        return ({required Object count}) =>
+            'Passa alla modalità integrata per creare ${count} carte in coda';
       default:
         return null;
     }
@@ -216931,6 +218034,46 @@ extension on _StringsJa {
         return '折りたたむ';
       case 'video_subtitle_adjust_expand':
         return '展開';
+      case 'settings_section_reading_stats':
+        return '読書統計';
+      case 'reading_stats_idle_timeout':
+        return 'アイドル判定時間';
+      case 'reading_stats_idle_timeout_hint':
+        return 'ページめくり・スクロール・辞書引きがこの分数ないと読書時間の計測を止めます。小説・PDF・漫画のみ対象。動画は再生中なら計測します。';
+      case 'web_video_track_menu':
+        return '字幕トラック';
+      case 'web_video_track_live':
+        return 'ライブ字幕（ページから取得）';
+      case 'web_video_no_tracks':
+        return '字幕はまだ取得されていません';
+      case 'web_video_hide_native_subtitles':
+        return 'サイトの字幕を隠す';
+      case 'web_video_import_hint':
+        return 'これは（直接ストリームではなく）Web ページです。内蔵 Web プレーヤーで開きます。';
+      case 'web_video_platform_unsupported':
+        return '内蔵 Web プレーヤーは現在 Windows でのみ利用できます。';
+      case 'web_video_mine_queue_run':
+        return 'キューのカードを作成';
+      case 'web_video_mine_queue_stop':
+        return 'カード作成を停止';
+      case 'web_video_mine_queue_empty':
+        return 'キューにカードはありません';
+      case 'web_video_mine_queued':
+        return ({required Object count}) => 'カード作成のキューに追加しました（残り ${count} 件）';
+      case 'web_video_mine_queue_running':
+        return ({required Object done, required Object total}) =>
+            'カード作成中 ${done}/${total}…';
+      case 'web_video_mine_queue_finished':
+        return ({required Object ok, required Object failed}) =>
+            'カード作成完了：成功 ${ok}、失敗 ${failed}';
+      case 'web_video_hosting_menu':
+        return '再生モード';
+      case 'web_video_hosting_builtin':
+        return '内蔵（1080p；超解像・スクリーンショット・カード作成が可能）';
+      case 'web_video_hosting_windowed':
+        return 'ネイティブウィンドウ（4K、ハードウェア DRM；カードは後でキュー処理）';
+      case 'web_video_mine_switch_builtin':
+        return ({required Object count}) => '内蔵モードに切り替えて ${count} 件のカードを作成';
       default:
         return null;
     }
@@ -225004,6 +226147,47 @@ extension on _StringsKo {
         return '접기';
       case 'video_subtitle_adjust_expand':
         return '펼치기';
+      case 'settings_section_reading_stats':
+        return '독서 통계';
+      case 'reading_stats_idle_timeout':
+        return '유휴 판정 시간';
+      case 'reading_stats_idle_timeout_hint':
+        return '페이지 넘김·스크롤·단어 검색이 이 시간(분) 동안 없으면 독서 시간 집계를 멈춥니다. 소설·PDF·만화에만 적용되며, 동영상은 재생 중이면 집계합니다.';
+      case 'web_video_track_menu':
+        return '자막 트랙';
+      case 'web_video_track_live':
+        return '실시간 자막(페이지에서 수집)';
+      case 'web_video_no_tracks':
+        return '아직 수집된 자막이 없습니다';
+      case 'web_video_hide_native_subtitles':
+        return '사이트 자막 숨기기';
+      case 'web_video_import_hint':
+        return '직접 스트림이 아닌 웹 페이지입니다. 내장 웹 플레이어에서 열립니다.';
+      case 'web_video_platform_unsupported':
+        return '내장 웹 플레이어는 현재 Windows에서만 사용할 수 있습니다.';
+      case 'web_video_mine_queue_run':
+        return '대기 중인 카드 만들기';
+      case 'web_video_mine_queue_stop':
+        return '카드 만들기 중지';
+      case 'web_video_mine_queue_empty':
+        return '대기 중인 카드가 없습니다';
+      case 'web_video_mine_queued':
+        return ({required Object count}) => '카드 만들기 대기열에 추가됨(${count}개 대기)';
+      case 'web_video_mine_queue_running':
+        return ({required Object done, required Object total}) =>
+            '카드 만드는 중 ${done}/${total}…';
+      case 'web_video_mine_queue_finished':
+        return ({required Object ok, required Object failed}) =>
+            '카드 만들기 완료: 성공 ${ok}, 실패 ${failed}';
+      case 'web_video_hosting_menu':
+        return '재생 모드';
+      case 'web_video_hosting_builtin':
+        return '내장(1080p; 초해상도, 스크린샷, 카드 만들기 가능)';
+      case 'web_video_hosting_windowed':
+        return '네이티브 창(4K, 하드웨어 DRM; 카드는 나중에 대기열 처리)';
+      case 'web_video_mine_switch_builtin':
+        return ({required Object count}) =>
+            '내장 모드로 전환하여 대기 중인 카드 ${count}개 만들기';
       default:
         return null;
     }
@@ -233137,6 +234321,48 @@ extension on _StringsNl {
         return 'Inklappen';
       case 'video_subtitle_adjust_expand':
         return 'Uitklappen';
+      case 'settings_section_reading_stats':
+        return 'Leesstatistieken';
+      case 'reading_stats_idle_timeout':
+        return 'Inactiviteitstime-out';
+      case 'reading_stats_idle_timeout_hint':
+        return 'Stop met het tellen van leestijd na dit aantal minuten zonder bladeren, scrollen of een woord opzoeken. Alleen voor romans, pdf\'s en manga; video telt zolang het afspeelt.';
+      case 'web_video_track_menu':
+        return 'Ondertitelspoor';
+      case 'web_video_track_live':
+        return 'Live-ondertitels (van de pagina)';
+      case 'web_video_no_tracks':
+        return 'Nog geen ondertitels vastgelegd';
+      case 'web_video_hide_native_subtitles':
+        return 'Ondertitels van de site verbergen';
+      case 'web_video_import_hint':
+        return 'Dit is een webpagina (geen directe stream). Deze wordt in de ingebouwde webspeler geopend.';
+      case 'web_video_platform_unsupported':
+        return 'De ingebouwde webspeler is voorlopig alleen beschikbaar op Windows.';
+      case 'web_video_mine_queue_run':
+        return 'Wachtende kaarten aanmaken';
+      case 'web_video_mine_queue_stop':
+        return 'Kaarten aanmaken stoppen';
+      case 'web_video_mine_queue_empty':
+        return 'Geen wachtende kaarten';
+      case 'web_video_mine_queued':
+        return ({required Object count}) =>
+            'In wachtrij voor kaart aanmaken (${count} wachtend)';
+      case 'web_video_mine_queue_running':
+        return ({required Object done, required Object total}) =>
+            'Kaarten aanmaken ${done}/${total}…';
+      case 'web_video_mine_queue_finished':
+        return ({required Object ok, required Object failed}) =>
+            'Kaarten aangemaakt: ${ok}, mislukt: ${failed}';
+      case 'web_video_hosting_menu':
+        return 'Afspeelmodus';
+      case 'web_video_hosting_builtin':
+        return 'Ingebouwd (1080p; superresolutie, schermafbeeldingen en kaarten beschikbaar)';
+      case 'web_video_hosting_windowed':
+        return 'Native venster (4K, hardware-DRM; kaarten komen in de wachtrij)';
+      case 'web_video_mine_switch_builtin':
+        return ({required Object count}) =>
+            'Schakel naar ingebouwde modus om ${count} wachtende kaarten aan te maken';
       default:
         return null;
     }
@@ -241265,6 +242491,48 @@ extension on _StringsPtBr {
         return 'Recolher';
       case 'video_subtitle_adjust_expand':
         return 'Expandir';
+      case 'settings_section_reading_stats':
+        return 'Estatísticas de leitura';
+      case 'reading_stats_idle_timeout':
+        return 'Tempo de inatividade';
+      case 'reading_stats_idle_timeout_hint':
+        return 'Parar de contar o tempo de leitura após esses minutos sem virar página, rolar ou pesquisar uma palavra. Apenas para romances, PDFs e mangás; o vídeo conta enquanto estiver reproduzindo.';
+      case 'web_video_track_menu':
+        return 'Faixa de legendas';
+      case 'web_video_track_live':
+        return 'Legendas ao vivo (capturadas da página)';
+      case 'web_video_no_tracks':
+        return 'Nenhuma legenda capturada ainda';
+      case 'web_video_hide_native_subtitles':
+        return 'Ocultar legendas do site';
+      case 'web_video_import_hint':
+        return 'Isto é uma página web (não um stream direto). Será aberta no player web integrado.';
+      case 'web_video_platform_unsupported':
+        return 'O player web integrado só está disponível no Windows por enquanto.';
+      case 'web_video_mine_queue_run':
+        return 'Criar cartões na fila';
+      case 'web_video_mine_queue_stop':
+        return 'Parar de criar cartões';
+      case 'web_video_mine_queue_empty':
+        return 'Nenhum cartão na fila';
+      case 'web_video_mine_queued':
+        return ({required Object count}) =>
+            'Na fila para criar cartões (${count} pendentes)';
+      case 'web_video_mine_queue_running':
+        return ({required Object done, required Object total}) =>
+            'Criando cartões ${done}/${total}…';
+      case 'web_video_mine_queue_finished':
+        return ({required Object ok, required Object failed}) =>
+            'Cartões criados: ${ok}, falhas: ${failed}';
+      case 'web_video_hosting_menu':
+        return 'Modo de reprodução';
+      case 'web_video_hosting_builtin':
+        return 'Integrado (1080p; super-resolução, capturas e cartões disponíveis)';
+      case 'web_video_hosting_windowed':
+        return 'Janela nativa (4K, DRM por hardware; cartões ficam na fila)';
+      case 'web_video_mine_switch_builtin':
+        return ({required Object count}) =>
+            'Mudar para o modo integrado para criar ${count} cartões na fila';
       default:
         return null;
     }
@@ -249399,6 +250667,48 @@ extension on _StringsRu {
         return 'Свернуть';
       case 'video_subtitle_adjust_expand':
         return 'Развернуть';
+      case 'settings_section_reading_stats':
+        return 'Статистика чтения';
+      case 'reading_stats_idle_timeout':
+        return 'Тайм-аут бездействия';
+      case 'reading_stats_idle_timeout_hint':
+        return 'Не засчитывать время чтения после стольких минут без перелистывания, прокрутки или поиска слова. Только для романов, PDF и манги; видео засчитывается, пока воспроизводится.';
+      case 'web_video_track_menu':
+        return 'Дорожка субтитров';
+      case 'web_video_track_live':
+        return 'Живые субтитры (с страницы)';
+      case 'web_video_no_tracks':
+        return 'Субтитры пока не получены';
+      case 'web_video_hide_native_subtitles':
+        return 'Скрыть субтитры сайта';
+      case 'web_video_import_hint':
+        return 'Это веб-страница (не прямой поток). Она откроется во встроенном веб-плеере.';
+      case 'web_video_platform_unsupported':
+        return 'Встроенный веб-плеер пока доступен только в Windows.';
+      case 'web_video_mine_queue_run':
+        return 'Создать карточки из очереди';
+      case 'web_video_mine_queue_stop':
+        return 'Остановить создание карточек';
+      case 'web_video_mine_queue_empty':
+        return 'Очередь карточек пуста';
+      case 'web_video_mine_queued':
+        return ({required Object count}) =>
+            'Добавлено в очередь на создание карточек (ожидает: ${count})';
+      case 'web_video_mine_queue_running':
+        return ({required Object done, required Object total}) =>
+            'Создание карточек ${done}/${total}…';
+      case 'web_video_mine_queue_finished':
+        return ({required Object ok, required Object failed}) =>
+            'Карточек создано: ${ok}, ошибок: ${failed}';
+      case 'web_video_hosting_menu':
+        return 'Режим воспроизведения';
+      case 'web_video_hosting_builtin':
+        return 'Встроенный (1080p; доступны суперразрешение, скриншоты и карточки)';
+      case 'web_video_hosting_windowed':
+        return 'Нативное окно (4K, аппаратный DRM; карточки ставятся в очередь)';
+      case 'web_video_mine_switch_builtin':
+        return ({required Object count}) =>
+            'Переключиться на встроенный режим и создать карточек из очереди: ${count}';
       default:
         return null;
     }
@@ -257506,6 +258816,48 @@ extension on _StringsTh {
         return 'ย่อ';
       case 'video_subtitle_adjust_expand':
         return 'ขยาย';
+      case 'settings_section_reading_stats':
+        return 'สถิติการอ่าน';
+      case 'reading_stats_idle_timeout':
+        return 'เวลาพักการอ่าน';
+      case 'reading_stats_idle_timeout_hint':
+        return 'หยุดนับเวลาอ่านเมื่อไม่มีการพลิกหน้า เลื่อน หรือค้นหาคำนานเท่านี้นาที ใช้กับนิยาย PDF และมังงะเท่านั้น วิดีโอจะนับขณะเล่น';
+      case 'web_video_track_menu':
+        return 'แทร็กคำบรรยาย';
+      case 'web_video_track_live':
+        return 'คำบรรยายสด (เก็บจากหน้าเว็บ)';
+      case 'web_video_no_tracks':
+        return 'ยังไม่ได้เก็บคำบรรยาย';
+      case 'web_video_hide_native_subtitles':
+        return 'ซ่อนคำบรรยายของเว็บไซต์';
+      case 'web_video_import_hint':
+        return 'นี่คือหน้าเว็บ (ไม่ใช่สตรีมโดยตรง) จะเปิดในเว็บเพลเยอร์ในตัว';
+      case 'web_video_platform_unsupported':
+        return 'ตอนนี้เว็บเพลเยอร์ในตัวใช้ได้เฉพาะบน Windows';
+      case 'web_video_mine_queue_run':
+        return 'สร้างการ์ดที่อยู่ในคิว';
+      case 'web_video_mine_queue_stop':
+        return 'หยุดสร้างการ์ด';
+      case 'web_video_mine_queue_empty':
+        return 'ไม่มีการ์ดในคิว';
+      case 'web_video_mine_queued':
+        return ({required Object count}) =>
+            'เพิ่มในคิวสร้างการ์ดแล้ว (รอ ${count} รายการ)';
+      case 'web_video_mine_queue_running':
+        return ({required Object done, required Object total}) =>
+            'กำลังสร้างการ์ด ${done}/${total}…';
+      case 'web_video_mine_queue_finished':
+        return ({required Object ok, required Object failed}) =>
+            'สร้างการ์ดแล้ว: ${ok} รายการ ล้มเหลว: ${failed} รายการ';
+      case 'web_video_hosting_menu':
+        return 'โหมดเล่น';
+      case 'web_video_hosting_builtin':
+        return 'ในตัว (1080p; ใช้ซูเปอร์เรโซลูชัน ภาพหน้าจอ และการ์ดได้)';
+      case 'web_video_hosting_windowed':
+        return 'หน้าต่างเนทีฟ (4K, DRM ฮาร์ดแวร์; การ์ดจะเข้าคิวไว้ก่อน)';
+      case 'web_video_mine_switch_builtin':
+        return ({required Object count}) =>
+            'สลับไปโหมดในตัวเพื่อสร้างการ์ดในคิว ${count} รายการ';
       default:
         return null;
     }
@@ -265629,6 +266981,48 @@ extension on _StringsTr {
         return 'Daralt';
       case 'video_subtitle_adjust_expand':
         return 'Genişlet';
+      case 'settings_section_reading_stats':
+        return 'Okuma istatistikleri';
+      case 'reading_stats_idle_timeout':
+        return 'Boşta kalma süresi';
+      case 'reading_stats_idle_timeout_hint':
+        return 'Sayfa çevirme, kaydırma veya sözcük arama olmadan bu kadar dakika geçince okuma süresini saymayı durdur. Yalnızca roman, PDF ve manga için; video oynatılırken sayılır.';
+      case 'web_video_track_menu':
+        return 'Altyazı parçası';
+      case 'web_video_track_live':
+        return 'Canlı altyazılar (sayfadan alınan)';
+      case 'web_video_no_tracks':
+        return 'Henüz altyazı yakalanmadı';
+      case 'web_video_hide_native_subtitles':
+        return 'Site altyazılarını gizle';
+      case 'web_video_import_hint':
+        return 'Bu bir web sayfası (doğrudan akış değil). Yerleşik web oynatıcıda açılacak.';
+      case 'web_video_platform_unsupported':
+        return 'Yerleşik web oynatıcı şimdilik yalnızca Windows’ta kullanılabilir.';
+      case 'web_video_mine_queue_run':
+        return 'Sıradaki kartları oluştur';
+      case 'web_video_mine_queue_stop':
+        return 'Kart oluşturmayı durdur';
+      case 'web_video_mine_queue_empty':
+        return 'Sırada kart yok';
+      case 'web_video_mine_queued':
+        return ({required Object count}) =>
+            'Kart oluşturma sırasına alındı (${count} bekliyor)';
+      case 'web_video_mine_queue_running':
+        return ({required Object done, required Object total}) =>
+            'Kartlar oluşturuluyor ${done}/${total}…';
+      case 'web_video_mine_queue_finished':
+        return ({required Object ok, required Object failed}) =>
+            'Oluşturulan kart: ${ok}, başarısız: ${failed}';
+      case 'web_video_hosting_menu':
+        return 'Oynatma modu';
+      case 'web_video_hosting_builtin':
+        return 'Yerleşik (1080p; süper çözünürlük, ekran görüntüsü ve kartlar kullanılabilir)';
+      case 'web_video_hosting_windowed':
+        return 'Yerel pencere (4K, donanımsal DRM; kartlar sonra sıraya alınır)';
+      case 'web_video_mine_switch_builtin':
+        return ({required Object count}) =>
+            '${count} bekleyen kartı oluşturmak için yerleşik moda geç';
       default:
         return null;
     }
@@ -273745,6 +275139,48 @@ extension on _StringsVi {
         return 'Thu gọn';
       case 'video_subtitle_adjust_expand':
         return 'Mở rộng';
+      case 'settings_section_reading_stats':
+        return 'Thống kê đọc';
+      case 'reading_stats_idle_timeout':
+        return 'Thời gian không hoạt động';
+      case 'reading_stats_idle_timeout_hint':
+        return 'Ngừng tính thời gian đọc sau số phút này nếu không lật trang, cuộn hoặc tra từ. Chỉ áp dụng cho tiểu thuyết, PDF và manga; video được tính khi đang phát.';
+      case 'web_video_track_menu':
+        return 'Rãnh phụ đề';
+      case 'web_video_track_live':
+        return 'Phụ đề trực tiếp (lấy từ trang)';
+      case 'web_video_no_tracks':
+        return 'Chưa bắt được phụ đề nào';
+      case 'web_video_hide_native_subtitles':
+        return 'Ẩn phụ đề của trang';
+      case 'web_video_import_hint':
+        return 'Đây là trang web (không phải luồng trực tiếp). Sẽ mở trong trình phát web tích hợp.';
+      case 'web_video_platform_unsupported':
+        return 'Trình phát web tích hợp hiện chỉ có trên Windows.';
+      case 'web_video_mine_queue_run':
+        return 'Tạo các thẻ đang chờ';
+      case 'web_video_mine_queue_stop':
+        return 'Dừng tạo thẻ';
+      case 'web_video_mine_queue_empty':
+        return 'Không có thẻ nào đang chờ';
+      case 'web_video_mine_queued':
+        return ({required Object count}) =>
+            'Đã xếp hàng để tạo thẻ (${count} đang chờ)';
+      case 'web_video_mine_queue_running':
+        return ({required Object done, required Object total}) =>
+            'Đang tạo thẻ ${done}/${total}…';
+      case 'web_video_mine_queue_finished':
+        return ({required Object ok, required Object failed}) =>
+            'Đã tạo thẻ: ${ok}, thất bại: ${failed}';
+      case 'web_video_hosting_menu':
+        return 'Chế độ phát';
+      case 'web_video_hosting_builtin':
+        return 'Tích hợp (1080p; có siêu phân giải, ảnh chụp màn hình và thẻ)';
+      case 'web_video_hosting_windowed':
+        return 'Cửa sổ gốc (4K, DRM phần cứng; thẻ được xếp hàng để làm sau)';
+      case 'web_video_mine_switch_builtin':
+        return ({required Object count}) =>
+            'Chuyển sang chế độ tích hợp để tạo ${count} thẻ đang chờ';
       default:
         return null;
     }
@@ -281794,6 +283230,46 @@ extension on _StringsZhCn {
         return '收起';
       case 'video_subtitle_adjust_expand':
         return '展开';
+      case 'settings_section_reading_stats':
+        return '阅读统计';
+      case 'reading_stats_idle_timeout':
+        return '空闲判定时长';
+      case 'reading_stats_idle_timeout_hint':
+        return '这么久没有翻页、滚动或查词就停止计入阅读时长。只对小说、PDF、漫画生效；视频以播放状态为准。';
+      case 'web_video_track_menu':
+        return '字幕轨';
+      case 'web_video_track_live':
+        return '实时采集（页面字幕）';
+      case 'web_video_no_tracks':
+        return '尚未采集到字幕';
+      case 'web_video_hide_native_subtitles':
+        return '隐藏站点字幕';
+      case 'web_video_import_hint':
+        return '这是网页地址（非直链），将用内置网页播放器打开。';
+      case 'web_video_platform_unsupported':
+        return '内置网页播放器目前仅支持 Windows。';
+      case 'web_video_mine_queue_run':
+        return '制作队列中的卡片';
+      case 'web_video_mine_queue_stop':
+        return '停止制卡';
+      case 'web_video_mine_queue_empty':
+        return '制卡队列为空';
+      case 'web_video_mine_queued':
+        return ({required Object count}) => '已加入制卡队列（待制 ${count} 张）';
+      case 'web_video_mine_queue_running':
+        return ({required Object done, required Object total}) =>
+            '制卡中 ${done}/${total}…';
+      case 'web_video_mine_queue_finished':
+        return ({required Object ok, required Object failed}) =>
+            '制卡完成：成功 ${ok}，失败 ${failed}';
+      case 'web_video_hosting_menu':
+        return '播放模式';
+      case 'web_video_hosting_builtin':
+        return '内置（1080p；可超分、可截图制卡）';
+      case 'web_video_hosting_windowed':
+        return '原生窗口（4K 硬件 DRM；制卡先排队）';
+      case 'web_video_mine_switch_builtin':
+        return ({required Object count}) => '切到内置模式制作 ${count} 张排队卡片';
       default:
         return null;
     }
@@ -289844,6 +291320,46 @@ extension on _StringsZhHk {
         return '收起';
       case 'video_subtitle_adjust_expand':
         return '展開';
+      case 'settings_section_reading_stats':
+        return '閱讀統計';
+      case 'reading_stats_idle_timeout':
+        return '閒置判定時長';
+      case 'reading_stats_idle_timeout_hint':
+        return '這麼久沒有翻頁、捲動或查詞就停止計入閱讀時長。只對小說、PDF、漫畫生效；影片以播放狀態為準。';
+      case 'web_video_track_menu':
+        return '字幕軌';
+      case 'web_video_track_live':
+        return '即時字幕（從頁面取樣）';
+      case 'web_video_no_tracks':
+        return '尚未擷取到字幕';
+      case 'web_video_hide_native_subtitles':
+        return '隱藏網站字幕';
+      case 'web_video_import_hint':
+        return '這是網頁（不是直接串流），將在內建網頁播放器中開啟。';
+      case 'web_video_platform_unsupported':
+        return '內建網頁播放器目前僅支援 Windows。';
+      case 'web_video_mine_queue_run':
+        return '製作佇列中的卡片';
+      case 'web_video_mine_queue_stop':
+        return '停止製作卡片';
+      case 'web_video_mine_queue_empty':
+        return '佇列中沒有卡片';
+      case 'web_video_mine_queued':
+        return ({required Object count}) => '已加入製卡佇列（待製 ${count} 張）';
+      case 'web_video_mine_queue_running':
+        return ({required Object done, required Object total}) =>
+            '製卡中 ${done}/${total}…';
+      case 'web_video_mine_queue_finished':
+        return ({required Object ok, required Object failed}) =>
+            '製卡完成：成功 ${ok}，失敗 ${failed}';
+      case 'web_video_hosting_menu':
+        return '播放模式';
+      case 'web_video_hosting_builtin':
+        return '內建（1080p；可超解析、截圖、製卡）';
+      case 'web_video_hosting_windowed':
+        return '原生視窗（4K 硬體 DRM；製卡先排隊）';
+      case 'web_video_mine_switch_builtin':
+        return ({required Object count}) => '切換到內建模式製作 ${count} 張排隊卡片';
       default:
         return null;
     }
