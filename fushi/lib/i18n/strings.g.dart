@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 66164 (3892 per locale)
+/// Strings: 66215 (3895 per locale)
 ///
-/// Built on 2026-08-30 at 00:33 UTC
+/// Built on 2026-08-30 at 01:13 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5302,6 +5302,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Caption still catches clicks while clicking through';
   String get gal_hook_passthrough_blocks_mouse_hint =>
       'On: text lines still take clicks so you can tap a word. Off: the whole overlay is transparent to the mouse — you can click whatever is underneath, but tapping words no longer works.';
+  String get floating_lyric_passthrough =>
+      'Click through to what is underneath';
+  String get floating_lyric_transparency => 'Toggle the background';
+  String get floating_lyric_topmost => 'Keep on top';
 }
 
 // Path: <root>
@@ -14325,6 +14329,12 @@ class _StringsAr extends _StringsEn {
   @override
   String get gal_hook_passthrough_blocks_mouse_hint =>
       'تشغيل: تبقى أسطر النص تستقبل النقرات فتستطيع الضغط على كلمة. إيقاف: تصبح الطبقة كلها شفافة للفأرة — تنقر ما تحتها، لكن الضغط على الكلمات لا يعمل.';
+  @override
+  String get floating_lyric_passthrough => 'النقر للوصول إلى ما تحته';
+  @override
+  String get floating_lyric_transparency => 'تبديل الخلفية';
+  @override
+  String get floating_lyric_topmost => 'الإبقاء في المقدمة';
 }
 
 // Path: <root>
@@ -23559,6 +23569,12 @@ class _StringsDe extends _StringsEn {
   @override
   String get gal_hook_passthrough_blocks_mouse_hint =>
       'An: Textzeilen nehmen weiter Klicks an, du kannst also ein Wort antippen. Aus: Das gesamte Overlay ist für die Maus durchlässig – du klickst, was darunter liegt, aber Wörter antippen geht nicht mehr.';
+  @override
+  String get floating_lyric_passthrough => 'Klicks nach unten durchreichen';
+  @override
+  String get floating_lyric_transparency => 'Hintergrund umschalten';
+  @override
+  String get floating_lyric_topmost => 'Immer im Vordergrund';
 }
 
 // Path: <root>
@@ -32836,6 +32852,13 @@ class _StringsEs extends _StringsEn {
   @override
   String get gal_hook_passthrough_blocks_mouse_hint =>
       'Activado: las líneas de texto siguen recibiendo clics, así puedes tocar una palabra. Desactivado: toda la superposición es transparente al ratón; puedes hacer clic en lo que haya debajo, pero tocar palabras deja de funcionar.';
+  @override
+  String get floating_lyric_passthrough =>
+      'Dejar pasar los clics a lo que hay debajo';
+  @override
+  String get floating_lyric_transparency => 'Alternar el fondo';
+  @override
+  String get floating_lyric_topmost => 'Mantener al frente';
 }
 
 // Path: <root>
@@ -42147,6 +42170,13 @@ class _StringsFr extends _StringsEn {
   @override
   String get gal_hook_passthrough_blocks_mouse_hint =>
       'Activé : les lignes de texte reçoivent encore les clics, vous pouvez donc toucher un mot. Désactivé : toute la surcouche est transparente à la souris — vous cliquez ce qui est dessous, mais toucher un mot ne marche plus.';
+  @override
+  String get floating_lyric_passthrough =>
+      'Laisser passer les clics vers le dessous';
+  @override
+  String get floating_lyric_transparency => 'Basculer l’arrière-plan';
+  @override
+  String get floating_lyric_topmost => 'Garder au premier plan';
 }
 
 // Path: <root>
@@ -51283,6 +51313,13 @@ class _StringsId extends _StringsEn {
   @override
   String get gal_hook_passthrough_blocks_mouse_hint =>
       'Aktif: baris teks tetap menerima klik sehingga kamu bisa mengetuk kata. Nonaktif: seluruh lapisan tembus bagi tetikus — kamu bisa mengeklik apa pun di bawahnya, tapi mengetuk kata tidak lagi berfungsi.';
+  @override
+  String get floating_lyric_passthrough =>
+      'Teruskan klik ke jendela di bawahnya';
+  @override
+  String get floating_lyric_transparency => 'Alihkan latar belakang';
+  @override
+  String get floating_lyric_topmost => 'Tetap di atas';
 }
 
 // Path: <root>
@@ -60497,6 +60534,13 @@ class _StringsIt extends _StringsEn {
   @override
   String get gal_hook_passthrough_blocks_mouse_hint =>
       'Attivo: le righe di testo ricevono ancora i clic, così puoi toccare una parola. Disattivo: l’intera sovrapposizione è trasparente al mouse — clicchi ciò che sta sotto, ma toccare le parole non funziona più.';
+  @override
+  String get floating_lyric_passthrough =>
+      'Lascia passare i clic a ciò che sta sotto';
+  @override
+  String get floating_lyric_transparency => 'Attiva/disattiva lo sfondo';
+  @override
+  String get floating_lyric_topmost => 'Mantieni in primo piano';
 }
 
 // Path: <root>
@@ -69149,6 +69193,12 @@ class _StringsJa extends _StringsEn {
   @override
   String get gal_hook_passthrough_blocks_mouse_hint =>
       'オン：字幕の行はクリックを受け続けるので単語をタップできます。オフ：オーバーレイ全体がマウスに対して透明になり、下のものをクリックできますが、単語のタップはできなくなります。';
+  @override
+  String get floating_lyric_passthrough => 'クリックを下のウィンドウに通す';
+  @override
+  String get floating_lyric_transparency => '背景を切り替える';
+  @override
+  String get floating_lyric_topmost => '常に手前に表示';
 }
 
 // Path: <root>
@@ -77815,6 +77865,12 @@ class _StringsKo extends _StringsEn {
   @override
   String get gal_hook_passthrough_blocks_mouse_hint =>
       '켬: 자막 줄이 계속 클릭을 받아 단어를 누를 수 있습니다. 끔: 오버레이 전체가 마우스에 투명해져 아래 것을 클릭할 수 있지만, 단어 누르기는 더 이상 되지 않습니다.';
+  @override
+  String get floating_lyric_passthrough => '클릭을 아래 창으로 통과';
+  @override
+  String get floating_lyric_transparency => '배경 전환';
+  @override
+  String get floating_lyric_topmost => '항상 위에 표시';
 }
 
 // Path: <root>
@@ -86985,6 +87041,13 @@ class _StringsNl extends _StringsEn {
   @override
   String get gal_hook_passthrough_blocks_mouse_hint =>
       'Aan: tekstregels blijven klikken aannemen, zodat je een woord kunt aantikken. Uit: de hele overlay is transparant voor de muis — je klikt wat eronder ligt, maar woorden aantikken werkt niet meer.';
+  @override
+  String get floating_lyric_passthrough =>
+      'Klikken doorlaten naar wat eronder ligt';
+  @override
+  String get floating_lyric_transparency => 'Achtergrond omschakelen';
+  @override
+  String get floating_lyric_topmost => 'Altijd op de voorgrond';
 }
 
 // Path: <root>
@@ -96211,6 +96274,13 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get gal_hook_passthrough_blocks_mouse_hint =>
       'Ligado: as linhas de texto continuam recebendo cliques, então você pode tocar numa palavra. Desligado: toda a sobreposição fica transparente ao mouse — você clica no que está embaixo, mas tocar palavras não funciona mais.';
+  @override
+  String get floating_lyric_passthrough =>
+      'Deixar os cliques passarem para baixo';
+  @override
+  String get floating_lyric_transparency => 'Alternar o fundo';
+  @override
+  String get floating_lyric_topmost => 'Manter sempre visível';
 }
 
 // Path: <root>
@@ -105411,6 +105481,12 @@ class _StringsRu extends _StringsEn {
   @override
   String get gal_hook_passthrough_blocks_mouse_hint =>
       'Вкл.: строки текста по-прежнему принимают клики, поэтому по слову можно нажать. Выкл.: весь оверлей прозрачен для мыши — вы кликаете то, что под ним, но нажатие по словам больше не работает.';
+  @override
+  String get floating_lyric_passthrough => 'Пропускать клики вниз';
+  @override
+  String get floating_lyric_transparency => 'Переключить фон';
+  @override
+  String get floating_lyric_topmost => 'Поверх других окон';
 }
 
 // Path: <root>
@@ -114429,6 +114505,12 @@ class _StringsTh extends _StringsEn {
   @override
   String get gal_hook_passthrough_blocks_mouse_hint =>
       'เปิด: บรรทัดข้อความยังรับคลิก จึงแตะคำได้ ปิด: โอเวอร์เลย์ทั้งหมดโปร่งต่อเมาส์ คุณคลิกสิ่งที่อยู่ข้างล่างได้ แต่แตะคำจะไม่ทำงานอีก';
+  @override
+  String get floating_lyric_passthrough => 'ส่งการคลิกไปยังหน้าต่างด้านล่าง';
+  @override
+  String get floating_lyric_transparency => 'สลับพื้นหลัง';
+  @override
+  String get floating_lyric_topmost => 'อยู่ด้านบนเสมอ';
 }
 
 // Path: <root>
@@ -123551,6 +123633,13 @@ class _StringsTr extends _StringsEn {
   @override
   String get gal_hook_passthrough_blocks_mouse_hint =>
       'Açık: metin satırları tıklama almaya devam eder, böylece bir kelimeye dokunabilirsin. Kapalı: tüm katman fareye saydamdır — altındakine tıklarsın ama kelimelere dokunmak artık çalışmaz.';
+  @override
+  String get floating_lyric_passthrough =>
+      'Tıklamaları alttaki pencereye geçir';
+  @override
+  String get floating_lyric_transparency => 'Arka planı değiştir';
+  @override
+  String get floating_lyric_topmost => 'Her zaman üstte tut';
 }
 
 // Path: <root>
@@ -132654,6 +132743,12 @@ class _StringsVi extends _StringsEn {
   @override
   String get gal_hook_passthrough_blocks_mouse_hint =>
       'Bật: các dòng chữ vẫn nhận nhấp chuột nên bạn chạm được vào từ. Tắt: toàn bộ lớp phủ trong suốt với chuột — bạn bấm được thứ bên dưới, nhưng chạm vào từ không còn tác dụng.';
+  @override
+  String get floating_lyric_passthrough => 'Cho phép nhấp xuyên xuống dưới';
+  @override
+  String get floating_lyric_transparency => 'Bật/tắt nền';
+  @override
+  String get floating_lyric_topmost => 'Luôn hiển thị trên cùng';
 }
 
 // Path: <root>
@@ -141032,6 +141127,12 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get gal_hook_passthrough_blocks_mouse_hint =>
       '开：文字行仍接鼠标，能点字查词。关：整个浮窗对鼠标彻底透明，能点到底下的东西，但点字查词也就没了。';
+  @override
+  String get floating_lyric_passthrough => '鼠标穿透到下层窗口';
+  @override
+  String get floating_lyric_transparency => '切换底板';
+  @override
+  String get floating_lyric_topmost => '保持置顶';
 }
 
 // Path: <root>
@@ -149415,6 +149516,12 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get gal_hook_passthrough_blocks_mouse_hint =>
       '開：文字行仍然接點擊，所以點得到字。關：整個浮層對滑鼠完全透明——點得到下面的東西，但點字就失效了。';
+  @override
+  String get floating_lyric_passthrough => '鼠標穿透到下層視窗';
+  @override
+  String get floating_lyric_transparency => '切換底板';
+  @override
+  String get floating_lyric_topmost => '保持置頂';
 }
 
 /// Flat map(s) containing all translations.
@@ -157403,6 +157510,12 @@ extension on _StringsEn {
         return 'Caption still catches clicks while clicking through';
       case 'gal_hook_passthrough_blocks_mouse_hint':
         return 'On: text lines still take clicks so you can tap a word. Off: the whole overlay is transparent to the mouse — you can click whatever is underneath, but tapping words no longer works.';
+      case 'floating_lyric_passthrough':
+        return 'Click through to what is underneath';
+      case 'floating_lyric_transparency':
+        return 'Toggle the background';
+      case 'floating_lyric_topmost':
+        return 'Keep on top';
       default:
         return null;
     }
@@ -165387,6 +165500,12 @@ extension on _StringsAr {
         return 'النص يستقبل النقرات أثناء النقر النافذ';
       case 'gal_hook_passthrough_blocks_mouse_hint':
         return 'تشغيل: تبقى أسطر النص تستقبل النقرات فتستطيع الضغط على كلمة. إيقاف: تصبح الطبقة كلها شفافة للفأرة — تنقر ما تحتها، لكن الضغط على الكلمات لا يعمل.';
+      case 'floating_lyric_passthrough':
+        return 'النقر للوصول إلى ما تحته';
+      case 'floating_lyric_transparency':
+        return 'تبديل الخلفية';
+      case 'floating_lyric_topmost':
+        return 'الإبقاء في المقدمة';
       default:
         return null;
     }
@@ -173414,6 +173533,12 @@ extension on _StringsDe {
         return 'Text nimmt Klicks trotz Durchklicken an';
       case 'gal_hook_passthrough_blocks_mouse_hint':
         return 'An: Textzeilen nehmen weiter Klicks an, du kannst also ein Wort antippen. Aus: Das gesamte Overlay ist für die Maus durchlässig – du klickst, was darunter liegt, aber Wörter antippen geht nicht mehr.';
+      case 'floating_lyric_passthrough':
+        return 'Klicks nach unten durchreichen';
+      case 'floating_lyric_transparency':
+        return 'Hintergrund umschalten';
+      case 'floating_lyric_topmost':
+        return 'Immer im Vordergrund';
       default:
         return null;
     }
@@ -181433,6 +181558,12 @@ extension on _StringsEs {
         return 'El texto sigue recibiendo clics con el clic pasante';
       case 'gal_hook_passthrough_blocks_mouse_hint':
         return 'Activado: las líneas de texto siguen recibiendo clics, así puedes tocar una palabra. Desactivado: toda la superposición es transparente al ratón; puedes hacer clic en lo que haya debajo, pero tocar palabras deja de funcionar.';
+      case 'floating_lyric_passthrough':
+        return 'Dejar pasar los clics a lo que hay debajo';
+      case 'floating_lyric_transparency':
+        return 'Alternar el fondo';
+      case 'floating_lyric_topmost':
+        return 'Mantener al frente';
       default:
         return null;
     }
@@ -189460,6 +189591,12 @@ extension on _StringsFr {
         return 'Le texte reçoit encore les clics en mode traversant';
       case 'gal_hook_passthrough_blocks_mouse_hint':
         return 'Activé : les lignes de texte reçoivent encore les clics, vous pouvez donc toucher un mot. Désactivé : toute la surcouche est transparente à la souris — vous cliquez ce qui est dessous, mais toucher un mot ne marche plus.';
+      case 'floating_lyric_passthrough':
+        return 'Laisser passer les clics vers le dessous';
+      case 'floating_lyric_transparency':
+        return 'Basculer l’arrière-plan';
+      case 'floating_lyric_topmost':
+        return 'Garder au premier plan';
       default:
         return null;
     }
@@ -197459,6 +197596,12 @@ extension on _StringsId {
         return 'Teks tetap menerima klik saat klik-tembus';
       case 'gal_hook_passthrough_blocks_mouse_hint':
         return 'Aktif: baris teks tetap menerima klik sehingga kamu bisa mengetuk kata. Nonaktif: seluruh lapisan tembus bagi tetikus — kamu bisa mengeklik apa pun di bawahnya, tapi mengetuk kata tidak lagi berfungsi.';
+      case 'floating_lyric_passthrough':
+        return 'Teruskan klik ke jendela di bawahnya';
+      case 'floating_lyric_transparency':
+        return 'Alihkan latar belakang';
+      case 'floating_lyric_topmost':
+        return 'Tetap di atas';
       default:
         return null;
     }
@@ -205479,6 +205622,12 @@ extension on _StringsIt {
         return 'Il testo riceve ancora i clic durante il clic passante';
       case 'gal_hook_passthrough_blocks_mouse_hint':
         return 'Attivo: le righe di testo ricevono ancora i clic, così puoi toccare una parola. Disattivo: l’intera sovrapposizione è trasparente al mouse — clicchi ciò che sta sotto, ma toccare le parole non funziona più.';
+      case 'floating_lyric_passthrough':
+        return 'Lascia passare i clic a ciò che sta sotto';
+      case 'floating_lyric_transparency':
+        return 'Attiva/disattiva lo sfondo';
+      case 'floating_lyric_topmost':
+        return 'Mantieni in primo piano';
       default:
         return null;
     }
@@ -213432,6 +213581,12 @@ extension on _StringsJa {
         return 'クリック透過中も字幕はクリックを受ける';
       case 'gal_hook_passthrough_blocks_mouse_hint':
         return 'オン：字幕の行はクリックを受け続けるので単語をタップできます。オフ：オーバーレイ全体がマウスに対して透明になり、下のものをクリックできますが、単語のタップはできなくなります。';
+      case 'floating_lyric_passthrough':
+        return 'クリックを下のウィンドウに通す';
+      case 'floating_lyric_transparency':
+        return '背景を切り替える';
+      case 'floating_lyric_topmost':
+        return '常に手前に表示';
       default:
         return null;
     }
@@ -221387,6 +221542,12 @@ extension on _StringsKo {
         return '클릭 통과 중에도 자막은 클릭을 받음';
       case 'gal_hook_passthrough_blocks_mouse_hint':
         return '켬: 자막 줄이 계속 클릭을 받아 단어를 누를 수 있습니다. 끔: 오버레이 전체가 마우스에 투명해져 아래 것을 클릭할 수 있지만, 단어 누르기는 더 이상 되지 않습니다.';
+      case 'floating_lyric_passthrough':
+        return '클릭을 아래 창으로 통과';
+      case 'floating_lyric_transparency':
+        return '배경 전환';
+      case 'floating_lyric_topmost':
+        return '항상 위에 표시';
       default:
         return null;
     }
@@ -229401,6 +229562,12 @@ extension on _StringsNl {
         return 'Tekst vangt nog klikken tijdens doorklikken';
       case 'gal_hook_passthrough_blocks_mouse_hint':
         return 'Aan: tekstregels blijven klikken aannemen, zodat je een woord kunt aantikken. Uit: de hele overlay is transparant voor de muis — je klikt wat eronder ligt, maar woorden aantikken werkt niet meer.';
+      case 'floating_lyric_passthrough':
+        return 'Klikken doorlaten naar wat eronder ligt';
+      case 'floating_lyric_transparency':
+        return 'Achtergrond omschakelen';
+      case 'floating_lyric_topmost':
+        return 'Altijd op de voorgrond';
       default:
         return null;
     }
@@ -237410,6 +237577,12 @@ extension on _StringsPtBr {
         return 'A legenda ainda recebe cliques durante o clique passante';
       case 'gal_hook_passthrough_blocks_mouse_hint':
         return 'Ligado: as linhas de texto continuam recebendo cliques, então você pode tocar numa palavra. Desligado: toda a sobreposição fica transparente ao mouse — você clica no que está embaixo, mas tocar palavras não funciona mais.';
+      case 'floating_lyric_passthrough':
+        return 'Deixar os cliques passarem para baixo';
+      case 'floating_lyric_transparency':
+        return 'Alternar o fundo';
+      case 'floating_lyric_topmost':
+        return 'Manter sempre visível';
       default:
         return null;
     }
@@ -245425,6 +245598,12 @@ extension on _StringsRu {
         return 'Субтитры продолжают ловить клики при сквозном клике';
       case 'gal_hook_passthrough_blocks_mouse_hint':
         return 'Вкл.: строки текста по-прежнему принимают клики, поэтому по слову можно нажать. Выкл.: весь оверлей прозрачен для мыши — вы кликаете то, что под ним, но нажатие по словам больше не работает.';
+      case 'floating_lyric_passthrough':
+        return 'Пропускать клики вниз';
+      case 'floating_lyric_transparency':
+        return 'Переключить фон';
+      case 'floating_lyric_topmost':
+        return 'Поверх других окон';
       default:
         return null;
     }
@@ -253412,6 +253591,12 @@ extension on _StringsTh {
         return 'คำบรรยายยังรับคลิกขณะคลิกทะลุ';
       case 'gal_hook_passthrough_blocks_mouse_hint':
         return 'เปิด: บรรทัดข้อความยังรับคลิก จึงแตะคำได้ ปิด: โอเวอร์เลย์ทั้งหมดโปร่งต่อเมาส์ คุณคลิกสิ่งที่อยู่ข้างล่างได้ แต่แตะคำจะไม่ทำงานอีก';
+      case 'floating_lyric_passthrough':
+        return 'ส่งการคลิกไปยังหน้าต่างด้านล่าง';
+      case 'floating_lyric_transparency':
+        return 'สลับพื้นหลัง';
+      case 'floating_lyric_topmost':
+        return 'อยู่ด้านบนเสมอ';
       default:
         return null;
     }
@@ -261416,6 +261601,12 @@ extension on _StringsTr {
         return 'Tıklama geçişi açıkken altyazı yine tıklama alır';
       case 'gal_hook_passthrough_blocks_mouse_hint':
         return 'Açık: metin satırları tıklama almaya devam eder, böylece bir kelimeye dokunabilirsin. Kapalı: tüm katman fareye saydamdır — altındakine tıklarsın ama kelimelere dokunmak artık çalışmaz.';
+      case 'floating_lyric_passthrough':
+        return 'Tıklamaları alttaki pencereye geçir';
+      case 'floating_lyric_transparency':
+        return 'Arka planı değiştir';
+      case 'floating_lyric_topmost':
+        return 'Her zaman üstte tut';
       default:
         return null;
     }
@@ -269413,6 +269604,12 @@ extension on _StringsVi {
         return 'Phụ đề vẫn nhận nhấp chuột khi xuyên chuột';
       case 'gal_hook_passthrough_blocks_mouse_hint':
         return 'Bật: các dòng chữ vẫn nhận nhấp chuột nên bạn chạm được vào từ. Tắt: toàn bộ lớp phủ trong suốt với chuột — bạn bấm được thứ bên dưới, nhưng chạm vào từ không còn tác dụng.';
+      case 'floating_lyric_passthrough':
+        return 'Cho phép nhấp xuyên xuống dưới';
+      case 'floating_lyric_transparency':
+        return 'Bật/tắt nền';
+      case 'floating_lyric_topmost':
+        return 'Luôn hiển thị trên cùng';
       default:
         return null;
     }
@@ -277344,6 +277541,12 @@ extension on _StringsZhCn {
         return '穿透时台词仍拦截点击';
       case 'gal_hook_passthrough_blocks_mouse_hint':
         return '开：文字行仍接鼠标，能点字查词。关：整个浮窗对鼠标彻底透明，能点到底下的东西，但点字查词也就没了。';
+      case 'floating_lyric_passthrough':
+        return '鼠标穿透到下层窗口';
+      case 'floating_lyric_transparency':
+        return '切换底板';
+      case 'floating_lyric_topmost':
+        return '保持置顶';
       default:
         return null;
     }
@@ -285276,6 +285479,12 @@ extension on _StringsZhHk {
         return '穿透時字幕仍接點擊';
       case 'gal_hook_passthrough_blocks_mouse_hint':
         return '開：文字行仍然接點擊，所以點得到字。關：整個浮層對滑鼠完全透明——點得到下面的東西，但點字就失效了。';
+      case 'floating_lyric_passthrough':
+        return '鼠標穿透到下層視窗';
+      case 'floating_lyric_transparency':
+        return '切換底板';
+      case 'floating_lyric_topmost':
+        return '保持置頂';
       default:
         return null;
     }
