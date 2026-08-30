@@ -3,7 +3,7 @@
 /// Locales: 17
 /// Strings: 68272 (4016 per locale)
 ///
-/// Built on 2026-08-30 at 12:14 UTC
+/// Built on 2026-08-30 at 13:05 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5471,12 +5471,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'The lookup opens separately from the source app. You can tap more words inside it, then close it to return where you were.';
   String get onboarding_feature_manual_resources =>
       'Import dictionaries and audio manually';
-  String get onboarding_feature_manual_resources_hint =>
-      'Skip the pack; import your own dictionaries, audiobooks, and pronunciation sources';
   String get onboarding_step_manual_resources_title =>
       'Prepare dictionaries and audio manually';
-  String get onboarding_step_manual_resources_body =>
-      'Skip the recommended pack and prepare only what you need. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional.';
   String get onboarding_manual_dictionary_action => 'Import a dictionary';
   String get onboarding_manual_dictionary_action_desc =>
       'Open dictionary management and import at least one supported dictionary file or archive. Lookup tutorials are useful only after a query returns a definition.';
@@ -5518,6 +5514,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Highlight the same word you already verified has a dictionary definition, and leave the selection active.';
   String get onboarding_global_lookup_android_select_body =>
       'Long-press the same word you already verified has a dictionary definition, then adjust the selection handles to cover it.';
+  String get onboarding_feature_manual_resources_hint =>
+      'Supplement the recommended pack, or import your own dictionaries, audiobooks, and pronunciation sources';
+  String get onboarding_step_manual_resources_body =>
+      'Use this alongside the recommended pack or on its own. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional supplements.';
 }
 
 // Path: <root>
@@ -14806,14 +14806,8 @@ class _StringsAr extends _StringsEn {
   String get onboarding_feature_manual_resources =>
       'Import dictionaries and audio manually';
   @override
-  String get onboarding_feature_manual_resources_hint =>
-      'Skip the pack; import your own dictionaries, audiobooks, and pronunciation sources';
-  @override
   String get onboarding_step_manual_resources_title =>
       'Prepare dictionaries and audio manually';
-  @override
-  String get onboarding_step_manual_resources_body =>
-      'Skip the recommended pack and prepare only what you need. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional.';
   @override
   String get onboarding_manual_dictionary_action => 'Import a dictionary';
   @override
@@ -14877,6 +14871,12 @@ class _StringsAr extends _StringsEn {
   @override
   String get onboarding_global_lookup_android_select_body =>
       'Long-press the same word you already verified has a dictionary definition, then adjust the selection handles to cover it.';
+  @override
+  String get onboarding_feature_manual_resources_hint =>
+      'Supplement the recommended pack, or import your own dictionaries, audiobooks, and pronunciation sources';
+  @override
+  String get onboarding_step_manual_resources_body =>
+      'Use this alongside the recommended pack or on its own. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional supplements.';
 }
 
 // Path: <root>
@@ -24380,14 +24380,8 @@ class _StringsDe extends _StringsEn {
   String get onboarding_feature_manual_resources =>
       'Import dictionaries and audio manually';
   @override
-  String get onboarding_feature_manual_resources_hint =>
-      'Skip the pack; import your own dictionaries, audiobooks, and pronunciation sources';
-  @override
   String get onboarding_step_manual_resources_title =>
       'Prepare dictionaries and audio manually';
-  @override
-  String get onboarding_step_manual_resources_body =>
-      'Skip the recommended pack and prepare only what you need. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional.';
   @override
   String get onboarding_manual_dictionary_action => 'Import a dictionary';
   @override
@@ -24451,6 +24445,12 @@ class _StringsDe extends _StringsEn {
   @override
   String get onboarding_global_lookup_android_select_body =>
       'Long-press the same word you already verified has a dictionary definition, then adjust the selection handles to cover it.';
+  @override
+  String get onboarding_feature_manual_resources_hint =>
+      'Supplement the recommended pack, or import your own dictionaries, audiobooks, and pronunciation sources';
+  @override
+  String get onboarding_step_manual_resources_body =>
+      'Use this alongside the recommended pack or on its own. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional supplements.';
 }
 
 // Path: <root>
@@ -34000,14 +34000,8 @@ class _StringsEs extends _StringsEn {
   String get onboarding_feature_manual_resources =>
       'Import dictionaries and audio manually';
   @override
-  String get onboarding_feature_manual_resources_hint =>
-      'Skip the pack; import your own dictionaries, audiobooks, and pronunciation sources';
-  @override
   String get onboarding_step_manual_resources_title =>
       'Prepare dictionaries and audio manually';
-  @override
-  String get onboarding_step_manual_resources_body =>
-      'Skip the recommended pack and prepare only what you need. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional.';
   @override
   String get onboarding_manual_dictionary_action => 'Import a dictionary';
   @override
@@ -34071,6 +34065,12 @@ class _StringsEs extends _StringsEn {
   @override
   String get onboarding_global_lookup_android_select_body =>
       'Long-press the same word you already verified has a dictionary definition, then adjust the selection handles to cover it.';
+  @override
+  String get onboarding_feature_manual_resources_hint =>
+      'Supplement the recommended pack, or import your own dictionaries, audiobooks, and pronunciation sources';
+  @override
+  String get onboarding_step_manual_resources_body =>
+      'Use this alongside the recommended pack or on its own. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional supplements.';
 }
 
 // Path: <root>
@@ -43654,14 +43654,8 @@ class _StringsFr extends _StringsEn {
   String get onboarding_feature_manual_resources =>
       'Import dictionaries and audio manually';
   @override
-  String get onboarding_feature_manual_resources_hint =>
-      'Skip the pack; import your own dictionaries, audiobooks, and pronunciation sources';
-  @override
   String get onboarding_step_manual_resources_title =>
       'Prepare dictionaries and audio manually';
-  @override
-  String get onboarding_step_manual_resources_body =>
-      'Skip the recommended pack and prepare only what you need. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional.';
   @override
   String get onboarding_manual_dictionary_action => 'Import a dictionary';
   @override
@@ -43725,6 +43719,12 @@ class _StringsFr extends _StringsEn {
   @override
   String get onboarding_global_lookup_android_select_body =>
       'Long-press the same word you already verified has a dictionary definition, then adjust the selection handles to cover it.';
+  @override
+  String get onboarding_feature_manual_resources_hint =>
+      'Supplement the recommended pack, or import your own dictionaries, audiobooks, and pronunciation sources';
+  @override
+  String get onboarding_step_manual_resources_body =>
+      'Use this alongside the recommended pack or on its own. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional supplements.';
 }
 
 // Path: <root>
@@ -53130,14 +53130,8 @@ class _StringsId extends _StringsEn {
   String get onboarding_feature_manual_resources =>
       'Import dictionaries and audio manually';
   @override
-  String get onboarding_feature_manual_resources_hint =>
-      'Skip the pack; import your own dictionaries, audiobooks, and pronunciation sources';
-  @override
   String get onboarding_step_manual_resources_title =>
       'Prepare dictionaries and audio manually';
-  @override
-  String get onboarding_step_manual_resources_body =>
-      'Skip the recommended pack and prepare only what you need. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional.';
   @override
   String get onboarding_manual_dictionary_action => 'Import a dictionary';
   @override
@@ -53201,6 +53195,12 @@ class _StringsId extends _StringsEn {
   @override
   String get onboarding_global_lookup_android_select_body =>
       'Long-press the same word you already verified has a dictionary definition, then adjust the selection handles to cover it.';
+  @override
+  String get onboarding_feature_manual_resources_hint =>
+      'Supplement the recommended pack, or import your own dictionaries, audiobooks, and pronunciation sources';
+  @override
+  String get onboarding_step_manual_resources_body =>
+      'Use this alongside the recommended pack or on its own. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional supplements.';
 }
 
 // Path: <root>
@@ -62688,14 +62688,8 @@ class _StringsIt extends _StringsEn {
   String get onboarding_feature_manual_resources =>
       'Import dictionaries and audio manually';
   @override
-  String get onboarding_feature_manual_resources_hint =>
-      'Skip the pack; import your own dictionaries, audiobooks, and pronunciation sources';
-  @override
   String get onboarding_step_manual_resources_title =>
       'Prepare dictionaries and audio manually';
-  @override
-  String get onboarding_step_manual_resources_body =>
-      'Skip the recommended pack and prepare only what you need. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional.';
   @override
   String get onboarding_manual_dictionary_action => 'Import a dictionary';
   @override
@@ -62759,6 +62753,12 @@ class _StringsIt extends _StringsEn {
   @override
   String get onboarding_global_lookup_android_select_body =>
       'Long-press the same word you already verified has a dictionary definition, then adjust the selection handles to cover it.';
+  @override
+  String get onboarding_feature_manual_resources_hint =>
+      'Supplement the recommended pack, or import your own dictionaries, audiobooks, and pronunciation sources';
+  @override
+  String get onboarding_step_manual_resources_body =>
+      'Use this alongside the recommended pack or on its own. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional supplements.';
 }
 
 // Path: <root>
@@ -71671,14 +71671,8 @@ class _StringsJa extends _StringsEn {
   String get onboarding_feature_manual_resources =>
       'Import dictionaries and audio manually';
   @override
-  String get onboarding_feature_manual_resources_hint =>
-      'Skip the pack; import your own dictionaries, audiobooks, and pronunciation sources';
-  @override
   String get onboarding_step_manual_resources_title =>
       'Prepare dictionaries and audio manually';
-  @override
-  String get onboarding_step_manual_resources_body =>
-      'Skip the recommended pack and prepare only what you need. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional.';
   @override
   String get onboarding_manual_dictionary_action => 'Import a dictionary';
   @override
@@ -71742,6 +71736,12 @@ class _StringsJa extends _StringsEn {
   @override
   String get onboarding_global_lookup_android_select_body =>
       'Long-press the same word you already verified has a dictionary definition, then adjust the selection handles to cover it.';
+  @override
+  String get onboarding_feature_manual_resources_hint =>
+      'Supplement the recommended pack, or import your own dictionaries, audiobooks, and pronunciation sources';
+  @override
+  String get onboarding_step_manual_resources_body =>
+      'Use this alongside the recommended pack or on its own. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional supplements.';
 }
 
 // Path: <root>
@@ -80666,14 +80666,8 @@ class _StringsKo extends _StringsEn {
   String get onboarding_feature_manual_resources =>
       'Import dictionaries and audio manually';
   @override
-  String get onboarding_feature_manual_resources_hint =>
-      'Skip the pack; import your own dictionaries, audiobooks, and pronunciation sources';
-  @override
   String get onboarding_step_manual_resources_title =>
       'Prepare dictionaries and audio manually';
-  @override
-  String get onboarding_step_manual_resources_body =>
-      'Skip the recommended pack and prepare only what you need. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional.';
   @override
   String get onboarding_manual_dictionary_action => 'Import a dictionary';
   @override
@@ -80737,6 +80731,12 @@ class _StringsKo extends _StringsEn {
   @override
   String get onboarding_global_lookup_android_select_body =>
       'Long-press the same word you already verified has a dictionary definition, then adjust the selection handles to cover it.';
+  @override
+  String get onboarding_feature_manual_resources_hint =>
+      'Supplement the recommended pack, or import your own dictionaries, audiobooks, and pronunciation sources';
+  @override
+  String get onboarding_step_manual_resources_body =>
+      'Use this alongside the recommended pack or on its own. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional supplements.';
 }
 
 // Path: <root>
@@ -90177,14 +90177,8 @@ class _StringsNl extends _StringsEn {
   String get onboarding_feature_manual_resources =>
       'Import dictionaries and audio manually';
   @override
-  String get onboarding_feature_manual_resources_hint =>
-      'Skip the pack; import your own dictionaries, audiobooks, and pronunciation sources';
-  @override
   String get onboarding_step_manual_resources_title =>
       'Prepare dictionaries and audio manually';
-  @override
-  String get onboarding_step_manual_resources_body =>
-      'Skip the recommended pack and prepare only what you need. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional.';
   @override
   String get onboarding_manual_dictionary_action => 'Import a dictionary';
   @override
@@ -90248,6 +90242,12 @@ class _StringsNl extends _StringsEn {
   @override
   String get onboarding_global_lookup_android_select_body =>
       'Long-press the same word you already verified has a dictionary definition, then adjust the selection handles to cover it.';
+  @override
+  String get onboarding_feature_manual_resources_hint =>
+      'Supplement the recommended pack, or import your own dictionaries, audiobooks, and pronunciation sources';
+  @override
+  String get onboarding_step_manual_resources_body =>
+      'Use this alongside the recommended pack or on its own. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional supplements.';
 }
 
 // Path: <root>
@@ -99744,14 +99744,8 @@ class _StringsPtBr extends _StringsEn {
   String get onboarding_feature_manual_resources =>
       'Import dictionaries and audio manually';
   @override
-  String get onboarding_feature_manual_resources_hint =>
-      'Skip the pack; import your own dictionaries, audiobooks, and pronunciation sources';
-  @override
   String get onboarding_step_manual_resources_title =>
       'Prepare dictionaries and audio manually';
-  @override
-  String get onboarding_step_manual_resources_body =>
-      'Skip the recommended pack and prepare only what you need. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional.';
   @override
   String get onboarding_manual_dictionary_action => 'Import a dictionary';
   @override
@@ -99815,6 +99809,12 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get onboarding_global_lookup_android_select_body =>
       'Long-press the same word you already verified has a dictionary definition, then adjust the selection handles to cover it.';
+  @override
+  String get onboarding_feature_manual_resources_hint =>
+      'Supplement the recommended pack, or import your own dictionaries, audiobooks, and pronunciation sources';
+  @override
+  String get onboarding_step_manual_resources_body =>
+      'Use this alongside the recommended pack or on its own. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional supplements.';
 }
 
 // Path: <root>
@@ -109287,14 +109287,8 @@ class _StringsRu extends _StringsEn {
   String get onboarding_feature_manual_resources =>
       'Import dictionaries and audio manually';
   @override
-  String get onboarding_feature_manual_resources_hint =>
-      'Skip the pack; import your own dictionaries, audiobooks, and pronunciation sources';
-  @override
   String get onboarding_step_manual_resources_title =>
       'Prepare dictionaries and audio manually';
-  @override
-  String get onboarding_step_manual_resources_body =>
-      'Skip the recommended pack and prepare only what you need. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional.';
   @override
   String get onboarding_manual_dictionary_action => 'Import a dictionary';
   @override
@@ -109358,6 +109352,12 @@ class _StringsRu extends _StringsEn {
   @override
   String get onboarding_global_lookup_android_select_body =>
       'Long-press the same word you already verified has a dictionary definition, then adjust the selection handles to cover it.';
+  @override
+  String get onboarding_feature_manual_resources_hint =>
+      'Supplement the recommended pack, or import your own dictionaries, audiobooks, and pronunciation sources';
+  @override
+  String get onboarding_step_manual_resources_body =>
+      'Use this alongside the recommended pack or on its own. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional supplements.';
 }
 
 // Path: <root>
@@ -118641,14 +118641,8 @@ class _StringsTh extends _StringsEn {
   String get onboarding_feature_manual_resources =>
       'Import dictionaries and audio manually';
   @override
-  String get onboarding_feature_manual_resources_hint =>
-      'Skip the pack; import your own dictionaries, audiobooks, and pronunciation sources';
-  @override
   String get onboarding_step_manual_resources_title =>
       'Prepare dictionaries and audio manually';
-  @override
-  String get onboarding_step_manual_resources_body =>
-      'Skip the recommended pack and prepare only what you need. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional.';
   @override
   String get onboarding_manual_dictionary_action => 'Import a dictionary';
   @override
@@ -118712,6 +118706,12 @@ class _StringsTh extends _StringsEn {
   @override
   String get onboarding_global_lookup_android_select_body =>
       'Long-press the same word you already verified has a dictionary definition, then adjust the selection handles to cover it.';
+  @override
+  String get onboarding_feature_manual_resources_hint =>
+      'Supplement the recommended pack, or import your own dictionaries, audiobooks, and pronunciation sources';
+  @override
+  String get onboarding_step_manual_resources_body =>
+      'Use this alongside the recommended pack or on its own. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional supplements.';
 }
 
 // Path: <root>
@@ -128103,14 +128103,8 @@ class _StringsTr extends _StringsEn {
   String get onboarding_feature_manual_resources =>
       'Import dictionaries and audio manually';
   @override
-  String get onboarding_feature_manual_resources_hint =>
-      'Skip the pack; import your own dictionaries, audiobooks, and pronunciation sources';
-  @override
   String get onboarding_step_manual_resources_title =>
       'Prepare dictionaries and audio manually';
-  @override
-  String get onboarding_step_manual_resources_body =>
-      'Skip the recommended pack and prepare only what you need. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional.';
   @override
   String get onboarding_manual_dictionary_action => 'Import a dictionary';
   @override
@@ -128174,6 +128168,12 @@ class _StringsTr extends _StringsEn {
   @override
   String get onboarding_global_lookup_android_select_body =>
       'Long-press the same word you already verified has a dictionary definition, then adjust the selection handles to cover it.';
+  @override
+  String get onboarding_feature_manual_resources_hint =>
+      'Supplement the recommended pack, or import your own dictionaries, audiobooks, and pronunciation sources';
+  @override
+  String get onboarding_step_manual_resources_body =>
+      'Use this alongside the recommended pack or on its own. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional supplements.';
 }
 
 // Path: <root>
@@ -137544,14 +137544,8 @@ class _StringsVi extends _StringsEn {
   String get onboarding_feature_manual_resources =>
       'Import dictionaries and audio manually';
   @override
-  String get onboarding_feature_manual_resources_hint =>
-      'Skip the pack; import your own dictionaries, audiobooks, and pronunciation sources';
-  @override
   String get onboarding_step_manual_resources_title =>
       'Prepare dictionaries and audio manually';
-  @override
-  String get onboarding_step_manual_resources_body =>
-      'Skip the recommended pack and prepare only what you need. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional.';
   @override
   String get onboarding_manual_dictionary_action => 'Import a dictionary';
   @override
@@ -137615,6 +137609,12 @@ class _StringsVi extends _StringsEn {
   @override
   String get onboarding_global_lookup_android_select_body =>
       'Long-press the same word you already verified has a dictionary definition, then adjust the selection handles to cover it.';
+  @override
+  String get onboarding_feature_manual_resources_hint =>
+      'Supplement the recommended pack, or import your own dictionaries, audiobooks, and pronunciation sources';
+  @override
+  String get onboarding_step_manual_resources_body =>
+      'Use this alongside the recommended pack or on its own. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional supplements.';
 }
 
 // Path: <root>
@@ -146234,13 +146234,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get onboarding_feature_manual_resources => '手动导入词典和音频';
   @override
-  String get onboarding_feature_manual_resources_hint =>
-      '不下载推荐包，自己导入词典、有声书和单词发音来源';
-  @override
   String get onboarding_step_manual_resources_title => '手动准备词典和音频';
-  @override
-  String get onboarding_step_manual_resources_body =>
-      '不下载推荐包时，在这里按需准备资源。进入查词教程前至少导入一本词典；有声书音频和单词发音音频按需配置。';
   @override
   String get onboarding_manual_dictionary_action => '导入词典';
   @override
@@ -146298,6 +146292,12 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get onboarding_global_lookup_android_select_body =>
       '长按刚才已经验证能返回词典释义的同一个词，再拖动选区手柄让它完整覆盖。';
+  @override
+  String get onboarding_feature_manual_resources_hint =>
+      '可补充推荐包，也可单独导入自己的词典、有声书和单词发音来源';
+  @override
+  String get onboarding_step_manual_resources_body =>
+      '这一项可以与推荐包同时使用，也可以单独使用。进入查词教程前至少导入一本词典；有声书音频和单词发音音频属于按需补充。';
 }
 
 // Path: <root>
@@ -154932,14 +154932,8 @@ class _StringsZhHk extends _StringsEn {
   String get onboarding_feature_manual_resources =>
       'Import dictionaries and audio manually';
   @override
-  String get onboarding_feature_manual_resources_hint =>
-      'Skip the pack; import your own dictionaries, audiobooks, and pronunciation sources';
-  @override
   String get onboarding_step_manual_resources_title =>
       'Prepare dictionaries and audio manually';
-  @override
-  String get onboarding_step_manual_resources_body =>
-      'Skip the recommended pack and prepare only what you need. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional.';
   @override
   String get onboarding_manual_dictionary_action => 'Import a dictionary';
   @override
@@ -155003,6 +154997,12 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get onboarding_global_lookup_android_select_body =>
       'Long-press the same word you already verified has a dictionary definition, then adjust the selection handles to cover it.';
+  @override
+  String get onboarding_feature_manual_resources_hint =>
+      'Supplement the recommended pack, or import your own dictionaries, audiobooks, and pronunciation sources';
+  @override
+  String get onboarding_step_manual_resources_body =>
+      'Use this alongside the recommended pack or on its own. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional supplements.';
 }
 
 /// Flat map(s) containing all translations.
@@ -163196,12 +163196,8 @@ extension on _StringsEn {
         return 'The lookup opens separately from the source app. You can tap more words inside it, then close it to return where you were.';
       case 'onboarding_feature_manual_resources':
         return 'Import dictionaries and audio manually';
-      case 'onboarding_feature_manual_resources_hint':
-        return 'Skip the pack; import your own dictionaries, audiobooks, and pronunciation sources';
       case 'onboarding_step_manual_resources_title':
         return 'Prepare dictionaries and audio manually';
-      case 'onboarding_step_manual_resources_body':
-        return 'Skip the recommended pack and prepare only what you need. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional.';
       case 'onboarding_manual_dictionary_action':
         return 'Import a dictionary';
       case 'onboarding_manual_dictionary_action_desc':
@@ -163246,6 +163242,10 @@ extension on _StringsEn {
         return 'Highlight the same word you already verified has a dictionary definition, and leave the selection active.';
       case 'onboarding_global_lookup_android_select_body':
         return 'Long-press the same word you already verified has a dictionary definition, then adjust the selection handles to cover it.';
+      case 'onboarding_feature_manual_resources_hint':
+        return 'Supplement the recommended pack, or import your own dictionaries, audiobooks, and pronunciation sources';
+      case 'onboarding_step_manual_resources_body':
+        return 'Use this alongside the recommended pack or on its own. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional supplements.';
       default:
         return null;
     }
@@ -171435,12 +171435,8 @@ extension on _StringsAr {
         return 'The lookup opens separately from the source app. You can tap more words inside it, then close it to return where you were.';
       case 'onboarding_feature_manual_resources':
         return 'Import dictionaries and audio manually';
-      case 'onboarding_feature_manual_resources_hint':
-        return 'Skip the pack; import your own dictionaries, audiobooks, and pronunciation sources';
       case 'onboarding_step_manual_resources_title':
         return 'Prepare dictionaries and audio manually';
-      case 'onboarding_step_manual_resources_body':
-        return 'Skip the recommended pack and prepare only what you need. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional.';
       case 'onboarding_manual_dictionary_action':
         return 'Import a dictionary';
       case 'onboarding_manual_dictionary_action_desc':
@@ -171485,6 +171481,10 @@ extension on _StringsAr {
         return 'Highlight the same word you already verified has a dictionary definition, and leave the selection active.';
       case 'onboarding_global_lookup_android_select_body':
         return 'Long-press the same word you already verified has a dictionary definition, then adjust the selection handles to cover it.';
+      case 'onboarding_feature_manual_resources_hint':
+        return 'Supplement the recommended pack, or import your own dictionaries, audiobooks, and pronunciation sources';
+      case 'onboarding_step_manual_resources_body':
+        return 'Use this alongside the recommended pack or on its own. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional supplements.';
       default:
         return null;
     }
@@ -179717,12 +179717,8 @@ extension on _StringsDe {
         return 'The lookup opens separately from the source app. You can tap more words inside it, then close it to return where you were.';
       case 'onboarding_feature_manual_resources':
         return 'Import dictionaries and audio manually';
-      case 'onboarding_feature_manual_resources_hint':
-        return 'Skip the pack; import your own dictionaries, audiobooks, and pronunciation sources';
       case 'onboarding_step_manual_resources_title':
         return 'Prepare dictionaries and audio manually';
-      case 'onboarding_step_manual_resources_body':
-        return 'Skip the recommended pack and prepare only what you need. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional.';
       case 'onboarding_manual_dictionary_action':
         return 'Import a dictionary';
       case 'onboarding_manual_dictionary_action_desc':
@@ -179767,6 +179763,10 @@ extension on _StringsDe {
         return 'Highlight the same word you already verified has a dictionary definition, and leave the selection active.';
       case 'onboarding_global_lookup_android_select_body':
         return 'Long-press the same word you already verified has a dictionary definition, then adjust the selection handles to cover it.';
+      case 'onboarding_feature_manual_resources_hint':
+        return 'Supplement the recommended pack, or import your own dictionaries, audiobooks, and pronunciation sources';
+      case 'onboarding_step_manual_resources_body':
+        return 'Use this alongside the recommended pack or on its own. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional supplements.';
       default:
         return null;
     }
@@ -187991,12 +187991,8 @@ extension on _StringsEs {
         return 'The lookup opens separately from the source app. You can tap more words inside it, then close it to return where you were.';
       case 'onboarding_feature_manual_resources':
         return 'Import dictionaries and audio manually';
-      case 'onboarding_feature_manual_resources_hint':
-        return 'Skip the pack; import your own dictionaries, audiobooks, and pronunciation sources';
       case 'onboarding_step_manual_resources_title':
         return 'Prepare dictionaries and audio manually';
-      case 'onboarding_step_manual_resources_body':
-        return 'Skip the recommended pack and prepare only what you need. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional.';
       case 'onboarding_manual_dictionary_action':
         return 'Import a dictionary';
       case 'onboarding_manual_dictionary_action_desc':
@@ -188041,6 +188037,10 @@ extension on _StringsEs {
         return 'Highlight the same word you already verified has a dictionary definition, and leave the selection active.';
       case 'onboarding_global_lookup_android_select_body':
         return 'Long-press the same word you already verified has a dictionary definition, then adjust the selection handles to cover it.';
+      case 'onboarding_feature_manual_resources_hint':
+        return 'Supplement the recommended pack, or import your own dictionaries, audiobooks, and pronunciation sources';
+      case 'onboarding_step_manual_resources_body':
+        return 'Use this alongside the recommended pack or on its own. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional supplements.';
       default:
         return null;
     }
@@ -196273,12 +196273,8 @@ extension on _StringsFr {
         return 'The lookup opens separately from the source app. You can tap more words inside it, then close it to return where you were.';
       case 'onboarding_feature_manual_resources':
         return 'Import dictionaries and audio manually';
-      case 'onboarding_feature_manual_resources_hint':
-        return 'Skip the pack; import your own dictionaries, audiobooks, and pronunciation sources';
       case 'onboarding_step_manual_resources_title':
         return 'Prepare dictionaries and audio manually';
-      case 'onboarding_step_manual_resources_body':
-        return 'Skip the recommended pack and prepare only what you need. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional.';
       case 'onboarding_manual_dictionary_action':
         return 'Import a dictionary';
       case 'onboarding_manual_dictionary_action_desc':
@@ -196323,6 +196319,10 @@ extension on _StringsFr {
         return 'Highlight the same word you already verified has a dictionary definition, and leave the selection active.';
       case 'onboarding_global_lookup_android_select_body':
         return 'Long-press the same word you already verified has a dictionary definition, then adjust the selection handles to cover it.';
+      case 'onboarding_feature_manual_resources_hint':
+        return 'Supplement the recommended pack, or import your own dictionaries, audiobooks, and pronunciation sources';
+      case 'onboarding_step_manual_resources_body':
+        return 'Use this alongside the recommended pack or on its own. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional supplements.';
       default:
         return null;
     }
@@ -204527,12 +204527,8 @@ extension on _StringsId {
         return 'The lookup opens separately from the source app. You can tap more words inside it, then close it to return where you were.';
       case 'onboarding_feature_manual_resources':
         return 'Import dictionaries and audio manually';
-      case 'onboarding_feature_manual_resources_hint':
-        return 'Skip the pack; import your own dictionaries, audiobooks, and pronunciation sources';
       case 'onboarding_step_manual_resources_title':
         return 'Prepare dictionaries and audio manually';
-      case 'onboarding_step_manual_resources_body':
-        return 'Skip the recommended pack and prepare only what you need. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional.';
       case 'onboarding_manual_dictionary_action':
         return 'Import a dictionary';
       case 'onboarding_manual_dictionary_action_desc':
@@ -204577,6 +204573,10 @@ extension on _StringsId {
         return 'Highlight the same word you already verified has a dictionary definition, and leave the selection active.';
       case 'onboarding_global_lookup_android_select_body':
         return 'Long-press the same word you already verified has a dictionary definition, then adjust the selection handles to cover it.';
+      case 'onboarding_feature_manual_resources_hint':
+        return 'Supplement the recommended pack, or import your own dictionaries, audiobooks, and pronunciation sources';
+      case 'onboarding_step_manual_resources_body':
+        return 'Use this alongside the recommended pack or on its own. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional supplements.';
       default:
         return null;
     }
@@ -212802,12 +212802,8 @@ extension on _StringsIt {
         return 'The lookup opens separately from the source app. You can tap more words inside it, then close it to return where you were.';
       case 'onboarding_feature_manual_resources':
         return 'Import dictionaries and audio manually';
-      case 'onboarding_feature_manual_resources_hint':
-        return 'Skip the pack; import your own dictionaries, audiobooks, and pronunciation sources';
       case 'onboarding_step_manual_resources_title':
         return 'Prepare dictionaries and audio manually';
-      case 'onboarding_step_manual_resources_body':
-        return 'Skip the recommended pack and prepare only what you need. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional.';
       case 'onboarding_manual_dictionary_action':
         return 'Import a dictionary';
       case 'onboarding_manual_dictionary_action_desc':
@@ -212852,6 +212848,10 @@ extension on _StringsIt {
         return 'Highlight the same word you already verified has a dictionary definition, and leave the selection active.';
       case 'onboarding_global_lookup_android_select_body':
         return 'Long-press the same word you already verified has a dictionary definition, then adjust the selection handles to cover it.';
+      case 'onboarding_feature_manual_resources_hint':
+        return 'Supplement the recommended pack, or import your own dictionaries, audiobooks, and pronunciation sources';
+      case 'onboarding_step_manual_resources_body':
+        return 'Use this alongside the recommended pack or on its own. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional supplements.';
       default:
         return null;
     }
@@ -221007,12 +221007,8 @@ extension on _StringsJa {
         return 'The lookup opens separately from the source app. You can tap more words inside it, then close it to return where you were.';
       case 'onboarding_feature_manual_resources':
         return 'Import dictionaries and audio manually';
-      case 'onboarding_feature_manual_resources_hint':
-        return 'Skip the pack; import your own dictionaries, audiobooks, and pronunciation sources';
       case 'onboarding_step_manual_resources_title':
         return 'Prepare dictionaries and audio manually';
-      case 'onboarding_step_manual_resources_body':
-        return 'Skip the recommended pack and prepare only what you need. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional.';
       case 'onboarding_manual_dictionary_action':
         return 'Import a dictionary';
       case 'onboarding_manual_dictionary_action_desc':
@@ -221057,6 +221053,10 @@ extension on _StringsJa {
         return 'Highlight the same word you already verified has a dictionary definition, and leave the selection active.';
       case 'onboarding_global_lookup_android_select_body':
         return 'Long-press the same word you already verified has a dictionary definition, then adjust the selection handles to cover it.';
+      case 'onboarding_feature_manual_resources_hint':
+        return 'Supplement the recommended pack, or import your own dictionaries, audiobooks, and pronunciation sources';
+      case 'onboarding_step_manual_resources_body':
+        return 'Use this alongside the recommended pack or on its own. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional supplements.';
       default:
         return null;
     }
@@ -229215,12 +229215,8 @@ extension on _StringsKo {
         return 'The lookup opens separately from the source app. You can tap more words inside it, then close it to return where you were.';
       case 'onboarding_feature_manual_resources':
         return 'Import dictionaries and audio manually';
-      case 'onboarding_feature_manual_resources_hint':
-        return 'Skip the pack; import your own dictionaries, audiobooks, and pronunciation sources';
       case 'onboarding_step_manual_resources_title':
         return 'Prepare dictionaries and audio manually';
-      case 'onboarding_step_manual_resources_body':
-        return 'Skip the recommended pack and prepare only what you need. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional.';
       case 'onboarding_manual_dictionary_action':
         return 'Import a dictionary';
       case 'onboarding_manual_dictionary_action_desc':
@@ -229265,6 +229261,10 @@ extension on _StringsKo {
         return 'Highlight the same word you already verified has a dictionary definition, and leave the selection active.';
       case 'onboarding_global_lookup_android_select_body':
         return 'Long-press the same word you already verified has a dictionary definition, then adjust the selection handles to cover it.';
+      case 'onboarding_feature_manual_resources_hint':
+        return 'Supplement the recommended pack, or import your own dictionaries, audiobooks, and pronunciation sources';
+      case 'onboarding_step_manual_resources_body':
+        return 'Use this alongside the recommended pack or on its own. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional supplements.';
       default:
         return null;
     }
@@ -237484,12 +237484,8 @@ extension on _StringsNl {
         return 'The lookup opens separately from the source app. You can tap more words inside it, then close it to return where you were.';
       case 'onboarding_feature_manual_resources':
         return 'Import dictionaries and audio manually';
-      case 'onboarding_feature_manual_resources_hint':
-        return 'Skip the pack; import your own dictionaries, audiobooks, and pronunciation sources';
       case 'onboarding_step_manual_resources_title':
         return 'Prepare dictionaries and audio manually';
-      case 'onboarding_step_manual_resources_body':
-        return 'Skip the recommended pack and prepare only what you need. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional.';
       case 'onboarding_manual_dictionary_action':
         return 'Import a dictionary';
       case 'onboarding_manual_dictionary_action_desc':
@@ -237534,6 +237530,10 @@ extension on _StringsNl {
         return 'Highlight the same word you already verified has a dictionary definition, and leave the selection active.';
       case 'onboarding_global_lookup_android_select_body':
         return 'Long-press the same word you already verified has a dictionary definition, then adjust the selection handles to cover it.';
+      case 'onboarding_feature_manual_resources_hint':
+        return 'Supplement the recommended pack, or import your own dictionaries, audiobooks, and pronunciation sources';
+      case 'onboarding_step_manual_resources_body':
+        return 'Use this alongside the recommended pack or on its own. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional supplements.';
       default:
         return null;
     }
@@ -245748,12 +245748,8 @@ extension on _StringsPtBr {
         return 'The lookup opens separately from the source app. You can tap more words inside it, then close it to return where you were.';
       case 'onboarding_feature_manual_resources':
         return 'Import dictionaries and audio manually';
-      case 'onboarding_feature_manual_resources_hint':
-        return 'Skip the pack; import your own dictionaries, audiobooks, and pronunciation sources';
       case 'onboarding_step_manual_resources_title':
         return 'Prepare dictionaries and audio manually';
-      case 'onboarding_step_manual_resources_body':
-        return 'Skip the recommended pack and prepare only what you need. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional.';
       case 'onboarding_manual_dictionary_action':
         return 'Import a dictionary';
       case 'onboarding_manual_dictionary_action_desc':
@@ -245798,6 +245794,10 @@ extension on _StringsPtBr {
         return 'Highlight the same word you already verified has a dictionary definition, and leave the selection active.';
       case 'onboarding_global_lookup_android_select_body':
         return 'Long-press the same word you already verified has a dictionary definition, then adjust the selection handles to cover it.';
+      case 'onboarding_feature_manual_resources_hint':
+        return 'Supplement the recommended pack, or import your own dictionaries, audiobooks, and pronunciation sources';
+      case 'onboarding_step_manual_resources_body':
+        return 'Use this alongside the recommended pack or on its own. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional supplements.';
       default:
         return null;
     }
@@ -254018,12 +254018,8 @@ extension on _StringsRu {
         return 'The lookup opens separately from the source app. You can tap more words inside it, then close it to return where you were.';
       case 'onboarding_feature_manual_resources':
         return 'Import dictionaries and audio manually';
-      case 'onboarding_feature_manual_resources_hint':
-        return 'Skip the pack; import your own dictionaries, audiobooks, and pronunciation sources';
       case 'onboarding_step_manual_resources_title':
         return 'Prepare dictionaries and audio manually';
-      case 'onboarding_step_manual_resources_body':
-        return 'Skip the recommended pack and prepare only what you need. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional.';
       case 'onboarding_manual_dictionary_action':
         return 'Import a dictionary';
       case 'onboarding_manual_dictionary_action_desc':
@@ -254068,6 +254064,10 @@ extension on _StringsRu {
         return 'Highlight the same word you already verified has a dictionary definition, and leave the selection active.';
       case 'onboarding_global_lookup_android_select_body':
         return 'Long-press the same word you already verified has a dictionary definition, then adjust the selection handles to cover it.';
+      case 'onboarding_feature_manual_resources_hint':
+        return 'Supplement the recommended pack, or import your own dictionaries, audiobooks, and pronunciation sources';
+      case 'onboarding_step_manual_resources_body':
+        return 'Use this alongside the recommended pack or on its own. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional supplements.';
       default:
         return null;
     }
@@ -262261,12 +262261,8 @@ extension on _StringsTh {
         return 'The lookup opens separately from the source app. You can tap more words inside it, then close it to return where you were.';
       case 'onboarding_feature_manual_resources':
         return 'Import dictionaries and audio manually';
-      case 'onboarding_feature_manual_resources_hint':
-        return 'Skip the pack; import your own dictionaries, audiobooks, and pronunciation sources';
       case 'onboarding_step_manual_resources_title':
         return 'Prepare dictionaries and audio manually';
-      case 'onboarding_step_manual_resources_body':
-        return 'Skip the recommended pack and prepare only what you need. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional.';
       case 'onboarding_manual_dictionary_action':
         return 'Import a dictionary';
       case 'onboarding_manual_dictionary_action_desc':
@@ -262311,6 +262307,10 @@ extension on _StringsTh {
         return 'Highlight the same word you already verified has a dictionary definition, and leave the selection active.';
       case 'onboarding_global_lookup_android_select_body':
         return 'Long-press the same word you already verified has a dictionary definition, then adjust the selection handles to cover it.';
+      case 'onboarding_feature_manual_resources_hint':
+        return 'Supplement the recommended pack, or import your own dictionaries, audiobooks, and pronunciation sources';
+      case 'onboarding_step_manual_resources_body':
+        return 'Use this alongside the recommended pack or on its own. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional supplements.';
       default:
         return null;
     }
@@ -270520,12 +270520,8 @@ extension on _StringsTr {
         return 'The lookup opens separately from the source app. You can tap more words inside it, then close it to return where you were.';
       case 'onboarding_feature_manual_resources':
         return 'Import dictionaries and audio manually';
-      case 'onboarding_feature_manual_resources_hint':
-        return 'Skip the pack; import your own dictionaries, audiobooks, and pronunciation sources';
       case 'onboarding_step_manual_resources_title':
         return 'Prepare dictionaries and audio manually';
-      case 'onboarding_step_manual_resources_body':
-        return 'Skip the recommended pack and prepare only what you need. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional.';
       case 'onboarding_manual_dictionary_action':
         return 'Import a dictionary';
       case 'onboarding_manual_dictionary_action_desc':
@@ -270570,6 +270566,10 @@ extension on _StringsTr {
         return 'Highlight the same word you already verified has a dictionary definition, and leave the selection active.';
       case 'onboarding_global_lookup_android_select_body':
         return 'Long-press the same word you already verified has a dictionary definition, then adjust the selection handles to cover it.';
+      case 'onboarding_feature_manual_resources_hint':
+        return 'Supplement the recommended pack, or import your own dictionaries, audiobooks, and pronunciation sources';
+      case 'onboarding_step_manual_resources_body':
+        return 'Use this alongside the recommended pack or on its own. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional supplements.';
       default:
         return null;
     }
@@ -278772,12 +278772,8 @@ extension on _StringsVi {
         return 'The lookup opens separately from the source app. You can tap more words inside it, then close it to return where you were.';
       case 'onboarding_feature_manual_resources':
         return 'Import dictionaries and audio manually';
-      case 'onboarding_feature_manual_resources_hint':
-        return 'Skip the pack; import your own dictionaries, audiobooks, and pronunciation sources';
       case 'onboarding_step_manual_resources_title':
         return 'Prepare dictionaries and audio manually';
-      case 'onboarding_step_manual_resources_body':
-        return 'Skip the recommended pack and prepare only what you need. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional.';
       case 'onboarding_manual_dictionary_action':
         return 'Import a dictionary';
       case 'onboarding_manual_dictionary_action_desc':
@@ -278822,6 +278818,10 @@ extension on _StringsVi {
         return 'Highlight the same word you already verified has a dictionary definition, and leave the selection active.';
       case 'onboarding_global_lookup_android_select_body':
         return 'Long-press the same word you already verified has a dictionary definition, then adjust the selection handles to cover it.';
+      case 'onboarding_feature_manual_resources_hint':
+        return 'Supplement the recommended pack, or import your own dictionaries, audiobooks, and pronunciation sources';
+      case 'onboarding_step_manual_resources_body':
+        return 'Use this alongside the recommended pack or on its own. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional supplements.';
       default:
         return null;
     }
@@ -286955,12 +286955,8 @@ extension on _StringsZhCn {
         return '查词结果会独立打开；你可以继续点释义里的词，关闭后回到刚才的应用。';
       case 'onboarding_feature_manual_resources':
         return '手动导入词典和音频';
-      case 'onboarding_feature_manual_resources_hint':
-        return '不下载推荐包，自己导入词典、有声书和单词发音来源';
       case 'onboarding_step_manual_resources_title':
         return '手动准备词典和音频';
-      case 'onboarding_step_manual_resources_body':
-        return '不下载推荐包时，在这里按需准备资源。进入查词教程前至少导入一本词典；有声书音频和单词发音音频按需配置。';
       case 'onboarding_manual_dictionary_action':
         return '导入词典';
       case 'onboarding_manual_dictionary_action_desc':
@@ -287005,6 +287001,10 @@ extension on _StringsZhCn {
         return '拖选刚才已经验证能返回词典释义的同一个词，并保持文字处于选中状态。';
       case 'onboarding_global_lookup_android_select_body':
         return '长按刚才已经验证能返回词典释义的同一个词，再拖动选区手柄让它完整覆盖。';
+      case 'onboarding_feature_manual_resources_hint':
+        return '可补充推荐包，也可单独导入自己的词典、有声书和单词发音来源';
+      case 'onboarding_step_manual_resources_body':
+        return '这一项可以与推荐包同时使用，也可以单独使用。进入查词教程前至少导入一本词典；有声书音频和单词发音音频属于按需补充。';
       default:
         return null;
     }
@@ -295139,12 +295139,8 @@ extension on _StringsZhHk {
         return 'The lookup opens separately from the source app. You can tap more words inside it, then close it to return where you were.';
       case 'onboarding_feature_manual_resources':
         return 'Import dictionaries and audio manually';
-      case 'onboarding_feature_manual_resources_hint':
-        return 'Skip the pack; import your own dictionaries, audiobooks, and pronunciation sources';
       case 'onboarding_step_manual_resources_title':
         return 'Prepare dictionaries and audio manually';
-      case 'onboarding_step_manual_resources_body':
-        return 'Skip the recommended pack and prepare only what you need. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional.';
       case 'onboarding_manual_dictionary_action':
         return 'Import a dictionary';
       case 'onboarding_manual_dictionary_action_desc':
@@ -295189,6 +295185,10 @@ extension on _StringsZhHk {
         return 'Highlight the same word you already verified has a dictionary definition, and leave the selection active.';
       case 'onboarding_global_lookup_android_select_body':
         return 'Long-press the same word you already verified has a dictionary definition, then adjust the selection handles to cover it.';
+      case 'onboarding_feature_manual_resources_hint':
+        return 'Supplement the recommended pack, or import your own dictionaries, audiobooks, and pronunciation sources';
+      case 'onboarding_step_manual_resources_body':
+        return 'Use this alongside the recommended pack or on its own. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional supplements.';
       default:
         return null;
     }
