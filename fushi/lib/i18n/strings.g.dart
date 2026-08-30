@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 66436 (3908 per locale)
+/// Strings: 66521 (3913 per locale)
 ///
-/// Built on 2026-08-30 at 04:41 UTC
+/// Built on 2026-08-30 at 06:51 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5329,6 +5329,15 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Fetched ${count} trackers';
   String download_tracker_fetch_failed({required Object message}) =>
       'Could not fetch trackers: ${message}';
+  String get anki_connect_port_auto_fix => 'Switch to a free port';
+  String get anki_connect_port_auto_fix_hint =>
+      'Picks a free port and writes it to both Hibiki and the AnkiConnect add-on config. Restart Anki to apply.';
+  String anki_connect_port_auto_fix_done({required Object port}) =>
+      'Switched AnkiConnect to port ${port}. Restart Anki to apply.';
+  String anki_connect_port_auto_fix_manual({required Object port}) =>
+      'Hibiki now uses port ${port}, but the AnkiConnect add-on config was not found. Set webBindPort to ${port} in Anki (Tools -> Add-ons -> AnkiConnect -> Config), then restart Anki.';
+  String get anki_connect_port_auto_fix_none =>
+      'No free port found on this machine.';
 }
 
 // Path: <root>
@@ -14395,6 +14404,20 @@ class _StringsAr extends _StringsEn {
   @override
   String download_tracker_fetch_failed({required Object message}) =>
       'تعذّر جلب المتعقّبات: ${message}';
+  @override
+  String get anki_connect_port_auto_fix => 'التبديل إلى منفذ حر';
+  @override
+  String get anki_connect_port_auto_fix_hint =>
+      'يختار منفذًا حرًا ويكتبه في Hibiki وفي إعدادات إضافة AnkiConnect معًا. أعد تشغيل Anki لتطبيق التغيير.';
+  @override
+  String anki_connect_port_auto_fix_done({required Object port}) =>
+      'تم تغيير منفذ AnkiConnect إلى ${port}. أعد تشغيل Anki ثم حاول مجددًا.';
+  @override
+  String anki_connect_port_auto_fix_manual({required Object port}) =>
+      'يستخدم Hibiki الآن المنفذ ${port}، لكن لم يُعثر على إعدادات إضافة AnkiConnect. اضبط webBindPort على ${port} في Anki (أدوات ← الإضافات ← AnkiConnect ← إعداد) ثم أعد تشغيل Anki.';
+  @override
+  String get anki_connect_port_auto_fix_none =>
+      'لم يُعثر على أي منفذ حر على هذا الجهاز.';
 }
 
 // Path: <root>
@@ -23673,6 +23696,20 @@ class _StringsDe extends _StringsEn {
   @override
   String download_tracker_fetch_failed({required Object message}) =>
       'Tracker konnten nicht abgerufen werden: ${message}';
+  @override
+  String get anki_connect_port_auto_fix => 'Auf freien Port wechseln';
+  @override
+  String get anki_connect_port_auto_fix_hint =>
+      'Wählt einen freien Port und trägt ihn sowohl in Hibiki als auch in die AnkiConnect-Add-on-Konfiguration ein. Starte Anki neu, damit es wirkt.';
+  @override
+  String anki_connect_port_auto_fix_done({required Object port}) =>
+      'AnkiConnect nutzt jetzt Port ${port}. Starte Anki neu und versuche es erneut.';
+  @override
+  String anki_connect_port_auto_fix_manual({required Object port}) =>
+      'Hibiki nutzt jetzt Port ${port}, aber die AnkiConnect-Add-on-Konfiguration wurde nicht gefunden. Setze webBindPort in Anki (Werkzeuge → Add-ons → AnkiConnect → Konfiguration) ebenfalls auf ${port} und starte Anki neu.';
+  @override
+  String get anki_connect_port_auto_fix_none =>
+      'Auf diesem Rechner wurde kein freier Port gefunden.';
 }
 
 // Path: <root>
@@ -32994,6 +33031,20 @@ class _StringsEs extends _StringsEn {
   @override
   String download_tracker_fetch_failed({required Object message}) =>
       'No se pudieron obtener los trackers: ${message}';
+  @override
+  String get anki_connect_port_auto_fix => 'Cambiar a un puerto libre';
+  @override
+  String get anki_connect_port_auto_fix_hint =>
+      'Elige un puerto libre y lo escribe tanto en Hibiki como en la configuración del complemento AnkiConnect. Reinicia Anki para aplicarlo.';
+  @override
+  String anki_connect_port_auto_fix_done({required Object port}) =>
+      'AnkiConnect ahora usa el puerto ${port}. Reinicia Anki y vuelve a intentarlo.';
+  @override
+  String anki_connect_port_auto_fix_manual({required Object port}) =>
+      'Hibiki ahora usa el puerto ${port}, pero no se encontró la configuración del complemento AnkiConnect. Pon webBindPort en ${port} dentro de Anki (Herramientas → Complementos → AnkiConnect → Configuración) y reinicia Anki.';
+  @override
+  String get anki_connect_port_auto_fix_none =>
+      'No se encontró ningún puerto libre en este equipo.';
 }
 
 // Path: <root>
@@ -42349,6 +42400,20 @@ class _StringsFr extends _StringsEn {
   @override
   String download_tracker_fetch_failed({required Object message}) =>
       'Impossible de récupérer les trackers : ${message}';
+  @override
+  String get anki_connect_port_auto_fix => 'Passer à un port libre';
+  @override
+  String get anki_connect_port_auto_fix_hint =>
+      'Choisit un port libre et l\'écrit à la fois dans Hibiki et dans la configuration du module AnkiConnect. Redémarrez Anki pour l\'appliquer.';
+  @override
+  String anki_connect_port_auto_fix_done({required Object port}) =>
+      'AnkiConnect utilise désormais le port ${port}. Redémarrez Anki puis réessayez.';
+  @override
+  String anki_connect_port_auto_fix_manual({required Object port}) =>
+      'Hibiki utilise désormais le port ${port}, mais la configuration du module AnkiConnect est introuvable. Définissez webBindPort sur ${port} dans Anki (Outils → Modules complémentaires → AnkiConnect → Configuration), puis redémarrez Anki.';
+  @override
+  String get anki_connect_port_auto_fix_none =>
+      'Aucun port libre trouvé sur cette machine.';
 }
 
 // Path: <root>
@@ -51529,6 +51594,20 @@ class _StringsId extends _StringsEn {
   @override
   String download_tracker_fetch_failed({required Object message}) =>
       'Tidak dapat mengambil tracker: ${message}';
+  @override
+  String get anki_connect_port_auto_fix => 'Ganti ke port yang kosong';
+  @override
+  String get anki_connect_port_auto_fix_hint =>
+      'Memilih port kosong lalu menuliskannya ke Hibiki dan ke konfigurasi add-on AnkiConnect. Mulai ulang Anki agar berlaku.';
+  @override
+  String anki_connect_port_auto_fix_done({required Object port}) =>
+      'AnkiConnect kini memakai port ${port}. Mulai ulang Anki lalu coba lagi.';
+  @override
+  String anki_connect_port_auto_fix_manual({required Object port}) =>
+      'Hibiki kini memakai port ${port}, tetapi konfigurasi add-on AnkiConnect tidak ditemukan. Setel webBindPort ke ${port} di Anki (Alat → Add-on → AnkiConnect → Konfigurasi), lalu mulai ulang Anki.';
+  @override
+  String get anki_connect_port_auto_fix_none =>
+      'Tidak ditemukan port kosong di komputer ini.';
 }
 
 // Path: <root>
@@ -60786,6 +60865,20 @@ class _StringsIt extends _StringsEn {
   @override
   String download_tracker_fetch_failed({required Object message}) =>
       'Impossibile scaricare i tracker: ${message}';
+  @override
+  String get anki_connect_port_auto_fix => 'Passa a una porta libera';
+  @override
+  String get anki_connect_port_auto_fix_hint =>
+      'Sceglie una porta libera e la scrive sia in Hibiki sia nella configurazione del componente aggiuntivo AnkiConnect. Riavvia Anki per applicarla.';
+  @override
+  String anki_connect_port_auto_fix_done({required Object port}) =>
+      'AnkiConnect ora usa la porta ${port}. Riavvia Anki e riprova.';
+  @override
+  String anki_connect_port_auto_fix_manual({required Object port}) =>
+      'Hibiki ora usa la porta ${port}, ma la configurazione del componente aggiuntivo AnkiConnect non è stata trovata. Imposta webBindPort su ${port} in Anki (Strumenti → Componenti aggiuntivi → AnkiConnect → Configurazione) e riavvia Anki.';
+  @override
+  String get anki_connect_port_auto_fix_none =>
+      'Nessuna porta libera trovata su questo computer.';
 }
 
 // Path: <root>
@@ -69479,6 +69572,19 @@ class _StringsJa extends _StringsEn {
   @override
   String download_tracker_fetch_failed({required Object message}) =>
       'トラッカーを取得できませんでした: ${message}';
+  @override
+  String get anki_connect_port_auto_fix => '空いているポートに変更';
+  @override
+  String get anki_connect_port_auto_fix_hint =>
+      '空いているポートを選び、Hibiki と Anki の AnkiConnect アドオン設定の両方に書き込みます。反映には Anki の再起動が必要です。';
+  @override
+  String anki_connect_port_auto_fix_done({required Object port}) =>
+      'AnkiConnect のポートを ${port} に変更しました。Anki を再起動してからもう一度お試しください。';
+  @override
+  String anki_connect_port_auto_fix_manual({required Object port}) =>
+      'Hibiki はポート ${port} を使うようになりましたが、AnkiConnect のアドオン設定が見つかりませんでした。Anki の「ツール → アドオン → AnkiConnect → 設定」で webBindPort も ${port} にしてから、Anki を再起動してください。';
+  @override
+  String get anki_connect_port_auto_fix_none => 'このマシンに空いているポートが見つかりませんでした。';
 }
 
 // Path: <root>
@@ -78185,6 +78291,19 @@ class _StringsKo extends _StringsEn {
   @override
   String download_tracker_fetch_failed({required Object message}) =>
       '트래커를 가져오지 못했습니다: ${message}';
+  @override
+  String get anki_connect_port_auto_fix => '비어 있는 포트로 변경';
+  @override
+  String get anki_connect_port_auto_fix_hint =>
+      '비어 있는 포트를 골라 Hibiki와 AnkiConnect 애드온 설정 양쪽에 기록합니다. 적용하려면 Anki를 다시 시작하세요.';
+  @override
+  String anki_connect_port_auto_fix_done({required Object port}) =>
+      'AnkiConnect 포트를 ${port}(으)로 변경했습니다. Anki를 다시 시작한 뒤 다시 시도하세요.';
+  @override
+  String anki_connect_port_auto_fix_manual({required Object port}) =>
+      'Hibiki는 이제 포트 ${port}를 사용하지만 AnkiConnect 애드온 설정을 찾지 못했습니다. Anki의 [도구 → 애드온 → AnkiConnect → 설정]에서 webBindPort도 ${port}로 바꾼 뒤 Anki를 다시 시작하세요.';
+  @override
+  String get anki_connect_port_auto_fix_none => '이 컴퓨터에서 비어 있는 포트를 찾지 못했습니다.';
 }
 
 // Path: <root>
@@ -87399,6 +87518,20 @@ class _StringsNl extends _StringsEn {
   @override
   String download_tracker_fetch_failed({required Object message}) =>
       'Kan de trackers niet ophalen: ${message}';
+  @override
+  String get anki_connect_port_auto_fix => 'Naar een vrije poort wisselen';
+  @override
+  String get anki_connect_port_auto_fix_hint =>
+      'Kiest een vrije poort en schrijft die zowel in Hibiki als in de AnkiConnect-add-onconfiguratie. Herstart Anki om het toe te passen.';
+  @override
+  String anki_connect_port_auto_fix_done({required Object port}) =>
+      'AnkiConnect gebruikt nu poort ${port}. Herstart Anki en probeer het opnieuw.';
+  @override
+  String anki_connect_port_auto_fix_manual({required Object port}) =>
+      'Hibiki gebruikt nu poort ${port}, maar de AnkiConnect-add-onconfiguratie is niet gevonden. Zet webBindPort in Anki (Extra → Add-ons → AnkiConnect → Configuratie) ook op ${port} en herstart Anki.';
+  @override
+  String get anki_connect_port_auto_fix_none =>
+      'Geen vrije poort gevonden op deze machine.';
 }
 
 // Path: <root>
@@ -96669,6 +96802,20 @@ class _StringsPtBr extends _StringsEn {
   @override
   String download_tracker_fetch_failed({required Object message}) =>
       'Não foi possível buscar os trackers: ${message}';
+  @override
+  String get anki_connect_port_auto_fix => 'Mudar para uma porta livre';
+  @override
+  String get anki_connect_port_auto_fix_hint =>
+      'Escolhe uma porta livre e a grava tanto no Hibiki quanto na configuração do complemento AnkiConnect. Reinicie o Anki para aplicar.';
+  @override
+  String anki_connect_port_auto_fix_done({required Object port}) =>
+      'O AnkiConnect agora usa a porta ${port}. Reinicie o Anki e tente novamente.';
+  @override
+  String anki_connect_port_auto_fix_manual({required Object port}) =>
+      'O Hibiki agora usa a porta ${port}, mas a configuração do complemento AnkiConnect não foi encontrada. Defina webBindPort como ${port} no Anki (Ferramentas → Complementos → AnkiConnect → Configuração) e reinicie o Anki.';
+  @override
+  String get anki_connect_port_auto_fix_none =>
+      'Nenhuma porta livre encontrada nesta máquina.';
 }
 
 // Path: <root>
@@ -105913,6 +106060,20 @@ class _StringsRu extends _StringsEn {
   @override
   String download_tracker_fetch_failed({required Object message}) =>
       'Не удалось получить трекеры: ${message}';
+  @override
+  String get anki_connect_port_auto_fix => 'Выбрать свободный порт';
+  @override
+  String get anki_connect_port_auto_fix_hint =>
+      'Подбирает свободный порт и записывает его и в Hibiki, и в настройки дополнения AnkiConnect. Перезапустите Anki, чтобы изменения вступили в силу.';
+  @override
+  String anki_connect_port_auto_fix_done({required Object port}) =>
+      'AnkiConnect переключён на порт ${port}. Перезапустите Anki и повторите попытку.';
+  @override
+  String anki_connect_port_auto_fix_manual({required Object port}) =>
+      'Hibiki теперь использует порт ${port}, но настройки дополнения AnkiConnect не найдены. Укажите webBindPort равным ${port} в Anki (Инструменты → Дополнения → AnkiConnect → Настройка) и перезапустите Anki.';
+  @override
+  String get anki_connect_port_auto_fix_none =>
+      'На этом компьютере не найдено свободных портов.';
 }
 
 // Path: <root>
@@ -114973,6 +115134,19 @@ class _StringsTh extends _StringsEn {
   @override
   String download_tracker_fetch_failed({required Object message}) =>
       'ดึงแทร็กเกอร์ไม่สำเร็จ: ${message}';
+  @override
+  String get anki_connect_port_auto_fix => 'เปลี่ยนไปใช้พอร์ตที่ว่าง';
+  @override
+  String get anki_connect_port_auto_fix_hint =>
+      'เลือกพอร์ตที่ว่างแล้วเขียนลงทั้งใน Hibiki และการตั้งค่าส่วนเสริม AnkiConnect รีสตาร์ท Anki เพื่อให้มีผล';
+  @override
+  String anki_connect_port_auto_fix_done({required Object port}) =>
+      'เปลี่ยนพอร์ตของ AnkiConnect เป็น ${port} แล้ว รีสตาร์ท Anki แล้วลองอีกครั้ง';
+  @override
+  String anki_connect_port_auto_fix_manual({required Object port}) =>
+      'ตอนนี้ Hibiki ใช้พอร์ต ${port} แล้ว แต่ไม่พบการตั้งค่าส่วนเสริม AnkiConnect โปรดตั้ง webBindPort เป็น ${port} ใน Anki (เครื่องมือ → ส่วนเสริม → AnkiConnect → การตั้งค่า) แล้วรีสตาร์ท Anki';
+  @override
+  String get anki_connect_port_auto_fix_none => 'ไม่พบพอร์ตที่ว่างบนเครื่องนี้';
 }
 
 // Path: <root>
@@ -124139,6 +124313,20 @@ class _StringsTr extends _StringsEn {
   @override
   String download_tracker_fetch_failed({required Object message}) =>
       'Trackerlar getirilemedi: ${message}';
+  @override
+  String get anki_connect_port_auto_fix => 'Boş bir bağlantı noktasına geç';
+  @override
+  String get anki_connect_port_auto_fix_hint =>
+      'Boş bir bağlantı noktası seçip hem Hibiki\'ye hem de AnkiConnect eklenti yapılandırmasına yazar. Uygulamak için Anki\'yi yeniden başlatın.';
+  @override
+  String anki_connect_port_auto_fix_done({required Object port}) =>
+      'AnkiConnect artık ${port} bağlantı noktasını kullanıyor. Anki\'yi yeniden başlatıp tekrar deneyin.';
+  @override
+  String anki_connect_port_auto_fix_manual({required Object port}) =>
+      'Hibiki artık ${port} bağlantı noktasını kullanıyor ancak AnkiConnect eklenti yapılandırması bulunamadı. Anki\'de (Araçlar → Eklentiler → AnkiConnect → Yapılandırma) webBindPort değerini de ${port} yapıp Anki\'yi yeniden başlatın.';
+  @override
+  String get anki_connect_port_auto_fix_none =>
+      'Bu makinede boş bağlantı noktası bulunamadı.';
 }
 
 // Path: <root>
@@ -133286,6 +133474,20 @@ class _StringsVi extends _StringsEn {
   @override
   String download_tracker_fetch_failed({required Object message}) =>
       'Không lấy được tracker: ${message}';
+  @override
+  String get anki_connect_port_auto_fix => 'Đổi sang cổng còn trống';
+  @override
+  String get anki_connect_port_auto_fix_hint =>
+      'Chọn một cổng còn trống rồi ghi vào cả Hibiki lẫn cấu hình tiện ích AnkiConnect. Khởi động lại Anki để áp dụng.';
+  @override
+  String anki_connect_port_auto_fix_done({required Object port}) =>
+      'AnkiConnect đã chuyển sang cổng ${port}. Hãy khởi động lại Anki rồi thử lại.';
+  @override
+  String anki_connect_port_auto_fix_manual({required Object port}) =>
+      'Hibiki hiện dùng cổng ${port}, nhưng không tìm thấy cấu hình tiện ích AnkiConnect. Hãy đặt webBindPort thành ${port} trong Anki (Công cụ → Tiện ích → AnkiConnect → Cấu hình) rồi khởi động lại Anki.';
+  @override
+  String get anki_connect_port_auto_fix_none =>
+      'Không tìm thấy cổng nào còn trống trên máy này.';
 }
 
 // Path: <root>
@@ -141701,6 +141903,19 @@ class _StringsZhCn extends _StringsEn {
   @override
   String download_tracker_fetch_failed({required Object message}) =>
       '获取 Tracker 失败：${message}';
+  @override
+  String get anki_connect_port_auto_fix => '换一个空闲端口';
+  @override
+  String get anki_connect_port_auto_fix_hint =>
+      '自动挑一个空闲端口，同时写进 Hibiki 和 Anki 的 AnkiConnect 插件配置。改完重启 Anki 生效。';
+  @override
+  String anki_connect_port_auto_fix_done({required Object port}) =>
+      'AnkiConnect 端口已改为 ${port}。请重启 Anki 后重试。';
+  @override
+  String anki_connect_port_auto_fix_manual({required Object port}) =>
+      'Hibiki 已改用端口 ${port}，但没找到 AnkiConnect 的插件配置。请在 Anki 的「工具 → 插件 → AnkiConnect → 配置」里把 webBindPort 也改成 ${port}，然后重启 Anki。';
+  @override
+  String get anki_connect_port_auto_fix_none => '本机没有找到空闲端口。';
 }
 
 // Path: <root>
@@ -150121,6 +150336,19 @@ class _StringsZhHk extends _StringsEn {
   @override
   String download_tracker_fetch_failed({required Object message}) =>
       '抓取 Tracker 失敗：${message}';
+  @override
+  String get anki_connect_port_auto_fix => '換一個空閒的連接埠';
+  @override
+  String get anki_connect_port_auto_fix_hint =>
+      '自動挑一個空閒的連接埠，同時寫進 Hibiki 和 Anki 的 AnkiConnect 外掛設定。改完重啟 Anki 生效。';
+  @override
+  String anki_connect_port_auto_fix_done({required Object port}) =>
+      'AnkiConnect 連接埠已改為 ${port}。請重啟 Anki 後再試。';
+  @override
+  String anki_connect_port_auto_fix_manual({required Object port}) =>
+      'Hibiki 已改用連接埠 ${port}，但找不到 AnkiConnect 的外掛設定。請在 Anki 的「工具 → 外掛 → AnkiConnect → 設定」裡把 webBindPort 也改成 ${port}，然後重啟 Anki。';
+  @override
+  String get anki_connect_port_auto_fix_none => '本機找不到空閒的連接埠。';
 }
 
 /// Flat map(s) containing all translations.
@@ -158142,6 +158370,18 @@ extension on _StringsEn {
       case 'download_tracker_fetch_failed':
         return ({required Object message}) =>
             'Could not fetch trackers: ${message}';
+      case 'anki_connect_port_auto_fix':
+        return 'Switch to a free port';
+      case 'anki_connect_port_auto_fix_hint':
+        return 'Picks a free port and writes it to both Hibiki and the AnkiConnect add-on config. Restart Anki to apply.';
+      case 'anki_connect_port_auto_fix_done':
+        return ({required Object port}) =>
+            'Switched AnkiConnect to port ${port}. Restart Anki to apply.';
+      case 'anki_connect_port_auto_fix_manual':
+        return ({required Object port}) =>
+            'Hibiki now uses port ${port}, but the AnkiConnect add-on config was not found. Set webBindPort to ${port} in Anki (Tools -> Add-ons -> AnkiConnect -> Config), then restart Anki.';
+      case 'anki_connect_port_auto_fix_none':
+        return 'No free port found on this machine.';
       default:
         return null;
     }
@@ -166159,6 +166399,18 @@ extension on _StringsAr {
       case 'download_tracker_fetch_failed':
         return ({required Object message}) =>
             'تعذّر جلب المتعقّبات: ${message}';
+      case 'anki_connect_port_auto_fix':
+        return 'التبديل إلى منفذ حر';
+      case 'anki_connect_port_auto_fix_hint':
+        return 'يختار منفذًا حرًا ويكتبه في Hibiki وفي إعدادات إضافة AnkiConnect معًا. أعد تشغيل Anki لتطبيق التغيير.';
+      case 'anki_connect_port_auto_fix_done':
+        return ({required Object port}) =>
+            'تم تغيير منفذ AnkiConnect إلى ${port}. أعد تشغيل Anki ثم حاول مجددًا.';
+      case 'anki_connect_port_auto_fix_manual':
+        return ({required Object port}) =>
+            'يستخدم Hibiki الآن المنفذ ${port}، لكن لم يُعثر على إعدادات إضافة AnkiConnect. اضبط webBindPort على ${port} في Anki (أدوات ← الإضافات ← AnkiConnect ← إعداد) ثم أعد تشغيل Anki.';
+      case 'anki_connect_port_auto_fix_none':
+        return 'لم يُعثر على أي منفذ حر على هذا الجهاز.';
       default:
         return null;
     }
@@ -174219,6 +174471,18 @@ extension on _StringsDe {
       case 'download_tracker_fetch_failed':
         return ({required Object message}) =>
             'Tracker konnten nicht abgerufen werden: ${message}';
+      case 'anki_connect_port_auto_fix':
+        return 'Auf freien Port wechseln';
+      case 'anki_connect_port_auto_fix_hint':
+        return 'Wählt einen freien Port und trägt ihn sowohl in Hibiki als auch in die AnkiConnect-Add-on-Konfiguration ein. Starte Anki neu, damit es wirkt.';
+      case 'anki_connect_port_auto_fix_done':
+        return ({required Object port}) =>
+            'AnkiConnect nutzt jetzt Port ${port}. Starte Anki neu und versuche es erneut.';
+      case 'anki_connect_port_auto_fix_manual':
+        return ({required Object port}) =>
+            'Hibiki nutzt jetzt Port ${port}, aber die AnkiConnect-Add-on-Konfiguration wurde nicht gefunden. Setze webBindPort in Anki (Werkzeuge → Add-ons → AnkiConnect → Konfiguration) ebenfalls auf ${port} und starte Anki neu.';
+      case 'anki_connect_port_auto_fix_none':
+        return 'Auf diesem Rechner wurde kein freier Port gefunden.';
       default:
         return null;
     }
@@ -182271,6 +182535,18 @@ extension on _StringsEs {
       case 'download_tracker_fetch_failed':
         return ({required Object message}) =>
             'No se pudieron obtener los trackers: ${message}';
+      case 'anki_connect_port_auto_fix':
+        return 'Cambiar a un puerto libre';
+      case 'anki_connect_port_auto_fix_hint':
+        return 'Elige un puerto libre y lo escribe tanto en Hibiki como en la configuración del complemento AnkiConnect. Reinicia Anki para aplicarlo.';
+      case 'anki_connect_port_auto_fix_done':
+        return ({required Object port}) =>
+            'AnkiConnect ahora usa el puerto ${port}. Reinicia Anki y vuelve a intentarlo.';
+      case 'anki_connect_port_auto_fix_manual':
+        return ({required Object port}) =>
+            'Hibiki ahora usa el puerto ${port}, pero no se encontró la configuración del complemento AnkiConnect. Pon webBindPort en ${port} dentro de Anki (Herramientas → Complementos → AnkiConnect → Configuración) y reinicia Anki.';
+      case 'anki_connect_port_auto_fix_none':
+        return 'No se encontró ningún puerto libre en este equipo.';
       default:
         return null;
     }
@@ -190331,6 +190607,18 @@ extension on _StringsFr {
       case 'download_tracker_fetch_failed':
         return ({required Object message}) =>
             'Impossible de récupérer les trackers : ${message}';
+      case 'anki_connect_port_auto_fix':
+        return 'Passer à un port libre';
+      case 'anki_connect_port_auto_fix_hint':
+        return 'Choisit un port libre et l\'écrit à la fois dans Hibiki et dans la configuration du module AnkiConnect. Redémarrez Anki pour l\'appliquer.';
+      case 'anki_connect_port_auto_fix_done':
+        return ({required Object port}) =>
+            'AnkiConnect utilise désormais le port ${port}. Redémarrez Anki puis réessayez.';
+      case 'anki_connect_port_auto_fix_manual':
+        return ({required Object port}) =>
+            'Hibiki utilise désormais le port ${port}, mais la configuration du module AnkiConnect est introuvable. Définissez webBindPort sur ${port} dans Anki (Outils → Modules complémentaires → AnkiConnect → Configuration), puis redémarrez Anki.';
+      case 'anki_connect_port_auto_fix_none':
+        return 'Aucun port libre trouvé sur cette machine.';
       default:
         return null;
     }
@@ -198363,6 +198651,18 @@ extension on _StringsId {
       case 'download_tracker_fetch_failed':
         return ({required Object message}) =>
             'Tidak dapat mengambil tracker: ${message}';
+      case 'anki_connect_port_auto_fix':
+        return 'Ganti ke port yang kosong';
+      case 'anki_connect_port_auto_fix_hint':
+        return 'Memilih port kosong lalu menuliskannya ke Hibiki dan ke konfigurasi add-on AnkiConnect. Mulai ulang Anki agar berlaku.';
+      case 'anki_connect_port_auto_fix_done':
+        return ({required Object port}) =>
+            'AnkiConnect kini memakai port ${port}. Mulai ulang Anki lalu coba lagi.';
+      case 'anki_connect_port_auto_fix_manual':
+        return ({required Object port}) =>
+            'Hibiki kini memakai port ${port}, tetapi konfigurasi add-on AnkiConnect tidak ditemukan. Setel webBindPort ke ${port} di Anki (Alat → Add-on → AnkiConnect → Konfigurasi), lalu mulai ulang Anki.';
+      case 'anki_connect_port_auto_fix_none':
+        return 'Tidak ditemukan port kosong di komputer ini.';
       default:
         return null;
     }
@@ -206416,6 +206716,18 @@ extension on _StringsIt {
       case 'download_tracker_fetch_failed':
         return ({required Object message}) =>
             'Impossibile scaricare i tracker: ${message}';
+      case 'anki_connect_port_auto_fix':
+        return 'Passa a una porta libera';
+      case 'anki_connect_port_auto_fix_hint':
+        return 'Sceglie una porta libera e la scrive sia in Hibiki sia nella configurazione del componente aggiuntivo AnkiConnect. Riavvia Anki per applicarla.';
+      case 'anki_connect_port_auto_fix_done':
+        return ({required Object port}) =>
+            'AnkiConnect ora usa la porta ${port}. Riavvia Anki e riprova.';
+      case 'anki_connect_port_auto_fix_manual':
+        return ({required Object port}) =>
+            'Hibiki ora usa la porta ${port}, ma la configurazione del componente aggiuntivo AnkiConnect non è stata trovata. Imposta webBindPort su ${port} in Anki (Strumenti → Componenti aggiuntivi → AnkiConnect → Configurazione) e riavvia Anki.';
+      case 'anki_connect_port_auto_fix_none':
+        return 'Nessuna porta libera trovata su questo computer.';
       default:
         return null;
     }
@@ -214401,6 +214713,18 @@ extension on _StringsJa {
         return ({required Object count}) => '${count} 件のトラッカーを取得しました';
       case 'download_tracker_fetch_failed':
         return ({required Object message}) => 'トラッカーを取得できませんでした: ${message}';
+      case 'anki_connect_port_auto_fix':
+        return '空いているポートに変更';
+      case 'anki_connect_port_auto_fix_hint':
+        return '空いているポートを選び、Hibiki と Anki の AnkiConnect アドオン設定の両方に書き込みます。反映には Anki の再起動が必要です。';
+      case 'anki_connect_port_auto_fix_done':
+        return ({required Object port}) =>
+            'AnkiConnect のポートを ${port} に変更しました。Anki を再起動してからもう一度お試しください。';
+      case 'anki_connect_port_auto_fix_manual':
+        return ({required Object port}) =>
+            'Hibiki はポート ${port} を使うようになりましたが、AnkiConnect のアドオン設定が見つかりませんでした。Anki の「ツール → アドオン → AnkiConnect → 設定」で webBindPort も ${port} にしてから、Anki を再起動してください。';
+      case 'anki_connect_port_auto_fix_none':
+        return 'このマシンに空いているポートが見つかりませんでした。';
       default:
         return null;
     }
@@ -222388,6 +222712,18 @@ extension on _StringsKo {
         return ({required Object count}) => '트래커 ${count}개를 가져왔습니다';
       case 'download_tracker_fetch_failed':
         return ({required Object message}) => '트래커를 가져오지 못했습니다: ${message}';
+      case 'anki_connect_port_auto_fix':
+        return '비어 있는 포트로 변경';
+      case 'anki_connect_port_auto_fix_hint':
+        return '비어 있는 포트를 골라 Hibiki와 AnkiConnect 애드온 설정 양쪽에 기록합니다. 적용하려면 Anki를 다시 시작하세요.';
+      case 'anki_connect_port_auto_fix_done':
+        return ({required Object port}) =>
+            'AnkiConnect 포트를 ${port}(으)로 변경했습니다. Anki를 다시 시작한 뒤 다시 시도하세요.';
+      case 'anki_connect_port_auto_fix_manual':
+        return ({required Object port}) =>
+            'Hibiki는 이제 포트 ${port}를 사용하지만 AnkiConnect 애드온 설정을 찾지 못했습니다. Anki의 [도구 → 애드온 → AnkiConnect → 설정]에서 webBindPort도 ${port}로 바꾼 뒤 Anki를 다시 시작하세요.';
+      case 'anki_connect_port_auto_fix_none':
+        return '이 컴퓨터에서 비어 있는 포트를 찾지 못했습니다.';
       default:
         return null;
     }
@@ -230435,6 +230771,18 @@ extension on _StringsNl {
       case 'download_tracker_fetch_failed':
         return ({required Object message}) =>
             'Kan de trackers niet ophalen: ${message}';
+      case 'anki_connect_port_auto_fix':
+        return 'Naar een vrije poort wisselen';
+      case 'anki_connect_port_auto_fix_hint':
+        return 'Kiest een vrije poort en schrijft die zowel in Hibiki als in de AnkiConnect-add-onconfiguratie. Herstart Anki om het toe te passen.';
+      case 'anki_connect_port_auto_fix_done':
+        return ({required Object port}) =>
+            'AnkiConnect gebruikt nu poort ${port}. Herstart Anki en probeer het opnieuw.';
+      case 'anki_connect_port_auto_fix_manual':
+        return ({required Object port}) =>
+            'Hibiki gebruikt nu poort ${port}, maar de AnkiConnect-add-onconfiguratie is niet gevonden. Zet webBindPort in Anki (Extra → Add-ons → AnkiConnect → Configuratie) ook op ${port} en herstart Anki.';
+      case 'anki_connect_port_auto_fix_none':
+        return 'Geen vrije poort gevonden op deze machine.';
       default:
         return null;
     }
@@ -238477,6 +238825,18 @@ extension on _StringsPtBr {
       case 'download_tracker_fetch_failed':
         return ({required Object message}) =>
             'Não foi possível buscar os trackers: ${message}';
+      case 'anki_connect_port_auto_fix':
+        return 'Mudar para uma porta livre';
+      case 'anki_connect_port_auto_fix_hint':
+        return 'Escolhe uma porta livre e a grava tanto no Hibiki quanto na configuração do complemento AnkiConnect. Reinicie o Anki para aplicar.';
+      case 'anki_connect_port_auto_fix_done':
+        return ({required Object port}) =>
+            'O AnkiConnect agora usa a porta ${port}. Reinicie o Anki e tente novamente.';
+      case 'anki_connect_port_auto_fix_manual':
+        return ({required Object port}) =>
+            'O Hibiki agora usa a porta ${port}, mas a configuração do complemento AnkiConnect não foi encontrada. Defina webBindPort como ${port} no Anki (Ferramentas → Complementos → AnkiConnect → Configuração) e reinicie o Anki.';
+      case 'anki_connect_port_auto_fix_none':
+        return 'Nenhuma porta livre encontrada nesta máquina.';
       default:
         return null;
     }
@@ -246525,6 +246885,18 @@ extension on _StringsRu {
       case 'download_tracker_fetch_failed':
         return ({required Object message}) =>
             'Не удалось получить трекеры: ${message}';
+      case 'anki_connect_port_auto_fix':
+        return 'Выбрать свободный порт';
+      case 'anki_connect_port_auto_fix_hint':
+        return 'Подбирает свободный порт и записывает его и в Hibiki, и в настройки дополнения AnkiConnect. Перезапустите Anki, чтобы изменения вступили в силу.';
+      case 'anki_connect_port_auto_fix_done':
+        return ({required Object port}) =>
+            'AnkiConnect переключён на порт ${port}. Перезапустите Anki и повторите попытку.';
+      case 'anki_connect_port_auto_fix_manual':
+        return ({required Object port}) =>
+            'Hibiki теперь использует порт ${port}, но настройки дополнения AnkiConnect не найдены. Укажите webBindPort равным ${port} в Anki (Инструменты → Дополнения → AnkiConnect → Настройка) и перезапустите Anki.';
+      case 'anki_connect_port_auto_fix_none':
+        return 'На этом компьютере не найдено свободных портов.';
       default:
         return null;
     }
@@ -254546,6 +254918,18 @@ extension on _StringsTh {
       case 'download_tracker_fetch_failed':
         return ({required Object message}) =>
             'ดึงแทร็กเกอร์ไม่สำเร็จ: ${message}';
+      case 'anki_connect_port_auto_fix':
+        return 'เปลี่ยนไปใช้พอร์ตที่ว่าง';
+      case 'anki_connect_port_auto_fix_hint':
+        return 'เลือกพอร์ตที่ว่างแล้วเขียนลงทั้งใน Hibiki และการตั้งค่าส่วนเสริม AnkiConnect รีสตาร์ท Anki เพื่อให้มีผล';
+      case 'anki_connect_port_auto_fix_done':
+        return ({required Object port}) =>
+            'เปลี่ยนพอร์ตของ AnkiConnect เป็น ${port} แล้ว รีสตาร์ท Anki แล้วลองอีกครั้ง';
+      case 'anki_connect_port_auto_fix_manual':
+        return ({required Object port}) =>
+            'ตอนนี้ Hibiki ใช้พอร์ต ${port} แล้ว แต่ไม่พบการตั้งค่าส่วนเสริม AnkiConnect โปรดตั้ง webBindPort เป็น ${port} ใน Anki (เครื่องมือ → ส่วนเสริม → AnkiConnect → การตั้งค่า) แล้วรีสตาร์ท Anki';
+      case 'anki_connect_port_auto_fix_none':
+        return 'ไม่พบพอร์ตที่ว่างบนเครื่องนี้';
       default:
         return null;
     }
@@ -262583,6 +262967,18 @@ extension on _StringsTr {
       case 'download_tracker_fetch_failed':
         return ({required Object message}) =>
             'Trackerlar getirilemedi: ${message}';
+      case 'anki_connect_port_auto_fix':
+        return 'Boş bir bağlantı noktasına geç';
+      case 'anki_connect_port_auto_fix_hint':
+        return 'Boş bir bağlantı noktası seçip hem Hibiki\'ye hem de AnkiConnect eklenti yapılandırmasına yazar. Uygulamak için Anki\'yi yeniden başlatın.';
+      case 'anki_connect_port_auto_fix_done':
+        return ({required Object port}) =>
+            'AnkiConnect artık ${port} bağlantı noktasını kullanıyor. Anki\'yi yeniden başlatıp tekrar deneyin.';
+      case 'anki_connect_port_auto_fix_manual':
+        return ({required Object port}) =>
+            'Hibiki artık ${port} bağlantı noktasını kullanıyor ancak AnkiConnect eklenti yapılandırması bulunamadı. Anki\'de (Araçlar → Eklentiler → AnkiConnect → Yapılandırma) webBindPort değerini de ${port} yapıp Anki\'yi yeniden başlatın.';
+      case 'anki_connect_port_auto_fix_none':
+        return 'Bu makinede boş bağlantı noktası bulunamadı.';
       default:
         return null;
     }
@@ -270613,6 +271009,18 @@ extension on _StringsVi {
       case 'download_tracker_fetch_failed':
         return ({required Object message}) =>
             'Không lấy được tracker: ${message}';
+      case 'anki_connect_port_auto_fix':
+        return 'Đổi sang cổng còn trống';
+      case 'anki_connect_port_auto_fix_hint':
+        return 'Chọn một cổng còn trống rồi ghi vào cả Hibiki lẫn cấu hình tiện ích AnkiConnect. Khởi động lại Anki để áp dụng.';
+      case 'anki_connect_port_auto_fix_done':
+        return ({required Object port}) =>
+            'AnkiConnect đã chuyển sang cổng ${port}. Hãy khởi động lại Anki rồi thử lại.';
+      case 'anki_connect_port_auto_fix_manual':
+        return ({required Object port}) =>
+            'Hibiki hiện dùng cổng ${port}, nhưng không tìm thấy cấu hình tiện ích AnkiConnect. Hãy đặt webBindPort thành ${port} trong Anki (Công cụ → Tiện ích → AnkiConnect → Cấu hình) rồi khởi động lại Anki.';
+      case 'anki_connect_port_auto_fix_none':
+        return 'Không tìm thấy cổng nào còn trống trên máy này.';
       default:
         return null;
     }
@@ -278576,6 +278984,18 @@ extension on _StringsZhCn {
         return ({required Object count}) => '已获取 ${count} 个 Tracker';
       case 'download_tracker_fetch_failed':
         return ({required Object message}) => '获取 Tracker 失败：${message}';
+      case 'anki_connect_port_auto_fix':
+        return '换一个空闲端口';
+      case 'anki_connect_port_auto_fix_hint':
+        return '自动挑一个空闲端口，同时写进 Hibiki 和 Anki 的 AnkiConnect 插件配置。改完重启 Anki 生效。';
+      case 'anki_connect_port_auto_fix_done':
+        return ({required Object port}) =>
+            'AnkiConnect 端口已改为 ${port}。请重启 Anki 后重试。';
+      case 'anki_connect_port_auto_fix_manual':
+        return ({required Object port}) =>
+            'Hibiki 已改用端口 ${port}，但没找到 AnkiConnect 的插件配置。请在 Anki 的「工具 → 插件 → AnkiConnect → 配置」里把 webBindPort 也改成 ${port}，然后重启 Anki。';
+      case 'anki_connect_port_auto_fix_none':
+        return '本机没有找到空闲端口。';
       default:
         return null;
     }
@@ -286540,6 +286960,18 @@ extension on _StringsZhHk {
         return ({required Object count}) => '已抓取 ${count} 個 Tracker';
       case 'download_tracker_fetch_failed':
         return ({required Object message}) => '抓取 Tracker 失敗：${message}';
+      case 'anki_connect_port_auto_fix':
+        return '換一個空閒的連接埠';
+      case 'anki_connect_port_auto_fix_hint':
+        return '自動挑一個空閒的連接埠，同時寫進 Hibiki 和 Anki 的 AnkiConnect 外掛設定。改完重啟 Anki 生效。';
+      case 'anki_connect_port_auto_fix_done':
+        return ({required Object port}) =>
+            'AnkiConnect 連接埠已改為 ${port}。請重啟 Anki 後再試。';
+      case 'anki_connect_port_auto_fix_manual':
+        return ({required Object port}) =>
+            'Hibiki 已改用連接埠 ${port}，但找不到 AnkiConnect 的外掛設定。請在 Anki 的「工具 → 外掛 → AnkiConnect → 設定」裡把 webBindPort 也改成 ${port}，然後重啟 Anki。';
+      case 'anki_connect_port_auto_fix_none':
+        return '本機找不到空閒的連接埠。';
       default:
         return null;
     }
