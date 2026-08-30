@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 67898 (3994 per locale)
+/// Strings: 68272 (4016 per locale)
 ///
-/// Built on 2026-08-30 at 11:36 UTC
+/// Built on 2026-08-30 at 12:14 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5431,11 +5431,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String web_video_mine_switch_builtin({required Object count}) =>
       'Switch to built-in mode to create ${count} queued cards';
   String get onboarding_step_click_lookup_title => 'Tap to look up words';
-  String get onboarding_step_click_lookup_body =>
-      'Inside Fushi, books, OCR text in manga, and video subtitles all support direct lookup from the character you touch.';
   String get onboarding_click_lookup_tap_title => 'Tap the text';
-  String get onboarding_click_lookup_tap_body =>
-      'On a phone, tap a character. On a computer, left-click it. Fushi starts there and matches the longest word.';
   String get onboarding_click_lookup_nested_title =>
       'Keep exploring in the popup';
   String get onboarding_click_lookup_nested_body =>
@@ -5450,8 +5446,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'On Windows, select text in another app and summon the dictionary without switching back to Fushi.';
   String get onboarding_global_lookup_windows_select_title =>
       'Select text in any app';
-  String get onboarding_global_lookup_windows_select_body =>
-      'Highlight the word or phrase you want to look up and leave the selection active.';
   String get onboarding_global_lookup_windows_shortcut_title =>
       'Press Ctrl+Alt+D';
   String get onboarding_global_lookup_windows_shortcut_body =>
@@ -5468,8 +5462,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'On Android, the system passes selected text to Fushi through the text menu or Share sheet. There is no remappable global hotkey.';
   String get onboarding_global_lookup_android_select_title =>
       'Select text in another app';
-  String get onboarding_global_lookup_android_select_body =>
-      'Long-press text, then adjust the selection handles until they cover the word or phrase you want.';
   String get onboarding_global_lookup_android_open_title => 'Choose Fushi';
   String get onboarding_global_lookup_android_open_body =>
       'Tap Fushi in the text-selection menu. If it is hidden, tap Share and choose Fushi from the share sheet.';
@@ -5477,6 +5469,55 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Use the standalone popup';
   String get onboarding_global_lookup_android_continue_body =>
       'The lookup opens separately from the source app. You can tap more words inside it, then close it to return where you were.';
+  String get onboarding_feature_manual_resources =>
+      'Import dictionaries and audio manually';
+  String get onboarding_feature_manual_resources_hint =>
+      'Skip the pack; import your own dictionaries, audiobooks, and pronunciation sources';
+  String get onboarding_step_manual_resources_title =>
+      'Prepare dictionaries and audio manually';
+  String get onboarding_step_manual_resources_body =>
+      'Skip the recommended pack and prepare only what you need. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional.';
+  String get onboarding_manual_dictionary_action => 'Import a dictionary';
+  String get onboarding_manual_dictionary_action_desc =>
+      'Open dictionary management and import at least one supported dictionary file or archive. Lookup tutorials are useful only after a query returns a definition.';
+  String get onboarding_manual_audiobook_action =>
+      'Import a book with audiobook audio';
+  String get onboarding_manual_audiobook_action_desc =>
+      'Open book import and choose the book or text, aligned subtitles, and one or more audio files. Audio needs subtitles so Fushi can align it to sentences.';
+  String get onboarding_manual_pronunciation_action =>
+      'Configure word pronunciation audio';
+  String get onboarding_manual_pronunciation_action_desc =>
+      'Add local or online pronunciation sources used by dictionary entries. This is separate from audiobook audio attached to a book.';
+  String get onboarding_lookup_verify_action =>
+      'Verify a word in your dictionary';
+  String get onboarding_lookup_verify_action_desc =>
+      'Open lookup, enter any word you are learning, and continue only after the installed dictionary returns a definition. The tutorial does not hard-code a sample word.';
+  String get onboarding_step_first_anki_card_title =>
+      'Create your first Anki card';
+  String get onboarding_step_first_anki_card_body =>
+      'This step appears only after this onboarding session has connected to Anki and selected a usable deck and note type.';
+  String get onboarding_first_anki_lookup_title =>
+      'Start from a real dictionary result';
+  String get onboarding_first_anki_lookup_body =>
+      'Look up a word that your installed dictionary actually defines. There is no fixed tutorial word that might be absent from your dictionary.';
+  String get onboarding_first_anki_plus_title =>
+      'Tap the plus button on the entry';
+  String get onboarding_first_anki_plus_body =>
+      'The plus button opens the card creator with the current word, reading, meaning, sentence, audio, and available image context.';
+  String get onboarding_first_anki_save_title => 'Review and save';
+  String get onboarding_first_anki_save_body =>
+      'Confirm the target deck, note type, and field preview, then save. Open Anki to verify that the first card arrived.';
+  String get onboarding_first_anki_action => 'Open lookup and create a card';
+  String get onboarding_first_anki_action_desc =>
+      'Use a word with a visible definition, tap its plus button, review the fields, and save it to the connected Anki deck.';
+  String get onboarding_step_click_lookup_body =>
+      'First verify a word that your installed dictionary actually defines. Then use that same word to practise direct lookup in books, manga OCR text, and video subtitles.';
+  String get onboarding_click_lookup_tap_body =>
+      'On a phone, tap a character in the verified word. On a computer, left-click it. Fushi starts there and matches the longest word.';
+  String get onboarding_global_lookup_windows_select_body =>
+      'Highlight the same word you already verified has a dictionary definition, and leave the selection active.';
+  String get onboarding_global_lookup_android_select_body =>
+      'Long-press the same word you already verified has a dictionary definition, then adjust the selection handles to cover it.';
 }
 
 // Path: <root>
@@ -14704,13 +14745,7 @@ class _StringsAr extends _StringsEn {
   @override
   String get onboarding_step_click_lookup_title => 'Tap to look up words';
   @override
-  String get onboarding_step_click_lookup_body =>
-      'Inside Fushi, books, OCR text in manga, and video subtitles all support direct lookup from the character you touch.';
-  @override
   String get onboarding_click_lookup_tap_title => 'Tap the text';
-  @override
-  String get onboarding_click_lookup_tap_body =>
-      'On a phone, tap a character. On a computer, left-click it. Fushi starts there and matches the longest word.';
   @override
   String get onboarding_click_lookup_nested_title =>
       'Keep exploring in the popup';
@@ -14732,9 +14767,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get onboarding_global_lookup_windows_select_title =>
       'Select text in any app';
-  @override
-  String get onboarding_global_lookup_windows_select_body =>
-      'Highlight the word or phrase you want to look up and leave the selection active.';
   @override
   String get onboarding_global_lookup_windows_shortcut_title =>
       'Press Ctrl+Alt+D';
@@ -14760,9 +14792,6 @@ class _StringsAr extends _StringsEn {
   String get onboarding_global_lookup_android_select_title =>
       'Select text in another app';
   @override
-  String get onboarding_global_lookup_android_select_body =>
-      'Long-press text, then adjust the selection handles until they cover the word or phrase you want.';
-  @override
   String get onboarding_global_lookup_android_open_title => 'Choose Fushi';
   @override
   String get onboarding_global_lookup_android_open_body =>
@@ -14773,6 +14802,81 @@ class _StringsAr extends _StringsEn {
   @override
   String get onboarding_global_lookup_android_continue_body =>
       'The lookup opens separately from the source app. You can tap more words inside it, then close it to return where you were.';
+  @override
+  String get onboarding_feature_manual_resources =>
+      'Import dictionaries and audio manually';
+  @override
+  String get onboarding_feature_manual_resources_hint =>
+      'Skip the pack; import your own dictionaries, audiobooks, and pronunciation sources';
+  @override
+  String get onboarding_step_manual_resources_title =>
+      'Prepare dictionaries and audio manually';
+  @override
+  String get onboarding_step_manual_resources_body =>
+      'Skip the recommended pack and prepare only what you need. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional.';
+  @override
+  String get onboarding_manual_dictionary_action => 'Import a dictionary';
+  @override
+  String get onboarding_manual_dictionary_action_desc =>
+      'Open dictionary management and import at least one supported dictionary file or archive. Lookup tutorials are useful only after a query returns a definition.';
+  @override
+  String get onboarding_manual_audiobook_action =>
+      'Import a book with audiobook audio';
+  @override
+  String get onboarding_manual_audiobook_action_desc =>
+      'Open book import and choose the book or text, aligned subtitles, and one or more audio files. Audio needs subtitles so Fushi can align it to sentences.';
+  @override
+  String get onboarding_manual_pronunciation_action =>
+      'Configure word pronunciation audio';
+  @override
+  String get onboarding_manual_pronunciation_action_desc =>
+      'Add local or online pronunciation sources used by dictionary entries. This is separate from audiobook audio attached to a book.';
+  @override
+  String get onboarding_lookup_verify_action =>
+      'Verify a word in your dictionary';
+  @override
+  String get onboarding_lookup_verify_action_desc =>
+      'Open lookup, enter any word you are learning, and continue only after the installed dictionary returns a definition. The tutorial does not hard-code a sample word.';
+  @override
+  String get onboarding_step_first_anki_card_title =>
+      'Create your first Anki card';
+  @override
+  String get onboarding_step_first_anki_card_body =>
+      'This step appears only after this onboarding session has connected to Anki and selected a usable deck and note type.';
+  @override
+  String get onboarding_first_anki_lookup_title =>
+      'Start from a real dictionary result';
+  @override
+  String get onboarding_first_anki_lookup_body =>
+      'Look up a word that your installed dictionary actually defines. There is no fixed tutorial word that might be absent from your dictionary.';
+  @override
+  String get onboarding_first_anki_plus_title =>
+      'Tap the plus button on the entry';
+  @override
+  String get onboarding_first_anki_plus_body =>
+      'The plus button opens the card creator with the current word, reading, meaning, sentence, audio, and available image context.';
+  @override
+  String get onboarding_first_anki_save_title => 'Review and save';
+  @override
+  String get onboarding_first_anki_save_body =>
+      'Confirm the target deck, note type, and field preview, then save. Open Anki to verify that the first card arrived.';
+  @override
+  String get onboarding_first_anki_action => 'Open lookup and create a card';
+  @override
+  String get onboarding_first_anki_action_desc =>
+      'Use a word with a visible definition, tap its plus button, review the fields, and save it to the connected Anki deck.';
+  @override
+  String get onboarding_step_click_lookup_body =>
+      'First verify a word that your installed dictionary actually defines. Then use that same word to practise direct lookup in books, manga OCR text, and video subtitles.';
+  @override
+  String get onboarding_click_lookup_tap_body =>
+      'On a phone, tap a character in the verified word. On a computer, left-click it. Fushi starts there and matches the longest word.';
+  @override
+  String get onboarding_global_lookup_windows_select_body =>
+      'Highlight the same word you already verified has a dictionary definition, and leave the selection active.';
+  @override
+  String get onboarding_global_lookup_android_select_body =>
+      'Long-press the same word you already verified has a dictionary definition, then adjust the selection handles to cover it.';
 }
 
 // Path: <root>
@@ -24215,13 +24319,7 @@ class _StringsDe extends _StringsEn {
   @override
   String get onboarding_step_click_lookup_title => 'Tap to look up words';
   @override
-  String get onboarding_step_click_lookup_body =>
-      'Inside Fushi, books, OCR text in manga, and video subtitles all support direct lookup from the character you touch.';
-  @override
   String get onboarding_click_lookup_tap_title => 'Tap the text';
-  @override
-  String get onboarding_click_lookup_tap_body =>
-      'On a phone, tap a character. On a computer, left-click it. Fushi starts there and matches the longest word.';
   @override
   String get onboarding_click_lookup_nested_title =>
       'Keep exploring in the popup';
@@ -24243,9 +24341,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get onboarding_global_lookup_windows_select_title =>
       'Select text in any app';
-  @override
-  String get onboarding_global_lookup_windows_select_body =>
-      'Highlight the word or phrase you want to look up and leave the selection active.';
   @override
   String get onboarding_global_lookup_windows_shortcut_title =>
       'Press Ctrl+Alt+D';
@@ -24271,9 +24366,6 @@ class _StringsDe extends _StringsEn {
   String get onboarding_global_lookup_android_select_title =>
       'Select text in another app';
   @override
-  String get onboarding_global_lookup_android_select_body =>
-      'Long-press text, then adjust the selection handles until they cover the word or phrase you want.';
-  @override
   String get onboarding_global_lookup_android_open_title => 'Choose Fushi';
   @override
   String get onboarding_global_lookup_android_open_body =>
@@ -24284,6 +24376,81 @@ class _StringsDe extends _StringsEn {
   @override
   String get onboarding_global_lookup_android_continue_body =>
       'The lookup opens separately from the source app. You can tap more words inside it, then close it to return where you were.';
+  @override
+  String get onboarding_feature_manual_resources =>
+      'Import dictionaries and audio manually';
+  @override
+  String get onboarding_feature_manual_resources_hint =>
+      'Skip the pack; import your own dictionaries, audiobooks, and pronunciation sources';
+  @override
+  String get onboarding_step_manual_resources_title =>
+      'Prepare dictionaries and audio manually';
+  @override
+  String get onboarding_step_manual_resources_body =>
+      'Skip the recommended pack and prepare only what you need. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional.';
+  @override
+  String get onboarding_manual_dictionary_action => 'Import a dictionary';
+  @override
+  String get onboarding_manual_dictionary_action_desc =>
+      'Open dictionary management and import at least one supported dictionary file or archive. Lookup tutorials are useful only after a query returns a definition.';
+  @override
+  String get onboarding_manual_audiobook_action =>
+      'Import a book with audiobook audio';
+  @override
+  String get onboarding_manual_audiobook_action_desc =>
+      'Open book import and choose the book or text, aligned subtitles, and one or more audio files. Audio needs subtitles so Fushi can align it to sentences.';
+  @override
+  String get onboarding_manual_pronunciation_action =>
+      'Configure word pronunciation audio';
+  @override
+  String get onboarding_manual_pronunciation_action_desc =>
+      'Add local or online pronunciation sources used by dictionary entries. This is separate from audiobook audio attached to a book.';
+  @override
+  String get onboarding_lookup_verify_action =>
+      'Verify a word in your dictionary';
+  @override
+  String get onboarding_lookup_verify_action_desc =>
+      'Open lookup, enter any word you are learning, and continue only after the installed dictionary returns a definition. The tutorial does not hard-code a sample word.';
+  @override
+  String get onboarding_step_first_anki_card_title =>
+      'Create your first Anki card';
+  @override
+  String get onboarding_step_first_anki_card_body =>
+      'This step appears only after this onboarding session has connected to Anki and selected a usable deck and note type.';
+  @override
+  String get onboarding_first_anki_lookup_title =>
+      'Start from a real dictionary result';
+  @override
+  String get onboarding_first_anki_lookup_body =>
+      'Look up a word that your installed dictionary actually defines. There is no fixed tutorial word that might be absent from your dictionary.';
+  @override
+  String get onboarding_first_anki_plus_title =>
+      'Tap the plus button on the entry';
+  @override
+  String get onboarding_first_anki_plus_body =>
+      'The plus button opens the card creator with the current word, reading, meaning, sentence, audio, and available image context.';
+  @override
+  String get onboarding_first_anki_save_title => 'Review and save';
+  @override
+  String get onboarding_first_anki_save_body =>
+      'Confirm the target deck, note type, and field preview, then save. Open Anki to verify that the first card arrived.';
+  @override
+  String get onboarding_first_anki_action => 'Open lookup and create a card';
+  @override
+  String get onboarding_first_anki_action_desc =>
+      'Use a word with a visible definition, tap its plus button, review the fields, and save it to the connected Anki deck.';
+  @override
+  String get onboarding_step_click_lookup_body =>
+      'First verify a word that your installed dictionary actually defines. Then use that same word to practise direct lookup in books, manga OCR text, and video subtitles.';
+  @override
+  String get onboarding_click_lookup_tap_body =>
+      'On a phone, tap a character in the verified word. On a computer, left-click it. Fushi starts there and matches the longest word.';
+  @override
+  String get onboarding_global_lookup_windows_select_body =>
+      'Highlight the same word you already verified has a dictionary definition, and leave the selection active.';
+  @override
+  String get onboarding_global_lookup_android_select_body =>
+      'Long-press the same word you already verified has a dictionary definition, then adjust the selection handles to cover it.';
 }
 
 // Path: <root>
@@ -33772,13 +33939,7 @@ class _StringsEs extends _StringsEn {
   @override
   String get onboarding_step_click_lookup_title => 'Tap to look up words';
   @override
-  String get onboarding_step_click_lookup_body =>
-      'Inside Fushi, books, OCR text in manga, and video subtitles all support direct lookup from the character you touch.';
-  @override
   String get onboarding_click_lookup_tap_title => 'Tap the text';
-  @override
-  String get onboarding_click_lookup_tap_body =>
-      'On a phone, tap a character. On a computer, left-click it. Fushi starts there and matches the longest word.';
   @override
   String get onboarding_click_lookup_nested_title =>
       'Keep exploring in the popup';
@@ -33800,9 +33961,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get onboarding_global_lookup_windows_select_title =>
       'Select text in any app';
-  @override
-  String get onboarding_global_lookup_windows_select_body =>
-      'Highlight the word or phrase you want to look up and leave the selection active.';
   @override
   String get onboarding_global_lookup_windows_shortcut_title =>
       'Press Ctrl+Alt+D';
@@ -33828,9 +33986,6 @@ class _StringsEs extends _StringsEn {
   String get onboarding_global_lookup_android_select_title =>
       'Select text in another app';
   @override
-  String get onboarding_global_lookup_android_select_body =>
-      'Long-press text, then adjust the selection handles until they cover the word or phrase you want.';
-  @override
   String get onboarding_global_lookup_android_open_title => 'Choose Fushi';
   @override
   String get onboarding_global_lookup_android_open_body =>
@@ -33841,6 +33996,81 @@ class _StringsEs extends _StringsEn {
   @override
   String get onboarding_global_lookup_android_continue_body =>
       'The lookup opens separately from the source app. You can tap more words inside it, then close it to return where you were.';
+  @override
+  String get onboarding_feature_manual_resources =>
+      'Import dictionaries and audio manually';
+  @override
+  String get onboarding_feature_manual_resources_hint =>
+      'Skip the pack; import your own dictionaries, audiobooks, and pronunciation sources';
+  @override
+  String get onboarding_step_manual_resources_title =>
+      'Prepare dictionaries and audio manually';
+  @override
+  String get onboarding_step_manual_resources_body =>
+      'Skip the recommended pack and prepare only what you need. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional.';
+  @override
+  String get onboarding_manual_dictionary_action => 'Import a dictionary';
+  @override
+  String get onboarding_manual_dictionary_action_desc =>
+      'Open dictionary management and import at least one supported dictionary file or archive. Lookup tutorials are useful only after a query returns a definition.';
+  @override
+  String get onboarding_manual_audiobook_action =>
+      'Import a book with audiobook audio';
+  @override
+  String get onboarding_manual_audiobook_action_desc =>
+      'Open book import and choose the book or text, aligned subtitles, and one or more audio files. Audio needs subtitles so Fushi can align it to sentences.';
+  @override
+  String get onboarding_manual_pronunciation_action =>
+      'Configure word pronunciation audio';
+  @override
+  String get onboarding_manual_pronunciation_action_desc =>
+      'Add local or online pronunciation sources used by dictionary entries. This is separate from audiobook audio attached to a book.';
+  @override
+  String get onboarding_lookup_verify_action =>
+      'Verify a word in your dictionary';
+  @override
+  String get onboarding_lookup_verify_action_desc =>
+      'Open lookup, enter any word you are learning, and continue only after the installed dictionary returns a definition. The tutorial does not hard-code a sample word.';
+  @override
+  String get onboarding_step_first_anki_card_title =>
+      'Create your first Anki card';
+  @override
+  String get onboarding_step_first_anki_card_body =>
+      'This step appears only after this onboarding session has connected to Anki and selected a usable deck and note type.';
+  @override
+  String get onboarding_first_anki_lookup_title =>
+      'Start from a real dictionary result';
+  @override
+  String get onboarding_first_anki_lookup_body =>
+      'Look up a word that your installed dictionary actually defines. There is no fixed tutorial word that might be absent from your dictionary.';
+  @override
+  String get onboarding_first_anki_plus_title =>
+      'Tap the plus button on the entry';
+  @override
+  String get onboarding_first_anki_plus_body =>
+      'The plus button opens the card creator with the current word, reading, meaning, sentence, audio, and available image context.';
+  @override
+  String get onboarding_first_anki_save_title => 'Review and save';
+  @override
+  String get onboarding_first_anki_save_body =>
+      'Confirm the target deck, note type, and field preview, then save. Open Anki to verify that the first card arrived.';
+  @override
+  String get onboarding_first_anki_action => 'Open lookup and create a card';
+  @override
+  String get onboarding_first_anki_action_desc =>
+      'Use a word with a visible definition, tap its plus button, review the fields, and save it to the connected Anki deck.';
+  @override
+  String get onboarding_step_click_lookup_body =>
+      'First verify a word that your installed dictionary actually defines. Then use that same word to practise direct lookup in books, manga OCR text, and video subtitles.';
+  @override
+  String get onboarding_click_lookup_tap_body =>
+      'On a phone, tap a character in the verified word. On a computer, left-click it. Fushi starts there and matches the longest word.';
+  @override
+  String get onboarding_global_lookup_windows_select_body =>
+      'Highlight the same word you already verified has a dictionary definition, and leave the selection active.';
+  @override
+  String get onboarding_global_lookup_android_select_body =>
+      'Long-press the same word you already verified has a dictionary definition, then adjust the selection handles to cover it.';
 }
 
 // Path: <root>
@@ -43363,13 +43593,7 @@ class _StringsFr extends _StringsEn {
   @override
   String get onboarding_step_click_lookup_title => 'Tap to look up words';
   @override
-  String get onboarding_step_click_lookup_body =>
-      'Inside Fushi, books, OCR text in manga, and video subtitles all support direct lookup from the character you touch.';
-  @override
   String get onboarding_click_lookup_tap_title => 'Tap the text';
-  @override
-  String get onboarding_click_lookup_tap_body =>
-      'On a phone, tap a character. On a computer, left-click it. Fushi starts there and matches the longest word.';
   @override
   String get onboarding_click_lookup_nested_title =>
       'Keep exploring in the popup';
@@ -43391,9 +43615,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get onboarding_global_lookup_windows_select_title =>
       'Select text in any app';
-  @override
-  String get onboarding_global_lookup_windows_select_body =>
-      'Highlight the word or phrase you want to look up and leave the selection active.';
   @override
   String get onboarding_global_lookup_windows_shortcut_title =>
       'Press Ctrl+Alt+D';
@@ -43419,9 +43640,6 @@ class _StringsFr extends _StringsEn {
   String get onboarding_global_lookup_android_select_title =>
       'Select text in another app';
   @override
-  String get onboarding_global_lookup_android_select_body =>
-      'Long-press text, then adjust the selection handles until they cover the word or phrase you want.';
-  @override
   String get onboarding_global_lookup_android_open_title => 'Choose Fushi';
   @override
   String get onboarding_global_lookup_android_open_body =>
@@ -43432,6 +43650,81 @@ class _StringsFr extends _StringsEn {
   @override
   String get onboarding_global_lookup_android_continue_body =>
       'The lookup opens separately from the source app. You can tap more words inside it, then close it to return where you were.';
+  @override
+  String get onboarding_feature_manual_resources =>
+      'Import dictionaries and audio manually';
+  @override
+  String get onboarding_feature_manual_resources_hint =>
+      'Skip the pack; import your own dictionaries, audiobooks, and pronunciation sources';
+  @override
+  String get onboarding_step_manual_resources_title =>
+      'Prepare dictionaries and audio manually';
+  @override
+  String get onboarding_step_manual_resources_body =>
+      'Skip the recommended pack and prepare only what you need. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional.';
+  @override
+  String get onboarding_manual_dictionary_action => 'Import a dictionary';
+  @override
+  String get onboarding_manual_dictionary_action_desc =>
+      'Open dictionary management and import at least one supported dictionary file or archive. Lookup tutorials are useful only after a query returns a definition.';
+  @override
+  String get onboarding_manual_audiobook_action =>
+      'Import a book with audiobook audio';
+  @override
+  String get onboarding_manual_audiobook_action_desc =>
+      'Open book import and choose the book or text, aligned subtitles, and one or more audio files. Audio needs subtitles so Fushi can align it to sentences.';
+  @override
+  String get onboarding_manual_pronunciation_action =>
+      'Configure word pronunciation audio';
+  @override
+  String get onboarding_manual_pronunciation_action_desc =>
+      'Add local or online pronunciation sources used by dictionary entries. This is separate from audiobook audio attached to a book.';
+  @override
+  String get onboarding_lookup_verify_action =>
+      'Verify a word in your dictionary';
+  @override
+  String get onboarding_lookup_verify_action_desc =>
+      'Open lookup, enter any word you are learning, and continue only after the installed dictionary returns a definition. The tutorial does not hard-code a sample word.';
+  @override
+  String get onboarding_step_first_anki_card_title =>
+      'Create your first Anki card';
+  @override
+  String get onboarding_step_first_anki_card_body =>
+      'This step appears only after this onboarding session has connected to Anki and selected a usable deck and note type.';
+  @override
+  String get onboarding_first_anki_lookup_title =>
+      'Start from a real dictionary result';
+  @override
+  String get onboarding_first_anki_lookup_body =>
+      'Look up a word that your installed dictionary actually defines. There is no fixed tutorial word that might be absent from your dictionary.';
+  @override
+  String get onboarding_first_anki_plus_title =>
+      'Tap the plus button on the entry';
+  @override
+  String get onboarding_first_anki_plus_body =>
+      'The plus button opens the card creator with the current word, reading, meaning, sentence, audio, and available image context.';
+  @override
+  String get onboarding_first_anki_save_title => 'Review and save';
+  @override
+  String get onboarding_first_anki_save_body =>
+      'Confirm the target deck, note type, and field preview, then save. Open Anki to verify that the first card arrived.';
+  @override
+  String get onboarding_first_anki_action => 'Open lookup and create a card';
+  @override
+  String get onboarding_first_anki_action_desc =>
+      'Use a word with a visible definition, tap its plus button, review the fields, and save it to the connected Anki deck.';
+  @override
+  String get onboarding_step_click_lookup_body =>
+      'First verify a word that your installed dictionary actually defines. Then use that same word to practise direct lookup in books, manga OCR text, and video subtitles.';
+  @override
+  String get onboarding_click_lookup_tap_body =>
+      'On a phone, tap a character in the verified word. On a computer, left-click it. Fushi starts there and matches the longest word.';
+  @override
+  String get onboarding_global_lookup_windows_select_body =>
+      'Highlight the same word you already verified has a dictionary definition, and leave the selection active.';
+  @override
+  String get onboarding_global_lookup_android_select_body =>
+      'Long-press the same word you already verified has a dictionary definition, then adjust the selection handles to cover it.';
 }
 
 // Path: <root>
@@ -52776,13 +53069,7 @@ class _StringsId extends _StringsEn {
   @override
   String get onboarding_step_click_lookup_title => 'Tap to look up words';
   @override
-  String get onboarding_step_click_lookup_body =>
-      'Inside Fushi, books, OCR text in manga, and video subtitles all support direct lookup from the character you touch.';
-  @override
   String get onboarding_click_lookup_tap_title => 'Tap the text';
-  @override
-  String get onboarding_click_lookup_tap_body =>
-      'On a phone, tap a character. On a computer, left-click it. Fushi starts there and matches the longest word.';
   @override
   String get onboarding_click_lookup_nested_title =>
       'Keep exploring in the popup';
@@ -52804,9 +53091,6 @@ class _StringsId extends _StringsEn {
   @override
   String get onboarding_global_lookup_windows_select_title =>
       'Select text in any app';
-  @override
-  String get onboarding_global_lookup_windows_select_body =>
-      'Highlight the word or phrase you want to look up and leave the selection active.';
   @override
   String get onboarding_global_lookup_windows_shortcut_title =>
       'Press Ctrl+Alt+D';
@@ -52832,9 +53116,6 @@ class _StringsId extends _StringsEn {
   String get onboarding_global_lookup_android_select_title =>
       'Select text in another app';
   @override
-  String get onboarding_global_lookup_android_select_body =>
-      'Long-press text, then adjust the selection handles until they cover the word or phrase you want.';
-  @override
   String get onboarding_global_lookup_android_open_title => 'Choose Fushi';
   @override
   String get onboarding_global_lookup_android_open_body =>
@@ -52845,6 +53126,81 @@ class _StringsId extends _StringsEn {
   @override
   String get onboarding_global_lookup_android_continue_body =>
       'The lookup opens separately from the source app. You can tap more words inside it, then close it to return where you were.';
+  @override
+  String get onboarding_feature_manual_resources =>
+      'Import dictionaries and audio manually';
+  @override
+  String get onboarding_feature_manual_resources_hint =>
+      'Skip the pack; import your own dictionaries, audiobooks, and pronunciation sources';
+  @override
+  String get onboarding_step_manual_resources_title =>
+      'Prepare dictionaries and audio manually';
+  @override
+  String get onboarding_step_manual_resources_body =>
+      'Skip the recommended pack and prepare only what you need. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional.';
+  @override
+  String get onboarding_manual_dictionary_action => 'Import a dictionary';
+  @override
+  String get onboarding_manual_dictionary_action_desc =>
+      'Open dictionary management and import at least one supported dictionary file or archive. Lookup tutorials are useful only after a query returns a definition.';
+  @override
+  String get onboarding_manual_audiobook_action =>
+      'Import a book with audiobook audio';
+  @override
+  String get onboarding_manual_audiobook_action_desc =>
+      'Open book import and choose the book or text, aligned subtitles, and one or more audio files. Audio needs subtitles so Fushi can align it to sentences.';
+  @override
+  String get onboarding_manual_pronunciation_action =>
+      'Configure word pronunciation audio';
+  @override
+  String get onboarding_manual_pronunciation_action_desc =>
+      'Add local or online pronunciation sources used by dictionary entries. This is separate from audiobook audio attached to a book.';
+  @override
+  String get onboarding_lookup_verify_action =>
+      'Verify a word in your dictionary';
+  @override
+  String get onboarding_lookup_verify_action_desc =>
+      'Open lookup, enter any word you are learning, and continue only after the installed dictionary returns a definition. The tutorial does not hard-code a sample word.';
+  @override
+  String get onboarding_step_first_anki_card_title =>
+      'Create your first Anki card';
+  @override
+  String get onboarding_step_first_anki_card_body =>
+      'This step appears only after this onboarding session has connected to Anki and selected a usable deck and note type.';
+  @override
+  String get onboarding_first_anki_lookup_title =>
+      'Start from a real dictionary result';
+  @override
+  String get onboarding_first_anki_lookup_body =>
+      'Look up a word that your installed dictionary actually defines. There is no fixed tutorial word that might be absent from your dictionary.';
+  @override
+  String get onboarding_first_anki_plus_title =>
+      'Tap the plus button on the entry';
+  @override
+  String get onboarding_first_anki_plus_body =>
+      'The plus button opens the card creator with the current word, reading, meaning, sentence, audio, and available image context.';
+  @override
+  String get onboarding_first_anki_save_title => 'Review and save';
+  @override
+  String get onboarding_first_anki_save_body =>
+      'Confirm the target deck, note type, and field preview, then save. Open Anki to verify that the first card arrived.';
+  @override
+  String get onboarding_first_anki_action => 'Open lookup and create a card';
+  @override
+  String get onboarding_first_anki_action_desc =>
+      'Use a word with a visible definition, tap its plus button, review the fields, and save it to the connected Anki deck.';
+  @override
+  String get onboarding_step_click_lookup_body =>
+      'First verify a word that your installed dictionary actually defines. Then use that same word to practise direct lookup in books, manga OCR text, and video subtitles.';
+  @override
+  String get onboarding_click_lookup_tap_body =>
+      'On a phone, tap a character in the verified word. On a computer, left-click it. Fushi starts there and matches the longest word.';
+  @override
+  String get onboarding_global_lookup_windows_select_body =>
+      'Highlight the same word you already verified has a dictionary definition, and leave the selection active.';
+  @override
+  String get onboarding_global_lookup_android_select_body =>
+      'Long-press the same word you already verified has a dictionary definition, then adjust the selection handles to cover it.';
 }
 
 // Path: <root>
@@ -62271,13 +62627,7 @@ class _StringsIt extends _StringsEn {
   @override
   String get onboarding_step_click_lookup_title => 'Tap to look up words';
   @override
-  String get onboarding_step_click_lookup_body =>
-      'Inside Fushi, books, OCR text in manga, and video subtitles all support direct lookup from the character you touch.';
-  @override
   String get onboarding_click_lookup_tap_title => 'Tap the text';
-  @override
-  String get onboarding_click_lookup_tap_body =>
-      'On a phone, tap a character. On a computer, left-click it. Fushi starts there and matches the longest word.';
   @override
   String get onboarding_click_lookup_nested_title =>
       'Keep exploring in the popup';
@@ -62299,9 +62649,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get onboarding_global_lookup_windows_select_title =>
       'Select text in any app';
-  @override
-  String get onboarding_global_lookup_windows_select_body =>
-      'Highlight the word or phrase you want to look up and leave the selection active.';
   @override
   String get onboarding_global_lookup_windows_shortcut_title =>
       'Press Ctrl+Alt+D';
@@ -62327,9 +62674,6 @@ class _StringsIt extends _StringsEn {
   String get onboarding_global_lookup_android_select_title =>
       'Select text in another app';
   @override
-  String get onboarding_global_lookup_android_select_body =>
-      'Long-press text, then adjust the selection handles until they cover the word or phrase you want.';
-  @override
   String get onboarding_global_lookup_android_open_title => 'Choose Fushi';
   @override
   String get onboarding_global_lookup_android_open_body =>
@@ -62340,6 +62684,81 @@ class _StringsIt extends _StringsEn {
   @override
   String get onboarding_global_lookup_android_continue_body =>
       'The lookup opens separately from the source app. You can tap more words inside it, then close it to return where you were.';
+  @override
+  String get onboarding_feature_manual_resources =>
+      'Import dictionaries and audio manually';
+  @override
+  String get onboarding_feature_manual_resources_hint =>
+      'Skip the pack; import your own dictionaries, audiobooks, and pronunciation sources';
+  @override
+  String get onboarding_step_manual_resources_title =>
+      'Prepare dictionaries and audio manually';
+  @override
+  String get onboarding_step_manual_resources_body =>
+      'Skip the recommended pack and prepare only what you need. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional.';
+  @override
+  String get onboarding_manual_dictionary_action => 'Import a dictionary';
+  @override
+  String get onboarding_manual_dictionary_action_desc =>
+      'Open dictionary management and import at least one supported dictionary file or archive. Lookup tutorials are useful only after a query returns a definition.';
+  @override
+  String get onboarding_manual_audiobook_action =>
+      'Import a book with audiobook audio';
+  @override
+  String get onboarding_manual_audiobook_action_desc =>
+      'Open book import and choose the book or text, aligned subtitles, and one or more audio files. Audio needs subtitles so Fushi can align it to sentences.';
+  @override
+  String get onboarding_manual_pronunciation_action =>
+      'Configure word pronunciation audio';
+  @override
+  String get onboarding_manual_pronunciation_action_desc =>
+      'Add local or online pronunciation sources used by dictionary entries. This is separate from audiobook audio attached to a book.';
+  @override
+  String get onboarding_lookup_verify_action =>
+      'Verify a word in your dictionary';
+  @override
+  String get onboarding_lookup_verify_action_desc =>
+      'Open lookup, enter any word you are learning, and continue only after the installed dictionary returns a definition. The tutorial does not hard-code a sample word.';
+  @override
+  String get onboarding_step_first_anki_card_title =>
+      'Create your first Anki card';
+  @override
+  String get onboarding_step_first_anki_card_body =>
+      'This step appears only after this onboarding session has connected to Anki and selected a usable deck and note type.';
+  @override
+  String get onboarding_first_anki_lookup_title =>
+      'Start from a real dictionary result';
+  @override
+  String get onboarding_first_anki_lookup_body =>
+      'Look up a word that your installed dictionary actually defines. There is no fixed tutorial word that might be absent from your dictionary.';
+  @override
+  String get onboarding_first_anki_plus_title =>
+      'Tap the plus button on the entry';
+  @override
+  String get onboarding_first_anki_plus_body =>
+      'The plus button opens the card creator with the current word, reading, meaning, sentence, audio, and available image context.';
+  @override
+  String get onboarding_first_anki_save_title => 'Review and save';
+  @override
+  String get onboarding_first_anki_save_body =>
+      'Confirm the target deck, note type, and field preview, then save. Open Anki to verify that the first card arrived.';
+  @override
+  String get onboarding_first_anki_action => 'Open lookup and create a card';
+  @override
+  String get onboarding_first_anki_action_desc =>
+      'Use a word with a visible definition, tap its plus button, review the fields, and save it to the connected Anki deck.';
+  @override
+  String get onboarding_step_click_lookup_body =>
+      'First verify a word that your installed dictionary actually defines. Then use that same word to practise direct lookup in books, manga OCR text, and video subtitles.';
+  @override
+  String get onboarding_click_lookup_tap_body =>
+      'On a phone, tap a character in the verified word. On a computer, left-click it. Fushi starts there and matches the longest word.';
+  @override
+  String get onboarding_global_lookup_windows_select_body =>
+      'Highlight the same word you already verified has a dictionary definition, and leave the selection active.';
+  @override
+  String get onboarding_global_lookup_android_select_body =>
+      'Long-press the same word you already verified has a dictionary definition, then adjust the selection handles to cover it.';
 }
 
 // Path: <root>
@@ -71191,13 +71610,7 @@ class _StringsJa extends _StringsEn {
   @override
   String get onboarding_step_click_lookup_title => 'Tap to look up words';
   @override
-  String get onboarding_step_click_lookup_body =>
-      'Inside Fushi, books, OCR text in manga, and video subtitles all support direct lookup from the character you touch.';
-  @override
   String get onboarding_click_lookup_tap_title => 'Tap the text';
-  @override
-  String get onboarding_click_lookup_tap_body =>
-      'On a phone, tap a character. On a computer, left-click it. Fushi starts there and matches the longest word.';
   @override
   String get onboarding_click_lookup_nested_title =>
       'Keep exploring in the popup';
@@ -71219,9 +71632,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get onboarding_global_lookup_windows_select_title =>
       'Select text in any app';
-  @override
-  String get onboarding_global_lookup_windows_select_body =>
-      'Highlight the word or phrase you want to look up and leave the selection active.';
   @override
   String get onboarding_global_lookup_windows_shortcut_title =>
       'Press Ctrl+Alt+D';
@@ -71247,9 +71657,6 @@ class _StringsJa extends _StringsEn {
   String get onboarding_global_lookup_android_select_title =>
       'Select text in another app';
   @override
-  String get onboarding_global_lookup_android_select_body =>
-      'Long-press text, then adjust the selection handles until they cover the word or phrase you want.';
-  @override
   String get onboarding_global_lookup_android_open_title => 'Choose Fushi';
   @override
   String get onboarding_global_lookup_android_open_body =>
@@ -71260,6 +71667,81 @@ class _StringsJa extends _StringsEn {
   @override
   String get onboarding_global_lookup_android_continue_body =>
       'The lookup opens separately from the source app. You can tap more words inside it, then close it to return where you were.';
+  @override
+  String get onboarding_feature_manual_resources =>
+      'Import dictionaries and audio manually';
+  @override
+  String get onboarding_feature_manual_resources_hint =>
+      'Skip the pack; import your own dictionaries, audiobooks, and pronunciation sources';
+  @override
+  String get onboarding_step_manual_resources_title =>
+      'Prepare dictionaries and audio manually';
+  @override
+  String get onboarding_step_manual_resources_body =>
+      'Skip the recommended pack and prepare only what you need. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional.';
+  @override
+  String get onboarding_manual_dictionary_action => 'Import a dictionary';
+  @override
+  String get onboarding_manual_dictionary_action_desc =>
+      'Open dictionary management and import at least one supported dictionary file or archive. Lookup tutorials are useful only after a query returns a definition.';
+  @override
+  String get onboarding_manual_audiobook_action =>
+      'Import a book with audiobook audio';
+  @override
+  String get onboarding_manual_audiobook_action_desc =>
+      'Open book import and choose the book or text, aligned subtitles, and one or more audio files. Audio needs subtitles so Fushi can align it to sentences.';
+  @override
+  String get onboarding_manual_pronunciation_action =>
+      'Configure word pronunciation audio';
+  @override
+  String get onboarding_manual_pronunciation_action_desc =>
+      'Add local or online pronunciation sources used by dictionary entries. This is separate from audiobook audio attached to a book.';
+  @override
+  String get onboarding_lookup_verify_action =>
+      'Verify a word in your dictionary';
+  @override
+  String get onboarding_lookup_verify_action_desc =>
+      'Open lookup, enter any word you are learning, and continue only after the installed dictionary returns a definition. The tutorial does not hard-code a sample word.';
+  @override
+  String get onboarding_step_first_anki_card_title =>
+      'Create your first Anki card';
+  @override
+  String get onboarding_step_first_anki_card_body =>
+      'This step appears only after this onboarding session has connected to Anki and selected a usable deck and note type.';
+  @override
+  String get onboarding_first_anki_lookup_title =>
+      'Start from a real dictionary result';
+  @override
+  String get onboarding_first_anki_lookup_body =>
+      'Look up a word that your installed dictionary actually defines. There is no fixed tutorial word that might be absent from your dictionary.';
+  @override
+  String get onboarding_first_anki_plus_title =>
+      'Tap the plus button on the entry';
+  @override
+  String get onboarding_first_anki_plus_body =>
+      'The plus button opens the card creator with the current word, reading, meaning, sentence, audio, and available image context.';
+  @override
+  String get onboarding_first_anki_save_title => 'Review and save';
+  @override
+  String get onboarding_first_anki_save_body =>
+      'Confirm the target deck, note type, and field preview, then save. Open Anki to verify that the first card arrived.';
+  @override
+  String get onboarding_first_anki_action => 'Open lookup and create a card';
+  @override
+  String get onboarding_first_anki_action_desc =>
+      'Use a word with a visible definition, tap its plus button, review the fields, and save it to the connected Anki deck.';
+  @override
+  String get onboarding_step_click_lookup_body =>
+      'First verify a word that your installed dictionary actually defines. Then use that same word to practise direct lookup in books, manga OCR text, and video subtitles.';
+  @override
+  String get onboarding_click_lookup_tap_body =>
+      'On a phone, tap a character in the verified word. On a computer, left-click it. Fushi starts there and matches the longest word.';
+  @override
+  String get onboarding_global_lookup_windows_select_body =>
+      'Highlight the same word you already verified has a dictionary definition, and leave the selection active.';
+  @override
+  String get onboarding_global_lookup_android_select_body =>
+      'Long-press the same word you already verified has a dictionary definition, then adjust the selection handles to cover it.';
 }
 
 // Path: <root>
@@ -80123,13 +80605,7 @@ class _StringsKo extends _StringsEn {
   @override
   String get onboarding_step_click_lookup_title => 'Tap to look up words';
   @override
-  String get onboarding_step_click_lookup_body =>
-      'Inside Fushi, books, OCR text in manga, and video subtitles all support direct lookup from the character you touch.';
-  @override
   String get onboarding_click_lookup_tap_title => 'Tap the text';
-  @override
-  String get onboarding_click_lookup_tap_body =>
-      'On a phone, tap a character. On a computer, left-click it. Fushi starts there and matches the longest word.';
   @override
   String get onboarding_click_lookup_nested_title =>
       'Keep exploring in the popup';
@@ -80151,9 +80627,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get onboarding_global_lookup_windows_select_title =>
       'Select text in any app';
-  @override
-  String get onboarding_global_lookup_windows_select_body =>
-      'Highlight the word or phrase you want to look up and leave the selection active.';
   @override
   String get onboarding_global_lookup_windows_shortcut_title =>
       'Press Ctrl+Alt+D';
@@ -80179,9 +80652,6 @@ class _StringsKo extends _StringsEn {
   String get onboarding_global_lookup_android_select_title =>
       'Select text in another app';
   @override
-  String get onboarding_global_lookup_android_select_body =>
-      'Long-press text, then adjust the selection handles until they cover the word or phrase you want.';
-  @override
   String get onboarding_global_lookup_android_open_title => 'Choose Fushi';
   @override
   String get onboarding_global_lookup_android_open_body =>
@@ -80192,6 +80662,81 @@ class _StringsKo extends _StringsEn {
   @override
   String get onboarding_global_lookup_android_continue_body =>
       'The lookup opens separately from the source app. You can tap more words inside it, then close it to return where you were.';
+  @override
+  String get onboarding_feature_manual_resources =>
+      'Import dictionaries and audio manually';
+  @override
+  String get onboarding_feature_manual_resources_hint =>
+      'Skip the pack; import your own dictionaries, audiobooks, and pronunciation sources';
+  @override
+  String get onboarding_step_manual_resources_title =>
+      'Prepare dictionaries and audio manually';
+  @override
+  String get onboarding_step_manual_resources_body =>
+      'Skip the recommended pack and prepare only what you need. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional.';
+  @override
+  String get onboarding_manual_dictionary_action => 'Import a dictionary';
+  @override
+  String get onboarding_manual_dictionary_action_desc =>
+      'Open dictionary management and import at least one supported dictionary file or archive. Lookup tutorials are useful only after a query returns a definition.';
+  @override
+  String get onboarding_manual_audiobook_action =>
+      'Import a book with audiobook audio';
+  @override
+  String get onboarding_manual_audiobook_action_desc =>
+      'Open book import and choose the book or text, aligned subtitles, and one or more audio files. Audio needs subtitles so Fushi can align it to sentences.';
+  @override
+  String get onboarding_manual_pronunciation_action =>
+      'Configure word pronunciation audio';
+  @override
+  String get onboarding_manual_pronunciation_action_desc =>
+      'Add local or online pronunciation sources used by dictionary entries. This is separate from audiobook audio attached to a book.';
+  @override
+  String get onboarding_lookup_verify_action =>
+      'Verify a word in your dictionary';
+  @override
+  String get onboarding_lookup_verify_action_desc =>
+      'Open lookup, enter any word you are learning, and continue only after the installed dictionary returns a definition. The tutorial does not hard-code a sample word.';
+  @override
+  String get onboarding_step_first_anki_card_title =>
+      'Create your first Anki card';
+  @override
+  String get onboarding_step_first_anki_card_body =>
+      'This step appears only after this onboarding session has connected to Anki and selected a usable deck and note type.';
+  @override
+  String get onboarding_first_anki_lookup_title =>
+      'Start from a real dictionary result';
+  @override
+  String get onboarding_first_anki_lookup_body =>
+      'Look up a word that your installed dictionary actually defines. There is no fixed tutorial word that might be absent from your dictionary.';
+  @override
+  String get onboarding_first_anki_plus_title =>
+      'Tap the plus button on the entry';
+  @override
+  String get onboarding_first_anki_plus_body =>
+      'The plus button opens the card creator with the current word, reading, meaning, sentence, audio, and available image context.';
+  @override
+  String get onboarding_first_anki_save_title => 'Review and save';
+  @override
+  String get onboarding_first_anki_save_body =>
+      'Confirm the target deck, note type, and field preview, then save. Open Anki to verify that the first card arrived.';
+  @override
+  String get onboarding_first_anki_action => 'Open lookup and create a card';
+  @override
+  String get onboarding_first_anki_action_desc =>
+      'Use a word with a visible definition, tap its plus button, review the fields, and save it to the connected Anki deck.';
+  @override
+  String get onboarding_step_click_lookup_body =>
+      'First verify a word that your installed dictionary actually defines. Then use that same word to practise direct lookup in books, manga OCR text, and video subtitles.';
+  @override
+  String get onboarding_click_lookup_tap_body =>
+      'On a phone, tap a character in the verified word. On a computer, left-click it. Fushi starts there and matches the longest word.';
+  @override
+  String get onboarding_global_lookup_windows_select_body =>
+      'Highlight the same word you already verified has a dictionary definition, and leave the selection active.';
+  @override
+  String get onboarding_global_lookup_android_select_body =>
+      'Long-press the same word you already verified has a dictionary definition, then adjust the selection handles to cover it.';
 }
 
 // Path: <root>
@@ -89571,13 +90116,7 @@ class _StringsNl extends _StringsEn {
   @override
   String get onboarding_step_click_lookup_title => 'Tap to look up words';
   @override
-  String get onboarding_step_click_lookup_body =>
-      'Inside Fushi, books, OCR text in manga, and video subtitles all support direct lookup from the character you touch.';
-  @override
   String get onboarding_click_lookup_tap_title => 'Tap the text';
-  @override
-  String get onboarding_click_lookup_tap_body =>
-      'On a phone, tap a character. On a computer, left-click it. Fushi starts there and matches the longest word.';
   @override
   String get onboarding_click_lookup_nested_title =>
       'Keep exploring in the popup';
@@ -89599,9 +90138,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get onboarding_global_lookup_windows_select_title =>
       'Select text in any app';
-  @override
-  String get onboarding_global_lookup_windows_select_body =>
-      'Highlight the word or phrase you want to look up and leave the selection active.';
   @override
   String get onboarding_global_lookup_windows_shortcut_title =>
       'Press Ctrl+Alt+D';
@@ -89627,9 +90163,6 @@ class _StringsNl extends _StringsEn {
   String get onboarding_global_lookup_android_select_title =>
       'Select text in another app';
   @override
-  String get onboarding_global_lookup_android_select_body =>
-      'Long-press text, then adjust the selection handles until they cover the word or phrase you want.';
-  @override
   String get onboarding_global_lookup_android_open_title => 'Choose Fushi';
   @override
   String get onboarding_global_lookup_android_open_body =>
@@ -89640,6 +90173,81 @@ class _StringsNl extends _StringsEn {
   @override
   String get onboarding_global_lookup_android_continue_body =>
       'The lookup opens separately from the source app. You can tap more words inside it, then close it to return where you were.';
+  @override
+  String get onboarding_feature_manual_resources =>
+      'Import dictionaries and audio manually';
+  @override
+  String get onboarding_feature_manual_resources_hint =>
+      'Skip the pack; import your own dictionaries, audiobooks, and pronunciation sources';
+  @override
+  String get onboarding_step_manual_resources_title =>
+      'Prepare dictionaries and audio manually';
+  @override
+  String get onboarding_step_manual_resources_body =>
+      'Skip the recommended pack and prepare only what you need. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional.';
+  @override
+  String get onboarding_manual_dictionary_action => 'Import a dictionary';
+  @override
+  String get onboarding_manual_dictionary_action_desc =>
+      'Open dictionary management and import at least one supported dictionary file or archive. Lookup tutorials are useful only after a query returns a definition.';
+  @override
+  String get onboarding_manual_audiobook_action =>
+      'Import a book with audiobook audio';
+  @override
+  String get onboarding_manual_audiobook_action_desc =>
+      'Open book import and choose the book or text, aligned subtitles, and one or more audio files. Audio needs subtitles so Fushi can align it to sentences.';
+  @override
+  String get onboarding_manual_pronunciation_action =>
+      'Configure word pronunciation audio';
+  @override
+  String get onboarding_manual_pronunciation_action_desc =>
+      'Add local or online pronunciation sources used by dictionary entries. This is separate from audiobook audio attached to a book.';
+  @override
+  String get onboarding_lookup_verify_action =>
+      'Verify a word in your dictionary';
+  @override
+  String get onboarding_lookup_verify_action_desc =>
+      'Open lookup, enter any word you are learning, and continue only after the installed dictionary returns a definition. The tutorial does not hard-code a sample word.';
+  @override
+  String get onboarding_step_first_anki_card_title =>
+      'Create your first Anki card';
+  @override
+  String get onboarding_step_first_anki_card_body =>
+      'This step appears only after this onboarding session has connected to Anki and selected a usable deck and note type.';
+  @override
+  String get onboarding_first_anki_lookup_title =>
+      'Start from a real dictionary result';
+  @override
+  String get onboarding_first_anki_lookup_body =>
+      'Look up a word that your installed dictionary actually defines. There is no fixed tutorial word that might be absent from your dictionary.';
+  @override
+  String get onboarding_first_anki_plus_title =>
+      'Tap the plus button on the entry';
+  @override
+  String get onboarding_first_anki_plus_body =>
+      'The plus button opens the card creator with the current word, reading, meaning, sentence, audio, and available image context.';
+  @override
+  String get onboarding_first_anki_save_title => 'Review and save';
+  @override
+  String get onboarding_first_anki_save_body =>
+      'Confirm the target deck, note type, and field preview, then save. Open Anki to verify that the first card arrived.';
+  @override
+  String get onboarding_first_anki_action => 'Open lookup and create a card';
+  @override
+  String get onboarding_first_anki_action_desc =>
+      'Use a word with a visible definition, tap its plus button, review the fields, and save it to the connected Anki deck.';
+  @override
+  String get onboarding_step_click_lookup_body =>
+      'First verify a word that your installed dictionary actually defines. Then use that same word to practise direct lookup in books, manga OCR text, and video subtitles.';
+  @override
+  String get onboarding_click_lookup_tap_body =>
+      'On a phone, tap a character in the verified word. On a computer, left-click it. Fushi starts there and matches the longest word.';
+  @override
+  String get onboarding_global_lookup_windows_select_body =>
+      'Highlight the same word you already verified has a dictionary definition, and leave the selection active.';
+  @override
+  String get onboarding_global_lookup_android_select_body =>
+      'Long-press the same word you already verified has a dictionary definition, then adjust the selection handles to cover it.';
 }
 
 // Path: <root>
@@ -99075,13 +99683,7 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get onboarding_step_click_lookup_title => 'Tap to look up words';
   @override
-  String get onboarding_step_click_lookup_body =>
-      'Inside Fushi, books, OCR text in manga, and video subtitles all support direct lookup from the character you touch.';
-  @override
   String get onboarding_click_lookup_tap_title => 'Tap the text';
-  @override
-  String get onboarding_click_lookup_tap_body =>
-      'On a phone, tap a character. On a computer, left-click it. Fushi starts there and matches the longest word.';
   @override
   String get onboarding_click_lookup_nested_title =>
       'Keep exploring in the popup';
@@ -99103,9 +99705,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get onboarding_global_lookup_windows_select_title =>
       'Select text in any app';
-  @override
-  String get onboarding_global_lookup_windows_select_body =>
-      'Highlight the word or phrase you want to look up and leave the selection active.';
   @override
   String get onboarding_global_lookup_windows_shortcut_title =>
       'Press Ctrl+Alt+D';
@@ -99131,9 +99730,6 @@ class _StringsPtBr extends _StringsEn {
   String get onboarding_global_lookup_android_select_title =>
       'Select text in another app';
   @override
-  String get onboarding_global_lookup_android_select_body =>
-      'Long-press text, then adjust the selection handles until they cover the word or phrase you want.';
-  @override
   String get onboarding_global_lookup_android_open_title => 'Choose Fushi';
   @override
   String get onboarding_global_lookup_android_open_body =>
@@ -99144,6 +99740,81 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get onboarding_global_lookup_android_continue_body =>
       'The lookup opens separately from the source app. You can tap more words inside it, then close it to return where you were.';
+  @override
+  String get onboarding_feature_manual_resources =>
+      'Import dictionaries and audio manually';
+  @override
+  String get onboarding_feature_manual_resources_hint =>
+      'Skip the pack; import your own dictionaries, audiobooks, and pronunciation sources';
+  @override
+  String get onboarding_step_manual_resources_title =>
+      'Prepare dictionaries and audio manually';
+  @override
+  String get onboarding_step_manual_resources_body =>
+      'Skip the recommended pack and prepare only what you need. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional.';
+  @override
+  String get onboarding_manual_dictionary_action => 'Import a dictionary';
+  @override
+  String get onboarding_manual_dictionary_action_desc =>
+      'Open dictionary management and import at least one supported dictionary file or archive. Lookup tutorials are useful only after a query returns a definition.';
+  @override
+  String get onboarding_manual_audiobook_action =>
+      'Import a book with audiobook audio';
+  @override
+  String get onboarding_manual_audiobook_action_desc =>
+      'Open book import and choose the book or text, aligned subtitles, and one or more audio files. Audio needs subtitles so Fushi can align it to sentences.';
+  @override
+  String get onboarding_manual_pronunciation_action =>
+      'Configure word pronunciation audio';
+  @override
+  String get onboarding_manual_pronunciation_action_desc =>
+      'Add local or online pronunciation sources used by dictionary entries. This is separate from audiobook audio attached to a book.';
+  @override
+  String get onboarding_lookup_verify_action =>
+      'Verify a word in your dictionary';
+  @override
+  String get onboarding_lookup_verify_action_desc =>
+      'Open lookup, enter any word you are learning, and continue only after the installed dictionary returns a definition. The tutorial does not hard-code a sample word.';
+  @override
+  String get onboarding_step_first_anki_card_title =>
+      'Create your first Anki card';
+  @override
+  String get onboarding_step_first_anki_card_body =>
+      'This step appears only after this onboarding session has connected to Anki and selected a usable deck and note type.';
+  @override
+  String get onboarding_first_anki_lookup_title =>
+      'Start from a real dictionary result';
+  @override
+  String get onboarding_first_anki_lookup_body =>
+      'Look up a word that your installed dictionary actually defines. There is no fixed tutorial word that might be absent from your dictionary.';
+  @override
+  String get onboarding_first_anki_plus_title =>
+      'Tap the plus button on the entry';
+  @override
+  String get onboarding_first_anki_plus_body =>
+      'The plus button opens the card creator with the current word, reading, meaning, sentence, audio, and available image context.';
+  @override
+  String get onboarding_first_anki_save_title => 'Review and save';
+  @override
+  String get onboarding_first_anki_save_body =>
+      'Confirm the target deck, note type, and field preview, then save. Open Anki to verify that the first card arrived.';
+  @override
+  String get onboarding_first_anki_action => 'Open lookup and create a card';
+  @override
+  String get onboarding_first_anki_action_desc =>
+      'Use a word with a visible definition, tap its plus button, review the fields, and save it to the connected Anki deck.';
+  @override
+  String get onboarding_step_click_lookup_body =>
+      'First verify a word that your installed dictionary actually defines. Then use that same word to practise direct lookup in books, manga OCR text, and video subtitles.';
+  @override
+  String get onboarding_click_lookup_tap_body =>
+      'On a phone, tap a character in the verified word. On a computer, left-click it. Fushi starts there and matches the longest word.';
+  @override
+  String get onboarding_global_lookup_windows_select_body =>
+      'Highlight the same word you already verified has a dictionary definition, and leave the selection active.';
+  @override
+  String get onboarding_global_lookup_android_select_body =>
+      'Long-press the same word you already verified has a dictionary definition, then adjust the selection handles to cover it.';
 }
 
 // Path: <root>
@@ -108555,13 +109226,7 @@ class _StringsRu extends _StringsEn {
   @override
   String get onboarding_step_click_lookup_title => 'Tap to look up words';
   @override
-  String get onboarding_step_click_lookup_body =>
-      'Inside Fushi, books, OCR text in manga, and video subtitles all support direct lookup from the character you touch.';
-  @override
   String get onboarding_click_lookup_tap_title => 'Tap the text';
-  @override
-  String get onboarding_click_lookup_tap_body =>
-      'On a phone, tap a character. On a computer, left-click it. Fushi starts there and matches the longest word.';
   @override
   String get onboarding_click_lookup_nested_title =>
       'Keep exploring in the popup';
@@ -108583,9 +109248,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get onboarding_global_lookup_windows_select_title =>
       'Select text in any app';
-  @override
-  String get onboarding_global_lookup_windows_select_body =>
-      'Highlight the word or phrase you want to look up and leave the selection active.';
   @override
   String get onboarding_global_lookup_windows_shortcut_title =>
       'Press Ctrl+Alt+D';
@@ -108611,9 +109273,6 @@ class _StringsRu extends _StringsEn {
   String get onboarding_global_lookup_android_select_title =>
       'Select text in another app';
   @override
-  String get onboarding_global_lookup_android_select_body =>
-      'Long-press text, then adjust the selection handles until they cover the word or phrase you want.';
-  @override
   String get onboarding_global_lookup_android_open_title => 'Choose Fushi';
   @override
   String get onboarding_global_lookup_android_open_body =>
@@ -108624,6 +109283,81 @@ class _StringsRu extends _StringsEn {
   @override
   String get onboarding_global_lookup_android_continue_body =>
       'The lookup opens separately from the source app. You can tap more words inside it, then close it to return where you were.';
+  @override
+  String get onboarding_feature_manual_resources =>
+      'Import dictionaries and audio manually';
+  @override
+  String get onboarding_feature_manual_resources_hint =>
+      'Skip the pack; import your own dictionaries, audiobooks, and pronunciation sources';
+  @override
+  String get onboarding_step_manual_resources_title =>
+      'Prepare dictionaries and audio manually';
+  @override
+  String get onboarding_step_manual_resources_body =>
+      'Skip the recommended pack and prepare only what you need. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional.';
+  @override
+  String get onboarding_manual_dictionary_action => 'Import a dictionary';
+  @override
+  String get onboarding_manual_dictionary_action_desc =>
+      'Open dictionary management and import at least one supported dictionary file or archive. Lookup tutorials are useful only after a query returns a definition.';
+  @override
+  String get onboarding_manual_audiobook_action =>
+      'Import a book with audiobook audio';
+  @override
+  String get onboarding_manual_audiobook_action_desc =>
+      'Open book import and choose the book or text, aligned subtitles, and one or more audio files. Audio needs subtitles so Fushi can align it to sentences.';
+  @override
+  String get onboarding_manual_pronunciation_action =>
+      'Configure word pronunciation audio';
+  @override
+  String get onboarding_manual_pronunciation_action_desc =>
+      'Add local or online pronunciation sources used by dictionary entries. This is separate from audiobook audio attached to a book.';
+  @override
+  String get onboarding_lookup_verify_action =>
+      'Verify a word in your dictionary';
+  @override
+  String get onboarding_lookup_verify_action_desc =>
+      'Open lookup, enter any word you are learning, and continue only after the installed dictionary returns a definition. The tutorial does not hard-code a sample word.';
+  @override
+  String get onboarding_step_first_anki_card_title =>
+      'Create your first Anki card';
+  @override
+  String get onboarding_step_first_anki_card_body =>
+      'This step appears only after this onboarding session has connected to Anki and selected a usable deck and note type.';
+  @override
+  String get onboarding_first_anki_lookup_title =>
+      'Start from a real dictionary result';
+  @override
+  String get onboarding_first_anki_lookup_body =>
+      'Look up a word that your installed dictionary actually defines. There is no fixed tutorial word that might be absent from your dictionary.';
+  @override
+  String get onboarding_first_anki_plus_title =>
+      'Tap the plus button on the entry';
+  @override
+  String get onboarding_first_anki_plus_body =>
+      'The plus button opens the card creator with the current word, reading, meaning, sentence, audio, and available image context.';
+  @override
+  String get onboarding_first_anki_save_title => 'Review and save';
+  @override
+  String get onboarding_first_anki_save_body =>
+      'Confirm the target deck, note type, and field preview, then save. Open Anki to verify that the first card arrived.';
+  @override
+  String get onboarding_first_anki_action => 'Open lookup and create a card';
+  @override
+  String get onboarding_first_anki_action_desc =>
+      'Use a word with a visible definition, tap its plus button, review the fields, and save it to the connected Anki deck.';
+  @override
+  String get onboarding_step_click_lookup_body =>
+      'First verify a word that your installed dictionary actually defines. Then use that same word to practise direct lookup in books, manga OCR text, and video subtitles.';
+  @override
+  String get onboarding_click_lookup_tap_body =>
+      'On a phone, tap a character in the verified word. On a computer, left-click it. Fushi starts there and matches the longest word.';
+  @override
+  String get onboarding_global_lookup_windows_select_body =>
+      'Highlight the same word you already verified has a dictionary definition, and leave the selection active.';
+  @override
+  String get onboarding_global_lookup_android_select_body =>
+      'Long-press the same word you already verified has a dictionary definition, then adjust the selection handles to cover it.';
 }
 
 // Path: <root>
@@ -117846,13 +118580,7 @@ class _StringsTh extends _StringsEn {
   @override
   String get onboarding_step_click_lookup_title => 'Tap to look up words';
   @override
-  String get onboarding_step_click_lookup_body =>
-      'Inside Fushi, books, OCR text in manga, and video subtitles all support direct lookup from the character you touch.';
-  @override
   String get onboarding_click_lookup_tap_title => 'Tap the text';
-  @override
-  String get onboarding_click_lookup_tap_body =>
-      'On a phone, tap a character. On a computer, left-click it. Fushi starts there and matches the longest word.';
   @override
   String get onboarding_click_lookup_nested_title =>
       'Keep exploring in the popup';
@@ -117874,9 +118602,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get onboarding_global_lookup_windows_select_title =>
       'Select text in any app';
-  @override
-  String get onboarding_global_lookup_windows_select_body =>
-      'Highlight the word or phrase you want to look up and leave the selection active.';
   @override
   String get onboarding_global_lookup_windows_shortcut_title =>
       'Press Ctrl+Alt+D';
@@ -117902,9 +118627,6 @@ class _StringsTh extends _StringsEn {
   String get onboarding_global_lookup_android_select_title =>
       'Select text in another app';
   @override
-  String get onboarding_global_lookup_android_select_body =>
-      'Long-press text, then adjust the selection handles until they cover the word or phrase you want.';
-  @override
   String get onboarding_global_lookup_android_open_title => 'Choose Fushi';
   @override
   String get onboarding_global_lookup_android_open_body =>
@@ -117915,6 +118637,81 @@ class _StringsTh extends _StringsEn {
   @override
   String get onboarding_global_lookup_android_continue_body =>
       'The lookup opens separately from the source app. You can tap more words inside it, then close it to return where you were.';
+  @override
+  String get onboarding_feature_manual_resources =>
+      'Import dictionaries and audio manually';
+  @override
+  String get onboarding_feature_manual_resources_hint =>
+      'Skip the pack; import your own dictionaries, audiobooks, and pronunciation sources';
+  @override
+  String get onboarding_step_manual_resources_title =>
+      'Prepare dictionaries and audio manually';
+  @override
+  String get onboarding_step_manual_resources_body =>
+      'Skip the recommended pack and prepare only what you need. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional.';
+  @override
+  String get onboarding_manual_dictionary_action => 'Import a dictionary';
+  @override
+  String get onboarding_manual_dictionary_action_desc =>
+      'Open dictionary management and import at least one supported dictionary file or archive. Lookup tutorials are useful only after a query returns a definition.';
+  @override
+  String get onboarding_manual_audiobook_action =>
+      'Import a book with audiobook audio';
+  @override
+  String get onboarding_manual_audiobook_action_desc =>
+      'Open book import and choose the book or text, aligned subtitles, and one or more audio files. Audio needs subtitles so Fushi can align it to sentences.';
+  @override
+  String get onboarding_manual_pronunciation_action =>
+      'Configure word pronunciation audio';
+  @override
+  String get onboarding_manual_pronunciation_action_desc =>
+      'Add local or online pronunciation sources used by dictionary entries. This is separate from audiobook audio attached to a book.';
+  @override
+  String get onboarding_lookup_verify_action =>
+      'Verify a word in your dictionary';
+  @override
+  String get onboarding_lookup_verify_action_desc =>
+      'Open lookup, enter any word you are learning, and continue only after the installed dictionary returns a definition. The tutorial does not hard-code a sample word.';
+  @override
+  String get onboarding_step_first_anki_card_title =>
+      'Create your first Anki card';
+  @override
+  String get onboarding_step_first_anki_card_body =>
+      'This step appears only after this onboarding session has connected to Anki and selected a usable deck and note type.';
+  @override
+  String get onboarding_first_anki_lookup_title =>
+      'Start from a real dictionary result';
+  @override
+  String get onboarding_first_anki_lookup_body =>
+      'Look up a word that your installed dictionary actually defines. There is no fixed tutorial word that might be absent from your dictionary.';
+  @override
+  String get onboarding_first_anki_plus_title =>
+      'Tap the plus button on the entry';
+  @override
+  String get onboarding_first_anki_plus_body =>
+      'The plus button opens the card creator with the current word, reading, meaning, sentence, audio, and available image context.';
+  @override
+  String get onboarding_first_anki_save_title => 'Review and save';
+  @override
+  String get onboarding_first_anki_save_body =>
+      'Confirm the target deck, note type, and field preview, then save. Open Anki to verify that the first card arrived.';
+  @override
+  String get onboarding_first_anki_action => 'Open lookup and create a card';
+  @override
+  String get onboarding_first_anki_action_desc =>
+      'Use a word with a visible definition, tap its plus button, review the fields, and save it to the connected Anki deck.';
+  @override
+  String get onboarding_step_click_lookup_body =>
+      'First verify a word that your installed dictionary actually defines. Then use that same word to practise direct lookup in books, manga OCR text, and video subtitles.';
+  @override
+  String get onboarding_click_lookup_tap_body =>
+      'On a phone, tap a character in the verified word. On a computer, left-click it. Fushi starts there and matches the longest word.';
+  @override
+  String get onboarding_global_lookup_windows_select_body =>
+      'Highlight the same word you already verified has a dictionary definition, and leave the selection active.';
+  @override
+  String get onboarding_global_lookup_android_select_body =>
+      'Long-press the same word you already verified has a dictionary definition, then adjust the selection handles to cover it.';
 }
 
 // Path: <root>
@@ -127245,13 +128042,7 @@ class _StringsTr extends _StringsEn {
   @override
   String get onboarding_step_click_lookup_title => 'Tap to look up words';
   @override
-  String get onboarding_step_click_lookup_body =>
-      'Inside Fushi, books, OCR text in manga, and video subtitles all support direct lookup from the character you touch.';
-  @override
   String get onboarding_click_lookup_tap_title => 'Tap the text';
-  @override
-  String get onboarding_click_lookup_tap_body =>
-      'On a phone, tap a character. On a computer, left-click it. Fushi starts there and matches the longest word.';
   @override
   String get onboarding_click_lookup_nested_title =>
       'Keep exploring in the popup';
@@ -127273,9 +128064,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get onboarding_global_lookup_windows_select_title =>
       'Select text in any app';
-  @override
-  String get onboarding_global_lookup_windows_select_body =>
-      'Highlight the word or phrase you want to look up and leave the selection active.';
   @override
   String get onboarding_global_lookup_windows_shortcut_title =>
       'Press Ctrl+Alt+D';
@@ -127301,9 +128089,6 @@ class _StringsTr extends _StringsEn {
   String get onboarding_global_lookup_android_select_title =>
       'Select text in another app';
   @override
-  String get onboarding_global_lookup_android_select_body =>
-      'Long-press text, then adjust the selection handles until they cover the word or phrase you want.';
-  @override
   String get onboarding_global_lookup_android_open_title => 'Choose Fushi';
   @override
   String get onboarding_global_lookup_android_open_body =>
@@ -127314,6 +128099,81 @@ class _StringsTr extends _StringsEn {
   @override
   String get onboarding_global_lookup_android_continue_body =>
       'The lookup opens separately from the source app. You can tap more words inside it, then close it to return where you were.';
+  @override
+  String get onboarding_feature_manual_resources =>
+      'Import dictionaries and audio manually';
+  @override
+  String get onboarding_feature_manual_resources_hint =>
+      'Skip the pack; import your own dictionaries, audiobooks, and pronunciation sources';
+  @override
+  String get onboarding_step_manual_resources_title =>
+      'Prepare dictionaries and audio manually';
+  @override
+  String get onboarding_step_manual_resources_body =>
+      'Skip the recommended pack and prepare only what you need. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional.';
+  @override
+  String get onboarding_manual_dictionary_action => 'Import a dictionary';
+  @override
+  String get onboarding_manual_dictionary_action_desc =>
+      'Open dictionary management and import at least one supported dictionary file or archive. Lookup tutorials are useful only after a query returns a definition.';
+  @override
+  String get onboarding_manual_audiobook_action =>
+      'Import a book with audiobook audio';
+  @override
+  String get onboarding_manual_audiobook_action_desc =>
+      'Open book import and choose the book or text, aligned subtitles, and one or more audio files. Audio needs subtitles so Fushi can align it to sentences.';
+  @override
+  String get onboarding_manual_pronunciation_action =>
+      'Configure word pronunciation audio';
+  @override
+  String get onboarding_manual_pronunciation_action_desc =>
+      'Add local or online pronunciation sources used by dictionary entries. This is separate from audiobook audio attached to a book.';
+  @override
+  String get onboarding_lookup_verify_action =>
+      'Verify a word in your dictionary';
+  @override
+  String get onboarding_lookup_verify_action_desc =>
+      'Open lookup, enter any word you are learning, and continue only after the installed dictionary returns a definition. The tutorial does not hard-code a sample word.';
+  @override
+  String get onboarding_step_first_anki_card_title =>
+      'Create your first Anki card';
+  @override
+  String get onboarding_step_first_anki_card_body =>
+      'This step appears only after this onboarding session has connected to Anki and selected a usable deck and note type.';
+  @override
+  String get onboarding_first_anki_lookup_title =>
+      'Start from a real dictionary result';
+  @override
+  String get onboarding_first_anki_lookup_body =>
+      'Look up a word that your installed dictionary actually defines. There is no fixed tutorial word that might be absent from your dictionary.';
+  @override
+  String get onboarding_first_anki_plus_title =>
+      'Tap the plus button on the entry';
+  @override
+  String get onboarding_first_anki_plus_body =>
+      'The plus button opens the card creator with the current word, reading, meaning, sentence, audio, and available image context.';
+  @override
+  String get onboarding_first_anki_save_title => 'Review and save';
+  @override
+  String get onboarding_first_anki_save_body =>
+      'Confirm the target deck, note type, and field preview, then save. Open Anki to verify that the first card arrived.';
+  @override
+  String get onboarding_first_anki_action => 'Open lookup and create a card';
+  @override
+  String get onboarding_first_anki_action_desc =>
+      'Use a word with a visible definition, tap its plus button, review the fields, and save it to the connected Anki deck.';
+  @override
+  String get onboarding_step_click_lookup_body =>
+      'First verify a word that your installed dictionary actually defines. Then use that same word to practise direct lookup in books, manga OCR text, and video subtitles.';
+  @override
+  String get onboarding_click_lookup_tap_body =>
+      'On a phone, tap a character in the verified word. On a computer, left-click it. Fushi starts there and matches the longest word.';
+  @override
+  String get onboarding_global_lookup_windows_select_body =>
+      'Highlight the same word you already verified has a dictionary definition, and leave the selection active.';
+  @override
+  String get onboarding_global_lookup_android_select_body =>
+      'Long-press the same word you already verified has a dictionary definition, then adjust the selection handles to cover it.';
 }
 
 // Path: <root>
@@ -136623,13 +137483,7 @@ class _StringsVi extends _StringsEn {
   @override
   String get onboarding_step_click_lookup_title => 'Tap to look up words';
   @override
-  String get onboarding_step_click_lookup_body =>
-      'Inside Fushi, books, OCR text in manga, and video subtitles all support direct lookup from the character you touch.';
-  @override
   String get onboarding_click_lookup_tap_title => 'Tap the text';
-  @override
-  String get onboarding_click_lookup_tap_body =>
-      'On a phone, tap a character. On a computer, left-click it. Fushi starts there and matches the longest word.';
   @override
   String get onboarding_click_lookup_nested_title =>
       'Keep exploring in the popup';
@@ -136651,9 +137505,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get onboarding_global_lookup_windows_select_title =>
       'Select text in any app';
-  @override
-  String get onboarding_global_lookup_windows_select_body =>
-      'Highlight the word or phrase you want to look up and leave the selection active.';
   @override
   String get onboarding_global_lookup_windows_shortcut_title =>
       'Press Ctrl+Alt+D';
@@ -136679,9 +137530,6 @@ class _StringsVi extends _StringsEn {
   String get onboarding_global_lookup_android_select_title =>
       'Select text in another app';
   @override
-  String get onboarding_global_lookup_android_select_body =>
-      'Long-press text, then adjust the selection handles until they cover the word or phrase you want.';
-  @override
   String get onboarding_global_lookup_android_open_title => 'Choose Fushi';
   @override
   String get onboarding_global_lookup_android_open_body =>
@@ -136692,6 +137540,81 @@ class _StringsVi extends _StringsEn {
   @override
   String get onboarding_global_lookup_android_continue_body =>
       'The lookup opens separately from the source app. You can tap more words inside it, then close it to return where you were.';
+  @override
+  String get onboarding_feature_manual_resources =>
+      'Import dictionaries and audio manually';
+  @override
+  String get onboarding_feature_manual_resources_hint =>
+      'Skip the pack; import your own dictionaries, audiobooks, and pronunciation sources';
+  @override
+  String get onboarding_step_manual_resources_title =>
+      'Prepare dictionaries and audio manually';
+  @override
+  String get onboarding_step_manual_resources_body =>
+      'Skip the recommended pack and prepare only what you need. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional.';
+  @override
+  String get onboarding_manual_dictionary_action => 'Import a dictionary';
+  @override
+  String get onboarding_manual_dictionary_action_desc =>
+      'Open dictionary management and import at least one supported dictionary file or archive. Lookup tutorials are useful only after a query returns a definition.';
+  @override
+  String get onboarding_manual_audiobook_action =>
+      'Import a book with audiobook audio';
+  @override
+  String get onboarding_manual_audiobook_action_desc =>
+      'Open book import and choose the book or text, aligned subtitles, and one or more audio files. Audio needs subtitles so Fushi can align it to sentences.';
+  @override
+  String get onboarding_manual_pronunciation_action =>
+      'Configure word pronunciation audio';
+  @override
+  String get onboarding_manual_pronunciation_action_desc =>
+      'Add local or online pronunciation sources used by dictionary entries. This is separate from audiobook audio attached to a book.';
+  @override
+  String get onboarding_lookup_verify_action =>
+      'Verify a word in your dictionary';
+  @override
+  String get onboarding_lookup_verify_action_desc =>
+      'Open lookup, enter any word you are learning, and continue only after the installed dictionary returns a definition. The tutorial does not hard-code a sample word.';
+  @override
+  String get onboarding_step_first_anki_card_title =>
+      'Create your first Anki card';
+  @override
+  String get onboarding_step_first_anki_card_body =>
+      'This step appears only after this onboarding session has connected to Anki and selected a usable deck and note type.';
+  @override
+  String get onboarding_first_anki_lookup_title =>
+      'Start from a real dictionary result';
+  @override
+  String get onboarding_first_anki_lookup_body =>
+      'Look up a word that your installed dictionary actually defines. There is no fixed tutorial word that might be absent from your dictionary.';
+  @override
+  String get onboarding_first_anki_plus_title =>
+      'Tap the plus button on the entry';
+  @override
+  String get onboarding_first_anki_plus_body =>
+      'The plus button opens the card creator with the current word, reading, meaning, sentence, audio, and available image context.';
+  @override
+  String get onboarding_first_anki_save_title => 'Review and save';
+  @override
+  String get onboarding_first_anki_save_body =>
+      'Confirm the target deck, note type, and field preview, then save. Open Anki to verify that the first card arrived.';
+  @override
+  String get onboarding_first_anki_action => 'Open lookup and create a card';
+  @override
+  String get onboarding_first_anki_action_desc =>
+      'Use a word with a visible definition, tap its plus button, review the fields, and save it to the connected Anki deck.';
+  @override
+  String get onboarding_step_click_lookup_body =>
+      'First verify a word that your installed dictionary actually defines. Then use that same word to practise direct lookup in books, manga OCR text, and video subtitles.';
+  @override
+  String get onboarding_click_lookup_tap_body =>
+      'On a phone, tap a character in the verified word. On a computer, left-click it. Fushi starts there and matches the longest word.';
+  @override
+  String get onboarding_global_lookup_windows_select_body =>
+      'Highlight the same word you already verified has a dictionary definition, and leave the selection active.';
+  @override
+  String get onboarding_global_lookup_android_select_body =>
+      'Long-press the same word you already verified has a dictionary definition, then adjust the selection handles to cover it.';
 }
 
 // Path: <root>
@@ -145260,13 +146183,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get onboarding_step_click_lookup_title => '点击查词';
   @override
-  String get onboarding_step_click_lookup_body =>
-      '在 Fushi 里，书籍正文、漫画 OCR 文字和视频字幕都能从你点中的字符直接查词。';
-  @override
   String get onboarding_click_lookup_tap_title => '点一下文字';
-  @override
-  String get onboarding_click_lookup_tap_body =>
-      '手机轻点一个字，电脑用鼠标左键单击。Fushi 会从这里开始匹配最长的词。';
   @override
   String get onboarding_click_lookup_nested_title => '在弹窗里继续查';
   @override
@@ -145284,9 +146201,6 @@ class _StringsZhCn extends _StringsEn {
       '在 Windows 上，先在其他应用里选中文字，就能直接唤出词典，不必切回 Fushi。';
   @override
   String get onboarding_global_lookup_windows_select_title => '在任意应用里选中文字';
-  @override
-  String get onboarding_global_lookup_windows_select_body =>
-      '拖选要查的词或短语，并保持文字处于选中状态。';
   @override
   String get onboarding_global_lookup_windows_shortcut_title => '按 Ctrl+Alt+D';
   @override
@@ -145308,9 +146222,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get onboarding_global_lookup_android_select_title => '在其他应用里选中文字';
   @override
-  String get onboarding_global_lookup_android_select_body =>
-      '长按文字，再拖动选区手柄，让它覆盖要查的词或短语。';
-  @override
   String get onboarding_global_lookup_android_open_title => '选择 Fushi';
   @override
   String get onboarding_global_lookup_android_open_body =>
@@ -145320,6 +146231,73 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get onboarding_global_lookup_android_continue_body =>
       '查词结果会独立打开；你可以继续点释义里的词，关闭后回到刚才的应用。';
+  @override
+  String get onboarding_feature_manual_resources => '手动导入词典和音频';
+  @override
+  String get onboarding_feature_manual_resources_hint =>
+      '不下载推荐包，自己导入词典、有声书和单词发音来源';
+  @override
+  String get onboarding_step_manual_resources_title => '手动准备词典和音频';
+  @override
+  String get onboarding_step_manual_resources_body =>
+      '不下载推荐包时，在这里按需准备资源。进入查词教程前至少导入一本词典；有声书音频和单词发音音频按需配置。';
+  @override
+  String get onboarding_manual_dictionary_action => '导入词典';
+  @override
+  String get onboarding_manual_dictionary_action_desc =>
+      '打开词典管理，导入至少一个受支持的词典文件或压缩包。只有查词能返回释义后，后面的操作教程才有实际结果。';
+  @override
+  String get onboarding_manual_audiobook_action => '导入书籍和有声书音频';
+  @override
+  String get onboarding_manual_audiobook_action_desc =>
+      '打开书籍导入，选择书籍或文本、对齐字幕和一个或多个音频文件。音频需要配套字幕，Fushi 才能按句同步。';
+  @override
+  String get onboarding_manual_pronunciation_action => '配置单词发音音频';
+  @override
+  String get onboarding_manual_pronunciation_action_desc =>
+      '添加词典词条使用的本地或在线发音来源。它与附加到书籍的有声书音频是两套独立资源。';
+  @override
+  String get onboarding_lookup_verify_action => '先验证词典里有这个词';
+  @override
+  String get onboarding_lookup_verify_action_desc =>
+      '打开查词页，输入你正在学的任意词；确认当前已安装词典返回释义后，再用同一个词练习后续操作。教程不会写死示例词。';
+  @override
+  String get onboarding_step_first_anki_card_title => '完成第一张 Anki 卡片';
+  @override
+  String get onboarding_step_first_anki_card_body =>
+      '只有本次新手引导已连接 Anki，并选好了仍然可用的牌组和笔记类型，才会出现这一步。';
+  @override
+  String get onboarding_first_anki_lookup_title => '从真实词典结果开始';
+  @override
+  String get onboarding_first_anki_lookup_body =>
+      '查一个当前已安装词典确实能返回释义的词，不使用可能不存在于你词典里的固定示例词。';
+  @override
+  String get onboarding_first_anki_plus_title => '点词条上的加号';
+  @override
+  String get onboarding_first_anki_plus_body =>
+      '加号会打开制卡器，并带入当前单词、读音、释义、句子、音频和可用的画面上下文。';
+  @override
+  String get onboarding_first_anki_save_title => '检查后保存';
+  @override
+  String get onboarding_first_anki_save_body =>
+      '确认目标牌组、笔记类型和字段预览后保存，再打开 Anki 检查第一张卡是否已经写入。';
+  @override
+  String get onboarding_first_anki_action => '打开查词页并制卡';
+  @override
+  String get onboarding_first_anki_action_desc =>
+      '选择一个已经显示释义的词，点词条加号，检查字段后保存到刚才连接的 Anki 牌组。';
+  @override
+  String get onboarding_step_click_lookup_body =>
+      '先验证一个当前已安装词典确实能返回释义的词，再用同一个词练习书籍正文、漫画 OCR 文字和视频字幕里的点击查词。';
+  @override
+  String get onboarding_click_lookup_tap_body =>
+      '手机轻点刚才验证过的词中的一个字，电脑用鼠标左键单击。Fushi 会从这里开始匹配最长的词。';
+  @override
+  String get onboarding_global_lookup_windows_select_body =>
+      '拖选刚才已经验证能返回词典释义的同一个词，并保持文字处于选中状态。';
+  @override
+  String get onboarding_global_lookup_android_select_body =>
+      '长按刚才已经验证能返回词典释义的同一个词，再拖动选区手柄让它完整覆盖。';
 }
 
 // Path: <root>
@@ -153893,13 +154871,7 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get onboarding_step_click_lookup_title => 'Tap to look up words';
   @override
-  String get onboarding_step_click_lookup_body =>
-      'Inside Fushi, books, OCR text in manga, and video subtitles all support direct lookup from the character you touch.';
-  @override
   String get onboarding_click_lookup_tap_title => 'Tap the text';
-  @override
-  String get onboarding_click_lookup_tap_body =>
-      'On a phone, tap a character. On a computer, left-click it. Fushi starts there and matches the longest word.';
   @override
   String get onboarding_click_lookup_nested_title =>
       'Keep exploring in the popup';
@@ -153921,9 +154893,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get onboarding_global_lookup_windows_select_title =>
       'Select text in any app';
-  @override
-  String get onboarding_global_lookup_windows_select_body =>
-      'Highlight the word or phrase you want to look up and leave the selection active.';
   @override
   String get onboarding_global_lookup_windows_shortcut_title =>
       'Press Ctrl+Alt+D';
@@ -153949,9 +154918,6 @@ class _StringsZhHk extends _StringsEn {
   String get onboarding_global_lookup_android_select_title =>
       'Select text in another app';
   @override
-  String get onboarding_global_lookup_android_select_body =>
-      'Long-press text, then adjust the selection handles until they cover the word or phrase you want.';
-  @override
   String get onboarding_global_lookup_android_open_title => 'Choose Fushi';
   @override
   String get onboarding_global_lookup_android_open_body =>
@@ -153962,6 +154928,81 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get onboarding_global_lookup_android_continue_body =>
       'The lookup opens separately from the source app. You can tap more words inside it, then close it to return where you were.';
+  @override
+  String get onboarding_feature_manual_resources =>
+      'Import dictionaries and audio manually';
+  @override
+  String get onboarding_feature_manual_resources_hint =>
+      'Skip the pack; import your own dictionaries, audiobooks, and pronunciation sources';
+  @override
+  String get onboarding_step_manual_resources_title =>
+      'Prepare dictionaries and audio manually';
+  @override
+  String get onboarding_step_manual_resources_body =>
+      'Skip the recommended pack and prepare only what you need. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional.';
+  @override
+  String get onboarding_manual_dictionary_action => 'Import a dictionary';
+  @override
+  String get onboarding_manual_dictionary_action_desc =>
+      'Open dictionary management and import at least one supported dictionary file or archive. Lookup tutorials are useful only after a query returns a definition.';
+  @override
+  String get onboarding_manual_audiobook_action =>
+      'Import a book with audiobook audio';
+  @override
+  String get onboarding_manual_audiobook_action_desc =>
+      'Open book import and choose the book or text, aligned subtitles, and one or more audio files. Audio needs subtitles so Fushi can align it to sentences.';
+  @override
+  String get onboarding_manual_pronunciation_action =>
+      'Configure word pronunciation audio';
+  @override
+  String get onboarding_manual_pronunciation_action_desc =>
+      'Add local or online pronunciation sources used by dictionary entries. This is separate from audiobook audio attached to a book.';
+  @override
+  String get onboarding_lookup_verify_action =>
+      'Verify a word in your dictionary';
+  @override
+  String get onboarding_lookup_verify_action_desc =>
+      'Open lookup, enter any word you are learning, and continue only after the installed dictionary returns a definition. The tutorial does not hard-code a sample word.';
+  @override
+  String get onboarding_step_first_anki_card_title =>
+      'Create your first Anki card';
+  @override
+  String get onboarding_step_first_anki_card_body =>
+      'This step appears only after this onboarding session has connected to Anki and selected a usable deck and note type.';
+  @override
+  String get onboarding_first_anki_lookup_title =>
+      'Start from a real dictionary result';
+  @override
+  String get onboarding_first_anki_lookup_body =>
+      'Look up a word that your installed dictionary actually defines. There is no fixed tutorial word that might be absent from your dictionary.';
+  @override
+  String get onboarding_first_anki_plus_title =>
+      'Tap the plus button on the entry';
+  @override
+  String get onboarding_first_anki_plus_body =>
+      'The plus button opens the card creator with the current word, reading, meaning, sentence, audio, and available image context.';
+  @override
+  String get onboarding_first_anki_save_title => 'Review and save';
+  @override
+  String get onboarding_first_anki_save_body =>
+      'Confirm the target deck, note type, and field preview, then save. Open Anki to verify that the first card arrived.';
+  @override
+  String get onboarding_first_anki_action => 'Open lookup and create a card';
+  @override
+  String get onboarding_first_anki_action_desc =>
+      'Use a word with a visible definition, tap its plus button, review the fields, and save it to the connected Anki deck.';
+  @override
+  String get onboarding_step_click_lookup_body =>
+      'First verify a word that your installed dictionary actually defines. Then use that same word to practise direct lookup in books, manga OCR text, and video subtitles.';
+  @override
+  String get onboarding_click_lookup_tap_body =>
+      'On a phone, tap a character in the verified word. On a computer, left-click it. Fushi starts there and matches the longest word.';
+  @override
+  String get onboarding_global_lookup_windows_select_body =>
+      'Highlight the same word you already verified has a dictionary definition, and leave the selection active.';
+  @override
+  String get onboarding_global_lookup_android_select_body =>
+      'Long-press the same word you already verified has a dictionary definition, then adjust the selection handles to cover it.';
 }
 
 /// Flat map(s) containing all translations.
@@ -162113,12 +163154,8 @@ extension on _StringsEn {
             'Switch to built-in mode to create ${count} queued cards';
       case 'onboarding_step_click_lookup_title':
         return 'Tap to look up words';
-      case 'onboarding_step_click_lookup_body':
-        return 'Inside Fushi, books, OCR text in manga, and video subtitles all support direct lookup from the character you touch.';
       case 'onboarding_click_lookup_tap_title':
         return 'Tap the text';
-      case 'onboarding_click_lookup_tap_body':
-        return 'On a phone, tap a character. On a computer, left-click it. Fushi starts there and matches the longest word.';
       case 'onboarding_click_lookup_nested_title':
         return 'Keep exploring in the popup';
       case 'onboarding_click_lookup_nested_body':
@@ -162133,8 +163170,6 @@ extension on _StringsEn {
         return 'On Windows, select text in another app and summon the dictionary without switching back to Fushi.';
       case 'onboarding_global_lookup_windows_select_title':
         return 'Select text in any app';
-      case 'onboarding_global_lookup_windows_select_body':
-        return 'Highlight the word or phrase you want to look up and leave the selection active.';
       case 'onboarding_global_lookup_windows_shortcut_title':
         return 'Press Ctrl+Alt+D';
       case 'onboarding_global_lookup_windows_shortcut_body':
@@ -162151,8 +163186,6 @@ extension on _StringsEn {
         return 'On Android, the system passes selected text to Fushi through the text menu or Share sheet. There is no remappable global hotkey.';
       case 'onboarding_global_lookup_android_select_title':
         return 'Select text in another app';
-      case 'onboarding_global_lookup_android_select_body':
-        return 'Long-press text, then adjust the selection handles until they cover the word or phrase you want.';
       case 'onboarding_global_lookup_android_open_title':
         return 'Choose Fushi';
       case 'onboarding_global_lookup_android_open_body':
@@ -162161,6 +163194,58 @@ extension on _StringsEn {
         return 'Use the standalone popup';
       case 'onboarding_global_lookup_android_continue_body':
         return 'The lookup opens separately from the source app. You can tap more words inside it, then close it to return where you were.';
+      case 'onboarding_feature_manual_resources':
+        return 'Import dictionaries and audio manually';
+      case 'onboarding_feature_manual_resources_hint':
+        return 'Skip the pack; import your own dictionaries, audiobooks, and pronunciation sources';
+      case 'onboarding_step_manual_resources_title':
+        return 'Prepare dictionaries and audio manually';
+      case 'onboarding_step_manual_resources_body':
+        return 'Skip the recommended pack and prepare only what you need. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional.';
+      case 'onboarding_manual_dictionary_action':
+        return 'Import a dictionary';
+      case 'onboarding_manual_dictionary_action_desc':
+        return 'Open dictionary management and import at least one supported dictionary file or archive. Lookup tutorials are useful only after a query returns a definition.';
+      case 'onboarding_manual_audiobook_action':
+        return 'Import a book with audiobook audio';
+      case 'onboarding_manual_audiobook_action_desc':
+        return 'Open book import and choose the book or text, aligned subtitles, and one or more audio files. Audio needs subtitles so Fushi can align it to sentences.';
+      case 'onboarding_manual_pronunciation_action':
+        return 'Configure word pronunciation audio';
+      case 'onboarding_manual_pronunciation_action_desc':
+        return 'Add local or online pronunciation sources used by dictionary entries. This is separate from audiobook audio attached to a book.';
+      case 'onboarding_lookup_verify_action':
+        return 'Verify a word in your dictionary';
+      case 'onboarding_lookup_verify_action_desc':
+        return 'Open lookup, enter any word you are learning, and continue only after the installed dictionary returns a definition. The tutorial does not hard-code a sample word.';
+      case 'onboarding_step_first_anki_card_title':
+        return 'Create your first Anki card';
+      case 'onboarding_step_first_anki_card_body':
+        return 'This step appears only after this onboarding session has connected to Anki and selected a usable deck and note type.';
+      case 'onboarding_first_anki_lookup_title':
+        return 'Start from a real dictionary result';
+      case 'onboarding_first_anki_lookup_body':
+        return 'Look up a word that your installed dictionary actually defines. There is no fixed tutorial word that might be absent from your dictionary.';
+      case 'onboarding_first_anki_plus_title':
+        return 'Tap the plus button on the entry';
+      case 'onboarding_first_anki_plus_body':
+        return 'The plus button opens the card creator with the current word, reading, meaning, sentence, audio, and available image context.';
+      case 'onboarding_first_anki_save_title':
+        return 'Review and save';
+      case 'onboarding_first_anki_save_body':
+        return 'Confirm the target deck, note type, and field preview, then save. Open Anki to verify that the first card arrived.';
+      case 'onboarding_first_anki_action':
+        return 'Open lookup and create a card';
+      case 'onboarding_first_anki_action_desc':
+        return 'Use a word with a visible definition, tap its plus button, review the fields, and save it to the connected Anki deck.';
+      case 'onboarding_step_click_lookup_body':
+        return 'First verify a word that your installed dictionary actually defines. Then use that same word to practise direct lookup in books, manga OCR text, and video subtitles.';
+      case 'onboarding_click_lookup_tap_body':
+        return 'On a phone, tap a character in the verified word. On a computer, left-click it. Fushi starts there and matches the longest word.';
+      case 'onboarding_global_lookup_windows_select_body':
+        return 'Highlight the same word you already verified has a dictionary definition, and leave the selection active.';
+      case 'onboarding_global_lookup_android_select_body':
+        return 'Long-press the same word you already verified has a dictionary definition, then adjust the selection handles to cover it.';
       default:
         return null;
     }
@@ -170308,12 +171393,8 @@ extension on _StringsAr {
             'التبديل إلى الوضع المدمج لإنشاء ${count} بطاقة منتظرة';
       case 'onboarding_step_click_lookup_title':
         return 'Tap to look up words';
-      case 'onboarding_step_click_lookup_body':
-        return 'Inside Fushi, books, OCR text in manga, and video subtitles all support direct lookup from the character you touch.';
       case 'onboarding_click_lookup_tap_title':
         return 'Tap the text';
-      case 'onboarding_click_lookup_tap_body':
-        return 'On a phone, tap a character. On a computer, left-click it. Fushi starts there and matches the longest word.';
       case 'onboarding_click_lookup_nested_title':
         return 'Keep exploring in the popup';
       case 'onboarding_click_lookup_nested_body':
@@ -170328,8 +171409,6 @@ extension on _StringsAr {
         return 'On Windows, select text in another app and summon the dictionary without switching back to Fushi.';
       case 'onboarding_global_lookup_windows_select_title':
         return 'Select text in any app';
-      case 'onboarding_global_lookup_windows_select_body':
-        return 'Highlight the word or phrase you want to look up and leave the selection active.';
       case 'onboarding_global_lookup_windows_shortcut_title':
         return 'Press Ctrl+Alt+D';
       case 'onboarding_global_lookup_windows_shortcut_body':
@@ -170346,8 +171425,6 @@ extension on _StringsAr {
         return 'On Android, the system passes selected text to Fushi through the text menu or Share sheet. There is no remappable global hotkey.';
       case 'onboarding_global_lookup_android_select_title':
         return 'Select text in another app';
-      case 'onboarding_global_lookup_android_select_body':
-        return 'Long-press text, then adjust the selection handles until they cover the word or phrase you want.';
       case 'onboarding_global_lookup_android_open_title':
         return 'Choose Fushi';
       case 'onboarding_global_lookup_android_open_body':
@@ -170356,6 +171433,58 @@ extension on _StringsAr {
         return 'Use the standalone popup';
       case 'onboarding_global_lookup_android_continue_body':
         return 'The lookup opens separately from the source app. You can tap more words inside it, then close it to return where you were.';
+      case 'onboarding_feature_manual_resources':
+        return 'Import dictionaries and audio manually';
+      case 'onboarding_feature_manual_resources_hint':
+        return 'Skip the pack; import your own dictionaries, audiobooks, and pronunciation sources';
+      case 'onboarding_step_manual_resources_title':
+        return 'Prepare dictionaries and audio manually';
+      case 'onboarding_step_manual_resources_body':
+        return 'Skip the recommended pack and prepare only what you need. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional.';
+      case 'onboarding_manual_dictionary_action':
+        return 'Import a dictionary';
+      case 'onboarding_manual_dictionary_action_desc':
+        return 'Open dictionary management and import at least one supported dictionary file or archive. Lookup tutorials are useful only after a query returns a definition.';
+      case 'onboarding_manual_audiobook_action':
+        return 'Import a book with audiobook audio';
+      case 'onboarding_manual_audiobook_action_desc':
+        return 'Open book import and choose the book or text, aligned subtitles, and one or more audio files. Audio needs subtitles so Fushi can align it to sentences.';
+      case 'onboarding_manual_pronunciation_action':
+        return 'Configure word pronunciation audio';
+      case 'onboarding_manual_pronunciation_action_desc':
+        return 'Add local or online pronunciation sources used by dictionary entries. This is separate from audiobook audio attached to a book.';
+      case 'onboarding_lookup_verify_action':
+        return 'Verify a word in your dictionary';
+      case 'onboarding_lookup_verify_action_desc':
+        return 'Open lookup, enter any word you are learning, and continue only after the installed dictionary returns a definition. The tutorial does not hard-code a sample word.';
+      case 'onboarding_step_first_anki_card_title':
+        return 'Create your first Anki card';
+      case 'onboarding_step_first_anki_card_body':
+        return 'This step appears only after this onboarding session has connected to Anki and selected a usable deck and note type.';
+      case 'onboarding_first_anki_lookup_title':
+        return 'Start from a real dictionary result';
+      case 'onboarding_first_anki_lookup_body':
+        return 'Look up a word that your installed dictionary actually defines. There is no fixed tutorial word that might be absent from your dictionary.';
+      case 'onboarding_first_anki_plus_title':
+        return 'Tap the plus button on the entry';
+      case 'onboarding_first_anki_plus_body':
+        return 'The plus button opens the card creator with the current word, reading, meaning, sentence, audio, and available image context.';
+      case 'onboarding_first_anki_save_title':
+        return 'Review and save';
+      case 'onboarding_first_anki_save_body':
+        return 'Confirm the target deck, note type, and field preview, then save. Open Anki to verify that the first card arrived.';
+      case 'onboarding_first_anki_action':
+        return 'Open lookup and create a card';
+      case 'onboarding_first_anki_action_desc':
+        return 'Use a word with a visible definition, tap its plus button, review the fields, and save it to the connected Anki deck.';
+      case 'onboarding_step_click_lookup_body':
+        return 'First verify a word that your installed dictionary actually defines. Then use that same word to practise direct lookup in books, manga OCR text, and video subtitles.';
+      case 'onboarding_click_lookup_tap_body':
+        return 'On a phone, tap a character in the verified word. On a computer, left-click it. Fushi starts there and matches the longest word.';
+      case 'onboarding_global_lookup_windows_select_body':
+        return 'Highlight the same word you already verified has a dictionary definition, and leave the selection active.';
+      case 'onboarding_global_lookup_android_select_body':
+        return 'Long-press the same word you already verified has a dictionary definition, then adjust the selection handles to cover it.';
       default:
         return null;
     }
@@ -178546,12 +179675,8 @@ extension on _StringsDe {
             'In den integrierten Modus wechseln, um ${count} wartende Karten zu erstellen';
       case 'onboarding_step_click_lookup_title':
         return 'Tap to look up words';
-      case 'onboarding_step_click_lookup_body':
-        return 'Inside Fushi, books, OCR text in manga, and video subtitles all support direct lookup from the character you touch.';
       case 'onboarding_click_lookup_tap_title':
         return 'Tap the text';
-      case 'onboarding_click_lookup_tap_body':
-        return 'On a phone, tap a character. On a computer, left-click it. Fushi starts there and matches the longest word.';
       case 'onboarding_click_lookup_nested_title':
         return 'Keep exploring in the popup';
       case 'onboarding_click_lookup_nested_body':
@@ -178566,8 +179691,6 @@ extension on _StringsDe {
         return 'On Windows, select text in another app and summon the dictionary without switching back to Fushi.';
       case 'onboarding_global_lookup_windows_select_title':
         return 'Select text in any app';
-      case 'onboarding_global_lookup_windows_select_body':
-        return 'Highlight the word or phrase you want to look up and leave the selection active.';
       case 'onboarding_global_lookup_windows_shortcut_title':
         return 'Press Ctrl+Alt+D';
       case 'onboarding_global_lookup_windows_shortcut_body':
@@ -178584,8 +179707,6 @@ extension on _StringsDe {
         return 'On Android, the system passes selected text to Fushi through the text menu or Share sheet. There is no remappable global hotkey.';
       case 'onboarding_global_lookup_android_select_title':
         return 'Select text in another app';
-      case 'onboarding_global_lookup_android_select_body':
-        return 'Long-press text, then adjust the selection handles until they cover the word or phrase you want.';
       case 'onboarding_global_lookup_android_open_title':
         return 'Choose Fushi';
       case 'onboarding_global_lookup_android_open_body':
@@ -178594,6 +179715,58 @@ extension on _StringsDe {
         return 'Use the standalone popup';
       case 'onboarding_global_lookup_android_continue_body':
         return 'The lookup opens separately from the source app. You can tap more words inside it, then close it to return where you were.';
+      case 'onboarding_feature_manual_resources':
+        return 'Import dictionaries and audio manually';
+      case 'onboarding_feature_manual_resources_hint':
+        return 'Skip the pack; import your own dictionaries, audiobooks, and pronunciation sources';
+      case 'onboarding_step_manual_resources_title':
+        return 'Prepare dictionaries and audio manually';
+      case 'onboarding_step_manual_resources_body':
+        return 'Skip the recommended pack and prepare only what you need. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional.';
+      case 'onboarding_manual_dictionary_action':
+        return 'Import a dictionary';
+      case 'onboarding_manual_dictionary_action_desc':
+        return 'Open dictionary management and import at least one supported dictionary file or archive. Lookup tutorials are useful only after a query returns a definition.';
+      case 'onboarding_manual_audiobook_action':
+        return 'Import a book with audiobook audio';
+      case 'onboarding_manual_audiobook_action_desc':
+        return 'Open book import and choose the book or text, aligned subtitles, and one or more audio files. Audio needs subtitles so Fushi can align it to sentences.';
+      case 'onboarding_manual_pronunciation_action':
+        return 'Configure word pronunciation audio';
+      case 'onboarding_manual_pronunciation_action_desc':
+        return 'Add local or online pronunciation sources used by dictionary entries. This is separate from audiobook audio attached to a book.';
+      case 'onboarding_lookup_verify_action':
+        return 'Verify a word in your dictionary';
+      case 'onboarding_lookup_verify_action_desc':
+        return 'Open lookup, enter any word you are learning, and continue only after the installed dictionary returns a definition. The tutorial does not hard-code a sample word.';
+      case 'onboarding_step_first_anki_card_title':
+        return 'Create your first Anki card';
+      case 'onboarding_step_first_anki_card_body':
+        return 'This step appears only after this onboarding session has connected to Anki and selected a usable deck and note type.';
+      case 'onboarding_first_anki_lookup_title':
+        return 'Start from a real dictionary result';
+      case 'onboarding_first_anki_lookup_body':
+        return 'Look up a word that your installed dictionary actually defines. There is no fixed tutorial word that might be absent from your dictionary.';
+      case 'onboarding_first_anki_plus_title':
+        return 'Tap the plus button on the entry';
+      case 'onboarding_first_anki_plus_body':
+        return 'The plus button opens the card creator with the current word, reading, meaning, sentence, audio, and available image context.';
+      case 'onboarding_first_anki_save_title':
+        return 'Review and save';
+      case 'onboarding_first_anki_save_body':
+        return 'Confirm the target deck, note type, and field preview, then save. Open Anki to verify that the first card arrived.';
+      case 'onboarding_first_anki_action':
+        return 'Open lookup and create a card';
+      case 'onboarding_first_anki_action_desc':
+        return 'Use a word with a visible definition, tap its plus button, review the fields, and save it to the connected Anki deck.';
+      case 'onboarding_step_click_lookup_body':
+        return 'First verify a word that your installed dictionary actually defines. Then use that same word to practise direct lookup in books, manga OCR text, and video subtitles.';
+      case 'onboarding_click_lookup_tap_body':
+        return 'On a phone, tap a character in the verified word. On a computer, left-click it. Fushi starts there and matches the longest word.';
+      case 'onboarding_global_lookup_windows_select_body':
+        return 'Highlight the same word you already verified has a dictionary definition, and leave the selection active.';
+      case 'onboarding_global_lookup_android_select_body':
+        return 'Long-press the same word you already verified has a dictionary definition, then adjust the selection handles to cover it.';
       default:
         return null;
     }
@@ -186776,12 +187949,8 @@ extension on _StringsEs {
             'Cambiar al modo integrado para crear ${count} tarjetas en cola';
       case 'onboarding_step_click_lookup_title':
         return 'Tap to look up words';
-      case 'onboarding_step_click_lookup_body':
-        return 'Inside Fushi, books, OCR text in manga, and video subtitles all support direct lookup from the character you touch.';
       case 'onboarding_click_lookup_tap_title':
         return 'Tap the text';
-      case 'onboarding_click_lookup_tap_body':
-        return 'On a phone, tap a character. On a computer, left-click it. Fushi starts there and matches the longest word.';
       case 'onboarding_click_lookup_nested_title':
         return 'Keep exploring in the popup';
       case 'onboarding_click_lookup_nested_body':
@@ -186796,8 +187965,6 @@ extension on _StringsEs {
         return 'On Windows, select text in another app and summon the dictionary without switching back to Fushi.';
       case 'onboarding_global_lookup_windows_select_title':
         return 'Select text in any app';
-      case 'onboarding_global_lookup_windows_select_body':
-        return 'Highlight the word or phrase you want to look up and leave the selection active.';
       case 'onboarding_global_lookup_windows_shortcut_title':
         return 'Press Ctrl+Alt+D';
       case 'onboarding_global_lookup_windows_shortcut_body':
@@ -186814,8 +187981,6 @@ extension on _StringsEs {
         return 'On Android, the system passes selected text to Fushi through the text menu or Share sheet. There is no remappable global hotkey.';
       case 'onboarding_global_lookup_android_select_title':
         return 'Select text in another app';
-      case 'onboarding_global_lookup_android_select_body':
-        return 'Long-press text, then adjust the selection handles until they cover the word or phrase you want.';
       case 'onboarding_global_lookup_android_open_title':
         return 'Choose Fushi';
       case 'onboarding_global_lookup_android_open_body':
@@ -186824,6 +187989,58 @@ extension on _StringsEs {
         return 'Use the standalone popup';
       case 'onboarding_global_lookup_android_continue_body':
         return 'The lookup opens separately from the source app. You can tap more words inside it, then close it to return where you were.';
+      case 'onboarding_feature_manual_resources':
+        return 'Import dictionaries and audio manually';
+      case 'onboarding_feature_manual_resources_hint':
+        return 'Skip the pack; import your own dictionaries, audiobooks, and pronunciation sources';
+      case 'onboarding_step_manual_resources_title':
+        return 'Prepare dictionaries and audio manually';
+      case 'onboarding_step_manual_resources_body':
+        return 'Skip the recommended pack and prepare only what you need. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional.';
+      case 'onboarding_manual_dictionary_action':
+        return 'Import a dictionary';
+      case 'onboarding_manual_dictionary_action_desc':
+        return 'Open dictionary management and import at least one supported dictionary file or archive. Lookup tutorials are useful only after a query returns a definition.';
+      case 'onboarding_manual_audiobook_action':
+        return 'Import a book with audiobook audio';
+      case 'onboarding_manual_audiobook_action_desc':
+        return 'Open book import and choose the book or text, aligned subtitles, and one or more audio files. Audio needs subtitles so Fushi can align it to sentences.';
+      case 'onboarding_manual_pronunciation_action':
+        return 'Configure word pronunciation audio';
+      case 'onboarding_manual_pronunciation_action_desc':
+        return 'Add local or online pronunciation sources used by dictionary entries. This is separate from audiobook audio attached to a book.';
+      case 'onboarding_lookup_verify_action':
+        return 'Verify a word in your dictionary';
+      case 'onboarding_lookup_verify_action_desc':
+        return 'Open lookup, enter any word you are learning, and continue only after the installed dictionary returns a definition. The tutorial does not hard-code a sample word.';
+      case 'onboarding_step_first_anki_card_title':
+        return 'Create your first Anki card';
+      case 'onboarding_step_first_anki_card_body':
+        return 'This step appears only after this onboarding session has connected to Anki and selected a usable deck and note type.';
+      case 'onboarding_first_anki_lookup_title':
+        return 'Start from a real dictionary result';
+      case 'onboarding_first_anki_lookup_body':
+        return 'Look up a word that your installed dictionary actually defines. There is no fixed tutorial word that might be absent from your dictionary.';
+      case 'onboarding_first_anki_plus_title':
+        return 'Tap the plus button on the entry';
+      case 'onboarding_first_anki_plus_body':
+        return 'The plus button opens the card creator with the current word, reading, meaning, sentence, audio, and available image context.';
+      case 'onboarding_first_anki_save_title':
+        return 'Review and save';
+      case 'onboarding_first_anki_save_body':
+        return 'Confirm the target deck, note type, and field preview, then save. Open Anki to verify that the first card arrived.';
+      case 'onboarding_first_anki_action':
+        return 'Open lookup and create a card';
+      case 'onboarding_first_anki_action_desc':
+        return 'Use a word with a visible definition, tap its plus button, review the fields, and save it to the connected Anki deck.';
+      case 'onboarding_step_click_lookup_body':
+        return 'First verify a word that your installed dictionary actually defines. Then use that same word to practise direct lookup in books, manga OCR text, and video subtitles.';
+      case 'onboarding_click_lookup_tap_body':
+        return 'On a phone, tap a character in the verified word. On a computer, left-click it. Fushi starts there and matches the longest word.';
+      case 'onboarding_global_lookup_windows_select_body':
+        return 'Highlight the same word you already verified has a dictionary definition, and leave the selection active.';
+      case 'onboarding_global_lookup_android_select_body':
+        return 'Long-press the same word you already verified has a dictionary definition, then adjust the selection handles to cover it.';
       default:
         return null;
     }
@@ -195014,12 +196231,8 @@ extension on _StringsFr {
             'Passer en mode intégré pour créer ${count} cartes en attente';
       case 'onboarding_step_click_lookup_title':
         return 'Tap to look up words';
-      case 'onboarding_step_click_lookup_body':
-        return 'Inside Fushi, books, OCR text in manga, and video subtitles all support direct lookup from the character you touch.';
       case 'onboarding_click_lookup_tap_title':
         return 'Tap the text';
-      case 'onboarding_click_lookup_tap_body':
-        return 'On a phone, tap a character. On a computer, left-click it. Fushi starts there and matches the longest word.';
       case 'onboarding_click_lookup_nested_title':
         return 'Keep exploring in the popup';
       case 'onboarding_click_lookup_nested_body':
@@ -195034,8 +196247,6 @@ extension on _StringsFr {
         return 'On Windows, select text in another app and summon the dictionary without switching back to Fushi.';
       case 'onboarding_global_lookup_windows_select_title':
         return 'Select text in any app';
-      case 'onboarding_global_lookup_windows_select_body':
-        return 'Highlight the word or phrase you want to look up and leave the selection active.';
       case 'onboarding_global_lookup_windows_shortcut_title':
         return 'Press Ctrl+Alt+D';
       case 'onboarding_global_lookup_windows_shortcut_body':
@@ -195052,8 +196263,6 @@ extension on _StringsFr {
         return 'On Android, the system passes selected text to Fushi through the text menu or Share sheet. There is no remappable global hotkey.';
       case 'onboarding_global_lookup_android_select_title':
         return 'Select text in another app';
-      case 'onboarding_global_lookup_android_select_body':
-        return 'Long-press text, then adjust the selection handles until they cover the word or phrase you want.';
       case 'onboarding_global_lookup_android_open_title':
         return 'Choose Fushi';
       case 'onboarding_global_lookup_android_open_body':
@@ -195062,6 +196271,58 @@ extension on _StringsFr {
         return 'Use the standalone popup';
       case 'onboarding_global_lookup_android_continue_body':
         return 'The lookup opens separately from the source app. You can tap more words inside it, then close it to return where you were.';
+      case 'onboarding_feature_manual_resources':
+        return 'Import dictionaries and audio manually';
+      case 'onboarding_feature_manual_resources_hint':
+        return 'Skip the pack; import your own dictionaries, audiobooks, and pronunciation sources';
+      case 'onboarding_step_manual_resources_title':
+        return 'Prepare dictionaries and audio manually';
+      case 'onboarding_step_manual_resources_body':
+        return 'Skip the recommended pack and prepare only what you need. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional.';
+      case 'onboarding_manual_dictionary_action':
+        return 'Import a dictionary';
+      case 'onboarding_manual_dictionary_action_desc':
+        return 'Open dictionary management and import at least one supported dictionary file or archive. Lookup tutorials are useful only after a query returns a definition.';
+      case 'onboarding_manual_audiobook_action':
+        return 'Import a book with audiobook audio';
+      case 'onboarding_manual_audiobook_action_desc':
+        return 'Open book import and choose the book or text, aligned subtitles, and one or more audio files. Audio needs subtitles so Fushi can align it to sentences.';
+      case 'onboarding_manual_pronunciation_action':
+        return 'Configure word pronunciation audio';
+      case 'onboarding_manual_pronunciation_action_desc':
+        return 'Add local or online pronunciation sources used by dictionary entries. This is separate from audiobook audio attached to a book.';
+      case 'onboarding_lookup_verify_action':
+        return 'Verify a word in your dictionary';
+      case 'onboarding_lookup_verify_action_desc':
+        return 'Open lookup, enter any word you are learning, and continue only after the installed dictionary returns a definition. The tutorial does not hard-code a sample word.';
+      case 'onboarding_step_first_anki_card_title':
+        return 'Create your first Anki card';
+      case 'onboarding_step_first_anki_card_body':
+        return 'This step appears only after this onboarding session has connected to Anki and selected a usable deck and note type.';
+      case 'onboarding_first_anki_lookup_title':
+        return 'Start from a real dictionary result';
+      case 'onboarding_first_anki_lookup_body':
+        return 'Look up a word that your installed dictionary actually defines. There is no fixed tutorial word that might be absent from your dictionary.';
+      case 'onboarding_first_anki_plus_title':
+        return 'Tap the plus button on the entry';
+      case 'onboarding_first_anki_plus_body':
+        return 'The plus button opens the card creator with the current word, reading, meaning, sentence, audio, and available image context.';
+      case 'onboarding_first_anki_save_title':
+        return 'Review and save';
+      case 'onboarding_first_anki_save_body':
+        return 'Confirm the target deck, note type, and field preview, then save. Open Anki to verify that the first card arrived.';
+      case 'onboarding_first_anki_action':
+        return 'Open lookup and create a card';
+      case 'onboarding_first_anki_action_desc':
+        return 'Use a word with a visible definition, tap its plus button, review the fields, and save it to the connected Anki deck.';
+      case 'onboarding_step_click_lookup_body':
+        return 'First verify a word that your installed dictionary actually defines. Then use that same word to practise direct lookup in books, manga OCR text, and video subtitles.';
+      case 'onboarding_click_lookup_tap_body':
+        return 'On a phone, tap a character in the verified word. On a computer, left-click it. Fushi starts there and matches the longest word.';
+      case 'onboarding_global_lookup_windows_select_body':
+        return 'Highlight the same word you already verified has a dictionary definition, and leave the selection active.';
+      case 'onboarding_global_lookup_android_select_body':
+        return 'Long-press the same word you already verified has a dictionary definition, then adjust the selection handles to cover it.';
       default:
         return null;
     }
@@ -203224,12 +204485,8 @@ extension on _StringsId {
             'Beralih ke mode bawaan untuk membuat ${count} kartu yang antre';
       case 'onboarding_step_click_lookup_title':
         return 'Tap to look up words';
-      case 'onboarding_step_click_lookup_body':
-        return 'Inside Fushi, books, OCR text in manga, and video subtitles all support direct lookup from the character you touch.';
       case 'onboarding_click_lookup_tap_title':
         return 'Tap the text';
-      case 'onboarding_click_lookup_tap_body':
-        return 'On a phone, tap a character. On a computer, left-click it. Fushi starts there and matches the longest word.';
       case 'onboarding_click_lookup_nested_title':
         return 'Keep exploring in the popup';
       case 'onboarding_click_lookup_nested_body':
@@ -203244,8 +204501,6 @@ extension on _StringsId {
         return 'On Windows, select text in another app and summon the dictionary without switching back to Fushi.';
       case 'onboarding_global_lookup_windows_select_title':
         return 'Select text in any app';
-      case 'onboarding_global_lookup_windows_select_body':
-        return 'Highlight the word or phrase you want to look up and leave the selection active.';
       case 'onboarding_global_lookup_windows_shortcut_title':
         return 'Press Ctrl+Alt+D';
       case 'onboarding_global_lookup_windows_shortcut_body':
@@ -203262,8 +204517,6 @@ extension on _StringsId {
         return 'On Android, the system passes selected text to Fushi through the text menu or Share sheet. There is no remappable global hotkey.';
       case 'onboarding_global_lookup_android_select_title':
         return 'Select text in another app';
-      case 'onboarding_global_lookup_android_select_body':
-        return 'Long-press text, then adjust the selection handles until they cover the word or phrase you want.';
       case 'onboarding_global_lookup_android_open_title':
         return 'Choose Fushi';
       case 'onboarding_global_lookup_android_open_body':
@@ -203272,6 +204525,58 @@ extension on _StringsId {
         return 'Use the standalone popup';
       case 'onboarding_global_lookup_android_continue_body':
         return 'The lookup opens separately from the source app. You can tap more words inside it, then close it to return where you were.';
+      case 'onboarding_feature_manual_resources':
+        return 'Import dictionaries and audio manually';
+      case 'onboarding_feature_manual_resources_hint':
+        return 'Skip the pack; import your own dictionaries, audiobooks, and pronunciation sources';
+      case 'onboarding_step_manual_resources_title':
+        return 'Prepare dictionaries and audio manually';
+      case 'onboarding_step_manual_resources_body':
+        return 'Skip the recommended pack and prepare only what you need. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional.';
+      case 'onboarding_manual_dictionary_action':
+        return 'Import a dictionary';
+      case 'onboarding_manual_dictionary_action_desc':
+        return 'Open dictionary management and import at least one supported dictionary file or archive. Lookup tutorials are useful only after a query returns a definition.';
+      case 'onboarding_manual_audiobook_action':
+        return 'Import a book with audiobook audio';
+      case 'onboarding_manual_audiobook_action_desc':
+        return 'Open book import and choose the book or text, aligned subtitles, and one or more audio files. Audio needs subtitles so Fushi can align it to sentences.';
+      case 'onboarding_manual_pronunciation_action':
+        return 'Configure word pronunciation audio';
+      case 'onboarding_manual_pronunciation_action_desc':
+        return 'Add local or online pronunciation sources used by dictionary entries. This is separate from audiobook audio attached to a book.';
+      case 'onboarding_lookup_verify_action':
+        return 'Verify a word in your dictionary';
+      case 'onboarding_lookup_verify_action_desc':
+        return 'Open lookup, enter any word you are learning, and continue only after the installed dictionary returns a definition. The tutorial does not hard-code a sample word.';
+      case 'onboarding_step_first_anki_card_title':
+        return 'Create your first Anki card';
+      case 'onboarding_step_first_anki_card_body':
+        return 'This step appears only after this onboarding session has connected to Anki and selected a usable deck and note type.';
+      case 'onboarding_first_anki_lookup_title':
+        return 'Start from a real dictionary result';
+      case 'onboarding_first_anki_lookup_body':
+        return 'Look up a word that your installed dictionary actually defines. There is no fixed tutorial word that might be absent from your dictionary.';
+      case 'onboarding_first_anki_plus_title':
+        return 'Tap the plus button on the entry';
+      case 'onboarding_first_anki_plus_body':
+        return 'The plus button opens the card creator with the current word, reading, meaning, sentence, audio, and available image context.';
+      case 'onboarding_first_anki_save_title':
+        return 'Review and save';
+      case 'onboarding_first_anki_save_body':
+        return 'Confirm the target deck, note type, and field preview, then save. Open Anki to verify that the first card arrived.';
+      case 'onboarding_first_anki_action':
+        return 'Open lookup and create a card';
+      case 'onboarding_first_anki_action_desc':
+        return 'Use a word with a visible definition, tap its plus button, review the fields, and save it to the connected Anki deck.';
+      case 'onboarding_step_click_lookup_body':
+        return 'First verify a word that your installed dictionary actually defines. Then use that same word to practise direct lookup in books, manga OCR text, and video subtitles.';
+      case 'onboarding_click_lookup_tap_body':
+        return 'On a phone, tap a character in the verified word. On a computer, left-click it. Fushi starts there and matches the longest word.';
+      case 'onboarding_global_lookup_windows_select_body':
+        return 'Highlight the same word you already verified has a dictionary definition, and leave the selection active.';
+      case 'onboarding_global_lookup_android_select_body':
+        return 'Long-press the same word you already verified has a dictionary definition, then adjust the selection handles to cover it.';
       default:
         return null;
     }
@@ -211455,12 +212760,8 @@ extension on _StringsIt {
             'Passa alla modalità integrata per creare ${count} carte in coda';
       case 'onboarding_step_click_lookup_title':
         return 'Tap to look up words';
-      case 'onboarding_step_click_lookup_body':
-        return 'Inside Fushi, books, OCR text in manga, and video subtitles all support direct lookup from the character you touch.';
       case 'onboarding_click_lookup_tap_title':
         return 'Tap the text';
-      case 'onboarding_click_lookup_tap_body':
-        return 'On a phone, tap a character. On a computer, left-click it. Fushi starts there and matches the longest word.';
       case 'onboarding_click_lookup_nested_title':
         return 'Keep exploring in the popup';
       case 'onboarding_click_lookup_nested_body':
@@ -211475,8 +212776,6 @@ extension on _StringsIt {
         return 'On Windows, select text in another app and summon the dictionary without switching back to Fushi.';
       case 'onboarding_global_lookup_windows_select_title':
         return 'Select text in any app';
-      case 'onboarding_global_lookup_windows_select_body':
-        return 'Highlight the word or phrase you want to look up and leave the selection active.';
       case 'onboarding_global_lookup_windows_shortcut_title':
         return 'Press Ctrl+Alt+D';
       case 'onboarding_global_lookup_windows_shortcut_body':
@@ -211493,8 +212792,6 @@ extension on _StringsIt {
         return 'On Android, the system passes selected text to Fushi through the text menu or Share sheet. There is no remappable global hotkey.';
       case 'onboarding_global_lookup_android_select_title':
         return 'Select text in another app';
-      case 'onboarding_global_lookup_android_select_body':
-        return 'Long-press text, then adjust the selection handles until they cover the word or phrase you want.';
       case 'onboarding_global_lookup_android_open_title':
         return 'Choose Fushi';
       case 'onboarding_global_lookup_android_open_body':
@@ -211503,6 +212800,58 @@ extension on _StringsIt {
         return 'Use the standalone popup';
       case 'onboarding_global_lookup_android_continue_body':
         return 'The lookup opens separately from the source app. You can tap more words inside it, then close it to return where you were.';
+      case 'onboarding_feature_manual_resources':
+        return 'Import dictionaries and audio manually';
+      case 'onboarding_feature_manual_resources_hint':
+        return 'Skip the pack; import your own dictionaries, audiobooks, and pronunciation sources';
+      case 'onboarding_step_manual_resources_title':
+        return 'Prepare dictionaries and audio manually';
+      case 'onboarding_step_manual_resources_body':
+        return 'Skip the recommended pack and prepare only what you need. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional.';
+      case 'onboarding_manual_dictionary_action':
+        return 'Import a dictionary';
+      case 'onboarding_manual_dictionary_action_desc':
+        return 'Open dictionary management and import at least one supported dictionary file or archive. Lookup tutorials are useful only after a query returns a definition.';
+      case 'onboarding_manual_audiobook_action':
+        return 'Import a book with audiobook audio';
+      case 'onboarding_manual_audiobook_action_desc':
+        return 'Open book import and choose the book or text, aligned subtitles, and one or more audio files. Audio needs subtitles so Fushi can align it to sentences.';
+      case 'onboarding_manual_pronunciation_action':
+        return 'Configure word pronunciation audio';
+      case 'onboarding_manual_pronunciation_action_desc':
+        return 'Add local or online pronunciation sources used by dictionary entries. This is separate from audiobook audio attached to a book.';
+      case 'onboarding_lookup_verify_action':
+        return 'Verify a word in your dictionary';
+      case 'onboarding_lookup_verify_action_desc':
+        return 'Open lookup, enter any word you are learning, and continue only after the installed dictionary returns a definition. The tutorial does not hard-code a sample word.';
+      case 'onboarding_step_first_anki_card_title':
+        return 'Create your first Anki card';
+      case 'onboarding_step_first_anki_card_body':
+        return 'This step appears only after this onboarding session has connected to Anki and selected a usable deck and note type.';
+      case 'onboarding_first_anki_lookup_title':
+        return 'Start from a real dictionary result';
+      case 'onboarding_first_anki_lookup_body':
+        return 'Look up a word that your installed dictionary actually defines. There is no fixed tutorial word that might be absent from your dictionary.';
+      case 'onboarding_first_anki_plus_title':
+        return 'Tap the plus button on the entry';
+      case 'onboarding_first_anki_plus_body':
+        return 'The plus button opens the card creator with the current word, reading, meaning, sentence, audio, and available image context.';
+      case 'onboarding_first_anki_save_title':
+        return 'Review and save';
+      case 'onboarding_first_anki_save_body':
+        return 'Confirm the target deck, note type, and field preview, then save. Open Anki to verify that the first card arrived.';
+      case 'onboarding_first_anki_action':
+        return 'Open lookup and create a card';
+      case 'onboarding_first_anki_action_desc':
+        return 'Use a word with a visible definition, tap its plus button, review the fields, and save it to the connected Anki deck.';
+      case 'onboarding_step_click_lookup_body':
+        return 'First verify a word that your installed dictionary actually defines. Then use that same word to practise direct lookup in books, manga OCR text, and video subtitles.';
+      case 'onboarding_click_lookup_tap_body':
+        return 'On a phone, tap a character in the verified word. On a computer, left-click it. Fushi starts there and matches the longest word.';
+      case 'onboarding_global_lookup_windows_select_body':
+        return 'Highlight the same word you already verified has a dictionary definition, and leave the selection active.';
+      case 'onboarding_global_lookup_android_select_body':
+        return 'Long-press the same word you already verified has a dictionary definition, then adjust the selection handles to cover it.';
       default:
         return null;
     }
@@ -219616,12 +220965,8 @@ extension on _StringsJa {
         return ({required Object count}) => '内蔵モードに切り替えて ${count} 件のカードを作成';
       case 'onboarding_step_click_lookup_title':
         return 'Tap to look up words';
-      case 'onboarding_step_click_lookup_body':
-        return 'Inside Fushi, books, OCR text in manga, and video subtitles all support direct lookup from the character you touch.';
       case 'onboarding_click_lookup_tap_title':
         return 'Tap the text';
-      case 'onboarding_click_lookup_tap_body':
-        return 'On a phone, tap a character. On a computer, left-click it. Fushi starts there and matches the longest word.';
       case 'onboarding_click_lookup_nested_title':
         return 'Keep exploring in the popup';
       case 'onboarding_click_lookup_nested_body':
@@ -219636,8 +220981,6 @@ extension on _StringsJa {
         return 'On Windows, select text in another app and summon the dictionary without switching back to Fushi.';
       case 'onboarding_global_lookup_windows_select_title':
         return 'Select text in any app';
-      case 'onboarding_global_lookup_windows_select_body':
-        return 'Highlight the word or phrase you want to look up and leave the selection active.';
       case 'onboarding_global_lookup_windows_shortcut_title':
         return 'Press Ctrl+Alt+D';
       case 'onboarding_global_lookup_windows_shortcut_body':
@@ -219654,8 +220997,6 @@ extension on _StringsJa {
         return 'On Android, the system passes selected text to Fushi through the text menu or Share sheet. There is no remappable global hotkey.';
       case 'onboarding_global_lookup_android_select_title':
         return 'Select text in another app';
-      case 'onboarding_global_lookup_android_select_body':
-        return 'Long-press text, then adjust the selection handles until they cover the word or phrase you want.';
       case 'onboarding_global_lookup_android_open_title':
         return 'Choose Fushi';
       case 'onboarding_global_lookup_android_open_body':
@@ -219664,6 +221005,58 @@ extension on _StringsJa {
         return 'Use the standalone popup';
       case 'onboarding_global_lookup_android_continue_body':
         return 'The lookup opens separately from the source app. You can tap more words inside it, then close it to return where you were.';
+      case 'onboarding_feature_manual_resources':
+        return 'Import dictionaries and audio manually';
+      case 'onboarding_feature_manual_resources_hint':
+        return 'Skip the pack; import your own dictionaries, audiobooks, and pronunciation sources';
+      case 'onboarding_step_manual_resources_title':
+        return 'Prepare dictionaries and audio manually';
+      case 'onboarding_step_manual_resources_body':
+        return 'Skip the recommended pack and prepare only what you need. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional.';
+      case 'onboarding_manual_dictionary_action':
+        return 'Import a dictionary';
+      case 'onboarding_manual_dictionary_action_desc':
+        return 'Open dictionary management and import at least one supported dictionary file or archive. Lookup tutorials are useful only after a query returns a definition.';
+      case 'onboarding_manual_audiobook_action':
+        return 'Import a book with audiobook audio';
+      case 'onboarding_manual_audiobook_action_desc':
+        return 'Open book import and choose the book or text, aligned subtitles, and one or more audio files. Audio needs subtitles so Fushi can align it to sentences.';
+      case 'onboarding_manual_pronunciation_action':
+        return 'Configure word pronunciation audio';
+      case 'onboarding_manual_pronunciation_action_desc':
+        return 'Add local or online pronunciation sources used by dictionary entries. This is separate from audiobook audio attached to a book.';
+      case 'onboarding_lookup_verify_action':
+        return 'Verify a word in your dictionary';
+      case 'onboarding_lookup_verify_action_desc':
+        return 'Open lookup, enter any word you are learning, and continue only after the installed dictionary returns a definition. The tutorial does not hard-code a sample word.';
+      case 'onboarding_step_first_anki_card_title':
+        return 'Create your first Anki card';
+      case 'onboarding_step_first_anki_card_body':
+        return 'This step appears only after this onboarding session has connected to Anki and selected a usable deck and note type.';
+      case 'onboarding_first_anki_lookup_title':
+        return 'Start from a real dictionary result';
+      case 'onboarding_first_anki_lookup_body':
+        return 'Look up a word that your installed dictionary actually defines. There is no fixed tutorial word that might be absent from your dictionary.';
+      case 'onboarding_first_anki_plus_title':
+        return 'Tap the plus button on the entry';
+      case 'onboarding_first_anki_plus_body':
+        return 'The plus button opens the card creator with the current word, reading, meaning, sentence, audio, and available image context.';
+      case 'onboarding_first_anki_save_title':
+        return 'Review and save';
+      case 'onboarding_first_anki_save_body':
+        return 'Confirm the target deck, note type, and field preview, then save. Open Anki to verify that the first card arrived.';
+      case 'onboarding_first_anki_action':
+        return 'Open lookup and create a card';
+      case 'onboarding_first_anki_action_desc':
+        return 'Use a word with a visible definition, tap its plus button, review the fields, and save it to the connected Anki deck.';
+      case 'onboarding_step_click_lookup_body':
+        return 'First verify a word that your installed dictionary actually defines. Then use that same word to practise direct lookup in books, manga OCR text, and video subtitles.';
+      case 'onboarding_click_lookup_tap_body':
+        return 'On a phone, tap a character in the verified word. On a computer, left-click it. Fushi starts there and matches the longest word.';
+      case 'onboarding_global_lookup_windows_select_body':
+        return 'Highlight the same word you already verified has a dictionary definition, and leave the selection active.';
+      case 'onboarding_global_lookup_android_select_body':
+        return 'Long-press the same word you already verified has a dictionary definition, then adjust the selection handles to cover it.';
       default:
         return null;
     }
@@ -227780,12 +229173,8 @@ extension on _StringsKo {
             '내장 모드로 전환하여 대기 중인 카드 ${count}개 만들기';
       case 'onboarding_step_click_lookup_title':
         return 'Tap to look up words';
-      case 'onboarding_step_click_lookup_body':
-        return 'Inside Fushi, books, OCR text in manga, and video subtitles all support direct lookup from the character you touch.';
       case 'onboarding_click_lookup_tap_title':
         return 'Tap the text';
-      case 'onboarding_click_lookup_tap_body':
-        return 'On a phone, tap a character. On a computer, left-click it. Fushi starts there and matches the longest word.';
       case 'onboarding_click_lookup_nested_title':
         return 'Keep exploring in the popup';
       case 'onboarding_click_lookup_nested_body':
@@ -227800,8 +229189,6 @@ extension on _StringsKo {
         return 'On Windows, select text in another app and summon the dictionary without switching back to Fushi.';
       case 'onboarding_global_lookup_windows_select_title':
         return 'Select text in any app';
-      case 'onboarding_global_lookup_windows_select_body':
-        return 'Highlight the word or phrase you want to look up and leave the selection active.';
       case 'onboarding_global_lookup_windows_shortcut_title':
         return 'Press Ctrl+Alt+D';
       case 'onboarding_global_lookup_windows_shortcut_body':
@@ -227818,8 +229205,6 @@ extension on _StringsKo {
         return 'On Android, the system passes selected text to Fushi through the text menu or Share sheet. There is no remappable global hotkey.';
       case 'onboarding_global_lookup_android_select_title':
         return 'Select text in another app';
-      case 'onboarding_global_lookup_android_select_body':
-        return 'Long-press text, then adjust the selection handles until they cover the word or phrase you want.';
       case 'onboarding_global_lookup_android_open_title':
         return 'Choose Fushi';
       case 'onboarding_global_lookup_android_open_body':
@@ -227828,6 +229213,58 @@ extension on _StringsKo {
         return 'Use the standalone popup';
       case 'onboarding_global_lookup_android_continue_body':
         return 'The lookup opens separately from the source app. You can tap more words inside it, then close it to return where you were.';
+      case 'onboarding_feature_manual_resources':
+        return 'Import dictionaries and audio manually';
+      case 'onboarding_feature_manual_resources_hint':
+        return 'Skip the pack; import your own dictionaries, audiobooks, and pronunciation sources';
+      case 'onboarding_step_manual_resources_title':
+        return 'Prepare dictionaries and audio manually';
+      case 'onboarding_step_manual_resources_body':
+        return 'Skip the recommended pack and prepare only what you need. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional.';
+      case 'onboarding_manual_dictionary_action':
+        return 'Import a dictionary';
+      case 'onboarding_manual_dictionary_action_desc':
+        return 'Open dictionary management and import at least one supported dictionary file or archive. Lookup tutorials are useful only after a query returns a definition.';
+      case 'onboarding_manual_audiobook_action':
+        return 'Import a book with audiobook audio';
+      case 'onboarding_manual_audiobook_action_desc':
+        return 'Open book import and choose the book or text, aligned subtitles, and one or more audio files. Audio needs subtitles so Fushi can align it to sentences.';
+      case 'onboarding_manual_pronunciation_action':
+        return 'Configure word pronunciation audio';
+      case 'onboarding_manual_pronunciation_action_desc':
+        return 'Add local or online pronunciation sources used by dictionary entries. This is separate from audiobook audio attached to a book.';
+      case 'onboarding_lookup_verify_action':
+        return 'Verify a word in your dictionary';
+      case 'onboarding_lookup_verify_action_desc':
+        return 'Open lookup, enter any word you are learning, and continue only after the installed dictionary returns a definition. The tutorial does not hard-code a sample word.';
+      case 'onboarding_step_first_anki_card_title':
+        return 'Create your first Anki card';
+      case 'onboarding_step_first_anki_card_body':
+        return 'This step appears only after this onboarding session has connected to Anki and selected a usable deck and note type.';
+      case 'onboarding_first_anki_lookup_title':
+        return 'Start from a real dictionary result';
+      case 'onboarding_first_anki_lookup_body':
+        return 'Look up a word that your installed dictionary actually defines. There is no fixed tutorial word that might be absent from your dictionary.';
+      case 'onboarding_first_anki_plus_title':
+        return 'Tap the plus button on the entry';
+      case 'onboarding_first_anki_plus_body':
+        return 'The plus button opens the card creator with the current word, reading, meaning, sentence, audio, and available image context.';
+      case 'onboarding_first_anki_save_title':
+        return 'Review and save';
+      case 'onboarding_first_anki_save_body':
+        return 'Confirm the target deck, note type, and field preview, then save. Open Anki to verify that the first card arrived.';
+      case 'onboarding_first_anki_action':
+        return 'Open lookup and create a card';
+      case 'onboarding_first_anki_action_desc':
+        return 'Use a word with a visible definition, tap its plus button, review the fields, and save it to the connected Anki deck.';
+      case 'onboarding_step_click_lookup_body':
+        return 'First verify a word that your installed dictionary actually defines. Then use that same word to practise direct lookup in books, manga OCR text, and video subtitles.';
+      case 'onboarding_click_lookup_tap_body':
+        return 'On a phone, tap a character in the verified word. On a computer, left-click it. Fushi starts there and matches the longest word.';
+      case 'onboarding_global_lookup_windows_select_body':
+        return 'Highlight the same word you already verified has a dictionary definition, and leave the selection active.';
+      case 'onboarding_global_lookup_android_select_body':
+        return 'Long-press the same word you already verified has a dictionary definition, then adjust the selection handles to cover it.';
       default:
         return null;
     }
@@ -236005,12 +237442,8 @@ extension on _StringsNl {
             'Schakel naar ingebouwde modus om ${count} wachtende kaarten aan te maken';
       case 'onboarding_step_click_lookup_title':
         return 'Tap to look up words';
-      case 'onboarding_step_click_lookup_body':
-        return 'Inside Fushi, books, OCR text in manga, and video subtitles all support direct lookup from the character you touch.';
       case 'onboarding_click_lookup_tap_title':
         return 'Tap the text';
-      case 'onboarding_click_lookup_tap_body':
-        return 'On a phone, tap a character. On a computer, left-click it. Fushi starts there and matches the longest word.';
       case 'onboarding_click_lookup_nested_title':
         return 'Keep exploring in the popup';
       case 'onboarding_click_lookup_nested_body':
@@ -236025,8 +237458,6 @@ extension on _StringsNl {
         return 'On Windows, select text in another app and summon the dictionary without switching back to Fushi.';
       case 'onboarding_global_lookup_windows_select_title':
         return 'Select text in any app';
-      case 'onboarding_global_lookup_windows_select_body':
-        return 'Highlight the word or phrase you want to look up and leave the selection active.';
       case 'onboarding_global_lookup_windows_shortcut_title':
         return 'Press Ctrl+Alt+D';
       case 'onboarding_global_lookup_windows_shortcut_body':
@@ -236043,8 +237474,6 @@ extension on _StringsNl {
         return 'On Android, the system passes selected text to Fushi through the text menu or Share sheet. There is no remappable global hotkey.';
       case 'onboarding_global_lookup_android_select_title':
         return 'Select text in another app';
-      case 'onboarding_global_lookup_android_select_body':
-        return 'Long-press text, then adjust the selection handles until they cover the word or phrase you want.';
       case 'onboarding_global_lookup_android_open_title':
         return 'Choose Fushi';
       case 'onboarding_global_lookup_android_open_body':
@@ -236053,6 +237482,58 @@ extension on _StringsNl {
         return 'Use the standalone popup';
       case 'onboarding_global_lookup_android_continue_body':
         return 'The lookup opens separately from the source app. You can tap more words inside it, then close it to return where you were.';
+      case 'onboarding_feature_manual_resources':
+        return 'Import dictionaries and audio manually';
+      case 'onboarding_feature_manual_resources_hint':
+        return 'Skip the pack; import your own dictionaries, audiobooks, and pronunciation sources';
+      case 'onboarding_step_manual_resources_title':
+        return 'Prepare dictionaries and audio manually';
+      case 'onboarding_step_manual_resources_body':
+        return 'Skip the recommended pack and prepare only what you need. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional.';
+      case 'onboarding_manual_dictionary_action':
+        return 'Import a dictionary';
+      case 'onboarding_manual_dictionary_action_desc':
+        return 'Open dictionary management and import at least one supported dictionary file or archive. Lookup tutorials are useful only after a query returns a definition.';
+      case 'onboarding_manual_audiobook_action':
+        return 'Import a book with audiobook audio';
+      case 'onboarding_manual_audiobook_action_desc':
+        return 'Open book import and choose the book or text, aligned subtitles, and one or more audio files. Audio needs subtitles so Fushi can align it to sentences.';
+      case 'onboarding_manual_pronunciation_action':
+        return 'Configure word pronunciation audio';
+      case 'onboarding_manual_pronunciation_action_desc':
+        return 'Add local or online pronunciation sources used by dictionary entries. This is separate from audiobook audio attached to a book.';
+      case 'onboarding_lookup_verify_action':
+        return 'Verify a word in your dictionary';
+      case 'onboarding_lookup_verify_action_desc':
+        return 'Open lookup, enter any word you are learning, and continue only after the installed dictionary returns a definition. The tutorial does not hard-code a sample word.';
+      case 'onboarding_step_first_anki_card_title':
+        return 'Create your first Anki card';
+      case 'onboarding_step_first_anki_card_body':
+        return 'This step appears only after this onboarding session has connected to Anki and selected a usable deck and note type.';
+      case 'onboarding_first_anki_lookup_title':
+        return 'Start from a real dictionary result';
+      case 'onboarding_first_anki_lookup_body':
+        return 'Look up a word that your installed dictionary actually defines. There is no fixed tutorial word that might be absent from your dictionary.';
+      case 'onboarding_first_anki_plus_title':
+        return 'Tap the plus button on the entry';
+      case 'onboarding_first_anki_plus_body':
+        return 'The plus button opens the card creator with the current word, reading, meaning, sentence, audio, and available image context.';
+      case 'onboarding_first_anki_save_title':
+        return 'Review and save';
+      case 'onboarding_first_anki_save_body':
+        return 'Confirm the target deck, note type, and field preview, then save. Open Anki to verify that the first card arrived.';
+      case 'onboarding_first_anki_action':
+        return 'Open lookup and create a card';
+      case 'onboarding_first_anki_action_desc':
+        return 'Use a word with a visible definition, tap its plus button, review the fields, and save it to the connected Anki deck.';
+      case 'onboarding_step_click_lookup_body':
+        return 'First verify a word that your installed dictionary actually defines. Then use that same word to practise direct lookup in books, manga OCR text, and video subtitles.';
+      case 'onboarding_click_lookup_tap_body':
+        return 'On a phone, tap a character in the verified word. On a computer, left-click it. Fushi starts there and matches the longest word.';
+      case 'onboarding_global_lookup_windows_select_body':
+        return 'Highlight the same word you already verified has a dictionary definition, and leave the selection active.';
+      case 'onboarding_global_lookup_android_select_body':
+        return 'Long-press the same word you already verified has a dictionary definition, then adjust the selection handles to cover it.';
       default:
         return null;
     }
@@ -244225,12 +245706,8 @@ extension on _StringsPtBr {
             'Mudar para o modo integrado para criar ${count} cartões na fila';
       case 'onboarding_step_click_lookup_title':
         return 'Tap to look up words';
-      case 'onboarding_step_click_lookup_body':
-        return 'Inside Fushi, books, OCR text in manga, and video subtitles all support direct lookup from the character you touch.';
       case 'onboarding_click_lookup_tap_title':
         return 'Tap the text';
-      case 'onboarding_click_lookup_tap_body':
-        return 'On a phone, tap a character. On a computer, left-click it. Fushi starts there and matches the longest word.';
       case 'onboarding_click_lookup_nested_title':
         return 'Keep exploring in the popup';
       case 'onboarding_click_lookup_nested_body':
@@ -244245,8 +245722,6 @@ extension on _StringsPtBr {
         return 'On Windows, select text in another app and summon the dictionary without switching back to Fushi.';
       case 'onboarding_global_lookup_windows_select_title':
         return 'Select text in any app';
-      case 'onboarding_global_lookup_windows_select_body':
-        return 'Highlight the word or phrase you want to look up and leave the selection active.';
       case 'onboarding_global_lookup_windows_shortcut_title':
         return 'Press Ctrl+Alt+D';
       case 'onboarding_global_lookup_windows_shortcut_body':
@@ -244263,8 +245738,6 @@ extension on _StringsPtBr {
         return 'On Android, the system passes selected text to Fushi through the text menu or Share sheet. There is no remappable global hotkey.';
       case 'onboarding_global_lookup_android_select_title':
         return 'Select text in another app';
-      case 'onboarding_global_lookup_android_select_body':
-        return 'Long-press text, then adjust the selection handles until they cover the word or phrase you want.';
       case 'onboarding_global_lookup_android_open_title':
         return 'Choose Fushi';
       case 'onboarding_global_lookup_android_open_body':
@@ -244273,6 +245746,58 @@ extension on _StringsPtBr {
         return 'Use the standalone popup';
       case 'onboarding_global_lookup_android_continue_body':
         return 'The lookup opens separately from the source app. You can tap more words inside it, then close it to return where you were.';
+      case 'onboarding_feature_manual_resources':
+        return 'Import dictionaries and audio manually';
+      case 'onboarding_feature_manual_resources_hint':
+        return 'Skip the pack; import your own dictionaries, audiobooks, and pronunciation sources';
+      case 'onboarding_step_manual_resources_title':
+        return 'Prepare dictionaries and audio manually';
+      case 'onboarding_step_manual_resources_body':
+        return 'Skip the recommended pack and prepare only what you need. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional.';
+      case 'onboarding_manual_dictionary_action':
+        return 'Import a dictionary';
+      case 'onboarding_manual_dictionary_action_desc':
+        return 'Open dictionary management and import at least one supported dictionary file or archive. Lookup tutorials are useful only after a query returns a definition.';
+      case 'onboarding_manual_audiobook_action':
+        return 'Import a book with audiobook audio';
+      case 'onboarding_manual_audiobook_action_desc':
+        return 'Open book import and choose the book or text, aligned subtitles, and one or more audio files. Audio needs subtitles so Fushi can align it to sentences.';
+      case 'onboarding_manual_pronunciation_action':
+        return 'Configure word pronunciation audio';
+      case 'onboarding_manual_pronunciation_action_desc':
+        return 'Add local or online pronunciation sources used by dictionary entries. This is separate from audiobook audio attached to a book.';
+      case 'onboarding_lookup_verify_action':
+        return 'Verify a word in your dictionary';
+      case 'onboarding_lookup_verify_action_desc':
+        return 'Open lookup, enter any word you are learning, and continue only after the installed dictionary returns a definition. The tutorial does not hard-code a sample word.';
+      case 'onboarding_step_first_anki_card_title':
+        return 'Create your first Anki card';
+      case 'onboarding_step_first_anki_card_body':
+        return 'This step appears only after this onboarding session has connected to Anki and selected a usable deck and note type.';
+      case 'onboarding_first_anki_lookup_title':
+        return 'Start from a real dictionary result';
+      case 'onboarding_first_anki_lookup_body':
+        return 'Look up a word that your installed dictionary actually defines. There is no fixed tutorial word that might be absent from your dictionary.';
+      case 'onboarding_first_anki_plus_title':
+        return 'Tap the plus button on the entry';
+      case 'onboarding_first_anki_plus_body':
+        return 'The plus button opens the card creator with the current word, reading, meaning, sentence, audio, and available image context.';
+      case 'onboarding_first_anki_save_title':
+        return 'Review and save';
+      case 'onboarding_first_anki_save_body':
+        return 'Confirm the target deck, note type, and field preview, then save. Open Anki to verify that the first card arrived.';
+      case 'onboarding_first_anki_action':
+        return 'Open lookup and create a card';
+      case 'onboarding_first_anki_action_desc':
+        return 'Use a word with a visible definition, tap its plus button, review the fields, and save it to the connected Anki deck.';
+      case 'onboarding_step_click_lookup_body':
+        return 'First verify a word that your installed dictionary actually defines. Then use that same word to practise direct lookup in books, manga OCR text, and video subtitles.';
+      case 'onboarding_click_lookup_tap_body':
+        return 'On a phone, tap a character in the verified word. On a computer, left-click it. Fushi starts there and matches the longest word.';
+      case 'onboarding_global_lookup_windows_select_body':
+        return 'Highlight the same word you already verified has a dictionary definition, and leave the selection active.';
+      case 'onboarding_global_lookup_android_select_body':
+        return 'Long-press the same word you already verified has a dictionary definition, then adjust the selection handles to cover it.';
       default:
         return null;
     }
@@ -252451,12 +253976,8 @@ extension on _StringsRu {
             'Переключиться на встроенный режим и создать карточек из очереди: ${count}';
       case 'onboarding_step_click_lookup_title':
         return 'Tap to look up words';
-      case 'onboarding_step_click_lookup_body':
-        return 'Inside Fushi, books, OCR text in manga, and video subtitles all support direct lookup from the character you touch.';
       case 'onboarding_click_lookup_tap_title':
         return 'Tap the text';
-      case 'onboarding_click_lookup_tap_body':
-        return 'On a phone, tap a character. On a computer, left-click it. Fushi starts there and matches the longest word.';
       case 'onboarding_click_lookup_nested_title':
         return 'Keep exploring in the popup';
       case 'onboarding_click_lookup_nested_body':
@@ -252471,8 +253992,6 @@ extension on _StringsRu {
         return 'On Windows, select text in another app and summon the dictionary without switching back to Fushi.';
       case 'onboarding_global_lookup_windows_select_title':
         return 'Select text in any app';
-      case 'onboarding_global_lookup_windows_select_body':
-        return 'Highlight the word or phrase you want to look up and leave the selection active.';
       case 'onboarding_global_lookup_windows_shortcut_title':
         return 'Press Ctrl+Alt+D';
       case 'onboarding_global_lookup_windows_shortcut_body':
@@ -252489,8 +254008,6 @@ extension on _StringsRu {
         return 'On Android, the system passes selected text to Fushi through the text menu or Share sheet. There is no remappable global hotkey.';
       case 'onboarding_global_lookup_android_select_title':
         return 'Select text in another app';
-      case 'onboarding_global_lookup_android_select_body':
-        return 'Long-press text, then adjust the selection handles until they cover the word or phrase you want.';
       case 'onboarding_global_lookup_android_open_title':
         return 'Choose Fushi';
       case 'onboarding_global_lookup_android_open_body':
@@ -252499,6 +254016,58 @@ extension on _StringsRu {
         return 'Use the standalone popup';
       case 'onboarding_global_lookup_android_continue_body':
         return 'The lookup opens separately from the source app. You can tap more words inside it, then close it to return where you were.';
+      case 'onboarding_feature_manual_resources':
+        return 'Import dictionaries and audio manually';
+      case 'onboarding_feature_manual_resources_hint':
+        return 'Skip the pack; import your own dictionaries, audiobooks, and pronunciation sources';
+      case 'onboarding_step_manual_resources_title':
+        return 'Prepare dictionaries and audio manually';
+      case 'onboarding_step_manual_resources_body':
+        return 'Skip the recommended pack and prepare only what you need. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional.';
+      case 'onboarding_manual_dictionary_action':
+        return 'Import a dictionary';
+      case 'onboarding_manual_dictionary_action_desc':
+        return 'Open dictionary management and import at least one supported dictionary file or archive. Lookup tutorials are useful only after a query returns a definition.';
+      case 'onboarding_manual_audiobook_action':
+        return 'Import a book with audiobook audio';
+      case 'onboarding_manual_audiobook_action_desc':
+        return 'Open book import and choose the book or text, aligned subtitles, and one or more audio files. Audio needs subtitles so Fushi can align it to sentences.';
+      case 'onboarding_manual_pronunciation_action':
+        return 'Configure word pronunciation audio';
+      case 'onboarding_manual_pronunciation_action_desc':
+        return 'Add local or online pronunciation sources used by dictionary entries. This is separate from audiobook audio attached to a book.';
+      case 'onboarding_lookup_verify_action':
+        return 'Verify a word in your dictionary';
+      case 'onboarding_lookup_verify_action_desc':
+        return 'Open lookup, enter any word you are learning, and continue only after the installed dictionary returns a definition. The tutorial does not hard-code a sample word.';
+      case 'onboarding_step_first_anki_card_title':
+        return 'Create your first Anki card';
+      case 'onboarding_step_first_anki_card_body':
+        return 'This step appears only after this onboarding session has connected to Anki and selected a usable deck and note type.';
+      case 'onboarding_first_anki_lookup_title':
+        return 'Start from a real dictionary result';
+      case 'onboarding_first_anki_lookup_body':
+        return 'Look up a word that your installed dictionary actually defines. There is no fixed tutorial word that might be absent from your dictionary.';
+      case 'onboarding_first_anki_plus_title':
+        return 'Tap the plus button on the entry';
+      case 'onboarding_first_anki_plus_body':
+        return 'The plus button opens the card creator with the current word, reading, meaning, sentence, audio, and available image context.';
+      case 'onboarding_first_anki_save_title':
+        return 'Review and save';
+      case 'onboarding_first_anki_save_body':
+        return 'Confirm the target deck, note type, and field preview, then save. Open Anki to verify that the first card arrived.';
+      case 'onboarding_first_anki_action':
+        return 'Open lookup and create a card';
+      case 'onboarding_first_anki_action_desc':
+        return 'Use a word with a visible definition, tap its plus button, review the fields, and save it to the connected Anki deck.';
+      case 'onboarding_step_click_lookup_body':
+        return 'First verify a word that your installed dictionary actually defines. Then use that same word to practise direct lookup in books, manga OCR text, and video subtitles.';
+      case 'onboarding_click_lookup_tap_body':
+        return 'On a phone, tap a character in the verified word. On a computer, left-click it. Fushi starts there and matches the longest word.';
+      case 'onboarding_global_lookup_windows_select_body':
+        return 'Highlight the same word you already verified has a dictionary definition, and leave the selection active.';
+      case 'onboarding_global_lookup_android_select_body':
+        return 'Long-press the same word you already verified has a dictionary definition, then adjust the selection handles to cover it.';
       default:
         return null;
     }
@@ -260650,12 +262219,8 @@ extension on _StringsTh {
             'สลับไปโหมดในตัวเพื่อสร้างการ์ดในคิว ${count} รายการ';
       case 'onboarding_step_click_lookup_title':
         return 'Tap to look up words';
-      case 'onboarding_step_click_lookup_body':
-        return 'Inside Fushi, books, OCR text in manga, and video subtitles all support direct lookup from the character you touch.';
       case 'onboarding_click_lookup_tap_title':
         return 'Tap the text';
-      case 'onboarding_click_lookup_tap_body':
-        return 'On a phone, tap a character. On a computer, left-click it. Fushi starts there and matches the longest word.';
       case 'onboarding_click_lookup_nested_title':
         return 'Keep exploring in the popup';
       case 'onboarding_click_lookup_nested_body':
@@ -260670,8 +262235,6 @@ extension on _StringsTh {
         return 'On Windows, select text in another app and summon the dictionary without switching back to Fushi.';
       case 'onboarding_global_lookup_windows_select_title':
         return 'Select text in any app';
-      case 'onboarding_global_lookup_windows_select_body':
-        return 'Highlight the word or phrase you want to look up and leave the selection active.';
       case 'onboarding_global_lookup_windows_shortcut_title':
         return 'Press Ctrl+Alt+D';
       case 'onboarding_global_lookup_windows_shortcut_body':
@@ -260688,8 +262251,6 @@ extension on _StringsTh {
         return 'On Android, the system passes selected text to Fushi through the text menu or Share sheet. There is no remappable global hotkey.';
       case 'onboarding_global_lookup_android_select_title':
         return 'Select text in another app';
-      case 'onboarding_global_lookup_android_select_body':
-        return 'Long-press text, then adjust the selection handles until they cover the word or phrase you want.';
       case 'onboarding_global_lookup_android_open_title':
         return 'Choose Fushi';
       case 'onboarding_global_lookup_android_open_body':
@@ -260698,6 +262259,58 @@ extension on _StringsTh {
         return 'Use the standalone popup';
       case 'onboarding_global_lookup_android_continue_body':
         return 'The lookup opens separately from the source app. You can tap more words inside it, then close it to return where you were.';
+      case 'onboarding_feature_manual_resources':
+        return 'Import dictionaries and audio manually';
+      case 'onboarding_feature_manual_resources_hint':
+        return 'Skip the pack; import your own dictionaries, audiobooks, and pronunciation sources';
+      case 'onboarding_step_manual_resources_title':
+        return 'Prepare dictionaries and audio manually';
+      case 'onboarding_step_manual_resources_body':
+        return 'Skip the recommended pack and prepare only what you need. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional.';
+      case 'onboarding_manual_dictionary_action':
+        return 'Import a dictionary';
+      case 'onboarding_manual_dictionary_action_desc':
+        return 'Open dictionary management and import at least one supported dictionary file or archive. Lookup tutorials are useful only after a query returns a definition.';
+      case 'onboarding_manual_audiobook_action':
+        return 'Import a book with audiobook audio';
+      case 'onboarding_manual_audiobook_action_desc':
+        return 'Open book import and choose the book or text, aligned subtitles, and one or more audio files. Audio needs subtitles so Fushi can align it to sentences.';
+      case 'onboarding_manual_pronunciation_action':
+        return 'Configure word pronunciation audio';
+      case 'onboarding_manual_pronunciation_action_desc':
+        return 'Add local or online pronunciation sources used by dictionary entries. This is separate from audiobook audio attached to a book.';
+      case 'onboarding_lookup_verify_action':
+        return 'Verify a word in your dictionary';
+      case 'onboarding_lookup_verify_action_desc':
+        return 'Open lookup, enter any word you are learning, and continue only after the installed dictionary returns a definition. The tutorial does not hard-code a sample word.';
+      case 'onboarding_step_first_anki_card_title':
+        return 'Create your first Anki card';
+      case 'onboarding_step_first_anki_card_body':
+        return 'This step appears only after this onboarding session has connected to Anki and selected a usable deck and note type.';
+      case 'onboarding_first_anki_lookup_title':
+        return 'Start from a real dictionary result';
+      case 'onboarding_first_anki_lookup_body':
+        return 'Look up a word that your installed dictionary actually defines. There is no fixed tutorial word that might be absent from your dictionary.';
+      case 'onboarding_first_anki_plus_title':
+        return 'Tap the plus button on the entry';
+      case 'onboarding_first_anki_plus_body':
+        return 'The plus button opens the card creator with the current word, reading, meaning, sentence, audio, and available image context.';
+      case 'onboarding_first_anki_save_title':
+        return 'Review and save';
+      case 'onboarding_first_anki_save_body':
+        return 'Confirm the target deck, note type, and field preview, then save. Open Anki to verify that the first card arrived.';
+      case 'onboarding_first_anki_action':
+        return 'Open lookup and create a card';
+      case 'onboarding_first_anki_action_desc':
+        return 'Use a word with a visible definition, tap its plus button, review the fields, and save it to the connected Anki deck.';
+      case 'onboarding_step_click_lookup_body':
+        return 'First verify a word that your installed dictionary actually defines. Then use that same word to practise direct lookup in books, manga OCR text, and video subtitles.';
+      case 'onboarding_click_lookup_tap_body':
+        return 'On a phone, tap a character in the verified word. On a computer, left-click it. Fushi starts there and matches the longest word.';
+      case 'onboarding_global_lookup_windows_select_body':
+        return 'Highlight the same word you already verified has a dictionary definition, and leave the selection active.';
+      case 'onboarding_global_lookup_android_select_body':
+        return 'Long-press the same word you already verified has a dictionary definition, then adjust the selection handles to cover it.';
       default:
         return null;
     }
@@ -268865,12 +270478,8 @@ extension on _StringsTr {
             '${count} bekleyen kartı oluşturmak için yerleşik moda geç';
       case 'onboarding_step_click_lookup_title':
         return 'Tap to look up words';
-      case 'onboarding_step_click_lookup_body':
-        return 'Inside Fushi, books, OCR text in manga, and video subtitles all support direct lookup from the character you touch.';
       case 'onboarding_click_lookup_tap_title':
         return 'Tap the text';
-      case 'onboarding_click_lookup_tap_body':
-        return 'On a phone, tap a character. On a computer, left-click it. Fushi starts there and matches the longest word.';
       case 'onboarding_click_lookup_nested_title':
         return 'Keep exploring in the popup';
       case 'onboarding_click_lookup_nested_body':
@@ -268885,8 +270494,6 @@ extension on _StringsTr {
         return 'On Windows, select text in another app and summon the dictionary without switching back to Fushi.';
       case 'onboarding_global_lookup_windows_select_title':
         return 'Select text in any app';
-      case 'onboarding_global_lookup_windows_select_body':
-        return 'Highlight the word or phrase you want to look up and leave the selection active.';
       case 'onboarding_global_lookup_windows_shortcut_title':
         return 'Press Ctrl+Alt+D';
       case 'onboarding_global_lookup_windows_shortcut_body':
@@ -268903,8 +270510,6 @@ extension on _StringsTr {
         return 'On Android, the system passes selected text to Fushi through the text menu or Share sheet. There is no remappable global hotkey.';
       case 'onboarding_global_lookup_android_select_title':
         return 'Select text in another app';
-      case 'onboarding_global_lookup_android_select_body':
-        return 'Long-press text, then adjust the selection handles until they cover the word or phrase you want.';
       case 'onboarding_global_lookup_android_open_title':
         return 'Choose Fushi';
       case 'onboarding_global_lookup_android_open_body':
@@ -268913,6 +270518,58 @@ extension on _StringsTr {
         return 'Use the standalone popup';
       case 'onboarding_global_lookup_android_continue_body':
         return 'The lookup opens separately from the source app. You can tap more words inside it, then close it to return where you were.';
+      case 'onboarding_feature_manual_resources':
+        return 'Import dictionaries and audio manually';
+      case 'onboarding_feature_manual_resources_hint':
+        return 'Skip the pack; import your own dictionaries, audiobooks, and pronunciation sources';
+      case 'onboarding_step_manual_resources_title':
+        return 'Prepare dictionaries and audio manually';
+      case 'onboarding_step_manual_resources_body':
+        return 'Skip the recommended pack and prepare only what you need. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional.';
+      case 'onboarding_manual_dictionary_action':
+        return 'Import a dictionary';
+      case 'onboarding_manual_dictionary_action_desc':
+        return 'Open dictionary management and import at least one supported dictionary file or archive. Lookup tutorials are useful only after a query returns a definition.';
+      case 'onboarding_manual_audiobook_action':
+        return 'Import a book with audiobook audio';
+      case 'onboarding_manual_audiobook_action_desc':
+        return 'Open book import and choose the book or text, aligned subtitles, and one or more audio files. Audio needs subtitles so Fushi can align it to sentences.';
+      case 'onboarding_manual_pronunciation_action':
+        return 'Configure word pronunciation audio';
+      case 'onboarding_manual_pronunciation_action_desc':
+        return 'Add local or online pronunciation sources used by dictionary entries. This is separate from audiobook audio attached to a book.';
+      case 'onboarding_lookup_verify_action':
+        return 'Verify a word in your dictionary';
+      case 'onboarding_lookup_verify_action_desc':
+        return 'Open lookup, enter any word you are learning, and continue only after the installed dictionary returns a definition. The tutorial does not hard-code a sample word.';
+      case 'onboarding_step_first_anki_card_title':
+        return 'Create your first Anki card';
+      case 'onboarding_step_first_anki_card_body':
+        return 'This step appears only after this onboarding session has connected to Anki and selected a usable deck and note type.';
+      case 'onboarding_first_anki_lookup_title':
+        return 'Start from a real dictionary result';
+      case 'onboarding_first_anki_lookup_body':
+        return 'Look up a word that your installed dictionary actually defines. There is no fixed tutorial word that might be absent from your dictionary.';
+      case 'onboarding_first_anki_plus_title':
+        return 'Tap the plus button on the entry';
+      case 'onboarding_first_anki_plus_body':
+        return 'The plus button opens the card creator with the current word, reading, meaning, sentence, audio, and available image context.';
+      case 'onboarding_first_anki_save_title':
+        return 'Review and save';
+      case 'onboarding_first_anki_save_body':
+        return 'Confirm the target deck, note type, and field preview, then save. Open Anki to verify that the first card arrived.';
+      case 'onboarding_first_anki_action':
+        return 'Open lookup and create a card';
+      case 'onboarding_first_anki_action_desc':
+        return 'Use a word with a visible definition, tap its plus button, review the fields, and save it to the connected Anki deck.';
+      case 'onboarding_step_click_lookup_body':
+        return 'First verify a word that your installed dictionary actually defines. Then use that same word to practise direct lookup in books, manga OCR text, and video subtitles.';
+      case 'onboarding_click_lookup_tap_body':
+        return 'On a phone, tap a character in the verified word. On a computer, left-click it. Fushi starts there and matches the longest word.';
+      case 'onboarding_global_lookup_windows_select_body':
+        return 'Highlight the same word you already verified has a dictionary definition, and leave the selection active.';
+      case 'onboarding_global_lookup_android_select_body':
+        return 'Long-press the same word you already verified has a dictionary definition, then adjust the selection handles to cover it.';
       default:
         return null;
     }
@@ -277073,12 +278730,8 @@ extension on _StringsVi {
             'Chuyển sang chế độ tích hợp để tạo ${count} thẻ đang chờ';
       case 'onboarding_step_click_lookup_title':
         return 'Tap to look up words';
-      case 'onboarding_step_click_lookup_body':
-        return 'Inside Fushi, books, OCR text in manga, and video subtitles all support direct lookup from the character you touch.';
       case 'onboarding_click_lookup_tap_title':
         return 'Tap the text';
-      case 'onboarding_click_lookup_tap_body':
-        return 'On a phone, tap a character. On a computer, left-click it. Fushi starts there and matches the longest word.';
       case 'onboarding_click_lookup_nested_title':
         return 'Keep exploring in the popup';
       case 'onboarding_click_lookup_nested_body':
@@ -277093,8 +278746,6 @@ extension on _StringsVi {
         return 'On Windows, select text in another app and summon the dictionary without switching back to Fushi.';
       case 'onboarding_global_lookup_windows_select_title':
         return 'Select text in any app';
-      case 'onboarding_global_lookup_windows_select_body':
-        return 'Highlight the word or phrase you want to look up and leave the selection active.';
       case 'onboarding_global_lookup_windows_shortcut_title':
         return 'Press Ctrl+Alt+D';
       case 'onboarding_global_lookup_windows_shortcut_body':
@@ -277111,8 +278762,6 @@ extension on _StringsVi {
         return 'On Android, the system passes selected text to Fushi through the text menu or Share sheet. There is no remappable global hotkey.';
       case 'onboarding_global_lookup_android_select_title':
         return 'Select text in another app';
-      case 'onboarding_global_lookup_android_select_body':
-        return 'Long-press text, then adjust the selection handles until they cover the word or phrase you want.';
       case 'onboarding_global_lookup_android_open_title':
         return 'Choose Fushi';
       case 'onboarding_global_lookup_android_open_body':
@@ -277121,6 +278770,58 @@ extension on _StringsVi {
         return 'Use the standalone popup';
       case 'onboarding_global_lookup_android_continue_body':
         return 'The lookup opens separately from the source app. You can tap more words inside it, then close it to return where you were.';
+      case 'onboarding_feature_manual_resources':
+        return 'Import dictionaries and audio manually';
+      case 'onboarding_feature_manual_resources_hint':
+        return 'Skip the pack; import your own dictionaries, audiobooks, and pronunciation sources';
+      case 'onboarding_step_manual_resources_title':
+        return 'Prepare dictionaries and audio manually';
+      case 'onboarding_step_manual_resources_body':
+        return 'Skip the recommended pack and prepare only what you need. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional.';
+      case 'onboarding_manual_dictionary_action':
+        return 'Import a dictionary';
+      case 'onboarding_manual_dictionary_action_desc':
+        return 'Open dictionary management and import at least one supported dictionary file or archive. Lookup tutorials are useful only after a query returns a definition.';
+      case 'onboarding_manual_audiobook_action':
+        return 'Import a book with audiobook audio';
+      case 'onboarding_manual_audiobook_action_desc':
+        return 'Open book import and choose the book or text, aligned subtitles, and one or more audio files. Audio needs subtitles so Fushi can align it to sentences.';
+      case 'onboarding_manual_pronunciation_action':
+        return 'Configure word pronunciation audio';
+      case 'onboarding_manual_pronunciation_action_desc':
+        return 'Add local or online pronunciation sources used by dictionary entries. This is separate from audiobook audio attached to a book.';
+      case 'onboarding_lookup_verify_action':
+        return 'Verify a word in your dictionary';
+      case 'onboarding_lookup_verify_action_desc':
+        return 'Open lookup, enter any word you are learning, and continue only after the installed dictionary returns a definition. The tutorial does not hard-code a sample word.';
+      case 'onboarding_step_first_anki_card_title':
+        return 'Create your first Anki card';
+      case 'onboarding_step_first_anki_card_body':
+        return 'This step appears only after this onboarding session has connected to Anki and selected a usable deck and note type.';
+      case 'onboarding_first_anki_lookup_title':
+        return 'Start from a real dictionary result';
+      case 'onboarding_first_anki_lookup_body':
+        return 'Look up a word that your installed dictionary actually defines. There is no fixed tutorial word that might be absent from your dictionary.';
+      case 'onboarding_first_anki_plus_title':
+        return 'Tap the plus button on the entry';
+      case 'onboarding_first_anki_plus_body':
+        return 'The plus button opens the card creator with the current word, reading, meaning, sentence, audio, and available image context.';
+      case 'onboarding_first_anki_save_title':
+        return 'Review and save';
+      case 'onboarding_first_anki_save_body':
+        return 'Confirm the target deck, note type, and field preview, then save. Open Anki to verify that the first card arrived.';
+      case 'onboarding_first_anki_action':
+        return 'Open lookup and create a card';
+      case 'onboarding_first_anki_action_desc':
+        return 'Use a word with a visible definition, tap its plus button, review the fields, and save it to the connected Anki deck.';
+      case 'onboarding_step_click_lookup_body':
+        return 'First verify a word that your installed dictionary actually defines. Then use that same word to practise direct lookup in books, manga OCR text, and video subtitles.';
+      case 'onboarding_click_lookup_tap_body':
+        return 'On a phone, tap a character in the verified word. On a computer, left-click it. Fushi starts there and matches the longest word.';
+      case 'onboarding_global_lookup_windows_select_body':
+        return 'Highlight the same word you already verified has a dictionary definition, and leave the selection active.';
+      case 'onboarding_global_lookup_android_select_body':
+        return 'Long-press the same word you already verified has a dictionary definition, then adjust the selection handles to cover it.';
       default:
         return null;
     }
@@ -285212,12 +286913,8 @@ extension on _StringsZhCn {
         return ({required Object count}) => '切到内置模式制作 ${count} 张排队卡片';
       case 'onboarding_step_click_lookup_title':
         return '点击查词';
-      case 'onboarding_step_click_lookup_body':
-        return '在 Fushi 里，书籍正文、漫画 OCR 文字和视频字幕都能从你点中的字符直接查词。';
       case 'onboarding_click_lookup_tap_title':
         return '点一下文字';
-      case 'onboarding_click_lookup_tap_body':
-        return '手机轻点一个字，电脑用鼠标左键单击。Fushi 会从这里开始匹配最长的词。';
       case 'onboarding_click_lookup_nested_title':
         return '在弹窗里继续查';
       case 'onboarding_click_lookup_nested_body':
@@ -285232,8 +286929,6 @@ extension on _StringsZhCn {
         return '在 Windows 上，先在其他应用里选中文字，就能直接唤出词典，不必切回 Fushi。';
       case 'onboarding_global_lookup_windows_select_title':
         return '在任意应用里选中文字';
-      case 'onboarding_global_lookup_windows_select_body':
-        return '拖选要查的词或短语，并保持文字处于选中状态。';
       case 'onboarding_global_lookup_windows_shortcut_title':
         return '按 Ctrl+Alt+D';
       case 'onboarding_global_lookup_windows_shortcut_body':
@@ -285250,8 +286945,6 @@ extension on _StringsZhCn {
         return '在 Android 上，由系统通过文字菜单或分享面板把选中文本交给 Fushi；手机没有可自定义的全局热键。';
       case 'onboarding_global_lookup_android_select_title':
         return '在其他应用里选中文字';
-      case 'onboarding_global_lookup_android_select_body':
-        return '长按文字，再拖动选区手柄，让它覆盖要查的词或短语。';
       case 'onboarding_global_lookup_android_open_title':
         return '选择 Fushi';
       case 'onboarding_global_lookup_android_open_body':
@@ -285260,6 +286953,58 @@ extension on _StringsZhCn {
         return '在独立弹窗中继续';
       case 'onboarding_global_lookup_android_continue_body':
         return '查词结果会独立打开；你可以继续点释义里的词，关闭后回到刚才的应用。';
+      case 'onboarding_feature_manual_resources':
+        return '手动导入词典和音频';
+      case 'onboarding_feature_manual_resources_hint':
+        return '不下载推荐包，自己导入词典、有声书和单词发音来源';
+      case 'onboarding_step_manual_resources_title':
+        return '手动准备词典和音频';
+      case 'onboarding_step_manual_resources_body':
+        return '不下载推荐包时，在这里按需准备资源。进入查词教程前至少导入一本词典；有声书音频和单词发音音频按需配置。';
+      case 'onboarding_manual_dictionary_action':
+        return '导入词典';
+      case 'onboarding_manual_dictionary_action_desc':
+        return '打开词典管理，导入至少一个受支持的词典文件或压缩包。只有查词能返回释义后，后面的操作教程才有实际结果。';
+      case 'onboarding_manual_audiobook_action':
+        return '导入书籍和有声书音频';
+      case 'onboarding_manual_audiobook_action_desc':
+        return '打开书籍导入，选择书籍或文本、对齐字幕和一个或多个音频文件。音频需要配套字幕，Fushi 才能按句同步。';
+      case 'onboarding_manual_pronunciation_action':
+        return '配置单词发音音频';
+      case 'onboarding_manual_pronunciation_action_desc':
+        return '添加词典词条使用的本地或在线发音来源。它与附加到书籍的有声书音频是两套独立资源。';
+      case 'onboarding_lookup_verify_action':
+        return '先验证词典里有这个词';
+      case 'onboarding_lookup_verify_action_desc':
+        return '打开查词页，输入你正在学的任意词；确认当前已安装词典返回释义后，再用同一个词练习后续操作。教程不会写死示例词。';
+      case 'onboarding_step_first_anki_card_title':
+        return '完成第一张 Anki 卡片';
+      case 'onboarding_step_first_anki_card_body':
+        return '只有本次新手引导已连接 Anki，并选好了仍然可用的牌组和笔记类型，才会出现这一步。';
+      case 'onboarding_first_anki_lookup_title':
+        return '从真实词典结果开始';
+      case 'onboarding_first_anki_lookup_body':
+        return '查一个当前已安装词典确实能返回释义的词，不使用可能不存在于你词典里的固定示例词。';
+      case 'onboarding_first_anki_plus_title':
+        return '点词条上的加号';
+      case 'onboarding_first_anki_plus_body':
+        return '加号会打开制卡器，并带入当前单词、读音、释义、句子、音频和可用的画面上下文。';
+      case 'onboarding_first_anki_save_title':
+        return '检查后保存';
+      case 'onboarding_first_anki_save_body':
+        return '确认目标牌组、笔记类型和字段预览后保存，再打开 Anki 检查第一张卡是否已经写入。';
+      case 'onboarding_first_anki_action':
+        return '打开查词页并制卡';
+      case 'onboarding_first_anki_action_desc':
+        return '选择一个已经显示释义的词，点词条加号，检查字段后保存到刚才连接的 Anki 牌组。';
+      case 'onboarding_step_click_lookup_body':
+        return '先验证一个当前已安装词典确实能返回释义的词，再用同一个词练习书籍正文、漫画 OCR 文字和视频字幕里的点击查词。';
+      case 'onboarding_click_lookup_tap_body':
+        return '手机轻点刚才验证过的词中的一个字，电脑用鼠标左键单击。Fushi 会从这里开始匹配最长的词。';
+      case 'onboarding_global_lookup_windows_select_body':
+        return '拖选刚才已经验证能返回词典释义的同一个词，并保持文字处于选中状态。';
+      case 'onboarding_global_lookup_android_select_body':
+        return '长按刚才已经验证能返回词典释义的同一个词，再拖动选区手柄让它完整覆盖。';
       default:
         return null;
     }
@@ -293352,12 +295097,8 @@ extension on _StringsZhHk {
         return ({required Object count}) => '切換到內建模式製作 ${count} 張排隊卡片';
       case 'onboarding_step_click_lookup_title':
         return 'Tap to look up words';
-      case 'onboarding_step_click_lookup_body':
-        return 'Inside Fushi, books, OCR text in manga, and video subtitles all support direct lookup from the character you touch.';
       case 'onboarding_click_lookup_tap_title':
         return 'Tap the text';
-      case 'onboarding_click_lookup_tap_body':
-        return 'On a phone, tap a character. On a computer, left-click it. Fushi starts there and matches the longest word.';
       case 'onboarding_click_lookup_nested_title':
         return 'Keep exploring in the popup';
       case 'onboarding_click_lookup_nested_body':
@@ -293372,8 +295113,6 @@ extension on _StringsZhHk {
         return 'On Windows, select text in another app and summon the dictionary without switching back to Fushi.';
       case 'onboarding_global_lookup_windows_select_title':
         return 'Select text in any app';
-      case 'onboarding_global_lookup_windows_select_body':
-        return 'Highlight the word or phrase you want to look up and leave the selection active.';
       case 'onboarding_global_lookup_windows_shortcut_title':
         return 'Press Ctrl+Alt+D';
       case 'onboarding_global_lookup_windows_shortcut_body':
@@ -293390,8 +295129,6 @@ extension on _StringsZhHk {
         return 'On Android, the system passes selected text to Fushi through the text menu or Share sheet. There is no remappable global hotkey.';
       case 'onboarding_global_lookup_android_select_title':
         return 'Select text in another app';
-      case 'onboarding_global_lookup_android_select_body':
-        return 'Long-press text, then adjust the selection handles until they cover the word or phrase you want.';
       case 'onboarding_global_lookup_android_open_title':
         return 'Choose Fushi';
       case 'onboarding_global_lookup_android_open_body':
@@ -293400,6 +295137,58 @@ extension on _StringsZhHk {
         return 'Use the standalone popup';
       case 'onboarding_global_lookup_android_continue_body':
         return 'The lookup opens separately from the source app. You can tap more words inside it, then close it to return where you were.';
+      case 'onboarding_feature_manual_resources':
+        return 'Import dictionaries and audio manually';
+      case 'onboarding_feature_manual_resources_hint':
+        return 'Skip the pack; import your own dictionaries, audiobooks, and pronunciation sources';
+      case 'onboarding_step_manual_resources_title':
+        return 'Prepare dictionaries and audio manually';
+      case 'onboarding_step_manual_resources_body':
+        return 'Skip the recommended pack and prepare only what you need. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional.';
+      case 'onboarding_manual_dictionary_action':
+        return 'Import a dictionary';
+      case 'onboarding_manual_dictionary_action_desc':
+        return 'Open dictionary management and import at least one supported dictionary file or archive. Lookup tutorials are useful only after a query returns a definition.';
+      case 'onboarding_manual_audiobook_action':
+        return 'Import a book with audiobook audio';
+      case 'onboarding_manual_audiobook_action_desc':
+        return 'Open book import and choose the book or text, aligned subtitles, and one or more audio files. Audio needs subtitles so Fushi can align it to sentences.';
+      case 'onboarding_manual_pronunciation_action':
+        return 'Configure word pronunciation audio';
+      case 'onboarding_manual_pronunciation_action_desc':
+        return 'Add local or online pronunciation sources used by dictionary entries. This is separate from audiobook audio attached to a book.';
+      case 'onboarding_lookup_verify_action':
+        return 'Verify a word in your dictionary';
+      case 'onboarding_lookup_verify_action_desc':
+        return 'Open lookup, enter any word you are learning, and continue only after the installed dictionary returns a definition. The tutorial does not hard-code a sample word.';
+      case 'onboarding_step_first_anki_card_title':
+        return 'Create your first Anki card';
+      case 'onboarding_step_first_anki_card_body':
+        return 'This step appears only after this onboarding session has connected to Anki and selected a usable deck and note type.';
+      case 'onboarding_first_anki_lookup_title':
+        return 'Start from a real dictionary result';
+      case 'onboarding_first_anki_lookup_body':
+        return 'Look up a word that your installed dictionary actually defines. There is no fixed tutorial word that might be absent from your dictionary.';
+      case 'onboarding_first_anki_plus_title':
+        return 'Tap the plus button on the entry';
+      case 'onboarding_first_anki_plus_body':
+        return 'The plus button opens the card creator with the current word, reading, meaning, sentence, audio, and available image context.';
+      case 'onboarding_first_anki_save_title':
+        return 'Review and save';
+      case 'onboarding_first_anki_save_body':
+        return 'Confirm the target deck, note type, and field preview, then save. Open Anki to verify that the first card arrived.';
+      case 'onboarding_first_anki_action':
+        return 'Open lookup and create a card';
+      case 'onboarding_first_anki_action_desc':
+        return 'Use a word with a visible definition, tap its plus button, review the fields, and save it to the connected Anki deck.';
+      case 'onboarding_step_click_lookup_body':
+        return 'First verify a word that your installed dictionary actually defines. Then use that same word to practise direct lookup in books, manga OCR text, and video subtitles.';
+      case 'onboarding_click_lookup_tap_body':
+        return 'On a phone, tap a character in the verified word. On a computer, left-click it. Fushi starts there and matches the longest word.';
+      case 'onboarding_global_lookup_windows_select_body':
+        return 'Highlight the same word you already verified has a dictionary definition, and leave the selection active.';
+      case 'onboarding_global_lookup_android_select_body':
+        return 'Long-press the same word you already verified has a dictionary definition, then adjust the selection handles to cover it.';
       default:
         return null;
     }
