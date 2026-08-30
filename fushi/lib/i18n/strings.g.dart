@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 66385 (3905 per locale)
+/// Strings: 66521 (3913 per locale)
 ///
-/// Built on 2026-08-30 at 05:38 UTC
+/// Built on 2026-08-30 at 06:51 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -302,7 +302,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get anki_error_connection_refused =>
       'Could not connect to Anki: connection refused. Make sure Anki Desktop is running and the AnkiConnect add-on is installed.';
   String get anki_error_connection_timeout =>
-      'Anki did not answer in time. Something is listening on this port but is not responding as AnkiConnect - the port is probably taken by another program (or Anki is frozen). Try switching to a free port.';
+      'Could not connect to Anki: the connection timed out. Check the host, port, and firewall settings.';
   String get anki_error_connection_unknown =>
       'Could not export to Anki: an unexpected connection error occurred. See the error log for details.';
   String get anki_error_http =>
@@ -5316,6 +5316,19 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Could not read the game executable';
   String get gal_hook_ingame_lookup_exe_hash_copied =>
       'Executable SHA-256 copied';
+  String get download_tracker_section => 'Tracker subscription';
+  String get download_tracker_auto_add =>
+      'Automatically add subscription trackers to new downloads';
+  String get download_tracker_auto_add_hint =>
+      'The list is cached for 6 hours. A subscription failure will not block the download.';
+  String get download_tracker_url => 'Subscription URL';
+  String get download_tracker_refresh => 'Fetch trackers';
+  String get download_tracker_preview_empty =>
+      'Fetch the subscription to preview supported HTTP, HTTPS, and UDP trackers.';
+  String download_tracker_preview_count({required Object count}) =>
+      'Fetched ${count} trackers';
+  String download_tracker_fetch_failed({required Object message}) =>
+      'Could not fetch trackers: ${message}';
   String get anki_connect_port_auto_fix => 'Switch to a free port';
   String get anki_connect_port_auto_fix_hint =>
       'Picks a free port and writes it to both Hibiki and the AnkiConnect add-on config. Restart Anki to apply.';
@@ -5552,7 +5565,7 @@ class _StringsAr extends _StringsEn {
       'تعذّر الاتصال بـ Anki: تم رفض الاتصال. تأكد من تشغيل Anki Desktop وتثبيت الإضافة AnkiConnect.';
   @override
   String get anki_error_connection_timeout =>
-      'لم يستجب Anki في الوقت المحدد. هناك برنامج يستمع على هذا المنفذ لكنه لا يستجيب كـ AnkiConnect — على الأرجح أن المنفذ مشغول ببرنامج آخر (أو أن Anki متجمد). جرّب التبديل إلى منفذ حر.';
+      'تعذّر الاتصال بـ Anki: انتهت مهلة الاتصال. تحقق من المضيف والمنفذ وإعدادات الجدار الناري.';
   @override
   String get anki_error_connection_unknown =>
       'تعذّر التصدير إلى Anki: حدث خطأ اتصال غير متوقع. راجع سجل الأخطاء لمزيد من التفاصيل.';
@@ -14371,6 +14384,27 @@ class _StringsAr extends _StringsEn {
   String get gal_hook_ingame_lookup_exe_hash_copied =>
       'تم نسخ SHA-256 لملف اللعبة التنفيذي';
   @override
+  String get download_tracker_section => 'اشتراك المتعقّبات';
+  @override
+  String get download_tracker_auto_add =>
+      'إضافة متعقّبات الاشتراك تلقائيًا إلى التنزيلات الجديدة';
+  @override
+  String get download_tracker_auto_add_hint =>
+      'تُخزَّن القائمة مؤقتًا لست ساعات. فشل الاشتراك لا يمنع التنزيل.';
+  @override
+  String get download_tracker_url => 'رابط الاشتراك';
+  @override
+  String get download_tracker_refresh => 'جلب المتعقّبات';
+  @override
+  String get download_tracker_preview_empty =>
+      'اجلب الاشتراك لمعاينة متعقّبات HTTP وHTTPS وUDP المدعومة.';
+  @override
+  String download_tracker_preview_count({required Object count}) =>
+      'تم جلب ${count} متعقّبًا';
+  @override
+  String download_tracker_fetch_failed({required Object message}) =>
+      'تعذّر جلب المتعقّبات: ${message}';
+  @override
   String get anki_connect_port_auto_fix => 'التبديل إلى منفذ حر';
   @override
   String get anki_connect_port_auto_fix_hint =>
@@ -14613,7 +14647,7 @@ class _StringsDe extends _StringsEn {
       'Verbindung zu Anki fehlgeschlagen: Verbindung abgelehnt. Stelle sicher, dass Anki Desktop läuft und das AnkiConnect-Add-on installiert ist.';
   @override
   String get anki_error_connection_timeout =>
-      'Anki hat nicht rechtzeitig geantwortet. Auf diesem Port lauscht etwas, antwortet aber nicht als AnkiConnect – der Port ist wahrscheinlich von einem anderen Programm belegt (oder Anki hängt). Wechsle auf einen freien Port.';
+      'Verbindung zu Anki fehlgeschlagen: Zeitüberschreitung. Prüfe Host, Port und Firewall-Einstellungen.';
   @override
   String get anki_error_connection_unknown =>
       'Export zu Anki fehlgeschlagen: ein unerwarteter Verbindungsfehler ist aufgetreten. Einzelheiten im Fehlerprotokoll.';
@@ -23642,6 +23676,27 @@ class _StringsDe extends _StringsEn {
   String get gal_hook_ingame_lookup_exe_hash_copied =>
       'SHA-256 der Spieldatei kopiert';
   @override
+  String get download_tracker_section => 'Tracker-Abonnement';
+  @override
+  String get download_tracker_auto_add =>
+      'Abonnierte Tracker automatisch zu neuen Downloads hinzufügen';
+  @override
+  String get download_tracker_auto_add_hint =>
+      'Die Liste wird 6 Stunden zwischengespeichert. Ein fehlgeschlagenes Abonnement blockiert den Download nicht.';
+  @override
+  String get download_tracker_url => 'Abonnement-URL';
+  @override
+  String get download_tracker_refresh => 'Tracker abrufen';
+  @override
+  String get download_tracker_preview_empty =>
+      'Rufe das Abonnement ab, um die unterstützten HTTP-, HTTPS- und UDP-Tracker anzuzeigen.';
+  @override
+  String download_tracker_preview_count({required Object count}) =>
+      '${count} Tracker abgerufen';
+  @override
+  String download_tracker_fetch_failed({required Object message}) =>
+      'Tracker konnten nicht abgerufen werden: ${message}';
+  @override
   String get anki_connect_port_auto_fix => 'Auf freien Port wechseln';
   @override
   String get anki_connect_port_auto_fix_hint =>
@@ -23882,7 +23937,7 @@ class _StringsEs extends _StringsEn {
       'No se pudo conectar con Anki: conexión rechazada. Asegúrate de que Anki Desktop esté abierto y el complemento AnkiConnect instalado.';
   @override
   String get anki_error_connection_timeout =>
-      'Anki no respondió a tiempo. Algo está escuchando en este puerto pero no responde como AnkiConnect: probablemente otro programa ocupa el puerto (o Anki está bloqueado). Prueba a cambiar a un puerto libre.';
+      'No se pudo conectar con Anki: se agotó el tiempo de espera. Revisa el servidor, el puerto y el cortafuegos.';
   @override
   String get anki_error_connection_unknown =>
       'No se pudo exportar a Anki: error de conexión inesperado. Consulta el registro de errores.';
@@ -32956,6 +33011,27 @@ class _StringsEs extends _StringsEn {
   String get gal_hook_ingame_lookup_exe_hash_copied =>
       'SHA-256 del ejecutable copiado';
   @override
+  String get download_tracker_section => 'Suscripción de trackers';
+  @override
+  String get download_tracker_auto_add =>
+      'Añadir automáticamente los trackers suscritos a las descargas nuevas';
+  @override
+  String get download_tracker_auto_add_hint =>
+      'La lista se almacena en caché 6 horas. Si la suscripción falla, la descarga no se bloquea.';
+  @override
+  String get download_tracker_url => 'URL de suscripción';
+  @override
+  String get download_tracker_refresh => 'Obtener trackers';
+  @override
+  String get download_tracker_preview_empty =>
+      'Obtén la suscripción para ver los trackers HTTP, HTTPS y UDP compatibles.';
+  @override
+  String download_tracker_preview_count({required Object count}) =>
+      '${count} trackers obtenidos';
+  @override
+  String download_tracker_fetch_failed({required Object message}) =>
+      'No se pudieron obtener los trackers: ${message}';
+  @override
   String get anki_connect_port_auto_fix => 'Cambiar a un puerto libre';
   @override
   String get anki_connect_port_auto_fix_hint =>
@@ -33199,7 +33275,7 @@ class _StringsFr extends _StringsEn {
       'Connexion à Anki impossible : connexion refusée. Vérifiez qu\'Anki Desktop est lancé et que le module AnkiConnect est installé.';
   @override
   String get anki_error_connection_timeout =>
-      'Anki n\'a pas répondu à temps. Quelque chose écoute sur ce port mais ne répond pas comme AnkiConnect : le port est probablement occupé par un autre programme (ou Anki est figé). Essayez un port libre.';
+      'Connexion à Anki impossible : délai dépassé. Vérifiez l\'hôte, le port et le pare-feu.';
   @override
   String get anki_error_connection_unknown =>
       'Export vers Anki impossible : une erreur de connexion inattendue est survenue. Consultez le journal d\'erreurs.';
@@ -42304,6 +42380,27 @@ class _StringsFr extends _StringsEn {
   String get gal_hook_ingame_lookup_exe_hash_copied =>
       'SHA-256 de l\'exécutable copié';
   @override
+  String get download_tracker_section => 'Abonnement aux trackers';
+  @override
+  String get download_tracker_auto_add =>
+      'Ajouter automatiquement les trackers de l’abonnement aux nouveaux téléchargements';
+  @override
+  String get download_tracker_auto_add_hint =>
+      'La liste est mise en cache pendant 6 heures. L’échec de l’abonnement ne bloque pas le téléchargement.';
+  @override
+  String get download_tracker_url => 'URL de l’abonnement';
+  @override
+  String get download_tracker_refresh => 'Récupérer les trackers';
+  @override
+  String get download_tracker_preview_empty =>
+      'Récupère l’abonnement pour prévisualiser les trackers HTTP, HTTPS et UDP pris en charge.';
+  @override
+  String download_tracker_preview_count({required Object count}) =>
+      '${count} trackers récupérés';
+  @override
+  String download_tracker_fetch_failed({required Object message}) =>
+      'Impossible de récupérer les trackers : ${message}';
+  @override
   String get anki_connect_port_auto_fix => 'Passer à un port libre';
   @override
   String get anki_connect_port_auto_fix_hint =>
@@ -42545,7 +42642,7 @@ class _StringsId extends _StringsEn {
       'Tidak dapat terhubung ke Anki: koneksi ditolak. Pastikan Anki Desktop sedang berjalan dan add-on AnkiConnect sudah terpasang.';
   @override
   String get anki_error_connection_timeout =>
-      'Anki tidak menjawab tepat waktu. Ada program yang mendengarkan di port ini tetapi tidak menjawab sebagai AnkiConnect — port-nya kemungkinan besar dipakai program lain (atau Anki macet). Coba ganti ke port yang kosong.';
+      'Tidak dapat terhubung ke Anki: koneksi habis waktu. Periksa host, port, dan pengaturan firewall.';
   @override
   String get anki_error_connection_unknown =>
       'Tidak dapat mengekspor ke Anki: terjadi kesalahan koneksi yang tidak terduga. Lihat log kesalahan untuk detailnya.';
@@ -51477,6 +51574,27 @@ class _StringsId extends _StringsEn {
   String get gal_hook_ingame_lookup_exe_hash_copied =>
       'SHA-256 file eksekusi disalin';
   @override
+  String get download_tracker_section => 'Langganan tracker';
+  @override
+  String get download_tracker_auto_add =>
+      'Otomatis tambahkan tracker langganan ke unduhan baru';
+  @override
+  String get download_tracker_auto_add_hint =>
+      'Daftar disimpan di cache selama 6 jam. Kegagalan langganan tidak menghentikan unduhan.';
+  @override
+  String get download_tracker_url => 'URL langganan';
+  @override
+  String get download_tracker_refresh => 'Ambil tracker';
+  @override
+  String get download_tracker_preview_empty =>
+      'Ambil langganan untuk melihat tracker HTTP, HTTPS, dan UDP yang didukung.';
+  @override
+  String download_tracker_preview_count({required Object count}) =>
+      '${count} tracker diambil';
+  @override
+  String download_tracker_fetch_failed({required Object message}) =>
+      'Tidak dapat mengambil tracker: ${message}';
+  @override
   String get anki_connect_port_auto_fix => 'Ganti ke port yang kosong';
   @override
   String get anki_connect_port_auto_fix_hint =>
@@ -51718,7 +51836,7 @@ class _StringsIt extends _StringsEn {
       'Impossibile connettersi ad Anki: connessione rifiutata. Assicurati che Anki Desktop sia in esecuzione e il componente AnkiConnect sia installato.';
   @override
   String get anki_error_connection_timeout =>
-      'Anki non ha risposto in tempo. Qualcosa è in ascolto su questa porta ma non risponde come AnkiConnect: la porta è probabilmente occupata da un altro programma (o Anki è bloccato). Prova a passare a una porta libera.';
+      'Impossibile connettersi ad Anki: connessione scaduta. Controlla host, porta e firewall.';
   @override
   String get anki_error_connection_unknown =>
       'Impossibile esportare in Anki: errore di connessione imprevisto. Vedi il log degli errori.';
@@ -60727,6 +60845,27 @@ class _StringsIt extends _StringsEn {
   String get gal_hook_ingame_lookup_exe_hash_copied =>
       'SHA-256 dell\'eseguibile copiato';
   @override
+  String get download_tracker_section => 'Abbonamento ai tracker';
+  @override
+  String get download_tracker_auto_add =>
+      'Aggiungi automaticamente i tracker dell’abbonamento ai nuovi download';
+  @override
+  String get download_tracker_auto_add_hint =>
+      'L’elenco resta in cache per 6 ore. Se l’abbonamento fallisce, il download non viene bloccato.';
+  @override
+  String get download_tracker_url => 'URL dell’abbonamento';
+  @override
+  String get download_tracker_refresh => 'Scarica i tracker';
+  @override
+  String get download_tracker_preview_empty =>
+      'Scarica l’abbonamento per vedere in anteprima i tracker HTTP, HTTPS e UDP supportati.';
+  @override
+  String download_tracker_preview_count({required Object count}) =>
+      '${count} tracker scaricati';
+  @override
+  String download_tracker_fetch_failed({required Object message}) =>
+      'Impossibile scaricare i tracker: ${message}';
+  @override
   String get anki_connect_port_auto_fix => 'Passa a una porta libera';
   @override
   String get anki_connect_port_auto_fix_hint =>
@@ -60959,7 +61098,7 @@ class _StringsJa extends _StringsEn {
       'Anki に接続できません：接続が拒否されました。Anki デスクトップ版が起動していて、AnkiConnect アドオンがインストールされているか確認してください。';
   @override
   String get anki_error_connection_timeout =>
-      'Anki から応答がありませんでした。このポートで何かが待ち受けていますが、AnkiConnect としては応答していません——ポートが別のプログラムに使われている（または Anki がフリーズしている）可能性が高いです。空いているポートに変更してみてください。';
+      'Anki に接続できません：接続がタイムアウトしました。ホスト・ポート・ファイアウォールの設定を確認してください。';
   @override
   String get anki_error_connection_unknown =>
       'Anki に書き出せません：予期しない接続エラーが発生しました。詳細はエラーログを確認してください。';
@@ -69414,6 +69553,26 @@ class _StringsJa extends _StringsEn {
   String get gal_hook_ingame_lookup_exe_hash_copied =>
       '実行ファイルの SHA-256 をコピーしました';
   @override
+  String get download_tracker_section => 'トラッカー購読';
+  @override
+  String get download_tracker_auto_add => '新しいダウンロードに購読トラッカーを自動で追加する';
+  @override
+  String get download_tracker_auto_add_hint =>
+      'リストは 6 時間キャッシュされます。購読の取得に失敗してもダウンロードは止まりません。';
+  @override
+  String get download_tracker_url => '購読 URL';
+  @override
+  String get download_tracker_refresh => 'トラッカーを取得';
+  @override
+  String get download_tracker_preview_empty =>
+      '購読を取得すると、対応している HTTP・HTTPS・UDP のトラッカーをプレビューできます。';
+  @override
+  String download_tracker_preview_count({required Object count}) =>
+      '${count} 件のトラッカーを取得しました';
+  @override
+  String download_tracker_fetch_failed({required Object message}) =>
+      'トラッカーを取得できませんでした: ${message}';
+  @override
   String get anki_connect_port_auto_fix => '空いているポートに変更';
   @override
   String get anki_connect_port_auto_fix_hint =>
@@ -69644,7 +69803,7 @@ class _StringsKo extends _StringsEn {
       'Anki에 연결할 수 없습니다: 연결이 거부되었습니다. Anki 데스크톱이 실행 중이고 AnkiConnect 애드온이 설치되어 있는지 확인하세요.';
   @override
   String get anki_error_connection_timeout =>
-      'Anki가 제때 응답하지 않았습니다. 이 포트에서 무언가 수신 대기 중이지만 AnkiConnect로 응답하지 않습니다 — 다른 프로그램이 포트를 쓰고 있을 가능성이 높습니다(또는 Anki가 멈춤). 비어 있는 포트로 바꿔 보세요.';
+      'Anki에 연결할 수 없습니다: 연결 시간이 초과되었습니다. 호스트, 포트, 방화벽 설정을 확인하세요.';
   @override
   String get anki_error_connection_unknown =>
       'Anki로 내보낼 수 없습니다: 알 수 없는 연결 오류가 발생했습니다. 자세한 내용은 오류 로그를 확인하세요.';
@@ -78113,6 +78272,26 @@ class _StringsKo extends _StringsEn {
   @override
   String get gal_hook_ingame_lookup_exe_hash_copied => '실행 파일의 SHA-256을 복사했습니다';
   @override
+  String get download_tracker_section => '트래커 구독';
+  @override
+  String get download_tracker_auto_add => '새 다운로드에 구독 트래커 자동 추가';
+  @override
+  String get download_tracker_auto_add_hint =>
+      '목록은 6시간 동안 캐시됩니다. 구독을 가져오지 못해도 다운로드는 중단되지 않습니다.';
+  @override
+  String get download_tracker_url => '구독 URL';
+  @override
+  String get download_tracker_refresh => '트래커 가져오기';
+  @override
+  String get download_tracker_preview_empty =>
+      '구독을 가져오면 지원되는 HTTP, HTTPS, UDP 트래커를 미리 볼 수 있습니다.';
+  @override
+  String download_tracker_preview_count({required Object count}) =>
+      '트래커 ${count}개를 가져왔습니다';
+  @override
+  String download_tracker_fetch_failed({required Object message}) =>
+      '트래커를 가져오지 못했습니다: ${message}';
+  @override
   String get anki_connect_port_auto_fix => '비어 있는 포트로 변경';
   @override
   String get anki_connect_port_auto_fix_hint =>
@@ -78355,7 +78534,7 @@ class _StringsNl extends _StringsEn {
       'Kon geen verbinding maken met Anki: verbinding geweigerd. Controleer of Anki Desktop draait en de AnkiConnect-add-on is geïnstalleerd.';
   @override
   String get anki_error_connection_timeout =>
-      'Anki heeft niet op tijd geantwoord. Er luistert iets op deze poort, maar het antwoordt niet als AnkiConnect — de poort is waarschijnlijk in gebruik door een ander programma (of Anki loopt vast). Probeer een vrije poort.';
+      'Kon geen verbinding maken met Anki: time-out van de verbinding. Controleer de host, poort en firewallinstellingen.';
   @override
   String get anki_error_connection_unknown =>
       'Kon niet exporteren naar Anki: er is een onverwachte verbindingsfout opgetreden. Zie het foutenlogboek voor details.';
@@ -87319,6 +87498,27 @@ class _StringsNl extends _StringsEn {
   String get gal_hook_ingame_lookup_exe_hash_copied =>
       'SHA-256 van het spelbestand gekopieerd';
   @override
+  String get download_tracker_section => 'Tracker-abonnement';
+  @override
+  String get download_tracker_auto_add =>
+      'Geabonneerde trackers automatisch aan nieuwe downloads toevoegen';
+  @override
+  String get download_tracker_auto_add_hint =>
+      'De lijst wordt 6 uur gecachet. Een mislukt abonnement blokkeert de download niet.';
+  @override
+  String get download_tracker_url => 'Abonnements-URL';
+  @override
+  String get download_tracker_refresh => 'Trackers ophalen';
+  @override
+  String get download_tracker_preview_empty =>
+      'Haal het abonnement op om de ondersteunde HTTP-, HTTPS- en UDP-trackers te bekijken.';
+  @override
+  String download_tracker_preview_count({required Object count}) =>
+      '${count} trackers opgehaald';
+  @override
+  String download_tracker_fetch_failed({required Object message}) =>
+      'Kan de trackers niet ophalen: ${message}';
+  @override
   String get anki_connect_port_auto_fix => 'Naar een vrije poort wisselen';
   @override
   String get anki_connect_port_auto_fix_hint =>
@@ -87562,7 +87762,7 @@ class _StringsPtBr extends _StringsEn {
       'Não foi possível conectar ao Anki: conexão recusada. Verifique se o Anki Desktop está aberto e o complemento AnkiConnect instalado.';
   @override
   String get anki_error_connection_timeout =>
-      'O Anki não respondeu a tempo. Algo está escutando nesta porta, mas não responde como AnkiConnect — a porta provavelmente está ocupada por outro programa (ou o Anki travou). Tente mudar para uma porta livre.';
+      'Não foi possível conectar ao Anki: tempo limite esgotado. Verifique o host, a porta e o firewall.';
   @override
   String get anki_error_connection_unknown =>
       'Não foi possível exportar para o Anki: erro de conexão inesperado. Consulte o log de erros.';
@@ -96582,6 +96782,27 @@ class _StringsPtBr extends _StringsEn {
   String get gal_hook_ingame_lookup_exe_hash_copied =>
       'SHA-256 do executável copiado';
   @override
+  String get download_tracker_section => 'Assinatura de trackers';
+  @override
+  String get download_tracker_auto_add =>
+      'Adicionar automaticamente os trackers da assinatura aos novos downloads';
+  @override
+  String get download_tracker_auto_add_hint =>
+      'A lista fica em cache por 6 horas. Uma falha na assinatura não bloqueia o download.';
+  @override
+  String get download_tracker_url => 'URL da assinatura';
+  @override
+  String get download_tracker_refresh => 'Buscar trackers';
+  @override
+  String get download_tracker_preview_empty =>
+      'Busque a assinatura para pré-visualizar os trackers HTTP, HTTPS e UDP compatíveis.';
+  @override
+  String download_tracker_preview_count({required Object count}) =>
+      '${count} trackers obtidos';
+  @override
+  String download_tracker_fetch_failed({required Object message}) =>
+      'Não foi possível buscar os trackers: ${message}';
+  @override
   String get anki_connect_port_auto_fix => 'Mudar para uma porta livre';
   @override
   String get anki_connect_port_auto_fix_hint =>
@@ -96824,7 +97045,7 @@ class _StringsRu extends _StringsEn {
       'Не удалось подключиться к Anki: соединение отклонено. Убедитесь, что Anki Desktop запущен и установлен аддон AnkiConnect.';
   @override
   String get anki_error_connection_timeout =>
-      'Anki не ответил вовремя. Что-то слушает этот порт, но отвечает не как AnkiConnect — скорее всего, порт занят другой программой (или Anki завис). Попробуйте выбрать свободный порт.';
+      'Не удалось подключиться к Anki: время ожидания соединения истекло. Проверьте хост, порт и настройки брандмауэра.';
   @override
   String get anki_error_connection_unknown =>
       'Не удалось экспортировать в Anki: произошла непредвиденная ошибка соединения. Подробности см. в журнале ошибок.';
@@ -105819,6 +106040,27 @@ class _StringsRu extends _StringsEn {
   String get gal_hook_ingame_lookup_exe_hash_copied =>
       'SHA-256 исполняемого файла скопирован';
   @override
+  String get download_tracker_section => 'Подписка на трекеры';
+  @override
+  String get download_tracker_auto_add =>
+      'Автоматически добавлять трекеры из подписки в новые загрузки';
+  @override
+  String get download_tracker_auto_add_hint =>
+      'Список кэшируется на 6 часов. Сбой подписки не блокирует загрузку.';
+  @override
+  String get download_tracker_url => 'URL подписки';
+  @override
+  String get download_tracker_refresh => 'Получить трекеры';
+  @override
+  String get download_tracker_preview_empty =>
+      'Получите подписку, чтобы посмотреть поддерживаемые трекеры HTTP, HTTPS и UDP.';
+  @override
+  String download_tracker_preview_count({required Object count}) =>
+      'Получено трекеров: ${count}';
+  @override
+  String download_tracker_fetch_failed({required Object message}) =>
+      'Не удалось получить трекеры: ${message}';
+  @override
   String get anki_connect_port_auto_fix => 'Выбрать свободный порт';
   @override
   String get anki_connect_port_auto_fix_hint =>
@@ -106059,7 +106301,7 @@ class _StringsTh extends _StringsEn {
       'ไม่สามารถเชื่อมต่อกับ Anki: การเชื่อมต่อถูกปฏิเสธ โปรดตรวจสอบว่า Anki Desktop กำลังทำงานอยู่และติดตั้งส่วนเสริม AnkiConnect แล้ว';
   @override
   String get anki_error_connection_timeout =>
-      'Anki ไม่ตอบกลับภายในเวลาที่กำหนด มีบางโปรแกรมกำลังฟังอยู่ที่พอร์ตนี้แต่ไม่ได้ตอบแบบ AnkiConnect — พอร์ตน่าจะถูกโปรแกรมอื่นใช้อยู่ (หรือ Anki ค้าง) ลองเปลี่ยนไปใช้พอร์ตที่ว่าง';
+      'ไม่สามารถเชื่อมต่อกับ Anki: การเชื่อมต่อหมดเวลา โปรดตรวจสอบโฮสต์ พอร์ต และการตั้งค่าไฟร์วอลล์';
   @override
   String get anki_error_connection_unknown =>
       'ไม่สามารถส่งออกไปยัง Anki: เกิดข้อผิดพลาดในการเชื่อมต่อที่ไม่คาดคิด ดูรายละเอียดในบันทึกข้อผิดพลาด';
@@ -114872,6 +115114,27 @@ class _StringsTh extends _StringsEn {
   String get gal_hook_ingame_lookup_exe_hash_copied =>
       'คัดลอก SHA-256 ของไฟล์เกมแล้ว';
   @override
+  String get download_tracker_section => 'การสมัครรับแทร็กเกอร์';
+  @override
+  String get download_tracker_auto_add =>
+      'เพิ่มแทร็กเกอร์จากการสมัครรับลงในดาวน์โหลดใหม่โดยอัตโนมัติ';
+  @override
+  String get download_tracker_auto_add_hint =>
+      'รายการจะถูกแคชไว้ 6 ชั่วโมง หากดึงรายการไม่สำเร็จก็จะไม่ขัดขวางการดาวน์โหลด';
+  @override
+  String get download_tracker_url => 'URL การสมัครรับ';
+  @override
+  String get download_tracker_refresh => 'ดึงแทร็กเกอร์';
+  @override
+  String get download_tracker_preview_empty =>
+      'ดึงรายการที่สมัครรับเพื่อดูตัวอย่างแทร็กเกอร์ HTTP, HTTPS และ UDP ที่รองรับ';
+  @override
+  String download_tracker_preview_count({required Object count}) =>
+      'ดึงแทร็กเกอร์มาแล้ว ${count} รายการ';
+  @override
+  String download_tracker_fetch_failed({required Object message}) =>
+      'ดึงแทร็กเกอร์ไม่สำเร็จ: ${message}';
+  @override
   String get anki_connect_port_auto_fix => 'เปลี่ยนไปใช้พอร์ตที่ว่าง';
   @override
   String get anki_connect_port_auto_fix_hint =>
@@ -115112,7 +115375,7 @@ class _StringsTr extends _StringsEn {
       'Anki\'ye bağlanılamadı: bağlantı reddedildi. Anki Masaüstü\'nün çalıştığından ve AnkiConnect eklentisinin yüklü olduğundan emin olun.';
   @override
   String get anki_error_connection_timeout =>
-      'Anki zamanında yanıt vermedi. Bu bağlantı noktasında bir şey dinliyor ama AnkiConnect gibi yanıt vermiyor — bağlantı noktası büyük olasılıkla başka bir program tarafından kullanılıyor (ya da Anki donmuş). Boş bir bağlantı noktasına geçmeyi deneyin.';
+      'Anki\'ye bağlanılamadı: bağlantı zaman aşımına uğradı. Sunucu, bağlantı noktası ve güvenlik duvarı ayarlarını kontrol edin.';
   @override
   String get anki_error_connection_unknown =>
       'Anki\'ye aktarılamadı: beklenmeyen bir bağlantı hatası oluştu. Ayrıntılar için hata günlüğüne bakın.';
@@ -124030,6 +124293,27 @@ class _StringsTr extends _StringsEn {
   String get gal_hook_ingame_lookup_exe_hash_copied =>
       'Çalıştırılabilir dosyanın SHA-256 değeri kopyalandı';
   @override
+  String get download_tracker_section => 'Tracker aboneliği';
+  @override
+  String get download_tracker_auto_add =>
+      'Abonelikteki trackerları yeni indirmelere otomatik ekle';
+  @override
+  String get download_tracker_auto_add_hint =>
+      'Liste 6 saat önbellekte tutulur. Abonelik alınamazsa indirme engellenmez.';
+  @override
+  String get download_tracker_url => 'Abonelik adresi';
+  @override
+  String get download_tracker_refresh => 'Trackerları getir';
+  @override
+  String get download_tracker_preview_empty =>
+      'Desteklenen HTTP, HTTPS ve UDP trackerlarını önizlemek için aboneliği getir.';
+  @override
+  String download_tracker_preview_count({required Object count}) =>
+      '${count} tracker getirildi';
+  @override
+  String download_tracker_fetch_failed({required Object message}) =>
+      'Trackerlar getirilemedi: ${message}';
+  @override
   String get anki_connect_port_auto_fix => 'Boş bir bağlantı noktasına geç';
   @override
   String get anki_connect_port_auto_fix_hint =>
@@ -124271,7 +124555,7 @@ class _StringsVi extends _StringsEn {
       'Không thể kết nối tới Anki: kết nối bị từ chối. Hãy đảm bảo Anki Desktop đang chạy và add-on AnkiConnect đã được cài đặt.';
   @override
   String get anki_error_connection_timeout =>
-      'Anki không phản hồi kịp thời. Có thứ gì đó đang lắng nghe trên cổng này nhưng không trả lời như AnkiConnect — nhiều khả năng cổng đã bị chương trình khác chiếm (hoặc Anki bị treo). Hãy thử đổi sang một cổng còn trống.';
+      'Không thể kết nối tới Anki: kết nối đã hết thời gian chờ. Hãy kiểm tra máy chủ, cổng và cài đặt tường lửa.';
   @override
   String get anki_error_connection_unknown =>
       'Không thể xuất sang Anki: đã xảy ra lỗi kết nối không xác định. Xem nhật ký lỗi để biết chi tiết.';
@@ -133170,6 +133454,27 @@ class _StringsVi extends _StringsEn {
   String get gal_hook_ingame_lookup_exe_hash_copied =>
       'Đã sao chép SHA-256 của tệp thực thi';
   @override
+  String get download_tracker_section => 'Đăng ký tracker';
+  @override
+  String get download_tracker_auto_add =>
+      'Tự động thêm tracker từ đăng ký vào các tải xuống mới';
+  @override
+  String get download_tracker_auto_add_hint =>
+      'Danh sách được lưu đệm trong 6 giờ. Việc lấy đăng ký thất bại sẽ không chặn tải xuống.';
+  @override
+  String get download_tracker_url => 'URL đăng ký';
+  @override
+  String get download_tracker_refresh => 'Lấy tracker';
+  @override
+  String get download_tracker_preview_empty =>
+      'Lấy đăng ký để xem trước các tracker HTTP, HTTPS và UDP được hỗ trợ.';
+  @override
+  String download_tracker_preview_count({required Object count}) =>
+      'Đã lấy ${count} tracker';
+  @override
+  String download_tracker_fetch_failed({required Object message}) =>
+      'Không lấy được tracker: ${message}';
+  @override
   String get anki_connect_port_auto_fix => 'Đổi sang cổng còn trống';
   @override
   String get anki_connect_port_auto_fix_hint =>
@@ -133394,8 +133699,7 @@ class _StringsZhCn extends _StringsEn {
   String get anki_error_connection_refused =>
       '无法连接 Anki：连接被拒绝。请确认 Anki 桌面版正在运行，且已安装 AnkiConnect 插件。';
   @override
-  String get anki_error_connection_timeout =>
-      'Anki 没有在限定时间内应答。这个端口上有程序在监听，但它不是以 AnkiConnect 的方式回应——多半是端口被别的程序占用了（也可能 Anki 卡住了）。换一个空闲端口试试。';
+  String get anki_error_connection_timeout => '无法连接 Anki：连接超时。请检查主机、端口和防火墙设置。';
   @override
   String get anki_error_connection_unknown => '无法导出到 Anki：发生未知的连接错误。详情见错误日志。';
   @override
@@ -141581,6 +141885,25 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get gal_hook_ingame_lookup_exe_hash_copied => '已复制 exe 的 SHA-256';
   @override
+  String get download_tracker_section => 'Tracker 订阅';
+  @override
+  String get download_tracker_auto_add => '自动把订阅 Tracker 加到新下载';
+  @override
+  String get download_tracker_auto_add_hint => '列表缓存 6 小时；订阅获取失败不会阻止下载任务创建。';
+  @override
+  String get download_tracker_url => '订阅地址';
+  @override
+  String get download_tracker_refresh => '获取 Tracker';
+  @override
+  String get download_tracker_preview_empty =>
+      '获取订阅后可预览受支持的 HTTP、HTTPS 和 UDP Tracker。';
+  @override
+  String download_tracker_preview_count({required Object count}) =>
+      '已获取 ${count} 个 Tracker';
+  @override
+  String download_tracker_fetch_failed({required Object message}) =>
+      '获取 Tracker 失败：${message}';
+  @override
   String get anki_connect_port_auto_fix => '换一个空闲端口';
   @override
   String get anki_connect_port_auto_fix_hint =>
@@ -141804,8 +142127,7 @@ class _StringsZhHk extends _StringsEn {
   String get anki_error_connection_refused =>
       '無法連接 Anki：連接被拒絕。請確認 Anki 桌面版正在執行，且已安裝 AnkiConnect 外掛程式。';
   @override
-  String get anki_error_connection_timeout =>
-      'Anki 沒有在限定時間內回應。這個連接埠上有程式在監聽，但它並非以 AnkiConnect 的方式回應——多半是連接埠被其他程式佔用了（也可能 Anki 當掉了）。換一個空閒的連接埠試試。';
+  String get anki_error_connection_timeout => '無法連接 Anki：連接逾時。請檢查主機、連接埠和防火牆設定。';
   @override
   String get anki_error_connection_unknown => '無法匯出到 Anki：發生未知的連接錯誤。詳情見錯誤記錄檔。';
   @override
@@ -149996,6 +150318,25 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get gal_hook_ingame_lookup_exe_hash_copied => '已複製 exe 的 SHA-256';
   @override
+  String get download_tracker_section => 'Tracker 訂閱';
+  @override
+  String get download_tracker_auto_add => '自動把訂閱的 Tracker 加到新任務';
+  @override
+  String get download_tracker_auto_add_hint => '清單會快取 6 小時；訂閱抓取失敗不會阻止建立下載任務。';
+  @override
+  String get download_tracker_url => '訂閱網址';
+  @override
+  String get download_tracker_refresh => '抓取 Tracker';
+  @override
+  String get download_tracker_preview_empty =>
+      '抓取訂閱後可預覽支援的 HTTP、HTTPS 與 UDP Tracker。';
+  @override
+  String download_tracker_preview_count({required Object count}) =>
+      '已抓取 ${count} 個 Tracker';
+  @override
+  String download_tracker_fetch_failed({required Object message}) =>
+      '抓取 Tracker 失敗：${message}';
+  @override
   String get anki_connect_port_auto_fix => '換一個空閒的連接埠';
   @override
   String get anki_connect_port_auto_fix_hint =>
@@ -150183,7 +150524,7 @@ extension on _StringsEn {
       case 'anki_error_connection_refused':
         return 'Could not connect to Anki: connection refused. Make sure Anki Desktop is running and the AnkiConnect add-on is installed.';
       case 'anki_error_connection_timeout':
-        return 'Anki did not answer in time. Something is listening on this port but is not responding as AnkiConnect - the port is probably taken by another program (or Anki is frozen). Try switching to a free port.';
+        return 'Could not connect to Anki: the connection timed out. Check the host, port, and firewall settings.';
       case 'anki_error_connection_unknown':
         return 'Could not export to Anki: an unexpected connection error occurred. See the error log for details.';
       case 'anki_error_http':
@@ -158012,6 +158353,23 @@ extension on _StringsEn {
         return 'Could not read the game executable';
       case 'gal_hook_ingame_lookup_exe_hash_copied':
         return 'Executable SHA-256 copied';
+      case 'download_tracker_section':
+        return 'Tracker subscription';
+      case 'download_tracker_auto_add':
+        return 'Automatically add subscription trackers to new downloads';
+      case 'download_tracker_auto_add_hint':
+        return 'The list is cached for 6 hours. A subscription failure will not block the download.';
+      case 'download_tracker_url':
+        return 'Subscription URL';
+      case 'download_tracker_refresh':
+        return 'Fetch trackers';
+      case 'download_tracker_preview_empty':
+        return 'Fetch the subscription to preview supported HTTP, HTTPS, and UDP trackers.';
+      case 'download_tracker_preview_count':
+        return ({required Object count}) => 'Fetched ${count} trackers';
+      case 'download_tracker_fetch_failed':
+        return ({required Object message}) =>
+            'Could not fetch trackers: ${message}';
       case 'anki_connect_port_auto_fix':
         return 'Switch to a free port';
       case 'anki_connect_port_auto_fix_hint':
@@ -158199,7 +158557,7 @@ extension on _StringsAr {
       case 'anki_error_connection_refused':
         return 'تعذّر الاتصال بـ Anki: تم رفض الاتصال. تأكد من تشغيل Anki Desktop وتثبيت الإضافة AnkiConnect.';
       case 'anki_error_connection_timeout':
-        return 'لم يستجب Anki في الوقت المحدد. هناك برنامج يستمع على هذا المنفذ لكنه لا يستجيب كـ AnkiConnect — على الأرجح أن المنفذ مشغول ببرنامج آخر (أو أن Anki متجمد). جرّب التبديل إلى منفذ حر.';
+        return 'تعذّر الاتصال بـ Anki: انتهت مهلة الاتصال. تحقق من المضيف والمنفذ وإعدادات الجدار الناري.';
       case 'anki_error_connection_unknown':
         return 'تعذّر التصدير إلى Anki: حدث خطأ اتصال غير متوقع. راجع سجل الأخطاء لمزيد من التفاصيل.';
       case 'anki_error_http':
@@ -166024,6 +166382,23 @@ extension on _StringsAr {
         return 'تعذّرت قراءة ملف اللعبة التنفيذي';
       case 'gal_hook_ingame_lookup_exe_hash_copied':
         return 'تم نسخ SHA-256 لملف اللعبة التنفيذي';
+      case 'download_tracker_section':
+        return 'اشتراك المتعقّبات';
+      case 'download_tracker_auto_add':
+        return 'إضافة متعقّبات الاشتراك تلقائيًا إلى التنزيلات الجديدة';
+      case 'download_tracker_auto_add_hint':
+        return 'تُخزَّن القائمة مؤقتًا لست ساعات. فشل الاشتراك لا يمنع التنزيل.';
+      case 'download_tracker_url':
+        return 'رابط الاشتراك';
+      case 'download_tracker_refresh':
+        return 'جلب المتعقّبات';
+      case 'download_tracker_preview_empty':
+        return 'اجلب الاشتراك لمعاينة متعقّبات HTTP وHTTPS وUDP المدعومة.';
+      case 'download_tracker_preview_count':
+        return ({required Object count}) => 'تم جلب ${count} متعقّبًا';
+      case 'download_tracker_fetch_failed':
+        return ({required Object message}) =>
+            'تعذّر جلب المتعقّبات: ${message}';
       case 'anki_connect_port_auto_fix':
         return 'التبديل إلى منفذ حر';
       case 'anki_connect_port_auto_fix_hint':
@@ -166212,7 +166587,7 @@ extension on _StringsDe {
       case 'anki_error_connection_refused':
         return 'Verbindung zu Anki fehlgeschlagen: Verbindung abgelehnt. Stelle sicher, dass Anki Desktop läuft und das AnkiConnect-Add-on installiert ist.';
       case 'anki_error_connection_timeout':
-        return 'Anki hat nicht rechtzeitig geantwortet. Auf diesem Port lauscht etwas, antwortet aber nicht als AnkiConnect – der Port ist wahrscheinlich von einem anderen Programm belegt (oder Anki hängt). Wechsle auf einen freien Port.';
+        return 'Verbindung zu Anki fehlgeschlagen: Zeitüberschreitung. Prüfe Host, Port und Firewall-Einstellungen.';
       case 'anki_error_connection_unknown':
         return 'Export zu Anki fehlgeschlagen: ein unerwarteter Verbindungsfehler ist aufgetreten. Einzelheiten im Fehlerprotokoll.';
       case 'anki_error_http':
@@ -174079,6 +174454,23 @@ extension on _StringsDe {
         return 'Die Spieldatei konnte nicht gelesen werden';
       case 'gal_hook_ingame_lookup_exe_hash_copied':
         return 'SHA-256 der Spieldatei kopiert';
+      case 'download_tracker_section':
+        return 'Tracker-Abonnement';
+      case 'download_tracker_auto_add':
+        return 'Abonnierte Tracker automatisch zu neuen Downloads hinzufügen';
+      case 'download_tracker_auto_add_hint':
+        return 'Die Liste wird 6 Stunden zwischengespeichert. Ein fehlgeschlagenes Abonnement blockiert den Download nicht.';
+      case 'download_tracker_url':
+        return 'Abonnement-URL';
+      case 'download_tracker_refresh':
+        return 'Tracker abrufen';
+      case 'download_tracker_preview_empty':
+        return 'Rufe das Abonnement ab, um die unterstützten HTTP-, HTTPS- und UDP-Tracker anzuzeigen.';
+      case 'download_tracker_preview_count':
+        return ({required Object count}) => '${count} Tracker abgerufen';
+      case 'download_tracker_fetch_failed':
+        return ({required Object message}) =>
+            'Tracker konnten nicht abgerufen werden: ${message}';
       case 'anki_connect_port_auto_fix':
         return 'Auf freien Port wechseln';
       case 'anki_connect_port_auto_fix_hint':
@@ -174266,7 +174658,7 @@ extension on _StringsEs {
       case 'anki_error_connection_refused':
         return 'No se pudo conectar con Anki: conexión rechazada. Asegúrate de que Anki Desktop esté abierto y el complemento AnkiConnect instalado.';
       case 'anki_error_connection_timeout':
-        return 'Anki no respondió a tiempo. Algo está escuchando en este puerto pero no responde como AnkiConnect: probablemente otro programa ocupa el puerto (o Anki está bloqueado). Prueba a cambiar a un puerto libre.';
+        return 'No se pudo conectar con Anki: se agotó el tiempo de espera. Revisa el servidor, el puerto y el cortafuegos.';
       case 'anki_error_connection_unknown':
         return 'No se pudo exportar a Anki: error de conexión inesperado. Consulta el registro de errores.';
       case 'anki_error_http':
@@ -182126,6 +182518,23 @@ extension on _StringsEs {
         return 'No se pudo leer el ejecutable del juego';
       case 'gal_hook_ingame_lookup_exe_hash_copied':
         return 'SHA-256 del ejecutable copiado';
+      case 'download_tracker_section':
+        return 'Suscripción de trackers';
+      case 'download_tracker_auto_add':
+        return 'Añadir automáticamente los trackers suscritos a las descargas nuevas';
+      case 'download_tracker_auto_add_hint':
+        return 'La lista se almacena en caché 6 horas. Si la suscripción falla, la descarga no se bloquea.';
+      case 'download_tracker_url':
+        return 'URL de suscripción';
+      case 'download_tracker_refresh':
+        return 'Obtener trackers';
+      case 'download_tracker_preview_empty':
+        return 'Obtén la suscripción para ver los trackers HTTP, HTTPS y UDP compatibles.';
+      case 'download_tracker_preview_count':
+        return ({required Object count}) => '${count} trackers obtenidos';
+      case 'download_tracker_fetch_failed':
+        return ({required Object message}) =>
+            'No se pudieron obtener los trackers: ${message}';
       case 'anki_connect_port_auto_fix':
         return 'Cambiar a un puerto libre';
       case 'anki_connect_port_auto_fix_hint':
@@ -182314,7 +182723,7 @@ extension on _StringsFr {
       case 'anki_error_connection_refused':
         return 'Connexion à Anki impossible : connexion refusée. Vérifiez qu\'Anki Desktop est lancé et que le module AnkiConnect est installé.';
       case 'anki_error_connection_timeout':
-        return 'Anki n\'a pas répondu à temps. Quelque chose écoute sur ce port mais ne répond pas comme AnkiConnect : le port est probablement occupé par un autre programme (ou Anki est figé). Essayez un port libre.';
+        return 'Connexion à Anki impossible : délai dépassé. Vérifiez l\'hôte, le port et le pare-feu.';
       case 'anki_error_connection_unknown':
         return 'Export vers Anki impossible : une erreur de connexion inattendue est survenue. Consultez le journal d\'erreurs.';
       case 'anki_error_http':
@@ -190181,6 +190590,23 @@ extension on _StringsFr {
         return 'Impossible de lire l\'exécutable du jeu';
       case 'gal_hook_ingame_lookup_exe_hash_copied':
         return 'SHA-256 de l\'exécutable copié';
+      case 'download_tracker_section':
+        return 'Abonnement aux trackers';
+      case 'download_tracker_auto_add':
+        return 'Ajouter automatiquement les trackers de l’abonnement aux nouveaux téléchargements';
+      case 'download_tracker_auto_add_hint':
+        return 'La liste est mise en cache pendant 6 heures. L’échec de l’abonnement ne bloque pas le téléchargement.';
+      case 'download_tracker_url':
+        return 'URL de l’abonnement';
+      case 'download_tracker_refresh':
+        return 'Récupérer les trackers';
+      case 'download_tracker_preview_empty':
+        return 'Récupère l’abonnement pour prévisualiser les trackers HTTP, HTTPS et UDP pris en charge.';
+      case 'download_tracker_preview_count':
+        return ({required Object count}) => '${count} trackers récupérés';
+      case 'download_tracker_fetch_failed':
+        return ({required Object message}) =>
+            'Impossible de récupérer les trackers : ${message}';
       case 'anki_connect_port_auto_fix':
         return 'Passer à un port libre';
       case 'anki_connect_port_auto_fix_hint':
@@ -190369,7 +190795,7 @@ extension on _StringsId {
       case 'anki_error_connection_refused':
         return 'Tidak dapat terhubung ke Anki: koneksi ditolak. Pastikan Anki Desktop sedang berjalan dan add-on AnkiConnect sudah terpasang.';
       case 'anki_error_connection_timeout':
-        return 'Anki tidak menjawab tepat waktu. Ada program yang mendengarkan di port ini tetapi tidak menjawab sebagai AnkiConnect — port-nya kemungkinan besar dipakai program lain (atau Anki macet). Coba ganti ke port yang kosong.';
+        return 'Tidak dapat terhubung ke Anki: koneksi habis waktu. Periksa host, port, dan pengaturan firewall.';
       case 'anki_error_connection_unknown':
         return 'Tidak dapat mengekspor ke Anki: terjadi kesalahan koneksi yang tidak terduga. Lihat log kesalahan untuk detailnya.';
       case 'anki_error_http':
@@ -198208,6 +198634,23 @@ extension on _StringsId {
         return 'Tidak dapat membaca file eksekusi gim';
       case 'gal_hook_ingame_lookup_exe_hash_copied':
         return 'SHA-256 file eksekusi disalin';
+      case 'download_tracker_section':
+        return 'Langganan tracker';
+      case 'download_tracker_auto_add':
+        return 'Otomatis tambahkan tracker langganan ke unduhan baru';
+      case 'download_tracker_auto_add_hint':
+        return 'Daftar disimpan di cache selama 6 jam. Kegagalan langganan tidak menghentikan unduhan.';
+      case 'download_tracker_url':
+        return 'URL langganan';
+      case 'download_tracker_refresh':
+        return 'Ambil tracker';
+      case 'download_tracker_preview_empty':
+        return 'Ambil langganan untuk melihat tracker HTTP, HTTPS, dan UDP yang didukung.';
+      case 'download_tracker_preview_count':
+        return ({required Object count}) => '${count} tracker diambil';
+      case 'download_tracker_fetch_failed':
+        return ({required Object message}) =>
+            'Tidak dapat mengambil tracker: ${message}';
       case 'anki_connect_port_auto_fix':
         return 'Ganti ke port yang kosong';
       case 'anki_connect_port_auto_fix_hint':
@@ -198396,7 +198839,7 @@ extension on _StringsIt {
       case 'anki_error_connection_refused':
         return 'Impossibile connettersi ad Anki: connessione rifiutata. Assicurati che Anki Desktop sia in esecuzione e il componente AnkiConnect sia installato.';
       case 'anki_error_connection_timeout':
-        return 'Anki non ha risposto in tempo. Qualcosa è in ascolto su questa porta ma non risponde come AnkiConnect: la porta è probabilmente occupata da un altro programma (o Anki è bloccato). Prova a passare a una porta libera.';
+        return 'Impossibile connettersi ad Anki: connessione scaduta. Controlla host, porta e firewall.';
       case 'anki_error_connection_unknown':
         return 'Impossibile esportare in Anki: errore di connessione imprevisto. Vedi il log degli errori.';
       case 'anki_error_http':
@@ -206256,6 +206699,23 @@ extension on _StringsIt {
         return 'Impossibile leggere l\'eseguibile del gioco';
       case 'gal_hook_ingame_lookup_exe_hash_copied':
         return 'SHA-256 dell\'eseguibile copiato';
+      case 'download_tracker_section':
+        return 'Abbonamento ai tracker';
+      case 'download_tracker_auto_add':
+        return 'Aggiungi automaticamente i tracker dell’abbonamento ai nuovi download';
+      case 'download_tracker_auto_add_hint':
+        return 'L’elenco resta in cache per 6 ore. Se l’abbonamento fallisce, il download non viene bloccato.';
+      case 'download_tracker_url':
+        return 'URL dell’abbonamento';
+      case 'download_tracker_refresh':
+        return 'Scarica i tracker';
+      case 'download_tracker_preview_empty':
+        return 'Scarica l’abbonamento per vedere in anteprima i tracker HTTP, HTTPS e UDP supportati.';
+      case 'download_tracker_preview_count':
+        return ({required Object count}) => '${count} tracker scaricati';
+      case 'download_tracker_fetch_failed':
+        return ({required Object message}) =>
+            'Impossibile scaricare i tracker: ${message}';
       case 'anki_connect_port_auto_fix':
         return 'Passa a una porta libera';
       case 'anki_connect_port_auto_fix_hint':
@@ -206442,7 +206902,7 @@ extension on _StringsJa {
       case 'anki_error_connection_refused':
         return 'Anki に接続できません：接続が拒否されました。Anki デスクトップ版が起動していて、AnkiConnect アドオンがインストールされているか確認してください。';
       case 'anki_error_connection_timeout':
-        return 'Anki から応答がありませんでした。このポートで何かが待ち受けていますが、AnkiConnect としては応答していません——ポートが別のプログラムに使われている（または Anki がフリーズしている）可能性が高いです。空いているポートに変更してみてください。';
+        return 'Anki に接続できません：接続がタイムアウトしました。ホスト・ポート・ファイアウォールの設定を確認してください。';
       case 'anki_error_connection_unknown':
         return 'Anki に書き出せません：予期しない接続エラーが発生しました。詳細はエラーログを確認してください。';
       case 'anki_error_http':
@@ -214237,6 +214697,22 @@ extension on _StringsJa {
         return 'ゲーム実行ファイルを読み取れません（権限不足の可能性）';
       case 'gal_hook_ingame_lookup_exe_hash_copied':
         return '実行ファイルの SHA-256 をコピーしました';
+      case 'download_tracker_section':
+        return 'トラッカー購読';
+      case 'download_tracker_auto_add':
+        return '新しいダウンロードに購読トラッカーを自動で追加する';
+      case 'download_tracker_auto_add_hint':
+        return 'リストは 6 時間キャッシュされます。購読の取得に失敗してもダウンロードは止まりません。';
+      case 'download_tracker_url':
+        return '購読 URL';
+      case 'download_tracker_refresh':
+        return 'トラッカーを取得';
+      case 'download_tracker_preview_empty':
+        return '購読を取得すると、対応している HTTP・HTTPS・UDP のトラッカーをプレビューできます。';
+      case 'download_tracker_preview_count':
+        return ({required Object count}) => '${count} 件のトラッカーを取得しました';
+      case 'download_tracker_fetch_failed':
+        return ({required Object message}) => 'トラッカーを取得できませんでした: ${message}';
       case 'anki_connect_port_auto_fix':
         return '空いているポートに変更';
       case 'anki_connect_port_auto_fix_hint':
@@ -214423,7 +214899,7 @@ extension on _StringsKo {
       case 'anki_error_connection_refused':
         return 'Anki에 연결할 수 없습니다: 연결이 거부되었습니다. Anki 데스크톱이 실행 중이고 AnkiConnect 애드온이 설치되어 있는지 확인하세요.';
       case 'anki_error_connection_timeout':
-        return 'Anki가 제때 응답하지 않았습니다. 이 포트에서 무언가 수신 대기 중이지만 AnkiConnect로 응답하지 않습니다 — 다른 프로그램이 포트를 쓰고 있을 가능성이 높습니다(또는 Anki가 멈춤). 비어 있는 포트로 바꿔 보세요.';
+        return 'Anki에 연결할 수 없습니다: 연결 시간이 초과되었습니다. 호스트, 포트, 방화벽 설정을 확인하세요.';
       case 'anki_error_connection_unknown':
         return 'Anki로 내보낼 수 없습니다: 알 수 없는 연결 오류가 발생했습니다. 자세한 내용은 오류 로그를 확인하세요.';
       case 'anki_error_http':
@@ -222220,6 +222696,22 @@ extension on _StringsKo {
         return '게임 실행 파일을 읽을 수 없습니다 (권한 부족일 수 있음)';
       case 'gal_hook_ingame_lookup_exe_hash_copied':
         return '실행 파일의 SHA-256을 복사했습니다';
+      case 'download_tracker_section':
+        return '트래커 구독';
+      case 'download_tracker_auto_add':
+        return '새 다운로드에 구독 트래커 자동 추가';
+      case 'download_tracker_auto_add_hint':
+        return '목록은 6시간 동안 캐시됩니다. 구독을 가져오지 못해도 다운로드는 중단되지 않습니다.';
+      case 'download_tracker_url':
+        return '구독 URL';
+      case 'download_tracker_refresh':
+        return '트래커 가져오기';
+      case 'download_tracker_preview_empty':
+        return '구독을 가져오면 지원되는 HTTP, HTTPS, UDP 트래커를 미리 볼 수 있습니다.';
+      case 'download_tracker_preview_count':
+        return ({required Object count}) => '트래커 ${count}개를 가져왔습니다';
+      case 'download_tracker_fetch_failed':
+        return ({required Object message}) => '트래커를 가져오지 못했습니다: ${message}';
       case 'anki_connect_port_auto_fix':
         return '비어 있는 포트로 변경';
       case 'anki_connect_port_auto_fix_hint':
@@ -222408,7 +222900,7 @@ extension on _StringsNl {
       case 'anki_error_connection_refused':
         return 'Kon geen verbinding maken met Anki: verbinding geweigerd. Controleer of Anki Desktop draait en de AnkiConnect-add-on is geïnstalleerd.';
       case 'anki_error_connection_timeout':
-        return 'Anki heeft niet op tijd geantwoord. Er luistert iets op deze poort, maar het antwoordt niet als AnkiConnect — de poort is waarschijnlijk in gebruik door een ander programma (of Anki loopt vast). Probeer een vrije poort.';
+        return 'Kon geen verbinding maken met Anki: time-out van de verbinding. Controleer de host, poort en firewallinstellingen.';
       case 'anki_error_connection_unknown':
         return 'Kon niet exporteren naar Anki: er is een onverwachte verbindingsfout opgetreden. Zie het foutenlogboek voor details.';
       case 'anki_error_http':
@@ -230262,6 +230754,23 @@ extension on _StringsNl {
         return 'Kan het spelbestand niet lezen';
       case 'gal_hook_ingame_lookup_exe_hash_copied':
         return 'SHA-256 van het spelbestand gekopieerd';
+      case 'download_tracker_section':
+        return 'Tracker-abonnement';
+      case 'download_tracker_auto_add':
+        return 'Geabonneerde trackers automatisch aan nieuwe downloads toevoegen';
+      case 'download_tracker_auto_add_hint':
+        return 'De lijst wordt 6 uur gecachet. Een mislukt abonnement blokkeert de download niet.';
+      case 'download_tracker_url':
+        return 'Abonnements-URL';
+      case 'download_tracker_refresh':
+        return 'Trackers ophalen';
+      case 'download_tracker_preview_empty':
+        return 'Haal het abonnement op om de ondersteunde HTTP-, HTTPS- en UDP-trackers te bekijken.';
+      case 'download_tracker_preview_count':
+        return ({required Object count}) => '${count} trackers opgehaald';
+      case 'download_tracker_fetch_failed':
+        return ({required Object message}) =>
+            'Kan de trackers niet ophalen: ${message}';
       case 'anki_connect_port_auto_fix':
         return 'Naar een vrije poort wisselen';
       case 'anki_connect_port_auto_fix_hint':
@@ -230450,7 +230959,7 @@ extension on _StringsPtBr {
       case 'anki_error_connection_refused':
         return 'Não foi possível conectar ao Anki: conexão recusada. Verifique se o Anki Desktop está aberto e o complemento AnkiConnect instalado.';
       case 'anki_error_connection_timeout':
-        return 'O Anki não respondeu a tempo. Algo está escutando nesta porta, mas não responde como AnkiConnect — a porta provavelmente está ocupada por outro programa (ou o Anki travou). Tente mudar para uma porta livre.';
+        return 'Não foi possível conectar ao Anki: tempo limite esgotado. Verifique o host, a porta e o firewall.';
       case 'anki_error_connection_unknown':
         return 'Não foi possível exportar para o Anki: erro de conexão inesperado. Consulte o log de erros.';
       case 'anki_error_http':
@@ -238299,6 +238808,23 @@ extension on _StringsPtBr {
         return 'Não foi possível ler o executável do jogo';
       case 'gal_hook_ingame_lookup_exe_hash_copied':
         return 'SHA-256 do executável copiado';
+      case 'download_tracker_section':
+        return 'Assinatura de trackers';
+      case 'download_tracker_auto_add':
+        return 'Adicionar automaticamente os trackers da assinatura aos novos downloads';
+      case 'download_tracker_auto_add_hint':
+        return 'A lista fica em cache por 6 horas. Uma falha na assinatura não bloqueia o download.';
+      case 'download_tracker_url':
+        return 'URL da assinatura';
+      case 'download_tracker_refresh':
+        return 'Buscar trackers';
+      case 'download_tracker_preview_empty':
+        return 'Busque a assinatura para pré-visualizar os trackers HTTP, HTTPS e UDP compatíveis.';
+      case 'download_tracker_preview_count':
+        return ({required Object count}) => '${count} trackers obtidos';
+      case 'download_tracker_fetch_failed':
+        return ({required Object message}) =>
+            'Não foi possível buscar os trackers: ${message}';
       case 'anki_connect_port_auto_fix':
         return 'Mudar para uma porta livre';
       case 'anki_connect_port_auto_fix_hint':
@@ -238487,7 +239013,7 @@ extension on _StringsRu {
       case 'anki_error_connection_refused':
         return 'Не удалось подключиться к Anki: соединение отклонено. Убедитесь, что Anki Desktop запущен и установлен аддон AnkiConnect.';
       case 'anki_error_connection_timeout':
-        return 'Anki не ответил вовремя. Что-то слушает этот порт, но отвечает не как AnkiConnect — скорее всего, порт занят другой программой (или Anki завис). Попробуйте выбрать свободный порт.';
+        return 'Не удалось подключиться к Anki: время ожидания соединения истекло. Проверьте хост, порт и настройки брандмауэра.';
       case 'anki_error_connection_unknown':
         return 'Не удалось экспортировать в Anki: произошла непредвиденная ошибка соединения. Подробности см. в журнале ошибок.';
       case 'anki_error_http':
@@ -246342,6 +246868,23 @@ extension on _StringsRu {
         return 'Не удалось прочитать исполняемый файл игры';
       case 'gal_hook_ingame_lookup_exe_hash_copied':
         return 'SHA-256 исполняемого файла скопирован';
+      case 'download_tracker_section':
+        return 'Подписка на трекеры';
+      case 'download_tracker_auto_add':
+        return 'Автоматически добавлять трекеры из подписки в новые загрузки';
+      case 'download_tracker_auto_add_hint':
+        return 'Список кэшируется на 6 часов. Сбой подписки не блокирует загрузку.';
+      case 'download_tracker_url':
+        return 'URL подписки';
+      case 'download_tracker_refresh':
+        return 'Получить трекеры';
+      case 'download_tracker_preview_empty':
+        return 'Получите подписку, чтобы посмотреть поддерживаемые трекеры HTTP, HTTPS и UDP.';
+      case 'download_tracker_preview_count':
+        return ({required Object count}) => 'Получено трекеров: ${count}';
+      case 'download_tracker_fetch_failed':
+        return ({required Object message}) =>
+            'Не удалось получить трекеры: ${message}';
       case 'anki_connect_port_auto_fix':
         return 'Выбрать свободный порт';
       case 'anki_connect_port_auto_fix_hint':
@@ -246529,7 +247072,7 @@ extension on _StringsTh {
       case 'anki_error_connection_refused':
         return 'ไม่สามารถเชื่อมต่อกับ Anki: การเชื่อมต่อถูกปฏิเสธ โปรดตรวจสอบว่า Anki Desktop กำลังทำงานอยู่และติดตั้งส่วนเสริม AnkiConnect แล้ว';
       case 'anki_error_connection_timeout':
-        return 'Anki ไม่ตอบกลับภายในเวลาที่กำหนด มีบางโปรแกรมกำลังฟังอยู่ที่พอร์ตนี้แต่ไม่ได้ตอบแบบ AnkiConnect — พอร์ตน่าจะถูกโปรแกรมอื่นใช้อยู่ (หรือ Anki ค้าง) ลองเปลี่ยนไปใช้พอร์ตที่ว่าง';
+        return 'ไม่สามารถเชื่อมต่อกับ Anki: การเชื่อมต่อหมดเวลา โปรดตรวจสอบโฮสต์ พอร์ต และการตั้งค่าไฟร์วอลล์';
       case 'anki_error_connection_unknown':
         return 'ไม่สามารถส่งออกไปยัง Anki: เกิดข้อผิดพลาดในการเชื่อมต่อที่ไม่คาดคิด ดูรายละเอียดในบันทึกข้อผิดพลาด';
       case 'anki_error_http':
@@ -254357,6 +254900,24 @@ extension on _StringsTh {
         return 'อ่านไฟล์เกมไม่ได้';
       case 'gal_hook_ingame_lookup_exe_hash_copied':
         return 'คัดลอก SHA-256 ของไฟล์เกมแล้ว';
+      case 'download_tracker_section':
+        return 'การสมัครรับแทร็กเกอร์';
+      case 'download_tracker_auto_add':
+        return 'เพิ่มแทร็กเกอร์จากการสมัครรับลงในดาวน์โหลดใหม่โดยอัตโนมัติ';
+      case 'download_tracker_auto_add_hint':
+        return 'รายการจะถูกแคชไว้ 6 ชั่วโมง หากดึงรายการไม่สำเร็จก็จะไม่ขัดขวางการดาวน์โหลด';
+      case 'download_tracker_url':
+        return 'URL การสมัครรับ';
+      case 'download_tracker_refresh':
+        return 'ดึงแทร็กเกอร์';
+      case 'download_tracker_preview_empty':
+        return 'ดึงรายการที่สมัครรับเพื่อดูตัวอย่างแทร็กเกอร์ HTTP, HTTPS และ UDP ที่รองรับ';
+      case 'download_tracker_preview_count':
+        return ({required Object count}) =>
+            'ดึงแทร็กเกอร์มาแล้ว ${count} รายการ';
+      case 'download_tracker_fetch_failed':
+        return ({required Object message}) =>
+            'ดึงแทร็กเกอร์ไม่สำเร็จ: ${message}';
       case 'anki_connect_port_auto_fix':
         return 'เปลี่ยนไปใช้พอร์ตที่ว่าง';
       case 'anki_connect_port_auto_fix_hint':
@@ -254545,7 +255106,7 @@ extension on _StringsTr {
       case 'anki_error_connection_refused':
         return 'Anki\'ye bağlanılamadı: bağlantı reddedildi. Anki Masaüstü\'nün çalıştığından ve AnkiConnect eklentisinin yüklü olduğundan emin olun.';
       case 'anki_error_connection_timeout':
-        return 'Anki zamanında yanıt vermedi. Bu bağlantı noktasında bir şey dinliyor ama AnkiConnect gibi yanıt vermiyor — bağlantı noktası büyük olasılıkla başka bir program tarafından kullanılıyor (ya da Anki donmuş). Boş bir bağlantı noktasına geçmeyi deneyin.';
+        return 'Anki\'ye bağlanılamadı: bağlantı zaman aşımına uğradı. Sunucu, bağlantı noktası ve güvenlik duvarı ayarlarını kontrol edin.';
       case 'anki_error_connection_unknown':
         return 'Anki\'ye aktarılamadı: beklenmeyen bir bağlantı hatası oluştu. Ayrıntılar için hata günlüğüne bakın.';
       case 'anki_error_http':
@@ -262389,6 +262950,23 @@ extension on _StringsTr {
         return 'Oyun çalıştırılabilir dosyası okunamadı';
       case 'gal_hook_ingame_lookup_exe_hash_copied':
         return 'Çalıştırılabilir dosyanın SHA-256 değeri kopyalandı';
+      case 'download_tracker_section':
+        return 'Tracker aboneliği';
+      case 'download_tracker_auto_add':
+        return 'Abonelikteki trackerları yeni indirmelere otomatik ekle';
+      case 'download_tracker_auto_add_hint':
+        return 'Liste 6 saat önbellekte tutulur. Abonelik alınamazsa indirme engellenmez.';
+      case 'download_tracker_url':
+        return 'Abonelik adresi';
+      case 'download_tracker_refresh':
+        return 'Trackerları getir';
+      case 'download_tracker_preview_empty':
+        return 'Desteklenen HTTP, HTTPS ve UDP trackerlarını önizlemek için aboneliği getir.';
+      case 'download_tracker_preview_count':
+        return ({required Object count}) => '${count} tracker getirildi';
+      case 'download_tracker_fetch_failed':
+        return ({required Object message}) =>
+            'Trackerlar getirilemedi: ${message}';
       case 'anki_connect_port_auto_fix':
         return 'Boş bir bağlantı noktasına geç';
       case 'anki_connect_port_auto_fix_hint':
@@ -262577,7 +263155,7 @@ extension on _StringsVi {
       case 'anki_error_connection_refused':
         return 'Không thể kết nối tới Anki: kết nối bị từ chối. Hãy đảm bảo Anki Desktop đang chạy và add-on AnkiConnect đã được cài đặt.';
       case 'anki_error_connection_timeout':
-        return 'Anki không phản hồi kịp thời. Có thứ gì đó đang lắng nghe trên cổng này nhưng không trả lời như AnkiConnect — nhiều khả năng cổng đã bị chương trình khác chiếm (hoặc Anki bị treo). Hãy thử đổi sang một cổng còn trống.';
+        return 'Không thể kết nối tới Anki: kết nối đã hết thời gian chờ. Hãy kiểm tra máy chủ, cổng và cài đặt tường lửa.';
       case 'anki_error_connection_unknown':
         return 'Không thể xuất sang Anki: đã xảy ra lỗi kết nối không xác định. Xem nhật ký lỗi để biết chi tiết.';
       case 'anki_error_http':
@@ -270414,6 +270992,23 @@ extension on _StringsVi {
         return 'Không đọc được tệp thực thi trò chơi';
       case 'gal_hook_ingame_lookup_exe_hash_copied':
         return 'Đã sao chép SHA-256 của tệp thực thi';
+      case 'download_tracker_section':
+        return 'Đăng ký tracker';
+      case 'download_tracker_auto_add':
+        return 'Tự động thêm tracker từ đăng ký vào các tải xuống mới';
+      case 'download_tracker_auto_add_hint':
+        return 'Danh sách được lưu đệm trong 6 giờ. Việc lấy đăng ký thất bại sẽ không chặn tải xuống.';
+      case 'download_tracker_url':
+        return 'URL đăng ký';
+      case 'download_tracker_refresh':
+        return 'Lấy tracker';
+      case 'download_tracker_preview_empty':
+        return 'Lấy đăng ký để xem trước các tracker HTTP, HTTPS và UDP được hỗ trợ.';
+      case 'download_tracker_preview_count':
+        return ({required Object count}) => 'Đã lấy ${count} tracker';
+      case 'download_tracker_fetch_failed':
+        return ({required Object message}) =>
+            'Không lấy được tracker: ${message}';
       case 'anki_connect_port_auto_fix':
         return 'Đổi sang cổng còn trống';
       case 'anki_connect_port_auto_fix_hint':
@@ -270598,7 +271193,7 @@ extension on _StringsZhCn {
       case 'anki_error_connection_refused':
         return '无法连接 Anki：连接被拒绝。请确认 Anki 桌面版正在运行，且已安装 AnkiConnect 插件。';
       case 'anki_error_connection_timeout':
-        return 'Anki 没有在限定时间内应答。这个端口上有程序在监听，但它不是以 AnkiConnect 的方式回应——多半是端口被别的程序占用了（也可能 Anki 卡住了）。换一个空闲端口试试。';
+        return '无法连接 Anki：连接超时。请检查主机、端口和防火墙设置。';
       case 'anki_error_connection_unknown':
         return '无法导出到 Anki：发生未知的连接错误。详情见错误日志。';
       case 'anki_error_http':
@@ -278373,6 +278968,22 @@ extension on _StringsZhCn {
         return '无法读取游戏 exe（可能权限不足）';
       case 'gal_hook_ingame_lookup_exe_hash_copied':
         return '已复制 exe 的 SHA-256';
+      case 'download_tracker_section':
+        return 'Tracker 订阅';
+      case 'download_tracker_auto_add':
+        return '自动把订阅 Tracker 加到新下载';
+      case 'download_tracker_auto_add_hint':
+        return '列表缓存 6 小时；订阅获取失败不会阻止下载任务创建。';
+      case 'download_tracker_url':
+        return '订阅地址';
+      case 'download_tracker_refresh':
+        return '获取 Tracker';
+      case 'download_tracker_preview_empty':
+        return '获取订阅后可预览受支持的 HTTP、HTTPS 和 UDP Tracker。';
+      case 'download_tracker_preview_count':
+        return ({required Object count}) => '已获取 ${count} 个 Tracker';
+      case 'download_tracker_fetch_failed':
+        return ({required Object message}) => '获取 Tracker 失败：${message}';
       case 'anki_connect_port_auto_fix':
         return '换一个空闲端口';
       case 'anki_connect_port_auto_fix_hint':
@@ -278557,7 +279168,7 @@ extension on _StringsZhHk {
       case 'anki_error_connection_refused':
         return '無法連接 Anki：連接被拒絕。請確認 Anki 桌面版正在執行，且已安裝 AnkiConnect 外掛程式。';
       case 'anki_error_connection_timeout':
-        return 'Anki 沒有在限定時間內回應。這個連接埠上有程式在監聽，但它並非以 AnkiConnect 的方式回應——多半是連接埠被其他程式佔用了（也可能 Anki 當掉了）。換一個空閒的連接埠試試。';
+        return '無法連接 Anki：連接逾時。請檢查主機、連接埠和防火牆設定。';
       case 'anki_error_connection_unknown':
         return '無法匯出到 Anki：發生未知的連接錯誤。詳情見錯誤記錄檔。';
       case 'anki_error_http':
@@ -286333,6 +286944,22 @@ extension on _StringsZhHk {
         return '無法讀取遊戲 exe（可能權限不足）';
       case 'gal_hook_ingame_lookup_exe_hash_copied':
         return '已複製 exe 的 SHA-256';
+      case 'download_tracker_section':
+        return 'Tracker 訂閱';
+      case 'download_tracker_auto_add':
+        return '自動把訂閱的 Tracker 加到新任務';
+      case 'download_tracker_auto_add_hint':
+        return '清單會快取 6 小時；訂閱抓取失敗不會阻止建立下載任務。';
+      case 'download_tracker_url':
+        return '訂閱網址';
+      case 'download_tracker_refresh':
+        return '抓取 Tracker';
+      case 'download_tracker_preview_empty':
+        return '抓取訂閱後可預覽支援的 HTTP、HTTPS 與 UDP Tracker。';
+      case 'download_tracker_preview_count':
+        return ({required Object count}) => '已抓取 ${count} 個 Tracker';
+      case 'download_tracker_fetch_failed':
+        return ({required Object message}) => '抓取 Tracker 失敗：${message}';
       case 'anki_connect_port_auto_fix':
         return '換一個空閒的連接埠';
       case 'anki_connect_port_auto_fix_hint':
