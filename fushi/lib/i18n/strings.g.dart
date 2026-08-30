@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 66249 (3897 per locale)
+/// Strings: 66334 (3902 per locale)
 ///
-/// Built on 2026-08-30 at 01:51 UTC
+/// Built on 2026-08-30 at 03:16 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5309,6 +5309,16 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get gal_hook_fold_progressive_lines => 'Merge split dialogue lines';
   String get gal_hook_fold_progressive_lines_hint =>
       'Some engines redraw the whole line on every click, so one line is captured several times. Fold those snapshots into a single line.';
+  String get gal_hook_ingame_lookup_engine_unsupported =>
+      'This game engine has no in-game lookup sensor yet';
+  String get gal_hook_ingame_lookup_version_unsupported =>
+      'This game version is not on the supported list yet';
+  String get gal_hook_ingame_lookup_exe_hash_copy =>
+      'Copy game executable SHA-256';
+  String get gal_hook_ingame_lookup_exe_hash_unavailable =>
+      'Could not read the game executable';
+  String get gal_hook_ingame_lookup_exe_hash_copied =>
+      'Executable SHA-256 copied';
 }
 
 // Path: <root>
@@ -14343,6 +14353,21 @@ class _StringsAr extends _StringsEn {
   @override
   String get gal_hook_fold_progressive_lines_hint =>
       'بعض المحرّكات تعيد رسم السطر كاملًا مع كل نقرة، فيُلتقط السطر الواحد عدة مرات. اطوِ تلك اللقطات في سطر واحد.';
+  @override
+  String get gal_hook_ingame_lookup_engine_unsupported =>
+      'محرك اللعبة هذا لا يدعم البحث داخل اللعبة بعد';
+  @override
+  String get gal_hook_ingame_lookup_version_unsupported =>
+      'إصدار اللعبة هذا ليس ضمن القائمة المدعومة بعد';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copy =>
+      'نسخ SHA-256 لملف اللعبة التنفيذي';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_unavailable =>
+      'تعذّرت قراءة ملف اللعبة التنفيذي';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copied =>
+      'تم نسخ SHA-256 لملف اللعبة التنفيذي';
 }
 
 // Path: <root>
@@ -23589,6 +23614,21 @@ class _StringsDe extends _StringsEn {
   @override
   String get gal_hook_fold_progressive_lines_hint =>
       'Manche Engines zeichnen bei jedem Klick die ganze Zeile neu, sodass eine Zeile mehrfach erfasst wird. Diese Schnappschüsse zu einer Zeile zusammenfalten.';
+  @override
+  String get gal_hook_ingame_lookup_engine_unsupported =>
+      'Diese Spiel-Engine unterstützt die Suche im Spiel noch nicht';
+  @override
+  String get gal_hook_ingame_lookup_version_unsupported =>
+      'Diese Spielversion steht noch nicht auf der Liste der unterstützten Versionen';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copy =>
+      'SHA-256 der Spieldatei kopieren';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_unavailable =>
+      'Die Spieldatei konnte nicht gelesen werden';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copied =>
+      'SHA-256 der Spieldatei kopiert';
 }
 
 // Path: <root>
@@ -32879,6 +32919,21 @@ class _StringsEs extends _StringsEn {
   @override
   String get gal_hook_fold_progressive_lines_hint =>
       'Algunos motores redibujan la línea entera en cada clic, así que una misma línea se captura varias veces. Pliega esas instantáneas en una sola línea.';
+  @override
+  String get gal_hook_ingame_lookup_engine_unsupported =>
+      'Este motor de juego aún no admite la búsqueda dentro del juego';
+  @override
+  String get gal_hook_ingame_lookup_version_unsupported =>
+      'Esta versión del juego aún no está en la lista de compatibles';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copy =>
+      'Copiar el SHA-256 del ejecutable del juego';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_unavailable =>
+      'No se pudo leer el ejecutable del juego';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copied =>
+      'SHA-256 del ejecutable copiado';
 }
 
 // Path: <root>
@@ -42203,6 +42258,21 @@ class _StringsFr extends _StringsEn {
   @override
   String get gal_hook_fold_progressive_lines_hint =>
       'Certains moteurs redessinent toute la ligne à chaque clic, si bien qu\'une même ligne est capturée plusieurs fois. Replie ces instantanés en une seule ligne.';
+  @override
+  String get gal_hook_ingame_lookup_engine_unsupported =>
+      'Ce moteur de jeu ne prend pas encore en charge la recherche en jeu';
+  @override
+  String get gal_hook_ingame_lookup_version_unsupported =>
+      'Cette version du jeu ne figure pas encore dans la liste prise en charge';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copy =>
+      'Copier le SHA-256 de l\'exécutable du jeu';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_unavailable =>
+      'Impossible de lire l\'exécutable du jeu';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copied =>
+      'SHA-256 de l\'exécutable copié';
 }
 
 // Path: <root>
@@ -51352,6 +51422,21 @@ class _StringsId extends _StringsEn {
   @override
   String get gal_hook_fold_progressive_lines_hint =>
       'Sebagian engine menggambar ulang seluruh baris setiap kali diklik, sehingga satu baris tertangkap beberapa kali. Lipat cuplikan itu menjadi satu baris.';
+  @override
+  String get gal_hook_ingame_lookup_engine_unsupported =>
+      'Mesin gim ini belum mendukung pencarian kamus dalam gim';
+  @override
+  String get gal_hook_ingame_lookup_version_unsupported =>
+      'Versi gim ini belum ada dalam daftar yang didukung';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copy =>
+      'Salin SHA-256 file eksekusi gim';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_unavailable =>
+      'Tidak dapat membaca file eksekusi gim';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copied =>
+      'SHA-256 file eksekusi disalin';
 }
 
 // Path: <root>
@@ -60578,6 +60663,21 @@ class _StringsIt extends _StringsEn {
   @override
   String get gal_hook_fold_progressive_lines_hint =>
       'Alcuni motori ridisegnano l’intera riga a ogni clic, così una stessa riga viene catturata più volte. Ripiega quelle istantanee in una sola riga.';
+  @override
+  String get gal_hook_ingame_lookup_engine_unsupported =>
+      'Questo motore di gioco non supporta ancora la ricerca nel gioco';
+  @override
+  String get gal_hook_ingame_lookup_version_unsupported =>
+      'Questa versione del gioco non è ancora nell\'elenco supportato';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copy =>
+      'Copia lo SHA-256 dell\'eseguibile del gioco';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_unavailable =>
+      'Impossibile leggere l\'eseguibile del gioco';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copied =>
+      'SHA-256 dell\'eseguibile copiato';
 }
 
 // Path: <root>
@@ -69241,6 +69341,20 @@ class _StringsJa extends _StringsEn {
   @override
   String get gal_hook_fold_progressive_lines_hint =>
       'クリックのたびに行全体を描き直すエンジンがあり、同じ行が何度も取り込まれます。そのスナップショットを 1 行にまとめます。';
+  @override
+  String get gal_hook_ingame_lookup_engine_unsupported =>
+      'このゲームエンジンはゲーム内辞書引きに未対応です';
+  @override
+  String get gal_hook_ingame_lookup_version_unsupported =>
+      'このゲームのバージョンはまだ対応リストにありません';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copy => 'ゲーム実行ファイルの SHA-256 をコピー';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_unavailable =>
+      'ゲーム実行ファイルを読み取れません（権限不足の可能性）';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copied =>
+      '実行ファイルの SHA-256 をコピーしました';
 }
 
 // Path: <root>
@@ -77918,6 +78032,19 @@ class _StringsKo extends _StringsEn {
   @override
   String get gal_hook_fold_progressive_lines_hint =>
       '클릭할 때마다 줄 전체를 다시 그리는 엔진이 있어 같은 줄이 여러 번 캡처됩니다. 그 스냅숏들을 한 줄로 접습니다.';
+  @override
+  String get gal_hook_ingame_lookup_engine_unsupported =>
+      '이 게임 엔진은 아직 인게임 사전 검색을 지원하지 않습니다';
+  @override
+  String get gal_hook_ingame_lookup_version_unsupported =>
+      '이 게임 버전은 아직 지원 목록에 없습니다';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copy => '게임 실행 파일의 SHA-256 복사';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_unavailable =>
+      '게임 실행 파일을 읽을 수 없습니다 (권한 부족일 수 있음)';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copied => '실행 파일의 SHA-256을 복사했습니다';
 }
 
 // Path: <root>
@@ -87101,6 +87228,21 @@ class _StringsNl extends _StringsEn {
   @override
   String get gal_hook_fold_progressive_lines_hint =>
       'Sommige engines tekenen bij elke klik de hele regel opnieuw, waardoor één regel meerdere keren wordt vastgelegd. Vouw die momentopnamen samen tot één regel.';
+  @override
+  String get gal_hook_ingame_lookup_engine_unsupported =>
+      'Deze game-engine ondersteunt opzoeken in het spel nog niet';
+  @override
+  String get gal_hook_ingame_lookup_version_unsupported =>
+      'Deze spelversie staat nog niet op de lijst met ondersteunde versies';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copy =>
+      'SHA-256 van het spelbestand kopiëren';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_unavailable =>
+      'Kan het spelbestand niet lezen';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copied =>
+      'SHA-256 van het spelbestand gekopieerd';
 }
 
 // Path: <root>
@@ -96340,6 +96482,21 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get gal_hook_fold_progressive_lines_hint =>
       'Alguns motores redesenham a linha inteira a cada clique, então a mesma linha é capturada várias vezes. Dobre esses instantâneos em uma única linha.';
+  @override
+  String get gal_hook_ingame_lookup_engine_unsupported =>
+      'Este motor de jogo ainda não oferece suporte à busca dentro do jogo';
+  @override
+  String get gal_hook_ingame_lookup_version_unsupported =>
+      'Esta versão do jogo ainda não está na lista de compatíveis';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copy =>
+      'Copiar o SHA-256 do executável do jogo';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_unavailable =>
+      'Não foi possível ler o executável do jogo';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copied =>
+      'SHA-256 do executável copiado';
 }
 
 // Path: <root>
@@ -105552,6 +105709,21 @@ class _StringsRu extends _StringsEn {
   @override
   String get gal_hook_fold_progressive_lines_hint =>
       'Некоторые движки перерисовывают строку целиком при каждом клике, поэтому одна строка захватывается несколько раз. Сворачивать такие снимки в одну строку.';
+  @override
+  String get gal_hook_ingame_lookup_engine_unsupported =>
+      'Этот движок игры пока не поддерживает поиск внутри игры';
+  @override
+  String get gal_hook_ingame_lookup_version_unsupported =>
+      'Эта версия игры пока не в списке поддерживаемых';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copy =>
+      'Скопировать SHA-256 исполняемого файла игры';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_unavailable =>
+      'Не удалось прочитать исполняемый файл игры';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copied =>
+      'SHA-256 исполняемого файла скопирован';
 }
 
 // Path: <root>
@@ -114581,6 +114753,20 @@ class _StringsTh extends _StringsEn {
   @override
   String get gal_hook_fold_progressive_lines_hint =>
       'บางเอนจินวาดทั้งบรรทัดใหม่ทุกครั้งที่คลิก ทำให้บรรทัดเดียวถูกเก็บหลายครั้ง ให้ยุบสแนปช็อตเหล่านั้นเป็นบรรทัดเดียว';
+  @override
+  String get gal_hook_ingame_lookup_engine_unsupported =>
+      'เอนจินเกมนี้ยังไม่รองรับการเปิดพจนานุกรมในเกม';
+  @override
+  String get gal_hook_ingame_lookup_version_unsupported =>
+      'เกมเวอร์ชันนี้ยังไม่อยู่ในรายการที่รองรับ';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copy =>
+      'คัดลอก SHA-256 ของไฟล์เกม';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_unavailable => 'อ่านไฟล์เกมไม่ได้';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copied =>
+      'คัดลอก SHA-256 ของไฟล์เกมแล้ว';
 }
 
 // Path: <root>
@@ -123716,6 +123902,21 @@ class _StringsTr extends _StringsEn {
   @override
   String get gal_hook_fold_progressive_lines_hint =>
       'Bazı motorlar her tıklamada satırın tamamını yeniden çizer, bu yüzden tek bir satır birkaç kez yakalanır. Bu anlık görüntüleri tek satırda topla.';
+  @override
+  String get gal_hook_ingame_lookup_engine_unsupported =>
+      'Bu oyun motoru henüz oyun içi sözlük aramasını desteklemiyor';
+  @override
+  String get gal_hook_ingame_lookup_version_unsupported =>
+      'Bu oyun sürümü henüz desteklenenler listesinde değil';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copy =>
+      'Oyun çalıştırılabilir dosyasının SHA-256 değerini kopyala';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_unavailable =>
+      'Oyun çalıştırılabilir dosyası okunamadı';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copied =>
+      'Çalıştırılabilir dosyanın SHA-256 değeri kopyalandı';
 }
 
 // Path: <root>
@@ -132831,6 +133032,21 @@ class _StringsVi extends _StringsEn {
   @override
   String get gal_hook_fold_progressive_lines_hint =>
       'Một số engine vẽ lại cả dòng mỗi lần nhấp, nên cùng một dòng bị bắt nhiều lần. Gộp các ảnh chụp đó thành một dòng.';
+  @override
+  String get gal_hook_ingame_lookup_engine_unsupported =>
+      'Engine trò chơi này chưa hỗ trợ tra từ trong trò chơi';
+  @override
+  String get gal_hook_ingame_lookup_version_unsupported =>
+      'Phiên bản trò chơi này chưa có trong danh sách được hỗ trợ';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copy =>
+      'Sao chép SHA-256 của tệp thực thi trò chơi';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_unavailable =>
+      'Không đọc được tệp thực thi trò chơi';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copied =>
+      'Đã sao chép SHA-256 của tệp thực thi';
 }
 
 // Path: <root>
@@ -141220,6 +141436,17 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get gal_hook_fold_progressive_lines_hint =>
       '有些引擎每次点击都重绘整行，一句台词会被抓成好几条。开启后把同一句的多次快照折成一条。';
+  @override
+  String get gal_hook_ingame_lookup_engine_unsupported => '当前游戏引擎不支持游戏内查词';
+  @override
+  String get gal_hook_ingame_lookup_version_unsupported => '当前游戏版本未在支持列表中';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copy => '复制游戏 exe 的 SHA-256';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_unavailable =>
+      '无法读取游戏 exe（可能权限不足）';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copied => '已复制 exe 的 SHA-256';
 }
 
 // Path: <root>
@@ -149614,6 +149841,17 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get gal_hook_fold_progressive_lines_hint =>
       '有些引擎每點一次就重畫整行，於是同一行被抓到好幾次。把這些快照摺成一條。';
+  @override
+  String get gal_hook_ingame_lookup_engine_unsupported => '目前遊戲引擎不支援遊戲內查詞';
+  @override
+  String get gal_hook_ingame_lookup_version_unsupported => '目前遊戲版本未在支援清單中';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copy => '複製遊戲 exe 的 SHA-256';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_unavailable =>
+      '無法讀取遊戲 exe（可能權限不足）';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copied => '已複製 exe 的 SHA-256';
 }
 
 /// Flat map(s) containing all translations.
@@ -157612,6 +157850,16 @@ extension on _StringsEn {
         return 'Merge split dialogue lines';
       case 'gal_hook_fold_progressive_lines_hint':
         return 'Some engines redraw the whole line on every click, so one line is captured several times. Fold those snapshots into a single line.';
+      case 'gal_hook_ingame_lookup_engine_unsupported':
+        return 'This game engine has no in-game lookup sensor yet';
+      case 'gal_hook_ingame_lookup_version_unsupported':
+        return 'This game version is not on the supported list yet';
+      case 'gal_hook_ingame_lookup_exe_hash_copy':
+        return 'Copy game executable SHA-256';
+      case 'gal_hook_ingame_lookup_exe_hash_unavailable':
+        return 'Could not read the game executable';
+      case 'gal_hook_ingame_lookup_exe_hash_copied':
+        return 'Executable SHA-256 copied';
       default:
         return null;
     }
@@ -165606,6 +165854,16 @@ extension on _StringsAr {
         return 'دمج أسطر الحوار المقسّمة';
       case 'gal_hook_fold_progressive_lines_hint':
         return 'بعض المحرّكات تعيد رسم السطر كاملًا مع كل نقرة، فيُلتقط السطر الواحد عدة مرات. اطوِ تلك اللقطات في سطر واحد.';
+      case 'gal_hook_ingame_lookup_engine_unsupported':
+        return 'محرك اللعبة هذا لا يدعم البحث داخل اللعبة بعد';
+      case 'gal_hook_ingame_lookup_version_unsupported':
+        return 'إصدار اللعبة هذا ليس ضمن القائمة المدعومة بعد';
+      case 'gal_hook_ingame_lookup_exe_hash_copy':
+        return 'نسخ SHA-256 لملف اللعبة التنفيذي';
+      case 'gal_hook_ingame_lookup_exe_hash_unavailable':
+        return 'تعذّرت قراءة ملف اللعبة التنفيذي';
+      case 'gal_hook_ingame_lookup_exe_hash_copied':
+        return 'تم نسخ SHA-256 لملف اللعبة التنفيذي';
       default:
         return null;
     }
@@ -173643,6 +173901,16 @@ extension on _StringsDe {
         return 'Aufgeteilte Dialogzeilen zusammenfassen';
       case 'gal_hook_fold_progressive_lines_hint':
         return 'Manche Engines zeichnen bei jedem Klick die ganze Zeile neu, sodass eine Zeile mehrfach erfasst wird. Diese Schnappschüsse zu einer Zeile zusammenfalten.';
+      case 'gal_hook_ingame_lookup_engine_unsupported':
+        return 'Diese Spiel-Engine unterstützt die Suche im Spiel noch nicht';
+      case 'gal_hook_ingame_lookup_version_unsupported':
+        return 'Diese Spielversion steht noch nicht auf der Liste der unterstützten Versionen';
+      case 'gal_hook_ingame_lookup_exe_hash_copy':
+        return 'SHA-256 der Spieldatei kopieren';
+      case 'gal_hook_ingame_lookup_exe_hash_unavailable':
+        return 'Die Spieldatei konnte nicht gelesen werden';
+      case 'gal_hook_ingame_lookup_exe_hash_copied':
+        return 'SHA-256 der Spieldatei kopiert';
       default:
         return null;
     }
@@ -181672,6 +181940,16 @@ extension on _StringsEs {
         return 'Unir líneas de diálogo divididas';
       case 'gal_hook_fold_progressive_lines_hint':
         return 'Algunos motores redibujan la línea entera en cada clic, así que una misma línea se captura varias veces. Pliega esas instantáneas en una sola línea.';
+      case 'gal_hook_ingame_lookup_engine_unsupported':
+        return 'Este motor de juego aún no admite la búsqueda dentro del juego';
+      case 'gal_hook_ingame_lookup_version_unsupported':
+        return 'Esta versión del juego aún no está en la lista de compatibles';
+      case 'gal_hook_ingame_lookup_exe_hash_copy':
+        return 'Copiar el SHA-256 del ejecutable del juego';
+      case 'gal_hook_ingame_lookup_exe_hash_unavailable':
+        return 'No se pudo leer el ejecutable del juego';
+      case 'gal_hook_ingame_lookup_exe_hash_copied':
+        return 'SHA-256 del ejecutable copiado';
       default:
         return null;
     }
@@ -189709,6 +189987,16 @@ extension on _StringsFr {
         return 'Fusionner les répliques découpées';
       case 'gal_hook_fold_progressive_lines_hint':
         return 'Certains moteurs redessinent toute la ligne à chaque clic, si bien qu\'une même ligne est capturée plusieurs fois. Replie ces instantanés en une seule ligne.';
+      case 'gal_hook_ingame_lookup_engine_unsupported':
+        return 'Ce moteur de jeu ne prend pas encore en charge la recherche en jeu';
+      case 'gal_hook_ingame_lookup_version_unsupported':
+        return 'Cette version du jeu ne figure pas encore dans la liste prise en charge';
+      case 'gal_hook_ingame_lookup_exe_hash_copy':
+        return 'Copier le SHA-256 de l\'exécutable du jeu';
+      case 'gal_hook_ingame_lookup_exe_hash_unavailable':
+        return 'Impossible de lire l\'exécutable du jeu';
+      case 'gal_hook_ingame_lookup_exe_hash_copied':
+        return 'SHA-256 de l\'exécutable copié';
       default:
         return null;
     }
@@ -197718,6 +198006,16 @@ extension on _StringsId {
         return 'Gabungkan baris dialog yang terpotong';
       case 'gal_hook_fold_progressive_lines_hint':
         return 'Sebagian engine menggambar ulang seluruh baris setiap kali diklik, sehingga satu baris tertangkap beberapa kali. Lipat cuplikan itu menjadi satu baris.';
+      case 'gal_hook_ingame_lookup_engine_unsupported':
+        return 'Mesin gim ini belum mendukung pencarian kamus dalam gim';
+      case 'gal_hook_ingame_lookup_version_unsupported':
+        return 'Versi gim ini belum ada dalam daftar yang didukung';
+      case 'gal_hook_ingame_lookup_exe_hash_copy':
+        return 'Salin SHA-256 file eksekusi gim';
+      case 'gal_hook_ingame_lookup_exe_hash_unavailable':
+        return 'Tidak dapat membaca file eksekusi gim';
+      case 'gal_hook_ingame_lookup_exe_hash_copied':
+        return 'SHA-256 file eksekusi disalin';
       default:
         return null;
     }
@@ -205748,6 +206046,16 @@ extension on _StringsIt {
         return 'Unisci le battute spezzate';
       case 'gal_hook_fold_progressive_lines_hint':
         return 'Alcuni motori ridisegnano l’intera riga a ogni clic, così una stessa riga viene catturata più volte. Ripiega quelle istantanee in una sola riga.';
+      case 'gal_hook_ingame_lookup_engine_unsupported':
+        return 'Questo motore di gioco non supporta ancora la ricerca nel gioco';
+      case 'gal_hook_ingame_lookup_version_unsupported':
+        return 'Questa versione del gioco non è ancora nell\'elenco supportato';
+      case 'gal_hook_ingame_lookup_exe_hash_copy':
+        return 'Copia lo SHA-256 dell\'eseguibile del gioco';
+      case 'gal_hook_ingame_lookup_exe_hash_unavailable':
+        return 'Impossibile leggere l\'eseguibile del gioco';
+      case 'gal_hook_ingame_lookup_exe_hash_copied':
+        return 'SHA-256 dell\'eseguibile copiato';
       default:
         return null;
     }
@@ -213711,6 +214019,16 @@ extension on _StringsJa {
         return '分割されたセリフ行をまとめる';
       case 'gal_hook_fold_progressive_lines_hint':
         return 'クリックのたびに行全体を描き直すエンジンがあり、同じ行が何度も取り込まれます。そのスナップショットを 1 行にまとめます。';
+      case 'gal_hook_ingame_lookup_engine_unsupported':
+        return 'このゲームエンジンはゲーム内辞書引きに未対応です';
+      case 'gal_hook_ingame_lookup_version_unsupported':
+        return 'このゲームのバージョンはまだ対応リストにありません';
+      case 'gal_hook_ingame_lookup_exe_hash_copy':
+        return 'ゲーム実行ファイルの SHA-256 をコピー';
+      case 'gal_hook_ingame_lookup_exe_hash_unavailable':
+        return 'ゲーム実行ファイルを読み取れません（権限不足の可能性）';
+      case 'gal_hook_ingame_lookup_exe_hash_copied':
+        return '実行ファイルの SHA-256 をコピーしました';
       default:
         return null;
     }
@@ -221676,6 +221994,16 @@ extension on _StringsKo {
         return '나뉜 대사 줄 합치기';
       case 'gal_hook_fold_progressive_lines_hint':
         return '클릭할 때마다 줄 전체를 다시 그리는 엔진이 있어 같은 줄이 여러 번 캡처됩니다. 그 스냅숏들을 한 줄로 접습니다.';
+      case 'gal_hook_ingame_lookup_engine_unsupported':
+        return '이 게임 엔진은 아직 인게임 사전 검색을 지원하지 않습니다';
+      case 'gal_hook_ingame_lookup_version_unsupported':
+        return '이 게임 버전은 아직 지원 목록에 없습니다';
+      case 'gal_hook_ingame_lookup_exe_hash_copy':
+        return '게임 실행 파일의 SHA-256 복사';
+      case 'gal_hook_ingame_lookup_exe_hash_unavailable':
+        return '게임 실행 파일을 읽을 수 없습니다 (권한 부족일 수 있음)';
+      case 'gal_hook_ingame_lookup_exe_hash_copied':
+        return '실행 파일의 SHA-256을 복사했습니다';
       default:
         return null;
     }
@@ -229700,6 +230028,16 @@ extension on _StringsNl {
         return 'Opgesplitste dialoogregels samenvoegen';
       case 'gal_hook_fold_progressive_lines_hint':
         return 'Sommige engines tekenen bij elke klik de hele regel opnieuw, waardoor één regel meerdere keren wordt vastgelegd. Vouw die momentopnamen samen tot één regel.';
+      case 'gal_hook_ingame_lookup_engine_unsupported':
+        return 'Deze game-engine ondersteunt opzoeken in het spel nog niet';
+      case 'gal_hook_ingame_lookup_version_unsupported':
+        return 'Deze spelversie staat nog niet op de lijst met ondersteunde versies';
+      case 'gal_hook_ingame_lookup_exe_hash_copy':
+        return 'SHA-256 van het spelbestand kopiëren';
+      case 'gal_hook_ingame_lookup_exe_hash_unavailable':
+        return 'Kan het spelbestand niet lezen';
+      case 'gal_hook_ingame_lookup_exe_hash_copied':
+        return 'SHA-256 van het spelbestand gekopieerd';
       default:
         return null;
     }
@@ -237719,6 +238057,16 @@ extension on _StringsPtBr {
         return 'Unir linhas de diálogo divididas';
       case 'gal_hook_fold_progressive_lines_hint':
         return 'Alguns motores redesenham a linha inteira a cada clique, então a mesma linha é capturada várias vezes. Dobre esses instantâneos em uma única linha.';
+      case 'gal_hook_ingame_lookup_engine_unsupported':
+        return 'Este motor de jogo ainda não oferece suporte à busca dentro do jogo';
+      case 'gal_hook_ingame_lookup_version_unsupported':
+        return 'Esta versão do jogo ainda não está na lista de compatíveis';
+      case 'gal_hook_ingame_lookup_exe_hash_copy':
+        return 'Copiar o SHA-256 do executável do jogo';
+      case 'gal_hook_ingame_lookup_exe_hash_unavailable':
+        return 'Não foi possível ler o executável do jogo';
+      case 'gal_hook_ingame_lookup_exe_hash_copied':
+        return 'SHA-256 do executável copiado';
       default:
         return null;
     }
@@ -245744,6 +246092,16 @@ extension on _StringsRu {
         return 'Объединять разбитые строки диалога';
       case 'gal_hook_fold_progressive_lines_hint':
         return 'Некоторые движки перерисовывают строку целиком при каждом клике, поэтому одна строка захватывается несколько раз. Сворачивать такие снимки в одну строку.';
+      case 'gal_hook_ingame_lookup_engine_unsupported':
+        return 'Этот движок игры пока не поддерживает поиск внутри игры';
+      case 'gal_hook_ingame_lookup_version_unsupported':
+        return 'Эта версия игры пока не в списке поддерживаемых';
+      case 'gal_hook_ingame_lookup_exe_hash_copy':
+        return 'Скопировать SHA-256 исполняемого файла игры';
+      case 'gal_hook_ingame_lookup_exe_hash_unavailable':
+        return 'Не удалось прочитать исполняемый файл игры';
+      case 'gal_hook_ingame_lookup_exe_hash_copied':
+        return 'SHA-256 исполняемого файла скопирован';
       default:
         return null;
     }
@@ -253741,6 +254099,16 @@ extension on _StringsTh {
         return 'รวมบรรทัดบทสนทนาที่ถูกแบ่ง';
       case 'gal_hook_fold_progressive_lines_hint':
         return 'บางเอนจินวาดทั้งบรรทัดใหม่ทุกครั้งที่คลิก ทำให้บรรทัดเดียวถูกเก็บหลายครั้ง ให้ยุบสแนปช็อตเหล่านั้นเป็นบรรทัดเดียว';
+      case 'gal_hook_ingame_lookup_engine_unsupported':
+        return 'เอนจินเกมนี้ยังไม่รองรับการเปิดพจนานุกรมในเกม';
+      case 'gal_hook_ingame_lookup_version_unsupported':
+        return 'เกมเวอร์ชันนี้ยังไม่อยู่ในรายการที่รองรับ';
+      case 'gal_hook_ingame_lookup_exe_hash_copy':
+        return 'คัดลอก SHA-256 ของไฟล์เกม';
+      case 'gal_hook_ingame_lookup_exe_hash_unavailable':
+        return 'อ่านไฟล์เกมไม่ได้';
+      case 'gal_hook_ingame_lookup_exe_hash_copied':
+        return 'คัดลอก SHA-256 ของไฟล์เกมแล้ว';
       default:
         return null;
     }
@@ -261755,6 +262123,16 @@ extension on _StringsTr {
         return 'Bölünmüş diyalog satırlarını birleştir';
       case 'gal_hook_fold_progressive_lines_hint':
         return 'Bazı motorlar her tıklamada satırın tamamını yeniden çizer, bu yüzden tek bir satır birkaç kez yakalanır. Bu anlık görüntüleri tek satırda topla.';
+      case 'gal_hook_ingame_lookup_engine_unsupported':
+        return 'Bu oyun motoru henüz oyun içi sözlük aramasını desteklemiyor';
+      case 'gal_hook_ingame_lookup_version_unsupported':
+        return 'Bu oyun sürümü henüz desteklenenler listesinde değil';
+      case 'gal_hook_ingame_lookup_exe_hash_copy':
+        return 'Oyun çalıştırılabilir dosyasının SHA-256 değerini kopyala';
+      case 'gal_hook_ingame_lookup_exe_hash_unavailable':
+        return 'Oyun çalıştırılabilir dosyası okunamadı';
+      case 'gal_hook_ingame_lookup_exe_hash_copied':
+        return 'Çalıştırılabilir dosyanın SHA-256 değeri kopyalandı';
       default:
         return null;
     }
@@ -269762,6 +270140,16 @@ extension on _StringsVi {
         return 'Gộp các dòng thoại bị chia nhỏ';
       case 'gal_hook_fold_progressive_lines_hint':
         return 'Một số engine vẽ lại cả dòng mỗi lần nhấp, nên cùng một dòng bị bắt nhiều lần. Gộp các ảnh chụp đó thành một dòng.';
+      case 'gal_hook_ingame_lookup_engine_unsupported':
+        return 'Engine trò chơi này chưa hỗ trợ tra từ trong trò chơi';
+      case 'gal_hook_ingame_lookup_version_unsupported':
+        return 'Phiên bản trò chơi này chưa có trong danh sách được hỗ trợ';
+      case 'gal_hook_ingame_lookup_exe_hash_copy':
+        return 'Sao chép SHA-256 của tệp thực thi trò chơi';
+      case 'gal_hook_ingame_lookup_exe_hash_unavailable':
+        return 'Không đọc được tệp thực thi trò chơi';
+      case 'gal_hook_ingame_lookup_exe_hash_copied':
+        return 'Đã sao chép SHA-256 của tệp thực thi';
       default:
         return null;
     }
@@ -277703,6 +278091,16 @@ extension on _StringsZhCn {
         return '合并分段吐出的台词';
       case 'gal_hook_fold_progressive_lines_hint':
         return '有些引擎每次点击都重绘整行，一句台词会被抓成好几条。开启后把同一句的多次快照折成一条。';
+      case 'gal_hook_ingame_lookup_engine_unsupported':
+        return '当前游戏引擎不支持游戏内查词';
+      case 'gal_hook_ingame_lookup_version_unsupported':
+        return '当前游戏版本未在支持列表中';
+      case 'gal_hook_ingame_lookup_exe_hash_copy':
+        return '复制游戏 exe 的 SHA-256';
+      case 'gal_hook_ingame_lookup_exe_hash_unavailable':
+        return '无法读取游戏 exe（可能权限不足）';
+      case 'gal_hook_ingame_lookup_exe_hash_copied':
+        return '已复制 exe 的 SHA-256';
       default:
         return null;
     }
@@ -285645,6 +286043,16 @@ extension on _StringsZhHk {
         return '把分開顯示的台詞合成一條';
       case 'gal_hook_fold_progressive_lines_hint':
         return '有些引擎每點一次就重畫整行，於是同一行被抓到好幾次。把這些快照摺成一條。';
+      case 'gal_hook_ingame_lookup_engine_unsupported':
+        return '目前遊戲引擎不支援遊戲內查詞';
+      case 'gal_hook_ingame_lookup_version_unsupported':
+        return '目前遊戲版本未在支援清單中';
+      case 'gal_hook_ingame_lookup_exe_hash_copy':
+        return '複製遊戲 exe 的 SHA-256';
+      case 'gal_hook_ingame_lookup_exe_hash_unavailable':
+        return '無法讀取遊戲 exe（可能權限不足）';
+      case 'gal_hook_ingame_lookup_exe_hash_copied':
+        return '已複製 exe 的 SHA-256';
       default:
         return null;
     }
