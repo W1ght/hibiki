@@ -3,7 +3,7 @@
 /// Locales: 17
 /// Strings: 68272 (4016 per locale)
 ///
-/// Built on 2026-08-30 at 12:53 UTC
+/// Built on 2026-08-30 at 13:08 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5471,12 +5471,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'The lookup opens separately from the source app. You can tap more words inside it, then close it to return where you were.';
   String get onboarding_feature_manual_resources =>
       'Import dictionaries and audio manually';
-  String get onboarding_feature_manual_resources_hint =>
-      'Skip the pack; import your own dictionaries, audiobooks, and pronunciation sources';
   String get onboarding_step_manual_resources_title =>
       'Prepare dictionaries and audio manually';
-  String get onboarding_step_manual_resources_body =>
-      'Skip the recommended pack and prepare only what you need. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional.';
   String get onboarding_manual_dictionary_action => 'Import a dictionary';
   String get onboarding_manual_dictionary_action_desc =>
       'Open dictionary management and import at least one supported dictionary file or archive. Lookup tutorials are useful only after a query returns a definition.';
@@ -5518,6 +5514,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Highlight the same word you already verified has a dictionary definition, and leave the selection active.';
   String get onboarding_global_lookup_android_select_body =>
       'Long-press the same word you already verified has a dictionary definition, then adjust the selection handles to cover it.';
+  String get onboarding_feature_manual_resources_hint =>
+      'Supplement the recommended pack, or import your own dictionaries, audiobooks, and pronunciation sources';
+  String get onboarding_step_manual_resources_body =>
+      'Use this alongside the recommended pack or on its own. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional supplements.';
 }
 
 // Path: <root>
@@ -14805,13 +14805,13 @@ class _StringsAr extends _StringsEn {
       'استيراد القواميس والصوت يدويًا';
   @override
   String get onboarding_feature_manual_resources_hint =>
-      'بدون الحزمة: استورد قواميسك وكتبك الصوتية ومصادر النطق الخاصة بك';
+      'Supplement the recommended pack, or import your own dictionaries, audiobooks, and pronunciation sources';
   @override
   String get onboarding_step_manual_resources_title =>
       'جهّز القواميس والصوت يدويًا';
   @override
   String get onboarding_step_manual_resources_body =>
-      'تخطَّ الحزمة الموصى بها وجهّز ما تحتاجه فقط. استورد قاموسًا واحدًا على الأقل قبل درس البحث؛ أما الكتاب الصوتي وصوت النطق فاختياريان.';
+      'Use this alongside the recommended pack or on its own. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional supplements.';
   @override
   String get onboarding_manual_dictionary_action => 'استيراد قاموس';
   @override
@@ -24373,13 +24373,13 @@ class _StringsDe extends _StringsEn {
       'Wörterbücher und Audio manuell importieren';
   @override
   String get onboarding_feature_manual_resources_hint =>
-      'Ohne Paket: eigene Wörterbücher, Hörbücher und Aussprachequellen importieren';
+      'Supplement the recommended pack, or import your own dictionaries, audiobooks, and pronunciation sources';
   @override
   String get onboarding_step_manual_resources_title =>
       'Wörterbücher und Audio manuell vorbereiten';
   @override
   String get onboarding_step_manual_resources_body =>
-      'Überspringen Sie das empfohlene Paket und richten Sie nur das Nötige ein. Importieren Sie vor der Nachschlage-Anleitung mindestens ein Wörterbuch; Hörbuch- und Aussprache-Audio sind optional.';
+      'Use this alongside the recommended pack or on its own. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional supplements.';
   @override
   String get onboarding_manual_dictionary_action =>
       'Ein Wörterbuch importieren';
@@ -33994,13 +33994,13 @@ class _StringsEs extends _StringsEn {
       'Importar diccionarios y audio manualmente';
   @override
   String get onboarding_feature_manual_resources_hint =>
-      'Sin el pack: importe sus propios diccionarios, audiolibros y fuentes de pronunciación';
+      'Supplement the recommended pack, or import your own dictionaries, audiobooks, and pronunciation sources';
   @override
   String get onboarding_step_manual_resources_title =>
       'Prepare diccionarios y audio manualmente';
   @override
   String get onboarding_step_manual_resources_body =>
-      'Omita el pack recomendado y prepare solo lo que necesite. Importe al menos un diccionario antes del tutorial de búsqueda; el audiolibro y el audio de pronunciación son opcionales.';
+      'Use this alongside the recommended pack or on its own. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional supplements.';
   @override
   String get onboarding_manual_dictionary_action => 'Importar un diccionario';
   @override
@@ -43650,13 +43650,13 @@ class _StringsFr extends _StringsEn {
       'Importer les dictionnaires et l\'audio manuellement';
   @override
   String get onboarding_feature_manual_resources_hint =>
-      'Sans le pack : importez vos propres dictionnaires, livres audio et sources de prononciation';
+      'Supplement the recommended pack, or import your own dictionaries, audiobooks, and pronunciation sources';
   @override
   String get onboarding_step_manual_resources_title =>
       'Préparer les dictionnaires et l\'audio manuellement';
   @override
   String get onboarding_step_manual_resources_body =>
-      'Ignorez le pack recommandé et ne préparez que le nécessaire. Importez au moins un dictionnaire avant le tutoriel de recherche ; les livres audio et l\'audio de prononciation sont facultatifs.';
+      'Use this alongside the recommended pack or on its own. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional supplements.';
   @override
   String get onboarding_manual_dictionary_action => 'Importer un dictionnaire';
   @override
@@ -53127,13 +53127,13 @@ class _StringsId extends _StringsEn {
       'Impor kamus dan audio secara manual';
   @override
   String get onboarding_feature_manual_resources_hint =>
-      'Tanpa paket: impor sendiri kamus, buku audio, dan sumber pelafalan Anda';
+      'Supplement the recommended pack, or import your own dictionaries, audiobooks, and pronunciation sources';
   @override
   String get onboarding_step_manual_resources_title =>
       'Siapkan kamus dan audio secara manual';
   @override
   String get onboarding_step_manual_resources_body =>
-      'Lewati paket rekomendasi dan siapkan hanya yang Anda butuhkan. Impor minimal satu kamus sebelum tutorial pencarian; buku audio dan audio pelafalan sifatnya opsional.';
+      'Use this alongside the recommended pack or on its own. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional supplements.';
   @override
   String get onboarding_manual_dictionary_action => 'Impor kamus';
   @override
@@ -62685,13 +62685,13 @@ class _StringsIt extends _StringsEn {
       'Importa dizionari e audio manualmente';
   @override
   String get onboarding_feature_manual_resources_hint =>
-      'Senza pacchetto: importa i tuoi dizionari, audiolibri e fonti di pronuncia';
+      'Supplement the recommended pack, or import your own dictionaries, audiobooks, and pronunciation sources';
   @override
   String get onboarding_step_manual_resources_title =>
       'Prepara dizionari e audio manualmente';
   @override
   String get onboarding_step_manual_resources_body =>
-      'Salta il pacchetto consigliato e prepara solo ciò che ti serve. Importa almeno un dizionario prima del tutorial di ricerca; audiolibro e audio di pronuncia sono facoltativi.';
+      'Use this alongside the recommended pack or on its own. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional supplements.';
   @override
   String get onboarding_manual_dictionary_action => 'Importa un dizionario';
   @override
@@ -71660,12 +71660,12 @@ class _StringsJa extends _StringsEn {
   String get onboarding_feature_manual_resources => '辞書と音声を手動でインポート';
   @override
   String get onboarding_feature_manual_resources_hint =>
-      'パックを使わず、自分の辞書・オーディオブック・発音ソースを取り込む';
+      'Supplement the recommended pack, or import your own dictionaries, audiobooks, and pronunciation sources';
   @override
   String get onboarding_step_manual_resources_title => '辞書と音声を手動で準備';
   @override
   String get onboarding_step_manual_resources_body =>
-      'おすすめパックを使わず、必要なものだけを準備します。検索チュートリアルの前に辞書を最低1つインポートしてください。オーディオブックと発音音声は任意です。';
+      'Use this alongside the recommended pack or on its own. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional supplements.';
   @override
   String get onboarding_manual_dictionary_action => '辞書をインポート';
   @override
@@ -80639,12 +80639,12 @@ class _StringsKo extends _StringsEn {
   String get onboarding_feature_manual_resources => '사전과 오디오 직접 가져오기';
   @override
   String get onboarding_feature_manual_resources_hint =>
-      '팩 없이 사전, 오디오북, 발음 소스를 직접 가져옵니다';
+      'Supplement the recommended pack, or import your own dictionaries, audiobooks, and pronunciation sources';
   @override
   String get onboarding_step_manual_resources_title => '사전과 오디오 직접 준비하기';
   @override
   String get onboarding_step_manual_resources_body =>
-      '추천 팩을 건너뛰고 필요한 것만 준비하세요. 검색 튜토리얼 전에 사전을 최소 하나 가져와야 하며, 오디오북과 발음 오디오는 선택 사항입니다.';
+      'Use this alongside the recommended pack or on its own. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional supplements.';
   @override
   String get onboarding_manual_dictionary_action => '사전 가져오기';
   @override
@@ -90142,13 +90142,13 @@ class _StringsNl extends _StringsEn {
       'Woordenboeken en audio handmatig importeren';
   @override
   String get onboarding_feature_manual_resources_hint =>
-      'Zonder pakket: importeer je eigen woordenboeken, luisterboeken en uitspraakbronnen';
+      'Supplement the recommended pack, or import your own dictionaries, audiobooks, and pronunciation sources';
   @override
   String get onboarding_step_manual_resources_title =>
       'Woordenboeken en audio handmatig voorbereiden';
   @override
   String get onboarding_step_manual_resources_body =>
-      'Sla het aanbevolen pakket over en zet alleen klaar wat je nodig hebt. Importeer minstens één woordenboek vóór de zoekhandleiding; luisterboek- en uitspraakaudio zijn optioneel.';
+      'Use this alongside the recommended pack or on its own. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional supplements.';
   @override
   String get onboarding_manual_dictionary_action =>
       'Een woordenboek importeren';
@@ -99712,13 +99712,13 @@ class _StringsPtBr extends _StringsEn {
       'Importar dicionários e áudio manualmente';
   @override
   String get onboarding_feature_manual_resources_hint =>
-      'Sem o pacote: importe seus próprios dicionários, audiolivros e fontes de pronúncia';
+      'Supplement the recommended pack, or import your own dictionaries, audiobooks, and pronunciation sources';
   @override
   String get onboarding_step_manual_resources_title =>
       'Prepare dicionários e áudio manualmente';
   @override
   String get onboarding_step_manual_resources_body =>
-      'Pule o pacote recomendado e prepare só o que precisar. Importe pelo menos um dicionário antes do tutorial de consulta; audiolivro e áudio de pronúncia são opcionais.';
+      'Use this alongside the recommended pack or on its own. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional supplements.';
   @override
   String get onboarding_manual_dictionary_action => 'Importar um dicionário';
   @override
@@ -109256,13 +109256,13 @@ class _StringsRu extends _StringsEn {
       'Импортировать словари и аудио вручную';
   @override
   String get onboarding_feature_manual_resources_hint =>
-      'Без набора: импортируйте свои словари, аудиокниги и источники произношения';
+      'Supplement the recommended pack, or import your own dictionaries, audiobooks, and pronunciation sources';
   @override
   String get onboarding_step_manual_resources_title =>
       'Подготовьте словари и аудио вручную';
   @override
   String get onboarding_step_manual_resources_body =>
-      'Пропустите рекомендуемый набор и подготовьте только нужное. До урока по поиску импортируйте хотя бы один словарь; аудиокниги и аудио произношения — по желанию.';
+      'Use this alongside the recommended pack or on its own. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional supplements.';
   @override
   String get onboarding_manual_dictionary_action => 'Импортировать словарь';
   @override
@@ -118605,13 +118605,13 @@ class _StringsTh extends _StringsEn {
       'นำเข้าพจนานุกรมและไฟล์เสียงเอง';
   @override
   String get onboarding_feature_manual_resources_hint =>
-      'ไม่ใช้แพ็ก แต่นำเข้าพจนานุกรม หนังสือเสียง และแหล่งเสียงอ่านคำของคุณเอง';
+      'Supplement the recommended pack, or import your own dictionaries, audiobooks, and pronunciation sources';
   @override
   String get onboarding_step_manual_resources_title =>
       'เตรียมพจนานุกรมและไฟล์เสียงเอง';
   @override
   String get onboarding_step_manual_resources_body =>
-      'ข้ามแพ็กแนะนำแล้วเตรียมเฉพาะสิ่งที่ต้องใช้ ควรนำเข้าพจนานุกรมอย่างน้อยหนึ่งเล่มก่อนเริ่มบทเรียนการค้นคำ ส่วนหนังสือเสียงและเสียงอ่านคำเป็นตัวเลือกเสริม';
+      'Use this alongside the recommended pack or on its own. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional supplements.';
   @override
   String get onboarding_manual_dictionary_action => 'นำเข้าพจนานุกรม';
   @override
@@ -128063,13 +128063,13 @@ class _StringsTr extends _StringsEn {
       'Sözlükleri ve sesleri elle içe aktar';
   @override
   String get onboarding_feature_manual_resources_hint =>
-      'Paketi atlayın; kendi sözlüklerinizi, sesli kitaplarınızı ve telaffuz kaynaklarınızı içe aktarın';
+      'Supplement the recommended pack, or import your own dictionaries, audiobooks, and pronunciation sources';
   @override
   String get onboarding_step_manual_resources_title =>
       'Sözlükleri ve sesleri elle hazırlayın';
   @override
   String get onboarding_step_manual_resources_body =>
-      'Önerilen paketi atlayıp yalnızca ihtiyacınız olanı hazırlayın. Arama eğitiminden önce en az bir sözlük içe aktarın; sesli kitap ve telaffuz sesi isteğe bağlıdır.';
+      'Use this alongside the recommended pack or on its own. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional supplements.';
   @override
   String get onboarding_manual_dictionary_action => 'Sözlük içe aktar';
   @override
@@ -137501,13 +137501,13 @@ class _StringsVi extends _StringsEn {
       'Nhập từ điển và âm thanh thủ công';
   @override
   String get onboarding_feature_manual_resources_hint =>
-      'Bỏ qua gói: tự nhập từ điển, sách nói và nguồn phát âm của bạn';
+      'Supplement the recommended pack, or import your own dictionaries, audiobooks, and pronunciation sources';
   @override
   String get onboarding_step_manual_resources_title =>
       'Chuẩn bị từ điển và âm thanh thủ công';
   @override
   String get onboarding_step_manual_resources_body =>
-      'Bỏ qua gói khuyến nghị và chỉ chuẩn bị thứ bạn cần. Hãy nhập ít nhất một từ điển trước phần hướng dẫn tra từ; sách nói và âm thanh phát âm là tuỳ chọn.';
+      'Use this alongside the recommended pack or on its own. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional supplements.';
   @override
   String get onboarding_manual_dictionary_action => 'Nhập một từ điển';
   @override
@@ -146189,13 +146189,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get onboarding_feature_manual_resources => '手动导入词典和音频';
   @override
-  String get onboarding_feature_manual_resources_hint =>
-      '不下载推荐包，自己导入词典、有声书和单词发音来源';
-  @override
   String get onboarding_step_manual_resources_title => '手动准备词典和音频';
-  @override
-  String get onboarding_step_manual_resources_body =>
-      '不下载推荐包时，在这里按需准备资源。进入查词教程前至少导入一本词典；有声书音频和单词发音音频按需配置。';
   @override
   String get onboarding_manual_dictionary_action => '导入词典';
   @override
@@ -146253,6 +146247,12 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get onboarding_global_lookup_android_select_body =>
       '长按刚才已经验证能返回词典释义的同一个词，再拖动选区手柄让它完整覆盖。';
+  @override
+  String get onboarding_feature_manual_resources_hint =>
+      '可补充推荐包，也可单独导入自己的词典、有声书和单词发音来源';
+  @override
+  String get onboarding_step_manual_resources_body =>
+      '这一项可以与推荐包同时使用，也可以单独使用。进入查词教程前至少导入一本词典；有声书音频和单词发音音频属于按需补充。';
 }
 
 // Path: <root>
@@ -154878,12 +154878,12 @@ class _StringsZhHk extends _StringsEn {
   String get onboarding_feature_manual_resources => '手動導入詞典和音頻';
   @override
   String get onboarding_feature_manual_resources_hint =>
-      '不下載推薦包，自己導入詞典、有聲書和單詞發音來源';
+      '可補充推薦包，也可單獨匯入自己的字典、有聲書和單字發音來源';
   @override
   String get onboarding_step_manual_resources_title => '手動準備詞典和音頻';
   @override
   String get onboarding_step_manual_resources_body =>
-      '不下載推薦包時，在這裡按需準備資源。進入查詞教學前至少導入一本詞典；有聲書音頻和單詞發音音頻按需配置。';
+      '這一項可以與推薦包同時使用，也可以單獨使用。進入查詞教學前至少匯入一本字典；有聲書音訊和單字發音音訊屬於按需補充。';
   @override
   String get onboarding_manual_dictionary_action => '導入詞典';
   @override
@@ -163134,12 +163134,8 @@ extension on _StringsEn {
         return 'The lookup opens separately from the source app. You can tap more words inside it, then close it to return where you were.';
       case 'onboarding_feature_manual_resources':
         return 'Import dictionaries and audio manually';
-      case 'onboarding_feature_manual_resources_hint':
-        return 'Skip the pack; import your own dictionaries, audiobooks, and pronunciation sources';
       case 'onboarding_step_manual_resources_title':
         return 'Prepare dictionaries and audio manually';
-      case 'onboarding_step_manual_resources_body':
-        return 'Skip the recommended pack and prepare only what you need. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional.';
       case 'onboarding_manual_dictionary_action':
         return 'Import a dictionary';
       case 'onboarding_manual_dictionary_action_desc':
@@ -163184,6 +163180,10 @@ extension on _StringsEn {
         return 'Highlight the same word you already verified has a dictionary definition, and leave the selection active.';
       case 'onboarding_global_lookup_android_select_body':
         return 'Long-press the same word you already verified has a dictionary definition, then adjust the selection handles to cover it.';
+      case 'onboarding_feature_manual_resources_hint':
+        return 'Supplement the recommended pack, or import your own dictionaries, audiobooks, and pronunciation sources';
+      case 'onboarding_step_manual_resources_body':
+        return 'Use this alongside the recommended pack or on its own. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional supplements.';
       default:
         return null;
     }
@@ -171374,11 +171374,11 @@ extension on _StringsAr {
       case 'onboarding_feature_manual_resources':
         return 'استيراد القواميس والصوت يدويًا';
       case 'onboarding_feature_manual_resources_hint':
-        return 'بدون الحزمة: استورد قواميسك وكتبك الصوتية ومصادر النطق الخاصة بك';
+        return 'Supplement the recommended pack, or import your own dictionaries, audiobooks, and pronunciation sources';
       case 'onboarding_step_manual_resources_title':
         return 'جهّز القواميس والصوت يدويًا';
       case 'onboarding_step_manual_resources_body':
-        return 'تخطَّ الحزمة الموصى بها وجهّز ما تحتاجه فقط. استورد قاموسًا واحدًا على الأقل قبل درس البحث؛ أما الكتاب الصوتي وصوت النطق فاختياريان.';
+        return 'Use this alongside the recommended pack or on its own. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional supplements.';
       case 'onboarding_manual_dictionary_action':
         return 'استيراد قاموس';
       case 'onboarding_manual_dictionary_action_desc':
@@ -179656,11 +179656,11 @@ extension on _StringsDe {
       case 'onboarding_feature_manual_resources':
         return 'Wörterbücher und Audio manuell importieren';
       case 'onboarding_feature_manual_resources_hint':
-        return 'Ohne Paket: eigene Wörterbücher, Hörbücher und Aussprachequellen importieren';
+        return 'Supplement the recommended pack, or import your own dictionaries, audiobooks, and pronunciation sources';
       case 'onboarding_step_manual_resources_title':
         return 'Wörterbücher und Audio manuell vorbereiten';
       case 'onboarding_step_manual_resources_body':
-        return 'Überspringen Sie das empfohlene Paket und richten Sie nur das Nötige ein. Importieren Sie vor der Nachschlage-Anleitung mindestens ein Wörterbuch; Hörbuch- und Aussprache-Audio sind optional.';
+        return 'Use this alongside the recommended pack or on its own. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional supplements.';
       case 'onboarding_manual_dictionary_action':
         return 'Ein Wörterbuch importieren';
       case 'onboarding_manual_dictionary_action_desc':
@@ -187930,11 +187930,11 @@ extension on _StringsEs {
       case 'onboarding_feature_manual_resources':
         return 'Importar diccionarios y audio manualmente';
       case 'onboarding_feature_manual_resources_hint':
-        return 'Sin el pack: importe sus propios diccionarios, audiolibros y fuentes de pronunciación';
+        return 'Supplement the recommended pack, or import your own dictionaries, audiobooks, and pronunciation sources';
       case 'onboarding_step_manual_resources_title':
         return 'Prepare diccionarios y audio manualmente';
       case 'onboarding_step_manual_resources_body':
-        return 'Omita el pack recomendado y prepare solo lo que necesite. Importe al menos un diccionario antes del tutorial de búsqueda; el audiolibro y el audio de pronunciación son opcionales.';
+        return 'Use this alongside the recommended pack or on its own. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional supplements.';
       case 'onboarding_manual_dictionary_action':
         return 'Importar un diccionario';
       case 'onboarding_manual_dictionary_action_desc':
@@ -196212,11 +196212,11 @@ extension on _StringsFr {
       case 'onboarding_feature_manual_resources':
         return 'Importer les dictionnaires et l\'audio manuellement';
       case 'onboarding_feature_manual_resources_hint':
-        return 'Sans le pack : importez vos propres dictionnaires, livres audio et sources de prononciation';
+        return 'Supplement the recommended pack, or import your own dictionaries, audiobooks, and pronunciation sources';
       case 'onboarding_step_manual_resources_title':
         return 'Préparer les dictionnaires et l\'audio manuellement';
       case 'onboarding_step_manual_resources_body':
-        return 'Ignorez le pack recommandé et ne préparez que le nécessaire. Importez au moins un dictionnaire avant le tutoriel de recherche ; les livres audio et l\'audio de prononciation sont facultatifs.';
+        return 'Use this alongside the recommended pack or on its own. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional supplements.';
       case 'onboarding_manual_dictionary_action':
         return 'Importer un dictionnaire';
       case 'onboarding_manual_dictionary_action_desc':
@@ -204466,11 +204466,11 @@ extension on _StringsId {
       case 'onboarding_feature_manual_resources':
         return 'Impor kamus dan audio secara manual';
       case 'onboarding_feature_manual_resources_hint':
-        return 'Tanpa paket: impor sendiri kamus, buku audio, dan sumber pelafalan Anda';
+        return 'Supplement the recommended pack, or import your own dictionaries, audiobooks, and pronunciation sources';
       case 'onboarding_step_manual_resources_title':
         return 'Siapkan kamus dan audio secara manual';
       case 'onboarding_step_manual_resources_body':
-        return 'Lewati paket rekomendasi dan siapkan hanya yang Anda butuhkan. Impor minimal satu kamus sebelum tutorial pencarian; buku audio dan audio pelafalan sifatnya opsional.';
+        return 'Use this alongside the recommended pack or on its own. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional supplements.';
       case 'onboarding_manual_dictionary_action':
         return 'Impor kamus';
       case 'onboarding_manual_dictionary_action_desc':
@@ -212741,11 +212741,11 @@ extension on _StringsIt {
       case 'onboarding_feature_manual_resources':
         return 'Importa dizionari e audio manualmente';
       case 'onboarding_feature_manual_resources_hint':
-        return 'Senza pacchetto: importa i tuoi dizionari, audiolibri e fonti di pronuncia';
+        return 'Supplement the recommended pack, or import your own dictionaries, audiobooks, and pronunciation sources';
       case 'onboarding_step_manual_resources_title':
         return 'Prepara dizionari e audio manualmente';
       case 'onboarding_step_manual_resources_body':
-        return 'Salta il pacchetto consigliato e prepara solo ciò che ti serve. Importa almeno un dizionario prima del tutorial di ricerca; audiolibro e audio di pronuncia sono facoltativi.';
+        return 'Use this alongside the recommended pack or on its own. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional supplements.';
       case 'onboarding_manual_dictionary_action':
         return 'Importa un dizionario';
       case 'onboarding_manual_dictionary_action_desc':
@@ -220946,11 +220946,11 @@ extension on _StringsJa {
       case 'onboarding_feature_manual_resources':
         return '辞書と音声を手動でインポート';
       case 'onboarding_feature_manual_resources_hint':
-        return 'パックを使わず、自分の辞書・オーディオブック・発音ソースを取り込む';
+        return 'Supplement the recommended pack, or import your own dictionaries, audiobooks, and pronunciation sources';
       case 'onboarding_step_manual_resources_title':
         return '辞書と音声を手動で準備';
       case 'onboarding_step_manual_resources_body':
-        return 'おすすめパックを使わず、必要なものだけを準備します。検索チュートリアルの前に辞書を最低1つインポートしてください。オーディオブックと発音音声は任意です。';
+        return 'Use this alongside the recommended pack or on its own. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional supplements.';
       case 'onboarding_manual_dictionary_action':
         return '辞書をインポート';
       case 'onboarding_manual_dictionary_action_desc':
@@ -229154,11 +229154,11 @@ extension on _StringsKo {
       case 'onboarding_feature_manual_resources':
         return '사전과 오디오 직접 가져오기';
       case 'onboarding_feature_manual_resources_hint':
-        return '팩 없이 사전, 오디오북, 발음 소스를 직접 가져옵니다';
+        return 'Supplement the recommended pack, or import your own dictionaries, audiobooks, and pronunciation sources';
       case 'onboarding_step_manual_resources_title':
         return '사전과 오디오 직접 준비하기';
       case 'onboarding_step_manual_resources_body':
-        return '추천 팩을 건너뛰고 필요한 것만 준비하세요. 검색 튜토리얼 전에 사전을 최소 하나 가져와야 하며, 오디오북과 발음 오디오는 선택 사항입니다.';
+        return 'Use this alongside the recommended pack or on its own. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional supplements.';
       case 'onboarding_manual_dictionary_action':
         return '사전 가져오기';
       case 'onboarding_manual_dictionary_action_desc':
@@ -237423,11 +237423,11 @@ extension on _StringsNl {
       case 'onboarding_feature_manual_resources':
         return 'Woordenboeken en audio handmatig importeren';
       case 'onboarding_feature_manual_resources_hint':
-        return 'Zonder pakket: importeer je eigen woordenboeken, luisterboeken en uitspraakbronnen';
+        return 'Supplement the recommended pack, or import your own dictionaries, audiobooks, and pronunciation sources';
       case 'onboarding_step_manual_resources_title':
         return 'Woordenboeken en audio handmatig voorbereiden';
       case 'onboarding_step_manual_resources_body':
-        return 'Sla het aanbevolen pakket over en zet alleen klaar wat je nodig hebt. Importeer minstens één woordenboek vóór de zoekhandleiding; luisterboek- en uitspraakaudio zijn optioneel.';
+        return 'Use this alongside the recommended pack or on its own. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional supplements.';
       case 'onboarding_manual_dictionary_action':
         return 'Een woordenboek importeren';
       case 'onboarding_manual_dictionary_action_desc':
@@ -245687,11 +245687,11 @@ extension on _StringsPtBr {
       case 'onboarding_feature_manual_resources':
         return 'Importar dicionários e áudio manualmente';
       case 'onboarding_feature_manual_resources_hint':
-        return 'Sem o pacote: importe seus próprios dicionários, audiolivros e fontes de pronúncia';
+        return 'Supplement the recommended pack, or import your own dictionaries, audiobooks, and pronunciation sources';
       case 'onboarding_step_manual_resources_title':
         return 'Prepare dicionários e áudio manualmente';
       case 'onboarding_step_manual_resources_body':
-        return 'Pule o pacote recomendado e prepare só o que precisar. Importe pelo menos um dicionário antes do tutorial de consulta; audiolivro e áudio de pronúncia são opcionais.';
+        return 'Use this alongside the recommended pack or on its own. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional supplements.';
       case 'onboarding_manual_dictionary_action':
         return 'Importar um dicionário';
       case 'onboarding_manual_dictionary_action_desc':
@@ -253957,11 +253957,11 @@ extension on _StringsRu {
       case 'onboarding_feature_manual_resources':
         return 'Импортировать словари и аудио вручную';
       case 'onboarding_feature_manual_resources_hint':
-        return 'Без набора: импортируйте свои словари, аудиокниги и источники произношения';
+        return 'Supplement the recommended pack, or import your own dictionaries, audiobooks, and pronunciation sources';
       case 'onboarding_step_manual_resources_title':
         return 'Подготовьте словари и аудио вручную';
       case 'onboarding_step_manual_resources_body':
-        return 'Пропустите рекомендуемый набор и подготовьте только нужное. До урока по поиску импортируйте хотя бы один словарь; аудиокниги и аудио произношения — по желанию.';
+        return 'Use this alongside the recommended pack or on its own. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional supplements.';
       case 'onboarding_manual_dictionary_action':
         return 'Импортировать словарь';
       case 'onboarding_manual_dictionary_action_desc':
@@ -262200,11 +262200,11 @@ extension on _StringsTh {
       case 'onboarding_feature_manual_resources':
         return 'นำเข้าพจนานุกรมและไฟล์เสียงเอง';
       case 'onboarding_feature_manual_resources_hint':
-        return 'ไม่ใช้แพ็ก แต่นำเข้าพจนานุกรม หนังสือเสียง และแหล่งเสียงอ่านคำของคุณเอง';
+        return 'Supplement the recommended pack, or import your own dictionaries, audiobooks, and pronunciation sources';
       case 'onboarding_step_manual_resources_title':
         return 'เตรียมพจนานุกรมและไฟล์เสียงเอง';
       case 'onboarding_step_manual_resources_body':
-        return 'ข้ามแพ็กแนะนำแล้วเตรียมเฉพาะสิ่งที่ต้องใช้ ควรนำเข้าพจนานุกรมอย่างน้อยหนึ่งเล่มก่อนเริ่มบทเรียนการค้นคำ ส่วนหนังสือเสียงและเสียงอ่านคำเป็นตัวเลือกเสริม';
+        return 'Use this alongside the recommended pack or on its own. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional supplements.';
       case 'onboarding_manual_dictionary_action':
         return 'นำเข้าพจนานุกรม';
       case 'onboarding_manual_dictionary_action_desc':
@@ -270459,11 +270459,11 @@ extension on _StringsTr {
       case 'onboarding_feature_manual_resources':
         return 'Sözlükleri ve sesleri elle içe aktar';
       case 'onboarding_feature_manual_resources_hint':
-        return 'Paketi atlayın; kendi sözlüklerinizi, sesli kitaplarınızı ve telaffuz kaynaklarınızı içe aktarın';
+        return 'Supplement the recommended pack, or import your own dictionaries, audiobooks, and pronunciation sources';
       case 'onboarding_step_manual_resources_title':
         return 'Sözlükleri ve sesleri elle hazırlayın';
       case 'onboarding_step_manual_resources_body':
-        return 'Önerilen paketi atlayıp yalnızca ihtiyacınız olanı hazırlayın. Arama eğitiminden önce en az bir sözlük içe aktarın; sesli kitap ve telaffuz sesi isteğe bağlıdır.';
+        return 'Use this alongside the recommended pack or on its own. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional supplements.';
       case 'onboarding_manual_dictionary_action':
         return 'Sözlük içe aktar';
       case 'onboarding_manual_dictionary_action_desc':
@@ -278711,11 +278711,11 @@ extension on _StringsVi {
       case 'onboarding_feature_manual_resources':
         return 'Nhập từ điển và âm thanh thủ công';
       case 'onboarding_feature_manual_resources_hint':
-        return 'Bỏ qua gói: tự nhập từ điển, sách nói và nguồn phát âm của bạn';
+        return 'Supplement the recommended pack, or import your own dictionaries, audiobooks, and pronunciation sources';
       case 'onboarding_step_manual_resources_title':
         return 'Chuẩn bị từ điển và âm thanh thủ công';
       case 'onboarding_step_manual_resources_body':
-        return 'Bỏ qua gói khuyến nghị và chỉ chuẩn bị thứ bạn cần. Hãy nhập ít nhất một từ điển trước phần hướng dẫn tra từ; sách nói và âm thanh phát âm là tuỳ chọn.';
+        return 'Use this alongside the recommended pack or on its own. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional supplements.';
       case 'onboarding_manual_dictionary_action':
         return 'Nhập một từ điển';
       case 'onboarding_manual_dictionary_action_desc':
@@ -286893,12 +286893,8 @@ extension on _StringsZhCn {
         return '查词结果会独立打开；你可以继续点释义里的词，关闭后回到刚才的应用。';
       case 'onboarding_feature_manual_resources':
         return '手动导入词典和音频';
-      case 'onboarding_feature_manual_resources_hint':
-        return '不下载推荐包，自己导入词典、有声书和单词发音来源';
       case 'onboarding_step_manual_resources_title':
         return '手动准备词典和音频';
-      case 'onboarding_step_manual_resources_body':
-        return '不下载推荐包时，在这里按需准备资源。进入查词教程前至少导入一本词典；有声书音频和单词发音音频按需配置。';
       case 'onboarding_manual_dictionary_action':
         return '导入词典';
       case 'onboarding_manual_dictionary_action_desc':
@@ -286943,6 +286939,10 @@ extension on _StringsZhCn {
         return '拖选刚才已经验证能返回词典释义的同一个词，并保持文字处于选中状态。';
       case 'onboarding_global_lookup_android_select_body':
         return '长按刚才已经验证能返回词典释义的同一个词，再拖动选区手柄让它完整覆盖。';
+      case 'onboarding_feature_manual_resources_hint':
+        return '可补充推荐包，也可单独导入自己的词典、有声书和单词发音来源';
+      case 'onboarding_step_manual_resources_body':
+        return '这一项可以与推荐包同时使用，也可以单独使用。进入查词教程前至少导入一本词典；有声书音频和单词发音音频属于按需补充。';
       default:
         return null;
     }
@@ -295078,11 +295078,11 @@ extension on _StringsZhHk {
       case 'onboarding_feature_manual_resources':
         return '手動導入詞典和音頻';
       case 'onboarding_feature_manual_resources_hint':
-        return '不下載推薦包，自己導入詞典、有聲書和單詞發音來源';
+        return '可補充推薦包，也可單獨匯入自己的字典、有聲書和單字發音來源';
       case 'onboarding_step_manual_resources_title':
         return '手動準備詞典和音頻';
       case 'onboarding_step_manual_resources_body':
-        return '不下載推薦包時，在這裡按需準備資源。進入查詞教學前至少導入一本詞典；有聲書音頻和單詞發音音頻按需配置。';
+        return '這一項可以與推薦包同時使用，也可以單獨使用。進入查詞教學前至少匯入一本字典；有聲書音訊和單字發音音訊屬於按需補充。';
       case 'onboarding_manual_dictionary_action':
         return '導入詞典';
       case 'onboarding_manual_dictionary_action_desc':
