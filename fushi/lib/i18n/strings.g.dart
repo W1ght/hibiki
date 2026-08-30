@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 66300 (3900 per locale)
+/// Strings: 66436 (3908 per locale)
 ///
-/// Built on 2026-08-30 at 04:36 UTC
+/// Built on 2026-08-30 at 04:41 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5316,6 +5316,19 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Could not read the game executable';
   String get gal_hook_ingame_lookup_exe_hash_copied =>
       'Executable SHA-256 copied';
+  String get download_tracker_section => 'Tracker subscription';
+  String get download_tracker_auto_add =>
+      'Automatically add subscription trackers to new downloads';
+  String get download_tracker_auto_add_hint =>
+      'The list is cached for 6 hours. A subscription failure will not block the download.';
+  String get download_tracker_url => 'Subscription URL';
+  String get download_tracker_refresh => 'Fetch trackers';
+  String get download_tracker_preview_empty =>
+      'Fetch the subscription to preview supported HTTP, HTTPS, and UDP trackers.';
+  String download_tracker_preview_count({required Object count}) =>
+      'Fetched ${count} trackers';
+  String download_tracker_fetch_failed({required Object message}) =>
+      'Could not fetch trackers: ${message}';
 }
 
 // Path: <root>
@@ -14361,6 +14374,27 @@ class _StringsAr extends _StringsEn {
   @override
   String get gal_hook_ingame_lookup_exe_hash_copied =>
       'تم نسخ SHA-256 لملف اللعبة التنفيذي';
+  @override
+  String get download_tracker_section => 'اشتراك المتعقّبات';
+  @override
+  String get download_tracker_auto_add =>
+      'إضافة متعقّبات الاشتراك تلقائيًا إلى التنزيلات الجديدة';
+  @override
+  String get download_tracker_auto_add_hint =>
+      'تُخزَّن القائمة مؤقتًا لست ساعات. فشل الاشتراك لا يمنع التنزيل.';
+  @override
+  String get download_tracker_url => 'رابط الاشتراك';
+  @override
+  String get download_tracker_refresh => 'جلب المتعقّبات';
+  @override
+  String get download_tracker_preview_empty =>
+      'اجلب الاشتراك لمعاينة متعقّبات HTTP وHTTPS وUDP المدعومة.';
+  @override
+  String download_tracker_preview_count({required Object count}) =>
+      'تم جلب ${count} متعقّبًا';
+  @override
+  String download_tracker_fetch_failed({required Object message}) =>
+      'تعذّر جلب المتعقّبات: ${message}';
 }
 
 // Path: <root>
@@ -23618,6 +23652,27 @@ class _StringsDe extends _StringsEn {
   @override
   String get gal_hook_ingame_lookup_exe_hash_copied =>
       'SHA-256 der Spieldatei kopiert';
+  @override
+  String get download_tracker_section => 'Tracker-Abonnement';
+  @override
+  String get download_tracker_auto_add =>
+      'Abonnierte Tracker automatisch zu neuen Downloads hinzufügen';
+  @override
+  String get download_tracker_auto_add_hint =>
+      'Die Liste wird 6 Stunden zwischengespeichert. Ein fehlgeschlagenes Abonnement blockiert den Download nicht.';
+  @override
+  String get download_tracker_url => 'Abonnement-URL';
+  @override
+  String get download_tracker_refresh => 'Tracker abrufen';
+  @override
+  String get download_tracker_preview_empty =>
+      'Rufe das Abonnement ab, um die unterstützten HTTP-, HTTPS- und UDP-Tracker anzuzeigen.';
+  @override
+  String download_tracker_preview_count({required Object count}) =>
+      '${count} Tracker abgerufen';
+  @override
+  String download_tracker_fetch_failed({required Object message}) =>
+      'Tracker konnten nicht abgerufen werden: ${message}';
 }
 
 // Path: <root>
@@ -32918,6 +32973,27 @@ class _StringsEs extends _StringsEn {
   @override
   String get gal_hook_ingame_lookup_exe_hash_copied =>
       'SHA-256 del ejecutable copiado';
+  @override
+  String get download_tracker_section => 'Suscripción de trackers';
+  @override
+  String get download_tracker_auto_add =>
+      'Añadir automáticamente los trackers suscritos a las descargas nuevas';
+  @override
+  String get download_tracker_auto_add_hint =>
+      'La lista se almacena en caché 6 horas. Si la suscripción falla, la descarga no se bloquea.';
+  @override
+  String get download_tracker_url => 'URL de suscripción';
+  @override
+  String get download_tracker_refresh => 'Obtener trackers';
+  @override
+  String get download_tracker_preview_empty =>
+      'Obtén la suscripción para ver los trackers HTTP, HTTPS y UDP compatibles.';
+  @override
+  String download_tracker_preview_count({required Object count}) =>
+      '${count} trackers obtenidos';
+  @override
+  String download_tracker_fetch_failed({required Object message}) =>
+      'No se pudieron obtener los trackers: ${message}';
 }
 
 // Path: <root>
@@ -42252,6 +42328,27 @@ class _StringsFr extends _StringsEn {
   @override
   String get gal_hook_ingame_lookup_exe_hash_copied =>
       'SHA-256 de l\'exécutable copié';
+  @override
+  String get download_tracker_section => 'Abonnement aux trackers';
+  @override
+  String get download_tracker_auto_add =>
+      'Ajouter automatiquement les trackers de l’abonnement aux nouveaux téléchargements';
+  @override
+  String get download_tracker_auto_add_hint =>
+      'La liste est mise en cache pendant 6 heures. L’échec de l’abonnement ne bloque pas le téléchargement.';
+  @override
+  String get download_tracker_url => 'URL de l’abonnement';
+  @override
+  String get download_tracker_refresh => 'Récupérer les trackers';
+  @override
+  String get download_tracker_preview_empty =>
+      'Récupère l’abonnement pour prévisualiser les trackers HTTP, HTTPS et UDP pris en charge.';
+  @override
+  String download_tracker_preview_count({required Object count}) =>
+      '${count} trackers récupérés';
+  @override
+  String download_tracker_fetch_failed({required Object message}) =>
+      'Impossible de récupérer les trackers : ${message}';
 }
 
 // Path: <root>
@@ -51411,6 +51508,27 @@ class _StringsId extends _StringsEn {
   @override
   String get gal_hook_ingame_lookup_exe_hash_copied =>
       'SHA-256 file eksekusi disalin';
+  @override
+  String get download_tracker_section => 'Langganan tracker';
+  @override
+  String get download_tracker_auto_add =>
+      'Otomatis tambahkan tracker langganan ke unduhan baru';
+  @override
+  String get download_tracker_auto_add_hint =>
+      'Daftar disimpan di cache selama 6 jam. Kegagalan langganan tidak menghentikan unduhan.';
+  @override
+  String get download_tracker_url => 'URL langganan';
+  @override
+  String get download_tracker_refresh => 'Ambil tracker';
+  @override
+  String get download_tracker_preview_empty =>
+      'Ambil langganan untuk melihat tracker HTTP, HTTPS, dan UDP yang didukung.';
+  @override
+  String download_tracker_preview_count({required Object count}) =>
+      '${count} tracker diambil';
+  @override
+  String download_tracker_fetch_failed({required Object message}) =>
+      'Tidak dapat mengambil tracker: ${message}';
 }
 
 // Path: <root>
@@ -60647,6 +60765,27 @@ class _StringsIt extends _StringsEn {
   @override
   String get gal_hook_ingame_lookup_exe_hash_copied =>
       'SHA-256 dell\'eseguibile copiato';
+  @override
+  String get download_tracker_section => 'Abbonamento ai tracker';
+  @override
+  String get download_tracker_auto_add =>
+      'Aggiungi automaticamente i tracker dell’abbonamento ai nuovi download';
+  @override
+  String get download_tracker_auto_add_hint =>
+      'L’elenco resta in cache per 6 ore. Se l’abbonamento fallisce, il download non viene bloccato.';
+  @override
+  String get download_tracker_url => 'URL dell’abbonamento';
+  @override
+  String get download_tracker_refresh => 'Scarica i tracker';
+  @override
+  String get download_tracker_preview_empty =>
+      'Scarica l’abbonamento per vedere in anteprima i tracker HTTP, HTTPS e UDP supportati.';
+  @override
+  String download_tracker_preview_count({required Object count}) =>
+      '${count} tracker scaricati';
+  @override
+  String download_tracker_fetch_failed({required Object message}) =>
+      'Impossibile scaricare i tracker: ${message}';
 }
 
 // Path: <root>
@@ -69320,6 +69459,26 @@ class _StringsJa extends _StringsEn {
   @override
   String get gal_hook_ingame_lookup_exe_hash_copied =>
       '実行ファイルの SHA-256 をコピーしました';
+  @override
+  String get download_tracker_section => 'トラッカー購読';
+  @override
+  String get download_tracker_auto_add => '新しいダウンロードに購読トラッカーを自動で追加する';
+  @override
+  String get download_tracker_auto_add_hint =>
+      'リストは 6 時間キャッシュされます。購読の取得に失敗してもダウンロードは止まりません。';
+  @override
+  String get download_tracker_url => '購読 URL';
+  @override
+  String get download_tracker_refresh => 'トラッカーを取得';
+  @override
+  String get download_tracker_preview_empty =>
+      '購読を取得すると、対応している HTTP・HTTPS・UDP のトラッカーをプレビューできます。';
+  @override
+  String download_tracker_preview_count({required Object count}) =>
+      '${count} 件のトラッカーを取得しました';
+  @override
+  String download_tracker_fetch_failed({required Object message}) =>
+      'トラッカーを取得できませんでした: ${message}';
 }
 
 // Path: <root>
@@ -78006,6 +78165,26 @@ class _StringsKo extends _StringsEn {
       '게임 실행 파일을 읽을 수 없습니다 (권한 부족일 수 있음)';
   @override
   String get gal_hook_ingame_lookup_exe_hash_copied => '실행 파일의 SHA-256을 복사했습니다';
+  @override
+  String get download_tracker_section => '트래커 구독';
+  @override
+  String get download_tracker_auto_add => '새 다운로드에 구독 트래커 자동 추가';
+  @override
+  String get download_tracker_auto_add_hint =>
+      '목록은 6시간 동안 캐시됩니다. 구독을 가져오지 못해도 다운로드는 중단되지 않습니다.';
+  @override
+  String get download_tracker_url => '구독 URL';
+  @override
+  String get download_tracker_refresh => '트래커 가져오기';
+  @override
+  String get download_tracker_preview_empty =>
+      '구독을 가져오면 지원되는 HTTP, HTTPS, UDP 트래커를 미리 볼 수 있습니다.';
+  @override
+  String download_tracker_preview_count({required Object count}) =>
+      '트래커 ${count}개를 가져왔습니다';
+  @override
+  String download_tracker_fetch_failed({required Object message}) =>
+      '트래커를 가져오지 못했습니다: ${message}';
 }
 
 // Path: <root>
@@ -87199,6 +87378,27 @@ class _StringsNl extends _StringsEn {
   @override
   String get gal_hook_ingame_lookup_exe_hash_copied =>
       'SHA-256 van het spelbestand gekopieerd';
+  @override
+  String get download_tracker_section => 'Tracker-abonnement';
+  @override
+  String get download_tracker_auto_add =>
+      'Geabonneerde trackers automatisch aan nieuwe downloads toevoegen';
+  @override
+  String get download_tracker_auto_add_hint =>
+      'De lijst wordt 6 uur gecachet. Een mislukt abonnement blokkeert de download niet.';
+  @override
+  String get download_tracker_url => 'Abonnements-URL';
+  @override
+  String get download_tracker_refresh => 'Trackers ophalen';
+  @override
+  String get download_tracker_preview_empty =>
+      'Haal het abonnement op om de ondersteunde HTTP-, HTTPS- en UDP-trackers te bekijken.';
+  @override
+  String download_tracker_preview_count({required Object count}) =>
+      '${count} trackers opgehaald';
+  @override
+  String download_tracker_fetch_failed({required Object message}) =>
+      'Kan de trackers niet ophalen: ${message}';
 }
 
 // Path: <root>
@@ -96448,6 +96648,27 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get gal_hook_ingame_lookup_exe_hash_copied =>
       'SHA-256 do executável copiado';
+  @override
+  String get download_tracker_section => 'Assinatura de trackers';
+  @override
+  String get download_tracker_auto_add =>
+      'Adicionar automaticamente os trackers da assinatura aos novos downloads';
+  @override
+  String get download_tracker_auto_add_hint =>
+      'A lista fica em cache por 6 horas. Uma falha na assinatura não bloqueia o download.';
+  @override
+  String get download_tracker_url => 'URL da assinatura';
+  @override
+  String get download_tracker_refresh => 'Buscar trackers';
+  @override
+  String get download_tracker_preview_empty =>
+      'Busque a assinatura para pré-visualizar os trackers HTTP, HTTPS e UDP compatíveis.';
+  @override
+  String download_tracker_preview_count({required Object count}) =>
+      '${count} trackers obtidos';
+  @override
+  String download_tracker_fetch_failed({required Object message}) =>
+      'Não foi possível buscar os trackers: ${message}';
 }
 
 // Path: <root>
@@ -105671,6 +105892,27 @@ class _StringsRu extends _StringsEn {
   @override
   String get gal_hook_ingame_lookup_exe_hash_copied =>
       'SHA-256 исполняемого файла скопирован';
+  @override
+  String get download_tracker_section => 'Подписка на трекеры';
+  @override
+  String get download_tracker_auto_add =>
+      'Автоматически добавлять трекеры из подписки в новые загрузки';
+  @override
+  String get download_tracker_auto_add_hint =>
+      'Список кэшируется на 6 часов. Сбой подписки не блокирует загрузку.';
+  @override
+  String get download_tracker_url => 'URL подписки';
+  @override
+  String get download_tracker_refresh => 'Получить трекеры';
+  @override
+  String get download_tracker_preview_empty =>
+      'Получите подписку, чтобы посмотреть поддерживаемые трекеры HTTP, HTTPS и UDP.';
+  @override
+  String download_tracker_preview_count({required Object count}) =>
+      'Получено трекеров: ${count}';
+  @override
+  String download_tracker_fetch_failed({required Object message}) =>
+      'Не удалось получить трекеры: ${message}';
 }
 
 // Path: <root>
@@ -114710,6 +114952,27 @@ class _StringsTh extends _StringsEn {
   @override
   String get gal_hook_ingame_lookup_exe_hash_copied =>
       'คัดลอก SHA-256 ของไฟล์เกมแล้ว';
+  @override
+  String get download_tracker_section => 'การสมัครรับแทร็กเกอร์';
+  @override
+  String get download_tracker_auto_add =>
+      'เพิ่มแทร็กเกอร์จากการสมัครรับลงในดาวน์โหลดใหม่โดยอัตโนมัติ';
+  @override
+  String get download_tracker_auto_add_hint =>
+      'รายการจะถูกแคชไว้ 6 ชั่วโมง หากดึงรายการไม่สำเร็จก็จะไม่ขัดขวางการดาวน์โหลด';
+  @override
+  String get download_tracker_url => 'URL การสมัครรับ';
+  @override
+  String get download_tracker_refresh => 'ดึงแทร็กเกอร์';
+  @override
+  String get download_tracker_preview_empty =>
+      'ดึงรายการที่สมัครรับเพื่อดูตัวอย่างแทร็กเกอร์ HTTP, HTTPS และ UDP ที่รองรับ';
+  @override
+  String download_tracker_preview_count({required Object count}) =>
+      'ดึงแทร็กเกอร์มาแล้ว ${count} รายการ';
+  @override
+  String download_tracker_fetch_failed({required Object message}) =>
+      'ดึงแทร็กเกอร์ไม่สำเร็จ: ${message}';
 }
 
 // Path: <root>
@@ -123855,6 +124118,27 @@ class _StringsTr extends _StringsEn {
   @override
   String get gal_hook_ingame_lookup_exe_hash_copied =>
       'Çalıştırılabilir dosyanın SHA-256 değeri kopyalandı';
+  @override
+  String get download_tracker_section => 'Tracker aboneliği';
+  @override
+  String get download_tracker_auto_add =>
+      'Abonelikteki trackerları yeni indirmelere otomatik ekle';
+  @override
+  String get download_tracker_auto_add_hint =>
+      'Liste 6 saat önbellekte tutulur. Abonelik alınamazsa indirme engellenmez.';
+  @override
+  String get download_tracker_url => 'Abonelik adresi';
+  @override
+  String get download_tracker_refresh => 'Trackerları getir';
+  @override
+  String get download_tracker_preview_empty =>
+      'Desteklenen HTTP, HTTPS ve UDP trackerlarını önizlemek için aboneliği getir.';
+  @override
+  String download_tracker_preview_count({required Object count}) =>
+      '${count} tracker getirildi';
+  @override
+  String download_tracker_fetch_failed({required Object message}) =>
+      'Trackerlar getirilemedi: ${message}';
 }
 
 // Path: <root>
@@ -132981,6 +133265,27 @@ class _StringsVi extends _StringsEn {
   @override
   String get gal_hook_ingame_lookup_exe_hash_copied =>
       'Đã sao chép SHA-256 của tệp thực thi';
+  @override
+  String get download_tracker_section => 'Đăng ký tracker';
+  @override
+  String get download_tracker_auto_add =>
+      'Tự động thêm tracker từ đăng ký vào các tải xuống mới';
+  @override
+  String get download_tracker_auto_add_hint =>
+      'Danh sách được lưu đệm trong 6 giờ. Việc lấy đăng ký thất bại sẽ không chặn tải xuống.';
+  @override
+  String get download_tracker_url => 'URL đăng ký';
+  @override
+  String get download_tracker_refresh => 'Lấy tracker';
+  @override
+  String get download_tracker_preview_empty =>
+      'Lấy đăng ký để xem trước các tracker HTTP, HTTPS và UDP được hỗ trợ.';
+  @override
+  String download_tracker_preview_count({required Object count}) =>
+      'Đã lấy ${count} tracker';
+  @override
+  String download_tracker_fetch_failed({required Object message}) =>
+      'Không lấy được tracker: ${message}';
 }
 
 // Path: <root>
@@ -141377,6 +141682,25 @@ class _StringsZhCn extends _StringsEn {
       '无法读取游戏 exe（可能权限不足）';
   @override
   String get gal_hook_ingame_lookup_exe_hash_copied => '已复制 exe 的 SHA-256';
+  @override
+  String get download_tracker_section => 'Tracker 订阅';
+  @override
+  String get download_tracker_auto_add => '自动把订阅 Tracker 加到新下载';
+  @override
+  String get download_tracker_auto_add_hint => '列表缓存 6 小时；订阅获取失败不会阻止下载任务创建。';
+  @override
+  String get download_tracker_url => '订阅地址';
+  @override
+  String get download_tracker_refresh => '获取 Tracker';
+  @override
+  String get download_tracker_preview_empty =>
+      '获取订阅后可预览受支持的 HTTP、HTTPS 和 UDP Tracker。';
+  @override
+  String download_tracker_preview_count({required Object count}) =>
+      '已获取 ${count} 个 Tracker';
+  @override
+  String download_tracker_fetch_failed({required Object message}) =>
+      '获取 Tracker 失败：${message}';
 }
 
 // Path: <root>
@@ -149778,6 +150102,25 @@ class _StringsZhHk extends _StringsEn {
       '無法讀取遊戲 exe（可能權限不足）';
   @override
   String get gal_hook_ingame_lookup_exe_hash_copied => '已複製 exe 的 SHA-256';
+  @override
+  String get download_tracker_section => 'Tracker 訂閱';
+  @override
+  String get download_tracker_auto_add => '自動把訂閱的 Tracker 加到新任務';
+  @override
+  String get download_tracker_auto_add_hint => '清單會快取 6 小時；訂閱抓取失敗不會阻止建立下載任務。';
+  @override
+  String get download_tracker_url => '訂閱網址';
+  @override
+  String get download_tracker_refresh => '抓取 Tracker';
+  @override
+  String get download_tracker_preview_empty =>
+      '抓取訂閱後可預覽支援的 HTTP、HTTPS 與 UDP Tracker。';
+  @override
+  String download_tracker_preview_count({required Object count}) =>
+      '已抓取 ${count} 個 Tracker';
+  @override
+  String download_tracker_fetch_failed({required Object message}) =>
+      '抓取 Tracker 失敗：${message}';
 }
 
 /// Flat map(s) containing all translations.
@@ -157782,6 +158125,23 @@ extension on _StringsEn {
         return 'Could not read the game executable';
       case 'gal_hook_ingame_lookup_exe_hash_copied':
         return 'Executable SHA-256 copied';
+      case 'download_tracker_section':
+        return 'Tracker subscription';
+      case 'download_tracker_auto_add':
+        return 'Automatically add subscription trackers to new downloads';
+      case 'download_tracker_auto_add_hint':
+        return 'The list is cached for 6 hours. A subscription failure will not block the download.';
+      case 'download_tracker_url':
+        return 'Subscription URL';
+      case 'download_tracker_refresh':
+        return 'Fetch trackers';
+      case 'download_tracker_preview_empty':
+        return 'Fetch the subscription to preview supported HTTP, HTTPS, and UDP trackers.';
+      case 'download_tracker_preview_count':
+        return ({required Object count}) => 'Fetched ${count} trackers';
+      case 'download_tracker_fetch_failed':
+        return ({required Object message}) =>
+            'Could not fetch trackers: ${message}';
       default:
         return null;
     }
@@ -165782,6 +166142,23 @@ extension on _StringsAr {
         return 'تعذّرت قراءة ملف اللعبة التنفيذي';
       case 'gal_hook_ingame_lookup_exe_hash_copied':
         return 'تم نسخ SHA-256 لملف اللعبة التنفيذي';
+      case 'download_tracker_section':
+        return 'اشتراك المتعقّبات';
+      case 'download_tracker_auto_add':
+        return 'إضافة متعقّبات الاشتراك تلقائيًا إلى التنزيلات الجديدة';
+      case 'download_tracker_auto_add_hint':
+        return 'تُخزَّن القائمة مؤقتًا لست ساعات. فشل الاشتراك لا يمنع التنزيل.';
+      case 'download_tracker_url':
+        return 'رابط الاشتراك';
+      case 'download_tracker_refresh':
+        return 'جلب المتعقّبات';
+      case 'download_tracker_preview_empty':
+        return 'اجلب الاشتراك لمعاينة متعقّبات HTTP وHTTPS وUDP المدعومة.';
+      case 'download_tracker_preview_count':
+        return ({required Object count}) => 'تم جلب ${count} متعقّبًا';
+      case 'download_tracker_fetch_failed':
+        return ({required Object message}) =>
+            'تعذّر جلب المتعقّبات: ${message}';
       default:
         return null;
     }
@@ -173825,6 +174202,23 @@ extension on _StringsDe {
         return 'Die Spieldatei konnte nicht gelesen werden';
       case 'gal_hook_ingame_lookup_exe_hash_copied':
         return 'SHA-256 der Spieldatei kopiert';
+      case 'download_tracker_section':
+        return 'Tracker-Abonnement';
+      case 'download_tracker_auto_add':
+        return 'Abonnierte Tracker automatisch zu neuen Downloads hinzufügen';
+      case 'download_tracker_auto_add_hint':
+        return 'Die Liste wird 6 Stunden zwischengespeichert. Ein fehlgeschlagenes Abonnement blockiert den Download nicht.';
+      case 'download_tracker_url':
+        return 'Abonnement-URL';
+      case 'download_tracker_refresh':
+        return 'Tracker abrufen';
+      case 'download_tracker_preview_empty':
+        return 'Rufe das Abonnement ab, um die unterstützten HTTP-, HTTPS- und UDP-Tracker anzuzeigen.';
+      case 'download_tracker_preview_count':
+        return ({required Object count}) => '${count} Tracker abgerufen';
+      case 'download_tracker_fetch_failed':
+        return ({required Object message}) =>
+            'Tracker konnten nicht abgerufen werden: ${message}';
       default:
         return null;
     }
@@ -181860,6 +182254,23 @@ extension on _StringsEs {
         return 'No se pudo leer el ejecutable del juego';
       case 'gal_hook_ingame_lookup_exe_hash_copied':
         return 'SHA-256 del ejecutable copiado';
+      case 'download_tracker_section':
+        return 'Suscripción de trackers';
+      case 'download_tracker_auto_add':
+        return 'Añadir automáticamente los trackers suscritos a las descargas nuevas';
+      case 'download_tracker_auto_add_hint':
+        return 'La lista se almacena en caché 6 horas. Si la suscripción falla, la descarga no se bloquea.';
+      case 'download_tracker_url':
+        return 'URL de suscripción';
+      case 'download_tracker_refresh':
+        return 'Obtener trackers';
+      case 'download_tracker_preview_empty':
+        return 'Obtén la suscripción para ver los trackers HTTP, HTTPS y UDP compatibles.';
+      case 'download_tracker_preview_count':
+        return ({required Object count}) => '${count} trackers obtenidos';
+      case 'download_tracker_fetch_failed':
+        return ({required Object message}) =>
+            'No se pudieron obtener los trackers: ${message}';
       default:
         return null;
     }
@@ -189903,6 +190314,23 @@ extension on _StringsFr {
         return 'Impossible de lire l\'exécutable du jeu';
       case 'gal_hook_ingame_lookup_exe_hash_copied':
         return 'SHA-256 de l\'exécutable copié';
+      case 'download_tracker_section':
+        return 'Abonnement aux trackers';
+      case 'download_tracker_auto_add':
+        return 'Ajouter automatiquement les trackers de l’abonnement aux nouveaux téléchargements';
+      case 'download_tracker_auto_add_hint':
+        return 'La liste est mise en cache pendant 6 heures. L’échec de l’abonnement ne bloque pas le téléchargement.';
+      case 'download_tracker_url':
+        return 'URL de l’abonnement';
+      case 'download_tracker_refresh':
+        return 'Récupérer les trackers';
+      case 'download_tracker_preview_empty':
+        return 'Récupère l’abonnement pour prévisualiser les trackers HTTP, HTTPS et UDP pris en charge.';
+      case 'download_tracker_preview_count':
+        return ({required Object count}) => '${count} trackers récupérés';
+      case 'download_tracker_fetch_failed':
+        return ({required Object message}) =>
+            'Impossible de récupérer les trackers : ${message}';
       default:
         return null;
     }
@@ -197918,6 +198346,23 @@ extension on _StringsId {
         return 'Tidak dapat membaca file eksekusi gim';
       case 'gal_hook_ingame_lookup_exe_hash_copied':
         return 'SHA-256 file eksekusi disalin';
+      case 'download_tracker_section':
+        return 'Langganan tracker';
+      case 'download_tracker_auto_add':
+        return 'Otomatis tambahkan tracker langganan ke unduhan baru';
+      case 'download_tracker_auto_add_hint':
+        return 'Daftar disimpan di cache selama 6 jam. Kegagalan langganan tidak menghentikan unduhan.';
+      case 'download_tracker_url':
+        return 'URL langganan';
+      case 'download_tracker_refresh':
+        return 'Ambil tracker';
+      case 'download_tracker_preview_empty':
+        return 'Ambil langganan untuk melihat tracker HTTP, HTTPS, dan UDP yang didukung.';
+      case 'download_tracker_preview_count':
+        return ({required Object count}) => '${count} tracker diambil';
+      case 'download_tracker_fetch_failed':
+        return ({required Object message}) =>
+            'Tidak dapat mengambil tracker: ${message}';
       default:
         return null;
     }
@@ -205954,6 +206399,23 @@ extension on _StringsIt {
         return 'Impossibile leggere l\'eseguibile del gioco';
       case 'gal_hook_ingame_lookup_exe_hash_copied':
         return 'SHA-256 dell\'eseguibile copiato';
+      case 'download_tracker_section':
+        return 'Abbonamento ai tracker';
+      case 'download_tracker_auto_add':
+        return 'Aggiungi automaticamente i tracker dell’abbonamento ai nuovi download';
+      case 'download_tracker_auto_add_hint':
+        return 'L’elenco resta in cache per 6 ore. Se l’abbonamento fallisce, il download non viene bloccato.';
+      case 'download_tracker_url':
+        return 'URL dell’abbonamento';
+      case 'download_tracker_refresh':
+        return 'Scarica i tracker';
+      case 'download_tracker_preview_empty':
+        return 'Scarica l’abbonamento per vedere in anteprima i tracker HTTP, HTTPS e UDP supportati.';
+      case 'download_tracker_preview_count':
+        return ({required Object count}) => '${count} tracker scaricati';
+      case 'download_tracker_fetch_failed':
+        return ({required Object message}) =>
+            'Impossibile scaricare i tracker: ${message}';
       default:
         return null;
     }
@@ -213923,6 +214385,22 @@ extension on _StringsJa {
         return 'ゲーム実行ファイルを読み取れません（権限不足の可能性）';
       case 'gal_hook_ingame_lookup_exe_hash_copied':
         return '実行ファイルの SHA-256 をコピーしました';
+      case 'download_tracker_section':
+        return 'トラッカー購読';
+      case 'download_tracker_auto_add':
+        return '新しいダウンロードに購読トラッカーを自動で追加する';
+      case 'download_tracker_auto_add_hint':
+        return 'リストは 6 時間キャッシュされます。購読の取得に失敗してもダウンロードは止まりません。';
+      case 'download_tracker_url':
+        return '購読 URL';
+      case 'download_tracker_refresh':
+        return 'トラッカーを取得';
+      case 'download_tracker_preview_empty':
+        return '購読を取得すると、対応している HTTP・HTTPS・UDP のトラッカーをプレビューできます。';
+      case 'download_tracker_preview_count':
+        return ({required Object count}) => '${count} 件のトラッカーを取得しました';
+      case 'download_tracker_fetch_failed':
+        return ({required Object message}) => 'トラッカーを取得できませんでした: ${message}';
       default:
         return null;
     }
@@ -221894,6 +222372,22 @@ extension on _StringsKo {
         return '게임 실행 파일을 읽을 수 없습니다 (권한 부족일 수 있음)';
       case 'gal_hook_ingame_lookup_exe_hash_copied':
         return '실행 파일의 SHA-256을 복사했습니다';
+      case 'download_tracker_section':
+        return '트래커 구독';
+      case 'download_tracker_auto_add':
+        return '새 다운로드에 구독 트래커 자동 추가';
+      case 'download_tracker_auto_add_hint':
+        return '목록은 6시간 동안 캐시됩니다. 구독을 가져오지 못해도 다운로드는 중단되지 않습니다.';
+      case 'download_tracker_url':
+        return '구독 URL';
+      case 'download_tracker_refresh':
+        return '트래커 가져오기';
+      case 'download_tracker_preview_empty':
+        return '구독을 가져오면 지원되는 HTTP, HTTPS, UDP 트래커를 미리 볼 수 있습니다.';
+      case 'download_tracker_preview_count':
+        return ({required Object count}) => '트래커 ${count}개를 가져왔습니다';
+      case 'download_tracker_fetch_failed':
+        return ({required Object message}) => '트래커를 가져오지 못했습니다: ${message}';
       default:
         return null;
     }
@@ -229924,6 +230418,23 @@ extension on _StringsNl {
         return 'Kan het spelbestand niet lezen';
       case 'gal_hook_ingame_lookup_exe_hash_copied':
         return 'SHA-256 van het spelbestand gekopieerd';
+      case 'download_tracker_section':
+        return 'Tracker-abonnement';
+      case 'download_tracker_auto_add':
+        return 'Geabonneerde trackers automatisch aan nieuwe downloads toevoegen';
+      case 'download_tracker_auto_add_hint':
+        return 'De lijst wordt 6 uur gecachet. Een mislukt abonnement blokkeert de download niet.';
+      case 'download_tracker_url':
+        return 'Abonnements-URL';
+      case 'download_tracker_refresh':
+        return 'Trackers ophalen';
+      case 'download_tracker_preview_empty':
+        return 'Haal het abonnement op om de ondersteunde HTTP-, HTTPS- en UDP-trackers te bekijken.';
+      case 'download_tracker_preview_count':
+        return ({required Object count}) => '${count} trackers opgehaald';
+      case 'download_tracker_fetch_failed':
+        return ({required Object message}) =>
+            'Kan de trackers niet ophalen: ${message}';
       default:
         return null;
     }
@@ -237949,6 +238460,23 @@ extension on _StringsPtBr {
         return 'Não foi possível ler o executável do jogo';
       case 'gal_hook_ingame_lookup_exe_hash_copied':
         return 'SHA-256 do executável copiado';
+      case 'download_tracker_section':
+        return 'Assinatura de trackers';
+      case 'download_tracker_auto_add':
+        return 'Adicionar automaticamente os trackers da assinatura aos novos downloads';
+      case 'download_tracker_auto_add_hint':
+        return 'A lista fica em cache por 6 horas. Uma falha na assinatura não bloqueia o download.';
+      case 'download_tracker_url':
+        return 'URL da assinatura';
+      case 'download_tracker_refresh':
+        return 'Buscar trackers';
+      case 'download_tracker_preview_empty':
+        return 'Busque a assinatura para pré-visualizar os trackers HTTP, HTTPS e UDP compatíveis.';
+      case 'download_tracker_preview_count':
+        return ({required Object count}) => '${count} trackers obtidos';
+      case 'download_tracker_fetch_failed':
+        return ({required Object message}) =>
+            'Não foi possível buscar os trackers: ${message}';
       default:
         return null;
     }
@@ -245980,6 +246508,23 @@ extension on _StringsRu {
         return 'Не удалось прочитать исполняемый файл игры';
       case 'gal_hook_ingame_lookup_exe_hash_copied':
         return 'SHA-256 исполняемого файла скопирован';
+      case 'download_tracker_section':
+        return 'Подписка на трекеры';
+      case 'download_tracker_auto_add':
+        return 'Автоматически добавлять трекеры из подписки в новые загрузки';
+      case 'download_tracker_auto_add_hint':
+        return 'Список кэшируется на 6 часов. Сбой подписки не блокирует загрузку.';
+      case 'download_tracker_url':
+        return 'URL подписки';
+      case 'download_tracker_refresh':
+        return 'Получить трекеры';
+      case 'download_tracker_preview_empty':
+        return 'Получите подписку, чтобы посмотреть поддерживаемые трекеры HTTP, HTTPS и UDP.';
+      case 'download_tracker_preview_count':
+        return ({required Object count}) => 'Получено трекеров: ${count}';
+      case 'download_tracker_fetch_failed':
+        return ({required Object message}) =>
+            'Не удалось получить трекеры: ${message}';
       default:
         return null;
     }
@@ -253983,6 +254528,24 @@ extension on _StringsTh {
         return 'อ่านไฟล์เกมไม่ได้';
       case 'gal_hook_ingame_lookup_exe_hash_copied':
         return 'คัดลอก SHA-256 ของไฟล์เกมแล้ว';
+      case 'download_tracker_section':
+        return 'การสมัครรับแทร็กเกอร์';
+      case 'download_tracker_auto_add':
+        return 'เพิ่มแทร็กเกอร์จากการสมัครรับลงในดาวน์โหลดใหม่โดยอัตโนมัติ';
+      case 'download_tracker_auto_add_hint':
+        return 'รายการจะถูกแคชไว้ 6 ชั่วโมง หากดึงรายการไม่สำเร็จก็จะไม่ขัดขวางการดาวน์โหลด';
+      case 'download_tracker_url':
+        return 'URL การสมัครรับ';
+      case 'download_tracker_refresh':
+        return 'ดึงแทร็กเกอร์';
+      case 'download_tracker_preview_empty':
+        return 'ดึงรายการที่สมัครรับเพื่อดูตัวอย่างแทร็กเกอร์ HTTP, HTTPS และ UDP ที่รองรับ';
+      case 'download_tracker_preview_count':
+        return ({required Object count}) =>
+            'ดึงแทร็กเกอร์มาแล้ว ${count} รายการ';
+      case 'download_tracker_fetch_failed':
+        return ({required Object message}) =>
+            'ดึงแทร็กเกอร์ไม่สำเร็จ: ${message}';
       default:
         return null;
     }
@@ -262003,6 +262566,23 @@ extension on _StringsTr {
         return 'Oyun çalıştırılabilir dosyası okunamadı';
       case 'gal_hook_ingame_lookup_exe_hash_copied':
         return 'Çalıştırılabilir dosyanın SHA-256 değeri kopyalandı';
+      case 'download_tracker_section':
+        return 'Tracker aboneliği';
+      case 'download_tracker_auto_add':
+        return 'Abonelikteki trackerları yeni indirmelere otomatik ekle';
+      case 'download_tracker_auto_add_hint':
+        return 'Liste 6 saat önbellekte tutulur. Abonelik alınamazsa indirme engellenmez.';
+      case 'download_tracker_url':
+        return 'Abonelik adresi';
+      case 'download_tracker_refresh':
+        return 'Trackerları getir';
+      case 'download_tracker_preview_empty':
+        return 'Desteklenen HTTP, HTTPS ve UDP trackerlarını önizlemek için aboneliği getir.';
+      case 'download_tracker_preview_count':
+        return ({required Object count}) => '${count} tracker getirildi';
+      case 'download_tracker_fetch_failed':
+        return ({required Object message}) =>
+            'Trackerlar getirilemedi: ${message}';
       default:
         return null;
     }
@@ -270016,6 +270596,23 @@ extension on _StringsVi {
         return 'Không đọc được tệp thực thi trò chơi';
       case 'gal_hook_ingame_lookup_exe_hash_copied':
         return 'Đã sao chép SHA-256 của tệp thực thi';
+      case 'download_tracker_section':
+        return 'Đăng ký tracker';
+      case 'download_tracker_auto_add':
+        return 'Tự động thêm tracker từ đăng ký vào các tải xuống mới';
+      case 'download_tracker_auto_add_hint':
+        return 'Danh sách được lưu đệm trong 6 giờ. Việc lấy đăng ký thất bại sẽ không chặn tải xuống.';
+      case 'download_tracker_url':
+        return 'URL đăng ký';
+      case 'download_tracker_refresh':
+        return 'Lấy tracker';
+      case 'download_tracker_preview_empty':
+        return 'Lấy đăng ký để xem trước các tracker HTTP, HTTPS và UDP được hỗ trợ.';
+      case 'download_tracker_preview_count':
+        return ({required Object count}) => 'Đã lấy ${count} tracker';
+      case 'download_tracker_fetch_failed':
+        return ({required Object message}) =>
+            'Không lấy được tracker: ${message}';
       default:
         return null;
     }
@@ -277963,6 +278560,22 @@ extension on _StringsZhCn {
         return '无法读取游戏 exe（可能权限不足）';
       case 'gal_hook_ingame_lookup_exe_hash_copied':
         return '已复制 exe 的 SHA-256';
+      case 'download_tracker_section':
+        return 'Tracker 订阅';
+      case 'download_tracker_auto_add':
+        return '自动把订阅 Tracker 加到新下载';
+      case 'download_tracker_auto_add_hint':
+        return '列表缓存 6 小时；订阅获取失败不会阻止下载任务创建。';
+      case 'download_tracker_url':
+        return '订阅地址';
+      case 'download_tracker_refresh':
+        return '获取 Tracker';
+      case 'download_tracker_preview_empty':
+        return '获取订阅后可预览受支持的 HTTP、HTTPS 和 UDP Tracker。';
+      case 'download_tracker_preview_count':
+        return ({required Object count}) => '已获取 ${count} 个 Tracker';
+      case 'download_tracker_fetch_failed':
+        return ({required Object message}) => '获取 Tracker 失败：${message}';
       default:
         return null;
     }
@@ -285911,6 +286524,22 @@ extension on _StringsZhHk {
         return '無法讀取遊戲 exe（可能權限不足）';
       case 'gal_hook_ingame_lookup_exe_hash_copied':
         return '已複製 exe 的 SHA-256';
+      case 'download_tracker_section':
+        return 'Tracker 訂閱';
+      case 'download_tracker_auto_add':
+        return '自動把訂閱的 Tracker 加到新任務';
+      case 'download_tracker_auto_add_hint':
+        return '清單會快取 6 小時；訂閱抓取失敗不會阻止建立下載任務。';
+      case 'download_tracker_url':
+        return '訂閱網址';
+      case 'download_tracker_refresh':
+        return '抓取 Tracker';
+      case 'download_tracker_preview_empty':
+        return '抓取訂閱後可預覽支援的 HTTP、HTTPS 與 UDP Tracker。';
+      case 'download_tracker_preview_count':
+        return ({required Object count}) => '已抓取 ${count} 個 Tracker';
+      case 'download_tracker_fetch_failed':
+        return ({required Object message}) => '抓取 Tracker 失敗：${message}';
       default:
         return null;
     }
