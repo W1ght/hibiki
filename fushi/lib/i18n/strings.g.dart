@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 66521 (3913 per locale)
+/// Strings: 66827 (3931 per locale)
 ///
-/// Built on 2026-08-30 at 06:51 UTC
+/// Built on 2026-08-30 at 09:19 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5027,10 +5027,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Advanced: use AnkiConnect on this device';
   String get onboarding_anki_mobile_ankiconnect_hint =>
       'This device can also create cards into Anki running on a computer in the same network: enable AnkiConnect in card creation settings and enter the computer address.';
-  String get onboarding_anki_fsrs_title => 'Switch Anki to FSRS';
-  String get onboarding_anki_fsrs_body =>
-      'Anki ships with FSRS, a far better scheduler than the 30-year-old SM-2 default: better retention with fewer reviews. In Anki, open deck options and turn on FSRS (one switch covers the whole collection). This must be done inside Anki itself.';
-  String get onboarding_step_pack_browser_action => 'Download in browser';
   String get onboarding_anki_setup_android_hint =>
       'Install AnkiDroid and open it once to finish its first-run setup. Back in Fushi, tap Allow on the permission dialog that pops up with your first card - no AnkiDroid settings to change.';
   String get onboarding_anki_install_addon_action =>
@@ -5338,6 +5334,45 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Hibiki now uses port ${port}, but the AnkiConnect add-on config was not found. Set webBindPort to ${port} in Anki (Tools -> Add-ons -> AnkiConnect -> Config), then restart Anki.';
   String get anki_connect_port_auto_fix_none =>
       'No free port found on this machine.';
+  String get onboarding_action_badge_required => 'Required';
+  String get onboarding_action_badge_recommended => 'Recommended';
+  String get onboarding_action_badge_optional => 'Optional';
+  String get onboarding_pack_action_download_desc =>
+      'Downloads the whole pack in the background, then imports it. Cancel anytime; it resumes from where it stopped.';
+  String get onboarding_pack_action_import_existing_desc =>
+      'The pack is already downloaded; this imports it. Choose Merge in the confirmation dialog and your existing data is left alone.';
+  String get onboarding_pack_action_pick_desc =>
+      'Already got the pack zip from somewhere else? Import it from disk and skip the download entirely.';
+  String get onboarding_pack_action_website =>
+      'Open the download page on the website';
+  String get onboarding_pack_action_website_desc =>
+      'Opens the official site in your browser. Its pack section lists chunk links you can feed to a download manager; come back afterwards and use Choose a local pack file to import what you got.';
+  String get onboarding_pack_action_dictionary_desc =>
+      'Learning a language other than Japanese? Skip the pack and import dictionaries for your own language here instead.';
+  String get onboarding_pack_action_audio_desc =>
+      'Where pronunciation audio comes from. The pack already covers Japanese and English; add online sources here for other languages.';
+  String get onboarding_anki_action_test_desc =>
+      'Checks that Fushi can reach Anki and loads your decks and note types. Nothing is created yet.';
+  String get onboarding_anki_action_refresh_desc =>
+      'Reloads decks and note types from Anki. Use it after creating a new deck inside Anki.';
+  String get onboarding_anki_action_get_ankidroid_desc =>
+      'Opens the store page for AnkiDroid. Fushi writes its cards into it, so it has to be installed first.';
+  String get onboarding_anki_action_get_anki_desc =>
+      'Opens the Anki download page. Install Anki and keep it running while you make cards.';
+  String get onboarding_anki_action_install_addon_desc =>
+      'Unpacks the bundled AnkiConnect add-on into Anki for you, which is what lets Fushi talk to it. Restart Anki afterwards.';
+  String get onboarding_step_anki_action_desc =>
+      'Card template, field mapping, screenshots and audio: the details of what a created card looks like. The deck and note type above are enough to start, so open this only if you want to change how cards are built.';
+  String get onboarding_step_backup_action_desc =>
+      'Choose a backup backend and sign in, so your library survives a lost or replaced device.';
+  String get onboarding_step_interconnect_action_desc =>
+      'Pair this device with your other devices to share one library and keep progress in sync.';
+  String get onboarding_step_extension_action_desc =>
+      'Shows how to install the browser extension and connect it to Fushi, so you can look words up on web pages too.';
+  String get onboarding_step_fonts_action_desc =>
+      'Add your own font files and pick which one each language uses.';
+  String get onboarding_pack_sources_hint =>
+      'Downloaded in parallel chunks from GitHub, the official site and a backup mirror at the same time, each chunk checksummed. Fushi measures the sources as it goes and gives more chunks to whichever is fastest right now, so there is nothing to choose here.';
 }
 
 // Path: <root>
@@ -13902,13 +13937,6 @@ class _StringsAr extends _StringsEn {
   String get onboarding_anki_mobile_ankiconnect_hint =>
       'يمكن لهذا الجهاز أيضاً إنشاء بطاقات في Anki على جهاز كمبيوتر في نفس الشبكة: فعّل AnkiConnect في إعدادات إنشاء البطاقات وأدخل عنوان الكمبيوتر.';
   @override
-  String get onboarding_anki_fsrs_title => 'تبديل Anki إلى FSRS';
-  @override
-  String get onboarding_anki_fsrs_body =>
-      'يأتي Anki مع FSRS، وهو مُجدوِل أفضل بكثير من SM-2 الافتراضي القديم: حفظ أفضل بمراجعات أقل. في Anki، افتح خيارات المجموعة وفعّل FSRS (مفتاح واحد يغطي المجموعة بالكامل). يجب فعل ذلك من داخل Anki نفسه.';
-  @override
-  String get onboarding_step_pack_browser_action => 'تحميل في المتصفح';
-  @override
   String get onboarding_anki_setup_android_hint =>
       'ثبّت AnkiDroid وافتحه مرة واحدة لإكمال الإعداد الأولي. عُد إلى Fushi واضغط على السماح في نافذة الإذن التي تظهر مع أول بطاقة - لا حاجة لتغيير إعدادات AnkiDroid.';
   @override
@@ -14418,6 +14446,65 @@ class _StringsAr extends _StringsEn {
   @override
   String get anki_connect_port_auto_fix_none =>
       'لم يُعثر على أي منفذ حر على هذا الجهاز.';
+  @override
+  String get onboarding_action_badge_required => 'مطلوب';
+  @override
+  String get onboarding_action_badge_recommended => 'موصى به';
+  @override
+  String get onboarding_action_badge_optional => 'اختياري';
+  @override
+  String get onboarding_pack_action_download_desc =>
+      'ينزّل الحزمة كاملة في الخلفية ثم يستوردها. يمكنك الإلغاء في أي وقت، وسيُستأنف التنزيل من حيث توقّف.';
+  @override
+  String get onboarding_pack_action_import_existing_desc =>
+      'الحزمة منزَّلة بالفعل، وهذا يستوردها. اختر «دمج» في نافذة التأكيد لتبقى بياناتك الحالية كما هي.';
+  @override
+  String get onboarding_pack_action_pick_desc =>
+      'حصلت على ملف zip للحزمة من مكان آخر؟ استوردها من القرص وتخطَّ التنزيل بالكامل.';
+  @override
+  String get onboarding_pack_action_website => 'فتح صفحة التنزيل في الموقع';
+  @override
+  String get onboarding_pack_action_website_desc =>
+      'يفتح الموقع الرسمي في متصفحك. يوفّر قسم الحزمة روابط أجزاء يمكن تمريرها إلى مدير تنزيل، ثم عد إلى هنا واستخدم «اختيار ملف حزمة محلي» لاستيراد ما حصلت عليه.';
+  @override
+  String get onboarding_pack_action_dictionary_desc =>
+      'تتعلّم لغة غير اليابانية؟ تخطَّ الحزمة واستورد هنا قواميس لغتك.';
+  @override
+  String get onboarding_pack_action_audio_desc =>
+      'مصدر مقاطع النطق الصوتية. الحزمة تغطّي اليابانية والإنجليزية بالفعل؛ أضف هنا مصادر عبر الإنترنت للغات الأخرى.';
+  @override
+  String get onboarding_anki_action_test_desc =>
+      'يتحقّق من قدرة Fushi على الاتصال بـ Anki ويحمّل مجموعاتك وأنواع الملاحظات. لا يُنشأ أي شيء بعد.';
+  @override
+  String get onboarding_anki_action_refresh_desc =>
+      'يعيد تحميل المجموعات وأنواع الملاحظات من Anki. استخدمه بعد إنشاء مجموعة جديدة داخل Anki.';
+  @override
+  String get onboarding_anki_action_get_ankidroid_desc =>
+      'يفتح صفحة AnkiDroid في المتجر. يكتب Fushi بطاقاته داخله، لذا يجب تثبيته أولاً.';
+  @override
+  String get onboarding_anki_action_get_anki_desc =>
+      'يفتح صفحة تنزيل Anki. ثبّت Anki وأبقِه مفتوحًا أثناء إنشاء البطاقات.';
+  @override
+  String get onboarding_anki_action_install_addon_desc =>
+      'يفكّ ضغط إضافة AnkiConnect المرفقة داخل Anki، وهي ما يتيح لـ Fushi التخاطب معه. أعد تشغيل Anki بعد ذلك.';
+  @override
+  String get onboarding_step_anki_action_desc =>
+      'قالب البطاقة وربط الحقول ولقطات الشاشة والصوت: أي تفاصيل شكل البطاقة الناتجة. تكفي المجموعة ونوع الملاحظة أعلاه للبدء، فلا تفتح هذا إلا إذا أردت تغيير طريقة بناء البطاقات.';
+  @override
+  String get onboarding_step_backup_action_desc =>
+      'اختر خدمة نسخ احتياطي وسجّل الدخول، لتبقى مكتبتك سليمة عند فقدان الجهاز أو استبداله.';
+  @override
+  String get onboarding_step_interconnect_action_desc =>
+      'يقرن هذا الجهاز بأجهزتك الأخرى لمشاركة مكتبة واحدة وإبقاء التقدّم متزامنًا.';
+  @override
+  String get onboarding_step_extension_action_desc =>
+      'يوضّح كيفية تثبيت إضافة المتصفح وربطها بـ Fushi، لتتمكّن من البحث عن الكلمات في صفحات الويب أيضًا.';
+  @override
+  String get onboarding_step_fonts_action_desc =>
+      'أضف ملفات خطوطك الخاصة واختر الخط الذي تستخدمه كل لغة.';
+  @override
+  String get onboarding_pack_sources_hint =>
+      'يُنزَّل على أجزاء متوازية من GitHub والموقع الرسمي ومرآة احتياطية في آنٍ واحد، مع التحقّق من كل جزء. يقيس Fushi سرعة المصادر أثناء العمل ويمنح الأسرع في تلك اللحظة عددًا أكبر من الأجزاء، فلا شيء تختاره هنا.';
 }
 
 // Path: <root>
@@ -23179,13 +23266,6 @@ class _StringsDe extends _StringsEn {
   String get onboarding_anki_mobile_ankiconnect_hint =>
       'Dieses Gerät kann auch Karten in Anki erstellen, das auf einem Computer im selben Netzwerk läuft: Aktivieren Sie AnkiConnect in den Kartenerstellungs-Einstellungen und geben Sie die Computeradresse ein.';
   @override
-  String get onboarding_anki_fsrs_title => 'Anki auf FSRS umstellen';
-  @override
-  String get onboarding_anki_fsrs_body =>
-      'Anki enthält FSRS, einen weit besseren Planer als den 30 Jahre alten SM-2-Standard: bessere Behaltensrate mit weniger Wiederholungen. Öffnen Sie in Anki die Stapeloptionen und aktivieren Sie FSRS (ein Schalter gilt für die gesamte Sammlung). Dies muss direkt in Anki erfolgen.';
-  @override
-  String get onboarding_step_pack_browser_action => 'Im Browser herunterladen';
-  @override
   String get onboarding_anki_setup_android_hint =>
       'Installieren Sie AnkiDroid und öffnen Sie es einmal, um die Ersteinrichtung abzuschließen. Tippen Sie zurück in Fushi bei Ihrer ersten Karte im Berechtigungsdialog auf „Zulassen" – keine AnkiDroid-Einstellungen müssen geändert werden.';
   @override
@@ -23710,6 +23790,66 @@ class _StringsDe extends _StringsEn {
   @override
   String get anki_connect_port_auto_fix_none =>
       'Auf diesem Rechner wurde kein freier Port gefunden.';
+  @override
+  String get onboarding_action_badge_required => 'Erforderlich';
+  @override
+  String get onboarding_action_badge_recommended => 'Empfohlen';
+  @override
+  String get onboarding_action_badge_optional => 'Optional';
+  @override
+  String get onboarding_pack_action_download_desc =>
+      'Lädt das gesamte Paket im Hintergrund herunter und importiert es anschließend. Jederzeit abbrechbar; der Download wird an der Abbruchstelle fortgesetzt.';
+  @override
+  String get onboarding_pack_action_import_existing_desc =>
+      'Das Paket ist bereits heruntergeladen; hier wird es importiert. Wähle im Bestätigungsdialog „Zusammenführen“, dann bleiben deine vorhandenen Daten unangetastet.';
+  @override
+  String get onboarding_pack_action_pick_desc =>
+      'Du hast das Paket-ZIP bereits anderweitig bekommen? Importiere es von der Festplatte und überspringe den Download komplett.';
+  @override
+  String get onboarding_pack_action_website =>
+      'Download-Seite der Website öffnen';
+  @override
+  String get onboarding_pack_action_website_desc =>
+      'Öffnet die offizielle Website im Browser. Im Paket-Abschnitt findest du Teil-Links, die du einem Downloadmanager übergeben kannst; komm danach hierher zurück und importiere das Ergebnis über „Lokale Paketdatei wählen“.';
+  @override
+  String get onboarding_pack_action_dictionary_desc =>
+      'Du lernst eine andere Sprache als Japanisch? Überspring das Paket und importiere hier stattdessen Wörterbücher für deine Sprache.';
+  @override
+  String get onboarding_pack_action_audio_desc =>
+      'Woher die Aussprache-Audios kommen. Japanisch und Englisch deckt das Paket bereits ab; für andere Sprachen fügst du hier Online-Quellen hinzu.';
+  @override
+  String get onboarding_anki_action_test_desc =>
+      'Prüft, ob Fushi Anki erreicht, und lädt deine Stapel und Notiztypen. Es wird noch nichts angelegt.';
+  @override
+  String get onboarding_anki_action_refresh_desc =>
+      'Lädt Stapel und Notiztypen erneut aus Anki. Nutze das, nachdem du in Anki einen neuen Stapel angelegt hast.';
+  @override
+  String get onboarding_anki_action_get_ankidroid_desc =>
+      'Öffnet die Store-Seite von AnkiDroid. Fushi schreibt seine Karten dorthin, es muss also zuerst installiert sein.';
+  @override
+  String get onboarding_anki_action_get_anki_desc =>
+      'Öffnet die Download-Seite von Anki. Installiere Anki und lass es beim Kartenerstellen laufen.';
+  @override
+  String get onboarding_anki_action_install_addon_desc =>
+      'Entpackt das mitgelieferte AnkiConnect-Add-on für dich nach Anki – darüber spricht Fushi mit Anki. Starte Anki danach neu.';
+  @override
+  String get onboarding_step_anki_action_desc =>
+      'Kartenvorlage, Feldzuordnung, Screenshots und Audio: die Details dazu, wie eine erzeugte Karte aussieht. Stapel und Notiztyp oben genügen zum Loslegen – öffne das hier nur, wenn du ändern willst, wie Karten gebaut werden.';
+  @override
+  String get onboarding_step_backup_action_desc =>
+      'Wähle ein Backup-Backend und melde dich an, damit deine Bibliothek einen Geräteverlust oder -wechsel übersteht.';
+  @override
+  String get onboarding_step_interconnect_action_desc =>
+      'Koppelt dieses Gerät mit deinen anderen Geräten, um eine Bibliothek zu teilen und den Fortschritt synchron zu halten.';
+  @override
+  String get onboarding_step_extension_action_desc =>
+      'Zeigt, wie du die Browser-Erweiterung installierst und mit Fushi verbindest, damit du auch auf Webseiten nachschlagen kannst.';
+  @override
+  String get onboarding_step_fonts_action_desc =>
+      'Eigene Schriftdateien hinzufügen und festlegen, welche Schrift jede Sprache verwendet.';
+  @override
+  String get onboarding_pack_sources_hint =>
+      'Wird parallel in Teilstücken gleichzeitig von GitHub, der offiziellen Website und einem Ersatz-Spiegel geladen, jedes Teilstück mit Prüfsumme. Fushi misst die Quellen währenddessen und gibt der aktuell schnellsten mehr Teilstücke – hier gibt es also nichts auszuwählen.';
 }
 
 // Path: <root>
@@ -32514,13 +32654,6 @@ class _StringsEs extends _StringsEn {
   String get onboarding_anki_mobile_ankiconnect_hint =>
       'Este dispositivo también puede crear tarjetas en Anki ejecutándose en una computadora en la misma red: active AnkiConnect en ajustes de creación de tarjetas e introduzca la dirección de la computadora.';
   @override
-  String get onboarding_anki_fsrs_title => 'Cambiar Anki a FSRS';
-  @override
-  String get onboarding_anki_fsrs_body =>
-      'Anki viene con FSRS, un programador mucho mejor que el SM-2 predeterminado de hace 30 años: mejor retención con menos revisiones. En Anki, abra opciones de mazo y active FSRS (un interruptor cubre toda la colección). Esto debe hacerse dentro de Anki.';
-  @override
-  String get onboarding_step_pack_browser_action => 'Descargar en navegador';
-  @override
   String get onboarding_anki_setup_android_hint =>
       'Instale AnkiDroid y ábralo una vez para completar su configuración inicial. De vuelta en Fushi, toque Permitir en el diálogo de permisos que aparece con su primera tarjeta — no hay ajustes de AnkiDroid que cambiar.';
   @override
@@ -33045,6 +33178,66 @@ class _StringsEs extends _StringsEn {
   @override
   String get anki_connect_port_auto_fix_none =>
       'No se encontró ningún puerto libre en este equipo.';
+  @override
+  String get onboarding_action_badge_required => 'Obligatorio';
+  @override
+  String get onboarding_action_badge_recommended => 'Recomendado';
+  @override
+  String get onboarding_action_badge_optional => 'Opcional';
+  @override
+  String get onboarding_pack_action_download_desc =>
+      'Descarga todo el paquete en segundo plano y luego lo importa. Puedes cancelar cuando quieras; la próxima vez continúa desde donde se detuvo.';
+  @override
+  String get onboarding_pack_action_import_existing_desc =>
+      'El paquete ya está descargado; esto lo importa. Elige «Combinar» en el diálogo de confirmación y tus datos actuales quedarán intactos.';
+  @override
+  String get onboarding_pack_action_pick_desc =>
+      '¿Ya conseguiste el zip del paquete por otro lado? Impórtalo desde el disco y sáltate la descarga por completo.';
+  @override
+  String get onboarding_pack_action_website =>
+      'Abrir la página de descarga del sitio';
+  @override
+  String get onboarding_pack_action_website_desc =>
+      'Abre el sitio oficial en tu navegador. Su sección de paquete lista enlaces por fragmentos que puedes pasar a un gestor de descargas; vuelve después aquí y usa «Elegir un archivo de paquete local» para importar lo que obtuviste.';
+  @override
+  String get onboarding_pack_action_dictionary_desc =>
+      '¿Aprendes un idioma distinto del japonés? Sáltate el paquete e importa aquí diccionarios de tu propio idioma.';
+  @override
+  String get onboarding_pack_action_audio_desc =>
+      'De dónde sale el audio de pronunciación. El paquete ya cubre japonés e inglés; añade aquí fuentes en línea para otros idiomas.';
+  @override
+  String get onboarding_anki_action_test_desc =>
+      'Comprueba que Fushi puede conectarse con Anki y carga tus mazos y tipos de nota. Todavía no se crea nada.';
+  @override
+  String get onboarding_anki_action_refresh_desc =>
+      'Vuelve a cargar mazos y tipos de nota desde Anki. Úsalo después de crear un mazo nuevo dentro de Anki.';
+  @override
+  String get onboarding_anki_action_get_ankidroid_desc =>
+      'Abre la página de la tienda de AnkiDroid. Fushi escribe ahí sus tarjetas, así que hay que instalarlo primero.';
+  @override
+  String get onboarding_anki_action_get_anki_desc =>
+      'Abre la página de descarga de Anki. Instala Anki y déjalo abierto mientras creas tarjetas.';
+  @override
+  String get onboarding_anki_action_install_addon_desc =>
+      'Descomprime por ti el complemento AnkiConnect incluido dentro de Anki, que es lo que permite a Fushi comunicarse con él. Reinicia Anki después.';
+  @override
+  String get onboarding_step_anki_action_desc =>
+      'Plantilla de tarjeta, asignación de campos, capturas y audio: los detalles de qué aspecto tiene una tarjeta creada. Con el mazo y el tipo de nota de arriba ya puedes empezar, así que abre esto solo si quieres cambiar cómo se construyen las tarjetas.';
+  @override
+  String get onboarding_step_backup_action_desc =>
+      'Elige un servicio de copia de seguridad e inicia sesión, para que tu biblioteca sobreviva a la pérdida o el cambio de dispositivo.';
+  @override
+  String get onboarding_step_interconnect_action_desc =>
+      'Empareja este dispositivo con tus otros dispositivos para compartir una misma biblioteca y mantener el progreso sincronizado.';
+  @override
+  String get onboarding_step_extension_action_desc =>
+      'Muestra cómo instalar la extensión de navegador y conectarla con Fushi, para poder buscar palabras también en páginas web.';
+  @override
+  String get onboarding_step_fonts_action_desc =>
+      'Añade tus propios archivos de fuente y elige cuál usa cada idioma.';
+  @override
+  String get onboarding_pack_sources_hint =>
+      'Se descarga en fragmentos paralelos desde GitHub, el sitio oficial y un espejo de respaldo a la vez, con suma de verificación en cada fragmento. Fushi mide las fuentes sobre la marcha y da más fragmentos a la que sea más rápida en ese momento, así que aquí no hay nada que elegir.';
 }
 
 // Path: <root>
@@ -41878,14 +42071,6 @@ class _StringsFr extends _StringsEn {
   String get onboarding_anki_mobile_ankiconnect_hint =>
       'Cet appareil peut aussi créer des cartes dans Anki sur un ordinateur du même réseau : activez AnkiConnect dans les paramètres de création de cartes et entrez l\'adresse de l\'ordinateur.';
   @override
-  String get onboarding_anki_fsrs_title => 'Passer Anki à FSRS';
-  @override
-  String get onboarding_anki_fsrs_body =>
-      'Anki est livré avec FSRS, un planificateur bien meilleur que le SM-2 par défaut vieux de 30 ans : meilleure rétention avec moins de révisions. Dans Anki, ouvrez les options du paquet et activez FSRS (un seul interrupteur couvre toute la collection). Cela doit être fait dans Anki même.';
-  @override
-  String get onboarding_step_pack_browser_action =>
-      'Télécharger dans le navigateur';
-  @override
   String get onboarding_anki_setup_android_hint =>
       'Installez AnkiDroid et ouvrez-le une fois pour terminer sa configuration initiale. De retour dans Fushi, appuyez sur Autoriser dans la boîte de dialogue de permission qui apparaît avec votre première carte — aucun paramètre AnkiDroid à changer.';
   @override
@@ -42414,6 +42599,66 @@ class _StringsFr extends _StringsEn {
   @override
   String get anki_connect_port_auto_fix_none =>
       'Aucun port libre trouvé sur cette machine.';
+  @override
+  String get onboarding_action_badge_required => 'Requis';
+  @override
+  String get onboarding_action_badge_recommended => 'Recommandé';
+  @override
+  String get onboarding_action_badge_optional => 'Facultatif';
+  @override
+  String get onboarding_pack_action_download_desc =>
+      'Télécharge tout le pack en arrière-plan, puis l’importe. Annulable à tout moment ; la reprise repart du point d’arrêt.';
+  @override
+  String get onboarding_pack_action_import_existing_desc =>
+      'Le pack est déjà téléchargé ; ceci l’importe. Choisissez « Fusionner » dans la boîte de confirmation et vos données existantes ne seront pas touchées.';
+  @override
+  String get onboarding_pack_action_pick_desc =>
+      'Vous avez déjà récupéré le zip du pack ailleurs ? Importez-le depuis le disque et sautez complètement le téléchargement.';
+  @override
+  String get onboarding_pack_action_website =>
+      'Ouvrir la page de téléchargement du site';
+  @override
+  String get onboarding_pack_action_website_desc =>
+      'Ouvre le site officiel dans votre navigateur. Sa section pack liste des liens par morceaux que vous pouvez donner à un gestionnaire de téléchargement ; revenez ensuite ici et utilisez « Choisir un fichier de pack local » pour importer ce que vous avez obtenu.';
+  @override
+  String get onboarding_pack_action_dictionary_desc =>
+      'Vous apprenez une autre langue que le japonais ? Passez le pack et importez ici les dictionnaires de votre langue.';
+  @override
+  String get onboarding_pack_action_audio_desc =>
+      'D’où viennent les audios de prononciation. Le pack couvre déjà le japonais et l’anglais ; ajoutez ici des sources en ligne pour les autres langues.';
+  @override
+  String get onboarding_anki_action_test_desc =>
+      'Vérifie que Fushi joint bien Anki et charge vos paquets et types de notes. Rien n’est encore créé.';
+  @override
+  String get onboarding_anki_action_refresh_desc =>
+      'Recharge les paquets et types de notes depuis Anki. À utiliser après avoir créé un paquet dans Anki.';
+  @override
+  String get onboarding_anki_action_get_ankidroid_desc =>
+      'Ouvre la page du store d’AnkiDroid. Fushi y écrit ses cartes, il doit donc être installé d’abord.';
+  @override
+  String get onboarding_anki_action_get_anki_desc =>
+      'Ouvre la page de téléchargement d’Anki. Installez Anki et laissez-le ouvert pendant la création de cartes.';
+  @override
+  String get onboarding_anki_action_install_addon_desc =>
+      'Décompresse pour vous le module AnkiConnect fourni dans Anki ; c’est lui qui permet à Fushi de lui parler. Redémarrez Anki ensuite.';
+  @override
+  String get onboarding_step_anki_action_desc =>
+      'Modèle de carte, correspondance des champs, captures et audio : les détails de l’apparence d’une carte créée. Le paquet et le type de note ci-dessus suffisent pour commencer, n’ouvrez ceci que si vous voulez changer la façon dont les cartes sont fabriquées.';
+  @override
+  String get onboarding_step_backup_action_desc =>
+      'Choisissez un service de sauvegarde et connectez-vous, pour que votre bibliothèque survive à la perte ou au remplacement d’un appareil.';
+  @override
+  String get onboarding_step_interconnect_action_desc =>
+      'Associe cet appareil à vos autres appareils pour partager une même bibliothèque et garder la progression synchronisée.';
+  @override
+  String get onboarding_step_extension_action_desc =>
+      'Montre comment installer l’extension de navigateur et la connecter à Fushi, pour pouvoir aussi chercher des mots sur les pages web.';
+  @override
+  String get onboarding_step_fonts_action_desc =>
+      'Ajoutez vos propres fichiers de police et choisissez celle utilisée par chaque langue.';
+  @override
+  String get onboarding_pack_sources_hint =>
+      'Téléchargé en morceaux parallèles depuis GitHub, le site officiel et un miroir de secours à la fois, chaque morceau vérifié par somme de contrôle. Fushi mesure les sources au fil de l’eau et donne plus de morceaux à la plus rapide du moment ; il n’y a donc rien à choisir ici.';
 }
 
 // Path: <root>
@@ -51084,13 +51329,6 @@ class _StringsId extends _StringsEn {
   String get onboarding_anki_mobile_ankiconnect_hint =>
       'Perangkat ini juga bisa membuat kartu ke Anki yang berjalan di komputer dalam jaringan yang sama: aktifkan AnkiConnect di pengaturan pembuatan kartu dan masukkan alamat komputer.';
   @override
-  String get onboarding_anki_fsrs_title => 'Beralih Anki ke FSRS';
-  @override
-  String get onboarding_anki_fsrs_body =>
-      'Anki dilengkapi FSRS, penjadwal yang jauh lebih baik dari default SM-2 berusia 30 tahun: retensi lebih baik dengan ulasan lebih sedikit. Di Anki, buka opsi dek dan aktifkan FSRS (satu sakelar mencakup seluruh koleksi). Ini harus dilakukan di dalam Anki sendiri.';
-  @override
-  String get onboarding_step_pack_browser_action => 'Unduh di browser';
-  @override
   String get onboarding_anki_setup_android_hint =>
       'Instal AnkiDroid dan buka sekali untuk menyelesaikan pengaturan awalnya. Kembali di Fushi, ketuk Izinkan pada dialog izin yang muncul saat kartu pertama Anda - tidak perlu mengubah pengaturan AnkiDroid.';
   @override
@@ -51608,6 +51846,66 @@ class _StringsId extends _StringsEn {
   @override
   String get anki_connect_port_auto_fix_none =>
       'Tidak ditemukan port kosong di komputer ini.';
+  @override
+  String get onboarding_action_badge_required => 'Wajib';
+  @override
+  String get onboarding_action_badge_recommended => 'Disarankan';
+  @override
+  String get onboarding_action_badge_optional => 'Opsional';
+  @override
+  String get onboarding_pack_action_download_desc =>
+      'Mengunduh seluruh paket di latar belakang, lalu mengimpornya. Bisa dibatalkan kapan saja; berikutnya dilanjutkan dari titik terakhir.';
+  @override
+  String get onboarding_pack_action_import_existing_desc =>
+      'Paket sudah terunduh; tombol ini mengimpornya. Pilih «Gabungkan» pada dialog konfirmasi agar data yang sudah ada tidak tersentuh.';
+  @override
+  String get onboarding_pack_action_pick_desc =>
+      'Sudah punya zip paketnya dari tempat lain? Impor dari disk dan lewati proses unduh sepenuhnya.';
+  @override
+  String get onboarding_pack_action_website =>
+      'Buka halaman unduh di situs web';
+  @override
+  String get onboarding_pack_action_website_desc =>
+      'Membuka situs resmi di peramban. Bagian paket di sana memuat tautan per potongan yang bisa diberikan ke pengelola unduhan; setelah itu kembali ke sini dan gunakan «Pilih berkas paket lokal» untuk mengimpor hasilnya.';
+  @override
+  String get onboarding_pack_action_dictionary_desc =>
+      'Sedang belajar bahasa selain Jepang? Lewati paketnya dan impor kamus untuk bahasamu sendiri di sini.';
+  @override
+  String get onboarding_pack_action_audio_desc =>
+      'Dari mana audio pelafalan berasal. Paket sudah mencakup bahasa Jepang dan Inggris; untuk bahasa lain tambahkan sumber daring di sini.';
+  @override
+  String get onboarding_anki_action_test_desc =>
+      'Memeriksa apakah Fushi bisa menghubungi Anki dan memuat dek serta jenis catatanmu. Belum ada yang dibuat.';
+  @override
+  String get onboarding_anki_action_refresh_desc =>
+      'Memuat ulang dek dan jenis catatan dari Anki. Gunakan setelah membuat dek baru di dalam Anki.';
+  @override
+  String get onboarding_anki_action_get_ankidroid_desc =>
+      'Membuka halaman toko AnkiDroid. Fushi menulis kartunya ke sana, jadi harus dipasang lebih dulu.';
+  @override
+  String get onboarding_anki_action_get_anki_desc =>
+      'Membuka halaman unduh Anki. Pasang Anki dan biarkan tetap berjalan selagi kamu membuat kartu.';
+  @override
+  String get onboarding_anki_action_install_addon_desc =>
+      'Mengekstrak add-on AnkiConnect bawaan ke dalam Anki untukmu; itulah yang membuat Fushi bisa berbicara dengannya. Mulai ulang Anki setelahnya.';
+  @override
+  String get onboarding_step_anki_action_desc =>
+      'Templat kartu, pemetaan bidang, tangkapan layar, dan audio: yaitu rincian seperti apa kartu yang dihasilkan. Dek dan jenis catatan di atas sudah cukup untuk mulai, jadi buka ini hanya jika kamu ingin mengubah cara kartu disusun.';
+  @override
+  String get onboarding_step_backup_action_desc =>
+      'Pilih backend cadangan dan masuk, supaya pustakamu selamat saat perangkat hilang atau diganti.';
+  @override
+  String get onboarding_step_interconnect_action_desc =>
+      'Memasangkan perangkat ini dengan perangkatmu yang lain untuk berbagi satu pustaka dan menyelaraskan progres.';
+  @override
+  String get onboarding_step_extension_action_desc =>
+      'Menunjukkan cara memasang ekstensi peramban dan menghubungkannya ke Fushi, supaya kamu juga bisa mencari kata di halaman web.';
+  @override
+  String get onboarding_step_fonts_action_desc =>
+      'Tambahkan berkas fonmu sendiri dan pilih fon yang dipakai tiap bahasa.';
+  @override
+  String get onboarding_pack_sources_hint =>
+      'Diunduh dalam potongan paralel dari GitHub, situs resmi, dan satu cermin cadangan sekaligus, tiap potongan diperiksa checksum-nya. Fushi mengukur kecepatan sumber sambil berjalan dan memberi lebih banyak potongan ke yang tercepat saat itu, jadi tidak ada yang perlu dipilih di sini.';
 }
 
 // Path: <root>
@@ -60351,13 +60649,6 @@ class _StringsIt extends _StringsEn {
   String get onboarding_anki_mobile_ankiconnect_hint =>
       'Questo dispositivo può anche creare carte in Anki su un computer nella stessa rete: abilita AnkiConnect nelle impostazioni di creazione carte e inserisci l\'indirizzo del computer.';
   @override
-  String get onboarding_anki_fsrs_title => 'Passa ad FSRS in Anki';
-  @override
-  String get onboarding_anki_fsrs_body =>
-      'Anki include FSRS, uno scheduler molto migliore rispetto al vecchio SM-2 predefinito di 30 anni: migliore ritenzione con meno revisioni. In Anki, apri le opzioni del mazzo e attiva FSRS (un interruttore copre l\'intera collezione). Questo deve essere fatto dentro Anki stesso.';
-  @override
-  String get onboarding_step_pack_browser_action => 'Scarica nel browser';
-  @override
   String get onboarding_anki_setup_android_hint =>
       'Installa AnkiDroid e aprilo una volta per completare la configurazione iniziale. Tornando in Fushi, tocca Consenti nella finestra di permesso che appare con la prima carta — nessuna impostazione di AnkiDroid da cambiare.';
   @override
@@ -60879,6 +61170,66 @@ class _StringsIt extends _StringsEn {
   @override
   String get anki_connect_port_auto_fix_none =>
       'Nessuna porta libera trovata su questo computer.';
+  @override
+  String get onboarding_action_badge_required => 'Obbligatorio';
+  @override
+  String get onboarding_action_badge_recommended => 'Consigliato';
+  @override
+  String get onboarding_action_badge_optional => 'Facoltativo';
+  @override
+  String get onboarding_pack_action_download_desc =>
+      'Scarica l’intero pacchetto in background e poi lo importa. Puoi annullare in qualsiasi momento; la volta dopo riprende dal punto in cui si era fermato.';
+  @override
+  String get onboarding_pack_action_import_existing_desc =>
+      'Il pacchetto è già scaricato; qui viene importato. Scegli «Unisci» nella finestra di conferma e i dati esistenti resteranno intatti.';
+  @override
+  String get onboarding_pack_action_pick_desc =>
+      'Hai già preso lo zip del pacchetto da un’altra parte? Importalo dal disco e salta del tutto il download.';
+  @override
+  String get onboarding_pack_action_website =>
+      'Apri la pagina di download del sito';
+  @override
+  String get onboarding_pack_action_website_desc =>
+      'Apre il sito ufficiale nel browser. La sezione dedicata al pacchetto elenca link a spezzoni che puoi passare a un download manager; poi torna qui e usa «Scegli un file pacchetto locale» per importare quello che hai ottenuto.';
+  @override
+  String get onboarding_pack_action_dictionary_desc =>
+      'Stai studiando una lingua diversa dal giapponese? Salta il pacchetto e importa qui i dizionari della tua lingua.';
+  @override
+  String get onboarding_pack_action_audio_desc =>
+      'Da dove arriva l’audio della pronuncia. Il pacchetto copre già giapponese e inglese; per le altre lingue aggiungi qui le sorgenti online.';
+  @override
+  String get onboarding_anki_action_test_desc =>
+      'Verifica che Fushi riesca a raggiungere Anki e carica i tuoi mazzi e tipi di nota. Per ora non viene creato nulla.';
+  @override
+  String get onboarding_anki_action_refresh_desc =>
+      'Ricarica mazzi e tipi di nota da Anki. Usalo dopo aver creato un nuovo mazzo dentro Anki.';
+  @override
+  String get onboarding_anki_action_get_ankidroid_desc =>
+      'Apre la pagina dello store di AnkiDroid. Fushi ci scrive dentro le sue carte, quindi va installato prima.';
+  @override
+  String get onboarding_anki_action_get_anki_desc =>
+      'Apre la pagina di download di Anki. Installa Anki e tienilo aperto mentre crei le carte.';
+  @override
+  String get onboarding_anki_action_install_addon_desc =>
+      'Estrae per te il componente aggiuntivo AnkiConnect incluso dentro Anki: è ciò che permette a Fushi di parlarci. Al termine riavvia Anki.';
+  @override
+  String get onboarding_step_anki_action_desc =>
+      'Modello di carta, mappatura dei campi, screenshot e audio: i dettagli di come appare una carta creata. Il mazzo e il tipo di nota qui sopra bastano per iniziare, quindi apri questa sezione solo se vuoi cambiare come vengono costruite le carte.';
+  @override
+  String get onboarding_step_backup_action_desc =>
+      'Scegli un servizio di backup e accedi, così la tua libreria sopravvive alla perdita o alla sostituzione del dispositivo.';
+  @override
+  String get onboarding_step_interconnect_action_desc =>
+      'Associa questo dispositivo agli altri tuoi dispositivi per condividere un’unica libreria e mantenere sincronizzati i progressi.';
+  @override
+  String get onboarding_step_extension_action_desc =>
+      'Mostra come installare l’estensione del browser e collegarla a Fushi, così puoi cercare le parole anche nelle pagine web.';
+  @override
+  String get onboarding_step_fonts_action_desc =>
+      'Aggiungi i tuoi file di font e scegli quale usare per ciascuna lingua.';
+  @override
+  String get onboarding_pack_sources_hint =>
+      'Scaricato in spezzoni paralleli contemporaneamente da GitHub, dal sito ufficiale e da un mirror di riserva, con checksum su ogni spezzone. Fushi misura le sorgenti strada facendo e assegna più spezzoni a quella più veloce in quel momento, quindi qui non c’è nulla da scegliere.';
 }
 
 // Path: <root>
@@ -69084,13 +69435,6 @@ class _StringsJa extends _StringsEn {
   String get onboarding_anki_mobile_ankiconnect_hint =>
       'このデバイスから同じネットワーク上のパソコンで動作しているAnkiにカードを作成することもできます。カード作成設定でAnkiConnectを有効にし、パソコンのアドレスを入力してください。';
   @override
-  String get onboarding_anki_fsrs_title => 'AnkiをFSRSに切り替え';
-  @override
-  String get onboarding_anki_fsrs_body =>
-      'AnkiにはFSRSが搭載されており、30年前のSM-2デフォルトよりもはるかに優れたスケジューラーです。少ないレビューでより良い記憶定着が得られます。Ankiでデッキオプションを開き、FSRSをオンにしてください（1つのスイッチでコレクション全体に適用されます）。これはAnki内で行う必要があります。';
-  @override
-  String get onboarding_step_pack_browser_action => 'ブラウザでダウンロード';
-  @override
   String get onboarding_anki_setup_android_hint =>
       'AnkiDroidをインストールし、一度開いて初回セットアップを完了させてください。Fushiに戻り、最初のカード作成時に表示される権限ダイアログで「許可」をタップするだけです。AnkiDroidの設定変更は不要です。';
   @override
@@ -69585,6 +69929,65 @@ class _StringsJa extends _StringsEn {
       'Hibiki はポート ${port} を使うようになりましたが、AnkiConnect のアドオン設定が見つかりませんでした。Anki の「ツール → アドオン → AnkiConnect → 設定」で webBindPort も ${port} にしてから、Anki を再起動してください。';
   @override
   String get anki_connect_port_auto_fix_none => 'このマシンに空いているポートが見つかりませんでした。';
+  @override
+  String get onboarding_action_badge_required => '必須';
+  @override
+  String get onboarding_action_badge_recommended => '推奨';
+  @override
+  String get onboarding_action_badge_optional => '任意';
+  @override
+  String get onboarding_pack_action_download_desc =>
+      'おすすめパック全体をバックグラウンドでダウンロードし、完了後そのままインポートに進みます。いつでも中止でき、次回は中断した位置から再開します。';
+  @override
+  String get onboarding_pack_action_import_existing_desc =>
+      'パックはダウンロード済みです。ここからインポートします。確認ダイアログで「統合」を選べば、既存のデータはそのまま残ります。';
+  @override
+  String get onboarding_pack_action_pick_desc =>
+      'すでに別の場所からパックの zip を入手済みですか？ディスクからインポートすれば、ダウンロードはまるごと省けます。';
+  @override
+  String get onboarding_pack_action_website => '公式サイトのダウンロードページを開く';
+  @override
+  String get onboarding_pack_action_website_desc =>
+      'ブラウザで公式サイトを開きます。パックの項に、ダウンロードマネージャーへ渡せる分割リンクが載っています。入手後はここに戻り、「ローカルのパックファイルを選ぶ」からインポートしてください。';
+  @override
+  String get onboarding_pack_action_dictionary_desc =>
+      '日本語以外の言語を学んでいますか？パックは飛ばして、ここで自分の言語の辞書をインポートしてください。';
+  @override
+  String get onboarding_pack_action_audio_desc =>
+      '発音音声の取得元です。パックには日本語と英語が含まれています。その他の言語はここでオンラインソースを追加してください。';
+  @override
+  String get onboarding_anki_action_test_desc =>
+      'Fushi が Anki に接続できるか確認し、デッキとノートタイプを読み込みます。この時点では何も作成されません。';
+  @override
+  String get onboarding_anki_action_refresh_desc =>
+      'デッキとノートタイプを Anki から読み込み直します。Anki 側で新しいデッキを作った後に使ってください。';
+  @override
+  String get onboarding_anki_action_get_ankidroid_desc =>
+      'AnkiDroid のストアページを開きます。Fushi はここにカードを書き込むので、先にインストールが必要です。';
+  @override
+  String get onboarding_anki_action_get_anki_desc =>
+      'Anki のダウンロードページを開きます。Anki をインストールし、カード作成中は起動したままにしてください。';
+  @override
+  String get onboarding_anki_action_install_addon_desc =>
+      '同梱の AnkiConnect アドオンを Anki に展開します。Fushi はこれを通じて Anki と通信します。完了後に Anki を再起動してください。';
+  @override
+  String get onboarding_step_anki_action_desc =>
+      'カードテンプレート、フィールド対応、スクリーンショットと音声——つまり「出来上がるカードの見た目」です。上でデッキとノートタイプを選べばカード作成は始められるので、カードの作られ方を変えたいときだけ開いてください。';
+  @override
+  String get onboarding_step_backup_action_desc =>
+      'バックアップ先を選んでサインインしておけば、端末を紛失・買い替えてもライブラリは残ります。';
+  @override
+  String get onboarding_step_interconnect_action_desc =>
+      'この端末を他の端末とペアリングして、同じライブラリを共有し進捗を同期します。';
+  @override
+  String get onboarding_step_extension_action_desc =>
+      'ブラウザ拡張機能のインストール方法と Fushi への接続手順を案内します。ウェブページ上でも辞書を引けるようになります。';
+  @override
+  String get onboarding_step_fonts_action_desc =>
+      '自分のフォントファイルを追加し、言語ごとにどれを使うか指定します。';
+  @override
+  String get onboarding_pack_sources_hint =>
+      'GitHub・公式サイト・予備ミラーから同時に分割ダウンロードし、各断片をチェックサムで検証します。ダウンロード中も各ソースの速度を実測し、その時点で最も速いソースに多くの断片を割り当てるため、ここで選ぶ必要はありません。';
 }
 
 // Path: <root>
@@ -77805,13 +78208,6 @@ class _StringsKo extends _StringsEn {
   String get onboarding_anki_mobile_ankiconnect_hint =>
       '이 기기에서도 같은 네트워크의 컴퓨터에서 실행 중인 Anki에 카드를 만들 수 있습니다: 카드 생성 설정에서 AnkiConnect를 활성화하고 컴퓨터 주소를 입력하세요.';
   @override
-  String get onboarding_anki_fsrs_title => 'Anki를 FSRS로 전환';
-  @override
-  String get onboarding_anki_fsrs_body =>
-      'Anki에는 30년 된 SM-2 기본값보다 훨씬 뛰어난 스케줄러인 FSRS가 내장되어 있습니다: 더 적은 복습으로 더 나은 기억률을 제공합니다. Anki에서 덱 옵션을 열고 FSRS를 켜세요 (하나의 스위치로 전체 컬렉션에 적용됩니다). 이 설정은 Anki 내에서 직접 해야 합니다.';
-  @override
-  String get onboarding_step_pack_browser_action => '브라우저에서 다운로드';
-  @override
   String get onboarding_anki_setup_android_hint =>
       'AnkiDroid를 설치하고 한 번 열어 초기 설정을 완료하세요. Fushi로 돌아와 첫 카드를 만들 때 나타나는 권한 대화상자에서 허용을 탭하세요 - AnkiDroid 설정을 변경할 필요가 없습니다.';
   @override
@@ -78304,6 +78700,65 @@ class _StringsKo extends _StringsEn {
       'Hibiki는 이제 포트 ${port}를 사용하지만 AnkiConnect 애드온 설정을 찾지 못했습니다. Anki의 [도구 → 애드온 → AnkiConnect → 설정]에서 webBindPort도 ${port}로 바꾼 뒤 Anki를 다시 시작하세요.';
   @override
   String get anki_connect_port_auto_fix_none => '이 컴퓨터에서 비어 있는 포트를 찾지 못했습니다.';
+  @override
+  String get onboarding_action_badge_required => '필수';
+  @override
+  String get onboarding_action_badge_recommended => '권장';
+  @override
+  String get onboarding_action_badge_optional => '선택';
+  @override
+  String get onboarding_pack_action_download_desc =>
+      '추천 팩 전체를 백그라운드로 내려받은 뒤 이어서 가져오기를 진행합니다. 언제든 취소할 수 있고, 다음에 중단된 지점부터 이어받습니다.';
+  @override
+  String get onboarding_pack_action_import_existing_desc =>
+      '팩이 이미 내려받아져 있습니다. 여기서 바로 가져옵니다. 확인 창에서 «병합»을 고르면 기존 데이터는 그대로 유지됩니다.';
+  @override
+  String get onboarding_pack_action_pick_desc =>
+      '다른 곳에서 이미 팩 zip을 받으셨나요? 디스크에서 가져오면 내려받기를 통째로 건너뛸 수 있습니다.';
+  @override
+  String get onboarding_pack_action_website => '공식 사이트 다운로드 페이지 열기';
+  @override
+  String get onboarding_pack_action_website_desc =>
+      '브라우저에서 공식 사이트를 엽니다. 팩 항목에 다운로드 관리자에 넣을 수 있는 분할 링크가 있습니다. 받은 뒤 여기로 돌아와 «로컬 팩 파일 선택»으로 가져오세요.';
+  @override
+  String get onboarding_pack_action_dictionary_desc =>
+      '일본어 말고 다른 언어를 배우시나요? 팩은 건너뛰고 여기서 해당 언어의 사전을 가져오세요.';
+  @override
+  String get onboarding_pack_action_audio_desc =>
+      '발음 오디오의 출처입니다. 팩에는 일본어와 영어가 이미 들어 있습니다. 다른 언어는 여기서 온라인 소스를 추가하세요.';
+  @override
+  String get onboarding_anki_action_test_desc =>
+      'Fushi가 Anki에 연결되는지 확인하고 덱과 노트 유형을 불러옵니다. 이 단계에서는 아무것도 만들지 않습니다.';
+  @override
+  String get onboarding_anki_action_refresh_desc =>
+      'Anki에서 덱과 노트 유형을 다시 불러옵니다. Anki에서 새 덱을 만든 뒤에 사용하세요.';
+  @override
+  String get onboarding_anki_action_get_ankidroid_desc =>
+      'AnkiDroid 스토어 페이지를 엽니다. Fushi가 여기에 카드를 쓰므로 먼저 설치해야 합니다.';
+  @override
+  String get onboarding_anki_action_get_anki_desc =>
+      'Anki 다운로드 페이지를 엽니다. Anki를 설치하고 카드를 만드는 동안 켜 두세요.';
+  @override
+  String get onboarding_anki_action_install_addon_desc =>
+      '내장된 AnkiConnect 애드온을 Anki에 풀어 넣습니다. Fushi는 이것을 통해 Anki와 통신합니다. 설치 후 Anki를 다시 시작하세요.';
+  @override
+  String get onboarding_step_anki_action_desc =>
+      '카드 템플릿, 필드 매핑, 스크린샷과 오디오 — 즉 «만들어진 카드가 어떻게 생겼는지»입니다. 위에서 덱과 노트 유형만 고르면 카드 만들기를 시작할 수 있으니, 카드가 만들어지는 방식을 바꾸고 싶을 때만 들어오세요.';
+  @override
+  String get onboarding_step_backup_action_desc =>
+      '백업 백엔드를 고르고 로그인해 두면 기기를 잃어버리거나 바꿔도 라이브러리가 남습니다.';
+  @override
+  String get onboarding_step_interconnect_action_desc =>
+      '이 기기를 다른 기기와 페어링해 같은 라이브러리를 공유하고 진도를 동기화합니다.';
+  @override
+  String get onboarding_step_extension_action_desc =>
+      '브라우저 확장을 설치하고 Fushi에 연결하는 방법을 안내합니다. 웹페이지에서도 단어를 찾을 수 있게 됩니다.';
+  @override
+  String get onboarding_step_fonts_action_desc =>
+      '자신의 글꼴 파일을 추가하고 언어마다 어떤 글꼴을 쓸지 지정합니다.';
+  @override
+  String get onboarding_pack_sources_hint =>
+      'GitHub, 공식 사이트, 예비 미러에서 동시에 조각을 나눠 내려받고 조각마다 체크섬을 확인합니다. 내려받는 동안 각 소스의 속도를 실측해 그 순간 가장 빠른 쪽에 더 많은 조각을 맡기므로, 여기서 고를 것은 없습니다.';
 }
 
 // Path: <root>
@@ -87006,13 +87461,6 @@ class _StringsNl extends _StringsEn {
   String get onboarding_anki_mobile_ankiconnect_hint =>
       'Dit apparaat kan ook kaarten maken in Anki op een computer in hetzelfde netwerk: schakel AnkiConnect in bij kaartaanmaak-instellingen en voer het computeradres in.';
   @override
-  String get onboarding_anki_fsrs_title => 'Anki overschakelen naar FSRS';
-  @override
-  String get onboarding_anki_fsrs_body =>
-      'Anki wordt geleverd met FSRS, een veel beter planningssysteem dan de 30 jaar oude SM-2 standaard: betere retentie met minder herhalingen. Open in Anki de dekopties en schakel FSRS in (één schakelaar voor de gehele collectie). Dit moet in Anki zelf worden gedaan.';
-  @override
-  String get onboarding_step_pack_browser_action => 'Downloaden in browser';
-  @override
   String get onboarding_anki_setup_android_hint =>
       'Installeer AnkiDroid en open het eenmaal om de eerste installatie te voltooien. Terug in Fushi, tik op Toestaan bij het toestemmingsvenster dat verschijnt bij je eerste kaart — geen AnkiDroid-instellingen te wijzigen.';
   @override
@@ -87532,6 +87980,66 @@ class _StringsNl extends _StringsEn {
   @override
   String get anki_connect_port_auto_fix_none =>
       'Geen vrije poort gevonden op deze machine.';
+  @override
+  String get onboarding_action_badge_required => 'Verplicht';
+  @override
+  String get onboarding_action_badge_recommended => 'Aanbevolen';
+  @override
+  String get onboarding_action_badge_optional => 'Optioneel';
+  @override
+  String get onboarding_pack_action_download_desc =>
+      'Downloadt het hele pakket op de achtergrond en importeert het daarna. Je kunt altijd annuleren; de volgende keer gaat het verder waar het gebleven was.';
+  @override
+  String get onboarding_pack_action_import_existing_desc =>
+      'Het pakket is al gedownload; hiermee importeer je het. Kies «Samenvoegen» in het bevestigingsvenster, dan blijft je bestaande data ongemoeid.';
+  @override
+  String get onboarding_pack_action_pick_desc =>
+      'Heb je de zip van het pakket al ergens anders vandaan? Importeer hem van schijf en sla de download helemaal over.';
+  @override
+  String get onboarding_pack_action_website =>
+      'Downloadpagina van de website openen';
+  @override
+  String get onboarding_pack_action_website_desc =>
+      'Opent de officiële site in je browser. In het pakketgedeelte staan losse deel-links die je aan een downloadmanager kunt geven; kom daarna hier terug en gebruik «Kies een lokaal pakketbestand» om te importeren wat je hebt.';
+  @override
+  String get onboarding_pack_action_dictionary_desc =>
+      'Leer je een andere taal dan Japans? Sla het pakket over en importeer hier woordenboeken voor je eigen taal.';
+  @override
+  String get onboarding_pack_action_audio_desc =>
+      'Waar de uitspraakaudio vandaan komt. Het pakket dekt Japans en Engels al; voeg hier online bronnen toe voor andere talen.';
+  @override
+  String get onboarding_anki_action_test_desc =>
+      'Controleert of Fushi Anki kan bereiken en laadt je decks en notitietypes. Er wordt nog niets aangemaakt.';
+  @override
+  String get onboarding_anki_action_refresh_desc =>
+      'Laadt decks en notitietypes opnieuw uit Anki. Gebruik dit nadat je in Anki een nieuw deck hebt gemaakt.';
+  @override
+  String get onboarding_anki_action_get_ankidroid_desc =>
+      'Opent de storepagina van AnkiDroid. Fushi schrijft zijn kaarten daarin, dus het moet eerst geïnstalleerd zijn.';
+  @override
+  String get onboarding_anki_action_get_anki_desc =>
+      'Opent de downloadpagina van Anki. Installeer Anki en laat het draaien terwijl je kaarten maakt.';
+  @override
+  String get onboarding_anki_action_install_addon_desc =>
+      'Pakt de meegeleverde AnkiConnect-add-on voor je uit in Anki; daarmee kan Fushi ermee praten. Start Anki daarna opnieuw op.';
+  @override
+  String get onboarding_step_anki_action_desc =>
+      'Kaartsjabloon, veldtoewijzing, schermafbeeldingen en audio: de details van hoe een gemaakte kaart eruitziet. Het deck en notitietype hierboven zijn genoeg om te beginnen, dus open dit alleen als je wilt veranderen hoe kaarten worden opgebouwd.';
+  @override
+  String get onboarding_step_backup_action_desc =>
+      'Kies een back-upbackend en meld je aan, zodat je bibliotheek een verloren of vervangen apparaat overleeft.';
+  @override
+  String get onboarding_step_interconnect_action_desc =>
+      'Koppelt dit apparaat aan je andere apparaten om één bibliotheek te delen en de voortgang gelijk te houden.';
+  @override
+  String get onboarding_step_extension_action_desc =>
+      'Laat zien hoe je de browserextensie installeert en met Fushi verbindt, zodat je ook op webpagina’s woorden kunt opzoeken.';
+  @override
+  String get onboarding_step_fonts_action_desc =>
+      'Voeg je eigen lettertypebestanden toe en kies welk lettertype elke taal gebruikt.';
+  @override
+  String get onboarding_pack_sources_hint =>
+      'Wordt in parallelle stukken tegelijk van GitHub, de officiële site en een reservespiegel gehaald, met een checksum per stuk. Fushi meet de bronnen onderweg en geeft meer stukken aan degene die op dat moment het snelst is, dus hier valt niets te kiezen.';
 }
 
 // Path: <root>
@@ -96287,13 +96795,6 @@ class _StringsPtBr extends _StringsEn {
   String get onboarding_anki_mobile_ankiconnect_hint =>
       'Este dispositivo também pode criar cartões no Anki rodando em um computador na mesma rede: ative o AnkiConnect nas configurações de criação de cartões e insira o endereço do computador.';
   @override
-  String get onboarding_anki_fsrs_title => 'Mudar Anki para FSRS';
-  @override
-  String get onboarding_anki_fsrs_body =>
-      'O Anki vem com FSRS, um programador muito melhor que o SM-2 padrão de 30 anos: melhor retenção com menos revisões. No Anki, abra as opções do baralho e ative o FSRS (um switch cobre toda a coleção). Isso deve ser feito dentro do próprio Anki.';
-  @override
-  String get onboarding_step_pack_browser_action => 'Baixar no navegador';
-  @override
   String get onboarding_anki_setup_android_hint =>
       'Instale o AnkiDroid e abra-o uma vez para concluir a configuração inicial. De volta ao Fushi, toque em Permitir na caixa de diálogo de permissão que aparece com seu primeiro cartão - nenhuma configuração do AnkiDroid para alterar.';
   @override
@@ -96816,6 +97317,66 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get anki_connect_port_auto_fix_none =>
       'Nenhuma porta livre encontrada nesta máquina.';
+  @override
+  String get onboarding_action_badge_required => 'Obrigatório';
+  @override
+  String get onboarding_action_badge_recommended => 'Recomendado';
+  @override
+  String get onboarding_action_badge_optional => 'Opcional';
+  @override
+  String get onboarding_pack_action_download_desc =>
+      'Baixa o pacote inteiro em segundo plano e depois o importa. Dá para cancelar a qualquer momento; da próxima vez ele retoma de onde parou.';
+  @override
+  String get onboarding_pack_action_import_existing_desc =>
+      'O pacote já foi baixado; isto o importa. Escolha «Mesclar» na caixa de confirmação e seus dados atuais ficam intactos.';
+  @override
+  String get onboarding_pack_action_pick_desc =>
+      'Já pegou o zip do pacote em outro lugar? Importe do disco e pule o download por completo.';
+  @override
+  String get onboarding_pack_action_website =>
+      'Abrir a página de download do site';
+  @override
+  String get onboarding_pack_action_website_desc =>
+      'Abre o site oficial no navegador. A seção do pacote lista links por partes que você pode passar a um gerenciador de downloads; depois volte aqui e use «Escolher um arquivo de pacote local» para importar o que baixou.';
+  @override
+  String get onboarding_pack_action_dictionary_desc =>
+      'Está aprendendo um idioma que não é japonês? Pule o pacote e importe aqui dicionários do seu próprio idioma.';
+  @override
+  String get onboarding_pack_action_audio_desc =>
+      'De onde vem o áudio de pronúncia. O pacote já cobre japonês e inglês; adicione aqui fontes on-line para outros idiomas.';
+  @override
+  String get onboarding_anki_action_test_desc =>
+      'Verifica se o Fushi consegue falar com o Anki e carrega seus baralhos e tipos de nota. Nada é criado ainda.';
+  @override
+  String get onboarding_anki_action_refresh_desc =>
+      'Recarrega baralhos e tipos de nota a partir do Anki. Use depois de criar um baralho novo dentro do Anki.';
+  @override
+  String get onboarding_anki_action_get_ankidroid_desc =>
+      'Abre a página do AnkiDroid na loja. O Fushi grava os cartões nele, então precisa estar instalado antes.';
+  @override
+  String get onboarding_anki_action_get_anki_desc =>
+      'Abre a página de download do Anki. Instale o Anki e deixe-o aberto enquanto cria cartões.';
+  @override
+  String get onboarding_anki_action_install_addon_desc =>
+      'Descompacta para você o complemento AnkiConnect embutido dentro do Anki, que é o que permite ao Fushi conversar com ele. Reinicie o Anki depois.';
+  @override
+  String get onboarding_step_anki_action_desc =>
+      'Modelo de cartão, mapeamento de campos, capturas e áudio: os detalhes de como fica um cartão criado. O baralho e o tipo de nota acima já bastam para começar, então abra isto só se quiser mudar como os cartões são montados.';
+  @override
+  String get onboarding_step_backup_action_desc =>
+      'Escolha um serviço de backup e entre na conta, para que sua biblioteca sobreviva à perda ou troca de aparelho.';
+  @override
+  String get onboarding_step_interconnect_action_desc =>
+      'Pareia este aparelho com seus outros aparelhos para compartilhar uma mesma biblioteca e manter o progresso em sincronia.';
+  @override
+  String get onboarding_step_extension_action_desc =>
+      'Mostra como instalar a extensão de navegador e conectá-la ao Fushi, para você também consultar palavras em páginas da web.';
+  @override
+  String get onboarding_step_fonts_action_desc =>
+      'Adicione seus próprios arquivos de fonte e escolha qual cada idioma usa.';
+  @override
+  String get onboarding_pack_sources_hint =>
+      'Baixado em partes paralelas do GitHub, do site oficial e de um espelho reserva ao mesmo tempo, com checksum em cada parte. O Fushi mede as fontes durante o processo e dá mais partes para a que estiver mais rápida no momento, então não há nada a escolher aqui.';
 }
 
 // Path: <root>
@@ -105547,13 +106108,6 @@ class _StringsRu extends _StringsEn {
   String get onboarding_anki_mobile_ankiconnect_hint =>
       'Это устройство также может создавать карточки в Anki на компьютере в той же сети: включите AnkiConnect в настройках создания карточек и введите адрес компьютера.';
   @override
-  String get onboarding_anki_fsrs_title => 'Переключите Anki на FSRS';
-  @override
-  String get onboarding_anki_fsrs_body =>
-      'В Anki встроен FSRS — планировщик, значительно лучше устаревшего SM-2: лучше запоминание при меньшем количестве повторений. В Anki откройте настройки колоды и включите FSRS (один переключатель на всю коллекцию). Это делается в самом Anki.';
-  @override
-  String get onboarding_step_pack_browser_action => 'Скачать в браузере';
-  @override
   String get onboarding_anki_setup_android_hint =>
       'Установите AnkiDroid и откройте его один раз для первоначальной настройки. Вернувшись в Fushi, нажмите «Разрешить» в диалоге разрешений, который появится при создании первой карточки — настройки AnkiDroid менять не нужно.';
   @override
@@ -106074,6 +106628,66 @@ class _StringsRu extends _StringsEn {
   @override
   String get anki_connect_port_auto_fix_none =>
       'На этом компьютере не найдено свободных портов.';
+  @override
+  String get onboarding_action_badge_required => 'Обязательно';
+  @override
+  String get onboarding_action_badge_recommended => 'Рекомендуется';
+  @override
+  String get onboarding_action_badge_optional => 'По желанию';
+  @override
+  String get onboarding_pack_action_download_desc =>
+      'Скачивает весь пакет в фоне, а затем импортирует его. Отменить можно в любой момент; в следующий раз загрузка продолжится с места остановки.';
+  @override
+  String get onboarding_pack_action_import_existing_desc =>
+      'Пакет уже скачан; здесь он импортируется. Выберите «Объединить» в окне подтверждения — существующие данные останутся нетронутыми.';
+  @override
+  String get onboarding_pack_action_pick_desc =>
+      'Уже получили zip пакета из другого места? Импортируйте его с диска и полностью пропустите загрузку.';
+  @override
+  String get onboarding_pack_action_website =>
+      'Открыть страницу загрузки на сайте';
+  @override
+  String get onboarding_pack_action_website_desc =>
+      'Открывает официальный сайт в браузере. В разделе про пакет есть ссылки на отдельные части, которые можно отдать менеджеру загрузок; затем вернитесь сюда и импортируйте полученное через «Выбрать локальный файл пакета».';
+  @override
+  String get onboarding_pack_action_dictionary_desc =>
+      'Учите не японский, а другой язык? Пропустите пакет и импортируйте здесь словари для своего языка.';
+  @override
+  String get onboarding_pack_action_audio_desc =>
+      'Откуда берётся аудио произношения. Японский и английский пакет уже покрывает; для других языков добавьте здесь онлайн-источники.';
+  @override
+  String get onboarding_anki_action_test_desc =>
+      'Проверяет, что Fushi может связаться с Anki, и загружает ваши колоды и типы заметок. Пока ничего не создаётся.';
+  @override
+  String get onboarding_anki_action_refresh_desc =>
+      'Заново загружает колоды и типы заметок из Anki. Используйте после создания новой колоды в Anki.';
+  @override
+  String get onboarding_anki_action_get_ankidroid_desc =>
+      'Открывает страницу AnkiDroid в магазине. Fushi записывает карточки именно туда, поэтому его нужно установить первым.';
+  @override
+  String get onboarding_anki_action_get_anki_desc =>
+      'Открывает страницу загрузки Anki. Установите Anki и держите его запущенным, пока создаёте карточки.';
+  @override
+  String get onboarding_anki_action_install_addon_desc =>
+      'Распаковывает встроенное дополнение AnkiConnect в Anki — именно через него Fushi общается с Anki. После этого перезапустите Anki.';
+  @override
+  String get onboarding_step_anki_action_desc =>
+      'Шаблон карточки, сопоставление полей, скриншоты и аудио — то, как выглядит созданная карточка. Колоды и типа заметки выше уже достаточно, чтобы начать, так что заходите сюда только если хотите изменить, как собираются карточки.';
+  @override
+  String get onboarding_step_backup_action_desc =>
+      'Выберите хранилище для резервных копий и войдите в него, чтобы библиотека пережила потерю или замену устройства.';
+  @override
+  String get onboarding_step_interconnect_action_desc =>
+      'Связывает это устройство с вашими другими устройствами: одна общая библиотека и синхронный прогресс.';
+  @override
+  String get onboarding_step_extension_action_desc =>
+      'Показывает, как установить расширение для браузера и подключить его к Fushi, чтобы искать слова и на веб-страницах.';
+  @override
+  String get onboarding_step_fonts_action_desc =>
+      'Добавьте свои файлы шрифтов и выберите, какой из них использует каждый язык.';
+  @override
+  String get onboarding_pack_sources_hint =>
+      'Скачивается параллельными частями одновременно с GitHub, официального сайта и резервного зеркала, каждая часть проверяется контрольной суммой. Fushi по ходу измеряет источники и отдаёт больше частей тому, кто быстрее прямо сейчас, поэтому выбирать здесь нечего.';
 }
 
 // Path: <root>
@@ -114631,13 +115245,6 @@ class _StringsTh extends _StringsEn {
   String get onboarding_anki_mobile_ankiconnect_hint =>
       'อุปกรณ์นี้ยังสามารถสร้างการ์ดเข้า Anki ที่ทำงานบนคอมพิวเตอร์ในเครือข่ายเดียวกัน: เปิด AnkiConnect ในการตั้งค่าการสร้างการ์ดแล้วป้อนที่อยู่คอมพิวเตอร์';
   @override
-  String get onboarding_anki_fsrs_title => 'เปลี่ยน Anki เป็น FSRS';
-  @override
-  String get onboarding_anki_fsrs_body =>
-      'Anki มาพร้อม FSRS ตัวจัดกำหนดการที่ดีกว่าค่าเริ่มต้น SM-2 อายุ 30 ปีมาก: จำได้ดีกว่าด้วยการทบทวนน้อยลง ใน Anki เปิดตัวเลือกสำรับแล้วเปิด FSRS (สวิตช์เดียวครอบคลุมทั้งคอลเลกชัน) ต้องทำในตัว Anki เอง';
-  @override
-  String get onboarding_step_pack_browser_action => 'ดาวน์โหลดในเบราว์เซอร์';
-  @override
   String get onboarding_anki_setup_android_hint =>
       'ติดตั้ง AnkiDroid แล้วเปิดครั้งหนึ่งเพื่อเสร็จสิ้นการตั้งค่าครั้งแรก กลับมาที่ Fushi แตะอนุญาตในกล่องโต้ตอบสิทธิ์ที่ปรากฏขึ้นเมื่อสร้างการ์ดแรก ไม่ต้องเปลี่ยนการตั้งค่า AnkiDroid';
   @override
@@ -115147,6 +115754,65 @@ class _StringsTh extends _StringsEn {
       'ตอนนี้ Hibiki ใช้พอร์ต ${port} แล้ว แต่ไม่พบการตั้งค่าส่วนเสริม AnkiConnect โปรดตั้ง webBindPort เป็น ${port} ใน Anki (เครื่องมือ → ส่วนเสริม → AnkiConnect → การตั้งค่า) แล้วรีสตาร์ท Anki';
   @override
   String get anki_connect_port_auto_fix_none => 'ไม่พบพอร์ตที่ว่างบนเครื่องนี้';
+  @override
+  String get onboarding_action_badge_required => 'จำเป็น';
+  @override
+  String get onboarding_action_badge_recommended => 'แนะนำ';
+  @override
+  String get onboarding_action_badge_optional => 'ไม่บังคับ';
+  @override
+  String get onboarding_pack_action_download_desc =>
+      'ดาวน์โหลดแพ็กทั้งชุดในเบื้องหลัง แล้วนำเข้าให้ต่อ ยกเลิกได้ทุกเมื่อ ครั้งถัดไปจะดาวน์โหลดต่อจากจุดที่หยุดไว้';
+  @override
+  String get onboarding_pack_action_import_existing_desc =>
+      'แพ็กดาวน์โหลดไว้แล้ว ปุ่มนี้คือการนำเข้า เลือก «รวมเข้ากับคลังเดิม» ในกล่องยืนยัน แล้วข้อมูลเดิมของคุณจะไม่ถูกแตะต้อง';
+  @override
+  String get onboarding_pack_action_pick_desc =>
+      'ได้ไฟล์ zip ของแพ็กมาจากที่อื่นแล้วหรือ? นำเข้าจากดิสก์ได้เลย ข้ามการดาวน์โหลดทั้งหมด';
+  @override
+  String get onboarding_pack_action_website => 'เปิดหน้าดาวน์โหลดบนเว็บไซต์';
+  @override
+  String get onboarding_pack_action_website_desc =>
+      'เปิดเว็บไซต์ทางการในเบราว์เซอร์ ในหัวข้อแพ็กจะมีลิงก์แบบแบ่งส่วนที่ป้อนให้โปรแกรมช่วยดาวน์โหลดได้ เมื่อโหลดเสร็จให้กลับมาที่นี่แล้วใช้ «เลือกไฟล์แพ็กในเครื่อง» เพื่อนำเข้า';
+  @override
+  String get onboarding_pack_action_dictionary_desc =>
+      'กำลังเรียนภาษาอื่นที่ไม่ใช่ญี่ปุ่นใช่ไหม? ข้ามแพ็กไป แล้วนำเข้าพจนานุกรมของภาษาคุณที่นี่แทน';
+  @override
+  String get onboarding_pack_action_audio_desc =>
+      'เสียงอ่านออกเสียงมาจากไหน แพ็กครอบคลุมภาษาญี่ปุ่นและอังกฤษอยู่แล้ว ภาษาอื่นให้เพิ่มแหล่งออนไลน์ที่นี่';
+  @override
+  String get onboarding_anki_action_test_desc =>
+      'ตรวจสอบว่า Fushi ติดต่อ Anki ได้ และโหลดสำรับกับชนิดโน้ตของคุณเข้ามา ขั้นนี้ยังไม่สร้างอะไรทั้งสิ้น';
+  @override
+  String get onboarding_anki_action_refresh_desc =>
+      'โหลดสำรับและชนิดโน้ตจาก Anki ใหม่ ใช้หลังจากสร้างสำรับใหม่ใน Anki';
+  @override
+  String get onboarding_anki_action_get_ankidroid_desc =>
+      'เปิดหน้าร้านค้าของ AnkiDroid เนื่องจาก Fushi เขียนการ์ดลงในนั้น จึงต้องติดตั้งก่อน';
+  @override
+  String get onboarding_anki_action_get_anki_desc =>
+      'เปิดหน้าดาวน์โหลด Anki ติดตั้ง Anki แล้วเปิดค้างไว้ระหว่างสร้างการ์ด';
+  @override
+  String get onboarding_anki_action_install_addon_desc =>
+      'แตกส่วนเสริม AnkiConnect ที่มาพร้อมโปรแกรมเข้าไปใน Anki ให้คุณ ซึ่งเป็นสิ่งที่ทำให้ Fushi คุยกับ Anki ได้ เสร็จแล้วให้รีสตาร์ท Anki';
+  @override
+  String get onboarding_step_anki_action_desc =>
+      'เทมเพลตการ์ด การจับคู่ฟิลด์ ภาพหน้าจอ และเสียง — ก็คือรายละเอียดว่าการ์ดที่สร้างออกมาหน้าตาเป็นอย่างไร แค่เลือกสำรับกับชนิดโน้ตด้านบนก็เริ่มสร้างการ์ดได้แล้ว จึงเปิดตรงนี้เฉพาะเมื่อต้องการเปลี่ยนวิธีประกอบการ์ด';
+  @override
+  String get onboarding_step_backup_action_desc =>
+      'เลือกปลายทางสำรองข้อมูลแล้วลงชื่อเข้าใช้ เพื่อให้คลังของคุณอยู่รอดเมื่อทำอุปกรณ์หายหรือเปลี่ยนเครื่อง';
+  @override
+  String get onboarding_step_interconnect_action_desc =>
+      'จับคู่อุปกรณ์นี้กับอุปกรณ์อื่นของคุณ เพื่อใช้คลังเดียวกันและซิงก์ความคืบหน้า';
+  @override
+  String get onboarding_step_extension_action_desc =>
+      'แสดงวิธีติดตั้งส่วนขยายเบราว์เซอร์และเชื่อมกับ Fushi เพื่อให้เปิดหาคำศัพท์บนหน้าเว็บได้ด้วย';
+  @override
+  String get onboarding_step_fonts_action_desc =>
+      'เพิ่มไฟล์ฟอนต์ของคุณเอง แล้วเลือกว่าภาษาไหนใช้ฟอนต์ใด';
+  @override
+  String get onboarding_pack_sources_hint =>
+      'ดาวน์โหลดแบบแบ่งส่วนขนานกันจาก GitHub เว็บไซต์ทางการ และมิเรอร์สำรองพร้อมกัน โดยตรวจสอบค่าแฮชทุกส่วน ระหว่างดาวน์โหลด Fushi จะวัดความเร็วของแต่ละแหล่งจริง แล้วแบ่งส่วนให้แหล่งที่เร็วที่สุดในขณะนั้นมากขึ้น จึงไม่มีอะไรให้เลือกตรงนี้';
 }
 
 // Path: <root>
@@ -123804,13 +124470,6 @@ class _StringsTr extends _StringsEn {
   String get onboarding_anki_mobile_ankiconnect_hint =>
       'Bu cihaz ayrıca aynı ağdaki bir bilgisayarda çalışan Anki\'ye kart oluşturabilir: kart oluşturma ayarlarında AnkiConnect\'i etkinleştirin ve bilgisayar adresini girin.';
   @override
-  String get onboarding_anki_fsrs_title => 'Anki\'yi FSRS\'ye geçirin';
-  @override
-  String get onboarding_anki_fsrs_body =>
-      'Anki, 30 yıllık SM-2 varsayılanından çok daha iyi bir planlayıcı olan FSRS ile birlikte gelir: daha az tekrarla daha iyi hatırlama. Anki\'de deste seçeneklerini açın ve FSRS\'yi açın (bir anahtar tüm koleksiyonu kapsar). Bu, Anki\'nin kendisinde yapılmalıdır.';
-  @override
-  String get onboarding_step_pack_browser_action => 'Tarayıcıda indir';
-  @override
   String get onboarding_anki_setup_android_hint =>
       'AnkiDroid\'i yükleyin ve ilk çalıştırma kurulumunu tamamlamak için bir kez açın. Fushi\'ye dönün, ilk kartınızla birlikte açılan izin iletişim kutusunda İzin Ver\'e dokunun - AnkiDroid ayarlarında değişiklik gerekmez.';
   @override
@@ -124327,6 +124986,65 @@ class _StringsTr extends _StringsEn {
   @override
   String get anki_connect_port_auto_fix_none =>
       'Bu makinede boş bağlantı noktası bulunamadı.';
+  @override
+  String get onboarding_action_badge_required => 'Zorunlu';
+  @override
+  String get onboarding_action_badge_recommended => 'Önerilir';
+  @override
+  String get onboarding_action_badge_optional => 'İsteğe bağlı';
+  @override
+  String get onboarding_pack_action_download_desc =>
+      'Paketin tamamını arka planda indirir, ardından içe aktarır. İstediğin an iptal edebilirsin; bir dahaki sefere kaldığı yerden devam eder.';
+  @override
+  String get onboarding_pack_action_import_existing_desc =>
+      'Paket zaten indirilmiş durumda; bu onu içe aktarır. Onay penceresinde «Birleştir» seçersen mevcut verilerine dokunulmaz.';
+  @override
+  String get onboarding_pack_action_pick_desc =>
+      'Paketin zip dosyasını başka bir yerden aldın mı? Diskten içe aktar, indirmeyi tamamen atla.';
+  @override
+  String get onboarding_pack_action_website => 'Sitedeki indirme sayfasını aç';
+  @override
+  String get onboarding_pack_action_website_desc =>
+      'Resmî siteyi tarayıcında açar. Paket bölümünde bir indirme yöneticisine verebileceğin parça bağlantıları var; sonra buraya dönüp «Yerel paket dosyası seç» ile indirdiğini içe aktar.';
+  @override
+  String get onboarding_pack_action_dictionary_desc =>
+      'Japonca dışında bir dil mi öğreniyorsun? Paketi atla ve burada kendi dilinin sözlüklerini içe aktar.';
+  @override
+  String get onboarding_pack_action_audio_desc =>
+      'Telaffuz seslerinin nereden geldiği. Paket Japonca ve İngilizceyi zaten kapsıyor; diğer diller için buradan çevrimiçi kaynak ekle.';
+  @override
+  String get onboarding_anki_action_test_desc =>
+      'Fushi’nin Anki’ye ulaşıp ulaşamadığını denetler ve destelerinle not türlerini yükler. Henüz hiçbir şey oluşturulmaz.';
+  @override
+  String get onboarding_anki_action_refresh_desc =>
+      'Desteleri ve not türlerini Anki’den yeniden yükler. Anki içinde yeni bir deste oluşturduktan sonra kullan.';
+  @override
+  String get onboarding_anki_action_get_ankidroid_desc =>
+      'AnkiDroid’in mağaza sayfasını açar. Fushi kartlarını onun içine yazdığı için önce kurulu olması gerekir.';
+  @override
+  String get onboarding_anki_action_get_anki_desc =>
+      'Anki’nin indirme sayfasını açar. Anki’yi kur ve kart üretirken açık bırak.';
+  @override
+  String get onboarding_anki_action_install_addon_desc =>
+      'Birlikte gelen AnkiConnect eklentisini senin için Anki’ye açar; Fushi onunla konuşmasını buna borçlu. Sonrasında Anki’yi yeniden başlat.';
+  @override
+  String get onboarding_step_anki_action_desc =>
+      'Kart şablonu, alan eşlemesi, ekran görüntüleri ve ses: yani üretilen kartın nasıl göründüğünün ayrıntıları. Yukarıdaki deste ve not türü başlamak için yeterli, bu yüzden buraya yalnızca kartların nasıl kurulduğunu değiştirmek istiyorsan gir.';
+  @override
+  String get onboarding_step_backup_action_desc =>
+      'Bir yedekleme arka ucu seç ve oturum aç ki kitaplığın cihaz kaybını veya değişimini atlatsın.';
+  @override
+  String get onboarding_step_interconnect_action_desc =>
+      'Bu cihazı diğer cihazlarınla eşler; tek bir kitaplığı paylaşır ve ilerlemeyi eşitler.';
+  @override
+  String get onboarding_step_extension_action_desc =>
+      'Tarayıcı uzantısını nasıl kurup Fushi’ye bağlayacağını gösterir; böylece web sayfalarında da kelime arayabilirsin.';
+  @override
+  String get onboarding_step_fonts_action_desc =>
+      'Kendi yazı tipi dosyalarını ekle ve her dilin hangisini kullanacağını seç.';
+  @override
+  String get onboarding_pack_sources_hint =>
+      'Aynı anda GitHub’dan, resmî siteden ve bir yedek aynadan paralel parçalar hâlinde indirilir; her parça sağlama toplamıyla doğrulanır. Fushi kaynakları yol boyunca ölçer ve o an en hızlı olana daha çok parça verir, bu yüzden burada seçilecek bir şey yok.';
 }
 
 // Path: <root>
@@ -132964,14 +133682,6 @@ class _StringsVi extends _StringsEn {
   String get onboarding_anki_mobile_ankiconnect_hint =>
       'Thiết bị này cũng có thể tạo thẻ vào Anki đang chạy trên máy tính cùng mạng: bật AnkiConnect trong cài đặt tạo thẻ và nhập địa chỉ máy tính.';
   @override
-  String get onboarding_anki_fsrs_title => 'Chuyển Anki sang FSRS';
-  @override
-  String get onboarding_anki_fsrs_body =>
-      'Anki tích hợp sẵn FSRS, thuật toán lên lịch tốt hơn nhiều so với SM-2 mặc định 30 năm tuổi: ghi nhớ tốt hơn với ít lần ôn tập hơn. Trong Anki, mở tùy chọn bộ thẻ và bật FSRS (một công tắc áp dụng cho toàn bộ bộ sưu tập). Việc này phải được thực hiện trong chính Anki.';
-  @override
-  String get onboarding_step_pack_browser_action =>
-      'Tải xuống trong trình duyệt';
-  @override
   String get onboarding_anki_setup_android_hint =>
       'Cài đặt AnkiDroid và mở một lần để hoàn tất thiết lập ban đầu. Quay lại Fushi, chạm Cho phép trên hộp thoại quyền xuất hiện khi tạo thẻ đầu tiên - không cần thay đổi cài đặt AnkiDroid.';
   @override
@@ -133488,6 +134198,65 @@ class _StringsVi extends _StringsEn {
   @override
   String get anki_connect_port_auto_fix_none =>
       'Không tìm thấy cổng nào còn trống trên máy này.';
+  @override
+  String get onboarding_action_badge_required => 'Bắt buộc';
+  @override
+  String get onboarding_action_badge_recommended => 'Nên làm';
+  @override
+  String get onboarding_action_badge_optional => 'Tuỳ chọn';
+  @override
+  String get onboarding_pack_action_download_desc =>
+      'Tải toàn bộ gói ở chế độ nền rồi nhập vào. Có thể huỷ bất cứ lúc nào; lần sau sẽ tải tiếp từ chỗ đã dừng.';
+  @override
+  String get onboarding_pack_action_import_existing_desc =>
+      'Gói đã tải xong; thao tác này nhập nó vào. Chọn «Gộp» trong hộp xác nhận thì dữ liệu hiện có của bạn sẽ được giữ nguyên.';
+  @override
+  String get onboarding_pack_action_pick_desc =>
+      'Đã lấy được tệp zip của gói từ nơi khác? Nhập từ ổ đĩa và bỏ qua hoàn toàn phần tải về.';
+  @override
+  String get onboarding_pack_action_website => 'Mở trang tải về trên website';
+  @override
+  String get onboarding_pack_action_website_desc =>
+      'Mở trang chính thức trong trình duyệt. Mục về gói ở đó liệt kê các liên kết theo từng phần để bạn đưa cho trình quản lý tải; xong rồi quay lại đây và dùng «Chọn tệp gói trên máy» để nhập.';
+  @override
+  String get onboarding_pack_action_dictionary_desc =>
+      'Bạn học ngôn ngữ khác ngoài tiếng Nhật? Bỏ qua gói và nhập từ điển cho ngôn ngữ của bạn ở đây.';
+  @override
+  String get onboarding_pack_action_audio_desc =>
+      'Âm thanh phát âm lấy từ đâu. Gói đã bao gồm tiếng Nhật và tiếng Anh; các ngôn ngữ khác thì thêm nguồn trực tuyến ở đây.';
+  @override
+  String get onboarding_anki_action_test_desc =>
+      'Kiểm tra xem Fushi có kết nối được với Anki không và nạp các bộ thẻ cùng loại ghi chú của bạn. Chưa tạo ra thứ gì cả.';
+  @override
+  String get onboarding_anki_action_refresh_desc =>
+      'Nạp lại bộ thẻ và loại ghi chú từ Anki. Dùng sau khi bạn tạo bộ thẻ mới trong Anki.';
+  @override
+  String get onboarding_anki_action_get_ankidroid_desc =>
+      'Mở trang cửa hàng của AnkiDroid. Fushi ghi thẻ vào đó nên phải cài nó trước.';
+  @override
+  String get onboarding_anki_action_get_anki_desc =>
+      'Mở trang tải Anki. Cài Anki và để nó chạy trong lúc bạn tạo thẻ.';
+  @override
+  String get onboarding_anki_action_install_addon_desc =>
+      'Giải nén tiện ích AnkiConnect đi kèm vào Anki giúp bạn — đó chính là thứ cho phép Fushi nói chuyện với Anki. Xong rồi khởi động lại Anki.';
+  @override
+  String get onboarding_step_anki_action_desc =>
+      'Mẫu thẻ, ánh xạ trường, ảnh chụp màn hình và âm thanh: tức là chi tiết về hình hài của tấm thẻ được tạo ra. Bộ thẻ và loại ghi chú ở trên là đủ để bắt đầu, nên chỉ mở phần này khi bạn muốn đổi cách dựng thẻ.';
+  @override
+  String get onboarding_step_backup_action_desc =>
+      'Chọn nơi sao lưu và đăng nhập, để thư viện của bạn sống sót khi mất máy hoặc đổi máy.';
+  @override
+  String get onboarding_step_interconnect_action_desc =>
+      'Ghép nối thiết bị này với các thiết bị khác của bạn để dùng chung một thư viện và đồng bộ tiến độ.';
+  @override
+  String get onboarding_step_extension_action_desc =>
+      'Hướng dẫn cách cài tiện ích trình duyệt và kết nối nó với Fushi, để bạn tra từ ngay trên trang web.';
+  @override
+  String get onboarding_step_fonts_action_desc =>
+      'Thêm tệp phông chữ của riêng bạn và chọn phông cho từng ngôn ngữ.';
+  @override
+  String get onboarding_pack_sources_hint =>
+      'Được tải song song theo từng phần, đồng thời từ GitHub, trang chính thức và một máy chủ gương dự phòng, mỗi phần đều được kiểm tra checksum. Fushi đo tốc độ các nguồn ngay trong lúc tải và giao nhiều phần hơn cho nguồn đang nhanh nhất, nên ở đây không có gì để chọn.';
 }
 
 // Path: <root>
@@ -141438,13 +142207,6 @@ class _StringsZhCn extends _StringsEn {
   String get onboarding_anki_mobile_ankiconnect_hint =>
       '本机也能把卡制进同一局域网里电脑上的 Anki：在制卡设置里开启「改用 AnkiConnect」并填电脑地址。';
   @override
-  String get onboarding_anki_fsrs_title => '把 Anki 算法换成 FSRS';
-  @override
-  String get onboarding_anki_fsrs_body =>
-      'Anki 内置的 FSRS 算法远好于默认的 30 年前的 SM-2：记得更牢、复习量更少。请在 Anki 的 牌组选项 里打开 FSRS 开关（开一次全局生效）。这一步只能在 Anki 内手动完成。';
-  @override
-  String get onboarding_step_pack_browser_action => '浏览器下载';
-  @override
   String get onboarding_anki_setup_android_hint =>
       '安装 AnkiDroid 并打开一次完成初始化。回到 Fushi 首次制卡时，在弹出的授权框里点「允许」即可——不需要去 AnkiDroid 设置里改任何开关。';
   @override
@@ -141916,6 +142678,63 @@ class _StringsZhCn extends _StringsEn {
       'Hibiki 已改用端口 ${port}，但没找到 AnkiConnect 的插件配置。请在 Anki 的「工具 → 插件 → AnkiConnect → 配置」里把 webBindPort 也改成 ${port}，然后重启 Anki。';
   @override
   String get anki_connect_port_auto_fix_none => '本机没有找到空闲端口。';
+  @override
+  String get onboarding_action_badge_required => '必做';
+  @override
+  String get onboarding_action_badge_recommended => '推荐';
+  @override
+  String get onboarding_action_badge_optional => '可选';
+  @override
+  String get onboarding_pack_action_download_desc =>
+      '在后台下载整个推荐包，下完自动进入导入。随时可以取消，下次从断点续传。';
+  @override
+  String get onboarding_pack_action_import_existing_desc =>
+      '包已经下好了，这里直接导入。确认框里选「合并到现有库」不会动你已有的数据。';
+  @override
+  String get onboarding_pack_action_pick_desc =>
+      '已经从别处拿到包的 zip？从硬盘导入，整段下载都可以跳过。';
+  @override
+  String get onboarding_pack_action_website => '在官网下载页打开';
+  @override
+  String get onboarding_pack_action_website_desc =>
+      '在浏览器打开官网。那里的推荐包一节给出可以喂给下载工具的分片直链；下完回到这里，用「选择本地包文件」导入。';
+  @override
+  String get onboarding_pack_action_dictionary_desc =>
+      '学日语以外的语言？跳过推荐包，在这里按语言导入词典。';
+  @override
+  String get onboarding_pack_action_audio_desc =>
+      '发音音频从哪里来。推荐包已经含日语和英语；其它语言在这里加在线来源。';
+  @override
+  String get onboarding_anki_action_test_desc =>
+      '检查 Fushi 能不能连上 Anki，并把你的牌组和笔记类型拉过来。这一步不会创建任何东西。';
+  @override
+  String get onboarding_anki_action_refresh_desc =>
+      '重新从 Anki 拉牌组和笔记类型。在 Anki 里新建了牌组之后点它。';
+  @override
+  String get onboarding_anki_action_get_ankidroid_desc =>
+      '打开 AnkiDroid 的商店页。Fushi 的卡片写进它里面，得先装上。';
+  @override
+  String get onboarding_anki_action_get_anki_desc =>
+      '打开 Anki 的下载页。装好 Anki，制卡时让它开着。';
+  @override
+  String get onboarding_anki_action_install_addon_desc =>
+      '把内置的 AnkiConnect 插件解压进 Anki——Fushi 靠它和 Anki 通话。装完重启 Anki。';
+  @override
+  String get onboarding_step_anki_action_desc =>
+      '卡片模板、字段映射、截图和音频——也就是「做出来的卡长什么样」。上面选好牌组和笔记类型就能开始制卡了，想改卡片怎么做才需要进来。';
+  @override
+  String get onboarding_step_backup_action_desc => '选备份后端并登录，换机器或丢设备时库还在。';
+  @override
+  String get onboarding_step_interconnect_action_desc =>
+      '把这台设备和你的其它设备配对，共享同一个库并同步进度。';
+  @override
+  String get onboarding_step_extension_action_desc =>
+      '告诉你怎么装浏览器扩展并连上 Fushi，之后在网页上也能查词。';
+  @override
+  String get onboarding_step_fonts_action_desc => '导入自己的字体文件，并给每种语言指定用哪个。';
+  @override
+  String get onboarding_pack_sources_hint =>
+      '同时从 GitHub、官网和备用镜像分片并发下载，每片都校验。下载过程中会实测各来源速度，哪家快就多分给哪家，所以这里不用你选。';
 }
 
 // Path: <root>
@@ -149872,13 +150691,6 @@ class _StringsZhHk extends _StringsEn {
   String get onboarding_anki_mobile_ankiconnect_hint =>
       '本機也能把卡製進同一局域網裡電腦上的 Anki：在製卡設定裡開啟「改用 AnkiConnect」並填電腦地址。';
   @override
-  String get onboarding_anki_fsrs_title => '把 Anki 算法換成 FSRS';
-  @override
-  String get onboarding_anki_fsrs_body =>
-      'Anki 內置的 FSRS 算法遠好於預設的 30 年前的 SM-2：記得更牢、復習量更少。請在 Anki 的 牌組選項 裡打開 FSRS 開關（開一次全局生效）。這一步只能在 Anki 內手動完成。';
-  @override
-  String get onboarding_step_pack_browser_action => '瀏覽器下載';
-  @override
   String get onboarding_anki_setup_android_hint =>
       '安裝 AnkiDroid 並打開一次完成初始化。回到 Fushi 首次製卡時，在彈出的授權框裡點「允許」即可——不需要去 AnkiDroid 設定裡改任何開關。';
   @override
@@ -150349,6 +151161,63 @@ class _StringsZhHk extends _StringsEn {
       'Hibiki 已改用連接埠 ${port}，但找不到 AnkiConnect 的外掛設定。請在 Anki 的「工具 → 外掛 → AnkiConnect → 設定」裡把 webBindPort 也改成 ${port}，然後重啟 Anki。';
   @override
   String get anki_connect_port_auto_fix_none => '本機找不到空閒的連接埠。';
+  @override
+  String get onboarding_action_badge_required => '必做';
+  @override
+  String get onboarding_action_badge_recommended => '推薦';
+  @override
+  String get onboarding_action_badge_optional => '可選';
+  @override
+  String get onboarding_pack_action_download_desc =>
+      '在後台下載整個推薦包，下完自動進入匯入。隨時可以取消，下次從斷點續傳。';
+  @override
+  String get onboarding_pack_action_import_existing_desc =>
+      '包已經下好了，這裏直接匯入。確認框裏選「合併到現有庫」不會動你已有的資料。';
+  @override
+  String get onboarding_pack_action_pick_desc =>
+      '已經從別處拿到包的 zip？從硬碟匯入，整段下載都可以跳過。';
+  @override
+  String get onboarding_pack_action_website => '在官網下載頁打開';
+  @override
+  String get onboarding_pack_action_website_desc =>
+      '在瀏覽器打開官網。那裏的推薦包一節給出可以餵給下載工具的分片直連；下完回到這裏，用「選擇本機包檔案」匯入。';
+  @override
+  String get onboarding_pack_action_dictionary_desc =>
+      '學日語以外的語言？跳過推薦包，在這裏按語言匯入詞典。';
+  @override
+  String get onboarding_pack_action_audio_desc =>
+      '發音音訊從哪裏來。推薦包已經含日語和英語；其它語言在這裏加線上來源。';
+  @override
+  String get onboarding_anki_action_test_desc =>
+      '檢查 Fushi 能不能連上 Anki，並把你的牌組和筆記類型拉過來。這一步不會建立任何東西。';
+  @override
+  String get onboarding_anki_action_refresh_desc =>
+      '重新從 Anki 拉牌組和筆記類型。在 Anki 裏新建了牌組之後點它。';
+  @override
+  String get onboarding_anki_action_get_ankidroid_desc =>
+      '打開 AnkiDroid 的商店頁。Fushi 的卡片寫進它裏面，得先裝上。';
+  @override
+  String get onboarding_anki_action_get_anki_desc =>
+      '打開 Anki 的下載頁。裝好 Anki，製卡時讓它開着。';
+  @override
+  String get onboarding_anki_action_install_addon_desc =>
+      '把內建的 AnkiConnect 外掛解壓進 Anki——Fushi 靠它和 Anki 通話。裝完重啟 Anki。';
+  @override
+  String get onboarding_step_anki_action_desc =>
+      '卡片範本、欄位對應、截圖和音訊——也就是「做出來的卡長甚麼樣」。上面選好牌組和筆記類型就能開始製卡了，想改卡片怎麼做才需要進來。';
+  @override
+  String get onboarding_step_backup_action_desc => '選備份後端並登入，換機器或丟裝置時庫還在。';
+  @override
+  String get onboarding_step_interconnect_action_desc =>
+      '把這台裝置和你的其它裝置配對，共用同一個庫並同步進度。';
+  @override
+  String get onboarding_step_extension_action_desc =>
+      '告訴你怎麼裝瀏覽器擴充功能並連上 Fushi，之後在網頁上也能查詞。';
+  @override
+  String get onboarding_step_fonts_action_desc => '匯入自己的字型檔案，並給每種語言指定用哪個。';
+  @override
+  String get onboarding_pack_sources_hint =>
+      '同時從 GitHub、官網和備用鏡像分片並發下載，每片都校驗。下載過程中會實測各來源速度，哪家快就多分給哪家，所以這裏不用你選。';
 }
 
 /// Flat map(s) containing all translations.
@@ -157943,12 +158812,6 @@ extension on _StringsEn {
         return 'Advanced: use AnkiConnect on this device';
       case 'onboarding_anki_mobile_ankiconnect_hint':
         return 'This device can also create cards into Anki running on a computer in the same network: enable AnkiConnect in card creation settings and enter the computer address.';
-      case 'onboarding_anki_fsrs_title':
-        return 'Switch Anki to FSRS';
-      case 'onboarding_anki_fsrs_body':
-        return 'Anki ships with FSRS, a far better scheduler than the 30-year-old SM-2 default: better retention with fewer reviews. In Anki, open deck options and turn on FSRS (one switch covers the whole collection). This must be done inside Anki itself.';
-      case 'onboarding_step_pack_browser_action':
-        return 'Download in browser';
       case 'onboarding_anki_setup_android_hint':
         return 'Install AnkiDroid and open it once to finish its first-run setup. Back in Fushi, tap Allow on the permission dialog that pops up with your first card - no AnkiDroid settings to change.';
       case 'onboarding_anki_install_addon_action':
@@ -158382,6 +159245,48 @@ extension on _StringsEn {
             'Hibiki now uses port ${port}, but the AnkiConnect add-on config was not found. Set webBindPort to ${port} in Anki (Tools -> Add-ons -> AnkiConnect -> Config), then restart Anki.';
       case 'anki_connect_port_auto_fix_none':
         return 'No free port found on this machine.';
+      case 'onboarding_action_badge_required':
+        return 'Required';
+      case 'onboarding_action_badge_recommended':
+        return 'Recommended';
+      case 'onboarding_action_badge_optional':
+        return 'Optional';
+      case 'onboarding_pack_action_download_desc':
+        return 'Downloads the whole pack in the background, then imports it. Cancel anytime; it resumes from where it stopped.';
+      case 'onboarding_pack_action_import_existing_desc':
+        return 'The pack is already downloaded; this imports it. Choose Merge in the confirmation dialog and your existing data is left alone.';
+      case 'onboarding_pack_action_pick_desc':
+        return 'Already got the pack zip from somewhere else? Import it from disk and skip the download entirely.';
+      case 'onboarding_pack_action_website':
+        return 'Open the download page on the website';
+      case 'onboarding_pack_action_website_desc':
+        return 'Opens the official site in your browser. Its pack section lists chunk links you can feed to a download manager; come back afterwards and use Choose a local pack file to import what you got.';
+      case 'onboarding_pack_action_dictionary_desc':
+        return 'Learning a language other than Japanese? Skip the pack and import dictionaries for your own language here instead.';
+      case 'onboarding_pack_action_audio_desc':
+        return 'Where pronunciation audio comes from. The pack already covers Japanese and English; add online sources here for other languages.';
+      case 'onboarding_anki_action_test_desc':
+        return 'Checks that Fushi can reach Anki and loads your decks and note types. Nothing is created yet.';
+      case 'onboarding_anki_action_refresh_desc':
+        return 'Reloads decks and note types from Anki. Use it after creating a new deck inside Anki.';
+      case 'onboarding_anki_action_get_ankidroid_desc':
+        return 'Opens the store page for AnkiDroid. Fushi writes its cards into it, so it has to be installed first.';
+      case 'onboarding_anki_action_get_anki_desc':
+        return 'Opens the Anki download page. Install Anki and keep it running while you make cards.';
+      case 'onboarding_anki_action_install_addon_desc':
+        return 'Unpacks the bundled AnkiConnect add-on into Anki for you, which is what lets Fushi talk to it. Restart Anki afterwards.';
+      case 'onboarding_step_anki_action_desc':
+        return 'Card template, field mapping, screenshots and audio: the details of what a created card looks like. The deck and note type above are enough to start, so open this only if you want to change how cards are built.';
+      case 'onboarding_step_backup_action_desc':
+        return 'Choose a backup backend and sign in, so your library survives a lost or replaced device.';
+      case 'onboarding_step_interconnect_action_desc':
+        return 'Pair this device with your other devices to share one library and keep progress in sync.';
+      case 'onboarding_step_extension_action_desc':
+        return 'Shows how to install the browser extension and connect it to Fushi, so you can look words up on web pages too.';
+      case 'onboarding_step_fonts_action_desc':
+        return 'Add your own font files and pick which one each language uses.';
+      case 'onboarding_pack_sources_hint':
+        return 'Downloaded in parallel chunks from GitHub, the official site and a backup mirror at the same time, each chunk checksummed. Fushi measures the sources as it goes and gives more chunks to whichever is fastest right now, so there is nothing to choose here.';
       default:
         return null;
     }
@@ -165973,12 +166878,6 @@ extension on _StringsAr {
         return 'متقدم: استخدام AnkiConnect على هذا الجهاز';
       case 'onboarding_anki_mobile_ankiconnect_hint':
         return 'يمكن لهذا الجهاز أيضاً إنشاء بطاقات في Anki على جهاز كمبيوتر في نفس الشبكة: فعّل AnkiConnect في إعدادات إنشاء البطاقات وأدخل عنوان الكمبيوتر.';
-      case 'onboarding_anki_fsrs_title':
-        return 'تبديل Anki إلى FSRS';
-      case 'onboarding_anki_fsrs_body':
-        return 'يأتي Anki مع FSRS، وهو مُجدوِل أفضل بكثير من SM-2 الافتراضي القديم: حفظ أفضل بمراجعات أقل. في Anki، افتح خيارات المجموعة وفعّل FSRS (مفتاح واحد يغطي المجموعة بالكامل). يجب فعل ذلك من داخل Anki نفسه.';
-      case 'onboarding_step_pack_browser_action':
-        return 'تحميل في المتصفح';
       case 'onboarding_anki_setup_android_hint':
         return 'ثبّت AnkiDroid وافتحه مرة واحدة لإكمال الإعداد الأولي. عُد إلى Fushi واضغط على السماح في نافذة الإذن التي تظهر مع أول بطاقة - لا حاجة لتغيير إعدادات AnkiDroid.';
       case 'onboarding_anki_install_addon_action':
@@ -166411,6 +167310,48 @@ extension on _StringsAr {
             'يستخدم Hibiki الآن المنفذ ${port}، لكن لم يُعثر على إعدادات إضافة AnkiConnect. اضبط webBindPort على ${port} في Anki (أدوات ← الإضافات ← AnkiConnect ← إعداد) ثم أعد تشغيل Anki.';
       case 'anki_connect_port_auto_fix_none':
         return 'لم يُعثر على أي منفذ حر على هذا الجهاز.';
+      case 'onboarding_action_badge_required':
+        return 'مطلوب';
+      case 'onboarding_action_badge_recommended':
+        return 'موصى به';
+      case 'onboarding_action_badge_optional':
+        return 'اختياري';
+      case 'onboarding_pack_action_download_desc':
+        return 'ينزّل الحزمة كاملة في الخلفية ثم يستوردها. يمكنك الإلغاء في أي وقت، وسيُستأنف التنزيل من حيث توقّف.';
+      case 'onboarding_pack_action_import_existing_desc':
+        return 'الحزمة منزَّلة بالفعل، وهذا يستوردها. اختر «دمج» في نافذة التأكيد لتبقى بياناتك الحالية كما هي.';
+      case 'onboarding_pack_action_pick_desc':
+        return 'حصلت على ملف zip للحزمة من مكان آخر؟ استوردها من القرص وتخطَّ التنزيل بالكامل.';
+      case 'onboarding_pack_action_website':
+        return 'فتح صفحة التنزيل في الموقع';
+      case 'onboarding_pack_action_website_desc':
+        return 'يفتح الموقع الرسمي في متصفحك. يوفّر قسم الحزمة روابط أجزاء يمكن تمريرها إلى مدير تنزيل، ثم عد إلى هنا واستخدم «اختيار ملف حزمة محلي» لاستيراد ما حصلت عليه.';
+      case 'onboarding_pack_action_dictionary_desc':
+        return 'تتعلّم لغة غير اليابانية؟ تخطَّ الحزمة واستورد هنا قواميس لغتك.';
+      case 'onboarding_pack_action_audio_desc':
+        return 'مصدر مقاطع النطق الصوتية. الحزمة تغطّي اليابانية والإنجليزية بالفعل؛ أضف هنا مصادر عبر الإنترنت للغات الأخرى.';
+      case 'onboarding_anki_action_test_desc':
+        return 'يتحقّق من قدرة Fushi على الاتصال بـ Anki ويحمّل مجموعاتك وأنواع الملاحظات. لا يُنشأ أي شيء بعد.';
+      case 'onboarding_anki_action_refresh_desc':
+        return 'يعيد تحميل المجموعات وأنواع الملاحظات من Anki. استخدمه بعد إنشاء مجموعة جديدة داخل Anki.';
+      case 'onboarding_anki_action_get_ankidroid_desc':
+        return 'يفتح صفحة AnkiDroid في المتجر. يكتب Fushi بطاقاته داخله، لذا يجب تثبيته أولاً.';
+      case 'onboarding_anki_action_get_anki_desc':
+        return 'يفتح صفحة تنزيل Anki. ثبّت Anki وأبقِه مفتوحًا أثناء إنشاء البطاقات.';
+      case 'onboarding_anki_action_install_addon_desc':
+        return 'يفكّ ضغط إضافة AnkiConnect المرفقة داخل Anki، وهي ما يتيح لـ Fushi التخاطب معه. أعد تشغيل Anki بعد ذلك.';
+      case 'onboarding_step_anki_action_desc':
+        return 'قالب البطاقة وربط الحقول ولقطات الشاشة والصوت: أي تفاصيل شكل البطاقة الناتجة. تكفي المجموعة ونوع الملاحظة أعلاه للبدء، فلا تفتح هذا إلا إذا أردت تغيير طريقة بناء البطاقات.';
+      case 'onboarding_step_backup_action_desc':
+        return 'اختر خدمة نسخ احتياطي وسجّل الدخول، لتبقى مكتبتك سليمة عند فقدان الجهاز أو استبداله.';
+      case 'onboarding_step_interconnect_action_desc':
+        return 'يقرن هذا الجهاز بأجهزتك الأخرى لمشاركة مكتبة واحدة وإبقاء التقدّم متزامنًا.';
+      case 'onboarding_step_extension_action_desc':
+        return 'يوضّح كيفية تثبيت إضافة المتصفح وربطها بـ Fushi، لتتمكّن من البحث عن الكلمات في صفحات الويب أيضًا.';
+      case 'onboarding_step_fonts_action_desc':
+        return 'أضف ملفات خطوطك الخاصة واختر الخط الذي تستخدمه كل لغة.';
+      case 'onboarding_pack_sources_hint':
+        return 'يُنزَّل على أجزاء متوازية من GitHub والموقع الرسمي ومرآة احتياطية في آنٍ واحد، مع التحقّق من كل جزء. يقيس Fushi سرعة المصادر أثناء العمل ويمنح الأسرع في تلك اللحظة عددًا أكبر من الأجزاء، فلا شيء تختاره هنا.';
       default:
         return null;
     }
@@ -174041,12 +174982,6 @@ extension on _StringsDe {
         return 'Erweitert: AnkiConnect auf diesem Gerät verwenden';
       case 'onboarding_anki_mobile_ankiconnect_hint':
         return 'Dieses Gerät kann auch Karten in Anki erstellen, das auf einem Computer im selben Netzwerk läuft: Aktivieren Sie AnkiConnect in den Kartenerstellungs-Einstellungen und geben Sie die Computeradresse ein.';
-      case 'onboarding_anki_fsrs_title':
-        return 'Anki auf FSRS umstellen';
-      case 'onboarding_anki_fsrs_body':
-        return 'Anki enthält FSRS, einen weit besseren Planer als den 30 Jahre alten SM-2-Standard: bessere Behaltensrate mit weniger Wiederholungen. Öffnen Sie in Anki die Stapeloptionen und aktivieren Sie FSRS (ein Schalter gilt für die gesamte Sammlung). Dies muss direkt in Anki erfolgen.';
-      case 'onboarding_step_pack_browser_action':
-        return 'Im Browser herunterladen';
       case 'onboarding_anki_setup_android_hint':
         return 'Installieren Sie AnkiDroid und öffnen Sie es einmal, um die Ersteinrichtung abzuschließen. Tippen Sie zurück in Fushi bei Ihrer ersten Karte im Berechtigungsdialog auf „Zulassen" – keine AnkiDroid-Einstellungen müssen geändert werden.';
       case 'onboarding_anki_install_addon_action':
@@ -174483,6 +175418,48 @@ extension on _StringsDe {
             'Hibiki nutzt jetzt Port ${port}, aber die AnkiConnect-Add-on-Konfiguration wurde nicht gefunden. Setze webBindPort in Anki (Werkzeuge → Add-ons → AnkiConnect → Konfiguration) ebenfalls auf ${port} und starte Anki neu.';
       case 'anki_connect_port_auto_fix_none':
         return 'Auf diesem Rechner wurde kein freier Port gefunden.';
+      case 'onboarding_action_badge_required':
+        return 'Erforderlich';
+      case 'onboarding_action_badge_recommended':
+        return 'Empfohlen';
+      case 'onboarding_action_badge_optional':
+        return 'Optional';
+      case 'onboarding_pack_action_download_desc':
+        return 'Lädt das gesamte Paket im Hintergrund herunter und importiert es anschließend. Jederzeit abbrechbar; der Download wird an der Abbruchstelle fortgesetzt.';
+      case 'onboarding_pack_action_import_existing_desc':
+        return 'Das Paket ist bereits heruntergeladen; hier wird es importiert. Wähle im Bestätigungsdialog „Zusammenführen“, dann bleiben deine vorhandenen Daten unangetastet.';
+      case 'onboarding_pack_action_pick_desc':
+        return 'Du hast das Paket-ZIP bereits anderweitig bekommen? Importiere es von der Festplatte und überspringe den Download komplett.';
+      case 'onboarding_pack_action_website':
+        return 'Download-Seite der Website öffnen';
+      case 'onboarding_pack_action_website_desc':
+        return 'Öffnet die offizielle Website im Browser. Im Paket-Abschnitt findest du Teil-Links, die du einem Downloadmanager übergeben kannst; komm danach hierher zurück und importiere das Ergebnis über „Lokale Paketdatei wählen“.';
+      case 'onboarding_pack_action_dictionary_desc':
+        return 'Du lernst eine andere Sprache als Japanisch? Überspring das Paket und importiere hier stattdessen Wörterbücher für deine Sprache.';
+      case 'onboarding_pack_action_audio_desc':
+        return 'Woher die Aussprache-Audios kommen. Japanisch und Englisch deckt das Paket bereits ab; für andere Sprachen fügst du hier Online-Quellen hinzu.';
+      case 'onboarding_anki_action_test_desc':
+        return 'Prüft, ob Fushi Anki erreicht, und lädt deine Stapel und Notiztypen. Es wird noch nichts angelegt.';
+      case 'onboarding_anki_action_refresh_desc':
+        return 'Lädt Stapel und Notiztypen erneut aus Anki. Nutze das, nachdem du in Anki einen neuen Stapel angelegt hast.';
+      case 'onboarding_anki_action_get_ankidroid_desc':
+        return 'Öffnet die Store-Seite von AnkiDroid. Fushi schreibt seine Karten dorthin, es muss also zuerst installiert sein.';
+      case 'onboarding_anki_action_get_anki_desc':
+        return 'Öffnet die Download-Seite von Anki. Installiere Anki und lass es beim Kartenerstellen laufen.';
+      case 'onboarding_anki_action_install_addon_desc':
+        return 'Entpackt das mitgelieferte AnkiConnect-Add-on für dich nach Anki – darüber spricht Fushi mit Anki. Starte Anki danach neu.';
+      case 'onboarding_step_anki_action_desc':
+        return 'Kartenvorlage, Feldzuordnung, Screenshots und Audio: die Details dazu, wie eine erzeugte Karte aussieht. Stapel und Notiztyp oben genügen zum Loslegen – öffne das hier nur, wenn du ändern willst, wie Karten gebaut werden.';
+      case 'onboarding_step_backup_action_desc':
+        return 'Wähle ein Backup-Backend und melde dich an, damit deine Bibliothek einen Geräteverlust oder -wechsel übersteht.';
+      case 'onboarding_step_interconnect_action_desc':
+        return 'Koppelt dieses Gerät mit deinen anderen Geräten, um eine Bibliothek zu teilen und den Fortschritt synchron zu halten.';
+      case 'onboarding_step_extension_action_desc':
+        return 'Zeigt, wie du die Browser-Erweiterung installierst und mit Fushi verbindest, damit du auch auf Webseiten nachschlagen kannst.';
+      case 'onboarding_step_fonts_action_desc':
+        return 'Eigene Schriftdateien hinzufügen und festlegen, welche Schrift jede Sprache verwendet.';
+      case 'onboarding_pack_sources_hint':
+        return 'Wird parallel in Teilstücken gleichzeitig von GitHub, der offiziellen Website und einem Ersatz-Spiegel geladen, jedes Teilstück mit Prüfsumme. Fushi misst die Quellen währenddessen und gibt der aktuell schnellsten mehr Teilstücke – hier gibt es also nichts auszuwählen.';
       default:
         return null;
     }
@@ -182105,12 +183082,6 @@ extension on _StringsEs {
         return 'Avanzado: usar AnkiConnect en este dispositivo';
       case 'onboarding_anki_mobile_ankiconnect_hint':
         return 'Este dispositivo también puede crear tarjetas en Anki ejecutándose en una computadora en la misma red: active AnkiConnect en ajustes de creación de tarjetas e introduzca la dirección de la computadora.';
-      case 'onboarding_anki_fsrs_title':
-        return 'Cambiar Anki a FSRS';
-      case 'onboarding_anki_fsrs_body':
-        return 'Anki viene con FSRS, un programador mucho mejor que el SM-2 predeterminado de hace 30 años: mejor retención con menos revisiones. En Anki, abra opciones de mazo y active FSRS (un interruptor cubre toda la colección). Esto debe hacerse dentro de Anki.';
-      case 'onboarding_step_pack_browser_action':
-        return 'Descargar en navegador';
       case 'onboarding_anki_setup_android_hint':
         return 'Instale AnkiDroid y ábralo una vez para completar su configuración inicial. De vuelta en Fushi, toque Permitir en el diálogo de permisos que aparece con su primera tarjeta — no hay ajustes de AnkiDroid que cambiar.';
       case 'onboarding_anki_install_addon_action':
@@ -182547,6 +183518,48 @@ extension on _StringsEs {
             'Hibiki ahora usa el puerto ${port}, pero no se encontró la configuración del complemento AnkiConnect. Pon webBindPort en ${port} dentro de Anki (Herramientas → Complementos → AnkiConnect → Configuración) y reinicia Anki.';
       case 'anki_connect_port_auto_fix_none':
         return 'No se encontró ningún puerto libre en este equipo.';
+      case 'onboarding_action_badge_required':
+        return 'Obligatorio';
+      case 'onboarding_action_badge_recommended':
+        return 'Recomendado';
+      case 'onboarding_action_badge_optional':
+        return 'Opcional';
+      case 'onboarding_pack_action_download_desc':
+        return 'Descarga todo el paquete en segundo plano y luego lo importa. Puedes cancelar cuando quieras; la próxima vez continúa desde donde se detuvo.';
+      case 'onboarding_pack_action_import_existing_desc':
+        return 'El paquete ya está descargado; esto lo importa. Elige «Combinar» en el diálogo de confirmación y tus datos actuales quedarán intactos.';
+      case 'onboarding_pack_action_pick_desc':
+        return '¿Ya conseguiste el zip del paquete por otro lado? Impórtalo desde el disco y sáltate la descarga por completo.';
+      case 'onboarding_pack_action_website':
+        return 'Abrir la página de descarga del sitio';
+      case 'onboarding_pack_action_website_desc':
+        return 'Abre el sitio oficial en tu navegador. Su sección de paquete lista enlaces por fragmentos que puedes pasar a un gestor de descargas; vuelve después aquí y usa «Elegir un archivo de paquete local» para importar lo que obtuviste.';
+      case 'onboarding_pack_action_dictionary_desc':
+        return '¿Aprendes un idioma distinto del japonés? Sáltate el paquete e importa aquí diccionarios de tu propio idioma.';
+      case 'onboarding_pack_action_audio_desc':
+        return 'De dónde sale el audio de pronunciación. El paquete ya cubre japonés e inglés; añade aquí fuentes en línea para otros idiomas.';
+      case 'onboarding_anki_action_test_desc':
+        return 'Comprueba que Fushi puede conectarse con Anki y carga tus mazos y tipos de nota. Todavía no se crea nada.';
+      case 'onboarding_anki_action_refresh_desc':
+        return 'Vuelve a cargar mazos y tipos de nota desde Anki. Úsalo después de crear un mazo nuevo dentro de Anki.';
+      case 'onboarding_anki_action_get_ankidroid_desc':
+        return 'Abre la página de la tienda de AnkiDroid. Fushi escribe ahí sus tarjetas, así que hay que instalarlo primero.';
+      case 'onboarding_anki_action_get_anki_desc':
+        return 'Abre la página de descarga de Anki. Instala Anki y déjalo abierto mientras creas tarjetas.';
+      case 'onboarding_anki_action_install_addon_desc':
+        return 'Descomprime por ti el complemento AnkiConnect incluido dentro de Anki, que es lo que permite a Fushi comunicarse con él. Reinicia Anki después.';
+      case 'onboarding_step_anki_action_desc':
+        return 'Plantilla de tarjeta, asignación de campos, capturas y audio: los detalles de qué aspecto tiene una tarjeta creada. Con el mazo y el tipo de nota de arriba ya puedes empezar, así que abre esto solo si quieres cambiar cómo se construyen las tarjetas.';
+      case 'onboarding_step_backup_action_desc':
+        return 'Elige un servicio de copia de seguridad e inicia sesión, para que tu biblioteca sobreviva a la pérdida o el cambio de dispositivo.';
+      case 'onboarding_step_interconnect_action_desc':
+        return 'Empareja este dispositivo con tus otros dispositivos para compartir una misma biblioteca y mantener el progreso sincronizado.';
+      case 'onboarding_step_extension_action_desc':
+        return 'Muestra cómo instalar la extensión de navegador y conectarla con Fushi, para poder buscar palabras también en páginas web.';
+      case 'onboarding_step_fonts_action_desc':
+        return 'Añade tus propios archivos de fuente y elige cuál usa cada idioma.';
+      case 'onboarding_pack_sources_hint':
+        return 'Se descarga en fragmentos paralelos desde GitHub, el sitio oficial y un espejo de respaldo a la vez, con suma de verificación en cada fragmento. Fushi mide las fuentes sobre la marcha y da más fragmentos a la que sea más rápida en ese momento, así que aquí no hay nada que elegir.';
       default:
         return null;
     }
@@ -190177,12 +191190,6 @@ extension on _StringsFr {
         return 'Avancé : utiliser AnkiConnect sur cet appareil';
       case 'onboarding_anki_mobile_ankiconnect_hint':
         return 'Cet appareil peut aussi créer des cartes dans Anki sur un ordinateur du même réseau : activez AnkiConnect dans les paramètres de création de cartes et entrez l\'adresse de l\'ordinateur.';
-      case 'onboarding_anki_fsrs_title':
-        return 'Passer Anki à FSRS';
-      case 'onboarding_anki_fsrs_body':
-        return 'Anki est livré avec FSRS, un planificateur bien meilleur que le SM-2 par défaut vieux de 30 ans : meilleure rétention avec moins de révisions. Dans Anki, ouvrez les options du paquet et activez FSRS (un seul interrupteur couvre toute la collection). Cela doit être fait dans Anki même.';
-      case 'onboarding_step_pack_browser_action':
-        return 'Télécharger dans le navigateur';
       case 'onboarding_anki_setup_android_hint':
         return 'Installez AnkiDroid et ouvrez-le une fois pour terminer sa configuration initiale. De retour dans Fushi, appuyez sur Autoriser dans la boîte de dialogue de permission qui apparaît avec votre première carte — aucun paramètre AnkiDroid à changer.';
       case 'onboarding_anki_install_addon_action':
@@ -190619,6 +191626,48 @@ extension on _StringsFr {
             'Hibiki utilise désormais le port ${port}, mais la configuration du module AnkiConnect est introuvable. Définissez webBindPort sur ${port} dans Anki (Outils → Modules complémentaires → AnkiConnect → Configuration), puis redémarrez Anki.';
       case 'anki_connect_port_auto_fix_none':
         return 'Aucun port libre trouvé sur cette machine.';
+      case 'onboarding_action_badge_required':
+        return 'Requis';
+      case 'onboarding_action_badge_recommended':
+        return 'Recommandé';
+      case 'onboarding_action_badge_optional':
+        return 'Facultatif';
+      case 'onboarding_pack_action_download_desc':
+        return 'Télécharge tout le pack en arrière-plan, puis l’importe. Annulable à tout moment ; la reprise repart du point d’arrêt.';
+      case 'onboarding_pack_action_import_existing_desc':
+        return 'Le pack est déjà téléchargé ; ceci l’importe. Choisissez « Fusionner » dans la boîte de confirmation et vos données existantes ne seront pas touchées.';
+      case 'onboarding_pack_action_pick_desc':
+        return 'Vous avez déjà récupéré le zip du pack ailleurs ? Importez-le depuis le disque et sautez complètement le téléchargement.';
+      case 'onboarding_pack_action_website':
+        return 'Ouvrir la page de téléchargement du site';
+      case 'onboarding_pack_action_website_desc':
+        return 'Ouvre le site officiel dans votre navigateur. Sa section pack liste des liens par morceaux que vous pouvez donner à un gestionnaire de téléchargement ; revenez ensuite ici et utilisez « Choisir un fichier de pack local » pour importer ce que vous avez obtenu.';
+      case 'onboarding_pack_action_dictionary_desc':
+        return 'Vous apprenez une autre langue que le japonais ? Passez le pack et importez ici les dictionnaires de votre langue.';
+      case 'onboarding_pack_action_audio_desc':
+        return 'D’où viennent les audios de prononciation. Le pack couvre déjà le japonais et l’anglais ; ajoutez ici des sources en ligne pour les autres langues.';
+      case 'onboarding_anki_action_test_desc':
+        return 'Vérifie que Fushi joint bien Anki et charge vos paquets et types de notes. Rien n’est encore créé.';
+      case 'onboarding_anki_action_refresh_desc':
+        return 'Recharge les paquets et types de notes depuis Anki. À utiliser après avoir créé un paquet dans Anki.';
+      case 'onboarding_anki_action_get_ankidroid_desc':
+        return 'Ouvre la page du store d’AnkiDroid. Fushi y écrit ses cartes, il doit donc être installé d’abord.';
+      case 'onboarding_anki_action_get_anki_desc':
+        return 'Ouvre la page de téléchargement d’Anki. Installez Anki et laissez-le ouvert pendant la création de cartes.';
+      case 'onboarding_anki_action_install_addon_desc':
+        return 'Décompresse pour vous le module AnkiConnect fourni dans Anki ; c’est lui qui permet à Fushi de lui parler. Redémarrez Anki ensuite.';
+      case 'onboarding_step_anki_action_desc':
+        return 'Modèle de carte, correspondance des champs, captures et audio : les détails de l’apparence d’une carte créée. Le paquet et le type de note ci-dessus suffisent pour commencer, n’ouvrez ceci que si vous voulez changer la façon dont les cartes sont fabriquées.';
+      case 'onboarding_step_backup_action_desc':
+        return 'Choisissez un service de sauvegarde et connectez-vous, pour que votre bibliothèque survive à la perte ou au remplacement d’un appareil.';
+      case 'onboarding_step_interconnect_action_desc':
+        return 'Associe cet appareil à vos autres appareils pour partager une même bibliothèque et garder la progression synchronisée.';
+      case 'onboarding_step_extension_action_desc':
+        return 'Montre comment installer l’extension de navigateur et la connecter à Fushi, pour pouvoir aussi chercher des mots sur les pages web.';
+      case 'onboarding_step_fonts_action_desc':
+        return 'Ajoutez vos propres fichiers de police et choisissez celle utilisée par chaque langue.';
+      case 'onboarding_pack_sources_hint':
+        return 'Téléchargé en morceaux parallèles depuis GitHub, le site officiel et un miroir de secours à la fois, chaque morceau vérifié par somme de contrôle. Fushi mesure les sources au fil de l’eau et donne plus de morceaux à la plus rapide du moment ; il n’y a donc rien à choisir ici.';
       default:
         return null;
     }
@@ -198224,12 +199273,6 @@ extension on _StringsId {
         return 'Lanjutan: gunakan AnkiConnect di perangkat ini';
       case 'onboarding_anki_mobile_ankiconnect_hint':
         return 'Perangkat ini juga bisa membuat kartu ke Anki yang berjalan di komputer dalam jaringan yang sama: aktifkan AnkiConnect di pengaturan pembuatan kartu dan masukkan alamat komputer.';
-      case 'onboarding_anki_fsrs_title':
-        return 'Beralih Anki ke FSRS';
-      case 'onboarding_anki_fsrs_body':
-        return 'Anki dilengkapi FSRS, penjadwal yang jauh lebih baik dari default SM-2 berusia 30 tahun: retensi lebih baik dengan ulasan lebih sedikit. Di Anki, buka opsi dek dan aktifkan FSRS (satu sakelar mencakup seluruh koleksi). Ini harus dilakukan di dalam Anki sendiri.';
-      case 'onboarding_step_pack_browser_action':
-        return 'Unduh di browser';
       case 'onboarding_anki_setup_android_hint':
         return 'Instal AnkiDroid dan buka sekali untuk menyelesaikan pengaturan awalnya. Kembali di Fushi, ketuk Izinkan pada dialog izin yang muncul saat kartu pertama Anda - tidak perlu mengubah pengaturan AnkiDroid.';
       case 'onboarding_anki_install_addon_action':
@@ -198663,6 +199706,48 @@ extension on _StringsId {
             'Hibiki kini memakai port ${port}, tetapi konfigurasi add-on AnkiConnect tidak ditemukan. Setel webBindPort ke ${port} di Anki (Alat → Add-on → AnkiConnect → Konfigurasi), lalu mulai ulang Anki.';
       case 'anki_connect_port_auto_fix_none':
         return 'Tidak ditemukan port kosong di komputer ini.';
+      case 'onboarding_action_badge_required':
+        return 'Wajib';
+      case 'onboarding_action_badge_recommended':
+        return 'Disarankan';
+      case 'onboarding_action_badge_optional':
+        return 'Opsional';
+      case 'onboarding_pack_action_download_desc':
+        return 'Mengunduh seluruh paket di latar belakang, lalu mengimpornya. Bisa dibatalkan kapan saja; berikutnya dilanjutkan dari titik terakhir.';
+      case 'onboarding_pack_action_import_existing_desc':
+        return 'Paket sudah terunduh; tombol ini mengimpornya. Pilih «Gabungkan» pada dialog konfirmasi agar data yang sudah ada tidak tersentuh.';
+      case 'onboarding_pack_action_pick_desc':
+        return 'Sudah punya zip paketnya dari tempat lain? Impor dari disk dan lewati proses unduh sepenuhnya.';
+      case 'onboarding_pack_action_website':
+        return 'Buka halaman unduh di situs web';
+      case 'onboarding_pack_action_website_desc':
+        return 'Membuka situs resmi di peramban. Bagian paket di sana memuat tautan per potongan yang bisa diberikan ke pengelola unduhan; setelah itu kembali ke sini dan gunakan «Pilih berkas paket lokal» untuk mengimpor hasilnya.';
+      case 'onboarding_pack_action_dictionary_desc':
+        return 'Sedang belajar bahasa selain Jepang? Lewati paketnya dan impor kamus untuk bahasamu sendiri di sini.';
+      case 'onboarding_pack_action_audio_desc':
+        return 'Dari mana audio pelafalan berasal. Paket sudah mencakup bahasa Jepang dan Inggris; untuk bahasa lain tambahkan sumber daring di sini.';
+      case 'onboarding_anki_action_test_desc':
+        return 'Memeriksa apakah Fushi bisa menghubungi Anki dan memuat dek serta jenis catatanmu. Belum ada yang dibuat.';
+      case 'onboarding_anki_action_refresh_desc':
+        return 'Memuat ulang dek dan jenis catatan dari Anki. Gunakan setelah membuat dek baru di dalam Anki.';
+      case 'onboarding_anki_action_get_ankidroid_desc':
+        return 'Membuka halaman toko AnkiDroid. Fushi menulis kartunya ke sana, jadi harus dipasang lebih dulu.';
+      case 'onboarding_anki_action_get_anki_desc':
+        return 'Membuka halaman unduh Anki. Pasang Anki dan biarkan tetap berjalan selagi kamu membuat kartu.';
+      case 'onboarding_anki_action_install_addon_desc':
+        return 'Mengekstrak add-on AnkiConnect bawaan ke dalam Anki untukmu; itulah yang membuat Fushi bisa berbicara dengannya. Mulai ulang Anki setelahnya.';
+      case 'onboarding_step_anki_action_desc':
+        return 'Templat kartu, pemetaan bidang, tangkapan layar, dan audio: yaitu rincian seperti apa kartu yang dihasilkan. Dek dan jenis catatan di atas sudah cukup untuk mulai, jadi buka ini hanya jika kamu ingin mengubah cara kartu disusun.';
+      case 'onboarding_step_backup_action_desc':
+        return 'Pilih backend cadangan dan masuk, supaya pustakamu selamat saat perangkat hilang atau diganti.';
+      case 'onboarding_step_interconnect_action_desc':
+        return 'Memasangkan perangkat ini dengan perangkatmu yang lain untuk berbagi satu pustaka dan menyelaraskan progres.';
+      case 'onboarding_step_extension_action_desc':
+        return 'Menunjukkan cara memasang ekstensi peramban dan menghubungkannya ke Fushi, supaya kamu juga bisa mencari kata di halaman web.';
+      case 'onboarding_step_fonts_action_desc':
+        return 'Tambahkan berkas fonmu sendiri dan pilih fon yang dipakai tiap bahasa.';
+      case 'onboarding_pack_sources_hint':
+        return 'Diunduh dalam potongan paralel dari GitHub, situs resmi, dan satu cermin cadangan sekaligus, tiap potongan diperiksa checksum-nya. Fushi mengukur kecepatan sumber sambil berjalan dan memberi lebih banyak potongan ke yang tercepat saat itu, jadi tidak ada yang perlu dipilih di sini.';
       default:
         return null;
     }
@@ -206287,12 +207372,6 @@ extension on _StringsIt {
         return 'Avanzato: usa AnkiConnect su questo dispositivo';
       case 'onboarding_anki_mobile_ankiconnect_hint':
         return 'Questo dispositivo può anche creare carte in Anki su un computer nella stessa rete: abilita AnkiConnect nelle impostazioni di creazione carte e inserisci l\'indirizzo del computer.';
-      case 'onboarding_anki_fsrs_title':
-        return 'Passa ad FSRS in Anki';
-      case 'onboarding_anki_fsrs_body':
-        return 'Anki include FSRS, uno scheduler molto migliore rispetto al vecchio SM-2 predefinito di 30 anni: migliore ritenzione con meno revisioni. In Anki, apri le opzioni del mazzo e attiva FSRS (un interruttore copre l\'intera collezione). Questo deve essere fatto dentro Anki stesso.';
-      case 'onboarding_step_pack_browser_action':
-        return 'Scarica nel browser';
       case 'onboarding_anki_setup_android_hint':
         return 'Installa AnkiDroid e aprilo una volta per completare la configurazione iniziale. Tornando in Fushi, tocca Consenti nella finestra di permesso che appare con la prima carta — nessuna impostazione di AnkiDroid da cambiare.';
       case 'onboarding_anki_install_addon_action':
@@ -206728,6 +207807,48 @@ extension on _StringsIt {
             'Hibiki ora usa la porta ${port}, ma la configurazione del componente aggiuntivo AnkiConnect non è stata trovata. Imposta webBindPort su ${port} in Anki (Strumenti → Componenti aggiuntivi → AnkiConnect → Configurazione) e riavvia Anki.';
       case 'anki_connect_port_auto_fix_none':
         return 'Nessuna porta libera trovata su questo computer.';
+      case 'onboarding_action_badge_required':
+        return 'Obbligatorio';
+      case 'onboarding_action_badge_recommended':
+        return 'Consigliato';
+      case 'onboarding_action_badge_optional':
+        return 'Facoltativo';
+      case 'onboarding_pack_action_download_desc':
+        return 'Scarica l’intero pacchetto in background e poi lo importa. Puoi annullare in qualsiasi momento; la volta dopo riprende dal punto in cui si era fermato.';
+      case 'onboarding_pack_action_import_existing_desc':
+        return 'Il pacchetto è già scaricato; qui viene importato. Scegli «Unisci» nella finestra di conferma e i dati esistenti resteranno intatti.';
+      case 'onboarding_pack_action_pick_desc':
+        return 'Hai già preso lo zip del pacchetto da un’altra parte? Importalo dal disco e salta del tutto il download.';
+      case 'onboarding_pack_action_website':
+        return 'Apri la pagina di download del sito';
+      case 'onboarding_pack_action_website_desc':
+        return 'Apre il sito ufficiale nel browser. La sezione dedicata al pacchetto elenca link a spezzoni che puoi passare a un download manager; poi torna qui e usa «Scegli un file pacchetto locale» per importare quello che hai ottenuto.';
+      case 'onboarding_pack_action_dictionary_desc':
+        return 'Stai studiando una lingua diversa dal giapponese? Salta il pacchetto e importa qui i dizionari della tua lingua.';
+      case 'onboarding_pack_action_audio_desc':
+        return 'Da dove arriva l’audio della pronuncia. Il pacchetto copre già giapponese e inglese; per le altre lingue aggiungi qui le sorgenti online.';
+      case 'onboarding_anki_action_test_desc':
+        return 'Verifica che Fushi riesca a raggiungere Anki e carica i tuoi mazzi e tipi di nota. Per ora non viene creato nulla.';
+      case 'onboarding_anki_action_refresh_desc':
+        return 'Ricarica mazzi e tipi di nota da Anki. Usalo dopo aver creato un nuovo mazzo dentro Anki.';
+      case 'onboarding_anki_action_get_ankidroid_desc':
+        return 'Apre la pagina dello store di AnkiDroid. Fushi ci scrive dentro le sue carte, quindi va installato prima.';
+      case 'onboarding_anki_action_get_anki_desc':
+        return 'Apre la pagina di download di Anki. Installa Anki e tienilo aperto mentre crei le carte.';
+      case 'onboarding_anki_action_install_addon_desc':
+        return 'Estrae per te il componente aggiuntivo AnkiConnect incluso dentro Anki: è ciò che permette a Fushi di parlarci. Al termine riavvia Anki.';
+      case 'onboarding_step_anki_action_desc':
+        return 'Modello di carta, mappatura dei campi, screenshot e audio: i dettagli di come appare una carta creata. Il mazzo e il tipo di nota qui sopra bastano per iniziare, quindi apri questa sezione solo se vuoi cambiare come vengono costruite le carte.';
+      case 'onboarding_step_backup_action_desc':
+        return 'Scegli un servizio di backup e accedi, così la tua libreria sopravvive alla perdita o alla sostituzione del dispositivo.';
+      case 'onboarding_step_interconnect_action_desc':
+        return 'Associa questo dispositivo agli altri tuoi dispositivi per condividere un’unica libreria e mantenere sincronizzati i progressi.';
+      case 'onboarding_step_extension_action_desc':
+        return 'Mostra come installare l’estensione del browser e collegarla a Fushi, così puoi cercare le parole anche nelle pagine web.';
+      case 'onboarding_step_fonts_action_desc':
+        return 'Aggiungi i tuoi file di font e scegli quale usare per ciascuna lingua.';
+      case 'onboarding_pack_sources_hint':
+        return 'Scaricato in spezzoni paralleli contemporaneamente da GitHub, dal sito ufficiale e da un mirror di riserva, con checksum su ogni spezzone. Fushi misura le sorgenti strada facendo e assegna più spezzoni a quella più veloce in quel momento, quindi qui non c’è nulla da scegliere.';
       default:
         return null;
     }
@@ -214289,12 +215410,6 @@ extension on _StringsJa {
         return '上級: このデバイスでAnkiConnectを使用';
       case 'onboarding_anki_mobile_ankiconnect_hint':
         return 'このデバイスから同じネットワーク上のパソコンで動作しているAnkiにカードを作成することもできます。カード作成設定でAnkiConnectを有効にし、パソコンのアドレスを入力してください。';
-      case 'onboarding_anki_fsrs_title':
-        return 'AnkiをFSRSに切り替え';
-      case 'onboarding_anki_fsrs_body':
-        return 'AnkiにはFSRSが搭載されており、30年前のSM-2デフォルトよりもはるかに優れたスケジューラーです。少ないレビューでより良い記憶定着が得られます。Ankiでデッキオプションを開き、FSRSをオンにしてください（1つのスイッチでコレクション全体に適用されます）。これはAnki内で行う必要があります。';
-      case 'onboarding_step_pack_browser_action':
-        return 'ブラウザでダウンロード';
       case 'onboarding_anki_setup_android_hint':
         return 'AnkiDroidをインストールし、一度開いて初回セットアップを完了させてください。Fushiに戻り、最初のカード作成時に表示される権限ダイアログで「許可」をタップするだけです。AnkiDroidの設定変更は不要です。';
       case 'onboarding_anki_install_addon_action':
@@ -214725,6 +215840,48 @@ extension on _StringsJa {
             'Hibiki はポート ${port} を使うようになりましたが、AnkiConnect のアドオン設定が見つかりませんでした。Anki の「ツール → アドオン → AnkiConnect → 設定」で webBindPort も ${port} にしてから、Anki を再起動してください。';
       case 'anki_connect_port_auto_fix_none':
         return 'このマシンに空いているポートが見つかりませんでした。';
+      case 'onboarding_action_badge_required':
+        return '必須';
+      case 'onboarding_action_badge_recommended':
+        return '推奨';
+      case 'onboarding_action_badge_optional':
+        return '任意';
+      case 'onboarding_pack_action_download_desc':
+        return 'おすすめパック全体をバックグラウンドでダウンロードし、完了後そのままインポートに進みます。いつでも中止でき、次回は中断した位置から再開します。';
+      case 'onboarding_pack_action_import_existing_desc':
+        return 'パックはダウンロード済みです。ここからインポートします。確認ダイアログで「統合」を選べば、既存のデータはそのまま残ります。';
+      case 'onboarding_pack_action_pick_desc':
+        return 'すでに別の場所からパックの zip を入手済みですか？ディスクからインポートすれば、ダウンロードはまるごと省けます。';
+      case 'onboarding_pack_action_website':
+        return '公式サイトのダウンロードページを開く';
+      case 'onboarding_pack_action_website_desc':
+        return 'ブラウザで公式サイトを開きます。パックの項に、ダウンロードマネージャーへ渡せる分割リンクが載っています。入手後はここに戻り、「ローカルのパックファイルを選ぶ」からインポートしてください。';
+      case 'onboarding_pack_action_dictionary_desc':
+        return '日本語以外の言語を学んでいますか？パックは飛ばして、ここで自分の言語の辞書をインポートしてください。';
+      case 'onboarding_pack_action_audio_desc':
+        return '発音音声の取得元です。パックには日本語と英語が含まれています。その他の言語はここでオンラインソースを追加してください。';
+      case 'onboarding_anki_action_test_desc':
+        return 'Fushi が Anki に接続できるか確認し、デッキとノートタイプを読み込みます。この時点では何も作成されません。';
+      case 'onboarding_anki_action_refresh_desc':
+        return 'デッキとノートタイプを Anki から読み込み直します。Anki 側で新しいデッキを作った後に使ってください。';
+      case 'onboarding_anki_action_get_ankidroid_desc':
+        return 'AnkiDroid のストアページを開きます。Fushi はここにカードを書き込むので、先にインストールが必要です。';
+      case 'onboarding_anki_action_get_anki_desc':
+        return 'Anki のダウンロードページを開きます。Anki をインストールし、カード作成中は起動したままにしてください。';
+      case 'onboarding_anki_action_install_addon_desc':
+        return '同梱の AnkiConnect アドオンを Anki に展開します。Fushi はこれを通じて Anki と通信します。完了後に Anki を再起動してください。';
+      case 'onboarding_step_anki_action_desc':
+        return 'カードテンプレート、フィールド対応、スクリーンショットと音声——つまり「出来上がるカードの見た目」です。上でデッキとノートタイプを選べばカード作成は始められるので、カードの作られ方を変えたいときだけ開いてください。';
+      case 'onboarding_step_backup_action_desc':
+        return 'バックアップ先を選んでサインインしておけば、端末を紛失・買い替えてもライブラリは残ります。';
+      case 'onboarding_step_interconnect_action_desc':
+        return 'この端末を他の端末とペアリングして、同じライブラリを共有し進捗を同期します。';
+      case 'onboarding_step_extension_action_desc':
+        return 'ブラウザ拡張機能のインストール方法と Fushi への接続手順を案内します。ウェブページ上でも辞書を引けるようになります。';
+      case 'onboarding_step_fonts_action_desc':
+        return '自分のフォントファイルを追加し、言語ごとにどれを使うか指定します。';
+      case 'onboarding_pack_sources_hint':
+        return 'GitHub・公式サイト・予備ミラーから同時に分割ダウンロードし、各断片をチェックサムで検証します。ダウンロード中も各ソースの速度を実測し、その時点で最も速いソースに多くの断片を割り当てるため、ここで選ぶ必要はありません。';
       default:
         return null;
     }
@@ -222288,12 +223445,6 @@ extension on _StringsKo {
         return '고급: 이 기기에서 AnkiConnect 사용';
       case 'onboarding_anki_mobile_ankiconnect_hint':
         return '이 기기에서도 같은 네트워크의 컴퓨터에서 실행 중인 Anki에 카드를 만들 수 있습니다: 카드 생성 설정에서 AnkiConnect를 활성화하고 컴퓨터 주소를 입력하세요.';
-      case 'onboarding_anki_fsrs_title':
-        return 'Anki를 FSRS로 전환';
-      case 'onboarding_anki_fsrs_body':
-        return 'Anki에는 30년 된 SM-2 기본값보다 훨씬 뛰어난 스케줄러인 FSRS가 내장되어 있습니다: 더 적은 복습으로 더 나은 기억률을 제공합니다. Anki에서 덱 옵션을 열고 FSRS를 켜세요 (하나의 스위치로 전체 컬렉션에 적용됩니다). 이 설정은 Anki 내에서 직접 해야 합니다.';
-      case 'onboarding_step_pack_browser_action':
-        return '브라우저에서 다운로드';
       case 'onboarding_anki_setup_android_hint':
         return 'AnkiDroid를 설치하고 한 번 열어 초기 설정을 완료하세요. Fushi로 돌아와 첫 카드를 만들 때 나타나는 권한 대화상자에서 허용을 탭하세요 - AnkiDroid 설정을 변경할 필요가 없습니다.';
       case 'onboarding_anki_install_addon_action':
@@ -222724,6 +223875,48 @@ extension on _StringsKo {
             'Hibiki는 이제 포트 ${port}를 사용하지만 AnkiConnect 애드온 설정을 찾지 못했습니다. Anki의 [도구 → 애드온 → AnkiConnect → 설정]에서 webBindPort도 ${port}로 바꾼 뒤 Anki를 다시 시작하세요.';
       case 'anki_connect_port_auto_fix_none':
         return '이 컴퓨터에서 비어 있는 포트를 찾지 못했습니다.';
+      case 'onboarding_action_badge_required':
+        return '필수';
+      case 'onboarding_action_badge_recommended':
+        return '권장';
+      case 'onboarding_action_badge_optional':
+        return '선택';
+      case 'onboarding_pack_action_download_desc':
+        return '추천 팩 전체를 백그라운드로 내려받은 뒤 이어서 가져오기를 진행합니다. 언제든 취소할 수 있고, 다음에 중단된 지점부터 이어받습니다.';
+      case 'onboarding_pack_action_import_existing_desc':
+        return '팩이 이미 내려받아져 있습니다. 여기서 바로 가져옵니다. 확인 창에서 «병합»을 고르면 기존 데이터는 그대로 유지됩니다.';
+      case 'onboarding_pack_action_pick_desc':
+        return '다른 곳에서 이미 팩 zip을 받으셨나요? 디스크에서 가져오면 내려받기를 통째로 건너뛸 수 있습니다.';
+      case 'onboarding_pack_action_website':
+        return '공식 사이트 다운로드 페이지 열기';
+      case 'onboarding_pack_action_website_desc':
+        return '브라우저에서 공식 사이트를 엽니다. 팩 항목에 다운로드 관리자에 넣을 수 있는 분할 링크가 있습니다. 받은 뒤 여기로 돌아와 «로컬 팩 파일 선택»으로 가져오세요.';
+      case 'onboarding_pack_action_dictionary_desc':
+        return '일본어 말고 다른 언어를 배우시나요? 팩은 건너뛰고 여기서 해당 언어의 사전을 가져오세요.';
+      case 'onboarding_pack_action_audio_desc':
+        return '발음 오디오의 출처입니다. 팩에는 일본어와 영어가 이미 들어 있습니다. 다른 언어는 여기서 온라인 소스를 추가하세요.';
+      case 'onboarding_anki_action_test_desc':
+        return 'Fushi가 Anki에 연결되는지 확인하고 덱과 노트 유형을 불러옵니다. 이 단계에서는 아무것도 만들지 않습니다.';
+      case 'onboarding_anki_action_refresh_desc':
+        return 'Anki에서 덱과 노트 유형을 다시 불러옵니다. Anki에서 새 덱을 만든 뒤에 사용하세요.';
+      case 'onboarding_anki_action_get_ankidroid_desc':
+        return 'AnkiDroid 스토어 페이지를 엽니다. Fushi가 여기에 카드를 쓰므로 먼저 설치해야 합니다.';
+      case 'onboarding_anki_action_get_anki_desc':
+        return 'Anki 다운로드 페이지를 엽니다. Anki를 설치하고 카드를 만드는 동안 켜 두세요.';
+      case 'onboarding_anki_action_install_addon_desc':
+        return '내장된 AnkiConnect 애드온을 Anki에 풀어 넣습니다. Fushi는 이것을 통해 Anki와 통신합니다. 설치 후 Anki를 다시 시작하세요.';
+      case 'onboarding_step_anki_action_desc':
+        return '카드 템플릿, 필드 매핑, 스크린샷과 오디오 — 즉 «만들어진 카드가 어떻게 생겼는지»입니다. 위에서 덱과 노트 유형만 고르면 카드 만들기를 시작할 수 있으니, 카드가 만들어지는 방식을 바꾸고 싶을 때만 들어오세요.';
+      case 'onboarding_step_backup_action_desc':
+        return '백업 백엔드를 고르고 로그인해 두면 기기를 잃어버리거나 바꿔도 라이브러리가 남습니다.';
+      case 'onboarding_step_interconnect_action_desc':
+        return '이 기기를 다른 기기와 페어링해 같은 라이브러리를 공유하고 진도를 동기화합니다.';
+      case 'onboarding_step_extension_action_desc':
+        return '브라우저 확장을 설치하고 Fushi에 연결하는 방법을 안내합니다. 웹페이지에서도 단어를 찾을 수 있게 됩니다.';
+      case 'onboarding_step_fonts_action_desc':
+        return '자신의 글꼴 파일을 추가하고 언어마다 어떤 글꼴을 쓸지 지정합니다.';
+      case 'onboarding_pack_sources_hint':
+        return 'GitHub, 공식 사이트, 예비 미러에서 동시에 조각을 나눠 내려받고 조각마다 체크섬을 확인합니다. 내려받는 동안 각 소스의 속도를 실측해 그 순간 가장 빠른 쪽에 더 많은 조각을 맡기므로, 여기서 고를 것은 없습니다.';
       default:
         return null;
     }
@@ -230342,12 +231535,6 @@ extension on _StringsNl {
         return 'Geavanceerd: AnkiConnect op dit apparaat gebruiken';
       case 'onboarding_anki_mobile_ankiconnect_hint':
         return 'Dit apparaat kan ook kaarten maken in Anki op een computer in hetzelfde netwerk: schakel AnkiConnect in bij kaartaanmaak-instellingen en voer het computeradres in.';
-      case 'onboarding_anki_fsrs_title':
-        return 'Anki overschakelen naar FSRS';
-      case 'onboarding_anki_fsrs_body':
-        return 'Anki wordt geleverd met FSRS, een veel beter planningssysteem dan de 30 jaar oude SM-2 standaard: betere retentie met minder herhalingen. Open in Anki de dekopties en schakel FSRS in (één schakelaar voor de gehele collectie). Dit moet in Anki zelf worden gedaan.';
-      case 'onboarding_step_pack_browser_action':
-        return 'Downloaden in browser';
       case 'onboarding_anki_setup_android_hint':
         return 'Installeer AnkiDroid en open het eenmaal om de eerste installatie te voltooien. Terug in Fushi, tik op Toestaan bij het toestemmingsvenster dat verschijnt bij je eerste kaart — geen AnkiDroid-instellingen te wijzigen.';
       case 'onboarding_anki_install_addon_action':
@@ -230783,6 +231970,48 @@ extension on _StringsNl {
             'Hibiki gebruikt nu poort ${port}, maar de AnkiConnect-add-onconfiguratie is niet gevonden. Zet webBindPort in Anki (Extra → Add-ons → AnkiConnect → Configuratie) ook op ${port} en herstart Anki.';
       case 'anki_connect_port_auto_fix_none':
         return 'Geen vrije poort gevonden op deze machine.';
+      case 'onboarding_action_badge_required':
+        return 'Verplicht';
+      case 'onboarding_action_badge_recommended':
+        return 'Aanbevolen';
+      case 'onboarding_action_badge_optional':
+        return 'Optioneel';
+      case 'onboarding_pack_action_download_desc':
+        return 'Downloadt het hele pakket op de achtergrond en importeert het daarna. Je kunt altijd annuleren; de volgende keer gaat het verder waar het gebleven was.';
+      case 'onboarding_pack_action_import_existing_desc':
+        return 'Het pakket is al gedownload; hiermee importeer je het. Kies «Samenvoegen» in het bevestigingsvenster, dan blijft je bestaande data ongemoeid.';
+      case 'onboarding_pack_action_pick_desc':
+        return 'Heb je de zip van het pakket al ergens anders vandaan? Importeer hem van schijf en sla de download helemaal over.';
+      case 'onboarding_pack_action_website':
+        return 'Downloadpagina van de website openen';
+      case 'onboarding_pack_action_website_desc':
+        return 'Opent de officiële site in je browser. In het pakketgedeelte staan losse deel-links die je aan een downloadmanager kunt geven; kom daarna hier terug en gebruik «Kies een lokaal pakketbestand» om te importeren wat je hebt.';
+      case 'onboarding_pack_action_dictionary_desc':
+        return 'Leer je een andere taal dan Japans? Sla het pakket over en importeer hier woordenboeken voor je eigen taal.';
+      case 'onboarding_pack_action_audio_desc':
+        return 'Waar de uitspraakaudio vandaan komt. Het pakket dekt Japans en Engels al; voeg hier online bronnen toe voor andere talen.';
+      case 'onboarding_anki_action_test_desc':
+        return 'Controleert of Fushi Anki kan bereiken en laadt je decks en notitietypes. Er wordt nog niets aangemaakt.';
+      case 'onboarding_anki_action_refresh_desc':
+        return 'Laadt decks en notitietypes opnieuw uit Anki. Gebruik dit nadat je in Anki een nieuw deck hebt gemaakt.';
+      case 'onboarding_anki_action_get_ankidroid_desc':
+        return 'Opent de storepagina van AnkiDroid. Fushi schrijft zijn kaarten daarin, dus het moet eerst geïnstalleerd zijn.';
+      case 'onboarding_anki_action_get_anki_desc':
+        return 'Opent de downloadpagina van Anki. Installeer Anki en laat het draaien terwijl je kaarten maakt.';
+      case 'onboarding_anki_action_install_addon_desc':
+        return 'Pakt de meegeleverde AnkiConnect-add-on voor je uit in Anki; daarmee kan Fushi ermee praten. Start Anki daarna opnieuw op.';
+      case 'onboarding_step_anki_action_desc':
+        return 'Kaartsjabloon, veldtoewijzing, schermafbeeldingen en audio: de details van hoe een gemaakte kaart eruitziet. Het deck en notitietype hierboven zijn genoeg om te beginnen, dus open dit alleen als je wilt veranderen hoe kaarten worden opgebouwd.';
+      case 'onboarding_step_backup_action_desc':
+        return 'Kies een back-upbackend en meld je aan, zodat je bibliotheek een verloren of vervangen apparaat overleeft.';
+      case 'onboarding_step_interconnect_action_desc':
+        return 'Koppelt dit apparaat aan je andere apparaten om één bibliotheek te delen en de voortgang gelijk te houden.';
+      case 'onboarding_step_extension_action_desc':
+        return 'Laat zien hoe je de browserextensie installeert en met Fushi verbindt, zodat je ook op webpagina’s woorden kunt opzoeken.';
+      case 'onboarding_step_fonts_action_desc':
+        return 'Voeg je eigen lettertypebestanden toe en kies welk lettertype elke taal gebruikt.';
+      case 'onboarding_pack_sources_hint':
+        return 'Wordt in parallelle stukken tegelijk van GitHub, de officiële site en een reservespiegel gehaald, met een checksum per stuk. Fushi meet de bronnen onderweg en geeft meer stukken aan degene die op dat moment het snelst is, dus hier valt niets te kiezen.';
       default:
         return null;
     }
@@ -238397,12 +239626,6 @@ extension on _StringsPtBr {
         return 'Avançado: usar AnkiConnect neste dispositivo';
       case 'onboarding_anki_mobile_ankiconnect_hint':
         return 'Este dispositivo também pode criar cartões no Anki rodando em um computador na mesma rede: ative o AnkiConnect nas configurações de criação de cartões e insira o endereço do computador.';
-      case 'onboarding_anki_fsrs_title':
-        return 'Mudar Anki para FSRS';
-      case 'onboarding_anki_fsrs_body':
-        return 'O Anki vem com FSRS, um programador muito melhor que o SM-2 padrão de 30 anos: melhor retenção com menos revisões. No Anki, abra as opções do baralho e ative o FSRS (um switch cobre toda a coleção). Isso deve ser feito dentro do próprio Anki.';
-      case 'onboarding_step_pack_browser_action':
-        return 'Baixar no navegador';
       case 'onboarding_anki_setup_android_hint':
         return 'Instale o AnkiDroid e abra-o uma vez para concluir a configuração inicial. De volta ao Fushi, toque em Permitir na caixa de diálogo de permissão que aparece com seu primeiro cartão - nenhuma configuração do AnkiDroid para alterar.';
       case 'onboarding_anki_install_addon_action':
@@ -238837,6 +240060,48 @@ extension on _StringsPtBr {
             'O Hibiki agora usa a porta ${port}, mas a configuração do complemento AnkiConnect não foi encontrada. Defina webBindPort como ${port} no Anki (Ferramentas → Complementos → AnkiConnect → Configuração) e reinicie o Anki.';
       case 'anki_connect_port_auto_fix_none':
         return 'Nenhuma porta livre encontrada nesta máquina.';
+      case 'onboarding_action_badge_required':
+        return 'Obrigatório';
+      case 'onboarding_action_badge_recommended':
+        return 'Recomendado';
+      case 'onboarding_action_badge_optional':
+        return 'Opcional';
+      case 'onboarding_pack_action_download_desc':
+        return 'Baixa o pacote inteiro em segundo plano e depois o importa. Dá para cancelar a qualquer momento; da próxima vez ele retoma de onde parou.';
+      case 'onboarding_pack_action_import_existing_desc':
+        return 'O pacote já foi baixado; isto o importa. Escolha «Mesclar» na caixa de confirmação e seus dados atuais ficam intactos.';
+      case 'onboarding_pack_action_pick_desc':
+        return 'Já pegou o zip do pacote em outro lugar? Importe do disco e pule o download por completo.';
+      case 'onboarding_pack_action_website':
+        return 'Abrir a página de download do site';
+      case 'onboarding_pack_action_website_desc':
+        return 'Abre o site oficial no navegador. A seção do pacote lista links por partes que você pode passar a um gerenciador de downloads; depois volte aqui e use «Escolher um arquivo de pacote local» para importar o que baixou.';
+      case 'onboarding_pack_action_dictionary_desc':
+        return 'Está aprendendo um idioma que não é japonês? Pule o pacote e importe aqui dicionários do seu próprio idioma.';
+      case 'onboarding_pack_action_audio_desc':
+        return 'De onde vem o áudio de pronúncia. O pacote já cobre japonês e inglês; adicione aqui fontes on-line para outros idiomas.';
+      case 'onboarding_anki_action_test_desc':
+        return 'Verifica se o Fushi consegue falar com o Anki e carrega seus baralhos e tipos de nota. Nada é criado ainda.';
+      case 'onboarding_anki_action_refresh_desc':
+        return 'Recarrega baralhos e tipos de nota a partir do Anki. Use depois de criar um baralho novo dentro do Anki.';
+      case 'onboarding_anki_action_get_ankidroid_desc':
+        return 'Abre a página do AnkiDroid na loja. O Fushi grava os cartões nele, então precisa estar instalado antes.';
+      case 'onboarding_anki_action_get_anki_desc':
+        return 'Abre a página de download do Anki. Instale o Anki e deixe-o aberto enquanto cria cartões.';
+      case 'onboarding_anki_action_install_addon_desc':
+        return 'Descompacta para você o complemento AnkiConnect embutido dentro do Anki, que é o que permite ao Fushi conversar com ele. Reinicie o Anki depois.';
+      case 'onboarding_step_anki_action_desc':
+        return 'Modelo de cartão, mapeamento de campos, capturas e áudio: os detalhes de como fica um cartão criado. O baralho e o tipo de nota acima já bastam para começar, então abra isto só se quiser mudar como os cartões são montados.';
+      case 'onboarding_step_backup_action_desc':
+        return 'Escolha um serviço de backup e entre na conta, para que sua biblioteca sobreviva à perda ou troca de aparelho.';
+      case 'onboarding_step_interconnect_action_desc':
+        return 'Pareia este aparelho com seus outros aparelhos para compartilhar uma mesma biblioteca e manter o progresso em sincronia.';
+      case 'onboarding_step_extension_action_desc':
+        return 'Mostra como instalar a extensão de navegador e conectá-la ao Fushi, para você também consultar palavras em páginas da web.';
+      case 'onboarding_step_fonts_action_desc':
+        return 'Adicione seus próprios arquivos de fonte e escolha qual cada idioma usa.';
+      case 'onboarding_pack_sources_hint':
+        return 'Baixado em partes paralelas do GitHub, do site oficial e de um espelho reserva ao mesmo tempo, com checksum em cada parte. O Fushi mede as fontes durante o processo e dá mais partes para a que estiver mais rápida no momento, então não há nada a escolher aqui.';
       default:
         return null;
     }
@@ -246458,12 +247723,6 @@ extension on _StringsRu {
         return 'Дополнительно: использовать AnkiConnect на этом устройстве';
       case 'onboarding_anki_mobile_ankiconnect_hint':
         return 'Это устройство также может создавать карточки в Anki на компьютере в той же сети: включите AnkiConnect в настройках создания карточек и введите адрес компьютера.';
-      case 'onboarding_anki_fsrs_title':
-        return 'Переключите Anki на FSRS';
-      case 'onboarding_anki_fsrs_body':
-        return 'В Anki встроен FSRS — планировщик, значительно лучше устаревшего SM-2: лучше запоминание при меньшем количестве повторений. В Anki откройте настройки колоды и включите FSRS (один переключатель на всю коллекцию). Это делается в самом Anki.';
-      case 'onboarding_step_pack_browser_action':
-        return 'Скачать в браузере';
       case 'onboarding_anki_setup_android_hint':
         return 'Установите AnkiDroid и откройте его один раз для первоначальной настройки. Вернувшись в Fushi, нажмите «Разрешить» в диалоге разрешений, который появится при создании первой карточки — настройки AnkiDroid менять не нужно.';
       case 'onboarding_anki_install_addon_action':
@@ -246897,6 +248156,48 @@ extension on _StringsRu {
             'Hibiki теперь использует порт ${port}, но настройки дополнения AnkiConnect не найдены. Укажите webBindPort равным ${port} в Anki (Инструменты → Дополнения → AnkiConnect → Настройка) и перезапустите Anki.';
       case 'anki_connect_port_auto_fix_none':
         return 'На этом компьютере не найдено свободных портов.';
+      case 'onboarding_action_badge_required':
+        return 'Обязательно';
+      case 'onboarding_action_badge_recommended':
+        return 'Рекомендуется';
+      case 'onboarding_action_badge_optional':
+        return 'По желанию';
+      case 'onboarding_pack_action_download_desc':
+        return 'Скачивает весь пакет в фоне, а затем импортирует его. Отменить можно в любой момент; в следующий раз загрузка продолжится с места остановки.';
+      case 'onboarding_pack_action_import_existing_desc':
+        return 'Пакет уже скачан; здесь он импортируется. Выберите «Объединить» в окне подтверждения — существующие данные останутся нетронутыми.';
+      case 'onboarding_pack_action_pick_desc':
+        return 'Уже получили zip пакета из другого места? Импортируйте его с диска и полностью пропустите загрузку.';
+      case 'onboarding_pack_action_website':
+        return 'Открыть страницу загрузки на сайте';
+      case 'onboarding_pack_action_website_desc':
+        return 'Открывает официальный сайт в браузере. В разделе про пакет есть ссылки на отдельные части, которые можно отдать менеджеру загрузок; затем вернитесь сюда и импортируйте полученное через «Выбрать локальный файл пакета».';
+      case 'onboarding_pack_action_dictionary_desc':
+        return 'Учите не японский, а другой язык? Пропустите пакет и импортируйте здесь словари для своего языка.';
+      case 'onboarding_pack_action_audio_desc':
+        return 'Откуда берётся аудио произношения. Японский и английский пакет уже покрывает; для других языков добавьте здесь онлайн-источники.';
+      case 'onboarding_anki_action_test_desc':
+        return 'Проверяет, что Fushi может связаться с Anki, и загружает ваши колоды и типы заметок. Пока ничего не создаётся.';
+      case 'onboarding_anki_action_refresh_desc':
+        return 'Заново загружает колоды и типы заметок из Anki. Используйте после создания новой колоды в Anki.';
+      case 'onboarding_anki_action_get_ankidroid_desc':
+        return 'Открывает страницу AnkiDroid в магазине. Fushi записывает карточки именно туда, поэтому его нужно установить первым.';
+      case 'onboarding_anki_action_get_anki_desc':
+        return 'Открывает страницу загрузки Anki. Установите Anki и держите его запущенным, пока создаёте карточки.';
+      case 'onboarding_anki_action_install_addon_desc':
+        return 'Распаковывает встроенное дополнение AnkiConnect в Anki — именно через него Fushi общается с Anki. После этого перезапустите Anki.';
+      case 'onboarding_step_anki_action_desc':
+        return 'Шаблон карточки, сопоставление полей, скриншоты и аудио — то, как выглядит созданная карточка. Колоды и типа заметки выше уже достаточно, чтобы начать, так что заходите сюда только если хотите изменить, как собираются карточки.';
+      case 'onboarding_step_backup_action_desc':
+        return 'Выберите хранилище для резервных копий и войдите в него, чтобы библиотека пережила потерю или замену устройства.';
+      case 'onboarding_step_interconnect_action_desc':
+        return 'Связывает это устройство с вашими другими устройствами: одна общая библиотека и синхронный прогресс.';
+      case 'onboarding_step_extension_action_desc':
+        return 'Показывает, как установить расширение для браузера и подключить его к Fushi, чтобы искать слова и на веб-страницах.';
+      case 'onboarding_step_fonts_action_desc':
+        return 'Добавьте свои файлы шрифтов и выберите, какой из них использует каждый язык.';
+      case 'onboarding_pack_sources_hint':
+        return 'Скачивается параллельными частями одновременно с GitHub, официального сайта и резервного зеркала, каждая часть проверяется контрольной суммой. Fushi по ходу измеряет источники и отдаёт больше частей тому, кто быстрее прямо сейчас, поэтому выбирать здесь нечего.';
       default:
         return null;
     }
@@ -254492,12 +255793,6 @@ extension on _StringsTh {
         return 'ขั้นสูง: ใช้ AnkiConnect บนอุปกรณ์นี้';
       case 'onboarding_anki_mobile_ankiconnect_hint':
         return 'อุปกรณ์นี้ยังสามารถสร้างการ์ดเข้า Anki ที่ทำงานบนคอมพิวเตอร์ในเครือข่ายเดียวกัน: เปิด AnkiConnect ในการตั้งค่าการสร้างการ์ดแล้วป้อนที่อยู่คอมพิวเตอร์';
-      case 'onboarding_anki_fsrs_title':
-        return 'เปลี่ยน Anki เป็น FSRS';
-      case 'onboarding_anki_fsrs_body':
-        return 'Anki มาพร้อม FSRS ตัวจัดกำหนดการที่ดีกว่าค่าเริ่มต้น SM-2 อายุ 30 ปีมาก: จำได้ดีกว่าด้วยการทบทวนน้อยลง ใน Anki เปิดตัวเลือกสำรับแล้วเปิด FSRS (สวิตช์เดียวครอบคลุมทั้งคอลเลกชัน) ต้องทำในตัว Anki เอง';
-      case 'onboarding_step_pack_browser_action':
-        return 'ดาวน์โหลดในเบราว์เซอร์';
       case 'onboarding_anki_setup_android_hint':
         return 'ติดตั้ง AnkiDroid แล้วเปิดครั้งหนึ่งเพื่อเสร็จสิ้นการตั้งค่าครั้งแรก กลับมาที่ Fushi แตะอนุญาตในกล่องโต้ตอบสิทธิ์ที่ปรากฏขึ้นเมื่อสร้างการ์ดแรก ไม่ต้องเปลี่ยนการตั้งค่า AnkiDroid';
       case 'onboarding_anki_install_addon_action':
@@ -254930,6 +256225,48 @@ extension on _StringsTh {
             'ตอนนี้ Hibiki ใช้พอร์ต ${port} แล้ว แต่ไม่พบการตั้งค่าส่วนเสริม AnkiConnect โปรดตั้ง webBindPort เป็น ${port} ใน Anki (เครื่องมือ → ส่วนเสริม → AnkiConnect → การตั้งค่า) แล้วรีสตาร์ท Anki';
       case 'anki_connect_port_auto_fix_none':
         return 'ไม่พบพอร์ตที่ว่างบนเครื่องนี้';
+      case 'onboarding_action_badge_required':
+        return 'จำเป็น';
+      case 'onboarding_action_badge_recommended':
+        return 'แนะนำ';
+      case 'onboarding_action_badge_optional':
+        return 'ไม่บังคับ';
+      case 'onboarding_pack_action_download_desc':
+        return 'ดาวน์โหลดแพ็กทั้งชุดในเบื้องหลัง แล้วนำเข้าให้ต่อ ยกเลิกได้ทุกเมื่อ ครั้งถัดไปจะดาวน์โหลดต่อจากจุดที่หยุดไว้';
+      case 'onboarding_pack_action_import_existing_desc':
+        return 'แพ็กดาวน์โหลดไว้แล้ว ปุ่มนี้คือการนำเข้า เลือก «รวมเข้ากับคลังเดิม» ในกล่องยืนยัน แล้วข้อมูลเดิมของคุณจะไม่ถูกแตะต้อง';
+      case 'onboarding_pack_action_pick_desc':
+        return 'ได้ไฟล์ zip ของแพ็กมาจากที่อื่นแล้วหรือ? นำเข้าจากดิสก์ได้เลย ข้ามการดาวน์โหลดทั้งหมด';
+      case 'onboarding_pack_action_website':
+        return 'เปิดหน้าดาวน์โหลดบนเว็บไซต์';
+      case 'onboarding_pack_action_website_desc':
+        return 'เปิดเว็บไซต์ทางการในเบราว์เซอร์ ในหัวข้อแพ็กจะมีลิงก์แบบแบ่งส่วนที่ป้อนให้โปรแกรมช่วยดาวน์โหลดได้ เมื่อโหลดเสร็จให้กลับมาที่นี่แล้วใช้ «เลือกไฟล์แพ็กในเครื่อง» เพื่อนำเข้า';
+      case 'onboarding_pack_action_dictionary_desc':
+        return 'กำลังเรียนภาษาอื่นที่ไม่ใช่ญี่ปุ่นใช่ไหม? ข้ามแพ็กไป แล้วนำเข้าพจนานุกรมของภาษาคุณที่นี่แทน';
+      case 'onboarding_pack_action_audio_desc':
+        return 'เสียงอ่านออกเสียงมาจากไหน แพ็กครอบคลุมภาษาญี่ปุ่นและอังกฤษอยู่แล้ว ภาษาอื่นให้เพิ่มแหล่งออนไลน์ที่นี่';
+      case 'onboarding_anki_action_test_desc':
+        return 'ตรวจสอบว่า Fushi ติดต่อ Anki ได้ และโหลดสำรับกับชนิดโน้ตของคุณเข้ามา ขั้นนี้ยังไม่สร้างอะไรทั้งสิ้น';
+      case 'onboarding_anki_action_refresh_desc':
+        return 'โหลดสำรับและชนิดโน้ตจาก Anki ใหม่ ใช้หลังจากสร้างสำรับใหม่ใน Anki';
+      case 'onboarding_anki_action_get_ankidroid_desc':
+        return 'เปิดหน้าร้านค้าของ AnkiDroid เนื่องจาก Fushi เขียนการ์ดลงในนั้น จึงต้องติดตั้งก่อน';
+      case 'onboarding_anki_action_get_anki_desc':
+        return 'เปิดหน้าดาวน์โหลด Anki ติดตั้ง Anki แล้วเปิดค้างไว้ระหว่างสร้างการ์ด';
+      case 'onboarding_anki_action_install_addon_desc':
+        return 'แตกส่วนเสริม AnkiConnect ที่มาพร้อมโปรแกรมเข้าไปใน Anki ให้คุณ ซึ่งเป็นสิ่งที่ทำให้ Fushi คุยกับ Anki ได้ เสร็จแล้วให้รีสตาร์ท Anki';
+      case 'onboarding_step_anki_action_desc':
+        return 'เทมเพลตการ์ด การจับคู่ฟิลด์ ภาพหน้าจอ และเสียง — ก็คือรายละเอียดว่าการ์ดที่สร้างออกมาหน้าตาเป็นอย่างไร แค่เลือกสำรับกับชนิดโน้ตด้านบนก็เริ่มสร้างการ์ดได้แล้ว จึงเปิดตรงนี้เฉพาะเมื่อต้องการเปลี่ยนวิธีประกอบการ์ด';
+      case 'onboarding_step_backup_action_desc':
+        return 'เลือกปลายทางสำรองข้อมูลแล้วลงชื่อเข้าใช้ เพื่อให้คลังของคุณอยู่รอดเมื่อทำอุปกรณ์หายหรือเปลี่ยนเครื่อง';
+      case 'onboarding_step_interconnect_action_desc':
+        return 'จับคู่อุปกรณ์นี้กับอุปกรณ์อื่นของคุณ เพื่อใช้คลังเดียวกันและซิงก์ความคืบหน้า';
+      case 'onboarding_step_extension_action_desc':
+        return 'แสดงวิธีติดตั้งส่วนขยายเบราว์เซอร์และเชื่อมกับ Fushi เพื่อให้เปิดหาคำศัพท์บนหน้าเว็บได้ด้วย';
+      case 'onboarding_step_fonts_action_desc':
+        return 'เพิ่มไฟล์ฟอนต์ของคุณเอง แล้วเลือกว่าภาษาไหนใช้ฟอนต์ใด';
+      case 'onboarding_pack_sources_hint':
+        return 'ดาวน์โหลดแบบแบ่งส่วนขนานกันจาก GitHub เว็บไซต์ทางการ และมิเรอร์สำรองพร้อมกัน โดยตรวจสอบค่าแฮชทุกส่วน ระหว่างดาวน์โหลด Fushi จะวัดความเร็วของแต่ละแหล่งจริง แล้วแบ่งส่วนให้แหล่งที่เร็วที่สุดในขณะนั้นมากขึ้น จึงไม่มีอะไรให้เลือกตรงนี้';
       default:
         return null;
     }
@@ -262540,12 +263877,6 @@ extension on _StringsTr {
         return 'Gelişmiş: bu cihazda AnkiConnect kullan';
       case 'onboarding_anki_mobile_ankiconnect_hint':
         return 'Bu cihaz ayrıca aynı ağdaki bir bilgisayarda çalışan Anki\'ye kart oluşturabilir: kart oluşturma ayarlarında AnkiConnect\'i etkinleştirin ve bilgisayar adresini girin.';
-      case 'onboarding_anki_fsrs_title':
-        return 'Anki\'yi FSRS\'ye geçirin';
-      case 'onboarding_anki_fsrs_body':
-        return 'Anki, 30 yıllık SM-2 varsayılanından çok daha iyi bir planlayıcı olan FSRS ile birlikte gelir: daha az tekrarla daha iyi hatırlama. Anki\'de deste seçeneklerini açın ve FSRS\'yi açın (bir anahtar tüm koleksiyonu kapsar). Bu, Anki\'nin kendisinde yapılmalıdır.';
-      case 'onboarding_step_pack_browser_action':
-        return 'Tarayıcıda indir';
       case 'onboarding_anki_setup_android_hint':
         return 'AnkiDroid\'i yükleyin ve ilk çalıştırma kurulumunu tamamlamak için bir kez açın. Fushi\'ye dönün, ilk kartınızla birlikte açılan izin iletişim kutusunda İzin Ver\'e dokunun - AnkiDroid ayarlarında değişiklik gerekmez.';
       case 'onboarding_anki_install_addon_action':
@@ -262979,6 +264310,48 @@ extension on _StringsTr {
             'Hibiki artık ${port} bağlantı noktasını kullanıyor ancak AnkiConnect eklenti yapılandırması bulunamadı. Anki\'de (Araçlar → Eklentiler → AnkiConnect → Yapılandırma) webBindPort değerini de ${port} yapıp Anki\'yi yeniden başlatın.';
       case 'anki_connect_port_auto_fix_none':
         return 'Bu makinede boş bağlantı noktası bulunamadı.';
+      case 'onboarding_action_badge_required':
+        return 'Zorunlu';
+      case 'onboarding_action_badge_recommended':
+        return 'Önerilir';
+      case 'onboarding_action_badge_optional':
+        return 'İsteğe bağlı';
+      case 'onboarding_pack_action_download_desc':
+        return 'Paketin tamamını arka planda indirir, ardından içe aktarır. İstediğin an iptal edebilirsin; bir dahaki sefere kaldığı yerden devam eder.';
+      case 'onboarding_pack_action_import_existing_desc':
+        return 'Paket zaten indirilmiş durumda; bu onu içe aktarır. Onay penceresinde «Birleştir» seçersen mevcut verilerine dokunulmaz.';
+      case 'onboarding_pack_action_pick_desc':
+        return 'Paketin zip dosyasını başka bir yerden aldın mı? Diskten içe aktar, indirmeyi tamamen atla.';
+      case 'onboarding_pack_action_website':
+        return 'Sitedeki indirme sayfasını aç';
+      case 'onboarding_pack_action_website_desc':
+        return 'Resmî siteyi tarayıcında açar. Paket bölümünde bir indirme yöneticisine verebileceğin parça bağlantıları var; sonra buraya dönüp «Yerel paket dosyası seç» ile indirdiğini içe aktar.';
+      case 'onboarding_pack_action_dictionary_desc':
+        return 'Japonca dışında bir dil mi öğreniyorsun? Paketi atla ve burada kendi dilinin sözlüklerini içe aktar.';
+      case 'onboarding_pack_action_audio_desc':
+        return 'Telaffuz seslerinin nereden geldiği. Paket Japonca ve İngilizceyi zaten kapsıyor; diğer diller için buradan çevrimiçi kaynak ekle.';
+      case 'onboarding_anki_action_test_desc':
+        return 'Fushi’nin Anki’ye ulaşıp ulaşamadığını denetler ve destelerinle not türlerini yükler. Henüz hiçbir şey oluşturulmaz.';
+      case 'onboarding_anki_action_refresh_desc':
+        return 'Desteleri ve not türlerini Anki’den yeniden yükler. Anki içinde yeni bir deste oluşturduktan sonra kullan.';
+      case 'onboarding_anki_action_get_ankidroid_desc':
+        return 'AnkiDroid’in mağaza sayfasını açar. Fushi kartlarını onun içine yazdığı için önce kurulu olması gerekir.';
+      case 'onboarding_anki_action_get_anki_desc':
+        return 'Anki’nin indirme sayfasını açar. Anki’yi kur ve kart üretirken açık bırak.';
+      case 'onboarding_anki_action_install_addon_desc':
+        return 'Birlikte gelen AnkiConnect eklentisini senin için Anki’ye açar; Fushi onunla konuşmasını buna borçlu. Sonrasında Anki’yi yeniden başlat.';
+      case 'onboarding_step_anki_action_desc':
+        return 'Kart şablonu, alan eşlemesi, ekran görüntüleri ve ses: yani üretilen kartın nasıl göründüğünün ayrıntıları. Yukarıdaki deste ve not türü başlamak için yeterli, bu yüzden buraya yalnızca kartların nasıl kurulduğunu değiştirmek istiyorsan gir.';
+      case 'onboarding_step_backup_action_desc':
+        return 'Bir yedekleme arka ucu seç ve oturum aç ki kitaplığın cihaz kaybını veya değişimini atlatsın.';
+      case 'onboarding_step_interconnect_action_desc':
+        return 'Bu cihazı diğer cihazlarınla eşler; tek bir kitaplığı paylaşır ve ilerlemeyi eşitler.';
+      case 'onboarding_step_extension_action_desc':
+        return 'Tarayıcı uzantısını nasıl kurup Fushi’ye bağlayacağını gösterir; böylece web sayfalarında da kelime arayabilirsin.';
+      case 'onboarding_step_fonts_action_desc':
+        return 'Kendi yazı tipi dosyalarını ekle ve her dilin hangisini kullanacağını seç.';
+      case 'onboarding_pack_sources_hint':
+        return 'Aynı anda GitHub’dan, resmî siteden ve bir yedek aynadan paralel parçalar hâlinde indirilir; her parça sağlama toplamıyla doğrulanır. Fushi kaynakları yol boyunca ölçer ve o an en hızlı olana daha çok parça verir, bu yüzden burada seçilecek bir şey yok.';
       default:
         return null;
     }
@@ -270583,12 +271956,6 @@ extension on _StringsVi {
         return 'Nâng cao: sử dụng AnkiConnect trên thiết bị này';
       case 'onboarding_anki_mobile_ankiconnect_hint':
         return 'Thiết bị này cũng có thể tạo thẻ vào Anki đang chạy trên máy tính cùng mạng: bật AnkiConnect trong cài đặt tạo thẻ và nhập địa chỉ máy tính.';
-      case 'onboarding_anki_fsrs_title':
-        return 'Chuyển Anki sang FSRS';
-      case 'onboarding_anki_fsrs_body':
-        return 'Anki tích hợp sẵn FSRS, thuật toán lên lịch tốt hơn nhiều so với SM-2 mặc định 30 năm tuổi: ghi nhớ tốt hơn với ít lần ôn tập hơn. Trong Anki, mở tùy chọn bộ thẻ và bật FSRS (một công tắc áp dụng cho toàn bộ bộ sưu tập). Việc này phải được thực hiện trong chính Anki.';
-      case 'onboarding_step_pack_browser_action':
-        return 'Tải xuống trong trình duyệt';
       case 'onboarding_anki_setup_android_hint':
         return 'Cài đặt AnkiDroid và mở một lần để hoàn tất thiết lập ban đầu. Quay lại Fushi, chạm Cho phép trên hộp thoại quyền xuất hiện khi tạo thẻ đầu tiên - không cần thay đổi cài đặt AnkiDroid.';
       case 'onboarding_anki_install_addon_action':
@@ -271021,6 +272388,48 @@ extension on _StringsVi {
             'Hibiki hiện dùng cổng ${port}, nhưng không tìm thấy cấu hình tiện ích AnkiConnect. Hãy đặt webBindPort thành ${port} trong Anki (Công cụ → Tiện ích → AnkiConnect → Cấu hình) rồi khởi động lại Anki.';
       case 'anki_connect_port_auto_fix_none':
         return 'Không tìm thấy cổng nào còn trống trên máy này.';
+      case 'onboarding_action_badge_required':
+        return 'Bắt buộc';
+      case 'onboarding_action_badge_recommended':
+        return 'Nên làm';
+      case 'onboarding_action_badge_optional':
+        return 'Tuỳ chọn';
+      case 'onboarding_pack_action_download_desc':
+        return 'Tải toàn bộ gói ở chế độ nền rồi nhập vào. Có thể huỷ bất cứ lúc nào; lần sau sẽ tải tiếp từ chỗ đã dừng.';
+      case 'onboarding_pack_action_import_existing_desc':
+        return 'Gói đã tải xong; thao tác này nhập nó vào. Chọn «Gộp» trong hộp xác nhận thì dữ liệu hiện có của bạn sẽ được giữ nguyên.';
+      case 'onboarding_pack_action_pick_desc':
+        return 'Đã lấy được tệp zip của gói từ nơi khác? Nhập từ ổ đĩa và bỏ qua hoàn toàn phần tải về.';
+      case 'onboarding_pack_action_website':
+        return 'Mở trang tải về trên website';
+      case 'onboarding_pack_action_website_desc':
+        return 'Mở trang chính thức trong trình duyệt. Mục về gói ở đó liệt kê các liên kết theo từng phần để bạn đưa cho trình quản lý tải; xong rồi quay lại đây và dùng «Chọn tệp gói trên máy» để nhập.';
+      case 'onboarding_pack_action_dictionary_desc':
+        return 'Bạn học ngôn ngữ khác ngoài tiếng Nhật? Bỏ qua gói và nhập từ điển cho ngôn ngữ của bạn ở đây.';
+      case 'onboarding_pack_action_audio_desc':
+        return 'Âm thanh phát âm lấy từ đâu. Gói đã bao gồm tiếng Nhật và tiếng Anh; các ngôn ngữ khác thì thêm nguồn trực tuyến ở đây.';
+      case 'onboarding_anki_action_test_desc':
+        return 'Kiểm tra xem Fushi có kết nối được với Anki không và nạp các bộ thẻ cùng loại ghi chú của bạn. Chưa tạo ra thứ gì cả.';
+      case 'onboarding_anki_action_refresh_desc':
+        return 'Nạp lại bộ thẻ và loại ghi chú từ Anki. Dùng sau khi bạn tạo bộ thẻ mới trong Anki.';
+      case 'onboarding_anki_action_get_ankidroid_desc':
+        return 'Mở trang cửa hàng của AnkiDroid. Fushi ghi thẻ vào đó nên phải cài nó trước.';
+      case 'onboarding_anki_action_get_anki_desc':
+        return 'Mở trang tải Anki. Cài Anki và để nó chạy trong lúc bạn tạo thẻ.';
+      case 'onboarding_anki_action_install_addon_desc':
+        return 'Giải nén tiện ích AnkiConnect đi kèm vào Anki giúp bạn — đó chính là thứ cho phép Fushi nói chuyện với Anki. Xong rồi khởi động lại Anki.';
+      case 'onboarding_step_anki_action_desc':
+        return 'Mẫu thẻ, ánh xạ trường, ảnh chụp màn hình và âm thanh: tức là chi tiết về hình hài của tấm thẻ được tạo ra. Bộ thẻ và loại ghi chú ở trên là đủ để bắt đầu, nên chỉ mở phần này khi bạn muốn đổi cách dựng thẻ.';
+      case 'onboarding_step_backup_action_desc':
+        return 'Chọn nơi sao lưu và đăng nhập, để thư viện của bạn sống sót khi mất máy hoặc đổi máy.';
+      case 'onboarding_step_interconnect_action_desc':
+        return 'Ghép nối thiết bị này với các thiết bị khác của bạn để dùng chung một thư viện và đồng bộ tiến độ.';
+      case 'onboarding_step_extension_action_desc':
+        return 'Hướng dẫn cách cài tiện ích trình duyệt và kết nối nó với Fushi, để bạn tra từ ngay trên trang web.';
+      case 'onboarding_step_fonts_action_desc':
+        return 'Thêm tệp phông chữ của riêng bạn và chọn phông cho từng ngôn ngữ.';
+      case 'onboarding_pack_sources_hint':
+        return 'Được tải song song theo từng phần, đồng thời từ GitHub, trang chính thức và một máy chủ gương dự phòng, mỗi phần đều được kiểm tra checksum. Fushi đo tốc độ các nguồn ngay trong lúc tải và giao nhiều phần hơn cho nguồn đang nhanh nhất, nên ở đây không có gì để chọn.';
       default:
         return null;
     }
@@ -278563,12 +279972,6 @@ extension on _StringsZhCn {
         return '高级：本机改用 AnkiConnect 连电脑';
       case 'onboarding_anki_mobile_ankiconnect_hint':
         return '本机也能把卡制进同一局域网里电脑上的 Anki：在制卡设置里开启「改用 AnkiConnect」并填电脑地址。';
-      case 'onboarding_anki_fsrs_title':
-        return '把 Anki 算法换成 FSRS';
-      case 'onboarding_anki_fsrs_body':
-        return 'Anki 内置的 FSRS 算法远好于默认的 30 年前的 SM-2：记得更牢、复习量更少。请在 Anki 的 牌组选项 里打开 FSRS 开关（开一次全局生效）。这一步只能在 Anki 内手动完成。';
-      case 'onboarding_step_pack_browser_action':
-        return '浏览器下载';
       case 'onboarding_anki_setup_android_hint':
         return '安装 AnkiDroid 并打开一次完成初始化。回到 Fushi 首次制卡时，在弹出的授权框里点「允许」即可——不需要去 AnkiDroid 设置里改任何开关。';
       case 'onboarding_anki_install_addon_action':
@@ -278996,6 +280399,48 @@ extension on _StringsZhCn {
             'Hibiki 已改用端口 ${port}，但没找到 AnkiConnect 的插件配置。请在 Anki 的「工具 → 插件 → AnkiConnect → 配置」里把 webBindPort 也改成 ${port}，然后重启 Anki。';
       case 'anki_connect_port_auto_fix_none':
         return '本机没有找到空闲端口。';
+      case 'onboarding_action_badge_required':
+        return '必做';
+      case 'onboarding_action_badge_recommended':
+        return '推荐';
+      case 'onboarding_action_badge_optional':
+        return '可选';
+      case 'onboarding_pack_action_download_desc':
+        return '在后台下载整个推荐包，下完自动进入导入。随时可以取消，下次从断点续传。';
+      case 'onboarding_pack_action_import_existing_desc':
+        return '包已经下好了，这里直接导入。确认框里选「合并到现有库」不会动你已有的数据。';
+      case 'onboarding_pack_action_pick_desc':
+        return '已经从别处拿到包的 zip？从硬盘导入，整段下载都可以跳过。';
+      case 'onboarding_pack_action_website':
+        return '在官网下载页打开';
+      case 'onboarding_pack_action_website_desc':
+        return '在浏览器打开官网。那里的推荐包一节给出可以喂给下载工具的分片直链；下完回到这里，用「选择本地包文件」导入。';
+      case 'onboarding_pack_action_dictionary_desc':
+        return '学日语以外的语言？跳过推荐包，在这里按语言导入词典。';
+      case 'onboarding_pack_action_audio_desc':
+        return '发音音频从哪里来。推荐包已经含日语和英语；其它语言在这里加在线来源。';
+      case 'onboarding_anki_action_test_desc':
+        return '检查 Fushi 能不能连上 Anki，并把你的牌组和笔记类型拉过来。这一步不会创建任何东西。';
+      case 'onboarding_anki_action_refresh_desc':
+        return '重新从 Anki 拉牌组和笔记类型。在 Anki 里新建了牌组之后点它。';
+      case 'onboarding_anki_action_get_ankidroid_desc':
+        return '打开 AnkiDroid 的商店页。Fushi 的卡片写进它里面，得先装上。';
+      case 'onboarding_anki_action_get_anki_desc':
+        return '打开 Anki 的下载页。装好 Anki，制卡时让它开着。';
+      case 'onboarding_anki_action_install_addon_desc':
+        return '把内置的 AnkiConnect 插件解压进 Anki——Fushi 靠它和 Anki 通话。装完重启 Anki。';
+      case 'onboarding_step_anki_action_desc':
+        return '卡片模板、字段映射、截图和音频——也就是「做出来的卡长什么样」。上面选好牌组和笔记类型就能开始制卡了，想改卡片怎么做才需要进来。';
+      case 'onboarding_step_backup_action_desc':
+        return '选备份后端并登录，换机器或丢设备时库还在。';
+      case 'onboarding_step_interconnect_action_desc':
+        return '把这台设备和你的其它设备配对，共享同一个库并同步进度。';
+      case 'onboarding_step_extension_action_desc':
+        return '告诉你怎么装浏览器扩展并连上 Fushi，之后在网页上也能查词。';
+      case 'onboarding_step_fonts_action_desc':
+        return '导入自己的字体文件，并给每种语言指定用哪个。';
+      case 'onboarding_pack_sources_hint':
+        return '同时从 GitHub、官网和备用镜像分片并发下载，每片都校验。下载过程中会实测各来源速度，哪家快就多分给哪家，所以这里不用你选。';
       default:
         return null;
     }
@@ -286539,12 +287984,6 @@ extension on _StringsZhHk {
         return '高級：本機改用 AnkiConnect 連電腦';
       case 'onboarding_anki_mobile_ankiconnect_hint':
         return '本機也能把卡製進同一局域網裡電腦上的 Anki：在製卡設定裡開啟「改用 AnkiConnect」並填電腦地址。';
-      case 'onboarding_anki_fsrs_title':
-        return '把 Anki 算法換成 FSRS';
-      case 'onboarding_anki_fsrs_body':
-        return 'Anki 內置的 FSRS 算法遠好於預設的 30 年前的 SM-2：記得更牢、復習量更少。請在 Anki 的 牌組選項 裡打開 FSRS 開關（開一次全局生效）。這一步只能在 Anki 內手動完成。';
-      case 'onboarding_step_pack_browser_action':
-        return '瀏覽器下載';
       case 'onboarding_anki_setup_android_hint':
         return '安裝 AnkiDroid 並打開一次完成初始化。回到 Fushi 首次製卡時，在彈出的授權框裡點「允許」即可——不需要去 AnkiDroid 設定裡改任何開關。';
       case 'onboarding_anki_install_addon_action':
@@ -286972,6 +288411,48 @@ extension on _StringsZhHk {
             'Hibiki 已改用連接埠 ${port}，但找不到 AnkiConnect 的外掛設定。請在 Anki 的「工具 → 外掛 → AnkiConnect → 設定」裡把 webBindPort 也改成 ${port}，然後重啟 Anki。';
       case 'anki_connect_port_auto_fix_none':
         return '本機找不到空閒的連接埠。';
+      case 'onboarding_action_badge_required':
+        return '必做';
+      case 'onboarding_action_badge_recommended':
+        return '推薦';
+      case 'onboarding_action_badge_optional':
+        return '可選';
+      case 'onboarding_pack_action_download_desc':
+        return '在後台下載整個推薦包，下完自動進入匯入。隨時可以取消，下次從斷點續傳。';
+      case 'onboarding_pack_action_import_existing_desc':
+        return '包已經下好了，這裏直接匯入。確認框裏選「合併到現有庫」不會動你已有的資料。';
+      case 'onboarding_pack_action_pick_desc':
+        return '已經從別處拿到包的 zip？從硬碟匯入，整段下載都可以跳過。';
+      case 'onboarding_pack_action_website':
+        return '在官網下載頁打開';
+      case 'onboarding_pack_action_website_desc':
+        return '在瀏覽器打開官網。那裏的推薦包一節給出可以餵給下載工具的分片直連；下完回到這裏，用「選擇本機包檔案」匯入。';
+      case 'onboarding_pack_action_dictionary_desc':
+        return '學日語以外的語言？跳過推薦包，在這裏按語言匯入詞典。';
+      case 'onboarding_pack_action_audio_desc':
+        return '發音音訊從哪裏來。推薦包已經含日語和英語；其它語言在這裏加線上來源。';
+      case 'onboarding_anki_action_test_desc':
+        return '檢查 Fushi 能不能連上 Anki，並把你的牌組和筆記類型拉過來。這一步不會建立任何東西。';
+      case 'onboarding_anki_action_refresh_desc':
+        return '重新從 Anki 拉牌組和筆記類型。在 Anki 裏新建了牌組之後點它。';
+      case 'onboarding_anki_action_get_ankidroid_desc':
+        return '打開 AnkiDroid 的商店頁。Fushi 的卡片寫進它裏面，得先裝上。';
+      case 'onboarding_anki_action_get_anki_desc':
+        return '打開 Anki 的下載頁。裝好 Anki，製卡時讓它開着。';
+      case 'onboarding_anki_action_install_addon_desc':
+        return '把內建的 AnkiConnect 外掛解壓進 Anki——Fushi 靠它和 Anki 通話。裝完重啟 Anki。';
+      case 'onboarding_step_anki_action_desc':
+        return '卡片範本、欄位對應、截圖和音訊——也就是「做出來的卡長甚麼樣」。上面選好牌組和筆記類型就能開始製卡了，想改卡片怎麼做才需要進來。';
+      case 'onboarding_step_backup_action_desc':
+        return '選備份後端並登入，換機器或丟裝置時庫還在。';
+      case 'onboarding_step_interconnect_action_desc':
+        return '把這台裝置和你的其它裝置配對，共用同一個庫並同步進度。';
+      case 'onboarding_step_extension_action_desc':
+        return '告訴你怎麼裝瀏覽器擴充功能並連上 Fushi，之後在網頁上也能查詞。';
+      case 'onboarding_step_fonts_action_desc':
+        return '匯入自己的字型檔案，並給每種語言指定用哪個。';
+      case 'onboarding_pack_sources_hint':
+        return '同時從 GitHub、官網和備用鏡像分片並發下載，每片都校驗。下載過程中會實測各來源速度，哪家快就多分給哪家，所以這裏不用你選。';
       default:
         return null;
     }
