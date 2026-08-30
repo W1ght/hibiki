@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 69258 (4074 per locale)
+/// Strings: 69275 (4075 per locale)
 ///
-/// Built on 2026-08-30 at 14:06 UTC
+/// Built on 2026-08-30 at 16:09 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5587,6 +5587,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'The saved rectangle, text layout, and executable-specific click authorization will be removed.';
   String get game_lookup_attached_probe_waiting =>
       'Waiting for matching in-game click';
+  String get delete_choices_remember => 'Remember these choices';
 }
 
 // Path: <root>
@@ -15066,6 +15067,8 @@ class _StringsAr extends _StringsEn {
   @override
   String get game_lookup_attached_probe_waiting =>
       'Waiting for matching in-game click';
+  @override
+  String get delete_choices_remember => 'تذكّر هذه الخيارات';
 }
 
 // Path: <root>
@@ -24767,6 +24770,8 @@ class _StringsDe extends _StringsEn {
   @override
   String get game_lookup_attached_probe_waiting =>
       'Waiting for matching in-game click';
+  @override
+  String get delete_choices_remember => 'Diese Auswahl merken';
 }
 
 // Path: <root>
@@ -34515,6 +34520,8 @@ class _StringsEs extends _StringsEn {
   @override
   String get game_lookup_attached_probe_waiting =>
       'Waiting for matching in-game click';
+  @override
+  String get delete_choices_remember => 'Recordar estas opciones';
 }
 
 // Path: <root>
@@ -44298,6 +44305,8 @@ class _StringsFr extends _StringsEn {
   @override
   String get game_lookup_attached_probe_waiting =>
       'Waiting for matching in-game click';
+  @override
+  String get delete_choices_remember => 'Mémoriser ces choix';
 }
 
 // Path: <root>
@@ -53900,6 +53909,8 @@ class _StringsId extends _StringsEn {
   @override
   String get game_lookup_attached_probe_waiting =>
       'Waiting for matching in-game click';
+  @override
+  String get delete_choices_remember => 'Ingat pilihan ini';
 }
 
 // Path: <root>
@@ -63586,6 +63597,8 @@ class _StringsIt extends _StringsEn {
   @override
   String get game_lookup_attached_probe_waiting =>
       'Waiting for matching in-game click';
+  @override
+  String get delete_choices_remember => 'Ricorda queste scelte';
 }
 
 // Path: <root>
@@ -72681,6 +72694,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get game_lookup_attached_probe_waiting =>
       'Waiting for matching in-game click';
+  @override
+  String get delete_choices_remember => 'この選択を記憶する';
 }
 
 // Path: <root>
@@ -81787,6 +81802,8 @@ class _StringsKo extends _StringsEn {
   @override
   String get game_lookup_attached_probe_waiting =>
       'Waiting for matching in-game click';
+  @override
+  String get delete_choices_remember => '이 선택 기억하기';
 }
 
 // Path: <root>
@@ -91426,6 +91443,8 @@ class _StringsNl extends _StringsEn {
   @override
   String get game_lookup_attached_probe_waiting =>
       'Waiting for matching in-game click';
+  @override
+  String get delete_choices_remember => 'Deze keuzes onthouden';
 }
 
 // Path: <root>
@@ -101122,6 +101141,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get game_lookup_attached_probe_waiting =>
       'Waiting for matching in-game click';
+  @override
+  String get delete_choices_remember => 'Lembrar estas escolhas';
 }
 
 // Path: <root>
@@ -110792,6 +110813,8 @@ class _StringsRu extends _StringsEn {
   @override
   String get game_lookup_attached_probe_waiting =>
       'Waiting for matching in-game click';
+  @override
+  String get delete_choices_remember => 'Запомнить этот выбор';
 }
 
 // Path: <root>
@@ -120266,6 +120289,8 @@ class _StringsTh extends _StringsEn {
   @override
   String get game_lookup_attached_probe_waiting =>
       'Waiting for matching in-game click';
+  @override
+  String get delete_choices_remember => 'จดจำตัวเลือกเหล่านี้';
 }
 
 // Path: <root>
@@ -129853,6 +129878,8 @@ class _StringsTr extends _StringsEn {
   @override
   String get game_lookup_attached_probe_waiting =>
       'Waiting for matching in-game click';
+  @override
+  String get delete_choices_remember => 'Bu seçimleri hatırla';
 }
 
 // Path: <root>
@@ -139417,6 +139444,8 @@ class _StringsVi extends _StringsEn {
   @override
   String get game_lookup_attached_probe_waiting =>
       'Waiting for matching in-game click';
+  @override
+  String get delete_choices_remember => 'Ghi nhớ các lựa chọn này';
 }
 
 // Path: <root>
@@ -148220,6 +148249,8 @@ class _StringsZhCn extends _StringsEn {
       '将删除已保存的正文框、文字布局及该 exe 的点击风险授权。';
   @override
   String get game_lookup_attached_probe_waiting => '等待游戏内对应字形点击';
+  @override
+  String get delete_choices_remember => '记住这些选择';
 }
 
 // Path: <root>
@@ -157035,6 +157066,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get game_lookup_attached_probe_waiting =>
       'Waiting for matching in-game click';
+  @override
+  String get delete_choices_remember => '記住這些選擇';
 }
 
 /// Flat map(s) containing all translations.
@@ -165394,6 +165427,8 @@ extension on _StringsEn {
         return 'The saved rectangle, text layout, and executable-specific click authorization will be removed.';
       case 'game_lookup_attached_probe_waiting':
         return 'Waiting for matching in-game click';
+      case 'delete_choices_remember':
+        return 'Remember these choices';
       default:
         return null;
     }
@@ -173749,6 +173784,8 @@ extension on _StringsAr {
         return 'The saved rectangle, text layout, and executable-specific click authorization will be removed.';
       case 'game_lookup_attached_probe_waiting':
         return 'Waiting for matching in-game click';
+      case 'delete_choices_remember':
+        return 'تذكّر هذه الخيارات';
       default:
         return null;
     }
@@ -182147,6 +182184,8 @@ extension on _StringsDe {
         return 'The saved rectangle, text layout, and executable-specific click authorization will be removed.';
       case 'game_lookup_attached_probe_waiting':
         return 'Waiting for matching in-game click';
+      case 'delete_choices_remember':
+        return 'Diese Auswahl merken';
       default:
         return null;
     }
@@ -190537,6 +190576,8 @@ extension on _StringsEs {
         return 'The saved rectangle, text layout, and executable-specific click authorization will be removed.';
       case 'game_lookup_attached_probe_waiting':
         return 'Waiting for matching in-game click';
+      case 'delete_choices_remember':
+        return 'Recordar estas opciones';
       default:
         return null;
     }
@@ -198935,6 +198976,8 @@ extension on _StringsFr {
         return 'The saved rectangle, text layout, and executable-specific click authorization will be removed.';
       case 'game_lookup_attached_probe_waiting':
         return 'Waiting for matching in-game click';
+      case 'delete_choices_remember':
+        return 'Mémoriser ces choix';
       default:
         return null;
     }
@@ -207305,6 +207348,8 @@ extension on _StringsId {
         return 'The saved rectangle, text layout, and executable-specific click authorization will be removed.';
       case 'game_lookup_attached_probe_waiting':
         return 'Waiting for matching in-game click';
+      case 'delete_choices_remember':
+        return 'Ingat pilihan ini';
       default:
         return null;
     }
@@ -215696,6 +215741,8 @@ extension on _StringsIt {
         return 'The saved rectangle, text layout, and executable-specific click authorization will be removed.';
       case 'game_lookup_attached_probe_waiting':
         return 'Waiting for matching in-game click';
+      case 'delete_choices_remember':
+        return 'Ricorda queste scelte';
       default:
         return null;
     }
@@ -224017,6 +224064,8 @@ extension on _StringsJa {
         return 'The saved rectangle, text layout, and executable-specific click authorization will be removed.';
       case 'game_lookup_attached_probe_waiting':
         return 'Waiting for matching in-game click';
+      case 'delete_choices_remember':
+        return 'この選択を記憶する';
       default:
         return null;
     }
@@ -232341,6 +232390,8 @@ extension on _StringsKo {
         return 'The saved rectangle, text layout, and executable-specific click authorization will be removed.';
       case 'game_lookup_attached_probe_waiting':
         return 'Waiting for matching in-game click';
+      case 'delete_choices_remember':
+        return '이 선택 기억하기';
       default:
         return null;
     }
@@ -240726,6 +240777,8 @@ extension on _StringsNl {
         return 'The saved rectangle, text layout, and executable-specific click authorization will be removed.';
       case 'game_lookup_attached_probe_waiting':
         return 'Waiting for matching in-game click';
+      case 'delete_choices_remember':
+        return 'Deze keuzes onthouden';
       default:
         return null;
     }
@@ -249106,6 +249159,8 @@ extension on _StringsPtBr {
         return 'The saved rectangle, text layout, and executable-specific click authorization will be removed.';
       case 'game_lookup_attached_probe_waiting':
         return 'Waiting for matching in-game click';
+      case 'delete_choices_remember':
+        return 'Lembrar estas escolhas';
       default:
         return null;
     }
@@ -257492,6 +257547,8 @@ extension on _StringsRu {
         return 'The saved rectangle, text layout, and executable-specific click authorization will be removed.';
       case 'game_lookup_attached_probe_waiting':
         return 'Waiting for matching in-game click';
+      case 'delete_choices_remember':
+        return 'Запомнить этот выбор';
       default:
         return null;
     }
@@ -265851,6 +265908,8 @@ extension on _StringsTh {
         return 'The saved rectangle, text layout, and executable-specific click authorization will be removed.';
       case 'game_lookup_attached_probe_waiting':
         return 'Waiting for matching in-game click';
+      case 'delete_choices_remember':
+        return 'จดจำตัวเลือกเหล่านี้';
       default:
         return null;
     }
@@ -274226,6 +274285,8 @@ extension on _StringsTr {
         return 'The saved rectangle, text layout, and executable-specific click authorization will be removed.';
       case 'game_lookup_attached_probe_waiting':
         return 'Waiting for matching in-game click';
+      case 'delete_choices_remember':
+        return 'Bu seçimleri hatırla';
       default:
         return null;
     }
@@ -282594,6 +282655,8 @@ extension on _StringsVi {
         return 'The saved rectangle, text layout, and executable-specific click authorization will be removed.';
       case 'game_lookup_attached_probe_waiting':
         return 'Waiting for matching in-game click';
+      case 'delete_choices_remember':
+        return 'Ghi nhớ các lựa chọn này';
       default:
         return null;
     }
@@ -290893,6 +290956,8 @@ extension on _StringsZhCn {
         return '将删除已保存的正文框、文字布局及该 exe 的点击风险授权。';
       case 'game_lookup_attached_probe_waiting':
         return '等待游戏内对应字形点击';
+      case 'delete_choices_remember':
+        return '记住这些选择';
       default:
         return null;
     }
@@ -299193,6 +299258,8 @@ extension on _StringsZhHk {
         return 'The saved rectangle, text layout, and executable-specific click authorization will be removed.';
       case 'game_lookup_attached_probe_waiting':
         return 'Waiting for matching in-game click';
+      case 'delete_choices_remember':
+        return '記住這些選擇';
       default:
         return null;
     }
