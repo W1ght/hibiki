@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 66912 (3936 per locale)
+/// Strings: 66861 (3933 per locale)
 ///
-/// Built on 2026-08-30 at 09:30 UTC
+/// Built on 2026-08-30 at 09:35 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -988,13 +988,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get download_clear_finished => 'Clear finished';
   String get download_detail_backend_offline =>
       'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
-  String get download_network_proxy_auto => 'Auto';
-  String get download_network_proxy_auto_hint =>
-      'Applies to AniList, Nyaa, and Jimaku only. Auto uses environment variables, then the enabled system proxy; torrent traffic is unchanged.';
-  String get download_network_proxy_custom => 'Custom';
-  String get download_network_proxy_custom_label => 'Custom proxy';
-  String get download_network_proxy_direct => 'Direct';
-  String get download_network_proxy_section => 'Discovery network';
   String get download_open_settings => 'Open settings';
   String get download_save_root_change => 'Change folder';
   String get download_save_root_create_failed =>
@@ -2714,12 +2707,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get update_check_failed => 'Update check failed';
   String get update_checking_now => 'Checking for updates…';
   String get update_connecting => 'Connecting…';
-  String get update_custom_proxy_auto_hint =>
-      'Used for update checks, cloud sync and downloads. Leave blank to use environment variables, then the enabled system proxy.';
-  String get update_custom_proxy_hint =>
-      'host:port, e.g. 127.0.0.1:7890 (IPv4/host only)';
-  String get update_custom_proxy_invalid => 'Invalid proxy. Use host:port';
-  String get update_custom_proxy_label => 'Custom network proxy';
   String get update_debug_channel => 'Debug update channel';
   String get update_debug_channel_warning =>
       'Debug channel builds may be unstable. Use at your own risk.';
@@ -5379,6 +5366,17 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_setting_hdr_output_auto => 'Auto';
   String get video_setting_hdr_output_always => 'Always';
   String get video_setting_hdr_output_off => 'Off';
+  String get network_proxy_auto_hint =>
+      'Applies to every internet request the app makes: updates, cloud sync, dictionaries, downloads, subtitles and metadata. Leave blank for automatic: environment variables, then the enabled system proxy. P2P (torrent) transfers connect directly unless enabled below.';
+  String get network_proxy_hint =>
+      'host:port, e.g. 127.0.0.1:7890 (IPv4/host only)';
+  String get network_proxy_invalid => 'Invalid proxy. Use host:port';
+  String get network_proxy_label => 'Network proxy';
+  String get section_network => 'Network';
+  String get network_proxy_p2p_label =>
+      'Route P2P (torrent) traffic through the proxy';
+  String get network_proxy_p2p_warning =>
+      'Off by default: P2P connects directly. Routing it through the proxy can reduce speed, and many proxy providers forbid BitTorrent traffic, so your proxy account may be throttled, warned or terminated. Applies to the built-in engine; an external qBittorrent uses its own proxy settings.';
 }
 
 // Path: <root>
@@ -6831,19 +6829,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get download_detail_backend_offline =>
       'خلفية التحميل الأصلية غير متصلة. يتم عرض معلومات المهمة المحفوظة؛ المعلمات المباشرة غير متاحة.';
-  @override
-  String get download_network_proxy_auto => 'تلقائي';
-  @override
-  String get download_network_proxy_auto_hint =>
-      'ينطبق على AniList وNyaa وJimaku فقط. التلقائي يستخدم متغيرات البيئة، ثم وكيل النظام المُفعّل؛ حركة التورنت لا تتغير.';
-  @override
-  String get download_network_proxy_custom => 'مخصص';
-  @override
-  String get download_network_proxy_custom_label => 'وكيل مخصص';
-  @override
-  String get download_network_proxy_direct => 'مباشر';
-  @override
-  String get download_network_proxy_section => 'شبكة الاكتشاف';
   @override
   String get download_open_settings => 'فتح الإعدادات';
   @override
@@ -9956,17 +9941,6 @@ class _StringsAr extends _StringsEn {
   String get update_checking_now => 'جارٍ التحقق من التحديثات…';
   @override
   String get update_connecting => 'جارٍ الاتصال…';
-  @override
-  String get update_custom_proxy_auto_hint =>
-      'Leave blank to use environment variables, then the enabled system proxy.';
-  @override
-  String get update_custom_proxy_hint =>
-      'المضيف:المنفذ، مثال 127.0.0.1:7890 (IPv4/اسم مضيف فقط)';
-  @override
-  String get update_custom_proxy_invalid =>
-      'وكيل غير صالح. استخدم المضيف:المنفذ';
-  @override
-  String get update_custom_proxy_label => 'Custom update proxy';
   @override
   String get update_debug_channel => 'قناة تحديث التصحيح';
   @override
@@ -14522,6 +14496,23 @@ class _StringsAr extends _StringsEn {
   String get video_setting_hdr_output_always => 'دائمًا';
   @override
   String get video_setting_hdr_output_off => 'إيقاف';
+  @override
+  String get network_proxy_auto_hint =>
+      'يُطبَّق على جميع طلبات الإنترنت في التطبيق: التحديثات، والمزامنة السحابية، والقواميس، والتنزيلات، والترجمات، والبيانات الوصفية. اتركه فارغًا للوضع التلقائي: متغيرات البيئة، ثم وكيل النظام المفعّل. تتصل عمليات نقل P2P (torrent) مباشرة افتراضيًا؛ يمكنك تفعيلها بشكل منفصل أدناه.';
+  @override
+  String get network_proxy_hint =>
+      'المضيف:المنفذ، مثال 127.0.0.1:7890 (IPv4/اسم مضيف فقط)';
+  @override
+  String get network_proxy_invalid => 'وكيل غير صالح. استخدم المضيف:المنفذ';
+  @override
+  String get network_proxy_label => 'وكيل الشبكة';
+  @override
+  String get section_network => 'الشبكة';
+  @override
+  String get network_proxy_p2p_label => 'تمرير حركة P2P (torrent) عبر الوكيل';
+  @override
+  String get network_proxy_p2p_warning =>
+      'معطّل افتراضيًا؛ يتصل P2P مباشرة. قد يؤدي التمرير عبر الوكيل إلى خفض السرعة، وكثير من مزودي الوكلاء يحظرون حركة BitTorrent: قد يتم تقييد حساب الوكيل أو تحذيره أو إنهاؤه. ينطبق على المحرك المدمج فقط؛ يستخدم qBittorrent الخارجي إعدادات الوكيل الخاصة به.';
 }
 
 // Path: <root>
@@ -16007,19 +15998,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get download_detail_backend_offline =>
       'Das ursprüngliche Download-Backend ist offline. Gespeicherte Aufgabeninformationen werden angezeigt; Live-Parameter sind nicht verfügbar.';
-  @override
-  String get download_network_proxy_auto => 'Automatisch';
-  @override
-  String get download_network_proxy_auto_hint =>
-      'Gilt nur für AniList, Nyaa und Jimaku. Automatisch verwendet Umgebungsvariablen, dann den aktivierten System-Proxy; Torrent-Datenverkehr bleibt unverändert.';
-  @override
-  String get download_network_proxy_custom => 'Benutzerdefiniert';
-  @override
-  String get download_network_proxy_custom_label => 'Benutzerdefinierter Proxy';
-  @override
-  String get download_network_proxy_direct => 'Direkt';
-  @override
-  String get download_network_proxy_section => 'Entdeckungsnetzwerk';
   @override
   String get download_open_settings => 'Einstellungen öffnen';
   @override
@@ -19198,17 +19176,6 @@ class _StringsDe extends _StringsEn {
   String get update_checking_now => 'Suche nach Updates…';
   @override
   String get update_connecting => 'Verbinde…';
-  @override
-  String get update_custom_proxy_auto_hint =>
-      'Leave blank to use environment variables, then the enabled system proxy.';
-  @override
-  String get update_custom_proxy_hint =>
-      'Host:Port, z. B. 127.0.0.1:7890 (nur IPv4/Host)';
-  @override
-  String get update_custom_proxy_invalid =>
-      'Ungültiger Proxy. Verwende Host:Port';
-  @override
-  String get update_custom_proxy_label => 'Custom update proxy';
   @override
   String get update_debug_channel => 'Debug-Update-Kanal';
   @override
@@ -23878,6 +23845,24 @@ class _StringsDe extends _StringsEn {
   String get video_setting_hdr_output_always => 'Immer';
   @override
   String get video_setting_hdr_output_off => 'Aus';
+  @override
+  String get network_proxy_auto_hint =>
+      'Gilt für alle Internetanfragen der App: Updates, Cloud-Sync, Wörterbücher, Downloads, Untertitel und Metadaten. Leer lassen für automatisch: Umgebungsvariablen, dann der aktivierte System-Proxy. P2P-(Torrent-)Übertragungen verbinden sich standardmäßig direkt und lassen sich unten separat aktivieren.';
+  @override
+  String get network_proxy_hint =>
+      'Host:Port, z. B. 127.0.0.1:7890 (nur IPv4/Host)';
+  @override
+  String get network_proxy_invalid => 'Ungültiger Proxy. Verwende Host:Port';
+  @override
+  String get network_proxy_label => 'Netzwerk-Proxy';
+  @override
+  String get section_network => 'Netzwerk';
+  @override
+  String get network_proxy_p2p_label =>
+      'P2P-(Torrent-)Verkehr über den Proxy leiten';
+  @override
+  String get network_proxy_p2p_warning =>
+      'Standardmäßig aus – P2P verbindet sich direkt. Über den Proxy kann die Geschwindigkeit sinken, und viele Proxy-Anbieter verbieten BitTorrent-Verkehr: Dein Proxy-Konto kann gedrosselt, verwarnt oder gekündigt werden. Gilt nur für die integrierte Engine; ein externes qBittorrent nutzt seine eigenen Proxy-Einstellungen.';
 }
 
 // Path: <root>
@@ -25363,19 +25348,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get download_detail_backend_offline =>
       'El motor de descarga original está desconectado. Se muestra la información persistida de la tarea; los parámetros en tiempo real no están disponibles.';
-  @override
-  String get download_network_proxy_auto => 'Auto';
-  @override
-  String get download_network_proxy_auto_hint =>
-      'Se aplica solo a AniList, Nyaa y Jimaku. Auto usa variables de entorno, luego el proxy del sistema habilitado; el tráfico de torrents no se modifica.';
-  @override
-  String get download_network_proxy_custom => 'Personalizado';
-  @override
-  String get download_network_proxy_custom_label => 'Proxy personalizado';
-  @override
-  String get download_network_proxy_direct => 'Directo';
-  @override
-  String get download_network_proxy_section => 'Red de descubrimiento';
   @override
   String get download_open_settings => 'Abrir ajustes';
   @override
@@ -28577,16 +28549,6 @@ class _StringsEs extends _StringsEn {
   String get update_checking_now => 'Buscando actualizaciones…';
   @override
   String get update_connecting => 'Conectando…';
-  @override
-  String get update_custom_proxy_auto_hint =>
-      'Leave blank to use environment variables, then the enabled system proxy.';
-  @override
-  String get update_custom_proxy_hint =>
-      'host:puerto, ej. 127.0.0.1:7890 (solo IPv4/host)';
-  @override
-  String get update_custom_proxy_invalid => 'Proxy no válido. Use host:puerto';
-  @override
-  String get update_custom_proxy_label => 'Custom update proxy';
   @override
   String get update_debug_channel => 'Canal de actualización de depuración';
   @override
@@ -33277,6 +33239,24 @@ class _StringsEs extends _StringsEn {
   String get video_setting_hdr_output_always => 'Siempre';
   @override
   String get video_setting_hdr_output_off => 'Desactivado';
+  @override
+  String get network_proxy_auto_hint =>
+      'Se aplica a todas las solicitudes de Internet de la aplicación: actualizaciones, sincronización en la nube, diccionarios, descargas, subtítulos y metadatos. Déjelo en blanco para automático: variables de entorno y, después, el proxy del sistema habilitado. Las transferencias P2P (torrent) se conectan directamente de forma predeterminada; puede activarlas por separado abajo.';
+  @override
+  String get network_proxy_hint =>
+      'host:puerto, ej. 127.0.0.1:7890 (solo IPv4/host)';
+  @override
+  String get network_proxy_invalid => 'Proxy no válido. Use host:puerto';
+  @override
+  String get network_proxy_label => 'Proxy de red';
+  @override
+  String get section_network => 'Red';
+  @override
+  String get network_proxy_p2p_label =>
+      'Enrutar el tráfico P2P (torrent) por el proxy';
+  @override
+  String get network_proxy_p2p_warning =>
+      'Desactivado de forma predeterminada: P2P se conecta directamente. Pasar por el proxy puede reducir la velocidad y muchos proveedores de proxy prohíben el tráfico BitTorrent: su cuenta de proxy podría ser limitada, advertida o cancelada. Solo se aplica al motor integrado; un qBittorrent externo usa su propia configuración de proxy.';
 }
 
 // Path: <root>
@@ -34779,19 +34759,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get download_detail_backend_offline =>
       'Le moteur de téléchargement d\'origine est hors ligne. Les informations sauvegardées sont affichées ; les paramètres en direct sont indisponibles.';
-  @override
-  String get download_network_proxy_auto => 'Auto';
-  @override
-  String get download_network_proxy_auto_hint =>
-      'S\'applique à AniList, Nyaa et Jimaku uniquement. Auto utilise les variables d\'environnement, puis le proxy système activé ; le trafic torrent est inchangé.';
-  @override
-  String get download_network_proxy_custom => 'Personnalisé';
-  @override
-  String get download_network_proxy_custom_label => 'Proxy personnalisé';
-  @override
-  String get download_network_proxy_direct => 'Direct';
-  @override
-  String get download_network_proxy_section => 'Réseau de découverte';
   @override
   String get download_open_settings => 'Ouvrir les paramètres';
   @override
@@ -37989,17 +37956,6 @@ class _StringsFr extends _StringsEn {
   String get update_checking_now => 'Vérification des mises à jour…';
   @override
   String get update_connecting => 'Connexion…';
-  @override
-  String get update_custom_proxy_auto_hint =>
-      'Leave blank to use environment variables, then the enabled system proxy.';
-  @override
-  String get update_custom_proxy_hint =>
-      'hôte:port, par ex. 127.0.0.1:7890 (IPv4/nom d\'hôte uniquement)';
-  @override
-  String get update_custom_proxy_invalid =>
-      'Proxy invalide. Utilisez hôte:port';
-  @override
-  String get update_custom_proxy_label => 'Custom update proxy';
   @override
   String get update_debug_channel => 'Canal de mise à jour de débogage';
   @override
@@ -42709,6 +42665,24 @@ class _StringsFr extends _StringsEn {
   String get video_setting_hdr_output_always => 'Toujours';
   @override
   String get video_setting_hdr_output_off => 'Désactivé';
+  @override
+  String get network_proxy_auto_hint =>
+      'S\'applique à toutes les requêtes Internet de l\'application : mises à jour, synchronisation cloud, dictionnaires, téléchargements, sous-titres et métadonnées. Laissez vide pour le mode automatique : variables d\'environnement, puis le proxy système activé. Les transferts P2P (torrent) se connectent directement par défaut ; vous pouvez les activer séparément ci-dessous.';
+  @override
+  String get network_proxy_hint =>
+      'hôte:port, par ex. 127.0.0.1:7890 (IPv4/nom d\'hôte uniquement)';
+  @override
+  String get network_proxy_invalid => 'Proxy invalide. Utilisez hôte:port';
+  @override
+  String get network_proxy_label => 'Proxy réseau';
+  @override
+  String get section_network => 'Réseau';
+  @override
+  String get network_proxy_p2p_label =>
+      'Faire passer le trafic P2P (torrent) par le proxy';
+  @override
+  String get network_proxy_p2p_warning =>
+      'Désactivé par défaut : le P2P se connecte directement. Passer par le proxy peut réduire la vitesse, et de nombreux fournisseurs de proxy interdisent le trafic BitTorrent : votre compte proxy peut être bridé, averti ou résilié. Ne s\'applique qu\'au moteur intégré ; un qBittorrent externe utilise ses propres paramètres de proxy.';
 }
 
 // Path: <root>
@@ -44170,19 +44144,6 @@ class _StringsId extends _StringsEn {
   @override
   String get download_detail_backend_offline =>
       'Backend unduhan asli sedang offline. Informasi tugas yang tersimpan ditampilkan; parameter langsung tidak tersedia.';
-  @override
-  String get download_network_proxy_auto => 'Otomatis';
-  @override
-  String get download_network_proxy_auto_hint =>
-      'Berlaku untuk AniList, Nyaa, dan Jimaku saja. Otomatis menggunakan variabel lingkungan, lalu proksi sistem yang aktif; lalu lintas torrent tidak berubah.';
-  @override
-  String get download_network_proxy_custom => 'Kustom';
-  @override
-  String get download_network_proxy_custom_label => 'Proksi kustom';
-  @override
-  String get download_network_proxy_direct => 'Langsung';
-  @override
-  String get download_network_proxy_section => 'Jaringan pencarian';
   @override
   String get download_open_settings => 'Buka pengaturan';
   @override
@@ -47335,17 +47296,6 @@ class _StringsId extends _StringsEn {
   String get update_checking_now => 'Memeriksa pembaruan…';
   @override
   String get update_connecting => 'Menghubungkan…';
-  @override
-  String get update_custom_proxy_auto_hint =>
-      'Leave blank to use environment variables, then the enabled system proxy.';
-  @override
-  String get update_custom_proxy_hint =>
-      'host:port, mis. 127.0.0.1:7890 (khusus IPv4/host)';
-  @override
-  String get update_custom_proxy_invalid =>
-      'Proksi tidak valid. Gunakan host:port';
-  @override
-  String get update_custom_proxy_label => 'Custom update proxy';
   @override
   String get update_debug_channel => 'Kanal Pembaruan Debug';
   @override
@@ -51967,6 +51917,24 @@ class _StringsId extends _StringsEn {
   String get video_setting_hdr_output_always => 'Selalu';
   @override
   String get video_setting_hdr_output_off => 'Mati';
+  @override
+  String get network_proxy_auto_hint =>
+      'Berlaku untuk semua permintaan Internet aplikasi: pembaruan, sinkronisasi cloud, kamus, unduhan, subtitel, dan metadata. Kosongkan untuk otomatis: variabel lingkungan, lalu proksi sistem yang diaktifkan. Transfer P2P (torrent) terhubung langsung secara default; Anda dapat mengaktifkannya secara terpisah di bawah.';
+  @override
+  String get network_proxy_hint =>
+      'host:port, mis. 127.0.0.1:7890 (khusus IPv4/host)';
+  @override
+  String get network_proxy_invalid => 'Proksi tidak valid. Gunakan host:port';
+  @override
+  String get network_proxy_label => 'Proksi jaringan';
+  @override
+  String get section_network => 'Jaringan';
+  @override
+  String get network_proxy_p2p_label =>
+      'Rutekan lalu lintas P2P (torrent) melalui proksi';
+  @override
+  String get network_proxy_p2p_warning =>
+      'Nonaktif secara default — P2P terhubung langsung. Melewati proksi dapat menurunkan kecepatan, dan banyak penyedia proksi melarang lalu lintas BitTorrent: akun proksi Anda bisa dibatasi, diperingatkan, atau dihentikan. Hanya berlaku untuk mesin bawaan; qBittorrent eksternal memakai pengaturan proksinya sendiri.';
 }
 
 // Path: <root>
@@ -53445,19 +53413,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get download_detail_backend_offline =>
       'Il backend di download originale è offline. Vengono mostrate le informazioni salvate; i parametri live non sono disponibili.';
-  @override
-  String get download_network_proxy_auto => 'Auto';
-  @override
-  String get download_network_proxy_auto_hint =>
-      'Si applica solo ad AniList, Nyaa e Jimaku. Auto usa le variabili d\'ambiente, poi il proxy di sistema abilitato; il traffico torrent non cambia.';
-  @override
-  String get download_network_proxy_custom => 'Personalizzato';
-  @override
-  String get download_network_proxy_custom_label => 'Proxy personalizzato';
-  @override
-  String get download_network_proxy_direct => 'Diretto';
-  @override
-  String get download_network_proxy_section => 'Rete di scoperta';
   @override
   String get download_open_settings => 'Apri impostazioni';
   @override
@@ -56640,16 +56595,6 @@ class _StringsIt extends _StringsEn {
   String get update_checking_now => 'Controllo aggiornamenti…';
   @override
   String get update_connecting => 'Connessione…';
-  @override
-  String get update_custom_proxy_auto_hint =>
-      'Leave blank to use environment variables, then the enabled system proxy.';
-  @override
-  String get update_custom_proxy_hint =>
-      'host:porta, es. 127.0.0.1:7890 (solo IPv4/host)';
-  @override
-  String get update_custom_proxy_invalid => 'Proxy non valido. Usa host:porta';
-  @override
-  String get update_custom_proxy_label => 'Custom update proxy';
   @override
   String get update_debug_channel => 'Canale aggiornamenti di debug';
   @override
@@ -61302,6 +61247,24 @@ class _StringsIt extends _StringsEn {
   String get video_setting_hdr_output_always => 'Sempre';
   @override
   String get video_setting_hdr_output_off => 'Disattivato';
+  @override
+  String get network_proxy_auto_hint =>
+      'Si applica a tutte le richieste Internet dell\'app: aggiornamenti, sincronizzazione cloud, dizionari, download, sottotitoli e metadati. Lascia vuoto per la modalità automatica: variabili d\'ambiente, poi il proxy di sistema attivo. I trasferimenti P2P (torrent) si connettono direttamente per impostazione predefinita; puoi attivarli separatamente qui sotto.';
+  @override
+  String get network_proxy_hint =>
+      'host:porta, es. 127.0.0.1:7890 (solo IPv4/host)';
+  @override
+  String get network_proxy_invalid => 'Proxy non valido. Usa host:porta';
+  @override
+  String get network_proxy_label => 'Proxy di rete';
+  @override
+  String get section_network => 'Rete';
+  @override
+  String get network_proxy_p2p_label =>
+      'Instrada il traffico P2P (torrent) tramite il proxy';
+  @override
+  String get network_proxy_p2p_warning =>
+      'Disattivato per impostazione predefinita: il P2P si connette direttamente. Passare dal proxy può ridurre la velocità e molti provider proxy vietano il traffico BitTorrent: l\'account proxy potrebbe essere limitato, avvisato o chiuso. Vale solo per il motore integrato; un qBittorrent esterno usa le proprie impostazioni proxy.';
 }
 
 // Path: <root>
@@ -62706,19 +62669,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get download_detail_backend_offline =>
       '元のダウンロードバックエンドがオフラインです。保存されたタスク情報が表示されています。ライブパラメータは利用できません。';
-  @override
-  String get download_network_proxy_auto => '自動';
-  @override
-  String get download_network_proxy_auto_hint =>
-      'AniList、Nyaa、Jimaku にのみ適用されます。自動は環境変数を使用し、次にシステムプロキシを使用します。torrent トラフィックは変更されません。';
-  @override
-  String get download_network_proxy_custom => 'カスタム';
-  @override
-  String get download_network_proxy_custom_label => 'カスタムプロキシ';
-  @override
-  String get download_network_proxy_direct => '直接接続';
-  @override
-  String get download_network_proxy_section => 'ディスカバリーネットワーク';
   @override
   String get download_open_settings => '設定を開く';
   @override
@@ -65713,16 +65663,6 @@ class _StringsJa extends _StringsEn {
   String get update_checking_now => 'アップデートを確認中…';
   @override
   String get update_connecting => '更新元に接続中…';
-  @override
-  String get update_custom_proxy_auto_hint =>
-      'Leave blank to use environment variables, then the enabled system proxy.';
-  @override
-  String get update_custom_proxy_hint =>
-      'ホスト:ポート 例: 127.0.0.1:7890（IPv4/ホスト名のみ）';
-  @override
-  String get update_custom_proxy_invalid => '無効なプロキシです。ホスト:ポートの形式で入力してください';
-  @override
-  String get update_custom_proxy_label => 'Custom update proxy';
   @override
   String get update_debug_channel => 'デバッグ更新チャンネル';
   @override
@@ -70071,6 +70011,22 @@ class _StringsJa extends _StringsEn {
   String get video_setting_hdr_output_always => '常に';
   @override
   String get video_setting_hdr_output_off => 'オフ';
+  @override
+  String get network_proxy_auto_hint =>
+      'アプリのすべての通信（更新、クラウド同期、辞書、ダウンロード、字幕、メタデータ）に適用されます。空欄で自動：環境変数、次に有効なシステムプロキシを使用します。P2P（torrent）通信は既定で直接接続します。下で個別に有効化できます。';
+  @override
+  String get network_proxy_hint => 'ホスト:ポート 例: 127.0.0.1:7890（IPv4/ホスト名のみ）';
+  @override
+  String get network_proxy_invalid => '無効なプロキシです。ホスト:ポートの形式で入力してください';
+  @override
+  String get network_proxy_label => 'ネットワークプロキシ';
+  @override
+  String get section_network => 'ネットワーク';
+  @override
+  String get network_proxy_p2p_label => 'P2P（torrent）通信をプロキシ経由にする';
+  @override
+  String get network_proxy_p2p_warning =>
+      '既定ではオフで、P2P は直接接続します。プロキシ経由にすると速度が低下する場合があり、多くのプロキシ事業者は BitTorrent 通信を禁止しているため、プロキシアカウントが帯域制限・警告・停止される恐れがあります。内蔵エンジンにのみ適用され、外部 qBittorrent は自身のプロキシ設定を使用します。';
 }
 
 // Path: <root>
@@ -71472,19 +71428,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get download_detail_backend_offline =>
       '원래 다운로드 백엔드가 오프라인입니다. 저장된 작업 정보가 표시됩니다; 실시간 매개변수를 사용할 수 없습니다.';
-  @override
-  String get download_network_proxy_auto => '자동';
-  @override
-  String get download_network_proxy_auto_hint =>
-      'AniList, Nyaa, Jimaku에만 적용됩니다. 자동은 환경 변수를 먼저 사용한 후 활성화된 시스템 프록시를 사용합니다; 토렌트 트래픽은 변경되지 않습니다.';
-  @override
-  String get download_network_proxy_custom => '사용자 정의';
-  @override
-  String get download_network_proxy_custom_label => '사용자 정의 프록시';
-  @override
-  String get download_network_proxy_direct => '직접 연결';
-  @override
-  String get download_network_proxy_section => '탐색 네트워크';
   @override
   String get download_open_settings => '설정 열기';
   @override
@@ -74485,16 +74428,6 @@ class _StringsKo extends _StringsEn {
   String get update_checking_now => '업데이트 확인 중…';
   @override
   String get update_connecting => '연결 중…';
-  @override
-  String get update_custom_proxy_auto_hint =>
-      'Leave blank to use environment variables, then the enabled system proxy.';
-  @override
-  String get update_custom_proxy_hint =>
-      '호스트:포트, 예: 127.0.0.1:7890 (IPv4/호스트만 지원)';
-  @override
-  String get update_custom_proxy_invalid => '잘못된 프록시입니다. 호스트:포트 형식을 사용하세요';
-  @override
-  String get update_custom_proxy_label => 'Custom update proxy';
   @override
   String get update_debug_channel => '디버그 업데이트 채널';
   @override
@@ -78853,6 +78786,22 @@ class _StringsKo extends _StringsEn {
   String get video_setting_hdr_output_always => '항상';
   @override
   String get video_setting_hdr_output_off => '끄기';
+  @override
+  String get network_proxy_auto_hint =>
+      '앱의 모든 인터넷 요청(업데이트, 클라우드 동기화, 사전, 다운로드, 자막, 메타데이터)에 적용됩니다. 비워 두면 자동: 환경 변수, 그다음 활성화된 시스템 프록시를 사용합니다. P2P(토렌트) 전송은 기본적으로 직접 연결하며, 아래에서 따로 켤 수 있습니다.';
+  @override
+  String get network_proxy_hint => '호스트:포트, 예: 127.0.0.1:7890 (IPv4/호스트만 지원)';
+  @override
+  String get network_proxy_invalid => '잘못된 프록시입니다. 호스트:포트 형식을 사용하세요';
+  @override
+  String get network_proxy_label => '네트워크 프록시';
+  @override
+  String get section_network => '네트워크';
+  @override
+  String get network_proxy_p2p_label => 'P2P(토렌트) 전송을 프록시로 라우팅';
+  @override
+  String get network_proxy_p2p_warning =>
+      '기본적으로 꺼져 있으며 P2P는 직접 연결합니다. 프록시를 거치면 속도가 떨어질 수 있고, 많은 프록시 제공업체가 BitTorrent 트래픽을 금지하므로 프록시 계정이 속도 제한·경고·해지될 수 있습니다. 내장 엔진에만 적용되며 외부 qBittorrent는 자체 프록시 설정을 사용합니다.';
 }
 
 // Path: <root>
@@ -80327,19 +80276,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get download_detail_backend_offline =>
       'De oorspronkelijke download-backend is offline. Opgeslagen taakinformatie wordt getoond; live parameters zijn niet beschikbaar.';
-  @override
-  String get download_network_proxy_auto => 'Automatisch';
-  @override
-  String get download_network_proxy_auto_hint =>
-      'Geldt alleen voor AniList, Nyaa en Jimaku. Automatisch gebruikt omgevingsvariabelen, dan de ingeschakelde systeemproxy; torrentverkeer wordt niet gewijzigd.';
-  @override
-  String get download_network_proxy_custom => 'Aangepast';
-  @override
-  String get download_network_proxy_custom_label => 'Aangepaste proxy';
-  @override
-  String get download_network_proxy_direct => 'Direct';
-  @override
-  String get download_network_proxy_section => 'Discovery-netwerk';
   @override
   String get download_open_settings => 'Instellingen openen';
   @override
@@ -83504,17 +83440,6 @@ class _StringsNl extends _StringsEn {
   String get update_checking_now => 'Controleren op updates…';
   @override
   String get update_connecting => 'Verbinden…';
-  @override
-  String get update_custom_proxy_auto_hint =>
-      'Leave blank to use environment variables, then the enabled system proxy.';
-  @override
-  String get update_custom_proxy_hint =>
-      'host:poort, bijv. 127.0.0.1:7890 (alleen IPv4/host)';
-  @override
-  String get update_custom_proxy_invalid =>
-      'Ongeldige proxy. Gebruik host:poort';
-  @override
-  String get update_custom_proxy_label => 'Custom update proxy';
   @override
   String get update_debug_channel => 'Debug-updatekanaal';
   @override
@@ -88145,6 +88070,24 @@ class _StringsNl extends _StringsEn {
   String get video_setting_hdr_output_always => 'Altijd';
   @override
   String get video_setting_hdr_output_off => 'Uit';
+  @override
+  String get network_proxy_auto_hint =>
+      'Geldt voor alle internetverzoeken van de app: updates, cloudsynchronisatie, woordenboeken, downloads, ondertitels en metadata. Laat leeg voor automatisch: omgevingsvariabelen, daarna de ingeschakelde systeemproxy. P2P-overdrachten (torrent) maken standaard rechtstreeks verbinding; je kunt ze hieronder apart inschakelen.';
+  @override
+  String get network_proxy_hint =>
+      'host:poort, bijv. 127.0.0.1:7890 (alleen IPv4/host)';
+  @override
+  String get network_proxy_invalid => 'Ongeldige proxy. Gebruik host:poort';
+  @override
+  String get network_proxy_label => 'Netwerkproxy';
+  @override
+  String get section_network => 'Netwerk';
+  @override
+  String get network_proxy_p2p_label =>
+      'P2P-verkeer (torrent) via de proxy leiden';
+  @override
+  String get network_proxy_p2p_warning =>
+      'Standaard uit: P2P maakt rechtstreeks verbinding. Via de proxy kan de snelheid dalen en veel proxyaanbieders verbieden BitTorrent-verkeer: je proxyaccount kan worden afgeknepen, gewaarschuwd of opgezegd. Geldt alleen voor de ingebouwde engine; een externe qBittorrent gebruikt zijn eigen proxy-instellingen.';
 }
 
 // Path: <root>
@@ -89626,19 +89569,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get download_detail_backend_offline =>
       'O backend de download original está offline. Informações da tarefa persistidas são mostradas; parâmetros ao vivo estão indisponíveis.';
-  @override
-  String get download_network_proxy_auto => 'Auto';
-  @override
-  String get download_network_proxy_auto_hint =>
-      'Aplica-se apenas ao AniList, Nyaa e Jimaku. Auto usa variáveis de ambiente e depois o proxy do sistema ativado; o tráfego de torrent não é alterado.';
-  @override
-  String get download_network_proxy_custom => 'Personalizado';
-  @override
-  String get download_network_proxy_custom_label => 'Proxy personalizado';
-  @override
-  String get download_network_proxy_direct => 'Direto';
-  @override
-  String get download_network_proxy_section => 'Rede de descoberta';
   @override
   String get download_open_settings => 'Abrir configurações';
   @override
@@ -92811,16 +92741,6 @@ class _StringsPtBr extends _StringsEn {
   String get update_checking_now => 'Verificando atualizações…';
   @override
   String get update_connecting => 'Conectando…';
-  @override
-  String get update_custom_proxy_auto_hint =>
-      'Leave blank to use environment variables, then the enabled system proxy.';
-  @override
-  String get update_custom_proxy_hint =>
-      'host:porta, ex: 127.0.0.1:7890 (apenas IPv4/host)';
-  @override
-  String get update_custom_proxy_invalid => 'Proxy inválido. Use host:porta';
-  @override
-  String get update_custom_proxy_label => 'Custom update proxy';
   @override
   String get update_debug_channel => 'Canal de Atualização de Depuração';
   @override
@@ -97493,6 +97413,24 @@ class _StringsPtBr extends _StringsEn {
   String get video_setting_hdr_output_always => 'Sempre';
   @override
   String get video_setting_hdr_output_off => 'Desligado';
+  @override
+  String get network_proxy_auto_hint =>
+      'Aplica-se a todas as solicitações de Internet do aplicativo: atualizações, sincronização na nuvem, dicionários, downloads, legendas e metadados. Deixe em branco para automático: variáveis de ambiente e, depois, o proxy do sistema ativado. As transferências P2P (torrent) se conectam diretamente por padrão; você pode ativá-las separadamente abaixo.';
+  @override
+  String get network_proxy_hint =>
+      'host:porta, ex: 127.0.0.1:7890 (apenas IPv4/host)';
+  @override
+  String get network_proxy_invalid => 'Proxy inválido. Use host:porta';
+  @override
+  String get network_proxy_label => 'Proxy de rede';
+  @override
+  String get section_network => 'Rede';
+  @override
+  String get network_proxy_p2p_label =>
+      'Rotear o tráfego P2P (torrent) pelo proxy';
+  @override
+  String get network_proxy_p2p_warning =>
+      'Desativado por padrão: o P2P se conecta diretamente. Passar pelo proxy pode reduzir a velocidade, e muitos provedores de proxy proíbem tráfego BitTorrent: sua conta de proxy pode ser limitada, advertida ou encerrada. Aplica-se apenas ao mecanismo integrado; um qBittorrent externo usa suas próprias configurações de proxy.';
 }
 
 // Path: <root>
@@ -98966,19 +98904,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get download_detail_backend_offline =>
       'Исходный бэкенд загрузки не в сети. Показана сохранённая информация о задаче; актуальные параметры недоступны.';
-  @override
-  String get download_network_proxy_auto => 'Авто';
-  @override
-  String get download_network_proxy_auto_hint =>
-      'Применяется только к AniList, Nyaa и Jimaku. «Авто» использует переменные окружения, затем включённый системный прокси; торрент-трафик не затрагивается.';
-  @override
-  String get download_network_proxy_custom => 'Настраиваемый';
-  @override
-  String get download_network_proxy_custom_label => 'Настраиваемый прокси';
-  @override
-  String get download_network_proxy_direct => 'Прямое подключение';
-  @override
-  String get download_network_proxy_section => 'Сеть обнаружения';
   @override
   String get download_open_settings => 'Открыть настройки';
   @override
@@ -102152,17 +102077,6 @@ class _StringsRu extends _StringsEn {
   String get update_checking_now => 'Проверка обновлений…';
   @override
   String get update_connecting => 'Подключение…';
-  @override
-  String get update_custom_proxy_auto_hint =>
-      'Leave blank to use environment variables, then the enabled system proxy.';
-  @override
-  String get update_custom_proxy_hint =>
-      'хост:порт, например 127.0.0.1:7890 (только IPv4/хост)';
-  @override
-  String get update_custom_proxy_invalid =>
-      'Недопустимый прокси. Используйте хост:порт';
-  @override
-  String get update_custom_proxy_label => 'Custom update proxy';
   @override
   String get update_debug_channel => 'Канал отладочных обновлений';
   @override
@@ -106815,6 +106729,25 @@ class _StringsRu extends _StringsEn {
   String get video_setting_hdr_output_always => 'Всегда';
   @override
   String get video_setting_hdr_output_off => 'Выключено';
+  @override
+  String get network_proxy_auto_hint =>
+      'Применяется ко всем интернет-запросам приложения: обновления, облачная синхронизация, словари, загрузки, субтитры и метаданные. Оставьте пустым для автоматического режима: переменные окружения, затем включённый системный прокси. P2P-передачи (torrent) по умолчанию подключаются напрямую; их можно включить отдельно ниже.';
+  @override
+  String get network_proxy_hint =>
+      'хост:порт, например 127.0.0.1:7890 (только IPv4/хост)';
+  @override
+  String get network_proxy_invalid =>
+      'Недопустимый прокси. Используйте хост:порт';
+  @override
+  String get network_proxy_label => 'Сетевой прокси';
+  @override
+  String get section_network => 'Сеть';
+  @override
+  String get network_proxy_p2p_label =>
+      'Пропускать P2P-трафик (torrent) через прокси';
+  @override
+  String get network_proxy_p2p_warning =>
+      'По умолчанию выключено — P2P подключается напрямую. Через прокси скорость может снизиться, а многие прокси-провайдеры запрещают BitTorrent-трафик: аккаунт прокси могут ограничить, предупредить или заблокировать. Действует только для встроенного движка; внешний qBittorrent использует собственные настройки прокси.';
 }
 
 // Path: <root>
@@ -108266,19 +108199,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get download_detail_backend_offline =>
       'แบ็กเอนด์ดาวน์โหลดเดิมออฟไลน์อยู่ แสดงข้อมูลงานที่บันทึกไว้; พารามิเตอร์แบบเรียลไทม์ไม่พร้อมใช้งาน';
-  @override
-  String get download_network_proxy_auto => 'อัตโนมัติ';
-  @override
-  String get download_network_proxy_auto_hint =>
-      'ใช้กับ AniList, Nyaa และ Jimaku เท่านั้น อัตโนมัติใช้ตัวแปรสภาพแวดล้อมก่อน จากนั้นพร็อกซีระบบที่เปิดใช้งาน; ทราฟฟิกทอร์เรนต์ไม่เปลี่ยนแปลง';
-  @override
-  String get download_network_proxy_custom => 'กำหนดเอง';
-  @override
-  String get download_network_proxy_custom_label => 'พร็อกซีที่กำหนดเอง';
-  @override
-  String get download_network_proxy_direct => 'ตรง';
-  @override
-  String get download_network_proxy_section => 'เครือข่ายค้นหา';
   @override
   String get download_open_settings => 'เปิดการตั้งค่า';
   @override
@@ -111392,17 +111312,6 @@ class _StringsTh extends _StringsEn {
   String get update_checking_now => 'กำลังตรวจสอบอัปเดต…';
   @override
   String get update_connecting => 'กำลังเชื่อมต่อแหล่งอัปเดต…';
-  @override
-  String get update_custom_proxy_auto_hint =>
-      'Leave blank to use environment variables, then the enabled system proxy.';
-  @override
-  String get update_custom_proxy_hint =>
-      'host:port เช่น 127.0.0.1:7890 (IPv4/host เท่านั้น)';
-  @override
-  String get update_custom_proxy_invalid =>
-      'พร็อกซีไม่ถูกต้อง ใช้รูปแบบ host:port';
-  @override
-  String get update_custom_proxy_label => 'Custom update proxy';
   @override
   String get update_debug_channel => 'ช่องอัปเดตดีบัก';
   @override
@@ -115951,6 +115860,24 @@ class _StringsTh extends _StringsEn {
   String get video_setting_hdr_output_always => 'เสมอ';
   @override
   String get video_setting_hdr_output_off => 'ปิด';
+  @override
+  String get network_proxy_auto_hint =>
+      'ใช้กับคำขออินเทอร์เน็ตทั้งหมดของแอป: การอัปเดต การซิงค์คลาวด์ พจนานุกรม การดาวน์โหลด คำบรรยาย และข้อมูลเมตา เว้นว่างไว้เพื่อใช้อัตโนมัติ: ตัวแปรสภาพแวดล้อม จากนั้นพร็อกซีระบบที่เปิดใช้งาน การถ่ายโอน P2P (torrent) จะเชื่อมต่อโดยตรงตามค่าเริ่มต้น สามารถเปิดแยกได้ด้านล่าง';
+  @override
+  String get network_proxy_hint =>
+      'host:port เช่น 127.0.0.1:7890 (IPv4/host เท่านั้น)';
+  @override
+  String get network_proxy_invalid => 'พร็อกซีไม่ถูกต้อง ใช้รูปแบบ host:port';
+  @override
+  String get network_proxy_label => 'พร็อกซีเครือข่าย';
+  @override
+  String get section_network => 'เครือข่าย';
+  @override
+  String get network_proxy_p2p_label =>
+      'ส่งการรับส่งข้อมูล P2P (torrent) ผ่านพร็อกซี';
+  @override
+  String get network_proxy_p2p_warning =>
+      'ปิดตามค่าเริ่มต้น P2P จะเชื่อมต่อโดยตรง การส่งผ่านพร็อกซีอาจทำให้ความเร็วลดลง และผู้ให้บริการพร็อกซีจำนวนมากห้ามการรับส่งข้อมูล BitTorrent บัญชีพร็อกซีของคุณอาจถูกจำกัดความเร็ว เตือน หรือยกเลิก มีผลเฉพาะเอนจินในตัวเท่านั้น qBittorrent ภายนอกใช้การตั้งค่าพร็อกซีของตัวเอง';
 }
 
 // Path: <root>
@@ -117418,19 +117345,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get download_detail_backend_offline =>
       'Orijinal indirme arka ucu çevrimdışı. Kaydedilmiş görev bilgileri gösteriliyor; canlı parametreler kullanılamıyor.';
-  @override
-  String get download_network_proxy_auto => 'Otomatik';
-  @override
-  String get download_network_proxy_auto_hint =>
-      'Yalnızca AniList, Nyaa ve Jimaku için geçerlidir. Otomatik, ortam değişkenlerini, ardından etkin sistem proxy\'sini kullanır; torrent trafiği değişmez.';
-  @override
-  String get download_network_proxy_custom => 'Özel';
-  @override
-  String get download_network_proxy_custom_label => 'Özel proxy';
-  @override
-  String get download_network_proxy_direct => 'Doğrudan';
-  @override
-  String get download_network_proxy_section => 'Keşif ağı';
   @override
   String get download_open_settings => 'Ayarları aç';
   @override
@@ -120576,17 +120490,6 @@ class _StringsTr extends _StringsEn {
   String get update_checking_now => 'Güncellemeler kontrol ediliyor…';
   @override
   String get update_connecting => 'Bağlanılıyor…';
-  @override
-  String get update_custom_proxy_auto_hint =>
-      'Leave blank to use environment variables, then the enabled system proxy.';
-  @override
-  String get update_custom_proxy_hint =>
-      'sunucu:port, ör. 127.0.0.1:7890 (yalnızca IPv4/sunucu adı)';
-  @override
-  String get update_custom_proxy_invalid =>
-      'Geçersiz proxy. sunucu:port kullanın';
-  @override
-  String get update_custom_proxy_label => 'Custom update proxy';
   @override
   String get update_debug_channel => 'Hata Ayıklama Güncelleme Kanalı';
   @override
@@ -125194,6 +125097,24 @@ class _StringsTr extends _StringsEn {
   String get video_setting_hdr_output_always => 'Her zaman';
   @override
   String get video_setting_hdr_output_off => 'Kapalı';
+  @override
+  String get network_proxy_auto_hint =>
+      'Uygulamanın tüm internet isteklerine uygulanır: güncellemeler, bulut eşitleme, sözlükler, indirmeler, altyazılar ve meta veriler. Otomatik için boş bırakın: önce ortam değişkenleri, sonra etkin sistem proxy\'si. P2P (torrent) aktarımları varsayılan olarak doğrudan bağlanır; aşağıdan ayrıca etkinleştirebilirsiniz.';
+  @override
+  String get network_proxy_hint =>
+      'sunucu:port, ör. 127.0.0.1:7890 (yalnızca IPv4/sunucu adı)';
+  @override
+  String get network_proxy_invalid => 'Geçersiz proxy. sunucu:port kullanın';
+  @override
+  String get network_proxy_label => 'Ağ proxy\'si';
+  @override
+  String get section_network => 'Ağ';
+  @override
+  String get network_proxy_p2p_label =>
+      'P2P (torrent) trafiğini proxy üzerinden yönlendir';
+  @override
+  String get network_proxy_p2p_warning =>
+      'Varsayılan olarak kapalı; P2P doğrudan bağlanır. Proxy üzerinden geçmek hızı düşürebilir ve birçok proxy sağlayıcısı BitTorrent trafiğini yasaklar: proxy hesabınız kısıtlanabilir, uyarılabilir veya kapatılabilir. Yalnızca yerleşik motor için geçerlidir; harici qBittorrent kendi proxy ayarlarını kullanır.';
 }
 
 // Path: <root>
@@ -126659,19 +126580,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get download_detail_backend_offline =>
       'Trình tải xuống gốc đang ngoại tuyến. Thông tin tác vụ đã lưu được hiển thị; các tham số trực tiếp không khả dụng.';
-  @override
-  String get download_network_proxy_auto => 'Tự động';
-  @override
-  String get download_network_proxy_auto_hint =>
-      'Chỉ áp dụng cho AniList, Nyaa và Jimaku. Tự động sử dụng biến môi trường, sau đó proxy hệ thống đã bật; lưu lượng torrent không thay đổi.';
-  @override
-  String get download_network_proxy_custom => 'Tùy chỉnh';
-  @override
-  String get download_network_proxy_custom_label => 'Proxy tùy chỉnh';
-  @override
-  String get download_network_proxy_direct => 'Trực tiếp';
-  @override
-  String get download_network_proxy_section => 'Mạng khám phá';
   @override
   String get download_open_settings => 'Mở cài đặt';
   @override
@@ -129811,17 +129719,6 @@ class _StringsVi extends _StringsEn {
   String get update_checking_now => 'Đang kiểm tra cập nhật…';
   @override
   String get update_connecting => 'Đang kết nối…';
-  @override
-  String get update_custom_proxy_auto_hint =>
-      'Leave blank to use environment variables, then the enabled system proxy.';
-  @override
-  String get update_custom_proxy_hint =>
-      'host:port, ví dụ 127.0.0.1:7890 (chỉ IPv4/host)';
-  @override
-  String get update_custom_proxy_invalid =>
-      'Proxy không hợp lệ. Dùng host:port';
-  @override
-  String get update_custom_proxy_label => 'Custom update proxy';
   @override
   String get update_debug_channel => 'Kênh cập nhật gỡ lỗi';
   @override
@@ -134417,6 +134314,24 @@ class _StringsVi extends _StringsEn {
   String get video_setting_hdr_output_always => 'Luôn luôn';
   @override
   String get video_setting_hdr_output_off => 'Tắt';
+  @override
+  String get network_proxy_auto_hint =>
+      'Áp dụng cho mọi yêu cầu Internet của ứng dụng: cập nhật, đồng bộ đám mây, từ điển, tải xuống, phụ đề và siêu dữ liệu. Để trống để tự động: biến môi trường, sau đó là proxy hệ thống đã bật. Truyền P2P (torrent) mặc định kết nối trực tiếp; bạn có thể bật riêng bên dưới.';
+  @override
+  String get network_proxy_hint =>
+      'host:port, ví dụ 127.0.0.1:7890 (chỉ IPv4/host)';
+  @override
+  String get network_proxy_invalid => 'Proxy không hợp lệ. Dùng host:port';
+  @override
+  String get network_proxy_label => 'Proxy mạng';
+  @override
+  String get section_network => 'Mạng';
+  @override
+  String get network_proxy_p2p_label =>
+      'Định tuyến lưu lượng P2P (torrent) qua proxy';
+  @override
+  String get network_proxy_p2p_warning =>
+      'Mặc định tắt — P2P kết nối trực tiếp. Đi qua proxy có thể làm giảm tốc độ, và nhiều nhà cung cấp proxy cấm lưu lượng BitTorrent: tài khoản proxy của bạn có thể bị giới hạn, cảnh báo hoặc chấm dứt. Chỉ áp dụng cho engine tích hợp; qBittorrent bên ngoài dùng cài đặt proxy riêng.';
 }
 
 // Path: <root>
@@ -135781,19 +135696,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get download_detail_backend_offline =>
       '原下载后端当前离线。这里仍显示已保存的任务信息，但实时参数暂不可用。';
-  @override
-  String get download_network_proxy_auto => '自动';
-  @override
-  String get download_network_proxy_auto_hint =>
-      '仅影响 AniList、Nyaa 和 Jimaku。自动模式先读环境变量，再读已启用的系统代理；种子流量不受影响。';
-  @override
-  String get download_network_proxy_custom => '自定义';
-  @override
-  String get download_network_proxy_custom_label => '自定义代理';
-  @override
-  String get download_network_proxy_direct => '直连';
-  @override
-  String get download_network_proxy_section => '发现网络';
   @override
   String get download_open_settings => '去设置';
   @override
@@ -138713,16 +138615,6 @@ class _StringsZhCn extends _StringsEn {
   String get update_checking_now => '正在检查更新…';
   @override
   String get update_connecting => '正在连接更新源…';
-  @override
-  String get update_custom_proxy_auto_hint =>
-      '用于更新检查、云同步和下载。留空时自动读取环境变量，再读取已启用的系统代理。';
-  @override
-  String get update_custom_proxy_hint =>
-      'host:port，例如 127.0.0.1:7890（仅 IPv4/域名）';
-  @override
-  String get update_custom_proxy_invalid => '代理格式无效，请用 host:port';
-  @override
-  String get update_custom_proxy_label => '自定义网络代理';
   @override
   String get update_debug_channel => '调试更新通道';
   @override
@@ -142906,6 +142798,22 @@ class _StringsZhCn extends _StringsEn {
   String get video_setting_hdr_output_always => '始终';
   @override
   String get video_setting_hdr_output_off => '关闭';
+  @override
+  String get network_proxy_auto_hint =>
+      '应用的全部联网请求都走这里：更新、云同步、词典、下载、字幕与元数据。留空为自动：先读环境变量，再读已启用的系统代理。P2P（torrent）传输默认直连，可在下方单独开启。';
+  @override
+  String get network_proxy_hint => 'host:port，例如 127.0.0.1:7890（仅 IPv4/域名）';
+  @override
+  String get network_proxy_invalid => '代理格式无效，请用 host:port';
+  @override
+  String get network_proxy_label => '网络代理';
+  @override
+  String get section_network => '网络';
+  @override
+  String get network_proxy_p2p_label => 'P2P（torrent）传输走代理';
+  @override
+  String get network_proxy_p2p_warning =>
+      '默认关闭，P2P 直连。走代理可能降低速度；且不少代理服务商禁止 BT 流量，可能导致代理账号被限速、警告甚至封禁。仅对内置引擎生效，外接 qBittorrent 请在其自身设置中配置。';
 }
 
 // Path: <root>
@@ -144270,19 +144178,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get download_detail_backend_offline =>
       '原下載後端當前離線。這裡仍顯示已保存的任務資訊，但實時參數暫不可用。';
-  @override
-  String get download_network_proxy_auto => '自動';
-  @override
-  String get download_network_proxy_auto_hint =>
-      '僅影響 AniList、Nyaa 和 Jimaku。自動模式先讀環境變量，再讀已啟用的系統代理；種子流量不受影響。';
-  @override
-  String get download_network_proxy_custom => '自定義';
-  @override
-  String get download_network_proxy_custom_label => '自定義代理';
-  @override
-  String get download_network_proxy_direct => '直連';
-  @override
-  String get download_network_proxy_section => '發現網路';
   @override
   String get download_open_settings => '去設定';
   @override
@@ -147206,16 +147101,6 @@ class _StringsZhHk extends _StringsEn {
   String get update_checking_now => '正在檢查更新…';
   @override
   String get update_connecting => '正在連接更新來源…';
-  @override
-  String get update_custom_proxy_auto_hint =>
-      'Leave blank to use environment variables, then the enabled system proxy.';
-  @override
-  String get update_custom_proxy_hint =>
-      'host:port，例如 127.0.0.1:7890（僅 IPv4/域名）';
-  @override
-  String get update_custom_proxy_invalid => '代理格式無效，請用 host:port';
-  @override
-  String get update_custom_proxy_label => 'Custom update proxy';
   @override
   String get update_debug_channel => '偵錯更新頻道';
   @override
@@ -151400,6 +151285,22 @@ class _StringsZhHk extends _StringsEn {
   String get video_setting_hdr_output_always => '始終';
   @override
   String get video_setting_hdr_output_off => '關閉';
+  @override
+  String get network_proxy_auto_hint =>
+      '應用程式的全部連線請求都經此處：更新、雲端同步、詞典、下載、字幕與中繼資料。留空為自動：先讀取環境變數，再讀取已啟用的系統代理。P2P（torrent）傳輸預設直連，可在下方單獨開啟。';
+  @override
+  String get network_proxy_hint => 'host:port，例如 127.0.0.1:7890（僅 IPv4/域名）';
+  @override
+  String get network_proxy_invalid => '代理格式無效，請用 host:port';
+  @override
+  String get network_proxy_label => '網路代理';
+  @override
+  String get section_network => '網路';
+  @override
+  String get network_proxy_p2p_label => 'P2P（torrent）傳輸走代理';
+  @override
+  String get network_proxy_p2p_warning =>
+      '預設關閉，P2P 直連。走代理可能降低速度；且不少代理服務商禁止 BT 流量，可能導致代理帳號被限速、警告甚至封禁。僅對內建引擎生效，外接 qBittorrent 請在其自身設定中配置。';
 }
 
 /// Flat map(s) containing all translations.
@@ -152691,18 +152592,6 @@ extension on _StringsEn {
         return 'Clear finished';
       case 'download_detail_backend_offline':
         return 'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
-      case 'download_network_proxy_auto':
-        return 'Auto';
-      case 'download_network_proxy_auto_hint':
-        return 'Applies to AniList, Nyaa, and Jimaku only. Auto uses environment variables, then the enabled system proxy; torrent traffic is unchanged.';
-      case 'download_network_proxy_custom':
-        return 'Custom';
-      case 'download_network_proxy_custom_label':
-        return 'Custom proxy';
-      case 'download_network_proxy_direct':
-        return 'Direct';
-      case 'download_network_proxy_section':
-        return 'Discovery network';
       case 'download_open_settings':
         return 'Open settings';
       case 'download_save_root_change':
@@ -155544,14 +155433,6 @@ extension on _StringsEn {
         return 'Checking for updates…';
       case 'update_connecting':
         return 'Connecting…';
-      case 'update_custom_proxy_auto_hint':
-        return 'Used for update checks, cloud sync and downloads. Leave blank to use environment variables, then the enabled system proxy.';
-      case 'update_custom_proxy_hint':
-        return 'host:port, e.g. 127.0.0.1:7890 (IPv4/host only)';
-      case 'update_custom_proxy_invalid':
-        return 'Invalid proxy. Use host:port';
-      case 'update_custom_proxy_label':
-        return 'Custom network proxy';
       case 'update_debug_channel':
         return 'Debug update channel';
       case 'update_debug_channel_warning':
@@ -159479,6 +159360,20 @@ extension on _StringsEn {
         return 'Always';
       case 'video_setting_hdr_output_off':
         return 'Off';
+      case 'network_proxy_auto_hint':
+        return 'Applies to every internet request the app makes: updates, cloud sync, dictionaries, downloads, subtitles and metadata. Leave blank for automatic: environment variables, then the enabled system proxy. P2P (torrent) transfers connect directly unless enabled below.';
+      case 'network_proxy_hint':
+        return 'host:port, e.g. 127.0.0.1:7890 (IPv4/host only)';
+      case 'network_proxy_invalid':
+        return 'Invalid proxy. Use host:port';
+      case 'network_proxy_label':
+        return 'Network proxy';
+      case 'section_network':
+        return 'Network';
+      case 'network_proxy_p2p_label':
+        return 'Route P2P (torrent) traffic through the proxy';
+      case 'network_proxy_p2p_warning':
+        return 'Off by default: P2P connects directly. Routing it through the proxy can reduce speed, and many proxy providers forbid BitTorrent traffic, so your proxy account may be throttled, warned or terminated. Applies to the built-in engine; an external qBittorrent uses its own proxy settings.';
       default:
         return null;
     }
@@ -160770,18 +160665,6 @@ extension on _StringsAr {
         return 'مسح المنتهية';
       case 'download_detail_backend_offline':
         return 'خلفية التحميل الأصلية غير متصلة. يتم عرض معلومات المهمة المحفوظة؛ المعلمات المباشرة غير متاحة.';
-      case 'download_network_proxy_auto':
-        return 'تلقائي';
-      case 'download_network_proxy_auto_hint':
-        return 'ينطبق على AniList وNyaa وJimaku فقط. التلقائي يستخدم متغيرات البيئة، ثم وكيل النظام المُفعّل؛ حركة التورنت لا تتغير.';
-      case 'download_network_proxy_custom':
-        return 'مخصص';
-      case 'download_network_proxy_custom_label':
-        return 'وكيل مخصص';
-      case 'download_network_proxy_direct':
-        return 'مباشر';
-      case 'download_network_proxy_section':
-        return 'شبكة الاكتشاف';
       case 'download_open_settings':
         return 'فتح الإعدادات';
       case 'download_save_root_change':
@@ -163618,14 +163501,6 @@ extension on _StringsAr {
         return 'جارٍ التحقق من التحديثات…';
       case 'update_connecting':
         return 'جارٍ الاتصال…';
-      case 'update_custom_proxy_auto_hint':
-        return 'Leave blank to use environment variables, then the enabled system proxy.';
-      case 'update_custom_proxy_hint':
-        return 'المضيف:المنفذ، مثال 127.0.0.1:7890 (IPv4/اسم مضيف فقط)';
-      case 'update_custom_proxy_invalid':
-        return 'وكيل غير صالح. استخدم المضيف:المنفذ';
-      case 'update_custom_proxy_label':
-        return 'Custom update proxy';
       case 'update_debug_channel':
         return 'قناة تحديث التصحيح';
       case 'update_debug_channel_warning':
@@ -167554,6 +167429,20 @@ extension on _StringsAr {
         return 'دائمًا';
       case 'video_setting_hdr_output_off':
         return 'إيقاف';
+      case 'network_proxy_auto_hint':
+        return 'يُطبَّق على جميع طلبات الإنترنت في التطبيق: التحديثات، والمزامنة السحابية، والقواميس، والتنزيلات، والترجمات، والبيانات الوصفية. اتركه فارغًا للوضع التلقائي: متغيرات البيئة، ثم وكيل النظام المفعّل. تتصل عمليات نقل P2P (torrent) مباشرة افتراضيًا؛ يمكنك تفعيلها بشكل منفصل أدناه.';
+      case 'network_proxy_hint':
+        return 'المضيف:المنفذ، مثال 127.0.0.1:7890 (IPv4/اسم مضيف فقط)';
+      case 'network_proxy_invalid':
+        return 'وكيل غير صالح. استخدم المضيف:المنفذ';
+      case 'network_proxy_label':
+        return 'وكيل الشبكة';
+      case 'section_network':
+        return 'الشبكة';
+      case 'network_proxy_p2p_label':
+        return 'تمرير حركة P2P (torrent) عبر الوكيل';
+      case 'network_proxy_p2p_warning':
+        return 'معطّل افتراضيًا؛ يتصل P2P مباشرة. قد يؤدي التمرير عبر الوكيل إلى خفض السرعة، وكثير من مزودي الوكلاء يحظرون حركة BitTorrent: قد يتم تقييد حساب الوكيل أو تحذيره أو إنهاؤه. ينطبق على المحرك المدمج فقط؛ يستخدم qBittorrent الخارجي إعدادات الوكيل الخاصة به.';
       default:
         return null;
     }
@@ -168852,18 +168741,6 @@ extension on _StringsDe {
         return 'Abgeschlossene löschen';
       case 'download_detail_backend_offline':
         return 'Das ursprüngliche Download-Backend ist offline. Gespeicherte Aufgabeninformationen werden angezeigt; Live-Parameter sind nicht verfügbar.';
-      case 'download_network_proxy_auto':
-        return 'Automatisch';
-      case 'download_network_proxy_auto_hint':
-        return 'Gilt nur für AniList, Nyaa und Jimaku. Automatisch verwendet Umgebungsvariablen, dann den aktivierten System-Proxy; Torrent-Datenverkehr bleibt unverändert.';
-      case 'download_network_proxy_custom':
-        return 'Benutzerdefiniert';
-      case 'download_network_proxy_custom_label':
-        return 'Benutzerdefinierter Proxy';
-      case 'download_network_proxy_direct':
-        return 'Direkt';
-      case 'download_network_proxy_section':
-        return 'Entdeckungsnetzwerk';
       case 'download_open_settings':
         return 'Einstellungen öffnen';
       case 'download_save_root_change':
@@ -171718,14 +171595,6 @@ extension on _StringsDe {
         return 'Suche nach Updates…';
       case 'update_connecting':
         return 'Verbinde…';
-      case 'update_custom_proxy_auto_hint':
-        return 'Leave blank to use environment variables, then the enabled system proxy.';
-      case 'update_custom_proxy_hint':
-        return 'Host:Port, z. B. 127.0.0.1:7890 (nur IPv4/Host)';
-      case 'update_custom_proxy_invalid':
-        return 'Ungültiger Proxy. Verwende Host:Port';
-      case 'update_custom_proxy_label':
-        return 'Custom update proxy';
       case 'update_debug_channel':
         return 'Debug-Update-Kanal';
       case 'update_debug_channel_warning':
@@ -175672,6 +175541,20 @@ extension on _StringsDe {
         return 'Immer';
       case 'video_setting_hdr_output_off':
         return 'Aus';
+      case 'network_proxy_auto_hint':
+        return 'Gilt für alle Internetanfragen der App: Updates, Cloud-Sync, Wörterbücher, Downloads, Untertitel und Metadaten. Leer lassen für automatisch: Umgebungsvariablen, dann der aktivierte System-Proxy. P2P-(Torrent-)Übertragungen verbinden sich standardmäßig direkt und lassen sich unten separat aktivieren.';
+      case 'network_proxy_hint':
+        return 'Host:Port, z. B. 127.0.0.1:7890 (nur IPv4/Host)';
+      case 'network_proxy_invalid':
+        return 'Ungültiger Proxy. Verwende Host:Port';
+      case 'network_proxy_label':
+        return 'Netzwerk-Proxy';
+      case 'section_network':
+        return 'Netzwerk';
+      case 'network_proxy_p2p_label':
+        return 'P2P-(Torrent-)Verkehr über den Proxy leiten';
+      case 'network_proxy_p2p_warning':
+        return 'Standardmäßig aus – P2P verbindet sich direkt. Über den Proxy kann die Geschwindigkeit sinken, und viele Proxy-Anbieter verbieten BitTorrent-Verkehr: Dein Proxy-Konto kann gedrosselt, verwarnt oder gekündigt werden. Gilt nur für die integrierte Engine; ein externes qBittorrent nutzt seine eigenen Proxy-Einstellungen.';
       default:
         return null;
     }
@@ -176970,18 +176853,6 @@ extension on _StringsEs {
         return 'Limpiar finalizados';
       case 'download_detail_backend_offline':
         return 'El motor de descarga original está desconectado. Se muestra la información persistida de la tarea; los parámetros en tiempo real no están disponibles.';
-      case 'download_network_proxy_auto':
-        return 'Auto';
-      case 'download_network_proxy_auto_hint':
-        return 'Se aplica solo a AniList, Nyaa y Jimaku. Auto usa variables de entorno, luego el proxy del sistema habilitado; el tráfico de torrents no se modifica.';
-      case 'download_network_proxy_custom':
-        return 'Personalizado';
-      case 'download_network_proxy_custom_label':
-        return 'Proxy personalizado';
-      case 'download_network_proxy_direct':
-        return 'Directo';
-      case 'download_network_proxy_section':
-        return 'Red de descubrimiento';
       case 'download_open_settings':
         return 'Abrir ajustes';
       case 'download_save_root_change':
@@ -179834,14 +179705,6 @@ extension on _StringsEs {
         return 'Buscando actualizaciones…';
       case 'update_connecting':
         return 'Conectando…';
-      case 'update_custom_proxy_auto_hint':
-        return 'Leave blank to use environment variables, then the enabled system proxy.';
-      case 'update_custom_proxy_hint':
-        return 'host:puerto, ej. 127.0.0.1:7890 (solo IPv4/host)';
-      case 'update_custom_proxy_invalid':
-        return 'Proxy no válido. Use host:puerto';
-      case 'update_custom_proxy_label':
-        return 'Custom update proxy';
       case 'update_debug_channel':
         return 'Canal de actualización de depuración';
       case 'update_debug_channel_warning':
@@ -183782,6 +183645,20 @@ extension on _StringsEs {
         return 'Siempre';
       case 'video_setting_hdr_output_off':
         return 'Desactivado';
+      case 'network_proxy_auto_hint':
+        return 'Se aplica a todas las solicitudes de Internet de la aplicación: actualizaciones, sincronización en la nube, diccionarios, descargas, subtítulos y metadatos. Déjelo en blanco para automático: variables de entorno y, después, el proxy del sistema habilitado. Las transferencias P2P (torrent) se conectan directamente de forma predeterminada; puede activarlas por separado abajo.';
+      case 'network_proxy_hint':
+        return 'host:puerto, ej. 127.0.0.1:7890 (solo IPv4/host)';
+      case 'network_proxy_invalid':
+        return 'Proxy no válido. Use host:puerto';
+      case 'network_proxy_label':
+        return 'Proxy de red';
+      case 'section_network':
+        return 'Red';
+      case 'network_proxy_p2p_label':
+        return 'Enrutar el tráfico P2P (torrent) por el proxy';
+      case 'network_proxy_p2p_warning':
+        return 'Desactivado de forma predeterminada: P2P se conecta directamente. Pasar por el proxy puede reducir la velocidad y muchos proveedores de proxy prohíben el tráfico BitTorrent: su cuenta de proxy podría ser limitada, advertida o cancelada. Solo se aplica al motor integrado; un qBittorrent externo usa su propia configuración de proxy.';
       default:
         return null;
     }
@@ -185084,18 +184961,6 @@ extension on _StringsFr {
         return 'Effacer les terminés';
       case 'download_detail_backend_offline':
         return 'Le moteur de téléchargement d\'origine est hors ligne. Les informations sauvegardées sont affichées ; les paramètres en direct sont indisponibles.';
-      case 'download_network_proxy_auto':
-        return 'Auto';
-      case 'download_network_proxy_auto_hint':
-        return 'S\'applique à AniList, Nyaa et Jimaku uniquement. Auto utilise les variables d\'environnement, puis le proxy système activé ; le trafic torrent est inchangé.';
-      case 'download_network_proxy_custom':
-        return 'Personnalisé';
-      case 'download_network_proxy_custom_label':
-        return 'Proxy personnalisé';
-      case 'download_network_proxy_direct':
-        return 'Direct';
-      case 'download_network_proxy_section':
-        return 'Réseau de découverte';
       case 'download_open_settings':
         return 'Ouvrir les paramètres';
       case 'download_save_root_change':
@@ -187949,14 +187814,6 @@ extension on _StringsFr {
         return 'Vérification des mises à jour…';
       case 'update_connecting':
         return 'Connexion…';
-      case 'update_custom_proxy_auto_hint':
-        return 'Leave blank to use environment variables, then the enabled system proxy.';
-      case 'update_custom_proxy_hint':
-        return 'hôte:port, par ex. 127.0.0.1:7890 (IPv4/nom d\'hôte uniquement)';
-      case 'update_custom_proxy_invalid':
-        return 'Proxy invalide. Utilisez hôte:port';
-      case 'update_custom_proxy_label':
-        return 'Custom update proxy';
       case 'update_debug_channel':
         return 'Canal de mise à jour de débogage';
       case 'update_debug_channel_warning':
@@ -191900,6 +191757,20 @@ extension on _StringsFr {
         return 'Toujours';
       case 'video_setting_hdr_output_off':
         return 'Désactivé';
+      case 'network_proxy_auto_hint':
+        return 'S\'applique à toutes les requêtes Internet de l\'application : mises à jour, synchronisation cloud, dictionnaires, téléchargements, sous-titres et métadonnées. Laissez vide pour le mode automatique : variables d\'environnement, puis le proxy système activé. Les transferts P2P (torrent) se connectent directement par défaut ; vous pouvez les activer séparément ci-dessous.';
+      case 'network_proxy_hint':
+        return 'hôte:port, par ex. 127.0.0.1:7890 (IPv4/nom d\'hôte uniquement)';
+      case 'network_proxy_invalid':
+        return 'Proxy invalide. Utilisez hôte:port';
+      case 'network_proxy_label':
+        return 'Proxy réseau';
+      case 'section_network':
+        return 'Réseau';
+      case 'network_proxy_p2p_label':
+        return 'Faire passer le trafic P2P (torrent) par le proxy';
+      case 'network_proxy_p2p_warning':
+        return 'Désactivé par défaut : le P2P se connecte directement. Passer par le proxy peut réduire la vitesse, et de nombreux fournisseurs de proxy interdisent le trafic BitTorrent : votre compte proxy peut être bridé, averti ou résilié. Ne s\'applique qu\'au moteur intégré ; un qBittorrent externe utilise ses propres paramètres de proxy.';
       default:
         return null;
     }
@@ -193196,18 +193067,6 @@ extension on _StringsId {
         return 'Bersihkan yang selesai';
       case 'download_detail_backend_offline':
         return 'Backend unduhan asli sedang offline. Informasi tugas yang tersimpan ditampilkan; parameter langsung tidak tersedia.';
-      case 'download_network_proxy_auto':
-        return 'Otomatis';
-      case 'download_network_proxy_auto_hint':
-        return 'Berlaku untuk AniList, Nyaa, dan Jimaku saja. Otomatis menggunakan variabel lingkungan, lalu proksi sistem yang aktif; lalu lintas torrent tidak berubah.';
-      case 'download_network_proxy_custom':
-        return 'Kustom';
-      case 'download_network_proxy_custom_label':
-        return 'Proksi kustom';
-      case 'download_network_proxy_direct':
-        return 'Langsung';
-      case 'download_network_proxy_section':
-        return 'Jaringan pencarian';
       case 'download_open_settings':
         return 'Buka pengaturan';
       case 'download_save_root_change':
@@ -196052,14 +195911,6 @@ extension on _StringsId {
         return 'Memeriksa pembaruan…';
       case 'update_connecting':
         return 'Menghubungkan…';
-      case 'update_custom_proxy_auto_hint':
-        return 'Leave blank to use environment variables, then the enabled system proxy.';
-      case 'update_custom_proxy_hint':
-        return 'host:port, mis. 127.0.0.1:7890 (khusus IPv4/host)';
-      case 'update_custom_proxy_invalid':
-        return 'Proksi tidak valid. Gunakan host:port';
-      case 'update_custom_proxy_label':
-        return 'Custom update proxy';
       case 'update_debug_channel':
         return 'Kanal Pembaruan Debug';
       case 'update_debug_channel_warning':
@@ -199990,6 +199841,20 @@ extension on _StringsId {
         return 'Selalu';
       case 'video_setting_hdr_output_off':
         return 'Mati';
+      case 'network_proxy_auto_hint':
+        return 'Berlaku untuk semua permintaan Internet aplikasi: pembaruan, sinkronisasi cloud, kamus, unduhan, subtitel, dan metadata. Kosongkan untuk otomatis: variabel lingkungan, lalu proksi sistem yang diaktifkan. Transfer P2P (torrent) terhubung langsung secara default; Anda dapat mengaktifkannya secara terpisah di bawah.';
+      case 'network_proxy_hint':
+        return 'host:port, mis. 127.0.0.1:7890 (khusus IPv4/host)';
+      case 'network_proxy_invalid':
+        return 'Proksi tidak valid. Gunakan host:port';
+      case 'network_proxy_label':
+        return 'Proksi jaringan';
+      case 'section_network':
+        return 'Jaringan';
+      case 'network_proxy_p2p_label':
+        return 'Rutekan lalu lintas P2P (torrent) melalui proksi';
+      case 'network_proxy_p2p_warning':
+        return 'Nonaktif secara default — P2P terhubung langsung. Melewati proksi dapat menurunkan kecepatan, dan banyak penyedia proksi melarang lalu lintas BitTorrent: akun proksi Anda bisa dibatasi, diperingatkan, atau dihentikan. Hanya berlaku untuk mesin bawaan; qBittorrent eksternal memakai pengaturan proksinya sendiri.';
       default:
         return null;
     }
@@ -201288,18 +201153,6 @@ extension on _StringsIt {
         return 'Cancella completati';
       case 'download_detail_backend_offline':
         return 'Il backend di download originale è offline. Vengono mostrate le informazioni salvate; i parametri live non sono disponibili.';
-      case 'download_network_proxy_auto':
-        return 'Auto';
-      case 'download_network_proxy_auto_hint':
-        return 'Si applica solo ad AniList, Nyaa e Jimaku. Auto usa le variabili d\'ambiente, poi il proxy di sistema abilitato; il traffico torrent non cambia.';
-      case 'download_network_proxy_custom':
-        return 'Personalizzato';
-      case 'download_network_proxy_custom_label':
-        return 'Proxy personalizzato';
-      case 'download_network_proxy_direct':
-        return 'Diretto';
-      case 'download_network_proxy_section':
-        return 'Rete di scoperta';
       case 'download_open_settings':
         return 'Apri impostazioni';
       case 'download_save_root_change':
@@ -204152,14 +204005,6 @@ extension on _StringsIt {
         return 'Controllo aggiornamenti…';
       case 'update_connecting':
         return 'Connessione…';
-      case 'update_custom_proxy_auto_hint':
-        return 'Leave blank to use environment variables, then the enabled system proxy.';
-      case 'update_custom_proxy_hint':
-        return 'host:porta, es. 127.0.0.1:7890 (solo IPv4/host)';
-      case 'update_custom_proxy_invalid':
-        return 'Proxy non valido. Usa host:porta';
-      case 'update_custom_proxy_label':
-        return 'Custom update proxy';
       case 'update_debug_channel':
         return 'Canale aggiornamenti di debug';
       case 'update_debug_channel_warning':
@@ -208101,6 +207946,20 @@ extension on _StringsIt {
         return 'Sempre';
       case 'video_setting_hdr_output_off':
         return 'Disattivato';
+      case 'network_proxy_auto_hint':
+        return 'Si applica a tutte le richieste Internet dell\'app: aggiornamenti, sincronizzazione cloud, dizionari, download, sottotitoli e metadati. Lascia vuoto per la modalità automatica: variabili d\'ambiente, poi il proxy di sistema attivo. I trasferimenti P2P (torrent) si connettono direttamente per impostazione predefinita; puoi attivarli separatamente qui sotto.';
+      case 'network_proxy_hint':
+        return 'host:porta, es. 127.0.0.1:7890 (solo IPv4/host)';
+      case 'network_proxy_invalid':
+        return 'Proxy non valido. Usa host:porta';
+      case 'network_proxy_label':
+        return 'Proxy di rete';
+      case 'section_network':
+        return 'Rete';
+      case 'network_proxy_p2p_label':
+        return 'Instrada il traffico P2P (torrent) tramite il proxy';
+      case 'network_proxy_p2p_warning':
+        return 'Disattivato per impostazione predefinita: il P2P si connette direttamente. Passare dal proxy può ridurre la velocità e molti provider proxy vietano il traffico BitTorrent: l\'account proxy potrebbe essere limitato, avvisato o chiuso. Vale solo per il motore integrato; un qBittorrent esterno usa le proprie impostazioni proxy.';
       default:
         return null;
     }
@@ -209385,18 +209244,6 @@ extension on _StringsJa {
         return '完了済みをクリア';
       case 'download_detail_backend_offline':
         return '元のダウンロードバックエンドがオフラインです。保存されたタスク情報が表示されています。ライブパラメータは利用できません。';
-      case 'download_network_proxy_auto':
-        return '自動';
-      case 'download_network_proxy_auto_hint':
-        return 'AniList、Nyaa、Jimaku にのみ適用されます。自動は環境変数を使用し、次にシステムプロキシを使用します。torrent トラフィックは変更されません。';
-      case 'download_network_proxy_custom':
-        return 'カスタム';
-      case 'download_network_proxy_custom_label':
-        return 'カスタムプロキシ';
-      case 'download_network_proxy_direct':
-        return '直接接続';
-      case 'download_network_proxy_section':
-        return 'ディスカバリーネットワーク';
       case 'download_open_settings':
         return '設定を開く';
       case 'download_save_root_change':
@@ -212223,14 +212070,6 @@ extension on _StringsJa {
         return 'アップデートを確認中…';
       case 'update_connecting':
         return '更新元に接続中…';
-      case 'update_custom_proxy_auto_hint':
-        return 'Leave blank to use environment variables, then the enabled system proxy.';
-      case 'update_custom_proxy_hint':
-        return 'ホスト:ポート 例: 127.0.0.1:7890（IPv4/ホスト名のみ）';
-      case 'update_custom_proxy_invalid':
-        return '無効なプロキシです。ホスト:ポートの形式で入力してください';
-      case 'update_custom_proxy_label':
-        return 'Custom update proxy';
       case 'update_debug_channel':
         return 'デバッグ更新チャンネル';
       case 'update_debug_channel_warning':
@@ -216144,6 +215983,20 @@ extension on _StringsJa {
         return '常に';
       case 'video_setting_hdr_output_off':
         return 'オフ';
+      case 'network_proxy_auto_hint':
+        return 'アプリのすべての通信（更新、クラウド同期、辞書、ダウンロード、字幕、メタデータ）に適用されます。空欄で自動：環境変数、次に有効なシステムプロキシを使用します。P2P（torrent）通信は既定で直接接続します。下で個別に有効化できます。';
+      case 'network_proxy_hint':
+        return 'ホスト:ポート 例: 127.0.0.1:7890（IPv4/ホスト名のみ）';
+      case 'network_proxy_invalid':
+        return '無効なプロキシです。ホスト:ポートの形式で入力してください';
+      case 'network_proxy_label':
+        return 'ネットワークプロキシ';
+      case 'section_network':
+        return 'ネットワーク';
+      case 'network_proxy_p2p_label':
+        return 'P2P（torrent）通信をプロキシ経由にする';
+      case 'network_proxy_p2p_warning':
+        return '既定ではオフで、P2P は直接接続します。プロキシ経由にすると速度が低下する場合があり、多くのプロキシ事業者は BitTorrent 通信を禁止しているため、プロキシアカウントが帯域制限・警告・停止される恐れがあります。内蔵エンジンにのみ適用され、外部 qBittorrent は自身のプロキシ設定を使用します。';
       default:
         return null;
     }
@@ -217429,18 +217282,6 @@ extension on _StringsKo {
         return '완료된 항목 지우기';
       case 'download_detail_backend_offline':
         return '원래 다운로드 백엔드가 오프라인입니다. 저장된 작업 정보가 표시됩니다; 실시간 매개변수를 사용할 수 없습니다.';
-      case 'download_network_proxy_auto':
-        return '자동';
-      case 'download_network_proxy_auto_hint':
-        return 'AniList, Nyaa, Jimaku에만 적용됩니다. 자동은 환경 변수를 먼저 사용한 후 활성화된 시스템 프록시를 사용합니다; 토렌트 트래픽은 변경되지 않습니다.';
-      case 'download_network_proxy_custom':
-        return '사용자 정의';
-      case 'download_network_proxy_custom_label':
-        return '사용자 정의 프록시';
-      case 'download_network_proxy_direct':
-        return '직접 연결';
-      case 'download_network_proxy_section':
-        return '탐색 네트워크';
       case 'download_open_settings':
         return '설정 열기';
       case 'download_save_root_change':
@@ -220269,14 +220110,6 @@ extension on _StringsKo {
         return '업데이트 확인 중…';
       case 'update_connecting':
         return '연결 중…';
-      case 'update_custom_proxy_auto_hint':
-        return 'Leave blank to use environment variables, then the enabled system proxy.';
-      case 'update_custom_proxy_hint':
-        return '호스트:포트, 예: 127.0.0.1:7890 (IPv4/호스트만 지원)';
-      case 'update_custom_proxy_invalid':
-        return '잘못된 프록시입니다. 호스트:포트 형식을 사용하세요';
-      case 'update_custom_proxy_label':
-        return 'Custom update proxy';
       case 'update_debug_channel':
         return '디버그 업데이트 채널';
       case 'update_debug_channel_warning':
@@ -224189,6 +224022,20 @@ extension on _StringsKo {
         return '항상';
       case 'video_setting_hdr_output_off':
         return '끄기';
+      case 'network_proxy_auto_hint':
+        return '앱의 모든 인터넷 요청(업데이트, 클라우드 동기화, 사전, 다운로드, 자막, 메타데이터)에 적용됩니다. 비워 두면 자동: 환경 변수, 그다음 활성화된 시스템 프록시를 사용합니다. P2P(토렌트) 전송은 기본적으로 직접 연결하며, 아래에서 따로 켤 수 있습니다.';
+      case 'network_proxy_hint':
+        return '호스트:포트, 예: 127.0.0.1:7890 (IPv4/호스트만 지원)';
+      case 'network_proxy_invalid':
+        return '잘못된 프록시입니다. 호스트:포트 형식을 사용하세요';
+      case 'network_proxy_label':
+        return '네트워크 프록시';
+      case 'section_network':
+        return '네트워크';
+      case 'network_proxy_p2p_label':
+        return 'P2P(토렌트) 전송을 프록시로 라우팅';
+      case 'network_proxy_p2p_warning':
+        return '기본적으로 꺼져 있으며 P2P는 직접 연결합니다. 프록시를 거치면 속도가 떨어질 수 있고, 많은 프록시 제공업체가 BitTorrent 트래픽을 금지하므로 프록시 계정이 속도 제한·경고·해지될 수 있습니다. 내장 엔진에만 적용되며 외부 qBittorrent는 자체 프록시 설정을 사용합니다.';
       default:
         return null;
     }
@@ -225487,18 +225334,6 @@ extension on _StringsNl {
         return 'Voltooide wissen';
       case 'download_detail_backend_offline':
         return 'De oorspronkelijke download-backend is offline. Opgeslagen taakinformatie wordt getoond; live parameters zijn niet beschikbaar.';
-      case 'download_network_proxy_auto':
-        return 'Automatisch';
-      case 'download_network_proxy_auto_hint':
-        return 'Geldt alleen voor AniList, Nyaa en Jimaku. Automatisch gebruikt omgevingsvariabelen, dan de ingeschakelde systeemproxy; torrentverkeer wordt niet gewijzigd.';
-      case 'download_network_proxy_custom':
-        return 'Aangepast';
-      case 'download_network_proxy_custom_label':
-        return 'Aangepaste proxy';
-      case 'download_network_proxy_direct':
-        return 'Direct';
-      case 'download_network_proxy_section':
-        return 'Discovery-netwerk';
       case 'download_open_settings':
         return 'Instellingen openen';
       case 'download_save_root_change':
@@ -228346,14 +228181,6 @@ extension on _StringsNl {
         return 'Controleren op updates…';
       case 'update_connecting':
         return 'Verbinden…';
-      case 'update_custom_proxy_auto_hint':
-        return 'Leave blank to use environment variables, then the enabled system proxy.';
-      case 'update_custom_proxy_hint':
-        return 'host:poort, bijv. 127.0.0.1:7890 (alleen IPv4/host)';
-      case 'update_custom_proxy_invalid':
-        return 'Ongeldige proxy. Gebruik host:poort';
-      case 'update_custom_proxy_label':
-        return 'Custom update proxy';
       case 'update_debug_channel':
         return 'Debug-updatekanaal';
       case 'update_debug_channel_warning':
@@ -232294,6 +232121,20 @@ extension on _StringsNl {
         return 'Altijd';
       case 'video_setting_hdr_output_off':
         return 'Uit';
+      case 'network_proxy_auto_hint':
+        return 'Geldt voor alle internetverzoeken van de app: updates, cloudsynchronisatie, woordenboeken, downloads, ondertitels en metadata. Laat leeg voor automatisch: omgevingsvariabelen, daarna de ingeschakelde systeemproxy. P2P-overdrachten (torrent) maken standaard rechtstreeks verbinding; je kunt ze hieronder apart inschakelen.';
+      case 'network_proxy_hint':
+        return 'host:poort, bijv. 127.0.0.1:7890 (alleen IPv4/host)';
+      case 'network_proxy_invalid':
+        return 'Ongeldige proxy. Gebruik host:poort';
+      case 'network_proxy_label':
+        return 'Netwerkproxy';
+      case 'section_network':
+        return 'Netwerk';
+      case 'network_proxy_p2p_label':
+        return 'P2P-verkeer (torrent) via de proxy leiden';
+      case 'network_proxy_p2p_warning':
+        return 'Standaard uit: P2P maakt rechtstreeks verbinding. Via de proxy kan de snelheid dalen en veel proxyaanbieders verbieden BitTorrent-verkeer: je proxyaccount kan worden afgeknepen, gewaarschuwd of opgezegd. Geldt alleen voor de ingebouwde engine; een externe qBittorrent gebruikt zijn eigen proxy-instellingen.';
       default:
         return null;
     }
@@ -233591,18 +233432,6 @@ extension on _StringsPtBr {
         return 'Limpar concluídos';
       case 'download_detail_backend_offline':
         return 'O backend de download original está offline. Informações da tarefa persistidas são mostradas; parâmetros ao vivo estão indisponíveis.';
-      case 'download_network_proxy_auto':
-        return 'Auto';
-      case 'download_network_proxy_auto_hint':
-        return 'Aplica-se apenas ao AniList, Nyaa e Jimaku. Auto usa variáveis de ambiente e depois o proxy do sistema ativado; o tráfego de torrent não é alterado.';
-      case 'download_network_proxy_custom':
-        return 'Personalizado';
-      case 'download_network_proxy_custom_label':
-        return 'Proxy personalizado';
-      case 'download_network_proxy_direct':
-        return 'Direto';
-      case 'download_network_proxy_section':
-        return 'Rede de descoberta';
       case 'download_open_settings':
         return 'Abrir configurações';
       case 'download_save_root_change':
@@ -236448,14 +236277,6 @@ extension on _StringsPtBr {
         return 'Verificando atualizações…';
       case 'update_connecting':
         return 'Conectando…';
-      case 'update_custom_proxy_auto_hint':
-        return 'Leave blank to use environment variables, then the enabled system proxy.';
-      case 'update_custom_proxy_hint':
-        return 'host:porta, ex: 127.0.0.1:7890 (apenas IPv4/host)';
-      case 'update_custom_proxy_invalid':
-        return 'Proxy inválido. Use host:porta';
-      case 'update_custom_proxy_label':
-        return 'Custom update proxy';
       case 'update_debug_channel':
         return 'Canal de Atualização de Depuração';
       case 'update_debug_channel_warning':
@@ -240394,6 +240215,20 @@ extension on _StringsPtBr {
         return 'Sempre';
       case 'video_setting_hdr_output_off':
         return 'Desligado';
+      case 'network_proxy_auto_hint':
+        return 'Aplica-se a todas as solicitações de Internet do aplicativo: atualizações, sincronização na nuvem, dicionários, downloads, legendas e metadados. Deixe em branco para automático: variáveis de ambiente e, depois, o proxy do sistema ativado. As transferências P2P (torrent) se conectam diretamente por padrão; você pode ativá-las separadamente abaixo.';
+      case 'network_proxy_hint':
+        return 'host:porta, ex: 127.0.0.1:7890 (apenas IPv4/host)';
+      case 'network_proxy_invalid':
+        return 'Proxy inválido. Use host:porta';
+      case 'network_proxy_label':
+        return 'Proxy de rede';
+      case 'section_network':
+        return 'Rede';
+      case 'network_proxy_p2p_label':
+        return 'Rotear o tráfego P2P (torrent) pelo proxy';
+      case 'network_proxy_p2p_warning':
+        return 'Desativado por padrão: o P2P se conecta diretamente. Passar pelo proxy pode reduzir a velocidade, e muitos provedores de proxy proíbem tráfego BitTorrent: sua conta de proxy pode ser limitada, advertida ou encerrada. Aplica-se apenas ao mecanismo integrado; um qBittorrent externo usa suas próprias configurações de proxy.';
       default:
         return null;
     }
@@ -241694,18 +241529,6 @@ extension on _StringsRu {
         return 'Очистить завершённые';
       case 'download_detail_backend_offline':
         return 'Исходный бэкенд загрузки не в сети. Показана сохранённая информация о задаче; актуальные параметры недоступны.';
-      case 'download_network_proxy_auto':
-        return 'Авто';
-      case 'download_network_proxy_auto_hint':
-        return 'Применяется только к AniList, Nyaa и Jimaku. «Авто» использует переменные окружения, затем включённый системный прокси; торрент-трафик не затрагивается.';
-      case 'download_network_proxy_custom':
-        return 'Настраиваемый';
-      case 'download_network_proxy_custom_label':
-        return 'Настраиваемый прокси';
-      case 'download_network_proxy_direct':
-        return 'Прямое подключение';
-      case 'download_network_proxy_section':
-        return 'Сеть обнаружения';
       case 'download_open_settings':
         return 'Открыть настройки';
       case 'download_save_root_change':
@@ -244553,14 +244376,6 @@ extension on _StringsRu {
         return 'Проверка обновлений…';
       case 'update_connecting':
         return 'Подключение…';
-      case 'update_custom_proxy_auto_hint':
-        return 'Leave blank to use environment variables, then the enabled system proxy.';
-      case 'update_custom_proxy_hint':
-        return 'хост:порт, например 127.0.0.1:7890 (только IPv4/хост)';
-      case 'update_custom_proxy_invalid':
-        return 'Недопустимый прокси. Используйте хост:порт';
-      case 'update_custom_proxy_label':
-        return 'Custom update proxy';
       case 'update_debug_channel':
         return 'Канал отладочных обновлений';
       case 'update_debug_channel_warning':
@@ -248500,6 +248315,20 @@ extension on _StringsRu {
         return 'Всегда';
       case 'video_setting_hdr_output_off':
         return 'Выключено';
+      case 'network_proxy_auto_hint':
+        return 'Применяется ко всем интернет-запросам приложения: обновления, облачная синхронизация, словари, загрузки, субтитры и метаданные. Оставьте пустым для автоматического режима: переменные окружения, затем включённый системный прокси. P2P-передачи (torrent) по умолчанию подключаются напрямую; их можно включить отдельно ниже.';
+      case 'network_proxy_hint':
+        return 'хост:порт, например 127.0.0.1:7890 (только IPv4/хост)';
+      case 'network_proxy_invalid':
+        return 'Недопустимый прокси. Используйте хост:порт';
+      case 'network_proxy_label':
+        return 'Сетевой прокси';
+      case 'section_network':
+        return 'Сеть';
+      case 'network_proxy_p2p_label':
+        return 'Пропускать P2P-трафик (torrent) через прокси';
+      case 'network_proxy_p2p_warning':
+        return 'По умолчанию выключено — P2P подключается напрямую. Через прокси скорость может снизиться, а многие прокси-провайдеры запрещают BitTorrent-трафик: аккаунт прокси могут ограничить, предупредить или заблокировать. Действует только для встроенного движка; внешний qBittorrent использует собственные настройки прокси.';
       default:
         return null;
     }
@@ -249790,18 +249619,6 @@ extension on _StringsTh {
         return 'ล้างที่เสร็จแล้ว';
       case 'download_detail_backend_offline':
         return 'แบ็กเอนด์ดาวน์โหลดเดิมออฟไลน์อยู่ แสดงข้อมูลงานที่บันทึกไว้; พารามิเตอร์แบบเรียลไทม์ไม่พร้อมใช้งาน';
-      case 'download_network_proxy_auto':
-        return 'อัตโนมัติ';
-      case 'download_network_proxy_auto_hint':
-        return 'ใช้กับ AniList, Nyaa และ Jimaku เท่านั้น อัตโนมัติใช้ตัวแปรสภาพแวดล้อมก่อน จากนั้นพร็อกซีระบบที่เปิดใช้งาน; ทราฟฟิกทอร์เรนต์ไม่เปลี่ยนแปลง';
-      case 'download_network_proxy_custom':
-        return 'กำหนดเอง';
-      case 'download_network_proxy_custom_label':
-        return 'พร็อกซีที่กำหนดเอง';
-      case 'download_network_proxy_direct':
-        return 'ตรง';
-      case 'download_network_proxy_section':
-        return 'เครือข่ายค้นหา';
       case 'download_open_settings':
         return 'เปิดการตั้งค่า';
       case 'download_save_root_change':
@@ -252644,14 +252461,6 @@ extension on _StringsTh {
         return 'กำลังตรวจสอบอัปเดต…';
       case 'update_connecting':
         return 'กำลังเชื่อมต่อแหล่งอัปเดต…';
-      case 'update_custom_proxy_auto_hint':
-        return 'Leave blank to use environment variables, then the enabled system proxy.';
-      case 'update_custom_proxy_hint':
-        return 'host:port เช่น 127.0.0.1:7890 (IPv4/host เท่านั้น)';
-      case 'update_custom_proxy_invalid':
-        return 'พร็อกซีไม่ถูกต้อง ใช้รูปแบบ host:port';
-      case 'update_custom_proxy_label':
-        return 'Custom update proxy';
       case 'update_debug_channel':
         return 'ช่องอัปเดตดีบัก';
       case 'update_debug_channel_warning':
@@ -256579,6 +256388,20 @@ extension on _StringsTh {
         return 'เสมอ';
       case 'video_setting_hdr_output_off':
         return 'ปิด';
+      case 'network_proxy_auto_hint':
+        return 'ใช้กับคำขออินเทอร์เน็ตทั้งหมดของแอป: การอัปเดต การซิงค์คลาวด์ พจนานุกรม การดาวน์โหลด คำบรรยาย และข้อมูลเมตา เว้นว่างไว้เพื่อใช้อัตโนมัติ: ตัวแปรสภาพแวดล้อม จากนั้นพร็อกซีระบบที่เปิดใช้งาน การถ่ายโอน P2P (torrent) จะเชื่อมต่อโดยตรงตามค่าเริ่มต้น สามารถเปิดแยกได้ด้านล่าง';
+      case 'network_proxy_hint':
+        return 'host:port เช่น 127.0.0.1:7890 (IPv4/host เท่านั้น)';
+      case 'network_proxy_invalid':
+        return 'พร็อกซีไม่ถูกต้อง ใช้รูปแบบ host:port';
+      case 'network_proxy_label':
+        return 'พร็อกซีเครือข่าย';
+      case 'section_network':
+        return 'เครือข่าย';
+      case 'network_proxy_p2p_label':
+        return 'ส่งการรับส่งข้อมูล P2P (torrent) ผ่านพร็อกซี';
+      case 'network_proxy_p2p_warning':
+        return 'ปิดตามค่าเริ่มต้น P2P จะเชื่อมต่อโดยตรง การส่งผ่านพร็อกซีอาจทำให้ความเร็วลดลง และผู้ให้บริการพร็อกซีจำนวนมากห้ามการรับส่งข้อมูล BitTorrent บัญชีพร็อกซีของคุณอาจถูกจำกัดความเร็ว เตือน หรือยกเลิก มีผลเฉพาะเอนจินในตัวเท่านั้น qBittorrent ภายนอกใช้การตั้งค่าพร็อกซีของตัวเอง';
       default:
         return null;
     }
@@ -257874,18 +257697,6 @@ extension on _StringsTr {
         return 'Tamamlananları temizle';
       case 'download_detail_backend_offline':
         return 'Orijinal indirme arka ucu çevrimdışı. Kaydedilmiş görev bilgileri gösteriliyor; canlı parametreler kullanılamıyor.';
-      case 'download_network_proxy_auto':
-        return 'Otomatik';
-      case 'download_network_proxy_auto_hint':
-        return 'Yalnızca AniList, Nyaa ve Jimaku için geçerlidir. Otomatik, ortam değişkenlerini, ardından etkin sistem proxy\'sini kullanır; torrent trafiği değişmez.';
-      case 'download_network_proxy_custom':
-        return 'Özel';
-      case 'download_network_proxy_custom_label':
-        return 'Özel proxy';
-      case 'download_network_proxy_direct':
-        return 'Doğrudan';
-      case 'download_network_proxy_section':
-        return 'Keşif ağı';
       case 'download_open_settings':
         return 'Ayarları aç';
       case 'download_save_root_change':
@@ -260729,14 +260540,6 @@ extension on _StringsTr {
         return 'Güncellemeler kontrol ediliyor…';
       case 'update_connecting':
         return 'Bağlanılıyor…';
-      case 'update_custom_proxy_auto_hint':
-        return 'Leave blank to use environment variables, then the enabled system proxy.';
-      case 'update_custom_proxy_hint':
-        return 'sunucu:port, ör. 127.0.0.1:7890 (yalnızca IPv4/sunucu adı)';
-      case 'update_custom_proxy_invalid':
-        return 'Geçersiz proxy. sunucu:port kullanın';
-      case 'update_custom_proxy_label':
-        return 'Custom update proxy';
       case 'update_debug_channel':
         return 'Hata Ayıklama Güncelleme Kanalı';
       case 'update_debug_channel_warning':
@@ -264674,6 +264477,20 @@ extension on _StringsTr {
         return 'Her zaman';
       case 'video_setting_hdr_output_off':
         return 'Kapalı';
+      case 'network_proxy_auto_hint':
+        return 'Uygulamanın tüm internet isteklerine uygulanır: güncellemeler, bulut eşitleme, sözlükler, indirmeler, altyazılar ve meta veriler. Otomatik için boş bırakın: önce ortam değişkenleri, sonra etkin sistem proxy\'si. P2P (torrent) aktarımları varsayılan olarak doğrudan bağlanır; aşağıdan ayrıca etkinleştirebilirsiniz.';
+      case 'network_proxy_hint':
+        return 'sunucu:port, ör. 127.0.0.1:7890 (yalnızca IPv4/sunucu adı)';
+      case 'network_proxy_invalid':
+        return 'Geçersiz proxy. sunucu:port kullanın';
+      case 'network_proxy_label':
+        return 'Ağ proxy\'si';
+      case 'section_network':
+        return 'Ağ';
+      case 'network_proxy_p2p_label':
+        return 'P2P (torrent) trafiğini proxy üzerinden yönlendir';
+      case 'network_proxy_p2p_warning':
+        return 'Varsayılan olarak kapalı; P2P doğrudan bağlanır. Proxy üzerinden geçmek hızı düşürebilir ve birçok proxy sağlayıcısı BitTorrent trafiğini yasaklar: proxy hesabınız kısıtlanabilir, uyarılabilir veya kapatılabilir. Yalnızca yerleşik motor için geçerlidir; harici qBittorrent kendi proxy ayarlarını kullanır.';
       default:
         return null;
     }
@@ -265968,18 +265785,6 @@ extension on _StringsVi {
         return 'Xóa đã hoàn tất';
       case 'download_detail_backend_offline':
         return 'Trình tải xuống gốc đang ngoại tuyến. Thông tin tác vụ đã lưu được hiển thị; các tham số trực tiếp không khả dụng.';
-      case 'download_network_proxy_auto':
-        return 'Tự động';
-      case 'download_network_proxy_auto_hint':
-        return 'Chỉ áp dụng cho AniList, Nyaa và Jimaku. Tự động sử dụng biến môi trường, sau đó proxy hệ thống đã bật; lưu lượng torrent không thay đổi.';
-      case 'download_network_proxy_custom':
-        return 'Tùy chỉnh';
-      case 'download_network_proxy_custom_label':
-        return 'Proxy tùy chỉnh';
-      case 'download_network_proxy_direct':
-        return 'Trực tiếp';
-      case 'download_network_proxy_section':
-        return 'Mạng khám phá';
       case 'download_open_settings':
         return 'Mở cài đặt';
       case 'download_save_root_change':
@@ -268825,14 +268630,6 @@ extension on _StringsVi {
         return 'Đang kiểm tra cập nhật…';
       case 'update_connecting':
         return 'Đang kết nối…';
-      case 'update_custom_proxy_auto_hint':
-        return 'Leave blank to use environment variables, then the enabled system proxy.';
-      case 'update_custom_proxy_hint':
-        return 'host:port, ví dụ 127.0.0.1:7890 (chỉ IPv4/host)';
-      case 'update_custom_proxy_invalid':
-        return 'Proxy không hợp lệ. Dùng host:port';
-      case 'update_custom_proxy_label':
-        return 'Custom update proxy';
       case 'update_debug_channel':
         return 'Kênh cập nhật gỡ lỗi';
       case 'update_debug_channel_warning':
@@ -272762,6 +272559,20 @@ extension on _StringsVi {
         return 'Luôn luôn';
       case 'video_setting_hdr_output_off':
         return 'Tắt';
+      case 'network_proxy_auto_hint':
+        return 'Áp dụng cho mọi yêu cầu Internet của ứng dụng: cập nhật, đồng bộ đám mây, từ điển, tải xuống, phụ đề và siêu dữ liệu. Để trống để tự động: biến môi trường, sau đó là proxy hệ thống đã bật. Truyền P2P (torrent) mặc định kết nối trực tiếp; bạn có thể bật riêng bên dưới.';
+      case 'network_proxy_hint':
+        return 'host:port, ví dụ 127.0.0.1:7890 (chỉ IPv4/host)';
+      case 'network_proxy_invalid':
+        return 'Proxy không hợp lệ. Dùng host:port';
+      case 'network_proxy_label':
+        return 'Proxy mạng';
+      case 'section_network':
+        return 'Mạng';
+      case 'network_proxy_p2p_label':
+        return 'Định tuyến lưu lượng P2P (torrent) qua proxy';
+      case 'network_proxy_p2p_warning':
+        return 'Mặc định tắt — P2P kết nối trực tiếp. Đi qua proxy có thể làm giảm tốc độ, và nhiều nhà cung cấp proxy cấm lưu lượng BitTorrent: tài khoản proxy của bạn có thể bị giới hạn, cảnh báo hoặc chấm dứt. Chỉ áp dụng cho engine tích hợp; qBittorrent bên ngoài dùng cài đặt proxy riêng.';
       default:
         return null;
     }
@@ -274041,18 +273852,6 @@ extension on _StringsZhCn {
         return '清除已完成';
       case 'download_detail_backend_offline':
         return '原下载后端当前离线。这里仍显示已保存的任务信息，但实时参数暂不可用。';
-      case 'download_network_proxy_auto':
-        return '自动';
-      case 'download_network_proxy_auto_hint':
-        return '仅影响 AniList、Nyaa 和 Jimaku。自动模式先读环境变量，再读已启用的系统代理；种子流量不受影响。';
-      case 'download_network_proxy_custom':
-        return '自定义';
-      case 'download_network_proxy_custom_label':
-        return '自定义代理';
-      case 'download_network_proxy_direct':
-        return '直连';
-      case 'download_network_proxy_section':
-        return '发现网络';
       case 'download_open_settings':
         return '去设置';
       case 'download_save_root_change':
@@ -276874,14 +276673,6 @@ extension on _StringsZhCn {
         return '正在检查更新…';
       case 'update_connecting':
         return '正在连接更新源…';
-      case 'update_custom_proxy_auto_hint':
-        return '用于更新检查、云同步和下载。留空时自动读取环境变量，再读取已启用的系统代理。';
-      case 'update_custom_proxy_hint':
-        return 'host:port，例如 127.0.0.1:7890（仅 IPv4/域名）';
-      case 'update_custom_proxy_invalid':
-        return '代理格式无效，请用 host:port';
-      case 'update_custom_proxy_label':
-        return '自定义网络代理';
       case 'update_debug_channel':
         return '调试更新通道';
       case 'update_debug_channel_warning':
@@ -280783,6 +280574,20 @@ extension on _StringsZhCn {
         return '始终';
       case 'video_setting_hdr_output_off':
         return '关闭';
+      case 'network_proxy_auto_hint':
+        return '应用的全部联网请求都走这里：更新、云同步、词典、下载、字幕与元数据。留空为自动：先读环境变量，再读已启用的系统代理。P2P（torrent）传输默认直连，可在下方单独开启。';
+      case 'network_proxy_hint':
+        return 'host:port，例如 127.0.0.1:7890（仅 IPv4/域名）';
+      case 'network_proxy_invalid':
+        return '代理格式无效，请用 host:port';
+      case 'network_proxy_label':
+        return '网络代理';
+      case 'section_network':
+        return '网络';
+      case 'network_proxy_p2p_label':
+        return 'P2P（torrent）传输走代理';
+      case 'network_proxy_p2p_warning':
+        return '默认关闭，P2P 直连。走代理可能降低速度；且不少代理服务商禁止 BT 流量，可能导致代理账号被限速、警告甚至封禁。仅对内置引擎生效，外接 qBittorrent 请在其自身设置中配置。';
       default:
         return null;
     }
@@ -282062,18 +281867,6 @@ extension on _StringsZhHk {
         return '清除已完成';
       case 'download_detail_backend_offline':
         return '原下載後端當前離線。這裡仍顯示已保存的任務資訊，但實時參數暫不可用。';
-      case 'download_network_proxy_auto':
-        return '自動';
-      case 'download_network_proxy_auto_hint':
-        return '僅影響 AniList、Nyaa 和 Jimaku。自動模式先讀環境變量，再讀已啟用的系統代理；種子流量不受影響。';
-      case 'download_network_proxy_custom':
-        return '自定義';
-      case 'download_network_proxy_custom_label':
-        return '自定義代理';
-      case 'download_network_proxy_direct':
-        return '直連';
-      case 'download_network_proxy_section':
-        return '發現網路';
       case 'download_open_settings':
         return '去設定';
       case 'download_save_root_change':
@@ -284896,14 +284689,6 @@ extension on _StringsZhHk {
         return '正在檢查更新…';
       case 'update_connecting':
         return '正在連接更新來源…';
-      case 'update_custom_proxy_auto_hint':
-        return 'Leave blank to use environment variables, then the enabled system proxy.';
-      case 'update_custom_proxy_hint':
-        return 'host:port，例如 127.0.0.1:7890（僅 IPv4/域名）';
-      case 'update_custom_proxy_invalid':
-        return '代理格式無效，請用 host:port';
-      case 'update_custom_proxy_label':
-        return 'Custom update proxy';
       case 'update_debug_channel':
         return '偵錯更新頻道';
       case 'update_debug_channel_warning':
@@ -288805,6 +288590,20 @@ extension on _StringsZhHk {
         return '始終';
       case 'video_setting_hdr_output_off':
         return '關閉';
+      case 'network_proxy_auto_hint':
+        return '應用程式的全部連線請求都經此處：更新、雲端同步、詞典、下載、字幕與中繼資料。留空為自動：先讀取環境變數，再讀取已啟用的系統代理。P2P（torrent）傳輸預設直連，可在下方單獨開啟。';
+      case 'network_proxy_hint':
+        return 'host:port，例如 127.0.0.1:7890（僅 IPv4/域名）';
+      case 'network_proxy_invalid':
+        return '代理格式無效，請用 host:port';
+      case 'network_proxy_label':
+        return '網路代理';
+      case 'section_network':
+        return '網路';
+      case 'network_proxy_p2p_label':
+        return 'P2P（torrent）傳輸走代理';
+      case 'network_proxy_p2p_warning':
+        return '預設關閉，P2P 直連。走代理可能降低速度；且不少代理服務商禁止 BT 流量，可能導致代理帳號被限速、警告甚至封禁。僅對內建引擎生效，外接 qBittorrent 請在其自身設定中配置。';
       default:
         return null;
     }
