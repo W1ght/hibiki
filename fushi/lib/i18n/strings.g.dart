@@ -5518,6 +5518,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Supplement the recommended pack, or import your own dictionaries, audiobooks, and pronunciation sources';
   String get onboarding_step_manual_resources_body =>
       'Use this alongside the recommended pack or on its own. Import at least one dictionary before the lookup tutorial; audiobook and pronunciation audio are optional supplements.';
+  String get delete_choices_remember => 'Remember these choices';
 }
 
 // Path: <root>
@@ -146253,6 +146254,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get onboarding_step_manual_resources_body =>
       '这一项可以与推荐包同时使用，也可以单独使用。进入查词教程前至少导入一本词典；有声书音频和单词发音音频属于按需补充。';
+  @override
+  String get delete_choices_remember => '记住这些选择';
 }
 
 // Path: <root>
