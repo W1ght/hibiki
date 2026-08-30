@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 66878 (3934 per locale)
+/// Strings: 66827 (3931 per locale)
 ///
 /// Built on 2026-08-30 at 07:48 UTC
 
@@ -5337,13 +5337,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get onboarding_action_badge_required => 'Required';
   String get onboarding_action_badge_recommended => 'Recommended';
   String get onboarding_action_badge_optional => 'Optional';
-  String get onboarding_pack_route_label => 'Download source';
-  String get onboarding_pack_route_github_hint =>
-      'Fetches the manifest, then downloads the pack from GitHub Releases as parallel chunks, verifying each one. Fastest wherever GitHub is reachable.';
-  String get onboarding_pack_route_drive_hint =>
-      'Pulls the whole file from Google Drive in one piece. Use this when GitHub is slow or blocked.';
-  String get onboarding_pack_manifest_failed =>
-      'Could not fetch the pack manifest from the website or from GitHub. Check your network, or switch the download source to Google Drive.';
   String get onboarding_pack_action_download_desc =>
       'Downloads the whole pack in the background, then imports it. Cancel anytime; it resumes from where it stopped.';
   String get onboarding_pack_action_import_existing_desc =>
@@ -5378,6 +5371,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Shows how to install the browser extension and connect it to Fushi, so you can look words up on web pages too.';
   String get onboarding_step_fonts_action_desc =>
       'Add your own font files and pick which one each language uses.';
+  String get onboarding_pack_sources_hint =>
+      'Downloaded in parallel chunks from GitHub, the official site and a backup mirror at the same time, each chunk checksummed. Fushi measures the sources as it goes and gives more chunks to whichever is fastest right now, so there is nothing to choose here.';
 }
 
 // Path: <root>
@@ -14458,17 +14453,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get onboarding_action_badge_optional => 'Optional';
   @override
-  String get onboarding_pack_route_label => 'Download source';
-  @override
-  String get onboarding_pack_route_github_hint =>
-      'Fetches the manifest, then downloads the pack from GitHub Releases as parallel chunks, verifying each one. Fastest wherever GitHub is reachable.';
-  @override
-  String get onboarding_pack_route_drive_hint =>
-      'Pulls the whole file from Google Drive in one piece. Use this when GitHub is slow or blocked.';
-  @override
-  String get onboarding_pack_manifest_failed =>
-      'Could not fetch the pack manifest from the website or from GitHub. Check your network, or switch the download source to Google Drive.';
-  @override
   String get onboarding_pack_action_download_desc =>
       'Downloads the whole pack in the background, then imports it. Cancel anytime; it resumes from where it stopped.';
   @override
@@ -14519,6 +14503,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get onboarding_step_fonts_action_desc =>
       'Add your own font files and pick which one each language uses.';
+  @override
+  String get onboarding_pack_sources_hint =>
+      'Downloaded in parallel chunks from GitHub, the official site and a backup mirror at the same time, each chunk checksummed. Fushi measures the sources as it goes and gives more chunks to whichever is fastest right now, so there is nothing to choose here.';
 }
 
 // Path: <root>
@@ -23811,17 +23798,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get onboarding_action_badge_optional => 'Optional';
   @override
-  String get onboarding_pack_route_label => 'Download source';
-  @override
-  String get onboarding_pack_route_github_hint =>
-      'Fetches the manifest, then downloads the pack from GitHub Releases as parallel chunks, verifying each one. Fastest wherever GitHub is reachable.';
-  @override
-  String get onboarding_pack_route_drive_hint =>
-      'Pulls the whole file from Google Drive in one piece. Use this when GitHub is slow or blocked.';
-  @override
-  String get onboarding_pack_manifest_failed =>
-      'Could not fetch the pack manifest from the website or from GitHub. Check your network, or switch the download source to Google Drive.';
-  @override
   String get onboarding_pack_action_download_desc =>
       'Downloads the whole pack in the background, then imports it. Cancel anytime; it resumes from where it stopped.';
   @override
@@ -23872,6 +23848,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get onboarding_step_fonts_action_desc =>
       'Add your own font files and pick which one each language uses.';
+  @override
+  String get onboarding_pack_sources_hint =>
+      'Downloaded in parallel chunks from GitHub, the official site and a backup mirror at the same time, each chunk checksummed. Fushi measures the sources as it goes and gives more chunks to whichever is fastest right now, so there is nothing to choose here.';
 }
 
 // Path: <root>
@@ -33207,17 +33186,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get onboarding_action_badge_optional => 'Optional';
   @override
-  String get onboarding_pack_route_label => 'Download source';
-  @override
-  String get onboarding_pack_route_github_hint =>
-      'Fetches the manifest, then downloads the pack from GitHub Releases as parallel chunks, verifying each one. Fastest wherever GitHub is reachable.';
-  @override
-  String get onboarding_pack_route_drive_hint =>
-      'Pulls the whole file from Google Drive in one piece. Use this when GitHub is slow or blocked.';
-  @override
-  String get onboarding_pack_manifest_failed =>
-      'Could not fetch the pack manifest from the website or from GitHub. Check your network, or switch the download source to Google Drive.';
-  @override
   String get onboarding_pack_action_download_desc =>
       'Downloads the whole pack in the background, then imports it. Cancel anytime; it resumes from where it stopped.';
   @override
@@ -33268,6 +33236,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get onboarding_step_fonts_action_desc =>
       'Add your own font files and pick which one each language uses.';
+  @override
+  String get onboarding_pack_sources_hint =>
+      'Downloaded in parallel chunks from GitHub, the official site and a backup mirror at the same time, each chunk checksummed. Fushi measures the sources as it goes and gives more chunks to whichever is fastest right now, so there is nothing to choose here.';
 }
 
 // Path: <root>
@@ -42636,17 +42607,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get onboarding_action_badge_optional => 'Optional';
   @override
-  String get onboarding_pack_route_label => 'Download source';
-  @override
-  String get onboarding_pack_route_github_hint =>
-      'Fetches the manifest, then downloads the pack from GitHub Releases as parallel chunks, verifying each one. Fastest wherever GitHub is reachable.';
-  @override
-  String get onboarding_pack_route_drive_hint =>
-      'Pulls the whole file from Google Drive in one piece. Use this when GitHub is slow or blocked.';
-  @override
-  String get onboarding_pack_manifest_failed =>
-      'Could not fetch the pack manifest from the website or from GitHub. Check your network, or switch the download source to Google Drive.';
-  @override
   String get onboarding_pack_action_download_desc =>
       'Downloads the whole pack in the background, then imports it. Cancel anytime; it resumes from where it stopped.';
   @override
@@ -42697,6 +42657,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get onboarding_step_fonts_action_desc =>
       'Add your own font files and pick which one each language uses.';
+  @override
+  String get onboarding_pack_sources_hint =>
+      'Downloaded in parallel chunks from GitHub, the official site and a backup mirror at the same time, each chunk checksummed. Fushi measures the sources as it goes and gives more chunks to whichever is fastest right now, so there is nothing to choose here.';
 }
 
 // Path: <root>
@@ -51891,17 +51854,6 @@ class _StringsId extends _StringsEn {
   @override
   String get onboarding_action_badge_optional => 'Optional';
   @override
-  String get onboarding_pack_route_label => 'Download source';
-  @override
-  String get onboarding_pack_route_github_hint =>
-      'Fetches the manifest, then downloads the pack from GitHub Releases as parallel chunks, verifying each one. Fastest wherever GitHub is reachable.';
-  @override
-  String get onboarding_pack_route_drive_hint =>
-      'Pulls the whole file from Google Drive in one piece. Use this when GitHub is slow or blocked.';
-  @override
-  String get onboarding_pack_manifest_failed =>
-      'Could not fetch the pack manifest from the website or from GitHub. Check your network, or switch the download source to Google Drive.';
-  @override
   String get onboarding_pack_action_download_desc =>
       'Downloads the whole pack in the background, then imports it. Cancel anytime; it resumes from where it stopped.';
   @override
@@ -51952,6 +51904,9 @@ class _StringsId extends _StringsEn {
   @override
   String get onboarding_step_fonts_action_desc =>
       'Add your own font files and pick which one each language uses.';
+  @override
+  String get onboarding_pack_sources_hint =>
+      'Downloaded in parallel chunks from GitHub, the official site and a backup mirror at the same time, each chunk checksummed. Fushi measures the sources as it goes and gives more chunks to whichever is fastest right now, so there is nothing to choose here.';
 }
 
 // Path: <root>
@@ -61223,17 +61178,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get onboarding_action_badge_optional => 'Optional';
   @override
-  String get onboarding_pack_route_label => 'Download source';
-  @override
-  String get onboarding_pack_route_github_hint =>
-      'Fetches the manifest, then downloads the pack from GitHub Releases as parallel chunks, verifying each one. Fastest wherever GitHub is reachable.';
-  @override
-  String get onboarding_pack_route_drive_hint =>
-      'Pulls the whole file from Google Drive in one piece. Use this when GitHub is slow or blocked.';
-  @override
-  String get onboarding_pack_manifest_failed =>
-      'Could not fetch the pack manifest from the website or from GitHub. Check your network, or switch the download source to Google Drive.';
-  @override
   String get onboarding_pack_action_download_desc =>
       'Downloads the whole pack in the background, then imports it. Cancel anytime; it resumes from where it stopped.';
   @override
@@ -61284,6 +61228,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get onboarding_step_fonts_action_desc =>
       'Add your own font files and pick which one each language uses.';
+  @override
+  String get onboarding_pack_sources_hint =>
+      'Downloaded in parallel chunks from GitHub, the official site and a backup mirror at the same time, each chunk checksummed. Fushi measures the sources as it goes and gives more chunks to whichever is fastest right now, so there is nothing to choose here.';
 }
 
 // Path: <root>
@@ -69990,17 +69937,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get onboarding_action_badge_optional => 'Optional';
   @override
-  String get onboarding_pack_route_label => 'Download source';
-  @override
-  String get onboarding_pack_route_github_hint =>
-      'Fetches the manifest, then downloads the pack from GitHub Releases as parallel chunks, verifying each one. Fastest wherever GitHub is reachable.';
-  @override
-  String get onboarding_pack_route_drive_hint =>
-      'Pulls the whole file from Google Drive in one piece. Use this when GitHub is slow or blocked.';
-  @override
-  String get onboarding_pack_manifest_failed =>
-      'Could not fetch the pack manifest from the website or from GitHub. Check your network, or switch the download source to Google Drive.';
-  @override
   String get onboarding_pack_action_download_desc =>
       'Downloads the whole pack in the background, then imports it. Cancel anytime; it resumes from where it stopped.';
   @override
@@ -70051,6 +69987,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get onboarding_step_fonts_action_desc =>
       'Add your own font files and pick which one each language uses.';
+  @override
+  String get onboarding_pack_sources_hint =>
+      'Downloaded in parallel chunks from GitHub, the official site and a backup mirror at the same time, each chunk checksummed. Fushi measures the sources as it goes and gives more chunks to whichever is fastest right now, so there is nothing to choose here.';
 }
 
 // Path: <root>
@@ -78770,17 +78709,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get onboarding_action_badge_optional => 'Optional';
   @override
-  String get onboarding_pack_route_label => 'Download source';
-  @override
-  String get onboarding_pack_route_github_hint =>
-      'Fetches the manifest, then downloads the pack from GitHub Releases as parallel chunks, verifying each one. Fastest wherever GitHub is reachable.';
-  @override
-  String get onboarding_pack_route_drive_hint =>
-      'Pulls the whole file from Google Drive in one piece. Use this when GitHub is slow or blocked.';
-  @override
-  String get onboarding_pack_manifest_failed =>
-      'Could not fetch the pack manifest from the website or from GitHub. Check your network, or switch the download source to Google Drive.';
-  @override
   String get onboarding_pack_action_download_desc =>
       'Downloads the whole pack in the background, then imports it. Cancel anytime; it resumes from where it stopped.';
   @override
@@ -78831,6 +78759,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get onboarding_step_fonts_action_desc =>
       'Add your own font files and pick which one each language uses.';
+  @override
+  String get onboarding_pack_sources_hint =>
+      'Downloaded in parallel chunks from GitHub, the official site and a backup mirror at the same time, each chunk checksummed. Fushi measures the sources as it goes and gives more chunks to whichever is fastest right now, so there is nothing to choose here.';
 }
 
 // Path: <root>
@@ -88059,17 +87990,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get onboarding_action_badge_optional => 'Optional';
   @override
-  String get onboarding_pack_route_label => 'Download source';
-  @override
-  String get onboarding_pack_route_github_hint =>
-      'Fetches the manifest, then downloads the pack from GitHub Releases as parallel chunks, verifying each one. Fastest wherever GitHub is reachable.';
-  @override
-  String get onboarding_pack_route_drive_hint =>
-      'Pulls the whole file from Google Drive in one piece. Use this when GitHub is slow or blocked.';
-  @override
-  String get onboarding_pack_manifest_failed =>
-      'Could not fetch the pack manifest from the website or from GitHub. Check your network, or switch the download source to Google Drive.';
-  @override
   String get onboarding_pack_action_download_desc =>
       'Downloads the whole pack in the background, then imports it. Cancel anytime; it resumes from where it stopped.';
   @override
@@ -88120,6 +88040,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get onboarding_step_fonts_action_desc =>
       'Add your own font files and pick which one each language uses.';
+  @override
+  String get onboarding_pack_sources_hint =>
+      'Downloaded in parallel chunks from GitHub, the official site and a backup mirror at the same time, each chunk checksummed. Fushi measures the sources as it goes and gives more chunks to whichever is fastest right now, so there is nothing to choose here.';
 }
 
 // Path: <root>
@@ -97404,17 +97327,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get onboarding_action_badge_optional => 'Optional';
   @override
-  String get onboarding_pack_route_label => 'Download source';
-  @override
-  String get onboarding_pack_route_github_hint =>
-      'Fetches the manifest, then downloads the pack from GitHub Releases as parallel chunks, verifying each one. Fastest wherever GitHub is reachable.';
-  @override
-  String get onboarding_pack_route_drive_hint =>
-      'Pulls the whole file from Google Drive in one piece. Use this when GitHub is slow or blocked.';
-  @override
-  String get onboarding_pack_manifest_failed =>
-      'Could not fetch the pack manifest from the website or from GitHub. Check your network, or switch the download source to Google Drive.';
-  @override
   String get onboarding_pack_action_download_desc =>
       'Downloads the whole pack in the background, then imports it. Cancel anytime; it resumes from where it stopped.';
   @override
@@ -97465,6 +97377,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get onboarding_step_fonts_action_desc =>
       'Add your own font files and pick which one each language uses.';
+  @override
+  String get onboarding_pack_sources_hint =>
+      'Downloaded in parallel chunks from GitHub, the official site and a backup mirror at the same time, each chunk checksummed. Fushi measures the sources as it goes and gives more chunks to whichever is fastest right now, so there is nothing to choose here.';
 }
 
 // Path: <root>
@@ -106723,17 +106638,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get onboarding_action_badge_optional => 'Optional';
   @override
-  String get onboarding_pack_route_label => 'Download source';
-  @override
-  String get onboarding_pack_route_github_hint =>
-      'Fetches the manifest, then downloads the pack from GitHub Releases as parallel chunks, verifying each one. Fastest wherever GitHub is reachable.';
-  @override
-  String get onboarding_pack_route_drive_hint =>
-      'Pulls the whole file from Google Drive in one piece. Use this when GitHub is slow or blocked.';
-  @override
-  String get onboarding_pack_manifest_failed =>
-      'Could not fetch the pack manifest from the website or from GitHub. Check your network, or switch the download source to Google Drive.';
-  @override
   String get onboarding_pack_action_download_desc =>
       'Downloads the whole pack in the background, then imports it. Cancel anytime; it resumes from where it stopped.';
   @override
@@ -106784,6 +106688,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get onboarding_step_fonts_action_desc =>
       'Add your own font files and pick which one each language uses.';
+  @override
+  String get onboarding_pack_sources_hint =>
+      'Downloaded in parallel chunks from GitHub, the official site and a backup mirror at the same time, each chunk checksummed. Fushi measures the sources as it goes and gives more chunks to whichever is fastest right now, so there is nothing to choose here.';
 }
 
 // Path: <root>
@@ -115857,17 +115764,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get onboarding_action_badge_optional => 'Optional';
   @override
-  String get onboarding_pack_route_label => 'Download source';
-  @override
-  String get onboarding_pack_route_github_hint =>
-      'Fetches the manifest, then downloads the pack from GitHub Releases as parallel chunks, verifying each one. Fastest wherever GitHub is reachable.';
-  @override
-  String get onboarding_pack_route_drive_hint =>
-      'Pulls the whole file from Google Drive in one piece. Use this when GitHub is slow or blocked.';
-  @override
-  String get onboarding_pack_manifest_failed =>
-      'Could not fetch the pack manifest from the website or from GitHub. Check your network, or switch the download source to Google Drive.';
-  @override
   String get onboarding_pack_action_download_desc =>
       'Downloads the whole pack in the background, then imports it. Cancel anytime; it resumes from where it stopped.';
   @override
@@ -115918,6 +115814,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get onboarding_step_fonts_action_desc =>
       'Add your own font files and pick which one each language uses.';
+  @override
+  String get onboarding_pack_sources_hint =>
+      'Downloaded in parallel chunks from GitHub, the official site and a backup mirror at the same time, each chunk checksummed. Fushi measures the sources as it goes and gives more chunks to whichever is fastest right now, so there is nothing to choose here.';
 }
 
 // Path: <root>
@@ -125098,17 +124997,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get onboarding_action_badge_optional => 'Optional';
   @override
-  String get onboarding_pack_route_label => 'Download source';
-  @override
-  String get onboarding_pack_route_github_hint =>
-      'Fetches the manifest, then downloads the pack from GitHub Releases as parallel chunks, verifying each one. Fastest wherever GitHub is reachable.';
-  @override
-  String get onboarding_pack_route_drive_hint =>
-      'Pulls the whole file from Google Drive in one piece. Use this when GitHub is slow or blocked.';
-  @override
-  String get onboarding_pack_manifest_failed =>
-      'Could not fetch the pack manifest from the website or from GitHub. Check your network, or switch the download source to Google Drive.';
-  @override
   String get onboarding_pack_action_download_desc =>
       'Downloads the whole pack in the background, then imports it. Cancel anytime; it resumes from where it stopped.';
   @override
@@ -125159,6 +125047,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get onboarding_step_fonts_action_desc =>
       'Add your own font files and pick which one each language uses.';
+  @override
+  String get onboarding_pack_sources_hint =>
+      'Downloaded in parallel chunks from GitHub, the official site and a backup mirror at the same time, each chunk checksummed. Fushi measures the sources as it goes and gives more chunks to whichever is fastest right now, so there is nothing to choose here.';
 }
 
 // Path: <root>
@@ -134319,17 +134210,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get onboarding_action_badge_optional => 'Optional';
   @override
-  String get onboarding_pack_route_label => 'Download source';
-  @override
-  String get onboarding_pack_route_github_hint =>
-      'Fetches the manifest, then downloads the pack from GitHub Releases as parallel chunks, verifying each one. Fastest wherever GitHub is reachable.';
-  @override
-  String get onboarding_pack_route_drive_hint =>
-      'Pulls the whole file from Google Drive in one piece. Use this when GitHub is slow or blocked.';
-  @override
-  String get onboarding_pack_manifest_failed =>
-      'Could not fetch the pack manifest from the website or from GitHub. Check your network, or switch the download source to Google Drive.';
-  @override
   String get onboarding_pack_action_download_desc =>
       'Downloads the whole pack in the background, then imports it. Cancel anytime; it resumes from where it stopped.';
   @override
@@ -134380,6 +134260,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get onboarding_step_fonts_action_desc =>
       'Add your own font files and pick which one each language uses.';
+  @override
+  String get onboarding_pack_sources_hint =>
+      'Downloaded in parallel chunks from GitHub, the official site and a backup mirror at the same time, each chunk checksummed. Fushi measures the sources as it goes and gives more chunks to whichever is fastest right now, so there is nothing to choose here.';
 }
 
 // Path: <root>
@@ -142808,17 +142691,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get onboarding_action_badge_optional => '可选';
   @override
-  String get onboarding_pack_route_label => '下载来源';
-  @override
-  String get onboarding_pack_route_github_hint =>
-      '先取清单，再从 GitHub Releases 并发下载分片并逐片校验。GitHub 通的话这条最快。';
-  @override
-  String get onboarding_pack_route_drive_hint =>
-      '从 Google Drive 拉一个整包。GitHub 慢或被挡时用这条。';
-  @override
-  String get onboarding_pack_manifest_failed =>
-      '官网和 GitHub 都没取到推荐包清单。检查网络，或把下载来源切到 Google Drive。';
-  @override
   String get onboarding_pack_action_download_desc =>
       '在后台下载整个推荐包，下完自动进入导入。随时可以取消，下次从断点续传。';
   @override
@@ -142866,6 +142738,9 @@ class _StringsZhCn extends _StringsEn {
       '告诉你怎么装浏览器扩展并连上 Fushi，之后在网页上也能查词。';
   @override
   String get onboarding_step_fonts_action_desc => '导入自己的字体文件，并给每种语言指定用哪个。';
+  @override
+  String get onboarding_pack_sources_hint =>
+      '同时从 GitHub、官网和备用镜像分片并发下载，每片都校验。下载过程中会实测各来源速度，哪家快就多分给哪家，所以这里不用你选。';
 }
 
 // Path: <root>
@@ -151299,17 +151174,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get onboarding_action_badge_optional => 'Optional';
   @override
-  String get onboarding_pack_route_label => 'Download source';
-  @override
-  String get onboarding_pack_route_github_hint =>
-      'Fetches the manifest, then downloads the pack from GitHub Releases as parallel chunks, verifying each one. Fastest wherever GitHub is reachable.';
-  @override
-  String get onboarding_pack_route_drive_hint =>
-      'Pulls the whole file from Google Drive in one piece. Use this when GitHub is slow or blocked.';
-  @override
-  String get onboarding_pack_manifest_failed =>
-      'Could not fetch the pack manifest from the website or from GitHub. Check your network, or switch the download source to Google Drive.';
-  @override
   String get onboarding_pack_action_download_desc =>
       'Downloads the whole pack in the background, then imports it. Cancel anytime; it resumes from where it stopped.';
   @override
@@ -151360,6 +151224,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get onboarding_step_fonts_action_desc =>
       'Add your own font files and pick which one each language uses.';
+  @override
+  String get onboarding_pack_sources_hint =>
+      'Downloaded in parallel chunks from GitHub, the official site and a backup mirror at the same time, each chunk checksummed. Fushi measures the sources as it goes and gives more chunks to whichever is fastest right now, so there is nothing to choose here.';
 }
 
 /// Flat map(s) containing all translations.
@@ -159393,14 +159260,6 @@ extension on _StringsEn {
         return 'Recommended';
       case 'onboarding_action_badge_optional':
         return 'Optional';
-      case 'onboarding_pack_route_label':
-        return 'Download source';
-      case 'onboarding_pack_route_github_hint':
-        return 'Fetches the manifest, then downloads the pack from GitHub Releases as parallel chunks, verifying each one. Fastest wherever GitHub is reachable.';
-      case 'onboarding_pack_route_drive_hint':
-        return 'Pulls the whole file from Google Drive in one piece. Use this when GitHub is slow or blocked.';
-      case 'onboarding_pack_manifest_failed':
-        return 'Could not fetch the pack manifest from the website or from GitHub. Check your network, or switch the download source to Google Drive.';
       case 'onboarding_pack_action_download_desc':
         return 'Downloads the whole pack in the background, then imports it. Cancel anytime; it resumes from where it stopped.';
       case 'onboarding_pack_action_import_existing_desc':
@@ -159435,6 +159294,8 @@ extension on _StringsEn {
         return 'Shows how to install the browser extension and connect it to Fushi, so you can look words up on web pages too.';
       case 'onboarding_step_fonts_action_desc':
         return 'Add your own font files and pick which one each language uses.';
+      case 'onboarding_pack_sources_hint':
+        return 'Downloaded in parallel chunks from GitHub, the official site and a backup mirror at the same time, each chunk checksummed. Fushi measures the sources as it goes and gives more chunks to whichever is fastest right now, so there is nothing to choose here.';
       default:
         return null;
     }
@@ -167464,14 +167325,6 @@ extension on _StringsAr {
         return 'Recommended';
       case 'onboarding_action_badge_optional':
         return 'Optional';
-      case 'onboarding_pack_route_label':
-        return 'Download source';
-      case 'onboarding_pack_route_github_hint':
-        return 'Fetches the manifest, then downloads the pack from GitHub Releases as parallel chunks, verifying each one. Fastest wherever GitHub is reachable.';
-      case 'onboarding_pack_route_drive_hint':
-        return 'Pulls the whole file from Google Drive in one piece. Use this when GitHub is slow or blocked.';
-      case 'onboarding_pack_manifest_failed':
-        return 'Could not fetch the pack manifest from the website or from GitHub. Check your network, or switch the download source to Google Drive.';
       case 'onboarding_pack_action_download_desc':
         return 'Downloads the whole pack in the background, then imports it. Cancel anytime; it resumes from where it stopped.';
       case 'onboarding_pack_action_import_existing_desc':
@@ -167506,6 +167359,8 @@ extension on _StringsAr {
         return 'Shows how to install the browser extension and connect it to Fushi, so you can look words up on web pages too.';
       case 'onboarding_step_fonts_action_desc':
         return 'Add your own font files and pick which one each language uses.';
+      case 'onboarding_pack_sources_hint':
+        return 'Downloaded in parallel chunks from GitHub, the official site and a backup mirror at the same time, each chunk checksummed. Fushi measures the sources as it goes and gives more chunks to whichever is fastest right now, so there is nothing to choose here.';
       default:
         return null;
     }
@@ -175578,14 +175433,6 @@ extension on _StringsDe {
         return 'Recommended';
       case 'onboarding_action_badge_optional':
         return 'Optional';
-      case 'onboarding_pack_route_label':
-        return 'Download source';
-      case 'onboarding_pack_route_github_hint':
-        return 'Fetches the manifest, then downloads the pack from GitHub Releases as parallel chunks, verifying each one. Fastest wherever GitHub is reachable.';
-      case 'onboarding_pack_route_drive_hint':
-        return 'Pulls the whole file from Google Drive in one piece. Use this when GitHub is slow or blocked.';
-      case 'onboarding_pack_manifest_failed':
-        return 'Could not fetch the pack manifest from the website or from GitHub. Check your network, or switch the download source to Google Drive.';
       case 'onboarding_pack_action_download_desc':
         return 'Downloads the whole pack in the background, then imports it. Cancel anytime; it resumes from where it stopped.';
       case 'onboarding_pack_action_import_existing_desc':
@@ -175620,6 +175467,8 @@ extension on _StringsDe {
         return 'Shows how to install the browser extension and connect it to Fushi, so you can look words up on web pages too.';
       case 'onboarding_step_fonts_action_desc':
         return 'Add your own font files and pick which one each language uses.';
+      case 'onboarding_pack_sources_hint':
+        return 'Downloaded in parallel chunks from GitHub, the official site and a backup mirror at the same time, each chunk checksummed. Fushi measures the sources as it goes and gives more chunks to whichever is fastest right now, so there is nothing to choose here.';
       default:
         return null;
     }
@@ -183684,14 +183533,6 @@ extension on _StringsEs {
         return 'Recommended';
       case 'onboarding_action_badge_optional':
         return 'Optional';
-      case 'onboarding_pack_route_label':
-        return 'Download source';
-      case 'onboarding_pack_route_github_hint':
-        return 'Fetches the manifest, then downloads the pack from GitHub Releases as parallel chunks, verifying each one. Fastest wherever GitHub is reachable.';
-      case 'onboarding_pack_route_drive_hint':
-        return 'Pulls the whole file from Google Drive in one piece. Use this when GitHub is slow or blocked.';
-      case 'onboarding_pack_manifest_failed':
-        return 'Could not fetch the pack manifest from the website or from GitHub. Check your network, or switch the download source to Google Drive.';
       case 'onboarding_pack_action_download_desc':
         return 'Downloads the whole pack in the background, then imports it. Cancel anytime; it resumes from where it stopped.';
       case 'onboarding_pack_action_import_existing_desc':
@@ -183726,6 +183567,8 @@ extension on _StringsEs {
         return 'Shows how to install the browser extension and connect it to Fushi, so you can look words up on web pages too.';
       case 'onboarding_step_fonts_action_desc':
         return 'Add your own font files and pick which one each language uses.';
+      case 'onboarding_pack_sources_hint':
+        return 'Downloaded in parallel chunks from GitHub, the official site and a backup mirror at the same time, each chunk checksummed. Fushi measures the sources as it goes and gives more chunks to whichever is fastest right now, so there is nothing to choose here.';
       default:
         return null;
     }
@@ -191798,14 +191641,6 @@ extension on _StringsFr {
         return 'Recommended';
       case 'onboarding_action_badge_optional':
         return 'Optional';
-      case 'onboarding_pack_route_label':
-        return 'Download source';
-      case 'onboarding_pack_route_github_hint':
-        return 'Fetches the manifest, then downloads the pack from GitHub Releases as parallel chunks, verifying each one. Fastest wherever GitHub is reachable.';
-      case 'onboarding_pack_route_drive_hint':
-        return 'Pulls the whole file from Google Drive in one piece. Use this when GitHub is slow or blocked.';
-      case 'onboarding_pack_manifest_failed':
-        return 'Could not fetch the pack manifest from the website or from GitHub. Check your network, or switch the download source to Google Drive.';
       case 'onboarding_pack_action_download_desc':
         return 'Downloads the whole pack in the background, then imports it. Cancel anytime; it resumes from where it stopped.';
       case 'onboarding_pack_action_import_existing_desc':
@@ -191840,6 +191675,8 @@ extension on _StringsFr {
         return 'Shows how to install the browser extension and connect it to Fushi, so you can look words up on web pages too.';
       case 'onboarding_step_fonts_action_desc':
         return 'Add your own font files and pick which one each language uses.';
+      case 'onboarding_pack_sources_hint':
+        return 'Downloaded in parallel chunks from GitHub, the official site and a backup mirror at the same time, each chunk checksummed. Fushi measures the sources as it goes and gives more chunks to whichever is fastest right now, so there is nothing to choose here.';
       default:
         return null;
     }
@@ -199884,14 +199721,6 @@ extension on _StringsId {
         return 'Recommended';
       case 'onboarding_action_badge_optional':
         return 'Optional';
-      case 'onboarding_pack_route_label':
-        return 'Download source';
-      case 'onboarding_pack_route_github_hint':
-        return 'Fetches the manifest, then downloads the pack from GitHub Releases as parallel chunks, verifying each one. Fastest wherever GitHub is reachable.';
-      case 'onboarding_pack_route_drive_hint':
-        return 'Pulls the whole file from Google Drive in one piece. Use this when GitHub is slow or blocked.';
-      case 'onboarding_pack_manifest_failed':
-        return 'Could not fetch the pack manifest from the website or from GitHub. Check your network, or switch the download source to Google Drive.';
       case 'onboarding_pack_action_download_desc':
         return 'Downloads the whole pack in the background, then imports it. Cancel anytime; it resumes from where it stopped.';
       case 'onboarding_pack_action_import_existing_desc':
@@ -199926,6 +199755,8 @@ extension on _StringsId {
         return 'Shows how to install the browser extension and connect it to Fushi, so you can look words up on web pages too.';
       case 'onboarding_step_fonts_action_desc':
         return 'Add your own font files and pick which one each language uses.';
+      case 'onboarding_pack_sources_hint':
+        return 'Downloaded in parallel chunks from GitHub, the official site and a backup mirror at the same time, each chunk checksummed. Fushi measures the sources as it goes and gives more chunks to whichever is fastest right now, so there is nothing to choose here.';
       default:
         return null;
     }
@@ -207991,14 +207822,6 @@ extension on _StringsIt {
         return 'Recommended';
       case 'onboarding_action_badge_optional':
         return 'Optional';
-      case 'onboarding_pack_route_label':
-        return 'Download source';
-      case 'onboarding_pack_route_github_hint':
-        return 'Fetches the manifest, then downloads the pack from GitHub Releases as parallel chunks, verifying each one. Fastest wherever GitHub is reachable.';
-      case 'onboarding_pack_route_drive_hint':
-        return 'Pulls the whole file from Google Drive in one piece. Use this when GitHub is slow or blocked.';
-      case 'onboarding_pack_manifest_failed':
-        return 'Could not fetch the pack manifest from the website or from GitHub. Check your network, or switch the download source to Google Drive.';
       case 'onboarding_pack_action_download_desc':
         return 'Downloads the whole pack in the background, then imports it. Cancel anytime; it resumes from where it stopped.';
       case 'onboarding_pack_action_import_existing_desc':
@@ -208033,6 +207856,8 @@ extension on _StringsIt {
         return 'Shows how to install the browser extension and connect it to Fushi, so you can look words up on web pages too.';
       case 'onboarding_step_fonts_action_desc':
         return 'Add your own font files and pick which one each language uses.';
+      case 'onboarding_pack_sources_hint':
+        return 'Downloaded in parallel chunks from GitHub, the official site and a backup mirror at the same time, each chunk checksummed. Fushi measures the sources as it goes and gives more chunks to whichever is fastest right now, so there is nothing to choose here.';
       default:
         return null;
     }
@@ -216030,14 +215855,6 @@ extension on _StringsJa {
         return 'Recommended';
       case 'onboarding_action_badge_optional':
         return 'Optional';
-      case 'onboarding_pack_route_label':
-        return 'Download source';
-      case 'onboarding_pack_route_github_hint':
-        return 'Fetches the manifest, then downloads the pack from GitHub Releases as parallel chunks, verifying each one. Fastest wherever GitHub is reachable.';
-      case 'onboarding_pack_route_drive_hint':
-        return 'Pulls the whole file from Google Drive in one piece. Use this when GitHub is slow or blocked.';
-      case 'onboarding_pack_manifest_failed':
-        return 'Could not fetch the pack manifest from the website or from GitHub. Check your network, or switch the download source to Google Drive.';
       case 'onboarding_pack_action_download_desc':
         return 'Downloads the whole pack in the background, then imports it. Cancel anytime; it resumes from where it stopped.';
       case 'onboarding_pack_action_import_existing_desc':
@@ -216072,6 +215889,8 @@ extension on _StringsJa {
         return 'Shows how to install the browser extension and connect it to Fushi, so you can look words up on web pages too.';
       case 'onboarding_step_fonts_action_desc':
         return 'Add your own font files and pick which one each language uses.';
+      case 'onboarding_pack_sources_hint':
+        return 'Downloaded in parallel chunks from GitHub, the official site and a backup mirror at the same time, each chunk checksummed. Fushi measures the sources as it goes and gives more chunks to whichever is fastest right now, so there is nothing to choose here.';
       default:
         return null;
     }
@@ -224071,14 +223890,6 @@ extension on _StringsKo {
         return 'Recommended';
       case 'onboarding_action_badge_optional':
         return 'Optional';
-      case 'onboarding_pack_route_label':
-        return 'Download source';
-      case 'onboarding_pack_route_github_hint':
-        return 'Fetches the manifest, then downloads the pack from GitHub Releases as parallel chunks, verifying each one. Fastest wherever GitHub is reachable.';
-      case 'onboarding_pack_route_drive_hint':
-        return 'Pulls the whole file from Google Drive in one piece. Use this when GitHub is slow or blocked.';
-      case 'onboarding_pack_manifest_failed':
-        return 'Could not fetch the pack manifest from the website or from GitHub. Check your network, or switch the download source to Google Drive.';
       case 'onboarding_pack_action_download_desc':
         return 'Downloads the whole pack in the background, then imports it. Cancel anytime; it resumes from where it stopped.';
       case 'onboarding_pack_action_import_existing_desc':
@@ -224113,6 +223924,8 @@ extension on _StringsKo {
         return 'Shows how to install the browser extension and connect it to Fushi, so you can look words up on web pages too.';
       case 'onboarding_step_fonts_action_desc':
         return 'Add your own font files and pick which one each language uses.';
+      case 'onboarding_pack_sources_hint':
+        return 'Downloaded in parallel chunks from GitHub, the official site and a backup mirror at the same time, each chunk checksummed. Fushi measures the sources as it goes and gives more chunks to whichever is fastest right now, so there is nothing to choose here.';
       default:
         return null;
     }
@@ -232172,14 +231985,6 @@ extension on _StringsNl {
         return 'Recommended';
       case 'onboarding_action_badge_optional':
         return 'Optional';
-      case 'onboarding_pack_route_label':
-        return 'Download source';
-      case 'onboarding_pack_route_github_hint':
-        return 'Fetches the manifest, then downloads the pack from GitHub Releases as parallel chunks, verifying each one. Fastest wherever GitHub is reachable.';
-      case 'onboarding_pack_route_drive_hint':
-        return 'Pulls the whole file from Google Drive in one piece. Use this when GitHub is slow or blocked.';
-      case 'onboarding_pack_manifest_failed':
-        return 'Could not fetch the pack manifest from the website or from GitHub. Check your network, or switch the download source to Google Drive.';
       case 'onboarding_pack_action_download_desc':
         return 'Downloads the whole pack in the background, then imports it. Cancel anytime; it resumes from where it stopped.';
       case 'onboarding_pack_action_import_existing_desc':
@@ -232214,6 +232019,8 @@ extension on _StringsNl {
         return 'Shows how to install the browser extension and connect it to Fushi, so you can look words up on web pages too.';
       case 'onboarding_step_fonts_action_desc':
         return 'Add your own font files and pick which one each language uses.';
+      case 'onboarding_pack_sources_hint':
+        return 'Downloaded in parallel chunks from GitHub, the official site and a backup mirror at the same time, each chunk checksummed. Fushi measures the sources as it goes and gives more chunks to whichever is fastest right now, so there is nothing to choose here.';
       default:
         return null;
     }
@@ -240268,14 +240075,6 @@ extension on _StringsPtBr {
         return 'Recommended';
       case 'onboarding_action_badge_optional':
         return 'Optional';
-      case 'onboarding_pack_route_label':
-        return 'Download source';
-      case 'onboarding_pack_route_github_hint':
-        return 'Fetches the manifest, then downloads the pack from GitHub Releases as parallel chunks, verifying each one. Fastest wherever GitHub is reachable.';
-      case 'onboarding_pack_route_drive_hint':
-        return 'Pulls the whole file from Google Drive in one piece. Use this when GitHub is slow or blocked.';
-      case 'onboarding_pack_manifest_failed':
-        return 'Could not fetch the pack manifest from the website or from GitHub. Check your network, or switch the download source to Google Drive.';
       case 'onboarding_pack_action_download_desc':
         return 'Downloads the whole pack in the background, then imports it. Cancel anytime; it resumes from where it stopped.';
       case 'onboarding_pack_action_import_existing_desc':
@@ -240310,6 +240109,8 @@ extension on _StringsPtBr {
         return 'Shows how to install the browser extension and connect it to Fushi, so you can look words up on web pages too.';
       case 'onboarding_step_fonts_action_desc':
         return 'Add your own font files and pick which one each language uses.';
+      case 'onboarding_pack_sources_hint':
+        return 'Downloaded in parallel chunks from GitHub, the official site and a backup mirror at the same time, each chunk checksummed. Fushi measures the sources as it goes and gives more chunks to whichever is fastest right now, so there is nothing to choose here.';
       default:
         return null;
     }
@@ -248370,14 +248171,6 @@ extension on _StringsRu {
         return 'Recommended';
       case 'onboarding_action_badge_optional':
         return 'Optional';
-      case 'onboarding_pack_route_label':
-        return 'Download source';
-      case 'onboarding_pack_route_github_hint':
-        return 'Fetches the manifest, then downloads the pack from GitHub Releases as parallel chunks, verifying each one. Fastest wherever GitHub is reachable.';
-      case 'onboarding_pack_route_drive_hint':
-        return 'Pulls the whole file from Google Drive in one piece. Use this when GitHub is slow or blocked.';
-      case 'onboarding_pack_manifest_failed':
-        return 'Could not fetch the pack manifest from the website or from GitHub. Check your network, or switch the download source to Google Drive.';
       case 'onboarding_pack_action_download_desc':
         return 'Downloads the whole pack in the background, then imports it. Cancel anytime; it resumes from where it stopped.';
       case 'onboarding_pack_action_import_existing_desc':
@@ -248412,6 +248205,8 @@ extension on _StringsRu {
         return 'Shows how to install the browser extension and connect it to Fushi, so you can look words up on web pages too.';
       case 'onboarding_step_fonts_action_desc':
         return 'Add your own font files and pick which one each language uses.';
+      case 'onboarding_pack_sources_hint':
+        return 'Downloaded in parallel chunks from GitHub, the official site and a backup mirror at the same time, each chunk checksummed. Fushi measures the sources as it goes and gives more chunks to whichever is fastest right now, so there is nothing to choose here.';
       default:
         return null;
     }
@@ -256445,14 +256240,6 @@ extension on _StringsTh {
         return 'Recommended';
       case 'onboarding_action_badge_optional':
         return 'Optional';
-      case 'onboarding_pack_route_label':
-        return 'Download source';
-      case 'onboarding_pack_route_github_hint':
-        return 'Fetches the manifest, then downloads the pack from GitHub Releases as parallel chunks, verifying each one. Fastest wherever GitHub is reachable.';
-      case 'onboarding_pack_route_drive_hint':
-        return 'Pulls the whole file from Google Drive in one piece. Use this when GitHub is slow or blocked.';
-      case 'onboarding_pack_manifest_failed':
-        return 'Could not fetch the pack manifest from the website or from GitHub. Check your network, or switch the download source to Google Drive.';
       case 'onboarding_pack_action_download_desc':
         return 'Downloads the whole pack in the background, then imports it. Cancel anytime; it resumes from where it stopped.';
       case 'onboarding_pack_action_import_existing_desc':
@@ -256487,6 +256274,8 @@ extension on _StringsTh {
         return 'Shows how to install the browser extension and connect it to Fushi, so you can look words up on web pages too.';
       case 'onboarding_step_fonts_action_desc':
         return 'Add your own font files and pick which one each language uses.';
+      case 'onboarding_pack_sources_hint':
+        return 'Downloaded in parallel chunks from GitHub, the official site and a backup mirror at the same time, each chunk checksummed. Fushi measures the sources as it goes and gives more chunks to whichever is fastest right now, so there is nothing to choose here.';
       default:
         return null;
     }
@@ -264536,14 +264325,6 @@ extension on _StringsTr {
         return 'Recommended';
       case 'onboarding_action_badge_optional':
         return 'Optional';
-      case 'onboarding_pack_route_label':
-        return 'Download source';
-      case 'onboarding_pack_route_github_hint':
-        return 'Fetches the manifest, then downloads the pack from GitHub Releases as parallel chunks, verifying each one. Fastest wherever GitHub is reachable.';
-      case 'onboarding_pack_route_drive_hint':
-        return 'Pulls the whole file from Google Drive in one piece. Use this when GitHub is slow or blocked.';
-      case 'onboarding_pack_manifest_failed':
-        return 'Could not fetch the pack manifest from the website or from GitHub. Check your network, or switch the download source to Google Drive.';
       case 'onboarding_pack_action_download_desc':
         return 'Downloads the whole pack in the background, then imports it. Cancel anytime; it resumes from where it stopped.';
       case 'onboarding_pack_action_import_existing_desc':
@@ -264578,6 +264359,8 @@ extension on _StringsTr {
         return 'Shows how to install the browser extension and connect it to Fushi, so you can look words up on web pages too.';
       case 'onboarding_step_fonts_action_desc':
         return 'Add your own font files and pick which one each language uses.';
+      case 'onboarding_pack_sources_hint':
+        return 'Downloaded in parallel chunks from GitHub, the official site and a backup mirror at the same time, each chunk checksummed. Fushi measures the sources as it goes and gives more chunks to whichever is fastest right now, so there is nothing to choose here.';
       default:
         return null;
     }
@@ -272620,14 +272403,6 @@ extension on _StringsVi {
         return 'Recommended';
       case 'onboarding_action_badge_optional':
         return 'Optional';
-      case 'onboarding_pack_route_label':
-        return 'Download source';
-      case 'onboarding_pack_route_github_hint':
-        return 'Fetches the manifest, then downloads the pack from GitHub Releases as parallel chunks, verifying each one. Fastest wherever GitHub is reachable.';
-      case 'onboarding_pack_route_drive_hint':
-        return 'Pulls the whole file from Google Drive in one piece. Use this when GitHub is slow or blocked.';
-      case 'onboarding_pack_manifest_failed':
-        return 'Could not fetch the pack manifest from the website or from GitHub. Check your network, or switch the download source to Google Drive.';
       case 'onboarding_pack_action_download_desc':
         return 'Downloads the whole pack in the background, then imports it. Cancel anytime; it resumes from where it stopped.';
       case 'onboarding_pack_action_import_existing_desc':
@@ -272662,6 +272437,8 @@ extension on _StringsVi {
         return 'Shows how to install the browser extension and connect it to Fushi, so you can look words up on web pages too.';
       case 'onboarding_step_fonts_action_desc':
         return 'Add your own font files and pick which one each language uses.';
+      case 'onboarding_pack_sources_hint':
+        return 'Downloaded in parallel chunks from GitHub, the official site and a backup mirror at the same time, each chunk checksummed. Fushi measures the sources as it goes and gives more chunks to whichever is fastest right now, so there is nothing to choose here.';
       default:
         return null;
     }
@@ -280637,14 +280414,6 @@ extension on _StringsZhCn {
         return '推荐';
       case 'onboarding_action_badge_optional':
         return '可选';
-      case 'onboarding_pack_route_label':
-        return '下载来源';
-      case 'onboarding_pack_route_github_hint':
-        return '先取清单，再从 GitHub Releases 并发下载分片并逐片校验。GitHub 通的话这条最快。';
-      case 'onboarding_pack_route_drive_hint':
-        return '从 Google Drive 拉一个整包。GitHub 慢或被挡时用这条。';
-      case 'onboarding_pack_manifest_failed':
-        return '官网和 GitHub 都没取到推荐包清单。检查网络，或把下载来源切到 Google Drive。';
       case 'onboarding_pack_action_download_desc':
         return '在后台下载整个推荐包，下完自动进入导入。随时可以取消，下次从断点续传。';
       case 'onboarding_pack_action_import_existing_desc':
@@ -280679,6 +280448,8 @@ extension on _StringsZhCn {
         return '告诉你怎么装浏览器扩展并连上 Fushi，之后在网页上也能查词。';
       case 'onboarding_step_fonts_action_desc':
         return '导入自己的字体文件，并给每种语言指定用哪个。';
+      case 'onboarding_pack_sources_hint':
+        return '同时从 GitHub、官网和备用镜像分片并发下载，每片都校验。下载过程中会实测各来源速度，哪家快就多分给哪家，所以这里不用你选。';
       default:
         return null;
     }
@@ -288655,14 +288426,6 @@ extension on _StringsZhHk {
         return 'Recommended';
       case 'onboarding_action_badge_optional':
         return 'Optional';
-      case 'onboarding_pack_route_label':
-        return 'Download source';
-      case 'onboarding_pack_route_github_hint':
-        return 'Fetches the manifest, then downloads the pack from GitHub Releases as parallel chunks, verifying each one. Fastest wherever GitHub is reachable.';
-      case 'onboarding_pack_route_drive_hint':
-        return 'Pulls the whole file from Google Drive in one piece. Use this when GitHub is slow or blocked.';
-      case 'onboarding_pack_manifest_failed':
-        return 'Could not fetch the pack manifest from the website or from GitHub. Check your network, or switch the download source to Google Drive.';
       case 'onboarding_pack_action_download_desc':
         return 'Downloads the whole pack in the background, then imports it. Cancel anytime; it resumes from where it stopped.';
       case 'onboarding_pack_action_import_existing_desc':
@@ -288697,6 +288460,8 @@ extension on _StringsZhHk {
         return 'Shows how to install the browser extension and connect it to Fushi, so you can look words up on web pages too.';
       case 'onboarding_step_fonts_action_desc':
         return 'Add your own font files and pick which one each language uses.';
+      case 'onboarding_pack_sources_hint':
+        return 'Downloaded in parallel chunks from GitHub, the official site and a backup mirror at the same time, each chunk checksummed. Fushi measures the sources as it goes and gives more chunks to whichever is fastest right now, so there is nothing to choose here.';
       default:
         return null;
     }
