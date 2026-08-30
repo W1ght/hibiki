@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 66215 (3895 per locale)
+/// Strings: 66249 (3897 per locale)
 ///
-/// Built on 2026-08-30 at 01:13 UTC
+/// Built on 2026-08-30 at 01:51 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5306,6 +5306,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Click through to what is underneath';
   String get floating_lyric_transparency => 'Toggle the background';
   String get floating_lyric_topmost => 'Keep on top';
+  String get gal_hook_fold_progressive_lines => 'Merge split dialogue lines';
+  String get gal_hook_fold_progressive_lines_hint =>
+      'Some engines redraw the whole line on every click, so one line is captured several times. Fold those snapshots into a single line.';
 }
 
 // Path: <root>
@@ -14335,6 +14338,11 @@ class _StringsAr extends _StringsEn {
   String get floating_lyric_transparency => 'تبديل الخلفية';
   @override
   String get floating_lyric_topmost => 'الإبقاء في المقدمة';
+  @override
+  String get gal_hook_fold_progressive_lines => 'دمج أسطر الحوار المقسّمة';
+  @override
+  String get gal_hook_fold_progressive_lines_hint =>
+      'بعض المحرّكات تعيد رسم السطر كاملًا مع كل نقرة، فيُلتقط السطر الواحد عدة مرات. اطوِ تلك اللقطات في سطر واحد.';
 }
 
 // Path: <root>
@@ -23575,6 +23583,12 @@ class _StringsDe extends _StringsEn {
   String get floating_lyric_transparency => 'Hintergrund umschalten';
   @override
   String get floating_lyric_topmost => 'Immer im Vordergrund';
+  @override
+  String get gal_hook_fold_progressive_lines =>
+      'Aufgeteilte Dialogzeilen zusammenfassen';
+  @override
+  String get gal_hook_fold_progressive_lines_hint =>
+      'Manche Engines zeichnen bei jedem Klick die ganze Zeile neu, sodass eine Zeile mehrfach erfasst wird. Diese Schnappschüsse zu einer Zeile zusammenfalten.';
 }
 
 // Path: <root>
@@ -32859,6 +32873,12 @@ class _StringsEs extends _StringsEn {
   String get floating_lyric_transparency => 'Alternar el fondo';
   @override
   String get floating_lyric_topmost => 'Mantener al frente';
+  @override
+  String get gal_hook_fold_progressive_lines =>
+      'Unir líneas de diálogo divididas';
+  @override
+  String get gal_hook_fold_progressive_lines_hint =>
+      'Algunos motores redibujan la línea entera en cada clic, así que una misma línea se captura varias veces. Pliega esas instantáneas en una sola línea.';
 }
 
 // Path: <root>
@@ -42177,6 +42197,12 @@ class _StringsFr extends _StringsEn {
   String get floating_lyric_transparency => 'Basculer l’arrière-plan';
   @override
   String get floating_lyric_topmost => 'Garder au premier plan';
+  @override
+  String get gal_hook_fold_progressive_lines =>
+      'Fusionner les répliques découpées';
+  @override
+  String get gal_hook_fold_progressive_lines_hint =>
+      'Certains moteurs redessinent toute la ligne à chaque clic, si bien qu\'une même ligne est capturée plusieurs fois. Replie ces instantanés en une seule ligne.';
 }
 
 // Path: <root>
@@ -51320,6 +51346,12 @@ class _StringsId extends _StringsEn {
   String get floating_lyric_transparency => 'Alihkan latar belakang';
   @override
   String get floating_lyric_topmost => 'Tetap di atas';
+  @override
+  String get gal_hook_fold_progressive_lines =>
+      'Gabungkan baris dialog yang terpotong';
+  @override
+  String get gal_hook_fold_progressive_lines_hint =>
+      'Sebagian engine menggambar ulang seluruh baris setiap kali diklik, sehingga satu baris tertangkap beberapa kali. Lipat cuplikan itu menjadi satu baris.';
 }
 
 // Path: <root>
@@ -60541,6 +60573,11 @@ class _StringsIt extends _StringsEn {
   String get floating_lyric_transparency => 'Attiva/disattiva lo sfondo';
   @override
   String get floating_lyric_topmost => 'Mantieni in primo piano';
+  @override
+  String get gal_hook_fold_progressive_lines => 'Unisci le battute spezzate';
+  @override
+  String get gal_hook_fold_progressive_lines_hint =>
+      'Alcuni motori ridisegnano l’intera riga a ogni clic, così una stessa riga viene catturata più volte. Ripiega quelle istantanee in una sola riga.';
 }
 
 // Path: <root>
@@ -69199,6 +69236,11 @@ class _StringsJa extends _StringsEn {
   String get floating_lyric_transparency => '背景を切り替える';
   @override
   String get floating_lyric_topmost => '常に手前に表示';
+  @override
+  String get gal_hook_fold_progressive_lines => '分割されたセリフ行をまとめる';
+  @override
+  String get gal_hook_fold_progressive_lines_hint =>
+      'クリックのたびに行全体を描き直すエンジンがあり、同じ行が何度も取り込まれます。そのスナップショットを 1 行にまとめます。';
 }
 
 // Path: <root>
@@ -77871,6 +77913,11 @@ class _StringsKo extends _StringsEn {
   String get floating_lyric_transparency => '배경 전환';
   @override
   String get floating_lyric_topmost => '항상 위에 표시';
+  @override
+  String get gal_hook_fold_progressive_lines => '나뉜 대사 줄 합치기';
+  @override
+  String get gal_hook_fold_progressive_lines_hint =>
+      '클릭할 때마다 줄 전체를 다시 그리는 엔진이 있어 같은 줄이 여러 번 캡처됩니다. 그 스냅숏들을 한 줄로 접습니다.';
 }
 
 // Path: <root>
@@ -87048,6 +87095,12 @@ class _StringsNl extends _StringsEn {
   String get floating_lyric_transparency => 'Achtergrond omschakelen';
   @override
   String get floating_lyric_topmost => 'Altijd op de voorgrond';
+  @override
+  String get gal_hook_fold_progressive_lines =>
+      'Opgesplitste dialoogregels samenvoegen';
+  @override
+  String get gal_hook_fold_progressive_lines_hint =>
+      'Sommige engines tekenen bij elke klik de hele regel opnieuw, waardoor één regel meerdere keren wordt vastgelegd. Vouw die momentopnamen samen tot één regel.';
 }
 
 // Path: <root>
@@ -96281,6 +96334,12 @@ class _StringsPtBr extends _StringsEn {
   String get floating_lyric_transparency => 'Alternar o fundo';
   @override
   String get floating_lyric_topmost => 'Manter sempre visível';
+  @override
+  String get gal_hook_fold_progressive_lines =>
+      'Unir linhas de diálogo divididas';
+  @override
+  String get gal_hook_fold_progressive_lines_hint =>
+      'Alguns motores redesenham a linha inteira a cada clique, então a mesma linha é capturada várias vezes. Dobre esses instantâneos em uma única linha.';
 }
 
 // Path: <root>
@@ -105487,6 +105546,12 @@ class _StringsRu extends _StringsEn {
   String get floating_lyric_transparency => 'Переключить фон';
   @override
   String get floating_lyric_topmost => 'Поверх других окон';
+  @override
+  String get gal_hook_fold_progressive_lines =>
+      'Объединять разбитые строки диалога';
+  @override
+  String get gal_hook_fold_progressive_lines_hint =>
+      'Некоторые движки перерисовывают строку целиком при каждом клике, поэтому одна строка захватывается несколько раз. Сворачивать такие снимки в одну строку.';
 }
 
 // Path: <root>
@@ -114511,6 +114576,11 @@ class _StringsTh extends _StringsEn {
   String get floating_lyric_transparency => 'สลับพื้นหลัง';
   @override
   String get floating_lyric_topmost => 'อยู่ด้านบนเสมอ';
+  @override
+  String get gal_hook_fold_progressive_lines => 'รวมบรรทัดบทสนทนาที่ถูกแบ่ง';
+  @override
+  String get gal_hook_fold_progressive_lines_hint =>
+      'บางเอนจินวาดทั้งบรรทัดใหม่ทุกครั้งที่คลิก ทำให้บรรทัดเดียวถูกเก็บหลายครั้ง ให้ยุบสแนปช็อตเหล่านั้นเป็นบรรทัดเดียว';
 }
 
 // Path: <root>
@@ -123640,6 +123710,12 @@ class _StringsTr extends _StringsEn {
   String get floating_lyric_transparency => 'Arka planı değiştir';
   @override
   String get floating_lyric_topmost => 'Her zaman üstte tut';
+  @override
+  String get gal_hook_fold_progressive_lines =>
+      'Bölünmüş diyalog satırlarını birleştir';
+  @override
+  String get gal_hook_fold_progressive_lines_hint =>
+      'Bazı motorlar her tıklamada satırın tamamını yeniden çizer, bu yüzden tek bir satır birkaç kez yakalanır. Bu anlık görüntüleri tek satırda topla.';
 }
 
 // Path: <root>
@@ -132749,6 +132825,12 @@ class _StringsVi extends _StringsEn {
   String get floating_lyric_transparency => 'Bật/tắt nền';
   @override
   String get floating_lyric_topmost => 'Luôn hiển thị trên cùng';
+  @override
+  String get gal_hook_fold_progressive_lines =>
+      'Gộp các dòng thoại bị chia nhỏ';
+  @override
+  String get gal_hook_fold_progressive_lines_hint =>
+      'Một số engine vẽ lại cả dòng mỗi lần nhấp, nên cùng một dòng bị bắt nhiều lần. Gộp các ảnh chụp đó thành một dòng.';
 }
 
 // Path: <root>
@@ -141133,6 +141215,11 @@ class _StringsZhCn extends _StringsEn {
   String get floating_lyric_transparency => '切换底板';
   @override
   String get floating_lyric_topmost => '保持置顶';
+  @override
+  String get gal_hook_fold_progressive_lines => '合并分段吐出的台词';
+  @override
+  String get gal_hook_fold_progressive_lines_hint =>
+      '有些引擎每次点击都重绘整行，一句台词会被抓成好几条。开启后把同一句的多次快照折成一条。';
 }
 
 // Path: <root>
@@ -149522,6 +149609,11 @@ class _StringsZhHk extends _StringsEn {
   String get floating_lyric_transparency => '切換底板';
   @override
   String get floating_lyric_topmost => '保持置頂';
+  @override
+  String get gal_hook_fold_progressive_lines => '把分開顯示的台詞合成一條';
+  @override
+  String get gal_hook_fold_progressive_lines_hint =>
+      '有些引擎每點一次就重畫整行，於是同一行被抓到好幾次。把這些快照摺成一條。';
 }
 
 /// Flat map(s) containing all translations.
@@ -157516,6 +157608,10 @@ extension on _StringsEn {
         return 'Toggle the background';
       case 'floating_lyric_topmost':
         return 'Keep on top';
+      case 'gal_hook_fold_progressive_lines':
+        return 'Merge split dialogue lines';
+      case 'gal_hook_fold_progressive_lines_hint':
+        return 'Some engines redraw the whole line on every click, so one line is captured several times. Fold those snapshots into a single line.';
       default:
         return null;
     }
@@ -165506,6 +165602,10 @@ extension on _StringsAr {
         return 'تبديل الخلفية';
       case 'floating_lyric_topmost':
         return 'الإبقاء في المقدمة';
+      case 'gal_hook_fold_progressive_lines':
+        return 'دمج أسطر الحوار المقسّمة';
+      case 'gal_hook_fold_progressive_lines_hint':
+        return 'بعض المحرّكات تعيد رسم السطر كاملًا مع كل نقرة، فيُلتقط السطر الواحد عدة مرات. اطوِ تلك اللقطات في سطر واحد.';
       default:
         return null;
     }
@@ -173539,6 +173639,10 @@ extension on _StringsDe {
         return 'Hintergrund umschalten';
       case 'floating_lyric_topmost':
         return 'Immer im Vordergrund';
+      case 'gal_hook_fold_progressive_lines':
+        return 'Aufgeteilte Dialogzeilen zusammenfassen';
+      case 'gal_hook_fold_progressive_lines_hint':
+        return 'Manche Engines zeichnen bei jedem Klick die ganze Zeile neu, sodass eine Zeile mehrfach erfasst wird. Diese Schnappschüsse zu einer Zeile zusammenfalten.';
       default:
         return null;
     }
@@ -181564,6 +181668,10 @@ extension on _StringsEs {
         return 'Alternar el fondo';
       case 'floating_lyric_topmost':
         return 'Mantener al frente';
+      case 'gal_hook_fold_progressive_lines':
+        return 'Unir líneas de diálogo divididas';
+      case 'gal_hook_fold_progressive_lines_hint':
+        return 'Algunos motores redibujan la línea entera en cada clic, así que una misma línea se captura varias veces. Pliega esas instantáneas en una sola línea.';
       default:
         return null;
     }
@@ -189597,6 +189705,10 @@ extension on _StringsFr {
         return 'Basculer l’arrière-plan';
       case 'floating_lyric_topmost':
         return 'Garder au premier plan';
+      case 'gal_hook_fold_progressive_lines':
+        return 'Fusionner les répliques découpées';
+      case 'gal_hook_fold_progressive_lines_hint':
+        return 'Certains moteurs redessinent toute la ligne à chaque clic, si bien qu\'une même ligne est capturée plusieurs fois. Replie ces instantanés en une seule ligne.';
       default:
         return null;
     }
@@ -197602,6 +197714,10 @@ extension on _StringsId {
         return 'Alihkan latar belakang';
       case 'floating_lyric_topmost':
         return 'Tetap di atas';
+      case 'gal_hook_fold_progressive_lines':
+        return 'Gabungkan baris dialog yang terpotong';
+      case 'gal_hook_fold_progressive_lines_hint':
+        return 'Sebagian engine menggambar ulang seluruh baris setiap kali diklik, sehingga satu baris tertangkap beberapa kali. Lipat cuplikan itu menjadi satu baris.';
       default:
         return null;
     }
@@ -205628,6 +205744,10 @@ extension on _StringsIt {
         return 'Attiva/disattiva lo sfondo';
       case 'floating_lyric_topmost':
         return 'Mantieni in primo piano';
+      case 'gal_hook_fold_progressive_lines':
+        return 'Unisci le battute spezzate';
+      case 'gal_hook_fold_progressive_lines_hint':
+        return 'Alcuni motori ridisegnano l’intera riga a ogni clic, così una stessa riga viene catturata più volte. Ripiega quelle istantanee in una sola riga.';
       default:
         return null;
     }
@@ -213587,6 +213707,10 @@ extension on _StringsJa {
         return '背景を切り替える';
       case 'floating_lyric_topmost':
         return '常に手前に表示';
+      case 'gal_hook_fold_progressive_lines':
+        return '分割されたセリフ行をまとめる';
+      case 'gal_hook_fold_progressive_lines_hint':
+        return 'クリックのたびに行全体を描き直すエンジンがあり、同じ行が何度も取り込まれます。そのスナップショットを 1 行にまとめます。';
       default:
         return null;
     }
@@ -221548,6 +221672,10 @@ extension on _StringsKo {
         return '배경 전환';
       case 'floating_lyric_topmost':
         return '항상 위에 표시';
+      case 'gal_hook_fold_progressive_lines':
+        return '나뉜 대사 줄 합치기';
+      case 'gal_hook_fold_progressive_lines_hint':
+        return '클릭할 때마다 줄 전체를 다시 그리는 엔진이 있어 같은 줄이 여러 번 캡처됩니다. 그 스냅숏들을 한 줄로 접습니다.';
       default:
         return null;
     }
@@ -229568,6 +229696,10 @@ extension on _StringsNl {
         return 'Achtergrond omschakelen';
       case 'floating_lyric_topmost':
         return 'Altijd op de voorgrond';
+      case 'gal_hook_fold_progressive_lines':
+        return 'Opgesplitste dialoogregels samenvoegen';
+      case 'gal_hook_fold_progressive_lines_hint':
+        return 'Sommige engines tekenen bij elke klik de hele regel opnieuw, waardoor één regel meerdere keren wordt vastgelegd. Vouw die momentopnamen samen tot één regel.';
       default:
         return null;
     }
@@ -237583,6 +237715,10 @@ extension on _StringsPtBr {
         return 'Alternar o fundo';
       case 'floating_lyric_topmost':
         return 'Manter sempre visível';
+      case 'gal_hook_fold_progressive_lines':
+        return 'Unir linhas de diálogo divididas';
+      case 'gal_hook_fold_progressive_lines_hint':
+        return 'Alguns motores redesenham a linha inteira a cada clique, então a mesma linha é capturada várias vezes. Dobre esses instantâneos em uma única linha.';
       default:
         return null;
     }
@@ -245604,6 +245740,10 @@ extension on _StringsRu {
         return 'Переключить фон';
       case 'floating_lyric_topmost':
         return 'Поверх других окон';
+      case 'gal_hook_fold_progressive_lines':
+        return 'Объединять разбитые строки диалога';
+      case 'gal_hook_fold_progressive_lines_hint':
+        return 'Некоторые движки перерисовывают строку целиком при каждом клике, поэтому одна строка захватывается несколько раз. Сворачивать такие снимки в одну строку.';
       default:
         return null;
     }
@@ -253597,6 +253737,10 @@ extension on _StringsTh {
         return 'สลับพื้นหลัง';
       case 'floating_lyric_topmost':
         return 'อยู่ด้านบนเสมอ';
+      case 'gal_hook_fold_progressive_lines':
+        return 'รวมบรรทัดบทสนทนาที่ถูกแบ่ง';
+      case 'gal_hook_fold_progressive_lines_hint':
+        return 'บางเอนจินวาดทั้งบรรทัดใหม่ทุกครั้งที่คลิก ทำให้บรรทัดเดียวถูกเก็บหลายครั้ง ให้ยุบสแนปช็อตเหล่านั้นเป็นบรรทัดเดียว';
       default:
         return null;
     }
@@ -261607,6 +261751,10 @@ extension on _StringsTr {
         return 'Arka planı değiştir';
       case 'floating_lyric_topmost':
         return 'Her zaman üstte tut';
+      case 'gal_hook_fold_progressive_lines':
+        return 'Bölünmüş diyalog satırlarını birleştir';
+      case 'gal_hook_fold_progressive_lines_hint':
+        return 'Bazı motorlar her tıklamada satırın tamamını yeniden çizer, bu yüzden tek bir satır birkaç kez yakalanır. Bu anlık görüntüleri tek satırda topla.';
       default:
         return null;
     }
@@ -269610,6 +269758,10 @@ extension on _StringsVi {
         return 'Bật/tắt nền';
       case 'floating_lyric_topmost':
         return 'Luôn hiển thị trên cùng';
+      case 'gal_hook_fold_progressive_lines':
+        return 'Gộp các dòng thoại bị chia nhỏ';
+      case 'gal_hook_fold_progressive_lines_hint':
+        return 'Một số engine vẽ lại cả dòng mỗi lần nhấp, nên cùng một dòng bị bắt nhiều lần. Gộp các ảnh chụp đó thành một dòng.';
       default:
         return null;
     }
@@ -277547,6 +277699,10 @@ extension on _StringsZhCn {
         return '切换底板';
       case 'floating_lyric_topmost':
         return '保持置顶';
+      case 'gal_hook_fold_progressive_lines':
+        return '合并分段吐出的台词';
+      case 'gal_hook_fold_progressive_lines_hint':
+        return '有些引擎每次点击都重绘整行，一句台词会被抓成好几条。开启后把同一句的多次快照折成一条。';
       default:
         return null;
     }
@@ -285485,6 +285641,10 @@ extension on _StringsZhHk {
         return '切換底板';
       case 'floating_lyric_topmost':
         return '保持置頂';
+      case 'gal_hook_fold_progressive_lines':
+        return '把分開顯示的台詞合成一條';
+      case 'gal_hook_fold_progressive_lines_hint':
+        return '有些引擎每點一次就重畫整行，於是同一行被抓到好幾次。把這些快照摺成一條。';
       default:
         return null;
     }
