@@ -3,7 +3,7 @@
 /// Locales: 17
 /// Strings: 68272 (4016 per locale)
 ///
-/// Built on 2026-08-30 at 12:50 UTC
+/// Built on 2026-08-30 at 12:53 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -146173,7 +146173,7 @@ class _StringsZhCn extends _StringsEn {
       '可修改应用外查词快捷键；默认 Ctrl+Alt+D 已可直接使用，因此不改也没关系。';
   @override
   String get onboarding_global_lookup_android_body =>
-      '在 Android 上，由系统通过文字菜单或分享面板把选中文本交给 Fushi；手机没有可自定义的全局热键。';
+      '在 Android 上，由系统通过文字菜单或分享面板把选中文本交给 Fushi；手机没有可自定义的全局快捷键。';
   @override
   String get onboarding_global_lookup_android_select_title => '在其他应用里选中文字';
   @override
@@ -286880,7 +286880,7 @@ extension on _StringsZhCn {
       case 'onboarding_global_lookup_windows_action_desc':
         return '可修改应用外查词快捷键；默认 Ctrl+Alt+D 已可直接使用，因此不改也没关系。';
       case 'onboarding_global_lookup_android_body':
-        return '在 Android 上，由系统通过文字菜单或分享面板把选中文本交给 Fushi；手机没有可自定义的全局热键。';
+        return '在 Android 上，由系统通过文字菜单或分享面板把选中文本交给 Fushi；手机没有可自定义的全局快捷键。';
       case 'onboarding_global_lookup_android_select_title':
         return '在其他应用里选中文字';
       case 'onboarding_global_lookup_android_open_title':
