@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 65909 (3877 per locale)
+/// Strings: 66164 (3892 per locale)
 ///
-/// Built on 2026-08-29 at 15:17 UTC
+/// Built on 2026-08-30 at 00:33 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5265,6 +5265,27 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Read to page ${page} of ${total}';
   String manga_series_read_progress_partial({required Object page}) =>
       'Read to page ${page}';
+  String mihon_store_extension_count({required Object count}) =>
+      '${count} extensions';
+  String mihon_extension_sources_more({required Object count}) =>
+      'Show all ${count} sources';
+  String get mihon_extension_sources_less => 'Show fewer sources';
+  String get options_website => 'Visit the official website';
+  String get video_setting_mpv_group_hdr => 'HDR';
+  String get video_setting_hdr_tone_mapping => 'HDR tone mapping';
+  String get video_setting_hdr_tone_mapping_hint =>
+      'Curve used when an HDR source has to be squeezed onto an SDR display. Auto lets mpv pick per source.';
+  String get video_setting_hdr_compute_peak => 'Dynamic peak detection';
+  String get video_setting_hdr_compute_peak_hint =>
+      'Measure each frame\'s real peak brightness instead of trusting the stream metadata. Better highlights, costs some GPU.';
+  String get video_setting_hdr_auto => 'Auto';
+  String get video_setting_hdr_on => 'On';
+  String get video_setting_hdr_off => 'Off';
+  String get video_discovery_cancel_downloads_title => 'Cancel downloads?';
+  String video_discovery_cancel_downloads_body({required Object n}) =>
+      '${n} download task(s) for this title will be stopped. Downloaded pieces stay on disk; you can start the download again later.';
+  String get video_discovery_cancel_downloads_failed =>
+      'Could not cancel the download. The task may have already finished, or the download backend is unavailable.';
   String get gal_hook_click_lookup => 'Tap a word to look it up';
   String get gal_hook_click_lookup_hint =>
       'Off means clicks on the caption never trigger a lookup — useful with click-through on, when you would rather not hit a word by accident.';
@@ -14242,15 +14263,51 @@ class _StringsAr extends _StringsEn {
   String manga_series_read_progress_partial({required Object page}) =>
       'تمت القراءة حتى الصفحة ${page}';
   @override
-  String get gal_hook_click_lookup => 'Tap a word to look it up';
+  String mihon_store_extension_count({required Object count}) =>
+      '${count} إضافة';
+  @override
+  String mihon_extension_sources_more({required Object count}) =>
+      'إظهار كل المصادر (${count})';
+  @override
+  String get mihon_extension_sources_less => 'إظهار مصادر أقل';
+  @override
+  String get options_website => 'زيارة الموقع الرسمي';
+  @override
+  String get video_setting_mpv_group_hdr => 'HDR';
+  @override
+  String get video_setting_hdr_tone_mapping => 'تعيين ألوان HDR';
+  @override
+  String get video_setting_hdr_tone_mapping_hint =>
+      'المنحنى المستخدم عند ضغط مصدر HDR على شاشة SDR. «تلقائي» يترك الاختيار لـ mpv حسب كل مصدر.';
+  @override
+  String get video_setting_hdr_compute_peak => 'كشف الذروة الديناميكي';
+  @override
+  String get video_setting_hdr_compute_peak_hint =>
+      'قياس ذروة السطوع الحقيقية لكل إطار بدلاً من الوثوق ببيانات المصدر. إبرازات أدق مقابل بعض استهلاك المعالج الرسومي.';
+  @override
+  String get video_setting_hdr_auto => 'تلقائي';
+  @override
+  String get video_setting_hdr_on => 'تشغيل';
+  @override
+  String get video_setting_hdr_off => 'إيقاف';
+  @override
+  String get video_discovery_cancel_downloads_title => 'إلغاء التنزيلات؟';
+  @override
+  String video_discovery_cancel_downloads_body({required Object n}) =>
+      'سيتم إيقاف ${n} مهمة تنزيل لهذا العمل. تبقى الأجزاء المنزَّلة على القرص، ويمكنك بدء التنزيل مرة أخرى لاحقًا.';
+  @override
+  String get video_discovery_cancel_downloads_failed =>
+      'تعذّر إلغاء التنزيل. قد تكون المهمة قد انتهت بالفعل، أو أن خلفية التنزيل غير متاحة.';
+  @override
+  String get gal_hook_click_lookup => 'اضغط على كلمة للبحث عنها';
   @override
   String get gal_hook_click_lookup_hint =>
-      'Off means clicks on the caption never trigger a lookup — useful with click-through on, when you would rather not hit a word by accident.';
+      'الإيقاف يعني ألا يؤدي النقر على النص إلى بحث — مفيد مع تفعيل النقر النافذ عندما لا تريد إصابة كلمة بالخطأ.';
   @override
-  String get gal_hook_lookup_trigger => 'Lookup trigger';
+  String get gal_hook_lookup_trigger => 'زر البحث';
   @override
   String get gal_hook_lookup_trigger_hint =>
-      'Which mouse button looks up the word under the pointer. Independent of the switch above: you can turn tap-lookup off and still look up with a side button.';
+      'أي زر فأرة يبحث عن الكلمة تحت المؤشر. مستقل عن المفتاح أعلاه: يمكنك إيقاف البحث بالنقر والبحث بزر جانبي.';
   @override
   String get gal_hook_lookup_trigger_left => 'Left click';
   @override
@@ -14258,16 +14315,16 @@ class _StringsAr extends _StringsEn {
   @override
   String get gal_hook_lookup_trigger_side => 'Side button';
   @override
-  String get gal_hook_toolbar_auto_hide => 'Auto-hide the toolbar';
+  String get gal_hook_toolbar_auto_hide => 'إخفاء شريط الأدوات تلقائيًا';
   @override
   String get gal_hook_toolbar_auto_hide_hint =>
-      'Hide the toolbar until the pointer reaches the caption box, LunaHook style. Hidden means really hidden — those pixels go back to the game.';
+      'يخفي شريط الأدوات حتى يصل المؤشر إلى صندوق النص، بأسلوب LunaHook. مخفي يعني مخفي فعلًا — تعود تلك البكسلات إلى اللعبة.';
   @override
   String get gal_hook_passthrough_blocks_mouse =>
-      'Caption still catches clicks while clicking through';
+      'النص يستقبل النقرات أثناء النقر النافذ';
   @override
   String get gal_hook_passthrough_blocks_mouse_hint =>
-      'On: text lines still take clicks so you can tap a word. Off: the whole overlay is transparent to the mouse — you can click whatever is underneath, but tapping words no longer works.';
+      'تشغيل: تبقى أسطر النص تستقبل النقرات فتستطيع الضغط على كلمة. إيقاف: تصبح الطبقة كلها شفافة للفأرة — تنقر ما تحتها، لكن الضغط على الكلمات لا يعمل.';
 }
 
 // Path: <root>
@@ -23438,15 +23495,52 @@ class _StringsDe extends _StringsEn {
   String manga_series_read_progress_partial({required Object page}) =>
       'Bis Seite ${page} gelesen';
   @override
-  String get gal_hook_click_lookup => 'Tap a word to look it up';
+  String mihon_store_extension_count({required Object count}) =>
+      '${count} Erweiterungen';
+  @override
+  String mihon_extension_sources_more({required Object count}) =>
+      'Alle ${count} Quellen anzeigen';
+  @override
+  String get mihon_extension_sources_less => 'Weniger Quellen anzeigen';
+  @override
+  String get options_website => 'Offizielle Website besuchen';
+  @override
+  String get video_setting_mpv_group_hdr => 'HDR';
+  @override
+  String get video_setting_hdr_tone_mapping => 'HDR-Tonemapping';
+  @override
+  String get video_setting_hdr_tone_mapping_hint =>
+      'Kurve, mit der eine HDR-Quelle auf ein SDR-Display gebracht wird. „Automatisch“ überlässt mpv die Wahl je Quelle.';
+  @override
+  String get video_setting_hdr_compute_peak =>
+      'Dynamische Spitzenwerterkennung';
+  @override
+  String get video_setting_hdr_compute_peak_hint =>
+      'Misst die echte Spitzenhelligkeit jedes Bildes, statt den Metadaten der Quelle zu vertrauen. Bessere Lichter, kostet etwas GPU-Leistung.';
+  @override
+  String get video_setting_hdr_auto => 'Automatisch';
+  @override
+  String get video_setting_hdr_on => 'An';
+  @override
+  String get video_setting_hdr_off => 'Aus';
+  @override
+  String get video_discovery_cancel_downloads_title => 'Downloads abbrechen?';
+  @override
+  String video_discovery_cancel_downloads_body({required Object n}) =>
+      '${n} Download-Aufgabe(n) für diesen Titel werden gestoppt. Bereits geladene Teile bleiben auf der Festplatte; du kannst den Download später erneut starten.';
+  @override
+  String get video_discovery_cancel_downloads_failed =>
+      'Download konnte nicht abgebrochen werden. Die Aufgabe ist möglicherweise schon fertig, oder das Download-Backend ist nicht verfügbar.';
+  @override
+  String get gal_hook_click_lookup => 'Wort antippen zum Nachschlagen';
   @override
   String get gal_hook_click_lookup_hint =>
-      'Off means clicks on the caption never trigger a lookup — useful with click-through on, when you would rather not hit a word by accident.';
+      'Aus bedeutet, dass Klicks auf den Text nie ein Nachschlagen auslösen – praktisch bei aktiviertem Durchklicken, wenn du nicht versehentlich ein Wort treffen willst.';
   @override
-  String get gal_hook_lookup_trigger => 'Lookup trigger';
+  String get gal_hook_lookup_trigger => 'Auslöser fürs Nachschlagen';
   @override
   String get gal_hook_lookup_trigger_hint =>
-      'Which mouse button looks up the word under the pointer. Independent of the switch above: you can turn tap-lookup off and still look up with a side button.';
+      'Welche Maustaste das Wort unter dem Zeiger nachschlägt. Unabhängig vom Schalter oben: Du kannst Tippen-zum-Nachschlagen ausschalten und trotzdem mit einer Seitentaste nachschlagen.';
   @override
   String get gal_hook_lookup_trigger_left => 'Left click';
   @override
@@ -23454,16 +23548,17 @@ class _StringsDe extends _StringsEn {
   @override
   String get gal_hook_lookup_trigger_side => 'Side button';
   @override
-  String get gal_hook_toolbar_auto_hide => 'Auto-hide the toolbar';
+  String get gal_hook_toolbar_auto_hide =>
+      'Werkzeugleiste automatisch ausblenden';
   @override
   String get gal_hook_toolbar_auto_hide_hint =>
-      'Hide the toolbar until the pointer reaches the caption box, LunaHook style. Hidden means really hidden — those pixels go back to the game.';
+      'Blendet die Leiste aus, bis der Zeiger den Textkasten erreicht – wie bei LunaHook. Ausgeblendet heißt wirklich weg: Diese Pixel gehören wieder dem Spiel.';
   @override
   String get gal_hook_passthrough_blocks_mouse =>
-      'Caption still catches clicks while clicking through';
+      'Text nimmt Klicks trotz Durchklicken an';
   @override
   String get gal_hook_passthrough_blocks_mouse_hint =>
-      'On: text lines still take clicks so you can tap a word. Off: the whole overlay is transparent to the mouse — you can click whatever is underneath, but tapping words no longer works.';
+      'An: Textzeilen nehmen weiter Klicks an, du kannst also ein Wort antippen. Aus: Das gesamte Overlay ist für die Maus durchlässig – du klickst, was darunter liegt, aber Wörter antippen geht nicht mehr.';
 }
 
 // Path: <root>
@@ -32678,15 +32773,52 @@ class _StringsEs extends _StringsEn {
   String manga_series_read_progress_partial({required Object page}) =>
       'Leído hasta la página ${page}';
   @override
-  String get gal_hook_click_lookup => 'Tap a word to look it up';
+  String mihon_store_extension_count({required Object count}) =>
+      '${count} extensiones';
+  @override
+  String mihon_extension_sources_more({required Object count}) =>
+      'Mostrar las ${count} fuentes';
+  @override
+  String get mihon_extension_sources_less => 'Mostrar menos fuentes';
+  @override
+  String get options_website => 'Visitar el sitio web oficial';
+  @override
+  String get video_setting_mpv_group_hdr => 'HDR';
+  @override
+  String get video_setting_hdr_tone_mapping => 'Mapeo de tonos HDR';
+  @override
+  String get video_setting_hdr_tone_mapping_hint =>
+      'Curva que se usa al comprimir una fuente HDR en una pantalla SDR. «Automático» deja que mpv elija según la fuente.';
+  @override
+  String get video_setting_hdr_compute_peak => 'Detección dinámica de picos';
+  @override
+  String get video_setting_hdr_compute_peak_hint =>
+      'Mide el brillo máximo real de cada fotograma en vez de fiarse de los metadatos de la fuente. Mejores luces altas, a costa de algo de GPU.';
+  @override
+  String get video_setting_hdr_auto => 'Automático';
+  @override
+  String get video_setting_hdr_on => 'Activado';
+  @override
+  String get video_setting_hdr_off => 'Desactivado';
+  @override
+  String get video_discovery_cancel_downloads_title =>
+      '¿Cancelar las descargas?';
+  @override
+  String video_discovery_cancel_downloads_body({required Object n}) =>
+      'Se detendrán ${n} tarea(s) de descarga de este título. Las partes ya descargadas se conservan en el disco; podrás reanudar la descarga más adelante.';
+  @override
+  String get video_discovery_cancel_downloads_failed =>
+      'No se pudo cancelar la descarga. Puede que la tarea ya haya terminado o que el backend de descargas no esté disponible.';
+  @override
+  String get gal_hook_click_lookup => 'Toca una palabra para buscarla';
   @override
   String get gal_hook_click_lookup_hint =>
-      'Off means clicks on the caption never trigger a lookup — useful with click-through on, when you would rather not hit a word by accident.';
+      'Desactivado significa que los clics sobre el texto nunca activan una búsqueda: útil con el clic pasante activado, cuando prefieres no darle a una palabra sin querer.';
   @override
-  String get gal_hook_lookup_trigger => 'Lookup trigger';
+  String get gal_hook_lookup_trigger => 'Disparador de búsqueda';
   @override
   String get gal_hook_lookup_trigger_hint =>
-      'Which mouse button looks up the word under the pointer. Independent of the switch above: you can turn tap-lookup off and still look up with a side button.';
+      'Qué botón del ratón busca la palabra bajo el puntero. Es independiente del interruptor de arriba: puedes desactivar la búsqueda por toque y seguir buscando con un botón lateral.';
   @override
   String get gal_hook_lookup_trigger_left => 'Left click';
   @override
@@ -32694,16 +32826,16 @@ class _StringsEs extends _StringsEn {
   @override
   String get gal_hook_lookup_trigger_side => 'Side button';
   @override
-  String get gal_hook_toolbar_auto_hide => 'Auto-hide the toolbar';
+  String get gal_hook_toolbar_auto_hide => 'Ocultar la barra automáticamente';
   @override
   String get gal_hook_toolbar_auto_hide_hint =>
-      'Hide the toolbar until the pointer reaches the caption box, LunaHook style. Hidden means really hidden — those pixels go back to the game.';
+      'Oculta la barra hasta que el puntero llega al cuadro de texto, al estilo de LunaHook. Oculta significa oculta de verdad: esos píxeles vuelven al juego.';
   @override
   String get gal_hook_passthrough_blocks_mouse =>
-      'Caption still catches clicks while clicking through';
+      'El texto sigue recibiendo clics con el clic pasante';
   @override
   String get gal_hook_passthrough_blocks_mouse_hint =>
-      'On: text lines still take clicks so you can tap a word. Off: the whole overlay is transparent to the mouse — you can click whatever is underneath, but tapping words no longer works.';
+      'Activado: las líneas de texto siguen recibiendo clics, así puedes tocar una palabra. Desactivado: toda la superposición es transparente al ratón; puedes hacer clic en lo que haya debajo, pero tocar palabras deja de funcionar.';
 }
 
 // Path: <root>
@@ -41952,15 +42084,52 @@ class _StringsFr extends _StringsEn {
   String manga_series_read_progress_partial({required Object page}) =>
       'Lu jusqu\'à la page ${page}';
   @override
-  String get gal_hook_click_lookup => 'Tap a word to look it up';
+  String mihon_store_extension_count({required Object count}) =>
+      '${count} extensions';
+  @override
+  String mihon_extension_sources_more({required Object count}) =>
+      'Afficher les ${count} sources';
+  @override
+  String get mihon_extension_sources_less => 'Afficher moins de sources';
+  @override
+  String get options_website => 'Visiter le site officiel';
+  @override
+  String get video_setting_mpv_group_hdr => 'HDR';
+  @override
+  String get video_setting_hdr_tone_mapping => 'Mappage tonal HDR';
+  @override
+  String get video_setting_hdr_tone_mapping_hint =>
+      'Courbe utilisée pour ramener une source HDR sur un écran SDR. « Auto » laisse mpv choisir selon la source.';
+  @override
+  String get video_setting_hdr_compute_peak => 'Détection dynamique des pics';
+  @override
+  String get video_setting_hdr_compute_peak_hint =>
+      'Mesure le pic de luminosité réel de chaque image au lieu de se fier aux métadonnées de la source. Meilleures hautes lumières, au prix d\'un peu de GPU.';
+  @override
+  String get video_setting_hdr_auto => 'Auto';
+  @override
+  String get video_setting_hdr_on => 'Activé';
+  @override
+  String get video_setting_hdr_off => 'Désactivé';
+  @override
+  String get video_discovery_cancel_downloads_title =>
+      'Annuler les téléchargements ?';
+  @override
+  String video_discovery_cancel_downloads_body({required Object n}) =>
+      '${n} tâche(s) de téléchargement pour ce titre vont être arrêtées. Les morceaux déjà téléchargés restent sur le disque ; vous pourrez relancer le téléchargement plus tard.';
+  @override
+  String get video_discovery_cancel_downloads_failed =>
+      'Impossible d\'annuler le téléchargement. La tâche est peut-être déjà terminée, ou le backend de téléchargement est indisponible.';
+  @override
+  String get gal_hook_click_lookup => 'Toucher un mot pour le chercher';
   @override
   String get gal_hook_click_lookup_hint =>
-      'Off means clicks on the caption never trigger a lookup — useful with click-through on, when you would rather not hit a word by accident.';
+      'Désactivé : les clics sur le texte ne déclenchent jamais de recherche — pratique avec le clic traversant, quand vous préférez ne pas toucher un mot par erreur.';
   @override
-  String get gal_hook_lookup_trigger => 'Lookup trigger';
+  String get gal_hook_lookup_trigger => 'Déclencheur de recherche';
   @override
   String get gal_hook_lookup_trigger_hint =>
-      'Which mouse button looks up the word under the pointer. Independent of the switch above: you can turn tap-lookup off and still look up with a side button.';
+      'Quel bouton de la souris cherche le mot sous le pointeur. Indépendant du réglage ci-dessus : vous pouvez désactiver la recherche au toucher et chercher quand même avec un bouton latéral.';
   @override
   String get gal_hook_lookup_trigger_left => 'Left click';
   @override
@@ -41968,16 +42137,16 @@ class _StringsFr extends _StringsEn {
   @override
   String get gal_hook_lookup_trigger_side => 'Side button';
   @override
-  String get gal_hook_toolbar_auto_hide => 'Auto-hide the toolbar';
+  String get gal_hook_toolbar_auto_hide => 'Masquer la barre automatiquement';
   @override
   String get gal_hook_toolbar_auto_hide_hint =>
-      'Hide the toolbar until the pointer reaches the caption box, LunaHook style. Hidden means really hidden — those pixels go back to the game.';
+      'Masque la barre jusqu\'à ce que le pointeur atteigne la zone de texte, à la manière de LunaHook. Masqué veut dire vraiment masqué : ces pixels reviennent au jeu.';
   @override
   String get gal_hook_passthrough_blocks_mouse =>
-      'Caption still catches clicks while clicking through';
+      'Le texte reçoit encore les clics en mode traversant';
   @override
   String get gal_hook_passthrough_blocks_mouse_hint =>
-      'On: text lines still take clicks so you can tap a word. Off: the whole overlay is transparent to the mouse — you can click whatever is underneath, but tapping words no longer works.';
+      'Activé : les lignes de texte reçoivent encore les clics, vous pouvez donc toucher un mot. Désactivé : toute la surcouche est transparente à la souris — vous cliquez ce qui est dessous, mais toucher un mot ne marche plus.';
 }
 
 // Path: <root>
@@ -51052,15 +51221,51 @@ class _StringsId extends _StringsEn {
   String manga_series_read_progress_partial({required Object page}) =>
       'Dibaca sampai halaman ${page}';
   @override
-  String get gal_hook_click_lookup => 'Tap a word to look it up';
+  String mihon_store_extension_count({required Object count}) =>
+      '${count} ekstensi';
+  @override
+  String mihon_extension_sources_more({required Object count}) =>
+      'Tampilkan semua ${count} sumber';
+  @override
+  String get mihon_extension_sources_less => 'Tampilkan lebih sedikit sumber';
+  @override
+  String get options_website => 'Kunjungi situs web resmi';
+  @override
+  String get video_setting_mpv_group_hdr => 'HDR';
+  @override
+  String get video_setting_hdr_tone_mapping => 'Pemetaan nada HDR';
+  @override
+  String get video_setting_hdr_tone_mapping_hint =>
+      'Kurva yang dipakai saat sumber HDR harus dipadatkan ke layar SDR. "Otomatis" membiarkan mpv memilih per sumber.';
+  @override
+  String get video_setting_hdr_compute_peak => 'Deteksi puncak dinamis';
+  @override
+  String get video_setting_hdr_compute_peak_hint =>
+      'Mengukur puncak kecerahan asli tiap bingkai alih-alih mempercayai metadata sumber. Sorotan lebih baik, memakan sedikit GPU.';
+  @override
+  String get video_setting_hdr_auto => 'Otomatis';
+  @override
+  String get video_setting_hdr_on => 'Aktif';
+  @override
+  String get video_setting_hdr_off => 'Nonaktif';
+  @override
+  String get video_discovery_cancel_downloads_title => 'Batalkan unduhan?';
+  @override
+  String video_discovery_cancel_downloads_body({required Object n}) =>
+      '${n} tugas unduhan untuk judul ini akan dihentikan. Bagian yang sudah terunduh tetap ada di disk; kamu bisa memulai unduhan lagi nanti.';
+  @override
+  String get video_discovery_cancel_downloads_failed =>
+      'Tidak bisa membatalkan unduhan. Tugasnya mungkin sudah selesai, atau backend unduhan sedang tidak tersedia.';
+  @override
+  String get gal_hook_click_lookup => 'Ketuk kata untuk mencarinya';
   @override
   String get gal_hook_click_lookup_hint =>
-      'Off means clicks on the caption never trigger a lookup — useful with click-through on, when you would rather not hit a word by accident.';
+      'Mati berarti klik pada teks tidak pernah memicu pencarian — berguna saat klik-tembus aktif dan kamu tidak ingin tak sengaja mengenai kata.';
   @override
-  String get gal_hook_lookup_trigger => 'Lookup trigger';
+  String get gal_hook_lookup_trigger => 'Pemicu pencarian';
   @override
   String get gal_hook_lookup_trigger_hint =>
-      'Which mouse button looks up the word under the pointer. Independent of the switch above: you can turn tap-lookup off and still look up with a side button.';
+      'Tombol tetikus mana yang mencari kata di bawah penunjuk. Terpisah dari sakelar di atas: kamu bisa mematikan ketuk-untuk-cari dan tetap mencari dengan tombol samping.';
   @override
   String get gal_hook_lookup_trigger_left => 'Left click';
   @override
@@ -51068,16 +51273,16 @@ class _StringsId extends _StringsEn {
   @override
   String get gal_hook_lookup_trigger_side => 'Side button';
   @override
-  String get gal_hook_toolbar_auto_hide => 'Auto-hide the toolbar';
+  String get gal_hook_toolbar_auto_hide => 'Sembunyikan bilah otomatis';
   @override
   String get gal_hook_toolbar_auto_hide_hint =>
-      'Hide the toolbar until the pointer reaches the caption box, LunaHook style. Hidden means really hidden — those pixels go back to the game.';
+      'Sembunyikan bilah sampai penunjuk mencapai kotak teks, ala LunaHook. Tersembunyi artinya benar-benar hilang — piksel itu kembali ke game.';
   @override
   String get gal_hook_passthrough_blocks_mouse =>
-      'Caption still catches clicks while clicking through';
+      'Teks tetap menerima klik saat klik-tembus';
   @override
   String get gal_hook_passthrough_blocks_mouse_hint =>
-      'On: text lines still take clicks so you can tap a word. Off: the whole overlay is transparent to the mouse — you can click whatever is underneath, but tapping words no longer works.';
+      'Aktif: baris teks tetap menerima klik sehingga kamu bisa mengetuk kata. Nonaktif: seluruh lapisan tembus bagi tetikus — kamu bisa mengeklik apa pun di bawahnya, tapi mengetuk kata tidak lagi berfungsi.';
 }
 
 // Path: <root>
@@ -60229,15 +60434,52 @@ class _StringsIt extends _StringsEn {
   String manga_series_read_progress_partial({required Object page}) =>
       'Letto fino a pagina ${page}';
   @override
-  String get gal_hook_click_lookup => 'Tap a word to look it up';
+  String mihon_store_extension_count({required Object count}) =>
+      '${count} estensioni';
+  @override
+  String mihon_extension_sources_more({required Object count}) =>
+      'Mostra tutte le ${count} fonti';
+  @override
+  String get mihon_extension_sources_less => 'Mostra meno fonti';
+  @override
+  String get options_website => 'Visita il sito ufficiale';
+  @override
+  String get video_setting_mpv_group_hdr => 'HDR';
+  @override
+  String get video_setting_hdr_tone_mapping => 'Mappatura tonale HDR';
+  @override
+  String get video_setting_hdr_tone_mapping_hint =>
+      'Curva usata quando una sorgente HDR va compressa su uno schermo SDR. «Automatico» lascia scegliere a mpv per ogni sorgente.';
+  @override
+  String get video_setting_hdr_compute_peak =>
+      'Rilevamento dinamico dei picchi';
+  @override
+  String get video_setting_hdr_compute_peak_hint =>
+      'Misura il picco di luminosità reale di ogni fotogramma invece di fidarsi dei metadati della sorgente. Alte luci migliori, con un po’ di costo GPU.';
+  @override
+  String get video_setting_hdr_auto => 'Automatico';
+  @override
+  String get video_setting_hdr_on => 'Attivo';
+  @override
+  String get video_setting_hdr_off => 'Disattivo';
+  @override
+  String get video_discovery_cancel_downloads_title => 'Annullare i download?';
+  @override
+  String video_discovery_cancel_downloads_body({required Object n}) =>
+      'Verranno interrotte ${n} attività di download per questo titolo. Le parti già scaricate restano sul disco; potrai riavviare il download più tardi.';
+  @override
+  String get video_discovery_cancel_downloads_failed =>
+      'Impossibile annullare il download. L’attività potrebbe essere già terminata, oppure il backend di download non è disponibile.';
+  @override
+  String get gal_hook_click_lookup => 'Tocca una parola per cercarla';
   @override
   String get gal_hook_click_lookup_hint =>
-      'Off means clicks on the caption never trigger a lookup — useful with click-through on, when you would rather not hit a word by accident.';
+      'Disattivato: i clic sul testo non avviano mai una ricerca — utile con il clic passante attivo, quando preferisci non colpire una parola per sbaglio.';
   @override
-  String get gal_hook_lookup_trigger => 'Lookup trigger';
+  String get gal_hook_lookup_trigger => 'Attivatore della ricerca';
   @override
   String get gal_hook_lookup_trigger_hint =>
-      'Which mouse button looks up the word under the pointer. Independent of the switch above: you can turn tap-lookup off and still look up with a side button.';
+      'Quale tasto del mouse cerca la parola sotto il puntatore. Indipendente dall’interruttore qui sopra: puoi disattivare il tocco-per-cercare e cercare comunque con un tasto laterale.';
   @override
   String get gal_hook_lookup_trigger_left => 'Left click';
   @override
@@ -60245,16 +60487,16 @@ class _StringsIt extends _StringsEn {
   @override
   String get gal_hook_lookup_trigger_side => 'Side button';
   @override
-  String get gal_hook_toolbar_auto_hide => 'Auto-hide the toolbar';
+  String get gal_hook_toolbar_auto_hide => 'Nascondi la barra automaticamente';
   @override
   String get gal_hook_toolbar_auto_hide_hint =>
-      'Hide the toolbar until the pointer reaches the caption box, LunaHook style. Hidden means really hidden — those pixels go back to the game.';
+      'Nasconde la barra finché il puntatore non raggiunge il riquadro del testo, in stile LunaHook. Nascosto significa davvero nascosto: quei pixel tornano al gioco.';
   @override
   String get gal_hook_passthrough_blocks_mouse =>
-      'Caption still catches clicks while clicking through';
+      'Il testo riceve ancora i clic durante il clic passante';
   @override
   String get gal_hook_passthrough_blocks_mouse_hint =>
-      'On: text lines still take clicks so you can tap a word. Off: the whole overlay is transparent to the mouse — you can click whatever is underneath, but tapping words no longer works.';
+      'Attivo: le righe di testo ricevono ancora i clic, così puoi toccare una parola. Disattivo: l’intera sovrapposizione è trasparente al mouse — clicchi ciò che sta sotto, ma toccare le parole non funziona più.';
 }
 
 // Path: <root>
@@ -68846,15 +69088,51 @@ class _StringsJa extends _StringsEn {
   String manga_series_read_progress_partial({required Object page}) =>
       '${page} ページまで';
   @override
-  String get gal_hook_click_lookup => 'Tap a word to look it up';
+  String mihon_store_extension_count({required Object count}) =>
+      '拡張機能 ${count} 件';
+  @override
+  String mihon_extension_sources_more({required Object count}) =>
+      '${count} 件のソースをすべて表示';
+  @override
+  String get mihon_extension_sources_less => 'ソースの表示を減らす';
+  @override
+  String get options_website => '公式サイトを開く';
+  @override
+  String get video_setting_mpv_group_hdr => 'HDR';
+  @override
+  String get video_setting_hdr_tone_mapping => 'HDR トーンマッピング';
+  @override
+  String get video_setting_hdr_tone_mapping_hint =>
+      'HDR ソースを SDR ディスプレイに収めるときに使うカーブ。「自動」は mpv がソースごとに選びます。';
+  @override
+  String get video_setting_hdr_compute_peak => '動的ピーク検出';
+  @override
+  String get video_setting_hdr_compute_peak_hint =>
+      'ソースのメタデータを信じる代わりに、フレームごとの実際のピーク輝度を測ります。ハイライトが良くなる一方、GPU を少し使います。';
+  @override
+  String get video_setting_hdr_auto => '自動';
+  @override
+  String get video_setting_hdr_on => 'オン';
+  @override
+  String get video_setting_hdr_off => 'オフ';
+  @override
+  String get video_discovery_cancel_downloads_title => 'ダウンロードを中止しますか？';
+  @override
+  String video_discovery_cancel_downloads_body({required Object n}) =>
+      'この作品のダウンロードタスク ${n} 件を停止します。ダウンロード済みの断片はディスクに残るので、後でやり直せます。';
+  @override
+  String get video_discovery_cancel_downloads_failed =>
+      'ダウンロードを中止できませんでした。タスクが既に終了しているか、ダウンロードバックエンドが利用できません。';
+  @override
+  String get gal_hook_click_lookup => '単語をタップして辞書を引く';
   @override
   String get gal_hook_click_lookup_hint =>
-      'Off means clicks on the caption never trigger a lookup — useful with click-through on, when you would rather not hit a word by accident.';
+      'オフにすると、字幕をクリックしても辞書を引きません。クリック透過と併用して、うっかり単語に当たるのを避けたいときに便利です。';
   @override
-  String get gal_hook_lookup_trigger => 'Lookup trigger';
+  String get gal_hook_lookup_trigger => '辞書を引くボタン';
   @override
   String get gal_hook_lookup_trigger_hint =>
-      'Which mouse button looks up the word under the pointer. Independent of the switch above: you can turn tap-lookup off and still look up with a side button.';
+      'ポインタの下の単語を引くマウスボタン。上のスイッチとは独立です：タップで引くのをオフにしたまま、サイドボタンで引けます。';
   @override
   String get gal_hook_lookup_trigger_left => 'Left click';
   @override
@@ -68862,16 +69140,15 @@ class _StringsJa extends _StringsEn {
   @override
   String get gal_hook_lookup_trigger_side => 'Side button';
   @override
-  String get gal_hook_toolbar_auto_hide => 'Auto-hide the toolbar';
+  String get gal_hook_toolbar_auto_hide => 'ツールバーを自動で隠す';
   @override
   String get gal_hook_toolbar_auto_hide_hint =>
-      'Hide the toolbar until the pointer reaches the caption box, LunaHook style. Hidden means really hidden — those pixels go back to the game.';
+      'ポインタが字幕枠に来るまでツールバーを隠します（LunaHook 方式）。隠すときは本当に消します——その分のピクセルはゲームに返ります。';
   @override
-  String get gal_hook_passthrough_blocks_mouse =>
-      'Caption still catches clicks while clicking through';
+  String get gal_hook_passthrough_blocks_mouse => 'クリック透過中も字幕はクリックを受ける';
   @override
   String get gal_hook_passthrough_blocks_mouse_hint =>
-      'On: text lines still take clicks so you can tap a word. Off: the whole overlay is transparent to the mouse — you can click whatever is underneath, but tapping words no longer works.';
+      'オン：字幕の行はクリックを受け続けるので単語をタップできます。オフ：オーバーレイ全体がマウスに対して透明になり、下のものをクリックできますが、単語のタップはできなくなります。';
 }
 
 // Path: <root>
@@ -77478,15 +77755,50 @@ class _StringsKo extends _StringsEn {
   String manga_series_read_progress_partial({required Object page}) =>
       '${page}페이지까지 읽음';
   @override
-  String get gal_hook_click_lookup => 'Tap a word to look it up';
+  String mihon_store_extension_count({required Object count}) => '확장 ${count}개';
+  @override
+  String mihon_extension_sources_more({required Object count}) =>
+      '소스 ${count}개 모두 보기';
+  @override
+  String get mihon_extension_sources_less => '소스 적게 보기';
+  @override
+  String get options_website => '공식 웹사이트 방문';
+  @override
+  String get video_setting_mpv_group_hdr => 'HDR';
+  @override
+  String get video_setting_hdr_tone_mapping => 'HDR 톤 매핑';
+  @override
+  String get video_setting_hdr_tone_mapping_hint =>
+      'HDR 소스를 SDR 디스플레이에 맞출 때 쓰는 곡선입니다. ‘자동’은 mpv가 소스마다 고르게 합니다.';
+  @override
+  String get video_setting_hdr_compute_peak => '동적 피크 검출';
+  @override
+  String get video_setting_hdr_compute_peak_hint =>
+      '소스 메타데이터를 믿는 대신 프레임마다 실제 최대 밝기를 측정합니다. 하이라이트가 좋아지지만 GPU를 조금 씁니다.';
+  @override
+  String get video_setting_hdr_auto => '자동';
+  @override
+  String get video_setting_hdr_on => '켜기';
+  @override
+  String get video_setting_hdr_off => '끄기';
+  @override
+  String get video_discovery_cancel_downloads_title => '다운로드를 취소할까요?';
+  @override
+  String video_discovery_cancel_downloads_body({required Object n}) =>
+      '이 작품의 다운로드 작업 ${n}개를 중지합니다. 이미 받은 조각은 디스크에 남아 있어 나중에 다시 시작할 수 있습니다.';
+  @override
+  String get video_discovery_cancel_downloads_failed =>
+      '다운로드를 취소하지 못했습니다. 작업이 이미 끝났거나 다운로드 백엔드를 사용할 수 없습니다.';
+  @override
+  String get gal_hook_click_lookup => '단어를 눌러 사전 찾기';
   @override
   String get gal_hook_click_lookup_hint =>
-      'Off means clicks on the caption never trigger a lookup — useful with click-through on, when you would rather not hit a word by accident.';
+      '끄면 자막을 클릭해도 사전을 찾지 않습니다. 클릭 통과를 켠 채로 실수로 단어를 누르고 싶지 않을 때 유용합니다.';
   @override
-  String get gal_hook_lookup_trigger => 'Lookup trigger';
+  String get gal_hook_lookup_trigger => '사전 찾기 버튼';
   @override
   String get gal_hook_lookup_trigger_hint =>
-      'Which mouse button looks up the word under the pointer. Independent of the switch above: you can turn tap-lookup off and still look up with a side button.';
+      '포인터 아래 단어를 찾을 마우스 버튼입니다. 위 스위치와는 별개예요: 눌러서 찾기를 꺼도 옆 버튼으로는 찾을 수 있습니다.';
   @override
   String get gal_hook_lookup_trigger_left => 'Left click';
   @override
@@ -77494,16 +77806,15 @@ class _StringsKo extends _StringsEn {
   @override
   String get gal_hook_lookup_trigger_side => 'Side button';
   @override
-  String get gal_hook_toolbar_auto_hide => 'Auto-hide the toolbar';
+  String get gal_hook_toolbar_auto_hide => '도구 모음 자동 숨김';
   @override
   String get gal_hook_toolbar_auto_hide_hint =>
-      'Hide the toolbar until the pointer reaches the caption box, LunaHook style. Hidden means really hidden — those pixels go back to the game.';
+      '포인터가 자막 상자에 닿을 때까지 도구 모음을 숨깁니다(LunaHook 방식). 숨긴다는 건 정말로 사라진다는 뜻이라, 그 픽셀은 게임으로 돌아갑니다.';
   @override
-  String get gal_hook_passthrough_blocks_mouse =>
-      'Caption still catches clicks while clicking through';
+  String get gal_hook_passthrough_blocks_mouse => '클릭 통과 중에도 자막은 클릭을 받음';
   @override
   String get gal_hook_passthrough_blocks_mouse_hint =>
-      'On: text lines still take clicks so you can tap a word. Off: the whole overlay is transparent to the mouse — you can click whatever is underneath, but tapping words no longer works.';
+      '켬: 자막 줄이 계속 클릭을 받아 단어를 누를 수 있습니다. 끔: 오버레이 전체가 마우스에 투명해져 아래 것을 클릭할 수 있지만, 단어 누르기는 더 이상 되지 않습니다.';
 }
 
 // Path: <root>
@@ -86612,15 +86923,51 @@ class _StringsNl extends _StringsEn {
   String manga_series_read_progress_partial({required Object page}) =>
       'Gelezen tot pagina ${page}';
   @override
-  String get gal_hook_click_lookup => 'Tap a word to look it up';
+  String mihon_store_extension_count({required Object count}) =>
+      '${count} extensies';
+  @override
+  String mihon_extension_sources_more({required Object count}) =>
+      'Alle ${count} bronnen tonen';
+  @override
+  String get mihon_extension_sources_less => 'Minder bronnen tonen';
+  @override
+  String get options_website => 'Officiële website bezoeken';
+  @override
+  String get video_setting_mpv_group_hdr => 'HDR';
+  @override
+  String get video_setting_hdr_tone_mapping => 'HDR-tonemapping';
+  @override
+  String get video_setting_hdr_tone_mapping_hint =>
+      'Curve die wordt gebruikt als een HDR-bron op een SDR-scherm moet worden geperst. ‘Automatisch’ laat mpv per bron kiezen.';
+  @override
+  String get video_setting_hdr_compute_peak => 'Dynamische piekdetectie';
+  @override
+  String get video_setting_hdr_compute_peak_hint =>
+      'Meet de echte piekhelderheid van elk beeld in plaats van te vertrouwen op de metadata van de bron. Betere highlights, kost wat GPU.';
+  @override
+  String get video_setting_hdr_auto => 'Automatisch';
+  @override
+  String get video_setting_hdr_on => 'Aan';
+  @override
+  String get video_setting_hdr_off => 'Uit';
+  @override
+  String get video_discovery_cancel_downloads_title => 'Downloads annuleren?';
+  @override
+  String video_discovery_cancel_downloads_body({required Object n}) =>
+      '${n} downloadtaak/-taken voor deze titel worden gestopt. Al gedownloade delen blijven op schijf staan; je kunt de download later opnieuw starten.';
+  @override
+  String get video_discovery_cancel_downloads_failed =>
+      'Kon de download niet annuleren. De taak is mogelijk al klaar, of de download-backend is niet beschikbaar.';
+  @override
+  String get gal_hook_click_lookup => 'Tik op een woord om het op te zoeken';
   @override
   String get gal_hook_click_lookup_hint =>
-      'Off means clicks on the caption never trigger a lookup — useful with click-through on, when you would rather not hit a word by accident.';
+      'Uit betekent dat klikken op de tekst nooit een opzoeking start — handig met doorklikken aan, als je niet per ongeluk een woord wilt raken.';
   @override
-  String get gal_hook_lookup_trigger => 'Lookup trigger';
+  String get gal_hook_lookup_trigger => 'Opzoekknop';
   @override
   String get gal_hook_lookup_trigger_hint =>
-      'Which mouse button looks up the word under the pointer. Independent of the switch above: you can turn tap-lookup off and still look up with a side button.';
+      'Welke muisknop het woord onder de aanwijzer opzoekt. Los van de schakelaar hierboven: je kunt tikken-om-op-te-zoeken uitzetten en toch met een zijknop opzoeken.';
   @override
   String get gal_hook_lookup_trigger_left => 'Left click';
   @override
@@ -86628,16 +86975,16 @@ class _StringsNl extends _StringsEn {
   @override
   String get gal_hook_lookup_trigger_side => 'Side button';
   @override
-  String get gal_hook_toolbar_auto_hide => 'Auto-hide the toolbar';
+  String get gal_hook_toolbar_auto_hide => 'Werkbalk automatisch verbergen';
   @override
   String get gal_hook_toolbar_auto_hide_hint =>
-      'Hide the toolbar until the pointer reaches the caption box, LunaHook style. Hidden means really hidden — those pixels go back to the game.';
+      'Verbergt de werkbalk tot de aanwijzer het tekstvak bereikt, zoals LunaHook. Verborgen is echt verborgen — die pixels gaan terug naar het spel.';
   @override
   String get gal_hook_passthrough_blocks_mouse =>
-      'Caption still catches clicks while clicking through';
+      'Tekst vangt nog klikken tijdens doorklikken';
   @override
   String get gal_hook_passthrough_blocks_mouse_hint =>
-      'On: text lines still take clicks so you can tap a word. Off: the whole overlay is transparent to the mouse — you can click whatever is underneath, but tapping words no longer works.';
+      'Aan: tekstregels blijven klikken aannemen, zodat je een woord kunt aantikken. Uit: de hele overlay is transparant voor de muis — je klikt wat eronder ligt, maar woorden aantikken werkt niet meer.';
 }
 
 // Path: <root>
@@ -95802,15 +96149,51 @@ class _StringsPtBr extends _StringsEn {
   String manga_series_read_progress_partial({required Object page}) =>
       'Lido até a página ${page}';
   @override
-  String get gal_hook_click_lookup => 'Tap a word to look it up';
+  String mihon_store_extension_count({required Object count}) =>
+      '${count} extensões';
+  @override
+  String mihon_extension_sources_more({required Object count}) =>
+      'Mostrar todas as ${count} fontes';
+  @override
+  String get mihon_extension_sources_less => 'Mostrar menos fontes';
+  @override
+  String get options_website => 'Visitar o site oficial';
+  @override
+  String get video_setting_mpv_group_hdr => 'HDR';
+  @override
+  String get video_setting_hdr_tone_mapping => 'Mapeamento de tons HDR';
+  @override
+  String get video_setting_hdr_tone_mapping_hint =>
+      'Curva usada quando uma fonte HDR precisa ser comprimida para uma tela SDR. “Automático” deixa o mpv escolher por fonte.';
+  @override
+  String get video_setting_hdr_compute_peak => 'Detecção dinâmica de pico';
+  @override
+  String get video_setting_hdr_compute_peak_hint =>
+      'Mede o pico real de brilho de cada quadro em vez de confiar nos metadados da fonte. Melhores altas-luzes, com algum custo de GPU.';
+  @override
+  String get video_setting_hdr_auto => 'Automático';
+  @override
+  String get video_setting_hdr_on => 'Ligado';
+  @override
+  String get video_setting_hdr_off => 'Desligado';
+  @override
+  String get video_discovery_cancel_downloads_title => 'Cancelar os downloads?';
+  @override
+  String video_discovery_cancel_downloads_body({required Object n}) =>
+      '${n} tarefa(s) de download deste título serão interrompidas. As partes já baixadas continuam no disco; você pode recomeçar o download depois.';
+  @override
+  String get video_discovery_cancel_downloads_failed =>
+      'Não foi possível cancelar o download. A tarefa pode já ter terminado, ou o backend de download está indisponível.';
+  @override
+  String get gal_hook_click_lookup => 'Toque numa palavra para consultá-la';
   @override
   String get gal_hook_click_lookup_hint =>
-      'Off means clicks on the caption never trigger a lookup — useful with click-through on, when you would rather not hit a word by accident.';
+      'Desligado: cliques na legenda nunca iniciam uma consulta — útil com o clique passante ligado, quando você prefere não acertar uma palavra sem querer.';
   @override
-  String get gal_hook_lookup_trigger => 'Lookup trigger';
+  String get gal_hook_lookup_trigger => 'Gatilho da consulta';
   @override
   String get gal_hook_lookup_trigger_hint =>
-      'Which mouse button looks up the word under the pointer. Independent of the switch above: you can turn tap-lookup off and still look up with a side button.';
+      'Qual botão do mouse consulta a palavra sob o ponteiro. Independente da chave acima: você pode desligar o toque-para-consultar e ainda consultar com um botão lateral.';
   @override
   String get gal_hook_lookup_trigger_left => 'Left click';
   @override
@@ -95818,16 +96201,16 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get gal_hook_lookup_trigger_side => 'Side button';
   @override
-  String get gal_hook_toolbar_auto_hide => 'Auto-hide the toolbar';
+  String get gal_hook_toolbar_auto_hide => 'Ocultar a barra automaticamente';
   @override
   String get gal_hook_toolbar_auto_hide_hint =>
-      'Hide the toolbar until the pointer reaches the caption box, LunaHook style. Hidden means really hidden — those pixels go back to the game.';
+      'Oculta a barra até o ponteiro chegar à caixa de legenda, no estilo do LunaHook. Oculto significa oculto de verdade — aqueles pixels voltam para o jogo.';
   @override
   String get gal_hook_passthrough_blocks_mouse =>
-      'Caption still catches clicks while clicking through';
+      'A legenda ainda recebe cliques durante o clique passante';
   @override
   String get gal_hook_passthrough_blocks_mouse_hint =>
-      'On: text lines still take clicks so you can tap a word. Off: the whole overlay is transparent to the mouse — you can click whatever is underneath, but tapping words no longer works.';
+      'Ligado: as linhas de texto continuam recebendo cliques, então você pode tocar numa palavra. Desligado: toda a sobreposição fica transparente ao mouse — você clica no que está embaixo, mas tocar palavras não funciona mais.';
 }
 
 // Path: <root>
@@ -104966,15 +105349,51 @@ class _StringsRu extends _StringsEn {
   String manga_series_read_progress_partial({required Object page}) =>
       'Прочитано до страницы ${page}';
   @override
-  String get gal_hook_click_lookup => 'Tap a word to look it up';
+  String mihon_store_extension_count({required Object count}) =>
+      'Расширений: ${count}';
+  @override
+  String mihon_extension_sources_more({required Object count}) =>
+      'Показать все источники (${count})';
+  @override
+  String get mihon_extension_sources_less => 'Показать меньше источников';
+  @override
+  String get options_website => 'Открыть официальный сайт';
+  @override
+  String get video_setting_mpv_group_hdr => 'HDR';
+  @override
+  String get video_setting_hdr_tone_mapping => 'Тональное отображение HDR';
+  @override
+  String get video_setting_hdr_tone_mapping_hint =>
+      'Кривая, по которой HDR-источник укладывается в SDR-экран. «Авто» оставляет выбор за mpv для каждого источника.';
+  @override
+  String get video_setting_hdr_compute_peak => 'Динамическое определение пика';
+  @override
+  String get video_setting_hdr_compute_peak_hint =>
+      'Измеряет реальную пиковую яркость каждого кадра вместо доверия метаданным источника. Света лучше, но нагружает GPU.';
+  @override
+  String get video_setting_hdr_auto => 'Авто';
+  @override
+  String get video_setting_hdr_on => 'Вкл.';
+  @override
+  String get video_setting_hdr_off => 'Выкл.';
+  @override
+  String get video_discovery_cancel_downloads_title => 'Отменить загрузки?';
+  @override
+  String video_discovery_cancel_downloads_body({required Object n}) =>
+      'Будет остановлено загрузок для этого тайтла: ${n}. Уже скачанные части останутся на диске — загрузку можно начать снова позже.';
+  @override
+  String get video_discovery_cancel_downloads_failed =>
+      'Не удалось отменить загрузку. Возможно, задача уже завершилась или бэкенд загрузок недоступен.';
+  @override
+  String get gal_hook_click_lookup => 'Нажмите на слово, чтобы найти его';
   @override
   String get gal_hook_click_lookup_hint =>
-      'Off means clicks on the caption never trigger a lookup — useful with click-through on, when you would rather not hit a word by accident.';
+      'Выключено — клики по субтитрам никогда не запускают поиск. Удобно вместе с включённым сквозным кликом, когда не хочется случайно попасть по слову.';
   @override
-  String get gal_hook_lookup_trigger => 'Lookup trigger';
+  String get gal_hook_lookup_trigger => 'Кнопка поиска';
   @override
   String get gal_hook_lookup_trigger_hint =>
-      'Which mouse button looks up the word under the pointer. Independent of the switch above: you can turn tap-lookup off and still look up with a side button.';
+      'Какая кнопка мыши ищет слово под указателем. Не зависит от переключателя выше: можно выключить поиск по нажатию и всё равно искать боковой кнопкой.';
   @override
   String get gal_hook_lookup_trigger_left => 'Left click';
   @override
@@ -104982,16 +105401,16 @@ class _StringsRu extends _StringsEn {
   @override
   String get gal_hook_lookup_trigger_side => 'Side button';
   @override
-  String get gal_hook_toolbar_auto_hide => 'Auto-hide the toolbar';
+  String get gal_hook_toolbar_auto_hide => 'Автоматически скрывать панель';
   @override
   String get gal_hook_toolbar_auto_hide_hint =>
-      'Hide the toolbar until the pointer reaches the caption box, LunaHook style. Hidden means really hidden — those pixels go back to the game.';
+      'Скрывает панель, пока указатель не дойдёт до блока субтитров — как в LunaHook. Скрыто значит скрыто по-настоящему: эти пиксели возвращаются игре.';
   @override
   String get gal_hook_passthrough_blocks_mouse =>
-      'Caption still catches clicks while clicking through';
+      'Субтитры продолжают ловить клики при сквозном клике';
   @override
   String get gal_hook_passthrough_blocks_mouse_hint =>
-      'On: text lines still take clicks so you can tap a word. Off: the whole overlay is transparent to the mouse — you can click whatever is underneath, but tapping words no longer works.';
+      'Вкл.: строки текста по-прежнему принимают клики, поэтому по слову можно нажать. Выкл.: весь оверлей прозрачен для мыши — вы кликаете то, что под ним, но нажатие по словам больше не работает.';
 }
 
 // Path: <root>
@@ -113948,15 +114367,51 @@ class _StringsTh extends _StringsEn {
   String manga_series_read_progress_partial({required Object page}) =>
       'อ่านถึงหน้า ${page}';
   @override
-  String get gal_hook_click_lookup => 'Tap a word to look it up';
+  String mihon_store_extension_count({required Object count}) =>
+      'ส่วนขยาย ${count} รายการ';
+  @override
+  String mihon_extension_sources_more({required Object count}) =>
+      'แสดงแหล่งทั้งหมด ${count} แหล่ง';
+  @override
+  String get mihon_extension_sources_less => 'แสดงแหล่งน้อยลง';
+  @override
+  String get options_website => 'เยี่ยมชมเว็บไซต์ทางการ';
+  @override
+  String get video_setting_mpv_group_hdr => 'HDR';
+  @override
+  String get video_setting_hdr_tone_mapping => 'การแมปโทน HDR';
+  @override
+  String get video_setting_hdr_tone_mapping_hint =>
+      'เส้นโค้งที่ใช้เมื่อต้องบีบแหล่ง HDR ลงบนจอ SDR "อัตโนมัติ" ให้ mpv เลือกตามแต่ละแหล่ง';
+  @override
+  String get video_setting_hdr_compute_peak => 'ตรวจจับจุดสว่างสุดแบบไดนามิก';
+  @override
+  String get video_setting_hdr_compute_peak_hint =>
+      'วัดความสว่างสูงสุดจริงของแต่ละเฟรมแทนการเชื่อเมตาดาตาของแหล่ง ไฮไลต์ดีขึ้นแต่กิน GPU เล็กน้อย';
+  @override
+  String get video_setting_hdr_auto => 'อัตโนมัติ';
+  @override
+  String get video_setting_hdr_on => 'เปิด';
+  @override
+  String get video_setting_hdr_off => 'ปิด';
+  @override
+  String get video_discovery_cancel_downloads_title => 'ยกเลิกการดาวน์โหลดไหม';
+  @override
+  String video_discovery_cancel_downloads_body({required Object n}) =>
+      'งานดาวน์โหลดของเรื่องนี้ ${n} งานจะถูกหยุด ส่วนที่ดาวน์โหลดไปแล้วยังอยู่ในดิสก์ และเริ่มดาวน์โหลดใหม่ได้ภายหลัง';
+  @override
+  String get video_discovery_cancel_downloads_failed =>
+      'ยกเลิกการดาวน์โหลดไม่สำเร็จ งานอาจเสร็จไปแล้ว หรือแบ็กเอนด์ดาวน์โหลดใช้งานไม่ได้';
+  @override
+  String get gal_hook_click_lookup => 'แตะคำเพื่อเปิดพจนานุกรม';
   @override
   String get gal_hook_click_lookup_hint =>
-      'Off means clicks on the caption never trigger a lookup — useful with click-through on, when you would rather not hit a word by accident.';
+      'ปิดไว้หมายความว่าการคลิกบนคำบรรยายจะไม่เปิดพจนานุกรม มีประโยชน์เมื่อเปิดคลิกทะลุ และคุณไม่อยากเผลอโดนคำ';
   @override
-  String get gal_hook_lookup_trigger => 'Lookup trigger';
+  String get gal_hook_lookup_trigger => 'ปุ่มเปิดพจนานุกรม';
   @override
   String get gal_hook_lookup_trigger_hint =>
-      'Which mouse button looks up the word under the pointer. Independent of the switch above: you can turn tap-lookup off and still look up with a side button.';
+      'ปุ่มเมาส์ที่ใช้เปิดคำใต้ตัวชี้ แยกจากสวิตช์ด้านบน คุณปิดการแตะเพื่อเปิดได้ แล้วยังใช้ปุ่มข้างเปิดได้อยู่';
   @override
   String get gal_hook_lookup_trigger_left => 'Left click';
   @override
@@ -113964,16 +114419,16 @@ class _StringsTh extends _StringsEn {
   @override
   String get gal_hook_lookup_trigger_side => 'Side button';
   @override
-  String get gal_hook_toolbar_auto_hide => 'Auto-hide the toolbar';
+  String get gal_hook_toolbar_auto_hide => 'ซ่อนแถบเครื่องมืออัตโนมัติ';
   @override
   String get gal_hook_toolbar_auto_hide_hint =>
-      'Hide the toolbar until the pointer reaches the caption box, LunaHook style. Hidden means really hidden — those pixels go back to the game.';
+      'ซ่อนแถบเครื่องมือจนกว่าตัวชี้จะถึงกล่องคำบรรยาย แบบ LunaHook ซ่อนคือซ่อนจริง ๆ พิกเซลเหล่านั้นคืนให้เกม';
   @override
   String get gal_hook_passthrough_blocks_mouse =>
-      'Caption still catches clicks while clicking through';
+      'คำบรรยายยังรับคลิกขณะคลิกทะลุ';
   @override
   String get gal_hook_passthrough_blocks_mouse_hint =>
-      'On: text lines still take clicks so you can tap a word. Off: the whole overlay is transparent to the mouse — you can click whatever is underneath, but tapping words no longer works.';
+      'เปิด: บรรทัดข้อความยังรับคลิก จึงแตะคำได้ ปิด: โอเวอร์เลย์ทั้งหมดโปร่งต่อเมาส์ คุณคลิกสิ่งที่อยู่ข้างล่างได้ แต่แตะคำจะไม่ทำงานอีก';
 }
 
 // Path: <root>
@@ -123033,15 +123488,52 @@ class _StringsTr extends _StringsEn {
   String manga_series_read_progress_partial({required Object page}) =>
       '${page}. sayfaya kadar okundu';
   @override
-  String get gal_hook_click_lookup => 'Tap a word to look it up';
+  String mihon_store_extension_count({required Object count}) =>
+      '${count} uzantı';
+  @override
+  String mihon_extension_sources_more({required Object count}) =>
+      '${count} kaynağın tümünü göster';
+  @override
+  String get mihon_extension_sources_less => 'Daha az kaynak göster';
+  @override
+  String get options_website => 'Resmî web sitesini ziyaret et';
+  @override
+  String get video_setting_mpv_group_hdr => 'HDR';
+  @override
+  String get video_setting_hdr_tone_mapping => 'HDR ton eşleme';
+  @override
+  String get video_setting_hdr_tone_mapping_hint =>
+      'Bir HDR kaynağı SDR ekrana sıkıştırılırken kullanılan eğri. “Otomatik” seçimi kaynak başına mpv’ye bırakır.';
+  @override
+  String get video_setting_hdr_compute_peak => 'Dinamik tepe algılama';
+  @override
+  String get video_setting_hdr_compute_peak_hint =>
+      'Kaynağın üstverisine güvenmek yerine her karenin gerçek tepe parlaklığını ölçer. Parlak alanlar daha iyi olur, biraz GPU harcar.';
+  @override
+  String get video_setting_hdr_auto => 'Otomatik';
+  @override
+  String get video_setting_hdr_on => 'Açık';
+  @override
+  String get video_setting_hdr_off => 'Kapalı';
+  @override
+  String get video_discovery_cancel_downloads_title =>
+      'İndirmeler iptal edilsin mi?';
+  @override
+  String video_discovery_cancel_downloads_body({required Object n}) =>
+      'Bu yapım için ${n} indirme görevi durdurulacak. İndirilmiş parçalar diskte kalır; indirmeyi sonra yeniden başlatabilirsin.';
+  @override
+  String get video_discovery_cancel_downloads_failed =>
+      'İndirme iptal edilemedi. Görev çoktan bitmiş olabilir ya da indirme arka ucu kullanılamıyor.';
+  @override
+  String get gal_hook_click_lookup => 'Aramak için bir kelimeye dokun';
   @override
   String get gal_hook_click_lookup_hint =>
-      'Off means clicks on the caption never trigger a lookup — useful with click-through on, when you would rather not hit a word by accident.';
+      'Kapalı olduğunda altyazıya tıklamak hiçbir zaman arama başlatmaz — tıklama geçişi açıkken yanlışlıkla bir kelimeye denk gelmek istemediğinde kullanışlı.';
   @override
-  String get gal_hook_lookup_trigger => 'Lookup trigger';
+  String get gal_hook_lookup_trigger => 'Arama tetikleyicisi';
   @override
   String get gal_hook_lookup_trigger_hint =>
-      'Which mouse button looks up the word under the pointer. Independent of the switch above: you can turn tap-lookup off and still look up with a side button.';
+      'İmlecin altındaki kelimeyi hangi fare düğmesinin arayacağı. Yukarıdaki anahtardan bağımsızdır: dokunarak aramayı kapatıp yan düğmeyle arayabilirsin.';
   @override
   String get gal_hook_lookup_trigger_left => 'Left click';
   @override
@@ -123049,16 +123541,16 @@ class _StringsTr extends _StringsEn {
   @override
   String get gal_hook_lookup_trigger_side => 'Side button';
   @override
-  String get gal_hook_toolbar_auto_hide => 'Auto-hide the toolbar';
+  String get gal_hook_toolbar_auto_hide => 'Araç çubuğunu otomatik gizle';
   @override
   String get gal_hook_toolbar_auto_hide_hint =>
-      'Hide the toolbar until the pointer reaches the caption box, LunaHook style. Hidden means really hidden — those pixels go back to the game.';
+      'İmleç altyazı kutusuna gelene kadar araç çubuğunu gizler, LunaHook tarzı. Gizli gerçekten gizli demek — o pikseller oyuna geri döner.';
   @override
   String get gal_hook_passthrough_blocks_mouse =>
-      'Caption still catches clicks while clicking through';
+      'Tıklama geçişi açıkken altyazı yine tıklama alır';
   @override
   String get gal_hook_passthrough_blocks_mouse_hint =>
-      'On: text lines still take clicks so you can tap a word. Off: the whole overlay is transparent to the mouse — you can click whatever is underneath, but tapping words no longer works.';
+      'Açık: metin satırları tıklama almaya devam eder, böylece bir kelimeye dokunabilirsin. Kapalı: tüm katman fareye saydamdır — altındakine tıklarsın ama kelimelere dokunmak artık çalışmaz.';
 }
 
 // Path: <root>
@@ -132100,15 +132592,51 @@ class _StringsVi extends _StringsEn {
   String manga_series_read_progress_partial({required Object page}) =>
       'Đã đọc đến trang ${page}';
   @override
-  String get gal_hook_click_lookup => 'Tap a word to look it up';
+  String mihon_store_extension_count({required Object count}) =>
+      '${count} tiện ích';
+  @override
+  String mihon_extension_sources_more({required Object count}) =>
+      'Hiện tất cả ${count} nguồn';
+  @override
+  String get mihon_extension_sources_less => 'Hiện ít nguồn hơn';
+  @override
+  String get options_website => 'Truy cập trang web chính thức';
+  @override
+  String get video_setting_mpv_group_hdr => 'HDR';
+  @override
+  String get video_setting_hdr_tone_mapping => 'Ánh xạ tông màu HDR';
+  @override
+  String get video_setting_hdr_tone_mapping_hint =>
+      'Đường cong dùng khi phải nén nguồn HDR xuống màn hình SDR. “Tự động” để mpv chọn theo từng nguồn.';
+  @override
+  String get video_setting_hdr_compute_peak => 'Phát hiện đỉnh động';
+  @override
+  String get video_setting_hdr_compute_peak_hint =>
+      'Đo độ sáng đỉnh thực của từng khung hình thay vì tin vào siêu dữ liệu của nguồn. Vùng sáng đẹp hơn, tốn thêm chút GPU.';
+  @override
+  String get video_setting_hdr_auto => 'Tự động';
+  @override
+  String get video_setting_hdr_on => 'Bật';
+  @override
+  String get video_setting_hdr_off => 'Tắt';
+  @override
+  String get video_discovery_cancel_downloads_title => 'Huỷ tải xuống?';
+  @override
+  String video_discovery_cancel_downloads_body({required Object n}) =>
+      '${n} tác vụ tải xuống của tác phẩm này sẽ bị dừng. Các phần đã tải vẫn nằm trên ổ đĩa; bạn có thể tải lại sau.';
+  @override
+  String get video_discovery_cancel_downloads_failed =>
+      'Không huỷ được tải xuống. Tác vụ có thể đã xong, hoặc backend tải xuống hiện không khả dụng.';
+  @override
+  String get gal_hook_click_lookup => 'Chạm vào từ để tra nghĩa';
   @override
   String get gal_hook_click_lookup_hint =>
-      'Off means clicks on the caption never trigger a lookup — useful with click-through on, when you would rather not hit a word by accident.';
+      'Tắt nghĩa là bấm vào phụ đề sẽ không bao giờ tra từ — hữu ích khi bật xuyên chuột và bạn không muốn lỡ tay trúng một từ.';
   @override
-  String get gal_hook_lookup_trigger => 'Lookup trigger';
+  String get gal_hook_lookup_trigger => 'Nút tra từ';
   @override
   String get gal_hook_lookup_trigger_hint =>
-      'Which mouse button looks up the word under the pointer. Independent of the switch above: you can turn tap-lookup off and still look up with a side button.';
+      'Nút chuột nào sẽ tra từ dưới con trỏ. Độc lập với công tắc phía trên: bạn có thể tắt chạm-để-tra mà vẫn tra bằng nút bên hông.';
   @override
   String get gal_hook_lookup_trigger_left => 'Left click';
   @override
@@ -132116,16 +132644,16 @@ class _StringsVi extends _StringsEn {
   @override
   String get gal_hook_lookup_trigger_side => 'Side button';
   @override
-  String get gal_hook_toolbar_auto_hide => 'Auto-hide the toolbar';
+  String get gal_hook_toolbar_auto_hide => 'Tự ẩn thanh công cụ';
   @override
   String get gal_hook_toolbar_auto_hide_hint =>
-      'Hide the toolbar until the pointer reaches the caption box, LunaHook style. Hidden means really hidden — those pixels go back to the game.';
+      'Ẩn thanh công cụ cho tới khi con trỏ chạm vào khung phụ đề, kiểu LunaHook. Ẩn là ẩn thật — số điểm ảnh đó trả lại cho game.';
   @override
   String get gal_hook_passthrough_blocks_mouse =>
-      'Caption still catches clicks while clicking through';
+      'Phụ đề vẫn nhận nhấp chuột khi xuyên chuột';
   @override
   String get gal_hook_passthrough_blocks_mouse_hint =>
-      'On: text lines still take clicks so you can tap a word. Off: the whole overlay is transparent to the mouse — you can click whatever is underneath, but tapping words no longer works.';
+      'Bật: các dòng chữ vẫn nhận nhấp chuột nên bạn chạm được vào từ. Tắt: toàn bộ lớp phủ trong suốt với chuột — bạn bấm được thứ bên dưới, nhưng chạm vào từ không còn tác dụng.';
 }
 
 // Path: <root>
@@ -140443,6 +140971,41 @@ class _StringsZhCn extends _StringsEn {
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       '读到第 ${page} 页';
+  @override
+  String mihon_store_extension_count({required Object count}) => '${count} 个扩展';
+  @override
+  String mihon_extension_sources_more({required Object count}) =>
+      '展开全部 ${count} 个源';
+  @override
+  String get mihon_extension_sources_less => '收起源列表';
+  @override
+  String get options_website => '访问官网';
+  @override
+  String get video_setting_mpv_group_hdr => 'HDR';
+  @override
+  String get video_setting_hdr_tone_mapping => 'HDR 色调映射';
+  @override
+  String get video_setting_hdr_tone_mapping_hint =>
+      '把 HDR 片源压到 SDR 屏幕上时用的曲线。自动 = 交给 mpv 按片源挑。';
+  @override
+  String get video_setting_hdr_compute_peak => '动态峰值检测';
+  @override
+  String get video_setting_hdr_compute_peak_hint =>
+      '逐帧测量真实峰值亮度，而不是相信片源元数据。高光更准，但会占一点 GPU。';
+  @override
+  String get video_setting_hdr_auto => '自动';
+  @override
+  String get video_setting_hdr_on => '开';
+  @override
+  String get video_setting_hdr_off => '关';
+  @override
+  String get video_discovery_cancel_downloads_title => '取消下载？';
+  @override
+  String video_discovery_cancel_downloads_body({required Object n}) =>
+      '本作品有 ${n} 个下载任务会被停止。已下载的分片仍保留在磁盘上，之后可以重新开始下载。';
+  @override
+  String get video_discovery_cancel_downloads_failed =>
+      '取消下载失败。任务可能已经结束，或下载后端当前不可用。';
   @override
   String get gal_hook_click_lookup => '单击文字查词';
   @override
@@ -148793,15 +149356,49 @@ class _StringsZhHk extends _StringsEn {
   String manga_series_read_progress_partial({required Object page}) =>
       '讀到第 ${page} 頁';
   @override
-  String get gal_hook_click_lookup => 'Tap a word to look it up';
+  String mihon_store_extension_count({required Object count}) => '${count} 個擴充';
   @override
-  String get gal_hook_click_lookup_hint =>
-      'Off means clicks on the caption never trigger a lookup — useful with click-through on, when you would rather not hit a word by accident.';
+  String mihon_extension_sources_more({required Object count}) =>
+      '顯示全部 ${count} 個來源';
   @override
-  String get gal_hook_lookup_trigger => 'Lookup trigger';
+  String get mihon_extension_sources_less => '顯示較少來源';
+  @override
+  String get options_website => '瀏覽官方網站';
+  @override
+  String get video_setting_mpv_group_hdr => 'HDR';
+  @override
+  String get video_setting_hdr_tone_mapping => 'HDR 色調映射';
+  @override
+  String get video_setting_hdr_tone_mapping_hint =>
+      '把 HDR 片源壓進 SDR 螢幕時用的曲線。自動 = 交給 mpv 按片源決定。';
+  @override
+  String get video_setting_hdr_compute_peak => '動態峰值偵測';
+  @override
+  String get video_setting_hdr_compute_peak_hint =>
+      '逐格量實際峰值亮度，而不是信片源中繼資料。高光更準，但會佔一點 GPU。';
+  @override
+  String get video_setting_hdr_auto => '自動';
+  @override
+  String get video_setting_hdr_on => '開';
+  @override
+  String get video_setting_hdr_off => '關';
+  @override
+  String get video_discovery_cancel_downloads_title => '取消下載？';
+  @override
+  String video_discovery_cancel_downloads_body({required Object n}) =>
+      '本作品有 ${n} 個下載任務會被停止。已下載的分片仍保留在磁碟上，之後可以重新開始下載。';
+  @override
+  String get video_discovery_cancel_downloads_failed =>
+      '取消下載失敗。任務可能已經結束，或下載後端目前無法使用。';
+  @override
+  String get gal_hook_click_lookup => '點字查詞';
+  @override
+  String get gal_hook_click_lookup_hint => '關掉之後，點字幕不會查詞——配合點擊穿透使用，免得不小心點到字。';
+  @override
+  String get gal_hook_lookup_trigger => '查詞觸發鍵';
   @override
   String get gal_hook_lookup_trigger_hint =>
-      'Which mouse button looks up the word under the pointer. Independent of the switch above: you can turn tap-lookup off and still look up with a side button.';
+      '用哪個滑鼠鍵查指標下的字。與上面那個開關互相獨立：可以關掉點字查詞，仍用側鍵查。';
   @override
   String get gal_hook_lookup_trigger_left => 'Left click';
   @override
@@ -148809,16 +149406,15 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get gal_hook_lookup_trigger_side => 'Side button';
   @override
-  String get gal_hook_toolbar_auto_hide => 'Auto-hide the toolbar';
+  String get gal_hook_toolbar_auto_hide => '自動隱藏功能欄';
   @override
   String get gal_hook_toolbar_auto_hide_hint =>
-      'Hide the toolbar until the pointer reaches the caption box, LunaHook style. Hidden means really hidden — those pixels go back to the game.';
+      '指標移到字幕框才顯示功能欄（LunaHook 那種）。隱藏就是真的隱藏——那塊像素還給遊戲。';
   @override
-  String get gal_hook_passthrough_blocks_mouse =>
-      'Caption still catches clicks while clicking through';
+  String get gal_hook_passthrough_blocks_mouse => '穿透時字幕仍接點擊';
   @override
   String get gal_hook_passthrough_blocks_mouse_hint =>
-      'On: text lines still take clicks so you can tap a word. Off: the whole overlay is transparent to the mouse — you can click whatever is underneath, but tapping words no longer works.';
+      '開：文字行仍然接點擊，所以點得到字。關：整個浮層對滑鼠完全透明——點得到下面的東西，但點字就失效了。';
 }
 
 /// Flat map(s) containing all translations.
@@ -156754,6 +157350,37 @@ extension on _StringsEn {
             'Read to page ${page} of ${total}';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'Read to page ${page}';
+      case 'mihon_store_extension_count':
+        return ({required Object count}) => '${count} extensions';
+      case 'mihon_extension_sources_more':
+        return ({required Object count}) => 'Show all ${count} sources';
+      case 'mihon_extension_sources_less':
+        return 'Show fewer sources';
+      case 'options_website':
+        return 'Visit the official website';
+      case 'video_setting_mpv_group_hdr':
+        return 'HDR';
+      case 'video_setting_hdr_tone_mapping':
+        return 'HDR tone mapping';
+      case 'video_setting_hdr_tone_mapping_hint':
+        return 'Curve used when an HDR source has to be squeezed onto an SDR display. Auto lets mpv pick per source.';
+      case 'video_setting_hdr_compute_peak':
+        return 'Dynamic peak detection';
+      case 'video_setting_hdr_compute_peak_hint':
+        return 'Measure each frame\'s real peak brightness instead of trusting the stream metadata. Better highlights, costs some GPU.';
+      case 'video_setting_hdr_auto':
+        return 'Auto';
+      case 'video_setting_hdr_on':
+        return 'On';
+      case 'video_setting_hdr_off':
+        return 'Off';
+      case 'video_discovery_cancel_downloads_title':
+        return 'Cancel downloads?';
+      case 'video_discovery_cancel_downloads_body':
+        return ({required Object n}) =>
+            '${n} download task(s) for this title will be stopped. Downloaded pieces stay on disk; you can start the download again later.';
+      case 'video_discovery_cancel_downloads_failed':
+        return 'Could not cancel the download. The task may have already finished, or the download backend is unavailable.';
       case 'gal_hook_click_lookup':
         return 'Tap a word to look it up';
       case 'gal_hook_click_lookup_hint':
@@ -164707,14 +165334,45 @@ extension on _StringsAr {
             'تمت القراءة حتى الصفحة ${page} من ${total}';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'تمت القراءة حتى الصفحة ${page}';
+      case 'mihon_store_extension_count':
+        return ({required Object count}) => '${count} إضافة';
+      case 'mihon_extension_sources_more':
+        return ({required Object count}) => 'إظهار كل المصادر (${count})';
+      case 'mihon_extension_sources_less':
+        return 'إظهار مصادر أقل';
+      case 'options_website':
+        return 'زيارة الموقع الرسمي';
+      case 'video_setting_mpv_group_hdr':
+        return 'HDR';
+      case 'video_setting_hdr_tone_mapping':
+        return 'تعيين ألوان HDR';
+      case 'video_setting_hdr_tone_mapping_hint':
+        return 'المنحنى المستخدم عند ضغط مصدر HDR على شاشة SDR. «تلقائي» يترك الاختيار لـ mpv حسب كل مصدر.';
+      case 'video_setting_hdr_compute_peak':
+        return 'كشف الذروة الديناميكي';
+      case 'video_setting_hdr_compute_peak_hint':
+        return 'قياس ذروة السطوع الحقيقية لكل إطار بدلاً من الوثوق ببيانات المصدر. إبرازات أدق مقابل بعض استهلاك المعالج الرسومي.';
+      case 'video_setting_hdr_auto':
+        return 'تلقائي';
+      case 'video_setting_hdr_on':
+        return 'تشغيل';
+      case 'video_setting_hdr_off':
+        return 'إيقاف';
+      case 'video_discovery_cancel_downloads_title':
+        return 'إلغاء التنزيلات؟';
+      case 'video_discovery_cancel_downloads_body':
+        return ({required Object n}) =>
+            'سيتم إيقاف ${n} مهمة تنزيل لهذا العمل. تبقى الأجزاء المنزَّلة على القرص، ويمكنك بدء التنزيل مرة أخرى لاحقًا.';
+      case 'video_discovery_cancel_downloads_failed':
+        return 'تعذّر إلغاء التنزيل. قد تكون المهمة قد انتهت بالفعل، أو أن خلفية التنزيل غير متاحة.';
       case 'gal_hook_click_lookup':
-        return 'Tap a word to look it up';
+        return 'اضغط على كلمة للبحث عنها';
       case 'gal_hook_click_lookup_hint':
-        return 'Off means clicks on the caption never trigger a lookup — useful with click-through on, when you would rather not hit a word by accident.';
+        return 'الإيقاف يعني ألا يؤدي النقر على النص إلى بحث — مفيد مع تفعيل النقر النافذ عندما لا تريد إصابة كلمة بالخطأ.';
       case 'gal_hook_lookup_trigger':
-        return 'Lookup trigger';
+        return 'زر البحث';
       case 'gal_hook_lookup_trigger_hint':
-        return 'Which mouse button looks up the word under the pointer. Independent of the switch above: you can turn tap-lookup off and still look up with a side button.';
+        return 'أي زر فأرة يبحث عن الكلمة تحت المؤشر. مستقل عن المفتاح أعلاه: يمكنك إيقاف البحث بالنقر والبحث بزر جانبي.';
       case 'gal_hook_lookup_trigger_left':
         return 'Left click';
       case 'gal_hook_lookup_trigger_middle':
@@ -164722,13 +165380,13 @@ extension on _StringsAr {
       case 'gal_hook_lookup_trigger_side':
         return 'Side button';
       case 'gal_hook_toolbar_auto_hide':
-        return 'Auto-hide the toolbar';
+        return 'إخفاء شريط الأدوات تلقائيًا';
       case 'gal_hook_toolbar_auto_hide_hint':
-        return 'Hide the toolbar until the pointer reaches the caption box, LunaHook style. Hidden means really hidden — those pixels go back to the game.';
+        return 'يخفي شريط الأدوات حتى يصل المؤشر إلى صندوق النص، بأسلوب LunaHook. مخفي يعني مخفي فعلًا — تعود تلك البكسلات إلى اللعبة.';
       case 'gal_hook_passthrough_blocks_mouse':
-        return 'Caption still catches clicks while clicking through';
+        return 'النص يستقبل النقرات أثناء النقر النافذ';
       case 'gal_hook_passthrough_blocks_mouse_hint':
-        return 'On: text lines still take clicks so you can tap a word. Off: the whole overlay is transparent to the mouse — you can click whatever is underneath, but tapping words no longer works.';
+        return 'تشغيل: تبقى أسطر النص تستقبل النقرات فتستطيع الضغط على كلمة. إيقاف: تصبح الطبقة كلها شفافة للفأرة — تنقر ما تحتها، لكن الضغط على الكلمات لا يعمل.';
       default:
         return null;
     }
@@ -172703,14 +173361,45 @@ extension on _StringsDe {
             'Bis Seite ${page} von ${total} gelesen';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'Bis Seite ${page} gelesen';
+      case 'mihon_store_extension_count':
+        return ({required Object count}) => '${count} Erweiterungen';
+      case 'mihon_extension_sources_more':
+        return ({required Object count}) => 'Alle ${count} Quellen anzeigen';
+      case 'mihon_extension_sources_less':
+        return 'Weniger Quellen anzeigen';
+      case 'options_website':
+        return 'Offizielle Website besuchen';
+      case 'video_setting_mpv_group_hdr':
+        return 'HDR';
+      case 'video_setting_hdr_tone_mapping':
+        return 'HDR-Tonemapping';
+      case 'video_setting_hdr_tone_mapping_hint':
+        return 'Kurve, mit der eine HDR-Quelle auf ein SDR-Display gebracht wird. „Automatisch“ überlässt mpv die Wahl je Quelle.';
+      case 'video_setting_hdr_compute_peak':
+        return 'Dynamische Spitzenwerterkennung';
+      case 'video_setting_hdr_compute_peak_hint':
+        return 'Misst die echte Spitzenhelligkeit jedes Bildes, statt den Metadaten der Quelle zu vertrauen. Bessere Lichter, kostet etwas GPU-Leistung.';
+      case 'video_setting_hdr_auto':
+        return 'Automatisch';
+      case 'video_setting_hdr_on':
+        return 'An';
+      case 'video_setting_hdr_off':
+        return 'Aus';
+      case 'video_discovery_cancel_downloads_title':
+        return 'Downloads abbrechen?';
+      case 'video_discovery_cancel_downloads_body':
+        return ({required Object n}) =>
+            '${n} Download-Aufgabe(n) für diesen Titel werden gestoppt. Bereits geladene Teile bleiben auf der Festplatte; du kannst den Download später erneut starten.';
+      case 'video_discovery_cancel_downloads_failed':
+        return 'Download konnte nicht abgebrochen werden. Die Aufgabe ist möglicherweise schon fertig, oder das Download-Backend ist nicht verfügbar.';
       case 'gal_hook_click_lookup':
-        return 'Tap a word to look it up';
+        return 'Wort antippen zum Nachschlagen';
       case 'gal_hook_click_lookup_hint':
-        return 'Off means clicks on the caption never trigger a lookup — useful with click-through on, when you would rather not hit a word by accident.';
+        return 'Aus bedeutet, dass Klicks auf den Text nie ein Nachschlagen auslösen – praktisch bei aktiviertem Durchklicken, wenn du nicht versehentlich ein Wort treffen willst.';
       case 'gal_hook_lookup_trigger':
-        return 'Lookup trigger';
+        return 'Auslöser fürs Nachschlagen';
       case 'gal_hook_lookup_trigger_hint':
-        return 'Which mouse button looks up the word under the pointer. Independent of the switch above: you can turn tap-lookup off and still look up with a side button.';
+        return 'Welche Maustaste das Wort unter dem Zeiger nachschlägt. Unabhängig vom Schalter oben: Du kannst Tippen-zum-Nachschlagen ausschalten und trotzdem mit einer Seitentaste nachschlagen.';
       case 'gal_hook_lookup_trigger_left':
         return 'Left click';
       case 'gal_hook_lookup_trigger_middle':
@@ -172718,13 +173407,13 @@ extension on _StringsDe {
       case 'gal_hook_lookup_trigger_side':
         return 'Side button';
       case 'gal_hook_toolbar_auto_hide':
-        return 'Auto-hide the toolbar';
+        return 'Werkzeugleiste automatisch ausblenden';
       case 'gal_hook_toolbar_auto_hide_hint':
-        return 'Hide the toolbar until the pointer reaches the caption box, LunaHook style. Hidden means really hidden — those pixels go back to the game.';
+        return 'Blendet die Leiste aus, bis der Zeiger den Textkasten erreicht – wie bei LunaHook. Ausgeblendet heißt wirklich weg: Diese Pixel gehören wieder dem Spiel.';
       case 'gal_hook_passthrough_blocks_mouse':
-        return 'Caption still catches clicks while clicking through';
+        return 'Text nimmt Klicks trotz Durchklicken an';
       case 'gal_hook_passthrough_blocks_mouse_hint':
-        return 'On: text lines still take clicks so you can tap a word. Off: the whole overlay is transparent to the mouse — you can click whatever is underneath, but tapping words no longer works.';
+        return 'An: Textzeilen nehmen weiter Klicks an, du kannst also ein Wort antippen. Aus: Das gesamte Overlay ist für die Maus durchlässig – du klickst, was darunter liegt, aber Wörter antippen geht nicht mehr.';
       default:
         return null;
     }
@@ -180691,14 +181380,45 @@ extension on _StringsEs {
             'Leído hasta la página ${page} de ${total}';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'Leído hasta la página ${page}';
+      case 'mihon_store_extension_count':
+        return ({required Object count}) => '${count} extensiones';
+      case 'mihon_extension_sources_more':
+        return ({required Object count}) => 'Mostrar las ${count} fuentes';
+      case 'mihon_extension_sources_less':
+        return 'Mostrar menos fuentes';
+      case 'options_website':
+        return 'Visitar el sitio web oficial';
+      case 'video_setting_mpv_group_hdr':
+        return 'HDR';
+      case 'video_setting_hdr_tone_mapping':
+        return 'Mapeo de tonos HDR';
+      case 'video_setting_hdr_tone_mapping_hint':
+        return 'Curva que se usa al comprimir una fuente HDR en una pantalla SDR. «Automático» deja que mpv elija según la fuente.';
+      case 'video_setting_hdr_compute_peak':
+        return 'Detección dinámica de picos';
+      case 'video_setting_hdr_compute_peak_hint':
+        return 'Mide el brillo máximo real de cada fotograma en vez de fiarse de los metadatos de la fuente. Mejores luces altas, a costa de algo de GPU.';
+      case 'video_setting_hdr_auto':
+        return 'Automático';
+      case 'video_setting_hdr_on':
+        return 'Activado';
+      case 'video_setting_hdr_off':
+        return 'Desactivado';
+      case 'video_discovery_cancel_downloads_title':
+        return '¿Cancelar las descargas?';
+      case 'video_discovery_cancel_downloads_body':
+        return ({required Object n}) =>
+            'Se detendrán ${n} tarea(s) de descarga de este título. Las partes ya descargadas se conservan en el disco; podrás reanudar la descarga más adelante.';
+      case 'video_discovery_cancel_downloads_failed':
+        return 'No se pudo cancelar la descarga. Puede que la tarea ya haya terminado o que el backend de descargas no esté disponible.';
       case 'gal_hook_click_lookup':
-        return 'Tap a word to look it up';
+        return 'Toca una palabra para buscarla';
       case 'gal_hook_click_lookup_hint':
-        return 'Off means clicks on the caption never trigger a lookup — useful with click-through on, when you would rather not hit a word by accident.';
+        return 'Desactivado significa que los clics sobre el texto nunca activan una búsqueda: útil con el clic pasante activado, cuando prefieres no darle a una palabra sin querer.';
       case 'gal_hook_lookup_trigger':
-        return 'Lookup trigger';
+        return 'Disparador de búsqueda';
       case 'gal_hook_lookup_trigger_hint':
-        return 'Which mouse button looks up the word under the pointer. Independent of the switch above: you can turn tap-lookup off and still look up with a side button.';
+        return 'Qué botón del ratón busca la palabra bajo el puntero. Es independiente del interruptor de arriba: puedes desactivar la búsqueda por toque y seguir buscando con un botón lateral.';
       case 'gal_hook_lookup_trigger_left':
         return 'Left click';
       case 'gal_hook_lookup_trigger_middle':
@@ -180706,13 +181426,13 @@ extension on _StringsEs {
       case 'gal_hook_lookup_trigger_side':
         return 'Side button';
       case 'gal_hook_toolbar_auto_hide':
-        return 'Auto-hide the toolbar';
+        return 'Ocultar la barra automáticamente';
       case 'gal_hook_toolbar_auto_hide_hint':
-        return 'Hide the toolbar until the pointer reaches the caption box, LunaHook style. Hidden means really hidden — those pixels go back to the game.';
+        return 'Oculta la barra hasta que el puntero llega al cuadro de texto, al estilo de LunaHook. Oculta significa oculta de verdad: esos píxeles vuelven al juego.';
       case 'gal_hook_passthrough_blocks_mouse':
-        return 'Caption still catches clicks while clicking through';
+        return 'El texto sigue recibiendo clics con el clic pasante';
       case 'gal_hook_passthrough_blocks_mouse_hint':
-        return 'On: text lines still take clicks so you can tap a word. Off: the whole overlay is transparent to the mouse — you can click whatever is underneath, but tapping words no longer works.';
+        return 'Activado: las líneas de texto siguen recibiendo clics, así puedes tocar una palabra. Desactivado: toda la superposición es transparente al ratón; puedes hacer clic en lo que haya debajo, pero tocar palabras deja de funcionar.';
       default:
         return null;
     }
@@ -188687,14 +189407,45 @@ extension on _StringsFr {
             'Lu jusqu\'à la page ${page} sur ${total}';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'Lu jusqu\'à la page ${page}';
+      case 'mihon_store_extension_count':
+        return ({required Object count}) => '${count} extensions';
+      case 'mihon_extension_sources_more':
+        return ({required Object count}) => 'Afficher les ${count} sources';
+      case 'mihon_extension_sources_less':
+        return 'Afficher moins de sources';
+      case 'options_website':
+        return 'Visiter le site officiel';
+      case 'video_setting_mpv_group_hdr':
+        return 'HDR';
+      case 'video_setting_hdr_tone_mapping':
+        return 'Mappage tonal HDR';
+      case 'video_setting_hdr_tone_mapping_hint':
+        return 'Courbe utilisée pour ramener une source HDR sur un écran SDR. « Auto » laisse mpv choisir selon la source.';
+      case 'video_setting_hdr_compute_peak':
+        return 'Détection dynamique des pics';
+      case 'video_setting_hdr_compute_peak_hint':
+        return 'Mesure le pic de luminosité réel de chaque image au lieu de se fier aux métadonnées de la source. Meilleures hautes lumières, au prix d\'un peu de GPU.';
+      case 'video_setting_hdr_auto':
+        return 'Auto';
+      case 'video_setting_hdr_on':
+        return 'Activé';
+      case 'video_setting_hdr_off':
+        return 'Désactivé';
+      case 'video_discovery_cancel_downloads_title':
+        return 'Annuler les téléchargements ?';
+      case 'video_discovery_cancel_downloads_body':
+        return ({required Object n}) =>
+            '${n} tâche(s) de téléchargement pour ce titre vont être arrêtées. Les morceaux déjà téléchargés restent sur le disque ; vous pourrez relancer le téléchargement plus tard.';
+      case 'video_discovery_cancel_downloads_failed':
+        return 'Impossible d\'annuler le téléchargement. La tâche est peut-être déjà terminée, ou le backend de téléchargement est indisponible.';
       case 'gal_hook_click_lookup':
-        return 'Tap a word to look it up';
+        return 'Toucher un mot pour le chercher';
       case 'gal_hook_click_lookup_hint':
-        return 'Off means clicks on the caption never trigger a lookup — useful with click-through on, when you would rather not hit a word by accident.';
+        return 'Désactivé : les clics sur le texte ne déclenchent jamais de recherche — pratique avec le clic traversant, quand vous préférez ne pas toucher un mot par erreur.';
       case 'gal_hook_lookup_trigger':
-        return 'Lookup trigger';
+        return 'Déclencheur de recherche';
       case 'gal_hook_lookup_trigger_hint':
-        return 'Which mouse button looks up the word under the pointer. Independent of the switch above: you can turn tap-lookup off and still look up with a side button.';
+        return 'Quel bouton de la souris cherche le mot sous le pointeur. Indépendant du réglage ci-dessus : vous pouvez désactiver la recherche au toucher et chercher quand même avec un bouton latéral.';
       case 'gal_hook_lookup_trigger_left':
         return 'Left click';
       case 'gal_hook_lookup_trigger_middle':
@@ -188702,13 +189453,13 @@ extension on _StringsFr {
       case 'gal_hook_lookup_trigger_side':
         return 'Side button';
       case 'gal_hook_toolbar_auto_hide':
-        return 'Auto-hide the toolbar';
+        return 'Masquer la barre automatiquement';
       case 'gal_hook_toolbar_auto_hide_hint':
-        return 'Hide the toolbar until the pointer reaches the caption box, LunaHook style. Hidden means really hidden — those pixels go back to the game.';
+        return 'Masque la barre jusqu\'à ce que le pointeur atteigne la zone de texte, à la manière de LunaHook. Masqué veut dire vraiment masqué : ces pixels reviennent au jeu.';
       case 'gal_hook_passthrough_blocks_mouse':
-        return 'Caption still catches clicks while clicking through';
+        return 'Le texte reçoit encore les clics en mode traversant';
       case 'gal_hook_passthrough_blocks_mouse_hint':
-        return 'On: text lines still take clicks so you can tap a word. Off: the whole overlay is transparent to the mouse — you can click whatever is underneath, but tapping words no longer works.';
+        return 'Activé : les lignes de texte reçoivent encore les clics, vous pouvez donc toucher un mot. Désactivé : toute la surcouche est transparente à la souris — vous cliquez ce qui est dessous, mais toucher un mot ne marche plus.';
       default:
         return null;
     }
@@ -196655,14 +197406,45 @@ extension on _StringsId {
             'Dibaca sampai halaman ${page} dari ${total}';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'Dibaca sampai halaman ${page}';
+      case 'mihon_store_extension_count':
+        return ({required Object count}) => '${count} ekstensi';
+      case 'mihon_extension_sources_more':
+        return ({required Object count}) => 'Tampilkan semua ${count} sumber';
+      case 'mihon_extension_sources_less':
+        return 'Tampilkan lebih sedikit sumber';
+      case 'options_website':
+        return 'Kunjungi situs web resmi';
+      case 'video_setting_mpv_group_hdr':
+        return 'HDR';
+      case 'video_setting_hdr_tone_mapping':
+        return 'Pemetaan nada HDR';
+      case 'video_setting_hdr_tone_mapping_hint':
+        return 'Kurva yang dipakai saat sumber HDR harus dipadatkan ke layar SDR. "Otomatis" membiarkan mpv memilih per sumber.';
+      case 'video_setting_hdr_compute_peak':
+        return 'Deteksi puncak dinamis';
+      case 'video_setting_hdr_compute_peak_hint':
+        return 'Mengukur puncak kecerahan asli tiap bingkai alih-alih mempercayai metadata sumber. Sorotan lebih baik, memakan sedikit GPU.';
+      case 'video_setting_hdr_auto':
+        return 'Otomatis';
+      case 'video_setting_hdr_on':
+        return 'Aktif';
+      case 'video_setting_hdr_off':
+        return 'Nonaktif';
+      case 'video_discovery_cancel_downloads_title':
+        return 'Batalkan unduhan?';
+      case 'video_discovery_cancel_downloads_body':
+        return ({required Object n}) =>
+            '${n} tugas unduhan untuk judul ini akan dihentikan. Bagian yang sudah terunduh tetap ada di disk; kamu bisa memulai unduhan lagi nanti.';
+      case 'video_discovery_cancel_downloads_failed':
+        return 'Tidak bisa membatalkan unduhan. Tugasnya mungkin sudah selesai, atau backend unduhan sedang tidak tersedia.';
       case 'gal_hook_click_lookup':
-        return 'Tap a word to look it up';
+        return 'Ketuk kata untuk mencarinya';
       case 'gal_hook_click_lookup_hint':
-        return 'Off means clicks on the caption never trigger a lookup — useful with click-through on, when you would rather not hit a word by accident.';
+        return 'Mati berarti klik pada teks tidak pernah memicu pencarian — berguna saat klik-tembus aktif dan kamu tidak ingin tak sengaja mengenai kata.';
       case 'gal_hook_lookup_trigger':
-        return 'Lookup trigger';
+        return 'Pemicu pencarian';
       case 'gal_hook_lookup_trigger_hint':
-        return 'Which mouse button looks up the word under the pointer. Independent of the switch above: you can turn tap-lookup off and still look up with a side button.';
+        return 'Tombol tetikus mana yang mencari kata di bawah penunjuk. Terpisah dari sakelar di atas: kamu bisa mematikan ketuk-untuk-cari dan tetap mencari dengan tombol samping.';
       case 'gal_hook_lookup_trigger_left':
         return 'Left click';
       case 'gal_hook_lookup_trigger_middle':
@@ -196670,13 +197452,13 @@ extension on _StringsId {
       case 'gal_hook_lookup_trigger_side':
         return 'Side button';
       case 'gal_hook_toolbar_auto_hide':
-        return 'Auto-hide the toolbar';
+        return 'Sembunyikan bilah otomatis';
       case 'gal_hook_toolbar_auto_hide_hint':
-        return 'Hide the toolbar until the pointer reaches the caption box, LunaHook style. Hidden means really hidden — those pixels go back to the game.';
+        return 'Sembunyikan bilah sampai penunjuk mencapai kotak teks, ala LunaHook. Tersembunyi artinya benar-benar hilang — piksel itu kembali ke game.';
       case 'gal_hook_passthrough_blocks_mouse':
-        return 'Caption still catches clicks while clicking through';
+        return 'Teks tetap menerima klik saat klik-tembus';
       case 'gal_hook_passthrough_blocks_mouse_hint':
-        return 'On: text lines still take clicks so you can tap a word. Off: the whole overlay is transparent to the mouse — you can click whatever is underneath, but tapping words no longer works.';
+        return 'Aktif: baris teks tetap menerima klik sehingga kamu bisa mengetuk kata. Nonaktif: seluruh lapisan tembus bagi tetikus — kamu bisa mengeklik apa pun di bawahnya, tapi mengetuk kata tidak lagi berfungsi.';
       default:
         return null;
     }
@@ -204644,14 +205426,45 @@ extension on _StringsIt {
             'Letto fino a pagina ${page} di ${total}';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'Letto fino a pagina ${page}';
+      case 'mihon_store_extension_count':
+        return ({required Object count}) => '${count} estensioni';
+      case 'mihon_extension_sources_more':
+        return ({required Object count}) => 'Mostra tutte le ${count} fonti';
+      case 'mihon_extension_sources_less':
+        return 'Mostra meno fonti';
+      case 'options_website':
+        return 'Visita il sito ufficiale';
+      case 'video_setting_mpv_group_hdr':
+        return 'HDR';
+      case 'video_setting_hdr_tone_mapping':
+        return 'Mappatura tonale HDR';
+      case 'video_setting_hdr_tone_mapping_hint':
+        return 'Curva usata quando una sorgente HDR va compressa su uno schermo SDR. «Automatico» lascia scegliere a mpv per ogni sorgente.';
+      case 'video_setting_hdr_compute_peak':
+        return 'Rilevamento dinamico dei picchi';
+      case 'video_setting_hdr_compute_peak_hint':
+        return 'Misura il picco di luminosità reale di ogni fotogramma invece di fidarsi dei metadati della sorgente. Alte luci migliori, con un po’ di costo GPU.';
+      case 'video_setting_hdr_auto':
+        return 'Automatico';
+      case 'video_setting_hdr_on':
+        return 'Attivo';
+      case 'video_setting_hdr_off':
+        return 'Disattivo';
+      case 'video_discovery_cancel_downloads_title':
+        return 'Annullare i download?';
+      case 'video_discovery_cancel_downloads_body':
+        return ({required Object n}) =>
+            'Verranno interrotte ${n} attività di download per questo titolo. Le parti già scaricate restano sul disco; potrai riavviare il download più tardi.';
+      case 'video_discovery_cancel_downloads_failed':
+        return 'Impossibile annullare il download. L’attività potrebbe essere già terminata, oppure il backend di download non è disponibile.';
       case 'gal_hook_click_lookup':
-        return 'Tap a word to look it up';
+        return 'Tocca una parola per cercarla';
       case 'gal_hook_click_lookup_hint':
-        return 'Off means clicks on the caption never trigger a lookup — useful with click-through on, when you would rather not hit a word by accident.';
+        return 'Disattivato: i clic sul testo non avviano mai una ricerca — utile con il clic passante attivo, quando preferisci non colpire una parola per sbaglio.';
       case 'gal_hook_lookup_trigger':
-        return 'Lookup trigger';
+        return 'Attivatore della ricerca';
       case 'gal_hook_lookup_trigger_hint':
-        return 'Which mouse button looks up the word under the pointer. Independent of the switch above: you can turn tap-lookup off and still look up with a side button.';
+        return 'Quale tasto del mouse cerca la parola sotto il puntatore. Indipendente dall’interruttore qui sopra: puoi disattivare il tocco-per-cercare e cercare comunque con un tasto laterale.';
       case 'gal_hook_lookup_trigger_left':
         return 'Left click';
       case 'gal_hook_lookup_trigger_middle':
@@ -204659,13 +205472,13 @@ extension on _StringsIt {
       case 'gal_hook_lookup_trigger_side':
         return 'Side button';
       case 'gal_hook_toolbar_auto_hide':
-        return 'Auto-hide the toolbar';
+        return 'Nascondi la barra automaticamente';
       case 'gal_hook_toolbar_auto_hide_hint':
-        return 'Hide the toolbar until the pointer reaches the caption box, LunaHook style. Hidden means really hidden — those pixels go back to the game.';
+        return 'Nasconde la barra finché il puntatore non raggiunge il riquadro del testo, in stile LunaHook. Nascosto significa davvero nascosto: quei pixel tornano al gioco.';
       case 'gal_hook_passthrough_blocks_mouse':
-        return 'Caption still catches clicks while clicking through';
+        return 'Il testo riceve ancora i clic durante il clic passante';
       case 'gal_hook_passthrough_blocks_mouse_hint':
-        return 'On: text lines still take clicks so you can tap a word. Off: the whole overlay is transparent to the mouse — you can click whatever is underneath, but tapping words no longer works.';
+        return 'Attivo: le righe di testo ricevono ancora i clic, così puoi toccare una parola. Disattivo: l’intera sovrapposizione è trasparente al mouse — clicchi ciò che sta sotto, ma toccare le parole non funziona più.';
       default:
         return null;
     }
@@ -212566,14 +213379,45 @@ extension on _StringsJa {
             '${total} ページ中 ${page} ページまで';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => '${page} ページまで';
+      case 'mihon_store_extension_count':
+        return ({required Object count}) => '拡張機能 ${count} 件';
+      case 'mihon_extension_sources_more':
+        return ({required Object count}) => '${count} 件のソースをすべて表示';
+      case 'mihon_extension_sources_less':
+        return 'ソースの表示を減らす';
+      case 'options_website':
+        return '公式サイトを開く';
+      case 'video_setting_mpv_group_hdr':
+        return 'HDR';
+      case 'video_setting_hdr_tone_mapping':
+        return 'HDR トーンマッピング';
+      case 'video_setting_hdr_tone_mapping_hint':
+        return 'HDR ソースを SDR ディスプレイに収めるときに使うカーブ。「自動」は mpv がソースごとに選びます。';
+      case 'video_setting_hdr_compute_peak':
+        return '動的ピーク検出';
+      case 'video_setting_hdr_compute_peak_hint':
+        return 'ソースのメタデータを信じる代わりに、フレームごとの実際のピーク輝度を測ります。ハイライトが良くなる一方、GPU を少し使います。';
+      case 'video_setting_hdr_auto':
+        return '自動';
+      case 'video_setting_hdr_on':
+        return 'オン';
+      case 'video_setting_hdr_off':
+        return 'オフ';
+      case 'video_discovery_cancel_downloads_title':
+        return 'ダウンロードを中止しますか？';
+      case 'video_discovery_cancel_downloads_body':
+        return ({required Object n}) =>
+            'この作品のダウンロードタスク ${n} 件を停止します。ダウンロード済みの断片はディスクに残るので、後でやり直せます。';
+      case 'video_discovery_cancel_downloads_failed':
+        return 'ダウンロードを中止できませんでした。タスクが既に終了しているか、ダウンロードバックエンドが利用できません。';
       case 'gal_hook_click_lookup':
-        return 'Tap a word to look it up';
+        return '単語をタップして辞書を引く';
       case 'gal_hook_click_lookup_hint':
-        return 'Off means clicks on the caption never trigger a lookup — useful with click-through on, when you would rather not hit a word by accident.';
+        return 'オフにすると、字幕をクリックしても辞書を引きません。クリック透過と併用して、うっかり単語に当たるのを避けたいときに便利です。';
       case 'gal_hook_lookup_trigger':
-        return 'Lookup trigger';
+        return '辞書を引くボタン';
       case 'gal_hook_lookup_trigger_hint':
-        return 'Which mouse button looks up the word under the pointer. Independent of the switch above: you can turn tap-lookup off and still look up with a side button.';
+        return 'ポインタの下の単語を引くマウスボタン。上のスイッチとは独立です：タップで引くのをオフにしたまま、サイドボタンで引けます。';
       case 'gal_hook_lookup_trigger_left':
         return 'Left click';
       case 'gal_hook_lookup_trigger_middle':
@@ -212581,13 +213425,13 @@ extension on _StringsJa {
       case 'gal_hook_lookup_trigger_side':
         return 'Side button';
       case 'gal_hook_toolbar_auto_hide':
-        return 'Auto-hide the toolbar';
+        return 'ツールバーを自動で隠す';
       case 'gal_hook_toolbar_auto_hide_hint':
-        return 'Hide the toolbar until the pointer reaches the caption box, LunaHook style. Hidden means really hidden — those pixels go back to the game.';
+        return 'ポインタが字幕枠に来るまでツールバーを隠します（LunaHook 方式）。隠すときは本当に消します——その分のピクセルはゲームに返ります。';
       case 'gal_hook_passthrough_blocks_mouse':
-        return 'Caption still catches clicks while clicking through';
+        return 'クリック透過中も字幕はクリックを受ける';
       case 'gal_hook_passthrough_blocks_mouse_hint':
-        return 'On: text lines still take clicks so you can tap a word. Off: the whole overlay is transparent to the mouse — you can click whatever is underneath, but tapping words no longer works.';
+        return 'オン：字幕の行はクリックを受け続けるので単語をタップできます。オフ：オーバーレイ全体がマウスに対して透明になり、下のものをクリックできますが、単語のタップはできなくなります。';
       default:
         return null;
     }
@@ -220490,14 +221334,45 @@ extension on _StringsKo {
             '${total}페이지 중 ${page}페이지까지 읽음';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => '${page}페이지까지 읽음';
+      case 'mihon_store_extension_count':
+        return ({required Object count}) => '확장 ${count}개';
+      case 'mihon_extension_sources_more':
+        return ({required Object count}) => '소스 ${count}개 모두 보기';
+      case 'mihon_extension_sources_less':
+        return '소스 적게 보기';
+      case 'options_website':
+        return '공식 웹사이트 방문';
+      case 'video_setting_mpv_group_hdr':
+        return 'HDR';
+      case 'video_setting_hdr_tone_mapping':
+        return 'HDR 톤 매핑';
+      case 'video_setting_hdr_tone_mapping_hint':
+        return 'HDR 소스를 SDR 디스플레이에 맞출 때 쓰는 곡선입니다. ‘자동’은 mpv가 소스마다 고르게 합니다.';
+      case 'video_setting_hdr_compute_peak':
+        return '동적 피크 검출';
+      case 'video_setting_hdr_compute_peak_hint':
+        return '소스 메타데이터를 믿는 대신 프레임마다 실제 최대 밝기를 측정합니다. 하이라이트가 좋아지지만 GPU를 조금 씁니다.';
+      case 'video_setting_hdr_auto':
+        return '자동';
+      case 'video_setting_hdr_on':
+        return '켜기';
+      case 'video_setting_hdr_off':
+        return '끄기';
+      case 'video_discovery_cancel_downloads_title':
+        return '다운로드를 취소할까요?';
+      case 'video_discovery_cancel_downloads_body':
+        return ({required Object n}) =>
+            '이 작품의 다운로드 작업 ${n}개를 중지합니다. 이미 받은 조각은 디스크에 남아 있어 나중에 다시 시작할 수 있습니다.';
+      case 'video_discovery_cancel_downloads_failed':
+        return '다운로드를 취소하지 못했습니다. 작업이 이미 끝났거나 다운로드 백엔드를 사용할 수 없습니다.';
       case 'gal_hook_click_lookup':
-        return 'Tap a word to look it up';
+        return '단어를 눌러 사전 찾기';
       case 'gal_hook_click_lookup_hint':
-        return 'Off means clicks on the caption never trigger a lookup — useful with click-through on, when you would rather not hit a word by accident.';
+        return '끄면 자막을 클릭해도 사전을 찾지 않습니다. 클릭 통과를 켠 채로 실수로 단어를 누르고 싶지 않을 때 유용합니다.';
       case 'gal_hook_lookup_trigger':
-        return 'Lookup trigger';
+        return '사전 찾기 버튼';
       case 'gal_hook_lookup_trigger_hint':
-        return 'Which mouse button looks up the word under the pointer. Independent of the switch above: you can turn tap-lookup off and still look up with a side button.';
+        return '포인터 아래 단어를 찾을 마우스 버튼입니다. 위 스위치와는 별개예요: 눌러서 찾기를 꺼도 옆 버튼으로는 찾을 수 있습니다.';
       case 'gal_hook_lookup_trigger_left':
         return 'Left click';
       case 'gal_hook_lookup_trigger_middle':
@@ -220505,13 +221380,13 @@ extension on _StringsKo {
       case 'gal_hook_lookup_trigger_side':
         return 'Side button';
       case 'gal_hook_toolbar_auto_hide':
-        return 'Auto-hide the toolbar';
+        return '도구 모음 자동 숨김';
       case 'gal_hook_toolbar_auto_hide_hint':
-        return 'Hide the toolbar until the pointer reaches the caption box, LunaHook style. Hidden means really hidden — those pixels go back to the game.';
+        return '포인터가 자막 상자에 닿을 때까지 도구 모음을 숨깁니다(LunaHook 방식). 숨긴다는 건 정말로 사라진다는 뜻이라, 그 픽셀은 게임으로 돌아갑니다.';
       case 'gal_hook_passthrough_blocks_mouse':
-        return 'Caption still catches clicks while clicking through';
+        return '클릭 통과 중에도 자막은 클릭을 받음';
       case 'gal_hook_passthrough_blocks_mouse_hint':
-        return 'On: text lines still take clicks so you can tap a word. Off: the whole overlay is transparent to the mouse — you can click whatever is underneath, but tapping words no longer works.';
+        return '켬: 자막 줄이 계속 클릭을 받아 단어를 누를 수 있습니다. 끔: 오버레이 전체가 마우스에 투명해져 아래 것을 클릭할 수 있지만, 단어 누르기는 더 이상 되지 않습니다.';
       default:
         return null;
     }
@@ -228473,14 +229348,45 @@ extension on _StringsNl {
             'Gelezen tot pagina ${page} van ${total}';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'Gelezen tot pagina ${page}';
+      case 'mihon_store_extension_count':
+        return ({required Object count}) => '${count} extensies';
+      case 'mihon_extension_sources_more':
+        return ({required Object count}) => 'Alle ${count} bronnen tonen';
+      case 'mihon_extension_sources_less':
+        return 'Minder bronnen tonen';
+      case 'options_website':
+        return 'Officiële website bezoeken';
+      case 'video_setting_mpv_group_hdr':
+        return 'HDR';
+      case 'video_setting_hdr_tone_mapping':
+        return 'HDR-tonemapping';
+      case 'video_setting_hdr_tone_mapping_hint':
+        return 'Curve die wordt gebruikt als een HDR-bron op een SDR-scherm moet worden geperst. ‘Automatisch’ laat mpv per bron kiezen.';
+      case 'video_setting_hdr_compute_peak':
+        return 'Dynamische piekdetectie';
+      case 'video_setting_hdr_compute_peak_hint':
+        return 'Meet de echte piekhelderheid van elk beeld in plaats van te vertrouwen op de metadata van de bron. Betere highlights, kost wat GPU.';
+      case 'video_setting_hdr_auto':
+        return 'Automatisch';
+      case 'video_setting_hdr_on':
+        return 'Aan';
+      case 'video_setting_hdr_off':
+        return 'Uit';
+      case 'video_discovery_cancel_downloads_title':
+        return 'Downloads annuleren?';
+      case 'video_discovery_cancel_downloads_body':
+        return ({required Object n}) =>
+            '${n} downloadtaak/-taken voor deze titel worden gestopt. Al gedownloade delen blijven op schijf staan; je kunt de download later opnieuw starten.';
+      case 'video_discovery_cancel_downloads_failed':
+        return 'Kon de download niet annuleren. De taak is mogelijk al klaar, of de download-backend is niet beschikbaar.';
       case 'gal_hook_click_lookup':
-        return 'Tap a word to look it up';
+        return 'Tik op een woord om het op te zoeken';
       case 'gal_hook_click_lookup_hint':
-        return 'Off means clicks on the caption never trigger a lookup — useful with click-through on, when you would rather not hit a word by accident.';
+        return 'Uit betekent dat klikken op de tekst nooit een opzoeking start — handig met doorklikken aan, als je niet per ongeluk een woord wilt raken.';
       case 'gal_hook_lookup_trigger':
-        return 'Lookup trigger';
+        return 'Opzoekknop';
       case 'gal_hook_lookup_trigger_hint':
-        return 'Which mouse button looks up the word under the pointer. Independent of the switch above: you can turn tap-lookup off and still look up with a side button.';
+        return 'Welke muisknop het woord onder de aanwijzer opzoekt. Los van de schakelaar hierboven: je kunt tikken-om-op-te-zoeken uitzetten en toch met een zijknop opzoeken.';
       case 'gal_hook_lookup_trigger_left':
         return 'Left click';
       case 'gal_hook_lookup_trigger_middle':
@@ -228488,13 +229394,13 @@ extension on _StringsNl {
       case 'gal_hook_lookup_trigger_side':
         return 'Side button';
       case 'gal_hook_toolbar_auto_hide':
-        return 'Auto-hide the toolbar';
+        return 'Werkbalk automatisch verbergen';
       case 'gal_hook_toolbar_auto_hide_hint':
-        return 'Hide the toolbar until the pointer reaches the caption box, LunaHook style. Hidden means really hidden — those pixels go back to the game.';
+        return 'Verbergt de werkbalk tot de aanwijzer het tekstvak bereikt, zoals LunaHook. Verborgen is echt verborgen — die pixels gaan terug naar het spel.';
       case 'gal_hook_passthrough_blocks_mouse':
-        return 'Caption still catches clicks while clicking through';
+        return 'Tekst vangt nog klikken tijdens doorklikken';
       case 'gal_hook_passthrough_blocks_mouse_hint':
-        return 'On: text lines still take clicks so you can tap a word. Off: the whole overlay is transparent to the mouse — you can click whatever is underneath, but tapping words no longer works.';
+        return 'Aan: tekstregels blijven klikken aannemen, zodat je een woord kunt aantikken. Uit: de hele overlay is transparant voor de muis — je klikt wat eronder ligt, maar woorden aantikken werkt niet meer.';
       default:
         return null;
     }
@@ -236451,14 +237357,45 @@ extension on _StringsPtBr {
             'Lido até a página ${page} de ${total}';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'Lido até a página ${page}';
+      case 'mihon_store_extension_count':
+        return ({required Object count}) => '${count} extensões';
+      case 'mihon_extension_sources_more':
+        return ({required Object count}) => 'Mostrar todas as ${count} fontes';
+      case 'mihon_extension_sources_less':
+        return 'Mostrar menos fontes';
+      case 'options_website':
+        return 'Visitar o site oficial';
+      case 'video_setting_mpv_group_hdr':
+        return 'HDR';
+      case 'video_setting_hdr_tone_mapping':
+        return 'Mapeamento de tons HDR';
+      case 'video_setting_hdr_tone_mapping_hint':
+        return 'Curva usada quando uma fonte HDR precisa ser comprimida para uma tela SDR. “Automático” deixa o mpv escolher por fonte.';
+      case 'video_setting_hdr_compute_peak':
+        return 'Detecção dinâmica de pico';
+      case 'video_setting_hdr_compute_peak_hint':
+        return 'Mede o pico real de brilho de cada quadro em vez de confiar nos metadados da fonte. Melhores altas-luzes, com algum custo de GPU.';
+      case 'video_setting_hdr_auto':
+        return 'Automático';
+      case 'video_setting_hdr_on':
+        return 'Ligado';
+      case 'video_setting_hdr_off':
+        return 'Desligado';
+      case 'video_discovery_cancel_downloads_title':
+        return 'Cancelar os downloads?';
+      case 'video_discovery_cancel_downloads_body':
+        return ({required Object n}) =>
+            '${n} tarefa(s) de download deste título serão interrompidas. As partes já baixadas continuam no disco; você pode recomeçar o download depois.';
+      case 'video_discovery_cancel_downloads_failed':
+        return 'Não foi possível cancelar o download. A tarefa pode já ter terminado, ou o backend de download está indisponível.';
       case 'gal_hook_click_lookup':
-        return 'Tap a word to look it up';
+        return 'Toque numa palavra para consultá-la';
       case 'gal_hook_click_lookup_hint':
-        return 'Off means clicks on the caption never trigger a lookup — useful with click-through on, when you would rather not hit a word by accident.';
+        return 'Desligado: cliques na legenda nunca iniciam uma consulta — útil com o clique passante ligado, quando você prefere não acertar uma palavra sem querer.';
       case 'gal_hook_lookup_trigger':
-        return 'Lookup trigger';
+        return 'Gatilho da consulta';
       case 'gal_hook_lookup_trigger_hint':
-        return 'Which mouse button looks up the word under the pointer. Independent of the switch above: you can turn tap-lookup off and still look up with a side button.';
+        return 'Qual botão do mouse consulta a palavra sob o ponteiro. Independente da chave acima: você pode desligar o toque-para-consultar e ainda consultar com um botão lateral.';
       case 'gal_hook_lookup_trigger_left':
         return 'Left click';
       case 'gal_hook_lookup_trigger_middle':
@@ -236466,13 +237403,13 @@ extension on _StringsPtBr {
       case 'gal_hook_lookup_trigger_side':
         return 'Side button';
       case 'gal_hook_toolbar_auto_hide':
-        return 'Auto-hide the toolbar';
+        return 'Ocultar a barra automaticamente';
       case 'gal_hook_toolbar_auto_hide_hint':
-        return 'Hide the toolbar until the pointer reaches the caption box, LunaHook style. Hidden means really hidden — those pixels go back to the game.';
+        return 'Oculta a barra até o ponteiro chegar à caixa de legenda, no estilo do LunaHook. Oculto significa oculto de verdade — aqueles pixels voltam para o jogo.';
       case 'gal_hook_passthrough_blocks_mouse':
-        return 'Caption still catches clicks while clicking through';
+        return 'A legenda ainda recebe cliques durante o clique passante';
       case 'gal_hook_passthrough_blocks_mouse_hint':
-        return 'On: text lines still take clicks so you can tap a word. Off: the whole overlay is transparent to the mouse — you can click whatever is underneath, but tapping words no longer works.';
+        return 'Ligado: as linhas de texto continuam recebendo cliques, então você pode tocar numa palavra. Desligado: toda a sobreposição fica transparente ao mouse — você clica no que está embaixo, mas tocar palavras não funciona mais.';
       default:
         return null;
     }
@@ -244435,14 +245372,45 @@ extension on _StringsRu {
             'Прочитано до страницы ${page} из ${total}';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'Прочитано до страницы ${page}';
+      case 'mihon_store_extension_count':
+        return ({required Object count}) => 'Расширений: ${count}';
+      case 'mihon_extension_sources_more':
+        return ({required Object count}) => 'Показать все источники (${count})';
+      case 'mihon_extension_sources_less':
+        return 'Показать меньше источников';
+      case 'options_website':
+        return 'Открыть официальный сайт';
+      case 'video_setting_mpv_group_hdr':
+        return 'HDR';
+      case 'video_setting_hdr_tone_mapping':
+        return 'Тональное отображение HDR';
+      case 'video_setting_hdr_tone_mapping_hint':
+        return 'Кривая, по которой HDR-источник укладывается в SDR-экран. «Авто» оставляет выбор за mpv для каждого источника.';
+      case 'video_setting_hdr_compute_peak':
+        return 'Динамическое определение пика';
+      case 'video_setting_hdr_compute_peak_hint':
+        return 'Измеряет реальную пиковую яркость каждого кадра вместо доверия метаданным источника. Света лучше, но нагружает GPU.';
+      case 'video_setting_hdr_auto':
+        return 'Авто';
+      case 'video_setting_hdr_on':
+        return 'Вкл.';
+      case 'video_setting_hdr_off':
+        return 'Выкл.';
+      case 'video_discovery_cancel_downloads_title':
+        return 'Отменить загрузки?';
+      case 'video_discovery_cancel_downloads_body':
+        return ({required Object n}) =>
+            'Будет остановлено загрузок для этого тайтла: ${n}. Уже скачанные части останутся на диске — загрузку можно начать снова позже.';
+      case 'video_discovery_cancel_downloads_failed':
+        return 'Не удалось отменить загрузку. Возможно, задача уже завершилась или бэкенд загрузок недоступен.';
       case 'gal_hook_click_lookup':
-        return 'Tap a word to look it up';
+        return 'Нажмите на слово, чтобы найти его';
       case 'gal_hook_click_lookup_hint':
-        return 'Off means clicks on the caption never trigger a lookup — useful with click-through on, when you would rather not hit a word by accident.';
+        return 'Выключено — клики по субтитрам никогда не запускают поиск. Удобно вместе с включённым сквозным кликом, когда не хочется случайно попасть по слову.';
       case 'gal_hook_lookup_trigger':
-        return 'Lookup trigger';
+        return 'Кнопка поиска';
       case 'gal_hook_lookup_trigger_hint':
-        return 'Which mouse button looks up the word under the pointer. Independent of the switch above: you can turn tap-lookup off and still look up with a side button.';
+        return 'Какая кнопка мыши ищет слово под указателем. Не зависит от переключателя выше: можно выключить поиск по нажатию и всё равно искать боковой кнопкой.';
       case 'gal_hook_lookup_trigger_left':
         return 'Left click';
       case 'gal_hook_lookup_trigger_middle':
@@ -244450,13 +245418,13 @@ extension on _StringsRu {
       case 'gal_hook_lookup_trigger_side':
         return 'Side button';
       case 'gal_hook_toolbar_auto_hide':
-        return 'Auto-hide the toolbar';
+        return 'Автоматически скрывать панель';
       case 'gal_hook_toolbar_auto_hide_hint':
-        return 'Hide the toolbar until the pointer reaches the caption box, LunaHook style. Hidden means really hidden — those pixels go back to the game.';
+        return 'Скрывает панель, пока указатель не дойдёт до блока субтитров — как в LunaHook. Скрыто значит скрыто по-настоящему: эти пиксели возвращаются игре.';
       case 'gal_hook_passthrough_blocks_mouse':
-        return 'Caption still catches clicks while clicking through';
+        return 'Субтитры продолжают ловить клики при сквозном клике';
       case 'gal_hook_passthrough_blocks_mouse_hint':
-        return 'On: text lines still take clicks so you can tap a word. Off: the whole overlay is transparent to the mouse — you can click whatever is underneath, but tapping words no longer works.';
+        return 'Вкл.: строки текста по-прежнему принимают клики, поэтому по слову можно нажать. Выкл.: весь оверлей прозрачен для мыши — вы кликаете то, что под ним, но нажатие по словам больше не работает.';
       default:
         return null;
     }
@@ -252391,14 +253359,45 @@ extension on _StringsTh {
             'อ่านถึงหน้า ${page} จาก ${total}';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'อ่านถึงหน้า ${page}';
+      case 'mihon_store_extension_count':
+        return ({required Object count}) => 'ส่วนขยาย ${count} รายการ';
+      case 'mihon_extension_sources_more':
+        return ({required Object count}) => 'แสดงแหล่งทั้งหมด ${count} แหล่ง';
+      case 'mihon_extension_sources_less':
+        return 'แสดงแหล่งน้อยลง';
+      case 'options_website':
+        return 'เยี่ยมชมเว็บไซต์ทางการ';
+      case 'video_setting_mpv_group_hdr':
+        return 'HDR';
+      case 'video_setting_hdr_tone_mapping':
+        return 'การแมปโทน HDR';
+      case 'video_setting_hdr_tone_mapping_hint':
+        return 'เส้นโค้งที่ใช้เมื่อต้องบีบแหล่ง HDR ลงบนจอ SDR "อัตโนมัติ" ให้ mpv เลือกตามแต่ละแหล่ง';
+      case 'video_setting_hdr_compute_peak':
+        return 'ตรวจจับจุดสว่างสุดแบบไดนามิก';
+      case 'video_setting_hdr_compute_peak_hint':
+        return 'วัดความสว่างสูงสุดจริงของแต่ละเฟรมแทนการเชื่อเมตาดาตาของแหล่ง ไฮไลต์ดีขึ้นแต่กิน GPU เล็กน้อย';
+      case 'video_setting_hdr_auto':
+        return 'อัตโนมัติ';
+      case 'video_setting_hdr_on':
+        return 'เปิด';
+      case 'video_setting_hdr_off':
+        return 'ปิด';
+      case 'video_discovery_cancel_downloads_title':
+        return 'ยกเลิกการดาวน์โหลดไหม';
+      case 'video_discovery_cancel_downloads_body':
+        return ({required Object n}) =>
+            'งานดาวน์โหลดของเรื่องนี้ ${n} งานจะถูกหยุด ส่วนที่ดาวน์โหลดไปแล้วยังอยู่ในดิสก์ และเริ่มดาวน์โหลดใหม่ได้ภายหลัง';
+      case 'video_discovery_cancel_downloads_failed':
+        return 'ยกเลิกการดาวน์โหลดไม่สำเร็จ งานอาจเสร็จไปแล้ว หรือแบ็กเอนด์ดาวน์โหลดใช้งานไม่ได้';
       case 'gal_hook_click_lookup':
-        return 'Tap a word to look it up';
+        return 'แตะคำเพื่อเปิดพจนานุกรม';
       case 'gal_hook_click_lookup_hint':
-        return 'Off means clicks on the caption never trigger a lookup — useful with click-through on, when you would rather not hit a word by accident.';
+        return 'ปิดไว้หมายความว่าการคลิกบนคำบรรยายจะไม่เปิดพจนานุกรม มีประโยชน์เมื่อเปิดคลิกทะลุ และคุณไม่อยากเผลอโดนคำ';
       case 'gal_hook_lookup_trigger':
-        return 'Lookup trigger';
+        return 'ปุ่มเปิดพจนานุกรม';
       case 'gal_hook_lookup_trigger_hint':
-        return 'Which mouse button looks up the word under the pointer. Independent of the switch above: you can turn tap-lookup off and still look up with a side button.';
+        return 'ปุ่มเมาส์ที่ใช้เปิดคำใต้ตัวชี้ แยกจากสวิตช์ด้านบน คุณปิดการแตะเพื่อเปิดได้ แล้วยังใช้ปุ่มข้างเปิดได้อยู่';
       case 'gal_hook_lookup_trigger_left':
         return 'Left click';
       case 'gal_hook_lookup_trigger_middle':
@@ -252406,13 +253405,13 @@ extension on _StringsTh {
       case 'gal_hook_lookup_trigger_side':
         return 'Side button';
       case 'gal_hook_toolbar_auto_hide':
-        return 'Auto-hide the toolbar';
+        return 'ซ่อนแถบเครื่องมืออัตโนมัติ';
       case 'gal_hook_toolbar_auto_hide_hint':
-        return 'Hide the toolbar until the pointer reaches the caption box, LunaHook style. Hidden means really hidden — those pixels go back to the game.';
+        return 'ซ่อนแถบเครื่องมือจนกว่าตัวชี้จะถึงกล่องคำบรรยาย แบบ LunaHook ซ่อนคือซ่อนจริง ๆ พิกเซลเหล่านั้นคืนให้เกม';
       case 'gal_hook_passthrough_blocks_mouse':
-        return 'Caption still catches clicks while clicking through';
+        return 'คำบรรยายยังรับคลิกขณะคลิกทะลุ';
       case 'gal_hook_passthrough_blocks_mouse_hint':
-        return 'On: text lines still take clicks so you can tap a word. Off: the whole overlay is transparent to the mouse — you can click whatever is underneath, but tapping words no longer works.';
+        return 'เปิด: บรรทัดข้อความยังรับคลิก จึงแตะคำได้ ปิด: โอเวอร์เลย์ทั้งหมดโปร่งต่อเมาส์ คุณคลิกสิ่งที่อยู่ข้างล่างได้ แต่แตะคำจะไม่ทำงานอีก';
       default:
         return null;
     }
@@ -260364,14 +261363,45 @@ extension on _StringsTr {
             '${total} sayfadan ${page}. sayfaya kadar okundu';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => '${page}. sayfaya kadar okundu';
+      case 'mihon_store_extension_count':
+        return ({required Object count}) => '${count} uzantı';
+      case 'mihon_extension_sources_more':
+        return ({required Object count}) => '${count} kaynağın tümünü göster';
+      case 'mihon_extension_sources_less':
+        return 'Daha az kaynak göster';
+      case 'options_website':
+        return 'Resmî web sitesini ziyaret et';
+      case 'video_setting_mpv_group_hdr':
+        return 'HDR';
+      case 'video_setting_hdr_tone_mapping':
+        return 'HDR ton eşleme';
+      case 'video_setting_hdr_tone_mapping_hint':
+        return 'Bir HDR kaynağı SDR ekrana sıkıştırılırken kullanılan eğri. “Otomatik” seçimi kaynak başına mpv’ye bırakır.';
+      case 'video_setting_hdr_compute_peak':
+        return 'Dinamik tepe algılama';
+      case 'video_setting_hdr_compute_peak_hint':
+        return 'Kaynağın üstverisine güvenmek yerine her karenin gerçek tepe parlaklığını ölçer. Parlak alanlar daha iyi olur, biraz GPU harcar.';
+      case 'video_setting_hdr_auto':
+        return 'Otomatik';
+      case 'video_setting_hdr_on':
+        return 'Açık';
+      case 'video_setting_hdr_off':
+        return 'Kapalı';
+      case 'video_discovery_cancel_downloads_title':
+        return 'İndirmeler iptal edilsin mi?';
+      case 'video_discovery_cancel_downloads_body':
+        return ({required Object n}) =>
+            'Bu yapım için ${n} indirme görevi durdurulacak. İndirilmiş parçalar diskte kalır; indirmeyi sonra yeniden başlatabilirsin.';
+      case 'video_discovery_cancel_downloads_failed':
+        return 'İndirme iptal edilemedi. Görev çoktan bitmiş olabilir ya da indirme arka ucu kullanılamıyor.';
       case 'gal_hook_click_lookup':
-        return 'Tap a word to look it up';
+        return 'Aramak için bir kelimeye dokun';
       case 'gal_hook_click_lookup_hint':
-        return 'Off means clicks on the caption never trigger a lookup — useful with click-through on, when you would rather not hit a word by accident.';
+        return 'Kapalı olduğunda altyazıya tıklamak hiçbir zaman arama başlatmaz — tıklama geçişi açıkken yanlışlıkla bir kelimeye denk gelmek istemediğinde kullanışlı.';
       case 'gal_hook_lookup_trigger':
-        return 'Lookup trigger';
+        return 'Arama tetikleyicisi';
       case 'gal_hook_lookup_trigger_hint':
-        return 'Which mouse button looks up the word under the pointer. Independent of the switch above: you can turn tap-lookup off and still look up with a side button.';
+        return 'İmlecin altındaki kelimeyi hangi fare düğmesinin arayacağı. Yukarıdaki anahtardan bağımsızdır: dokunarak aramayı kapatıp yan düğmeyle arayabilirsin.';
       case 'gal_hook_lookup_trigger_left':
         return 'Left click';
       case 'gal_hook_lookup_trigger_middle':
@@ -260379,13 +261409,13 @@ extension on _StringsTr {
       case 'gal_hook_lookup_trigger_side':
         return 'Side button';
       case 'gal_hook_toolbar_auto_hide':
-        return 'Auto-hide the toolbar';
+        return 'Araç çubuğunu otomatik gizle';
       case 'gal_hook_toolbar_auto_hide_hint':
-        return 'Hide the toolbar until the pointer reaches the caption box, LunaHook style. Hidden means really hidden — those pixels go back to the game.';
+        return 'İmleç altyazı kutusuna gelene kadar araç çubuğunu gizler, LunaHook tarzı. Gizli gerçekten gizli demek — o pikseller oyuna geri döner.';
       case 'gal_hook_passthrough_blocks_mouse':
-        return 'Caption still catches clicks while clicking through';
+        return 'Tıklama geçişi açıkken altyazı yine tıklama alır';
       case 'gal_hook_passthrough_blocks_mouse_hint':
-        return 'On: text lines still take clicks so you can tap a word. Off: the whole overlay is transparent to the mouse — you can click whatever is underneath, but tapping words no longer works.';
+        return 'Açık: metin satırları tıklama almaya devam eder, böylece bir kelimeye dokunabilirsin. Kapalı: tüm katman fareye saydamdır — altındakine tıklarsın ama kelimelere dokunmak artık çalışmaz.';
       default:
         return null;
     }
@@ -268330,14 +269360,45 @@ extension on _StringsVi {
             'Đã đọc đến trang ${page} trên ${total}';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => 'Đã đọc đến trang ${page}';
+      case 'mihon_store_extension_count':
+        return ({required Object count}) => '${count} tiện ích';
+      case 'mihon_extension_sources_more':
+        return ({required Object count}) => 'Hiện tất cả ${count} nguồn';
+      case 'mihon_extension_sources_less':
+        return 'Hiện ít nguồn hơn';
+      case 'options_website':
+        return 'Truy cập trang web chính thức';
+      case 'video_setting_mpv_group_hdr':
+        return 'HDR';
+      case 'video_setting_hdr_tone_mapping':
+        return 'Ánh xạ tông màu HDR';
+      case 'video_setting_hdr_tone_mapping_hint':
+        return 'Đường cong dùng khi phải nén nguồn HDR xuống màn hình SDR. “Tự động” để mpv chọn theo từng nguồn.';
+      case 'video_setting_hdr_compute_peak':
+        return 'Phát hiện đỉnh động';
+      case 'video_setting_hdr_compute_peak_hint':
+        return 'Đo độ sáng đỉnh thực của từng khung hình thay vì tin vào siêu dữ liệu của nguồn. Vùng sáng đẹp hơn, tốn thêm chút GPU.';
+      case 'video_setting_hdr_auto':
+        return 'Tự động';
+      case 'video_setting_hdr_on':
+        return 'Bật';
+      case 'video_setting_hdr_off':
+        return 'Tắt';
+      case 'video_discovery_cancel_downloads_title':
+        return 'Huỷ tải xuống?';
+      case 'video_discovery_cancel_downloads_body':
+        return ({required Object n}) =>
+            '${n} tác vụ tải xuống của tác phẩm này sẽ bị dừng. Các phần đã tải vẫn nằm trên ổ đĩa; bạn có thể tải lại sau.';
+      case 'video_discovery_cancel_downloads_failed':
+        return 'Không huỷ được tải xuống. Tác vụ có thể đã xong, hoặc backend tải xuống hiện không khả dụng.';
       case 'gal_hook_click_lookup':
-        return 'Tap a word to look it up';
+        return 'Chạm vào từ để tra nghĩa';
       case 'gal_hook_click_lookup_hint':
-        return 'Off means clicks on the caption never trigger a lookup — useful with click-through on, when you would rather not hit a word by accident.';
+        return 'Tắt nghĩa là bấm vào phụ đề sẽ không bao giờ tra từ — hữu ích khi bật xuyên chuột và bạn không muốn lỡ tay trúng một từ.';
       case 'gal_hook_lookup_trigger':
-        return 'Lookup trigger';
+        return 'Nút tra từ';
       case 'gal_hook_lookup_trigger_hint':
-        return 'Which mouse button looks up the word under the pointer. Independent of the switch above: you can turn tap-lookup off and still look up with a side button.';
+        return 'Nút chuột nào sẽ tra từ dưới con trỏ. Độc lập với công tắc phía trên: bạn có thể tắt chạm-để-tra mà vẫn tra bằng nút bên hông.';
       case 'gal_hook_lookup_trigger_left':
         return 'Left click';
       case 'gal_hook_lookup_trigger_middle':
@@ -268345,13 +269406,13 @@ extension on _StringsVi {
       case 'gal_hook_lookup_trigger_side':
         return 'Side button';
       case 'gal_hook_toolbar_auto_hide':
-        return 'Auto-hide the toolbar';
+        return 'Tự ẩn thanh công cụ';
       case 'gal_hook_toolbar_auto_hide_hint':
-        return 'Hide the toolbar until the pointer reaches the caption box, LunaHook style. Hidden means really hidden — those pixels go back to the game.';
+        return 'Ẩn thanh công cụ cho tới khi con trỏ chạm vào khung phụ đề, kiểu LunaHook. Ẩn là ẩn thật — số điểm ảnh đó trả lại cho game.';
       case 'gal_hook_passthrough_blocks_mouse':
-        return 'Caption still catches clicks while clicking through';
+        return 'Phụ đề vẫn nhận nhấp chuột khi xuyên chuột';
       case 'gal_hook_passthrough_blocks_mouse_hint':
-        return 'On: text lines still take clicks so you can tap a word. Off: the whole overlay is transparent to the mouse — you can click whatever is underneath, but tapping words no longer works.';
+        return 'Bật: các dòng chữ vẫn nhận nhấp chuột nên bạn chạm được vào từ. Tắt: toàn bộ lớp phủ trong suốt với chuột — bạn bấm được thứ bên dưới, nhưng chạm vào từ không còn tác dụng.';
       default:
         return null;
     }
@@ -276230,6 +277291,37 @@ extension on _StringsZhCn {
             '读到第 ${page}/${total} 页';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => '读到第 ${page} 页';
+      case 'mihon_store_extension_count':
+        return ({required Object count}) => '${count} 个扩展';
+      case 'mihon_extension_sources_more':
+        return ({required Object count}) => '展开全部 ${count} 个源';
+      case 'mihon_extension_sources_less':
+        return '收起源列表';
+      case 'options_website':
+        return '访问官网';
+      case 'video_setting_mpv_group_hdr':
+        return 'HDR';
+      case 'video_setting_hdr_tone_mapping':
+        return 'HDR 色调映射';
+      case 'video_setting_hdr_tone_mapping_hint':
+        return '把 HDR 片源压到 SDR 屏幕上时用的曲线。自动 = 交给 mpv 按片源挑。';
+      case 'video_setting_hdr_compute_peak':
+        return '动态峰值检测';
+      case 'video_setting_hdr_compute_peak_hint':
+        return '逐帧测量真实峰值亮度，而不是相信片源元数据。高光更准，但会占一点 GPU。';
+      case 'video_setting_hdr_auto':
+        return '自动';
+      case 'video_setting_hdr_on':
+        return '开';
+      case 'video_setting_hdr_off':
+        return '关';
+      case 'video_discovery_cancel_downloads_title':
+        return '取消下载？';
+      case 'video_discovery_cancel_downloads_body':
+        return ({required Object n}) =>
+            '本作品有 ${n} 个下载任务会被停止。已下载的分片仍保留在磁盘上，之后可以重新开始下载。';
+      case 'video_discovery_cancel_downloads_failed':
+        return '取消下载失败。任务可能已经结束，或下载后端当前不可用。';
       case 'gal_hook_click_lookup':
         return '单击文字查词';
       case 'gal_hook_click_lookup_hint':
@@ -284131,14 +285223,45 @@ extension on _StringsZhHk {
             '讀到第 ${page}/${total} 頁';
       case 'manga_series_read_progress_partial':
         return ({required Object page}) => '讀到第 ${page} 頁';
+      case 'mihon_store_extension_count':
+        return ({required Object count}) => '${count} 個擴充';
+      case 'mihon_extension_sources_more':
+        return ({required Object count}) => '顯示全部 ${count} 個來源';
+      case 'mihon_extension_sources_less':
+        return '顯示較少來源';
+      case 'options_website':
+        return '瀏覽官方網站';
+      case 'video_setting_mpv_group_hdr':
+        return 'HDR';
+      case 'video_setting_hdr_tone_mapping':
+        return 'HDR 色調映射';
+      case 'video_setting_hdr_tone_mapping_hint':
+        return '把 HDR 片源壓進 SDR 螢幕時用的曲線。自動 = 交給 mpv 按片源決定。';
+      case 'video_setting_hdr_compute_peak':
+        return '動態峰值偵測';
+      case 'video_setting_hdr_compute_peak_hint':
+        return '逐格量實際峰值亮度，而不是信片源中繼資料。高光更準，但會佔一點 GPU。';
+      case 'video_setting_hdr_auto':
+        return '自動';
+      case 'video_setting_hdr_on':
+        return '開';
+      case 'video_setting_hdr_off':
+        return '關';
+      case 'video_discovery_cancel_downloads_title':
+        return '取消下載？';
+      case 'video_discovery_cancel_downloads_body':
+        return ({required Object n}) =>
+            '本作品有 ${n} 個下載任務會被停止。已下載的分片仍保留在磁碟上，之後可以重新開始下載。';
+      case 'video_discovery_cancel_downloads_failed':
+        return '取消下載失敗。任務可能已經結束，或下載後端目前無法使用。';
       case 'gal_hook_click_lookup':
-        return 'Tap a word to look it up';
+        return '點字查詞';
       case 'gal_hook_click_lookup_hint':
-        return 'Off means clicks on the caption never trigger a lookup — useful with click-through on, when you would rather not hit a word by accident.';
+        return '關掉之後，點字幕不會查詞——配合點擊穿透使用，免得不小心點到字。';
       case 'gal_hook_lookup_trigger':
-        return 'Lookup trigger';
+        return '查詞觸發鍵';
       case 'gal_hook_lookup_trigger_hint':
-        return 'Which mouse button looks up the word under the pointer. Independent of the switch above: you can turn tap-lookup off and still look up with a side button.';
+        return '用哪個滑鼠鍵查指標下的字。與上面那個開關互相獨立：可以關掉點字查詞，仍用側鍵查。';
       case 'gal_hook_lookup_trigger_left':
         return 'Left click';
       case 'gal_hook_lookup_trigger_middle':
@@ -284146,13 +285269,13 @@ extension on _StringsZhHk {
       case 'gal_hook_lookup_trigger_side':
         return 'Side button';
       case 'gal_hook_toolbar_auto_hide':
-        return 'Auto-hide the toolbar';
+        return '自動隱藏功能欄';
       case 'gal_hook_toolbar_auto_hide_hint':
-        return 'Hide the toolbar until the pointer reaches the caption box, LunaHook style. Hidden means really hidden — those pixels go back to the game.';
+        return '指標移到字幕框才顯示功能欄（LunaHook 那種）。隱藏就是真的隱藏——那塊像素還給遊戲。';
       case 'gal_hook_passthrough_blocks_mouse':
-        return 'Caption still catches clicks while clicking through';
+        return '穿透時字幕仍接點擊';
       case 'gal_hook_passthrough_blocks_mouse_hint':
-        return 'On: text lines still take clicks so you can tap a word. Off: the whole overlay is transparent to the mouse — you can click whatever is underneath, but tapping words no longer works.';
+        return '開：文字行仍然接點擊，所以點得到字。關：整個浮層對滑鼠完全透明——點得到下面的東西，但點字就失效了。';
       default:
         return null;
     }
