@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 69275 (4075 per locale)
+/// Strings: 69598 (4094 per locale)
 ///
-/// Built on 2026-08-30 at 16:09 UTC
+/// Built on 2026-08-30 at 19:51 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -40,11 +40,12 @@ enum AppLocale with BaseAppLocale<AppLocale, _StringsEn> {
   zhCn(languageCode: 'zh', countryCode: 'CN', build: _StringsZhCn.build),
   zhHk(languageCode: 'zh', countryCode: 'HK', build: _StringsZhHk.build);
 
-  const AppLocale(
-      {required this.languageCode,
-      this.scriptCode,
-      this.countryCode,
-      required this.build}); // ignore: unused_element
+  const AppLocale({
+    required this.languageCode,
+    this.scriptCode,
+    this.countryCode,
+    required this.build,
+  }); // ignore: unused_element
 
   @override
   final String languageCode;
@@ -96,7 +97,7 @@ class Translations {
 class TranslationProvider
     extends BaseTranslationProvider<AppLocale, _StringsEn> {
   TranslationProvider({required super.child})
-      : super(settings: LocaleSettings.instance);
+    : super(settings: LocaleSettings.instance);
 
   static InheritedLocaleData<AppLocale, _StringsEn> of(BuildContext context) =>
       InheritedLocaleData.of<AppLocale, _StringsEn>(context);
@@ -120,48 +121,53 @@ class LocaleSettings extends BaseFlutterLocaleSettings<AppLocale, _StringsEn> {
   // static aliases (checkout base methods for documentation)
   static AppLocale get currentLocale => instance.currentLocale;
   static Stream<AppLocale> getLocaleStream() => instance.getLocaleStream();
-  static AppLocale setLocale(AppLocale locale,
-          {bool? listenToDeviceLocale = false}) =>
-      instance.setLocale(locale, listenToDeviceLocale: listenToDeviceLocale);
-  static AppLocale setLocaleRaw(String rawLocale,
-          {bool? listenToDeviceLocale = false}) =>
-      instance.setLocaleRaw(rawLocale,
-          listenToDeviceLocale: listenToDeviceLocale);
+  static AppLocale setLocale(
+    AppLocale locale, {
+    bool? listenToDeviceLocale = false,
+  }) => instance.setLocale(locale, listenToDeviceLocale: listenToDeviceLocale);
+  static AppLocale setLocaleRaw(
+    String rawLocale, {
+    bool? listenToDeviceLocale = false,
+  }) => instance.setLocaleRaw(
+    rawLocale,
+    listenToDeviceLocale: listenToDeviceLocale,
+  );
   static AppLocale useDeviceLocale() => instance.useDeviceLocale();
   @Deprecated('Use [AppLocaleUtils.supportedLocales]')
   static List<Locale> get supportedLocales => instance.supportedLocales;
   @Deprecated('Use [AppLocaleUtils.supportedLocalesRaw]')
   static List<String> get supportedLocalesRaw => instance.supportedLocalesRaw;
-  static void setPluralResolver(
-          {String? language,
-          AppLocale? locale,
-          PluralResolver? cardinalResolver,
-          PluralResolver? ordinalResolver}) =>
-      instance.setPluralResolver(
-        language: language,
-        locale: locale,
-        cardinalResolver: cardinalResolver,
-        ordinalResolver: ordinalResolver,
-      );
+  static void setPluralResolver({
+    String? language,
+    AppLocale? locale,
+    PluralResolver? cardinalResolver,
+    PluralResolver? ordinalResolver,
+  }) => instance.setPluralResolver(
+    language: language,
+    locale: locale,
+    cardinalResolver: cardinalResolver,
+    ordinalResolver: ordinalResolver,
+  );
 }
 
 /// Provides utility functions without any side effects.
 class AppLocaleUtils extends BaseAppLocaleUtils<AppLocale, _StringsEn> {
   AppLocaleUtils._()
-      : super(baseLocale: _baseLocale, locales: AppLocale.values);
+    : super(baseLocale: _baseLocale, locales: AppLocale.values);
 
   static final instance = AppLocaleUtils._();
 
   // static aliases (checkout base methods for documentation)
   static AppLocale parse(String rawLocale) => instance.parse(rawLocale);
-  static AppLocale parseLocaleParts(
-          {required String languageCode,
-          String? scriptCode,
-          String? countryCode}) =>
-      instance.parseLocaleParts(
-          languageCode: languageCode,
-          scriptCode: scriptCode,
-          countryCode: countryCode);
+  static AppLocale parseLocaleParts({
+    required String languageCode,
+    String? scriptCode,
+    String? countryCode,
+  }) => instance.parseLocaleParts(
+    languageCode: languageCode,
+    scriptCode: scriptCode,
+    countryCode: countryCode,
+  );
   static AppLocale findDeviceLocale() => instance.findDeviceLocale();
   static List<Locale> get supportedLocales => instance.supportedLocales;
   static List<String> get supportedLocalesRaw => instance.supportedLocalesRaw;
@@ -173,18 +179,20 @@ class AppLocaleUtils extends BaseAppLocaleUtils<AppLocale, _StringsEn> {
 class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   /// You can call this constructor and build your own translation instance of this locale.
   /// Constructing via the enum [AppLocale.build] is preferred.
-  _StringsEn.build(
-      {Map<String, Node>? overrides,
-      PluralResolver? cardinalResolver,
-      PluralResolver? ordinalResolver})
-      : assert(overrides == null,
-            'Set "translation_overrides: true" in order to enable this feature.'),
-        $meta = TranslationMetadata(
-          locale: AppLocale.en,
-          overrides: overrides ?? {},
-          cardinalResolver: cardinalResolver,
-          ordinalResolver: ordinalResolver,
-        ) {
+  _StringsEn.build({
+    Map<String, Node>? overrides,
+    PluralResolver? cardinalResolver,
+    PluralResolver? ordinalResolver,
+  }) : assert(
+         overrides == null,
+         'Set "translation_overrides: true" in order to enable this feature.',
+       ),
+       $meta = TranslationMetadata(
+         locale: AppLocale.en,
+         overrides: overrides ?? {},
+         cardinalResolver: cardinalResolver,
+         ordinalResolver: ordinalResolver,
+       ) {
     $meta.setFlatMapFunction(_flatMapFunction);
   }
 
@@ -472,10 +480,11 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       '${count} videos selected';
   String get backup_exporting => 'Creating backup…';
   String get backup_import => 'Import backup';
-  String backup_import_confirm(
-          {required Object date,
-          required Object bookCount,
-          required Object statsCount}) =>
+  String backup_import_confirm({
+    required Object date,
+    required Object bookCount,
+    required Object statsCount,
+  }) =>
       'This will replace all current data with the backup from ${date}.\n\n${bookCount} books, ${statsCount} statistics records.\n\nThe app will restart after restore.';
   String get backup_import_confirm_title => 'Restore Backup?';
   String get backup_import_contents_hint => 'Untick an item to skip it.';
@@ -485,8 +494,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get backup_import_hint =>
       'Restore from a backup file. The app will restart.';
   String get backup_import_invalid => 'Invalid backup file';
-  String backup_import_merge_preview(
-          {required Object bookCount, required Object progressCount}) =>
+  String backup_import_merge_preview({
+    required Object bookCount,
+    required Object progressCount,
+  }) =>
       'Merge will add ${bookCount} books and update ${progressCount} reading positions.';
   String get backup_import_mode_label => 'Import mode';
   String get backup_import_mode_merge => 'Merge into current library';
@@ -656,12 +667,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'No changelog found. Check your network or proxy settings.';
   String get changelog_open_releases => 'Open releases page';
   String get changelog_prerelease => 'Prerelease';
-  String chapter_progress(
-          {required Object idx,
-          required Object total,
-          required Object suffix,
-          required Object pct}) =>
-      'Chapter ${idx} / ${total}${suffix} · ${pct}%';
+  String chapter_progress({
+    required Object idx,
+    required Object total,
+    required Object suffix,
+    required Object pct,
+  }) => 'Chapter ${idx} / ${total}${suffix} · ${pct}%';
   String get clear => 'Clear';
   String get clear_dictionary_description =>
       'This will clear all dictionary results from history. Are you sure?';
@@ -709,9 +720,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get collection_sort_by_imported => 'Sort by import date';
   String get collection_sort_by_title => 'Sort by name';
   String get collection_view_all => 'View all';
-  String collection_watched_progress(
-          {required Object done, required Object total}) =>
-      'Watched ${done}/${total}';
+  String collection_watched_progress({
+    required Object done,
+    required Object total,
+  }) => 'Watched ${done}/${total}';
   String get collection_word => 'Word';
   String get collections => 'Collections';
   String get color_container => 'Container';
@@ -828,9 +840,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get data_storage_migrate_failed_suggestions =>
       'Please try again with a different, empty folder. Do not choose the app\'s install folder, and make sure no files in that location are in use.';
   String get data_storage_migrate_failed_title => 'Data migration failed';
-  String data_storage_migrate_overlay_progress(
-          {required Object copied, required Object total}) =>
-      'Copying files: ${copied} / ${total}';
+  String data_storage_migrate_overlay_progress({
+    required Object copied,
+    required Object total,
+  }) => 'Copying files: ${copied} / ${total}';
   String get data_storage_migrate_overlay_title => 'Moving your data';
   String get data_storage_migrate_overlay_warning =>
       'Please keep the app open. Do not close or shut down your computer until it finishes.';
@@ -840,8 +853,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'That folder is the app\'s install location and can\'t store your data. Please choose a different, empty folder.';
   String get data_storage_restart_failed =>
       'Data moved, but automatic restart failed. Please reopen Fushi manually.';
-  String db_downgrade_message(
-          {required Object dbVersion, required Object appVersion}) =>
+  String db_downgrade_message({
+    required Object dbVersion,
+    required Object appVersion,
+  }) =>
       'This database was created by a newer version of Fushi (schema v${dbVersion}). Your current app is too old (v${appVersion}). Opening was blocked to protect your data. Please update the app and try again.';
   String get db_downgrade_title => 'Update Fushi';
   String get db_unrecoverable_message =>
@@ -930,11 +945,11 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Download failed: ${error}';
   String get dict_download_installed => 'Installed';
   String get dict_download_language => 'Your language';
-  String dict_download_partial(
-          {required Object success,
-          required Object total,
-          required Object error}) =>
-      '${success} / ${total} OK. Failed: ${error}';
+  String dict_download_partial({
+    required Object success,
+    required Object total,
+    required Object error,
+  }) => '${success} / ${total} OK. Failed: ${error}';
   String get dict_download_select_title => 'Select dictionaries';
   String dict_downloading({required Object name}) => 'Downloading ${name}…';
   String dict_import_failed_summary({required Object n}) =>
@@ -952,16 +967,18 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get dict_update_interval_monthly => 'Monthly';
   String get dict_update_interval_weekly => 'Weekly';
   String get dict_update_latest => 'Already up to date.';
-  String dict_update_name_mismatch_body(
-          {required Object incoming, required Object existing}) =>
+  String dict_update_name_mismatch_body({
+    required Object incoming,
+    required Object existing,
+  }) =>
       'The selected file is "${incoming}", but you are updating "${existing}". Replace anyway?';
   String get dict_update_name_mismatch_title => 'Names do not match';
   String get dict_update_none => 'All dictionaries are up to date.';
-  String dict_update_summary(
-          {required Object updated,
-          required Object current,
-          required Object failed}) =>
-      '${updated} updated, ${current} up to date, ${failed} failed.';
+  String dict_update_summary({
+    required Object updated,
+    required Object current,
+    required Object failed,
+  }) => '${updated} updated, ${current} up to date, ${failed} failed.';
   String get dict_update_tooltip => 'Update dictionary';
   String dict_update_updating({required Object name}) => 'Updating ${name}…';
   String get dictionaries => 'Dictionaries';
@@ -1008,8 +1025,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'After episode ${episode}';
   String get download_subscription_check_all => 'Check all';
   String get download_subscription_check_now => 'Check now';
-  String download_subscription_choice_hint(
-          {required Object group, required Object resolution}) =>
+  String download_subscription_choice_hint({
+    required Object group,
+    required Object resolution,
+  }) =>
       'Follow ${group} · ${resolution}. New single-episode releases will be queued.';
   String get download_subscription_created =>
       'Download queued and subscription created';
@@ -1092,9 +1111,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get favorite_added => 'Sentence saved to favorites';
   String get favorite_removed => 'Sentence removed from favorites';
   String favorites({required Object n}) => 'Favorites (${n})';
-  String field_fallback_used(
-          {required Object field, required Object secondField}) =>
-      'The ${field} field used ${secondField} as its fallback search term.';
+  String field_fallback_used({
+    required Object field,
+    required Object secondField,
+  }) => 'The ${field} field used ${secondField} as its fallback search term.';
   String file_count({required Object count}) => '${count} files';
   String get floating_dict_close => 'Close';
   String get floating_dict_title => 'Dictionary';
@@ -1495,12 +1515,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get game_user_rating => 'My rating';
   String get game_view_detail => 'View details';
   String get game_waiting_for_text => 'Waiting for text';
-  String game_waveform_range_label(
-          {required Object start,
-          required Object end,
-          required Object duration,
-          required Object total}) =>
-      '${start} - ${end} (selected ${duration} / total ${total})';
+  String game_waveform_range_label({
+    required Object start,
+    required Object end,
+    required Object duration,
+    required Object total,
+  }) => '${start} - ${end} (selected ${duration} / total ${total})';
   String get game_waveform_select_title => 'Select audio range';
   String get game_window_bound => 'Bound';
   String get game_window_missing => 'Not bound';
@@ -1646,9 +1666,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get invert_swipe_direction => 'Invert swipe page turn direction';
   String get invert_volume_buttons => 'Invert volume buttons';
   String get jump_to_char => 'Jump to character';
-  String jump_to_char_current(
-          {required Object current, required Object total}) =>
-      'Current: ${current} / ${total}';
+  String jump_to_char_current({
+    required Object current,
+    required Object total,
+  }) => 'Current: ${current} / ${total}';
   String get jump_to_char_hint => 'Enter character position…';
   String get keep_screen_awake => 'Keep screen awake';
   String get library_search => 'Search library';
@@ -1747,9 +1768,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'This folder already has a .mokuro file — use normal import instead.';
   String get manga_ocr_wizard_importing => 'Importing…';
   String get manga_ocr_wizard_no_images => 'No images found in this folder.';
-  String manga_ocr_wizard_page_progress(
-          {required Object done, required Object total}) =>
-      'Page ${done} / ${total}';
+  String manga_ocr_wizard_page_progress({
+    required Object done,
+    required Object total,
+  }) => 'Page ${done} / ${total}';
   String get manga_ocr_wizard_pick_folder => 'Choose image folder';
   String get manga_ocr_wizard_run => 'Run OCR';
   String get manga_ocr_wizard_running => 'Running OCR…';
@@ -1762,9 +1784,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get manga_online_failed => 'Download failed';
   String get manga_online_load_failed => 'Failed to load catalog';
   String get manga_online_queue_added => 'Added to download queue';
-  String manga_online_queue_progress(
-          {required Object done, required Object total}) =>
-      'Volume ${done} / ${total}';
+  String manga_online_queue_progress({
+    required Object done,
+    required Object total,
+  }) => 'Volume ${done} / ${total}';
   String get manga_online_queue_section => 'Manga catalog downloads';
   String get manga_online_search_hint => 'Search series';
   String get manga_online_stage_cbz => 'Downloading volume…';
@@ -1783,9 +1806,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get manga_remote_ocr_running => 'Paired host is running OCR…';
   String get manga_remote_ocr_unsupported =>
       'The paired host does not support manga OCR.';
-  String manga_remote_ocr_uploading(
-          {required Object done, required Object total}) =>
-      'Uploading pages ${done} / ${total}…';
+  String manga_remote_ocr_uploading({
+    required Object done,
+    required Object total,
+  }) => 'Uploading pages ${done} / ${total}…';
   String get margin_bottom => 'Bottom margin';
   String get margin_left => 'Left margin';
   String get margin_right => 'Right margin';
@@ -2055,13 +2079,15 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String audiobook_rematch_auto_failed({required Object error}) =>
       'Auto-match failed: ${error}';
   String get audiobook_rematch_auto_match => 'Auto match';
-  String audiobook_rematch_auto_picked(
-          {required Object window, required Object pct}) =>
-      'Auto-selected ${window} (hit ${pct}%)';
+  String audiobook_rematch_auto_picked({
+    required Object window,
+    required Object pct,
+  }) => 'Auto-selected ${window} (hit ${pct}%)';
   String audiobook_rematch_default_value({required Object n}) => 'Default ${n}';
-  String audiobook_rematch_health_label(
-          {required Object pct, required Object detail}) =>
-      '${pct} matched — ${detail}';
+  String audiobook_rematch_health_label({
+    required Object pct,
+    required Object detail,
+  }) => '${pct} matched — ${detail}';
   String get audiobook_rematch_matching => 'Matching...';
   String get audiobook_rematch_no_chapters => 'EPUB has no chapter text';
   String get audiobook_rematch_no_cues_to_match => 'No cues to match';
@@ -2071,9 +2097,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'No stored cues, cannot re-run';
   String audiobook_rematch_failed({required Object error}) =>
       'Re-match failed: ${error}';
-  String audiobook_rematch_result(
-          {required Object pct, required Object window}) =>
-      'Rematched: ${pct}% (window: ${window})';
+  String audiobook_rematch_result({
+    required Object pct,
+    required Object window,
+  }) => 'Rematched: ${pct}% (window: ${window})';
   String get audiobook_rematch_search_window => 'Search window';
   String get audiobook_rematch_similarity_threshold => 'Similarity threshold';
   String get audiobook_rematch_threshold_hint =>
@@ -2716,9 +2743,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String update_download_resume_status({required Object status}) =>
       'Resume: ${status}';
   String get update_download_resumed => 'resumed';
-  String update_download_size(
-          {required Object received, required Object total}) =>
-      'Downloaded: ${received} / ${total}';
+  String update_download_size({
+    required Object received,
+    required Object total,
+  }) => 'Downloaded: ${received} / ${total}';
   String update_download_source({required Object source}) =>
       'Source: ${source}';
   String update_download_speed({required Object speed}) => 'Speed: ${speed}';
@@ -2726,12 +2754,14 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get update_hide => 'Hide';
   String update_install_current_executable({required Object path}) =>
       'Running executable: ${path}';
-  String update_install_deletefile_failure(
-          {required Object path, required Object code}) =>
-      'Installer failed to replace ${path} (code ${code})';
-  String update_install_detected_location(
-          {required Object source, required Object path}) =>
-      'Detected install location (${source}): ${path}';
+  String update_install_deletefile_failure({
+    required Object path,
+    required Object code,
+  }) => 'Installer failed to replace ${path} (code ${code})';
+  String update_install_detected_location({
+    required Object source,
+    required Object path,
+  }) => 'Detected install location (${source}): ${path}';
   String update_install_failure_summary({required Object summary}) =>
       'Reason: ${summary}';
   String get update_install_incomplete_message =>
@@ -2745,9 +2775,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Update installer did not start';
   String update_install_launcher_pid({required Object pid}) =>
       'Update launcher PID: ${pid}';
-  String update_install_libmpv_holder(
-          {required Object pid, required Object path}) =>
-      'libmpv holder: PID ${pid} - ${path}';
+  String update_install_libmpv_holder({
+    required Object pid,
+    required Object path,
+  }) => 'libmpv holder: PID ${pid} - ${path}';
   String get update_install_log_not_observed =>
       'Installer log was not created during the post-launch check.';
   String get update_install_log_observed =>
@@ -2769,9 +2800,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get update_install_permission_title => 'Allow installing updates';
   String get update_install_restart_windows_hint =>
       'If the listed processes are closed but libmpv-2.dll is still locked, restart Windows and install again.';
-  String update_install_running_process(
-          {required Object pid, required Object path}) =>
-      'Running Fushi process: PID ${pid} - ${path}';
+  String update_install_running_process({
+    required Object pid,
+    required Object path,
+  }) => 'Running Fushi process: PID ${pid} - ${path}';
   String update_install_success_message({required Object version}) =>
       'Fushi was updated to version ${version}.';
   String get update_install_success_title => 'Update installed';
@@ -2782,9 +2814,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'The update could not be applied, so Fushi is still on the previous version. You can retry the update, or download the latest release manually.';
   String update_message({required Object version}) =>
       'Version ${version} is available.';
-  String update_network_failure(
-          {required Object host, required Object reason}) =>
-      'Could not reach ${host}: ${reason}';
+  String update_network_failure({
+    required Object host,
+    required Object reason,
+  }) => 'Could not reach ${host}: ${reason}';
   String get update_never_remind => 'Don\'t remind me about updates';
   String get update_skip => 'Skip';
   String get url => 'URL';
@@ -2925,9 +2958,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_jimaku_api_key_hint =>
       'Get a free API key at jimaku.cc/account';
   String get video_jimaku_api_key_set => 'API key set';
-  String video_jimaku_batch_done(
-          {required Object done, required Object total}) =>
-      'Subtitles fetched: ${done}/${total}';
+  String video_jimaku_batch_done({
+    required Object done,
+    required Object total,
+  }) => 'Subtitles fetched: ${done}/${total}';
   String get video_jimaku_batch_download => 'Download all';
   String get video_jimaku_batch_title => 'Fetch subtitles for collection';
   String get video_jimaku_download_failed => 'Download failed';
@@ -3211,9 +3245,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String video_shader_download_done({required Object count}) =>
       'Downloaded ${count} shader(s)';
   String get video_shader_download_failed => 'Shader download failed';
-  String video_shader_download_partial(
-          {required Object ok, required Object failed}) =>
-      'Downloaded ${ok} shader(s), ${failed} failed';
+  String video_shader_download_partial({
+    required Object ok,
+    required Object failed,
+  }) => 'Downloaded ${ok} shader(s), ${failed} failed';
   String get video_shader_download_url => 'Download from link';
   String get video_shader_downloaded_label => 'Downloaded';
   String get video_shader_downloading => 'Downloading shaders…';
@@ -3277,9 +3312,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_statistics => 'Video statistics';
   String get video_subtitle_attach_playlist_hint =>
       'Open the playlist to attach a subtitle per episode';
-  String video_subtitle_attached_to_video(
-          {required Object title, required Object count}) =>
-      'Subtitle attached to ${title} (${count} cues)';
+  String video_subtitle_attached_to_video({
+    required Object title,
+    required Object count,
+  }) => 'Subtitle attached to ${title} (${count} cues)';
   String get video_subtitle_auto_align => 'Auto-align subtitle';
   String video_subtitle_auto_align_done({required Object ms}) =>
       'Auto-aligned subtitle by ${ms} ms';
@@ -3404,13 +3440,14 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get anki_dedup_scan => 'Scan for duplicates (no changes)';
   String get anki_dedup_run => 'Deduplicate now';
   String get anki_dedup_report_title => 'Media deduplication report';
-  String anki_dedup_report_body(
-          {required Object groups,
-          required Object removed,
-          required Object size,
-          required Object notes,
-          required Object models,
-          required Object skipped}) =>
+  String anki_dedup_report_body({
+    required Object groups,
+    required Object removed,
+    required Object size,
+    required Object notes,
+    required Object models,
+    required Object skipped,
+  }) =>
       '${groups} duplicate groups; ${removed} extra copies (${size}); ${notes} notes and ${models} note types rewritten; ${skipped} skipped.';
   String get anki_dedup_report_dry_note => 'Scan only - nothing was changed.';
   String get anki_dedup_report_clean => 'No byte-identical duplicates found.';
@@ -3423,11 +3460,11 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get anki_dedup_plan_title => 'Files to delete';
   String anki_dedup_plan_intro({required Object count, required Object size}) =>
       '${count} extra copies, ${size} reclaimable. One copy of each file is kept and every reference is repointed to it first; nothing is ever re-encoded.';
-  String anki_dedup_plan_entry(
-          {required Object file,
-          required Object size,
-          required Object canonical}) =>
-      'Delete ${file} (${size}) - keeping ${canonical}';
+  String anki_dedup_plan_entry({
+    required Object file,
+    required Object size,
+    required Object canonical,
+  }) => 'Delete ${file} (${size}) - keeping ${canonical}';
   String get anki_dedup_plan_delete => 'Delete these files';
   String get anki_dedup_plan_journal =>
       'A journal of every rewrite and deletion is written to the backup folder first.';
@@ -3461,9 +3498,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Remove this game from the library? Game files on disk will not be deleted.';
   String manga_ocr_acceleration_status({required Object engine}) =>
       'OCR acceleration: ${engine}';
-  String manga_ocr_acceleration_degraded(
-          {required Object engine, required Object reason}) =>
-      'GPU acceleration unavailable, running OCR on ${engine}: ${reason}';
+  String manga_ocr_acceleration_degraded({
+    required Object engine,
+    required Object reason,
+  }) => 'GPU acceleration unavailable, running OCR on ${engine}: ${reason}';
   String get media_tracking_status => 'Collection status';
   String get media_tracking_signup => 'Create a Bangumi account';
   String get media_tracking_game => 'Game';
@@ -3491,8 +3529,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get anki_dedup_auto_review => 'Review';
   String anki_dedup_auto_done({required Object count, required Object size}) =>
       'Removed ${count} duplicate Anki media files, ${size} reclaimed';
-  String anki_lapis_backup_done_pruned(
-          {required Object path, required Object count}) =>
+  String anki_lapis_backup_done_pruned({
+    required Object path,
+    required Object count,
+  }) =>
       'Backed up to ${path} (${count} old backups pruned by the 90-day / keep-10 policy)';
   String get game_audio_fallback_policy => 'Audio fallback';
   String get game_audio_fallback_full => 'Allow mixed audio';
@@ -3582,9 +3622,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get game_stat_by_game => 'By game';
   String get stat_clear_all_game_message =>
       'Clear all game play time and session counts? Your game library and activity timeline are kept. This cannot be undone.';
-  String batch_selection_stale_skipped(
-          {required Object m, required Object n}) =>
-      'Skipped ${m} of ${n} selected items that no longer exist';
+  String batch_selection_stale_skipped({
+    required Object m,
+    required Object n,
+  }) => 'Skipped ${m} of ${n} selected items that no longer exist';
   String get game_text_thread_unset =>
       'No thread selected — pick one to start capturing';
   String get media_tracking_watched_show => 'View all watched anime';
@@ -3617,19 +3658,22 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_jimaku_source_failed =>
       'Could not check subtitle availability. Try searching again.';
   String get video_jimaku_language_unknown => 'Language not labeled';
-  String video_jimaku_source_summary(
-          {required Object files,
-          required Object episodes,
-          required Object languages}) =>
-      '${files} subtitle files · ${episodes} episodes · ${languages}';
-  String video_jimaku_episode_unlabeled(
-          {required Object episode, required Object count}) =>
+  String video_jimaku_source_summary({
+    required Object files,
+    required Object episodes,
+    required Object languages,
+  }) => '${files} subtitle files · ${episodes} episodes · ${languages}';
+  String video_jimaku_episode_unlabeled({
+    required Object episode,
+    required Object count,
+  }) =>
       'No subtitle labeled episode ${episode}; ${count} unlabeled files may still match';
   String video_jimaku_episode_unavailable({required Object episode}) =>
       'No subtitle found for episode ${episode}';
-  String video_jimaku_episode_available(
-          {required Object count, required Object languages}) =>
-      '${count} subtitles available · ${languages}';
+  String video_jimaku_episode_available({
+    required Object count,
+    required Object languages,
+  }) => '${count} subtitles available · ${languages}';
   String get manga_online_source_disabled =>
       'This internet source is disabled. Enable it in Sources to browse the catalog.';
   String get selection_web_search => 'Search the web';
@@ -3640,12 +3684,14 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get anki_dedup_progress_title => 'Deduplicating media';
   String anki_dedup_progress_scanning({required Object count}) =>
       'Scanning media folder… (${count} files found)';
-  String anki_dedup_progress_hashing(
-          {required Object done, required Object total}) =>
-      'Comparing same-size files… (${done} / ${total})';
-  String anki_dedup_progress_resolving(
-          {required Object done, required Object total}) =>
-      'Processing duplicates… (${done} / ${total})';
+  String anki_dedup_progress_hashing({
+    required Object done,
+    required Object total,
+  }) => 'Comparing same-size files… (${done} / ${total})';
+  String anki_dedup_progress_resolving({
+    required Object done,
+    required Object total,
+  }) => 'Processing duplicates… (${done} / ${total})';
   String anki_dedup_progress_freed({required Object size}) =>
       'Freed ${size} so far';
   String get anki_dedup_cancelling => 'Cancelling…';
@@ -3675,8 +3721,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get sync_last_auto_disabled => 'Last sync: skipped - auto sync is off';
   String get sync_last_cooled_down => 'Last sync: skipped - synced recently';
   String get sync_last_failed => 'Last sync: failed';
-  String anime_download_no_results_detail(
-          {required Object query, required Object filters}) =>
+  String anime_download_no_results_detail({
+    required Object query,
+    required Object filters,
+  }) =>
       'The service responded successfully but returned 0 items. Query: ${query}; filters: ${filters}. Try another title or loosen the filters.';
   String get anime_download_streaming_ready =>
       'In library · download continues';
@@ -3782,11 +3830,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String scrape_all_running({required Object current, required Object total}) =>
       'Scraping ${current} / ${total}';
   String scrape_all_item({required Object title}) => 'Processing: ${title}';
-  String scrape_all_done(
-          {required Object applied,
-          required Object review,
-          required Object skipped,
-          required Object failed}) =>
+  String scrape_all_done({
+    required Object applied,
+    required Object review,
+    required Object skipped,
+    required Object failed,
+  }) =>
       'Done: ${applied} applied, ${review} need review, ${skipped} skipped, ${failed} failed';
   String get scrape_all_empty =>
       'There are no items to scrape in this library.';
@@ -3985,9 +4034,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Split into ${n} collections';
   String collection_episode_watched_at({required Object position}) =>
       'Watched to ${position}';
-  String collection_episode_rename_partial(
-          {required Object n, required Object m}) =>
-      'Renamed ${n} episodes, ${m} failed';
+  String collection_episode_rename_partial({
+    required Object n,
+    required Object m,
+  }) => 'Renamed ${n} episodes, ${m} failed';
   String get sync_err_browser_timeout =>
       'The browser never returned the authorization. Retry, and make sure your proxy lets 127.0.0.1 through.';
   String get manga_rescan_running => 'Recognizing the selected box...';
@@ -4011,9 +4061,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'This manga was imported from images, so there is no original book to convert back to.';
   String get book_convert_blocked_source_missing =>
       'The source files are gone from disk.';
-  String manga_online_retry_waiting(
-          {required Object attempt, required Object total}) =>
-      'Retrying automatically (${attempt}/${total})';
+  String manga_online_retry_waiting({
+    required Object attempt,
+    required Object total,
+  }) => 'Retrying automatically (${attempt}/${total})';
   String get manga_ocr_wizard_already_ocred =>
       'This volume already has OCR data on every page. Running OCR again would overwrite it.';
   String get shortcut_scope_universal => 'Back / Exit';
@@ -4071,16 +4122,17 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Run metadata scraping automatically after this source is scanned';
   String get video_source_scrape_write_nfo => 'Write NFO files';
   String get video_source_scrape_write_images => 'Write image files';
-  String video_source_scrape_progress(
-          {required Object phase,
-          required Object current,
-          required Object total}) =>
-      '${phase} · ${current}/${total}';
-  String video_source_scrape_last_summary(
-          {required Object status,
-          required Object succeeded,
-          required Object pending,
-          required Object failed}) =>
+  String video_source_scrape_progress({
+    required Object phase,
+    required Object current,
+    required Object total,
+  }) => '${phase} · ${current}/${total}';
+  String video_source_scrape_last_summary({
+    required Object status,
+    required Object succeeded,
+    required Object pending,
+    required Object failed,
+  }) =>
       'Last scrape (${status}): ${succeeded} succeeded, ${pending} pending, ${failed} failed';
   String get video_source_scrape_phase_planning => 'Planning';
   String get video_source_scrape_phase_recognizing => 'Matching';
@@ -4204,9 +4256,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get migration_import_start => 'Start import';
   String migration_import_running({required Object batch}) =>
       'Importing ${batch}…';
-  String migration_import_verify_failed(
-          {required Object batch, required Object detail}) =>
-      '${batch} failed verification and was kept for re-export: ${detail}';
+  String migration_import_verify_failed({
+    required Object batch,
+    required Object detail,
+  }) => '${batch} failed verification and was kept for re-export: ${detail}';
   String migration_import_counts_failed({required Object detail}) =>
       'Imported data is incomplete: ${detail}. Re-export the missing parts from Hibiki, then import again.';
   String get migration_import_success => 'Import complete and verified.';
@@ -4221,11 +4274,11 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get migration_import_permission_body =>
       'The transfer folder was created by the old app. Without "All files access", Fushi cannot read it — the data is intact, it just cannot be opened.';
   String get migration_import_permission_grant => 'Grant permission';
-  String migration_import_verifying(
-          {required Object batch,
-          required Object done,
-          required Object total}) =>
-      'Verifying ${batch} (${done}/${total})';
+  String migration_import_verifying({
+    required Object batch,
+    required Object done,
+    required Object total,
+  }) => 'Verifying ${batch} (${done}/${total})';
   String get migration_import_verifying_hint =>
       'Checksumming the archives. Large libraries can take several minutes.';
   String get game_line_copy_tooltip => 'Copy sentence';
@@ -4324,11 +4377,11 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_setting_drag_seek_sensitivity_high => 'High';
   String video_subtitle_read_failed({required Object label}) =>
       'Couldn\'t read this subtitle file (damaged or empty): ${label}';
-  String dict_downloading_size(
-          {required Object name,
-          required Object done,
-          required Object total}) =>
-      'Downloading ${name} (${done} / ${total})';
+  String dict_downloading_size({
+    required Object name,
+    required Object done,
+    required Object total,
+  }) => 'Downloading ${name} (${done} / ${total})';
   String get video_subtitle_attach_book_missing =>
       'This video isn\'t in your library, so the subtitle wasn\'t attached';
   String get dict_download_hide => 'Run in background';
@@ -4439,11 +4492,11 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'AnkiConnect needs an API key on mobile, so clearing it turned the switch back off. Anki now goes through the built-in backend again.';
   String manga_import_batch_hint({required Object n}) =>
       'This folder holds ${n} volume files; each is imported as its own book, named after its file.';
-  String manga_import_batch_done(
-          {required Object imported,
-          required Object skipped,
-          required Object failed}) =>
-      'Imported ${imported}, skipped ${skipped}, failed ${failed}.';
+  String manga_import_batch_done({
+    required Object imported,
+    required Object skipped,
+    required Object failed,
+  }) => 'Imported ${imported}, skipped ${skipped}, failed ${failed}.';
   String get srt_book_reimport => 'Re-import';
   String get srt_book_reimport_subtitle_hint =>
       'Replacing the subtitle rebuilds the book text from the new cues.';
@@ -4496,8 +4549,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get update_testflight_open => 'Open TestFlight';
   String get update_app_store_open => 'Open App Store';
   String get update_release_page_open => 'Release page';
-  String update_install_gal_hook_holder(
-          {required Object pid, required Object path}) =>
+  String update_install_gal_hook_holder({
+    required Object pid,
+    required Object path,
+  }) =>
       'Galgame capture component in use: PID ${pid} - ${path} (this is the game you are playing, or its capture host). Close the game, then update again.';
   String get game_hook_reason_protocol_mismatch =>
       'The capture component does not match this Fushi build. It ships inside Fushi, so there is nothing to install separately. First, fully close the game and launch it again: the game process may still hold the component injected by an earlier session. If it still mismatches, the component files on disk are older than Fushi, because the last Fushi update could not replace them while a game was running. Close every game, then run the Fushi installer again.';
@@ -4785,9 +4840,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Models deleted, freed ${size}';
   String get manga_ocr_model_unused_by_engine =>
       'The current engine doesn\'t use these local model files.';
-  String manga_ocr_download_total_progress(
-          {required Object done, required Object total}) =>
-      '${done} of ${total}';
+  String manga_ocr_download_total_progress({
+    required Object done,
+    required Object total,
+  }) => '${done} of ${total}';
   String get media_source_network_subtitle_video =>
       'WebDAV remote library (streams in place)';
   String get jellyfin_settings_title => 'Media server (Jellyfin / Emby)';
@@ -5055,11 +5111,11 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Imported ${count} file(s)';
   String get manga_ocr_import_matched_nothing =>
       'No usable model files were recognised';
-  String manga_ocr_import_size_mismatch(
-          {required Object file,
-          required Object expected,
-          required Object actual}) =>
-      '${file} has the wrong size: expected ${expected}, got ${actual}';
+  String manga_ocr_import_size_mismatch({
+    required Object file,
+    required Object expected,
+    required Object actual,
+  }) => '${file} has the wrong size: expected ${expected}, got ${actual}';
   String manga_ocr_import_still_missing({required Object count}) =>
       'Still missing ${count} file(s)';
   String get manga_ocr_import_failed => 'Model import failed';
@@ -5096,9 +5152,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get game_hook_btn_topmost => 'Keep on top';
   String get game_hook_btn_close => 'Close the overlay';
   String get video_jimaku_search_failed => 'Subtitle search failed';
-  String video_subtitle_error_with_code(
-          {required Object msg, required Object code}) =>
-      '${msg} (HTTP ${code})';
+  String video_subtitle_error_with_code({
+    required Object msg,
+    required Object code,
+  }) => '${msg} (HTTP ${code})';
   String get manga_rescan_run => 'Re-OCR selected area';
   String get manga_rescan_failed => 'Re-OCR of the selected area failed';
   String get manga_rescan_region_updated =>
@@ -5243,9 +5300,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get manga_series_last_chapter_reached => 'This is the newest chapter';
   String get manga_series_first_chapter_reached => 'This is the first chapter';
   String get manga_series_open_series => 'Series page';
-  String manga_series_read_progress(
-          {required Object page, required Object total}) =>
-      'Read to page ${page} of ${total}';
+  String manga_series_read_progress({
+    required Object page,
+    required Object total,
+  }) => 'Read to page ${page} of ${total}';
   String manga_series_read_progress_partial({required Object page}) =>
       'Read to page ${page}';
   String mihon_store_extension_count({required Object count}) =>
@@ -5417,12 +5475,14 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get web_video_mine_queue_empty => 'No queued cards';
   String web_video_mine_queued({required Object count}) =>
       'Queued for card creation (${count} pending)';
-  String web_video_mine_queue_running(
-          {required Object done, required Object total}) =>
-      'Creating cards ${done}/${total}...';
-  String web_video_mine_queue_finished(
-          {required Object ok, required Object failed}) =>
-      'Cards created: ${ok}, failed: ${failed}';
+  String web_video_mine_queue_running({
+    required Object done,
+    required Object total,
+  }) => 'Creating cards ${done}/${total}...';
+  String web_video_mine_queue_finished({
+    required Object ok,
+    required Object failed,
+  }) => 'Cards created: ${ok}, failed: ${failed}';
   String get web_video_hosting_menu => 'Playback mode';
   String get web_video_hosting_builtin =>
       'Built-in (1080p; super-resolution, screenshots and cards available)';
@@ -5588,29 +5648,59 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get game_lookup_attached_probe_waiting =>
       'Waiting for matching in-game click';
   String get delete_choices_remember => 'Remember these choices';
+  String get network_proxy_mode_label => 'Proxy mode';
+  String get network_proxy_mode_auto => 'Automatic';
+  String get network_proxy_mode_auto_hint =>
+      'Use environment variables, then the enabled system proxy';
+  String get network_proxy_mode_direct => 'Direct';
+  String get network_proxy_mode_direct_hint => 'Disable proxy use for the app';
+  String get network_proxy_mode_manual => 'Manual';
+  String get network_proxy_mode_manual_hint =>
+      'Use the server and optional credentials below';
+  String get network_proxy_manual_hint =>
+      'HTTP proxy server used by all public internet requests';
+  String get network_proxy_username => 'Proxy username (optional)';
+  String get network_proxy_password => 'Proxy password (optional)';
+  String get storage_category_backups => 'Local backups';
+  String storage_entry_backups_label({required Object n}) =>
+      '${n} backup archive(s)';
+  String get storage_entry_delete_backups_confirm_body =>
+      'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+  String get update_download_source_preference => 'Preferred download source';
+  String get update_download_source_preference_hint =>
+      'The selected source is tried first; unavailable sources still fall back automatically.';
+  String get update_download_source_auto => 'Automatic (recommended)';
+  String get update_download_source_cloudflare => 'Cloudflare mirror';
+  String get update_download_source_github => 'GitHub direct';
+  String update_download_source_proxy({required Object host}) =>
+      'Proxy: ${host}';
 }
 
 // Path: <root>
 class _StringsAr extends _StringsEn {
   /// You can call this constructor and build your own translation instance of this locale.
   /// Constructing via the enum [AppLocale.build] is preferred.
-  _StringsAr.build(
-      {Map<String, Node>? overrides,
-      PluralResolver? cardinalResolver,
-      PluralResolver? ordinalResolver})
-      : assert(overrides == null,
-            'Set "translation_overrides: true" in order to enable this feature.'),
-        $meta = TranslationMetadata(
-          locale: AppLocale.ar,
-          overrides: overrides ?? {},
-          cardinalResolver: cardinalResolver,
-          ordinalResolver: ordinalResolver,
-        ),
-        super.build(
-            cardinalResolver: cardinalResolver,
-            ordinalResolver: ordinalResolver) {
+  _StringsAr.build({
+    Map<String, Node>? overrides,
+    PluralResolver? cardinalResolver,
+    PluralResolver? ordinalResolver,
+  }) : assert(
+         overrides == null,
+         'Set "translation_overrides: true" in order to enable this feature.',
+       ),
+       $meta = TranslationMetadata(
+         locale: AppLocale.ar,
+         overrides: overrides ?? {},
+         cardinalResolver: cardinalResolver,
+         ordinalResolver: ordinalResolver,
+       ),
+       super.build(
+         cardinalResolver: cardinalResolver,
+         ordinalResolver: ordinalResolver,
+       ) {
     super.$meta.setFlatMapFunction(
-        $meta.getTranslation); // copy base translations to super.$meta
+      $meta.getTranslation,
+    ); // copy base translations to super.$meta
     $meta.setFlatMapFunction(_flatMapFunction);
   }
 
@@ -6119,10 +6209,11 @@ class _StringsAr extends _StringsEn {
   @override
   String get backup_import => 'استيراد نسخة احتياطية';
   @override
-  String backup_import_confirm(
-          {required Object date,
-          required Object bookCount,
-          required Object statsCount}) =>
+  String backup_import_confirm({
+    required Object date,
+    required Object bookCount,
+    required Object statsCount,
+  }) =>
       'سيؤدي هذا إلى استبدال كل البيانات الحالية بالنسخة الاحتياطية من ${date}.\n\n${bookCount} كتاب، ${statsCount} سجل إحصائي.\n\nسيُعاد تشغيل التطبيق بعد الاستعادة.';
   @override
   String get backup_import_confirm_title => 'استعادة النسخة الاحتياطية؟';
@@ -6139,9 +6230,10 @@ class _StringsAr extends _StringsEn {
   @override
   String get backup_import_invalid => 'ملف نسخة احتياطية غير صالح';
   @override
-  String backup_import_merge_preview(
-          {required Object bookCount, required Object progressCount}) =>
-      'سيضيف الدمج ${bookCount} كتاب ويحدّث ${progressCount} موضع قراءة.';
+  String backup_import_merge_preview({
+    required Object bookCount,
+    required Object progressCount,
+  }) => 'سيضيف الدمج ${bookCount} كتاب ويحدّث ${progressCount} موضع قراءة.';
   @override
   String get backup_import_mode_label => 'وضع الاستيراد';
   @override
@@ -6436,12 +6528,12 @@ class _StringsAr extends _StringsEn {
   @override
   String get changelog_prerelease => 'إصدار تجريبي';
   @override
-  String chapter_progress(
-          {required Object idx,
-          required Object total,
-          required Object suffix,
-          required Object pct}) =>
-      'الفصل ${idx} / ${total}${suffix} · ${pct}%';
+  String chapter_progress({
+    required Object idx,
+    required Object total,
+    required Object suffix,
+    required Object pct,
+  }) => 'الفصل ${idx} / ${total}${suffix} · ${pct}%';
   @override
   String get clear => 'مسح';
   @override
@@ -6531,9 +6623,10 @@ class _StringsAr extends _StringsEn {
   @override
   String get collection_view_all => 'عرض الكل';
   @override
-  String collection_watched_progress(
-          {required Object done, required Object total}) =>
-      'تمت مشاهدة ${done}/${total}';
+  String collection_watched_progress({
+    required Object done,
+    required Object total,
+  }) => 'تمت مشاهدة ${done}/${total}';
   @override
   String get collection_word => 'كلمة';
   @override
@@ -6755,9 +6848,10 @@ class _StringsAr extends _StringsEn {
   @override
   String get data_storage_migrate_failed_title => 'فشل نقل البيانات';
   @override
-  String data_storage_migrate_overlay_progress(
-          {required Object copied, required Object total}) =>
-      'نسخ الملفات: ${copied} / ${total}';
+  String data_storage_migrate_overlay_progress({
+    required Object copied,
+    required Object total,
+  }) => 'نسخ الملفات: ${copied} / ${total}';
   @override
   String get data_storage_migrate_overlay_title => 'جارٍ نقل بياناتك';
   @override
@@ -6775,8 +6869,10 @@ class _StringsAr extends _StringsEn {
   String get data_storage_restart_failed =>
       'تم نقل البيانات، لكن إعادة التشغيل التلقائية فشلت. يرجى إعادة فتح Fushi يدوياً.';
   @override
-  String db_downgrade_message(
-          {required Object dbVersion, required Object appVersion}) =>
+  String db_downgrade_message({
+    required Object dbVersion,
+    required Object appVersion,
+  }) =>
       'أُنشئت قاعدة البيانات هذه بإصدار أحدث من Fushi (المخطط v${dbVersion}). تطبيقك الحالي قديم جدًا (v${appVersion}). تم حظر الفتح لحماية بياناتك. يُرجى تحديث التطبيق والمحاولة مجددًا.';
   @override
   String get db_downgrade_title => 'حدّث Fushi';
@@ -6944,11 +7040,11 @@ class _StringsAr extends _StringsEn {
   @override
   String get dict_download_language => 'لغتك';
   @override
-  String dict_download_partial(
-          {required Object success,
-          required Object total,
-          required Object error}) =>
-      '${success} / ${total} ناجح. فشل: ${error}';
+  String dict_download_partial({
+    required Object success,
+    required Object total,
+    required Object error,
+  }) => '${success} / ${total} ناجح. فشل: ${error}';
   @override
   String get dict_download_select_title => 'اختيار القواميس';
   @override
@@ -6978,19 +7074,21 @@ class _StringsAr extends _StringsEn {
   @override
   String get dict_update_latest => 'محدّث بالفعل.';
   @override
-  String dict_update_name_mismatch_body(
-          {required Object incoming, required Object existing}) =>
+  String dict_update_name_mismatch_body({
+    required Object incoming,
+    required Object existing,
+  }) =>
       'الملف المحدد هو "${incoming}"، لكنك تُحدّث "${existing}". هل تريد الاستبدال على أي حال؟';
   @override
   String get dict_update_name_mismatch_title => 'الأسماء غير متطابقة';
   @override
   String get dict_update_none => 'جميع القواميس محدّثة.';
   @override
-  String dict_update_summary(
-          {required Object updated,
-          required Object current,
-          required Object failed}) =>
-      '${updated} محدّث، ${current} محدّث بالفعل، ${failed} فشل.';
+  String dict_update_summary({
+    required Object updated,
+    required Object current,
+    required Object failed,
+  }) => '${updated} محدّث، ${current} محدّث بالفعل، ${failed} فشل.';
   @override
   String get dict_update_tooltip => 'تحديث القاموس';
   @override
@@ -7075,8 +7173,10 @@ class _StringsAr extends _StringsEn {
   @override
   String get download_subscription_check_now => 'فحص الآن';
   @override
-  String download_subscription_choice_hint(
-          {required Object group, required Object resolution}) =>
+  String download_subscription_choice_hint({
+    required Object group,
+    required Object resolution,
+  }) =>
       'متابعة ${group} · ${resolution}. سيتم وضع الإصدارات الجديدة أحادية الحلقة في قائمة الانتظار.';
   @override
   String get download_subscription_created =>
@@ -7216,9 +7316,10 @@ class _StringsAr extends _StringsEn {
   @override
   String favorites({required Object n}) => 'المفضّلات (${n})';
   @override
-  String field_fallback_used(
-          {required Object field, required Object secondField}) =>
-      'استخدم حقل ${field} حقل ${secondField} كمصطلح بحث بديل.';
+  String field_fallback_used({
+    required Object field,
+    required Object secondField,
+  }) => 'استخدم حقل ${field} حقل ${secondField} كمصطلح بحث بديل.';
   @override
   String file_count({required Object count}) => '${count} ملفات';
   @override
@@ -7932,12 +8033,12 @@ class _StringsAr extends _StringsEn {
   @override
   String get game_waiting_for_text => 'في انتظار النص';
   @override
-  String game_waveform_range_label(
-          {required Object start,
-          required Object end,
-          required Object duration,
-          required Object total}) =>
-      '${start} - ${end} (محدد ${duration} / إجمالي ${total})';
+  String game_waveform_range_label({
+    required Object start,
+    required Object end,
+    required Object duration,
+    required Object total,
+  }) => '${start} - ${end} (محدد ${duration} / إجمالي ${total})';
   @override
   String get game_waveform_select_title => 'اختر نطاق الصوت';
   @override
@@ -8205,9 +8306,10 @@ class _StringsAr extends _StringsEn {
   @override
   String get jump_to_char => 'الانتقال إلى حرف';
   @override
-  String jump_to_char_current(
-          {required Object current, required Object total}) =>
-      'الحالي: ${current} / ${total}';
+  String jump_to_char_current({
+    required Object current,
+    required Object total,
+  }) => 'الحالي: ${current} / ${total}';
   @override
   String get jump_to_char_hint => 'أدخل موضع الحرف…';
   @override
@@ -8384,9 +8486,10 @@ class _StringsAr extends _StringsEn {
   @override
   String get manga_ocr_wizard_no_images => 'لم يُعثر على صور في هذا المجلد.';
   @override
-  String manga_ocr_wizard_page_progress(
-          {required Object done, required Object total}) =>
-      'صفحة ${done} / ${total}';
+  String manga_ocr_wizard_page_progress({
+    required Object done,
+    required Object total,
+  }) => 'صفحة ${done} / ${total}';
   @override
   String get manga_ocr_wizard_pick_folder => 'اختر مجلد الصور';
   @override
@@ -8412,9 +8515,10 @@ class _StringsAr extends _StringsEn {
   @override
   String get manga_online_queue_added => 'أُضيف إلى قائمة التحميل';
   @override
-  String manga_online_queue_progress(
-          {required Object done, required Object total}) =>
-      'المجلد ${done} / ${total}';
+  String manga_online_queue_progress({
+    required Object done,
+    required Object total,
+  }) => 'المجلد ${done} / ${total}';
   @override
   String get manga_online_queue_section => 'تحميلات كتالوج المانغا';
   @override
@@ -8446,9 +8550,10 @@ class _StringsAr extends _StringsEn {
   String get manga_remote_ocr_unsupported =>
       'المضيف المقترن لا يدعم OCR للمانغا.';
   @override
-  String manga_remote_ocr_uploading(
-          {required Object done, required Object total}) =>
-      'جارٍ رفع الصفحات ${done} / ${total}…';
+  String manga_remote_ocr_uploading({
+    required Object done,
+    required Object total,
+  }) => 'جارٍ رفع الصفحات ${done} / ${total}…';
   @override
   String get margin_bottom => 'الهامش السفلي';
   @override
@@ -8952,15 +9057,17 @@ class _StringsAr extends _StringsEn {
   @override
   String get audiobook_rematch_auto_match => 'مطابقة تلقائية';
   @override
-  String audiobook_rematch_auto_picked(
-          {required Object window, required Object pct}) =>
-      'تم اختيار ${window} تلقائياً (نسبة ${pct}%)';
+  String audiobook_rematch_auto_picked({
+    required Object window,
+    required Object pct,
+  }) => 'تم اختيار ${window} تلقائياً (نسبة ${pct}%)';
   @override
   String audiobook_rematch_default_value({required Object n}) => 'افتراضي ${n}';
   @override
-  String audiobook_rematch_health_label(
-          {required Object pct, required Object detail}) =>
-      '${pct} مطابق — ${detail}';
+  String audiobook_rematch_health_label({
+    required Object pct,
+    required Object detail,
+  }) => '${pct} مطابق — ${detail}';
   @override
   String get audiobook_rematch_matching => 'جارٍ المطابقة...';
   @override
@@ -8977,9 +9084,10 @@ class _StringsAr extends _StringsEn {
   String audiobook_rematch_failed({required Object error}) =>
       'فشلت إعادة المطابقة: ${error}';
   @override
-  String audiobook_rematch_result(
-          {required Object pct, required Object window}) =>
-      'أُعيدت المطابقة: ${pct}% (نافذة: ${window})';
+  String audiobook_rematch_result({
+    required Object pct,
+    required Object window,
+  }) => 'أُعيدت المطابقة: ${pct}% (نافذة: ${window})';
   @override
   String get audiobook_rematch_search_window => 'نافذة البحث';
   @override
@@ -10169,9 +10277,10 @@ class _StringsAr extends _StringsEn {
   @override
   String get update_download_resumed => 'تم الاستئناف';
   @override
-  String update_download_size(
-          {required Object received, required Object total}) =>
-      'تم التنزيل: ${received} / ${total}';
+  String update_download_size({
+    required Object received,
+    required Object total,
+  }) => 'تم التنزيل: ${received} / ${total}';
   @override
   String update_download_source({required Object source}) =>
       'المصدر: ${source}';
@@ -10185,13 +10294,15 @@ class _StringsAr extends _StringsEn {
   String update_install_current_executable({required Object path}) =>
       'البرنامج قيد التشغيل: ${path}';
   @override
-  String update_install_deletefile_failure(
-          {required Object path, required Object code}) =>
-      'فشل المثبّت في استبدال ${path} (الرمز ${code})';
+  String update_install_deletefile_failure({
+    required Object path,
+    required Object code,
+  }) => 'فشل المثبّت في استبدال ${path} (الرمز ${code})';
   @override
-  String update_install_detected_location(
-          {required Object source, required Object path}) =>
-      'موقع التثبيت المكتشف (${source}): ${path}';
+  String update_install_detected_location({
+    required Object source,
+    required Object path,
+  }) => 'موقع التثبيت المكتشف (${source}): ${path}';
   @override
   String update_install_failure_summary({required Object summary}) =>
       'السبب: ${summary}';
@@ -10212,9 +10323,10 @@ class _StringsAr extends _StringsEn {
   String update_install_launcher_pid({required Object pid}) =>
       'معرّف عملية مشغّل التحديث: ${pid}';
   @override
-  String update_install_libmpv_holder(
-          {required Object pid, required Object path}) =>
-      'حامل libmpv: PID ${pid} - ${path}';
+  String update_install_libmpv_holder({
+    required Object pid,
+    required Object path,
+  }) => 'حامل libmpv: PID ${pid} - ${path}';
   @override
   String get update_install_log_not_observed =>
       'لم يُنشأ سجل المثبّت أثناء الفحص بعد البدء.';
@@ -10249,9 +10361,10 @@ class _StringsAr extends _StringsEn {
   String get update_install_restart_windows_hint =>
       'إذا أُغلقت العمليات المدرجة لكن libmpv-2.dll لا يزال مقفلًا، أعد تشغيل Windows وثبّت مجددًا.';
   @override
-  String update_install_running_process(
-          {required Object pid, required Object path}) =>
-      'عملية Fushi قيد التشغيل: PID ${pid} - ${path}';
+  String update_install_running_process({
+    required Object pid,
+    required Object path,
+  }) => 'عملية Fushi قيد التشغيل: PID ${pid} - ${path}';
   @override
   String update_install_success_message({required Object version}) =>
       'تم تحديث Fushi إلى الإصدار ${version}.';
@@ -10269,9 +10382,10 @@ class _StringsAr extends _StringsEn {
   String update_message({required Object version}) =>
       'الإصدار ${version} متاح.';
   @override
-  String update_network_failure(
-          {required Object host, required Object reason}) =>
-      'تعذّر الوصول إلى ${host}: ${reason}';
+  String update_network_failure({
+    required Object host,
+    required Object reason,
+  }) => 'تعذّر الوصول إلى ${host}: ${reason}';
   @override
   String get update_never_remind => 'عدم التذكير بالتحديثات';
   @override
@@ -10528,9 +10642,10 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_jimaku_api_key_set => 'تم ضبط مفتاح API';
   @override
-  String video_jimaku_batch_done(
-          {required Object done, required Object total}) =>
-      'تم جلب الترجمات: ${done}/${total}';
+  String video_jimaku_batch_done({
+    required Object done,
+    required Object total,
+  }) => 'تم جلب الترجمات: ${done}/${total}';
   @override
   String get video_jimaku_batch_download => 'تحميل الكل';
   @override
@@ -11045,9 +11160,10 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_shader_download_failed => 'فشل تنزيل المظلِّل';
   @override
-  String video_shader_download_partial(
-          {required Object ok, required Object failed}) =>
-      'تم تنزيل ${ok} مظلِّل، وفشل ${failed}';
+  String video_shader_download_partial({
+    required Object ok,
+    required Object failed,
+  }) => 'تم تنزيل ${ok} مظلِّل، وفشل ${failed}';
   @override
   String get video_shader_download_url => 'التنزيل من رابط';
   @override
@@ -11158,9 +11274,10 @@ class _StringsAr extends _StringsEn {
   String get video_subtitle_attach_playlist_hint =>
       'افتح قائمة التشغيل لإرفاق ترجمة لكل حلقة';
   @override
-  String video_subtitle_attached_to_video(
-          {required Object title, required Object count}) =>
-      'أُرفقت الترجمة بـ ${title} (${count} سطرًا)';
+  String video_subtitle_attached_to_video({
+    required Object title,
+    required Object count,
+  }) => 'أُرفقت الترجمة بـ ${title} (${count} سطرًا)';
   @override
   String get video_subtitle_auto_align => 'محاذاة الترجمة تلقائيًا';
   @override
@@ -11380,13 +11497,14 @@ class _StringsAr extends _StringsEn {
   @override
   String get anki_dedup_report_title => 'تقرير إزالة تكرار الوسائط';
   @override
-  String anki_dedup_report_body(
-          {required Object groups,
-          required Object removed,
-          required Object size,
-          required Object notes,
-          required Object models,
-          required Object skipped}) =>
+  String anki_dedup_report_body({
+    required Object groups,
+    required Object removed,
+    required Object size,
+    required Object notes,
+    required Object models,
+    required Object skipped,
+  }) =>
       '${groups} مجموعة مكررة؛ ${removed} نسخة إضافية (${size})؛ ${notes} ملاحظة و${models} نوع ملاحظة أُعيدت كتابتها؛ ${skipped} تم تخطيها.';
   @override
   String get anki_dedup_report_dry_note => 'فحص فقط - لم يتم تغيير شيء.';
@@ -11407,11 +11525,11 @@ class _StringsAr extends _StringsEn {
   String anki_dedup_plan_intro({required Object count, required Object size}) =>
       '${count} نسخة إضافية، ${size} قابلة للاسترداد. يتم الاحتفاظ بنسخة واحدة من كل ملف وإعادة توجيه كل مرجع إليها أولاً؛ لا يتم إعادة ترميز أي شيء.';
   @override
-  String anki_dedup_plan_entry(
-          {required Object file,
-          required Object size,
-          required Object canonical}) =>
-      'حذف ${file} (${size}) - الاحتفاظ بـ ${canonical}';
+  String anki_dedup_plan_entry({
+    required Object file,
+    required Object size,
+    required Object canonical,
+  }) => 'حذف ${file} (${size}) - الاحتفاظ بـ ${canonical}';
   @override
   String get anki_dedup_plan_delete => 'حذف هذه الملفات';
   @override
@@ -11472,9 +11590,10 @@ class _StringsAr extends _StringsEn {
   String manga_ocr_acceleration_status({required Object engine}) =>
       'تسريع OCR: ${engine}';
   @override
-  String manga_ocr_acceleration_degraded(
-          {required Object engine, required Object reason}) =>
-      'تسريع GPU غير متوفر، يعمل OCR على ${engine}: ${reason}';
+  String manga_ocr_acceleration_degraded({
+    required Object engine,
+    required Object reason,
+  }) => 'تسريع GPU غير متوفر، يعمل OCR على ${engine}: ${reason}';
   @override
   String get media_tracking_status => 'حالة المجموعة';
   @override
@@ -11520,8 +11639,10 @@ class _StringsAr extends _StringsEn {
   String anki_dedup_auto_done({required Object count, required Object size}) =>
       'تمت إزالة ${count} ملف وسائط مكرر في Anki، تم استرداد ${size}';
   @override
-  String anki_lapis_backup_done_pruned(
-          {required Object path, required Object count}) =>
+  String anki_lapis_backup_done_pruned({
+    required Object path,
+    required Object count,
+  }) =>
       'تم النسخ الاحتياطي إلى ${path} (تم تنظيف ${count} نسخة احتياطية قديمة وفق سياسة 90 يوماً / الاحتفاظ بـ 10)';
   @override
   String get game_audio_fallback_policy => 'بديل الصوت';
@@ -11672,9 +11793,10 @@ class _StringsAr extends _StringsEn {
   String get stat_clear_all_game_message =>
       'مسح جميع أوقات اللعب وعدد الجلسات؟ تُحفظ مكتبة الألعاب والجدول الزمني للنشاط. لا يمكن التراجع عن هذا.';
   @override
-  String batch_selection_stale_skipped(
-          {required Object m, required Object n}) =>
-      'تم تخطي ${m} من ${n} عنصر محدد لم يعد موجوداً';
+  String batch_selection_stale_skipped({
+    required Object m,
+    required Object n,
+  }) => 'تم تخطي ${m} من ${n} عنصر محدد لم يعد موجوداً';
   @override
   String get game_text_thread_unset =>
       'لم يتم اختيار مسار — اختر واحداً لبدء الالتقاط';
@@ -11729,22 +11851,25 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_jimaku_language_unknown => 'اللغة غير محددة';
   @override
-  String video_jimaku_source_summary(
-          {required Object files,
-          required Object episodes,
-          required Object languages}) =>
-      '${files} ملف ترجمة · ${episodes} حلقة · ${languages}';
+  String video_jimaku_source_summary({
+    required Object files,
+    required Object episodes,
+    required Object languages,
+  }) => '${files} ملف ترجمة · ${episodes} حلقة · ${languages}';
   @override
-  String video_jimaku_episode_unlabeled(
-          {required Object episode, required Object count}) =>
+  String video_jimaku_episode_unlabeled({
+    required Object episode,
+    required Object count,
+  }) =>
       'لا توجد ترجمة بعلامة الحلقة ${episode}؛ ${count} ملف بدون علامة قد يطابق';
   @override
   String video_jimaku_episode_unavailable({required Object episode}) =>
       'لم يُعثر على ترجمة للحلقة ${episode}';
   @override
-  String video_jimaku_episode_available(
-          {required Object count, required Object languages}) =>
-      '${count} ترجمة متوفرة · ${languages}';
+  String video_jimaku_episode_available({
+    required Object count,
+    required Object languages,
+  }) => '${count} ترجمة متوفرة · ${languages}';
   @override
   String get manga_online_source_disabled =>
       'مصدر الإنترنت هذا معطّل. فعّله في المصادر لتصفح الكتالوج.';
@@ -11764,13 +11889,15 @@ class _StringsAr extends _StringsEn {
   String anki_dedup_progress_scanning({required Object count}) =>
       'جارٍ فحص مجلد الوسائط… (تم العثور على ${count} ملف)';
   @override
-  String anki_dedup_progress_hashing(
-          {required Object done, required Object total}) =>
-      'جارٍ مقارنة الملفات بنفس الحجم… (${done} / ${total})';
+  String anki_dedup_progress_hashing({
+    required Object done,
+    required Object total,
+  }) => 'جارٍ مقارنة الملفات بنفس الحجم… (${done} / ${total})';
   @override
-  String anki_dedup_progress_resolving(
-          {required Object done, required Object total}) =>
-      'جارٍ معالجة التكرارات… (${done} / ${total})';
+  String anki_dedup_progress_resolving({
+    required Object done,
+    required Object total,
+  }) => 'جارٍ معالجة التكرارات… (${done} / ${total})';
   @override
   String anki_dedup_progress_freed({required Object size}) =>
       'تم تحرير ${size} حتى الآن';
@@ -11825,8 +11952,10 @@ class _StringsAr extends _StringsEn {
   @override
   String get sync_last_failed => 'آخر مزامنة: فشلت';
   @override
-  String anime_download_no_results_detail(
-          {required Object query, required Object filters}) =>
+  String anime_download_no_results_detail({
+    required Object query,
+    required Object filters,
+  }) =>
       'استجابت الخدمة بنجاح لكن أعادت 0 عناصر. الاستعلام: ${query}؛ المرشحات: ${filters}. جرّب عنواناً آخر أو خفف المرشحات.';
   @override
   String get anime_download_streaming_ready => 'في المكتبة · التحميل مستمر';
@@ -12009,11 +12138,12 @@ class _StringsAr extends _StringsEn {
   @override
   String scrape_all_item({required Object title}) => 'قيد المعالجة: ${title}';
   @override
-  String scrape_all_done(
-          {required Object applied,
-          required Object review,
-          required Object skipped,
-          required Object failed}) =>
+  String scrape_all_done({
+    required Object applied,
+    required Object review,
+    required Object skipped,
+    required Object failed,
+  }) =>
       'تم: ${applied} مُطبَّق، ${review} بحاجة مراجعة، ${skipped} تم تخطيه، ${failed} فشل';
   @override
   String get scrape_all_empty => 'لا توجد عناصر لجلبها في هذه المكتبة.';
@@ -12379,9 +12509,10 @@ class _StringsAr extends _StringsEn {
   String collection_episode_watched_at({required Object position}) =>
       'شوهد حتى ${position}';
   @override
-  String collection_episode_rename_partial(
-          {required Object n, required Object m}) =>
-      'تمت إعادة تسمية ${n} حلقة، فشل ${m}';
+  String collection_episode_rename_partial({
+    required Object n,
+    required Object m,
+  }) => 'تمت إعادة تسمية ${n} حلقة، فشل ${m}';
   @override
   String get sync_err_browser_timeout =>
       'لم يُعِد المتصفح التفويض. حاول مجددًا، وتأكد من أن الوكيل يسمح بالمرور عبر 127.0.0.1.';
@@ -12422,9 +12553,10 @@ class _StringsAr extends _StringsEn {
   String get book_convert_blocked_source_missing =>
       'الملفات المصدرية لم تعد موجودة على القرص.';
   @override
-  String manga_online_retry_waiting(
-          {required Object attempt, required Object total}) =>
-      'إعادة المحاولة تلقائيًا (${attempt}/${total})';
+  String manga_online_retry_waiting({
+    required Object attempt,
+    required Object total,
+  }) => 'إعادة المحاولة تلقائيًا (${attempt}/${total})';
   @override
   String get manga_ocr_wizard_already_ocred =>
       'هذا المجلد يحتوي بالفعل على بيانات التعرف الضوئي في كل صفحة. تشغيل التعرف الضوئي مجددًا سيستبدلها.';
@@ -12521,17 +12653,18 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_source_scrape_write_images => 'كتابة ملفات الصور';
   @override
-  String video_source_scrape_progress(
-          {required Object phase,
-          required Object current,
-          required Object total}) =>
-      '${phase} · ${current}/${total}';
+  String video_source_scrape_progress({
+    required Object phase,
+    required Object current,
+    required Object total,
+  }) => '${phase} · ${current}/${total}';
   @override
-  String video_source_scrape_last_summary(
-          {required Object status,
-          required Object succeeded,
-          required Object pending,
-          required Object failed}) =>
+  String video_source_scrape_last_summary({
+    required Object status,
+    required Object succeeded,
+    required Object pending,
+    required Object failed,
+  }) =>
       'آخر جلب (${status}): ${succeeded} نجح، ${pending} معلّق، ${failed} فشل';
   @override
   String get video_source_scrape_phase_planning => 'التخطيط';
@@ -12745,9 +12878,10 @@ class _StringsAr extends _StringsEn {
   String migration_import_running({required Object batch}) =>
       'جارٍ استيراد ${batch}…';
   @override
-  String migration_import_verify_failed(
-          {required Object batch, required Object detail}) =>
-      'فشل التحقق من ${batch} وتم الاحتفاظ بها لإعادة التصدير: ${detail}';
+  String migration_import_verify_failed({
+    required Object batch,
+    required Object detail,
+  }) => 'فشل التحقق من ${batch} وتم الاحتفاظ بها لإعادة التصدير: ${detail}';
   @override
   String migration_import_counts_failed({required Object detail}) =>
       'البيانات المستوردة غير مكتملة: ${detail}. أعد تصدير الأجزاء المفقودة من Hibiki، ثم استورد مجدداً.';
@@ -12772,11 +12906,11 @@ class _StringsAr extends _StringsEn {
   @override
   String get migration_import_permission_grant => 'منح الإذن';
   @override
-  String migration_import_verifying(
-          {required Object batch,
-          required Object done,
-          required Object total}) =>
-      'جارٍ التحقق من ${batch} (${done}/${total})';
+  String migration_import_verifying({
+    required Object batch,
+    required Object done,
+    required Object total,
+  }) => 'جارٍ التحقق من ${batch} (${done}/${total})';
   @override
   String get migration_import_verifying_hint =>
       'جارٍ حساب المجاميع الاختبارية للأرشيفات. قد تستغرق المكتبات الكبيرة عدة دقائق.';
@@ -12949,11 +13083,11 @@ class _StringsAr extends _StringsEn {
   String video_subtitle_read_failed({required Object label}) =>
       'تعذّرت قراءة ملف الترجمة هذا (تالف أو فارغ): ${label}';
   @override
-  String dict_downloading_size(
-          {required Object name,
-          required Object done,
-          required Object total}) =>
-      'جارٍ تحميل ${name} (${done} / ${total})';
+  String dict_downloading_size({
+    required Object name,
+    required Object done,
+    required Object total,
+  }) => 'جارٍ تحميل ${name} (${done} / ${total})';
   @override
   String get video_subtitle_attach_book_missing =>
       'هذا الفيديو ليس في مكتبتك، لذا لم يتم إرفاق الترجمة';
@@ -13144,11 +13278,11 @@ class _StringsAr extends _StringsEn {
   String manga_import_batch_hint({required Object n}) =>
       'يحتوي هذا المجلد على ${n} ملف مجلّد؛ يتم استيراد كل منها ككتاب مستقل باسم ملفه.';
   @override
-  String manga_import_batch_done(
-          {required Object imported,
-          required Object skipped,
-          required Object failed}) =>
-      'تم استيراد ${imported}، تخطّي ${skipped}، فشل ${failed}.';
+  String manga_import_batch_done({
+    required Object imported,
+    required Object skipped,
+    required Object failed,
+  }) => 'تم استيراد ${imported}، تخطّي ${skipped}، فشل ${failed}.';
   @override
   String get srt_book_reimport => 'إعادة الاستيراد';
   @override
@@ -13242,8 +13376,10 @@ class _StringsAr extends _StringsEn {
   @override
   String get update_release_page_open => 'صفحة الإصدار';
   @override
-  String update_install_gal_hook_holder(
-          {required Object pid, required Object path}) =>
+  String update_install_gal_hook_holder({
+    required Object pid,
+    required Object path,
+  }) =>
       'مكون التقاط Galgame قيد الاستخدام: PID ${pid} - ${path} (هذه هي اللعبة التي تلعبها، أو مضيف الالتقاط). أغلق اللعبة، ثم حدّث مرة أخرى.';
   @override
   String get game_hook_reason_protocol_mismatch =>
@@ -13726,9 +13862,10 @@ class _StringsAr extends _StringsEn {
   String get manga_ocr_model_unused_by_engine =>
       'المحرك الحالي لا يستخدم ملفات النموذج المحلية هذه.';
   @override
-  String manga_ocr_download_total_progress(
-          {required Object done, required Object total}) =>
-      '${done} من ${total}';
+  String manga_ocr_download_total_progress({
+    required Object done,
+    required Object total,
+  }) => '${done} من ${total}';
   @override
   String get media_source_network_subtitle_video =>
       'مكتبة WebDAV عن بُعد (بث مباشر)';
@@ -14194,11 +14331,11 @@ class _StringsAr extends _StringsEn {
   String get manga_ocr_import_matched_nothing =>
       'لم يتم التعرف على أي ملفات نموذج صالحة';
   @override
-  String manga_ocr_import_size_mismatch(
-          {required Object file,
-          required Object expected,
-          required Object actual}) =>
-      'حجم ${file} غير صحيح: المتوقع ${expected}، والفعلي ${actual}';
+  String manga_ocr_import_size_mismatch({
+    required Object file,
+    required Object expected,
+    required Object actual,
+  }) => 'حجم ${file} غير صحيح: المتوقع ${expected}، والفعلي ${actual}';
   @override
   String manga_ocr_import_still_missing({required Object count}) =>
       'لا يزال ينقص ${count} ملف';
@@ -14264,9 +14401,10 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_jimaku_search_failed => 'فشل البحث عن الترجمة';
   @override
-  String video_subtitle_error_with_code(
-          {required Object msg, required Object code}) =>
-      '${msg} (HTTP ${code})';
+  String video_subtitle_error_with_code({
+    required Object msg,
+    required Object code,
+  }) => '${msg} (HTTP ${code})';
   @override
   String get manga_rescan_run => 'إعادة التعرف على المنطقة المحددة';
   @override
@@ -14511,9 +14649,10 @@ class _StringsAr extends _StringsEn {
   @override
   String get manga_series_open_series => 'صفحة العمل';
   @override
-  String manga_series_read_progress(
-          {required Object page, required Object total}) =>
-      'تمت القراءة حتى الصفحة ${page} من ${total}';
+  String manga_series_read_progress({
+    required Object page,
+    required Object total,
+  }) => 'تمت القراءة حتى الصفحة ${page} من ${total}';
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       'تمت القراءة حتى الصفحة ${page}';
@@ -14794,13 +14933,15 @@ class _StringsAr extends _StringsEn {
   String web_video_mine_queued({required Object count}) =>
       'أُضيف إلى قائمة انتظار إنشاء البطاقات (${count} معلّقة)';
   @override
-  String web_video_mine_queue_running(
-          {required Object done, required Object total}) =>
-      'جارٍ إنشاء البطاقات ${done}/${total}…';
+  String web_video_mine_queue_running({
+    required Object done,
+    required Object total,
+  }) => 'جارٍ إنشاء البطاقات ${done}/${total}…';
   @override
-  String web_video_mine_queue_finished(
-          {required Object ok, required Object failed}) =>
-      'البطاقات المُنشأة: ${ok}، الفاشلة: ${failed}';
+  String web_video_mine_queue_finished({
+    required Object ok,
+    required Object failed,
+  }) => 'البطاقات المُنشأة: ${ok}، الفاشلة: ${failed}';
   @override
   String get web_video_hosting_menu => 'وضع التشغيل';
   @override
@@ -15069,29 +15210,78 @@ class _StringsAr extends _StringsEn {
       'Waiting for matching in-game click';
   @override
   String get delete_choices_remember => 'تذكّر هذه الخيارات';
+  @override
+  String get network_proxy_mode_label => 'Proxy mode';
+  @override
+  String get network_proxy_mode_auto => 'Automatic';
+  @override
+  String get network_proxy_mode_auto_hint =>
+      'Use environment variables, then the enabled system proxy';
+  @override
+  String get network_proxy_mode_direct => 'Direct';
+  @override
+  String get network_proxy_mode_direct_hint => 'Disable proxy use for the app';
+  @override
+  String get network_proxy_mode_manual => 'Manual';
+  @override
+  String get network_proxy_mode_manual_hint =>
+      'Use the server and optional credentials below';
+  @override
+  String get network_proxy_manual_hint =>
+      'HTTP proxy server used by all public internet requests';
+  @override
+  String get network_proxy_username => 'Proxy username (optional)';
+  @override
+  String get network_proxy_password => 'Proxy password (optional)';
+  @override
+  String get storage_category_backups => 'Local backups';
+  @override
+  String storage_entry_backups_label({required Object n}) =>
+      '${n} backup archive(s)';
+  @override
+  String get storage_entry_delete_backups_confirm_body =>
+      'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+  @override
+  String get update_download_source_preference => 'Preferred download source';
+  @override
+  String get update_download_source_preference_hint =>
+      'The selected source is tried first; unavailable sources still fall back automatically.';
+  @override
+  String get update_download_source_auto => 'Automatic (recommended)';
+  @override
+  String get update_download_source_cloudflare => 'Cloudflare mirror';
+  @override
+  String get update_download_source_github => 'GitHub direct';
+  @override
+  String update_download_source_proxy({required Object host}) =>
+      'Proxy: ${host}';
 }
 
 // Path: <root>
 class _StringsDe extends _StringsEn {
   /// You can call this constructor and build your own translation instance of this locale.
   /// Constructing via the enum [AppLocale.build] is preferred.
-  _StringsDe.build(
-      {Map<String, Node>? overrides,
-      PluralResolver? cardinalResolver,
-      PluralResolver? ordinalResolver})
-      : assert(overrides == null,
-            'Set "translation_overrides: true" in order to enable this feature.'),
-        $meta = TranslationMetadata(
-          locale: AppLocale.de,
-          overrides: overrides ?? {},
-          cardinalResolver: cardinalResolver,
-          ordinalResolver: ordinalResolver,
-        ),
-        super.build(
-            cardinalResolver: cardinalResolver,
-            ordinalResolver: ordinalResolver) {
+  _StringsDe.build({
+    Map<String, Node>? overrides,
+    PluralResolver? cardinalResolver,
+    PluralResolver? ordinalResolver,
+  }) : assert(
+         overrides == null,
+         'Set "translation_overrides: true" in order to enable this feature.',
+       ),
+       $meta = TranslationMetadata(
+         locale: AppLocale.de,
+         overrides: overrides ?? {},
+         cardinalResolver: cardinalResolver,
+         ordinalResolver: ordinalResolver,
+       ),
+       super.build(
+         cardinalResolver: cardinalResolver,
+         ordinalResolver: ordinalResolver,
+       ) {
     super.$meta.setFlatMapFunction(
-        $meta.getTranslation); // copy base translations to super.$meta
+      $meta.getTranslation,
+    ); // copy base translations to super.$meta
     $meta.setFlatMapFunction(_flatMapFunction);
   }
 
@@ -15609,10 +15799,11 @@ class _StringsDe extends _StringsEn {
   @override
   String get backup_import => 'Backup importieren';
   @override
-  String backup_import_confirm(
-          {required Object date,
-          required Object bookCount,
-          required Object statsCount}) =>
+  String backup_import_confirm({
+    required Object date,
+    required Object bookCount,
+    required Object statsCount,
+  }) =>
       'Dadurch werden alle aktuellen Daten durch das Backup vom ${date} ersetzt.\n\n${bookCount} Bücher, ${statsCount} Statistikeinträge.\n\nNach der Wiederherstellung wird die App neu gestartet.';
   @override
   String get backup_import_confirm_title => 'Backup wiederherstellen?';
@@ -15630,8 +15821,10 @@ class _StringsDe extends _StringsEn {
   @override
   String get backup_import_invalid => 'Ungültige Backup-Datei';
   @override
-  String backup_import_merge_preview(
-          {required Object bookCount, required Object progressCount}) =>
+  String backup_import_merge_preview({
+    required Object bookCount,
+    required Object progressCount,
+  }) =>
       'Zusammenführung fügt ${bookCount} Bücher hinzu und aktualisiert ${progressCount} Lesepositionen.';
   @override
   String get backup_import_mode_label => 'Importmodus';
@@ -15934,12 +16127,12 @@ class _StringsDe extends _StringsEn {
   @override
   String get changelog_prerelease => 'Vorabversion';
   @override
-  String chapter_progress(
-          {required Object idx,
-          required Object total,
-          required Object suffix,
-          required Object pct}) =>
-      'Kapitel ${idx} / ${total}${suffix} · ${pct}%';
+  String chapter_progress({
+    required Object idx,
+    required Object total,
+    required Object suffix,
+    required Object pct,
+  }) => 'Kapitel ${idx} / ${total}${suffix} · ${pct}%';
   @override
   String get clear => 'Leeren';
   @override
@@ -16029,9 +16222,10 @@ class _StringsDe extends _StringsEn {
   @override
   String get collection_view_all => 'Alle anzeigen';
   @override
-  String collection_watched_progress(
-          {required Object done, required Object total}) =>
-      '${done}/${total} angesehen';
+  String collection_watched_progress({
+    required Object done,
+    required Object total,
+  }) => '${done}/${total} angesehen';
   @override
   String get collection_word => 'Wort';
   @override
@@ -16260,9 +16454,10 @@ class _StringsDe extends _StringsEn {
   String get data_storage_migrate_failed_title =>
       'Datenmigration fehlgeschlagen';
   @override
-  String data_storage_migrate_overlay_progress(
-          {required Object copied, required Object total}) =>
-      'Dateien werden kopiert: ${copied} / ${total}';
+  String data_storage_migrate_overlay_progress({
+    required Object copied,
+    required Object total,
+  }) => 'Dateien werden kopiert: ${copied} / ${total}';
   @override
   String get data_storage_migrate_overlay_title =>
       'Deine Daten werden verschoben';
@@ -16280,8 +16475,10 @@ class _StringsDe extends _StringsEn {
   String get data_storage_restart_failed =>
       'Daten verschoben, aber automatischer Neustart fehlgeschlagen. Bitte öffne Fushi manuell erneut.';
   @override
-  String db_downgrade_message(
-          {required Object dbVersion, required Object appVersion}) =>
+  String db_downgrade_message({
+    required Object dbVersion,
+    required Object appVersion,
+  }) =>
       'Diese Datenbank wurde von einer neueren Fushi-Version erstellt (Schema v${dbVersion}). Deine aktuelle App ist zu alt (v${appVersion}). Das Öffnen wurde zum Schutz deiner Daten blockiert. Bitte aktualisiere die App und versuche es erneut.';
   @override
   String get db_downgrade_title => 'Fushi aktualisieren';
@@ -16452,11 +16649,11 @@ class _StringsDe extends _StringsEn {
   @override
   String get dict_download_language => 'Deine Sprache';
   @override
-  String dict_download_partial(
-          {required Object success,
-          required Object total,
-          required Object error}) =>
-      '${success} / ${total} OK. Fehlgeschlagen: ${error}';
+  String dict_download_partial({
+    required Object success,
+    required Object total,
+    required Object error,
+  }) => '${success} / ${total} OK. Fehlgeschlagen: ${error}';
   @override
   String get dict_download_select_title => 'Wörterbücher auswählen';
   @override
@@ -16489,18 +16686,21 @@ class _StringsDe extends _StringsEn {
   @override
   String get dict_update_latest => 'Bereits aktuell.';
   @override
-  String dict_update_name_mismatch_body(
-          {required Object incoming, required Object existing}) =>
+  String dict_update_name_mismatch_body({
+    required Object incoming,
+    required Object existing,
+  }) =>
       'Die ausgewählte Datei ist „${incoming}“, aber du aktualisierst „${existing}“. Trotzdem ersetzen?';
   @override
   String get dict_update_name_mismatch_title => 'Namen stimmen nicht überein';
   @override
   String get dict_update_none => 'Alle Wörterbücher sind aktuell.';
   @override
-  String dict_update_summary(
-          {required Object updated,
-          required Object current,
-          required Object failed}) =>
+  String dict_update_summary({
+    required Object updated,
+    required Object current,
+    required Object failed,
+  }) =>
       '${updated} aktualisiert, ${current} aktuell, ${failed} fehlgeschlagen.';
   @override
   String get dict_update_tooltip => 'Wörterbuch aktualisieren';
@@ -16591,8 +16791,10 @@ class _StringsDe extends _StringsEn {
   @override
   String get download_subscription_check_now => 'Jetzt prüfen';
   @override
-  String download_subscription_choice_hint(
-          {required Object group, required Object resolution}) =>
+  String download_subscription_choice_hint({
+    required Object group,
+    required Object resolution,
+  }) =>
       'Folge ${group} · ${resolution}. Neue Einzelepisoden-Veröffentlichungen werden in die Warteschlange gestellt.';
   @override
   String get download_subscription_created =>
@@ -16738,8 +16940,10 @@ class _StringsDe extends _StringsEn {
   @override
   String favorites({required Object n}) => 'Favoriten (${n})';
   @override
-  String field_fallback_used(
-          {required Object field, required Object secondField}) =>
+  String field_fallback_used({
+    required Object field,
+    required Object secondField,
+  }) =>
       'Das Feld ${field} hat ${secondField} als Ersatz-Suchbegriff verwendet.';
   @override
   String file_count({required Object count}) => '${count} Dateien';
@@ -17473,12 +17677,12 @@ class _StringsDe extends _StringsEn {
   @override
   String get game_waiting_for_text => 'Warte auf Text';
   @override
-  String game_waveform_range_label(
-          {required Object start,
-          required Object end,
-          required Object duration,
-          required Object total}) =>
-      '${start} – ${end} (ausgewählt ${duration} / gesamt ${total})';
+  String game_waveform_range_label({
+    required Object start,
+    required Object end,
+    required Object duration,
+    required Object total,
+  }) => '${start} – ${end} (ausgewählt ${duration} / gesamt ${total})';
   @override
   String get game_waveform_select_title => 'Audiobereich auswählen';
   @override
@@ -17748,9 +17952,10 @@ class _StringsDe extends _StringsEn {
   @override
   String get jump_to_char => 'Zur Zeichenposition springen';
   @override
-  String jump_to_char_current(
-          {required Object current, required Object total}) =>
-      'Aktuell: ${current} / ${total}';
+  String jump_to_char_current({
+    required Object current,
+    required Object total,
+  }) => 'Aktuell: ${current} / ${total}';
   @override
   String get jump_to_char_hint => 'Zeichenposition eingeben…';
   @override
@@ -17929,9 +18134,10 @@ class _StringsDe extends _StringsEn {
   String get manga_ocr_wizard_no_images =>
       'Keine Bilder in diesem Ordner gefunden.';
   @override
-  String manga_ocr_wizard_page_progress(
-          {required Object done, required Object total}) =>
-      'Seite ${done} / ${total}';
+  String manga_ocr_wizard_page_progress({
+    required Object done,
+    required Object total,
+  }) => 'Seite ${done} / ${total}';
   @override
   String get manga_ocr_wizard_pick_folder => 'Bildordner auswählen';
   @override
@@ -17958,9 +18164,10 @@ class _StringsDe extends _StringsEn {
   String get manga_online_queue_added =>
       'Zur Download-Warteschlange hinzugefügt';
   @override
-  String manga_online_queue_progress(
-          {required Object done, required Object total}) =>
-      'Band ${done} / ${total}';
+  String manga_online_queue_progress({
+    required Object done,
+    required Object total,
+  }) => 'Band ${done} / ${total}';
   @override
   String get manga_online_queue_section => 'Manga-Katalog-Downloads';
   @override
@@ -17994,9 +18201,10 @@ class _StringsDe extends _StringsEn {
   String get manga_remote_ocr_unsupported =>
       'Der gekoppelte Host unterstützt keine Manga-OCR.';
   @override
-  String manga_remote_ocr_uploading(
-          {required Object done, required Object total}) =>
-      'Seiten hochladen ${done} / ${total}…';
+  String manga_remote_ocr_uploading({
+    required Object done,
+    required Object total,
+  }) => 'Seiten hochladen ${done} / ${total}…';
   @override
   String get margin_bottom => 'Unterer Rand';
   @override
@@ -18508,16 +18716,18 @@ class _StringsDe extends _StringsEn {
   @override
   String get audiobook_rematch_auto_match => 'Automatischer Abgleich';
   @override
-  String audiobook_rematch_auto_picked(
-          {required Object window, required Object pct}) =>
-      'Automatisch ${window} ausgewählt (Treffer ${pct}%)';
+  String audiobook_rematch_auto_picked({
+    required Object window,
+    required Object pct,
+  }) => 'Automatisch ${window} ausgewählt (Treffer ${pct}%)';
   @override
   String audiobook_rematch_default_value({required Object n}) =>
       'Standard ${n}';
   @override
-  String audiobook_rematch_health_label(
-          {required Object pct, required Object detail}) =>
-      '${pct} übereinstimmend — ${detail}';
+  String audiobook_rematch_health_label({
+    required Object pct,
+    required Object detail,
+  }) => '${pct} übereinstimmend — ${detail}';
   @override
   String get audiobook_rematch_matching => 'Abgleich läuft...';
   @override
@@ -18534,9 +18744,10 @@ class _StringsDe extends _StringsEn {
   String audiobook_rematch_failed({required Object error}) =>
       'Neuabgleich fehlgeschlagen: ${error}';
   @override
-  String audiobook_rematch_result(
-          {required Object pct, required Object window}) =>
-      'Neu abgeglichen: ${pct}% (Fenster: ${window})';
+  String audiobook_rematch_result({
+    required Object pct,
+    required Object window,
+  }) => 'Neu abgeglichen: ${pct}% (Fenster: ${window})';
   @override
   String get audiobook_rematch_search_window => 'Suchfenster';
   @override
@@ -19749,9 +19960,10 @@ class _StringsDe extends _StringsEn {
   @override
   String get update_download_resumed => 'fortgesetzt';
   @override
-  String update_download_size(
-          {required Object received, required Object total}) =>
-      'Heruntergeladen: ${received} / ${total}';
+  String update_download_size({
+    required Object received,
+    required Object total,
+  }) => 'Heruntergeladen: ${received} / ${total}';
   @override
   String update_download_source({required Object source}) =>
       'Quelle: ${source}';
@@ -19766,13 +19978,16 @@ class _StringsDe extends _StringsEn {
   String update_install_current_executable({required Object path}) =>
       'Laufende Anwendung: ${path}';
   @override
-  String update_install_deletefile_failure(
-          {required Object path, required Object code}) =>
+  String update_install_deletefile_failure({
+    required Object path,
+    required Object code,
+  }) =>
       'Das Installationsprogramm konnte ${path} nicht ersetzen (Code ${code})';
   @override
-  String update_install_detected_location(
-          {required Object source, required Object path}) =>
-      'Erkannter Installationsort (${source}): ${path}';
+  String update_install_detected_location({
+    required Object source,
+    required Object path,
+  }) => 'Erkannter Installationsort (${source}): ${path}';
   @override
   String update_install_failure_summary({required Object summary}) =>
       'Grund: ${summary}';
@@ -19794,9 +20009,10 @@ class _StringsDe extends _StringsEn {
   String update_install_launcher_pid({required Object pid}) =>
       'Update-Launcher-PID: ${pid}';
   @override
-  String update_install_libmpv_holder(
-          {required Object pid, required Object path}) =>
-      'libmpv-Halter: PID ${pid} - ${path}';
+  String update_install_libmpv_holder({
+    required Object pid,
+    required Object path,
+  }) => 'libmpv-Halter: PID ${pid} - ${path}';
   @override
   String get update_install_log_not_observed =>
       'Das Installationsprotokoll wurde bei der Prüfung nach dem Start nicht erstellt.';
@@ -19831,9 +20047,10 @@ class _StringsDe extends _StringsEn {
   String get update_install_restart_windows_hint =>
       'Wenn die aufgeführten Prozesse geschlossen sind, libmpv-2.dll aber weiterhin gesperrt ist, starte Windows neu und installiere erneut.';
   @override
-  String update_install_running_process(
-          {required Object pid, required Object path}) =>
-      'Laufender Fushi-Prozess: PID ${pid} - ${path}';
+  String update_install_running_process({
+    required Object pid,
+    required Object path,
+  }) => 'Laufender Fushi-Prozess: PID ${pid} - ${path}';
   @override
   String update_install_success_message({required Object version}) =>
       'Fushi wurde auf Version ${version} aktualisiert.';
@@ -19851,9 +20068,10 @@ class _StringsDe extends _StringsEn {
   String update_message({required Object version}) =>
       'Version ${version} ist verfügbar.';
   @override
-  String update_network_failure(
-          {required Object host, required Object reason}) =>
-      '${host} konnte nicht erreicht werden: ${reason}';
+  String update_network_failure({
+    required Object host,
+    required Object reason,
+  }) => '${host} konnte nicht erreicht werden: ${reason}';
   @override
   String get update_never_remind => 'Nicht mehr erinnern';
   @override
@@ -20114,9 +20332,10 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_jimaku_api_key_set => 'API-Schlüssel gesetzt';
   @override
-  String video_jimaku_batch_done(
-          {required Object done, required Object total}) =>
-      'Untertitel abgerufen: ${done}/${total}';
+  String video_jimaku_batch_done({
+    required Object done,
+    required Object total,
+  }) => 'Untertitel abgerufen: ${done}/${total}';
   @override
   String get video_jimaku_batch_download => 'Alle herunterladen';
   @override
@@ -20647,9 +20866,10 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_shader_download_failed => 'Shader-Download fehlgeschlagen';
   @override
-  String video_shader_download_partial(
-          {required Object ok, required Object failed}) =>
-      '${ok} Shader heruntergeladen, ${failed} fehlgeschlagen';
+  String video_shader_download_partial({
+    required Object ok,
+    required Object failed,
+  }) => '${ok} Shader heruntergeladen, ${failed} fehlgeschlagen';
   @override
   String get video_shader_download_url => 'Über Link herunterladen';
   @override
@@ -20761,9 +20981,10 @@ class _StringsDe extends _StringsEn {
   String get video_subtitle_attach_playlist_hint =>
       'Öffne die Playlist, um pro Folge einen Untertitel anzuhängen';
   @override
-  String video_subtitle_attached_to_video(
-          {required Object title, required Object count}) =>
-      'Untertitel an ${title} angehängt (${count} Cues)';
+  String video_subtitle_attached_to_video({
+    required Object title,
+    required Object count,
+  }) => 'Untertitel an ${title} angehängt (${count} Cues)';
   @override
   String get video_subtitle_auto_align => 'Untertitel automatisch ausrichten';
   @override
@@ -20990,13 +21211,14 @@ class _StringsDe extends _StringsEn {
   @override
   String get anki_dedup_report_title => 'Medien-Deduplizierungsbericht';
   @override
-  String anki_dedup_report_body(
-          {required Object groups,
-          required Object removed,
-          required Object size,
-          required Object notes,
-          required Object models,
-          required Object skipped}) =>
+  String anki_dedup_report_body({
+    required Object groups,
+    required Object removed,
+    required Object size,
+    required Object notes,
+    required Object models,
+    required Object skipped,
+  }) =>
       '${groups} Duplikatgruppen; ${removed} zusätzliche Kopien (${size}); ${notes} Notizen und ${models} Notiztypen umgeschrieben; ${skipped} übersprungen.';
   @override
   String get anki_dedup_report_dry_note =>
@@ -21019,11 +21241,11 @@ class _StringsDe extends _StringsEn {
   String anki_dedup_plan_intro({required Object count, required Object size}) =>
       '${count} zusätzliche Kopien, ${size} rückgewinnbar. Eine Kopie jeder Datei wird behalten und jede Referenz wird zuvor darauf umgeleitet; nichts wird neu kodiert.';
   @override
-  String anki_dedup_plan_entry(
-          {required Object file,
-          required Object size,
-          required Object canonical}) =>
-      '${file} löschen (${size}) – ${canonical} wird behalten';
+  String anki_dedup_plan_entry({
+    required Object file,
+    required Object size,
+    required Object canonical,
+  }) => '${file} löschen (${size}) – ${canonical} wird behalten';
   @override
   String get anki_dedup_plan_delete => 'Diese Dateien löschen';
   @override
@@ -21084,8 +21306,10 @@ class _StringsDe extends _StringsEn {
   String manga_ocr_acceleration_status({required Object engine}) =>
       'OCR-Beschleunigung: ${engine}';
   @override
-  String manga_ocr_acceleration_degraded(
-          {required Object engine, required Object reason}) =>
+  String manga_ocr_acceleration_degraded({
+    required Object engine,
+    required Object reason,
+  }) =>
       'GPU-Beschleunigung nicht verfügbar, OCR läuft auf ${engine}: ${reason}';
   @override
   String get media_tracking_status => 'Sammlungsstatus';
@@ -21132,8 +21356,10 @@ class _StringsDe extends _StringsEn {
   String anki_dedup_auto_done({required Object count, required Object size}) =>
       '${count} doppelte Anki-Mediendateien entfernt, ${size} freigegeben';
   @override
-  String anki_lapis_backup_done_pruned(
-          {required Object path, required Object count}) =>
+  String anki_lapis_backup_done_pruned({
+    required Object path,
+    required Object count,
+  }) =>
       'Gesichert unter ${path} (${count} alte Sicherungen nach der 90-Tage-/10-behalten-Regel bereinigt)';
   @override
   String get game_audio_fallback_policy => 'Audio-Fallback';
@@ -21285,8 +21511,10 @@ class _StringsDe extends _StringsEn {
   String get stat_clear_all_game_message =>
       'Alle Spielzeiten und Sitzungszähler löschen? Ihre Spielebibliothek und Aktivitätszeitleiste bleiben erhalten. Dies kann nicht rückgängig gemacht werden.';
   @override
-  String batch_selection_stale_skipped(
-          {required Object m, required Object n}) =>
+  String batch_selection_stale_skipped({
+    required Object m,
+    required Object n,
+  }) =>
       '${m} von ${n} ausgewählten Elementen übersprungen, die nicht mehr existieren';
   @override
   String get game_text_thread_unset =>
@@ -21345,22 +21573,25 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_jimaku_language_unknown => 'Sprache nicht gekennzeichnet';
   @override
-  String video_jimaku_source_summary(
-          {required Object files,
-          required Object episodes,
-          required Object languages}) =>
-      '${files} Untertiteldateien · ${episodes} Episoden · ${languages}';
+  String video_jimaku_source_summary({
+    required Object files,
+    required Object episodes,
+    required Object languages,
+  }) => '${files} Untertiteldateien · ${episodes} Episoden · ${languages}';
   @override
-  String video_jimaku_episode_unlabeled(
-          {required Object episode, required Object count}) =>
+  String video_jimaku_episode_unlabeled({
+    required Object episode,
+    required Object count,
+  }) =>
       'Kein Untertitel für Episode ${episode} gekennzeichnet; ${count} nicht gekennzeichnete Dateien könnten trotzdem passen';
   @override
   String video_jimaku_episode_unavailable({required Object episode}) =>
       'Kein Untertitel für Episode ${episode} gefunden';
   @override
-  String video_jimaku_episode_available(
-          {required Object count, required Object languages}) =>
-      '${count} Untertitel verfügbar · ${languages}';
+  String video_jimaku_episode_available({
+    required Object count,
+    required Object languages,
+  }) => '${count} Untertitel verfügbar · ${languages}';
   @override
   String get manga_online_source_disabled =>
       'Diese Internetquelle ist deaktiviert. Aktivieren Sie sie unter Quellen, um den Katalog zu durchsuchen.';
@@ -21381,13 +21612,15 @@ class _StringsDe extends _StringsEn {
   String anki_dedup_progress_scanning({required Object count}) =>
       'Medienordner wird gescannt… (${count} Dateien gefunden)';
   @override
-  String anki_dedup_progress_hashing(
-          {required Object done, required Object total}) =>
-      'Dateien gleicher Größe werden verglichen… (${done} / ${total})';
+  String anki_dedup_progress_hashing({
+    required Object done,
+    required Object total,
+  }) => 'Dateien gleicher Größe werden verglichen… (${done} / ${total})';
   @override
-  String anki_dedup_progress_resolving(
-          {required Object done, required Object total}) =>
-      'Duplikate werden verarbeitet… (${done} / ${total})';
+  String anki_dedup_progress_resolving({
+    required Object done,
+    required Object total,
+  }) => 'Duplikate werden verarbeitet… (${done} / ${total})';
   @override
   String anki_dedup_progress_freed({required Object size}) =>
       'Bisher ${size} freigegeben';
@@ -21443,8 +21676,10 @@ class _StringsDe extends _StringsEn {
   @override
   String get sync_last_failed => 'Letzte Synchronisierung: fehlgeschlagen';
   @override
-  String anime_download_no_results_detail(
-          {required Object query, required Object filters}) =>
+  String anime_download_no_results_detail({
+    required Object query,
+    required Object filters,
+  }) =>
       'Der Dienst hat erfolgreich geantwortet, aber 0 Ergebnisse zurückgegeben. Abfrage: ${query}; Filter: ${filters}. Versuchen Sie einen anderen Titel oder lockern Sie die Filter.';
   @override
   String get anime_download_streaming_ready =>
@@ -21630,11 +21865,12 @@ class _StringsDe extends _StringsEn {
   @override
   String scrape_all_item({required Object title}) => 'Verarbeitung: ${title}';
   @override
-  String scrape_all_done(
-          {required Object applied,
-          required Object review,
-          required Object skipped,
-          required Object failed}) =>
+  String scrape_all_done({
+    required Object applied,
+    required Object review,
+    required Object skipped,
+    required Object failed,
+  }) =>
       'Fertig: ${applied} angewendet, ${review} zur Überprüfung, ${skipped} übersprungen, ${failed} fehlgeschlagen';
   @override
   String get scrape_all_empty =>
@@ -22007,9 +22243,10 @@ class _StringsDe extends _StringsEn {
   String collection_episode_watched_at({required Object position}) =>
       'Angesehen bis ${position}';
   @override
-  String collection_episode_rename_partial(
-          {required Object n, required Object m}) =>
-      '${n} Episoden umbenannt, ${m} fehlgeschlagen';
+  String collection_episode_rename_partial({
+    required Object n,
+    required Object m,
+  }) => '${n} Episoden umbenannt, ${m} fehlgeschlagen';
   @override
   String get sync_err_browser_timeout =>
       'Der Browser hat die Autorisierung nicht zurückgegeben. Versuchen Sie es erneut und stellen Sie sicher, dass Ihr Proxy 127.0.0.1 durchlässt.';
@@ -22051,9 +22288,10 @@ class _StringsDe extends _StringsEn {
   String get book_convert_blocked_source_missing =>
       'Die Quelldateien sind nicht mehr auf der Festplatte.';
   @override
-  String manga_online_retry_waiting(
-          {required Object attempt, required Object total}) =>
-      'Automatischer Wiederholungsversuch (${attempt}/${total})';
+  String manga_online_retry_waiting({
+    required Object attempt,
+    required Object total,
+  }) => 'Automatischer Wiederholungsversuch (${attempt}/${total})';
   @override
   String get manga_ocr_wizard_already_ocred =>
       'Dieses Volume hat bereits OCR-Daten auf jeder Seite. Eine erneute OCR würde diese überschreiben.';
@@ -22155,17 +22393,18 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_source_scrape_write_images => 'Bilddateien schreiben';
   @override
-  String video_source_scrape_progress(
-          {required Object phase,
-          required Object current,
-          required Object total}) =>
-      '${phase} · ${current}/${total}';
+  String video_source_scrape_progress({
+    required Object phase,
+    required Object current,
+    required Object total,
+  }) => '${phase} · ${current}/${total}';
   @override
-  String video_source_scrape_last_summary(
-          {required Object status,
-          required Object succeeded,
-          required Object pending,
-          required Object failed}) =>
+  String video_source_scrape_last_summary({
+    required Object status,
+    required Object succeeded,
+    required Object pending,
+    required Object failed,
+  }) =>
       'Letzter Abruf (${status}): ${succeeded} erfolgreich, ${pending} ausstehend, ${failed} fehlgeschlagen';
   @override
   String get video_source_scrape_phase_planning => 'Planung';
@@ -22385,8 +22624,10 @@ class _StringsDe extends _StringsEn {
   String migration_import_running({required Object batch}) =>
       '${batch} wird importiert…';
   @override
-  String migration_import_verify_failed(
-          {required Object batch, required Object detail}) =>
+  String migration_import_verify_failed({
+    required Object batch,
+    required Object detail,
+  }) =>
       '${batch} hat die Verifizierung nicht bestanden und wurde für den erneuten Export beibehalten: ${detail}';
   @override
   String migration_import_counts_failed({required Object detail}) =>
@@ -22414,11 +22655,11 @@ class _StringsDe extends _StringsEn {
   @override
   String get migration_import_permission_grant => 'Berechtigung erteilen';
   @override
-  String migration_import_verifying(
-          {required Object batch,
-          required Object done,
-          required Object total}) =>
-      '${batch} wird verifiziert (${done}/${total})';
+  String migration_import_verifying({
+    required Object batch,
+    required Object done,
+    required Object total,
+  }) => '${batch} wird verifiziert (${done}/${total})';
   @override
   String get migration_import_verifying_hint =>
       'Archive werden überprüft. Große Bibliotheken können mehrere Minuten dauern.';
@@ -22596,11 +22837,11 @@ class _StringsDe extends _StringsEn {
   String video_subtitle_read_failed({required Object label}) =>
       'Diese Untertiteldatei konnte nicht gelesen werden (beschädigt oder leer): ${label}';
   @override
-  String dict_downloading_size(
-          {required Object name,
-          required Object done,
-          required Object total}) =>
-      '${name} wird heruntergeladen (${done} / ${total})';
+  String dict_downloading_size({
+    required Object name,
+    required Object done,
+    required Object total,
+  }) => '${name} wird heruntergeladen (${done} / ${total})';
   @override
   String get video_subtitle_attach_book_missing =>
       'Dieses Video ist nicht in Ihrer Bibliothek, daher wurde der Untertitel nicht zugeordnet';
@@ -22800,10 +23041,11 @@ class _StringsDe extends _StringsEn {
   String manga_import_batch_hint({required Object n}) =>
       'Dieser Ordner enthält ${n} Banddateien; jede wird als eigenes Buch importiert, benannt nach der Datei.';
   @override
-  String manga_import_batch_done(
-          {required Object imported,
-          required Object skipped,
-          required Object failed}) =>
+  String manga_import_batch_done({
+    required Object imported,
+    required Object skipped,
+    required Object failed,
+  }) =>
       '${imported} importiert, ${skipped} übersprungen, ${failed} fehlgeschlagen.';
   @override
   String get srt_book_reimport => 'Erneut importieren';
@@ -22900,8 +23142,10 @@ class _StringsDe extends _StringsEn {
   @override
   String get update_release_page_open => 'Release-Seite';
   @override
-  String update_install_gal_hook_holder(
-          {required Object pid, required Object path}) =>
+  String update_install_gal_hook_holder({
+    required Object pid,
+    required Object path,
+  }) =>
       'Galgame-Aufnahmekomponente in Verwendung: PID ${pid} – ${path} (dies ist das Spiel, das Sie spielen, oder sein Aufnahme-Host). Schließen Sie das Spiel und aktualisieren Sie erneut.';
   @override
   String get game_hook_reason_protocol_mismatch =>
@@ -23398,9 +23642,10 @@ class _StringsDe extends _StringsEn {
   String get manga_ocr_model_unused_by_engine =>
       'Die aktuelle Engine verwendet diese lokalen Modelldateien nicht.';
   @override
-  String manga_ocr_download_total_progress(
-          {required Object done, required Object total}) =>
-      '${done} von ${total}';
+  String manga_ocr_download_total_progress({
+    required Object done,
+    required Object total,
+  }) => '${done} von ${total}';
   @override
   String get media_source_network_subtitle_video =>
       'WebDAV-Remote-Bibliothek (Streaming vor Ort)';
@@ -23873,10 +24118,11 @@ class _StringsDe extends _StringsEn {
   String get manga_ocr_import_matched_nothing =>
       'Keine brauchbaren Modelldateien erkannt';
   @override
-  String manga_ocr_import_size_mismatch(
-          {required Object file,
-          required Object expected,
-          required Object actual}) =>
+  String manga_ocr_import_size_mismatch({
+    required Object file,
+    required Object expected,
+    required Object actual,
+  }) =>
       '${file} hat die falsche Größe: erwartet ${expected}, tatsächlich ${actual}';
   @override
   String manga_ocr_import_still_missing({required Object count}) =>
@@ -23943,9 +24189,10 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_jimaku_search_failed => 'Untertitelsuche fehlgeschlagen';
   @override
-  String video_subtitle_error_with_code(
-          {required Object msg, required Object code}) =>
-      '${msg} (HTTP ${code})';
+  String video_subtitle_error_with_code({
+    required Object msg,
+    required Object code,
+  }) => '${msg} (HTTP ${code})';
   @override
   String get manga_rescan_run => 'Ausgewählten Bereich neu erkennen';
   @override
@@ -24201,9 +24448,10 @@ class _StringsDe extends _StringsEn {
   @override
   String get manga_series_open_series => 'Werkseite';
   @override
-  String manga_series_read_progress(
-          {required Object page, required Object total}) =>
-      'Bis Seite ${page} von ${total} gelesen';
+  String manga_series_read_progress({
+    required Object page,
+    required Object total,
+  }) => 'Bis Seite ${page} von ${total} gelesen';
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       'Bis Seite ${page} gelesen';
@@ -24490,13 +24738,15 @@ class _StringsDe extends _StringsEn {
   String web_video_mine_queued({required Object count}) =>
       'Für die Kartenerstellung vorgemerkt (${count} ausstehend)';
   @override
-  String web_video_mine_queue_running(
-          {required Object done, required Object total}) =>
-      'Karten werden erstellt ${done}/${total}…';
+  String web_video_mine_queue_running({
+    required Object done,
+    required Object total,
+  }) => 'Karten werden erstellt ${done}/${total}…';
   @override
-  String web_video_mine_queue_finished(
-          {required Object ok, required Object failed}) =>
-      'Karten erstellt: ${ok}, fehlgeschlagen: ${failed}';
+  String web_video_mine_queue_finished({
+    required Object ok,
+    required Object failed,
+  }) => 'Karten erstellt: ${ok}, fehlgeschlagen: ${failed}';
   @override
   String get web_video_hosting_menu => 'Wiedergabemodus';
   @override
@@ -24772,29 +25022,78 @@ class _StringsDe extends _StringsEn {
       'Waiting for matching in-game click';
   @override
   String get delete_choices_remember => 'Diese Auswahl merken';
+  @override
+  String get network_proxy_mode_label => 'Proxy mode';
+  @override
+  String get network_proxy_mode_auto => 'Automatic';
+  @override
+  String get network_proxy_mode_auto_hint =>
+      'Use environment variables, then the enabled system proxy';
+  @override
+  String get network_proxy_mode_direct => 'Direct';
+  @override
+  String get network_proxy_mode_direct_hint => 'Disable proxy use for the app';
+  @override
+  String get network_proxy_mode_manual => 'Manual';
+  @override
+  String get network_proxy_mode_manual_hint =>
+      'Use the server and optional credentials below';
+  @override
+  String get network_proxy_manual_hint =>
+      'HTTP proxy server used by all public internet requests';
+  @override
+  String get network_proxy_username => 'Proxy username (optional)';
+  @override
+  String get network_proxy_password => 'Proxy password (optional)';
+  @override
+  String get storage_category_backups => 'Local backups';
+  @override
+  String storage_entry_backups_label({required Object n}) =>
+      '${n} backup archive(s)';
+  @override
+  String get storage_entry_delete_backups_confirm_body =>
+      'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+  @override
+  String get update_download_source_preference => 'Preferred download source';
+  @override
+  String get update_download_source_preference_hint =>
+      'The selected source is tried first; unavailable sources still fall back automatically.';
+  @override
+  String get update_download_source_auto => 'Automatic (recommended)';
+  @override
+  String get update_download_source_cloudflare => 'Cloudflare mirror';
+  @override
+  String get update_download_source_github => 'GitHub direct';
+  @override
+  String update_download_source_proxy({required Object host}) =>
+      'Proxy: ${host}';
 }
 
 // Path: <root>
 class _StringsEs extends _StringsEn {
   /// You can call this constructor and build your own translation instance of this locale.
   /// Constructing via the enum [AppLocale.build] is preferred.
-  _StringsEs.build(
-      {Map<String, Node>? overrides,
-      PluralResolver? cardinalResolver,
-      PluralResolver? ordinalResolver})
-      : assert(overrides == null,
-            'Set "translation_overrides: true" in order to enable this feature.'),
-        $meta = TranslationMetadata(
-          locale: AppLocale.es,
-          overrides: overrides ?? {},
-          cardinalResolver: cardinalResolver,
-          ordinalResolver: ordinalResolver,
-        ),
-        super.build(
-            cardinalResolver: cardinalResolver,
-            ordinalResolver: ordinalResolver) {
+  _StringsEs.build({
+    Map<String, Node>? overrides,
+    PluralResolver? cardinalResolver,
+    PluralResolver? ordinalResolver,
+  }) : assert(
+         overrides == null,
+         'Set "translation_overrides: true" in order to enable this feature.',
+       ),
+       $meta = TranslationMetadata(
+         locale: AppLocale.es,
+         overrides: overrides ?? {},
+         cardinalResolver: cardinalResolver,
+         ordinalResolver: ordinalResolver,
+       ),
+       super.build(
+         cardinalResolver: cardinalResolver,
+         ordinalResolver: ordinalResolver,
+       ) {
     super.$meta.setFlatMapFunction(
-        $meta.getTranslation); // copy base translations to super.$meta
+      $meta.getTranslation,
+    ); // copy base translations to super.$meta
     $meta.setFlatMapFunction(_flatMapFunction);
   }
 
@@ -25313,10 +25612,11 @@ class _StringsEs extends _StringsEn {
   @override
   String get backup_import => 'Importar copia de seguridad';
   @override
-  String backup_import_confirm(
-          {required Object date,
-          required Object bookCount,
-          required Object statsCount}) =>
+  String backup_import_confirm({
+    required Object date,
+    required Object bookCount,
+    required Object statsCount,
+  }) =>
       'Esto reemplazará todos los datos actuales con la copia de seguridad del ${date}.\n\n${bookCount} libros, ${statsCount} registros de estadísticas.\n\nLa app se reiniciará tras la restauración.';
   @override
   String get backup_import_confirm_title => '¿Restaurar copia de seguridad?';
@@ -25334,8 +25634,10 @@ class _StringsEs extends _StringsEn {
   @override
   String get backup_import_invalid => 'Archivo de copia de seguridad no válido';
   @override
-  String backup_import_merge_preview(
-          {required Object bookCount, required Object progressCount}) =>
+  String backup_import_merge_preview({
+    required Object bookCount,
+    required Object progressCount,
+  }) =>
       'La fusión añadirá ${bookCount} libros y actualizará ${progressCount} posiciones de lectura.';
   @override
   String get backup_import_mode_label => 'Modo de importación';
@@ -25635,12 +25937,12 @@ class _StringsEs extends _StringsEn {
   @override
   String get changelog_prerelease => 'Prelanzamiento';
   @override
-  String chapter_progress(
-          {required Object idx,
-          required Object total,
-          required Object suffix,
-          required Object pct}) =>
-      'Capítulo ${idx} / ${total}${suffix} · ${pct}%';
+  String chapter_progress({
+    required Object idx,
+    required Object total,
+    required Object suffix,
+    required Object pct,
+  }) => 'Capítulo ${idx} / ${total}${suffix} · ${pct}%';
   @override
   String get clear => 'Limpiar';
   @override
@@ -25731,9 +26033,10 @@ class _StringsEs extends _StringsEn {
   @override
   String get collection_view_all => 'Ver todo';
   @override
-  String collection_watched_progress(
-          {required Object done, required Object total}) =>
-      'Visto ${done}/${total}';
+  String collection_watched_progress({
+    required Object done,
+    required Object total,
+  }) => 'Visto ${done}/${total}';
   @override
   String get collection_word => 'Palabra';
   @override
@@ -25960,9 +26263,10 @@ class _StringsEs extends _StringsEn {
   @override
   String get data_storage_migrate_failed_title => 'La migración de datos falló';
   @override
-  String data_storage_migrate_overlay_progress(
-          {required Object copied, required Object total}) =>
-      'Copiando archivos: ${copied} / ${total}';
+  String data_storage_migrate_overlay_progress({
+    required Object copied,
+    required Object total,
+  }) => 'Copiando archivos: ${copied} / ${total}';
   @override
   String get data_storage_migrate_overlay_title => 'Moviendo sus datos';
   @override
@@ -25979,8 +26283,10 @@ class _StringsEs extends _StringsEn {
   String get data_storage_restart_failed =>
       'Datos movidos, pero el reinicio automático falló. Vuelva a abrir Fushi manualmente.';
   @override
-  String db_downgrade_message(
-          {required Object dbVersion, required Object appVersion}) =>
+  String db_downgrade_message({
+    required Object dbVersion,
+    required Object appVersion,
+  }) =>
       'Esta base de datos la creó una versión más reciente de Fushi (esquema v${dbVersion}). Tu app actual es demasiado antigua (v${appVersion}). Se bloqueó la apertura para proteger tus datos. Actualiza la app e inténtalo de nuevo.';
   @override
   String get db_downgrade_title => 'Actualiza Fushi';
@@ -26154,11 +26460,11 @@ class _StringsEs extends _StringsEn {
   @override
   String get dict_download_language => 'Tu idioma';
   @override
-  String dict_download_partial(
-          {required Object success,
-          required Object total,
-          required Object error}) =>
-      '${success} / ${total} correctos. Fallidos: ${error}';
+  String dict_download_partial({
+    required Object success,
+    required Object total,
+    required Object error,
+  }) => '${success} / ${total} correctos. Fallidos: ${error}';
   @override
   String get dict_download_select_title => 'Seleccionar diccionarios';
   @override
@@ -26190,19 +26496,21 @@ class _StringsEs extends _StringsEn {
   @override
   String get dict_update_latest => 'Ya está actualizado.';
   @override
-  String dict_update_name_mismatch_body(
-          {required Object incoming, required Object existing}) =>
+  String dict_update_name_mismatch_body({
+    required Object incoming,
+    required Object existing,
+  }) =>
       'El archivo seleccionado es «${incoming}», pero estás actualizando «${existing}». ¿Reemplazar de todos modos?';
   @override
   String get dict_update_name_mismatch_title => 'Los nombres no coinciden';
   @override
   String get dict_update_none => 'Todos los diccionarios están actualizados.';
   @override
-  String dict_update_summary(
-          {required Object updated,
-          required Object current,
-          required Object failed}) =>
-      '${updated} actualizados, ${current} al día, ${failed} fallaron.';
+  String dict_update_summary({
+    required Object updated,
+    required Object current,
+    required Object failed,
+  }) => '${updated} actualizados, ${current} al día, ${failed} fallaron.';
   @override
   String get dict_update_tooltip => 'Actualizar diccionario';
   @override
@@ -26294,8 +26602,10 @@ class _StringsEs extends _StringsEn {
   @override
   String get download_subscription_check_now => 'Verificar ahora';
   @override
-  String download_subscription_choice_hint(
-          {required Object group, required Object resolution}) =>
+  String download_subscription_choice_hint({
+    required Object group,
+    required Object resolution,
+  }) =>
       'Seguir ${group} · ${resolution}. Los nuevos episodios individuales se pondrán en cola.';
   @override
   String get download_subscription_created =>
@@ -26442,8 +26752,10 @@ class _StringsEs extends _StringsEn {
   @override
   String favorites({required Object n}) => 'Favoritos (${n})';
   @override
-  String field_fallback_used(
-          {required Object field, required Object secondField}) =>
+  String field_fallback_used({
+    required Object field,
+    required Object secondField,
+  }) =>
       'El campo ${field} usó ${secondField} como término de búsqueda alternativo.';
   @override
   String file_count({required Object count}) => '${count} archivos';
@@ -27179,12 +27491,12 @@ class _StringsEs extends _StringsEn {
   @override
   String get game_waiting_for_text => 'Esperando texto';
   @override
-  String game_waveform_range_label(
-          {required Object start,
-          required Object end,
-          required Object duration,
-          required Object total}) =>
-      '${start} - ${end} (seleccionado ${duration} / total ${total})';
+  String game_waveform_range_label({
+    required Object start,
+    required Object end,
+    required Object duration,
+    required Object total,
+  }) => '${start} - ${end} (seleccionado ${duration} / total ${total})';
   @override
   String get game_waveform_select_title => 'Seleccionar rango de audio';
   @override
@@ -27456,9 +27768,10 @@ class _StringsEs extends _StringsEn {
   @override
   String get jump_to_char => 'Ir al carácter';
   @override
-  String jump_to_char_current(
-          {required Object current, required Object total}) =>
-      'Actual: ${current} / ${total}';
+  String jump_to_char_current({
+    required Object current,
+    required Object total,
+  }) => 'Actual: ${current} / ${total}';
   @override
   String get jump_to_char_hint => 'Introduce la posición del carácter…';
   @override
@@ -27637,9 +27950,10 @@ class _StringsEs extends _StringsEn {
   String get manga_ocr_wizard_no_images =>
       'No se encontraron imágenes en esta carpeta.';
   @override
-  String manga_ocr_wizard_page_progress(
-          {required Object done, required Object total}) =>
-      'Página ${done} / ${total}';
+  String manga_ocr_wizard_page_progress({
+    required Object done,
+    required Object total,
+  }) => 'Página ${done} / ${total}';
   @override
   String get manga_ocr_wizard_pick_folder => 'Elegir carpeta de imágenes';
   @override
@@ -27665,9 +27979,10 @@ class _StringsEs extends _StringsEn {
   @override
   String get manga_online_queue_added => 'Añadido a la cola de descarga';
   @override
-  String manga_online_queue_progress(
-          {required Object done, required Object total}) =>
-      'Volumen ${done} / ${total}';
+  String manga_online_queue_progress({
+    required Object done,
+    required Object total,
+  }) => 'Volumen ${done} / ${total}';
   @override
   String get manga_online_queue_section => 'Descargas del catálogo de manga';
   @override
@@ -27702,9 +28017,10 @@ class _StringsEs extends _StringsEn {
   String get manga_remote_ocr_unsupported =>
       'El host emparejado no soporta OCR de manga.';
   @override
-  String manga_remote_ocr_uploading(
-          {required Object done, required Object total}) =>
-      'Subiendo páginas ${done} / ${total}…';
+  String manga_remote_ocr_uploading({
+    required Object done,
+    required Object total,
+  }) => 'Subiendo páginas ${done} / ${total}…';
   @override
   String get margin_bottom => 'Margen inferior';
   @override
@@ -28217,16 +28533,18 @@ class _StringsEs extends _StringsEn {
   @override
   String get audiobook_rematch_auto_match => 'Emparejamiento automático';
   @override
-  String audiobook_rematch_auto_picked(
-          {required Object window, required Object pct}) =>
-      'Selección automática ${window} (acierto ${pct}%)';
+  String audiobook_rematch_auto_picked({
+    required Object window,
+    required Object pct,
+  }) => 'Selección automática ${window} (acierto ${pct}%)';
   @override
   String audiobook_rematch_default_value({required Object n}) =>
       'Predeterminado ${n}';
   @override
-  String audiobook_rematch_health_label(
-          {required Object pct, required Object detail}) =>
-      '${pct} coincidencia — ${detail}';
+  String audiobook_rematch_health_label({
+    required Object pct,
+    required Object detail,
+  }) => '${pct} coincidencia — ${detail}';
   @override
   String get audiobook_rematch_matching => 'Emparejando...';
   @override
@@ -28245,9 +28563,10 @@ class _StringsEs extends _StringsEn {
   String audiobook_rematch_failed({required Object error}) =>
       'Re-emparejamiento fallido: ${error}';
   @override
-  String audiobook_rematch_result(
-          {required Object pct, required Object window}) =>
-      'Reemparejado: ${pct}% (ventana: ${window})';
+  String audiobook_rematch_result({
+    required Object pct,
+    required Object window,
+  }) => 'Reemparejado: ${pct}% (ventana: ${window})';
   @override
   String get audiobook_rematch_search_window => 'Ventana de búsqueda';
   @override
@@ -29475,9 +29794,10 @@ class _StringsEs extends _StringsEn {
   @override
   String get update_download_resumed => 'reanudada';
   @override
-  String update_download_size(
-          {required Object received, required Object total}) =>
-      'Descargado: ${received} / ${total}';
+  String update_download_size({
+    required Object received,
+    required Object total,
+  }) => 'Descargado: ${received} / ${total}';
   @override
   String update_download_source({required Object source}) =>
       'Fuente: ${source}';
@@ -29492,13 +29812,15 @@ class _StringsEs extends _StringsEn {
   String update_install_current_executable({required Object path}) =>
       'Ejecutable en uso: ${path}';
   @override
-  String update_install_deletefile_failure(
-          {required Object path, required Object code}) =>
-      'El instalador no pudo reemplazar ${path} (código ${code})';
+  String update_install_deletefile_failure({
+    required Object path,
+    required Object code,
+  }) => 'El instalador no pudo reemplazar ${path} (código ${code})';
   @override
-  String update_install_detected_location(
-          {required Object source, required Object path}) =>
-      'Ubicación de instalación detectada (${source}): ${path}';
+  String update_install_detected_location({
+    required Object source,
+    required Object path,
+  }) => 'Ubicación de instalación detectada (${source}): ${path}';
   @override
   String update_install_failure_summary({required Object summary}) =>
       'Motivo: ${summary}';
@@ -29520,9 +29842,10 @@ class _StringsEs extends _StringsEn {
   String update_install_launcher_pid({required Object pid}) =>
       'PID del lanzador de actualización: ${pid}';
   @override
-  String update_install_libmpv_holder(
-          {required Object pid, required Object path}) =>
-      'Proceso que retiene libmpv: PID ${pid} - ${path}';
+  String update_install_libmpv_holder({
+    required Object pid,
+    required Object path,
+  }) => 'Proceso que retiene libmpv: PID ${pid} - ${path}';
   @override
   String get update_install_log_not_observed =>
       'El registro del instalador no se creó durante la comprobación posterior al inicio.';
@@ -29558,9 +29881,10 @@ class _StringsEs extends _StringsEn {
   String get update_install_restart_windows_hint =>
       'Si los procesos indicados están cerrados pero libmpv-2.dll sigue bloqueado, reinicia Windows e instala de nuevo.';
   @override
-  String update_install_running_process(
-          {required Object pid, required Object path}) =>
-      'Proceso de Fushi en ejecución: PID ${pid} - ${path}';
+  String update_install_running_process({
+    required Object pid,
+    required Object path,
+  }) => 'Proceso de Fushi en ejecución: PID ${pid} - ${path}';
   @override
   String update_install_success_message({required Object version}) =>
       'Fushi se actualizó a la versión ${version}.';
@@ -29578,9 +29902,10 @@ class _StringsEs extends _StringsEn {
   String update_message({required Object version}) =>
       'La versión ${version} está disponible.';
   @override
-  String update_network_failure(
-          {required Object host, required Object reason}) =>
-      'No se pudo conectar con ${host}: ${reason}';
+  String update_network_failure({
+    required Object host,
+    required Object reason,
+  }) => 'No se pudo conectar con ${host}: ${reason}';
   @override
   String get update_never_remind => 'No recordar de nuevo';
   @override
@@ -29846,9 +30171,10 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_jimaku_api_key_set => 'API key configurada';
   @override
-  String video_jimaku_batch_done(
-          {required Object done, required Object total}) =>
-      'Subtítulos obtenidos: ${done}/${total}';
+  String video_jimaku_batch_done({
+    required Object done,
+    required Object total,
+  }) => 'Subtítulos obtenidos: ${done}/${total}';
   @override
   String get video_jimaku_batch_download => 'Descargar todos';
   @override
@@ -30377,9 +30703,10 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_shader_download_failed => 'Error al descargar el shader';
   @override
-  String video_shader_download_partial(
-          {required Object ok, required Object failed}) =>
-      'Se descargaron ${ok} shader(s), ${failed} fallaron';
+  String video_shader_download_partial({
+    required Object ok,
+    required Object failed,
+  }) => 'Se descargaron ${ok} shader(s), ${failed} fallaron';
   @override
   String get video_shader_download_url => 'Descargar desde enlace';
   @override
@@ -30492,9 +30819,10 @@ class _StringsEs extends _StringsEn {
   String get video_subtitle_attach_playlist_hint =>
       'Abre la lista de reproducción para adjuntar un subtítulo por episodio';
   @override
-  String video_subtitle_attached_to_video(
-          {required Object title, required Object count}) =>
-      'Subtítulo adjuntado a ${title} (${count} líneas)';
+  String video_subtitle_attached_to_video({
+    required Object title,
+    required Object count,
+  }) => 'Subtítulo adjuntado a ${title} (${count} líneas)';
   @override
   String get video_subtitle_auto_align => 'Alinear subtítulos';
   @override
@@ -30723,13 +31051,14 @@ class _StringsEs extends _StringsEn {
   @override
   String get anki_dedup_report_title => 'Reporte de deduplicación de medios';
   @override
-  String anki_dedup_report_body(
-          {required Object groups,
-          required Object removed,
-          required Object size,
-          required Object notes,
-          required Object models,
-          required Object skipped}) =>
+  String anki_dedup_report_body({
+    required Object groups,
+    required Object removed,
+    required Object size,
+    required Object notes,
+    required Object models,
+    required Object skipped,
+  }) =>
       '${groups} grupos duplicados; ${removed} copias extra (${size}); ${notes} notas y ${models} tipos de nota reescritos; ${skipped} omitidos.';
   @override
   String get anki_dedup_report_dry_note => 'Solo escaneo — nada fue cambiado.';
@@ -30751,11 +31080,11 @@ class _StringsEs extends _StringsEn {
   String anki_dedup_plan_intro({required Object count, required Object size}) =>
       '${count} copias extra, ${size} recuperable. Se conserva una copia de cada archivo y cada referencia se redirige primero; nada se re-codifica.';
   @override
-  String anki_dedup_plan_entry(
-          {required Object file,
-          required Object size,
-          required Object canonical}) =>
-      'Eliminar ${file} (${size}) — conservando ${canonical}';
+  String anki_dedup_plan_entry({
+    required Object file,
+    required Object size,
+    required Object canonical,
+  }) => 'Eliminar ${file} (${size}) — conservando ${canonical}';
   @override
   String get anki_dedup_plan_delete => 'Eliminar estos archivos';
   @override
@@ -30816,8 +31145,10 @@ class _StringsEs extends _StringsEn {
   String manga_ocr_acceleration_status({required Object engine}) =>
       'Aceleración de OCR: ${engine}';
   @override
-  String manga_ocr_acceleration_degraded(
-          {required Object engine, required Object reason}) =>
+  String manga_ocr_acceleration_degraded({
+    required Object engine,
+    required Object reason,
+  }) =>
       'Aceleración por GPU no disponible, ejecutando OCR en ${engine}: ${reason}';
   @override
   String get media_tracking_status => 'Estado de colección';
@@ -30864,8 +31195,10 @@ class _StringsEs extends _StringsEn {
   String anki_dedup_auto_done({required Object count, required Object size}) =>
       'Se eliminaron ${count} archivos de medios duplicados de Anki, ${size} recuperado';
   @override
-  String anki_lapis_backup_done_pruned(
-          {required Object path, required Object count}) =>
+  String anki_lapis_backup_done_pruned({
+    required Object path,
+    required Object count,
+  }) =>
       'Respaldado en ${path} (${count} respaldos antiguos eliminados por la política de 90 días / mantener 10)';
   @override
   String get game_audio_fallback_policy => 'Respaldo de audio';
@@ -31017,9 +31350,10 @@ class _StringsEs extends _StringsEn {
   String get stat_clear_all_game_message =>
       '¿Borrar todo el tiempo de juego y conteos de sesiones? Su biblioteca de juegos y línea de actividad se conservan. Esto no se puede deshacer.';
   @override
-  String batch_selection_stale_skipped(
-          {required Object m, required Object n}) =>
-      'Se omitieron ${m} de ${n} elementos seleccionados que ya no existen';
+  String batch_selection_stale_skipped({
+    required Object m,
+    required Object n,
+  }) => 'Se omitieron ${m} de ${n} elementos seleccionados que ya no existen';
   @override
   String get game_text_thread_unset =>
       'Sin hilo seleccionado — elija uno para comenzar a capturar';
@@ -31076,22 +31410,26 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_jimaku_language_unknown => 'Idioma no etiquetado';
   @override
-  String video_jimaku_source_summary(
-          {required Object files,
-          required Object episodes,
-          required Object languages}) =>
+  String video_jimaku_source_summary({
+    required Object files,
+    required Object episodes,
+    required Object languages,
+  }) =>
       '${files} archivos de subtítulos · ${episodes} episodios · ${languages}';
   @override
-  String video_jimaku_episode_unlabeled(
-          {required Object episode, required Object count}) =>
+  String video_jimaku_episode_unlabeled({
+    required Object episode,
+    required Object count,
+  }) =>
       'Sin subtítulo etiquetado para episodio ${episode}; ${count} archivos sin etiquetar pueden coincidir';
   @override
   String video_jimaku_episode_unavailable({required Object episode}) =>
       'No se encontró subtítulo para episodio ${episode}';
   @override
-  String video_jimaku_episode_available(
-          {required Object count, required Object languages}) =>
-      '${count} subtítulos disponibles · ${languages}';
+  String video_jimaku_episode_available({
+    required Object count,
+    required Object languages,
+  }) => '${count} subtítulos disponibles · ${languages}';
   @override
   String get manga_online_source_disabled =>
       'Esta fuente de internet está desactivada. Actívela en Fuentes para explorar el catálogo.';
@@ -31111,13 +31449,15 @@ class _StringsEs extends _StringsEn {
   String anki_dedup_progress_scanning({required Object count}) =>
       'Escaneando carpeta de medios… (${count} archivos encontrados)';
   @override
-  String anki_dedup_progress_hashing(
-          {required Object done, required Object total}) =>
-      'Comparando archivos del mismo tamaño… (${done} / ${total})';
+  String anki_dedup_progress_hashing({
+    required Object done,
+    required Object total,
+  }) => 'Comparando archivos del mismo tamaño… (${done} / ${total})';
   @override
-  String anki_dedup_progress_resolving(
-          {required Object done, required Object total}) =>
-      'Procesando duplicados… (${done} / ${total})';
+  String anki_dedup_progress_resolving({
+    required Object done,
+    required Object total,
+  }) => 'Procesando duplicados… (${done} / ${total})';
   @override
   String anki_dedup_progress_freed({required Object size}) =>
       '${size} liberado hasta ahora';
@@ -31172,8 +31512,10 @@ class _StringsEs extends _StringsEn {
   @override
   String get sync_last_failed => 'Última sincronización: falló';
   @override
-  String anime_download_no_results_detail(
-          {required Object query, required Object filters}) =>
+  String anime_download_no_results_detail({
+    required Object query,
+    required Object filters,
+  }) =>
       'El servicio respondió exitosamente pero devolvió 0 elementos. Consulta: ${query}; filtros: ${filters}. Intente otro título o relaje los filtros.';
   @override
   String get anime_download_streaming_ready =>
@@ -31367,11 +31709,12 @@ class _StringsEs extends _StringsEn {
   @override
   String scrape_all_item({required Object title}) => 'Procesando: ${title}';
   @override
-  String scrape_all_done(
-          {required Object applied,
-          required Object review,
-          required Object skipped,
-          required Object failed}) =>
+  String scrape_all_done({
+    required Object applied,
+    required Object review,
+    required Object skipped,
+    required Object failed,
+  }) =>
       'Listo: ${applied} aplicados, ${review} necesitan revisión, ${skipped} omitidos, ${failed} fallidos';
   @override
   String get scrape_all_empty =>
@@ -31743,9 +32086,10 @@ class _StringsEs extends _StringsEn {
   String collection_episode_watched_at({required Object position}) =>
       'Visto hasta ${position}';
   @override
-  String collection_episode_rename_partial(
-          {required Object n, required Object m}) =>
-      'Se renombraron ${n} episodios, ${m} fallaron';
+  String collection_episode_rename_partial({
+    required Object n,
+    required Object m,
+  }) => 'Se renombraron ${n} episodios, ${m} fallaron';
   @override
   String get sync_err_browser_timeout =>
       'El navegador nunca devolvió la autorización. Reintente y asegúrese de que su proxy deje pasar 127.0.0.1.';
@@ -31787,9 +32131,10 @@ class _StringsEs extends _StringsEn {
   String get book_convert_blocked_source_missing =>
       'Los archivos fuente ya no están en disco.';
   @override
-  String manga_online_retry_waiting(
-          {required Object attempt, required Object total}) =>
-      'Reintentando automáticamente (${attempt}/${total})';
+  String manga_online_retry_waiting({
+    required Object attempt,
+    required Object total,
+  }) => 'Reintentando automáticamente (${attempt}/${total})';
   @override
   String get manga_ocr_wizard_already_ocred =>
       'Este volumen ya tiene datos de OCR en cada página. Ejecutar OCR de nuevo los sobrescribiría.';
@@ -31893,17 +32238,18 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_source_scrape_write_images => 'Escribir archivos de imagen';
   @override
-  String video_source_scrape_progress(
-          {required Object phase,
-          required Object current,
-          required Object total}) =>
-      '${phase} · ${current}/${total}';
+  String video_source_scrape_progress({
+    required Object phase,
+    required Object current,
+    required Object total,
+  }) => '${phase} · ${current}/${total}';
   @override
-  String video_source_scrape_last_summary(
-          {required Object status,
-          required Object succeeded,
-          required Object pending,
-          required Object failed}) =>
+  String video_source_scrape_last_summary({
+    required Object status,
+    required Object succeeded,
+    required Object pending,
+    required Object failed,
+  }) =>
       'Última obtención (${status}): ${succeeded} exitosos, ${pending} pendientes, ${failed} fallidos';
   @override
   String get video_source_scrape_phase_planning => 'Planificando';
@@ -32122,8 +32468,10 @@ class _StringsEs extends _StringsEn {
   String migration_import_running({required Object batch}) =>
       'Importando ${batch}…';
   @override
-  String migration_import_verify_failed(
-          {required Object batch, required Object detail}) =>
+  String migration_import_verify_failed({
+    required Object batch,
+    required Object detail,
+  }) =>
       '${batch} falló la verificación y se conservó para re-exportar: ${detail}';
   @override
   String migration_import_counts_failed({required Object detail}) =>
@@ -32150,11 +32498,11 @@ class _StringsEs extends _StringsEn {
   @override
   String get migration_import_permission_grant => 'Conceder permiso';
   @override
-  String migration_import_verifying(
-          {required Object batch,
-          required Object done,
-          required Object total}) =>
-      'Verificando ${batch} (${done}/${total})';
+  String migration_import_verifying({
+    required Object batch,
+    required Object done,
+    required Object total,
+  }) => 'Verificando ${batch} (${done}/${total})';
   @override
   String get migration_import_verifying_hint =>
       'Verificando los archivos. Las bibliotecas grandes pueden tardar varios minutos.';
@@ -32333,11 +32681,11 @@ class _StringsEs extends _StringsEn {
   String video_subtitle_read_failed({required Object label}) =>
       'No se pudo leer este archivo de subtítulos (dañado o vacío): ${label}';
   @override
-  String dict_downloading_size(
-          {required Object name,
-          required Object done,
-          required Object total}) =>
-      'Descargando ${name} (${done} / ${total})';
+  String dict_downloading_size({
+    required Object name,
+    required Object done,
+    required Object total,
+  }) => 'Descargando ${name} (${done} / ${total})';
   @override
   String get video_subtitle_attach_book_missing =>
       'Este vídeo no está en su biblioteca, por lo que el subtítulo no se adjuntó';
@@ -32538,11 +32886,11 @@ class _StringsEs extends _StringsEn {
   String manga_import_batch_hint({required Object n}) =>
       'Esta carpeta contiene ${n} archivos de volumen; cada uno se importa como su propio libro, nombrado según su archivo.';
   @override
-  String manga_import_batch_done(
-          {required Object imported,
-          required Object skipped,
-          required Object failed}) =>
-      'Importados ${imported}, omitidos ${skipped}, fallidos ${failed}.';
+  String manga_import_batch_done({
+    required Object imported,
+    required Object skipped,
+    required Object failed,
+  }) => 'Importados ${imported}, omitidos ${skipped}, fallidos ${failed}.';
   @override
   String get srt_book_reimport => 'Reimportar';
   @override
@@ -32636,8 +32984,10 @@ class _StringsEs extends _StringsEn {
   @override
   String get update_release_page_open => 'Página de versiones';
   @override
-  String update_install_gal_hook_holder(
-          {required Object pid, required Object path}) =>
+  String update_install_gal_hook_holder({
+    required Object pid,
+    required Object path,
+  }) =>
       'Componente de captura de galgame en uso: PID ${pid} — ${path} (este es el juego que está jugando, o su host de captura). Cierre el juego, luego actualice de nuevo.';
   @override
   String get game_hook_reason_protocol_mismatch =>
@@ -33136,9 +33486,10 @@ class _StringsEs extends _StringsEn {
   String get manga_ocr_model_unused_by_engine =>
       'El motor actual no usa estos archivos de modelo local.';
   @override
-  String manga_ocr_download_total_progress(
-          {required Object done, required Object total}) =>
-      '${done} de ${total}';
+  String manga_ocr_download_total_progress({
+    required Object done,
+    required Object total,
+  }) => '${done} de ${total}';
   @override
   String get media_source_network_subtitle_video =>
       'Biblioteca remota WebDAV (reproduce en el lugar)';
@@ -33621,10 +33972,11 @@ class _StringsEs extends _StringsEn {
   String get manga_ocr_import_matched_nothing =>
       'No se reconoció ningún archivo de modelo utilizable';
   @override
-  String manga_ocr_import_size_mismatch(
-          {required Object file,
-          required Object expected,
-          required Object actual}) =>
+  String manga_ocr_import_size_mismatch({
+    required Object file,
+    required Object expected,
+    required Object actual,
+  }) =>
       '${file} tiene un tamaño incorrecto: se esperaba ${expected}, se obtuvo ${actual}';
   @override
   String manga_ocr_import_still_missing({required Object count}) =>
@@ -33691,9 +34043,10 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_jimaku_search_failed => 'Error al buscar subtítulos';
   @override
-  String video_subtitle_error_with_code(
-          {required Object msg, required Object code}) =>
-      '${msg} (HTTP ${code})';
+  String video_subtitle_error_with_code({
+    required Object msg,
+    required Object code,
+  }) => '${msg} (HTTP ${code})';
   @override
   String get manga_rescan_run => 'Volver a reconocer el área seleccionada';
   @override
@@ -33949,9 +34302,10 @@ class _StringsEs extends _StringsEn {
   @override
   String get manga_series_open_series => 'Página de la obra';
   @override
-  String manga_series_read_progress(
-          {required Object page, required Object total}) =>
-      'Leído hasta la página ${page} de ${total}';
+  String manga_series_read_progress({
+    required Object page,
+    required Object total,
+  }) => 'Leído hasta la página ${page} de ${total}';
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       'Leído hasta la página ${page}';
@@ -34239,13 +34593,15 @@ class _StringsEs extends _StringsEn {
   String web_video_mine_queued({required Object count}) =>
       'En cola para crear tarjetas (${count} pendientes)';
   @override
-  String web_video_mine_queue_running(
-          {required Object done, required Object total}) =>
-      'Creando tarjetas ${done}/${total}…';
+  String web_video_mine_queue_running({
+    required Object done,
+    required Object total,
+  }) => 'Creando tarjetas ${done}/${total}…';
   @override
-  String web_video_mine_queue_finished(
-          {required Object ok, required Object failed}) =>
-      'Tarjetas creadas: ${ok}, fallidas: ${failed}';
+  String web_video_mine_queue_finished({
+    required Object ok,
+    required Object failed,
+  }) => 'Tarjetas creadas: ${ok}, fallidas: ${failed}';
   @override
   String get web_video_hosting_menu => 'Modo de reproducción';
   @override
@@ -34522,29 +34878,78 @@ class _StringsEs extends _StringsEn {
       'Waiting for matching in-game click';
   @override
   String get delete_choices_remember => 'Recordar estas opciones';
+  @override
+  String get network_proxy_mode_label => 'Proxy mode';
+  @override
+  String get network_proxy_mode_auto => 'Automatic';
+  @override
+  String get network_proxy_mode_auto_hint =>
+      'Use environment variables, then the enabled system proxy';
+  @override
+  String get network_proxy_mode_direct => 'Direct';
+  @override
+  String get network_proxy_mode_direct_hint => 'Disable proxy use for the app';
+  @override
+  String get network_proxy_mode_manual => 'Manual';
+  @override
+  String get network_proxy_mode_manual_hint =>
+      'Use the server and optional credentials below';
+  @override
+  String get network_proxy_manual_hint =>
+      'HTTP proxy server used by all public internet requests';
+  @override
+  String get network_proxy_username => 'Proxy username (optional)';
+  @override
+  String get network_proxy_password => 'Proxy password (optional)';
+  @override
+  String get storage_category_backups => 'Local backups';
+  @override
+  String storage_entry_backups_label({required Object n}) =>
+      '${n} backup archive(s)';
+  @override
+  String get storage_entry_delete_backups_confirm_body =>
+      'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+  @override
+  String get update_download_source_preference => 'Preferred download source';
+  @override
+  String get update_download_source_preference_hint =>
+      'The selected source is tried first; unavailable sources still fall back automatically.';
+  @override
+  String get update_download_source_auto => 'Automatic (recommended)';
+  @override
+  String get update_download_source_cloudflare => 'Cloudflare mirror';
+  @override
+  String get update_download_source_github => 'GitHub direct';
+  @override
+  String update_download_source_proxy({required Object host}) =>
+      'Proxy: ${host}';
 }
 
 // Path: <root>
 class _StringsFr extends _StringsEn {
   /// You can call this constructor and build your own translation instance of this locale.
   /// Constructing via the enum [AppLocale.build] is preferred.
-  _StringsFr.build(
-      {Map<String, Node>? overrides,
-      PluralResolver? cardinalResolver,
-      PluralResolver? ordinalResolver})
-      : assert(overrides == null,
-            'Set "translation_overrides: true" in order to enable this feature.'),
-        $meta = TranslationMetadata(
-          locale: AppLocale.fr,
-          overrides: overrides ?? {},
-          cardinalResolver: cardinalResolver,
-          ordinalResolver: ordinalResolver,
-        ),
-        super.build(
-            cardinalResolver: cardinalResolver,
-            ordinalResolver: ordinalResolver) {
+  _StringsFr.build({
+    Map<String, Node>? overrides,
+    PluralResolver? cardinalResolver,
+    PluralResolver? ordinalResolver,
+  }) : assert(
+         overrides == null,
+         'Set "translation_overrides: true" in order to enable this feature.',
+       ),
+       $meta = TranslationMetadata(
+         locale: AppLocale.fr,
+         overrides: overrides ?? {},
+         cardinalResolver: cardinalResolver,
+         ordinalResolver: ordinalResolver,
+       ),
+       super.build(
+         cardinalResolver: cardinalResolver,
+         ordinalResolver: ordinalResolver,
+       ) {
     super.$meta.setFlatMapFunction(
-        $meta.getTranslation); // copy base translations to super.$meta
+      $meta.getTranslation,
+    ); // copy base translations to super.$meta
     $meta.setFlatMapFunction(_flatMapFunction);
   }
 
@@ -35068,10 +35473,11 @@ class _StringsFr extends _StringsEn {
   @override
   String get backup_import => 'Importer une sauvegarde';
   @override
-  String backup_import_confirm(
-          {required Object date,
-          required Object bookCount,
-          required Object statsCount}) =>
+  String backup_import_confirm({
+    required Object date,
+    required Object bookCount,
+    required Object statsCount,
+  }) =>
       'Cela remplacera toutes les données actuelles par la sauvegarde du ${date}.\n\n${bookCount} livres, ${statsCount} enregistrements de statistiques.\n\nL\'application redémarrera après la restauration.';
   @override
   String get backup_import_confirm_title => 'Restaurer la sauvegarde ?';
@@ -35089,8 +35495,10 @@ class _StringsFr extends _StringsEn {
   @override
   String get backup_import_invalid => 'Fichier de sauvegarde invalide';
   @override
-  String backup_import_merge_preview(
-          {required Object bookCount, required Object progressCount}) =>
+  String backup_import_merge_preview({
+    required Object bookCount,
+    required Object progressCount,
+  }) =>
       'La fusion ajoutera ${bookCount} livres et mettra à jour ${progressCount} positions de lecture.';
   @override
   String get backup_import_mode_label => 'Mode d\'importation';
@@ -35393,12 +35801,12 @@ class _StringsFr extends _StringsEn {
   @override
   String get changelog_prerelease => 'Préversion';
   @override
-  String chapter_progress(
-          {required Object idx,
-          required Object total,
-          required Object suffix,
-          required Object pct}) =>
-      'Chapitre ${idx} / ${total}${suffix} · ${pct}%';
+  String chapter_progress({
+    required Object idx,
+    required Object total,
+    required Object suffix,
+    required Object pct,
+  }) => 'Chapitre ${idx} / ${total}${suffix} · ${pct}%';
   @override
   String get clear => 'Effacer';
   @override
@@ -35489,9 +35897,10 @@ class _StringsFr extends _StringsEn {
   @override
   String get collection_view_all => 'Tout voir';
   @override
-  String collection_watched_progress(
-          {required Object done, required Object total}) =>
-      'Vu ${done}/${total}';
+  String collection_watched_progress({
+    required Object done,
+    required Object total,
+  }) => 'Vu ${done}/${total}';
   @override
   String get collection_word => 'Mot';
   @override
@@ -35724,9 +36133,10 @@ class _StringsFr extends _StringsEn {
   String get data_storage_migrate_failed_title =>
       'Échec de la migration des données';
   @override
-  String data_storage_migrate_overlay_progress(
-          {required Object copied, required Object total}) =>
-      'Copie des fichiers : ${copied} / ${total}';
+  String data_storage_migrate_overlay_progress({
+    required Object copied,
+    required Object total,
+  }) => 'Copie des fichiers : ${copied} / ${total}';
   @override
   String get data_storage_migrate_overlay_title => 'Déplacement de vos données';
   @override
@@ -35743,8 +36153,10 @@ class _StringsFr extends _StringsEn {
   String get data_storage_restart_failed =>
       'Données déplacées, mais le redémarrage automatique a échoué. Veuillez rouvrir Fushi manuellement.';
   @override
-  String db_downgrade_message(
-          {required Object dbVersion, required Object appVersion}) =>
+  String db_downgrade_message({
+    required Object dbVersion,
+    required Object appVersion,
+  }) =>
       'Cette base de données a été créée par une version plus récente de Fushi (schéma v${dbVersion}). Votre application actuelle est trop ancienne (v${appVersion}). L\'ouverture a été bloquée pour protéger vos données. Veuillez mettre l\'application à jour et réessayer.';
   @override
   String get db_downgrade_title => 'Mettez Fushi à jour';
@@ -35918,11 +36330,11 @@ class _StringsFr extends _StringsEn {
   @override
   String get dict_download_language => 'Votre langue';
   @override
-  String dict_download_partial(
-          {required Object success,
-          required Object total,
-          required Object error}) =>
-      '${success} / ${total} OK. Échecs : ${error}';
+  String dict_download_partial({
+    required Object success,
+    required Object total,
+    required Object error,
+  }) => '${success} / ${total} OK. Échecs : ${error}';
   @override
   String get dict_download_select_title => 'Sélectionner des dictionnaires';
   @override
@@ -35956,19 +36368,21 @@ class _StringsFr extends _StringsEn {
   @override
   String get dict_update_latest => 'Déjà à jour.';
   @override
-  String dict_update_name_mismatch_body(
-          {required Object incoming, required Object existing}) =>
+  String dict_update_name_mismatch_body({
+    required Object incoming,
+    required Object existing,
+  }) =>
       'Le fichier sélectionné est « ${incoming} », mais vous mettez à jour « ${existing} ». Remplacer quand même ?';
   @override
   String get dict_update_name_mismatch_title => 'Les noms ne correspondent pas';
   @override
   String get dict_update_none => 'Tous les dictionnaires sont à jour.';
   @override
-  String dict_update_summary(
-          {required Object updated,
-          required Object current,
-          required Object failed}) =>
-      '${updated} mis à jour, ${current} à jour, ${failed} en échec.';
+  String dict_update_summary({
+    required Object updated,
+    required Object current,
+    required Object failed,
+  }) => '${updated} mis à jour, ${current} à jour, ${failed} en échec.';
   @override
   String get dict_update_tooltip => 'Mettre à jour le dictionnaire';
   @override
@@ -36061,8 +36475,10 @@ class _StringsFr extends _StringsEn {
   @override
   String get download_subscription_check_now => 'Vérifier maintenant';
   @override
-  String download_subscription_choice_hint(
-          {required Object group, required Object resolution}) =>
+  String download_subscription_choice_hint({
+    required Object group,
+    required Object resolution,
+  }) =>
       'Suivre ${group} · ${resolution}. Les nouvelles sorties d\'épisodes uniques seront mises en file d\'attente.';
   @override
   String get download_subscription_created =>
@@ -36208,8 +36624,10 @@ class _StringsFr extends _StringsEn {
   @override
   String favorites({required Object n}) => 'Favoris (${n})';
   @override
-  String field_fallback_used(
-          {required Object field, required Object secondField}) =>
+  String field_fallback_used({
+    required Object field,
+    required Object secondField,
+  }) =>
       'Le champ ${field} a utilisé ${secondField} comme terme de recherche de secours.';
   @override
   String file_count({required Object count}) => '${count} fichiers';
@@ -36938,12 +37356,12 @@ class _StringsFr extends _StringsEn {
   @override
   String get game_waiting_for_text => 'En attente de texte';
   @override
-  String game_waveform_range_label(
-          {required Object start,
-          required Object end,
-          required Object duration,
-          required Object total}) =>
-      '${start} - ${end} (sélection ${duration} / total ${total})';
+  String game_waveform_range_label({
+    required Object start,
+    required Object end,
+    required Object duration,
+    required Object total,
+  }) => '${start} - ${end} (sélection ${duration} / total ${total})';
   @override
   String get game_waveform_select_title => 'Sélectionner une plage audio';
   @override
@@ -37217,9 +37635,10 @@ class _StringsFr extends _StringsEn {
   @override
   String get jump_to_char => 'Aller au caractère';
   @override
-  String jump_to_char_current(
-          {required Object current, required Object total}) =>
-      'Actuel : ${current} / ${total}';
+  String jump_to_char_current({
+    required Object current,
+    required Object total,
+  }) => 'Actuel : ${current} / ${total}';
   @override
   String get jump_to_char_hint => 'Entrez la position du caractère…';
   @override
@@ -37398,9 +37817,10 @@ class _StringsFr extends _StringsEn {
   String get manga_ocr_wizard_no_images =>
       'Aucune image trouvée dans ce dossier.';
   @override
-  String manga_ocr_wizard_page_progress(
-          {required Object done, required Object total}) =>
-      'Page ${done} / ${total}';
+  String manga_ocr_wizard_page_progress({
+    required Object done,
+    required Object total,
+  }) => 'Page ${done} / ${total}';
   @override
   String get manga_ocr_wizard_pick_folder => 'Choisir le dossier d\'images';
   @override
@@ -37426,9 +37846,10 @@ class _StringsFr extends _StringsEn {
   @override
   String get manga_online_queue_added => 'Ajouté à la file de téléchargement';
   @override
-  String manga_online_queue_progress(
-          {required Object done, required Object total}) =>
-      'Tome ${done} / ${total}';
+  String manga_online_queue_progress({
+    required Object done,
+    required Object total,
+  }) => 'Tome ${done} / ${total}';
   @override
   String get manga_online_queue_section => 'Téléchargements du catalogue manga';
   @override
@@ -37462,9 +37883,10 @@ class _StringsFr extends _StringsEn {
   String get manga_remote_ocr_unsupported =>
       'L\'hôte apparié ne prend pas en charge l\'OCR manga.';
   @override
-  String manga_remote_ocr_uploading(
-          {required Object done, required Object total}) =>
-      'Envoi des pages ${done} / ${total}…';
+  String manga_remote_ocr_uploading({
+    required Object done,
+    required Object total,
+  }) => 'Envoi des pages ${done} / ${total}…';
   @override
   String get margin_bottom => 'Marge inférieure';
   @override
@@ -37980,16 +38402,18 @@ class _StringsFr extends _StringsEn {
   @override
   String get audiobook_rematch_auto_match => 'Correspondance automatique';
   @override
-  String audiobook_rematch_auto_picked(
-          {required Object window, required Object pct}) =>
-      'Sélection automatique de ${window} (taux ${pct}%)';
+  String audiobook_rematch_auto_picked({
+    required Object window,
+    required Object pct,
+  }) => 'Sélection automatique de ${window} (taux ${pct}%)';
   @override
   String audiobook_rematch_default_value({required Object n}) =>
       'Par défaut ${n}';
   @override
-  String audiobook_rematch_health_label(
-          {required Object pct, required Object detail}) =>
-      '${pct} correspondance — ${detail}';
+  String audiobook_rematch_health_label({
+    required Object pct,
+    required Object detail,
+  }) => '${pct} correspondance — ${detail}';
   @override
   String get audiobook_rematch_matching => 'Correspondance en cours...';
   @override
@@ -38008,9 +38432,10 @@ class _StringsFr extends _StringsEn {
   String audiobook_rematch_failed({required Object error}) =>
       'échec de la correspondance : ${error}';
   @override
-  String audiobook_rematch_result(
-          {required Object pct, required Object window}) =>
-      'Recorrespondance : ${pct}% (fenêtre : ${window})';
+  String audiobook_rematch_result({
+    required Object pct,
+    required Object window,
+  }) => 'Recorrespondance : ${pct}% (fenêtre : ${window})';
   @override
   String get audiobook_rematch_search_window => 'Fenêtre de recherche';
   @override
@@ -39238,9 +39663,10 @@ class _StringsFr extends _StringsEn {
   @override
   String get update_download_resumed => 'repris';
   @override
-  String update_download_size(
-          {required Object received, required Object total}) =>
-      'Téléchargé : ${received} / ${total}';
+  String update_download_size({
+    required Object received,
+    required Object total,
+  }) => 'Téléchargé : ${received} / ${total}';
   @override
   String update_download_source({required Object source}) =>
       'Source : ${source}';
@@ -39254,13 +39680,15 @@ class _StringsFr extends _StringsEn {
   String update_install_current_executable({required Object path}) =>
       'Exécutable en cours : ${path}';
   @override
-  String update_install_deletefile_failure(
-          {required Object path, required Object code}) =>
-      'L\'installateur n\'a pas pu remplacer ${path} (code ${code})';
+  String update_install_deletefile_failure({
+    required Object path,
+    required Object code,
+  }) => 'L\'installateur n\'a pas pu remplacer ${path} (code ${code})';
   @override
-  String update_install_detected_location(
-          {required Object source, required Object path}) =>
-      'Emplacement d\'installation détecté (${source}) : ${path}';
+  String update_install_detected_location({
+    required Object source,
+    required Object path,
+  }) => 'Emplacement d\'installation détecté (${source}) : ${path}';
   @override
   String update_install_failure_summary({required Object summary}) =>
       'Raison : ${summary}';
@@ -39282,9 +39710,10 @@ class _StringsFr extends _StringsEn {
   String update_install_launcher_pid({required Object pid}) =>
       'PID du lanceur de mise à jour : ${pid}';
   @override
-  String update_install_libmpv_holder(
-          {required Object pid, required Object path}) =>
-      'Processus détenant libmpv : PID ${pid} - ${path}';
+  String update_install_libmpv_holder({
+    required Object pid,
+    required Object path,
+  }) => 'Processus détenant libmpv : PID ${pid} - ${path}';
   @override
   String get update_install_log_not_observed =>
       'Le journal de l\'installateur n\'a pas été créé lors de la vérification après lancement.';
@@ -39320,9 +39749,10 @@ class _StringsFr extends _StringsEn {
   String get update_install_restart_windows_hint =>
       'Si les processus indiqués sont fermés mais que libmpv-2.dll reste verrouillé, redémarrez Windows puis réinstallez.';
   @override
-  String update_install_running_process(
-          {required Object pid, required Object path}) =>
-      'Processus Fushi en cours : PID ${pid} - ${path}';
+  String update_install_running_process({
+    required Object pid,
+    required Object path,
+  }) => 'Processus Fushi en cours : PID ${pid} - ${path}';
   @override
   String update_install_success_message({required Object version}) =>
       'Fushi a été mis à jour vers la version ${version}.';
@@ -39340,9 +39770,10 @@ class _StringsFr extends _StringsEn {
   String update_message({required Object version}) =>
       'La version ${version} est disponible.';
   @override
-  String update_network_failure(
-          {required Object host, required Object reason}) =>
-      'Impossible de joindre ${host} : ${reason}';
+  String update_network_failure({
+    required Object host,
+    required Object reason,
+  }) => 'Impossible de joindre ${host} : ${reason}';
   @override
   String get update_never_remind => 'Ne plus rappeler';
   @override
@@ -39606,9 +40037,10 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_jimaku_api_key_set => 'Clé API configurée';
   @override
-  String video_jimaku_batch_done(
-          {required Object done, required Object total}) =>
-      'Sous-titres récupérés : ${done}/${total}';
+  String video_jimaku_batch_done({
+    required Object done,
+    required Object total,
+  }) => 'Sous-titres récupérés : ${done}/${total}';
   @override
   String get video_jimaku_batch_download => 'Tout télécharger';
   @override
@@ -40140,9 +40572,10 @@ class _StringsFr extends _StringsEn {
   String get video_shader_download_failed =>
       'Échec du téléchargement du shader';
   @override
-  String video_shader_download_partial(
-          {required Object ok, required Object failed}) =>
-      '${ok} shader(s) téléchargé(s), ${failed} échoué(s)';
+  String video_shader_download_partial({
+    required Object ok,
+    required Object failed,
+  }) => '${ok} shader(s) téléchargé(s), ${failed} échoué(s)';
   @override
   String get video_shader_download_url => 'Télécharger depuis un lien';
   @override
@@ -40254,9 +40687,10 @@ class _StringsFr extends _StringsEn {
   String get video_subtitle_attach_playlist_hint =>
       'Ouvrez la playlist pour joindre un sous-titre à chaque épisode';
   @override
-  String video_subtitle_attached_to_video(
-          {required Object title, required Object count}) =>
-      'Sous-titre joint à ${title} (${count} lignes)';
+  String video_subtitle_attached_to_video({
+    required Object title,
+    required Object count,
+  }) => 'Sous-titre joint à ${title} (${count} lignes)';
   @override
   String get video_subtitle_auto_align => 'Aligner les sous-titres';
   @override
@@ -40486,13 +40920,14 @@ class _StringsFr extends _StringsEn {
   @override
   String get anki_dedup_report_title => 'Rapport de déduplication média';
   @override
-  String anki_dedup_report_body(
-          {required Object groups,
-          required Object removed,
-          required Object size,
-          required Object notes,
-          required Object models,
-          required Object skipped}) =>
+  String anki_dedup_report_body({
+    required Object groups,
+    required Object removed,
+    required Object size,
+    required Object notes,
+    required Object models,
+    required Object skipped,
+  }) =>
       '${groups} groupes de doublons ; ${removed} copies supplémentaires (${size}) ; ${notes} notes et ${models} types de notes réécrits ; ${skipped} ignorés.';
   @override
   String get anki_dedup_report_dry_note =>
@@ -40514,11 +40949,11 @@ class _StringsFr extends _StringsEn {
   String anki_dedup_plan_intro({required Object count, required Object size}) =>
       '${count} copies supplémentaires, ${size} récupérables. Une copie de chaque fichier est conservée et chaque référence est redirigée d\'abord ; rien n\'est jamais ré-encodé.';
   @override
-  String anki_dedup_plan_entry(
-          {required Object file,
-          required Object size,
-          required Object canonical}) =>
-      'Supprimer ${file} (${size}) — conservation de ${canonical}';
+  String anki_dedup_plan_entry({
+    required Object file,
+    required Object size,
+    required Object canonical,
+  }) => 'Supprimer ${file} (${size}) — conservation de ${canonical}';
   @override
   String get anki_dedup_plan_delete => 'Supprimer ces fichiers';
   @override
@@ -40579,9 +41014,10 @@ class _StringsFr extends _StringsEn {
   String manga_ocr_acceleration_status({required Object engine}) =>
       'Accélération OCR : ${engine}';
   @override
-  String manga_ocr_acceleration_degraded(
-          {required Object engine, required Object reason}) =>
-      'Accélération GPU indisponible, OCR exécuté sur ${engine} : ${reason}';
+  String manga_ocr_acceleration_degraded({
+    required Object engine,
+    required Object reason,
+  }) => 'Accélération GPU indisponible, OCR exécuté sur ${engine} : ${reason}';
   @override
   String get media_tracking_status => 'Statut de la collection';
   @override
@@ -40628,8 +41064,10 @@ class _StringsFr extends _StringsEn {
   String anki_dedup_auto_done({required Object count, required Object size}) =>
       '${count} fichiers média Anki en double supprimés, ${size} récupérés';
   @override
-  String anki_lapis_backup_done_pruned(
-          {required Object path, required Object count}) =>
+  String anki_lapis_backup_done_pruned({
+    required Object path,
+    required Object count,
+  }) =>
       'Sauvegardé dans ${path} (${count} anciennes sauvegardes élaguées par la politique 90 jours / 10 max)';
   @override
   String get game_audio_fallback_policy => 'Repli audio';
@@ -40783,9 +41221,10 @@ class _StringsFr extends _StringsEn {
   String get stat_clear_all_game_message =>
       'Effacer tous les temps de jeu et compteurs de sessions ? Votre ludothèque et la chronologie d\'activité sont conservées. Cette action est irréversible.';
   @override
-  String batch_selection_stale_skipped(
-          {required Object m, required Object n}) =>
-      '${m} sur ${n} éléments sélectionnés ignorés car ils n\'existent plus';
+  String batch_selection_stale_skipped({
+    required Object m,
+    required Object n,
+  }) => '${m} sur ${n} éléments sélectionnés ignorés car ils n\'existent plus';
   @override
   String get game_text_thread_unset =>
       'Aucun fil sélectionné — choisissez-en un pour commencer la capture';
@@ -40842,22 +41281,26 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_jimaku_language_unknown => 'Langue non étiquetée';
   @override
-  String video_jimaku_source_summary(
-          {required Object files,
-          required Object episodes,
-          required Object languages}) =>
+  String video_jimaku_source_summary({
+    required Object files,
+    required Object episodes,
+    required Object languages,
+  }) =>
       '${files} fichiers de sous-titres · ${episodes} épisodes · ${languages}';
   @override
-  String video_jimaku_episode_unlabeled(
-          {required Object episode, required Object count}) =>
+  String video_jimaku_episode_unlabeled({
+    required Object episode,
+    required Object count,
+  }) =>
       'Aucun sous-titre étiqueté épisode ${episode} ; ${count} fichiers non étiquetés peuvent correspondre';
   @override
   String video_jimaku_episode_unavailable({required Object episode}) =>
       'Aucun sous-titre trouvé pour l\'épisode ${episode}';
   @override
-  String video_jimaku_episode_available(
-          {required Object count, required Object languages}) =>
-      '${count} sous-titres disponibles · ${languages}';
+  String video_jimaku_episode_available({
+    required Object count,
+    required Object languages,
+  }) => '${count} sous-titres disponibles · ${languages}';
   @override
   String get manga_online_source_disabled =>
       'Cette source internet est désactivée. Activez-la dans les Sources pour parcourir le catalogue.';
@@ -40878,13 +41321,15 @@ class _StringsFr extends _StringsEn {
   String anki_dedup_progress_scanning({required Object count}) =>
       'Analyse du dossier média… (${count} fichiers trouvés)';
   @override
-  String anki_dedup_progress_hashing(
-          {required Object done, required Object total}) =>
-      'Comparaison des fichiers de même taille… (${done} / ${total})';
+  String anki_dedup_progress_hashing({
+    required Object done,
+    required Object total,
+  }) => 'Comparaison des fichiers de même taille… (${done} / ${total})';
   @override
-  String anki_dedup_progress_resolving(
-          {required Object done, required Object total}) =>
-      'Traitement des doublons… (${done} / ${total})';
+  String anki_dedup_progress_resolving({
+    required Object done,
+    required Object total,
+  }) => 'Traitement des doublons… (${done} / ${total})';
   @override
   String anki_dedup_progress_freed({required Object size}) =>
       '${size} libérés jusqu\'ici';
@@ -40939,8 +41384,10 @@ class _StringsFr extends _StringsEn {
   @override
   String get sync_last_failed => 'Dernière synchro : échouée';
   @override
-  String anime_download_no_results_detail(
-          {required Object query, required Object filters}) =>
+  String anime_download_no_results_detail({
+    required Object query,
+    required Object filters,
+  }) =>
       'Le service a répondu avec succès mais a renvoyé 0 résultat. Requête : ${query} ; filtres : ${filters}. Essayez un autre titre ou élargissez les filtres.';
   @override
   String get anime_download_streaming_ready =>
@@ -41133,11 +41580,12 @@ class _StringsFr extends _StringsEn {
   @override
   String scrape_all_item({required Object title}) => 'Traitement : ${title}';
   @override
-  String scrape_all_done(
-          {required Object applied,
-          required Object review,
-          required Object skipped,
-          required Object failed}) =>
+  String scrape_all_done({
+    required Object applied,
+    required Object review,
+    required Object skipped,
+    required Object failed,
+  }) =>
       'Terminé : ${applied} appliqués, ${review} à vérifier, ${skipped} ignorés, ${failed} échoués';
   @override
   String get scrape_all_empty =>
@@ -41510,9 +41958,10 @@ class _StringsFr extends _StringsEn {
   String collection_episode_watched_at({required Object position}) =>
       'Regardé jusqu\'à ${position}';
   @override
-  String collection_episode_rename_partial(
-          {required Object n, required Object m}) =>
-      '${n} épisodes renommés, ${m} échoués';
+  String collection_episode_rename_partial({
+    required Object n,
+    required Object m,
+  }) => '${n} épisodes renommés, ${m} échoués';
   @override
   String get sync_err_browser_timeout =>
       'Le navigateur n\'a jamais renvoyé l\'autorisation. Réessayez et assurez-vous que votre proxy laisse passer 127.0.0.1.';
@@ -41555,9 +42004,10 @@ class _StringsFr extends _StringsEn {
   String get book_convert_blocked_source_missing =>
       'Les fichiers sources ont disparu du disque.';
   @override
-  String manga_online_retry_waiting(
-          {required Object attempt, required Object total}) =>
-      'Nouvelle tentative automatique (${attempt}/${total})';
+  String manga_online_retry_waiting({
+    required Object attempt,
+    required Object total,
+  }) => 'Nouvelle tentative automatique (${attempt}/${total})';
   @override
   String get manga_ocr_wizard_already_ocred =>
       'Ce tome a déjà des données OCR sur chaque page. Relancer l\'OCR les écraserait.';
@@ -41659,17 +42109,18 @@ class _StringsFr extends _StringsEn {
   String get video_source_scrape_write_images =>
       'Écrire des fichiers d\'images';
   @override
-  String video_source_scrape_progress(
-          {required Object phase,
-          required Object current,
-          required Object total}) =>
-      '${phase} · ${current}/${total}';
+  String video_source_scrape_progress({
+    required Object phase,
+    required Object current,
+    required Object total,
+  }) => '${phase} · ${current}/${total}';
   @override
-  String video_source_scrape_last_summary(
-          {required Object status,
-          required Object succeeded,
-          required Object pending,
-          required Object failed}) =>
+  String video_source_scrape_last_summary({
+    required Object status,
+    required Object succeeded,
+    required Object pending,
+    required Object failed,
+  }) =>
       'Dernière récupération (${status}) : ${succeeded} réussis, ${pending} en attente, ${failed} échoués';
   @override
   String get video_source_scrape_phase_planning => 'Planification';
@@ -41893,8 +42344,10 @@ class _StringsFr extends _StringsEn {
   String migration_import_running({required Object batch}) =>
       'Importation de ${batch}…';
   @override
-  String migration_import_verify_failed(
-          {required Object batch, required Object detail}) =>
+  String migration_import_verify_failed({
+    required Object batch,
+    required Object detail,
+  }) =>
       'La vérification de ${batch} a échoué et a été conservée pour réexportation : ${detail}';
   @override
   String migration_import_counts_failed({required Object detail}) =>
@@ -41921,11 +42374,11 @@ class _StringsFr extends _StringsEn {
   @override
   String get migration_import_permission_grant => 'Accorder l\'autorisation';
   @override
-  String migration_import_verifying(
-          {required Object batch,
-          required Object done,
-          required Object total}) =>
-      'Vérification de ${batch} (${done}/${total})';
+  String migration_import_verifying({
+    required Object batch,
+    required Object done,
+    required Object total,
+  }) => 'Vérification de ${batch} (${done}/${total})';
   @override
   String get migration_import_verifying_hint =>
       'Vérification des sommes de contrôle des archives. Les grandes bibliothèques peuvent prendre plusieurs minutes.';
@@ -42107,11 +42560,11 @@ class _StringsFr extends _StringsEn {
   String video_subtitle_read_failed({required Object label}) =>
       'Impossible de lire ce fichier de sous-titres (endommagé ou vide) : ${label}';
   @override
-  String dict_downloading_size(
-          {required Object name,
-          required Object done,
-          required Object total}) =>
-      'Téléchargement de ${name} (${done} / ${total})';
+  String dict_downloading_size({
+    required Object name,
+    required Object done,
+    required Object total,
+  }) => 'Téléchargement de ${name} (${done} / ${total})';
   @override
   String get video_subtitle_attach_book_missing =>
       'Cette vidéo n\'est pas dans votre bibliothèque, le sous-titre n\'a pas été attaché';
@@ -42313,11 +42766,11 @@ class _StringsFr extends _StringsEn {
   String manga_import_batch_hint({required Object n}) =>
       'Ce dossier contient ${n} fichiers de tomes ; chacun est importé comme son propre livre, nommé d\'après son fichier.';
   @override
-  String manga_import_batch_done(
-          {required Object imported,
-          required Object skipped,
-          required Object failed}) =>
-      'Importés ${imported}, ignorés ${skipped}, échoués ${failed}.';
+  String manga_import_batch_done({
+    required Object imported,
+    required Object skipped,
+    required Object failed,
+  }) => 'Importés ${imported}, ignorés ${skipped}, échoués ${failed}.';
   @override
   String get srt_book_reimport => 'Réimporter';
   @override
@@ -42412,8 +42865,10 @@ class _StringsFr extends _StringsEn {
   @override
   String get update_release_page_open => 'Page des versions';
   @override
-  String update_install_gal_hook_holder(
-          {required Object pid, required Object path}) =>
+  String update_install_gal_hook_holder({
+    required Object pid,
+    required Object path,
+  }) =>
       'Composant de capture de galgame en cours d\'utilisation : PID ${pid} - ${path} (c\'est le jeu auquel vous jouez, ou son hôte de capture). Fermez le jeu, puis mettez à jour à nouveau.';
   @override
   String get game_hook_reason_protocol_mismatch =>
@@ -42916,9 +43371,10 @@ class _StringsFr extends _StringsEn {
   String get manga_ocr_model_unused_by_engine =>
       'Le moteur actuel n\'utilise pas ces fichiers de modèle locaux.';
   @override
-  String manga_ocr_download_total_progress(
-          {required Object done, required Object total}) =>
-      '${done} sur ${total}';
+  String manga_ocr_download_total_progress({
+    required Object done,
+    required Object total,
+  }) => '${done} sur ${total}';
   @override
   String get media_source_network_subtitle_video =>
       'Bibliothèque distante WebDAV (lecture en place)';
@@ -43399,10 +43855,11 @@ class _StringsFr extends _StringsEn {
   String get manga_ocr_import_matched_nothing =>
       'Aucun fichier de modèle utilisable reconnu';
   @override
-  String manga_ocr_import_size_mismatch(
-          {required Object file,
-          required Object expected,
-          required Object actual}) =>
+  String manga_ocr_import_size_mismatch({
+    required Object file,
+    required Object expected,
+    required Object actual,
+  }) =>
       '${file} n\'a pas la bonne taille : attendu ${expected}, obtenu ${actual}';
   @override
   String manga_ocr_import_still_missing({required Object count}) =>
@@ -43471,9 +43928,10 @@ class _StringsFr extends _StringsEn {
   String get video_jimaku_search_failed =>
       'Échec de la recherche de sous-titres';
   @override
-  String video_subtitle_error_with_code(
-          {required Object msg, required Object code}) =>
-      '${msg} (HTTP ${code})';
+  String video_subtitle_error_with_code({
+    required Object msg,
+    required Object code,
+  }) => '${msg} (HTTP ${code})';
   @override
   String get manga_rescan_run => 'Réanalyser la zone sélectionnée';
   @override
@@ -43731,9 +44189,10 @@ class _StringsFr extends _StringsEn {
   @override
   String get manga_series_open_series => 'Page de l\'œuvre';
   @override
-  String manga_series_read_progress(
-          {required Object page, required Object total}) =>
-      'Lu jusqu\'à la page ${page} sur ${total}';
+  String manga_series_read_progress({
+    required Object page,
+    required Object total,
+  }) => 'Lu jusqu\'à la page ${page} sur ${total}';
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       'Lu jusqu\'à la page ${page}';
@@ -44023,13 +44482,15 @@ class _StringsFr extends _StringsEn {
   String web_video_mine_queued({required Object count}) =>
       'Mis en attente pour la création de cartes (${count} en attente)';
   @override
-  String web_video_mine_queue_running(
-          {required Object done, required Object total}) =>
-      'Création des cartes ${done}/${total}…';
+  String web_video_mine_queue_running({
+    required Object done,
+    required Object total,
+  }) => 'Création des cartes ${done}/${total}…';
   @override
-  String web_video_mine_queue_finished(
-          {required Object ok, required Object failed}) =>
-      'Cartes créées : ${ok}, échecs : ${failed}';
+  String web_video_mine_queue_finished({
+    required Object ok,
+    required Object failed,
+  }) => 'Cartes créées : ${ok}, échecs : ${failed}';
   @override
   String get web_video_hosting_menu => 'Mode de lecture';
   @override
@@ -44307,29 +44768,78 @@ class _StringsFr extends _StringsEn {
       'Waiting for matching in-game click';
   @override
   String get delete_choices_remember => 'Mémoriser ces choix';
+  @override
+  String get network_proxy_mode_label => 'Proxy mode';
+  @override
+  String get network_proxy_mode_auto => 'Automatic';
+  @override
+  String get network_proxy_mode_auto_hint =>
+      'Use environment variables, then the enabled system proxy';
+  @override
+  String get network_proxy_mode_direct => 'Direct';
+  @override
+  String get network_proxy_mode_direct_hint => 'Disable proxy use for the app';
+  @override
+  String get network_proxy_mode_manual => 'Manual';
+  @override
+  String get network_proxy_mode_manual_hint =>
+      'Use the server and optional credentials below';
+  @override
+  String get network_proxy_manual_hint =>
+      'HTTP proxy server used by all public internet requests';
+  @override
+  String get network_proxy_username => 'Proxy username (optional)';
+  @override
+  String get network_proxy_password => 'Proxy password (optional)';
+  @override
+  String get storage_category_backups => 'Local backups';
+  @override
+  String storage_entry_backups_label({required Object n}) =>
+      '${n} backup archive(s)';
+  @override
+  String get storage_entry_delete_backups_confirm_body =>
+      'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+  @override
+  String get update_download_source_preference => 'Preferred download source';
+  @override
+  String get update_download_source_preference_hint =>
+      'The selected source is tried first; unavailable sources still fall back automatically.';
+  @override
+  String get update_download_source_auto => 'Automatic (recommended)';
+  @override
+  String get update_download_source_cloudflare => 'Cloudflare mirror';
+  @override
+  String get update_download_source_github => 'GitHub direct';
+  @override
+  String update_download_source_proxy({required Object host}) =>
+      'Proxy: ${host}';
 }
 
 // Path: <root>
 class _StringsId extends _StringsEn {
   /// You can call this constructor and build your own translation instance of this locale.
   /// Constructing via the enum [AppLocale.build] is preferred.
-  _StringsId.build(
-      {Map<String, Node>? overrides,
-      PluralResolver? cardinalResolver,
-      PluralResolver? ordinalResolver})
-      : assert(overrides == null,
-            'Set "translation_overrides: true" in order to enable this feature.'),
-        $meta = TranslationMetadata(
-          locale: AppLocale.id,
-          overrides: overrides ?? {},
-          cardinalResolver: cardinalResolver,
-          ordinalResolver: ordinalResolver,
-        ),
-        super.build(
-            cardinalResolver: cardinalResolver,
-            ordinalResolver: ordinalResolver) {
+  _StringsId.build({
+    Map<String, Node>? overrides,
+    PluralResolver? cardinalResolver,
+    PluralResolver? ordinalResolver,
+  }) : assert(
+         overrides == null,
+         'Set "translation_overrides: true" in order to enable this feature.',
+       ),
+       $meta = TranslationMetadata(
+         locale: AppLocale.id,
+         overrides: overrides ?? {},
+         cardinalResolver: cardinalResolver,
+         ordinalResolver: ordinalResolver,
+       ),
+       super.build(
+         cardinalResolver: cardinalResolver,
+         ordinalResolver: ordinalResolver,
+       ) {
     super.$meta.setFlatMapFunction(
-        $meta.getTranslation); // copy base translations to super.$meta
+      $meta.getTranslation,
+    ); // copy base translations to super.$meta
     $meta.setFlatMapFunction(_flatMapFunction);
   }
 
@@ -44843,10 +45353,11 @@ class _StringsId extends _StringsEn {
   @override
   String get backup_import => 'Impor Cadangan';
   @override
-  String backup_import_confirm(
-          {required Object date,
-          required Object bookCount,
-          required Object statsCount}) =>
+  String backup_import_confirm({
+    required Object date,
+    required Object bookCount,
+    required Object statsCount,
+  }) =>
       'Ini akan menggantikan semua data saat ini dengan cadangan dari ${date}.\n\n${bookCount} buku, ${statsCount} catatan statistik.\n\nAplikasi akan dimulai ulang setelah pemulihan.';
   @override
   String get backup_import_confirm_title => 'Pulihkan Cadangan?';
@@ -44864,8 +45375,10 @@ class _StringsId extends _StringsEn {
   @override
   String get backup_import_invalid => 'Berkas cadangan tidak valid';
   @override
-  String backup_import_merge_preview(
-          {required Object bookCount, required Object progressCount}) =>
+  String backup_import_merge_preview({
+    required Object bookCount,
+    required Object progressCount,
+  }) =>
       'Penggabungan akan menambah ${bookCount} buku dan memperbarui ${progressCount} posisi membaca.';
   @override
   String get backup_import_mode_label => 'Mode impor';
@@ -45161,12 +45674,12 @@ class _StringsId extends _StringsEn {
   @override
   String get changelog_prerelease => 'Prarilis';
   @override
-  String chapter_progress(
-          {required Object idx,
-          required Object total,
-          required Object suffix,
-          required Object pct}) =>
-      'Bab ${idx} / ${total}${suffix} · ${pct}%';
+  String chapter_progress({
+    required Object idx,
+    required Object total,
+    required Object suffix,
+    required Object pct,
+  }) => 'Bab ${idx} / ${total}${suffix} · ${pct}%';
   @override
   String get clear => 'Hapus';
   @override
@@ -45256,9 +45769,10 @@ class _StringsId extends _StringsEn {
   @override
   String get collection_view_all => 'Lihat semua';
   @override
-  String collection_watched_progress(
-          {required Object done, required Object total}) =>
-      'Ditonton ${done}/${total}';
+  String collection_watched_progress({
+    required Object done,
+    required Object total,
+  }) => 'Ditonton ${done}/${total}';
   @override
   String get collection_word => 'Kata';
   @override
@@ -45482,9 +45996,10 @@ class _StringsId extends _StringsEn {
   @override
   String get data_storage_migrate_failed_title => 'Migrasi data gagal';
   @override
-  String data_storage_migrate_overlay_progress(
-          {required Object copied, required Object total}) =>
-      'Menyalin file: ${copied} / ${total}';
+  String data_storage_migrate_overlay_progress({
+    required Object copied,
+    required Object total,
+  }) => 'Menyalin file: ${copied} / ${total}';
   @override
   String get data_storage_migrate_overlay_title => 'Memindahkan data Anda';
   @override
@@ -45501,8 +46016,10 @@ class _StringsId extends _StringsEn {
   String get data_storage_restart_failed =>
       'Data dipindahkan, tetapi mulai ulang otomatis gagal. Silakan buka Fushi secara manual.';
   @override
-  String db_downgrade_message(
-          {required Object dbVersion, required Object appVersion}) =>
+  String db_downgrade_message({
+    required Object dbVersion,
+    required Object appVersion,
+  }) =>
       'Basis data ini dibuat oleh versi Fushi yang lebih baru (schema v${dbVersion}). Aplikasimu saat ini terlalu lama (v${appVersion}). Pembukaan diblokir untuk melindungi datamu. Silakan perbarui aplikasi lalu coba lagi.';
   @override
   String get db_downgrade_title => 'Perbarui Fushi';
@@ -45671,11 +46188,11 @@ class _StringsId extends _StringsEn {
   @override
   String get dict_download_language => 'Bahasa Anda';
   @override
-  String dict_download_partial(
-          {required Object success,
-          required Object total,
-          required Object error}) =>
-      '${success} / ${total} OK. Gagal: ${error}';
+  String dict_download_partial({
+    required Object success,
+    required Object total,
+    required Object error,
+  }) => '${success} / ${total} OK. Gagal: ${error}';
   @override
   String get dict_download_select_title => 'Pilih Kamus';
   @override
@@ -45706,19 +46223,21 @@ class _StringsId extends _StringsEn {
   @override
   String get dict_update_latest => 'Sudah yang terbaru.';
   @override
-  String dict_update_name_mismatch_body(
-          {required Object incoming, required Object existing}) =>
+  String dict_update_name_mismatch_body({
+    required Object incoming,
+    required Object existing,
+  }) =>
       'File yang dipilih adalah "${incoming}", tetapi Anda memperbarui "${existing}". Tetap ganti?';
   @override
   String get dict_update_name_mismatch_title => 'Nama tidak cocok';
   @override
   String get dict_update_none => 'Semua kamus sudah yang terbaru.';
   @override
-  String dict_update_summary(
-          {required Object updated,
-          required Object current,
-          required Object failed}) =>
-      '${updated} diperbarui, ${current} terbaru, ${failed} gagal.';
+  String dict_update_summary({
+    required Object updated,
+    required Object current,
+    required Object failed,
+  }) => '${updated} diperbarui, ${current} terbaru, ${failed} gagal.';
   @override
   String get dict_update_tooltip => 'Perbarui kamus';
   @override
@@ -45805,9 +46324,10 @@ class _StringsId extends _StringsEn {
   @override
   String get download_subscription_check_now => 'Periksa sekarang';
   @override
-  String download_subscription_choice_hint(
-          {required Object group, required Object resolution}) =>
-      'Ikuti ${group} · ${resolution}. Rilis episode baru akan diantrean.';
+  String download_subscription_choice_hint({
+    required Object group,
+    required Object resolution,
+  }) => 'Ikuti ${group} · ${resolution}. Rilis episode baru akan diantrean.';
   @override
   String get download_subscription_created =>
       'Unduhan diantrean dan langganan dibuat';
@@ -45949,8 +46469,10 @@ class _StringsId extends _StringsEn {
   @override
   String favorites({required Object n}) => 'Favorit (${n})';
   @override
-  String field_fallback_used(
-          {required Object field, required Object secondField}) =>
+  String field_fallback_used({
+    required Object field,
+    required Object secondField,
+  }) =>
       'Field ${field} menggunakan ${secondField} sebagai kata pencarian cadangan.';
   @override
   String file_count({required Object count}) => '${count} file';
@@ -46675,12 +47197,12 @@ class _StringsId extends _StringsEn {
   @override
   String get game_waiting_for_text => 'Menunggu teks';
   @override
-  String game_waveform_range_label(
-          {required Object start,
-          required Object end,
-          required Object duration,
-          required Object total}) =>
-      '${start} - ${end} (dipilih ${duration} / total ${total})';
+  String game_waveform_range_label({
+    required Object start,
+    required Object end,
+    required Object duration,
+    required Object total,
+  }) => '${start} - ${end} (dipilih ${duration} / total ${total})';
   @override
   String get game_waveform_select_title => 'Pilih rentang audio';
   @override
@@ -46950,9 +47472,10 @@ class _StringsId extends _StringsEn {
   @override
   String get jump_to_char => 'Lompat ke Karakter';
   @override
-  String jump_to_char_current(
-          {required Object current, required Object total}) =>
-      'Saat ini: ${current} / ${total}';
+  String jump_to_char_current({
+    required Object current,
+    required Object total,
+  }) => 'Saat ini: ${current} / ${total}';
   @override
   String get jump_to_char_hint => 'Masukkan posisi karakter…';
   @override
@@ -47130,9 +47653,10 @@ class _StringsId extends _StringsEn {
   String get manga_ocr_wizard_no_images =>
       'Tidak ada gambar ditemukan di folder ini.';
   @override
-  String manga_ocr_wizard_page_progress(
-          {required Object done, required Object total}) =>
-      'Halaman ${done} / ${total}';
+  String manga_ocr_wizard_page_progress({
+    required Object done,
+    required Object total,
+  }) => 'Halaman ${done} / ${total}';
   @override
   String get manga_ocr_wizard_pick_folder => 'Pilih folder gambar';
   @override
@@ -47158,9 +47682,10 @@ class _StringsId extends _StringsEn {
   @override
   String get manga_online_queue_added => 'Ditambahkan ke antrean unduhan';
   @override
-  String manga_online_queue_progress(
-          {required Object done, required Object total}) =>
-      'Volume ${done} / ${total}';
+  String manga_online_queue_progress({
+    required Object done,
+    required Object total,
+  }) => 'Volume ${done} / ${total}';
   @override
   String get manga_online_queue_section => 'Unduhan katalog manga';
   @override
@@ -47194,9 +47719,10 @@ class _StringsId extends _StringsEn {
   String get manga_remote_ocr_unsupported =>
       'Host berpasangan tidak mendukung OCR manga.';
   @override
-  String manga_remote_ocr_uploading(
-          {required Object done, required Object total}) =>
-      'Mengunggah halaman ${done} / ${total}…';
+  String manga_remote_ocr_uploading({
+    required Object done,
+    required Object total,
+  }) => 'Mengunggah halaman ${done} / ${total}…';
   @override
   String get margin_bottom => 'Margin bawah';
   @override
@@ -47707,15 +48233,17 @@ class _StringsId extends _StringsEn {
   @override
   String get audiobook_rematch_auto_match => 'Pencocokan Otomatis';
   @override
-  String audiobook_rematch_auto_picked(
-          {required Object window, required Object pct}) =>
-      'Otomatis memilih ${window} (cocok ${pct}%)';
+  String audiobook_rematch_auto_picked({
+    required Object window,
+    required Object pct,
+  }) => 'Otomatis memilih ${window} (cocok ${pct}%)';
   @override
   String audiobook_rematch_default_value({required Object n}) => 'Default ${n}';
   @override
-  String audiobook_rematch_health_label(
-          {required Object pct, required Object detail}) =>
-      '${pct} cocok — ${detail}';
+  String audiobook_rematch_health_label({
+    required Object pct,
+    required Object detail,
+  }) => '${pct} cocok — ${detail}';
   @override
   String get audiobook_rematch_matching => 'Mencocokkan...';
   @override
@@ -47733,9 +48261,10 @@ class _StringsId extends _StringsEn {
   String audiobook_rematch_failed({required Object error}) =>
       'Pencocokan ulang gagal: ${error}';
   @override
-  String audiobook_rematch_result(
-          {required Object pct, required Object window}) =>
-      'Dicocokkan ulang: ${pct}% (jendela: ${window})';
+  String audiobook_rematch_result({
+    required Object pct,
+    required Object window,
+  }) => 'Dicocokkan ulang: ${pct}% (jendela: ${window})';
   @override
   String get audiobook_rematch_search_window => 'Jendela Pencarian';
   @override
@@ -48937,9 +49466,10 @@ class _StringsId extends _StringsEn {
   @override
   String get update_download_resumed => 'dilanjutkan';
   @override
-  String update_download_size(
-          {required Object received, required Object total}) =>
-      'Terunduh: ${received} / ${total}';
+  String update_download_size({
+    required Object received,
+    required Object total,
+  }) => 'Terunduh: ${received} / ${total}';
   @override
   String update_download_source({required Object source}) =>
       'Sumber: ${source}';
@@ -48954,13 +49484,15 @@ class _StringsId extends _StringsEn {
   String update_install_current_executable({required Object path}) =>
       'Eksekutabel yang berjalan: ${path}';
   @override
-  String update_install_deletefile_failure(
-          {required Object path, required Object code}) =>
-      'Penginstal gagal mengganti ${path} (kode ${code})';
+  String update_install_deletefile_failure({
+    required Object path,
+    required Object code,
+  }) => 'Penginstal gagal mengganti ${path} (kode ${code})';
   @override
-  String update_install_detected_location(
-          {required Object source, required Object path}) =>
-      'Lokasi pemasangan terdeteksi (${source}): ${path}';
+  String update_install_detected_location({
+    required Object source,
+    required Object path,
+  }) => 'Lokasi pemasangan terdeteksi (${source}): ${path}';
   @override
   String update_install_failure_summary({required Object summary}) =>
       'Alasan: ${summary}';
@@ -48982,9 +49514,10 @@ class _StringsId extends _StringsEn {
   String update_install_launcher_pid({required Object pid}) =>
       'PID peluncur pembaruan: ${pid}';
   @override
-  String update_install_libmpv_holder(
-          {required Object pid, required Object path}) =>
-      'Pemegang libmpv: PID ${pid} - ${path}';
+  String update_install_libmpv_holder({
+    required Object pid,
+    required Object path,
+  }) => 'Pemegang libmpv: PID ${pid} - ${path}';
   @override
   String get update_install_log_not_observed =>
       'Log penginstal tidak dibuat selama pemeriksaan pasca-peluncuran.';
@@ -49019,9 +49552,10 @@ class _StringsId extends _StringsEn {
   String get update_install_restart_windows_hint =>
       'Jika proses yang tercantum sudah ditutup tetapi libmpv-2.dll masih terkunci, mulai ulang Windows lalu pasang lagi.';
   @override
-  String update_install_running_process(
-          {required Object pid, required Object path}) =>
-      'Proses Fushi yang berjalan: PID ${pid} - ${path}';
+  String update_install_running_process({
+    required Object pid,
+    required Object path,
+  }) => 'Proses Fushi yang berjalan: PID ${pid} - ${path}';
   @override
   String update_install_success_message({required Object version}) =>
       'Fushi diperbarui ke versi ${version}.';
@@ -49039,9 +49573,10 @@ class _StringsId extends _StringsEn {
   String update_message({required Object version}) =>
       'Versi ${version} tersedia.';
   @override
-  String update_network_failure(
-          {required Object host, required Object reason}) =>
-      'Tidak dapat menjangkau ${host}: ${reason}';
+  String update_network_failure({
+    required Object host,
+    required Object reason,
+  }) => 'Tidak dapat menjangkau ${host}: ${reason}';
   @override
   String get update_never_remind => 'Jangan ingatkan lagi';
   @override
@@ -49305,9 +49840,10 @@ class _StringsId extends _StringsEn {
   @override
   String get video_jimaku_api_key_set => 'API key telah diatur';
   @override
-  String video_jimaku_batch_done(
-          {required Object done, required Object total}) =>
-      'Subtitle diambil: ${done}/${total}';
+  String video_jimaku_batch_done({
+    required Object done,
+    required Object total,
+  }) => 'Subtitle diambil: ${done}/${total}';
   @override
   String get video_jimaku_batch_download => 'Unduh semua';
   @override
@@ -49830,9 +50366,10 @@ class _StringsId extends _StringsEn {
   @override
   String get video_shader_download_failed => 'Unduhan shader gagal';
   @override
-  String video_shader_download_partial(
-          {required Object ok, required Object failed}) =>
-      'Mengunduh ${ok} shader, ${failed} gagal';
+  String video_shader_download_partial({
+    required Object ok,
+    required Object failed,
+  }) => 'Mengunduh ${ok} shader, ${failed} gagal';
   @override
   String get video_shader_download_url => 'Unduh dari tautan';
   @override
@@ -49944,9 +50481,10 @@ class _StringsId extends _StringsEn {
   String get video_subtitle_attach_playlist_hint =>
       'Buka playlist untuk melampirkan subtitle per episode';
   @override
-  String video_subtitle_attached_to_video(
-          {required Object title, required Object count}) =>
-      'Subtitle dilampirkan ke ${title} (${count} baris)';
+  String video_subtitle_attached_to_video({
+    required Object title,
+    required Object count,
+  }) => 'Subtitle dilampirkan ke ${title} (${count} baris)';
   @override
   String get video_subtitle_auto_align => 'Sejajarkan subtitle otomatis';
   @override
@@ -50172,13 +50710,14 @@ class _StringsId extends _StringsEn {
   @override
   String get anki_dedup_report_title => 'Laporan deduplikasi media';
   @override
-  String anki_dedup_report_body(
-          {required Object groups,
-          required Object removed,
-          required Object size,
-          required Object notes,
-          required Object models,
-          required Object skipped}) =>
+  String anki_dedup_report_body({
+    required Object groups,
+    required Object removed,
+    required Object size,
+    required Object notes,
+    required Object models,
+    required Object skipped,
+  }) =>
       '${groups} kelompok duplikat; ${removed} salinan ekstra (${size}); ${notes} catatan dan ${models} tipe catatan ditulis ulang; ${skipped} dilewati.';
   @override
   String get anki_dedup_report_dry_note =>
@@ -50201,11 +50740,11 @@ class _StringsId extends _StringsEn {
   String anki_dedup_plan_intro({required Object count, required Object size}) =>
       '${count} salinan ekstra, ${size} dapat diklaim kembali. Satu salinan tiap file dipertahankan dan setiap referensi diarahkan ulang terlebih dahulu; tidak ada yang pernah di-encode ulang.';
   @override
-  String anki_dedup_plan_entry(
-          {required Object file,
-          required Object size,
-          required Object canonical}) =>
-      'Hapus ${file} (${size}) - pertahankan ${canonical}';
+  String anki_dedup_plan_entry({
+    required Object file,
+    required Object size,
+    required Object canonical,
+  }) => 'Hapus ${file} (${size}) - pertahankan ${canonical}';
   @override
   String get anki_dedup_plan_delete => 'Hapus file-file ini';
   @override
@@ -50267,8 +50806,10 @@ class _StringsId extends _StringsEn {
   String manga_ocr_acceleration_status({required Object engine}) =>
       'Akselerasi OCR: ${engine}';
   @override
-  String manga_ocr_acceleration_degraded(
-          {required Object engine, required Object reason}) =>
+  String manga_ocr_acceleration_degraded({
+    required Object engine,
+    required Object reason,
+  }) =>
       'Akselerasi GPU tidak tersedia, menjalankan OCR di ${engine}: ${reason}';
   @override
   String get media_tracking_status => 'Status koleksi';
@@ -50314,8 +50855,10 @@ class _StringsId extends _StringsEn {
   String anki_dedup_auto_done({required Object count, required Object size}) =>
       'Dihapus ${count} file media Anki duplikat, ${size} diklaim kembali';
   @override
-  String anki_lapis_backup_done_pruned(
-          {required Object path, required Object count}) =>
+  String anki_lapis_backup_done_pruned({
+    required Object path,
+    required Object count,
+  }) =>
       'Dicadangkan ke ${path} (${count} cadangan lama dihapus berdasarkan kebijakan 90 hari / simpan 10)';
   @override
   String get game_audio_fallback_policy => 'Fallback audio';
@@ -50467,9 +51010,10 @@ class _StringsId extends _StringsEn {
   String get stat_clear_all_game_message =>
       'Hapus semua waktu bermain game dan jumlah sesi? Perpustakaan game dan garis waktu aktivitas Anda dipertahankan. Ini tidak bisa dibatalkan.';
   @override
-  String batch_selection_stale_skipped(
-          {required Object m, required Object n}) =>
-      'Melewati ${m} dari ${n} item yang dipilih yang sudah tidak ada lagi';
+  String batch_selection_stale_skipped({
+    required Object m,
+    required Object n,
+  }) => 'Melewati ${m} dari ${n} item yang dipilih yang sudah tidak ada lagi';
   @override
   String get game_text_thread_unset =>
       'Belum ada thread yang dipilih — pilih satu untuk mulai menangkap';
@@ -50526,22 +51070,25 @@ class _StringsId extends _StringsEn {
   @override
   String get video_jimaku_language_unknown => 'Bahasa tidak dilabeli';
   @override
-  String video_jimaku_source_summary(
-          {required Object files,
-          required Object episodes,
-          required Object languages}) =>
-      '${files} file subtitle · ${episodes} episode · ${languages}';
+  String video_jimaku_source_summary({
+    required Object files,
+    required Object episodes,
+    required Object languages,
+  }) => '${files} file subtitle · ${episodes} episode · ${languages}';
   @override
-  String video_jimaku_episode_unlabeled(
-          {required Object episode, required Object count}) =>
+  String video_jimaku_episode_unlabeled({
+    required Object episode,
+    required Object count,
+  }) =>
       'Tidak ada subtitle berlabel episode ${episode}; ${count} file tanpa label mungkin masih cocok';
   @override
   String video_jimaku_episode_unavailable({required Object episode}) =>
       'Tidak ditemukan subtitle untuk episode ${episode}';
   @override
-  String video_jimaku_episode_available(
-          {required Object count, required Object languages}) =>
-      '${count} subtitle tersedia · ${languages}';
+  String video_jimaku_episode_available({
+    required Object count,
+    required Object languages,
+  }) => '${count} subtitle tersedia · ${languages}';
   @override
   String get manga_online_source_disabled =>
       'Sumber internet ini dinonaktifkan. Aktifkan di Sumber untuk menjelajahi katalog.';
@@ -50561,13 +51108,15 @@ class _StringsId extends _StringsEn {
   String anki_dedup_progress_scanning({required Object count}) =>
       'Memindai folder media... (${count} file ditemukan)';
   @override
-  String anki_dedup_progress_hashing(
-          {required Object done, required Object total}) =>
-      'Membandingkan file berukuran sama... (${done} / ${total})';
+  String anki_dedup_progress_hashing({
+    required Object done,
+    required Object total,
+  }) => 'Membandingkan file berukuran sama... (${done} / ${total})';
   @override
-  String anki_dedup_progress_resolving(
-          {required Object done, required Object total}) =>
-      'Memproses duplikat... (${done} / ${total})';
+  String anki_dedup_progress_resolving({
+    required Object done,
+    required Object total,
+  }) => 'Memproses duplikat... (${done} / ${total})';
   @override
   String anki_dedup_progress_freed({required Object size}) =>
       'Dibebaskan ${size} sejauh ini';
@@ -50623,8 +51172,10 @@ class _StringsId extends _StringsEn {
   @override
   String get sync_last_failed => 'Sinkronisasi terakhir: gagal';
   @override
-  String anime_download_no_results_detail(
-          {required Object query, required Object filters}) =>
+  String anime_download_no_results_detail({
+    required Object query,
+    required Object filters,
+  }) =>
       'Layanan merespons dengan sukses tetapi mengembalikan 0 item. Kueri: ${query}; filter: ${filters}. Coba judul lain atau longgarkan filter.';
   @override
   String get anime_download_streaming_ready =>
@@ -50808,11 +51359,12 @@ class _StringsId extends _StringsEn {
   @override
   String scrape_all_item({required Object title}) => 'Memproses: ${title}';
   @override
-  String scrape_all_done(
-          {required Object applied,
-          required Object review,
-          required Object skipped,
-          required Object failed}) =>
+  String scrape_all_done({
+    required Object applied,
+    required Object review,
+    required Object skipped,
+    required Object failed,
+  }) =>
       'Selesai: ${applied} diterapkan, ${review} perlu ditinjau, ${skipped} dilewati, ${failed} gagal';
   @override
   String get scrape_all_empty =>
@@ -51179,9 +51731,10 @@ class _StringsId extends _StringsEn {
   String collection_episode_watched_at({required Object position}) =>
       'Ditonton sampai ${position}';
   @override
-  String collection_episode_rename_partial(
-          {required Object n, required Object m}) =>
-      '${n} episode diganti nama, ${m} gagal';
+  String collection_episode_rename_partial({
+    required Object n,
+    required Object m,
+  }) => '${n} episode diganti nama, ${m} gagal';
   @override
   String get sync_err_browser_timeout =>
       'Browser tidak pernah mengembalikan otorisasi. Coba lagi, dan pastikan proxy Anda mengizinkan 127.0.0.1.';
@@ -51223,9 +51776,10 @@ class _StringsId extends _StringsEn {
   String get book_convert_blocked_source_missing =>
       'File sumber sudah tidak ada di disk.';
   @override
-  String manga_online_retry_waiting(
-          {required Object attempt, required Object total}) =>
-      'Mencoba ulang secara otomatis (${attempt}/${total})';
+  String manga_online_retry_waiting({
+    required Object attempt,
+    required Object total,
+  }) => 'Mencoba ulang secara otomatis (${attempt}/${total})';
   @override
   String get manga_ocr_wizard_already_ocred =>
       'Volume ini sudah memiliki data OCR di setiap halaman. Menjalankan OCR lagi akan menimpanya.';
@@ -51326,17 +51880,18 @@ class _StringsId extends _StringsEn {
   @override
   String get video_source_scrape_write_images => 'Tulis file gambar';
   @override
-  String video_source_scrape_progress(
-          {required Object phase,
-          required Object current,
-          required Object total}) =>
-      '${phase} · ${current}/${total}';
+  String video_source_scrape_progress({
+    required Object phase,
+    required Object current,
+    required Object total,
+  }) => '${phase} · ${current}/${total}';
   @override
-  String video_source_scrape_last_summary(
-          {required Object status,
-          required Object succeeded,
-          required Object pending,
-          required Object failed}) =>
+  String video_source_scrape_last_summary({
+    required Object status,
+    required Object succeeded,
+    required Object pending,
+    required Object failed,
+  }) =>
       'Scrape terakhir (${status}): ${succeeded} berhasil, ${pending} menunggu, ${failed} gagal';
   @override
   String get video_source_scrape_phase_planning => 'Merencanakan';
@@ -51552,9 +52107,10 @@ class _StringsId extends _StringsEn {
   String migration_import_running({required Object batch}) =>
       'Mengimpor ${batch}...';
   @override
-  String migration_import_verify_failed(
-          {required Object batch, required Object detail}) =>
-      '${batch} gagal verifikasi dan disimpan untuk ekspor ulang: ${detail}';
+  String migration_import_verify_failed({
+    required Object batch,
+    required Object detail,
+  }) => '${batch} gagal verifikasi dan disimpan untuk ekspor ulang: ${detail}';
   @override
   String migration_import_counts_failed({required Object detail}) =>
       'Data yang diimpor tidak lengkap: ${detail}. Ekspor ulang bagian yang hilang dari Hibiki, lalu impor lagi.';
@@ -51579,11 +52135,11 @@ class _StringsId extends _StringsEn {
   @override
   String get migration_import_permission_grant => 'Berikan izin';
   @override
-  String migration_import_verifying(
-          {required Object batch,
-          required Object done,
-          required Object total}) =>
-      'Memverifikasi ${batch} (${done}/${total})';
+  String migration_import_verifying({
+    required Object batch,
+    required Object done,
+    required Object total,
+  }) => 'Memverifikasi ${batch} (${done}/${total})';
   @override
   String get migration_import_verifying_hint =>
       'Menghitung checksum arsip. Perpustakaan besar bisa memakan waktu beberapa menit.';
@@ -51759,11 +52315,11 @@ class _StringsId extends _StringsEn {
   String video_subtitle_read_failed({required Object label}) =>
       'Tidak bisa membaca file subtitle ini (rusak atau kosong): ${label}';
   @override
-  String dict_downloading_size(
-          {required Object name,
-          required Object done,
-          required Object total}) =>
-      'Mengunduh ${name} (${done} / ${total})';
+  String dict_downloading_size({
+    required Object name,
+    required Object done,
+    required Object total,
+  }) => 'Mengunduh ${name} (${done} / ${total})';
   @override
   String get video_subtitle_attach_book_missing =>
       'Video ini tidak ada di perpustakaan Anda, jadi subtitle tidak dilampirkan';
@@ -51960,11 +52516,11 @@ class _StringsId extends _StringsEn {
   String manga_import_batch_hint({required Object n}) =>
       'Folder ini berisi ${n} file volume; masing-masing diimpor sebagai buku tersendiri, dinamai sesuai filenya.';
   @override
-  String manga_import_batch_done(
-          {required Object imported,
-          required Object skipped,
-          required Object failed}) =>
-      'Diimpor ${imported}, dilewati ${skipped}, gagal ${failed}.';
+  String manga_import_batch_done({
+    required Object imported,
+    required Object skipped,
+    required Object failed,
+  }) => 'Diimpor ${imported}, dilewati ${skipped}, gagal ${failed}.';
   @override
   String get srt_book_reimport => 'Impor ulang';
   @override
@@ -52060,8 +52616,10 @@ class _StringsId extends _StringsEn {
   @override
   String get update_release_page_open => 'Halaman rilis';
   @override
-  String update_install_gal_hook_holder(
-          {required Object pid, required Object path}) =>
+  String update_install_gal_hook_holder({
+    required Object pid,
+    required Object path,
+  }) =>
       'Komponen tangkapan galgame sedang digunakan: PID ${pid} - ${path} (ini adalah game yang sedang Anda mainkan, atau host tangkapannya). Tutup game, lalu perbarui lagi.';
   @override
   String get game_hook_reason_protocol_mismatch =>
@@ -52549,9 +53107,10 @@ class _StringsId extends _StringsEn {
   String get manga_ocr_model_unused_by_engine =>
       'Mesin saat ini tidak menggunakan file model lokal ini.';
   @override
-  String manga_ocr_download_total_progress(
-          {required Object done, required Object total}) =>
-      '${done} dari ${total}';
+  String manga_ocr_download_total_progress({
+    required Object done,
+    required Object total,
+  }) => '${done} dari ${total}';
   @override
   String get media_source_network_subtitle_video =>
       'Perpustakaan jarak jauh WebDAV (streaming langsung)';
@@ -53020,11 +53579,11 @@ class _StringsId extends _StringsEn {
   String get manga_ocr_import_matched_nothing =>
       'Tidak ada berkas model yang dapat dipakai dikenali';
   @override
-  String manga_ocr_import_size_mismatch(
-          {required Object file,
-          required Object expected,
-          required Object actual}) =>
-      'Ukuran ${file} salah: diharapkan ${expected}, diperoleh ${actual}';
+  String manga_ocr_import_size_mismatch({
+    required Object file,
+    required Object expected,
+    required Object actual,
+  }) => 'Ukuran ${file} salah: diharapkan ${expected}, diperoleh ${actual}';
   @override
   String manga_ocr_import_still_missing({required Object count}) =>
       'Masih kurang ${count} berkas';
@@ -53090,9 +53649,10 @@ class _StringsId extends _StringsEn {
   @override
   String get video_jimaku_search_failed => 'Pencarian subtitle gagal';
   @override
-  String video_subtitle_error_with_code(
-          {required Object msg, required Object code}) =>
-      '${msg} (HTTP ${code})';
+  String video_subtitle_error_with_code({
+    required Object msg,
+    required Object code,
+  }) => '${msg} (HTTP ${code})';
   @override
   String get manga_rescan_run => 'Kenali ulang area terpilih';
   @override
@@ -53343,9 +53903,10 @@ class _StringsId extends _StringsEn {
   @override
   String get manga_series_open_series => 'Halaman karya';
   @override
-  String manga_series_read_progress(
-          {required Object page, required Object total}) =>
-      'Dibaca sampai halaman ${page} dari ${total}';
+  String manga_series_read_progress({
+    required Object page,
+    required Object total,
+  }) => 'Dibaca sampai halaman ${page} dari ${total}';
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       'Dibaca sampai halaman ${page}';
@@ -53630,13 +54191,15 @@ class _StringsId extends _StringsEn {
   String web_video_mine_queued({required Object count}) =>
       'Masuk antrean pembuatan kartu (${count} menunggu)';
   @override
-  String web_video_mine_queue_running(
-          {required Object done, required Object total}) =>
-      'Membuat kartu ${done}/${total}…';
+  String web_video_mine_queue_running({
+    required Object done,
+    required Object total,
+  }) => 'Membuat kartu ${done}/${total}…';
   @override
-  String web_video_mine_queue_finished(
-          {required Object ok, required Object failed}) =>
-      'Kartu dibuat: ${ok}, gagal: ${failed}';
+  String web_video_mine_queue_finished({
+    required Object ok,
+    required Object failed,
+  }) => 'Kartu dibuat: ${ok}, gagal: ${failed}';
   @override
   String get web_video_hosting_menu => 'Mode pemutaran';
   @override
@@ -53911,29 +54474,78 @@ class _StringsId extends _StringsEn {
       'Waiting for matching in-game click';
   @override
   String get delete_choices_remember => 'Ingat pilihan ini';
+  @override
+  String get network_proxy_mode_label => 'Proxy mode';
+  @override
+  String get network_proxy_mode_auto => 'Automatic';
+  @override
+  String get network_proxy_mode_auto_hint =>
+      'Use environment variables, then the enabled system proxy';
+  @override
+  String get network_proxy_mode_direct => 'Direct';
+  @override
+  String get network_proxy_mode_direct_hint => 'Disable proxy use for the app';
+  @override
+  String get network_proxy_mode_manual => 'Manual';
+  @override
+  String get network_proxy_mode_manual_hint =>
+      'Use the server and optional credentials below';
+  @override
+  String get network_proxy_manual_hint =>
+      'HTTP proxy server used by all public internet requests';
+  @override
+  String get network_proxy_username => 'Proxy username (optional)';
+  @override
+  String get network_proxy_password => 'Proxy password (optional)';
+  @override
+  String get storage_category_backups => 'Local backups';
+  @override
+  String storage_entry_backups_label({required Object n}) =>
+      '${n} backup archive(s)';
+  @override
+  String get storage_entry_delete_backups_confirm_body =>
+      'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+  @override
+  String get update_download_source_preference => 'Preferred download source';
+  @override
+  String get update_download_source_preference_hint =>
+      'The selected source is tried first; unavailable sources still fall back automatically.';
+  @override
+  String get update_download_source_auto => 'Automatic (recommended)';
+  @override
+  String get update_download_source_cloudflare => 'Cloudflare mirror';
+  @override
+  String get update_download_source_github => 'GitHub direct';
+  @override
+  String update_download_source_proxy({required Object host}) =>
+      'Proxy: ${host}';
 }
 
 // Path: <root>
 class _StringsIt extends _StringsEn {
   /// You can call this constructor and build your own translation instance of this locale.
   /// Constructing via the enum [AppLocale.build] is preferred.
-  _StringsIt.build(
-      {Map<String, Node>? overrides,
-      PluralResolver? cardinalResolver,
-      PluralResolver? ordinalResolver})
-      : assert(overrides == null,
-            'Set "translation_overrides: true" in order to enable this feature.'),
-        $meta = TranslationMetadata(
-          locale: AppLocale.it,
-          overrides: overrides ?? {},
-          cardinalResolver: cardinalResolver,
-          ordinalResolver: ordinalResolver,
-        ),
-        super.build(
-            cardinalResolver: cardinalResolver,
-            ordinalResolver: ordinalResolver) {
+  _StringsIt.build({
+    Map<String, Node>? overrides,
+    PluralResolver? cardinalResolver,
+    PluralResolver? ordinalResolver,
+  }) : assert(
+         overrides == null,
+         'Set "translation_overrides: true" in order to enable this feature.',
+       ),
+       $meta = TranslationMetadata(
+         locale: AppLocale.it,
+         overrides: overrides ?? {},
+         cardinalResolver: cardinalResolver,
+         ordinalResolver: ordinalResolver,
+       ),
+       super.build(
+         cardinalResolver: cardinalResolver,
+         ordinalResolver: ordinalResolver,
+       ) {
     super.$meta.setFlatMapFunction(
-        $meta.getTranslation); // copy base translations to super.$meta
+      $meta.getTranslation,
+    ); // copy base translations to super.$meta
     $meta.setFlatMapFunction(_flatMapFunction);
   }
 
@@ -54452,10 +55064,11 @@ class _StringsIt extends _StringsEn {
   @override
   String get backup_import => 'Importa backup';
   @override
-  String backup_import_confirm(
-          {required Object date,
-          required Object bookCount,
-          required Object statsCount}) =>
+  String backup_import_confirm({
+    required Object date,
+    required Object bookCount,
+    required Object statsCount,
+  }) =>
       'Questa operazione sostituirà tutti i dati attuali con il backup del ${date}.\n\n${bookCount} libri, ${statsCount} record di statistiche.\n\nL\'app verrà riavviata dopo il ripristino.';
   @override
   String get backup_import_confirm_title => 'Ripristinare il backup?';
@@ -54473,8 +55086,10 @@ class _StringsIt extends _StringsEn {
   @override
   String get backup_import_invalid => 'File di backup non valido';
   @override
-  String backup_import_merge_preview(
-          {required Object bookCount, required Object progressCount}) =>
+  String backup_import_merge_preview({
+    required Object bookCount,
+    required Object progressCount,
+  }) =>
       'L\'unione aggiungerà ${bookCount} libri e aggiornerà ${progressCount} posizioni di lettura.';
   @override
   String get backup_import_mode_label => 'Modalità di importazione';
@@ -54772,12 +55387,12 @@ class _StringsIt extends _StringsEn {
   @override
   String get changelog_prerelease => 'Pre-release';
   @override
-  String chapter_progress(
-          {required Object idx,
-          required Object total,
-          required Object suffix,
-          required Object pct}) =>
-      'Capitolo ${idx} / ${total}${suffix} · ${pct}%';
+  String chapter_progress({
+    required Object idx,
+    required Object total,
+    required Object suffix,
+    required Object pct,
+  }) => 'Capitolo ${idx} / ${total}${suffix} · ${pct}%';
   @override
   String get clear => 'Cancella';
   @override
@@ -54868,9 +55483,10 @@ class _StringsIt extends _StringsEn {
   @override
   String get collection_view_all => 'Vedi tutto';
   @override
-  String collection_watched_progress(
-          {required Object done, required Object total}) =>
-      'Visti ${done}/${total}';
+  String collection_watched_progress({
+    required Object done,
+    required Object total,
+  }) => 'Visti ${done}/${total}';
   @override
   String get collection_word => 'Parola';
   @override
@@ -55098,9 +55714,10 @@ class _StringsIt extends _StringsEn {
   @override
   String get data_storage_migrate_failed_title => 'Migrazione dati fallita';
   @override
-  String data_storage_migrate_overlay_progress(
-          {required Object copied, required Object total}) =>
-      'Copia file: ${copied} / ${total}';
+  String data_storage_migrate_overlay_progress({
+    required Object copied,
+    required Object total,
+  }) => 'Copia file: ${copied} / ${total}';
   @override
   String get data_storage_migrate_overlay_title => 'Spostamento dei tuoi dati';
   @override
@@ -55117,8 +55734,10 @@ class _StringsIt extends _StringsEn {
   String get data_storage_restart_failed =>
       'Dati spostati, ma il riavvio automatico è fallito. Riapri Fushi manualmente.';
   @override
-  String db_downgrade_message(
-          {required Object dbVersion, required Object appVersion}) =>
+  String db_downgrade_message({
+    required Object dbVersion,
+    required Object appVersion,
+  }) =>
       'Questo database è stato creato da una versione più recente di Fushi (schema v${dbVersion}). La tua app attuale è troppo vecchia (v${appVersion}). L\'apertura è stata bloccata per proteggere i tuoi dati. Aggiorna l\'app e riprova.';
   @override
   String get db_downgrade_title => 'Aggiorna Fushi';
@@ -55287,11 +55906,11 @@ class _StringsIt extends _StringsEn {
   @override
   String get dict_download_language => 'La tua lingua';
   @override
-  String dict_download_partial(
-          {required Object success,
-          required Object total,
-          required Object error}) =>
-      '${success} / ${total} OK. Falliti: ${error}';
+  String dict_download_partial({
+    required Object success,
+    required Object total,
+    required Object error,
+  }) => '${success} / ${total} OK. Falliti: ${error}';
   @override
   String get dict_download_select_title => 'Seleziona dizionari';
   @override
@@ -55323,18 +55942,21 @@ class _StringsIt extends _StringsEn {
   @override
   String get dict_update_latest => 'Già aggiornato.';
   @override
-  String dict_update_name_mismatch_body(
-          {required Object incoming, required Object existing}) =>
+  String dict_update_name_mismatch_body({
+    required Object incoming,
+    required Object existing,
+  }) =>
       'Il file selezionato è «${incoming}», ma stai aggiornando «${existing}». Sostituire comunque?';
   @override
   String get dict_update_name_mismatch_title => 'I nomi non corrispondono';
   @override
   String get dict_update_none => 'Tutti i dizionari sono aggiornati.';
   @override
-  String dict_update_summary(
-          {required Object updated,
-          required Object current,
-          required Object failed}) =>
+  String dict_update_summary({
+    required Object updated,
+    required Object current,
+    required Object failed,
+  }) =>
       '${updated} aggiornati, ${current} già aggiornati, ${failed} non riusciti.';
   @override
   String get dict_update_tooltip => 'Aggiorna dizionario';
@@ -55426,8 +56048,10 @@ class _StringsIt extends _StringsEn {
   @override
   String get download_subscription_check_now => 'Controlla ora';
   @override
-  String download_subscription_choice_hint(
-          {required Object group, required Object resolution}) =>
+  String download_subscription_choice_hint({
+    required Object group,
+    required Object resolution,
+  }) =>
       'Segui ${group} · ${resolution}. Le nuove uscite a episodio singolo verranno messe in coda.';
   @override
   String get download_subscription_created =>
@@ -55573,8 +56197,10 @@ class _StringsIt extends _StringsEn {
   @override
   String favorites({required Object n}) => 'Preferiti (${n})';
   @override
-  String field_fallback_used(
-          {required Object field, required Object secondField}) =>
+  String field_fallback_used({
+    required Object field,
+    required Object secondField,
+  }) =>
       'Il campo ${field} ha usato ${secondField} come termine di ricerca di riserva.';
   @override
   String file_count({required Object count}) => '${count} file';
@@ -56303,12 +56929,12 @@ class _StringsIt extends _StringsEn {
   @override
   String get game_waiting_for_text => 'In attesa del testo';
   @override
-  String game_waveform_range_label(
-          {required Object start,
-          required Object end,
-          required Object duration,
-          required Object total}) =>
-      '${start} - ${end} (selezionati ${duration} / totale ${total})';
+  String game_waveform_range_label({
+    required Object start,
+    required Object end,
+    required Object duration,
+    required Object total,
+  }) => '${start} - ${end} (selezionati ${duration} / totale ${total})';
   @override
   String get game_waveform_select_title => 'Seleziona intervallo audio';
   @override
@@ -56580,9 +57206,10 @@ class _StringsIt extends _StringsEn {
   @override
   String get jump_to_char => 'Vai al carattere';
   @override
-  String jump_to_char_current(
-          {required Object current, required Object total}) =>
-      'Attuale: ${current} / ${total}';
+  String jump_to_char_current({
+    required Object current,
+    required Object total,
+  }) => 'Attuale: ${current} / ${total}';
   @override
   String get jump_to_char_hint => 'Inserisci la posizione del carattere…';
   @override
@@ -56760,9 +57387,10 @@ class _StringsIt extends _StringsEn {
   String get manga_ocr_wizard_no_images =>
       'Nessuna immagine trovata in questa cartella.';
   @override
-  String manga_ocr_wizard_page_progress(
-          {required Object done, required Object total}) =>
-      'Pagina ${done} / ${total}';
+  String manga_ocr_wizard_page_progress({
+    required Object done,
+    required Object total,
+  }) => 'Pagina ${done} / ${total}';
   @override
   String get manga_ocr_wizard_pick_folder => 'Scegli cartella immagini';
   @override
@@ -56788,9 +57416,10 @@ class _StringsIt extends _StringsEn {
   @override
   String get manga_online_queue_added => 'Aggiunto alla coda di download';
   @override
-  String manga_online_queue_progress(
-          {required Object done, required Object total}) =>
-      'Volume ${done} / ${total}';
+  String manga_online_queue_progress({
+    required Object done,
+    required Object total,
+  }) => 'Volume ${done} / ${total}';
   @override
   String get manga_online_queue_section => 'Download catalogo manga';
   @override
@@ -56824,9 +57453,10 @@ class _StringsIt extends _StringsEn {
   String get manga_remote_ocr_unsupported =>
       'L\'host accoppiato non supporta l\'OCR manga.';
   @override
-  String manga_remote_ocr_uploading(
-          {required Object done, required Object total}) =>
-      'Caricamento pagine ${done} / ${total}…';
+  String manga_remote_ocr_uploading({
+    required Object done,
+    required Object total,
+  }) => 'Caricamento pagine ${done} / ${total}…';
   @override
   String get margin_bottom => 'Margine inferiore';
   @override
@@ -57340,16 +57970,18 @@ class _StringsIt extends _StringsEn {
   @override
   String get audiobook_rematch_auto_match => 'Corrispondenza automatica';
   @override
-  String audiobook_rematch_auto_picked(
-          {required Object window, required Object pct}) =>
-      'Selezione automatica di ${window} (tasso ${pct}%)';
+  String audiobook_rematch_auto_picked({
+    required Object window,
+    required Object pct,
+  }) => 'Selezione automatica di ${window} (tasso ${pct}%)';
   @override
   String audiobook_rematch_default_value({required Object n}) =>
       'Predefinito ${n}';
   @override
-  String audiobook_rematch_health_label(
-          {required Object pct, required Object detail}) =>
-      '${pct} corrispondente — ${detail}';
+  String audiobook_rematch_health_label({
+    required Object pct,
+    required Object detail,
+  }) => '${pct} corrispondente — ${detail}';
   @override
   String get audiobook_rematch_matching => 'Corrispondenza in corso...';
   @override
@@ -57368,9 +58000,10 @@ class _StringsIt extends _StringsEn {
   String audiobook_rematch_failed({required Object error}) =>
       'Corrispondenza fallita: ${error}';
   @override
-  String audiobook_rematch_result(
-          {required Object pct, required Object window}) =>
-      'Ricalcolato: ${pct}% (finestra: ${window})';
+  String audiobook_rematch_result({
+    required Object pct,
+    required Object window,
+  }) => 'Ricalcolato: ${pct}% (finestra: ${window})';
   @override
   String get audiobook_rematch_search_window => 'Finestra di ricerca';
   @override
@@ -58588,9 +59221,10 @@ class _StringsIt extends _StringsEn {
   @override
   String get update_download_resumed => 'ripreso';
   @override
-  String update_download_size(
-          {required Object received, required Object total}) =>
-      'Scaricato: ${received} / ${total}';
+  String update_download_size({
+    required Object received,
+    required Object total,
+  }) => 'Scaricato: ${received} / ${total}';
   @override
   String update_download_source({required Object source}) =>
       'Sorgente: ${source}';
@@ -58604,13 +59238,16 @@ class _StringsIt extends _StringsEn {
   String update_install_current_executable({required Object path}) =>
       'Eseguibile in esecuzione: ${path}';
   @override
-  String update_install_deletefile_failure(
-          {required Object path, required Object code}) =>
+  String update_install_deletefile_failure({
+    required Object path,
+    required Object code,
+  }) =>
       'Il programma di installazione non è riuscito a sostituire ${path} (codice ${code})';
   @override
-  String update_install_detected_location(
-          {required Object source, required Object path}) =>
-      'Posizione di installazione rilevata (${source}): ${path}';
+  String update_install_detected_location({
+    required Object source,
+    required Object path,
+  }) => 'Posizione di installazione rilevata (${source}): ${path}';
   @override
   String update_install_failure_summary({required Object summary}) =>
       'Motivo: ${summary}';
@@ -58633,9 +59270,10 @@ class _StringsIt extends _StringsEn {
   String update_install_launcher_pid({required Object pid}) =>
       'PID dell\'avviatore dell\'aggiornamento: ${pid}';
   @override
-  String update_install_libmpv_holder(
-          {required Object pid, required Object path}) =>
-      'Processo che blocca libmpv: PID ${pid} - ${path}';
+  String update_install_libmpv_holder({
+    required Object pid,
+    required Object path,
+  }) => 'Processo che blocca libmpv: PID ${pid} - ${path}';
   @override
   String get update_install_log_not_observed =>
       'Il log di installazione non è stato creato durante il controllo successivo all\'avvio.';
@@ -58671,9 +59309,10 @@ class _StringsIt extends _StringsEn {
   String get update_install_restart_windows_hint =>
       'Se i processi elencati sono chiusi ma libmpv-2.dll è ancora bloccato, riavvia Windows e installa di nuovo.';
   @override
-  String update_install_running_process(
-          {required Object pid, required Object path}) =>
-      'Processo Fushi in esecuzione: PID ${pid} - ${path}';
+  String update_install_running_process({
+    required Object pid,
+    required Object path,
+  }) => 'Processo Fushi in esecuzione: PID ${pid} - ${path}';
   @override
   String update_install_success_message({required Object version}) =>
       'Fushi è stato aggiornato alla versione ${version}.';
@@ -58691,9 +59330,10 @@ class _StringsIt extends _StringsEn {
   String update_message({required Object version}) =>
       'La versione ${version} è disponibile.';
   @override
-  String update_network_failure(
-          {required Object host, required Object reason}) =>
-      'Impossibile raggiungere ${host}: ${reason}';
+  String update_network_failure({
+    required Object host,
+    required Object reason,
+  }) => 'Impossibile raggiungere ${host}: ${reason}';
   @override
   String get update_never_remind => 'Non ricordarmelo più';
   @override
@@ -58957,9 +59597,10 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_jimaku_api_key_set => 'API key impostata';
   @override
-  String video_jimaku_batch_done(
-          {required Object done, required Object total}) =>
-      'Sottotitoli recuperati: ${done}/${total}';
+  String video_jimaku_batch_done({
+    required Object done,
+    required Object total,
+  }) => 'Sottotitoli recuperati: ${done}/${total}';
   @override
   String get video_jimaku_batch_download => 'Scarica tutto';
   @override
@@ -59484,9 +60125,10 @@ class _StringsIt extends _StringsEn {
   String get video_shader_download_failed =>
       'Download dello shader non riuscito';
   @override
-  String video_shader_download_partial(
-          {required Object ok, required Object failed}) =>
-      'Scaricati ${ok} shader, ${failed} non riusciti';
+  String video_shader_download_partial({
+    required Object ok,
+    required Object failed,
+  }) => 'Scaricati ${ok} shader, ${failed} non riusciti';
   @override
   String get video_shader_download_url => 'Scarica da link';
   @override
@@ -59598,9 +60240,10 @@ class _StringsIt extends _StringsEn {
   String get video_subtitle_attach_playlist_hint =>
       'Apri la playlist per allegare un sottotitolo per ogni episodio';
   @override
-  String video_subtitle_attached_to_video(
-          {required Object title, required Object count}) =>
-      'Sottotitoli allegati a ${title} (${count} battute)';
+  String video_subtitle_attached_to_video({
+    required Object title,
+    required Object count,
+  }) => 'Sottotitoli allegati a ${title} (${count} battute)';
   @override
   String get video_subtitle_auto_align => 'Allinea sottotitoli';
   @override
@@ -59825,13 +60468,14 @@ class _StringsIt extends _StringsEn {
   @override
   String get anki_dedup_report_title => 'Rapporto deduplicazione media';
   @override
-  String anki_dedup_report_body(
-          {required Object groups,
-          required Object removed,
-          required Object size,
-          required Object notes,
-          required Object models,
-          required Object skipped}) =>
+  String anki_dedup_report_body({
+    required Object groups,
+    required Object removed,
+    required Object size,
+    required Object notes,
+    required Object models,
+    required Object skipped,
+  }) =>
       '${groups} gruppi duplicati; ${removed} copie extra (${size}); ${notes} note e ${models} tipi di nota riscritti; ${skipped} saltati.';
   @override
   String get anki_dedup_report_dry_note =>
@@ -59854,11 +60498,11 @@ class _StringsIt extends _StringsEn {
   String anki_dedup_plan_intro({required Object count, required Object size}) =>
       '${count} copie extra, ${size} recuperabili. Una copia di ogni file viene mantenuta e ogni riferimento viene reindirizzato ad essa prima; nulla viene ricodificato.';
   @override
-  String anki_dedup_plan_entry(
-          {required Object file,
-          required Object size,
-          required Object canonical}) =>
-      'Elimina ${file} (${size}) — mantieni ${canonical}';
+  String anki_dedup_plan_entry({
+    required Object file,
+    required Object size,
+    required Object canonical,
+  }) => 'Elimina ${file} (${size}) — mantieni ${canonical}';
   @override
   String get anki_dedup_plan_delete => 'Elimina questi file';
   @override
@@ -59919,8 +60563,10 @@ class _StringsIt extends _StringsEn {
   String manga_ocr_acceleration_status({required Object engine}) =>
       'Accelerazione OCR: ${engine}';
   @override
-  String manga_ocr_acceleration_degraded(
-          {required Object engine, required Object reason}) =>
+  String manga_ocr_acceleration_degraded({
+    required Object engine,
+    required Object reason,
+  }) =>
       'Accelerazione GPU non disponibile, OCR in esecuzione su ${engine}: ${reason}';
   @override
   String get media_tracking_status => 'Stato raccolta';
@@ -59967,8 +60613,10 @@ class _StringsIt extends _StringsEn {
   String anki_dedup_auto_done({required Object count, required Object size}) =>
       'Rimossi ${count} file media Anki duplicati, ${size} recuperati';
   @override
-  String anki_lapis_backup_done_pruned(
-          {required Object path, required Object count}) =>
+  String anki_lapis_backup_done_pruned({
+    required Object path,
+    required Object count,
+  }) =>
       'Backup in ${path} (${count} vecchi backup eliminati dalla politica 90 giorni / mantieni 10)';
   @override
   String get game_audio_fallback_policy => 'Fallback audio';
@@ -60121,9 +60769,10 @@ class _StringsIt extends _StringsEn {
   String get stat_clear_all_game_message =>
       'Cancellare tutto il tempo di gioco e i conteggi sessioni? La libreria giochi e la timeline delle attività vengono mantenute. Non può essere annullato.';
   @override
-  String batch_selection_stale_skipped(
-          {required Object m, required Object n}) =>
-      'Saltati ${m} di ${n} elementi selezionati che non esistono più';
+  String batch_selection_stale_skipped({
+    required Object m,
+    required Object n,
+  }) => 'Saltati ${m} di ${n} elementi selezionati che non esistono più';
   @override
   String get game_text_thread_unset =>
       'Nessun thread selezionato — scegline uno per iniziare la cattura';
@@ -60180,22 +60829,25 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_jimaku_language_unknown => 'Lingua non indicata';
   @override
-  String video_jimaku_source_summary(
-          {required Object files,
-          required Object episodes,
-          required Object languages}) =>
-      '${files} file sottotitoli · ${episodes} episodi · ${languages}';
+  String video_jimaku_source_summary({
+    required Object files,
+    required Object episodes,
+    required Object languages,
+  }) => '${files} file sottotitoli · ${episodes} episodi · ${languages}';
   @override
-  String video_jimaku_episode_unlabeled(
-          {required Object episode, required Object count}) =>
+  String video_jimaku_episode_unlabeled({
+    required Object episode,
+    required Object count,
+  }) =>
       'Nessun sottotitolo etichettato episodio ${episode}; ${count} file senza etichetta potrebbero corrispondere';
   @override
   String video_jimaku_episode_unavailable({required Object episode}) =>
       'Nessun sottotitolo trovato per l\'episodio ${episode}';
   @override
-  String video_jimaku_episode_available(
-          {required Object count, required Object languages}) =>
-      '${count} sottotitoli disponibili · ${languages}';
+  String video_jimaku_episode_available({
+    required Object count,
+    required Object languages,
+  }) => '${count} sottotitoli disponibili · ${languages}';
   @override
   String get manga_online_source_disabled =>
       'Questa fonte internet è disabilitata. Abilitala in Fonti per sfogliare il catalogo.';
@@ -60216,13 +60868,15 @@ class _StringsIt extends _StringsEn {
   String anki_dedup_progress_scanning({required Object count}) =>
       'Scansione cartella media… (${count} file trovati)';
   @override
-  String anki_dedup_progress_hashing(
-          {required Object done, required Object total}) =>
-      'Confronto file delle stesse dimensioni… (${done} / ${total})';
+  String anki_dedup_progress_hashing({
+    required Object done,
+    required Object total,
+  }) => 'Confronto file delle stesse dimensioni… (${done} / ${total})';
   @override
-  String anki_dedup_progress_resolving(
-          {required Object done, required Object total}) =>
-      'Elaborazione duplicati… (${done} / ${total})';
+  String anki_dedup_progress_resolving({
+    required Object done,
+    required Object total,
+  }) => 'Elaborazione duplicati… (${done} / ${total})';
   @override
   String anki_dedup_progress_freed({required Object size}) =>
       'Liberati ${size} finora';
@@ -60278,8 +60932,10 @@ class _StringsIt extends _StringsEn {
   @override
   String get sync_last_failed => 'Ultima sincronizzazione: fallita';
   @override
-  String anime_download_no_results_detail(
-          {required Object query, required Object filters}) =>
+  String anime_download_no_results_detail({
+    required Object query,
+    required Object filters,
+  }) =>
       'Il servizio ha risposto con successo ma ha restituito 0 elementi. Query: ${query}; filtri: ${filters}. Prova un altro titolo o allenta i filtri.';
   @override
   String get anime_download_streaming_ready =>
@@ -60468,11 +61124,12 @@ class _StringsIt extends _StringsEn {
   @override
   String scrape_all_item({required Object title}) => 'Elaborazione: ${title}';
   @override
-  String scrape_all_done(
-          {required Object applied,
-          required Object review,
-          required Object skipped,
-          required Object failed}) =>
+  String scrape_all_done({
+    required Object applied,
+    required Object review,
+    required Object skipped,
+    required Object failed,
+  }) =>
       'Fatto: ${applied} applicati, ${review} da revisionare, ${skipped} saltati, ${failed} falliti';
   @override
   String get scrape_all_empty =>
@@ -60842,9 +61499,10 @@ class _StringsIt extends _StringsEn {
   String collection_episode_watched_at({required Object position}) =>
       'Visto fino a ${position}';
   @override
-  String collection_episode_rename_partial(
-          {required Object n, required Object m}) =>
-      'Rinominati ${n} episodi, ${m} falliti';
+  String collection_episode_rename_partial({
+    required Object n,
+    required Object m,
+  }) => 'Rinominati ${n} episodi, ${m} falliti';
   @override
   String get sync_err_browser_timeout =>
       'Il browser non ha restituito l\'autorizzazione. Riprova e assicurati che il proxy lasci passare 127.0.0.1.';
@@ -60888,9 +61546,10 @@ class _StringsIt extends _StringsEn {
   String get book_convert_blocked_source_missing =>
       'I file sorgente non sono più sul disco.';
   @override
-  String manga_online_retry_waiting(
-          {required Object attempt, required Object total}) =>
-      'Nuovo tentativo automatico (${attempt}/${total})';
+  String manga_online_retry_waiting({
+    required Object attempt,
+    required Object total,
+  }) => 'Nuovo tentativo automatico (${attempt}/${total})';
   @override
   String get manga_ocr_wizard_already_ocred =>
       'Questo volume ha già dati OCR su ogni pagina. Eseguire l\'OCR di nuovo li sovrascriverebbe.';
@@ -60990,17 +61649,18 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_source_scrape_write_images => 'Scrivi file immagine';
   @override
-  String video_source_scrape_progress(
-          {required Object phase,
-          required Object current,
-          required Object total}) =>
-      '${phase} · ${current}/${total}';
+  String video_source_scrape_progress({
+    required Object phase,
+    required Object current,
+    required Object total,
+  }) => '${phase} · ${current}/${total}';
   @override
-  String video_source_scrape_last_summary(
-          {required Object status,
-          required Object succeeded,
-          required Object pending,
-          required Object failed}) =>
+  String video_source_scrape_last_summary({
+    required Object status,
+    required Object succeeded,
+    required Object pending,
+    required Object failed,
+  }) =>
       'Ultimo scrape (${status}): ${succeeded} riusciti, ${pending} in attesa, ${failed} falliti';
   @override
   String get video_source_scrape_phase_planning => 'Pianificazione';
@@ -61216,8 +61876,10 @@ class _StringsIt extends _StringsEn {
   String migration_import_running({required Object batch}) =>
       'Importazione ${batch}…';
   @override
-  String migration_import_verify_failed(
-          {required Object batch, required Object detail}) =>
+  String migration_import_verify_failed({
+    required Object batch,
+    required Object detail,
+  }) =>
       '${batch} ha fallito la verifica ed è stato mantenuto per la riesportazione: ${detail}';
   @override
   String migration_import_counts_failed({required Object detail}) =>
@@ -61245,11 +61907,11 @@ class _StringsIt extends _StringsEn {
   @override
   String get migration_import_permission_grant => 'Concedi permesso';
   @override
-  String migration_import_verifying(
-          {required Object batch,
-          required Object done,
-          required Object total}) =>
-      'Verifica ${batch} (${done}/${total})';
+  String migration_import_verifying({
+    required Object batch,
+    required Object done,
+    required Object total,
+  }) => 'Verifica ${batch} (${done}/${total})';
   @override
   String get migration_import_verifying_hint =>
       'Calcolo dei checksum degli archivi. Librerie grandi possono richiedere diversi minuti.';
@@ -61427,11 +62089,11 @@ class _StringsIt extends _StringsEn {
   String video_subtitle_read_failed({required Object label}) =>
       'Impossibile leggere questo file sottotitoli (danneggiato o vuoto): ${label}';
   @override
-  String dict_downloading_size(
-          {required Object name,
-          required Object done,
-          required Object total}) =>
-      'Download ${name} (${done} / ${total})';
+  String dict_downloading_size({
+    required Object name,
+    required Object done,
+    required Object total,
+  }) => 'Download ${name} (${done} / ${total})';
   @override
   String get video_subtitle_attach_book_missing =>
       'Questo video non è nella tua libreria, quindi il sottotitolo non è stato allegato';
@@ -61629,11 +62291,11 @@ class _StringsIt extends _StringsEn {
   String manga_import_batch_hint({required Object n}) =>
       'Questa cartella contiene ${n} file di volume; ogni volume viene importato come libro a sé, con il nome del file.';
   @override
-  String manga_import_batch_done(
-          {required Object imported,
-          required Object skipped,
-          required Object failed}) =>
-      'Importati ${imported}, saltati ${skipped}, falliti ${failed}.';
+  String manga_import_batch_done({
+    required Object imported,
+    required Object skipped,
+    required Object failed,
+  }) => 'Importati ${imported}, saltati ${skipped}, falliti ${failed}.';
   @override
   String get srt_book_reimport => 'Reimporta';
   @override
@@ -61728,8 +62390,10 @@ class _StringsIt extends _StringsEn {
   @override
   String get update_release_page_open => 'Pagina release';
   @override
-  String update_install_gal_hook_holder(
-          {required Object pid, required Object path}) =>
+  String update_install_gal_hook_holder({
+    required Object pid,
+    required Object path,
+  }) =>
       'Componente cattura galgame in uso: PID ${pid} — ${path} (questo è il gioco a cui stai giocando, o il suo host di cattura). Chiudi il gioco, poi aggiorna di nuovo.';
   @override
   String get game_hook_reason_protocol_mismatch =>
@@ -62222,9 +62886,10 @@ class _StringsIt extends _StringsEn {
   String get manga_ocr_model_unused_by_engine =>
       'Il motore attuale non usa questi file di modelli locali.';
   @override
-  String manga_ocr_download_total_progress(
-          {required Object done, required Object total}) =>
-      '${done} di ${total}';
+  String manga_ocr_download_total_progress({
+    required Object done,
+    required Object total,
+  }) => '${done} di ${total}';
   @override
   String get media_source_network_subtitle_video =>
       'Libreria remota WebDAV (streaming diretto)';
@@ -62698,10 +63363,11 @@ class _StringsIt extends _StringsEn {
   String get manga_ocr_import_matched_nothing =>
       'Nessun file di modello utilizzabile riconosciuto';
   @override
-  String manga_ocr_import_size_mismatch(
-          {required Object file,
-          required Object expected,
-          required Object actual}) =>
+  String manga_ocr_import_size_mismatch({
+    required Object file,
+    required Object expected,
+    required Object actual,
+  }) =>
       '${file} ha la dimensione sbagliata: attesi ${expected}, ricevuti ${actual}';
   @override
   String manga_ocr_import_still_missing({required Object count}) =>
@@ -62769,9 +63435,10 @@ class _StringsIt extends _StringsEn {
   String get video_jimaku_search_failed =>
       'Ricerca dei sottotitoli non riuscita';
   @override
-  String video_subtitle_error_with_code(
-          {required Object msg, required Object code}) =>
-      '${msg} (HTTP ${code})';
+  String video_subtitle_error_with_code({
+    required Object msg,
+    required Object code,
+  }) => '${msg} (HTTP ${code})';
   @override
   String get manga_rescan_run => 'Ripeti l\'OCR sull\'area selezionata';
   @override
@@ -63025,9 +63692,10 @@ class _StringsIt extends _StringsEn {
   @override
   String get manga_series_open_series => 'Pagina dell\'opera';
   @override
-  String manga_series_read_progress(
-          {required Object page, required Object total}) =>
-      'Letto fino a pagina ${page} di ${total}';
+  String manga_series_read_progress({
+    required Object page,
+    required Object total,
+  }) => 'Letto fino a pagina ${page} di ${total}';
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       'Letto fino a pagina ${page}';
@@ -63316,13 +63984,15 @@ class _StringsIt extends _StringsEn {
   String web_video_mine_queued({required Object count}) =>
       'In coda per la creazione di carte (${count} in attesa)';
   @override
-  String web_video_mine_queue_running(
-          {required Object done, required Object total}) =>
-      'Creazione carte ${done}/${total}…';
+  String web_video_mine_queue_running({
+    required Object done,
+    required Object total,
+  }) => 'Creazione carte ${done}/${total}…';
   @override
-  String web_video_mine_queue_finished(
-          {required Object ok, required Object failed}) =>
-      'Carte create: ${ok}, non riuscite: ${failed}';
+  String web_video_mine_queue_finished({
+    required Object ok,
+    required Object failed,
+  }) => 'Carte create: ${ok}, non riuscite: ${failed}';
   @override
   String get web_video_hosting_menu => 'Modalità di riproduzione';
   @override
@@ -63599,29 +64269,78 @@ class _StringsIt extends _StringsEn {
       'Waiting for matching in-game click';
   @override
   String get delete_choices_remember => 'Ricorda queste scelte';
+  @override
+  String get network_proxy_mode_label => 'Proxy mode';
+  @override
+  String get network_proxy_mode_auto => 'Automatic';
+  @override
+  String get network_proxy_mode_auto_hint =>
+      'Use environment variables, then the enabled system proxy';
+  @override
+  String get network_proxy_mode_direct => 'Direct';
+  @override
+  String get network_proxy_mode_direct_hint => 'Disable proxy use for the app';
+  @override
+  String get network_proxy_mode_manual => 'Manual';
+  @override
+  String get network_proxy_mode_manual_hint =>
+      'Use the server and optional credentials below';
+  @override
+  String get network_proxy_manual_hint =>
+      'HTTP proxy server used by all public internet requests';
+  @override
+  String get network_proxy_username => 'Proxy username (optional)';
+  @override
+  String get network_proxy_password => 'Proxy password (optional)';
+  @override
+  String get storage_category_backups => 'Local backups';
+  @override
+  String storage_entry_backups_label({required Object n}) =>
+      '${n} backup archive(s)';
+  @override
+  String get storage_entry_delete_backups_confirm_body =>
+      'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+  @override
+  String get update_download_source_preference => 'Preferred download source';
+  @override
+  String get update_download_source_preference_hint =>
+      'The selected source is tried first; unavailable sources still fall back automatically.';
+  @override
+  String get update_download_source_auto => 'Automatic (recommended)';
+  @override
+  String get update_download_source_cloudflare => 'Cloudflare mirror';
+  @override
+  String get update_download_source_github => 'GitHub direct';
+  @override
+  String update_download_source_proxy({required Object host}) =>
+      'Proxy: ${host}';
 }
 
 // Path: <root>
 class _StringsJa extends _StringsEn {
   /// You can call this constructor and build your own translation instance of this locale.
   /// Constructing via the enum [AppLocale.build] is preferred.
-  _StringsJa.build(
-      {Map<String, Node>? overrides,
-      PluralResolver? cardinalResolver,
-      PluralResolver? ordinalResolver})
-      : assert(overrides == null,
-            'Set "translation_overrides: true" in order to enable this feature.'),
-        $meta = TranslationMetadata(
-          locale: AppLocale.ja,
-          overrides: overrides ?? {},
-          cardinalResolver: cardinalResolver,
-          ordinalResolver: ordinalResolver,
-        ),
-        super.build(
-            cardinalResolver: cardinalResolver,
-            ordinalResolver: ordinalResolver) {
+  _StringsJa.build({
+    Map<String, Node>? overrides,
+    PluralResolver? cardinalResolver,
+    PluralResolver? ordinalResolver,
+  }) : assert(
+         overrides == null,
+         'Set "translation_overrides: true" in order to enable this feature.',
+       ),
+       $meta = TranslationMetadata(
+         locale: AppLocale.ja,
+         overrides: overrides ?? {},
+         cardinalResolver: cardinalResolver,
+         ordinalResolver: ordinalResolver,
+       ),
+       super.build(
+         cardinalResolver: cardinalResolver,
+         ordinalResolver: ordinalResolver,
+       ) {
     super.$meta.setFlatMapFunction(
-        $meta.getTranslation); // copy base translations to super.$meta
+      $meta.getTranslation,
+    ); // copy base translations to super.$meta
     $meta.setFlatMapFunction(_flatMapFunction);
   }
 
@@ -64110,10 +64829,11 @@ class _StringsJa extends _StringsEn {
   @override
   String get backup_import => 'バックアップを読み込む';
   @override
-  String backup_import_confirm(
-          {required Object date,
-          required Object bookCount,
-          required Object statsCount}) =>
+  String backup_import_confirm({
+    required Object date,
+    required Object bookCount,
+    required Object statsCount,
+  }) =>
       '現在のすべてのデータが${date}のバックアップで置き換えられます。\n\n書籍${bookCount}冊、統計${statsCount}件。\n\n復元後にアプリが再起動します。';
   @override
   String get backup_import_confirm_title => 'バックアップを復元しますか？';
@@ -64129,9 +64849,10 @@ class _StringsJa extends _StringsEn {
   @override
   String get backup_import_invalid => '無効なバックアップファイルです';
   @override
-  String backup_import_merge_preview(
-          {required Object bookCount, required Object progressCount}) =>
-      'マージにより ${bookCount} 冊の書籍が追加され、${progressCount} 件の読書位置が更新されます。';
+  String backup_import_merge_preview({
+    required Object bookCount,
+    required Object progressCount,
+  }) => 'マージにより ${bookCount} 冊の書籍が追加され、${progressCount} 件の読書位置が更新されます。';
   @override
   String get backup_import_mode_label => 'インポートモード';
   @override
@@ -64414,12 +65135,12 @@ class _StringsJa extends _StringsEn {
   @override
   String get changelog_prerelease => 'プレリリース';
   @override
-  String chapter_progress(
-          {required Object idx,
-          required Object total,
-          required Object suffix,
-          required Object pct}) =>
-      'チャプター ${idx} / ${total}${suffix} · ${pct}%';
+  String chapter_progress({
+    required Object idx,
+    required Object total,
+    required Object suffix,
+    required Object pct,
+  }) => 'チャプター ${idx} / ${total}${suffix} · ${pct}%';
   @override
   String get clear => 'クリア';
   @override
@@ -64505,9 +65226,10 @@ class _StringsJa extends _StringsEn {
   @override
   String get collection_view_all => 'すべて表示';
   @override
-  String collection_watched_progress(
-          {required Object done, required Object total}) =>
-      '${done}/${total} 視聴済み';
+  String collection_watched_progress({
+    required Object done,
+    required Object total,
+  }) => '${done}/${total} 視聴済み';
   @override
   String get collection_word => '単語';
   @override
@@ -64726,9 +65448,10 @@ class _StringsJa extends _StringsEn {
   @override
   String get data_storage_migrate_failed_title => 'データ移行に失敗しました';
   @override
-  String data_storage_migrate_overlay_progress(
-          {required Object copied, required Object total}) =>
-      'ファイルをコピー中: ${copied} / ${total}';
+  String data_storage_migrate_overlay_progress({
+    required Object copied,
+    required Object total,
+  }) => 'ファイルをコピー中: ${copied} / ${total}';
   @override
   String get data_storage_migrate_overlay_title => 'データを移動中';
   @override
@@ -64745,8 +65468,10 @@ class _StringsJa extends _StringsEn {
   String get data_storage_restart_failed =>
       'データを移動しましたが、自動再起動に失敗しました。手動で Fushi を再度開いてください。';
   @override
-  String db_downgrade_message(
-          {required Object dbVersion, required Object appVersion}) =>
+  String db_downgrade_message({
+    required Object dbVersion,
+    required Object appVersion,
+  }) =>
       'このデータベースは新しいバージョンの Fushi（スキーマ v${dbVersion}）で作成されています。現在のアプリ（v${appVersion}）は古すぎます。データ保護のため、開くのを中止しました。アプリを更新してから再試行してください。';
   @override
   String get db_downgrade_title => 'Fushi を更新してください';
@@ -64908,11 +65633,11 @@ class _StringsJa extends _StringsEn {
   @override
   String get dict_download_language => 'あなたの言語';
   @override
-  String dict_download_partial(
-          {required Object success,
-          required Object total,
-          required Object error}) =>
-      '${success} / ${total} 成功。失敗: ${error}';
+  String dict_download_partial({
+    required Object success,
+    required Object total,
+    required Object error,
+  }) => '${success} / ${total} 成功。失敗: ${error}';
   @override
   String get dict_download_select_title => '辞書を選択';
   @override
@@ -64942,19 +65667,20 @@ class _StringsJa extends _StringsEn {
   @override
   String get dict_update_latest => 'すでに最新です。';
   @override
-  String dict_update_name_mismatch_body(
-          {required Object incoming, required Object existing}) =>
-      '選択したファイルは「${incoming}」ですが、更新対象は「${existing}」です。置き換えますか？';
+  String dict_update_name_mismatch_body({
+    required Object incoming,
+    required Object existing,
+  }) => '選択したファイルは「${incoming}」ですが、更新対象は「${existing}」です。置き換えますか？';
   @override
   String get dict_update_name_mismatch_title => '名前が一致しません';
   @override
   String get dict_update_none => 'すべての辞書は最新です。';
   @override
-  String dict_update_summary(
-          {required Object updated,
-          required Object current,
-          required Object failed}) =>
-      '${updated} 件を更新、${current} 件は最新、${failed} 件が失敗しました。';
+  String dict_update_summary({
+    required Object updated,
+    required Object current,
+    required Object failed,
+  }) => '${updated} 件を更新、${current} 件は最新、${failed} 件が失敗しました。';
   @override
   String get dict_update_tooltip => '辞書を更新';
   @override
@@ -65038,9 +65764,10 @@ class _StringsJa extends _StringsEn {
   @override
   String get download_subscription_check_now => '今すぐチェック';
   @override
-  String download_subscription_choice_hint(
-          {required Object group, required Object resolution}) =>
-      '${group} · ${resolution} をフォロー。新しい単話リリースは自動でキューに追加されます。';
+  String download_subscription_choice_hint({
+    required Object group,
+    required Object resolution,
+  }) => '${group} · ${resolution} をフォロー。新しい単話リリースは自動でキューに追加されます。';
   @override
   String get download_subscription_created => 'ダウンロードをキューに追加し、サブスクリプションを作成しました';
   @override
@@ -65173,9 +65900,10 @@ class _StringsJa extends _StringsEn {
   @override
   String favorites({required Object n}) => 'お気に入り (${n})';
   @override
-  String field_fallback_used(
-          {required Object field, required Object secondField}) =>
-      '${field} フィールドは ${secondField} をフォールバック検索語として使用しました。';
+  String field_fallback_used({
+    required Object field,
+    required Object secondField,
+  }) => '${field} フィールドは ${secondField} をフォールバック検索語として使用しました。';
   @override
   String file_count({required Object count}) => '${count} ファイル';
   @override
@@ -65860,12 +66588,12 @@ class _StringsJa extends _StringsEn {
   @override
   String get game_waiting_for_text => 'テキスト待機中';
   @override
-  String game_waveform_range_label(
-          {required Object start,
-          required Object end,
-          required Object duration,
-          required Object total}) =>
-      '${start} - ${end} (選択 ${duration} / 合計 ${total})';
+  String game_waveform_range_label({
+    required Object start,
+    required Object end,
+    required Object duration,
+    required Object total,
+  }) => '${start} - ${end} (選択 ${duration} / 合計 ${total})';
   @override
   String get game_waveform_select_title => '音声範囲を選択';
   @override
@@ -66120,9 +66848,10 @@ class _StringsJa extends _StringsEn {
   @override
   String get jump_to_char => '文字数でジャンプ';
   @override
-  String jump_to_char_current(
-          {required Object current, required Object total}) =>
-      '現在: ${current} / ${total}';
+  String jump_to_char_current({
+    required Object current,
+    required Object total,
+  }) => '現在: ${current} / ${total}';
   @override
   String get jump_to_char_hint => '文字位置を入力…';
   @override
@@ -66287,9 +67016,10 @@ class _StringsJa extends _StringsEn {
   @override
   String get manga_ocr_wizard_no_images => 'このフォルダに画像が見つかりません。';
   @override
-  String manga_ocr_wizard_page_progress(
-          {required Object done, required Object total}) =>
-      'ページ ${done} / ${total}';
+  String manga_ocr_wizard_page_progress({
+    required Object done,
+    required Object total,
+  }) => 'ページ ${done} / ${total}';
   @override
   String get manga_ocr_wizard_pick_folder => '画像フォルダを選択';
   @override
@@ -66315,9 +67045,10 @@ class _StringsJa extends _StringsEn {
   @override
   String get manga_online_queue_added => 'ダウンロードキューに追加しました';
   @override
-  String manga_online_queue_progress(
-          {required Object done, required Object total}) =>
-      '巻 ${done} / ${total}';
+  String manga_online_queue_progress({
+    required Object done,
+    required Object total,
+  }) => '巻 ${done} / ${total}';
   @override
   String get manga_online_queue_section => 'マンガカタログのダウンロード';
   @override
@@ -66348,9 +67079,10 @@ class _StringsJa extends _StringsEn {
   @override
   String get manga_remote_ocr_unsupported => 'ペアリング済みホストはマンガOCRに対応していません。';
   @override
-  String manga_remote_ocr_uploading(
-          {required Object done, required Object total}) =>
-      'ページをアップロード中 ${done} / ${total}…';
+  String manga_remote_ocr_uploading({
+    required Object done,
+    required Object total,
+  }) => 'ページをアップロード中 ${done} / ${total}…';
   @override
   String get margin_bottom => '下余白';
   @override
@@ -66841,15 +67573,17 @@ class _StringsJa extends _StringsEn {
   @override
   String get audiobook_rematch_auto_match => '自動マッチング';
   @override
-  String audiobook_rematch_auto_picked(
-          {required Object window, required Object pct}) =>
-      '${window} を自動選択しました（ヒット率 ${pct}%）';
+  String audiobook_rematch_auto_picked({
+    required Object window,
+    required Object pct,
+  }) => '${window} を自動選択しました（ヒット率 ${pct}%）';
   @override
   String audiobook_rematch_default_value({required Object n}) => 'デフォルト ${n}';
   @override
-  String audiobook_rematch_health_label(
-          {required Object pct, required Object detail}) =>
-      '${pct} マッチ — ${detail}';
+  String audiobook_rematch_health_label({
+    required Object pct,
+    required Object detail,
+  }) => '${pct} マッチ — ${detail}';
   @override
   String get audiobook_rematch_matching => 'マッチング中...';
   @override
@@ -66864,9 +67598,10 @@ class _StringsJa extends _StringsEn {
   String audiobook_rematch_failed({required Object error}) =>
       '再マッチングに失敗しました：${error}';
   @override
-  String audiobook_rematch_result(
-          {required Object pct, required Object window}) =>
-      '再マッチング結果：${pct}%（ウィンドウ：${window}）';
+  String audiobook_rematch_result({
+    required Object pct,
+    required Object window,
+  }) => '再マッチング結果：${pct}%（ウィンドウ：${window}）';
   @override
   String get audiobook_rematch_search_window => '検索ウィンドウ';
   @override
@@ -68014,9 +68749,10 @@ class _StringsJa extends _StringsEn {
   @override
   String get update_download_resumed => 'レジューム済み';
   @override
-  String update_download_size(
-          {required Object received, required Object total}) =>
-      'ダウンロード済み：${received} / ${total}';
+  String update_download_size({
+    required Object received,
+    required Object total,
+  }) => 'ダウンロード済み：${received} / ${total}';
   @override
   String update_download_source({required Object source}) => 'ソース：${source}';
   @override
@@ -68029,13 +68765,15 @@ class _StringsJa extends _StringsEn {
   String update_install_current_executable({required Object path}) =>
       '実行中のプログラム：${path}';
   @override
-  String update_install_deletefile_failure(
-          {required Object path, required Object code}) =>
-      'インストーラーが ${path} を置き換えられませんでした（コード ${code}）';
+  String update_install_deletefile_failure({
+    required Object path,
+    required Object code,
+  }) => 'インストーラーが ${path} を置き換えられませんでした（コード ${code}）';
   @override
-  String update_install_detected_location(
-          {required Object source, required Object path}) =>
-      '検出されたインストール場所（${source}）：${path}';
+  String update_install_detected_location({
+    required Object source,
+    required Object path,
+  }) => '検出されたインストール場所（${source}）：${path}';
   @override
   String update_install_failure_summary({required Object summary}) =>
       '原因：${summary}';
@@ -68056,9 +68794,10 @@ class _StringsJa extends _StringsEn {
   String update_install_launcher_pid({required Object pid}) =>
       '更新ランチャー PID：${pid}';
   @override
-  String update_install_libmpv_holder(
-          {required Object pid, required Object path}) =>
-      'libmpv を保持しているプロセス：PID ${pid} - ${path}';
+  String update_install_libmpv_holder({
+    required Object pid,
+    required Object path,
+  }) => 'libmpv を保持しているプロセス：PID ${pid} - ${path}';
   @override
   String get update_install_log_not_observed =>
       '起動後のチェック時にインストーラーログが作成されませんでした。';
@@ -68091,9 +68830,10 @@ class _StringsJa extends _StringsEn {
   String get update_install_restart_windows_hint =>
       '上記のプロセスを終了しても libmpv-2.dll がまだロックされている場合は、Windows を再起動してから再インストールしてください。';
   @override
-  String update_install_running_process(
-          {required Object pid, required Object path}) =>
-      '実行中の Fushi プロセス：PID ${pid} - ${path}';
+  String update_install_running_process({
+    required Object pid,
+    required Object path,
+  }) => '実行中の Fushi プロセス：PID ${pid} - ${path}';
   @override
   String update_install_success_message({required Object version}) =>
       'Fushi をバージョン ${version} に更新しました。';
@@ -68110,9 +68850,10 @@ class _StringsJa extends _StringsEn {
   String update_message({required Object version}) =>
       'バージョン ${version} が利用可能です。';
   @override
-  String update_network_failure(
-          {required Object host, required Object reason}) =>
-      '${host} に接続できませんでした：${reason}';
+  String update_network_failure({
+    required Object host,
+    required Object reason,
+  }) => '${host} に接続できませんでした：${reason}';
   @override
   String get update_never_remind => '今後通知しない';
   @override
@@ -68359,9 +69100,10 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_jimaku_api_key_set => 'API key を設定済み';
   @override
-  String video_jimaku_batch_done(
-          {required Object done, required Object total}) =>
-      '字幕を取得しました：${done}/${total}';
+  String video_jimaku_batch_done({
+    required Object done,
+    required Object total,
+  }) => '字幕を取得しました：${done}/${total}';
   @override
   String get video_jimaku_batch_download => 'すべてダウンロード';
   @override
@@ -68854,9 +69596,10 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_shader_download_failed => 'シェーダーのダウンロードに失敗しました';
   @override
-  String video_shader_download_partial(
-          {required Object ok, required Object failed}) =>
-      '${ok} 件をダウンロード、${failed} 件が失敗しました';
+  String video_shader_download_partial({
+    required Object ok,
+    required Object failed,
+  }) => '${ok} 件をダウンロード、${failed} 件が失敗しました';
   @override
   String get video_shader_download_url => 'リンクからダウンロード';
   @override
@@ -68961,9 +69704,10 @@ class _StringsJa extends _StringsEn {
   String get video_subtitle_attach_playlist_hint =>
       '再生画面を開き、エピソードごとに字幕を添付してください';
   @override
-  String video_subtitle_attached_to_video(
-          {required Object title, required Object count}) =>
-      '『${title}』に字幕を添付しました（${count} 句）';
+  String video_subtitle_attached_to_video({
+    required Object title,
+    required Object count,
+  }) => '『${title}』に字幕を添付しました（${count} 句）';
   @override
   String get video_subtitle_auto_align => '字幕を自動同期';
   @override
@@ -69173,13 +69917,14 @@ class _StringsJa extends _StringsEn {
   @override
   String get anki_dedup_report_title => 'メディア重複排除レポート';
   @override
-  String anki_dedup_report_body(
-          {required Object groups,
-          required Object removed,
-          required Object size,
-          required Object notes,
-          required Object models,
-          required Object skipped}) =>
+  String anki_dedup_report_body({
+    required Object groups,
+    required Object removed,
+    required Object size,
+    required Object notes,
+    required Object models,
+    required Object skipped,
+  }) =>
       '${groups}件の重複グループ、${removed}件の余分なコピー（${size}）、${notes}件のノートと${models}件のノートタイプを書き換え、${skipped}件をスキップしました。';
   @override
   String get anki_dedup_report_dry_note => 'スキャンのみ - 変更は行われていません。';
@@ -69197,11 +69942,11 @@ class _StringsJa extends _StringsEn {
   String anki_dedup_plan_intro({required Object count, required Object size}) =>
       '${count}件の余分なコピー、${size}回収可能。各ファイルの1つのコピーが保持され、すべての参照が先にそこに書き換えられます。再エンコードは行われません。';
   @override
-  String anki_dedup_plan_entry(
-          {required Object file,
-          required Object size,
-          required Object canonical}) =>
-      '${file}を削除（${size}）- ${canonical}を保持';
+  String anki_dedup_plan_entry({
+    required Object file,
+    required Object size,
+    required Object canonical,
+  }) => '${file}を削除（${size}）- ${canonical}を保持';
   @override
   String get anki_dedup_plan_delete => 'これらのファイルを削除';
   @override
@@ -69259,9 +70004,10 @@ class _StringsJa extends _StringsEn {
   String manga_ocr_acceleration_status({required Object engine}) =>
       'OCRアクセラレーション: ${engine}';
   @override
-  String manga_ocr_acceleration_degraded(
-          {required Object engine, required Object reason}) =>
-      'GPUアクセラレーションを利用できません。${engine}でOCRを実行中: ${reason}';
+  String manga_ocr_acceleration_degraded({
+    required Object engine,
+    required Object reason,
+  }) => 'GPUアクセラレーションを利用できません。${engine}でOCRを実行中: ${reason}';
   @override
   String get media_tracking_status => 'ステータス';
   @override
@@ -69304,9 +70050,10 @@ class _StringsJa extends _StringsEn {
   String anki_dedup_auto_done({required Object count, required Object size}) =>
       '${count}件の重複Ankiメディアファイルを削除しました。${size}を回収しました';
   @override
-  String anki_lapis_backup_done_pruned(
-          {required Object path, required Object count}) =>
-      '${path}にバックアップしました（${count}件の古いバックアップが90日/10件保持ポリシーにより削除されました）';
+  String anki_lapis_backup_done_pruned({
+    required Object path,
+    required Object count,
+  }) => '${path}にバックアップしました（${count}件の古いバックアップが90日/10件保持ポリシーにより削除されました）';
   @override
   String get game_audio_fallback_policy => '音声フォールバック';
   @override
@@ -69447,9 +70194,10 @@ class _StringsJa extends _StringsEn {
   String get stat_clear_all_game_message =>
       'すべてのゲームプレイ時間とセッション数をクリアしますか？ゲームライブラリとアクティビティタイムラインは保持されます。この操作は取り消せません。';
   @override
-  String batch_selection_stale_skipped(
-          {required Object n, required Object m}) =>
-      '選択した${n}件中${m}件が存在しなくなったためスキップしました';
+  String batch_selection_stale_skipped({
+    required Object n,
+    required Object m,
+  }) => '選択した${n}件中${m}件が存在しなくなったためスキップしました';
   @override
   String get game_text_thread_unset => 'スレッドが未選択 — キャプチャを開始するにはスレッドを選んでください';
   @override
@@ -69500,22 +70248,24 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_jimaku_language_unknown => '言語ラベルなし';
   @override
-  String video_jimaku_source_summary(
-          {required Object files,
-          required Object episodes,
-          required Object languages}) =>
-      '${files}件の字幕ファイル · ${episodes}エピソード · ${languages}';
+  String video_jimaku_source_summary({
+    required Object files,
+    required Object episodes,
+    required Object languages,
+  }) => '${files}件の字幕ファイル · ${episodes}エピソード · ${languages}';
   @override
-  String video_jimaku_episode_unlabeled(
-          {required Object episode, required Object count}) =>
-      'エピソード${episode}のラベル付き字幕がありません。${count}件のラベルなしファイルが一致する可能性があります';
+  String video_jimaku_episode_unlabeled({
+    required Object episode,
+    required Object count,
+  }) => 'エピソード${episode}のラベル付き字幕がありません。${count}件のラベルなしファイルが一致する可能性があります';
   @override
   String video_jimaku_episode_unavailable({required Object episode}) =>
       'エピソード${episode}の字幕が見つかりません';
   @override
-  String video_jimaku_episode_available(
-          {required Object count, required Object languages}) =>
-      '${count}件の字幕が利用可能 · ${languages}';
+  String video_jimaku_episode_available({
+    required Object count,
+    required Object languages,
+  }) => '${count}件の字幕が利用可能 · ${languages}';
   @override
   String get manga_online_source_disabled =>
       'このインターネットソースは無効です。カタログを閲覧するにはソースで有効にしてください。';
@@ -69534,13 +70284,15 @@ class _StringsJa extends _StringsEn {
   String anki_dedup_progress_scanning({required Object count}) =>
       'メディアフォルダをスキャン中…（${count}件のファイルが見つかりました）';
   @override
-  String anki_dedup_progress_hashing(
-          {required Object done, required Object total}) =>
-      '同サイズのファイルを比較中…（${done} / ${total}）';
+  String anki_dedup_progress_hashing({
+    required Object done,
+    required Object total,
+  }) => '同サイズのファイルを比較中…（${done} / ${total}）';
   @override
-  String anki_dedup_progress_resolving(
-          {required Object done, required Object total}) =>
-      '重複を処理中…（${done} / ${total}）';
+  String anki_dedup_progress_resolving({
+    required Object done,
+    required Object total,
+  }) => '重複を処理中…（${done} / ${total}）';
   @override
   String anki_dedup_progress_freed({required Object size}) => 'これまでに${size}を解放';
   @override
@@ -69587,8 +70339,10 @@ class _StringsJa extends _StringsEn {
   @override
   String get sync_last_failed => '前回の同期: 失敗';
   @override
-  String anime_download_no_results_detail(
-          {required Object query, required Object filters}) =>
+  String anime_download_no_results_detail({
+    required Object query,
+    required Object filters,
+  }) =>
       'サービスは正常に応答しましたが、0件でした。クエリ: ${query}; フィルター: ${filters}。別のタイトルを試すか、フィルターを緩めてください。';
   @override
   String get anime_download_streaming_ready => 'ライブラリに追加済み · ダウンロード継続中';
@@ -69760,12 +70514,12 @@ class _StringsJa extends _StringsEn {
   @override
   String scrape_all_item({required Object title}) => '処理中: ${title}';
   @override
-  String scrape_all_done(
-          {required Object applied,
-          required Object review,
-          required Object skipped,
-          required Object failed}) =>
-      '完了: ${applied}件適用、${review}件要レビュー、${skipped}件スキップ、${failed}件失敗';
+  String scrape_all_done({
+    required Object applied,
+    required Object review,
+    required Object skipped,
+    required Object failed,
+  }) => '完了: ${applied}件適用、${review}件要レビュー、${skipped}件スキップ、${failed}件失敗';
   @override
   String get scrape_all_empty => 'このライブラリにスクレイプ対象のアイテムはありません。';
   @override
@@ -70120,9 +70874,10 @@ class _StringsJa extends _StringsEn {
   String collection_episode_watched_at({required Object position}) =>
       '${position}まで視聴済み';
   @override
-  String collection_episode_rename_partial(
-          {required Object n, required Object m}) =>
-      '${n}話の名前を変更、${m}件失敗';
+  String collection_episode_rename_partial({
+    required Object n,
+    required Object m,
+  }) => '${n}話の名前を変更、${m}件失敗';
   @override
   String get sync_err_browser_timeout =>
       'ブラウザが認可を返しませんでした。再試行し、プロキシが127.0.0.1を通すことを確認してください。';
@@ -70162,9 +70917,10 @@ class _StringsJa extends _StringsEn {
   @override
   String get book_convert_blocked_source_missing => 'ソースファイルがディスクから消失しています。';
   @override
-  String manga_online_retry_waiting(
-          {required Object attempt, required Object total}) =>
-      '自動的に再試行中（${attempt}/${total}）';
+  String manga_online_retry_waiting({
+    required Object attempt,
+    required Object total,
+  }) => '自動的に再試行中（${attempt}/${total}）';
   @override
   String get manga_ocr_wizard_already_ocred =>
       'この巻はすべてのページにOCRデータがあります。再度OCRを実行すると上書きされます。';
@@ -70258,18 +71014,18 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_source_scrape_write_images => '画像ファイルを書き出し';
   @override
-  String video_source_scrape_progress(
-          {required Object phase,
-          required Object current,
-          required Object total}) =>
-      '${phase} · ${current}/${total}';
+  String video_source_scrape_progress({
+    required Object phase,
+    required Object current,
+    required Object total,
+  }) => '${phase} · ${current}/${total}';
   @override
-  String video_source_scrape_last_summary(
-          {required Object status,
-          required Object succeeded,
-          required Object pending,
-          required Object failed}) =>
-      '前回のスクレイプ (${status}): ${succeeded}件成功、${pending}件保留、${failed}件失敗';
+  String video_source_scrape_last_summary({
+    required Object status,
+    required Object succeeded,
+    required Object pending,
+    required Object failed,
+  }) => '前回のスクレイプ (${status}): ${succeeded}件成功、${pending}件保留、${failed}件失敗';
   @override
   String get video_source_scrape_phase_planning => '計画中';
   @override
@@ -70470,9 +71226,10 @@ class _StringsJa extends _StringsEn {
   String migration_import_running({required Object batch}) =>
       '${batch}をインポート中…';
   @override
-  String migration_import_verify_failed(
-          {required Object batch, required Object detail}) =>
-      '${batch}の検証に失敗しました。再エクスポート用に保持されています: ${detail}';
+  String migration_import_verify_failed({
+    required Object batch,
+    required Object detail,
+  }) => '${batch}の検証に失敗しました。再エクスポート用に保持されています: ${detail}';
   @override
   String migration_import_counts_failed({required Object detail}) =>
       'インポートされたデータが不完全です: ${detail}。Hibikiから欠損部分を再エクスポートし、再度インポートしてください。';
@@ -70495,11 +71252,11 @@ class _StringsJa extends _StringsEn {
   @override
   String get migration_import_permission_grant => '権限を付与';
   @override
-  String migration_import_verifying(
-          {required Object batch,
-          required Object done,
-          required Object total}) =>
-      '${batch}を検証中（${done}/${total}）';
+  String migration_import_verifying({
+    required Object batch,
+    required Object done,
+    required Object total,
+  }) => '${batch}を検証中（${done}/${total}）';
   @override
   String get migration_import_verifying_hint =>
       'アーカイブのチェックサムを検証しています。大きなライブラリは数分かかることがあります。';
@@ -70665,11 +71422,11 @@ class _StringsJa extends _StringsEn {
   String video_subtitle_read_failed({required Object label}) =>
       'この字幕ファイルを読み取れませんでした（破損または空）: ${label}';
   @override
-  String dict_downloading_size(
-          {required Object name,
-          required Object done,
-          required Object total}) =>
-      '${name}をダウンロード中（${done} / ${total}）';
+  String dict_downloading_size({
+    required Object name,
+    required Object done,
+    required Object total,
+  }) => '${name}をダウンロード中（${done} / ${total}）';
   @override
   String get video_subtitle_attach_book_missing =>
       'この動画はライブラリにないため、字幕は紐付けされませんでした';
@@ -70850,11 +71607,11 @@ class _StringsJa extends _StringsEn {
   String manga_import_batch_hint({required Object n}) =>
       'このフォルダには${n}巻のファイルがあります。それぞれがファイル名で独立した本としてインポートされます。';
   @override
-  String manga_import_batch_done(
-          {required Object imported,
-          required Object skipped,
-          required Object failed}) =>
-      'インポート ${imported}件、スキップ ${skipped}件、失敗 ${failed}件';
+  String manga_import_batch_done({
+    required Object imported,
+    required Object skipped,
+    required Object failed,
+  }) => 'インポート ${imported}件、スキップ ${skipped}件、失敗 ${failed}件';
   @override
   String get srt_book_reimport => '再インポート';
   @override
@@ -70946,8 +71703,10 @@ class _StringsJa extends _StringsEn {
   @override
   String get update_release_page_open => 'リリースページ';
   @override
-  String update_install_gal_hook_holder(
-          {required Object pid, required Object path}) =>
+  String update_install_gal_hook_holder({
+    required Object pid,
+    required Object path,
+  }) =>
       'ゲームキャプチャコンポーネント使用中: PID ${pid} - ${path}（プレイ中のゲームまたはそのキャプチャホストです）。ゲームを閉じてから再度更新してください。';
   @override
   String get game_hook_reason_protocol_mismatch =>
@@ -71398,9 +72157,10 @@ class _StringsJa extends _StringsEn {
   String get manga_ocr_model_unused_by_engine =>
       '現在のエンジンはこれらのローカルモデルファイルを使用しません。';
   @override
-  String manga_ocr_download_total_progress(
-          {required Object done, required Object total}) =>
-      '${done} / ${total}';
+  String manga_ocr_download_total_progress({
+    required Object done,
+    required Object total,
+  }) => '${done} / ${total}';
   @override
   String get media_source_network_subtitle_video =>
       'WebDAVリモートライブラリ（その場でストリーミング）';
@@ -71846,11 +72606,11 @@ class _StringsJa extends _StringsEn {
   @override
   String get manga_ocr_import_matched_nothing => '使用できるモデルファイルを認識できませんでした';
   @override
-  String manga_ocr_import_size_mismatch(
-          {required Object file,
-          required Object expected,
-          required Object actual}) =>
-      '${file} のサイズが違います: 期待値 ${expected}、実際 ${actual}';
+  String manga_ocr_import_size_mismatch({
+    required Object file,
+    required Object expected,
+    required Object actual,
+  }) => '${file} のサイズが違います: 期待値 ${expected}、実際 ${actual}';
   @override
   String manga_ocr_import_still_missing({required Object count}) =>
       'まだ ${count} 個のファイルが足りません';
@@ -71915,9 +72675,10 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_jimaku_search_failed => '字幕の検索に失敗しました';
   @override
-  String video_subtitle_error_with_code(
-          {required Object msg, required Object code}) =>
-      '${msg}（HTTP ${code}）';
+  String video_subtitle_error_with_code({
+    required Object msg,
+    required Object code,
+  }) => '${msg}（HTTP ${code}）';
   @override
   String get manga_rescan_run => '選択範囲を再認識';
   @override
@@ -72153,9 +72914,10 @@ class _StringsJa extends _StringsEn {
   @override
   String get manga_series_open_series => '作品ページ';
   @override
-  String manga_series_read_progress(
-          {required Object total, required Object page}) =>
-      '${total} ページ中 ${page} ページまで';
+  String manga_series_read_progress({
+    required Object total,
+    required Object page,
+  }) => '${total} ページ中 ${page} ページまで';
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       '${page} ページまで';
@@ -72430,13 +73192,15 @@ class _StringsJa extends _StringsEn {
   String web_video_mine_queued({required Object count}) =>
       'カード作成のキューに追加しました（残り ${count} 件）';
   @override
-  String web_video_mine_queue_running(
-          {required Object done, required Object total}) =>
-      'カード作成中 ${done}/${total}…';
+  String web_video_mine_queue_running({
+    required Object done,
+    required Object total,
+  }) => 'カード作成中 ${done}/${total}…';
   @override
-  String web_video_mine_queue_finished(
-          {required Object ok, required Object failed}) =>
-      'カード作成完了：成功 ${ok}、失敗 ${failed}';
+  String web_video_mine_queue_finished({
+    required Object ok,
+    required Object failed,
+  }) => 'カード作成完了：成功 ${ok}、失敗 ${failed}';
   @override
   String get web_video_hosting_menu => '再生モード';
   @override
@@ -72696,29 +73460,78 @@ class _StringsJa extends _StringsEn {
       'Waiting for matching in-game click';
   @override
   String get delete_choices_remember => 'この選択を記憶する';
+  @override
+  String get network_proxy_mode_label => 'Proxy mode';
+  @override
+  String get network_proxy_mode_auto => 'Automatic';
+  @override
+  String get network_proxy_mode_auto_hint =>
+      'Use environment variables, then the enabled system proxy';
+  @override
+  String get network_proxy_mode_direct => 'Direct';
+  @override
+  String get network_proxy_mode_direct_hint => 'Disable proxy use for the app';
+  @override
+  String get network_proxy_mode_manual => 'Manual';
+  @override
+  String get network_proxy_mode_manual_hint =>
+      'Use the server and optional credentials below';
+  @override
+  String get network_proxy_manual_hint =>
+      'HTTP proxy server used by all public internet requests';
+  @override
+  String get network_proxy_username => 'Proxy username (optional)';
+  @override
+  String get network_proxy_password => 'Proxy password (optional)';
+  @override
+  String get storage_category_backups => 'Local backups';
+  @override
+  String storage_entry_backups_label({required Object n}) =>
+      '${n} backup archive(s)';
+  @override
+  String get storage_entry_delete_backups_confirm_body =>
+      'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+  @override
+  String get update_download_source_preference => 'Preferred download source';
+  @override
+  String get update_download_source_preference_hint =>
+      'The selected source is tried first; unavailable sources still fall back automatically.';
+  @override
+  String get update_download_source_auto => 'Automatic (recommended)';
+  @override
+  String get update_download_source_cloudflare => 'Cloudflare mirror';
+  @override
+  String get update_download_source_github => 'GitHub direct';
+  @override
+  String update_download_source_proxy({required Object host}) =>
+      'Proxy: ${host}';
 }
 
 // Path: <root>
 class _StringsKo extends _StringsEn {
   /// You can call this constructor and build your own translation instance of this locale.
   /// Constructing via the enum [AppLocale.build] is preferred.
-  _StringsKo.build(
-      {Map<String, Node>? overrides,
-      PluralResolver? cardinalResolver,
-      PluralResolver? ordinalResolver})
-      : assert(overrides == null,
-            'Set "translation_overrides: true" in order to enable this feature.'),
-        $meta = TranslationMetadata(
-          locale: AppLocale.ko,
-          overrides: overrides ?? {},
-          cardinalResolver: cardinalResolver,
-          ordinalResolver: ordinalResolver,
-        ),
-        super.build(
-            cardinalResolver: cardinalResolver,
-            ordinalResolver: ordinalResolver) {
+  _StringsKo.build({
+    Map<String, Node>? overrides,
+    PluralResolver? cardinalResolver,
+    PluralResolver? ordinalResolver,
+  }) : assert(
+         overrides == null,
+         'Set "translation_overrides: true" in order to enable this feature.',
+       ),
+       $meta = TranslationMetadata(
+         locale: AppLocale.ko,
+         overrides: overrides ?? {},
+         cardinalResolver: cardinalResolver,
+         ordinalResolver: ordinalResolver,
+       ),
+       super.build(
+         cardinalResolver: cardinalResolver,
+         ordinalResolver: ordinalResolver,
+       ) {
     super.$meta.setFlatMapFunction(
-        $meta.getTranslation); // copy base translations to super.$meta
+      $meta.getTranslation,
+    ); // copy base translations to super.$meta
     $meta.setFlatMapFunction(_flatMapFunction);
   }
 
@@ -73206,10 +74019,11 @@ class _StringsKo extends _StringsEn {
   @override
   String get backup_import => '백업 가져오기';
   @override
-  String backup_import_confirm(
-          {required Object date,
-          required Object bookCount,
-          required Object statsCount}) =>
+  String backup_import_confirm({
+    required Object date,
+    required Object bookCount,
+    required Object statsCount,
+  }) =>
       '현재 모든 데이터가 ${date} 백업으로 대체됩니다.\n\n책 ${bookCount}권, 통계 기록 ${statsCount}개.\n\n복원 후 앱이 다시 시작됩니다.';
   @override
   String get backup_import_confirm_title => '백업을 복원할까요?';
@@ -73225,9 +74039,10 @@ class _StringsKo extends _StringsEn {
   @override
   String get backup_import_invalid => '잘못된 백업 파일';
   @override
-  String backup_import_merge_preview(
-          {required Object bookCount, required Object progressCount}) =>
-      '병합하면 도서 ${bookCount}권을 추가하고 읽기 위치 ${progressCount}개를 업데이트합니다.';
+  String backup_import_merge_preview({
+    required Object bookCount,
+    required Object progressCount,
+  }) => '병합하면 도서 ${bookCount}권을 추가하고 읽기 위치 ${progressCount}개를 업데이트합니다.';
   @override
   String get backup_import_mode_label => '가져오기 모드';
   @override
@@ -73510,12 +74325,12 @@ class _StringsKo extends _StringsEn {
   @override
   String get changelog_prerelease => '프리릴리스';
   @override
-  String chapter_progress(
-          {required Object idx,
-          required Object total,
-          required Object suffix,
-          required Object pct}) =>
-      '챕터 ${idx} / ${total}${suffix} · ${pct}%';
+  String chapter_progress({
+    required Object idx,
+    required Object total,
+    required Object suffix,
+    required Object pct,
+  }) => '챕터 ${idx} / ${total}${suffix} · ${pct}%';
   @override
   String get clear => '지우기';
   @override
@@ -73602,9 +74417,10 @@ class _StringsKo extends _StringsEn {
   @override
   String get collection_view_all => '전체 보기';
   @override
-  String collection_watched_progress(
-          {required Object done, required Object total}) =>
-      '${done}/${total} 시청함';
+  String collection_watched_progress({
+    required Object done,
+    required Object total,
+  }) => '${done}/${total} 시청함';
   @override
   String get collection_word => '단어';
   @override
@@ -73823,9 +74639,10 @@ class _StringsKo extends _StringsEn {
   @override
   String get data_storage_migrate_failed_title => '데이터 마이그레이션 실패';
   @override
-  String data_storage_migrate_overlay_progress(
-          {required Object copied, required Object total}) =>
-      '파일 복사 중: ${copied} / ${total}';
+  String data_storage_migrate_overlay_progress({
+    required Object copied,
+    required Object total,
+  }) => '파일 복사 중: ${copied} / ${total}';
   @override
   String get data_storage_migrate_overlay_title => '데이터 이동 중';
   @override
@@ -73842,8 +74659,10 @@ class _StringsKo extends _StringsEn {
   String get data_storage_restart_failed =>
       '데이터가 이동되었지만 자동 재시작에 실패했습니다. Fushi를 수동으로 다시 여세요.';
   @override
-  String db_downgrade_message(
-          {required Object dbVersion, required Object appVersion}) =>
+  String db_downgrade_message({
+    required Object dbVersion,
+    required Object appVersion,
+  }) =>
       '이 데이터베이스는 더 새로운 버전의 Fushi(schema v${dbVersion})로 만들어졌습니다. 현재 앱이 너무 오래되었습니다(v${appVersion}). 데이터 보호를 위해 열기가 차단되었습니다. 앱을 업데이트한 뒤 다시 시도하세요.';
   @override
   String get db_downgrade_title => 'Fushi 업데이트';
@@ -74005,11 +74824,11 @@ class _StringsKo extends _StringsEn {
   @override
   String get dict_download_language => '사용 언어';
   @override
-  String dict_download_partial(
-          {required Object success,
-          required Object total,
-          required Object error}) =>
-      '${success} / ${total} 성공. 실패: ${error}';
+  String dict_download_partial({
+    required Object success,
+    required Object total,
+    required Object error,
+  }) => '${success} / ${total} 성공. 실패: ${error}';
   @override
   String get dict_download_select_title => '사전 선택';
   @override
@@ -74037,19 +74856,20 @@ class _StringsKo extends _StringsEn {
   @override
   String get dict_update_latest => '이미 최신 상태입니다.';
   @override
-  String dict_update_name_mismatch_body(
-          {required Object incoming, required Object existing}) =>
-      '선택한 파일은 "${incoming}"이지만 "${existing}"을(를) 업데이트하고 있습니다. 그래도 교체할까요?';
+  String dict_update_name_mismatch_body({
+    required Object incoming,
+    required Object existing,
+  }) => '선택한 파일은 "${incoming}"이지만 "${existing}"을(를) 업데이트하고 있습니다. 그래도 교체할까요?';
   @override
   String get dict_update_name_mismatch_title => '이름이 일치하지 않습니다';
   @override
   String get dict_update_none => '모든 사전이 최신 상태입니다.';
   @override
-  String dict_update_summary(
-          {required Object updated,
-          required Object current,
-          required Object failed}) =>
-      '${updated}개 업데이트, ${current}개 최신, ${failed}개 실패.';
+  String dict_update_summary({
+    required Object updated,
+    required Object current,
+    required Object failed,
+  }) => '${updated}개 업데이트, ${current}개 최신, ${failed}개 실패.';
   @override
   String get dict_update_tooltip => '사전 업데이트';
   @override
@@ -74132,9 +74952,10 @@ class _StringsKo extends _StringsEn {
   @override
   String get download_subscription_check_now => '지금 확인';
   @override
-  String download_subscription_choice_hint(
-          {required Object group, required Object resolution}) =>
-      '${group} · ${resolution} 팔로우. 새 단편 에피소드가 대기열에 추가됩니다.';
+  String download_subscription_choice_hint({
+    required Object group,
+    required Object resolution,
+  }) => '${group} · ${resolution} 팔로우. 새 단편 에피소드가 대기열에 추가됩니다.';
   @override
   String get download_subscription_created => '다운로드 대기열에 추가 및 구독 생성됨';
   @override
@@ -74267,9 +75088,10 @@ class _StringsKo extends _StringsEn {
   @override
   String favorites({required Object n}) => '즐겨찾기 (${n})';
   @override
-  String field_fallback_used(
-          {required Object field, required Object secondField}) =>
-      '${field} 필드가 ${secondField}을(를) 대체 검색어로 사용했습니다.';
+  String field_fallback_used({
+    required Object field,
+    required Object secondField,
+  }) => '${field} 필드가 ${secondField}을(를) 대체 검색어로 사용했습니다.';
   @override
   String file_count({required Object count}) => '${count}개 파일';
   @override
@@ -74952,12 +75774,12 @@ class _StringsKo extends _StringsEn {
   @override
   String get game_waiting_for_text => '텍스트 대기 중';
   @override
-  String game_waveform_range_label(
-          {required Object start,
-          required Object end,
-          required Object duration,
-          required Object total}) =>
-      '${start} - ${end} (선택 ${duration} / 전체 ${total})';
+  String game_waveform_range_label({
+    required Object start,
+    required Object end,
+    required Object duration,
+    required Object total,
+  }) => '${start} - ${end} (선택 ${duration} / 전체 ${total})';
   @override
   String get game_waveform_select_title => '오디오 범위 선택';
   @override
@@ -75213,9 +76035,10 @@ class _StringsKo extends _StringsEn {
   @override
   String get jump_to_char => '문자 위치로 이동';
   @override
-  String jump_to_char_current(
-          {required Object current, required Object total}) =>
-      '현재: ${current} / ${total}';
+  String jump_to_char_current({
+    required Object current,
+    required Object total,
+  }) => '현재: ${current} / ${total}';
   @override
   String get jump_to_char_hint => '문자 위치를 입력하세요…';
   @override
@@ -75384,9 +76207,10 @@ class _StringsKo extends _StringsEn {
   @override
   String get manga_ocr_wizard_no_images => '이 폴더에 이미지가 없습니다.';
   @override
-  String manga_ocr_wizard_page_progress(
-          {required Object done, required Object total}) =>
-      '페이지 ${done} / ${total}';
+  String manga_ocr_wizard_page_progress({
+    required Object done,
+    required Object total,
+  }) => '페이지 ${done} / ${total}';
   @override
   String get manga_ocr_wizard_pick_folder => '이미지 폴더 선택';
   @override
@@ -75412,9 +76236,10 @@ class _StringsKo extends _StringsEn {
   @override
   String get manga_online_queue_added => '다운로드 대기열에 추가됨';
   @override
-  String manga_online_queue_progress(
-          {required Object done, required Object total}) =>
-      '권 ${done} / ${total}';
+  String manga_online_queue_progress({
+    required Object done,
+    required Object total,
+  }) => '권 ${done} / ${total}';
   @override
   String get manga_online_queue_section => '만화 카탈로그 다운로드';
   @override
@@ -75445,9 +76270,10 @@ class _StringsKo extends _StringsEn {
   @override
   String get manga_remote_ocr_unsupported => '페어링된 호스트가 만화 OCR을 지원하지 않습니다.';
   @override
-  String manga_remote_ocr_uploading(
-          {required Object done, required Object total}) =>
-      '페이지 업로드 중 ${done} / ${total}…';
+  String manga_remote_ocr_uploading({
+    required Object done,
+    required Object total,
+  }) => '페이지 업로드 중 ${done} / ${total}…';
   @override
   String get margin_bottom => '아래 여백';
   @override
@@ -75936,15 +76762,17 @@ class _StringsKo extends _StringsEn {
   @override
   String get audiobook_rematch_auto_match => '자동 매칭';
   @override
-  String audiobook_rematch_auto_picked(
-          {required Object window, required Object pct}) =>
-      '${window} 자동 선택됨 (적중률 ${pct}%)';
+  String audiobook_rematch_auto_picked({
+    required Object window,
+    required Object pct,
+  }) => '${window} 자동 선택됨 (적중률 ${pct}%)';
   @override
   String audiobook_rematch_default_value({required Object n}) => '기본값 ${n}';
   @override
-  String audiobook_rematch_health_label(
-          {required Object pct, required Object detail}) =>
-      '${pct} 일치 — ${detail}';
+  String audiobook_rematch_health_label({
+    required Object pct,
+    required Object detail,
+  }) => '${pct} 일치 — ${detail}';
   @override
   String get audiobook_rematch_matching => '매칭 중...';
   @override
@@ -75959,9 +76787,10 @@ class _StringsKo extends _StringsEn {
   String audiobook_rematch_failed({required Object error}) =>
       '재매칭 실패: ${error}';
   @override
-  String audiobook_rematch_result(
-          {required Object pct, required Object window}) =>
-      '재매칭: ${pct}% (윈도우: ${window})';
+  String audiobook_rematch_result({
+    required Object pct,
+    required Object window,
+  }) => '재매칭: ${pct}% (윈도우: ${window})';
   @override
   String get audiobook_rematch_search_window => '검색 윈도우';
   @override
@@ -77114,9 +77943,10 @@ class _StringsKo extends _StringsEn {
   @override
   String get update_download_resumed => '이어받음';
   @override
-  String update_download_size(
-          {required Object received, required Object total}) =>
-      '다운로드: ${received} / ${total}';
+  String update_download_size({
+    required Object received,
+    required Object total,
+  }) => '다운로드: ${received} / ${total}';
   @override
   String update_download_source({required Object source}) => '소스: ${source}';
   @override
@@ -77129,13 +77959,15 @@ class _StringsKo extends _StringsEn {
   String update_install_current_executable({required Object path}) =>
       '실행 중인 프로그램: ${path}';
   @override
-  String update_install_deletefile_failure(
-          {required Object path, required Object code}) =>
-      '설치 프로그램이 ${path}을(를) 교체하지 못했습니다(코드 ${code})';
+  String update_install_deletefile_failure({
+    required Object path,
+    required Object code,
+  }) => '설치 프로그램이 ${path}을(를) 교체하지 못했습니다(코드 ${code})';
   @override
-  String update_install_detected_location(
-          {required Object source, required Object path}) =>
-      '감지된 설치 위치(${source}): ${path}';
+  String update_install_detected_location({
+    required Object source,
+    required Object path,
+  }) => '감지된 설치 위치(${source}): ${path}';
   @override
   String update_install_failure_summary({required Object summary}) =>
       '원인: ${summary}';
@@ -77156,9 +77988,10 @@ class _StringsKo extends _StringsEn {
   String update_install_launcher_pid({required Object pid}) =>
       '업데이트 런처 PID: ${pid}';
   @override
-  String update_install_libmpv_holder(
-          {required Object pid, required Object path}) =>
-      'libmpv 점유 프로세스: PID ${pid} - ${path}';
+  String update_install_libmpv_holder({
+    required Object pid,
+    required Object path,
+  }) => 'libmpv 점유 프로세스: PID ${pid} - ${path}';
   @override
   String get update_install_log_not_observed => '실행 후 점검 시 설치 로그가 생성되지 않았습니다.';
   @override
@@ -77190,9 +78023,10 @@ class _StringsKo extends _StringsEn {
   String get update_install_restart_windows_hint =>
       '위 프로세스를 종료해도 libmpv-2.dll이 여전히 잠겨 있으면 Windows를 재시작한 뒤 다시 설치하세요.';
   @override
-  String update_install_running_process(
-          {required Object pid, required Object path}) =>
-      '실행 중인 Fushi 프로세스: PID ${pid} - ${path}';
+  String update_install_running_process({
+    required Object pid,
+    required Object path,
+  }) => '실행 중인 Fushi 프로세스: PID ${pid} - ${path}';
   @override
   String update_install_success_message({required Object version}) =>
       'Fushi가 ${version} 버전으로 업데이트되었습니다.';
@@ -77209,9 +78043,10 @@ class _StringsKo extends _StringsEn {
   String update_message({required Object version}) =>
       '버전 ${version}을(를) 사용할 수 있습니다.';
   @override
-  String update_network_failure(
-          {required Object host, required Object reason}) =>
-      '${host}에 연결할 수 없습니다: ${reason}';
+  String update_network_failure({
+    required Object host,
+    required Object reason,
+  }) => '${host}에 연결할 수 없습니다: ${reason}';
   @override
   String get update_never_remind => '업데이트 알림 끄기';
   @override
@@ -77459,9 +78294,10 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_jimaku_api_key_set => 'API key 설정됨';
   @override
-  String video_jimaku_batch_done(
-          {required Object done, required Object total}) =>
-      '자막 가져오기 완료: ${done}/${total}';
+  String video_jimaku_batch_done({
+    required Object done,
+    required Object total,
+  }) => '자막 가져오기 완료: ${done}/${total}';
   @override
   String get video_jimaku_batch_download => '모두 다운로드';
   @override
@@ -77954,9 +78790,10 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_shader_download_failed => '셰이더 다운로드 실패';
   @override
-  String video_shader_download_partial(
-          {required Object ok, required Object failed}) =>
-      '셰이더 ${ok}개 다운로드, ${failed}개 실패';
+  String video_shader_download_partial({
+    required Object ok,
+    required Object failed,
+  }) => '셰이더 ${ok}개 다운로드, ${failed}개 실패';
   @override
   String get video_shader_download_url => '링크에서 다운로드';
   @override
@@ -78064,9 +78901,10 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_subtitle_attach_playlist_hint => '재생목록을 열어 에피소드별로 자막을 연결하세요';
   @override
-  String video_subtitle_attached_to_video(
-          {required Object title, required Object count}) =>
-      '${title}에 자막을 연결했습니다(${count}개 큐)';
+  String video_subtitle_attached_to_video({
+    required Object title,
+    required Object count,
+  }) => '${title}에 자막을 연결했습니다(${count}개 큐)';
   @override
   String get video_subtitle_auto_align => '자막 자동 정렬';
   @override
@@ -78273,13 +79111,14 @@ class _StringsKo extends _StringsEn {
   @override
   String get anki_dedup_report_title => '미디어 중복 제거 보고서';
   @override
-  String anki_dedup_report_body(
-          {required Object groups,
-          required Object removed,
-          required Object size,
-          required Object notes,
-          required Object models,
-          required Object skipped}) =>
+  String anki_dedup_report_body({
+    required Object groups,
+    required Object removed,
+    required Object size,
+    required Object notes,
+    required Object models,
+    required Object skipped,
+  }) =>
       '중복 그룹 ${groups}개; 추가 사본 ${removed}개 (${size}); 노트 ${notes}개와 노트 유형 ${models}개 재작성; ${skipped}개 건너뜀.';
   @override
   String get anki_dedup_report_dry_note => '검색만 수행됨 - 변경된 사항이 없습니다.';
@@ -78299,11 +79138,11 @@ class _StringsKo extends _StringsEn {
   String anki_dedup_plan_intro({required Object count, required Object size}) =>
       '추가 사본 ${count}개, ${size} 회수 가능. 각 파일의 사본 하나가 유지되고 모든 참조가 먼저 그것을 가리키도록 변경됩니다. 재인코딩은 하지 않습니다.';
   @override
-  String anki_dedup_plan_entry(
-          {required Object file,
-          required Object size,
-          required Object canonical}) =>
-      '${file} (${size}) 삭제 - ${canonical} 유지';
+  String anki_dedup_plan_entry({
+    required Object file,
+    required Object size,
+    required Object canonical,
+  }) => '${file} (${size}) 삭제 - ${canonical} 유지';
   @override
   String get anki_dedup_plan_delete => '이 파일들을 삭제';
   @override
@@ -78362,9 +79201,10 @@ class _StringsKo extends _StringsEn {
   String manga_ocr_acceleration_status({required Object engine}) =>
       'OCR 가속: ${engine}';
   @override
-  String manga_ocr_acceleration_degraded(
-          {required Object engine, required Object reason}) =>
-      'GPU 가속을 사용할 수 없어 ${engine}에서 OCR 실행 중: ${reason}';
+  String manga_ocr_acceleration_degraded({
+    required Object engine,
+    required Object reason,
+  }) => 'GPU 가속을 사용할 수 없어 ${engine}에서 OCR 실행 중: ${reason}';
   @override
   String get media_tracking_status => '컬렉션 상태';
   @override
@@ -78408,9 +79248,10 @@ class _StringsKo extends _StringsEn {
   String anki_dedup_auto_done({required Object count, required Object size}) =>
       '중복 Anki 미디어 파일 ${count}개 삭제, ${size} 회수됨';
   @override
-  String anki_lapis_backup_done_pruned(
-          {required Object path, required Object count}) =>
-      '${path}에 백업됨 (90일 / 최대 10개 정책에 따라 이전 백업 ${count}개 정리됨)';
+  String anki_lapis_backup_done_pruned({
+    required Object path,
+    required Object count,
+  }) => '${path}에 백업됨 (90일 / 최대 10개 정책에 따라 이전 백업 ${count}개 정리됨)';
   @override
   String get game_audio_fallback_policy => '오디오 폴백';
   @override
@@ -78553,9 +79394,10 @@ class _StringsKo extends _StringsEn {
   String get stat_clear_all_game_message =>
       '모든 게임 플레이 시간과 세션 수를 지우시겠습니까? 게임 라이브러리와 활동 타임라인은 유지됩니다. 이 작업은 취소할 수 없습니다.';
   @override
-  String batch_selection_stale_skipped(
-          {required Object n, required Object m}) =>
-      '선택한 ${n}개 항목 중 더 이상 존재하지 않는 ${m}개를 건너뜀';
+  String batch_selection_stale_skipped({
+    required Object n,
+    required Object m,
+  }) => '선택한 ${n}개 항목 중 더 이상 존재하지 않는 ${m}개를 건너뜀';
   @override
   String get game_text_thread_unset => '스레드가 선택되지 않았습니다 - 캡처를 시작하려면 하나를 선택하세요';
   @override
@@ -78608,22 +79450,24 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_jimaku_language_unknown => '언어 미표기';
   @override
-  String video_jimaku_source_summary(
-          {required Object files,
-          required Object episodes,
-          required Object languages}) =>
-      '자막 파일 ${files}개 · 에피소드 ${episodes}개 · ${languages}';
+  String video_jimaku_source_summary({
+    required Object files,
+    required Object episodes,
+    required Object languages,
+  }) => '자막 파일 ${files}개 · 에피소드 ${episodes}개 · ${languages}';
   @override
-  String video_jimaku_episode_unlabeled(
-          {required Object episode, required Object count}) =>
-      '에피소드 ${episode}으로 표시된 자막이 없습니다. 라벨 없는 파일 ${count}개가 일치할 수 있습니다';
+  String video_jimaku_episode_unlabeled({
+    required Object episode,
+    required Object count,
+  }) => '에피소드 ${episode}으로 표시된 자막이 없습니다. 라벨 없는 파일 ${count}개가 일치할 수 있습니다';
   @override
   String video_jimaku_episode_unavailable({required Object episode}) =>
       '에피소드 ${episode}에 대한 자막을 찾을 수 없습니다';
   @override
-  String video_jimaku_episode_available(
-          {required Object count, required Object languages}) =>
-      '자막 ${count}개 사용 가능 · ${languages}';
+  String video_jimaku_episode_available({
+    required Object count,
+    required Object languages,
+  }) => '자막 ${count}개 사용 가능 · ${languages}';
   @override
   String get manga_online_source_disabled =>
       '이 인터넷 소스는 비활성화되어 있습니다. 카탈로그를 찾아보려면 소스에서 활성화하세요.';
@@ -78642,13 +79486,15 @@ class _StringsKo extends _StringsEn {
   String anki_dedup_progress_scanning({required Object count}) =>
       '미디어 폴더 검색 중... (파일 ${count}개 발견)';
   @override
-  String anki_dedup_progress_hashing(
-          {required Object done, required Object total}) =>
-      '같은 크기의 파일 비교 중... (${done} / ${total})';
+  String anki_dedup_progress_hashing({
+    required Object done,
+    required Object total,
+  }) => '같은 크기의 파일 비교 중... (${done} / ${total})';
   @override
-  String anki_dedup_progress_resolving(
-          {required Object done, required Object total}) =>
-      '중복 처리 중... (${done} / ${total})';
+  String anki_dedup_progress_resolving({
+    required Object done,
+    required Object total,
+  }) => '중복 처리 중... (${done} / ${total})';
   @override
   String anki_dedup_progress_freed({required Object size}) => '지금까지 ${size} 확보';
   @override
@@ -78695,8 +79541,10 @@ class _StringsKo extends _StringsEn {
   @override
   String get sync_last_failed => '마지막 동기화: 실패';
   @override
-  String anime_download_no_results_detail(
-          {required Object query, required Object filters}) =>
+  String anime_download_no_results_detail({
+    required Object query,
+    required Object filters,
+  }) =>
       '서비스가 정상 응답했지만 0개의 항목을 반환했습니다. 쿼리: ${query}; 필터: ${filters}. 다른 제목을 시도하거나 필터를 완화하세요.';
   @override
   String get anime_download_streaming_ready => '라이브러리에 있음 · 다운로드 계속 중';
@@ -78870,12 +79718,12 @@ class _StringsKo extends _StringsEn {
   @override
   String scrape_all_item({required Object title}) => '처리 중: ${title}';
   @override
-  String scrape_all_done(
-          {required Object applied,
-          required Object review,
-          required Object skipped,
-          required Object failed}) =>
-      '완료: ${applied} 적용, ${review} 검토 필요, ${skipped} 건너뜀, ${failed} 실패';
+  String scrape_all_done({
+    required Object applied,
+    required Object review,
+    required Object skipped,
+    required Object failed,
+  }) => '완료: ${applied} 적용, ${review} 검토 필요, ${skipped} 건너뜀, ${failed} 실패';
   @override
   String get scrape_all_empty => '이 라이브러리에 스크래핑할 항목이 없습니다.';
   @override
@@ -79232,9 +80080,10 @@ class _StringsKo extends _StringsEn {
   String collection_episode_watched_at({required Object position}) =>
       '${position}까지 시청함';
   @override
-  String collection_episode_rename_partial(
-          {required Object n, required Object m}) =>
-      '${n}개 에피소드 이름 변경됨, ${m}개 실패';
+  String collection_episode_rename_partial({
+    required Object n,
+    required Object m,
+  }) => '${n}개 에피소드 이름 변경됨, ${m}개 실패';
   @override
   String get sync_err_browser_timeout =>
       '브라우저에서 인증을 반환하지 않았습니다. 다시 시도하고 프록시가 127.0.0.1을 통과시키는지 확인하세요.';
@@ -79274,9 +80123,10 @@ class _StringsKo extends _StringsEn {
   @override
   String get book_convert_blocked_source_missing => '원본 파일이 디스크에서 사라졌습니다.';
   @override
-  String manga_online_retry_waiting(
-          {required Object attempt, required Object total}) =>
-      '자동 재시도 중 (${attempt}/${total})';
+  String manga_online_retry_waiting({
+    required Object attempt,
+    required Object total,
+  }) => '자동 재시도 중 (${attempt}/${total})';
   @override
   String get manga_ocr_wizard_already_ocred =>
       '이 권에는 이미 모든 페이지에 OCR 데이터가 있습니다. OCR을 다시 실행하면 덮어쓰게 됩니다.';
@@ -79370,18 +80220,18 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_source_scrape_write_images => '이미지 파일 쓰기';
   @override
-  String video_source_scrape_progress(
-          {required Object phase,
-          required Object current,
-          required Object total}) =>
-      '${phase} · ${current}/${total}';
+  String video_source_scrape_progress({
+    required Object phase,
+    required Object current,
+    required Object total,
+  }) => '${phase} · ${current}/${total}';
   @override
-  String video_source_scrape_last_summary(
-          {required Object status,
-          required Object succeeded,
-          required Object pending,
-          required Object failed}) =>
-      '마지막 스크래핑 (${status}): ${succeeded} 성공, ${pending} 보류, ${failed} 실패';
+  String video_source_scrape_last_summary({
+    required Object status,
+    required Object succeeded,
+    required Object pending,
+    required Object failed,
+  }) => '마지막 스크래핑 (${status}): ${succeeded} 성공, ${pending} 보류, ${failed} 실패';
   @override
   String get video_source_scrape_phase_planning => '계획 중';
   @override
@@ -79581,9 +80431,10 @@ class _StringsKo extends _StringsEn {
   String migration_import_running({required Object batch}) =>
       '${batch} 가져오는 중…';
   @override
-  String migration_import_verify_failed(
-          {required Object batch, required Object detail}) =>
-      '${batch} 검증 실패, 다시 내보내기용으로 보관됨: ${detail}';
+  String migration_import_verify_failed({
+    required Object batch,
+    required Object detail,
+  }) => '${batch} 검증 실패, 다시 내보내기용으로 보관됨: ${detail}';
   @override
   String migration_import_counts_failed({required Object detail}) =>
       '가져온 데이터가 불완전합니다: ${detail}. Hibiki에서 누락된 부분을 다시 내보낸 후 다시 가져오세요.';
@@ -79607,11 +80458,11 @@ class _StringsKo extends _StringsEn {
   @override
   String get migration_import_permission_grant => '권한 허용';
   @override
-  String migration_import_verifying(
-          {required Object batch,
-          required Object done,
-          required Object total}) =>
-      '${batch} 검증 중 (${done}/${total})';
+  String migration_import_verifying({
+    required Object batch,
+    required Object done,
+    required Object total,
+  }) => '${batch} 검증 중 (${done}/${total})';
   @override
   String get migration_import_verifying_hint =>
       '아카이브 체크섬 검증 중. 대용량 라이브러리는 몇 분 걸릴 수 있습니다.';
@@ -79775,11 +80626,11 @@ class _StringsKo extends _StringsEn {
   String video_subtitle_read_failed({required Object label}) =>
       '이 자막 파일을 읽을 수 없습니다 (손상되었거나 비어 있음): ${label}';
   @override
-  String dict_downloading_size(
-          {required Object name,
-          required Object done,
-          required Object total}) =>
-      '${name} 다운로드 중 (${done} / ${total})';
+  String dict_downloading_size({
+    required Object name,
+    required Object done,
+    required Object total,
+  }) => '${name} 다운로드 중 (${done} / ${total})';
   @override
   String get video_subtitle_attach_book_missing =>
       '이 동영상이 라이브러리에 없어서 자막이 첨부되지 않았습니다';
@@ -79959,11 +80810,11 @@ class _StringsKo extends _StringsEn {
   String manga_import_batch_hint({required Object n}) =>
       '이 폴더에 ${n}개의 볼륨 파일이 있습니다. 각각 파일 이름을 따서 별도의 책으로 가져옵니다.';
   @override
-  String manga_import_batch_done(
-          {required Object imported,
-          required Object skipped,
-          required Object failed}) =>
-      '${imported}개 가져옴, ${skipped}개 건너뜀, ${failed}개 실패.';
+  String manga_import_batch_done({
+    required Object imported,
+    required Object skipped,
+    required Object failed,
+  }) => '${imported}개 가져옴, ${skipped}개 건너뜀, ${failed}개 실패.';
   @override
   String get srt_book_reimport => '다시 가져오기';
   @override
@@ -80053,8 +80904,10 @@ class _StringsKo extends _StringsEn {
   @override
   String get update_release_page_open => '릴리스 페이지';
   @override
-  String update_install_gal_hook_holder(
-          {required Object pid, required Object path}) =>
+  String update_install_gal_hook_holder({
+    required Object pid,
+    required Object path,
+  }) =>
       '게임 캡처 구성 요소 사용 중: PID ${pid} - ${path} (현재 플레이 중인 게임 또는 캡처 호스트입니다). 게임을 종료한 후 다시 업데이트하세요.';
   @override
   String get game_hook_reason_protocol_mismatch =>
@@ -80506,9 +81359,10 @@ class _StringsKo extends _StringsEn {
   String get manga_ocr_model_unused_by_engine =>
       '현재 엔진은 이 로컬 모델 파일을 사용하지 않습니다.';
   @override
-  String manga_ocr_download_total_progress(
-          {required Object total, required Object done}) =>
-      '${total} 중 ${done}';
+  String manga_ocr_download_total_progress({
+    required Object total,
+    required Object done,
+  }) => '${total} 중 ${done}';
   @override
   String get media_source_network_subtitle_video =>
       'WebDAV 원격 라이브러리 (원본 위치에서 스트리밍)';
@@ -80958,11 +81812,11 @@ class _StringsKo extends _StringsEn {
   @override
   String get manga_ocr_import_matched_nothing => '사용할 수 있는 모델 파일을 인식하지 못했어요';
   @override
-  String manga_ocr_import_size_mismatch(
-          {required Object file,
-          required Object expected,
-          required Object actual}) =>
-      '${file} 크기가 맞지 않아요: 예상 ${expected}, 실제 ${actual}';
+  String manga_ocr_import_size_mismatch({
+    required Object file,
+    required Object expected,
+    required Object actual,
+  }) => '${file} 크기가 맞지 않아요: 예상 ${expected}, 실제 ${actual}';
   @override
   String manga_ocr_import_still_missing({required Object count}) =>
       '아직 파일 ${count}개가 부족해요';
@@ -81027,9 +81881,10 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_jimaku_search_failed => '자막 검색에 실패했어요';
   @override
-  String video_subtitle_error_with_code(
-          {required Object msg, required Object code}) =>
-      '${msg} (HTTP ${code})';
+  String video_subtitle_error_with_code({
+    required Object msg,
+    required Object code,
+  }) => '${msg} (HTTP ${code})';
   @override
   String get manga_rescan_run => '선택 영역 다시 인식';
   @override
@@ -81265,9 +82120,10 @@ class _StringsKo extends _StringsEn {
   @override
   String get manga_series_open_series => '작품 페이지';
   @override
-  String manga_series_read_progress(
-          {required Object total, required Object page}) =>
-      '${total}페이지 중 ${page}페이지까지 읽음';
+  String manga_series_read_progress({
+    required Object total,
+    required Object page,
+  }) => '${total}페이지 중 ${page}페이지까지 읽음';
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       '${page}페이지까지 읽음';
@@ -81539,13 +82395,15 @@ class _StringsKo extends _StringsEn {
   String web_video_mine_queued({required Object count}) =>
       '카드 만들기 대기열에 추가됨(${count}개 대기)';
   @override
-  String web_video_mine_queue_running(
-          {required Object done, required Object total}) =>
-      '카드 만드는 중 ${done}/${total}…';
+  String web_video_mine_queue_running({
+    required Object done,
+    required Object total,
+  }) => '카드 만드는 중 ${done}/${total}…';
   @override
-  String web_video_mine_queue_finished(
-          {required Object ok, required Object failed}) =>
-      '카드 만들기 완료: 성공 ${ok}, 실패 ${failed}';
+  String web_video_mine_queue_finished({
+    required Object ok,
+    required Object failed,
+  }) => '카드 만들기 완료: 성공 ${ok}, 실패 ${failed}';
   @override
   String get web_video_hosting_menu => '재생 모드';
   @override
@@ -81804,29 +82662,78 @@ class _StringsKo extends _StringsEn {
       'Waiting for matching in-game click';
   @override
   String get delete_choices_remember => '이 선택 기억하기';
+  @override
+  String get network_proxy_mode_label => 'Proxy mode';
+  @override
+  String get network_proxy_mode_auto => 'Automatic';
+  @override
+  String get network_proxy_mode_auto_hint =>
+      'Use environment variables, then the enabled system proxy';
+  @override
+  String get network_proxy_mode_direct => 'Direct';
+  @override
+  String get network_proxy_mode_direct_hint => 'Disable proxy use for the app';
+  @override
+  String get network_proxy_mode_manual => 'Manual';
+  @override
+  String get network_proxy_mode_manual_hint =>
+      'Use the server and optional credentials below';
+  @override
+  String get network_proxy_manual_hint =>
+      'HTTP proxy server used by all public internet requests';
+  @override
+  String get network_proxy_username => 'Proxy username (optional)';
+  @override
+  String get network_proxy_password => 'Proxy password (optional)';
+  @override
+  String get storage_category_backups => 'Local backups';
+  @override
+  String storage_entry_backups_label({required Object n}) =>
+      '${n} backup archive(s)';
+  @override
+  String get storage_entry_delete_backups_confirm_body =>
+      'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+  @override
+  String get update_download_source_preference => 'Preferred download source';
+  @override
+  String get update_download_source_preference_hint =>
+      'The selected source is tried first; unavailable sources still fall back automatically.';
+  @override
+  String get update_download_source_auto => 'Automatic (recommended)';
+  @override
+  String get update_download_source_cloudflare => 'Cloudflare mirror';
+  @override
+  String get update_download_source_github => 'GitHub direct';
+  @override
+  String update_download_source_proxy({required Object host}) =>
+      'Proxy: ${host}';
 }
 
 // Path: <root>
 class _StringsNl extends _StringsEn {
   /// You can call this constructor and build your own translation instance of this locale.
   /// Constructing via the enum [AppLocale.build] is preferred.
-  _StringsNl.build(
-      {Map<String, Node>? overrides,
-      PluralResolver? cardinalResolver,
-      PluralResolver? ordinalResolver})
-      : assert(overrides == null,
-            'Set "translation_overrides: true" in order to enable this feature.'),
-        $meta = TranslationMetadata(
-          locale: AppLocale.nl,
-          overrides: overrides ?? {},
-          cardinalResolver: cardinalResolver,
-          ordinalResolver: ordinalResolver,
-        ),
-        super.build(
-            cardinalResolver: cardinalResolver,
-            ordinalResolver: ordinalResolver) {
+  _StringsNl.build({
+    Map<String, Node>? overrides,
+    PluralResolver? cardinalResolver,
+    PluralResolver? ordinalResolver,
+  }) : assert(
+         overrides == null,
+         'Set "translation_overrides: true" in order to enable this feature.',
+       ),
+       $meta = TranslationMetadata(
+         locale: AppLocale.nl,
+         overrides: overrides ?? {},
+         cardinalResolver: cardinalResolver,
+         ordinalResolver: ordinalResolver,
+       ),
+       super.build(
+         cardinalResolver: cardinalResolver,
+         ordinalResolver: ordinalResolver,
+       ) {
     super.$meta.setFlatMapFunction(
-        $meta.getTranslation); // copy base translations to super.$meta
+      $meta.getTranslation,
+    ); // copy base translations to super.$meta
     $meta.setFlatMapFunction(_flatMapFunction);
   }
 
@@ -82342,10 +83249,11 @@ class _StringsNl extends _StringsEn {
   @override
   String get backup_import => 'Back-up importeren';
   @override
-  String backup_import_confirm(
-          {required Object date,
-          required Object bookCount,
-          required Object statsCount}) =>
+  String backup_import_confirm({
+    required Object date,
+    required Object bookCount,
+    required Object statsCount,
+  }) =>
       'Dit vervangt alle huidige gegevens door de back-up van ${date}.\n\n${bookCount} boeken, ${statsCount} statistiekrecords.\n\nDe app wordt na het herstellen opnieuw gestart.';
   @override
   String get backup_import_confirm_title => 'Back-up herstellen?';
@@ -82363,8 +83271,10 @@ class _StringsNl extends _StringsEn {
   @override
   String get backup_import_invalid => 'Ongeldig back-upbestand';
   @override
-  String backup_import_merge_preview(
-          {required Object bookCount, required Object progressCount}) =>
+  String backup_import_merge_preview({
+    required Object bookCount,
+    required Object progressCount,
+  }) =>
       'Samenvoegen voegt ${bookCount} boeken toe en werkt ${progressCount} leesposities bij.';
   @override
   String get backup_import_mode_label => 'Importmodus';
@@ -82666,12 +83576,12 @@ class _StringsNl extends _StringsEn {
   @override
   String get changelog_prerelease => 'Prerelease';
   @override
-  String chapter_progress(
-          {required Object idx,
-          required Object total,
-          required Object suffix,
-          required Object pct}) =>
-      'Hoofdstuk ${idx} / ${total}${suffix} · ${pct}%';
+  String chapter_progress({
+    required Object idx,
+    required Object total,
+    required Object suffix,
+    required Object pct,
+  }) => 'Hoofdstuk ${idx} / ${total}${suffix} · ${pct}%';
   @override
   String get clear => 'Wissen';
   @override
@@ -82761,9 +83671,10 @@ class _StringsNl extends _StringsEn {
   @override
   String get collection_view_all => 'Alles bekijken';
   @override
-  String collection_watched_progress(
-          {required Object done, required Object total}) =>
-      '${done}/${total} bekeken';
+  String collection_watched_progress({
+    required Object done,
+    required Object total,
+  }) => '${done}/${total} bekeken';
   @override
   String get collection_word => 'Woord';
   @override
@@ -82987,9 +83898,10 @@ class _StringsNl extends _StringsEn {
   @override
   String get data_storage_migrate_failed_title => 'Datamigratie mislukt';
   @override
-  String data_storage_migrate_overlay_progress(
-          {required Object copied, required Object total}) =>
-      'Bestanden kopiëren: ${copied} / ${total}';
+  String data_storage_migrate_overlay_progress({
+    required Object copied,
+    required Object total,
+  }) => 'Bestanden kopiëren: ${copied} / ${total}';
   @override
   String get data_storage_migrate_overlay_title => 'Je gegevens verplaatsen';
   @override
@@ -83006,8 +83918,10 @@ class _StringsNl extends _StringsEn {
   String get data_storage_restart_failed =>
       'Gegevens verplaatst, maar automatisch herstarten mislukt. Open Fushi handmatig opnieuw.';
   @override
-  String db_downgrade_message(
-          {required Object dbVersion, required Object appVersion}) =>
+  String db_downgrade_message({
+    required Object dbVersion,
+    required Object appVersion,
+  }) =>
       'Deze database is gemaakt door een nieuwere versie van Fushi (schema v${dbVersion}). Je huidige app is te oud (v${appVersion}). Het openen is geblokkeerd om je gegevens te beschermen. Werk de app bij en probeer het opnieuw.';
   @override
   String get db_downgrade_title => 'Fushi bijwerken';
@@ -83177,11 +84091,11 @@ class _StringsNl extends _StringsEn {
   @override
   String get dict_download_language => 'Je taal';
   @override
-  String dict_download_partial(
-          {required Object success,
-          required Object total,
-          required Object error}) =>
-      '${success} / ${total} OK. Mislukt: ${error}';
+  String dict_download_partial({
+    required Object success,
+    required Object total,
+    required Object error,
+  }) => '${success} / ${total} OK. Mislukt: ${error}';
   @override
   String get dict_download_select_title => 'Selecteer woordenboeken';
   @override
@@ -83213,19 +84127,21 @@ class _StringsNl extends _StringsEn {
   @override
   String get dict_update_latest => 'Al up-to-date.';
   @override
-  String dict_update_name_mismatch_body(
-          {required Object incoming, required Object existing}) =>
+  String dict_update_name_mismatch_body({
+    required Object incoming,
+    required Object existing,
+  }) =>
       'Het geselecteerde bestand is "${incoming}", maar je werkt "${existing}" bij. Toch vervangen?';
   @override
   String get dict_update_name_mismatch_title => 'Namen komen niet overeen';
   @override
   String get dict_update_none => 'Alle woordenboeken zijn up-to-date.';
   @override
-  String dict_update_summary(
-          {required Object updated,
-          required Object current,
-          required Object failed}) =>
-      '${updated} bijgewerkt, ${current} up-to-date, ${failed} mislukt.';
+  String dict_update_summary({
+    required Object updated,
+    required Object current,
+    required Object failed,
+  }) => '${updated} bijgewerkt, ${current} up-to-date, ${failed} mislukt.';
   @override
   String get dict_update_tooltip => 'Woordenboek bijwerken';
   @override
@@ -83314,8 +84230,10 @@ class _StringsNl extends _StringsEn {
   @override
   String get download_subscription_check_now => 'Nu controleren';
   @override
-  String download_subscription_choice_hint(
-          {required Object group, required Object resolution}) =>
+  String download_subscription_choice_hint({
+    required Object group,
+    required Object resolution,
+  }) =>
       'Volg ${group} · ${resolution}. Nieuwe afzonderlijke afleveringen worden in de wachtrij geplaatst.';
   @override
   String get download_subscription_created =>
@@ -83459,9 +84377,10 @@ class _StringsNl extends _StringsEn {
   @override
   String favorites({required Object n}) => 'Favorieten (${n})';
   @override
-  String field_fallback_used(
-          {required Object field, required Object secondField}) =>
-      'Het veld ${field} gebruikte ${secondField} als terugvalzoekterm.';
+  String field_fallback_used({
+    required Object field,
+    required Object secondField,
+  }) => 'Het veld ${field} gebruikte ${secondField} als terugvalzoekterm.';
   @override
   String file_count({required Object count}) => '${count} bestanden';
   @override
@@ -84184,12 +85103,12 @@ class _StringsNl extends _StringsEn {
   @override
   String get game_waiting_for_text => 'Wachten op tekst';
   @override
-  String game_waveform_range_label(
-          {required Object start,
-          required Object end,
-          required Object duration,
-          required Object total}) =>
-      '${start} - ${end} (geselecteerd ${duration} / totaal ${total})';
+  String game_waveform_range_label({
+    required Object start,
+    required Object end,
+    required Object duration,
+    required Object total,
+  }) => '${start} - ${end} (geselecteerd ${duration} / totaal ${total})';
   @override
   String get game_waveform_select_title => 'Audiobereik selecteren';
   @override
@@ -84460,9 +85379,10 @@ class _StringsNl extends _StringsEn {
   @override
   String get jump_to_char => 'Ga naar tekenpositie';
   @override
-  String jump_to_char_current(
-          {required Object current, required Object total}) =>
-      'Huidig: ${current} / ${total}';
+  String jump_to_char_current({
+    required Object current,
+    required Object total,
+  }) => 'Huidig: ${current} / ${total}';
   @override
   String get jump_to_char_hint => 'Voer tekenpositie in…';
   @override
@@ -84639,9 +85559,10 @@ class _StringsNl extends _StringsEn {
   String get manga_ocr_wizard_no_images =>
       'Geen afbeeldingen gevonden in deze map.';
   @override
-  String manga_ocr_wizard_page_progress(
-          {required Object done, required Object total}) =>
-      'Pagina ${done} / ${total}';
+  String manga_ocr_wizard_page_progress({
+    required Object done,
+    required Object total,
+  }) => 'Pagina ${done} / ${total}';
   @override
   String get manga_ocr_wizard_pick_folder => 'Afbeeldingenmap kiezen';
   @override
@@ -84667,9 +85588,10 @@ class _StringsNl extends _StringsEn {
   @override
   String get manga_online_queue_added => 'Aan downloadwachtrij toegevoegd';
   @override
-  String manga_online_queue_progress(
-          {required Object done, required Object total}) =>
-      'Deel ${done} / ${total}';
+  String manga_online_queue_progress({
+    required Object done,
+    required Object total,
+  }) => 'Deel ${done} / ${total}';
   @override
   String get manga_online_queue_section => 'Manga-catalogusdownloads';
   @override
@@ -84703,9 +85625,10 @@ class _StringsNl extends _StringsEn {
   String get manga_remote_ocr_unsupported =>
       'De gekoppelde host ondersteunt geen manga-OCR.';
   @override
-  String manga_remote_ocr_uploading(
-          {required Object done, required Object total}) =>
-      'Pagina\'s uploaden ${done} / ${total}…';
+  String manga_remote_ocr_uploading({
+    required Object done,
+    required Object total,
+  }) => 'Pagina\'s uploaden ${done} / ${total}…';
   @override
   String get margin_bottom => 'Ondermarge';
   @override
@@ -85216,16 +86139,18 @@ class _StringsNl extends _StringsEn {
   @override
   String get audiobook_rematch_auto_match => 'Automatisch matchen';
   @override
-  String audiobook_rematch_auto_picked(
-          {required Object window, required Object pct}) =>
-      'Automatisch geselecteerd ${window} (treffers ${pct}%)';
+  String audiobook_rematch_auto_picked({
+    required Object window,
+    required Object pct,
+  }) => 'Automatisch geselecteerd ${window} (treffers ${pct}%)';
   @override
   String audiobook_rematch_default_value({required Object n}) =>
       'Standaard ${n}';
   @override
-  String audiobook_rematch_health_label(
-          {required Object pct, required Object detail}) =>
-      '${pct} overeenkomst — ${detail}';
+  String audiobook_rematch_health_label({
+    required Object pct,
+    required Object detail,
+  }) => '${pct} overeenkomst — ${detail}';
   @override
   String get audiobook_rematch_matching => 'Matchen...';
   @override
@@ -85243,9 +86168,10 @@ class _StringsNl extends _StringsEn {
   String audiobook_rematch_failed({required Object error}) =>
       'Opnieuw matchen mislukt: ${error}';
   @override
-  String audiobook_rematch_result(
-          {required Object pct, required Object window}) =>
-      'Opnieuw gematcht: ${pct}% (venster: ${window})';
+  String audiobook_rematch_result({
+    required Object pct,
+    required Object window,
+  }) => 'Opnieuw gematcht: ${pct}% (venster: ${window})';
   @override
   String get audiobook_rematch_search_window => 'Zoekvenster';
   @override
@@ -86460,9 +87386,10 @@ class _StringsNl extends _StringsEn {
   @override
   String get update_download_resumed => 'hervat';
   @override
-  String update_download_size(
-          {required Object received, required Object total}) =>
-      'Gedownload: ${received} / ${total}';
+  String update_download_size({
+    required Object received,
+    required Object total,
+  }) => 'Gedownload: ${received} / ${total}';
   @override
   String update_download_source({required Object source}) => 'Bron: ${source}';
   @override
@@ -86475,13 +87402,15 @@ class _StringsNl extends _StringsEn {
   String update_install_current_executable({required Object path}) =>
       'Actief programma: ${path}';
   @override
-  String update_install_deletefile_failure(
-          {required Object path, required Object code}) =>
-      'Installatieprogramma kon ${path} niet vervangen (code ${code})';
+  String update_install_deletefile_failure({
+    required Object path,
+    required Object code,
+  }) => 'Installatieprogramma kon ${path} niet vervangen (code ${code})';
   @override
-  String update_install_detected_location(
-          {required Object source, required Object path}) =>
-      'Gedetecteerde installatielocatie (${source}): ${path}';
+  String update_install_detected_location({
+    required Object source,
+    required Object path,
+  }) => 'Gedetecteerde installatielocatie (${source}): ${path}';
   @override
   String update_install_failure_summary({required Object summary}) =>
       'Reden: ${summary}';
@@ -86503,9 +87432,10 @@ class _StringsNl extends _StringsEn {
   String update_install_launcher_pid({required Object pid}) =>
       'PID update-launcher: ${pid}';
   @override
-  String update_install_libmpv_holder(
-          {required Object pid, required Object path}) =>
-      'libmpv-houder: PID ${pid} - ${path}';
+  String update_install_libmpv_holder({
+    required Object pid,
+    required Object path,
+  }) => 'libmpv-houder: PID ${pid} - ${path}';
   @override
   String get update_install_log_not_observed =>
       'Het installatielogboek is niet aangemaakt tijdens de controle na het starten.';
@@ -86540,9 +87470,10 @@ class _StringsNl extends _StringsEn {
   String get update_install_restart_windows_hint =>
       'Als de vermelde processen gesloten zijn maar libmpv-2.dll nog steeds vergrendeld is, start Windows opnieuw op en installeer opnieuw.';
   @override
-  String update_install_running_process(
-          {required Object pid, required Object path}) =>
-      'Actief Fushi-proces: PID ${pid} - ${path}';
+  String update_install_running_process({
+    required Object pid,
+    required Object path,
+  }) => 'Actief Fushi-proces: PID ${pid} - ${path}';
   @override
   String update_install_success_message({required Object version}) =>
       'Fushi is bijgewerkt naar versie ${version}.';
@@ -86560,9 +87491,10 @@ class _StringsNl extends _StringsEn {
   String update_message({required Object version}) =>
       'Versie ${version} is beschikbaar.';
   @override
-  String update_network_failure(
-          {required Object host, required Object reason}) =>
-      'Kan ${host} niet bereiken: ${reason}';
+  String update_network_failure({
+    required Object host,
+    required Object reason,
+  }) => 'Kan ${host} niet bereiken: ${reason}';
   @override
   String get update_never_remind => 'Niet meer herinneren';
   @override
@@ -86824,9 +87756,10 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_jimaku_api_key_set => 'API-sleutel ingesteld';
   @override
-  String video_jimaku_batch_done(
-          {required Object done, required Object total}) =>
-      'Ondertitels opgehaald: ${done}/${total}';
+  String video_jimaku_batch_done({
+    required Object done,
+    required Object total,
+  }) => 'Ondertitels opgehaald: ${done}/${total}';
   @override
   String get video_jimaku_batch_download => 'Alles downloaden';
   @override
@@ -87347,9 +88280,10 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_shader_download_failed => 'Shader downloaden mislukt';
   @override
-  String video_shader_download_partial(
-          {required Object ok, required Object failed}) =>
-      '${ok} shader(s) gedownload, ${failed} mislukt';
+  String video_shader_download_partial({
+    required Object ok,
+    required Object failed,
+  }) => '${ok} shader(s) gedownload, ${failed} mislukt';
   @override
   String get video_shader_download_url => 'Downloaden via link';
   @override
@@ -87461,9 +88395,10 @@ class _StringsNl extends _StringsEn {
   String get video_subtitle_attach_playlist_hint =>
       'Open de afspeellijst om per aflevering een ondertitel te koppelen';
   @override
-  String video_subtitle_attached_to_video(
-          {required Object title, required Object count}) =>
-      'Ondertitel gekoppeld aan ${title} (${count} regels)';
+  String video_subtitle_attached_to_video({
+    required Object title,
+    required Object count,
+  }) => 'Ondertitel gekoppeld aan ${title} (${count} regels)';
   @override
   String get video_subtitle_auto_align => 'Ondertitel automatisch uitlijnen';
   @override
@@ -87690,13 +88625,14 @@ class _StringsNl extends _StringsEn {
   @override
   String get anki_dedup_report_title => 'Media-ontdubbelingsrapport';
   @override
-  String anki_dedup_report_body(
-          {required Object groups,
-          required Object removed,
-          required Object size,
-          required Object notes,
-          required Object models,
-          required Object skipped}) =>
+  String anki_dedup_report_body({
+    required Object groups,
+    required Object removed,
+    required Object size,
+    required Object notes,
+    required Object models,
+    required Object skipped,
+  }) =>
       '${groups} duplicaatgroepen; ${removed} extra kopieën (${size}); ${notes} notities en ${models} notetypes herschreven; ${skipped} overgeslagen.';
   @override
   String get anki_dedup_report_dry_note =>
@@ -87719,11 +88655,11 @@ class _StringsNl extends _StringsEn {
   String anki_dedup_plan_intro({required Object count, required Object size}) =>
       '${count} extra kopieën, ${size} terug te winnen. Eén kopie van elk bestand wordt bewaard en elke referentie wordt eerst omgeleid; niets wordt opnieuw gecodeerd.';
   @override
-  String anki_dedup_plan_entry(
-          {required Object file,
-          required Object size,
-          required Object canonical}) =>
-      'Verwijder ${file} (${size}) — bewaar ${canonical}';
+  String anki_dedup_plan_entry({
+    required Object file,
+    required Object size,
+    required Object canonical,
+  }) => 'Verwijder ${file} (${size}) — bewaar ${canonical}';
   @override
   String get anki_dedup_plan_delete => 'Deze bestanden verwijderen';
   @override
@@ -87784,9 +88720,10 @@ class _StringsNl extends _StringsEn {
   String manga_ocr_acceleration_status({required Object engine}) =>
       'OCR-versnelling: ${engine}';
   @override
-  String manga_ocr_acceleration_degraded(
-          {required Object engine, required Object reason}) =>
-      'GPU-versnelling niet beschikbaar, OCR draait op ${engine}: ${reason}';
+  String manga_ocr_acceleration_degraded({
+    required Object engine,
+    required Object reason,
+  }) => 'GPU-versnelling niet beschikbaar, OCR draait op ${engine}: ${reason}';
   @override
   String get media_tracking_status => 'Collectiestatus';
   @override
@@ -87831,8 +88768,10 @@ class _StringsNl extends _StringsEn {
   String anki_dedup_auto_done({required Object count, required Object size}) =>
       '${count} dubbele Anki-mediabestanden verwijderd, ${size} teruggewonnen';
   @override
-  String anki_lapis_backup_done_pruned(
-          {required Object path, required Object count}) =>
+  String anki_lapis_backup_done_pruned({
+    required Object path,
+    required Object count,
+  }) =>
       'Geback-upt naar ${path} (${count} oude back-ups verwijderd door het 90-dagen / bewaar-10 beleid)';
   @override
   String get game_audio_fallback_policy => 'Audioterugval';
@@ -87985,9 +88924,10 @@ class _StringsNl extends _StringsEn {
   String get stat_clear_all_game_message =>
       'Alle speeltijd en sessietellingen wissen? Je spelbibliotheek en activiteitstijdlijn worden bewaard. Dit kan niet ongedaan worden gemaakt.';
   @override
-  String batch_selection_stale_skipped(
-          {required Object m, required Object n}) =>
-      '${m} van ${n} geselecteerde items overgeslagen die niet meer bestaan';
+  String batch_selection_stale_skipped({
+    required Object m,
+    required Object n,
+  }) => '${m} van ${n} geselecteerde items overgeslagen die niet meer bestaan';
   @override
   String get game_text_thread_unset =>
       'Geen thread geselecteerd — kies er een om te beginnen met opnemen';
@@ -88044,22 +88984,26 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_jimaku_language_unknown => 'Taal niet gelabeld';
   @override
-  String video_jimaku_source_summary(
-          {required Object files,
-          required Object episodes,
-          required Object languages}) =>
+  String video_jimaku_source_summary({
+    required Object files,
+    required Object episodes,
+    required Object languages,
+  }) =>
       '${files} ondertitelbestanden · ${episodes} afleveringen · ${languages}';
   @override
-  String video_jimaku_episode_unlabeled(
-          {required Object episode, required Object count}) =>
+  String video_jimaku_episode_unlabeled({
+    required Object episode,
+    required Object count,
+  }) =>
       'Geen ondertitel gelabeld als aflevering ${episode}; ${count} ongelabelde bestanden kunnen nog overeenkomen';
   @override
   String video_jimaku_episode_unavailable({required Object episode}) =>
       'Geen ondertitel gevonden voor aflevering ${episode}';
   @override
-  String video_jimaku_episode_available(
-          {required Object count, required Object languages}) =>
-      '${count} ondertitels beschikbaar · ${languages}';
+  String video_jimaku_episode_available({
+    required Object count,
+    required Object languages,
+  }) => '${count} ondertitels beschikbaar · ${languages}';
   @override
   String get manga_online_source_disabled =>
       'Deze internetbron is uitgeschakeld. Schakel deze in bij Bronnen om de catalogus te bladeren.';
@@ -88079,13 +89023,15 @@ class _StringsNl extends _StringsEn {
   String anki_dedup_progress_scanning({required Object count}) =>
       'Mediamap scannen… (${count} bestanden gevonden)';
   @override
-  String anki_dedup_progress_hashing(
-          {required Object done, required Object total}) =>
-      'Bestanden van gelijke grootte vergelijken… (${done} / ${total})';
+  String anki_dedup_progress_hashing({
+    required Object done,
+    required Object total,
+  }) => 'Bestanden van gelijke grootte vergelijken… (${done} / ${total})';
   @override
-  String anki_dedup_progress_resolving(
-          {required Object done, required Object total}) =>
-      'Duplicaten verwerken… (${done} / ${total})';
+  String anki_dedup_progress_resolving({
+    required Object done,
+    required Object total,
+  }) => 'Duplicaten verwerken… (${done} / ${total})';
   @override
   String anki_dedup_progress_freed({required Object size}) =>
       '${size} tot nu toe vrijgemaakt';
@@ -88140,8 +89086,10 @@ class _StringsNl extends _StringsEn {
   @override
   String get sync_last_failed => 'Laatste sync: mislukt';
   @override
-  String anime_download_no_results_detail(
-          {required Object query, required Object filters}) =>
+  String anime_download_no_results_detail({
+    required Object query,
+    required Object filters,
+  }) =>
       'De service reageerde succesvol maar gaf 0 items terug. Zoekopdracht: ${query}; filters: ${filters}. Probeer een andere titel of versoepl de filters.';
   @override
   String get anime_download_streaming_ready =>
@@ -88325,11 +89273,12 @@ class _StringsNl extends _StringsEn {
   @override
   String scrape_all_item({required Object title}) => 'Verwerken: ${title}';
   @override
-  String scrape_all_done(
-          {required Object applied,
-          required Object review,
-          required Object skipped,
-          required Object failed}) =>
+  String scrape_all_done({
+    required Object applied,
+    required Object review,
+    required Object skipped,
+    required Object failed,
+  }) =>
       'Klaar: ${applied} toegepast, ${review} moet beoordeeld, ${skipped} overgeslagen, ${failed} mislukt';
   @override
   String get scrape_all_empty =>
@@ -88700,9 +89649,10 @@ class _StringsNl extends _StringsEn {
   String collection_episode_watched_at({required Object position}) =>
       'Bekeken tot ${position}';
   @override
-  String collection_episode_rename_partial(
-          {required Object n, required Object m}) =>
-      '${n} afleveringen hernoemd, ${m} mislukt';
+  String collection_episode_rename_partial({
+    required Object n,
+    required Object m,
+  }) => '${n} afleveringen hernoemd, ${m} mislukt';
   @override
   String get sync_err_browser_timeout =>
       'De browser heeft de autorisatie nooit geretourneerd. Probeer opnieuw en zorg dat je proxy 127.0.0.1 doorlaat.';
@@ -88743,9 +89693,10 @@ class _StringsNl extends _StringsEn {
   String get book_convert_blocked_source_missing =>
       'De bronbestanden zijn verdwenen van de schijf.';
   @override
-  String manga_online_retry_waiting(
-          {required Object attempt, required Object total}) =>
-      'Automatisch opnieuw proberen (${attempt}/${total})';
+  String manga_online_retry_waiting({
+    required Object attempt,
+    required Object total,
+  }) => 'Automatisch opnieuw proberen (${attempt}/${total})';
   @override
   String get manga_ocr_wizard_already_ocred =>
       'Dit deel heeft al OCR-gegevens op elke pagina. Opnieuw OCR uitvoeren zou deze overschrijven.';
@@ -88847,17 +89798,18 @@ class _StringsNl extends _StringsEn {
   String get video_source_scrape_write_images =>
       'Afbeeldingsbestanden schrijven';
   @override
-  String video_source_scrape_progress(
-          {required Object phase,
-          required Object current,
-          required Object total}) =>
-      '${phase} · ${current}/${total}';
+  String video_source_scrape_progress({
+    required Object phase,
+    required Object current,
+    required Object total,
+  }) => '${phase} · ${current}/${total}';
   @override
-  String video_source_scrape_last_summary(
-          {required Object status,
-          required Object succeeded,
-          required Object pending,
-          required Object failed}) =>
+  String video_source_scrape_last_summary({
+    required Object status,
+    required Object succeeded,
+    required Object pending,
+    required Object failed,
+  }) =>
       'Laatste scrape (${status}): ${succeeded} geslaagd, ${pending} wachtend, ${failed} mislukt';
   @override
   String get video_source_scrape_phase_planning => 'Plannen';
@@ -89077,9 +90029,10 @@ class _StringsNl extends _StringsEn {
   String migration_import_running({required Object batch}) =>
       '${batch} importeren…';
   @override
-  String migration_import_verify_failed(
-          {required Object batch, required Object detail}) =>
-      '${batch} verificatie mislukt en bewaard voor herexport: ${detail}';
+  String migration_import_verify_failed({
+    required Object batch,
+    required Object detail,
+  }) => '${batch} verificatie mislukt en bewaard voor herexport: ${detail}';
   @override
   String migration_import_counts_failed({required Object detail}) =>
       'Geïmporteerde gegevens zijn incompleet: ${detail}. Exporteer de ontbrekende onderdelen opnieuw vanuit Hibiki en importeer opnieuw.';
@@ -89104,11 +90057,11 @@ class _StringsNl extends _StringsEn {
   @override
   String get migration_import_permission_grant => 'Toestemming verlenen';
   @override
-  String migration_import_verifying(
-          {required Object batch,
-          required Object done,
-          required Object total}) =>
-      '${batch} verifiëren (${done}/${total})';
+  String migration_import_verifying({
+    required Object batch,
+    required Object done,
+    required Object total,
+  }) => '${batch} verifiëren (${done}/${total})';
   @override
   String get migration_import_verifying_hint =>
       'De archieven worden gecontroleerd. Grote bibliotheken kunnen enkele minuten duren.';
@@ -89284,11 +90237,11 @@ class _StringsNl extends _StringsEn {
   String video_subtitle_read_failed({required Object label}) =>
       'Kon dit ondertitelbestand niet lezen (beschadigd of leeg): ${label}';
   @override
-  String dict_downloading_size(
-          {required Object name,
-          required Object done,
-          required Object total}) =>
-      '${name} downloaden (${done} / ${total})';
+  String dict_downloading_size({
+    required Object name,
+    required Object done,
+    required Object total,
+  }) => '${name} downloaden (${done} / ${total})';
   @override
   String get video_subtitle_attach_book_missing =>
       'Deze video staat niet in je bibliotheek, dus de ondertitel is niet bijgevoegd';
@@ -89486,11 +90439,11 @@ class _StringsNl extends _StringsEn {
   String manga_import_batch_hint({required Object n}) =>
       'Deze map bevat ${n} deelbestanden; elk wordt als eigen boek geïmporteerd, vernoemd naar het bestand.';
   @override
-  String manga_import_batch_done(
-          {required Object imported,
-          required Object skipped,
-          required Object failed}) =>
-      '${imported} geïmporteerd, ${skipped} overgeslagen, ${failed} mislukt.';
+  String manga_import_batch_done({
+    required Object imported,
+    required Object skipped,
+    required Object failed,
+  }) => '${imported} geïmporteerd, ${skipped} overgeslagen, ${failed} mislukt.';
   @override
   String get srt_book_reimport => 'Opnieuw importeren';
   @override
@@ -89584,8 +90537,10 @@ class _StringsNl extends _StringsEn {
   @override
   String get update_release_page_open => 'Releasepagina';
   @override
-  String update_install_gal_hook_holder(
-          {required Object pid, required Object path}) =>
+  String update_install_gal_hook_holder({
+    required Object pid,
+    required Object path,
+  }) =>
       'Galgame-opnamecomponent in gebruik: PID ${pid} - ${path} (dit is het spel dat je speelt, of de opnamehost). Sluit het spel en werk dan opnieuw bij.';
   @override
   String get game_hook_reason_protocol_mismatch =>
@@ -90075,9 +91030,10 @@ class _StringsNl extends _StringsEn {
   String get manga_ocr_model_unused_by_engine =>
       'De huidige engine gebruikt deze lokale modelbestanden niet.';
   @override
-  String manga_ocr_download_total_progress(
-          {required Object done, required Object total}) =>
-      '${done} van ${total}';
+  String manga_ocr_download_total_progress({
+    required Object done,
+    required Object total,
+  }) => '${done} van ${total}';
   @override
   String get media_source_network_subtitle_video =>
       'WebDAV externe bibliotheek (streamt op locatie)';
@@ -90549,10 +91505,11 @@ class _StringsNl extends _StringsEn {
   String get manga_ocr_import_matched_nothing =>
       'Geen bruikbare modelbestanden herkend';
   @override
-  String manga_ocr_import_size_mismatch(
-          {required Object file,
-          required Object expected,
-          required Object actual}) =>
+  String manga_ocr_import_size_mismatch({
+    required Object file,
+    required Object expected,
+    required Object actual,
+  }) =>
       '${file} heeft de verkeerde grootte: verwacht ${expected}, gekregen ${actual}';
   @override
   String manga_ocr_import_still_missing({required Object count}) =>
@@ -90619,9 +91576,10 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_jimaku_search_failed => 'Zoeken naar ondertitels mislukt';
   @override
-  String video_subtitle_error_with_code(
-          {required Object msg, required Object code}) =>
-      '${msg} (HTTP ${code})';
+  String video_subtitle_error_with_code({
+    required Object msg,
+    required Object code,
+  }) => '${msg} (HTTP ${code})';
   @override
   String get manga_rescan_run => 'Geselecteerd gebied opnieuw herkennen';
   @override
@@ -90874,9 +91832,10 @@ class _StringsNl extends _StringsEn {
   @override
   String get manga_series_open_series => 'Werkpagina';
   @override
-  String manga_series_read_progress(
-          {required Object page, required Object total}) =>
-      'Gelezen tot pagina ${page} van ${total}';
+  String manga_series_read_progress({
+    required Object page,
+    required Object total,
+  }) => 'Gelezen tot pagina ${page} van ${total}';
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       'Gelezen tot pagina ${page}';
@@ -91162,13 +92121,15 @@ class _StringsNl extends _StringsEn {
   String web_video_mine_queued({required Object count}) =>
       'In wachtrij voor kaart aanmaken (${count} wachtend)';
   @override
-  String web_video_mine_queue_running(
-          {required Object done, required Object total}) =>
-      'Kaarten aanmaken ${done}/${total}…';
+  String web_video_mine_queue_running({
+    required Object done,
+    required Object total,
+  }) => 'Kaarten aanmaken ${done}/${total}…';
   @override
-  String web_video_mine_queue_finished(
-          {required Object ok, required Object failed}) =>
-      'Kaarten aangemaakt: ${ok}, mislukt: ${failed}';
+  String web_video_mine_queue_finished({
+    required Object ok,
+    required Object failed,
+  }) => 'Kaarten aangemaakt: ${ok}, mislukt: ${failed}';
   @override
   String get web_video_hosting_menu => 'Afspeelmodus';
   @override
@@ -91445,29 +92406,78 @@ class _StringsNl extends _StringsEn {
       'Waiting for matching in-game click';
   @override
   String get delete_choices_remember => 'Deze keuzes onthouden';
+  @override
+  String get network_proxy_mode_label => 'Proxy mode';
+  @override
+  String get network_proxy_mode_auto => 'Automatic';
+  @override
+  String get network_proxy_mode_auto_hint =>
+      'Use environment variables, then the enabled system proxy';
+  @override
+  String get network_proxy_mode_direct => 'Direct';
+  @override
+  String get network_proxy_mode_direct_hint => 'Disable proxy use for the app';
+  @override
+  String get network_proxy_mode_manual => 'Manual';
+  @override
+  String get network_proxy_mode_manual_hint =>
+      'Use the server and optional credentials below';
+  @override
+  String get network_proxy_manual_hint =>
+      'HTTP proxy server used by all public internet requests';
+  @override
+  String get network_proxy_username => 'Proxy username (optional)';
+  @override
+  String get network_proxy_password => 'Proxy password (optional)';
+  @override
+  String get storage_category_backups => 'Local backups';
+  @override
+  String storage_entry_backups_label({required Object n}) =>
+      '${n} backup archive(s)';
+  @override
+  String get storage_entry_delete_backups_confirm_body =>
+      'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+  @override
+  String get update_download_source_preference => 'Preferred download source';
+  @override
+  String get update_download_source_preference_hint =>
+      'The selected source is tried first; unavailable sources still fall back automatically.';
+  @override
+  String get update_download_source_auto => 'Automatic (recommended)';
+  @override
+  String get update_download_source_cloudflare => 'Cloudflare mirror';
+  @override
+  String get update_download_source_github => 'GitHub direct';
+  @override
+  String update_download_source_proxy({required Object host}) =>
+      'Proxy: ${host}';
 }
 
 // Path: <root>
 class _StringsPtBr extends _StringsEn {
   /// You can call this constructor and build your own translation instance of this locale.
   /// Constructing via the enum [AppLocale.build] is preferred.
-  _StringsPtBr.build(
-      {Map<String, Node>? overrides,
-      PluralResolver? cardinalResolver,
-      PluralResolver? ordinalResolver})
-      : assert(overrides == null,
-            'Set "translation_overrides: true" in order to enable this feature.'),
-        $meta = TranslationMetadata(
-          locale: AppLocale.ptBr,
-          overrides: overrides ?? {},
-          cardinalResolver: cardinalResolver,
-          ordinalResolver: ordinalResolver,
-        ),
-        super.build(
-            cardinalResolver: cardinalResolver,
-            ordinalResolver: ordinalResolver) {
+  _StringsPtBr.build({
+    Map<String, Node>? overrides,
+    PluralResolver? cardinalResolver,
+    PluralResolver? ordinalResolver,
+  }) : assert(
+         overrides == null,
+         'Set "translation_overrides: true" in order to enable this feature.',
+       ),
+       $meta = TranslationMetadata(
+         locale: AppLocale.ptBr,
+         overrides: overrides ?? {},
+         cardinalResolver: cardinalResolver,
+         ordinalResolver: ordinalResolver,
+       ),
+       super.build(
+         cardinalResolver: cardinalResolver,
+         ordinalResolver: ordinalResolver,
+       ) {
     super.$meta.setFlatMapFunction(
-        $meta.getTranslation); // copy base translations to super.$meta
+      $meta.getTranslation,
+    ); // copy base translations to super.$meta
     $meta.setFlatMapFunction(_flatMapFunction);
   }
 
@@ -91990,10 +93000,11 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get backup_import => 'Importar backup';
   @override
-  String backup_import_confirm(
-          {required Object date,
-          required Object bookCount,
-          required Object statsCount}) =>
+  String backup_import_confirm({
+    required Object date,
+    required Object bookCount,
+    required Object statsCount,
+  }) =>
       'Isto substituirá todos os dados atuais pelo backup de ${date}.\n\n${bookCount} livros, ${statsCount} registros de estatísticas.\n\nO app será reiniciado após a restauração.';
   @override
   String get backup_import_confirm_title => 'Restaurar backup?';
@@ -92010,8 +93021,10 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get backup_import_invalid => 'Arquivo de backup inválido';
   @override
-  String backup_import_merge_preview(
-          {required Object bookCount, required Object progressCount}) =>
+  String backup_import_merge_preview({
+    required Object bookCount,
+    required Object progressCount,
+  }) =>
       'A mesclagem adicionará ${bookCount} livros e atualizará ${progressCount} posições de leitura.';
   @override
   String get backup_import_mode_label => 'Modo de importação';
@@ -92311,12 +93324,12 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get changelog_prerelease => 'Pré-lançamento';
   @override
-  String chapter_progress(
-          {required Object idx,
-          required Object total,
-          required Object suffix,
-          required Object pct}) =>
-      'Capítulo ${idx} / ${total}${suffix} · ${pct}%';
+  String chapter_progress({
+    required Object idx,
+    required Object total,
+    required Object suffix,
+    required Object pct,
+  }) => 'Capítulo ${idx} / ${total}${suffix} · ${pct}%';
   @override
   String get clear => 'Limpar';
   @override
@@ -92407,9 +93420,10 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get collection_view_all => 'Ver tudo';
   @override
-  String collection_watched_progress(
-          {required Object done, required Object total}) =>
-      'Assistido ${done}/${total}';
+  String collection_watched_progress({
+    required Object done,
+    required Object total,
+  }) => 'Assistido ${done}/${total}';
   @override
   String get collection_word => 'Palavra';
   @override
@@ -92636,9 +93650,10 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get data_storage_migrate_failed_title => 'Migração de dados falhou';
   @override
-  String data_storage_migrate_overlay_progress(
-          {required Object copied, required Object total}) =>
-      'Copiando arquivos: ${copied} / ${total}';
+  String data_storage_migrate_overlay_progress({
+    required Object copied,
+    required Object total,
+  }) => 'Copiando arquivos: ${copied} / ${total}';
   @override
   String get data_storage_migrate_overlay_title => 'Movendo seus dados';
   @override
@@ -92655,8 +93670,10 @@ class _StringsPtBr extends _StringsEn {
   String get data_storage_restart_failed =>
       'Dados movidos, mas a reinicialização automática falhou. Reabra o Fushi manualmente.';
   @override
-  String db_downgrade_message(
-          {required Object dbVersion, required Object appVersion}) =>
+  String db_downgrade_message({
+    required Object dbVersion,
+    required Object appVersion,
+  }) =>
       'Este banco de dados foi criado por uma versão mais recente do Fushi (schema v${dbVersion}). Seu app atual é antigo demais (v${appVersion}). A abertura foi bloqueada para proteger seus dados. Atualize o app e tente novamente.';
   @override
   String get db_downgrade_title => 'Atualize o Fushi';
@@ -92826,11 +93843,11 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get dict_download_language => 'Seu idioma';
   @override
-  String dict_download_partial(
-          {required Object success,
-          required Object total,
-          required Object error}) =>
-      '${success} / ${total} OK. Falharam: ${error}';
+  String dict_download_partial({
+    required Object success,
+    required Object total,
+    required Object error,
+  }) => '${success} / ${total} OK. Falharam: ${error}';
   @override
   String get dict_download_select_title => 'Selecionar Dicionários';
   @override
@@ -92862,18 +93879,21 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get dict_update_latest => 'Já está atualizado.';
   @override
-  String dict_update_name_mismatch_body(
-          {required Object incoming, required Object existing}) =>
+  String dict_update_name_mismatch_body({
+    required Object incoming,
+    required Object existing,
+  }) =>
       'O arquivo selecionado é "${incoming}", mas você está atualizando "${existing}". Substituir mesmo assim?';
   @override
   String get dict_update_name_mismatch_title => 'Os nomes não coincidem';
   @override
   String get dict_update_none => 'Todos os dicionários estão atualizados.';
   @override
-  String dict_update_summary(
-          {required Object updated,
-          required Object current,
-          required Object failed}) =>
+  String dict_update_summary({
+    required Object updated,
+    required Object current,
+    required Object failed,
+  }) =>
       '${updated} atualizado(s), ${current} atualizado(s), ${failed} com falha.';
   @override
   String get dict_update_tooltip => 'Atualizar dicionário';
@@ -92963,8 +93983,10 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get download_subscription_check_now => 'Verificar agora';
   @override
-  String download_subscription_choice_hint(
-          {required Object group, required Object resolution}) =>
+  String download_subscription_choice_hint({
+    required Object group,
+    required Object resolution,
+  }) =>
       'Seguir ${group} · ${resolution}. Novos lançamentos de episódio único serão enfileirados.';
   @override
   String get download_subscription_created =>
@@ -93109,9 +94131,10 @@ class _StringsPtBr extends _StringsEn {
   @override
   String favorites({required Object n}) => 'Favoritos (${n})';
   @override
-  String field_fallback_used(
-          {required Object field, required Object secondField}) =>
-      'O campo ${field} usou ${secondField} como termo de busca alternativo.';
+  String field_fallback_used({
+    required Object field,
+    required Object secondField,
+  }) => 'O campo ${field} usou ${secondField} como termo de busca alternativo.';
   @override
   String file_count({required Object count}) => '${count} arquivos';
   @override
@@ -93840,12 +94863,12 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get game_waiting_for_text => 'Aguardando texto';
   @override
-  String game_waveform_range_label(
-          {required Object start,
-          required Object end,
-          required Object duration,
-          required Object total}) =>
-      '${start} - ${end} (selecionado ${duration} / total ${total})';
+  String game_waveform_range_label({
+    required Object start,
+    required Object end,
+    required Object duration,
+    required Object total,
+  }) => '${start} - ${end} (selecionado ${duration} / total ${total})';
   @override
   String get game_waveform_select_title => 'Selecionar intervalo de áudio';
   @override
@@ -94116,9 +95139,10 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get jump_to_char => 'Ir para o caractere';
   @override
-  String jump_to_char_current(
-          {required Object current, required Object total}) =>
-      'Atual: ${current} / ${total}';
+  String jump_to_char_current({
+    required Object current,
+    required Object total,
+  }) => 'Atual: ${current} / ${total}';
   @override
   String get jump_to_char_hint => 'Digite a posição do caractere…';
   @override
@@ -94296,9 +95320,10 @@ class _StringsPtBr extends _StringsEn {
   String get manga_ocr_wizard_no_images =>
       'Nenhuma imagem encontrada nesta pasta.';
   @override
-  String manga_ocr_wizard_page_progress(
-          {required Object done, required Object total}) =>
-      'Página ${done} / ${total}';
+  String manga_ocr_wizard_page_progress({
+    required Object done,
+    required Object total,
+  }) => 'Página ${done} / ${total}';
   @override
   String get manga_ocr_wizard_pick_folder => 'Escolher pasta de imagens';
   @override
@@ -94324,9 +95349,10 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get manga_online_queue_added => 'Adicionado à fila de download';
   @override
-  String manga_online_queue_progress(
-          {required Object done, required Object total}) =>
-      'Volume ${done} / ${total}';
+  String manga_online_queue_progress({
+    required Object done,
+    required Object total,
+  }) => 'Volume ${done} / ${total}';
   @override
   String get manga_online_queue_section => 'Downloads do catálogo de mangá';
   @override
@@ -94359,9 +95385,10 @@ class _StringsPtBr extends _StringsEn {
   String get manga_remote_ocr_unsupported =>
       'O host pareado não suporta OCR de mangá.';
   @override
-  String manga_remote_ocr_uploading(
-          {required Object done, required Object total}) =>
-      'Enviando páginas ${done} / ${total}…';
+  String manga_remote_ocr_uploading({
+    required Object done,
+    required Object total,
+  }) => 'Enviando páginas ${done} / ${total}…';
   @override
   String get margin_bottom => 'Margem inferior';
   @override
@@ -94875,15 +95902,17 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get audiobook_rematch_auto_match => 'Correspondência Automática';
   @override
-  String audiobook_rematch_auto_picked(
-          {required Object window, required Object pct}) =>
-      'Selecionado automaticamente ${window} (acerto ${pct}%)';
+  String audiobook_rematch_auto_picked({
+    required Object window,
+    required Object pct,
+  }) => 'Selecionado automaticamente ${window} (acerto ${pct}%)';
   @override
   String audiobook_rematch_default_value({required Object n}) => 'Padrão ${n}';
   @override
-  String audiobook_rematch_health_label(
-          {required Object pct, required Object detail}) =>
-      '${pct} correspondência — ${detail}';
+  String audiobook_rematch_health_label({
+    required Object pct,
+    required Object detail,
+  }) => '${pct} correspondência — ${detail}';
   @override
   String get audiobook_rematch_matching => 'Correspondendo...';
   @override
@@ -94901,9 +95930,10 @@ class _StringsPtBr extends _StringsEn {
   String audiobook_rematch_failed({required Object error}) =>
       'Falha na correspondência: ${error}';
   @override
-  String audiobook_rematch_result(
-          {required Object pct, required Object window}) =>
-      'Recorrespondido: ${pct}% (janela: ${window})';
+  String audiobook_rematch_result({
+    required Object pct,
+    required Object window,
+  }) => 'Recorrespondido: ${pct}% (janela: ${window})';
   @override
   String get audiobook_rematch_search_window => 'Janela de Busca';
   @override
@@ -96115,9 +97145,10 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get update_download_resumed => 'retomado';
   @override
-  String update_download_size(
-          {required Object received, required Object total}) =>
-      'Baixado: ${received} / ${total}';
+  String update_download_size({
+    required Object received,
+    required Object total,
+  }) => 'Baixado: ${received} / ${total}';
   @override
   String update_download_source({required Object source}) => 'Fonte: ${source}';
   @override
@@ -96131,13 +97162,15 @@ class _StringsPtBr extends _StringsEn {
   String update_install_current_executable({required Object path}) =>
       'Executável em execução: ${path}';
   @override
-  String update_install_deletefile_failure(
-          {required Object path, required Object code}) =>
-      'O instalador não conseguiu substituir ${path} (código ${code})';
+  String update_install_deletefile_failure({
+    required Object path,
+    required Object code,
+  }) => 'O instalador não conseguiu substituir ${path} (código ${code})';
   @override
-  String update_install_detected_location(
-          {required Object source, required Object path}) =>
-      'Local de instalação detectado (${source}): ${path}';
+  String update_install_detected_location({
+    required Object source,
+    required Object path,
+  }) => 'Local de instalação detectado (${source}): ${path}';
   @override
   String update_install_failure_summary({required Object summary}) =>
       'Motivo: ${summary}';
@@ -96160,9 +97193,10 @@ class _StringsPtBr extends _StringsEn {
   String update_install_launcher_pid({required Object pid}) =>
       'PID do iniciador da atualização: ${pid}';
   @override
-  String update_install_libmpv_holder(
-          {required Object pid, required Object path}) =>
-      'Processo que retém o libmpv: PID ${pid} - ${path}';
+  String update_install_libmpv_holder({
+    required Object pid,
+    required Object path,
+  }) => 'Processo que retém o libmpv: PID ${pid} - ${path}';
   @override
   String get update_install_log_not_observed =>
       'O log do instalador não foi criado durante a verificação pós-início.';
@@ -96198,9 +97232,10 @@ class _StringsPtBr extends _StringsEn {
   String get update_install_restart_windows_hint =>
       'Se os processos listados foram fechados, mas o libmpv-2.dll ainda estiver bloqueado, reinicie o Windows e instale novamente.';
   @override
-  String update_install_running_process(
-          {required Object pid, required Object path}) =>
-      'Processo do Fushi em execução: PID ${pid} - ${path}';
+  String update_install_running_process({
+    required Object pid,
+    required Object path,
+  }) => 'Processo do Fushi em execução: PID ${pid} - ${path}';
   @override
   String update_install_success_message({required Object version}) =>
       'O Fushi foi atualizado para a versão ${version}.';
@@ -96218,9 +97253,10 @@ class _StringsPtBr extends _StringsEn {
   String update_message({required Object version}) =>
       'A versão ${version} está disponível.';
   @override
-  String update_network_failure(
-          {required Object host, required Object reason}) =>
-      'Não foi possível conectar a ${host}: ${reason}';
+  String update_network_failure({
+    required Object host,
+    required Object reason,
+  }) => 'Não foi possível conectar a ${host}: ${reason}';
   @override
   String get update_never_remind => 'Não lembrar novamente';
   @override
@@ -96486,9 +97522,10 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_jimaku_api_key_set => 'API key configurada';
   @override
-  String video_jimaku_batch_done(
-          {required Object done, required Object total}) =>
-      'Legendas obtidas: ${done}/${total}';
+  String video_jimaku_batch_done({
+    required Object done,
+    required Object total,
+  }) => 'Legendas obtidas: ${done}/${total}';
   @override
   String get video_jimaku_batch_download => 'Baixar tudo';
   @override
@@ -97015,9 +98052,10 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_shader_download_failed => 'Falha ao baixar o shader';
   @override
-  String video_shader_download_partial(
-          {required Object ok, required Object failed}) =>
-      '${ok} shader(s) baixado(s), ${failed} com falha';
+  String video_shader_download_partial({
+    required Object ok,
+    required Object failed,
+  }) => '${ok} shader(s) baixado(s), ${failed} com falha';
   @override
   String get video_shader_download_url => 'Baixar de um link';
   @override
@@ -97130,9 +98168,10 @@ class _StringsPtBr extends _StringsEn {
   String get video_subtitle_attach_playlist_hint =>
       'Abra a playlist para anexar uma legenda por episódio';
   @override
-  String video_subtitle_attached_to_video(
-          {required Object title, required Object count}) =>
-      'Legenda anexada a ${title} (${count} linhas)';
+  String video_subtitle_attached_to_video({
+    required Object title,
+    required Object count,
+  }) => 'Legenda anexada a ${title} (${count} linhas)';
   @override
   String get video_subtitle_auto_align => 'Alinhar legenda';
   @override
@@ -97359,13 +98398,14 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get anki_dedup_report_title => 'Relatório de deduplicação de mídia';
   @override
-  String anki_dedup_report_body(
-          {required Object groups,
-          required Object removed,
-          required Object size,
-          required Object notes,
-          required Object models,
-          required Object skipped}) =>
+  String anki_dedup_report_body({
+    required Object groups,
+    required Object removed,
+    required Object size,
+    required Object notes,
+    required Object models,
+    required Object skipped,
+  }) =>
       '${groups} grupos duplicados; ${removed} cópias extras (${size}); ${notes} notas e ${models} tipos de nota reescritos; ${skipped} ignorados.';
   @override
   String get anki_dedup_report_dry_note =>
@@ -97388,11 +98428,11 @@ class _StringsPtBr extends _StringsEn {
   String anki_dedup_plan_intro({required Object count, required Object size}) =>
       '${count} cópias extras, ${size} recuperável. Uma cópia de cada arquivo é mantida e toda referência é redirecionada primeiro; nada é recodificado.';
   @override
-  String anki_dedup_plan_entry(
-          {required Object file,
-          required Object size,
-          required Object canonical}) =>
-      'Excluir ${file} (${size}) - mantendo ${canonical}';
+  String anki_dedup_plan_entry({
+    required Object file,
+    required Object size,
+    required Object canonical,
+  }) => 'Excluir ${file} (${size}) - mantendo ${canonical}';
   @override
   String get anki_dedup_plan_delete => 'Excluir estes arquivos';
   @override
@@ -97453,9 +98493,10 @@ class _StringsPtBr extends _StringsEn {
   String manga_ocr_acceleration_status({required Object engine}) =>
       'Aceleração de OCR: ${engine}';
   @override
-  String manga_ocr_acceleration_degraded(
-          {required Object engine, required Object reason}) =>
-      'Aceleração GPU indisponível, executando OCR em ${engine}: ${reason}';
+  String manga_ocr_acceleration_degraded({
+    required Object engine,
+    required Object reason,
+  }) => 'Aceleração GPU indisponível, executando OCR em ${engine}: ${reason}';
   @override
   String get media_tracking_status => 'Status da coleção';
   @override
@@ -97500,8 +98541,10 @@ class _StringsPtBr extends _StringsEn {
   String anki_dedup_auto_done({required Object count, required Object size}) =>
       'Removidos ${count} arquivos de mídia duplicados do Anki, ${size} recuperado';
   @override
-  String anki_lapis_backup_done_pruned(
-          {required Object path, required Object count}) =>
+  String anki_lapis_backup_done_pruned({
+    required Object path,
+    required Object count,
+  }) =>
       'Backup salvo em ${path} (${count} backups antigos removidos pela política de 90 dias / manter 10)';
   @override
   String get game_audio_fallback_policy => 'Reserva de áudio';
@@ -97654,9 +98697,10 @@ class _StringsPtBr extends _StringsEn {
   String get stat_clear_all_game_message =>
       'Limpar todo o tempo de jogo e contagem de sessões? Sua biblioteca de jogos e timeline de atividades são mantidas. Isso não pode ser desfeito.';
   @override
-  String batch_selection_stale_skipped(
-          {required Object m, required Object n}) =>
-      'Ignorados ${m} de ${n} itens selecionados que não existem mais';
+  String batch_selection_stale_skipped({
+    required Object m,
+    required Object n,
+  }) => 'Ignorados ${m} de ${n} itens selecionados que não existem mais';
   @override
   String get game_text_thread_unset =>
       'Nenhuma thread selecionada — escolha uma para começar a capturar';
@@ -97713,22 +98757,25 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_jimaku_language_unknown => 'Idioma não identificado';
   @override
-  String video_jimaku_source_summary(
-          {required Object files,
-          required Object episodes,
-          required Object languages}) =>
-      '${files} arquivos de legenda · ${episodes} episódios · ${languages}';
+  String video_jimaku_source_summary({
+    required Object files,
+    required Object episodes,
+    required Object languages,
+  }) => '${files} arquivos de legenda · ${episodes} episódios · ${languages}';
   @override
-  String video_jimaku_episode_unlabeled(
-          {required Object episode, required Object count}) =>
+  String video_jimaku_episode_unlabeled({
+    required Object episode,
+    required Object count,
+  }) =>
       'Nenhuma legenda rotulada como episódio ${episode}; ${count} arquivos sem rótulo podem corresponder';
   @override
   String video_jimaku_episode_unavailable({required Object episode}) =>
       'Nenhuma legenda encontrada para o episódio ${episode}';
   @override
-  String video_jimaku_episode_available(
-          {required Object count, required Object languages}) =>
-      '${count} legendas disponíveis · ${languages}';
+  String video_jimaku_episode_available({
+    required Object count,
+    required Object languages,
+  }) => '${count} legendas disponíveis · ${languages}';
   @override
   String get manga_online_source_disabled =>
       'Esta fonte online está desativada. Ative-a em Fontes para navegar no catálogo.';
@@ -97749,13 +98796,15 @@ class _StringsPtBr extends _StringsEn {
   String anki_dedup_progress_scanning({required Object count}) =>
       'Verificando pasta de mídia… (${count} arquivos encontrados)';
   @override
-  String anki_dedup_progress_hashing(
-          {required Object done, required Object total}) =>
-      'Comparando arquivos do mesmo tamanho… (${done} / ${total})';
+  String anki_dedup_progress_hashing({
+    required Object done,
+    required Object total,
+  }) => 'Comparando arquivos do mesmo tamanho… (${done} / ${total})';
   @override
-  String anki_dedup_progress_resolving(
-          {required Object done, required Object total}) =>
-      'Processando duplicatas… (${done} / ${total})';
+  String anki_dedup_progress_resolving({
+    required Object done,
+    required Object total,
+  }) => 'Processando duplicatas… (${done} / ${total})';
   @override
   String anki_dedup_progress_freed({required Object size}) =>
       '${size} liberados até agora';
@@ -97810,8 +98859,10 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get sync_last_failed => 'Última sincronização: falhou';
   @override
-  String anime_download_no_results_detail(
-          {required Object query, required Object filters}) =>
+  String anime_download_no_results_detail({
+    required Object query,
+    required Object filters,
+  }) =>
       'O serviço respondeu com sucesso mas retornou 0 itens. Consulta: ${query}; filtros: ${filters}. Tente outro título ou reduza os filtros.';
   @override
   String get anime_download_streaming_ready =>
@@ -98002,11 +99053,12 @@ class _StringsPtBr extends _StringsEn {
   @override
   String scrape_all_item({required Object title}) => 'Processando: ${title}';
   @override
-  String scrape_all_done(
-          {required Object applied,
-          required Object review,
-          required Object skipped,
-          required Object failed}) =>
+  String scrape_all_done({
+    required Object applied,
+    required Object review,
+    required Object skipped,
+    required Object failed,
+  }) =>
       'Concluído: ${applied} aplicados, ${review} precisam de revisão, ${skipped} ignorados, ${failed} falharam';
   @override
   String get scrape_all_empty => 'Não há itens para buscar nesta biblioteca.';
@@ -98374,9 +99426,10 @@ class _StringsPtBr extends _StringsEn {
   String collection_episode_watched_at({required Object position}) =>
       'Assistido até ${position}';
   @override
-  String collection_episode_rename_partial(
-          {required Object n, required Object m}) =>
-      'Renomeados ${n} episódios, ${m} falharam';
+  String collection_episode_rename_partial({
+    required Object n,
+    required Object m,
+  }) => 'Renomeados ${n} episódios, ${m} falharam';
   @override
   String get sync_err_browser_timeout =>
       'O navegador nunca retornou a autorização. Tente novamente e certifique-se de que seu proxy permite 127.0.0.1.';
@@ -98418,9 +99471,10 @@ class _StringsPtBr extends _StringsEn {
   String get book_convert_blocked_source_missing =>
       'Os arquivos fonte sumiram do disco.';
   @override
-  String manga_online_retry_waiting(
-          {required Object attempt, required Object total}) =>
-      'Tentando novamente automaticamente (${attempt}/${total})';
+  String manga_online_retry_waiting({
+    required Object attempt,
+    required Object total,
+  }) => 'Tentando novamente automaticamente (${attempt}/${total})';
   @override
   String get manga_ocr_wizard_already_ocred =>
       'Este volume já tem dados de OCR em todas as páginas. Executar OCR novamente sobrescreveria.';
@@ -98523,17 +99577,18 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_source_scrape_write_images => 'Gravar arquivos de imagem';
   @override
-  String video_source_scrape_progress(
-          {required Object phase,
-          required Object current,
-          required Object total}) =>
-      '${phase} · ${current}/${total}';
+  String video_source_scrape_progress({
+    required Object phase,
+    required Object current,
+    required Object total,
+  }) => '${phase} · ${current}/${total}';
   @override
-  String video_source_scrape_last_summary(
-          {required Object status,
-          required Object succeeded,
-          required Object pending,
-          required Object failed}) =>
+  String video_source_scrape_last_summary({
+    required Object status,
+    required Object succeeded,
+    required Object pending,
+    required Object failed,
+  }) =>
       'Última busca (${status}): ${succeeded} bem-sucedidos, ${pending} pendentes, ${failed} falharam';
   @override
   String get video_source_scrape_phase_planning => 'Planejando';
@@ -98751,8 +99806,10 @@ class _StringsPtBr extends _StringsEn {
   String migration_import_running({required Object batch}) =>
       'Importando ${batch}…';
   @override
-  String migration_import_verify_failed(
-          {required Object batch, required Object detail}) =>
+  String migration_import_verify_failed({
+    required Object batch,
+    required Object detail,
+  }) =>
       '${batch} falhou na verificação e foi mantido para reexportação: ${detail}';
   @override
   String migration_import_counts_failed({required Object detail}) =>
@@ -98779,11 +99836,11 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get migration_import_permission_grant => 'Conceder permissão';
   @override
-  String migration_import_verifying(
-          {required Object batch,
-          required Object done,
-          required Object total}) =>
-      'Verificando ${batch} (${done}/${total})';
+  String migration_import_verifying({
+    required Object batch,
+    required Object done,
+    required Object total,
+  }) => 'Verificando ${batch} (${done}/${total})';
   @override
   String get migration_import_verifying_hint =>
       'Verificando checksums dos arquivos. Bibliotecas grandes podem levar vários minutos.';
@@ -98962,11 +100019,11 @@ class _StringsPtBr extends _StringsEn {
   String video_subtitle_read_failed({required Object label}) =>
       'Não foi possível ler este arquivo de legenda (danificado ou vazio): ${label}';
   @override
-  String dict_downloading_size(
-          {required Object name,
-          required Object done,
-          required Object total}) =>
-      'Baixando ${name} (${done} / ${total})';
+  String dict_downloading_size({
+    required Object name,
+    required Object done,
+    required Object total,
+  }) => 'Baixando ${name} (${done} / ${total})';
   @override
   String get video_subtitle_attach_book_missing =>
       'Este vídeo não está na sua biblioteca, então a legenda não foi anexada';
@@ -99166,11 +100223,11 @@ class _StringsPtBr extends _StringsEn {
   String manga_import_batch_hint({required Object n}) =>
       'Esta pasta contém ${n} arquivos de volume; cada um é importado como seu próprio livro, nomeado pelo arquivo.';
   @override
-  String manga_import_batch_done(
-          {required Object imported,
-          required Object skipped,
-          required Object failed}) =>
-      'Importados ${imported}, ignorados ${skipped}, falharam ${failed}.';
+  String manga_import_batch_done({
+    required Object imported,
+    required Object skipped,
+    required Object failed,
+  }) => 'Importados ${imported}, ignorados ${skipped}, falharam ${failed}.';
   @override
   String get srt_book_reimport => 'Reimportar';
   @override
@@ -99264,8 +100321,10 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get update_release_page_open => 'Página de lançamento';
   @override
-  String update_install_gal_hook_holder(
-          {required Object pid, required Object path}) =>
+  String update_install_gal_hook_holder({
+    required Object pid,
+    required Object path,
+  }) =>
       'Componente de captura de galgame em uso: PID ${pid} - ${path} (este é o jogo que você está jogando, ou seu host de captura). Feche o jogo e atualize novamente.';
   @override
   String get game_hook_reason_protocol_mismatch =>
@@ -99763,9 +100822,10 @@ class _StringsPtBr extends _StringsEn {
   String get manga_ocr_model_unused_by_engine =>
       'O motor atual não usa estes arquivos de modelo locais.';
   @override
-  String manga_ocr_download_total_progress(
-          {required Object done, required Object total}) =>
-      '${done} de ${total}';
+  String manga_ocr_download_total_progress({
+    required Object done,
+    required Object total,
+  }) => '${done} de ${total}';
   @override
   String get media_source_network_subtitle_video =>
       'Biblioteca remota WebDAV (streaming no local)';
@@ -100245,10 +101305,11 @@ class _StringsPtBr extends _StringsEn {
   String get manga_ocr_import_matched_nothing =>
       'Nenhum arquivo de modelo utilizável foi reconhecido';
   @override
-  String manga_ocr_import_size_mismatch(
-          {required Object file,
-          required Object expected,
-          required Object actual}) =>
+  String manga_ocr_import_size_mismatch({
+    required Object file,
+    required Object expected,
+    required Object actual,
+  }) =>
       '${file} está com o tamanho errado: esperado ${expected}, obtido ${actual}';
   @override
   String manga_ocr_import_still_missing({required Object count}) =>
@@ -100315,9 +101376,10 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_jimaku_search_failed => 'Falha na busca de legendas';
   @override
-  String video_subtitle_error_with_code(
-          {required Object msg, required Object code}) =>
-      '${msg} (HTTP ${code})';
+  String video_subtitle_error_with_code({
+    required Object msg,
+    required Object code,
+  }) => '${msg} (HTTP ${code})';
   @override
   String get manga_rescan_run => 'Reconhecer novamente a área selecionada';
   @override
@@ -100572,9 +101634,10 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get manga_series_open_series => 'Página da obra';
   @override
-  String manga_series_read_progress(
-          {required Object page, required Object total}) =>
-      'Lido até a página ${page} de ${total}';
+  String manga_series_read_progress({
+    required Object page,
+    required Object total,
+  }) => 'Lido até a página ${page} de ${total}';
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       'Lido até a página ${page}';
@@ -100859,13 +101922,15 @@ class _StringsPtBr extends _StringsEn {
   String web_video_mine_queued({required Object count}) =>
       'Na fila para criar cartões (${count} pendentes)';
   @override
-  String web_video_mine_queue_running(
-          {required Object done, required Object total}) =>
-      'Criando cartões ${done}/${total}…';
+  String web_video_mine_queue_running({
+    required Object done,
+    required Object total,
+  }) => 'Criando cartões ${done}/${total}…';
   @override
-  String web_video_mine_queue_finished(
-          {required Object ok, required Object failed}) =>
-      'Cartões criados: ${ok}, falhas: ${failed}';
+  String web_video_mine_queue_finished({
+    required Object ok,
+    required Object failed,
+  }) => 'Cartões criados: ${ok}, falhas: ${failed}';
   @override
   String get web_video_hosting_menu => 'Modo de reprodução';
   @override
@@ -101143,29 +102208,78 @@ class _StringsPtBr extends _StringsEn {
       'Waiting for matching in-game click';
   @override
   String get delete_choices_remember => 'Lembrar estas escolhas';
+  @override
+  String get network_proxy_mode_label => 'Proxy mode';
+  @override
+  String get network_proxy_mode_auto => 'Automatic';
+  @override
+  String get network_proxy_mode_auto_hint =>
+      'Use environment variables, then the enabled system proxy';
+  @override
+  String get network_proxy_mode_direct => 'Direct';
+  @override
+  String get network_proxy_mode_direct_hint => 'Disable proxy use for the app';
+  @override
+  String get network_proxy_mode_manual => 'Manual';
+  @override
+  String get network_proxy_mode_manual_hint =>
+      'Use the server and optional credentials below';
+  @override
+  String get network_proxy_manual_hint =>
+      'HTTP proxy server used by all public internet requests';
+  @override
+  String get network_proxy_username => 'Proxy username (optional)';
+  @override
+  String get network_proxy_password => 'Proxy password (optional)';
+  @override
+  String get storage_category_backups => 'Local backups';
+  @override
+  String storage_entry_backups_label({required Object n}) =>
+      '${n} backup archive(s)';
+  @override
+  String get storage_entry_delete_backups_confirm_body =>
+      'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+  @override
+  String get update_download_source_preference => 'Preferred download source';
+  @override
+  String get update_download_source_preference_hint =>
+      'The selected source is tried first; unavailable sources still fall back automatically.';
+  @override
+  String get update_download_source_auto => 'Automatic (recommended)';
+  @override
+  String get update_download_source_cloudflare => 'Cloudflare mirror';
+  @override
+  String get update_download_source_github => 'GitHub direct';
+  @override
+  String update_download_source_proxy({required Object host}) =>
+      'Proxy: ${host}';
 }
 
 // Path: <root>
 class _StringsRu extends _StringsEn {
   /// You can call this constructor and build your own translation instance of this locale.
   /// Constructing via the enum [AppLocale.build] is preferred.
-  _StringsRu.build(
-      {Map<String, Node>? overrides,
-      PluralResolver? cardinalResolver,
-      PluralResolver? ordinalResolver})
-      : assert(overrides == null,
-            'Set "translation_overrides: true" in order to enable this feature.'),
-        $meta = TranslationMetadata(
-          locale: AppLocale.ru,
-          overrides: overrides ?? {},
-          cardinalResolver: cardinalResolver,
-          ordinalResolver: ordinalResolver,
-        ),
-        super.build(
-            cardinalResolver: cardinalResolver,
-            ordinalResolver: ordinalResolver) {
+  _StringsRu.build({
+    Map<String, Node>? overrides,
+    PluralResolver? cardinalResolver,
+    PluralResolver? ordinalResolver,
+  }) : assert(
+         overrides == null,
+         'Set "translation_overrides: true" in order to enable this feature.',
+       ),
+       $meta = TranslationMetadata(
+         locale: AppLocale.ru,
+         overrides: overrides ?? {},
+         cardinalResolver: cardinalResolver,
+         ordinalResolver: ordinalResolver,
+       ),
+       super.build(
+         cardinalResolver: cardinalResolver,
+         ordinalResolver: ordinalResolver,
+       ) {
     super.$meta.setFlatMapFunction(
-        $meta.getTranslation); // copy base translations to super.$meta
+      $meta.getTranslation,
+    ); // copy base translations to super.$meta
     $meta.setFlatMapFunction(_flatMapFunction);
   }
 
@@ -101680,10 +102794,11 @@ class _StringsRu extends _StringsEn {
   @override
   String get backup_import => 'Импорт копии';
   @override
-  String backup_import_confirm(
-          {required Object date,
-          required Object bookCount,
-          required Object statsCount}) =>
+  String backup_import_confirm({
+    required Object date,
+    required Object bookCount,
+    required Object statsCount,
+  }) =>
       'Это заменит все текущие данные копией от ${date}.\n\nКниг: ${bookCount}, записей статистики: ${statsCount}.\n\nПосле восстановления приложение перезапустится.';
   @override
   String get backup_import_confirm_title => 'Восстановить копию?';
@@ -101701,8 +102816,10 @@ class _StringsRu extends _StringsEn {
   @override
   String get backup_import_invalid => 'Недопустимый файл резервной копии';
   @override
-  String backup_import_merge_preview(
-          {required Object bookCount, required Object progressCount}) =>
+  String backup_import_merge_preview({
+    required Object bookCount,
+    required Object progressCount,
+  }) =>
       'Слияние добавит ${bookCount} книг и обновит ${progressCount} позиций чтения.';
   @override
   String get backup_import_mode_label => 'Режим импорта';
@@ -102002,12 +103119,12 @@ class _StringsRu extends _StringsEn {
   @override
   String get changelog_prerelease => 'Предварительный выпуск';
   @override
-  String chapter_progress(
-          {required Object idx,
-          required Object total,
-          required Object suffix,
-          required Object pct}) =>
-      'Глава ${idx} / ${total}${suffix} · ${pct}%';
+  String chapter_progress({
+    required Object idx,
+    required Object total,
+    required Object suffix,
+    required Object pct,
+  }) => 'Глава ${idx} / ${total}${suffix} · ${pct}%';
   @override
   String get clear => 'Очистить';
   @override
@@ -102097,9 +103214,10 @@ class _StringsRu extends _StringsEn {
   @override
   String get collection_view_all => 'Показать все';
   @override
-  String collection_watched_progress(
-          {required Object done, required Object total}) =>
-      'Просмотрено ${done}/${total}';
+  String collection_watched_progress({
+    required Object done,
+    required Object total,
+  }) => 'Просмотрено ${done}/${total}';
   @override
   String get collection_word => 'Слово';
   @override
@@ -102327,9 +103445,10 @@ class _StringsRu extends _StringsEn {
   @override
   String get data_storage_migrate_failed_title => 'Перенос данных не удался';
   @override
-  String data_storage_migrate_overlay_progress(
-          {required Object copied, required Object total}) =>
-      'Копирование файлов: ${copied} / ${total}';
+  String data_storage_migrate_overlay_progress({
+    required Object copied,
+    required Object total,
+  }) => 'Копирование файлов: ${copied} / ${total}';
   @override
   String get data_storage_migrate_overlay_title => 'Перенос данных';
   @override
@@ -102346,8 +103465,10 @@ class _StringsRu extends _StringsEn {
   String get data_storage_restart_failed =>
       'Данные перенесены, но автоматический перезапуск не удался. Пожалуйста, откройте Fushi вручную.';
   @override
-  String db_downgrade_message(
-          {required Object dbVersion, required Object appVersion}) =>
+  String db_downgrade_message({
+    required Object dbVersion,
+    required Object appVersion,
+  }) =>
       'Эта база данных создана более новой версией Fushi (схема v${dbVersion}). Текущая версия приложения слишком старая (v${appVersion}). Открытие заблокировано для защиты данных. Обновите приложение и повторите попытку.';
   @override
   String get db_downgrade_title => 'Обновите Fushi';
@@ -102518,11 +103639,11 @@ class _StringsRu extends _StringsEn {
   @override
   String get dict_download_language => 'Ваш язык';
   @override
-  String dict_download_partial(
-          {required Object success,
-          required Object total,
-          required Object error}) =>
-      '${success} / ${total} успешно. Ошибок: ${error}';
+  String dict_download_partial({
+    required Object success,
+    required Object total,
+    required Object error,
+  }) => '${success} / ${total} успешно. Ошибок: ${error}';
   @override
   String get dict_download_select_title => 'Выбрать словари';
   @override
@@ -102553,19 +103674,21 @@ class _StringsRu extends _StringsEn {
   @override
   String get dict_update_latest => 'Уже актуально.';
   @override
-  String dict_update_name_mismatch_body(
-          {required Object incoming, required Object existing}) =>
+  String dict_update_name_mismatch_body({
+    required Object incoming,
+    required Object existing,
+  }) =>
       'Выбранный файл — «${incoming}», но вы обновляете «${existing}». Всё равно заменить?';
   @override
   String get dict_update_name_mismatch_title => 'Имена не совпадают';
   @override
   String get dict_update_none => 'Все словари обновлены.';
   @override
-  String dict_update_summary(
-          {required Object updated,
-          required Object current,
-          required Object failed}) =>
-      'Обновлено: ${updated}, актуально: ${current}, не удалось: ${failed}.';
+  String dict_update_summary({
+    required Object updated,
+    required Object current,
+    required Object failed,
+  }) => 'Обновлено: ${updated}, актуально: ${current}, не удалось: ${failed}.';
   @override
   String get dict_update_tooltip => 'Обновить словарь';
   @override
@@ -102653,8 +103776,10 @@ class _StringsRu extends _StringsEn {
   @override
   String get download_subscription_check_now => 'Проверить сейчас';
   @override
-  String download_subscription_choice_hint(
-          {required Object group, required Object resolution}) =>
+  String download_subscription_choice_hint({
+    required Object group,
+    required Object resolution,
+  }) =>
       'Подписаться на ${group} · ${resolution}. Новые одиночные серии будут добавляться в очередь.';
   @override
   String get download_subscription_created =>
@@ -102797,8 +103922,10 @@ class _StringsRu extends _StringsEn {
   @override
   String favorites({required Object n}) => 'Избранное (${n})';
   @override
-  String field_fallback_used(
-          {required Object field, required Object secondField}) =>
+  String field_fallback_used({
+    required Object field,
+    required Object secondField,
+  }) =>
       'Поле ${field} использовало ${secondField} в качестве резервного запроса.';
   @override
   String file_count({required Object count}) => '${count} файлов';
@@ -103528,12 +104655,12 @@ class _StringsRu extends _StringsEn {
   @override
   String get game_waiting_for_text => 'Ожидание текста';
   @override
-  String game_waveform_range_label(
-          {required Object start,
-          required Object end,
-          required Object duration,
-          required Object total}) =>
-      '${start} - ${end} (выбрано ${duration} / всего ${total})';
+  String game_waveform_range_label({
+    required Object start,
+    required Object end,
+    required Object duration,
+    required Object total,
+  }) => '${start} - ${end} (выбрано ${duration} / всего ${total})';
   @override
   String get game_waveform_select_title => 'Выбрать диапазон аудио';
   @override
@@ -103805,9 +104932,10 @@ class _StringsRu extends _StringsEn {
   @override
   String get jump_to_char => 'Перейти к символу';
   @override
-  String jump_to_char_current(
-          {required Object current, required Object total}) =>
-      'Текущая: ${current} / ${total}';
+  String jump_to_char_current({
+    required Object current,
+    required Object total,
+  }) => 'Текущая: ${current} / ${total}';
   @override
   String get jump_to_char_hint => 'Введите позицию символа…';
   @override
@@ -103985,9 +105113,10 @@ class _StringsRu extends _StringsEn {
   String get manga_ocr_wizard_no_images =>
       'В этой папке изображения не найдены.';
   @override
-  String manga_ocr_wizard_page_progress(
-          {required Object done, required Object total}) =>
-      'Страница ${done} / ${total}';
+  String manga_ocr_wizard_page_progress({
+    required Object done,
+    required Object total,
+  }) => 'Страница ${done} / ${total}';
   @override
   String get manga_ocr_wizard_pick_folder => 'Выбрать папку с изображениями';
   @override
@@ -104013,9 +105142,10 @@ class _StringsRu extends _StringsEn {
   @override
   String get manga_online_queue_added => 'Добавлено в очередь загрузки';
   @override
-  String manga_online_queue_progress(
-          {required Object done, required Object total}) =>
-      'Том ${done} / ${total}';
+  String manga_online_queue_progress({
+    required Object done,
+    required Object total,
+  }) => 'Том ${done} / ${total}';
   @override
   String get manga_online_queue_section => 'Загрузки из каталога манги';
   @override
@@ -104048,9 +105178,10 @@ class _StringsRu extends _StringsEn {
   String get manga_remote_ocr_unsupported =>
       'Сопряжённый хост не поддерживает OCR манги.';
   @override
-  String manga_remote_ocr_uploading(
-          {required Object done, required Object total}) =>
-      'Загрузка страниц ${done} / ${total}…';
+  String manga_remote_ocr_uploading({
+    required Object done,
+    required Object total,
+  }) => 'Загрузка страниц ${done} / ${total}…';
   @override
   String get margin_bottom => 'Нижнее поле';
   @override
@@ -104565,16 +105696,18 @@ class _StringsRu extends _StringsEn {
   @override
   String get audiobook_rematch_auto_match => 'Автосопоставление';
   @override
-  String audiobook_rematch_auto_picked(
-          {required Object window, required Object pct}) =>
-      'Автоматически выбрано ${window} (совпадение ${pct}%)';
+  String audiobook_rematch_auto_picked({
+    required Object window,
+    required Object pct,
+  }) => 'Автоматически выбрано ${window} (совпадение ${pct}%)';
   @override
   String audiobook_rematch_default_value({required Object n}) =>
       'По умолчанию ${n}';
   @override
-  String audiobook_rematch_health_label(
-          {required Object pct, required Object detail}) =>
-      '${pct} совпадение — ${detail}';
+  String audiobook_rematch_health_label({
+    required Object pct,
+    required Object detail,
+  }) => '${pct} совпадение — ${detail}';
   @override
   String get audiobook_rematch_matching => 'Сопоставление...';
   @override
@@ -104592,9 +105725,10 @@ class _StringsRu extends _StringsEn {
   String audiobook_rematch_failed({required Object error}) =>
       'Пересопоставление не удалось: ${error}';
   @override
-  String audiobook_rematch_result(
-          {required Object pct, required Object window}) =>
-      'Пересопоставлено: ${pct}% (окно: ${window})';
+  String audiobook_rematch_result({
+    required Object pct,
+    required Object window,
+  }) => 'Пересопоставлено: ${pct}% (окно: ${window})';
   @override
   String get audiobook_rematch_search_window => 'Окно поиска';
   @override
@@ -105806,9 +106940,10 @@ class _StringsRu extends _StringsEn {
   @override
   String get update_download_resumed => 'продолжена';
   @override
-  String update_download_size(
-          {required Object received, required Object total}) =>
-      'Загружено: ${received} / ${total}';
+  String update_download_size({
+    required Object received,
+    required Object total,
+  }) => 'Загружено: ${received} / ${total}';
   @override
   String update_download_source({required Object source}) =>
       'Источник: ${source}';
@@ -105822,13 +106957,15 @@ class _StringsRu extends _StringsEn {
   String update_install_current_executable({required Object path}) =>
       'Запущенный исполняемый файл: ${path}';
   @override
-  String update_install_deletefile_failure(
-          {required Object path, required Object code}) =>
-      'Установщику не удалось заменить ${path} (код ${code})';
+  String update_install_deletefile_failure({
+    required Object path,
+    required Object code,
+  }) => 'Установщику не удалось заменить ${path} (код ${code})';
   @override
-  String update_install_detected_location(
-          {required Object source, required Object path}) =>
-      'Обнаружено расположение установки (${source}): ${path}';
+  String update_install_detected_location({
+    required Object source,
+    required Object path,
+  }) => 'Обнаружено расположение установки (${source}): ${path}';
   @override
   String update_install_failure_summary({required Object summary}) =>
       'Причина: ${summary}';
@@ -105850,9 +106987,10 @@ class _StringsRu extends _StringsEn {
   String update_install_launcher_pid({required Object pid}) =>
       'PID программы запуска обновления: ${pid}';
   @override
-  String update_install_libmpv_holder(
-          {required Object pid, required Object path}) =>
-      'Процесс, удерживающий libmpv: PID ${pid} - ${path}';
+  String update_install_libmpv_holder({
+    required Object pid,
+    required Object path,
+  }) => 'Процесс, удерживающий libmpv: PID ${pid} - ${path}';
   @override
   String get update_install_log_not_observed =>
       'Журнал установщика не был создан при проверке после запуска.';
@@ -105888,9 +107026,10 @@ class _StringsRu extends _StringsEn {
   String get update_install_restart_windows_hint =>
       'Если перечисленные процессы закрыты, но libmpv-2.dll всё ещё заблокирован, перезагрузите Windows и установите снова.';
   @override
-  String update_install_running_process(
-          {required Object pid, required Object path}) =>
-      'Запущенный процесс Fushi: PID ${pid} - ${path}';
+  String update_install_running_process({
+    required Object pid,
+    required Object path,
+  }) => 'Запущенный процесс Fushi: PID ${pid} - ${path}';
   @override
   String update_install_success_message({required Object version}) =>
       'Fushi обновлён до версии ${version}.';
@@ -105908,9 +107047,10 @@ class _StringsRu extends _StringsEn {
   String update_message({required Object version}) =>
       'Доступна версия ${version}.';
   @override
-  String update_network_failure(
-          {required Object host, required Object reason}) =>
-      'Не удалось подключиться к ${host}: ${reason}';
+  String update_network_failure({
+    required Object host,
+    required Object reason,
+  }) => 'Не удалось подключиться к ${host}: ${reason}';
   @override
   String get update_never_remind => 'Больше не напоминать';
   @override
@@ -106173,9 +107313,10 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_jimaku_api_key_set => 'API key задан';
   @override
-  String video_jimaku_batch_done(
-          {required Object done, required Object total}) =>
-      'Субтитры получены: ${done}/${total}';
+  String video_jimaku_batch_done({
+    required Object done,
+    required Object total,
+  }) => 'Субтитры получены: ${done}/${total}';
   @override
   String get video_jimaku_batch_download => 'Скачать все';
   @override
@@ -106700,9 +107841,10 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_shader_download_failed => 'Не удалось загрузить шейдеры';
   @override
-  String video_shader_download_partial(
-          {required Object ok, required Object failed}) =>
-      'Загружено: ${ok}, не удалось: ${failed}';
+  String video_shader_download_partial({
+    required Object ok,
+    required Object failed,
+  }) => 'Загружено: ${ok}, не удалось: ${failed}';
   @override
   String get video_shader_download_url => 'Загрузить по ссылке';
   @override
@@ -106814,9 +107956,10 @@ class _StringsRu extends _StringsEn {
   String get video_subtitle_attach_playlist_hint =>
       'Откройте плейлист, чтобы подключить субтитры к каждой серии';
   @override
-  String video_subtitle_attached_to_video(
-          {required Object title, required Object count}) =>
-      'Субтитры подключены к «${title}» (строк: ${count})';
+  String video_subtitle_attached_to_video({
+    required Object title,
+    required Object count,
+  }) => 'Субтитры подключены к «${title}» (строк: ${count})';
   @override
   String get video_subtitle_auto_align => 'Авто-выравнивание субтитров';
   @override
@@ -107044,13 +108187,14 @@ class _StringsRu extends _StringsEn {
   @override
   String get anki_dedup_report_title => 'Отчёт об удалении дубликатов';
   @override
-  String anki_dedup_report_body(
-          {required Object groups,
-          required Object removed,
-          required Object size,
-          required Object notes,
-          required Object models,
-          required Object skipped}) =>
+  String anki_dedup_report_body({
+    required Object groups,
+    required Object removed,
+    required Object size,
+    required Object notes,
+    required Object models,
+    required Object skipped,
+  }) =>
       '${groups} групп дубликатов; ${removed} лишних копий (${size}); ${notes} заметок и ${models} типов заметок перезаписано; ${skipped} пропущено.';
   @override
   String get anki_dedup_report_dry_note =>
@@ -107072,11 +108216,11 @@ class _StringsRu extends _StringsEn {
   String anki_dedup_plan_intro({required Object count, required Object size}) =>
       '${count} лишних копий, ${size} можно освободить. Одна копия каждого файла сохраняется, и все ссылки перенаправляются на неё; перекодирование не выполняется.';
   @override
-  String anki_dedup_plan_entry(
-          {required Object file,
-          required Object size,
-          required Object canonical}) =>
-      'Удалить ${file} (${size}) — оставить ${canonical}';
+  String anki_dedup_plan_entry({
+    required Object file,
+    required Object size,
+    required Object canonical,
+  }) => 'Удалить ${file} (${size}) — оставить ${canonical}';
   @override
   String get anki_dedup_plan_delete => 'Удалить эти файлы';
   @override
@@ -107137,9 +108281,10 @@ class _StringsRu extends _StringsEn {
   String manga_ocr_acceleration_status({required Object engine}) =>
       'Ускорение OCR: ${engine}';
   @override
-  String manga_ocr_acceleration_degraded(
-          {required Object engine, required Object reason}) =>
-      'Ускорение GPU недоступно, OCR работает на ${engine}: ${reason}';
+  String manga_ocr_acceleration_degraded({
+    required Object engine,
+    required Object reason,
+  }) => 'Ускорение GPU недоступно, OCR работает на ${engine}: ${reason}';
   @override
   String get media_tracking_status => 'Статус коллекции';
   @override
@@ -107184,8 +108329,10 @@ class _StringsRu extends _StringsEn {
   String anki_dedup_auto_done({required Object count, required Object size}) =>
       'Удалено ${count} дубликатов медиафайлов Anki, освобождено ${size}';
   @override
-  String anki_lapis_backup_done_pruned(
-          {required Object path, required Object count}) =>
+  String anki_lapis_backup_done_pruned({
+    required Object path,
+    required Object count,
+  }) =>
       'Сохранено в ${path} (удалено ${count} старых копий по правилу 90 дней / хранить 10)';
   @override
   String get game_audio_fallback_policy => 'Запасной источник аудио';
@@ -107338,8 +108485,10 @@ class _StringsRu extends _StringsEn {
   String get stat_clear_all_game_message =>
       'Очистить всё время игры и количество сессий? Библиотека игр и хронология активности сохранятся. Это действие нельзя отменить.';
   @override
-  String batch_selection_stale_skipped(
-          {required Object m, required Object n}) =>
+  String batch_selection_stale_skipped({
+    required Object m,
+    required Object n,
+  }) =>
       'Пропущено ${m} из ${n} выбранных элементов, которые больше не существуют';
   @override
   String get game_text_thread_unset =>
@@ -107397,22 +108546,25 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_jimaku_language_unknown => 'Язык не указан';
   @override
-  String video_jimaku_source_summary(
-          {required Object files,
-          required Object episodes,
-          required Object languages}) =>
-      '${files} файлов субтитров · ${episodes} эпизодов · ${languages}';
+  String video_jimaku_source_summary({
+    required Object files,
+    required Object episodes,
+    required Object languages,
+  }) => '${files} файлов субтитров · ${episodes} эпизодов · ${languages}';
   @override
-  String video_jimaku_episode_unlabeled(
-          {required Object episode, required Object count}) =>
+  String video_jimaku_episode_unlabeled({
+    required Object episode,
+    required Object count,
+  }) =>
       'Нет субтитров с пометкой эпизод ${episode}; ${count} файлов без пометки могут подойти';
   @override
   String video_jimaku_episode_unavailable({required Object episode}) =>
       'Субтитры для эпизода ${episode} не найдены';
   @override
-  String video_jimaku_episode_available(
-          {required Object count, required Object languages}) =>
-      '${count} субтитров доступно · ${languages}';
+  String video_jimaku_episode_available({
+    required Object count,
+    required Object languages,
+  }) => '${count} субтитров доступно · ${languages}';
   @override
   String get manga_online_source_disabled =>
       'Этот интернет-источник отключён. Включите его в «Источниках», чтобы просматривать каталог.';
@@ -107432,13 +108584,15 @@ class _StringsRu extends _StringsEn {
   String anki_dedup_progress_scanning({required Object count}) =>
       'Сканирование папки медиа… (найдено ${count} файлов)';
   @override
-  String anki_dedup_progress_hashing(
-          {required Object done, required Object total}) =>
-      'Сравнение файлов одинакового размера… (${done} / ${total})';
+  String anki_dedup_progress_hashing({
+    required Object done,
+    required Object total,
+  }) => 'Сравнение файлов одинакового размера… (${done} / ${total})';
   @override
-  String anki_dedup_progress_resolving(
-          {required Object done, required Object total}) =>
-      'Обработка дубликатов… (${done} / ${total})';
+  String anki_dedup_progress_resolving({
+    required Object done,
+    required Object total,
+  }) => 'Обработка дубликатов… (${done} / ${total})';
   @override
   String anki_dedup_progress_freed({required Object size}) =>
       'Освобождено ${size}';
@@ -107494,8 +108648,10 @@ class _StringsRu extends _StringsEn {
   @override
   String get sync_last_failed => 'Последняя синхронизация: ошибка';
   @override
-  String anime_download_no_results_detail(
-          {required Object query, required Object filters}) =>
+  String anime_download_no_results_detail({
+    required Object query,
+    required Object filters,
+  }) =>
       'Сервис ответил успешно, но вернул 0 результатов. Запрос: ${query}; фильтры: ${filters}. Попробуйте другое название или ослабьте фильтры.';
   @override
   String get anime_download_streaming_ready =>
@@ -107683,11 +108839,12 @@ class _StringsRu extends _StringsEn {
   @override
   String scrape_all_item({required Object title}) => 'Обработка: ${title}';
   @override
-  String scrape_all_done(
-          {required Object applied,
-          required Object review,
-          required Object skipped,
-          required Object failed}) =>
+  String scrape_all_done({
+    required Object applied,
+    required Object review,
+    required Object skipped,
+    required Object failed,
+  }) =>
       'Готово: ${applied} применено, ${review} требуют проверки, ${skipped} пропущено, ${failed} с ошибкой';
   @override
   String get scrape_all_empty =>
@@ -108057,9 +109214,10 @@ class _StringsRu extends _StringsEn {
   String collection_episode_watched_at({required Object position}) =>
       'Просмотрено до ${position}';
   @override
-  String collection_episode_rename_partial(
-          {required Object n, required Object m}) =>
-      'Переименовано ${n} эпизодов, ${m} с ошибкой';
+  String collection_episode_rename_partial({
+    required Object n,
+    required Object m,
+  }) => 'Переименовано ${n} эпизодов, ${m} с ошибкой';
   @override
   String get sync_err_browser_timeout =>
       'Браузер не вернул авторизацию. Попробуйте снова и убедитесь, что ваш прокси пропускает 127.0.0.1.';
@@ -108100,9 +109258,10 @@ class _StringsRu extends _StringsEn {
   String get book_convert_blocked_source_missing =>
       'Исходные файлы удалены с диска.';
   @override
-  String manga_online_retry_waiting(
-          {required Object attempt, required Object total}) =>
-      'Автоматическая повторная попытка (${attempt}/${total})';
+  String manga_online_retry_waiting({
+    required Object attempt,
+    required Object total,
+  }) => 'Автоматическая повторная попытка (${attempt}/${total})';
   @override
   String get manga_ocr_wizard_already_ocred =>
       'Для этого тома уже есть данные OCR на каждой странице. Повторный запуск OCR перезапишет их.';
@@ -108204,17 +109363,18 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_source_scrape_write_images => 'Записывать файлы изображений';
   @override
-  String video_source_scrape_progress(
-          {required Object phase,
-          required Object current,
-          required Object total}) =>
-      '${phase} · ${current}/${total}';
+  String video_source_scrape_progress({
+    required Object phase,
+    required Object current,
+    required Object total,
+  }) => '${phase} · ${current}/${total}';
   @override
-  String video_source_scrape_last_summary(
-          {required Object status,
-          required Object succeeded,
-          required Object pending,
-          required Object failed}) =>
+  String video_source_scrape_last_summary({
+    required Object status,
+    required Object succeeded,
+    required Object pending,
+    required Object failed,
+  }) =>
       'Последнее получение (${status}): ${succeeded} успешно, ${pending} в ожидании, ${failed} с ошибкой';
   @override
   String get video_source_scrape_phase_planning => 'Планирование';
@@ -108433,8 +109593,10 @@ class _StringsRu extends _StringsEn {
   String migration_import_running({required Object batch}) =>
       'Импорт ${batch}…';
   @override
-  String migration_import_verify_failed(
-          {required Object batch, required Object detail}) =>
+  String migration_import_verify_failed({
+    required Object batch,
+    required Object detail,
+  }) =>
       '${batch} не прошёл проверку и сохранён для повторного экспорта: ${detail}';
   @override
   String migration_import_counts_failed({required Object detail}) =>
@@ -108461,11 +109623,11 @@ class _StringsRu extends _StringsEn {
   @override
   String get migration_import_permission_grant => 'Предоставить разрешение';
   @override
-  String migration_import_verifying(
-          {required Object batch,
-          required Object done,
-          required Object total}) =>
-      'Проверка ${batch} (${done}/${total})';
+  String migration_import_verifying({
+    required Object batch,
+    required Object done,
+    required Object total,
+  }) => 'Проверка ${batch} (${done}/${total})';
   @override
   String get migration_import_verifying_hint =>
       'Вычисление контрольных сумм архивов. Для больших библиотек это может занять несколько минут.';
@@ -108643,11 +109805,11 @@ class _StringsRu extends _StringsEn {
   String video_subtitle_read_failed({required Object label}) =>
       'Не удалось прочитать файл субтитров (повреждён или пуст): ${label}';
   @override
-  String dict_downloading_size(
-          {required Object name,
-          required Object done,
-          required Object total}) =>
-      'Загрузка ${name} (${done} / ${total})';
+  String dict_downloading_size({
+    required Object name,
+    required Object done,
+    required Object total,
+  }) => 'Загрузка ${name} (${done} / ${total})';
   @override
   String get video_subtitle_attach_book_missing =>
       'Это видео не в вашей библиотеке, поэтому субтитры не были прикреплены';
@@ -108843,11 +110005,11 @@ class _StringsRu extends _StringsEn {
   String manga_import_batch_hint({required Object n}) =>
       'В этой папке ${n} томов; каждый импортируется как отдельная книга с именем файла.';
   @override
-  String manga_import_batch_done(
-          {required Object imported,
-          required Object skipped,
-          required Object failed}) =>
-      'Импортировано ${imported}, пропущено ${skipped}, ошибок ${failed}.';
+  String manga_import_batch_done({
+    required Object imported,
+    required Object skipped,
+    required Object failed,
+  }) => 'Импортировано ${imported}, пропущено ${skipped}, ошибок ${failed}.';
   @override
   String get srt_book_reimport => 'Повторный импорт';
   @override
@@ -108941,8 +110103,10 @@ class _StringsRu extends _StringsEn {
   @override
   String get update_release_page_open => 'Страница релиза';
   @override
-  String update_install_gal_hook_holder(
-          {required Object pid, required Object path}) =>
+  String update_install_gal_hook_holder({
+    required Object pid,
+    required Object path,
+  }) =>
       'Компонент захвата Galgame используется: PID ${pid} — ${path} (это игра, в которую вы играете, или её хост захвата). Закройте игру, затем обновите снова.';
   @override
   String get game_hook_reason_protocol_mismatch =>
@@ -109440,9 +110604,10 @@ class _StringsRu extends _StringsEn {
   String get manga_ocr_model_unused_by_engine =>
       'Текущий движок не использует эти локальные файлы моделей.';
   @override
-  String manga_ocr_download_total_progress(
-          {required Object done, required Object total}) =>
-      '${done} из ${total}';
+  String manga_ocr_download_total_progress({
+    required Object done,
+    required Object total,
+  }) => '${done} из ${total}';
   @override
   String get media_source_network_subtitle_video =>
       'Удалённая библиотека WebDAV (потоковое воспроизведение на месте)';
@@ -109917,11 +111082,11 @@ class _StringsRu extends _StringsEn {
   String get manga_ocr_import_matched_nothing =>
       'Пригодные файлы модели не распознаны';
   @override
-  String manga_ocr_import_size_mismatch(
-          {required Object file,
-          required Object expected,
-          required Object actual}) =>
-      'Неверный размер ${file}: ожидался ${expected}, получен ${actual}';
+  String manga_ocr_import_size_mismatch({
+    required Object file,
+    required Object expected,
+    required Object actual,
+  }) => 'Неверный размер ${file}: ожидался ${expected}, получен ${actual}';
   @override
   String manga_ocr_import_still_missing({required Object count}) =>
       'Не хватает ещё файлов: ${count}';
@@ -109988,9 +111153,10 @@ class _StringsRu extends _StringsEn {
   String get video_jimaku_search_failed =>
       'Не удалось выполнить поиск субтитров';
   @override
-  String video_subtitle_error_with_code(
-          {required Object msg, required Object code}) =>
-      '${msg} (HTTP ${code})';
+  String video_subtitle_error_with_code({
+    required Object msg,
+    required Object code,
+  }) => '${msg} (HTTP ${code})';
   @override
   String get manga_rescan_run => 'Распознать выделенную область заново';
   @override
@@ -110243,9 +111409,10 @@ class _StringsRu extends _StringsEn {
   @override
   String get manga_series_open_series => 'Страница произведения';
   @override
-  String manga_series_read_progress(
-          {required Object page, required Object total}) =>
-      'Прочитано до страницы ${page} из ${total}';
+  String manga_series_read_progress({
+    required Object page,
+    required Object total,
+  }) => 'Прочитано до страницы ${page} из ${total}';
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       'Прочитано до страницы ${page}';
@@ -110533,13 +111700,15 @@ class _StringsRu extends _StringsEn {
   String web_video_mine_queued({required Object count}) =>
       'Добавлено в очередь на создание карточек (ожидает: ${count})';
   @override
-  String web_video_mine_queue_running(
-          {required Object done, required Object total}) =>
-      'Создание карточек ${done}/${total}…';
+  String web_video_mine_queue_running({
+    required Object done,
+    required Object total,
+  }) => 'Создание карточек ${done}/${total}…';
   @override
-  String web_video_mine_queue_finished(
-          {required Object ok, required Object failed}) =>
-      'Карточек создано: ${ok}, ошибок: ${failed}';
+  String web_video_mine_queue_finished({
+    required Object ok,
+    required Object failed,
+  }) => 'Карточек создано: ${ok}, ошибок: ${failed}';
   @override
   String get web_video_hosting_menu => 'Режим воспроизведения';
   @override
@@ -110815,29 +111984,78 @@ class _StringsRu extends _StringsEn {
       'Waiting for matching in-game click';
   @override
   String get delete_choices_remember => 'Запомнить этот выбор';
+  @override
+  String get network_proxy_mode_label => 'Proxy mode';
+  @override
+  String get network_proxy_mode_auto => 'Automatic';
+  @override
+  String get network_proxy_mode_auto_hint =>
+      'Use environment variables, then the enabled system proxy';
+  @override
+  String get network_proxy_mode_direct => 'Direct';
+  @override
+  String get network_proxy_mode_direct_hint => 'Disable proxy use for the app';
+  @override
+  String get network_proxy_mode_manual => 'Manual';
+  @override
+  String get network_proxy_mode_manual_hint =>
+      'Use the server and optional credentials below';
+  @override
+  String get network_proxy_manual_hint =>
+      'HTTP proxy server used by all public internet requests';
+  @override
+  String get network_proxy_username => 'Proxy username (optional)';
+  @override
+  String get network_proxy_password => 'Proxy password (optional)';
+  @override
+  String get storage_category_backups => 'Local backups';
+  @override
+  String storage_entry_backups_label({required Object n}) =>
+      '${n} backup archive(s)';
+  @override
+  String get storage_entry_delete_backups_confirm_body =>
+      'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+  @override
+  String get update_download_source_preference => 'Preferred download source';
+  @override
+  String get update_download_source_preference_hint =>
+      'The selected source is tried first; unavailable sources still fall back automatically.';
+  @override
+  String get update_download_source_auto => 'Automatic (recommended)';
+  @override
+  String get update_download_source_cloudflare => 'Cloudflare mirror';
+  @override
+  String get update_download_source_github => 'GitHub direct';
+  @override
+  String update_download_source_proxy({required Object host}) =>
+      'Proxy: ${host}';
 }
 
 // Path: <root>
 class _StringsTh extends _StringsEn {
   /// You can call this constructor and build your own translation instance of this locale.
   /// Constructing via the enum [AppLocale.build] is preferred.
-  _StringsTh.build(
-      {Map<String, Node>? overrides,
-      PluralResolver? cardinalResolver,
-      PluralResolver? ordinalResolver})
-      : assert(overrides == null,
-            'Set "translation_overrides: true" in order to enable this feature.'),
-        $meta = TranslationMetadata(
-          locale: AppLocale.th,
-          overrides: overrides ?? {},
-          cardinalResolver: cardinalResolver,
-          ordinalResolver: ordinalResolver,
-        ),
-        super.build(
-            cardinalResolver: cardinalResolver,
-            ordinalResolver: ordinalResolver) {
+  _StringsTh.build({
+    Map<String, Node>? overrides,
+    PluralResolver? cardinalResolver,
+    PluralResolver? ordinalResolver,
+  }) : assert(
+         overrides == null,
+         'Set "translation_overrides: true" in order to enable this feature.',
+       ),
+       $meta = TranslationMetadata(
+         locale: AppLocale.th,
+         overrides: overrides ?? {},
+         cardinalResolver: cardinalResolver,
+         ordinalResolver: ordinalResolver,
+       ),
+       super.build(
+         cardinalResolver: cardinalResolver,
+         ordinalResolver: ordinalResolver,
+       ) {
     super.$meta.setFlatMapFunction(
-        $meta.getTranslation); // copy base translations to super.$meta
+      $meta.getTranslation,
+    ); // copy base translations to super.$meta
     $meta.setFlatMapFunction(_flatMapFunction);
   }
 
@@ -111346,10 +112564,11 @@ class _StringsTh extends _StringsEn {
   @override
   String get backup_import => 'นำเข้าข้อมูลสำรอง';
   @override
-  String backup_import_confirm(
-          {required Object date,
-          required Object bookCount,
-          required Object statsCount}) =>
+  String backup_import_confirm({
+    required Object date,
+    required Object bookCount,
+    required Object statsCount,
+  }) =>
       'การดำเนินการนี้จะแทนที่ข้อมูลปัจจุบันทั้งหมดด้วยข้อมูลสำรองจาก ${date}\n\nหนังสือ ${bookCount} เล่ม, บันทึกสถิติ ${statsCount} รายการ\n\nแอปจะรีสตาร์ทหลังกู้คืน';
   @override
   String get backup_import_confirm_title => 'กู้คืนข้อมูลสำรอง?';
@@ -111365,8 +112584,10 @@ class _StringsTh extends _StringsEn {
   @override
   String get backup_import_invalid => 'ไฟล์สำรองไม่ถูกต้อง';
   @override
-  String backup_import_merge_preview(
-          {required Object bookCount, required Object progressCount}) =>
+  String backup_import_merge_preview({
+    required Object bookCount,
+    required Object progressCount,
+  }) =>
       'การรวมจะเพิ่มหนังสือ ${bookCount} เล่มและอัปเดตตำแหน่งการอ่าน ${progressCount} รายการ';
   @override
   String get backup_import_mode_label => 'โหมดนำเข้า';
@@ -111663,12 +112884,12 @@ class _StringsTh extends _StringsEn {
   @override
   String get changelog_prerelease => 'เวอร์ชันก่อนเผยแพร่';
   @override
-  String chapter_progress(
-          {required Object idx,
-          required Object total,
-          required Object suffix,
-          required Object pct}) =>
-      'บทที่ ${idx} / ${total}${suffix} · ${pct}%';
+  String chapter_progress({
+    required Object idx,
+    required Object total,
+    required Object suffix,
+    required Object pct,
+  }) => 'บทที่ ${idx} / ${total}${suffix} · ${pct}%';
   @override
   String get clear => 'ล้าง';
   @override
@@ -111758,9 +112979,10 @@ class _StringsTh extends _StringsEn {
   @override
   String get collection_view_all => 'ดูทั้งหมด';
   @override
-  String collection_watched_progress(
-          {required Object done, required Object total}) =>
-      'ดูแล้ว ${done}/${total}';
+  String collection_watched_progress({
+    required Object done,
+    required Object total,
+  }) => 'ดูแล้ว ${done}/${total}';
   @override
   String get collection_word => 'คำศัพท์';
   @override
@@ -111981,9 +113203,10 @@ class _StringsTh extends _StringsEn {
   @override
   String get data_storage_migrate_failed_title => 'การย้ายข้อมูลล้มเหลว';
   @override
-  String data_storage_migrate_overlay_progress(
-          {required Object copied, required Object total}) =>
-      'กำลังคัดลอกไฟล์: ${copied} / ${total}';
+  String data_storage_migrate_overlay_progress({
+    required Object copied,
+    required Object total,
+  }) => 'กำลังคัดลอกไฟล์: ${copied} / ${total}';
   @override
   String get data_storage_migrate_overlay_title => 'กำลังย้ายข้อมูลของคุณ';
   @override
@@ -112000,8 +113223,10 @@ class _StringsTh extends _StringsEn {
   String get data_storage_restart_failed =>
       'ย้ายข้อมูลแล้ว แต่การรีสตาร์ทอัตโนมัติล้มเหลว กรุณาเปิด Fushi ใหม่ด้วยตนเอง';
   @override
-  String db_downgrade_message(
-          {required Object dbVersion, required Object appVersion}) =>
+  String db_downgrade_message({
+    required Object dbVersion,
+    required Object appVersion,
+  }) =>
       'ฐานข้อมูลนี้สร้างด้วย Fushi เวอร์ชันใหม่กว่า (schema v${dbVersion}) แอปปัจจุบันของคุณเก่าเกินไป (v${appVersion}) จึงบล็อกการเปิดเพื่อปกป้องข้อมูลของคุณ กรุณาอัปเดตแอปแล้วลองใหม่';
   @override
   String get db_downgrade_title => 'กรุณาอัปเดต Fushi';
@@ -112169,11 +113394,11 @@ class _StringsTh extends _StringsEn {
   @override
   String get dict_download_language => 'ภาษาของคุณ';
   @override
-  String dict_download_partial(
-          {required Object success,
-          required Object total,
-          required Object error}) =>
-      '${success} / ${total} สำเร็จ ล้มเหลว: ${error}';
+  String dict_download_partial({
+    required Object success,
+    required Object total,
+    required Object error,
+  }) => '${success} / ${total} สำเร็จ ล้มเหลว: ${error}';
   @override
   String get dict_download_select_title => 'เลือกพจนานุกรม';
   @override
@@ -112204,19 +113429,21 @@ class _StringsTh extends _StringsEn {
   @override
   String get dict_update_latest => 'เป็นเวอร์ชันล่าสุดแล้ว';
   @override
-  String dict_update_name_mismatch_body(
-          {required Object incoming, required Object existing}) =>
+  String dict_update_name_mismatch_body({
+    required Object incoming,
+    required Object existing,
+  }) =>
       'ไฟล์ที่เลือกคือ "${incoming}" แต่คุณกำลังอัปเดต "${existing}" จะแทนที่ต่อไปหรือไม่?';
   @override
   String get dict_update_name_mismatch_title => 'ชื่อไม่ตรงกัน';
   @override
   String get dict_update_none => 'พจนานุกรมทั้งหมดเป็นเวอร์ชันล่าสุดแล้ว';
   @override
-  String dict_update_summary(
-          {required Object updated,
-          required Object current,
-          required Object failed}) =>
-      'อัปเดต ${updated}, ล่าสุดแล้ว ${current}, ล้มเหลว ${failed}';
+  String dict_update_summary({
+    required Object updated,
+    required Object current,
+    required Object failed,
+  }) => 'อัปเดต ${updated}, ล่าสุดแล้ว ${current}, ล้มเหลว ${failed}';
   @override
   String get dict_update_tooltip => 'อัปเดตพจนานุกรม';
   @override
@@ -112302,9 +113529,10 @@ class _StringsTh extends _StringsEn {
   @override
   String get download_subscription_check_now => 'ตรวจสอบตอนนี้';
   @override
-  String download_subscription_choice_hint(
-          {required Object group, required Object resolution}) =>
-      'ติดตาม ${group} · ${resolution} ตอนใหม่ที่ปล่อยทีละตอนจะถูกเข้าคิว';
+  String download_subscription_choice_hint({
+    required Object group,
+    required Object resolution,
+  }) => 'ติดตาม ${group} · ${resolution} ตอนใหม่ที่ปล่อยทีละตอนจะถูกเข้าคิว';
   @override
   String get download_subscription_created =>
       'เข้าคิวดาวน์โหลดและสร้างการติดตามแล้ว';
@@ -112443,9 +113671,10 @@ class _StringsTh extends _StringsEn {
   @override
   String favorites({required Object n}) => 'รายการโปรด (${n})';
   @override
-  String field_fallback_used(
-          {required Object field, required Object secondField}) =>
-      'ฟิลด์ ${field} ใช้ ${secondField} เป็นคำค้นสำรอง';
+  String field_fallback_used({
+    required Object field,
+    required Object secondField,
+  }) => 'ฟิลด์ ${field} ใช้ ${secondField} เป็นคำค้นสำรอง';
   @override
   String file_count({required Object count}) => '${count} ไฟล์';
   @override
@@ -113154,12 +114383,12 @@ class _StringsTh extends _StringsEn {
   @override
   String get game_waiting_for_text => 'รอข้อความ';
   @override
-  String game_waveform_range_label(
-          {required Object start,
-          required Object end,
-          required Object duration,
-          required Object total}) =>
-      '${start} - ${end} (เลือก ${duration} / ทั้งหมด ${total})';
+  String game_waveform_range_label({
+    required Object start,
+    required Object end,
+    required Object duration,
+    required Object total,
+  }) => '${start} - ${end} (เลือก ${duration} / ทั้งหมด ${total})';
   @override
   String get game_waveform_select_title => 'เลือกช่วงเสียง';
   @override
@@ -113426,9 +114655,10 @@ class _StringsTh extends _StringsEn {
   @override
   String get jump_to_char => 'ข้ามไปยังอักขระ';
   @override
-  String jump_to_char_current(
-          {required Object current, required Object total}) =>
-      'ปัจจุบัน: ${current} / ${total}';
+  String jump_to_char_current({
+    required Object current,
+    required Object total,
+  }) => 'ปัจจุบัน: ${current} / ${total}';
   @override
   String get jump_to_char_hint => 'ป้อนตำแหน่งอักขระ…';
   @override
@@ -113603,9 +114833,10 @@ class _StringsTh extends _StringsEn {
   @override
   String get manga_ocr_wizard_no_images => 'ไม่พบรูปภาพในโฟลเดอร์นี้';
   @override
-  String manga_ocr_wizard_page_progress(
-          {required Object done, required Object total}) =>
-      'หน้า ${done} / ${total}';
+  String manga_ocr_wizard_page_progress({
+    required Object done,
+    required Object total,
+  }) => 'หน้า ${done} / ${total}';
   @override
   String get manga_ocr_wizard_pick_folder => 'เลือกโฟลเดอร์รูปภาพ';
   @override
@@ -113631,9 +114862,10 @@ class _StringsTh extends _StringsEn {
   @override
   String get manga_online_queue_added => 'เพิ่มในคิวดาวน์โหลดแล้ว';
   @override
-  String manga_online_queue_progress(
-          {required Object done, required Object total}) =>
-      'เล่ม ${done} / ${total}';
+  String manga_online_queue_progress({
+    required Object done,
+    required Object total,
+  }) => 'เล่ม ${done} / ${total}';
   @override
   String get manga_online_queue_section => 'ดาวน์โหลดแคตตาล็อกมังงะ';
   @override
@@ -113666,9 +114898,10 @@ class _StringsTh extends _StringsEn {
   String get manga_remote_ocr_unsupported =>
       'โฮสต์ที่จับคู่ไม่รองรับ OCR มังงะ';
   @override
-  String manga_remote_ocr_uploading(
-          {required Object done, required Object total}) =>
-      'กำลังอัปโหลดหน้า ${done} / ${total}…';
+  String manga_remote_ocr_uploading({
+    required Object done,
+    required Object total,
+  }) => 'กำลังอัปโหลดหน้า ${done} / ${total}…';
   @override
   String get margin_bottom => 'ขอบล่าง';
   @override
@@ -114172,16 +115405,18 @@ class _StringsTh extends _StringsEn {
   @override
   String get audiobook_rematch_auto_match => 'จับคู่อัตโนมัติ';
   @override
-  String audiobook_rematch_auto_picked(
-          {required Object window, required Object pct}) =>
-      'เลือกอัตโนมัติ ${window} (ตรง ${pct}%)';
+  String audiobook_rematch_auto_picked({
+    required Object window,
+    required Object pct,
+  }) => 'เลือกอัตโนมัติ ${window} (ตรง ${pct}%)';
   @override
   String audiobook_rematch_default_value({required Object n}) =>
       'ค่าเริ่มต้น ${n}';
   @override
-  String audiobook_rematch_health_label(
-          {required Object pct, required Object detail}) =>
-      '${pct} ตรง — ${detail}';
+  String audiobook_rematch_health_label({
+    required Object pct,
+    required Object detail,
+  }) => '${pct} ตรง — ${detail}';
   @override
   String get audiobook_rematch_matching => 'กำลังจับคู่...';
   @override
@@ -114198,9 +115433,10 @@ class _StringsTh extends _StringsEn {
   String audiobook_rematch_failed({required Object error}) =>
       'การจับคู่ใหม่ล้มเหลว: ${error}';
   @override
-  String audiobook_rematch_result(
-          {required Object pct, required Object window}) =>
-      'จับคู่ใหม่: ${pct}% (หน้าต่าง: ${window})';
+  String audiobook_rematch_result({
+    required Object pct,
+    required Object window,
+  }) => 'จับคู่ใหม่: ${pct}% (หน้าต่าง: ${window})';
   @override
   String get audiobook_rematch_search_window => 'หน้าต่างค้นหา';
   @override
@@ -115397,9 +116633,10 @@ class _StringsTh extends _StringsEn {
   @override
   String get update_download_resumed => 'ดาวน์โหลดต่อแล้ว';
   @override
-  String update_download_size(
-          {required Object received, required Object total}) =>
-      'ดาวน์โหลดแล้ว: ${received} / ${total}';
+  String update_download_size({
+    required Object received,
+    required Object total,
+  }) => 'ดาวน์โหลดแล้ว: ${received} / ${total}';
   @override
   String update_download_source({required Object source}) => 'แหล่ง: ${source}';
   @override
@@ -115412,13 +116649,15 @@ class _StringsTh extends _StringsEn {
   String update_install_current_executable({required Object path}) =>
       'โปรแกรมที่กำลังทำงาน: ${path}';
   @override
-  String update_install_deletefile_failure(
-          {required Object path, required Object code}) =>
-      'ตัวติดตั้งแทนที่ ${path} ไม่ได้ (รหัส ${code})';
+  String update_install_deletefile_failure({
+    required Object path,
+    required Object code,
+  }) => 'ตัวติดตั้งแทนที่ ${path} ไม่ได้ (รหัส ${code})';
   @override
-  String update_install_detected_location(
-          {required Object source, required Object path}) =>
-      'ตำแหน่งติดตั้งที่ตรวจพบ (${source}): ${path}';
+  String update_install_detected_location({
+    required Object source,
+    required Object path,
+  }) => 'ตำแหน่งติดตั้งที่ตรวจพบ (${source}): ${path}';
   @override
   String update_install_failure_summary({required Object summary}) =>
       'สาเหตุ: ${summary}';
@@ -115440,9 +116679,10 @@ class _StringsTh extends _StringsEn {
   String update_install_launcher_pid({required Object pid}) =>
       'PID ตัวเรียกอัปเดต: ${pid}';
   @override
-  String update_install_libmpv_holder(
-          {required Object pid, required Object path}) =>
-      'โปรเซสที่ถือ libmpv: PID ${pid} - ${path}';
+  String update_install_libmpv_holder({
+    required Object pid,
+    required Object path,
+  }) => 'โปรเซสที่ถือ libmpv: PID ${pid} - ${path}';
   @override
   String get update_install_log_not_observed =>
       'ไม่ได้สร้างล็อกตัวติดตั้งระหว่างการตรวจสอบหลังเริ่มทำงาน';
@@ -115477,9 +116717,10 @@ class _StringsTh extends _StringsEn {
   String get update_install_restart_windows_hint =>
       'หากปิดโปรเซสด้านบนแล้วแต่ libmpv-2.dll ยังถูกล็อก กรุณารีสตาร์ท Windows แล้วติดตั้งใหม่';
   @override
-  String update_install_running_process(
-          {required Object pid, required Object path}) =>
-      'โปรเซส Fushi ที่ยังทำงานอยู่: PID ${pid} - ${path}';
+  String update_install_running_process({
+    required Object pid,
+    required Object path,
+  }) => 'โปรเซส Fushi ที่ยังทำงานอยู่: PID ${pid} - ${path}';
   @override
   String update_install_success_message({required Object version}) =>
       'อัปเดต Fushi เป็นเวอร์ชัน ${version} แล้ว';
@@ -115497,9 +116738,10 @@ class _StringsTh extends _StringsEn {
   String update_message({required Object version}) =>
       'เวอร์ชัน ${version} พร้อมใช้งาน';
   @override
-  String update_network_failure(
-          {required Object host, required Object reason}) =>
-      'เชื่อมต่อ ${host} ไม่ได้: ${reason}';
+  String update_network_failure({
+    required Object host,
+    required Object reason,
+  }) => 'เชื่อมต่อ ${host} ไม่ได้: ${reason}';
   @override
   String get update_never_remind => 'ไม่ต้องแจ้งเตือน';
   @override
@@ -115756,9 +116998,10 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_jimaku_api_key_set => 'ตั้งค่า API key แล้ว';
   @override
-  String video_jimaku_batch_done(
-          {required Object done, required Object total}) =>
-      'ดึงคำบรรยายแล้ว: ${done}/${total}';
+  String video_jimaku_batch_done({
+    required Object done,
+    required Object total,
+  }) => 'ดึงคำบรรยายแล้ว: ${done}/${total}';
   @override
   String get video_jimaku_batch_download => 'ดาวน์โหลดทั้งหมด';
   @override
@@ -116269,9 +117512,10 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_shader_download_failed => 'ดาวน์โหลดเชเดอร์ไม่สำเร็จ';
   @override
-  String video_shader_download_partial(
-          {required Object ok, required Object failed}) =>
-      'ดาวน์โหลด ${ok} สำเร็จ, ${failed} ล้มเหลว';
+  String video_shader_download_partial({
+    required Object ok,
+    required Object failed,
+  }) => 'ดาวน์โหลด ${ok} สำเร็จ, ${failed} ล้มเหลว';
   @override
   String get video_shader_download_url => 'ดาวน์โหลดจากลิงก์';
   @override
@@ -116381,9 +117625,10 @@ class _StringsTh extends _StringsEn {
   String get video_subtitle_attach_playlist_hint =>
       'เปิดเพลย์ลิสต์เพื่อแนบคำบรรยายแยกตามตอน';
   @override
-  String video_subtitle_attached_to_video(
-          {required Object title, required Object count}) =>
-      'แนบคำบรรยายให้《${title}》แล้ว (${count} ประโยค)';
+  String video_subtitle_attached_to_video({
+    required Object title,
+    required Object count,
+  }) => 'แนบคำบรรยายให้《${title}》แล้ว (${count} ประโยค)';
   @override
   String get video_subtitle_auto_align => 'จัดแนวคำบรรยายอัตโนมัติ';
   @override
@@ -116604,13 +117849,14 @@ class _StringsTh extends _StringsEn {
   @override
   String get anki_dedup_report_title => 'รายงานการลบไฟล์สื่อซ้ำ';
   @override
-  String anki_dedup_report_body(
-          {required Object groups,
-          required Object removed,
-          required Object size,
-          required Object notes,
-          required Object models,
-          required Object skipped}) =>
+  String anki_dedup_report_body({
+    required Object groups,
+    required Object removed,
+    required Object size,
+    required Object notes,
+    required Object models,
+    required Object skipped,
+  }) =>
       '${groups} กลุ่มซ้ำ; ${removed} สำเนาเพิ่มเติม (${size}); ${notes} โน้ตและ ${models} ประเภทโน้ตถูกเขียนใหม่; ${skipped} ข้าม';
   @override
   String get anki_dedup_report_dry_note => 'สแกนเท่านั้น — ไม่มีการเปลี่ยนแปลง';
@@ -116631,11 +117877,11 @@ class _StringsTh extends _StringsEn {
   String anki_dedup_plan_intro({required Object count, required Object size}) =>
       '${count} สำเนาเพิ่มเติม, ${size} ที่สามารถเรียกคืนได้ เก็บสำเนาหนึ่งชุดของแต่ละไฟล์และเปลี่ยนการอ้างอิงทั้งหมดไปที่ไฟล์นั้นก่อน; ไม่มีการเข้ารหัสใหม่';
   @override
-  String anki_dedup_plan_entry(
-          {required Object file,
-          required Object size,
-          required Object canonical}) =>
-      'ลบ ${file} (${size}) — เก็บ ${canonical}';
+  String anki_dedup_plan_entry({
+    required Object file,
+    required Object size,
+    required Object canonical,
+  }) => 'ลบ ${file} (${size}) — เก็บ ${canonical}';
   @override
   String get anki_dedup_plan_delete => 'ลบไฟล์เหล่านี้';
   @override
@@ -116696,8 +117942,10 @@ class _StringsTh extends _StringsEn {
   String manga_ocr_acceleration_status({required Object engine}) =>
       'การเร่งความเร็ว OCR: ${engine}';
   @override
-  String manga_ocr_acceleration_degraded(
-          {required Object engine, required Object reason}) =>
+  String manga_ocr_acceleration_degraded({
+    required Object engine,
+    required Object reason,
+  }) =>
       'การเร่งความเร็ว GPU ไม่พร้อมใช้งาน กำลังรัน OCR บน ${engine}: ${reason}';
   @override
   String get media_tracking_status => 'สถานะคอลเลกชัน';
@@ -116743,8 +117991,10 @@ class _StringsTh extends _StringsEn {
   String anki_dedup_auto_done({required Object count, required Object size}) =>
       'ลบไฟล์สื่อ Anki ซ้ำ ${count} ไฟล์, เรียกคืน ${size}';
   @override
-  String anki_lapis_backup_done_pruned(
-          {required Object path, required Object count}) =>
+  String anki_lapis_backup_done_pruned({
+    required Object path,
+    required Object count,
+  }) =>
       'สำรองไว้ที่ ${path} (${count} ข้อมูลสำรองเก่าถูกลบตามนโยบาย 90 วัน / เก็บ 10)';
   @override
   String get game_audio_fallback_policy => 'เสียงสำรอง';
@@ -116893,9 +118143,10 @@ class _StringsTh extends _StringsEn {
   String get stat_clear_all_game_message =>
       'ล้างเวลาเล่นเกมและจำนวนเซสชันทั้งหมด? คลังเกมและไทม์ไลน์กิจกรรมจะยังอยู่ ไม่สามารถเลิกทำได้';
   @override
-  String batch_selection_stale_skipped(
-          {required Object m, required Object n}) =>
-      'ข้าม ${m} จาก ${n} รายการที่เลือกเนื่องจากไม่มีอยู่แล้ว';
+  String batch_selection_stale_skipped({
+    required Object m,
+    required Object n,
+  }) => 'ข้าม ${m} จาก ${n} รายการที่เลือกเนื่องจากไม่มีอยู่แล้ว';
   @override
   String get game_text_thread_unset =>
       'ไม่ได้เลือกเธรด — เลือกเธรดเพื่อเริ่มจับข้อความ';
@@ -116950,22 +118201,25 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_jimaku_language_unknown => 'ไม่ได้ระบุภาษา';
   @override
-  String video_jimaku_source_summary(
-          {required Object files,
-          required Object episodes,
-          required Object languages}) =>
-      '${files} ไฟล์คำบรรยาย · ${episodes} ตอน · ${languages}';
+  String video_jimaku_source_summary({
+    required Object files,
+    required Object episodes,
+    required Object languages,
+  }) => '${files} ไฟล์คำบรรยาย · ${episodes} ตอน · ${languages}';
   @override
-  String video_jimaku_episode_unlabeled(
-          {required Object episode, required Object count}) =>
+  String video_jimaku_episode_unlabeled({
+    required Object episode,
+    required Object count,
+  }) =>
       'ไม่มีคำบรรยายที่ระบุตอน ${episode}; ${count} ไฟล์ที่ไม่ได้ระบุอาจยังตรงกัน';
   @override
   String video_jimaku_episode_unavailable({required Object episode}) =>
       'ไม่พบคำบรรยายสำหรับตอน ${episode}';
   @override
-  String video_jimaku_episode_available(
-          {required Object count, required Object languages}) =>
-      '${count} คำบรรยายที่มี · ${languages}';
+  String video_jimaku_episode_available({
+    required Object count,
+    required Object languages,
+  }) => '${count} คำบรรยายที่มี · ${languages}';
   @override
   String get manga_online_source_disabled =>
       'แหล่งอินเทอร์เน็ตนี้ถูกปิดใช้งาน เปิดใช้ในแหล่งเพื่อเรียกดูแค็ตตาล็อก';
@@ -116985,13 +118239,15 @@ class _StringsTh extends _StringsEn {
   String anki_dedup_progress_scanning({required Object count}) =>
       'กำลังสแกนโฟลเดอร์สื่อ... (พบ ${count} ไฟล์)';
   @override
-  String anki_dedup_progress_hashing(
-          {required Object done, required Object total}) =>
-      'กำลังเปรียบเทียบไฟล์ขนาดเดียวกัน... (${done} / ${total})';
+  String anki_dedup_progress_hashing({
+    required Object done,
+    required Object total,
+  }) => 'กำลังเปรียบเทียบไฟล์ขนาดเดียวกัน... (${done} / ${total})';
   @override
-  String anki_dedup_progress_resolving(
-          {required Object done, required Object total}) =>
-      'กำลังประมวลผลไฟล์ซ้ำ... (${done} / ${total})';
+  String anki_dedup_progress_resolving({
+    required Object done,
+    required Object total,
+  }) => 'กำลังประมวลผลไฟล์ซ้ำ... (${done} / ${total})';
   @override
   String anki_dedup_progress_freed({required Object size}) =>
       'เรียกคืนพื้นที่ ${size} แล้ว';
@@ -117045,8 +118301,10 @@ class _StringsTh extends _StringsEn {
   @override
   String get sync_last_failed => 'ซิงค์ล่าสุด: ล้มเหลว';
   @override
-  String anime_download_no_results_detail(
-          {required Object query, required Object filters}) =>
+  String anime_download_no_results_detail({
+    required Object query,
+    required Object filters,
+  }) =>
       'บริการตอบกลับสำเร็จแต่ส่งคืน 0 รายการ คำค้น: ${query}; ตัวกรอง: ${filters} ลองชื่ออื่นหรือผ่อนคลายตัวกรอง';
   @override
   String get anime_download_streaming_ready => 'ในคลัง · ดาวน์โหลดต่อ';
@@ -117229,11 +118487,12 @@ class _StringsTh extends _StringsEn {
   @override
   String scrape_all_item({required Object title}) => 'กำลังประมวลผล: ${title}';
   @override
-  String scrape_all_done(
-          {required Object applied,
-          required Object review,
-          required Object skipped,
-          required Object failed}) =>
+  String scrape_all_done({
+    required Object applied,
+    required Object review,
+    required Object skipped,
+    required Object failed,
+  }) =>
       'เสร็จสิ้น: ใช้แล้ว ${applied}, ต้องตรวจสอบ ${review}, ข้ามไป ${skipped}, ล้มเหลว ${failed}';
   @override
   String get scrape_all_empty => 'ไม่มีรายการที่ต้องดึงข้อมูลในไลบรารีนี้';
@@ -117596,9 +118855,10 @@ class _StringsTh extends _StringsEn {
   String collection_episode_watched_at({required Object position}) =>
       'ดูถึง ${position}';
   @override
-  String collection_episode_rename_partial(
-          {required Object n, required Object m}) =>
-      'เปลี่ยนชื่อแล้ว ${n} ตอน, ล้มเหลว ${m}';
+  String collection_episode_rename_partial({
+    required Object n,
+    required Object m,
+  }) => 'เปลี่ยนชื่อแล้ว ${n} ตอน, ล้มเหลว ${m}';
   @override
   String get sync_err_browser_timeout =>
       'เบราว์เซอร์ไม่ส่งคืนการอนุญาต ลองใหม่ และตรวจสอบว่าพร็อกซีของคุณอนุญาต 127.0.0.1 ผ่าน';
@@ -117638,9 +118898,10 @@ class _StringsTh extends _StringsEn {
   @override
   String get book_convert_blocked_source_missing => 'ไฟล์ต้นฉบับหายไปจากดิสก์';
   @override
-  String manga_online_retry_waiting(
-          {required Object attempt, required Object total}) =>
-      'กำลังลองใหม่โดยอัตโนมัติ (${attempt}/${total})';
+  String manga_online_retry_waiting({
+    required Object attempt,
+    required Object total,
+  }) => 'กำลังลองใหม่โดยอัตโนมัติ (${attempt}/${total})';
   @override
   String get manga_ocr_wizard_already_ocred =>
       'เล่มนี้มีข้อมูล OCR ในทุกหน้าแล้ว การรัน OCR อีกครั้งจะเขียนทับข้อมูลเดิม';
@@ -117737,17 +118998,18 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_source_scrape_write_images => 'เขียนไฟล์รูปภาพ';
   @override
-  String video_source_scrape_progress(
-          {required Object phase,
-          required Object current,
-          required Object total}) =>
-      '${phase} · ${current}/${total}';
+  String video_source_scrape_progress({
+    required Object phase,
+    required Object current,
+    required Object total,
+  }) => '${phase} · ${current}/${total}';
   @override
-  String video_source_scrape_last_summary(
-          {required Object status,
-          required Object succeeded,
-          required Object pending,
-          required Object failed}) =>
+  String video_source_scrape_last_summary({
+    required Object status,
+    required Object succeeded,
+    required Object pending,
+    required Object failed,
+  }) =>
       'การดึงข้อมูลล่าสุด (${status}): สำเร็จ ${succeeded}, รอดำเนินการ ${pending}, ล้มเหลว ${failed}';
   @override
   String get video_source_scrape_phase_planning => 'กำลังวางแผน';
@@ -117963,9 +119225,10 @@ class _StringsTh extends _StringsEn {
   String migration_import_running({required Object batch}) =>
       'กำลังนำเข้า ${batch}…';
   @override
-  String migration_import_verify_failed(
-          {required Object batch, required Object detail}) =>
-      '${batch} ไม่ผ่านการตรวจสอบและถูกเก็บไว้สำหรับการส่งออกใหม่: ${detail}';
+  String migration_import_verify_failed({
+    required Object batch,
+    required Object detail,
+  }) => '${batch} ไม่ผ่านการตรวจสอบและถูกเก็บไว้สำหรับการส่งออกใหม่: ${detail}';
   @override
   String migration_import_counts_failed({required Object detail}) =>
       'ข้อมูลที่นำเข้าไม่ครบถ้วน: ${detail} ส่งออกส่วนที่ขาดจาก Hibiki ใหม่ แล้วนำเข้าอีกครั้ง';
@@ -117990,11 +119253,11 @@ class _StringsTh extends _StringsEn {
   @override
   String get migration_import_permission_grant => 'ให้สิทธิ์';
   @override
-  String migration_import_verifying(
-          {required Object batch,
-          required Object done,
-          required Object total}) =>
-      'กำลังตรวจสอบ ${batch} (${done}/${total})';
+  String migration_import_verifying({
+    required Object batch,
+    required Object done,
+    required Object total,
+  }) => 'กำลังตรวจสอบ ${batch} (${done}/${total})';
   @override
   String get migration_import_verifying_hint =>
       'กำลังตรวจสอบ checksum ของไฟล์เก็บถาวร ไลบรารีขนาดใหญ่อาจใช้เวลาหลายนาที';
@@ -118167,11 +119430,11 @@ class _StringsTh extends _StringsEn {
   String video_subtitle_read_failed({required Object label}) =>
       'อ่านไฟล์คำบรรยายนี้ไม่ได้ (เสียหายหรือว่างเปล่า): ${label}';
   @override
-  String dict_downloading_size(
-          {required Object name,
-          required Object done,
-          required Object total}) =>
-      'กำลังดาวน์โหลด ${name} (${done} / ${total})';
+  String dict_downloading_size({
+    required Object name,
+    required Object done,
+    required Object total,
+  }) => 'กำลังดาวน์โหลด ${name} (${done} / ${total})';
   @override
   String get video_subtitle_attach_book_missing =>
       'วิดีโอนี้ไม่อยู่ในไลบรารีของคุณ จึงไม่ได้แนบคำบรรยาย';
@@ -118362,11 +119625,11 @@ class _StringsTh extends _StringsEn {
   String manga_import_batch_hint({required Object n}) =>
       'โฟลเดอร์นี้มีไฟล์เล่ม ${n} ไฟล์ แต่ละไฟล์จะถูกนำเข้าเป็นหนังสือแยกตามชื่อไฟล์';
   @override
-  String manga_import_batch_done(
-          {required Object imported,
-          required Object skipped,
-          required Object failed}) =>
-      'นำเข้า ${imported}, ข้าม ${skipped}, ล้มเหลว ${failed}';
+  String manga_import_batch_done({
+    required Object imported,
+    required Object skipped,
+    required Object failed,
+  }) => 'นำเข้า ${imported}, ข้าม ${skipped}, ล้มเหลว ${failed}';
   @override
   String get srt_book_reimport => 'นำเข้าใหม่';
   @override
@@ -118459,8 +119722,10 @@ class _StringsTh extends _StringsEn {
   @override
   String get update_release_page_open => 'หน้าเผยแพร่';
   @override
-  String update_install_gal_hook_holder(
-          {required Object pid, required Object path}) =>
+  String update_install_gal_hook_holder({
+    required Object pid,
+    required Object path,
+  }) =>
       'ส่วนประกอบจับภาพเกมกำลังใช้งาน: PID ${pid} - ${path} (นี่คือเกมที่คุณกำลังเล่น หรือโฮสต์จับภาพ) ปิดเกมก่อน แล้วอัปเดตอีกครั้ง';
   @override
   String get game_hook_reason_protocol_mismatch =>
@@ -118942,9 +120207,10 @@ class _StringsTh extends _StringsEn {
   String get manga_ocr_model_unused_by_engine =>
       'เอนจินปัจจุบันไม่ใช้ไฟล์โมเดลในเครื่องเหล่านี้';
   @override
-  String manga_ocr_download_total_progress(
-          {required Object done, required Object total}) =>
-      '${done} จาก ${total}';
+  String manga_ocr_download_total_progress({
+    required Object done,
+    required Object total,
+  }) => '${done} จาก ${total}';
   @override
   String get media_source_network_subtitle_video =>
       'คลังระยะไกล WebDAV (สตรีมจากที่เดิม)';
@@ -119414,11 +120680,11 @@ class _StringsTh extends _StringsEn {
   @override
   String get manga_ocr_import_matched_nothing => 'ไม่พบไฟล์โมเดลที่ใช้งานได้';
   @override
-  String manga_ocr_import_size_mismatch(
-          {required Object file,
-          required Object expected,
-          required Object actual}) =>
-      '${file} มีขนาดไม่ถูกต้อง: ควรเป็น ${expected} แต่ได้ ${actual}';
+  String manga_ocr_import_size_mismatch({
+    required Object file,
+    required Object expected,
+    required Object actual,
+  }) => '${file} มีขนาดไม่ถูกต้อง: ควรเป็น ${expected} แต่ได้ ${actual}';
   @override
   String manga_ocr_import_still_missing({required Object count}) =>
       'ยังขาดอีก ${count} ไฟล์';
@@ -119484,9 +120750,10 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_jimaku_search_failed => 'ค้นหาคำบรรยายไม่สำเร็จ';
   @override
-  String video_subtitle_error_with_code(
-          {required Object msg, required Object code}) =>
-      '${msg} (HTTP ${code})';
+  String video_subtitle_error_with_code({
+    required Object msg,
+    required Object code,
+  }) => '${msg} (HTTP ${code})';
   @override
   String get manga_rescan_run => 'รู้จำพื้นที่ที่เลือกใหม่';
   @override
@@ -119733,9 +121000,10 @@ class _StringsTh extends _StringsEn {
   @override
   String get manga_series_open_series => 'หน้าผลงาน';
   @override
-  String manga_series_read_progress(
-          {required Object page, required Object total}) =>
-      'อ่านถึงหน้า ${page} จาก ${total}';
+  String manga_series_read_progress({
+    required Object page,
+    required Object total,
+  }) => 'อ่านถึงหน้า ${page} จาก ${total}';
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       'อ่านถึงหน้า ${page}';
@@ -120016,13 +121284,15 @@ class _StringsTh extends _StringsEn {
   String web_video_mine_queued({required Object count}) =>
       'เพิ่มในคิวสร้างการ์ดแล้ว (รอ ${count} รายการ)';
   @override
-  String web_video_mine_queue_running(
-          {required Object done, required Object total}) =>
-      'กำลังสร้างการ์ด ${done}/${total}…';
+  String web_video_mine_queue_running({
+    required Object done,
+    required Object total,
+  }) => 'กำลังสร้างการ์ด ${done}/${total}…';
   @override
-  String web_video_mine_queue_finished(
-          {required Object ok, required Object failed}) =>
-      'สร้างการ์ดแล้ว: ${ok} รายการ ล้มเหลว: ${failed} รายการ';
+  String web_video_mine_queue_finished({
+    required Object ok,
+    required Object failed,
+  }) => 'สร้างการ์ดแล้ว: ${ok} รายการ ล้มเหลว: ${failed} รายการ';
   @override
   String get web_video_hosting_menu => 'โหมดเล่น';
   @override
@@ -120291,29 +121561,78 @@ class _StringsTh extends _StringsEn {
       'Waiting for matching in-game click';
   @override
   String get delete_choices_remember => 'จดจำตัวเลือกเหล่านี้';
+  @override
+  String get network_proxy_mode_label => 'Proxy mode';
+  @override
+  String get network_proxy_mode_auto => 'Automatic';
+  @override
+  String get network_proxy_mode_auto_hint =>
+      'Use environment variables, then the enabled system proxy';
+  @override
+  String get network_proxy_mode_direct => 'Direct';
+  @override
+  String get network_proxy_mode_direct_hint => 'Disable proxy use for the app';
+  @override
+  String get network_proxy_mode_manual => 'Manual';
+  @override
+  String get network_proxy_mode_manual_hint =>
+      'Use the server and optional credentials below';
+  @override
+  String get network_proxy_manual_hint =>
+      'HTTP proxy server used by all public internet requests';
+  @override
+  String get network_proxy_username => 'Proxy username (optional)';
+  @override
+  String get network_proxy_password => 'Proxy password (optional)';
+  @override
+  String get storage_category_backups => 'Local backups';
+  @override
+  String storage_entry_backups_label({required Object n}) =>
+      '${n} backup archive(s)';
+  @override
+  String get storage_entry_delete_backups_confirm_body =>
+      'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+  @override
+  String get update_download_source_preference => 'Preferred download source';
+  @override
+  String get update_download_source_preference_hint =>
+      'The selected source is tried first; unavailable sources still fall back automatically.';
+  @override
+  String get update_download_source_auto => 'Automatic (recommended)';
+  @override
+  String get update_download_source_cloudflare => 'Cloudflare mirror';
+  @override
+  String get update_download_source_github => 'GitHub direct';
+  @override
+  String update_download_source_proxy({required Object host}) =>
+      'Proxy: ${host}';
 }
 
 // Path: <root>
 class _StringsTr extends _StringsEn {
   /// You can call this constructor and build your own translation instance of this locale.
   /// Constructing via the enum [AppLocale.build] is preferred.
-  _StringsTr.build(
-      {Map<String, Node>? overrides,
-      PluralResolver? cardinalResolver,
-      PluralResolver? ordinalResolver})
-      : assert(overrides == null,
-            'Set "translation_overrides: true" in order to enable this feature.'),
-        $meta = TranslationMetadata(
-          locale: AppLocale.tr,
-          overrides: overrides ?? {},
-          cardinalResolver: cardinalResolver,
-          ordinalResolver: ordinalResolver,
-        ),
-        super.build(
-            cardinalResolver: cardinalResolver,
-            ordinalResolver: ordinalResolver) {
+  _StringsTr.build({
+    Map<String, Node>? overrides,
+    PluralResolver? cardinalResolver,
+    PluralResolver? ordinalResolver,
+  }) : assert(
+         overrides == null,
+         'Set "translation_overrides: true" in order to enable this feature.',
+       ),
+       $meta = TranslationMetadata(
+         locale: AppLocale.tr,
+         overrides: overrides ?? {},
+         cardinalResolver: cardinalResolver,
+         ordinalResolver: ordinalResolver,
+       ),
+       super.build(
+         cardinalResolver: cardinalResolver,
+         ordinalResolver: ordinalResolver,
+       ) {
     super.$meta.setFlatMapFunction(
-        $meta.getTranslation); // copy base translations to super.$meta
+      $meta.getTranslation,
+    ); // copy base translations to super.$meta
     $meta.setFlatMapFunction(_flatMapFunction);
   }
 
@@ -120826,10 +122145,11 @@ class _StringsTr extends _StringsEn {
   @override
   String get backup_import => 'Yedeği İçe Aktar';
   @override
-  String backup_import_confirm(
-          {required Object date,
-          required Object bookCount,
-          required Object statsCount}) =>
+  String backup_import_confirm({
+    required Object date,
+    required Object bookCount,
+    required Object statsCount,
+  }) =>
       'Bu işlem tüm mevcut verileri ${date} tarihli yedekle değiştirir.\n\n${bookCount} kitap, ${statsCount} istatistik kaydı.\n\nGeri yüklemeden sonra uygulama yeniden başlatılacak.';
   @override
   String get backup_import_confirm_title => 'Yedek Geri Yüklensin mi?';
@@ -120847,8 +122167,10 @@ class _StringsTr extends _StringsEn {
   @override
   String get backup_import_invalid => 'Geçersiz yedek dosyası';
   @override
-  String backup_import_merge_preview(
-          {required Object bookCount, required Object progressCount}) =>
+  String backup_import_merge_preview({
+    required Object bookCount,
+    required Object progressCount,
+  }) =>
       'Birleştirme ${bookCount} kitap ekleyecek ve ${progressCount} okuma konumunu güncelleyecek.';
   @override
   String get backup_import_mode_label => 'İçe aktarma modu';
@@ -121148,12 +122470,12 @@ class _StringsTr extends _StringsEn {
   @override
   String get changelog_prerelease => 'Ön sürüm';
   @override
-  String chapter_progress(
-          {required Object idx,
-          required Object total,
-          required Object suffix,
-          required Object pct}) =>
-      'Bölüm ${idx} / ${total}${suffix} · ${pct}%';
+  String chapter_progress({
+    required Object idx,
+    required Object total,
+    required Object suffix,
+    required Object pct,
+  }) => 'Bölüm ${idx} / ${total}${suffix} · ${pct}%';
   @override
   String get clear => 'Temizle';
   @override
@@ -121242,9 +122564,10 @@ class _StringsTr extends _StringsEn {
   @override
   String get collection_view_all => 'Tümünü görüntüle';
   @override
-  String collection_watched_progress(
-          {required Object done, required Object total}) =>
-      '${done}/${total} izlendi';
+  String collection_watched_progress({
+    required Object done,
+    required Object total,
+  }) => '${done}/${total} izlendi';
   @override
   String get collection_word => 'Kelime';
   @override
@@ -121469,9 +122792,10 @@ class _StringsTr extends _StringsEn {
   @override
   String get data_storage_migrate_failed_title => 'Veri taşıma başarısız';
   @override
-  String data_storage_migrate_overlay_progress(
-          {required Object copied, required Object total}) =>
-      'Dosyalar kopyalanıyor: ${copied} / ${total}';
+  String data_storage_migrate_overlay_progress({
+    required Object copied,
+    required Object total,
+  }) => 'Dosyalar kopyalanıyor: ${copied} / ${total}';
   @override
   String get data_storage_migrate_overlay_title => 'Verileriniz taşınıyor';
   @override
@@ -121489,8 +122813,10 @@ class _StringsTr extends _StringsEn {
   String get data_storage_restart_failed =>
       'Veri taşındı, ancak otomatik yeniden başlatma başarısız oldu. Lütfen Fushi\'yi elle yeniden açın.';
   @override
-  String db_downgrade_message(
-          {required Object dbVersion, required Object appVersion}) =>
+  String db_downgrade_message({
+    required Object dbVersion,
+    required Object appVersion,
+  }) =>
       'Bu veritabanı Fushi\'nin daha yeni bir sürümü tarafından oluşturuldu (şema v${dbVersion}). Mevcut uygulamanız çok eski (v${appVersion}). Verilerinizi korumak için açma engellendi. Lütfen uygulamayı güncelleyip tekrar deneyin.';
   @override
   String get db_downgrade_title => 'Fushi\'yi güncelle';
@@ -121660,11 +122986,11 @@ class _StringsTr extends _StringsEn {
   @override
   String get dict_download_language => 'Diliniz';
   @override
-  String dict_download_partial(
-          {required Object success,
-          required Object total,
-          required Object error}) =>
-      '${success} / ${total} tamam. Başarısız: ${error}';
+  String dict_download_partial({
+    required Object success,
+    required Object total,
+    required Object error,
+  }) => '${success} / ${total} tamam. Başarısız: ${error}';
   @override
   String get dict_download_select_title => 'Sözlükleri Seçin';
   @override
@@ -121695,19 +123021,21 @@ class _StringsTr extends _StringsEn {
   @override
   String get dict_update_latest => 'Zaten güncel.';
   @override
-  String dict_update_name_mismatch_body(
-          {required Object incoming, required Object existing}) =>
+  String dict_update_name_mismatch_body({
+    required Object incoming,
+    required Object existing,
+  }) =>
       'Seçilen dosya "${incoming}", ancak "${existing}" sözlüğünü güncelliyorsunuz. Yine de değiştirilsin mi?';
   @override
   String get dict_update_name_mismatch_title => 'Adlar eşleşmiyor';
   @override
   String get dict_update_none => 'Tüm sözlükler güncel.';
   @override
-  String dict_update_summary(
-          {required Object updated,
-          required Object current,
-          required Object failed}) =>
-      '${updated} güncellendi, ${current} güncel, ${failed} başarısız.';
+  String dict_update_summary({
+    required Object updated,
+    required Object current,
+    required Object failed,
+  }) => '${updated} güncellendi, ${current} güncel, ${failed} başarısız.';
   @override
   String get dict_update_tooltip => 'Sözlüğü güncelle';
   @override
@@ -121794,8 +123122,10 @@ class _StringsTr extends _StringsEn {
   @override
   String get download_subscription_check_now => 'Şimdi kontrol et';
   @override
-  String download_subscription_choice_hint(
-          {required Object group, required Object resolution}) =>
+  String download_subscription_choice_hint({
+    required Object group,
+    required Object resolution,
+  }) =>
       '${group} · ${resolution} takip et. Yeni tekli bölüm yayınları sıraya alınacak.';
   @override
   String get download_subscription_created =>
@@ -121940,9 +123270,10 @@ class _StringsTr extends _StringsEn {
   @override
   String favorites({required Object n}) => 'Favoriler (${n})';
   @override
-  String field_fallback_used(
-          {required Object field, required Object secondField}) =>
-      '${field} alanı yedek arama terimi olarak ${secondField} kullandı.';
+  String field_fallback_used({
+    required Object field,
+    required Object secondField,
+  }) => '${field} alanı yedek arama terimi olarak ${secondField} kullandı.';
   @override
   String file_count({required Object count}) => '${count} dosya';
   @override
@@ -122662,12 +123993,12 @@ class _StringsTr extends _StringsEn {
   @override
   String get game_waiting_for_text => 'Metin bekleniyor';
   @override
-  String game_waveform_range_label(
-          {required Object start,
-          required Object end,
-          required Object duration,
-          required Object total}) =>
-      '${start} - ${end} (seçili ${duration} / toplam ${total})';
+  String game_waveform_range_label({
+    required Object start,
+    required Object end,
+    required Object duration,
+    required Object total,
+  }) => '${start} - ${end} (seçili ${duration} / toplam ${total})';
   @override
   String get game_waveform_select_title => 'Ses aralığı seçin';
   @override
@@ -122936,9 +124267,10 @@ class _StringsTr extends _StringsEn {
   @override
   String get jump_to_char => 'Karaktere Git';
   @override
-  String jump_to_char_current(
-          {required Object current, required Object total}) =>
-      'Mevcut: ${current} / ${total}';
+  String jump_to_char_current({
+    required Object current,
+    required Object total,
+  }) => 'Mevcut: ${current} / ${total}';
   @override
   String get jump_to_char_hint => 'Karakter konumu girin…';
   @override
@@ -123114,9 +124446,10 @@ class _StringsTr extends _StringsEn {
   @override
   String get manga_ocr_wizard_no_images => 'Bu klasörde görsel bulunamadı.';
   @override
-  String manga_ocr_wizard_page_progress(
-          {required Object done, required Object total}) =>
-      'Sayfa ${done} / ${total}';
+  String manga_ocr_wizard_page_progress({
+    required Object done,
+    required Object total,
+  }) => 'Sayfa ${done} / ${total}';
   @override
   String get manga_ocr_wizard_pick_folder => 'Görsel klasörünü seçin';
   @override
@@ -123142,9 +124475,10 @@ class _StringsTr extends _StringsEn {
   @override
   String get manga_online_queue_added => 'İndirme kuyruğuna eklendi';
   @override
-  String manga_online_queue_progress(
-          {required Object done, required Object total}) =>
-      'Cilt ${done} / ${total}';
+  String manga_online_queue_progress({
+    required Object done,
+    required Object total,
+  }) => 'Cilt ${done} / ${total}';
   @override
   String get manga_online_queue_section => 'Manga katalog indirmeleri';
   @override
@@ -123178,9 +124512,10 @@ class _StringsTr extends _StringsEn {
   String get manga_remote_ocr_unsupported =>
       'Eşleşmiş cihaz manga OCR desteklemiyor.';
   @override
-  String manga_remote_ocr_uploading(
-          {required Object done, required Object total}) =>
-      'Sayfalar yükleniyor ${done} / ${total}…';
+  String manga_remote_ocr_uploading({
+    required Object done,
+    required Object total,
+  }) => 'Sayfalar yükleniyor ${done} / ${total}…';
   @override
   String get margin_bottom => 'Alt kenar boşluğu';
   @override
@@ -123687,16 +125022,18 @@ class _StringsTr extends _StringsEn {
   @override
   String get audiobook_rematch_auto_match => 'Otomatik eşleştir';
   @override
-  String audiobook_rematch_auto_picked(
-          {required Object window, required Object pct}) =>
-      '${window} otomatik seçildi (isabet ${pct}%)';
+  String audiobook_rematch_auto_picked({
+    required Object window,
+    required Object pct,
+  }) => '${window} otomatik seçildi (isabet ${pct}%)';
   @override
   String audiobook_rematch_default_value({required Object n}) =>
       'Varsayılan ${n}';
   @override
-  String audiobook_rematch_health_label(
-          {required Object pct, required Object detail}) =>
-      '${pct} eşleşti — ${detail}';
+  String audiobook_rematch_health_label({
+    required Object pct,
+    required Object detail,
+  }) => '${pct} eşleşti — ${detail}';
   @override
   String get audiobook_rematch_matching => 'Eşleştiriliyor...';
   @override
@@ -123714,9 +125051,10 @@ class _StringsTr extends _StringsEn {
   String audiobook_rematch_failed({required Object error}) =>
       'Yeniden eşleştirme başarısız: ${error}';
   @override
-  String audiobook_rematch_result(
-          {required Object pct, required Object window}) =>
-      'Yeniden eşleştirildi: ${pct}% (pencere: ${window})';
+  String audiobook_rematch_result({
+    required Object pct,
+    required Object window,
+  }) => 'Yeniden eşleştirildi: ${pct}% (pencere: ${window})';
   @override
   String get audiobook_rematch_search_window => 'Arama penceresi';
   @override
@@ -124921,9 +126259,10 @@ class _StringsTr extends _StringsEn {
   @override
   String get update_download_resumed => 'sürdürüldü';
   @override
-  String update_download_size(
-          {required Object received, required Object total}) =>
-      'İndirilen: ${received} / ${total}';
+  String update_download_size({
+    required Object received,
+    required Object total,
+  }) => 'İndirilen: ${received} / ${total}';
   @override
   String update_download_source({required Object source}) =>
       'Kaynak: ${source}';
@@ -124937,13 +126276,15 @@ class _StringsTr extends _StringsEn {
   String update_install_current_executable({required Object path}) =>
       'Çalışan yürütülebilir dosya: ${path}';
   @override
-  String update_install_deletefile_failure(
-          {required Object path, required Object code}) =>
-      'Yükleyici ${path} dosyasını değiştiremedi (kod ${code})';
+  String update_install_deletefile_failure({
+    required Object path,
+    required Object code,
+  }) => 'Yükleyici ${path} dosyasını değiştiremedi (kod ${code})';
   @override
-  String update_install_detected_location(
-          {required Object source, required Object path}) =>
-      'Algılanan yükleme konumu (${source}): ${path}';
+  String update_install_detected_location({
+    required Object source,
+    required Object path,
+  }) => 'Algılanan yükleme konumu (${source}): ${path}';
   @override
   String update_install_failure_summary({required Object summary}) =>
       'Neden: ${summary}';
@@ -124965,9 +126306,10 @@ class _StringsTr extends _StringsEn {
   String update_install_launcher_pid({required Object pid}) =>
       'Güncelleme başlatıcısı PID: ${pid}';
   @override
-  String update_install_libmpv_holder(
-          {required Object pid, required Object path}) =>
-      'libmpv tutan süreç: PID ${pid} - ${path}';
+  String update_install_libmpv_holder({
+    required Object pid,
+    required Object path,
+  }) => 'libmpv tutan süreç: PID ${pid} - ${path}';
   @override
   String get update_install_log_not_observed =>
       'Başlatma sonrası kontrol sırasında yükleyici günlüğü oluşturulmadı.';
@@ -125002,9 +126344,10 @@ class _StringsTr extends _StringsEn {
   String get update_install_restart_windows_hint =>
       'Listelenen süreçler kapatıldığı hâlde libmpv-2.dll hâlâ kilitliyse Windows\'u yeniden başlatıp tekrar yükleyin.';
   @override
-  String update_install_running_process(
-          {required Object pid, required Object path}) =>
-      'Çalışan Fushi süreci: PID ${pid} - ${path}';
+  String update_install_running_process({
+    required Object pid,
+    required Object path,
+  }) => 'Çalışan Fushi süreci: PID ${pid} - ${path}';
   @override
   String update_install_success_message({required Object version}) =>
       'Fushi ${version} sürümüne güncellendi.';
@@ -125022,9 +126365,10 @@ class _StringsTr extends _StringsEn {
   String update_message({required Object version}) =>
       'Sürüm ${version} mevcut.';
   @override
-  String update_network_failure(
-          {required Object host, required Object reason}) =>
-      '${host} adresine ulaşılamadı: ${reason}';
+  String update_network_failure({
+    required Object host,
+    required Object reason,
+  }) => '${host} adresine ulaşılamadı: ${reason}';
   @override
   String get update_never_remind => 'Güncellemeleri hatırlatma';
   @override
@@ -125282,9 +126626,10 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_jimaku_api_key_set => 'API key ayarlandı';
   @override
-  String video_jimaku_batch_done(
-          {required Object done, required Object total}) =>
-      'Altyazılar indirildi: ${done}/${total}';
+  String video_jimaku_batch_done({
+    required Object done,
+    required Object total,
+  }) => 'Altyazılar indirildi: ${done}/${total}';
   @override
   String get video_jimaku_batch_download => 'Tümünü indir';
   @override
@@ -125802,9 +127147,10 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_shader_download_failed => 'Shader indirme başarısız';
   @override
-  String video_shader_download_partial(
-          {required Object ok, required Object failed}) =>
-      '${ok} shader indirildi, ${failed} başarısız';
+  String video_shader_download_partial({
+    required Object ok,
+    required Object failed,
+  }) => '${ok} shader indirildi, ${failed} başarısız';
   @override
   String get video_shader_download_url => 'Bağlantıdan indir';
   @override
@@ -125915,9 +127261,10 @@ class _StringsTr extends _StringsEn {
   String get video_subtitle_attach_playlist_hint =>
       'Bölüm başına altyazı eklemek için oynatma listesini açın';
   @override
-  String video_subtitle_attached_to_video(
-          {required Object title, required Object count}) =>
-      '${title} videosuna altyazı eklendi (${count} satır)';
+  String video_subtitle_attached_to_video({
+    required Object title,
+    required Object count,
+  }) => '${title} videosuna altyazı eklendi (${count} satır)';
   @override
   String get video_subtitle_auto_align => 'Altyazıyı otomatik hizala';
   @override
@@ -126141,13 +127488,14 @@ class _StringsTr extends _StringsEn {
   @override
   String get anki_dedup_report_title => 'Medya yineleme temizleme raporu';
   @override
-  String anki_dedup_report_body(
-          {required Object groups,
-          required Object removed,
-          required Object size,
-          required Object notes,
-          required Object models,
-          required Object skipped}) =>
+  String anki_dedup_report_body({
+    required Object groups,
+    required Object removed,
+    required Object size,
+    required Object notes,
+    required Object models,
+    required Object skipped,
+  }) =>
       '${groups} yinelenen grup; ${removed} fazla kopya (${size}); ${notes} not ve ${models} not türü yeniden yazıldı; ${skipped} atlandı.';
   @override
   String get anki_dedup_report_dry_note =>
@@ -126170,11 +127518,11 @@ class _StringsTr extends _StringsEn {
   String anki_dedup_plan_intro({required Object count, required Object size}) =>
       '${count} fazla kopya, ${size} geri kazanılabilir. Her dosyanın bir kopyası korunur ve tüm referanslar önce ona yönlendirilir; hiçbir şey yeniden kodlanmaz.';
   @override
-  String anki_dedup_plan_entry(
-          {required Object file,
-          required Object size,
-          required Object canonical}) =>
-      '${file} (${size}) silinecek — ${canonical} korunuyor';
+  String anki_dedup_plan_entry({
+    required Object file,
+    required Object size,
+    required Object canonical,
+  }) => '${file} (${size}) silinecek — ${canonical} korunuyor';
   @override
   String get anki_dedup_plan_delete => 'Bu dosyaları sil';
   @override
@@ -126236,8 +127584,10 @@ class _StringsTr extends _StringsEn {
   String manga_ocr_acceleration_status({required Object engine}) =>
       'OCR hızlandırma: ${engine}';
   @override
-  String manga_ocr_acceleration_degraded(
-          {required Object engine, required Object reason}) =>
+  String manga_ocr_acceleration_degraded({
+    required Object engine,
+    required Object reason,
+  }) =>
       'GPU hızlandırma kullanılamıyor, OCR ${engine} üzerinde çalışıyor: ${reason}';
   @override
   String get media_tracking_status => 'Koleksiyon durumu';
@@ -126283,8 +127633,10 @@ class _StringsTr extends _StringsEn {
   String anki_dedup_auto_done({required Object count, required Object size}) =>
       '${count} yinelenen Anki medya dosyası kaldırıldı, ${size} geri kazanıldı';
   @override
-  String anki_lapis_backup_done_pruned(
-          {required Object path, required Object count}) =>
+  String anki_lapis_backup_done_pruned({
+    required Object path,
+    required Object count,
+  }) =>
       '${path} konumuna yedeklendi (${count} eski yedek 90 gün / 10 adet tutma politikasıyla temizlendi)';
   @override
   String get game_audio_fallback_policy => 'Ses geri dönüşü';
@@ -126435,9 +127787,10 @@ class _StringsTr extends _StringsEn {
   String get stat_clear_all_game_message =>
       'Tüm oyun oynama süresi ve oturum sayıları silinsin mi? Oyun kütüphaneniz ve etkinlik zaman çizelgeniz korunur. Bu işlem geri alınamaz.';
   @override
-  String batch_selection_stale_skipped(
-          {required Object n, required Object m}) =>
-      'Seçilen ${n} öğeden artık mevcut olmayan ${m} tanesi atlandı';
+  String batch_selection_stale_skipped({
+    required Object n,
+    required Object m,
+  }) => 'Seçilen ${n} öğeden artık mevcut olmayan ${m} tanesi atlandı';
   @override
   String get game_text_thread_unset =>
       'İş parçacığı seçilmedi — yakalamayı başlatmak için birini seçin';
@@ -126494,22 +127847,25 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_jimaku_language_unknown => 'Dil etiketlenmemiş';
   @override
-  String video_jimaku_source_summary(
-          {required Object files,
-          required Object episodes,
-          required Object languages}) =>
-      '${files} altyazı dosyası · ${episodes} bölüm · ${languages}';
+  String video_jimaku_source_summary({
+    required Object files,
+    required Object episodes,
+    required Object languages,
+  }) => '${files} altyazı dosyası · ${episodes} bölüm · ${languages}';
   @override
-  String video_jimaku_episode_unlabeled(
-          {required Object episode, required Object count}) =>
+  String video_jimaku_episode_unlabeled({
+    required Object episode,
+    required Object count,
+  }) =>
       '${episode} bölümü olarak etiketlenmiş altyazı yok; ${count} etiketsiz dosya yine de eşleşebilir';
   @override
   String video_jimaku_episode_unavailable({required Object episode}) =>
       '${episode} bölümü için altyazı bulunamadı';
   @override
-  String video_jimaku_episode_available(
-          {required Object count, required Object languages}) =>
-      '${count} altyazı mevcut · ${languages}';
+  String video_jimaku_episode_available({
+    required Object count,
+    required Object languages,
+  }) => '${count} altyazı mevcut · ${languages}';
   @override
   String get manga_online_source_disabled =>
       'Bu internet kaynağı devre dışı. Kataloğa göz atmak için Kaynaklar\'dan etkinleştirin.';
@@ -126529,13 +127885,15 @@ class _StringsTr extends _StringsEn {
   String anki_dedup_progress_scanning({required Object count}) =>
       'Medya klasörü taranıyor… (${count} dosya bulundu)';
   @override
-  String anki_dedup_progress_hashing(
-          {required Object done, required Object total}) =>
-      'Aynı boyuttaki dosyalar karşılaştırılıyor… (${done} / ${total})';
+  String anki_dedup_progress_hashing({
+    required Object done,
+    required Object total,
+  }) => 'Aynı boyuttaki dosyalar karşılaştırılıyor… (${done} / ${total})';
   @override
-  String anki_dedup_progress_resolving(
-          {required Object done, required Object total}) =>
-      'Yinelenenler işleniyor… (${done} / ${total})';
+  String anki_dedup_progress_resolving({
+    required Object done,
+    required Object total,
+  }) => 'Yinelenenler işleniyor… (${done} / ${total})';
   @override
   String anki_dedup_progress_freed({required Object size}) =>
       'Şu ana kadar ${size} serbest bırakıldı';
@@ -126590,8 +127948,10 @@ class _StringsTr extends _StringsEn {
   @override
   String get sync_last_failed => 'Son senkronizasyon: başarısız';
   @override
-  String anime_download_no_results_detail(
-          {required Object query, required Object filters}) =>
+  String anime_download_no_results_detail({
+    required Object query,
+    required Object filters,
+  }) =>
       'Hizmet başarılı yanıt verdi ancak 0 öğe döndürdü. Sorgu: ${query}; filtreler: ${filters}. Başka bir başlık deneyin veya filtreleri gevşetin.';
   @override
   String get anime_download_streaming_ready =>
@@ -126774,11 +128134,12 @@ class _StringsTr extends _StringsEn {
   @override
   String scrape_all_item({required Object title}) => 'İşleniyor: ${title}';
   @override
-  String scrape_all_done(
-          {required Object applied,
-          required Object review,
-          required Object skipped,
-          required Object failed}) =>
+  String scrape_all_done({
+    required Object applied,
+    required Object review,
+    required Object skipped,
+    required Object failed,
+  }) =>
       'Tamamlandı: ${applied} uygulandı, ${review} inceleme gerekiyor, ${skipped} atlandı, ${failed} başarısız';
   @override
   String get scrape_all_empty => 'Bu kütüphanede taranacak öğe yok.';
@@ -127150,9 +128511,10 @@ class _StringsTr extends _StringsEn {
   String collection_episode_watched_at({required Object position}) =>
       '${position} konumuna kadar izlendi';
   @override
-  String collection_episode_rename_partial(
-          {required Object n, required Object m}) =>
-      '${n} bölüm yeniden adlandırıldı, ${m} başarısız';
+  String collection_episode_rename_partial({
+    required Object n,
+    required Object m,
+  }) => '${n} bölüm yeniden adlandırıldı, ${m} başarısız';
   @override
   String get sync_err_browser_timeout =>
       'Tarayıcı yetkilendirmeyi döndürmedi. Tekrar deneyin ve proxy\'nizin 127.0.0.1 adresine izin verdiğinden emin olun.';
@@ -127193,9 +128555,10 @@ class _StringsTr extends _StringsEn {
   String get book_convert_blocked_source_missing =>
       'Kaynak dosyalar diskten silindi.';
   @override
-  String manga_online_retry_waiting(
-          {required Object attempt, required Object total}) =>
-      'Otomatik olarak yeniden deneniyor (${attempt}/${total})';
+  String manga_online_retry_waiting({
+    required Object attempt,
+    required Object total,
+  }) => 'Otomatik olarak yeniden deneniyor (${attempt}/${total})';
   @override
   String get manga_ocr_wizard_already_ocred =>
       'Bu cilt zaten her sayfada OCR verisine sahip. OCR\'yi yeniden çalıştırmak bunların üzerine yazacaktır.';
@@ -127296,17 +128659,18 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_source_scrape_write_images => 'Görsel dosyaları yaz';
   @override
-  String video_source_scrape_progress(
-          {required Object phase,
-          required Object current,
-          required Object total}) =>
-      '${phase} · ${current}/${total}';
+  String video_source_scrape_progress({
+    required Object phase,
+    required Object current,
+    required Object total,
+  }) => '${phase} · ${current}/${total}';
   @override
-  String video_source_scrape_last_summary(
-          {required Object status,
-          required Object succeeded,
-          required Object pending,
-          required Object failed}) =>
+  String video_source_scrape_last_summary({
+    required Object status,
+    required Object succeeded,
+    required Object pending,
+    required Object failed,
+  }) =>
       'Son tarama (${status}): ${succeeded} başarılı, ${pending} beklemede, ${failed} başarısız';
   @override
   String get video_source_scrape_phase_planning => 'Planlanıyor';
@@ -127523,8 +128887,10 @@ class _StringsTr extends _StringsEn {
   String migration_import_running({required Object batch}) =>
       '${batch} içe aktarılıyor…';
   @override
-  String migration_import_verify_failed(
-          {required Object batch, required Object detail}) =>
+  String migration_import_verify_failed({
+    required Object batch,
+    required Object detail,
+  }) =>
       '${batch} doğrulama başarısız oldu ve yeniden dışa aktarma için saklandı: ${detail}';
   @override
   String migration_import_counts_failed({required Object detail}) =>
@@ -127551,11 +128917,11 @@ class _StringsTr extends _StringsEn {
   @override
   String get migration_import_permission_grant => 'İzin ver';
   @override
-  String migration_import_verifying(
-          {required Object batch,
-          required Object done,
-          required Object total}) =>
-      '${batch} doğrulanıyor (${done}/${total})';
+  String migration_import_verifying({
+    required Object batch,
+    required Object done,
+    required Object total,
+  }) => '${batch} doğrulanıyor (${done}/${total})';
   @override
   String get migration_import_verifying_hint =>
       'Arşivler sağlama toplamıyla doğrulanıyor. Büyük kütüphaneler birkaç dakika sürebilir.';
@@ -127731,11 +129097,11 @@ class _StringsTr extends _StringsEn {
   String video_subtitle_read_failed({required Object label}) =>
       'Bu altyazı dosyası okunamadı (hasarlı veya boş): ${label}';
   @override
-  String dict_downloading_size(
-          {required Object name,
-          required Object done,
-          required Object total}) =>
-      '${name} indiriliyor (${done} / ${total})';
+  String dict_downloading_size({
+    required Object name,
+    required Object done,
+    required Object total,
+  }) => '${name} indiriliyor (${done} / ${total})';
   @override
   String get video_subtitle_attach_book_missing =>
       'Bu video kütüphanenizde olmadığı için altyazı eklenmedi';
@@ -127930,11 +129296,11 @@ class _StringsTr extends _StringsEn {
   String manga_import_batch_hint({required Object n}) =>
       'Bu klasörde ${n} cilt dosyası var; her biri dosya adıyla kendi kitabı olarak içe aktarılır.';
   @override
-  String manga_import_batch_done(
-          {required Object imported,
-          required Object skipped,
-          required Object failed}) =>
-      '${imported} içe aktarıldı, ${skipped} atlandı, ${failed} başarısız.';
+  String manga_import_batch_done({
+    required Object imported,
+    required Object skipped,
+    required Object failed,
+  }) => '${imported} içe aktarıldı, ${skipped} atlandı, ${failed} başarısız.';
   @override
   String get srt_book_reimport => 'Yeniden içe aktar';
   @override
@@ -128028,8 +129394,10 @@ class _StringsTr extends _StringsEn {
   @override
   String get update_release_page_open => 'Sürüm sayfası';
   @override
-  String update_install_gal_hook_holder(
-          {required Object pid, required Object path}) =>
+  String update_install_gal_hook_holder({
+    required Object pid,
+    required Object path,
+  }) =>
       'Galgame yakalama bileşeni kullanımda: PID ${pid} - ${path} (bu oynadığınız oyun veya yakalama sunucusu). Oyunu kapatın, ardından tekrar güncelleyin.';
   @override
   String get game_hook_reason_protocol_mismatch =>
@@ -128516,9 +129884,10 @@ class _StringsTr extends _StringsEn {
   String get manga_ocr_model_unused_by_engine =>
       'Mevcut motor bu yerel model dosyalarını kullanmıyor.';
   @override
-  String manga_ocr_download_total_progress(
-          {required Object done, required Object total}) =>
-      '${done} / ${total}';
+  String manga_ocr_download_total_progress({
+    required Object done,
+    required Object total,
+  }) => '${done} / ${total}';
   @override
   String get media_source_network_subtitle_video =>
       'WebDAV uzak kütüphane (yerinde akış)';
@@ -128991,11 +130360,11 @@ class _StringsTr extends _StringsEn {
   String get manga_ocr_import_matched_nothing =>
       'Kullanılabilir model dosyası tanınmadı';
   @override
-  String manga_ocr_import_size_mismatch(
-          {required Object file,
-          required Object expected,
-          required Object actual}) =>
-      '${file} boyutu yanlış: beklenen ${expected}, gelen ${actual}';
+  String manga_ocr_import_size_mismatch({
+    required Object file,
+    required Object expected,
+    required Object actual,
+  }) => '${file} boyutu yanlış: beklenen ${expected}, gelen ${actual}';
   @override
   String manga_ocr_import_still_missing({required Object count}) =>
       'Hâlâ ${count} dosya eksik';
@@ -129061,9 +130430,10 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_jimaku_search_failed => 'Altyazı araması başarısız';
   @override
-  String video_subtitle_error_with_code(
-          {required Object msg, required Object code}) =>
-      '${msg} (HTTP ${code})';
+  String video_subtitle_error_with_code({
+    required Object msg,
+    required Object code,
+  }) => '${msg} (HTTP ${code})';
   @override
   String get manga_rescan_run => 'Seçili alanı yeniden tanı';
   @override
@@ -129312,9 +130682,10 @@ class _StringsTr extends _StringsEn {
   @override
   String get manga_series_open_series => 'Eser sayfası';
   @override
-  String manga_series_read_progress(
-          {required Object total, required Object page}) =>
-      '${total} sayfadan ${page}. sayfaya kadar okundu';
+  String manga_series_read_progress({
+    required Object total,
+    required Object page,
+  }) => '${total} sayfadan ${page}. sayfaya kadar okundu';
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       '${page}. sayfaya kadar okundu';
@@ -129600,13 +130971,15 @@ class _StringsTr extends _StringsEn {
   String web_video_mine_queued({required Object count}) =>
       'Kart oluşturma sırasına alındı (${count} bekliyor)';
   @override
-  String web_video_mine_queue_running(
-          {required Object done, required Object total}) =>
-      'Kartlar oluşturuluyor ${done}/${total}…';
+  String web_video_mine_queue_running({
+    required Object done,
+    required Object total,
+  }) => 'Kartlar oluşturuluyor ${done}/${total}…';
   @override
-  String web_video_mine_queue_finished(
-          {required Object ok, required Object failed}) =>
-      'Oluşturulan kart: ${ok}, başarısız: ${failed}';
+  String web_video_mine_queue_finished({
+    required Object ok,
+    required Object failed,
+  }) => 'Oluşturulan kart: ${ok}, başarısız: ${failed}';
   @override
   String get web_video_hosting_menu => 'Oynatma modu';
   @override
@@ -129880,29 +131253,78 @@ class _StringsTr extends _StringsEn {
       'Waiting for matching in-game click';
   @override
   String get delete_choices_remember => 'Bu seçimleri hatırla';
+  @override
+  String get network_proxy_mode_label => 'Proxy mode';
+  @override
+  String get network_proxy_mode_auto => 'Automatic';
+  @override
+  String get network_proxy_mode_auto_hint =>
+      'Use environment variables, then the enabled system proxy';
+  @override
+  String get network_proxy_mode_direct => 'Direct';
+  @override
+  String get network_proxy_mode_direct_hint => 'Disable proxy use for the app';
+  @override
+  String get network_proxy_mode_manual => 'Manual';
+  @override
+  String get network_proxy_mode_manual_hint =>
+      'Use the server and optional credentials below';
+  @override
+  String get network_proxy_manual_hint =>
+      'HTTP proxy server used by all public internet requests';
+  @override
+  String get network_proxy_username => 'Proxy username (optional)';
+  @override
+  String get network_proxy_password => 'Proxy password (optional)';
+  @override
+  String get storage_category_backups => 'Local backups';
+  @override
+  String storage_entry_backups_label({required Object n}) =>
+      '${n} backup archive(s)';
+  @override
+  String get storage_entry_delete_backups_confirm_body =>
+      'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+  @override
+  String get update_download_source_preference => 'Preferred download source';
+  @override
+  String get update_download_source_preference_hint =>
+      'The selected source is tried first; unavailable sources still fall back automatically.';
+  @override
+  String get update_download_source_auto => 'Automatic (recommended)';
+  @override
+  String get update_download_source_cloudflare => 'Cloudflare mirror';
+  @override
+  String get update_download_source_github => 'GitHub direct';
+  @override
+  String update_download_source_proxy({required Object host}) =>
+      'Proxy: ${host}';
 }
 
 // Path: <root>
 class _StringsVi extends _StringsEn {
   /// You can call this constructor and build your own translation instance of this locale.
   /// Constructing via the enum [AppLocale.build] is preferred.
-  _StringsVi.build(
-      {Map<String, Node>? overrides,
-      PluralResolver? cardinalResolver,
-      PluralResolver? ordinalResolver})
-      : assert(overrides == null,
-            'Set "translation_overrides: true" in order to enable this feature.'),
-        $meta = TranslationMetadata(
-          locale: AppLocale.vi,
-          overrides: overrides ?? {},
-          cardinalResolver: cardinalResolver,
-          ordinalResolver: ordinalResolver,
-        ),
-        super.build(
-            cardinalResolver: cardinalResolver,
-            ordinalResolver: ordinalResolver) {
+  _StringsVi.build({
+    Map<String, Node>? overrides,
+    PluralResolver? cardinalResolver,
+    PluralResolver? ordinalResolver,
+  }) : assert(
+         overrides == null,
+         'Set "translation_overrides: true" in order to enable this feature.',
+       ),
+       $meta = TranslationMetadata(
+         locale: AppLocale.vi,
+         overrides: overrides ?? {},
+         cardinalResolver: cardinalResolver,
+         ordinalResolver: ordinalResolver,
+       ),
+       super.build(
+         cardinalResolver: cardinalResolver,
+         ordinalResolver: ordinalResolver,
+       ) {
     super.$meta.setFlatMapFunction(
-        $meta.getTranslation); // copy base translations to super.$meta
+      $meta.getTranslation,
+    ); // copy base translations to super.$meta
     $meta.setFlatMapFunction(_flatMapFunction);
   }
 
@@ -130413,10 +131835,11 @@ class _StringsVi extends _StringsEn {
   @override
   String get backup_import => 'Nhập bản sao lưu';
   @override
-  String backup_import_confirm(
-          {required Object date,
-          required Object bookCount,
-          required Object statsCount}) =>
+  String backup_import_confirm({
+    required Object date,
+    required Object bookCount,
+    required Object statsCount,
+  }) =>
       'Thao tác này sẽ thay thế toàn bộ dữ liệu hiện tại bằng bản sao lưu từ ${date}.\n\n${bookCount} sách, ${statsCount} bản ghi thống kê.\n\nỨng dụng sẽ khởi động lại sau khi khôi phục.';
   @override
   String get backup_import_confirm_title => 'Khôi phục bản sao lưu?';
@@ -130433,8 +131856,10 @@ class _StringsVi extends _StringsEn {
   @override
   String get backup_import_invalid => 'Tệp sao lưu không hợp lệ';
   @override
-  String backup_import_merge_preview(
-          {required Object bookCount, required Object progressCount}) =>
+  String backup_import_merge_preview({
+    required Object bookCount,
+    required Object progressCount,
+  }) =>
       'Hợp nhất sẽ thêm ${bookCount} cuốn sách và cập nhật ${progressCount} vị trí đọc.';
   @override
   String get backup_import_mode_label => 'Chế độ nhập';
@@ -130734,12 +132159,12 @@ class _StringsVi extends _StringsEn {
   @override
   String get changelog_prerelease => 'Phiên bản thử nghiệm';
   @override
-  String chapter_progress(
-          {required Object idx,
-          required Object total,
-          required Object suffix,
-          required Object pct}) =>
-      'Chương ${idx} / ${total}${suffix} · ${pct}%';
+  String chapter_progress({
+    required Object idx,
+    required Object total,
+    required Object suffix,
+    required Object pct,
+  }) => 'Chương ${idx} / ${total}${suffix} · ${pct}%';
   @override
   String get clear => 'Xóa';
   @override
@@ -130829,9 +132254,10 @@ class _StringsVi extends _StringsEn {
   @override
   String get collection_view_all => 'Xem tất cả';
   @override
-  String collection_watched_progress(
-          {required Object done, required Object total}) =>
-      'Đã xem ${done}/${total}';
+  String collection_watched_progress({
+    required Object done,
+    required Object total,
+  }) => 'Đã xem ${done}/${total}';
   @override
   String get collection_word => 'Từ';
   @override
@@ -131055,9 +132481,10 @@ class _StringsVi extends _StringsEn {
   @override
   String get data_storage_migrate_failed_title => 'Di chuyển dữ liệu thất bại';
   @override
-  String data_storage_migrate_overlay_progress(
-          {required Object copied, required Object total}) =>
-      'Đang sao chép tệp: ${copied} / ${total}';
+  String data_storage_migrate_overlay_progress({
+    required Object copied,
+    required Object total,
+  }) => 'Đang sao chép tệp: ${copied} / ${total}';
   @override
   String get data_storage_migrate_overlay_title => 'Đang di chuyển dữ liệu';
   @override
@@ -131075,8 +132502,10 @@ class _StringsVi extends _StringsEn {
   String get data_storage_restart_failed =>
       'Đã di chuyển dữ liệu, nhưng khởi động lại tự động thất bại. Vui lòng mở lại Fushi thủ công.';
   @override
-  String db_downgrade_message(
-          {required Object dbVersion, required Object appVersion}) =>
+  String db_downgrade_message({
+    required Object dbVersion,
+    required Object appVersion,
+  }) =>
       'Cơ sở dữ liệu này được tạo bởi một phiên bản Fushi mới hơn (schema v${dbVersion}). Ứng dụng hiện tại của bạn quá cũ (v${appVersion}). Việc mở đã bị chặn để bảo vệ dữ liệu của bạn. Hãy cập nhật ứng dụng và thử lại.';
   @override
   String get db_downgrade_title => 'Hãy cập nhật Fushi';
@@ -131246,11 +132675,11 @@ class _StringsVi extends _StringsEn {
   @override
   String get dict_download_language => 'Ngôn ngữ';
   @override
-  String dict_download_partial(
-          {required Object success,
-          required Object total,
-          required Object error}) =>
-      '${success} / ${total} thành công. Thất bại: ${error}';
+  String dict_download_partial({
+    required Object success,
+    required Object total,
+    required Object error,
+  }) => '${success} / ${total} thành công. Thất bại: ${error}';
   @override
   String get dict_download_select_title => 'Chọn từ điển';
   @override
@@ -131281,19 +132710,21 @@ class _StringsVi extends _StringsEn {
   @override
   String get dict_update_latest => 'Đã là mới nhất.';
   @override
-  String dict_update_name_mismatch_body(
-          {required Object incoming, required Object existing}) =>
+  String dict_update_name_mismatch_body({
+    required Object incoming,
+    required Object existing,
+  }) =>
       'Tệp đã chọn là "${incoming}", nhưng bạn đang cập nhật "${existing}". Vẫn thay thế?';
   @override
   String get dict_update_name_mismatch_title => 'Tên không khớp';
   @override
   String get dict_update_none => 'Tất cả từ điển đều là mới nhất.';
   @override
-  String dict_update_summary(
-          {required Object updated,
-          required Object current,
-          required Object failed}) =>
-      '${updated} đã cập nhật, ${current} mới nhất, ${failed} thất bại.';
+  String dict_update_summary({
+    required Object updated,
+    required Object current,
+    required Object failed,
+  }) => '${updated} đã cập nhật, ${current} mới nhất, ${failed} thất bại.';
   @override
   String get dict_update_tooltip => 'Cập nhật từ điển';
   @override
@@ -131382,8 +132813,10 @@ class _StringsVi extends _StringsEn {
   @override
   String get download_subscription_check_now => 'Kiểm tra ngay';
   @override
-  String download_subscription_choice_hint(
-          {required Object group, required Object resolution}) =>
+  String download_subscription_choice_hint({
+    required Object group,
+    required Object resolution,
+  }) =>
       'Theo dõi ${group} · ${resolution}. Các tập đơn phát hành mới sẽ được xếp hàng.';
   @override
   String get download_subscription_created =>
@@ -131525,9 +132958,10 @@ class _StringsVi extends _StringsEn {
   @override
   String favorites({required Object n}) => 'Yêu thích (${n})';
   @override
-  String field_fallback_used(
-          {required Object field, required Object secondField}) =>
-      'Trường ${field} đã sử dụng ${secondField} làm từ tìm kiếm dự phòng.';
+  String field_fallback_used({
+    required Object field,
+    required Object secondField,
+  }) => 'Trường ${field} đã sử dụng ${secondField} làm từ tìm kiếm dự phòng.';
   @override
   String file_count({required Object count}) => '${count} tệp';
   @override
@@ -132249,12 +133683,12 @@ class _StringsVi extends _StringsEn {
   @override
   String get game_waiting_for_text => 'Đang chờ văn bản';
   @override
-  String game_waveform_range_label(
-          {required Object start,
-          required Object end,
-          required Object duration,
-          required Object total}) =>
-      '${start} - ${end} (đã chọn ${duration} / tổng ${total})';
+  String game_waveform_range_label({
+    required Object start,
+    required Object end,
+    required Object duration,
+    required Object total,
+  }) => '${start} - ${end} (đã chọn ${duration} / tổng ${total})';
   @override
   String get game_waveform_select_title => 'Chọn phạm vi âm thanh';
   @override
@@ -132521,9 +133955,10 @@ class _StringsVi extends _StringsEn {
   @override
   String get jump_to_char => 'Nhảy đến ký tự';
   @override
-  String jump_to_char_current(
-          {required Object current, required Object total}) =>
-      'Hiện tại: ${current} / ${total}';
+  String jump_to_char_current({
+    required Object current,
+    required Object total,
+  }) => 'Hiện tại: ${current} / ${total}';
   @override
   String get jump_to_char_hint => 'Nhập vị trí ký tự…';
   @override
@@ -132702,9 +134137,10 @@ class _StringsVi extends _StringsEn {
   String get manga_ocr_wizard_no_images =>
       'Không tìm thấy hình ảnh trong thư mục này.';
   @override
-  String manga_ocr_wizard_page_progress(
-          {required Object done, required Object total}) =>
-      'Trang ${done} / ${total}';
+  String manga_ocr_wizard_page_progress({
+    required Object done,
+    required Object total,
+  }) => 'Trang ${done} / ${total}';
   @override
   String get manga_ocr_wizard_pick_folder => 'Chọn thư mục hình ảnh';
   @override
@@ -132730,9 +134166,10 @@ class _StringsVi extends _StringsEn {
   @override
   String get manga_online_queue_added => 'Đã thêm vào hàng đợi tải xuống';
   @override
-  String manga_online_queue_progress(
-          {required Object done, required Object total}) =>
-      'Tập ${done} / ${total}';
+  String manga_online_queue_progress({
+    required Object done,
+    required Object total,
+  }) => 'Tập ${done} / ${total}';
   @override
   String get manga_online_queue_section => 'Tải xuống danh mục truyện tranh';
   @override
@@ -132765,9 +134202,10 @@ class _StringsVi extends _StringsEn {
   String get manga_remote_ocr_unsupported =>
       'Máy chủ ghép nối không hỗ trợ OCR truyện tranh.';
   @override
-  String manga_remote_ocr_uploading(
-          {required Object done, required Object total}) =>
-      'Đang tải lên trang ${done} / ${total}…';
+  String manga_remote_ocr_uploading({
+    required Object done,
+    required Object total,
+  }) => 'Đang tải lên trang ${done} / ${total}…';
   @override
   String get margin_bottom => 'Lề dưới';
   @override
@@ -133277,16 +134715,18 @@ class _StringsVi extends _StringsEn {
   @override
   String get audiobook_rematch_auto_match => 'Tự động khớp';
   @override
-  String audiobook_rematch_auto_picked(
-          {required Object window, required Object pct}) =>
-      'Đã tự động chọn ${window} (khớp ${pct}%)';
+  String audiobook_rematch_auto_picked({
+    required Object window,
+    required Object pct,
+  }) => 'Đã tự động chọn ${window} (khớp ${pct}%)';
   @override
   String audiobook_rematch_default_value({required Object n}) =>
       'Mặc định ${n}';
   @override
-  String audiobook_rematch_health_label(
-          {required Object pct, required Object detail}) =>
-      '${pct} khớp — ${detail}';
+  String audiobook_rematch_health_label({
+    required Object pct,
+    required Object detail,
+  }) => '${pct} khớp — ${detail}';
   @override
   String get audiobook_rematch_matching => 'Đang khớp…';
   @override
@@ -133303,9 +134743,10 @@ class _StringsVi extends _StringsEn {
   String audiobook_rematch_failed({required Object error}) =>
       'Khớp lại thất bại: ${error}';
   @override
-  String audiobook_rematch_result(
-          {required Object pct, required Object window}) =>
-      'Đã khớp lại: ${pct}% (cửa sổ: ${window})';
+  String audiobook_rematch_result({
+    required Object pct,
+    required Object window,
+  }) => 'Đã khớp lại: ${pct}% (cửa sổ: ${window})';
   @override
   String get audiobook_rematch_search_window => 'Cửa sổ tìm kiếm';
   @override
@@ -134501,9 +135942,10 @@ class _StringsVi extends _StringsEn {
   @override
   String get update_download_resumed => 'đã tiếp tục';
   @override
-  String update_download_size(
-          {required Object received, required Object total}) =>
-      'Đã tải: ${received} / ${total}';
+  String update_download_size({
+    required Object received,
+    required Object total,
+  }) => 'Đã tải: ${received} / ${total}';
   @override
   String update_download_source({required Object source}) => 'Nguồn: ${source}';
   @override
@@ -134516,13 +135958,15 @@ class _StringsVi extends _StringsEn {
   String update_install_current_executable({required Object path}) =>
       'Chương trình đang chạy: ${path}';
   @override
-  String update_install_deletefile_failure(
-          {required Object path, required Object code}) =>
-      'Trình cài đặt không thể thay thế ${path} (mã ${code})';
+  String update_install_deletefile_failure({
+    required Object path,
+    required Object code,
+  }) => 'Trình cài đặt không thể thay thế ${path} (mã ${code})';
   @override
-  String update_install_detected_location(
-          {required Object source, required Object path}) =>
-      'Vị trí cài đặt phát hiện được (${source}): ${path}';
+  String update_install_detected_location({
+    required Object source,
+    required Object path,
+  }) => 'Vị trí cài đặt phát hiện được (${source}): ${path}';
   @override
   String update_install_failure_summary({required Object summary}) =>
       'Lý do: ${summary}';
@@ -134544,9 +135988,10 @@ class _StringsVi extends _StringsEn {
   String update_install_launcher_pid({required Object pid}) =>
       'PID trình khởi chạy cập nhật: ${pid}';
   @override
-  String update_install_libmpv_holder(
-          {required Object pid, required Object path}) =>
-      'Tiến trình giữ libmpv: PID ${pid} - ${path}';
+  String update_install_libmpv_holder({
+    required Object pid,
+    required Object path,
+  }) => 'Tiến trình giữ libmpv: PID ${pid} - ${path}';
   @override
   String get update_install_log_not_observed =>
       'Nhật ký trình cài đặt không được tạo trong lúc kiểm tra sau khởi chạy.';
@@ -134581,9 +136026,10 @@ class _StringsVi extends _StringsEn {
   String get update_install_restart_windows_hint =>
       'Nếu các tiến trình liệt kê đã đóng nhưng libmpv-2.dll vẫn bị khóa, hãy khởi động lại Windows và cài đặt lại.';
   @override
-  String update_install_running_process(
-          {required Object pid, required Object path}) =>
-      'Tiến trình Fushi đang chạy: PID ${pid} - ${path}';
+  String update_install_running_process({
+    required Object pid,
+    required Object path,
+  }) => 'Tiến trình Fushi đang chạy: PID ${pid} - ${path}';
   @override
   String update_install_success_message({required Object version}) =>
       'Fushi đã được cập nhật lên phiên bản ${version}.';
@@ -134601,9 +136047,10 @@ class _StringsVi extends _StringsEn {
   String update_message({required Object version}) =>
       'Phiên bản ${version} đã có sẵn.';
   @override
-  String update_network_failure(
-          {required Object host, required Object reason}) =>
-      'Không thể kết nối ${host}: ${reason}';
+  String update_network_failure({
+    required Object host,
+    required Object reason,
+  }) => 'Không thể kết nối ${host}: ${reason}';
   @override
   String get update_never_remind => 'Không nhắc lại';
   @override
@@ -134863,9 +136310,10 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_jimaku_api_key_set => 'Đã đặt API key';
   @override
-  String video_jimaku_batch_done(
-          {required Object done, required Object total}) =>
-      'Đã tải phụ đề: ${done}/${total}';
+  String video_jimaku_batch_done({
+    required Object done,
+    required Object total,
+  }) => 'Đã tải phụ đề: ${done}/${total}';
   @override
   String get video_jimaku_batch_download => 'Tải tất cả';
   @override
@@ -135384,9 +136832,10 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_shader_download_failed => 'Tải shader thất bại';
   @override
-  String video_shader_download_partial(
-          {required Object ok, required Object failed}) =>
-      'Đã tải ${ok} shader, ${failed} thất bại';
+  String video_shader_download_partial({
+    required Object ok,
+    required Object failed,
+  }) => 'Đã tải ${ok} shader, ${failed} thất bại';
   @override
   String get video_shader_download_url => 'Tải từ liên kết';
   @override
@@ -135497,9 +136946,10 @@ class _StringsVi extends _StringsEn {
   String get video_subtitle_attach_playlist_hint =>
       'Mở danh sách phát để gắn phụ đề cho từng tập';
   @override
-  String video_subtitle_attached_to_video(
-          {required Object title, required Object count}) =>
-      'Đã gắn phụ đề cho ${title} (${count} câu)';
+  String video_subtitle_attached_to_video({
+    required Object title,
+    required Object count,
+  }) => 'Đã gắn phụ đề cho ${title} (${count} câu)';
   @override
   String get video_subtitle_auto_align => 'Tự động căn chỉnh phụ đề';
   @override
@@ -135723,13 +137173,14 @@ class _StringsVi extends _StringsEn {
   @override
   String get anki_dedup_report_title => 'Báo cáo loại bỏ trùng lặp media';
   @override
-  String anki_dedup_report_body(
-          {required Object groups,
-          required Object removed,
-          required Object size,
-          required Object notes,
-          required Object models,
-          required Object skipped}) =>
+  String anki_dedup_report_body({
+    required Object groups,
+    required Object removed,
+    required Object size,
+    required Object notes,
+    required Object models,
+    required Object skipped,
+  }) =>
       '${groups} nhóm trùng lặp; ${removed} bản sao thừa (${size}); ${notes} ghi chú và ${models} loại ghi chú đã viết lại; ${skipped} đã bỏ qua.';
   @override
   String get anki_dedup_report_dry_note => 'Chỉ quét - không có gì thay đổi.';
@@ -135751,11 +137202,11 @@ class _StringsVi extends _StringsEn {
   String anki_dedup_plan_intro({required Object count, required Object size}) =>
       '${count} bản sao thừa, ${size} có thể thu hồi. Một bản sao của mỗi tệp được giữ lại và mọi tham chiếu được chuyển sang nó trước; không có gì bị mã hóa lại.';
   @override
-  String anki_dedup_plan_entry(
-          {required Object file,
-          required Object size,
-          required Object canonical}) =>
-      'Xóa ${file} (${size}) - giữ ${canonical}';
+  String anki_dedup_plan_entry({
+    required Object file,
+    required Object size,
+    required Object canonical,
+  }) => 'Xóa ${file} (${size}) - giữ ${canonical}';
   @override
   String get anki_dedup_plan_delete => 'Xóa các tệp này';
   @override
@@ -135816,9 +137267,10 @@ class _StringsVi extends _StringsEn {
   String manga_ocr_acceleration_status({required Object engine}) =>
       'Tăng tốc OCR: ${engine}';
   @override
-  String manga_ocr_acceleration_degraded(
-          {required Object engine, required Object reason}) =>
-      'Tăng tốc GPU không khả dụng, đang chạy OCR trên ${engine}: ${reason}';
+  String manga_ocr_acceleration_degraded({
+    required Object engine,
+    required Object reason,
+  }) => 'Tăng tốc GPU không khả dụng, đang chạy OCR trên ${engine}: ${reason}';
   @override
   String get media_tracking_status => 'Trạng thái bộ sưu tập';
   @override
@@ -135863,8 +137315,10 @@ class _StringsVi extends _StringsEn {
   String anki_dedup_auto_done({required Object count, required Object size}) =>
       'Đã xóa ${count} tệp media Anki trùng lặp, thu hồi ${size}';
   @override
-  String anki_lapis_backup_done_pruned(
-          {required Object path, required Object count}) =>
+  String anki_lapis_backup_done_pruned({
+    required Object path,
+    required Object count,
+  }) =>
       'Đã sao lưu tại ${path} (đã dọn ${count} bản sao lưu cũ theo chính sách 90 ngày / giữ 10)';
   @override
   String get game_audio_fallback_policy => 'Âm thanh dự phòng';
@@ -136017,9 +137471,10 @@ class _StringsVi extends _StringsEn {
   String get stat_clear_all_game_message =>
       'Xóa toàn bộ thời gian chơi và số phiên? Thư viện trò chơi và dòng thời gian hoạt động được giữ nguyên. Không thể hoàn tác.';
   @override
-  String batch_selection_stale_skipped(
-          {required Object m, required Object n}) =>
-      'Đã bỏ qua ${m} trong ${n} mục đã chọn vì không còn tồn tại';
+  String batch_selection_stale_skipped({
+    required Object m,
+    required Object n,
+  }) => 'Đã bỏ qua ${m} trong ${n} mục đã chọn vì không còn tồn tại';
   @override
   String get game_text_thread_unset =>
       'Chưa chọn luồng — chọn một luồng để bắt đầu thu thập';
@@ -136075,22 +137530,25 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_jimaku_language_unknown => 'Ngôn ngữ không được ghi nhận';
   @override
-  String video_jimaku_source_summary(
-          {required Object files,
-          required Object episodes,
-          required Object languages}) =>
-      '${files} tệp phụ đề · ${episodes} tập · ${languages}';
+  String video_jimaku_source_summary({
+    required Object files,
+    required Object episodes,
+    required Object languages,
+  }) => '${files} tệp phụ đề · ${episodes} tập · ${languages}';
   @override
-  String video_jimaku_episode_unlabeled(
-          {required Object episode, required Object count}) =>
+  String video_jimaku_episode_unlabeled({
+    required Object episode,
+    required Object count,
+  }) =>
       'Không có phụ đề ghi nhãn tập ${episode}; ${count} tệp không nhãn có thể phù hợp';
   @override
   String video_jimaku_episode_unavailable({required Object episode}) =>
       'Không tìm thấy phụ đề cho tập ${episode}';
   @override
-  String video_jimaku_episode_available(
-          {required Object count, required Object languages}) =>
-      '${count} phụ đề khả dụng · ${languages}';
+  String video_jimaku_episode_available({
+    required Object count,
+    required Object languages,
+  }) => '${count} phụ đề khả dụng · ${languages}';
   @override
   String get manga_online_source_disabled =>
       'Nguồn internet này bị tắt. Bật trong Nguồn để duyệt danh mục.';
@@ -136110,13 +137568,15 @@ class _StringsVi extends _StringsEn {
   String anki_dedup_progress_scanning({required Object count}) =>
       'Đang quét thư mục media… (đã tìm thấy ${count} tệp)';
   @override
-  String anki_dedup_progress_hashing(
-          {required Object done, required Object total}) =>
-      'Đang so sánh các tệp cùng kích thước… (${done} / ${total})';
+  String anki_dedup_progress_hashing({
+    required Object done,
+    required Object total,
+  }) => 'Đang so sánh các tệp cùng kích thước… (${done} / ${total})';
   @override
-  String anki_dedup_progress_resolving(
-          {required Object done, required Object total}) =>
-      'Đang xử lý trùng lặp… (${done} / ${total})';
+  String anki_dedup_progress_resolving({
+    required Object done,
+    required Object total,
+  }) => 'Đang xử lý trùng lặp… (${done} / ${total})';
   @override
   String anki_dedup_progress_freed({required Object size}) =>
       'Đã giải phóng ${size}';
@@ -136169,8 +137629,10 @@ class _StringsVi extends _StringsEn {
   @override
   String get sync_last_failed => 'Đồng bộ lần cuối: thất bại';
   @override
-  String anime_download_no_results_detail(
-          {required Object query, required Object filters}) =>
+  String anime_download_no_results_detail({
+    required Object query,
+    required Object filters,
+  }) =>
       'Dịch vụ phản hồi thành công nhưng trả về 0 kết quả. Truy vấn: ${query}; bộ lọc: ${filters}. Thử tiêu đề khác hoặc nới lỏng bộ lọc.';
   @override
   String get anime_download_streaming_ready =>
@@ -136354,11 +137816,12 @@ class _StringsVi extends _StringsEn {
   @override
   String scrape_all_item({required Object title}) => 'Đang xử lý: ${title}';
   @override
-  String scrape_all_done(
-          {required Object applied,
-          required Object review,
-          required Object skipped,
-          required Object failed}) =>
+  String scrape_all_done({
+    required Object applied,
+    required Object review,
+    required Object skipped,
+    required Object failed,
+  }) =>
       'Xong: ${applied} đã áp dụng, ${review} cần xem lại, ${skipped} bỏ qua, ${failed} thất bại';
   @override
   String get scrape_all_empty => 'Không có mục nào để quét trong thư viện này.';
@@ -136724,9 +138187,10 @@ class _StringsVi extends _StringsEn {
   String collection_episode_watched_at({required Object position}) =>
       'Đã xem đến ${position}';
   @override
-  String collection_episode_rename_partial(
-          {required Object n, required Object m}) =>
-      'Đã đổi tên ${n} tập, ${m} thất bại';
+  String collection_episode_rename_partial({
+    required Object n,
+    required Object m,
+  }) => 'Đã đổi tên ${n} tập, ${m} thất bại';
   @override
   String get sync_err_browser_timeout =>
       'Trình duyệt không trả về ủy quyền. Thử lại, và đảm bảo proxy của bạn cho phép 127.0.0.1 đi qua.';
@@ -136768,9 +138232,10 @@ class _StringsVi extends _StringsEn {
   String get book_convert_blocked_source_missing =>
       'Các tệp nguồn đã bị mất khỏi ổ đĩa.';
   @override
-  String manga_online_retry_waiting(
-          {required Object attempt, required Object total}) =>
-      'Đang tự động thử lại (${attempt}/${total})';
+  String manga_online_retry_waiting({
+    required Object attempt,
+    required Object total,
+  }) => 'Đang tự động thử lại (${attempt}/${total})';
   @override
   String get manga_ocr_wizard_already_ocred =>
       'Tập này đã có dữ liệu OCR trên mọi trang. Chạy lại OCR sẽ ghi đè dữ liệu đó.';
@@ -136868,17 +138333,18 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_source_scrape_write_images => 'Ghi tệp hình ảnh';
   @override
-  String video_source_scrape_progress(
-          {required Object phase,
-          required Object current,
-          required Object total}) =>
-      '${phase} · ${current}/${total}';
+  String video_source_scrape_progress({
+    required Object phase,
+    required Object current,
+    required Object total,
+  }) => '${phase} · ${current}/${total}';
   @override
-  String video_source_scrape_last_summary(
-          {required Object status,
-          required Object succeeded,
-          required Object pending,
-          required Object failed}) =>
+  String video_source_scrape_last_summary({
+    required Object status,
+    required Object succeeded,
+    required Object pending,
+    required Object failed,
+  }) =>
       'Lần quét trước (${status}): ${succeeded} thành công, ${pending} đang chờ, ${failed} thất bại';
   @override
   String get video_source_scrape_phase_planning => 'Lập kế hoạch';
@@ -137093,9 +138559,10 @@ class _StringsVi extends _StringsEn {
   String migration_import_running({required Object batch}) =>
       'Đang nhập ${batch}…';
   @override
-  String migration_import_verify_failed(
-          {required Object batch, required Object detail}) =>
-      '${batch} không qua xác minh và đã được giữ lại để xuất lại: ${detail}';
+  String migration_import_verify_failed({
+    required Object batch,
+    required Object detail,
+  }) => '${batch} không qua xác minh và đã được giữ lại để xuất lại: ${detail}';
   @override
   String migration_import_counts_failed({required Object detail}) =>
       'Dữ liệu nhập không đầy đủ: ${detail}. Xuất lại các phần còn thiếu từ Hibiki, rồi nhập lại.';
@@ -137120,11 +138587,11 @@ class _StringsVi extends _StringsEn {
   @override
   String get migration_import_permission_grant => 'Cấp quyền';
   @override
-  String migration_import_verifying(
-          {required Object batch,
-          required Object done,
-          required Object total}) =>
-      'Đang xác minh ${batch} (${done}/${total})';
+  String migration_import_verifying({
+    required Object batch,
+    required Object done,
+    required Object total,
+  }) => 'Đang xác minh ${batch} (${done}/${total})';
   @override
   String get migration_import_verifying_hint =>
       'Đang kiểm tra tổng kho lưu trữ. Thư viện lớn có thể mất vài phút.';
@@ -137298,11 +138765,11 @@ class _StringsVi extends _StringsEn {
   String video_subtitle_read_failed({required Object label}) =>
       'Không thể đọc tệp phụ đề này (bị hỏng hoặc trống): ${label}';
   @override
-  String dict_downloading_size(
-          {required Object name,
-          required Object done,
-          required Object total}) =>
-      'Đang tải ${name} (${done} / ${total})';
+  String dict_downloading_size({
+    required Object name,
+    required Object done,
+    required Object total,
+  }) => 'Đang tải ${name} (${done} / ${total})';
   @override
   String get video_subtitle_attach_book_missing =>
       'Video này không có trong thư viện, nên phụ đề không được đính kèm';
@@ -137494,11 +138961,11 @@ class _StringsVi extends _StringsEn {
   String manga_import_batch_hint({required Object n}) =>
       'Thư mục này chứa ${n} tệp tập; mỗi tệp được nhập thành một cuốn sách riêng, đặt tên theo tệp.';
   @override
-  String manga_import_batch_done(
-          {required Object imported,
-          required Object skipped,
-          required Object failed}) =>
-      'Đã nhập ${imported}, bỏ qua ${skipped}, thất bại ${failed}.';
+  String manga_import_batch_done({
+    required Object imported,
+    required Object skipped,
+    required Object failed,
+  }) => 'Đã nhập ${imported}, bỏ qua ${skipped}, thất bại ${failed}.';
   @override
   String get srt_book_reimport => 'Nhập lại';
   @override
@@ -137594,8 +139061,10 @@ class _StringsVi extends _StringsEn {
   @override
   String get update_release_page_open => 'Trang phát hành';
   @override
-  String update_install_gal_hook_holder(
-          {required Object pid, required Object path}) =>
+  String update_install_gal_hook_holder({
+    required Object pid,
+    required Object path,
+  }) =>
       'Thành phần thu thập Galgame đang được sử dụng: PID ${pid} - ${path} (đây là trò chơi bạn đang chơi, hoặc máy chủ thu thập). Đóng trò chơi, rồi cập nhật lại.';
   @override
   String get game_hook_reason_protocol_mismatch =>
@@ -138084,9 +139553,10 @@ class _StringsVi extends _StringsEn {
   String get manga_ocr_model_unused_by_engine =>
       'Công cụ hiện tại không sử dụng các tệp mô hình cục bộ này.';
   @override
-  String manga_ocr_download_total_progress(
-          {required Object done, required Object total}) =>
-      '${done} / ${total}';
+  String manga_ocr_download_total_progress({
+    required Object done,
+    required Object total,
+  }) => '${done} / ${total}';
   @override
   String get media_source_network_subtitle_video =>
       'Thư viện từ xa WebDAV (phát trực tiếp tại chỗ)';
@@ -138560,11 +140030,11 @@ class _StringsVi extends _StringsEn {
   String get manga_ocr_import_matched_nothing =>
       'Không nhận ra tệp mô hình nào dùng được';
   @override
-  String manga_ocr_import_size_mismatch(
-          {required Object file,
-          required Object expected,
-          required Object actual}) =>
-      '${file} sai kích thước: cần ${expected}, nhận ${actual}';
+  String manga_ocr_import_size_mismatch({
+    required Object file,
+    required Object expected,
+    required Object actual,
+  }) => '${file} sai kích thước: cần ${expected}, nhận ${actual}';
   @override
   String manga_ocr_import_still_missing({required Object count}) =>
       'Vẫn thiếu ${count} tệp';
@@ -138630,9 +140100,10 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_jimaku_search_failed => 'Tìm phụ đề thất bại';
   @override
-  String video_subtitle_error_with_code(
-          {required Object msg, required Object code}) =>
-      '${msg} (HTTP ${code})';
+  String video_subtitle_error_with_code({
+    required Object msg,
+    required Object code,
+  }) => '${msg} (HTTP ${code})';
   @override
   String get manga_rescan_run => 'Nhận dạng lại vùng đã chọn';
   @override
@@ -138882,9 +140353,10 @@ class _StringsVi extends _StringsEn {
   @override
   String get manga_series_open_series => 'Trang tác phẩm';
   @override
-  String manga_series_read_progress(
-          {required Object page, required Object total}) =>
-      'Đã đọc đến trang ${page} trên ${total}';
+  String manga_series_read_progress({
+    required Object page,
+    required Object total,
+  }) => 'Đã đọc đến trang ${page} trên ${total}';
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       'Đã đọc đến trang ${page}';
@@ -139168,13 +140640,15 @@ class _StringsVi extends _StringsEn {
   String web_video_mine_queued({required Object count}) =>
       'Đã xếp hàng để tạo thẻ (${count} đang chờ)';
   @override
-  String web_video_mine_queue_running(
-          {required Object done, required Object total}) =>
-      'Đang tạo thẻ ${done}/${total}…';
+  String web_video_mine_queue_running({
+    required Object done,
+    required Object total,
+  }) => 'Đang tạo thẻ ${done}/${total}…';
   @override
-  String web_video_mine_queue_finished(
-          {required Object ok, required Object failed}) =>
-      'Đã tạo thẻ: ${ok}, thất bại: ${failed}';
+  String web_video_mine_queue_finished({
+    required Object ok,
+    required Object failed,
+  }) => 'Đã tạo thẻ: ${ok}, thất bại: ${failed}';
   @override
   String get web_video_hosting_menu => 'Chế độ phát';
   @override
@@ -139446,29 +140920,78 @@ class _StringsVi extends _StringsEn {
       'Waiting for matching in-game click';
   @override
   String get delete_choices_remember => 'Ghi nhớ các lựa chọn này';
+  @override
+  String get network_proxy_mode_label => 'Proxy mode';
+  @override
+  String get network_proxy_mode_auto => 'Automatic';
+  @override
+  String get network_proxy_mode_auto_hint =>
+      'Use environment variables, then the enabled system proxy';
+  @override
+  String get network_proxy_mode_direct => 'Direct';
+  @override
+  String get network_proxy_mode_direct_hint => 'Disable proxy use for the app';
+  @override
+  String get network_proxy_mode_manual => 'Manual';
+  @override
+  String get network_proxy_mode_manual_hint =>
+      'Use the server and optional credentials below';
+  @override
+  String get network_proxy_manual_hint =>
+      'HTTP proxy server used by all public internet requests';
+  @override
+  String get network_proxy_username => 'Proxy username (optional)';
+  @override
+  String get network_proxy_password => 'Proxy password (optional)';
+  @override
+  String get storage_category_backups => 'Local backups';
+  @override
+  String storage_entry_backups_label({required Object n}) =>
+      '${n} backup archive(s)';
+  @override
+  String get storage_entry_delete_backups_confirm_body =>
+      'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+  @override
+  String get update_download_source_preference => 'Preferred download source';
+  @override
+  String get update_download_source_preference_hint =>
+      'The selected source is tried first; unavailable sources still fall back automatically.';
+  @override
+  String get update_download_source_auto => 'Automatic (recommended)';
+  @override
+  String get update_download_source_cloudflare => 'Cloudflare mirror';
+  @override
+  String get update_download_source_github => 'GitHub direct';
+  @override
+  String update_download_source_proxy({required Object host}) =>
+      'Proxy: ${host}';
 }
 
 // Path: <root>
 class _StringsZhCn extends _StringsEn {
   /// You can call this constructor and build your own translation instance of this locale.
   /// Constructing via the enum [AppLocale.build] is preferred.
-  _StringsZhCn.build(
-      {Map<String, Node>? overrides,
-      PluralResolver? cardinalResolver,
-      PluralResolver? ordinalResolver})
-      : assert(overrides == null,
-            'Set "translation_overrides: true" in order to enable this feature.'),
-        $meta = TranslationMetadata(
-          locale: AppLocale.zhCn,
-          overrides: overrides ?? {},
-          cardinalResolver: cardinalResolver,
-          ordinalResolver: ordinalResolver,
-        ),
-        super.build(
-            cardinalResolver: cardinalResolver,
-            ordinalResolver: ordinalResolver) {
+  _StringsZhCn.build({
+    Map<String, Node>? overrides,
+    PluralResolver? cardinalResolver,
+    PluralResolver? ordinalResolver,
+  }) : assert(
+         overrides == null,
+         'Set "translation_overrides: true" in order to enable this feature.',
+       ),
+       $meta = TranslationMetadata(
+         locale: AppLocale.zhCn,
+         overrides: overrides ?? {},
+         cardinalResolver: cardinalResolver,
+         ordinalResolver: ordinalResolver,
+       ),
+       super.build(
+         cardinalResolver: cardinalResolver,
+         ordinalResolver: ordinalResolver,
+       ) {
     super.$meta.setFlatMapFunction(
-        $meta.getTranslation); // copy base translations to super.$meta
+      $meta.getTranslation,
+    ); // copy base translations to super.$meta
     $meta.setFlatMapFunction(_flatMapFunction);
   }
 
@@ -139938,10 +141461,11 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get backup_import => '导入备份';
   @override
-  String backup_import_confirm(
-          {required Object date,
-          required Object bookCount,
-          required Object statsCount}) =>
+  String backup_import_confirm({
+    required Object date,
+    required Object bookCount,
+    required Object statsCount,
+  }) =>
       '这将用 ${date} 的备份替换所有当前数据。\n\n${bookCount} 本书，${statsCount} 条统计记录。\n\n恢复后应用将重启。';
   @override
   String get backup_import_confirm_title => '恢复备份？';
@@ -139956,9 +141480,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get backup_import_invalid => '无效的备份文件';
   @override
-  String backup_import_merge_preview(
-          {required Object bookCount, required Object progressCount}) =>
-      '合并将新增 ${bookCount} 本书、更新 ${progressCount} 条阅读进度。';
+  String backup_import_merge_preview({
+    required Object bookCount,
+    required Object progressCount,
+  }) => '合并将新增 ${bookCount} 本书、更新 ${progressCount} 条阅读进度。';
   @override
   String get backup_import_mode_label => '导入方式';
   @override
@@ -140229,12 +141754,12 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get changelog_prerelease => '预发布';
   @override
-  String chapter_progress(
-          {required Object idx,
-          required Object total,
-          required Object suffix,
-          required Object pct}) =>
-      '第 ${idx} / ${total} 章${suffix} · ${pct}%';
+  String chapter_progress({
+    required Object idx,
+    required Object total,
+    required Object suffix,
+    required Object pct,
+  }) => '第 ${idx} / ${total} 章${suffix} · ${pct}%';
   @override
   String get clear => '清除';
   @override
@@ -140319,9 +141844,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get collection_view_all => '查看全部';
   @override
-  String collection_watched_progress(
-          {required Object done, required Object total}) =>
-      '已看完 ${done}/${total}';
+  String collection_watched_progress({
+    required Object done,
+    required Object total,
+  }) => '已看完 ${done}/${total}';
   @override
   String get collection_word => '单词';
   @override
@@ -140539,9 +142065,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get data_storage_migrate_failed_title => '数据迁移失败';
   @override
-  String data_storage_migrate_overlay_progress(
-          {required Object copied, required Object total}) =>
-      '正在复制文件：${copied} / ${total}';
+  String data_storage_migrate_overlay_progress({
+    required Object copied,
+    required Object total,
+  }) => '正在复制文件：${copied} / ${total}';
   @override
   String get data_storage_migrate_overlay_title => '正在迁移数据';
   @override
@@ -140557,8 +142084,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get data_storage_restart_failed => '数据已迁移，但自动重启失败，请手动重新打开 Fushi。';
   @override
-  String db_downgrade_message(
-          {required Object dbVersion, required Object appVersion}) =>
+  String db_downgrade_message({
+    required Object dbVersion,
+    required Object appVersion,
+  }) =>
       '此数据库由更新版本的 Fushi 创建（schema v${dbVersion}）。当前应用版本过旧（v${appVersion}）。已阻止打开以保护你的数据。请更新应用后重试。';
   @override
   String get db_downgrade_title => '请更新 Fushi';
@@ -140718,11 +142247,11 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get dict_download_language => '你的语言';
   @override
-  String dict_download_partial(
-          {required Object success,
-          required Object total,
-          required Object error}) =>
-      '成功 ${success} / ${total}。失败：${error}';
+  String dict_download_partial({
+    required Object success,
+    required Object total,
+    required Object error,
+  }) => '成功 ${success} / ${total}。失败：${error}';
   @override
   String get dict_download_select_title => '选择词典';
   @override
@@ -140750,19 +142279,20 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get dict_update_latest => '已是最新。';
   @override
-  String dict_update_name_mismatch_body(
-          {required Object incoming, required Object existing}) =>
-      '所选文件是「${incoming}」，但你正在更新「${existing}」。仍要替换吗？';
+  String dict_update_name_mismatch_body({
+    required Object incoming,
+    required Object existing,
+  }) => '所选文件是「${incoming}」，但你正在更新「${existing}」。仍要替换吗？';
   @override
   String get dict_update_name_mismatch_title => '词典名称不一致';
   @override
   String get dict_update_none => '所有词典均为最新。';
   @override
-  String dict_update_summary(
-          {required Object updated,
-          required Object current,
-          required Object failed}) =>
-      '${updated} 个已更新，${current} 个最新，${failed} 个失败。';
+  String dict_update_summary({
+    required Object updated,
+    required Object current,
+    required Object failed,
+  }) => '${updated} 个已更新，${current} 个最新，${failed} 个失败。';
   @override
   String get dict_update_tooltip => '更新词典';
   @override
@@ -140842,9 +142372,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get download_subscription_check_now => '立即检查';
   @override
-  String download_subscription_choice_hint(
-          {required Object group, required Object resolution}) =>
-      '将追踪 ${group} · ${resolution}，有新的单集发布时自动加入下载。';
+  String download_subscription_choice_hint({
+    required Object group,
+    required Object resolution,
+  }) => '将追踪 ${group} · ${resolution}，有新的单集发布时自动加入下载。';
   @override
   String get download_subscription_created => '已加入下载并创建订阅';
   @override
@@ -140974,9 +142505,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String favorites({required Object n}) => '收藏 (${n})';
   @override
-  String field_fallback_used(
-          {required Object field, required Object secondField}) =>
-      '${field} 字段使用 ${secondField} 作为备选搜索词。';
+  String field_fallback_used({
+    required Object field,
+    required Object secondField,
+  }) => '${field} 字段使用 ${secondField} 作为备选搜索词。';
   @override
   String file_count({required Object count}) => '${count} 个文件';
   @override
@@ -141636,12 +143168,12 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get game_waiting_for_text => '等待文本';
   @override
-  String game_waveform_range_label(
-          {required Object start,
-          required Object end,
-          required Object duration,
-          required Object total}) =>
-      '${start} - ${end}（时长 ${duration} / 共 ${total}）';
+  String game_waveform_range_label({
+    required Object start,
+    required Object end,
+    required Object duration,
+    required Object total,
+  }) => '${start} - ${end}（时长 ${duration} / 共 ${total}）';
   @override
   String get game_waveform_select_title => '选择音频范围';
   @override
@@ -141890,9 +143422,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get jump_to_char => '按字数跳转';
   @override
-  String jump_to_char_current(
-          {required Object current, required Object total}) =>
-      '当前: ${current} / ${total}';
+  String jump_to_char_current({
+    required Object current,
+    required Object total,
+  }) => '当前: ${current} / ${total}';
   @override
   String get jump_to_char_hint => '输入字符位置…';
   @override
@@ -142053,9 +143586,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get manga_ocr_wizard_no_images => '此文件夹中没有找到图片。';
   @override
-  String manga_ocr_wizard_page_progress(
-          {required Object done, required Object total}) =>
-      '第 ${done} / ${total} 页';
+  String manga_ocr_wizard_page_progress({
+    required Object done,
+    required Object total,
+  }) => '第 ${done} / ${total} 页';
   @override
   String get manga_ocr_wizard_pick_folder => '选择图片文件夹';
   @override
@@ -142081,9 +143615,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get manga_online_queue_added => '已加入下载队列';
   @override
-  String manga_online_queue_progress(
-          {required Object done, required Object total}) =>
-      '第 ${done} / ${total} 卷';
+  String manga_online_queue_progress({
+    required Object done,
+    required Object total,
+  }) => '第 ${done} / ${total} 卷';
   @override
   String get manga_online_queue_section => '漫画目录下载';
   @override
@@ -142113,9 +143648,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get manga_remote_ocr_unsupported => '已配对主机不支持漫画 OCR。';
   @override
-  String manga_remote_ocr_uploading(
-          {required Object done, required Object total}) =>
-      '正在上传页面 ${done} / ${total}…';
+  String manga_remote_ocr_uploading({
+    required Object done,
+    required Object total,
+  }) => '正在上传页面 ${done} / ${total}…';
   @override
   String get margin_bottom => '下边距';
   @override
@@ -142595,15 +144131,17 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get audiobook_rematch_auto_match => '自动匹配';
   @override
-  String audiobook_rematch_auto_picked(
-          {required Object window, required Object pct}) =>
-      '自动选定 ${window}（命中 ${pct}%）';
+  String audiobook_rematch_auto_picked({
+    required Object window,
+    required Object pct,
+  }) => '自动选定 ${window}（命中 ${pct}%）';
   @override
   String audiobook_rematch_default_value({required Object n}) => '默认 ${n}';
   @override
-  String audiobook_rematch_health_label(
-          {required Object pct, required Object detail}) =>
-      '${pct} 匹配 — ${detail}';
+  String audiobook_rematch_health_label({
+    required Object pct,
+    required Object detail,
+  }) => '${pct} 匹配 — ${detail}';
   @override
   String get audiobook_rematch_matching => '匹配中…';
   @override
@@ -142617,9 +144155,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String audiobook_rematch_failed({required Object error}) => '重跑失败：${error}';
   @override
-  String audiobook_rematch_result(
-          {required Object pct, required Object window}) =>
-      '重新匹配：${pct}%（窗口：${window}）';
+  String audiobook_rematch_result({
+    required Object pct,
+    required Object window,
+  }) => '重新匹配：${pct}%（窗口：${window}）';
   @override
   String get audiobook_rematch_search_window => '搜索窗口';
   @override
@@ -143745,9 +145284,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get update_download_resumed => '已续传';
   @override
-  String update_download_size(
-          {required Object received, required Object total}) =>
-      '已下载：${received} / ${total}';
+  String update_download_size({
+    required Object received,
+    required Object total,
+  }) => '已下载：${received} / ${total}';
   @override
   String update_download_source({required Object source}) => '来源：${source}';
   @override
@@ -143760,13 +145300,15 @@ class _StringsZhCn extends _StringsEn {
   String update_install_current_executable({required Object path}) =>
       '当前运行程序：${path}';
   @override
-  String update_install_deletefile_failure(
-          {required Object path, required Object code}) =>
-      '安装器无法替换 ${path}（代码 ${code}）';
+  String update_install_deletefile_failure({
+    required Object path,
+    required Object code,
+  }) => '安装器无法替换 ${path}（代码 ${code}）';
   @override
-  String update_install_detected_location(
-          {required Object source, required Object path}) =>
-      '检测到的安装位置（${source}）：${path}';
+  String update_install_detected_location({
+    required Object source,
+    required Object path,
+  }) => '检测到的安装位置（${source}）：${path}';
   @override
   String update_install_failure_summary({required Object summary}) =>
       '原因：${summary}';
@@ -143787,9 +145329,10 @@ class _StringsZhCn extends _StringsEn {
   String update_install_launcher_pid({required Object pid}) =>
       '更新启动器 PID：${pid}';
   @override
-  String update_install_libmpv_holder(
-          {required Object pid, required Object path}) =>
-      'libmpv 持有进程：PID ${pid} - ${path}';
+  String update_install_libmpv_holder({
+    required Object pid,
+    required Object path,
+  }) => 'libmpv 持有进程：PID ${pid} - ${path}';
   @override
   String get update_install_log_not_observed => '启动后检查时未创建安装日志。';
   @override
@@ -143820,9 +145363,10 @@ class _StringsZhCn extends _StringsEn {
   String get update_install_restart_windows_hint =>
       '如果上方进程已关闭但 libmpv-2.dll 仍被占用，请重启 Windows 后再安装。';
   @override
-  String update_install_running_process(
-          {required Object pid, required Object path}) =>
-      '仍在运行的 Fushi 进程：PID ${pid} - ${path}';
+  String update_install_running_process({
+    required Object pid,
+    required Object path,
+  }) => '仍在运行的 Fushi 进程：PID ${pid} - ${path}';
   @override
   String update_install_success_message({required Object version}) =>
       'Fushi 已更新到 ${version} 版本。';
@@ -143838,9 +145382,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String update_message({required Object version}) => '${version} 版本可用。';
   @override
-  String update_network_failure(
-          {required Object host, required Object reason}) =>
-      '无法连接 ${host}：${reason}';
+  String update_network_failure({
+    required Object host,
+    required Object reason,
+  }) => '无法连接 ${host}：${reason}';
   @override
   String get update_never_remind => '不再提醒自动更新';
   @override
@@ -144075,9 +145620,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_jimaku_api_key_set => 'API key 已配置';
   @override
-  String video_jimaku_batch_done(
-          {required Object done, required Object total}) =>
-      '字幕已获取：${done}/${total}';
+  String video_jimaku_batch_done({
+    required Object done,
+    required Object total,
+  }) => '字幕已获取：${done}/${total}';
   @override
   String get video_jimaku_batch_download => '下载全部';
   @override
@@ -144554,9 +146100,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_shader_download_failed => '着色器下载失败';
   @override
-  String video_shader_download_partial(
-          {required Object ok, required Object failed}) =>
-      '已下载 ${ok} 个，${failed} 个失败';
+  String video_shader_download_partial({
+    required Object ok,
+    required Object failed,
+  }) => '已下载 ${ok} 个，${failed} 个失败';
   @override
   String get video_shader_download_url => '粘贴链接下载';
   @override
@@ -144658,9 +146205,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_subtitle_attach_playlist_hint => '请进入播放页按集挂载字幕';
   @override
-  String video_subtitle_attached_to_video(
-          {required Object title, required Object count}) =>
-      '已为《${title}》挂上字幕（${count} 句）';
+  String video_subtitle_attached_to_video({
+    required Object title,
+    required Object count,
+  }) => '已为《${title}》挂上字幕（${count} 句）';
   @override
   String get video_subtitle_auto_align => '自动对轴';
   @override
@@ -144861,13 +146409,14 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get anki_dedup_report_title => '媒体去重报告';
   @override
-  String anki_dedup_report_body(
-          {required Object groups,
-          required Object removed,
-          required Object size,
-          required Object notes,
-          required Object models,
-          required Object skipped}) =>
+  String anki_dedup_report_body({
+    required Object groups,
+    required Object removed,
+    required Object size,
+    required Object notes,
+    required Object models,
+    required Object skipped,
+  }) =>
       '${groups} 组重复；多余副本 ${removed} 个（${size}）；改写笔记 ${notes} 张、模板 ${models} 个；跳过 ${skipped} 个。';
   @override
   String get anki_dedup_report_dry_note => '仅扫描——未做任何改动。';
@@ -144885,11 +146434,11 @@ class _StringsZhCn extends _StringsEn {
   String anki_dedup_plan_intro({required Object count, required Object size}) =>
       '共 ${count} 个多余副本，可回收 ${size}。每个文件都保留一份，所有引用先改指到保留的那一份；不重新编码任何文件。';
   @override
-  String anki_dedup_plan_entry(
-          {required Object file,
-          required Object size,
-          required Object canonical}) =>
-      '删除 ${file}（${size}）——保留 ${canonical}';
+  String anki_dedup_plan_entry({
+    required Object file,
+    required Object size,
+    required Object canonical,
+  }) => '删除 ${file}（${size}）——保留 ${canonical}';
   @override
   String get anki_dedup_plan_delete => '删除这些文件';
   @override
@@ -144945,9 +146494,10 @@ class _StringsZhCn extends _StringsEn {
   String manga_ocr_acceleration_status({required Object engine}) =>
       'OCR 加速：${engine}';
   @override
-  String manga_ocr_acceleration_degraded(
-          {required Object engine, required Object reason}) =>
-      'GPU 加速不可用，OCR 改用 ${engine} 运行：${reason}';
+  String manga_ocr_acceleration_degraded({
+    required Object engine,
+    required Object reason,
+  }) => 'GPU 加速不可用，OCR 改用 ${engine} 运行：${reason}';
   @override
   String get media_tracking_status => '收藏状态';
   @override
@@ -144988,9 +146538,10 @@ class _StringsZhCn extends _StringsEn {
   String anki_dedup_auto_done({required Object count, required Object size}) =>
       '已删除 ${count} 个重复的 Anki 媒体文件，释放 ${size}';
   @override
-  String anki_lapis_backup_done_pruned(
-          {required Object path, required Object count}) =>
-      '已备份到 ${path}（按「保留 90 天、至少留 10 份」清理了 ${count} 份旧备份）';
+  String anki_lapis_backup_done_pruned({
+    required Object path,
+    required Object count,
+  }) => '已备份到 ${path}（按「保留 90 天、至少留 10 份」清理了 ${count} 份旧备份）';
   @override
   String get game_audio_fallback_policy => '音频降级';
   @override
@@ -145125,9 +146676,10 @@ class _StringsZhCn extends _StringsEn {
   String get stat_clear_all_game_message =>
       '确定清空全部游戏统计吗？将删除所有游戏时长和游玩次数。你的游戏库与首页活动流不受影响。此操作不可撤销。';
   @override
-  String batch_selection_stale_skipped(
-          {required Object n, required Object m}) =>
-      '选中的 ${n} 项中有 ${m} 项已不存在，已跳过';
+  String batch_selection_stale_skipped({
+    required Object n,
+    required Object m,
+  }) => '选中的 ${n} 项中有 ${m} 项已不存在，已跳过';
   @override
   String get game_text_thread_unset => '尚未选择线程 · 选一条后开始捕获';
   @override
@@ -145176,22 +146728,24 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_jimaku_language_unknown => '语言未标注';
   @override
-  String video_jimaku_source_summary(
-          {required Object files,
-          required Object episodes,
-          required Object languages}) =>
-      '${files} 个字幕文件 · 覆盖 ${episodes} 集 · ${languages}';
+  String video_jimaku_source_summary({
+    required Object files,
+    required Object episodes,
+    required Object languages,
+  }) => '${files} 个字幕文件 · 覆盖 ${episodes} 集 · ${languages}';
   @override
-  String video_jimaku_episode_unlabeled(
-          {required Object episode, required Object count}) =>
-      '未发现标为第 ${episode} 集的字幕；另有 ${count} 个未标集号文件可尝试';
+  String video_jimaku_episode_unlabeled({
+    required Object episode,
+    required Object count,
+  }) => '未发现标为第 ${episode} 集的字幕；另有 ${count} 个未标集号文件可尝试';
   @override
   String video_jimaku_episode_unavailable({required Object episode}) =>
       '没有找到第 ${episode} 集字幕';
   @override
-  String video_jimaku_episode_available(
-          {required Object count, required Object languages}) =>
-      '有 ${count} 个字幕 · ${languages}';
+  String video_jimaku_episode_available({
+    required Object count,
+    required Object languages,
+  }) => '有 ${count} 个字幕 · ${languages}';
   @override
   String get manga_online_source_disabled => '此互联网来源已关闭，请在「来源」中开启后浏览目录。';
   @override
@@ -145209,13 +146763,15 @@ class _StringsZhCn extends _StringsEn {
   String anki_dedup_progress_scanning({required Object count}) =>
       '正在扫描媒体目录…（已发现 ${count} 个文件）';
   @override
-  String anki_dedup_progress_hashing(
-          {required Object done, required Object total}) =>
-      '正在比对同大小文件…（${done} / ${total}）';
+  String anki_dedup_progress_hashing({
+    required Object done,
+    required Object total,
+  }) => '正在比对同大小文件…（${done} / ${total}）';
   @override
-  String anki_dedup_progress_resolving(
-          {required Object done, required Object total}) =>
-      '正在处理重复副本…（${done} / ${total}）';
+  String anki_dedup_progress_resolving({
+    required Object done,
+    required Object total,
+  }) => '正在处理重复副本…（${done} / ${total}）';
   @override
   String anki_dedup_progress_freed({required Object size}) => '已释放 ${size}';
   @override
@@ -145260,9 +146816,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get sync_last_failed => '上次同步：失败';
   @override
-  String anime_download_no_results_detail(
-          {required Object query, required Object filters}) =>
-      '服务已正常响应，但按当前条件返回 0 条。查询：${query}；筛选：${filters}。请尝试别名或放宽筛选。';
+  String anime_download_no_results_detail({
+    required Object query,
+    required Object filters,
+  }) => '服务已正常响应，但按当前条件返回 0 条。查询：${query}；筛选：${filters}。请尝试别名或放宽筛选。';
   @override
   String get anime_download_streaming_ready => '已入库 · 下载继续';
   @override
@@ -145431,12 +146988,12 @@ class _StringsZhCn extends _StringsEn {
   @override
   String scrape_all_item({required Object title}) => '正在处理：${title}';
   @override
-  String scrape_all_done(
-          {required Object applied,
-          required Object review,
-          required Object skipped,
-          required Object failed}) =>
-      '完成：已应用 ${applied} 个，待手动确认 ${review} 个，已跳过 ${skipped} 个，失败 ${failed} 个';
+  String scrape_all_done({
+    required Object applied,
+    required Object review,
+    required Object skipped,
+    required Object failed,
+  }) => '完成：已应用 ${applied} 个，待手动确认 ${review} 个，已跳过 ${skipped} 个，失败 ${failed} 个';
   @override
   String get scrape_all_empty => '当前库没有可刮削的条目。';
   @override
@@ -145790,9 +147347,10 @@ class _StringsZhCn extends _StringsEn {
   String collection_episode_watched_at({required Object position}) =>
       '看到 ${position}';
   @override
-  String collection_episode_rename_partial(
-          {required Object n, required Object m}) =>
-      '已重命名 ${n} 集 · ${m} 集失败';
+  String collection_episode_rename_partial({
+    required Object n,
+    required Object m,
+  }) => '已重命名 ${n} 集 · ${m} 集失败';
   @override
   String get sync_err_browser_timeout =>
       '浏览器授权没有返回到应用。请重试，并确认代理放行了本机回环地址 127.0.0.1。';
@@ -145830,9 +147388,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get book_convert_blocked_source_missing => '源文件已从磁盘上消失。';
   @override
-  String manga_online_retry_waiting(
-          {required Object attempt, required Object total}) =>
-      '即将自动重试 (${attempt}/${total})';
+  String manga_online_retry_waiting({
+    required Object attempt,
+    required Object total,
+  }) => '即将自动重试 (${attempt}/${total})';
   @override
   String get manga_ocr_wizard_already_ocred =>
       '本卷每一页都已有 OCR 数据，无需再跑（重跑会覆盖现有数据）。';
@@ -145921,18 +147480,18 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_source_scrape_write_images => '写入图片文件';
   @override
-  String video_source_scrape_progress(
-          {required Object phase,
-          required Object current,
-          required Object total}) =>
-      '${phase} · ${current}/${total}';
+  String video_source_scrape_progress({
+    required Object phase,
+    required Object current,
+    required Object total,
+  }) => '${phase} · ${current}/${total}';
   @override
-  String video_source_scrape_last_summary(
-          {required Object status,
-          required Object succeeded,
-          required Object pending,
-          required Object failed}) =>
-      '上次刮削（${status}）：成功 ${succeeded}，待确认 ${pending}，失败 ${failed}';
+  String video_source_scrape_last_summary({
+    required Object status,
+    required Object succeeded,
+    required Object pending,
+    required Object failed,
+  }) => '上次刮削（${status}）：成功 ${succeeded}，待确认 ${pending}，失败 ${failed}';
   @override
   String get video_source_scrape_phase_planning => '准备中';
   @override
@@ -146125,9 +147684,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String migration_import_running({required Object batch}) => '正在导入 ${batch}…';
   @override
-  String migration_import_verify_failed(
-          {required Object batch, required Object detail}) =>
-      '${batch} 校验未通过，已保留待重传：${detail}';
+  String migration_import_verify_failed({
+    required Object batch,
+    required Object detail,
+  }) => '${batch} 校验未通过，已保留待重传：${detail}';
   @override
   String migration_import_counts_failed({required Object detail}) =>
       '导入数据不完整：${detail}。请回 Hibiki 重新导出缺失部分后再导入。';
@@ -146149,11 +147709,11 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get migration_import_permission_grant => '去授权';
   @override
-  String migration_import_verifying(
-          {required Object batch,
-          required Object done,
-          required Object total}) =>
-      '正在校验 ${batch}（${done}/${total}）';
+  String migration_import_verifying({
+    required Object batch,
+    required Object done,
+    required Object total,
+  }) => '正在校验 ${batch}（${done}/${total}）';
   @override
   String get migration_import_verifying_hint => '正在核对归档校验和。库很大时需要几分钟。';
   @override
@@ -146308,11 +147868,11 @@ class _StringsZhCn extends _StringsEn {
   String video_subtitle_read_failed({required Object label}) =>
       '无法读取该字幕文件（内容损坏或为空）：${label}';
   @override
-  String dict_downloading_size(
-          {required Object name,
-          required Object done,
-          required Object total}) =>
-      '正在下载 ${name}（${done} / ${total}）';
+  String dict_downloading_size({
+    required Object name,
+    required Object done,
+    required Object total,
+  }) => '正在下载 ${name}（${done} / ${total}）';
   @override
   String get video_subtitle_attach_book_missing => '该视频不在视频库中，字幕没有挂上';
   @override
@@ -146482,11 +148042,11 @@ class _StringsZhCn extends _StringsEn {
   String manga_import_batch_hint({required Object n}) =>
       '该文件夹里有 ${n} 个整卷文件，将逐卷各导入为一本，书名取各自的文件名。';
   @override
-  String manga_import_batch_done(
-          {required Object imported,
-          required Object skipped,
-          required Object failed}) =>
-      '导入完成：成功 ${imported} 卷，跳过 ${skipped} 卷，失败 ${failed} 卷。';
+  String manga_import_batch_done({
+    required Object imported,
+    required Object skipped,
+    required Object failed,
+  }) => '导入完成：成功 ${imported} 卷，跳过 ${skipped} 卷，失败 ${failed} 卷。';
   @override
   String get srt_book_reimport => '重新导入';
   @override
@@ -146572,9 +148132,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get update_release_page_open => '发布页';
   @override
-  String update_install_gal_hook_holder(
-          {required Object pid, required Object path}) =>
-      'Galgame 捕获组件被占用：PID ${pid} - ${path}（这是你正在玩的游戏或它的捕获宿主进程）。请先关闭游戏再更新。';
+  String update_install_gal_hook_holder({
+    required Object pid,
+    required Object path,
+  }) => 'Galgame 捕获组件被占用：PID ${pid} - ${path}（这是你正在玩的游戏或它的捕获宿主进程）。请先关闭游戏再更新。';
   @override
   String get game_hook_reason_protocol_mismatch =>
       '捕获组件与本体版本不一致。组件已内置在 Fushi 里，不需要单独安装：先彻底关掉游戏再重开一次（游戏进程里可能还挂着上一次注入的旧组件）。若重开后仍提示不一致，说明磁盘上的组件比 Fushi 旧——上次更新 Fushi 时游戏正开着，安装器换不掉被占用的组件文件。请关闭所有游戏，然后重新运行一次 Fushi 安装程序。';
@@ -147003,9 +148564,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get manga_ocr_model_unused_by_engine => '当前引擎用不到这些本地模型文件。';
   @override
-  String manga_ocr_download_total_progress(
-          {required Object done, required Object total}) =>
-      '${done} / ${total}';
+  String manga_ocr_download_total_progress({
+    required Object done,
+    required Object total,
+  }) => '${done} / ${total}';
   @override
   String get media_source_network_subtitle_video => 'WebDAV 远程库（原地串流）';
   @override
@@ -147433,11 +148995,11 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get manga_ocr_import_matched_nothing => '没有认出可用的模型文件';
   @override
-  String manga_ocr_import_size_mismatch(
-          {required Object file,
-          required Object expected,
-          required Object actual}) =>
-      '${file} 大小不对：应为 ${expected}，实为 ${actual}';
+  String manga_ocr_import_size_mismatch({
+    required Object file,
+    required Object expected,
+    required Object actual,
+  }) => '${file} 大小不对：应为 ${expected}，实为 ${actual}';
   @override
   String manga_ocr_import_still_missing({required Object count}) =>
       '还缺 ${count} 个文件';
@@ -147500,9 +149062,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_jimaku_search_failed => '字幕搜索失败';
   @override
-  String video_subtitle_error_with_code(
-          {required Object msg, required Object code}) =>
-      '${msg}（HTTP ${code}）';
+  String video_subtitle_error_with_code({
+    required Object msg,
+    required Object code,
+  }) => '${msg}（HTTP ${code}）';
   @override
   String get manga_rescan_run => '重新识别框选区域';
   @override
@@ -147727,9 +149290,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get manga_series_open_series => '作品页';
   @override
-  String manga_series_read_progress(
-          {required Object page, required Object total}) =>
-      '读到第 ${page}/${total} 页';
+  String manga_series_read_progress({
+    required Object page,
+    required Object total,
+  }) => '读到第 ${page}/${total} 页';
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       '读到第 ${page} 页';
@@ -147995,13 +149559,15 @@ class _StringsZhCn extends _StringsEn {
   String web_video_mine_queued({required Object count}) =>
       '已加入制卡队列（待制 ${count} 张）';
   @override
-  String web_video_mine_queue_running(
-          {required Object done, required Object total}) =>
-      '制卡中 ${done}/${total}…';
+  String web_video_mine_queue_running({
+    required Object done,
+    required Object total,
+  }) => '制卡中 ${done}/${total}…';
   @override
-  String web_video_mine_queue_finished(
-          {required Object ok, required Object failed}) =>
-      '制卡完成：成功 ${ok}，失败 ${failed}';
+  String web_video_mine_queue_finished({
+    required Object ok,
+    required Object failed,
+  }) => '制卡完成：成功 ${ok}，失败 ${failed}';
   @override
   String get web_video_hosting_menu => '播放模式';
   @override
@@ -148251,29 +149817,73 @@ class _StringsZhCn extends _StringsEn {
   String get game_lookup_attached_probe_waiting => '等待游戏内对应字形点击';
   @override
   String get delete_choices_remember => '记住这些选择';
+  @override
+  String get network_proxy_mode_label => '代理模式';
+  @override
+  String get network_proxy_mode_auto => '自动';
+  @override
+  String get network_proxy_mode_auto_hint => '先读取环境变量，再读取已启用的系统代理';
+  @override
+  String get network_proxy_mode_direct => '直连';
+  @override
+  String get network_proxy_mode_direct_hint => '应用不使用任何代理';
+  @override
+  String get network_proxy_mode_manual => '手动';
+  @override
+  String get network_proxy_mode_manual_hint => '使用下方服务器与可选认证信息';
+  @override
+  String get network_proxy_manual_hint => '供应用全部公网请求使用的 HTTP 代理服务器';
+  @override
+  String get network_proxy_username => '代理用户名（可选）';
+  @override
+  String get network_proxy_password => '代理密码（可选）';
+  @override
+  String get storage_category_backups => '本地备份';
+  @override
+  String storage_entry_backups_label({required Object n}) => '${n} 个备份归档';
+  @override
+  String get storage_entry_delete_backups_confirm_body =>
+      '确定清除这些临时本地备份吗？请先确认需要保留的副本已经保存或分享出去。';
+  @override
+  String get update_download_source_preference => '首选下载源';
+  @override
+  String get update_download_source_preference_hint =>
+      '优先尝试所选来源；不可用时仍会自动回退到其他来源。';
+  @override
+  String get update_download_source_auto => '自动（推荐）';
+  @override
+  String get update_download_source_cloudflare => 'Cloudflare 镜像';
+  @override
+  String get update_download_source_github => 'GitHub 直连';
+  @override
+  String update_download_source_proxy({required Object host}) => '代理站：${host}';
 }
 
 // Path: <root>
 class _StringsZhHk extends _StringsEn {
   /// You can call this constructor and build your own translation instance of this locale.
   /// Constructing via the enum [AppLocale.build] is preferred.
-  _StringsZhHk.build(
-      {Map<String, Node>? overrides,
-      PluralResolver? cardinalResolver,
-      PluralResolver? ordinalResolver})
-      : assert(overrides == null,
-            'Set "translation_overrides: true" in order to enable this feature.'),
-        $meta = TranslationMetadata(
-          locale: AppLocale.zhHk,
-          overrides: overrides ?? {},
-          cardinalResolver: cardinalResolver,
-          ordinalResolver: ordinalResolver,
-        ),
-        super.build(
-            cardinalResolver: cardinalResolver,
-            ordinalResolver: ordinalResolver) {
+  _StringsZhHk.build({
+    Map<String, Node>? overrides,
+    PluralResolver? cardinalResolver,
+    PluralResolver? ordinalResolver,
+  }) : assert(
+         overrides == null,
+         'Set "translation_overrides: true" in order to enable this feature.',
+       ),
+       $meta = TranslationMetadata(
+         locale: AppLocale.zhHk,
+         overrides: overrides ?? {},
+         cardinalResolver: cardinalResolver,
+         ordinalResolver: ordinalResolver,
+       ),
+       super.build(
+         cardinalResolver: cardinalResolver,
+         ordinalResolver: ordinalResolver,
+       ) {
     super.$meta.setFlatMapFunction(
-        $meta.getTranslation); // copy base translations to super.$meta
+      $meta.getTranslation,
+    ); // copy base translations to super.$meta
     $meta.setFlatMapFunction(_flatMapFunction);
   }
 
@@ -148743,10 +150353,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get backup_import => '匯入備份';
   @override
-  String backup_import_confirm(
-          {required Object date,
-          required Object bookCount,
-          required Object statsCount}) =>
+  String backup_import_confirm({
+    required Object date,
+    required Object bookCount,
+    required Object statsCount,
+  }) =>
       '此操作會用 ${date} 的備份取代所有目前資料。\n\n共 ${bookCount} 本書、${statsCount} 條統計記錄。\n\n還原後 App 將會重新啟動。';
   @override
   String get backup_import_confirm_title => '還原備份？';
@@ -148761,9 +150372,10 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get backup_import_invalid => '無效的備份檔案';
   @override
-  String backup_import_merge_preview(
-          {required Object bookCount, required Object progressCount}) =>
-      '合併將新增 ${bookCount} 本書、更新 ${progressCount} 條閱讀進度。';
+  String backup_import_merge_preview({
+    required Object bookCount,
+    required Object progressCount,
+  }) => '合併將新增 ${bookCount} 本書、更新 ${progressCount} 條閱讀進度。';
   @override
   String get backup_import_mode_label => '導入方式';
   @override
@@ -149034,12 +150646,12 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get changelog_prerelease => '預發布';
   @override
-  String chapter_progress(
-          {required Object idx,
-          required Object total,
-          required Object suffix,
-          required Object pct}) =>
-      '第 ${idx} / ${total} 章${suffix} · ${pct}%';
+  String chapter_progress({
+    required Object idx,
+    required Object total,
+    required Object suffix,
+    required Object pct,
+  }) => '第 ${idx} / ${total} 章${suffix} · ${pct}%';
   @override
   String get clear => '清除';
   @override
@@ -149124,9 +150736,10 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get collection_view_all => '查看全部';
   @override
-  String collection_watched_progress(
-          {required Object done, required Object total}) =>
-      '已看完 ${done}/${total}';
+  String collection_watched_progress({
+    required Object done,
+    required Object total,
+  }) => '已看完 ${done}/${total}';
   @override
   String get collection_word => '單詞';
   @override
@@ -149344,9 +150957,10 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get data_storage_migrate_failed_title => '數據遷移失敗';
   @override
-  String data_storage_migrate_overlay_progress(
-          {required Object copied, required Object total}) =>
-      '正在復製檔案：${copied} / ${total}';
+  String data_storage_migrate_overlay_progress({
+    required Object copied,
+    required Object total,
+  }) => '正在復製檔案：${copied} / ${total}';
   @override
   String get data_storage_migrate_overlay_title => '正在遷移數據';
   @override
@@ -149362,8 +150976,10 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get data_storage_restart_failed => '數據已遷移，但自動重啟失敗，請手動重新打開 Fushi。';
   @override
-  String db_downgrade_message(
-          {required Object dbVersion, required Object appVersion}) =>
+  String db_downgrade_message({
+    required Object dbVersion,
+    required Object appVersion,
+  }) =>
       '此資料庫由較新版本的 Fushi 建立（schema v${dbVersion}）。目前 App 版本過舊（v${appVersion}）。為保護你的資料已阻止開啟。請更新 App 後再試一次。';
   @override
   String get db_downgrade_title => '請更新 Fushi';
@@ -149523,11 +151139,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get dict_download_language => '你的語言';
   @override
-  String dict_download_partial(
-          {required Object success,
-          required Object total,
-          required Object error}) =>
-      '成功 ${success} / ${total}。失敗：${error}';
+  String dict_download_partial({
+    required Object success,
+    required Object total,
+    required Object error,
+  }) => '成功 ${success} / ${total}。失敗：${error}';
   @override
   String get dict_download_select_title => '選擇辭典';
   @override
@@ -149555,19 +151171,20 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get dict_update_latest => '已是最新。';
   @override
-  String dict_update_name_mismatch_body(
-          {required Object incoming, required Object existing}) =>
-      '所選檔案是「${incoming}」，但你正在更新「${existing}」。仍要替換嗎？';
+  String dict_update_name_mismatch_body({
+    required Object incoming,
+    required Object existing,
+  }) => '所選檔案是「${incoming}」，但你正在更新「${existing}」。仍要替換嗎？';
   @override
   String get dict_update_name_mismatch_title => '詞典名稱不一致';
   @override
   String get dict_update_none => '所有詞典均為最新。';
   @override
-  String dict_update_summary(
-          {required Object updated,
-          required Object current,
-          required Object failed}) =>
-      '${updated} 個已更新，${current} 個最新，${failed} 個失敗。';
+  String dict_update_summary({
+    required Object updated,
+    required Object current,
+    required Object failed,
+  }) => '${updated} 個已更新，${current} 個最新，${failed} 個失敗。';
   @override
   String get dict_update_tooltip => '更新詞典';
   @override
@@ -149647,9 +151264,10 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get download_subscription_check_now => '立即檢查';
   @override
-  String download_subscription_choice_hint(
-          {required Object group, required Object resolution}) =>
-      '將追蹤 ${group} · ${resolution}，有新的單集發布時自動加入下載。';
+  String download_subscription_choice_hint({
+    required Object group,
+    required Object resolution,
+  }) => '將追蹤 ${group} · ${resolution}，有新的單集發布時自動加入下載。';
   @override
   String get download_subscription_created => '已加入下載並創建訂閱';
   @override
@@ -149779,9 +151397,10 @@ class _StringsZhHk extends _StringsEn {
   @override
   String favorites({required Object n}) => '收藏 (${n})';
   @override
-  String field_fallback_used(
-          {required Object field, required Object secondField}) =>
-      '${field} 欄位使用 ${secondField} 作為備選搜尋詞。';
+  String field_fallback_used({
+    required Object field,
+    required Object secondField,
+  }) => '${field} 欄位使用 ${secondField} 作為備選搜尋詞。';
   @override
   String file_count({required Object count}) => '${count} 個檔案';
   @override
@@ -150441,12 +152060,12 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get game_waiting_for_text => '等待文本';
   @override
-  String game_waveform_range_label(
-          {required Object start,
-          required Object end,
-          required Object duration,
-          required Object total}) =>
-      '${start} - ${end}（時長 ${duration} / 共 ${total}）';
+  String game_waveform_range_label({
+    required Object start,
+    required Object end,
+    required Object duration,
+    required Object total,
+  }) => '${start} - ${end}（時長 ${duration} / 共 ${total}）';
   @override
   String get game_waveform_select_title => '選擇音頻範圍';
   @override
@@ -150696,9 +152315,10 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get jump_to_char => '按字數跳轉';
   @override
-  String jump_to_char_current(
-          {required Object current, required Object total}) =>
-      '當前: ${current} / ${total}';
+  String jump_to_char_current({
+    required Object current,
+    required Object total,
+  }) => '當前: ${current} / ${total}';
   @override
   String get jump_to_char_hint => '輸入字符位置…';
   @override
@@ -150859,9 +152479,10 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get manga_ocr_wizard_no_images => '此資料夾中沒有找到圖片。';
   @override
-  String manga_ocr_wizard_page_progress(
-          {required Object done, required Object total}) =>
-      '第 ${done} / ${total} 頁';
+  String manga_ocr_wizard_page_progress({
+    required Object done,
+    required Object total,
+  }) => '第 ${done} / ${total} 頁';
   @override
   String get manga_ocr_wizard_pick_folder => '選擇圖片資料夾';
   @override
@@ -150887,9 +152508,10 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get manga_online_queue_added => '已加入下載隊列';
   @override
-  String manga_online_queue_progress(
-          {required Object done, required Object total}) =>
-      '第 ${done} / ${total} 卷';
+  String manga_online_queue_progress({
+    required Object done,
+    required Object total,
+  }) => '第 ${done} / ${total} 卷';
   @override
   String get manga_online_queue_section => '漫畫目錄下載';
   @override
@@ -150919,9 +152541,10 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get manga_remote_ocr_unsupported => '已配對主機不支持漫畫 OCR。';
   @override
-  String manga_remote_ocr_uploading(
-          {required Object done, required Object total}) =>
-      '正在上傳頁面 ${done} / ${total}…';
+  String manga_remote_ocr_uploading({
+    required Object done,
+    required Object total,
+  }) => '正在上傳頁面 ${done} / ${total}…';
   @override
   String get margin_bottom => '下邊距';
   @override
@@ -151401,15 +153024,17 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get audiobook_rematch_auto_match => '自動比對';
   @override
-  String audiobook_rematch_auto_picked(
-          {required Object window, required Object pct}) =>
-      '自動選定 ${window}（命中 ${pct}%）';
+  String audiobook_rematch_auto_picked({
+    required Object window,
+    required Object pct,
+  }) => '自動選定 ${window}（命中 ${pct}%）';
   @override
   String audiobook_rematch_default_value({required Object n}) => '預設 ${n}';
   @override
-  String audiobook_rematch_health_label(
-          {required Object pct, required Object detail}) =>
-      '${pct} 比對 — ${detail}';
+  String audiobook_rematch_health_label({
+    required Object pct,
+    required Object detail,
+  }) => '${pct} 比對 — ${detail}';
   @override
   String get audiobook_rematch_matching => '比對中…';
   @override
@@ -151423,9 +153048,10 @@ class _StringsZhHk extends _StringsEn {
   @override
   String audiobook_rematch_failed({required Object error}) => '重跑失敗：${error}';
   @override
-  String audiobook_rematch_result(
-          {required Object pct, required Object window}) =>
-      '重新比對：${pct}%（視窗：${window}）';
+  String audiobook_rematch_result({
+    required Object pct,
+    required Object window,
+  }) => '重新比對：${pct}%（視窗：${window}）';
   @override
   String get audiobook_rematch_search_window => '搜尋視窗';
   @override
@@ -152554,9 +154180,10 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get update_download_resumed => '已續傳';
   @override
-  String update_download_size(
-          {required Object received, required Object total}) =>
-      '已下載：${received} / ${total}';
+  String update_download_size({
+    required Object received,
+    required Object total,
+  }) => '已下載：${received} / ${total}';
   @override
   String update_download_source({required Object source}) => '來源：${source}';
   @override
@@ -152569,13 +154196,15 @@ class _StringsZhHk extends _StringsEn {
   String update_install_current_executable({required Object path}) =>
       '目前執行的程式：${path}';
   @override
-  String update_install_deletefile_failure(
-          {required Object path, required Object code}) =>
-      '安裝程式無法取代 ${path}（代碼 ${code}）';
+  String update_install_deletefile_failure({
+    required Object path,
+    required Object code,
+  }) => '安裝程式無法取代 ${path}（代碼 ${code}）';
   @override
-  String update_install_detected_location(
-          {required Object source, required Object path}) =>
-      '偵測到的安裝位置（${source}）：${path}';
+  String update_install_detected_location({
+    required Object source,
+    required Object path,
+  }) => '偵測到的安裝位置（${source}）：${path}';
   @override
   String update_install_failure_summary({required Object summary}) =>
       '原因：${summary}';
@@ -152596,9 +154225,10 @@ class _StringsZhHk extends _StringsEn {
   String update_install_launcher_pid({required Object pid}) =>
       '更新啟動器 PID：${pid}';
   @override
-  String update_install_libmpv_holder(
-          {required Object pid, required Object path}) =>
-      'libmpv 持有程序：PID ${pid} - ${path}';
+  String update_install_libmpv_holder({
+    required Object pid,
+    required Object path,
+  }) => 'libmpv 持有程序：PID ${pid} - ${path}';
   @override
   String get update_install_log_not_observed => '啟動後檢查時未建立安裝記錄。';
   @override
@@ -152629,9 +154259,10 @@ class _StringsZhHk extends _StringsEn {
   String get update_install_restart_windows_hint =>
       '如果上方程序已關閉但 libmpv-2.dll 仍被佔用，請重新啟動 Windows 後再安裝。';
   @override
-  String update_install_running_process(
-          {required Object pid, required Object path}) =>
-      '仍在執行的 Fushi 程序：PID ${pid} - ${path}';
+  String update_install_running_process({
+    required Object pid,
+    required Object path,
+  }) => '仍在執行的 Fushi 程序：PID ${pid} - ${path}';
   @override
   String update_install_success_message({required Object version}) =>
       'Fushi 已更新到 ${version} 版本。';
@@ -152647,9 +154278,10 @@ class _StringsZhHk extends _StringsEn {
   @override
   String update_message({required Object version}) => '${version} 版本可用。';
   @override
-  String update_network_failure(
-          {required Object host, required Object reason}) =>
-      '無法連接 ${host}：${reason}';
+  String update_network_failure({
+    required Object host,
+    required Object reason,
+  }) => '無法連接 ${host}：${reason}';
   @override
   String get update_never_remind => '不再提醒';
   @override
@@ -152884,9 +154516,10 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_jimaku_api_key_set => 'API key 已設定';
   @override
-  String video_jimaku_batch_done(
-          {required Object done, required Object total}) =>
-      '字幕已獲取：${done}/${total}';
+  String video_jimaku_batch_done({
+    required Object done,
+    required Object total,
+  }) => '字幕已獲取：${done}/${total}';
   @override
   String get video_jimaku_batch_download => '下載全部';
   @override
@@ -153364,9 +154997,10 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_shader_download_failed => '着色器下載失敗';
   @override
-  String video_shader_download_partial(
-          {required Object ok, required Object failed}) =>
-      '已下載 ${ok} 個，${failed} 個失敗';
+  String video_shader_download_partial({
+    required Object ok,
+    required Object failed,
+  }) => '已下載 ${ok} 個，${failed} 個失敗';
   @override
   String get video_shader_download_url => '貼上連結下載';
   @override
@@ -153468,9 +155102,10 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_subtitle_attach_playlist_hint => '請進入播放頁，逐集掛載字幕';
   @override
-  String video_subtitle_attached_to_video(
-          {required Object title, required Object count}) =>
-      '已為《${title}》掛上字幕（${count} 句）';
+  String video_subtitle_attached_to_video({
+    required Object title,
+    required Object count,
+  }) => '已為《${title}》掛上字幕（${count} 句）';
   @override
   String get video_subtitle_auto_align => '自動對軸';
   @override
@@ -153671,13 +155306,14 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get anki_dedup_report_title => '媒體去重報告';
   @override
-  String anki_dedup_report_body(
-          {required Object groups,
-          required Object removed,
-          required Object size,
-          required Object notes,
-          required Object models,
-          required Object skipped}) =>
+  String anki_dedup_report_body({
+    required Object groups,
+    required Object removed,
+    required Object size,
+    required Object notes,
+    required Object models,
+    required Object skipped,
+  }) =>
       '${groups} 組重復；多餘副本 ${removed} 個（${size}）；改寫筆記 ${notes} 張、模板 ${models} 個；跳過 ${skipped} 個。';
   @override
   String get anki_dedup_report_dry_note => '僅掃描——未做任何改動。';
@@ -153695,11 +155331,11 @@ class _StringsZhHk extends _StringsEn {
   String anki_dedup_plan_intro({required Object count, required Object size}) =>
       '共 ${count} 個多餘副本，可回收 ${size}。每個檔案都保留一份，所有引用先改指到保留的那一份；不重新編碼任何檔案。';
   @override
-  String anki_dedup_plan_entry(
-          {required Object file,
-          required Object size,
-          required Object canonical}) =>
-      '刪除 ${file}（${size}）——保留 ${canonical}';
+  String anki_dedup_plan_entry({
+    required Object file,
+    required Object size,
+    required Object canonical,
+  }) => '刪除 ${file}（${size}）——保留 ${canonical}';
   @override
   String get anki_dedup_plan_delete => '刪除這些檔案';
   @override
@@ -153755,9 +155391,10 @@ class _StringsZhHk extends _StringsEn {
   String manga_ocr_acceleration_status({required Object engine}) =>
       'OCR 加速：${engine}';
   @override
-  String manga_ocr_acceleration_degraded(
-          {required Object engine, required Object reason}) =>
-      'GPU 加速不可用，OCR 改用 ${engine} 運行：${reason}';
+  String manga_ocr_acceleration_degraded({
+    required Object engine,
+    required Object reason,
+  }) => 'GPU 加速不可用，OCR 改用 ${engine} 運行：${reason}';
   @override
   String get media_tracking_status => '收藏狀態';
   @override
@@ -153798,9 +155435,10 @@ class _StringsZhHk extends _StringsEn {
   String anki_dedup_auto_done({required Object count, required Object size}) =>
       '已刪除 ${count} 個重復的 Anki 媒體檔案，釋放 ${size}';
   @override
-  String anki_lapis_backup_done_pruned(
-          {required Object path, required Object count}) =>
-      '已備份到 ${path}（按「保留 90 天、至少留 10 份」清理了 ${count} 份舊備份）';
+  String anki_lapis_backup_done_pruned({
+    required Object path,
+    required Object count,
+  }) => '已備份到 ${path}（按「保留 90 天、至少留 10 份」清理了 ${count} 份舊備份）';
   @override
   String get game_audio_fallback_policy => '音頻降級';
   @override
@@ -153935,9 +155573,10 @@ class _StringsZhHk extends _StringsEn {
   String get stat_clear_all_game_message =>
       '確定清空全部遊戲統計嗎？將刪除所有遊戲時長和遊玩次數。你的遊戲庫與首頁活動流不受影響。此操作不可撤銷。';
   @override
-  String batch_selection_stale_skipped(
-          {required Object n, required Object m}) =>
-      '選中的 ${n} 項中有 ${m} 項已不存在，已跳過';
+  String batch_selection_stale_skipped({
+    required Object n,
+    required Object m,
+  }) => '選中的 ${n} 項中有 ${m} 項已不存在，已跳過';
   @override
   String get game_text_thread_unset => '尚未選擇線程 · 選一條後開始捕獲';
   @override
@@ -153986,22 +155625,24 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_jimaku_language_unknown => '語言未標注';
   @override
-  String video_jimaku_source_summary(
-          {required Object files,
-          required Object episodes,
-          required Object languages}) =>
-      '${files} 個字幕檔案 · 覆蓋 ${episodes} 集 · ${languages}';
+  String video_jimaku_source_summary({
+    required Object files,
+    required Object episodes,
+    required Object languages,
+  }) => '${files} 個字幕檔案 · 覆蓋 ${episodes} 集 · ${languages}';
   @override
-  String video_jimaku_episode_unlabeled(
-          {required Object episode, required Object count}) =>
-      '未發現標為第 ${episode} 集的字幕；另有 ${count} 個未標集號檔案可嘗試';
+  String video_jimaku_episode_unlabeled({
+    required Object episode,
+    required Object count,
+  }) => '未發現標為第 ${episode} 集的字幕；另有 ${count} 個未標集號檔案可嘗試';
   @override
   String video_jimaku_episode_unavailable({required Object episode}) =>
       '沒有找到第 ${episode} 集字幕';
   @override
-  String video_jimaku_episode_available(
-          {required Object count, required Object languages}) =>
-      '有 ${count} 個字幕 · ${languages}';
+  String video_jimaku_episode_available({
+    required Object count,
+    required Object languages,
+  }) => '有 ${count} 個字幕 · ${languages}';
   @override
   String get manga_online_source_disabled => '此互聯網來源已關閉，請在「來源」中開啟後瀏覽目錄。';
   @override
@@ -154019,13 +155660,15 @@ class _StringsZhHk extends _StringsEn {
   String anki_dedup_progress_scanning({required Object count}) =>
       '正在掃描媒體目錄…（已發現 ${count} 個檔案）';
   @override
-  String anki_dedup_progress_hashing(
-          {required Object done, required Object total}) =>
-      '正在比對同大小檔案…（${done} / ${total}）';
+  String anki_dedup_progress_hashing({
+    required Object done,
+    required Object total,
+  }) => '正在比對同大小檔案…（${done} / ${total}）';
   @override
-  String anki_dedup_progress_resolving(
-          {required Object done, required Object total}) =>
-      '正在處理重復副本…（${done} / ${total}）';
+  String anki_dedup_progress_resolving({
+    required Object done,
+    required Object total,
+  }) => '正在處理重復副本…（${done} / ${total}）';
   @override
   String anki_dedup_progress_freed({required Object size}) => '已釋放 ${size}';
   @override
@@ -154070,9 +155713,10 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get sync_last_failed => '上次同步：失敗';
   @override
-  String anime_download_no_results_detail(
-          {required Object query, required Object filters}) =>
-      '服務已正常響應，但按當前條件返回 0 條。查詢：${query}；篩選：${filters}。請嘗試別名或放寬篩選。';
+  String anime_download_no_results_detail({
+    required Object query,
+    required Object filters,
+  }) => '服務已正常響應，但按當前條件返回 0 條。查詢：${query}；篩選：${filters}。請嘗試別名或放寬篩選。';
   @override
   String get anime_download_streaming_ready => '已入庫 · 下載繼續';
   @override
@@ -154241,12 +155885,12 @@ class _StringsZhHk extends _StringsEn {
   @override
   String scrape_all_item({required Object title}) => '正在處理：${title}';
   @override
-  String scrape_all_done(
-          {required Object applied,
-          required Object review,
-          required Object skipped,
-          required Object failed}) =>
-      '完成：已應用 ${applied} 個，待手動確認 ${review} 個，已跳過 ${skipped} 個，失敗 ${failed} 個';
+  String scrape_all_done({
+    required Object applied,
+    required Object review,
+    required Object skipped,
+    required Object failed,
+  }) => '完成：已應用 ${applied} 個，待手動確認 ${review} 個，已跳過 ${skipped} 個，失敗 ${failed} 個';
   @override
   String get scrape_all_empty => '當前庫沒有可刮削的條目。';
   @override
@@ -154597,9 +156241,10 @@ class _StringsZhHk extends _StringsEn {
   String collection_episode_watched_at({required Object position}) =>
       '看到 ${position}';
   @override
-  String collection_episode_rename_partial(
-          {required Object n, required Object m}) =>
-      '已重命名 ${n} 集 · ${m} 集失敗';
+  String collection_episode_rename_partial({
+    required Object n,
+    required Object m,
+  }) => '已重命名 ${n} 集 · ${m} 集失敗';
   @override
   String get sync_err_browser_timeout =>
       '瀏覽器授權沒有返回到應用。請重試，並確認代理放行了本機回環地址 127.0.0.1。';
@@ -154637,9 +156282,10 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get book_convert_blocked_source_missing => '源檔案已從磁碟上消失。';
   @override
-  String manga_online_retry_waiting(
-          {required Object attempt, required Object total}) =>
-      '即將自動重試 (${attempt}/${total})';
+  String manga_online_retry_waiting({
+    required Object attempt,
+    required Object total,
+  }) => '即將自動重試 (${attempt}/${total})';
   @override
   String get manga_ocr_wizard_already_ocred =>
       '本卷每一頁都已有 OCR 數據，無需再跑（重跑會覆蓋現有數據）。';
@@ -154728,18 +156374,18 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_source_scrape_write_images => '寫入圖片檔案';
   @override
-  String video_source_scrape_progress(
-          {required Object phase,
-          required Object current,
-          required Object total}) =>
-      '${phase} · ${current}/${total}';
+  String video_source_scrape_progress({
+    required Object phase,
+    required Object current,
+    required Object total,
+  }) => '${phase} · ${current}/${total}';
   @override
-  String video_source_scrape_last_summary(
-          {required Object status,
-          required Object succeeded,
-          required Object pending,
-          required Object failed}) =>
-      '上次刮削（${status}）：成功 ${succeeded}，待確認 ${pending}，失敗 ${failed}';
+  String video_source_scrape_last_summary({
+    required Object status,
+    required Object succeeded,
+    required Object pending,
+    required Object failed,
+  }) => '上次刮削（${status}）：成功 ${succeeded}，待確認 ${pending}，失敗 ${failed}';
   @override
   String get video_source_scrape_phase_planning => '準備中';
   @override
@@ -154932,9 +156578,10 @@ class _StringsZhHk extends _StringsEn {
   @override
   String migration_import_running({required Object batch}) => '正在導入 ${batch}…';
   @override
-  String migration_import_verify_failed(
-          {required Object batch, required Object detail}) =>
-      '${batch} 校驗未通過，已保留待重傳：${detail}';
+  String migration_import_verify_failed({
+    required Object batch,
+    required Object detail,
+  }) => '${batch} 校驗未通過，已保留待重傳：${detail}';
   @override
   String migration_import_counts_failed({required Object detail}) =>
       '導入數據不完整：${detail}。請回 Hibiki 重新導出缺失部分後再導入。';
@@ -154957,11 +156604,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get migration_import_permission_grant => '去授權';
   @override
-  String migration_import_verifying(
-          {required Object batch,
-          required Object done,
-          required Object total}) =>
-      '正在校驗 ${batch}（${done}/${total}）';
+  String migration_import_verifying({
+    required Object batch,
+    required Object done,
+    required Object total,
+  }) => '正在校驗 ${batch}（${done}/${total}）';
   @override
   String get migration_import_verifying_hint => '正在核對歸檔校驗和。庫很大時需要幾分鐘。';
   @override
@@ -155116,11 +156763,11 @@ class _StringsZhHk extends _StringsEn {
   String video_subtitle_read_failed({required Object label}) =>
       '無法讀取該字幕檔案（內容損壞或為空）：${label}';
   @override
-  String dict_downloading_size(
-          {required Object name,
-          required Object done,
-          required Object total}) =>
-      '正在下載 ${name}（${done} / ${total}）';
+  String dict_downloading_size({
+    required Object name,
+    required Object done,
+    required Object total,
+  }) => '正在下載 ${name}（${done} / ${total}）';
   @override
   String get video_subtitle_attach_book_missing => '該影片不在影片庫中，字幕沒有掛上';
   @override
@@ -155293,11 +156940,11 @@ class _StringsZhHk extends _StringsEn {
   String manga_import_batch_hint({required Object n}) =>
       '該資料夾裡有 ${n} 個整卷檔案，將逐卷各導入為一本，書名取各自的檔案名。';
   @override
-  String manga_import_batch_done(
-          {required Object imported,
-          required Object skipped,
-          required Object failed}) =>
-      '導入完成：成功 ${imported} 卷，跳過 ${skipped} 卷，失敗 ${failed} 卷。';
+  String manga_import_batch_done({
+    required Object imported,
+    required Object skipped,
+    required Object failed,
+  }) => '導入完成：成功 ${imported} 卷，跳過 ${skipped} 卷，失敗 ${failed} 卷。';
   @override
   String get srt_book_reimport => '重新導入';
   @override
@@ -155383,9 +157030,10 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get update_release_page_open => '發布頁';
   @override
-  String update_install_gal_hook_holder(
-          {required Object pid, required Object path}) =>
-      'Galgame 捕獲組件被佔用：PID ${pid} - ${path}（這是你正在玩的遊戲或它的捕獲宿主進程）。請先關閉遊戲再更新。';
+  String update_install_gal_hook_holder({
+    required Object pid,
+    required Object path,
+  }) => 'Galgame 捕獲組件被佔用：PID ${pid} - ${path}（這是你正在玩的遊戲或它的捕獲宿主進程）。請先關閉遊戲再更新。';
   @override
   String get game_hook_reason_protocol_mismatch =>
       '捕獲組件與本體版本不一致。組件已內置在 Fushi 裡，不需要單獨安裝：先徹底關掉遊戲再重開一次（遊戲進程裡可能還掛着上一次注入的舊組件）。若重開後仍提示不一致，說明磁碟上的組件比 Fushi 舊——上次更新 Fushi 時遊戲正開着，安裝器換不掉被佔用的組件檔案。請關閉所有遊戲，然後重新運行一次 Fushi 安裝程式。';
@@ -155814,9 +157462,10 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get manga_ocr_model_unused_by_engine => '當前引擎用不到這些本地模型檔案。';
   @override
-  String manga_ocr_download_total_progress(
-          {required Object done, required Object total}) =>
-      '${done} / ${total}';
+  String manga_ocr_download_total_progress({
+    required Object done,
+    required Object total,
+  }) => '${done} / ${total}';
   @override
   String get media_source_network_subtitle_video => 'WebDAV 遠程庫（原地串流）';
   @override
@@ -156244,11 +157893,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get manga_ocr_import_matched_nothing => '認不出可用的模型檔案';
   @override
-  String manga_ocr_import_size_mismatch(
-          {required Object file,
-          required Object expected,
-          required Object actual}) =>
-      '${file} 大小不符：應為 ${expected}，實為 ${actual}';
+  String manga_ocr_import_size_mismatch({
+    required Object file,
+    required Object expected,
+    required Object actual,
+  }) => '${file} 大小不符：應為 ${expected}，實為 ${actual}';
   @override
   String manga_ocr_import_still_missing({required Object count}) =>
       '仍欠 ${count} 個檔案';
@@ -156311,9 +157960,10 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_jimaku_search_failed => '字幕搜尋失敗';
   @override
-  String video_subtitle_error_with_code(
-          {required Object msg, required Object code}) =>
-      '${msg}（HTTP ${code}）';
+  String video_subtitle_error_with_code({
+    required Object msg,
+    required Object code,
+  }) => '${msg}（HTTP ${code}）';
   @override
   String get manga_rescan_run => '重新識別框選區域';
   @override
@@ -156538,9 +158188,10 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get manga_series_open_series => '作品頁';
   @override
-  String manga_series_read_progress(
-          {required Object page, required Object total}) =>
-      '讀到第 ${page}/${total} 頁';
+  String manga_series_read_progress({
+    required Object page,
+    required Object total,
+  }) => '讀到第 ${page}/${total} 頁';
   @override
   String manga_series_read_progress_partial({required Object page}) =>
       '讀到第 ${page} 頁';
@@ -156805,13 +158456,15 @@ class _StringsZhHk extends _StringsEn {
   String web_video_mine_queued({required Object count}) =>
       '已加入製卡佇列（待製 ${count} 張）';
   @override
-  String web_video_mine_queue_running(
-          {required Object done, required Object total}) =>
-      '製卡中 ${done}/${total}…';
+  String web_video_mine_queue_running({
+    required Object done,
+    required Object total,
+  }) => '製卡中 ${done}/${total}…';
   @override
-  String web_video_mine_queue_finished(
-          {required Object ok, required Object failed}) =>
-      '製卡完成：成功 ${ok}，失敗 ${failed}';
+  String web_video_mine_queue_finished({
+    required Object ok,
+    required Object failed,
+  }) => '製卡完成：成功 ${ok}，失敗 ${failed}';
   @override
   String get web_video_hosting_menu => '播放模式';
   @override
@@ -157068,6 +158721,51 @@ class _StringsZhHk extends _StringsEn {
       'Waiting for matching in-game click';
   @override
   String get delete_choices_remember => '記住這些選擇';
+  @override
+  String get network_proxy_mode_label => 'Proxy mode';
+  @override
+  String get network_proxy_mode_auto => 'Automatic';
+  @override
+  String get network_proxy_mode_auto_hint =>
+      'Use environment variables, then the enabled system proxy';
+  @override
+  String get network_proxy_mode_direct => 'Direct';
+  @override
+  String get network_proxy_mode_direct_hint => 'Disable proxy use for the app';
+  @override
+  String get network_proxy_mode_manual => 'Manual';
+  @override
+  String get network_proxy_mode_manual_hint =>
+      'Use the server and optional credentials below';
+  @override
+  String get network_proxy_manual_hint =>
+      'HTTP proxy server used by all public internet requests';
+  @override
+  String get network_proxy_username => 'Proxy username (optional)';
+  @override
+  String get network_proxy_password => 'Proxy password (optional)';
+  @override
+  String get storage_category_backups => 'Local backups';
+  @override
+  String storage_entry_backups_label({required Object n}) =>
+      '${n} backup archive(s)';
+  @override
+  String get storage_entry_delete_backups_confirm_body =>
+      'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+  @override
+  String get update_download_source_preference => 'Preferred download source';
+  @override
+  String get update_download_source_preference_hint =>
+      'The selected source is tried first; unavailable sources still fall back automatically.';
+  @override
+  String get update_download_source_auto => 'Automatic (recommended)';
+  @override
+  String get update_download_source_cloudflare => 'Cloudflare mirror';
+  @override
+  String get update_download_source_github => 'GitHub direct';
+  @override
+  String update_download_source_proxy({required Object host}) =>
+      'Proxy: ${host}';
 }
 
 /// Flat map(s) containing all translations.
@@ -157514,10 +159212,11 @@ extension on _StringsEn {
       case 'backup_import':
         return 'Import backup';
       case 'backup_import_confirm':
-        return (
-                {required Object date,
-                required Object bookCount,
-                required Object statsCount}) =>
+        return ({
+          required Object date,
+          required Object bookCount,
+          required Object statsCount,
+        }) =>
             'This will replace all current data with the backup from ${date}.\n\n${bookCount} books, ${statsCount} statistics records.\n\nThe app will restart after restore.';
       case 'backup_import_confirm_title':
         return 'Restore Backup?';
@@ -157794,12 +159493,12 @@ extension on _StringsEn {
       case 'changelog_prerelease':
         return 'Prerelease';
       case 'chapter_progress':
-        return (
-                {required Object idx,
-                required Object total,
-                required Object suffix,
-                required Object pct}) =>
-            'Chapter ${idx} / ${total}${suffix} · ${pct}%';
+        return ({
+          required Object idx,
+          required Object total,
+          required Object suffix,
+          required Object pct,
+        }) => 'Chapter ${idx} / ${total}${suffix} · ${pct}%';
       case 'clear':
         return 'Clear';
       case 'clear_dictionary_description':
@@ -158269,11 +159968,11 @@ extension on _StringsEn {
       case 'dict_download_language':
         return 'Your language';
       case 'dict_download_partial':
-        return (
-                {required Object success,
-                required Object total,
-                required Object error}) =>
-            '${success} / ${total} OK. Failed: ${error}';
+        return ({
+          required Object success,
+          required Object total,
+          required Object error,
+        }) => '${success} / ${total} OK. Failed: ${error}';
       case 'dict_download_select_title':
         return 'Select dictionaries';
       case 'dict_downloading':
@@ -158308,11 +160007,11 @@ extension on _StringsEn {
       case 'dict_update_none':
         return 'All dictionaries are up to date.';
       case 'dict_update_summary':
-        return (
-                {required Object updated,
-                required Object current,
-                required Object failed}) =>
-            '${updated} updated, ${current} up to date, ${failed} failed.';
+        return ({
+          required Object updated,
+          required Object current,
+          required Object failed,
+        }) => '${updated} updated, ${current} up to date, ${failed} failed.';
       case 'dict_update_tooltip':
         return 'Update dictionary';
       case 'dict_update_updating':
@@ -159143,12 +160842,12 @@ extension on _StringsEn {
       case 'game_waiting_for_text':
         return 'Waiting for text';
       case 'game_waveform_range_label':
-        return (
-                {required Object start,
-                required Object end,
-                required Object duration,
-                required Object total}) =>
-            '${start} - ${end} (selected ${duration} / total ${total})';
+        return ({
+          required Object start,
+          required Object end,
+          required Object duration,
+          required Object total,
+        }) => '${start} - ${end} (selected ${duration} / total ${total})';
       case 'game_waveform_select_title':
         return 'Select audio range';
       case 'game_window_bound':
@@ -162277,13 +163976,14 @@ extension on _StringsEn {
       case 'anki_dedup_report_title':
         return 'Media deduplication report';
       case 'anki_dedup_report_body':
-        return (
-                {required Object groups,
-                required Object removed,
-                required Object size,
-                required Object notes,
-                required Object models,
-                required Object skipped}) =>
+        return ({
+          required Object groups,
+          required Object removed,
+          required Object size,
+          required Object notes,
+          required Object models,
+          required Object skipped,
+        }) =>
             '${groups} duplicate groups; ${removed} extra copies (${size}); ${notes} notes and ${models} note types rewritten; ${skipped} skipped.';
       case 'anki_dedup_report_dry_note':
         return 'Scan only - nothing was changed.';
@@ -162301,11 +164001,11 @@ extension on _StringsEn {
         return ({required Object count, required Object size}) =>
             '${count} extra copies, ${size} reclaimable. One copy of each file is kept and every reference is repointed to it first; nothing is ever re-encoded.';
       case 'anki_dedup_plan_entry':
-        return (
-                {required Object file,
-                required Object size,
-                required Object canonical}) =>
-            'Delete ${file} (${size}) - keeping ${canonical}';
+        return ({
+          required Object file,
+          required Object size,
+          required Object canonical,
+        }) => 'Delete ${file} (${size}) - keeping ${canonical}';
       case 'anki_dedup_plan_delete':
         return 'Delete these files';
       case 'anki_dedup_plan_journal':
@@ -162571,11 +164271,11 @@ extension on _StringsEn {
       case 'video_jimaku_language_unknown':
         return 'Language not labeled';
       case 'video_jimaku_source_summary':
-        return (
-                {required Object files,
-                required Object episodes,
-                required Object languages}) =>
-            '${files} subtitle files · ${episodes} episodes · ${languages}';
+        return ({
+          required Object files,
+          required Object episodes,
+          required Object languages,
+        }) => '${files} subtitle files · ${episodes} episodes · ${languages}';
       case 'video_jimaku_episode_unlabeled':
         return ({required Object episode, required Object count}) =>
             'No subtitle labeled episode ${episode}; ${count} unlabeled files may still match';
@@ -162809,11 +164509,12 @@ extension on _StringsEn {
       case 'scrape_all_item':
         return ({required Object title}) => 'Processing: ${title}';
       case 'scrape_all_done':
-        return (
-                {required Object applied,
-                required Object review,
-                required Object skipped,
-                required Object failed}) =>
+        return ({
+          required Object applied,
+          required Object review,
+          required Object skipped,
+          required Object failed,
+        }) =>
             'Done: ${applied} applied, ${review} need review, ${skipped} skipped, ${failed} failed';
       case 'scrape_all_empty':
         return 'There are no items to scrape in this library.';
@@ -163275,17 +164976,18 @@ extension on _StringsEn {
       case 'video_source_scrape_write_images':
         return 'Write image files';
       case 'video_source_scrape_progress':
-        return (
-                {required Object phase,
-                required Object current,
-                required Object total}) =>
-            '${phase} · ${current}/${total}';
+        return ({
+          required Object phase,
+          required Object current,
+          required Object total,
+        }) => '${phase} · ${current}/${total}';
       case 'video_source_scrape_last_summary':
-        return (
-                {required Object status,
-                required Object succeeded,
-                required Object pending,
-                required Object failed}) =>
+        return ({
+          required Object status,
+          required Object succeeded,
+          required Object pending,
+          required Object failed,
+        }) =>
             'Last scrape (${status}): ${succeeded} succeeded, ${pending} pending, ${failed} failed';
       case 'video_source_scrape_phase_planning':
         return 'Planning';
@@ -163489,11 +165191,11 @@ extension on _StringsEn {
       case 'migration_import_permission_grant':
         return 'Grant permission';
       case 'migration_import_verifying':
-        return (
-                {required Object batch,
-                required Object done,
-                required Object total}) =>
-            'Verifying ${batch} (${done}/${total})';
+        return ({
+          required Object batch,
+          required Object done,
+          required Object total,
+        }) => 'Verifying ${batch} (${done}/${total})';
       case 'migration_import_verifying_hint':
         return 'Checksumming the archives. Large libraries can take several minutes.';
       case 'game_line_copy_tooltip':
@@ -163645,11 +165347,11 @@ extension on _StringsEn {
         return ({required Object label}) =>
             'Couldn\'t read this subtitle file (damaged or empty): ${label}';
       case 'dict_downloading_size':
-        return (
-                {required Object name,
-                required Object done,
-                required Object total}) =>
-            'Downloading ${name} (${done} / ${total})';
+        return ({
+          required Object name,
+          required Object done,
+          required Object total,
+        }) => 'Downloading ${name} (${done} / ${total})';
       case 'video_subtitle_attach_book_missing':
         return 'This video isn\'t in your library, so the subtitle wasn\'t attached';
       case 'dict_download_hide':
@@ -163810,11 +165512,11 @@ extension on _StringsEn {
         return ({required Object n}) =>
             'This folder holds ${n} volume files; each is imported as its own book, named after its file.';
       case 'manga_import_batch_done':
-        return (
-                {required Object imported,
-                required Object skipped,
-                required Object failed}) =>
-            'Imported ${imported}, skipped ${skipped}, failed ${failed}.';
+        return ({
+          required Object imported,
+          required Object skipped,
+          required Object failed,
+        }) => 'Imported ${imported}, skipped ${skipped}, failed ${failed}.';
       case 'srt_book_reimport':
         return 'Re-import';
       case 'srt_book_reimport_subtitle_hint':
@@ -164695,11 +166397,11 @@ extension on _StringsEn {
       case 'manga_ocr_import_matched_nothing':
         return 'No usable model files were recognised';
       case 'manga_ocr_import_size_mismatch':
-        return (
-                {required Object file,
-                required Object expected,
-                required Object actual}) =>
-            '${file} has the wrong size: expected ${expected}, got ${actual}';
+        return ({
+          required Object file,
+          required Object expected,
+          required Object actual,
+        }) => '${file} has the wrong size: expected ${expected}, got ${actual}';
       case 'manga_ocr_import_still_missing':
         return ({required Object count}) => 'Still missing ${count} file(s)';
       case 'manga_ocr_import_failed':
@@ -165429,6 +167131,44 @@ extension on _StringsEn {
         return 'Waiting for matching in-game click';
       case 'delete_choices_remember':
         return 'Remember these choices';
+      case 'network_proxy_mode_label':
+        return 'Proxy mode';
+      case 'network_proxy_mode_auto':
+        return 'Automatic';
+      case 'network_proxy_mode_auto_hint':
+        return 'Use environment variables, then the enabled system proxy';
+      case 'network_proxy_mode_direct':
+        return 'Direct';
+      case 'network_proxy_mode_direct_hint':
+        return 'Disable proxy use for the app';
+      case 'network_proxy_mode_manual':
+        return 'Manual';
+      case 'network_proxy_mode_manual_hint':
+        return 'Use the server and optional credentials below';
+      case 'network_proxy_manual_hint':
+        return 'HTTP proxy server used by all public internet requests';
+      case 'network_proxy_username':
+        return 'Proxy username (optional)';
+      case 'network_proxy_password':
+        return 'Proxy password (optional)';
+      case 'storage_category_backups':
+        return 'Local backups';
+      case 'storage_entry_backups_label':
+        return ({required Object n}) => '${n} backup archive(s)';
+      case 'storage_entry_delete_backups_confirm_body':
+        return 'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+      case 'update_download_source_preference':
+        return 'Preferred download source';
+      case 'update_download_source_preference_hint':
+        return 'The selected source is tried first; unavailable sources still fall back automatically.';
+      case 'update_download_source_auto':
+        return 'Automatic (recommended)';
+      case 'update_download_source_cloudflare':
+        return 'Cloudflare mirror';
+      case 'update_download_source_github':
+        return 'GitHub direct';
+      case 'update_download_source_proxy':
+        return ({required Object host}) => 'Proxy: ${host}';
       default:
         return null;
     }
@@ -165874,10 +167614,11 @@ extension on _StringsAr {
       case 'backup_import':
         return 'استيراد نسخة احتياطية';
       case 'backup_import_confirm':
-        return (
-                {required Object date,
-                required Object bookCount,
-                required Object statsCount}) =>
+        return ({
+          required Object date,
+          required Object bookCount,
+          required Object statsCount,
+        }) =>
             'سيؤدي هذا إلى استبدال كل البيانات الحالية بالنسخة الاحتياطية من ${date}.\n\n${bookCount} كتاب، ${statsCount} سجل إحصائي.\n\nسيُعاد تشغيل التطبيق بعد الاستعادة.';
       case 'backup_import_confirm_title':
         return 'استعادة النسخة الاحتياطية؟';
@@ -166155,12 +167896,12 @@ extension on _StringsAr {
       case 'changelog_prerelease':
         return 'إصدار تجريبي';
       case 'chapter_progress':
-        return (
-                {required Object idx,
-                required Object total,
-                required Object suffix,
-                required Object pct}) =>
-            'الفصل ${idx} / ${total}${suffix} · ${pct}%';
+        return ({
+          required Object idx,
+          required Object total,
+          required Object suffix,
+          required Object pct,
+        }) => 'الفصل ${idx} / ${total}${suffix} · ${pct}%';
       case 'clear':
         return 'مسح';
       case 'clear_dictionary_description':
@@ -166630,11 +168371,11 @@ extension on _StringsAr {
       case 'dict_download_language':
         return 'لغتك';
       case 'dict_download_partial':
-        return (
-                {required Object success,
-                required Object total,
-                required Object error}) =>
-            '${success} / ${total} ناجح. فشل: ${error}';
+        return ({
+          required Object success,
+          required Object total,
+          required Object error,
+        }) => '${success} / ${total} ناجح. فشل: ${error}';
       case 'dict_download_select_title':
         return 'اختيار القواميس';
       case 'dict_downloading':
@@ -166669,11 +168410,11 @@ extension on _StringsAr {
       case 'dict_update_none':
         return 'جميع القواميس محدّثة.';
       case 'dict_update_summary':
-        return (
-                {required Object updated,
-                required Object current,
-                required Object failed}) =>
-            '${updated} محدّث، ${current} محدّث بالفعل، ${failed} فشل.';
+        return ({
+          required Object updated,
+          required Object current,
+          required Object failed,
+        }) => '${updated} محدّث، ${current} محدّث بالفعل، ${failed} فشل.';
       case 'dict_update_tooltip':
         return 'تحديث القاموس';
       case 'dict_update_updating':
@@ -167502,12 +169243,12 @@ extension on _StringsAr {
       case 'game_waiting_for_text':
         return 'في انتظار النص';
       case 'game_waveform_range_label':
-        return (
-                {required Object start,
-                required Object end,
-                required Object duration,
-                required Object total}) =>
-            '${start} - ${end} (محدد ${duration} / إجمالي ${total})';
+        return ({
+          required Object start,
+          required Object end,
+          required Object duration,
+          required Object total,
+        }) => '${start} - ${end} (محدد ${duration} / إجمالي ${total})';
       case 'game_waveform_select_title':
         return 'اختر نطاق الصوت';
       case 'game_window_bound':
@@ -170633,13 +172374,14 @@ extension on _StringsAr {
       case 'anki_dedup_report_title':
         return 'تقرير إزالة تكرار الوسائط';
       case 'anki_dedup_report_body':
-        return (
-                {required Object groups,
-                required Object removed,
-                required Object size,
-                required Object notes,
-                required Object models,
-                required Object skipped}) =>
+        return ({
+          required Object groups,
+          required Object removed,
+          required Object size,
+          required Object notes,
+          required Object models,
+          required Object skipped,
+        }) =>
             '${groups} مجموعة مكررة؛ ${removed} نسخة إضافية (${size})؛ ${notes} ملاحظة و${models} نوع ملاحظة أُعيدت كتابتها؛ ${skipped} تم تخطيها.';
       case 'anki_dedup_report_dry_note':
         return 'فحص فقط - لم يتم تغيير شيء.';
@@ -170657,11 +172399,11 @@ extension on _StringsAr {
         return ({required Object count, required Object size}) =>
             '${count} نسخة إضافية، ${size} قابلة للاسترداد. يتم الاحتفاظ بنسخة واحدة من كل ملف وإعادة توجيه كل مرجع إليها أولاً؛ لا يتم إعادة ترميز أي شيء.';
       case 'anki_dedup_plan_entry':
-        return (
-                {required Object file,
-                required Object size,
-                required Object canonical}) =>
-            'حذف ${file} (${size}) - الاحتفاظ بـ ${canonical}';
+        return ({
+          required Object file,
+          required Object size,
+          required Object canonical,
+        }) => 'حذف ${file} (${size}) - الاحتفاظ بـ ${canonical}';
       case 'anki_dedup_plan_delete':
         return 'حذف هذه الملفات';
       case 'anki_dedup_plan_journal':
@@ -170927,11 +172669,11 @@ extension on _StringsAr {
       case 'video_jimaku_language_unknown':
         return 'اللغة غير محددة';
       case 'video_jimaku_source_summary':
-        return (
-                {required Object files,
-                required Object episodes,
-                required Object languages}) =>
-            '${files} ملف ترجمة · ${episodes} حلقة · ${languages}';
+        return ({
+          required Object files,
+          required Object episodes,
+          required Object languages,
+        }) => '${files} ملف ترجمة · ${episodes} حلقة · ${languages}';
       case 'video_jimaku_episode_unlabeled':
         return ({required Object episode, required Object count}) =>
             'لا توجد ترجمة بعلامة الحلقة ${episode}؛ ${count} ملف بدون علامة قد يطابق';
@@ -171165,11 +172907,12 @@ extension on _StringsAr {
       case 'scrape_all_item':
         return ({required Object title}) => 'قيد المعالجة: ${title}';
       case 'scrape_all_done':
-        return (
-                {required Object applied,
-                required Object review,
-                required Object skipped,
-                required Object failed}) =>
+        return ({
+          required Object applied,
+          required Object review,
+          required Object skipped,
+          required Object failed,
+        }) =>
             'تم: ${applied} مُطبَّق، ${review} بحاجة مراجعة، ${skipped} تم تخطيه، ${failed} فشل';
       case 'scrape_all_empty':
         return 'لا توجد عناصر لجلبها في هذه المكتبة.';
@@ -171629,17 +173372,18 @@ extension on _StringsAr {
       case 'video_source_scrape_write_images':
         return 'كتابة ملفات الصور';
       case 'video_source_scrape_progress':
-        return (
-                {required Object phase,
-                required Object current,
-                required Object total}) =>
-            '${phase} · ${current}/${total}';
+        return ({
+          required Object phase,
+          required Object current,
+          required Object total,
+        }) => '${phase} · ${current}/${total}';
       case 'video_source_scrape_last_summary':
-        return (
-                {required Object status,
-                required Object succeeded,
-                required Object pending,
-                required Object failed}) =>
+        return ({
+          required Object status,
+          required Object succeeded,
+          required Object pending,
+          required Object failed,
+        }) =>
             'آخر جلب (${status}): ${succeeded} نجح، ${pending} معلّق، ${failed} فشل';
       case 'video_source_scrape_phase_planning':
         return 'التخطيط';
@@ -171843,11 +173587,11 @@ extension on _StringsAr {
       case 'migration_import_permission_grant':
         return 'منح الإذن';
       case 'migration_import_verifying':
-        return (
-                {required Object batch,
-                required Object done,
-                required Object total}) =>
-            'جارٍ التحقق من ${batch} (${done}/${total})';
+        return ({
+          required Object batch,
+          required Object done,
+          required Object total,
+        }) => 'جارٍ التحقق من ${batch} (${done}/${total})';
       case 'migration_import_verifying_hint':
         return 'جارٍ حساب المجاميع الاختبارية للأرشيفات. قد تستغرق المكتبات الكبيرة عدة دقائق.';
       case 'game_line_copy_tooltip':
@@ -171999,11 +173743,11 @@ extension on _StringsAr {
         return ({required Object label}) =>
             'تعذّرت قراءة ملف الترجمة هذا (تالف أو فارغ): ${label}';
       case 'dict_downloading_size':
-        return (
-                {required Object name,
-                required Object done,
-                required Object total}) =>
-            'جارٍ تحميل ${name} (${done} / ${total})';
+        return ({
+          required Object name,
+          required Object done,
+          required Object total,
+        }) => 'جارٍ تحميل ${name} (${done} / ${total})';
       case 'video_subtitle_attach_book_missing':
         return 'هذا الفيديو ليس في مكتبتك، لذا لم يتم إرفاق الترجمة';
       case 'dict_download_hide':
@@ -172167,11 +173911,11 @@ extension on _StringsAr {
         return ({required Object n}) =>
             'يحتوي هذا المجلد على ${n} ملف مجلّد؛ يتم استيراد كل منها ككتاب مستقل باسم ملفه.';
       case 'manga_import_batch_done':
-        return (
-                {required Object imported,
-                required Object skipped,
-                required Object failed}) =>
-            'تم استيراد ${imported}، تخطّي ${skipped}، فشل ${failed}.';
+        return ({
+          required Object imported,
+          required Object skipped,
+          required Object failed,
+        }) => 'تم استيراد ${imported}، تخطّي ${skipped}، فشل ${failed}.';
       case 'srt_book_reimport':
         return 'إعادة الاستيراد';
       case 'srt_book_reimport_subtitle_hint':
@@ -173053,11 +174797,11 @@ extension on _StringsAr {
       case 'manga_ocr_import_matched_nothing':
         return 'لم يتم التعرف على أي ملفات نموذج صالحة';
       case 'manga_ocr_import_size_mismatch':
-        return (
-                {required Object file,
-                required Object expected,
-                required Object actual}) =>
-            'حجم ${file} غير صحيح: المتوقع ${expected}، والفعلي ${actual}';
+        return ({
+          required Object file,
+          required Object expected,
+          required Object actual,
+        }) => 'حجم ${file} غير صحيح: المتوقع ${expected}، والفعلي ${actual}';
       case 'manga_ocr_import_still_missing':
         return ({required Object count}) => 'لا يزال ينقص ${count} ملف';
       case 'manga_ocr_import_failed':
@@ -173786,6 +175530,44 @@ extension on _StringsAr {
         return 'Waiting for matching in-game click';
       case 'delete_choices_remember':
         return 'تذكّر هذه الخيارات';
+      case 'network_proxy_mode_label':
+        return 'Proxy mode';
+      case 'network_proxy_mode_auto':
+        return 'Automatic';
+      case 'network_proxy_mode_auto_hint':
+        return 'Use environment variables, then the enabled system proxy';
+      case 'network_proxy_mode_direct':
+        return 'Direct';
+      case 'network_proxy_mode_direct_hint':
+        return 'Disable proxy use for the app';
+      case 'network_proxy_mode_manual':
+        return 'Manual';
+      case 'network_proxy_mode_manual_hint':
+        return 'Use the server and optional credentials below';
+      case 'network_proxy_manual_hint':
+        return 'HTTP proxy server used by all public internet requests';
+      case 'network_proxy_username':
+        return 'Proxy username (optional)';
+      case 'network_proxy_password':
+        return 'Proxy password (optional)';
+      case 'storage_category_backups':
+        return 'Local backups';
+      case 'storage_entry_backups_label':
+        return ({required Object n}) => '${n} backup archive(s)';
+      case 'storage_entry_delete_backups_confirm_body':
+        return 'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+      case 'update_download_source_preference':
+        return 'Preferred download source';
+      case 'update_download_source_preference_hint':
+        return 'The selected source is tried first; unavailable sources still fall back automatically.';
+      case 'update_download_source_auto':
+        return 'Automatic (recommended)';
+      case 'update_download_source_cloudflare':
+        return 'Cloudflare mirror';
+      case 'update_download_source_github':
+        return 'GitHub direct';
+      case 'update_download_source_proxy':
+        return ({required Object host}) => 'Proxy: ${host}';
       default:
         return null;
     }
@@ -174234,10 +176016,11 @@ extension on _StringsDe {
       case 'backup_import':
         return 'Backup importieren';
       case 'backup_import_confirm':
-        return (
-                {required Object date,
-                required Object bookCount,
-                required Object statsCount}) =>
+        return ({
+          required Object date,
+          required Object bookCount,
+          required Object statsCount,
+        }) =>
             'Dadurch werden alle aktuellen Daten durch das Backup vom ${date} ersetzt.\n\n${bookCount} Bücher, ${statsCount} Statistikeinträge.\n\nNach der Wiederherstellung wird die App neu gestartet.';
       case 'backup_import_confirm_title':
         return 'Backup wiederherstellen?';
@@ -174516,12 +176299,12 @@ extension on _StringsDe {
       case 'changelog_prerelease':
         return 'Vorabversion';
       case 'chapter_progress':
-        return (
-                {required Object idx,
-                required Object total,
-                required Object suffix,
-                required Object pct}) =>
-            'Kapitel ${idx} / ${total}${suffix} · ${pct}%';
+        return ({
+          required Object idx,
+          required Object total,
+          required Object suffix,
+          required Object pct,
+        }) => 'Kapitel ${idx} / ${total}${suffix} · ${pct}%';
       case 'clear':
         return 'Leeren';
       case 'clear_dictionary_description':
@@ -174993,11 +176776,11 @@ extension on _StringsDe {
       case 'dict_download_language':
         return 'Deine Sprache';
       case 'dict_download_partial':
-        return (
-                {required Object success,
-                required Object total,
-                required Object error}) =>
-            '${success} / ${total} OK. Fehlgeschlagen: ${error}';
+        return ({
+          required Object success,
+          required Object total,
+          required Object error,
+        }) => '${success} / ${total} OK. Fehlgeschlagen: ${error}';
       case 'dict_download_select_title':
         return 'Wörterbücher auswählen';
       case 'dict_downloading':
@@ -175033,10 +176816,11 @@ extension on _StringsDe {
       case 'dict_update_none':
         return 'Alle Wörterbücher sind aktuell.';
       case 'dict_update_summary':
-        return (
-                {required Object updated,
-                required Object current,
-                required Object failed}) =>
+        return ({
+          required Object updated,
+          required Object current,
+          required Object failed,
+        }) =>
             '${updated} aktualisiert, ${current} aktuell, ${failed} fehlgeschlagen.';
       case 'dict_update_tooltip':
         return 'Wörterbuch aktualisieren';
@@ -175869,12 +177653,12 @@ extension on _StringsDe {
       case 'game_waiting_for_text':
         return 'Warte auf Text';
       case 'game_waveform_range_label':
-        return (
-                {required Object start,
-                required Object end,
-                required Object duration,
-                required Object total}) =>
-            '${start} – ${end} (ausgewählt ${duration} / gesamt ${total})';
+        return ({
+          required Object start,
+          required Object end,
+          required Object duration,
+          required Object total,
+        }) => '${start} – ${end} (ausgewählt ${duration} / gesamt ${total})';
       case 'game_waveform_select_title':
         return 'Audiobereich auswählen';
       case 'game_window_bound':
@@ -179021,13 +180805,14 @@ extension on _StringsDe {
       case 'anki_dedup_report_title':
         return 'Medien-Deduplizierungsbericht';
       case 'anki_dedup_report_body':
-        return (
-                {required Object groups,
-                required Object removed,
-                required Object size,
-                required Object notes,
-                required Object models,
-                required Object skipped}) =>
+        return ({
+          required Object groups,
+          required Object removed,
+          required Object size,
+          required Object notes,
+          required Object models,
+          required Object skipped,
+        }) =>
             '${groups} Duplikatgruppen; ${removed} zusätzliche Kopien (${size}); ${notes} Notizen und ${models} Notiztypen umgeschrieben; ${skipped} übersprungen.';
       case 'anki_dedup_report_dry_note':
         return 'Nur Scan – es wurden keine Änderungen vorgenommen.';
@@ -179046,11 +180831,11 @@ extension on _StringsDe {
         return ({required Object count, required Object size}) =>
             '${count} zusätzliche Kopien, ${size} rückgewinnbar. Eine Kopie jeder Datei wird behalten und jede Referenz wird zuvor darauf umgeleitet; nichts wird neu kodiert.';
       case 'anki_dedup_plan_entry':
-        return (
-                {required Object file,
-                required Object size,
-                required Object canonical}) =>
-            '${file} löschen (${size}) – ${canonical} wird behalten';
+        return ({
+          required Object file,
+          required Object size,
+          required Object canonical,
+        }) => '${file} löschen (${size}) – ${canonical} wird behalten';
       case 'anki_dedup_plan_delete':
         return 'Diese Dateien löschen';
       case 'anki_dedup_plan_journal':
@@ -179318,10 +181103,11 @@ extension on _StringsDe {
       case 'video_jimaku_language_unknown':
         return 'Sprache nicht gekennzeichnet';
       case 'video_jimaku_source_summary':
-        return (
-                {required Object files,
-                required Object episodes,
-                required Object languages}) =>
+        return ({
+          required Object files,
+          required Object episodes,
+          required Object languages,
+        }) =>
             '${files} Untertiteldateien · ${episodes} Episoden · ${languages}';
       case 'video_jimaku_episode_unlabeled':
         return ({required Object episode, required Object count}) =>
@@ -179557,11 +181343,12 @@ extension on _StringsDe {
       case 'scrape_all_item':
         return ({required Object title}) => 'Verarbeitung: ${title}';
       case 'scrape_all_done':
-        return (
-                {required Object applied,
-                required Object review,
-                required Object skipped,
-                required Object failed}) =>
+        return ({
+          required Object applied,
+          required Object review,
+          required Object skipped,
+          required Object failed,
+        }) =>
             'Fertig: ${applied} angewendet, ${review} zur Überprüfung, ${skipped} übersprungen, ${failed} fehlgeschlagen';
       case 'scrape_all_empty':
         return 'Es gibt keine Einträge zum Abrufen in dieser Bibliothek.';
@@ -180022,17 +181809,18 @@ extension on _StringsDe {
       case 'video_source_scrape_write_images':
         return 'Bilddateien schreiben';
       case 'video_source_scrape_progress':
-        return (
-                {required Object phase,
-                required Object current,
-                required Object total}) =>
-            '${phase} · ${current}/${total}';
+        return ({
+          required Object phase,
+          required Object current,
+          required Object total,
+        }) => '${phase} · ${current}/${total}';
       case 'video_source_scrape_last_summary':
-        return (
-                {required Object status,
-                required Object succeeded,
-                required Object pending,
-                required Object failed}) =>
+        return ({
+          required Object status,
+          required Object succeeded,
+          required Object pending,
+          required Object failed,
+        }) =>
             'Letzter Abruf (${status}): ${succeeded} erfolgreich, ${pending} ausstehend, ${failed} fehlgeschlagen';
       case 'video_source_scrape_phase_planning':
         return 'Planung';
@@ -180236,11 +182024,11 @@ extension on _StringsDe {
       case 'migration_import_permission_grant':
         return 'Berechtigung erteilen';
       case 'migration_import_verifying':
-        return (
-                {required Object batch,
-                required Object done,
-                required Object total}) =>
-            '${batch} wird verifiziert (${done}/${total})';
+        return ({
+          required Object batch,
+          required Object done,
+          required Object total,
+        }) => '${batch} wird verifiziert (${done}/${total})';
       case 'migration_import_verifying_hint':
         return 'Archive werden überprüft. Große Bibliotheken können mehrere Minuten dauern.';
       case 'game_line_copy_tooltip':
@@ -180392,11 +182180,11 @@ extension on _StringsDe {
         return ({required Object label}) =>
             'Diese Untertiteldatei konnte nicht gelesen werden (beschädigt oder leer): ${label}';
       case 'dict_downloading_size':
-        return (
-                {required Object name,
-                required Object done,
-                required Object total}) =>
-            '${name} wird heruntergeladen (${done} / ${total})';
+        return ({
+          required Object name,
+          required Object done,
+          required Object total,
+        }) => '${name} wird heruntergeladen (${done} / ${total})';
       case 'video_subtitle_attach_book_missing':
         return 'Dieses Video ist nicht in Ihrer Bibliothek, daher wurde der Untertitel nicht zugeordnet';
       case 'dict_download_hide':
@@ -180560,10 +182348,11 @@ extension on _StringsDe {
         return ({required Object n}) =>
             'Dieser Ordner enthält ${n} Banddateien; jede wird als eigenes Buch importiert, benannt nach der Datei.';
       case 'manga_import_batch_done':
-        return (
-                {required Object imported,
-                required Object skipped,
-                required Object failed}) =>
+        return ({
+          required Object imported,
+          required Object skipped,
+          required Object failed,
+        }) =>
             '${imported} importiert, ${skipped} übersprungen, ${failed} fehlgeschlagen.';
       case 'srt_book_reimport':
         return 'Erneut importieren';
@@ -181450,10 +183239,11 @@ extension on _StringsDe {
       case 'manga_ocr_import_matched_nothing':
         return 'Keine brauchbaren Modelldateien erkannt';
       case 'manga_ocr_import_size_mismatch':
-        return (
-                {required Object file,
-                required Object expected,
-                required Object actual}) =>
+        return ({
+          required Object file,
+          required Object expected,
+          required Object actual,
+        }) =>
             '${file} hat die falsche Größe: erwartet ${expected}, tatsächlich ${actual}';
       case 'manga_ocr_import_still_missing':
         return ({required Object count}) =>
@@ -182186,6 +183976,44 @@ extension on _StringsDe {
         return 'Waiting for matching in-game click';
       case 'delete_choices_remember':
         return 'Diese Auswahl merken';
+      case 'network_proxy_mode_label':
+        return 'Proxy mode';
+      case 'network_proxy_mode_auto':
+        return 'Automatic';
+      case 'network_proxy_mode_auto_hint':
+        return 'Use environment variables, then the enabled system proxy';
+      case 'network_proxy_mode_direct':
+        return 'Direct';
+      case 'network_proxy_mode_direct_hint':
+        return 'Disable proxy use for the app';
+      case 'network_proxy_mode_manual':
+        return 'Manual';
+      case 'network_proxy_mode_manual_hint':
+        return 'Use the server and optional credentials below';
+      case 'network_proxy_manual_hint':
+        return 'HTTP proxy server used by all public internet requests';
+      case 'network_proxy_username':
+        return 'Proxy username (optional)';
+      case 'network_proxy_password':
+        return 'Proxy password (optional)';
+      case 'storage_category_backups':
+        return 'Local backups';
+      case 'storage_entry_backups_label':
+        return ({required Object n}) => '${n} backup archive(s)';
+      case 'storage_entry_delete_backups_confirm_body':
+        return 'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+      case 'update_download_source_preference':
+        return 'Preferred download source';
+      case 'update_download_source_preference_hint':
+        return 'The selected source is tried first; unavailable sources still fall back automatically.';
+      case 'update_download_source_auto':
+        return 'Automatic (recommended)';
+      case 'update_download_source_cloudflare':
+        return 'Cloudflare mirror';
+      case 'update_download_source_github':
+        return 'GitHub direct';
+      case 'update_download_source_proxy':
+        return ({required Object host}) => 'Proxy: ${host}';
       default:
         return null;
     }
@@ -182634,10 +184462,11 @@ extension on _StringsEs {
       case 'backup_import':
         return 'Importar copia de seguridad';
       case 'backup_import_confirm':
-        return (
-                {required Object date,
-                required Object bookCount,
-                required Object statsCount}) =>
+        return ({
+          required Object date,
+          required Object bookCount,
+          required Object statsCount,
+        }) =>
             'Esto reemplazará todos los datos actuales con la copia de seguridad del ${date}.\n\n${bookCount} libros, ${statsCount} registros de estadísticas.\n\nLa app se reiniciará tras la restauración.';
       case 'backup_import_confirm_title':
         return '¿Restaurar copia de seguridad?';
@@ -182916,12 +184745,12 @@ extension on _StringsEs {
       case 'changelog_prerelease':
         return 'Prelanzamiento';
       case 'chapter_progress':
-        return (
-                {required Object idx,
-                required Object total,
-                required Object suffix,
-                required Object pct}) =>
-            'Capítulo ${idx} / ${total}${suffix} · ${pct}%';
+        return ({
+          required Object idx,
+          required Object total,
+          required Object suffix,
+          required Object pct,
+        }) => 'Capítulo ${idx} / ${total}${suffix} · ${pct}%';
       case 'clear':
         return 'Limpiar';
       case 'clear_dictionary_description':
@@ -183393,11 +185222,11 @@ extension on _StringsEs {
       case 'dict_download_language':
         return 'Tu idioma';
       case 'dict_download_partial':
-        return (
-                {required Object success,
-                required Object total,
-                required Object error}) =>
-            '${success} / ${total} correctos. Fallidos: ${error}';
+        return ({
+          required Object success,
+          required Object total,
+          required Object error,
+        }) => '${success} / ${total} correctos. Fallidos: ${error}';
       case 'dict_download_select_title':
         return 'Seleccionar diccionarios';
       case 'dict_downloading':
@@ -183433,11 +185262,11 @@ extension on _StringsEs {
       case 'dict_update_none':
         return 'Todos los diccionarios están actualizados.';
       case 'dict_update_summary':
-        return (
-                {required Object updated,
-                required Object current,
-                required Object failed}) =>
-            '${updated} actualizados, ${current} al día, ${failed} fallaron.';
+        return ({
+          required Object updated,
+          required Object current,
+          required Object failed,
+        }) => '${updated} actualizados, ${current} al día, ${failed} fallaron.';
       case 'dict_update_tooltip':
         return 'Actualizar diccionario';
       case 'dict_update_updating':
@@ -184269,12 +186098,12 @@ extension on _StringsEs {
       case 'game_waiting_for_text':
         return 'Esperando texto';
       case 'game_waveform_range_label':
-        return (
-                {required Object start,
-                required Object end,
-                required Object duration,
-                required Object total}) =>
-            '${start} - ${end} (seleccionado ${duration} / total ${total})';
+        return ({
+          required Object start,
+          required Object end,
+          required Object duration,
+          required Object total,
+        }) => '${start} - ${end} (seleccionado ${duration} / total ${total})';
       case 'game_waveform_select_title':
         return 'Seleccionar rango de audio';
       case 'game_window_bound':
@@ -187418,13 +189247,14 @@ extension on _StringsEs {
       case 'anki_dedup_report_title':
         return 'Reporte de deduplicación de medios';
       case 'anki_dedup_report_body':
-        return (
-                {required Object groups,
-                required Object removed,
-                required Object size,
-                required Object notes,
-                required Object models,
-                required Object skipped}) =>
+        return ({
+          required Object groups,
+          required Object removed,
+          required Object size,
+          required Object notes,
+          required Object models,
+          required Object skipped,
+        }) =>
             '${groups} grupos duplicados; ${removed} copias extra (${size}); ${notes} notas y ${models} tipos de nota reescritos; ${skipped} omitidos.';
       case 'anki_dedup_report_dry_note':
         return 'Solo escaneo — nada fue cambiado.';
@@ -187442,11 +189272,11 @@ extension on _StringsEs {
         return ({required Object count, required Object size}) =>
             '${count} copias extra, ${size} recuperable. Se conserva una copia de cada archivo y cada referencia se redirige primero; nada se re-codifica.';
       case 'anki_dedup_plan_entry':
-        return (
-                {required Object file,
-                required Object size,
-                required Object canonical}) =>
-            'Eliminar ${file} (${size}) — conservando ${canonical}';
+        return ({
+          required Object file,
+          required Object size,
+          required Object canonical,
+        }) => 'Eliminar ${file} (${size}) — conservando ${canonical}';
       case 'anki_dedup_plan_delete':
         return 'Eliminar estos archivos';
       case 'anki_dedup_plan_journal':
@@ -187714,10 +189544,11 @@ extension on _StringsEs {
       case 'video_jimaku_language_unknown':
         return 'Idioma no etiquetado';
       case 'video_jimaku_source_summary':
-        return (
-                {required Object files,
-                required Object episodes,
-                required Object languages}) =>
+        return ({
+          required Object files,
+          required Object episodes,
+          required Object languages,
+        }) =>
             '${files} archivos de subtítulos · ${episodes} episodios · ${languages}';
       case 'video_jimaku_episode_unlabeled':
         return ({required Object episode, required Object count}) =>
@@ -187952,11 +189783,12 @@ extension on _StringsEs {
       case 'scrape_all_item':
         return ({required Object title}) => 'Procesando: ${title}';
       case 'scrape_all_done':
-        return (
-                {required Object applied,
-                required Object review,
-                required Object skipped,
-                required Object failed}) =>
+        return ({
+          required Object applied,
+          required Object review,
+          required Object skipped,
+          required Object failed,
+        }) =>
             'Listo: ${applied} aplicados, ${review} necesitan revisión, ${skipped} omitidos, ${failed} fallidos';
       case 'scrape_all_empty':
         return 'No hay elementos para obtener en esta biblioteca.';
@@ -188416,17 +190248,18 @@ extension on _StringsEs {
       case 'video_source_scrape_write_images':
         return 'Escribir archivos de imagen';
       case 'video_source_scrape_progress':
-        return (
-                {required Object phase,
-                required Object current,
-                required Object total}) =>
-            '${phase} · ${current}/${total}';
+        return ({
+          required Object phase,
+          required Object current,
+          required Object total,
+        }) => '${phase} · ${current}/${total}';
       case 'video_source_scrape_last_summary':
-        return (
-                {required Object status,
-                required Object succeeded,
-                required Object pending,
-                required Object failed}) =>
+        return ({
+          required Object status,
+          required Object succeeded,
+          required Object pending,
+          required Object failed,
+        }) =>
             'Última obtención (${status}): ${succeeded} exitosos, ${pending} pendientes, ${failed} fallidos';
       case 'video_source_scrape_phase_planning':
         return 'Planificando';
@@ -188630,11 +190463,11 @@ extension on _StringsEs {
       case 'migration_import_permission_grant':
         return 'Conceder permiso';
       case 'migration_import_verifying':
-        return (
-                {required Object batch,
-                required Object done,
-                required Object total}) =>
-            'Verificando ${batch} (${done}/${total})';
+        return ({
+          required Object batch,
+          required Object done,
+          required Object total,
+        }) => 'Verificando ${batch} (${done}/${total})';
       case 'migration_import_verifying_hint':
         return 'Verificando los archivos. Las bibliotecas grandes pueden tardar varios minutos.';
       case 'game_line_copy_tooltip':
@@ -188786,11 +190619,11 @@ extension on _StringsEs {
         return ({required Object label}) =>
             'No se pudo leer este archivo de subtítulos (dañado o vacío): ${label}';
       case 'dict_downloading_size':
-        return (
-                {required Object name,
-                required Object done,
-                required Object total}) =>
-            'Descargando ${name} (${done} / ${total})';
+        return ({
+          required Object name,
+          required Object done,
+          required Object total,
+        }) => 'Descargando ${name} (${done} / ${total})';
       case 'video_subtitle_attach_book_missing':
         return 'Este vídeo no está en su biblioteca, por lo que el subtítulo no se adjuntó';
       case 'dict_download_hide':
@@ -188954,10 +190787,11 @@ extension on _StringsEs {
         return ({required Object n}) =>
             'Esta carpeta contiene ${n} archivos de volumen; cada uno se importa como su propio libro, nombrado según su archivo.';
       case 'manga_import_batch_done':
-        return (
-                {required Object imported,
-                required Object skipped,
-                required Object failed}) =>
+        return ({
+          required Object imported,
+          required Object skipped,
+          required Object failed,
+        }) =>
             'Importados ${imported}, omitidos ${skipped}, fallidos ${failed}.';
       case 'srt_book_reimport':
         return 'Reimportar';
@@ -189842,10 +191676,11 @@ extension on _StringsEs {
       case 'manga_ocr_import_matched_nothing':
         return 'No se reconoció ningún archivo de modelo utilizable';
       case 'manga_ocr_import_size_mismatch':
-        return (
-                {required Object file,
-                required Object expected,
-                required Object actual}) =>
+        return ({
+          required Object file,
+          required Object expected,
+          required Object actual,
+        }) =>
             '${file} tiene un tamaño incorrecto: se esperaba ${expected}, se obtuvo ${actual}';
       case 'manga_ocr_import_still_missing':
         return ({required Object count}) =>
@@ -190578,6 +192413,44 @@ extension on _StringsEs {
         return 'Waiting for matching in-game click';
       case 'delete_choices_remember':
         return 'Recordar estas opciones';
+      case 'network_proxy_mode_label':
+        return 'Proxy mode';
+      case 'network_proxy_mode_auto':
+        return 'Automatic';
+      case 'network_proxy_mode_auto_hint':
+        return 'Use environment variables, then the enabled system proxy';
+      case 'network_proxy_mode_direct':
+        return 'Direct';
+      case 'network_proxy_mode_direct_hint':
+        return 'Disable proxy use for the app';
+      case 'network_proxy_mode_manual':
+        return 'Manual';
+      case 'network_proxy_mode_manual_hint':
+        return 'Use the server and optional credentials below';
+      case 'network_proxy_manual_hint':
+        return 'HTTP proxy server used by all public internet requests';
+      case 'network_proxy_username':
+        return 'Proxy username (optional)';
+      case 'network_proxy_password':
+        return 'Proxy password (optional)';
+      case 'storage_category_backups':
+        return 'Local backups';
+      case 'storage_entry_backups_label':
+        return ({required Object n}) => '${n} backup archive(s)';
+      case 'storage_entry_delete_backups_confirm_body':
+        return 'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+      case 'update_download_source_preference':
+        return 'Preferred download source';
+      case 'update_download_source_preference_hint':
+        return 'The selected source is tried first; unavailable sources still fall back automatically.';
+      case 'update_download_source_auto':
+        return 'Automatic (recommended)';
+      case 'update_download_source_cloudflare':
+        return 'Cloudflare mirror';
+      case 'update_download_source_github':
+        return 'GitHub direct';
+      case 'update_download_source_proxy':
+        return ({required Object host}) => 'Proxy: ${host}';
       default:
         return null;
     }
@@ -191028,10 +192901,11 @@ extension on _StringsFr {
       case 'backup_import':
         return 'Importer une sauvegarde';
       case 'backup_import_confirm':
-        return (
-                {required Object date,
-                required Object bookCount,
-                required Object statsCount}) =>
+        return ({
+          required Object date,
+          required Object bookCount,
+          required Object statsCount,
+        }) =>
             'Cela remplacera toutes les données actuelles par la sauvegarde du ${date}.\n\n${bookCount} livres, ${statsCount} enregistrements de statistiques.\n\nL\'application redémarrera après la restauration.';
       case 'backup_import_confirm_title':
         return 'Restaurer la sauvegarde ?';
@@ -191310,12 +193184,12 @@ extension on _StringsFr {
       case 'changelog_prerelease':
         return 'Préversion';
       case 'chapter_progress':
-        return (
-                {required Object idx,
-                required Object total,
-                required Object suffix,
-                required Object pct}) =>
-            'Chapitre ${idx} / ${total}${suffix} · ${pct}%';
+        return ({
+          required Object idx,
+          required Object total,
+          required Object suffix,
+          required Object pct,
+        }) => 'Chapitre ${idx} / ${total}${suffix} · ${pct}%';
       case 'clear':
         return 'Effacer';
       case 'clear_dictionary_description':
@@ -191788,11 +193662,11 @@ extension on _StringsFr {
       case 'dict_download_language':
         return 'Votre langue';
       case 'dict_download_partial':
-        return (
-                {required Object success,
-                required Object total,
-                required Object error}) =>
-            '${success} / ${total} OK. Échecs : ${error}';
+        return ({
+          required Object success,
+          required Object total,
+          required Object error,
+        }) => '${success} / ${total} OK. Échecs : ${error}';
       case 'dict_download_select_title':
         return 'Sélectionner des dictionnaires';
       case 'dict_downloading':
@@ -191829,11 +193703,11 @@ extension on _StringsFr {
       case 'dict_update_none':
         return 'Tous les dictionnaires sont à jour.';
       case 'dict_update_summary':
-        return (
-                {required Object updated,
-                required Object current,
-                required Object failed}) =>
-            '${updated} mis à jour, ${current} à jour, ${failed} en échec.';
+        return ({
+          required Object updated,
+          required Object current,
+          required Object failed,
+        }) => '${updated} mis à jour, ${current} à jour, ${failed} en échec.';
       case 'dict_update_tooltip':
         return 'Mettre à jour le dictionnaire';
       case 'dict_update_updating':
@@ -192665,12 +194539,12 @@ extension on _StringsFr {
       case 'game_waiting_for_text':
         return 'En attente de texte';
       case 'game_waveform_range_label':
-        return (
-                {required Object start,
-                required Object end,
-                required Object duration,
-                required Object total}) =>
-            '${start} - ${end} (sélection ${duration} / total ${total})';
+        return ({
+          required Object start,
+          required Object end,
+          required Object duration,
+          required Object total,
+        }) => '${start} - ${end} (sélection ${duration} / total ${total})';
       case 'game_waveform_select_title':
         return 'Sélectionner une plage audio';
       case 'game_window_bound':
@@ -195817,13 +197691,14 @@ extension on _StringsFr {
       case 'anki_dedup_report_title':
         return 'Rapport de déduplication média';
       case 'anki_dedup_report_body':
-        return (
-                {required Object groups,
-                required Object removed,
-                required Object size,
-                required Object notes,
-                required Object models,
-                required Object skipped}) =>
+        return ({
+          required Object groups,
+          required Object removed,
+          required Object size,
+          required Object notes,
+          required Object models,
+          required Object skipped,
+        }) =>
             '${groups} groupes de doublons ; ${removed} copies supplémentaires (${size}) ; ${notes} notes et ${models} types de notes réécrits ; ${skipped} ignorés.';
       case 'anki_dedup_report_dry_note':
         return 'Analyse uniquement — rien n\'a été modifié.';
@@ -195841,11 +197716,11 @@ extension on _StringsFr {
         return ({required Object count, required Object size}) =>
             '${count} copies supplémentaires, ${size} récupérables. Une copie de chaque fichier est conservée et chaque référence est redirigée d\'abord ; rien n\'est jamais ré-encodé.';
       case 'anki_dedup_plan_entry':
-        return (
-                {required Object file,
-                required Object size,
-                required Object canonical}) =>
-            'Supprimer ${file} (${size}) — conservation de ${canonical}';
+        return ({
+          required Object file,
+          required Object size,
+          required Object canonical,
+        }) => 'Supprimer ${file} (${size}) — conservation de ${canonical}';
       case 'anki_dedup_plan_delete':
         return 'Supprimer ces fichiers';
       case 'anki_dedup_plan_journal':
@@ -196114,10 +197989,11 @@ extension on _StringsFr {
       case 'video_jimaku_language_unknown':
         return 'Langue non étiquetée';
       case 'video_jimaku_source_summary':
-        return (
-                {required Object files,
-                required Object episodes,
-                required Object languages}) =>
+        return ({
+          required Object files,
+          required Object episodes,
+          required Object languages,
+        }) =>
             '${files} fichiers de sous-titres · ${episodes} épisodes · ${languages}';
       case 'video_jimaku_episode_unlabeled':
         return ({required Object episode, required Object count}) =>
@@ -196352,11 +198228,12 @@ extension on _StringsFr {
       case 'scrape_all_item':
         return ({required Object title}) => 'Traitement : ${title}';
       case 'scrape_all_done':
-        return (
-                {required Object applied,
-                required Object review,
-                required Object skipped,
-                required Object failed}) =>
+        return ({
+          required Object applied,
+          required Object review,
+          required Object skipped,
+          required Object failed,
+        }) =>
             'Terminé : ${applied} appliqués, ${review} à vérifier, ${skipped} ignorés, ${failed} échoués';
       case 'scrape_all_empty':
         return 'Aucun élément à récupérer dans cette bibliothèque.';
@@ -196816,17 +198693,18 @@ extension on _StringsFr {
       case 'video_source_scrape_write_images':
         return 'Écrire des fichiers d\'images';
       case 'video_source_scrape_progress':
-        return (
-                {required Object phase,
-                required Object current,
-                required Object total}) =>
-            '${phase} · ${current}/${total}';
+        return ({
+          required Object phase,
+          required Object current,
+          required Object total,
+        }) => '${phase} · ${current}/${total}';
       case 'video_source_scrape_last_summary':
-        return (
-                {required Object status,
-                required Object succeeded,
-                required Object pending,
-                required Object failed}) =>
+        return ({
+          required Object status,
+          required Object succeeded,
+          required Object pending,
+          required Object failed,
+        }) =>
             'Dernière récupération (${status}) : ${succeeded} réussis, ${pending} en attente, ${failed} échoués';
       case 'video_source_scrape_phase_planning':
         return 'Planification';
@@ -197030,11 +198908,11 @@ extension on _StringsFr {
       case 'migration_import_permission_grant':
         return 'Accorder l\'autorisation';
       case 'migration_import_verifying':
-        return (
-                {required Object batch,
-                required Object done,
-                required Object total}) =>
-            'Vérification de ${batch} (${done}/${total})';
+        return ({
+          required Object batch,
+          required Object done,
+          required Object total,
+        }) => 'Vérification de ${batch} (${done}/${total})';
       case 'migration_import_verifying_hint':
         return 'Vérification des sommes de contrôle des archives. Les grandes bibliothèques peuvent prendre plusieurs minutes.';
       case 'game_line_copy_tooltip':
@@ -197186,11 +199064,11 @@ extension on _StringsFr {
         return ({required Object label}) =>
             'Impossible de lire ce fichier de sous-titres (endommagé ou vide) : ${label}';
       case 'dict_downloading_size':
-        return (
-                {required Object name,
-                required Object done,
-                required Object total}) =>
-            'Téléchargement de ${name} (${done} / ${total})';
+        return ({
+          required Object name,
+          required Object done,
+          required Object total,
+        }) => 'Téléchargement de ${name} (${done} / ${total})';
       case 'video_subtitle_attach_book_missing':
         return 'Cette vidéo n\'est pas dans votre bibliothèque, le sous-titre n\'a pas été attaché';
       case 'dict_download_hide':
@@ -197354,11 +199232,11 @@ extension on _StringsFr {
         return ({required Object n}) =>
             'Ce dossier contient ${n} fichiers de tomes ; chacun est importé comme son propre livre, nommé d\'après son fichier.';
       case 'manga_import_batch_done':
-        return (
-                {required Object imported,
-                required Object skipped,
-                required Object failed}) =>
-            'Importés ${imported}, ignorés ${skipped}, échoués ${failed}.';
+        return ({
+          required Object imported,
+          required Object skipped,
+          required Object failed,
+        }) => 'Importés ${imported}, ignorés ${skipped}, échoués ${failed}.';
       case 'srt_book_reimport':
         return 'Réimporter';
       case 'srt_book_reimport_subtitle_hint':
@@ -198242,10 +200120,11 @@ extension on _StringsFr {
       case 'manga_ocr_import_matched_nothing':
         return 'Aucun fichier de modèle utilisable reconnu';
       case 'manga_ocr_import_size_mismatch':
-        return (
-                {required Object file,
-                required Object expected,
-                required Object actual}) =>
+        return ({
+          required Object file,
+          required Object expected,
+          required Object actual,
+        }) =>
             '${file} n\'a pas la bonne taille : attendu ${expected}, obtenu ${actual}';
       case 'manga_ocr_import_still_missing':
         return ({required Object count}) =>
@@ -198978,6 +200857,44 @@ extension on _StringsFr {
         return 'Waiting for matching in-game click';
       case 'delete_choices_remember':
         return 'Mémoriser ces choix';
+      case 'network_proxy_mode_label':
+        return 'Proxy mode';
+      case 'network_proxy_mode_auto':
+        return 'Automatic';
+      case 'network_proxy_mode_auto_hint':
+        return 'Use environment variables, then the enabled system proxy';
+      case 'network_proxy_mode_direct':
+        return 'Direct';
+      case 'network_proxy_mode_direct_hint':
+        return 'Disable proxy use for the app';
+      case 'network_proxy_mode_manual':
+        return 'Manual';
+      case 'network_proxy_mode_manual_hint':
+        return 'Use the server and optional credentials below';
+      case 'network_proxy_manual_hint':
+        return 'HTTP proxy server used by all public internet requests';
+      case 'network_proxy_username':
+        return 'Proxy username (optional)';
+      case 'network_proxy_password':
+        return 'Proxy password (optional)';
+      case 'storage_category_backups':
+        return 'Local backups';
+      case 'storage_entry_backups_label':
+        return ({required Object n}) => '${n} backup archive(s)';
+      case 'storage_entry_delete_backups_confirm_body':
+        return 'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+      case 'update_download_source_preference':
+        return 'Preferred download source';
+      case 'update_download_source_preference_hint':
+        return 'The selected source is tried first; unavailable sources still fall back automatically.';
+      case 'update_download_source_auto':
+        return 'Automatic (recommended)';
+      case 'update_download_source_cloudflare':
+        return 'Cloudflare mirror';
+      case 'update_download_source_github':
+        return 'GitHub direct';
+      case 'update_download_source_proxy':
+        return ({required Object host}) => 'Proxy: ${host}';
       default:
         return null;
     }
@@ -199426,10 +201343,11 @@ extension on _StringsId {
       case 'backup_import':
         return 'Impor Cadangan';
       case 'backup_import_confirm':
-        return (
-                {required Object date,
-                required Object bookCount,
-                required Object statsCount}) =>
+        return ({
+          required Object date,
+          required Object bookCount,
+          required Object statsCount,
+        }) =>
             'Ini akan menggantikan semua data saat ini dengan cadangan dari ${date}.\n\n${bookCount} buku, ${statsCount} catatan statistik.\n\nAplikasi akan dimulai ulang setelah pemulihan.';
       case 'backup_import_confirm_title':
         return 'Pulihkan Cadangan?';
@@ -199707,12 +201625,12 @@ extension on _StringsId {
       case 'changelog_prerelease':
         return 'Prarilis';
       case 'chapter_progress':
-        return (
-                {required Object idx,
-                required Object total,
-                required Object suffix,
-                required Object pct}) =>
-            'Bab ${idx} / ${total}${suffix} · ${pct}%';
+        return ({
+          required Object idx,
+          required Object total,
+          required Object suffix,
+          required Object pct,
+        }) => 'Bab ${idx} / ${total}${suffix} · ${pct}%';
       case 'clear':
         return 'Hapus';
       case 'clear_dictionary_description':
@@ -200184,11 +202102,11 @@ extension on _StringsId {
       case 'dict_download_language':
         return 'Bahasa Anda';
       case 'dict_download_partial':
-        return (
-                {required Object success,
-                required Object total,
-                required Object error}) =>
-            '${success} / ${total} OK. Gagal: ${error}';
+        return ({
+          required Object success,
+          required Object total,
+          required Object error,
+        }) => '${success} / ${total} OK. Gagal: ${error}';
       case 'dict_download_select_title':
         return 'Pilih Kamus';
       case 'dict_downloading':
@@ -200223,11 +202141,11 @@ extension on _StringsId {
       case 'dict_update_none':
         return 'Semua kamus sudah yang terbaru.';
       case 'dict_update_summary':
-        return (
-                {required Object updated,
-                required Object current,
-                required Object failed}) =>
-            '${updated} diperbarui, ${current} terbaru, ${failed} gagal.';
+        return ({
+          required Object updated,
+          required Object current,
+          required Object failed,
+        }) => '${updated} diperbarui, ${current} terbaru, ${failed} gagal.';
       case 'dict_update_tooltip':
         return 'Perbarui kamus';
       case 'dict_update_updating':
@@ -201058,12 +202976,12 @@ extension on _StringsId {
       case 'game_waiting_for_text':
         return 'Menunggu teks';
       case 'game_waveform_range_label':
-        return (
-                {required Object start,
-                required Object end,
-                required Object duration,
-                required Object total}) =>
-            '${start} - ${end} (dipilih ${duration} / total ${total})';
+        return ({
+          required Object start,
+          required Object end,
+          required Object duration,
+          required Object total,
+        }) => '${start} - ${end} (dipilih ${duration} / total ${total})';
       case 'game_waveform_select_title':
         return 'Pilih rentang audio';
       case 'game_window_bound':
@@ -204197,13 +206115,14 @@ extension on _StringsId {
       case 'anki_dedup_report_title':
         return 'Laporan deduplikasi media';
       case 'anki_dedup_report_body':
-        return (
-                {required Object groups,
-                required Object removed,
-                required Object size,
-                required Object notes,
-                required Object models,
-                required Object skipped}) =>
+        return ({
+          required Object groups,
+          required Object removed,
+          required Object size,
+          required Object notes,
+          required Object models,
+          required Object skipped,
+        }) =>
             '${groups} kelompok duplikat; ${removed} salinan ekstra (${size}); ${notes} catatan dan ${models} tipe catatan ditulis ulang; ${skipped} dilewati.';
       case 'anki_dedup_report_dry_note':
         return 'Pemindaian saja - tidak ada yang diubah.';
@@ -204221,11 +206140,11 @@ extension on _StringsId {
         return ({required Object count, required Object size}) =>
             '${count} salinan ekstra, ${size} dapat diklaim kembali. Satu salinan tiap file dipertahankan dan setiap referensi diarahkan ulang terlebih dahulu; tidak ada yang pernah di-encode ulang.';
       case 'anki_dedup_plan_entry':
-        return (
-                {required Object file,
-                required Object size,
-                required Object canonical}) =>
-            'Hapus ${file} (${size}) - pertahankan ${canonical}';
+        return ({
+          required Object file,
+          required Object size,
+          required Object canonical,
+        }) => 'Hapus ${file} (${size}) - pertahankan ${canonical}';
       case 'anki_dedup_plan_delete':
         return 'Hapus file-file ini';
       case 'anki_dedup_plan_journal':
@@ -204491,11 +206410,11 @@ extension on _StringsId {
       case 'video_jimaku_language_unknown':
         return 'Bahasa tidak dilabeli';
       case 'video_jimaku_source_summary':
-        return (
-                {required Object files,
-                required Object episodes,
-                required Object languages}) =>
-            '${files} file subtitle · ${episodes} episode · ${languages}';
+        return ({
+          required Object files,
+          required Object episodes,
+          required Object languages,
+        }) => '${files} file subtitle · ${episodes} episode · ${languages}';
       case 'video_jimaku_episode_unlabeled':
         return ({required Object episode, required Object count}) =>
             'Tidak ada subtitle berlabel episode ${episode}; ${count} file tanpa label mungkin masih cocok';
@@ -204729,11 +206648,12 @@ extension on _StringsId {
       case 'scrape_all_item':
         return ({required Object title}) => 'Memproses: ${title}';
       case 'scrape_all_done':
-        return (
-                {required Object applied,
-                required Object review,
-                required Object skipped,
-                required Object failed}) =>
+        return ({
+          required Object applied,
+          required Object review,
+          required Object skipped,
+          required Object failed,
+        }) =>
             'Selesai: ${applied} diterapkan, ${review} perlu ditinjau, ${skipped} dilewati, ${failed} gagal';
       case 'scrape_all_empty':
         return 'Tidak ada item untuk di-scrape di perpustakaan ini.';
@@ -205193,17 +207113,18 @@ extension on _StringsId {
       case 'video_source_scrape_write_images':
         return 'Tulis file gambar';
       case 'video_source_scrape_progress':
-        return (
-                {required Object phase,
-                required Object current,
-                required Object total}) =>
-            '${phase} · ${current}/${total}';
+        return ({
+          required Object phase,
+          required Object current,
+          required Object total,
+        }) => '${phase} · ${current}/${total}';
       case 'video_source_scrape_last_summary':
-        return (
-                {required Object status,
-                required Object succeeded,
-                required Object pending,
-                required Object failed}) =>
+        return ({
+          required Object status,
+          required Object succeeded,
+          required Object pending,
+          required Object failed,
+        }) =>
             'Scrape terakhir (${status}): ${succeeded} berhasil, ${pending} menunggu, ${failed} gagal';
       case 'video_source_scrape_phase_planning':
         return 'Merencanakan';
@@ -205407,11 +207328,11 @@ extension on _StringsId {
       case 'migration_import_permission_grant':
         return 'Berikan izin';
       case 'migration_import_verifying':
-        return (
-                {required Object batch,
-                required Object done,
-                required Object total}) =>
-            'Memverifikasi ${batch} (${done}/${total})';
+        return ({
+          required Object batch,
+          required Object done,
+          required Object total,
+        }) => 'Memverifikasi ${batch} (${done}/${total})';
       case 'migration_import_verifying_hint':
         return 'Menghitung checksum arsip. Perpustakaan besar bisa memakan waktu beberapa menit.';
       case 'game_line_copy_tooltip':
@@ -205563,11 +207484,11 @@ extension on _StringsId {
         return ({required Object label}) =>
             'Tidak bisa membaca file subtitle ini (rusak atau kosong): ${label}';
       case 'dict_downloading_size':
-        return (
-                {required Object name,
-                required Object done,
-                required Object total}) =>
-            'Mengunduh ${name} (${done} / ${total})';
+        return ({
+          required Object name,
+          required Object done,
+          required Object total,
+        }) => 'Mengunduh ${name} (${done} / ${total})';
       case 'video_subtitle_attach_book_missing':
         return 'Video ini tidak ada di perpustakaan Anda, jadi subtitle tidak dilampirkan';
       case 'dict_download_hide':
@@ -205731,11 +207652,11 @@ extension on _StringsId {
         return ({required Object n}) =>
             'Folder ini berisi ${n} file volume; masing-masing diimpor sebagai buku tersendiri, dinamai sesuai filenya.';
       case 'manga_import_batch_done':
-        return (
-                {required Object imported,
-                required Object skipped,
-                required Object failed}) =>
-            'Diimpor ${imported}, dilewati ${skipped}, gagal ${failed}.';
+        return ({
+          required Object imported,
+          required Object skipped,
+          required Object failed,
+        }) => 'Diimpor ${imported}, dilewati ${skipped}, gagal ${failed}.';
       case 'srt_book_reimport':
         return 'Impor ulang';
       case 'srt_book_reimport_subtitle_hint':
@@ -206616,10 +208537,11 @@ extension on _StringsId {
       case 'manga_ocr_import_matched_nothing':
         return 'Tidak ada berkas model yang dapat dipakai dikenali';
       case 'manga_ocr_import_size_mismatch':
-        return (
-                {required Object file,
-                required Object expected,
-                required Object actual}) =>
+        return ({
+          required Object file,
+          required Object expected,
+          required Object actual,
+        }) =>
             'Ukuran ${file} salah: diharapkan ${expected}, diperoleh ${actual}';
       case 'manga_ocr_import_still_missing':
         return ({required Object count}) => 'Masih kurang ${count} berkas';
@@ -207350,6 +209272,44 @@ extension on _StringsId {
         return 'Waiting for matching in-game click';
       case 'delete_choices_remember':
         return 'Ingat pilihan ini';
+      case 'network_proxy_mode_label':
+        return 'Proxy mode';
+      case 'network_proxy_mode_auto':
+        return 'Automatic';
+      case 'network_proxy_mode_auto_hint':
+        return 'Use environment variables, then the enabled system proxy';
+      case 'network_proxy_mode_direct':
+        return 'Direct';
+      case 'network_proxy_mode_direct_hint':
+        return 'Disable proxy use for the app';
+      case 'network_proxy_mode_manual':
+        return 'Manual';
+      case 'network_proxy_mode_manual_hint':
+        return 'Use the server and optional credentials below';
+      case 'network_proxy_manual_hint':
+        return 'HTTP proxy server used by all public internet requests';
+      case 'network_proxy_username':
+        return 'Proxy username (optional)';
+      case 'network_proxy_password':
+        return 'Proxy password (optional)';
+      case 'storage_category_backups':
+        return 'Local backups';
+      case 'storage_entry_backups_label':
+        return ({required Object n}) => '${n} backup archive(s)';
+      case 'storage_entry_delete_backups_confirm_body':
+        return 'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+      case 'update_download_source_preference':
+        return 'Preferred download source';
+      case 'update_download_source_preference_hint':
+        return 'The selected source is tried first; unavailable sources still fall back automatically.';
+      case 'update_download_source_auto':
+        return 'Automatic (recommended)';
+      case 'update_download_source_cloudflare':
+        return 'Cloudflare mirror';
+      case 'update_download_source_github':
+        return 'GitHub direct';
+      case 'update_download_source_proxy':
+        return ({required Object host}) => 'Proxy: ${host}';
       default:
         return null;
     }
@@ -207798,10 +209758,11 @@ extension on _StringsIt {
       case 'backup_import':
         return 'Importa backup';
       case 'backup_import_confirm':
-        return (
-                {required Object date,
-                required Object bookCount,
-                required Object statsCount}) =>
+        return ({
+          required Object date,
+          required Object bookCount,
+          required Object statsCount,
+        }) =>
             'Questa operazione sostituirà tutti i dati attuali con il backup del ${date}.\n\n${bookCount} libri, ${statsCount} record di statistiche.\n\nL\'app verrà riavviata dopo il ripristino.';
       case 'backup_import_confirm_title':
         return 'Ripristinare il backup?';
@@ -208080,12 +210041,12 @@ extension on _StringsIt {
       case 'changelog_prerelease':
         return 'Pre-release';
       case 'chapter_progress':
-        return (
-                {required Object idx,
-                required Object total,
-                required Object suffix,
-                required Object pct}) =>
-            'Capitolo ${idx} / ${total}${suffix} · ${pct}%';
+        return ({
+          required Object idx,
+          required Object total,
+          required Object suffix,
+          required Object pct,
+        }) => 'Capitolo ${idx} / ${total}${suffix} · ${pct}%';
       case 'clear':
         return 'Cancella';
       case 'clear_dictionary_description':
@@ -208556,11 +210517,11 @@ extension on _StringsIt {
       case 'dict_download_language':
         return 'La tua lingua';
       case 'dict_download_partial':
-        return (
-                {required Object success,
-                required Object total,
-                required Object error}) =>
-            '${success} / ${total} OK. Falliti: ${error}';
+        return ({
+          required Object success,
+          required Object total,
+          required Object error,
+        }) => '${success} / ${total} OK. Falliti: ${error}';
       case 'dict_download_select_title':
         return 'Seleziona dizionari';
       case 'dict_downloading':
@@ -208597,10 +210558,11 @@ extension on _StringsIt {
       case 'dict_update_none':
         return 'Tutti i dizionari sono aggiornati.';
       case 'dict_update_summary':
-        return (
-                {required Object updated,
-                required Object current,
-                required Object failed}) =>
+        return ({
+          required Object updated,
+          required Object current,
+          required Object failed,
+        }) =>
             '${updated} aggiornati, ${current} già aggiornati, ${failed} non riusciti.';
       case 'dict_update_tooltip':
         return 'Aggiorna dizionario';
@@ -209433,12 +211395,12 @@ extension on _StringsIt {
       case 'game_waiting_for_text':
         return 'In attesa del testo';
       case 'game_waveform_range_label':
-        return (
-                {required Object start,
-                required Object end,
-                required Object duration,
-                required Object total}) =>
-            '${start} - ${end} (selezionati ${duration} / totale ${total})';
+        return ({
+          required Object start,
+          required Object end,
+          required Object duration,
+          required Object total,
+        }) => '${start} - ${end} (selezionati ${duration} / totale ${total})';
       case 'game_waveform_select_title':
         return 'Seleziona intervallo audio';
       case 'game_window_bound':
@@ -212585,13 +214547,14 @@ extension on _StringsIt {
       case 'anki_dedup_report_title':
         return 'Rapporto deduplicazione media';
       case 'anki_dedup_report_body':
-        return (
-                {required Object groups,
-                required Object removed,
-                required Object size,
-                required Object notes,
-                required Object models,
-                required Object skipped}) =>
+        return ({
+          required Object groups,
+          required Object removed,
+          required Object size,
+          required Object notes,
+          required Object models,
+          required Object skipped,
+        }) =>
             '${groups} gruppi duplicati; ${removed} copie extra (${size}); ${notes} note e ${models} tipi di nota riscritti; ${skipped} saltati.';
       case 'anki_dedup_report_dry_note':
         return 'Solo scansione — nulla è stato modificato.';
@@ -212609,11 +214572,11 @@ extension on _StringsIt {
         return ({required Object count, required Object size}) =>
             '${count} copie extra, ${size} recuperabili. Una copia di ogni file viene mantenuta e ogni riferimento viene reindirizzato ad essa prima; nulla viene ricodificato.';
       case 'anki_dedup_plan_entry':
-        return (
-                {required Object file,
-                required Object size,
-                required Object canonical}) =>
-            'Elimina ${file} (${size}) — mantieni ${canonical}';
+        return ({
+          required Object file,
+          required Object size,
+          required Object canonical,
+        }) => 'Elimina ${file} (${size}) — mantieni ${canonical}';
       case 'anki_dedup_plan_delete':
         return 'Elimina questi file';
       case 'anki_dedup_plan_journal':
@@ -212881,11 +214844,11 @@ extension on _StringsIt {
       case 'video_jimaku_language_unknown':
         return 'Lingua non indicata';
       case 'video_jimaku_source_summary':
-        return (
-                {required Object files,
-                required Object episodes,
-                required Object languages}) =>
-            '${files} file sottotitoli · ${episodes} episodi · ${languages}';
+        return ({
+          required Object files,
+          required Object episodes,
+          required Object languages,
+        }) => '${files} file sottotitoli · ${episodes} episodi · ${languages}';
       case 'video_jimaku_episode_unlabeled':
         return ({required Object episode, required Object count}) =>
             'Nessun sottotitolo etichettato episodio ${episode}; ${count} file senza etichetta potrebbero corrispondere';
@@ -213119,11 +215082,12 @@ extension on _StringsIt {
       case 'scrape_all_item':
         return ({required Object title}) => 'Elaborazione: ${title}';
       case 'scrape_all_done':
-        return (
-                {required Object applied,
-                required Object review,
-                required Object skipped,
-                required Object failed}) =>
+        return ({
+          required Object applied,
+          required Object review,
+          required Object skipped,
+          required Object failed,
+        }) =>
             'Fatto: ${applied} applicati, ${review} da revisionare, ${skipped} saltati, ${failed} falliti';
       case 'scrape_all_empty':
         return 'Non ci sono elementi da cercare in questa libreria.';
@@ -213583,17 +215547,18 @@ extension on _StringsIt {
       case 'video_source_scrape_write_images':
         return 'Scrivi file immagine';
       case 'video_source_scrape_progress':
-        return (
-                {required Object phase,
-                required Object current,
-                required Object total}) =>
-            '${phase} · ${current}/${total}';
+        return ({
+          required Object phase,
+          required Object current,
+          required Object total,
+        }) => '${phase} · ${current}/${total}';
       case 'video_source_scrape_last_summary':
-        return (
-                {required Object status,
-                required Object succeeded,
-                required Object pending,
-                required Object failed}) =>
+        return ({
+          required Object status,
+          required Object succeeded,
+          required Object pending,
+          required Object failed,
+        }) =>
             'Ultimo scrape (${status}): ${succeeded} riusciti, ${pending} in attesa, ${failed} falliti';
       case 'video_source_scrape_phase_planning':
         return 'Pianificazione';
@@ -213797,11 +215762,11 @@ extension on _StringsIt {
       case 'migration_import_permission_grant':
         return 'Concedi permesso';
       case 'migration_import_verifying':
-        return (
-                {required Object batch,
-                required Object done,
-                required Object total}) =>
-            'Verifica ${batch} (${done}/${total})';
+        return ({
+          required Object batch,
+          required Object done,
+          required Object total,
+        }) => 'Verifica ${batch} (${done}/${total})';
       case 'migration_import_verifying_hint':
         return 'Calcolo dei checksum degli archivi. Librerie grandi possono richiedere diversi minuti.';
       case 'game_line_copy_tooltip':
@@ -213953,11 +215918,11 @@ extension on _StringsIt {
         return ({required Object label}) =>
             'Impossibile leggere questo file sottotitoli (danneggiato o vuoto): ${label}';
       case 'dict_downloading_size':
-        return (
-                {required Object name,
-                required Object done,
-                required Object total}) =>
-            'Download ${name} (${done} / ${total})';
+        return ({
+          required Object name,
+          required Object done,
+          required Object total,
+        }) => 'Download ${name} (${done} / ${total})';
       case 'video_subtitle_attach_book_missing':
         return 'Questo video non è nella tua libreria, quindi il sottotitolo non è stato allegato';
       case 'dict_download_hide':
@@ -214121,11 +216086,11 @@ extension on _StringsIt {
         return ({required Object n}) =>
             'Questa cartella contiene ${n} file di volume; ogni volume viene importato come libro a sé, con il nome del file.';
       case 'manga_import_batch_done':
-        return (
-                {required Object imported,
-                required Object skipped,
-                required Object failed}) =>
-            'Importati ${imported}, saltati ${skipped}, falliti ${failed}.';
+        return ({
+          required Object imported,
+          required Object skipped,
+          required Object failed,
+        }) => 'Importati ${imported}, saltati ${skipped}, falliti ${failed}.';
       case 'srt_book_reimport':
         return 'Reimporta';
       case 'srt_book_reimport_subtitle_hint':
@@ -215008,10 +216973,11 @@ extension on _StringsIt {
       case 'manga_ocr_import_matched_nothing':
         return 'Nessun file di modello utilizzabile riconosciuto';
       case 'manga_ocr_import_size_mismatch':
-        return (
-                {required Object file,
-                required Object expected,
-                required Object actual}) =>
+        return ({
+          required Object file,
+          required Object expected,
+          required Object actual,
+        }) =>
             '${file} ha la dimensione sbagliata: attesi ${expected}, ricevuti ${actual}';
       case 'manga_ocr_import_still_missing':
         return ({required Object count}) => 'Mancano ancora ${count} file';
@@ -215743,6 +217709,44 @@ extension on _StringsIt {
         return 'Waiting for matching in-game click';
       case 'delete_choices_remember':
         return 'Ricorda queste scelte';
+      case 'network_proxy_mode_label':
+        return 'Proxy mode';
+      case 'network_proxy_mode_auto':
+        return 'Automatic';
+      case 'network_proxy_mode_auto_hint':
+        return 'Use environment variables, then the enabled system proxy';
+      case 'network_proxy_mode_direct':
+        return 'Direct';
+      case 'network_proxy_mode_direct_hint':
+        return 'Disable proxy use for the app';
+      case 'network_proxy_mode_manual':
+        return 'Manual';
+      case 'network_proxy_mode_manual_hint':
+        return 'Use the server and optional credentials below';
+      case 'network_proxy_manual_hint':
+        return 'HTTP proxy server used by all public internet requests';
+      case 'network_proxy_username':
+        return 'Proxy username (optional)';
+      case 'network_proxy_password':
+        return 'Proxy password (optional)';
+      case 'storage_category_backups':
+        return 'Local backups';
+      case 'storage_entry_backups_label':
+        return ({required Object n}) => '${n} backup archive(s)';
+      case 'storage_entry_delete_backups_confirm_body':
+        return 'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+      case 'update_download_source_preference':
+        return 'Preferred download source';
+      case 'update_download_source_preference_hint':
+        return 'The selected source is tried first; unavailable sources still fall back automatically.';
+      case 'update_download_source_auto':
+        return 'Automatic (recommended)';
+      case 'update_download_source_cloudflare':
+        return 'Cloudflare mirror';
+      case 'update_download_source_github':
+        return 'GitHub direct';
+      case 'update_download_source_proxy':
+        return ({required Object host}) => 'Proxy: ${host}';
       default:
         return null;
     }
@@ -216185,10 +218189,11 @@ extension on _StringsJa {
       case 'backup_import':
         return 'バックアップを読み込む';
       case 'backup_import_confirm':
-        return (
-                {required Object date,
-                required Object bookCount,
-                required Object statsCount}) =>
+        return ({
+          required Object date,
+          required Object bookCount,
+          required Object statsCount,
+        }) =>
             '現在のすべてのデータが${date}のバックアップで置き換えられます。\n\n書籍${bookCount}冊、統計${statsCount}件。\n\n復元後にアプリが再起動します。';
       case 'backup_import_confirm_title':
         return 'バックアップを復元しますか？';
@@ -216462,12 +218467,12 @@ extension on _StringsJa {
       case 'changelog_prerelease':
         return 'プレリリース';
       case 'chapter_progress':
-        return (
-                {required Object idx,
-                required Object total,
-                required Object suffix,
-                required Object pct}) =>
-            'チャプター ${idx} / ${total}${suffix} · ${pct}%';
+        return ({
+          required Object idx,
+          required Object total,
+          required Object suffix,
+          required Object pct,
+        }) => 'チャプター ${idx} / ${total}${suffix} · ${pct}%';
       case 'clear':
         return 'クリア';
       case 'clear_dictionary_description':
@@ -216937,11 +218942,11 @@ extension on _StringsJa {
       case 'dict_download_language':
         return 'あなたの言語';
       case 'dict_download_partial':
-        return (
-                {required Object success,
-                required Object total,
-                required Object error}) =>
-            '${success} / ${total} 成功。失敗: ${error}';
+        return ({
+          required Object success,
+          required Object total,
+          required Object error,
+        }) => '${success} / ${total} 成功。失敗: ${error}';
       case 'dict_download_select_title':
         return '辞書を選択';
       case 'dict_downloading':
@@ -216976,11 +218981,11 @@ extension on _StringsJa {
       case 'dict_update_none':
         return 'すべての辞書は最新です。';
       case 'dict_update_summary':
-        return (
-                {required Object updated,
-                required Object current,
-                required Object failed}) =>
-            '${updated} 件を更新、${current} 件は最新、${failed} 件が失敗しました。';
+        return ({
+          required Object updated,
+          required Object current,
+          required Object failed,
+        }) => '${updated} 件を更新、${current} 件は最新、${failed} 件が失敗しました。';
       case 'dict_update_tooltip':
         return '辞書を更新';
       case 'dict_update_updating':
@@ -217809,12 +219814,12 @@ extension on _StringsJa {
       case 'game_waiting_for_text':
         return 'テキスト待機中';
       case 'game_waveform_range_label':
-        return (
-                {required Object start,
-                required Object end,
-                required Object duration,
-                required Object total}) =>
-            '${start} - ${end} (選択 ${duration} / 合計 ${total})';
+        return ({
+          required Object start,
+          required Object end,
+          required Object duration,
+          required Object total,
+        }) => '${start} - ${end} (選択 ${duration} / 合計 ${total})';
       case 'game_waveform_select_title':
         return '音声範囲を選択';
       case 'game_window_bound':
@@ -220924,13 +222929,14 @@ extension on _StringsJa {
       case 'anki_dedup_report_title':
         return 'メディア重複排除レポート';
       case 'anki_dedup_report_body':
-        return (
-                {required Object groups,
-                required Object removed,
-                required Object size,
-                required Object notes,
-                required Object models,
-                required Object skipped}) =>
+        return ({
+          required Object groups,
+          required Object removed,
+          required Object size,
+          required Object notes,
+          required Object models,
+          required Object skipped,
+        }) =>
             '${groups}件の重複グループ、${removed}件の余分なコピー（${size}）、${notes}件のノートと${models}件のノートタイプを書き換え、${skipped}件をスキップしました。';
       case 'anki_dedup_report_dry_note':
         return 'スキャンのみ - 変更は行われていません。';
@@ -220948,11 +222954,11 @@ extension on _StringsJa {
         return ({required Object count, required Object size}) =>
             '${count}件の余分なコピー、${size}回収可能。各ファイルの1つのコピーが保持され、すべての参照が先にそこに書き換えられます。再エンコードは行われません。';
       case 'anki_dedup_plan_entry':
-        return (
-                {required Object file,
-                required Object size,
-                required Object canonical}) =>
-            '${file}を削除（${size}）- ${canonical}を保持';
+        return ({
+          required Object file,
+          required Object size,
+          required Object canonical,
+        }) => '${file}を削除（${size}）- ${canonical}を保持';
       case 'anki_dedup_plan_delete':
         return 'これらのファイルを削除';
       case 'anki_dedup_plan_journal':
@@ -221217,11 +223223,11 @@ extension on _StringsJa {
       case 'video_jimaku_language_unknown':
         return '言語ラベルなし';
       case 'video_jimaku_source_summary':
-        return (
-                {required Object files,
-                required Object episodes,
-                required Object languages}) =>
-            '${files}件の字幕ファイル · ${episodes}エピソード · ${languages}';
+        return ({
+          required Object files,
+          required Object episodes,
+          required Object languages,
+        }) => '${files}件の字幕ファイル · ${episodes}エピソード · ${languages}';
       case 'video_jimaku_episode_unlabeled':
         return ({required Object episode, required Object count}) =>
             'エピソード${episode}のラベル付き字幕がありません。${count}件のラベルなしファイルが一致する可能性があります';
@@ -221453,12 +223459,12 @@ extension on _StringsJa {
       case 'scrape_all_item':
         return ({required Object title}) => '処理中: ${title}';
       case 'scrape_all_done':
-        return (
-                {required Object applied,
-                required Object review,
-                required Object skipped,
-                required Object failed}) =>
-            '完了: ${applied}件適用、${review}件要レビュー、${skipped}件スキップ、${failed}件失敗';
+        return ({
+          required Object applied,
+          required Object review,
+          required Object skipped,
+          required Object failed,
+        }) => '完了: ${applied}件適用、${review}件要レビュー、${skipped}件スキップ、${failed}件失敗';
       case 'scrape_all_empty':
         return 'このライブラリにスクレイプ対象のアイテムはありません。';
       case 'scrape_all_start':
@@ -221917,17 +223923,18 @@ extension on _StringsJa {
       case 'video_source_scrape_write_images':
         return '画像ファイルを書き出し';
       case 'video_source_scrape_progress':
-        return (
-                {required Object phase,
-                required Object current,
-                required Object total}) =>
-            '${phase} · ${current}/${total}';
+        return ({
+          required Object phase,
+          required Object current,
+          required Object total,
+        }) => '${phase} · ${current}/${total}';
       case 'video_source_scrape_last_summary':
-        return (
-                {required Object status,
-                required Object succeeded,
-                required Object pending,
-                required Object failed}) =>
+        return ({
+          required Object status,
+          required Object succeeded,
+          required Object pending,
+          required Object failed,
+        }) =>
             '前回のスクレイプ (${status}): ${succeeded}件成功、${pending}件保留、${failed}件失敗';
       case 'video_source_scrape_phase_planning':
         return '計画中';
@@ -222130,11 +224137,11 @@ extension on _StringsJa {
       case 'migration_import_permission_grant':
         return '権限を付与';
       case 'migration_import_verifying':
-        return (
-                {required Object batch,
-                required Object done,
-                required Object total}) =>
-            '${batch}を検証中（${done}/${total}）';
+        return ({
+          required Object batch,
+          required Object done,
+          required Object total,
+        }) => '${batch}を検証中（${done}/${total}）';
       case 'migration_import_verifying_hint':
         return 'アーカイブのチェックサムを検証しています。大きなライブラリは数分かかることがあります。';
       case 'game_line_copy_tooltip':
@@ -222286,11 +224293,11 @@ extension on _StringsJa {
         return ({required Object label}) =>
             'この字幕ファイルを読み取れませんでした（破損または空）: ${label}';
       case 'dict_downloading_size':
-        return (
-                {required Object name,
-                required Object done,
-                required Object total}) =>
-            '${name}をダウンロード中（${done} / ${total}）';
+        return ({
+          required Object name,
+          required Object done,
+          required Object total,
+        }) => '${name}をダウンロード中（${done} / ${total}）';
       case 'video_subtitle_attach_book_missing':
         return 'この動画はライブラリにないため、字幕は紐付けされませんでした';
       case 'dict_download_hide':
@@ -222453,11 +224460,11 @@ extension on _StringsJa {
         return ({required Object n}) =>
             'このフォルダには${n}巻のファイルがあります。それぞれがファイル名で独立した本としてインポートされます。';
       case 'manga_import_batch_done':
-        return (
-                {required Object imported,
-                required Object skipped,
-                required Object failed}) =>
-            'インポート ${imported}件、スキップ ${skipped}件、失敗 ${failed}件';
+        return ({
+          required Object imported,
+          required Object skipped,
+          required Object failed,
+        }) => 'インポート ${imported}件、スキップ ${skipped}件、失敗 ${failed}件';
       case 'srt_book_reimport':
         return '再インポート';
       case 'srt_book_reimport_subtitle_hint':
@@ -223337,11 +225344,11 @@ extension on _StringsJa {
       case 'manga_ocr_import_matched_nothing':
         return '使用できるモデルファイルを認識できませんでした';
       case 'manga_ocr_import_size_mismatch':
-        return (
-                {required Object file,
-                required Object expected,
-                required Object actual}) =>
-            '${file} のサイズが違います: 期待値 ${expected}、実際 ${actual}';
+        return ({
+          required Object file,
+          required Object expected,
+          required Object actual,
+        }) => '${file} のサイズが違います: 期待値 ${expected}、実際 ${actual}';
       case 'manga_ocr_import_still_missing':
         return ({required Object count}) => 'まだ ${count} 個のファイルが足りません';
       case 'manga_ocr_import_failed':
@@ -224066,6 +226073,44 @@ extension on _StringsJa {
         return 'Waiting for matching in-game click';
       case 'delete_choices_remember':
         return 'この選択を記憶する';
+      case 'network_proxy_mode_label':
+        return 'Proxy mode';
+      case 'network_proxy_mode_auto':
+        return 'Automatic';
+      case 'network_proxy_mode_auto_hint':
+        return 'Use environment variables, then the enabled system proxy';
+      case 'network_proxy_mode_direct':
+        return 'Direct';
+      case 'network_proxy_mode_direct_hint':
+        return 'Disable proxy use for the app';
+      case 'network_proxy_mode_manual':
+        return 'Manual';
+      case 'network_proxy_mode_manual_hint':
+        return 'Use the server and optional credentials below';
+      case 'network_proxy_manual_hint':
+        return 'HTTP proxy server used by all public internet requests';
+      case 'network_proxy_username':
+        return 'Proxy username (optional)';
+      case 'network_proxy_password':
+        return 'Proxy password (optional)';
+      case 'storage_category_backups':
+        return 'Local backups';
+      case 'storage_entry_backups_label':
+        return ({required Object n}) => '${n} backup archive(s)';
+      case 'storage_entry_delete_backups_confirm_body':
+        return 'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+      case 'update_download_source_preference':
+        return 'Preferred download source';
+      case 'update_download_source_preference_hint':
+        return 'The selected source is tried first; unavailable sources still fall back automatically.';
+      case 'update_download_source_auto':
+        return 'Automatic (recommended)';
+      case 'update_download_source_cloudflare':
+        return 'Cloudflare mirror';
+      case 'update_download_source_github':
+        return 'GitHub direct';
+      case 'update_download_source_proxy':
+        return ({required Object host}) => 'Proxy: ${host}';
       default:
         return null;
     }
@@ -224508,10 +226553,11 @@ extension on _StringsKo {
       case 'backup_import':
         return '백업 가져오기';
       case 'backup_import_confirm':
-        return (
-                {required Object date,
-                required Object bookCount,
-                required Object statsCount}) =>
+        return ({
+          required Object date,
+          required Object bookCount,
+          required Object statsCount,
+        }) =>
             '현재 모든 데이터가 ${date} 백업으로 대체됩니다.\n\n책 ${bookCount}권, 통계 기록 ${statsCount}개.\n\n복원 후 앱이 다시 시작됩니다.';
       case 'backup_import_confirm_title':
         return '백업을 복원할까요?';
@@ -224786,12 +226832,12 @@ extension on _StringsKo {
       case 'changelog_prerelease':
         return '프리릴리스';
       case 'chapter_progress':
-        return (
-                {required Object idx,
-                required Object total,
-                required Object suffix,
-                required Object pct}) =>
-            '챕터 ${idx} / ${total}${suffix} · ${pct}%';
+        return ({
+          required Object idx,
+          required Object total,
+          required Object suffix,
+          required Object pct,
+        }) => '챕터 ${idx} / ${total}${suffix} · ${pct}%';
       case 'clear':
         return '지우기';
       case 'clear_dictionary_description':
@@ -225261,11 +227307,11 @@ extension on _StringsKo {
       case 'dict_download_language':
         return '사용 언어';
       case 'dict_download_partial':
-        return (
-                {required Object success,
-                required Object total,
-                required Object error}) =>
-            '${success} / ${total} 성공. 실패: ${error}';
+        return ({
+          required Object success,
+          required Object total,
+          required Object error,
+        }) => '${success} / ${total} 성공. 실패: ${error}';
       case 'dict_download_select_title':
         return '사전 선택';
       case 'dict_downloading':
@@ -225300,11 +227346,11 @@ extension on _StringsKo {
       case 'dict_update_none':
         return '모든 사전이 최신 상태입니다.';
       case 'dict_update_summary':
-        return (
-                {required Object updated,
-                required Object current,
-                required Object failed}) =>
-            '${updated}개 업데이트, ${current}개 최신, ${failed}개 실패.';
+        return ({
+          required Object updated,
+          required Object current,
+          required Object failed,
+        }) => '${updated}개 업데이트, ${current}개 최신, ${failed}개 실패.';
       case 'dict_update_tooltip':
         return '사전 업데이트';
       case 'dict_update_updating':
@@ -226132,12 +228178,12 @@ extension on _StringsKo {
       case 'game_waiting_for_text':
         return '텍스트 대기 중';
       case 'game_waveform_range_label':
-        return (
-                {required Object start,
-                required Object end,
-                required Object duration,
-                required Object total}) =>
-            '${start} - ${end} (선택 ${duration} / 전체 ${total})';
+        return ({
+          required Object start,
+          required Object end,
+          required Object duration,
+          required Object total,
+        }) => '${start} - ${end} (선택 ${duration} / 전체 ${total})';
       case 'game_waveform_select_title':
         return '오디오 범위 선택';
       case 'game_window_bound':
@@ -229250,13 +231296,14 @@ extension on _StringsKo {
       case 'anki_dedup_report_title':
         return '미디어 중복 제거 보고서';
       case 'anki_dedup_report_body':
-        return (
-                {required Object groups,
-                required Object removed,
-                required Object size,
-                required Object notes,
-                required Object models,
-                required Object skipped}) =>
+        return ({
+          required Object groups,
+          required Object removed,
+          required Object size,
+          required Object notes,
+          required Object models,
+          required Object skipped,
+        }) =>
             '중복 그룹 ${groups}개; 추가 사본 ${removed}개 (${size}); 노트 ${notes}개와 노트 유형 ${models}개 재작성; ${skipped}개 건너뜀.';
       case 'anki_dedup_report_dry_note':
         return '검색만 수행됨 - 변경된 사항이 없습니다.';
@@ -229274,11 +231321,11 @@ extension on _StringsKo {
         return ({required Object count, required Object size}) =>
             '추가 사본 ${count}개, ${size} 회수 가능. 각 파일의 사본 하나가 유지되고 모든 참조가 먼저 그것을 가리키도록 변경됩니다. 재인코딩은 하지 않습니다.';
       case 'anki_dedup_plan_entry':
-        return (
-                {required Object file,
-                required Object size,
-                required Object canonical}) =>
-            '${file} (${size}) 삭제 - ${canonical} 유지';
+        return ({
+          required Object file,
+          required Object size,
+          required Object canonical,
+        }) => '${file} (${size}) 삭제 - ${canonical} 유지';
       case 'anki_dedup_plan_delete':
         return '이 파일들을 삭제';
       case 'anki_dedup_plan_journal':
@@ -229543,11 +231590,11 @@ extension on _StringsKo {
       case 'video_jimaku_language_unknown':
         return '언어 미표기';
       case 'video_jimaku_source_summary':
-        return (
-                {required Object files,
-                required Object episodes,
-                required Object languages}) =>
-            '자막 파일 ${files}개 · 에피소드 ${episodes}개 · ${languages}';
+        return ({
+          required Object files,
+          required Object episodes,
+          required Object languages,
+        }) => '자막 파일 ${files}개 · 에피소드 ${episodes}개 · ${languages}';
       case 'video_jimaku_episode_unlabeled':
         return ({required Object episode, required Object count}) =>
             '에피소드 ${episode}으로 표시된 자막이 없습니다. 라벨 없는 파일 ${count}개가 일치할 수 있습니다';
@@ -229779,11 +231826,12 @@ extension on _StringsKo {
       case 'scrape_all_item':
         return ({required Object title}) => '처리 중: ${title}';
       case 'scrape_all_done':
-        return (
-                {required Object applied,
-                required Object review,
-                required Object skipped,
-                required Object failed}) =>
+        return ({
+          required Object applied,
+          required Object review,
+          required Object skipped,
+          required Object failed,
+        }) =>
             '완료: ${applied} 적용, ${review} 검토 필요, ${skipped} 건너뜀, ${failed} 실패';
       case 'scrape_all_empty':
         return '이 라이브러리에 스크래핑할 항목이 없습니다.';
@@ -230243,17 +232291,18 @@ extension on _StringsKo {
       case 'video_source_scrape_write_images':
         return '이미지 파일 쓰기';
       case 'video_source_scrape_progress':
-        return (
-                {required Object phase,
-                required Object current,
-                required Object total}) =>
-            '${phase} · ${current}/${total}';
+        return ({
+          required Object phase,
+          required Object current,
+          required Object total,
+        }) => '${phase} · ${current}/${total}';
       case 'video_source_scrape_last_summary':
-        return (
-                {required Object status,
-                required Object succeeded,
-                required Object pending,
-                required Object failed}) =>
+        return ({
+          required Object status,
+          required Object succeeded,
+          required Object pending,
+          required Object failed,
+        }) =>
             '마지막 스크래핑 (${status}): ${succeeded} 성공, ${pending} 보류, ${failed} 실패';
       case 'video_source_scrape_phase_planning':
         return '계획 중';
@@ -230456,11 +232505,11 @@ extension on _StringsKo {
       case 'migration_import_permission_grant':
         return '권한 허용';
       case 'migration_import_verifying':
-        return (
-                {required Object batch,
-                required Object done,
-                required Object total}) =>
-            '${batch} 검증 중 (${done}/${total})';
+        return ({
+          required Object batch,
+          required Object done,
+          required Object total,
+        }) => '${batch} 검증 중 (${done}/${total})';
       case 'migration_import_verifying_hint':
         return '아카이브 체크섬 검증 중. 대용량 라이브러리는 몇 분 걸릴 수 있습니다.';
       case 'game_line_copy_tooltip':
@@ -230611,11 +232660,11 @@ extension on _StringsKo {
         return ({required Object label}) =>
             '이 자막 파일을 읽을 수 없습니다 (손상되었거나 비어 있음): ${label}';
       case 'dict_downloading_size':
-        return (
-                {required Object name,
-                required Object done,
-                required Object total}) =>
-            '${name} 다운로드 중 (${done} / ${total})';
+        return ({
+          required Object name,
+          required Object done,
+          required Object total,
+        }) => '${name} 다운로드 중 (${done} / ${total})';
       case 'video_subtitle_attach_book_missing':
         return '이 동영상이 라이브러리에 없어서 자막이 첨부되지 않았습니다';
       case 'dict_download_hide':
@@ -230778,11 +232827,11 @@ extension on _StringsKo {
         return ({required Object n}) =>
             '이 폴더에 ${n}개의 볼륨 파일이 있습니다. 각각 파일 이름을 따서 별도의 책으로 가져옵니다.';
       case 'manga_import_batch_done':
-        return (
-                {required Object imported,
-                required Object skipped,
-                required Object failed}) =>
-            '${imported}개 가져옴, ${skipped}개 건너뜀, ${failed}개 실패.';
+        return ({
+          required Object imported,
+          required Object skipped,
+          required Object failed,
+        }) => '${imported}개 가져옴, ${skipped}개 건너뜀, ${failed}개 실패.';
       case 'srt_book_reimport':
         return '다시 가져오기';
       case 'srt_book_reimport_subtitle_hint':
@@ -231662,11 +233711,11 @@ extension on _StringsKo {
       case 'manga_ocr_import_matched_nothing':
         return '사용할 수 있는 모델 파일을 인식하지 못했어요';
       case 'manga_ocr_import_size_mismatch':
-        return (
-                {required Object file,
-                required Object expected,
-                required Object actual}) =>
-            '${file} 크기가 맞지 않아요: 예상 ${expected}, 실제 ${actual}';
+        return ({
+          required Object file,
+          required Object expected,
+          required Object actual,
+        }) => '${file} 크기가 맞지 않아요: 예상 ${expected}, 실제 ${actual}';
       case 'manga_ocr_import_still_missing':
         return ({required Object count}) => '아직 파일 ${count}개가 부족해요';
       case 'manga_ocr_import_failed':
@@ -232392,6 +234441,44 @@ extension on _StringsKo {
         return 'Waiting for matching in-game click';
       case 'delete_choices_remember':
         return '이 선택 기억하기';
+      case 'network_proxy_mode_label':
+        return 'Proxy mode';
+      case 'network_proxy_mode_auto':
+        return 'Automatic';
+      case 'network_proxy_mode_auto_hint':
+        return 'Use environment variables, then the enabled system proxy';
+      case 'network_proxy_mode_direct':
+        return 'Direct';
+      case 'network_proxy_mode_direct_hint':
+        return 'Disable proxy use for the app';
+      case 'network_proxy_mode_manual':
+        return 'Manual';
+      case 'network_proxy_mode_manual_hint':
+        return 'Use the server and optional credentials below';
+      case 'network_proxy_manual_hint':
+        return 'HTTP proxy server used by all public internet requests';
+      case 'network_proxy_username':
+        return 'Proxy username (optional)';
+      case 'network_proxy_password':
+        return 'Proxy password (optional)';
+      case 'storage_category_backups':
+        return 'Local backups';
+      case 'storage_entry_backups_label':
+        return ({required Object n}) => '${n} backup archive(s)';
+      case 'storage_entry_delete_backups_confirm_body':
+        return 'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+      case 'update_download_source_preference':
+        return 'Preferred download source';
+      case 'update_download_source_preference_hint':
+        return 'The selected source is tried first; unavailable sources still fall back automatically.';
+      case 'update_download_source_auto':
+        return 'Automatic (recommended)';
+      case 'update_download_source_cloudflare':
+        return 'Cloudflare mirror';
+      case 'update_download_source_github':
+        return 'GitHub direct';
+      case 'update_download_source_proxy':
+        return ({required Object host}) => 'Proxy: ${host}';
       default:
         return null;
     }
@@ -232839,10 +234926,11 @@ extension on _StringsNl {
       case 'backup_import':
         return 'Back-up importeren';
       case 'backup_import_confirm':
-        return (
-                {required Object date,
-                required Object bookCount,
-                required Object statsCount}) =>
+        return ({
+          required Object date,
+          required Object bookCount,
+          required Object statsCount,
+        }) =>
             'Dit vervangt alle huidige gegevens door de back-up van ${date}.\n\n${bookCount} boeken, ${statsCount} statistiekrecords.\n\nDe app wordt na het herstellen opnieuw gestart.';
       case 'backup_import_confirm_title':
         return 'Back-up herstellen?';
@@ -233121,12 +235209,12 @@ extension on _StringsNl {
       case 'changelog_prerelease':
         return 'Prerelease';
       case 'chapter_progress':
-        return (
-                {required Object idx,
-                required Object total,
-                required Object suffix,
-                required Object pct}) =>
-            'Hoofdstuk ${idx} / ${total}${suffix} · ${pct}%';
+        return ({
+          required Object idx,
+          required Object total,
+          required Object suffix,
+          required Object pct,
+        }) => 'Hoofdstuk ${idx} / ${total}${suffix} · ${pct}%';
       case 'clear':
         return 'Wissen';
       case 'clear_dictionary_description':
@@ -233599,11 +235687,11 @@ extension on _StringsNl {
       case 'dict_download_language':
         return 'Je taal';
       case 'dict_download_partial':
-        return (
-                {required Object success,
-                required Object total,
-                required Object error}) =>
-            '${success} / ${total} OK. Mislukt: ${error}';
+        return ({
+          required Object success,
+          required Object total,
+          required Object error,
+        }) => '${success} / ${total} OK. Mislukt: ${error}';
       case 'dict_download_select_title':
         return 'Selecteer woordenboeken';
       case 'dict_downloading':
@@ -233639,10 +235727,11 @@ extension on _StringsNl {
       case 'dict_update_none':
         return 'Alle woordenboeken zijn up-to-date.';
       case 'dict_update_summary':
-        return (
-                {required Object updated,
-                required Object current,
-                required Object failed}) =>
+        return ({
+          required Object updated,
+          required Object current,
+          required Object failed,
+        }) =>
             '${updated} bijgewerkt, ${current} up-to-date, ${failed} mislukt.';
       case 'dict_update_tooltip':
         return 'Woordenboek bijwerken';
@@ -234474,12 +236563,12 @@ extension on _StringsNl {
       case 'game_waiting_for_text':
         return 'Wachten op tekst';
       case 'game_waveform_range_label':
-        return (
-                {required Object start,
-                required Object end,
-                required Object duration,
-                required Object total}) =>
-            '${start} - ${end} (geselecteerd ${duration} / totaal ${total})';
+        return ({
+          required Object start,
+          required Object end,
+          required Object duration,
+          required Object total,
+        }) => '${start} - ${end} (geselecteerd ${duration} / totaal ${total})';
       case 'game_waveform_select_title':
         return 'Audiobereik selecteren';
       case 'game_window_bound':
@@ -237620,13 +239709,14 @@ extension on _StringsNl {
       case 'anki_dedup_report_title':
         return 'Media-ontdubbelingsrapport';
       case 'anki_dedup_report_body':
-        return (
-                {required Object groups,
-                required Object removed,
-                required Object size,
-                required Object notes,
-                required Object models,
-                required Object skipped}) =>
+        return ({
+          required Object groups,
+          required Object removed,
+          required Object size,
+          required Object notes,
+          required Object models,
+          required Object skipped,
+        }) =>
             '${groups} duplicaatgroepen; ${removed} extra kopieën (${size}); ${notes} notities en ${models} notetypes herschreven; ${skipped} overgeslagen.';
       case 'anki_dedup_report_dry_note':
         return 'Alleen scan — er is niets gewijzigd.';
@@ -237644,11 +239734,11 @@ extension on _StringsNl {
         return ({required Object count, required Object size}) =>
             '${count} extra kopieën, ${size} terug te winnen. Eén kopie van elk bestand wordt bewaard en elke referentie wordt eerst omgeleid; niets wordt opnieuw gecodeerd.';
       case 'anki_dedup_plan_entry':
-        return (
-                {required Object file,
-                required Object size,
-                required Object canonical}) =>
-            'Verwijder ${file} (${size}) — bewaar ${canonical}';
+        return ({
+          required Object file,
+          required Object size,
+          required Object canonical,
+        }) => 'Verwijder ${file} (${size}) — bewaar ${canonical}';
       case 'anki_dedup_plan_delete':
         return 'Deze bestanden verwijderen';
       case 'anki_dedup_plan_journal':
@@ -237916,10 +240006,11 @@ extension on _StringsNl {
       case 'video_jimaku_language_unknown':
         return 'Taal niet gelabeld';
       case 'video_jimaku_source_summary':
-        return (
-                {required Object files,
-                required Object episodes,
-                required Object languages}) =>
+        return ({
+          required Object files,
+          required Object episodes,
+          required Object languages,
+        }) =>
             '${files} ondertitelbestanden · ${episodes} afleveringen · ${languages}';
       case 'video_jimaku_episode_unlabeled':
         return ({required Object episode, required Object count}) =>
@@ -238154,11 +240245,12 @@ extension on _StringsNl {
       case 'scrape_all_item':
         return ({required Object title}) => 'Verwerken: ${title}';
       case 'scrape_all_done':
-        return (
-                {required Object applied,
-                required Object review,
-                required Object skipped,
-                required Object failed}) =>
+        return ({
+          required Object applied,
+          required Object review,
+          required Object skipped,
+          required Object failed,
+        }) =>
             'Klaar: ${applied} toegepast, ${review} moet beoordeeld, ${skipped} overgeslagen, ${failed} mislukt';
       case 'scrape_all_empty':
         return 'Er zijn geen items om te scrapen in deze bibliotheek.';
@@ -238618,17 +240710,18 @@ extension on _StringsNl {
       case 'video_source_scrape_write_images':
         return 'Afbeeldingsbestanden schrijven';
       case 'video_source_scrape_progress':
-        return (
-                {required Object phase,
-                required Object current,
-                required Object total}) =>
-            '${phase} · ${current}/${total}';
+        return ({
+          required Object phase,
+          required Object current,
+          required Object total,
+        }) => '${phase} · ${current}/${total}';
       case 'video_source_scrape_last_summary':
-        return (
-                {required Object status,
-                required Object succeeded,
-                required Object pending,
-                required Object failed}) =>
+        return ({
+          required Object status,
+          required Object succeeded,
+          required Object pending,
+          required Object failed,
+        }) =>
             'Laatste scrape (${status}): ${succeeded} geslaagd, ${pending} wachtend, ${failed} mislukt';
       case 'video_source_scrape_phase_planning':
         return 'Plannen';
@@ -238832,11 +240925,11 @@ extension on _StringsNl {
       case 'migration_import_permission_grant':
         return 'Toestemming verlenen';
       case 'migration_import_verifying':
-        return (
-                {required Object batch,
-                required Object done,
-                required Object total}) =>
-            '${batch} verifiëren (${done}/${total})';
+        return ({
+          required Object batch,
+          required Object done,
+          required Object total,
+        }) => '${batch} verifiëren (${done}/${total})';
       case 'migration_import_verifying_hint':
         return 'De archieven worden gecontroleerd. Grote bibliotheken kunnen enkele minuten duren.';
       case 'game_line_copy_tooltip':
@@ -238988,11 +241081,11 @@ extension on _StringsNl {
         return ({required Object label}) =>
             'Kon dit ondertitelbestand niet lezen (beschadigd of leeg): ${label}';
       case 'dict_downloading_size':
-        return (
-                {required Object name,
-                required Object done,
-                required Object total}) =>
-            '${name} downloaden (${done} / ${total})';
+        return ({
+          required Object name,
+          required Object done,
+          required Object total,
+        }) => '${name} downloaden (${done} / ${total})';
       case 'video_subtitle_attach_book_missing':
         return 'Deze video staat niet in je bibliotheek, dus de ondertitel is niet bijgevoegd';
       case 'dict_download_hide':
@@ -239156,10 +241249,11 @@ extension on _StringsNl {
         return ({required Object n}) =>
             'Deze map bevat ${n} deelbestanden; elk wordt als eigen boek geïmporteerd, vernoemd naar het bestand.';
       case 'manga_import_batch_done':
-        return (
-                {required Object imported,
-                required Object skipped,
-                required Object failed}) =>
+        return ({
+          required Object imported,
+          required Object skipped,
+          required Object failed,
+        }) =>
             '${imported} geïmporteerd, ${skipped} overgeslagen, ${failed} mislukt.';
       case 'srt_book_reimport':
         return 'Opnieuw importeren';
@@ -240043,10 +242137,11 @@ extension on _StringsNl {
       case 'manga_ocr_import_matched_nothing':
         return 'Geen bruikbare modelbestanden herkend';
       case 'manga_ocr_import_size_mismatch':
-        return (
-                {required Object file,
-                required Object expected,
-                required Object actual}) =>
+        return ({
+          required Object file,
+          required Object expected,
+          required Object actual,
+        }) =>
             '${file} heeft de verkeerde grootte: verwacht ${expected}, gekregen ${actual}';
       case 'manga_ocr_import_still_missing':
         return ({required Object count}) =>
@@ -240779,6 +242874,44 @@ extension on _StringsNl {
         return 'Waiting for matching in-game click';
       case 'delete_choices_remember':
         return 'Deze keuzes onthouden';
+      case 'network_proxy_mode_label':
+        return 'Proxy mode';
+      case 'network_proxy_mode_auto':
+        return 'Automatic';
+      case 'network_proxy_mode_auto_hint':
+        return 'Use environment variables, then the enabled system proxy';
+      case 'network_proxy_mode_direct':
+        return 'Direct';
+      case 'network_proxy_mode_direct_hint':
+        return 'Disable proxy use for the app';
+      case 'network_proxy_mode_manual':
+        return 'Manual';
+      case 'network_proxy_mode_manual_hint':
+        return 'Use the server and optional credentials below';
+      case 'network_proxy_manual_hint':
+        return 'HTTP proxy server used by all public internet requests';
+      case 'network_proxy_username':
+        return 'Proxy username (optional)';
+      case 'network_proxy_password':
+        return 'Proxy password (optional)';
+      case 'storage_category_backups':
+        return 'Local backups';
+      case 'storage_entry_backups_label':
+        return ({required Object n}) => '${n} backup archive(s)';
+      case 'storage_entry_delete_backups_confirm_body':
+        return 'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+      case 'update_download_source_preference':
+        return 'Preferred download source';
+      case 'update_download_source_preference_hint':
+        return 'The selected source is tried first; unavailable sources still fall back automatically.';
+      case 'update_download_source_auto':
+        return 'Automatic (recommended)';
+      case 'update_download_source_cloudflare':
+        return 'Cloudflare mirror';
+      case 'update_download_source_github':
+        return 'GitHub direct';
+      case 'update_download_source_proxy':
+        return ({required Object host}) => 'Proxy: ${host}';
       default:
         return null;
     }
@@ -241227,10 +243360,11 @@ extension on _StringsPtBr {
       case 'backup_import':
         return 'Importar backup';
       case 'backup_import_confirm':
-        return (
-                {required Object date,
-                required Object bookCount,
-                required Object statsCount}) =>
+        return ({
+          required Object date,
+          required Object bookCount,
+          required Object statsCount,
+        }) =>
             'Isto substituirá todos os dados atuais pelo backup de ${date}.\n\n${bookCount} livros, ${statsCount} registros de estatísticas.\n\nO app será reiniciado após a restauração.';
       case 'backup_import_confirm_title':
         return 'Restaurar backup?';
@@ -241509,12 +243643,12 @@ extension on _StringsPtBr {
       case 'changelog_prerelease':
         return 'Pré-lançamento';
       case 'chapter_progress':
-        return (
-                {required Object idx,
-                required Object total,
-                required Object suffix,
-                required Object pct}) =>
-            'Capítulo ${idx} / ${total}${suffix} · ${pct}%';
+        return ({
+          required Object idx,
+          required Object total,
+          required Object suffix,
+          required Object pct,
+        }) => 'Capítulo ${idx} / ${total}${suffix} · ${pct}%';
       case 'clear':
         return 'Limpar';
       case 'clear_dictionary_description':
@@ -241986,11 +244120,11 @@ extension on _StringsPtBr {
       case 'dict_download_language':
         return 'Seu idioma';
       case 'dict_download_partial':
-        return (
-                {required Object success,
-                required Object total,
-                required Object error}) =>
-            '${success} / ${total} OK. Falharam: ${error}';
+        return ({
+          required Object success,
+          required Object total,
+          required Object error,
+        }) => '${success} / ${total} OK. Falharam: ${error}';
       case 'dict_download_select_title':
         return 'Selecionar Dicionários';
       case 'dict_downloading':
@@ -242025,10 +244159,11 @@ extension on _StringsPtBr {
       case 'dict_update_none':
         return 'Todos os dicionários estão atualizados.';
       case 'dict_update_summary':
-        return (
-                {required Object updated,
-                required Object current,
-                required Object failed}) =>
+        return ({
+          required Object updated,
+          required Object current,
+          required Object failed,
+        }) =>
             '${updated} atualizado(s), ${current} atualizado(s), ${failed} com falha.';
       case 'dict_update_tooltip':
         return 'Atualizar dicionário';
@@ -242860,12 +244995,12 @@ extension on _StringsPtBr {
       case 'game_waiting_for_text':
         return 'Aguardando texto';
       case 'game_waveform_range_label':
-        return (
-                {required Object start,
-                required Object end,
-                required Object duration,
-                required Object total}) =>
-            '${start} - ${end} (selecionado ${duration} / total ${total})';
+        return ({
+          required Object start,
+          required Object end,
+          required Object duration,
+          required Object total,
+        }) => '${start} - ${end} (selecionado ${duration} / total ${total})';
       case 'game_waveform_select_title':
         return 'Selecionar intervalo de áudio';
       case 'game_window_bound':
@@ -246002,13 +248137,14 @@ extension on _StringsPtBr {
       case 'anki_dedup_report_title':
         return 'Relatório de deduplicação de mídia';
       case 'anki_dedup_report_body':
-        return (
-                {required Object groups,
-                required Object removed,
-                required Object size,
-                required Object notes,
-                required Object models,
-                required Object skipped}) =>
+        return ({
+          required Object groups,
+          required Object removed,
+          required Object size,
+          required Object notes,
+          required Object models,
+          required Object skipped,
+        }) =>
             '${groups} grupos duplicados; ${removed} cópias extras (${size}); ${notes} notas e ${models} tipos de nota reescritos; ${skipped} ignorados.';
       case 'anki_dedup_report_dry_note':
         return 'Apenas verificação — nada foi alterado.';
@@ -246026,11 +248162,11 @@ extension on _StringsPtBr {
         return ({required Object count, required Object size}) =>
             '${count} cópias extras, ${size} recuperável. Uma cópia de cada arquivo é mantida e toda referência é redirecionada primeiro; nada é recodificado.';
       case 'anki_dedup_plan_entry':
-        return (
-                {required Object file,
-                required Object size,
-                required Object canonical}) =>
-            'Excluir ${file} (${size}) - mantendo ${canonical}';
+        return ({
+          required Object file,
+          required Object size,
+          required Object canonical,
+        }) => 'Excluir ${file} (${size}) - mantendo ${canonical}';
       case 'anki_dedup_plan_delete':
         return 'Excluir estes arquivos';
       case 'anki_dedup_plan_journal':
@@ -246298,10 +248434,11 @@ extension on _StringsPtBr {
       case 'video_jimaku_language_unknown':
         return 'Idioma não identificado';
       case 'video_jimaku_source_summary':
-        return (
-                {required Object files,
-                required Object episodes,
-                required Object languages}) =>
+        return ({
+          required Object files,
+          required Object episodes,
+          required Object languages,
+        }) =>
             '${files} arquivos de legenda · ${episodes} episódios · ${languages}';
       case 'video_jimaku_episode_unlabeled':
         return ({required Object episode, required Object count}) =>
@@ -246536,11 +248673,12 @@ extension on _StringsPtBr {
       case 'scrape_all_item':
         return ({required Object title}) => 'Processando: ${title}';
       case 'scrape_all_done':
-        return (
-                {required Object applied,
-                required Object review,
-                required Object skipped,
-                required Object failed}) =>
+        return ({
+          required Object applied,
+          required Object review,
+          required Object skipped,
+          required Object failed,
+        }) =>
             'Concluído: ${applied} aplicados, ${review} precisam de revisão, ${skipped} ignorados, ${failed} falharam';
       case 'scrape_all_empty':
         return 'Não há itens para buscar nesta biblioteca.';
@@ -247000,17 +249138,18 @@ extension on _StringsPtBr {
       case 'video_source_scrape_write_images':
         return 'Gravar arquivos de imagem';
       case 'video_source_scrape_progress':
-        return (
-                {required Object phase,
-                required Object current,
-                required Object total}) =>
-            '${phase} · ${current}/${total}';
+        return ({
+          required Object phase,
+          required Object current,
+          required Object total,
+        }) => '${phase} · ${current}/${total}';
       case 'video_source_scrape_last_summary':
-        return (
-                {required Object status,
-                required Object succeeded,
-                required Object pending,
-                required Object failed}) =>
+        return ({
+          required Object status,
+          required Object succeeded,
+          required Object pending,
+          required Object failed,
+        }) =>
             'Última busca (${status}): ${succeeded} bem-sucedidos, ${pending} pendentes, ${failed} falharam';
       case 'video_source_scrape_phase_planning':
         return 'Planejando';
@@ -247215,11 +249354,11 @@ extension on _StringsPtBr {
       case 'migration_import_permission_grant':
         return 'Conceder permissão';
       case 'migration_import_verifying':
-        return (
-                {required Object batch,
-                required Object done,
-                required Object total}) =>
-            'Verificando ${batch} (${done}/${total})';
+        return ({
+          required Object batch,
+          required Object done,
+          required Object total,
+        }) => 'Verificando ${batch} (${done}/${total})';
       case 'migration_import_verifying_hint':
         return 'Verificando checksums dos arquivos. Bibliotecas grandes podem levar vários minutos.';
       case 'game_line_copy_tooltip':
@@ -247371,11 +249510,11 @@ extension on _StringsPtBr {
         return ({required Object label}) =>
             'Não foi possível ler este arquivo de legenda (danificado ou vazio): ${label}';
       case 'dict_downloading_size':
-        return (
-                {required Object name,
-                required Object done,
-                required Object total}) =>
-            'Baixando ${name} (${done} / ${total})';
+        return ({
+          required Object name,
+          required Object done,
+          required Object total,
+        }) => 'Baixando ${name} (${done} / ${total})';
       case 'video_subtitle_attach_book_missing':
         return 'Este vídeo não está na sua biblioteca, então a legenda não foi anexada';
       case 'dict_download_hide':
@@ -247539,10 +249678,11 @@ extension on _StringsPtBr {
         return ({required Object n}) =>
             'Esta pasta contém ${n} arquivos de volume; cada um é importado como seu próprio livro, nomeado pelo arquivo.';
       case 'manga_import_batch_done':
-        return (
-                {required Object imported,
-                required Object skipped,
-                required Object failed}) =>
+        return ({
+          required Object imported,
+          required Object skipped,
+          required Object failed,
+        }) =>
             'Importados ${imported}, ignorados ${skipped}, falharam ${failed}.';
       case 'srt_book_reimport':
         return 'Reimportar';
@@ -248426,10 +250566,11 @@ extension on _StringsPtBr {
       case 'manga_ocr_import_matched_nothing':
         return 'Nenhum arquivo de modelo utilizável foi reconhecido';
       case 'manga_ocr_import_size_mismatch':
-        return (
-                {required Object file,
-                required Object expected,
-                required Object actual}) =>
+        return ({
+          required Object file,
+          required Object expected,
+          required Object actual,
+        }) =>
             '${file} está com o tamanho errado: esperado ${expected}, obtido ${actual}';
       case 'manga_ocr_import_still_missing':
         return ({required Object count}) => 'Ainda faltam ${count} arquivo(s)';
@@ -249161,6 +251302,44 @@ extension on _StringsPtBr {
         return 'Waiting for matching in-game click';
       case 'delete_choices_remember':
         return 'Lembrar estas escolhas';
+      case 'network_proxy_mode_label':
+        return 'Proxy mode';
+      case 'network_proxy_mode_auto':
+        return 'Automatic';
+      case 'network_proxy_mode_auto_hint':
+        return 'Use environment variables, then the enabled system proxy';
+      case 'network_proxy_mode_direct':
+        return 'Direct';
+      case 'network_proxy_mode_direct_hint':
+        return 'Disable proxy use for the app';
+      case 'network_proxy_mode_manual':
+        return 'Manual';
+      case 'network_proxy_mode_manual_hint':
+        return 'Use the server and optional credentials below';
+      case 'network_proxy_manual_hint':
+        return 'HTTP proxy server used by all public internet requests';
+      case 'network_proxy_username':
+        return 'Proxy username (optional)';
+      case 'network_proxy_password':
+        return 'Proxy password (optional)';
+      case 'storage_category_backups':
+        return 'Local backups';
+      case 'storage_entry_backups_label':
+        return ({required Object n}) => '${n} backup archive(s)';
+      case 'storage_entry_delete_backups_confirm_body':
+        return 'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+      case 'update_download_source_preference':
+        return 'Preferred download source';
+      case 'update_download_source_preference_hint':
+        return 'The selected source is tried first; unavailable sources still fall back automatically.';
+      case 'update_download_source_auto':
+        return 'Automatic (recommended)';
+      case 'update_download_source_cloudflare':
+        return 'Cloudflare mirror';
+      case 'update_download_source_github':
+        return 'GitHub direct';
+      case 'update_download_source_proxy':
+        return ({required Object host}) => 'Proxy: ${host}';
       default:
         return null;
     }
@@ -249610,10 +251789,11 @@ extension on _StringsRu {
       case 'backup_import':
         return 'Импорт копии';
       case 'backup_import_confirm':
-        return (
-                {required Object date,
-                required Object bookCount,
-                required Object statsCount}) =>
+        return ({
+          required Object date,
+          required Object bookCount,
+          required Object statsCount,
+        }) =>
             'Это заменит все текущие данные копией от ${date}.\n\nКниг: ${bookCount}, записей статистики: ${statsCount}.\n\nПосле восстановления приложение перезапустится.';
       case 'backup_import_confirm_title':
         return 'Восстановить копию?';
@@ -249893,12 +252073,12 @@ extension on _StringsRu {
       case 'changelog_prerelease':
         return 'Предварительный выпуск';
       case 'chapter_progress':
-        return (
-                {required Object idx,
-                required Object total,
-                required Object suffix,
-                required Object pct}) =>
-            'Глава ${idx} / ${total}${suffix} · ${pct}%';
+        return ({
+          required Object idx,
+          required Object total,
+          required Object suffix,
+          required Object pct,
+        }) => 'Глава ${idx} / ${total}${suffix} · ${pct}%';
       case 'clear':
         return 'Очистить';
       case 'clear_dictionary_description':
@@ -250370,11 +252550,11 @@ extension on _StringsRu {
       case 'dict_download_language':
         return 'Ваш язык';
       case 'dict_download_partial':
-        return (
-                {required Object success,
-                required Object total,
-                required Object error}) =>
-            '${success} / ${total} успешно. Ошибок: ${error}';
+        return ({
+          required Object success,
+          required Object total,
+          required Object error,
+        }) => '${success} / ${total} успешно. Ошибок: ${error}';
       case 'dict_download_select_title':
         return 'Выбрать словари';
       case 'dict_downloading':
@@ -250410,10 +252590,11 @@ extension on _StringsRu {
       case 'dict_update_none':
         return 'Все словари обновлены.';
       case 'dict_update_summary':
-        return (
-                {required Object updated,
-                required Object current,
-                required Object failed}) =>
+        return ({
+          required Object updated,
+          required Object current,
+          required Object failed,
+        }) =>
             'Обновлено: ${updated}, актуально: ${current}, не удалось: ${failed}.';
       case 'dict_update_tooltip':
         return 'Обновить словарь';
@@ -251246,12 +253427,12 @@ extension on _StringsRu {
       case 'game_waiting_for_text':
         return 'Ожидание текста';
       case 'game_waveform_range_label':
-        return (
-                {required Object start,
-                required Object end,
-                required Object duration,
-                required Object total}) =>
-            '${start} - ${end} (выбрано ${duration} / всего ${total})';
+        return ({
+          required Object start,
+          required Object end,
+          required Object duration,
+          required Object total,
+        }) => '${start} - ${end} (выбрано ${duration} / всего ${total})';
       case 'game_waveform_select_title':
         return 'Выбрать диапазон аудио';
       case 'game_window_bound':
@@ -254391,13 +256572,14 @@ extension on _StringsRu {
       case 'anki_dedup_report_title':
         return 'Отчёт об удалении дубликатов';
       case 'anki_dedup_report_body':
-        return (
-                {required Object groups,
-                required Object removed,
-                required Object size,
-                required Object notes,
-                required Object models,
-                required Object skipped}) =>
+        return ({
+          required Object groups,
+          required Object removed,
+          required Object size,
+          required Object notes,
+          required Object models,
+          required Object skipped,
+        }) =>
             '${groups} групп дубликатов; ${removed} лишних копий (${size}); ${notes} заметок и ${models} типов заметок перезаписано; ${skipped} пропущено.';
       case 'anki_dedup_report_dry_note':
         return 'Только сканирование — ничего не было изменено.';
@@ -254416,11 +256598,11 @@ extension on _StringsRu {
         return ({required Object count, required Object size}) =>
             '${count} лишних копий, ${size} можно освободить. Одна копия каждого файла сохраняется, и все ссылки перенаправляются на неё; перекодирование не выполняется.';
       case 'anki_dedup_plan_entry':
-        return (
-                {required Object file,
-                required Object size,
-                required Object canonical}) =>
-            'Удалить ${file} (${size}) — оставить ${canonical}';
+        return ({
+          required Object file,
+          required Object size,
+          required Object canonical,
+        }) => 'Удалить ${file} (${size}) — оставить ${canonical}';
       case 'anki_dedup_plan_delete':
         return 'Удалить эти файлы';
       case 'anki_dedup_plan_journal':
@@ -254688,11 +256870,11 @@ extension on _StringsRu {
       case 'video_jimaku_language_unknown':
         return 'Язык не указан';
       case 'video_jimaku_source_summary':
-        return (
-                {required Object files,
-                required Object episodes,
-                required Object languages}) =>
-            '${files} файлов субтитров · ${episodes} эпизодов · ${languages}';
+        return ({
+          required Object files,
+          required Object episodes,
+          required Object languages,
+        }) => '${files} файлов субтитров · ${episodes} эпизодов · ${languages}';
       case 'video_jimaku_episode_unlabeled':
         return ({required Object episode, required Object count}) =>
             'Нет субтитров с пометкой эпизод ${episode}; ${count} файлов без пометки могут подойти';
@@ -254926,11 +257108,12 @@ extension on _StringsRu {
       case 'scrape_all_item':
         return ({required Object title}) => 'Обработка: ${title}';
       case 'scrape_all_done':
-        return (
-                {required Object applied,
-                required Object review,
-                required Object skipped,
-                required Object failed}) =>
+        return ({
+          required Object applied,
+          required Object review,
+          required Object skipped,
+          required Object failed,
+        }) =>
             'Готово: ${applied} применено, ${review} требуют проверки, ${skipped} пропущено, ${failed} с ошибкой';
       case 'scrape_all_empty':
         return 'В этой библиотеке нет элементов для получения метаданных.';
@@ -255390,17 +257573,18 @@ extension on _StringsRu {
       case 'video_source_scrape_write_images':
         return 'Записывать файлы изображений';
       case 'video_source_scrape_progress':
-        return (
-                {required Object phase,
-                required Object current,
-                required Object total}) =>
-            '${phase} · ${current}/${total}';
+        return ({
+          required Object phase,
+          required Object current,
+          required Object total,
+        }) => '${phase} · ${current}/${total}';
       case 'video_source_scrape_last_summary':
-        return (
-                {required Object status,
-                required Object succeeded,
-                required Object pending,
-                required Object failed}) =>
+        return ({
+          required Object status,
+          required Object succeeded,
+          required Object pending,
+          required Object failed,
+        }) =>
             'Последнее получение (${status}): ${succeeded} успешно, ${pending} в ожидании, ${failed} с ошибкой';
       case 'video_source_scrape_phase_planning':
         return 'Планирование';
@@ -255604,11 +257788,11 @@ extension on _StringsRu {
       case 'migration_import_permission_grant':
         return 'Предоставить разрешение';
       case 'migration_import_verifying':
-        return (
-                {required Object batch,
-                required Object done,
-                required Object total}) =>
-            'Проверка ${batch} (${done}/${total})';
+        return ({
+          required Object batch,
+          required Object done,
+          required Object total,
+        }) => 'Проверка ${batch} (${done}/${total})';
       case 'migration_import_verifying_hint':
         return 'Вычисление контрольных сумм архивов. Для больших библиотек это может занять несколько минут.';
       case 'game_line_copy_tooltip':
@@ -255760,11 +257944,11 @@ extension on _StringsRu {
         return ({required Object label}) =>
             'Не удалось прочитать файл субтитров (повреждён или пуст): ${label}';
       case 'dict_downloading_size':
-        return (
-                {required Object name,
-                required Object done,
-                required Object total}) =>
-            'Загрузка ${name} (${done} / ${total})';
+        return ({
+          required Object name,
+          required Object done,
+          required Object total,
+        }) => 'Загрузка ${name} (${done} / ${total})';
       case 'video_subtitle_attach_book_missing':
         return 'Это видео не в вашей библиотеке, поэтому субтитры не были прикреплены';
       case 'dict_download_hide':
@@ -255928,10 +258112,11 @@ extension on _StringsRu {
         return ({required Object n}) =>
             'В этой папке ${n} томов; каждый импортируется как отдельная книга с именем файла.';
       case 'manga_import_batch_done':
-        return (
-                {required Object imported,
-                required Object skipped,
-                required Object failed}) =>
+        return ({
+          required Object imported,
+          required Object skipped,
+          required Object failed,
+        }) =>
             'Импортировано ${imported}, пропущено ${skipped}, ошибок ${failed}.';
       case 'srt_book_reimport':
         return 'Повторный импорт';
@@ -256815,10 +259000,11 @@ extension on _StringsRu {
       case 'manga_ocr_import_matched_nothing':
         return 'Пригодные файлы модели не распознаны';
       case 'manga_ocr_import_size_mismatch':
-        return (
-                {required Object file,
-                required Object expected,
-                required Object actual}) =>
+        return ({
+          required Object file,
+          required Object expected,
+          required Object actual,
+        }) =>
             'Неверный размер ${file}: ожидался ${expected}, получен ${actual}';
       case 'manga_ocr_import_still_missing':
         return ({required Object count}) => 'Не хватает ещё файлов: ${count}';
@@ -257549,6 +259735,44 @@ extension on _StringsRu {
         return 'Waiting for matching in-game click';
       case 'delete_choices_remember':
         return 'Запомнить этот выбор';
+      case 'network_proxy_mode_label':
+        return 'Proxy mode';
+      case 'network_proxy_mode_auto':
+        return 'Automatic';
+      case 'network_proxy_mode_auto_hint':
+        return 'Use environment variables, then the enabled system proxy';
+      case 'network_proxy_mode_direct':
+        return 'Direct';
+      case 'network_proxy_mode_direct_hint':
+        return 'Disable proxy use for the app';
+      case 'network_proxy_mode_manual':
+        return 'Manual';
+      case 'network_proxy_mode_manual_hint':
+        return 'Use the server and optional credentials below';
+      case 'network_proxy_manual_hint':
+        return 'HTTP proxy server used by all public internet requests';
+      case 'network_proxy_username':
+        return 'Proxy username (optional)';
+      case 'network_proxy_password':
+        return 'Proxy password (optional)';
+      case 'storage_category_backups':
+        return 'Local backups';
+      case 'storage_entry_backups_label':
+        return ({required Object n}) => '${n} backup archive(s)';
+      case 'storage_entry_delete_backups_confirm_body':
+        return 'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+      case 'update_download_source_preference':
+        return 'Preferred download source';
+      case 'update_download_source_preference_hint':
+        return 'The selected source is tried first; unavailable sources still fall back automatically.';
+      case 'update_download_source_auto':
+        return 'Automatic (recommended)';
+      case 'update_download_source_cloudflare':
+        return 'Cloudflare mirror';
+      case 'update_download_source_github':
+        return 'GitHub direct';
+      case 'update_download_source_proxy':
+        return ({required Object host}) => 'Proxy: ${host}';
       default:
         return null;
     }
@@ -257994,10 +260218,11 @@ extension on _StringsTh {
       case 'backup_import':
         return 'นำเข้าข้อมูลสำรอง';
       case 'backup_import_confirm':
-        return (
-                {required Object date,
-                required Object bookCount,
-                required Object statsCount}) =>
+        return ({
+          required Object date,
+          required Object bookCount,
+          required Object statsCount,
+        }) =>
             'การดำเนินการนี้จะแทนที่ข้อมูลปัจจุบันทั้งหมดด้วยข้อมูลสำรองจาก ${date}\n\nหนังสือ ${bookCount} เล่ม, บันทึกสถิติ ${statsCount} รายการ\n\nแอปจะรีสตาร์ทหลังกู้คืน';
       case 'backup_import_confirm_title':
         return 'กู้คืนข้อมูลสำรอง?';
@@ -258274,12 +260499,12 @@ extension on _StringsTh {
       case 'changelog_prerelease':
         return 'เวอร์ชันก่อนเผยแพร่';
       case 'chapter_progress':
-        return (
-                {required Object idx,
-                required Object total,
-                required Object suffix,
-                required Object pct}) =>
-            'บทที่ ${idx} / ${total}${suffix} · ${pct}%';
+        return ({
+          required Object idx,
+          required Object total,
+          required Object suffix,
+          required Object pct,
+        }) => 'บทที่ ${idx} / ${total}${suffix} · ${pct}%';
       case 'clear':
         return 'ล้าง';
       case 'clear_dictionary_description':
@@ -258749,11 +260974,11 @@ extension on _StringsTh {
       case 'dict_download_language':
         return 'ภาษาของคุณ';
       case 'dict_download_partial':
-        return (
-                {required Object success,
-                required Object total,
-                required Object error}) =>
-            '${success} / ${total} สำเร็จ ล้มเหลว: ${error}';
+        return ({
+          required Object success,
+          required Object total,
+          required Object error,
+        }) => '${success} / ${total} สำเร็จ ล้มเหลว: ${error}';
       case 'dict_download_select_title':
         return 'เลือกพจนานุกรม';
       case 'dict_downloading':
@@ -258788,11 +261013,11 @@ extension on _StringsTh {
       case 'dict_update_none':
         return 'พจนานุกรมทั้งหมดเป็นเวอร์ชันล่าสุดแล้ว';
       case 'dict_update_summary':
-        return (
-                {required Object updated,
-                required Object current,
-                required Object failed}) =>
-            'อัปเดต ${updated}, ล่าสุดแล้ว ${current}, ล้มเหลว ${failed}';
+        return ({
+          required Object updated,
+          required Object current,
+          required Object failed,
+        }) => 'อัปเดต ${updated}, ล่าสุดแล้ว ${current}, ล้มเหลว ${failed}';
       case 'dict_update_tooltip':
         return 'อัปเดตพจนานุกรม';
       case 'dict_update_updating':
@@ -259623,12 +261848,12 @@ extension on _StringsTh {
       case 'game_waiting_for_text':
         return 'รอข้อความ';
       case 'game_waveform_range_label':
-        return (
-                {required Object start,
-                required Object end,
-                required Object duration,
-                required Object total}) =>
-            '${start} - ${end} (เลือก ${duration} / ทั้งหมด ${total})';
+        return ({
+          required Object start,
+          required Object end,
+          required Object duration,
+          required Object total,
+        }) => '${start} - ${end} (เลือก ${duration} / ทั้งหมด ${total})';
       case 'game_waveform_select_title':
         return 'เลือกช่วงเสียง';
       case 'game_window_bound':
@@ -262759,13 +264984,14 @@ extension on _StringsTh {
       case 'anki_dedup_report_title':
         return 'รายงานการลบไฟล์สื่อซ้ำ';
       case 'anki_dedup_report_body':
-        return (
-                {required Object groups,
-                required Object removed,
-                required Object size,
-                required Object notes,
-                required Object models,
-                required Object skipped}) =>
+        return ({
+          required Object groups,
+          required Object removed,
+          required Object size,
+          required Object notes,
+          required Object models,
+          required Object skipped,
+        }) =>
             '${groups} กลุ่มซ้ำ; ${removed} สำเนาเพิ่มเติม (${size}); ${notes} โน้ตและ ${models} ประเภทโน้ตถูกเขียนใหม่; ${skipped} ข้าม';
       case 'anki_dedup_report_dry_note':
         return 'สแกนเท่านั้น — ไม่มีการเปลี่ยนแปลง';
@@ -262783,11 +265009,11 @@ extension on _StringsTh {
         return ({required Object count, required Object size}) =>
             '${count} สำเนาเพิ่มเติม, ${size} ที่สามารถเรียกคืนได้ เก็บสำเนาหนึ่งชุดของแต่ละไฟล์และเปลี่ยนการอ้างอิงทั้งหมดไปที่ไฟล์นั้นก่อน; ไม่มีการเข้ารหัสใหม่';
       case 'anki_dedup_plan_entry':
-        return (
-                {required Object file,
-                required Object size,
-                required Object canonical}) =>
-            'ลบ ${file} (${size}) — เก็บ ${canonical}';
+        return ({
+          required Object file,
+          required Object size,
+          required Object canonical,
+        }) => 'ลบ ${file} (${size}) — เก็บ ${canonical}';
       case 'anki_dedup_plan_delete':
         return 'ลบไฟล์เหล่านี้';
       case 'anki_dedup_plan_journal':
@@ -263053,11 +265279,11 @@ extension on _StringsTh {
       case 'video_jimaku_language_unknown':
         return 'ไม่ได้ระบุภาษา';
       case 'video_jimaku_source_summary':
-        return (
-                {required Object files,
-                required Object episodes,
-                required Object languages}) =>
-            '${files} ไฟล์คำบรรยาย · ${episodes} ตอน · ${languages}';
+        return ({
+          required Object files,
+          required Object episodes,
+          required Object languages,
+        }) => '${files} ไฟล์คำบรรยาย · ${episodes} ตอน · ${languages}';
       case 'video_jimaku_episode_unlabeled':
         return ({required Object episode, required Object count}) =>
             'ไม่มีคำบรรยายที่ระบุตอน ${episode}; ${count} ไฟล์ที่ไม่ได้ระบุอาจยังตรงกัน';
@@ -263291,11 +265517,12 @@ extension on _StringsTh {
       case 'scrape_all_item':
         return ({required Object title}) => 'กำลังประมวลผล: ${title}';
       case 'scrape_all_done':
-        return (
-                {required Object applied,
-                required Object review,
-                required Object skipped,
-                required Object failed}) =>
+        return ({
+          required Object applied,
+          required Object review,
+          required Object skipped,
+          required Object failed,
+        }) =>
             'เสร็จสิ้น: ใช้แล้ว ${applied}, ต้องตรวจสอบ ${review}, ข้ามไป ${skipped}, ล้มเหลว ${failed}';
       case 'scrape_all_empty':
         return 'ไม่มีรายการที่ต้องดึงข้อมูลในไลบรารีนี้';
@@ -263755,17 +265982,18 @@ extension on _StringsTh {
       case 'video_source_scrape_write_images':
         return 'เขียนไฟล์รูปภาพ';
       case 'video_source_scrape_progress':
-        return (
-                {required Object phase,
-                required Object current,
-                required Object total}) =>
-            '${phase} · ${current}/${total}';
+        return ({
+          required Object phase,
+          required Object current,
+          required Object total,
+        }) => '${phase} · ${current}/${total}';
       case 'video_source_scrape_last_summary':
-        return (
-                {required Object status,
-                required Object succeeded,
-                required Object pending,
-                required Object failed}) =>
+        return ({
+          required Object status,
+          required Object succeeded,
+          required Object pending,
+          required Object failed,
+        }) =>
             'การดึงข้อมูลล่าสุด (${status}): สำเร็จ ${succeeded}, รอดำเนินการ ${pending}, ล้มเหลว ${failed}';
       case 'video_source_scrape_phase_planning':
         return 'กำลังวางแผน';
@@ -263969,11 +266197,11 @@ extension on _StringsTh {
       case 'migration_import_permission_grant':
         return 'ให้สิทธิ์';
       case 'migration_import_verifying':
-        return (
-                {required Object batch,
-                required Object done,
-                required Object total}) =>
-            'กำลังตรวจสอบ ${batch} (${done}/${total})';
+        return ({
+          required Object batch,
+          required Object done,
+          required Object total,
+        }) => 'กำลังตรวจสอบ ${batch} (${done}/${total})';
       case 'migration_import_verifying_hint':
         return 'กำลังตรวจสอบ checksum ของไฟล์เก็บถาวร ไลบรารีขนาดใหญ่อาจใช้เวลาหลายนาที';
       case 'game_line_copy_tooltip':
@@ -264125,11 +266353,11 @@ extension on _StringsTh {
         return ({required Object label}) =>
             'อ่านไฟล์คำบรรยายนี้ไม่ได้ (เสียหายหรือว่างเปล่า): ${label}';
       case 'dict_downloading_size':
-        return (
-                {required Object name,
-                required Object done,
-                required Object total}) =>
-            'กำลังดาวน์โหลด ${name} (${done} / ${total})';
+        return ({
+          required Object name,
+          required Object done,
+          required Object total,
+        }) => 'กำลังดาวน์โหลด ${name} (${done} / ${total})';
       case 'video_subtitle_attach_book_missing':
         return 'วิดีโอนี้ไม่อยู่ในไลบรารีของคุณ จึงไม่ได้แนบคำบรรยาย';
       case 'dict_download_hide':
@@ -264292,11 +266520,11 @@ extension on _StringsTh {
         return ({required Object n}) =>
             'โฟลเดอร์นี้มีไฟล์เล่ม ${n} ไฟล์ แต่ละไฟล์จะถูกนำเข้าเป็นหนังสือแยกตามชื่อไฟล์';
       case 'manga_import_batch_done':
-        return (
-                {required Object imported,
-                required Object skipped,
-                required Object failed}) =>
-            'นำเข้า ${imported}, ข้าม ${skipped}, ล้มเหลว ${failed}';
+        return ({
+          required Object imported,
+          required Object skipped,
+          required Object failed,
+        }) => 'นำเข้า ${imported}, ข้าม ${skipped}, ล้มเหลว ${failed}';
       case 'srt_book_reimport':
         return 'นำเข้าใหม่';
       case 'srt_book_reimport_subtitle_hint':
@@ -265177,11 +267405,11 @@ extension on _StringsTh {
       case 'manga_ocr_import_matched_nothing':
         return 'ไม่พบไฟล์โมเดลที่ใช้งานได้';
       case 'manga_ocr_import_size_mismatch':
-        return (
-                {required Object file,
-                required Object expected,
-                required Object actual}) =>
-            '${file} มีขนาดไม่ถูกต้อง: ควรเป็น ${expected} แต่ได้ ${actual}';
+        return ({
+          required Object file,
+          required Object expected,
+          required Object actual,
+        }) => '${file} มีขนาดไม่ถูกต้อง: ควรเป็น ${expected} แต่ได้ ${actual}';
       case 'manga_ocr_import_still_missing':
         return ({required Object count}) => 'ยังขาดอีก ${count} ไฟล์';
       case 'manga_ocr_import_failed':
@@ -265910,6 +268138,44 @@ extension on _StringsTh {
         return 'Waiting for matching in-game click';
       case 'delete_choices_remember':
         return 'จดจำตัวเลือกเหล่านี้';
+      case 'network_proxy_mode_label':
+        return 'Proxy mode';
+      case 'network_proxy_mode_auto':
+        return 'Automatic';
+      case 'network_proxy_mode_auto_hint':
+        return 'Use environment variables, then the enabled system proxy';
+      case 'network_proxy_mode_direct':
+        return 'Direct';
+      case 'network_proxy_mode_direct_hint':
+        return 'Disable proxy use for the app';
+      case 'network_proxy_mode_manual':
+        return 'Manual';
+      case 'network_proxy_mode_manual_hint':
+        return 'Use the server and optional credentials below';
+      case 'network_proxy_manual_hint':
+        return 'HTTP proxy server used by all public internet requests';
+      case 'network_proxy_username':
+        return 'Proxy username (optional)';
+      case 'network_proxy_password':
+        return 'Proxy password (optional)';
+      case 'storage_category_backups':
+        return 'Local backups';
+      case 'storage_entry_backups_label':
+        return ({required Object n}) => '${n} backup archive(s)';
+      case 'storage_entry_delete_backups_confirm_body':
+        return 'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+      case 'update_download_source_preference':
+        return 'Preferred download source';
+      case 'update_download_source_preference_hint':
+        return 'The selected source is tried first; unavailable sources still fall back automatically.';
+      case 'update_download_source_auto':
+        return 'Automatic (recommended)';
+      case 'update_download_source_cloudflare':
+        return 'Cloudflare mirror';
+      case 'update_download_source_github':
+        return 'GitHub direct';
+      case 'update_download_source_proxy':
+        return ({required Object host}) => 'Proxy: ${host}';
       default:
         return null;
     }
@@ -266357,10 +268623,11 @@ extension on _StringsTr {
       case 'backup_import':
         return 'Yedeği İçe Aktar';
       case 'backup_import_confirm':
-        return (
-                {required Object date,
-                required Object bookCount,
-                required Object statsCount}) =>
+        return ({
+          required Object date,
+          required Object bookCount,
+          required Object statsCount,
+        }) =>
             'Bu işlem tüm mevcut verileri ${date} tarihli yedekle değiştirir.\n\n${bookCount} kitap, ${statsCount} istatistik kaydı.\n\nGeri yüklemeden sonra uygulama yeniden başlatılacak.';
       case 'backup_import_confirm_title':
         return 'Yedek Geri Yüklensin mi?';
@@ -266640,12 +268907,12 @@ extension on _StringsTr {
       case 'changelog_prerelease':
         return 'Ön sürüm';
       case 'chapter_progress':
-        return (
-                {required Object idx,
-                required Object total,
-                required Object suffix,
-                required Object pct}) =>
-            'Bölüm ${idx} / ${total}${suffix} · ${pct}%';
+        return ({
+          required Object idx,
+          required Object total,
+          required Object suffix,
+          required Object pct,
+        }) => 'Bölüm ${idx} / ${total}${suffix} · ${pct}%';
       case 'clear':
         return 'Temizle';
       case 'clear_dictionary_description':
@@ -267115,11 +269382,11 @@ extension on _StringsTr {
       case 'dict_download_language':
         return 'Diliniz';
       case 'dict_download_partial':
-        return (
-                {required Object success,
-                required Object total,
-                required Object error}) =>
-            '${success} / ${total} tamam. Başarısız: ${error}';
+        return ({
+          required Object success,
+          required Object total,
+          required Object error,
+        }) => '${success} / ${total} tamam. Başarısız: ${error}';
       case 'dict_download_select_title':
         return 'Sözlükleri Seçin';
       case 'dict_downloading':
@@ -267154,11 +269421,11 @@ extension on _StringsTr {
       case 'dict_update_none':
         return 'Tüm sözlükler güncel.';
       case 'dict_update_summary':
-        return (
-                {required Object updated,
-                required Object current,
-                required Object failed}) =>
-            '${updated} güncellendi, ${current} güncel, ${failed} başarısız.';
+        return ({
+          required Object updated,
+          required Object current,
+          required Object failed,
+        }) => '${updated} güncellendi, ${current} güncel, ${failed} başarısız.';
       case 'dict_update_tooltip':
         return 'Sözlüğü güncelle';
       case 'dict_update_updating':
@@ -267989,12 +270256,12 @@ extension on _StringsTr {
       case 'game_waiting_for_text':
         return 'Metin bekleniyor';
       case 'game_waveform_range_label':
-        return (
-                {required Object start,
-                required Object end,
-                required Object duration,
-                required Object total}) =>
-            '${start} - ${end} (seçili ${duration} / toplam ${total})';
+        return ({
+          required Object start,
+          required Object end,
+          required Object duration,
+          required Object total,
+        }) => '${start} - ${end} (seçili ${duration} / toplam ${total})';
       case 'game_waveform_select_title':
         return 'Ses aralığı seçin';
       case 'game_window_bound':
@@ -271129,13 +273396,14 @@ extension on _StringsTr {
       case 'anki_dedup_report_title':
         return 'Medya yineleme temizleme raporu';
       case 'anki_dedup_report_body':
-        return (
-                {required Object groups,
-                required Object removed,
-                required Object size,
-                required Object notes,
-                required Object models,
-                required Object skipped}) =>
+        return ({
+          required Object groups,
+          required Object removed,
+          required Object size,
+          required Object notes,
+          required Object models,
+          required Object skipped,
+        }) =>
             '${groups} yinelenen grup; ${removed} fazla kopya (${size}); ${notes} not ve ${models} not türü yeniden yazıldı; ${skipped} atlandı.';
       case 'anki_dedup_report_dry_note':
         return 'Yalnızca tarama — hiçbir şey değiştirilmedi.';
@@ -271154,11 +273422,11 @@ extension on _StringsTr {
         return ({required Object count, required Object size}) =>
             '${count} fazla kopya, ${size} geri kazanılabilir. Her dosyanın bir kopyası korunur ve tüm referanslar önce ona yönlendirilir; hiçbir şey yeniden kodlanmaz.';
       case 'anki_dedup_plan_entry':
-        return (
-                {required Object file,
-                required Object size,
-                required Object canonical}) =>
-            '${file} (${size}) silinecek — ${canonical} korunuyor';
+        return ({
+          required Object file,
+          required Object size,
+          required Object canonical,
+        }) => '${file} (${size}) silinecek — ${canonical} korunuyor';
       case 'anki_dedup_plan_delete':
         return 'Bu dosyaları sil';
       case 'anki_dedup_plan_journal':
@@ -271425,11 +273693,11 @@ extension on _StringsTr {
       case 'video_jimaku_language_unknown':
         return 'Dil etiketlenmemiş';
       case 'video_jimaku_source_summary':
-        return (
-                {required Object files,
-                required Object episodes,
-                required Object languages}) =>
-            '${files} altyazı dosyası · ${episodes} bölüm · ${languages}';
+        return ({
+          required Object files,
+          required Object episodes,
+          required Object languages,
+        }) => '${files} altyazı dosyası · ${episodes} bölüm · ${languages}';
       case 'video_jimaku_episode_unlabeled':
         return ({required Object episode, required Object count}) =>
             '${episode} bölümü olarak etiketlenmiş altyazı yok; ${count} etiketsiz dosya yine de eşleşebilir';
@@ -271664,11 +273932,12 @@ extension on _StringsTr {
       case 'scrape_all_item':
         return ({required Object title}) => 'İşleniyor: ${title}';
       case 'scrape_all_done':
-        return (
-                {required Object applied,
-                required Object review,
-                required Object skipped,
-                required Object failed}) =>
+        return ({
+          required Object applied,
+          required Object review,
+          required Object skipped,
+          required Object failed,
+        }) =>
             'Tamamlandı: ${applied} uygulandı, ${review} inceleme gerekiyor, ${skipped} atlandı, ${failed} başarısız';
       case 'scrape_all_empty':
         return 'Bu kütüphanede taranacak öğe yok.';
@@ -272129,17 +274398,18 @@ extension on _StringsTr {
       case 'video_source_scrape_write_images':
         return 'Görsel dosyaları yaz';
       case 'video_source_scrape_progress':
-        return (
-                {required Object phase,
-                required Object current,
-                required Object total}) =>
-            '${phase} · ${current}/${total}';
+        return ({
+          required Object phase,
+          required Object current,
+          required Object total,
+        }) => '${phase} · ${current}/${total}';
       case 'video_source_scrape_last_summary':
-        return (
-                {required Object status,
-                required Object succeeded,
-                required Object pending,
-                required Object failed}) =>
+        return ({
+          required Object status,
+          required Object succeeded,
+          required Object pending,
+          required Object failed,
+        }) =>
             'Son tarama (${status}): ${succeeded} başarılı, ${pending} beklemede, ${failed} başarısız';
       case 'video_source_scrape_phase_planning':
         return 'Planlanıyor';
@@ -272343,11 +274613,11 @@ extension on _StringsTr {
       case 'migration_import_permission_grant':
         return 'İzin ver';
       case 'migration_import_verifying':
-        return (
-                {required Object batch,
-                required Object done,
-                required Object total}) =>
-            '${batch} doğrulanıyor (${done}/${total})';
+        return ({
+          required Object batch,
+          required Object done,
+          required Object total,
+        }) => '${batch} doğrulanıyor (${done}/${total})';
       case 'migration_import_verifying_hint':
         return 'Arşivler sağlama toplamıyla doğrulanıyor. Büyük kütüphaneler birkaç dakika sürebilir.';
       case 'game_line_copy_tooltip':
@@ -272499,11 +274769,11 @@ extension on _StringsTr {
         return ({required Object label}) =>
             'Bu altyazı dosyası okunamadı (hasarlı veya boş): ${label}';
       case 'dict_downloading_size':
-        return (
-                {required Object name,
-                required Object done,
-                required Object total}) =>
-            '${name} indiriliyor (${done} / ${total})';
+        return ({
+          required Object name,
+          required Object done,
+          required Object total,
+        }) => '${name} indiriliyor (${done} / ${total})';
       case 'video_subtitle_attach_book_missing':
         return 'Bu video kütüphanenizde olmadığı için altyazı eklenmedi';
       case 'dict_download_hide':
@@ -272667,10 +274937,11 @@ extension on _StringsTr {
         return ({required Object n}) =>
             'Bu klasörde ${n} cilt dosyası var; her biri dosya adıyla kendi kitabı olarak içe aktarılır.';
       case 'manga_import_batch_done':
-        return (
-                {required Object imported,
-                required Object skipped,
-                required Object failed}) =>
+        return ({
+          required Object imported,
+          required Object skipped,
+          required Object failed,
+        }) =>
             '${imported} içe aktarıldı, ${skipped} atlandı, ${failed} başarısız.';
       case 'srt_book_reimport':
         return 'Yeniden içe aktar';
@@ -273553,11 +275824,11 @@ extension on _StringsTr {
       case 'manga_ocr_import_matched_nothing':
         return 'Kullanılabilir model dosyası tanınmadı';
       case 'manga_ocr_import_size_mismatch':
-        return (
-                {required Object file,
-                required Object expected,
-                required Object actual}) =>
-            '${file} boyutu yanlış: beklenen ${expected}, gelen ${actual}';
+        return ({
+          required Object file,
+          required Object expected,
+          required Object actual,
+        }) => '${file} boyutu yanlış: beklenen ${expected}, gelen ${actual}';
       case 'manga_ocr_import_still_missing':
         return ({required Object count}) => 'Hâlâ ${count} dosya eksik';
       case 'manga_ocr_import_failed':
@@ -274287,6 +276558,44 @@ extension on _StringsTr {
         return 'Waiting for matching in-game click';
       case 'delete_choices_remember':
         return 'Bu seçimleri hatırla';
+      case 'network_proxy_mode_label':
+        return 'Proxy mode';
+      case 'network_proxy_mode_auto':
+        return 'Automatic';
+      case 'network_proxy_mode_auto_hint':
+        return 'Use environment variables, then the enabled system proxy';
+      case 'network_proxy_mode_direct':
+        return 'Direct';
+      case 'network_proxy_mode_direct_hint':
+        return 'Disable proxy use for the app';
+      case 'network_proxy_mode_manual':
+        return 'Manual';
+      case 'network_proxy_mode_manual_hint':
+        return 'Use the server and optional credentials below';
+      case 'network_proxy_manual_hint':
+        return 'HTTP proxy server used by all public internet requests';
+      case 'network_proxy_username':
+        return 'Proxy username (optional)';
+      case 'network_proxy_password':
+        return 'Proxy password (optional)';
+      case 'storage_category_backups':
+        return 'Local backups';
+      case 'storage_entry_backups_label':
+        return ({required Object n}) => '${n} backup archive(s)';
+      case 'storage_entry_delete_backups_confirm_body':
+        return 'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+      case 'update_download_source_preference':
+        return 'Preferred download source';
+      case 'update_download_source_preference_hint':
+        return 'The selected source is tried first; unavailable sources still fall back automatically.';
+      case 'update_download_source_auto':
+        return 'Automatic (recommended)';
+      case 'update_download_source_cloudflare':
+        return 'Cloudflare mirror';
+      case 'update_download_source_github':
+        return 'GitHub direct';
+      case 'update_download_source_proxy':
+        return ({required Object host}) => 'Proxy: ${host}';
       default:
         return null;
     }
@@ -274734,10 +277043,11 @@ extension on _StringsVi {
       case 'backup_import':
         return 'Nhập bản sao lưu';
       case 'backup_import_confirm':
-        return (
-                {required Object date,
-                required Object bookCount,
-                required Object statsCount}) =>
+        return ({
+          required Object date,
+          required Object bookCount,
+          required Object statsCount,
+        }) =>
             'Thao tác này sẽ thay thế toàn bộ dữ liệu hiện tại bằng bản sao lưu từ ${date}.\n\n${bookCount} sách, ${statsCount} bản ghi thống kê.\n\nỨng dụng sẽ khởi động lại sau khi khôi phục.';
       case 'backup_import_confirm_title':
         return 'Khôi phục bản sao lưu?';
@@ -275014,12 +277324,12 @@ extension on _StringsVi {
       case 'changelog_prerelease':
         return 'Phiên bản thử nghiệm';
       case 'chapter_progress':
-        return (
-                {required Object idx,
-                required Object total,
-                required Object suffix,
-                required Object pct}) =>
-            'Chương ${idx} / ${total}${suffix} · ${pct}%';
+        return ({
+          required Object idx,
+          required Object total,
+          required Object suffix,
+          required Object pct,
+        }) => 'Chương ${idx} / ${total}${suffix} · ${pct}%';
       case 'clear':
         return 'Xóa';
       case 'clear_dictionary_description':
@@ -275491,11 +277801,11 @@ extension on _StringsVi {
       case 'dict_download_language':
         return 'Ngôn ngữ';
       case 'dict_download_partial':
-        return (
-                {required Object success,
-                required Object total,
-                required Object error}) =>
-            '${success} / ${total} thành công. Thất bại: ${error}';
+        return ({
+          required Object success,
+          required Object total,
+          required Object error,
+        }) => '${success} / ${total} thành công. Thất bại: ${error}';
       case 'dict_download_select_title':
         return 'Chọn từ điển';
       case 'dict_downloading':
@@ -275530,10 +277840,11 @@ extension on _StringsVi {
       case 'dict_update_none':
         return 'Tất cả từ điển đều là mới nhất.';
       case 'dict_update_summary':
-        return (
-                {required Object updated,
-                required Object current,
-                required Object failed}) =>
+        return ({
+          required Object updated,
+          required Object current,
+          required Object failed,
+        }) =>
             '${updated} đã cập nhật, ${current} mới nhất, ${failed} thất bại.';
       case 'dict_update_tooltip':
         return 'Cập nhật từ điển';
@@ -276367,12 +278678,12 @@ extension on _StringsVi {
       case 'game_waiting_for_text':
         return 'Đang chờ văn bản';
       case 'game_waveform_range_label':
-        return (
-                {required Object start,
-                required Object end,
-                required Object duration,
-                required Object total}) =>
-            '${start} - ${end} (đã chọn ${duration} / tổng ${total})';
+        return ({
+          required Object start,
+          required Object end,
+          required Object duration,
+          required Object total,
+        }) => '${start} - ${end} (đã chọn ${duration} / tổng ${total})';
       case 'game_waveform_select_title':
         return 'Chọn phạm vi âm thanh';
       case 'game_window_bound':
@@ -279504,13 +281815,14 @@ extension on _StringsVi {
       case 'anki_dedup_report_title':
         return 'Báo cáo loại bỏ trùng lặp media';
       case 'anki_dedup_report_body':
-        return (
-                {required Object groups,
-                required Object removed,
-                required Object size,
-                required Object notes,
-                required Object models,
-                required Object skipped}) =>
+        return ({
+          required Object groups,
+          required Object removed,
+          required Object size,
+          required Object notes,
+          required Object models,
+          required Object skipped,
+        }) =>
             '${groups} nhóm trùng lặp; ${removed} bản sao thừa (${size}); ${notes} ghi chú và ${models} loại ghi chú đã viết lại; ${skipped} đã bỏ qua.';
       case 'anki_dedup_report_dry_note':
         return 'Chỉ quét - không có gì thay đổi.';
@@ -279529,11 +281841,11 @@ extension on _StringsVi {
         return ({required Object count, required Object size}) =>
             '${count} bản sao thừa, ${size} có thể thu hồi. Một bản sao của mỗi tệp được giữ lại và mọi tham chiếu được chuyển sang nó trước; không có gì bị mã hóa lại.';
       case 'anki_dedup_plan_entry':
-        return (
-                {required Object file,
-                required Object size,
-                required Object canonical}) =>
-            'Xóa ${file} (${size}) - giữ ${canonical}';
+        return ({
+          required Object file,
+          required Object size,
+          required Object canonical,
+        }) => 'Xóa ${file} (${size}) - giữ ${canonical}';
       case 'anki_dedup_plan_delete':
         return 'Xóa các tệp này';
       case 'anki_dedup_plan_journal':
@@ -279799,11 +282111,11 @@ extension on _StringsVi {
       case 'video_jimaku_language_unknown':
         return 'Ngôn ngữ không được ghi nhận';
       case 'video_jimaku_source_summary':
-        return (
-                {required Object files,
-                required Object episodes,
-                required Object languages}) =>
-            '${files} tệp phụ đề · ${episodes} tập · ${languages}';
+        return ({
+          required Object files,
+          required Object episodes,
+          required Object languages,
+        }) => '${files} tệp phụ đề · ${episodes} tập · ${languages}';
       case 'video_jimaku_episode_unlabeled':
         return ({required Object episode, required Object count}) =>
             'Không có phụ đề ghi nhãn tập ${episode}; ${count} tệp không nhãn có thể phù hợp';
@@ -280037,11 +282349,12 @@ extension on _StringsVi {
       case 'scrape_all_item':
         return ({required Object title}) => 'Đang xử lý: ${title}';
       case 'scrape_all_done':
-        return (
-                {required Object applied,
-                required Object review,
-                required Object skipped,
-                required Object failed}) =>
+        return ({
+          required Object applied,
+          required Object review,
+          required Object skipped,
+          required Object failed,
+        }) =>
             'Xong: ${applied} đã áp dụng, ${review} cần xem lại, ${skipped} bỏ qua, ${failed} thất bại';
       case 'scrape_all_empty':
         return 'Không có mục nào để quét trong thư viện này.';
@@ -280501,17 +282814,18 @@ extension on _StringsVi {
       case 'video_source_scrape_write_images':
         return 'Ghi tệp hình ảnh';
       case 'video_source_scrape_progress':
-        return (
-                {required Object phase,
-                required Object current,
-                required Object total}) =>
-            '${phase} · ${current}/${total}';
+        return ({
+          required Object phase,
+          required Object current,
+          required Object total,
+        }) => '${phase} · ${current}/${total}';
       case 'video_source_scrape_last_summary':
-        return (
-                {required Object status,
-                required Object succeeded,
-                required Object pending,
-                required Object failed}) =>
+        return ({
+          required Object status,
+          required Object succeeded,
+          required Object pending,
+          required Object failed,
+        }) =>
             'Lần quét trước (${status}): ${succeeded} thành công, ${pending} đang chờ, ${failed} thất bại';
       case 'video_source_scrape_phase_planning':
         return 'Lập kế hoạch';
@@ -280715,11 +283029,11 @@ extension on _StringsVi {
       case 'migration_import_permission_grant':
         return 'Cấp quyền';
       case 'migration_import_verifying':
-        return (
-                {required Object batch,
-                required Object done,
-                required Object total}) =>
-            'Đang xác minh ${batch} (${done}/${total})';
+        return ({
+          required Object batch,
+          required Object done,
+          required Object total,
+        }) => 'Đang xác minh ${batch} (${done}/${total})';
       case 'migration_import_verifying_hint':
         return 'Đang kiểm tra tổng kho lưu trữ. Thư viện lớn có thể mất vài phút.';
       case 'game_line_copy_tooltip':
@@ -280871,11 +283185,11 @@ extension on _StringsVi {
         return ({required Object label}) =>
             'Không thể đọc tệp phụ đề này (bị hỏng hoặc trống): ${label}';
       case 'dict_downloading_size':
-        return (
-                {required Object name,
-                required Object done,
-                required Object total}) =>
-            'Đang tải ${name} (${done} / ${total})';
+        return ({
+          required Object name,
+          required Object done,
+          required Object total,
+        }) => 'Đang tải ${name} (${done} / ${total})';
       case 'video_subtitle_attach_book_missing':
         return 'Video này không có trong thư viện, nên phụ đề không được đính kèm';
       case 'dict_download_hide':
@@ -281038,11 +283352,11 @@ extension on _StringsVi {
         return ({required Object n}) =>
             'Thư mục này chứa ${n} tệp tập; mỗi tệp được nhập thành một cuốn sách riêng, đặt tên theo tệp.';
       case 'manga_import_batch_done':
-        return (
-                {required Object imported,
-                required Object skipped,
-                required Object failed}) =>
-            'Đã nhập ${imported}, bỏ qua ${skipped}, thất bại ${failed}.';
+        return ({
+          required Object imported,
+          required Object skipped,
+          required Object failed,
+        }) => 'Đã nhập ${imported}, bỏ qua ${skipped}, thất bại ${failed}.';
       case 'srt_book_reimport':
         return 'Nhập lại';
       case 'srt_book_reimport_subtitle_hint':
@@ -281924,11 +284238,11 @@ extension on _StringsVi {
       case 'manga_ocr_import_matched_nothing':
         return 'Không nhận ra tệp mô hình nào dùng được';
       case 'manga_ocr_import_size_mismatch':
-        return (
-                {required Object file,
-                required Object expected,
-                required Object actual}) =>
-            '${file} sai kích thước: cần ${expected}, nhận ${actual}';
+        return ({
+          required Object file,
+          required Object expected,
+          required Object actual,
+        }) => '${file} sai kích thước: cần ${expected}, nhận ${actual}';
       case 'manga_ocr_import_still_missing':
         return ({required Object count}) => 'Vẫn thiếu ${count} tệp';
       case 'manga_ocr_import_failed':
@@ -282657,6 +284971,44 @@ extension on _StringsVi {
         return 'Waiting for matching in-game click';
       case 'delete_choices_remember':
         return 'Ghi nhớ các lựa chọn này';
+      case 'network_proxy_mode_label':
+        return 'Proxy mode';
+      case 'network_proxy_mode_auto':
+        return 'Automatic';
+      case 'network_proxy_mode_auto_hint':
+        return 'Use environment variables, then the enabled system proxy';
+      case 'network_proxy_mode_direct':
+        return 'Direct';
+      case 'network_proxy_mode_direct_hint':
+        return 'Disable proxy use for the app';
+      case 'network_proxy_mode_manual':
+        return 'Manual';
+      case 'network_proxy_mode_manual_hint':
+        return 'Use the server and optional credentials below';
+      case 'network_proxy_manual_hint':
+        return 'HTTP proxy server used by all public internet requests';
+      case 'network_proxy_username':
+        return 'Proxy username (optional)';
+      case 'network_proxy_password':
+        return 'Proxy password (optional)';
+      case 'storage_category_backups':
+        return 'Local backups';
+      case 'storage_entry_backups_label':
+        return ({required Object n}) => '${n} backup archive(s)';
+      case 'storage_entry_delete_backups_confirm_body':
+        return 'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+      case 'update_download_source_preference':
+        return 'Preferred download source';
+      case 'update_download_source_preference_hint':
+        return 'The selected source is tried first; unavailable sources still fall back automatically.';
+      case 'update_download_source_auto':
+        return 'Automatic (recommended)';
+      case 'update_download_source_cloudflare':
+        return 'Cloudflare mirror';
+      case 'update_download_source_github':
+        return 'GitHub direct';
+      case 'update_download_source_proxy':
+        return ({required Object host}) => 'Proxy: ${host}';
       default:
         return null;
     }
@@ -283097,10 +285449,11 @@ extension on _StringsZhCn {
       case 'backup_import':
         return '导入备份';
       case 'backup_import_confirm':
-        return (
-                {required Object date,
-                required Object bookCount,
-                required Object statsCount}) =>
+        return ({
+          required Object date,
+          required Object bookCount,
+          required Object statsCount,
+        }) =>
             '这将用 ${date} 的备份替换所有当前数据。\n\n${bookCount} 本书，${statsCount} 条统计记录。\n\n恢复后应用将重启。';
       case 'backup_import_confirm_title':
         return '恢复备份？';
@@ -283371,12 +285724,12 @@ extension on _StringsZhCn {
       case 'changelog_prerelease':
         return '预发布';
       case 'chapter_progress':
-        return (
-                {required Object idx,
-                required Object total,
-                required Object suffix,
-                required Object pct}) =>
-            '第 ${idx} / ${total} 章${suffix} · ${pct}%';
+        return ({
+          required Object idx,
+          required Object total,
+          required Object suffix,
+          required Object pct,
+        }) => '第 ${idx} / ${total} 章${suffix} · ${pct}%';
       case 'clear':
         return '清除';
       case 'clear_dictionary_description':
@@ -283846,11 +286199,11 @@ extension on _StringsZhCn {
       case 'dict_download_language':
         return '你的语言';
       case 'dict_download_partial':
-        return (
-                {required Object success,
-                required Object total,
-                required Object error}) =>
-            '成功 ${success} / ${total}。失败：${error}';
+        return ({
+          required Object success,
+          required Object total,
+          required Object error,
+        }) => '成功 ${success} / ${total}。失败：${error}';
       case 'dict_download_select_title':
         return '选择词典';
       case 'dict_downloading':
@@ -283885,11 +286238,11 @@ extension on _StringsZhCn {
       case 'dict_update_none':
         return '所有词典均为最新。';
       case 'dict_update_summary':
-        return (
-                {required Object updated,
-                required Object current,
-                required Object failed}) =>
-            '${updated} 个已更新，${current} 个最新，${failed} 个失败。';
+        return ({
+          required Object updated,
+          required Object current,
+          required Object failed,
+        }) => '${updated} 个已更新，${current} 个最新，${failed} 个失败。';
       case 'dict_update_tooltip':
         return '更新词典';
       case 'dict_update_updating':
@@ -284716,12 +287069,12 @@ extension on _StringsZhCn {
       case 'game_waiting_for_text':
         return '等待文本';
       case 'game_waveform_range_label':
-        return (
-                {required Object start,
-                required Object end,
-                required Object duration,
-                required Object total}) =>
-            '${start} - ${end}（时长 ${duration} / 共 ${total}）';
+        return ({
+          required Object start,
+          required Object end,
+          required Object duration,
+          required Object total,
+        }) => '${start} - ${end}（时长 ${duration} / 共 ${total}）';
       case 'game_waveform_select_title':
         return '选择音频范围';
       case 'game_window_bound':
@@ -287824,13 +290177,14 @@ extension on _StringsZhCn {
       case 'anki_dedup_report_title':
         return '媒体去重报告';
       case 'anki_dedup_report_body':
-        return (
-                {required Object groups,
-                required Object removed,
-                required Object size,
-                required Object notes,
-                required Object models,
-                required Object skipped}) =>
+        return ({
+          required Object groups,
+          required Object removed,
+          required Object size,
+          required Object notes,
+          required Object models,
+          required Object skipped,
+        }) =>
             '${groups} 组重复；多余副本 ${removed} 个（${size}）；改写笔记 ${notes} 张、模板 ${models} 个；跳过 ${skipped} 个。';
       case 'anki_dedup_report_dry_note':
         return '仅扫描——未做任何改动。';
@@ -287848,11 +290202,11 @@ extension on _StringsZhCn {
         return ({required Object count, required Object size}) =>
             '共 ${count} 个多余副本，可回收 ${size}。每个文件都保留一份，所有引用先改指到保留的那一份；不重新编码任何文件。';
       case 'anki_dedup_plan_entry':
-        return (
-                {required Object file,
-                required Object size,
-                required Object canonical}) =>
-            '删除 ${file}（${size}）——保留 ${canonical}';
+        return ({
+          required Object file,
+          required Object size,
+          required Object canonical,
+        }) => '删除 ${file}（${size}）——保留 ${canonical}';
       case 'anki_dedup_plan_delete':
         return '删除这些文件';
       case 'anki_dedup_plan_journal':
@@ -288116,11 +290470,11 @@ extension on _StringsZhCn {
       case 'video_jimaku_language_unknown':
         return '语言未标注';
       case 'video_jimaku_source_summary':
-        return (
-                {required Object files,
-                required Object episodes,
-                required Object languages}) =>
-            '${files} 个字幕文件 · 覆盖 ${episodes} 集 · ${languages}';
+        return ({
+          required Object files,
+          required Object episodes,
+          required Object languages,
+        }) => '${files} 个字幕文件 · 覆盖 ${episodes} 集 · ${languages}';
       case 'video_jimaku_episode_unlabeled':
         return ({required Object episode, required Object count}) =>
             '未发现标为第 ${episode} 集的字幕；另有 ${count} 个未标集号文件可尝试';
@@ -288350,11 +290704,12 @@ extension on _StringsZhCn {
       case 'scrape_all_item':
         return ({required Object title}) => '正在处理：${title}';
       case 'scrape_all_done':
-        return (
-                {required Object applied,
-                required Object review,
-                required Object skipped,
-                required Object failed}) =>
+        return ({
+          required Object applied,
+          required Object review,
+          required Object skipped,
+          required Object failed,
+        }) =>
             '完成：已应用 ${applied} 个，待手动确认 ${review} 个，已跳过 ${skipped} 个，失败 ${failed} 个';
       case 'scrape_all_empty':
         return '当前库没有可刮削的条目。';
@@ -288816,18 +291171,18 @@ extension on _StringsZhCn {
       case 'video_source_scrape_write_images':
         return '写入图片文件';
       case 'video_source_scrape_progress':
-        return (
-                {required Object phase,
-                required Object current,
-                required Object total}) =>
-            '${phase} · ${current}/${total}';
+        return ({
+          required Object phase,
+          required Object current,
+          required Object total,
+        }) => '${phase} · ${current}/${total}';
       case 'video_source_scrape_last_summary':
-        return (
-                {required Object status,
-                required Object succeeded,
-                required Object pending,
-                required Object failed}) =>
-            '上次刮削（${status}）：成功 ${succeeded}，待确认 ${pending}，失败 ${failed}';
+        return ({
+          required Object status,
+          required Object succeeded,
+          required Object pending,
+          required Object failed,
+        }) => '上次刮削（${status}）：成功 ${succeeded}，待确认 ${pending}，失败 ${failed}';
       case 'video_source_scrape_phase_planning':
         return '准备中';
       case 'video_source_scrape_phase_recognizing':
@@ -289029,11 +291384,11 @@ extension on _StringsZhCn {
       case 'migration_import_permission_grant':
         return '去授权';
       case 'migration_import_verifying':
-        return (
-                {required Object batch,
-                required Object done,
-                required Object total}) =>
-            '正在校验 ${batch}（${done}/${total}）';
+        return ({
+          required Object batch,
+          required Object done,
+          required Object total,
+        }) => '正在校验 ${batch}（${done}/${total}）';
       case 'migration_import_verifying_hint':
         return '正在核对归档校验和。库很大时需要几分钟。';
       case 'game_line_copy_tooltip':
@@ -289183,11 +291538,11 @@ extension on _StringsZhCn {
       case 'video_subtitle_read_failed':
         return ({required Object label}) => '无法读取该字幕文件（内容损坏或为空）：${label}';
       case 'dict_downloading_size':
-        return (
-                {required Object name,
-                required Object done,
-                required Object total}) =>
-            '正在下载 ${name}（${done} / ${total}）';
+        return ({
+          required Object name,
+          required Object done,
+          required Object total,
+        }) => '正在下载 ${name}（${done} / ${total}）';
       case 'video_subtitle_attach_book_missing':
         return '该视频不在视频库中，字幕没有挂上';
       case 'dict_download_hide':
@@ -289348,11 +291703,11 @@ extension on _StringsZhCn {
         return ({required Object n}) =>
             '该文件夹里有 ${n} 个整卷文件，将逐卷各导入为一本，书名取各自的文件名。';
       case 'manga_import_batch_done':
-        return (
-                {required Object imported,
-                required Object skipped,
-                required Object failed}) =>
-            '导入完成：成功 ${imported} 卷，跳过 ${skipped} 卷，失败 ${failed} 卷。';
+        return ({
+          required Object imported,
+          required Object skipped,
+          required Object failed,
+        }) => '导入完成：成功 ${imported} 卷，跳过 ${skipped} 卷，失败 ${failed} 卷。';
       case 'srt_book_reimport':
         return '重新导入';
       case 'srt_book_reimport_subtitle_hint':
@@ -290232,11 +292587,11 @@ extension on _StringsZhCn {
       case 'manga_ocr_import_matched_nothing':
         return '没有认出可用的模型文件';
       case 'manga_ocr_import_size_mismatch':
-        return (
-                {required Object file,
-                required Object expected,
-                required Object actual}) =>
-            '${file} 大小不对：应为 ${expected}，实为 ${actual}';
+        return ({
+          required Object file,
+          required Object expected,
+          required Object actual,
+        }) => '${file} 大小不对：应为 ${expected}，实为 ${actual}';
       case 'manga_ocr_import_still_missing':
         return ({required Object count}) => '还缺 ${count} 个文件';
       case 'manga_ocr_import_failed':
@@ -290958,6 +293313,44 @@ extension on _StringsZhCn {
         return '等待游戏内对应字形点击';
       case 'delete_choices_remember':
         return '记住这些选择';
+      case 'network_proxy_mode_label':
+        return '代理模式';
+      case 'network_proxy_mode_auto':
+        return '自动';
+      case 'network_proxy_mode_auto_hint':
+        return '先读取环境变量，再读取已启用的系统代理';
+      case 'network_proxy_mode_direct':
+        return '直连';
+      case 'network_proxy_mode_direct_hint':
+        return '应用不使用任何代理';
+      case 'network_proxy_mode_manual':
+        return '手动';
+      case 'network_proxy_mode_manual_hint':
+        return '使用下方服务器与可选认证信息';
+      case 'network_proxy_manual_hint':
+        return '供应用全部公网请求使用的 HTTP 代理服务器';
+      case 'network_proxy_username':
+        return '代理用户名（可选）';
+      case 'network_proxy_password':
+        return '代理密码（可选）';
+      case 'storage_category_backups':
+        return '本地备份';
+      case 'storage_entry_backups_label':
+        return ({required Object n}) => '${n} 个备份归档';
+      case 'storage_entry_delete_backups_confirm_body':
+        return '确定清除这些临时本地备份吗？请先确认需要保留的副本已经保存或分享出去。';
+      case 'update_download_source_preference':
+        return '首选下载源';
+      case 'update_download_source_preference_hint':
+        return '优先尝试所选来源；不可用时仍会自动回退到其他来源。';
+      case 'update_download_source_auto':
+        return '自动（推荐）';
+      case 'update_download_source_cloudflare':
+        return 'Cloudflare 镜像';
+      case 'update_download_source_github':
+        return 'GitHub 直连';
+      case 'update_download_source_proxy':
+        return ({required Object host}) => '代理站：${host}';
       default:
         return null;
     }
@@ -291398,10 +293791,11 @@ extension on _StringsZhHk {
       case 'backup_import':
         return '匯入備份';
       case 'backup_import_confirm':
-        return (
-                {required Object date,
-                required Object bookCount,
-                required Object statsCount}) =>
+        return ({
+          required Object date,
+          required Object bookCount,
+          required Object statsCount,
+        }) =>
             '此操作會用 ${date} 的備份取代所有目前資料。\n\n共 ${bookCount} 本書、${statsCount} 條統計記錄。\n\n還原後 App 將會重新啟動。';
       case 'backup_import_confirm_title':
         return '還原備份？';
@@ -291672,12 +294066,12 @@ extension on _StringsZhHk {
       case 'changelog_prerelease':
         return '預發布';
       case 'chapter_progress':
-        return (
-                {required Object idx,
-                required Object total,
-                required Object suffix,
-                required Object pct}) =>
-            '第 ${idx} / ${total} 章${suffix} · ${pct}%';
+        return ({
+          required Object idx,
+          required Object total,
+          required Object suffix,
+          required Object pct,
+        }) => '第 ${idx} / ${total} 章${suffix} · ${pct}%';
       case 'clear':
         return '清除';
       case 'clear_dictionary_description':
@@ -292147,11 +294541,11 @@ extension on _StringsZhHk {
       case 'dict_download_language':
         return '你的語言';
       case 'dict_download_partial':
-        return (
-                {required Object success,
-                required Object total,
-                required Object error}) =>
-            '成功 ${success} / ${total}。失敗：${error}';
+        return ({
+          required Object success,
+          required Object total,
+          required Object error,
+        }) => '成功 ${success} / ${total}。失敗：${error}';
       case 'dict_download_select_title':
         return '選擇辭典';
       case 'dict_downloading':
@@ -292186,11 +294580,11 @@ extension on _StringsZhHk {
       case 'dict_update_none':
         return '所有詞典均為最新。';
       case 'dict_update_summary':
-        return (
-                {required Object updated,
-                required Object current,
-                required Object failed}) =>
-            '${updated} 個已更新，${current} 個最新，${failed} 個失敗。';
+        return ({
+          required Object updated,
+          required Object current,
+          required Object failed,
+        }) => '${updated} 個已更新，${current} 個最新，${failed} 個失敗。';
       case 'dict_update_tooltip':
         return '更新詞典';
       case 'dict_update_updating':
@@ -293017,12 +295411,12 @@ extension on _StringsZhHk {
       case 'game_waiting_for_text':
         return '等待文本';
       case 'game_waveform_range_label':
-        return (
-                {required Object start,
-                required Object end,
-                required Object duration,
-                required Object total}) =>
-            '${start} - ${end}（時長 ${duration} / 共 ${total}）';
+        return ({
+          required Object start,
+          required Object end,
+          required Object duration,
+          required Object total,
+        }) => '${start} - ${end}（時長 ${duration} / 共 ${total}）';
       case 'game_waveform_select_title':
         return '選擇音頻範圍';
       case 'game_window_bound':
@@ -296126,13 +298520,14 @@ extension on _StringsZhHk {
       case 'anki_dedup_report_title':
         return '媒體去重報告';
       case 'anki_dedup_report_body':
-        return (
-                {required Object groups,
-                required Object removed,
-                required Object size,
-                required Object notes,
-                required Object models,
-                required Object skipped}) =>
+        return ({
+          required Object groups,
+          required Object removed,
+          required Object size,
+          required Object notes,
+          required Object models,
+          required Object skipped,
+        }) =>
             '${groups} 組重復；多餘副本 ${removed} 個（${size}）；改寫筆記 ${notes} 張、模板 ${models} 個；跳過 ${skipped} 個。';
       case 'anki_dedup_report_dry_note':
         return '僅掃描——未做任何改動。';
@@ -296150,11 +298545,11 @@ extension on _StringsZhHk {
         return ({required Object count, required Object size}) =>
             '共 ${count} 個多餘副本，可回收 ${size}。每個檔案都保留一份，所有引用先改指到保留的那一份；不重新編碼任何檔案。';
       case 'anki_dedup_plan_entry':
-        return (
-                {required Object file,
-                required Object size,
-                required Object canonical}) =>
-            '刪除 ${file}（${size}）——保留 ${canonical}';
+        return ({
+          required Object file,
+          required Object size,
+          required Object canonical,
+        }) => '刪除 ${file}（${size}）——保留 ${canonical}';
       case 'anki_dedup_plan_delete':
         return '刪除這些檔案';
       case 'anki_dedup_plan_journal':
@@ -296418,11 +298813,11 @@ extension on _StringsZhHk {
       case 'video_jimaku_language_unknown':
         return '語言未標注';
       case 'video_jimaku_source_summary':
-        return (
-                {required Object files,
-                required Object episodes,
-                required Object languages}) =>
-            '${files} 個字幕檔案 · 覆蓋 ${episodes} 集 · ${languages}';
+        return ({
+          required Object files,
+          required Object episodes,
+          required Object languages,
+        }) => '${files} 個字幕檔案 · 覆蓋 ${episodes} 集 · ${languages}';
       case 'video_jimaku_episode_unlabeled':
         return ({required Object episode, required Object count}) =>
             '未發現標為第 ${episode} 集的字幕；另有 ${count} 個未標集號檔案可嘗試';
@@ -296652,11 +299047,12 @@ extension on _StringsZhHk {
       case 'scrape_all_item':
         return ({required Object title}) => '正在處理：${title}';
       case 'scrape_all_done':
-        return (
-                {required Object applied,
-                required Object review,
-                required Object skipped,
-                required Object failed}) =>
+        return ({
+          required Object applied,
+          required Object review,
+          required Object skipped,
+          required Object failed,
+        }) =>
             '完成：已應用 ${applied} 個，待手動確認 ${review} 個，已跳過 ${skipped} 個，失敗 ${failed} 個';
       case 'scrape_all_empty':
         return '當前庫沒有可刮削的條目。';
@@ -297116,18 +299512,18 @@ extension on _StringsZhHk {
       case 'video_source_scrape_write_images':
         return '寫入圖片檔案';
       case 'video_source_scrape_progress':
-        return (
-                {required Object phase,
-                required Object current,
-                required Object total}) =>
-            '${phase} · ${current}/${total}';
+        return ({
+          required Object phase,
+          required Object current,
+          required Object total,
+        }) => '${phase} · ${current}/${total}';
       case 'video_source_scrape_last_summary':
-        return (
-                {required Object status,
-                required Object succeeded,
-                required Object pending,
-                required Object failed}) =>
-            '上次刮削（${status}）：成功 ${succeeded}，待確認 ${pending}，失敗 ${failed}';
+        return ({
+          required Object status,
+          required Object succeeded,
+          required Object pending,
+          required Object failed,
+        }) => '上次刮削（${status}）：成功 ${succeeded}，待確認 ${pending}，失敗 ${failed}';
       case 'video_source_scrape_phase_planning':
         return '準備中';
       case 'video_source_scrape_phase_recognizing':
@@ -297329,11 +299725,11 @@ extension on _StringsZhHk {
       case 'migration_import_permission_grant':
         return '去授權';
       case 'migration_import_verifying':
-        return (
-                {required Object batch,
-                required Object done,
-                required Object total}) =>
-            '正在校驗 ${batch}（${done}/${total}）';
+        return ({
+          required Object batch,
+          required Object done,
+          required Object total,
+        }) => '正在校驗 ${batch}（${done}/${total}）';
       case 'migration_import_verifying_hint':
         return '正在核對歸檔校驗和。庫很大時需要幾分鐘。';
       case 'game_line_copy_tooltip':
@@ -297483,11 +299879,11 @@ extension on _StringsZhHk {
       case 'video_subtitle_read_failed':
         return ({required Object label}) => '無法讀取該字幕檔案（內容損壞或為空）：${label}';
       case 'dict_downloading_size':
-        return (
-                {required Object name,
-                required Object done,
-                required Object total}) =>
-            '正在下載 ${name}（${done} / ${total}）';
+        return ({
+          required Object name,
+          required Object done,
+          required Object total,
+        }) => '正在下載 ${name}（${done} / ${total}）';
       case 'video_subtitle_attach_book_missing':
         return '該影片不在影片庫中，字幕沒有掛上';
       case 'dict_download_hide':
@@ -297650,11 +300046,11 @@ extension on _StringsZhHk {
         return ({required Object n}) =>
             '該資料夾裡有 ${n} 個整卷檔案，將逐卷各導入為一本，書名取各自的檔案名。';
       case 'manga_import_batch_done':
-        return (
-                {required Object imported,
-                required Object skipped,
-                required Object failed}) =>
-            '導入完成：成功 ${imported} 卷，跳過 ${skipped} 卷，失敗 ${failed} 卷。';
+        return ({
+          required Object imported,
+          required Object skipped,
+          required Object failed,
+        }) => '導入完成：成功 ${imported} 卷，跳過 ${skipped} 卷，失敗 ${failed} 卷。';
       case 'srt_book_reimport':
         return '重新導入';
       case 'srt_book_reimport_subtitle_hint':
@@ -298534,11 +300930,11 @@ extension on _StringsZhHk {
       case 'manga_ocr_import_matched_nothing':
         return '認不出可用的模型檔案';
       case 'manga_ocr_import_size_mismatch':
-        return (
-                {required Object file,
-                required Object expected,
-                required Object actual}) =>
-            '${file} 大小不符：應為 ${expected}，實為 ${actual}';
+        return ({
+          required Object file,
+          required Object expected,
+          required Object actual,
+        }) => '${file} 大小不符：應為 ${expected}，實為 ${actual}';
       case 'manga_ocr_import_still_missing':
         return ({required Object count}) => '仍欠 ${count} 個檔案';
       case 'manga_ocr_import_failed':
@@ -299260,6 +301656,44 @@ extension on _StringsZhHk {
         return 'Waiting for matching in-game click';
       case 'delete_choices_remember':
         return '記住這些選擇';
+      case 'network_proxy_mode_label':
+        return 'Proxy mode';
+      case 'network_proxy_mode_auto':
+        return 'Automatic';
+      case 'network_proxy_mode_auto_hint':
+        return 'Use environment variables, then the enabled system proxy';
+      case 'network_proxy_mode_direct':
+        return 'Direct';
+      case 'network_proxy_mode_direct_hint':
+        return 'Disable proxy use for the app';
+      case 'network_proxy_mode_manual':
+        return 'Manual';
+      case 'network_proxy_mode_manual_hint':
+        return 'Use the server and optional credentials below';
+      case 'network_proxy_manual_hint':
+        return 'HTTP proxy server used by all public internet requests';
+      case 'network_proxy_username':
+        return 'Proxy username (optional)';
+      case 'network_proxy_password':
+        return 'Proxy password (optional)';
+      case 'storage_category_backups':
+        return 'Local backups';
+      case 'storage_entry_backups_label':
+        return ({required Object n}) => '${n} backup archive(s)';
+      case 'storage_entry_delete_backups_confirm_body':
+        return 'Delete these temporary local backup archives? Make sure you have saved or shared any copy you still need.';
+      case 'update_download_source_preference':
+        return 'Preferred download source';
+      case 'update_download_source_preference_hint':
+        return 'The selected source is tried first; unavailable sources still fall back automatically.';
+      case 'update_download_source_auto':
+        return 'Automatic (recommended)';
+      case 'update_download_source_cloudflare':
+        return 'Cloudflare mirror';
+      case 'update_download_source_github':
+        return 'GitHub direct';
+      case 'update_download_source_proxy':
+        return ({required Object host}) => 'Proxy: ${host}';
       default:
         return null;
     }
