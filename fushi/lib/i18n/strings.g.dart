@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 66776 (3928 per locale)
+/// Strings: 66861 (3933 per locale)
 ///
-/// Built on 2026-08-30 at 09:27 UTC
+/// Built on 2026-08-30 at 09:35 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5360,6 +5360,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Add your own font files and pick which one each language uses.';
   String get onboarding_pack_sources_hint =>
       'Downloaded in parallel chunks from GitHub, the official site and a backup mirror at the same time, each chunk checksummed. Fushi measures the sources as it goes and gives more chunks to whichever is fastest right now, so there is nothing to choose here.';
+  String get video_setting_hdr_output => 'HDR / 10-bit output';
+  String get video_setting_hdr_output_hint =>
+      'Windows only. Auto hands HDR sources straight to an HDR display through a native video window; Always uses that window for every video (10-bit output); Off keeps the standard renderer.';
+  String get video_setting_hdr_output_auto => 'Auto';
+  String get video_setting_hdr_output_always => 'Always';
+  String get video_setting_hdr_output_off => 'Off';
   String get network_proxy_auto_hint =>
       'Applies to every internet request the app makes: updates, cloud sync, dictionaries, downloads, subtitles and metadata. Leave blank for automatic: environment variables, then the enabled system proxy. P2P (torrent) transfers connect directly unless enabled below.';
   String get network_proxy_hint =>
@@ -14479,6 +14485,17 @@ class _StringsAr extends _StringsEn {
   @override
   String get onboarding_pack_sources_hint =>
       'يُنزَّل على أجزاء متوازية من GitHub والموقع الرسمي ومرآة احتياطية في آنٍ واحد، مع التحقّق من كل جزء. يقيس Fushi سرعة المصادر أثناء العمل ويمنح الأسرع في تلك اللحظة عددًا أكبر من الأجزاء، فلا شيء تختاره هنا.';
+  @override
+  String get video_setting_hdr_output => 'إخراج HDR / ‏10 بت';
+  @override
+  String get video_setting_hdr_output_hint =>
+      'على Windows فقط. يمرّر «تلقائي» مصادر HDR مباشرةً إلى شاشة HDR عبر نافذة فيديو أصلية، ويستخدم «دائمًا» تلك النافذة لكل مقطع (إخراج 10 بت)، بينما يُبقي «إيقاف» على العارض القياسي.';
+  @override
+  String get video_setting_hdr_output_auto => 'تلقائي';
+  @override
+  String get video_setting_hdr_output_always => 'دائمًا';
+  @override
+  String get video_setting_hdr_output_off => 'إيقاف';
   @override
   String get network_proxy_auto_hint =>
       'يُطبَّق على جميع طلبات الإنترنت في التطبيق: التحديثات، والمزامنة السحابية، والقواميس، والتنزيلات، والترجمات، والبيانات الوصفية. اتركه فارغًا للوضع التلقائي: متغيرات البيئة، ثم وكيل النظام المفعّل. تتصل عمليات نقل P2P (torrent) مباشرة افتراضيًا؛ يمكنك تفعيلها بشكل منفصل أدناه.';
@@ -23817,6 +23834,17 @@ class _StringsDe extends _StringsEn {
   @override
   String get onboarding_pack_sources_hint =>
       'Wird parallel in Teilstücken gleichzeitig von GitHub, der offiziellen Website und einem Ersatz-Spiegel geladen, jedes Teilstück mit Prüfsumme. Fushi misst die Quellen währenddessen und gibt der aktuell schnellsten mehr Teilstücke – hier gibt es also nichts auszuwählen.';
+  @override
+  String get video_setting_hdr_output => 'HDR-/10-Bit-Ausgabe';
+  @override
+  String get video_setting_hdr_output_hint =>
+      'Nur Windows. „Automatisch“ reicht HDR-Quellen über ein natives Videofenster direkt an ein HDR-Display weiter; „Immer“ nutzt dieses Fenster für jedes Video (10-Bit-Ausgabe); „Aus“ behält den Standard-Renderer.';
+  @override
+  String get video_setting_hdr_output_auto => 'Automatisch';
+  @override
+  String get video_setting_hdr_output_always => 'Immer';
+  @override
+  String get video_setting_hdr_output_off => 'Aus';
   @override
   String get network_proxy_auto_hint =>
       'Gilt für alle Internetanfragen der App: Updates, Cloud-Sync, Wörterbücher, Downloads, Untertitel und Metadaten. Leer lassen für automatisch: Umgebungsvariablen, dann der aktivierte System-Proxy. P2P-(Torrent-)Übertragungen verbinden sich standardmäßig direkt und lassen sich unten separat aktivieren.';
@@ -33200,6 +33228,17 @@ class _StringsEs extends _StringsEn {
   @override
   String get onboarding_pack_sources_hint =>
       'Se descarga en fragmentos paralelos desde GitHub, el sitio oficial y un espejo de respaldo a la vez, con suma de verificación en cada fragmento. Fushi mide las fuentes sobre la marcha y da más fragmentos a la que sea más rápida en ese momento, así que aquí no hay nada que elegir.';
+  @override
+  String get video_setting_hdr_output => 'Salida HDR / 10 bits';
+  @override
+  String get video_setting_hdr_output_hint =>
+      'Solo en Windows. «Automático» entrega las fuentes HDR directamente a una pantalla HDR mediante una ventana de vídeo nativa; «Siempre» usa esa ventana para todos los vídeos (salida de 10 bits); «Desactivado» mantiene el renderizador estándar.';
+  @override
+  String get video_setting_hdr_output_auto => 'Automático';
+  @override
+  String get video_setting_hdr_output_always => 'Siempre';
+  @override
+  String get video_setting_hdr_output_off => 'Desactivado';
   @override
   String get network_proxy_auto_hint =>
       'Se aplica a todas las solicitudes de Internet de la aplicación: actualizaciones, sincronización en la nube, diccionarios, descargas, subtítulos y metadatos. Déjelo en blanco para automático: variables de entorno y, después, el proxy del sistema habilitado. Las transferencias P2P (torrent) se conectan directamente de forma predeterminada; puede activarlas por separado abajo.';
@@ -42616,6 +42655,17 @@ class _StringsFr extends _StringsEn {
   String get onboarding_pack_sources_hint =>
       'Téléchargé en morceaux parallèles depuis GitHub, le site officiel et un miroir de secours à la fois, chaque morceau vérifié par somme de contrôle. Fushi mesure les sources au fil de l’eau et donne plus de morceaux à la plus rapide du moment ; il n’y a donc rien à choisir ici.';
   @override
+  String get video_setting_hdr_output => 'Sortie HDR / 10 bits';
+  @override
+  String get video_setting_hdr_output_hint =>
+      'Windows uniquement. « Auto » transmet les sources HDR directement à un écran HDR via une fenêtre vidéo native ; « Toujours » utilise cette fenêtre pour toutes les vidéos (sortie 10 bits) ; « Désactivé » conserve le rendu standard.';
+  @override
+  String get video_setting_hdr_output_auto => 'Auto';
+  @override
+  String get video_setting_hdr_output_always => 'Toujours';
+  @override
+  String get video_setting_hdr_output_off => 'Désactivé';
+  @override
   String get network_proxy_auto_hint =>
       'S\'applique à toutes les requêtes Internet de l\'application : mises à jour, synchronisation cloud, dictionnaires, téléchargements, sous-titres et métadonnées. Laissez vide pour le mode automatique : variables d\'environnement, puis le proxy système activé. Les transferts P2P (torrent) se connectent directement par défaut ; vous pouvez les activer séparément ci-dessous.';
   @override
@@ -51856,6 +51906,17 @@ class _StringsId extends _StringsEn {
   @override
   String get onboarding_pack_sources_hint =>
       'Diunduh dalam potongan paralel dari GitHub, situs resmi, dan satu cermin cadangan sekaligus, tiap potongan diperiksa checksum-nya. Fushi mengukur kecepatan sumber sambil berjalan dan memberi lebih banyak potongan ke yang tercepat saat itu, jadi tidak ada yang perlu dipilih di sini.';
+  @override
+  String get video_setting_hdr_output => 'Keluaran HDR / 10 bit';
+  @override
+  String get video_setting_hdr_output_hint =>
+      'Hanya Windows. «Otomatis» meneruskan sumber HDR langsung ke layar HDR lewat jendela video native; «Selalu» memakai jendela itu untuk semua video (keluaran 10 bit); «Mati» tetap memakai perender standar.';
+  @override
+  String get video_setting_hdr_output_auto => 'Otomatis';
+  @override
+  String get video_setting_hdr_output_always => 'Selalu';
+  @override
+  String get video_setting_hdr_output_off => 'Mati';
   @override
   String get network_proxy_auto_hint =>
       'Berlaku untuk semua permintaan Internet aplikasi: pembaruan, sinkronisasi cloud, kamus, unduhan, subtitel, dan metadata. Kosongkan untuk otomatis: variabel lingkungan, lalu proksi sistem yang diaktifkan. Transfer P2P (torrent) terhubung langsung secara default; Anda dapat mengaktifkannya secara terpisah di bawah.';
@@ -61176,6 +61237,17 @@ class _StringsIt extends _StringsEn {
   String get onboarding_pack_sources_hint =>
       'Scaricato in spezzoni paralleli contemporaneamente da GitHub, dal sito ufficiale e da un mirror di riserva, con checksum su ogni spezzone. Fushi misura le sorgenti strada facendo e assegna più spezzoni a quella più veloce in quel momento, quindi qui non c’è nulla da scegliere.';
   @override
+  String get video_setting_hdr_output => 'Uscita HDR / 10 bit';
+  @override
+  String get video_setting_hdr_output_hint =>
+      'Solo Windows. «Automatico» passa le sorgenti HDR direttamente a uno schermo HDR tramite una finestra video nativa; «Sempre» usa quella finestra per ogni video (uscita a 10 bit); «Disattivato» mantiene il renderer standard.';
+  @override
+  String get video_setting_hdr_output_auto => 'Automatico';
+  @override
+  String get video_setting_hdr_output_always => 'Sempre';
+  @override
+  String get video_setting_hdr_output_off => 'Disattivato';
+  @override
   String get network_proxy_auto_hint =>
       'Si applica a tutte le richieste Internet dell\'app: aggiornamenti, sincronizzazione cloud, dizionari, download, sottotitoli e metadati. Lascia vuoto per la modalità automatica: variabili d\'ambiente, poi il proxy di sistema attivo. I trasferimenti P2P (torrent) si connettono direttamente per impostazione predefinita; puoi attivarli separatamente qui sotto.';
   @override
@@ -69928,6 +70000,17 @@ class _StringsJa extends _StringsEn {
   @override
   String get onboarding_pack_sources_hint =>
       'GitHub・公式サイト・予備ミラーから同時に分割ダウンロードし、各断片をチェックサムで検証します。ダウンロード中も各ソースの速度を実測し、その時点で最も速いソースに多くの断片を割り当てるため、ここで選ぶ必要はありません。';
+  @override
+  String get video_setting_hdr_output => 'HDR / 10 ビット出力';
+  @override
+  String get video_setting_hdr_output_hint =>
+      'Windows のみ。「自動」はディスプレイとソースがどちらも HDR のとき、ネイティブ動画ウィンドウ経由でそのまま HDR ディスプレイへ渡します。「常に」はすべての動画でそのウィンドウを使います（10 ビット出力）。「オフ」は標準のレンダラーのままです。';
+  @override
+  String get video_setting_hdr_output_auto => '自動';
+  @override
+  String get video_setting_hdr_output_always => '常に';
+  @override
+  String get video_setting_hdr_output_off => 'オフ';
   @override
   String get network_proxy_auto_hint =>
       'アプリのすべての通信（更新、クラウド同期、辞書、ダウンロード、字幕、メタデータ）に適用されます。空欄で自動：環境変数、次に有効なシステムプロキシを使用します。P2P（torrent）通信は既定で直接接続します。下で個別に有効化できます。';
@@ -78692,6 +78775,17 @@ class _StringsKo extends _StringsEn {
   @override
   String get onboarding_pack_sources_hint =>
       'GitHub, 공식 사이트, 예비 미러에서 동시에 조각을 나눠 내려받고 조각마다 체크섬을 확인합니다. 내려받는 동안 각 소스의 속도를 실측해 그 순간 가장 빠른 쪽에 더 많은 조각을 맡기므로, 여기서 고를 것은 없습니다.';
+  @override
+  String get video_setting_hdr_output => 'HDR / 10비트 출력';
+  @override
+  String get video_setting_hdr_output_hint =>
+      'Windows 전용. «자동»은 디스플레이와 원본이 모두 HDR일 때 네이티브 동영상 창을 통해 HDR 디스플레이로 그대로 전달합니다. «항상»은 모든 동영상에 그 창을 사용합니다(10비트 출력). «끄기»는 표준 렌더러를 유지합니다.';
+  @override
+  String get video_setting_hdr_output_auto => '자동';
+  @override
+  String get video_setting_hdr_output_always => '항상';
+  @override
+  String get video_setting_hdr_output_off => '끄기';
   @override
   String get network_proxy_auto_hint =>
       '앱의 모든 인터넷 요청(업데이트, 클라우드 동기화, 사전, 다운로드, 자막, 메타데이터)에 적용됩니다. 비워 두면 자동: 환경 변수, 그다음 활성화된 시스템 프록시를 사용합니다. P2P(토렌트) 전송은 기본적으로 직접 연결하며, 아래에서 따로 켤 수 있습니다.';
@@ -87965,6 +88059,17 @@ class _StringsNl extends _StringsEn {
   @override
   String get onboarding_pack_sources_hint =>
       'Wordt in parallelle stukken tegelijk van GitHub, de officiële site en een reservespiegel gehaald, met een checksum per stuk. Fushi meet de bronnen onderweg en geeft meer stukken aan degene die op dat moment het snelst is, dus hier valt niets te kiezen.';
+  @override
+  String get video_setting_hdr_output => 'HDR-/10-bits-uitvoer';
+  @override
+  String get video_setting_hdr_output_hint =>
+      'Alleen Windows. «Automatisch» stuurt HDR-bronnen via een native videovenster rechtstreeks naar een HDR-scherm; «Altijd» gebruikt dat venster voor elke video (10-bits uitvoer); «Uit» houdt de standaardrenderer aan.';
+  @override
+  String get video_setting_hdr_output_auto => 'Automatisch';
+  @override
+  String get video_setting_hdr_output_always => 'Altijd';
+  @override
+  String get video_setting_hdr_output_off => 'Uit';
   @override
   String get network_proxy_auto_hint =>
       'Geldt voor alle internetverzoeken van de app: updates, cloudsynchronisatie, woordenboeken, downloads, ondertitels en metadata. Laat leeg voor automatisch: omgevingsvariabelen, daarna de ingeschakelde systeemproxy. P2P-overdrachten (torrent) maken standaard rechtstreeks verbinding; je kunt ze hieronder apart inschakelen.';
@@ -97298,6 +97403,17 @@ class _StringsPtBr extends _StringsEn {
   String get onboarding_pack_sources_hint =>
       'Baixado em partes paralelas do GitHub, do site oficial e de um espelho reserva ao mesmo tempo, com checksum em cada parte. O Fushi mede as fontes durante o processo e dá mais partes para a que estiver mais rápida no momento, então não há nada a escolher aqui.';
   @override
+  String get video_setting_hdr_output => 'Saída HDR / 10 bits';
+  @override
+  String get video_setting_hdr_output_hint =>
+      'Somente no Windows. «Automático» entrega fontes HDR direto a uma tela HDR por uma janela de vídeo nativa; «Sempre» usa essa janela para todos os vídeos (saída de 10 bits); «Desligado» mantém o renderizador padrão.';
+  @override
+  String get video_setting_hdr_output_auto => 'Automático';
+  @override
+  String get video_setting_hdr_output_always => 'Sempre';
+  @override
+  String get video_setting_hdr_output_off => 'Desligado';
+  @override
   String get network_proxy_auto_hint =>
       'Aplica-se a todas as solicitações de Internet do aplicativo: atualizações, sincronização na nuvem, dicionários, downloads, legendas e metadados. Deixe em branco para automático: variáveis de ambiente e, depois, o proxy do sistema ativado. As transferências P2P (torrent) se conectam diretamente por padrão; você pode ativá-las separadamente abaixo.';
   @override
@@ -106603,6 +106719,17 @@ class _StringsRu extends _StringsEn {
   String get onboarding_pack_sources_hint =>
       'Скачивается параллельными частями одновременно с GitHub, официального сайта и резервного зеркала, каждая часть проверяется контрольной суммой. Fushi по ходу измеряет источники и отдаёт больше частей тому, кто быстрее прямо сейчас, поэтому выбирать здесь нечего.';
   @override
+  String get video_setting_hdr_output => 'Вывод HDR / 10 бит';
+  @override
+  String get video_setting_hdr_output_hint =>
+      'Только Windows. «Авто» передаёт HDR-источники прямо на HDR-дисплей через нативное окно видео; «Всегда» использует это окно для любого видео (10-битный вывод); «Выключено» оставляет обычный рендерер.';
+  @override
+  String get video_setting_hdr_output_auto => 'Авто';
+  @override
+  String get video_setting_hdr_output_always => 'Всегда';
+  @override
+  String get video_setting_hdr_output_off => 'Выключено';
+  @override
   String get network_proxy_auto_hint =>
       'Применяется ко всем интернет-запросам приложения: обновления, облачная синхронизация, словари, загрузки, субтитры и метаданные. Оставьте пустым для автоматического режима: переменные окружения, затем включённый системный прокси. P2P-передачи (torrent) по умолчанию подключаются напрямую; их можно включить отдельно ниже.';
   @override
@@ -115722,6 +115849,17 @@ class _StringsTh extends _StringsEn {
   @override
   String get onboarding_pack_sources_hint =>
       'ดาวน์โหลดแบบแบ่งส่วนขนานกันจาก GitHub เว็บไซต์ทางการ และมิเรอร์สำรองพร้อมกัน โดยตรวจสอบค่าแฮชทุกส่วน ระหว่างดาวน์โหลด Fushi จะวัดความเร็วของแต่ละแหล่งจริง แล้วแบ่งส่วนให้แหล่งที่เร็วที่สุดในขณะนั้นมากขึ้น จึงไม่มีอะไรให้เลือกตรงนี้';
+  @override
+  String get video_setting_hdr_output => 'เอาต์พุต HDR / 10 บิต';
+  @override
+  String get video_setting_hdr_output_hint =>
+      'เฉพาะ Windows «อัตโนมัติ» ส่งแหล่งภาพ HDR ตรงไปยังจอ HDR ผ่านหน้าต่างวิดีโอดั้งเดิม «เสมอ» ใช้หน้าต่างนั้นกับทุกวิดีโอ (เอาต์พุต 10 บิต) «ปิด» คงตัวเรนเดอร์มาตรฐานไว้';
+  @override
+  String get video_setting_hdr_output_auto => 'อัตโนมัติ';
+  @override
+  String get video_setting_hdr_output_always => 'เสมอ';
+  @override
+  String get video_setting_hdr_output_off => 'ปิด';
   @override
   String get network_proxy_auto_hint =>
       'ใช้กับคำขออินเทอร์เน็ตทั้งหมดของแอป: การอัปเดต การซิงค์คลาวด์ พจนานุกรม การดาวน์โหลด คำบรรยาย และข้อมูลเมตา เว้นว่างไว้เพื่อใช้อัตโนมัติ: ตัวแปรสภาพแวดล้อม จากนั้นพร็อกซีระบบที่เปิดใช้งาน การถ่ายโอน P2P (torrent) จะเชื่อมต่อโดยตรงตามค่าเริ่มต้น สามารถเปิดแยกได้ด้านล่าง';
@@ -124949,6 +125087,17 @@ class _StringsTr extends _StringsEn {
   String get onboarding_pack_sources_hint =>
       'Aynı anda GitHub’dan, resmî siteden ve bir yedek aynadan paralel parçalar hâlinde indirilir; her parça sağlama toplamıyla doğrulanır. Fushi kaynakları yol boyunca ölçer ve o an en hızlı olana daha çok parça verir, bu yüzden burada seçilecek bir şey yok.';
   @override
+  String get video_setting_hdr_output => 'HDR / 10 bit çıkış';
+  @override
+  String get video_setting_hdr_output_hint =>
+      'Yalnızca Windows. «Otomatik», HDR kaynakları yerel bir video penceresi üzerinden doğrudan HDR ekrana verir; «Her zaman» bu pencereyi tüm videolar için kullanır (10 bit çıkış); «Kapalı» standart işleyiciyi korur.';
+  @override
+  String get video_setting_hdr_output_auto => 'Otomatik';
+  @override
+  String get video_setting_hdr_output_always => 'Her zaman';
+  @override
+  String get video_setting_hdr_output_off => 'Kapalı';
+  @override
   String get network_proxy_auto_hint =>
       'Uygulamanın tüm internet isteklerine uygulanır: güncellemeler, bulut eşitleme, sözlükler, indirmeler, altyazılar ve meta veriler. Otomatik için boş bırakın: önce ortam değişkenleri, sonra etkin sistem proxy\'si. P2P (torrent) aktarımları varsayılan olarak doğrudan bağlanır; aşağıdan ayrıca etkinleştirebilirsiniz.';
   @override
@@ -134155,6 +134304,17 @@ class _StringsVi extends _StringsEn {
   String get onboarding_pack_sources_hint =>
       'Được tải song song theo từng phần, đồng thời từ GitHub, trang chính thức và một máy chủ gương dự phòng, mỗi phần đều được kiểm tra checksum. Fushi đo tốc độ các nguồn ngay trong lúc tải và giao nhiều phần hơn cho nguồn đang nhanh nhất, nên ở đây không có gì để chọn.';
   @override
+  String get video_setting_hdr_output => 'Đầu ra HDR / 10 bit';
+  @override
+  String get video_setting_hdr_output_hint =>
+      'Chỉ trên Windows. «Tự động» đưa nguồn HDR thẳng tới màn hình HDR qua một cửa sổ video gốc; «Luôn luôn» dùng cửa sổ đó cho mọi video (đầu ra 10 bit); «Tắt» giữ nguyên bộ kết xuất tiêu chuẩn.';
+  @override
+  String get video_setting_hdr_output_auto => 'Tự động';
+  @override
+  String get video_setting_hdr_output_always => 'Luôn luôn';
+  @override
+  String get video_setting_hdr_output_off => 'Tắt';
+  @override
   String get network_proxy_auto_hint =>
       'Áp dụng cho mọi yêu cầu Internet của ứng dụng: cập nhật, đồng bộ đám mây, từ điển, tải xuống, phụ đề và siêu dữ liệu. Để trống để tự động: biến môi trường, sau đó là proxy hệ thống đã bật. Truyền P2P (torrent) mặc định kết nối trực tiếp; bạn có thể bật riêng bên dưới.';
   @override
@@ -142627,6 +142787,17 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get onboarding_pack_sources_hint =>
       '同时从 GitHub、官网和备用镜像分片并发下载，每片都校验。下载过程中会实测各来源速度，哪家快就多分给哪家，所以这里不用你选。';
+  @override
+  String get video_setting_hdr_output => 'HDR / 10-bit 输出';
+  @override
+  String get video_setting_hdr_output_hint =>
+      '仅 Windows。自动：显示器开着 HDR 且片源是 HDR 时经原生视频窗口直通；始终：所有视频都走原生窗口（10-bit 输出）；关闭：沿用常规渲染。';
+  @override
+  String get video_setting_hdr_output_auto => '自动';
+  @override
+  String get video_setting_hdr_output_always => '始终';
+  @override
+  String get video_setting_hdr_output_off => '关闭';
   @override
   String get network_proxy_auto_hint =>
       '应用的全部联网请求都走这里：更新、云同步、词典、下载、字幕与元数据。留空为自动：先读环境变量，再读已启用的系统代理。P2P（torrent）传输默认直连，可在下方单独开启。';
@@ -151104,6 +151275,17 @@ class _StringsZhHk extends _StringsEn {
   String get onboarding_pack_sources_hint =>
       '同時從 GitHub、官網和備用鏡像分片並發下載，每片都校驗。下載過程中會實測各來源速度，哪家快就多分給哪家，所以這裏不用你選。';
   @override
+  String get video_setting_hdr_output => 'HDR / 10-bit 輸出';
+  @override
+  String get video_setting_hdr_output_hint =>
+      '僅 Windows。「自動」在顯示器與片源都是 HDR 時把畫面經原生影片視窗直通；「始終」對所有影片都用原生視窗（10-bit 輸出）；「關閉」沿用常規算繪。';
+  @override
+  String get video_setting_hdr_output_auto => '自動';
+  @override
+  String get video_setting_hdr_output_always => '始終';
+  @override
+  String get video_setting_hdr_output_off => '關閉';
+  @override
   String get network_proxy_auto_hint =>
       '應用程式的全部連線請求都經此處：更新、雲端同步、詞典、下載、字幕與中繼資料。留空為自動：先讀取環境變數，再讀取已啟用的系統代理。P2P（torrent）傳輸預設直連，可在下方單獨開啟。';
   @override
@@ -159168,6 +159350,16 @@ extension on _StringsEn {
         return 'Add your own font files and pick which one each language uses.';
       case 'onboarding_pack_sources_hint':
         return 'Downloaded in parallel chunks from GitHub, the official site and a backup mirror at the same time, each chunk checksummed. Fushi measures the sources as it goes and gives more chunks to whichever is fastest right now, so there is nothing to choose here.';
+      case 'video_setting_hdr_output':
+        return 'HDR / 10-bit output';
+      case 'video_setting_hdr_output_hint':
+        return 'Windows only. Auto hands HDR sources straight to an HDR display through a native video window; Always uses that window for every video (10-bit output); Off keeps the standard renderer.';
+      case 'video_setting_hdr_output_auto':
+        return 'Auto';
+      case 'video_setting_hdr_output_always':
+        return 'Always';
+      case 'video_setting_hdr_output_off':
+        return 'Off';
       case 'network_proxy_auto_hint':
         return 'Applies to every internet request the app makes: updates, cloud sync, dictionaries, downloads, subtitles and metadata. Leave blank for automatic: environment variables, then the enabled system proxy. P2P (torrent) transfers connect directly unless enabled below.';
       case 'network_proxy_hint':
@@ -167227,6 +167419,16 @@ extension on _StringsAr {
         return 'أضف ملفات خطوطك الخاصة واختر الخط الذي تستخدمه كل لغة.';
       case 'onboarding_pack_sources_hint':
         return 'يُنزَّل على أجزاء متوازية من GitHub والموقع الرسمي ومرآة احتياطية في آنٍ واحد، مع التحقّق من كل جزء. يقيس Fushi سرعة المصادر أثناء العمل ويمنح الأسرع في تلك اللحظة عددًا أكبر من الأجزاء، فلا شيء تختاره هنا.';
+      case 'video_setting_hdr_output':
+        return 'إخراج HDR / ‏10 بت';
+      case 'video_setting_hdr_output_hint':
+        return 'على Windows فقط. يمرّر «تلقائي» مصادر HDR مباشرةً إلى شاشة HDR عبر نافذة فيديو أصلية، ويستخدم «دائمًا» تلك النافذة لكل مقطع (إخراج 10 بت)، بينما يُبقي «إيقاف» على العارض القياسي.';
+      case 'video_setting_hdr_output_auto':
+        return 'تلقائي';
+      case 'video_setting_hdr_output_always':
+        return 'دائمًا';
+      case 'video_setting_hdr_output_off':
+        return 'إيقاف';
       case 'network_proxy_auto_hint':
         return 'يُطبَّق على جميع طلبات الإنترنت في التطبيق: التحديثات، والمزامنة السحابية، والقواميس، والتنزيلات، والترجمات، والبيانات الوصفية. اتركه فارغًا للوضع التلقائي: متغيرات البيئة، ثم وكيل النظام المفعّل. تتصل عمليات نقل P2P (torrent) مباشرة افتراضيًا؛ يمكنك تفعيلها بشكل منفصل أدناه.';
       case 'network_proxy_hint':
@@ -175329,6 +175531,16 @@ extension on _StringsDe {
         return 'Eigene Schriftdateien hinzufügen und festlegen, welche Schrift jede Sprache verwendet.';
       case 'onboarding_pack_sources_hint':
         return 'Wird parallel in Teilstücken gleichzeitig von GitHub, der offiziellen Website und einem Ersatz-Spiegel geladen, jedes Teilstück mit Prüfsumme. Fushi misst die Quellen währenddessen und gibt der aktuell schnellsten mehr Teilstücke – hier gibt es also nichts auszuwählen.';
+      case 'video_setting_hdr_output':
+        return 'HDR-/10-Bit-Ausgabe';
+      case 'video_setting_hdr_output_hint':
+        return 'Nur Windows. „Automatisch“ reicht HDR-Quellen über ein natives Videofenster direkt an ein HDR-Display weiter; „Immer“ nutzt dieses Fenster für jedes Video (10-Bit-Ausgabe); „Aus“ behält den Standard-Renderer.';
+      case 'video_setting_hdr_output_auto':
+        return 'Automatisch';
+      case 'video_setting_hdr_output_always':
+        return 'Immer';
+      case 'video_setting_hdr_output_off':
+        return 'Aus';
       case 'network_proxy_auto_hint':
         return 'Gilt für alle Internetanfragen der App: Updates, Cloud-Sync, Wörterbücher, Downloads, Untertitel und Metadaten. Leer lassen für automatisch: Umgebungsvariablen, dann der aktivierte System-Proxy. P2P-(Torrent-)Übertragungen verbinden sich standardmäßig direkt und lassen sich unten separat aktivieren.';
       case 'network_proxy_hint':
@@ -183423,6 +183635,16 @@ extension on _StringsEs {
         return 'Añade tus propios archivos de fuente y elige cuál usa cada idioma.';
       case 'onboarding_pack_sources_hint':
         return 'Se descarga en fragmentos paralelos desde GitHub, el sitio oficial y un espejo de respaldo a la vez, con suma de verificación en cada fragmento. Fushi mide las fuentes sobre la marcha y da más fragmentos a la que sea más rápida en ese momento, así que aquí no hay nada que elegir.';
+      case 'video_setting_hdr_output':
+        return 'Salida HDR / 10 bits';
+      case 'video_setting_hdr_output_hint':
+        return 'Solo en Windows. «Automático» entrega las fuentes HDR directamente a una pantalla HDR mediante una ventana de vídeo nativa; «Siempre» usa esa ventana para todos los vídeos (salida de 10 bits); «Desactivado» mantiene el renderizador estándar.';
+      case 'video_setting_hdr_output_auto':
+        return 'Automático';
+      case 'video_setting_hdr_output_always':
+        return 'Siempre';
+      case 'video_setting_hdr_output_off':
+        return 'Desactivado';
       case 'network_proxy_auto_hint':
         return 'Se aplica a todas las solicitudes de Internet de la aplicación: actualizaciones, sincronización en la nube, diccionarios, descargas, subtítulos y metadatos. Déjelo en blanco para automático: variables de entorno y, después, el proxy del sistema habilitado. Las transferencias P2P (torrent) se conectan directamente de forma predeterminada; puede activarlas por separado abajo.';
       case 'network_proxy_hint':
@@ -191525,6 +191747,16 @@ extension on _StringsFr {
         return 'Ajoutez vos propres fichiers de police et choisissez celle utilisée par chaque langue.';
       case 'onboarding_pack_sources_hint':
         return 'Téléchargé en morceaux parallèles depuis GitHub, le site officiel et un miroir de secours à la fois, chaque morceau vérifié par somme de contrôle. Fushi mesure les sources au fil de l’eau et donne plus de morceaux à la plus rapide du moment ; il n’y a donc rien à choisir ici.';
+      case 'video_setting_hdr_output':
+        return 'Sortie HDR / 10 bits';
+      case 'video_setting_hdr_output_hint':
+        return 'Windows uniquement. « Auto » transmet les sources HDR directement à un écran HDR via une fenêtre vidéo native ; « Toujours » utilise cette fenêtre pour toutes les vidéos (sortie 10 bits) ; « Désactivé » conserve le rendu standard.';
+      case 'video_setting_hdr_output_auto':
+        return 'Auto';
+      case 'video_setting_hdr_output_always':
+        return 'Toujours';
+      case 'video_setting_hdr_output_off':
+        return 'Désactivé';
       case 'network_proxy_auto_hint':
         return 'S\'applique à toutes les requêtes Internet de l\'application : mises à jour, synchronisation cloud, dictionnaires, téléchargements, sous-titres et métadonnées. Laissez vide pour le mode automatique : variables d\'environnement, puis le proxy système activé. Les transferts P2P (torrent) se connectent directement par défaut ; vous pouvez les activer séparément ci-dessous.';
       case 'network_proxy_hint':
@@ -199599,6 +199831,16 @@ extension on _StringsId {
         return 'Tambahkan berkas fonmu sendiri dan pilih fon yang dipakai tiap bahasa.';
       case 'onboarding_pack_sources_hint':
         return 'Diunduh dalam potongan paralel dari GitHub, situs resmi, dan satu cermin cadangan sekaligus, tiap potongan diperiksa checksum-nya. Fushi mengukur kecepatan sumber sambil berjalan dan memberi lebih banyak potongan ke yang tercepat saat itu, jadi tidak ada yang perlu dipilih di sini.';
+      case 'video_setting_hdr_output':
+        return 'Keluaran HDR / 10 bit';
+      case 'video_setting_hdr_output_hint':
+        return 'Hanya Windows. «Otomatis» meneruskan sumber HDR langsung ke layar HDR lewat jendela video native; «Selalu» memakai jendela itu untuk semua video (keluaran 10 bit); «Mati» tetap memakai perender standar.';
+      case 'video_setting_hdr_output_auto':
+        return 'Otomatis';
+      case 'video_setting_hdr_output_always':
+        return 'Selalu';
+      case 'video_setting_hdr_output_off':
+        return 'Mati';
       case 'network_proxy_auto_hint':
         return 'Berlaku untuk semua permintaan Internet aplikasi: pembaruan, sinkronisasi cloud, kamus, unduhan, subtitel, dan metadata. Kosongkan untuk otomatis: variabel lingkungan, lalu proksi sistem yang diaktifkan. Transfer P2P (torrent) terhubung langsung secara default; Anda dapat mengaktifkannya secara terpisah di bawah.';
       case 'network_proxy_hint':
@@ -207694,6 +207936,16 @@ extension on _StringsIt {
         return 'Aggiungi i tuoi file di font e scegli quale usare per ciascuna lingua.';
       case 'onboarding_pack_sources_hint':
         return 'Scaricato in spezzoni paralleli contemporaneamente da GitHub, dal sito ufficiale e da un mirror di riserva, con checksum su ogni spezzone. Fushi misura le sorgenti strada facendo e assegna più spezzoni a quella più veloce in quel momento, quindi qui non c’è nulla da scegliere.';
+      case 'video_setting_hdr_output':
+        return 'Uscita HDR / 10 bit';
+      case 'video_setting_hdr_output_hint':
+        return 'Solo Windows. «Automatico» passa le sorgenti HDR direttamente a uno schermo HDR tramite una finestra video nativa; «Sempre» usa quella finestra per ogni video (uscita a 10 bit); «Disattivato» mantiene il renderer standard.';
+      case 'video_setting_hdr_output_auto':
+        return 'Automatico';
+      case 'video_setting_hdr_output_always':
+        return 'Sempre';
+      case 'video_setting_hdr_output_off':
+        return 'Disattivato';
       case 'network_proxy_auto_hint':
         return 'Si applica a tutte le richieste Internet dell\'app: aggiornamenti, sincronizzazione cloud, dizionari, download, sottotitoli e metadati. Lascia vuoto per la modalità automatica: variabili d\'ambiente, poi il proxy di sistema attivo. I trasferimenti P2P (torrent) si connettono direttamente per impostazione predefinita; puoi attivarli separatamente qui sotto.';
       case 'network_proxy_hint':
@@ -215721,6 +215973,16 @@ extension on _StringsJa {
         return '自分のフォントファイルを追加し、言語ごとにどれを使うか指定します。';
       case 'onboarding_pack_sources_hint':
         return 'GitHub・公式サイト・予備ミラーから同時に分割ダウンロードし、各断片をチェックサムで検証します。ダウンロード中も各ソースの速度を実測し、その時点で最も速いソースに多くの断片を割り当てるため、ここで選ぶ必要はありません。';
+      case 'video_setting_hdr_output':
+        return 'HDR / 10 ビット出力';
+      case 'video_setting_hdr_output_hint':
+        return 'Windows のみ。「自動」はディスプレイとソースがどちらも HDR のとき、ネイティブ動画ウィンドウ経由でそのまま HDR ディスプレイへ渡します。「常に」はすべての動画でそのウィンドウを使います（10 ビット出力）。「オフ」は標準のレンダラーのままです。';
+      case 'video_setting_hdr_output_auto':
+        return '自動';
+      case 'video_setting_hdr_output_always':
+        return '常に';
+      case 'video_setting_hdr_output_off':
+        return 'オフ';
       case 'network_proxy_auto_hint':
         return 'アプリのすべての通信（更新、クラウド同期、辞書、ダウンロード、字幕、メタデータ）に適用されます。空欄で自動：環境変数、次に有効なシステムプロキシを使用します。P2P（torrent）通信は既定で直接接続します。下で個別に有効化できます。';
       case 'network_proxy_hint':
@@ -223750,6 +224012,16 @@ extension on _StringsKo {
         return '자신의 글꼴 파일을 추가하고 언어마다 어떤 글꼴을 쓸지 지정합니다.';
       case 'onboarding_pack_sources_hint':
         return 'GitHub, 공식 사이트, 예비 미러에서 동시에 조각을 나눠 내려받고 조각마다 체크섬을 확인합니다. 내려받는 동안 각 소스의 속도를 실측해 그 순간 가장 빠른 쪽에 더 많은 조각을 맡기므로, 여기서 고를 것은 없습니다.';
+      case 'video_setting_hdr_output':
+        return 'HDR / 10비트 출력';
+      case 'video_setting_hdr_output_hint':
+        return 'Windows 전용. «자동»은 디스플레이와 원본이 모두 HDR일 때 네이티브 동영상 창을 통해 HDR 디스플레이로 그대로 전달합니다. «항상»은 모든 동영상에 그 창을 사용합니다(10비트 출력). «끄기»는 표준 렌더러를 유지합니다.';
+      case 'video_setting_hdr_output_auto':
+        return '자동';
+      case 'video_setting_hdr_output_always':
+        return '항상';
+      case 'video_setting_hdr_output_off':
+        return '끄기';
       case 'network_proxy_auto_hint':
         return '앱의 모든 인터넷 요청(업데이트, 클라우드 동기화, 사전, 다운로드, 자막, 메타데이터)에 적용됩니다. 비워 두면 자동: 환경 변수, 그다음 활성화된 시스템 프록시를 사용합니다. P2P(토렌트) 전송은 기본적으로 직접 연결하며, 아래에서 따로 켤 수 있습니다.';
       case 'network_proxy_hint':
@@ -231839,6 +232111,16 @@ extension on _StringsNl {
         return 'Voeg je eigen lettertypebestanden toe en kies welk lettertype elke taal gebruikt.';
       case 'onboarding_pack_sources_hint':
         return 'Wordt in parallelle stukken tegelijk van GitHub, de officiële site en een reservespiegel gehaald, met een checksum per stuk. Fushi meet de bronnen onderweg en geeft meer stukken aan degene die op dat moment het snelst is, dus hier valt niets te kiezen.';
+      case 'video_setting_hdr_output':
+        return 'HDR-/10-bits-uitvoer';
+      case 'video_setting_hdr_output_hint':
+        return 'Alleen Windows. «Automatisch» stuurt HDR-bronnen via een native videovenster rechtstreeks naar een HDR-scherm; «Altijd» gebruikt dat venster voor elke video (10-bits uitvoer); «Uit» houdt de standaardrenderer aan.';
+      case 'video_setting_hdr_output_auto':
+        return 'Automatisch';
+      case 'video_setting_hdr_output_always':
+        return 'Altijd';
+      case 'video_setting_hdr_output_off':
+        return 'Uit';
       case 'network_proxy_auto_hint':
         return 'Geldt voor alle internetverzoeken van de app: updates, cloudsynchronisatie, woordenboeken, downloads, ondertitels en metadata. Laat leeg voor automatisch: omgevingsvariabelen, daarna de ingeschakelde systeemproxy. P2P-overdrachten (torrent) maken standaard rechtstreeks verbinding; je kunt ze hieronder apart inschakelen.';
       case 'network_proxy_hint':
@@ -239923,6 +240205,16 @@ extension on _StringsPtBr {
         return 'Adicione seus próprios arquivos de fonte e escolha qual cada idioma usa.';
       case 'onboarding_pack_sources_hint':
         return 'Baixado em partes paralelas do GitHub, do site oficial e de um espelho reserva ao mesmo tempo, com checksum em cada parte. O Fushi mede as fontes durante o processo e dá mais partes para a que estiver mais rápida no momento, então não há nada a escolher aqui.';
+      case 'video_setting_hdr_output':
+        return 'Saída HDR / 10 bits';
+      case 'video_setting_hdr_output_hint':
+        return 'Somente no Windows. «Automático» entrega fontes HDR direto a uma tela HDR por uma janela de vídeo nativa; «Sempre» usa essa janela para todos os vídeos (saída de 10 bits); «Desligado» mantém o renderizador padrão.';
+      case 'video_setting_hdr_output_auto':
+        return 'Automático';
+      case 'video_setting_hdr_output_always':
+        return 'Sempre';
+      case 'video_setting_hdr_output_off':
+        return 'Desligado';
       case 'network_proxy_auto_hint':
         return 'Aplica-se a todas as solicitações de Internet do aplicativo: atualizações, sincronização na nuvem, dicionários, downloads, legendas e metadados. Deixe em branco para automático: variáveis de ambiente e, depois, o proxy do sistema ativado. As transferências P2P (torrent) se conectam diretamente por padrão; você pode ativá-las separadamente abaixo.';
       case 'network_proxy_hint':
@@ -248013,6 +248305,16 @@ extension on _StringsRu {
         return 'Добавьте свои файлы шрифтов и выберите, какой из них использует каждый язык.';
       case 'onboarding_pack_sources_hint':
         return 'Скачивается параллельными частями одновременно с GitHub, официального сайта и резервного зеркала, каждая часть проверяется контрольной суммой. Fushi по ходу измеряет источники и отдаёт больше частей тому, кто быстрее прямо сейчас, поэтому выбирать здесь нечего.';
+      case 'video_setting_hdr_output':
+        return 'Вывод HDR / 10 бит';
+      case 'video_setting_hdr_output_hint':
+        return 'Только Windows. «Авто» передаёт HDR-источники прямо на HDR-дисплей через нативное окно видео; «Всегда» использует это окно для любого видео (10-битный вывод); «Выключено» оставляет обычный рендерер.';
+      case 'video_setting_hdr_output_auto':
+        return 'Авто';
+      case 'video_setting_hdr_output_always':
+        return 'Всегда';
+      case 'video_setting_hdr_output_off':
+        return 'Выключено';
       case 'network_proxy_auto_hint':
         return 'Применяется ко всем интернет-запросам приложения: обновления, облачная синхронизация, словари, загрузки, субтитры и метаданные. Оставьте пустым для автоматического режима: переменные окружения, затем включённый системный прокси. P2P-передачи (torrent) по умолчанию подключаются напрямую; их можно включить отдельно ниже.';
       case 'network_proxy_hint':
@@ -256076,6 +256378,16 @@ extension on _StringsTh {
         return 'เพิ่มไฟล์ฟอนต์ของคุณเอง แล้วเลือกว่าภาษาไหนใช้ฟอนต์ใด';
       case 'onboarding_pack_sources_hint':
         return 'ดาวน์โหลดแบบแบ่งส่วนขนานกันจาก GitHub เว็บไซต์ทางการ และมิเรอร์สำรองพร้อมกัน โดยตรวจสอบค่าแฮชทุกส่วน ระหว่างดาวน์โหลด Fushi จะวัดความเร็วของแต่ละแหล่งจริง แล้วแบ่งส่วนให้แหล่งที่เร็วที่สุดในขณะนั้นมากขึ้น จึงไม่มีอะไรให้เลือกตรงนี้';
+      case 'video_setting_hdr_output':
+        return 'เอาต์พุต HDR / 10 บิต';
+      case 'video_setting_hdr_output_hint':
+        return 'เฉพาะ Windows «อัตโนมัติ» ส่งแหล่งภาพ HDR ตรงไปยังจอ HDR ผ่านหน้าต่างวิดีโอดั้งเดิม «เสมอ» ใช้หน้าต่างนั้นกับทุกวิดีโอ (เอาต์พุต 10 บิต) «ปิด» คงตัวเรนเดอร์มาตรฐานไว้';
+      case 'video_setting_hdr_output_auto':
+        return 'อัตโนมัติ';
+      case 'video_setting_hdr_output_always':
+        return 'เสมอ';
+      case 'video_setting_hdr_output_off':
+        return 'ปิด';
       case 'network_proxy_auto_hint':
         return 'ใช้กับคำขออินเทอร์เน็ตทั้งหมดของแอป: การอัปเดต การซิงค์คลาวด์ พจนานุกรม การดาวน์โหลด คำบรรยาย และข้อมูลเมตา เว้นว่างไว้เพื่อใช้อัตโนมัติ: ตัวแปรสภาพแวดล้อม จากนั้นพร็อกซีระบบที่เปิดใช้งาน การถ่ายโอน P2P (torrent) จะเชื่อมต่อโดยตรงตามค่าเริ่มต้น สามารถเปิดแยกได้ด้านล่าง';
       case 'network_proxy_hint':
@@ -264155,6 +264467,16 @@ extension on _StringsTr {
         return 'Kendi yazı tipi dosyalarını ekle ve her dilin hangisini kullanacağını seç.';
       case 'onboarding_pack_sources_hint':
         return 'Aynı anda GitHub’dan, resmî siteden ve bir yedek aynadan paralel parçalar hâlinde indirilir; her parça sağlama toplamıyla doğrulanır. Fushi kaynakları yol boyunca ölçer ve o an en hızlı olana daha çok parça verir, bu yüzden burada seçilecek bir şey yok.';
+      case 'video_setting_hdr_output':
+        return 'HDR / 10 bit çıkış';
+      case 'video_setting_hdr_output_hint':
+        return 'Yalnızca Windows. «Otomatik», HDR kaynakları yerel bir video penceresi üzerinden doğrudan HDR ekrana verir; «Her zaman» bu pencereyi tüm videolar için kullanır (10 bit çıkış); «Kapalı» standart işleyiciyi korur.';
+      case 'video_setting_hdr_output_auto':
+        return 'Otomatik';
+      case 'video_setting_hdr_output_always':
+        return 'Her zaman';
+      case 'video_setting_hdr_output_off':
+        return 'Kapalı';
       case 'network_proxy_auto_hint':
         return 'Uygulamanın tüm internet isteklerine uygulanır: güncellemeler, bulut eşitleme, sözlükler, indirmeler, altyazılar ve meta veriler. Otomatik için boş bırakın: önce ortam değişkenleri, sonra etkin sistem proxy\'si. P2P (torrent) aktarımları varsayılan olarak doğrudan bağlanır; aşağıdan ayrıca etkinleştirebilirsiniz.';
       case 'network_proxy_hint':
@@ -272227,6 +272549,16 @@ extension on _StringsVi {
         return 'Thêm tệp phông chữ của riêng bạn và chọn phông cho từng ngôn ngữ.';
       case 'onboarding_pack_sources_hint':
         return 'Được tải song song theo từng phần, đồng thời từ GitHub, trang chính thức và một máy chủ gương dự phòng, mỗi phần đều được kiểm tra checksum. Fushi đo tốc độ các nguồn ngay trong lúc tải và giao nhiều phần hơn cho nguồn đang nhanh nhất, nên ở đây không có gì để chọn.';
+      case 'video_setting_hdr_output':
+        return 'Đầu ra HDR / 10 bit';
+      case 'video_setting_hdr_output_hint':
+        return 'Chỉ trên Windows. «Tự động» đưa nguồn HDR thẳng tới màn hình HDR qua một cửa sổ video gốc; «Luôn luôn» dùng cửa sổ đó cho mọi video (đầu ra 10 bit); «Tắt» giữ nguyên bộ kết xuất tiêu chuẩn.';
+      case 'video_setting_hdr_output_auto':
+        return 'Tự động';
+      case 'video_setting_hdr_output_always':
+        return 'Luôn luôn';
+      case 'video_setting_hdr_output_off':
+        return 'Tắt';
       case 'network_proxy_auto_hint':
         return 'Áp dụng cho mọi yêu cầu Internet của ứng dụng: cập nhật, đồng bộ đám mây, từ điển, tải xuống, phụ đề và siêu dữ liệu. Để trống để tự động: biến môi trường, sau đó là proxy hệ thống đã bật. Truyền P2P (torrent) mặc định kết nối trực tiếp; bạn có thể bật riêng bên dưới.';
       case 'network_proxy_hint':
@@ -280232,6 +280564,16 @@ extension on _StringsZhCn {
         return '导入自己的字体文件，并给每种语言指定用哪个。';
       case 'onboarding_pack_sources_hint':
         return '同时从 GitHub、官网和备用镜像分片并发下载，每片都校验。下载过程中会实测各来源速度，哪家快就多分给哪家，所以这里不用你选。';
+      case 'video_setting_hdr_output':
+        return 'HDR / 10-bit 输出';
+      case 'video_setting_hdr_output_hint':
+        return '仅 Windows。自动：显示器开着 HDR 且片源是 HDR 时经原生视频窗口直通；始终：所有视频都走原生窗口（10-bit 输出）；关闭：沿用常规渲染。';
+      case 'video_setting_hdr_output_auto':
+        return '自动';
+      case 'video_setting_hdr_output_always':
+        return '始终';
+      case 'video_setting_hdr_output_off':
+        return '关闭';
       case 'network_proxy_auto_hint':
         return '应用的全部联网请求都走这里：更新、云同步、词典、下载、字幕与元数据。留空为自动：先读环境变量，再读已启用的系统代理。P2P（torrent）传输默认直连，可在下方单独开启。';
       case 'network_proxy_hint':
@@ -288238,6 +288580,16 @@ extension on _StringsZhHk {
         return '匯入自己的字型檔案，並給每種語言指定用哪個。';
       case 'onboarding_pack_sources_hint':
         return '同時從 GitHub、官網和備用鏡像分片並發下載，每片都校驗。下載過程中會實測各來源速度，哪家快就多分給哪家，所以這裏不用你選。';
+      case 'video_setting_hdr_output':
+        return 'HDR / 10-bit 輸出';
+      case 'video_setting_hdr_output_hint':
+        return '僅 Windows。「自動」在顯示器與片源都是 HDR 時把畫面經原生影片視窗直通；「始終」對所有影片都用原生視窗（10-bit 輸出）；「關閉」沿用常規算繪。';
+      case 'video_setting_hdr_output_auto':
+        return '自動';
+      case 'video_setting_hdr_output_always':
+        return '始終';
+      case 'video_setting_hdr_output_off':
+        return '關閉';
       case 'network_proxy_auto_hint':
         return '應用程式的全部連線請求都經此處：更新、雲端同步、詞典、下載、字幕與中繼資料。留空為自動：先讀取環境變數，再讀取已啟用的系統代理。P2P（torrent）傳輸預設直連，可在下方單獨開啟。';
       case 'network_proxy_hint':
