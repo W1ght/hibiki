@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 65484 (3852 per locale)
+/// Strings: 67201 (3953 per locale)
 ///
-/// Built on 2026-08-29 at 09:08 UTC
+/// Built on 2026-08-30 at 09:38 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5027,10 +5027,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Advanced: use AnkiConnect on this device';
   String get onboarding_anki_mobile_ankiconnect_hint =>
       'This device can also create cards into Anki running on a computer in the same network: enable AnkiConnect in card creation settings and enter the computer address.';
-  String get onboarding_anki_fsrs_title => 'Switch Anki to FSRS';
-  String get onboarding_anki_fsrs_body =>
-      'Anki ships with FSRS, a far better scheduler than the 30-year-old SM-2 default: better retention with fewer reviews. In Anki, open deck options and turn on FSRS (one switch covers the whole collection). This must be done inside Anki itself.';
-  String get onboarding_step_pack_browser_action => 'Download in browser';
   String get onboarding_anki_setup_android_hint =>
       'Install AnkiDroid and open it once to finish its first-run setup. Back in Fushi, tap Allow on the permission dialog that pops up with your first card - no AnkiDroid settings to change.';
   String get onboarding_anki_install_addon_action =>
@@ -5225,6 +5221,164 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Could not delete ${n} local file(s); they may still be in use';
   String batch_hidden_by_filter_note({required Object n}) =>
       'Another ${n} selected item(s) are hidden by the current filter and will not be affected.';
+  String get download_direct_queue_section => 'Direct downloads';
+  String get download_task_kind_all => 'All types';
+  String get download_task_kind_filter => 'Filter by type';
+  String get manga_online_series_empty => 'No volumes in this series.';
+  String sync_peer_book_delete_confirm({required Object name}) =>
+      'Delete "${name}" from the peer device? Its files and reading progress there are removed for good, and this device has no copy. This cannot be undone.';
+  String sync_peer_video_delete_confirm({required Object name}) =>
+      'Remove "${name}" from the peer device\'s library? The peer\'s own imported video file is kept. This cannot be undone.';
+  String get storage_entry_delete_files_confirm_body =>
+      'This deletes it from disk right away. Nothing in your library references it - it is cached, exported or re-downloadable data.';
+  String get manga_series_refresh => 'Refresh chapters';
+  String get manga_series_refresh_failed => 'Could not refresh from the source';
+  String get manga_series_source_disabled =>
+      'This source is not installed or is disabled';
+  String get manga_series_platform_unsupported =>
+      'This source runtime is unavailable on this platform';
+  String get manga_series_offline_hint =>
+      'Showing the chapters saved on this device';
+  String get manga_series_no_chapters => 'No chapters yet';
+  String get manga_series_all_read => 'Every chapter has been read';
+  String get manga_series_sort_newest => 'Newest first';
+  String get manga_series_sort_oldest => 'Oldest first';
+  String get manga_series_unread_only => 'Unread only';
+  String get manga_series_mark_read => 'Mark as read';
+  String get manga_series_mark_unread => 'Mark as unread';
+  String get manga_series_mark_previous_read => 'Mark this and earlier as read';
+  String get manga_series_local_volume => 'Local volume';
+  String get manga_series_volume_info => 'Volume';
+  String get manga_series_page_count => 'Pages';
+  String get manga_series_chapters_action => 'Chapters';
+  String get manga_series_next_chapter => 'Next chapter';
+  String get manga_series_previous_chapter => 'Previous chapter';
+  String get manga_series_last_chapter_reached => 'This is the newest chapter';
+  String get manga_series_first_chapter_reached => 'This is the first chapter';
+  String get manga_series_open_series => 'Series page';
+  String manga_series_read_progress(
+          {required Object page, required Object total}) =>
+      'Read to page ${page} of ${total}';
+  String manga_series_read_progress_partial({required Object page}) =>
+      'Read to page ${page}';
+  String mihon_store_extension_count({required Object count}) =>
+      '${count} extensions';
+  String mihon_extension_sources_more({required Object count}) =>
+      'Show all ${count} sources';
+  String get mihon_extension_sources_less => 'Show fewer sources';
+  String get options_website => 'Visit the official website';
+  String get video_setting_mpv_group_hdr => 'HDR';
+  String get video_setting_hdr_tone_mapping => 'HDR tone mapping';
+  String get video_setting_hdr_tone_mapping_hint =>
+      'Curve used when an HDR source has to be squeezed onto an SDR display. Auto lets mpv pick per source.';
+  String get video_setting_hdr_compute_peak => 'Dynamic peak detection';
+  String get video_setting_hdr_compute_peak_hint =>
+      'Measure each frame\'s real peak brightness instead of trusting the stream metadata. Better highlights, costs some GPU.';
+  String get video_setting_hdr_auto => 'Auto';
+  String get video_setting_hdr_on => 'On';
+  String get video_setting_hdr_off => 'Off';
+  String get video_discovery_cancel_downloads_title => 'Cancel downloads?';
+  String video_discovery_cancel_downloads_body({required Object n}) =>
+      '${n} download task(s) for this title will be stopped. Downloaded pieces stay on disk; you can start the download again later.';
+  String get video_discovery_cancel_downloads_failed =>
+      'Could not cancel the download. The task may have already finished, or the download backend is unavailable.';
+  String get gal_hook_click_lookup => 'Tap a word to look it up';
+  String get gal_hook_click_lookup_hint =>
+      'Off means clicks on the caption never trigger a lookup — useful with click-through on, when you would rather not hit a word by accident.';
+  String get gal_hook_lookup_trigger => 'Lookup trigger';
+  String get gal_hook_lookup_trigger_hint =>
+      'Which mouse button looks up the word under the pointer. Independent of the switch above: you can turn tap-lookup off and still look up with a side button.';
+  String get gal_hook_lookup_trigger_left => 'Left click';
+  String get gal_hook_lookup_trigger_middle => 'Middle click';
+  String get gal_hook_lookup_trigger_side => 'Side button';
+  String get gal_hook_toolbar_auto_hide => 'Auto-hide the toolbar';
+  String get gal_hook_toolbar_auto_hide_hint =>
+      'Hide the toolbar until the pointer reaches the caption box, LunaHook style. Hidden means really hidden — those pixels go back to the game.';
+  String get gal_hook_passthrough_blocks_mouse =>
+      'Caption still catches clicks while clicking through';
+  String get gal_hook_passthrough_blocks_mouse_hint =>
+      'On: text lines still take clicks so you can tap a word. Off: the whole overlay is transparent to the mouse — you can click whatever is underneath, but tapping words no longer works.';
+  String get floating_lyric_topmost => 'Keep on top';
+  String get gal_hook_fold_progressive_lines => 'Merge split dialogue lines';
+  String get gal_hook_fold_progressive_lines_hint =>
+      'Some engines redraw the whole line on every click, so one line is captured several times. Fold those snapshots into a single line.';
+  String get gal_hook_ingame_lookup_engine_unsupported =>
+      'This game engine has no in-game lookup sensor yet';
+  String get gal_hook_ingame_lookup_version_unsupported =>
+      'This game version is not on the supported list yet';
+  String get gal_hook_ingame_lookup_exe_hash_copy =>
+      'Copy game executable SHA-256';
+  String get gal_hook_ingame_lookup_exe_hash_unavailable =>
+      'Could not read the game executable';
+  String get gal_hook_ingame_lookup_exe_hash_copied =>
+      'Executable SHA-256 copied';
+  String get download_tracker_section => 'Tracker subscription';
+  String get download_tracker_auto_add =>
+      'Automatically add subscription trackers to new downloads';
+  String get download_tracker_auto_add_hint =>
+      'The list is cached for 6 hours. A subscription failure will not block the download.';
+  String get download_tracker_url => 'Subscription URL';
+  String get download_tracker_refresh => 'Fetch trackers';
+  String get download_tracker_preview_empty =>
+      'Fetch the subscription to preview supported HTTP, HTTPS, and UDP trackers.';
+  String download_tracker_preview_count({required Object count}) =>
+      'Fetched ${count} trackers';
+  String download_tracker_fetch_failed({required Object message}) =>
+      'Could not fetch trackers: ${message}';
+  String get anki_connect_port_auto_fix => 'Switch to a free port';
+  String get anki_connect_port_auto_fix_hint =>
+      'Picks a free port and writes it to both Hibiki and the AnkiConnect add-on config. Restart Anki to apply.';
+  String anki_connect_port_auto_fix_done({required Object port}) =>
+      'Switched AnkiConnect to port ${port}. Restart Anki to apply.';
+  String anki_connect_port_auto_fix_manual({required Object port}) =>
+      'Hibiki now uses port ${port}, but the AnkiConnect add-on config was not found. Set webBindPort to ${port} in Anki (Tools -> Add-ons -> AnkiConnect -> Config), then restart Anki.';
+  String get anki_connect_port_auto_fix_none =>
+      'No free port found on this machine.';
+  String get onboarding_action_badge_required => 'Required';
+  String get onboarding_action_badge_recommended => 'Recommended';
+  String get onboarding_action_badge_optional => 'Optional';
+  String get onboarding_pack_action_download_desc =>
+      'Downloads the whole pack in the background, then imports it. Cancel anytime; it resumes from where it stopped.';
+  String get onboarding_pack_action_import_existing_desc =>
+      'The pack is already downloaded; this imports it. Choose Merge in the confirmation dialog and your existing data is left alone.';
+  String get onboarding_pack_action_pick_desc =>
+      'Already got the pack zip from somewhere else? Import it from disk and skip the download entirely.';
+  String get onboarding_pack_action_website =>
+      'Open the download page on the website';
+  String get onboarding_pack_action_website_desc =>
+      'Opens the official site in your browser. Its pack section lists chunk links you can feed to a download manager; come back afterwards and use Choose a local pack file to import what you got.';
+  String get onboarding_pack_action_dictionary_desc =>
+      'Learning a language other than Japanese? Skip the pack and import dictionaries for your own language here instead.';
+  String get onboarding_pack_action_audio_desc =>
+      'Where pronunciation audio comes from. The pack already covers Japanese and English; add online sources here for other languages.';
+  String get onboarding_anki_action_test_desc =>
+      'Checks that Fushi can reach Anki and loads your decks and note types. Nothing is created yet.';
+  String get onboarding_anki_action_refresh_desc =>
+      'Reloads decks and note types from Anki. Use it after creating a new deck inside Anki.';
+  String get onboarding_anki_action_get_ankidroid_desc =>
+      'Opens the store page for AnkiDroid. Fushi writes its cards into it, so it has to be installed first.';
+  String get onboarding_anki_action_get_anki_desc =>
+      'Opens the Anki download page. Install Anki and keep it running while you make cards.';
+  String get onboarding_anki_action_install_addon_desc =>
+      'Unpacks the bundled AnkiConnect add-on into Anki for you, which is what lets Fushi talk to it. Restart Anki afterwards.';
+  String get onboarding_step_anki_action_desc =>
+      'Card template, field mapping, screenshots and audio: the details of what a created card looks like. The deck and note type above are enough to start, so open this only if you want to change how cards are built.';
+  String get onboarding_step_backup_action_desc =>
+      'Choose a backup backend and sign in, so your library survives a lost or replaced device.';
+  String get onboarding_step_interconnect_action_desc =>
+      'Pair this device with your other devices to share one library and keep progress in sync.';
+  String get onboarding_step_extension_action_desc =>
+      'Shows how to install the browser extension and connect it to Fushi, so you can look words up on web pages too.';
+  String get onboarding_step_fonts_action_desc =>
+      'Add your own font files and pick which one each language uses.';
+  String get onboarding_pack_sources_hint =>
+      'Downloaded in parallel chunks from GitHub, the official site and a backup mirror at the same time, each chunk checksummed. Fushi measures the sources as it goes and gives more chunks to whichever is fastest right now, so there is nothing to choose here.';
+  String get video_setting_hdr_output => 'HDR / 10-bit output';
+  String get video_setting_hdr_output_hint =>
+      'Windows only. Auto hands HDR sources straight to an HDR display through a native video window; Always uses that window for every video (10-bit output); Off keeps the standard renderer.';
+  String get video_setting_hdr_output_auto => 'Auto';
+  String get video_setting_hdr_output_always => 'Always';
+  String get video_setting_hdr_output_off => 'Off';
   String get video_ajatt_settings_hint =>
       'Free Japanese subtitle archive (kitsunekko mirror). No account needed; subtitle files download from GitHub.';
   String get video_ajatt_enabled_hint =>
@@ -13812,13 +13966,6 @@ class _StringsAr extends _StringsEn {
   String get onboarding_anki_mobile_ankiconnect_hint =>
       'يمكن لهذا الجهاز أيضاً إنشاء بطاقات في Anki على جهاز كمبيوتر في نفس الشبكة: فعّل AnkiConnect في إعدادات إنشاء البطاقات وأدخل عنوان الكمبيوتر.';
   @override
-  String get onboarding_anki_fsrs_title => 'تبديل Anki إلى FSRS';
-  @override
-  String get onboarding_anki_fsrs_body =>
-      'يأتي Anki مع FSRS، وهو مُجدوِل أفضل بكثير من SM-2 الافتراضي القديم: حفظ أفضل بمراجعات أقل. في Anki، افتح خيارات المجموعة وفعّل FSRS (مفتاح واحد يغطي المجموعة بالكامل). يجب فعل ذلك من داخل Anki نفسه.';
-  @override
-  String get onboarding_step_pack_browser_action => 'تحميل في المتصفح';
-  @override
   String get onboarding_anki_setup_android_hint =>
       'ثبّت AnkiDroid وافتحه مرة واحدة لإكمال الإعداد الأولي. عُد إلى Fushi واضغط على السماح في نافذة الإذن التي تظهر مع أول بطاقة - لا حاجة لتغيير إعدادات AnkiDroid.';
   @override
@@ -14137,6 +14284,267 @@ class _StringsAr extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       'هناك ${n} عنصر محدد مخفي بواسطة عامل التصفية الحالي ولن تتم معالجته.';
+  @override
+  String get download_direct_queue_section => 'Direct downloads';
+  @override
+  String get download_task_kind_all => 'All types';
+  @override
+  String get download_task_kind_filter => 'Filter by type';
+  @override
+  String get manga_online_series_empty => 'لا توجد مجلدات في هذه السلسلة.';
+  @override
+  String sync_peer_book_delete_confirm({required Object name}) =>
+      'هل تريد حذف "${name}" من الجهاز النظير؟ ستُحذف ملفاته وتقدّم القراءة هناك نهائيًا، ولا توجد نسخة على هذا الجهاز. لا يمكن التراجع عن هذا الإجراء.';
+  @override
+  String sync_peer_video_delete_confirm({required Object name}) =>
+      'هل تريد إزالة "${name}" من مكتبة الجهاز النظير؟ سيبقى ملف الفيديو الذي استورده النظير بنفسه. لا يمكن التراجع عن هذا الإجراء.';
+  @override
+  String get storage_entry_delete_files_confirm_body =>
+      'سيُحذف من القرص فورًا. لا يشير إليه أي عنصر في مكتبتك — فهذه بيانات مؤقتة أو مُصدَّرة أو يمكن تنزيلها من جديد.';
+  @override
+  String get manga_series_refresh => 'تحديث الفصول';
+  @override
+  String get manga_series_refresh_failed => 'تعذّر التحديث من المصدر';
+  @override
+  String get manga_series_source_disabled => 'هذا المصدر غير مثبَّت أو معطَّل';
+  @override
+  String get manga_series_platform_unsupported =>
+      'هذا المصدر غير متاح على هذه المنصة';
+  @override
+  String get manga_series_offline_hint =>
+      'يتم عرض الفصول المحفوظة على هذا الجهاز';
+  @override
+  String get manga_series_no_chapters => 'لا توجد فصول بعد';
+  @override
+  String get manga_series_all_read => 'تمت قراءة جميع الفصول';
+  @override
+  String get manga_series_sort_newest => 'الأحدث أولاً';
+  @override
+  String get manga_series_sort_oldest => 'الأقدم أولاً';
+  @override
+  String get manga_series_unread_only => 'غير المقروءة فقط';
+  @override
+  String get manga_series_mark_read => 'تعليم كمقروء';
+  @override
+  String get manga_series_mark_unread => 'تعليم كغير مقروء';
+  @override
+  String get manga_series_mark_previous_read =>
+      'تعليم هذا الفصل وما قبله كمقروء';
+  @override
+  String get manga_series_local_volume => 'مجلد محلي';
+  @override
+  String get manga_series_volume_info => 'المجلد';
+  @override
+  String get manga_series_page_count => 'الصفحات';
+  @override
+  String get manga_series_chapters_action => 'الفصول';
+  @override
+  String get manga_series_next_chapter => 'الفصل التالي';
+  @override
+  String get manga_series_previous_chapter => 'الفصل السابق';
+  @override
+  String get manga_series_last_chapter_reached => 'هذا هو أحدث فصل';
+  @override
+  String get manga_series_first_chapter_reached => 'هذا هو الفصل الأول';
+  @override
+  String get manga_series_open_series => 'صفحة العمل';
+  @override
+  String manga_series_read_progress(
+          {required Object page, required Object total}) =>
+      'تمت القراءة حتى الصفحة ${page} من ${total}';
+  @override
+  String manga_series_read_progress_partial({required Object page}) =>
+      'تمت القراءة حتى الصفحة ${page}';
+  @override
+  String mihon_store_extension_count({required Object count}) =>
+      '${count} إضافة';
+  @override
+  String mihon_extension_sources_more({required Object count}) =>
+      'إظهار كل المصادر (${count})';
+  @override
+  String get mihon_extension_sources_less => 'إظهار مصادر أقل';
+  @override
+  String get options_website => 'زيارة الموقع الرسمي';
+  @override
+  String get video_setting_mpv_group_hdr => 'HDR';
+  @override
+  String get video_setting_hdr_tone_mapping => 'تعيين ألوان HDR';
+  @override
+  String get video_setting_hdr_tone_mapping_hint =>
+      'المنحنى المستخدم عند ضغط مصدر HDR على شاشة SDR. «تلقائي» يترك الاختيار لـ mpv حسب كل مصدر.';
+  @override
+  String get video_setting_hdr_compute_peak => 'كشف الذروة الديناميكي';
+  @override
+  String get video_setting_hdr_compute_peak_hint =>
+      'قياس ذروة السطوع الحقيقية لكل إطار بدلاً من الوثوق ببيانات المصدر. إبرازات أدق مقابل بعض استهلاك المعالج الرسومي.';
+  @override
+  String get video_setting_hdr_auto => 'تلقائي';
+  @override
+  String get video_setting_hdr_on => 'تشغيل';
+  @override
+  String get video_setting_hdr_off => 'إيقاف';
+  @override
+  String get video_discovery_cancel_downloads_title => 'إلغاء التنزيلات؟';
+  @override
+  String video_discovery_cancel_downloads_body({required Object n}) =>
+      'سيتم إيقاف ${n} مهمة تنزيل لهذا العمل. تبقى الأجزاء المنزَّلة على القرص، ويمكنك بدء التنزيل مرة أخرى لاحقًا.';
+  @override
+  String get video_discovery_cancel_downloads_failed =>
+      'تعذّر إلغاء التنزيل. قد تكون المهمة قد انتهت بالفعل، أو أن خلفية التنزيل غير متاحة.';
+  @override
+  String get gal_hook_click_lookup => 'اضغط على كلمة للبحث عنها';
+  @override
+  String get gal_hook_click_lookup_hint =>
+      'الإيقاف يعني ألا يؤدي النقر على النص إلى بحث — مفيد مع تفعيل النقر النافذ عندما لا تريد إصابة كلمة بالخطأ.';
+  @override
+  String get gal_hook_lookup_trigger => 'زر البحث';
+  @override
+  String get gal_hook_lookup_trigger_hint =>
+      'أي زر فأرة يبحث عن الكلمة تحت المؤشر. مستقل عن المفتاح أعلاه: يمكنك إيقاف البحث بالنقر والبحث بزر جانبي.';
+  @override
+  String get gal_hook_lookup_trigger_left => 'Left click';
+  @override
+  String get gal_hook_lookup_trigger_middle => 'Middle click';
+  @override
+  String get gal_hook_lookup_trigger_side => 'Side button';
+  @override
+  String get gal_hook_toolbar_auto_hide => 'إخفاء شريط الأدوات تلقائيًا';
+  @override
+  String get gal_hook_toolbar_auto_hide_hint =>
+      'يخفي شريط الأدوات حتى يصل المؤشر إلى صندوق النص، بأسلوب LunaHook. مخفي يعني مخفي فعلًا — تعود تلك البكسلات إلى اللعبة.';
+  @override
+  String get gal_hook_passthrough_blocks_mouse =>
+      'النص يستقبل النقرات أثناء النقر النافذ';
+  @override
+  String get gal_hook_passthrough_blocks_mouse_hint =>
+      'تشغيل: تبقى أسطر النص تستقبل النقرات فتستطيع الضغط على كلمة. إيقاف: تصبح الطبقة كلها شفافة للفأرة — تنقر ما تحتها، لكن الضغط على الكلمات لا يعمل.';
+  @override
+  String get floating_lyric_topmost => 'الإبقاء في المقدمة';
+  @override
+  String get gal_hook_fold_progressive_lines => 'دمج أسطر الحوار المقسّمة';
+  @override
+  String get gal_hook_fold_progressive_lines_hint =>
+      'بعض المحرّكات تعيد رسم السطر كاملًا مع كل نقرة، فيُلتقط السطر الواحد عدة مرات. اطوِ تلك اللقطات في سطر واحد.';
+  @override
+  String get gal_hook_ingame_lookup_engine_unsupported =>
+      'محرك اللعبة هذا لا يدعم البحث داخل اللعبة بعد';
+  @override
+  String get gal_hook_ingame_lookup_version_unsupported =>
+      'إصدار اللعبة هذا ليس ضمن القائمة المدعومة بعد';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copy =>
+      'نسخ SHA-256 لملف اللعبة التنفيذي';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_unavailable =>
+      'تعذّرت قراءة ملف اللعبة التنفيذي';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copied =>
+      'تم نسخ SHA-256 لملف اللعبة التنفيذي';
+  @override
+  String get download_tracker_section => 'اشتراك المتعقّبات';
+  @override
+  String get download_tracker_auto_add =>
+      'إضافة متعقّبات الاشتراك تلقائيًا إلى التنزيلات الجديدة';
+  @override
+  String get download_tracker_auto_add_hint =>
+      'تُخزَّن القائمة مؤقتًا لست ساعات. فشل الاشتراك لا يمنع التنزيل.';
+  @override
+  String get download_tracker_url => 'رابط الاشتراك';
+  @override
+  String get download_tracker_refresh => 'جلب المتعقّبات';
+  @override
+  String get download_tracker_preview_empty =>
+      'اجلب الاشتراك لمعاينة متعقّبات HTTP وHTTPS وUDP المدعومة.';
+  @override
+  String download_tracker_preview_count({required Object count}) =>
+      'تم جلب ${count} متعقّبًا';
+  @override
+  String download_tracker_fetch_failed({required Object message}) =>
+      'تعذّر جلب المتعقّبات: ${message}';
+  @override
+  String get anki_connect_port_auto_fix => 'التبديل إلى منفذ حر';
+  @override
+  String get anki_connect_port_auto_fix_hint =>
+      'يختار منفذًا حرًا ويكتبه في Hibiki وفي إعدادات إضافة AnkiConnect معًا. أعد تشغيل Anki لتطبيق التغيير.';
+  @override
+  String anki_connect_port_auto_fix_done({required Object port}) =>
+      'تم تغيير منفذ AnkiConnect إلى ${port}. أعد تشغيل Anki ثم حاول مجددًا.';
+  @override
+  String anki_connect_port_auto_fix_manual({required Object port}) =>
+      'يستخدم Hibiki الآن المنفذ ${port}، لكن لم يُعثر على إعدادات إضافة AnkiConnect. اضبط webBindPort على ${port} في Anki (أدوات ← الإضافات ← AnkiConnect ← إعداد) ثم أعد تشغيل Anki.';
+  @override
+  String get anki_connect_port_auto_fix_none =>
+      'لم يُعثر على أي منفذ حر على هذا الجهاز.';
+  @override
+  String get onboarding_action_badge_required => 'مطلوب';
+  @override
+  String get onboarding_action_badge_recommended => 'موصى به';
+  @override
+  String get onboarding_action_badge_optional => 'اختياري';
+  @override
+  String get onboarding_pack_action_download_desc =>
+      'ينزّل الحزمة كاملة في الخلفية ثم يستوردها. يمكنك الإلغاء في أي وقت، وسيُستأنف التنزيل من حيث توقّف.';
+  @override
+  String get onboarding_pack_action_import_existing_desc =>
+      'الحزمة منزَّلة بالفعل، وهذا يستوردها. اختر «دمج» في نافذة التأكيد لتبقى بياناتك الحالية كما هي.';
+  @override
+  String get onboarding_pack_action_pick_desc =>
+      'حصلت على ملف zip للحزمة من مكان آخر؟ استوردها من القرص وتخطَّ التنزيل بالكامل.';
+  @override
+  String get onboarding_pack_action_website => 'فتح صفحة التنزيل في الموقع';
+  @override
+  String get onboarding_pack_action_website_desc =>
+      'يفتح الموقع الرسمي في متصفحك. يوفّر قسم الحزمة روابط أجزاء يمكن تمريرها إلى مدير تنزيل، ثم عد إلى هنا واستخدم «اختيار ملف حزمة محلي» لاستيراد ما حصلت عليه.';
+  @override
+  String get onboarding_pack_action_dictionary_desc =>
+      'تتعلّم لغة غير اليابانية؟ تخطَّ الحزمة واستورد هنا قواميس لغتك.';
+  @override
+  String get onboarding_pack_action_audio_desc =>
+      'مصدر مقاطع النطق الصوتية. الحزمة تغطّي اليابانية والإنجليزية بالفعل؛ أضف هنا مصادر عبر الإنترنت للغات الأخرى.';
+  @override
+  String get onboarding_anki_action_test_desc =>
+      'يتحقّق من قدرة Fushi على الاتصال بـ Anki ويحمّل مجموعاتك وأنواع الملاحظات. لا يُنشأ أي شيء بعد.';
+  @override
+  String get onboarding_anki_action_refresh_desc =>
+      'يعيد تحميل المجموعات وأنواع الملاحظات من Anki. استخدمه بعد إنشاء مجموعة جديدة داخل Anki.';
+  @override
+  String get onboarding_anki_action_get_ankidroid_desc =>
+      'يفتح صفحة AnkiDroid في المتجر. يكتب Fushi بطاقاته داخله، لذا يجب تثبيته أولاً.';
+  @override
+  String get onboarding_anki_action_get_anki_desc =>
+      'يفتح صفحة تنزيل Anki. ثبّت Anki وأبقِه مفتوحًا أثناء إنشاء البطاقات.';
+  @override
+  String get onboarding_anki_action_install_addon_desc =>
+      'يفكّ ضغط إضافة AnkiConnect المرفقة داخل Anki، وهي ما يتيح لـ Fushi التخاطب معه. أعد تشغيل Anki بعد ذلك.';
+  @override
+  String get onboarding_step_anki_action_desc =>
+      'قالب البطاقة وربط الحقول ولقطات الشاشة والصوت: أي تفاصيل شكل البطاقة الناتجة. تكفي المجموعة ونوع الملاحظة أعلاه للبدء، فلا تفتح هذا إلا إذا أردت تغيير طريقة بناء البطاقات.';
+  @override
+  String get onboarding_step_backup_action_desc =>
+      'اختر خدمة نسخ احتياطي وسجّل الدخول، لتبقى مكتبتك سليمة عند فقدان الجهاز أو استبداله.';
+  @override
+  String get onboarding_step_interconnect_action_desc =>
+      'يقرن هذا الجهاز بأجهزتك الأخرى لمشاركة مكتبة واحدة وإبقاء التقدّم متزامنًا.';
+  @override
+  String get onboarding_step_extension_action_desc =>
+      'يوضّح كيفية تثبيت إضافة المتصفح وربطها بـ Fushi، لتتمكّن من البحث عن الكلمات في صفحات الويب أيضًا.';
+  @override
+  String get onboarding_step_fonts_action_desc =>
+      'أضف ملفات خطوطك الخاصة واختر الخط الذي تستخدمه كل لغة.';
+  @override
+  String get onboarding_pack_sources_hint =>
+      'يُنزَّل على أجزاء متوازية من GitHub والموقع الرسمي ومرآة احتياطية في آنٍ واحد، مع التحقّق من كل جزء. يقيس Fushi سرعة المصادر أثناء العمل ويمنح الأسرع في تلك اللحظة عددًا أكبر من الأجزاء، فلا شيء تختاره هنا.';
+  @override
+  String get video_setting_hdr_output => 'إخراج HDR / ‏10 بت';
+  @override
+  String get video_setting_hdr_output_hint =>
+      'على Windows فقط. يمرّر «تلقائي» مصادر HDR مباشرةً إلى شاشة HDR عبر نافذة فيديو أصلية، ويستخدم «دائمًا» تلك النافذة لكل مقطع (إخراج 10 بت)، بينما يُبقي «إيقاف» على العارض القياسي.';
+  @override
+  String get video_setting_hdr_output_auto => 'تلقائي';
+  @override
+  String get video_setting_hdr_output_always => 'دائمًا';
+  @override
+  String get video_setting_hdr_output_off => 'إيقاف';
   @override
   String get video_ajatt_settings_hint =>
       'أرشيف مجاني للترجمات اليابانية (مرآة kitsunekko). لا يتطلب حسابًا؛ تُنزَّل ملفات الترجمة من GitHub.';
@@ -22937,13 +23345,6 @@ class _StringsDe extends _StringsEn {
   String get onboarding_anki_mobile_ankiconnect_hint =>
       'Dieses Gerät kann auch Karten in Anki erstellen, das auf einem Computer im selben Netzwerk läuft: Aktivieren Sie AnkiConnect in den Kartenerstellungs-Einstellungen und geben Sie die Computeradresse ein.';
   @override
-  String get onboarding_anki_fsrs_title => 'Anki auf FSRS umstellen';
-  @override
-  String get onboarding_anki_fsrs_body =>
-      'Anki enthält FSRS, einen weit besseren Planer als den 30 Jahre alten SM-2-Standard: bessere Behaltensrate mit weniger Wiederholungen. Öffnen Sie in Anki die Stapeloptionen und aktivieren Sie FSRS (ein Schalter gilt für die gesamte Sammlung). Dies muss direkt in Anki erfolgen.';
-  @override
-  String get onboarding_step_pack_browser_action => 'Im Browser herunterladen';
-  @override
   String get onboarding_anki_setup_android_hint =>
       'Installieren Sie AnkiDroid und öffnen Sie es einmal, um die Ersteinrichtung abzuschließen. Tippen Sie zurück in Fushi bei Ihrer ersten Karte im Berechtigungsdialog auf „Zulassen" – keine AnkiDroid-Einstellungen müssen geändert werden.';
   @override
@@ -23272,6 +23673,273 @@ class _StringsDe extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       'Weitere ${n} ausgewählte Elemente sind durch den aktuellen Filter ausgeblendet und werden nicht bearbeitet.';
+  @override
+  String get download_direct_queue_section => 'Direct downloads';
+  @override
+  String get download_task_kind_all => 'All types';
+  @override
+  String get download_task_kind_filter => 'Filter by type';
+  @override
+  String get manga_online_series_empty => 'Diese Serie enthält keine Bände.';
+  @override
+  String sync_peer_book_delete_confirm({required Object name}) =>
+      '„${name}“ vom Partnergerät löschen? Die dortigen Dateien und der Lesefortschritt werden endgültig entfernt, und auf diesem Gerät liegt keine Kopie. Dies kann nicht rückgängig gemacht werden.';
+  @override
+  String sync_peer_video_delete_confirm({required Object name}) =>
+      '„${name}“ aus der Bibliothek des Partnergeräts entfernen? Die vom Partner selbst importierte Videodatei bleibt erhalten. Dies kann nicht rückgängig gemacht werden.';
+  @override
+  String get storage_entry_delete_files_confirm_body =>
+      'Wird sofort von der Festplatte gelöscht. Nichts in deiner Bibliothek verweist darauf – es sind zwischengespeicherte, exportierte oder erneut herunterladbare Daten.';
+  @override
+  String get manga_series_refresh => 'Kapitel aktualisieren';
+  @override
+  String get manga_series_refresh_failed =>
+      'Aktualisierung von der Quelle fehlgeschlagen';
+  @override
+  String get manga_series_source_disabled =>
+      'Diese Quelle ist nicht installiert oder deaktiviert';
+  @override
+  String get manga_series_platform_unsupported =>
+      'Diese Quelle ist auf dieser Plattform nicht verfügbar';
+  @override
+  String get manga_series_offline_hint =>
+      'Es werden die auf diesem Gerät gespeicherten Kapitel angezeigt';
+  @override
+  String get manga_series_no_chapters => 'Noch keine Kapitel';
+  @override
+  String get manga_series_all_read => 'Alle Kapitel wurden gelesen';
+  @override
+  String get manga_series_sort_newest => 'Neueste zuerst';
+  @override
+  String get manga_series_sort_oldest => 'Älteste zuerst';
+  @override
+  String get manga_series_unread_only => 'Nur ungelesene';
+  @override
+  String get manga_series_mark_read => 'Als gelesen markieren';
+  @override
+  String get manga_series_mark_unread => 'Als ungelesen markieren';
+  @override
+  String get manga_series_mark_previous_read =>
+      'Dieses und ältere als gelesen markieren';
+  @override
+  String get manga_series_local_volume => 'Lokaler Band';
+  @override
+  String get manga_series_volume_info => 'Band';
+  @override
+  String get manga_series_page_count => 'Seiten';
+  @override
+  String get manga_series_chapters_action => 'Kapitel';
+  @override
+  String get manga_series_next_chapter => 'Nächstes Kapitel';
+  @override
+  String get manga_series_previous_chapter => 'Vorheriges Kapitel';
+  @override
+  String get manga_series_last_chapter_reached => 'Das ist das neueste Kapitel';
+  @override
+  String get manga_series_first_chapter_reached => 'Das ist das erste Kapitel';
+  @override
+  String get manga_series_open_series => 'Werkseite';
+  @override
+  String manga_series_read_progress(
+          {required Object page, required Object total}) =>
+      'Bis Seite ${page} von ${total} gelesen';
+  @override
+  String manga_series_read_progress_partial({required Object page}) =>
+      'Bis Seite ${page} gelesen';
+  @override
+  String mihon_store_extension_count({required Object count}) =>
+      '${count} Erweiterungen';
+  @override
+  String mihon_extension_sources_more({required Object count}) =>
+      'Alle ${count} Quellen anzeigen';
+  @override
+  String get mihon_extension_sources_less => 'Weniger Quellen anzeigen';
+  @override
+  String get options_website => 'Offizielle Website besuchen';
+  @override
+  String get video_setting_mpv_group_hdr => 'HDR';
+  @override
+  String get video_setting_hdr_tone_mapping => 'HDR-Tonemapping';
+  @override
+  String get video_setting_hdr_tone_mapping_hint =>
+      'Kurve, mit der eine HDR-Quelle auf ein SDR-Display gebracht wird. „Automatisch“ überlässt mpv die Wahl je Quelle.';
+  @override
+  String get video_setting_hdr_compute_peak =>
+      'Dynamische Spitzenwerterkennung';
+  @override
+  String get video_setting_hdr_compute_peak_hint =>
+      'Misst die echte Spitzenhelligkeit jedes Bildes, statt den Metadaten der Quelle zu vertrauen. Bessere Lichter, kostet etwas GPU-Leistung.';
+  @override
+  String get video_setting_hdr_auto => 'Automatisch';
+  @override
+  String get video_setting_hdr_on => 'An';
+  @override
+  String get video_setting_hdr_off => 'Aus';
+  @override
+  String get video_discovery_cancel_downloads_title => 'Downloads abbrechen?';
+  @override
+  String video_discovery_cancel_downloads_body({required Object n}) =>
+      '${n} Download-Aufgabe(n) für diesen Titel werden gestoppt. Bereits geladene Teile bleiben auf der Festplatte; du kannst den Download später erneut starten.';
+  @override
+  String get video_discovery_cancel_downloads_failed =>
+      'Download konnte nicht abgebrochen werden. Die Aufgabe ist möglicherweise schon fertig, oder das Download-Backend ist nicht verfügbar.';
+  @override
+  String get gal_hook_click_lookup => 'Wort antippen zum Nachschlagen';
+  @override
+  String get gal_hook_click_lookup_hint =>
+      'Aus bedeutet, dass Klicks auf den Text nie ein Nachschlagen auslösen – praktisch bei aktiviertem Durchklicken, wenn du nicht versehentlich ein Wort treffen willst.';
+  @override
+  String get gal_hook_lookup_trigger => 'Auslöser fürs Nachschlagen';
+  @override
+  String get gal_hook_lookup_trigger_hint =>
+      'Welche Maustaste das Wort unter dem Zeiger nachschlägt. Unabhängig vom Schalter oben: Du kannst Tippen-zum-Nachschlagen ausschalten und trotzdem mit einer Seitentaste nachschlagen.';
+  @override
+  String get gal_hook_lookup_trigger_left => 'Left click';
+  @override
+  String get gal_hook_lookup_trigger_middle => 'Middle click';
+  @override
+  String get gal_hook_lookup_trigger_side => 'Side button';
+  @override
+  String get gal_hook_toolbar_auto_hide =>
+      'Werkzeugleiste automatisch ausblenden';
+  @override
+  String get gal_hook_toolbar_auto_hide_hint =>
+      'Blendet die Leiste aus, bis der Zeiger den Textkasten erreicht – wie bei LunaHook. Ausgeblendet heißt wirklich weg: Diese Pixel gehören wieder dem Spiel.';
+  @override
+  String get gal_hook_passthrough_blocks_mouse =>
+      'Text nimmt Klicks trotz Durchklicken an';
+  @override
+  String get gal_hook_passthrough_blocks_mouse_hint =>
+      'An: Textzeilen nehmen weiter Klicks an, du kannst also ein Wort antippen. Aus: Das gesamte Overlay ist für die Maus durchlässig – du klickst, was darunter liegt, aber Wörter antippen geht nicht mehr.';
+  @override
+  String get floating_lyric_topmost => 'Immer im Vordergrund';
+  @override
+  String get gal_hook_fold_progressive_lines =>
+      'Aufgeteilte Dialogzeilen zusammenfassen';
+  @override
+  String get gal_hook_fold_progressive_lines_hint =>
+      'Manche Engines zeichnen bei jedem Klick die ganze Zeile neu, sodass eine Zeile mehrfach erfasst wird. Diese Schnappschüsse zu einer Zeile zusammenfalten.';
+  @override
+  String get gal_hook_ingame_lookup_engine_unsupported =>
+      'Diese Spiel-Engine unterstützt die Suche im Spiel noch nicht';
+  @override
+  String get gal_hook_ingame_lookup_version_unsupported =>
+      'Diese Spielversion steht noch nicht auf der Liste der unterstützten Versionen';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copy =>
+      'SHA-256 der Spieldatei kopieren';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_unavailable =>
+      'Die Spieldatei konnte nicht gelesen werden';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copied =>
+      'SHA-256 der Spieldatei kopiert';
+  @override
+  String get download_tracker_section => 'Tracker-Abonnement';
+  @override
+  String get download_tracker_auto_add =>
+      'Abonnierte Tracker automatisch zu neuen Downloads hinzufügen';
+  @override
+  String get download_tracker_auto_add_hint =>
+      'Die Liste wird 6 Stunden zwischengespeichert. Ein fehlgeschlagenes Abonnement blockiert den Download nicht.';
+  @override
+  String get download_tracker_url => 'Abonnement-URL';
+  @override
+  String get download_tracker_refresh => 'Tracker abrufen';
+  @override
+  String get download_tracker_preview_empty =>
+      'Rufe das Abonnement ab, um die unterstützten HTTP-, HTTPS- und UDP-Tracker anzuzeigen.';
+  @override
+  String download_tracker_preview_count({required Object count}) =>
+      '${count} Tracker abgerufen';
+  @override
+  String download_tracker_fetch_failed({required Object message}) =>
+      'Tracker konnten nicht abgerufen werden: ${message}';
+  @override
+  String get anki_connect_port_auto_fix => 'Auf freien Port wechseln';
+  @override
+  String get anki_connect_port_auto_fix_hint =>
+      'Wählt einen freien Port und trägt ihn sowohl in Hibiki als auch in die AnkiConnect-Add-on-Konfiguration ein. Starte Anki neu, damit es wirkt.';
+  @override
+  String anki_connect_port_auto_fix_done({required Object port}) =>
+      'AnkiConnect nutzt jetzt Port ${port}. Starte Anki neu und versuche es erneut.';
+  @override
+  String anki_connect_port_auto_fix_manual({required Object port}) =>
+      'Hibiki nutzt jetzt Port ${port}, aber die AnkiConnect-Add-on-Konfiguration wurde nicht gefunden. Setze webBindPort in Anki (Werkzeuge → Add-ons → AnkiConnect → Konfiguration) ebenfalls auf ${port} und starte Anki neu.';
+  @override
+  String get anki_connect_port_auto_fix_none =>
+      'Auf diesem Rechner wurde kein freier Port gefunden.';
+  @override
+  String get onboarding_action_badge_required => 'Erforderlich';
+  @override
+  String get onboarding_action_badge_recommended => 'Empfohlen';
+  @override
+  String get onboarding_action_badge_optional => 'Optional';
+  @override
+  String get onboarding_pack_action_download_desc =>
+      'Lädt das gesamte Paket im Hintergrund herunter und importiert es anschließend. Jederzeit abbrechbar; der Download wird an der Abbruchstelle fortgesetzt.';
+  @override
+  String get onboarding_pack_action_import_existing_desc =>
+      'Das Paket ist bereits heruntergeladen; hier wird es importiert. Wähle im Bestätigungsdialog „Zusammenführen“, dann bleiben deine vorhandenen Daten unangetastet.';
+  @override
+  String get onboarding_pack_action_pick_desc =>
+      'Du hast das Paket-ZIP bereits anderweitig bekommen? Importiere es von der Festplatte und überspringe den Download komplett.';
+  @override
+  String get onboarding_pack_action_website =>
+      'Download-Seite der Website öffnen';
+  @override
+  String get onboarding_pack_action_website_desc =>
+      'Öffnet die offizielle Website im Browser. Im Paket-Abschnitt findest du Teil-Links, die du einem Downloadmanager übergeben kannst; komm danach hierher zurück und importiere das Ergebnis über „Lokale Paketdatei wählen“.';
+  @override
+  String get onboarding_pack_action_dictionary_desc =>
+      'Du lernst eine andere Sprache als Japanisch? Überspring das Paket und importiere hier stattdessen Wörterbücher für deine Sprache.';
+  @override
+  String get onboarding_pack_action_audio_desc =>
+      'Woher die Aussprache-Audios kommen. Japanisch und Englisch deckt das Paket bereits ab; für andere Sprachen fügst du hier Online-Quellen hinzu.';
+  @override
+  String get onboarding_anki_action_test_desc =>
+      'Prüft, ob Fushi Anki erreicht, und lädt deine Stapel und Notiztypen. Es wird noch nichts angelegt.';
+  @override
+  String get onboarding_anki_action_refresh_desc =>
+      'Lädt Stapel und Notiztypen erneut aus Anki. Nutze das, nachdem du in Anki einen neuen Stapel angelegt hast.';
+  @override
+  String get onboarding_anki_action_get_ankidroid_desc =>
+      'Öffnet die Store-Seite von AnkiDroid. Fushi schreibt seine Karten dorthin, es muss also zuerst installiert sein.';
+  @override
+  String get onboarding_anki_action_get_anki_desc =>
+      'Öffnet die Download-Seite von Anki. Installiere Anki und lass es beim Kartenerstellen laufen.';
+  @override
+  String get onboarding_anki_action_install_addon_desc =>
+      'Entpackt das mitgelieferte AnkiConnect-Add-on für dich nach Anki – darüber spricht Fushi mit Anki. Starte Anki danach neu.';
+  @override
+  String get onboarding_step_anki_action_desc =>
+      'Kartenvorlage, Feldzuordnung, Screenshots und Audio: die Details dazu, wie eine erzeugte Karte aussieht. Stapel und Notiztyp oben genügen zum Loslegen – öffne das hier nur, wenn du ändern willst, wie Karten gebaut werden.';
+  @override
+  String get onboarding_step_backup_action_desc =>
+      'Wähle ein Backup-Backend und melde dich an, damit deine Bibliothek einen Geräteverlust oder -wechsel übersteht.';
+  @override
+  String get onboarding_step_interconnect_action_desc =>
+      'Koppelt dieses Gerät mit deinen anderen Geräten, um eine Bibliothek zu teilen und den Fortschritt synchron zu halten.';
+  @override
+  String get onboarding_step_extension_action_desc =>
+      'Zeigt, wie du die Browser-Erweiterung installierst und mit Fushi verbindest, damit du auch auf Webseiten nachschlagen kannst.';
+  @override
+  String get onboarding_step_fonts_action_desc =>
+      'Eigene Schriftdateien hinzufügen und festlegen, welche Schrift jede Sprache verwendet.';
+  @override
+  String get onboarding_pack_sources_hint =>
+      'Wird parallel in Teilstücken gleichzeitig von GitHub, der offiziellen Website und einem Ersatz-Spiegel geladen, jedes Teilstück mit Prüfsumme. Fushi misst die Quellen währenddessen und gibt der aktuell schnellsten mehr Teilstücke – hier gibt es also nichts auszuwählen.';
+  @override
+  String get video_setting_hdr_output => 'HDR-/10-Bit-Ausgabe';
+  @override
+  String get video_setting_hdr_output_hint =>
+      'Nur Windows. „Automatisch“ reicht HDR-Quellen über ein natives Videofenster direkt an ein HDR-Display weiter; „Immer“ nutzt dieses Fenster für jedes Video (10-Bit-Ausgabe); „Aus“ behält den Standard-Renderer.';
+  @override
+  String get video_setting_hdr_output_auto => 'Automatisch';
+  @override
+  String get video_setting_hdr_output_always => 'Immer';
+  @override
+  String get video_setting_hdr_output_off => 'Aus';
   @override
   String get video_ajatt_settings_hint =>
       'Kostenloses Archiv japanischer Untertitel (kitsunekko-Spiegel). Kein Konto nötig; Untertiteldateien werden von GitHub geladen.';
@@ -32116,13 +32784,6 @@ class _StringsEs extends _StringsEn {
   String get onboarding_anki_mobile_ankiconnect_hint =>
       'Este dispositivo también puede crear tarjetas en Anki ejecutándose en una computadora en la misma red: active AnkiConnect en ajustes de creación de tarjetas e introduzca la dirección de la computadora.';
   @override
-  String get onboarding_anki_fsrs_title => 'Cambiar Anki a FSRS';
-  @override
-  String get onboarding_anki_fsrs_body =>
-      'Anki viene con FSRS, un programador mucho mejor que el SM-2 predeterminado de hace 30 años: mejor retención con menos revisiones. En Anki, abra opciones de mazo y active FSRS (un interruptor cubre toda la colección). Esto debe hacerse dentro de Anki.';
-  @override
-  String get onboarding_step_pack_browser_action => 'Descargar en navegador';
-  @override
   String get onboarding_anki_setup_android_hint =>
       'Instale AnkiDroid y ábralo una vez para completar su configuración inicial. De vuelta en Fushi, toque Permitir en el diálogo de permisos que aparece con su primera tarjeta — no hay ajustes de AnkiDroid que cambiar.';
   @override
@@ -32451,6 +33112,273 @@ class _StringsEs extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       'Otros ${n} elementos seleccionados están ocultos por el filtro actual y no se procesarán.';
+  @override
+  String get download_direct_queue_section => 'Direct downloads';
+  @override
+  String get download_task_kind_all => 'All types';
+  @override
+  String get download_task_kind_filter => 'Filter by type';
+  @override
+  String get manga_online_series_empty => 'Esta serie no tiene volúmenes.';
+  @override
+  String sync_peer_book_delete_confirm({required Object name}) =>
+      '¿Eliminar «${name}» del dispositivo emparejado? Sus archivos y el progreso de lectura allí se borrarán definitivamente, y este dispositivo no tiene ninguna copia. Esta acción no se puede deshacer.';
+  @override
+  String sync_peer_video_delete_confirm({required Object name}) =>
+      '¿Quitar «${name}» de la biblioteca del dispositivo emparejado? El archivo de vídeo que el propio dispositivo importó se conserva. Esta acción no se puede deshacer.';
+  @override
+  String get storage_entry_delete_files_confirm_body =>
+      'Se eliminará del disco de inmediato. Nada de tu biblioteca hace referencia a esto: son datos en caché, exportados o que se pueden volver a descargar.';
+  @override
+  String get manga_series_refresh => 'Actualizar capítulos';
+  @override
+  String get manga_series_refresh_failed =>
+      'No se pudo actualizar desde la fuente';
+  @override
+  String get manga_series_source_disabled =>
+      'Esta fuente no está instalada o está desactivada';
+  @override
+  String get manga_series_platform_unsupported =>
+      'Esta fuente no está disponible en esta plataforma';
+  @override
+  String get manga_series_offline_hint =>
+      'Se muestran los capítulos guardados en este dispositivo';
+  @override
+  String get manga_series_no_chapters => 'Todavía no hay capítulos';
+  @override
+  String get manga_series_all_read => 'Se han leído todos los capítulos';
+  @override
+  String get manga_series_sort_newest => 'Más recientes primero';
+  @override
+  String get manga_series_sort_oldest => 'Más antiguos primero';
+  @override
+  String get manga_series_unread_only => 'Solo no leídos';
+  @override
+  String get manga_series_mark_read => 'Marcar como leído';
+  @override
+  String get manga_series_mark_unread => 'Marcar como no leído';
+  @override
+  String get manga_series_mark_previous_read =>
+      'Marcar este y los anteriores como leídos';
+  @override
+  String get manga_series_local_volume => 'Volumen local';
+  @override
+  String get manga_series_volume_info => 'Volumen';
+  @override
+  String get manga_series_page_count => 'Páginas';
+  @override
+  String get manga_series_chapters_action => 'Capítulos';
+  @override
+  String get manga_series_next_chapter => 'Capítulo siguiente';
+  @override
+  String get manga_series_previous_chapter => 'Capítulo anterior';
+  @override
+  String get manga_series_last_chapter_reached =>
+      'Este es el capítulo más reciente';
+  @override
+  String get manga_series_first_chapter_reached => 'Este es el primer capítulo';
+  @override
+  String get manga_series_open_series => 'Página de la obra';
+  @override
+  String manga_series_read_progress(
+          {required Object page, required Object total}) =>
+      'Leído hasta la página ${page} de ${total}';
+  @override
+  String manga_series_read_progress_partial({required Object page}) =>
+      'Leído hasta la página ${page}';
+  @override
+  String mihon_store_extension_count({required Object count}) =>
+      '${count} extensiones';
+  @override
+  String mihon_extension_sources_more({required Object count}) =>
+      'Mostrar las ${count} fuentes';
+  @override
+  String get mihon_extension_sources_less => 'Mostrar menos fuentes';
+  @override
+  String get options_website => 'Visitar el sitio web oficial';
+  @override
+  String get video_setting_mpv_group_hdr => 'HDR';
+  @override
+  String get video_setting_hdr_tone_mapping => 'Mapeo de tonos HDR';
+  @override
+  String get video_setting_hdr_tone_mapping_hint =>
+      'Curva que se usa al comprimir una fuente HDR en una pantalla SDR. «Automático» deja que mpv elija según la fuente.';
+  @override
+  String get video_setting_hdr_compute_peak => 'Detección dinámica de picos';
+  @override
+  String get video_setting_hdr_compute_peak_hint =>
+      'Mide el brillo máximo real de cada fotograma en vez de fiarse de los metadatos de la fuente. Mejores luces altas, a costa de algo de GPU.';
+  @override
+  String get video_setting_hdr_auto => 'Automático';
+  @override
+  String get video_setting_hdr_on => 'Activado';
+  @override
+  String get video_setting_hdr_off => 'Desactivado';
+  @override
+  String get video_discovery_cancel_downloads_title =>
+      '¿Cancelar las descargas?';
+  @override
+  String video_discovery_cancel_downloads_body({required Object n}) =>
+      'Se detendrán ${n} tarea(s) de descarga de este título. Las partes ya descargadas se conservan en el disco; podrás reanudar la descarga más adelante.';
+  @override
+  String get video_discovery_cancel_downloads_failed =>
+      'No se pudo cancelar la descarga. Puede que la tarea ya haya terminado o que el backend de descargas no esté disponible.';
+  @override
+  String get gal_hook_click_lookup => 'Toca una palabra para buscarla';
+  @override
+  String get gal_hook_click_lookup_hint =>
+      'Desactivado significa que los clics sobre el texto nunca activan una búsqueda: útil con el clic pasante activado, cuando prefieres no darle a una palabra sin querer.';
+  @override
+  String get gal_hook_lookup_trigger => 'Disparador de búsqueda';
+  @override
+  String get gal_hook_lookup_trigger_hint =>
+      'Qué botón del ratón busca la palabra bajo el puntero. Es independiente del interruptor de arriba: puedes desactivar la búsqueda por toque y seguir buscando con un botón lateral.';
+  @override
+  String get gal_hook_lookup_trigger_left => 'Left click';
+  @override
+  String get gal_hook_lookup_trigger_middle => 'Middle click';
+  @override
+  String get gal_hook_lookup_trigger_side => 'Side button';
+  @override
+  String get gal_hook_toolbar_auto_hide => 'Ocultar la barra automáticamente';
+  @override
+  String get gal_hook_toolbar_auto_hide_hint =>
+      'Oculta la barra hasta que el puntero llega al cuadro de texto, al estilo de LunaHook. Oculta significa oculta de verdad: esos píxeles vuelven al juego.';
+  @override
+  String get gal_hook_passthrough_blocks_mouse =>
+      'El texto sigue recibiendo clics con el clic pasante';
+  @override
+  String get gal_hook_passthrough_blocks_mouse_hint =>
+      'Activado: las líneas de texto siguen recibiendo clics, así puedes tocar una palabra. Desactivado: toda la superposición es transparente al ratón; puedes hacer clic en lo que haya debajo, pero tocar palabras deja de funcionar.';
+  @override
+  String get floating_lyric_topmost => 'Mantener al frente';
+  @override
+  String get gal_hook_fold_progressive_lines =>
+      'Unir líneas de diálogo divididas';
+  @override
+  String get gal_hook_fold_progressive_lines_hint =>
+      'Algunos motores redibujan la línea entera en cada clic, así que una misma línea se captura varias veces. Pliega esas instantáneas en una sola línea.';
+  @override
+  String get gal_hook_ingame_lookup_engine_unsupported =>
+      'Este motor de juego aún no admite la búsqueda dentro del juego';
+  @override
+  String get gal_hook_ingame_lookup_version_unsupported =>
+      'Esta versión del juego aún no está en la lista de compatibles';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copy =>
+      'Copiar el SHA-256 del ejecutable del juego';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_unavailable =>
+      'No se pudo leer el ejecutable del juego';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copied =>
+      'SHA-256 del ejecutable copiado';
+  @override
+  String get download_tracker_section => 'Suscripción de trackers';
+  @override
+  String get download_tracker_auto_add =>
+      'Añadir automáticamente los trackers suscritos a las descargas nuevas';
+  @override
+  String get download_tracker_auto_add_hint =>
+      'La lista se almacena en caché 6 horas. Si la suscripción falla, la descarga no se bloquea.';
+  @override
+  String get download_tracker_url => 'URL de suscripción';
+  @override
+  String get download_tracker_refresh => 'Obtener trackers';
+  @override
+  String get download_tracker_preview_empty =>
+      'Obtén la suscripción para ver los trackers HTTP, HTTPS y UDP compatibles.';
+  @override
+  String download_tracker_preview_count({required Object count}) =>
+      '${count} trackers obtenidos';
+  @override
+  String download_tracker_fetch_failed({required Object message}) =>
+      'No se pudieron obtener los trackers: ${message}';
+  @override
+  String get anki_connect_port_auto_fix => 'Cambiar a un puerto libre';
+  @override
+  String get anki_connect_port_auto_fix_hint =>
+      'Elige un puerto libre y lo escribe tanto en Hibiki como en la configuración del complemento AnkiConnect. Reinicia Anki para aplicarlo.';
+  @override
+  String anki_connect_port_auto_fix_done({required Object port}) =>
+      'AnkiConnect ahora usa el puerto ${port}. Reinicia Anki y vuelve a intentarlo.';
+  @override
+  String anki_connect_port_auto_fix_manual({required Object port}) =>
+      'Hibiki ahora usa el puerto ${port}, pero no se encontró la configuración del complemento AnkiConnect. Pon webBindPort en ${port} dentro de Anki (Herramientas → Complementos → AnkiConnect → Configuración) y reinicia Anki.';
+  @override
+  String get anki_connect_port_auto_fix_none =>
+      'No se encontró ningún puerto libre en este equipo.';
+  @override
+  String get onboarding_action_badge_required => 'Obligatorio';
+  @override
+  String get onboarding_action_badge_recommended => 'Recomendado';
+  @override
+  String get onboarding_action_badge_optional => 'Opcional';
+  @override
+  String get onboarding_pack_action_download_desc =>
+      'Descarga todo el paquete en segundo plano y luego lo importa. Puedes cancelar cuando quieras; la próxima vez continúa desde donde se detuvo.';
+  @override
+  String get onboarding_pack_action_import_existing_desc =>
+      'El paquete ya está descargado; esto lo importa. Elige «Combinar» en el diálogo de confirmación y tus datos actuales quedarán intactos.';
+  @override
+  String get onboarding_pack_action_pick_desc =>
+      '¿Ya conseguiste el zip del paquete por otro lado? Impórtalo desde el disco y sáltate la descarga por completo.';
+  @override
+  String get onboarding_pack_action_website =>
+      'Abrir la página de descarga del sitio';
+  @override
+  String get onboarding_pack_action_website_desc =>
+      'Abre el sitio oficial en tu navegador. Su sección de paquete lista enlaces por fragmentos que puedes pasar a un gestor de descargas; vuelve después aquí y usa «Elegir un archivo de paquete local» para importar lo que obtuviste.';
+  @override
+  String get onboarding_pack_action_dictionary_desc =>
+      '¿Aprendes un idioma distinto del japonés? Sáltate el paquete e importa aquí diccionarios de tu propio idioma.';
+  @override
+  String get onboarding_pack_action_audio_desc =>
+      'De dónde sale el audio de pronunciación. El paquete ya cubre japonés e inglés; añade aquí fuentes en línea para otros idiomas.';
+  @override
+  String get onboarding_anki_action_test_desc =>
+      'Comprueba que Fushi puede conectarse con Anki y carga tus mazos y tipos de nota. Todavía no se crea nada.';
+  @override
+  String get onboarding_anki_action_refresh_desc =>
+      'Vuelve a cargar mazos y tipos de nota desde Anki. Úsalo después de crear un mazo nuevo dentro de Anki.';
+  @override
+  String get onboarding_anki_action_get_ankidroid_desc =>
+      'Abre la página de la tienda de AnkiDroid. Fushi escribe ahí sus tarjetas, así que hay que instalarlo primero.';
+  @override
+  String get onboarding_anki_action_get_anki_desc =>
+      'Abre la página de descarga de Anki. Instala Anki y déjalo abierto mientras creas tarjetas.';
+  @override
+  String get onboarding_anki_action_install_addon_desc =>
+      'Descomprime por ti el complemento AnkiConnect incluido dentro de Anki, que es lo que permite a Fushi comunicarse con él. Reinicia Anki después.';
+  @override
+  String get onboarding_step_anki_action_desc =>
+      'Plantilla de tarjeta, asignación de campos, capturas y audio: los detalles de qué aspecto tiene una tarjeta creada. Con el mazo y el tipo de nota de arriba ya puedes empezar, así que abre esto solo si quieres cambiar cómo se construyen las tarjetas.';
+  @override
+  String get onboarding_step_backup_action_desc =>
+      'Elige un servicio de copia de seguridad e inicia sesión, para que tu biblioteca sobreviva a la pérdida o el cambio de dispositivo.';
+  @override
+  String get onboarding_step_interconnect_action_desc =>
+      'Empareja este dispositivo con tus otros dispositivos para compartir una misma biblioteca y mantener el progreso sincronizado.';
+  @override
+  String get onboarding_step_extension_action_desc =>
+      'Muestra cómo instalar la extensión de navegador y conectarla con Fushi, para poder buscar palabras también en páginas web.';
+  @override
+  String get onboarding_step_fonts_action_desc =>
+      'Añade tus propios archivos de fuente y elige cuál usa cada idioma.';
+  @override
+  String get onboarding_pack_sources_hint =>
+      'Se descarga en fragmentos paralelos desde GitHub, el sitio oficial y un espejo de respaldo a la vez, con suma de verificación en cada fragmento. Fushi mide las fuentes sobre la marcha y da más fragmentos a la que sea más rápida en ese momento, así que aquí no hay nada que elegir.';
+  @override
+  String get video_setting_hdr_output => 'Salida HDR / 10 bits';
+  @override
+  String get video_setting_hdr_output_hint =>
+      'Solo en Windows. «Automático» entrega las fuentes HDR directamente a una pantalla HDR mediante una ventana de vídeo nativa; «Siempre» usa esa ventana para todos los vídeos (salida de 10 bits); «Desactivado» mantiene el renderizador estándar.';
+  @override
+  String get video_setting_hdr_output_auto => 'Automático';
+  @override
+  String get video_setting_hdr_output_always => 'Siempre';
+  @override
+  String get video_setting_hdr_output_off => 'Desactivado';
   @override
   String get video_ajatt_settings_hint =>
       'Archivo gratuito de subtítulos en japonés (réplica de kitsunekko). No requiere cuenta; los archivos se descargan desde GitHub.';
@@ -41325,14 +42253,6 @@ class _StringsFr extends _StringsEn {
   String get onboarding_anki_mobile_ankiconnect_hint =>
       'Cet appareil peut aussi créer des cartes dans Anki sur un ordinateur du même réseau : activez AnkiConnect dans les paramètres de création de cartes et entrez l\'adresse de l\'ordinateur.';
   @override
-  String get onboarding_anki_fsrs_title => 'Passer Anki à FSRS';
-  @override
-  String get onboarding_anki_fsrs_body =>
-      'Anki est livré avec FSRS, un planificateur bien meilleur que le SM-2 par défaut vieux de 30 ans : meilleure rétention avec moins de révisions. Dans Anki, ouvrez les options du paquet et activez FSRS (un seul interrupteur couvre toute la collection). Cela doit être fait dans Anki même.';
-  @override
-  String get onboarding_step_pack_browser_action =>
-      'Télécharger dans le navigateur';
-  @override
   String get onboarding_anki_setup_android_hint =>
       'Installez AnkiDroid et ouvrez-le une fois pour terminer sa configuration initiale. De retour dans Fushi, appuyez sur Autoriser dans la boîte de dialogue de permission qui apparaît avec votre première carte — aucun paramètre AnkiDroid à changer.';
   @override
@@ -41665,6 +42585,273 @@ class _StringsFr extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       '${n} autres éléments sélectionnés sont masqués par le filtre actuel et ne seront pas traités.';
+  @override
+  String get download_direct_queue_section => 'Direct downloads';
+  @override
+  String get download_task_kind_all => 'All types';
+  @override
+  String get download_task_kind_filter => 'Filter by type';
+  @override
+  String get manga_online_series_empty => 'Aucun volume dans cette série.';
+  @override
+  String sync_peer_book_delete_confirm({required Object name}) =>
+      'Supprimer « ${name} » de l\'appareil pair ? Ses fichiers et la progression de lecture qui s\'y trouvent seront définitivement supprimés, et cet appareil n\'en a aucune copie. Cette action est irréversible.';
+  @override
+  String sync_peer_video_delete_confirm({required Object name}) =>
+      'Retirer « ${name} » de la bibliothèque de l\'appareil pair ? Le fichier vidéo importé par l\'appareil pair lui-même est conservé. Cette action est irréversible.';
+  @override
+  String get storage_entry_delete_files_confirm_body =>
+      'Suppression immédiate du disque. Rien dans votre bibliothèque n\'y fait référence : ce sont des données en cache, exportées ou re-téléchargeables.';
+  @override
+  String get manga_series_refresh => 'Actualiser les chapitres';
+  @override
+  String get manga_series_refresh_failed =>
+      'Impossible d\'actualiser depuis la source';
+  @override
+  String get manga_series_source_disabled =>
+      'Cette source n\'est pas installée ou est désactivée';
+  @override
+  String get manga_series_platform_unsupported =>
+      'Cette source n\'est pas disponible sur cette plateforme';
+  @override
+  String get manga_series_offline_hint =>
+      'Affichage des chapitres enregistrés sur cet appareil';
+  @override
+  String get manga_series_no_chapters => 'Aucun chapitre pour le moment';
+  @override
+  String get manga_series_all_read => 'Tous les chapitres ont été lus';
+  @override
+  String get manga_series_sort_newest => 'Plus récents d\'abord';
+  @override
+  String get manga_series_sort_oldest => 'Plus anciens d\'abord';
+  @override
+  String get manga_series_unread_only => 'Non lus uniquement';
+  @override
+  String get manga_series_mark_read => 'Marquer comme lu';
+  @override
+  String get manga_series_mark_unread => 'Marquer comme non lu';
+  @override
+  String get manga_series_mark_previous_read =>
+      'Marquer celui-ci et les précédents comme lus';
+  @override
+  String get manga_series_local_volume => 'Volume local';
+  @override
+  String get manga_series_volume_info => 'Volume';
+  @override
+  String get manga_series_page_count => 'Pages';
+  @override
+  String get manga_series_chapters_action => 'Chapitres';
+  @override
+  String get manga_series_next_chapter => 'Chapitre suivant';
+  @override
+  String get manga_series_previous_chapter => 'Chapitre précédent';
+  @override
+  String get manga_series_last_chapter_reached =>
+      'C\'est le chapitre le plus récent';
+  @override
+  String get manga_series_first_chapter_reached => 'C\'est le premier chapitre';
+  @override
+  String get manga_series_open_series => 'Page de l\'œuvre';
+  @override
+  String manga_series_read_progress(
+          {required Object page, required Object total}) =>
+      'Lu jusqu\'à la page ${page} sur ${total}';
+  @override
+  String manga_series_read_progress_partial({required Object page}) =>
+      'Lu jusqu\'à la page ${page}';
+  @override
+  String mihon_store_extension_count({required Object count}) =>
+      '${count} extensions';
+  @override
+  String mihon_extension_sources_more({required Object count}) =>
+      'Afficher les ${count} sources';
+  @override
+  String get mihon_extension_sources_less => 'Afficher moins de sources';
+  @override
+  String get options_website => 'Visiter le site officiel';
+  @override
+  String get video_setting_mpv_group_hdr => 'HDR';
+  @override
+  String get video_setting_hdr_tone_mapping => 'Mappage tonal HDR';
+  @override
+  String get video_setting_hdr_tone_mapping_hint =>
+      'Courbe utilisée pour ramener une source HDR sur un écran SDR. « Auto » laisse mpv choisir selon la source.';
+  @override
+  String get video_setting_hdr_compute_peak => 'Détection dynamique des pics';
+  @override
+  String get video_setting_hdr_compute_peak_hint =>
+      'Mesure le pic de luminosité réel de chaque image au lieu de se fier aux métadonnées de la source. Meilleures hautes lumières, au prix d\'un peu de GPU.';
+  @override
+  String get video_setting_hdr_auto => 'Auto';
+  @override
+  String get video_setting_hdr_on => 'Activé';
+  @override
+  String get video_setting_hdr_off => 'Désactivé';
+  @override
+  String get video_discovery_cancel_downloads_title =>
+      'Annuler les téléchargements ?';
+  @override
+  String video_discovery_cancel_downloads_body({required Object n}) =>
+      '${n} tâche(s) de téléchargement pour ce titre vont être arrêtées. Les morceaux déjà téléchargés restent sur le disque ; vous pourrez relancer le téléchargement plus tard.';
+  @override
+  String get video_discovery_cancel_downloads_failed =>
+      'Impossible d\'annuler le téléchargement. La tâche est peut-être déjà terminée, ou le backend de téléchargement est indisponible.';
+  @override
+  String get gal_hook_click_lookup => 'Toucher un mot pour le chercher';
+  @override
+  String get gal_hook_click_lookup_hint =>
+      'Désactivé : les clics sur le texte ne déclenchent jamais de recherche — pratique avec le clic traversant, quand vous préférez ne pas toucher un mot par erreur.';
+  @override
+  String get gal_hook_lookup_trigger => 'Déclencheur de recherche';
+  @override
+  String get gal_hook_lookup_trigger_hint =>
+      'Quel bouton de la souris cherche le mot sous le pointeur. Indépendant du réglage ci-dessus : vous pouvez désactiver la recherche au toucher et chercher quand même avec un bouton latéral.';
+  @override
+  String get gal_hook_lookup_trigger_left => 'Left click';
+  @override
+  String get gal_hook_lookup_trigger_middle => 'Middle click';
+  @override
+  String get gal_hook_lookup_trigger_side => 'Side button';
+  @override
+  String get gal_hook_toolbar_auto_hide => 'Masquer la barre automatiquement';
+  @override
+  String get gal_hook_toolbar_auto_hide_hint =>
+      'Masque la barre jusqu\'à ce que le pointeur atteigne la zone de texte, à la manière de LunaHook. Masqué veut dire vraiment masqué : ces pixels reviennent au jeu.';
+  @override
+  String get gal_hook_passthrough_blocks_mouse =>
+      'Le texte reçoit encore les clics en mode traversant';
+  @override
+  String get gal_hook_passthrough_blocks_mouse_hint =>
+      'Activé : les lignes de texte reçoivent encore les clics, vous pouvez donc toucher un mot. Désactivé : toute la surcouche est transparente à la souris — vous cliquez ce qui est dessous, mais toucher un mot ne marche plus.';
+  @override
+  String get floating_lyric_topmost => 'Garder au premier plan';
+  @override
+  String get gal_hook_fold_progressive_lines =>
+      'Fusionner les répliques découpées';
+  @override
+  String get gal_hook_fold_progressive_lines_hint =>
+      'Certains moteurs redessinent toute la ligne à chaque clic, si bien qu\'une même ligne est capturée plusieurs fois. Replie ces instantanés en une seule ligne.';
+  @override
+  String get gal_hook_ingame_lookup_engine_unsupported =>
+      'Ce moteur de jeu ne prend pas encore en charge la recherche en jeu';
+  @override
+  String get gal_hook_ingame_lookup_version_unsupported =>
+      'Cette version du jeu ne figure pas encore dans la liste prise en charge';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copy =>
+      'Copier le SHA-256 de l\'exécutable du jeu';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_unavailable =>
+      'Impossible de lire l\'exécutable du jeu';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copied =>
+      'SHA-256 de l\'exécutable copié';
+  @override
+  String get download_tracker_section => 'Abonnement aux trackers';
+  @override
+  String get download_tracker_auto_add =>
+      'Ajouter automatiquement les trackers de l’abonnement aux nouveaux téléchargements';
+  @override
+  String get download_tracker_auto_add_hint =>
+      'La liste est mise en cache pendant 6 heures. L’échec de l’abonnement ne bloque pas le téléchargement.';
+  @override
+  String get download_tracker_url => 'URL de l’abonnement';
+  @override
+  String get download_tracker_refresh => 'Récupérer les trackers';
+  @override
+  String get download_tracker_preview_empty =>
+      'Récupère l’abonnement pour prévisualiser les trackers HTTP, HTTPS et UDP pris en charge.';
+  @override
+  String download_tracker_preview_count({required Object count}) =>
+      '${count} trackers récupérés';
+  @override
+  String download_tracker_fetch_failed({required Object message}) =>
+      'Impossible de récupérer les trackers : ${message}';
+  @override
+  String get anki_connect_port_auto_fix => 'Passer à un port libre';
+  @override
+  String get anki_connect_port_auto_fix_hint =>
+      'Choisit un port libre et l\'écrit à la fois dans Hibiki et dans la configuration du module AnkiConnect. Redémarrez Anki pour l\'appliquer.';
+  @override
+  String anki_connect_port_auto_fix_done({required Object port}) =>
+      'AnkiConnect utilise désormais le port ${port}. Redémarrez Anki puis réessayez.';
+  @override
+  String anki_connect_port_auto_fix_manual({required Object port}) =>
+      'Hibiki utilise désormais le port ${port}, mais la configuration du module AnkiConnect est introuvable. Définissez webBindPort sur ${port} dans Anki (Outils → Modules complémentaires → AnkiConnect → Configuration), puis redémarrez Anki.';
+  @override
+  String get anki_connect_port_auto_fix_none =>
+      'Aucun port libre trouvé sur cette machine.';
+  @override
+  String get onboarding_action_badge_required => 'Requis';
+  @override
+  String get onboarding_action_badge_recommended => 'Recommandé';
+  @override
+  String get onboarding_action_badge_optional => 'Facultatif';
+  @override
+  String get onboarding_pack_action_download_desc =>
+      'Télécharge tout le pack en arrière-plan, puis l’importe. Annulable à tout moment ; la reprise repart du point d’arrêt.';
+  @override
+  String get onboarding_pack_action_import_existing_desc =>
+      'Le pack est déjà téléchargé ; ceci l’importe. Choisissez « Fusionner » dans la boîte de confirmation et vos données existantes ne seront pas touchées.';
+  @override
+  String get onboarding_pack_action_pick_desc =>
+      'Vous avez déjà récupéré le zip du pack ailleurs ? Importez-le depuis le disque et sautez complètement le téléchargement.';
+  @override
+  String get onboarding_pack_action_website =>
+      'Ouvrir la page de téléchargement du site';
+  @override
+  String get onboarding_pack_action_website_desc =>
+      'Ouvre le site officiel dans votre navigateur. Sa section pack liste des liens par morceaux que vous pouvez donner à un gestionnaire de téléchargement ; revenez ensuite ici et utilisez « Choisir un fichier de pack local » pour importer ce que vous avez obtenu.';
+  @override
+  String get onboarding_pack_action_dictionary_desc =>
+      'Vous apprenez une autre langue que le japonais ? Passez le pack et importez ici les dictionnaires de votre langue.';
+  @override
+  String get onboarding_pack_action_audio_desc =>
+      'D’où viennent les audios de prononciation. Le pack couvre déjà le japonais et l’anglais ; ajoutez ici des sources en ligne pour les autres langues.';
+  @override
+  String get onboarding_anki_action_test_desc =>
+      'Vérifie que Fushi joint bien Anki et charge vos paquets et types de notes. Rien n’est encore créé.';
+  @override
+  String get onboarding_anki_action_refresh_desc =>
+      'Recharge les paquets et types de notes depuis Anki. À utiliser après avoir créé un paquet dans Anki.';
+  @override
+  String get onboarding_anki_action_get_ankidroid_desc =>
+      'Ouvre la page du store d’AnkiDroid. Fushi y écrit ses cartes, il doit donc être installé d’abord.';
+  @override
+  String get onboarding_anki_action_get_anki_desc =>
+      'Ouvre la page de téléchargement d’Anki. Installez Anki et laissez-le ouvert pendant la création de cartes.';
+  @override
+  String get onboarding_anki_action_install_addon_desc =>
+      'Décompresse pour vous le module AnkiConnect fourni dans Anki ; c’est lui qui permet à Fushi de lui parler. Redémarrez Anki ensuite.';
+  @override
+  String get onboarding_step_anki_action_desc =>
+      'Modèle de carte, correspondance des champs, captures et audio : les détails de l’apparence d’une carte créée. Le paquet et le type de note ci-dessus suffisent pour commencer, n’ouvrez ceci que si vous voulez changer la façon dont les cartes sont fabriquées.';
+  @override
+  String get onboarding_step_backup_action_desc =>
+      'Choisissez un service de sauvegarde et connectez-vous, pour que votre bibliothèque survive à la perte ou au remplacement d’un appareil.';
+  @override
+  String get onboarding_step_interconnect_action_desc =>
+      'Associe cet appareil à vos autres appareils pour partager une même bibliothèque et garder la progression synchronisée.';
+  @override
+  String get onboarding_step_extension_action_desc =>
+      'Montre comment installer l’extension de navigateur et la connecter à Fushi, pour pouvoir aussi chercher des mots sur les pages web.';
+  @override
+  String get onboarding_step_fonts_action_desc =>
+      'Ajoutez vos propres fichiers de police et choisissez celle utilisée par chaque langue.';
+  @override
+  String get onboarding_pack_sources_hint =>
+      'Téléchargé en morceaux parallèles depuis GitHub, le site officiel et un miroir de secours à la fois, chaque morceau vérifié par somme de contrôle. Fushi mesure les sources au fil de l’eau et donne plus de morceaux à la plus rapide du moment ; il n’y a donc rien à choisir ici.';
+  @override
+  String get video_setting_hdr_output => 'Sortie HDR / 10 bits';
+  @override
+  String get video_setting_hdr_output_hint =>
+      'Windows uniquement. « Auto » transmet les sources HDR directement à un écran HDR via une fenêtre vidéo native ; « Toujours » utilise cette fenêtre pour toutes les vidéos (sortie 10 bits) ; « Désactivé » conserve le rendu standard.';
+  @override
+  String get video_setting_hdr_output_auto => 'Auto';
+  @override
+  String get video_setting_hdr_output_always => 'Toujours';
+  @override
+  String get video_setting_hdr_output_off => 'Désactivé';
   @override
   String get video_ajatt_settings_hint =>
       'Archive gratuite de sous-titres japonais (miroir kitsunekko). Aucun compte requis ; les fichiers sont téléchargés depuis GitHub.';
@@ -50377,13 +51564,6 @@ class _StringsId extends _StringsEn {
   String get onboarding_anki_mobile_ankiconnect_hint =>
       'Perangkat ini juga bisa membuat kartu ke Anki yang berjalan di komputer dalam jaringan yang sama: aktifkan AnkiConnect di pengaturan pembuatan kartu dan masukkan alamat komputer.';
   @override
-  String get onboarding_anki_fsrs_title => 'Beralih Anki ke FSRS';
-  @override
-  String get onboarding_anki_fsrs_body =>
-      'Anki dilengkapi FSRS, penjadwal yang jauh lebih baik dari default SM-2 berusia 30 tahun: retensi lebih baik dengan ulasan lebih sedikit. Di Anki, buka opsi dek dan aktifkan FSRS (satu sakelar mencakup seluruh koleksi). Ini harus dilakukan di dalam Anki sendiri.';
-  @override
-  String get onboarding_step_pack_browser_action => 'Unduh di browser';
-  @override
   String get onboarding_anki_setup_android_hint =>
       'Instal AnkiDroid dan buka sekali untuk menyelesaikan pengaturan awalnya. Kembali di Fushi, ketuk Izinkan pada dialog izin yang muncul saat kartu pertama Anda - tidak perlu mengubah pengaturan AnkiDroid.';
   @override
@@ -50707,6 +51887,271 @@ class _StringsId extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       '${n} item terpilih lainnya disembunyikan oleh filter saat ini dan tidak akan diproses.';
+  @override
+  String get download_direct_queue_section => 'Direct downloads';
+  @override
+  String get download_task_kind_all => 'All types';
+  @override
+  String get download_task_kind_filter => 'Filter by type';
+  @override
+  String get manga_online_series_empty => 'Seri ini tidak memiliki volume.';
+  @override
+  String sync_peer_book_delete_confirm({required Object name}) =>
+      'Hapus "${name}" dari perangkat pasangan? Berkas dan progres bacanya di sana akan dihapus permanen, dan perangkat ini tidak punya salinan. Tindakan ini tidak dapat dibatalkan.';
+  @override
+  String sync_peer_video_delete_confirm({required Object name}) =>
+      'Hapus "${name}" dari pustaka perangkat pasangan? Berkas video yang diimpor sendiri oleh perangkat itu tetap disimpan. Tindakan ini tidak dapat dibatalkan.';
+  @override
+  String get storage_entry_delete_files_confirm_body =>
+      'Akan langsung dihapus dari disk. Tidak ada di pustaka Anda yang merujuk ke sini — isinya data cache, hasil ekspor, atau yang bisa diunduh ulang.';
+  @override
+  String get manga_series_refresh => 'Segarkan bab';
+  @override
+  String get manga_series_refresh_failed =>
+      'Tidak dapat menyegarkan dari sumber';
+  @override
+  String get manga_series_source_disabled =>
+      'Sumber ini belum dipasang atau dinonaktifkan';
+  @override
+  String get manga_series_platform_unsupported =>
+      'Sumber ini tidak tersedia di platform ini';
+  @override
+  String get manga_series_offline_hint =>
+      'Menampilkan bab yang tersimpan di perangkat ini';
+  @override
+  String get manga_series_no_chapters => 'Belum ada bab';
+  @override
+  String get manga_series_all_read => 'Semua bab telah dibaca';
+  @override
+  String get manga_series_sort_newest => 'Terbaru dulu';
+  @override
+  String get manga_series_sort_oldest => 'Terlama dulu';
+  @override
+  String get manga_series_unread_only => 'Hanya yang belum dibaca';
+  @override
+  String get manga_series_mark_read => 'Tandai sudah dibaca';
+  @override
+  String get manga_series_mark_unread => 'Tandai belum dibaca';
+  @override
+  String get manga_series_mark_previous_read =>
+      'Tandai bab ini dan sebelumnya sudah dibaca';
+  @override
+  String get manga_series_local_volume => 'Volume lokal';
+  @override
+  String get manga_series_volume_info => 'Volume';
+  @override
+  String get manga_series_page_count => 'Halaman';
+  @override
+  String get manga_series_chapters_action => 'Bab';
+  @override
+  String get manga_series_next_chapter => 'Bab berikutnya';
+  @override
+  String get manga_series_previous_chapter => 'Bab sebelumnya';
+  @override
+  String get manga_series_last_chapter_reached => 'Ini bab terbaru';
+  @override
+  String get manga_series_first_chapter_reached => 'Ini bab pertama';
+  @override
+  String get manga_series_open_series => 'Halaman karya';
+  @override
+  String manga_series_read_progress(
+          {required Object page, required Object total}) =>
+      'Dibaca sampai halaman ${page} dari ${total}';
+  @override
+  String manga_series_read_progress_partial({required Object page}) =>
+      'Dibaca sampai halaman ${page}';
+  @override
+  String mihon_store_extension_count({required Object count}) =>
+      '${count} ekstensi';
+  @override
+  String mihon_extension_sources_more({required Object count}) =>
+      'Tampilkan semua ${count} sumber';
+  @override
+  String get mihon_extension_sources_less => 'Tampilkan lebih sedikit sumber';
+  @override
+  String get options_website => 'Kunjungi situs web resmi';
+  @override
+  String get video_setting_mpv_group_hdr => 'HDR';
+  @override
+  String get video_setting_hdr_tone_mapping => 'Pemetaan nada HDR';
+  @override
+  String get video_setting_hdr_tone_mapping_hint =>
+      'Kurva yang dipakai saat sumber HDR harus dipadatkan ke layar SDR. "Otomatis" membiarkan mpv memilih per sumber.';
+  @override
+  String get video_setting_hdr_compute_peak => 'Deteksi puncak dinamis';
+  @override
+  String get video_setting_hdr_compute_peak_hint =>
+      'Mengukur puncak kecerahan asli tiap bingkai alih-alih mempercayai metadata sumber. Sorotan lebih baik, memakan sedikit GPU.';
+  @override
+  String get video_setting_hdr_auto => 'Otomatis';
+  @override
+  String get video_setting_hdr_on => 'Aktif';
+  @override
+  String get video_setting_hdr_off => 'Nonaktif';
+  @override
+  String get video_discovery_cancel_downloads_title => 'Batalkan unduhan?';
+  @override
+  String video_discovery_cancel_downloads_body({required Object n}) =>
+      '${n} tugas unduhan untuk judul ini akan dihentikan. Bagian yang sudah terunduh tetap ada di disk; kamu bisa memulai unduhan lagi nanti.';
+  @override
+  String get video_discovery_cancel_downloads_failed =>
+      'Tidak bisa membatalkan unduhan. Tugasnya mungkin sudah selesai, atau backend unduhan sedang tidak tersedia.';
+  @override
+  String get gal_hook_click_lookup => 'Ketuk kata untuk mencarinya';
+  @override
+  String get gal_hook_click_lookup_hint =>
+      'Mati berarti klik pada teks tidak pernah memicu pencarian — berguna saat klik-tembus aktif dan kamu tidak ingin tak sengaja mengenai kata.';
+  @override
+  String get gal_hook_lookup_trigger => 'Pemicu pencarian';
+  @override
+  String get gal_hook_lookup_trigger_hint =>
+      'Tombol tetikus mana yang mencari kata di bawah penunjuk. Terpisah dari sakelar di atas: kamu bisa mematikan ketuk-untuk-cari dan tetap mencari dengan tombol samping.';
+  @override
+  String get gal_hook_lookup_trigger_left => 'Left click';
+  @override
+  String get gal_hook_lookup_trigger_middle => 'Middle click';
+  @override
+  String get gal_hook_lookup_trigger_side => 'Side button';
+  @override
+  String get gal_hook_toolbar_auto_hide => 'Sembunyikan bilah otomatis';
+  @override
+  String get gal_hook_toolbar_auto_hide_hint =>
+      'Sembunyikan bilah sampai penunjuk mencapai kotak teks, ala LunaHook. Tersembunyi artinya benar-benar hilang — piksel itu kembali ke game.';
+  @override
+  String get gal_hook_passthrough_blocks_mouse =>
+      'Teks tetap menerima klik saat klik-tembus';
+  @override
+  String get gal_hook_passthrough_blocks_mouse_hint =>
+      'Aktif: baris teks tetap menerima klik sehingga kamu bisa mengetuk kata. Nonaktif: seluruh lapisan tembus bagi tetikus — kamu bisa mengeklik apa pun di bawahnya, tapi mengetuk kata tidak lagi berfungsi.';
+  @override
+  String get floating_lyric_topmost => 'Tetap di atas';
+  @override
+  String get gal_hook_fold_progressive_lines =>
+      'Gabungkan baris dialog yang terpotong';
+  @override
+  String get gal_hook_fold_progressive_lines_hint =>
+      'Sebagian engine menggambar ulang seluruh baris setiap kali diklik, sehingga satu baris tertangkap beberapa kali. Lipat cuplikan itu menjadi satu baris.';
+  @override
+  String get gal_hook_ingame_lookup_engine_unsupported =>
+      'Mesin gim ini belum mendukung pencarian kamus dalam gim';
+  @override
+  String get gal_hook_ingame_lookup_version_unsupported =>
+      'Versi gim ini belum ada dalam daftar yang didukung';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copy =>
+      'Salin SHA-256 file eksekusi gim';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_unavailable =>
+      'Tidak dapat membaca file eksekusi gim';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copied =>
+      'SHA-256 file eksekusi disalin';
+  @override
+  String get download_tracker_section => 'Langganan tracker';
+  @override
+  String get download_tracker_auto_add =>
+      'Otomatis tambahkan tracker langganan ke unduhan baru';
+  @override
+  String get download_tracker_auto_add_hint =>
+      'Daftar disimpan di cache selama 6 jam. Kegagalan langganan tidak menghentikan unduhan.';
+  @override
+  String get download_tracker_url => 'URL langganan';
+  @override
+  String get download_tracker_refresh => 'Ambil tracker';
+  @override
+  String get download_tracker_preview_empty =>
+      'Ambil langganan untuk melihat tracker HTTP, HTTPS, dan UDP yang didukung.';
+  @override
+  String download_tracker_preview_count({required Object count}) =>
+      '${count} tracker diambil';
+  @override
+  String download_tracker_fetch_failed({required Object message}) =>
+      'Tidak dapat mengambil tracker: ${message}';
+  @override
+  String get anki_connect_port_auto_fix => 'Ganti ke port yang kosong';
+  @override
+  String get anki_connect_port_auto_fix_hint =>
+      'Memilih port kosong lalu menuliskannya ke Hibiki dan ke konfigurasi add-on AnkiConnect. Mulai ulang Anki agar berlaku.';
+  @override
+  String anki_connect_port_auto_fix_done({required Object port}) =>
+      'AnkiConnect kini memakai port ${port}. Mulai ulang Anki lalu coba lagi.';
+  @override
+  String anki_connect_port_auto_fix_manual({required Object port}) =>
+      'Hibiki kini memakai port ${port}, tetapi konfigurasi add-on AnkiConnect tidak ditemukan. Setel webBindPort ke ${port} di Anki (Alat → Add-on → AnkiConnect → Konfigurasi), lalu mulai ulang Anki.';
+  @override
+  String get anki_connect_port_auto_fix_none =>
+      'Tidak ditemukan port kosong di komputer ini.';
+  @override
+  String get onboarding_action_badge_required => 'Wajib';
+  @override
+  String get onboarding_action_badge_recommended => 'Disarankan';
+  @override
+  String get onboarding_action_badge_optional => 'Opsional';
+  @override
+  String get onboarding_pack_action_download_desc =>
+      'Mengunduh seluruh paket di latar belakang, lalu mengimpornya. Bisa dibatalkan kapan saja; berikutnya dilanjutkan dari titik terakhir.';
+  @override
+  String get onboarding_pack_action_import_existing_desc =>
+      'Paket sudah terunduh; tombol ini mengimpornya. Pilih «Gabungkan» pada dialog konfirmasi agar data yang sudah ada tidak tersentuh.';
+  @override
+  String get onboarding_pack_action_pick_desc =>
+      'Sudah punya zip paketnya dari tempat lain? Impor dari disk dan lewati proses unduh sepenuhnya.';
+  @override
+  String get onboarding_pack_action_website =>
+      'Buka halaman unduh di situs web';
+  @override
+  String get onboarding_pack_action_website_desc =>
+      'Membuka situs resmi di peramban. Bagian paket di sana memuat tautan per potongan yang bisa diberikan ke pengelola unduhan; setelah itu kembali ke sini dan gunakan «Pilih berkas paket lokal» untuk mengimpor hasilnya.';
+  @override
+  String get onboarding_pack_action_dictionary_desc =>
+      'Sedang belajar bahasa selain Jepang? Lewati paketnya dan impor kamus untuk bahasamu sendiri di sini.';
+  @override
+  String get onboarding_pack_action_audio_desc =>
+      'Dari mana audio pelafalan berasal. Paket sudah mencakup bahasa Jepang dan Inggris; untuk bahasa lain tambahkan sumber daring di sini.';
+  @override
+  String get onboarding_anki_action_test_desc =>
+      'Memeriksa apakah Fushi bisa menghubungi Anki dan memuat dek serta jenis catatanmu. Belum ada yang dibuat.';
+  @override
+  String get onboarding_anki_action_refresh_desc =>
+      'Memuat ulang dek dan jenis catatan dari Anki. Gunakan setelah membuat dek baru di dalam Anki.';
+  @override
+  String get onboarding_anki_action_get_ankidroid_desc =>
+      'Membuka halaman toko AnkiDroid. Fushi menulis kartunya ke sana, jadi harus dipasang lebih dulu.';
+  @override
+  String get onboarding_anki_action_get_anki_desc =>
+      'Membuka halaman unduh Anki. Pasang Anki dan biarkan tetap berjalan selagi kamu membuat kartu.';
+  @override
+  String get onboarding_anki_action_install_addon_desc =>
+      'Mengekstrak add-on AnkiConnect bawaan ke dalam Anki untukmu; itulah yang membuat Fushi bisa berbicara dengannya. Mulai ulang Anki setelahnya.';
+  @override
+  String get onboarding_step_anki_action_desc =>
+      'Templat kartu, pemetaan bidang, tangkapan layar, dan audio: yaitu rincian seperti apa kartu yang dihasilkan. Dek dan jenis catatan di atas sudah cukup untuk mulai, jadi buka ini hanya jika kamu ingin mengubah cara kartu disusun.';
+  @override
+  String get onboarding_step_backup_action_desc =>
+      'Pilih backend cadangan dan masuk, supaya pustakamu selamat saat perangkat hilang atau diganti.';
+  @override
+  String get onboarding_step_interconnect_action_desc =>
+      'Memasangkan perangkat ini dengan perangkatmu yang lain untuk berbagi satu pustaka dan menyelaraskan progres.';
+  @override
+  String get onboarding_step_extension_action_desc =>
+      'Menunjukkan cara memasang ekstensi peramban dan menghubungkannya ke Fushi, supaya kamu juga bisa mencari kata di halaman web.';
+  @override
+  String get onboarding_step_fonts_action_desc =>
+      'Tambahkan berkas fonmu sendiri dan pilih fon yang dipakai tiap bahasa.';
+  @override
+  String get onboarding_pack_sources_hint =>
+      'Diunduh dalam potongan paralel dari GitHub, situs resmi, dan satu cermin cadangan sekaligus, tiap potongan diperiksa checksum-nya. Fushi mengukur kecepatan sumber sambil berjalan dan memberi lebih banyak potongan ke yang tercepat saat itu, jadi tidak ada yang perlu dipilih di sini.';
+  @override
+  String get video_setting_hdr_output => 'Keluaran HDR / 10 bit';
+  @override
+  String get video_setting_hdr_output_hint =>
+      'Hanya Windows. «Otomatis» meneruskan sumber HDR langsung ke layar HDR lewat jendela video native; «Selalu» memakai jendela itu untuk semua video (keluaran 10 bit); «Mati» tetap memakai perender standar.';
+  @override
+  String get video_setting_hdr_output_auto => 'Otomatis';
+  @override
+  String get video_setting_hdr_output_always => 'Selalu';
+  @override
+  String get video_setting_hdr_output_off => 'Mati';
   @override
   String get video_ajatt_settings_hint =>
       'Arsip subtitle bahasa Jepang gratis (cermin kitsunekko). Tidak perlu akun; berkas subtitle diunduh dari GitHub.';
@@ -59490,13 +60935,6 @@ class _StringsIt extends _StringsEn {
   String get onboarding_anki_mobile_ankiconnect_hint =>
       'Questo dispositivo può anche creare carte in Anki su un computer nella stessa rete: abilita AnkiConnect nelle impostazioni di creazione carte e inserisci l\'indirizzo del computer.';
   @override
-  String get onboarding_anki_fsrs_title => 'Passa ad FSRS in Anki';
-  @override
-  String get onboarding_anki_fsrs_body =>
-      'Anki include FSRS, uno scheduler molto migliore rispetto al vecchio SM-2 predefinito di 30 anni: migliore ritenzione con meno revisioni. In Anki, apri le opzioni del mazzo e attiva FSRS (un interruttore copre l\'intera collezione). Questo deve essere fatto dentro Anki stesso.';
-  @override
-  String get onboarding_step_pack_browser_action => 'Scarica nel browser';
-  @override
   String get onboarding_anki_setup_android_hint =>
       'Installa AnkiDroid e aprilo una volta per completare la configurazione iniziale. Tornando in Fushi, tocca Consenti nella finestra di permesso che appare con la prima carta — nessuna impostazione di AnkiDroid da cambiare.';
   @override
@@ -59823,6 +61261,272 @@ class _StringsIt extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       'Altri ${n} elementi selezionati sono nascosti dal filtro corrente e non verranno elaborati.';
+  @override
+  String get download_direct_queue_section => 'Direct downloads';
+  @override
+  String get download_task_kind_all => 'All types';
+  @override
+  String get download_task_kind_filter => 'Filter by type';
+  @override
+  String get manga_online_series_empty => 'Nessun volume in questa serie.';
+  @override
+  String sync_peer_book_delete_confirm({required Object name}) =>
+      'Eliminare "${name}" dal dispositivo peer? I suoi file e i progressi di lettura lì verranno rimossi definitivamente e questo dispositivo non ne ha alcuna copia. L\'operazione non può essere annullata.';
+  @override
+  String sync_peer_video_delete_confirm({required Object name}) =>
+      'Rimuovere "${name}" dalla libreria del dispositivo peer? Il file video importato dal peer stesso viene conservato. L\'operazione non può essere annullata.';
+  @override
+  String get storage_entry_delete_files_confirm_body =>
+      'Verrà eliminato subito dal disco. Nulla nella tua libreria vi fa riferimento: sono dati in cache, esportati o riscaricabili.';
+  @override
+  String get manga_series_refresh => 'Aggiorna capitoli';
+  @override
+  String get manga_series_refresh_failed =>
+      'Impossibile aggiornare dalla fonte';
+  @override
+  String get manga_series_source_disabled =>
+      'Questa fonte non è installata o è disattivata';
+  @override
+  String get manga_series_platform_unsupported =>
+      'Questa fonte non è disponibile su questa piattaforma';
+  @override
+  String get manga_series_offline_hint =>
+      'Vengono mostrati i capitoli salvati su questo dispositivo';
+  @override
+  String get manga_series_no_chapters => 'Ancora nessun capitolo';
+  @override
+  String get manga_series_all_read => 'Tutti i capitoli sono stati letti';
+  @override
+  String get manga_series_sort_newest => 'Prima i più recenti';
+  @override
+  String get manga_series_sort_oldest => 'Prima i più vecchi';
+  @override
+  String get manga_series_unread_only => 'Solo non letti';
+  @override
+  String get manga_series_mark_read => 'Segna come letto';
+  @override
+  String get manga_series_mark_unread => 'Segna come non letto';
+  @override
+  String get manga_series_mark_previous_read =>
+      'Segna questo e i precedenti come letti';
+  @override
+  String get manga_series_local_volume => 'Volume locale';
+  @override
+  String get manga_series_volume_info => 'Volume';
+  @override
+  String get manga_series_page_count => 'Pagine';
+  @override
+  String get manga_series_chapters_action => 'Capitoli';
+  @override
+  String get manga_series_next_chapter => 'Capitolo successivo';
+  @override
+  String get manga_series_previous_chapter => 'Capitolo precedente';
+  @override
+  String get manga_series_last_chapter_reached =>
+      'Questo è il capitolo più recente';
+  @override
+  String get manga_series_first_chapter_reached => 'Questo è il primo capitolo';
+  @override
+  String get manga_series_open_series => 'Pagina dell\'opera';
+  @override
+  String manga_series_read_progress(
+          {required Object page, required Object total}) =>
+      'Letto fino a pagina ${page} di ${total}';
+  @override
+  String manga_series_read_progress_partial({required Object page}) =>
+      'Letto fino a pagina ${page}';
+  @override
+  String mihon_store_extension_count({required Object count}) =>
+      '${count} estensioni';
+  @override
+  String mihon_extension_sources_more({required Object count}) =>
+      'Mostra tutte le ${count} fonti';
+  @override
+  String get mihon_extension_sources_less => 'Mostra meno fonti';
+  @override
+  String get options_website => 'Visita il sito ufficiale';
+  @override
+  String get video_setting_mpv_group_hdr => 'HDR';
+  @override
+  String get video_setting_hdr_tone_mapping => 'Mappatura tonale HDR';
+  @override
+  String get video_setting_hdr_tone_mapping_hint =>
+      'Curva usata quando una sorgente HDR va compressa su uno schermo SDR. «Automatico» lascia scegliere a mpv per ogni sorgente.';
+  @override
+  String get video_setting_hdr_compute_peak =>
+      'Rilevamento dinamico dei picchi';
+  @override
+  String get video_setting_hdr_compute_peak_hint =>
+      'Misura il picco di luminosità reale di ogni fotogramma invece di fidarsi dei metadati della sorgente. Alte luci migliori, con un po’ di costo GPU.';
+  @override
+  String get video_setting_hdr_auto => 'Automatico';
+  @override
+  String get video_setting_hdr_on => 'Attivo';
+  @override
+  String get video_setting_hdr_off => 'Disattivo';
+  @override
+  String get video_discovery_cancel_downloads_title => 'Annullare i download?';
+  @override
+  String video_discovery_cancel_downloads_body({required Object n}) =>
+      'Verranno interrotte ${n} attività di download per questo titolo. Le parti già scaricate restano sul disco; potrai riavviare il download più tardi.';
+  @override
+  String get video_discovery_cancel_downloads_failed =>
+      'Impossibile annullare il download. L’attività potrebbe essere già terminata, oppure il backend di download non è disponibile.';
+  @override
+  String get gal_hook_click_lookup => 'Tocca una parola per cercarla';
+  @override
+  String get gal_hook_click_lookup_hint =>
+      'Disattivato: i clic sul testo non avviano mai una ricerca — utile con il clic passante attivo, quando preferisci non colpire una parola per sbaglio.';
+  @override
+  String get gal_hook_lookup_trigger => 'Attivatore della ricerca';
+  @override
+  String get gal_hook_lookup_trigger_hint =>
+      'Quale tasto del mouse cerca la parola sotto il puntatore. Indipendente dall’interruttore qui sopra: puoi disattivare il tocco-per-cercare e cercare comunque con un tasto laterale.';
+  @override
+  String get gal_hook_lookup_trigger_left => 'Left click';
+  @override
+  String get gal_hook_lookup_trigger_middle => 'Middle click';
+  @override
+  String get gal_hook_lookup_trigger_side => 'Side button';
+  @override
+  String get gal_hook_toolbar_auto_hide => 'Nascondi la barra automaticamente';
+  @override
+  String get gal_hook_toolbar_auto_hide_hint =>
+      'Nasconde la barra finché il puntatore non raggiunge il riquadro del testo, in stile LunaHook. Nascosto significa davvero nascosto: quei pixel tornano al gioco.';
+  @override
+  String get gal_hook_passthrough_blocks_mouse =>
+      'Il testo riceve ancora i clic durante il clic passante';
+  @override
+  String get gal_hook_passthrough_blocks_mouse_hint =>
+      'Attivo: le righe di testo ricevono ancora i clic, così puoi toccare una parola. Disattivo: l’intera sovrapposizione è trasparente al mouse — clicchi ciò che sta sotto, ma toccare le parole non funziona più.';
+  @override
+  String get floating_lyric_topmost => 'Mantieni in primo piano';
+  @override
+  String get gal_hook_fold_progressive_lines => 'Unisci le battute spezzate';
+  @override
+  String get gal_hook_fold_progressive_lines_hint =>
+      'Alcuni motori ridisegnano l’intera riga a ogni clic, così una stessa riga viene catturata più volte. Ripiega quelle istantanee in una sola riga.';
+  @override
+  String get gal_hook_ingame_lookup_engine_unsupported =>
+      'Questo motore di gioco non supporta ancora la ricerca nel gioco';
+  @override
+  String get gal_hook_ingame_lookup_version_unsupported =>
+      'Questa versione del gioco non è ancora nell\'elenco supportato';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copy =>
+      'Copia lo SHA-256 dell\'eseguibile del gioco';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_unavailable =>
+      'Impossibile leggere l\'eseguibile del gioco';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copied =>
+      'SHA-256 dell\'eseguibile copiato';
+  @override
+  String get download_tracker_section => 'Abbonamento ai tracker';
+  @override
+  String get download_tracker_auto_add =>
+      'Aggiungi automaticamente i tracker dell’abbonamento ai nuovi download';
+  @override
+  String get download_tracker_auto_add_hint =>
+      'L’elenco resta in cache per 6 ore. Se l’abbonamento fallisce, il download non viene bloccato.';
+  @override
+  String get download_tracker_url => 'URL dell’abbonamento';
+  @override
+  String get download_tracker_refresh => 'Scarica i tracker';
+  @override
+  String get download_tracker_preview_empty =>
+      'Scarica l’abbonamento per vedere in anteprima i tracker HTTP, HTTPS e UDP supportati.';
+  @override
+  String download_tracker_preview_count({required Object count}) =>
+      '${count} tracker scaricati';
+  @override
+  String download_tracker_fetch_failed({required Object message}) =>
+      'Impossibile scaricare i tracker: ${message}';
+  @override
+  String get anki_connect_port_auto_fix => 'Passa a una porta libera';
+  @override
+  String get anki_connect_port_auto_fix_hint =>
+      'Sceglie una porta libera e la scrive sia in Hibiki sia nella configurazione del componente aggiuntivo AnkiConnect. Riavvia Anki per applicarla.';
+  @override
+  String anki_connect_port_auto_fix_done({required Object port}) =>
+      'AnkiConnect ora usa la porta ${port}. Riavvia Anki e riprova.';
+  @override
+  String anki_connect_port_auto_fix_manual({required Object port}) =>
+      'Hibiki ora usa la porta ${port}, ma la configurazione del componente aggiuntivo AnkiConnect non è stata trovata. Imposta webBindPort su ${port} in Anki (Strumenti → Componenti aggiuntivi → AnkiConnect → Configurazione) e riavvia Anki.';
+  @override
+  String get anki_connect_port_auto_fix_none =>
+      'Nessuna porta libera trovata su questo computer.';
+  @override
+  String get onboarding_action_badge_required => 'Obbligatorio';
+  @override
+  String get onboarding_action_badge_recommended => 'Consigliato';
+  @override
+  String get onboarding_action_badge_optional => 'Facoltativo';
+  @override
+  String get onboarding_pack_action_download_desc =>
+      'Scarica l’intero pacchetto in background e poi lo importa. Puoi annullare in qualsiasi momento; la volta dopo riprende dal punto in cui si era fermato.';
+  @override
+  String get onboarding_pack_action_import_existing_desc =>
+      'Il pacchetto è già scaricato; qui viene importato. Scegli «Unisci» nella finestra di conferma e i dati esistenti resteranno intatti.';
+  @override
+  String get onboarding_pack_action_pick_desc =>
+      'Hai già preso lo zip del pacchetto da un’altra parte? Importalo dal disco e salta del tutto il download.';
+  @override
+  String get onboarding_pack_action_website =>
+      'Apri la pagina di download del sito';
+  @override
+  String get onboarding_pack_action_website_desc =>
+      'Apre il sito ufficiale nel browser. La sezione dedicata al pacchetto elenca link a spezzoni che puoi passare a un download manager; poi torna qui e usa «Scegli un file pacchetto locale» per importare quello che hai ottenuto.';
+  @override
+  String get onboarding_pack_action_dictionary_desc =>
+      'Stai studiando una lingua diversa dal giapponese? Salta il pacchetto e importa qui i dizionari della tua lingua.';
+  @override
+  String get onboarding_pack_action_audio_desc =>
+      'Da dove arriva l’audio della pronuncia. Il pacchetto copre già giapponese e inglese; per le altre lingue aggiungi qui le sorgenti online.';
+  @override
+  String get onboarding_anki_action_test_desc =>
+      'Verifica che Fushi riesca a raggiungere Anki e carica i tuoi mazzi e tipi di nota. Per ora non viene creato nulla.';
+  @override
+  String get onboarding_anki_action_refresh_desc =>
+      'Ricarica mazzi e tipi di nota da Anki. Usalo dopo aver creato un nuovo mazzo dentro Anki.';
+  @override
+  String get onboarding_anki_action_get_ankidroid_desc =>
+      'Apre la pagina dello store di AnkiDroid. Fushi ci scrive dentro le sue carte, quindi va installato prima.';
+  @override
+  String get onboarding_anki_action_get_anki_desc =>
+      'Apre la pagina di download di Anki. Installa Anki e tienilo aperto mentre crei le carte.';
+  @override
+  String get onboarding_anki_action_install_addon_desc =>
+      'Estrae per te il componente aggiuntivo AnkiConnect incluso dentro Anki: è ciò che permette a Fushi di parlarci. Al termine riavvia Anki.';
+  @override
+  String get onboarding_step_anki_action_desc =>
+      'Modello di carta, mappatura dei campi, screenshot e audio: i dettagli di come appare una carta creata. Il mazzo e il tipo di nota qui sopra bastano per iniziare, quindi apri questa sezione solo se vuoi cambiare come vengono costruite le carte.';
+  @override
+  String get onboarding_step_backup_action_desc =>
+      'Scegli un servizio di backup e accedi, così la tua libreria sopravvive alla perdita o alla sostituzione del dispositivo.';
+  @override
+  String get onboarding_step_interconnect_action_desc =>
+      'Associa questo dispositivo agli altri tuoi dispositivi per condividere un’unica libreria e mantenere sincronizzati i progressi.';
+  @override
+  String get onboarding_step_extension_action_desc =>
+      'Mostra come installare l’estensione del browser e collegarla a Fushi, così puoi cercare le parole anche nelle pagine web.';
+  @override
+  String get onboarding_step_fonts_action_desc =>
+      'Aggiungi i tuoi file di font e scegli quale usare per ciascuna lingua.';
+  @override
+  String get onboarding_pack_sources_hint =>
+      'Scaricato in spezzoni paralleli contemporaneamente da GitHub, dal sito ufficiale e da un mirror di riserva, con checksum su ogni spezzone. Fushi misura le sorgenti strada facendo e assegna più spezzoni a quella più veloce in quel momento, quindi qui non c’è nulla da scegliere.';
+  @override
+  String get video_setting_hdr_output => 'Uscita HDR / 10 bit';
+  @override
+  String get video_setting_hdr_output_hint =>
+      'Solo Windows. «Automatico» passa le sorgenti HDR direttamente a uno schermo HDR tramite una finestra video nativa; «Sempre» usa quella finestra per ogni video (uscita a 10 bit); «Disattivato» mantiene il renderer standard.';
+  @override
+  String get video_setting_hdr_output_auto => 'Automatico';
+  @override
+  String get video_setting_hdr_output_always => 'Sempre';
+  @override
+  String get video_setting_hdr_output_off => 'Disattivato';
   @override
   String get video_ajatt_settings_hint =>
       'Archivio gratuito di sottotitoli giapponesi (mirror kitsunekko). Nessun account richiesto; i file vengono scaricati da GitHub.';
@@ -68070,13 +69774,6 @@ class _StringsJa extends _StringsEn {
   String get onboarding_anki_mobile_ankiconnect_hint =>
       'このデバイスから同じネットワーク上のパソコンで動作しているAnkiにカードを作成することもできます。カード作成設定でAnkiConnectを有効にし、パソコンのアドレスを入力してください。';
   @override
-  String get onboarding_anki_fsrs_title => 'AnkiをFSRSに切り替え';
-  @override
-  String get onboarding_anki_fsrs_body =>
-      'AnkiにはFSRSが搭載されており、30年前のSM-2デフォルトよりもはるかに優れたスケジューラーです。少ないレビューでより良い記憶定着が得られます。Ankiでデッキオプションを開き、FSRSをオンにしてください（1つのスイッチでコレクション全体に適用されます）。これはAnki内で行う必要があります。';
-  @override
-  String get onboarding_step_pack_browser_action => 'ブラウザでダウンロード';
-  @override
   String get onboarding_anki_setup_android_hint =>
       'AnkiDroidをインストールし、一度開いて初回セットアップを完了させてください。Fushiに戻り、最初のカード作成時に表示される権限ダイアログで「許可」をタップするだけです。AnkiDroidの設定変更は不要です。';
   @override
@@ -68387,6 +70084,260 @@ class _StringsJa extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       '選択済みの ${n} 件は現在のフィルターで非表示のため、今回は処理されません。';
+  @override
+  String get download_direct_queue_section => '直リンクダウンロード';
+  @override
+  String get download_task_kind_all => 'すべての種類';
+  @override
+  String get download_task_kind_filter => '種類で絞り込む';
+  @override
+  String get manga_online_series_empty => 'このシリーズには巻がありません。';
+  @override
+  String sync_peer_book_delete_confirm({required Object name}) =>
+      '対向デバイスから「${name}」を削除しますか？そちらのファイルと読書進捗は完全に削除され、この端末には控えがありません。この操作は取り消せません。';
+  @override
+  String sync_peer_video_delete_confirm({required Object name}) =>
+      '対向デバイスのライブラリから「${name}」を削除しますか？対向デバイスが自分で取り込んだ動画ファイルは残ります。この操作は取り消せません。';
+  @override
+  String get storage_entry_delete_files_confirm_body =>
+      'ディスクからすぐに削除します。ライブラリのどの項目もこれを参照していません（キャッシュ・書き出し済みデータ・再取得できるデータです）。';
+  @override
+  String get manga_series_refresh => '章を更新';
+  @override
+  String get manga_series_refresh_failed => 'ソースから更新できませんでした';
+  @override
+  String get manga_series_source_disabled => 'このソースは未インストールまたは無効です';
+  @override
+  String get manga_series_platform_unsupported => 'このソースはこのプラットフォームでは利用できません';
+  @override
+  String get manga_series_offline_hint => 'この端末に保存済みの章を表示しています';
+  @override
+  String get manga_series_no_chapters => '章がまだありません';
+  @override
+  String get manga_series_all_read => 'すべての章を読み終えました';
+  @override
+  String get manga_series_sort_newest => '新しい順';
+  @override
+  String get manga_series_sort_oldest => '古い順';
+  @override
+  String get manga_series_unread_only => '未読のみ';
+  @override
+  String get manga_series_mark_read => '既読にする';
+  @override
+  String get manga_series_mark_unread => '未読にする';
+  @override
+  String get manga_series_mark_previous_read => 'この章までを既読にする';
+  @override
+  String get manga_series_local_volume => 'ローカルの巻';
+  @override
+  String get manga_series_volume_info => '巻の情報';
+  @override
+  String get manga_series_page_count => 'ページ数';
+  @override
+  String get manga_series_chapters_action => '章';
+  @override
+  String get manga_series_next_chapter => '次の章';
+  @override
+  String get manga_series_previous_chapter => '前の章';
+  @override
+  String get manga_series_last_chapter_reached => '最新の章です';
+  @override
+  String get manga_series_first_chapter_reached => '最初の章です';
+  @override
+  String get manga_series_open_series => '作品ページ';
+  @override
+  String manga_series_read_progress(
+          {required Object total, required Object page}) =>
+      '${total} ページ中 ${page} ページまで';
+  @override
+  String manga_series_read_progress_partial({required Object page}) =>
+      '${page} ページまで';
+  @override
+  String mihon_store_extension_count({required Object count}) =>
+      '拡張機能 ${count} 件';
+  @override
+  String mihon_extension_sources_more({required Object count}) =>
+      '${count} 件のソースをすべて表示';
+  @override
+  String get mihon_extension_sources_less => 'ソースの表示を減らす';
+  @override
+  String get options_website => '公式サイトを開く';
+  @override
+  String get video_setting_mpv_group_hdr => 'HDR';
+  @override
+  String get video_setting_hdr_tone_mapping => 'HDR トーンマッピング';
+  @override
+  String get video_setting_hdr_tone_mapping_hint =>
+      'HDR ソースを SDR ディスプレイに収めるときに使うカーブ。「自動」は mpv がソースごとに選びます。';
+  @override
+  String get video_setting_hdr_compute_peak => '動的ピーク検出';
+  @override
+  String get video_setting_hdr_compute_peak_hint =>
+      'ソースのメタデータを信じる代わりに、フレームごとの実際のピーク輝度を測ります。ハイライトが良くなる一方、GPU を少し使います。';
+  @override
+  String get video_setting_hdr_auto => '自動';
+  @override
+  String get video_setting_hdr_on => 'オン';
+  @override
+  String get video_setting_hdr_off => 'オフ';
+  @override
+  String get video_discovery_cancel_downloads_title => 'ダウンロードを中止しますか？';
+  @override
+  String video_discovery_cancel_downloads_body({required Object n}) =>
+      'この作品のダウンロードタスク ${n} 件を停止します。ダウンロード済みの断片はディスクに残るので、後でやり直せます。';
+  @override
+  String get video_discovery_cancel_downloads_failed =>
+      'ダウンロードを中止できませんでした。タスクが既に終了しているか、ダウンロードバックエンドが利用できません。';
+  @override
+  String get gal_hook_click_lookup => '単語をタップして辞書を引く';
+  @override
+  String get gal_hook_click_lookup_hint =>
+      'オフにすると、字幕をクリックしても辞書を引きません。クリック透過と併用して、うっかり単語に当たるのを避けたいときに便利です。';
+  @override
+  String get gal_hook_lookup_trigger => '辞書を引くボタン';
+  @override
+  String get gal_hook_lookup_trigger_hint =>
+      'ポインタの下の単語を引くマウスボタン。上のスイッチとは独立です：タップで引くのをオフにしたまま、サイドボタンで引けます。';
+  @override
+  String get gal_hook_lookup_trigger_left => 'Left click';
+  @override
+  String get gal_hook_lookup_trigger_middle => 'Middle click';
+  @override
+  String get gal_hook_lookup_trigger_side => 'Side button';
+  @override
+  String get gal_hook_toolbar_auto_hide => 'ツールバーを自動で隠す';
+  @override
+  String get gal_hook_toolbar_auto_hide_hint =>
+      'ポインタが字幕枠に来るまでツールバーを隠します（LunaHook 方式）。隠すときは本当に消します——その分のピクセルはゲームに返ります。';
+  @override
+  String get gal_hook_passthrough_blocks_mouse => 'クリック透過中も字幕はクリックを受ける';
+  @override
+  String get gal_hook_passthrough_blocks_mouse_hint =>
+      'オン：字幕の行はクリックを受け続けるので単語をタップできます。オフ：オーバーレイ全体がマウスに対して透明になり、下のものをクリックできますが、単語のタップはできなくなります。';
+  @override
+  String get floating_lyric_topmost => '常に手前に表示';
+  @override
+  String get gal_hook_fold_progressive_lines => '分割されたセリフ行をまとめる';
+  @override
+  String get gal_hook_fold_progressive_lines_hint =>
+      'クリックのたびに行全体を描き直すエンジンがあり、同じ行が何度も取り込まれます。そのスナップショットを 1 行にまとめます。';
+  @override
+  String get gal_hook_ingame_lookup_engine_unsupported =>
+      'このゲームエンジンはゲーム内辞書引きに未対応です';
+  @override
+  String get gal_hook_ingame_lookup_version_unsupported =>
+      'このゲームのバージョンはまだ対応リストにありません';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copy => 'ゲーム実行ファイルの SHA-256 をコピー';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_unavailable =>
+      'ゲーム実行ファイルを読み取れません（権限不足の可能性）';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copied =>
+      '実行ファイルの SHA-256 をコピーしました';
+  @override
+  String get download_tracker_section => 'トラッカー購読';
+  @override
+  String get download_tracker_auto_add => '新しいダウンロードに購読トラッカーを自動で追加する';
+  @override
+  String get download_tracker_auto_add_hint =>
+      'リストは 6 時間キャッシュされます。購読の取得に失敗してもダウンロードは止まりません。';
+  @override
+  String get download_tracker_url => '購読 URL';
+  @override
+  String get download_tracker_refresh => 'トラッカーを取得';
+  @override
+  String get download_tracker_preview_empty =>
+      '購読を取得すると、対応している HTTP・HTTPS・UDP のトラッカーをプレビューできます。';
+  @override
+  String download_tracker_preview_count({required Object count}) =>
+      '${count} 件のトラッカーを取得しました';
+  @override
+  String download_tracker_fetch_failed({required Object message}) =>
+      'トラッカーを取得できませんでした: ${message}';
+  @override
+  String get anki_connect_port_auto_fix => '空いているポートに変更';
+  @override
+  String get anki_connect_port_auto_fix_hint =>
+      '空いているポートを選び、Hibiki と Anki の AnkiConnect アドオン設定の両方に書き込みます。反映には Anki の再起動が必要です。';
+  @override
+  String anki_connect_port_auto_fix_done({required Object port}) =>
+      'AnkiConnect のポートを ${port} に変更しました。Anki を再起動してからもう一度お試しください。';
+  @override
+  String anki_connect_port_auto_fix_manual({required Object port}) =>
+      'Hibiki はポート ${port} を使うようになりましたが、AnkiConnect のアドオン設定が見つかりませんでした。Anki の「ツール → アドオン → AnkiConnect → 設定」で webBindPort も ${port} にしてから、Anki を再起動してください。';
+  @override
+  String get anki_connect_port_auto_fix_none => 'このマシンに空いているポートが見つかりませんでした。';
+  @override
+  String get onboarding_action_badge_required => '必須';
+  @override
+  String get onboarding_action_badge_recommended => '推奨';
+  @override
+  String get onboarding_action_badge_optional => '任意';
+  @override
+  String get onboarding_pack_action_download_desc =>
+      'おすすめパック全体をバックグラウンドでダウンロードし、完了後そのままインポートに進みます。いつでも中止でき、次回は中断した位置から再開します。';
+  @override
+  String get onboarding_pack_action_import_existing_desc =>
+      'パックはダウンロード済みです。ここからインポートします。確認ダイアログで「統合」を選べば、既存のデータはそのまま残ります。';
+  @override
+  String get onboarding_pack_action_pick_desc =>
+      'すでに別の場所からパックの zip を入手済みですか？ディスクからインポートすれば、ダウンロードはまるごと省けます。';
+  @override
+  String get onboarding_pack_action_website => '公式サイトのダウンロードページを開く';
+  @override
+  String get onboarding_pack_action_website_desc =>
+      'ブラウザで公式サイトを開きます。パックの項に、ダウンロードマネージャーへ渡せる分割リンクが載っています。入手後はここに戻り、「ローカルのパックファイルを選ぶ」からインポートしてください。';
+  @override
+  String get onboarding_pack_action_dictionary_desc =>
+      '日本語以外の言語を学んでいますか？パックは飛ばして、ここで自分の言語の辞書をインポートしてください。';
+  @override
+  String get onboarding_pack_action_audio_desc =>
+      '発音音声の取得元です。パックには日本語と英語が含まれています。その他の言語はここでオンラインソースを追加してください。';
+  @override
+  String get onboarding_anki_action_test_desc =>
+      'Fushi が Anki に接続できるか確認し、デッキとノートタイプを読み込みます。この時点では何も作成されません。';
+  @override
+  String get onboarding_anki_action_refresh_desc =>
+      'デッキとノートタイプを Anki から読み込み直します。Anki 側で新しいデッキを作った後に使ってください。';
+  @override
+  String get onboarding_anki_action_get_ankidroid_desc =>
+      'AnkiDroid のストアページを開きます。Fushi はここにカードを書き込むので、先にインストールが必要です。';
+  @override
+  String get onboarding_anki_action_get_anki_desc =>
+      'Anki のダウンロードページを開きます。Anki をインストールし、カード作成中は起動したままにしてください。';
+  @override
+  String get onboarding_anki_action_install_addon_desc =>
+      '同梱の AnkiConnect アドオンを Anki に展開します。Fushi はこれを通じて Anki と通信します。完了後に Anki を再起動してください。';
+  @override
+  String get onboarding_step_anki_action_desc =>
+      'カードテンプレート、フィールド対応、スクリーンショットと音声——つまり「出来上がるカードの見た目」です。上でデッキとノートタイプを選べばカード作成は始められるので、カードの作られ方を変えたいときだけ開いてください。';
+  @override
+  String get onboarding_step_backup_action_desc =>
+      'バックアップ先を選んでサインインしておけば、端末を紛失・買い替えてもライブラリは残ります。';
+  @override
+  String get onboarding_step_interconnect_action_desc =>
+      'この端末を他の端末とペアリングして、同じライブラリを共有し進捗を同期します。';
+  @override
+  String get onboarding_step_extension_action_desc =>
+      'ブラウザ拡張機能のインストール方法と Fushi への接続手順を案内します。ウェブページ上でも辞書を引けるようになります。';
+  @override
+  String get onboarding_step_fonts_action_desc =>
+      '自分のフォントファイルを追加し、言語ごとにどれを使うか指定します。';
+  @override
+  String get onboarding_pack_sources_hint =>
+      'GitHub・公式サイト・予備ミラーから同時に分割ダウンロードし、各断片をチェックサムで検証します。ダウンロード中も各ソースの速度を実測し、その時点で最も速いソースに多くの断片を割り当てるため、ここで選ぶ必要はありません。';
+  @override
+  String get video_setting_hdr_output => 'HDR / 10 ビット出力';
+  @override
+  String get video_setting_hdr_output_hint =>
+      'Windows のみ。「自動」はディスプレイとソースがどちらも HDR のとき、ネイティブ動画ウィンドウ経由でそのまま HDR ディスプレイへ渡します。「常に」はすべての動画でそのウィンドウを使います（10 ビット出力）。「オフ」は標準のレンダラーのままです。';
+  @override
+  String get video_setting_hdr_output_auto => '自動';
+  @override
+  String get video_setting_hdr_output_always => '常に';
+  @override
+  String get video_setting_hdr_output_off => 'オフ';
   @override
   String get video_ajatt_settings_hint =>
       '無料の日本語字幕アーカイブ（kitsunekko ミラー）。アカウント不要。字幕ファイルは GitHub からダウンロードされます。';
@@ -76645,13 +78596,6 @@ class _StringsKo extends _StringsEn {
   String get onboarding_anki_mobile_ankiconnect_hint =>
       '이 기기에서도 같은 네트워크의 컴퓨터에서 실행 중인 Anki에 카드를 만들 수 있습니다: 카드 생성 설정에서 AnkiConnect를 활성화하고 컴퓨터 주소를 입력하세요.';
   @override
-  String get onboarding_anki_fsrs_title => 'Anki를 FSRS로 전환';
-  @override
-  String get onboarding_anki_fsrs_body =>
-      'Anki에는 30년 된 SM-2 기본값보다 훨씬 뛰어난 스케줄러인 FSRS가 내장되어 있습니다: 더 적은 복습으로 더 나은 기억률을 제공합니다. Anki에서 덱 옵션을 열고 FSRS를 켜세요 (하나의 스위치로 전체 컬렉션에 적용됩니다). 이 설정은 Anki 내에서 직접 해야 합니다.';
-  @override
-  String get onboarding_step_pack_browser_action => '브라우저에서 다운로드';
-  @override
   String get onboarding_anki_setup_android_hint =>
       'AnkiDroid를 설치하고 한 번 열어 초기 설정을 완료하세요. Fushi로 돌아와 첫 카드를 만들 때 나타나는 권한 대화상자에서 허용을 탭하세요 - AnkiDroid 설정을 변경할 필요가 없습니다.';
   @override
@@ -76961,6 +78905,259 @@ class _StringsKo extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       '선택한 항목 중 ${n}개는 현재 필터로 숨겨져 있어 처리되지 않습니다.';
+  @override
+  String get download_direct_queue_section => '직접 링크 다운로드';
+  @override
+  String get download_task_kind_all => '모든 유형';
+  @override
+  String get download_task_kind_filter => '유형별 필터';
+  @override
+  String get manga_online_series_empty => '이 시리즈에는 권이 없습니다.';
+  @override
+  String sync_peer_book_delete_confirm({required Object name}) =>
+      '상대 기기에서 "${name}"을(를) 삭제할까요? 해당 기기의 파일과 읽기 진행률이 영구히 삭제되며, 이 기기에는 사본이 없습니다. 이 작업은 되돌릴 수 없습니다.';
+  @override
+  String sync_peer_video_delete_confirm({required Object name}) =>
+      '상대 기기의 라이브러리에서 "${name}"을(를) 제거할까요? 상대 기기가 직접 가져온 동영상 파일은 유지됩니다. 이 작업은 되돌릴 수 없습니다.';
+  @override
+  String get storage_entry_delete_files_confirm_body =>
+      '디스크에서 즉시 삭제합니다. 라이브러리의 어떤 항목도 이를 참조하지 않습니다 — 캐시, 내보낸 파일, 또는 다시 받을 수 있는 데이터입니다.';
+  @override
+  String get manga_series_refresh => '챕터 새로고침';
+  @override
+  String get manga_series_refresh_failed => '소스에서 새로고침하지 못했습니다';
+  @override
+  String get manga_series_source_disabled => '이 소스가 설치되지 않았거나 비활성화되었습니다';
+  @override
+  String get manga_series_platform_unsupported =>
+      '이 소스 런타임은 이 플랫폼에서 사용할 수 없습니다';
+  @override
+  String get manga_series_offline_hint => '이 기기에 저장된 챕터를 표시하고 있습니다';
+  @override
+  String get manga_series_no_chapters => '아직 챕터가 없습니다';
+  @override
+  String get manga_series_all_read => '모든 챕터를 읽었습니다';
+  @override
+  String get manga_series_sort_newest => '최신순';
+  @override
+  String get manga_series_sort_oldest => '오래된순';
+  @override
+  String get manga_series_unread_only => '읽지 않은 것만';
+  @override
+  String get manga_series_mark_read => '읽음으로 표시';
+  @override
+  String get manga_series_mark_unread => '읽지 않음으로 표시';
+  @override
+  String get manga_series_mark_previous_read => '이 챕터까지 읽음으로 표시';
+  @override
+  String get manga_series_local_volume => '로컬 권';
+  @override
+  String get manga_series_volume_info => '권 정보';
+  @override
+  String get manga_series_page_count => '페이지 수';
+  @override
+  String get manga_series_chapters_action => '챕터';
+  @override
+  String get manga_series_next_chapter => '다음 챕터';
+  @override
+  String get manga_series_previous_chapter => '이전 챕터';
+  @override
+  String get manga_series_last_chapter_reached => '최신 챕터입니다';
+  @override
+  String get manga_series_first_chapter_reached => '첫 번째 챕터입니다';
+  @override
+  String get manga_series_open_series => '작품 페이지';
+  @override
+  String manga_series_read_progress(
+          {required Object total, required Object page}) =>
+      '${total}페이지 중 ${page}페이지까지 읽음';
+  @override
+  String manga_series_read_progress_partial({required Object page}) =>
+      '${page}페이지까지 읽음';
+  @override
+  String mihon_store_extension_count({required Object count}) => '확장 ${count}개';
+  @override
+  String mihon_extension_sources_more({required Object count}) =>
+      '소스 ${count}개 모두 보기';
+  @override
+  String get mihon_extension_sources_less => '소스 적게 보기';
+  @override
+  String get options_website => '공식 웹사이트 방문';
+  @override
+  String get video_setting_mpv_group_hdr => 'HDR';
+  @override
+  String get video_setting_hdr_tone_mapping => 'HDR 톤 매핑';
+  @override
+  String get video_setting_hdr_tone_mapping_hint =>
+      'HDR 소스를 SDR 디스플레이에 맞출 때 쓰는 곡선입니다. ‘자동’은 mpv가 소스마다 고르게 합니다.';
+  @override
+  String get video_setting_hdr_compute_peak => '동적 피크 검출';
+  @override
+  String get video_setting_hdr_compute_peak_hint =>
+      '소스 메타데이터를 믿는 대신 프레임마다 실제 최대 밝기를 측정합니다. 하이라이트가 좋아지지만 GPU를 조금 씁니다.';
+  @override
+  String get video_setting_hdr_auto => '자동';
+  @override
+  String get video_setting_hdr_on => '켜기';
+  @override
+  String get video_setting_hdr_off => '끄기';
+  @override
+  String get video_discovery_cancel_downloads_title => '다운로드를 취소할까요?';
+  @override
+  String video_discovery_cancel_downloads_body({required Object n}) =>
+      '이 작품의 다운로드 작업 ${n}개를 중지합니다. 이미 받은 조각은 디스크에 남아 있어 나중에 다시 시작할 수 있습니다.';
+  @override
+  String get video_discovery_cancel_downloads_failed =>
+      '다운로드를 취소하지 못했습니다. 작업이 이미 끝났거나 다운로드 백엔드를 사용할 수 없습니다.';
+  @override
+  String get gal_hook_click_lookup => '단어를 눌러 사전 찾기';
+  @override
+  String get gal_hook_click_lookup_hint =>
+      '끄면 자막을 클릭해도 사전을 찾지 않습니다. 클릭 통과를 켠 채로 실수로 단어를 누르고 싶지 않을 때 유용합니다.';
+  @override
+  String get gal_hook_lookup_trigger => '사전 찾기 버튼';
+  @override
+  String get gal_hook_lookup_trigger_hint =>
+      '포인터 아래 단어를 찾을 마우스 버튼입니다. 위 스위치와는 별개예요: 눌러서 찾기를 꺼도 옆 버튼으로는 찾을 수 있습니다.';
+  @override
+  String get gal_hook_lookup_trigger_left => 'Left click';
+  @override
+  String get gal_hook_lookup_trigger_middle => 'Middle click';
+  @override
+  String get gal_hook_lookup_trigger_side => 'Side button';
+  @override
+  String get gal_hook_toolbar_auto_hide => '도구 모음 자동 숨김';
+  @override
+  String get gal_hook_toolbar_auto_hide_hint =>
+      '포인터가 자막 상자에 닿을 때까지 도구 모음을 숨깁니다(LunaHook 방식). 숨긴다는 건 정말로 사라진다는 뜻이라, 그 픽셀은 게임으로 돌아갑니다.';
+  @override
+  String get gal_hook_passthrough_blocks_mouse => '클릭 통과 중에도 자막은 클릭을 받음';
+  @override
+  String get gal_hook_passthrough_blocks_mouse_hint =>
+      '켬: 자막 줄이 계속 클릭을 받아 단어를 누를 수 있습니다. 끔: 오버레이 전체가 마우스에 투명해져 아래 것을 클릭할 수 있지만, 단어 누르기는 더 이상 되지 않습니다.';
+  @override
+  String get floating_lyric_topmost => '항상 위에 표시';
+  @override
+  String get gal_hook_fold_progressive_lines => '나뉜 대사 줄 합치기';
+  @override
+  String get gal_hook_fold_progressive_lines_hint =>
+      '클릭할 때마다 줄 전체를 다시 그리는 엔진이 있어 같은 줄이 여러 번 캡처됩니다. 그 스냅숏들을 한 줄로 접습니다.';
+  @override
+  String get gal_hook_ingame_lookup_engine_unsupported =>
+      '이 게임 엔진은 아직 인게임 사전 검색을 지원하지 않습니다';
+  @override
+  String get gal_hook_ingame_lookup_version_unsupported =>
+      '이 게임 버전은 아직 지원 목록에 없습니다';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copy => '게임 실행 파일의 SHA-256 복사';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_unavailable =>
+      '게임 실행 파일을 읽을 수 없습니다 (권한 부족일 수 있음)';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copied => '실행 파일의 SHA-256을 복사했습니다';
+  @override
+  String get download_tracker_section => '트래커 구독';
+  @override
+  String get download_tracker_auto_add => '새 다운로드에 구독 트래커 자동 추가';
+  @override
+  String get download_tracker_auto_add_hint =>
+      '목록은 6시간 동안 캐시됩니다. 구독을 가져오지 못해도 다운로드는 중단되지 않습니다.';
+  @override
+  String get download_tracker_url => '구독 URL';
+  @override
+  String get download_tracker_refresh => '트래커 가져오기';
+  @override
+  String get download_tracker_preview_empty =>
+      '구독을 가져오면 지원되는 HTTP, HTTPS, UDP 트래커를 미리 볼 수 있습니다.';
+  @override
+  String download_tracker_preview_count({required Object count}) =>
+      '트래커 ${count}개를 가져왔습니다';
+  @override
+  String download_tracker_fetch_failed({required Object message}) =>
+      '트래커를 가져오지 못했습니다: ${message}';
+  @override
+  String get anki_connect_port_auto_fix => '비어 있는 포트로 변경';
+  @override
+  String get anki_connect_port_auto_fix_hint =>
+      '비어 있는 포트를 골라 Hibiki와 AnkiConnect 애드온 설정 양쪽에 기록합니다. 적용하려면 Anki를 다시 시작하세요.';
+  @override
+  String anki_connect_port_auto_fix_done({required Object port}) =>
+      'AnkiConnect 포트를 ${port}(으)로 변경했습니다. Anki를 다시 시작한 뒤 다시 시도하세요.';
+  @override
+  String anki_connect_port_auto_fix_manual({required Object port}) =>
+      'Hibiki는 이제 포트 ${port}를 사용하지만 AnkiConnect 애드온 설정을 찾지 못했습니다. Anki의 [도구 → 애드온 → AnkiConnect → 설정]에서 webBindPort도 ${port}로 바꾼 뒤 Anki를 다시 시작하세요.';
+  @override
+  String get anki_connect_port_auto_fix_none => '이 컴퓨터에서 비어 있는 포트를 찾지 못했습니다.';
+  @override
+  String get onboarding_action_badge_required => '필수';
+  @override
+  String get onboarding_action_badge_recommended => '권장';
+  @override
+  String get onboarding_action_badge_optional => '선택';
+  @override
+  String get onboarding_pack_action_download_desc =>
+      '추천 팩 전체를 백그라운드로 내려받은 뒤 이어서 가져오기를 진행합니다. 언제든 취소할 수 있고, 다음에 중단된 지점부터 이어받습니다.';
+  @override
+  String get onboarding_pack_action_import_existing_desc =>
+      '팩이 이미 내려받아져 있습니다. 여기서 바로 가져옵니다. 확인 창에서 «병합»을 고르면 기존 데이터는 그대로 유지됩니다.';
+  @override
+  String get onboarding_pack_action_pick_desc =>
+      '다른 곳에서 이미 팩 zip을 받으셨나요? 디스크에서 가져오면 내려받기를 통째로 건너뛸 수 있습니다.';
+  @override
+  String get onboarding_pack_action_website => '공식 사이트 다운로드 페이지 열기';
+  @override
+  String get onboarding_pack_action_website_desc =>
+      '브라우저에서 공식 사이트를 엽니다. 팩 항목에 다운로드 관리자에 넣을 수 있는 분할 링크가 있습니다. 받은 뒤 여기로 돌아와 «로컬 팩 파일 선택»으로 가져오세요.';
+  @override
+  String get onboarding_pack_action_dictionary_desc =>
+      '일본어 말고 다른 언어를 배우시나요? 팩은 건너뛰고 여기서 해당 언어의 사전을 가져오세요.';
+  @override
+  String get onboarding_pack_action_audio_desc =>
+      '발음 오디오의 출처입니다. 팩에는 일본어와 영어가 이미 들어 있습니다. 다른 언어는 여기서 온라인 소스를 추가하세요.';
+  @override
+  String get onboarding_anki_action_test_desc =>
+      'Fushi가 Anki에 연결되는지 확인하고 덱과 노트 유형을 불러옵니다. 이 단계에서는 아무것도 만들지 않습니다.';
+  @override
+  String get onboarding_anki_action_refresh_desc =>
+      'Anki에서 덱과 노트 유형을 다시 불러옵니다. Anki에서 새 덱을 만든 뒤에 사용하세요.';
+  @override
+  String get onboarding_anki_action_get_ankidroid_desc =>
+      'AnkiDroid 스토어 페이지를 엽니다. Fushi가 여기에 카드를 쓰므로 먼저 설치해야 합니다.';
+  @override
+  String get onboarding_anki_action_get_anki_desc =>
+      'Anki 다운로드 페이지를 엽니다. Anki를 설치하고 카드를 만드는 동안 켜 두세요.';
+  @override
+  String get onboarding_anki_action_install_addon_desc =>
+      '내장된 AnkiConnect 애드온을 Anki에 풀어 넣습니다. Fushi는 이것을 통해 Anki와 통신합니다. 설치 후 Anki를 다시 시작하세요.';
+  @override
+  String get onboarding_step_anki_action_desc =>
+      '카드 템플릿, 필드 매핑, 스크린샷과 오디오 — 즉 «만들어진 카드가 어떻게 생겼는지»입니다. 위에서 덱과 노트 유형만 고르면 카드 만들기를 시작할 수 있으니, 카드가 만들어지는 방식을 바꾸고 싶을 때만 들어오세요.';
+  @override
+  String get onboarding_step_backup_action_desc =>
+      '백업 백엔드를 고르고 로그인해 두면 기기를 잃어버리거나 바꿔도 라이브러리가 남습니다.';
+  @override
+  String get onboarding_step_interconnect_action_desc =>
+      '이 기기를 다른 기기와 페어링해 같은 라이브러리를 공유하고 진도를 동기화합니다.';
+  @override
+  String get onboarding_step_extension_action_desc =>
+      '브라우저 확장을 설치하고 Fushi에 연결하는 방법을 안내합니다. 웹페이지에서도 단어를 찾을 수 있게 됩니다.';
+  @override
+  String get onboarding_step_fonts_action_desc =>
+      '자신의 글꼴 파일을 추가하고 언어마다 어떤 글꼴을 쓸지 지정합니다.';
+  @override
+  String get onboarding_pack_sources_hint =>
+      'GitHub, 공식 사이트, 예비 미러에서 동시에 조각을 나눠 내려받고 조각마다 체크섬을 확인합니다. 내려받는 동안 각 소스의 속도를 실측해 그 순간 가장 빠른 쪽에 더 많은 조각을 맡기므로, 여기서 고를 것은 없습니다.';
+  @override
+  String get video_setting_hdr_output => 'HDR / 10비트 출력';
+  @override
+  String get video_setting_hdr_output_hint =>
+      'Windows 전용. «자동»은 디스플레이와 원본이 모두 HDR일 때 네이티브 동영상 창을 통해 HDR 디스플레이로 그대로 전달합니다. «항상»은 모든 동영상에 그 창을 사용합니다(10비트 출력). «끄기»는 표준 렌더러를 유지합니다.';
+  @override
+  String get video_setting_hdr_output_auto => '자동';
+  @override
+  String get video_setting_hdr_output_always => '항상';
+  @override
+  String get video_setting_hdr_output_off => '끄기';
   @override
   String get video_ajatt_settings_hint =>
       '무료 일본어 자막 아카이브(kitsunekko 미러). 계정 불필요. 자막 파일은 GitHub에서 다운로드됩니다.';
@@ -85701,13 +87898,6 @@ class _StringsNl extends _StringsEn {
   String get onboarding_anki_mobile_ankiconnect_hint =>
       'Dit apparaat kan ook kaarten maken in Anki op een computer in hetzelfde netwerk: schakel AnkiConnect in bij kaartaanmaak-instellingen en voer het computeradres in.';
   @override
-  String get onboarding_anki_fsrs_title => 'Anki overschakelen naar FSRS';
-  @override
-  String get onboarding_anki_fsrs_body =>
-      'Anki wordt geleverd met FSRS, een veel beter planningssysteem dan de 30 jaar oude SM-2 standaard: betere retentie met minder herhalingen. Open in Anki de dekopties en schakel FSRS in (één schakelaar voor de gehele collectie). Dit moet in Anki zelf worden gedaan.';
-  @override
-  String get onboarding_step_pack_browser_action => 'Downloaden in browser';
-  @override
   String get onboarding_anki_setup_android_hint =>
       'Installeer AnkiDroid en open het eenmaal om de eerste installatie te voltooien. Terug in Fushi, tik op Toestaan bij het toestemmingsvenster dat verschijnt bij je eerste kaart — geen AnkiDroid-instellingen te wijzigen.';
   @override
@@ -86032,6 +88222,272 @@ class _StringsNl extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       'Nog ${n} geselecteerde items zijn verborgen door het huidige filter en worden niet verwerkt.';
+  @override
+  String get download_direct_queue_section => 'Direct downloads';
+  @override
+  String get download_task_kind_all => 'All types';
+  @override
+  String get download_task_kind_filter => 'Filter by type';
+  @override
+  String get manga_online_series_empty => 'Deze serie bevat geen delen.';
+  @override
+  String sync_peer_book_delete_confirm({required Object name}) =>
+      '"${name}" van het gekoppelde apparaat verwijderen? De bestanden en leesvoortgang daar worden definitief verwijderd en dit apparaat heeft geen kopie. Dit kan niet ongedaan worden gemaakt.';
+  @override
+  String sync_peer_video_delete_confirm({required Object name}) =>
+      '"${name}" uit de bibliotheek van het gekoppelde apparaat verwijderen? Het videobestand dat dat apparaat zelf heeft geïmporteerd blijft bewaard. Dit kan niet ongedaan worden gemaakt.';
+  @override
+  String get storage_entry_delete_files_confirm_body =>
+      'Wordt meteen van de schijf verwijderd. Niets in je bibliotheek verwijst ernaar: het zijn cache-, geëxporteerde of opnieuw te downloaden gegevens.';
+  @override
+  String get manga_series_refresh => 'Hoofdstukken vernieuwen';
+  @override
+  String get manga_series_refresh_failed => 'Kon niet vernieuwen vanaf de bron';
+  @override
+  String get manga_series_source_disabled =>
+      'Deze bron is niet geïnstalleerd of is uitgeschakeld';
+  @override
+  String get manga_series_platform_unsupported =>
+      'Deze bron is niet beschikbaar op dit platform';
+  @override
+  String get manga_series_offline_hint =>
+      'De op dit apparaat opgeslagen hoofdstukken worden getoond';
+  @override
+  String get manga_series_no_chapters => 'Nog geen hoofdstukken';
+  @override
+  String get manga_series_all_read => 'Alle hoofdstukken zijn gelezen';
+  @override
+  String get manga_series_sort_newest => 'Nieuwste eerst';
+  @override
+  String get manga_series_sort_oldest => 'Oudste eerst';
+  @override
+  String get manga_series_unread_only => 'Alleen ongelezen';
+  @override
+  String get manga_series_mark_read => 'Markeren als gelezen';
+  @override
+  String get manga_series_mark_unread => 'Markeren als ongelezen';
+  @override
+  String get manga_series_mark_previous_read =>
+      'Deze en eerdere als gelezen markeren';
+  @override
+  String get manga_series_local_volume => 'Lokaal deel';
+  @override
+  String get manga_series_volume_info => 'Deel';
+  @override
+  String get manga_series_page_count => 'Pagina\'s';
+  @override
+  String get manga_series_chapters_action => 'Hoofdstukken';
+  @override
+  String get manga_series_next_chapter => 'Volgend hoofdstuk';
+  @override
+  String get manga_series_previous_chapter => 'Vorig hoofdstuk';
+  @override
+  String get manga_series_last_chapter_reached =>
+      'Dit is het nieuwste hoofdstuk';
+  @override
+  String get manga_series_first_chapter_reached =>
+      'Dit is het eerste hoofdstuk';
+  @override
+  String get manga_series_open_series => 'Werkpagina';
+  @override
+  String manga_series_read_progress(
+          {required Object page, required Object total}) =>
+      'Gelezen tot pagina ${page} van ${total}';
+  @override
+  String manga_series_read_progress_partial({required Object page}) =>
+      'Gelezen tot pagina ${page}';
+  @override
+  String mihon_store_extension_count({required Object count}) =>
+      '${count} extensies';
+  @override
+  String mihon_extension_sources_more({required Object count}) =>
+      'Alle ${count} bronnen tonen';
+  @override
+  String get mihon_extension_sources_less => 'Minder bronnen tonen';
+  @override
+  String get options_website => 'Officiële website bezoeken';
+  @override
+  String get video_setting_mpv_group_hdr => 'HDR';
+  @override
+  String get video_setting_hdr_tone_mapping => 'HDR-tonemapping';
+  @override
+  String get video_setting_hdr_tone_mapping_hint =>
+      'Curve die wordt gebruikt als een HDR-bron op een SDR-scherm moet worden geperst. ‘Automatisch’ laat mpv per bron kiezen.';
+  @override
+  String get video_setting_hdr_compute_peak => 'Dynamische piekdetectie';
+  @override
+  String get video_setting_hdr_compute_peak_hint =>
+      'Meet de echte piekhelderheid van elk beeld in plaats van te vertrouwen op de metadata van de bron. Betere highlights, kost wat GPU.';
+  @override
+  String get video_setting_hdr_auto => 'Automatisch';
+  @override
+  String get video_setting_hdr_on => 'Aan';
+  @override
+  String get video_setting_hdr_off => 'Uit';
+  @override
+  String get video_discovery_cancel_downloads_title => 'Downloads annuleren?';
+  @override
+  String video_discovery_cancel_downloads_body({required Object n}) =>
+      '${n} downloadtaak/-taken voor deze titel worden gestopt. Al gedownloade delen blijven op schijf staan; je kunt de download later opnieuw starten.';
+  @override
+  String get video_discovery_cancel_downloads_failed =>
+      'Kon de download niet annuleren. De taak is mogelijk al klaar, of de download-backend is niet beschikbaar.';
+  @override
+  String get gal_hook_click_lookup => 'Tik op een woord om het op te zoeken';
+  @override
+  String get gal_hook_click_lookup_hint =>
+      'Uit betekent dat klikken op de tekst nooit een opzoeking start — handig met doorklikken aan, als je niet per ongeluk een woord wilt raken.';
+  @override
+  String get gal_hook_lookup_trigger => 'Opzoekknop';
+  @override
+  String get gal_hook_lookup_trigger_hint =>
+      'Welke muisknop het woord onder de aanwijzer opzoekt. Los van de schakelaar hierboven: je kunt tikken-om-op-te-zoeken uitzetten en toch met een zijknop opzoeken.';
+  @override
+  String get gal_hook_lookup_trigger_left => 'Left click';
+  @override
+  String get gal_hook_lookup_trigger_middle => 'Middle click';
+  @override
+  String get gal_hook_lookup_trigger_side => 'Side button';
+  @override
+  String get gal_hook_toolbar_auto_hide => 'Werkbalk automatisch verbergen';
+  @override
+  String get gal_hook_toolbar_auto_hide_hint =>
+      'Verbergt de werkbalk tot de aanwijzer het tekstvak bereikt, zoals LunaHook. Verborgen is echt verborgen — die pixels gaan terug naar het spel.';
+  @override
+  String get gal_hook_passthrough_blocks_mouse =>
+      'Tekst vangt nog klikken tijdens doorklikken';
+  @override
+  String get gal_hook_passthrough_blocks_mouse_hint =>
+      'Aan: tekstregels blijven klikken aannemen, zodat je een woord kunt aantikken. Uit: de hele overlay is transparant voor de muis — je klikt wat eronder ligt, maar woorden aantikken werkt niet meer.';
+  @override
+  String get floating_lyric_topmost => 'Altijd op de voorgrond';
+  @override
+  String get gal_hook_fold_progressive_lines =>
+      'Opgesplitste dialoogregels samenvoegen';
+  @override
+  String get gal_hook_fold_progressive_lines_hint =>
+      'Sommige engines tekenen bij elke klik de hele regel opnieuw, waardoor één regel meerdere keren wordt vastgelegd. Vouw die momentopnamen samen tot één regel.';
+  @override
+  String get gal_hook_ingame_lookup_engine_unsupported =>
+      'Deze game-engine ondersteunt opzoeken in het spel nog niet';
+  @override
+  String get gal_hook_ingame_lookup_version_unsupported =>
+      'Deze spelversie staat nog niet op de lijst met ondersteunde versies';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copy =>
+      'SHA-256 van het spelbestand kopiëren';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_unavailable =>
+      'Kan het spelbestand niet lezen';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copied =>
+      'SHA-256 van het spelbestand gekopieerd';
+  @override
+  String get download_tracker_section => 'Tracker-abonnement';
+  @override
+  String get download_tracker_auto_add =>
+      'Geabonneerde trackers automatisch aan nieuwe downloads toevoegen';
+  @override
+  String get download_tracker_auto_add_hint =>
+      'De lijst wordt 6 uur gecachet. Een mislukt abonnement blokkeert de download niet.';
+  @override
+  String get download_tracker_url => 'Abonnements-URL';
+  @override
+  String get download_tracker_refresh => 'Trackers ophalen';
+  @override
+  String get download_tracker_preview_empty =>
+      'Haal het abonnement op om de ondersteunde HTTP-, HTTPS- en UDP-trackers te bekijken.';
+  @override
+  String download_tracker_preview_count({required Object count}) =>
+      '${count} trackers opgehaald';
+  @override
+  String download_tracker_fetch_failed({required Object message}) =>
+      'Kan de trackers niet ophalen: ${message}';
+  @override
+  String get anki_connect_port_auto_fix => 'Naar een vrije poort wisselen';
+  @override
+  String get anki_connect_port_auto_fix_hint =>
+      'Kiest een vrije poort en schrijft die zowel in Hibiki als in de AnkiConnect-add-onconfiguratie. Herstart Anki om het toe te passen.';
+  @override
+  String anki_connect_port_auto_fix_done({required Object port}) =>
+      'AnkiConnect gebruikt nu poort ${port}. Herstart Anki en probeer het opnieuw.';
+  @override
+  String anki_connect_port_auto_fix_manual({required Object port}) =>
+      'Hibiki gebruikt nu poort ${port}, maar de AnkiConnect-add-onconfiguratie is niet gevonden. Zet webBindPort in Anki (Extra → Add-ons → AnkiConnect → Configuratie) ook op ${port} en herstart Anki.';
+  @override
+  String get anki_connect_port_auto_fix_none =>
+      'Geen vrije poort gevonden op deze machine.';
+  @override
+  String get onboarding_action_badge_required => 'Verplicht';
+  @override
+  String get onboarding_action_badge_recommended => 'Aanbevolen';
+  @override
+  String get onboarding_action_badge_optional => 'Optioneel';
+  @override
+  String get onboarding_pack_action_download_desc =>
+      'Downloadt het hele pakket op de achtergrond en importeert het daarna. Je kunt altijd annuleren; de volgende keer gaat het verder waar het gebleven was.';
+  @override
+  String get onboarding_pack_action_import_existing_desc =>
+      'Het pakket is al gedownload; hiermee importeer je het. Kies «Samenvoegen» in het bevestigingsvenster, dan blijft je bestaande data ongemoeid.';
+  @override
+  String get onboarding_pack_action_pick_desc =>
+      'Heb je de zip van het pakket al ergens anders vandaan? Importeer hem van schijf en sla de download helemaal over.';
+  @override
+  String get onboarding_pack_action_website =>
+      'Downloadpagina van de website openen';
+  @override
+  String get onboarding_pack_action_website_desc =>
+      'Opent de officiële site in je browser. In het pakketgedeelte staan losse deel-links die je aan een downloadmanager kunt geven; kom daarna hier terug en gebruik «Kies een lokaal pakketbestand» om te importeren wat je hebt.';
+  @override
+  String get onboarding_pack_action_dictionary_desc =>
+      'Leer je een andere taal dan Japans? Sla het pakket over en importeer hier woordenboeken voor je eigen taal.';
+  @override
+  String get onboarding_pack_action_audio_desc =>
+      'Waar de uitspraakaudio vandaan komt. Het pakket dekt Japans en Engels al; voeg hier online bronnen toe voor andere talen.';
+  @override
+  String get onboarding_anki_action_test_desc =>
+      'Controleert of Fushi Anki kan bereiken en laadt je decks en notitietypes. Er wordt nog niets aangemaakt.';
+  @override
+  String get onboarding_anki_action_refresh_desc =>
+      'Laadt decks en notitietypes opnieuw uit Anki. Gebruik dit nadat je in Anki een nieuw deck hebt gemaakt.';
+  @override
+  String get onboarding_anki_action_get_ankidroid_desc =>
+      'Opent de storepagina van AnkiDroid. Fushi schrijft zijn kaarten daarin, dus het moet eerst geïnstalleerd zijn.';
+  @override
+  String get onboarding_anki_action_get_anki_desc =>
+      'Opent de downloadpagina van Anki. Installeer Anki en laat het draaien terwijl je kaarten maakt.';
+  @override
+  String get onboarding_anki_action_install_addon_desc =>
+      'Pakt de meegeleverde AnkiConnect-add-on voor je uit in Anki; daarmee kan Fushi ermee praten. Start Anki daarna opnieuw op.';
+  @override
+  String get onboarding_step_anki_action_desc =>
+      'Kaartsjabloon, veldtoewijzing, schermafbeeldingen en audio: de details van hoe een gemaakte kaart eruitziet. Het deck en notitietype hierboven zijn genoeg om te beginnen, dus open dit alleen als je wilt veranderen hoe kaarten worden opgebouwd.';
+  @override
+  String get onboarding_step_backup_action_desc =>
+      'Kies een back-upbackend en meld je aan, zodat je bibliotheek een verloren of vervangen apparaat overleeft.';
+  @override
+  String get onboarding_step_interconnect_action_desc =>
+      'Koppelt dit apparaat aan je andere apparaten om één bibliotheek te delen en de voortgang gelijk te houden.';
+  @override
+  String get onboarding_step_extension_action_desc =>
+      'Laat zien hoe je de browserextensie installeert en met Fushi verbindt, zodat je ook op webpagina’s woorden kunt opzoeken.';
+  @override
+  String get onboarding_step_fonts_action_desc =>
+      'Voeg je eigen lettertypebestanden toe en kies welk lettertype elke taal gebruikt.';
+  @override
+  String get onboarding_pack_sources_hint =>
+      'Wordt in parallelle stukken tegelijk van GitHub, de officiële site en een reservespiegel gehaald, met een checksum per stuk. Fushi meet de bronnen onderweg en geeft meer stukken aan degene die op dat moment het snelst is, dus hier valt niets te kiezen.';
+  @override
+  String get video_setting_hdr_output => 'HDR-/10-bits-uitvoer';
+  @override
+  String get video_setting_hdr_output_hint =>
+      'Alleen Windows. «Automatisch» stuurt HDR-bronnen via een native videovenster rechtstreeks naar een HDR-scherm; «Altijd» gebruikt dat venster voor elke video (10-bits uitvoer); «Uit» houdt de standaardrenderer aan.';
+  @override
+  String get video_setting_hdr_output_auto => 'Automatisch';
+  @override
+  String get video_setting_hdr_output_always => 'Altijd';
+  @override
+  String get video_setting_hdr_output_off => 'Uit';
   @override
   String get video_ajatt_settings_hint =>
       'Gratis archief met Japanse ondertitels (kitsunekko-mirror). Geen account nodig; bestanden worden van GitHub gedownload.';
@@ -94827,13 +97283,6 @@ class _StringsPtBr extends _StringsEn {
   String get onboarding_anki_mobile_ankiconnect_hint =>
       'Este dispositivo também pode criar cartões no Anki rodando em um computador na mesma rede: ative o AnkiConnect nas configurações de criação de cartões e insira o endereço do computador.';
   @override
-  String get onboarding_anki_fsrs_title => 'Mudar Anki para FSRS';
-  @override
-  String get onboarding_anki_fsrs_body =>
-      'O Anki vem com FSRS, um programador muito melhor que o SM-2 padrão de 30 anos: melhor retenção com menos revisões. No Anki, abra as opções do baralho e ative o FSRS (um switch cobre toda a coleção). Isso deve ser feito dentro do próprio Anki.';
-  @override
-  String get onboarding_step_pack_browser_action => 'Baixar no navegador';
-  @override
   String get onboarding_anki_setup_android_hint =>
       'Instale o AnkiDroid e abra-o uma vez para concluir a configuração inicial. De volta ao Fushi, toque em Permitir na caixa de diálogo de permissão que aparece com seu primeiro cartão - nenhuma configuração do AnkiDroid para alterar.';
   @override
@@ -95161,6 +97610,272 @@ class _StringsPtBr extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       'Outros ${n} itens selecionados estão ocultos pelo filtro atual e não serão processados.';
+  @override
+  String get download_direct_queue_section => 'Direct downloads';
+  @override
+  String get download_task_kind_all => 'All types';
+  @override
+  String get download_task_kind_filter => 'Filter by type';
+  @override
+  String get manga_online_series_empty => 'Esta série não tem volumes.';
+  @override
+  String sync_peer_book_delete_confirm({required Object name}) =>
+      'Excluir "${name}" do dispositivo pareado? Os arquivos e o progresso de leitura de lá serão removidos definitivamente, e este dispositivo não tem cópia. Não é possível desfazer.';
+  @override
+  String sync_peer_video_delete_confirm({required Object name}) =>
+      'Remover "${name}" da biblioteca do dispositivo pareado? O arquivo de vídeo importado pelo próprio dispositivo é mantido. Não é possível desfazer.';
+  @override
+  String get storage_entry_delete_files_confirm_body =>
+      'Será excluído do disco imediatamente. Nada na sua biblioteca faz referência a isso — são dados em cache, exportados ou que podem ser baixados de novo.';
+  @override
+  String get manga_series_refresh => 'Atualizar capítulos';
+  @override
+  String get manga_series_refresh_failed =>
+      'Não foi possível atualizar pela fonte';
+  @override
+  String get manga_series_source_disabled =>
+      'Esta fonte não está instalada ou está desativada';
+  @override
+  String get manga_series_platform_unsupported =>
+      'Esta fonte não está disponível nesta plataforma';
+  @override
+  String get manga_series_offline_hint =>
+      'Exibindo os capítulos salvos neste dispositivo';
+  @override
+  String get manga_series_no_chapters => 'Ainda não há capítulos';
+  @override
+  String get manga_series_all_read => 'Todos os capítulos foram lidos';
+  @override
+  String get manga_series_sort_newest => 'Mais recentes primeiro';
+  @override
+  String get manga_series_sort_oldest => 'Mais antigos primeiro';
+  @override
+  String get manga_series_unread_only => 'Somente não lidos';
+  @override
+  String get manga_series_mark_read => 'Marcar como lido';
+  @override
+  String get manga_series_mark_unread => 'Marcar como não lido';
+  @override
+  String get manga_series_mark_previous_read =>
+      'Marcar este e os anteriores como lidos';
+  @override
+  String get manga_series_local_volume => 'Volume local';
+  @override
+  String get manga_series_volume_info => 'Volume';
+  @override
+  String get manga_series_page_count => 'Páginas';
+  @override
+  String get manga_series_chapters_action => 'Capítulos';
+  @override
+  String get manga_series_next_chapter => 'Próximo capítulo';
+  @override
+  String get manga_series_previous_chapter => 'Capítulo anterior';
+  @override
+  String get manga_series_last_chapter_reached =>
+      'Este é o capítulo mais recente';
+  @override
+  String get manga_series_first_chapter_reached => 'Este é o primeiro capítulo';
+  @override
+  String get manga_series_open_series => 'Página da obra';
+  @override
+  String manga_series_read_progress(
+          {required Object page, required Object total}) =>
+      'Lido até a página ${page} de ${total}';
+  @override
+  String manga_series_read_progress_partial({required Object page}) =>
+      'Lido até a página ${page}';
+  @override
+  String mihon_store_extension_count({required Object count}) =>
+      '${count} extensões';
+  @override
+  String mihon_extension_sources_more({required Object count}) =>
+      'Mostrar todas as ${count} fontes';
+  @override
+  String get mihon_extension_sources_less => 'Mostrar menos fontes';
+  @override
+  String get options_website => 'Visitar o site oficial';
+  @override
+  String get video_setting_mpv_group_hdr => 'HDR';
+  @override
+  String get video_setting_hdr_tone_mapping => 'Mapeamento de tons HDR';
+  @override
+  String get video_setting_hdr_tone_mapping_hint =>
+      'Curva usada quando uma fonte HDR precisa ser comprimida para uma tela SDR. “Automático” deixa o mpv escolher por fonte.';
+  @override
+  String get video_setting_hdr_compute_peak => 'Detecção dinâmica de pico';
+  @override
+  String get video_setting_hdr_compute_peak_hint =>
+      'Mede o pico real de brilho de cada quadro em vez de confiar nos metadados da fonte. Melhores altas-luzes, com algum custo de GPU.';
+  @override
+  String get video_setting_hdr_auto => 'Automático';
+  @override
+  String get video_setting_hdr_on => 'Ligado';
+  @override
+  String get video_setting_hdr_off => 'Desligado';
+  @override
+  String get video_discovery_cancel_downloads_title => 'Cancelar os downloads?';
+  @override
+  String video_discovery_cancel_downloads_body({required Object n}) =>
+      '${n} tarefa(s) de download deste título serão interrompidas. As partes já baixadas continuam no disco; você pode recomeçar o download depois.';
+  @override
+  String get video_discovery_cancel_downloads_failed =>
+      'Não foi possível cancelar o download. A tarefa pode já ter terminado, ou o backend de download está indisponível.';
+  @override
+  String get gal_hook_click_lookup => 'Toque numa palavra para consultá-la';
+  @override
+  String get gal_hook_click_lookup_hint =>
+      'Desligado: cliques na legenda nunca iniciam uma consulta — útil com o clique passante ligado, quando você prefere não acertar uma palavra sem querer.';
+  @override
+  String get gal_hook_lookup_trigger => 'Gatilho da consulta';
+  @override
+  String get gal_hook_lookup_trigger_hint =>
+      'Qual botão do mouse consulta a palavra sob o ponteiro. Independente da chave acima: você pode desligar o toque-para-consultar e ainda consultar com um botão lateral.';
+  @override
+  String get gal_hook_lookup_trigger_left => 'Left click';
+  @override
+  String get gal_hook_lookup_trigger_middle => 'Middle click';
+  @override
+  String get gal_hook_lookup_trigger_side => 'Side button';
+  @override
+  String get gal_hook_toolbar_auto_hide => 'Ocultar a barra automaticamente';
+  @override
+  String get gal_hook_toolbar_auto_hide_hint =>
+      'Oculta a barra até o ponteiro chegar à caixa de legenda, no estilo do LunaHook. Oculto significa oculto de verdade — aqueles pixels voltam para o jogo.';
+  @override
+  String get gal_hook_passthrough_blocks_mouse =>
+      'A legenda ainda recebe cliques durante o clique passante';
+  @override
+  String get gal_hook_passthrough_blocks_mouse_hint =>
+      'Ligado: as linhas de texto continuam recebendo cliques, então você pode tocar numa palavra. Desligado: toda a sobreposição fica transparente ao mouse — você clica no que está embaixo, mas tocar palavras não funciona mais.';
+  @override
+  String get floating_lyric_topmost => 'Manter sempre visível';
+  @override
+  String get gal_hook_fold_progressive_lines =>
+      'Unir linhas de diálogo divididas';
+  @override
+  String get gal_hook_fold_progressive_lines_hint =>
+      'Alguns motores redesenham a linha inteira a cada clique, então a mesma linha é capturada várias vezes. Dobre esses instantâneos em uma única linha.';
+  @override
+  String get gal_hook_ingame_lookup_engine_unsupported =>
+      'Este motor de jogo ainda não oferece suporte à busca dentro do jogo';
+  @override
+  String get gal_hook_ingame_lookup_version_unsupported =>
+      'Esta versão do jogo ainda não está na lista de compatíveis';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copy =>
+      'Copiar o SHA-256 do executável do jogo';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_unavailable =>
+      'Não foi possível ler o executável do jogo';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copied =>
+      'SHA-256 do executável copiado';
+  @override
+  String get download_tracker_section => 'Assinatura de trackers';
+  @override
+  String get download_tracker_auto_add =>
+      'Adicionar automaticamente os trackers da assinatura aos novos downloads';
+  @override
+  String get download_tracker_auto_add_hint =>
+      'A lista fica em cache por 6 horas. Uma falha na assinatura não bloqueia o download.';
+  @override
+  String get download_tracker_url => 'URL da assinatura';
+  @override
+  String get download_tracker_refresh => 'Buscar trackers';
+  @override
+  String get download_tracker_preview_empty =>
+      'Busque a assinatura para pré-visualizar os trackers HTTP, HTTPS e UDP compatíveis.';
+  @override
+  String download_tracker_preview_count({required Object count}) =>
+      '${count} trackers obtidos';
+  @override
+  String download_tracker_fetch_failed({required Object message}) =>
+      'Não foi possível buscar os trackers: ${message}';
+  @override
+  String get anki_connect_port_auto_fix => 'Mudar para uma porta livre';
+  @override
+  String get anki_connect_port_auto_fix_hint =>
+      'Escolhe uma porta livre e a grava tanto no Hibiki quanto na configuração do complemento AnkiConnect. Reinicie o Anki para aplicar.';
+  @override
+  String anki_connect_port_auto_fix_done({required Object port}) =>
+      'O AnkiConnect agora usa a porta ${port}. Reinicie o Anki e tente novamente.';
+  @override
+  String anki_connect_port_auto_fix_manual({required Object port}) =>
+      'O Hibiki agora usa a porta ${port}, mas a configuração do complemento AnkiConnect não foi encontrada. Defina webBindPort como ${port} no Anki (Ferramentas → Complementos → AnkiConnect → Configuração) e reinicie o Anki.';
+  @override
+  String get anki_connect_port_auto_fix_none =>
+      'Nenhuma porta livre encontrada nesta máquina.';
+  @override
+  String get onboarding_action_badge_required => 'Obrigatório';
+  @override
+  String get onboarding_action_badge_recommended => 'Recomendado';
+  @override
+  String get onboarding_action_badge_optional => 'Opcional';
+  @override
+  String get onboarding_pack_action_download_desc =>
+      'Baixa o pacote inteiro em segundo plano e depois o importa. Dá para cancelar a qualquer momento; da próxima vez ele retoma de onde parou.';
+  @override
+  String get onboarding_pack_action_import_existing_desc =>
+      'O pacote já foi baixado; isto o importa. Escolha «Mesclar» na caixa de confirmação e seus dados atuais ficam intactos.';
+  @override
+  String get onboarding_pack_action_pick_desc =>
+      'Já pegou o zip do pacote em outro lugar? Importe do disco e pule o download por completo.';
+  @override
+  String get onboarding_pack_action_website =>
+      'Abrir a página de download do site';
+  @override
+  String get onboarding_pack_action_website_desc =>
+      'Abre o site oficial no navegador. A seção do pacote lista links por partes que você pode passar a um gerenciador de downloads; depois volte aqui e use «Escolher um arquivo de pacote local» para importar o que baixou.';
+  @override
+  String get onboarding_pack_action_dictionary_desc =>
+      'Está aprendendo um idioma que não é japonês? Pule o pacote e importe aqui dicionários do seu próprio idioma.';
+  @override
+  String get onboarding_pack_action_audio_desc =>
+      'De onde vem o áudio de pronúncia. O pacote já cobre japonês e inglês; adicione aqui fontes on-line para outros idiomas.';
+  @override
+  String get onboarding_anki_action_test_desc =>
+      'Verifica se o Fushi consegue falar com o Anki e carrega seus baralhos e tipos de nota. Nada é criado ainda.';
+  @override
+  String get onboarding_anki_action_refresh_desc =>
+      'Recarrega baralhos e tipos de nota a partir do Anki. Use depois de criar um baralho novo dentro do Anki.';
+  @override
+  String get onboarding_anki_action_get_ankidroid_desc =>
+      'Abre a página do AnkiDroid na loja. O Fushi grava os cartões nele, então precisa estar instalado antes.';
+  @override
+  String get onboarding_anki_action_get_anki_desc =>
+      'Abre a página de download do Anki. Instale o Anki e deixe-o aberto enquanto cria cartões.';
+  @override
+  String get onboarding_anki_action_install_addon_desc =>
+      'Descompacta para você o complemento AnkiConnect embutido dentro do Anki, que é o que permite ao Fushi conversar com ele. Reinicie o Anki depois.';
+  @override
+  String get onboarding_step_anki_action_desc =>
+      'Modelo de cartão, mapeamento de campos, capturas e áudio: os detalhes de como fica um cartão criado. O baralho e o tipo de nota acima já bastam para começar, então abra isto só se quiser mudar como os cartões são montados.';
+  @override
+  String get onboarding_step_backup_action_desc =>
+      'Escolha um serviço de backup e entre na conta, para que sua biblioteca sobreviva à perda ou troca de aparelho.';
+  @override
+  String get onboarding_step_interconnect_action_desc =>
+      'Pareia este aparelho com seus outros aparelhos para compartilhar uma mesma biblioteca e manter o progresso em sincronia.';
+  @override
+  String get onboarding_step_extension_action_desc =>
+      'Mostra como instalar a extensão de navegador e conectá-la ao Fushi, para você também consultar palavras em páginas da web.';
+  @override
+  String get onboarding_step_fonts_action_desc =>
+      'Adicione seus próprios arquivos de fonte e escolha qual cada idioma usa.';
+  @override
+  String get onboarding_pack_sources_hint =>
+      'Baixado em partes paralelas do GitHub, do site oficial e de um espelho reserva ao mesmo tempo, com checksum em cada parte. O Fushi mede as fontes durante o processo e dá mais partes para a que estiver mais rápida no momento, então não há nada a escolher aqui.';
+  @override
+  String get video_setting_hdr_output => 'Saída HDR / 10 bits';
+  @override
+  String get video_setting_hdr_output_hint =>
+      'Somente no Windows. «Automático» entrega fontes HDR direto a uma tela HDR por uma janela de vídeo nativa; «Sempre» usa essa janela para todos os vídeos (saída de 10 bits); «Desligado» mantém o renderizador padrão.';
+  @override
+  String get video_setting_hdr_output_auto => 'Automático';
+  @override
+  String get video_setting_hdr_output_always => 'Sempre';
+  @override
+  String get video_setting_hdr_output_off => 'Desligado';
   @override
   String get video_ajatt_settings_hint =>
       'Arquivo gratuito de legendas em japonês (espelho do kitsunekko). Não precisa de conta; os arquivos são baixados do GitHub.';
@@ -103932,13 +106647,6 @@ class _StringsRu extends _StringsEn {
   String get onboarding_anki_mobile_ankiconnect_hint =>
       'Это устройство также может создавать карточки в Anki на компьютере в той же сети: включите AnkiConnect в настройках создания карточек и введите адрес компьютера.';
   @override
-  String get onboarding_anki_fsrs_title => 'Переключите Anki на FSRS';
-  @override
-  String get onboarding_anki_fsrs_body =>
-      'В Anki встроен FSRS — планировщик, значительно лучше устаревшего SM-2: лучше запоминание при меньшем количестве повторений. В Anki откройте настройки колоды и включите FSRS (один переключатель на всю коллекцию). Это делается в самом Anki.';
-  @override
-  String get onboarding_step_pack_browser_action => 'Скачать в браузере';
-  @override
   String get onboarding_anki_setup_android_hint =>
       'Установите AnkiDroid и откройте его один раз для первоначальной настройки. Вернувшись в Fushi, нажмите «Разрешить» в диалоге разрешений, который появится при создании первой карточки — настройки AnkiDroid менять не нужно.';
   @override
@@ -104266,6 +106974,270 @@ class _StringsRu extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       'Ещё ${n} выбранных элементов скрыты текущим фильтром и не будут обработаны.';
+  @override
+  String get download_direct_queue_section => 'Direct downloads';
+  @override
+  String get download_task_kind_all => 'All types';
+  @override
+  String get download_task_kind_filter => 'Filter by type';
+  @override
+  String get manga_online_series_empty => 'В этой серии нет томов.';
+  @override
+  String sync_peer_book_delete_confirm({required Object name}) =>
+      'Удалить «${name}» с сопряжённого устройства? Его файлы и прогресс чтения там будут удалены безвозвратно, а на этом устройстве копии нет. Отменить это действие нельзя.';
+  @override
+  String sync_peer_video_delete_confirm({required Object name}) =>
+      'Убрать «${name}» из библиотеки сопряжённого устройства? Видеофайл, импортированный самим устройством, останется. Отменить это действие нельзя.';
+  @override
+  String get storage_entry_delete_files_confirm_body =>
+      'Будет сразу удалено с диска. Ничто в вашей библиотеке на это не ссылается — это кеш, экспортированные или заново загружаемые данные.';
+  @override
+  String get manga_series_refresh => 'Обновить главы';
+  @override
+  String get manga_series_refresh_failed => 'Не удалось обновить из источника';
+  @override
+  String get manga_series_source_disabled =>
+      'Этот источник не установлен или отключён';
+  @override
+  String get manga_series_platform_unsupported =>
+      'Этот источник недоступен на этой платформе';
+  @override
+  String get manga_series_offline_hint =>
+      'Показаны главы, сохранённые на этом устройстве';
+  @override
+  String get manga_series_no_chapters => 'Глав пока нет';
+  @override
+  String get manga_series_all_read => 'Все главы прочитаны';
+  @override
+  String get manga_series_sort_newest => 'Сначала новые';
+  @override
+  String get manga_series_sort_oldest => 'Сначала старые';
+  @override
+  String get manga_series_unread_only => 'Только непрочитанные';
+  @override
+  String get manga_series_mark_read => 'Отметить как прочитанное';
+  @override
+  String get manga_series_mark_unread => 'Отметить как непрочитанное';
+  @override
+  String get manga_series_mark_previous_read =>
+      'Отметить эту и более ранние как прочитанные';
+  @override
+  String get manga_series_local_volume => 'Локальный том';
+  @override
+  String get manga_series_volume_info => 'Том';
+  @override
+  String get manga_series_page_count => 'Страниц';
+  @override
+  String get manga_series_chapters_action => 'Главы';
+  @override
+  String get manga_series_next_chapter => 'Следующая глава';
+  @override
+  String get manga_series_previous_chapter => 'Предыдущая глава';
+  @override
+  String get manga_series_last_chapter_reached => 'Это самая новая глава';
+  @override
+  String get manga_series_first_chapter_reached => 'Это первая глава';
+  @override
+  String get manga_series_open_series => 'Страница произведения';
+  @override
+  String manga_series_read_progress(
+          {required Object page, required Object total}) =>
+      'Прочитано до страницы ${page} из ${total}';
+  @override
+  String manga_series_read_progress_partial({required Object page}) =>
+      'Прочитано до страницы ${page}';
+  @override
+  String mihon_store_extension_count({required Object count}) =>
+      'Расширений: ${count}';
+  @override
+  String mihon_extension_sources_more({required Object count}) =>
+      'Показать все источники (${count})';
+  @override
+  String get mihon_extension_sources_less => 'Показать меньше источников';
+  @override
+  String get options_website => 'Открыть официальный сайт';
+  @override
+  String get video_setting_mpv_group_hdr => 'HDR';
+  @override
+  String get video_setting_hdr_tone_mapping => 'Тональное отображение HDR';
+  @override
+  String get video_setting_hdr_tone_mapping_hint =>
+      'Кривая, по которой HDR-источник укладывается в SDR-экран. «Авто» оставляет выбор за mpv для каждого источника.';
+  @override
+  String get video_setting_hdr_compute_peak => 'Динамическое определение пика';
+  @override
+  String get video_setting_hdr_compute_peak_hint =>
+      'Измеряет реальную пиковую яркость каждого кадра вместо доверия метаданным источника. Света лучше, но нагружает GPU.';
+  @override
+  String get video_setting_hdr_auto => 'Авто';
+  @override
+  String get video_setting_hdr_on => 'Вкл.';
+  @override
+  String get video_setting_hdr_off => 'Выкл.';
+  @override
+  String get video_discovery_cancel_downloads_title => 'Отменить загрузки?';
+  @override
+  String video_discovery_cancel_downloads_body({required Object n}) =>
+      'Будет остановлено загрузок для этого тайтла: ${n}. Уже скачанные части останутся на диске — загрузку можно начать снова позже.';
+  @override
+  String get video_discovery_cancel_downloads_failed =>
+      'Не удалось отменить загрузку. Возможно, задача уже завершилась или бэкенд загрузок недоступен.';
+  @override
+  String get gal_hook_click_lookup => 'Нажмите на слово, чтобы найти его';
+  @override
+  String get gal_hook_click_lookup_hint =>
+      'Выключено — клики по субтитрам никогда не запускают поиск. Удобно вместе с включённым сквозным кликом, когда не хочется случайно попасть по слову.';
+  @override
+  String get gal_hook_lookup_trigger => 'Кнопка поиска';
+  @override
+  String get gal_hook_lookup_trigger_hint =>
+      'Какая кнопка мыши ищет слово под указателем. Не зависит от переключателя выше: можно выключить поиск по нажатию и всё равно искать боковой кнопкой.';
+  @override
+  String get gal_hook_lookup_trigger_left => 'Left click';
+  @override
+  String get gal_hook_lookup_trigger_middle => 'Middle click';
+  @override
+  String get gal_hook_lookup_trigger_side => 'Side button';
+  @override
+  String get gal_hook_toolbar_auto_hide => 'Автоматически скрывать панель';
+  @override
+  String get gal_hook_toolbar_auto_hide_hint =>
+      'Скрывает панель, пока указатель не дойдёт до блока субтитров — как в LunaHook. Скрыто значит скрыто по-настоящему: эти пиксели возвращаются игре.';
+  @override
+  String get gal_hook_passthrough_blocks_mouse =>
+      'Субтитры продолжают ловить клики при сквозном клике';
+  @override
+  String get gal_hook_passthrough_blocks_mouse_hint =>
+      'Вкл.: строки текста по-прежнему принимают клики, поэтому по слову можно нажать. Выкл.: весь оверлей прозрачен для мыши — вы кликаете то, что под ним, но нажатие по словам больше не работает.';
+  @override
+  String get floating_lyric_topmost => 'Поверх других окон';
+  @override
+  String get gal_hook_fold_progressive_lines =>
+      'Объединять разбитые строки диалога';
+  @override
+  String get gal_hook_fold_progressive_lines_hint =>
+      'Некоторые движки перерисовывают строку целиком при каждом клике, поэтому одна строка захватывается несколько раз. Сворачивать такие снимки в одну строку.';
+  @override
+  String get gal_hook_ingame_lookup_engine_unsupported =>
+      'Этот движок игры пока не поддерживает поиск внутри игры';
+  @override
+  String get gal_hook_ingame_lookup_version_unsupported =>
+      'Эта версия игры пока не в списке поддерживаемых';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copy =>
+      'Скопировать SHA-256 исполняемого файла игры';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_unavailable =>
+      'Не удалось прочитать исполняемый файл игры';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copied =>
+      'SHA-256 исполняемого файла скопирован';
+  @override
+  String get download_tracker_section => 'Подписка на трекеры';
+  @override
+  String get download_tracker_auto_add =>
+      'Автоматически добавлять трекеры из подписки в новые загрузки';
+  @override
+  String get download_tracker_auto_add_hint =>
+      'Список кэшируется на 6 часов. Сбой подписки не блокирует загрузку.';
+  @override
+  String get download_tracker_url => 'URL подписки';
+  @override
+  String get download_tracker_refresh => 'Получить трекеры';
+  @override
+  String get download_tracker_preview_empty =>
+      'Получите подписку, чтобы посмотреть поддерживаемые трекеры HTTP, HTTPS и UDP.';
+  @override
+  String download_tracker_preview_count({required Object count}) =>
+      'Получено трекеров: ${count}';
+  @override
+  String download_tracker_fetch_failed({required Object message}) =>
+      'Не удалось получить трекеры: ${message}';
+  @override
+  String get anki_connect_port_auto_fix => 'Выбрать свободный порт';
+  @override
+  String get anki_connect_port_auto_fix_hint =>
+      'Подбирает свободный порт и записывает его и в Hibiki, и в настройки дополнения AnkiConnect. Перезапустите Anki, чтобы изменения вступили в силу.';
+  @override
+  String anki_connect_port_auto_fix_done({required Object port}) =>
+      'AnkiConnect переключён на порт ${port}. Перезапустите Anki и повторите попытку.';
+  @override
+  String anki_connect_port_auto_fix_manual({required Object port}) =>
+      'Hibiki теперь использует порт ${port}, но настройки дополнения AnkiConnect не найдены. Укажите webBindPort равным ${port} в Anki (Инструменты → Дополнения → AnkiConnect → Настройка) и перезапустите Anki.';
+  @override
+  String get anki_connect_port_auto_fix_none =>
+      'На этом компьютере не найдено свободных портов.';
+  @override
+  String get onboarding_action_badge_required => 'Обязательно';
+  @override
+  String get onboarding_action_badge_recommended => 'Рекомендуется';
+  @override
+  String get onboarding_action_badge_optional => 'По желанию';
+  @override
+  String get onboarding_pack_action_download_desc =>
+      'Скачивает весь пакет в фоне, а затем импортирует его. Отменить можно в любой момент; в следующий раз загрузка продолжится с места остановки.';
+  @override
+  String get onboarding_pack_action_import_existing_desc =>
+      'Пакет уже скачан; здесь он импортируется. Выберите «Объединить» в окне подтверждения — существующие данные останутся нетронутыми.';
+  @override
+  String get onboarding_pack_action_pick_desc =>
+      'Уже получили zip пакета из другого места? Импортируйте его с диска и полностью пропустите загрузку.';
+  @override
+  String get onboarding_pack_action_website =>
+      'Открыть страницу загрузки на сайте';
+  @override
+  String get onboarding_pack_action_website_desc =>
+      'Открывает официальный сайт в браузере. В разделе про пакет есть ссылки на отдельные части, которые можно отдать менеджеру загрузок; затем вернитесь сюда и импортируйте полученное через «Выбрать локальный файл пакета».';
+  @override
+  String get onboarding_pack_action_dictionary_desc =>
+      'Учите не японский, а другой язык? Пропустите пакет и импортируйте здесь словари для своего языка.';
+  @override
+  String get onboarding_pack_action_audio_desc =>
+      'Откуда берётся аудио произношения. Японский и английский пакет уже покрывает; для других языков добавьте здесь онлайн-источники.';
+  @override
+  String get onboarding_anki_action_test_desc =>
+      'Проверяет, что Fushi может связаться с Anki, и загружает ваши колоды и типы заметок. Пока ничего не создаётся.';
+  @override
+  String get onboarding_anki_action_refresh_desc =>
+      'Заново загружает колоды и типы заметок из Anki. Используйте после создания новой колоды в Anki.';
+  @override
+  String get onboarding_anki_action_get_ankidroid_desc =>
+      'Открывает страницу AnkiDroid в магазине. Fushi записывает карточки именно туда, поэтому его нужно установить первым.';
+  @override
+  String get onboarding_anki_action_get_anki_desc =>
+      'Открывает страницу загрузки Anki. Установите Anki и держите его запущенным, пока создаёте карточки.';
+  @override
+  String get onboarding_anki_action_install_addon_desc =>
+      'Распаковывает встроенное дополнение AnkiConnect в Anki — именно через него Fushi общается с Anki. После этого перезапустите Anki.';
+  @override
+  String get onboarding_step_anki_action_desc =>
+      'Шаблон карточки, сопоставление полей, скриншоты и аудио — то, как выглядит созданная карточка. Колоды и типа заметки выше уже достаточно, чтобы начать, так что заходите сюда только если хотите изменить, как собираются карточки.';
+  @override
+  String get onboarding_step_backup_action_desc =>
+      'Выберите хранилище для резервных копий и войдите в него, чтобы библиотека пережила потерю или замену устройства.';
+  @override
+  String get onboarding_step_interconnect_action_desc =>
+      'Связывает это устройство с вашими другими устройствами: одна общая библиотека и синхронный прогресс.';
+  @override
+  String get onboarding_step_extension_action_desc =>
+      'Показывает, как установить расширение для браузера и подключить его к Fushi, чтобы искать слова и на веб-страницах.';
+  @override
+  String get onboarding_step_fonts_action_desc =>
+      'Добавьте свои файлы шрифтов и выберите, какой из них использует каждый язык.';
+  @override
+  String get onboarding_pack_sources_hint =>
+      'Скачивается параллельными частями одновременно с GitHub, официального сайта и резервного зеркала, каждая часть проверяется контрольной суммой. Fushi по ходу измеряет источники и отдаёт больше частей тому, кто быстрее прямо сейчас, поэтому выбирать здесь нечего.';
+  @override
+  String get video_setting_hdr_output => 'Вывод HDR / 10 бит';
+  @override
+  String get video_setting_hdr_output_hint =>
+      'Только Windows. «Авто» передаёт HDR-источники прямо на HDR-дисплей через нативное окно видео; «Всегда» использует это окно для любого видео (10-битный вывод); «Выключено» оставляет обычный рендерер.';
+  @override
+  String get video_setting_hdr_output_auto => 'Авто';
+  @override
+  String get video_setting_hdr_output_always => 'Всегда';
+  @override
+  String get video_setting_hdr_output_off => 'Выключено';
   @override
   String get video_ajatt_settings_hint =>
       'Бесплатный архив японских субтитров (зеркало kitsunekko). Аккаунт не нужен; файлы скачиваются с GitHub.';
@@ -112865,13 +115837,6 @@ class _StringsTh extends _StringsEn {
   String get onboarding_anki_mobile_ankiconnect_hint =>
       'อุปกรณ์นี้ยังสามารถสร้างการ์ดเข้า Anki ที่ทำงานบนคอมพิวเตอร์ในเครือข่ายเดียวกัน: เปิด AnkiConnect ในการตั้งค่าการสร้างการ์ดแล้วป้อนที่อยู่คอมพิวเตอร์';
   @override
-  String get onboarding_anki_fsrs_title => 'เปลี่ยน Anki เป็น FSRS';
-  @override
-  String get onboarding_anki_fsrs_body =>
-      'Anki มาพร้อม FSRS ตัวจัดกำหนดการที่ดีกว่าค่าเริ่มต้น SM-2 อายุ 30 ปีมาก: จำได้ดีกว่าด้วยการทบทวนน้อยลง ใน Anki เปิดตัวเลือกสำรับแล้วเปิด FSRS (สวิตช์เดียวครอบคลุมทั้งคอลเลกชัน) ต้องทำในตัว Anki เอง';
-  @override
-  String get onboarding_step_pack_browser_action => 'ดาวน์โหลดในเบราว์เซอร์';
-  @override
   String get onboarding_anki_setup_android_hint =>
       'ติดตั้ง AnkiDroid แล้วเปิดครั้งหนึ่งเพื่อเสร็จสิ้นการตั้งค่าครั้งแรก กลับมาที่ Fushi แตะอนุญาตในกล่องโต้ตอบสิทธิ์ที่ปรากฏขึ้นเมื่อสร้างการ์ดแรก ไม่ต้องเปลี่ยนการตั้งค่า AnkiDroid';
   @override
@@ -113191,6 +116156,266 @@ class _StringsTh extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       'รายการที่เลือกอีก ${n} รายการถูกซ่อนด้วยตัวกรองปัจจุบันและจะไม่ถูกดำเนินการ';
+  @override
+  String get download_direct_queue_section => 'Direct downloads';
+  @override
+  String get download_task_kind_all => 'All types';
+  @override
+  String get download_task_kind_filter => 'Filter by type';
+  @override
+  String get manga_online_series_empty => 'ซีรีส์นี้ไม่มีเล่ม';
+  @override
+  String sync_peer_book_delete_confirm({required Object name}) =>
+      'ลบ "${name}" ออกจากอุปกรณ์คู่หรือไม่? ไฟล์และความคืบหน้าการอ่านบนอุปกรณ์นั้นจะถูกลบถาวร และเครื่องนี้ไม่มีสำเนา การกระทำนี้ย้อนกลับไม่ได้';
+  @override
+  String sync_peer_video_delete_confirm({required Object name}) =>
+      'นำ "${name}" ออกจากคลังของอุปกรณ์คู่หรือไม่? ไฟล์วิดีโอที่อุปกรณ์นั้นนำเข้าเองจะยังคงอยู่ การกระทำนี้ย้อนกลับไม่ได้';
+  @override
+  String get storage_entry_delete_files_confirm_body =>
+      'จะถูกลบออกจากดิสก์ทันที ไม่มีรายการใดในคลังอ้างอิงถึงไฟล์นี้ — เป็นข้อมูลแคช ข้อมูลที่ส่งออก หรือข้อมูลที่ดาวน์โหลดใหม่ได้';
+  @override
+  String get manga_series_refresh => 'รีเฟรชตอน';
+  @override
+  String get manga_series_refresh_failed => 'รีเฟรชจากแหล่งที่มาไม่สำเร็จ';
+  @override
+  String get manga_series_source_disabled =>
+      'ยังไม่ได้ติดตั้งแหล่งที่มานี้หรือถูกปิดใช้งาน';
+  @override
+  String get manga_series_platform_unsupported =>
+      'แหล่งที่มานี้ใช้ไม่ได้บนแพลตฟอร์มนี้';
+  @override
+  String get manga_series_offline_hint =>
+      'กำลังแสดงตอนที่บันทึกไว้ในเครื่องนี้';
+  @override
+  String get manga_series_no_chapters => 'ยังไม่มีตอน';
+  @override
+  String get manga_series_all_read => 'อ่านครบทุกตอนแล้ว';
+  @override
+  String get manga_series_sort_newest => 'ใหม่สุดก่อน';
+  @override
+  String get manga_series_sort_oldest => 'เก่าสุดก่อน';
+  @override
+  String get manga_series_unread_only => 'เฉพาะที่ยังไม่อ่าน';
+  @override
+  String get manga_series_mark_read => 'ทำเครื่องหมายว่าอ่านแล้ว';
+  @override
+  String get manga_series_mark_unread => 'ทำเครื่องหมายว่ายังไม่อ่าน';
+  @override
+  String get manga_series_mark_previous_read =>
+      'ทำเครื่องหมายตอนนี้และก่อนหน้าว่าอ่านแล้ว';
+  @override
+  String get manga_series_local_volume => 'เล่มในเครื่อง';
+  @override
+  String get manga_series_volume_info => 'ข้อมูลเล่ม';
+  @override
+  String get manga_series_page_count => 'จำนวนหน้า';
+  @override
+  String get manga_series_chapters_action => 'ตอน';
+  @override
+  String get manga_series_next_chapter => 'ตอนถัดไป';
+  @override
+  String get manga_series_previous_chapter => 'ตอนก่อนหน้า';
+  @override
+  String get manga_series_last_chapter_reached => 'นี่เป็นตอนล่าสุดแล้ว';
+  @override
+  String get manga_series_first_chapter_reached => 'นี่เป็นตอนแรกแล้ว';
+  @override
+  String get manga_series_open_series => 'หน้าผลงาน';
+  @override
+  String manga_series_read_progress(
+          {required Object page, required Object total}) =>
+      'อ่านถึงหน้า ${page} จาก ${total}';
+  @override
+  String manga_series_read_progress_partial({required Object page}) =>
+      'อ่านถึงหน้า ${page}';
+  @override
+  String mihon_store_extension_count({required Object count}) =>
+      'ส่วนขยาย ${count} รายการ';
+  @override
+  String mihon_extension_sources_more({required Object count}) =>
+      'แสดงแหล่งทั้งหมด ${count} แหล่ง';
+  @override
+  String get mihon_extension_sources_less => 'แสดงแหล่งน้อยลง';
+  @override
+  String get options_website => 'เยี่ยมชมเว็บไซต์ทางการ';
+  @override
+  String get video_setting_mpv_group_hdr => 'HDR';
+  @override
+  String get video_setting_hdr_tone_mapping => 'การแมปโทน HDR';
+  @override
+  String get video_setting_hdr_tone_mapping_hint =>
+      'เส้นโค้งที่ใช้เมื่อต้องบีบแหล่ง HDR ลงบนจอ SDR "อัตโนมัติ" ให้ mpv เลือกตามแต่ละแหล่ง';
+  @override
+  String get video_setting_hdr_compute_peak => 'ตรวจจับจุดสว่างสุดแบบไดนามิก';
+  @override
+  String get video_setting_hdr_compute_peak_hint =>
+      'วัดความสว่างสูงสุดจริงของแต่ละเฟรมแทนการเชื่อเมตาดาตาของแหล่ง ไฮไลต์ดีขึ้นแต่กิน GPU เล็กน้อย';
+  @override
+  String get video_setting_hdr_auto => 'อัตโนมัติ';
+  @override
+  String get video_setting_hdr_on => 'เปิด';
+  @override
+  String get video_setting_hdr_off => 'ปิด';
+  @override
+  String get video_discovery_cancel_downloads_title => 'ยกเลิกการดาวน์โหลดไหม';
+  @override
+  String video_discovery_cancel_downloads_body({required Object n}) =>
+      'งานดาวน์โหลดของเรื่องนี้ ${n} งานจะถูกหยุด ส่วนที่ดาวน์โหลดไปแล้วยังอยู่ในดิสก์ และเริ่มดาวน์โหลดใหม่ได้ภายหลัง';
+  @override
+  String get video_discovery_cancel_downloads_failed =>
+      'ยกเลิกการดาวน์โหลดไม่สำเร็จ งานอาจเสร็จไปแล้ว หรือแบ็กเอนด์ดาวน์โหลดใช้งานไม่ได้';
+  @override
+  String get gal_hook_click_lookup => 'แตะคำเพื่อเปิดพจนานุกรม';
+  @override
+  String get gal_hook_click_lookup_hint =>
+      'ปิดไว้หมายความว่าการคลิกบนคำบรรยายจะไม่เปิดพจนานุกรม มีประโยชน์เมื่อเปิดคลิกทะลุ และคุณไม่อยากเผลอโดนคำ';
+  @override
+  String get gal_hook_lookup_trigger => 'ปุ่มเปิดพจนานุกรม';
+  @override
+  String get gal_hook_lookup_trigger_hint =>
+      'ปุ่มเมาส์ที่ใช้เปิดคำใต้ตัวชี้ แยกจากสวิตช์ด้านบน คุณปิดการแตะเพื่อเปิดได้ แล้วยังใช้ปุ่มข้างเปิดได้อยู่';
+  @override
+  String get gal_hook_lookup_trigger_left => 'Left click';
+  @override
+  String get gal_hook_lookup_trigger_middle => 'Middle click';
+  @override
+  String get gal_hook_lookup_trigger_side => 'Side button';
+  @override
+  String get gal_hook_toolbar_auto_hide => 'ซ่อนแถบเครื่องมืออัตโนมัติ';
+  @override
+  String get gal_hook_toolbar_auto_hide_hint =>
+      'ซ่อนแถบเครื่องมือจนกว่าตัวชี้จะถึงกล่องคำบรรยาย แบบ LunaHook ซ่อนคือซ่อนจริง ๆ พิกเซลเหล่านั้นคืนให้เกม';
+  @override
+  String get gal_hook_passthrough_blocks_mouse =>
+      'คำบรรยายยังรับคลิกขณะคลิกทะลุ';
+  @override
+  String get gal_hook_passthrough_blocks_mouse_hint =>
+      'เปิด: บรรทัดข้อความยังรับคลิก จึงแตะคำได้ ปิด: โอเวอร์เลย์ทั้งหมดโปร่งต่อเมาส์ คุณคลิกสิ่งที่อยู่ข้างล่างได้ แต่แตะคำจะไม่ทำงานอีก';
+  @override
+  String get floating_lyric_topmost => 'อยู่ด้านบนเสมอ';
+  @override
+  String get gal_hook_fold_progressive_lines => 'รวมบรรทัดบทสนทนาที่ถูกแบ่ง';
+  @override
+  String get gal_hook_fold_progressive_lines_hint =>
+      'บางเอนจินวาดทั้งบรรทัดใหม่ทุกครั้งที่คลิก ทำให้บรรทัดเดียวถูกเก็บหลายครั้ง ให้ยุบสแนปช็อตเหล่านั้นเป็นบรรทัดเดียว';
+  @override
+  String get gal_hook_ingame_lookup_engine_unsupported =>
+      'เอนจินเกมนี้ยังไม่รองรับการเปิดพจนานุกรมในเกม';
+  @override
+  String get gal_hook_ingame_lookup_version_unsupported =>
+      'เกมเวอร์ชันนี้ยังไม่อยู่ในรายการที่รองรับ';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copy =>
+      'คัดลอก SHA-256 ของไฟล์เกม';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_unavailable => 'อ่านไฟล์เกมไม่ได้';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copied =>
+      'คัดลอก SHA-256 ของไฟล์เกมแล้ว';
+  @override
+  String get download_tracker_section => 'การสมัครรับแทร็กเกอร์';
+  @override
+  String get download_tracker_auto_add =>
+      'เพิ่มแทร็กเกอร์จากการสมัครรับลงในดาวน์โหลดใหม่โดยอัตโนมัติ';
+  @override
+  String get download_tracker_auto_add_hint =>
+      'รายการจะถูกแคชไว้ 6 ชั่วโมง หากดึงรายการไม่สำเร็จก็จะไม่ขัดขวางการดาวน์โหลด';
+  @override
+  String get download_tracker_url => 'URL การสมัครรับ';
+  @override
+  String get download_tracker_refresh => 'ดึงแทร็กเกอร์';
+  @override
+  String get download_tracker_preview_empty =>
+      'ดึงรายการที่สมัครรับเพื่อดูตัวอย่างแทร็กเกอร์ HTTP, HTTPS และ UDP ที่รองรับ';
+  @override
+  String download_tracker_preview_count({required Object count}) =>
+      'ดึงแทร็กเกอร์มาแล้ว ${count} รายการ';
+  @override
+  String download_tracker_fetch_failed({required Object message}) =>
+      'ดึงแทร็กเกอร์ไม่สำเร็จ: ${message}';
+  @override
+  String get anki_connect_port_auto_fix => 'เปลี่ยนไปใช้พอร์ตที่ว่าง';
+  @override
+  String get anki_connect_port_auto_fix_hint =>
+      'เลือกพอร์ตที่ว่างแล้วเขียนลงทั้งใน Hibiki และการตั้งค่าส่วนเสริม AnkiConnect รีสตาร์ท Anki เพื่อให้มีผล';
+  @override
+  String anki_connect_port_auto_fix_done({required Object port}) =>
+      'เปลี่ยนพอร์ตของ AnkiConnect เป็น ${port} แล้ว รีสตาร์ท Anki แล้วลองอีกครั้ง';
+  @override
+  String anki_connect_port_auto_fix_manual({required Object port}) =>
+      'ตอนนี้ Hibiki ใช้พอร์ต ${port} แล้ว แต่ไม่พบการตั้งค่าส่วนเสริม AnkiConnect โปรดตั้ง webBindPort เป็น ${port} ใน Anki (เครื่องมือ → ส่วนเสริม → AnkiConnect → การตั้งค่า) แล้วรีสตาร์ท Anki';
+  @override
+  String get anki_connect_port_auto_fix_none => 'ไม่พบพอร์ตที่ว่างบนเครื่องนี้';
+  @override
+  String get onboarding_action_badge_required => 'จำเป็น';
+  @override
+  String get onboarding_action_badge_recommended => 'แนะนำ';
+  @override
+  String get onboarding_action_badge_optional => 'ไม่บังคับ';
+  @override
+  String get onboarding_pack_action_download_desc =>
+      'ดาวน์โหลดแพ็กทั้งชุดในเบื้องหลัง แล้วนำเข้าให้ต่อ ยกเลิกได้ทุกเมื่อ ครั้งถัดไปจะดาวน์โหลดต่อจากจุดที่หยุดไว้';
+  @override
+  String get onboarding_pack_action_import_existing_desc =>
+      'แพ็กดาวน์โหลดไว้แล้ว ปุ่มนี้คือการนำเข้า เลือก «รวมเข้ากับคลังเดิม» ในกล่องยืนยัน แล้วข้อมูลเดิมของคุณจะไม่ถูกแตะต้อง';
+  @override
+  String get onboarding_pack_action_pick_desc =>
+      'ได้ไฟล์ zip ของแพ็กมาจากที่อื่นแล้วหรือ? นำเข้าจากดิสก์ได้เลย ข้ามการดาวน์โหลดทั้งหมด';
+  @override
+  String get onboarding_pack_action_website => 'เปิดหน้าดาวน์โหลดบนเว็บไซต์';
+  @override
+  String get onboarding_pack_action_website_desc =>
+      'เปิดเว็บไซต์ทางการในเบราว์เซอร์ ในหัวข้อแพ็กจะมีลิงก์แบบแบ่งส่วนที่ป้อนให้โปรแกรมช่วยดาวน์โหลดได้ เมื่อโหลดเสร็จให้กลับมาที่นี่แล้วใช้ «เลือกไฟล์แพ็กในเครื่อง» เพื่อนำเข้า';
+  @override
+  String get onboarding_pack_action_dictionary_desc =>
+      'กำลังเรียนภาษาอื่นที่ไม่ใช่ญี่ปุ่นใช่ไหม? ข้ามแพ็กไป แล้วนำเข้าพจนานุกรมของภาษาคุณที่นี่แทน';
+  @override
+  String get onboarding_pack_action_audio_desc =>
+      'เสียงอ่านออกเสียงมาจากไหน แพ็กครอบคลุมภาษาญี่ปุ่นและอังกฤษอยู่แล้ว ภาษาอื่นให้เพิ่มแหล่งออนไลน์ที่นี่';
+  @override
+  String get onboarding_anki_action_test_desc =>
+      'ตรวจสอบว่า Fushi ติดต่อ Anki ได้ และโหลดสำรับกับชนิดโน้ตของคุณเข้ามา ขั้นนี้ยังไม่สร้างอะไรทั้งสิ้น';
+  @override
+  String get onboarding_anki_action_refresh_desc =>
+      'โหลดสำรับและชนิดโน้ตจาก Anki ใหม่ ใช้หลังจากสร้างสำรับใหม่ใน Anki';
+  @override
+  String get onboarding_anki_action_get_ankidroid_desc =>
+      'เปิดหน้าร้านค้าของ AnkiDroid เนื่องจาก Fushi เขียนการ์ดลงในนั้น จึงต้องติดตั้งก่อน';
+  @override
+  String get onboarding_anki_action_get_anki_desc =>
+      'เปิดหน้าดาวน์โหลด Anki ติดตั้ง Anki แล้วเปิดค้างไว้ระหว่างสร้างการ์ด';
+  @override
+  String get onboarding_anki_action_install_addon_desc =>
+      'แตกส่วนเสริม AnkiConnect ที่มาพร้อมโปรแกรมเข้าไปใน Anki ให้คุณ ซึ่งเป็นสิ่งที่ทำให้ Fushi คุยกับ Anki ได้ เสร็จแล้วให้รีสตาร์ท Anki';
+  @override
+  String get onboarding_step_anki_action_desc =>
+      'เทมเพลตการ์ด การจับคู่ฟิลด์ ภาพหน้าจอ และเสียง — ก็คือรายละเอียดว่าการ์ดที่สร้างออกมาหน้าตาเป็นอย่างไร แค่เลือกสำรับกับชนิดโน้ตด้านบนก็เริ่มสร้างการ์ดได้แล้ว จึงเปิดตรงนี้เฉพาะเมื่อต้องการเปลี่ยนวิธีประกอบการ์ด';
+  @override
+  String get onboarding_step_backup_action_desc =>
+      'เลือกปลายทางสำรองข้อมูลแล้วลงชื่อเข้าใช้ เพื่อให้คลังของคุณอยู่รอดเมื่อทำอุปกรณ์หายหรือเปลี่ยนเครื่อง';
+  @override
+  String get onboarding_step_interconnect_action_desc =>
+      'จับคู่อุปกรณ์นี้กับอุปกรณ์อื่นของคุณ เพื่อใช้คลังเดียวกันและซิงก์ความคืบหน้า';
+  @override
+  String get onboarding_step_extension_action_desc =>
+      'แสดงวิธีติดตั้งส่วนขยายเบราว์เซอร์และเชื่อมกับ Fushi เพื่อให้เปิดหาคำศัพท์บนหน้าเว็บได้ด้วย';
+  @override
+  String get onboarding_step_fonts_action_desc =>
+      'เพิ่มไฟล์ฟอนต์ของคุณเอง แล้วเลือกว่าภาษาไหนใช้ฟอนต์ใด';
+  @override
+  String get onboarding_pack_sources_hint =>
+      'ดาวน์โหลดแบบแบ่งส่วนขนานกันจาก GitHub เว็บไซต์ทางการ และมิเรอร์สำรองพร้อมกัน โดยตรวจสอบค่าแฮชทุกส่วน ระหว่างดาวน์โหลด Fushi จะวัดความเร็วของแต่ละแหล่งจริง แล้วแบ่งส่วนให้แหล่งที่เร็วที่สุดในขณะนั้นมากขึ้น จึงไม่มีอะไรให้เลือกตรงนี้';
+  @override
+  String get video_setting_hdr_output => 'เอาต์พุต HDR / 10 บิต';
+  @override
+  String get video_setting_hdr_output_hint =>
+      'เฉพาะ Windows «อัตโนมัติ» ส่งแหล่งภาพ HDR ตรงไปยังจอ HDR ผ่านหน้าต่างวิดีโอดั้งเดิม «เสมอ» ใช้หน้าต่างนั้นกับทุกวิดีโอ (เอาต์พุต 10 บิต) «ปิด» คงตัวเรนเดอร์มาตรฐานไว้';
+  @override
+  String get video_setting_hdr_output_auto => 'อัตโนมัติ';
+  @override
+  String get video_setting_hdr_output_always => 'เสมอ';
+  @override
+  String get video_setting_hdr_output_off => 'ปิด';
   @override
   String get video_ajatt_settings_hint =>
       'คลังซับไตเติลภาษาญี่ปุ่นฟรี (มิเรอร์ kitsunekko) ไม่ต้องใช้บัญชี ไฟล์ซับไตเติลดาวน์โหลดจาก GitHub';
@@ -121888,13 +125113,6 @@ class _StringsTr extends _StringsEn {
   String get onboarding_anki_mobile_ankiconnect_hint =>
       'Bu cihaz ayrıca aynı ağdaki bir bilgisayarda çalışan Anki\'ye kart oluşturabilir: kart oluşturma ayarlarında AnkiConnect\'i etkinleştirin ve bilgisayar adresini girin.';
   @override
-  String get onboarding_anki_fsrs_title => 'Anki\'yi FSRS\'ye geçirin';
-  @override
-  String get onboarding_anki_fsrs_body =>
-      'Anki, 30 yıllık SM-2 varsayılanından çok daha iyi bir planlayıcı olan FSRS ile birlikte gelir: daha az tekrarla daha iyi hatırlama. Anki\'de deste seçeneklerini açın ve FSRS\'yi açın (bir anahtar tüm koleksiyonu kapsar). Bu, Anki\'nin kendisinde yapılmalıdır.';
-  @override
-  String get onboarding_step_pack_browser_action => 'Tarayıcıda indir';
-  @override
   String get onboarding_anki_setup_android_hint =>
       'AnkiDroid\'i yükleyin ve ilk çalıştırma kurulumunu tamamlamak için bir kez açın. Fushi\'ye dönün, ilk kartınızla birlikte açılan izin iletişim kutusunda İzin Ver\'e dokunun - AnkiDroid ayarlarında değişiklik gerekmez.';
   @override
@@ -122217,6 +125435,270 @@ class _StringsTr extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       'Seçili ${n} öğe daha geçerli filtre tarafından gizlendi ve işlenmeyecek.';
+  @override
+  String get download_direct_queue_section => 'Direct downloads';
+  @override
+  String get download_task_kind_all => 'All types';
+  @override
+  String get download_task_kind_filter => 'Filter by type';
+  @override
+  String get manga_online_series_empty => 'Bu seride hiç cilt yok.';
+  @override
+  String sync_peer_book_delete_confirm({required Object name}) =>
+      '"${name}" eş cihazdan silinsin mi? Oradaki dosyaları ve okuma ilerlemesi kalıcı olarak kaldırılır ve bu cihazda kopyası yok. Bu işlem geri alınamaz.';
+  @override
+  String sync_peer_video_delete_confirm({required Object name}) =>
+      '"${name}" eş cihazın kitaplığından kaldırılsın mı? Eş cihazın kendi içe aktardığı video dosyası korunur. Bu işlem geri alınamaz.';
+  @override
+  String get storage_entry_delete_files_confirm_body =>
+      'Diskten hemen silinir. Kitaplığınızdaki hiçbir şey buna başvurmuyor — bunlar önbellek, dışa aktarılmış veya yeniden indirilebilir verilerdir.';
+  @override
+  String get manga_series_refresh => 'Bölümleri yenile';
+  @override
+  String get manga_series_refresh_failed => 'Kaynaktan yenilenemedi';
+  @override
+  String get manga_series_source_disabled =>
+      'Bu kaynak yüklü değil veya devre dışı';
+  @override
+  String get manga_series_platform_unsupported =>
+      'Bu kaynak bu platformda kullanılamıyor';
+  @override
+  String get manga_series_offline_hint =>
+      'Bu cihazda kayıtlı bölümler gösteriliyor';
+  @override
+  String get manga_series_no_chapters => 'Henüz bölüm yok';
+  @override
+  String get manga_series_all_read => 'Tüm bölümler okundu';
+  @override
+  String get manga_series_sort_newest => 'Önce en yeni';
+  @override
+  String get manga_series_sort_oldest => 'Önce en eski';
+  @override
+  String get manga_series_unread_only => 'Yalnızca okunmamışlar';
+  @override
+  String get manga_series_mark_read => 'Okundu olarak işaretle';
+  @override
+  String get manga_series_mark_unread => 'Okunmadı olarak işaretle';
+  @override
+  String get manga_series_mark_previous_read =>
+      'Bunu ve öncekileri okundu olarak işaretle';
+  @override
+  String get manga_series_local_volume => 'Yerel cilt';
+  @override
+  String get manga_series_volume_info => 'Cilt';
+  @override
+  String get manga_series_page_count => 'Sayfa';
+  @override
+  String get manga_series_chapters_action => 'Bölümler';
+  @override
+  String get manga_series_next_chapter => 'Sonraki bölüm';
+  @override
+  String get manga_series_previous_chapter => 'Önceki bölüm';
+  @override
+  String get manga_series_last_chapter_reached => 'Bu en yeni bölüm';
+  @override
+  String get manga_series_first_chapter_reached => 'Bu ilk bölüm';
+  @override
+  String get manga_series_open_series => 'Eser sayfası';
+  @override
+  String manga_series_read_progress(
+          {required Object total, required Object page}) =>
+      '${total} sayfadan ${page}. sayfaya kadar okundu';
+  @override
+  String manga_series_read_progress_partial({required Object page}) =>
+      '${page}. sayfaya kadar okundu';
+  @override
+  String mihon_store_extension_count({required Object count}) =>
+      '${count} uzantı';
+  @override
+  String mihon_extension_sources_more({required Object count}) =>
+      '${count} kaynağın tümünü göster';
+  @override
+  String get mihon_extension_sources_less => 'Daha az kaynak göster';
+  @override
+  String get options_website => 'Resmî web sitesini ziyaret et';
+  @override
+  String get video_setting_mpv_group_hdr => 'HDR';
+  @override
+  String get video_setting_hdr_tone_mapping => 'HDR ton eşleme';
+  @override
+  String get video_setting_hdr_tone_mapping_hint =>
+      'Bir HDR kaynağı SDR ekrana sıkıştırılırken kullanılan eğri. “Otomatik” seçimi kaynak başına mpv’ye bırakır.';
+  @override
+  String get video_setting_hdr_compute_peak => 'Dinamik tepe algılama';
+  @override
+  String get video_setting_hdr_compute_peak_hint =>
+      'Kaynağın üstverisine güvenmek yerine her karenin gerçek tepe parlaklığını ölçer. Parlak alanlar daha iyi olur, biraz GPU harcar.';
+  @override
+  String get video_setting_hdr_auto => 'Otomatik';
+  @override
+  String get video_setting_hdr_on => 'Açık';
+  @override
+  String get video_setting_hdr_off => 'Kapalı';
+  @override
+  String get video_discovery_cancel_downloads_title =>
+      'İndirmeler iptal edilsin mi?';
+  @override
+  String video_discovery_cancel_downloads_body({required Object n}) =>
+      'Bu yapım için ${n} indirme görevi durdurulacak. İndirilmiş parçalar diskte kalır; indirmeyi sonra yeniden başlatabilirsin.';
+  @override
+  String get video_discovery_cancel_downloads_failed =>
+      'İndirme iptal edilemedi. Görev çoktan bitmiş olabilir ya da indirme arka ucu kullanılamıyor.';
+  @override
+  String get gal_hook_click_lookup => 'Aramak için bir kelimeye dokun';
+  @override
+  String get gal_hook_click_lookup_hint =>
+      'Kapalı olduğunda altyazıya tıklamak hiçbir zaman arama başlatmaz — tıklama geçişi açıkken yanlışlıkla bir kelimeye denk gelmek istemediğinde kullanışlı.';
+  @override
+  String get gal_hook_lookup_trigger => 'Arama tetikleyicisi';
+  @override
+  String get gal_hook_lookup_trigger_hint =>
+      'İmlecin altındaki kelimeyi hangi fare düğmesinin arayacağı. Yukarıdaki anahtardan bağımsızdır: dokunarak aramayı kapatıp yan düğmeyle arayabilirsin.';
+  @override
+  String get gal_hook_lookup_trigger_left => 'Left click';
+  @override
+  String get gal_hook_lookup_trigger_middle => 'Middle click';
+  @override
+  String get gal_hook_lookup_trigger_side => 'Side button';
+  @override
+  String get gal_hook_toolbar_auto_hide => 'Araç çubuğunu otomatik gizle';
+  @override
+  String get gal_hook_toolbar_auto_hide_hint =>
+      'İmleç altyazı kutusuna gelene kadar araç çubuğunu gizler, LunaHook tarzı. Gizli gerçekten gizli demek — o pikseller oyuna geri döner.';
+  @override
+  String get gal_hook_passthrough_blocks_mouse =>
+      'Tıklama geçişi açıkken altyazı yine tıklama alır';
+  @override
+  String get gal_hook_passthrough_blocks_mouse_hint =>
+      'Açık: metin satırları tıklama almaya devam eder, böylece bir kelimeye dokunabilirsin. Kapalı: tüm katman fareye saydamdır — altındakine tıklarsın ama kelimelere dokunmak artık çalışmaz.';
+  @override
+  String get floating_lyric_topmost => 'Her zaman üstte tut';
+  @override
+  String get gal_hook_fold_progressive_lines =>
+      'Bölünmüş diyalog satırlarını birleştir';
+  @override
+  String get gal_hook_fold_progressive_lines_hint =>
+      'Bazı motorlar her tıklamada satırın tamamını yeniden çizer, bu yüzden tek bir satır birkaç kez yakalanır. Bu anlık görüntüleri tek satırda topla.';
+  @override
+  String get gal_hook_ingame_lookup_engine_unsupported =>
+      'Bu oyun motoru henüz oyun içi sözlük aramasını desteklemiyor';
+  @override
+  String get gal_hook_ingame_lookup_version_unsupported =>
+      'Bu oyun sürümü henüz desteklenenler listesinde değil';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copy =>
+      'Oyun çalıştırılabilir dosyasının SHA-256 değerini kopyala';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_unavailable =>
+      'Oyun çalıştırılabilir dosyası okunamadı';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copied =>
+      'Çalıştırılabilir dosyanın SHA-256 değeri kopyalandı';
+  @override
+  String get download_tracker_section => 'Tracker aboneliği';
+  @override
+  String get download_tracker_auto_add =>
+      'Abonelikteki trackerları yeni indirmelere otomatik ekle';
+  @override
+  String get download_tracker_auto_add_hint =>
+      'Liste 6 saat önbellekte tutulur. Abonelik alınamazsa indirme engellenmez.';
+  @override
+  String get download_tracker_url => 'Abonelik adresi';
+  @override
+  String get download_tracker_refresh => 'Trackerları getir';
+  @override
+  String get download_tracker_preview_empty =>
+      'Desteklenen HTTP, HTTPS ve UDP trackerlarını önizlemek için aboneliği getir.';
+  @override
+  String download_tracker_preview_count({required Object count}) =>
+      '${count} tracker getirildi';
+  @override
+  String download_tracker_fetch_failed({required Object message}) =>
+      'Trackerlar getirilemedi: ${message}';
+  @override
+  String get anki_connect_port_auto_fix => 'Boş bir bağlantı noktasına geç';
+  @override
+  String get anki_connect_port_auto_fix_hint =>
+      'Boş bir bağlantı noktası seçip hem Hibiki\'ye hem de AnkiConnect eklenti yapılandırmasına yazar. Uygulamak için Anki\'yi yeniden başlatın.';
+  @override
+  String anki_connect_port_auto_fix_done({required Object port}) =>
+      'AnkiConnect artık ${port} bağlantı noktasını kullanıyor. Anki\'yi yeniden başlatıp tekrar deneyin.';
+  @override
+  String anki_connect_port_auto_fix_manual({required Object port}) =>
+      'Hibiki artık ${port} bağlantı noktasını kullanıyor ancak AnkiConnect eklenti yapılandırması bulunamadı. Anki\'de (Araçlar → Eklentiler → AnkiConnect → Yapılandırma) webBindPort değerini de ${port} yapıp Anki\'yi yeniden başlatın.';
+  @override
+  String get anki_connect_port_auto_fix_none =>
+      'Bu makinede boş bağlantı noktası bulunamadı.';
+  @override
+  String get onboarding_action_badge_required => 'Zorunlu';
+  @override
+  String get onboarding_action_badge_recommended => 'Önerilir';
+  @override
+  String get onboarding_action_badge_optional => 'İsteğe bağlı';
+  @override
+  String get onboarding_pack_action_download_desc =>
+      'Paketin tamamını arka planda indirir, ardından içe aktarır. İstediğin an iptal edebilirsin; bir dahaki sefere kaldığı yerden devam eder.';
+  @override
+  String get onboarding_pack_action_import_existing_desc =>
+      'Paket zaten indirilmiş durumda; bu onu içe aktarır. Onay penceresinde «Birleştir» seçersen mevcut verilerine dokunulmaz.';
+  @override
+  String get onboarding_pack_action_pick_desc =>
+      'Paketin zip dosyasını başka bir yerden aldın mı? Diskten içe aktar, indirmeyi tamamen atla.';
+  @override
+  String get onboarding_pack_action_website => 'Sitedeki indirme sayfasını aç';
+  @override
+  String get onboarding_pack_action_website_desc =>
+      'Resmî siteyi tarayıcında açar. Paket bölümünde bir indirme yöneticisine verebileceğin parça bağlantıları var; sonra buraya dönüp «Yerel paket dosyası seç» ile indirdiğini içe aktar.';
+  @override
+  String get onboarding_pack_action_dictionary_desc =>
+      'Japonca dışında bir dil mi öğreniyorsun? Paketi atla ve burada kendi dilinin sözlüklerini içe aktar.';
+  @override
+  String get onboarding_pack_action_audio_desc =>
+      'Telaffuz seslerinin nereden geldiği. Paket Japonca ve İngilizceyi zaten kapsıyor; diğer diller için buradan çevrimiçi kaynak ekle.';
+  @override
+  String get onboarding_anki_action_test_desc =>
+      'Fushi’nin Anki’ye ulaşıp ulaşamadığını denetler ve destelerinle not türlerini yükler. Henüz hiçbir şey oluşturulmaz.';
+  @override
+  String get onboarding_anki_action_refresh_desc =>
+      'Desteleri ve not türlerini Anki’den yeniden yükler. Anki içinde yeni bir deste oluşturduktan sonra kullan.';
+  @override
+  String get onboarding_anki_action_get_ankidroid_desc =>
+      'AnkiDroid’in mağaza sayfasını açar. Fushi kartlarını onun içine yazdığı için önce kurulu olması gerekir.';
+  @override
+  String get onboarding_anki_action_get_anki_desc =>
+      'Anki’nin indirme sayfasını açar. Anki’yi kur ve kart üretirken açık bırak.';
+  @override
+  String get onboarding_anki_action_install_addon_desc =>
+      'Birlikte gelen AnkiConnect eklentisini senin için Anki’ye açar; Fushi onunla konuşmasını buna borçlu. Sonrasında Anki’yi yeniden başlat.';
+  @override
+  String get onboarding_step_anki_action_desc =>
+      'Kart şablonu, alan eşlemesi, ekran görüntüleri ve ses: yani üretilen kartın nasıl göründüğünün ayrıntıları. Yukarıdaki deste ve not türü başlamak için yeterli, bu yüzden buraya yalnızca kartların nasıl kurulduğunu değiştirmek istiyorsan gir.';
+  @override
+  String get onboarding_step_backup_action_desc =>
+      'Bir yedekleme arka ucu seç ve oturum aç ki kitaplığın cihaz kaybını veya değişimini atlatsın.';
+  @override
+  String get onboarding_step_interconnect_action_desc =>
+      'Bu cihazı diğer cihazlarınla eşler; tek bir kitaplığı paylaşır ve ilerlemeyi eşitler.';
+  @override
+  String get onboarding_step_extension_action_desc =>
+      'Tarayıcı uzantısını nasıl kurup Fushi’ye bağlayacağını gösterir; böylece web sayfalarında da kelime arayabilirsin.';
+  @override
+  String get onboarding_step_fonts_action_desc =>
+      'Kendi yazı tipi dosyalarını ekle ve her dilin hangisini kullanacağını seç.';
+  @override
+  String get onboarding_pack_sources_hint =>
+      'Aynı anda GitHub’dan, resmî siteden ve bir yedek aynadan paralel parçalar hâlinde indirilir; her parça sağlama toplamıyla doğrulanır. Fushi kaynakları yol boyunca ölçer ve o an en hızlı olana daha çok parça verir, bu yüzden burada seçilecek bir şey yok.';
+  @override
+  String get video_setting_hdr_output => 'HDR / 10 bit çıkış';
+  @override
+  String get video_setting_hdr_output_hint =>
+      'Yalnızca Windows. «Otomatik», HDR kaynakları yerel bir video penceresi üzerinden doğrudan HDR ekrana verir; «Her zaman» bu pencereyi tüm videolar için kullanır (10 bit çıkış); «Kapalı» standart işleyiciyi korur.';
+  @override
+  String get video_setting_hdr_output_auto => 'Otomatik';
+  @override
+  String get video_setting_hdr_output_always => 'Her zaman';
+  @override
+  String get video_setting_hdr_output_off => 'Kapalı';
   @override
   String get video_ajatt_settings_hint =>
       'Ücretsiz Japonca altyazı arşivi (kitsunekko yansıması). Hesap gerekmez; altyazı dosyaları GitHub\'dan indirilir.';
@@ -130895,14 +134377,6 @@ class _StringsVi extends _StringsEn {
   String get onboarding_anki_mobile_ankiconnect_hint =>
       'Thiết bị này cũng có thể tạo thẻ vào Anki đang chạy trên máy tính cùng mạng: bật AnkiConnect trong cài đặt tạo thẻ và nhập địa chỉ máy tính.';
   @override
-  String get onboarding_anki_fsrs_title => 'Chuyển Anki sang FSRS';
-  @override
-  String get onboarding_anki_fsrs_body =>
-      'Anki tích hợp sẵn FSRS, thuật toán lên lịch tốt hơn nhiều so với SM-2 mặc định 30 năm tuổi: ghi nhớ tốt hơn với ít lần ôn tập hơn. Trong Anki, mở tùy chọn bộ thẻ và bật FSRS (một công tắc áp dụng cho toàn bộ bộ sưu tập). Việc này phải được thực hiện trong chính Anki.';
-  @override
-  String get onboarding_step_pack_browser_action =>
-      'Tải xuống trong trình duyệt';
-  @override
   String get onboarding_anki_setup_android_hint =>
       'Cài đặt AnkiDroid và mở một lần để hoàn tất thiết lập ban đầu. Quay lại Fushi, chạm Cho phép trên hộp thoại quyền xuất hiện khi tạo thẻ đầu tiên - không cần thay đổi cài đặt AnkiDroid.';
   @override
@@ -131226,6 +134700,269 @@ class _StringsVi extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       'Còn ${n} mục đã chọn bị ẩn bởi bộ lọc hiện tại và sẽ không được xử lý.';
+  @override
+  String get download_direct_queue_section => 'Direct downloads';
+  @override
+  String get download_task_kind_all => 'All types';
+  @override
+  String get download_task_kind_filter => 'Filter by type';
+  @override
+  String get manga_online_series_empty => 'Bộ truyện này không có tập nào.';
+  @override
+  String sync_peer_book_delete_confirm({required Object name}) =>
+      'Xóa "${name}" khỏi thiết bị đối tác? Tệp và tiến độ đọc trên thiết bị đó sẽ bị xóa vĩnh viễn, và máy này không có bản sao. Không thể hoàn tác.';
+  @override
+  String sync_peer_video_delete_confirm({required Object name}) =>
+      'Gỡ "${name}" khỏi thư viện của thiết bị đối tác? Tệp video do thiết bị đó tự nhập vẫn được giữ lại. Không thể hoàn tác.';
+  @override
+  String get storage_entry_delete_files_confirm_body =>
+      'Sẽ bị xóa khỏi ổ đĩa ngay lập tức. Không có mục nào trong thư viện tham chiếu tới nó — đây là dữ liệu bộ nhớ đệm, đã xuất hoặc có thể tải lại.';
+  @override
+  String get manga_series_refresh => 'Làm mới chương';
+  @override
+  String get manga_series_refresh_failed => 'Không thể làm mới từ nguồn';
+  @override
+  String get manga_series_source_disabled =>
+      'Nguồn này chưa được cài đặt hoặc đã bị tắt';
+  @override
+  String get manga_series_platform_unsupported =>
+      'Nguồn này không khả dụng trên nền tảng này';
+  @override
+  String get manga_series_offline_hint =>
+      'Đang hiển thị các chương đã lưu trên thiết bị này';
+  @override
+  String get manga_series_no_chapters => 'Chưa có chương nào';
+  @override
+  String get manga_series_all_read => 'Đã đọc hết tất cả các chương';
+  @override
+  String get manga_series_sort_newest => 'Mới nhất trước';
+  @override
+  String get manga_series_sort_oldest => 'Cũ nhất trước';
+  @override
+  String get manga_series_unread_only => 'Chỉ chưa đọc';
+  @override
+  String get manga_series_mark_read => 'Đánh dấu đã đọc';
+  @override
+  String get manga_series_mark_unread => 'Đánh dấu chưa đọc';
+  @override
+  String get manga_series_mark_previous_read =>
+      'Đánh dấu chương này và trước đó là đã đọc';
+  @override
+  String get manga_series_local_volume => 'Tập cục bộ';
+  @override
+  String get manga_series_volume_info => 'Tập';
+  @override
+  String get manga_series_page_count => 'Số trang';
+  @override
+  String get manga_series_chapters_action => 'Chương';
+  @override
+  String get manga_series_next_chapter => 'Chương sau';
+  @override
+  String get manga_series_previous_chapter => 'Chương trước';
+  @override
+  String get manga_series_last_chapter_reached => 'Đây là chương mới nhất';
+  @override
+  String get manga_series_first_chapter_reached => 'Đây là chương đầu tiên';
+  @override
+  String get manga_series_open_series => 'Trang tác phẩm';
+  @override
+  String manga_series_read_progress(
+          {required Object page, required Object total}) =>
+      'Đã đọc đến trang ${page} trên ${total}';
+  @override
+  String manga_series_read_progress_partial({required Object page}) =>
+      'Đã đọc đến trang ${page}';
+  @override
+  String mihon_store_extension_count({required Object count}) =>
+      '${count} tiện ích';
+  @override
+  String mihon_extension_sources_more({required Object count}) =>
+      'Hiện tất cả ${count} nguồn';
+  @override
+  String get mihon_extension_sources_less => 'Hiện ít nguồn hơn';
+  @override
+  String get options_website => 'Truy cập trang web chính thức';
+  @override
+  String get video_setting_mpv_group_hdr => 'HDR';
+  @override
+  String get video_setting_hdr_tone_mapping => 'Ánh xạ tông màu HDR';
+  @override
+  String get video_setting_hdr_tone_mapping_hint =>
+      'Đường cong dùng khi phải nén nguồn HDR xuống màn hình SDR. “Tự động” để mpv chọn theo từng nguồn.';
+  @override
+  String get video_setting_hdr_compute_peak => 'Phát hiện đỉnh động';
+  @override
+  String get video_setting_hdr_compute_peak_hint =>
+      'Đo độ sáng đỉnh thực của từng khung hình thay vì tin vào siêu dữ liệu của nguồn. Vùng sáng đẹp hơn, tốn thêm chút GPU.';
+  @override
+  String get video_setting_hdr_auto => 'Tự động';
+  @override
+  String get video_setting_hdr_on => 'Bật';
+  @override
+  String get video_setting_hdr_off => 'Tắt';
+  @override
+  String get video_discovery_cancel_downloads_title => 'Huỷ tải xuống?';
+  @override
+  String video_discovery_cancel_downloads_body({required Object n}) =>
+      '${n} tác vụ tải xuống của tác phẩm này sẽ bị dừng. Các phần đã tải vẫn nằm trên ổ đĩa; bạn có thể tải lại sau.';
+  @override
+  String get video_discovery_cancel_downloads_failed =>
+      'Không huỷ được tải xuống. Tác vụ có thể đã xong, hoặc backend tải xuống hiện không khả dụng.';
+  @override
+  String get gal_hook_click_lookup => 'Chạm vào từ để tra nghĩa';
+  @override
+  String get gal_hook_click_lookup_hint =>
+      'Tắt nghĩa là bấm vào phụ đề sẽ không bao giờ tra từ — hữu ích khi bật xuyên chuột và bạn không muốn lỡ tay trúng một từ.';
+  @override
+  String get gal_hook_lookup_trigger => 'Nút tra từ';
+  @override
+  String get gal_hook_lookup_trigger_hint =>
+      'Nút chuột nào sẽ tra từ dưới con trỏ. Độc lập với công tắc phía trên: bạn có thể tắt chạm-để-tra mà vẫn tra bằng nút bên hông.';
+  @override
+  String get gal_hook_lookup_trigger_left => 'Left click';
+  @override
+  String get gal_hook_lookup_trigger_middle => 'Middle click';
+  @override
+  String get gal_hook_lookup_trigger_side => 'Side button';
+  @override
+  String get gal_hook_toolbar_auto_hide => 'Tự ẩn thanh công cụ';
+  @override
+  String get gal_hook_toolbar_auto_hide_hint =>
+      'Ẩn thanh công cụ cho tới khi con trỏ chạm vào khung phụ đề, kiểu LunaHook. Ẩn là ẩn thật — số điểm ảnh đó trả lại cho game.';
+  @override
+  String get gal_hook_passthrough_blocks_mouse =>
+      'Phụ đề vẫn nhận nhấp chuột khi xuyên chuột';
+  @override
+  String get gal_hook_passthrough_blocks_mouse_hint =>
+      'Bật: các dòng chữ vẫn nhận nhấp chuột nên bạn chạm được vào từ. Tắt: toàn bộ lớp phủ trong suốt với chuột — bạn bấm được thứ bên dưới, nhưng chạm vào từ không còn tác dụng.';
+  @override
+  String get floating_lyric_topmost => 'Luôn hiển thị trên cùng';
+  @override
+  String get gal_hook_fold_progressive_lines =>
+      'Gộp các dòng thoại bị chia nhỏ';
+  @override
+  String get gal_hook_fold_progressive_lines_hint =>
+      'Một số engine vẽ lại cả dòng mỗi lần nhấp, nên cùng một dòng bị bắt nhiều lần. Gộp các ảnh chụp đó thành một dòng.';
+  @override
+  String get gal_hook_ingame_lookup_engine_unsupported =>
+      'Engine trò chơi này chưa hỗ trợ tra từ trong trò chơi';
+  @override
+  String get gal_hook_ingame_lookup_version_unsupported =>
+      'Phiên bản trò chơi này chưa có trong danh sách được hỗ trợ';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copy =>
+      'Sao chép SHA-256 của tệp thực thi trò chơi';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_unavailable =>
+      'Không đọc được tệp thực thi trò chơi';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copied =>
+      'Đã sao chép SHA-256 của tệp thực thi';
+  @override
+  String get download_tracker_section => 'Đăng ký tracker';
+  @override
+  String get download_tracker_auto_add =>
+      'Tự động thêm tracker từ đăng ký vào các tải xuống mới';
+  @override
+  String get download_tracker_auto_add_hint =>
+      'Danh sách được lưu đệm trong 6 giờ. Việc lấy đăng ký thất bại sẽ không chặn tải xuống.';
+  @override
+  String get download_tracker_url => 'URL đăng ký';
+  @override
+  String get download_tracker_refresh => 'Lấy tracker';
+  @override
+  String get download_tracker_preview_empty =>
+      'Lấy đăng ký để xem trước các tracker HTTP, HTTPS và UDP được hỗ trợ.';
+  @override
+  String download_tracker_preview_count({required Object count}) =>
+      'Đã lấy ${count} tracker';
+  @override
+  String download_tracker_fetch_failed({required Object message}) =>
+      'Không lấy được tracker: ${message}';
+  @override
+  String get anki_connect_port_auto_fix => 'Đổi sang cổng còn trống';
+  @override
+  String get anki_connect_port_auto_fix_hint =>
+      'Chọn một cổng còn trống rồi ghi vào cả Hibiki lẫn cấu hình tiện ích AnkiConnect. Khởi động lại Anki để áp dụng.';
+  @override
+  String anki_connect_port_auto_fix_done({required Object port}) =>
+      'AnkiConnect đã chuyển sang cổng ${port}. Hãy khởi động lại Anki rồi thử lại.';
+  @override
+  String anki_connect_port_auto_fix_manual({required Object port}) =>
+      'Hibiki hiện dùng cổng ${port}, nhưng không tìm thấy cấu hình tiện ích AnkiConnect. Hãy đặt webBindPort thành ${port} trong Anki (Công cụ → Tiện ích → AnkiConnect → Cấu hình) rồi khởi động lại Anki.';
+  @override
+  String get anki_connect_port_auto_fix_none =>
+      'Không tìm thấy cổng nào còn trống trên máy này.';
+  @override
+  String get onboarding_action_badge_required => 'Bắt buộc';
+  @override
+  String get onboarding_action_badge_recommended => 'Nên làm';
+  @override
+  String get onboarding_action_badge_optional => 'Tuỳ chọn';
+  @override
+  String get onboarding_pack_action_download_desc =>
+      'Tải toàn bộ gói ở chế độ nền rồi nhập vào. Có thể huỷ bất cứ lúc nào; lần sau sẽ tải tiếp từ chỗ đã dừng.';
+  @override
+  String get onboarding_pack_action_import_existing_desc =>
+      'Gói đã tải xong; thao tác này nhập nó vào. Chọn «Gộp» trong hộp xác nhận thì dữ liệu hiện có của bạn sẽ được giữ nguyên.';
+  @override
+  String get onboarding_pack_action_pick_desc =>
+      'Đã lấy được tệp zip của gói từ nơi khác? Nhập từ ổ đĩa và bỏ qua hoàn toàn phần tải về.';
+  @override
+  String get onboarding_pack_action_website => 'Mở trang tải về trên website';
+  @override
+  String get onboarding_pack_action_website_desc =>
+      'Mở trang chính thức trong trình duyệt. Mục về gói ở đó liệt kê các liên kết theo từng phần để bạn đưa cho trình quản lý tải; xong rồi quay lại đây và dùng «Chọn tệp gói trên máy» để nhập.';
+  @override
+  String get onboarding_pack_action_dictionary_desc =>
+      'Bạn học ngôn ngữ khác ngoài tiếng Nhật? Bỏ qua gói và nhập từ điển cho ngôn ngữ của bạn ở đây.';
+  @override
+  String get onboarding_pack_action_audio_desc =>
+      'Âm thanh phát âm lấy từ đâu. Gói đã bao gồm tiếng Nhật và tiếng Anh; các ngôn ngữ khác thì thêm nguồn trực tuyến ở đây.';
+  @override
+  String get onboarding_anki_action_test_desc =>
+      'Kiểm tra xem Fushi có kết nối được với Anki không và nạp các bộ thẻ cùng loại ghi chú của bạn. Chưa tạo ra thứ gì cả.';
+  @override
+  String get onboarding_anki_action_refresh_desc =>
+      'Nạp lại bộ thẻ và loại ghi chú từ Anki. Dùng sau khi bạn tạo bộ thẻ mới trong Anki.';
+  @override
+  String get onboarding_anki_action_get_ankidroid_desc =>
+      'Mở trang cửa hàng của AnkiDroid. Fushi ghi thẻ vào đó nên phải cài nó trước.';
+  @override
+  String get onboarding_anki_action_get_anki_desc =>
+      'Mở trang tải Anki. Cài Anki và để nó chạy trong lúc bạn tạo thẻ.';
+  @override
+  String get onboarding_anki_action_install_addon_desc =>
+      'Giải nén tiện ích AnkiConnect đi kèm vào Anki giúp bạn — đó chính là thứ cho phép Fushi nói chuyện với Anki. Xong rồi khởi động lại Anki.';
+  @override
+  String get onboarding_step_anki_action_desc =>
+      'Mẫu thẻ, ánh xạ trường, ảnh chụp màn hình và âm thanh: tức là chi tiết về hình hài của tấm thẻ được tạo ra. Bộ thẻ và loại ghi chú ở trên là đủ để bắt đầu, nên chỉ mở phần này khi bạn muốn đổi cách dựng thẻ.';
+  @override
+  String get onboarding_step_backup_action_desc =>
+      'Chọn nơi sao lưu và đăng nhập, để thư viện của bạn sống sót khi mất máy hoặc đổi máy.';
+  @override
+  String get onboarding_step_interconnect_action_desc =>
+      'Ghép nối thiết bị này với các thiết bị khác của bạn để dùng chung một thư viện và đồng bộ tiến độ.';
+  @override
+  String get onboarding_step_extension_action_desc =>
+      'Hướng dẫn cách cài tiện ích trình duyệt và kết nối nó với Fushi, để bạn tra từ ngay trên trang web.';
+  @override
+  String get onboarding_step_fonts_action_desc =>
+      'Thêm tệp phông chữ của riêng bạn và chọn phông cho từng ngôn ngữ.';
+  @override
+  String get onboarding_pack_sources_hint =>
+      'Được tải song song theo từng phần, đồng thời từ GitHub, trang chính thức và một máy chủ gương dự phòng, mỗi phần đều được kiểm tra checksum. Fushi đo tốc độ các nguồn ngay trong lúc tải và giao nhiều phần hơn cho nguồn đang nhanh nhất, nên ở đây không có gì để chọn.';
+  @override
+  String get video_setting_hdr_output => 'Đầu ra HDR / 10 bit';
+  @override
+  String get video_setting_hdr_output_hint =>
+      'Chỉ trên Windows. «Tự động» đưa nguồn HDR thẳng tới màn hình HDR qua một cửa sổ video gốc; «Luôn luôn» dùng cửa sổ đó cho mọi video (đầu ra 10 bit); «Tắt» giữ nguyên bộ kết xuất tiêu chuẩn.';
+  @override
+  String get video_setting_hdr_output_auto => 'Tự động';
+  @override
+  String get video_setting_hdr_output_always => 'Luôn luôn';
+  @override
+  String get video_setting_hdr_output_off => 'Tắt';
   @override
   String get video_ajatt_settings_hint =>
       'Kho phụ đề tiếng Nhật miễn phí (bản sao kitsunekko). Không cần tài khoản; tệp phụ đề tải từ GitHub.';
@@ -139216,13 +142953,6 @@ class _StringsZhCn extends _StringsEn {
   String get onboarding_anki_mobile_ankiconnect_hint =>
       '本机也能把卡制进同一局域网里电脑上的 Anki：在制卡设置里开启「改用 AnkiConnect」并填电脑地址。';
   @override
-  String get onboarding_anki_fsrs_title => '把 Anki 算法换成 FSRS';
-  @override
-  String get onboarding_anki_fsrs_body =>
-      'Anki 内置的 FSRS 算法远好于默认的 30 年前的 SM-2：记得更牢、复习量更少。请在 Anki 的 牌组选项 里打开 FSRS 开关（开一次全局生效）。这一步只能在 Anki 内手动完成。';
-  @override
-  String get onboarding_step_pack_browser_action => '浏览器下载';
-  @override
   String get onboarding_anki_setup_android_hint =>
       '安装 AnkiDroid 并打开一次完成初始化。回到 Fushi 首次制卡时，在弹出的授权框里点「允许」即可——不需要去 AnkiDroid 设置里改任何开关。';
   @override
@@ -139515,6 +143245,253 @@ class _StringsZhCn extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       '另有 ${n} 项被当前筛选隐藏，本次不会处理。';
+  @override
+  String get download_direct_queue_section => '直链下载';
+  @override
+  String get download_task_kind_all => '全部类型';
+  @override
+  String get download_task_kind_filter => '按类型筛选';
+  @override
+  String get manga_online_series_empty => '这个系列没有可下载的卷。';
+  @override
+  String sync_peer_book_delete_confirm({required Object name}) =>
+      '确定从对端设备删除「${name}」吗？对端上的文件与阅读进度会被永久删除，本机没有副本，此操作不可撤销。';
+  @override
+  String sync_peer_video_delete_confirm({required Object name}) =>
+      '确定从对端设备的媒体库移除「${name}」吗？对端自己导入的视频文件会保留，此操作不可撤销。';
+  @override
+  String get storage_entry_delete_files_confirm_body =>
+      '将立即从磁盘删除。媒体库里没有条目引用它——这里放的是缓存、导出或可重新获取的数据。';
+  @override
+  String get manga_series_refresh => '刷新章节';
+  @override
+  String get manga_series_refresh_failed => '无法从来源刷新';
+  @override
+  String get manga_series_source_disabled => '该来源未安装或已停用';
+  @override
+  String get manga_series_platform_unsupported => '该来源运行时在本平台不可用';
+  @override
+  String get manga_series_offline_hint => '显示的是本机已保存的章节';
+  @override
+  String get manga_series_no_chapters => '还没有章节';
+  @override
+  String get manga_series_all_read => '所有章节都已读完';
+  @override
+  String get manga_series_sort_newest => '最新在前';
+  @override
+  String get manga_series_sort_oldest => '最早在前';
+  @override
+  String get manga_series_unread_only => '只看未读';
+  @override
+  String get manga_series_mark_read => '标记为已读';
+  @override
+  String get manga_series_mark_unread => '标记为未读';
+  @override
+  String get manga_series_mark_previous_read => '标记此章及更早为已读';
+  @override
+  String get manga_series_local_volume => '本地卷';
+  @override
+  String get manga_series_volume_info => '卷信息';
+  @override
+  String get manga_series_page_count => '页数';
+  @override
+  String get manga_series_chapters_action => '章节';
+  @override
+  String get manga_series_next_chapter => '下一章';
+  @override
+  String get manga_series_previous_chapter => '上一章';
+  @override
+  String get manga_series_last_chapter_reached => '已经是最新一章了';
+  @override
+  String get manga_series_first_chapter_reached => '已经是第一章了';
+  @override
+  String get manga_series_open_series => '作品页';
+  @override
+  String manga_series_read_progress(
+          {required Object page, required Object total}) =>
+      '读到第 ${page}/${total} 页';
+  @override
+  String manga_series_read_progress_partial({required Object page}) =>
+      '读到第 ${page} 页';
+  @override
+  String mihon_store_extension_count({required Object count}) => '${count} 个扩展';
+  @override
+  String mihon_extension_sources_more({required Object count}) =>
+      '展开全部 ${count} 个源';
+  @override
+  String get mihon_extension_sources_less => '收起源列表';
+  @override
+  String get options_website => '访问官网';
+  @override
+  String get video_setting_mpv_group_hdr => 'HDR';
+  @override
+  String get video_setting_hdr_tone_mapping => 'HDR 色调映射';
+  @override
+  String get video_setting_hdr_tone_mapping_hint =>
+      '把 HDR 片源压到 SDR 屏幕上时用的曲线。自动 = 交给 mpv 按片源挑。';
+  @override
+  String get video_setting_hdr_compute_peak => '动态峰值检测';
+  @override
+  String get video_setting_hdr_compute_peak_hint =>
+      '逐帧测量真实峰值亮度，而不是相信片源元数据。高光更准，但会占一点 GPU。';
+  @override
+  String get video_setting_hdr_auto => '自动';
+  @override
+  String get video_setting_hdr_on => '开';
+  @override
+  String get video_setting_hdr_off => '关';
+  @override
+  String get video_discovery_cancel_downloads_title => '取消下载？';
+  @override
+  String video_discovery_cancel_downloads_body({required Object n}) =>
+      '本作品有 ${n} 个下载任务会被停止。已下载的分片仍保留在磁盘上，之后可以重新开始下载。';
+  @override
+  String get video_discovery_cancel_downloads_failed =>
+      '取消下载失败。任务可能已经结束，或下载后端当前不可用。';
+  @override
+  String get gal_hook_click_lookup => '单击文字查词';
+  @override
+  String get gal_hook_click_lookup_hint =>
+      '关掉后点台词不再触发查词。开着鼠标穿透时尤其有用——不想一不小心点到单词。';
+  @override
+  String get gal_hook_lookup_trigger => '查词触发方式';
+  @override
+  String get gal_hook_lookup_trigger_hint =>
+      '用哪个鼠标键查指针底下的词。与上面的开关正交：可以关掉单击查词，仍用侧键查。';
+  @override
+  String get gal_hook_lookup_trigger_left => '左键单击';
+  @override
+  String get gal_hook_lookup_trigger_middle => '鼠标中键';
+  @override
+  String get gal_hook_lookup_trigger_side => '鼠标侧键';
+  @override
+  String get gal_hook_toolbar_auto_hide => '自动隐藏功能栏';
+  @override
+  String get gal_hook_toolbar_auto_hide_hint =>
+      '平时把功能栏整条隐藏，鼠标移到台词框附近才现身（LunaHook 那样）。隐藏就是真隐藏，那块像素还给游戏。';
+  @override
+  String get gal_hook_passthrough_blocks_mouse => '穿透时台词仍拦截点击';
+  @override
+  String get gal_hook_passthrough_blocks_mouse_hint =>
+      '开：文字行仍接鼠标，能点字查词。关：整个浮窗对鼠标彻底透明，能点到底下的东西，但点字查词也就没了。';
+  @override
+  String get floating_lyric_topmost => '保持置顶';
+  @override
+  String get gal_hook_fold_progressive_lines => '合并分段吐出的台词';
+  @override
+  String get gal_hook_fold_progressive_lines_hint =>
+      '有些引擎每次点击都重绘整行，一句台词会被抓成好几条。开启后把同一句的多次快照折成一条。';
+  @override
+  String get gal_hook_ingame_lookup_engine_unsupported => '当前游戏引擎不支持游戏内查词';
+  @override
+  String get gal_hook_ingame_lookup_version_unsupported => '当前游戏版本未在支持列表中';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copy => '复制游戏 exe 的 SHA-256';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_unavailable =>
+      '无法读取游戏 exe（可能权限不足）';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copied => '已复制 exe 的 SHA-256';
+  @override
+  String get download_tracker_section => 'Tracker 订阅';
+  @override
+  String get download_tracker_auto_add => '自动把订阅 Tracker 加到新下载';
+  @override
+  String get download_tracker_auto_add_hint => '列表缓存 6 小时；订阅获取失败不会阻止下载任务创建。';
+  @override
+  String get download_tracker_url => '订阅地址';
+  @override
+  String get download_tracker_refresh => '获取 Tracker';
+  @override
+  String get download_tracker_preview_empty =>
+      '获取订阅后可预览受支持的 HTTP、HTTPS 和 UDP Tracker。';
+  @override
+  String download_tracker_preview_count({required Object count}) =>
+      '已获取 ${count} 个 Tracker';
+  @override
+  String download_tracker_fetch_failed({required Object message}) =>
+      '获取 Tracker 失败：${message}';
+  @override
+  String get anki_connect_port_auto_fix => '换一个空闲端口';
+  @override
+  String get anki_connect_port_auto_fix_hint =>
+      '自动挑一个空闲端口，同时写进 Hibiki 和 Anki 的 AnkiConnect 插件配置。改完重启 Anki 生效。';
+  @override
+  String anki_connect_port_auto_fix_done({required Object port}) =>
+      'AnkiConnect 端口已改为 ${port}。请重启 Anki 后重试。';
+  @override
+  String anki_connect_port_auto_fix_manual({required Object port}) =>
+      'Hibiki 已改用端口 ${port}，但没找到 AnkiConnect 的插件配置。请在 Anki 的「工具 → 插件 → AnkiConnect → 配置」里把 webBindPort 也改成 ${port}，然后重启 Anki。';
+  @override
+  String get anki_connect_port_auto_fix_none => '本机没有找到空闲端口。';
+  @override
+  String get onboarding_action_badge_required => '必做';
+  @override
+  String get onboarding_action_badge_recommended => '推荐';
+  @override
+  String get onboarding_action_badge_optional => '可选';
+  @override
+  String get onboarding_pack_action_download_desc =>
+      '在后台下载整个推荐包，下完自动进入导入。随时可以取消，下次从断点续传。';
+  @override
+  String get onboarding_pack_action_import_existing_desc =>
+      '包已经下好了，这里直接导入。确认框里选「合并到现有库」不会动你已有的数据。';
+  @override
+  String get onboarding_pack_action_pick_desc =>
+      '已经从别处拿到包的 zip？从硬盘导入，整段下载都可以跳过。';
+  @override
+  String get onboarding_pack_action_website => '在官网下载页打开';
+  @override
+  String get onboarding_pack_action_website_desc =>
+      '在浏览器打开官网。那里的推荐包一节给出可以喂给下载工具的分片直链；下完回到这里，用「选择本地包文件」导入。';
+  @override
+  String get onboarding_pack_action_dictionary_desc =>
+      '学日语以外的语言？跳过推荐包，在这里按语言导入词典。';
+  @override
+  String get onboarding_pack_action_audio_desc =>
+      '发音音频从哪里来。推荐包已经含日语和英语；其它语言在这里加在线来源。';
+  @override
+  String get onboarding_anki_action_test_desc =>
+      '检查 Fushi 能不能连上 Anki，并把你的牌组和笔记类型拉过来。这一步不会创建任何东西。';
+  @override
+  String get onboarding_anki_action_refresh_desc =>
+      '重新从 Anki 拉牌组和笔记类型。在 Anki 里新建了牌组之后点它。';
+  @override
+  String get onboarding_anki_action_get_ankidroid_desc =>
+      '打开 AnkiDroid 的商店页。Fushi 的卡片写进它里面，得先装上。';
+  @override
+  String get onboarding_anki_action_get_anki_desc =>
+      '打开 Anki 的下载页。装好 Anki，制卡时让它开着。';
+  @override
+  String get onboarding_anki_action_install_addon_desc =>
+      '把内置的 AnkiConnect 插件解压进 Anki——Fushi 靠它和 Anki 通话。装完重启 Anki。';
+  @override
+  String get onboarding_step_anki_action_desc =>
+      '卡片模板、字段映射、截图和音频——也就是「做出来的卡长什么样」。上面选好牌组和笔记类型就能开始制卡了，想改卡片怎么做才需要进来。';
+  @override
+  String get onboarding_step_backup_action_desc => '选备份后端并登录，换机器或丢设备时库还在。';
+  @override
+  String get onboarding_step_interconnect_action_desc =>
+      '把这台设备和你的其它设备配对，共享同一个库并同步进度。';
+  @override
+  String get onboarding_step_extension_action_desc =>
+      '告诉你怎么装浏览器扩展并连上 Fushi，之后在网页上也能查词。';
+  @override
+  String get onboarding_step_fonts_action_desc => '导入自己的字体文件，并给每种语言指定用哪个。';
+  @override
+  String get onboarding_pack_sources_hint =>
+      '同时从 GitHub、官网和备用镜像分片并发下载，每片都校验。下载过程中会实测各来源速度，哪家快就多分给哪家，所以这里不用你选。';
+  @override
+  String get video_setting_hdr_output => 'HDR / 10-bit 输出';
+  @override
+  String get video_setting_hdr_output_hint =>
+      '仅 Windows。自动：显示器开着 HDR 且片源是 HDR 时经原生视频窗口直通；始终：所有视频都走原生窗口（10-bit 输出）；关闭：沿用常规渲染。';
+  @override
+  String get video_setting_hdr_output_auto => '自动';
+  @override
+  String get video_setting_hdr_output_always => '始终';
+  @override
+  String get video_setting_hdr_output_off => '关闭';
   @override
   String get video_ajatt_settings_hint =>
       '免费日语字幕库（kitsunekko 镜像）。无需账号；字幕文件从 GitHub 下载。';
@@ -147509,13 +151486,6 @@ class _StringsZhHk extends _StringsEn {
   String get onboarding_anki_mobile_ankiconnect_hint =>
       '本機也能把卡製進同一局域網裡電腦上的 Anki：在製卡設定裡開啟「改用 AnkiConnect」並填電腦地址。';
   @override
-  String get onboarding_anki_fsrs_title => '把 Anki 算法換成 FSRS';
-  @override
-  String get onboarding_anki_fsrs_body =>
-      'Anki 內置的 FSRS 算法遠好於預設的 30 年前的 SM-2：記得更牢、復習量更少。請在 Anki 的 牌組選項 裡打開 FSRS 開關（開一次全局生效）。這一步只能在 Anki 內手動完成。';
-  @override
-  String get onboarding_step_pack_browser_action => '瀏覽器下載';
-  @override
   String get onboarding_anki_setup_android_hint =>
       '安裝 AnkiDroid 並打開一次完成初始化。回到 Fushi 首次製卡時，在彈出的授權框裡點「允許」即可——不需要去 AnkiDroid 設定裡改任何開關。';
   @override
@@ -147808,6 +151778,252 @@ class _StringsZhHk extends _StringsEn {
   @override
   String batch_hidden_by_filter_note({required Object n}) =>
       '另有 ${n} 項被目前篩選隱藏，今次不會處理。';
+  @override
+  String get download_direct_queue_section => '直鏈下載';
+  @override
+  String get download_task_kind_all => '全部類型';
+  @override
+  String get download_task_kind_filter => '按類型篩選';
+  @override
+  String get manga_online_series_empty => '這個系列沒有可下載的卷。';
+  @override
+  String sync_peer_book_delete_confirm({required Object name}) =>
+      '確定從對端裝置刪除「${name}」嗎？對端上的檔案與閱讀進度會被永久刪除，本機沒有副本，此操作不可撤銷。';
+  @override
+  String sync_peer_video_delete_confirm({required Object name}) =>
+      '確定從對端裝置的媒體庫移除「${name}」嗎？對端自己匯入的影片檔案會保留，此操作不可撤銷。';
+  @override
+  String get storage_entry_delete_files_confirm_body =>
+      '將立即從磁碟刪除。媒體庫裡沒有項目引用它——這裡放的是快取、匯出或可重新取得的資料。';
+  @override
+  String get manga_series_refresh => '重新整理章節';
+  @override
+  String get manga_series_refresh_failed => '無法從來源重新整理';
+  @override
+  String get manga_series_source_disabled => '此來源未安裝或已停用';
+  @override
+  String get manga_series_platform_unsupported => '此來源執行階段在本平台無法使用';
+  @override
+  String get manga_series_offline_hint => '顯示的是本機已儲存的章節';
+  @override
+  String get manga_series_no_chapters => '還沒有章節';
+  @override
+  String get manga_series_all_read => '所有章節都已讀完';
+  @override
+  String get manga_series_sort_newest => '最新在前';
+  @override
+  String get manga_series_sort_oldest => '最早在前';
+  @override
+  String get manga_series_unread_only => '只看未讀';
+  @override
+  String get manga_series_mark_read => '標記為已讀';
+  @override
+  String get manga_series_mark_unread => '標記為未讀';
+  @override
+  String get manga_series_mark_previous_read => '標記此章及更早為已讀';
+  @override
+  String get manga_series_local_volume => '本機卷';
+  @override
+  String get manga_series_volume_info => '卷資訊';
+  @override
+  String get manga_series_page_count => '頁數';
+  @override
+  String get manga_series_chapters_action => '章節';
+  @override
+  String get manga_series_next_chapter => '下一章';
+  @override
+  String get manga_series_previous_chapter => '上一章';
+  @override
+  String get manga_series_last_chapter_reached => '已經是最新一章了';
+  @override
+  String get manga_series_first_chapter_reached => '已經是第一章了';
+  @override
+  String get manga_series_open_series => '作品頁';
+  @override
+  String manga_series_read_progress(
+          {required Object page, required Object total}) =>
+      '讀到第 ${page}/${total} 頁';
+  @override
+  String manga_series_read_progress_partial({required Object page}) =>
+      '讀到第 ${page} 頁';
+  @override
+  String mihon_store_extension_count({required Object count}) => '${count} 個擴充';
+  @override
+  String mihon_extension_sources_more({required Object count}) =>
+      '顯示全部 ${count} 個來源';
+  @override
+  String get mihon_extension_sources_less => '顯示較少來源';
+  @override
+  String get options_website => '瀏覽官方網站';
+  @override
+  String get video_setting_mpv_group_hdr => 'HDR';
+  @override
+  String get video_setting_hdr_tone_mapping => 'HDR 色調映射';
+  @override
+  String get video_setting_hdr_tone_mapping_hint =>
+      '把 HDR 片源壓進 SDR 螢幕時用的曲線。自動 = 交給 mpv 按片源決定。';
+  @override
+  String get video_setting_hdr_compute_peak => '動態峰值偵測';
+  @override
+  String get video_setting_hdr_compute_peak_hint =>
+      '逐格量實際峰值亮度，而不是信片源中繼資料。高光更準，但會佔一點 GPU。';
+  @override
+  String get video_setting_hdr_auto => '自動';
+  @override
+  String get video_setting_hdr_on => '開';
+  @override
+  String get video_setting_hdr_off => '關';
+  @override
+  String get video_discovery_cancel_downloads_title => '取消下載？';
+  @override
+  String video_discovery_cancel_downloads_body({required Object n}) =>
+      '本作品有 ${n} 個下載任務會被停止。已下載的分片仍保留在磁碟上，之後可以重新開始下載。';
+  @override
+  String get video_discovery_cancel_downloads_failed =>
+      '取消下載失敗。任務可能已經結束，或下載後端目前無法使用。';
+  @override
+  String get gal_hook_click_lookup => '點字查詞';
+  @override
+  String get gal_hook_click_lookup_hint => '關掉之後，點字幕不會查詞——配合點擊穿透使用，免得不小心點到字。';
+  @override
+  String get gal_hook_lookup_trigger => '查詞觸發鍵';
+  @override
+  String get gal_hook_lookup_trigger_hint =>
+      '用哪個滑鼠鍵查指標下的字。與上面那個開關互相獨立：可以關掉點字查詞，仍用側鍵查。';
+  @override
+  String get gal_hook_lookup_trigger_left => 'Left click';
+  @override
+  String get gal_hook_lookup_trigger_middle => 'Middle click';
+  @override
+  String get gal_hook_lookup_trigger_side => 'Side button';
+  @override
+  String get gal_hook_toolbar_auto_hide => '自動隱藏功能欄';
+  @override
+  String get gal_hook_toolbar_auto_hide_hint =>
+      '指標移到字幕框才顯示功能欄（LunaHook 那種）。隱藏就是真的隱藏——那塊像素還給遊戲。';
+  @override
+  String get gal_hook_passthrough_blocks_mouse => '穿透時字幕仍接點擊';
+  @override
+  String get gal_hook_passthrough_blocks_mouse_hint =>
+      '開：文字行仍然接點擊，所以點得到字。關：整個浮層對滑鼠完全透明——點得到下面的東西，但點字就失效了。';
+  @override
+  String get floating_lyric_topmost => '保持置頂';
+  @override
+  String get gal_hook_fold_progressive_lines => '把分開顯示的台詞合成一條';
+  @override
+  String get gal_hook_fold_progressive_lines_hint =>
+      '有些引擎每點一次就重畫整行，於是同一行被抓到好幾次。把這些快照摺成一條。';
+  @override
+  String get gal_hook_ingame_lookup_engine_unsupported => '目前遊戲引擎不支援遊戲內查詞';
+  @override
+  String get gal_hook_ingame_lookup_version_unsupported => '目前遊戲版本未在支援清單中';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copy => '複製遊戲 exe 的 SHA-256';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_unavailable =>
+      '無法讀取遊戲 exe（可能權限不足）';
+  @override
+  String get gal_hook_ingame_lookup_exe_hash_copied => '已複製 exe 的 SHA-256';
+  @override
+  String get download_tracker_section => 'Tracker 訂閱';
+  @override
+  String get download_tracker_auto_add => '自動把訂閱的 Tracker 加到新任務';
+  @override
+  String get download_tracker_auto_add_hint => '清單會快取 6 小時；訂閱抓取失敗不會阻止建立下載任務。';
+  @override
+  String get download_tracker_url => '訂閱網址';
+  @override
+  String get download_tracker_refresh => '抓取 Tracker';
+  @override
+  String get download_tracker_preview_empty =>
+      '抓取訂閱後可預覽支援的 HTTP、HTTPS 與 UDP Tracker。';
+  @override
+  String download_tracker_preview_count({required Object count}) =>
+      '已抓取 ${count} 個 Tracker';
+  @override
+  String download_tracker_fetch_failed({required Object message}) =>
+      '抓取 Tracker 失敗：${message}';
+  @override
+  String get anki_connect_port_auto_fix => '換一個空閒的連接埠';
+  @override
+  String get anki_connect_port_auto_fix_hint =>
+      '自動挑一個空閒的連接埠，同時寫進 Hibiki 和 Anki 的 AnkiConnect 外掛設定。改完重啟 Anki 生效。';
+  @override
+  String anki_connect_port_auto_fix_done({required Object port}) =>
+      'AnkiConnect 連接埠已改為 ${port}。請重啟 Anki 後再試。';
+  @override
+  String anki_connect_port_auto_fix_manual({required Object port}) =>
+      'Hibiki 已改用連接埠 ${port}，但找不到 AnkiConnect 的外掛設定。請在 Anki 的「工具 → 外掛 → AnkiConnect → 設定」裡把 webBindPort 也改成 ${port}，然後重啟 Anki。';
+  @override
+  String get anki_connect_port_auto_fix_none => '本機找不到空閒的連接埠。';
+  @override
+  String get onboarding_action_badge_required => '必做';
+  @override
+  String get onboarding_action_badge_recommended => '推薦';
+  @override
+  String get onboarding_action_badge_optional => '可選';
+  @override
+  String get onboarding_pack_action_download_desc =>
+      '在後台下載整個推薦包，下完自動進入匯入。隨時可以取消，下次從斷點續傳。';
+  @override
+  String get onboarding_pack_action_import_existing_desc =>
+      '包已經下好了，這裏直接匯入。確認框裏選「合併到現有庫」不會動你已有的資料。';
+  @override
+  String get onboarding_pack_action_pick_desc =>
+      '已經從別處拿到包的 zip？從硬碟匯入，整段下載都可以跳過。';
+  @override
+  String get onboarding_pack_action_website => '在官網下載頁打開';
+  @override
+  String get onboarding_pack_action_website_desc =>
+      '在瀏覽器打開官網。那裏的推薦包一節給出可以餵給下載工具的分片直連；下完回到這裏，用「選擇本機包檔案」匯入。';
+  @override
+  String get onboarding_pack_action_dictionary_desc =>
+      '學日語以外的語言？跳過推薦包，在這裏按語言匯入詞典。';
+  @override
+  String get onboarding_pack_action_audio_desc =>
+      '發音音訊從哪裏來。推薦包已經含日語和英語；其它語言在這裏加線上來源。';
+  @override
+  String get onboarding_anki_action_test_desc =>
+      '檢查 Fushi 能不能連上 Anki，並把你的牌組和筆記類型拉過來。這一步不會建立任何東西。';
+  @override
+  String get onboarding_anki_action_refresh_desc =>
+      '重新從 Anki 拉牌組和筆記類型。在 Anki 裏新建了牌組之後點它。';
+  @override
+  String get onboarding_anki_action_get_ankidroid_desc =>
+      '打開 AnkiDroid 的商店頁。Fushi 的卡片寫進它裏面，得先裝上。';
+  @override
+  String get onboarding_anki_action_get_anki_desc =>
+      '打開 Anki 的下載頁。裝好 Anki，製卡時讓它開着。';
+  @override
+  String get onboarding_anki_action_install_addon_desc =>
+      '把內建的 AnkiConnect 外掛解壓進 Anki——Fushi 靠它和 Anki 通話。裝完重啟 Anki。';
+  @override
+  String get onboarding_step_anki_action_desc =>
+      '卡片範本、欄位對應、截圖和音訊——也就是「做出來的卡長甚麼樣」。上面選好牌組和筆記類型就能開始製卡了，想改卡片怎麼做才需要進來。';
+  @override
+  String get onboarding_step_backup_action_desc => '選備份後端並登入，換機器或丟裝置時庫還在。';
+  @override
+  String get onboarding_step_interconnect_action_desc =>
+      '把這台裝置和你的其它裝置配對，共用同一個庫並同步進度。';
+  @override
+  String get onboarding_step_extension_action_desc =>
+      '告訴你怎麼裝瀏覽器擴充功能並連上 Fushi，之後在網頁上也能查詞。';
+  @override
+  String get onboarding_step_fonts_action_desc => '匯入自己的字型檔案，並給每種語言指定用哪個。';
+  @override
+  String get onboarding_pack_sources_hint =>
+      '同時從 GitHub、官網和備用鏡像分片並發下載，每片都校驗。下載過程中會實測各來源速度，哪家快就多分給哪家，所以這裏不用你選。';
+  @override
+  String get video_setting_hdr_output => 'HDR / 10-bit 輸出';
+  @override
+  String get video_setting_hdr_output_hint =>
+      '僅 Windows。「自動」在顯示器與片源都是 HDR 時把畫面經原生影片視窗直通；「始終」對所有影片都用原生視窗（10-bit 輸出）；「關閉」沿用常規算繪。';
+  @override
+  String get video_setting_hdr_output_auto => '自動';
+  @override
+  String get video_setting_hdr_output_always => '始終';
+  @override
+  String get video_setting_hdr_output_off => '關閉';
   @override
   String get video_ajatt_settings_hint =>
       '免費日語字幕庫（kitsunekko 鏡像）。無需帳號；字幕檔案從 GitHub 下載。';
@@ -155440,12 +159656,6 @@ extension on _StringsEn {
         return 'Advanced: use AnkiConnect on this device';
       case 'onboarding_anki_mobile_ankiconnect_hint':
         return 'This device can also create cards into Anki running on a computer in the same network: enable AnkiConnect in card creation settings and enter the computer address.';
-      case 'onboarding_anki_fsrs_title':
-        return 'Switch Anki to FSRS';
-      case 'onboarding_anki_fsrs_body':
-        return 'Anki ships with FSRS, a far better scheduler than the 30-year-old SM-2 default: better retention with fewer reviews. In Anki, open deck options and turn on FSRS (one switch covers the whole collection). This must be done inside Anki itself.';
-      case 'onboarding_step_pack_browser_action':
-        return 'Download in browser';
       case 'onboarding_anki_setup_android_hint':
         return 'Install AnkiDroid and open it once to finish its first-run setup. Back in Fushi, tap Allow on the permission dialog that pops up with your first card - no AnkiDroid settings to change.';
       case 'onboarding_anki_install_addon_action':
@@ -155716,6 +159926,221 @@ extension on _StringsEn {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             'Another ${n} selected item(s) are hidden by the current filter and will not be affected.';
+      case 'download_direct_queue_section':
+        return 'Direct downloads';
+      case 'download_task_kind_all':
+        return 'All types';
+      case 'download_task_kind_filter':
+        return 'Filter by type';
+      case 'manga_online_series_empty':
+        return 'No volumes in this series.';
+      case 'sync_peer_book_delete_confirm':
+        return ({required Object name}) =>
+            'Delete "${name}" from the peer device? Its files and reading progress there are removed for good, and this device has no copy. This cannot be undone.';
+      case 'sync_peer_video_delete_confirm':
+        return ({required Object name}) =>
+            'Remove "${name}" from the peer device\'s library? The peer\'s own imported video file is kept. This cannot be undone.';
+      case 'storage_entry_delete_files_confirm_body':
+        return 'This deletes it from disk right away. Nothing in your library references it - it is cached, exported or re-downloadable data.';
+      case 'manga_series_refresh':
+        return 'Refresh chapters';
+      case 'manga_series_refresh_failed':
+        return 'Could not refresh from the source';
+      case 'manga_series_source_disabled':
+        return 'This source is not installed or is disabled';
+      case 'manga_series_platform_unsupported':
+        return 'This source runtime is unavailable on this platform';
+      case 'manga_series_offline_hint':
+        return 'Showing the chapters saved on this device';
+      case 'manga_series_no_chapters':
+        return 'No chapters yet';
+      case 'manga_series_all_read':
+        return 'Every chapter has been read';
+      case 'manga_series_sort_newest':
+        return 'Newest first';
+      case 'manga_series_sort_oldest':
+        return 'Oldest first';
+      case 'manga_series_unread_only':
+        return 'Unread only';
+      case 'manga_series_mark_read':
+        return 'Mark as read';
+      case 'manga_series_mark_unread':
+        return 'Mark as unread';
+      case 'manga_series_mark_previous_read':
+        return 'Mark this and earlier as read';
+      case 'manga_series_local_volume':
+        return 'Local volume';
+      case 'manga_series_volume_info':
+        return 'Volume';
+      case 'manga_series_page_count':
+        return 'Pages';
+      case 'manga_series_chapters_action':
+        return 'Chapters';
+      case 'manga_series_next_chapter':
+        return 'Next chapter';
+      case 'manga_series_previous_chapter':
+        return 'Previous chapter';
+      case 'manga_series_last_chapter_reached':
+        return 'This is the newest chapter';
+      case 'manga_series_first_chapter_reached':
+        return 'This is the first chapter';
+      case 'manga_series_open_series':
+        return 'Series page';
+      case 'manga_series_read_progress':
+        return ({required Object page, required Object total}) =>
+            'Read to page ${page} of ${total}';
+      case 'manga_series_read_progress_partial':
+        return ({required Object page}) => 'Read to page ${page}';
+      case 'mihon_store_extension_count':
+        return ({required Object count}) => '${count} extensions';
+      case 'mihon_extension_sources_more':
+        return ({required Object count}) => 'Show all ${count} sources';
+      case 'mihon_extension_sources_less':
+        return 'Show fewer sources';
+      case 'options_website':
+        return 'Visit the official website';
+      case 'video_setting_mpv_group_hdr':
+        return 'HDR';
+      case 'video_setting_hdr_tone_mapping':
+        return 'HDR tone mapping';
+      case 'video_setting_hdr_tone_mapping_hint':
+        return 'Curve used when an HDR source has to be squeezed onto an SDR display. Auto lets mpv pick per source.';
+      case 'video_setting_hdr_compute_peak':
+        return 'Dynamic peak detection';
+      case 'video_setting_hdr_compute_peak_hint':
+        return 'Measure each frame\'s real peak brightness instead of trusting the stream metadata. Better highlights, costs some GPU.';
+      case 'video_setting_hdr_auto':
+        return 'Auto';
+      case 'video_setting_hdr_on':
+        return 'On';
+      case 'video_setting_hdr_off':
+        return 'Off';
+      case 'video_discovery_cancel_downloads_title':
+        return 'Cancel downloads?';
+      case 'video_discovery_cancel_downloads_body':
+        return ({required Object n}) =>
+            '${n} download task(s) for this title will be stopped. Downloaded pieces stay on disk; you can start the download again later.';
+      case 'video_discovery_cancel_downloads_failed':
+        return 'Could not cancel the download. The task may have already finished, or the download backend is unavailable.';
+      case 'gal_hook_click_lookup':
+        return 'Tap a word to look it up';
+      case 'gal_hook_click_lookup_hint':
+        return 'Off means clicks on the caption never trigger a lookup — useful with click-through on, when you would rather not hit a word by accident.';
+      case 'gal_hook_lookup_trigger':
+        return 'Lookup trigger';
+      case 'gal_hook_lookup_trigger_hint':
+        return 'Which mouse button looks up the word under the pointer. Independent of the switch above: you can turn tap-lookup off and still look up with a side button.';
+      case 'gal_hook_lookup_trigger_left':
+        return 'Left click';
+      case 'gal_hook_lookup_trigger_middle':
+        return 'Middle click';
+      case 'gal_hook_lookup_trigger_side':
+        return 'Side button';
+      case 'gal_hook_toolbar_auto_hide':
+        return 'Auto-hide the toolbar';
+      case 'gal_hook_toolbar_auto_hide_hint':
+        return 'Hide the toolbar until the pointer reaches the caption box, LunaHook style. Hidden means really hidden — those pixels go back to the game.';
+      case 'gal_hook_passthrough_blocks_mouse':
+        return 'Caption still catches clicks while clicking through';
+      case 'gal_hook_passthrough_blocks_mouse_hint':
+        return 'On: text lines still take clicks so you can tap a word. Off: the whole overlay is transparent to the mouse — you can click whatever is underneath, but tapping words no longer works.';
+      case 'floating_lyric_topmost':
+        return 'Keep on top';
+      case 'gal_hook_fold_progressive_lines':
+        return 'Merge split dialogue lines';
+      case 'gal_hook_fold_progressive_lines_hint':
+        return 'Some engines redraw the whole line on every click, so one line is captured several times. Fold those snapshots into a single line.';
+      case 'gal_hook_ingame_lookup_engine_unsupported':
+        return 'This game engine has no in-game lookup sensor yet';
+      case 'gal_hook_ingame_lookup_version_unsupported':
+        return 'This game version is not on the supported list yet';
+      case 'gal_hook_ingame_lookup_exe_hash_copy':
+        return 'Copy game executable SHA-256';
+      case 'gal_hook_ingame_lookup_exe_hash_unavailable':
+        return 'Could not read the game executable';
+      case 'gal_hook_ingame_lookup_exe_hash_copied':
+        return 'Executable SHA-256 copied';
+      case 'download_tracker_section':
+        return 'Tracker subscription';
+      case 'download_tracker_auto_add':
+        return 'Automatically add subscription trackers to new downloads';
+      case 'download_tracker_auto_add_hint':
+        return 'The list is cached for 6 hours. A subscription failure will not block the download.';
+      case 'download_tracker_url':
+        return 'Subscription URL';
+      case 'download_tracker_refresh':
+        return 'Fetch trackers';
+      case 'download_tracker_preview_empty':
+        return 'Fetch the subscription to preview supported HTTP, HTTPS, and UDP trackers.';
+      case 'download_tracker_preview_count':
+        return ({required Object count}) => 'Fetched ${count} trackers';
+      case 'download_tracker_fetch_failed':
+        return ({required Object message}) =>
+            'Could not fetch trackers: ${message}';
+      case 'anki_connect_port_auto_fix':
+        return 'Switch to a free port';
+      case 'anki_connect_port_auto_fix_hint':
+        return 'Picks a free port and writes it to both Hibiki and the AnkiConnect add-on config. Restart Anki to apply.';
+      case 'anki_connect_port_auto_fix_done':
+        return ({required Object port}) =>
+            'Switched AnkiConnect to port ${port}. Restart Anki to apply.';
+      case 'anki_connect_port_auto_fix_manual':
+        return ({required Object port}) =>
+            'Hibiki now uses port ${port}, but the AnkiConnect add-on config was not found. Set webBindPort to ${port} in Anki (Tools -> Add-ons -> AnkiConnect -> Config), then restart Anki.';
+      case 'anki_connect_port_auto_fix_none':
+        return 'No free port found on this machine.';
+      case 'onboarding_action_badge_required':
+        return 'Required';
+      case 'onboarding_action_badge_recommended':
+        return 'Recommended';
+      case 'onboarding_action_badge_optional':
+        return 'Optional';
+      case 'onboarding_pack_action_download_desc':
+        return 'Downloads the whole pack in the background, then imports it. Cancel anytime; it resumes from where it stopped.';
+      case 'onboarding_pack_action_import_existing_desc':
+        return 'The pack is already downloaded; this imports it. Choose Merge in the confirmation dialog and your existing data is left alone.';
+      case 'onboarding_pack_action_pick_desc':
+        return 'Already got the pack zip from somewhere else? Import it from disk and skip the download entirely.';
+      case 'onboarding_pack_action_website':
+        return 'Open the download page on the website';
+      case 'onboarding_pack_action_website_desc':
+        return 'Opens the official site in your browser. Its pack section lists chunk links you can feed to a download manager; come back afterwards and use Choose a local pack file to import what you got.';
+      case 'onboarding_pack_action_dictionary_desc':
+        return 'Learning a language other than Japanese? Skip the pack and import dictionaries for your own language here instead.';
+      case 'onboarding_pack_action_audio_desc':
+        return 'Where pronunciation audio comes from. The pack already covers Japanese and English; add online sources here for other languages.';
+      case 'onboarding_anki_action_test_desc':
+        return 'Checks that Fushi can reach Anki and loads your decks and note types. Nothing is created yet.';
+      case 'onboarding_anki_action_refresh_desc':
+        return 'Reloads decks and note types from Anki. Use it after creating a new deck inside Anki.';
+      case 'onboarding_anki_action_get_ankidroid_desc':
+        return 'Opens the store page for AnkiDroid. Fushi writes its cards into it, so it has to be installed first.';
+      case 'onboarding_anki_action_get_anki_desc':
+        return 'Opens the Anki download page. Install Anki and keep it running while you make cards.';
+      case 'onboarding_anki_action_install_addon_desc':
+        return 'Unpacks the bundled AnkiConnect add-on into Anki for you, which is what lets Fushi talk to it. Restart Anki afterwards.';
+      case 'onboarding_step_anki_action_desc':
+        return 'Card template, field mapping, screenshots and audio: the details of what a created card looks like. The deck and note type above are enough to start, so open this only if you want to change how cards are built.';
+      case 'onboarding_step_backup_action_desc':
+        return 'Choose a backup backend and sign in, so your library survives a lost or replaced device.';
+      case 'onboarding_step_interconnect_action_desc':
+        return 'Pair this device with your other devices to share one library and keep progress in sync.';
+      case 'onboarding_step_extension_action_desc':
+        return 'Shows how to install the browser extension and connect it to Fushi, so you can look words up on web pages too.';
+      case 'onboarding_step_fonts_action_desc':
+        return 'Add your own font files and pick which one each language uses.';
+      case 'onboarding_pack_sources_hint':
+        return 'Downloaded in parallel chunks from GitHub, the official site and a backup mirror at the same time, each chunk checksummed. Fushi measures the sources as it goes and gives more chunks to whichever is fastest right now, so there is nothing to choose here.';
+      case 'video_setting_hdr_output':
+        return 'HDR / 10-bit output';
+      case 'video_setting_hdr_output_hint':
+        return 'Windows only. Auto hands HDR sources straight to an HDR display through a native video window; Always uses that window for every video (10-bit output); Off keeps the standard renderer.';
+      case 'video_setting_hdr_output_auto':
+        return 'Auto';
+      case 'video_setting_hdr_output_always':
+        return 'Always';
+      case 'video_setting_hdr_output_off':
+        return 'Off';
       case 'video_ajatt_settings_hint':
         return 'Free Japanese subtitle archive (kitsunekko mirror). No account needed; subtitle files download from GitHub.';
       case 'video_ajatt_enabled_hint':
@@ -163341,12 +167766,6 @@ extension on _StringsAr {
         return 'متقدم: استخدام AnkiConnect على هذا الجهاز';
       case 'onboarding_anki_mobile_ankiconnect_hint':
         return 'يمكن لهذا الجهاز أيضاً إنشاء بطاقات في Anki على جهاز كمبيوتر في نفس الشبكة: فعّل AnkiConnect في إعدادات إنشاء البطاقات وأدخل عنوان الكمبيوتر.';
-      case 'onboarding_anki_fsrs_title':
-        return 'تبديل Anki إلى FSRS';
-      case 'onboarding_anki_fsrs_body':
-        return 'يأتي Anki مع FSRS، وهو مُجدوِل أفضل بكثير من SM-2 الافتراضي القديم: حفظ أفضل بمراجعات أقل. في Anki، افتح خيارات المجموعة وفعّل FSRS (مفتاح واحد يغطي المجموعة بالكامل). يجب فعل ذلك من داخل Anki نفسه.';
-      case 'onboarding_step_pack_browser_action':
-        return 'تحميل في المتصفح';
       case 'onboarding_anki_setup_android_hint':
         return 'ثبّت AnkiDroid وافتحه مرة واحدة لإكمال الإعداد الأولي. عُد إلى Fushi واضغط على السماح في نافذة الإذن التي تظهر مع أول بطاقة - لا حاجة لتغيير إعدادات AnkiDroid.';
       case 'onboarding_anki_install_addon_action':
@@ -163616,6 +168035,221 @@ extension on _StringsAr {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             'هناك ${n} عنصر محدد مخفي بواسطة عامل التصفية الحالي ولن تتم معالجته.';
+      case 'download_direct_queue_section':
+        return 'Direct downloads';
+      case 'download_task_kind_all':
+        return 'All types';
+      case 'download_task_kind_filter':
+        return 'Filter by type';
+      case 'manga_online_series_empty':
+        return 'لا توجد مجلدات في هذه السلسلة.';
+      case 'sync_peer_book_delete_confirm':
+        return ({required Object name}) =>
+            'هل تريد حذف "${name}" من الجهاز النظير؟ ستُحذف ملفاته وتقدّم القراءة هناك نهائيًا، ولا توجد نسخة على هذا الجهاز. لا يمكن التراجع عن هذا الإجراء.';
+      case 'sync_peer_video_delete_confirm':
+        return ({required Object name}) =>
+            'هل تريد إزالة "${name}" من مكتبة الجهاز النظير؟ سيبقى ملف الفيديو الذي استورده النظير بنفسه. لا يمكن التراجع عن هذا الإجراء.';
+      case 'storage_entry_delete_files_confirm_body':
+        return 'سيُحذف من القرص فورًا. لا يشير إليه أي عنصر في مكتبتك — فهذه بيانات مؤقتة أو مُصدَّرة أو يمكن تنزيلها من جديد.';
+      case 'manga_series_refresh':
+        return 'تحديث الفصول';
+      case 'manga_series_refresh_failed':
+        return 'تعذّر التحديث من المصدر';
+      case 'manga_series_source_disabled':
+        return 'هذا المصدر غير مثبَّت أو معطَّل';
+      case 'manga_series_platform_unsupported':
+        return 'هذا المصدر غير متاح على هذه المنصة';
+      case 'manga_series_offline_hint':
+        return 'يتم عرض الفصول المحفوظة على هذا الجهاز';
+      case 'manga_series_no_chapters':
+        return 'لا توجد فصول بعد';
+      case 'manga_series_all_read':
+        return 'تمت قراءة جميع الفصول';
+      case 'manga_series_sort_newest':
+        return 'الأحدث أولاً';
+      case 'manga_series_sort_oldest':
+        return 'الأقدم أولاً';
+      case 'manga_series_unread_only':
+        return 'غير المقروءة فقط';
+      case 'manga_series_mark_read':
+        return 'تعليم كمقروء';
+      case 'manga_series_mark_unread':
+        return 'تعليم كغير مقروء';
+      case 'manga_series_mark_previous_read':
+        return 'تعليم هذا الفصل وما قبله كمقروء';
+      case 'manga_series_local_volume':
+        return 'مجلد محلي';
+      case 'manga_series_volume_info':
+        return 'المجلد';
+      case 'manga_series_page_count':
+        return 'الصفحات';
+      case 'manga_series_chapters_action':
+        return 'الفصول';
+      case 'manga_series_next_chapter':
+        return 'الفصل التالي';
+      case 'manga_series_previous_chapter':
+        return 'الفصل السابق';
+      case 'manga_series_last_chapter_reached':
+        return 'هذا هو أحدث فصل';
+      case 'manga_series_first_chapter_reached':
+        return 'هذا هو الفصل الأول';
+      case 'manga_series_open_series':
+        return 'صفحة العمل';
+      case 'manga_series_read_progress':
+        return ({required Object page, required Object total}) =>
+            'تمت القراءة حتى الصفحة ${page} من ${total}';
+      case 'manga_series_read_progress_partial':
+        return ({required Object page}) => 'تمت القراءة حتى الصفحة ${page}';
+      case 'mihon_store_extension_count':
+        return ({required Object count}) => '${count} إضافة';
+      case 'mihon_extension_sources_more':
+        return ({required Object count}) => 'إظهار كل المصادر (${count})';
+      case 'mihon_extension_sources_less':
+        return 'إظهار مصادر أقل';
+      case 'options_website':
+        return 'زيارة الموقع الرسمي';
+      case 'video_setting_mpv_group_hdr':
+        return 'HDR';
+      case 'video_setting_hdr_tone_mapping':
+        return 'تعيين ألوان HDR';
+      case 'video_setting_hdr_tone_mapping_hint':
+        return 'المنحنى المستخدم عند ضغط مصدر HDR على شاشة SDR. «تلقائي» يترك الاختيار لـ mpv حسب كل مصدر.';
+      case 'video_setting_hdr_compute_peak':
+        return 'كشف الذروة الديناميكي';
+      case 'video_setting_hdr_compute_peak_hint':
+        return 'قياس ذروة السطوع الحقيقية لكل إطار بدلاً من الوثوق ببيانات المصدر. إبرازات أدق مقابل بعض استهلاك المعالج الرسومي.';
+      case 'video_setting_hdr_auto':
+        return 'تلقائي';
+      case 'video_setting_hdr_on':
+        return 'تشغيل';
+      case 'video_setting_hdr_off':
+        return 'إيقاف';
+      case 'video_discovery_cancel_downloads_title':
+        return 'إلغاء التنزيلات؟';
+      case 'video_discovery_cancel_downloads_body':
+        return ({required Object n}) =>
+            'سيتم إيقاف ${n} مهمة تنزيل لهذا العمل. تبقى الأجزاء المنزَّلة على القرص، ويمكنك بدء التنزيل مرة أخرى لاحقًا.';
+      case 'video_discovery_cancel_downloads_failed':
+        return 'تعذّر إلغاء التنزيل. قد تكون المهمة قد انتهت بالفعل، أو أن خلفية التنزيل غير متاحة.';
+      case 'gal_hook_click_lookup':
+        return 'اضغط على كلمة للبحث عنها';
+      case 'gal_hook_click_lookup_hint':
+        return 'الإيقاف يعني ألا يؤدي النقر على النص إلى بحث — مفيد مع تفعيل النقر النافذ عندما لا تريد إصابة كلمة بالخطأ.';
+      case 'gal_hook_lookup_trigger':
+        return 'زر البحث';
+      case 'gal_hook_lookup_trigger_hint':
+        return 'أي زر فأرة يبحث عن الكلمة تحت المؤشر. مستقل عن المفتاح أعلاه: يمكنك إيقاف البحث بالنقر والبحث بزر جانبي.';
+      case 'gal_hook_lookup_trigger_left':
+        return 'Left click';
+      case 'gal_hook_lookup_trigger_middle':
+        return 'Middle click';
+      case 'gal_hook_lookup_trigger_side':
+        return 'Side button';
+      case 'gal_hook_toolbar_auto_hide':
+        return 'إخفاء شريط الأدوات تلقائيًا';
+      case 'gal_hook_toolbar_auto_hide_hint':
+        return 'يخفي شريط الأدوات حتى يصل المؤشر إلى صندوق النص، بأسلوب LunaHook. مخفي يعني مخفي فعلًا — تعود تلك البكسلات إلى اللعبة.';
+      case 'gal_hook_passthrough_blocks_mouse':
+        return 'النص يستقبل النقرات أثناء النقر النافذ';
+      case 'gal_hook_passthrough_blocks_mouse_hint':
+        return 'تشغيل: تبقى أسطر النص تستقبل النقرات فتستطيع الضغط على كلمة. إيقاف: تصبح الطبقة كلها شفافة للفأرة — تنقر ما تحتها، لكن الضغط على الكلمات لا يعمل.';
+      case 'floating_lyric_topmost':
+        return 'الإبقاء في المقدمة';
+      case 'gal_hook_fold_progressive_lines':
+        return 'دمج أسطر الحوار المقسّمة';
+      case 'gal_hook_fold_progressive_lines_hint':
+        return 'بعض المحرّكات تعيد رسم السطر كاملًا مع كل نقرة، فيُلتقط السطر الواحد عدة مرات. اطوِ تلك اللقطات في سطر واحد.';
+      case 'gal_hook_ingame_lookup_engine_unsupported':
+        return 'محرك اللعبة هذا لا يدعم البحث داخل اللعبة بعد';
+      case 'gal_hook_ingame_lookup_version_unsupported':
+        return 'إصدار اللعبة هذا ليس ضمن القائمة المدعومة بعد';
+      case 'gal_hook_ingame_lookup_exe_hash_copy':
+        return 'نسخ SHA-256 لملف اللعبة التنفيذي';
+      case 'gal_hook_ingame_lookup_exe_hash_unavailable':
+        return 'تعذّرت قراءة ملف اللعبة التنفيذي';
+      case 'gal_hook_ingame_lookup_exe_hash_copied':
+        return 'تم نسخ SHA-256 لملف اللعبة التنفيذي';
+      case 'download_tracker_section':
+        return 'اشتراك المتعقّبات';
+      case 'download_tracker_auto_add':
+        return 'إضافة متعقّبات الاشتراك تلقائيًا إلى التنزيلات الجديدة';
+      case 'download_tracker_auto_add_hint':
+        return 'تُخزَّن القائمة مؤقتًا لست ساعات. فشل الاشتراك لا يمنع التنزيل.';
+      case 'download_tracker_url':
+        return 'رابط الاشتراك';
+      case 'download_tracker_refresh':
+        return 'جلب المتعقّبات';
+      case 'download_tracker_preview_empty':
+        return 'اجلب الاشتراك لمعاينة متعقّبات HTTP وHTTPS وUDP المدعومة.';
+      case 'download_tracker_preview_count':
+        return ({required Object count}) => 'تم جلب ${count} متعقّبًا';
+      case 'download_tracker_fetch_failed':
+        return ({required Object message}) =>
+            'تعذّر جلب المتعقّبات: ${message}';
+      case 'anki_connect_port_auto_fix':
+        return 'التبديل إلى منفذ حر';
+      case 'anki_connect_port_auto_fix_hint':
+        return 'يختار منفذًا حرًا ويكتبه في Hibiki وفي إعدادات إضافة AnkiConnect معًا. أعد تشغيل Anki لتطبيق التغيير.';
+      case 'anki_connect_port_auto_fix_done':
+        return ({required Object port}) =>
+            'تم تغيير منفذ AnkiConnect إلى ${port}. أعد تشغيل Anki ثم حاول مجددًا.';
+      case 'anki_connect_port_auto_fix_manual':
+        return ({required Object port}) =>
+            'يستخدم Hibiki الآن المنفذ ${port}، لكن لم يُعثر على إعدادات إضافة AnkiConnect. اضبط webBindPort على ${port} في Anki (أدوات ← الإضافات ← AnkiConnect ← إعداد) ثم أعد تشغيل Anki.';
+      case 'anki_connect_port_auto_fix_none':
+        return 'لم يُعثر على أي منفذ حر على هذا الجهاز.';
+      case 'onboarding_action_badge_required':
+        return 'مطلوب';
+      case 'onboarding_action_badge_recommended':
+        return 'موصى به';
+      case 'onboarding_action_badge_optional':
+        return 'اختياري';
+      case 'onboarding_pack_action_download_desc':
+        return 'ينزّل الحزمة كاملة في الخلفية ثم يستوردها. يمكنك الإلغاء في أي وقت، وسيُستأنف التنزيل من حيث توقّف.';
+      case 'onboarding_pack_action_import_existing_desc':
+        return 'الحزمة منزَّلة بالفعل، وهذا يستوردها. اختر «دمج» في نافذة التأكيد لتبقى بياناتك الحالية كما هي.';
+      case 'onboarding_pack_action_pick_desc':
+        return 'حصلت على ملف zip للحزمة من مكان آخر؟ استوردها من القرص وتخطَّ التنزيل بالكامل.';
+      case 'onboarding_pack_action_website':
+        return 'فتح صفحة التنزيل في الموقع';
+      case 'onboarding_pack_action_website_desc':
+        return 'يفتح الموقع الرسمي في متصفحك. يوفّر قسم الحزمة روابط أجزاء يمكن تمريرها إلى مدير تنزيل، ثم عد إلى هنا واستخدم «اختيار ملف حزمة محلي» لاستيراد ما حصلت عليه.';
+      case 'onboarding_pack_action_dictionary_desc':
+        return 'تتعلّم لغة غير اليابانية؟ تخطَّ الحزمة واستورد هنا قواميس لغتك.';
+      case 'onboarding_pack_action_audio_desc':
+        return 'مصدر مقاطع النطق الصوتية. الحزمة تغطّي اليابانية والإنجليزية بالفعل؛ أضف هنا مصادر عبر الإنترنت للغات الأخرى.';
+      case 'onboarding_anki_action_test_desc':
+        return 'يتحقّق من قدرة Fushi على الاتصال بـ Anki ويحمّل مجموعاتك وأنواع الملاحظات. لا يُنشأ أي شيء بعد.';
+      case 'onboarding_anki_action_refresh_desc':
+        return 'يعيد تحميل المجموعات وأنواع الملاحظات من Anki. استخدمه بعد إنشاء مجموعة جديدة داخل Anki.';
+      case 'onboarding_anki_action_get_ankidroid_desc':
+        return 'يفتح صفحة AnkiDroid في المتجر. يكتب Fushi بطاقاته داخله، لذا يجب تثبيته أولاً.';
+      case 'onboarding_anki_action_get_anki_desc':
+        return 'يفتح صفحة تنزيل Anki. ثبّت Anki وأبقِه مفتوحًا أثناء إنشاء البطاقات.';
+      case 'onboarding_anki_action_install_addon_desc':
+        return 'يفكّ ضغط إضافة AnkiConnect المرفقة داخل Anki، وهي ما يتيح لـ Fushi التخاطب معه. أعد تشغيل Anki بعد ذلك.';
+      case 'onboarding_step_anki_action_desc':
+        return 'قالب البطاقة وربط الحقول ولقطات الشاشة والصوت: أي تفاصيل شكل البطاقة الناتجة. تكفي المجموعة ونوع الملاحظة أعلاه للبدء، فلا تفتح هذا إلا إذا أردت تغيير طريقة بناء البطاقات.';
+      case 'onboarding_step_backup_action_desc':
+        return 'اختر خدمة نسخ احتياطي وسجّل الدخول، لتبقى مكتبتك سليمة عند فقدان الجهاز أو استبداله.';
+      case 'onboarding_step_interconnect_action_desc':
+        return 'يقرن هذا الجهاز بأجهزتك الأخرى لمشاركة مكتبة واحدة وإبقاء التقدّم متزامنًا.';
+      case 'onboarding_step_extension_action_desc':
+        return 'يوضّح كيفية تثبيت إضافة المتصفح وربطها بـ Fushi، لتتمكّن من البحث عن الكلمات في صفحات الويب أيضًا.';
+      case 'onboarding_step_fonts_action_desc':
+        return 'أضف ملفات خطوطك الخاصة واختر الخط الذي تستخدمه كل لغة.';
+      case 'onboarding_pack_sources_hint':
+        return 'يُنزَّل على أجزاء متوازية من GitHub والموقع الرسمي ومرآة احتياطية في آنٍ واحد، مع التحقّق من كل جزء. يقيس Fushi سرعة المصادر أثناء العمل ويمنح الأسرع في تلك اللحظة عددًا أكبر من الأجزاء، فلا شيء تختاره هنا.';
+      case 'video_setting_hdr_output':
+        return 'إخراج HDR / ‏10 بت';
+      case 'video_setting_hdr_output_hint':
+        return 'على Windows فقط. يمرّر «تلقائي» مصادر HDR مباشرةً إلى شاشة HDR عبر نافذة فيديو أصلية، ويستخدم «دائمًا» تلك النافذة لكل مقطع (إخراج 10 بت)، بينما يُبقي «إيقاف» على العارض القياسي.';
+      case 'video_setting_hdr_output_auto':
+        return 'تلقائي';
+      case 'video_setting_hdr_output_always':
+        return 'دائمًا';
+      case 'video_setting_hdr_output_off':
+        return 'إيقاف';
       case 'video_ajatt_settings_hint':
         return 'أرشيف مجاني للترجمات اليابانية (مرآة kitsunekko). لا يتطلب حسابًا؛ تُنزَّل ملفات الترجمة من GitHub.';
       case 'video_ajatt_enabled_hint':
@@ -171280,12 +175914,6 @@ extension on _StringsDe {
         return 'Erweitert: AnkiConnect auf diesem Gerät verwenden';
       case 'onboarding_anki_mobile_ankiconnect_hint':
         return 'Dieses Gerät kann auch Karten in Anki erstellen, das auf einem Computer im selben Netzwerk läuft: Aktivieren Sie AnkiConnect in den Kartenerstellungs-Einstellungen und geben Sie die Computeradresse ein.';
-      case 'onboarding_anki_fsrs_title':
-        return 'Anki auf FSRS umstellen';
-      case 'onboarding_anki_fsrs_body':
-        return 'Anki enthält FSRS, einen weit besseren Planer als den 30 Jahre alten SM-2-Standard: bessere Behaltensrate mit weniger Wiederholungen. Öffnen Sie in Anki die Stapeloptionen und aktivieren Sie FSRS (ein Schalter gilt für die gesamte Sammlung). Dies muss direkt in Anki erfolgen.';
-      case 'onboarding_step_pack_browser_action':
-        return 'Im Browser herunterladen';
       case 'onboarding_anki_setup_android_hint':
         return 'Installieren Sie AnkiDroid und öffnen Sie es einmal, um die Ersteinrichtung abzuschließen. Tippen Sie zurück in Fushi bei Ihrer ersten Karte im Berechtigungsdialog auf „Zulassen" – keine AnkiDroid-Einstellungen müssen geändert werden.';
       case 'onboarding_anki_install_addon_action':
@@ -171559,6 +176187,221 @@ extension on _StringsDe {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             'Weitere ${n} ausgewählte Elemente sind durch den aktuellen Filter ausgeblendet und werden nicht bearbeitet.';
+      case 'download_direct_queue_section':
+        return 'Direct downloads';
+      case 'download_task_kind_all':
+        return 'All types';
+      case 'download_task_kind_filter':
+        return 'Filter by type';
+      case 'manga_online_series_empty':
+        return 'Diese Serie enthält keine Bände.';
+      case 'sync_peer_book_delete_confirm':
+        return ({required Object name}) =>
+            '„${name}“ vom Partnergerät löschen? Die dortigen Dateien und der Lesefortschritt werden endgültig entfernt, und auf diesem Gerät liegt keine Kopie. Dies kann nicht rückgängig gemacht werden.';
+      case 'sync_peer_video_delete_confirm':
+        return ({required Object name}) =>
+            '„${name}“ aus der Bibliothek des Partnergeräts entfernen? Die vom Partner selbst importierte Videodatei bleibt erhalten. Dies kann nicht rückgängig gemacht werden.';
+      case 'storage_entry_delete_files_confirm_body':
+        return 'Wird sofort von der Festplatte gelöscht. Nichts in deiner Bibliothek verweist darauf – es sind zwischengespeicherte, exportierte oder erneut herunterladbare Daten.';
+      case 'manga_series_refresh':
+        return 'Kapitel aktualisieren';
+      case 'manga_series_refresh_failed':
+        return 'Aktualisierung von der Quelle fehlgeschlagen';
+      case 'manga_series_source_disabled':
+        return 'Diese Quelle ist nicht installiert oder deaktiviert';
+      case 'manga_series_platform_unsupported':
+        return 'Diese Quelle ist auf dieser Plattform nicht verfügbar';
+      case 'manga_series_offline_hint':
+        return 'Es werden die auf diesem Gerät gespeicherten Kapitel angezeigt';
+      case 'manga_series_no_chapters':
+        return 'Noch keine Kapitel';
+      case 'manga_series_all_read':
+        return 'Alle Kapitel wurden gelesen';
+      case 'manga_series_sort_newest':
+        return 'Neueste zuerst';
+      case 'manga_series_sort_oldest':
+        return 'Älteste zuerst';
+      case 'manga_series_unread_only':
+        return 'Nur ungelesene';
+      case 'manga_series_mark_read':
+        return 'Als gelesen markieren';
+      case 'manga_series_mark_unread':
+        return 'Als ungelesen markieren';
+      case 'manga_series_mark_previous_read':
+        return 'Dieses und ältere als gelesen markieren';
+      case 'manga_series_local_volume':
+        return 'Lokaler Band';
+      case 'manga_series_volume_info':
+        return 'Band';
+      case 'manga_series_page_count':
+        return 'Seiten';
+      case 'manga_series_chapters_action':
+        return 'Kapitel';
+      case 'manga_series_next_chapter':
+        return 'Nächstes Kapitel';
+      case 'manga_series_previous_chapter':
+        return 'Vorheriges Kapitel';
+      case 'manga_series_last_chapter_reached':
+        return 'Das ist das neueste Kapitel';
+      case 'manga_series_first_chapter_reached':
+        return 'Das ist das erste Kapitel';
+      case 'manga_series_open_series':
+        return 'Werkseite';
+      case 'manga_series_read_progress':
+        return ({required Object page, required Object total}) =>
+            'Bis Seite ${page} von ${total} gelesen';
+      case 'manga_series_read_progress_partial':
+        return ({required Object page}) => 'Bis Seite ${page} gelesen';
+      case 'mihon_store_extension_count':
+        return ({required Object count}) => '${count} Erweiterungen';
+      case 'mihon_extension_sources_more':
+        return ({required Object count}) => 'Alle ${count} Quellen anzeigen';
+      case 'mihon_extension_sources_less':
+        return 'Weniger Quellen anzeigen';
+      case 'options_website':
+        return 'Offizielle Website besuchen';
+      case 'video_setting_mpv_group_hdr':
+        return 'HDR';
+      case 'video_setting_hdr_tone_mapping':
+        return 'HDR-Tonemapping';
+      case 'video_setting_hdr_tone_mapping_hint':
+        return 'Kurve, mit der eine HDR-Quelle auf ein SDR-Display gebracht wird. „Automatisch“ überlässt mpv die Wahl je Quelle.';
+      case 'video_setting_hdr_compute_peak':
+        return 'Dynamische Spitzenwerterkennung';
+      case 'video_setting_hdr_compute_peak_hint':
+        return 'Misst die echte Spitzenhelligkeit jedes Bildes, statt den Metadaten der Quelle zu vertrauen. Bessere Lichter, kostet etwas GPU-Leistung.';
+      case 'video_setting_hdr_auto':
+        return 'Automatisch';
+      case 'video_setting_hdr_on':
+        return 'An';
+      case 'video_setting_hdr_off':
+        return 'Aus';
+      case 'video_discovery_cancel_downloads_title':
+        return 'Downloads abbrechen?';
+      case 'video_discovery_cancel_downloads_body':
+        return ({required Object n}) =>
+            '${n} Download-Aufgabe(n) für diesen Titel werden gestoppt. Bereits geladene Teile bleiben auf der Festplatte; du kannst den Download später erneut starten.';
+      case 'video_discovery_cancel_downloads_failed':
+        return 'Download konnte nicht abgebrochen werden. Die Aufgabe ist möglicherweise schon fertig, oder das Download-Backend ist nicht verfügbar.';
+      case 'gal_hook_click_lookup':
+        return 'Wort antippen zum Nachschlagen';
+      case 'gal_hook_click_lookup_hint':
+        return 'Aus bedeutet, dass Klicks auf den Text nie ein Nachschlagen auslösen – praktisch bei aktiviertem Durchklicken, wenn du nicht versehentlich ein Wort treffen willst.';
+      case 'gal_hook_lookup_trigger':
+        return 'Auslöser fürs Nachschlagen';
+      case 'gal_hook_lookup_trigger_hint':
+        return 'Welche Maustaste das Wort unter dem Zeiger nachschlägt. Unabhängig vom Schalter oben: Du kannst Tippen-zum-Nachschlagen ausschalten und trotzdem mit einer Seitentaste nachschlagen.';
+      case 'gal_hook_lookup_trigger_left':
+        return 'Left click';
+      case 'gal_hook_lookup_trigger_middle':
+        return 'Middle click';
+      case 'gal_hook_lookup_trigger_side':
+        return 'Side button';
+      case 'gal_hook_toolbar_auto_hide':
+        return 'Werkzeugleiste automatisch ausblenden';
+      case 'gal_hook_toolbar_auto_hide_hint':
+        return 'Blendet die Leiste aus, bis der Zeiger den Textkasten erreicht – wie bei LunaHook. Ausgeblendet heißt wirklich weg: Diese Pixel gehören wieder dem Spiel.';
+      case 'gal_hook_passthrough_blocks_mouse':
+        return 'Text nimmt Klicks trotz Durchklicken an';
+      case 'gal_hook_passthrough_blocks_mouse_hint':
+        return 'An: Textzeilen nehmen weiter Klicks an, du kannst also ein Wort antippen. Aus: Das gesamte Overlay ist für die Maus durchlässig – du klickst, was darunter liegt, aber Wörter antippen geht nicht mehr.';
+      case 'floating_lyric_topmost':
+        return 'Immer im Vordergrund';
+      case 'gal_hook_fold_progressive_lines':
+        return 'Aufgeteilte Dialogzeilen zusammenfassen';
+      case 'gal_hook_fold_progressive_lines_hint':
+        return 'Manche Engines zeichnen bei jedem Klick die ganze Zeile neu, sodass eine Zeile mehrfach erfasst wird. Diese Schnappschüsse zu einer Zeile zusammenfalten.';
+      case 'gal_hook_ingame_lookup_engine_unsupported':
+        return 'Diese Spiel-Engine unterstützt die Suche im Spiel noch nicht';
+      case 'gal_hook_ingame_lookup_version_unsupported':
+        return 'Diese Spielversion steht noch nicht auf der Liste der unterstützten Versionen';
+      case 'gal_hook_ingame_lookup_exe_hash_copy':
+        return 'SHA-256 der Spieldatei kopieren';
+      case 'gal_hook_ingame_lookup_exe_hash_unavailable':
+        return 'Die Spieldatei konnte nicht gelesen werden';
+      case 'gal_hook_ingame_lookup_exe_hash_copied':
+        return 'SHA-256 der Spieldatei kopiert';
+      case 'download_tracker_section':
+        return 'Tracker-Abonnement';
+      case 'download_tracker_auto_add':
+        return 'Abonnierte Tracker automatisch zu neuen Downloads hinzufügen';
+      case 'download_tracker_auto_add_hint':
+        return 'Die Liste wird 6 Stunden zwischengespeichert. Ein fehlgeschlagenes Abonnement blockiert den Download nicht.';
+      case 'download_tracker_url':
+        return 'Abonnement-URL';
+      case 'download_tracker_refresh':
+        return 'Tracker abrufen';
+      case 'download_tracker_preview_empty':
+        return 'Rufe das Abonnement ab, um die unterstützten HTTP-, HTTPS- und UDP-Tracker anzuzeigen.';
+      case 'download_tracker_preview_count':
+        return ({required Object count}) => '${count} Tracker abgerufen';
+      case 'download_tracker_fetch_failed':
+        return ({required Object message}) =>
+            'Tracker konnten nicht abgerufen werden: ${message}';
+      case 'anki_connect_port_auto_fix':
+        return 'Auf freien Port wechseln';
+      case 'anki_connect_port_auto_fix_hint':
+        return 'Wählt einen freien Port und trägt ihn sowohl in Hibiki als auch in die AnkiConnect-Add-on-Konfiguration ein. Starte Anki neu, damit es wirkt.';
+      case 'anki_connect_port_auto_fix_done':
+        return ({required Object port}) =>
+            'AnkiConnect nutzt jetzt Port ${port}. Starte Anki neu und versuche es erneut.';
+      case 'anki_connect_port_auto_fix_manual':
+        return ({required Object port}) =>
+            'Hibiki nutzt jetzt Port ${port}, aber die AnkiConnect-Add-on-Konfiguration wurde nicht gefunden. Setze webBindPort in Anki (Werkzeuge → Add-ons → AnkiConnect → Konfiguration) ebenfalls auf ${port} und starte Anki neu.';
+      case 'anki_connect_port_auto_fix_none':
+        return 'Auf diesem Rechner wurde kein freier Port gefunden.';
+      case 'onboarding_action_badge_required':
+        return 'Erforderlich';
+      case 'onboarding_action_badge_recommended':
+        return 'Empfohlen';
+      case 'onboarding_action_badge_optional':
+        return 'Optional';
+      case 'onboarding_pack_action_download_desc':
+        return 'Lädt das gesamte Paket im Hintergrund herunter und importiert es anschließend. Jederzeit abbrechbar; der Download wird an der Abbruchstelle fortgesetzt.';
+      case 'onboarding_pack_action_import_existing_desc':
+        return 'Das Paket ist bereits heruntergeladen; hier wird es importiert. Wähle im Bestätigungsdialog „Zusammenführen“, dann bleiben deine vorhandenen Daten unangetastet.';
+      case 'onboarding_pack_action_pick_desc':
+        return 'Du hast das Paket-ZIP bereits anderweitig bekommen? Importiere es von der Festplatte und überspringe den Download komplett.';
+      case 'onboarding_pack_action_website':
+        return 'Download-Seite der Website öffnen';
+      case 'onboarding_pack_action_website_desc':
+        return 'Öffnet die offizielle Website im Browser. Im Paket-Abschnitt findest du Teil-Links, die du einem Downloadmanager übergeben kannst; komm danach hierher zurück und importiere das Ergebnis über „Lokale Paketdatei wählen“.';
+      case 'onboarding_pack_action_dictionary_desc':
+        return 'Du lernst eine andere Sprache als Japanisch? Überspring das Paket und importiere hier stattdessen Wörterbücher für deine Sprache.';
+      case 'onboarding_pack_action_audio_desc':
+        return 'Woher die Aussprache-Audios kommen. Japanisch und Englisch deckt das Paket bereits ab; für andere Sprachen fügst du hier Online-Quellen hinzu.';
+      case 'onboarding_anki_action_test_desc':
+        return 'Prüft, ob Fushi Anki erreicht, und lädt deine Stapel und Notiztypen. Es wird noch nichts angelegt.';
+      case 'onboarding_anki_action_refresh_desc':
+        return 'Lädt Stapel und Notiztypen erneut aus Anki. Nutze das, nachdem du in Anki einen neuen Stapel angelegt hast.';
+      case 'onboarding_anki_action_get_ankidroid_desc':
+        return 'Öffnet die Store-Seite von AnkiDroid. Fushi schreibt seine Karten dorthin, es muss also zuerst installiert sein.';
+      case 'onboarding_anki_action_get_anki_desc':
+        return 'Öffnet die Download-Seite von Anki. Installiere Anki und lass es beim Kartenerstellen laufen.';
+      case 'onboarding_anki_action_install_addon_desc':
+        return 'Entpackt das mitgelieferte AnkiConnect-Add-on für dich nach Anki – darüber spricht Fushi mit Anki. Starte Anki danach neu.';
+      case 'onboarding_step_anki_action_desc':
+        return 'Kartenvorlage, Feldzuordnung, Screenshots und Audio: die Details dazu, wie eine erzeugte Karte aussieht. Stapel und Notiztyp oben genügen zum Loslegen – öffne das hier nur, wenn du ändern willst, wie Karten gebaut werden.';
+      case 'onboarding_step_backup_action_desc':
+        return 'Wähle ein Backup-Backend und melde dich an, damit deine Bibliothek einen Geräteverlust oder -wechsel übersteht.';
+      case 'onboarding_step_interconnect_action_desc':
+        return 'Koppelt dieses Gerät mit deinen anderen Geräten, um eine Bibliothek zu teilen und den Fortschritt synchron zu halten.';
+      case 'onboarding_step_extension_action_desc':
+        return 'Zeigt, wie du die Browser-Erweiterung installierst und mit Fushi verbindest, damit du auch auf Webseiten nachschlagen kannst.';
+      case 'onboarding_step_fonts_action_desc':
+        return 'Eigene Schriftdateien hinzufügen und festlegen, welche Schrift jede Sprache verwendet.';
+      case 'onboarding_pack_sources_hint':
+        return 'Wird parallel in Teilstücken gleichzeitig von GitHub, der offiziellen Website und einem Ersatz-Spiegel geladen, jedes Teilstück mit Prüfsumme. Fushi misst die Quellen währenddessen und gibt der aktuell schnellsten mehr Teilstücke – hier gibt es also nichts auszuwählen.';
+      case 'video_setting_hdr_output':
+        return 'HDR-/10-Bit-Ausgabe';
+      case 'video_setting_hdr_output_hint':
+        return 'Nur Windows. „Automatisch“ reicht HDR-Quellen über ein natives Videofenster direkt an ein HDR-Display weiter; „Immer“ nutzt dieses Fenster für jedes Video (10-Bit-Ausgabe); „Aus“ behält den Standard-Renderer.';
+      case 'video_setting_hdr_output_auto':
+        return 'Automatisch';
+      case 'video_setting_hdr_output_always':
+        return 'Immer';
+      case 'video_setting_hdr_output_off':
+        return 'Aus';
       case 'video_ajatt_settings_hint':
         return 'Kostenloses Archiv japanischer Untertitel (kitsunekko-Spiegel). Kein Konto nötig; Untertiteldateien werden von GitHub geladen.';
       case 'video_ajatt_enabled_hint':
@@ -179215,12 +184058,6 @@ extension on _StringsEs {
         return 'Avanzado: usar AnkiConnect en este dispositivo';
       case 'onboarding_anki_mobile_ankiconnect_hint':
         return 'Este dispositivo también puede crear tarjetas en Anki ejecutándose en una computadora en la misma red: active AnkiConnect en ajustes de creación de tarjetas e introduzca la dirección de la computadora.';
-      case 'onboarding_anki_fsrs_title':
-        return 'Cambiar Anki a FSRS';
-      case 'onboarding_anki_fsrs_body':
-        return 'Anki viene con FSRS, un programador mucho mejor que el SM-2 predeterminado de hace 30 años: mejor retención con menos revisiones. En Anki, abra opciones de mazo y active FSRS (un interruptor cubre toda la colección). Esto debe hacerse dentro de Anki.';
-      case 'onboarding_step_pack_browser_action':
-        return 'Descargar en navegador';
       case 'onboarding_anki_setup_android_hint':
         return 'Instale AnkiDroid y ábralo una vez para completar su configuración inicial. De vuelta en Fushi, toque Permitir en el diálogo de permisos que aparece con su primera tarjeta — no hay ajustes de AnkiDroid que cambiar.';
       case 'onboarding_anki_install_addon_action':
@@ -179494,6 +184331,221 @@ extension on _StringsEs {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             'Otros ${n} elementos seleccionados están ocultos por el filtro actual y no se procesarán.';
+      case 'download_direct_queue_section':
+        return 'Direct downloads';
+      case 'download_task_kind_all':
+        return 'All types';
+      case 'download_task_kind_filter':
+        return 'Filter by type';
+      case 'manga_online_series_empty':
+        return 'Esta serie no tiene volúmenes.';
+      case 'sync_peer_book_delete_confirm':
+        return ({required Object name}) =>
+            '¿Eliminar «${name}» del dispositivo emparejado? Sus archivos y el progreso de lectura allí se borrarán definitivamente, y este dispositivo no tiene ninguna copia. Esta acción no se puede deshacer.';
+      case 'sync_peer_video_delete_confirm':
+        return ({required Object name}) =>
+            '¿Quitar «${name}» de la biblioteca del dispositivo emparejado? El archivo de vídeo que el propio dispositivo importó se conserva. Esta acción no se puede deshacer.';
+      case 'storage_entry_delete_files_confirm_body':
+        return 'Se eliminará del disco de inmediato. Nada de tu biblioteca hace referencia a esto: son datos en caché, exportados o que se pueden volver a descargar.';
+      case 'manga_series_refresh':
+        return 'Actualizar capítulos';
+      case 'manga_series_refresh_failed':
+        return 'No se pudo actualizar desde la fuente';
+      case 'manga_series_source_disabled':
+        return 'Esta fuente no está instalada o está desactivada';
+      case 'manga_series_platform_unsupported':
+        return 'Esta fuente no está disponible en esta plataforma';
+      case 'manga_series_offline_hint':
+        return 'Se muestran los capítulos guardados en este dispositivo';
+      case 'manga_series_no_chapters':
+        return 'Todavía no hay capítulos';
+      case 'manga_series_all_read':
+        return 'Se han leído todos los capítulos';
+      case 'manga_series_sort_newest':
+        return 'Más recientes primero';
+      case 'manga_series_sort_oldest':
+        return 'Más antiguos primero';
+      case 'manga_series_unread_only':
+        return 'Solo no leídos';
+      case 'manga_series_mark_read':
+        return 'Marcar como leído';
+      case 'manga_series_mark_unread':
+        return 'Marcar como no leído';
+      case 'manga_series_mark_previous_read':
+        return 'Marcar este y los anteriores como leídos';
+      case 'manga_series_local_volume':
+        return 'Volumen local';
+      case 'manga_series_volume_info':
+        return 'Volumen';
+      case 'manga_series_page_count':
+        return 'Páginas';
+      case 'manga_series_chapters_action':
+        return 'Capítulos';
+      case 'manga_series_next_chapter':
+        return 'Capítulo siguiente';
+      case 'manga_series_previous_chapter':
+        return 'Capítulo anterior';
+      case 'manga_series_last_chapter_reached':
+        return 'Este es el capítulo más reciente';
+      case 'manga_series_first_chapter_reached':
+        return 'Este es el primer capítulo';
+      case 'manga_series_open_series':
+        return 'Página de la obra';
+      case 'manga_series_read_progress':
+        return ({required Object page, required Object total}) =>
+            'Leído hasta la página ${page} de ${total}';
+      case 'manga_series_read_progress_partial':
+        return ({required Object page}) => 'Leído hasta la página ${page}';
+      case 'mihon_store_extension_count':
+        return ({required Object count}) => '${count} extensiones';
+      case 'mihon_extension_sources_more':
+        return ({required Object count}) => 'Mostrar las ${count} fuentes';
+      case 'mihon_extension_sources_less':
+        return 'Mostrar menos fuentes';
+      case 'options_website':
+        return 'Visitar el sitio web oficial';
+      case 'video_setting_mpv_group_hdr':
+        return 'HDR';
+      case 'video_setting_hdr_tone_mapping':
+        return 'Mapeo de tonos HDR';
+      case 'video_setting_hdr_tone_mapping_hint':
+        return 'Curva que se usa al comprimir una fuente HDR en una pantalla SDR. «Automático» deja que mpv elija según la fuente.';
+      case 'video_setting_hdr_compute_peak':
+        return 'Detección dinámica de picos';
+      case 'video_setting_hdr_compute_peak_hint':
+        return 'Mide el brillo máximo real de cada fotograma en vez de fiarse de los metadatos de la fuente. Mejores luces altas, a costa de algo de GPU.';
+      case 'video_setting_hdr_auto':
+        return 'Automático';
+      case 'video_setting_hdr_on':
+        return 'Activado';
+      case 'video_setting_hdr_off':
+        return 'Desactivado';
+      case 'video_discovery_cancel_downloads_title':
+        return '¿Cancelar las descargas?';
+      case 'video_discovery_cancel_downloads_body':
+        return ({required Object n}) =>
+            'Se detendrán ${n} tarea(s) de descarga de este título. Las partes ya descargadas se conservan en el disco; podrás reanudar la descarga más adelante.';
+      case 'video_discovery_cancel_downloads_failed':
+        return 'No se pudo cancelar la descarga. Puede que la tarea ya haya terminado o que el backend de descargas no esté disponible.';
+      case 'gal_hook_click_lookup':
+        return 'Toca una palabra para buscarla';
+      case 'gal_hook_click_lookup_hint':
+        return 'Desactivado significa que los clics sobre el texto nunca activan una búsqueda: útil con el clic pasante activado, cuando prefieres no darle a una palabra sin querer.';
+      case 'gal_hook_lookup_trigger':
+        return 'Disparador de búsqueda';
+      case 'gal_hook_lookup_trigger_hint':
+        return 'Qué botón del ratón busca la palabra bajo el puntero. Es independiente del interruptor de arriba: puedes desactivar la búsqueda por toque y seguir buscando con un botón lateral.';
+      case 'gal_hook_lookup_trigger_left':
+        return 'Left click';
+      case 'gal_hook_lookup_trigger_middle':
+        return 'Middle click';
+      case 'gal_hook_lookup_trigger_side':
+        return 'Side button';
+      case 'gal_hook_toolbar_auto_hide':
+        return 'Ocultar la barra automáticamente';
+      case 'gal_hook_toolbar_auto_hide_hint':
+        return 'Oculta la barra hasta que el puntero llega al cuadro de texto, al estilo de LunaHook. Oculta significa oculta de verdad: esos píxeles vuelven al juego.';
+      case 'gal_hook_passthrough_blocks_mouse':
+        return 'El texto sigue recibiendo clics con el clic pasante';
+      case 'gal_hook_passthrough_blocks_mouse_hint':
+        return 'Activado: las líneas de texto siguen recibiendo clics, así puedes tocar una palabra. Desactivado: toda la superposición es transparente al ratón; puedes hacer clic en lo que haya debajo, pero tocar palabras deja de funcionar.';
+      case 'floating_lyric_topmost':
+        return 'Mantener al frente';
+      case 'gal_hook_fold_progressive_lines':
+        return 'Unir líneas de diálogo divididas';
+      case 'gal_hook_fold_progressive_lines_hint':
+        return 'Algunos motores redibujan la línea entera en cada clic, así que una misma línea se captura varias veces. Pliega esas instantáneas en una sola línea.';
+      case 'gal_hook_ingame_lookup_engine_unsupported':
+        return 'Este motor de juego aún no admite la búsqueda dentro del juego';
+      case 'gal_hook_ingame_lookup_version_unsupported':
+        return 'Esta versión del juego aún no está en la lista de compatibles';
+      case 'gal_hook_ingame_lookup_exe_hash_copy':
+        return 'Copiar el SHA-256 del ejecutable del juego';
+      case 'gal_hook_ingame_lookup_exe_hash_unavailable':
+        return 'No se pudo leer el ejecutable del juego';
+      case 'gal_hook_ingame_lookup_exe_hash_copied':
+        return 'SHA-256 del ejecutable copiado';
+      case 'download_tracker_section':
+        return 'Suscripción de trackers';
+      case 'download_tracker_auto_add':
+        return 'Añadir automáticamente los trackers suscritos a las descargas nuevas';
+      case 'download_tracker_auto_add_hint':
+        return 'La lista se almacena en caché 6 horas. Si la suscripción falla, la descarga no se bloquea.';
+      case 'download_tracker_url':
+        return 'URL de suscripción';
+      case 'download_tracker_refresh':
+        return 'Obtener trackers';
+      case 'download_tracker_preview_empty':
+        return 'Obtén la suscripción para ver los trackers HTTP, HTTPS y UDP compatibles.';
+      case 'download_tracker_preview_count':
+        return ({required Object count}) => '${count} trackers obtenidos';
+      case 'download_tracker_fetch_failed':
+        return ({required Object message}) =>
+            'No se pudieron obtener los trackers: ${message}';
+      case 'anki_connect_port_auto_fix':
+        return 'Cambiar a un puerto libre';
+      case 'anki_connect_port_auto_fix_hint':
+        return 'Elige un puerto libre y lo escribe tanto en Hibiki como en la configuración del complemento AnkiConnect. Reinicia Anki para aplicarlo.';
+      case 'anki_connect_port_auto_fix_done':
+        return ({required Object port}) =>
+            'AnkiConnect ahora usa el puerto ${port}. Reinicia Anki y vuelve a intentarlo.';
+      case 'anki_connect_port_auto_fix_manual':
+        return ({required Object port}) =>
+            'Hibiki ahora usa el puerto ${port}, pero no se encontró la configuración del complemento AnkiConnect. Pon webBindPort en ${port} dentro de Anki (Herramientas → Complementos → AnkiConnect → Configuración) y reinicia Anki.';
+      case 'anki_connect_port_auto_fix_none':
+        return 'No se encontró ningún puerto libre en este equipo.';
+      case 'onboarding_action_badge_required':
+        return 'Obligatorio';
+      case 'onboarding_action_badge_recommended':
+        return 'Recomendado';
+      case 'onboarding_action_badge_optional':
+        return 'Opcional';
+      case 'onboarding_pack_action_download_desc':
+        return 'Descarga todo el paquete en segundo plano y luego lo importa. Puedes cancelar cuando quieras; la próxima vez continúa desde donde se detuvo.';
+      case 'onboarding_pack_action_import_existing_desc':
+        return 'El paquete ya está descargado; esto lo importa. Elige «Combinar» en el diálogo de confirmación y tus datos actuales quedarán intactos.';
+      case 'onboarding_pack_action_pick_desc':
+        return '¿Ya conseguiste el zip del paquete por otro lado? Impórtalo desde el disco y sáltate la descarga por completo.';
+      case 'onboarding_pack_action_website':
+        return 'Abrir la página de descarga del sitio';
+      case 'onboarding_pack_action_website_desc':
+        return 'Abre el sitio oficial en tu navegador. Su sección de paquete lista enlaces por fragmentos que puedes pasar a un gestor de descargas; vuelve después aquí y usa «Elegir un archivo de paquete local» para importar lo que obtuviste.';
+      case 'onboarding_pack_action_dictionary_desc':
+        return '¿Aprendes un idioma distinto del japonés? Sáltate el paquete e importa aquí diccionarios de tu propio idioma.';
+      case 'onboarding_pack_action_audio_desc':
+        return 'De dónde sale el audio de pronunciación. El paquete ya cubre japonés e inglés; añade aquí fuentes en línea para otros idiomas.';
+      case 'onboarding_anki_action_test_desc':
+        return 'Comprueba que Fushi puede conectarse con Anki y carga tus mazos y tipos de nota. Todavía no se crea nada.';
+      case 'onboarding_anki_action_refresh_desc':
+        return 'Vuelve a cargar mazos y tipos de nota desde Anki. Úsalo después de crear un mazo nuevo dentro de Anki.';
+      case 'onboarding_anki_action_get_ankidroid_desc':
+        return 'Abre la página de la tienda de AnkiDroid. Fushi escribe ahí sus tarjetas, así que hay que instalarlo primero.';
+      case 'onboarding_anki_action_get_anki_desc':
+        return 'Abre la página de descarga de Anki. Instala Anki y déjalo abierto mientras creas tarjetas.';
+      case 'onboarding_anki_action_install_addon_desc':
+        return 'Descomprime por ti el complemento AnkiConnect incluido dentro de Anki, que es lo que permite a Fushi comunicarse con él. Reinicia Anki después.';
+      case 'onboarding_step_anki_action_desc':
+        return 'Plantilla de tarjeta, asignación de campos, capturas y audio: los detalles de qué aspecto tiene una tarjeta creada. Con el mazo y el tipo de nota de arriba ya puedes empezar, así que abre esto solo si quieres cambiar cómo se construyen las tarjetas.';
+      case 'onboarding_step_backup_action_desc':
+        return 'Elige un servicio de copia de seguridad e inicia sesión, para que tu biblioteca sobreviva a la pérdida o el cambio de dispositivo.';
+      case 'onboarding_step_interconnect_action_desc':
+        return 'Empareja este dispositivo con tus otros dispositivos para compartir una misma biblioteca y mantener el progreso sincronizado.';
+      case 'onboarding_step_extension_action_desc':
+        return 'Muestra cómo instalar la extensión de navegador y conectarla con Fushi, para poder buscar palabras también en páginas web.';
+      case 'onboarding_step_fonts_action_desc':
+        return 'Añade tus propios archivos de fuente y elige cuál usa cada idioma.';
+      case 'onboarding_pack_sources_hint':
+        return 'Se descarga en fragmentos paralelos desde GitHub, el sitio oficial y un espejo de respaldo a la vez, con suma de verificación en cada fragmento. Fushi mide las fuentes sobre la marcha y da más fragmentos a la que sea más rápida en ese momento, así que aquí no hay nada que elegir.';
+      case 'video_setting_hdr_output':
+        return 'Salida HDR / 10 bits';
+      case 'video_setting_hdr_output_hint':
+        return 'Solo en Windows. «Automático» entrega las fuentes HDR directamente a una pantalla HDR mediante una ventana de vídeo nativa; «Siempre» usa esa ventana para todos los vídeos (salida de 10 bits); «Desactivado» mantiene el renderizador estándar.';
+      case 'video_setting_hdr_output_auto':
+        return 'Automático';
+      case 'video_setting_hdr_output_always':
+        return 'Siempre';
+      case 'video_setting_hdr_output_off':
+        return 'Desactivado';
       case 'video_ajatt_settings_hint':
         return 'Archivo gratuito de subtítulos en japonés (réplica de kitsunekko). No requiere cuenta; los archivos se descargan desde GitHub.';
       case 'video_ajatt_enabled_hint':
@@ -187158,12 +192210,6 @@ extension on _StringsFr {
         return 'Avancé : utiliser AnkiConnect sur cet appareil';
       case 'onboarding_anki_mobile_ankiconnect_hint':
         return 'Cet appareil peut aussi créer des cartes dans Anki sur un ordinateur du même réseau : activez AnkiConnect dans les paramètres de création de cartes et entrez l\'adresse de l\'ordinateur.';
-      case 'onboarding_anki_fsrs_title':
-        return 'Passer Anki à FSRS';
-      case 'onboarding_anki_fsrs_body':
-        return 'Anki est livré avec FSRS, un planificateur bien meilleur que le SM-2 par défaut vieux de 30 ans : meilleure rétention avec moins de révisions. Dans Anki, ouvrez les options du paquet et activez FSRS (un seul interrupteur couvre toute la collection). Cela doit être fait dans Anki même.';
-      case 'onboarding_step_pack_browser_action':
-        return 'Télécharger dans le navigateur';
       case 'onboarding_anki_setup_android_hint':
         return 'Installez AnkiDroid et ouvrez-le une fois pour terminer sa configuration initiale. De retour dans Fushi, appuyez sur Autoriser dans la boîte de dialogue de permission qui apparaît avec votre première carte — aucun paramètre AnkiDroid à changer.';
       case 'onboarding_anki_install_addon_action':
@@ -187437,6 +192483,221 @@ extension on _StringsFr {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             '${n} autres éléments sélectionnés sont masqués par le filtre actuel et ne seront pas traités.';
+      case 'download_direct_queue_section':
+        return 'Direct downloads';
+      case 'download_task_kind_all':
+        return 'All types';
+      case 'download_task_kind_filter':
+        return 'Filter by type';
+      case 'manga_online_series_empty':
+        return 'Aucun volume dans cette série.';
+      case 'sync_peer_book_delete_confirm':
+        return ({required Object name}) =>
+            'Supprimer « ${name} » de l\'appareil pair ? Ses fichiers et la progression de lecture qui s\'y trouvent seront définitivement supprimés, et cet appareil n\'en a aucune copie. Cette action est irréversible.';
+      case 'sync_peer_video_delete_confirm':
+        return ({required Object name}) =>
+            'Retirer « ${name} » de la bibliothèque de l\'appareil pair ? Le fichier vidéo importé par l\'appareil pair lui-même est conservé. Cette action est irréversible.';
+      case 'storage_entry_delete_files_confirm_body':
+        return 'Suppression immédiate du disque. Rien dans votre bibliothèque n\'y fait référence : ce sont des données en cache, exportées ou re-téléchargeables.';
+      case 'manga_series_refresh':
+        return 'Actualiser les chapitres';
+      case 'manga_series_refresh_failed':
+        return 'Impossible d\'actualiser depuis la source';
+      case 'manga_series_source_disabled':
+        return 'Cette source n\'est pas installée ou est désactivée';
+      case 'manga_series_platform_unsupported':
+        return 'Cette source n\'est pas disponible sur cette plateforme';
+      case 'manga_series_offline_hint':
+        return 'Affichage des chapitres enregistrés sur cet appareil';
+      case 'manga_series_no_chapters':
+        return 'Aucun chapitre pour le moment';
+      case 'manga_series_all_read':
+        return 'Tous les chapitres ont été lus';
+      case 'manga_series_sort_newest':
+        return 'Plus récents d\'abord';
+      case 'manga_series_sort_oldest':
+        return 'Plus anciens d\'abord';
+      case 'manga_series_unread_only':
+        return 'Non lus uniquement';
+      case 'manga_series_mark_read':
+        return 'Marquer comme lu';
+      case 'manga_series_mark_unread':
+        return 'Marquer comme non lu';
+      case 'manga_series_mark_previous_read':
+        return 'Marquer celui-ci et les précédents comme lus';
+      case 'manga_series_local_volume':
+        return 'Volume local';
+      case 'manga_series_volume_info':
+        return 'Volume';
+      case 'manga_series_page_count':
+        return 'Pages';
+      case 'manga_series_chapters_action':
+        return 'Chapitres';
+      case 'manga_series_next_chapter':
+        return 'Chapitre suivant';
+      case 'manga_series_previous_chapter':
+        return 'Chapitre précédent';
+      case 'manga_series_last_chapter_reached':
+        return 'C\'est le chapitre le plus récent';
+      case 'manga_series_first_chapter_reached':
+        return 'C\'est le premier chapitre';
+      case 'manga_series_open_series':
+        return 'Page de l\'œuvre';
+      case 'manga_series_read_progress':
+        return ({required Object page, required Object total}) =>
+            'Lu jusqu\'à la page ${page} sur ${total}';
+      case 'manga_series_read_progress_partial':
+        return ({required Object page}) => 'Lu jusqu\'à la page ${page}';
+      case 'mihon_store_extension_count':
+        return ({required Object count}) => '${count} extensions';
+      case 'mihon_extension_sources_more':
+        return ({required Object count}) => 'Afficher les ${count} sources';
+      case 'mihon_extension_sources_less':
+        return 'Afficher moins de sources';
+      case 'options_website':
+        return 'Visiter le site officiel';
+      case 'video_setting_mpv_group_hdr':
+        return 'HDR';
+      case 'video_setting_hdr_tone_mapping':
+        return 'Mappage tonal HDR';
+      case 'video_setting_hdr_tone_mapping_hint':
+        return 'Courbe utilisée pour ramener une source HDR sur un écran SDR. « Auto » laisse mpv choisir selon la source.';
+      case 'video_setting_hdr_compute_peak':
+        return 'Détection dynamique des pics';
+      case 'video_setting_hdr_compute_peak_hint':
+        return 'Mesure le pic de luminosité réel de chaque image au lieu de se fier aux métadonnées de la source. Meilleures hautes lumières, au prix d\'un peu de GPU.';
+      case 'video_setting_hdr_auto':
+        return 'Auto';
+      case 'video_setting_hdr_on':
+        return 'Activé';
+      case 'video_setting_hdr_off':
+        return 'Désactivé';
+      case 'video_discovery_cancel_downloads_title':
+        return 'Annuler les téléchargements ?';
+      case 'video_discovery_cancel_downloads_body':
+        return ({required Object n}) =>
+            '${n} tâche(s) de téléchargement pour ce titre vont être arrêtées. Les morceaux déjà téléchargés restent sur le disque ; vous pourrez relancer le téléchargement plus tard.';
+      case 'video_discovery_cancel_downloads_failed':
+        return 'Impossible d\'annuler le téléchargement. La tâche est peut-être déjà terminée, ou le backend de téléchargement est indisponible.';
+      case 'gal_hook_click_lookup':
+        return 'Toucher un mot pour le chercher';
+      case 'gal_hook_click_lookup_hint':
+        return 'Désactivé : les clics sur le texte ne déclenchent jamais de recherche — pratique avec le clic traversant, quand vous préférez ne pas toucher un mot par erreur.';
+      case 'gal_hook_lookup_trigger':
+        return 'Déclencheur de recherche';
+      case 'gal_hook_lookup_trigger_hint':
+        return 'Quel bouton de la souris cherche le mot sous le pointeur. Indépendant du réglage ci-dessus : vous pouvez désactiver la recherche au toucher et chercher quand même avec un bouton latéral.';
+      case 'gal_hook_lookup_trigger_left':
+        return 'Left click';
+      case 'gal_hook_lookup_trigger_middle':
+        return 'Middle click';
+      case 'gal_hook_lookup_trigger_side':
+        return 'Side button';
+      case 'gal_hook_toolbar_auto_hide':
+        return 'Masquer la barre automatiquement';
+      case 'gal_hook_toolbar_auto_hide_hint':
+        return 'Masque la barre jusqu\'à ce que le pointeur atteigne la zone de texte, à la manière de LunaHook. Masqué veut dire vraiment masqué : ces pixels reviennent au jeu.';
+      case 'gal_hook_passthrough_blocks_mouse':
+        return 'Le texte reçoit encore les clics en mode traversant';
+      case 'gal_hook_passthrough_blocks_mouse_hint':
+        return 'Activé : les lignes de texte reçoivent encore les clics, vous pouvez donc toucher un mot. Désactivé : toute la surcouche est transparente à la souris — vous cliquez ce qui est dessous, mais toucher un mot ne marche plus.';
+      case 'floating_lyric_topmost':
+        return 'Garder au premier plan';
+      case 'gal_hook_fold_progressive_lines':
+        return 'Fusionner les répliques découpées';
+      case 'gal_hook_fold_progressive_lines_hint':
+        return 'Certains moteurs redessinent toute la ligne à chaque clic, si bien qu\'une même ligne est capturée plusieurs fois. Replie ces instantanés en une seule ligne.';
+      case 'gal_hook_ingame_lookup_engine_unsupported':
+        return 'Ce moteur de jeu ne prend pas encore en charge la recherche en jeu';
+      case 'gal_hook_ingame_lookup_version_unsupported':
+        return 'Cette version du jeu ne figure pas encore dans la liste prise en charge';
+      case 'gal_hook_ingame_lookup_exe_hash_copy':
+        return 'Copier le SHA-256 de l\'exécutable du jeu';
+      case 'gal_hook_ingame_lookup_exe_hash_unavailable':
+        return 'Impossible de lire l\'exécutable du jeu';
+      case 'gal_hook_ingame_lookup_exe_hash_copied':
+        return 'SHA-256 de l\'exécutable copié';
+      case 'download_tracker_section':
+        return 'Abonnement aux trackers';
+      case 'download_tracker_auto_add':
+        return 'Ajouter automatiquement les trackers de l’abonnement aux nouveaux téléchargements';
+      case 'download_tracker_auto_add_hint':
+        return 'La liste est mise en cache pendant 6 heures. L’échec de l’abonnement ne bloque pas le téléchargement.';
+      case 'download_tracker_url':
+        return 'URL de l’abonnement';
+      case 'download_tracker_refresh':
+        return 'Récupérer les trackers';
+      case 'download_tracker_preview_empty':
+        return 'Récupère l’abonnement pour prévisualiser les trackers HTTP, HTTPS et UDP pris en charge.';
+      case 'download_tracker_preview_count':
+        return ({required Object count}) => '${count} trackers récupérés';
+      case 'download_tracker_fetch_failed':
+        return ({required Object message}) =>
+            'Impossible de récupérer les trackers : ${message}';
+      case 'anki_connect_port_auto_fix':
+        return 'Passer à un port libre';
+      case 'anki_connect_port_auto_fix_hint':
+        return 'Choisit un port libre et l\'écrit à la fois dans Hibiki et dans la configuration du module AnkiConnect. Redémarrez Anki pour l\'appliquer.';
+      case 'anki_connect_port_auto_fix_done':
+        return ({required Object port}) =>
+            'AnkiConnect utilise désormais le port ${port}. Redémarrez Anki puis réessayez.';
+      case 'anki_connect_port_auto_fix_manual':
+        return ({required Object port}) =>
+            'Hibiki utilise désormais le port ${port}, mais la configuration du module AnkiConnect est introuvable. Définissez webBindPort sur ${port} dans Anki (Outils → Modules complémentaires → AnkiConnect → Configuration), puis redémarrez Anki.';
+      case 'anki_connect_port_auto_fix_none':
+        return 'Aucun port libre trouvé sur cette machine.';
+      case 'onboarding_action_badge_required':
+        return 'Requis';
+      case 'onboarding_action_badge_recommended':
+        return 'Recommandé';
+      case 'onboarding_action_badge_optional':
+        return 'Facultatif';
+      case 'onboarding_pack_action_download_desc':
+        return 'Télécharge tout le pack en arrière-plan, puis l’importe. Annulable à tout moment ; la reprise repart du point d’arrêt.';
+      case 'onboarding_pack_action_import_existing_desc':
+        return 'Le pack est déjà téléchargé ; ceci l’importe. Choisissez « Fusionner » dans la boîte de confirmation et vos données existantes ne seront pas touchées.';
+      case 'onboarding_pack_action_pick_desc':
+        return 'Vous avez déjà récupéré le zip du pack ailleurs ? Importez-le depuis le disque et sautez complètement le téléchargement.';
+      case 'onboarding_pack_action_website':
+        return 'Ouvrir la page de téléchargement du site';
+      case 'onboarding_pack_action_website_desc':
+        return 'Ouvre le site officiel dans votre navigateur. Sa section pack liste des liens par morceaux que vous pouvez donner à un gestionnaire de téléchargement ; revenez ensuite ici et utilisez « Choisir un fichier de pack local » pour importer ce que vous avez obtenu.';
+      case 'onboarding_pack_action_dictionary_desc':
+        return 'Vous apprenez une autre langue que le japonais ? Passez le pack et importez ici les dictionnaires de votre langue.';
+      case 'onboarding_pack_action_audio_desc':
+        return 'D’où viennent les audios de prononciation. Le pack couvre déjà le japonais et l’anglais ; ajoutez ici des sources en ligne pour les autres langues.';
+      case 'onboarding_anki_action_test_desc':
+        return 'Vérifie que Fushi joint bien Anki et charge vos paquets et types de notes. Rien n’est encore créé.';
+      case 'onboarding_anki_action_refresh_desc':
+        return 'Recharge les paquets et types de notes depuis Anki. À utiliser après avoir créé un paquet dans Anki.';
+      case 'onboarding_anki_action_get_ankidroid_desc':
+        return 'Ouvre la page du store d’AnkiDroid. Fushi y écrit ses cartes, il doit donc être installé d’abord.';
+      case 'onboarding_anki_action_get_anki_desc':
+        return 'Ouvre la page de téléchargement d’Anki. Installez Anki et laissez-le ouvert pendant la création de cartes.';
+      case 'onboarding_anki_action_install_addon_desc':
+        return 'Décompresse pour vous le module AnkiConnect fourni dans Anki ; c’est lui qui permet à Fushi de lui parler. Redémarrez Anki ensuite.';
+      case 'onboarding_step_anki_action_desc':
+        return 'Modèle de carte, correspondance des champs, captures et audio : les détails de l’apparence d’une carte créée. Le paquet et le type de note ci-dessus suffisent pour commencer, n’ouvrez ceci que si vous voulez changer la façon dont les cartes sont fabriquées.';
+      case 'onboarding_step_backup_action_desc':
+        return 'Choisissez un service de sauvegarde et connectez-vous, pour que votre bibliothèque survive à la perte ou au remplacement d’un appareil.';
+      case 'onboarding_step_interconnect_action_desc':
+        return 'Associe cet appareil à vos autres appareils pour partager une même bibliothèque et garder la progression synchronisée.';
+      case 'onboarding_step_extension_action_desc':
+        return 'Montre comment installer l’extension de navigateur et la connecter à Fushi, pour pouvoir aussi chercher des mots sur les pages web.';
+      case 'onboarding_step_fonts_action_desc':
+        return 'Ajoutez vos propres fichiers de police et choisissez celle utilisée par chaque langue.';
+      case 'onboarding_pack_sources_hint':
+        return 'Téléchargé en morceaux parallèles depuis GitHub, le site officiel et un miroir de secours à la fois, chaque morceau vérifié par somme de contrôle. Fushi mesure les sources au fil de l’eau et donne plus de morceaux à la plus rapide du moment ; il n’y a donc rien à choisir ici.';
+      case 'video_setting_hdr_output':
+        return 'Sortie HDR / 10 bits';
+      case 'video_setting_hdr_output_hint':
+        return 'Windows uniquement. « Auto » transmet les sources HDR directement à un écran HDR via une fenêtre vidéo native ; « Toujours » utilise cette fenêtre pour toutes les vidéos (sortie 10 bits) ; « Désactivé » conserve le rendu standard.';
+      case 'video_setting_hdr_output_auto':
+        return 'Auto';
+      case 'video_setting_hdr_output_always':
+        return 'Toujours';
+      case 'video_setting_hdr_output_off':
+        return 'Désactivé';
       case 'video_ajatt_settings_hint':
         return 'Archive gratuite de sous-titres japonais (miroir kitsunekko). Aucun compte requis ; les fichiers sont téléchargés depuis GitHub.';
       case 'video_ajatt_enabled_hint':
@@ -195076,12 +200337,6 @@ extension on _StringsId {
         return 'Lanjutan: gunakan AnkiConnect di perangkat ini';
       case 'onboarding_anki_mobile_ankiconnect_hint':
         return 'Perangkat ini juga bisa membuat kartu ke Anki yang berjalan di komputer dalam jaringan yang sama: aktifkan AnkiConnect di pengaturan pembuatan kartu dan masukkan alamat komputer.';
-      case 'onboarding_anki_fsrs_title':
-        return 'Beralih Anki ke FSRS';
-      case 'onboarding_anki_fsrs_body':
-        return 'Anki dilengkapi FSRS, penjadwal yang jauh lebih baik dari default SM-2 berusia 30 tahun: retensi lebih baik dengan ulasan lebih sedikit. Di Anki, buka opsi dek dan aktifkan FSRS (satu sakelar mencakup seluruh koleksi). Ini harus dilakukan di dalam Anki sendiri.';
-      case 'onboarding_step_pack_browser_action':
-        return 'Unduh di browser';
       case 'onboarding_anki_setup_android_hint':
         return 'Instal AnkiDroid dan buka sekali untuk menyelesaikan pengaturan awalnya. Kembali di Fushi, ketuk Izinkan pada dialog izin yang muncul saat kartu pertama Anda - tidak perlu mengubah pengaturan AnkiDroid.';
       case 'onboarding_anki_install_addon_action':
@@ -195352,6 +200607,221 @@ extension on _StringsId {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             '${n} item terpilih lainnya disembunyikan oleh filter saat ini dan tidak akan diproses.';
+      case 'download_direct_queue_section':
+        return 'Direct downloads';
+      case 'download_task_kind_all':
+        return 'All types';
+      case 'download_task_kind_filter':
+        return 'Filter by type';
+      case 'manga_online_series_empty':
+        return 'Seri ini tidak memiliki volume.';
+      case 'sync_peer_book_delete_confirm':
+        return ({required Object name}) =>
+            'Hapus "${name}" dari perangkat pasangan? Berkas dan progres bacanya di sana akan dihapus permanen, dan perangkat ini tidak punya salinan. Tindakan ini tidak dapat dibatalkan.';
+      case 'sync_peer_video_delete_confirm':
+        return ({required Object name}) =>
+            'Hapus "${name}" dari pustaka perangkat pasangan? Berkas video yang diimpor sendiri oleh perangkat itu tetap disimpan. Tindakan ini tidak dapat dibatalkan.';
+      case 'storage_entry_delete_files_confirm_body':
+        return 'Akan langsung dihapus dari disk. Tidak ada di pustaka Anda yang merujuk ke sini — isinya data cache, hasil ekspor, atau yang bisa diunduh ulang.';
+      case 'manga_series_refresh':
+        return 'Segarkan bab';
+      case 'manga_series_refresh_failed':
+        return 'Tidak dapat menyegarkan dari sumber';
+      case 'manga_series_source_disabled':
+        return 'Sumber ini belum dipasang atau dinonaktifkan';
+      case 'manga_series_platform_unsupported':
+        return 'Sumber ini tidak tersedia di platform ini';
+      case 'manga_series_offline_hint':
+        return 'Menampilkan bab yang tersimpan di perangkat ini';
+      case 'manga_series_no_chapters':
+        return 'Belum ada bab';
+      case 'manga_series_all_read':
+        return 'Semua bab telah dibaca';
+      case 'manga_series_sort_newest':
+        return 'Terbaru dulu';
+      case 'manga_series_sort_oldest':
+        return 'Terlama dulu';
+      case 'manga_series_unread_only':
+        return 'Hanya yang belum dibaca';
+      case 'manga_series_mark_read':
+        return 'Tandai sudah dibaca';
+      case 'manga_series_mark_unread':
+        return 'Tandai belum dibaca';
+      case 'manga_series_mark_previous_read':
+        return 'Tandai bab ini dan sebelumnya sudah dibaca';
+      case 'manga_series_local_volume':
+        return 'Volume lokal';
+      case 'manga_series_volume_info':
+        return 'Volume';
+      case 'manga_series_page_count':
+        return 'Halaman';
+      case 'manga_series_chapters_action':
+        return 'Bab';
+      case 'manga_series_next_chapter':
+        return 'Bab berikutnya';
+      case 'manga_series_previous_chapter':
+        return 'Bab sebelumnya';
+      case 'manga_series_last_chapter_reached':
+        return 'Ini bab terbaru';
+      case 'manga_series_first_chapter_reached':
+        return 'Ini bab pertama';
+      case 'manga_series_open_series':
+        return 'Halaman karya';
+      case 'manga_series_read_progress':
+        return ({required Object page, required Object total}) =>
+            'Dibaca sampai halaman ${page} dari ${total}';
+      case 'manga_series_read_progress_partial':
+        return ({required Object page}) => 'Dibaca sampai halaman ${page}';
+      case 'mihon_store_extension_count':
+        return ({required Object count}) => '${count} ekstensi';
+      case 'mihon_extension_sources_more':
+        return ({required Object count}) => 'Tampilkan semua ${count} sumber';
+      case 'mihon_extension_sources_less':
+        return 'Tampilkan lebih sedikit sumber';
+      case 'options_website':
+        return 'Kunjungi situs web resmi';
+      case 'video_setting_mpv_group_hdr':
+        return 'HDR';
+      case 'video_setting_hdr_tone_mapping':
+        return 'Pemetaan nada HDR';
+      case 'video_setting_hdr_tone_mapping_hint':
+        return 'Kurva yang dipakai saat sumber HDR harus dipadatkan ke layar SDR. "Otomatis" membiarkan mpv memilih per sumber.';
+      case 'video_setting_hdr_compute_peak':
+        return 'Deteksi puncak dinamis';
+      case 'video_setting_hdr_compute_peak_hint':
+        return 'Mengukur puncak kecerahan asli tiap bingkai alih-alih mempercayai metadata sumber. Sorotan lebih baik, memakan sedikit GPU.';
+      case 'video_setting_hdr_auto':
+        return 'Otomatis';
+      case 'video_setting_hdr_on':
+        return 'Aktif';
+      case 'video_setting_hdr_off':
+        return 'Nonaktif';
+      case 'video_discovery_cancel_downloads_title':
+        return 'Batalkan unduhan?';
+      case 'video_discovery_cancel_downloads_body':
+        return ({required Object n}) =>
+            '${n} tugas unduhan untuk judul ini akan dihentikan. Bagian yang sudah terunduh tetap ada di disk; kamu bisa memulai unduhan lagi nanti.';
+      case 'video_discovery_cancel_downloads_failed':
+        return 'Tidak bisa membatalkan unduhan. Tugasnya mungkin sudah selesai, atau backend unduhan sedang tidak tersedia.';
+      case 'gal_hook_click_lookup':
+        return 'Ketuk kata untuk mencarinya';
+      case 'gal_hook_click_lookup_hint':
+        return 'Mati berarti klik pada teks tidak pernah memicu pencarian — berguna saat klik-tembus aktif dan kamu tidak ingin tak sengaja mengenai kata.';
+      case 'gal_hook_lookup_trigger':
+        return 'Pemicu pencarian';
+      case 'gal_hook_lookup_trigger_hint':
+        return 'Tombol tetikus mana yang mencari kata di bawah penunjuk. Terpisah dari sakelar di atas: kamu bisa mematikan ketuk-untuk-cari dan tetap mencari dengan tombol samping.';
+      case 'gal_hook_lookup_trigger_left':
+        return 'Left click';
+      case 'gal_hook_lookup_trigger_middle':
+        return 'Middle click';
+      case 'gal_hook_lookup_trigger_side':
+        return 'Side button';
+      case 'gal_hook_toolbar_auto_hide':
+        return 'Sembunyikan bilah otomatis';
+      case 'gal_hook_toolbar_auto_hide_hint':
+        return 'Sembunyikan bilah sampai penunjuk mencapai kotak teks, ala LunaHook. Tersembunyi artinya benar-benar hilang — piksel itu kembali ke game.';
+      case 'gal_hook_passthrough_blocks_mouse':
+        return 'Teks tetap menerima klik saat klik-tembus';
+      case 'gal_hook_passthrough_blocks_mouse_hint':
+        return 'Aktif: baris teks tetap menerima klik sehingga kamu bisa mengetuk kata. Nonaktif: seluruh lapisan tembus bagi tetikus — kamu bisa mengeklik apa pun di bawahnya, tapi mengetuk kata tidak lagi berfungsi.';
+      case 'floating_lyric_topmost':
+        return 'Tetap di atas';
+      case 'gal_hook_fold_progressive_lines':
+        return 'Gabungkan baris dialog yang terpotong';
+      case 'gal_hook_fold_progressive_lines_hint':
+        return 'Sebagian engine menggambar ulang seluruh baris setiap kali diklik, sehingga satu baris tertangkap beberapa kali. Lipat cuplikan itu menjadi satu baris.';
+      case 'gal_hook_ingame_lookup_engine_unsupported':
+        return 'Mesin gim ini belum mendukung pencarian kamus dalam gim';
+      case 'gal_hook_ingame_lookup_version_unsupported':
+        return 'Versi gim ini belum ada dalam daftar yang didukung';
+      case 'gal_hook_ingame_lookup_exe_hash_copy':
+        return 'Salin SHA-256 file eksekusi gim';
+      case 'gal_hook_ingame_lookup_exe_hash_unavailable':
+        return 'Tidak dapat membaca file eksekusi gim';
+      case 'gal_hook_ingame_lookup_exe_hash_copied':
+        return 'SHA-256 file eksekusi disalin';
+      case 'download_tracker_section':
+        return 'Langganan tracker';
+      case 'download_tracker_auto_add':
+        return 'Otomatis tambahkan tracker langganan ke unduhan baru';
+      case 'download_tracker_auto_add_hint':
+        return 'Daftar disimpan di cache selama 6 jam. Kegagalan langganan tidak menghentikan unduhan.';
+      case 'download_tracker_url':
+        return 'URL langganan';
+      case 'download_tracker_refresh':
+        return 'Ambil tracker';
+      case 'download_tracker_preview_empty':
+        return 'Ambil langganan untuk melihat tracker HTTP, HTTPS, dan UDP yang didukung.';
+      case 'download_tracker_preview_count':
+        return ({required Object count}) => '${count} tracker diambil';
+      case 'download_tracker_fetch_failed':
+        return ({required Object message}) =>
+            'Tidak dapat mengambil tracker: ${message}';
+      case 'anki_connect_port_auto_fix':
+        return 'Ganti ke port yang kosong';
+      case 'anki_connect_port_auto_fix_hint':
+        return 'Memilih port kosong lalu menuliskannya ke Hibiki dan ke konfigurasi add-on AnkiConnect. Mulai ulang Anki agar berlaku.';
+      case 'anki_connect_port_auto_fix_done':
+        return ({required Object port}) =>
+            'AnkiConnect kini memakai port ${port}. Mulai ulang Anki lalu coba lagi.';
+      case 'anki_connect_port_auto_fix_manual':
+        return ({required Object port}) =>
+            'Hibiki kini memakai port ${port}, tetapi konfigurasi add-on AnkiConnect tidak ditemukan. Setel webBindPort ke ${port} di Anki (Alat → Add-on → AnkiConnect → Konfigurasi), lalu mulai ulang Anki.';
+      case 'anki_connect_port_auto_fix_none':
+        return 'Tidak ditemukan port kosong di komputer ini.';
+      case 'onboarding_action_badge_required':
+        return 'Wajib';
+      case 'onboarding_action_badge_recommended':
+        return 'Disarankan';
+      case 'onboarding_action_badge_optional':
+        return 'Opsional';
+      case 'onboarding_pack_action_download_desc':
+        return 'Mengunduh seluruh paket di latar belakang, lalu mengimpornya. Bisa dibatalkan kapan saja; berikutnya dilanjutkan dari titik terakhir.';
+      case 'onboarding_pack_action_import_existing_desc':
+        return 'Paket sudah terunduh; tombol ini mengimpornya. Pilih «Gabungkan» pada dialog konfirmasi agar data yang sudah ada tidak tersentuh.';
+      case 'onboarding_pack_action_pick_desc':
+        return 'Sudah punya zip paketnya dari tempat lain? Impor dari disk dan lewati proses unduh sepenuhnya.';
+      case 'onboarding_pack_action_website':
+        return 'Buka halaman unduh di situs web';
+      case 'onboarding_pack_action_website_desc':
+        return 'Membuka situs resmi di peramban. Bagian paket di sana memuat tautan per potongan yang bisa diberikan ke pengelola unduhan; setelah itu kembali ke sini dan gunakan «Pilih berkas paket lokal» untuk mengimpor hasilnya.';
+      case 'onboarding_pack_action_dictionary_desc':
+        return 'Sedang belajar bahasa selain Jepang? Lewati paketnya dan impor kamus untuk bahasamu sendiri di sini.';
+      case 'onboarding_pack_action_audio_desc':
+        return 'Dari mana audio pelafalan berasal. Paket sudah mencakup bahasa Jepang dan Inggris; untuk bahasa lain tambahkan sumber daring di sini.';
+      case 'onboarding_anki_action_test_desc':
+        return 'Memeriksa apakah Fushi bisa menghubungi Anki dan memuat dek serta jenis catatanmu. Belum ada yang dibuat.';
+      case 'onboarding_anki_action_refresh_desc':
+        return 'Memuat ulang dek dan jenis catatan dari Anki. Gunakan setelah membuat dek baru di dalam Anki.';
+      case 'onboarding_anki_action_get_ankidroid_desc':
+        return 'Membuka halaman toko AnkiDroid. Fushi menulis kartunya ke sana, jadi harus dipasang lebih dulu.';
+      case 'onboarding_anki_action_get_anki_desc':
+        return 'Membuka halaman unduh Anki. Pasang Anki dan biarkan tetap berjalan selagi kamu membuat kartu.';
+      case 'onboarding_anki_action_install_addon_desc':
+        return 'Mengekstrak add-on AnkiConnect bawaan ke dalam Anki untukmu; itulah yang membuat Fushi bisa berbicara dengannya. Mulai ulang Anki setelahnya.';
+      case 'onboarding_step_anki_action_desc':
+        return 'Templat kartu, pemetaan bidang, tangkapan layar, dan audio: yaitu rincian seperti apa kartu yang dihasilkan. Dek dan jenis catatan di atas sudah cukup untuk mulai, jadi buka ini hanya jika kamu ingin mengubah cara kartu disusun.';
+      case 'onboarding_step_backup_action_desc':
+        return 'Pilih backend cadangan dan masuk, supaya pustakamu selamat saat perangkat hilang atau diganti.';
+      case 'onboarding_step_interconnect_action_desc':
+        return 'Memasangkan perangkat ini dengan perangkatmu yang lain untuk berbagi satu pustaka dan menyelaraskan progres.';
+      case 'onboarding_step_extension_action_desc':
+        return 'Menunjukkan cara memasang ekstensi peramban dan menghubungkannya ke Fushi, supaya kamu juga bisa mencari kata di halaman web.';
+      case 'onboarding_step_fonts_action_desc':
+        return 'Tambahkan berkas fonmu sendiri dan pilih fon yang dipakai tiap bahasa.';
+      case 'onboarding_pack_sources_hint':
+        return 'Diunduh dalam potongan paralel dari GitHub, situs resmi, dan satu cermin cadangan sekaligus, tiap potongan diperiksa checksum-nya. Fushi mengukur kecepatan sumber sambil berjalan dan memberi lebih banyak potongan ke yang tercepat saat itu, jadi tidak ada yang perlu dipilih di sini.';
+      case 'video_setting_hdr_output':
+        return 'Keluaran HDR / 10 bit';
+      case 'video_setting_hdr_output_hint':
+        return 'Hanya Windows. «Otomatis» meneruskan sumber HDR langsung ke layar HDR lewat jendela video native; «Selalu» memakai jendela itu untuk semua video (keluaran 10 bit); «Mati» tetap memakai perender standar.';
+      case 'video_setting_hdr_output_auto':
+        return 'Otomatis';
+      case 'video_setting_hdr_output_always':
+        return 'Selalu';
+      case 'video_setting_hdr_output_off':
+        return 'Mati';
       case 'video_ajatt_settings_hint':
         return 'Arsip subtitle bahasa Jepang gratis (cermin kitsunekko). Tidak perlu akun; berkas subtitle diunduh dari GitHub.';
       case 'video_ajatt_enabled_hint':
@@ -203010,12 +208480,6 @@ extension on _StringsIt {
         return 'Avanzato: usa AnkiConnect su questo dispositivo';
       case 'onboarding_anki_mobile_ankiconnect_hint':
         return 'Questo dispositivo può anche creare carte in Anki su un computer nella stessa rete: abilita AnkiConnect nelle impostazioni di creazione carte e inserisci l\'indirizzo del computer.';
-      case 'onboarding_anki_fsrs_title':
-        return 'Passa ad FSRS in Anki';
-      case 'onboarding_anki_fsrs_body':
-        return 'Anki include FSRS, uno scheduler molto migliore rispetto al vecchio SM-2 predefinito di 30 anni: migliore ritenzione con meno revisioni. In Anki, apri le opzioni del mazzo e attiva FSRS (un interruttore copre l\'intera collezione). Questo deve essere fatto dentro Anki stesso.';
-      case 'onboarding_step_pack_browser_action':
-        return 'Scarica nel browser';
       case 'onboarding_anki_setup_android_hint':
         return 'Installa AnkiDroid e aprilo una volta per completare la configurazione iniziale. Tornando in Fushi, tocca Consenti nella finestra di permesso che appare con la prima carta — nessuna impostazione di AnkiDroid da cambiare.';
       case 'onboarding_anki_install_addon_action':
@@ -203288,6 +208752,221 @@ extension on _StringsIt {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             'Altri ${n} elementi selezionati sono nascosti dal filtro corrente e non verranno elaborati.';
+      case 'download_direct_queue_section':
+        return 'Direct downloads';
+      case 'download_task_kind_all':
+        return 'All types';
+      case 'download_task_kind_filter':
+        return 'Filter by type';
+      case 'manga_online_series_empty':
+        return 'Nessun volume in questa serie.';
+      case 'sync_peer_book_delete_confirm':
+        return ({required Object name}) =>
+            'Eliminare "${name}" dal dispositivo peer? I suoi file e i progressi di lettura lì verranno rimossi definitivamente e questo dispositivo non ne ha alcuna copia. L\'operazione non può essere annullata.';
+      case 'sync_peer_video_delete_confirm':
+        return ({required Object name}) =>
+            'Rimuovere "${name}" dalla libreria del dispositivo peer? Il file video importato dal peer stesso viene conservato. L\'operazione non può essere annullata.';
+      case 'storage_entry_delete_files_confirm_body':
+        return 'Verrà eliminato subito dal disco. Nulla nella tua libreria vi fa riferimento: sono dati in cache, esportati o riscaricabili.';
+      case 'manga_series_refresh':
+        return 'Aggiorna capitoli';
+      case 'manga_series_refresh_failed':
+        return 'Impossibile aggiornare dalla fonte';
+      case 'manga_series_source_disabled':
+        return 'Questa fonte non è installata o è disattivata';
+      case 'manga_series_platform_unsupported':
+        return 'Questa fonte non è disponibile su questa piattaforma';
+      case 'manga_series_offline_hint':
+        return 'Vengono mostrati i capitoli salvati su questo dispositivo';
+      case 'manga_series_no_chapters':
+        return 'Ancora nessun capitolo';
+      case 'manga_series_all_read':
+        return 'Tutti i capitoli sono stati letti';
+      case 'manga_series_sort_newest':
+        return 'Prima i più recenti';
+      case 'manga_series_sort_oldest':
+        return 'Prima i più vecchi';
+      case 'manga_series_unread_only':
+        return 'Solo non letti';
+      case 'manga_series_mark_read':
+        return 'Segna come letto';
+      case 'manga_series_mark_unread':
+        return 'Segna come non letto';
+      case 'manga_series_mark_previous_read':
+        return 'Segna questo e i precedenti come letti';
+      case 'manga_series_local_volume':
+        return 'Volume locale';
+      case 'manga_series_volume_info':
+        return 'Volume';
+      case 'manga_series_page_count':
+        return 'Pagine';
+      case 'manga_series_chapters_action':
+        return 'Capitoli';
+      case 'manga_series_next_chapter':
+        return 'Capitolo successivo';
+      case 'manga_series_previous_chapter':
+        return 'Capitolo precedente';
+      case 'manga_series_last_chapter_reached':
+        return 'Questo è il capitolo più recente';
+      case 'manga_series_first_chapter_reached':
+        return 'Questo è il primo capitolo';
+      case 'manga_series_open_series':
+        return 'Pagina dell\'opera';
+      case 'manga_series_read_progress':
+        return ({required Object page, required Object total}) =>
+            'Letto fino a pagina ${page} di ${total}';
+      case 'manga_series_read_progress_partial':
+        return ({required Object page}) => 'Letto fino a pagina ${page}';
+      case 'mihon_store_extension_count':
+        return ({required Object count}) => '${count} estensioni';
+      case 'mihon_extension_sources_more':
+        return ({required Object count}) => 'Mostra tutte le ${count} fonti';
+      case 'mihon_extension_sources_less':
+        return 'Mostra meno fonti';
+      case 'options_website':
+        return 'Visita il sito ufficiale';
+      case 'video_setting_mpv_group_hdr':
+        return 'HDR';
+      case 'video_setting_hdr_tone_mapping':
+        return 'Mappatura tonale HDR';
+      case 'video_setting_hdr_tone_mapping_hint':
+        return 'Curva usata quando una sorgente HDR va compressa su uno schermo SDR. «Automatico» lascia scegliere a mpv per ogni sorgente.';
+      case 'video_setting_hdr_compute_peak':
+        return 'Rilevamento dinamico dei picchi';
+      case 'video_setting_hdr_compute_peak_hint':
+        return 'Misura il picco di luminosità reale di ogni fotogramma invece di fidarsi dei metadati della sorgente. Alte luci migliori, con un po’ di costo GPU.';
+      case 'video_setting_hdr_auto':
+        return 'Automatico';
+      case 'video_setting_hdr_on':
+        return 'Attivo';
+      case 'video_setting_hdr_off':
+        return 'Disattivo';
+      case 'video_discovery_cancel_downloads_title':
+        return 'Annullare i download?';
+      case 'video_discovery_cancel_downloads_body':
+        return ({required Object n}) =>
+            'Verranno interrotte ${n} attività di download per questo titolo. Le parti già scaricate restano sul disco; potrai riavviare il download più tardi.';
+      case 'video_discovery_cancel_downloads_failed':
+        return 'Impossibile annullare il download. L’attività potrebbe essere già terminata, oppure il backend di download non è disponibile.';
+      case 'gal_hook_click_lookup':
+        return 'Tocca una parola per cercarla';
+      case 'gal_hook_click_lookup_hint':
+        return 'Disattivato: i clic sul testo non avviano mai una ricerca — utile con il clic passante attivo, quando preferisci non colpire una parola per sbaglio.';
+      case 'gal_hook_lookup_trigger':
+        return 'Attivatore della ricerca';
+      case 'gal_hook_lookup_trigger_hint':
+        return 'Quale tasto del mouse cerca la parola sotto il puntatore. Indipendente dall’interruttore qui sopra: puoi disattivare il tocco-per-cercare e cercare comunque con un tasto laterale.';
+      case 'gal_hook_lookup_trigger_left':
+        return 'Left click';
+      case 'gal_hook_lookup_trigger_middle':
+        return 'Middle click';
+      case 'gal_hook_lookup_trigger_side':
+        return 'Side button';
+      case 'gal_hook_toolbar_auto_hide':
+        return 'Nascondi la barra automaticamente';
+      case 'gal_hook_toolbar_auto_hide_hint':
+        return 'Nasconde la barra finché il puntatore non raggiunge il riquadro del testo, in stile LunaHook. Nascosto significa davvero nascosto: quei pixel tornano al gioco.';
+      case 'gal_hook_passthrough_blocks_mouse':
+        return 'Il testo riceve ancora i clic durante il clic passante';
+      case 'gal_hook_passthrough_blocks_mouse_hint':
+        return 'Attivo: le righe di testo ricevono ancora i clic, così puoi toccare una parola. Disattivo: l’intera sovrapposizione è trasparente al mouse — clicchi ciò che sta sotto, ma toccare le parole non funziona più.';
+      case 'floating_lyric_topmost':
+        return 'Mantieni in primo piano';
+      case 'gal_hook_fold_progressive_lines':
+        return 'Unisci le battute spezzate';
+      case 'gal_hook_fold_progressive_lines_hint':
+        return 'Alcuni motori ridisegnano l’intera riga a ogni clic, così una stessa riga viene catturata più volte. Ripiega quelle istantanee in una sola riga.';
+      case 'gal_hook_ingame_lookup_engine_unsupported':
+        return 'Questo motore di gioco non supporta ancora la ricerca nel gioco';
+      case 'gal_hook_ingame_lookup_version_unsupported':
+        return 'Questa versione del gioco non è ancora nell\'elenco supportato';
+      case 'gal_hook_ingame_lookup_exe_hash_copy':
+        return 'Copia lo SHA-256 dell\'eseguibile del gioco';
+      case 'gal_hook_ingame_lookup_exe_hash_unavailable':
+        return 'Impossibile leggere l\'eseguibile del gioco';
+      case 'gal_hook_ingame_lookup_exe_hash_copied':
+        return 'SHA-256 dell\'eseguibile copiato';
+      case 'download_tracker_section':
+        return 'Abbonamento ai tracker';
+      case 'download_tracker_auto_add':
+        return 'Aggiungi automaticamente i tracker dell’abbonamento ai nuovi download';
+      case 'download_tracker_auto_add_hint':
+        return 'L’elenco resta in cache per 6 ore. Se l’abbonamento fallisce, il download non viene bloccato.';
+      case 'download_tracker_url':
+        return 'URL dell’abbonamento';
+      case 'download_tracker_refresh':
+        return 'Scarica i tracker';
+      case 'download_tracker_preview_empty':
+        return 'Scarica l’abbonamento per vedere in anteprima i tracker HTTP, HTTPS e UDP supportati.';
+      case 'download_tracker_preview_count':
+        return ({required Object count}) => '${count} tracker scaricati';
+      case 'download_tracker_fetch_failed':
+        return ({required Object message}) =>
+            'Impossibile scaricare i tracker: ${message}';
+      case 'anki_connect_port_auto_fix':
+        return 'Passa a una porta libera';
+      case 'anki_connect_port_auto_fix_hint':
+        return 'Sceglie una porta libera e la scrive sia in Hibiki sia nella configurazione del componente aggiuntivo AnkiConnect. Riavvia Anki per applicarla.';
+      case 'anki_connect_port_auto_fix_done':
+        return ({required Object port}) =>
+            'AnkiConnect ora usa la porta ${port}. Riavvia Anki e riprova.';
+      case 'anki_connect_port_auto_fix_manual':
+        return ({required Object port}) =>
+            'Hibiki ora usa la porta ${port}, ma la configurazione del componente aggiuntivo AnkiConnect non è stata trovata. Imposta webBindPort su ${port} in Anki (Strumenti → Componenti aggiuntivi → AnkiConnect → Configurazione) e riavvia Anki.';
+      case 'anki_connect_port_auto_fix_none':
+        return 'Nessuna porta libera trovata su questo computer.';
+      case 'onboarding_action_badge_required':
+        return 'Obbligatorio';
+      case 'onboarding_action_badge_recommended':
+        return 'Consigliato';
+      case 'onboarding_action_badge_optional':
+        return 'Facoltativo';
+      case 'onboarding_pack_action_download_desc':
+        return 'Scarica l’intero pacchetto in background e poi lo importa. Puoi annullare in qualsiasi momento; la volta dopo riprende dal punto in cui si era fermato.';
+      case 'onboarding_pack_action_import_existing_desc':
+        return 'Il pacchetto è già scaricato; qui viene importato. Scegli «Unisci» nella finestra di conferma e i dati esistenti resteranno intatti.';
+      case 'onboarding_pack_action_pick_desc':
+        return 'Hai già preso lo zip del pacchetto da un’altra parte? Importalo dal disco e salta del tutto il download.';
+      case 'onboarding_pack_action_website':
+        return 'Apri la pagina di download del sito';
+      case 'onboarding_pack_action_website_desc':
+        return 'Apre il sito ufficiale nel browser. La sezione dedicata al pacchetto elenca link a spezzoni che puoi passare a un download manager; poi torna qui e usa «Scegli un file pacchetto locale» per importare quello che hai ottenuto.';
+      case 'onboarding_pack_action_dictionary_desc':
+        return 'Stai studiando una lingua diversa dal giapponese? Salta il pacchetto e importa qui i dizionari della tua lingua.';
+      case 'onboarding_pack_action_audio_desc':
+        return 'Da dove arriva l’audio della pronuncia. Il pacchetto copre già giapponese e inglese; per le altre lingue aggiungi qui le sorgenti online.';
+      case 'onboarding_anki_action_test_desc':
+        return 'Verifica che Fushi riesca a raggiungere Anki e carica i tuoi mazzi e tipi di nota. Per ora non viene creato nulla.';
+      case 'onboarding_anki_action_refresh_desc':
+        return 'Ricarica mazzi e tipi di nota da Anki. Usalo dopo aver creato un nuovo mazzo dentro Anki.';
+      case 'onboarding_anki_action_get_ankidroid_desc':
+        return 'Apre la pagina dello store di AnkiDroid. Fushi ci scrive dentro le sue carte, quindi va installato prima.';
+      case 'onboarding_anki_action_get_anki_desc':
+        return 'Apre la pagina di download di Anki. Installa Anki e tienilo aperto mentre crei le carte.';
+      case 'onboarding_anki_action_install_addon_desc':
+        return 'Estrae per te il componente aggiuntivo AnkiConnect incluso dentro Anki: è ciò che permette a Fushi di parlarci. Al termine riavvia Anki.';
+      case 'onboarding_step_anki_action_desc':
+        return 'Modello di carta, mappatura dei campi, screenshot e audio: i dettagli di come appare una carta creata. Il mazzo e il tipo di nota qui sopra bastano per iniziare, quindi apri questa sezione solo se vuoi cambiare come vengono costruite le carte.';
+      case 'onboarding_step_backup_action_desc':
+        return 'Scegli un servizio di backup e accedi, così la tua libreria sopravvive alla perdita o alla sostituzione del dispositivo.';
+      case 'onboarding_step_interconnect_action_desc':
+        return 'Associa questo dispositivo agli altri tuoi dispositivi per condividere un’unica libreria e mantenere sincronizzati i progressi.';
+      case 'onboarding_step_extension_action_desc':
+        return 'Mostra come installare l’estensione del browser e collegarla a Fushi, così puoi cercare le parole anche nelle pagine web.';
+      case 'onboarding_step_fonts_action_desc':
+        return 'Aggiungi i tuoi file di font e scegli quale usare per ciascuna lingua.';
+      case 'onboarding_pack_sources_hint':
+        return 'Scaricato in spezzoni paralleli contemporaneamente da GitHub, dal sito ufficiale e da un mirror di riserva, con checksum su ogni spezzone. Fushi misura le sorgenti strada facendo e assegna più spezzoni a quella più veloce in quel momento, quindi qui non c’è nulla da scegliere.';
+      case 'video_setting_hdr_output':
+        return 'Uscita HDR / 10 bit';
+      case 'video_setting_hdr_output_hint':
+        return 'Solo Windows. «Automatico» passa le sorgenti HDR direttamente a uno schermo HDR tramite una finestra video nativa; «Sempre» usa quella finestra per ogni video (uscita a 10 bit); «Disattivato» mantiene il renderer standard.';
+      case 'video_setting_hdr_output_auto':
+        return 'Automatico';
+      case 'video_setting_hdr_output_always':
+        return 'Sempre';
+      case 'video_setting_hdr_output_off':
+        return 'Disattivato';
       case 'video_ajatt_settings_hint':
         return 'Archivio gratuito di sottotitoli giapponesi (mirror kitsunekko). Nessun account richiesto; i file vengono scaricati da GitHub.';
       case 'video_ajatt_enabled_hint':
@@ -210883,12 +216562,6 @@ extension on _StringsJa {
         return '上級: このデバイスでAnkiConnectを使用';
       case 'onboarding_anki_mobile_ankiconnect_hint':
         return 'このデバイスから同じネットワーク上のパソコンで動作しているAnkiにカードを作成することもできます。カード作成設定でAnkiConnectを有効にし、パソコンのアドレスを入力してください。';
-      case 'onboarding_anki_fsrs_title':
-        return 'AnkiをFSRSに切り替え';
-      case 'onboarding_anki_fsrs_body':
-        return 'AnkiにはFSRSが搭載されており、30年前のSM-2デフォルトよりもはるかに優れたスケジューラーです。少ないレビューでより良い記憶定着が得られます。Ankiでデッキオプションを開き、FSRSをオンにしてください（1つのスイッチでコレクション全体に適用されます）。これはAnki内で行う必要があります。';
-      case 'onboarding_step_pack_browser_action':
-        return 'ブラウザでダウンロード';
       case 'onboarding_anki_setup_android_hint':
         return 'AnkiDroidをインストールし、一度開いて初回セットアップを完了させてください。Fushiに戻り、最初のカード作成時に表示される権限ダイアログで「許可」をタップするだけです。AnkiDroidの設定変更は不要です。';
       case 'onboarding_anki_install_addon_action':
@@ -211157,6 +216830,220 @@ extension on _StringsJa {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             '選択済みの ${n} 件は現在のフィルターで非表示のため、今回は処理されません。';
+      case 'download_direct_queue_section':
+        return '直リンクダウンロード';
+      case 'download_task_kind_all':
+        return 'すべての種類';
+      case 'download_task_kind_filter':
+        return '種類で絞り込む';
+      case 'manga_online_series_empty':
+        return 'このシリーズには巻がありません。';
+      case 'sync_peer_book_delete_confirm':
+        return ({required Object name}) =>
+            '対向デバイスから「${name}」を削除しますか？そちらのファイルと読書進捗は完全に削除され、この端末には控えがありません。この操作は取り消せません。';
+      case 'sync_peer_video_delete_confirm':
+        return ({required Object name}) =>
+            '対向デバイスのライブラリから「${name}」を削除しますか？対向デバイスが自分で取り込んだ動画ファイルは残ります。この操作は取り消せません。';
+      case 'storage_entry_delete_files_confirm_body':
+        return 'ディスクからすぐに削除します。ライブラリのどの項目もこれを参照していません（キャッシュ・書き出し済みデータ・再取得できるデータです）。';
+      case 'manga_series_refresh':
+        return '章を更新';
+      case 'manga_series_refresh_failed':
+        return 'ソースから更新できませんでした';
+      case 'manga_series_source_disabled':
+        return 'このソースは未インストールまたは無効です';
+      case 'manga_series_platform_unsupported':
+        return 'このソースはこのプラットフォームでは利用できません';
+      case 'manga_series_offline_hint':
+        return 'この端末に保存済みの章を表示しています';
+      case 'manga_series_no_chapters':
+        return '章がまだありません';
+      case 'manga_series_all_read':
+        return 'すべての章を読み終えました';
+      case 'manga_series_sort_newest':
+        return '新しい順';
+      case 'manga_series_sort_oldest':
+        return '古い順';
+      case 'manga_series_unread_only':
+        return '未読のみ';
+      case 'manga_series_mark_read':
+        return '既読にする';
+      case 'manga_series_mark_unread':
+        return '未読にする';
+      case 'manga_series_mark_previous_read':
+        return 'この章までを既読にする';
+      case 'manga_series_local_volume':
+        return 'ローカルの巻';
+      case 'manga_series_volume_info':
+        return '巻の情報';
+      case 'manga_series_page_count':
+        return 'ページ数';
+      case 'manga_series_chapters_action':
+        return '章';
+      case 'manga_series_next_chapter':
+        return '次の章';
+      case 'manga_series_previous_chapter':
+        return '前の章';
+      case 'manga_series_last_chapter_reached':
+        return '最新の章です';
+      case 'manga_series_first_chapter_reached':
+        return '最初の章です';
+      case 'manga_series_open_series':
+        return '作品ページ';
+      case 'manga_series_read_progress':
+        return ({required Object total, required Object page}) =>
+            '${total} ページ中 ${page} ページまで';
+      case 'manga_series_read_progress_partial':
+        return ({required Object page}) => '${page} ページまで';
+      case 'mihon_store_extension_count':
+        return ({required Object count}) => '拡張機能 ${count} 件';
+      case 'mihon_extension_sources_more':
+        return ({required Object count}) => '${count} 件のソースをすべて表示';
+      case 'mihon_extension_sources_less':
+        return 'ソースの表示を減らす';
+      case 'options_website':
+        return '公式サイトを開く';
+      case 'video_setting_mpv_group_hdr':
+        return 'HDR';
+      case 'video_setting_hdr_tone_mapping':
+        return 'HDR トーンマッピング';
+      case 'video_setting_hdr_tone_mapping_hint':
+        return 'HDR ソースを SDR ディスプレイに収めるときに使うカーブ。「自動」は mpv がソースごとに選びます。';
+      case 'video_setting_hdr_compute_peak':
+        return '動的ピーク検出';
+      case 'video_setting_hdr_compute_peak_hint':
+        return 'ソースのメタデータを信じる代わりに、フレームごとの実際のピーク輝度を測ります。ハイライトが良くなる一方、GPU を少し使います。';
+      case 'video_setting_hdr_auto':
+        return '自動';
+      case 'video_setting_hdr_on':
+        return 'オン';
+      case 'video_setting_hdr_off':
+        return 'オフ';
+      case 'video_discovery_cancel_downloads_title':
+        return 'ダウンロードを中止しますか？';
+      case 'video_discovery_cancel_downloads_body':
+        return ({required Object n}) =>
+            'この作品のダウンロードタスク ${n} 件を停止します。ダウンロード済みの断片はディスクに残るので、後でやり直せます。';
+      case 'video_discovery_cancel_downloads_failed':
+        return 'ダウンロードを中止できませんでした。タスクが既に終了しているか、ダウンロードバックエンドが利用できません。';
+      case 'gal_hook_click_lookup':
+        return '単語をタップして辞書を引く';
+      case 'gal_hook_click_lookup_hint':
+        return 'オフにすると、字幕をクリックしても辞書を引きません。クリック透過と併用して、うっかり単語に当たるのを避けたいときに便利です。';
+      case 'gal_hook_lookup_trigger':
+        return '辞書を引くボタン';
+      case 'gal_hook_lookup_trigger_hint':
+        return 'ポインタの下の単語を引くマウスボタン。上のスイッチとは独立です：タップで引くのをオフにしたまま、サイドボタンで引けます。';
+      case 'gal_hook_lookup_trigger_left':
+        return 'Left click';
+      case 'gal_hook_lookup_trigger_middle':
+        return 'Middle click';
+      case 'gal_hook_lookup_trigger_side':
+        return 'Side button';
+      case 'gal_hook_toolbar_auto_hide':
+        return 'ツールバーを自動で隠す';
+      case 'gal_hook_toolbar_auto_hide_hint':
+        return 'ポインタが字幕枠に来るまでツールバーを隠します（LunaHook 方式）。隠すときは本当に消します——その分のピクセルはゲームに返ります。';
+      case 'gal_hook_passthrough_blocks_mouse':
+        return 'クリック透過中も字幕はクリックを受ける';
+      case 'gal_hook_passthrough_blocks_mouse_hint':
+        return 'オン：字幕の行はクリックを受け続けるので単語をタップできます。オフ：オーバーレイ全体がマウスに対して透明になり、下のものをクリックできますが、単語のタップはできなくなります。';
+      case 'floating_lyric_topmost':
+        return '常に手前に表示';
+      case 'gal_hook_fold_progressive_lines':
+        return '分割されたセリフ行をまとめる';
+      case 'gal_hook_fold_progressive_lines_hint':
+        return 'クリックのたびに行全体を描き直すエンジンがあり、同じ行が何度も取り込まれます。そのスナップショットを 1 行にまとめます。';
+      case 'gal_hook_ingame_lookup_engine_unsupported':
+        return 'このゲームエンジンはゲーム内辞書引きに未対応です';
+      case 'gal_hook_ingame_lookup_version_unsupported':
+        return 'このゲームのバージョンはまだ対応リストにありません';
+      case 'gal_hook_ingame_lookup_exe_hash_copy':
+        return 'ゲーム実行ファイルの SHA-256 をコピー';
+      case 'gal_hook_ingame_lookup_exe_hash_unavailable':
+        return 'ゲーム実行ファイルを読み取れません（権限不足の可能性）';
+      case 'gal_hook_ingame_lookup_exe_hash_copied':
+        return '実行ファイルの SHA-256 をコピーしました';
+      case 'download_tracker_section':
+        return 'トラッカー購読';
+      case 'download_tracker_auto_add':
+        return '新しいダウンロードに購読トラッカーを自動で追加する';
+      case 'download_tracker_auto_add_hint':
+        return 'リストは 6 時間キャッシュされます。購読の取得に失敗してもダウンロードは止まりません。';
+      case 'download_tracker_url':
+        return '購読 URL';
+      case 'download_tracker_refresh':
+        return 'トラッカーを取得';
+      case 'download_tracker_preview_empty':
+        return '購読を取得すると、対応している HTTP・HTTPS・UDP のトラッカーをプレビューできます。';
+      case 'download_tracker_preview_count':
+        return ({required Object count}) => '${count} 件のトラッカーを取得しました';
+      case 'download_tracker_fetch_failed':
+        return ({required Object message}) => 'トラッカーを取得できませんでした: ${message}';
+      case 'anki_connect_port_auto_fix':
+        return '空いているポートに変更';
+      case 'anki_connect_port_auto_fix_hint':
+        return '空いているポートを選び、Hibiki と Anki の AnkiConnect アドオン設定の両方に書き込みます。反映には Anki の再起動が必要です。';
+      case 'anki_connect_port_auto_fix_done':
+        return ({required Object port}) =>
+            'AnkiConnect のポートを ${port} に変更しました。Anki を再起動してからもう一度お試しください。';
+      case 'anki_connect_port_auto_fix_manual':
+        return ({required Object port}) =>
+            'Hibiki はポート ${port} を使うようになりましたが、AnkiConnect のアドオン設定が見つかりませんでした。Anki の「ツール → アドオン → AnkiConnect → 設定」で webBindPort も ${port} にしてから、Anki を再起動してください。';
+      case 'anki_connect_port_auto_fix_none':
+        return 'このマシンに空いているポートが見つかりませんでした。';
+      case 'onboarding_action_badge_required':
+        return '必須';
+      case 'onboarding_action_badge_recommended':
+        return '推奨';
+      case 'onboarding_action_badge_optional':
+        return '任意';
+      case 'onboarding_pack_action_download_desc':
+        return 'おすすめパック全体をバックグラウンドでダウンロードし、完了後そのままインポートに進みます。いつでも中止でき、次回は中断した位置から再開します。';
+      case 'onboarding_pack_action_import_existing_desc':
+        return 'パックはダウンロード済みです。ここからインポートします。確認ダイアログで「統合」を選べば、既存のデータはそのまま残ります。';
+      case 'onboarding_pack_action_pick_desc':
+        return 'すでに別の場所からパックの zip を入手済みですか？ディスクからインポートすれば、ダウンロードはまるごと省けます。';
+      case 'onboarding_pack_action_website':
+        return '公式サイトのダウンロードページを開く';
+      case 'onboarding_pack_action_website_desc':
+        return 'ブラウザで公式サイトを開きます。パックの項に、ダウンロードマネージャーへ渡せる分割リンクが載っています。入手後はここに戻り、「ローカルのパックファイルを選ぶ」からインポートしてください。';
+      case 'onboarding_pack_action_dictionary_desc':
+        return '日本語以外の言語を学んでいますか？パックは飛ばして、ここで自分の言語の辞書をインポートしてください。';
+      case 'onboarding_pack_action_audio_desc':
+        return '発音音声の取得元です。パックには日本語と英語が含まれています。その他の言語はここでオンラインソースを追加してください。';
+      case 'onboarding_anki_action_test_desc':
+        return 'Fushi が Anki に接続できるか確認し、デッキとノートタイプを読み込みます。この時点では何も作成されません。';
+      case 'onboarding_anki_action_refresh_desc':
+        return 'デッキとノートタイプを Anki から読み込み直します。Anki 側で新しいデッキを作った後に使ってください。';
+      case 'onboarding_anki_action_get_ankidroid_desc':
+        return 'AnkiDroid のストアページを開きます。Fushi はここにカードを書き込むので、先にインストールが必要です。';
+      case 'onboarding_anki_action_get_anki_desc':
+        return 'Anki のダウンロードページを開きます。Anki をインストールし、カード作成中は起動したままにしてください。';
+      case 'onboarding_anki_action_install_addon_desc':
+        return '同梱の AnkiConnect アドオンを Anki に展開します。Fushi はこれを通じて Anki と通信します。完了後に Anki を再起動してください。';
+      case 'onboarding_step_anki_action_desc':
+        return 'カードテンプレート、フィールド対応、スクリーンショットと音声——つまり「出来上がるカードの見た目」です。上でデッキとノートタイプを選べばカード作成は始められるので、カードの作られ方を変えたいときだけ開いてください。';
+      case 'onboarding_step_backup_action_desc':
+        return 'バックアップ先を選んでサインインしておけば、端末を紛失・買い替えてもライブラリは残ります。';
+      case 'onboarding_step_interconnect_action_desc':
+        return 'この端末を他の端末とペアリングして、同じライブラリを共有し進捗を同期します。';
+      case 'onboarding_step_extension_action_desc':
+        return 'ブラウザ拡張機能のインストール方法と Fushi への接続手順を案内します。ウェブページ上でも辞書を引けるようになります。';
+      case 'onboarding_step_fonts_action_desc':
+        return '自分のフォントファイルを追加し、言語ごとにどれを使うか指定します。';
+      case 'onboarding_pack_sources_hint':
+        return 'GitHub・公式サイト・予備ミラーから同時に分割ダウンロードし、各断片をチェックサムで検証します。ダウンロード中も各ソースの速度を実測し、その時点で最も速いソースに多くの断片を割り当てるため、ここで選ぶ必要はありません。';
+      case 'video_setting_hdr_output':
+        return 'HDR / 10 ビット出力';
+      case 'video_setting_hdr_output_hint':
+        return 'Windows のみ。「自動」はディスプレイとソースがどちらも HDR のとき、ネイティブ動画ウィンドウ経由でそのまま HDR ディスプレイへ渡します。「常に」はすべての動画でそのウィンドウを使います（10 ビット出力）。「オフ」は標準のレンダラーのままです。';
+      case 'video_setting_hdr_output_auto':
+        return '自動';
+      case 'video_setting_hdr_output_always':
+        return '常に';
+      case 'video_setting_hdr_output_off':
+        return 'オフ';
       case 'video_ajatt_settings_hint':
         return '無料の日本語字幕アーカイブ（kitsunekko ミラー）。アカウント不要。字幕ファイルは GitHub からダウンロードされます。';
       case 'video_ajatt_enabled_hint':
@@ -218754,12 +224641,6 @@ extension on _StringsKo {
         return '고급: 이 기기에서 AnkiConnect 사용';
       case 'onboarding_anki_mobile_ankiconnect_hint':
         return '이 기기에서도 같은 네트워크의 컴퓨터에서 실행 중인 Anki에 카드를 만들 수 있습니다: 카드 생성 설정에서 AnkiConnect를 활성화하고 컴퓨터 주소를 입력하세요.';
-      case 'onboarding_anki_fsrs_title':
-        return 'Anki를 FSRS로 전환';
-      case 'onboarding_anki_fsrs_body':
-        return 'Anki에는 30년 된 SM-2 기본값보다 훨씬 뛰어난 스케줄러인 FSRS가 내장되어 있습니다: 더 적은 복습으로 더 나은 기억률을 제공합니다. Anki에서 덱 옵션을 열고 FSRS를 켜세요 (하나의 스위치로 전체 컬렉션에 적용됩니다). 이 설정은 Anki 내에서 직접 해야 합니다.';
-      case 'onboarding_step_pack_browser_action':
-        return '브라우저에서 다운로드';
       case 'onboarding_anki_setup_android_hint':
         return 'AnkiDroid를 설치하고 한 번 열어 초기 설정을 완료하세요. Fushi로 돌아와 첫 카드를 만들 때 나타나는 권한 대화상자에서 허용을 탭하세요 - AnkiDroid 설정을 변경할 필요가 없습니다.';
       case 'onboarding_anki_install_addon_action':
@@ -219028,6 +224909,220 @@ extension on _StringsKo {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             '선택한 항목 중 ${n}개는 현재 필터로 숨겨져 있어 처리되지 않습니다.';
+      case 'download_direct_queue_section':
+        return '직접 링크 다운로드';
+      case 'download_task_kind_all':
+        return '모든 유형';
+      case 'download_task_kind_filter':
+        return '유형별 필터';
+      case 'manga_online_series_empty':
+        return '이 시리즈에는 권이 없습니다.';
+      case 'sync_peer_book_delete_confirm':
+        return ({required Object name}) =>
+            '상대 기기에서 "${name}"을(를) 삭제할까요? 해당 기기의 파일과 읽기 진행률이 영구히 삭제되며, 이 기기에는 사본이 없습니다. 이 작업은 되돌릴 수 없습니다.';
+      case 'sync_peer_video_delete_confirm':
+        return ({required Object name}) =>
+            '상대 기기의 라이브러리에서 "${name}"을(를) 제거할까요? 상대 기기가 직접 가져온 동영상 파일은 유지됩니다. 이 작업은 되돌릴 수 없습니다.';
+      case 'storage_entry_delete_files_confirm_body':
+        return '디스크에서 즉시 삭제합니다. 라이브러리의 어떤 항목도 이를 참조하지 않습니다 — 캐시, 내보낸 파일, 또는 다시 받을 수 있는 데이터입니다.';
+      case 'manga_series_refresh':
+        return '챕터 새로고침';
+      case 'manga_series_refresh_failed':
+        return '소스에서 새로고침하지 못했습니다';
+      case 'manga_series_source_disabled':
+        return '이 소스가 설치되지 않았거나 비활성화되었습니다';
+      case 'manga_series_platform_unsupported':
+        return '이 소스 런타임은 이 플랫폼에서 사용할 수 없습니다';
+      case 'manga_series_offline_hint':
+        return '이 기기에 저장된 챕터를 표시하고 있습니다';
+      case 'manga_series_no_chapters':
+        return '아직 챕터가 없습니다';
+      case 'manga_series_all_read':
+        return '모든 챕터를 읽었습니다';
+      case 'manga_series_sort_newest':
+        return '최신순';
+      case 'manga_series_sort_oldest':
+        return '오래된순';
+      case 'manga_series_unread_only':
+        return '읽지 않은 것만';
+      case 'manga_series_mark_read':
+        return '읽음으로 표시';
+      case 'manga_series_mark_unread':
+        return '읽지 않음으로 표시';
+      case 'manga_series_mark_previous_read':
+        return '이 챕터까지 읽음으로 표시';
+      case 'manga_series_local_volume':
+        return '로컬 권';
+      case 'manga_series_volume_info':
+        return '권 정보';
+      case 'manga_series_page_count':
+        return '페이지 수';
+      case 'manga_series_chapters_action':
+        return '챕터';
+      case 'manga_series_next_chapter':
+        return '다음 챕터';
+      case 'manga_series_previous_chapter':
+        return '이전 챕터';
+      case 'manga_series_last_chapter_reached':
+        return '최신 챕터입니다';
+      case 'manga_series_first_chapter_reached':
+        return '첫 번째 챕터입니다';
+      case 'manga_series_open_series':
+        return '작품 페이지';
+      case 'manga_series_read_progress':
+        return ({required Object total, required Object page}) =>
+            '${total}페이지 중 ${page}페이지까지 읽음';
+      case 'manga_series_read_progress_partial':
+        return ({required Object page}) => '${page}페이지까지 읽음';
+      case 'mihon_store_extension_count':
+        return ({required Object count}) => '확장 ${count}개';
+      case 'mihon_extension_sources_more':
+        return ({required Object count}) => '소스 ${count}개 모두 보기';
+      case 'mihon_extension_sources_less':
+        return '소스 적게 보기';
+      case 'options_website':
+        return '공식 웹사이트 방문';
+      case 'video_setting_mpv_group_hdr':
+        return 'HDR';
+      case 'video_setting_hdr_tone_mapping':
+        return 'HDR 톤 매핑';
+      case 'video_setting_hdr_tone_mapping_hint':
+        return 'HDR 소스를 SDR 디스플레이에 맞출 때 쓰는 곡선입니다. ‘자동’은 mpv가 소스마다 고르게 합니다.';
+      case 'video_setting_hdr_compute_peak':
+        return '동적 피크 검출';
+      case 'video_setting_hdr_compute_peak_hint':
+        return '소스 메타데이터를 믿는 대신 프레임마다 실제 최대 밝기를 측정합니다. 하이라이트가 좋아지지만 GPU를 조금 씁니다.';
+      case 'video_setting_hdr_auto':
+        return '자동';
+      case 'video_setting_hdr_on':
+        return '켜기';
+      case 'video_setting_hdr_off':
+        return '끄기';
+      case 'video_discovery_cancel_downloads_title':
+        return '다운로드를 취소할까요?';
+      case 'video_discovery_cancel_downloads_body':
+        return ({required Object n}) =>
+            '이 작품의 다운로드 작업 ${n}개를 중지합니다. 이미 받은 조각은 디스크에 남아 있어 나중에 다시 시작할 수 있습니다.';
+      case 'video_discovery_cancel_downloads_failed':
+        return '다운로드를 취소하지 못했습니다. 작업이 이미 끝났거나 다운로드 백엔드를 사용할 수 없습니다.';
+      case 'gal_hook_click_lookup':
+        return '단어를 눌러 사전 찾기';
+      case 'gal_hook_click_lookup_hint':
+        return '끄면 자막을 클릭해도 사전을 찾지 않습니다. 클릭 통과를 켠 채로 실수로 단어를 누르고 싶지 않을 때 유용합니다.';
+      case 'gal_hook_lookup_trigger':
+        return '사전 찾기 버튼';
+      case 'gal_hook_lookup_trigger_hint':
+        return '포인터 아래 단어를 찾을 마우스 버튼입니다. 위 스위치와는 별개예요: 눌러서 찾기를 꺼도 옆 버튼으로는 찾을 수 있습니다.';
+      case 'gal_hook_lookup_trigger_left':
+        return 'Left click';
+      case 'gal_hook_lookup_trigger_middle':
+        return 'Middle click';
+      case 'gal_hook_lookup_trigger_side':
+        return 'Side button';
+      case 'gal_hook_toolbar_auto_hide':
+        return '도구 모음 자동 숨김';
+      case 'gal_hook_toolbar_auto_hide_hint':
+        return '포인터가 자막 상자에 닿을 때까지 도구 모음을 숨깁니다(LunaHook 방식). 숨긴다는 건 정말로 사라진다는 뜻이라, 그 픽셀은 게임으로 돌아갑니다.';
+      case 'gal_hook_passthrough_blocks_mouse':
+        return '클릭 통과 중에도 자막은 클릭을 받음';
+      case 'gal_hook_passthrough_blocks_mouse_hint':
+        return '켬: 자막 줄이 계속 클릭을 받아 단어를 누를 수 있습니다. 끔: 오버레이 전체가 마우스에 투명해져 아래 것을 클릭할 수 있지만, 단어 누르기는 더 이상 되지 않습니다.';
+      case 'floating_lyric_topmost':
+        return '항상 위에 표시';
+      case 'gal_hook_fold_progressive_lines':
+        return '나뉜 대사 줄 합치기';
+      case 'gal_hook_fold_progressive_lines_hint':
+        return '클릭할 때마다 줄 전체를 다시 그리는 엔진이 있어 같은 줄이 여러 번 캡처됩니다. 그 스냅숏들을 한 줄로 접습니다.';
+      case 'gal_hook_ingame_lookup_engine_unsupported':
+        return '이 게임 엔진은 아직 인게임 사전 검색을 지원하지 않습니다';
+      case 'gal_hook_ingame_lookup_version_unsupported':
+        return '이 게임 버전은 아직 지원 목록에 없습니다';
+      case 'gal_hook_ingame_lookup_exe_hash_copy':
+        return '게임 실행 파일의 SHA-256 복사';
+      case 'gal_hook_ingame_lookup_exe_hash_unavailable':
+        return '게임 실행 파일을 읽을 수 없습니다 (권한 부족일 수 있음)';
+      case 'gal_hook_ingame_lookup_exe_hash_copied':
+        return '실행 파일의 SHA-256을 복사했습니다';
+      case 'download_tracker_section':
+        return '트래커 구독';
+      case 'download_tracker_auto_add':
+        return '새 다운로드에 구독 트래커 자동 추가';
+      case 'download_tracker_auto_add_hint':
+        return '목록은 6시간 동안 캐시됩니다. 구독을 가져오지 못해도 다운로드는 중단되지 않습니다.';
+      case 'download_tracker_url':
+        return '구독 URL';
+      case 'download_tracker_refresh':
+        return '트래커 가져오기';
+      case 'download_tracker_preview_empty':
+        return '구독을 가져오면 지원되는 HTTP, HTTPS, UDP 트래커를 미리 볼 수 있습니다.';
+      case 'download_tracker_preview_count':
+        return ({required Object count}) => '트래커 ${count}개를 가져왔습니다';
+      case 'download_tracker_fetch_failed':
+        return ({required Object message}) => '트래커를 가져오지 못했습니다: ${message}';
+      case 'anki_connect_port_auto_fix':
+        return '비어 있는 포트로 변경';
+      case 'anki_connect_port_auto_fix_hint':
+        return '비어 있는 포트를 골라 Hibiki와 AnkiConnect 애드온 설정 양쪽에 기록합니다. 적용하려면 Anki를 다시 시작하세요.';
+      case 'anki_connect_port_auto_fix_done':
+        return ({required Object port}) =>
+            'AnkiConnect 포트를 ${port}(으)로 변경했습니다. Anki를 다시 시작한 뒤 다시 시도하세요.';
+      case 'anki_connect_port_auto_fix_manual':
+        return ({required Object port}) =>
+            'Hibiki는 이제 포트 ${port}를 사용하지만 AnkiConnect 애드온 설정을 찾지 못했습니다. Anki의 [도구 → 애드온 → AnkiConnect → 설정]에서 webBindPort도 ${port}로 바꾼 뒤 Anki를 다시 시작하세요.';
+      case 'anki_connect_port_auto_fix_none':
+        return '이 컴퓨터에서 비어 있는 포트를 찾지 못했습니다.';
+      case 'onboarding_action_badge_required':
+        return '필수';
+      case 'onboarding_action_badge_recommended':
+        return '권장';
+      case 'onboarding_action_badge_optional':
+        return '선택';
+      case 'onboarding_pack_action_download_desc':
+        return '추천 팩 전체를 백그라운드로 내려받은 뒤 이어서 가져오기를 진행합니다. 언제든 취소할 수 있고, 다음에 중단된 지점부터 이어받습니다.';
+      case 'onboarding_pack_action_import_existing_desc':
+        return '팩이 이미 내려받아져 있습니다. 여기서 바로 가져옵니다. 확인 창에서 «병합»을 고르면 기존 데이터는 그대로 유지됩니다.';
+      case 'onboarding_pack_action_pick_desc':
+        return '다른 곳에서 이미 팩 zip을 받으셨나요? 디스크에서 가져오면 내려받기를 통째로 건너뛸 수 있습니다.';
+      case 'onboarding_pack_action_website':
+        return '공식 사이트 다운로드 페이지 열기';
+      case 'onboarding_pack_action_website_desc':
+        return '브라우저에서 공식 사이트를 엽니다. 팩 항목에 다운로드 관리자에 넣을 수 있는 분할 링크가 있습니다. 받은 뒤 여기로 돌아와 «로컬 팩 파일 선택»으로 가져오세요.';
+      case 'onboarding_pack_action_dictionary_desc':
+        return '일본어 말고 다른 언어를 배우시나요? 팩은 건너뛰고 여기서 해당 언어의 사전을 가져오세요.';
+      case 'onboarding_pack_action_audio_desc':
+        return '발음 오디오의 출처입니다. 팩에는 일본어와 영어가 이미 들어 있습니다. 다른 언어는 여기서 온라인 소스를 추가하세요.';
+      case 'onboarding_anki_action_test_desc':
+        return 'Fushi가 Anki에 연결되는지 확인하고 덱과 노트 유형을 불러옵니다. 이 단계에서는 아무것도 만들지 않습니다.';
+      case 'onboarding_anki_action_refresh_desc':
+        return 'Anki에서 덱과 노트 유형을 다시 불러옵니다. Anki에서 새 덱을 만든 뒤에 사용하세요.';
+      case 'onboarding_anki_action_get_ankidroid_desc':
+        return 'AnkiDroid 스토어 페이지를 엽니다. Fushi가 여기에 카드를 쓰므로 먼저 설치해야 합니다.';
+      case 'onboarding_anki_action_get_anki_desc':
+        return 'Anki 다운로드 페이지를 엽니다. Anki를 설치하고 카드를 만드는 동안 켜 두세요.';
+      case 'onboarding_anki_action_install_addon_desc':
+        return '내장된 AnkiConnect 애드온을 Anki에 풀어 넣습니다. Fushi는 이것을 통해 Anki와 통신합니다. 설치 후 Anki를 다시 시작하세요.';
+      case 'onboarding_step_anki_action_desc':
+        return '카드 템플릿, 필드 매핑, 스크린샷과 오디오 — 즉 «만들어진 카드가 어떻게 생겼는지»입니다. 위에서 덱과 노트 유형만 고르면 카드 만들기를 시작할 수 있으니, 카드가 만들어지는 방식을 바꾸고 싶을 때만 들어오세요.';
+      case 'onboarding_step_backup_action_desc':
+        return '백업 백엔드를 고르고 로그인해 두면 기기를 잃어버리거나 바꿔도 라이브러리가 남습니다.';
+      case 'onboarding_step_interconnect_action_desc':
+        return '이 기기를 다른 기기와 페어링해 같은 라이브러리를 공유하고 진도를 동기화합니다.';
+      case 'onboarding_step_extension_action_desc':
+        return '브라우저 확장을 설치하고 Fushi에 연결하는 방법을 안내합니다. 웹페이지에서도 단어를 찾을 수 있게 됩니다.';
+      case 'onboarding_step_fonts_action_desc':
+        return '자신의 글꼴 파일을 추가하고 언어마다 어떤 글꼴을 쓸지 지정합니다.';
+      case 'onboarding_pack_sources_hint':
+        return 'GitHub, 공식 사이트, 예비 미러에서 동시에 조각을 나눠 내려받고 조각마다 체크섬을 확인합니다. 내려받는 동안 각 소스의 속도를 실측해 그 순간 가장 빠른 쪽에 더 많은 조각을 맡기므로, 여기서 고를 것은 없습니다.';
+      case 'video_setting_hdr_output':
+        return 'HDR / 10비트 출력';
+      case 'video_setting_hdr_output_hint':
+        return 'Windows 전용. «자동»은 디스플레이와 원본이 모두 HDR일 때 네이티브 동영상 창을 통해 HDR 디스플레이로 그대로 전달합니다. «항상»은 모든 동영상에 그 창을 사용합니다(10비트 출력). «끄기»는 표준 렌더러를 유지합니다.';
+      case 'video_setting_hdr_output_auto':
+        return '자동';
+      case 'video_setting_hdr_output_always':
+        return '항상';
+      case 'video_setting_hdr_output_off':
+        return '끄기';
       case 'video_ajatt_settings_hint':
         return '무료 일본어 자막 아카이브(kitsunekko 미러). 계정 불필요. 자막 파일은 GitHub에서 다운로드됩니다.';
       case 'video_ajatt_enabled_hint':
@@ -226680,12 +232775,6 @@ extension on _StringsNl {
         return 'Geavanceerd: AnkiConnect op dit apparaat gebruiken';
       case 'onboarding_anki_mobile_ankiconnect_hint':
         return 'Dit apparaat kan ook kaarten maken in Anki op een computer in hetzelfde netwerk: schakel AnkiConnect in bij kaartaanmaak-instellingen en voer het computeradres in.';
-      case 'onboarding_anki_fsrs_title':
-        return 'Anki overschakelen naar FSRS';
-      case 'onboarding_anki_fsrs_body':
-        return 'Anki wordt geleverd met FSRS, een veel beter planningssysteem dan de 30 jaar oude SM-2 standaard: betere retentie met minder herhalingen. Open in Anki de dekopties en schakel FSRS in (één schakelaar voor de gehele collectie). Dit moet in Anki zelf worden gedaan.';
-      case 'onboarding_step_pack_browser_action':
-        return 'Downloaden in browser';
       case 'onboarding_anki_setup_android_hint':
         return 'Installeer AnkiDroid en open het eenmaal om de eerste installatie te voltooien. Terug in Fushi, tik op Toestaan bij het toestemmingsvenster dat verschijnt bij je eerste kaart — geen AnkiDroid-instellingen te wijzigen.';
       case 'onboarding_anki_install_addon_action':
@@ -226958,6 +233047,221 @@ extension on _StringsNl {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             'Nog ${n} geselecteerde items zijn verborgen door het huidige filter en worden niet verwerkt.';
+      case 'download_direct_queue_section':
+        return 'Direct downloads';
+      case 'download_task_kind_all':
+        return 'All types';
+      case 'download_task_kind_filter':
+        return 'Filter by type';
+      case 'manga_online_series_empty':
+        return 'Deze serie bevat geen delen.';
+      case 'sync_peer_book_delete_confirm':
+        return ({required Object name}) =>
+            '"${name}" van het gekoppelde apparaat verwijderen? De bestanden en leesvoortgang daar worden definitief verwijderd en dit apparaat heeft geen kopie. Dit kan niet ongedaan worden gemaakt.';
+      case 'sync_peer_video_delete_confirm':
+        return ({required Object name}) =>
+            '"${name}" uit de bibliotheek van het gekoppelde apparaat verwijderen? Het videobestand dat dat apparaat zelf heeft geïmporteerd blijft bewaard. Dit kan niet ongedaan worden gemaakt.';
+      case 'storage_entry_delete_files_confirm_body':
+        return 'Wordt meteen van de schijf verwijderd. Niets in je bibliotheek verwijst ernaar: het zijn cache-, geëxporteerde of opnieuw te downloaden gegevens.';
+      case 'manga_series_refresh':
+        return 'Hoofdstukken vernieuwen';
+      case 'manga_series_refresh_failed':
+        return 'Kon niet vernieuwen vanaf de bron';
+      case 'manga_series_source_disabled':
+        return 'Deze bron is niet geïnstalleerd of is uitgeschakeld';
+      case 'manga_series_platform_unsupported':
+        return 'Deze bron is niet beschikbaar op dit platform';
+      case 'manga_series_offline_hint':
+        return 'De op dit apparaat opgeslagen hoofdstukken worden getoond';
+      case 'manga_series_no_chapters':
+        return 'Nog geen hoofdstukken';
+      case 'manga_series_all_read':
+        return 'Alle hoofdstukken zijn gelezen';
+      case 'manga_series_sort_newest':
+        return 'Nieuwste eerst';
+      case 'manga_series_sort_oldest':
+        return 'Oudste eerst';
+      case 'manga_series_unread_only':
+        return 'Alleen ongelezen';
+      case 'manga_series_mark_read':
+        return 'Markeren als gelezen';
+      case 'manga_series_mark_unread':
+        return 'Markeren als ongelezen';
+      case 'manga_series_mark_previous_read':
+        return 'Deze en eerdere als gelezen markeren';
+      case 'manga_series_local_volume':
+        return 'Lokaal deel';
+      case 'manga_series_volume_info':
+        return 'Deel';
+      case 'manga_series_page_count':
+        return 'Pagina\'s';
+      case 'manga_series_chapters_action':
+        return 'Hoofdstukken';
+      case 'manga_series_next_chapter':
+        return 'Volgend hoofdstuk';
+      case 'manga_series_previous_chapter':
+        return 'Vorig hoofdstuk';
+      case 'manga_series_last_chapter_reached':
+        return 'Dit is het nieuwste hoofdstuk';
+      case 'manga_series_first_chapter_reached':
+        return 'Dit is het eerste hoofdstuk';
+      case 'manga_series_open_series':
+        return 'Werkpagina';
+      case 'manga_series_read_progress':
+        return ({required Object page, required Object total}) =>
+            'Gelezen tot pagina ${page} van ${total}';
+      case 'manga_series_read_progress_partial':
+        return ({required Object page}) => 'Gelezen tot pagina ${page}';
+      case 'mihon_store_extension_count':
+        return ({required Object count}) => '${count} extensies';
+      case 'mihon_extension_sources_more':
+        return ({required Object count}) => 'Alle ${count} bronnen tonen';
+      case 'mihon_extension_sources_less':
+        return 'Minder bronnen tonen';
+      case 'options_website':
+        return 'Officiële website bezoeken';
+      case 'video_setting_mpv_group_hdr':
+        return 'HDR';
+      case 'video_setting_hdr_tone_mapping':
+        return 'HDR-tonemapping';
+      case 'video_setting_hdr_tone_mapping_hint':
+        return 'Curve die wordt gebruikt als een HDR-bron op een SDR-scherm moet worden geperst. ‘Automatisch’ laat mpv per bron kiezen.';
+      case 'video_setting_hdr_compute_peak':
+        return 'Dynamische piekdetectie';
+      case 'video_setting_hdr_compute_peak_hint':
+        return 'Meet de echte piekhelderheid van elk beeld in plaats van te vertrouwen op de metadata van de bron. Betere highlights, kost wat GPU.';
+      case 'video_setting_hdr_auto':
+        return 'Automatisch';
+      case 'video_setting_hdr_on':
+        return 'Aan';
+      case 'video_setting_hdr_off':
+        return 'Uit';
+      case 'video_discovery_cancel_downloads_title':
+        return 'Downloads annuleren?';
+      case 'video_discovery_cancel_downloads_body':
+        return ({required Object n}) =>
+            '${n} downloadtaak/-taken voor deze titel worden gestopt. Al gedownloade delen blijven op schijf staan; je kunt de download later opnieuw starten.';
+      case 'video_discovery_cancel_downloads_failed':
+        return 'Kon de download niet annuleren. De taak is mogelijk al klaar, of de download-backend is niet beschikbaar.';
+      case 'gal_hook_click_lookup':
+        return 'Tik op een woord om het op te zoeken';
+      case 'gal_hook_click_lookup_hint':
+        return 'Uit betekent dat klikken op de tekst nooit een opzoeking start — handig met doorklikken aan, als je niet per ongeluk een woord wilt raken.';
+      case 'gal_hook_lookup_trigger':
+        return 'Opzoekknop';
+      case 'gal_hook_lookup_trigger_hint':
+        return 'Welke muisknop het woord onder de aanwijzer opzoekt. Los van de schakelaar hierboven: je kunt tikken-om-op-te-zoeken uitzetten en toch met een zijknop opzoeken.';
+      case 'gal_hook_lookup_trigger_left':
+        return 'Left click';
+      case 'gal_hook_lookup_trigger_middle':
+        return 'Middle click';
+      case 'gal_hook_lookup_trigger_side':
+        return 'Side button';
+      case 'gal_hook_toolbar_auto_hide':
+        return 'Werkbalk automatisch verbergen';
+      case 'gal_hook_toolbar_auto_hide_hint':
+        return 'Verbergt de werkbalk tot de aanwijzer het tekstvak bereikt, zoals LunaHook. Verborgen is echt verborgen — die pixels gaan terug naar het spel.';
+      case 'gal_hook_passthrough_blocks_mouse':
+        return 'Tekst vangt nog klikken tijdens doorklikken';
+      case 'gal_hook_passthrough_blocks_mouse_hint':
+        return 'Aan: tekstregels blijven klikken aannemen, zodat je een woord kunt aantikken. Uit: de hele overlay is transparant voor de muis — je klikt wat eronder ligt, maar woorden aantikken werkt niet meer.';
+      case 'floating_lyric_topmost':
+        return 'Altijd op de voorgrond';
+      case 'gal_hook_fold_progressive_lines':
+        return 'Opgesplitste dialoogregels samenvoegen';
+      case 'gal_hook_fold_progressive_lines_hint':
+        return 'Sommige engines tekenen bij elke klik de hele regel opnieuw, waardoor één regel meerdere keren wordt vastgelegd. Vouw die momentopnamen samen tot één regel.';
+      case 'gal_hook_ingame_lookup_engine_unsupported':
+        return 'Deze game-engine ondersteunt opzoeken in het spel nog niet';
+      case 'gal_hook_ingame_lookup_version_unsupported':
+        return 'Deze spelversie staat nog niet op de lijst met ondersteunde versies';
+      case 'gal_hook_ingame_lookup_exe_hash_copy':
+        return 'SHA-256 van het spelbestand kopiëren';
+      case 'gal_hook_ingame_lookup_exe_hash_unavailable':
+        return 'Kan het spelbestand niet lezen';
+      case 'gal_hook_ingame_lookup_exe_hash_copied':
+        return 'SHA-256 van het spelbestand gekopieerd';
+      case 'download_tracker_section':
+        return 'Tracker-abonnement';
+      case 'download_tracker_auto_add':
+        return 'Geabonneerde trackers automatisch aan nieuwe downloads toevoegen';
+      case 'download_tracker_auto_add_hint':
+        return 'De lijst wordt 6 uur gecachet. Een mislukt abonnement blokkeert de download niet.';
+      case 'download_tracker_url':
+        return 'Abonnements-URL';
+      case 'download_tracker_refresh':
+        return 'Trackers ophalen';
+      case 'download_tracker_preview_empty':
+        return 'Haal het abonnement op om de ondersteunde HTTP-, HTTPS- en UDP-trackers te bekijken.';
+      case 'download_tracker_preview_count':
+        return ({required Object count}) => '${count} trackers opgehaald';
+      case 'download_tracker_fetch_failed':
+        return ({required Object message}) =>
+            'Kan de trackers niet ophalen: ${message}';
+      case 'anki_connect_port_auto_fix':
+        return 'Naar een vrije poort wisselen';
+      case 'anki_connect_port_auto_fix_hint':
+        return 'Kiest een vrije poort en schrijft die zowel in Hibiki als in de AnkiConnect-add-onconfiguratie. Herstart Anki om het toe te passen.';
+      case 'anki_connect_port_auto_fix_done':
+        return ({required Object port}) =>
+            'AnkiConnect gebruikt nu poort ${port}. Herstart Anki en probeer het opnieuw.';
+      case 'anki_connect_port_auto_fix_manual':
+        return ({required Object port}) =>
+            'Hibiki gebruikt nu poort ${port}, maar de AnkiConnect-add-onconfiguratie is niet gevonden. Zet webBindPort in Anki (Extra → Add-ons → AnkiConnect → Configuratie) ook op ${port} en herstart Anki.';
+      case 'anki_connect_port_auto_fix_none':
+        return 'Geen vrije poort gevonden op deze machine.';
+      case 'onboarding_action_badge_required':
+        return 'Verplicht';
+      case 'onboarding_action_badge_recommended':
+        return 'Aanbevolen';
+      case 'onboarding_action_badge_optional':
+        return 'Optioneel';
+      case 'onboarding_pack_action_download_desc':
+        return 'Downloadt het hele pakket op de achtergrond en importeert het daarna. Je kunt altijd annuleren; de volgende keer gaat het verder waar het gebleven was.';
+      case 'onboarding_pack_action_import_existing_desc':
+        return 'Het pakket is al gedownload; hiermee importeer je het. Kies «Samenvoegen» in het bevestigingsvenster, dan blijft je bestaande data ongemoeid.';
+      case 'onboarding_pack_action_pick_desc':
+        return 'Heb je de zip van het pakket al ergens anders vandaan? Importeer hem van schijf en sla de download helemaal over.';
+      case 'onboarding_pack_action_website':
+        return 'Downloadpagina van de website openen';
+      case 'onboarding_pack_action_website_desc':
+        return 'Opent de officiële site in je browser. In het pakketgedeelte staan losse deel-links die je aan een downloadmanager kunt geven; kom daarna hier terug en gebruik «Kies een lokaal pakketbestand» om te importeren wat je hebt.';
+      case 'onboarding_pack_action_dictionary_desc':
+        return 'Leer je een andere taal dan Japans? Sla het pakket over en importeer hier woordenboeken voor je eigen taal.';
+      case 'onboarding_pack_action_audio_desc':
+        return 'Waar de uitspraakaudio vandaan komt. Het pakket dekt Japans en Engels al; voeg hier online bronnen toe voor andere talen.';
+      case 'onboarding_anki_action_test_desc':
+        return 'Controleert of Fushi Anki kan bereiken en laadt je decks en notitietypes. Er wordt nog niets aangemaakt.';
+      case 'onboarding_anki_action_refresh_desc':
+        return 'Laadt decks en notitietypes opnieuw uit Anki. Gebruik dit nadat je in Anki een nieuw deck hebt gemaakt.';
+      case 'onboarding_anki_action_get_ankidroid_desc':
+        return 'Opent de storepagina van AnkiDroid. Fushi schrijft zijn kaarten daarin, dus het moet eerst geïnstalleerd zijn.';
+      case 'onboarding_anki_action_get_anki_desc':
+        return 'Opent de downloadpagina van Anki. Installeer Anki en laat het draaien terwijl je kaarten maakt.';
+      case 'onboarding_anki_action_install_addon_desc':
+        return 'Pakt de meegeleverde AnkiConnect-add-on voor je uit in Anki; daarmee kan Fushi ermee praten. Start Anki daarna opnieuw op.';
+      case 'onboarding_step_anki_action_desc':
+        return 'Kaartsjabloon, veldtoewijzing, schermafbeeldingen en audio: de details van hoe een gemaakte kaart eruitziet. Het deck en notitietype hierboven zijn genoeg om te beginnen, dus open dit alleen als je wilt veranderen hoe kaarten worden opgebouwd.';
+      case 'onboarding_step_backup_action_desc':
+        return 'Kies een back-upbackend en meld je aan, zodat je bibliotheek een verloren of vervangen apparaat overleeft.';
+      case 'onboarding_step_interconnect_action_desc':
+        return 'Koppelt dit apparaat aan je andere apparaten om één bibliotheek te delen en de voortgang gelijk te houden.';
+      case 'onboarding_step_extension_action_desc':
+        return 'Laat zien hoe je de browserextensie installeert en met Fushi verbindt, zodat je ook op webpagina’s woorden kunt opzoeken.';
+      case 'onboarding_step_fonts_action_desc':
+        return 'Voeg je eigen lettertypebestanden toe en kies welk lettertype elke taal gebruikt.';
+      case 'onboarding_pack_sources_hint':
+        return 'Wordt in parallelle stukken tegelijk van GitHub, de officiële site en een reservespiegel gehaald, met een checksum per stuk. Fushi meet de bronnen onderweg en geeft meer stukken aan degene die op dat moment het snelst is, dus hier valt niets te kiezen.';
+      case 'video_setting_hdr_output':
+        return 'HDR-/10-bits-uitvoer';
+      case 'video_setting_hdr_output_hint':
+        return 'Alleen Windows. «Automatisch» stuurt HDR-bronnen via een native videovenster rechtstreeks naar een HDR-scherm; «Altijd» gebruikt dat venster voor elke video (10-bits uitvoer); «Uit» houdt de standaardrenderer aan.';
+      case 'video_setting_hdr_output_auto':
+        return 'Automatisch';
+      case 'video_setting_hdr_output_always':
+        return 'Altijd';
+      case 'video_setting_hdr_output_off':
+        return 'Uit';
       case 'video_ajatt_settings_hint':
         return 'Gratis archief met Japanse ondertitels (kitsunekko-mirror). Geen account nodig; bestanden worden van GitHub gedownload.';
       case 'video_ajatt_enabled_hint':
@@ -234606,12 +240910,6 @@ extension on _StringsPtBr {
         return 'Avançado: usar AnkiConnect neste dispositivo';
       case 'onboarding_anki_mobile_ankiconnect_hint':
         return 'Este dispositivo também pode criar cartões no Anki rodando em um computador na mesma rede: ative o AnkiConnect nas configurações de criação de cartões e insira o endereço do computador.';
-      case 'onboarding_anki_fsrs_title':
-        return 'Mudar Anki para FSRS';
-      case 'onboarding_anki_fsrs_body':
-        return 'O Anki vem com FSRS, um programador muito melhor que o SM-2 padrão de 30 anos: melhor retenção com menos revisões. No Anki, abra as opções do baralho e ative o FSRS (um switch cobre toda a coleção). Isso deve ser feito dentro do próprio Anki.';
-      case 'onboarding_step_pack_browser_action':
-        return 'Baixar no navegador';
       case 'onboarding_anki_setup_android_hint':
         return 'Instale o AnkiDroid e abra-o uma vez para concluir a configuração inicial. De volta ao Fushi, toque em Permitir na caixa de diálogo de permissão que aparece com seu primeiro cartão - nenhuma configuração do AnkiDroid para alterar.';
       case 'onboarding_anki_install_addon_action':
@@ -234883,6 +241181,221 @@ extension on _StringsPtBr {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             'Outros ${n} itens selecionados estão ocultos pelo filtro atual e não serão processados.';
+      case 'download_direct_queue_section':
+        return 'Direct downloads';
+      case 'download_task_kind_all':
+        return 'All types';
+      case 'download_task_kind_filter':
+        return 'Filter by type';
+      case 'manga_online_series_empty':
+        return 'Esta série não tem volumes.';
+      case 'sync_peer_book_delete_confirm':
+        return ({required Object name}) =>
+            'Excluir "${name}" do dispositivo pareado? Os arquivos e o progresso de leitura de lá serão removidos definitivamente, e este dispositivo não tem cópia. Não é possível desfazer.';
+      case 'sync_peer_video_delete_confirm':
+        return ({required Object name}) =>
+            'Remover "${name}" da biblioteca do dispositivo pareado? O arquivo de vídeo importado pelo próprio dispositivo é mantido. Não é possível desfazer.';
+      case 'storage_entry_delete_files_confirm_body':
+        return 'Será excluído do disco imediatamente. Nada na sua biblioteca faz referência a isso — são dados em cache, exportados ou que podem ser baixados de novo.';
+      case 'manga_series_refresh':
+        return 'Atualizar capítulos';
+      case 'manga_series_refresh_failed':
+        return 'Não foi possível atualizar pela fonte';
+      case 'manga_series_source_disabled':
+        return 'Esta fonte não está instalada ou está desativada';
+      case 'manga_series_platform_unsupported':
+        return 'Esta fonte não está disponível nesta plataforma';
+      case 'manga_series_offline_hint':
+        return 'Exibindo os capítulos salvos neste dispositivo';
+      case 'manga_series_no_chapters':
+        return 'Ainda não há capítulos';
+      case 'manga_series_all_read':
+        return 'Todos os capítulos foram lidos';
+      case 'manga_series_sort_newest':
+        return 'Mais recentes primeiro';
+      case 'manga_series_sort_oldest':
+        return 'Mais antigos primeiro';
+      case 'manga_series_unread_only':
+        return 'Somente não lidos';
+      case 'manga_series_mark_read':
+        return 'Marcar como lido';
+      case 'manga_series_mark_unread':
+        return 'Marcar como não lido';
+      case 'manga_series_mark_previous_read':
+        return 'Marcar este e os anteriores como lidos';
+      case 'manga_series_local_volume':
+        return 'Volume local';
+      case 'manga_series_volume_info':
+        return 'Volume';
+      case 'manga_series_page_count':
+        return 'Páginas';
+      case 'manga_series_chapters_action':
+        return 'Capítulos';
+      case 'manga_series_next_chapter':
+        return 'Próximo capítulo';
+      case 'manga_series_previous_chapter':
+        return 'Capítulo anterior';
+      case 'manga_series_last_chapter_reached':
+        return 'Este é o capítulo mais recente';
+      case 'manga_series_first_chapter_reached':
+        return 'Este é o primeiro capítulo';
+      case 'manga_series_open_series':
+        return 'Página da obra';
+      case 'manga_series_read_progress':
+        return ({required Object page, required Object total}) =>
+            'Lido até a página ${page} de ${total}';
+      case 'manga_series_read_progress_partial':
+        return ({required Object page}) => 'Lido até a página ${page}';
+      case 'mihon_store_extension_count':
+        return ({required Object count}) => '${count} extensões';
+      case 'mihon_extension_sources_more':
+        return ({required Object count}) => 'Mostrar todas as ${count} fontes';
+      case 'mihon_extension_sources_less':
+        return 'Mostrar menos fontes';
+      case 'options_website':
+        return 'Visitar o site oficial';
+      case 'video_setting_mpv_group_hdr':
+        return 'HDR';
+      case 'video_setting_hdr_tone_mapping':
+        return 'Mapeamento de tons HDR';
+      case 'video_setting_hdr_tone_mapping_hint':
+        return 'Curva usada quando uma fonte HDR precisa ser comprimida para uma tela SDR. “Automático” deixa o mpv escolher por fonte.';
+      case 'video_setting_hdr_compute_peak':
+        return 'Detecção dinâmica de pico';
+      case 'video_setting_hdr_compute_peak_hint':
+        return 'Mede o pico real de brilho de cada quadro em vez de confiar nos metadados da fonte. Melhores altas-luzes, com algum custo de GPU.';
+      case 'video_setting_hdr_auto':
+        return 'Automático';
+      case 'video_setting_hdr_on':
+        return 'Ligado';
+      case 'video_setting_hdr_off':
+        return 'Desligado';
+      case 'video_discovery_cancel_downloads_title':
+        return 'Cancelar os downloads?';
+      case 'video_discovery_cancel_downloads_body':
+        return ({required Object n}) =>
+            '${n} tarefa(s) de download deste título serão interrompidas. As partes já baixadas continuam no disco; você pode recomeçar o download depois.';
+      case 'video_discovery_cancel_downloads_failed':
+        return 'Não foi possível cancelar o download. A tarefa pode já ter terminado, ou o backend de download está indisponível.';
+      case 'gal_hook_click_lookup':
+        return 'Toque numa palavra para consultá-la';
+      case 'gal_hook_click_lookup_hint':
+        return 'Desligado: cliques na legenda nunca iniciam uma consulta — útil com o clique passante ligado, quando você prefere não acertar uma palavra sem querer.';
+      case 'gal_hook_lookup_trigger':
+        return 'Gatilho da consulta';
+      case 'gal_hook_lookup_trigger_hint':
+        return 'Qual botão do mouse consulta a palavra sob o ponteiro. Independente da chave acima: você pode desligar o toque-para-consultar e ainda consultar com um botão lateral.';
+      case 'gal_hook_lookup_trigger_left':
+        return 'Left click';
+      case 'gal_hook_lookup_trigger_middle':
+        return 'Middle click';
+      case 'gal_hook_lookup_trigger_side':
+        return 'Side button';
+      case 'gal_hook_toolbar_auto_hide':
+        return 'Ocultar a barra automaticamente';
+      case 'gal_hook_toolbar_auto_hide_hint':
+        return 'Oculta a barra até o ponteiro chegar à caixa de legenda, no estilo do LunaHook. Oculto significa oculto de verdade — aqueles pixels voltam para o jogo.';
+      case 'gal_hook_passthrough_blocks_mouse':
+        return 'A legenda ainda recebe cliques durante o clique passante';
+      case 'gal_hook_passthrough_blocks_mouse_hint':
+        return 'Ligado: as linhas de texto continuam recebendo cliques, então você pode tocar numa palavra. Desligado: toda a sobreposição fica transparente ao mouse — você clica no que está embaixo, mas tocar palavras não funciona mais.';
+      case 'floating_lyric_topmost':
+        return 'Manter sempre visível';
+      case 'gal_hook_fold_progressive_lines':
+        return 'Unir linhas de diálogo divididas';
+      case 'gal_hook_fold_progressive_lines_hint':
+        return 'Alguns motores redesenham a linha inteira a cada clique, então a mesma linha é capturada várias vezes. Dobre esses instantâneos em uma única linha.';
+      case 'gal_hook_ingame_lookup_engine_unsupported':
+        return 'Este motor de jogo ainda não oferece suporte à busca dentro do jogo';
+      case 'gal_hook_ingame_lookup_version_unsupported':
+        return 'Esta versão do jogo ainda não está na lista de compatíveis';
+      case 'gal_hook_ingame_lookup_exe_hash_copy':
+        return 'Copiar o SHA-256 do executável do jogo';
+      case 'gal_hook_ingame_lookup_exe_hash_unavailable':
+        return 'Não foi possível ler o executável do jogo';
+      case 'gal_hook_ingame_lookup_exe_hash_copied':
+        return 'SHA-256 do executável copiado';
+      case 'download_tracker_section':
+        return 'Assinatura de trackers';
+      case 'download_tracker_auto_add':
+        return 'Adicionar automaticamente os trackers da assinatura aos novos downloads';
+      case 'download_tracker_auto_add_hint':
+        return 'A lista fica em cache por 6 horas. Uma falha na assinatura não bloqueia o download.';
+      case 'download_tracker_url':
+        return 'URL da assinatura';
+      case 'download_tracker_refresh':
+        return 'Buscar trackers';
+      case 'download_tracker_preview_empty':
+        return 'Busque a assinatura para pré-visualizar os trackers HTTP, HTTPS e UDP compatíveis.';
+      case 'download_tracker_preview_count':
+        return ({required Object count}) => '${count} trackers obtidos';
+      case 'download_tracker_fetch_failed':
+        return ({required Object message}) =>
+            'Não foi possível buscar os trackers: ${message}';
+      case 'anki_connect_port_auto_fix':
+        return 'Mudar para uma porta livre';
+      case 'anki_connect_port_auto_fix_hint':
+        return 'Escolhe uma porta livre e a grava tanto no Hibiki quanto na configuração do complemento AnkiConnect. Reinicie o Anki para aplicar.';
+      case 'anki_connect_port_auto_fix_done':
+        return ({required Object port}) =>
+            'O AnkiConnect agora usa a porta ${port}. Reinicie o Anki e tente novamente.';
+      case 'anki_connect_port_auto_fix_manual':
+        return ({required Object port}) =>
+            'O Hibiki agora usa a porta ${port}, mas a configuração do complemento AnkiConnect não foi encontrada. Defina webBindPort como ${port} no Anki (Ferramentas → Complementos → AnkiConnect → Configuração) e reinicie o Anki.';
+      case 'anki_connect_port_auto_fix_none':
+        return 'Nenhuma porta livre encontrada nesta máquina.';
+      case 'onboarding_action_badge_required':
+        return 'Obrigatório';
+      case 'onboarding_action_badge_recommended':
+        return 'Recomendado';
+      case 'onboarding_action_badge_optional':
+        return 'Opcional';
+      case 'onboarding_pack_action_download_desc':
+        return 'Baixa o pacote inteiro em segundo plano e depois o importa. Dá para cancelar a qualquer momento; da próxima vez ele retoma de onde parou.';
+      case 'onboarding_pack_action_import_existing_desc':
+        return 'O pacote já foi baixado; isto o importa. Escolha «Mesclar» na caixa de confirmação e seus dados atuais ficam intactos.';
+      case 'onboarding_pack_action_pick_desc':
+        return 'Já pegou o zip do pacote em outro lugar? Importe do disco e pule o download por completo.';
+      case 'onboarding_pack_action_website':
+        return 'Abrir a página de download do site';
+      case 'onboarding_pack_action_website_desc':
+        return 'Abre o site oficial no navegador. A seção do pacote lista links por partes que você pode passar a um gerenciador de downloads; depois volte aqui e use «Escolher um arquivo de pacote local» para importar o que baixou.';
+      case 'onboarding_pack_action_dictionary_desc':
+        return 'Está aprendendo um idioma que não é japonês? Pule o pacote e importe aqui dicionários do seu próprio idioma.';
+      case 'onboarding_pack_action_audio_desc':
+        return 'De onde vem o áudio de pronúncia. O pacote já cobre japonês e inglês; adicione aqui fontes on-line para outros idiomas.';
+      case 'onboarding_anki_action_test_desc':
+        return 'Verifica se o Fushi consegue falar com o Anki e carrega seus baralhos e tipos de nota. Nada é criado ainda.';
+      case 'onboarding_anki_action_refresh_desc':
+        return 'Recarrega baralhos e tipos de nota a partir do Anki. Use depois de criar um baralho novo dentro do Anki.';
+      case 'onboarding_anki_action_get_ankidroid_desc':
+        return 'Abre a página do AnkiDroid na loja. O Fushi grava os cartões nele, então precisa estar instalado antes.';
+      case 'onboarding_anki_action_get_anki_desc':
+        return 'Abre a página de download do Anki. Instale o Anki e deixe-o aberto enquanto cria cartões.';
+      case 'onboarding_anki_action_install_addon_desc':
+        return 'Descompacta para você o complemento AnkiConnect embutido dentro do Anki, que é o que permite ao Fushi conversar com ele. Reinicie o Anki depois.';
+      case 'onboarding_step_anki_action_desc':
+        return 'Modelo de cartão, mapeamento de campos, capturas e áudio: os detalhes de como fica um cartão criado. O baralho e o tipo de nota acima já bastam para começar, então abra isto só se quiser mudar como os cartões são montados.';
+      case 'onboarding_step_backup_action_desc':
+        return 'Escolha um serviço de backup e entre na conta, para que sua biblioteca sobreviva à perda ou troca de aparelho.';
+      case 'onboarding_step_interconnect_action_desc':
+        return 'Pareia este aparelho com seus outros aparelhos para compartilhar uma mesma biblioteca e manter o progresso em sincronia.';
+      case 'onboarding_step_extension_action_desc':
+        return 'Mostra como instalar a extensão de navegador e conectá-la ao Fushi, para você também consultar palavras em páginas da web.';
+      case 'onboarding_step_fonts_action_desc':
+        return 'Adicione seus próprios arquivos de fonte e escolha qual cada idioma usa.';
+      case 'onboarding_pack_sources_hint':
+        return 'Baixado em partes paralelas do GitHub, do site oficial e de um espelho reserva ao mesmo tempo, com checksum em cada parte. O Fushi mede as fontes durante o processo e dá mais partes para a que estiver mais rápida no momento, então não há nada a escolher aqui.';
+      case 'video_setting_hdr_output':
+        return 'Saída HDR / 10 bits';
+      case 'video_setting_hdr_output_hint':
+        return 'Somente no Windows. «Automático» entrega fontes HDR direto a uma tela HDR por uma janela de vídeo nativa; «Sempre» usa essa janela para todos os vídeos (saída de 10 bits); «Desligado» mantém o renderizador padrão.';
+      case 'video_setting_hdr_output_auto':
+        return 'Automático';
+      case 'video_setting_hdr_output_always':
+        return 'Sempre';
+      case 'video_setting_hdr_output_off':
+        return 'Desligado';
       case 'video_ajatt_settings_hint':
         return 'Arquivo gratuito de legendas em japonês (espelho do kitsunekko). Não precisa de conta; os arquivos são baixados do GitHub.';
       case 'video_ajatt_enabled_hint':
@@ -242538,12 +249051,6 @@ extension on _StringsRu {
         return 'Дополнительно: использовать AnkiConnect на этом устройстве';
       case 'onboarding_anki_mobile_ankiconnect_hint':
         return 'Это устройство также может создавать карточки в Anki на компьютере в той же сети: включите AnkiConnect в настройках создания карточек и введите адрес компьютера.';
-      case 'onboarding_anki_fsrs_title':
-        return 'Переключите Anki на FSRS';
-      case 'onboarding_anki_fsrs_body':
-        return 'В Anki встроен FSRS — планировщик, значительно лучше устаревшего SM-2: лучше запоминание при меньшем количестве повторений. В Anki откройте настройки колоды и включите FSRS (один переключатель на всю коллекцию). Это делается в самом Anki.';
-      case 'onboarding_step_pack_browser_action':
-        return 'Скачать в браузере';
       case 'onboarding_anki_setup_android_hint':
         return 'Установите AnkiDroid и откройте его один раз для первоначальной настройки. Вернувшись в Fushi, нажмите «Разрешить» в диалоге разрешений, который появится при создании первой карточки — настройки AnkiDroid менять не нужно.';
       case 'onboarding_anki_install_addon_action':
@@ -242814,6 +249321,221 @@ extension on _StringsRu {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             'Ещё ${n} выбранных элементов скрыты текущим фильтром и не будут обработаны.';
+      case 'download_direct_queue_section':
+        return 'Direct downloads';
+      case 'download_task_kind_all':
+        return 'All types';
+      case 'download_task_kind_filter':
+        return 'Filter by type';
+      case 'manga_online_series_empty':
+        return 'В этой серии нет томов.';
+      case 'sync_peer_book_delete_confirm':
+        return ({required Object name}) =>
+            'Удалить «${name}» с сопряжённого устройства? Его файлы и прогресс чтения там будут удалены безвозвратно, а на этом устройстве копии нет. Отменить это действие нельзя.';
+      case 'sync_peer_video_delete_confirm':
+        return ({required Object name}) =>
+            'Убрать «${name}» из библиотеки сопряжённого устройства? Видеофайл, импортированный самим устройством, останется. Отменить это действие нельзя.';
+      case 'storage_entry_delete_files_confirm_body':
+        return 'Будет сразу удалено с диска. Ничто в вашей библиотеке на это не ссылается — это кеш, экспортированные или заново загружаемые данные.';
+      case 'manga_series_refresh':
+        return 'Обновить главы';
+      case 'manga_series_refresh_failed':
+        return 'Не удалось обновить из источника';
+      case 'manga_series_source_disabled':
+        return 'Этот источник не установлен или отключён';
+      case 'manga_series_platform_unsupported':
+        return 'Этот источник недоступен на этой платформе';
+      case 'manga_series_offline_hint':
+        return 'Показаны главы, сохранённые на этом устройстве';
+      case 'manga_series_no_chapters':
+        return 'Глав пока нет';
+      case 'manga_series_all_read':
+        return 'Все главы прочитаны';
+      case 'manga_series_sort_newest':
+        return 'Сначала новые';
+      case 'manga_series_sort_oldest':
+        return 'Сначала старые';
+      case 'manga_series_unread_only':
+        return 'Только непрочитанные';
+      case 'manga_series_mark_read':
+        return 'Отметить как прочитанное';
+      case 'manga_series_mark_unread':
+        return 'Отметить как непрочитанное';
+      case 'manga_series_mark_previous_read':
+        return 'Отметить эту и более ранние как прочитанные';
+      case 'manga_series_local_volume':
+        return 'Локальный том';
+      case 'manga_series_volume_info':
+        return 'Том';
+      case 'manga_series_page_count':
+        return 'Страниц';
+      case 'manga_series_chapters_action':
+        return 'Главы';
+      case 'manga_series_next_chapter':
+        return 'Следующая глава';
+      case 'manga_series_previous_chapter':
+        return 'Предыдущая глава';
+      case 'manga_series_last_chapter_reached':
+        return 'Это самая новая глава';
+      case 'manga_series_first_chapter_reached':
+        return 'Это первая глава';
+      case 'manga_series_open_series':
+        return 'Страница произведения';
+      case 'manga_series_read_progress':
+        return ({required Object page, required Object total}) =>
+            'Прочитано до страницы ${page} из ${total}';
+      case 'manga_series_read_progress_partial':
+        return ({required Object page}) => 'Прочитано до страницы ${page}';
+      case 'mihon_store_extension_count':
+        return ({required Object count}) => 'Расширений: ${count}';
+      case 'mihon_extension_sources_more':
+        return ({required Object count}) => 'Показать все источники (${count})';
+      case 'mihon_extension_sources_less':
+        return 'Показать меньше источников';
+      case 'options_website':
+        return 'Открыть официальный сайт';
+      case 'video_setting_mpv_group_hdr':
+        return 'HDR';
+      case 'video_setting_hdr_tone_mapping':
+        return 'Тональное отображение HDR';
+      case 'video_setting_hdr_tone_mapping_hint':
+        return 'Кривая, по которой HDR-источник укладывается в SDR-экран. «Авто» оставляет выбор за mpv для каждого источника.';
+      case 'video_setting_hdr_compute_peak':
+        return 'Динамическое определение пика';
+      case 'video_setting_hdr_compute_peak_hint':
+        return 'Измеряет реальную пиковую яркость каждого кадра вместо доверия метаданным источника. Света лучше, но нагружает GPU.';
+      case 'video_setting_hdr_auto':
+        return 'Авто';
+      case 'video_setting_hdr_on':
+        return 'Вкл.';
+      case 'video_setting_hdr_off':
+        return 'Выкл.';
+      case 'video_discovery_cancel_downloads_title':
+        return 'Отменить загрузки?';
+      case 'video_discovery_cancel_downloads_body':
+        return ({required Object n}) =>
+            'Будет остановлено загрузок для этого тайтла: ${n}. Уже скачанные части останутся на диске — загрузку можно начать снова позже.';
+      case 'video_discovery_cancel_downloads_failed':
+        return 'Не удалось отменить загрузку. Возможно, задача уже завершилась или бэкенд загрузок недоступен.';
+      case 'gal_hook_click_lookup':
+        return 'Нажмите на слово, чтобы найти его';
+      case 'gal_hook_click_lookup_hint':
+        return 'Выключено — клики по субтитрам никогда не запускают поиск. Удобно вместе с включённым сквозным кликом, когда не хочется случайно попасть по слову.';
+      case 'gal_hook_lookup_trigger':
+        return 'Кнопка поиска';
+      case 'gal_hook_lookup_trigger_hint':
+        return 'Какая кнопка мыши ищет слово под указателем. Не зависит от переключателя выше: можно выключить поиск по нажатию и всё равно искать боковой кнопкой.';
+      case 'gal_hook_lookup_trigger_left':
+        return 'Left click';
+      case 'gal_hook_lookup_trigger_middle':
+        return 'Middle click';
+      case 'gal_hook_lookup_trigger_side':
+        return 'Side button';
+      case 'gal_hook_toolbar_auto_hide':
+        return 'Автоматически скрывать панель';
+      case 'gal_hook_toolbar_auto_hide_hint':
+        return 'Скрывает панель, пока указатель не дойдёт до блока субтитров — как в LunaHook. Скрыто значит скрыто по-настоящему: эти пиксели возвращаются игре.';
+      case 'gal_hook_passthrough_blocks_mouse':
+        return 'Субтитры продолжают ловить клики при сквозном клике';
+      case 'gal_hook_passthrough_blocks_mouse_hint':
+        return 'Вкл.: строки текста по-прежнему принимают клики, поэтому по слову можно нажать. Выкл.: весь оверлей прозрачен для мыши — вы кликаете то, что под ним, но нажатие по словам больше не работает.';
+      case 'floating_lyric_topmost':
+        return 'Поверх других окон';
+      case 'gal_hook_fold_progressive_lines':
+        return 'Объединять разбитые строки диалога';
+      case 'gal_hook_fold_progressive_lines_hint':
+        return 'Некоторые движки перерисовывают строку целиком при каждом клике, поэтому одна строка захватывается несколько раз. Сворачивать такие снимки в одну строку.';
+      case 'gal_hook_ingame_lookup_engine_unsupported':
+        return 'Этот движок игры пока не поддерживает поиск внутри игры';
+      case 'gal_hook_ingame_lookup_version_unsupported':
+        return 'Эта версия игры пока не в списке поддерживаемых';
+      case 'gal_hook_ingame_lookup_exe_hash_copy':
+        return 'Скопировать SHA-256 исполняемого файла игры';
+      case 'gal_hook_ingame_lookup_exe_hash_unavailable':
+        return 'Не удалось прочитать исполняемый файл игры';
+      case 'gal_hook_ingame_lookup_exe_hash_copied':
+        return 'SHA-256 исполняемого файла скопирован';
+      case 'download_tracker_section':
+        return 'Подписка на трекеры';
+      case 'download_tracker_auto_add':
+        return 'Автоматически добавлять трекеры из подписки в новые загрузки';
+      case 'download_tracker_auto_add_hint':
+        return 'Список кэшируется на 6 часов. Сбой подписки не блокирует загрузку.';
+      case 'download_tracker_url':
+        return 'URL подписки';
+      case 'download_tracker_refresh':
+        return 'Получить трекеры';
+      case 'download_tracker_preview_empty':
+        return 'Получите подписку, чтобы посмотреть поддерживаемые трекеры HTTP, HTTPS и UDP.';
+      case 'download_tracker_preview_count':
+        return ({required Object count}) => 'Получено трекеров: ${count}';
+      case 'download_tracker_fetch_failed':
+        return ({required Object message}) =>
+            'Не удалось получить трекеры: ${message}';
+      case 'anki_connect_port_auto_fix':
+        return 'Выбрать свободный порт';
+      case 'anki_connect_port_auto_fix_hint':
+        return 'Подбирает свободный порт и записывает его и в Hibiki, и в настройки дополнения AnkiConnect. Перезапустите Anki, чтобы изменения вступили в силу.';
+      case 'anki_connect_port_auto_fix_done':
+        return ({required Object port}) =>
+            'AnkiConnect переключён на порт ${port}. Перезапустите Anki и повторите попытку.';
+      case 'anki_connect_port_auto_fix_manual':
+        return ({required Object port}) =>
+            'Hibiki теперь использует порт ${port}, но настройки дополнения AnkiConnect не найдены. Укажите webBindPort равным ${port} в Anki (Инструменты → Дополнения → AnkiConnect → Настройка) и перезапустите Anki.';
+      case 'anki_connect_port_auto_fix_none':
+        return 'На этом компьютере не найдено свободных портов.';
+      case 'onboarding_action_badge_required':
+        return 'Обязательно';
+      case 'onboarding_action_badge_recommended':
+        return 'Рекомендуется';
+      case 'onboarding_action_badge_optional':
+        return 'По желанию';
+      case 'onboarding_pack_action_download_desc':
+        return 'Скачивает весь пакет в фоне, а затем импортирует его. Отменить можно в любой момент; в следующий раз загрузка продолжится с места остановки.';
+      case 'onboarding_pack_action_import_existing_desc':
+        return 'Пакет уже скачан; здесь он импортируется. Выберите «Объединить» в окне подтверждения — существующие данные останутся нетронутыми.';
+      case 'onboarding_pack_action_pick_desc':
+        return 'Уже получили zip пакета из другого места? Импортируйте его с диска и полностью пропустите загрузку.';
+      case 'onboarding_pack_action_website':
+        return 'Открыть страницу загрузки на сайте';
+      case 'onboarding_pack_action_website_desc':
+        return 'Открывает официальный сайт в браузере. В разделе про пакет есть ссылки на отдельные части, которые можно отдать менеджеру загрузок; затем вернитесь сюда и импортируйте полученное через «Выбрать локальный файл пакета».';
+      case 'onboarding_pack_action_dictionary_desc':
+        return 'Учите не японский, а другой язык? Пропустите пакет и импортируйте здесь словари для своего языка.';
+      case 'onboarding_pack_action_audio_desc':
+        return 'Откуда берётся аудио произношения. Японский и английский пакет уже покрывает; для других языков добавьте здесь онлайн-источники.';
+      case 'onboarding_anki_action_test_desc':
+        return 'Проверяет, что Fushi может связаться с Anki, и загружает ваши колоды и типы заметок. Пока ничего не создаётся.';
+      case 'onboarding_anki_action_refresh_desc':
+        return 'Заново загружает колоды и типы заметок из Anki. Используйте после создания новой колоды в Anki.';
+      case 'onboarding_anki_action_get_ankidroid_desc':
+        return 'Открывает страницу AnkiDroid в магазине. Fushi записывает карточки именно туда, поэтому его нужно установить первым.';
+      case 'onboarding_anki_action_get_anki_desc':
+        return 'Открывает страницу загрузки Anki. Установите Anki и держите его запущенным, пока создаёте карточки.';
+      case 'onboarding_anki_action_install_addon_desc':
+        return 'Распаковывает встроенное дополнение AnkiConnect в Anki — именно через него Fushi общается с Anki. После этого перезапустите Anki.';
+      case 'onboarding_step_anki_action_desc':
+        return 'Шаблон карточки, сопоставление полей, скриншоты и аудио — то, как выглядит созданная карточка. Колоды и типа заметки выше уже достаточно, чтобы начать, так что заходите сюда только если хотите изменить, как собираются карточки.';
+      case 'onboarding_step_backup_action_desc':
+        return 'Выберите хранилище для резервных копий и войдите в него, чтобы библиотека пережила потерю или замену устройства.';
+      case 'onboarding_step_interconnect_action_desc':
+        return 'Связывает это устройство с вашими другими устройствами: одна общая библиотека и синхронный прогресс.';
+      case 'onboarding_step_extension_action_desc':
+        return 'Показывает, как установить расширение для браузера и подключить его к Fushi, чтобы искать слова и на веб-страницах.';
+      case 'onboarding_step_fonts_action_desc':
+        return 'Добавьте свои файлы шрифтов и выберите, какой из них использует каждый язык.';
+      case 'onboarding_pack_sources_hint':
+        return 'Скачивается параллельными частями одновременно с GitHub, официального сайта и резервного зеркала, каждая часть проверяется контрольной суммой. Fushi по ходу измеряет источники и отдаёт больше частей тому, кто быстрее прямо сейчас, поэтому выбирать здесь нечего.';
+      case 'video_setting_hdr_output':
+        return 'Вывод HDR / 10 бит';
+      case 'video_setting_hdr_output_hint':
+        return 'Только Windows. «Авто» передаёт HDR-источники прямо на HDR-дисплей через нативное окно видео; «Всегда» использует это окно для любого видео (10-битный вывод); «Выключено» оставляет обычный рендерер.';
+      case 'video_setting_hdr_output_auto':
+        return 'Авто';
+      case 'video_setting_hdr_output_always':
+        return 'Всегда';
+      case 'video_setting_hdr_output_off':
+        return 'Выключено';
       case 'video_ajatt_settings_hint':
         return 'Бесплатный архив японских субтитров (зеркало kitsunekko). Аккаунт не нужен; файлы скачиваются с GitHub.';
       case 'video_ajatt_enabled_hint':
@@ -250443,12 +257165,6 @@ extension on _StringsTh {
         return 'ขั้นสูง: ใช้ AnkiConnect บนอุปกรณ์นี้';
       case 'onboarding_anki_mobile_ankiconnect_hint':
         return 'อุปกรณ์นี้ยังสามารถสร้างการ์ดเข้า Anki ที่ทำงานบนคอมพิวเตอร์ในเครือข่ายเดียวกัน: เปิด AnkiConnect ในการตั้งค่าการสร้างการ์ดแล้วป้อนที่อยู่คอมพิวเตอร์';
-      case 'onboarding_anki_fsrs_title':
-        return 'เปลี่ยน Anki เป็น FSRS';
-      case 'onboarding_anki_fsrs_body':
-        return 'Anki มาพร้อม FSRS ตัวจัดกำหนดการที่ดีกว่าค่าเริ่มต้น SM-2 อายุ 30 ปีมาก: จำได้ดีกว่าด้วยการทบทวนน้อยลง ใน Anki เปิดตัวเลือกสำรับแล้วเปิด FSRS (สวิตช์เดียวครอบคลุมทั้งคอลเลกชัน) ต้องทำในตัว Anki เอง';
-      case 'onboarding_step_pack_browser_action':
-        return 'ดาวน์โหลดในเบราว์เซอร์';
       case 'onboarding_anki_setup_android_hint':
         return 'ติดตั้ง AnkiDroid แล้วเปิดครั้งหนึ่งเพื่อเสร็จสิ้นการตั้งค่าครั้งแรก กลับมาที่ Fushi แตะอนุญาตในกล่องโต้ตอบสิทธิ์ที่ปรากฏขึ้นเมื่อสร้างการ์ดแรก ไม่ต้องเปลี่ยนการตั้งค่า AnkiDroid';
       case 'onboarding_anki_install_addon_action':
@@ -250717,6 +257433,222 @@ extension on _StringsTh {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             'รายการที่เลือกอีก ${n} รายการถูกซ่อนด้วยตัวกรองปัจจุบันและจะไม่ถูกดำเนินการ';
+      case 'download_direct_queue_section':
+        return 'Direct downloads';
+      case 'download_task_kind_all':
+        return 'All types';
+      case 'download_task_kind_filter':
+        return 'Filter by type';
+      case 'manga_online_series_empty':
+        return 'ซีรีส์นี้ไม่มีเล่ม';
+      case 'sync_peer_book_delete_confirm':
+        return ({required Object name}) =>
+            'ลบ "${name}" ออกจากอุปกรณ์คู่หรือไม่? ไฟล์และความคืบหน้าการอ่านบนอุปกรณ์นั้นจะถูกลบถาวร และเครื่องนี้ไม่มีสำเนา การกระทำนี้ย้อนกลับไม่ได้';
+      case 'sync_peer_video_delete_confirm':
+        return ({required Object name}) =>
+            'นำ "${name}" ออกจากคลังของอุปกรณ์คู่หรือไม่? ไฟล์วิดีโอที่อุปกรณ์นั้นนำเข้าเองจะยังคงอยู่ การกระทำนี้ย้อนกลับไม่ได้';
+      case 'storage_entry_delete_files_confirm_body':
+        return 'จะถูกลบออกจากดิสก์ทันที ไม่มีรายการใดในคลังอ้างอิงถึงไฟล์นี้ — เป็นข้อมูลแคช ข้อมูลที่ส่งออก หรือข้อมูลที่ดาวน์โหลดใหม่ได้';
+      case 'manga_series_refresh':
+        return 'รีเฟรชตอน';
+      case 'manga_series_refresh_failed':
+        return 'รีเฟรชจากแหล่งที่มาไม่สำเร็จ';
+      case 'manga_series_source_disabled':
+        return 'ยังไม่ได้ติดตั้งแหล่งที่มานี้หรือถูกปิดใช้งาน';
+      case 'manga_series_platform_unsupported':
+        return 'แหล่งที่มานี้ใช้ไม่ได้บนแพลตฟอร์มนี้';
+      case 'manga_series_offline_hint':
+        return 'กำลังแสดงตอนที่บันทึกไว้ในเครื่องนี้';
+      case 'manga_series_no_chapters':
+        return 'ยังไม่มีตอน';
+      case 'manga_series_all_read':
+        return 'อ่านครบทุกตอนแล้ว';
+      case 'manga_series_sort_newest':
+        return 'ใหม่สุดก่อน';
+      case 'manga_series_sort_oldest':
+        return 'เก่าสุดก่อน';
+      case 'manga_series_unread_only':
+        return 'เฉพาะที่ยังไม่อ่าน';
+      case 'manga_series_mark_read':
+        return 'ทำเครื่องหมายว่าอ่านแล้ว';
+      case 'manga_series_mark_unread':
+        return 'ทำเครื่องหมายว่ายังไม่อ่าน';
+      case 'manga_series_mark_previous_read':
+        return 'ทำเครื่องหมายตอนนี้และก่อนหน้าว่าอ่านแล้ว';
+      case 'manga_series_local_volume':
+        return 'เล่มในเครื่อง';
+      case 'manga_series_volume_info':
+        return 'ข้อมูลเล่ม';
+      case 'manga_series_page_count':
+        return 'จำนวนหน้า';
+      case 'manga_series_chapters_action':
+        return 'ตอน';
+      case 'manga_series_next_chapter':
+        return 'ตอนถัดไป';
+      case 'manga_series_previous_chapter':
+        return 'ตอนก่อนหน้า';
+      case 'manga_series_last_chapter_reached':
+        return 'นี่เป็นตอนล่าสุดแล้ว';
+      case 'manga_series_first_chapter_reached':
+        return 'นี่เป็นตอนแรกแล้ว';
+      case 'manga_series_open_series':
+        return 'หน้าผลงาน';
+      case 'manga_series_read_progress':
+        return ({required Object page, required Object total}) =>
+            'อ่านถึงหน้า ${page} จาก ${total}';
+      case 'manga_series_read_progress_partial':
+        return ({required Object page}) => 'อ่านถึงหน้า ${page}';
+      case 'mihon_store_extension_count':
+        return ({required Object count}) => 'ส่วนขยาย ${count} รายการ';
+      case 'mihon_extension_sources_more':
+        return ({required Object count}) => 'แสดงแหล่งทั้งหมด ${count} แหล่ง';
+      case 'mihon_extension_sources_less':
+        return 'แสดงแหล่งน้อยลง';
+      case 'options_website':
+        return 'เยี่ยมชมเว็บไซต์ทางการ';
+      case 'video_setting_mpv_group_hdr':
+        return 'HDR';
+      case 'video_setting_hdr_tone_mapping':
+        return 'การแมปโทน HDR';
+      case 'video_setting_hdr_tone_mapping_hint':
+        return 'เส้นโค้งที่ใช้เมื่อต้องบีบแหล่ง HDR ลงบนจอ SDR "อัตโนมัติ" ให้ mpv เลือกตามแต่ละแหล่ง';
+      case 'video_setting_hdr_compute_peak':
+        return 'ตรวจจับจุดสว่างสุดแบบไดนามิก';
+      case 'video_setting_hdr_compute_peak_hint':
+        return 'วัดความสว่างสูงสุดจริงของแต่ละเฟรมแทนการเชื่อเมตาดาตาของแหล่ง ไฮไลต์ดีขึ้นแต่กิน GPU เล็กน้อย';
+      case 'video_setting_hdr_auto':
+        return 'อัตโนมัติ';
+      case 'video_setting_hdr_on':
+        return 'เปิด';
+      case 'video_setting_hdr_off':
+        return 'ปิด';
+      case 'video_discovery_cancel_downloads_title':
+        return 'ยกเลิกการดาวน์โหลดไหม';
+      case 'video_discovery_cancel_downloads_body':
+        return ({required Object n}) =>
+            'งานดาวน์โหลดของเรื่องนี้ ${n} งานจะถูกหยุด ส่วนที่ดาวน์โหลดไปแล้วยังอยู่ในดิสก์ และเริ่มดาวน์โหลดใหม่ได้ภายหลัง';
+      case 'video_discovery_cancel_downloads_failed':
+        return 'ยกเลิกการดาวน์โหลดไม่สำเร็จ งานอาจเสร็จไปแล้ว หรือแบ็กเอนด์ดาวน์โหลดใช้งานไม่ได้';
+      case 'gal_hook_click_lookup':
+        return 'แตะคำเพื่อเปิดพจนานุกรม';
+      case 'gal_hook_click_lookup_hint':
+        return 'ปิดไว้หมายความว่าการคลิกบนคำบรรยายจะไม่เปิดพจนานุกรม มีประโยชน์เมื่อเปิดคลิกทะลุ และคุณไม่อยากเผลอโดนคำ';
+      case 'gal_hook_lookup_trigger':
+        return 'ปุ่มเปิดพจนานุกรม';
+      case 'gal_hook_lookup_trigger_hint':
+        return 'ปุ่มเมาส์ที่ใช้เปิดคำใต้ตัวชี้ แยกจากสวิตช์ด้านบน คุณปิดการแตะเพื่อเปิดได้ แล้วยังใช้ปุ่มข้างเปิดได้อยู่';
+      case 'gal_hook_lookup_trigger_left':
+        return 'Left click';
+      case 'gal_hook_lookup_trigger_middle':
+        return 'Middle click';
+      case 'gal_hook_lookup_trigger_side':
+        return 'Side button';
+      case 'gal_hook_toolbar_auto_hide':
+        return 'ซ่อนแถบเครื่องมืออัตโนมัติ';
+      case 'gal_hook_toolbar_auto_hide_hint':
+        return 'ซ่อนแถบเครื่องมือจนกว่าตัวชี้จะถึงกล่องคำบรรยาย แบบ LunaHook ซ่อนคือซ่อนจริง ๆ พิกเซลเหล่านั้นคืนให้เกม';
+      case 'gal_hook_passthrough_blocks_mouse':
+        return 'คำบรรยายยังรับคลิกขณะคลิกทะลุ';
+      case 'gal_hook_passthrough_blocks_mouse_hint':
+        return 'เปิด: บรรทัดข้อความยังรับคลิก จึงแตะคำได้ ปิด: โอเวอร์เลย์ทั้งหมดโปร่งต่อเมาส์ คุณคลิกสิ่งที่อยู่ข้างล่างได้ แต่แตะคำจะไม่ทำงานอีก';
+      case 'floating_lyric_topmost':
+        return 'อยู่ด้านบนเสมอ';
+      case 'gal_hook_fold_progressive_lines':
+        return 'รวมบรรทัดบทสนทนาที่ถูกแบ่ง';
+      case 'gal_hook_fold_progressive_lines_hint':
+        return 'บางเอนจินวาดทั้งบรรทัดใหม่ทุกครั้งที่คลิก ทำให้บรรทัดเดียวถูกเก็บหลายครั้ง ให้ยุบสแนปช็อตเหล่านั้นเป็นบรรทัดเดียว';
+      case 'gal_hook_ingame_lookup_engine_unsupported':
+        return 'เอนจินเกมนี้ยังไม่รองรับการเปิดพจนานุกรมในเกม';
+      case 'gal_hook_ingame_lookup_version_unsupported':
+        return 'เกมเวอร์ชันนี้ยังไม่อยู่ในรายการที่รองรับ';
+      case 'gal_hook_ingame_lookup_exe_hash_copy':
+        return 'คัดลอก SHA-256 ของไฟล์เกม';
+      case 'gal_hook_ingame_lookup_exe_hash_unavailable':
+        return 'อ่านไฟล์เกมไม่ได้';
+      case 'gal_hook_ingame_lookup_exe_hash_copied':
+        return 'คัดลอก SHA-256 ของไฟล์เกมแล้ว';
+      case 'download_tracker_section':
+        return 'การสมัครรับแทร็กเกอร์';
+      case 'download_tracker_auto_add':
+        return 'เพิ่มแทร็กเกอร์จากการสมัครรับลงในดาวน์โหลดใหม่โดยอัตโนมัติ';
+      case 'download_tracker_auto_add_hint':
+        return 'รายการจะถูกแคชไว้ 6 ชั่วโมง หากดึงรายการไม่สำเร็จก็จะไม่ขัดขวางการดาวน์โหลด';
+      case 'download_tracker_url':
+        return 'URL การสมัครรับ';
+      case 'download_tracker_refresh':
+        return 'ดึงแทร็กเกอร์';
+      case 'download_tracker_preview_empty':
+        return 'ดึงรายการที่สมัครรับเพื่อดูตัวอย่างแทร็กเกอร์ HTTP, HTTPS และ UDP ที่รองรับ';
+      case 'download_tracker_preview_count':
+        return ({required Object count}) =>
+            'ดึงแทร็กเกอร์มาแล้ว ${count} รายการ';
+      case 'download_tracker_fetch_failed':
+        return ({required Object message}) =>
+            'ดึงแทร็กเกอร์ไม่สำเร็จ: ${message}';
+      case 'anki_connect_port_auto_fix':
+        return 'เปลี่ยนไปใช้พอร์ตที่ว่าง';
+      case 'anki_connect_port_auto_fix_hint':
+        return 'เลือกพอร์ตที่ว่างแล้วเขียนลงทั้งใน Hibiki และการตั้งค่าส่วนเสริม AnkiConnect รีสตาร์ท Anki เพื่อให้มีผล';
+      case 'anki_connect_port_auto_fix_done':
+        return ({required Object port}) =>
+            'เปลี่ยนพอร์ตของ AnkiConnect เป็น ${port} แล้ว รีสตาร์ท Anki แล้วลองอีกครั้ง';
+      case 'anki_connect_port_auto_fix_manual':
+        return ({required Object port}) =>
+            'ตอนนี้ Hibiki ใช้พอร์ต ${port} แล้ว แต่ไม่พบการตั้งค่าส่วนเสริม AnkiConnect โปรดตั้ง webBindPort เป็น ${port} ใน Anki (เครื่องมือ → ส่วนเสริม → AnkiConnect → การตั้งค่า) แล้วรีสตาร์ท Anki';
+      case 'anki_connect_port_auto_fix_none':
+        return 'ไม่พบพอร์ตที่ว่างบนเครื่องนี้';
+      case 'onboarding_action_badge_required':
+        return 'จำเป็น';
+      case 'onboarding_action_badge_recommended':
+        return 'แนะนำ';
+      case 'onboarding_action_badge_optional':
+        return 'ไม่บังคับ';
+      case 'onboarding_pack_action_download_desc':
+        return 'ดาวน์โหลดแพ็กทั้งชุดในเบื้องหลัง แล้วนำเข้าให้ต่อ ยกเลิกได้ทุกเมื่อ ครั้งถัดไปจะดาวน์โหลดต่อจากจุดที่หยุดไว้';
+      case 'onboarding_pack_action_import_existing_desc':
+        return 'แพ็กดาวน์โหลดไว้แล้ว ปุ่มนี้คือการนำเข้า เลือก «รวมเข้ากับคลังเดิม» ในกล่องยืนยัน แล้วข้อมูลเดิมของคุณจะไม่ถูกแตะต้อง';
+      case 'onboarding_pack_action_pick_desc':
+        return 'ได้ไฟล์ zip ของแพ็กมาจากที่อื่นแล้วหรือ? นำเข้าจากดิสก์ได้เลย ข้ามการดาวน์โหลดทั้งหมด';
+      case 'onboarding_pack_action_website':
+        return 'เปิดหน้าดาวน์โหลดบนเว็บไซต์';
+      case 'onboarding_pack_action_website_desc':
+        return 'เปิดเว็บไซต์ทางการในเบราว์เซอร์ ในหัวข้อแพ็กจะมีลิงก์แบบแบ่งส่วนที่ป้อนให้โปรแกรมช่วยดาวน์โหลดได้ เมื่อโหลดเสร็จให้กลับมาที่นี่แล้วใช้ «เลือกไฟล์แพ็กในเครื่อง» เพื่อนำเข้า';
+      case 'onboarding_pack_action_dictionary_desc':
+        return 'กำลังเรียนภาษาอื่นที่ไม่ใช่ญี่ปุ่นใช่ไหม? ข้ามแพ็กไป แล้วนำเข้าพจนานุกรมของภาษาคุณที่นี่แทน';
+      case 'onboarding_pack_action_audio_desc':
+        return 'เสียงอ่านออกเสียงมาจากไหน แพ็กครอบคลุมภาษาญี่ปุ่นและอังกฤษอยู่แล้ว ภาษาอื่นให้เพิ่มแหล่งออนไลน์ที่นี่';
+      case 'onboarding_anki_action_test_desc':
+        return 'ตรวจสอบว่า Fushi ติดต่อ Anki ได้ และโหลดสำรับกับชนิดโน้ตของคุณเข้ามา ขั้นนี้ยังไม่สร้างอะไรทั้งสิ้น';
+      case 'onboarding_anki_action_refresh_desc':
+        return 'โหลดสำรับและชนิดโน้ตจาก Anki ใหม่ ใช้หลังจากสร้างสำรับใหม่ใน Anki';
+      case 'onboarding_anki_action_get_ankidroid_desc':
+        return 'เปิดหน้าร้านค้าของ AnkiDroid เนื่องจาก Fushi เขียนการ์ดลงในนั้น จึงต้องติดตั้งก่อน';
+      case 'onboarding_anki_action_get_anki_desc':
+        return 'เปิดหน้าดาวน์โหลด Anki ติดตั้ง Anki แล้วเปิดค้างไว้ระหว่างสร้างการ์ด';
+      case 'onboarding_anki_action_install_addon_desc':
+        return 'แตกส่วนเสริม AnkiConnect ที่มาพร้อมโปรแกรมเข้าไปใน Anki ให้คุณ ซึ่งเป็นสิ่งที่ทำให้ Fushi คุยกับ Anki ได้ เสร็จแล้วให้รีสตาร์ท Anki';
+      case 'onboarding_step_anki_action_desc':
+        return 'เทมเพลตการ์ด การจับคู่ฟิลด์ ภาพหน้าจอ และเสียง — ก็คือรายละเอียดว่าการ์ดที่สร้างออกมาหน้าตาเป็นอย่างไร แค่เลือกสำรับกับชนิดโน้ตด้านบนก็เริ่มสร้างการ์ดได้แล้ว จึงเปิดตรงนี้เฉพาะเมื่อต้องการเปลี่ยนวิธีประกอบการ์ด';
+      case 'onboarding_step_backup_action_desc':
+        return 'เลือกปลายทางสำรองข้อมูลแล้วลงชื่อเข้าใช้ เพื่อให้คลังของคุณอยู่รอดเมื่อทำอุปกรณ์หายหรือเปลี่ยนเครื่อง';
+      case 'onboarding_step_interconnect_action_desc':
+        return 'จับคู่อุปกรณ์นี้กับอุปกรณ์อื่นของคุณ เพื่อใช้คลังเดียวกันและซิงก์ความคืบหน้า';
+      case 'onboarding_step_extension_action_desc':
+        return 'แสดงวิธีติดตั้งส่วนขยายเบราว์เซอร์และเชื่อมกับ Fushi เพื่อให้เปิดหาคำศัพท์บนหน้าเว็บได้ด้วย';
+      case 'onboarding_step_fonts_action_desc':
+        return 'เพิ่มไฟล์ฟอนต์ของคุณเอง แล้วเลือกว่าภาษาไหนใช้ฟอนต์ใด';
+      case 'onboarding_pack_sources_hint':
+        return 'ดาวน์โหลดแบบแบ่งส่วนขนานกันจาก GitHub เว็บไซต์ทางการ และมิเรอร์สำรองพร้อมกัน โดยตรวจสอบค่าแฮชทุกส่วน ระหว่างดาวน์โหลด Fushi จะวัดความเร็วของแต่ละแหล่งจริง แล้วแบ่งส่วนให้แหล่งที่เร็วที่สุดในขณะนั้นมากขึ้น จึงไม่มีอะไรให้เลือกตรงนี้';
+      case 'video_setting_hdr_output':
+        return 'เอาต์พุต HDR / 10 บิต';
+      case 'video_setting_hdr_output_hint':
+        return 'เฉพาะ Windows «อัตโนมัติ» ส่งแหล่งภาพ HDR ตรงไปยังจอ HDR ผ่านหน้าต่างวิดีโอดั้งเดิม «เสมอ» ใช้หน้าต่างนั้นกับทุกวิดีโอ (เอาต์พุต 10 บิต) «ปิด» คงตัวเรนเดอร์มาตรฐานไว้';
+      case 'video_setting_hdr_output_auto':
+        return 'อัตโนมัติ';
+      case 'video_setting_hdr_output_always':
+        return 'เสมอ';
+      case 'video_setting_hdr_output_off':
+        return 'ปิด';
       case 'video_ajatt_settings_hint':
         return 'คลังซับไตเติลภาษาญี่ปุ่นฟรี (มิเรอร์ kitsunekko) ไม่ต้องใช้บัญชี ไฟล์ซับไตเติลดาวน์โหลดจาก GitHub';
       case 'video_ajatt_enabled_hint':
@@ -258361,12 +265293,6 @@ extension on _StringsTr {
         return 'Gelişmiş: bu cihazda AnkiConnect kullan';
       case 'onboarding_anki_mobile_ankiconnect_hint':
         return 'Bu cihaz ayrıca aynı ağdaki bir bilgisayarda çalışan Anki\'ye kart oluşturabilir: kart oluşturma ayarlarında AnkiConnect\'i etkinleştirin ve bilgisayar adresini girin.';
-      case 'onboarding_anki_fsrs_title':
-        return 'Anki\'yi FSRS\'ye geçirin';
-      case 'onboarding_anki_fsrs_body':
-        return 'Anki, 30 yıllık SM-2 varsayılanından çok daha iyi bir planlayıcı olan FSRS ile birlikte gelir: daha az tekrarla daha iyi hatırlama. Anki\'de deste seçeneklerini açın ve FSRS\'yi açın (bir anahtar tüm koleksiyonu kapsar). Bu, Anki\'nin kendisinde yapılmalıdır.';
-      case 'onboarding_step_pack_browser_action':
-        return 'Tarayıcıda indir';
       case 'onboarding_anki_setup_android_hint':
         return 'AnkiDroid\'i yükleyin ve ilk çalıştırma kurulumunu tamamlamak için bir kez açın. Fushi\'ye dönün, ilk kartınızla birlikte açılan izin iletişim kutusunda İzin Ver\'e dokunun - AnkiDroid ayarlarında değişiklik gerekmez.';
       case 'onboarding_anki_install_addon_action':
@@ -258637,6 +265563,221 @@ extension on _StringsTr {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             'Seçili ${n} öğe daha geçerli filtre tarafından gizlendi ve işlenmeyecek.';
+      case 'download_direct_queue_section':
+        return 'Direct downloads';
+      case 'download_task_kind_all':
+        return 'All types';
+      case 'download_task_kind_filter':
+        return 'Filter by type';
+      case 'manga_online_series_empty':
+        return 'Bu seride hiç cilt yok.';
+      case 'sync_peer_book_delete_confirm':
+        return ({required Object name}) =>
+            '"${name}" eş cihazdan silinsin mi? Oradaki dosyaları ve okuma ilerlemesi kalıcı olarak kaldırılır ve bu cihazda kopyası yok. Bu işlem geri alınamaz.';
+      case 'sync_peer_video_delete_confirm':
+        return ({required Object name}) =>
+            '"${name}" eş cihazın kitaplığından kaldırılsın mı? Eş cihazın kendi içe aktardığı video dosyası korunur. Bu işlem geri alınamaz.';
+      case 'storage_entry_delete_files_confirm_body':
+        return 'Diskten hemen silinir. Kitaplığınızdaki hiçbir şey buna başvurmuyor — bunlar önbellek, dışa aktarılmış veya yeniden indirilebilir verilerdir.';
+      case 'manga_series_refresh':
+        return 'Bölümleri yenile';
+      case 'manga_series_refresh_failed':
+        return 'Kaynaktan yenilenemedi';
+      case 'manga_series_source_disabled':
+        return 'Bu kaynak yüklü değil veya devre dışı';
+      case 'manga_series_platform_unsupported':
+        return 'Bu kaynak bu platformda kullanılamıyor';
+      case 'manga_series_offline_hint':
+        return 'Bu cihazda kayıtlı bölümler gösteriliyor';
+      case 'manga_series_no_chapters':
+        return 'Henüz bölüm yok';
+      case 'manga_series_all_read':
+        return 'Tüm bölümler okundu';
+      case 'manga_series_sort_newest':
+        return 'Önce en yeni';
+      case 'manga_series_sort_oldest':
+        return 'Önce en eski';
+      case 'manga_series_unread_only':
+        return 'Yalnızca okunmamışlar';
+      case 'manga_series_mark_read':
+        return 'Okundu olarak işaretle';
+      case 'manga_series_mark_unread':
+        return 'Okunmadı olarak işaretle';
+      case 'manga_series_mark_previous_read':
+        return 'Bunu ve öncekileri okundu olarak işaretle';
+      case 'manga_series_local_volume':
+        return 'Yerel cilt';
+      case 'manga_series_volume_info':
+        return 'Cilt';
+      case 'manga_series_page_count':
+        return 'Sayfa';
+      case 'manga_series_chapters_action':
+        return 'Bölümler';
+      case 'manga_series_next_chapter':
+        return 'Sonraki bölüm';
+      case 'manga_series_previous_chapter':
+        return 'Önceki bölüm';
+      case 'manga_series_last_chapter_reached':
+        return 'Bu en yeni bölüm';
+      case 'manga_series_first_chapter_reached':
+        return 'Bu ilk bölüm';
+      case 'manga_series_open_series':
+        return 'Eser sayfası';
+      case 'manga_series_read_progress':
+        return ({required Object total, required Object page}) =>
+            '${total} sayfadan ${page}. sayfaya kadar okundu';
+      case 'manga_series_read_progress_partial':
+        return ({required Object page}) => '${page}. sayfaya kadar okundu';
+      case 'mihon_store_extension_count':
+        return ({required Object count}) => '${count} uzantı';
+      case 'mihon_extension_sources_more':
+        return ({required Object count}) => '${count} kaynağın tümünü göster';
+      case 'mihon_extension_sources_less':
+        return 'Daha az kaynak göster';
+      case 'options_website':
+        return 'Resmî web sitesini ziyaret et';
+      case 'video_setting_mpv_group_hdr':
+        return 'HDR';
+      case 'video_setting_hdr_tone_mapping':
+        return 'HDR ton eşleme';
+      case 'video_setting_hdr_tone_mapping_hint':
+        return 'Bir HDR kaynağı SDR ekrana sıkıştırılırken kullanılan eğri. “Otomatik” seçimi kaynak başına mpv’ye bırakır.';
+      case 'video_setting_hdr_compute_peak':
+        return 'Dinamik tepe algılama';
+      case 'video_setting_hdr_compute_peak_hint':
+        return 'Kaynağın üstverisine güvenmek yerine her karenin gerçek tepe parlaklığını ölçer. Parlak alanlar daha iyi olur, biraz GPU harcar.';
+      case 'video_setting_hdr_auto':
+        return 'Otomatik';
+      case 'video_setting_hdr_on':
+        return 'Açık';
+      case 'video_setting_hdr_off':
+        return 'Kapalı';
+      case 'video_discovery_cancel_downloads_title':
+        return 'İndirmeler iptal edilsin mi?';
+      case 'video_discovery_cancel_downloads_body':
+        return ({required Object n}) =>
+            'Bu yapım için ${n} indirme görevi durdurulacak. İndirilmiş parçalar diskte kalır; indirmeyi sonra yeniden başlatabilirsin.';
+      case 'video_discovery_cancel_downloads_failed':
+        return 'İndirme iptal edilemedi. Görev çoktan bitmiş olabilir ya da indirme arka ucu kullanılamıyor.';
+      case 'gal_hook_click_lookup':
+        return 'Aramak için bir kelimeye dokun';
+      case 'gal_hook_click_lookup_hint':
+        return 'Kapalı olduğunda altyazıya tıklamak hiçbir zaman arama başlatmaz — tıklama geçişi açıkken yanlışlıkla bir kelimeye denk gelmek istemediğinde kullanışlı.';
+      case 'gal_hook_lookup_trigger':
+        return 'Arama tetikleyicisi';
+      case 'gal_hook_lookup_trigger_hint':
+        return 'İmlecin altındaki kelimeyi hangi fare düğmesinin arayacağı. Yukarıdaki anahtardan bağımsızdır: dokunarak aramayı kapatıp yan düğmeyle arayabilirsin.';
+      case 'gal_hook_lookup_trigger_left':
+        return 'Left click';
+      case 'gal_hook_lookup_trigger_middle':
+        return 'Middle click';
+      case 'gal_hook_lookup_trigger_side':
+        return 'Side button';
+      case 'gal_hook_toolbar_auto_hide':
+        return 'Araç çubuğunu otomatik gizle';
+      case 'gal_hook_toolbar_auto_hide_hint':
+        return 'İmleç altyazı kutusuna gelene kadar araç çubuğunu gizler, LunaHook tarzı. Gizli gerçekten gizli demek — o pikseller oyuna geri döner.';
+      case 'gal_hook_passthrough_blocks_mouse':
+        return 'Tıklama geçişi açıkken altyazı yine tıklama alır';
+      case 'gal_hook_passthrough_blocks_mouse_hint':
+        return 'Açık: metin satırları tıklama almaya devam eder, böylece bir kelimeye dokunabilirsin. Kapalı: tüm katman fareye saydamdır — altındakine tıklarsın ama kelimelere dokunmak artık çalışmaz.';
+      case 'floating_lyric_topmost':
+        return 'Her zaman üstte tut';
+      case 'gal_hook_fold_progressive_lines':
+        return 'Bölünmüş diyalog satırlarını birleştir';
+      case 'gal_hook_fold_progressive_lines_hint':
+        return 'Bazı motorlar her tıklamada satırın tamamını yeniden çizer, bu yüzden tek bir satır birkaç kez yakalanır. Bu anlık görüntüleri tek satırda topla.';
+      case 'gal_hook_ingame_lookup_engine_unsupported':
+        return 'Bu oyun motoru henüz oyun içi sözlük aramasını desteklemiyor';
+      case 'gal_hook_ingame_lookup_version_unsupported':
+        return 'Bu oyun sürümü henüz desteklenenler listesinde değil';
+      case 'gal_hook_ingame_lookup_exe_hash_copy':
+        return 'Oyun çalıştırılabilir dosyasının SHA-256 değerini kopyala';
+      case 'gal_hook_ingame_lookup_exe_hash_unavailable':
+        return 'Oyun çalıştırılabilir dosyası okunamadı';
+      case 'gal_hook_ingame_lookup_exe_hash_copied':
+        return 'Çalıştırılabilir dosyanın SHA-256 değeri kopyalandı';
+      case 'download_tracker_section':
+        return 'Tracker aboneliği';
+      case 'download_tracker_auto_add':
+        return 'Abonelikteki trackerları yeni indirmelere otomatik ekle';
+      case 'download_tracker_auto_add_hint':
+        return 'Liste 6 saat önbellekte tutulur. Abonelik alınamazsa indirme engellenmez.';
+      case 'download_tracker_url':
+        return 'Abonelik adresi';
+      case 'download_tracker_refresh':
+        return 'Trackerları getir';
+      case 'download_tracker_preview_empty':
+        return 'Desteklenen HTTP, HTTPS ve UDP trackerlarını önizlemek için aboneliği getir.';
+      case 'download_tracker_preview_count':
+        return ({required Object count}) => '${count} tracker getirildi';
+      case 'download_tracker_fetch_failed':
+        return ({required Object message}) =>
+            'Trackerlar getirilemedi: ${message}';
+      case 'anki_connect_port_auto_fix':
+        return 'Boş bir bağlantı noktasına geç';
+      case 'anki_connect_port_auto_fix_hint':
+        return 'Boş bir bağlantı noktası seçip hem Hibiki\'ye hem de AnkiConnect eklenti yapılandırmasına yazar. Uygulamak için Anki\'yi yeniden başlatın.';
+      case 'anki_connect_port_auto_fix_done':
+        return ({required Object port}) =>
+            'AnkiConnect artık ${port} bağlantı noktasını kullanıyor. Anki\'yi yeniden başlatıp tekrar deneyin.';
+      case 'anki_connect_port_auto_fix_manual':
+        return ({required Object port}) =>
+            'Hibiki artık ${port} bağlantı noktasını kullanıyor ancak AnkiConnect eklenti yapılandırması bulunamadı. Anki\'de (Araçlar → Eklentiler → AnkiConnect → Yapılandırma) webBindPort değerini de ${port} yapıp Anki\'yi yeniden başlatın.';
+      case 'anki_connect_port_auto_fix_none':
+        return 'Bu makinede boş bağlantı noktası bulunamadı.';
+      case 'onboarding_action_badge_required':
+        return 'Zorunlu';
+      case 'onboarding_action_badge_recommended':
+        return 'Önerilir';
+      case 'onboarding_action_badge_optional':
+        return 'İsteğe bağlı';
+      case 'onboarding_pack_action_download_desc':
+        return 'Paketin tamamını arka planda indirir, ardından içe aktarır. İstediğin an iptal edebilirsin; bir dahaki sefere kaldığı yerden devam eder.';
+      case 'onboarding_pack_action_import_existing_desc':
+        return 'Paket zaten indirilmiş durumda; bu onu içe aktarır. Onay penceresinde «Birleştir» seçersen mevcut verilerine dokunulmaz.';
+      case 'onboarding_pack_action_pick_desc':
+        return 'Paketin zip dosyasını başka bir yerden aldın mı? Diskten içe aktar, indirmeyi tamamen atla.';
+      case 'onboarding_pack_action_website':
+        return 'Sitedeki indirme sayfasını aç';
+      case 'onboarding_pack_action_website_desc':
+        return 'Resmî siteyi tarayıcında açar. Paket bölümünde bir indirme yöneticisine verebileceğin parça bağlantıları var; sonra buraya dönüp «Yerel paket dosyası seç» ile indirdiğini içe aktar.';
+      case 'onboarding_pack_action_dictionary_desc':
+        return 'Japonca dışında bir dil mi öğreniyorsun? Paketi atla ve burada kendi dilinin sözlüklerini içe aktar.';
+      case 'onboarding_pack_action_audio_desc':
+        return 'Telaffuz seslerinin nereden geldiği. Paket Japonca ve İngilizceyi zaten kapsıyor; diğer diller için buradan çevrimiçi kaynak ekle.';
+      case 'onboarding_anki_action_test_desc':
+        return 'Fushi’nin Anki’ye ulaşıp ulaşamadığını denetler ve destelerinle not türlerini yükler. Henüz hiçbir şey oluşturulmaz.';
+      case 'onboarding_anki_action_refresh_desc':
+        return 'Desteleri ve not türlerini Anki’den yeniden yükler. Anki içinde yeni bir deste oluşturduktan sonra kullan.';
+      case 'onboarding_anki_action_get_ankidroid_desc':
+        return 'AnkiDroid’in mağaza sayfasını açar. Fushi kartlarını onun içine yazdığı için önce kurulu olması gerekir.';
+      case 'onboarding_anki_action_get_anki_desc':
+        return 'Anki’nin indirme sayfasını açar. Anki’yi kur ve kart üretirken açık bırak.';
+      case 'onboarding_anki_action_install_addon_desc':
+        return 'Birlikte gelen AnkiConnect eklentisini senin için Anki’ye açar; Fushi onunla konuşmasını buna borçlu. Sonrasında Anki’yi yeniden başlat.';
+      case 'onboarding_step_anki_action_desc':
+        return 'Kart şablonu, alan eşlemesi, ekran görüntüleri ve ses: yani üretilen kartın nasıl göründüğünün ayrıntıları. Yukarıdaki deste ve not türü başlamak için yeterli, bu yüzden buraya yalnızca kartların nasıl kurulduğunu değiştirmek istiyorsan gir.';
+      case 'onboarding_step_backup_action_desc':
+        return 'Bir yedekleme arka ucu seç ve oturum aç ki kitaplığın cihaz kaybını veya değişimini atlatsın.';
+      case 'onboarding_step_interconnect_action_desc':
+        return 'Bu cihazı diğer cihazlarınla eşler; tek bir kitaplığı paylaşır ve ilerlemeyi eşitler.';
+      case 'onboarding_step_extension_action_desc':
+        return 'Tarayıcı uzantısını nasıl kurup Fushi’ye bağlayacağını gösterir; böylece web sayfalarında da kelime arayabilirsin.';
+      case 'onboarding_step_fonts_action_desc':
+        return 'Kendi yazı tipi dosyalarını ekle ve her dilin hangisini kullanacağını seç.';
+      case 'onboarding_pack_sources_hint':
+        return 'Aynı anda GitHub’dan, resmî siteden ve bir yedek aynadan paralel parçalar hâlinde indirilir; her parça sağlama toplamıyla doğrulanır. Fushi kaynakları yol boyunca ölçer ve o an en hızlı olana daha çok parça verir, bu yüzden burada seçilecek bir şey yok.';
+      case 'video_setting_hdr_output':
+        return 'HDR / 10 bit çıkış';
+      case 'video_setting_hdr_output_hint':
+        return 'Yalnızca Windows. «Otomatik», HDR kaynakları yerel bir video penceresi üzerinden doğrudan HDR ekrana verir; «Her zaman» bu pencereyi tüm videolar için kullanır (10 bit çıkış); «Kapalı» standart işleyiciyi korur.';
+      case 'video_setting_hdr_output_auto':
+        return 'Otomatik';
+      case 'video_setting_hdr_output_always':
+        return 'Her zaman';
+      case 'video_setting_hdr_output_off':
+        return 'Kapalı';
       case 'video_ajatt_settings_hint':
         return 'Ücretsiz Japonca altyazı arşivi (kitsunekko yansıması). Hesap gerekmez; altyazı dosyaları GitHub\'dan indirilir.';
       case 'video_ajatt_enabled_hint':
@@ -266275,12 +273416,6 @@ extension on _StringsVi {
         return 'Nâng cao: sử dụng AnkiConnect trên thiết bị này';
       case 'onboarding_anki_mobile_ankiconnect_hint':
         return 'Thiết bị này cũng có thể tạo thẻ vào Anki đang chạy trên máy tính cùng mạng: bật AnkiConnect trong cài đặt tạo thẻ và nhập địa chỉ máy tính.';
-      case 'onboarding_anki_fsrs_title':
-        return 'Chuyển Anki sang FSRS';
-      case 'onboarding_anki_fsrs_body':
-        return 'Anki tích hợp sẵn FSRS, thuật toán lên lịch tốt hơn nhiều so với SM-2 mặc định 30 năm tuổi: ghi nhớ tốt hơn với ít lần ôn tập hơn. Trong Anki, mở tùy chọn bộ thẻ và bật FSRS (một công tắc áp dụng cho toàn bộ bộ sưu tập). Việc này phải được thực hiện trong chính Anki.';
-      case 'onboarding_step_pack_browser_action':
-        return 'Tải xuống trong trình duyệt';
       case 'onboarding_anki_setup_android_hint':
         return 'Cài đặt AnkiDroid và mở một lần để hoàn tất thiết lập ban đầu. Quay lại Fushi, chạm Cho phép trên hộp thoại quyền xuất hiện khi tạo thẻ đầu tiên - không cần thay đổi cài đặt AnkiDroid.';
       case 'onboarding_anki_install_addon_action':
@@ -266550,6 +273685,221 @@ extension on _StringsVi {
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) =>
             'Còn ${n} mục đã chọn bị ẩn bởi bộ lọc hiện tại và sẽ không được xử lý.';
+      case 'download_direct_queue_section':
+        return 'Direct downloads';
+      case 'download_task_kind_all':
+        return 'All types';
+      case 'download_task_kind_filter':
+        return 'Filter by type';
+      case 'manga_online_series_empty':
+        return 'Bộ truyện này không có tập nào.';
+      case 'sync_peer_book_delete_confirm':
+        return ({required Object name}) =>
+            'Xóa "${name}" khỏi thiết bị đối tác? Tệp và tiến độ đọc trên thiết bị đó sẽ bị xóa vĩnh viễn, và máy này không có bản sao. Không thể hoàn tác.';
+      case 'sync_peer_video_delete_confirm':
+        return ({required Object name}) =>
+            'Gỡ "${name}" khỏi thư viện của thiết bị đối tác? Tệp video do thiết bị đó tự nhập vẫn được giữ lại. Không thể hoàn tác.';
+      case 'storage_entry_delete_files_confirm_body':
+        return 'Sẽ bị xóa khỏi ổ đĩa ngay lập tức. Không có mục nào trong thư viện tham chiếu tới nó — đây là dữ liệu bộ nhớ đệm, đã xuất hoặc có thể tải lại.';
+      case 'manga_series_refresh':
+        return 'Làm mới chương';
+      case 'manga_series_refresh_failed':
+        return 'Không thể làm mới từ nguồn';
+      case 'manga_series_source_disabled':
+        return 'Nguồn này chưa được cài đặt hoặc đã bị tắt';
+      case 'manga_series_platform_unsupported':
+        return 'Nguồn này không khả dụng trên nền tảng này';
+      case 'manga_series_offline_hint':
+        return 'Đang hiển thị các chương đã lưu trên thiết bị này';
+      case 'manga_series_no_chapters':
+        return 'Chưa có chương nào';
+      case 'manga_series_all_read':
+        return 'Đã đọc hết tất cả các chương';
+      case 'manga_series_sort_newest':
+        return 'Mới nhất trước';
+      case 'manga_series_sort_oldest':
+        return 'Cũ nhất trước';
+      case 'manga_series_unread_only':
+        return 'Chỉ chưa đọc';
+      case 'manga_series_mark_read':
+        return 'Đánh dấu đã đọc';
+      case 'manga_series_mark_unread':
+        return 'Đánh dấu chưa đọc';
+      case 'manga_series_mark_previous_read':
+        return 'Đánh dấu chương này và trước đó là đã đọc';
+      case 'manga_series_local_volume':
+        return 'Tập cục bộ';
+      case 'manga_series_volume_info':
+        return 'Tập';
+      case 'manga_series_page_count':
+        return 'Số trang';
+      case 'manga_series_chapters_action':
+        return 'Chương';
+      case 'manga_series_next_chapter':
+        return 'Chương sau';
+      case 'manga_series_previous_chapter':
+        return 'Chương trước';
+      case 'manga_series_last_chapter_reached':
+        return 'Đây là chương mới nhất';
+      case 'manga_series_first_chapter_reached':
+        return 'Đây là chương đầu tiên';
+      case 'manga_series_open_series':
+        return 'Trang tác phẩm';
+      case 'manga_series_read_progress':
+        return ({required Object page, required Object total}) =>
+            'Đã đọc đến trang ${page} trên ${total}';
+      case 'manga_series_read_progress_partial':
+        return ({required Object page}) => 'Đã đọc đến trang ${page}';
+      case 'mihon_store_extension_count':
+        return ({required Object count}) => '${count} tiện ích';
+      case 'mihon_extension_sources_more':
+        return ({required Object count}) => 'Hiện tất cả ${count} nguồn';
+      case 'mihon_extension_sources_less':
+        return 'Hiện ít nguồn hơn';
+      case 'options_website':
+        return 'Truy cập trang web chính thức';
+      case 'video_setting_mpv_group_hdr':
+        return 'HDR';
+      case 'video_setting_hdr_tone_mapping':
+        return 'Ánh xạ tông màu HDR';
+      case 'video_setting_hdr_tone_mapping_hint':
+        return 'Đường cong dùng khi phải nén nguồn HDR xuống màn hình SDR. “Tự động” để mpv chọn theo từng nguồn.';
+      case 'video_setting_hdr_compute_peak':
+        return 'Phát hiện đỉnh động';
+      case 'video_setting_hdr_compute_peak_hint':
+        return 'Đo độ sáng đỉnh thực của từng khung hình thay vì tin vào siêu dữ liệu của nguồn. Vùng sáng đẹp hơn, tốn thêm chút GPU.';
+      case 'video_setting_hdr_auto':
+        return 'Tự động';
+      case 'video_setting_hdr_on':
+        return 'Bật';
+      case 'video_setting_hdr_off':
+        return 'Tắt';
+      case 'video_discovery_cancel_downloads_title':
+        return 'Huỷ tải xuống?';
+      case 'video_discovery_cancel_downloads_body':
+        return ({required Object n}) =>
+            '${n} tác vụ tải xuống của tác phẩm này sẽ bị dừng. Các phần đã tải vẫn nằm trên ổ đĩa; bạn có thể tải lại sau.';
+      case 'video_discovery_cancel_downloads_failed':
+        return 'Không huỷ được tải xuống. Tác vụ có thể đã xong, hoặc backend tải xuống hiện không khả dụng.';
+      case 'gal_hook_click_lookup':
+        return 'Chạm vào từ để tra nghĩa';
+      case 'gal_hook_click_lookup_hint':
+        return 'Tắt nghĩa là bấm vào phụ đề sẽ không bao giờ tra từ — hữu ích khi bật xuyên chuột và bạn không muốn lỡ tay trúng một từ.';
+      case 'gal_hook_lookup_trigger':
+        return 'Nút tra từ';
+      case 'gal_hook_lookup_trigger_hint':
+        return 'Nút chuột nào sẽ tra từ dưới con trỏ. Độc lập với công tắc phía trên: bạn có thể tắt chạm-để-tra mà vẫn tra bằng nút bên hông.';
+      case 'gal_hook_lookup_trigger_left':
+        return 'Left click';
+      case 'gal_hook_lookup_trigger_middle':
+        return 'Middle click';
+      case 'gal_hook_lookup_trigger_side':
+        return 'Side button';
+      case 'gal_hook_toolbar_auto_hide':
+        return 'Tự ẩn thanh công cụ';
+      case 'gal_hook_toolbar_auto_hide_hint':
+        return 'Ẩn thanh công cụ cho tới khi con trỏ chạm vào khung phụ đề, kiểu LunaHook. Ẩn là ẩn thật — số điểm ảnh đó trả lại cho game.';
+      case 'gal_hook_passthrough_blocks_mouse':
+        return 'Phụ đề vẫn nhận nhấp chuột khi xuyên chuột';
+      case 'gal_hook_passthrough_blocks_mouse_hint':
+        return 'Bật: các dòng chữ vẫn nhận nhấp chuột nên bạn chạm được vào từ. Tắt: toàn bộ lớp phủ trong suốt với chuột — bạn bấm được thứ bên dưới, nhưng chạm vào từ không còn tác dụng.';
+      case 'floating_lyric_topmost':
+        return 'Luôn hiển thị trên cùng';
+      case 'gal_hook_fold_progressive_lines':
+        return 'Gộp các dòng thoại bị chia nhỏ';
+      case 'gal_hook_fold_progressive_lines_hint':
+        return 'Một số engine vẽ lại cả dòng mỗi lần nhấp, nên cùng một dòng bị bắt nhiều lần. Gộp các ảnh chụp đó thành một dòng.';
+      case 'gal_hook_ingame_lookup_engine_unsupported':
+        return 'Engine trò chơi này chưa hỗ trợ tra từ trong trò chơi';
+      case 'gal_hook_ingame_lookup_version_unsupported':
+        return 'Phiên bản trò chơi này chưa có trong danh sách được hỗ trợ';
+      case 'gal_hook_ingame_lookup_exe_hash_copy':
+        return 'Sao chép SHA-256 của tệp thực thi trò chơi';
+      case 'gal_hook_ingame_lookup_exe_hash_unavailable':
+        return 'Không đọc được tệp thực thi trò chơi';
+      case 'gal_hook_ingame_lookup_exe_hash_copied':
+        return 'Đã sao chép SHA-256 của tệp thực thi';
+      case 'download_tracker_section':
+        return 'Đăng ký tracker';
+      case 'download_tracker_auto_add':
+        return 'Tự động thêm tracker từ đăng ký vào các tải xuống mới';
+      case 'download_tracker_auto_add_hint':
+        return 'Danh sách được lưu đệm trong 6 giờ. Việc lấy đăng ký thất bại sẽ không chặn tải xuống.';
+      case 'download_tracker_url':
+        return 'URL đăng ký';
+      case 'download_tracker_refresh':
+        return 'Lấy tracker';
+      case 'download_tracker_preview_empty':
+        return 'Lấy đăng ký để xem trước các tracker HTTP, HTTPS và UDP được hỗ trợ.';
+      case 'download_tracker_preview_count':
+        return ({required Object count}) => 'Đã lấy ${count} tracker';
+      case 'download_tracker_fetch_failed':
+        return ({required Object message}) =>
+            'Không lấy được tracker: ${message}';
+      case 'anki_connect_port_auto_fix':
+        return 'Đổi sang cổng còn trống';
+      case 'anki_connect_port_auto_fix_hint':
+        return 'Chọn một cổng còn trống rồi ghi vào cả Hibiki lẫn cấu hình tiện ích AnkiConnect. Khởi động lại Anki để áp dụng.';
+      case 'anki_connect_port_auto_fix_done':
+        return ({required Object port}) =>
+            'AnkiConnect đã chuyển sang cổng ${port}. Hãy khởi động lại Anki rồi thử lại.';
+      case 'anki_connect_port_auto_fix_manual':
+        return ({required Object port}) =>
+            'Hibiki hiện dùng cổng ${port}, nhưng không tìm thấy cấu hình tiện ích AnkiConnect. Hãy đặt webBindPort thành ${port} trong Anki (Công cụ → Tiện ích → AnkiConnect → Cấu hình) rồi khởi động lại Anki.';
+      case 'anki_connect_port_auto_fix_none':
+        return 'Không tìm thấy cổng nào còn trống trên máy này.';
+      case 'onboarding_action_badge_required':
+        return 'Bắt buộc';
+      case 'onboarding_action_badge_recommended':
+        return 'Nên làm';
+      case 'onboarding_action_badge_optional':
+        return 'Tuỳ chọn';
+      case 'onboarding_pack_action_download_desc':
+        return 'Tải toàn bộ gói ở chế độ nền rồi nhập vào. Có thể huỷ bất cứ lúc nào; lần sau sẽ tải tiếp từ chỗ đã dừng.';
+      case 'onboarding_pack_action_import_existing_desc':
+        return 'Gói đã tải xong; thao tác này nhập nó vào. Chọn «Gộp» trong hộp xác nhận thì dữ liệu hiện có của bạn sẽ được giữ nguyên.';
+      case 'onboarding_pack_action_pick_desc':
+        return 'Đã lấy được tệp zip của gói từ nơi khác? Nhập từ ổ đĩa và bỏ qua hoàn toàn phần tải về.';
+      case 'onboarding_pack_action_website':
+        return 'Mở trang tải về trên website';
+      case 'onboarding_pack_action_website_desc':
+        return 'Mở trang chính thức trong trình duyệt. Mục về gói ở đó liệt kê các liên kết theo từng phần để bạn đưa cho trình quản lý tải; xong rồi quay lại đây và dùng «Chọn tệp gói trên máy» để nhập.';
+      case 'onboarding_pack_action_dictionary_desc':
+        return 'Bạn học ngôn ngữ khác ngoài tiếng Nhật? Bỏ qua gói và nhập từ điển cho ngôn ngữ của bạn ở đây.';
+      case 'onboarding_pack_action_audio_desc':
+        return 'Âm thanh phát âm lấy từ đâu. Gói đã bao gồm tiếng Nhật và tiếng Anh; các ngôn ngữ khác thì thêm nguồn trực tuyến ở đây.';
+      case 'onboarding_anki_action_test_desc':
+        return 'Kiểm tra xem Fushi có kết nối được với Anki không và nạp các bộ thẻ cùng loại ghi chú của bạn. Chưa tạo ra thứ gì cả.';
+      case 'onboarding_anki_action_refresh_desc':
+        return 'Nạp lại bộ thẻ và loại ghi chú từ Anki. Dùng sau khi bạn tạo bộ thẻ mới trong Anki.';
+      case 'onboarding_anki_action_get_ankidroid_desc':
+        return 'Mở trang cửa hàng của AnkiDroid. Fushi ghi thẻ vào đó nên phải cài nó trước.';
+      case 'onboarding_anki_action_get_anki_desc':
+        return 'Mở trang tải Anki. Cài Anki và để nó chạy trong lúc bạn tạo thẻ.';
+      case 'onboarding_anki_action_install_addon_desc':
+        return 'Giải nén tiện ích AnkiConnect đi kèm vào Anki giúp bạn — đó chính là thứ cho phép Fushi nói chuyện với Anki. Xong rồi khởi động lại Anki.';
+      case 'onboarding_step_anki_action_desc':
+        return 'Mẫu thẻ, ánh xạ trường, ảnh chụp màn hình và âm thanh: tức là chi tiết về hình hài của tấm thẻ được tạo ra. Bộ thẻ và loại ghi chú ở trên là đủ để bắt đầu, nên chỉ mở phần này khi bạn muốn đổi cách dựng thẻ.';
+      case 'onboarding_step_backup_action_desc':
+        return 'Chọn nơi sao lưu và đăng nhập, để thư viện của bạn sống sót khi mất máy hoặc đổi máy.';
+      case 'onboarding_step_interconnect_action_desc':
+        return 'Ghép nối thiết bị này với các thiết bị khác của bạn để dùng chung một thư viện và đồng bộ tiến độ.';
+      case 'onboarding_step_extension_action_desc':
+        return 'Hướng dẫn cách cài tiện ích trình duyệt và kết nối nó với Fushi, để bạn tra từ ngay trên trang web.';
+      case 'onboarding_step_fonts_action_desc':
+        return 'Thêm tệp phông chữ của riêng bạn và chọn phông cho từng ngôn ngữ.';
+      case 'onboarding_pack_sources_hint':
+        return 'Được tải song song theo từng phần, đồng thời từ GitHub, trang chính thức và một máy chủ gương dự phòng, mỗi phần đều được kiểm tra checksum. Fushi đo tốc độ các nguồn ngay trong lúc tải và giao nhiều phần hơn cho nguồn đang nhanh nhất, nên ở đây không có gì để chọn.';
+      case 'video_setting_hdr_output':
+        return 'Đầu ra HDR / 10 bit';
+      case 'video_setting_hdr_output_hint':
+        return 'Chỉ trên Windows. «Tự động» đưa nguồn HDR thẳng tới màn hình HDR qua một cửa sổ video gốc; «Luôn luôn» dùng cửa sổ đó cho mọi video (đầu ra 10 bit); «Tắt» giữ nguyên bộ kết xuất tiêu chuẩn.';
+      case 'video_setting_hdr_output_auto':
+        return 'Tự động';
+      case 'video_setting_hdr_output_always':
+        return 'Luôn luôn';
+      case 'video_setting_hdr_output_off':
+        return 'Tắt';
       case 'video_ajatt_settings_hint':
         return 'Kho phụ đề tiếng Nhật miễn phí (bản sao kitsunekko). Không cần tài khoản; tệp phụ đề tải từ GitHub.';
       case 'video_ajatt_enabled_hint':
@@ -274126,12 +281476,6 @@ extension on _StringsZhCn {
         return '高级：本机改用 AnkiConnect 连电脑';
       case 'onboarding_anki_mobile_ankiconnect_hint':
         return '本机也能把卡制进同一局域网里电脑上的 Anki：在制卡设置里开启「改用 AnkiConnect」并填电脑地址。';
-      case 'onboarding_anki_fsrs_title':
-        return '把 Anki 算法换成 FSRS';
-      case 'onboarding_anki_fsrs_body':
-        return 'Anki 内置的 FSRS 算法远好于默认的 30 年前的 SM-2：记得更牢、复习量更少。请在 Anki 的 牌组选项 里打开 FSRS 开关（开一次全局生效）。这一步只能在 Anki 内手动完成。';
-      case 'onboarding_step_pack_browser_action':
-        return '浏览器下载';
       case 'onboarding_anki_setup_android_hint':
         return '安装 AnkiDroid 并打开一次完成初始化。回到 Fushi 首次制卡时，在弹出的授权框里点「允许」即可——不需要去 AnkiDroid 设置里改任何开关。';
       case 'onboarding_anki_install_addon_action':
@@ -274397,6 +281741,220 @@ extension on _StringsZhCn {
         return ({required Object n}) => '有 ${n} 个本地文件删除失败，可能正在被使用';
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) => '另有 ${n} 项被当前筛选隐藏，本次不会处理。';
+      case 'download_direct_queue_section':
+        return '直链下载';
+      case 'download_task_kind_all':
+        return '全部类型';
+      case 'download_task_kind_filter':
+        return '按类型筛选';
+      case 'manga_online_series_empty':
+        return '这个系列没有可下载的卷。';
+      case 'sync_peer_book_delete_confirm':
+        return ({required Object name}) =>
+            '确定从对端设备删除「${name}」吗？对端上的文件与阅读进度会被永久删除，本机没有副本，此操作不可撤销。';
+      case 'sync_peer_video_delete_confirm':
+        return ({required Object name}) =>
+            '确定从对端设备的媒体库移除「${name}」吗？对端自己导入的视频文件会保留，此操作不可撤销。';
+      case 'storage_entry_delete_files_confirm_body':
+        return '将立即从磁盘删除。媒体库里没有条目引用它——这里放的是缓存、导出或可重新获取的数据。';
+      case 'manga_series_refresh':
+        return '刷新章节';
+      case 'manga_series_refresh_failed':
+        return '无法从来源刷新';
+      case 'manga_series_source_disabled':
+        return '该来源未安装或已停用';
+      case 'manga_series_platform_unsupported':
+        return '该来源运行时在本平台不可用';
+      case 'manga_series_offline_hint':
+        return '显示的是本机已保存的章节';
+      case 'manga_series_no_chapters':
+        return '还没有章节';
+      case 'manga_series_all_read':
+        return '所有章节都已读完';
+      case 'manga_series_sort_newest':
+        return '最新在前';
+      case 'manga_series_sort_oldest':
+        return '最早在前';
+      case 'manga_series_unread_only':
+        return '只看未读';
+      case 'manga_series_mark_read':
+        return '标记为已读';
+      case 'manga_series_mark_unread':
+        return '标记为未读';
+      case 'manga_series_mark_previous_read':
+        return '标记此章及更早为已读';
+      case 'manga_series_local_volume':
+        return '本地卷';
+      case 'manga_series_volume_info':
+        return '卷信息';
+      case 'manga_series_page_count':
+        return '页数';
+      case 'manga_series_chapters_action':
+        return '章节';
+      case 'manga_series_next_chapter':
+        return '下一章';
+      case 'manga_series_previous_chapter':
+        return '上一章';
+      case 'manga_series_last_chapter_reached':
+        return '已经是最新一章了';
+      case 'manga_series_first_chapter_reached':
+        return '已经是第一章了';
+      case 'manga_series_open_series':
+        return '作品页';
+      case 'manga_series_read_progress':
+        return ({required Object page, required Object total}) =>
+            '读到第 ${page}/${total} 页';
+      case 'manga_series_read_progress_partial':
+        return ({required Object page}) => '读到第 ${page} 页';
+      case 'mihon_store_extension_count':
+        return ({required Object count}) => '${count} 个扩展';
+      case 'mihon_extension_sources_more':
+        return ({required Object count}) => '展开全部 ${count} 个源';
+      case 'mihon_extension_sources_less':
+        return '收起源列表';
+      case 'options_website':
+        return '访问官网';
+      case 'video_setting_mpv_group_hdr':
+        return 'HDR';
+      case 'video_setting_hdr_tone_mapping':
+        return 'HDR 色调映射';
+      case 'video_setting_hdr_tone_mapping_hint':
+        return '把 HDR 片源压到 SDR 屏幕上时用的曲线。自动 = 交给 mpv 按片源挑。';
+      case 'video_setting_hdr_compute_peak':
+        return '动态峰值检测';
+      case 'video_setting_hdr_compute_peak_hint':
+        return '逐帧测量真实峰值亮度，而不是相信片源元数据。高光更准，但会占一点 GPU。';
+      case 'video_setting_hdr_auto':
+        return '自动';
+      case 'video_setting_hdr_on':
+        return '开';
+      case 'video_setting_hdr_off':
+        return '关';
+      case 'video_discovery_cancel_downloads_title':
+        return '取消下载？';
+      case 'video_discovery_cancel_downloads_body':
+        return ({required Object n}) =>
+            '本作品有 ${n} 个下载任务会被停止。已下载的分片仍保留在磁盘上，之后可以重新开始下载。';
+      case 'video_discovery_cancel_downloads_failed':
+        return '取消下载失败。任务可能已经结束，或下载后端当前不可用。';
+      case 'gal_hook_click_lookup':
+        return '单击文字查词';
+      case 'gal_hook_click_lookup_hint':
+        return '关掉后点台词不再触发查词。开着鼠标穿透时尤其有用——不想一不小心点到单词。';
+      case 'gal_hook_lookup_trigger':
+        return '查词触发方式';
+      case 'gal_hook_lookup_trigger_hint':
+        return '用哪个鼠标键查指针底下的词。与上面的开关正交：可以关掉单击查词，仍用侧键查。';
+      case 'gal_hook_lookup_trigger_left':
+        return '左键单击';
+      case 'gal_hook_lookup_trigger_middle':
+        return '鼠标中键';
+      case 'gal_hook_lookup_trigger_side':
+        return '鼠标侧键';
+      case 'gal_hook_toolbar_auto_hide':
+        return '自动隐藏功能栏';
+      case 'gal_hook_toolbar_auto_hide_hint':
+        return '平时把功能栏整条隐藏，鼠标移到台词框附近才现身（LunaHook 那样）。隐藏就是真隐藏，那块像素还给游戏。';
+      case 'gal_hook_passthrough_blocks_mouse':
+        return '穿透时台词仍拦截点击';
+      case 'gal_hook_passthrough_blocks_mouse_hint':
+        return '开：文字行仍接鼠标，能点字查词。关：整个浮窗对鼠标彻底透明，能点到底下的东西，但点字查词也就没了。';
+      case 'floating_lyric_topmost':
+        return '保持置顶';
+      case 'gal_hook_fold_progressive_lines':
+        return '合并分段吐出的台词';
+      case 'gal_hook_fold_progressive_lines_hint':
+        return '有些引擎每次点击都重绘整行，一句台词会被抓成好几条。开启后把同一句的多次快照折成一条。';
+      case 'gal_hook_ingame_lookup_engine_unsupported':
+        return '当前游戏引擎不支持游戏内查词';
+      case 'gal_hook_ingame_lookup_version_unsupported':
+        return '当前游戏版本未在支持列表中';
+      case 'gal_hook_ingame_lookup_exe_hash_copy':
+        return '复制游戏 exe 的 SHA-256';
+      case 'gal_hook_ingame_lookup_exe_hash_unavailable':
+        return '无法读取游戏 exe（可能权限不足）';
+      case 'gal_hook_ingame_lookup_exe_hash_copied':
+        return '已复制 exe 的 SHA-256';
+      case 'download_tracker_section':
+        return 'Tracker 订阅';
+      case 'download_tracker_auto_add':
+        return '自动把订阅 Tracker 加到新下载';
+      case 'download_tracker_auto_add_hint':
+        return '列表缓存 6 小时；订阅获取失败不会阻止下载任务创建。';
+      case 'download_tracker_url':
+        return '订阅地址';
+      case 'download_tracker_refresh':
+        return '获取 Tracker';
+      case 'download_tracker_preview_empty':
+        return '获取订阅后可预览受支持的 HTTP、HTTPS 和 UDP Tracker。';
+      case 'download_tracker_preview_count':
+        return ({required Object count}) => '已获取 ${count} 个 Tracker';
+      case 'download_tracker_fetch_failed':
+        return ({required Object message}) => '获取 Tracker 失败：${message}';
+      case 'anki_connect_port_auto_fix':
+        return '换一个空闲端口';
+      case 'anki_connect_port_auto_fix_hint':
+        return '自动挑一个空闲端口，同时写进 Hibiki 和 Anki 的 AnkiConnect 插件配置。改完重启 Anki 生效。';
+      case 'anki_connect_port_auto_fix_done':
+        return ({required Object port}) =>
+            'AnkiConnect 端口已改为 ${port}。请重启 Anki 后重试。';
+      case 'anki_connect_port_auto_fix_manual':
+        return ({required Object port}) =>
+            'Hibiki 已改用端口 ${port}，但没找到 AnkiConnect 的插件配置。请在 Anki 的「工具 → 插件 → AnkiConnect → 配置」里把 webBindPort 也改成 ${port}，然后重启 Anki。';
+      case 'anki_connect_port_auto_fix_none':
+        return '本机没有找到空闲端口。';
+      case 'onboarding_action_badge_required':
+        return '必做';
+      case 'onboarding_action_badge_recommended':
+        return '推荐';
+      case 'onboarding_action_badge_optional':
+        return '可选';
+      case 'onboarding_pack_action_download_desc':
+        return '在后台下载整个推荐包，下完自动进入导入。随时可以取消，下次从断点续传。';
+      case 'onboarding_pack_action_import_existing_desc':
+        return '包已经下好了，这里直接导入。确认框里选「合并到现有库」不会动你已有的数据。';
+      case 'onboarding_pack_action_pick_desc':
+        return '已经从别处拿到包的 zip？从硬盘导入，整段下载都可以跳过。';
+      case 'onboarding_pack_action_website':
+        return '在官网下载页打开';
+      case 'onboarding_pack_action_website_desc':
+        return '在浏览器打开官网。那里的推荐包一节给出可以喂给下载工具的分片直链；下完回到这里，用「选择本地包文件」导入。';
+      case 'onboarding_pack_action_dictionary_desc':
+        return '学日语以外的语言？跳过推荐包，在这里按语言导入词典。';
+      case 'onboarding_pack_action_audio_desc':
+        return '发音音频从哪里来。推荐包已经含日语和英语；其它语言在这里加在线来源。';
+      case 'onboarding_anki_action_test_desc':
+        return '检查 Fushi 能不能连上 Anki，并把你的牌组和笔记类型拉过来。这一步不会创建任何东西。';
+      case 'onboarding_anki_action_refresh_desc':
+        return '重新从 Anki 拉牌组和笔记类型。在 Anki 里新建了牌组之后点它。';
+      case 'onboarding_anki_action_get_ankidroid_desc':
+        return '打开 AnkiDroid 的商店页。Fushi 的卡片写进它里面，得先装上。';
+      case 'onboarding_anki_action_get_anki_desc':
+        return '打开 Anki 的下载页。装好 Anki，制卡时让它开着。';
+      case 'onboarding_anki_action_install_addon_desc':
+        return '把内置的 AnkiConnect 插件解压进 Anki——Fushi 靠它和 Anki 通话。装完重启 Anki。';
+      case 'onboarding_step_anki_action_desc':
+        return '卡片模板、字段映射、截图和音频——也就是「做出来的卡长什么样」。上面选好牌组和笔记类型就能开始制卡了，想改卡片怎么做才需要进来。';
+      case 'onboarding_step_backup_action_desc':
+        return '选备份后端并登录，换机器或丢设备时库还在。';
+      case 'onboarding_step_interconnect_action_desc':
+        return '把这台设备和你的其它设备配对，共享同一个库并同步进度。';
+      case 'onboarding_step_extension_action_desc':
+        return '告诉你怎么装浏览器扩展并连上 Fushi，之后在网页上也能查词。';
+      case 'onboarding_step_fonts_action_desc':
+        return '导入自己的字体文件，并给每种语言指定用哪个。';
+      case 'onboarding_pack_sources_hint':
+        return '同时从 GitHub、官网和备用镜像分片并发下载，每片都校验。下载过程中会实测各来源速度，哪家快就多分给哪家，所以这里不用你选。';
+      case 'video_setting_hdr_output':
+        return 'HDR / 10-bit 输出';
+      case 'video_setting_hdr_output_hint':
+        return '仅 Windows。自动：显示器开着 HDR 且片源是 HDR 时经原生视频窗口直通；始终：所有视频都走原生窗口（10-bit 输出）；关闭：沿用常规渲染。';
+      case 'video_setting_hdr_output_auto':
+        return '自动';
+      case 'video_setting_hdr_output_always':
+        return '始终';
+      case 'video_setting_hdr_output_off':
+        return '关闭';
       case 'video_ajatt_settings_hint':
         return '免费日语字幕库（kitsunekko 镜像）。无需账号；字幕文件从 GitHub 下载。';
       case 'video_ajatt_enabled_hint':
@@ -281974,12 +289532,6 @@ extension on _StringsZhHk {
         return '高級：本機改用 AnkiConnect 連電腦';
       case 'onboarding_anki_mobile_ankiconnect_hint':
         return '本機也能把卡製進同一局域網裡電腦上的 Anki：在製卡設定裡開啟「改用 AnkiConnect」並填電腦地址。';
-      case 'onboarding_anki_fsrs_title':
-        return '把 Anki 算法換成 FSRS';
-      case 'onboarding_anki_fsrs_body':
-        return 'Anki 內置的 FSRS 算法遠好於預設的 30 年前的 SM-2：記得更牢、復習量更少。請在 Anki 的 牌組選項 裡打開 FSRS 開關（開一次全局生效）。這一步只能在 Anki 內手動完成。';
-      case 'onboarding_step_pack_browser_action':
-        return '瀏覽器下載';
       case 'onboarding_anki_setup_android_hint':
         return '安裝 AnkiDroid 並打開一次完成初始化。回到 Fushi 首次製卡時，在彈出的授權框裡點「允許」即可——不需要去 AnkiDroid 設定裡改任何開關。';
       case 'onboarding_anki_install_addon_action':
@@ -282245,6 +289797,220 @@ extension on _StringsZhHk {
         return ({required Object n}) => '有 ${n} 個本機檔案刪除失敗，可能正在被使用';
       case 'batch_hidden_by_filter_note':
         return ({required Object n}) => '另有 ${n} 項被目前篩選隱藏，今次不會處理。';
+      case 'download_direct_queue_section':
+        return '直鏈下載';
+      case 'download_task_kind_all':
+        return '全部類型';
+      case 'download_task_kind_filter':
+        return '按類型篩選';
+      case 'manga_online_series_empty':
+        return '這個系列沒有可下載的卷。';
+      case 'sync_peer_book_delete_confirm':
+        return ({required Object name}) =>
+            '確定從對端裝置刪除「${name}」嗎？對端上的檔案與閱讀進度會被永久刪除，本機沒有副本，此操作不可撤銷。';
+      case 'sync_peer_video_delete_confirm':
+        return ({required Object name}) =>
+            '確定從對端裝置的媒體庫移除「${name}」嗎？對端自己匯入的影片檔案會保留，此操作不可撤銷。';
+      case 'storage_entry_delete_files_confirm_body':
+        return '將立即從磁碟刪除。媒體庫裡沒有項目引用它——這裡放的是快取、匯出或可重新取得的資料。';
+      case 'manga_series_refresh':
+        return '重新整理章節';
+      case 'manga_series_refresh_failed':
+        return '無法從來源重新整理';
+      case 'manga_series_source_disabled':
+        return '此來源未安裝或已停用';
+      case 'manga_series_platform_unsupported':
+        return '此來源執行階段在本平台無法使用';
+      case 'manga_series_offline_hint':
+        return '顯示的是本機已儲存的章節';
+      case 'manga_series_no_chapters':
+        return '還沒有章節';
+      case 'manga_series_all_read':
+        return '所有章節都已讀完';
+      case 'manga_series_sort_newest':
+        return '最新在前';
+      case 'manga_series_sort_oldest':
+        return '最早在前';
+      case 'manga_series_unread_only':
+        return '只看未讀';
+      case 'manga_series_mark_read':
+        return '標記為已讀';
+      case 'manga_series_mark_unread':
+        return '標記為未讀';
+      case 'manga_series_mark_previous_read':
+        return '標記此章及更早為已讀';
+      case 'manga_series_local_volume':
+        return '本機卷';
+      case 'manga_series_volume_info':
+        return '卷資訊';
+      case 'manga_series_page_count':
+        return '頁數';
+      case 'manga_series_chapters_action':
+        return '章節';
+      case 'manga_series_next_chapter':
+        return '下一章';
+      case 'manga_series_previous_chapter':
+        return '上一章';
+      case 'manga_series_last_chapter_reached':
+        return '已經是最新一章了';
+      case 'manga_series_first_chapter_reached':
+        return '已經是第一章了';
+      case 'manga_series_open_series':
+        return '作品頁';
+      case 'manga_series_read_progress':
+        return ({required Object page, required Object total}) =>
+            '讀到第 ${page}/${total} 頁';
+      case 'manga_series_read_progress_partial':
+        return ({required Object page}) => '讀到第 ${page} 頁';
+      case 'mihon_store_extension_count':
+        return ({required Object count}) => '${count} 個擴充';
+      case 'mihon_extension_sources_more':
+        return ({required Object count}) => '顯示全部 ${count} 個來源';
+      case 'mihon_extension_sources_less':
+        return '顯示較少來源';
+      case 'options_website':
+        return '瀏覽官方網站';
+      case 'video_setting_mpv_group_hdr':
+        return 'HDR';
+      case 'video_setting_hdr_tone_mapping':
+        return 'HDR 色調映射';
+      case 'video_setting_hdr_tone_mapping_hint':
+        return '把 HDR 片源壓進 SDR 螢幕時用的曲線。自動 = 交給 mpv 按片源決定。';
+      case 'video_setting_hdr_compute_peak':
+        return '動態峰值偵測';
+      case 'video_setting_hdr_compute_peak_hint':
+        return '逐格量實際峰值亮度，而不是信片源中繼資料。高光更準，但會佔一點 GPU。';
+      case 'video_setting_hdr_auto':
+        return '自動';
+      case 'video_setting_hdr_on':
+        return '開';
+      case 'video_setting_hdr_off':
+        return '關';
+      case 'video_discovery_cancel_downloads_title':
+        return '取消下載？';
+      case 'video_discovery_cancel_downloads_body':
+        return ({required Object n}) =>
+            '本作品有 ${n} 個下載任務會被停止。已下載的分片仍保留在磁碟上，之後可以重新開始下載。';
+      case 'video_discovery_cancel_downloads_failed':
+        return '取消下載失敗。任務可能已經結束，或下載後端目前無法使用。';
+      case 'gal_hook_click_lookup':
+        return '點字查詞';
+      case 'gal_hook_click_lookup_hint':
+        return '關掉之後，點字幕不會查詞——配合點擊穿透使用，免得不小心點到字。';
+      case 'gal_hook_lookup_trigger':
+        return '查詞觸發鍵';
+      case 'gal_hook_lookup_trigger_hint':
+        return '用哪個滑鼠鍵查指標下的字。與上面那個開關互相獨立：可以關掉點字查詞，仍用側鍵查。';
+      case 'gal_hook_lookup_trigger_left':
+        return 'Left click';
+      case 'gal_hook_lookup_trigger_middle':
+        return 'Middle click';
+      case 'gal_hook_lookup_trigger_side':
+        return 'Side button';
+      case 'gal_hook_toolbar_auto_hide':
+        return '自動隱藏功能欄';
+      case 'gal_hook_toolbar_auto_hide_hint':
+        return '指標移到字幕框才顯示功能欄（LunaHook 那種）。隱藏就是真的隱藏——那塊像素還給遊戲。';
+      case 'gal_hook_passthrough_blocks_mouse':
+        return '穿透時字幕仍接點擊';
+      case 'gal_hook_passthrough_blocks_mouse_hint':
+        return '開：文字行仍然接點擊，所以點得到字。關：整個浮層對滑鼠完全透明——點得到下面的東西，但點字就失效了。';
+      case 'floating_lyric_topmost':
+        return '保持置頂';
+      case 'gal_hook_fold_progressive_lines':
+        return '把分開顯示的台詞合成一條';
+      case 'gal_hook_fold_progressive_lines_hint':
+        return '有些引擎每點一次就重畫整行，於是同一行被抓到好幾次。把這些快照摺成一條。';
+      case 'gal_hook_ingame_lookup_engine_unsupported':
+        return '目前遊戲引擎不支援遊戲內查詞';
+      case 'gal_hook_ingame_lookup_version_unsupported':
+        return '目前遊戲版本未在支援清單中';
+      case 'gal_hook_ingame_lookup_exe_hash_copy':
+        return '複製遊戲 exe 的 SHA-256';
+      case 'gal_hook_ingame_lookup_exe_hash_unavailable':
+        return '無法讀取遊戲 exe（可能權限不足）';
+      case 'gal_hook_ingame_lookup_exe_hash_copied':
+        return '已複製 exe 的 SHA-256';
+      case 'download_tracker_section':
+        return 'Tracker 訂閱';
+      case 'download_tracker_auto_add':
+        return '自動把訂閱的 Tracker 加到新任務';
+      case 'download_tracker_auto_add_hint':
+        return '清單會快取 6 小時；訂閱抓取失敗不會阻止建立下載任務。';
+      case 'download_tracker_url':
+        return '訂閱網址';
+      case 'download_tracker_refresh':
+        return '抓取 Tracker';
+      case 'download_tracker_preview_empty':
+        return '抓取訂閱後可預覽支援的 HTTP、HTTPS 與 UDP Tracker。';
+      case 'download_tracker_preview_count':
+        return ({required Object count}) => '已抓取 ${count} 個 Tracker';
+      case 'download_tracker_fetch_failed':
+        return ({required Object message}) => '抓取 Tracker 失敗：${message}';
+      case 'anki_connect_port_auto_fix':
+        return '換一個空閒的連接埠';
+      case 'anki_connect_port_auto_fix_hint':
+        return '自動挑一個空閒的連接埠，同時寫進 Hibiki 和 Anki 的 AnkiConnect 外掛設定。改完重啟 Anki 生效。';
+      case 'anki_connect_port_auto_fix_done':
+        return ({required Object port}) =>
+            'AnkiConnect 連接埠已改為 ${port}。請重啟 Anki 後再試。';
+      case 'anki_connect_port_auto_fix_manual':
+        return ({required Object port}) =>
+            'Hibiki 已改用連接埠 ${port}，但找不到 AnkiConnect 的外掛設定。請在 Anki 的「工具 → 外掛 → AnkiConnect → 設定」裡把 webBindPort 也改成 ${port}，然後重啟 Anki。';
+      case 'anki_connect_port_auto_fix_none':
+        return '本機找不到空閒的連接埠。';
+      case 'onboarding_action_badge_required':
+        return '必做';
+      case 'onboarding_action_badge_recommended':
+        return '推薦';
+      case 'onboarding_action_badge_optional':
+        return '可選';
+      case 'onboarding_pack_action_download_desc':
+        return '在後台下載整個推薦包，下完自動進入匯入。隨時可以取消，下次從斷點續傳。';
+      case 'onboarding_pack_action_import_existing_desc':
+        return '包已經下好了，這裏直接匯入。確認框裏選「合併到現有庫」不會動你已有的資料。';
+      case 'onboarding_pack_action_pick_desc':
+        return '已經從別處拿到包的 zip？從硬碟匯入，整段下載都可以跳過。';
+      case 'onboarding_pack_action_website':
+        return '在官網下載頁打開';
+      case 'onboarding_pack_action_website_desc':
+        return '在瀏覽器打開官網。那裏的推薦包一節給出可以餵給下載工具的分片直連；下完回到這裏，用「選擇本機包檔案」匯入。';
+      case 'onboarding_pack_action_dictionary_desc':
+        return '學日語以外的語言？跳過推薦包，在這裏按語言匯入詞典。';
+      case 'onboarding_pack_action_audio_desc':
+        return '發音音訊從哪裏來。推薦包已經含日語和英語；其它語言在這裏加線上來源。';
+      case 'onboarding_anki_action_test_desc':
+        return '檢查 Fushi 能不能連上 Anki，並把你的牌組和筆記類型拉過來。這一步不會建立任何東西。';
+      case 'onboarding_anki_action_refresh_desc':
+        return '重新從 Anki 拉牌組和筆記類型。在 Anki 裏新建了牌組之後點它。';
+      case 'onboarding_anki_action_get_ankidroid_desc':
+        return '打開 AnkiDroid 的商店頁。Fushi 的卡片寫進它裏面，得先裝上。';
+      case 'onboarding_anki_action_get_anki_desc':
+        return '打開 Anki 的下載頁。裝好 Anki，製卡時讓它開着。';
+      case 'onboarding_anki_action_install_addon_desc':
+        return '把內建的 AnkiConnect 外掛解壓進 Anki——Fushi 靠它和 Anki 通話。裝完重啟 Anki。';
+      case 'onboarding_step_anki_action_desc':
+        return '卡片範本、欄位對應、截圖和音訊——也就是「做出來的卡長甚麼樣」。上面選好牌組和筆記類型就能開始製卡了，想改卡片怎麼做才需要進來。';
+      case 'onboarding_step_backup_action_desc':
+        return '選備份後端並登入，換機器或丟裝置時庫還在。';
+      case 'onboarding_step_interconnect_action_desc':
+        return '把這台裝置和你的其它裝置配對，共用同一個庫並同步進度。';
+      case 'onboarding_step_extension_action_desc':
+        return '告訴你怎麼裝瀏覽器擴充功能並連上 Fushi，之後在網頁上也能查詞。';
+      case 'onboarding_step_fonts_action_desc':
+        return '匯入自己的字型檔案，並給每種語言指定用哪個。';
+      case 'onboarding_pack_sources_hint':
+        return '同時從 GitHub、官網和備用鏡像分片並發下載，每片都校驗。下載過程中會實測各來源速度，哪家快就多分給哪家，所以這裏不用你選。';
+      case 'video_setting_hdr_output':
+        return 'HDR / 10-bit 輸出';
+      case 'video_setting_hdr_output_hint':
+        return '僅 Windows。「自動」在顯示器與片源都是 HDR 時把畫面經原生影片視窗直通；「始終」對所有影片都用原生視窗（10-bit 輸出）；「關閉」沿用常規算繪。';
+      case 'video_setting_hdr_output_auto':
+        return '自動';
+      case 'video_setting_hdr_output_always':
+        return '始終';
+      case 'video_setting_hdr_output_off':
+        return '關閉';
       case 'video_ajatt_settings_hint':
         return '免費日語字幕庫（kitsunekko 鏡像）。無需帳號；字幕檔案從 GitHub 下載。';
       case 'video_ajatt_enabled_hint':
